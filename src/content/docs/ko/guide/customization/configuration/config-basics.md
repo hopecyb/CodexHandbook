@@ -3,7 +3,7 @@ title: 설정 기초
 description: Codex 설정 파일 위치, 자주 쓰는 항목, 승인/샌드박스/모델 설정 입문.
 locale: ko
 source_locale: zh-CN
-source_revision: 6c67645
+source_revision: ee00ab5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

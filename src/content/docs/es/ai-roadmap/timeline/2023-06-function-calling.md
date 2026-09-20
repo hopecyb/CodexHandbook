@@ -1,47 +1,40 @@
 ---
 title: "Function Calling (llamadas a funciones)"
-date: 2023-06-13
-year: 2023
-summary: "Function Calling permite que el modelo seleccione una función disponible y rellene argumentos estructurados."
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+description: "El modelo puede proponer el nombre de una función y argumentos estructurados; la aplicación los valida y decide si ejecutarla. Generar argumentos, obtener autorización y ejecutar son tres pasos distintos."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Los datos del evento y del proyecto que aparecen abajo se contrastaron con la fuente primaria; las recomendaciones didácticas son criterio del autor y no se presentan como una prueba real del producto."
+  evidence:
+    - label: "Anuncio de lanzamiento de las llamadas a funciones"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling (llamadas a funciones)
+## Evento verificable y alcance
 
-- Fechas clave:
-  - OpenAI function calling release: 2023-06-13
-- Referencias oficiales:
-  - https://openai.com/index/function-calling-and-other-api-updates/
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+**Fecha: 13 de junio de 2023 · Tipo: lanzamiento de producto.** OpenAI anunció las llamadas a funciones para la API Chat Completions de aquel momento. Esta fecha corresponde al lanzamiento de la API de un proveedor concreto, no al origen de todas las llamadas a herramientas.
 
-## Qué Es
+Fuente: [anuncio de lanzamiento de las llamadas a funciones](https://openai.com/index/function-calling-and-other-api-updates/). Verificado el 18 de septiembre de 2026; la fecha de publicación de la fuente y la de verificación de esta página tienen significados distintos.
 
-Function Calling permite que el modelo seleccione una función disponible y rellene argumentos estructurados.
+## Qué problema resuelve
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+El modelo puede proponer el nombre de una función y argumentos estructurados; la aplicación los valida y decide si ejecutarla. Generar argumentos, obtener autorización y ejecutar son tres pasos distintos.
 
-Movió las aplicaciones desde respuestas textuales hacia instrucciones que pueden entrar en sistemas reales.
+## Recomendaciones de aprendizaje y límites de uso
 
-## En Qué Etapa Está Ahora
+Lo siguiente es un criterio didáctico de este sitio, no una medición de adopción sectorial ni de eficacia:
 
-Actualmente lo marco como `mainstream`.
+Prioriza entradas que se puedan validar, ámbitos de permiso explícitos y respuestas de error. Que el JSON sea válido no significa que los argumentos sean correctos en su significado ni que esté autorizada la escritura en un sistema externo. Los nombres de modelos y ejemplos de API del anuncio histórico no sirven como guía de configuración actual.
 
-Ya es un patrón mainstream y base de Tool Use y de agentes.
+## Ejercicio práctico
 
-## Qué Podría Reemplazar
+[Simulación de sugerencias para clasificar Issues](/es/cases/use-cases/team-automation/issue-triage-suggestions/): comprueba que las sugerencias estructuradas para Issues sintéticas correspondan a sus entradas y conserva una cola de revisión humana. El ejercicio verifica los límites de los datos sin llamar a la API histórica ni usar su etiqueta de lanzamiento.
 
-Reemplaza parsear texto libre con reglas frágiles para activar APIs.
-
-## Qué Podría Reemplazarlo
-
-Será absorbido por runtimes de herramientas con permisos, estado y recuperación.
+[Volver a la hoja de ruta y los criterios de fecha](/es/ai-roadmap/)

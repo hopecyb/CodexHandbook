@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "已对照当前官方 Developer commands 的成熟度表，仅列 Stable 入口，并核实 `--cd` / `-C`、沙箱和审批参数；实验性与弃用命令不进入基础速查。"
+  checkedAt: "2026-08-26"
 title: CLI 命令参考
 description: Codex CLI 常用子命令与参数速查——学习向索引，非替代官方手册。
 sidebar:
@@ -149,13 +154,3 @@ CLI 命令页主要用于分辨入口和查意图，不用靠死记参数上手�
 | 审批卡住 CI | 收紧 prompt + 只读沙盒 |
 
 [CLI 排障](/guide/cli/troubleshooting/)
-
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**核验依据：** 已对照当前官方 Developer commands 的成熟度表，仅列 Stable 入口，并核实 `--cd` / `-C`、沙箱和审批参数；实验性与弃用命令不进入基础速查。
-
-**最近核验：** 2026-08-26

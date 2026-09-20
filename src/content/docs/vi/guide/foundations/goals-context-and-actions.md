@@ -3,7 +3,7 @@ title: Mục tiêu, ngữ cảnh và hành động
 description: Tách một lần tương tác thành công thành mục tiêu, bối cảnh, hành động và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 656b931
+source_revision: 280cea9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

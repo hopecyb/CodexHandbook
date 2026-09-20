@@ -3,7 +3,7 @@ title: 장시간 작업 프롬프트
 description: 단계 분할, 체크포인트, 인수인계 정보입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b8e9c9b
+source_revision: 4e656af
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

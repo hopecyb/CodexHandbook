@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前关于长期目标与长任务协作的公开 use cases，以及本手册已核验的交接恢复、规划、压缩与委托章节交叉复核；本页仅说明长任务的检查点、移交与退出条件等稳定方法。"
+  checkedAt: "2026-07-26"
 title: 长任务管理
 description: 跨小时或多会话的大任务——检查点、压缩、委托与退出条件。
 ---
@@ -63,10 +68,3 @@ description: 跨小时或多会话的大任务——检查点、压缩、委托�
 - [ ] 长任务开始前有计划文档
 - [ ] 至少两个检查点有可审查 diff
 - [ ] 知道如何暂停、恢复或移交
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前关于长期目标与长任务协作的公开 use cases，以及本手册已核验的交接恢复、规划、压缩与委托章节交叉复核；本页仅说明长任务的检查点、移交与退出条件等稳定方法。  
-**最近核验：** 2026-07-26

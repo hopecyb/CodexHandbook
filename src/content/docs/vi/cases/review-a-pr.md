@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Review GitHub pull requests”, nhấn mạnh bắt hồi quy và vấn đề tiềm ẩn trước review thủ công; ví dụ trang này chỉ yêu cầu review diff có cấu trúc, xuất P0/P1 và đường dẫn tệp, không phụ thuộc giao diện hay lệnh cố định."
+  checkedAt: "2026-07-26"
 title: Review PR
 description: Dùng Codex để review diff có cấu trúc trước khi merge.
 locale: vi
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Review PR
 
 ## Siêu dữ liệu
 
@@ -44,9 +52,3 @@ Xuất checklist, gắn P0/P1, kèm đường dẫn tệp.
 
 - [Mẫu review](/vi/prompts/templates/review/)
 - [Review trước khi merge](/vi/cases/workflows/review-before-merge/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Review GitHub pull requests”, nhấn mạnh bắt hồi quy và vấn đề tiềm ẩn trước review thủ công; ví dụ trang này chỉ yêu cầu review diff có cấu trúc, xuất P0/P1 và đường dẫn tệp, không phụ thuộc giao diện hay lệnh cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

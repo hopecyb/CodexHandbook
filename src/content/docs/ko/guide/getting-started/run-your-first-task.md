@@ -3,7 +3,7 @@ title: 첫 작업 실행
 description: 명확한 프롬프트로 작은 변경을 한 번 마칩니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE"
+  checkedAt: "2026-08-26"
 title: 键盘快捷方式
 description: 只列官方现行文档可核对的 App 与 IDE 快捷操作。
 sidebar:
@@ -49,11 +53,3 @@ CLI TUI 的操作应通过当前版本的 `/help` 与界面提示查看。本页
 - [通知与 Activity](https://learn.chatgpt.com/docs/notifications)
 - [集成终端](https://learn.chatgpt.com/docs/integrated-terminal)
 - [IDE 设置](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**状态：** verified
-
-**适用产品：** App、CLI、IDE
-
-**最近核验：** 2026-08-26

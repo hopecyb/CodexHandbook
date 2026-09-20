@@ -1,39 +1,44 @@
 ---
-title: "Matrice des permissions"
-description: Carte conceptuelle des types d'actions Codex, points d'approbation et différences produit.
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE, Cloud"
+  checkedAt: "2026-08-26"
+title: Matrice des permissions
+description: Distinguer les Permission Profiles locaux, l’ancien bac à sable et la politique réseau du Cloud.
+sidebar:
+  order: 70
 locale: fr
 source_locale: zh-CN
-source_revision: a161c0c
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: c6ad6aa
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
+N’utilisez pas un tableau fixe des fenêtres d’approbation de l’App, du CLI, de l’IDE et du Cloud pour deviner les permissions. Le comportement réel dépend du lieu d’exécution, de la configuration effective, des exigences de l’organisation, du système d’exploitation et de l’action demandée.
 
-![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-fr.svg)
+![Enchaînement entre blocage par le bac à sable, approbation humaine et résultat de l’exécution](/diagrams/sandbox-approval-flow-fr.svg)
 
-## Three mechanisms to separate
+## Distinguer d’abord trois mécanismes
 
-| Mechanism | Scope | Primary control |
+| Mécanisme | Portée | Contrôle principal |
 |---|---|---|
-| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
-| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
-| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
+| Permission Profiles locaux (bêta) | Commandes locales sur macOS, Linux, WSL et Windows natif | Lecture, écriture ou refus dans le système de fichiers ; destinations réseau |
+| Anciens réglages du bac à sable | Codex local | `read-only`, `workspace-write`, `danger-full-access` et politique d’approbation |
+| Politique d’environnement Cloud | Codex Cloud | Conteneur isolé, accès réseau pendant la préparation, liste de domaines autorisés et méthodes HTTP pour l’Agent |
 
-Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
+Les Permission Profiles ne se combinent pas avec l’ancien `sandbox_mode`. Si la configuration chargée contient `sandbox_mode`, si `--sandbox` est passé en ligne de commande ou si un profil de configuration définit un bac à sable, Codex utilise l’ancien système plutôt que `default_permissions`.
 
-## Built-in local Permission Profiles
+## Permission Profiles locaux intégrés
 
-| Name | Boundary | Suitable for |
+| Nom | Limite | Usage adapté |
 |---|---|---|
-| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
-| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
-| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
+| `:read-only` | Commandes locales en lecture seule | Compréhension du code, revue, premier contact avec un dépôt |
+| `:workspace` | Écriture dans les racines de l’espace de travail et les dossiers temporaires système | Développement courant |
+| `:danger-full-access` | Supprime les limites du bac à sable local | Seulement si l’environnement est déjà isolé ailleurs et que ce niveau est explicitement nécessaire |
 
-A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
+Un profil personnalisé peut attribuer `read`, `write` ou `deny` à des chemins et exclure, au moyen de règles plus précises, des fichiers sensibles comme `.env` d’une portée plus large. En cas de conflit entre règles visant un même chemin, `deny` prime sur `write`, qui prime sur `read`.
 
-## Least-privilege example
+## Exemple de permissions minimales
 
 ```toml
 default_permissions = "project-edit"
@@ -57,42 +62,34 @@ enabled = true
 "tracking.example.com" = "deny"
 ```
 
-`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
+`network.enabled = true` permet seulement aux commandes d’accéder au réseau. Il faut aussi activer `features.network_proxy` pour que les règles de domaines soient appliquées par le proxy.
 
-## Evaluate by action
+## Évaluer selon l’action
 
-| Action | Primary risk | Minimum boundary |
+| Action | Risque principal | Limite minimale |
 |---|---|---|
-| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
-| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
-| Run tests | Script side effects | Review scripts; use controlled environment |
-| Install dependencies | Supply chain and network | Pin versions and domains |
-| Git push / PR | External state change | Separate branch, protection, human review |
-| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
+| Lire le code source | Inclure des fichiers sensibles dans le contexte | Lecture de l’espace de travail, refus explicite des identifiants |
+| Modifier des fichiers | Écraser ou supprimer hors du périmètre | Écriture limitée à l’espace de travail visé, puis examen du diff |
+| Exécuter des tests | Effets secondaires des scripts | Examiner les scripts et utiliser un environnement contrôlé |
+| Installer des dépendances | Chaîne d’approvisionnement et accès réseau | Versions fixées et domaines limités |
+| Git push ou PR | Modification d’un état externe | Branche distincte, protections de branche et revue humaine |
+| Outil MCP ou Plugin | Données tierces et opérations d’écriture | Portée minimale, approbations ciblées et journaux |
 
-`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
+`AGENTS.md` peut demander de ne pas faire de push, mais ce n’est pas une barrière technique. Combinez les règles avec le bac à sable ou les permissions, les droits GitHub et une revue humaine.
 
-## Team verification
+## Méthode de vérification pour une équipe
 
-1. Record client and Codex versions.
-2. List every loaded configuration layer.
-3. Confirm whether Permission Profiles or legacy sandboxing is active.
-4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
-5. Only then connect a real repository, retaining Git and organization gates.
+1. Relever le client et la version de Codex.
+2. Lister toutes les couches de configuration chargées.
+3. Confirmer si le système actif est un Permission Profile ou l’ancien bac à sable.
+4. Dans un dossier de test sans données sensibles, vérifier séparément `read`, `write`, `deny` et le réseau.
+5. Brancher ensuite le vrai dépôt et conserver les protections Git et organisationnelles.
 
-Permission Profiles remain Beta. Rerun this verification after upgrades.
+Les Permission Profiles restent en bêta ; refaites cette vérification après une mise à jour.
 
-## Official sources
+## Sources officielles
 
-- [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
+- [Permissions (bêta)](https://learn.chatgpt.com/docs/permissions)
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
-- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
-- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE, Cloud
-
-**Last verified:** 2026-08-26
+- [Approbations et sécurité des Agents](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Accès Internet du Cloud](https://learn.chatgpt.com/docs/cloud/internet-access)

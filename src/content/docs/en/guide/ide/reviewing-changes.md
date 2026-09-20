@@ -3,7 +3,7 @@ title: Review changes in the IDE
 description: Inspect diffs beside source code and use the read-only reviewer to check the worktree.
 locale: en
 source_locale: zh-CN
-source_revision: 1ca9ffe
+source_revision: a6badd5
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

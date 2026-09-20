@@ -3,7 +3,7 @@ title: IDE で変更をレビューする
 description: ソースコードの横で差分を確認し、読み取り専用の reviewer で worktree を検査します。
 locale: ja
 source_locale: zh-CN
-source_revision: 1ca9ffe
+source_revision: a6badd5
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

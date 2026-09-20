@@ -3,7 +3,7 @@ title: MCP-Verbindungen debuggen
 description: Grenze MCP-Fehler auf Konfiguration, Transport, Authentifizierung oder Werkzeug ein.
 locale: de
 source_locale: zh-CN
-source_revision: 829c1e9
+source_revision: d35b635
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

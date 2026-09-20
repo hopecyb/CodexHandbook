@@ -3,7 +3,7 @@ title: 규칙
 description: allow/deny, 명령 규칙, 팀 정책 설명 페이지 — 무엇을 막고 무엇을 알릴지 먼저 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

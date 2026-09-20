@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "Cruzado com a estrutura atual do capítulo developer-platform, as entradas de navegação e as páginas relacionadas de CLI/CI/SDK; esta página só clarifica a divisão estável de que a plataforma para desenvolvedores aponta à integração de engenharia, sem declarar parâmetros ou comportamentos de runtime concretos."
+  checkedAt: "2026-07-26"
 title: Plataforma para desenvolvedores
 description: Incorpora o Codex ao teu stack de engenharia com SDK, CLI não interativo e CI/CD — para desenvolvedores de integração.
 sidebar:
   order: 50
 locale: pt
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 A **plataforma para desenvolvedores** é para quem quer **productizar** o Codex em pipelines: apps à medida, revisão em lote, portões de release, portais internos de desenvolvimento. O uso quotidiano de «escrever um Prompt para corrigir um bug» continua a começar em [Primeiros passos](/pt/guide/getting-started/).
@@ -40,13 +44,15 @@ Orienta-se a cenários como:
 
 ```text
 O teu sistema (CI / plataforma interna / SaaS)
-        ↓ API ou CLI
-Codex (modelo + Ferramentas + política)
+        ↓ SDK / CLI local ou cliente App Server
+Ambiente de execução controlado (chamadas ao modelo + ferramentas + políticas)
         ↓
 Fornecedor Git / tickets / repositório de artefatos
 ```
 
 ## Princípios de desenho
+
+O SDK do Codex executa um Agent local. Um runner remoto, uma fila e callbacks HTTP criados por você fazem parte do desenho do seu sistema de integração. Não conclua, a partir do diagrama, que existe uma API unificada de tarefas hospedadas na nuvem. Veja os fundamentos e uma chamada mínima na [visão geral do SDK](/pt/guide/developer-platform/sdk-overview/).
 
 1. **Idempotente e retentável**: revisões repetidas do mesmo PR devem ser comparáveis
 2. **Privilégio mínimo**: token de CI só de leitura ou limitado a repositórios
@@ -85,9 +91,3 @@ Este capítulo fala de «como ligar o Codex ao sistema». Para o primeiro uso pr
 
 ## Fontes de referência
 - Documentação oficial da API / SDK OpenAI Codex
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** API / CLI / Cloud  
-**Base de verificação:** Cruzado com a estrutura atual do capítulo developer-platform, as entradas de navegação e as páginas relacionadas de CLI/CI/SDK; esta página só clarifica a divisão estável de que a plataforma para desenvolvedores aponta à integração de engenharia, sem declarar parâmetros ou comportamentos de runtime concretos.  
-**Última verificação:** 2026-07-26

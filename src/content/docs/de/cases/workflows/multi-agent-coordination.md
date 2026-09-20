@@ -3,7 +3,7 @@ title: Multi-Agent-Koordination
 description: Parallel erkunden, arbeitsteilig ausführen und Ergebnisse zusammenführen — wann zerlegen, wie abnehmen.
 locale: de
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

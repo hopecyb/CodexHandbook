@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前已核验的交接与恢复、诊断、命令规则与错误参考章节交叉复核；本页说明的是失败止损与继续推进的通用方法，不把某一端的恢复按钮或命令当固定规则。"
+  checkedAt: "2026-07-26"
 title: 失败恢复
 description: 任务跑偏、测试变红或上下文耗尽时——如何安全回退并继续。
 ---
@@ -75,10 +80,3 @@ description: 任务跑偏、测试变红或上下文耗尽时——如何安全�
 - [先诊断再修复](/cases/workflows/diagnose-before-fixing/)
 - [交接与恢复](/guide/agent-work/handoff-and-resume/)
 - [错误参考](/guide/reference/error-reference/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前已核验的交接与恢复、诊断、命令规则与错误参考章节交叉复核；本页说明的是失败止损与继续推进的通用方法，不把某一端的恢复按钮或命令当固定规则。  
-**最近核验：** 2026-07-26

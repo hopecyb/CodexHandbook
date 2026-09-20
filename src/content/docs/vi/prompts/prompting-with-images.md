@@ -3,7 +3,7 @@ title: Prompt với hình ảnh
 description: Khi đưa Codex ảnh chụp màn hình, bản thiết kế hoặc ảnh bảng trắng, hỏi thế nào để dễ nhận kết quả thực thi được.
 locale: vi
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

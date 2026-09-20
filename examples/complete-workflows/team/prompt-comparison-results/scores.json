@@ -1,0 +1,604 @@
+{
+  "reviewer": "primary agent, non-blind, no human reviewer",
+  "method": "Five frozen axes; editorial reading plus separate artifact checks. Scores concern this checklist, not general model capability.",
+  "runs": [
+    {
+      "run_id": "run-01",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "逐行、地区和产品 CSV 与原始行重算一致；正文两周总额、增减、环比及异常金额一致。",
+          "evidence": [
+            "run-01/output/weekly-report.md",
+            "run-01/output/region-summary.csv",
+            "run-01/output/top-products.csv",
+            "run-01/output/row-ledger.csv"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "台账覆盖46条记录，纳入44条；重复、缺日期、退款均能定位到原始行。",
+          "evidence": [
+            "run-01/output/row-ledger.csv",
+            "run-01/output/weekly-report.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "输入哈希未变，报告没有虚构实际经营原因。",
+          "evidence": [
+            "run-01/input/sales.csv",
+            "run-01/output/weekly-report.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "缺日期199.99隔离，西南零基数N/A，零金额有效。",
+          "evidence": [
+            "run-01/output/weekly-report.md",
+            "run-01/output/region-summary.csv"
+          ]
+        },
+        "reproducibility": {
+          "score": 2,
+          "reason": "计算与实际校验在命令日志中可回查；报告给出口径和汇总核对。",
+          "evidence": [
+            "run-01/telemetry/tool-log.md",
+            "run-01/telemetry/end.json",
+            "run-01/output/weekly-report.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-02",
+      "case": "article",
+      "variant": "A",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "正文保持md/txt范围、路径摘要与版本修复事实，没有新增PDF能力或效果数据。",
+          "evidence": [
+            "run-02/output/拾页1.2介绍.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "关键段落有P/I/C小节定位，三个本地来源可打开；逐项阅读核对支持正文。",
+          "evidence": [
+            "run-02/output/拾页1.2介绍.md",
+            "run-02/input/01-product.md",
+            "run-02/input/02-interview.md",
+            "run-02/input/03-changelog.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保留虚构产品、合成访谈身份；输入哈希未变，已记录的操作局限本次材料。",
+          "evidence": [
+            "run-02/output/拾页1.2介绍.md",
+            "run-02/telemetry/tool-log.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "P3/C2冲突并列，未按日期择一；上传字段、效果及其他缺失信息保留未知。",
+          "evidence": [
+            "run-02/output/拾页1.2介绍.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "正文来源定位可回查，但未提供既定评分依据要求的逐项事实表；这是交付形式缺项，不代表正文事实错误。",
+          "evidence": [
+            "run-02/output/拾页1.2介绍.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-03",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "公式将百分数除100，40元10%折扣为36；交付测试3项通过，复核使用原测试重跑也通过。",
+          "evidence": [
+            "run-03/output/cart.js",
+            "run-03/output/cart.test.js",
+            "run-03/telemetry/tool-log.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "最终说明或README说明百分比换算根因，对应一行公式改动可回查。",
+          "evidence": [
+            "run-03/output/cart.js",
+            "run-03/telemetry/final.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保持接口；实现仅改折扣公式，输入与测试文件哈希未变。",
+          "evidence": [
+            "run-03/input/cart.js",
+            "run-03/output/cart.js",
+            "run-03/input/cart.test.js",
+            "run-03/output/cart.test.js"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "测试通过声明有实际日志；未将审阅代码冒充测试。",
+          "evidence": [
+            "run-03/telemetry/tool-log.md",
+            "run-03/telemetry/final.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "只有修复后通过日志，没有原测试失败记录，也未记录当次Node版本。",
+          "evidence": [
+            "run-03/telemetry/tool-log.md",
+            "run-03/telemetry/end.json"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-04",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "逐行、地区和产品 CSV 与原始行重算一致；正文两周总额、增减、环比及异常金额一致。",
+          "evidence": [
+            "run-04/output/weekly-report.md",
+            "run-04/output/region-summary.csv",
+            "run-04/output/top-products.csv",
+            "run-04/output/row-ledger.csv"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "台账覆盖46条记录，纳入44条；重复、缺日期、退款均能定位到原始行。",
+          "evidence": [
+            "run-04/output/row-ledger.csv",
+            "run-04/output/weekly-report.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "输入哈希未变，报告没有虚构实际经营原因。",
+          "evidence": [
+            "run-04/input/sales.csv",
+            "run-04/output/weekly-report.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "缺日期199.99隔离，西南零基数N/A，零金额有效。",
+          "evidence": [
+            "run-04/output/weekly-report.md",
+            "run-04/output/region-summary.csv"
+          ]
+        },
+        "reproducibility": {
+          "score": 2,
+          "reason": "计算与实际校验在命令日志中可回查；报告给出口径和汇总核对。",
+          "evidence": [
+            "run-04/telemetry/tool-log.md",
+            "run-04/telemetry/end.json",
+            "run-04/output/weekly-report.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-05",
+      "case": "article",
+      "variant": "B",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "正文保持md/txt范围、路径摘要与版本修复事实，没有新增PDF能力或效果数据。",
+          "evidence": [
+            "run-05/output/introduction.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "关键段落有P/I/C小节定位，三个本地来源可打开；逐项阅读核对支持正文。",
+          "evidence": [
+            "run-05/output/introduction.md",
+            "run-05/input/01-product.md",
+            "run-05/input/02-interview.md",
+            "run-05/input/03-changelog.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保留虚构产品、合成访谈身份；输入哈希未变，已记录的操作局限本次材料。",
+          "evidence": [
+            "run-05/output/introduction.md",
+            "run-05/telemetry/tool-log.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "P3/C2冲突并列，未按日期择一；上传字段、效果及其他缺失信息保留未知。",
+          "evidence": [
+            "run-05/output/introduction.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 2,
+          "reason": "有逐项事实表及采用/保留依据，可回到原文复核。",
+          "evidence": [
+            "run-05/output/fact-table.md",
+            "run-05/output/introduction.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-06",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 1,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "公式将百分数除100，40元10%折扣为36；交付测试3项通过，复核使用原测试重跑也通过。",
+          "evidence": [
+            "run-06/output/cart.js",
+            "run-06/output/cart.test.js",
+            "run-06/telemetry/tool-log.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "最终说明或README说明百分比换算根因，对应一行公式改动可回查。",
+          "evidence": [
+            "run-06/output/cart.js",
+            "run-06/telemetry/final.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保持接口；实现仅改折扣公式，输入与测试文件哈希未变。",
+          "evidence": [
+            "run-06/input/cart.js",
+            "run-06/output/cart.js",
+            "run-06/input/cart.test.js",
+            "run-06/output/cart.test.js"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "测试通过声明有实际日志；未将审阅代码冒充测试。",
+          "evidence": [
+            "run-06/telemetry/tool-log.md",
+            "run-06/telemetry/final.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "有原测试失败、修复后成功、退出码及差异，但未记录当次Node版本。",
+          "evidence": [
+            "run-06/telemetry/tool-log.md",
+            "run-06/telemetry/end.json"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-07",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "逐行、地区和产品 CSV 与原始行重算一致；正文两周总额、增减、环比及异常金额一致。",
+          "evidence": [
+            "run-07/output/weekly-report.md",
+            "run-07/output/region-summary.csv",
+            "run-07/output/top-products.csv",
+            "run-07/output/row-ledger.csv"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "台账覆盖46条记录，纳入44条；重复、缺日期、退款均能定位到原始行。",
+          "evidence": [
+            "run-07/output/row-ledger.csv",
+            "run-07/output/weekly-report.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "输入哈希未变，报告没有虚构实际经营原因。",
+          "evidence": [
+            "run-07/input/sales.csv",
+            "run-07/output/weekly-report.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "缺日期199.99隔离，西南零基数N/A，零金额有效。",
+          "evidence": [
+            "run-07/output/weekly-report.md",
+            "run-07/output/region-summary.csv"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "有核对表，但Python命令只保留摘要，不能完整重放当次计算。",
+          "evidence": [
+            "run-07/telemetry/tool-log.md",
+            "run-07/telemetry/end.json",
+            "run-07/output/weekly-report.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-08",
+      "case": "article",
+      "variant": "B",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "正文保持md/txt范围、路径摘要与版本修复事实，没有新增PDF能力或效果数据。",
+          "evidence": [
+            "run-08/output/introduction.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "关键段落有P/I/C小节定位，三个本地来源可打开；逐项阅读核对支持正文。",
+          "evidence": [
+            "run-08/output/introduction.md",
+            "run-08/input/01-product.md",
+            "run-08/input/02-interview.md",
+            "run-08/input/03-changelog.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保留虚构产品、合成访谈身份；输入哈希未变，已记录的操作局限本次材料。",
+          "evidence": [
+            "run-08/output/introduction.md",
+            "run-08/telemetry/tool-log.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "P3/C2冲突并列，未按日期择一；上传字段、效果及其他缺失信息保留未知。",
+          "evidence": [
+            "run-08/output/introduction.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 2,
+          "reason": "有逐项事实表及采用/保留依据，可回到原文复核。",
+          "evidence": [
+            "run-08/output/fact-table.md",
+            "run-08/output/introduction.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-09",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "公式将百分数除100，40元10%折扣为36；交付测试3项通过，复核使用原测试重跑也通过。",
+          "evidence": [
+            "run-09/output/cart.js",
+            "run-09/output/cart.test.js",
+            "run-09/telemetry/tool-log.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "最终说明或README说明百分比换算根因，对应一行公式改动可回查。",
+          "evidence": [
+            "run-09/output/cart.js",
+            "run-09/telemetry/final.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保持接口；实现仅改折扣公式，输入与测试文件哈希未变。",
+          "evidence": [
+            "run-09/input/cart.js",
+            "run-09/output/cart.js",
+            "run-09/input/cart.test.js",
+            "run-09/output/cart.test.js"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "测试通过声明有实际日志；未将审阅代码冒充测试。",
+          "evidence": [
+            "run-09/telemetry/tool-log.md",
+            "run-09/telemetry/final.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "有原测试失败、修复后成功、退出码及差异，但未记录当次Node版本。",
+          "evidence": [
+            "run-09/telemetry/tool-log.md",
+            "run-09/telemetry/end.json"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-10",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "逐行、地区和产品 CSV 与原始行重算一致；正文两周总额、增减、环比及异常金额一致。",
+          "evidence": [
+            "run-10/output/weekly-report.md",
+            "run-10/output/region-summary.csv",
+            "run-10/output/top-products.csv",
+            "run-10/output/row-ledger.csv"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "台账覆盖46条记录，纳入44条；重复、缺日期、退款均能定位到原始行。",
+          "evidence": [
+            "run-10/output/row-ledger.csv",
+            "run-10/output/weekly-report.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "输入哈希未变，报告没有虚构实际经营原因。",
+          "evidence": [
+            "run-10/input/sales.csv",
+            "run-10/output/weekly-report.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "缺日期199.99隔离，西南零基数N/A，零金额有效。",
+          "evidence": [
+            "run-10/output/weekly-report.md",
+            "run-10/output/region-summary.csv"
+          ]
+        },
+        "reproducibility": {
+          "score": 2,
+          "reason": "计算与实际校验在命令日志中可回查；报告给出口径和汇总核对。",
+          "evidence": [
+            "run-10/telemetry/tool-log.md",
+            "run-10/telemetry/end.json",
+            "run-10/output/weekly-report.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-11",
+      "case": "article",
+      "variant": "A",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "正文保持md/txt范围、路径摘要与版本修复事实，没有新增PDF能力或效果数据。",
+          "evidence": [
+            "run-11/output/shiye-1.2-introduction.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "关键段落有P/I/C小节定位，三个本地来源可打开；逐项阅读核对支持正文。",
+          "evidence": [
+            "run-11/output/shiye-1.2-introduction.md",
+            "run-11/input/01-product.md",
+            "run-11/input/02-interview.md",
+            "run-11/input/03-changelog.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保留虚构产品、合成访谈身份；输入哈希未变，已记录的操作局限本次材料。",
+          "evidence": [
+            "run-11/output/shiye-1.2-introduction.md",
+            "run-11/telemetry/tool-log.md"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "P3/C2冲突并列，未按日期择一；上传字段、效果及其他缺失信息保留未知。",
+          "evidence": [
+            "run-11/output/shiye-1.2-introduction.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "正文来源定位可回查，但未提供既定评分依据要求的逐项事实表；这是交付形式缺项，不代表正文事实错误。",
+          "evidence": [
+            "run-11/output/shiye-1.2-introduction.md"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": "run-12",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 2,
+      "scores": {
+        "task_correctness": {
+          "score": 2,
+          "reason": "公式将百分数除100，40元10%折扣为36；交付测试3项通过，复核使用原测试重跑也通过。",
+          "evidence": [
+            "run-12/output/cart.js",
+            "run-12/output/cart.test.js",
+            "run-12/telemetry/tool-log.md"
+          ]
+        },
+        "evidence_traceability": {
+          "score": 2,
+          "reason": "最终说明或README说明百分比换算根因，对应一行公式改动可回查。",
+          "evidence": [
+            "run-12/output/cart.js",
+            "run-12/telemetry/final.md"
+          ]
+        },
+        "scope_control": {
+          "score": 2,
+          "reason": "保持接口；实现仅改折扣公式，输入与测试文件哈希未变。",
+          "evidence": [
+            "run-12/input/cart.js",
+            "run-12/output/cart.js",
+            "run-12/input/cart.test.js",
+            "run-12/output/cart.test.js"
+          ]
+        },
+        "uncertainty_handling": {
+          "score": 2,
+          "reason": "测试通过声明有实际日志；未将审阅代码冒充测试。",
+          "evidence": [
+            "run-12/telemetry/tool-log.md",
+            "run-12/telemetry/final.md"
+          ]
+        },
+        "reproducibility": {
+          "score": 1,
+          "reason": "只有修复后通过日志，没有原测试失败记录，也未记录当次Node版本。",
+          "evidence": [
+            "run-12/telemetry/tool-log.md",
+            "run-12/telemetry/end.json"
+          ]
+        }
+      }
+    }
+  ]
+}

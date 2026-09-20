@@ -3,7 +3,7 @@ title: Choisir un client Codex
 description: Choisir rapidement entre l'App de bureau, la CLI, l'IDE et Cloud.
 locale: fr
 source_locale: zh-CN
-source_revision: 960d5d3
+source_revision: d316380
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

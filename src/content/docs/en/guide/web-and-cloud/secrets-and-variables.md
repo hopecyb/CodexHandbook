@@ -3,7 +3,7 @@ title: Secrets and environment variables
 description: Choose correctly between Cloud setup Secrets and ordinary variables available throughout a chat.
 locale: en
 source_locale: zh-CN
-source_revision: 08f8d64
+source_revision: 78937be
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

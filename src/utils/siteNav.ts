@@ -516,3 +516,15 @@ export function getSiteLang(locale: string | undefined, localeLang?: string): Si
 export function pickLabel(label: LocalizedLabel, lang: SiteLang): string {
 	return label[lang] ?? label.en ?? label['zh-CN'];
 }
+
+/** Chinese reader navigation: task, learning path, and lookup are separate destinations. */
+export function readerNavItems(lang: SiteLang): NavItem[] {
+	const visible = mainNavItems.filter((item) => isNavItemVisible(item, lang));
+	if (lang !== 'zh-CN' && lang !== 'zh-TW') return visible;
+	return [
+		{ href: '/cases/', prefix: '/cases', label: { 'zh-CN': '做任务', 'zh-TW': '做任務', en: 'Tasks' } },
+		{ href: '/guide/learning-paths/', prefix: '/guide/learning-paths', label: { 'zh-CN': '按路径学习', 'zh-TW': '按路徑學習', en: 'Learning paths' } },
+		{ href: '/guide/reference/', prefix: '/guide/reference', label: { 'zh-CN': '查问题', 'zh-TW': '查問題', en: 'Reference' } },
+		...visible.filter((item) => !['/cases/'].includes(item.href)),
+	];
+}

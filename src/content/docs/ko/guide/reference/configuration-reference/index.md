@@ -3,7 +3,7 @@ title: 설정 항목 참고
 description: Codex 사용자급·프로젝트급 설정 키의 개념 색인——경로와 필드는 공식 문서를 기준으로 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

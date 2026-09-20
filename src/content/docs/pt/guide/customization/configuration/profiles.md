@@ -1,29 +1,27 @@
 ---
-title: Profiles de configuração
-description: Alternar combinações de modelo, Sandbox e Aprovação com Profiles com nome — um para desenvolvimento, revisão e CI.
+title: Perfis de configuração
+description: Sobrepõe um conjunto de definições com nome à configuração do Codex CLI através de um ficheiro independente.
 locale: pt
 source_locale: zh-CN
-source_revision: 7043ada
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6ab30c5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
+Na versão atual da Codex CLI, `--profile <name>` sobrepõe `$CODEX_HOME/<name>.config.toml` à configuração de base do utilizador. Destina-se sobretudo à CLI; não o descrevas como um “modo de um clique” universal na aplicação de desktop.
 
-Current Codex CLI `--profile <name>` layers `$CODEX_HOME/<name>.config.toml` over the base user configuration. It is primarily a CLI mechanism and should not be presented as a universal one-click desktop mode.
+## Exemplo mínimo
 
-## Minimal example
-
-Keep shared defaults in the base configuration:
+A configuração de base conserva os valores predefinidos partilhados:
 
 ```toml
 # ~/.codex/config.toml
 model_reasoning_effort = "medium"
 ```
 
-Create a read-only review profile:
+Um perfil de revisão só de leitura:
 
 ```toml
 # ~/.codex/review.config.toml
@@ -31,59 +29,51 @@ sandbox_mode = "read-only"
 approval_policy = "never"
 ```
 
-Start it:
+Para iniciar:
 
 ```bash
 codex --profile review
-# Short form
+# Forma abreviada
 codex -p review
 ```
 
-Confirm local semantics:
+Confirma o significado destes parâmetros na tua versão local:
 
 ```bash
 codex --help
 ```
 
-Current help should describe the profile path and layering. If your version differs, trust its output and the current official configuration reference.
+A ajuda atual deve indicar o caminho do ficheiro de perfil e como este se sobrepõe à configuração de base. Se a tua versão for diferente, segue a saída local e a referência oficial atual da configuração.
 
-## Appropriate uses
+## Quando usar um Profile
 
-| Profile | Purpose | Example boundary |
+| Profile | Objetivo | Exemplo de limite |
 |---|---|---|
-| `review` | Read-only inspection | read-only, no writes |
-| `workspace` | Everyday project changes | workspace writes, approvals as needed |
-| `ci` | Non-interactive checks | fixed output, no push |
+| `review` | Inspeção só de leitura | `read-only`, sem escritas |
+| `workspace` | Alterações correntes no projeto | Escritas apenas no espaço de trabalho, aprovações quando necessárias |
+| `ci` | Verificações não interativas | Saída fixa, sem push |
 
-A profile only saves a configuration starting point. It cannot override organization requirements or make a prompt inherently safe. In particular, do not make `danger-full-access` an easy default profile.
+Um Profile apenas guarda um ponto de partida para a configuração. Não se sobrepõe aos requisitos da organização nem torna um prompt automaticamente seguro. Em especial, não definas `danger-full-access` como perfil predefinido de uso fácil.
 
-## Do not confuse Permission Profiles
+## Não confundir com Permission Profile
 
-- **Configuration profile:** `--profile name` selects `<name>.config.toml` and may layer many Codex settings.
-- **Permission Profile (Beta):** `default_permissions` and `[permissions.<name>]` define filesystem and network boundaries.
+- **Profile de configuração**: `--profile name` seleciona `<name>.config.toml` e pode sobrepor várias definições do Codex.
+- **Permission Profile (Beta)**: `default_permissions` e `[permissions.<name>]` definem os limites do sistema de ficheiros e da rede.
 
-They share a name but not purpose or schema. Current Permission Profiles also do not compose with legacy `sandbox_mode`; choose one permission system.
+Ambos se chamam profile, mas têm finalidades e estruturas diferentes. A versão atual de Permission Profile também não se combina com o antigo `sandbox_mode`; escolhe um sistema de permissões para configurar.
 
-## Team boundary
+## Limites do uso em equipa
 
-Configuration profiles live in a user's Codex home and are not automatically project configuration in the current version. A team can publish reviewed examples for members to install and inspect explicitly. Do not assume cloning a repository activates a personal profile.
+Os Profiles de configuração ficam no Codex home do utilizador. Na versão atual, não são configurações de projeto que possam ser simplesmente incluídas no repositório. Uma equipa pode publicar exemplos revistos para que cada membro os instale e confira explicitamente. Não assumas que um clone do repositório ativa automaticamente um perfil pessoal.
 
-## Acceptance
+## Aceitação
 
-1. Run `codex --help` and confirm current `-p/--profile` support.
-2. Test `review` on a read-only task.
-3. Attempt an outside-workspace read or a write and confirm that the boundary blocks it.
-4. Inspect effective configuration; do not trust only the filename.
+1. Executa `codex --help` e confirma o suporte atual de `-p/--profile`.
+2. Testa `review` com uma tarefa só de leitura.
+3. Pede a leitura de um ficheiro fora do espaço de trabalho ou a escrita de um ficheiro e confirma que o limite bloqueia a operação.
+4. Confere a configuração efetiva, sem te guiares apenas pelo nome do ficheiro.
 
-## Official sources
+## Fontes oficiais
 
-- [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
-- [Configuration layers in Codex CLI source](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Last verified:** 2026-08-26 (local `codex-cli 0.148.0`)
+- [Schema da configuração do Codex](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Camadas da configuração no código-fonte da Codex CLI](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)

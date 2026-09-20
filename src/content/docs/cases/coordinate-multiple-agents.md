@@ -1,9 +1,15 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center 当前 Codex 计划资料仍说明桌面 App 支持并行 Codex agents、内置 worktree 支持与云端委派；本页仅总结“并行探索、目录边界隔离、避免并行 push、人工合并结论”的协作模式，不依赖某个单一 UI 流程。"
+  checkedAt: "2026-07-26"
 title: 协调多 Agent
 description: 并行探索、分工执行与合并结果的协作案例。
 ---
-
-# 协调多 Agent
 
 ## 元信息
 
@@ -43,9 +49,3 @@ Agent 2：方案 B 的优缺点与工作量
 
 - [多 Agent 协作](/cases/workflows/multi-agent-coordination/)
 - [子 Agent](/guide/agent-work/subagents/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Help Center 当前 Codex 计划资料仍说明桌面 App 支持并行 Codex agents、内置 worktree 支持与云端委派；本页仅总结“并行探索、目录边界隔离、避免并行 push、人工合并结论”的协作模式，不依赖某个单一 UI 流程。  
-**最近核验：** 2026-07-26

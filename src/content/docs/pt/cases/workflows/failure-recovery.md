@@ -3,7 +3,7 @@ title: Recuperação de falhas
 description: Quando a tarefa se desvia, os testes ficam vermelhos ou o contexto se esgota — como recuar com segurança e continuar.
 locale: pt
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

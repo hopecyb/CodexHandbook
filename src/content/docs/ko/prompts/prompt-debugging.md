@@ -3,7 +3,7 @@ title: 프롬프트 디버깅
 description: 결과가 어긋날 때 프롬프트 문제를 어떻게 찾는지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9b92e1f
+source_revision: a4fb74f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

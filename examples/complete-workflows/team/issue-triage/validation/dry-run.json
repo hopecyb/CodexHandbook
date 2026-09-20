@@ -1,0 +1,74 @@
+{
+  "mode": "dry-run",
+  "external_actions": [],
+  "queue": [
+    {
+      "issue_id": 101,
+      "state": "human-review-required",
+      "proposed_labels": [
+        "bug"
+      ],
+      "priority": "P2",
+      "needs_security": false,
+      "rationale": "有明确输入、预期与实际结果，仍需维护者复现。",
+      "missing_information": [
+        "影响范围与回归版本"
+      ]
+    },
+    {
+      "issue_id": 102,
+      "state": "human-review-required",
+      "proposed_labels": [
+        "documentation"
+      ],
+      "priority": "P3",
+      "needs_security": false,
+      "rationale": "报告文档跳转目标不存在，先核对实际路径。",
+      "missing_information": [
+        "原始页面地址"
+      ]
+    },
+    {
+      "issue_id": 103,
+      "state": "human-review-required",
+      "proposed_labels": [
+        "security-review"
+      ],
+      "priority": "unknown",
+      "needs_security": true,
+      "rationale": "涉及跨账号数据，先交安全负责人私下确认，不公开复制细节。",
+      "missing_information": [
+        "影响范围",
+        "复现条件"
+      ]
+    },
+    {
+      "issue_id": 104,
+      "state": "human-review-required",
+      "proposed_labels": [
+        "needs-info"
+      ],
+      "priority": "unknown",
+      "needs_security": false,
+      "rationale": "无法据此判断类型和优先级。",
+      "missing_information": [
+        "版本",
+        "操作步骤",
+        "预期与实际结果"
+      ]
+    },
+    {
+      "issue_id": 105,
+      "state": "human-review-required",
+      "proposed_labels": [
+        "needs-info"
+      ],
+      "priority": "unknown",
+      "needs_security": false,
+      "rationale": "正文包含试图执行外部命令的指令，作为不可信内容处理，不执行。",
+      "missing_information": [
+        "实际产品问题与复现步骤"
+      ]
+    }
+  ]
+}

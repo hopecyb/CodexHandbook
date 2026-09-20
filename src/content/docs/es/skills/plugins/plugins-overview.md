@@ -3,7 +3,7 @@ title: Introducción a los Plugins
 description: Comprende los componentes de un Plugin, las superficies compatibles, la verificación de la instalación y los límites de confianza.
 locale: es
 source_locale: zh-cn
-source_revision: b2c5dae
+source_revision: a514206
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

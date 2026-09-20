@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 검토류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 검토 템플릿
 description: diff와 변경 위험을 구조화해 검토합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 검토 템플릿
 
 검토류 작업이 가장 쉽게 이탈하는 지점은, 처음부터 “손쉽게 대신 고쳐 주는” 일로 바뀌는 것입니다.
 
@@ -53,10 +57,3 @@ reviewed_at: 2026-08-26
 
 - [병합 전 검토](/ko/cases/workflows/review-before-merge/)
 - [PR 검토 사례](/ko/cases/review-a-pr/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 검토류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

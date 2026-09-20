@@ -1,30 +1,53 @@
 ---
-title: Examiner les résultats
-description: Prendre l'habitude de vérifier les Diff, exécuter la Vérification et poser des questions de suivi.
-locale: fr
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Examiner les résultats"
+description: "Entraînez-vous à repérer les erreurs d'un exemple fixe, puis vérifiez votre propre annonce."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Les supports fixes et le résultat de référence de l'auteur sont prêts. Le script de manipulation des fichiers dans un répertoire temporaire a été exécuté, mais aucun test indépendant avec un modèle ou des lecteurs n'a encore été réalisé."
+  evidence:
+    - label: "Journal des opérations sur les fichiers de l'auteur"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/fr/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Donner des consignes claires"
+next:
+  link: "/fr/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "Terminer votre premier petit projet"
+locale: fr
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Objectif de cette étape
+## Commencer par un exemple dont les erreurs sont connues
 
-Remplacer « jeter un œil et approuver » par une routine de revue fixe.
+Ouvrez l'[annonce volontairement erronée préparée par l'auteur](/downloads/first-project/references/flawed-notice.md), comparez-la avec `facts.md`, puis notez chaque phrase erronée, le numéro du fait correspondant et la façon de la corriger. Cet exemple n'est pas une sortie de modèle et ne prouve pas qu'un prompt donné échoue nécessairement.
 
-Listes de contrôle : [Examiner le résultat](/fr/guide/getting-started/review-the-result/) · [Examiner les Diff](/fr/guide/quality/review-diffs/)
+N'assouplissez pas volontairement les permissions de votre véritable répertoire de travail pour provoquer un changement hors périmètre. L'exemple erroné fixe suffit pour apprendre à repérer les erreurs et comparer les résultats de façon répétable.
 
-## Exercice
+## Vérifier ensuite votre propre production
 
-Donnez délibérément un Prompt vague facile à dépasser ; observez le plan. Rejetez les étapes hors portée, resserrez les contraintes et relancez.
+Copiez `templates/review.md` du paquet dans un nouveau dossier `records` situé en dehors du répertoire de travail, puis renseignez chaque point :
 
-Suite : [Terminer votre premier petit projet](/fr/guide/learning-paths/beginner/05-complete-first-project/)
+- L'heure, le lieu, le nombre de places, le coût et les préparatifs sont-ils corrects ?
+- Le mode d'inscription reste-t-il inconnu et les numéros de faits justifient-ils le texte ?
+- Seul notice.md a-t-il changé ? Les faits et la note d'origine sont-ils intacts ?
+- Des fichiers ont-ils été créés ou supprimés en plus, ou des données envoyées à l'extérieur ?
 
----
+Indiquez « non vérifié » pour les points inconnus ; ne les marquez pas comme réussis au seul motif que le modèle dit « terminé ».
 
-**Statut :** review  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-25
+## Critères de réussite
+
+Repérez de manière autonome les quatre erreurs factuelles de l'exemple, puis consultez la [clé de vérification](/downloads/first-project/references/review-key.md) : l'heure de fin, le nombre de participants, un mode d'inscription inventé et le fait de présenter l'apport volontaire d'un livre comme obligatoire. Si votre propre annonce comporte des problèmes, corrigez-les puis vérifiez à nouveau.
+
+Conservez le compte rendu de vérification que vous avez réellement rempli ; ne copiez pas la référence de l'auteur comme preuve d'avoir terminé. À lire aussi : [Examiner les différences](/fr/guide/quality/review-diffs/).
+
+[Pack d'exercices et préparation](/fr/guide/learning-paths/beginner/)

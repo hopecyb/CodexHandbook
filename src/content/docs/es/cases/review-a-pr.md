@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Los use cases actuales de Codex en OpenAI Developers siguen incluyendo «Review GitHub pull requests», centrados en detectar regresiones y problemas potenciales antes de la revisión humana. Este ejemplo solo exige una revisión estructurada del diff con P0/P1 y rutas, sin depender de una UI o comando fijos."
+  checkedAt: "2026-07-26"
 title: Revisar un PR
 description: Usa Codex para una revisión estructurada del diff antes de fusionar.
 locale: es
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Revisar un PR
 
 ## Metadatos
 
@@ -44,10 +52,3 @@ Devuelve un checklist con P0/P1 y rutas de archivo.
 
 - [Plantilla de revisión](/es/prompts/templates/review/)
 - [Revisión antes de fusionar](/es/cases/workflows/review-before-merge/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Los use cases actuales de Codex en OpenAI Developers siguen incluyendo «Review GitHub pull requests», centrados en detectar regresiones y problemas potenciales antes de la revisión humana. Este ejemplo solo exige una revisión estructurada del diff con P0/P1 y rutas, sin depender de una UI o comando fijos.

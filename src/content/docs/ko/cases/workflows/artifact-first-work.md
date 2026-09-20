@@ -3,7 +3,7 @@ title: 산출물 우선
 description: 먼저 최종 산출물 형태와 경로를 정한 뒤 단계를 역산합니다—문서, 설정, 보고서 등 인도물에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

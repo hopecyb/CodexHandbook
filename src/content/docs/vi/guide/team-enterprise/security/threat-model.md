@@ -3,7 +3,7 @@ title: Mô hình mối đe dọa
 description: "Các bề mặt rủi ro chính của Codex trong môi trường đội — dữ liệu, công cụ, mở rộng và chuỗi cung ứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 4e63649
+source_revision: 4ec320d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

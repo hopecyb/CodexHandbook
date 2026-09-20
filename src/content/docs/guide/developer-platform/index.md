@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "已按本仓库当前 developer-platform 章节结构、导航入口与相关 CLI/CI/SDK 说明页交叉复核；本页仅说明“开发者平台面向工程化集成”这一稳定分工，不声明具体参数或运行时行为。"
+  checkedAt: "2026-07-26"
 title: 开发者平台
 description: 用 SDK、非交互 CLI 与 CI/CD 把 Codex 嵌入工程体系——面向集成开发者。
 sidebar:
@@ -34,13 +39,15 @@ sidebar:
 
 ```text
 开发者系统（CI / 内部平台 / SaaS）
-        ↓ API 或 CLI
-Codex（模型 + 工具 + 策略）
+        ↓ 本地 SDK / CLI，或 App Server 客户端
+受控执行环境（模型调用 + 工具 + 策略）
         ↓
 Git 提供商 / 工单 / 制品库
 ```
 
 ## 设计原则
+
+Codex SDK 运行本地 Agent，自建远程 runner、队列与 HTTP 回调属于集成系统的设计。不要由上图推断统一的托管云任务 API；具体依据和最小调用见 [SDK 概述](/guide/developer-platform/sdk-overview/)。
 
 1. **幂等与可重试**：同一 PR 多次审查结果应可比较
 2. **最小权限**：CI token 只读或限定仓库
@@ -79,9 +86,3 @@ Git 提供商 / 工单 / 制品库
 
 ## 参考来源
 - OpenAI Codex API / SDK 官方文档
----
-
-**状态：** verified  
-**适用产品：** API / CLI / Cloud  
-**核验依据：** 已按本仓库当前 developer-platform 章节结构、导航入口与相关 CLI/CI/SDK 说明页交叉复核；本页仅说明“开发者平台面向工程化集成”这一稳定分工，不声明具体参数或运行时行为。  
-**最近核验：** 2026-07-26

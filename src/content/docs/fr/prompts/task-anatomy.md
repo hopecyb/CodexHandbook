@@ -1,144 +1,144 @@
 ---
-title: "Anatomie d'une tâche"
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page présente uniquement une méthode de structuration des tâches. Les exemples et les liens internes ont été vérifiés ; le texte ne dépend pas de détails variables du produit, comme la version, le prix ou l’interface."
+  checkedAt: "2026-08-25"
+title: "Anatomie d’une bonne tâche"
 description: Objectif, contexte, entrées, contraintes, acceptation et limites de permission.
 locale: fr
 source_locale: zh-CN
-source_revision: 4df3d01
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 98c0511
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-A requirement with too much unstructured information mixes outcomes, boundaries, and acceptance. Codex must then fill the gaps.
+Quand une demande contient beaucoup d’informations sans structure, le résultat attendu, les limites et les critères d’acceptation se mélangent. Codex doit alors combler lui-même les vides.
 
-This page provides a reusable work order and shows how it enters an explore, plan, execute, verify loop.
+Cette page propose une fiche de tâche réutilisable. Elle explique le rôle de chaque partie et montre comment la demande s’inscrit dans une boucle « explorer, planifier, exécuter, vérifier ».
 
-## Who it is for
+## Pour qui ?
 
-- Readers who can open Codex but often see over-editing, incomplete work, or unverifiable results.
-- Developers, creators, and teams converting verbal requirements into Agent work.
-- Anyone defining scope, access, and stop conditions for a long task.
+- Les personnes qui savent déjà ouvrir Codex, mais obtiennent parfois trop de modifications, un travail incomplet ou un résultat difficile à vérifier.
+- Les développeurs, créateurs et équipes qui transforment une demande orale en tâche confiée à un Agent.
+- Toute personne qui doit définir la portée, les permissions et les conditions d’arrêt d’une tâche longue.
 
-## Task structure
+## Structure d’une tâche
 
-Organize around:
+Vous pouvez organiser la demande autour de ces questions :
 
-- desired outcome;
-- reason;
-- required material;
-- boundaries;
-- completion evidence.
+- Quel résultat faut-il obtenir ?
+- Pourquoi le faire ?
+- Quels matériaux sont nécessaires ?
+- Où sont les limites ?
+- Comment reconnaître que le travail est terminé ?
 
-The order can vary, but explicit answers make execution more stable.
+L’ordre peut varier, mais des réponses explicites rendent l’exécution plus stable.
 
-## Recommended template
-
-```text
-Goal: ... (final deliverable)
-Background: ... (why it matters and current state)
-Inputs: ... (files, links, pasted material)
-Constraints: ... (editable scope, style, prohibited actions)
-Acceptance criteria: ... (observable completion conditions)
-Permission boundary: ... (internet, dependencies, configuration)
-If information is missing: ask first; do not guess.
-```
-
-![Loop from a task specification to a verifiable result](/diagrams/task-execution-loop-fr.svg)
-
-The six fields do not exist to make a prompt long. They remove critical gaps. Verification decides the next step: deliver only on success; otherwise return with evidence to the task or plan instead of editing blindly.
-
-## Purpose of each section
-
-- **Goal:** define an outcome, not only an action.
-- **Background:** explain why this approach matters.
-- **Inputs:** place required files, links, and material nearby.
-- **Constraints:** prevent scope expansion.
-- **Acceptance:** make completion observable.
-- **Permissions:** state internet, install, and configuration boundaries.
-
-## Common misconceptions
-
-### 1. Every section must be long
-
-This is a checklist, not a form. Omitting context can be appropriate, but removes evidence for decisions.
-
-### 2. Goal and acceptance are different
-
-- **Goal:** what result you want.
-- **Acceptance:** how you know it was achieved.
-
-### 3. Inputs means pasting everything
-
-Relevance matters more than volume. Explicitly provide material that must be read.
-
-## Minimal task template
+## Modèle recommandé
 
 ```text
-Goal: turn what into which result
-Input: relevant files or pages
-Constraints: where edits are allowed and prohibited
-Acceptance: how I can verify completion
-When uncertain: ask first
+Objectif : … (livrable final)
+Contexte : … (pourquoi c’est important, état actuel)
+Entrées : … (fichiers, liens, contenu fourni)
+Contraintes : … (périmètre modifiable, style, actions interdites)
+Critères d’acceptation : … (conditions de fin observables)
+Limites de permission : … (accès à Internet, installation de dépendances, modification de configuration)
+Si des informations manquent : poser une question d’abord, sans deviner.
 ```
 
-## From vague request to executable task
+![De la description de tâche à un résultat vérifiable](/diagrams/task-execution-loop-fr.svg)
 
-### Original
+Les six éléments à gauche du schéma ne servent pas à allonger le prompt, mais à réduire les lacunes importantes. Une fois la tâche lancée, les preuves de vérification déterminent la suite : livrer si elle réussit ; sinon, revenir à la demande ou au plan avec les éléments de l’échec, au lieu de modifier à l’aveugle.
+
+## Rôle de chaque partie
+
+- **Objectif** : définir un résultat, pas seulement une action.
+- **Contexte** : aider Codex à comprendre pourquoi cette approche compte.
+- **Entrées** : rendre accessibles les fichiers, liens et matériaux indispensables.
+- **Contraintes** : empêcher l’élargissement involontaire du périmètre.
+- **Critères d’acceptation** : rendre la fin du travail vérifiable.
+- **Limites de permission** : préciser à l’avance l’accès au réseau, l’installation de dépendances et les changements de configuration.
+
+## Malentendus fréquents
+
+### 1. Chaque partie doit être longue
+
+Ce modèle ressemble davantage à une liste de contrôle qu’à un formulaire à remplir. Certaines tâches n’ont pas besoin d’un long contexte, mais l’omettre enlève aussi des éléments utiles à la décision.
+
+### 2. Objectif et acceptation désignent la même chose
+
+Ils ont deux rôles différents :
+
+- **L’objectif** décrit le résultat souhaité.
+- **L’acceptation** explique comment constater qu’il a été atteint.
+
+### 3. Les entrées consistent à tout coller
+
+La pertinence compte plus que la quantité. Indiquez clairement les matériaux que l’Agent doit absolument consulter.
+
+## Modèle minimal de tâche
+
+Pour commencer avec une version courte et utilisable :
 
 ```text
-Improve the documentation homepage.
+Objectif : transformer quoi en quel résultat
+Entrées : fichiers ou pages concernés
+Contraintes : ce qui peut être modifié et ce qui doit rester intact
+Acceptation : comment je vérifierai que le travail est terminé
+En cas d’incertitude : poser une question d’abord
 ```
 
-It lacks audience, scope, and success criteria.
+## D’une demande vague à une tâche exécutable
 
-### Executable version
+### Demande initiale
 
 ```text
-Goal: Rewrite the homepage first screen so a reader new to Codex knows within
-30 seconds what it is and where to start.
-Background: The current page assumes Agent, context, and Skill knowledge.
-Input: src/content/docs/guide/index.md
-Constraints: Modify only this file; do not change navigation, styles, or
-components. Explain Agent plainly on first use.
-Acceptance:
-- First screen states purpose, audience, and first reading entry.
-- Preserve frontmatter and heading levels.
-- Add no unexplained jargon.
-- pnpm build passes.
-Permissions: May read related site pages; no internet, installs, config changes,
-or Git commit.
-If information is missing: list it and the proposed scope, then wait.
+Améliore la page d’accueil de la documentation.
 ```
 
-### Expected execution
+Cette phrase ne précise ni le public, ni le périmètre modifiable, ni ce qui rendrait la page meilleure. Même si Codex produit quelque chose, il sera difficile de savoir s’il a dépassé les limites attendues.
 
-1. Read the homepage and adjacent entries; explain current issues.
-2. Give a short one-file plan.
-3. Edit and summarize the diff.
-4. Run `pnpm build`.
-5. Report evidence against all four criteria.
+### Version exécutable
 
-## Self-review before sending
+```text
+Objectif : réécrire le texte du premier écran de la page d’accueil pour qu’une personne découvrant Codex comprenne en 30 secondes de quoi il s’agit et par où commencer.
+Contexte : la page actuelle suppose que le lecteur connaît déjà les Agents, le contexte et les Skills ; les indications d’entrée ne sont pas assez directes.
+Entrée : src/content/docs/guide/index.md
+Contraintes : modifier uniquement ce fichier ; ne pas toucher à la navigation, aux styles ni aux composants ; expliquer simplement « Agent » à sa première apparition.
+Critères d’acceptation :
+- Le premier écran indique clairement l’objet du manuel, son public et la première page à lire.
+- Le frontmatter et la hiérarchie des titres existants sont conservés.
+- Aucun terme technique nouveau n’est introduit sans explication.
+- La commande pnpm build réussit.
+Limites de permission : lecture autorisée des pages liées du site ; pas d’accès à Internet, pas d’installation de dépendances, pas de commit Git.
+Si des informations manquent : lister les éléments absents et les modifications envisagées, puis attendre ma confirmation.
+```
 
-- Does the goal describe an outcome rather than “improve,” “handle,” or “look”?
-- Are inputs limited to relevant material?
-- Do constraints name prohibited areas?
-- Can another person judge each criterion pass/fail?
-- Do internet, installation, external writes, or commits need authorization?
-- Should the Agent ask, investigate, or stop when information is missing?
+### Déroulement attendu
 
-Scale the template to the task. A typo needs little background; a cross-module migration needs more than one goal sentence.
+1. Lire d’abord la page d’accueil et les pages d’entrée voisines, puis expliquer le problème actuel.
+2. Proposer un plan court limité à un fichier.
+3. Modifier le texte et montrer un résumé du diff.
+4. Exécuter `pnpm build`.
+5. Présenter, pour chacun des quatre critères d’acceptation, l’élément qui prouve qu’il est rempli.
 
-## Next steps
+## Comment vérifier votre demande
 
-- [Define done](/fr/prompts/define-done/)
-- [Constraints and boundaries](/fr/prompts/constraints-and-boundaries/)
-- [Ask for a plan](/fr/prompts/ask-for-a-plan/)
-- [Explore, plan, execute, verify](/fr/cases/workflows/explore-plan-execute-verify/)
+Avant de l’envoyer, demandez-vous :
 
----
+- L’objectif décrit-il un résultat, ou seulement une action comme « optimiser », « traiter » ou « regarder » ?
+- Les entrées contiennent-elles seulement les fichiers et matériaux vraiment pertinents ?
+- Les contraintes disent-elles ce qu’il ne faut pas toucher ?
+- Une autre personne pourrait-elle juger chaque critère d’acceptation comme « réussi » ou « échoué » ?
+- L’accès au réseau, l’installation de dépendances, l’écriture dans un service externe ou un commit nécessitent-ils une autorisation préalable ?
+- Si une information manque, l’Agent doit-il d’abord demander, examiner ou s’arrêter ?
 
-**Status:** verified
-**Applies to:** App / CLI / IDE / Cloud
-**Verification basis:** This page documents a stable task-design method. Examples and internal links were reviewed and do not depend on volatile UI, pricing, or version facts.
-**Last verified:** 2026-08-25
+Vous pouvez raccourcir le modèle selon la taille de la tâche. Mais supprimer une partie retire aussi une catégorie d’éléments utiles à la décision. Une coquille dans un seul fichier n’exige pas un long contexte ; une migration touchant plusieurs modules ne peut pas se limiter à une phrase d’objectif.
+
+## Pour aller plus loin
+
+- [Définir les critères de fin](/fr/prompts/define-done/)
+- [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
+- [Quand exécuter directement et quand planifier d’abord](/fr/prompts/ask-for-a-plan/)
+- [Explorer, planifier, exécuter, vérifier](/fr/cases/workflows/explore-plan-execute-verify/)

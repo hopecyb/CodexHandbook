@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅承担按症状分流到安装、登录、权限、上下文与结果质量章节的导航作用；所链接章节路径已逐项检查，且页面未依赖具体报错码、版本号或界面文案。"
+  checkedAt: "2026-07-26"
 title: 故障排查
 description: 按症状定位到对应教程与产品页。
 sidebar:
@@ -15,7 +20,6 @@ sidebar:
 - 不会判断错误类别时，最小该怎么开始排查
 - 哪些问题属于安装、权限、上下文或任务描述问题
 
-# 故障排查
 
 | 症状 | 前往 |
 |---|---|
@@ -56,10 +60,3 @@ sidebar:
 排障先做分类，不一定要立刻开始修。
 
 更多参考：[FAQ](/guide/reference/faq/) · [错误参考](/guide/reference/error-reference/) · [官方 Codex 文档](https://developers.openai.com/codex)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅承担按症状分流到安装、登录、权限、上下文与结果质量章节的导航作用；所链接章节路径已逐项检查，且页面未依赖具体报错码、版本号或界面文案。  
-**最近核验：** 2026-07-26

@@ -1,0 +1,17 @@
+{
+  "status": "not-run",
+  "case": null,
+  "variant": null,
+  "repetition": null,
+  "actual_model_label": null,
+  "client_version": null,
+  "reasoning_setting": null,
+  "started_at": null,
+  "elapsed_seconds": null,
+  "human_rework_minutes": null,
+  "input_hashes": {},
+  "output_paths": [],
+  "tool_failures": [],
+  "scores": {"task_correctness":null,"evidence_traceability":null,"scope_control":null,"uncertainty_handling":null,"reproducibility":null},
+  "reviewer_notes": "空白模板，不是实测结果"
+}

@@ -3,7 +3,7 @@ title: Bibliothèque de scénarios et de cas
 description: Tâches réelles de bout en bout — préparation, exécution, vérification, reprise après échec et rétrospective.
 locale: fr
 source_locale: zh-CN
-source_revision: 6349392
+source_revision: 1e284bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

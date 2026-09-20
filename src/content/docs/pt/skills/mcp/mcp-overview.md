@@ -1,101 +1,91 @@
 ---
 title: Visão geral de MCP
-description: Model Context Protocol — conecte o Codex com segurança a ferramentas e fontes de dados externas.
+description: Compreende o cliente, o servidor, as ferramentas, a autenticação e os limites de segurança do MCP.
 locale: pt
 source_locale: zh-CN
-source_revision: 7b8726f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 37e55d9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+O MCP transforma a intenção de um modelo usar uma capacidade externa numa chamada de ferramenta estruturada. Serve para ligar documentação de terceiros, navegadores, Figma, sistemas de tickets ou serviços internos.
 
-MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
-
-## Call chain
+## Uma cadeia de chamadas
 
 ```text
-Codex in a task
-  -> MCP client provided by the Codex host
-  -> MCP server: local process or remote service
-  -> external system: docs, design, tickets, internal API
-  -> structured result returned to the task
+Codex numa tarefa
+  -> cliente MCP (fornecido pelo Codex host)
+  -> servidor MCP (processo local ou serviço remoto)
+  -> sistema externo (documentação, design, tickets, API interna)
+  -> resultado estruturado devolvido à tarefa
 ```
 
-| Component | Responsible for | Not responsible for |
+| Componente | Responsabilidade | O que não faz |
 |---|---|---|
-| Codex host | Read configuration, connect servers, expose tools to the Agent | Defining the server's business permissions |
-| MCP server | Define tools, authentication, arguments, and structured results | Automatically making every tool safe |
-| Skill | Define when and how to use tools | Establishing network connections |
-| Plugin | Compose and distribute Skills, connectors, MCP, and related capabilities | Acting as another tool protocol |
+| Codex host | Lê a configuração, liga aos servidores e disponibiliza ferramentas ao Agent | Não define as permissões de negócio do servidor |
+| Servidor MCP | Define ferramentas, autenticação, argumentos e resultados estruturados | Não garante automaticamente a segurança das ferramentas |
+| Skill | Indica quando e em que passos usar as ferramentas | Não estabelece a ligação à rede |
+| Plugin | Combina e distribui Skills, conectores, MCP e outras capacidades | Não é outro protocolo de ferramentas |
 
-## Supported server transports
+## Formas de servidor atualmente suportadas
 
 ### STDIO
 
-Codex starts a local process and communicates over standard input/output. This fits local development tools and services that run only on the current computer.
+O Codex inicia um processo local e comunica através da entrada e saída padrão. É adequado a ferramentas de desenvolvimento locais e serviços que só funcionam na máquina atual.
 
-Review the command, dependency source, and forwarded environment variables because the process inherits the local execution environment.
+Risco principal: o processo herda o ambiente de execução local. Analisa o comando, a origem das dependências e as variáveis de ambiente transmitidas.
 
 ### Streamable HTTP
 
-Codex connects to a remote URL. Current documentation supports Bearer tokens, OAuth, and ChatGPT session authentication for trusted first-party servers.
+O Codex liga-se a um endereço remoto. A documentação oficial atual confirma o suporte a Bearer token, OAuth e autenticação por sessão ChatGPT para servidores de confiança da própria OpenAI.
 
-The service receives tool arguments. Verify TLS, identity, logging, retention, and tool permissions.
+Risco principal: o serviço remoto recebe os argumentos das ferramentas. Verifica TLS, identidade, registos, retenção de dados e permissões das ferramentas.
 
-## Combining MCP, Skills, and Plugins
+## Combinar MCP, Skill e Plugin
 
-For a weekly high-priority issue check:
+Considera uma verificação semanal de tickets de alta prioridade:
 
-| Layer | Content |
+| Camada | Conteúdo |
 |---|---|
-| MCP | Expose `search_issues`, `get_issue`, and related tools |
-| Skill | Define filters, evidence, and report format |
-| Plugin | Distribute the Skill, connector, and MCP definition |
-| Scheduled task | Run the verified task at a fixed time |
+| MCP | Disponibiliza ferramentas como `search_issues` e `get_issue` |
+| Skill | Define filtros, evidências necessárias e formato do relatório |
+| Plugin | Distribui à equipa o Skill, o conector e a definição de MCP |
+| Scheduled task | Executa a tarefa já verificada num horário fixo |
 
-These are orthogonal responsibilities, not an upgrade ladder. See the [capability map](/pt/skills/capability-map/).
+São responsabilidades diferentes, não degraus de uma escala de evolução. Consulta o [mapa das capacidades de extensão](/pt/skills/capability-map/) para a relação completa.
 
-## When MCP is worthwhile
+## Quando vale a pena ligar MCP
 
-| Worthwhile | Not yet |
+| Vale a pena | Ainda não vale a pena |
 |---|---|
-| Repeated access to one external system | One public web lookup |
-| Structured arguments and results are required | Repository file tools are enough |
-| OAuth or granular tool control is required | Only privileged writes exist, with no test environment |
-| A team needs one reusable connection | Server provenance cannot be reviewed |
+| Consultar repetidamente o mesmo sistema externo | Consultar uma página Web pública uma única vez |
+| Precisar de argumentos e resultados estruturados | As operações sobre ficheiros do repositório são suficientes |
+| Precisar de OAuth ou controlo detalhado das ferramentas | Só há operações de escrita muito privilegiadas e não existe ambiente de teste |
+| A equipa precisa de reutilizar a mesma ligação | Não é possível verificar a origem do servidor |
 
-## Security stages
+## Níveis de segurança
 
-1. **Read-only trial:** public docs or test tenant, query tools only.
-2. **Team validation:** restricted project, role, and tool allowlist; record failures and latency.
-3. **Limited writes:** reversible small writes with human approval.
-4. **Governed operation:** revocable authorization, reviewable config, redacted logs, environment isolation.
+1. **Ensaio só de leitura**: documentos públicos ou conta de teste, apenas com ferramentas de consulta.
+2. **Validação em equipa**: limitar projeto, funções e allowlist de ferramentas; registar falhas e duração.
+3. **Escritas limitadas**: pequenas operações reversíveis com aprovação humana.
+4. **Operação governada**: autorizações revogáveis, configuração verificável, registos sem dados sensíveis e separação por ambiente.
 
-Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_token_env_var`, or forwarded environment variables.
+Não coloques tokens em prompts, no Git ou em cabeçalhos HTTP estáticos. Dá preferência a OAuth, `bearer_token_env_var` ou ao encaminhamento de variáveis de ambiente.
 
-## Pre-connection checklist
+## Lista antes da ligação
 
-- [ ] Server source, version, and startup command are reviewable.
-- [ ] Read and write tools are identified.
-- [ ] A test tenant or least-privilege identity is used.
-- [ ] Remote logging of arguments and results is understood.
-- [ ] Writes have approval, rollback, and audit paths.
-- [ ] The team can disable the server and revoke access.
+- [ ] É possível verificar a origem, a versão e o comando de arranque do servidor.
+- [ ] A lista de ferramentas distingue operações de leitura e de escrita.
+- [ ] É usada uma conta de teste ou com permissões mínimas.
+- [ ] Está claro que argumentos e resultados podem entrar nos registos remotos.
+- [ ] As escritas têm aprovação, possibilidade de reversão e trilho de auditoria.
+- [ ] A equipa sabe desativar o servidor e revogar a autorização.
 
-## Next step
+## Próximo passo
 
-[Connect an MCP server](/pt/skills/mcp/connect-an-mcp-server/), beginning read-only, then verify with `codex mcp list` and `/mcp`.
+Vai para [Ligar um servidor MCP](/pt/skills/mcp/connect-an-mcp-server/). Começa com um servidor só de leitura e depois verifica com `codex mcp list` e `/mcp`.
 
-## Official sources
+## Fontes oficiais
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
-
-**Last verified:** 2026-08-25

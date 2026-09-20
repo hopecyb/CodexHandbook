@@ -3,7 +3,7 @@ title: Sandbox và mạng
 description: Hiểu cô lập thực thi, truy cập mạng và ranh giới rủi ro.
 locale: vi
 source_locale: zh-CN
-source_revision: b3d6d57
+source_revision: 5937622
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

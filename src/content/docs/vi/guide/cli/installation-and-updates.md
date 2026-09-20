@@ -3,7 +3,7 @@ title: Cài đặt và cập nhật CLI
 description: Cài đặt, nâng cấp và xác nhận phiên bản.
 locale: vi
 source_locale: zh-CN
-source_revision: 6b8ceaf
+source_revision: be3f2c4
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

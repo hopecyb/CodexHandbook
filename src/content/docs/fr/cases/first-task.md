@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page est un exercice d'introduction à faible risque du manuel : modification limitée à un seul fichier, interdiction du réseau, lecture du diff et vérification point par point selon les critères d'acceptation ; les chapitres préalables (installation, projet d'exercice, vérification) ont été recoupés, le contenu ne dépend pas de détails de version produit."
+  checkedAt: "2026-07-26"
 title: Première tâche
 description: Réalisez une petite modification avec un prompt clair et apprenez à vérifier le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Première tâche
 
 L'exemple ci-dessous suppose l'**application de bureau** par défaut ; le CLI et l'IDE acceptent le même prompt.
 
@@ -52,10 +59,3 @@ Si des informations manquent, demandez-moi d'abord, ne devinez pas.
 - [Bases des prompts](/fr/prompts/basics/)
 - [Vérification](/fr/guide/verification/)
 - [Commencer ici](/fr/guide/start-here/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page est un exercice d'introduction à faible risque du manuel : modification limitée à un seul fichier, interdiction du réseau, lecture du diff et vérification point par point selon les critères d'acceptation ; les chapitres préalables (installation, projet d'exercice, vérification) ont été recoupés, le contenu ne dépend pas de détails de version produit.

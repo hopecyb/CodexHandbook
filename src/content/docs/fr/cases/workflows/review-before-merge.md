@@ -3,7 +3,7 @@ title: Revue avant fusion
 description: Revue structurée du diff et des risques avec Codex avant la fusion — rôles humain–machine clairs.
 locale: fr
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

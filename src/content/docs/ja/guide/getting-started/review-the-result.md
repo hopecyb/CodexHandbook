@@ -3,7 +3,7 @@ title: 結果を確認する
 description: 変更を読み、成果物を検証し、承認または修正を決める。
 locale: ja
 source_locale: zh-CN
-source_revision: cb5b5d9
+source_revision: a215910
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

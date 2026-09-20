@@ -3,7 +3,7 @@ title: Tablas y hojas de cálculo
 description: Lectura, limpieza, análisis y exportación de CSV, Excel y datos tabulares — evita romper estructura y codificación.
 locale: es
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

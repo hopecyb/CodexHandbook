@@ -3,7 +3,7 @@ title: Escolher o mecanismo adequado
 description: Prompt temporário, AGENTS.md, memória, Skill, MCP — em que camada colocar cada um, com um quadro de decisão.
 locale: pt
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,12 +1,15 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Vérifié à partir du frontmatter actuel des documents du dépôt, de l’ancien système de statuts en pied de page, des liens croisés et de la gestion de la sidebar. Cette page décrit les conventions de rédaction et les conseils de structure du manuel, sans dépendre d’une version précise du produit."
+  checkedAt: "2026-07-26"
 title: Écrire une page guide
 description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du handbook.
 locale: fr
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -21,11 +24,13 @@ Blocages courants :
 - Tutoriel vs politique vs résumé d'index
 - Comment aider réellement les nouveaux
 
+Les sections suivantes distinguent ces questions pour vous aider à écrire un guide compréhensible et facile à maintenir.
+
 ## Rôle d'une page guide
 
-Un guide n'est pas « déverser de l'information ». Il doit déplacer les lecteurs de « je sais que ce sujet existe » à « je sais quand l'utiliser, quoi lire en premier et quoi éviter ».
+Un guide n’est pas terminé lorsqu’on y accumule des informations. Il doit amener le lecteur de « je sais que ce sujet existe » à « je vois à peu près quand l’utiliser, quoi lire d’abord et quels pièges éviter ».
 
-Pas seulement une liste à puces ou une fiche de commandes — il doit montrer les prochaines étapes.
+Il ne se limite donc pas à une liste de notions ou de commandes : il indique aussi la suite du parcours.
 
 ## Frontmatter
 
@@ -36,19 +41,21 @@ description: Une phrase sur le problème que cette page résout
 ---
 ```
 
-Pied de page unifié optionnel (correspondre aux pages existantes) :
+Les nouvelles pages consignent leur statut éditorial et leur méthode de vérification dans le frontmatter. N’ajoutez plus de pied de page de vérification en texte libre :
 
-```markdown
----
-
-**Statut :** planned | draft | review | verified | outdated | archived
-**Produits concernés :** App / CLI / IDE / Cloud
-**Dernière vérification :** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Structure du contenu vérifiée ; remplacez ce texte par les contrôles réellement effectués et leur date.
 ```
+
+Pour signaler une vérification des sources ou l’exécution d’un exemple, suivez [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/) et ajoutez les liens et l’environnement nécessaires. Les dates doivent être des chaînes `YYYY-MM-DD` entre guillemets.
 
 ## Structure recommandée
 
-Selon [modèle d'intégration sources externes](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, modèle de page recommandé), sections courantes :
+Choisissez les sections selon le [modèle d’intégration des sources externes](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Combinaisons courantes :
 
 - Quel problème la page résout
 - Pour qui elle est
@@ -65,17 +72,17 @@ Les how-tos produit peuvent être riches en étapes ; les pages concept peuvent 
 
 ### Toutes les pages ne sont pas une encyclopédie
 
-Commencer par :
+Quand on rédige son premier guide, il est facile d’y mettre tout ce que l’on sait et d’en perdre le fil directeur. Il vaut souvent mieux :
 
 - Le problème principal
 - Ce que les lecteurs comprennent mal
 - Une approche ou règle de décision utilisable
 
-Mieux pour les nouveaux que tous les détails d'un coup.
+Cela aide généralement davantage les débutants que de leur présenter tous les détails à la fois.
 
 ### Écrire pour les lecteurs, pas seulement pour vous
 
-Pont pour les premiers visiteurs :
+Vous connaissez le contexte, mais pas les lecteurs qui arrivent pour la première fois. Ajoutez les repères qui leur manquent :
 
 - Pour qui c'est
 - Ce qu'ils peuvent résoudre après lecture
@@ -83,17 +90,17 @@ Pont pour les premiers visiteurs :
 
 ### Les guides ne remplacent pas la doc officielle
 
-Le handbook communautaire aide la compréhension et l'accueil — mais les faits volatils nécessitent une vérification officielle.
+Le manuel communautaire aide à comprendre, relier et mettre en pratique les informations. Les faits susceptibles de changer doivent toutefois être vérifiés dans la documentation officielle.
 
 ## Liens croisés
 
-- Les liens internes utilisent des chemins racine : `/cases/workflows/explore-plan-execute-verify/`
+- Les liens internes utilisent des chemins racine : `/fr/cases/workflows/explore-plan-execute-verify/`
 - Lier vers les pages autoritaires ; éviter la longue duplication
 - Enregistrer les nouvelles pages dans l'`index.md` du chapitre et la sidebar `astro.config.mjs`
 
 ## Ton
 
-- Le chinois simplifié est la source ; les traductions anglaises suivent la structure source
+- Français, à destination des personnes qui passent à la pratique
 - Reconnaître l'incertitude (« selon la documentation officielle »)
 - Éviter le récit de « Prompt magique »
 
@@ -112,9 +119,3 @@ Un bon guide dit aux premiers lecteurs pourquoi la page existe, quoi lire en pre
 
 ## Sources de référence
 - Documentation officielle OpenAI Codex
-```
----
-
-**Statut :** vérifié  
-**Base de vérification :** Vérifié croisé frontmatter doc actuel, système de statut de pied de page, habitudes de liens croisés et maintenance sidebar ; décrit les conventions d'écriture — pas les détails de version produit spécifiques.  
-**Dernière vérification :** 2026-07-26

@@ -1,86 +1,83 @@
 ---
-title:  Revisión de código en Cloud
-description:  Revisar el diff, el PR y las sugerencias de revisión automática que produce una Tarea Cloud.
+title: Revisión de código en Cloud y GitHub
+description: Revisa el diff de Cloud y utiliza Codex en GitHub como revisión complementaria centrada en los hallazgos importantes.
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: a74296a
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: ea6796a
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 50
 ---
 
-A completed Cloud task provides a summary and diff. You can follow up, request changes, or create a PR. Completion is not merge approval; project CI, branch protection, and human judgment still apply.
+Cuando termina una tarea Cloud, recibes un resumen y un diff. Puedes hacer preguntas de seguimiento, pedir cambios o crear un PR. Que la tarea haya terminado no significa que se haya aprobado la fusión: todavía deben intervenir el CI, la protección de ramas y el criterio humano del proyecto.
 
-## Two review types
+## Dos tipos de revisión
 
-| Type | What it examines | Outcome |
+| Tipo | Qué examina | Resultado |
 |---|---|---|
-| Cloud result review | Task summary, logs, and diff | Decide whether to follow up or create a PR |
-| GitHub Codex review | PR diff and connected-repository `AGENTS.md` rules | Publish a GitHub code review |
+| Revisión del resultado de Cloud | Resumen, registros y diff de esta tarea | Decidir si continuar o crear un PR |
+| GitHub Codex review | Diff del PR en un repositorio conectado y reglas de `AGENTS.md` | Publicar una code review en GitHub |
 
-Comment on a GitHub PR:
+En un PR de GitHub, escribe el comentario:
 
 ```text
 @codex review
 ```
 
-Codex posts findings as a normal GitHub review. The current official guidance says GitHub comments focus on high-priority P0/P1 issues; when no issue is found, Codex may leave only a reaction. Few comments are not a reason to skip human review.
+Codex publica sus hallazgos como una revisión normal de GitHub. Según la explicación oficial actual, los comentarios de GitHub se centran en problemas P0/P1 de alta prioridad; si no encuentra ninguno, quizá deje solo una reacción. Que haya pocos comentarios no es motivo para omitir la revisión humana.
 
-## Review order
+## Orden de revisión
 
-1. **Scope:** do files, directories, dependencies, and generated artifacts match the task?
-2. **Behavior:** do success, failure, and boundary paths satisfy the requirement?
-3. **Security:** inspect authentication, authorization, input handling, credentials, and outbound network access.
-4. **Evidence:** which tests actually ran, and were failures disclosed?
-5. **Rollback:** can the change be reverted narrowly, or does it mix unrelated refactoring?
+1. **Alcance**: ¿coinciden los archivos, directorios, dependencias y elementos generados con la tarea?
+2. **Comportamiento**: ¿cumplen los requisitos las rutas normales, de error y de casos límite?
+3. **Seguridad**: examina autenticación, autorizaciones, tratamiento de entradas, credenciales y acceso saliente a la red.
+4. **Pruebas**: ¿qué pruebas se ejecutaron realmente y se han comunicado los fallos?
+5. **Posibilidad de reversión**: ¿puede deshacerse el cambio de forma acotada o mezcla refactorizaciones ajenas?
 
-Example prompt:
+Ejemplo de prompt:
 
 ```text
-Review this PR. Report only findings that could cause wrong behavior, data loss,
-a security issue, or a compatibility regression. Each finding must include
-severity, exact location, trigger condition, and impact. Do not report style
-preferences as defects.
+Revisa este PR e informa solo de hallazgos que puedan provocar un
+comportamiento incorrecto, corrupción de datos, problemas de seguridad o
+regresiones de compatibilidad. Cada uno debe indicar gravedad, ubicación
+concreta, condición que lo desencadena e impacto. No presentes preferencias
+de estilo como defectos.
 ```
 
-## Repository-specific rules
+## Reglas propias del repositorio
 
-Add this to the applicable `AGENTS.md`:
+Añade lo siguiente al `AGENTS.md` del directorio correspondiente:
 
 ```md
-## Code Review Rules
+## Reglas de revisión de código
 
-### Authentication boundaries
+### Límites de autenticación
 
-- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
-  Safe path: keep tokens in the credential provider and redact diagnostic output.
+- Señala cualquier ruta que registre tokens de acceso o los envíe a hosts
+  que no estén en la lista de permitidos. La opción segura es conservar los
+  tokens en el proveedor de credenciales y ocultarlos en la salida de diagnóstico.
 ```
 
-Root rules apply across the repository; a nested `AGENTS.md` can add service-specific checks. Begin with two or three stable rules that describe a safe path rather than a long list of volatile function names.
+Las reglas de la raíz se aplican a todo el repositorio; un `AGENTS.md` anidado puede añadir comprobaciones propias de cada servicio. Empieza por dos o tres reglas estables que describan una vía segura, en vez de llenar el archivo con nombres de funciones que pronto quedarán anticuados.
 
-## Automatic-review boundary
+## Límites de la revisión automática
 
-Users with the required GitHub push or admin permission can enable automatic reviews for a repository in Codex Settings. Automatic review is a supplementary gate and should not have automatic merge authority. High-risk repositories still need required reviewers, CI, and branch protection.
+Los usuarios que tengan los permisos de push o admin necesarios en GitHub pueden activar las reviews automáticas de un repositorio en Codex Settings. La revisión automática es una barrera complementaria y no debe tener permiso para hacer merge automáticamente. Los repositorios de alto riesgo deben conservar required reviewers, CI y protección de ramas.
 
-## Acceptance checklist
+## Lista de aceptación
 
-- [ ] A person reviewed the main logic diff.
-- [ ] P0/P1 findings are fixed or the risk is accepted in writing.
-- [ ] CI passes and any rerun is explained.
-- [ ] No Secrets, unintended generated files, or unrelated lockfile changes.
-- [ ] Task, PR description, and actual diff agree.
+- [ ] Una persona ha leído el diff de la lógica principal.
+- [ ] Los hallazgos P0/P1 se han corregido o el riesgo se ha aceptado por escrito.
+- [ ] El CI pasa y pueden explicarse los reintentos tras fallos.
+- [ ] No hay Secrets, elementos generados inesperados ni cambios ajenos en el lockfile.
+- [ ] La descripción de la tarea, la del PR y los cambios reales coinciden.
 
-## Official sources
+## Fuentes oficiales
 
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-- [Cross-client code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26
+- [Revisión de Pull Requests en GitHub](https://learn.chatgpt.com/docs/third-party/github)
+- [Revisión de código entre clientes](https://learn.chatgpt.com/docs/code-review)

@@ -1,100 +1,111 @@
 ---
-title: Bản đồ năng lực mở rộng
-description: Quan hệ giữa Skill, MCP, Plugin, Hooks, lệnh slash và AGENTS.md.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / ứng dụng máy tính / Codex CLI / IDE (xem phạm vi hỗ trợ của từng cơ chế trong nội dung)"
+  basis: "Mô hình trách nhiệm và ranh giới sử dụng đã được xây dựng lại theo tài liệu chính thức của OpenAI về Skills, Plugins, MCP, Hooks, Scheduled tasks và Subagents có thể truy cập ngày 2026-08-25."
+  checkedAt: "2026-08-25"
+title: Bản đồ các khả năng mở rộng
+description: "Hiểu hệ thống mở rộng của Codex qua tám vai trò: tác vụ, quy tắc, quy trình, công cụ, bảo vệ, phân phối, kích hoạt và làm việc song song."
 locale: vi
 source_locale: zh-CN
-source_revision: fa5604a
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 183812c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Extension mechanisms are confusing because they appear in one workflow while solving different problems.
+Các cơ chế mở rộng dễ gây nhầm lẫn vì chúng thường xuất hiện trong cùng một quy trình, nhưng mỗi cơ chế giải quyết một loại vấn đề khác nhau.
 
-Prompts and `AGENTS.md` provide tasks and rules; Skills provide reusable processes; MCP provides external tools; Hooks guard lifecycle points; Plugins compose and distribute; Scheduled tasks trigger by time. They combine without a fixed upgrade order.
+Trang này bắt đầu bằng một sơ đồ tổng thể: câu lệnh và `AGENTS.md` cung cấp tác vụ cùng quy tắc; Skill cung cấp quy trình có thể tái sử dụng; MCP cung cấp công cụ bên ngoài; Hook kiểm soát những thời điểm trong vòng đời thực hiện; Plugin tập hợp và phân phối các khả năng; Scheduled task kích hoạt công việc theo thời gian. Chúng có thể kết hợp với nhau và không có một “thứ tự nâng cấp” cố định.
 
-## System architecture
+## Kiến trúc hệ thống
 
-![Reusable Codex work-system architecture](/diagrams/codex-work-system-architecture-vi.svg)
+![Kiến trúc hệ thống làm việc có thể tái sử dụng của Codex](/diagrams/codex-work-system-architecture-vi.svg)
 
-Read the diagram around three ideas:
+Khi đọc sơ đồ, hãy chú ý ba điểm:
 
-- **Task input** defines this run; project rules define every run.
-- **Execution capability** expands reach but does not prove correctness; MCP, subagents, and scripts remain subject to permissions and acceptance.
-- **Distribution and triggering** are not the workflow itself. A Plugin bundles capabilities; a Scheduled task starts a run.
+- **Đầu vào của tác vụ** xác định việc cần làm trong lần này; quy tắc dự án xác định những điều phải tuân thủ trong mọi lần.
+- **Khả năng thực thi** có thể mở rộng phạm vi công việc, nhưng không tự chứng minh kết quả là đúng. MCP, Agent con và tập lệnh đều phải tuân theo giới hạn quyền hạn và tiêu chí nghiệm thu.
+- **Phân phối và kích hoạt** không phải bản thân quy trình làm việc. Plugin tập hợp các khả năng; Scheduled task bắt đầu một lần chạy vào thời điểm đã định.
 
-## Eight responsibilities
+## Tám nhóm trách nhiệm
 
-| Responsibility | Mechanism | Best problem | Not responsible for |
+| Trách nhiệm | Cơ chế | Phù hợp nhất để giải quyết | Không chịu trách nhiệm về |
 |---|---|---|---|
-| Current task | Prompt | Goal, scope, acceptance | Persistent project rules |
-| Persistent rules | `AGENTS.md` | Commands, conventions, directory boundaries | Full steps for a task class |
-| Reusable process | Skill | Stable steps, references, templates, scripts | External-system authorization |
-| External tools | MCP / Connector | Repository-external data and actions | Correct business goals |
-| Lifecycle guard | Hook | Observe, check, add context, or block around events | Replacing tests and human review |
-| Composition/distribution | Plugin | Bundle Skills, connectors, MCP, Hooks, templates | Making every component trustworthy |
-| Time trigger | Scheduled task | Periodically run a verified task | Replacing prompts and stop conditions |
-| Parallel division | Subagent | Independent exploration, test, or review | Eliminating write conflicts and coordination cost |
+| Tác vụ hiện tại | Câu lệnh | Việc cần làm lần này, phạm vi và tiêu chí nghiệm thu | Quy tắc dự án lâu dài |
+| Quy tắc bền vững | `AGENTS.md` | Lệnh của kho lưu trữ, quy ước, giới hạn thư mục | Toàn bộ các bước của một loại tác vụ |
+| Quy trình tái sử dụng | Skill | Các bước ổn định, tài liệu tham khảo, mẫu và tập lệnh hỗ trợ | Tự tạo quyền truy cập vào hệ thống bên ngoài |
+| Công cụ bên ngoài | MCP / Connector | Cho Codex dùng dữ liệu và thao tác ngoài kho lưu trữ | Quyết định mục tiêu nghiệp vụ có đúng hay không |
+| Bảo vệ theo vòng đời | Hook | Ghi nhận, kiểm tra, bổ sung ngữ cảnh hoặc chặn trước và sau một phiên hay lời gọi công cụ | Thay thế kiểm thử và xem xét thủ công |
+| Tập hợp và phân phối | Plugin | Đóng gói Skills, connector, MCP, Hooks và mẫu tác vụ | Tự động khiến mọi khả năng trở nên đáng tin cậy |
+| Kích hoạt theo thời gian | Scheduled task | Chạy tác vụ đã kiểm chứng theo lịch hoặc định kỳ | Thay thế câu lệnh rõ ràng và điều kiện dừng |
+| Phân công song song | Agent con | Giao các việc khảo sát, kiểm thử hoặc xem xét độc lập cho bên khác | Tự loại bỏ xung đột ghi tệp và chi phí điều phối |
 
-## Combining capabilities
+## Kết hợp các khả năng trong một tác vụ
 
-For weekly dependency-risk checks:
+Giả sử một nhóm kiểm tra rủi ro từ các gói phụ thuộc hằng tuần:
 
-1. `AGENTS.md` defines package manager, tests, and prohibited directories.
-2. A `dependency-audit` Skill defines collection, advisory checks, grading, and verification.
-3. GitHub or package-source MCP supplies read-only external data.
-4. A Hook blocks real credentials or logs external calls.
-5. A Plugin distributes the Skill, MCP config, and Hook.
-6. A Scheduled task runs weekly and creates only a report or draft issue for human review.
+1. `AGENTS.md` quy định trình quản lý gói được phép dùng, lệnh kiểm thử và những thư mục không được sửa.
+2. Skill `dependency-audit` cố định các bước thu thập thông tin phụ thuộc, đối chiếu cảnh báo, phân loại mức độ và kiểm chứng.
+3. MCP của GitHub hoặc nguồn gói cung cấp thông tin bên ngoài; ưu tiên quyền chỉ đọc.
+4. Hook có thể chặn đầu ra chứa khóa bí mật thật hoặc ghi lại những lần gọi công cụ bên ngoài.
+5. Plugin phân phối Skill, cấu hình MCP và Hook cho cả nhóm.
+6. Scheduled task kích hoạt mỗi tuần một lần và chỉ tạo báo cáo hoặc issue nháp; con người xem xét trước khi xuất bản.
 
-Missing a layer does not make a solution inferior. One local check may need only a clear prompt and terminal commands.
+Thiếu một tầng không có nghĩa là giải pháp “kém tiên tiến”. Nếu chỉ kiểm tra gói phụ thuộc trên máy một lần, một câu lệnh rõ ràng cùng các lệnh terminal sẵn có có thể đã đủ.
 
-## Common mappings
+## Cách chọn thường gặp
 
-| Need | Choose |
+| Nhu cầu | Lựa chọn đề xuất |
 |---|---|
-| Standard code style and test commands | AGENTS.md |
-| Standardize PR review | Skill |
-| Read Jira/Linear issues | MCP |
-| Install one integration bundle for a team | Plugin |
-| Scan credentials before each commit | Hooks |
-| Draft a report every Monday | Automations plus human publication |
+| Thống nhất phong cách mã và lệnh kiểm thử | AGENTS.md |
+| Chuẩn hóa quy trình xem xét PR | Skill |
+| Đọc issue trên Jira/Linear | MCP |
+| Cài một bộ tích hợp cho cả nhóm | Plugin |
+| Quét khóa bí mật trước mỗi lần commit | Hooks |
+| Tự động tạo bản nháp báo cáo tuần vào thứ Hai | Automations (và con người xuất bản) |
 
-## From success to team asset
+## Từ một lần thành công đến tài sản dùng chung của nhóm
 
-| Stage | Form | When |
+Bạn có thể dùng tiến trình sau để quyết định có nên tiếp tục chuẩn hóa cách làm hay không:
+
+| Giai đoạn | Hình thức | Khi nào phù hợp |
 |---|---|---|
-| One-off prompt | Current task specification | One use or ongoing exploration |
-| Template | Goal/context/constraints/acceptance skeleton | Repeated class, changing steps |
-| Skill | `SKILL.md` plus templates/references/scripts | Stable process and success criteria |
-| Plugin | Bundle of Skills, connectors, MCP, Hooks, templates | Unified installation, update, governance |
-| Scheduled task | Saved task, schedule, run history | Manually verified periodic work |
+| Câu lệnh dùng một lần | Mô tả tác vụ trong cuộc trò chuyện hiện tại | Chỉ làm một lần hoặc vẫn đang tìm hiểu vấn đề |
+| Mẫu | Khung cố định gồm “mục tiêu, ngữ cảnh, ràng buộc, nghiệm thu” | Loại tác vụ sẽ lặp lại nhưng các bước vẫn đang điều chỉnh |
+| Skill | `SKILL.md` kèm mẫu, tài liệu tham khảo hoặc tập lệnh | Quy trình đã ổn định và tiêu chí thành công rõ ràng |
+| Plugin | Gói kết hợp Skills, connector, MCP, Hooks và mẫu | Cần thống nhất việc cài đặt, cập nhật và quản trị |
+| Scheduled task | Tác vụ đã lưu, quy tắc thời gian và lịch sử chạy | Đã kiểm chứng thủ công và đáng để chạy định kỳ |
 
-MCP, Hooks, and subagents are not required stages; add them only for external tools, lifecycle guards, or parallel work. See [Choose an extension method](/vi/skills/choosing-an-extension-method/).
+MCP, Hook và Agent con không phải các bước bắt buộc trên tiến trình này. Chỉ thêm chúng khi tác vụ thật sự cần công cụ bên ngoài, cơ chế bảo vệ theo vòng đời hoặc phân công song song.
 
-## Current product boundaries
+Để xem các nhánh quyết định chi tiết, hãy đọc [Cách chọn phương thức mở rộng](/vi/skills/choosing-an-extension-method/).
 
-- A Codex Skill is a directory containing `SKILL.md`, optionally scripts, references, and assets; full instructions load when needed.
-- The desktop App, CLI, and IDE share MCP configuration on one Codex host.
-- Plugins work in supported ChatGPT surfaces, Codex desktop, and CLI; the IDE integration does not support Plugin browsing or use.
-- Scheduled tasks are managed in ChatGPT Web or desktop App; CLI and IDE can test inputs but have no management UI.
-- Subagents fit independent read-only exploration, test, and review; concurrent writes raise conflict cost.
+## Giới hạn của sản phẩm hiện tại
 
-Check [Feature comparison](/vi/guide/reference/feature-comparison/) and official sources before configuring changing entry points.
+- Một Codex Skill được định nghĩa bằng thư mục chứa `SKILL.md`, có thể kèm tập lệnh, tài liệu tham khảo và tài nguyên; Codex tải nội dung hướng dẫn đầy đủ khi cần.
+- Ứng dụng máy tính, Codex CLI và tiện ích IDE dùng chung cấu hình MCP khi chạy trên cùng một Codex host.
+- Plugins hiện dùng được trên các điểm truy cập ChatGPT được hỗ trợ, ứng dụng Codex cho máy tính và Codex CLI; tiện ích IDE không hỗ trợ duyệt hoặc dùng Plugin.
+- Scheduled task được tạo và quản lý trên ChatGPT Web hoặc ứng dụng máy tính. CLI và IDE có thể hỗ trợ kiểm thử câu lệnh, Skill hoặc tập lệnh trước, nhưng không có giao diện quản lý Scheduled task.
+- Agent con phù hợp với việc khảo sát chỉ đọc, kiểm thử và xem xét độc lập; nhiều Agent cùng ghi vào một nhóm tệp sẽ làm tăng chi phí xử lý xung đột.
 
-## Official sources
+Các điểm truy cập sản phẩm vẫn có thể thay đổi. Trước khi cấu hình cụ thể, hãy xem [bảng đối chiếu tính năng](/vi/guide/reference/feature-comparison/) và các nguồn chính thức bên dưới.
 
-- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
-- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+## Nguồn chính thức
+
+- [Skills và Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Xây dựng Codex Skills](https://learn.chatgpt.com/docs/build-skills)
 - [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-- [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
+- [Codex Agent con](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
 ---
 
 **Trạng thái:** verified
-**Áp dụng cho:** ChatGPT Web / desktop App / Codex CLI / IDE (see individual mechanism boundaries)
-**Căn cứ kiểm chứng:** Rebuilt from OpenAI Skills, Plugins, MCP, Hooks, Scheduled tasks, and Subagents documentation available on 2026-08-25.
+
+**Áp dụng cho:** ChatGPT Web / ứng dụng máy tính / Codex CLI / IDE (xem phạm vi hỗ trợ của từng cơ chế trong nội dung)
+
+**Căn cứ kiểm chứng:** Mô hình trách nhiệm và ranh giới sử dụng đã được xây dựng lại theo tài liệu chính thức của OpenAI về Skills, Plugins, MCP, Hooks, Scheduled tasks và Subagents có thể truy cập ngày 2026-08-25.
+
 **Kiểm chứng gần nhất:** 2026-08-25

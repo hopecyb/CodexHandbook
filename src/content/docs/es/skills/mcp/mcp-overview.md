@@ -3,7 +3,7 @@ title: Introducción a MCP
 description: Comprende clientes, servidores, herramientas, autenticación y límites de seguridad de MCP.
 locale: es
 source_locale: zh-cn
-source_revision: 7b8726f
+source_revision: 37e55d9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

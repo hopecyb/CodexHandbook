@@ -1,15 +1,22 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center의 현재 Codex 플랜 자료는 데스크톱 App이 병렬 Codex agents, 내장 worktree 지원, 클라우드 위임을 지원한다고 설명합니다. 이 페이지는 “병렬 탐색, 디렉터리 경계 격리, 병렬 push 회피, 사람이 결론 병합”이라는 협업 패턴만 요약하며, 특정 UI 흐름에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 여러 Agent 조율하기
 description: 병렬 탐색, 분업 실행, 결과 병합의 협업 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5abc786
+source_revision: 7b143fc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 여러 Agent 조율하기
 
 ## 메타 정보
 
@@ -49,9 +56,3 @@ Agent 2：방안 B의 장단점과 작업량
 
 - [여러 Agent 협업](/ko/cases/workflows/multi-agent-coordination/)
 - [Subagent](/ko/guide/agent-work/subagents/)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Help Center의 현재 Codex 플랜 자료는 데스크톱 App이 병렬 Codex agents, 내장 worktree 지원, 클라우드 위임을 지원한다고 설명합니다. 이 페이지는 “병렬 탐색, 디렉터리 경계 격리, 병렬 push 회피, 사람이 결론 병합”이라는 협업 패턴만 요약하며, 특정 UI 흐름에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

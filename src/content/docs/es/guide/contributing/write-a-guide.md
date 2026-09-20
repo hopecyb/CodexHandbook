@@ -1,14 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Revisado según el frontmatter actual de la documentación del repositorio, el antiguo sistema de estados del pie, las convenciones de enlaces cruzados y el mantenimiento de la barra lateral. La página describe criterios de redacción y estructura del manual, sin depender de detalles de una versión concreta del producto."
+  checkedAt: "2026-07-26"
 title: Escribir una página de guía
 description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
 Esta página explica cómo añadir o reescribir páginas de tipo **guía** en `src/content/docs/` (no casos puros ni tablas de referencia puras).
@@ -38,15 +41,17 @@ description: En una frase, el problema que resuelve este texto
 ---
 ```
 
-Opcionalmente, al final del texto, un pie unificado (como en las páginas existentes):
+Las páginas nuevas registran el estado editorial y el método de verificación en el frontmatter. Ya no se añade un pie de verificación en texto libre:
 
-```markdown
----
-
-**Estado:** planned | draft | review | verified | outdated | archived
-**Productos aplicables:** App / CLI / IDE / Cloud
-**Última verificación:** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Estructura del contenido revisada; sustitúyelo por las comprobaciones realizadas y su fecha.
 ```
+
+Para indicar que se revisaron fuentes o se ejecutó un ejemplo, sigue [Verificar contenido técnico](/es/guide/contributing/verify-technical-content/) y añade los enlaces y datos del entorno necesarios. Las fechas deben ser cadenas `YYYY-MM-DD` entre comillas.
 
 ## Estructura recomendada
 
@@ -93,7 +98,7 @@ El manual de la comunidad puede ayudar a entender, encadenar y aterrizar; pero l
 
 ## Enlaces cruzados
 
-- Enlaces internos con ruta raíz: `/cases/workflows/explore-plan-execute-verify/`
+- Enlaces internos con ruta raíz: `/es/cases/workflows/explore-plan-execute-verify/`
 - Enlaza a la página canónica; evita repetir bloques grandes
 - Registra la página nueva en el `index.md` del capítulo y en el sidebar de `astro.config.mjs`
 
@@ -120,9 +125,3 @@ Una buena página de guía no consiste en «escribir todo el material», sino en
 
 ## Referencias
 - Documentación oficial de OpenAI Codex
-```
----
-
-**Estado:** verificado  
-**Base de verificación:** Contrastado con el frontmatter actual de la documentación del repositorio, el sistema de estados del pie, los hábitos de enlaces cruzados y el mantenimiento del sidebar; esta página describe normas de escritura del cuerpo del manual y sugerencias de estructura, sin depender de detalles de versión de producto concretos.  
-**Última verificación:** 2026-07-26

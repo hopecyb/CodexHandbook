@@ -3,7 +3,7 @@ title: 첫 연습 프로젝트 만들기
 description: 버려도 되는 안전한 연습 디렉터리를 준비합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b461719
+source_revision: 43dcbdb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

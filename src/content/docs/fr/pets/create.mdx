@@ -3,15 +3,21 @@ title: Créer un Codex Pet
 description: "Comprendre la création d'un Codex Pet à travers les assets, la spritesheet, les métadonnées et les licences."
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: b2e0dbd
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 57e9aca
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Les limites de format et de récupération ont été précisées, mais aucune installation, animation ou désinstallation n’a été testée ici avec un client et un paquet Pet précis. Vérifiez dossiers et menus dans la version cible."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Créer un Codex Pet
+Ce site n’a pas encore testé la compatibilité d’un client et d’un paquet Pet précis. Notez d’abord leurs versions et leurs sources, puis utilisez la [fiche de compatibilité et de récupération](/fr/guide/reference/resource-compatibility/) pour vérifier les résultats réels. Le schéma explique la structure ; il ne constitue pas un contrat de format valable pour toutes les versions.
+
 
 Créer un Codex Pet ne consiste pas seulement à produire une belle image. L'objectif est d'obtenir un paquet que Codex peut identifier, charger, animer et basculer entre plusieurs états. Pensez-y comme à un ensemble : métadonnées, atlas d'animation et notes de source ou de licence.
 
@@ -29,15 +35,9 @@ La structure minimale courante est :
 
 Une spritesheet regroupe de nombreuses frames d'animation dans une grande image. Le client n'a pas besoin de charger des dizaines de petits fichiers : il découpe chaque frame par coordonnées de ligne et de colonne, puis les lit en séquence.
 
-Beaucoup de paquets Codex Pet utilisent cette convention d'atlas :
+Vérifiez ensemble la grille de l’atlas et les champs de version. Une ancienne illustration de ce site utilise 8 colonnes × 9 lignes, avec des images de 192 × 208 px (soit 1536 × 1872 px au total). Elle ne définit pas un format universel pour tous les clients. Avant de créer les ressources, obtenez la documentation du format correspondant à la version du client ou de l’outil et confirmez la grille, l’association des actions et les champs de version.
 
-- 8 colonnes x 9 lignes
-- 192 x 208 px par frame
-- 1536 x 1872 px pour l'image complète
-- 72 frames
-- WebP, ou un autre format explicitement pris en charge par l'outil source
-
-Ces valeurs sont des conventions courantes, pas des règles permanentes. Avant de créer un paquet, confirmez le contrat réel du client Codex, du générateur ou de la source utilisée.
+On ne peut pas agrandir l’atlas en changeant seulement la hauteur de l’image tout en conservant les anciennes métadonnées. Sans documentation de format traçable, arrêtez la création et clarifiez le contrat au lieu de déduire la compatibilité d’une illustration.
 
 ## Préparer les assets
 
@@ -53,7 +53,7 @@ Si les assets viennent de fan art, d'un jeu, d'un anime, d'une marque ou d'un au
 
 ## Rôle de `pet.json`
 
-`pet.json` doit au minimum identifier le pet et indiquer le chemin de la spritesheet. Exemple minimal :
+L’exemple suivant montre uniquement l’identité et le chemin de la ressource ; ce n’est pas un paquet complet dont l’installation a été vérifiée. Le format réel peut aussi exiger des champs de version :
 
 ```json
 {
@@ -70,7 +70,7 @@ Recommandations :
 - Garder le même nom pour le dossier et l'`id`.
 - Utiliser un chemin relatif pour `spritesheetPath`.
 - Décrire clairement le pet dans `description`.
-- Conserver l'auteur, la version, la source et la licence dans les métadonnées supplémentaires.
+- Conservez l’auteur, la version, la source et la licence dans le README ou le fichier LICENSE du paquet ; ne supposez pas que le client accepte des champs supplémentaires arbitraires.
 
 `pet.json` ne stocke pas l'animation. Il dit au client qui est le paquet, où se trouvent les assets et comment les interpréter.
 

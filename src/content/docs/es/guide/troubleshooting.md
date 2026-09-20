@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo enruta por síntoma hacia capítulos de instalación, inicio de sesión, Permisos, Contexto y calidad del resultado; se comprobaron las rutas enlazadas y la página no depende de códigos de error, números de versión ni textos de interfaz concretos."
+  checkedAt: "2026-07-26"
 title: Resolución de problemas
 description: Enruta síntomas a los tutoriales y páginas de producto correspondientes.
 sidebar:
   order: 18
 locale: es
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ No hace falta decidir de entrada si es CLI, IDE, Cloud, Permisos o Prompt. Clasi
 - Cómo empezar a diagnosticar con lo mínimo si no sabes clasificar el error
 - Qué problemas pertenecen a instalación, Permisos, Contexto o descripción de la Tarea
 
-# Resolución de problemas
 
 | Síntoma | Ir a |
 |---|---|
@@ -62,10 +66,3 @@ Suele ser mejor parar, clasificar a qué tipo perteneces y luego ir a la página
 Diagnosticar es primero clasificar; no hace falta empezar a reparar al instante.
 
 Más referencias: [FAQ](/es/guide/reference/faq/) · [Referencia de errores](/es/guide/reference/error-reference/) · [Documentación oficial de Codex](https://developers.openai.com/codex)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo enruta por síntoma hacia capítulos de instalación, inicio de sesión, Permisos, Contexto y calidad del resultado; se comprobaron las rutas enlazadas y la página no depende de códigos de error, números de versión ni textos de interfaz concretos.  
-**Última verificación:** 2026-07-26

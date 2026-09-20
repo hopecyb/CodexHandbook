@@ -3,7 +3,7 @@ title: 始める前に必要なもの
 description: アカウント、デバイス、練習プロジェクト、安全の底線。
 locale: ja
 source_locale: zh-CN
-source_revision: c8a032b
+source_revision: 5fbedb8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

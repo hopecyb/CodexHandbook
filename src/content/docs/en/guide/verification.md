@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers homepage still emphasizes building, testing, reviewing, and delivering changes with Codex; this page splits verification into review diffs, run tests, validate sources, and definition of done—cross-checked with in-site quality chapters."
+  checkedAt: "2026-07-26"
 title: Verification
 description: Review diffs, run tests, validate sources, and define done.
 sidebar:
   order: 17
 locale: en
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Verification
 
 A common beginner mistake: **treating "Codex said it is done" as actually done.**
 
@@ -94,10 +98,3 @@ Unsure where to start: default to [definition of done](/en/guide/quality/definit
 Verification confirms the result is usable, trustworthy, and shippable.
 
 How to write acceptance in prompts: [define done](/en/prompts/define-done/). End-to-end examples: [cases](/en/cases/).
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers homepage still emphasizes building, testing, reviewing, and delivering changes with Codex; this page splits verification into review diffs, run tests, validate sources, and definition of done—cross-checked with in-site quality chapters.  
-**Last verified:** 2026-07-26

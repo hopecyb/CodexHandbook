@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-Laufzeit unterstützt explizite Skill-Namen und Auto-Matching in passenden Szenarien; OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills bei Nutzen automatisch verwendet werden. Diese Seite fokussiert Auslösearten und Schreibprinzipien."
+  checkedAt: "2026-07-26"
 title: Einen Skill nutzen
 description: Skills explizit und implizit auslösen — und description gut schreiben.
 locale: de
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Ein häufiger Irrtum am Anfang: „Sobald er installiert ist, wirkt er von allei
 
 Skills können von dir **explizit benannt** oder in passenden Szenarien vom Modell **automatisch gewählt** werden. Die beiden Auslösearten zu trennen, spart Fehlersuche.
 
-# Einen Skill nutzen
 
 ## Auslösearten
 
@@ -87,9 +91,3 @@ Nach dem Lesen der `description` weiß man, „wann sie greifen soll und wann ni
 Liest sie sich wie „kann irgendwie alles“, ist sie meist zu vage.
 
 Mehr Konzepte: [Skills-Überblick](/de/skills/overview/).
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuelle Codex-Laufzeit unterstützt explizite Skill-Namen und Auto-Matching in passenden Szenarien; OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills bei Nutzen automatisch verwendet werden. Diese Seite fokussiert Auslösearten und Schreibprinzipien.  
-**Zuletzt geprüft:** 2026-07-26

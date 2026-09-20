@@ -1,75 +1,70 @@
 ---
-title:  Acceso a internet
-description:  Política de salida del Entorno Cloud, instalación de dependencias y riesgo de filtración de datos — abrir lo necesario y mantener el límite.
+title: Acceso a Internet
+description: Distingue el acceso durante la instalación del acceso del Agent y limita los riesgos mediante dominios y métodos HTTP.
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: 1e2d815
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 5bbb905
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 70
 ---
 
-Cloud has two separate network phases:
+Cloud tiene dos fases distintas de acceso a la red:
 
-| Phase | Default | Main purpose |
+| Fase | Comportamiento predeterminado | Uso principal |
 |---|---|---|
-| Setup script | Internet available | Install dependencies and tools |
-| Agent phase | Off by default | Let the Agent access external resources during the task |
+| Script de setup | Puede conectarse | Instalar dependencias y herramientas |
+| Fase Agent | Desactivado de forma predeterminada | Acceder a recursos externos mientras el Agent ejecuta la tarea |
 
-A successful `pnpm install` during setup does not mean the Agent can later `curl` any site.
+Por tanto, que `pnpm install` funcione durante setup no significa que el Agent pueda ejecutar después `curl` contra cualquier sitio.
 
-## Why Agent access is off by default
+## Por qué está desactivado de forma predeterminada
 
-Agent internet access increases the risks of prompt injection, code or data exfiltration, malicious dependencies, and license-incompatible material entering a repository. An untrusted issue, web page, or dependency README can contain instructions designed to induce exfiltration.
+El acceso del Agent a Internet aumenta el riesgo de inyección de prompts, exfiltración de código o datos, dependencias maliciosas y entrada en el repositorio de contenido con licencias incompatibles. Una incidencia, página web o README de una dependencia que no sea fiable puede incluir instrucciones para inducir al Agent a enviar datos fuera.
 
-Allow only the targets and actions required by the task, and review work logs.
+El principio es permitir solo los destinos y acciones necesarios para la tarea y revisar los registros de trabajo.
 
-## Options
+## Opciones de configuración
 
-Configure Agent internet access per environment:
+El acceso del Agent a Internet se configura por entorno:
 
-- **Off:** block all Agent internet access.
-- **On:** allow access, optionally constrained by domains and HTTP methods.
+- **Off**: bloquea por completo el acceso del Agent a Internet.
+- **On**: permite la conexión y puede limitarla por dominios y métodos HTTP.
 
-Start with an empty domain list, use the Common dependencies preset, or select All (unrestricted). Do not use unrestricted access as a production troubleshooting shortcut.
+La lista de dominios puede empezar vacía, usar la opción predefinida Common dependencies o seleccionar All (unrestricted). En un repositorio de producción, no uses el acceso sin restricciones como atajo para resolver problemas.
 
-For read-only documentation or downloads, allow only `GET`, `HEAD`, and `OPTIONS`. This blocks `POST`, `PUT`, `PATCH`, and `DELETE`, which may send or modify data.
+Si la tarea solo necesita leer documentación o descargar contenido, limita los métodos HTTP a `GET`, `HEAD` y `OPTIONS`. De este modo se bloquean `POST`, `PUT`, `PATCH` y `DELETE`, que podrían enviar o modificar datos.
 
-## Minimal-access example
+## Ejemplo de acceso mínimo
 
-A task must read public API documentation:
+Una tarea necesita consultar la documentación de una API pública:
 
-1. Keep access Off and confirm that the failure is network-related.
-2. Enable Agent access.
-3. Add only the official documentation domain to the allowlist.
-4. Allow only `GET`, `HEAD`, and `OPTIONS`.
-5. Rerun the task and inspect every outbound request in the log.
-6. Decide whether to restore Off afterward.
+1. Mantén Off y confirma que el fallo se debe realmente a la red.
+2. Activa el acceso del Agent.
+3. Añade a la allowlist únicamente el dominio oficial de esa documentación.
+4. Permite solo `GET`, `HEAD` y `OPTIONS`.
+5. Vuelve a ejecutar la tarea y revisa todas las solicitudes salientes en los registros.
+6. Al terminar, valora si debes volver a Off.
 
-## Relationship to Secrets
+## Relación esencial con los Secrets
 
-Cloud Secrets are removed before the Agent phase, reducing the risk of directly exfiltrating a setup Secret. Ordinary environment variables, repository content, and generated data can still be sent out. Never disguise sensitive data as an ordinary variable to bypass the Secret lifecycle.
+Los Secrets de Cloud se eliminan antes de la fase Agent, lo que reduce el riesgo de que este envíe directamente un Secret usado durante setup. Sin embargo, aún podría enviar variables de entorno ordinarias, contenido del repositorio y datos generados por la tarea. No disfraces valores sensibles como variables normales para eludir el ciclo de vida de los Secrets.
 
-## Acceptance checklist
+## Lista de aceptación
 
-- [ ] The need for Agent internet access is documented.
-- [ ] The allowlist contains only required domains.
-- [ ] HTTP methods are reduced to the smallest set.
-- [ ] Inputs are trusted or prompt-injection risk is considered.
-- [ ] Logs contain no command that uploads repository, environment, or credential data.
-- [ ] New dependencies were checked for source, version, and license.
+- [ ] Se ha explicado por qué la fase Agent necesita acceso a Internet.
+- [ ] La allowlist contiene solo los dominios necesarios.
+- [ ] Los métodos HTTP se han limitado al conjunto mínimo.
+- [ ] Las fuentes de entrada son fiables o se ha considerado el riesgo de inyección de prompts.
+- [ ] Los registros no contienen comandos que suban datos del repositorio, del entorno o credenciales.
+- [ ] Se han comprobado la procedencia, la versión y la licencia de las nuevas dependencias.
 
-## Official sources
+## Fuentes oficiales
 
-- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26
+- [Acceso del Agent a Internet](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Entornos Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)

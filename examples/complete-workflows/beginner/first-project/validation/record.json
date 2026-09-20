@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "python": "3.12.11",
+  "system": "Darwin",
+  "machine": "arm64",
+  "checks": [
+    "initial-copy-identical",
+    "step-2-only-notice-changed",
+    "reference-protected-inputs-unchanged",
+    "drill-difference-observed",
+    "drill-restored-all-file-bytes",
+    "work-and-starter-unchanged"
+  ],
+  "starter_sha256": {
+    "facts.md": "394b439bfd5c0541617f064f7dc60dbd985c560303e769ea5edb3f4774cab508",
+    "notice.md": "e0158cf57bd60adec1e5cf05310dbef5dd58911e19970318cfd80cf43b9364c2",
+    "private-note.md": "c8b25c6fa9c63c9e5d0defdbba31c2767ed88b5b3fcf04f8a57c34f11a7b7344"
+  },
+  "model_run": false,
+  "reader_trial": false,
+  "scope": "Temporary local file operations with authored reference; no semantic model evaluation"
+}

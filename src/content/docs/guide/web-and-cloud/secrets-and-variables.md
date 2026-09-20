@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Secrets 与环境变量
 description: 正确选择 Cloud setup Secret 与贯穿聊天的普通环境变量。
 sidebar:
@@ -58,11 +62,3 @@ GitHub Actions Secrets 与 Codex Cloud Secrets 是不同存储系统，不会自
 ## 官方依据
 
 - [Cloud environments：variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud
-
-**最近核验：** 2026-08-26

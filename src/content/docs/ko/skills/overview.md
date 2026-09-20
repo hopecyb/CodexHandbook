@@ -3,7 +3,7 @@ title: Skills 개요
 description: SKILL.md로 재사용 가능한 워크플로를 Codex에 가르칩니다. 한 번 쓰고, 필요할 때 호출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

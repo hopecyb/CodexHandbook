@@ -3,7 +3,7 @@ title: プロンプト例の追加
 description: examples/prompts に再現可能なプロンプトを提出する——メタデータと受け入れ基準を含む。
 locale: ja
 source_locale: zh-CN
-source_revision: cd78464
+source_revision: 15dabd2
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

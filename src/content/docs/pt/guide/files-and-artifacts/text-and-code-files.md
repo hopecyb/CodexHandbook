@@ -3,7 +3,7 @@ title: Ficheiros de texto e código
 description: Fazer o Codex ler e escrever corretamente ficheiros de texto — código-fonte, configuração e documentação.
 locale: pt
 source_locale: zh-CN
-source_revision: a6005dd
+source_revision: 1537793
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

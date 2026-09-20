@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明目标与背景的写法；站内链接与示例表达已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 提供目标与背景
 description: 让 Codex 知道要完成什么以及为何重要。
 ---
@@ -77,10 +82,3 @@ description: 让 Codex 知道要完成什么以及为何重要。
 目标决定交付什么，背景补充为什么要这样做。
 
 相关：项目级背景可沉到 [项目上下文](/guide/context/project-context/)，避免每条提示重复长篇。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明目标与背景的写法；站内链接与示例表达已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

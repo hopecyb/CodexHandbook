@@ -1,12 +1,20 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "El ejemplo inicial se verificó con un fallo esperado de tres pruebas; la solución de referencia supera las tres. La cadena de evidencias se organiza en rojo, causa raíz, reparación mínima, verde, regresión y revisión humana."
+  checkedAt: "2026-08-25"
 title: "Caso: corrección de bugs con verificación"
 description: Usa un bug ejecutable en el cálculo de descuentos para reproducir el rojo, localizar la causa raíz, aplicar la reparación mínima, verificar el verde, ejecutar la regresión y revisar el diff.
 locale: es
 source_locale: zh-cn
-source_revision: 91d8575
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 42d842e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 No es una plantilla de prompt que se completa cambiando nombres de archivo. Ejecutarás código inicial real, observarás una prueba que falla y comprobarás cómo la reparación de referencia hace pasar la misma suite.
@@ -42,6 +50,8 @@ No es una plantilla de prompt que se completa cambiando nombres de archivo. Ejec
 Las dos rutas de retorno son importantes: si falla una prueba relacionada, se vuelve a la reparación mínima; si falla la regresión o la revisión del diff, se vuelve al análisis de la causa raíz. Nunca elimines aserciones ni amplíes los cambios solo para llegar al verde.
 
 ## 2. Preparar los materiales
+
+Para seguir la secuencia completa, usa la [ruta para desarrolladores](/es/guide/learning-paths/developer/). Conecta este ejercicio con lectura de código, revisión y plantillas de entrega, y pide practicar en una copia `work/` separada. El nuevo [resumen de ejecución del 18-09-2026](/downloads/developer-path/run-record.json) documenta una nueva comprobación del punto de partida y la solución de referencia. La fecha 25-08-2026 que aparece más abajo corresponde a la verificación original del caso.
 
 ```text
 examples/complete-workflows/developer/verified-bug-fix/
@@ -188,10 +198,3 @@ Localiza la causa raíz y los riesgos en modo de solo lectura; espera la aprobac
 - [Ejecutar pruebas](/es/guide/quality/run-tests/)
 - [Revisar diffs](/es/guide/quality/review-diffs/)
 - [Definir cuándo está terminado](/es/prompts/define-done/)
-
----
-
-**Estado:** verified
-**Productos aplicables:** CLI / IDE
-**Base de verificación:** El ejemplo inicial se verificó con un fallo esperado de tres pruebas; la solución de referencia supera las tres. La cadena de evidencias se organiza en rojo, causa raíz, reparación mínima, verde, regresión y revisión humana.
-**Última verificación:** 2026-08-25

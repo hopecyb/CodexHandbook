@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Web 与 Cloud（概述）
 description: 从仓库连接、可复现环境到审查和 Pull Request 的远程任务主线。
 sidebar:
@@ -54,11 +58,3 @@ Cloud 的价值是隔离、可复现和并行，不是取消审查。
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Cloud 环境](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud
-
-**最近核验：** 2026-08-26

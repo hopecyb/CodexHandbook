@@ -3,7 +3,7 @@ title: Kontextkomprimierung
 description: Was nach der Komprimierung langer Gespräche bleibt — und was verloren geht.
 locale: de
 source_locale: zh-CN
-source_revision: 329ca4d
+source_revision: c6c9d03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

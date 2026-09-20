@@ -3,7 +3,7 @@ title: チーム自動化
 description: チーム内の反復自動化事例入口——トリガー、通知、承認、停止条件。
 locale: ja
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

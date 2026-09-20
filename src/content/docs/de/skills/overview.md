@@ -3,7 +3,7 @@ title: Skills-Überblick
 description: Mit SKILL.md wiederverwendbare Workflows an Codex vermitteln — einmal schreiben, bei Bedarf aufrufen.
 locale: de
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

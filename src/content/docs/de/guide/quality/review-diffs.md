@@ -3,10 +3,9 @@ title: Diffs prüfen
 description: Änderungen lesen und gezielte Fragen stellen.
 locale: de
 source_locale: zh-CN
-source_revision: 7dc8ee8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f7f953f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -33,6 +32,21 @@ Beim Lesen vor allem:
 4. Secrets oder Debug-Reste?
 
 Produktseitige Ansicht: [Diffs, Kommentare und Review](/de/guide/desktop-app/diffs-comments-and-review/)
+
+## Qualitätsprüfung von KI-generiertem Code
+
+Prüfe nicht nur, **welche Dateien** geändert wurden, sondern auch, ob die Änderung zum Projekt passt:
+
+| Prüfpunkt | Worauf achten? |
+|---|---|
+| Benennung | Drücken Variablen, Funktionen und Dateien ihre Absicht aus, statt überall `data`, `temp` oder `helper` zu verwenden? |
+| Funktionsgrenzen | Werden mehrere Verantwortlichkeiten in eine große Funktion gedrängt? |
+| Fehlerbehandlung | Liefert ein Fehler nützlichen Kontext, oder werden Ausnahmen verschluckt? |
+| Tests | Belegen neue Tests das Verhalten, statt nur die Implementierung zu ändern? |
+| Kommentare | Erklären sie das „Warum“, statt Code zu wiederholen? |
+| Vereinfachung | Wurden Abstraktionen eingeführt, die derzeit niemand braucht? |
+
+Für einen schnellen Review kannst du Codex bitten, seinen Diff anhand dieser Tabelle erneut zu prüfen und nur Risiken aufzulisten, ohne weiter Dateien zu ändern.
 
 ## Häufige Missverständnisse
 

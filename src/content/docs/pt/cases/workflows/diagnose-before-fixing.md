@@ -3,7 +3,7 @@ title: Diagnosticar antes de corrigir
 description: Problemas de produção e bugs teimosos — construa primeiro a cadeia de evidências, só depois intervir.
 locale: pt
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

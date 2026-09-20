@@ -1,26 +1,30 @@
 ---
-title: Explorar—Planear—Executar—Verificar
-description: Fluxo principal geral do Codex — quatro fases com checkpoints, mais estável do que «tudo de uma vez».
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Confrontado com as páginas verificadas do manual sobre planeamento, diagnóstico, definição de concluído, testes e AGENTS.md. Esta página limita-se ao fluxo de colaboração em quatro fases e aos seus pontos de controlo, sem opções de produto sujeitas a mudança."
+  checkedAt: "2026-07-26"
+title: "Explorar—planear—executar—verificar"
+description: "Ajuste a exploração, o planeamento, a execução e a verificação ao âmbito e à incerteza da tarefa, identificando as decisões que exigem uma pausa."
 locale: pt
 source_locale: zh-CN
-source_revision: ac26bee
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: "4a95760"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Este é o fluxo de trabalho predefinido recomendado por este manual — adequado desde «ainda não sei como fazer» até «pode fundir».
+Esta é a forma de organizar tarefas recomendada pelo manual, desde «ainda não sei como fazer» até «pronto para aceitação». Quatro fases não significam quatro aprovações. Uma tarefa pequena com âmbito claro pode avançar sem interrupções; espere por uma decisão quando a abordagem estiver por definir ou faltar uma autorização necessária. Comece pelos [níveis de tarefa](/pt/prompts/ask-for-a-plan/).
 
 ## Visão geral das quatro fases
 
 ```text
-① Explorar Explore   → Clarificar estado atual, âmbito e riscos
-② Planear Plan       → Passos, ficheiros, critérios de aceitação (tarefas grandes precisam da sua confirmação)
-③ Executar Execute   → Alterar código/documentação/configuração, commits pequenos
-④ Verificar Verify   → Testes, revisão do diff, confronto com a «definição de concluído»
+① Explorar Explore   → Perceber o estado atual, o âmbito e os riscos
+② Planear Plan       → Passos, ficheiros, critérios de aceitação e escolhas necessárias
+③ Executar Execute   → Alterar código, documentação ou configuração no âmbito autorizado
+④ Verificar Verify   → Testes, revisão do diff e confronto com a definição de concluído
 ```
 
-Não salte ①② e vá direto a ③ — isso vira facilmente «adivinhar a correção». Ver [diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/).
+Quando o estado atual não estiver claro, explore e planeie antes de corrigir por suposição. Uma gralha bem delimitada não precisa de quatro interações. Veja [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explorar
 
@@ -46,17 +50,17 @@ Com base na exploração anterior, apresente o plano: passos numerados, ficheiro
 Não escreva código até eu responder «executar conforme o plano».
 ```
 
-Tarefas grandes ou alterações de alto risco exigem confirmação prévia. Em tarefas pequenas, pode acordar «plano com no máximo 3 passos pode executar automaticamente» e registar em [AGENTS.md](/pt/guide/customization/agents-md/writing-effective-instructions/).
+O prompt acima limita expressamente o pedido ao plano, pelo que a execução tem de esperar. Se a implementação já estiver autorizada, peça antes um plano breve seguido de execução e verificação contínuas no âmbito acordado. A pausa depende da autorização, das escolhas necessárias e das permissões reais, não do número de passos do plano.
 
 ## ③ Executar
 
 **Objetivo:** Manter as alterações pequenas e reversíveis.
 
-- Focar um subobjetivo de cada vez
-- Preferir caminhos cobertos por testes
-- Se surgir algo fora do plano, **volte a ②** em vez de forçar
+- Concentrar-se num subobjetivo de cada vez
+- Privilegiar caminhos cobertos por testes
+- Para detalhes normais de implementação, atualizar o plano e continuar; se as premissas ou o âmbito mudarem, voltar a ② para decidir se é necessária uma nova decisão
 
-Frase de orientação: «Execute o passo 2; se precisar de alterar o plano, pare e explique primeiro.»
+Frase orientadora: «Conclua o trabalho no âmbito autorizado; se precisar de o ampliar, explique o impacto concreto e as opções».
 
 ## ④ Verificar
 
@@ -74,10 +78,10 @@ Listas relacionadas em [definir concluído](/pt/prompts/define-done/) e [correr 
 
 | Escala | Explorar | Planear | Executar | Verificar |
 |---|---|---|---|---|
-| Correção de typo | Pode omitir | 1 passo oral | Curto | lint |
-| Bug num único ficheiro | Leve | 3–5 passos | Médio | testes + diff |
-| Funcionalidade entre módulos | Obrigatório | Plano escrito + confirmação | Por fases | suíte completa + teste manual |
-| Incidente em produção | Diagnóstico primeiro | Plano de rollback primeiro | Passos mínimos | monitorização + retrospectiva |
+| Corrigir gralha | Conferir o texto-alvo | Pode ficar implícito | Curto | Rever o diff e verificar segundo as regras do projeto |
+| Bug num ficheiro | Leve | 3–5 passos | Médio | Testes + diff |
+| Funcionalidade entre módulos | Identificar dependências | Plano escrito; confirmar escolhas necessárias | Concluir por fases no âmbito autorizado | Testes segundo o impacto + revisão manual |
+| Incidente de produção | Diagnóstico primeiro | Plano de reversão primeiro | Passos mínimos | Monitorização + retrospetiva |
 
 ## Com o modelo de caso EPXV
 
@@ -88,10 +92,3 @@ A equipa pode escrever as quatro fases no [modelo de caso](/pt/cases/use-cases/c
 - Plano só na cabeça — a execução desvia-se
 - Verificar só se «parece que corre»
 - Exploração insuficiente — módulo errado alterado
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com as páginas já verificadas deste manual sobre planeamento, diagnóstico, definição de concluído, correr testes e `AGENTS.md`; o conteúdo limita-se à cadeia principal de colaboração em quatro fases e aos checkpoints, sem parâmetros de produto voláteis nem detalhes de entrada.  
-**Última verificação:** 2026-07-26

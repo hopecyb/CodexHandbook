@@ -3,7 +3,7 @@ title: 스펙 주도 작업
 description: 먼저 인수 가능한 스펙을 쓴 뒤 Codex가 계획대로 구현하게 합니다—요구가 명확한 인도 작업에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

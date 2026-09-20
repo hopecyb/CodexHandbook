@@ -1,21 +1,20 @@
 ---
-title: Manual de Codex
+title: Manual práctico de Codex y agentes de IA
 head:
   - tag: title
-    content: Manual de Codex
-description: Codex Handbook convierte fundamentos del producto, prompting, Skills y casos reales en métodos reutilizables para describir tareas, guiar la ejecución y verificar resultados.
+    content: Manual práctico de Codex y agentes de IA
+description: Un manual de agentes de IA centrado en Codex para convertir una colaboración exitosa en un método reutilizable, verificable y transferible para personas, creadores, desarrolladores y equipos.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: es
 source_locale: zh-CN
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Convierte ideas en resultados <br /> con Codex
-  tagline: De los fundamentos del producto y Prompts claros a Skills reutilizables y repasos de casos reales — convierte cada tarea en un método que puedas ejecutar, verificar y traspasar.
+  title: Usa Codex <br /> para hacer reutilizable una colaboración exitosa
+  tagline: Desde definir la tarea hasta ejecutarla, verificarla, revisarla y entregarla, este manual te ayuda a convertir ideas en resultados fiables.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,90 +36,90 @@ hero:
         </div>
       </div>
   actions:
-    - text: Empieza aquí
+    - text: Crear un informe semanal verificable
       icon: right-arrow
+      link: /es/cases/analyze-a-spreadsheet/
+    - text: Empieza aquí
+      variant: secondary
       link: /es/guide/start-here/
-    - text: Ver en GitHub
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="Posicionamiento del manual">
-	<p>Codex es mucho más que una herramienta que modifica código. Puede ayudarte a entender documentos, generar contenido, construir prototipos, tratar archivos, revisar cambios, automatizar tareas repetitivas y servir como compañero de ejecución en la colaboración en equipo.</p>
-	<p>Este manual se organiza en cuatro módulos — guía del producto, prompting, Skills y casos reales — para que lectores de todos los niveles encuentren su siguiente paso.</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>Cuatro módulos</p>
-		<h2 id="modules-heading">Empieza por módulo</h2>
+		<p>Elige una tarea y llévate un resultado</p>
+		<h2 id="tasks-heading">¿Qué quieres terminar hoy?</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/es/guide/">
-			<strong>Guía Codex</strong>
-			<span>Instala los clientes, entiende los Permisos y completa tu primera Tarea.</span>
+	<div class="path-grid">
+		<a class="path-card" href="/es/cases/analyze-a-spreadsheet/">
+			<strong>Crear un informe semanal de ventas</strong>
+			<span>Materiales completos · Script de referencia ejecutado y comprobado. Practica devoluciones, deduplicación y comparaciones entre periodos con 46 filas sintéticas; entrega informe y registro de conciliación.</span>
 		</a>
-		<a class="module-card" href="/es/prompts/">
-			<strong>Prompts</strong>
-			<span>Aclara objetivos, Contexto, límites y criterios de aceptación — con plantillas copiables.</span>
+		<a class="path-card" href="/es/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>Corregir un bug y superar las pruebas</strong>
+			<span>Ejercicio completo · Incluye un registro histórico de verificación. Parte de una prueba fallida y entrega la corrección mínima, resultados de regresión y nota de revisión.</span>
 		</a>
-		<a class="module-card" href="/es/skills/">
-			<strong>Skills</strong>
-			<span>Empaqueta métodos repetibles; amplía con Plugins, MCP y Hooks.</span>
-		</a>
-		<a class="module-card" href="/es/cases/">
-			<strong>Casos</strong>
-			<span>Aprende de tareas reales: corrección de bugs, redacción, automatización y más.</span>
+		<a class="path-card" href="/es/cases/write-an-article/">
+			<strong>Escribir un artículo</strong>
+			<span>Materiales completos · Fuentes comprobadas por el autor. Con tres fuentes sintéticas, practica citas de hechos, versiones contradictorias y revisiones; entrega artículo y tabla de hechos.</span>
 		</a>
 	</div>
+	<p>Informe semanal de referencia: importe neto <strong>¥4,644.75</strong>, con devoluciones y anomalías explicadas. <a href="/downloads/sales-weekly-report/summary.md">Ver el informe de referencia</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Descargar todos los materiales</a>. Las cifras proceden de datos sintéticos. Duración estimada de 30 a 45 minutos; no se ha cronometrado con lectores.</p>
+	<p><a href="/es/cases/">Ver casos y materiales por tarea</a> · <a href="/es/guide/learning-paths/">Aprender según tu rol</a> · <a href="/es/guide/reference/">Consultar la referencia</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>Elige tu recorrido</p>
-		<h2 id="paths-heading">Empieza según tu objetivo</h2>
+		<p>Elige tu ruta</p>
+		<h2 id="paths-heading">Empieza por tu objetivo</h2>
 	</div>
 	<div class="path-grid">
 		<a class="path-card" href="/es/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>Principiante</strong>
-			<span>Conoce Codex, completa tu primera Tarea y aprende a revisar y deshacer resultados.</span>
+			<span>Con un mismo paquete descargable, crea un aviso de actividad, revisa errores y recupera una copia. No requiere programar; cada paso tiene criterios de aceptación.</span>
 		</a>
 		<a class="path-card" href="/es/guide/learning-paths/creator/">
 			<strong>Creador</strong>
-			<span>Guías de inicio y plantillas para investigación, redacción, imágenes, presentaciones y publicación. (Más pasos en camino.)</span>
+			<span>Con un paquete de fuentes, crea una tabla de hechos, un artículo y una presentación editable de ocho diapositivas; guarda después una consigna reutilizable. Incluye descargas y controles por pasos.</span>
 		</a>
 		<a class="path-card" href="/es/guide/learning-paths/developer/">
 			<strong>Desarrollador</strong>
-			<span>Entiende el código, implementa funciones, ejecuta pruebas, revisa cambios y gestiona tareas complejas. (Más pasos en camino.)</span>
+			<span>Comprende un bug de carrito, conserva pruebas fallidas y correctas, revisa una solución mínima y escribe el traspaso. Incluye tres plantillas rellenables.</span>
 		</a>
 		<a class="path-card" href="/es/guide/learning-paths/team/">
 			<strong>Equipo</strong>
-			<span>Instrucciones compartidas, límites de Permiso, estándares de calidad y automatización de equipo. (Más pasos en camino.)</span>
+			<span>Durante diez días laborables, haz un piloto pequeño, revisa muestras y ensaya la reversión antes de decidir si ampliar. Incluye seis plantillas rellenables.</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>Mapa de capacidades</p>
-		<h2 id="map-heading">Capacidades que dominarás paso a paso</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>Busca directamente el problema</p><h2 id="lookup-heading">Encuentra el siguiente paso</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/es/guide/reference/troubleshooting/"><strong>Falló la instalación, el acceso o la ejecución</strong><span>Encuentra el diagnóstico por síntoma o sigue un ejercicio de recuperación con registros.</span></a>
+		<a class="path-card" href="/es/guide/reference/"><strong>Consulta comandos, permisos y términos</strong><span>Abre el índice de referencia para comprobar el alcance y las fuentes.</span></a>
+		<a class="path-card" href="/es/guide/verification/"><strong>Decide si un resultado está terminado</strong><span>Comprueba hechos, archivos y pruebas; anota lo que aún no se ha confirmado.</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> Escribir Prompts de Tarea con objetivos claros, límites explícitos y resultados verificables</li>
-		<li><span>02</span> Gestionar archivos, Contexto, terminal, navegador y materiales externos</li>
-		<li><span>03</span> Ampliar Codex con Skills, Plugins, MCP y Hooks</li>
-		<li><span>04</span> Organizar tareas largas, colaboración multi-Agent, retrospectivas y traspasos</li>
-		<li><span>05</span> Establecer seguridad, Verificación y gobernanza en contextos personales y de equipo</li>
-	</ul>
 </section>
 
-<AboutHandbook title="Colaboración abierta">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>Llévate recursos reutilizables</p>
+		<h2 id="assets-heading">Termina de leer y empieza a hacer</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/es/prompts/templates/"><strong>Plantillas de prompts para tareas</strong><span>Reutilízalas según la tarea: comprender, investigar, crear, editar, diagnosticar o automatizar.</span></a>
+		<a class="path-card" href="/es/skills/examples/"><strong>Ejemplos de Skills</strong><span>Empieza por ejemplos legibles y examina entradas, salidas, límites y pruebas.</span></a>
+		<a class="path-card" href="/es/cases/use-cases/case-study-template/"><strong>Plantilla de revisión de casos</strong><span>Anota objetivos, ejecución, controles humanos, verificación, manejo de errores y próxima mejora.</span></a>
+		<a class="path-card" href="/es/guide/verification/"><strong>Lista de aceptación</strong><span>Convierte «parece terminado» en un resultado revisable, reversible y transferible.</span></a>
+	</div>
+</section>
 
-El manual se redacta en chino simplificado como idioma fuente. Seguirán versiones en chino tradicional, inglés, francés, japonés, coreano, español y otras. El contenido se etiqueta con estado, fechas de verificación y productos aplicables — para que sepas qué puedes seguir directamente y qué merece una segunda lectura.
+<AboutHandbook title="Fuentes, actualizaciones y colaboración">
 
-[Explorar rutas de aprendizaje](/es/guide/learning-paths/)
+Este manual lo mantienen colaboradores de código abierto y su lengua fuente es el chino simplificado. Se distinguen descripciones del producto, materiales didácticos diseñados por autores y registros de ejecución reales. Que un script funcione no prueba la capacidad del modelo ni que los lectores completen el ejercicio. Cada página explica el alcance de su verificación.
+
+[Actualizaciones](/es/guide/updates/) · [Política de versiones y verificación](/es/guide/start-here/handbook-version-policy/) · [Contribuir](/es/guide/contributing/)
 
 </AboutHandbook>

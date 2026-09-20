@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / GitHub Actions"
+  basis: "已对照当前官方 Non-interactive mode 与 Codex GitHub Action 建议，修正 `--cd`，并把 API key 所在 job 与仓库写权限分离作为默认安全边界。"
+  checkedAt: "2026-08-26"
 title: 脚本与流水线
 description: 在 shell、Makefile 与 GitHub Actions 中编排 codex exec——可重复、可审计。
 sidebar:
@@ -136,12 +141,3 @@ GitHub Actions 优先使用官方 `openai/codex-action`，不要把 API key 设�
 
 ## 参考来源
 - OpenAI Codex + GitHub 集成文档
----
-
-**状态：** verified
-
-**适用产品：** CLI / GitHub Actions
-
-**核验依据：** 已对照当前官方 Non-interactive mode 与 Codex GitHub Action 建议，修正 `--cd`，并把 API key 所在 job 与仓库写权限分离作为默认安全边界。
-
-**最近核验：** 2026-08-26

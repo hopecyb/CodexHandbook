@@ -3,7 +3,7 @@ title: Delegate and follow up
 description: Start an independently runnable Cloud task and use the same chat to correct direction and acceptance results.
 locale: en
 source_locale: zh-CN
-source_revision: 681ea7d
+source_revision: 38b322f
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

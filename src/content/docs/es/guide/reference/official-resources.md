@@ -3,7 +3,7 @@ title: Recursos oficiales
 description: Enlaces a documentación y entradas oficiales de OpenAI / Codex.
 locale: es
 source_locale: zh-CN
-source_revision: c7126c4
+source_revision: 5a584b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,0 +1,10 @@
+{
+  "phase": "before",
+  "command": [
+    "<PYTHON>",
+    "<WORK>/02-unmapped-citation/source-backed-writer/scripts/check_article.py"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "FAIL: Unmapped or unused claim ID\n"
+}

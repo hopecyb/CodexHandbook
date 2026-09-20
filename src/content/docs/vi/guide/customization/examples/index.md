@@ -3,7 +3,7 @@ title: Ví dụ
 description: Hiểu cấu hình và AGENTS.md nên viết thế nào qua ví dụ thật, không chỉ xem nguyên tắc trừu tượng.
 locale: vi
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

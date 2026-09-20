@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "slide_count": 8,
+  "native_text_runs": [
+    5,
+    8,
+    15,
+    10,
+    9,
+    7,
+    15,
+    10
+  ],
+  "sha256": {
+    "solution/source-backed-writing.pptx": "050b9a105e77e7728dc34cd7dcd08ea1bc88a4f9e6bc221d016a0dc66bf25eb0",
+    "solution/source-backed-writing.pdf": "7f8214133c682231a4288b78af5fc53c479be98e943ead2e6aba000ce5a5d684",
+    "previews/slide-01.png": "d69660e19cbe2f83bb8d45048add7d7d43dc1357de9b351eb0b364dcc7527d61",
+    "previews/slide-02.png": "0cd98a1cfc5098ed972bcd6d109f2052b350c28523b2bef6f2a5229212e621d2",
+    "previews/slide-03.png": "6bc16f4a379d221036d224f6b0178ca0e4c39f1131e18633c7922cdd823fe67c",
+    "previews/slide-04.png": "2d8a3d42a8f710b121c69619fcccf40526db6ea1e5751bf5b8338bedb2a771cd",
+    "previews/slide-05.png": "9f129fc00ebc4bfd2a4650d076ba74a0dd7938273d77a7a7662a4221a3552486",
+    "previews/slide-06.png": "a3dda4332f31d74afc4066cabef8bf7d4a035971707ecf7dd2e9bc9c40aa5703",
+    "previews/slide-07.png": "820cc4c4e0107865a275af8396f23f1dbe920a105175d4df57309d46112ea966",
+    "previews/slide-08.png": "06d1211c408f0a64d86f80a47c2170e3388a169e6acac3b9101b35be913122b8"
+  }
+}

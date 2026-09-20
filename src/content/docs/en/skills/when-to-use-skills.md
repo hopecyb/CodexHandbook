@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help \"Skills in ChatGPT\" confirms Skills are reusable, shareable workflows; current Codex runtime also matches skills by name and description. This page is selection guidance, not volatile UI."
+  checkedAt: "2026-07-26"
 title: When to use Skills
 description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ When you first encounter Skills, a common question is: is this worth packaging a
 
 If everything becomes a Skill, things get heavy; if you never capture repeatable flows, you keep re-explaining the same steps by hand. This page helps you decide when to solidify a workflow.
 
-# When to use Skills
 
 ## Good candidates for a Skill
 
@@ -81,9 +85,3 @@ Skills built this way are sturdier because they come from real repetition, not u
 Skills are best for flows that repeat, need consistency, and you do not want to re-explain every time.
 
 For extension choice, see [Choosing an extension method](/en/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/en/cases/workflows/turn-a-workflow-into-a-skill/).
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills are reusable, shareable workflows; current Codex runtime also matches skills by name and description. This page is selection guidance, not volatile UI.  
-**Last verified:** 2026-07-26

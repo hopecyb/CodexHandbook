@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "本リポジトリ現行 developer-platform 章構造、ナビ入口、関連 CLI/CI/SDK 説明ページを相互確認。「開発者プラットフォームは工程化統合向け」という安定した分担のみ。具体パラメータやランタイム挙動は宣言しない。"
+  checkedAt: "2026-07-26"
 title: 開発者プラットフォーム
 description: SDK、非対話 CLI、CI/CD で Codex をエンジニアリング体系に組み込む——統合開発者向け。
 sidebar:
   order: 50
 locale: ja
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 **開発者プラットフォーム**は Codex を**製品化**してパイプラインに入れたい人向けです：カスタムアプリ、一括レビュー、リリースゲート、内部開発者ポータル。日常の「prompt でバグ修正」は [クイックスタート](/ja/guide/getting-started/) から始めてください。
@@ -40,13 +44,15 @@ reviewed_at: 2026-08-26
 
 ```text
 開発者システム（CI / 内部プラットフォーム / SaaS）
-        ↓ API または CLI
-Codex（モデル + ツール + 方針）
+        ↓ ローカルSDK / CLI、またはApp Serverクライアント
+制御された実行環境（モデル呼び出し + ツール + ポリシー）
         ↓
 Git プロバイダ / チケット / アーティファクトリポジトリ
 ```
 
 ## 設計原則
+
+Codex SDKはローカルAgentを実行します。独自のリモートrunner、キュー、HTTPコールバックは統合システム側の設計です。この図から統一されたホスト型クラウドタスクAPIがあると推測しないでください。根拠と最小限の呼び出し例は[SDKの概要](/ja/guide/developer-platform/sdk-overview/)を参照してください。
 
 1. **冪等と再試行可能**：同一 PR の複数レビュー結果を比較可能に
 2. **最小権限**：CI Token は読み取り専用またはリポジトリ限定
@@ -83,9 +89,3 @@ Git プロバイダ / チケット / アーティファクトリポジトリ
 
 ## 参考
 - OpenAI Codex API / SDK 公式ドキュメント
----
-
-**状態：** verified  
-**対象製品：** API / CLI / Cloud  
-**検証根拠：** 本リポジトリ現行 developer-platform 章構造、ナビ入口、関連 CLI/CI/SDK 説明ページを相互確認。「開発者プラットフォームは工程化統合向け」という安定した分担のみ。具体パラメータやランタイム挙動は宣言しない。  
-**最終検証：** 2026-07-26

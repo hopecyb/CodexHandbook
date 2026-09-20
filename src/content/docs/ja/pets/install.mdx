@@ -3,15 +3,21 @@ title: Codex Pet をインストールする
 description: "Codex Pets のインストールフォルダ、反映フロー、安全境界を理解します。"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: e0d8ef4
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 730c599
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "形式と復旧の境界を追記しましたが、このサイトでは特定のクライアントとPetパッケージを使ったインストール、アニメーション再生、削除をまだ実測していません。ディレクトリとメニューは対象バージョンで確認してください。"
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Codex Pet をインストールする
+このサイトでは、特定のクライアントとPetパッケージの互換性をまだ確認していません。まずバージョンと入手元を記録し、[互換性と復旧の記録](/ja/guide/reference/resource-compatibility/)で実際の結果を確かめてください。図は構造を説明するだけで、すべてのバージョンに共通する形式の仕様ではありません。
+
 
 Codex Pet のインストールとは、クライアントが読めるリソースパッケージを決められたフォルダに置くことです。クライアントは起動時または設定更新時にそのフォルダを読み、メタデータを見つけ、対応するアニメーション素材を読み込みます。
 
@@ -32,7 +38,7 @@ Pet は通常、少なくとも二つのファイルを含むローカルフォ�
 1. パッケージを取得する：少なくとも `pet.json` と spritesheet が含まれることを確認します。
 2. Pets フォルダに置く：一般的な場所は `~/.codex/pets/<pet-id>/` です。
 3. クライアントに再読み込みさせる：Codex を再起動するか、Pets 設定で更新します。
-4. UI で選択する：通常は Settings -> Appearance -> Pets にあります。
+4. 現在のクライアントでPetの選択画面を探します。メニュー名と場所はバージョンにより異なります。見つからなければ、そのバージョンがPetsに対応しているか先に確認してください。
 
 Windows では、ユーザーディレクトリ内の `.codex\pets\<pet-id>\` が一般的です。`CODEX_HOME` を設定している場合は、現在のクライアントが表示する Pets フォルダに従ってください。
 
@@ -46,13 +52,13 @@ Windows では、ユーザーディレクトリ内の `.codex\pets\<pet-id>\` �
 - Codex を再起動したか、Pets 設定を更新したか。
 - Windows、WSL、またはカスタム `CODEX_HOME` が別の場所を指していないか。
 
-多くの場合、ペット自体が壊れているのではなく、クライアントが想定場所で完全なパッケージを見つけられていません。
+パスとファイルに問題がなければ、形式のバージョン、クライアントの対応状況、実際の読み込みエラーも調べてください。
 
 ## 更新と削除
 
 更新前に古いフォルダをバックアップします。新しいパッケージが使えることを確認してから、`pet.json` と spritesheet を置き換えます。
 
-削除する場合は `~/.codex/pets/<pet-id>/` を消し、Codex を再起動するか Pets 設定を更新します。
+独自Petを無効にする前に、内蔵Petへ切り替えるか表示をオフにします。その後、独自パッケージをPetsの検索対象外にあるバックアップ先へ移動します。更新または再起動して表示されなくなったことを確認してください。復元する場合は元のパッケージを戻し、再度検証します。バックアップが不要と確認できてから削除してください。この手順は、このサイトで記録したクライアントバージョンではまだ実測していません。
 
 ## 安全上の注意
 

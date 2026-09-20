@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明文件、命令与工具的概念区别及风险判断方法；站内链接与示例表述已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 文件、工具与命令
 description: 说明 Codex 如何读写文件、运行命令和使用工具。
 sidebar:
@@ -92,10 +97,3 @@ Codex 不只是会“说”，它会通过文件、命令和工具真的动手�
 1. [权限与审批](/guide/foundations/permissions-and-approvals/)
 2. [沙箱与网络](/guide/foundations/sandbox-and-network/)
 3. [运行第一次任务](/guide/getting-started/run-your-first-task/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明文件、命令与工具的概念区别及风险判断方法；站内链接与示例表述已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: Web と Cloud（概要）
 description: リポジトリ接続、再現可能な環境、レビュー、Pull Request までのリモートタスクの流れを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 5861c62
+source_revision: 8fe7bea
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

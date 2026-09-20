@@ -3,7 +3,7 @@ title: 進捗と誘導
 description: 実行途中で方向がずれたとき、短い指示で Codex を正しい軌道に戻す。
 locale: ja
 source_locale: zh-CN
-source_revision: 6813a5b
+source_revision: c9ea3be
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

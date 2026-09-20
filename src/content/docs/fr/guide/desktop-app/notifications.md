@@ -3,7 +3,7 @@ title: Notifications et activité
 description: Configurez les alertes pour les tâches terminées, les demandes d'autorisation et les questions en attente de réponse.
 locale: fr
 source_locale: zh-CN
-source_revision: 0869db2
+source_revision: 4a1c672
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

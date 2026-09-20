@@ -3,7 +3,7 @@ title: 워크플로를 Skill로 정착하기
 description: 세 번째 반복되는 흐름은 Skill로 쓸 가치가 있습니다—트리거, 설명, 인수를 하나로 묶습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

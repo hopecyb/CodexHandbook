@@ -3,7 +3,7 @@ title: 출처가 있는 리서치
 description: Codex로 검색·비교·사실 검증을 하며—추적 가능한 출처와 결론을 산출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a9ff7a5
+source_revision: a075687
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

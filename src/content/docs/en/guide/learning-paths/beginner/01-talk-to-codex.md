@@ -1,38 +1,51 @@
 ---
-title: Talk to Codex
-description: Practice stating goals and constraints in natural language.
-locale: en
-source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-25
-reviewed_at: 2026-08-26
+title: "Talk to Codex"
+description: "Prepare the same practice materials and begin with a read-only understanding of the files and unknowns."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 10
-source_revision: 3648830
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "The fixed materials and author reference are complete; file operations in a temporary directory were run, but no independent model or reader completion test has been performed."
+  evidence:
+    - label: "Author’s file operation record"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/en/guide/learning-paths/beginner/"
+  label: "Beginner path and materials"
+next:
+  link: "/en/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Work with files"
+locale: en
+source_locale: zh-CN
+source_revision: 827a5d2
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Prepare the materials
 
-## Goal for this step
+[Download the complete practice package](/downloads/first-project/first-project-1.0.0.zip). After unzipping it, copy the entire `starter` folder to a new folder named `work`, then have Codex open `work`. It contains only three files—`facts.md`, `notice.md`, and `private-note.md`—all synthetic teaching materials.
 
-Use complete sentences to explain **what you want** and **what you do not want**—not a single vague word.
+Keep the original `starter`. Do not use `references`, which contains the author’s answers, as input for this step. You do not need Git, a terminal, or extra dependencies yet; opening files in an editor is enough.
 
-## Exercise
-
-Tell your practice project:
+## Send the first task
 
 ```text
-In three sentences, explain which files are in the current folder and what each file roughly does.
-Do not modify any files.
+Read only facts.md, notice.md, and private-note.md in the current directory.
+In three sentences, explain each file's purpose, then identify what remains undecided in the event information.
+Do not add, modify, or delete files. Do not access the network, publish, or send content.
 ```
 
-## What you learn
+This is explicitly a read-only exercise, so the read and write boundary is stated. Authorize other tasks according to their actual intent; do not append this sentence mechanically to every request.
 
-- Read-only tasks still need an explicit “do not modify”
-- Vague requests get vague answers
+## Completion criteria
 
-Next: [Work with files](/en/guide/learning-paths/beginner/02-work-with-files/) · Concepts: [Prompt basics](/en/prompts/basics/)
+The answer correctly distinguishes the source of facts, the notice to be edited, and the private note, and identifies that the registration method is unknown. All three files still match the originals in `starter`, with no files added or deleted.
 
----
+If in doubt, open the files to check directly, then consult the [author’s file guide](/downloads/first-project/references/folder-map.md). Different wording is fine; inventing a file’s purpose or a registration method is not.
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+[Practice package and preparation guide](/en/guide/learning-paths/beginner/)

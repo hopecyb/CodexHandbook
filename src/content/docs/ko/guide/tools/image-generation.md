@@ -3,7 +3,7 @@ title: 이미지 생성
 description: Codex 작업에서 이미지를 생성·편집 — 프롬프트, 형식, 검증.
 locale: ko
 source_locale: zh-CN
-source_revision: 67d0eb7
+source_revision: ea275fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

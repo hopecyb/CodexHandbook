@@ -1,0 +1,306 @@
+{
+  "checked_at_utc": "2026-09-18T02:28:33.649728+00:00",
+  "reviewer": "primary agent; not blind; no human reviewer",
+  "runs": [
+    {
+      "run_id": "run-01",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "csv_fields_and_all_rows_match": true,
+        "included_rows": 44,
+        "prior_cny": "2483.25",
+        "current_cny": "4644.75"
+      }
+    },
+    {
+      "run_id": "run-02",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "resolving_local_links": [
+          {
+            "file": "output/拾页1.2介绍.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/拾页1.2介绍.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/拾页1.2介绍.md",
+            "target": "../input/03-changelog.md"
+          }
+        ],
+        "note": "Existence only; claim support and uncertainty are reviewed separately."
+      }
+    },
+    {
+      "run_id": "run-03",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "original_tests_unchanged": true,
+        "node_version": "v22.16.0",
+        "reviewer_executions": [
+          {
+            "label": "original",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 1,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.37425\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.0735\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nnot ok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.358833\n  type: 'test'\n  location: '/private<REVIEW_TMP>/cart.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    -360 !== 36\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 36\n  actual: -360\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///private<REVIEW_TMP>/cart.test.js:14:9)\n    Test.runInAsyncScope (node:async_hooks:214:14)\n    Test.run (node:internal/test_runner/test:1047:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:744:18)\n    Test.postRun (node:internal/test_runner/test:1173:19)\n    Test.run (node:internal/test_runner/test:1101:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 42.688083\n",
+            "stderr": ""
+          },
+          {
+            "label": "corrected",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 0,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.33\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.053375\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.052375\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 40.827167\n",
+            "stderr": ""
+          }
+        ],
+        "note": "These are later reviewer runs, not evidence the experiment agent ran the original failing test."
+      }
+    },
+    {
+      "run_id": "run-04",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "csv_fields_and_all_rows_match": true,
+        "included_rows": 44,
+        "prior_cny": "2483.25",
+        "current_cny": "4644.75"
+      }
+    },
+    {
+      "run_id": "run-05",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "resolving_local_links": [
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/open-questions.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/open-questions.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/open-questions.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/open-questions.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/open-questions.md",
+            "target": "../input/02-interview.md"
+          }
+        ],
+        "note": "Existence only; claim support and uncertainty are reviewed separately."
+      }
+    },
+    {
+      "run_id": "run-06",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "original_tests_unchanged": true,
+        "node_version": "v22.16.0",
+        "reviewer_executions": [
+          {
+            "label": "original",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 1,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.311084\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.057542\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nnot ok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.327041\n  type: 'test'\n  location: '/private<REVIEW_TMP>/cart.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    -360 !== 36\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 36\n  actual: -360\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///private<REVIEW_TMP>/cart.test.js:14:9)\n    Test.runInAsyncScope (node:async_hooks:214:14)\n    Test.run (node:internal/test_runner/test:1047:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:744:18)\n    Test.postRun (node:internal/test_runner/test:1173:19)\n    Test.run (node:internal/test_runner/test:1101:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 39.8685\n",
+            "stderr": ""
+          },
+          {
+            "label": "corrected",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 0,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.371625\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.079542\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.0555\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 40.667209\n",
+            "stderr": ""
+          }
+        ],
+        "note": "These are later reviewer runs, not evidence the experiment agent ran the original failing test."
+      }
+    },
+    {
+      "run_id": "run-07",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "csv_fields_and_all_rows_match": true,
+        "included_rows": 44,
+        "prior_cny": "2483.25",
+        "current_cny": "4644.75"
+      }
+    },
+    {
+      "run_id": "run-08",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "resolving_local_links": [
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/fact-table.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/introduction.md",
+            "target": "../input/03-changelog.md"
+          },
+          {
+            "file": "output/unresolved.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/unresolved.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/unresolved.md",
+            "target": "../input/03-changelog.md"
+          }
+        ],
+        "note": "Existence only; claim support and uncertainty are reviewed separately."
+      }
+    },
+    {
+      "run_id": "run-09",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "original_tests_unchanged": true,
+        "node_version": "v22.16.0",
+        "reviewer_executions": [
+          {
+            "label": "original",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 1,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.329417\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.052083\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nnot ok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.336375\n  type: 'test'\n  location: '/private<REVIEW_TMP>/cart.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    -360 !== 36\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 36\n  actual: -360\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///private<REVIEW_TMP>/cart.test.js:14:9)\n    Test.runInAsyncScope (node:async_hooks:214:14)\n    Test.run (node:internal/test_runner/test:1047:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:744:18)\n    Test.postRun (node:internal/test_runner/test:1173:19)\n    Test.run (node:internal/test_runner/test:1101:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 40.485042\n",
+            "stderr": ""
+          },
+          {
+            "label": "corrected",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 0,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.459417\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.061917\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.047709\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 43.682459\n",
+            "stderr": ""
+          }
+        ],
+        "note": "These are later reviewer runs, not evidence the experiment agent ran the original failing test."
+      }
+    },
+    {
+      "run_id": "run-10",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "csv_fields_and_all_rows_match": true,
+        "included_rows": 44,
+        "prior_cny": "2483.25",
+        "current_cny": "4644.75"
+      }
+    },
+    {
+      "run_id": "run-11",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "resolving_local_links": [
+          {
+            "file": "output/shiye-1.2-introduction.md",
+            "target": "../input/01-product.md"
+          },
+          {
+            "file": "output/shiye-1.2-introduction.md",
+            "target": "../input/02-interview.md"
+          },
+          {
+            "file": "output/shiye-1.2-introduction.md",
+            "target": "../input/03-changelog.md"
+          }
+        ],
+        "note": "Existence only; claim support and uncertainty are reviewed separately."
+      }
+    },
+    {
+      "run_id": "run-12",
+      "artifact_check": "pass",
+      "inputs_and_task_unchanged": true,
+      "evidence": {
+        "original_tests_unchanged": true,
+        "node_version": "v22.16.0",
+        "reviewer_executions": [
+          {
+            "label": "original",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 1,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.311792\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.054875\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nnot ok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.320958\n  type: 'test'\n  location: '/private<REVIEW_TMP>/cart.test.js:13:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    \n    -360 !== 36\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 36\n  actual: -360\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (file:///private<REVIEW_TMP>/cart.test.js:14:9)\n    Test.runInAsyncScope (node:async_hooks:214:14)\n    Test.run (node:internal/test_runner/test:1047:25)\n    Test.processPendingSubtests (node:internal/test_runner/test:744:18)\n    Test.postRun (node:internal/test_runner/test:1173:19)\n    Test.run (node:internal/test_runner/test:1101:12)\n    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 2\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 43.885917\n",
+            "stderr": ""
+          },
+          {
+            "label": "corrected",
+            "command": "node --test cart.test.js",
+            "cwd": "temporary copy with original tests",
+            "exit_code": 0,
+            "stdout": "TAP version 13\n# Subtest: returns zero for an empty cart\nok 1 - returns zero for an empty cart\n  ---\n  duration_ms: 0.316958\n  type: 'test'\n  ...\n# Subtest: adds line totals when there is no discount\nok 2 - adds line totals when there is no discount\n  ---\n  duration_ms: 0.051458\n  type: 'test'\n  ...\n# Subtest: applies a percentage discount\nok 3 - applies a percentage discount\n  ---\n  duration_ms: 0.042208\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 42.624\n",
+            "stderr": ""
+          }
+        ],
+        "note": "These are later reviewer runs, not evidence the experiment agent ran the original failing test."
+      }
+    }
+  ]
+}

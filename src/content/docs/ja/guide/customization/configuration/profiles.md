@@ -3,7 +3,7 @@ title: 設定 Profile
 description: 独立した設定ファイルを使い、Codex CLI の基本設定に名前付きの設定一式を重ねます。
 locale: ja
 source_locale: zh-CN
-source_revision: 7043ada
+source_revision: 6ab30c5
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -3,7 +3,7 @@ title: "AGENTS.md dans un monorepo"
 description: Modèles d'exemple pour placer les instructions projet, la portée et les commandes de test dans une structure multi-paquets mono-dépôt.
 locale: fr
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

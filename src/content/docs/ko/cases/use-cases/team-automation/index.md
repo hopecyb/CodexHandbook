@@ -3,7 +3,7 @@ title: 팀 자동화
 description: 팀 내 반복 작업 자동화 사례 진입점입니다. 트리거 조건, 알림, 승인, 중지 조건을 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 制約を定義する
 description: 変更可能範囲、スタイル、禁止事項を限定する。
 locale: ja
 source_locale: zh-CN
-source_revision: 617fa41
+source_revision: 0ca4700
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

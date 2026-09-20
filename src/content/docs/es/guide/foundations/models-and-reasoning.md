@@ -3,10 +3,9 @@ title: Modelos y Razonamiento
 description: Factores a considerar al elegir modelo e intensidad de Razonamiento.
 locale: es
 source_locale: zh-CN
-source_revision: 001ea32
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0cbc9dc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 90
 ---
@@ -15,7 +14,7 @@ Los modelos disponibles y los niveles de «Razonamiento / pensamiento» cambian 
 
 - **Dificultad de la Tarea**: reescritura sencilla frente a decisiones de arquitectura en varios archivos
 - **Latencia y coste**: más intensidad de Razonamiento suele ser más lento y más caro
-- **Verificabilidad**: cuanto más difícil la Tarea, más hay que exigir plan y pruebas
+- **Verificabilidad**: en tareas complejas, define criterios de aceptación claros y planifica y verifica según haga falta.
 
 La primera vez que ves «modelo», «intensidad de Razonamiento» o «nivel de pensamiento», mucha gente pregunta: ¿cuanto más alto, mejor?
 
@@ -36,13 +35,9 @@ Quédate con esto: una Tarea simple y una compleja no siempre encajan en el mism
 No necesariamente.  
 Si la Tarea es solo cambiar una frase de copy o completar un párrafo pequeño, una intensidad demasiado alta puede ser solo más lenta y más cara, y no necesariamente más útil.
 
-### 2. ¿Con más Razonamiento se puede verificar menos?
+### 2. ¿Con más razonamiento se puede verificar menos?
 
-Cuanto más compleja la Tarea, más conviene:
-
-- pedir un plan primero
-- ejecutar pruebas
-- mirar el Diff
+Adapta la verificación al resultado: para código, revisa las pruebas y el diff; para artículos, contrasta las afirmaciones con sus fuentes; para hojas de cálculo, comprueba las reglas de cálculo. Planifica primero cuando debas valorar distintas opciones. No conviertas una pausa en cada paso en la norma.
 
 ### 3. ¿La elección de modelo solo importa a los expertos?
 
@@ -62,9 +57,4 @@ Lo más importante es juzgar: si esta Tarea merece el tiempo y el coste extra de
 
 Este handbook no se ata a un nombre comercial de modelo concreto. Usa la lista actual de tu cliente y [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** La documentación actual de modelos de OpenAI y las entradas de Codex/desarrolladores siguen tratando la elección de modelo, velocidad/coste y diferencias de capacidad como elementos configurables; esta página no se ata a un modelo concreto ni a niveles fijos, solo conserva el principio estable de sopesar según complejidad de la Tarea, latencia/coste y verificabilidad.  
-**Última verificación:** 2026-07-26
+Para registrar esta decisión, consulta [Uso, tiempo y elección del modelo](/guide/quality/usage-time-and-model-choice/). Esa página, actualmente disponible en chino, separa el cupo de la suscripción, el coste de API, la espera y el trabajo humano de revisión.

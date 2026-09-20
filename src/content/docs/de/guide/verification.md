@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die OpenAI-Developers-Startseite betont weiterhin Bau, Test, Review und Lieferung von Änderungen mit Codex; diese Seite zerlegt Überprüfung in Diff-Prüfung, Tests, Quellenvalidierung und Fertig-Definition und wurde mit den Qualitätskapiteln der Site abgeglichen."
+  checkedAt: "2026-07-26"
 title: Überprüfung
 description: "Diffs prüfen, Tests ausführen, Quellen validieren und Fertigkriterien definieren."
 locale: de
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 17
 ---
 
-# Überprüfung
 
 Der häufigste Anfängerfehler beim ersten Codex-Einsatz: **„fertig“ zu glauben, nur weil es „fertig“ sagt**.
 
@@ -96,10 +100,3 @@ Unklar, womit starten? Standard: [Fertig-Definition](/de/guide/quality/definitio
 Überprüfung bestätigt: Dieses Ergebnis ist nutzbar, vertrauenswürdig und abgabefähig.
 
 Wie Abnahmekriterien im Prompt stehen: [Fertigkriterien definieren](/de/prompts/define-done/). End-to-End-Fälle: [Praxisbeispiele](/de/cases/).
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Die OpenAI-Developers-Startseite betont weiterhin Bau, Test, Review und Lieferung von Änderungen mit Codex; diese Seite zerlegt Überprüfung in Diff-Prüfung, Tests, Quellenvalidierung und Fertig-Definition und wurde mit den Qualitätskapiteln der Site abgeglichen.  
-**Zuletzt überprüft:** 2026-07-26

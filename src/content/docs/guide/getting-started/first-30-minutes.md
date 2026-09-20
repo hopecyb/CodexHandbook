@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "已按本手册当前已核验的安全清单、练习项目、第一次任务、结果检查与初学者路径章节交叉复核；本页只提供“第一次半小时先跑通闭环”的稳定上手路线。"
+  checkedAt: "2026-07-26"
 title: 前三十分钟路线
 description: 第一次上手时可直接参考的 30 分钟路线。
 sidebar:
@@ -92,10 +97,3 @@ sidebar:
 先去 [故障排查索引](/guide/reference/troubleshooting/)。如果只是概念没听懂，也可以回到 [开始前需要什么](/guide/start-here/prerequisites/) 和 [本地与云端](/guide/foundations/local-vs-cloud/)。
 
 前三十分钟里，能亲手完成一次“提任务、看结果、自己判断”的闭环，就已经很值了。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 已按本手册当前已核验的安全清单、练习项目、第一次任务、结果检查与初学者路径章节交叉复核；本页只提供“第一次半小时先跑通闭环”的稳定上手路线。  
-**最近核验：** 2026-07-26

@@ -1,46 +1,70 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page explique uniquement comment choisir un parcours de lecture selon son rôle, sa tâche ou le produit ; ses liens internes et ses groupes de parcours ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
+  checkedAt: "2026-07-26"
 title: Choisir votre parcours
-description: Choisissez un parcours de lecture selon votre rôle, votre Tâche ou votre point d'entrée produit.
+description: Choisir une lecture selon votre rôle, votre tâche ou le produit.
 locale: fr
 source_locale: zh-CN
-source_revision: 612639b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: "680d473"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 4
 ---
 
-Vous pouvez entrer par **rôle**, **Tâche** ou **produit**. Les trois parcours convergent vers les mêmes pages de référence.
+Vous pouvez commencer par votre **rôle**, votre **tâche** ou votre **produit**. Les trois parcours rejoignent les mêmes pages essentielles ; seul le point de départ change.
+
+Choisissez l'entrée la plus proche de votre question actuelle.
 
 ## Par rôle
 
-- [Cinq étapes pour débutants](/fr/guide/learning-paths/beginner/01-talk-to-codex/) (MVP complet)
-- [Aperçu du parcours créateur](/fr/guide/learning-paths/creator/)
-- [Aperçu du parcours développeur](/fr/guide/learning-paths/developer/)
-- [Aperçu du parcours équipe](/fr/guide/learning-paths/team/)
+- [Cinq étapes pour débuter](/fr/guide/learning-paths/beginner/01-talk-to-codex/) (MVP complet)
+- [Parcours des créateurs](/fr/guide/learning-paths/creator/)
+- [Parcours des développeurs](/fr/guide/learning-paths/developer/)
+- [Parcours des équipes](/fr/guide/learning-paths/team/)
 
-## Par Tâche
+## Par tâche
 
-| Vous voulez… | Commencez par |
+| Vous voulez… | Lisez d'abord |
 |---|---|
-| Comprendre Codex et la terminologie | [Fondamentaux](/fr/guide/foundations/) |
-| Faire un tour complet aujourd'hui | [Premiers pas](/fr/guide/getting-started/) |
-| Écrire de meilleurs Prompts | [Prompting](/fr/prompts/) |
-| Apprendre à vérifier les résultats | [Qualité et Vérification](/fr/guide/quality/) |
-| Consulter comparaisons et dépannage | [Référence](/fr/guide/reference/) |
+| Comprendre Codex et les termes employés | [Notions fondamentales](/fr/guide/foundations/) |
+| Terminer une première tâche aujourd'hui | [Bien démarrer](/fr/guide/getting-started/) |
+| Mieux rédiger vos prompts | [Prompts](/fr/prompts/) |
+| Apprendre à vérifier les résultats | [Qualité et vérification](/fr/guide/quality/) |
+| Consulter les comparaisons et le dépannage | [Références](/fr/guide/reference/) |
 
 ## Par produit
 
-- Par défaut : [Application de bureau](/fr/guide/desktop-app/)
+- [Application de bureau](/fr/guide/desktop-app/)
 - Terminal : [CLI](/fr/guide/cli/)
 - Éditeur : [IDE](/fr/guide/ide/)
-- Aperçu Cloud : [Web et Cloud](/fr/guide/web-and-cloud/)
+- Présentation du cloud : [Web et Cloud](/fr/guide/web-and-cloud/)
 
-Vous ne savez pas lequel choisir ? Commencez par [Choisir votre client Codex](/fr/guide/getting-started/choose-your-codex-client/) et la [comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/).
+En cas de doute, consultez [Choisir un client Codex](/fr/guide/getting-started/choose-your-codex-client/) et le [comparatif des fonctions](/fr/guide/reference/feature-comparison/).
 
----
+## Idées reçues
 
-**Statut :** review  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-25
+### 1. Inutile de vous attribuer un rôle précis dès le départ
+
+Demandez-vous plutôt si vous voulez apprendre les gestes de base ou résoudre d'abord un type de tâche précis.
+
+### 2. Vous n'avez pas à choisir une seule des trois entrées
+
+Ce sont des manières différentes de commencer, pas des choix exclusifs. On peut commencer par la tâche, puis consulter le chapitre du produit.
+
+### 3. Une erreur de parcours ne vous oblige pas à tout recommencer
+
+Le parcours aide à éviter les détours. Ce n'est pas un cursus à suivre dans un ordre imposé.
+
+## Comment choisir en cas de doute
+
+Procédez ainsi :
+
+1. Vous n'avez pas encore terminé votre première tâche ? Commencez par le [parcours débutant](/fr/guide/learning-paths/beginner/).
+2. Vous savez déjà ce que vous voulez faire ? Utilisez le tableau « Par tâche ».
+3. Vous savez quel produit vous utiliserez surtout ? Consultez son chapitre.
+
+Commencez par l'entrée la plus proche de votre question ; vous pourrez ajuster votre parcours ensuite.

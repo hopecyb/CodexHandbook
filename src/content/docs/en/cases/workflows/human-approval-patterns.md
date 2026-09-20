@@ -1,91 +1,73 @@
 ---
-title: Human approval patterns
-description: When to approve, reject, or pause Codex—and how to write those rules clearly.
+title: Human Approval Patterns
+description: Distinguish task authorization from tool approval; prepare a reviewable result before pausing for a specific action that requires authorization.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: The distinct roles of sandboxing and approval were checked. The collaboration patterns below are handbook recommendations, not uniform dialog rules for every client.
+  evidence:
+    - label: Official sandbox and approval guidance
+      href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: en
 source_locale: zh-CN
-source_revision: 0e37633
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: f60dbb5
 ---
 
-Approval keeps irreversible actions for humans. This page summarizes common patterns.
+Approval should correspond to a specific action and its effects. Task authorization describes what the user wants completed; tool approval determines whether an action can run in the current environment. Writing a file, running a command, or accessing the network does not inherently require asking every time. Actual behavior depends on the authorized scope, tool policy, and sandbox together. See the [official guidance](https://learn.chatgpt.com/docs/agent-approvals-security).
 
-## Approval tiers
+## Three collaboration arrangements you can choose explicitly
 
-```text
-Auto-safe zone (read, analyze, plan)
-    ↓
-Prompt-confirm zone (write files, run commands, network)
-    ↓
-Mandatory human zone (push, delete data, send externally, change production config)
-```
+| Arrangement | What can continue | When to wait |
+|---|---|---|
+| Read-only analysis | Read, compare, and form a proposal | Do not change the implementation before the user authorizes it |
+| Implementation within authorized scope | Modify the specified area, verify appropriately, and prepare a reviewable result | Essential information is missing, the scope changes, or a new unauthorized action is needed |
+| Separate approval for the final action | Finish drafts, builds, previews, and recovery preparation | Before publishing, sending, or another action specifically reserved for approval |
 
-Specific dialog behavior varies by [product entry](/en/guide/); principles are the same.
+These are collaboration agreements, not names of new product modes. Do not request the same authorization again if it was clearly given and remains valid. If an enforced policy requires interactive approval, follow that mechanism.
 
-## Pattern 1: Plan first, execute later
+## Pattern 1: Propose a plan in this round
 
 ```text
-Rule: Do not modify repo files until I say "approve plan."
+Read-only this round: inspect the project and propose changes. Do not edit
+code or commit. If a check writes a cache, snapshot, or output file, say so;
+do not assume that every “test” is read-only.
 ```
 
-Good for: unfamiliar codebase, production-related, large diff.
+This suits a stage where the goal is undecided and alternatives need comparing. Even a read-only task requires attention to a command's actual side effects. Do not combine “tests may run” with “nothing may be written to disk” without checking what the tests do.
 
-## Pattern 2: Command whitelist
-
-In [AGENTS.md](/en/guide/customization/agents-md/writing-effective-instructions/) write:
-
-```md
-Allowed without asking again: pnpm test, pnpm lint, git status, git diff
-Must confirm each time: git push, npm publish, database migrate
-```
-
-When conflicting with hosted policy, **stricter** wins.
-
-## Pattern 3: Two-phase merge
-
-1. Codex opens draft PR or local branch
-2. Human CI + review, then merge
-
-Cloud: see [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/).
-
-## Pattern 4: Read-only recon
+## Pattern 2: Complete local work continuously
 
 ```text
-This round read-only: may read files, run tests, curl local API;
-no disk writes or git commit.
+You may edit these three documents and related internal links, and run the
+existing build checks. Complete the work continuously within that scope;
+resolve ordinary implementation details and report them. Do not publish
+the site or send messages. Explain any necessary tradeoff or out-of-scope
+action first.
 ```
 
-For audit, learning unfamiliar projects, production diagnosis.
+Editing and verification are already authorized here, so there is no need to ask again before every file write. Whether a particular command is permitted still depends on the execution environment; a prompt cannot override a refusal.
 
-## When to reject and restart
+## Pattern 3: Approve a specific publishing action
 
-| Signal | Suggestion |
-|---|---|
-| Plan doesn't match goal | Reject execution; request revised plan |
-| Scope creep | Stop; split task |
-| Tests skipped | Reject merge; require verification |
-| Cannot explain a command | Reject; require explanation |
+Prepare a reviewable version first, then provide:
 
-## Relation to Automations
+- The exact version or artifact to be published and its verification results.
+- The target environment, recipient, or affected people.
+- The expected external effects and any necessary recovery method.
+- The authorization or conditions still missing.
 
-Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/en/skills/automations/scheduled-tasks/).
+Approval to “publish this version to the test site” does not authorize publishing any future version to production. Conversely, when the same action has already been clearly approved, a generic template should not trigger another request for confirmation.
 
-## Common mistakes
+## After a refusal
 
-- Long-term "always allow" without remembering risk
-- Approval theater—don't read diff
-- Verbal "don't mess up" instead of explicit mode
+Preserve the original refusal and distinguish missing authorization, a policy prohibition, and an environment failure. Continue if you can narrow the work to a valid approach within the task. Do not evade the same restriction by switching tools, changing command spelling, or rewriting the prompt. If user action really is needed, explain the blocked action, the reason, and available next steps.
 
-## Acceptance checklist
+## What a reviewer checks
 
-- [ ] Approval mode declared before task starts
-- [ ] High-risk ops have second-person review or CI gate
-- [ ] Team has unified policy for `git push` and similar commands
+Check whether scope and result match, whether verification actually happened, and whether the external effects are understood. Having a plan does not automatically grant approval, and “no findings” does not guarantee zero risk.
 
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current official guidance on autonomy / approval boundaries, and verified approval, command rules, PR, and automation chapters in this handbook; this page only confirms stable collaboration principles—which actions auto-continue vs pause for human approval.
+For the working approach, see [task classification](/en/prompts/ask-for-a-plan/). For conflicting instructions, see [context priority](/en/guide/context/context-priority/). Unattended workflows also need [stop, failure, and notification mechanisms](/en/skills/automations/scheduled-tasks/).

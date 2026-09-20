@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu nghiên cứu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu nghiên cứu
 description: Khảo sát và so sánh kèm trích dẫn.
 locale: vi
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu nghiên cứu
 
 Khác biệt giữa tác vụ nghiên cứu và hỏi đáp thường là: bạn không chỉ cần câu trả lời, còn cần câu trả lời đến từ đâu.
 
@@ -47,10 +51,3 @@ Mẫu nghiên cứu có một ràng buộc then chốt: mỗi kết luận quan 
 
 - [Case nghiên cứu kèm nguồn](/vi/cases/research-with-sources/)
 - [Kiểm chứng](/vi/guide/verification/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu nghiên cứu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

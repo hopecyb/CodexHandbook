@@ -3,7 +3,7 @@ title: Tham chiếu cấu hình
 description: "Chỉ mục khái niệm các khóa cấu hình Codex cấp người dùng và dự án — đường dẫn và trường lấy theo tài liệu chính thức."
 locale: vi
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

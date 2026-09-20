@@ -1,0 +1,1 @@
+run_id,task_id,input_hash,client_model_config,execution_status,trigger,boundary,format,quality,elapsed_seconds,human_rework_minutes,evidence_path,reviewer,review_decision,reason,incident_id

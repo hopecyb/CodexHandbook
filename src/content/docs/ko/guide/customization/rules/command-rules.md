@@ -3,7 +3,7 @@ title: 명령 규칙
 description: 명령급 allow/deny로 shell·도구 호출을 제약 — 구두 약속보다 실행 가능하게.
 locale: ko
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

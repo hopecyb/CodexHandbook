@@ -3,7 +3,7 @@ title: Plugins
 description: 再利用可能な Skills、コネクタ、MCP、Hooks、タスクテンプレートの組み合わせを参照、インストール、管理します。
 locale: ja
 source_locale: zh-CN
-source_revision: 33c9fe2
+source_revision: 8917a59
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

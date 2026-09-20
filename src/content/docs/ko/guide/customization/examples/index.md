@@ -3,7 +3,7 @@ title: 예시
 description: 설정과 AGENTS.md를 추상 원칙만이 아니라 실제 예로 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

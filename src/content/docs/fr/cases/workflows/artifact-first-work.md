@@ -3,7 +3,7 @@ title: Travail orienté livrables
 description: Convenir d'abord de la forme et du chemin du livrable final, puis déduire les étapes — adapté aux docs, configurations, rapports et autres livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Glosario
 description: Definiciones cortas de términos habituales del manual.
 locale: es
 source_locale: zh-CN
-source_revision: c07a94c
+source_revision: ae4b794
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

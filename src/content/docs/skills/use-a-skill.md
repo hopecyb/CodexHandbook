@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "当前 Codex 运行时仍支持按技能名显式引用并在合适场景下自动匹配技能；OpenAI Help《Skills in ChatGPT》也确认 Skills 会在有帮助时被自动使用。本页以触发方式与写法原则为主。"
+  checkedAt: "2026-07-26"
 title: 使用 Skill
 description: 显式与隐式触发 Skill，以及写好 description 的要点。
 ---
@@ -7,7 +12,6 @@ description: 显式与隐式触发 Skill，以及写好 description 的要点。
 
 Skill 既可以由你**明确点名**调用，也可能在合适场景下被模型**自动选用**。分清这两种触发方式，能少走一些排查弯路。
 
-# 使用 Skill
 
 ## 触发方式
 
@@ -81,9 +85,3 @@ $pr-review 请审查我当前未提交的改动
 如果一句 description 读完后还是觉得“好像什么都能做”，那多半就太泛了。
 
 更多概念见 [Skills 概述](/skills/overview/)。
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 当前 Codex 运行时仍支持按技能名显式引用并在合适场景下自动匹配技能；OpenAI Help《Skills in ChatGPT》也确认 Skills 会在有帮助时被自动使用。本页以触发方式与写法原则为主。  
-**最近核验：** 2026-07-26

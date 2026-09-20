@@ -3,10 +3,9 @@ title: Personal Preferences
 description: User-level configuration, default models, and UI habits—without polluting team conventions in the repo.
 locale: en
 source_locale: zh-CN
-source_revision: e447e66
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: c381051
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
@@ -34,6 +33,16 @@ If you do not separate them, you later get:
 - Your local setup feels smooth, but teammates cannot reproduce it
 - You think rules are active when only your machine is compensating
 - You bring relaxed settings into a more serious project
+
+## What belongs in personal preferences
+
+| Setting | Example |
+|---|---|
+| Default model and reasoning level | Personal machine performance and plan |
+| UI theme, fonts, and notifications | Desktop app [settings](/en/guide/desktop-app/settings/) |
+| Personal MCP tools | Read-only access to a local database, granted cautiously |
+| Personal Skill library path | Keep it distinct from team Plugins |
+| Terminal aliases and usual `codex` launch directory | See [CLI Configuration](/en/guide/cli/configuration/) |
 
 ## Team Content That Should Not Live Only in the Personal Layer
 

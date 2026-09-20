@@ -1,42 +1,53 @@
 ---
+prev: false
+next:
+  link: /ko/guide/learning-paths/beginner/01-talk-to-codex/
+  label: 초보자 경로 시작하기
 title: 학습 경로
 description: 역할별로 읽기 순서를 정리하고 권위 있는 본문으로 연결합니다.
 sidebar:
   order: 5
 locale: ko
 source_locale: zh-CN
-source_revision: 05e85de
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f14e3a0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-학습 경로는 **순서만 정리**하며, 제품 매뉴얼이나 능력 특집의 긴 글을 복제하지 않습니다.
+학습 경로는 **읽는 순서만 정리**하며 제품 매뉴얼이나 기능 가이드의 긴 글을 복제하지 않습니다.
 
-“학습 경로” 장을 처음 보면 또 하나의 목차처럼 느껴질 수 있습니다. 핵심은 이것입니다. 지금 당신이 어떤 유형의 사용자에 가까운지, 다음에 어떤 순서로 읽어야 하는지.
+처음 보면 목차가 한 단계 더 생긴 것처럼 느껴질 수 있습니다. 지금 어떤 유형의 사용자에 가까운지, 다음에 무엇을 어떤 순서로 읽을지 알려 주는 장입니다.
 
-이 장은 새 지식을 채우기보다, 돌아가는 길을 줄이는 데 가깝습니다.
+새로운 제품 지식을 추가하기보다 돌아가는 길을 줄이는 역할을 합니다.
 
 ## 이 장이 하는 일
 
-- 초보자, 크리에이터, 개발자, 팀 추진자 중 어디에 가까운지, 어느 선을 탈지
-- 역할별로 읽기 순서가 어떻게 다른지
-- 지금 읽을 가치가 있는 것과 나중에 보완해도 되는 것
+- 초보자, 크리에이터, 개발자, 팀 추진자 중 어떤 경로를 고를지
+- 역할별 읽기 순서가 어떻게 다른지
+- 지금 읽을 내용과 나중에 보완할 내용이 무엇인지
 
-## MVP에서 쓸 수 있는 경로
+## 공통 자료를 쓰는 초보자 경로
 
-- **초보자(완전한 다섯 단계)**
+[같은 행사 안내 연습 자료를 내려받아](/downloads/first-project/first-project-1.0.0.zip) 다섯 단계로 안내문, 검토, 복구 기록을 완성하세요. 프로그래밍은 필요하지 않습니다. 독립적인 독자가 전체 경로를 끝까지 수행한 검증은 아직 없습니다.
+
+- **초보자(다섯 단계)**
   1. [Codex와 대화하기](/ko/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/)
   3. [명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [결과 검토하기](/ko/guide/learning-paths/beginner/04-review-results/)
   5. [첫 작은 프로젝트 끝내기](/ko/guide/learning-paths/beginner/05-complete-first-project/)
 
-## 개요(심화 단계는 이후 보완)
+## 크리에이터 실습 경로
 
-- [크리에이터](/ko/guide/learning-paths/creator/)
-- [개발자](/ko/guide/learning-paths/developer/)
-- [팀](/ko/guide/learning-paths/team/)
+[크리에이터 경로](/ko/guide/learning-paths/creator/)에는 자료와 사실표 → 출처가 있는 글 → 편집 가능한 여덟 장의 발표 자료 → 재사용 가능한 작업 설명이라는 네 가지 연속 이정표가 있습니다. 글과 발표 자료에는 각각 별도의 다운로드 자료가 있고 각 단계에는 완료 기준이 있습니다. 독립적인 독자가 전체 경로를 끝까지 수행한 검증은 아직 없습니다.
+
+## 개발자 실습 경로
+
+[개발자 경로](/ko/guide/learning-paths/developer/)는 장바구니 버그 연습을 재사용해 코드 읽기 → 수정과 테스트 → 차이 검토 → 인수인계 준비 순서로 진행합니다. 작성 가능한 템플릿 세 개와 작성자 참고 예시를 제공합니다. 참고 테스트는 다시 실행했으며, 독립적인 독자의 완주 여부는 아직 검증되지 않았습니다.
+
+## 팀 경로: 2주 시범 운영과 도입 결정
+
+- [팀](/ko/guide/learning-paths/team/): 운영 원칙 → 수동 검증 → 표본 점검 → 롤백 연습 → 도입·계속·중단 결정. 템플릿 여섯 개가 포함됩니다.
 
 ## 고급 운영자 경로
 
@@ -80,10 +91,3 @@ reviewed_at: 2026-08-26
 - 주로 팀 도입과 위험 통제：[팀 경로](/ko/guide/learning-paths/team/)
 
 학습 경로는 “지금 가장 중요한 문제”로 다음에 무엇을 읽을지 정합니다.
-
----
-
-**상태：** verified  
-**적용 제품：** App / CLI / IDE  
-**검증 근거：** 본 저장소의 현재 learning paths 디렉터리 구조, 역할별 입구 페이지, 초보자 단계 경로를 교차 확인했습니다. 이 페이지는 “역할별로 읽기 순서를 조직한다”는 내비 역할만 담당하며, 변동하기 쉬운 제품 동작 세부사항은 포함하지 않습니다.  
-**최근 검증：** 2026-07-26

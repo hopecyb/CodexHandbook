@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Understand large codebases“; Fokus ist das Verfolgen des Hauptpfads, das Erkennen zentraler Module und das schnelle Finden relevanter Dateien. Das Beispiel auf dieser Seite ist ein nur lesendes Erkundungsszenario und entspricht der aktuellen offiziellen Positionierung."
+  checkedAt: "2026-07-26"
 title: Eine Codebasis verstehen
 description: Unbekannte Repositories nur lesend erkunden und eine handlungsfähige mentale Karte aufbauen.
 locale: de
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Eine Codebasis verstehen
 
 ## Metadaten
 
@@ -45,9 +53,3 @@ reviewed_at: 2026-08-26
 
 - [Verstehen-Vorlage](/de/prompts/templates/understand/)
 - [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Understand large codebases“; Fokus ist das Verfolgen des Hauptpfads, das Erkennen zentraler Module und das schnelle Finden relevanter Dateien. Das Beispiel auf dieser Seite ist ein nur lesendes Erkundungsszenario und entspricht der aktuellen offiziellen Positionierung.  
-**Zuletzt geprüft:** 2026-07-26

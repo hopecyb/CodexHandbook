@@ -3,7 +3,7 @@ title: Team-Automatisierung
 description: Einstieg zu Fällen für wiederkehrende Teamaufgaben — Fokus auf Trigger, Benachrichtigung, Freigabe und Stoppbedingungen.
 locale: de
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

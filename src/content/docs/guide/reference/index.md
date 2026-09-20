@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明参考资料区的用途与入口；站内链接与章节分组已复查，且正文未声明会随版本变化的具体默认值。"
+  checkedAt: "2026-07-26"
 title: 参考资料
 description: 术语、命令、配置、权限矩阵、FAQ 与排障入口。
 sidebar:
@@ -45,10 +50,3 @@ sidebar:
 :::
 
 参考资料区不是主线教程。遇到术语、配置、命令或排障问题时，再回来查就行。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明参考资料区的用途与入口；站内链接与章节分组已复查，且正文未声明会随版本变化的具体默认值。  
-**最近核验：** 2026-07-26

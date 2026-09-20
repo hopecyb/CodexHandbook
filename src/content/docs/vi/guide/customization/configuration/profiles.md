@@ -1,28 +1,27 @@
 ---
 title: Profile cấu hình
-description: Dùng bộ cấu hình có tên để chuyển tổ hợp mô hình, Sandbox và phê duyệt — phát triển, rà soát, CI mỗi bộ một.
+description: Dùng tệp cấu hình riêng để áp dụng một nhóm cài đặt có tên cho Codex CLI.
 locale: vi
 source_locale: zh-CN
-source_revision: 7043ada
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6ab30c5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
-Current Codex CLI `--profile <name>` layers `$CODEX_HOME/<name>.config.toml` over the base user configuration. It is primarily a CLI mechanism and should not be presented as a universal one-click desktop mode.
+Trong Codex CLI hiện tại, `--profile <name>` áp dụng `$CODEX_HOME/<name>.config.toml` lên trên cấu hình người dùng cơ sở. Cơ chế này chủ yếu dành cho CLI, không nên mô tả như một “chế độ một nút bấm” dùng chung trong ứng dụng máy tính.
 
-## Minimal example
+## Ví dụ tối thiểu
 
-Keep shared defaults in the base configuration:
+Giữ các giá trị mặc định dùng chung trong cấu hình cơ sở:
 
 ```toml
 # ~/.codex/config.toml
 model_reasoning_effort = "medium"
 ```
 
-Create a read-only review profile:
+Profile để rà soát chỉ đọc:
 
 ```toml
 # ~/.codex/review.config.toml
@@ -30,59 +29,51 @@ sandbox_mode = "read-only"
 approval_policy = "never"
 ```
 
-Start it:
+Khởi chạy:
 
 ```bash
 codex --profile review
-# Short form
+# Viết tắt
 codex -p review
 ```
 
-Confirm local semantics:
+Xác nhận ý nghĩa của tham số bằng phiên bản đang cài trên máy:
 
 ```bash
 codex --help
 ```
 
-Current help should describe the profile path and layering. If your version differs, trust its output and the current official configuration reference.
+Phần trợ giúp của phiên bản hiện tại sẽ giải thích đường dẫn tệp profile và cách cấu hình được áp dụng theo lớp. Nếu phiên bản của bạn khác, hãy dựa vào kết quả trên máy và tài liệu cấu hình chính thức.
 
-## Appropriate uses
+## Profile phù hợp với việc gì
 
-| Profile | Purpose | Example boundary |
+| Profile | Mục đích | Ví dụ về ranh giới |
 |---|---|---|
-| `review` | Read-only inspection | read-only, no writes |
-| `workspace` | Everyday project changes | workspace writes, approvals as needed |
-| `ci` | Non-interactive checks | fixed output, no push |
+| `review` | Kiểm tra chỉ đọc | read-only, không ghi |
+| `workspace` | Sửa dự án hằng ngày | Chỉ ghi trong workspace, phê duyệt khi cần |
+| `ci` | Kiểm tra không tương tác | Đầu ra cố định, không push |
 
-A profile only saves a configuration starting point. It cannot override organization requirements or make a prompt inherently safe. In particular, do not make `danger-full-access` an easy default profile.
+Profile chỉ lưu một điểm khởi đầu gồm nhiều cài đặt. Nó không ghi đè requirements của tổ chức và cũng không tự làm prompt trở nên an toàn. Đặc biệt, đừng đặt `danger-full-access` thành profile mặc định để dùng tùy tiện.
 
-## Do not confuse Permission Profiles
+## Đừng nhầm với Permission Profile
 
-- **Configuration profile:** `--profile name` selects `<name>.config.toml` and may layer many Codex settings.
-- **Permission Profile (Beta):** `default_permissions` and `[permissions.<name>]` define filesystem and network boundaries.
+- **Profile cấu hình**: `--profile name` chọn `<name>.config.toml` và có thể áp dụng nhiều loại cấu hình Codex theo lớp.
+- **Permission Profile (Beta)**: `default_permissions` cùng `[permissions.<name>]` xác định ranh giới hệ thống tệp và mạng.
 
-They share a name but not purpose or schema. Current Permission Profiles also do not compose with legacy `sandbox_mode`; choose one permission system.
+Cả hai đều được gọi là profile, nhưng mục đích và cấu trúc cấu hình khác nhau. Permission Profile hiện cũng không kết hợp với `sandbox_mode` cũ; hãy chọn một hệ thống quyền để cấu hình.
 
-## Team boundary
+## Ranh giới khi dùng trong nhóm
 
-Configuration profiles live in a user's Codex home and are not automatically project configuration in the current version. A team can publish reviewed examples for members to install and inspect explicitly. Do not assume cloning a repository activates a personal profile.
+Profile cấu hình nằm trong thư mục Codex home của người dùng, không tự nhiên trở thành cấu hình dự án có thể commit ở phiên bản hiện tại. Nhóm có thể cung cấp tệp ví dụ đã được rà soát trong tài liệu để thành viên chủ động cài đặt và kiểm tra; đừng giả định rằng clone kho lưu trữ xong thì profile cá nhân sẽ tự được bật.
 
-## Acceptance
+## Nghiệm thu
 
-1. Run `codex --help` and confirm current `-p/--profile` support.
-2. Test `review` on a read-only task.
-3. Attempt an outside-workspace read or a write and confirm that the boundary blocks it.
-4. Inspect effective configuration; do not trust only the filename.
+1. Chạy `codex --help` để xác nhận phiên bản hiện tại hỗ trợ `-p/--profile`.
+2. Dùng tác vụ chỉ đọc để thử `review`.
+3. Yêu cầu đọc tệp ngoài workspace hoặc ghi tệp để xác nhận ranh giới chặn đúng như dự kiến.
+4. Kiểm tra cấu hình có hiệu lực, không chỉ tin vào tên tệp.
 
-## Official sources
+## Nguồn chính thức
 
-- [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
-- [Configuration layers in Codex CLI source](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** CLI
-
-**Kiểm chứng gần nhất:** 2026-08-26 (local `codex-cli 0.148.0`)
+- [Schema cấu hình Codex](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Lớp cấu hình trong mã nguồn Codex CLI](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)

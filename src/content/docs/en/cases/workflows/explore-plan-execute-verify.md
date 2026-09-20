@@ -1,26 +1,30 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against the handbook's verified planning, diagnosis, definition-of-done, testing, and AGENTS.md pages; this page covers the four-phase collaboration workflow and checkpoints without volatile product options."
+  checkedAt: "2026-07-26"
 title: Explore—plan—execute—verify
-description: Codex's default main workflow—four phase checkpoints, steadier than "one shot."
+description: Scale exploration, planning, execution, and verification to the task's scope and uncertainty, and identify decisions that require a pause.
 locale: en
 source_locale: zh-CN
-source_revision: ac26bee
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: 4a95760
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-This is the handbook's recommended default workflow—from "not sure how yet" to "ready to merge."
+This is the handbook's recommended way to organize a task, from “not sure how yet” to “ready for acceptance.” Four phases do not mean four approvals. A small, well-scoped task can proceed continuously; pause for a decision when the approach is unresolved or required authorization is missing. Start with [task levels](/en/prompts/ask-for-a-plan/).
 
 ## Four phases overview
 
 ```text
 ① Explore   → Understand current state, scope, risks
-② Plan      → Steps, files, acceptance criteria (large tasks need your confirmation)
-③ Execute   → Change code/docs/config in small steps
+② Plan      → Steps, files, acceptance criteria, and necessary tradeoffs
+③ Execute   → Change code/docs/config within the authorized scope
 ④ Verify    → Tests, diff review, check against definition of done
 ```
 
-Do not skip ①② and jump to ③—that often becomes "guess and patch." See [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/).
+When the current state is unclear, explore and plan first to avoid guessing. A clearly scoped typo fix need not be split into four interactions. See [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explore
 
@@ -46,7 +50,7 @@ Based on the exploration above, give a plan: numbered steps, involved files, how
 Do not write code until I reply "execute per plan."
 ```
 
-Large or high-risk changes need confirmation first. Small tasks can agree "plan under 3 steps can auto-execute"—write that in [AGENTS.md](/en/guide/customization/agents-md/writing-effective-instructions/).
+The prompt above explicitly asks for a plan only, so execution must wait. If implementation is already authorized, ask instead for a brief plan followed by continuous execution and verification within the agreed scope. Whether to pause depends on authorization, necessary tradeoffs, and actual permissions—not the number of plan steps.
 
 ## ③ Execute
 
@@ -54,9 +58,9 @@ Large or high-risk changes need confirmation first. Small tasks can agree "plan 
 
 - Focus on one sub-goal at a time
 - Prefer paths covered by tests
-- If plan diverges, **return to ②** instead of forcing ahead
+- For routine implementation details, update the plan and continue; if the premise or scope changes, return to ② and decide whether a new decision is needed
 
-Guide phrase: "Execute step 2; if the plan must change, stop and explain first."
+Guide phrase: “Complete the authorized scope; if you need to expand it, explain the specific impact and choices.”
 
 ## ④ Verify
 
@@ -74,9 +78,9 @@ See [Definition of done](/en/prompts/define-done/) and [Run tests](/en/guide/qua
 
 | Size | Explore | Plan | Execute | Verify |
 |---|---|---|---|---|
-| Typo fix | Can skip | 1 verbal step | Short | lint |
+| Typo fix | Check the target text | Can be implicit | Short | Review the diff and verify according to project rules |
 | Single-file bug | Light | 3–5 steps | Medium | tests + diff |
-| Cross-module feature | Required | Written plan + confirm | Phased | Full tests + hand-test |
+| Cross-module feature | Identify dependencies | Written plan; pause for necessary tradeoffs | Complete in phases within the authorized scope | Test according to impact + hand-test |
 | Production incident | Diagnose first | Rollback plan first | Tiny steps | Monitoring + postmortem |
 
 ## EPXV case template
@@ -88,10 +92,3 @@ Teams can embed the four phases in [case study template](/en/cases/use-cases/cas
 - Plan stays in your head—execution drifts
 - Verification is only "looks like it runs"
 - Insufficient explore—wrong module changed
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, diagnose, definition of done, run tests, and `AGENTS.md` pages in this handbook; content limited to four-phase collaboration main path and checkpoints—no volatile product parameters or entry details.

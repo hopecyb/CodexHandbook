@@ -3,7 +3,7 @@ title: Créer des pull requests
 description: Livrez le résultat d'une tâche Cloud sous forme de PR révisable et vérifiable, sans fusion automatique.
 locale: fr
 source_locale: zh-CN
-source_revision: 70996a7
+source_revision: 39371d4
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

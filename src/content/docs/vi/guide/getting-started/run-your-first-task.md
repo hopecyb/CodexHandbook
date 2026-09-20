@@ -3,7 +3,7 @@ title: Chạy tác vụ đầu tiên
 description: Dùng Prompt rõ ràng để hoàn thành một thay đổi nhỏ.
 locale: vi
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

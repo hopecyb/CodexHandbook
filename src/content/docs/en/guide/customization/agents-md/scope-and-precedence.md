@@ -1,12 +1,24 @@
 ---
-title: AGENTS.md scope and precedence
-description: Understand exactly how global, project-root, and current-directory instructions are discovered and merged.
+title: "AGENTS.md scope and precedence"
+description: "Understand exactly how global, project-root, and current-directory instructions are discovered and merged."
+contentType: reference
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Checked the official discovery and merging rules point by point. Directory examples and loading checks are instructional; they do not claim cross-client testing."
+  evidence:
+    - label: "Official AGENTS.md discovery, override, and validation rules"
+      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 locale: en
 source_locale: zh-CN
-source_revision: 698ab44
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: b5f31cc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -49,7 +61,7 @@ services/payments/retry.ts and its tests. Do not rotate credentials.
 Run make test-payments and report the actual result.
 ```
 
-A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, do not guess from “ignore previous rules.” Ask Codex to list loaded instruction sources, then narrow the task.
+A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, ask Codex to list the relevant instruction sources and their scopes. Distinguish adjustable project defaults from actual execution limits. If the scope is clear, authorization already exists, and no higher-level instruction conflicts, continue. Explain the specific blocker only when information or permission is genuinely missing. For the complete comparison, see [Context priority](/en/guide/context/context-priority/).
 
 ## Verify what actually loaded
 
@@ -76,11 +88,3 @@ A fallback applies only when no higher-priority file exists in the same director
 ## Official source
 
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE, Cloud
-
-**Last verified:** 2026-08-26

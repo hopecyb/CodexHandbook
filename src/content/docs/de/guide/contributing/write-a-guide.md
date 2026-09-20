@@ -1,14 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Anhand des aktuellen Dokumentations-Frontmatters, des früheren Footer-Statussystems, der Querverweise und der Sidebar-Pflege dieses Repositorys geprüft. Die Seite beschreibt Schreibkonventionen und Strukturempfehlungen für das Handbuch und hängt nicht von Einzelheiten einer Produktversion ab."
+  checkedAt: "2026-07-26"
 title: Eine Anleitungsseite schreiben
 description: Vorgaben für Struktur, Frontmatter und Querverweise neuer Handbuchseiten.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Diese Seite erklärt, wie du unter `src/content/docs/` eine **Anleitungsseite** hinzufügst oder überarbeitest, also weder ein reines Fallbeispiel noch eine reine Referenztabelle.
@@ -38,15 +41,17 @@ description: Ein Satz zum Problem, das diese Seite löst
 ---
 ```
 
-Optional kannst du den einheitlichen Footer bestehender Seiten verwenden:
+Neue Seiten halten den redaktionellen Status und die Art der Prüfung im Frontmatter fest. Füge keinen frei formulierten Prüf-Footer mehr an:
 
-```markdown
----
-
-**Status:** planned | draft | review | verified | outdated | archived
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-**Zuletzt geprüft:** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Inhaltsstruktur geprüft; durch die tatsächlich durchgeführten Prüfungen und deren Datum ersetzen.
 ```
+
+Wenn du Quellenprüfungen oder einen Probelauf kennzeichnest, ergänze gemäß [Technische Inhalte verifizieren](/de/guide/contributing/verify-technical-content/) die passenden Links und Angaben zur Umgebung. Datumsangaben müssen als `YYYY-MM-DD`-Zeichenfolgen in Anführungszeichen stehen.
 
 ## Empfohlene Struktur
 
@@ -120,9 +125,3 @@ Eine gute Anleitungsseite zeichnet sich nicht dadurch aus, dass sie jedes Detail
 
 ## Quellen
 - Offizielle OpenAI-Dokumentation zu Codex
-```
----
-
-**Status:** verified  
-**Prüfgrundlage:** Anhand des aktuellen Frontmatters, der Footer-Status, der Querverweise und der Sidebar-Pflege dieses Repositorys geprüft. Die Seite beschreibt Schreibregeln und Strukturempfehlungen für Handbuchtexte und hängt nicht von Einzelheiten einer Produktversion ab.  
-**Zuletzt geprüft:** 2026-07-26

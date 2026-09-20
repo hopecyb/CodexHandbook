@@ -3,7 +3,7 @@ title: Cloud environments
 description: Configure runtimes, dependencies, setup, caching, and repository starting points for Codex Cloud.
 locale: en
 source_locale: zh-CN
-source_revision: f7c7188
+source_revision: 1745f70
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

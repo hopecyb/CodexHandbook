@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明同线程上下文的累积与收口方法；概念、示例和站内链接已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 对话上下文
 description: 同一线程中信息如何累积与失效。
 sidebar:
@@ -86,10 +91,3 @@ sidebar:
 ```
 
 同一线程会帮你延续记忆，但也会把旧包袱一起带着走。主题一旦变化，就该主动收口。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明同线程上下文的累积与收口方法；概念、示例和站内链接已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

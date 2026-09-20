@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: 设置
 description: 配置桌面应用的日常行为、快捷键、通知与外观。
 sidebar:
@@ -49,11 +53,3 @@ sidebar:
 - [ChatGPT 桌面应用设置](https://learn.chatgpt.com/docs/app/settings)
 - [Codex 配置基础](https://learn.chatgpt.com/docs/config)
 - [权限](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**最近核验：** 2026-08-26

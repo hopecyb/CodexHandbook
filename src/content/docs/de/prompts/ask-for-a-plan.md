@@ -1,155 +1,119 @@
 ---
-title: Zuerst einen Plan verlangen
-description: 'Bevor Codex loslegt: Schritte, Risiken und Überprüfung klar machen lassen.'
+title: "Wann direkt ausführen und wann zuerst einen Plan verlangen"
+description: "Wähle anhand von Umfang, Unsicherheit und externen Folgen zwischen direkter Ausführung, Planung und Freigabe einer konkreten Aktion; mit zwei Prompt-Vergleichen."
+contentType: prompt
+audiences: [beginner, developer, creator]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Die drei Aufgabenkategorien und zwei Vergleiche sind redaktionelle Empfehlungen zur Zusammenarbeit. Autorisierungs- und Ausführungsgrenzen wurden geprüft; es handelt sich weder um feste Client-Modi noch um ein Experiment zur Erfolgsquote des Modells."
 locale: de
 source_locale: zh-CN
-source_revision: 0a2c7c7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 706f11b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Viele Probleme entstehen nicht, weil etwas unmöglich wäre — sondern weil **zu schnell gestartet** wird. Ein „hilf mir, das zu fixen“ vermengt Exploration, Plan und Ausführung; am Ende bleibst du beim Diff nur noch in der passiven Abnahme.
+Ob zuerst ein Plan nötig ist, hängt davon ab, welche Entscheidung noch offen ist. Eine klar abgegrenzte, rückgängig zu machende Änderung kann direkt ausgeführt werden. Ist der Weg unklar, plane zuerst. Vor einer konkreten Aktion, die zusätzliche Autorisierung erfordert, halte an. Ein Plan bedeutet nicht, dass nach jedem Schritt eine Antwort des Nutzers nötig ist.
 
-Effektiver ist dann: zuerst einen Plan verlangen, statt die Anforderungen immer länger zu schreiben.
+## Zuerst die Aufgabenkategorie bestimmen
 
-## Wann du unbedingt zuerst einen Plan verlangen solltest
+| Kategorie | Erkennungsmerkmal | Was anzugeben ist | Wann anhalten |
+|---|---|---|---|
+| Direkt ausführen | Eingaben, Umfang und Abnahmekriterien sind klar; die Änderung ist rückgängig zu machen | Änderungsort, Fertigstellungskriterium und Ausschlüsse nennen | Wenn der Umfang überschritten wird oder notwendige Informationen fehlen |
+| Zuerst planen | Architekturentscheidungen, unklarer Umfang oder mehrere voneinander abhängige Schritte | Istzustand prüfen, dann Weg, Auswirkungen und Prüfung skizzieren | Wenn eine Abwägung der Entscheidung des Nutzers bedarf oder er ausdrücklich zuerst den Plan prüfen will |
+| Aktion braucht Freigabe | Eine konkrete Aktion hätte nicht autorisierte externe Folgen oder berührt eine Ausführungsberechtigung | Erst ein überprüfbares Ergebnis vorbereiten, dann Aktion, Ziel und Auswirkungen benennen | Vor dieser Aktion; die bereits erledigte Vorbereitung beibehalten |
 
-| Szenario | Warum |
-|---|---|
-| Mehrere Dateien oder Module | Leicht versehentlich irrelevante Bereiche treffen |
-| Unbekanntes Codebase | Zuerst prüfen, welchen Scope es verstanden hat |
-| Noch schwankende Anforderungen | Uneinigkeit früh sichtbar machen |
-| Freigabe vor dem Ausführen nötig | „Ausführungsfreigabe“ und „Ideen diskutieren“ trennen |
-| Hochriskante Aktionen | Rollback und Überprüfung zuerst sehen |
+„Drei Dateien sind betroffen“ ist keine allgemeine Freigabeschwelle. Schon eine einzige Produktionskonfiguration kann große Auswirkungen haben. Produktdialoge und tatsächliche Ausführungsberechtigungen erklärt [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/). Diese Tabelle ist keine Berechtigungskonfiguration für alle Clients.
 
-Kleine Tippfehler oder einzelne Textänderungen brauchen keinen formellen Plan — aber sobald „schieflaufen wäre teuer“ gilt, lohnt ein kurzer Stopp.
+## Vergleich eins: lokale Textkorrektur
 
-## Was ein guter Plan mindestens enthalten sollte
+Aufgabe: Zwei Tippfehler in der README korrigieren, ohne ihre Struktur zu ändern.
 
-Die Minimalversion deckt diese vier Punkte ab:
-
-1. Schritte
-2. Betroffene Dateien oder Scope
-3. Risiken oder offene Klärungspunkte
-4. Wie jeder Schritt überprüft wird
-
-Fehlt Punkt 4, ist es eher eine To-do-Liste als ein abnahmefähiger Plan.
-
-## Drei gängige Formulierungen
-
-### Minimalversion
+**Gegenbeispiel mit übermäßigen Unterbrechungen:**
 
 ```text
-Noch keinen Code ändern. Gib mir zuerst einen Plan mit 3–5 Schritten:
-welche Dateien, und wie jeder Schritt überprüft wird.
+Erstelle zuerst einen Plan und warte auf meine Freigabe, bevor du Dateien liest.
+Liste nach dem Lesen die zwei geplanten Änderungen auf und warte erneut.
+Halte nach jeder Änderung an und frage mich danach, ob du prüfen sollst.
 ```
 
-Passt: Du kennst die grobe Richtung und willst nur sehen, wie es zerlegt.
+Diese Wartezeiten klären keine notwendige Entscheidung. Sie zerlegen eine bereits klar autorisierte Aufgabe.
 
-### Empfohlene Version
+**Formulierung mit klarem Umfang:**
 
 ```text
-Noch nicht ausführen. Bitte zuerst einen Plan auf Basis des aktuellen Repos, mit:
-1. Verständnis des Ziels
-2. Nummerierte Schritte
-3. Betroffene Dateien oder Verzeichnisse
-4. Risiken und offene Punkte
-5. Überprüfungsmethode
-
-Ändere keine Dateien, bis ich „Plan ausführen“ antworte.
+Ersetze im Fließtext der README.md die zwei Vorkommen von „帐户“ durch „账户“.
+Erhalte Codeblöcke, Links und alle anderen Inhalte. Erledige die Änderung
+direkt, prüfe den Diff und berichte, wo du geändert hast. Falls die Zahl der
+Fundstellen nicht zwei ist, erkläre zuerst die Abweichung. Weite die Aufgabe
+nicht auf ein vollständiges Lektorat aus.
 ```
 
-Passt: Alltag in Entwicklung, Docs, Prompt-Umschreiben, Konfiguration.
+Die Abnahme umfasst genau zwei korrekte Änderungen und unveränderte, nicht betroffene Inhalte. Für diese Art von Änderung sind meist keine neuen Tests nötig; prüfe angemessen nach den bestehenden Projektregeln.
 
-### Hochrisiko-Version
+## Vergleich zwei: Website ändern und veröffentlichen
+
+Aufgabe: Drei Tutorials aktualisieren und auf der Produktionswebsite veröffentlichen. Hier sind die Vorbereitung der Inhalte und die Wirkung der Veröffentlichung zu trennen.
+
+**Gegenbeispiel mit unklarer Autorisierung:**
 
 ```text
-Noch keine Änderungen. Erstelle zuerst einen Plan und erkläre separat:
-- Welcher Schritt Regressionen am ehesten einführt
-- Wie bei Fehlschlag zurückgerollt wird
-- Welche Aktionen meine Bestätigung brauchen
-- Welche Tests oder manuellen Checks Fertigstellung belegen
+Schreibe zuerst einen Plan, ändere dann die gesamte Website und stelle sie live.
 ```
 
-Passt: Produktionsprobleme, Berechtigungen, Automatisierungsskripte, modulübergreifende Refactors.
+Es bleibt offen, welche Inhalte geändert werden sollen, wohin veröffentlicht wird und ob die Live-Version ersetzt werden darf.
 
-## Ein Plan muss nicht möglichst lang sein
-
-Du brauchst ein **prüfbares, steuerbares, ausführbares Zwischen-Artefakt** — keine Abhandlung.
-
-Ob ein Plan brauchbar ist, siehst du an drei Punkten:
-
-- Kannst du klar sagen: „Schritt 2 weglassen, anders machen“?
-- Siehst du auf einen Blick, welche kritischen Bereiche es anfasst?
-- Weißt du vor dem Start, wie du abnimmst?
-
-Wenn nicht, ist der Plan noch zu vage.
-
-## Wie du einen Plan freigibst / korrigierst
-
-Du musst nichts neu schreiben — steuere wie bei einem Kollegen.
-
-Typische Lenksätze:
+**Formulierung mit konkreten Grenzen:**
 
 ```text
-Behalte Schritt 1 und 2, streiche Schritt 3.
-Teile DB-Änderungen als eigenen Schritt ab.
-Nur lesende Analyse zuerst, noch keine Implementierung.
-Ergänze Regressionstests und Rollback im Plan.
+Aktualisiere diese drei Tutorials und korrigiere zugehörige interne Links.
+Lies zuerst den Istzustand und gib einen kurzen Plan. Führe anschließend die
+Änderungen, den Build und die Vorschauprüfung in diesen Dateien und der
+zugehörigen Navigation fortlaufend aus, ohne nach jedem Schritt zu warten.
+Liefere Vorschau, Änderungsübersicht und Prüfergebnisse. Die Veröffentlichung
+in Produktion ist noch nicht autorisiert. Wenn die Vorbereitung abgeschlossen
+ist, nenne die zu veröffentlichende Version, die Zielumgebung und den
+Rückweg und warte auf meine Bestätigung der Veröffentlichungsaktion.
 ```
 
-Das spart Kontext und zieht das Ergebnis leichter zurück auf Kurs.
+Jetzt sollte erst die lokale Arbeit abgeschlossen und dann die endgültige Freigabe zur Veröffentlichung erfragt werden. Hat der Nutzer das konkrete Veröffentlichungsziel und die Aktion bereits ausdrücklich autorisiert, prüfe anhand der aktuellen Richtlinien, ob du fortfahren kannst. Frage nicht allein wegen der Bestätigungsformulierung in dieser Vorlage nochmals nach derselben Erlaubnis.
 
-## Nutzen gegenüber „einfach loslegen“
+Beide Vergleiche sind didaktische Beispiele, keine tatsächlichen Modellausgaben oder Effizienzmessungen.
 
-| Zuerst Plan | Direkt starten |
-|---|---|
-| Missverständnisse früh sichtbar | Richtung oft erst nach Änderungen falsch |
-| Freigabe und Zusammenarbeit leichter | Du siehst nur den finalen Diff |
-| Zerlegung in Teilaufgaben möglich | Mehrere Ziele vermischen sich leicht |
-| Überprüfungsmethode früh klar | Tests oft erst ganz am Ende |
+## Wann nur ein Plan erstellt werden soll
 
-Viele Workflows trennen „Exploration“ und „Plan“ bewusst. Siehe [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/).
+Wenn noch Lösungswege verglichen werden, eine Budgetentscheidung nötig ist oder die Gestaltung ausdrücklich zuerst geprüft werden soll, kann die Aufgabe auf Planung begrenzt werden:
 
-## Typische Plan-Probleme
+```text
+In dieser Runde nur planen. Lies die bestehende Implementierung und zeige
+zwei Optionen, ihre Auswirkungen und die Abnahmekriterien. Benenne die
+Abwägungen, die wirklich meine Entscheidung erfordern. Ändere die
+Implementierung nicht. Setze erst um, wenn der Ansatz feststeht.
+```
 
-### Nur Aktionen, keine Grenzen
+Diese ausdrückliche Phasengrenze ist einzuhalten. Die übliche Eigenständigkeit eines Agenten berechtigt nicht dazu, direkt zur Implementierung überzugehen.
 
-Z. B. „Docs aktualisieren und Struktur verbessern“, ohne Verzeichnisse und unberührte Module. Solche Pläne wachsen leicht aus.
+## Was in einen Plan gehört
 
-### Nur Implementierung, keine Überprüfung
+Ein ausreichender Plan nennt Ziel, betroffenen Umfang, Schritte, Prüfung und ungelöste Abwägungen. Bekannte Antworten müssen nicht zu offenen Bestätigungsfragen werden. Eine kurze, risikoarme Aufgabe braucht keine Rückrollsektion, nur um eine Vorlage zu erfüllen.
 
-Z. B. „Komponentenlogik ändern, Styles updaten, committen“ — ohne Nachweis, dass Verhalten intakt bleibt.
+Treten während der Ausführung neue Umstände auf, unterscheide gewöhnliche Implementierungsdetails von einer Zieländerung. Löse kleine Probleme innerhalb des ursprünglichen Umfangs und erläutere sie. Prüfe bei neuen Abhängigkeiten, einem größeren Änderungskreis, Schnittstellenänderungen oder neuen externen Aktionen zuerst, ob die Autorisierung weiterhin reicht.
 
-### Nur Aufgabenliste, keine offenen Punkte
-
-Gute Pläne benennen Unsicherheit, statt alle Voraussetzungen als gegeben zu tun.
-
-## Empfohlene Kombinationen
-
-- Formelle Ausführungskette: [Planung](/de/guide/agent-work/planning/)
-- Plan wiederverwendbar formulieren: [Aufgabenstruktur](/de/prompts/task-anatomy/)
-- Unterwegs korrigieren: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/)
-- Abnahme klar definieren: [Fertigstellung definieren](/de/prompts/define-done/)
-
-## Eine nützliche Team-Vereinbarung
-
-In `AGENTS.md` kannst du festschreiben:
+## Mögliche Standardregeln für Projektanweisungen
 
 ```md
-- Bei Änderungen an 3+ Dateien zuerst einen Plan
-- Keine destruktiven Befehle ohne Bestätigung
-- Pläne müssen Überprüfungsmethoden enthalten
+- Klar abgegrenzte und rückgängig zu machende Aufgaben direkt ausführen und
+  angemessen prüfen.
+- Für komplexe Aufgaben zuerst einen kurzen Plan nennen. Nur warten, wenn der
+  Nutzer ihn zuerst prüfen möchte oder eine notwendige Abwägung offen ist.
+- Innerhalb des autorisierten Umfangs ohne wiederholte Freigabe je Schritt
+  weiterarbeiten.
+- Bei fehlenden Schlüsselinformationen, überschrittenem Umfang oder einer nicht
+  autorisierten Aktion das konkrete Problem erläutern.
+- Abgeschlossene lokale Änderungen nicht als automatische Erlaubnis zum
+  Veröffentlichen, Senden von Nachrichten oder Löschen von Daten verstehen.
 ```
 
-Dann ist „zuerst Plan“ keine Ad-hoc-Erinnerung mehr, sondern Team-Default.
-
-## Quellen
-- Plan- und Ausführungsansätze in der offiziellen OpenAI-Codex-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite beschreibt nur die Kollaborationsmethode „zuerst Plan“; interne Links und Beispielstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26
+Dies sind anpassbare Empfehlungen zur Arbeitsweise; sie ersetzen keine Systemvorgaben, Organisationsrichtlinien oder Sandbox-Grenzen. Siehe [Kontextpriorität](/de/guide/context/context-priority/), [Planung](/de/guide/agent-work/planning/) und [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/).

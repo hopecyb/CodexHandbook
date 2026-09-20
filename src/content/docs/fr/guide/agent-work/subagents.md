@@ -3,7 +3,7 @@ title: Sous-agents
 description: Déléguez un travail bien délimité à des contextes indépendants, puis laissez l'Agent principal réunir les preuves, résoudre les conflits et accepter le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: d65f0ec
+source_revision: a3f2be5
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

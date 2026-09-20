@@ -3,7 +3,7 @@ title: Códigos de salida y reintentos
 description: Interpretar bien el éxito o el fallo de codex exec en el pipeline — cuándo reintentar y cuándo fallar de inmediato.
 locale: es
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

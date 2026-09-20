@@ -3,7 +3,7 @@ title: 첫 Skill 만들기
 description: 커밋 가능한 pr-review Skill을 처음부터 만들고, 테스트와 팀 공유 단계까지 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d6ef72a
+source_revision: 14414f5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

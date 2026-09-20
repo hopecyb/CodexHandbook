@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "当前 Codex 运行时明确采用按需读取技能正文与相关资料的方式；本页对 `references/` 的说明属于稳定的文档组织原则。"
+  checkedAt: "2026-07-26"
 title: references/ 目录
 description: 在 Skill 中组织长参考文档，实现渐进式披露。
 ---
@@ -7,7 +12,6 @@ description: 在 Skill 中组织长参考文档，实现渐进式披露。
 
 它不只是“多放几个文档”，也在于把那些**不是每次都要立刻读、但在某一步又确实有用**的资料单独收起来，需要时再读。
 
-# references/ 目录
 
 当 `SKILL.md` 正文过长时，把详细规范、API 说明、检查清单移到 `references/`，在步骤中按需引用。
 
@@ -67,10 +71,3 @@ my-skill/
 - 主流程留在 `SKILL.md`，参考资料按需加载
 - 单文件聚焦一个主题，便于维护
 - 避免在 references 中重复 SKILL.md 已有步骤
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 当前 Codex 运行时明确采用按需读取技能正文与相关资料的方式；本页对 `references/` 的说明属于稳定的文档组织原则。  
-**最近核验：** 2026-07-26

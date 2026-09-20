@@ -3,7 +3,7 @@ title: "Cas : matrice comparative de fonctionnalités"
 description: Recherche sourcée et livrable tabulaire — flux de travail réutilisable même pour les lecteurs non techniques.
 locale: fr
 source_locale: zh-CN
-source_revision: d90f5f1
+source_revision: b74008b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

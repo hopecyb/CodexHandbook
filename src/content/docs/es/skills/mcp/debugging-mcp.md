@@ -3,7 +3,7 @@ title: Depurar conexiones MCP
 description: Diagnostica fallos de MCP en las capas de configuración, transporte, autenticación y herramientas.
 locale: es
 source_locale: zh-cn
-source_revision: 829c1e9
+source_revision: d35b635
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers のトップページは現在も、Codex で構築、テスト、レビュー、変更を届けることを強調している。本ページは検証を差分レビュー、テスト実行、出典確認、完了定義に分け、品質章と突合済み。"
+  checkedAt: "2026-07-26"
 title: 検証
 description: 差分のレビュー、テスト実行、出典確認、完了基準の定義。
 sidebar:
   order: 17
 locale: ja
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 検証
 
 Codex を初めて使う人が陥りやすいミスは、**「完了した」と言われたら本当に完了だと思うこと** です。
 
@@ -96,10 +100,3 @@ Codex の出力は必ず確認可能であるべきです。検証は任意で�
 検証は、結果が本当に使え、安心して渡せるかを確かめるためのものです。
 
 プロンプトでの検収基準の書き方は [完了基準の定義](/ja/prompts/define-done/)。端到端の事例は [実践事例](/ja/cases/)。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Developers のトップページは現在も、Codex で構築、テスト、レビュー、変更を届けることを強調している。本ページは検証を差分レビュー、テスト実行、出典確認、完了定義に分け、品質章と突合済み。  
-**最終検証：** 2026-07-26

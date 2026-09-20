@@ -3,7 +3,7 @@ title: 프롬프트 안티패턴
 description: 피해야 할 모호함, 월권, 숨은 추론 요구입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6aba346
+source_revision: 8e89a5a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

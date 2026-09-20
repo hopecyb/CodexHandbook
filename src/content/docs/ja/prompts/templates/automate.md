@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは自動化系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 自動化テンプレート
 description: 反復タスクと再利用可能なフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 自動化テンプレート
 
 自動化タスクのよくある誤解は、「自動で回せるか」だけ考え、次を先に考えないことです。
 
@@ -61,10 +65,3 @@ reviewed_at: 2026-08-26
 
 - [長時間タスクのプロンプト](/ja/prompts/long-running-tasks/)
 - [日報自動化の事例](/ja/cases/automate-a-daily-report/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは自動化系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

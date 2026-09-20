@@ -1,154 +1,115 @@
 ---
-title: Ask for a plan first
-description: Before Codex edits, have it explain steps, risks, and how to verify.
+title: "When to act directly and when to ask for a plan"
+description: "Choose direct execution, planning, or approval for a specific action based on scope, uncertainty, and external impact, with two prompt comparisons."
+contentType: prompt
+audiences: [beginner, developer, creator]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "The three task categories and two comparisons are editorial collaboration advice. Authorization and execution boundaries were checked; they are not fixed client modes, and no model success-rate experiment was performed."
 locale: en
 source_locale: zh-CN
-source_revision: 0a2c7c7
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: 706f11b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Many problems aren't impossible—they started **too fast**. "Help me fix this" blends exploration, planning, and execution, leaving you to accept whatever shows up in the diff.
+Whether to ask for a plan depends on which decisions remain open. A clearly scoped, reversible change can be done directly. Plan first when the route is uncertain. Stop before a specific action that needs additional authorization. Asking for a plan does not mean asking the user to reply after every step.
 
-A better move: ask for a plan first instead of lengthening the requirement forever.
+## First decide which category applies
 
-## When you should ask for a plan
+| Category | How to recognize it | What to specify | When to pause |
+|---|---|---|---|
+| Execute directly | Input, scope, and acceptance criteria are clear; the change is reversible | Where to change, what counts as done, and what is excluded | When work would exceed the scope or essential information is missing |
+| Plan first | There are architecture choices, unclear scope, or several interdependent steps | Inspect the current state, then outline the route, impact, and verification | When a tradeoff requires the user's decision or the user explicitly asks to review the plan first |
+| Action needs approval | A specific action would create an unauthorized external effect or reach an execution-permission limit | Prepare a reviewable result, then identify the exact action, target, and impact | Before that action; keep the preparation already completed |
 
-| Scenario | Why |
-|---|---|
-| Cross-file or cross-module work | Easy to hit unrelated areas |
-| You're unfamiliar with the codebase | Confirm scope before edits |
-| Requirements still shifting | Surface disagreements early |
-| You must approve before execution | Separate "authorization to run" from "thinking out loud" |
-| High-risk actions | See rollback and verification up front |
+“Three files are involved” is not a universal approval threshold; even one production configuration file can have a large effect. See [Permissions and sandbox](/en/guide/permissions-and-sandbox/) for product prompts and actual execution permissions. This table is not a permissions configuration for every client.
 
-A single typo or one-line copy tweak may not need a formal plan—but if going wrong would hurt, pause first.
+## Comparison one: local copy edit
 
-## What a good plan should include
+Task: correct two typos in the README without changing its structure.
 
-Even a minimal plan should cover:
-
-1. Steps
-2. Files or scope involved
-3. Risks or open questions
-4. How each step will be verified
-
-Without item 4, it's a todo list—not an executable, verifiable plan.
-
-## Three common phrasings
-
-### Minimal
+**Counterexample with excessive pauses:**
 
 ```text
-Don't change code yet. Give me a 3–5 step plan: which files you'll touch and how each step will be verified.
+First list a plan and wait for my approval before reading files.
+After reading, list the two proposed edits and wait for approval before editing.
+Stop after each edit to ask me, then ask whether to check the result.
 ```
 
-Fits when you know the direction and only want the breakdown.
+These waits add no necessary decision; they fragment a task that was already authorized and clearly defined.
 
-### Recommended
+**Prompt with a clear scope:**
 
 ```text
-Don't execute yet. Based on the current repo, give me a plan that includes:
-1. Your understanding of the goal
-2. Numbered steps
-3. Files or directories involved
-4. Risks and open questions
-5. Verification approach
-
-Do not modify files until I reply "execute the plan."
+Change the two instances of “帐户” in the body of README.md to “账户”.
+Preserve code blocks, links, and all other content. Complete the edit directly,
+check the diff, and report where you changed it. If the actual count is not two,
+explain the difference first; do not expand this into a full copy edit.
 ```
 
-Fits daily dev, doc refactors, prompt rewrites, config changes.
+Acceptance means exactly two correct edits with unrelated content untouched. Such a change usually needs no new tests; perform the appropriate checks under the project's existing rules.
 
-### High-risk
+## Comparison two: edit and publish a site
+
+Task: update three tutorials and publish to the production site. Separate content preparation from the impact of publishing.
+
+**Counterexample with unclear authorization:**
 
 ```text
-Don't make changes yet. Produce a plan and separately explain:
-- Which step is most likely to cause regressions
-- How to roll back if it fails
-- Which operations need my confirmation
-- Which tests or manual checks prove completion
+Write a plan first, then change the whole website and put it live.
 ```
 
-Fits production issues, permission config, automation scripts, cross-module refactors.
+It does not identify the content to change, the publication target, or whether replacing the live version is authorized.
 
-## Plans shouldn't be long for length's sake
-
-You want something **you can approve, steer, and execute**—not a lengthy proposal.
-
-Check whether the plan is usable:
-
-- Can you say "skip step 2, do something else instead"?
-- Can you see which critical areas will move?
-- Do you know how to verify before starting?
-
-If not, it's not specific enough.
-
-## How to steer a plan
-
-You don't need to rewrite the whole thing—guide it like you'd guide a colleague.
-
-Common steering lines:
+**Prompt with concrete boundaries:**
 
 ```text
-Keep steps 1 and 2; drop step 3.
-Split database changes into a separate step.
-Read-only analysis first—no implementation yet.
-Add regression tests and rollback to the plan.
+Update these three tutorials and fix related internal links. Read the current
+state and give a short plan, then make the edits, build, and check the preview
+within these files and related navigation without pausing at every step.
+Deliver the preview, change summary, and verification results. Publishing to
+production is not yet authorized. When preparation is complete, list the version
+to publish, the target environment, and the rollback method, then wait for my
+confirmation of the publication action.
 ```
 
-This saves context versus "start over" and pulls results back on track.
+At this point, finish the local work before asking for final publication authorization. If the user has already explicitly authorized the specific publication target and action, apply the current policy to decide whether to continue; do not ask again solely because this template includes confirmation language.
 
-## Benefits vs. jumping straight in
+Both comparisons are instructional designs, not actual model output or efficiency measurements.
 
-| Plan first | Start immediately |
-|---|---|
-| Catch misunderstandings early | Often discover wrong direction after edits |
-| Easier approval and collaboration | You only see the final diff |
-| Natural split into subtasks | Multiple goals get mashed together |
-| Verification visible upfront | Tests remembered only at the end |
+## When to make only a plan
 
-Many workflows separate exploration and planning. See [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/).
+When you are still comparing approaches, need a budget decision, or explicitly want to review the design first, limit the work to planning:
 
-## Where plans go wrong
+```text
+This turn is for planning only. Read the current implementation and present two
+options, their impact, and how to verify them. Identify the tradeoffs that truly
+require my decision. Do not change the implementation. Execute only after the
+approach has been settled.
+```
 
-### Actions without boundaries
+This explicit stage limit should be followed. An agent's usual autonomy does not override it.
 
-e.g. "update docs and improve structure" with no directories to touch or modules to avoid—the plan tends to grow.
+## What to keep in a plan
 
-### Implementation without verification
+A sufficient plan states the goal, affected scope, steps, verification, and unresolved tradeoffs. Do not turn known answers into questions awaiting confirmation. A short, low-risk task does not need a rollback section just to satisfy a template.
 
-e.g. "change component logic, update styles, commit" with no proof behavior still works.
+When new circumstances arise during execution, distinguish ordinary implementation details from a change of goal. Resolve small issues within the original scope and explain them. If a new dependency, broader change, interface change, or new external action appears, first determine whether it remains authorized.
 
-### Task list without open questions
-
-Good plans admit uncertainty instead of pretending every assumption holds.
-
-## Recommended pairings
-
-- Formal execution flow: [Planning](/en/guide/agent-work/planning/)
-- Reusable plan structure: [Task anatomy](/en/prompts/task-anatomy/)
-- Mid-run steering: [Progress and steering](/en/guide/agent-work/progress-and-steering/)
-- Clear acceptance: [Define done](/en/prompts/define-done/)
-
-## A useful team convention
-
-In `AGENTS.md` you can state:
+## Default rules you can put in project instructions
 
 ```md
-- For changes touching 3+ files, produce a plan first
-- Don't run destructive commands without confirmation
-- Plans must include verification
+- Execute clearly scoped, reversible tasks directly and verify appropriately.
+- For complex tasks, write a short plan first. Wait only if the user asked to
+  review it first or a necessary tradeoff requires a decision.
+- Continue within the authorized scope without repeated step-by-step approval.
+- Explain the specific issue if key information is missing, the task scope is
+  exceeded, or an unauthorized action is required.
+- Do not treat completed local edits as automatic authorization to publish,
+  send messages, or delete data.
 ```
 
-Then "plan first" becomes default practice—not a one-off reminder.
-
-## Reference sources
-- Plan-and-execute patterns in OpenAI Codex official documentation
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains plan-first collaboration only; in-site links and example structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+These are adjustable working conventions, not substitutes for system rules, organization policy, or sandbox limits. See [Context priority](/en/guide/context/context-priority/), [Planning](/en/guide/agent-work/planning/), and [Human approval patterns](/en/cases/workflows/human-approval-patterns/).

@@ -3,7 +3,7 @@ title: Artefakt zuerst
 description: Zuerst Form und Pfad des finalen Artefakts vereinbaren, dann Schritte ableiten — geeignet für Docs, Configs, Reports und ähnliche Liefergegenstände.
 locale: de
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

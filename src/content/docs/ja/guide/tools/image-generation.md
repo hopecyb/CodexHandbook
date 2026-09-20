@@ -3,7 +3,7 @@ title: 画像生成
 description: Codex タスクでの画像生成または編集——プロンプト、形式、検証。
 locale: ja
 source_locale: zh-CN
-source_revision: 67d0eb7
+source_revision: ea275fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

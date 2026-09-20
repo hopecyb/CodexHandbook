@@ -1,28 +1,55 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page décrit le rôle de la section Référence et ses accès. Les liens internes et les regroupements ont été revérifiés ; le texte ne prétend pas fixer des valeurs par défaut susceptibles de changer selon la version.
+  checkedAt: '2026-07-26'
 title: Référence
-description: Glossaire, tableaux de comparaison, FAQ et points d'entrée de dépannage.
+description: Accès aux termes, commandes, configurations, permissions, FAQ et au dépannage.
+sidebar:
+  order: 60
 locale: fr
 source_locale: zh-CN
-source_revision: f13f975
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
-sidebar:
-  order: 150
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 0c9c971
 ---
 
-Court, précis, consultable. MVP inclut :
+Courte, précise et interrogeable : cette section sert surtout d'index et d'aide-mémoire. Les explications approfondies se trouvent dans les chapitres thématiques. Utilisez ces pages comme une boîte à outils, sans devoir les lire de bout en bout.
+
+## Comment l'utiliser
+
+Elle rassemble trois types de contenus :
+
+- **Comprendre une notion :** terminologie, FAQ et comparaison des fonctions.
+- **Trouver une règle :** commandes, configuration, permissions et variables d'environnement.
+- **Résoudre un problème :** messages d'erreur, dépannage et ressources officielles.
+
+Consultez-la avec une question précise plutôt que de tout lire d'une traite.
+
+## Index pour apprendre
 
 - [Glossaire](/fr/guide/reference/glossary/)
 - [FAQ](/fr/guide/reference/faq/)
-- [Comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/)
+- [Comparaison des fonctions](/fr/guide/reference/feature-comparison/)
+- [Aide-mémoire des commandes à barre oblique](/fr/guide/reference/slash-commands/)
+
+## Référence technique
+
+- [Commandes de la CLI](/fr/guide/reference/commands/)
+- [Référence de configuration](/fr/guide/reference/configuration-reference/)
+- [Matrice des permissions](/fr/guide/reference/permission-matrix/)
+- [Variables d'environnement](/fr/guide/reference/environment-variables/)
+- [Raccourcis clavier](/fr/guide/reference/keyboard-shortcuts/)
+- [Erreurs et messages](/fr/guide/reference/error-reference/)
+
+## Dépannage et liens externes
+
 - [Index de dépannage](/fr/guide/reference/troubleshooting/)
 - [Ressources officielles](/fr/guide/reference/official-resources/)
 
-La référence complète commandes/config est reportée.
+:::note[Sensible aux versions]
+Les commandes, clés de configuration et permissions par défaut évoluent avec le produit. Chaque page indique une date de vérification ; consultez la documentation officielle avant de vous y fier.
+:::
 
----
-
-**Statut :** en revue  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-25
+Cette section n'est pas un cours à suivre du début à la fin. Revenez-y pour vérifier un terme, un réglage, une commande ou une démarche de dépannage.

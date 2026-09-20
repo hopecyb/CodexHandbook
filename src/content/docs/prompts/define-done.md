@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明验收与完成标准写法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 定义完成标准
 description: 写出可检查的完成条件。
 ---
@@ -71,10 +76,3 @@ description: 写出可检查的完成条件。
 说到底，就是别让“到底算不算做完”只能靠猜。
 
 把验证命令写进标准，Agent 才更可能主动去跑：[运行测试](/guide/verification/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明验收与完成标准写法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

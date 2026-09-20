@@ -1,76 +1,66 @@
 ---
 title: Acesso à Internet
-description: Política de saída do Ambiente Cloud, instalação de dependências e risco de fuga de dados — abrir o necessário e manter o limite.
+description: Distingue o acesso durante a instalação do acesso do Agent e limita o risco por domínio e método HTTP.
 locale: pt
 source_locale: zh-CN
-source_revision: 1e2d815
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 5bbb905
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
 ---
 
+No Cloud existem duas fases distintas de acesso à rede:
 
-Cloud has two separate network phases:
-
-| Phase | Default | Main purpose |
+| Fase | Comportamento predefinido | Utilização principal |
 |---|---|---|
-| Setup script | Internet available | Install dependencies and tools |
-| Agent phase | Off by default | Let the Agent access external resources during the task |
+| setup script | Pode aceder à Internet | Instalar dependências e ferramentas |
+| Fase do Agent | Acesso desligado por predefinição | Aceder a recursos externos durante a tarefa |
 
-A successful `pnpm install` during setup does not mean the Agent can later `curl` any site.
+Por isso, um `pnpm install` bem-sucedido no setup não significa que o Agent possa depois executar `curl` para qualquer site.
 
-## Why Agent access is off by default
+## Porque está desligado por predefinição
 
-Agent internet access increases the risks of prompt injection, code or data exfiltration, malicious dependencies, and license-incompatible material entering a repository. An untrusted issue, web page, or dependency README can contain instructions designed to induce exfiltration.
+O acesso do Agent à Internet aumenta os riscos de injeção de instruções, envio de código ou dados para fora, dependências maliciosas e entrada de conteúdos com licenças incompatíveis no repositório. Uma issue, página Web ou README de uma dependência não fiável pode conter instruções destinadas a levar o Agent a enviar dados para terceiros.
 
-Allow only the targets and actions required by the task, and review work logs.
+O princípio é permitir apenas os destinos e ações necessários à tarefa e rever os registos do trabalho.
 
-## Options
+## Opções de configuração
 
-Configure Agent internet access per environment:
+O acesso do Agent à Internet é configurado por ambiente:
 
-- **Off:** block all Agent internet access.
-- **On:** allow access, optionally constrained by domains and HTTP methods.
+- **Off**: impede completamente o acesso do Agent à Internet.
+- **On**: permite o acesso, com a opção de o limitar por domínio e método HTTP.
 
-Start with an empty domain list, use the Common dependencies preset, or select All (unrestricted). Do not use unrestricted access as a production troubleshooting shortcut.
+A lista de domínios pode começar vazia, usar a predefinição Common dependencies ou escolher All (unrestricted). Num repositório de produção, não uses acesso sem restrições como atalho para resolver problemas.
 
-For read-only documentation or downloads, allow only `GET`, `HEAD`, and `OPTIONS`. This blocks `POST`, `PUT`, `PATCH`, and `DELETE`, which may send or modify data.
+Se a tarefa só precisa de ler documentação ou descarregar conteúdo, limita os métodos HTTP a `GET`, `HEAD` e `OPTIONS`. Assim bloqueias `POST`, `PUT`, `PATCH` e `DELETE`, que podem enviar ou modificar dados.
 
-## Minimal-access example
+## Exemplo de abertura mínima
 
-A task must read public API documentation:
+Uma tarefa precisa de consultar documentação pública de uma API:
 
-1. Keep access Off and confirm that the failure is network-related.
-2. Enable Agent access.
-3. Add only the official documentation domain to the allowlist.
-4. Allow only `GET`, `HEAD`, and `OPTIONS`.
-5. Rerun the task and inspect every outbound request in the log.
-6. Decide whether to restore Off afterward.
+1. Mantém Off e confirma que a falha é realmente causada pela falta de rede.
+2. Ativa Agent access.
+3. Acrescenta à allowlist apenas o domínio oficial da documentação.
+4. Permite só `GET`, `HEAD` e `OPTIONS`.
+5. Repete a tarefa e verifica todos os pedidos de saída nos registos.
+6. No fim, avalia se deves voltar a Off.
 
-## Relationship to Secrets
+## Relação essencial com Secret
 
-Cloud Secrets are removed before the Agent phase, reducing the risk of directly exfiltrating a setup Secret. Ordinary environment variables, repository content, and generated data can still be sent out. Never disguise sensitive data as an ordinary variable to bypass the Secret lifecycle.
+Os Secrets do Cloud são removidos antes da fase do Agent, o que reduz o risco de este enviar diretamente um Secret usado no setup. Mesmo assim, variáveis de ambiente normais, conteúdo do repositório e dados produzidos pela tarefa ainda podem ser enviados para fora. Não disfarces valores sensíveis de variáveis normais para contornar o ciclo de vida dos Secrets.
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] The need for Agent internet access is documented.
-- [ ] The allowlist contains only required domains.
-- [ ] HTTP methods are reduced to the smallest set.
-- [ ] Inputs are trusted or prompt-injection risk is considered.
-- [ ] Logs contain no command that uploads repository, environment, or credential data.
-- [ ] New dependencies were checked for source, version, and license.
+- [ ] A necessidade de acesso do Agent à Internet está explicada.
+- [ ] A allowlist contém apenas os domínios necessários.
+- [ ] Os métodos HTTP estão limitados ao conjunto mínimo.
+- [ ] As fontes de entrada são fiáveis ou o risco de injeção de instruções foi considerado.
+- [ ] Os registos não contêm comandos que enviem dados do repositório, ambiente ou credenciais.
+- [ ] A origem, a versão e a licença das novas dependências foram verificadas.
 
-## Official sources
+## Fontes oficiais
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

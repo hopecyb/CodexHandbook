@@ -3,7 +3,7 @@ title: Investigación con fuentes
 description: Usa Codex para buscar, comparar y verificar hechos — con fuentes y conclusiones trazables.
 locale: es
 source_locale: zh-CN
-source_revision: a9ff7a5
+source_revision: a075687
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

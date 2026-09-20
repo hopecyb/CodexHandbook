@@ -22,7 +22,8 @@ Codex Handbook 接受教程改写、事实核验、提示词、Skill、完整案
 3. 从最小可验证内容开始，补齐示例和失败路径。
 4. 涉及产品事实时查阅 OpenAI 官方文档，并记录核验日期。
 5. 新增图示时同步更新视觉资产清单。
-6. 在 Node.js `>=22.12.0` 环境运行 `pnpm build`。
+6. 在 Node.js `>=22.12.0` 环境运行 `pnpm build`。构建结束会自动检查渲染后的共享下载链接；修改语言链接规则后，也需运行 `node --test scripts/localized-download-links.test.mjs scripts/rendered-downloads.test.mjs`。
+7. 复查现有构建的下载地址可运行 `pnpm check:downloads`。此检查覆盖生成 HTML 的下载链接与本地目标，不替代 ZIP 内容、浏览器操作或外部链接验证。
 7. 阅读最终 diff，移除生成文件、真实凭据和无关改动。
 
 ## 内容状态
@@ -33,6 +34,8 @@ Codex Handbook 接受教程改写、事实核验、提示词、Skill、完整案
 - `outdated`：已知产品变化，暂不能按当前页面执行。
 
 不要用自信语气代替证据。详情见[核验技术内容](src/content/docs/guide/contributing/verify-technical-content.md)。
+
+新核验记录写在 frontmatter 的 `editorialStatus` 与 `verification` 中，不再追加自由文本页脚。编辑状态不等于验证方式：`editorial` 表示编辑审阅，`source-checked` 表示具体来源核对，`run-tested` 表示在记录的环境实跑。来源核对必须提供链接，实跑必须同时提供环境与证据。历史页脚已迁入 `legacyVerification`，保留原文与原日期，不自动升级为实跑。
 
 ## 可运行案例
 
@@ -81,3 +84,4 @@ node scripts/generate-zh-tw.mjs --check
 - 不把社区文章当作当前产品行为的唯一依据。
 - 不提供绕过权限、审批或组织安全策略的操作步骤。
 
+实验原始遥测中的本机绝对路径不属于站内 URL，`check:links` 排除规划目录 `experiments/*/run-*/telemetry/`，避免改写冻结记录。实验结果公开副本另外使用文件哈希清单与结果包的 `scripts/check_results.py` 验证；正文、实验输出和公开下载入口仍接受对应检查。

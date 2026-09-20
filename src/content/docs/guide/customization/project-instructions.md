@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前对项目上下文与文件协作方式的公开说明，以及本手册已核验的项目上下文、文件与工作流章节交叉复核；页面内容仅保留 README、`AGENTS.md`、`docs/` 与任务对话的稳定分工原则。"
+  checkedAt: "2026-07-26"
 title: 项目说明
 description: 除 AGENTS.md 外的项目级上下文，说明 README、docs 与对话引用的分工。
 sidebar:
@@ -93,10 +98,3 @@ Codex 会结合工具读取这些材料；关键是让**真相单一**，README 
 
 - [ ] 新克隆仓库的人（或 Codex）可按 README + AGENTS.md 跑通测试
 - [ ] 任务提示以 @ 引用为主，避免重复长背景
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前对项目上下文与文件协作方式的公开说明，以及本手册已核验的项目上下文、文件与工作流章节交叉复核；页面内容仅保留 README、`AGENTS.md`、`docs/` 与任务对话的稳定分工原则。  
-**最近核验：** 2026-07-26

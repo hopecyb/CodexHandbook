@@ -3,7 +3,7 @@ title: Trabajo impulsado por especificación
 description: Escribe primero una especificación aceptable y deja que Codex implemente según el plan — ideal para entregas con requisitos claros.
 locale: es
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

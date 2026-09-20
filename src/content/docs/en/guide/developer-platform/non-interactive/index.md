@@ -3,7 +3,7 @@ title: Non-Interactive Mode
 description: Batch jobs, scripts, and pipelines—understand what tasks fit first, then commands and output design.
 locale: en
 source_locale: zh-CN
-source_revision: e226a62
+source_revision: 2d542c9
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

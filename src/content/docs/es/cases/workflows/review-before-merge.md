@@ -3,7 +3,7 @@ title: Revisión antes de fusionar
 description: Antes del merge, usa Codex para una revisión estructurada del diff y de riesgos — con división clara humano/máquina.
 locale: es
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

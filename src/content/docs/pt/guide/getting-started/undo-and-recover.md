@@ -3,12 +3,16 @@ title: Desfazer e recuperar
 description: Volte com segurança quando o resultado não satisfizer.
 locale: pt
 source_locale: zh-CN
-source_revision: b76bcfc
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 5e7a06e
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Revisado com os capítulos introdutórios já verificados sobre aprovações, análise de resultados, recuperação de falhas e Git/área de trabalho. Esta página confirma apenas o método estável «pausar, conferir o escopo, priorizar desfazer e voltar a um estado seguro», sem tratar a função de desfazer de um cliente como contrato fixo.
+  checkedAt: '2026-07-26'
 ---
 
 Na primeira vez com o Codex, muita gente teme: se ele alterar errado, ainda consigo voltar?
@@ -65,8 +69,6 @@ Estas práticas reduzem claramente a chance de «alterar errado e ficar difícil
 - Verificar a cada passo — não acumular muitas mudanças para olhar juntas
 - Confirmar antes de operações de alto risco
 
-Errar em si não é terrível. Continuar alterando sem ver o alcance da mudança é o que complica mais.
-
 ## Usar pontos de recuperação como exploração
 
 Recuperar não serve só para corrigir erros. Também ajuda antes de explorar alternativas.
@@ -78,11 +80,17 @@ Bons momentos:
 - Testar scripts de automação ou substituições em lote
 - Achar que o requisito pode mudar em breve
 
-Ritmo mais seguro: confirmar estado seguro, pedir a Codex os ficheiros afetados, criar ponto de recuperação ou confirmar Git, mudar pouco, rever diff e verificação, depois manter, reverter ou tentar outro caminho.
+Uma sequência mais segura é:
 
----
+```text
+Confirmar o estado seguro atual
+→ Pedir ao Codex que informe quais arquivos serão afetados
+→ Criar um ponto de recuperação ou conferir o estado do Git
+→ Executar uma mudança pequena
+→ Revisar o diff e os resultados de verificação
+→ Manter, reverter ou tentar outra abordagem
+```
 
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com os princípios de início já verificados deste handbook sobre Aprovação, revisão de resultado, recuperação após falha e Git/área de trabalho; esta página só confirma o método estável de «pausar, ver o alcance, priorizar desfazer e então voltar a um estado seguro» — sem tratar a entrada de desfazer de um cliente específico como contrato fixo.  
-**Última verificação:** 2026-07-26
+Se o cliente oferecer checkpoints ou recurso de replay, você pode priorizar essas funções integradas. Em um projeto Git, branch, stash ou um commit pequeno também podem servir como ponto de recuperação. O essencial não é decorar um comando, mas evitar ampliar as mudanças enquanto seu impacto ainda não está claro.
+
+Errar em si não é terrível. Continuar alterando sem conhecer o alcance torna a recuperação mais difícil.

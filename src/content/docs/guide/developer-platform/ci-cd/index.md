@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "已按本仓库当前 CI/CD 子章节结构与代码审查自动化入口交叉复核；页面内容限定为“先在 CI/CD 中做低风险辅助、再决定是否放权”的稳定接入原则。"
+  checkedAt: "2026-07-26"
 title: CI/CD
 description: 在持续集成与发布流程里接入 Codex，先做低风险自动化。
 ---
@@ -20,10 +25,3 @@ description: 在持续集成与发布流程里接入 Codex，先做低风险自�
 - 把高风险动作继续留给人工审批
 
 CI/CD 里接 Codex，一般先做低风险辅助，再决定哪些动作值得放权。
-
----
-
-**状态：** verified  
-**适用产品：** CLI / API / Cloud  
-**核验依据：** 已按本仓库当前 CI/CD 子章节结构与代码审查自动化入口交叉复核；页面内容限定为“先在 CI/CD 中做低风险辅助、再决定是否放权”的稳定接入原则。  
-**最近核验：** 2026-07-26

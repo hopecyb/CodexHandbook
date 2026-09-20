@@ -3,7 +3,7 @@ title: Phát triển phần mềm
 description: Lối vào case sửa code, sửa bug, bổ sung kiểm chứng — trọng tâm kiểm soát phạm vi, test và hoàn tác.
 locale: vi
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

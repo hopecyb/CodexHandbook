@@ -3,7 +3,7 @@ title: Fundamentos de configuración
 description: Ubicación de los archivos de configuración de Codex, opciones habituales e introducción a aprobación, Sandbox y modelo.
 locale: es
 source_locale: zh-CN
-source_revision: 6c67645
+source_revision: ee00ab5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

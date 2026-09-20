@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers' current Codex use cases still include \"Understand large codebases,\" focusing on tracing main paths, identifying key modules, and quickly locating relevant files; this page's read-only exploration example aligns with the current official positioning."
+  checkedAt: "2026-07-26"
 title: Understand a codebase
 description: Read-only exploration of unfamiliar repos to build an actionable mental map.
 locale: en
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Understand a codebase
 
 ## Meta information
 
@@ -45,10 +53,3 @@ Do not change code yet. Read @src/ and @README; explain in 8 bullets or fewer:
 
 - [Understand template](/en/prompts/templates/understand/)
 - [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Understand large codebases," focusing on tracing main paths, identifying key modules, and quickly locating relevant files; this page's read-only exploration example aligns with the current official positioning.

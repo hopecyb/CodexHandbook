@@ -3,7 +3,7 @@ title: 設定項目リファレンス
 description: Codex ユーザー級とプロジェクト級設定キーの概念索引——パスとフィールドは公式を基準に。
 locale: ja
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

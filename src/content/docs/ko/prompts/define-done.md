@@ -3,7 +3,7 @@ title: 완료 기준 정의
 description: 확인할 수 있는 완료 조건을 작성합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b9d3ef1
+source_revision: 5d963e0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

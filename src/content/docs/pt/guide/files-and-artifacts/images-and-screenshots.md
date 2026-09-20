@@ -3,7 +3,7 @@ title: Imagens e ecrãs
 description: Fornecer ecrãs e mockups ao Codex e gerir ficheiros de imagem nas Tarefas.
 locale: pt
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

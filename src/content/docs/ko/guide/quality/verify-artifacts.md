@@ -3,7 +3,7 @@ title: 산출물 검증
 description: 생성된 문서, 페이지와 기타 산출물을 점검합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 3daaaa7
+source_revision: 7a6a12e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

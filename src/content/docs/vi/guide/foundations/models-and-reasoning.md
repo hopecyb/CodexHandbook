@@ -3,10 +3,9 @@ title: Model và suy luận
 description: Các yếu tố cần cân nhắc khi chọn model và cường độ suy luận.
 locale: vi
 source_locale: zh-CN
-source_revision: 001ea32
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0cbc9dc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 90
 ---
@@ -15,7 +14,7 @@ Model có thể chọn và mức «suy luận / suy nghĩ» sẽ đổi theo c�
 
 - **Độ khó tác vụ**: viết lại đơn giản vs quyết định kiến trúc nhiều tệp
 - **Độ trễ và chi phí**: cường độ suy luận cao hơn thường chậm hơn, đắt hơn
-- **Khả năng kiểm chứng**: tác vụ càng khó càng phải buộc có kế hoạch và kiểm thử
+- **Khả năng kiểm chứng**: với tác vụ phức tạp, hãy nêu rõ tiêu chí nghiệm thu và lập kế hoạch, kiểm chứng theo nhu cầu.
 
 Lần đầu thấy các từ «model», «cường độ suy luận», «mức suy nghĩ», nhiều người hỏi trước: có phải càng cao càng tốt?
 
@@ -38,11 +37,7 @@ Nếu tác vụ chỉ là sửa một câu copy, bổ sung một đoạn nhỏ �
 
 ### 2. Suy luận mạnh hơn thì có thể kiểm chứng ít hơn?
 
-Tác vụ càng phức tạp càng nên:
-
-- Yêu cầu kế hoạch trước
-- Chạy kiểm thử
-- Xem Diff
+Hãy kiểm chứng theo loại sản phẩm: với mã nguồn, xem kiểm thử và diff; với bài viết, đối chiếu nhận định với nguồn; với bảng tính, kiểm tra quy tắc tính. Lập kế hoạch trước khi cần cân nhắc các hướng thực hiện. Đừng mặc định phải dừng ở từng bước.
 
 ### 3. Chọn model chỉ là việc chuyên gia cần quan tâm?
 
@@ -62,9 +57,4 @@ Quan trọng hơn là phán đoán: lần tác vụ này có đáng trả thêm 
 
 Cẩm nang này không gắn với tên marketing của một model cụ thể. Lấy danh sách hiện tại trên client của bạn và [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn.
 
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Tài liệu model hiện hành của OpenAI và lối vào Codex/nhà phát triển vẫn coi chọn model, khác biệt tốc độ/chi phí và năng lực là mục có thể cấu hình; trang này không gắn số hiệu cụ thể hay mức cố định — chỉ giữ nguyên tắc chọn ổn định «cân nhắc theo độ phức tạp tác vụ, chi phí độ trễ và khả năng kiểm chứng».  
-**Kiểm chứng gần nhất:** 2026-07-26
+Cách ghi lại lựa chọn cụ thể được trình bày trong [Mức sử dụng, thời gian và chọn model](/guide/quality/usage-time-and-model-choice/). Trang này hiện chỉ có tiếng Trung và tách riêng hạn mức thuê bao, chi phí API, thời gian chờ và công sức làm lại của con người.

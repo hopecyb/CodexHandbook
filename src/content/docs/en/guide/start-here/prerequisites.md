@@ -1,36 +1,85 @@
 ---
-title: Prerequisites
-description: Account, device, practice project, and safety baseline.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Advice on access, clients, and practice environments was checked against official OpenAI getting-started and file-upload material; this page keeps lasting starting principles rather than detailed installation steps."
+  checkedAt: "2026-07-26"
+title: What you need before starting
+description: Account, device, practice project, and safety basics.
 locale: en
 source_locale: zh-CN
-reviewed_at: 2026-07-26
-source_revision: c8a032b
-translation_status: reviewed
-translated_at: 2026-07-26
+source_revision: "5fbedb8"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 5
 ---
 
-## Required
+For most people new to Codex, the obstacle is not technical background but knowing how to take the first step.
 
-1. **Working OpenAI / Codex access** (account and plan per official documentation)
-2. **A computer where you can install the desktop App, CLI, or IDE extension**
-3. **A disposable practice directory** (don't try your first run on a production repository)
-4. **Willingness to check results**: accept, edit, or undo—not blindly merge
+## Essentials
 
-## Recommended
+1. **Working OpenAI / Codex access** (consult official guidance for account and plan requirements)
+2. **A computer that can run the desktop App, CLI, or IDE extension**
+3. **A disposable practice directory** (do not make your first attempt in a production repository)
+4. **A willingness to review results:** accept, revise, or undo them rather than merge blindly
 
-- Read the [Beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/) first
-- Understand [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/) and [Sandbox and network](/en/guide/foundations/sandbox-and-network/)
-- For official installation and product changes, see [https://developers.openai.com/codex](https://developers.openai.com/codex)
+The third and fourth items are the easiest to overlook.
 
-## Not required
+- A practice directory makes mistakes less stressful
+- Reviewing the result makes the attempt controllable
 
-- You don't need to master Git or any programming language first
-- You don't need every client installed at once; the MVP default starts with the desktop App
+## What you do not need beforehand
 
----
+These are **not prerequisites**:
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+- You do not need to master Git first
+- You do not need to know much coding
+- You do not need to understand every detail about models, context, sandboxing, and approvals
+- You do not need to install every client at once
+
+Complete your first task, then learn these ideas gradually.
+
+## Common misconceptions
+
+### 1. You do not need to finish all documentation before starting
+
+You can learn while practicing. A common order is:
+
+1. Complete a very small task
+2. Return to the related concepts
+3. Consult the documentation when problems arise
+
+### 2. Do not start with a real project
+
+Begin with:
+
+- A small, disposable directory
+- A small task whose result you can understand
+- An environment where a mistake will not cause damage
+
+### 3. You do not need to learn CLI, IDE, and App all at once
+
+For many beginners, the **desktop App** is an easier start because the interface makes projects, tasks, and changes easier to see.
+
+## Recommendations
+
+- Read the [beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/)
+- Learn about [permissions and approvals](/en/guide/foundations/permissions-and-approvals/) and the [sandbox and network](/en/guide/foundations/sandbox-and-network/)
+- Follow [official Codex documentation](https://developers.openai.com/codex) for installation and product changes
+
+## Reference sources
+
+- OpenAI Academy: Getting started with ChatGPT
+- OpenAI Academy: Using ChatGPT
+- OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
+
+## A typical starting sequence
+
+1. Confirm you have access.
+2. Install one client.
+3. Prepare a practice directory.
+4. Run a very small task.
+5. Review the result before deciding what to do next.
+
+Completing a first task in a safe, small, reversible environment is easier than trying to learn every concept in advance.

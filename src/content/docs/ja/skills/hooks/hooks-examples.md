@@ -1,30 +1,33 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ローカル Codex ホストを使用する環境。信頼設定は Codex CLI の `/hooks` で管理"
+  checkedAt: "2026-08-25"
 title: Hook 設定例
-description: 改編可能な Hook 設定とスクリプト骨組み。秘密鍵スキャン、監査ログ、形式検証を含む。
+description: 実際の hooks.json と Python 標準ライブラリのスクリプトで、テスト可能な PreToolUse ガードを実装する。
 locale: ja
 source_locale: zh-CN
-source_revision: 5a86fd4
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 06e9fa2
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
-This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
+この章では、旧版の説明用イベント名と設定項目を削除しました。例は現在の公式 `hooks.json` 構造に従い、実行可能なテストも付属します。
 
-Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
+ファイル一式は [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard) にあります。
 
-## Goal and boundary
+## 目的と限界
 
-Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
+目的は、`Bash` または `apply_patch` のコマンド入力に AWS Access Key ID に似たテスト文字列が含まれている場合、ツール実行前に拒否することです。
 
-This demonstrates Hook input, output, and test structure only:
+この例は Hook の入出力とテストの構造を示すだけです。
 
-- It does not replace a professional secret scanner.
-- The regular expression has false positives and false negatives.
-- It does not scan hosted tools.
-- It must not log complete tool input.
+- 専門の secret scanner の代わりにはなりません。
+- 正規表現には誤検知と見逃しがあります。
+- Hosted tools は検査しません。
+- ツール入力全体をログに記録してはいけません。
 
-## 1. Configure hooks.json
+## 1. hooks.json を設定する
 
 ```json
 {
@@ -47,11 +50,11 @@ This demonstrates Hook input, output, and test structure only:
 }
 ```
 
-In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
+実際のリポジトリでは通常、設定を `.codex/hooks.json` に、スクリプトを `.codex/hooks/` に置きます。ここではハンドブックのリポジトリにある教材一式をそのまま検証できるよう、examples のパスを残しています。
 
-## 2. Denial output
+## 2. 拒否時の出力
 
-The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
+スクリプトは stdin からイベントの JSON を読み、`tool_input.command` だけを確認します。一致した場合は次を出力します。
 
 ```json
 {
@@ -63,50 +66,42 @@ The script reads event JSON from stdin and checks only `tool_input.command`. On 
 }
 ```
 
-On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+一致しなければ何も出力せず、終了コード `0` で終了します。通常の stdout テキストは有効な `PreToolUse` の判断にはなりません。
 
-## 3. Run tests
+## 3. テストを実行する
 
 ```bash
 python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
+期待する結果は、通常のコマンド、疑わしいキー、辞書型ではない `tool_input` を対象とする 3 件のテストがすべて通ることです。
 
-You can also pipe a fixture manually:
+fixture を手動で入力することもできます。
 
 ```bash
 printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
   | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-Normal input produces no stdout.
+通常の入力では stdout は出力されません。
 
-## 4. Enable it in a project
+## 4. プロジェクトで有効にする
 
-1. Put configuration and script in the target repository using a stable repository-relative path.
-2. Run unit tests and one real normal command in an isolated repository.
-3. Start Codex and open `/hooks` to inspect the source and exact definition.
-4. After trusting it, verify both a normal pass and test-string denial.
-5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
+1. 設定とスクリプトを対象リポジトリに置き、そのリポジトリ内の安定したパスに変更します。
+2. 隔離したリポジトリで単体テストと通常のコマンドを 1 回実行します。
+3. Codex を起動し、`/hooks` を開いて出所と正確な定義を確認します。
+4. 信頼を許可した後、「通常の入力は通る」「テスト文字列は拒否される」の両方を確認します。
+5. スクリプトを変更したら再確認します。hash が変わると、非管理 Hook は再び信頼待ち状態になります。
 
-## From warning to blocking
+## 警告からブロックへ強化する
 
-Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
+本番環境では通常、まずブロックしない監査やコンテキスト追加から始め、その後 `deny` に進めます。強化する前に、少なくとも次を確認してください。
 
-- Do fixtures cover known false positives?
-- Is a timeout or crash understandable to the user?
-- Does CI or service policy also enforce the rule?
-- Are bypass and emergency recovery auditable?
+- fixture は既知の誤検知を網羅していますか。
+- スクリプトがタイムアウトまたは異常終了したとき、利用者に理由が伝わりますか。
+- CI やサーバー側のポリシーでも同じルールを補完していますか。
+- 回避と緊急復旧の経緯を監査できますか。
 
-## Official source
+## 公式情報
 
-- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
-
-**Last verified:** 2026-08-25
+- [OpenAI：Hooks の設定と PreToolUse の出力](https://learn.chatgpt.com/docs/hooks)

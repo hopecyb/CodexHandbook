@@ -3,7 +3,7 @@ title: Token、コンテキストと圧縮
 description: コンテキストウィンドウ、占有、圧縮を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: b33848c
+source_revision: da31a01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

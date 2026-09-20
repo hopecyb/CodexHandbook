@@ -3,7 +3,7 @@ title: "Mode non interactif"
 description: Jobs par lot, scripts et pipelines — comprendre quelles tâches conviennent d'abord, puis les commandes et le design de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: e226a62
+source_revision: 2d542c9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

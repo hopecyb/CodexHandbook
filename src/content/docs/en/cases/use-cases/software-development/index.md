@@ -3,7 +3,7 @@ title: Software development
 description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
 locale: en
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

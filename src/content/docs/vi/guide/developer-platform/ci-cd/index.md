@@ -3,7 +3,7 @@ title: CI/CD
 description: Tích hợp Codex vào quy trình tích hợp liên tục và phát hành — bắt đầu từ tự động hóa rủi ro thấp.
 locale: vi
 source_locale: zh-CN
-source_revision: fb8b1b7
+source_revision: 4aeb424
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

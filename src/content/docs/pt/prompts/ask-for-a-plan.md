@@ -1,154 +1,118 @@
 ---
-title: Pedir um plano primeiro
-description: Antes de o Codex agir, peça que explique os passos, os riscos e a forma de verificar.
+title: "Quando executar diretamente e quando pedir primeiro um plano"
+description: "Escolha entre execução direta, planeamento e aprovação de uma ação concreta segundo o âmbito, a incerteza e o impacto externo, com duas comparações de prompts."
+contentType: prompt
+audiences: [beginner, developer, creator]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "As três categorias de tarefas e as duas comparações são recomendações editoriais de colaboração. Os limites de autorização e execução foram verificados; não são modos fixos do cliente nem uma experiência sobre a taxa de sucesso do modelo."
 locale: pt
 source_locale: zh-CN
-source_revision: 0a2c7c7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 706f11b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Muitos problemas não são «impossível fazer» — só **começam depressa demais**. Um «ajuda-me a corrigir» junta facilmente exploração, plano e execução; no fim só se valida passivamente no diff.
+Pedir um plano depende das decisões que ainda faltam tomar. Uma alteração com âmbito claro e fácil de reverter pode ser executada diretamente. Se o caminho não estiver claro, planeie primeiro. Pare antes de uma ação concreta que exija autorização adicional. Pedir um plano não significa esperar uma resposta do utilizador depois de cada passo.
 
-Nesse caso, o mais eficaz é pedir primeiro um plano, em vez de alongar cada vez mais o pedido.
+## Primeiro, identifique a categoria
 
-## Quando é obrigatório pedir um plano primeiro
+| Categoria | Como reconhecer | O que indicar | Quando parar |
+|---|---|---|---|
+| Executar diretamente | Entradas, âmbito e critérios de aceitação claros; alteração reversível | Indicar onde alterar, o que conta como conclusão e o que fica excluído | Se o trabalho sair do âmbito ou faltar informação essencial |
+| Planear primeiro | Escolhas de arquitetura, âmbito incerto ou vários passos interdependentes | Analisar o estado atual e descrever percurso, impacto e verificação | Se uma escolha couber ao utilizador ou este pedir expressamente para rever primeiro o plano |
+| Ação sujeita a aprovação | Uma ação concreta teria um efeito externo não autorizado ou atingiria um limite de permissão de execução | Preparar um resultado para revisão e indicar ação, alvo e impacto | Antes dessa ação, mantendo a preparação já concluída |
 
-| Cenário | Por quê |
-|---|---|
-| Vários arquivos ou módulos | Fácil afetar áreas irrelevantes |
-| Código-base desconhecido | Confirmar primeiro o âmbito que ele entendeu |
-| Requisitos ainda instáveis | Expor divergências cedo |
-| Precisa de aprovação antes de executar | Separar «autorização de execução» de «discussão de abordagem» |
-| Ações de alto risco | Ver antes o rollback e a verificação |
+«Envolve três ficheiros» não é um limiar universal de aprovação: um único ficheiro de configuração da produção pode ter grande impacto. Consulte [Permissões e sandbox](/pt/guide/permissions-and-sandbox/) para os diálogos do produto e as permissões reais de execução. Esta tabela não configura as permissões de todos os clientes.
 
-Um typo pequeno ou um ajuste pontual de texto pode não precisar de plano formal — mas se «errar aqui dá muito trabalho», vale a pena parar primeiro.
+## Comparação 1: corrigir texto local
 
-## O que um bom plano deve incluir no mínimo
+Tarefa: corrigir duas gralhas no README sem alterar a estrutura.
 
-A versão mínima deve cobrir estes quatro pontos:
-
-1. Passos
-2. Arquivos ou âmbito envolvidos
-3. Riscos ou pontos a confirmar
-4. Como verificar cada passo
-
-Sem o ponto 4, parece mais uma lista de tarefas do que um plano verificável.
-
-## Três formulações comuns
-
-### Versão mínima
+**Contraexemplo com pausas excessivas:**
 
 ```text
-Não altere código ainda. Dê-me primeiro um plano de 3–5 passos, indicando que arquivos mudará e como verificará cada passo.
+Apresenta primeiro um plano e espera pela minha aprovação antes de ler ficheiros.
+Depois da leitura, indica as duas alterações e espera novamente pela aprovação.
+Para após cada alteração para me perguntar e depois pergunta se deves verificar.
 ```
 
-Adequado quando: você já sabe a direção geral e só quer ver como ele divide o trabalho.
+Estas esperas não resolvem nenhuma decisão necessária; fragmentam uma tarefa já autorizada e bem delimitada.
 
-### Versão recomendada
+**Formulação com âmbito claro:**
 
 ```text
-Não execute ainda. Com base no repositório atual, dê um plano com:
-1. Compreensão do objetivo
-2. Passos numerados
-3. Arquivos ou diretórios envolvidos
-4. Riscos e itens a confirmar
-5. Forma de verificação
-
-Não modifique arquivos até eu responder «execute conforme o plano».
+No corpo de README.md, substitui as duas ocorrências de «帐户» por «账户».
+Mantém os blocos de código, ligações e todo o restante conteúdo. Faz a
+alteração diretamente, verifica o diff e indica onde alteraste. Se não
+encontrares exatamente duas ocorrências, explica primeiro a diferença;
+não alargues a tarefa a uma revisão integral do texto.
 ```
 
-Adequado para: desenvolvimento quotidiano, reescrita de docs, reescrita de Prompts, ajustes de configuração.
+A aceitação exige duas alterações exatas e nenhum conteúdo alheio modificado. Uma mudança deste tipo normalmente não precisa de testes novos; faça as verificações adequadas segundo as regras existentes do projeto.
 
-### Versão de alto risco
+## Comparação 2: alterar e publicar um site
+
+Tarefa: atualizar três tutoriais e publicá-los no site de produção. É preciso distinguir a preparação do conteúdo do impacto da publicação.
+
+**Contraexemplo com autorização pouco clara:**
 
 ```text
-Não faça alterações ainda. Produza um plano e explique à parte:
-- qual passo tem mais risco de regressão
-- como fazer rollback se falhar
-- quais operações precisam da minha confirmação
-- quais testes ou checagens manuais provam a conclusão
+Escreve primeiro um plano, depois altera o site inteiro e publica-o.
 ```
 
-Adequado para: problemas em produção, configuração de permissões, scripts de automação, refatorações entre módulos.
+Não especifica que conteúdos alterar, onde publicar ou se é permitido substituir a versão online.
 
-## O plano não precisa ser cada vez mais longo
-
-O que você quer é um artefato intermédio **aprovável, corrigível e executável** — não um documento longo.
-
-Para julgar se o plano serve, veja três pontos:
-
-- consegue dizer com clareza «pule o passo 2 e faça outra coisa»?
-- vê de imediato quais áreas críticas ele tocará?
-- sabe como aceitar o resultado antes de começar?
-
-Se não, o plano ainda não é concreto o bastante.
-
-## Como aprovar um plano
-
-Não precisa reescrever tudo — basta orientar como faria com um colega.
-
-Frases comuns:
+**Formulação com limites concretos:**
 
 ```text
-Mantenha os passos 1 e 2; remova o passo 3.
-Separe a mudança de banco de dados num passo próprio.
-Faça só análise somente leitura; não entre na implementação.
-Inclua no plano testes de regressão e plano de rollback.
+Atualiza estes três tutoriais e corrige as ligações internas relacionadas.
+Lê o estado atual e apresenta um plano breve; depois conclui as alterações,
+a compilação e a verificação da pré-visualização nesses ficheiros e na
+navegação relacionada, sem esperar a cada passo. Entrega a pré-visualização,
+o resumo das alterações e os resultados da verificação. A publicação em
+produção ainda não está autorizada. Quando a preparação terminar, indica
+a versão a publicar, o ambiente de destino e o método de reversão, e espera
+pela minha confirmação da ação de publicação.
 ```
 
-Isto poupa mais contexto do que «recomece do zero» e puxa o resultado de volta ao trilho.
+Neste caso, conclua o trabalho local antes de pedir a autorização final para publicar. Se o utilizador já autorizou expressamente o destino e a ação de publicação concretos, aplique a política atual para decidir se pode avançar; não volte a pedir a mesma autorização apenas porque esta apresentação inclui confirmação.
 
-## Benefícios face a «começar já»
+As duas comparações são exemplos didáticos, não saídas reais do modelo nem medições de eficiência.
 
-| Pedir um plano primeiro | Começar já |
-|---|---|
-| Detecta mal-entendidos cedo | Só nota o erro de direção depois da mudança |
-| Facilita aprovação e colaboração | Só vê o diff final, passivamente |
-| Ajuda a dividir em subtarefas | Junta vários objetivos no mesmo fluxo |
-| A verificação fica visível cedo | Só se lembra dos testes no fim |
+## Quando fazer apenas um plano
 
-Muitos workflows separam «exploração» e «plano». Ver [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/).
+Se ainda estiver a comparar opções, precisar de uma decisão sobre orçamento ou quiser rever expressamente o desenho antes de executar, limite o trabalho ao plano:
 
-## Problemas mais comuns num plano
+```text
+Nesta ronda, faz apenas o plano. Lê a implementação existente e apresenta
+duas opções, o impacto de cada uma e como as validar. Identifica as escolhas
+que exigem realmente a minha decisão. Não alteres a implementação. Executa
+apenas depois de a abordagem estar definida.
+```
 
-### Só ações, sem limites
+Este limite explícito da fase deve ser respeitado. A autonomia habitual do agente não permite saltar diretamente para a implementação.
 
-Por exemplo «atualizar a documentação e otimizar a estrutura», sem dizer quais diretórios mudar e quais módulos não tocar. O plano tende a crescer sem controlo.
+## O que incluir num plano
 
-### Só implementação, sem verificação
+Um plano suficiente indica objetivo, âmbito afetado, passos, verificação e escolhas ainda por resolver. Uma resposta conhecida não precisa de virar uma pergunta à espera de confirmação. Uma tarefa curta e de baixo risco também não precisa de uma secção de reversão só para preencher um modelo.
 
-Por exemplo «alterar a lógica do componente, atualizar estilos, fazer commit», sem dizer como provar que o comportamento não quebrou.
+Se surgirem novidades durante a execução, distinga detalhes normais de implementação de uma alteração do objetivo. Resolva e explique os pequenos problemas dentro do âmbito original. Perante uma nova dependência, uma alteração mais ampla, uma mudança de interface ou uma nova ação externa, avalie primeiro se a autorização continua a cobri-la.
 
-### Só lista de tarefas, sem itens a confirmar
-
-Um bom plano admite incerteza; não finge que todas as premissas já estão firmes.
-
-## Combinações recomendadas
-
-- Cadeia de execução formal: [Planejamento](/pt/guide/agent-work/planning/)
-- Plano reutilizável: [Anatomia de uma tarefa](/pt/prompts/task-anatomy/)
-- Correção a meio do caminho: [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/)
-- Aceitação clara: [Definir o concluído](/pt/prompts/define-done/)
-
-## Uma convenção útil em equipa
-
-Podem declarar no `AGENTS.md`:
+## Regras predefinidas para as instruções do projeto
 
 ```md
-- Mudanças em 3 ou mais arquivos: plano primeiro
-- Sem confirmação, não executar comandos destrutivos
-- O plano deve incluir a forma de verificação
+- Executar diretamente tarefas de âmbito claro e reversíveis, com verificação
+  adequada.
+- Nas tarefas complexas, apresentar primeiro um plano breve. Esperar apenas
+  se o utilizador pediu para o rever ou se há uma escolha necessária.
+- Prosseguir dentro do âmbito autorizado sem repetir a confirmação a cada passo.
+- Explicar o problema concreto se faltar informação essencial, o âmbito for
+  ultrapassado ou for necessária uma ação não autorizada.
+- Não tratar alterações locais concluídas como autorização automática para
+  publicar, enviar mensagens ou apagar dados.
 ```
 
-Assim «pedir um plano primeiro» deixa de ser lembrete avulso e passa a ser o padrão da equipa.
-
-## Fontes de referência
-- Ideias de plano e execução na documentação oficial do OpenAI Codex
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve o método de colaboração com plano primeiro; links internos e estrutura dos exemplos foram revistos; o corpo não depende de factos voláteis do produto.
+Estas recomendações de trabalho podem ser ajustadas; não substituem regras do sistema, políticas da organização nem limites da sandbox. Consulte [Prioridade do contexto](/pt/guide/context/context-priority/), [Planeamento](/pt/guide/agent-work/planning/) e [Padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/).

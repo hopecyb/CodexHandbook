@@ -1,48 +1,39 @@
 ---
-title: "Harness Engineering（実行ハーネス工学）"
-date: 2026-02-11
-year: 2026
-summary: "プロンプトは話し方を、コンテキストは見る情報を制御する。しかしそれだけでは信頼性は保証できない。Harness Engineering はツール編成、メモリ、エラー処理、状態追跡など周辺システムを作り、Agent を本番利用に近づける。"
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering（ハーネスエンジニアリング）"
+description: "ここではモデルを取り巻く実行環境、つまり参照できるプロジェクト知識、ツール、テスト、フィードバック、状態、エラーからの回復に注目します。モデルの能力だけでなく、環境もタスクを完了できるかどうかに影響します。"
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  evidence:
+    - label: "Harness engineeringの技術記事"
+      href: "https://openai.com/index/harness-engineering/"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 確認可能な出来事と範囲
 
-# Harness Engineering（実行ハーネス工学）
+**日付：2026-02-11 · 種別：エンジニアリング記事。** OpenAIは*Harness engineering: leveraging Codex in an agent-first world*を公開し、エージェントのための環境とフィードバックを整えたチームの経験を紹介しました。この日付は記事の公開日であり、関連するエンジニアリング手法が初めて登場した日ではありません。
 
-- 重要な日付:
-  - Application-engineering inflection: 2026-02-01
-- 公式リファレンス:
-  - https://platform.openai.com/docs/guides/evals
-  - https://platform.openai.com/docs/guides/tools
-- 注記: この項目は、AI アプリケーションがプロンプト中心から実行環境中心へ移る段階を記録する。
+出典：[Harness engineeringの技術記事](https://openai.com/index/harness-engineering/)。確認日は2026-09-18です。出典の公開日と本ページの確認日は意味が異なります。
 
-## それは何か
+## 何を解決するか
 
-Harness Engineering は、モデルを安定してタスク完了へ導く周辺システムを設計することだ。ツール、コンテキスト、メモリ、リトライ、評価、権限、ログ、回帰チェックを含む。
+ここではモデルを取り巻く実行環境、つまり参照できるプロジェクト知識、ツール、テスト、フィードバック、状態、エラーからの回復に注目します。モデルの能力だけでなく、環境もタスクを完了できるかどうかに影響します。
 
-## AI アプリケーション工学をどこからどこへ進めたか
+## 学習上の助言と適用範囲
 
-AI アプリケーションは「プロンプトや単発出力を最適化する」段階から、「タスクシステムと実行環境を最適化する」段階へ進んだ。
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定した結果ではありません。
 
-## 現在の段階
+まずエラーを検出できるチェックを整え、その後に自動実行の範囲を広げます。テストの成功が裏づけるのは対象とする動作だけであり、すべての要件の正しさや故障の排除は保証しません。記事中のチーム経験や効率の見積もりを本サイトへ直接当てはめることもできません。
 
-現時点では、この項目を `emerging` と見なしている。
+## 実践演習
 
-新興だが、実用化には不可欠になりつつある。信頼性、観測可能性、評価、回復を持たない Agent は本番で扱いにくい。
+[ワークフロー評価方法とサンプル集](/ja/guide/quality/workflow-evaluation/)：サンプルを1件選び、起動条件、境界、形式、品質、所要時間をそれぞれ記録し、出力の根拠を添えます。実行していない項目は未実行のままにします。
 
-## 置き換える可能性があるもの
-
-失敗をプロンプト修正だけで解決しようとするやり方を置き換える。問題をモデルの外側のシステム設計として扱う。
-
-## それを置き換える可能性があるもの
-
-標準 Agent ランタイム、ワークフローエンジン、評価基盤、権限システムと統合され、独立した言葉としては薄れる可能性がある。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

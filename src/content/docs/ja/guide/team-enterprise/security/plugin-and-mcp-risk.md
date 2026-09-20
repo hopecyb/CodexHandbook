@@ -3,7 +3,7 @@ title: Plugin と MCP リスク
 description: 拡張が何にアクセスできるか、チームがどう承認・監視するか——Skill、Plugin、MCP の統一リスク視点。
 locale: ja
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

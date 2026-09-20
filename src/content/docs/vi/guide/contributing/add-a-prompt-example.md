@@ -3,7 +3,7 @@ title: Thêm ví dụ Prompt
 description: Gửi Prompt tái hiện được vào examples/prompts, kèm siêu dữ liệu và tiêu chuẩn nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: cd78464
+source_revision: 15dabd2
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

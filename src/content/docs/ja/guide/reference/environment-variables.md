@@ -3,7 +3,7 @@ title: 環境変数
 description: Codex 関連環境変数の用途、層分け、セキュリティ——設定リファレンスの補足索引。
 locale: ja
 source_locale: zh-CN
-source_revision: 603ee7b
+source_revision: 58fd37b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

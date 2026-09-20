@@ -1,42 +1,53 @@
 ---
+prev: false
+next:
+  link: /es/guide/learning-paths/beginner/01-talk-to-codex/
+  label: Empezar la ruta para principiantes
 title: Rutas de aprendizaje
 description: Orden de lectura organizado por rol, con enlaces al contenido autoritativo.
 sidebar:
   order: 5
 locale: es
 source_locale: zh-CN
-source_revision: 05e85de
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f14e3a0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Las rutas de aprendizaje **solo organizan el orden de lectura**; no duplican los manuales de producto ni los artículos largos de capacidades.
+Las rutas de aprendizaje **solo organizan el orden de lectura**; no duplican los artículos extensos del manual de producto ni de las guías de capacidades.
 
-Al ver por primera vez el capítulo «Rutas de aprendizaje», puede parecer una capa más de índice. En realidad responde a: qué tipo de usuario eres ahora y en qué orden conviene leer a continuación.
+Al ver este capítulo por primera vez, puede parecer otra capa de índice. En realidad responde a qué tipo de usuario te pareces ahora y en qué orden te conviene leer.
 
-Este capítulo no aporta conocimiento nuevo; ayuda a evitar rodeos.
+No añade conocimientos nuevos sobre el producto; te ayuda a evitar rodeos.
 
 ## Qué hace este capítulo
 
-- Si eres principiante, creador, desarrollador o impulsor de equipo, qué línea seguir
-- En qué difiere el orden de lectura según el rol
-- Qué merece la pena leer ahora y qué puede esperar
+- Ayudar a principiantes, creadores, desarrolladores y responsables de equipo a elegir una ruta
+- Mostrar cómo cambia el orden de lectura según el rol
+- Separar lo que merece la pena leer ahora de lo que puede esperar
 
-## Rutas MVP disponibles
+## Ruta para principiantes con materiales fijos
 
-- **Principiante (cinco pasos completos)**
+[Descarga el mismo conjunto de materiales para practicar un anuncio de evento](/downloads/first-project/first-project-1.0.0.zip) y completa el anuncio, la revisión y el registro de recuperación en cinco pasos. No hace falta programar. Lectores independientes aún no han completado y validado toda la ruta.
+
+- **Principiante (cinco pasos)**
   1. [Hablar con Codex](/es/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [Trabajar con archivos](/es/guide/learning-paths/beginner/02-work-with-files/)
-  3. [Dar Tareas claras](/es/guide/learning-paths/beginner/03-give-clear-tasks/)
+  3. [Dar tareas claras](/es/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [Revisar resultados](/es/guide/learning-paths/beginner/04-review-results/)
   5. [Completar el primer proyecto pequeño](/es/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Resumen (pasos en profundidad pendientes)
+## Ruta práctica para creadores
 
-- [Creador](/es/guide/learning-paths/creator/)
-- [Desarrollador](/es/guide/learning-paths/developer/)
-- [Equipo](/es/guide/learning-paths/team/)
+La [ruta para creadores](/es/guide/learning-paths/creator/) tiene cuatro hitos consecutivos: materiales y tabla de hechos → artículo con fuentes → presentación editable de ocho diapositivas → instrucciones de tarea reutilizables. El artículo y la presentación tienen materiales descargables independientes, y cada paso tiene criterios de finalización. Lectores independientes aún no han validado la ruta completa.
+
+## Ruta práctica para desarrolladores
+
+La [ruta para desarrolladores](/es/guide/learning-paths/developer/) reutiliza el ejercicio del bug del carrito de compras: leer el código → corregir y probar → revisar el diff → preparar el traspaso. Incluye tres plantillas rellenables y una referencia del autor. Las pruebas de referencia se han vuelto a ejecutar; falta verificar que lectores independientes completen la ruta.
+
+## Ruta para equipos: piloto de dos semanas y decisión de despliegue
+
+- [Equipo](/es/guide/learning-paths/team/): acta → validación manual → controles por muestreo → ensayo de reversión → decisión de desplegar, continuar o detenerse, con seis plantillas.
 
 ## Ruta de operador avanzado
 
@@ -80,10 +91,3 @@ Si no sabes qué ruta tomar, elige así:
 - Te preocupa cómo desplegar en el equipo y controlar riesgos: [Ruta para equipos](/es/guide/learning-paths/team/)
 
 Las rutas de aprendizaje deciden qué leer a continuación según el problema más importante ahora.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con la estructura actual de learning paths del repositorio, las páginas de entrada por rol y la ruta paso a paso para principiantes; esta página solo organiza el orden de lectura por rol y no incluye detalles de comportamiento de producto variables.  
-**Última verificación:** 2026-07-26

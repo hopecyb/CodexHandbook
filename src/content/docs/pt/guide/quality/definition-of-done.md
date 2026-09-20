@@ -3,7 +3,7 @@ title: Definição de concluído
 description: Abordagem de checklist de concluído partilhada por equipas e indivíduos.
 locale: pt
 source_locale: zh-CN
-source_revision: e6b6511
+source_revision: f55e9f7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

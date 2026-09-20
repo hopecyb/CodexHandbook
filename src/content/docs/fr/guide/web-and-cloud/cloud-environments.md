@@ -3,7 +3,7 @@ title: Environnements Cloud
 description: Configurez les runtimes, les dépendances, le setup, le cache et le point de départ du dépôt pour Codex Cloud.
 locale: fr
 source_locale: zh-CN
-source_revision: f7c7188
+source_revision: 1745f70
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

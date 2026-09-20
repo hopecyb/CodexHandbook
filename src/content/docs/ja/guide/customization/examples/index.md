@@ -3,7 +3,7 @@ title: 例
 description: 抽象原則ではなく実例から、設定と AGENTS.md の書き方を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

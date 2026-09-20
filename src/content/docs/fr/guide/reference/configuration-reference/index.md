@@ -3,7 +3,7 @@ title: "Référence de configuration"
 description: Index conceptuel des clés de configuration Codex utilisateur et projet — chemins et champs selon la doc officielle.
 locale: fr
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

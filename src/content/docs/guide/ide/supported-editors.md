@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "已对照当前官方 IDE 页面，核实 VS Code、Cursor、Windsurf、VS Code Insiders、Xcode 与 JetBrains IDEs 的具体入口，并避免假设各集成功能完全相同。"
+  checkedAt: "2026-08-26"
 title: 支持的编辑器
 description: 区分 VS Code 兼容扩展、Xcode 集成与 JetBrains 集成。
 sidebar:
@@ -47,13 +52,3 @@ Codex 当前通过不同方式进入主流编辑器：VS Code 系使用 Codex �
 优先使用 [Codex CLI](/guide/cli/) 或 [桌面 App](/guide/desktop-app/)。不要把 VS Code 扩展包强行安装到不兼容编辑器，也不要把第三方集成默认视为 OpenAI 官方能力。
 
 安装步骤见 [安装 IDE 集成](/guide/getting-started/install-ide-extension/)，上下文用法见 [编辑器上下文](/guide/ide/editor-context/)。
-
----
-
-**状态：** verified
-
-**适用产品：** IDE
-
-**核验依据：** 已对照当前官方 IDE 页面，核实 VS Code、Cursor、Windsurf、VS Code Insiders、Xcode 与 JetBrains IDEs 的具体入口，并避免假设各集成功能完全相同。
-
-**最近核验：** 2026-08-26

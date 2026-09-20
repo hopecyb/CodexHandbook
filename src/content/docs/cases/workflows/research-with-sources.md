@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前公开的 Web search 与带来源研究相关能力，以及本手册已核验的网页搜索、验证来源、处理不确定性与版本策略章节交叉复核；本页只确认“关键结论应可追溯到来源、冲突与不确定性应显式标注”的稳定研究方法。"
+  checkedAt: "2026-07-26"
 title: 带引用的研究
 description: 用 Codex 做检索、比较与事实核验——产出可追溯的来源与结论。
 ---
@@ -57,10 +62,3 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 
 - [处理不确定性](/guide/quality/handle-uncertainty/)
 - [案例：文档重构与审查](/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前公开的 Web search 与带来源研究相关能力，以及本手册已核验的网页搜索、验证来源、处理不确定性与版本策略章节交叉复核；本页只确认“关键结论应可追溯到来源、冲突与不确定性应显式标注”的稳定研究方法。  
-**最近核验：** 2026-07-26

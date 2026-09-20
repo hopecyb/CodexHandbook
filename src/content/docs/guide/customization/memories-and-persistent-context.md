@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI（视版本）"
+  basis: "已按 OpenAI Help Center 当前关于 ChatGPT Memory 的官方说明，以及本手册已核验的项目指令、个人偏好与安全边界章节交叉复核；页面内容限定为“记忆适合存个人偏好和少量稳定事实，不替代仓库规则与敏感信息管理”的稳定原则。"
+  checkedAt: "2026-07-26"
 title: 记忆与持久上下文
 description: Codex 如何跨会话记住偏好与事实——能力、边界与团队规范。
 sidebar:
@@ -121,9 +126,3 @@ sidebar:
 
 ## 参考来源
 - OpenAI Codex memory 文档（以版本为准）
----
-
-**状态：** verified  
-**适用产品：** App / CLI（视版本）  
-**核验依据：** 已按 OpenAI Help Center 当前关于 ChatGPT Memory 的官方说明，以及本手册已核验的项目指令、个人偏好与安全边界章节交叉复核；页面内容限定为“记忆适合存个人偏好和少量稳定事实，不替代仓库规则与敏感信息管理”的稳定原则。  
-**最近核验：** 2026-07-26

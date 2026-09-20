@@ -1,61 +1,51 @@
 ---
-title: Trò chuyện với Codex
-description: Luyện dùng ngôn ngữ tự nhiên để nêu mục tiêu và hạn chế.
-locale: vi
-source_locale: zh-CN
-source_revision: 3648830
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Trò chuyện với Codex"
+description: "Chuẩn bị cùng một bộ tài liệu thực hành rồi bắt đầu bằng việc chỉ đọc để hiểu các tệp và những điều chưa rõ."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 10
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Bộ tài liệu cố định và phần tham khảo của tác giả đã đầy đủ; thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa có thử nghiệm độc lập với mô hình hoặc người học hoàn thành bài."
+  evidence:
+    - label: "Bản ghi thao tác tệp của tác giả"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/vi/guide/learning-paths/beginner/"
+  label: "Lộ trình cho người mới và tài liệu"
+next:
+  link: "/vi/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Làm việc với tệp"
+locale: vi
+source_locale: zh-CN
+source_revision: 827a5d2
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Chuẩn bị tài liệu
 
-## Mục tiêu bước này
+[Tải toàn bộ gói thực hành](/downloads/first-project/first-project-1.0.0.zip). Sau khi giải nén, sao chép nguyên thư mục `starter` thành một thư mục mới tên `work`, rồi cho Codex mở `work`. Trong đó chỉ có ba tệp `facts.md`, `notice.md` và `private-note.md`, đều là tài liệu học tập tổng hợp.
 
-Dùng câu đầy đủ nói rõ **bạn muốn gì** và **không muốn gì**, đừng chỉ thả vài từ.
+Giữ lại `starter` gốc. Đừng dùng `references`, nơi chứa đáp án của tác giả, làm đầu vào cho bước này. Chưa cần Git, terminal hay thư viện phụ thuộc bổ sung; chỉ cần mở tệp bằng trình soạn thảo.
 
-Lần đầu trò chuyện với Codex, nhiều người coi nó như ô tìm kiếm, chỉ thả vài từ khóa. Bước này dùng để bỏ thói quen đó.
-
-## Bài luyện
-
-Nói với dự án luyện tập:
+## Gửi tác vụ đầu tiên
 
 ```text
-Hãy giải thích bằng ba câu trong thư mục hiện tại có những tệp nào,
-và mỗi tệp đại khái làm gì.
-Không sửa bất kỳ tệp nào.
+Chỉ đọc facts.md, notice.md và private-note.md trong thư mục hiện tại.
+Dùng ba câu giải thích mục đích của từng tệp, rồi chỉ ra thông tin nào về sự kiện còn chưa xác định.
+Không tạo, sửa hoặc xóa tệp. Không truy cập mạng, đăng tải hoặc gửi nội dung.
 ```
 
-## Bước này đang luyện gì
+Đây là bài thực hành chỉ đọc được nêu rõ, nên ranh giới đọc và ghi cũng được nêu. Với tác vụ khác, hãy cấp quyền theo ý định thực tế; không cần máy móc thêm câu này vào mọi yêu cầu.
 
-Ở đây luyện hai việc cơ bản nhất, không phải viết Prompt đẹp hơn:
+## Điều kiện hoàn thành
 
-- Nói mục tiêu đủ
-- Nói ranh giới rõ
+Câu trả lời phân biệt đúng nguồn căn cứ sự thật, thông báo cần chỉnh sửa và ghi chú cần giữ lại, đồng thời chỉ ra cách đăng ký vẫn chưa biết. Cả ba tệp vẫn giống bản gốc trong `starter`, không có tệp mới hoặc tệp bị xóa.
 
-Dù chỉ là Tác vụ chỉ đọc, cũng nên viết rõ «không sửa bất kỳ tệp nào».
+Nếu chưa chắc, hãy mở tệp để kiểm tra trực tiếp, rồi xem [giải thích tệp của tác giả](/downloads/first-project/references/folder-map.md). Diễn đạt khác nhau không sao, nhưng không được bịa ra mục đích tệp hoặc cách đăng ký.
 
-## Học được gì
-
-- Tác vụ chỉ đọc cũng phải viết rõ «không sửa»
-- Yêu cầu mơ hồ sẽ nhận câu trả lời mơ hồ
-
-## Hiểu nhầm thường gặp
-
-### 1. Bài luyện này quá đơn giản, không cần làm
-
-Nếu ngay cả Tác vụ chỉ đọc cũng không nói rõ, sau này lên Tác vụ sửa đổi càng dễ lệch hướng.
-
-### 2. Chỉ khi sửa tệp mới cần viết hạn chế
-
-Tác vụ chỉ đọc, giải thích, tóm tắt cũng cần ranh giới.
-
-Bước tiếp: [Làm việc với tệp](/vi/guide/learning-paths/beginner/02-work-with-files/) · Nguyên lý: [Cơ bản về Prompt](/vi/prompts/basics/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương cơ bản Prompt, an toàn nhập môn và lộ trình người mới đã kiểm chứng trong sổ tay; trang chỉ luyện phương pháp nhập môn ổn định «dùng câu đầy đủ nói rõ mục tiêu và ranh giới».  
-**Kiểm chứng gần nhất:** 2026-07-26
+[Gói thực hành và hướng dẫn chuẩn bị](/vi/guide/learning-paths/beginner/)

@@ -3,7 +3,7 @@ title: Checklist an toàn cho người mới
 description: Các mục kiểm tra an toàn nên xem trước lần dùng đầu tiên.
 locale: vi
 source_locale: zh-CN
-source_revision: 5add3bd
+source_revision: 75bfe4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

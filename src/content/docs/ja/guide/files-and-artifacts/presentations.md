@@ -3,7 +3,7 @@ title: プレゼンテーション
 description: スライドと発表資料の生成、改訂、エクスポート。構成、マスター、発表者ノートの約束。
 locale: ja
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

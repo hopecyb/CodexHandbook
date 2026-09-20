@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud、App、IDE、CLI"
+  checkedAt: "2026-08-26"
 title: 委托与跟进
 description: 发起可独立运行的 Cloud 任务，并用同一聊天修正方向和验收结果。
 sidebar:
@@ -61,11 +65,3 @@ Cloud 可从 Web、IDE、GitHub、GitLab（Beta）、Linear 或 Slack 发起；�
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [长任务](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud、App、IDE、CLI
-
-**最近核验：** 2026-08-26

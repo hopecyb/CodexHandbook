@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明上下文分层与阅读路径；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 上下文
 description: 管理项目、文件与对话上下文。
 sidebar:
@@ -39,10 +44,3 @@ sidebar:
 - [敏感上下文](/guide/context/sensitive-context/)
 
 这章反复强调的是：上下文取决于“它这次实际上真的看到了什么”。如果你觉得它应该知道，但这次没有提供给它，那就不算上下文。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明上下文分层与阅读路径；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: 診断してから修正
 description: 本番問題と根深い bug——証拠チェーンを構築してから手を入れる。
 locale: ja
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

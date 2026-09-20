@@ -1,49 +1,40 @@
 ---
 title: Hooks
-description: Thêm kiểm tra, nhật ký và chặn tại điểm thực thi cố định — khi nào nên chặn, khi nào nên ghi.
+description: Chạy script hoặc công cụ MCP tại các mốc trong vòng đời Codex để kiểm tra, ghi nhận và áp dụng quy tắc.
 locale: vi
 source_locale: zh-CN
-source_revision: c768708
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a0312e9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-A Hook is an automatic handler in the Codex lifecycle. It can run a script or MCP tool when a session starts, a prompt is submitted, before or after a tool call, around context compaction, when a subagent stops, or when the main thread ends.
+Hook là bộ xử lý tự động trong vòng đời của Codex. Nó có thể chạy script hoặc công cụ MCP khi phiên bắt đầu, prompt được gửi, trước hoặc sau khi gọi công cụ, lúc nén ngữ cảnh, khi Agent con dừng hoặc khi luồng chính kết thúc.
 
-## What this section solves
+## Nhóm tài liệu này giải quyết điều gì
 
-- Choose a real event rather than inventing a name such as `pre_tool`.
-- Separate blocking before execution from feedback after execution.
-- Start with a testable, low-risk Hook.
-- Review the trust boundary of project Hooks and Hooks bundled in Plugins.
+- Chọn đúng sự kiện thay vì tự đặt những tên không tồn tại như `pre_tool`.
+- Phân biệt chặn trước khi thực thi với phản hồi sau khi thực thi.
+- Bắt đầu bằng Hook có thể kiểm thử và ít rủi ro.
+- Rà soát ranh giới tin cậy của Hook trong dự án và Hook đi kèm Plugin.
 
-## Reading order
+## Thứ tự đọc
 
-1. [Hooks overview](/vi/skills/hooks/hooks-overview/): configuration layers, trust, and runtime behavior
-2. [Hook event types](/vi/skills/hooks/hook-event-types/): choose events and matchers by lifecycle position
-3. [Hook examples](/vi/skills/hooks/hooks-examples/): run a unit-tested `PreToolUse` guard
+1. [Tổng quan về Hooks](/vi/skills/hooks/hooks-overview/): hiểu các lớp cấu hình, sự tin cậy và cách thực thi.
+2. [Các loại sự kiện Hook](/vi/skills/hooks/hook-event-types/): chọn sự kiện và matcher theo vòng đời.
+3. [Ví dụ cấu hình Hook](/vi/skills/hooks/hooks-examples/): chạy ví dụ bảo vệ `PreToolUse` có thể kiểm thử đơn vị.
 
-## Fastest decision
+## Cách chọn nhanh
 
-| Goal | Consider first |
+| Mục tiêu | Ưu tiên xem xét |
 |---|---|
-| Deny or rewrite tool input before execution | `PreToolUse` |
-| Decide when Codex is about to request elevated permission | `PermissionRequest` |
-| Log or add feedback after a tool finishes | `PostToolUse` |
-| Check a submitted prompt or add context | `UserPromptSubmit` |
-| Require the main thread or a subagent to continue another turn | `Stop` / `SubagentStop` |
+| Từ chối hoặc sửa đầu vào trước khi công cụ chạy | `PreToolUse` |
+| Quyết định khi Codex chuẩn bị xin nâng quyền | `PermissionRequest` |
+| Ghi nhận hoặc bổ sung phản hồi sau khi công cụ kết thúc | `PostToolUse` |
+| Kiểm tra hoặc thêm ngữ cảnh lúc gửi prompt | `UserPromptSubmit` |
+| Yêu cầu luồng chính hoặc Agent con tiếp tục thêm một lượt | `Stop` / `SubagentStop` |
 
-Hooks do not replace sandboxing, approvals, command rules, or service-side permissions. They are an additional guardrail, and some managed-tool paths do not pass through local tool Hooks.
+Hook không thay thế sandbox, phê duyệt, quy tắc lệnh hay quyền phía máy chủ. Đây là lớp bảo vệ bổ sung; một số đường đi của công cụ được quản lý không đi qua Hook cục bộ của công cụ.
 
-## Official source
+## Nguồn chính thức
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Environments using a local Codex host; trust review and `/hooks` management follow the Codex CLI documentation
-
-**Kiểm chứng gần nhất:** 2026-08-25

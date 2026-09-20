@@ -1,0 +1,39 @@
+{
+  "python": "3.12.11",
+  "system": "Darwin",
+  "machine": "arm64",
+  "before": {
+    "exit_code": 1,
+    "stdout": {
+      "scope": "static-local-html",
+      "local_pass": false,
+      "html_files": 1,
+      "checked_local_references": 2,
+      "findings": [
+        {
+          "file": "index.html",
+          "line": 21,
+          "url": "#signup",
+          "reason": "missing-fragment"
+        }
+      ],
+      "unchecked": []
+    },
+    "stderr": ""
+  },
+  "after": {
+    "exit_code": 0,
+    "stdout": {
+      "scope": "static-local-html",
+      "local_pass": true,
+      "html_files": 1,
+      "checked_local_references": 2,
+      "findings": [],
+      "unchecked": []
+    },
+    "stderr": ""
+  },
+  "repair": "Only href: #signup -> #participation",
+  "reference_sha256": "e5efcc427c8997d270cea00d2f52621c7e1aefd8bb71f51af3a903b5bb5d73c0",
+  "model_run": false
+}

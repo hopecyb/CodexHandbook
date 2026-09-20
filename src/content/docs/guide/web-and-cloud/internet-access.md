@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: 互联网访问
 description: 区分安装期联网与 Agent 联网，并以域名和 HTTP 方法限制风险。
 sidebar:
@@ -59,11 +63,3 @@ Cloud Secret 在 Agent 阶段前会被移除，这降低了 Agent 直接外传 s
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud
-
-**最近核验：** 2026-08-26

@@ -3,7 +3,7 @@ title: Debug MCP connections
 description: Diagnose MCP failures across configuration, transport, authentication, and tool layers.
 locale: en
 source_locale: zh-CN
-source_revision: 829c1e9
+source_revision: d35b635
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

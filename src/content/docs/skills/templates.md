@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "当前 Codex 运行时支持在技能中引导使用附带文件；本页讨论的是输出模板这一稳定写法，不依赖当前客户端界面或安装流程。"
+  checkedAt: "2026-07-26"
 title: templates/ 目录
 description: 在 Skill 中提供输出模板与报告骨架。
 ---
@@ -7,7 +12,6 @@ description: 在 Skill 中提供输出模板与报告骨架。
 
 如果 `references/` 更偏“输入时参考什么”，那 `templates/` 更偏“输出时长成什么样”。需要固定结构、方便复查的结果，都适合放这里。
 
-# templates/ 目录
 
 `templates/` 存放 Skill 执行时复用的输出格式，例如审查报告、changelog 骨架、研究对比表。
 
@@ -72,9 +76,3 @@ review-skill/
 如果连续两三次都在重复说“按这个结构输出”，就值得做成 `templates/`。
 
 `templates/` 的核心价值，是让输出结构稳定，后续也更好复用。
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 当前 Codex 运行时支持在技能中引导使用附带文件；本页讨论的是输出模板这一稳定写法，不依赖当前客户端界面或安装流程。  
-**最近核验：** 2026-07-26

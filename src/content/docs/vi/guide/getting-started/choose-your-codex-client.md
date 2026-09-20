@@ -1,42 +1,31 @@
 ---
 title: Chọn client Codex
-description: Lựa chọn lần đầu giữa App, CLI, IDE, Cloud.
+description: Chọn nhanh nơi bắt đầu giữa ứng dụng máy tính, CLI, IDE và Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: 960d5d3
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: d316380
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
-Start with where most of the work happens:
+Trước tiên, hãy xem phần lớn công việc của bạn diễn ra ở đâu:
 
-| You mainly work in | Start here |
+| Bạn chủ yếu làm việc | Hãy bắt đầu ở đây |
 |---|---|
-| The desktop, managing projects, files, and multiple tasks | **ChatGPT desktop App** |
-| A terminal, running Git, tests, and scripts | **Codex CLI** |
-| VS Code, a compatible editor, Xcode, or JetBrains | **IDE integration** |
-| A connected remote repository and isolated environment | **Codex Cloud** |
+| Trên máy tính, quản lý dự án, tệp và nhiều tác vụ | **Ứng dụng ChatGPT trên máy tính** |
+| Trong terminal, chạy Git, kiểm thử và script | **Codex CLI** |
+| Trong VS Code, trình soạn thảo tương thích, Xcode hoặc JetBrains | **Tích hợp IDE** |
+| Trong kho mã từ xa đã kết nối và môi trường tách biệt | **Codex Cloud** |
 
-If this is your first time and you have no strong preference, start with the desktop App. It makes tasks, files, diffs, and approvals easier to see. This choice is not permanent: one workflow can start in the IDE, use the CLI for verification, and continue a long task in the desktop App or Cloud.
+Nếu mới dùng lần đầu và chưa có sở thích rõ ràng, bạn có thể bắt đầu với ứng dụng máy tính. Ở đó dễ thấy tác vụ, tệp, diff và yêu cầu phê duyệt hơn. Đây không phải lựa chọn vĩnh viễn: cùng một quy trình có thể bắt đầu trong IDE, kiểm chứng bằng CLI rồi tiếp tục tác vụ dài trong ứng dụng máy tính hoặc Cloud.
 
-For the complete decision diagram, combined workflows, and verification steps, read [Choose a Codex client](/vi/guide/choose-your-client/). For a feature-by-feature comparison, see [Feature comparison](/vi/guide/reference/feature-comparison/).
+Để xem sơ đồ quyết định đầy đủ, ví dụ kết hợp và các bước kiểm chứng, hãy đọc [Chọn client Codex](/vi/guide/choose-your-client/). Để đối chiếu từng tính năng, xem [Bảng so sánh tính năng](/vi/guide/reference/feature-comparison/).
 
-Then continue to the relevant setup page:
+Sau đó chọn trang cài đặt tương ứng:
 
-- [Install the desktop App](/vi/guide/getting-started/install-desktop-app/)
-- [Install the CLI](/vi/guide/getting-started/install-cli/)
-- [Install an IDE integration](/vi/guide/getting-started/install-ide-extension/)
-- [Learn about Codex Cloud](/vi/guide/web-and-cloud/)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE / Cloud
-
-**Căn cứ kiểm chứng:** Compared with the four current official entry points. This page keeps only the quick beginner decision and navigation; detailed capabilities are maintained in the main client-selection and feature-comparison pages.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Cài ứng dụng máy tính](/vi/guide/getting-started/install-desktop-app/)
+- [Cài CLI](/vi/guide/getting-started/install-cli/)
+- [Cài tích hợp IDE](/vi/guide/getting-started/install-ide-extension/)
+- [Tìm hiểu Codex Cloud](/vi/guide/web-and-cloud/)

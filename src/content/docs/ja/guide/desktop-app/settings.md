@@ -3,7 +3,7 @@ title: 設定
 description: デスクトップ App の日常動作、ショートカット、通知、外観を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: c599d50
+source_revision: 7a6d2fe
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

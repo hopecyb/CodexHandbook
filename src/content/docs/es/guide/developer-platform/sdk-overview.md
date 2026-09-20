@@ -1,97 +1,88 @@
 ---
-title: Resumen del SDK
-description: Lanzar Tareas de Codex desde tu aplicación con el SDK oficial — conceptos de autenticación, sesión y manejo de errores.
-locale: es
-source_locale: zh-CN
-source_revision: a701e2d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: 'Descripción del SDK: tareas locales e integración de clientes'
+description: Distingue el SDK de Codex, la CLI no interactiva, App Server y un servicio de tareas remoto construido por ti.
+contentType: reference
+audiences: [developer]
+level: intermediate
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Se contrastaron el lugar de ejecución, las interfaces de threads y los límites de integración con la documentación oficial del SDK y App Server. Del ejemplo mínimo solo se comprobó la sintaxis; no se realizó ninguna llamada autenticada al modelo.
+  evidence:
+    - label: Documentación oficial del SDK de Codex
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: Documentación oficial de Codex App Server
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: es
+source_locale: zh-CN
+source_revision: e888ae6
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-El SDK (nombre e idiomas según la [documentación oficial](https://developers.openai.com/codex)) te permite crear Tareas, sondear el estado y obtener resultados en **tu propio servicio**, sin depender solo de la TUI de la terminal.
+El SDK de Codex permite controlar desde un programa un Agent de Codex local. «Local» se refiere a la máquina que ejecuta el SDK y el Agent: tu equipo o un runner de CI que administras. No lo interpretes como un servicio HTTP alojado que crea tareas Cloud, consulta su estado y descarga artefactos. Consulta la [documentación oficial del SDK](https://learn.chatgpt.com/docs/codex-sdk).
 
-Si ves «SDK» por primera vez, piénsalo como un conjunto de herramientas de desarrollo para que un programa llame a Codex, no como una interfaz de clics para personas.
+## Elegir la entrada según el objetivo
 
-Es decir: sirve para que «tu sistema llame a Codex». Si solo lanzas una Tarea puntual, normalmente no hace falta el SDK todavía.
-
-## Qué cubre esta página
-
-- Cuándo usar el SDK en lugar de CLI `exec`
-- Autenticación y aislamiento de tenant
-- Ideas de combinación con Webhook y colas
-
-Vista general de la plataforma: [Plataforma para desarrolladores](/es/guide/developer-platform/)
-
-## SDK vs CLI
-
-| | SDK | CLI `exec` |
+| Objetivo | Punto de partida | Sigue siendo tu responsabilidad |
 |---|---|---|
-| Dónde se integra | Servicio backend, herramientas internas | Shell, GitHub Actions |
-| Gestión de estado | Tu código | Código de salida del proceso |
-| Adecuado para | Producto multi-tenant, UI a medida | Pipelines simples |
+| Ejecutar una tarea en un script | [`codex exec`](/es/guide/developer-platform/non-interactive/codex-exec/) | Directorio de trabajo, entrada, código de salida y almacenamiento de resultados |
+| Ejecutar y continuar tareas desde un programa | SDK de Codex | Ciclo de vida, entorno, errores y verificación |
+| Crear un cliente con sesiones, aprobaciones y eventos en streaming | App Server | Interacción, conexión, identidad y despliegue del cliente |
+| Ofrecer una plataforma remota para varios usuarios | Tu propia arquitectura | Colas, aislamiento entre clientes, credenciales, almacenamiento, cancelación y callbacks |
 
-Muchos equipos usan **CLI en CI y SDK en el producto**.
+La última fila es una decisión de arquitectura, no una plataforma alojada incluida en el SDK. La guía oficial sitúa el SDK en automatización y CI, y App Server en la integración profunda de clientes. App Server intercambia solicitudes y eventos mediante JSON-RPC bidireccional. Consulta la [documentación de App Server](https://learn.chatgpt.com/docs/app-server).
 
-## Malentendidos frecuentes
+## Llamada mínima al SDK de TypeScript
 
-### 1. ¿En qué se diferencian SDK y CLI?
+El paquete oficial de TypeScript es `@openai/codex-sdk` y requiere Node.js 18 o posterior. El ejemplo usa sintaxis de módulos JavaScript para mostrar la interfaz básica del mismo paquete; no es un servicio de producción completo.
 
-A grandes rasgos:
+Instala la dependencia en un directorio de práctica específico y conserva la versión resuelta y el archivo de bloqueo:
 
-- **CLI**: lo llama una persona o un script en la terminal
-- **SDK**: escribes código e incrustas la capacidad de Codex en tu servicio
+```sh
+npm init -y
+npm install --save-exact @openai/codex-sdk
+npm ls @openai/codex-sdk
+```
 
-### 2. ¿Debo aprender primero el SDK?
+Prepara un `README.md` sin datos sensibles y guarda esto como `example.mjs`:
 
-Normalmente no.
+```js
+import { Codex } from '@openai/codex-sdk';
 
-Si solo quieres aprender a usar Codex, la entrada local y el modo interactivo del CLI suelen ser mejor primer paso.
+const agent = new Codex();
+const session = agent.startThread();
+const answer = await session.run(
+  'Lee solo el README.md del directorio actual y resume su propósito en tres puntos en chino; no modifiques archivos ni realices operaciones externas.'
+);
+console.log(answer.finalResponse);
+```
 
-### 3. ¿Cuándo merece la pena el SDK?
+Después ejecuta `node example.mjs`. Antes, completa la autenticación apropiada para el entorno y comprueba la configuración real de sandbox y aprobaciones. «Solo lectura» en el prompt es una restricción de la tarea, no reemplaza los límites de ejecución. La llamada al modelo puede consumir uso de tu cuenta; esta página no ha instalado ni llamado al modelo por ti.
 
-Cuando aparecen necesidades como:
+Los métodos y campos de retorno se contrastaron con el [ejemplo oficial](https://learn.chatgpt.com/docs/codex-sdk). El sitio solo comprobó la sintaxis JavaScript: no fijó ni probó una versión publicada concreta del SDK y no ofrece una salida de éxito inventada. Al reproducirlo, registra versión del paquete, CLI/runtime, sistema, método de autenticación sin credenciales y resultado.
 
-- Lanzar Tareas de Codex desde tu propio producto
-- Gestionar tú el estado y el resultado de las Tareas
-- Hacer UI, Permisos y flujos a medida
+## Continuar y recuperar tareas
 
-El SDK sirve para «conectar sistemas desde un programa», no como entrada principal la primera vez que usas Codex.
+Puedes llamar de nuevo a `run()` sobre el mismo objeto thread; un ID existente se puede pasar a `resumeThread()`. Los threads recuperables dependen del entorno donde se almacena el estado: el ID no es una URL Cloud consultable desde cualquier máquina. Existe además una interfaz oficial para Python; comprueba sus nombres y dependencias en la sección correspondiente y no mezcles código de los dos lenguajes. Consulta [threads e interfaces por lenguaje](https://learn.chatgpt.com/docs/codex-sdk).
 
-## Conceptos centrales (independientes del lenguaje)
+Al recuperar una tarea, comprueba primero si los archivos actuales coinciden con la descripción histórica; consulta [Entrega y recuperación](/es/guide/agent-work/handoff-and-resume/).
 
-1. **Autenticación**: API key de la organización u OAuth delegado — scope mínimo
-2. **Tarea / Hilo**: una petición de usuario con ID rastreable
-3. **Política de Herramientas**: el servidor fija Sandbox y Aprobación, alineado con el cliente
-4. **Resultado**: historial de mensajes, diff de archivos, URL de artefactos (según la API)
-5. **Errores**: distinguir reintentables (429) y no reintentables (400)
+## Qué comprobar después de una llamada correcta
 
-Índice de errores: [Referencia de errores y mensajes](/es/guide/reference/error-reference/)
+1. **Lugar de ejecución:** registra directorio de trabajo y archivos realmente leídos o modificados, no solo el prompt.
+2. **Resultado:** examina respuesta, diferencias y pruebas. Recibir `finalResponse` no implica aprobación del resultado de negocio.
+3. **Tipo de fallo:** distingue dependencias o proceso local, autenticación, servicio de modelo y validación de la tarea; no reduzcas todos los errores a 400/429.
+4. **Efecto de reintentar:** comprueba antes si ya hay archivos o efectos externos y decide después; no repitas sin más la misma solicitud.
+5. **Permisos:** eres responsable del entorno y las herramientas disponibles. El nombre del SDK no otorga automáticamente Cloud, administración organizativa ni aislamiento multiusuario.
 
-## Lista mínima de integración
+Son comprobaciones de integración propuestas por este sitio, no una lista de campos devueltos por el SDK. Consulta los tipos de la versión instalada y la documentación oficial para los campos reales.
 
-- [ ] Probar en staging con un repo de solo lectura
-- [ ] Desensibilizar logs; no registrar el Prompt completo del usuario si contiene PII
-- [ ] Timeout y cancelación: poder abortar la Tarea si el usuario abandona la página
-- [ ] Fijar versión del SDK y del model ID
+## Relación con callbacks, colas y ejecución remota
 
-## Encaje con CI/CD
+Tu runner puede ejecutar el SDK y tu servicio enviar después una notificación de finalización. En ese caso, estados de cola, callback HTTP, formato de firma y estrategia de reintento son parte del protocolo de tu sistema. Los eventos de App Server tampoco son directamente una dirección Webhook.
 
-El SDK puede disparar Cloud o un runner remoto, o CI puede llamar a tu servicio para actualizar el estado del PR. Patrones de ejemplo en [Automatización de revisión de código](/es/guide/developer-platform/ci-cd/code-review-automation/).
-
-## Errores frecuentes
-
-- Usar la cookie de sesión del navegador del usuario como API key
-- Sin límite de concurrencia; un pico de tráfico agota la cuota
-- Hacer merge automático de PRs generados por el SDK
-
-## Fuentes de referencia
-- Referencia del SDK de OpenAI Codex
----
-
-**Estado:** verified  
-**Productos aplicables:** API  
-**Base de verificación:** Contrastado con la documentación pública actual de OpenAI Developers sobre API/modelos Codex y casos de la plataforma para desarrolladores, y con los capítulos verificados de resumen de la plataforma, CI/CD y modo no interactivo; esta página solo confirma el principio estable de que el SDK sirve para integración programática, gestión de estado y UI a medida.  
-**Última verificación:** 2026-07-26
+Continúa con [Límites de Webhooks y eventos de tareas](/es/guide/developer-platform/webhooks/overview/) y [Scripts y pipelines](/es/guide/developer-platform/non-interactive/scripts-and-pipelines/). Esta página no promete que una llamada SDK cree automáticamente una tarea Codex Cloud, una URL de artefacto o una delegación OAuth.

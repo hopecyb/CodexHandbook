@@ -3,7 +3,7 @@ title: Mã thoát và thử lại
 description: "Đọc đúng thành bại của `codex exec` trong pipeline — khi nào thử lại, khi nào fail ngay."
 locale: vi
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

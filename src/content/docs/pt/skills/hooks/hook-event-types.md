@@ -1,38 +1,40 @@
 ---
-title: Tipos de evento Hook
-description: Pontos de disparo de Hook na cadeia de execução do Codex — validação, log e bloqueio na fase certa.
+legacyVerification:
+  status: "verified"
+  products: "Ambientes que usam um host Codex local"
+  checkedAt: "2026-08-25"
+title: Tipos de eventos Hook
+description: Escolher eventos ao longo do ciclo de vida da sessão, do turno, das chamadas de ferramentas, da compactação e dos subagentes.
 locale: pt
 source_locale: zh-CN
-source_revision: 7da5c40
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 07f4965
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
+Ao escolher um Hook, a primeira pergunta não é «como escrever o script?», mas sim «deve atuar antes ou depois do efeito secundário?». Um script ligado ao evento errado pode limitar-se a comunicar o problema depois de ele acontecer.
 
-The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
+![Ciclo de vida dos Hooks Codex e eventos principais](/diagrams/hook-lifecycle-events-pt.svg)
 
-![Codex Hook lifecycle and key events](/diagrams/hook-lifecycle-events-en.svg)
+## Lista atual de eventos
 
-## Current events
-
-| Event | When it runs | Matcher filters | Common use |
+| Evento | Quando ocorre | O que o matcher filtra | Utilização habitual |
 |---|---|---|---|
-| `SessionStart` | Session start or resume | `startup`, `resume`, `clear`, `compact` | Environment notes, restored context |
-| `SubagentStart` | Subagent starts | Subagent type | Add subagent constraints |
-| `UserPromptSubmit` | User submits a prompt | Unsupported; configuration is ignored | Secret scan, development context |
-| `PreToolUse` | Before a supported local tool runs | Tool name | Deny or rewrite the call |
-| `PermissionRequest` | Codex is about to request approval | Tool name | Allow, deny, or defer to normal approval |
-| `PostToolUse` | After a supported local tool returns | Tool name | Record results, feed later reasoning |
-| `PreCompact` | Before context compaction | `manual` / `auto` | Save state before compaction |
-| `PostCompact` | After context compaction | `manual` / `auto` | Restore required context |
-| `SubagentStop` | A subagent is about to stop | Subagent type | Require another check |
-| `Stop` | Main task turn is about to stop | Unsupported; configuration is ignored | Require more main-thread verification |
-| `SessionEnd` | Main thread ends | Currently `other` | Fast closing log; does not run for subagents |
+| `SessionStart` | Início ou retoma de uma sessão | `startup`, `resume`, `clear`, `compact` | Notas do ambiente, recuperação de contexto |
+| `SubagentStart` | Arranque de um subagente | Tipo de subagente | Acrescentar restrições ao subagente |
+| `UserPromptSubmit` | Envio de um prompt pelo utilizador | Não suportado; a configuração é ignorada | Pesquisa de segredos, contexto de desenvolvimento |
+| `PreToolUse` | Antes da execução de uma ferramenta local suportada | Nome da ferramenta | Recusar ou alterar a chamada |
+| `PermissionRequest` | Codex está prestes a pedir aprovação | Nome da ferramenta | Permitir, recusar ou deixar seguir a aprovação normal |
+| `PostToolUse` | Depois de uma ferramenta local suportada devolver o resultado | Nome da ferramenta | Registar resultados, dar feedback para o raciocínio seguinte |
+| `PreCompact` | Antes da compactação do contexto | `manual` / `auto` | Guardar o estado antes da compactação |
+| `PostCompact` | Depois da compactação do contexto | `manual` / `auto` | Restaurar o contexto necessário |
+| `SubagentStop` | Um subagente está prestes a terminar | Tipo de subagente | Exigir mais uma verificação |
+| `Stop` | O turno principal está prestes a terminar | Não suportado; a configuração é ignorada | Pedir ao processo principal que continue a verificar |
+| `SessionEnd` | Fim do processo principal | Atualmente `other` | Log rápido de encerramento; não corre para subagentes |
 
-## Tool matchers
+## Matchers de ferramentas
 
-Common values include:
+Valores frequentes:
 
 ```text
 Bash
@@ -42,50 +44,42 @@ mcp__filesystem__read_file
 mcp__filesystem__.*
 ```
 
-Shell and unified command execution match `Bash`. `apply_patch` can also match the aliases `Edit` or `Write`. MCP and other local function tools match their actual tool names.
+A shell e a execução unificada de comandos correspondem a `Bash`. `apply_patch` também pode corresponder aos nomes alternativos `Edit` ou `Write`. Ferramentas MCP e outras funções locais correspondem ao respetivo nome real.
 
-## Three events commonly confused
+## Três eventos fáceis de confundir
 
 ### PreToolUse
 
-Input contains `tool_name`, `tool_use_id`, and tool-specific `tool_input`. It can return:
+A entrada contém `tool_name`, `tool_use_id` e o `tool_input` específico da ferramenta. Pode devolver:
 
-- `permissionDecision: "deny"`: stop a supported call.
-- `permissionDecision: "allow"` plus `updatedInput`: rewrite supported input.
-- `additionalContext`: add model context without blocking.
+- `permissionDecision: "deny"`: impedir uma chamada de ferramenta suportada;
+- `permissionDecision: "allow"` com `updatedInput`: alterar a entrada de uma ferramenta suportada;
+- `additionalContext`: acrescentar contexto ao modelo sem bloquear.
 
-Plain stdout is ignored; output the documented JSON. Exit code `2` with stderr can also block and provide a reason.
+Texto simples em stdout é ignorado; deve ser produzido o JSON definido na documentação oficial. O código de saída `2` com uma mensagem em stderr também pode bloquear e explicar o motivo.
 
 ### PermissionRequest
 
-This runs only when Codex was already going to request approval for shell escalation, managed networking, or a similar action. It can allow, deny, or leave the decision to the normal approval UI. It does not replace general `PreToolUse` policy.
+Só ocorre quando o Codex já estava prestes a pedir aprovação, por exemplo para elevar uma operação shell ou aceder à rede administrada. Pode permitir, recusar ou não decidir, deixando prosseguir a interface de aprovação normal. Não substitui `PreToolUse` para uma política geral de ferramentas.
 
 ### PostToolUse
 
-The tool has already run, and the event fires even when Bash exits non-zero. Returning block or exiting `2` can replace feedback for the model, but cannot undo a command, file write, or external action.
+A ferramenta já foi executada; o evento ocorre mesmo que Bash termine com um código diferente de zero. Devolver `block` ou sair com código `2` apenas substitui o feedback para o modelo processar. Não desfaz comandos, escritas em ficheiros nem ações externas.
 
-## Stop is not an undo button
+## Stop não é um botão para «recusar terminar»
 
-`decision: "block"` for `Stop` automatically creates a continuation prompt from the reason, asking Codex to run another turn. It does not roll back completed side effects. Check `stop_hook_active` to prevent an infinite loop.
+Em `Stop`, `decision: "block"` cria automaticamente, a partir de `reason`, um prompt de continuação para que o Codex faça mais um turno. Não reverte efeitos já produzidos pelas ferramentas. O script deve verificar `stop_hook_active` para evitar um ciclo infinito de continuações.
 
-## Event-selection exercise
+## Exercício de escolha de evento
 
-| Need | Choose | Why |
+| Necessidade | Escolha | Motivo |
 |---|---|---|
-| Stop a suspected token from being written | `PreToolUse` matching `apply_patch|Edit|Write` | Must act before the write |
-| Measure shell failure rate | `PostToolUse` matching `Bash` | Needs the result |
-| Save key decisions before automatic compaction | `PreCompact` | Runs before compaction |
-| Do not close until tests have run | `Stop` | Continue the current task |
-| Send a 30-second network request at shutdown | Not `SessionEnd` | Maximum three seconds; closing events should stay short |
+| Impedir a escrita de um token suspeito num ficheiro | `PreToolUse` com `apply_patch|Edit|Write` | É preciso atuar antes da escrita |
+| Medir a taxa de falhas da shell | `PostToolUse` com `Bash` | É preciso conhecer o resultado |
+| Guardar decisões importantes antes de uma compactação automática | `PreCompact` | Ocorre antes da compactação |
+| Impedir que a tarefa termine sem executar os testes | `Stop` | Continuar o turno atual |
+| Enviar um pedido de rede de 30 segundos no encerramento | Não usar `SessionEnd` | O máximo é 3 segundos; o evento de fecho não deve alojar tarefas longas |
 
-## Official source
+## Fonte oficial
 
-- [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host
-
-**Last verified:** 2026-08-25
+- [OpenAI: eventos Hook e matchers](https://learn.chatgpt.com/docs/hooks)

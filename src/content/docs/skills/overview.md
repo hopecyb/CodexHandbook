@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "当前 Codex 运行时对 Skill 的装载规则（`SKILL.md`、按需读取完整技能文件）与 OpenAI Help《Skills in ChatGPT》对 Skill 作为可复用 workflow 的定义一致；本页以概念与目录组织为主，不依赖易变 UI。"
+  checkedAt: "2026-07-26"
 title: Skills 概述
 description: 用 SKILL.md 把可复用工作流教给 Codex，写一次，按需调用。
 ---
@@ -109,9 +114,3 @@ Skill 不是起步必需品，更适合拿来整理那些已经反复出现的�
 
 ## 参考来源
 - OpenAI Codex Skills 文档
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 当前 Codex 运行时对 Skill 的装载规则（`SKILL.md`、按需读取完整技能文件）与 OpenAI Help《Skills in ChatGPT》对 Skill 作为可复用 workflow 的定义一致；本页以概念与目录组织为主，不依赖易变 UI。  
-**最近核验：** 2026-07-26

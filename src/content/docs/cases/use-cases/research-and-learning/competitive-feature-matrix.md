@@ -1,4 +1,12 @@
 ---
+caseCategory: creation
+directoryOrder: 85
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI"
+  basis: "已按本手册当前已核验的带引用研究、网页搜索、验证来源与版本策略章节交叉复核；页面内容限定为“产出带来源的竞品对比表”的稳定研究案例结构，不把具体价格或产品版本写死。"
+  checkedAt: "2026-07-26"
 title: 案例：竞品功能对比表
 description: 带引用的研究与表格产出——非研发读者也能复用的工作流。
 ---
@@ -55,10 +63,3 @@ description: 带引用的研究与表格产出——非研发读者也能复用�
 
 - [产物优先](/cases/workflows/artifact-first-work/)
 - [验证来源](/guide/quality/validate-sources/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI  
-**核验依据：** 已按本手册当前已核验的带引用研究、网页搜索、验证来源与版本策略章节交叉复核；页面内容限定为“产出带来源的竞品对比表”的稳定研究案例结构，不把具体价格或产品版本写死。  
-**最近核验：** 2026-07-26

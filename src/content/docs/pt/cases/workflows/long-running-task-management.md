@@ -3,7 +3,7 @@ title: Gestão de tarefas longas
 description: Tarefas grandes que atravessam horas ou várias sessões — checkpoints, compactação, delegação e condições de saída.
 locale: pt
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

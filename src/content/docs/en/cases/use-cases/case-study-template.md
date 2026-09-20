@@ -3,7 +3,7 @@ title: Case study template
 description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
 locale: en
 source_locale: zh-CN
-source_revision: a430fba
+source_revision: 74ef905
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

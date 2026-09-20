@@ -3,7 +3,7 @@ title: Ứng dụng Desktop
 description: Cài đặt, giao diện và quy trình làm việc hàng ngày của ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: a3f2555
+source_revision: f6bc627
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

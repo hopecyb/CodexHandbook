@@ -3,10 +3,9 @@ title: Interaktiver Modus
 description: Im Terminal mit Codex sprechen und Aufgaben ausführen.
 locale: de
 source_locale: zh-CN
-source_revision: 794dd7c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 822e8f7
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -23,6 +22,19 @@ Nach Start der interaktiven Sitzung:
 4. Mit `/`-artigen Shortcuts (falls vorhanden) die Sitzung steuern — laut aktueller CLI-Hilfe
 
 Prompt-Methoden gelten weiter: [Prompts](/de/prompts/)
+
+## Aufgaben, für die der interaktive Modus passt
+
+Der interaktive Modus eignet sich besonders für Arbeit, bei der du unterwegs Entscheidungen triffst:
+
+| Aufgabensituation | Warum Interaktion hilft |
+|---|---|
+| Anforderungen noch nicht vollständig geklärt | Du kannst sie während der Arbeit präzisieren |
+| Vor dem nächsten Schritt muss ein Diff geprüft werden | Du kannst schrittweise genehmigen oder den Umfang eingrenzen |
+| Ein Workflow wird im Projekt erstmals ausprobiert | Du siehst leichter, was Codex liest und ändert |
+| Berechtigungen, externe Tools oder Dateischreibvorgänge sind beteiligt | Ein Mensch kann an wichtigen Punkten eingreifen |
+
+Wenn die Aufgabe so stabil ist, dass keine Rückfragen mehr nötig sind, ziehe den [nicht interaktiven Modus](/de/guide/cli/non-interactive-mode/) oder Automatisierung in Betracht.
 
 ## Häufige Missverständnisse
 

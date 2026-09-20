@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro dev",
     "start": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro dev",
-    "build": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro build",
+    "build": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro build && node scripts/check-rendered-downloads.mjs",
     "build:brand": "node scripts/build-brand-assets.mjs",
     "check:links": "node scripts/check-doc-links.mjs",
     "check:i18n": "node scripts/check-i18n-parity.mjs",
@@ -19,7 +19,8 @@
     "i18n:zh-tw": "node scripts/generate-zh-tw.mjs",
     "i18n:status": "node scripts/i18n-status.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:downloads": "node scripts/check-rendered-downloads.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.2",

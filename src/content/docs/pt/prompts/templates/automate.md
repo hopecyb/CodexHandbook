@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de automação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de automação
 description: Tarefas repetidas e fluxos reutilizáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de automação
 
 O equívoco comum em tarefas de automação: pensar só «consegue correr sozinho?», sem perguntar antes:
 
@@ -61,10 +65,3 @@ O valor deste template é permitir execução longa e segura.
 
 - [Prompts para tarefas longas](/pt/prompts/long-running-tasks/)
 - [Caso: automatizar um relatório diário](/pt/cases/automate-a-daily-report/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de automação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

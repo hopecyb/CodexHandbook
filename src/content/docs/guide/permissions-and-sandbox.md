@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照 Codex 当前沙箱、审批与安全说明；本页区分操作系统级执行边界、审批策略、任务约束和人工审查，并单独说明本地与 Cloud 的网络模型。"
+  checkedAt: "2026-08-26"
 title: 权限与沙箱
 description: 用一条判断链理解沙箱、审批、网络访问和本地与云端执行边界。
 sidebar:
@@ -99,13 +104,3 @@ pnpm install
 - **Hooks 可以代替沙箱**：Hook 是额外守护与审计层，不是操作系统强制隔离的替代品。
 
 产品级设置见 [CLI 审批与沙盒](/guide/cli/approvals-and-sandbox/) 和 [桌面 App 设置](/guide/desktop-app/settings/)，任务写法见 [约束与边界](/prompts/constraints-and-boundaries/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照 Codex 当前沙箱、审批与安全说明；本页区分操作系统级执行边界、审批策略、任务约束和人工审查，并单独说明本地与 Cloud 的网络模型。
-
-**最近核验：** 2026-08-26

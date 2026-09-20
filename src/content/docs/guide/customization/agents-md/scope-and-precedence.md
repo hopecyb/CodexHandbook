@@ -1,4 +1,17 @@
 ---
+contentType: reference
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: 已逐项对照官方发现与合并规则；目录示例和加载检查提示为教学示例，未声称跨客户端实跑。
+  evidence:
+    - label: 官方 AGENTS.md 发现、覆盖与验证规则
+      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 title: AGENTS.md 作用域与优先级
 description: 准确理解全局、项目根与当前目录规则如何被发现和合并。
 sidebar:
@@ -42,7 +55,7 @@ repo/
 不要进行密钥轮换；运行 make test-payments，并报告真实结果。
 ```
 
-提示词不能把不可突破的系统、组织、沙箱或权限边界变成可用能力。遇到冲突时不要靠一句“忽略之前规则”猜优先级，应先要求 Codex列出加载的 instruction sources，再收窄任务。
+提示词不能把不可突破的系统、组织、沙箱或权限边界变成可用能力。遇到冲突时要求 Codex 列出相关指令来源和作用范围，区分可调整的项目默认约定与实际执行限制。范围明确、已有授权且没有更高层冲突时继续执行；确实缺信息或权限时再说明具体阻塞。完整对照见[上下文优先级](/guide/context/context-priority/)。
 
 ## 验证实际加载内容
 
@@ -69,11 +82,3 @@ fallback 只在同目录没有更高优先文件时生效。扩容前先删重�
 ## 官方依据
 
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-
----
-
-**状态：** verified
-
-**适用产品：** App、CLI、IDE、Cloud
-
-**最近核验：** 2026-08-26

@@ -3,7 +3,7 @@ title: Sandbox e rede
 description: Entenda isolamento de execução, acesso à rede e limites de risco.
 locale: pt
 source_locale: zh-CN
-source_revision: b3d6d57
+source_revision: 5937622
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

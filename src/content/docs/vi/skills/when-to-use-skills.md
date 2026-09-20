@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help\"Skills in ChatGPT\"xác nhận Skill là workflow tái sử dụng, chia sẻ được; runtime Codex hiện tại cũng khớp theo tên và mô tả kỹ năng. Trang này chủ yếu là nguyên tắc chọn, không phụ thuộc giao diện hay đổi."
+  checkedAt: "2026-07-26"
 title: Khi nào dùng Skills
 description: Quyết định Tác vụ có nên đóng thành Skill, và phân công với lệnh slash, MCP.
 locale: vi
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Khi mới làm quen Skill, câu hỏi thường gặp là: việc này có đán
 
 Nếu cái gì cũng thành Skill, hệ thống ngày càng nặng; nếu đáng đóng mà không đóng, bạn sẽ mãi lặp lại cùng một lời thủ công. Phần này giúp bạn quyết khi nào nên cố định quy trình.
 
-# Khi nào dùng Skills
 
 ## Phù hợp đóng thành Skill
 
@@ -81,9 +85,3 @@ Skill làm theo cách này vững hơn vì đến từ sự lặp thật, không
 Skill phù hợp hơn để đóng những quy trình"sẽ lặp, cần nhất quán, và không muốn giải thích lại mỗi lần".
 
 Chọn cách mở rộng: [Cách chọn phương thức mở rộng](/vi/skills/choosing-an-extension-method/). Đóng workflow: [Biến quy trình thành Skill](/vi/cases/workflows/turn-a-workflow-into-a-skill/).
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** OpenAI Help"Skills in ChatGPT"xác nhận Skill là workflow tái sử dụng, chia sẻ được; runtime Codex hiện tại cũng khớp theo tên và mô tả kỹ năng. Trang này chủ yếu là nguyên tắc chọn, không phụ thuộc giao diện hay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,48 +1,39 @@
 ---
 title: "Prompt Engineering(프롬프트 엔지니어링)"
-date: 2022-11-30
-year: 2022
-summary: "대규모 언어 모델은 본질적으로 확률적이어서 같은 프롬프트도 다른 답을 낼 수 있다. Prompt Engineering은 역할, 형식, 제약을 설계해 변동성을 줄이고 출력을 더 안정적이고 제어 가능하게 만든다. Agent, Function Calling, Skills 같은 이후 패러다임의 기반이기도 하다."
-phase: mainstream
-trend: absorbed
-signal: well-calibrated
-tags: [prompt-engineering, llm, prompting, workflow, reliability]
-authored_by: ai-assisted
+description: "프롬프트는 목표, 필요한 배경, 제약 조건, 출력 요구 사항을 모델에 전달합니다. 예시는 기대 결과를 설명하는 데 도움이 되지만 길게 쓴다고 결과가 반드시 좋아지지는 않습니다."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "아래 사건과 프로젝트 설명은 1차 자료로 확인했습니다. 학습 조언은 작성자의 판단이며, 출처 확인이 제품을 직접 시험했다는 뜻은 아닙니다."
+  evidence:
+    - label: "ChatGPT 출시 발표"
+      href: "https://openai.com/index/chatgpt/"
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 1028eec
+source_revision: 225d837
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 확인 가능한 사건과 범위
 
-# Prompt Engineering(프롬프트 엔지니어링)
+**날짜: 2022-11-30 · 유형: 제품 출시.** OpenAI가 ChatGPT 연구용 미리보기를 공개했습니다. 이 사이트는 이 공개 제품 사건을 학습의 출발점으로 삼으며, 프롬프트 방법이 발명된 날짜로 부르지 않습니다.
 
-- 주요 날짜:
-  - Mainstream milestone: 2022-11-30 (ChatGPT public launch)
-- 공식 참고 자료:
-  - https://platform.openai.com/docs/guides/prompt-engineering
-  - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- 참고: 이 항목은 Prompt Engineering이 AI 애플리케이션 엔지니어링의 기초 방법론이 된 시점과 의미를 기록한다. 구체적 템플릿과 기법은 Guide에서 다룬다.
+출처: [ChatGPT 출시 발표](https://openai.com/index/chatgpt/). 확인일은 2026-09-18입니다. 출처의 발표일과 이 페이지의 확인일은 의미가 다릅니다.
 
-## 무엇인가
+## 어떤 문제를 해결하나
 
-Prompt Engineering은 입력 지시를 체계적으로 설계해 모델의 제어 가능성, 일관성, 작업 완료율을 높이는 엔지니어링 접근법이다. 멋진 문장을 쓰는 일이 아니라 역할 정의, 컨텍스트 구성, 출력 제약, 단계 분해, 피드백 반복을 재사용 가능한 프로세스로 만드는 일이다.
+프롬프트는 목표, 필요한 배경, 제약 조건, 출력 요구 사항을 모델에 전달합니다. 예시는 기대 결과를 설명하는 데 도움이 되지만 길게 쓴다고 결과가 반드시 좋아지지는 않습니다.
 
-## AI 애플리케이션 엔지니어링을 어디에서 어디로 옮겼나
+## 학습 조언과 적용 범위
 
-AI 애플리케이션은 “자연어로 물어보고 좋은 결과를 기대하는” 단계에서 “구조화된 입력을 설계해 목표 출력을 안정적으로 얻는” 단계로 이동했다. 팀은 템플릿, 패턴, 평가 기준을 축적하며 모델 상호작용을 재현 가능하게 만들었다.
+다음은 이 사이트의 교육적 판단이며, 업계 보급률이나 효과를 측정한 결과가 아닙니다.
 
-## 현재 단계
+먼저 무엇을 산출해야 하는지 명확히 쓰고, 그다음 모델에 부족한 정보를 보태세요. 간단한 작업은 바로 실행하고 중요한 미지수가 있으면 먼저 확인하세요. 모든 작업 전에 계획을 쓰거나 각 단계마다 승인을 기다리는 것을 보편적인 규칙으로 삼지 마세요.
 
-현재 이 항목은 `mainstream` 단계로 본다.
+## 직접 해 보기
 
-거의 모든 LLM 애플리케이션의 기본 역량이 되었다. 동시에 모델이 강해질수록 과도하게 세세한 지시는 역효과가 날 수 있다. 지금은 구조화 출력, Tool Calling, 워크플로 오케스트레이션, Skills 같은 상위 메커니즘에 흡수되고 있다.
+[프롬프트 비교 자료 세 묶음](/ko/prompts/comparison-lab/): 고정된 입력 하나를 선택해 A/B 출력을 각각 저장하고 같은 기준으로 비교하세요. 자료는 준비되어 있지만 이 사이트에는 아직 모델 효과를 실측한 결론이 없습니다.
 
-## 대체할 수 있는 것
-
-모델을 무작위 검색창이나 채팅 상자로 다루던 초기 방식을 대체했다. 팀에서는 “누가 더 잘 묻는가”라는 암묵지를 “팀이 작업과 출력 기준을 어떻게 정의하는가”로 바꾸었다.
-
-## 그것을 대체할 수 있는 것
-
-완전히 사라지기보다는 더 높은 추상화로 감싸질 가능성이 크다. 자동 프롬프트 최적화나 제약된 모델 인터페이스가 성숙해도 핵심 아이디어는 그 안에 남는다.
+[로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/)

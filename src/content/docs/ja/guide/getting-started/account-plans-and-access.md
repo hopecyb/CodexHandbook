@@ -3,7 +3,7 @@ title: アカウント、プラン、アクセス
 description: ChatGPT プラン、API key の利用量、組織ワークスペースの権限を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: 7e2e8e6
+source_revision: ecfa8f9
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

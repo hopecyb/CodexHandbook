@@ -3,7 +3,7 @@ title: Referência de configuração
 description: Índice conceptual de chaves de configuração de utilizador e de projeto do Codex — caminhos e campos conforme a documentação oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

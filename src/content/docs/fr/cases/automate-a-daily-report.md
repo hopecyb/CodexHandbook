@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Les cas d'usage Codex actuels d'OpenAI Developers incluent toujours « Automate bug triage » et « Turn feedback into actions » ; ce rapport quotidien est défini comme « Markdown au format fixe + code de sortie explicite + script ou Skill réutilisable », un mode d'automatisation stable, sans dépendre d'une intégration spécifique."
+  checkedAt: "2026-07-26"
 title: Automatiser un rapport quotidien
 description: Transformer un travail de synthèse répétitif en script ou Skill réutilisable.
 locale: fr
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Automatiser un rapport quotidien
 
 ## Métadonnées
 
@@ -38,10 +46,3 @@ Contraintes : git en lecture seule ; ne pas push ; fournir scripts/generate-dail
 
 - [Exemple de Skill d'automatisation](/fr/skills/examples/automation-skill/)
 - [Tâches planifiées](/fr/skills/automations/scheduled-tasks/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Les cas d'usage Codex actuels d'OpenAI Developers incluent toujours « Automate bug triage » et « Turn feedback into actions » ; ce rapport quotidien est défini comme « Markdown au format fixe + code de sortie explicite + script ou Skill réutilisable », un mode d'automatisation stable, sans dépendre d'une intégration spécifique.

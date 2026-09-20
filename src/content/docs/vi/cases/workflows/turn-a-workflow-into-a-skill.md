@@ -3,7 +3,7 @@ title: Đóng gói quy trình thành Skill
 description: Quy trình lặp lần thứ ba đáng viết thành Skill — tích hợp kích hoạt, hướng dẫn và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

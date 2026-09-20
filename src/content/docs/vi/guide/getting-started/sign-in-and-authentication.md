@@ -1,80 +1,74 @@
 ---
-title: Đăng nhập và xác thực danh tính
-description: Hoàn thành đăng nhập và xác nhận trạng thái danh tính cùng quyền.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu với trang Authentication chính thức hiện tại; xác minh hai cách đăng nhập cục bộ bằng ChatGPT và API key, yêu cầu đăng nhập ChatGPT cho Cloud, các lệnh CLI, việc chia sẻ bộ nhớ đệm và ranh giới lưu trữ thông tin xác thực."
+  checkedAt: "2026-08-26"
+title: Đăng nhập và xác thực
+description: Chọn đúng phương thức đăng nhập cho ứng dụng cục bộ và Cloud, rồi kiểm tra danh tính đang hoạt động một cách an toàn.
 locale: vi
 source_locale: zh-CN
-source_revision: e17d14f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: ea83fa6
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
-Codex supports two personal sign-in methods when using OpenAI models:
+Khi dùng mô hình OpenAI, Codex có hai cách đăng nhập cá nhân:
 
-- **Sign in with ChatGPT:** use subscription allowance and inherit ChatGPT workspace permissions and data policy.
-- **Sign in with an API key:** use usage-based API billing and inherit the API organization's data and administration policy.
+- **Đăng nhập bằng ChatGPT:** sử dụng hạn mức của gói đăng ký, đồng thời áp dụng quyền truy cập và chính sách dữ liệu của workspace ChatGPT.
+- **Đăng nhập bằng API key:** tính phí theo mức sử dụng API, đồng thời áp dụng chính sách dữ liệu và quản trị của API organization.
 
-Local work in the ChatGPT desktop App, Codex CLI, and IDE integrations supports both methods. **Codex Cloud requires ChatGPT sign-in.**
+Ứng dụng Codex trên máy tính, Codex CLI và tích hợp IDE đều hỗ trợ hai cách này cho công việc cục bộ; **Codex Cloud yêu cầu đăng nhập bằng ChatGPT**.
 
-## Sign in with ChatGPT
+## Đăng nhập bằng ChatGPT
 
-Local clients open a browser for authorization, then return credentials to the client:
+Ứng dụng cục bộ sẽ mở trình duyệt để bạn cấp quyền, sau đó chuyển thông tin xác thực về ứng dụng:
 
-- Desktop App: choose to continue signing in from the signed-out page.
-- CLI: run `codex login`.
-- IDE: select ChatGPT sign-in from the signed-out page.
+- Ứng dụng máy tính: tại màn hình khi chưa đăng nhập, chọn tiếp tục đăng nhập.
+- CLI: chạy `codex login`.
+- IDE: tại màn hình khi chưa đăng nhập, chọn đăng nhập bằng ChatGPT.
 
-Afterward, inspect the active account and workspace, especially when a personal space and company workspace share one email address.
+Sau khi đăng nhập, kiểm tra tài khoản và workspace đang hoạt động, nhất là khi bạn có cả không gian cá nhân lẫn workspace của công ty.
 
-## Sign in with an API key
+## Đăng nhập bằng API key
 
-After creating a key in OpenAI Platform, do not put it directly in command history. The CLI accepts it through standard input:
+Sau khi tạo key trên OpenAI Platform, đừng ghi trực tiếp key vào lịch sử lệnh. Với CLI, hãy dùng đầu vào chuẩn:
 
 ```bash
 printenv OPENAI_API_KEY | codex login --with-api-key
 ```
 
-In the desktop App, choose the alternate sign-in method. In the IDE, choose **Use API Key**. API-key sign-in is suitable for local work and trusted CI, but does not provide capabilities that depend on a ChatGPT workspace or Cloud.
+Trong ứng dụng máy tính, vào mục “Sign in with another method”; trong IDE, chọn “Use API Key”. API key phù hợp cho công việc cục bộ và CI đáng tin cậy, nhưng không cung cấp các tính năng phụ thuộc vào workspace ChatGPT hoặc Cloud.
 
-## Inspect and clear CLI identity
+## Kiểm tra danh tính CLI và đăng xuất
 
 ```bash
 codex login status
 codex logout
 ```
 
-CLI and IDE share cached sign-in information. Signing out from one may require signing in again when the other next starts.
+CLI và IDE dùng chung thông tin đăng nhập được lưu trong bộ nhớ đệm. Sau khi đăng xuất ở một bên, bên còn lại cũng có thể yêu cầu đăng nhập lại ở lần khởi chạy tiếp theo.
 
-## Credential security
+## Bảo vệ thông tin xác thực
 
-- Never commit `~/.codex/auth.json` or paste it into a ticket, chat, or log.
-- Prefer operating-system credential storage. Treat tokens in file storage as passwords.
-- Use dedicated, revocable CI credentials rather than a long-lived personal key.
-- Codex Cloud accesses code repositories directly, so enable MFA for the account. Organization SSO should enforce MFA.
-- Do not use a personal key to bypass organization restrictions; inspect the workspace and managed policy first.
+- Đừng commit `~/.codex/auth.json` hoặc dán nội dung của nó vào phiếu hỗ trợ, cuộc trò chuyện hay log.
+- Ưu tiên kho lưu trữ thông tin xác thực của hệ điều hành; hãy đối xử với token lưu trong tệp như mật khẩu.
+- Trong CI, dùng thông tin xác thực chuyên dụng và có thể thu hồi; đừng dùng lại key cá nhân dài hạn.
+- Codex Cloud truy cập trực tiếp kho mã, vì vậy hãy bật MFA cho tài khoản; quản trị viên nên bắt buộc MFA qua SSO của tổ chức.
+- Đừng chuyển sang key cá nhân để lách hạn chế của tổ chức; trước tiên hãy xác nhận workspace và chính sách được quản lý.
 
-## Signed in but still unable to use a feature
+## Đã đăng nhập thành công nhưng vẫn không sử dụng được
 
-Check in this order:
+Kiểm tra theo thứ tự:
 
-1. Is the correct account or API organization active?
-2. Are you in the correct ChatGPT workspace?
-3. Does the target capability require ChatGPT sign-in rather than an API key?
-4. Do the plan, seat, role, or administrator policy restrict access?
-5. Only then inspect client cache, network, and version.
+1. Tài khoản hiện tại hoặc API organization có đúng không.
+2. Bạn đã vào đúng workspace ChatGPT chưa.
+3. Tính năng cần dùng có yêu cầu đăng nhập bằng ChatGPT thay vì API key không.
+4. Gói dịch vụ, seat, vai trò hoặc chính sách của quản trị viên có giới hạn quyền truy cập không.
+5. Cuối cùng mới kiểm tra bộ nhớ đệm của ứng dụng, mạng và phiên bản.
 
-The CLI has dedicated sign-in logs for support and troubleshooting. Inspect those logs for sensitive data before sharing them.
+CLI có log đăng nhập riêng để dùng khi bộ phận hỗ trợ chính thức yêu cầu hoặc khi cần khắc phục sự cố đăng nhập; trước khi chia sẻ log, vẫn phải kiểm tra thông tin nhạy cảm.
 
-See [Accounts, plans, and access](/vi/guide/getting-started/account-plans-and-access/) for plan boundaries and the [official Authentication page](https://learn.chatgpt.com/docs/auth) for current details.
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE / Cloud
-
-**Căn cứ kiểm chứng:** Compared with the current Authentication documentation for ChatGPT and API-key local sign-in, the Cloud ChatGPT requirement, CLI commands, shared credential caching, and storage boundaries.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Để hiểu giới hạn theo gói, xem [Tài khoản, gói dịch vụ và quyền truy cập](/vi/guide/getting-started/account-plans-and-access/). Chi tiết đầy đủ theo [trang Authentication chính thức](https://learn.chatgpt.com/docs/auth).

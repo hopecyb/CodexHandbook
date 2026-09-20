@@ -3,7 +3,7 @@ title: Bộ nhớ và ngữ cảnh bền
 description: Codex nhớ sở thích và sự kiện qua phiên thế nào — năng lực, ranh giới và quy chuẩn nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,133 +1,67 @@
 ---
-title: Resumen de Webhooks
-description: Conectar el estado de Tareas de Codex a sistemas internos con callbacks HTTP — eventos, firma e idempotencia.
-locale: es
-source_locale: zh-CN
-source_revision: 78f037e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: Límites de Webhooks y eventos de tareas
+description: Distingue resultados locales de Codex, eventos de App Server y callbacks HTTP diseñados por ti.
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Se comprobaron los modelos de ejecución y eventos del SDK y App Server. La sección de callbacks HTTP propone una arquitectura propia; no afirma que exista un contrato unificado de Webhooks de Codex Cloud.
+  evidence:
+    - label: Documentación oficial del SDK
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: Protocolo y eventos de App Server
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: es
+source_locale: zh-CN
+source_revision: 8a84ab8
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-Un **Webhook** te permite, cuando cambia el estado de una Tarea de Codex o Cloud, enviar un callback HTTP a tu propio servicio y disparar actualizaciones de tickets, notificaciones de Slack o mesas de Aprobación internas. Este capítulo es la entrada de integración por eventos de la [plataforma para desarrolladores](/es/guide/developer-platform/).
+Al terminar una tarea puedes notificar a un sistema interno mediante un valor de retorno, el código de salida de un proceso, un flujo de eventos o un callback HTTP. Define primero el emisor y el protocolo; después decide si necesitas un Webhook.
 
-## Qué cubre esta página
+## No confundas estos tres mecanismos
 
-- Cuándo elegir Webhook frente a sondeo con SDK
-- Eventos habituales y campos del payload (concepto)
-- Verificar firma, replay e idempotencia
+| Mecanismo | Cómo se recibe | Límite |
+|---|---|---|
+| Ejecución local con SDK o CLI | Resultado del programa o estado del proceso | No es una API alojada de callbacks HTTP |
+| Eventos de App Server | Notificaciones JSON-RPC en una conexión establecida | Hay que conectar, inicializar y procesar mensajes según el protocolo |
+| Callback de tu runner | Solicitud HTTP enviada por tu servicio | Tú defines nombres de evento, firmas, reintentos y almacenamiento |
 
-## Primero entiende qué hace
+`turn/completed` de App Server es una notificación del protocolo; el estado final puede ser completado, interrumpido o fallido. Comprueba el estado y el resultado de negocio antes de iniciar un despliegue por el nombre del evento. Consulta los [eventos oficiales](https://learn.chatgpt.com/docs/app-server).
 
-Si es la primera vez con Webhooks, piénsalo así: cuando cambia el estado de la Tarea, Codex notifica a tu sistema, en lugar de que tú preguntes una y otra vez «¿ya está?».
+Esta página no ha verificado un endpoint unificado para registrar Webhooks de Codex Cloud, una cabecera de firma ni un contrato de evento `task.completed`. Por eso no presenta URL, cabeceras ni tablas de eventos como interfaz oficial. Si un producto concreto ofrece Webhooks, intégralo según la documentación versionada de ese producto.
 
-Encaja cuando «al terminar la Tarea aún hay que encadenar otra acción de sistema».
+## Cuándo conviene un callback propio
 
-:::note
-Ruta del Webhook, nombres de eventos y algoritmo de firma según la [documentación oficial de la API](https://developers.openai.com/codex).
-:::
+Una tarea de CI aislada suele continuar mediante su código de salida y la salida guardada. No necesita un receptor público solo por ser «asíncrona».
 
-## Malentendidos frecuentes
+Si tu sistema programa tareas entre procesos y actualiza un ticket al finalizar, puedes diseñar este flujo interno:
 
-### El Webhook no es la respuesta por defecto a toda automatización
-
-Si solo corres un `codex exec` y miras el código de salida, normalmente no hace falta Webhook.
-
-El Webhook encaja mejor en:
-
-- Tareas largas
-- Orquestación multi-paso
-- Notificar o disparar otros sistemas al terminar
-
-### Recibir el callback ≠ poder confiar en él de inmediato
-
-Muchos principiantes tratan el Webhook como «mensaje oficial, se puede usar tal cual».
-
-Sin verificación de firma, idempotencia y manejo de timeouts, puedes acabar con peticiones falsificadas, entregas duplicadas o problemas por inestabilidad del sistema.
-
-## Cuándo usar Webhook
-
-| Adecuado | No adecuado |
-|---|---|
-| Notificar sistemas internos al completar la Tarea | Necesitas streaming palabra a palabra en tiempo fuerte |
-| Integrar con un bus de eventos existente | Un cron simple solo necesita el código de salida de `exec` |
-| Orquestación multi-paso (completar → disparar deploy) | Sin endpoint alcanzable desde internet y sin querer usar cola |
-
-Pipelines simples pueden bastar con [Scripts y pipelines](/es/guide/developer-platform/non-interactive/scripts-and-pipelines/); un servicio multi-tenant productivizado suele combinar **SDK + Webhook**.
-
-## Eventos típicos (concepto)
-
-| Evento | Uso |
-|---|---|
-| `task.completed` | Obtener resultado, actualizar estado del PR |
-| `task.failed` | Alerta, cola de reintentos |
-| `task.needs_approval` | Empujar a UI de Aprobación humana |
-| `review.posted` | Sincronizar la conclusión de la revisión de código |
-
-El payload debería incluir: `task_id`, estado, marca de tiempo, identificador de repo/proyecto; **evita** poner el Prompt completo en el body del webhook si contiene PII.
-
-## Requisitos mínimos del receptor
-
-1. Terminal **HTTPS**; verificar la cabecera de firma oficial (p. ej. `X-Signature` + HMAC)
-2. **Idempotencia**: el mismo `event_id` se procesa una sola vez
-3. **2xx rápido**: la lógica pesada a una cola asíncrona
-4. **Logs desensibilizados**: no registrar secretos ni la entrada completa del usuario
-
-Esquema (pseudocódigo):
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+Cola propia → runner controlado que ejecuta SDK/CLI → guardar resultado y estado
+                                               → servicio propio de notificación → ticket interno
 ```
 
-## Relación con CI
+Es una recomendación de arquitectura del sitio, no una función de despliegue incluida en el SDK. Para el lugar de ejecución y los límites de integración, consulta la [Descripción del SDK](/es/guide/developer-platform/sdk-overview/).
 
-- Dentro de CI, `codex exec` suele **no** necesitar webhook; basta el código de salida
-- Tareas largas en Cloud y Aprobación desde móvil encajan mejor con webhook hacia sistemas internos
+## Qué debe definir tu protocolo
 
-## Errores frecuentes
+- **Identidad e integridad:** establece cómo verifica el receptor al emisor; usa una autenticación revisada y no inventes una «cabecera oficial de firma».
+- **ID estables y deduplicación:** registra ID de tarea, ID de evento y número de intentos; un evento repetido no debe repetir el efecto externo.
+- **Estado y versión:** distingue ejecución completada, fallo, interrupción y aceptación de negocio; versiona el payload.
+- **Recepción persistente:** confirma solo después de guardar o encolar el evento de forma fiable. Un error debe permitir reintentos; no devuelvas éxito antes de perder el evento.
+- **Alcance de los datos:** envía únicamente el resumen y referencias seguras que el consumidor necesita; no registres credenciales.
+- **Condiciones de parada:** limita los reintentos, prevé intervención humana y una forma de cancelar acciones posteriores.
 
-- Sin verificación de firma; callbacks falsificados
-- Procesar más allá del timeout de la plataforma y provocar reentregas
-- Correr un segundo Codex de forma síncrona en el handler del webhook
-- Exponer la URL del webhook en el frontend del cliente
+Son requisitos de diseño que aún hay que implementar y verificar, no un ejemplo listo para ejecutar. Esta página no conecta automáticamente tickets, envía mensajes ni crea despliegues.
 
-## Cómo decidir si usarlo
+## Escenarios mínimos de aceptación
 
-Si no tienes claro el escenario, pregunta:
+En pruebas, cubre al menos éxito, fallo de ejecución, cancelación, duplicados, identidad incorrecta e indisponibilidad temporal del receptor. Comprueba que duplicar entregas produce un solo efecto de negocio, que cancelar no cuenta como éxito y que un resultado generado sin validar no se publica directamente.
 
-1. ¿Necesito que me notifiquen de forma activa cuando cambia el estado de la Tarea?
-2. Al terminar, ¿hay un siguiente paso a nivel de sistema que deba encadenarse solo?
-3. ¿Ya tengo un backend que pueda recibir de forma segura callbacks HTTP?
-
-Cuantas más respuestas sean «sí», más sentido tiene el Webhook.
-
-## Límites de seguridad
-
-- Véase [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/) y [uso aceptable](/es/guide/team-enterprise/governance/acceptable-use/)
-- Incluye la rotación del secreto del webhook en el calendario de operaciones
-
-## Lista de aceptación
-
-- [ ] Fallo de verificación de firma → 4xx
-- [ ] Tabla de idempotencia o clave de dedupe implementada
-- [ ] Worker asíncrono y DLQ (cola de letra muerta) configurados
-- [ ] Convenio de campos alineado con [salida estructurada](/es/guide/developer-platform/non-interactive/structured-output/)
-
-El Webhook sirve para enchufar cambios de estado de Tarea a otros sistemas; antes hay que dejar bien firma, idempotencia y procesamiento asíncrono.
-
-## Fuentes de referencia
-- Documentación de eventos de la API OpenAI Codex / Cloud
----
-
-**Estado:** verified  
-**Productos aplicables:** API / Cloud  
-**Base de verificación:** Contrastado con la documentación pública actual de OpenAI Developers sobre plataforma para desarrolladores e integración orientada a eventos, y con las páginas verificadas de Webhooks, CI/CD, salida estructurada y límites de seguridad de equipo; esta página solo confirma el principio estable de que el Webhook sirve para notificar estado y que el receptor debe verificar firma, ser idempotente y procesar de forma asíncrona.  
-**Última verificación:** 2026-07-26
+Puedes practicar con el [caso de clasificación de issues](/es/cases/use-cases/team-automation/issue-triage-suggestions/) y la [comprobación programada de enlaces](/es/cases/use-cases/team-automation/scheduled-link-check/); el estado de sus materiales consta en cada página.

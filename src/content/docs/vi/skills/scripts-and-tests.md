@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Runtime Codex hiện tại cho phép kỹ năng kết hợp script và lệnh xác định; trang này nhấn mạnh nguyên tắc\"hành động ổn định thì script hóa, quy trình vẫn do Skill ràng buộc\", khớp năng lực hiện hành."
+  checkedAt: "2026-07-26"
 title: scripts/ và kiểm thử
 description: Thêm script xác định vào Skill và Kiểm chứng hành vi của chúng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Khi mới làm Skill, cách thường gặp là nhét hết vào `SKILL.md`. Quy
 
 Hành động cố định giao cho script; phán đoán và quy trình cộng tác để Skill lo.
 
-# scripts/ và kiểm thử
 
 Khi một bước phải chạy xác định (chạy test, sinh diff, kiểm tra định dạng), hãy cung cấp script trong `scripts/` và nói rõ trong `SKILL.md` khi nào gọi.
 
@@ -78,9 +82,3 @@ Dễ hơn để tách"script bản thân hỏng"và"cách tích hợp Skill khô
 Hành động chạy lặp ổn định đừng chỉ dựa mô tả chữ. Chạy thông script trước, rồi xác nhận Skill gọi không có vấn đề.
 
 Script kế thừa chính sách Phê duyệt hiện tại; xem [quy tắc lệnh](/vi/guide/customization/rules/command-rules/) và [bảo mật Skill](/vi/skills/security/).
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** Runtime Codex hiện tại cho phép kỹ năng kết hợp script và lệnh xác định; trang này nhấn mạnh nguyên tắc"hành động ổn định thì script hóa, quy trình vẫn do Skill ràng buộc", khớp năng lực hiện hành.  
-**Kiểm chứng gần nhất:** 2026-07-26

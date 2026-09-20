@@ -3,7 +3,7 @@ title: 目標、コンテキストとアクション
 description: 成功するやり取りを目標、背景、アクション、検収に分解する。
 locale: ja
 source_locale: zh-CN
-source_revision: 656b931
+source_revision: 280cea9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

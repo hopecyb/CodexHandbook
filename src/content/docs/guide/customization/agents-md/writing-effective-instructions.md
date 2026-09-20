@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本仓库当前 `AGENTS.md` 系列页面、上下文与工作流章节交叉复核；本页只说明项目指令的稳定写作原则与维护节奏，不把某一客户端的实现细节写成长期承诺。"
+  checkedAt: "2026-07-26"
 title: 写好项目指令
 description: AGENTS.md 写作清单——短、硬、可执行、可验证。
 sidebar:
@@ -163,10 +168,3 @@ pnpm test --filter @app/web
 - [项目说明](/guide/customization/project-instructions/)
 - [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
 - [定义完成](/prompts/define-done/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本仓库当前 `AGENTS.md` 系列页面、上下文与工作流章节交叉复核；本页只说明项目指令的稳定写作原则与维护节奏，不把某一客户端的实现细节写成长期承诺。  
-**最近核验：** 2026-07-26

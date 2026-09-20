@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu hiểu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu hiểu
 description: Lập nhận thức chung trước khi thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu hiểu
 
 Nhiều tác vụ kẹt vì chưa lập được hiểu biết chung tối thiểu.
 
@@ -55,10 +59,3 @@ Giá trị của mẫu hiểu là giúp bạn thu hẹp phạm vi tác vụ ti�
 
 - [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
 - [Case hiểu codebase](/vi/cases/understand-a-codebase/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu hiểu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

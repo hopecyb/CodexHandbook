@@ -3,7 +3,7 @@ title: Security
 description: Team-level risks, attack surface, and defenses—understand where risk lives before controls.
 locale: en
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

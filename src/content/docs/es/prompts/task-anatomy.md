@@ -3,7 +3,7 @@ title: Estructura de una buena tarea
 description: Objetivo, contexto, entradas, restricciones, aceptación y límites de permisos.
 locale: es
 source_locale: zh-cn
-source_revision: 4df3d01
+source_revision: 98c0511
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

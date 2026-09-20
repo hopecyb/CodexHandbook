@@ -1,48 +1,39 @@
 ---
 title: "Context Engineering (Kontext-Engineering)"
-date: 2025-09-29
-year: 2025
-summary: "Context Engineering gestaltet, was das Modell sieht: Verlauf, Dokumente, Tool-Ergebnisse und Speicher."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+description: "Kontext umfasst Aufgabe, Anweisungen, Dateien, Suchergebnisse und Tool-Ausgaben. Entscheidend ist, was in die aktuelle Aufgabe gehört, was bei Bedarf gelesen wird und was nach einer Verdichtung erhalten bleibt."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die nachstehenden Ereignisse und Projektangaben wurden anhand von Primärquellen geprüft. Die Lernempfehlungen sind Einschätzungen der Redaktion; die Quellenprüfung bedeutet keinen eigenen Produkttest."
+  evidence:
+    - label: "Artikel über Kontext-Engineering"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Nachprüfbares Ereignis und Geltungsbereich
 
-# Context Engineering (Kontext-Engineering)
+**Datum: 2025-09-29 · Typ: Fachartikel zur Entwicklung.** Anthropic veröffentlichte *Effective context engineering for AI agents* über die Organisation des Kontexts, den ein Agent benötigt. Das Datum des Artikels ist nicht das Entstehungsdatum des Konzepts.
 
-- Wichtige Daten:
-  - Application-engineering inflection: 2025-09-01
-- Offizielle Referenzen:
-  - https://platform.openai.com/docs/guides/conversation-state
-  - https://platform.openai.com/docs/guides/retrieval
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+Quelle: [Artikel über Kontext-Engineering](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Geprüft am 2026-09-18; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-## Was Es Ist
+## Welches Problem wird damit gelöst?
 
-Context Engineering gestaltet, was das Modell sieht: Verlauf, Dokumente, Tool-Ergebnisse und Speicher.
+Kontext umfasst Aufgabe, Anweisungen, Dateien, Suchergebnisse und Tool-Ausgaben. Entscheidend ist, was in die aktuelle Aufgabe gehört, was bei Bedarf gelesen wird und was nach einer Verdichtung erhalten bleibt.
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+## Lernempfehlung und Geltungsgrenzen
 
-Es bewegt Optimierung vom besseren Prompt zur Gestaltung der gesamten Kontextumgebung.
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-## In Welcher Phase Es Jetzt Ist
+Bevorzuge Fakten und Fundstellen, die für die aktuelle Entscheidung relevant sind. Mehr Inhalt kann auch Rauschen erzeugen; eine verdichtete Zusammenfassung ersetzt keine wichtigen Dateien. Wenn das Ziel abdriftet, prüfe zuerst bestehende Ergebnisse und Vorgaben, bevor du weitere Anweisungen ergänzt.
 
-Aktuell ordne ich diesen Punkt als `emerging` ein.
+## Praktische Übung
 
-Es ist aufstrebend und zentral für RAG, Agent-Speicher und lange Aufgaben.
+[Kontext fokussiert halten](/de/guide/context/keep-context-focused/): Liste für die aktuelle Aufgabe Pflichtdateien, bei Bedarf zu lesende Quellen und irrelevantes Material auf. Halte Ziel, erledigte Arbeit, offene Fragen und Fundstellen als Übergabe fest.
 
-## Was Es Ersetzen Könnte
-
-Es ersetzt ungefiltertes Hineinkippen von Dokumenten und Verlauf.
-
-## Was Es Ersetzen Könnte
-
-Es wird in automatische Kontextmanager und zustandsbehaftete Runtimes einfließen.
+[Zurück zur Roadmap und ihren Datumsregeln](/de/ai-roadmap/)

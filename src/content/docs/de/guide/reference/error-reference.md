@@ -3,7 +3,7 @@ title: Fehler- und Hinweisreferenz
 description: 'Lernindex gängiger Fehlermeldungen, Exit-Codes und Ursachen — zeigt auf Troubleshooting, ersetzt keinen offiziellen Support.'
 locale: de
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

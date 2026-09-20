@@ -1,0 +1,13 @@
+{
+  "heading.anchorLabel": "跳轉到「{{title}}」",
+  "pagefind.clear_search": "清除搜尋",
+  "pagefind.load_more": "載入更多結果",
+  "pagefind.search_label": "搜尋本站",
+  "pagefind.filters_label": "篩選",
+  "pagefind.zero_results": "沒有找到「[SEARCH_TERM]」的結果",
+  "pagefind.many_results": "找到 [COUNT] 條關於「[SEARCH_TERM]」的結果",
+  "pagefind.one_result": "找到 [COUNT] 條關於「[SEARCH_TERM]」的結果",
+  "pagefind.alt_search": "沒有找到「[SEARCH_TERM]」的結果，改為顯示「[DIFFERENT_TERM]」的結果",
+  "pagefind.search_suggestion": "沒有找到「[SEARCH_TERM]」的結果，請嘗試以下搜尋：",
+  "pagefind.searching": "正在搜尋「[SEARCH_TERM]」……"
+}

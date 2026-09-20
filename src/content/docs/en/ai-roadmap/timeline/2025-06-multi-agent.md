@@ -1,67 +1,40 @@
 ---
-title: Multi-agent
-date: 2025-06-13
-year: 2025
-summary: 'A single agent is limited by context length and sequential execution. Multi-agent systems break complex tasks into parallel roles — one searches, one analyzes, one writes — resembling real team collaboration. This significantly raises the ceiling for handling long and complex workflows.'
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [multi-agent, agent, orchestration, collaboration, llmops]
-authored_by: ai-assisted
+title: Multi-agent collaboration
+description: Multiple agents can handle independent retrieval, analysis, or review and combine their results through an agreed handoff format. Coordination, duplicate work, and shared state add costs.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: The event or project description in the primary source below was checked; learning advice is the author’s judgment, and source checking is not presented as a product test.
+  evidence:
+  - label: Engineering article on a multi-agent research system
+    href: https://www.anthropic.com/engineering/multi-agent-research-system
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: df11adc
+source_revision: f24f2f5
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# Multi-agent
+## Verifiable event and scope
 
-- LLM engineering mainstream milestone: 2025-06-13
-- Official references:
-  - Anthropic (engineering framework): https://www.anthropic.com/engineering/building-effective-agents
-  - Anthropic (production system): https://www.anthropic.com/engineering/multi-agent-research-system
-  - OpenAI (application case): https://openai.com/index/consensus/
-- Historical origin note (classical AI):
-  - Contract Net Protocol (1980): https://reidgsmith.com/The_Contract_Net_Protocol_Dec-1980.pdf
-- Note: This entry records when Multi-agent became mainstream in LLM application engineering, not the earliest origin of the concept in AI history.
+**Date: 2025-06-13 · Type: engineering article.** Anthropic published its engineering experience with a multi-agent research system. This date establishes when the article was published; it does not establish that the entire industry entered a mainstream phase that day.
 
-## What It Is
+Source: [Engineering article on a multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system). Checked on 2026-09-18; the source publication date and this page’s check date mean different things.
 
-Multi-agent is a system architecture where multiple software agents divide work, collaborate, and merge results to complete tasks.
+## What problem it addresses
 
-Here, "multi-agent" means multiple programmatic agents, not human teamwork. Each agent can take different roles such as planning, retrieval, execution, review, and synthesis, while an orchestration layer handles task routing, state passing, and result merging.
+Multiple agents can handle independent retrieval, analysis, or review and combine their results through an agreed handoff format. Coordination, duplicate work, and shared state add costs.
 
-## What Step It Moved AI Application Engineering From and To
+## Learning advice and limits of applicability
 
-It moved AI application engineering from "single-agent serial execution" to "parallel multi-role collaborative execution."
+The following is this site’s teaching judgment, not a measure of industry adoption or effectiveness:
 
-Under single-agent patterns, complex tasks are often limited by context size, single-thread reasoning speed, and quality variance from role mixing. Multi-agent systems decompose responsibilities and parallelize search, reasoning, verification, and writing, then aggregate and regress-check results at orchestration level.
+Consider parallel work only when subtasks can be carried out independently. If tasks depend closely on one another, modify the same file, or cannot be accepted separately, start with a single agent. Gains reported by a vendor on its own evaluations cannot be treated directly as the success rate of this site’s exercise.
 
-This moves AI systems from "able to answer questions" toward "able to reliably complete complex workflows."
+## Hands-on exercise
 
-## Why the Date Is 2025-06-13
+[Multi-agent coordination workflow](/en/cases/coordinate-multiple-agents/): first write a task breakdown table that names each role’s input, output, and dependencies; then decide whether parallel work is worthwhile. This is a workflow example, not a multi-agent experiment with measured gains from this site.
 
-Multi-agent as an AI concept is not new. It has long roots in distributed intelligence research, with Contract Net Protocol in 1980 as an early landmark.
-
-But in LLM engineering context, 2025-06-13 is a better milestone: Anthropic publicly shared production multi-agent research system construction and practical gains, signaling a shift from experimental discussion to reusable engineering practice.
-
-## What Stage It Is In Now
-
-I currently mark Multi-agent as `emerging`.
-
-It has been validated by leading teams and is spreading across more toolchains and product forms. But standards for orchestration, observability, cost governance, failure recovery, and cross-platform interoperability are still rapidly evolving.
-
-In short, Multi-agent is already a trend-level consensus, but not yet a default standard practice.
-
-## What It Might Replace
-
-It can replace part of "single agent handles everything" system designs, especially for long workflows, high-uncertainty tasks, and multi-step verification jobs.
-
-As orchestration matures, teams will rely less on giant one-shot prompts and single big model calls, and more on "role split + parallel execution + aggregate validation."
-
-## What Might Replace It
-
-It is more likely to be absorbed by higher-level orchestration abstractions than fully eliminated.
-
-Examples include automated task-graph compilers, standardized agent communication protocols, and system-level quality orchestration platforms that productize and standardize today's multi-agent practice.
+[Back to the roadmap and its dating convention](/en/ai-roadmap/).

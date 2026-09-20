@@ -1,15 +1,16 @@
 ---
 title: Codex 가이드
+prev: false
+next:
+  link: /ko/guide/start-here/
+  label: 여기서 시작하기
 description: Codex를 이해하고, 클라이언트를 고르고, 첫 작업을 마친 뒤 권한·컨텍스트·검증을 익힙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Codex 가이드
 
 여기에서는 Codex가 무엇인지, 어디에 잘 맞는지, 그리고 첫 사용에서 안정적인 워크플로로 어떻게 넘어가는지를 안내합니다.
 
@@ -23,6 +24,12 @@ reviewed_at: 2026-08-26
 - 어떤 클라이언트를 먼저 고를지
 - 첫 작업을 마친 뒤 다음에 어떤 역량을 보완할지
 - 권한·컨텍스트·검증 문제가 생겼을 때 어느 장으로 돌아갈지
+
+## 활용할 수 있는 자료
+
+- [초보자 안전 점검 목록](/ko/guide/getting-started/beginner-safety-checklist/)
+- [클라이언트 선택 방법](/ko/guide/choose-your-client/)
+- [결과 검증과 완료 기준](/ko/guide/verification/)
 
 ## 권장 순서
 

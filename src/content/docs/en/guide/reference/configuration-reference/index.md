@@ -3,7 +3,7 @@ title: Configuration Reference
 description: Conceptual index of Codex user- and project-level configuration keys—paths and fields per official docs.
 locale: en
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

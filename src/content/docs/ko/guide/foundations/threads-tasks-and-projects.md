@@ -3,7 +3,7 @@ title: 스레드·작업·프로젝트
 description: 세션·작업·프로젝트 작업 공간의 관계를 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f3b436
+source_revision: f5ded6a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 구조화 출력
 description: exec가 기계가 파싱할 수 있는 결과를 내게 합니다——후속 단계, 대시보드, 게이트용입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: aa19d49
+source_revision: e80b5d7
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -1,48 +1,40 @@
 ---
 title: "Tool Use(도구 사용)"
-date: 2025-03-11
-year: 2025
-summary: "Tool Use는 완전히 새로운 개념이라기보다 Function Calling을 시스템 수준으로 일반화한 것이다. Function Calling이 “어떻게 호출할까”라면 Tool Use는 “무엇을 호출할 수 있을까”를 넓힌다. 검색, 코드 실행, 브라우저, 데이터베이스가 포함된다."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [tool-use, tools, agent, orchestration, function-calling]
-authored_by: ai-assisted
+description: "도구 사용에는 도구 선택, 인수 구성, 실행, 결과 읽기, 다음 단계 결정이 포함됩니다. 한 번의 호출이 성공했다고 전체 작업이 끝난 것은 아닙니다. 실행 오류와 업무 검증에서 발견된 문제도 구분해야 합니다."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "아래 사건과 프로젝트 설명은 1차 출처와 대조했습니다. 학습 조언은 작성자의 판단이며 실제 제품 실행 검증으로 표시하지 않았습니다."
+  evidence:
+    - label: "에이전트용 새 도구 출시 발표"
+      href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 902c66c
+source_revision: efd508a
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Tool Use(도구 사용)
+## 확인 가능한 사건과 범위
 
-- 주요 날짜:
-  - Engineering inflection: 2025-03-11 (Responses API and built-in tools)
-- 공식 참고 자료:
-  - https://openai.com/index/new-tools-for-building-agents/
-  - https://platform.openai.com/docs/guides/tools
-- 참고: 이 항목은 내장 도구와 Agent 구축 도구 공개가 도구 사용을 일반적인 애플리케이션 설계 요소로 끌어올린 시점을 기록한다.
+**날짜: 2025년 3월 11일 · 유형: 제품 출시.** OpenAI는 Responses API, 내장 도구, Agents SDK를 포함한 에이전트용 새 도구를 발표했습니다. 이 발표는 특정 업체의 제품 이정표이지 모델의 도구 사용이 발명된 날짜가 아닙니다.
 
-## 무엇인가
+출처: [에이전트용 새 도구 출시 발표](https://openai.com/index/new-tools-for-building-agents/). 확인일은 2026년 9월 18일입니다. 출처의 게시일과 이 페이지의 확인일은 의미가 다릅니다.
 
-Tool Use는 모델이 외부 능력을 선택하고 호출하며 결과를 읽고 다음 행동에 반영하는 설계 패턴이다. 함수 호출보다 넓으며 검색, 파일 처리, 코드 실행, 브라우저 조작, 데이터베이스 작업을 포함한다.
+## 어떤 문제를 해결하는가
 
-## AI 애플리케이션 엔지니어링을 어디에서 어디로 옮겼나
+도구 사용에는 도구 선택, 인수 구성, 실행, 결과 읽기, 다음 단계 결정이 포함됩니다. 한 번의 호출이 성공했다고 전체 작업이 끝난 것은 아닙니다. 실행 오류와 업무 검증에서 발견된 문제도 구분해야 합니다.
 
-AI 애플리케이션은 “단일 함수를 구조화해 호출하는” 단계에서 “목표에 따라 여러 도구를 조합해 실행하는” 단계로 이동했다. 모델은 대화 상대를 넘어 외부 환경을 조작하는 실행 주체에 가까워졌다.
+## 학습 권장 사항과 적용 범위
 
-## 현재 단계
+다음 내용은 이 사이트의 교육적 판단이며 업계 보급률이나 효과를 측정한 결과가 아닙니다.
 
-현재 이 항목은 `emerging` 단계로 본다.
+반복 가능한 검사는 용도가 명확한 도구에 맡기고 종료 코드, 출력, 복구 방법을 남기세요. 먼저 수동 절차가 작동함을 확인한 뒤 예약 실행과 알림을 고려하세요.
 
-주류로 향하는 신흥 단계다. 주요 API와 Agent 프레임워크에서는 중심 기능이 되고 있지만 신뢰성과 권한 설계는 여전히 핵심 과제다.
+## 실습
 
-## 대체할 수 있는 것
+[다섯 가지 실패 복구 실습](/ko/guide/reference/troubleshooting/failure-recovery-lab/): 여러 오류를 재현하고 변경 전 로그를 읽은 뒤 변수 하나만 수정하여 변경 후 결과를 확인합니다. 이 실습은 로컬 스크립트를 사용하며 발표에 나온 API를 호출할 필요가 없습니다.
 
-사람이 검색, 복사, 붙여넣기, 실행, 확인을 수동으로 이어 붙이던 워크플로의 일부를 대체한다.
-
-## 그것을 대체할 수 있는 것
-
-Harness Engineering이나 Agent 런타임에 흡수되어 도구 단위가 아니라 상태, 체크포인트, 실패 복구를 가진 실행 시스템으로 다뤄질 것이다.
+[로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/)

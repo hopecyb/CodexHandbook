@@ -3,7 +3,7 @@ title: Struktur einer guten Aufgabe
 description: Ziel, Hintergrund, Eingaben, Einschränkungen, Abnahme und Berechtigungsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 4df3d01
+source_revision: 98c0511
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

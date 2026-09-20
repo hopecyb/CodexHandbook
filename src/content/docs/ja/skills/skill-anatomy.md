@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "現在の Codex ランタイムはスキルを `SKILL.md` 中心とし、スクリプトと参考資料を任意拡張。本ページはディレクトリ役割の説明で、変わりやすい製品入口に依存しない。"
+  checkedAt: "2026-07-26"
 title: Skill の構造
 description: SKILL.md、references/、templates/、scripts/ の役割と例。
 locale: ja
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Skill ディレクトリを初めて見ると、フォルダは見覚えがあっても、なぜこう配置するか分かりにくいことがあります。
@@ -15,7 +19,6 @@ Skill ディレクトリを初めて見ると、フォルダは見覚えがあ�
 
 読みやすく、直しやすく、再利用しやすくなり、肥大化時の混乱も減ります。
 
-# Skill の構造
 
 ## ディレクトリ構成
 
@@ -36,6 +39,18 @@ my-skill/
 
 最初は `SKILL.md` だけで十分なことも多いです。  
 複雑になったら `references/`、`templates/`、`scripts/` に分割します。
+
+## 一度に全部読まず、必要に応じて読み込む
+
+保守しやすい Skill は通常、三つの層に分けます。
+
+| 層 | 内容 | 使うとき |
+|---|---|---|
+| メタ情報 | 名前、説明、起動する場面 | Codex が使うべきか判断するとき |
+| 主な手順 | 必須の手順、禁止事項、完了条件 | Skill が起動した直後に読む |
+| 添付資料 | テンプレート、参考資料、スクリプト、例 | タスクで必要になったときだけ開く・実行する |
+
+通常は短い起動説明だけを見せ、実行時に詳しい内容を読み込みます。Skill が増えるほど、この分離は重要です。
 
 ## SKILL.md の最小例
 
@@ -113,10 +128,3 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 | スクリプト | 複雑度分析、リンクチェック、カバレッジ集計、整形確認 |
 
 良い Skill は、単に長いプロンプトではありません。再利用できる作業を読みやすく、テストしやすく、保守しやすい部品に分けたものです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現在の Codex ランタイムはスキルを `SKILL.md` 中心とし、スクリプトと参考資料を任意拡張。本ページはディレクトリ役割の説明で、変わりやすい製品入口に依存しない。

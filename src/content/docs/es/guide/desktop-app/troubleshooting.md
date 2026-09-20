@@ -3,7 +3,7 @@ title: Resolución de problemas de la App de escritorio
 description: Tratamiento habitual de fallos de instalación, inicio de sesión y Tareas.
 locale: es
 source_locale: zh-CN
-source_revision: ca74b6c
+source_revision: c298f9f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

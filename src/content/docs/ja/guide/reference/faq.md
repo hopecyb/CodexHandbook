@@ -3,7 +3,7 @@ title: よくある質問
 description: 入門と利用時の高頻度質問。
 locale: ja
 source_locale: zh-CN
-source_revision: 3f915e9
+source_revision: eb8bf4e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: AGENTS.md
 description: 프로젝트급 장기 지침 설명 페이지 — 누구에게, 무엇을 해결하는지 먼저 나눈 뒤 내용을 씁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ce5c1af
+source_revision: cb6371f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,14 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "このリポジトリの現在の文書 frontmatter、従来のフッター状態体系、相互リンクの慣例、sidebar の保守方法に照らして確認済み。このページはハンドブック本文の執筆規約と構成上の助言を扱い、特定の製品バージョンの詳細には依存しません。"
+  checkedAt: "2026-07-26"
 title: ガイドページの執筆
 description: 新しいハンドブック本文の構造、frontmatter、相互リンクの約束事。
 locale: ja
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
 本ページでは、`src/content/docs/` に**ガイド型**のページ（純粋な事例や参照表だけではないページ）を追加・改稿する方法を説明します。
@@ -38,15 +41,17 @@ description: 本文が解決する問題を一文で
 ---
 ```
 
-末尾に統一フッターを付けることもできます（既存ページと同様）：
+新しいページでは、編集状態と検証方法を frontmatter に記録します。自由記述の検証フッターは付けません。
 
-```markdown
----
-
-**状態：** planned | draft | review | verified | outdated | archived
-**対象製品：** App / CLI / IDE / Cloud
-**最終検証：** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 内容の構成を確認済み。実際に行った確認内容と日付に置き換えてください。
 ```
+
+出典の確認やサンプルの実行を示す場合は、[技術コンテンツの検証](/ja/guide/contributing/verify-technical-content/)に従い、必要なリンクと環境情報を追加します。日付は引用符で囲んだ `YYYY-MM-DD` 形式の文字列にしてください。
 
 ## 推奨構造
 
@@ -93,7 +98,7 @@ description: 本文が解決する問題を一文で
 
 ## 相互リンク
 
-- サイト内リンクはルートパス：`/cases/workflows/explore-plan-execute-verify/`
+- サイト内リンクはルートパス：`/ja/cases/workflows/explore-plan-execute-verify/`
 - 権威あるページへリンクし、大きな重複を避ける
 - 新規ページは章の `index.md` と `astro.config.mjs` の sidebar に登録する
 
@@ -120,10 +125,3 @@ PR 提出前に [技術コンテンツの検証](/ja/guide/contributing/verify-t
 
 ## 参考ソース
 - OpenAI Codex 公式ドキュメント
-```
----
-
-**状態：** verified  
-**対象製品：** （本ページは執筆規約のため該当なし）  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本リポジトリの現行ドキュメント frontmatter、フッター状態体系、相互リンクの慣習、sidebar 維持方法を再確認済み。本ページはハンドブック本文の執筆規約と構造提案であり、特定の製品バージョン詳細には依存しない。

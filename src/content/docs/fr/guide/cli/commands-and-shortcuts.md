@@ -3,7 +3,7 @@ title: Commandes et raccourcis
 description: Sous-commandes CLI, actions en session et habitudes clavier — orienté produit ; drapeaux complets dans la référence.
 locale: fr
 source_locale: zh-CN
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

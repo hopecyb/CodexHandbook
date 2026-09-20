@@ -3,7 +3,7 @@ title: "Corriger un bug : par où commencer"
 description: Choisissez le parcours de correction adapté à votre situation, puis poursuivez avec le cas complet et exécutable.
 locale: fr
 source_locale: zh-CN
-source_revision: 27c707b
+source_revision: 405a687
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

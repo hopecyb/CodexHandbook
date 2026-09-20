@@ -3,7 +3,7 @@ title: Agent の基礎
 description: Agent が目標を中心にツールを呼び出し、反復して進める仕組みを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: cb6933a
+source_revision: 5cfa120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

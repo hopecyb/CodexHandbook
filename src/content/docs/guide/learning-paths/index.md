@@ -1,4 +1,13 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "已按本仓库当前 learning paths 目录结构、各角色入口页与初学者分步路径交叉复核；本页只承担“按角色组织阅读顺序”的导航作用，不包含易变的产品行为细节。"
+  checkedAt: "2026-07-26"
+prev: false
+next:
+  link: /guide/learning-paths/beginner/01-talk-to-codex/
+  label: 开始初学者路径
 title: 学习路径
 description: 按角色编排阅读顺序，并链接权威正文。
 sidebar:
@@ -17,20 +26,28 @@ sidebar:
 - 不同角色的阅读顺序有什么差别
 - 哪些内容值得现在读，哪些可以以后再补
 
-## MVP 可用路径
+## 初学者固定材料路径
 
-- **初学者（完整五步）**
+[下载同一套活动通知练习材料](/downloads/first-project/first-project-1.0.0.zip)，按五步完成通知、复核与恢复记录。无需编程；尚未经独立读者通关测试。
+
+- **初学者（五步）**
   1. [与 Codex 对话](/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [处理文件](/guide/learning-paths/beginner/02-work-with-files/)
   3. [给出清晰任务](/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [审查结果](/guide/learning-paths/beginner/04-review-results/)
   5. [完成第一个小项目](/guide/learning-paths/beginner/05-complete-first-project/)
 
-## 概览（深度步骤后续补齐）
+## 创作者实操路径
 
-- [创作者](/guide/learning-paths/creator/)
-- [开发者](/guide/learning-paths/developer/)
-- [团队](/guide/learning-paths/team/)
+[创作者路径](/guide/learning-paths/creator/)提供四个连续里程碑：资料与事实表 → 带来源文章 → 八页可编辑演示稿 → 可复用任务说明。文章与演示稿均有独立下载材料，每步有完成条件；整条路径尚未经独立读者通关测试。
+
+## 开发者实操路径
+
+[开发者路径](/guide/learning-paths/developer/)复用购物车 Bug 练习，按代码阅读 → 修复与测试 → 差异审查 → 交接编排，提供三份可填写模板及作者参考。参考测试已重新运行，独立读者通关仍待验证。
+
+## 团队路径：两周试点与推广决定
+
+- [团队](/guide/learning-paths/team/)：章程 → 手动验证 → 抽检 → 回退演练 → 推广/继续/停止决定，含六份模板。
 
 ## 高级操作者路径
 
@@ -74,10 +91,3 @@ sidebar:
 - 主要在想团队怎么落地、怎么控风险：看 [团队路径](/guide/learning-paths/team/)
 
 学习路径就是按“当前最重要的问题”决定接下来读什么。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 已按本仓库当前 learning paths 目录结构、各角色入口页与初学者分步路径交叉复核；本页只承担“按角色组织阅读顺序”的导航作用，不包含易变的产品行为细节。  
-**最近核验：** 2026-07-26

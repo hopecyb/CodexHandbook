@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Review-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Review-Vorlage
 description: Diff und Änderungsrisiken strukturiert prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Review-Vorlage
 
 Reviews driften leicht ab, wenn sofort „nebenbei für dich geändert“ wird.
 
@@ -53,10 +57,3 @@ Kern der Review-Vorlage: Risiken entlang fester Dimensionen aufdecken — kein v
 
 - [Review vor dem Merge](/de/cases/workflows/review-before-merge/)
 - [PR-Review-Fall](/de/cases/review-a-pr/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Review-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

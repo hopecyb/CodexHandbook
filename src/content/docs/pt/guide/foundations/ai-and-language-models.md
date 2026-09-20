@@ -3,7 +3,7 @@ title: IA e modelos de linguagem
 description: Entenda como o modelo de linguagem gera respostas com base no Contexto.
 locale: pt
 source_locale: zh-CN
-source_revision: 1951620
+source_revision: ccdac83
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

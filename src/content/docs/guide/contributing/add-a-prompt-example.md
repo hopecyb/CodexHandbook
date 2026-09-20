@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "已按仓库当前 `examples/` 目录、示例 frontmatter、索引方式与贡献流程逐项复核；页面要求已与现有案例/工作流链接结构对齐，不依赖某一 Codex 产品端的易变行为。"
+  checkedAt: "2026-07-26"
 title: 添加提示词示例
 description: 向 examples/prompts 提交可复现提示词，包含元数据与验收标准。
 sidebar:
@@ -125,9 +129,3 @@ last_verified: YYYY-MM-DD
 - [ ] 至少一篇案例页或工作流页链接到该示例（可选但推荐）
 
 一个好的提示词示例，应该让别人能直接照着复现，并得到接近的结果。
-
----
-
-**状态：** verified  
-**核验依据：** 已按仓库当前 `examples/` 目录、示例 frontmatter、索引方式与贡献流程逐项复核；页面要求已与现有案例/工作流链接结构对齐，不依赖某一 Codex 产品端的易变行为。  
-**最近核验：** 2026-07-26

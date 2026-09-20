@@ -3,7 +3,7 @@ title: Exécuter votre première Tâche
 description: Réaliser un petit changement avec un Prompt clair.
 locale: fr
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

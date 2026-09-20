@@ -1,0 +1,15 @@
+{
+  "scope": "static-local-html",
+  "local_pass": true,
+  "html_files": 2,
+  "checked_local_references": 4,
+  "findings": [],
+  "unchecked": [
+    {
+      "file": "index.html",
+      "line": 6,
+      "url": "https://example.com/",
+      "reason": "external-or-nonlocal-scheme"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ title: Modo no interactivo
 description: Integra codex exec con scripts y pipelines para CI, tareas programadas y automatización.
 locale: es
 source_locale: zh-cn
-source_revision: a1cefbe
+source_revision: 1f37961
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: PDF와 문서
 description: Codex가 PDF류 문서를 읽고 요약·생성할 때의 범위, 도구, 검증 요점.
 locale: ko
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

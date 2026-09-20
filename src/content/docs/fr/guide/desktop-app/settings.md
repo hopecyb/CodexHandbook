@@ -3,7 +3,7 @@ title: Paramètres
 description: Configurez le comportement quotidien de l'App de bureau, ses raccourcis, ses notifications et son apparence.
 locale: fr
 source_locale: zh-CN
-source_revision: c599d50
+source_revision: 7a6d2fe
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

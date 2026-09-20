@@ -3,7 +3,7 @@ title: Instruções do projeto
 description: Contexto a nível de projeto além de AGENTS.md — divisão de papéis entre README, docs e referências na conversa.
 locale: pt
 source_locale: zh-CN
-source_revision: e2c79fe
+source_revision: 76b0fde
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

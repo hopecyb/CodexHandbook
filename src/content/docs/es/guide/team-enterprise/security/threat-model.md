@@ -3,7 +3,7 @@ title: Modelo de amenazas
 description: 'Principales superficies de riesgo de Codex en entornos de equipo: datos, Herramientas, extensiones y cadena de suministro.'
 locale: es
 source_locale: zh-CN
-source_revision: 4e63649
+source_revision: 4ec320d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

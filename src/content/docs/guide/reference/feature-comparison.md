@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照当前官方 App、CLI、IDE、Cloud、Authentication 与 Pricing 页面；矩阵只保留工作位置、上下文、审查方式和登录边界等明确能力，不再用“强 / 中 / 弱”猜测高波动功能。"
+  checkedAt: "2026-08-26"
 title: 功能对照
 description: 按工作面、运行位置和审查方式对照桌面 App、CLI、IDE 与 Cloud。
 sidebar:
@@ -57,13 +62,3 @@ GitHub / GitLab / Linear / Slack 发起 → Cloud 隔离运行 → 人工审查�
 - API key 登录是否支持某个 ChatGPT 或 Cloud 功能
 
 选型原则保持简单：**局部代码靠 IDE，终端闭环靠 CLI，本机任务协调靠桌面 App，远程隔离执行靠 Cloud。**
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照当前官方 App、CLI、IDE、Cloud、Authentication 与 Pricing 页面；矩阵只保留工作位置、上下文、审查方式和登录边界等明确能力，不再用“强 / 中 / 弱”猜测高波动功能。
-
-**最近核验：** 2026-08-26

@@ -3,7 +3,7 @@ title: Xử lý sự không chắc chắn
 description: Khi thiếu thông tin thì yêu cầu hỏi, đừng bịa.
 locale: vi
 source_locale: zh-CN
-source_revision: ea6795e
+source_revision: 839ce22
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

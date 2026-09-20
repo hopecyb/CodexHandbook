@@ -1,91 +1,69 @@
 ---
-title: Muster für menschliche Freigabe
-description: Wann freigeben, ablehnen oder Codex anhalten — und wie man diese Regeln klar formuliert.
+title: "Muster für menschliche Genehmigungen"
+description: "Unterscheide Aufgabenbefugnis von Tool-Genehmigung; bereite ein prüfbares Ergebnis vor, bevor eine konkrete genehmigungspflichtige Aktion pausiert."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Die unterschiedlichen Aufgaben von Sandbox und Genehmigung wurden geprüft. Die folgenden Formen der Zusammenarbeit sind Empfehlungen des Handbuchs, keine einheitlichen Dialogregeln aller Clients."
+  evidence:
+    - label: "Offizielle Hinweise zu Sandbox und Genehmigungen"
+      href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: de
 source_locale: zh-CN
-source_revision: 0e37633
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f60dbb5
+translation_status: draft
+translated_at: 2026-09-20
 ---
+Genehmigungen sollten sich auf eine konkrete Aktion und ihre Folgen beziehen. Die Aufgabenbefugnis beschreibt das Ziel des Nutzers; die Tool-Genehmigung entscheidet, ob eine Aktion in der aktuellen Umgebung ausgeführt werden darf. Schreiben, Befehle und Netzwerkzugriff erfordern nicht von sich aus jedes Mal eine Nachfrage. Maßgeblich sind erlaubter Umfang, Tool-Richtlinien und Sandbox gemeinsam. Siehe die [offizielle Erklärung](https://learn.chatgpt.com/docs/agent-approvals-security).
 
-Freigabe hält irreversible Aktionen beim Menschen. Diese Seite fasst gängige Muster zusammen.
+## Drei ausdrücklich wählbare Formen der Zusammenarbeit
 
-## Freigabe-Schichten
+| Form | Was weitergehen kann | Wann warten? |
+|---|---|---|
+| Nur lesende Analyse | Lesen, vergleichen und Vorschlag ausarbeiten | Keine Implementierungsänderung ohne Nutzerbefugnis |
+| Umsetzung im erlaubten Umfang | Angegebene Bereiche ändern, angemessen prüfen, prüfbares Ergebnis vorbereiten | Wesentliche Information fehlt, Umfang ändert sich oder neue unbefugte Aktion nötig |
+| Gesonderte Genehmigung der Schlussaktion | Entwürfe, Builds, Vorschauen und Rückkehrvorbereitung fertigstellen | Vor Veröffentlichung, Versand oder anderer ausdrücklich vorbehaltener Aktion |
 
-```text
-Automatisch sichere Zone (lesen, analysieren, planen)
-    ↓
-Bestätigungszone (Dateien schreiben, Befehle ausführen, Netz)
-    ↓
-Zwang zum Menschen (push, Daten löschen, nach außen senden, Produktionsconfig ändern)
-```
+Das sind Arbeitsabsprachen, keine Namen neuer Produktmodi. Eine klar erteilte und noch gültige Genehmigung wird nicht erneut eingeholt. Wenn eine verbindliche Richtlinie interaktive Freigabe fordert, gilt deren Mechanismus.
 
-Konkrete Dialoge variieren je nach [Produkteinstieg](/de/guide/); das Prinzip ist gleich.
-
-## Muster 1: Zuerst planen, dann ausführen
+## Muster 1: In dieser Runde nur Vorschlag
 
 ```text
-Regel: Ohne meine «Plan freigeben»-Antwort dürfen keine Repository-Dateien geändert werden.
+Arbeite diesmal nur lesend: prüfe das Projekt und schlage Änderungen vor. Ändere keinen Code und erstelle keinen Commit.
+Falls eine Prüfung Cache, Snapshot oder Ausgabedateien schreibt, weise darauf hin. Nicht jeder „Test“ ist lesend.
 ```
 
-Geeignet: unbekannte Codebasis, produktionsnah, großer Diff.
+Das passt, wenn das Ziel noch offen ist und Alternativen verglichen werden. Auch bei Leseaufgaben zählen tatsächliche Nebenwirkungen von Befehlen. „Tests dürfen laufen“ und „kein Schreiben auf die Platte“ dürfen nicht ungeprüft kombiniert werden.
 
-## Muster 2: Befehl-Whitelist
-
-In [AGENTS.md](/de/guide/customization/agents-md/writing-effective-instructions/) festhalten:
-
-```md
-Ohne Nachfrage erlaubt: pnpm test, pnpm lint, git status, git diff
-Jedes Mal bestätigen: git push, npm publish, Datenbank-Migrationen
-```
-
-Bei Konflikt mit Hosting-Policy gilt die **strengere** Regel.
-
-## Muster 3: Zweistufiges Mergen
-
-1. Codex öffnet Draft-PR oder lokalen Branch
-2. Mensch merged nach CI + Review
-
-Cloud-Szenarien: [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/).
-
-## Muster 4: Nur-lesen-Aufklärung
+## Muster 2: Lokale Arbeit durchgehend fertigstellen
 
 ```text
-Diese Runde nur lesen: Dateien lesen, Tests laufen lassen, lokale API curl’en;
-Schreiben auf Disk und git commit verboten.
+Du darfst diese drei Dokumente und zugehörige interne Links ändern sowie die vorhandenen Build-Prüfungen ausführen.
+Erledige die Arbeit im Umfang ohne Warten nach jedem Schritt, entscheide gewöhnliche Details selbst und berichte darüber.
+Veröffentliche die Website nicht und versende keine Nachrichten. Erläutere nötige Entscheidungen oder Aktionen außerhalb des Umfangs zuerst.
 ```
 
-Für Audits, Lernen fremder Projekte, Diagnose von Produktionsproblemen.
+Änderung und Prüfung sind hier bereits erlaubt; vor jedem Schreibzugriff erneut zu fragen ist unnötig. Ob ein bestimmter Befehl zulässig ist, bestimmt trotzdem die Umgebung; ein Prompt kann eine Ablehnung nicht umgehen.
 
-## Wann ablehnen und neu starten
+## Muster 3: Konkrete Veröffentlichung genehmigen
 
-| Signal | Empfehlung |
-|---|---|
-| Plan passt nicht zum Ziel | Ausführung ablehnen, Planüberarbeitung verlangen |
-| Änderungsumfang wächst | Stoppen, Aufgabe zerlegen |
-| Tests übersprungen | Merge ablehnen, Überprüfung nachfordern |
-| Ein Befehl ist unerklärlich | Ablehnen, Erklärung verlangen |
+Bereite zuerst eine prüfbare Fassung vor und nenne dann:
 
-## Verhältnis zu Automations
+- Genaue zu veröffentlichende Version oder Ergebnis und Prüfergebnisse.
+- Zielumgebung, Empfänger oder Betroffene.
+- Erwartete externe Wirkung und nötige Wiederherstellung.
+- Noch fehlende Befugnis oder Bedingung.
 
-Auch unbeaufsichtigte Aufgaben brauchen bei Design menschliche Bestätigungspunkte; siehe [Geplante und Hintergrundaufgaben](/de/skills/automations/scheduled-tasks/).
+„Diese Version auf die Testseite stellen“ ist keine Freigabe für spätere Versionen auf der Produktionsseite. Umgekehrt soll eine schon genehmigte identische Aktion nicht wegen einer allgemeinen Vorlage erneut bestätigt werden müssen.
 
-## Häufige Fehler
+## Nach einer Ablehnung weiterarbeiten
 
-- Dauerhaft «immer erlauben» anhaken und Risiken vergessen
-- Freigabe als Formsache, Diff nicht lesen
-- Mündliches «nicht übertreiben» statt klarer Muster
+Bewahre die ursprüngliche Ablehnung auf und unterscheide fehlende Befugnis, Richtlinienverbot und Umgebungsfehler. Arbeite mit einer engeren, weiterhin gültigen Lösung weiter, wenn möglich. Dieselbe Grenze darf nicht durch anderes Tool, andere Befehlsschreibweise oder umformulierten Prompt umgangen werden. Falls Nutzerhandeln nötig ist, nenne blockierte Aktion, Grund und mögliche nächste Schritte.
 
-## Abnahme-Checkliste
+## Was die prüfende Person kontrolliert
 
-- [ ] Vor Aufgabenstart erklärt, welches Freigabemuster gilt
-- [ ] Hochrisiko-Aktionen haben Zweit-Review oder CI-Gate
-- [ ] Team hat einheitliche Policy für `git push` & Co.
+Passen Umfang und Ergebnis zusammen? Wurde wirklich geprüft? Sind die externen Auswirkungen verstanden? Ein Plan bedeutet keine automatische Freigabe, und „keine Befunde“ garantiert kein Nullrisiko.
 
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle offizielle Leitlinien zu Autonomy / Approval Boundaries bei OpenAI Developers sowie die bereits geprüften Kapitel zu Freigabe, Befehlsregeln, PR und Automatisierung. Diese Seite bestätigt nur das stabile Kollaborationsprinzip „welche Aktionen automatisch weiterlaufen und welche für Menschen stoppen“.  
-**Zuletzt geprüft:** 2026-07-26
+Zur Arbeitsweise siehe [Aufgabenklassifizierung](/de/prompts/ask-for-a-plan/), bei widersprüchlichen Anweisungen [Kontextpriorität](/de/guide/context/context-priority/); unbeaufsichtigte Abläufe brauchen außerdem [Stopp-, Fehler- und Benachrichtigungsmechanismen](/de/skills/automations/scheduled-tasks/).

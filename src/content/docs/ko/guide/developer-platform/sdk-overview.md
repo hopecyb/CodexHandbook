@@ -1,97 +1,88 @@
 ---
-title: SDK 개요
-description: 공식 SDK로 애플리케이션에서 Codex 작업을 시작합니다——인증, 세션, 오류 처리 개념입니다.
-locale: ko
-source_locale: zh-CN
-source_revision: a701e2d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: 'SDK 개요: 로컬 작업과 클라이언트 통합'
+description: Codex SDK, 비대화형 CLI, App Server, 직접 구축하는 원격 작업 서비스를 구분한다.
+contentType: reference
+audiences: [developer]
+level: intermediate
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 실행 위치, 스레드 인터페이스, 통합 범위를 공식 SDK와 App Server 문서와 대조했다. 최소 예제는 구문만 검사했으며 인증된 모델 호출은 하지 않았다.
+  evidence:
+    - label: Codex SDK 공식 문서
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: Codex App Server 공식 문서
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: ko
+source_locale: zh-CN
+source_revision: e888ae6
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-SDK(이름과 언어는 [공식 문서](https://developers.openai.com/codex) 기준)는 **자체 서비스**에서 작업을 만들고, 상태를 폴링하고, 결과를 가져오게 해 줍니다. 터미널 TUI에만 의존하지 않아도 됩니다.
+Codex SDK를 사용하면 프로그램이 로컬 Codex Agent를 제어할 수 있다. 여기서 “로컬”은 SDK와 Agent가 실행되는 컴퓨터를 뜻하며, 개인 PC일 수도 관리하는 CI runner일 수도 있다. 이를 Cloud 작업 생성·상태 조회·산출물 다운로드를 제공하는 호스팅 HTTP 서비스로 해석하면 안 된다. [공식 SDK 문서](https://learn.chatgpt.com/docs/codex-sdk)를 참고한다.
 
-“SDK”를 처음 본다면, 사람이 클릭하는 UI가 아니라 프로그램이 Codex를 호출할 때 쓰는 개발 도구 세트로 이해하면 됩니다.
+## 통합 목표에 맞춰 진입점 선택하기
 
-즉 “내 시스템이 Codex를 호출한다”에 더 맞습니다. 임시로 작업 하나만 던질 때는 보통 SDK까지 쓰지 않아도 됩니다.
-
-## 이 페이지에서 다루는 내용
-
-- CLI `exec` 대신 SDK를 쓸 때
-- 인증과 테넌트 격리
-- Webhook, 큐와의 조합 아이디어
-
-플랫폼 총괄：[개발자 플랫폼](/ko/guide/developer-platform/)
-
-## SDK vs CLI
-
-| | SDK | CLI `exec` |
+| 목표 | 출발점 | 직접 맡아야 할 일 |
 |---|---|---|
-| 통합 위치 | 백엔드 서비스, 내부 도구 | Shell, GitHub Actions |
-| 상태 관리 | 내 코드가 담당 | 프로세스 종료 코드 |
-| 적합 | 멀티테넌트 제품, 커스텀 UI | 단순한 파이프라인 |
+| 스크립트에서 작업 한 번 실행 | [`codex exec`](/ko/guide/developer-platform/non-interactive/codex-exec/) | 작업 폴더, 입력, 종료 상태, 결과 저장 |
+| 프로그램에서 작업 실행 및 계속 진행 | Codex SDK | 프로그램 수명 주기, 환경, 실패 처리, 검증 |
+| 세션·승인·스트리밍 이벤트가 있는 클라이언트 제작 | App Server | 클라이언트 상호작용, 연결, 신원 처리, 배포 |
+| 다중 사용자 원격 작업 플랫폼 제공 | 자체 서비스 구조 | 대기열, 테넌트 격리, 자격 증명, 저장, 취소, 콜백 |
 
-많은 팀은 **CI에는 CLI, 제품에는 SDK**를 씁니다.
+마지막 줄은 설계 선택이지 SDK에 포함된 호스팅 플랫폼 기능이 아니다. 공식 안내는 SDK를 자동화와 CI에, App Server를 깊은 클라이언트 통합에 사용한다. App Server는 양방향 JSON-RPC로 요청과 이벤트를 주고받는다. [App Server 문서](https://learn.chatgpt.com/docs/app-server)를 참고한다.
 
-## 흔한 오해
+## 최소 TypeScript SDK 호출
 
-### 1. SDK와 CLI의 차이는 무엇인가요
+공식 TypeScript 패키지는 `@openai/codex-sdk`이며 Node.js 18 이상이 필요하다. 다음 예제는 JavaScript 모듈 구문으로 같은 패키지의 기본 인터페이스를 보여 준다. 완전한 운영 서비스는 아니다.
 
-대략 이렇게 보면 됩니다.
+전용 연습 폴더에 의존성을 설치하고 실제로 확인된 버전과 잠금 파일을 보관한다.
 
-- **CLI**：사람이나 스크립트가 터미널에서 호출
-- **SDK**：코드를 써서 Codex 능력을 자체 서비스에 임베드
+```sh
+npm init -y
+npm install --save-exact @openai/codex-sdk
+npm ls @openai/codex-sdk
+```
 
-### 2. SDK부터 배워야 하나요
+민감 정보가 없는 `README.md`를 준비하고 아래 내용을 `example.mjs`로 저장한다.
 
-보통은 아닙니다.
+```js
+import { Codex } from '@openai/codex-sdk';
 
-Codex를 먼저 익히고 싶다면, 로컬 입구나 CLI 대화형 모드가 첫 단계로 더 적합합니다.
+const agent = new Codex();
+const session = agent.startThread();
+const answer = await session.run(
+  '현재 폴더의 README.md만 읽고 용도를 중국어로 세 항목으로 요약해 주세요. 파일을 수정하거나 외부 작업을 실행하지 마세요.'
+);
+console.log(answer.finalResponse);
+```
 
-### 3. 어떤 때 SDK가 가치가 있나요
+이후 `node example.mjs`를 실행한다. 실행 전 선택한 환경의 인증을 완료하고 실제 sandbox와 승인 설정을 확인해야 한다. 프롬프트의 “읽기 전용”은 작업 제약이지 실행 환경의 제한을 대체하지 않는다. 모델 호출은 계정 사용량을 소비할 수 있으며 이 문서는 설치나 호출을 대신 실행하지 않았다.
 
-예를 들어 이런 요구가 생길 때입니다.
+메서드 이름과 반환 필드는 [공식 예제](https://learn.chatgpt.com/docs/codex-sdk)와 대조했다. 이 사이트는 JavaScript 구문만 검사했으며 특정 SDK 배포판을 고정해 실제 테스트하지 않았고 가짜 성공 출력도 제시하지 않는다. 재현할 때 패키지 버전, CLI/runtime, 운영체제, 자격 증명을 제외한 인증 방법과 결과를 기록한다.
 
-- 자사 제품에서 Codex 작업을 시작하고 싶다
-- 작업 상태와 결과를 직접 관리하고 싶다
-- 커스텀 UI, 권한, 프로세스를 만들고 싶다
+## 작업 계속하기와 복구하기
 
-SDK는 “프로그램에 시스템을 붙이는” 용도에 맞습니다. Codex를 처음 익히는 주 입구로는 적합하지 않습니다.
+같은 thread 객체에 `run()`을 다시 호출할 수 있다. 기존 thread ID는 `resumeThread()`에 전달해 재개한다. 재개 가능한 thread는 상태 저장 환경에 달려 있으므로 ID를 아무 컴퓨터에서나 조회할 수 있는 Cloud URL로 간주하지 않는다. 공식 Python 인터페이스도 있다. 두 언어의 코드와 의존성을 섞지 말고 각 장에서 이름과 요구사항을 확인한다. [thread 호출과 언어별 인터페이스](https://learn.chatgpt.com/docs/codex-sdk)를 참고한다.
 
-## 핵심 개념(언어 무관)
+재개 후에는 현재 파일이 과거 설명과 일치하는지 먼저 확인한다. [인계와 재개](/ko/guide/agent-work/handoff-and-resume/)를 참고한다.
 
-1. **인증**：조직 API key 또는 OAuth 위임——최소 scope를 따릅니다
-2. **작업/스레드**：한 번의 사용자 요청에 추적 가능한 ID가 대응합니다
-3. **도구 정책**：서버가 샌드박스와 승인을 지정하며, 클라이언트와 일치해야 합니다
-4. **결과**：메시지 이력, 파일 diff, artifact URL(API에 따라 다름)
-5. **오류**：재시도 가능(429)과 불가(400)를 구분합니다
+## 호출이 성공한 뒤 확인할 사항
 
-오류 색인：[오류와 안내 참고](/ko/guide/reference/error-reference/)
+1. **실행 위치:** 프롬프트만 남기지 말고 작업 폴더와 실제로 읽거나 바꾼 파일을 기록한다.
+2. **작업 결과:** 답변, 파일 차이, 테스트를 확인한다. `finalResponse`가 있다고 업무 인수가 끝난 것은 아니다.
+3. **실패 유형:** 로컬 의존성·프로세스, 인증, 모델 서비스, 작업 검증 실패를 구분한다. 모든 예외를 400/429로 단순화하지 않는다.
+4. **재시도 영향:** 이미 파일이나 외부 효과가 생겼는지 확인한 후 재시도를 결정한다. 같은 요청을 무작정 반복하지 않는다.
+5. **권한:** 실행 환경과 사용 가능한 도구는 직접 책임진다. SDK라는 이름만으로 Cloud, 조직 관리, 다중 테넌트 격리가 생긴다고 추정하지 않는다.
 
-## 최소 통합 체크리스트
+이는 사이트가 제안하는 통합 확인 항목이지 SDK 반환 필드 목록이 아니다. 실제 필드는 설치한 버전의 타입과 공식 문서를 따른다.
 
-- [ ] staging에서 읽기 전용 저장소로 시험 실행
-- [ ] 로그 마스킹；PII가 있으면 사용자 전체 프롬프트를 기록하지 않음
-- [ ] 타임아웃과 취소：사용자가 페이지를 떠나면 작업을 중단할 수 있음
-- [ ] SDK와 모델 ID 버전을 고정
+## 콜백, 대기열, 원격 실행과의 관계
 
-## CI/CD와의 연결
+자신의 runner에서 SDK를 실행한 뒤 자체 서비스로 완료 알림을 보낼 수 있다. 이 경우 대기열 상태, HTTP 콜백, 서명 형식, 재시도 정책은 자신의 시스템 프로토콜에 속한다. App Server의 스트리밍 이벤트도 Webhook 주소로 곧바로 사용할 수 없다.
 
-SDK가 Cloud나 원격 runner를 트리거하거나, CI가 내 서비스를 콜백해 PR 상태를 갱신합니다. 예시 패턴은 [코드 리뷰 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/)를 보세요.
-
-## 흔한 실수
-
-- 사용자 브라우저의 session cookie를 API 키처럼 쓰는 것
-- 동시성 제한 없이 트래픽 피크에 쿼터를 소진하는 것
-- SDK가 만든 PR을 자동 머지하는 것
-
-## 참고 출처
-- OpenAI Codex SDK reference
----
-
-**상태：** verified  
-**적용 제품：** API  
-**검증 근거：** OpenAI Developers의 Codex API/모델·개발자 플랫폼 공개 설명과, 본 핸드북에서 검증된 개발자 플랫폼 총괄·CI/CD·비대화형 모드 장을 교차 확인했습니다. 이 페이지는 “SDK가 프로그래밍 통합, 상태 관리, 커스텀 UI에 적합하다”는 안정된 역할 분담만 확인합니다.  
-**최근 검증：** 2026-07-26
+[Webhook과 작업 이벤트의 경계](/ko/guide/developer-platform/webhooks/overview/) 및 [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/)을 이어 읽는다. 이 페이지는 SDK 호출만으로 Codex Cloud 작업, artifact URL 또는 OAuth 위임이 자동 생성된다고 약속하지 않는다.

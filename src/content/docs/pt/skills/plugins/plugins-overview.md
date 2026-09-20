@@ -1,113 +1,107 @@
 ---
-title: Visão geral de Plugins
-description: Empacote Skills, MCP e conectores de app para distribuição e gestão unificadas na equipe.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / aplicação de ambiente de trabalho / Mobile; Codex de ambiente de trabalho e CLI; a extensão IDE não suporta Plugins"
+  checkedAt: "2026-08-26"
+title: Visão geral dos Plugins
+description: Compreender os componentes, os ambientes suportados, a instalação, a verificação e os limites de confiança dos Plugins.
 locale: pt
 source_locale: zh-CN
-source_revision: b2c5dae
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a514206
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
+O ChatGPT e o Codex usam o mesmo catálogo público de Plugins. Um Plugin reúne capacidades relacionadas num fluxo de trabalho que se pode descobrir e instalar; não inventa um novo protocolo de chamadas de ferramentas.
 
-ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
+## O que um Plugin pode incluir
 
-## Plugin contents
-
-| Component | Role | Installer review |
+| Componente | Função | O que deve verificar quem instala |
 |---|---|---|
-| Skills | Reusable steps, references, scripts | Instruction fit and script trust |
-| Connectors | GitHub, Slack, Drive, and other services | OAuth scopes, writes, external data |
-| MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
-| Browser extensions | Browser capability for a workflow | Browser access and necessity |
-| Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
-| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
+| Skills | Passos, referências e scripts reutilizáveis | Se as instruções servem para a tarefa atual e se os scripts são de confiança |
+| Connectors | Ligação ao GitHub, Slack, Google Drive e outros serviços | Âmbito OAuth, ações de leitura/escrita e dados externos abrangidos |
+| Servidores MCP | Definir ferramentas, autenticação e devolução de dados estruturados | Origem do servidor, lista de ferramentas, logs e permissões |
+| Extensões do browser | Capacidade de browser para um fluxo específico | Âmbito e necessidade do acesso ao browser |
+| Hooks | Executar comandos ou ferramentas MCP em pontos do ciclo de vida | Rever e aprovar a definição exata antes de ativar |
+| Modelos de Scheduled task | Ponto de partida reutilizável nos ambientes que suportam tarefas agendadas | Frequência, permissões, condição de saída e revisão humana |
 
-## Difference from Skill and MCP
+## Diferença entre Plugin, Skill e MCP
 
-| Mechanism | Main question | PR review example |
+| Mecanismo | Pergunta principal | Exemplo num conjunto de revisão de PR |
 |---|---|---|
-| Skill | Which steps? | Read diff, verify evidence, rank risk |
-| MCP / Connector | Which external tools? | Read GitHub PR and comments |
-| Hook | Which lifecycle check? | Scan secrets after a write |
-| Plugin | How is the bundle installed and distributed? | Team PR-review package |
+| Skill | Que passos seguir? | Ler o diff, verificar as provas, ordenar riscos |
+| MCP / Connector | Que ferramentas externas se podem chamar? | Ler um PR do GitHub e os seus comentários |
+| Hook | Em que momento do ciclo de vida se deve verificar? | Procurar segredos depois de escrever um ficheiro |
+| Plugin | Como instalar e distribuir estas capacidades em conjunto? | «Pacote de revisão de PR» da equipa |
 
-A Plugin is a distribution layer, not the final execution step. See [Capability map](/pt/skills/capability-map/).
+O Plugin é a camada de distribuição, não a última etapa da execução. Consulte o [mapa das capacidades de extensão](/pt/skills/capability-map/).
 
-## Install and verify
+## Instalar e verificar pela primeira vez
 
-### ChatGPT Web / desktop App
+### ChatGPT Web / aplicação de ambiente de trabalho
 
-1. Open Plugins.
-2. Inspect publisher, description, and contents.
-3. Install; review each external authorization separately.
-4. Verify at low risk in a new Chat, Work, or Codex task.
+1. Abra o separador Plugins.
+2. Veja o publicador, a descrição e as capacidades incluídas.
+3. Instale; se for pedida ligação a um serviço externo, reveja separadamente o âmbito da autorização.
+4. Faça uma verificação de baixo risco numa nova tarefa Chat, Work ou Codex.
 
 ### Codex CLI
 
-1. Enter `/plugins`.
-2. Install from a configured marketplace.
-3. **Start a new session**, then verify the installed Skill or tool.
+1. Introduza `/plugins` para abrir o navegador de Plugins.
+2. Instale a partir de um marketplace configurado.
+3. **Inicie uma nova sessão** e só então verifique o Skill ou a ferramenta instalados com o pacote.
 
-The IDE integration does not support Plugins. Manage them in the desktop App or CLI.
+A extensão IDE não suporta atualmente Plugins. Não procure resolver a «ausência de entrada no IDE» como se fosse uma avaria; use a aplicação de ambiente de trabalho ChatGPT ou o Codex CLI para gerir Plugins.
 
-## Low-risk prompt
+## Prompt de verificação de baixo risco
 
 ```text
-Inspect only newly installed <plugin-name>; do not write:
-1. List related Skills and tools.
-2. Mark each tool read-only or externally mutating.
-3. Use test data or one read-only query.
-4. Name the component used and authorizations still requiring human review.
+Examine apenas o <plugin-name> que acabei de instalar; não faça alterações:
+1. Liste os Skills e as ferramentas desse Plugin relevantes para esta tarefa.
+2. Indique quais são só de leitura e quais podem causar efeitos externos.
+3. Faça uma chamada mínima com dados de teste ou uma consulta só de leitura.
+4. Diga qual componente foi realmente usado e que autorizações ainda precisam de confirmação humana.
 ```
 
-Do not send messages, change states, delete data, or bulk-write during first verification.
+Se o Plugin precisar de uma ligação externa, na primeira verificação não envie mensagens, altere estados, apague dados nem escreva muitos ficheiros.
 
-## Team adoption
+## Processo de adoção pela equipa
 
-1. **Inventory:** Skills, connectors, MCP, browser extensions, Hooks, templates.
-2. **Provenance:** marketplace, repository, publisher, update policy.
-3. **Least privilege:** test account and read-only scopes.
-4. **Pilot:** non-production project or small team.
-5. **Hook review:** inspect bundled Hook hash and behavior in `/hooks`.
-6. **Exit record:** disable, uninstall, rollback, revoke OAuth.
+1. **Inventariar os componentes**: listar Skills, conectores, MCP, extensões de browser, Hooks e modelos.
+2. **Verificar a origem**: confirmar marketplace, repositório, publicador e política de atualização.
+3. **Autorizar o mínimo**: testar com conta de ensaio e âmbitos só de leitura.
+4. **Fazer um piloto isolado**: começar num projeto não produtivo ou numa pequena equipa.
+5. **Rever os Hooks**: usar `/hooks` para verificar o hash e o comportamento dos Hooks incluídos no Plugin.
+6. **Documentar a saída**: registar como desativar, desinstalar, reverter e revogar OAuth.
 
-## Boundaries
+## Limites a não ignorar
 
-- Successful installation does not prove safety or data fit.
-- External authorization is a separate high-risk step.
-- Plugin Hooks run alongside matching Hooks from other sources.
-- Workspace administrators can restrict Plugins and tools.
-- Mobile uses installed Plugins but should not be assumed to have full management.
+- A instalação ter sido bem-sucedida não prova que os componentes são seguros ou adequados aos dados atuais.
+- Um Plugin pode pedir ligação a serviços externos; conceder essa autorização é um passo independente e de risco elevado.
+- Os Hooks de um Plugin correm juntamente com Hooks correspondentes de outras origens; não substituem automaticamente os existentes.
+- O administrador do workspace pode controlar os Plugins e ferramentas disponíveis; o catálogo visível a um utilizador não equivale ao que a organização permite.
+- Em Mobile, podem usar-se os Plugins da conta, mas não se deve pressupor uma interface de gestão completa.
 
-## When not to build a Plugin
+## Quando não é necessário criar um Plugin
 
-- One simple `SKILL.md` with no distribution problem.
-- One personal experimental script.
-- Unstable permission and update policy.
-- Users work only in the IDE integration.
+- Só existe um `SKILL.md` simples, sem problema de combinação ou distribuição.
+- Trata-se de um script pessoal pontual ainda em experimentação rápida.
+- As permissões e a política de atualização ainda não estão estáveis.
+- Os utilizadores pretendidos trabalham apenas na extensão IDE.
 
-Stabilize one Skill or MCP workflow before bundling it.
+Em geral, é mais fácil rever um Skill ou um fluxo MCP isolado, torná-lo estável e só depois considerar a sua distribuição em conjunto.
 
-## Acceptance checklist
+## Lista de verificação
 
-- [ ] Target surface supports Plugins.
-- [ ] Publisher and source are traceable.
-- [ ] External connections and OAuth scopes reviewed.
-- [ ] Plugin Hooks reviewed and trusted.
-- [ ] Read-only minimal task succeeds.
-- [ ] New session discovers expected Skill/tool.
-- [ ] Team has disable, rollback, revocation steps.
+- [ ] O ambiente de destino suporta Plugins.
+- [ ] O publicador e a origem são rastreáveis.
+- [ ] As ligações externas e os âmbitos OAuth foram revistos.
+- [ ] Os Hooks do Plugin foram revistos e aprovados.
+- [ ] Uma tarefa mínima só de leitura foi concluída com sucesso.
+- [ ] Uma nova sessão encontra o Skill ou a ferramenta esperados.
+- [ ] A equipa documentou desativação, reversão e revogação de autorizações.
 
-## Official sources
+## Fontes oficiais
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
-
-**Last verified:** 2026-08-26

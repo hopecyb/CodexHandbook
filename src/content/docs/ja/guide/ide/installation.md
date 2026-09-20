@@ -3,7 +3,7 @@ title: IDE 統合をインストールして有効にする
 description: VS Code 系エディタ、Xcode、JetBrains IDE で Codex を正しく開きます。
 locale: ja
 source_locale: zh-CN
-source_revision: fb7ff84
+source_revision: 85e1691
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

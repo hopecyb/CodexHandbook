@@ -3,7 +3,7 @@ title: ログインと認証
 description: ローカルクライアントと Cloud で正しいログイン方法を選び、現在の ID を安全に確認します。
 locale: ja
 source_locale: zh-CN
-source_revision: e17d14f
+source_revision: ea83fa6
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE"
+  checkedAt: "2026-08-26"
 title: 差异、评论与审查
 description: 在提交或推送前，用审查窗格核对真实改动并给出逐行反馈。
 sidebar:
@@ -54,11 +58,3 @@ sidebar:
 ## 官方依据
 
 - [代码审查](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状态：** verified
-
-**适用产品：** App、CLI、IDE
-
-**最近核验：** 2026-08-26

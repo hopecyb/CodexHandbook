@@ -3,7 +3,7 @@ title: Comandos y atajos
 description: Subcomandos de la CLI, acciones dentro de la sesión y hábitos de teclado; una guía de producto cuyos parámetros completos están en la referencia.
 locale: es
 source_locale: zh-cn
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

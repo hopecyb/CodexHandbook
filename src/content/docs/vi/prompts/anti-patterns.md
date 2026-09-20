@@ -3,7 +3,7 @@ title: Phản mẫu Prompt
 description: Các yêu cầu mơ hồ, vượt quyền và đòi suy luận ẩn cần tránh.
 locale: vi
 source_locale: zh-CN
-source_revision: 6aba346
+source_revision: 8e89a5a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

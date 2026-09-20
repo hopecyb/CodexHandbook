@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページはスタート段階の順序と読書入口のみを説明。サイト内リンク、章の構成、ガイド構造を再確認済み。本文は変わりやすい製品事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: ここから始める
 description: Codex とは何か、誰向けかを理解し、学習パスを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: b7997c5
+source_revision: 016d023
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 1
 ---
 
-# ここから始める
 
 このハンドブックは主に **AI 初心者** 向けに書かれています。ターミナル、Git、Agent の使用を前提としませんが、後で出会う能力は段階的に説明していきます。
 
@@ -83,10 +87,3 @@ sidebar:
 同じ知識は 1 つの権威ある本文だけを保持します。パスとケースは要約とリンクで重複を避けます。
 
 この章は主にスタート段階の順序と境界を説明し、いくつかの明らかなリスクも事前に示します。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページはスタート段階の順序と読書入口のみを説明。サイト内リンク、章の構成、ガイド構造を再確認済み。本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

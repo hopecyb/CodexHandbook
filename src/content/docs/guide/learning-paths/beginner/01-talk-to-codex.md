@@ -1,54 +1,36 @@
 ---
-title: 与 Codex 对话
-description: 练习用自然语言说明目标与限制。
-sidebar:
-  order: 10
+title: "与 Codex 对话"
+description: "准备同一份练习材料，先只读理解文件与未知项。"
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
+sidebar: {"order": 10}
+verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。", "evidence": [{"label": "作者文件操作记录", "href": "/downloads/first-project/validation/record.json"}]}
+prev: {"link": "/guide/learning-paths/beginner/", "label": "初学者路径与材料"}
+next: {"link": "/guide/learning-paths/beginner/02-work-with-files/", "label": "处理文件"}
 ---
 
-## 本步目标
+## 准备材料
 
-用完整句子说明 **你要什么** 和 **不要什么**，不要只丢几个词。
+[下载完整练习包](/downloads/first-project/first-project-1.0.0.zip)，解压后把 `starter` 完整复制为新的 `work` 文件夹，让 Codex 打开 `work`。其中只有 `facts.md`、`notice.md` 和 `private-note.md` 三个文件，均为合成教学资料。
 
-第一次和 Codex 对话时，很多人会把它当成搜索框，只丢几个关键词。这一步用来改掉这个习惯。
+保留原始 `starter`，不要把作者答案所在的 `references` 当作本步输入。暂时不需要 Git、终端或额外依赖；用编辑器打开文件即可。
 
-## 练习
-
-对练习项目说：
+## 发出第一条任务
 
 ```text
-请用三句话解释当前文件夹里有哪些文件，以及每个文件大概做什么。
-不要修改任何文件。
+只读当前目录的 facts.md、notice.md 和 private-note.md。
+用三句话说明各文件的用途，再指出活动信息中尚未确定的内容。
+不要新增、修改或删除文件，不联网，不发布或发送内容。
 ```
 
-## 这一步在练什么
+这次是明确的只读练习，因此写出读写边界。其他任务应按实际意图授权，不必将这句话机械附加到所有请求。
 
-这里练的是两件最基本的事，不是把 prompt 写得更漂亮：
+## 完成条件
 
-- 把目标说完整
-- 把边界说清楚
+回答正确区分事实依据、待编辑通知与保留便条，指出报名方式未知。三个文件与 starter 中的原件一致，没有新增或删除文件。
 
-哪怕只是只读任务，也最好明确写上“不要修改任何文件”。
+有疑问时直接打开文件核对，再看[作者文件说明](/downloads/first-project/references/folder-map.md)。措辞不同没关系，不能编造文件用途或报名方式。
 
-## 学到什么
-
-- 只读任务也要写清「不要修改」
-- 含糊请求会得到含糊答案
-
-## 常见误会
-
-### 1. 这种练习太简单，没必要做
-
-如果连只读任务都不说清楚，后面一上来做改动任务更容易跑偏。
-
-### 2. 只有改文件时才需要写限制
-
-只读、解释、总结这类任务，同样需要边界。
-
-下一步：[处理文件](/guide/learning-paths/beginner/02-work-with-files/) · 原理：[提示词基础](/prompts/basics/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 已按本手册当前已核验的提示词基础、入门安全与初学者路径章节交叉复核；本页只训练“用完整句子说清目标与边界”的稳定入门方法。  
-**最近核验：** 2026-07-26
+[练习包与准备说明](/guide/learning-paths/beginner/)

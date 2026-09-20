@@ -4,7 +4,7 @@ title: Exit Codes and Retries
 description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
 locale: en
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

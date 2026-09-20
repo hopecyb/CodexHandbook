@@ -1,21 +1,20 @@
 ---
-title: Codex ハンドブック
+title: Codex / AI Agent 実践ハンドブック
 head:
   - tag: title
-    content: Codex ハンドブック
-description: Codex ハンドブックは、製品の基礎、プロンプト、Skills、実践ケースを通じて、タスクの説明、実行プロセス、検証結果を再利用可能な方法にまとめます。
+    content: Codex / AI Agent 実践ハンドブック
+description: Codex を中心に、個人、クリエイター、開発者、チームが成功した協働を再利用・検証・引き継ぎできる方法にする AI Agent 実践手引きです。
 template: splash
 editUrl: false
 lastUpdated: false
 locale: ja
 source_locale: zh-CN
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Codex で <br /> アイデアを成果物に
-  tagline: 製品の理解、プロンプトの書き方、Skills のパッケージ化、実践ケースの振り返りまで。毎回のタスクを実行可能で検証でき、引き継ぎ可能な方法に整理します。
+  title: Codex で <br /> 成功した協働を再利用できる方法に
+  tagline: タスクの明確化から実行、検証、振り返り、引き継ぎまで。アイデアを安定した成果に変えるための手引きです。
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,90 +36,90 @@ hero:
         </div>
       </div>
   actions:
-    - text: ここから始める
+    - text: 確認できる週報を作る
       icon: right-arrow
+      link: /ja/cases/analyze-a-spreadsheet/
+    - text: ここから始める
+      variant: secondary
       link: /ja/guide/start-here/
-    - text: GitHub で見る
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="ハンドブックの位置づけ">
-	<p>Codex はコードを編集するだけのツールではありません。資料の理解、コンテンツの生成、プロトタイプの構築、ドキュメントの処理、変更のレビュー、反復作業の自動化などに役立ち、チーム協業における実行パートナーにもなります。</p>
-	<p>このハンドブックは 4 つのモジュールで構成されています。製品の理解、プロンプトの書き方、Skills のパッケージ化、実践ケースを通じた完全なフローの学習。基礎レベルに関わらず、次のステップが見つかります。</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>4 つのモジュール</p>
-		<h2 id="modules-heading">モジュールから始める</h2>
+		<p>タスクを選び、成果を持ち帰る</p>
+		<h2 id="tasks-heading">今日は何を完成させますか？</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/ja/guide/">
-			<strong>Codex ガイド</strong>
-			<span>クライアントのインストール、権限の理解、最初のタスクの完了。</span>
+	<div class="path-grid">
+		<a class="path-card" href="/ja/cases/analyze-a-spreadsheet/">
+			<strong>売上週報を作る</strong>
+			<span>教材一式あり · 参考スクリプトは実行・確認済み。46行の合成データで返金、重複排除、前期比較を練習し、週報と照合記録を完成させます。</span>
 		</a>
-		<a class="module-card" href="/ja/prompts/">
-			<strong>プロンプト</strong>
-			<span>目標、背景、制約、検証基準を明確に。コピー可能なテンプレート付き。</span>
+		<a class="path-card" href="/ja/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>バグを修正してテストを通す</strong>
+			<span>演習一式あり · 過去の検証記録を含みます。失敗するテストから始め、最小修正、回帰結果、レビュー記録を残します。</span>
 		</a>
-		<a class="module-card" href="/ja/skills/">
-			<strong>Skills</strong>
-			<span>安定した方法をパッケージ化し、Plugins、MCP、Hooks で拡張。</span>
-		</a>
-		<a class="module-card" href="/ja/cases/">
-			<strong>実践ケース</strong>
-			<span>バグ修正、ライティング、自動化など、実際のタスクから学ぶ。</span>
+		<a class="path-card" href="/ja/cases/write-an-article/">
+			<strong>記事を書く</strong>
+			<span>教材一式あり · 筆者が出典を確認済み。3つの合成資料で事実の引用、版の矛盾、改稿を練習し、記事と事実表を作ります。</span>
 		</a>
 	</div>
+	<p>参考週報の純額は <strong>¥4,644.75</strong>, 。返金と例外の説明を含みます。<a href="/downloads/sales-weekly-report/summary.md">参考週報を見る</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">教材一式をダウンロード</a>. 数値は教育用の合成データです。所要時間は30～45分の見込みで、読者による計時は未実施です。</p>
+	<p><a href="/ja/cases/">タスク別に事例と教材を見る</a> · <a href="/ja/guide/learning-paths/">役割別に学ぶ</a> · <a href="/ja/guide/reference/">リファレンスを調べる</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>パスを選ぶ</p>
-		<h2 id="paths-heading">目標に合わせて始める</h2>
+		<p>自分の学習経路を選ぶ</p>
+		<h2 id="paths-heading">目標から始める</h2>
 	</div>
 	<div class="path-grid">
 		<a class="path-card" href="/ja/guide/learning-paths/beginner/01-talk-to-codex/">
-			<strong>初心者</strong>
-			<span>Codex を理解し、最初のタスクを完了し、結果の確認と取り消しを学ぶ。</span>
+			<strong>初学者</strong>
+			<span>同じダウンロード教材でイベント案内を作り、誤りを確認し、コピーを復元します。プログラミング不要で、各段階に受け入れ基準があります。</span>
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/creator/">
 			<strong>クリエイター</strong>
-			<span>リサーチ、ライティング、画像、プレゼン、公開の入門ガイドとテンプレート。（さらなるステップは順次追加）</span>
+			<span>一組の資料から事実表、記事、編集可能な8枚のプレゼン資料を作り、再利用できるタスク指示を保存します。教材と段階別の確認を用意。</span>
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/developer/">
 			<strong>開発者</strong>
-			<span>コードベースの理解、要件の実装、テスト、レビュー、複雑なタスクの処理。（さらなるステップは順次追加）</span>
+			<span>買い物かごのバグを理解し、失敗・成功テストを保存し、最小修正を確認して引き継ぎます。記入できるテンプレート3種付き。</span>
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/team/">
 			<strong>チーム</strong>
-			<span>共有の説明、権限の境界、品質基準、チーム自動化。（さらなるステップは順次追加）</span>
+			<span>10営業日で小規模試行、抜き取り確認、復旧演習を行い、展開するか判断します。記入できるテンプレート6種付き。</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>能力マップ</p>
-		<h2 id="map-heading">段階的に身につける能力</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>問題から直接調べる</p><h2 id="lookup-heading">次に行うことを見つける</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/ja/guide/reference/troubleshooting/"><strong>インストール、ログイン、実行に失敗した</strong><span>症状から調査手順を探すか、ログ付きの復旧演習を進めます。</span></a>
+		<a class="path-card" href="/ja/guide/reference/"><strong>コマンド、権限、用語を確認する</strong><span>リファレンス一覧で適用範囲と出典を調べます。</span></a>
+		<a class="path-card" href="/ja/guide/verification/"><strong>成果が完了したか判断する</strong><span>事実、ファイル、テストの証拠を確認し、未確認事項を残します。</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> 目標が明確で境界がはっきりし、検証可能なタスクプロンプトを書く</li>
-		<li><span>02</span> ファイル、コンテキスト、ターミナル、ブラウザ、外部資料を管理する</li>
-		<li><span>03</span> Skills、Plugins、MCP、Hooks で Codex を拡張する</li>
-		<li><span>04</span> 長期タスク、マルチ Agent 協業、振り返り、引き継ぎを組織する</li>
-		<li><span>05</span> 個人プロジェクトとチームシーンで安全、検証、ガバナンスの仕組みを構築する</li>
-	</ul>
 </section>
 
-<AboutHandbook title="オープンソースでの共同開発">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>再利用できる資産を持ち帰る</p>
+		<h2 id="assets-heading">読み終えたら、すぐに始める</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/ja/prompts/templates/"><strong>タスク用プロンプトのテンプレート</strong><span>理解、調査、作成、修正、診断、自動化などのタスク別に再利用できます。</span></a>
+		<a class="path-card" href="/ja/skills/examples/"><strong>Skill の例</strong><span>読みやすい例から始め、入力、出力、境界、テストを確認します。</span></a>
+		<a class="path-card" href="/ja/cases/use-cases/case-study-template/"><strong>事例振り返りテンプレート</strong><span>目標、実行、人による確認、検証、失敗への対応、次の改善を記録します。</span></a>
+		<a class="path-card" href="/ja/guide/verification/"><strong>受け入れチェックリスト</strong><span>「できたように見える」を再確認、取り消し、引き継ぎができる成果に変えます。</span></a>
+	</div>
+</section>
 
-ハンドブックは簡体中国語をソース言語とし、繁体中国語、英語、フランス語、日本語、韓国語などのバージョンを順次拡充していきます。コンテンツには状態、検証日、対象製品が記載されており、読者がそのまま実行できる内容と、再確認が必要な内容を区別できます。
+<AboutHandbook title="出典、更新、共同作業">
 
-[学習パスを見る](/ja/guide/learning-paths/)
+この手引きはオープンソースの貢献者が維持し、簡体字中国語を原文としています。製品説明、筆者作成の教材、実際の実行記録は区別して表示します。スクリプトの成功だけでモデルの性能や読者の完走は証明できません。各ページの記録で検証範囲を確認してください。
+
+[内容の更新](/ja/guide/updates/) · [バージョンと検証方針](/ja/guide/start-here/handbook-version-policy/) · [貢献する](/ja/guide/contributing/)
 
 </AboutHandbook>

@@ -3,7 +3,7 @@ title: Refactorisation de site de docs avec revue
 description: "Cas : mise à jour en lot des liens et chapitres dans un projet Astro/Starlight — petits diffs, validation de build."
 locale: fr
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

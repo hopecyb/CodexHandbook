@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照当前官方四类入口；本页只保留新手速选和去重导航，详细能力集中到主选择页与功能对照页维护。"
+  checkedAt: "2026-08-26"
 title: 选择 Codex 客户端
 description: 用最短路径决定从桌面 App、CLI、IDE 还是 Cloud 开始。
 sidebar:
@@ -24,13 +29,3 @@ sidebar:
 - [安装 CLI](/guide/getting-started/install-cli/)
 - [安装 IDE 集成](/guide/getting-started/install-ide-extension/)
 - [了解 Codex Cloud](/guide/web-and-cloud/)
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照当前官方四类入口；本页只保留新手速选和去重导航，详细能力集中到主选择页与功能对照页维护。
-
-**最近核验：** 2026-08-26

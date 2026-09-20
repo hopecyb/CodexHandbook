@@ -1,0 +1,11 @@
+{
+  "cases/sales/input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+  "cases/sales/input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80",
+  "cases/bug/input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+  "cases/bug/input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+  "cases/bug/input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958",
+  "cases/article/input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+  "cases/article/input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+  "cases/article/input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+  "cases/article/input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+}

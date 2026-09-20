@@ -1,48 +1,40 @@
 ---
 title: "Tool Use (Tool-Nutzung)"
-date: 2025-03-11
-year: 2025
-summary: "Tool Use lässt Modelle Werkzeuge wie Suche, Codeausführung, Browser und Datenbanken auswählen und verwenden."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [tool-use, tools, agent, orchestration, function-calling]
-authored_by: ai-assisted
+description: "Zur Tool-Nutzung gehören die Auswahl des Tools, das Erstellen der Argumente, die Ausführung, das Lesen des Ergebnisses und die Entscheidung über den nächsten Schritt. Ein erfolgreicher Aufruf bedeutet nicht, dass die ganze Aufgabe erledigt ist; Ausführungsfehler und durch fachliche Prüfungen entdeckte Probleme sind zu unterscheiden."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die unten genannten Ereignis- und Projektangaben wurden anhand der Primärquelle geprüft. Die Lernempfehlungen sind eine Einschätzung des Autors und kein praktischer Produkttest."
+  evidence:
+    - label: "Ankündigung neuer Tools für Agenten"
+      href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 902c66c
+source_revision: efd508a
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Tool Use (Tool-Nutzung)
+## Überprüfbares Ereignis und Geltungsbereich
 
-- Wichtige Daten:
-  - Engineering inflection: 2025-03-11 (Responses API and built-in tools)
-- Offizielle Referenzen:
-  - https://openai.com/index/new-tools-for-building-agents/
-  - https://platform.openai.com/docs/guides/tools
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+**Datum: 11.03.2025 · Art: Produktveröffentlichung.** OpenAI veröffentlichte neue Tools für Agenten, darunter die Responses API, integrierte Tools und das Agents SDK. Die Ankündigung bezeichnet einen Produktmeilenstein eines bestimmten Anbieters, nicht die Erfindung der Tool-Nutzung durch Modelle.
 
-## Was Es Ist
+Quelle: [Ankündigung neuer Tools für Agenten](https://openai.com/index/new-tools-for-building-agents/). Überprüft am 18.09.2026; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-Tool Use lässt Modelle Werkzeuge wie Suche, Codeausführung, Browser und Datenbanken auswählen und verwenden.
+## Welches Problem wird gelöst?
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+Zur Tool-Nutzung gehören die Auswahl des Tools, das Erstellen der Argumente, die Ausführung, das Lesen des Ergebnisses und die Entscheidung über den nächsten Schritt. Ein erfolgreicher Aufruf bedeutet nicht, dass die ganze Aufgabe erledigt ist; Ausführungsfehler und durch fachliche Prüfungen entdeckte Probleme sind zu unterscheiden.
 
-Es bewegt Systeme vom einzelnen Funktionsaufruf zur Orchestrierung mehrerer Fähigkeiten.
+## Lernempfehlungen und Grenzen
 
-## In Welcher Phase Es Jetzt Ist
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-Aktuell ordne ich diesen Punkt als `emerging` ein.
+Überlassen Sie wiederholbare Prüfungen klar definierten Tools und bewahren Sie Exitcodes, Ausgaben und Wiederherstellungsverfahren auf. Weisen Sie zuerst nach, dass die manuellen Schritte funktionieren; erst danach sollten Sie Zeitplanung und Benachrichtigungen erwägen.
 
-Es wird in APIs und Agent-Frameworks zum Mainstream.
+## Praktische Übung
 
-## Was Es Ersetzen Könnte
+[Fünf Übungen zur Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/): Stellen Sie mehrere Fehler nach, lesen Sie die Vorher-Protokolle, ändern Sie nur eine Variable und prüfen Sie dann das Nachher-Ergebnis. Die Übung verwendet lokale Skripte und erfordert keinen Aufruf der in der Ankündigung genannten APIs.
 
-Es ersetzt manuelle Abläufe aus Suchen, Kopieren, Ausführen und Prüfen.
-
-## Was Es Ersetzen Könnte
-
-Es geht in Harnesses und zustandsbehaftete Agent-Runtimes über.
+[Zurück zur Roadmap und den Datumsregeln](/de/ai-roadmap/)

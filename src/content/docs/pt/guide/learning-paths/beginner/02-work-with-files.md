@@ -1,61 +1,51 @@
 ---
-title: Trabalhar com ficheiros
-description: Faz o Codex ler e escrever ficheiros dentro de um âmbito claro.
-locale: pt
-source_locale: zh-CN
-source_revision: 7920b62
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Trabalhar com ficheiros"
+description: "Adicione uma linha apenas ao ficheiro indicado e observe a alteração real."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 20
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores."
+  evidence:
+    - label: "Registo das operações com ficheiros do autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/pt/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Conversar com o Codex"
+next:
+  link: "/pt/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Dar tarefas claras"
+locale: pt
+source_locale: zh-CN
+source_revision: "ec5c2d3"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Objetivo deste passo
+## Pré-requisitos
 
-Indica o nome do ficheiro e conclui uma edição controlada.
+Já concluiu o primeiro passo e `work` ainda contém os três ficheiros originais. Guarde `starter` fora do diretório de trabalho como referência inicial.
 
-A partir daqui, a Tarefa passa de «só conversar» a «deixar que mexa em ficheiros»; o foco deixa de ser só o objetivo e passa a controlar o âmbito.
-
-## Exercício
+## Fazer uma edição verificável
 
 ```text
-Edita apenas hello.md: no início do ficheiro, acrescenta uma linha de comentário com a data de hoje.
-Não alteres outros ficheiros nem executes comandos.
-No fim, lista as linhas que alteraste.
+Adiciona o comentário de estado seguinte apenas na primeira linha de notice.md:
+<!-- 状态：练习草稿，未发布 -->
+Mantém o texto original caráter por caráter. Não alteres outros ficheiros nem cries ficheiros novos.
+No fim, indica onde fizeste a alteração. Não publiques nem envies notificações.
 ```
 
-Verifica o Diff antes de aceitar. Relacionado: [Contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
+Compare o ficheiro linha a linha com o original na vista de diferenças do cliente atual ou num editor. Aqui basta uma pequena alteração; não é preciso acrescentar um processo de «planear primeiro e confirmar cada passo».
 
-## Foco do exercício
+## Condições de conclusão
 
-Três pontos principais:
+Só notice.md mudou, com exatamente uma linha de comentário acrescentada; os outros dois ficheiros permanecem inalterados. Compare com o [resultado do segundo passo](/downloads/first-project/references/step-2-notice.md). O comentário pode ficar oculto na apresentação de Markdown; examine o ficheiro em texto bruto.
 
-- Indicar que ficheiro alterar
-- Indicar que ações extra não fazer
-- Exigir que descreva as alterações no fim
+Se o modelo alterar o texto, restaure notice.md a partir do original em `starter` e repita este passo. Restaure apenas este ficheiro do exercício, sem reiniciar o projeto inteiro. Veja [Desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/).
 
-Juntos, isto é a capacidade básica de «edição controlada».
-
-## Mal-entendidos frequentes
-
-### 1. Alterar um ficheiro pequeno não tem sentido
-
-Quanto menor o âmbito, mais fácil ver se ultrapassou os limites.
-
-### 2. Se escrevi o nome do ficheiro, não toca noutro sítio
-
-Não podes assumir isso por completo.
-
-Por isso a seguir também precisas de verificar o Diff.
-
-Na primeira vez que mexes em ficheiros, o importante não é alterar muito — é ter o limite claro e fácil de verificar.
-
-Seguinte: [Dar Tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com Contexto de ficheiros e pastas, verificação de resultados e percurso de principiante; o conteúdo limita-se ao método estável de «uma edição controlada num âmbito claro».  
-**Última verificação:** 2026-07-26
+[Pacote de exercícios e preparação](/pt/guide/learning-paths/beginner/)

@@ -1,15 +1,16 @@
 ---
 title: Codex-Leitfaden
+prev: false
+next:
+  link: /de/guide/start-here/
+  label: Hier beginnen
 description: "Codex kennenlernen, Client wählen, erste Aufgabe abschließen und Berechtigungen, Kontext sowie Überprüfung verstehen."
 locale: de
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Codex-Leitfaden
 
 Hier verstehst du, was Codex ist, wofür es sich eignet und wie du von der ersten Nutzung zu einem stabilen Workflow kommst.
 
@@ -23,6 +24,12 @@ Du musst nicht zuerst alle Begriffe, Produkte und Workflows kennen. Finde deine 
 - Welchen Client zuerst wählen?
 - Welche Fähigkeit nach der ersten Aufgabe als Nächstes?
 - Bei Problemen mit Berechtigung, Kontext, Überprüfung: zurück zu welchem Kapitel?
+
+## Materialien zum Mitnehmen
+
+- [Sicherheitscheckliste für Einsteiger](/de/guide/getting-started/beginner-safety-checklist/)
+- [Methode zur Client-Wahl](/de/guide/choose-your-client/)
+- [Ergebnisse prüfen und Fertig-Kriterien](/de/guide/verification/)
 
 ## Empfohlene Reihenfolge
 

@@ -3,7 +3,7 @@ title: Brainstorm antes de construir
 description: Antes de escrever código ou textos longos, use exploração estruturada para convergir na solução — menos retrabalho.
 locale: pt
 source_locale: zh-CN
-source_revision: 9bf8989
+source_revision: 9c5e679
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: CLI をインストールする
 description: Codex CLI をインストールし、バージョン、ログイン状態、最初のリポジトリタスクを確認します。
 locale: ja
 source_locale: zh-CN
-source_revision: b12f7d0
+source_revision: 564bd75
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

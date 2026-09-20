@@ -3,7 +3,7 @@ title: Contexto sensível
 description: Chaves, privacidade e material que não se partilha.
 locale: pt
 source_locale: zh-CN
-source_revision: 909b1ff
+source_revision: a83db07
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

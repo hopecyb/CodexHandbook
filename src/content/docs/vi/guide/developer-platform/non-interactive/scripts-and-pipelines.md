@@ -3,7 +3,7 @@ title: Script và pipeline
 description: "Điều phối `codex exec` trong shell, Makefile và GitHub Actions — lặp lại được, kiểm toán được."
 locale: vi
 source_locale: zh-CN
-source_revision: ce1e940
+source_revision: 07aeb4f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

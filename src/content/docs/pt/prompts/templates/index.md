@@ -1,15 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só explica como usar templates; links e classificação foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Templates de Prompts
 description: Esqueletos reutilizáveis por tipo de tarefa — entender, criar, alterar, diagnosticar, rever, pesquisar, automatizar.
 locale: pt
 source_locale: zh-CN
-source_revision: 3dbc237
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: fae2ed3
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Templates de Prompts
 
 Ao ver «template», duas reações são comuns:
 
@@ -56,6 +59,27 @@ Alguns Prompts bastam uma vez; outros repetem-se e devem ser estabilizados.
 
 Template serve para tarefas iniciadas por pessoas; Skill para processos repetidos; Hook para verificações automáticas; MCP para acesso a sistemas externos.
 
+## Decisão rápida: que forma esta tarefa deve ter?
+
+Faça quatro perguntas:
+
+1. Será realizada apenas uma vez?
+2. Os passos serão quase iguais na próxima vez?
+3. Há formato de saída ou lista de verificação fixos?
+4. Precisa de sistema externo, script ou verificação automática?
+
+| Situação | Forma recomendada |
+|---|---|
+| Trabalho único que ainda exige discussão | Prompt completo |
+| Trabalho recorrente ainda em ajuste | Template |
+| Processo estável e saída definida | Skill |
+| Um papel independente precisa investigar a fundo | Subagente |
+| Precisa ler um sistema externo | MCP, de preferência primeiro só de leitura |
+| Uma etapa exige sempre uma verificação | Hook |
+| É preciso distribuir um pacote uniforme à equipe | Plugin |
+
+Um prompt mais longo não é necessariamente melhor. Vale reutilizar tarefas já verificadas repetidamente, com limites e critérios de aceitação claros.
+
 ## Ideias erradas habituais
 
 ### 1. Template = copiar tal e qual
@@ -77,10 +101,3 @@ Para iniciantes, «suficiente sem inchado» basta.
 Escolha primeiro o tipo certo; depois adapte-o à sua tarefa — não trate o template em si como a tarefa.
 
 Princípios de escrita: [Fundamentos de Prompts](/pt/prompts/basics/) e [Anatomia de uma tarefa](/pt/prompts/task-anatomy/).
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só explica como usar templates; links e classificação foram revistos; o corpo não depende de factos voláteis do produto.

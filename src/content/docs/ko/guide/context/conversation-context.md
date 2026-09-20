@@ -3,7 +3,7 @@ title: 대화 컨텍스트
 description: 같은 스레드에서 정보가 쌓이고 무효화되는 방식.
 locale: ko
 source_locale: zh-CN
-source_revision: 5c0569d
+source_revision: 3968049
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

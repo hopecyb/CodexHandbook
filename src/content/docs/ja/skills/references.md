@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "現在の Codex ランタイムはスキル本文と関連資料の必要に応じた読み込みを明示。本ページは `references/` の安定したドキュメント整理原則。"
+  checkedAt: "2026-07-26"
 title: references/ ディレクトリ
 description: Skill 内で長い参考ドキュメントを整理し、段階的開示を実現する。
 locale: ja
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 「ファイルを増やす」だけでなく、**すぐには読まなくてよいが特定ステップで必要**な資料を分け、必要時に読みます。
 
-# references/ ディレクトリ
 
 `SKILL.md` が長くなったら、詳細規約・API 説明・チェックリストを `references/` に移し、手順から必要に応じて参照します。
 
@@ -73,10 +77,3 @@ my-skill/
 - 主フローは `SKILL.md`、参考は必要時読み込み
 - 1 ファイル 1 トピックで保守しやすく
 - references 内で SKILL.md の手順を繰り返さない
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現在の Codex ランタイムはスキル本文と関連資料の必要に応じた読み込みを明示。本ページは `references/` の安定したドキュメント整理原則。

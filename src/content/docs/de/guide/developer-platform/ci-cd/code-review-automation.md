@@ -3,7 +3,7 @@ title: Code-Review-Automatisierung
 description: 'Codex-Review in CI- oder PR-Abläufe einbinden — Prompt, Berechtigungen und menschliche Gates.'
 locale: de
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

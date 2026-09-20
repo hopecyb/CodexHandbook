@@ -3,7 +3,7 @@ title: IDE-Fehlerbehebung
 description: Probleme beim Laden der Erweiterung, Kontext und Synchronisation.
 locale: de
 source_locale: zh-CN
-source_revision: 438b4f5
+source_revision: ebb21de
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite ist interne Navigation und Methodenüberblick; der Rahmen „Aufgabe, Dateimaterial, Projektregeln und Gesprächshistorie bilden gemeinsam den Kontext“ wurde mit den aktuellen Kontext- und Dateiverarbeitungs-Kapiteln Punkt für Punkt abgeglichen und hängt nicht von schnell veränderlichen UI-Details ab."
+  checkedAt: "2026-07-26"
 title: Kontext und Dateien
 description: "Projekt-, Datei- und Gesprächskontext sowie gängige Eingabetypen verwalten."
 locale: de
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 15
 ---
 
-# Kontext und Dateien
 
 Kontext ist die Information, die Codex in diesem Moment sehen, referenzieren und für Aktionen nutzen kann.
 
@@ -81,10 +85,3 @@ Nicht alles auf einmal. Diese Reihenfolge hilft:
 3. Je nach Materialtyp die passende Datei-Kapitelseite
 
 Kontext ist der Informationshaufen, den Codex beim Urteilen griffbereit hat; richtig gegeben, werden Ergebnisse leichter richtig.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite ist interne Navigation und Methodenüberblick; der Rahmen „Aufgabe, Dateimaterial, Projektregeln und Gesprächshistorie bilden gemeinsam den Kontext“ wurde mit den aktuellen Kontext- und Dateiverarbeitungs-Kapiteln Punkt für Punkt abgeglichen und hängt nicht von schnell veränderlichen UI-Details ab.  
-**Zuletzt überprüft:** 2026-07-26

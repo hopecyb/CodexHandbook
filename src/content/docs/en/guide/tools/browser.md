@@ -3,7 +3,7 @@ title: Browser tool
 description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

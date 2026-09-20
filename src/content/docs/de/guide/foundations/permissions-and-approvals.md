@@ -3,7 +3,7 @@ title: Berechtigungen und Freigaben
 description: "Erklärt, wann Codex deine Zustimmung für Operationen braucht."
 locale: de
 source_locale: zh-CN
-source_revision: 0870303
+source_revision: 5b1b5f8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

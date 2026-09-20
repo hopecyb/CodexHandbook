@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 title: 权限矩阵
 description: 区分本地 Permission Profile、旧沙箱与 Cloud 网络策略。
 sidebar:
@@ -84,11 +88,3 @@ Permission Profiles 仍处于 Beta，升级后应重新运行这套验证。
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**状态：** verified
-
-**适用产品：** App、CLI、IDE、Cloud
-
-**最近核验：** 2026-08-26

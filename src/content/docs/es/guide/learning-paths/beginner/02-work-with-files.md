@@ -1,61 +1,51 @@
 ---
-title: Trabajar con archivos
-description: Haz que Codex lea y escriba archivos dentro de un alcance explícito.
-locale: es
-source_locale: zh-CN
-source_revision: 7920b62
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Trabajar con archivos"
+description: "Añade una sola línea al archivo indicado y comprueba el cambio real."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 20
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Ya están completos los materiales fijos y el resultado de referencia del autor. Se ejecutó el script de operaciones con archivos en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo ni con lectores."
+  evidence:
+    - label: "Registro de operaciones con archivos del autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/es/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Hablar con Codex"
+next:
+  link: "/es/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Dar tareas claras"
+locale: es
+source_locale: zh-CN
+source_revision: "ec5c2d3"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Objetivo de este paso
+## Requisitos previos
 
-Indica el nombre del archivo y completa una edición controlada.
+Has completado el primer paso y `work` aún contiene los tres archivos originales. Conserva `starter` fuera del directorio de trabajo como referencia inicial.
 
-A partir de aquí, la Tarea pasa de «solo chat» a «hacer que mueva archivos de verdad»; el foco pasa de explicar el objetivo a controlar el alcance.
-
-## Ejercicio
+## Hacer una edición verificable
 
 ```text
-Edita solo hello.md: añade al inicio una línea de comentario con la fecha de hoy.
-No cambies otros archivos ni ejecutes comandos.
-Al terminar, enumera las líneas que modificaste.
+Añade el siguiente comentario de estado solo en la primera línea de notice.md:
+<!-- 状态：练习草稿，未发布 -->
+Conserva el texto original carácter por carácter. No modifiques otros archivos ni crees archivos nuevos.
+Al terminar, indica dónde hiciste el cambio. No publiques ni envíes notificaciones.
 ```
 
-Revisa el diff antes de aceptar. Relacionado: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
+Compara el archivo línea por línea con el original en la vista de diferencias de tu cliente o en un editor. Aquí solo se pide un cambio pequeño; no hace falta añadir un proceso de «planificar primero y confirmar cada paso».
 
-## Puntos clave del ejercicio
+## Criterios de finalización
 
-Aquí importan tres cosas:
+Solo ha cambiado notice.md y se ha añadido exactamente una línea de comentario; los otros dos archivos siguen iguales. Compáralo con el [resultado del segundo paso](/downloads/first-project/references/step-2-notice.md). El comentario puede quedar oculto al renderizar Markdown, así que examina el archivo sin renderizar.
 
-- Indicar qué archivo se puede cambiar
-- Indicar qué acciones extra no hacer
-- Pedir que explique los cambios al terminar
+Si el modelo cambia el texto, restaura notice.md desde el original en `starter` y repite este paso. Restaura solo este archivo del ejercicio; no reinicies todo el proyecto. Consulta [Deshacer y recuperar](/es/guide/getting-started/undo-and-recover/).
 
-Juntas, son la capacidad básica de «edición controlada».
-
-## Malentendidos frecuentes
-
-### 1. Cambiar un archivo pequeño no tiene sentido
-
-Cuanto menor es el alcance, más fácil ver si se ha salido de los límites.
-
-### 2. Si escribes el nombre del archivo, seguro que no toca nada más
-
-Tampoco puedes darlo por sentado.
-
-Por eso hay que combinarlo con la revisión del diff.
-
-La primera vez que se mueven archivos, lo importante no es cuánto se cambia, sino que el límite del cambio sea claro y fácil de comprobar.
-
-Siguiente: [Dar Tareas claras](/es/guide/learning-paths/beginner/03-give-clear-tasks/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con los capítulos ya verificados de contexto de archivos y carpetas, revisión de resultados y ruta para principiantes; el contenido se limita al método estable de «una edición controlada en un alcance explícito».  
-**Última verificación:** 2026-07-26
+[Paquete del ejercicio y preparación](/es/guide/learning-paths/beginner/)

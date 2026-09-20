@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Los use cases actuales de Codex en OpenAI Developers siguen incluyendo escenarios de automatización repetible como «Automate bug triage» y «Turn feedback into actions». Esta página define el informe diario como «Markdown de formato fijo + código de salida claro + script o Skill reutilizable» — un patrón de flujo estable, no ligado a una integración concreta."
+  checkedAt: "2026-07-26"
 title: Automatizar un informe diario
 description: Convierte el resumen repetitivo en un script o Skill reutilizable.
 locale: es
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Automatizar un informe diario
 
 ## Metadatos
 
@@ -42,10 +50,3 @@ Restricciones: git en solo lectura; no hacer push; proporcionar scripts/generate
 
 - [Ejemplo de Skill de automatización](/es/skills/examples/automation-skill/)
 - [Tareas programadas](/es/skills/automations/scheduled-tasks/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Los use cases actuales de Codex en OpenAI Developers siguen incluyendo escenarios de automatización repetible como «Automate bug triage» y «Turn feedback into actions». Esta página define el informe diario como «Markdown de formato fijo + código de salida claro + script o Skill reutilizable» — un patrón de flujo estable, no ligado a una integración concreta.

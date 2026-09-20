@@ -3,7 +3,7 @@ title: Resolución de problemas del IDE
 description: Problemas de carga de la extensión, Contexto y sincronización.
 locale: es
 source_locale: zh-CN
-source_revision: 438b4f5
+source_revision: ebb21de
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

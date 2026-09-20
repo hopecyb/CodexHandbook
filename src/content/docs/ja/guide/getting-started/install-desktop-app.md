@@ -3,7 +3,7 @@ title: デスクトップ App をインストールする
 description: ChatGPT デスクトップ App をインストールし、その中で Codex ワークスペースを開きます。
 locale: ja
 source_locale: zh-CN
-source_revision: 89d6303
+source_revision: 974842f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

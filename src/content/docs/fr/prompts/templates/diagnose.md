@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de diagnostic ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de diagnostic
 description: Trouver la cause racine avant de discuter du correctif.
 locale: fr
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de diagnostic
 
 Piège : dire « diagnostique d'abord » tout en supposant qu'il va corriger tout de suite.
 
@@ -50,10 +54,3 @@ Le modèle impose d'expliquer **pourquoi** ça casse avant **comment** changer.
 
 - [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/)
 - [Cas : corriger un bug](/fr/cases/fix-a-bug/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de diagnostic ; liens et structure revus ; pas de faits volatils produit.

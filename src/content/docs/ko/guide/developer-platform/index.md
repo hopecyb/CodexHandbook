@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "본 저장소의 현재 developer-platform 장 구조, 내비 입구, 관련 CLI/CI/SDK 설명 페이지를 교차 확인했습니다. 이 페이지는 “개발자 플랫폼이 엔지니어링 통합을 담당한다”는 안정된 역할 분담만 설명하며, 구체 파라미터나 런타임 동작을 단정하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 개발자 플랫폼
 description: SDK, 비대화형 CLI, CI/CD로 Codex를 엔지니어링 체계에 임베드합니다——통합 개발자를 위한 안내입니다.
 sidebar:
   order: 50
 locale: ko
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 **개발자 플랫폼**은 Codex를 파이프라인에 **제품화**하려는 사람을 위한 장입니다. 커스텀 앱, 일괄 리뷰, 릴리스 게이트, 내부 개발자 포털이 여기에 해당합니다. 일상적으로 “프롬프트를 써서 버그를 고친다”는 흐름은 여전히 [시작하기](/ko/guide/getting-started/)부터 보시면 됩니다.
@@ -40,13 +44,15 @@ reviewed_at: 2026-08-26
 
 ```text
 개발자 시스템(CI / 내부 플랫폼 / SaaS)
-        ↓ API 또는 CLI
-Codex(모델 + 도구 + 정책)
+        ↓ 로컬 SDK / CLI 또는 App Server 클라이언트
+제어된 실행 환경(모델 호출 + 도구 + 정책)
         ↓
 Git 제공자 / 이슈 / 아티팩트 저장소
 ```
 
 ## 설계 원칙
+
+Codex SDK는 로컬 Agent를 실행합니다. 직접 만드는 원격 runner, 큐, HTTP 콜백은 통합 시스템의 설계 요소입니다. 이 그림을 보고 통일된 호스팅 클라우드 작업 API가 있다고 추론하지 마세요. 근거와 최소 호출 예시는 [SDK 개요](/ko/guide/developer-platform/sdk-overview/)를 참고하세요.
 
 1. **멱등과 재시도 가능**：같은 PR을 여러 번 리뷰해도 결과를 비교할 수 있어야 합니다
 2. **최소 권한**：CI token은 읽기 전용이거나 저장소를 한정합니다
@@ -85,9 +91,3 @@ Git 제공자 / 이슈 / 아티팩트 저장소
 
 ## 참고 출처
 - OpenAI Codex API / SDK 공식 문서
----
-
-**상태：** verified  
-**적용 제품：** API / CLI / Cloud  
-**검증 근거：** 본 저장소의 현재 developer-platform 장 구조, 내비 입구, 관련 CLI/CI/SDK 설명 페이지를 교차 확인했습니다. 이 페이지는 “개발자 플랫폼이 엔지니어링 통합을 담당한다”는 안정된 역할 분담만 설명하며, 구체 파라미터나 런타임 동작을 단정하지 않습니다.  
-**최근 검증：** 2026-07-26

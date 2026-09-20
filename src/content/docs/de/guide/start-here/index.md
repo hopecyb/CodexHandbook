@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Startreihenfolge und Lese-Einstiege; interne Links, Kapitel-Schichtung und Führungsstruktur wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Hier starten
 description: "Verstehe, was Codex ist, für wen es geeignet ist, und wähle deinen Lernpfad."
 locale: de
 source_locale: zh-CN
-source_revision: b7997c5
+source_revision: 016d023
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 1
 ---
 
-# Hier starten
 
 Dieses Handbook richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht voraus, dass du Terminal, Git oder Agent beherrschst — die Fähigkeiten, die du später brauchst, werden Schritt für Schritt erklärt.
 
@@ -83,10 +87,3 @@ Wenn du direkt loslegen willst, schau dir die [Route für die ersten 30 Minuten]
 Jedes Wissen hat genau eine autoritative Seite; Pfade und Fallbeispiele nutzen Zusammenfassungen mit Links, um Doppelungen zu vermeiden.
 
 Dieses Kapitel erklärt vor allem Reihenfolge und Grenzen in der Startphase und benennt früh ein paar offensichtliche Risiken.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur Startreihenfolge und Lese-Einstiege; interne Links, Kapitel-Schichtung und Führungsstruktur wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

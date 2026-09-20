@@ -3,7 +3,7 @@ title: Auswahl und geöffnete Dateien
 description: Mit ausgewähltem Code und geöffneten Dateien den IDE-Aufgabenrahmen präzise setzen.
 locale: de
 source_locale: zh-CN
-source_revision: 032d53f
+source_revision: b6b264f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,80 +1,74 @@
 ---
-title: Criar Pull Request
-description: Da Tarefa Cloud a um PR revível — descrição, alcance e portão humano de merge.
+title: Criar um Pull Request
+description: Entregue o resultado de uma tarefa Cloud como PR verificável e revisto por pessoas, sem fusão automática.
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: 70996a7
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "39371d4"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
 ---
 
+Depois de uma tarefa Cloud terminar, examine primeiro o resumo e o diff. Crie um Pull Request apenas quando o resultado cumprir o âmbito e os critérios de verificação; caso contrário, continue a corrigi-lo na mesma conversa.
 
-Inspect the summary and diff after a Cloud task. Create a pull request only when the result satisfies scope and verification criteria; otherwise, continue correcting it in the same chat.
-
-## From task to PR
+## Da tarefa ao PR
 
 ```text
-Select environment and starting branch
-  → run the Cloud task
-  → review summary, logs, and diff
-  → follow up if needed
+Escolher o ambiente e a branch de partida
+  → executar a tarefa Cloud
+  → rever o resumo, os registos e o diff
+  → fazer seguimento, se necessário
   → Create Pull Request
-  → CI + supplementary Codex review + human review
-  → a person decides whether to merge
+  → CI + revisão complementar do Codex + revisão humana
+  → uma pessoa decide se faz o merge
 ```
 
-Tell Codex to “create a PR, do not merge,” but do not rely on a natural-language constraint alone. Enable branch protection and required checks in the repository.
+Indique no prompt «criar um PR, mas não fazer merge». Contudo, não dependa apenas de uma instrução em linguagem natural; ative também a proteção de branches e os required checks no repositório.
 
-## Reusable task template
+## Modelo de tarefa reutilizável
 
 ```text
-Goal: Fix the sign-in timeout regression in issue #42.
-Starting point: main.
-Scope: packages/auth/** and the corresponding tests only.
-Do not: upgrade dependencies, change the public API, or write directly to main.
-Verification: pnpm test --filter auth; pnpm typecheck.
-Deliverable: Create a PR to main, but do not merge it.
-The PR description must include the root cause, change summary, test commands
-and results, risks, and rollback approach.
+Objetivo: corrigir a regressão de timeout no início de sessão do issue #42.
+Ponto de partida: main.
+Âmbito: apenas packages/auth/** e os testes correspondentes.
+Proibido: atualizar dependências, alterar a API pública ou escrever diretamente em main.
+Verificação: pnpm test --filter auth; pnpm typecheck.
+Entrega: criar um PR para main, mas não fazer merge.
+A descrição do PR deve incluir a causa raiz, um resumo das alterações,
+os comandos e resultados dos testes, os riscos e a forma de reverter.
 ```
 
-## Before creation
+## Verificações antes de criar
 
-- [ ] Starting commit is correct and no required local input remains unpushed.
-- [ ] Diff contains only the task scope.
-- [ ] The new branch name is recognizable and does not overwrite another person's work.
-- [ ] Tests actually ran and failures are not hidden by the summary.
-- [ ] No credentials, temporary logs, caches, or unrelated formatting.
-- [ ] A large change is split into independently reviewable PRs.
+- [ ] O commit de partida está correto e não faltam entradas locais ainda não enviadas.
+- [ ] O diff contém apenas alterações do âmbito da tarefa.
+- [ ] O nome da nova branch é reconhecível e não substitui trabalho de outra pessoa.
+- [ ] Os testes foram realmente executados e as falhas não ficaram ocultas no resumo.
+- [ ] Não há credenciais, registos temporários, caches ou formatação sem relação.
+- [ ] Uma alteração grande foi dividida em PRs que possam ser revistos de forma independente.
 
-## Minimum PR description
+## A descrição do PR deve responder, pelo menos
 
-1. Why the change is required.
-2. What actually changed.
-3. How it was verified, including commands and results.
-4. Risks, limitations, and rollback.
-5. What was explicitly not done.
+1. Porque é necessária a alteração?
+2. O que foi realmente alterado?
+3. Como foi verificada, incluindo comandos e resultados?
+4. Quais são os riscos, limitações e método de reversão?
+5. O que ficou explicitamente por fazer?
 
-Add real screenshots for UI changes, reproduction steps for behavior changes, and compatibility and rollback details for migrations.
+Para alterações de UI, acrescente capturas de ecrã reais; para alterações de comportamento, passos de reprodução; para migrações, explicações de compatibilidade e reversão.
 
-## After creation
+## Depois de criar
 
-Wait for required checks, request supplementary review with `@codex review`, and have a person with context inspect the main diff. Return specific comments to the same PR branch; do not create an unrelated duplicate branch.
+Aguarde os required checks, peça uma revisão complementar com `@codex review` e faça com que uma pessoa conhecedora do contexto examine o diff principal. Se forem necessárias correções, aplique os comentários concretos na mesma branch do PR; não abra uma branch sem relação e produza dois resultados paralelos.
 
-Opening and merging a PR are separate permission boundaries. Cloud being able to create a PR does not justify bypassing the team's merge policy.
+Criar e fundir um PR são dois limites de permissão distintos. O facto de o Cloud conseguir criar um PR não justifica contornar a política de merge da equipa.
 
-## Official sources
+## Fontes oficiais
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)

@@ -3,7 +3,7 @@ title: Token, Contexto y Compactación
 description: Entiende la ventana de Contexto, su ocupación y la Compactación.
 locale: es
 source_locale: zh-CN
-source_revision: b33848c
+source_revision: da31a01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

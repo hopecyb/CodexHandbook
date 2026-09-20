@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明信息不足时的提问与纠偏原则；概念、提示句式和处理顺序已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 处理不确定性
 description: 信息不足时要求提问而非臆造。
 sidebar:
@@ -83,10 +88,3 @@ sidebar:
 ```
 
 更麻烦的情况，是把猜测当成事实继续往下推进。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明信息不足时的提问与纠偏原则；概念、提示句式和处理顺序已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

@@ -4,7 +4,7 @@ title: CLI Command Reference
 description: Common Codex CLI subcommands and flags—learning index, not a substitute for official docs.
 locale: en
 source_locale: zh-CN
-source_revision: bdc537d
+source_revision: 6091bcc
 translation_status: reviewed
 translated_at: 2026-08-26
 ---

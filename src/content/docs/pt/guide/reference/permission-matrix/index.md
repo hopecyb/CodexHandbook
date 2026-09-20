@@ -1,42 +1,44 @@
 ---
-title: Matriz de Permissões
-description: Tabela conceptual de tipos de operação Codex, pontos de Aprovação e diferenças entre produtos.
+title: Matriz de permissões
+description: Distinguir Permission Profiles locais, o sandbox anterior e a política de rede do Cloud.
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: a161c0c
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: c6ad6aa
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
 ---
 
+Não tente prever as permissões com uma tabela fixa de «a App, a CLI, o IDE ou o Cloud vão mostrar um pedido de aprovação?». O comportamento real depende do local de execução, da configuração efetiva, dos requisitos da organização, do sistema operativo e da ação pedida.
 
-Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
+![Fluxo de decisão entre bloqueio pela sandbox, aprovação humana e resultado da execução](/diagrams/sandbox-approval-flow-pt.svg)
 
-![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-pt.svg)
+## Distinguir primeiro três mecanismos
 
-## Three mechanisms to separate
-
-| Mechanism | Scope | Primary control |
+| Mecanismo | Âmbito | Controlo principal |
 |---|---|---|
-| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
-| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
-| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
+| Permission Profiles locais (Beta) | Comandos locais em macOS, Linux, WSL e Windows nativo | `read`/`write`/`deny` no sistema de ficheiros e destinos de rede |
+| Definições anteriores de sandbox | Codex local | `read-only`, `workspace-write`, `danger-full-access` e política de aprovação |
+| Política de ambiente Cloud | Codex Cloud | Contentor isolado, acesso à rede na preparação, allowlist de rede do Agent e métodos HTTP |
 
-Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
+Os Permission Profiles não se combinam com o antigo `sandbox_mode`. Se a configuração carregada contiver `sandbox_mode`, se for passado `--sandbox` na linha de comandos ou se um Profile de configuração definir uma sandbox, o Codex usa as definições anteriores de sandbox em vez de `default_permissions`.
 
-## Built-in local Permission Profiles
+## Permission Profiles locais integrados
 
-| Name | Boundary | Suitable for |
+| Nome | Limite | Uso adequado |
 |---|---|---|
-| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
-| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
-| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
+| `:read-only` | Comandos locais apenas de leitura | Compreender código, rever, explorar um repositório pela primeira vez |
+| `:workspace` | Permite escrever nas workspace roots atuais e nos diretórios temporários do sistema | Desenvolvimento corrente |
+| `:danger-full-access` | Remove as restrições da sandbox local | Apenas quando já existe isolamento externo e esta capacidade é explicitamente necessária |
 
-A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
+Um profile personalizado pode definir `read`, `write` ou `deny` para caminhos e usar regras mais específicas para excluir ficheiros sensíveis, como `.env`, de um âmbito mais amplo. Quando as regras para o mesmo caminho entram em conflito, `deny` prevalece sobre `write`, e `write` sobre `read`.
 
-## Least-privilege example
+## Exemplo de permissões mínimas
 
 ```toml
 default_permissions = "project-edit"
@@ -60,42 +62,34 @@ enabled = true
 "tracking.example.com" = "deny"
 ```
 
-`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
+`network.enabled = true` apenas permite que os comandos acedam à rede. Também é necessário ativar `features.network_proxy` para que as regras de domínio sejam aplicadas pelo proxy.
 
-## Evaluate by action
+## Avaliar por ação
 
-| Action | Primary risk | Minimum boundary |
+| Ação | Risco principal | Limite mínimo |
 |---|---|---|
-| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
-| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
-| Run tests | Script side effects | Review scripts; use controlled environment |
-| Install dependencies | Supply chain and network | Pin versions and domains |
-| Git push / PR | External state change | Separate branch, protection, human review |
-| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
+| Ler código-fonte | Ficheiros sensíveis entram no contexto | `read` no workspace, `deny` explícito para credenciais |
+| Alterar ficheiros | Substituição ou eliminação fora do âmbito | Escrever apenas no workspace de destino e ver primeiro o diff |
+| Executar testes | Efeitos secundários dos scripts | Rever scripts e usar um ambiente controlado |
+| Instalar dependências | Cadeia de fornecimento e acesso à rede | Fixar versões e limitar domínios |
+| Git push / PR | Mudança de estado externo | Branch separada, proteção de branch e revisão humana |
+| Ferramentas MCP/Plugin | Dados de terceiros e operações de escrita | Scope mínimo, aprovação por ação e registos |
 
-`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
+`AGENTS.md` pode dizer «não fazer push», mas isso não constitui uma barreira técnica de aplicação obrigatória. Combine estas regras com sandbox/permissions, permissões do GitHub e revisão humana.
 
-## Team verification
+## Método de verificação da equipa
 
-1. Record client and Codex versions.
-2. List every loaded configuration layer.
-3. Confirm whether Permission Profiles or legacy sandboxing is active.
-4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
-5. Only then connect a real repository, retaining Git and organization gates.
+1. Registe o cliente e a versão do Codex.
+2. Liste todas as camadas de configuração carregadas.
+3. Confirme se está ativo um Permission Profile ou o sandbox anterior.
+4. Num diretório de teste sem dados sensíveis, verifique separadamente `read`, `write`, `deny` e o acesso à rede.
+5. Só depois ligue o repositório real, mantendo as barreiras de Git e da organização.
 
-Permission Profiles remain Beta. Rerun this verification after upgrades.
+Os Permission Profiles ainda estão em Beta. Repita estas verificações após uma atualização.
 
-## Official sources
+## Fontes oficiais
 
 - [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE, Cloud
-
-**Last verified:** 2026-08-26

@@ -3,7 +3,7 @@ title: Trabalho orientado por especificação
 description: Escreva primeiro uma especificação aceitável e deixe o Codex implementar conforme o plano — adequado a entregas com requisitos claros.
 locale: pt
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

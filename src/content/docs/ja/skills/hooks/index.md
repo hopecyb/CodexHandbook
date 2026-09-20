@@ -3,7 +3,7 @@ title: Hooks
 description: Codex のライフサイクルでスクリプトまたは MCP ツールを実行し、チェック、記録、ポリシー制御を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: c768708
+source_revision: a0312e9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

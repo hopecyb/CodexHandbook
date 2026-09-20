@@ -1,15 +1,19 @@
 ---
 import config from 'virtual:starlight/user-config';
 import context from 'virtual:starlight/project-context';
-import { getActiveModule } from '../utils/activeModule';
+import { stripLocalePrefix } from '../utils/activeModule';
 import { localizedUrl } from '../utils/localizedUrl';
-import { getSiteLang, isNavItemVisible, mainNavItems, pickLabel, uiLabels } from '../utils/siteNav';
+import { getSiteLang, readerNavItems, pickLabel, uiLabels } from '../utils/siteNav';
 import { standaloneHref, type StandalonePageId } from '../utils/standalonePages';
 
 const locale = Astro.locals.starlightRoute.locale ?? 'root';
 const normalizedLocale = locale === 'root' ? undefined : locale;
 const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
-const visibleMainNavItems = mainNavItems.filter((item) => isNavItemVisible(item, lang));
+const visibleMainNavItems = readerNavItems(lang);
+const isChinese = lang === 'zh-CN' || lang === 'zh-TW';
+const resourcePaths = ['/ai-roadmap/', '/chatgpt-pricing/', '/pets/', '/theme/'];
+const primaryItems = visibleMainNavItems.filter((item) => !isChinese || !resourcePaths.includes(item.href));
+const resourceItems = visibleMainNavItems.filter((item) => isChinese && resourcePaths.includes(item.href));
 
 function localizeHref(item: { href: string; global?: boolean; standalonePage?: StandalonePageId }) {
 	if (item.global) return item.href;
@@ -18,19 +22,25 @@ function localizeHref(item: { href: string; global?: boolean; standalonePage?: S
 }
 
 function isActive(prefix: string) {
-	const moduleDir = prefix.replace(/^\//, '');
-	return getActiveModule(Astro.url.pathname, normalizedLocale) === moduleDir;
+	const path = stripLocalePrefix(Astro.url.pathname, normalizedLocale);
+	if (isChinese && prefix.replace(/\/$/, '') === '/guide' && /^\/guide\/(learning-paths|reference)(\/|$)/.test(path)) return false;
+	const base = prefix.replace(/\/$/, '');
+	return path === base || path.startsWith(`${base}/`);
 }
 ---
 
 <nav class="mobile-main-nav" aria-label={pickLabel(uiLabels.mainNav, lang)}>
 	{
-		visibleMainNavItems.map((item) => (
+		primaryItems.map((item) => (
 			<a href={localizeHref(item)} aria-current={isActive(item.prefix) ? 'page' : undefined}>
 				{pickLabel(item.label, lang)}
 			</a>
 		))
 	}
+	{resourceItems.length > 0 && <details>
+		<summary>{pickLabel(uiLabels.resources, lang)}</summary>
+		{resourceItems.map((item) => <a href={localizeHref(item)} aria-current={isActive(item.prefix) ? 'page' : undefined}>{pickLabel(item.label, lang)}</a>)}
+	</details>}
 </nav>
 
 <style>
@@ -41,6 +51,8 @@ function isActive(prefix: string) {
 		padding: 0 0 0.75rem;
 		border-bottom: 1px solid var(--sl-color-hairline-shade);
 	}
+
+	.mobile-main-nav summary { padding: 0.55rem 0.65rem; cursor: pointer; }
 
 	.mobile-main-nav a {
 		display: block;

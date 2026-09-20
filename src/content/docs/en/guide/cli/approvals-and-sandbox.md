@@ -3,7 +3,7 @@ title: Approvals and sandbox
 description: CLI approval policy for shell, disk, and network—and how sandbox limits Agent behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

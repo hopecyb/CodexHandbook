@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu review; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu review
 description: Review có cấu trúc về diff và rủi ro thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu review
 
 Chỗ dễ lệch nhất của tác vụ review là ngay từ đầu biến thành «tiện tay sửa giúp bạn».
 
@@ -53,10 +57,3 @@ Trọng tâm mẫu review là lật rủi ro theo chiều cố định—không 
 
 - [Review trước khi merge](/vi/cases/workflows/review-before-merge/)
 - [Case review PR](/vi/cases/review-a-pr/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu review; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

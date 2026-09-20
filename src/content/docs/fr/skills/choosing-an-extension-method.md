@@ -1,150 +1,142 @@
 ---
 title: Choisir une méthode d'extension
-description: Arbre de décision du Prompt aux Automations, sans « extension pour l'extension ».
+description: Choisir entre prompt, AGENTS.md, Skill, MCP, Hook, Plugin et Scheduled task selon ce qu'il faut conserver ou automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: 461cac4
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 28ae6f5
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-The common mistake is selecting a technology name before identifying the problem. Ask first: **what must persist, or what should happen automatically?**
+Quand les mécanismes d'extension se multiplient, l'erreur la plus fréquente consiste à choisir d'abord un nom technique, puis à chercher un problème auquel l'appliquer. Il vaut mieux commencer par cette question : **que voulez-vous conserver, ou que voulez-vous déclencher automatiquement ?**
 
-The frequently confused names are:
+Les termes les plus souvent confondus sont les suivants :
 
-- Prompts
+- Prompt
 - AGENTS.md
-- Skills
+- Skill
 - MCP
-- Plugins
-- Scheduled tasks
+- Plugin
+- Scheduled task
 
-Sometimes a prompt is enough; heavier mechanisms are conditional.
+Toutes ces méthodes « étendent Codex », mais un simple prompt suffit parfois. Les mécanismes plus lourds ne deviennent utiles que selon le besoin.
 
-## Decision diagram
+## Schéma de choix
 
-![Codex extension-method selection diagram](/diagrams/extension-selection-map-fr.svg)
+![Schéma de choix d'une méthode d'extension pour Codex](/diagrams/extension-selection-map-fr.svg)
 
-This is not an exclusive tree. A mature workflow may combine `AGENTS.md`, a Skill, and MCP; the diagram prevents assigning the wrong responsibility.
+Ce schéma n'est pas un arbre de décision exclusif. Un workflow mûr peut utiliser à la fois `AGENTS.md`, un Skill et MCP. Il sert à éviter de confier à un mécanisme un rôle qu'il remplit mal.
 
-## Seven questions
+## Sept questions pour choisir
 
-### 1. Only this task?
+### 1. Cela concerne-t-il seulement la tâche actuelle ?
 
-Use a prompt. State goal, input, scope, acceptance, and permissions.
+Commencez par un prompt. Précisez l'objectif, les entrées, le périmètre, les critères de réussite et les permissions. C'est l'option la moins coûteuse et celle qui permet d'observer le plus facilement les problèmes réels.
 
-### 2. Every run in this repository?
+### 2. La règle doit-elle s'appliquer chaque fois que l'on entre dans ce dépôt ?
 
-Use `AGENTS.md` for tests, style, prohibited directories, and install rules. Do not persist one-off requirements.
+Écrivez-la dans `AGENTS.md` : commandes de test, style de code, répertoires à ne pas modifier ou règles d'installation des dépendances, par exemple. N'inscrivez pas durablement dans les règles du projet une demande ponctuelle.
 
-### 3. Stable steps and output for a task class?
+### 3. Cette catégorie de tâches suit-elle des étapes et produit-elle des résultats stables ?
 
-Create a Skill with reusable instructions, templates, references, assets, or scripts. Keep experimenting in prompts until success is stable.
+Créez un Skill. Il peut conserver des consignes réutilisables et, selon le besoin, des modèles, références, ressources ou scripts auxiliaires. Si les critères de réussite ne sont pas encore fixes, continuez d'expérimenter avec des prompts.
 
-### 4. External data or actions?
+### 4. Faut-il accéder à des données ou effectuer des actions hors du dépôt ?
 
-Evaluate MCP or a Connector. List required tools and data, start read-only and least privilege, and avoid a connection when local files or commands suffice.
+Évaluez MCP ou un Connector. Énumérez d'abord les outils et données réellement nécessaires ; privilégiez la lecture seule, le périmètre minimal et une configuration vérifiable. Si des fichiers locaux ou des commandes existantes suffisent, n'ajoutez pas de connexion externe.
 
-### 5. Check at a fixed lifecycle point?
+### 5. Faut-il vérifier quelque chose à un moment précis du cycle de vie ?
 
-Use a Hook for pre-command policy, post-write patch scan, or closing summary. Test timeout, failure, and false positives.
+Utilisez un Hook : contrôler une commande dangereuse avant l'appel d'un outil, analyser un correctif après une écriture ou enregistrer un résumé en fin de session, par exemple. Un Hook s'exécute automatiquement ; testez donc ses délais d'expiration, ses échecs et ses faux positifs.
 
-### 6. Distribute a capability bundle?
+### 6. Faut-il distribuer ensemble plusieurs capacités ?
 
-Use a Plugin for Skills, connectors, MCP, Hooks, and Scheduled templates. Installation does not automatically establish trust.
+Envisagez un Plugin. Cette couche de composition et de distribution peut contenir Skills, Connectors, MCP, Hooks et modèles de Scheduled tasks. Installer un Plugin ne signifie pas que ses connexions, scripts ou Hooks sont automatiquement dignes de confiance.
 
-### 7. Manually stable and needs repetition by time?
+### 7. La tâche fonctionne-t-elle déjà bien manuellement et doit-elle se répéter à intervalles réguliers ?
 
-Create a Scheduled task only after verifying prompt, Skill, permissions, and output. Inspect early runs and retain human publish/merge gates.
+Créez alors une Scheduled task. Vérifiez d'abord le prompt, le Skill, les permissions et le format du résultat dans une tâche ordinaire. Après la mise en place du calendrier, contrôlez les premières exécutions et conservez une validation humaine avant toute publication ou fusion.
 
-## Scenario mapping
+## Choix selon le scénario
 
-| Scenario | Combination |
+| Scénario | Combinaison recommandée |
 |---|---|
-| Standard tests and commit rules | AGENTS.md |
-| Pre-merge checklist | `pr-review` Skill |
-| Fetch Linear ticket context | MCP plus task prompt |
-| Weekly dependency report | Scheduled task → draft issue |
-| Scan a patch for secrets after writing | Hook or CI; both for high risk |
-| Distribute review flow and GitHub tools | Plugin after permission and Hook review |
-| Weekly dependency-risk report | Verified Skill + Scheduled task + human review |
-| Parallel security, test, maintainability reviews | Read-only subagents, main Agent consolidates |
+| Uniformiser les tests et les règles de commit | AGENTS.md |
+| Utiliser une liste de contrôle avant chaque fusion | Skill `pr-review` |
+| Récupérer le contexte d'un ticket Linear | MCP + prompt de tâche |
+| Produire un rapport hebdomadaire sur les dépendances | Scheduled task → ouvrir une issue en brouillon |
+| Rechercher des secrets dans un correctif après écriture | Hook ou CI ; les deux dans les cas à haut risque |
+| Faire installer à toute l'équipe une procédure de revue et des outils GitHub | Plugin, après examen des permissions et des Hooks |
+| Produire chaque semaine un rapport sur les risques liés aux dépendances | Skill vérifié + Scheduled task + revue humaine |
+| Examiner en parallèle sécurité, tests et maintenabilité | Plusieurs subagents en lecture seule, puis synthèse par l'Agent principal |
 
-## Cost dimensions
+## Coûts comparés
 
-| Mechanism | Authoring | Maintenance | Security risk |
+| Mécanisme | Coût de création | Coût de maintenance | Risque de sécurité |
 |---|---|---|---|
-| Prompt | Low | Low | Low |
-| AGENTS.md | Medium | Medium | Low |
-| Skill | Medium | Medium | Low–medium |
-| MCP | High | High | Medium–high |
-| Hook | Medium | Medium–high | Medium–high |
-| Plugin | Low to install / high to build | Medium–high | Medium–high |
-| Scheduled task | Medium | High | High |
+| Prompt | Faible | Faible | Faible |
+| AGENTS.md | Moyen | Moyen | Faible |
+| Skill | Moyen | Moyen | Faible à moyen |
+| MCP | Élevé | Élevé | Moyen à élevé |
+| Hook | Moyen | Moyen à élevé | Moyen à élevé |
+| Plugin | Faible à installer / élevé à créer | Moyen à élevé | Moyen à élevé |
+| Scheduled task | Moyen | Élevé | Élevé |
 
-## Anti-patterns
+## Mauvaises pratiques
 
-- **Skill bloat:** dozens of overlapping descriptions.
-- **MCP hammer:** API integration where `git` suffices.
-- **Unaccepted scheduling:** unattended code edits with no evidence, stop, or human review.
-- **Rebuilding official connectors:** unnecessary custom MCP.
-- **Misplaced rule:** one-off requirement in `AGENTS.md`.
-- **Hook overload:** long business logic on every tool call.
+- **Accumuler les Skills** : en installer des dizaines dont les descriptions se disputent les mêmes tâches.
+- **Employer MCP comme solution universelle** : ajouter une API pour une opération que `git` peut déjà accomplir.
+- **Programmer sans critères de réussite** : modifier du code à heure fixe sans condition d'arrêt, preuves d'exécution ni revue humaine.
+- **Recréer l'existant** : construire un MCP sur mesure alors qu'un Connector officiel répond déjà au besoin.
+- **Placer une règle au mauvais endroit** : inscrire une exigence ponctuelle dans `AGENTS.md`, puis imposer cette ancienne contrainte à toutes les tâches suivantes.
+- **Surcharger les Hooks** : exécuter un long processus métier à chaque appel d'outil, ce qui ralentit les tâches ordinaires ou les bloque à tort.
 
-## Common questions
+## Questions fréquentes
 
-### 1. Install Plugins and MCP immediately?
+### 1. Dois-je installer un Plugin et connecter MCP dès le départ ?
 
-No. Clear prompts, scope, and `AGENTS.md` solve many tasks.
+Souvent, des prompts clairs, un périmètre maîtrisé et un bon `AGENTS.md` suffisent.
 
-### 2. How many repetitions justify a Skill?
+### 2. Après combien de répétitions une tâche mérite-t-elle un Skill ?
 
-No fixed count. Stability, success criteria, and failure cost matter more.
+Il n'existe pas de nombre fixe. La fréquence est un indice ; la stabilité des étapes, la clarté des critères de réussite et le coût des échecs comptent davantage pour décider s'il faut automatiser les vérifications.
 
-### 3. Where do beginners start?
+### 3. Par quelle méthode commencer lors d'une première utilisation ?
 
-Usually:
+Le plus souvent, par l'une de ces trois options :
 
-- Prompts
+- Prompt
 - `AGENTS.md`
-- Skills
+- Skill
 
-MCP and unattended automation rarely belong at the beginning.
+MCP et l'automatisation sans surveillance sont rarement nécessaires dès le début.
 
-Match responsibility, minimize permission, and verify results.
+L'essentiel est de faire correspondre chaque mécanisme à sa responsabilité, de limiter les permissions et de pouvoir vérifier le résultat.
 
-## Minimal exercise
+## Premier exercice pratique
 
-For pre-merge diff review:
+Prenons la « revue du diff actuel avant fusion » :
 
-1. Run a prompt twice and record repeated checks.
-2. Put fixed repository commands and generated-file exclusions in `AGENTS.md`.
-3. Put review steps, severity, and output format in a `pr-review` Skill.
-4. Add MCP/Connector only for GitHub comments or CI state.
-5. Add Hook or Scheduled only for fixed automatic checks.
-6. Build a Plugin only when several teams must install the bundle.
+1. Exécutez deux fois un prompt et notez les vérifications qu'il faut redemander à chaque fois.
+2. Écrivez les commandes propres au dépôt dans `AGENTS.md`, par exemple `pnpm test` et l'interdiction de modifier les répertoires générés.
+3. Transformez les étapes de revue, les niveaux de gravité et le format de sortie en Skill `pr-review`.
+4. Ajoutez MCP ou un Connector uniquement si vous avez besoin des commentaires de PR GitHub ou de l'état de CI.
+5. Ajoutez un Hook ou une Scheduled task uniquement si le contrôle doit se déclencher automatiquement à un moment précis.
+6. Si plusieurs équipes doivent installer cet ensemble, regroupez alors ces capacités dans un Plugin.
 
-For every added layer, ask: which access was added, how is it verified, and how is it disabled or rolled back?
+À chaque couche ajoutée, reposez trois questions : quelles permissions apporte-t-elle, comment la vérifier et comment la désactiver ou revenir en arrière ?
 
-## Further reading
+## Pour aller plus loin
 
-- [Capability map](/fr/skills/capability-map/)
-- [Human approval patterns](/fr/cases/workflows/human-approval-patterns/)
-- [Turn a workflow into a Skill](/fr/cases/workflows/turn-a-workflow-into-a-skill/)
+- [Carte des capacités d'extension](/fr/skills/capability-map/)
+- [Modèles de validation humaine](/fr/cases/workflows/human-approval-patterns/)
+- [Transformer un workflow en Skill](/fr/cases/workflows/turn-a-workflow-into-a-skill/) (page de parcours)
 
-## Official sources
+## Sources officielles
 
-- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
-- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+- [Skills et Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Créer des Skills Codex](https://learn.chatgpt.com/docs/build-skills)
 - [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-**Applies to:** ChatGPT Web / desktop App / Codex CLI / IDE (support differs by mechanism)
-**Verification basis:** Compared against OpenAI Skills, Plugins, MCP, Hooks, and Scheduled tasks documentation on 2026-08-25.
-**Last verified:** 2026-08-25

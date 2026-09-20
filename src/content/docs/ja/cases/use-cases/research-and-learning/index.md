@@ -3,7 +3,7 @@ title: 調査と学習
 description: 出典付き調査、比較、学習事例の入口——検索、引用、結論の境界。
 locale: ja
 source_locale: zh-CN
-source_revision: 862362f
+source_revision: a0be881
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

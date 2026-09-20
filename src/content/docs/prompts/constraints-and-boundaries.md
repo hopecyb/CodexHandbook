@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明约束与边界写法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 定义约束
 description: 限制可改范围、风格与禁止事项。
 ---
@@ -94,10 +99,3 @@ description: 限制可改范围、风格与禁止事项。
 目标告诉 Codex 要做什么，约束告诉它做到哪里为止。
 
 权限边界最好和约束一起写，减少“顺手”越权。相关页见 [定义完成标准](/prompts/define-done/) 和 [权限与沙箱](/guide/permissions-and-sandbox/)。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明约束与边界写法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

@@ -1,12 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "핸드북의 현재 상태 체계, 완료된 여러 차례의 검토, 공식 출처 우선 원칙에 따라 확인했습니다. 이 페이지는 문서를 `verified`로 올리는 내부 기준과 등급을 낮추는 원칙을 설명합니다."
+  checkedAt: "2026-07-26"
 title: 기술 내용 검증
-description: 페이지를 verified로 표시하는 방법 — 재현 단계, 공식 근거, 날짜 포함.
+description: 편집 상태, 출처 확인, 예제 실행을 구분하고 범위·환경·검증 근거를 기록합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: abada81
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: cfb077d
+translation_status: draft
+translated_at: 2026-09-20
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 사이트의 새 메타데이터 필드에 맞춰 기여 규정을 수정했습니다. 여기에 언급된 모든 제품 동작을 다시 실행했다는 뜻은 아닙니다.
 sidebar:
   order: 30
 ---
@@ -50,11 +58,27 @@ sidebar:
 
 ## 흔한 오해
 
-### `verified`는 확신이 아니라 증거
+### 편집 상태와 검증 방법은 별개의 필드입니다
 
-어조가 아니라 증거 상태입니다.
+`editorialStatus`는 작성 및 검토 진행 상태를 기록합니다. `verification.kind`는 실제로 수행한 검증 종류를 기록합니다. `verified`라는 표시만으로 예제가 실행되었다고 추론할 수 없습니다.
 
-재현을 했고, 공식 근거를 대조했고, 페이지 범위와 날짜가 맞을 때만 `verified`에 적합합니다.
+| 검증 방법 | 뒷받침할 수 있는 결론 | 필수 근거 |
+|---|---|---|
+| `editorial` | 구조·표현 또는 사이트 내부 참조를 검토함 | 검토 요약과 날짜 |
+| `source-checked` | 명시한 범위의 사실이 출처와 일치함 | 구체적인 출처 링크, 요약, 날짜 |
+| `run-tested` | 기록된 환경에서 예제를 실행함 | 환경, 실행 및 검토 기록, 요약, 날짜 |
+
+`run-tested`는 모든 플랫폼에서의 동작을 보장하지 않습니다. 요약에는 검증한 것과 검증하지 않은 것을 밝혀야 합니다. 독립 계산을 통한 자체 점검을 두 번째 사람의 검토라고 할 수 없습니다. 근거가 없는 옛 기록은 `legacyVerification`에 보관하며 새로운 검증 상태로 자동 해석하지 않습니다.
+
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 구조와 사이트 내부 링크를 확인했습니다. 예제는 아직 실행하지 않았습니다.
+```
+
+출처 확인과 예제 실행에는 `evidence` 목록을 사용하며 각 항목에 `label`과 `href`를 넣습니다. 실행 기록에는 `environment`도 작성해 OS, 관련 클라이언트 버전, 의존성 버전을 명시합니다. 환경이나 근거 링크가 없는 실행 기록은 빌드에서 거부합니다. 링크가 존재한다는 사실만으로 근거가 충분한 것은 아닙니다. 유지 관리자가 기록을 읽어야 합니다.
 
 ### 커뮤니티 글은 이해를 돕지만 사실 검증을 대체하지 않음
 
@@ -84,9 +108,9 @@ sidebar:
 
 1. **범위 표시**: 제품(App/CLI/IDE/Cloud), OS, CLI 버전
 2. **단계별 재현**: 처음부터 또는 깨끗한 worktree로 한 번 따라 함
-3. **공식 근거**: OpenAI 공식 문서 또는 헬프 센터 링크 최소 하나
+3. **공식 근거**: 제품 관련 사실에는 구체적인 공식 출처를 덧붙입니다. 안정적인 방법 연습에서는 실제 입력과 확인 기록을 사용하고 공식 보증을 꾸며내지 않습니다
 4. **커뮤니티 출처**: 커뮤니티 자료를 빌려도 주제 참고만, 사실은 공식 기준
-5. **날짜 갱신**: 푸터 `최근 검증: YYYY-MM-DD`
+5. **날짜 갱신**: `verification.checkedAt`에는 실제 확인한 날짜만 적습니다. 옛 날짜를 일괄 갱신해 재검토한 것처럼 보이게 하지 않습니다
 6. **독립 재검토**: `verified`는 비작성자 2인 확인 권장
 
 ## 검증 순서
@@ -122,9 +146,3 @@ sidebar:
 - [공식 리소스](/ko/guide/reference/official-resources/)
 
 `verified`는 “현재 표시된 근거로 실제로 검증했고, 근거를 추적할 수 있다”는 뜻입니다. 작성자 본인의 확신만으로는 부족합니다.
-
----
-
-**상태:** verified  
-**검증 근거:** 본 핸드북의 현재 상태 체계, 완료된 다회 재검토 실천, 공식 우선 원칙을 교차 확인했습니다. 이 페이지는 페이지를 `verified`로 올리는 내부 검증 기준과 강등 원칙을 설명합니다.  
-**최근 검증:** 2026-07-26

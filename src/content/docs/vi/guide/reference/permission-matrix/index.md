@@ -1,41 +1,40 @@
 ---
 title: Ma trận quyền
-description: "Bản đồ khái niệm các loại thao tác Codex, điểm phê duyệt và khác biệt sản phẩm."
+description: Phân biệt Permission Profiles cục bộ, sandbox cũ và chính sách mạng của Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: a161c0c
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: c6ad6aa
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
 ---
 
-Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
+Đừng dùng một bảng cố định kiểu “App/CLI/IDE/Cloud có hiện hộp thoại hay không” để đoán quyền. Hành vi thực tế do nơi thực thi, cấu hình có hiệu lực, yêu cầu của tổ chức, hệ điều hành và thao tác cụ thể cùng quyết định.
 
-![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-vi.svg)
+![Luồng quyết định giữa việc sandbox chặn thao tác, con người phê duyệt và kết quả thực thi](/diagrams/sandbox-approval-flow-zh-cn.svg)
 
-## Three mechanisms to separate
+## Trước tiên phân biệt ba cơ chế
 
-| Mechanism | Scope | Primary control |
+| Cơ chế | Phạm vi | Cách kiểm soát chính |
 |---|---|---|
-| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
-| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
-| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
+| Permission Profiles cục bộ (Beta) | Lệnh cục bộ trên macOS, Linux, WSL và Windows gốc | Đọc/ghi/từ chối trong hệ thống tệp, đích mạng |
+| Cài đặt sandbox cũ | Codex cục bộ | `read-only`, `workspace-write`, `danger-full-access` và chính sách phê duyệt |
+| Chính sách môi trường Cloud | Codex Cloud | Container cô lập, mạng trong giai đoạn thiết lập, danh sách đích mạng và phương thức HTTP được phép cho Agent |
 
-Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
+Permission Profiles không kết hợp với `sandbox_mode` cũ. Chỉ cần cấu hình được tải có `sandbox_mode`, dòng lệnh truyền `--sandbox`, hoặc một profile cấu hình thiết lập sandbox, Codex sẽ dùng cài đặt sandbox cũ thay vì `default_permissions`.
 
-## Built-in local Permission Profiles
+## Permission Profiles cục bộ tích hợp sẵn
 
-| Name | Boundary | Suitable for |
+| Tên | Ranh giới | Phù hợp với |
 |---|---|---|
-| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
-| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
-| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
+| `:read-only` | Lệnh cục bộ chỉ được đọc | Tìm hiểu mã, rà soát, lần đầu xem kho lưu trữ |
+| `:workspace` | Được ghi vào các thư mục gốc của workspace hiện tại và thư mục tạm hệ thống | Tác vụ phát triển thông thường |
+| `:danger-full-access` | Bỏ các giới hạn sandbox cục bộ | Chỉ khi bên ngoài đã có cơ chế cô lập và thực sự cần thiết |
 
-A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
+Profile tùy chỉnh có thể đặt `read`, `write`, `deny` cho từng đường dẫn, dùng quy tắc cụ thể hơn để loại tệp nhạy cảm như `.env` khỏi một phạm vi rộng. Khi các quy tắc xung đột trên cùng đường dẫn, `deny` ưu tiên hơn `write`, còn `write` ưu tiên hơn `read`.
 
-## Least-privilege example
+## Ví dụ về quyền tối thiểu
 
 ```toml
 default_permissions = "project-edit"
@@ -59,42 +58,34 @@ enabled = true
 "tracking.example.com" = "deny"
 ```
 
-`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
+`network.enabled = true` chỉ cho phép lệnh truy cập mạng. Bạn còn phải bật `features.network_proxy` thì quy tắc tên miền mới được proxy thực thi bắt buộc.
 
-## Evaluate by action
+## Đánh giá theo từng thao tác
 
-| Action | Primary risk | Minimum boundary |
+| Thao tác | Rủi ro chính | Ranh giới tối thiểu |
 |---|---|---|
-| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
-| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
-| Run tests | Script side effects | Review scripts; use controlled environment |
-| Install dependencies | Supply chain and network | Pin versions and domains |
-| Git push / PR | External state change | Separate branch, protection, human review |
-| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
+| Đọc mã nguồn | Tệp nhạy cảm bị đưa vào ngữ cảnh | Quyền đọc workspace, từ chối rõ ràng quyền truy cập thông tin đăng nhập |
+| Sửa tệp | Ghi đè hoặc xóa vượt phạm vi | Chỉ ghi vào workspace mục tiêu, xem diff trước |
+| Chạy kiểm thử | Tác dụng phụ của script | Rà soát script, dùng môi trường được kiểm soát |
+| Cài thư viện phụ thuộc | Chuỗi cung ứng và truy cập mạng | Cố định phiên bản, giới hạn tên miền |
+| Git push / PR | Thay đổi trạng thái bên ngoài | Nhánh riêng, bảo vệ nhánh và rà soát thủ công |
+| Công cụ MCP/plugin | Dữ liệu bên thứ ba và thao tác ghi | Phạm vi tối thiểu, phê duyệt từng thao tác và ghi log |
 
-`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
+`AGENTS.md` có thể ghi “không push”, nhưng không phải ranh giới bắt buộc về mặt kỹ thuật. Cần kết hợp quy tắc đó với sandbox/permissions, quyền GitHub và rà soát thủ công.
 
-## Team verification
+## Cách nhóm kiểm tra
 
-1. Record client and Codex versions.
-2. List every loaded configuration layer.
-3. Confirm whether Permission Profiles or legacy sandboxing is active.
-4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
-5. Only then connect a real repository, retaining Git and organization gates.
+1. Ghi lại phiên bản ứng dụng khách và Codex.
+2. Liệt kê tất cả các lớp cấu hình được tải.
+3. Xác nhận đang dùng Permission Profile hay sandbox cũ.
+4. Kiểm tra riêng quyền đọc, ghi, từ chối và mạng trong thư mục thử nghiệm không có dữ liệu nhạy cảm.
+5. Sau đó mới kết nối kho lưu trữ thật và giữ các cổng kiểm soát phía Git và tổ chức.
 
-Permission Profiles remain Beta. Rerun this verification after upgrades.
+Permission Profiles vẫn đang ở giai đoạn Beta. Hãy chạy lại các bước kiểm tra này sau khi nâng cấp.
 
-## Official sources
+## Nguồn chính thức
 
 - [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App, CLI, IDE, Cloud
-
-**Kiểm chứng gần nhất:** 2026-08-26

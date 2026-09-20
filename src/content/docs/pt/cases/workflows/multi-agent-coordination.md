@@ -3,7 +3,7 @@ title: Colaboração multi-Agent
 description: Exploração em paralelo, divisão de execução e fusão de resultados — quando dividir e como aceitar.
 locale: pt
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

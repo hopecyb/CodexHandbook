@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Teaching issue triage suggestion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issue_id", "input_sha256", "type", "priority", "labels", "needs_security", "rationale", "missing_information"],
+  "properties": {
+    "issue_id": {"type": "integer", "minimum": 1},
+    "input_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "type": {"type": "string", "enum": ["bug", "docs", "question", "security", "unknown"]},
+    "priority": {"type": "string", "enum": ["P0", "P1", "P2", "P3", "unknown"]},
+    "labels": {"type": "array", "uniqueItems": true, "maxItems": 3, "items": {"type": "string", "enum": ["bug", "documentation", "question", "security-review", "needs-info"]}},
+    "needs_security": {"type": "boolean"},
+    "rationale": {"type": "string", "minLength": 1, "maxLength": 1500},
+    "missing_information": {"type": "array", "maxItems": 8, "items": {"type": "string", "minLength": 1, "maxLength": 300}}
+  }
+}

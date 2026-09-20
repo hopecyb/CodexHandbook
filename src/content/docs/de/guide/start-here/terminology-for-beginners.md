@@ -3,7 +3,7 @@ title: Begriffe für Anfänger
 description: "Kurze Definitionen für Aufgabe, Kontext, Sandbox, Skill und weitere häufige Wörter."
 locale: de
 source_locale: zh-CN
-source_revision: 401719c
+source_revision: a18bacf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

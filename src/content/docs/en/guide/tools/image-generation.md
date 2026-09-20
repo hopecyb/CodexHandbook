@@ -3,7 +3,7 @@ title: Image generation
 description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: 67d0eb7
+source_revision: ea275fa
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

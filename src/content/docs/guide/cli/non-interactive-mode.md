@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "已对照当前官方 Non-interactive mode，核实 `codex exec`、`--cd`、默认只读沙箱，以及进度走 `stderr`、最终回复走 `stdout` 的管道行为。"
+  checkedAt: "2026-08-26"
 title: 非交互模式
 description: 用 codex exec 与脚本管道集成——适合 CI、定时任务与自动化流水线。
 sidebar:
@@ -126,12 +131,3 @@ codex exec --cd . "生成最近 10 个提交的发布说明" > release-notes.md
 
 ## 参考来源
 - OpenAI Codex CLI 文档
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**核验依据：** 已对照当前官方 Non-interactive mode，核实 `codex exec`、`--cd`、默认只读沙箱，以及进度走 `stderr`、最终回复走 `stdout` 的管道行为。
-
-**最近核验：** 2026-08-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照当前官方 Authentication 页面，核实 ChatGPT 与 API key 两种本地登录、Cloud 的 ChatGPT 登录要求、CLI 命令、缓存共享与凭据存储边界。"
+  checkedAt: "2026-08-26"
 title: 登录与身份验证
 description: 在本地客户端与 Cloud 中选择正确登录方式，并安全检查活动身份。
 sidebar:
@@ -62,13 +67,3 @@ CLI 与 IDE 会共享缓存的登录信息；从其中一个退出后，另一�
 CLI 登录有专用日志，可在官方支持或登录排障需要时使用；日志仍应先做敏感信息检查。
 
 计划边界见 [账号、套餐与访问](/guide/getting-started/account-plans-and-access/)，完整细节以 [官方 Authentication 页面](https://learn.chatgpt.com/docs/auth) 为准。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照当前官方 Authentication 页面，核实 ChatGPT 与 API key 两种本地登录、Cloud 的 ChatGPT 登录要求、CLI 命令、缓存共享与凭据存储边界。
-
-**最近核验：** 2026-08-26

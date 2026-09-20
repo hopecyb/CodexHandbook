@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确支持 Codex IDE extension，并说明其与 CLI、桌面 App 属于并列本地客户端；本页只作为 IDE 章节导航，强调“当前文件、选区与 diff 审查”这一稳定工作方式。"
+  checkedAt: "2026-07-26"
 title: IDE 扩展
 description: 在编辑器内使用 Codex——安装、上下文、本地与云端任务、审查与设置。
 sidebar:
@@ -34,10 +39,3 @@ IDE 扩展适合**边写边看 diff**：打开文件、选中代码、在侧边�
 3. 改完后仍然要自己审查 diff
 
 IDE 扩展适合“小范围、边看边改”的任务，但范围控制和审查还是少不了。
-
----
-
-**状态：** verified  
-**适用产品：** IDE  
-**核验依据：** OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确支持 Codex IDE extension，并说明其与 CLI、桌面 App 属于并列本地客户端；本页只作为 IDE 章节导航，强调“当前文件、选区与 diff 审查”这一稳定工作方式。  
-**最近核验：** 2026-07-26

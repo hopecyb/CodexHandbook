@@ -1,48 +1,39 @@
 ---
 title: "Context Engineering (ingeniería del contexto)"
-date: 2025-09-29
-year: 2025
-summary: "Context Engineering diseña qué ve el modelo: historial, documentos, resultados de herramientas y memoria."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+description: "El contexto incluye la tarea, las instrucciones, los archivos, los resultados recuperados y las salidas de las herramientas. Hay que decidir qué entra en la tarea actual, qué consultar cuando haga falta y qué conservar tras compactar."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Los eventos y las descripciones de proyectos siguientes se comprobaron con fuentes primarias. Los consejos de aprendizaje son criterios del autor; verificar las fuentes no equivale a haber probado el producto."
+  evidence:
+    - label: "Artículo sobre ingeniería del contexto"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Evento verificable y alcance
 
-# Context Engineering (ingeniería del contexto)
+**Fecha: 2025-09-29 · Tipo: artículo de ingeniería.** Anthropic publicó *Effective context engineering for AI agents*, sobre cómo organizar el contexto que necesita un agente. La fecha del artículo no es la fecha en que nació el concepto.
 
-- Fechas clave:
-  - Application-engineering inflection: 2025-09-01
-- Referencias oficiales:
-  - https://platform.openai.com/docs/guides/conversation-state
-  - https://platform.openai.com/docs/guides/retrieval
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+Fuente: [artículo sobre ingeniería del contexto](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Comprobado el 2026-09-18; la fecha de publicación de la fuente y la fecha de comprobación de esta página tienen significados distintos.
 
-## Qué Es
+## Qué problema resuelve
 
-Context Engineering diseña qué ve el modelo: historial, documentos, resultados de herramientas y memoria.
+El contexto incluye la tarea, las instrucciones, los archivos, los resultados recuperados y las salidas de las herramientas. Hay que decidir qué entra en la tarea actual, qué consultar cuando haga falta y qué conservar tras compactar.
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+## Consejos para aprender y límites de aplicación
 
-Movió la optimización desde redactar mejor el prompt hacia diseñar todo el entorno de contexto.
+Lo siguiente es un criterio didáctico de este sitio, no una medición de adopción en el sector ni de eficacia:
 
-## En Qué Etapa Está Ahora
+Prioriza los hechos y las rutas a pruebas relevantes para la decisión actual. Más contenido puede añadir ruido; un resumen compactado no sustituye los archivos clave. Si el objetivo se desvía, comprueba los resultados y las restricciones existentes antes de añadir otro prompt.
 
-Actualmente lo marco como `emerging`.
+## Ejercicio práctico
 
-Es emergente y crucial para RAG, memoria de agentes y tareas largas.
+[Mantener el contexto centrado](/es/guide/context/keep-context-focused/): enumera los archivos imprescindibles para la tarea actual, las referencias que consultarás cuando haga falta y el material irrelevante. Guarda el objetivo, lo ya hecho, las preguntas pendientes y las rutas a las pruebas como registro de traspaso.
 
-## Qué Podría Reemplazar
-
-Reemplaza volcar documentos e historial sin selección ni compresión.
-
-## Qué Podría Reemplazarlo
-
-Será absorbido por gestores automáticos de contexto y runtimes con estado.
+[Volver a la hoja de ruta y sus criterios de fechas](/es/ai-roadmap/)

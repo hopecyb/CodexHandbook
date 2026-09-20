@@ -3,7 +3,7 @@ title: Déléguer et poursuivre
 description: Lancez une tâche Cloud exécutable de manière autonome, puis utilisez la même conversation pour corriger sa direction et accepter le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: 681ea7d
+source_revision: 38b322f
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

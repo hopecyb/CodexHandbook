@@ -3,7 +3,7 @@ title: Feature comparison
 description: Compare the desktop App, CLI, IDE, and Cloud by work surface, execution location, and review method.
 locale: en
 source_locale: zh-CN
-source_revision: f2f0528
+source_revision: b3d30b0
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

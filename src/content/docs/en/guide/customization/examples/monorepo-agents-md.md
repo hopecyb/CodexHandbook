@@ -3,7 +3,7 @@ title: AGENTS.md in a Monorepo
 description: Example patterns for placing project instructions, scope, and test commands in a single-repo multi-package structure.
 locale: en
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -1,44 +1,35 @@
 ---
-title: Automations
-description: Hẹn giờ, sự kiện và chạy nền — nói gì phù hợp tự động hóa, gì phải đối chiếu lại thủ công.
+title: Tác vụ theo lịch
+description: Cho ChatGPT lặp lại theo lịch những tác vụ đã được kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: f32c13f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 759c38e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
+Scheduled task (tác vụ theo lịch) cho phép ChatGPT lặp lại công việc ở chế độ nền theo một lịch định trước. Nó phù hợp với báo cáo định kỳ, theo dõi liên tục và công việc bảo trì lặp lại. Nó không phải webhook dùng chung, sự kiện của kho mã hay hệ thống CI.
 
-## Decide whether it fits
+## Trước tiên, xem có phù hợp không
 
-| Suitable | Unsuitable |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Stable input sources and reviewable output | The problem must be redefined on every run |
-| Driven by time or interval | Must trigger exactly on Git push or PR creation |
-| Read-only checks, summaries, and drafts | Unattended main-branch merges or bulk deletion |
-| Explicit no-change and stop conditions | Infinite retry after failure |
+| Nguồn đầu vào ổn định và đầu ra có thể rà soát | Mỗi lần chạy đều phải xác định lại vấn đề |
+| Kích hoạt theo thời gian hoặc khoảng lặp | Phải kích hoạt chính xác khi Git push hoặc tạo PR |
+| Kiểm tra chỉ đọc, tóm tắt và bản nháp | Tự động hợp nhất nhánh chính hoặc xóa hàng loạt mà không có người giám sát |
+| Có điều kiện rõ ràng khi không có thay đổi và khi phải dừng | Thử lại vô hạn sau khi thất bại |
 
-## Current management surfaces
+## Nơi quản lý hiện tại
 
-- Create and manage Scheduled tasks in ChatGPT Web or the desktop App.
-- Codex CLI and IDE have no Scheduled management UI; use them to test prompts, Skills, or scripts first.
-- The desktop App can run a task against a local project or isolated worktree, but the computer must be awake, the App running, and the project still on disk.
-- A Web task can use uploaded context, connected tools, Skills, and Plugins, but cannot read a local folder directly.
+- Tạo và quản lý tác vụ theo lịch trên ChatGPT Web hoặc ứng dụng máy tính.
+- Codex CLI và tiện ích IDE không có giao diện quản lý Scheduled task; hãy dùng chúng để thử prompt, Skill hoặc script trước.
+- Ứng dụng máy tính có thể chạy tác vụ với dự án cục bộ hoặc worktree tách biệt, nhưng máy phải bật, ứng dụng phải đang chạy và dự án vẫn còn trên đĩa.
+- Tác vụ trên Web có thể dùng ngữ cảnh đã tải lên, công cụ đã kết nối, Skills và Plugins, nhưng không thể trực tiếp đọc thư mục cục bộ.
 
-## In this section
+## Các trang trong nhóm này
 
-- [Complete Scheduled tasks guide](/vi/skills/automations/scheduled-tasks/): choose an execution mode, write a durable prompt, and define permissions and acceptance
+- [Hướng dẫn đầy đủ về tác vụ theo lịch](/vi/skills/automations/scheduled-tasks/): chọn cách chạy, viết prompt dùng lâu dài, đặt quyền và tiêu chí nghiệm thu.
 
-## Official source
+## Nguồn chính thức
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
-
-**Kiểm chứng gần nhất:** 2026-08-26

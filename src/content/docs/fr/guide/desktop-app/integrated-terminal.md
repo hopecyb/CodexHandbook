@@ -3,7 +3,7 @@ title: Terminal intégré
 description: Exécutez des commandes dans le projet ou worktree actuel et vérifiez les résultats avec des sorties réelles.
 locale: fr
 source_locale: zh-CN
-source_revision: 918b2bf
+source_revision: 727e93e
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

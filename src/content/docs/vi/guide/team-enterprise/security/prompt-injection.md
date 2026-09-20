@@ -3,7 +3,7 @@ title: Prompt injection
 description: "Khi văn bản không đáng tin vào Ngữ cảnh — nhận diện, giảm thiểu và điểm chính sách đội."
 locale: vi
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

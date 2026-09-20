@@ -3,7 +3,7 @@ title: Prompting with images
 description: How to ask when giving Codex screenshots, designs, or whiteboard photos.
 locale: en
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

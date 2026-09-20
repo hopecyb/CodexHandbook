@@ -3,7 +3,7 @@ title: Anatomy of a good task
 description: Goal, background, inputs, constraints, acceptance, and permission boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 4df3d01
+source_revision: 98c0511
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -1,61 +1,51 @@
 ---
-title: Làm việc với tệp
-description: Để Codex đọc/ghi tệp trong phạm vi đã nêu rõ.
-locale: vi
-source_locale: zh-CN
-source_revision: 7920b62
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Làm việc với tệp"
+description: "Chỉ thêm một dòng vào tệp được chỉ định và kiểm tra thay đổi thực tế."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 20
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Đã bổ sung đủ tài liệu cố định và kết quả tham khảo của tác giả. Script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa có bài kiểm tra hoàn thành độc lập với mô hình hoặc người học."
+  evidence:
+    - label: "Bản ghi thao tác tệp của tác giả"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/vi/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Trò chuyện với Codex"
+next:
+  link: "/vi/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Giao tác vụ rõ ràng"
+locale: vi
+source_locale: zh-CN
+source_revision: "ec5c2d3"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Mục tiêu bước này
+## Điều kiện tiên quyết
 
-Chỉ định tên tệp, hoàn thành một lần chỉnh sửa có kiểm soát.
+Bạn đã hoàn thành bước một và `work` vẫn chứa ba tệp gốc. Giữ `starter` bên ngoài thư mục làm việc làm mốc đối chiếu.
 
-Từ bước này, Tác vụ chuyển từ «chỉ chat» sang «thật sự để nó đụng tệp»; trọng tâm cũng từ nêu mục tiêu sang kiểm soát phạm vi.
-
-## Bài luyện
+## Thực hiện một chỉnh sửa có thể kiểm tra
 
 ```text
-Chỉ sửa hello.md: thêm một dòng chú thích ngày ở đầu văn bản (ngày hôm nay).
-Không sửa tệp khác, không chạy lệnh.
-Xong hãy liệt kê các dòng bạn đã đổi.
+Chỉ thêm chú thích trạng thái sau vào dòng đầu tiên của notice.md:
+<!-- 状态：练习草稿，未发布 -->
+Giữ nguyên từng ký tự trong nội dung cũ. Không sửa tệp khác và không tạo tệp mới.
+Sau khi xong, hãy nêu vị trí đã thay đổi. Không đăng tải hoặc gửi thông báo.
 ```
 
-Kiểm tra Diff rồi mới chấp nhận. Liên quan: [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
+Dùng chế độ xem diff của client hiện tại hoặc trình soạn thảo để đối chiếu từng dòng với bản gốc. Bước này chỉ yêu cầu một thay đổi nhỏ, không cần thêm quy trình “lập kế hoạch trước rồi xác nhận từng bước”.
 
-## Trọng tâm luyện
+## Điều kiện hoàn thành
 
-Ở đây chủ yếu xem ba việc:
+Chỉ notice.md thay đổi và phần thêm vào đúng một dòng chú thích; hai tệp còn lại giữ nguyên. So sánh với [kết quả bước hai](/downloads/first-project/references/step-2-notice.md). Chú thích có thể bị ẩn khi Markdown được hiển thị, nên hãy xem nội dung thô của tệp.
 
-- Chỉ định chỉ sửa tệp nào
-- Chỉ định không làm hành động phụ nào
-- Sau khi xong yêu cầu nó nói rõ thay đổi
+Nếu mô hình sửa nội dung cũ, hãy khôi phục riêng notice.md từ bản gốc trong `starter` rồi làm lại bước này. Chỉ khôi phục tệp thực hành này, không đặt lại toàn bộ dự án. Xem [Hoàn tác và khôi phục](/vi/guide/getting-started/undo-and-recover/).
 
-Ba việc này hợp lại chính là năng lực «chỉnh sửa có kiểm soát» cơ bản nhất.
-
-## Hiểu nhầm thường gặp
-
-### 1. Chỉ sửa một tệp nhỏ chẳng có ý nghĩa
-
-Phạm vi càng nhỏ, bạn càng dễ thấy nó có vượt ranh giới không.
-
-### 2. Đã viết tên tệp thì chắc chắn nó không đụng chỗ khác
-
-Cũng không thể nghĩ hoàn toàn như vậy.
-
-Vì vậy phía sau còn phải phối hợp kiểm tra Diff.
-
-Lần đầu đụng tệp, trọng tâm không phải sửa nhiều, mà để ranh giới thay đổi rõ và dễ kiểm tra.
-
-Bước tiếp: [Giao Tác vụ rõ ràng](/vi/guide/learning-paths/beginner/03-give-clear-tasks/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp/thư mục, kiểm tra kết quả và lộ trình người mới đã kiểm chứng trong sổ tay; nội dung giới hạn ở phương pháp luyện ổn định «làm một lần chỉnh sửa có kiểm soát trong phạm vi rõ».  
-**Kiểm chứng gần nhất:** 2026-07-26
+[Gói thực hành và hướng dẫn chuẩn bị](/vi/guide/learning-paths/beginner/)

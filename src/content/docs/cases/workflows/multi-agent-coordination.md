@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "已按 OpenAI Developers 当前关于 multi-agent / subagents 的公开说明，以及本手册已核验的子 Agent、交接恢复与并行工作相关章节交叉复核；页面内容限定为“何时拆分、如何隔离边界、如何人工汇总验收”的稳定方法，不把当前 beta 或 UI 入口写成固定契约。"
+  checkedAt: "2026-07-26"
 title: 多 Agent 协作
 description: 并行探索、分工执行与合并结果——何时拆、如何验收。
 ---
@@ -54,10 +59,3 @@ Agent 2：方案 B 的优缺点与工作量
 
 - 并行三个 Agent 改 `package.json`
 - 无汇总步骤，不知道听谁的结论
-
----
-
-**状态：** verified  
-**适用产品：** App / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前关于 multi-agent / subagents 的公开说明，以及本手册已核验的子 Agent、交接恢复与并行工作相关章节交叉复核；页面内容限定为“何时拆分、如何隔离边界、如何人工汇总验收”的稳定方法，不把当前 beta 或 UI 入口写成固定契约。  
-**最近核验：** 2026-07-26

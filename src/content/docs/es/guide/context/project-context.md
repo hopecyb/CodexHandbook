@@ -3,7 +3,7 @@ title: Contexto del proyecto
 description: Descripción del proyecto y trasfondo a nivel de directorio.
 locale: es
 source_locale: zh-CN
-source_revision: 4e1818a
+source_revision: fb3eb50
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -4,7 +4,7 @@ title: codex exec
 description: Non-interactive execution entry—dispatch a complete task once in scripts and CI.
 locale: en
 source_locale: zh-CN
-source_revision: 124836c
+source_revision: 6d7c481
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

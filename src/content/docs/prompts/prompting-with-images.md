@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "已按 OpenAI 官方图像输入与文件上传资料复查本页结构、场景和注意事项；正文不再依赖非官方场景来源，且未保留需要逐版本核对的具体界面细节。"
+  checkedAt: "2026-07-26"
 title: 图像提示
 description: 给 Codex 截图、设计稿、白板图时，怎样提问更容易得到可执行结果。
 ---
@@ -179,9 +184,3 @@ description: 给 Codex 截图、设计稿、白板图时，怎样提问更容易
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**状态：** verified  
-**适用产品：** App / Cloud  
-**核验依据：** 已按 OpenAI 官方图像输入与文件上传资料复查本页结构、场景和注意事项；正文不再依赖非官方场景来源，且未保留需要逐版本核对的具体界面细节。  
-**最近核验：** 2026-07-26

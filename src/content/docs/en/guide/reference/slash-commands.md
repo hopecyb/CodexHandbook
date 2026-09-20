@@ -3,7 +3,7 @@ title: Slash commands and shortcuts
 description: A learning-oriented reference for slash commands and $ Skill invocation, not a complete parameter manual.
 locale: en
 source_locale: zh-CN
-source_revision: 9debf5c
+source_revision: a34c90f
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Quản lý tác vụ dài
 description: Tác vụ lớn xuyên nhiều giờ hoặc nhiều phiên — điểm kiểm tra, nén, ủy thác và điều kiện thoát.
 locale: vi
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

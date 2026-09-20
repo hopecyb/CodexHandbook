@@ -1,77 +1,73 @@
 ---
-title:  Instalación e interfaz
-description:  Principales zonas de la interfaz tras instalar la App de escritorio.
+title: Instalación y primeros pasos
+description: Conoce proyectos, conversaciones, Codex y la revisión en la aplicación de escritorio de ChatGPT.
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: d61c2fa
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: "080436d"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
 
-This chapter is for readers opening the ChatGPT desktop App for the first time. The goal is not to memorize every button. It is to complete one **reviewable, verifiable small task**.
+Este capítulo está dirigido a quienes abren por primera vez la aplicación de escritorio de ChatGPT. El objetivo no es memorizar todos los botones, sino completar **una tarea pequeña que se pueda revisar y verificar**.
 
-For installation and sign-in, see [Install the desktop App](/es/guide/getting-started/install-desktop-app/). The official App is currently available for macOS, Windows, and Linux. After signing in, you can start a chat, create a project, or open a local folder.
+Para instalar la aplicación e iniciar sesión, consulta [Instalar la aplicación de escritorio](/es/guide/getting-started/install-desktop-app/). La versión oficial está disponible actualmente para macOS, Windows y Linux. Tras iniciar sesión, puedes abrir una conversación, crear un proyecto o abrir una carpeta local.
 
-## Three objects to recognize first
+## Tres elementos que debes conocer primero
 
-| Object | Purpose | First step for beginners |
+| Elemento | Para qué sirve | Primer paso para principiantes |
 |---|---|---|
-| Project or folder | Provides files and a working directory to the chat | Open a practice repository, not a production directory |
-| Chat | Keeps the goal, context, progress, and result | Use one chat for one clear goal |
-| Codex | Reads, changes, and verifies project content | Start with a low-risk change that is easy to check |
+| Proyecto o carpeta | Proporciona archivos y un directorio de trabajo a la conversación | Abrir un repositorio de práctica, no un directorio de producción |
+| Conversación | Conserva el objetivo, el contexto, el progreso y el resultado | Usar una conversación para cada objetivo claro |
+| Codex | Lee, modifica y verifica el contenido del proyecto | Empezar con un cambio pequeño, de bajo riesgo y fácil de comprobar |
 
-The interface will continue to evolve, but these objects are more stable than the location of any particular button.
+La interfaz seguirá cambiando, pero estos tres elementos son más estables que la posición de un botón concreto.
 
-## Complete your first real task
+## Completa tu primera tarea real
 
-Prepare an existing Git repository. First confirm that it does not contain unrecorded changes you need to preserve. Open the folder in the App and start a Codex chat.
+Prepara un repositorio Git existente. Primero comprueba que no contiene cambios sin registrar que necesites conservar. Después abre esa carpeta en la aplicación y empieza una conversación con Codex.
 
-Enter:
+Escribe:
 
 ```text
-Read README.md first and modify only its "Run locally" section:
-1. Fix the startup command that no longer works.
-2. Leave every other section unchanged.
-3. Show the diff and run any verification command documented in the project.
-4. If verification is not possible, explain why. Do not claim completion.
+Lee primero README.md y modifica solo la sección «Ejecución local»:
+1. Corrige el comando de inicio que ha dejado de funcionar.
+2. Conserva intactas las demás secciones.
+3. Muestra el diff y ejecuta los comandos de verificación documentados
+   que puedan ejecutarse.
+4. Si no puedes verificarlo, explica por qué; no afirmes que está terminado.
 ```
 
-When Codex finishes, do not rely only on the chat summary. Check:
+Cuando termine, no te quedes solo con el resumen de la conversación. Comprueba también:
 
-1. whether the review pane contains only the expected files;
-2. whether any deletion is justified;
-3. whether the terminal output actually supports the claim that verification passed;
-4. whether `git diff` matches the requested scope.
+1. si el panel de revisión muestra únicamente los archivos esperados;
+2. si las eliminaciones de contenido están justificadas;
+3. si la salida del terminal respalda realmente la conclusión de que la verificación pasó;
+4. si `git diff` coincide con el alcance de la tarea.
 
-## Choosing Chat, Work, or Codex
+## Cómo elegir entre Chat, Work y Codex
 
-- Use Chat for knowledge questions or idea exploration.
-- Use Work for general work that spans files and tools.
-- Use Codex when the task requires understanding, modifying, and testing a repository.
+- Para preguntar algo o comentar una idea, usa Chat.
+- Para tareas generales que abarcan archivos y herramientas, usa Work.
+- Para comprender, modificar y probar un repositorio, usa Codex.
 
-Use Quick chat for a temporary question that does not need lasting context. Keep work that requires continuity in a regular chat or project.
+Si solo quieres hacer una pregunta puntual que no necesita contexto duradero, puedes usar Quick chat. Mantén el trabajo que requiere seguimiento en una conversación normal o en un proyecto.
 
-## What to check when something fails
+## Qué comprobar primero si algo falla
 
-- **Files are missing:** confirm that the correct folder is open and file access was not denied.
-- **A command cannot run:** confirm dependencies are installed, then inspect the first meaningful terminal error.
-- **Old changes are mixed in:** use `git status` to separate changes that existed before the task from current work.
-- **The interface differs from this page:** navigate by logical objects—project/folder, chat, review, and terminal—instead of relying on a fixed screenshot layout.
+- **No ves los archivos**: confirma que abriste la carpeta correcta y que no se rechazó el acceso necesario.
+- **No se puede ejecutar un comando**: confirma que las dependencias están instaladas y consulta el primer error real del terminal.
+- **Se mezclan cambios anteriores**: usa `git status` para distinguir los cambios previos a la tarea de los nuevos.
+- **La interfaz no coincide con esta página**: busca los elementos lógicos «proyecto/carpeta, conversación, revisión y terminal», sin depender de posiciones fijas en una captura de pantalla.
 
-Next, read [Diffs, comments, and review](/es/guide/desktop-app/diffs-comments-and-review/) and [Integrated terminal](/es/guide/desktop-app/integrated-terminal/).
+Después, lee [Diferencias, comentarios y revisión](/es/guide/desktop-app/diffs-comments-and-review/) y [Terminal integrado](/es/guide/desktop-app/integrated-terminal/).
 
-## Official sources
+## Fuentes oficiales
 
-- [ChatGPT desktop App](https://learn.chatgpt.com/docs/app)
-- [Code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26
+- [Aplicación de escritorio de ChatGPT](https://learn.chatgpt.com/docs/app)
+- [Revisión de código](https://learn.chatgpt.com/docs/code-review)

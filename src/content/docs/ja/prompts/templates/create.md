@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは作成系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 作成テンプレート
 description: 機能・原稿・成果物をゼロから作る。
 locale: ja
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 作成テンプレート
 
 ゼロから作るタスクでよくある問題は次の2つです。
 
@@ -65,10 +69,3 @@ reviewed_at: 2026-08-26
 
 - [仕様駆動の作業](/ja/cases/workflows/specification-driven-work/)
 - [完了基準の定義](/ja/prompts/define-done/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは作成系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

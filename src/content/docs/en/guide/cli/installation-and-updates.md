@@ -3,7 +3,7 @@ title: CLI installation and updates
 description: Install, upgrade, and confirm the active version.
 locale: en
 source_locale: zh-CN
-source_revision: 6b8ceaf
+source_revision: be3f2c4
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

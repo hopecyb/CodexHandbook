@@ -3,7 +3,7 @@ title: Comandos e atalhos
 description: Subcomandos da CLI, operações na sessão e hábitos de teclado — explicação orientada ao produto; parâmetros completos na zona de referência.
 locale: pt
 source_locale: zh-CN
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -3,7 +3,7 @@ title: Computer Use
 description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
 locale: en
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

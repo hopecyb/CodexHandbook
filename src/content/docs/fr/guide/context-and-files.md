@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Page de navigation et méthodologie ; cadre selon lequel exigences de Tâche, matériel fichier, règles de projet et historique de conversation forment le Contexte, recoupé avec les chapitres actuels sur le Contexte et la gestion des fichiers — sans dépendre de détails d'interface volatils."
+  checkedAt: "2026-07-26"
 title: Contexte et fichiers
 description: Gérer les projets, les fichiers, le Contexte de conversation et les types d'entrée courants.
 sidebar:
   order: 15
 locale: fr
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Contexte et fichiers
 
 Le **Contexte** est ce que Codex peut voir, référencer et traiter à cet instant.
 
@@ -80,10 +84,3 @@ Pas besoin de tout lire d'un coup :
 3. Lisez les chapitres par type de fichier correspondant à ce sur quoi vous travaillez
 
 Le Contexte est la pile d'informations dont Codex juge — bien le préparer rend les résultats plus faciles à obtenir.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Page de navigation et méthodologie ; cadre selon lequel exigences de Tâche, matériel fichier, règles de projet et historique de conversation forment le Contexte, recoupé avec les chapitres actuels sur le Contexte et la gestion des fichiers — sans dépendre de détails d'interface volatils.  
-**Dernière vérification :** 2026-07-26

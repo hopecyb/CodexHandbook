@@ -1,17 +1,21 @@
 ---
+prev: false
+next:
+  link: /en/skills/overview/
+  label: Skills overview
 title: Skills
 description: Learn to use, write, test, and maintain Codex Skills.
 locale: en
 source_locale: zh-CN
-source_revision: bd382e8
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: dd408f5
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Skills
 
 Skills package stable methods, reference material, templates, and scripts into reusable capabilities.
+
+Its value goes beyond giving Codex another capability: it gives a workflow clear inputs, outputs, permission boundaries, and ways to test it.
 
 ## Recommended order
 
@@ -25,3 +29,9 @@ Skills package stable methods, reference material, templates, and scripts into r
 8. [Hooks](/en/skills/hooks/) · [MCP](/en/skills/mcp/) · [Plugins](/en/skills/plugins/) · [Automations](/en/skills/automations/)
 9. [Security and versioning](/en/skills/security/)
 10. Browse [Skill examples](/en/skills/examples/)
+
+## Takeaway resources
+
+- [Skill anatomy](/en/skills/skill-anatomy/): Defines instructions, trigger conditions, workflow, and resource boundaries.
+- [Skill examples](/en/skills/examples/): Examples for writing, research, review, automation, and other scenarios.
+- [Security and versioning](/en/skills/security/): Check permissions, external inputs, and maintenance responsibilities before sharing or extending a Skill.

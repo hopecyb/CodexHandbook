@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help 《Skills in ChatGPT》는 Skill이 재사용·공유 가능한 workflow임을 확인합니다. 현재 Codex 런타임도 스킬 이름과 설명으로 매칭합니다. 이 페이지는 주로 선택 원칙이며, 자주 바뀌는 UI에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 언제 Skills를 쓰는가
 description: 작업을 Skill로 묶을지 판단하고, 슬래시 명령·MCP와의 역할을 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 �
 
 무엇이든 Skill로 만들면 점점 무거워지고, 정리할 것을 정리하지 않으면 같은 말을 수동으로 계속 반복하게 됩니다. 여기서는 언제 절차를 고정할지 판단하는 데 초점을 둡니다.
 
-# 언제 Skills를 쓰는가
 
 ## Skill로 묶기에 적합한 경우
 
@@ -81,9 +85,3 @@ Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 �
 Skill은 「반복되고, 일관성이 필요하며, 매번 다시 설명하고 싶지 않은」 절차를 정리하기에 더 적합합니다.
 
 확장 방식 선택은 [확장 방식 고르기](/ko/skills/choosing-an-extension-method/)를 참고하세요. 워크플로 정리는 [절차를 Skill로 바꾸기](/ko/cases/workflows/turn-a-workflow-into-a-skill/)를 참고하세요.
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Help 《Skills in ChatGPT》는 Skill이 재사용·공유 가능한 workflow임을 확인합니다. 현재 Codex 런타임도 스킬 이름과 설명으로 매칭합니다. 이 페이지는 주로 선택 원칙이며, 자주 바뀌는 UI에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: 通知与活动视图
 description: 配置任务完成、权限请求和等待回复的提醒。
 sidebar:
@@ -41,11 +45,3 @@ CLI 与 IDE 的通知机制不同：IDE 没有独立的通知设置；CLI 可通
 
 - [通知](https://learn.chatgpt.com/docs/notifications)
 - [桌面应用设置](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**最近核验：** 2026-08-26

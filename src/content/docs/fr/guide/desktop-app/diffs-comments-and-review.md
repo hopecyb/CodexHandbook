@@ -3,7 +3,7 @@ title: Diffs, commentaires et révision
 description: Vérifiez les modifications réelles et laissez des commentaires ligne par ligne dans le volet de révision avant tout commit ou push.
 locale: fr
 source_locale: zh-CN
-source_revision: 3efee20
+source_revision: 32ee40c
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

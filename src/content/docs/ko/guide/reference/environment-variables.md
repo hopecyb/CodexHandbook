@@ -3,7 +3,7 @@ title: 환경 변수
 description: Codex 관련 환경 변수의 용도, 계층, 보안——설정 참고의 보완 색인입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 603ee7b
+source_revision: 58fd37b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

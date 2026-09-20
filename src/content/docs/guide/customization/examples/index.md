@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本仓库当前 customization 示例分组与入口页结构复核；本页仅承担“示例导航与使用方式说明”，不包含易变的产品参数或版本行为。"
+  checkedAt: "2026-07-26"
 title: 示例
 description: 从真实例子理解配置与 AGENTS.md 应该怎么写，而不是只看抽象原则。
 ---
@@ -18,10 +23,3 @@ description: 从真实例子理解配置与 AGENTS.md 应该怎么写，而不�
 - 你想先看一个真实样板，再改成自己项目的版本
 
 示例页更适合拿来参考思路，不适合直接照抄。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本仓库当前 customization 示例分组与入口页结构复核；本页仅承担“示例导航与使用方式说明”，不包含易变的产品参数或版本行为。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: Automatização de revisão de código
 description: Ligar a revisão do Codex a CI ou ao fluxo de PR — Prompt, Permissões e portão humano.
 locale: pt
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

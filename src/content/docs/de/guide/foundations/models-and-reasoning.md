@@ -3,10 +3,9 @@ title: Modelle und Reasoning
 description: "Worauf du bei Modellwahl und Reasoning-Intensität achten solltest."
 locale: de
 source_locale: zh-CN
-source_revision: 001ea32
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0cbc9dc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 90
 ---
@@ -15,7 +14,7 @@ Verfügbare Modelle und Stufen für „Reasoning / Denken“ ändern sich mit de
 
 - **Aufgabenschwierigkeit**: einfache Umformulierung vs. Architekturentscheidung über viele Dateien
 - **Latenz und Kosten**: Höhere Reasoning-Intensität ist meist langsamer und teurer
-- **Überprüfbarkeit**: Je schwieriger die Aufgabe, desto stärker Plan und Tests erzwingen
+- **Überprüfbarkeit**: Komplexe Aufgaben brauchen klare Abnahmekriterien sowie Planung und Prüfung nach Bedarf.
 
 Beim ersten Kontakt mit „Modell“, „Reasoning-Intensität“, „Denk-Stufe“ fragen viele: Ist höher immer besser?
 
@@ -38,11 +37,7 @@ Geht es nur um einen Satz Copy oder einen kleinen Absatz, kostet zu hohe Reasoni
 
 ### 2. Stärkeres Reasoning = weniger Überprüfung nötig?
 
-Je komplexer die Aufgabe, desto eher solltest du:
-
-- Zuerst einen Plan verlangen
-- Tests laufen lassen
-- Den Diff ansehen
+Passe die Prüfung an das Ergebnis an: Bei Code Tests und Diff ansehen, bei Artikeln Aussagen mit Quellen abgleichen und bei Tabellen die Berechnungsregeln prüfen. Plane zuerst, wenn verschiedene Wege gegeneinander abgewogen werden müssen. Eine Pause nach jedem Schritt ist nicht die Voreinstellung.
 
 ### 3. Modellwahl ist nur etwas für Experten?
 
@@ -62,9 +57,4 @@ Wichtiger ist die Frage: Lohnt es sich diesmal, für „etwas mehr Nachdenken“
 
 Dieses Handbook bindet keinen Modell-Marketingnamen. Maßgeblich sind die aktuelle Liste in deinem Client und [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Aktuelle OpenAI-Modelle-Dokumentation und Codex-/Entwickler-Einstiege behandeln Modellwahl sowie Speed/Kosten und Fähigkeitsunterschiede weiterhin als konfigurierbar; diese Seite bindet keine konkreten Modellnamen oder festen Stufen und behält nur das stabile Auswahlprinzip „nach Komplexität, Latenzkosten und Überprüfbarkeit abwägen“.  
-**Zuletzt überprüft:** 2026-07-26
+Wie du diese Entscheidung konkret protokollierst, zeigt [Nutzung, Zeit und Modellwahl](/guide/quality/usage-time-and-model-choice/). Die derzeit nur auf Chinesisch verfügbare Seite trennt Abonnementkontingent, API-Kosten, Wartezeit und menschliche Nacharbeit.

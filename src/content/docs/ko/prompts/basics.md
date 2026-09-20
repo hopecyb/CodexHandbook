@@ -3,7 +3,7 @@ title: 프롬프트 기초
 description: 좋은 프롬프트의 기본 구성 요소입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b2a486e
+source_revision: eb86b2a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

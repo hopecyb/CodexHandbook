@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers' current Codex use cases still include \"Review GitHub pull requests,\" emphasizing catching regressions and potential issues before human review; this page only requires structured diff review with P0/P1 and file paths—not dependent on a specific UI or fixed command."
+  checkedAt: "2026-07-26"
 title: Review a PR
 description: Use Codex for structured diff review before merge.
 locale: en
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Review a PR
 
 ## Meta information
 
@@ -44,10 +52,3 @@ Output checklist with P0/P1, include file paths.
 
 - [Review template](/en/prompts/templates/review/)
 - [Review before merge](/en/cases/workflows/review-before-merge/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Review GitHub pull requests," emphasizing catching regressions and potential issues before human review; this page only requires structured diff review with P0/P1 and file paths—not dependent on a specific UI or fixed command.

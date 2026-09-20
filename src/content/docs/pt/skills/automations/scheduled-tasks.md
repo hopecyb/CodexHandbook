@@ -1,149 +1,142 @@
 ---
-title: Tarefas agendadas e em segundo plano
-description: Automations — rode o Codex sem supervisão sob triggers; desenhe Aprovação e condições de saída.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / aplicação de ambiente de trabalho; CLI e IDE para preparação e testes"
+  checkedAt: "2026-08-26"
+title: Guia completo de tarefas agendadas
+description: Escolher tarefas independentes ou dentro de uma conversa e configurar projeto local, worktree, permissões, prompt e revisão.
 locale: pt
 source_locale: zh-CN
-source_revision: 7b79596
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: fa792dc
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
+A parte realmente difícil de uma tarefa agendada não é escolher a hora. É garantir que cada execução sem supervisão tem dados de entrada estáveis, permissões restritas, resultados fáceis de rever e condições de paragem.
 
-The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
+![Ciclo seguro da verificação manual à execução agendada, revisão humana e ajuste](/diagrams/scheduled-task-safety-loop-pt.svg)
 
-![Safety loop from manual verification to scheduling, human review, and adjustment](/diagrams/scheduled-task-safety-loop-en.svg)
+## A quem se destina
 
-## Who it is for
+- Pessoas que querem produzir relatórios diários ou semanais, verificar documentos ou acompanhar PR.
+- Programadores que precisam de executar manutenção periódica num projeto local ou num worktree isolado.
+- Responsáveis que avaliam permissões, tratamento de falhas e Skills partilhados pela equipa.
 
-- Individuals producing daily or weekly reports, checking docs, or following PRs.
-- Developers running maintenance against a local project or isolated worktree.
-- Maintainers reviewing permissions, failure handling, and shared Skills.
+## Limites de suporte
 
-## Support boundaries
-
-| Surface | Capability | Constraint |
+| Ambiente | O que permite fazer | Limite principal |
 |---|---|---|
-| ChatGPT Web | Create, manage, inspect runs; use uploads, connected tools, Skills, Plugins | Cannot directly access local folders |
-| ChatGPT desktop App | Create and manage; select local project or Git worktree | Computer awake, App running, project present |
-| Codex CLI | Prepare and manually test prompts, Skills, scripts | No Scheduled management UI |
-| IDE integration | Verify commands and edits in workspace | No Scheduled management UI |
+| ChatGPT Web | Criar e gerir tarefas, consultar execuções; usar ficheiros carregados, ferramentas ligadas, Skills e Plugins | Não acede diretamente a pastas do computador local |
+| Aplicação de ambiente de trabalho ChatGPT | Criar e gerir tarefas; escolher um projeto local ou Git worktree | Tarefas com ficheiros locais exigem computador ligado, aplicação em execução e projeto existente |
+| Codex CLI | Preparar e testar manualmente prompts, Skills e scripts | Não tem interface de gestão Scheduled |
+| Extensão IDE | Verificar comandos e alterações no workspace | Não tem interface de gestão Scheduled |
 
-## 1. Standalone or in-chat
+## 1. Escolher uma tarefa independente ou dentro de uma conversa
 
-### Standalone Scheduled task
+### Scheduled task independente
 
-Each run starts from the saved prompt and appears separately in Scheduled. Use for independent reports and health checks; one task may cover several projects.
+Cada execução começa com o prompt guardado e aparece como uma execução separada em Scheduled. É adequada para relatórios diários ou semanais e verificações de estado independentes; uma tarefa pode abranger vários projetos.
 
-### In-chat Scheduled task
+### Scheduled task dentro de uma conversa
 
-Return to one chat on schedule and retain context. Use for polling long work, following a PR, or continuing research.
+Regressa à mesma conversa segundo o horário definido e conserva o contexto existente. É adequada para verificar periodicamente trabalhos longos, acompanhar o estado de um PR, continuar uma investigação ou manter discussões anteriores.
 
-Choose standalone when each run should restart; choose in-chat when one question needs continuity.
+Critério de escolha: se cada execução deve «começar de novo», escolha uma tarefa independente; se precisa de continuar o contexto do mesmo problema, escolha uma tarefa dentro da conversa.
 
-## 2. Choose material
+## 2. Escolher os materiais da execução
 
-### Web
+### Executar na Web
 
-Put durable instructions in the prompt or Skill and provide uploads, a Project, or connected services. “Read latest.csv from my desktop” cannot work on Web.
+Coloque as instruções duradouras no prompt da tarefa ou num Skill e disponibilize o material necessário em ficheiros carregados, num Project ou em serviços ligados. Não escreva «ler latest.csv no meu ambiente de trabalho»: a Web não acede diretamente a caminhos locais.
 
-### Local project in the desktop App
+### Usar um projeto local na aplicação de ambiente de trabalho
 
-For a Git repository:
+Num repositório Git, pode escolher:
 
-- **Local project:** work in the primary checkout, potentially touching open edits.
-- **Dedicated worktree:** isolate background edits from unfinished work.
+- **Projeto local**: trabalha diretamente no checkout principal e pode tocar em ficheiros que está a editar.
+- **Worktree dedicado**: isola as alterações em segundo plano do trabalho ainda por concluir; é adequado para tarefas que modificam ficheiros.
 
-Non-Git projects run directly in their directory. Archive unneeded high-frequency runs so worktrees do not accumulate.
+Projetos que não usam Git são executados diretamente na pasta do projeto. Tarefas frequentes em worktrees podem acumular árvores de trabalho. Arquive execuções que já não são necessárias para evitar manter muitos worktrees sem intenção.
 
-## 3. Verify manually first
+## 3. Verificar primeiro manualmente
 
-Run the identical prompt, model, reasoning effort, and tools in a normal chat. Confirm:
+Execute numa conversa normal exatamente o mesmo prompt, modelo, nível de raciocínio e ferramentas. Confirme pelo menos que:
 
-- inputs remain clear without live explanation;
-- no-change exits quietly;
-- output is quickly reviewable;
-- commands, Skills, and connected tools work;
-- missing access or material causes an explicit stop, not guessing.
+- os dados de entrada continuam claros sem explicações no momento da execução;
+- quando não há alterações, a tarefa termina em silêncio;
+- uma pessoa consegue rever rapidamente o resultado;
+- comandos, Skills e ferramentas ligadas funcionam;
+- na falta de permissões ou materiais, a tarefa pára e explica o motivo em vez de adivinhar.
 
-Inspect the first scheduled runs before changing prompt or frequency.
+Inspecione as primeiras execuções agendadas antes de ajustar o prompt ou a frequência.
 
-## 4. Reusable task prompt
+## 4. Um prompt de tarefa para adaptar
 
 ```text
-Create a standalone Scheduled task:
+Crie uma Scheduled task independente:
 
-Name: Weekly documentation broken-link check
-Time: Monday 09:00 in the current timezone
-Location: dedicated worktree for the current Git project
+Nome: Verificação semanal de ligações quebradas na documentação
+Hora: todas as segundas-feiras às 09:00, no fuso horário atual
+Local de execução: worktree dedicado do projeto Git atual
 
-Every run:
-1. Read only docs/, src/content/docs/, examples/, and public/diagrams/.
-2. Run pnpm check:links.
-3. If it passes, report file and link counts; do not edit.
-4. If it fails, list source file, broken target, and suggested fix; do not fix.
-5. No internet, installs, commit, push, or PR.
-6. If command/dependency is missing or result uncertain, stop and name the
-   exact item requiring human attention.
+Em cada execução:
+1. Leia apenas docs/, src/content/docs/, examples/ e public/diagrams/.
+2. Execute pnpm check:links.
+3. Se a verificação passar, indique apenas o número de ficheiros e ligações verificados; não altere ficheiros.
+4. Se falhar, liste «ficheiro de origem, destino quebrado, correção sugerida»; não corrija automaticamente as ligações.
+5. Não aceda à Internet, não instale dependências, não faça commit nem push e não crie PR.
+6. Se o comando não existir, faltar uma dependência ou o resultado for incerto, pare e identifique exatamente o que requer intervenção humana.
 
-Completion: end after one reviewable report; do not retry.
+Condição de conclusão: termine esta execução após produzir um relatório passível de revisão; não repita a tentativa.
 ```
 
-This defines time, project, read scope, command, branches, prohibitions, and stop condition. Scheduling only retriggers the task; it does not replace its specification.
+O prompt explicita horário, projeto, âmbito de leitura, comando, caminhos de sucesso e falha, ações proibidas e condição de saída. O agendamento apenas volta a iniciar a tarefa; não substitui a sua descrição.
 
-## 5. Permissions and review
+## 5. Permissões e revisão humana
 
-Scheduled tasks run unattended with default sandbox settings.
+As tarefas agendadas correm sem supervisão e usam as definições predefinidas do sandbox.
 
-| Sandbox | Common result |
+| Modo de sandbox | Resultado habitual |
 |---|---|
-| read-only | File edits, network, and local App control fail |
-| workspace-write | Workspace writes work; outside writes, network, and App control fail by default |
+| read-only | Falham as chamadas para modificar ficheiros, aceder à rede ou controlar aplicações locais |
+| workspace-write | Pode escrever no workspace; por predefinição falham a escrita fora dele, o acesso à rede e o controlo de aplicações |
 
-Start with the narrowest mode that works. Add explicit allowlists rather than granting broad access after one failure.
+Comece com as permissões mais restritas que permitem concluir a tarefa. Se precisar de rede ou de acesso mais amplo a ficheiros, defina uma allowlist explícita. Não atribua permissões elevadas a toda a tarefa apenas para eliminar uma falha.
 
-Keep human review for:
+Convém manter revisão humana para:
 
-- sending or publishing externally;
-- production-state changes;
-- merging PRs or pushing main;
-- bulk deletion, migration, or permission changes;
-- unexpected diffs or failed tests.
+- enviar mensagens ou publicar conteúdo externamente;
+- alterar o estado de produção;
+- juntar PR ou fazer push para o branch principal;
+- eliminar ou migrar em massa, ou alterar permissões;
+- diff fora do âmbito esperado ou testes falhados.
 
-## 6. No-change, failure, and stop
+## 6. Definir «sem alterações», falha e paragem
 
-A durable task defines:
+Uma tarefa duradoura deve definir três percursos:
 
-1. **Finding:** evidence, severity, next step.
-2. **No change:** concise scope report without invented issues.
-3. **Unable:** missing material or access, then stop for a person.
+1. **Há resultados**: apresenta provas, gravidade e próximo passo.
+2. **Sem alterações**: comunica resumidamente o âmbito da verificação sem inventar problemas.
+3. **Não é possível concluir**: explica quais os materiais ou permissões em falta, pára e espera por uma pessoa.
 
-For in-chat polling, add termination such as PR merged/closed, three identical failures, or approval required.
+Para verificações periódicas dentro de uma conversa, defina também uma condição de fim, por exemplo: «parar quando o PR for integrado ou fechado, houver três erros iguais consecutivos ou for necessária aprovação humana».
 
-## Scheduled is not event-driven CI
+## Uma Scheduled task não é CI orientada por eventos
 
-Use GitHub Actions, CI, webhooks, or Codex SDK when execution must follow a push, PR, or release event immediately. Minute-by-minute polling is not precise event triggering.
+Se a tarefa tiver de correr imediatamente após um `push`, a criação de um PR ou o fim de uma publicação, use um ponto de entrada orientado por eventos, como GitHub Actions, CI, webhook ou Codex SDK. Não trate uma «verificação a cada minuto» como um acionador de eventos preciso.
 
-## Acceptance checklist
+## Lista de verificação
 
-- [ ] Prompt passed completely in a normal chat.
-- [ ] Standalone or in-chat mode selected.
-- [ ] Web material or local project is available at runtime.
-- [ ] Default sandbox suffices, or extra access has a reason.
-- [ ] Finding, no-change, failure, and stop paths are explicit.
-- [ ] First three runs received human sampling.
-- [ ] Frequent worktrees have archive and cleanup policy.
-- [ ] Critical writes retain human confirmation.
+- [ ] O prompt foi executado até ao fim numa conversa normal.
+- [ ] Foi escolhida uma tarefa independente ou dentro de uma conversa.
+- [ ] Os materiais Web ou o projeto local estarão disponíveis na altura da execução.
+- [ ] O sandbox predefinido é suficiente; qualquer permissão adicional tem justificação explícita.
+- [ ] Foram definidos os percursos para resultados, ausência de alterações, falha e paragem.
+- [ ] Uma pessoa verificou por amostragem as três primeiras execuções.
+- [ ] Worktrees frequentes têm uma estratégia de arquivo e limpeza.
+- [ ] As escritas importantes continuam a exigir confirmação humana.
 
-## Official sources
+## Fontes oficiais
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test
-
-**Last verified:** 2026-08-26

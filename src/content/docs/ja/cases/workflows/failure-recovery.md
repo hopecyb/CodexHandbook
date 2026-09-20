@@ -3,7 +3,7 @@ title: 失敗からの回復
 description: タスクが逸脱、テストが赤、コンテキスト枯渇——安全にロールバックして続ける方法。
 locale: ja
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

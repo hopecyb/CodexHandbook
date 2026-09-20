@@ -3,7 +3,7 @@ title: デスクトップ App トラブルシューティング
 description: インストール、ログイン、タスク失敗の一般的な対処。
 locale: ja
 source_locale: zh-CN
-source_revision: ca74b6c
+source_revision: c298f9f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

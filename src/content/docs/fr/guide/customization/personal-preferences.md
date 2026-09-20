@@ -3,10 +3,9 @@ title: "Préférences personnelles"
 description: Configuration utilisateur, modèles par défaut et habitudes UI — sans polluer les conventions d'équipe dans le dépôt.
 locale: fr
 source_locale: zh-CN
-source_revision: e447e66
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: c381051
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
@@ -34,6 +33,16 @@ Si vous ne les séparez pas, vous obtenez plus tard :
 - Votre setup local semble fluide, mais les coéquipiers ne peuvent pas le reproduire
 - Vous croyez que les règles sont actives quand seule votre machine compense
 - Vous apportez des paramètres relaxés dans un projet plus sérieux
+
+## Ce qui convient aux préférences personnelles
+
+| Réglage | Exemple |
+|---|---|
+| Modèle et niveau de raisonnement par défaut | Performances de l'ordinateur et offre personnelle |
+| Thème, police et notifications | [Réglages](/fr/guide/desktop-app/settings/) de l'application de bureau |
+| Outils MCP personnels | Accès en lecture seule à une base locale, accordé avec prudence |
+| Chemin de la bibliothèque personnelle de Skills | À distinguer des Plugins de l'équipe |
+| Alias du terminal et dossier habituel de lancement de `codex` | Voir [Configuration de la CLI](/fr/guide/cli/configuration/) |
 
 ## Contenu d'équipe qui ne devrait pas vivre uniquement dans la couche personnelle
 

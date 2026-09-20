@@ -1,87 +1,77 @@
 ---
-title: Diagnóstico Cloud
-description: Índice de falhas habituais em ligação GitHub, ambiente, Secrets, saída à rede e PR.
+title: Solução de problemas do Cloud
+description: Localize falhas do Cloud nas camadas de repositório, setup, rede, Agent e entrega.
 locale: pt
 source_locale: zh-CN
-source_revision: 4ba9a4d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 019fac1
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
 ---
 
+Repetir uma tarefa no Cloud consome tempo novamente, mas não resolve automaticamente permissões, dependências ou configurações de rede ausentes. Primeiro, descubra em qual etapa ocorreu a falha.
 
-A Cloud retry consumes more time but does not add missing permissions, dependencies, or network configuration. Identify the failing stage first.
+## Diagnóstico em cinco camadas
 
-## Five-layer triage
-
-| Stage | Common symptom | First check |
+| Etapa | Sintomas comuns | Primeira verificação |
 |---|---|---|
-| Repository connection | Repository missing, 403, branch missing | GitHub authorization scope, organization policy, starting branch |
-| Container/setup | `command not found`, dependency installation failure | Pinned runtime, setup script, Secret |
-| Agent network | Setup downloads successfully, Agent `curl` fails | Agent access defaults to Off, allowlist, HTTP methods |
-| Agent execution | Wrong-scope edits, test command missing | Prompt scope, `AGENTS.md`, work log |
-| Delivery | Incomplete diff, unable to open a PR | Branch state, write access, protection rules |
+| Conexão com o repositório | Repositório ausente da lista, erro 403, branch inexistente | Escopo da autorização GitHub, política da organização, branch inicial |
+| Contêiner/setup | `command not found`, falha na instalação de dependências | Versão do ambiente de execução, setup script, Secret |
+| Rede do Agent | O setup consegue baixar arquivos, mas `curl` falha no Agent | Agent access desativado por padrão, allowlist, métodos HTTP |
+| Execução do Agent | Alterações fora do escopo, comando de teste inexistente | Escopo do prompt, `AGENTS.md`, registros de trabalho |
+| Entrega | Diff incompleto, PR não pode ser aberto | Estado da branch, permissão de escrita, regras de proteção |
 
-## Preserve evidence first
+## Guarde as evidências primeiro
 
-Record repository, starting commit, environment name, failure stage, first meaningful error, and complete command. Do not keep only “exit 1.”
+Registre repositório, commit inicial, nome do ambiente, etapa da falha, primeiro erro útil e comando completo. Não guarde apenas a mensagem final «exit 1».
 
 ```text
-Environment: api-node22
-Starting point: main@abc123
-Stage: setup
-Command: pnpm install --frozen-lockfile
-First error: ERR_PNPM_FETCH_401 ...
-Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured
+Ambiente: api-node22
+Ponto de partida: main@abc123
+Etapa: setup
+Comando: pnpm install --frozen-lockfile
+Primeiro erro: ERR_PNPM_FETCH_401 ...
+Diferença local: o ambiente local usa ~/.npmrc; o Cloud não tem NPM_TOKEN configurado
 ```
 
-This record points to a repair instead of forcing the next run to guess again.
+Esse registro aponta diretamente para a correção, sem exigir que a próxima tentativa comece com novas suposições.
 
-## Frequent failures
+## Problemas frequentes
 
-### Setup sees a Secret but the Agent does not
+### O Secret está disponível no setup, mas vazio no Agent
 
-This is intentional: Secrets are removed before the Agent phase. Put credential-dependent installation in setup. Do not convert the value to an ordinary environment variable to bypass the protection.
+Esse é o comportamento previsto: o Secret é removido antes da etapa do Agent. Faça a instalação que precisa de credenciais no setup. Não o transforme em uma variável de ambiente comum para contornar essa proteção.
 
-### Setup has internet but the Agent does not
+### O setup tem acesso à rede, mas o Agent não
 
-This is also the default. If the task truly requires Agent internet access, enable it for the environment, constrain domains and methods, and inspect the logs.
+Esse também é o comportamento padrão. Se a tarefa realmente exigir que o Agent acesse a internet, ative o acesso no ambiente, restrinja domínios e métodos HTTP e depois revise os logs.
 
-### Cached dependencies are stale
+### O cache mantém dependências antigas
 
-Changing setup, maintenance, variables, or Secrets invalidates the cache automatically. When repository changes make a cache incompatible, use **Reset cache** on the environment page. For a shared team environment, assess the impact on other users first.
+Alterações em setup, maintenance, variáveis ou secrets invalidam o cache automaticamente. Se uma mudança no próprio repositório o tornar incompatível, use Reset cache na página do ambiente. Em ambientes compartilhados, avalie antes o impacto sobre outras pessoas.
 
-### Local is green but Cloud is red
+### Funciona localmente, mas falha no Cloud
 
-Compare Node/Python versions, lockfiles, system dependencies, hidden local configuration, VPN or localhost services, and case-sensitive paths. Turn differences into explicit setup and repository rules.
+Compare versões de Node/Python, lockfile, dependências do sistema, configurações locais ocultas, serviços por VPN ou localhost e caminhos sensíveis a maiúsculas e minúsculas. Registre as diferenças explicitamente no setup e nas regras do repositório.
 
-### PR review did not run
+### A revisão do PR não foi acionada
 
-Confirm Cloud configuration for the repository, enabled Code review, the exact `@codex review` comment, and GitHub integration permissions. Automatic reviews must also be enabled separately.
+Confirme que o Cloud está configurado para o repositório, que Code review está ativado, que o comentário contém `@codex review` e que a integração GitHub tem as permissões necessárias. Reviews automáticos exigem ativação separada.
 
-## When to return local
+## Quando voltar ao ambiente local
 
-If a problem depends on a local service, or two consecutive runs are repairing the environment rather than business code, reproduce it locally first. Add the successful commands, versions, and tests to `AGENTS.md` or setup before delegating again.
+Se o problema depende de um serviço da sua máquina ou se duas tentativas consecutivas foram gastas corrigindo o ambiente, e não o código, faça primeiro uma reprodução mínima local. Depois registre o comando, as versões e os testes que funcionaram em `AGENTS.md` ou no setup antes de devolver a tarefa ao Cloud.
 
-## Acceptance after repair
+## Critérios de aceitação após resolver
 
-- [ ] The same environment runs repeatedly from a clean starting point.
-- [ ] The fix did not hide the problem with broader repository access or unrestricted network access.
-- [ ] Logs do not expose a Secret.
-- [ ] A person still reviews the result diff and tests.
+- [ ] A execução pode ser repetida no mesmo ambiente a partir de um ponto inicial limpo.
+- [ ] O problema não foi escondido com permissões mais amplas no repositório ou acesso irrestrito à rede.
+- [ ] Os logs não expõem Secrets.
+- [ ] O diff e os testes resultantes continuam sujeitos à revisão humana.
 
-## Official sources
+## Fontes oficiais
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

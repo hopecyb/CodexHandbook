@@ -3,7 +3,7 @@ title: Local và đám mây
 description: Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: c61d0ea
+source_revision: 1a0ea54
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

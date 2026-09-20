@@ -3,7 +3,7 @@ title: "Codes de sortie et retries"
 description: Interpréter succès et échec de codex exec dans les pipelines — quand retry vs fail fast.
 locale: fr
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

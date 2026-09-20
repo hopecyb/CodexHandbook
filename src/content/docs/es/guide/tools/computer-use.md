@@ -3,7 +3,7 @@ title: Computer Use
 description: Capacidad avanzada de operar la GUI mediante pantalla y dispositivos de entrada — escenarios, riesgos y aprobación.
 locale: es
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

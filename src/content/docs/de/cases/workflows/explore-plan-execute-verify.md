@@ -1,26 +1,30 @@
 ---
-title: Erkunden—Planen—Ausführen—Überprüfen
-description: "Der allgemeine Haupt-Workflow von Codex — vier Phasen-Prüfpunkte, stabiler als «alles in einem Schritt»."
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit den geprüften Handbuchseiten zu Planung, Diagnose, Definition of Done, Tests und AGENTS.md abgeglichen. Diese Seite behandelt den vierphasigen Ablauf der Zusammenarbeit und seine Prüfpunkte, ohne veränderliche Produktoptionen."
+  checkedAt: "2026-07-26"
+title: "Erkunden—Planen—Ausführen—Überprüfen"
+description: "Erkundung, Planung, Ausführung und Prüfung nach Umfang und Unsicherheit der Aufgabe zuschneiden und Entscheidungen benennen, auf die gewartet werden muss."
 locale: de
 source_locale: zh-CN
-source_revision: ac26bee
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: "4a95760"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Das ist der in diesem Handbuch empfohlene Standard-Workflow — von „noch unklar, wie“ bis „merge-fähig“.
+Dies ist die vom Handbuch empfohlene Art, Aufgaben zu organisieren – von „noch unklar, wie es geht“ bis „bereit zur Abnahme“. Vier Phasen bedeuten nicht vier Genehmigungen. Eine kleine Aufgabe mit klarem Umfang kann ohne Unterbrechung erledigt werden; nur wenn die Vorgehensweise offen ist oder eine nötige Berechtigung fehlt, muss auf eine Entscheidung gewartet werden. Beginnen Sie mit den [Aufgabenstufen](/de/prompts/ask-for-a-plan/).
 
 ## Überblick der vier Phasen
 
 ```text
-① Erkunden Explore   → Status, Umfang, Risiken klären
-② Planen Plan        → Schritte, Dateien, Akzeptanzkriterien (große Aufgaben brauchen deine Bestätigung)
-③ Ausführen Execute  → Code/Docs/Config ändern, in kleinen Schritten committen
-④ Überprüfen Verify  → Tests, Diff-Prüfung, Abgleich mit «Definition of Done»
+① Erkunden Explore   → Ist-Zustand, Umfang und Risiken klären
+② Planen Plan        → Schritte, Dateien, Akzeptanzkriterien und nötige Abwägungen
+③ Ausführen Execute  → Code/Dokumentation/Konfiguration im autorisierten Umfang ändern
+④ Überprüfen Verify  → Tests, Diff-Prüfung, Abgleich mit der Definition of Done
 ```
 
-① und ② nicht überspringen und direkt zu ③ gehen — das wird leicht zu „raten und reparieren“. Siehe [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/).
+Wenn der Ist-Zustand unklar ist, zuerst erkunden und planen, statt eine Korrektur zu erraten. Eine klar eingegrenzte Tippfehlerkorrektur braucht keine vier Interaktionen. Siehe [Erst diagnostizieren, dann korrigieren](/de/cases/workflows/diagnose-before-fixing/).
 
 ## ① Erkunden
 
@@ -46,17 +50,17 @@ Basierend auf der gerade erfolgten Erkundung einen Plan geben: Schrittnummern, b
 Vor meiner Antwort «Plan ausführen» keinen Code schreiben.
 ```
 
-Große oder riskante Änderungen brauchen zuerst Bestätigung. Bei kleinen Aufgaben kann man vereinbaren: „Pläne mit höchstens 3 Schritten dürfen automatisch ausgeführt werden“ — und das in [AGENTS.md](/de/guide/customization/agents-md/writing-effective-instructions/) festhalten.
+Die obige Aufforderung beschränkt die Aufgabe ausdrücklich auf einen Plan; daher muss die Ausführung warten. Wenn die Umsetzung bereits autorisiert ist, kann stattdessen ein kurzer Plan verlangt werden, gefolgt von fortlaufender Ausführung und Prüfung im vereinbarten Umfang. Ob eine Pause nötig ist, hängt von Autorisierung, erforderlichen Abwägungen und tatsächlichen Berechtigungen ab – nicht von der Zahl der Planschritte.
 
 ## ③ Ausführen
 
-**Ziel:** Änderungen klein und rückrollbar halten.
+**Ziel:** Änderungen klein und rückgängig machbar halten.
 
-- Pro Durchgang ein Teilziel
-- Bevorzugt Pfade, die Tests abdecken
-- Bei planfremden Problemen **zurück zu ②**, statt durchzudrücken
+- Jeweils auf ein Teilziel konzentrieren
+- Durch Tests abgedeckte Pfade bevorzugen
+- Bei gewöhnlichen Umsetzungsdetails den Plan aktualisieren und fortfahren; ändern sich Voraussetzungen oder Umfang, zu ② zurückkehren und prüfen, ob eine neue Entscheidung nötig ist
 
-Steuerungssatz: «Schritt 2 ausführen; bei Planänderung zuerst stoppen und erklären.»
+Leitformulierung: „Erledige den autorisierten Umfang weiter; falls er erweitert werden muss, erläutere die konkreten Folgen und Wahlmöglichkeiten.“
 
 ## ④ Überprüfen
 
@@ -72,12 +76,12 @@ Zugehörige Checklisten: [Done definieren](/de/prompts/define-done/) und [Tests 
 
 ## Nach Aufgabengröße zuschneiden
 
-| Größe | Erkunden | Planen | Ausführen | Überprüfen |
+| Umfang | Erkunden | Planen | Ausführen | Überprüfen |
 |---|---|---|---|---|
-| Typo-Fix | optional | 1 mündlicher Schritt | kurz | Lint |
-| Einzeldatei-Bug | leicht | 3–5 Schritte | mittel | Tests + Diff |
-| Modulübergreifendes Feature | Pflicht | schriftlicher Plan + Bestätigung | in Phasen | Volltests + Handtest |
-| Produktionsvorfall | Diagnose zuerst | Rollback-Plan zuerst | minimale Schritte | Monitoring + Retro |
+| Tippfehler | Zieltext prüfen | Kann implizit sein | Kurz | Diff prüfen und nach Projektregeln verifizieren |
+| Bug in einer Datei | Leicht | 3–5 Schritte | Mittel | Tests + Diff |
+| Modulübergreifende Funktion | Abhängigkeiten klären | Schriftlicher Plan; nötige Abwägungen klären | Im autorisierten Umfang schrittweise abschließen | Dem Umfang entsprechende Tests + manuelle Prüfung |
+| Produktionsvorfall | Erst diagnostizieren | Rücknahmeplan zuerst | Sehr kleine Schritte | Überwachung + Nachbesprechung |
 
 ## Mit der EPXV-Fallvorlage
 
@@ -88,10 +92,3 @@ Teams können die vier Phasen in die [Fallvorlage](/de/cases/use-cases/case-stud
 - Plan nur im Kopf, Ausführung driftet
 - Überprüfung nur als «sieht so aus, als liefe es»
 - Zu wenig Erkundung → falsches Modul geändert
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Seiten zu Planung, Diagnose, Definition of Done, Tests ausführen und `AGENTS.md`. Der Inhalt ist auf die vierphasige Kollaborations-Hauptkette und Prüfpunkte beschränkt und enthält keine volatilen Produktparameter oder Einstiegsdetails.  
-**Zuletzt geprüft:** 2026-07-26

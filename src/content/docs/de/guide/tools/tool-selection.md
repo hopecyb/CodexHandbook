@@ -3,7 +3,7 @@ title: Werkzeugwahl
 description: "Wann Terminal, Suche, Browser oder andere Werkzeuge."
 locale: de
 source_locale: zh-CN
-source_revision: 64967ca
+source_revision: 9fdb366
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Codex クライアントを選ぶ
 description: デスクトップ App、CLI、IDE、Cloud のどこから始めるかを最短で決めます。
 locale: ja
 source_locale: zh-CN
-source_revision: 960d5d3
+source_revision: d316380
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

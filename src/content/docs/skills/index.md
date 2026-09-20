@@ -1,9 +1,11 @@
 ---
+prev: false
+next:
+  link: /skills/overview/
+  label: Skills 概述
 title: Skills
 description: 学会使用、编写、测试和维护 Codex Skills。
 ---
-
-# Skills
 
 Skills 用来把稳定方法、参考资料、模板和脚本封装成可复用能力。它的价值不只是“让 Codex 多会一件事”，而是让一套工作流拥有清晰的输入、输出、权限边界和测试方法。
 

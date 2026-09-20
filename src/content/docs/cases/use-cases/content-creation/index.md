@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本仓库当前 content-creation 案例入口与相关内容产物/审查章节交叉复核；本页仅说明内容创作案例组关注的问题与入口。"
+  checkedAt: "2026-07-26"
 title: 内容创作
 description: 文档、文章与内容资产类案例入口，重点看审查、改写与产物验收。
 ---
@@ -16,10 +21,3 @@ description: 文档、文章与内容资产类案例入口，重点看审查、�
 - 多文件内容怎么分批修改
 - 文案改写怎么避免只会“扩写”
 - 构建、审查、复核怎样组成闭环
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本仓库当前 content-creation 案例入口与相关内容产物/审查章节交叉复核；本页仅说明内容创作案例组关注的问题与入口。  
-**最近核验：** 2026-07-26

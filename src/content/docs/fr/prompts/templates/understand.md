@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de compréhension ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de compréhension
 description: Construire une vision commune avant de modifier.
 locale: fr
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de compréhension
 
 Beaucoup de tâches bloquent faute de **compréhension partagée minimale**.
 
@@ -55,10 +59,3 @@ Le modèle sert à **resserrer** la prochaine tâche.
 
 - [Explorer — planifier — exécuter — vérifier](/fr/cases/workflows/explore-plan-execute-verify/)
 - [Cas : comprendre un dépôt](/fr/cases/understand-a-codebase/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de compréhension ; liens et structure revus ; pas de faits volatils produit.

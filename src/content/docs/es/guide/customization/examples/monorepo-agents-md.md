@@ -3,7 +3,7 @@ title: AGENTS.md en un monorepo
 description: Patrón de ejemplo para colocar instrucciones de proyecto, alcances y comandos de test en un único repositorio con varios paquetes.
 locale: es
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

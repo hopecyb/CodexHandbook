@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-Laufzeit nutzt weiterhin `SKILL.md` als Kern und erlaubt bei Bedarf Skripte und Referenzen; diese Seite fokussiert Verzeichnisrollen und bindet keine volatilen Produkteinstiege."
+  checkedAt: "2026-07-26"
 title: Skill-Aufbau
 description: Rollen von SKILL.md, references/, templates/ und scripts/ mit Beispielen.
 locale: de
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Beim ersten Blick auf ein Skill-Verzeichnis kennt man die Ordner oft, weiß aber nicht, warum sie so liegen.
@@ -15,7 +19,6 @@ Diese Seite zeigt, wie du Hauptablauf, lange Erklärungen, Vorlagen und Skripte 
 
 Das erleichtert Lesen, Ändern und Wiederverwenden und verhindert Chaos.
 
-# Skill-Aufbau
 
 ## Verzeichnisstruktur
 
@@ -36,6 +39,18 @@ my-skill/
 
 Am Anfang reicht oft nur `SKILL.md`.  
 Bei echter Komplexität `references/`, `templates/`, `scripts/` nachziehen.
+
+## Bei Bedarf laden statt alles auf einmal
+
+Ein gut wartbarer Skill hat gewöhnlich drei Ebenen:
+
+| Ebene | Inhalt | Wann verwendet |
+|---|---|---|
+| Metadaten | Name, Beschreibung, Auslösesituationen | Hilft Codex zu entscheiden, ob der Skill passt |
+| Hauptanleitung | Pflichtschritte, Verbote, Fertig-Kriterien | Wird beim Auslösen zuerst gelesen |
+| Anhänge | Vorlagen, Referenzen, Skripte, Beispiele | Nur öffnen oder ausführen, wenn die Aufgabe sie braucht |
+
+So bleibt die Beschreibung zum Auslösen im Alltag kurz; Details werden erst bei der Ausführung geladen. Je mehr Skills es gibt, desto wichtiger ist diese Trennung.
 
 ## Minimales SKILL.md-Beispiel
 
@@ -110,10 +125,3 @@ Nicht jede Vorlage muss Skill werden. Sinnvoll ist es bei wiederholter Nutzung, 
 | Skripte | Komplexitätsanalyse, Linkprüfung, Coverage, Formatprüfung |
 
 Ein guter Skill ist nicht nur ein längerer Prompt, sondern zerlegt wiederholbare Arbeit in lesbare, testbare und wartbare Teile.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuelle Codex-Laufzeit nutzt weiterhin `SKILL.md` als Kern und erlaubt bei Bedarf Skripte und Referenzen; diese Seite fokussiert Verzeichnisrollen und bindet keine volatilen Produkteinstiege.  
-**Zuletzt geprüft:** 2026-07-26

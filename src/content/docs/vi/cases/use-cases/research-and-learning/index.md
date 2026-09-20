@@ -3,7 +3,7 @@ title: Nghiên cứu và học
 description: Lối vào case khảo sát, so sánh và học có nguồn — trọng tâm truy xuất, trích dẫn và ranh giới kết luận.
 locale: vi
 source_locale: zh-CN
-source_revision: 862362f
+source_revision: a0be881
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

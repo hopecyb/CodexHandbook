@@ -3,7 +3,7 @@ title: このハンドブックは誰向けか
 description: 初心者、クリエイター、開発者、チームがこのハンドブックをどう使うかを説明。
 locale: ja
 source_locale: zh-CN
-source_revision: 41e8ab8
+source_revision: 95272c3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 統合ターミナル
 description: 現在のプロジェクトまたは worktree でコマンドを実行し、実際の出力でタスク結果を検証します。
 locale: ja
 source_locale: zh-CN
-source_revision: 918b2bf
+source_revision: 727e93e
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

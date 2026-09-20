@@ -3,7 +3,7 @@ title: Segurança
 description: Página sobre riscos ao nível da equipa, superfície de ataque e ideias de proteção — compreende primeiro onde está o risco, depois as medidas.
 locale: pt
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,15 +3,21 @@ title: Create a Codex Pet
 description: "Understand Codex Pet creation through assets, spritesheets, metadata, and licensing."
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: b2e0dbd
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 57e9aca
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "We added boundaries for file formats and recovery, but have not tested installation, animation playback, or removal with a specific client and pet package. Check directories and menus against the target version."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Create a Codex Pet
+This site has not completed compatibility tests for a specific client and pet package. Record their versions and sources first, then use the [compatibility and recovery record](/en/guide/reference/resource-compatibility/) to check actual results. The illustration explains the structure; it is not a file-format contract for every version.
+
 
 Creating a Codex Pet is not just making a nice image. The goal is to produce a package that Codex can identify, load, animate, and switch between states. Think of it as metadata plus an animation atlas plus source and license notes.
 
@@ -29,15 +35,9 @@ The smallest common structure is:
 
 A spritesheet combines many animation frames into one larger image. The client does not need to load dozens of small files; it crops frames from the larger image by row and column, then plays them in sequence.
 
-Many Codex Pet packages use this atlas convention:
+Check the atlas specification and version fields together. An older illustration on this site uses 8 columns × 9 rows, 192 × 208 px per frame (1536 × 1872 px overall). It is not a universal specification for every client. Before creating assets, obtain the format documentation for the target client or creation tool version and confirm the grid, action mapping, and version fields.
 
-- 8 columns x 9 rows
-- 192 x 208 px per frame
-- 1536 x 1872 px full image
-- 72 frames
-- WebP, or another image format explicitly supported by the source tool
-
-Treat these as common conventions, not permanent rules. Before creating a package, confirm the actual contract used by your Codex client, generator, or resource source.
+You cannot extend the atlas by changing only the image height while retaining old metadata. Without traceable format documentation, pause creation and establish the contract instead of inferring compatibility from an illustration.
 
 ## Prepare Assets
 
@@ -53,7 +53,7 @@ If the art is fan content or comes from a game, anime, brand, or another creator
 
 ## What `pet.json` Does
 
-`pet.json` should at least identify the pet and point to the spritesheet. A minimal example:
+The following shows only identity and asset-path fields, not a complete package verified to install. The actual format may also require version fields:
 
 ```json
 {
@@ -70,7 +70,7 @@ Keep these habits:
 - Match the folder name to the `id`.
 - Use a relative `spritesheetPath`.
 - Make `description` specific to the pet.
-- Keep author, version, source, and license notes in any extra metadata.
+- Keep author, version, source, and license information in the package README or LICENSE; do not assume the client accepts arbitrary additional fields.
 
 `pet.json` does not store the animation itself. It tells the client who this package is, where the asset is, and how to interpret it. If the path, filename, or folder structure does not line up, the client usually cannot load the Pet.
 

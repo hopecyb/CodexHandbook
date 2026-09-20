@@ -3,7 +3,7 @@ title: Revisar o resultado
 description: Leia as mudanças, verifique o Artefato e decida aceitar ou modificar.
 locale: pt
 source_locale: zh-CN
-source_revision: cb5b5d9
+source_revision: a215910
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 컨텍스트 압축
 description: 긴 대화를 압축한 뒤 무엇이 남고 무엇이 사라지는지.
 locale: ko
 source_locale: zh-CN
-source_revision: 329ca4d
+source_revision: c6c9d03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,47 +1,40 @@
 ---
 title: "Function Calling（関数呼び出し）"
-date: 2023-06-13
-year: 2023
-summary: "モデルは本質的にはテキスト生成器であり、行動を説明できても実行はできない。Function Calling は「能力メニュー」を導入し、必要なツールを選び構造化引数を埋められるようにした。これにより普通の返答が実行可能なアクションへ近づいた。"
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+description: "モデルは呼び出したい関数名と構造化された引数を出力でき、アプリケーションが検証して実行するかを決めます。引数の生成、承認の取得、実際の実行は別々の段階です。"
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。"
+  evidence:
+    - label: "Function Calling の公開告知"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling（関数呼び出し）
+## 確認可能な出来事と範囲
 
-- 重要な日付:
-  - OpenAI function calling release: 2023-06-13
-- 公式リファレンス:
-  - https://openai.com/index/function-calling-and-other-api-updates/
-- 注記: この項目は、Function Calling が API と製品設計における構造化ツール接続の起点になった時点を記録する。
+**日付：2023年6月13日 · 種別：製品発表。** OpenAI は当時の Chat Completions API に Function Calling を導入すると発表しました。この日付は特定の事業者による API の公開を指し、あらゆるツール呼び出しの起点ではありません。
 
-## それは何か
+出典：[Function Calling の公開告知](https://openai.com/index/function-calling-and-other-api-updates/)。確認日は2026年9月18日です。出典の公開日と本ページの確認日は意味が異なります。
 
-Function Calling は、モデルが利用可能な関数や API のスキーマを見て、どの関数を呼ぶべきか、どの引数を渡すべきかを構造化データとして出力する仕組みである。モデル自身が外部処理を実行するのではなく、実行可能な呼び出し意図をアプリケーションへ渡す。
+## 何を解決するか
 
-## AI アプリケーション工学をどこからどこへ進めたか
+モデルは呼び出したい関数名と構造化された引数を出力でき、アプリケーションが検証して実行するかを決めます。引数の生成、承認の取得、実際の実行は別々の段階です。
 
-AI アプリケーションは「モデルが自然言語で助言する」段階から、「モデルがシステム処理へ渡せる構造化指令を出す」段階へ進んだ。これにより、予約、検索、データ更新、社内 API 連携などが会話の外側の実処理に接続しやすくなった。
+## 学習上の助言と適用範囲
 
-## 現在の段階
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定した結果ではありません。
 
-現時点では、この項目を `mainstream` と見なしている。
+検証可能な入力、明確な権限範囲、失敗時の応答を優先して設計してください。JSON として正しくても、引数の意味が正しいとは限らず、外部システムへの書き込みが許可されたことにもなりません。過去の発表にあるモデル名や API の例は、現在の設定ガイドとして使わないでください。
 
-主流の仕組みになっている。単独の能力としてはすでに多くの API とフレームワークに吸収され、Tool Use や Agent 実行基盤の基礎部品になった。
+## 実践演習
 
-## 置き換える可能性があるもの
+[Issue 振り分け提案のドライラン](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)：合成 Issue に対する構造化された提案が入力に結び付いているか確認し、人による確認キューを残します。この演習では過去の API やリリース名を呼び出さず、データの境界を検証します。
 
-自然言語出力を正規表現や弱いパーサで読み取って外部処理へ変換するやり方の多くを置き換えた。
-
-## それを置き換える可能性があるもの
-
-より広い Tool Use、プランニング付き Agent、実行ハーネスに吸収される。将来は関数単位ではなく、権限、状態、観測、失敗回復まで含む実行単位が中心になる可能性がある。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

@@ -3,7 +3,7 @@ title: 設定
 description: 設定ファイルと profiles の説明ページ——何を設定に入れ、何を入れないかを先に分ける。
 locale: ja
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Create pull requests
 description: Deliver a Cloud result as a reviewable, verifiable PR that is not merged automatically.
 locale: en
 source_locale: zh-CN
-source_revision: 70996a7
+source_revision: 39371d4
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: PDF とドキュメント
 description: Codex に PDF 系ドキュメントを読み取り、要約または生成させるときの範囲、ツール、検証の要点。
 locale: ja
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

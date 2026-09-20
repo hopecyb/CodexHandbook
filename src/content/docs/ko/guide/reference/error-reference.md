@@ -3,7 +3,7 @@ title: 오류와 안내 참고
 description: 흔한 오류 메시지, 종료 코드, 실패 원인의 학습용 색인——장애 분석 페이지로 안내하며 공식 지원을 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

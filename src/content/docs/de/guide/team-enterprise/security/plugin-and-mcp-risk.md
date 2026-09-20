@@ -3,7 +3,7 @@ title: Plugin- und MCP-Risiken
 description: 'Was Erweiterungen erreichen können und wie Teams freigeben und überwachen — einheitliche Risikosicht auf Skills, Plugins und MCP.'
 locale: de
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

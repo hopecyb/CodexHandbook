@@ -3,7 +3,7 @@ title: Diagnostiquer avant de corriger
 description: Problèmes de production et bugs tenaces — établir une chaîne de preuves avant de toucher au code.
 locale: fr
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

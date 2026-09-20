@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "已对照当前官方 CLI 快速开始，确认 macOS/Linux、Windows、npm、Homebrew 安装入口、更新路径与 `codex` 登录流程；具体命令集中到新手安装页维护。"
+  checkedAt: "2026-08-26"
 title: CLI 安装与更新
 description: 安装、升级与版本确认。
 sidebar:
@@ -51,13 +56,3 @@ CLI 安装完成，不是命令跑过一次就算，而是你当前终端能稳�
 
 也可对照：[安装 CLI](/guide/getting-started/install-cli/)
 官方安装与升级说明见 [Codex CLI](https://learn.chatgpt.com/docs/codex/cli)。macOS/Linux 官方独立安装器使用同一命令完成安装与更新；Windows、npm 和 Homebrew 方式以官方页面的对应标签为准。
-
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**核验依据：** 已对照当前官方 CLI 快速开始，确认 macOS/Linux、Windows、npm、Homebrew 安装入口、更新路径与 `codex` 登录流程；具体命令集中到新手安装页维护。
-
-**最近核验：** 2026-08-26

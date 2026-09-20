@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "OpenAI Help Center 当前《Moving to the new ChatGPT desktop app》与《ChatGPT Work and Codex》都明确说明：桌面应用现已同时包含 Chat/Work 与 Codex，且 Codex 保持独立视图；本页只作为桌面 App 章节导航，聚焦输入任务、看改动、做审批这三类基础动作。"
+  checkedAt: "2026-07-26"
 title: 桌面 App
 description: 桌面 App 的安装、界面与日常工作流。
 sidebar:
@@ -83,10 +88,3 @@ sidebar:
 上手入口：[安装桌面 App](/guide/getting-started/install-desktop-app/)
 
 桌面 App 很适合把和 Codex 的基本协作先跑通，之后再补命令行和更进阶的工作流。
-
----
-
-**状态：** verified  
-**适用产品：** App  
-**核验依据：** OpenAI Help Center 当前《Moving to the new ChatGPT desktop app》与《ChatGPT Work and Codex》都明确说明：桌面应用现已同时包含 Chat/Work 与 Codex，且 Codex 保持独立视图；本页只作为桌面 App 章节导航，聚焦输入任务、看改动、做审批这三类基础动作。  
-**最近核验：** 2026-07-26

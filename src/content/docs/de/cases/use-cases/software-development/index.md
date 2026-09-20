@@ -3,7 +3,7 @@ title: Softwareentwicklung
 description: Einstieg zu Fällen für Codeänderungen, Bugfixes und ergänzte Überprüfung — Fokus auf Scope-Kontrolle, Tests und Rollback.
 locale: de
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,12 +1,20 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "The starter was verified with one expected failure out of three; the reference solution passes all three. The evidence chain is organized as red, root cause, minimal repair, green, regression, and human review."
+  checkedAt: "2026-08-25"
 title: "Case: verified bug fixing"
 description: Use a runnable discount-calculation bug to reproduce red, locate the root cause, make the smallest repair, verify green, regress, and review the diff.
 locale: en
 source_locale: zh-CN
-source_revision: 91d8575
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 42d842e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 This is not a prompt template that merely swaps filenames. You will run real starter code, observe a failing test, and inspect how the reference repair makes the same suite pass.
@@ -42,6 +50,8 @@ This is not a prompt template that merely swaps filenames. You will run real sta
 The two return paths matter: a related-test failure returns to the minimal repair; regression or diff failure returns to root-cause analysis. Never delete assertions or broaden changes only to reach green.
 
 ## 2. Prepare material
+
+For the full learning sequence, follow the [developer path](/en/guide/learning-paths/developer/). It connects this exercise to code reading, review, and handoff templates, and asks you to work in a separate `work/` copy. The new [2026-09-18 run summary](/downloads/developer-path/run-record.json) records renewed checks of the reference starter and solution. The 2026-08-25 date below is the original case verification date.
 
 ```text
 examples/complete-workflows/developer/verified-bug-fix/
@@ -186,10 +196,3 @@ Locate root cause and risk read-only; wait for plan approval before editing.
 - [Run tests](/en/guide/quality/run-tests/)
 - [Review diffs](/en/guide/quality/review-diffs/)
 - [Define done](/en/prompts/define-done/)
-
----
-
-**Status:** verified
-**Applies to:** CLI / IDE
-**Verification basis:** The starter was verified with one expected failure out of three; the reference solution passes all three. The evidence chain is organized as red, root cause, minimal repair, green, regression, and human review.
-**Last verified:** 2026-08-25

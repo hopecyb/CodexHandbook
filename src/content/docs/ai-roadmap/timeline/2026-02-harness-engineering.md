@@ -1,49 +1,29 @@
 ---
-title: Harness Engineering（驾驭工程）
-date: 2026-02-11
-year: 2026
-summary: prompt 管"怎么说"，context 管"看到什么"，但模型依然会出错失控。Harness Engineering 把工具调用、记忆、错误恢复设计成稳定脚手架——出错时不靠调 prompt 祈祷，而是在系统层面堵死漏洞，是让 Agent 真正跑进生产环境的关键一层。
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering（驾驭工程）"
+description: "这里关注模型周围的执行环境：可读取的项目知识、工具、测试、反馈、状态与错误恢复。模型能力之外，环境也会影响任务是否能完成。"
+contentType: "guide"
+editorialStatus: "review"
+verification: {"kind": "source-checked", "checkedAt": "2026-09-18", "summary": "已核对下列一手来源中的事件或项目说明；学习建议是作者判断，未将来源核对标为产品实跑。", "evidence": [{"label": "Harness engineering 工程文章", "href": "https://openai.com/index/harness-engineering/"}]}
 ---
 
-# Harness Engineering
+## 可核对的事件与范围
 
-- 概念公开时间：2026-02-11
-- 官方介绍：https://openai.com/index/harness-engineering/
-- 说明：此条目用于记录 OpenAI 文章中的 Harness Engineering 概念及其阶段意义，具体工具与流程实现应放在 Guide 中展开。
+**日期：2026-02-11 · 类型：工程文章。** OpenAI 发表 Harness engineering: leveraging Codex in an agent-first world，介绍团队围绕 Agent 建设环境与反馈的经验。日期对应文章，不代表相关工程方法首次出现。
 
-## 它是什么
+来源：[Harness engineering 工程文章](https://openai.com/index/harness-engineering/)。核对日期为 2026-09-18；来源发表日期与本页核对日期含义不同。
 
-Harness Engineering 是一种面向生产系统的 AI 工程方法，强调不是只优化模型回答本身，而是构建能稳定驱动模型完成任务的整套环境。
+## 它解决什么问题
 
-这套环境通常包括：任务分解、上下文组织、工具链接入、验证反馈、失败恢复、质量门槛与迭代机制。核心目标是“可驾驭地交付结果”，而不是“偶尔跑出好结果”。
+这里关注模型周围的执行环境：可读取的项目知识、工具、测试、反馈、状态与错误恢复。模型能力之外，环境也会影响任务是否能完成。
 
-## 它把 AI 应用工程从哪一步推进到了哪一步
+## 学习建议与适用边界
 
-它把 AI 应用工程从“围绕 prompt 与单次输出优化”推进到了“围绕任务系统与环境编排优化”。
+以下是本站的教学判断，不是行业普及率或效果测量：
 
-在这个范式下，问题不再是“怎么问模型更聪明”，而是“如何构建一套让模型持续可靠完成工作的方法系统”。这意味着评估、工具、上下文、流程和回归机制被视为同等重要的工程对象，而不是附属环节。
+先建立能发现错误的检查，再扩展自动执行范围。测试通过只能支持覆盖到的行为；不能据此保证所有需求正确或所有故障都被排除。文章中的团队经验与效率估计不直接外推到本站。
 
-## 现在看，它处于什么阶段
+## 动手练习
 
-目前我把 Harness Engineering 标记为 `emerging`。
+[工作流评估方法与样本集](/guide/quality/workflow-evaluation/)：选择一条样本，分别记录触发、边界、格式、质量和耗时，附输出证据；没有运行的维度保持未运行。
 
-原因是这一概念已经被明确提出并快速扩散，但行业内对其边界、方法论和实践标准仍在形成中。不同团队对 “Harness” 的实现深度差异很大，还没有统一的默认形态。
-
-换句话说，它已经成为趋势信号，但还没有沉淀成稳定的行业共识。
-
-## 它可能替代什么
-
-它可能替代“以单点提示词技巧为核心”的 AI 开发方式。
-
-随着该范式普及，团队会更少讨论“这句 prompt 怎么改”，更多讨论“这个系统如何稳定产出、如何可回归、如何持续迭代”。
-
-## 它可能被什么替代
-
-未来它更可能被更高抽象层吸收，而不是被完全推翻。
-
-例如，自动化 agent workflow 框架、系统级质量编排平台、或更强约束的任务执行协议，可能会把 Harness Engineering 的核心能力进一步产品化和标准化。
+[返回路线图与日期口径](/ai-roadmap/)

@@ -3,7 +3,7 @@ title: Geração de imagens
 description: Gerar ou editar imagens em Tarefas Codex — Prompt, formato e aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 67d0eb7
+source_revision: ea275fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,14 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Đã đối chiếu với frontmatter hiện tại của tài liệu trong kho, hệ thống trạng thái chân trang trước đây, quy ước liên kết chéo và cách duy trì thanh bên. Trang này mô tả quy ước viết và gợi ý cấu trúc cho sổ tay, không phụ thuộc vào chi tiết của phiên bản sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 title: Viết trang hướng dẫn
 description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
 Trang này giải thích cách thêm hoặc viết lại trang **kiểu hướng dẫn** trong `src/content/docs/` (không phải case thuần, không phải bảng tham chiếu thuần).
@@ -38,15 +41,17 @@ description: Một câu nói rõ vấn đề trang này giải quyết
 ---
 ```
 
-Có thể dùng chân trang thống nhất ở cuối (khớp trang hiện có):
+Trang mới ghi trạng thái biên tập và cách kiểm chứng trong frontmatter. Không thêm chân trang kiểm chứng dạng văn bản tự do nữa:
 
-```markdown
----
-
-**Trạng thái:** planned | draft | review | verified | outdated | archived
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
-**Kiểm chứng gần nhất:** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Đã kiểm tra cấu trúc nội dung; thay bằng các bước kiểm tra thực tế đã thực hiện và ngày tương ứng.
 ```
+
+Khi cần đánh dấu việc đối chiếu nguồn hoặc chạy thử ví dụ, hãy làm theo [Kiểm chứng nội dung kỹ thuật](/vi/guide/contributing/verify-technical-content/) và bổ sung liên kết cùng thông tin môi trường. Ngày phải là chuỗi `YYYY-MM-DD` đặt trong dấu ngoặc kép.
 
 ## Cấu trúc khuyến nghị
 
@@ -93,7 +98,7 @@ Sổ tay cộng đồng giúp độc giả hiểu, nối và áp dụng, nhưng 
 
 ## Liên kết chéo
 
-- Liên kết nội bộ dùng đường dẫn gốc: `/cases/workflows/explore-plan-execute-verify/`
+- Liên kết nội bộ dùng đường dẫn gốc: `/vi/cases/workflows/explore-plan-execute-verify/`
 - Liên kết tới trang có thẩm quyền, tránh lặp đoạn dài
 - Trang mới đăng ký trong `index.md` của chương và sidebar `astro.config.mjs`
 
@@ -120,9 +125,3 @@ Trang hướng dẫn tốt không nằm ở “viết đủ tài liệu”, mà 
 
 ## Nguồn tham khảo
 - Tài liệu chính thức OpenAI Codex
-```
----
-
-**Trạng thái:** verified  
-**Căn cứ kiểm chứng:** Đã rà theo frontmatter tài liệu hiện tại của kho, hệ trạng thái chân trang, thói quen liên kết chéo và cách duy trì sidebar; trang này mô tả quy chuẩn viết và gợi ý cấu trúc nội dung sổ tay, không phụ thuộc chi tiết phiên bản sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

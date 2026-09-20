@@ -1,14 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "이 저장소의 현재 문서 frontmatter, 이전 푸터 상태 체계, 교차 링크 관례, sidebar 유지 방식을 기준으로 확인했습니다. 이 페이지는 핸드북 본문의 작성 규범과 구조 제안을 설명하며 특정 제품 버전의 세부 사항에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 가이드 페이지 작성
 description: 새 핸드북 본문의 구조, frontmatter, 교차 링크 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
 이 페이지는 `src/content/docs/`에 **가이드형** 페이지(순수 사례·순수 참고표가 아님)를 추가하거나 다시 쓰는 방법을 설명합니다.
@@ -38,15 +41,17 @@ description: 이 글이 푸는 문제를 한 문장으로
 ---
 ```
 
-선택적으로 문말에 통일 푸터(기존 페이지와 동일):
+새 페이지는 편집 상태와 검증 방법을 frontmatter에 기록합니다. 자유 형식의 검증 푸터는 더 이상 붙이지 않습니다.
 
-```markdown
----
-
-**상태:** planned | draft | review | verified | outdated | archived
-**적용 제품:** App / CLI / IDE / Cloud
-**최근 검증:** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 내용 구조를 확인함. 실제로 수행한 확인 사항과 날짜로 바꾸세요.
 ```
+
+출처 확인이나 예제 실행을 표시하려면 [기술 내용 검증](/ko/guide/contributing/verify-technical-content/)에 따라 링크와 환경 정보를 추가하세요. 날짜는 따옴표로 묶은 `YYYY-MM-DD` 문자열을 사용합니다.
 
 ## 권장 구조
 
@@ -93,7 +98,7 @@ description: 이 글이 푸는 문제를 한 문장으로
 
 ## 교차 링크
 
-- 사이트 내 링크는 루트 경로: `/cases/workflows/explore-plan-execute-verify/`
+- 사이트 내 링크는 루트 경로: `/ko/cases/workflows/explore-plan-execute-verify/`
 - 권위 페이지로 링크하고 긴 반복을 피함
 - 새 페이지는 장 `index.md`와 `astro.config.mjs` sidebar에 등록
 
@@ -120,9 +125,3 @@ PR 전에 [기술 내용 검증](/ko/guide/contributing/verify-technical-content
 
 ## 참고 출처
 - OpenAI Codex 공식 문서
-```
----
-
-**상태:** verified  
-**검증 근거:** 본 저장소의 현재 문서 frontmatter, 푸터 상태 체계, 교차 링크 습관, sidebar 유지 방식을 확인했습니다. 이 페이지는 핸드북 본문 작성 규범과 구조 제안이며, 구체 제품 버전 세부에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

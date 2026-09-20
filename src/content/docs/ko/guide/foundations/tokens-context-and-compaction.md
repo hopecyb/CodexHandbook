@@ -3,7 +3,7 @@ title: Token·컨텍스트·압축
 description: 컨텍스트 창·점유와 압축을 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b33848c
+source_revision: da31a01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

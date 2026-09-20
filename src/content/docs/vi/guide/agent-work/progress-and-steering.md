@@ -3,7 +3,7 @@ title: Tiến độ và điều hướng
 description: Khi thực thi lệch hướng, dùng lệnh ngắn để kéo Codex về đúng quỹ đạo.
 locale: vi
 source_locale: zh-CN
-source_revision: 6813a5b
+source_revision: c9ea3be
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

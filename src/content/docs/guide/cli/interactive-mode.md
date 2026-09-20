@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center 当前 CLI 入门文档仍以在终端中启动 Codex、边对话边执行任务、按需批准操作作为基础工作流；本页只说明交互模式的基本形态和首次上手建议，不依赖具体快捷键列表。"
+  checkedAt: "2026-07-26"
 title: 交互模式
 description: 在终端中与 Codex 对话并执行任务。
 sidebar:
@@ -62,10 +67,3 @@ sidebar:
 - 完成后让它说明改了什么
 
 CLI 交互模式就是在终端里跑一条对话式任务流。目录要对，提示词也要清楚。
-
----
-
-**状态：** verified  
-**适用产品：** CLI  
-**核验依据：** OpenAI Help Center 当前 CLI 入门文档仍以在终端中启动 Codex、边对话边执行任务、按需批准操作作为基础工作流；本页只说明交互模式的基本形态和首次上手建议，不依赖具体快捷键列表。  
-**最近核验：** 2026-07-26

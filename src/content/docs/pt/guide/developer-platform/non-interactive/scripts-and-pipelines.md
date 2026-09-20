@@ -3,7 +3,7 @@ title: Scripts e pipelines
 description: Orquestrar codex exec em shell, Makefile e GitHub Actions — repetível e auditável.
 locale: pt
 source_locale: zh-CN
-source_revision: ce1e940
+source_revision: 07aeb4f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

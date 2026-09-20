@@ -1,77 +1,68 @@
 ---
-title:  Tareas Cloud en el IDE
-description:  Delegar Tareas Cloud desde el IDE, seguir el estado y revisar el resultado remoto.
+title: Tareas de Cloud desde el IDE
+description: Delega tareas largas desde el IDE a Codex Cloud y vuelve a resultados que se puedan revisar.
 locale: es
 source_locale: zh-CN
-source_revision: ea8a618
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: d5369b5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 60
 ---
 
-The IDE can keep quick iteration local or connect to Codex web to delegate longer work to Cloud. The entry point remains the editor, but execution environment, repository state, and network boundaries move to the cloud.
+Desde el IDE puedes mantener las iteraciones rápidas en local o conectarte a Codex web y delegar las tareas más largas a Cloud. El punto de partida sigue estando en el editor, pero el entorno de ejecución, el estado del repositorio y los límites de acceso a la red pasan a ser los de Cloud.
 
-## When to delegate
+## Cuándo delegar
 
-| Keep local | Delegate to Cloud |
+| Seguir en local | Delegar a Cloud |
 |---|---|
-| You need rapid back-and-forth with the current selection | The task has many steps or runs for a long time |
-| It depends on uncommitted local state | Inputs already exist in a remote repository or can be uploaded |
-| It requires a local-only tool | The cloud environment can recreate dependencies and verification |
-| You need to control a live local process | You want to continue other work locally |
+| Necesitas hacer cambios rápidos y sucesivos en la selección actual | La tarea tiene muchos pasos o tarda bastante tiempo |
+| Dependes de cambios locales que aún no has confirmado | Los datos de entrada ya están en el repositorio remoto o se pueden subir |
+| Debes usar herramientas exclusivas de tu equipo | El entorno de Cloud puede reconstruir las dependencias y ejecutar las comprobaciones |
+| Necesitas interactuar con el proceso en tiempo real | Quieres seguir trabajando en otras cosas en local |
 
-Cloud does not automatically have your uncommitted local files, credentials, or running processes. State explicitly which repository, branch, and commit the task starts from.
+Cloud no dispone automáticamente de los archivos sin confirmar, las credenciales ni los procesos en ejecución de tu equipo. Antes de delegar, deja claro desde qué repositorio, rama y commit debe empezar la tarea.
 
-## Delegation checklist
+## Lista de comprobación antes de delegar
 
-- [ ] Signed in with a ChatGPT account; Codex Cloud does not accept API-key sign-in.
-- [ ] GitHub is connected, or the currently supported GitLab Beta integration is in use.
-- [ ] The cloud environment can run setup and verification scripts.
-- [ ] Required variables and Secrets are configured in the environment, not pasted into the prompt.
-- [ ] Uncommitted local changes are handled or explicitly excluded.
-- [ ] Goal, allowed paths, exclusions, and acceptance commands are explicit.
+- [ ] Has iniciado sesión con una cuenta de ChatGPT; Codex Cloud no admite iniciar sesión con una clave de API.
+- [ ] Has conectado GitHub o utilizas la integración con GitLab Beta, si está disponible para ti.
+- [ ] El entorno de Cloud puede ejecutar los scripts de instalación y comprobación.
+- [ ] Las variables y los secretos necesarios están configurados en el entorno, sin incluirlos en el prompt.
+- [ ] Has gestionado los cambios locales sin confirmar o has indicado expresamente que quedan fuera de la tarea.
+- [ ] Has definido el objetivo, las rutas permitidas, las zonas excluidas y los comandos de aceptación.
 
-## End-to-end example
+## Ejemplo de principio a fin
 
 ```text
-Goal: Fix the retry module waiting one extra time after reaching its limit.
-Starting point: acme/retry-service, branch fix/retry-limit.
-Scope: Modify only src/retry.ts and its tests.
-Constraints: Do not upgrade dependencies, change the public API, or push to main.
-Acceptance: Run pnpm test -- retry and pnpm typecheck; show the diff and command results.
+Objetivo: corregir el módulo de reintentos, que sigue esperando una vez después de alcanzar el límite.
+Punto de partida: repositorio acme/retry-service, rama fix/retry-limit.
+Alcance: modificar solo src/retry.ts y sus pruebas correspondientes.
+Restricciones: no actualizar dependencias, no modificar la API pública y no enviar cambios a main.
+Aceptación: ejecutar pnpm test -- retry y pnpm typecheck; mostrar el diff y los resultados de los comandos.
 ```
 
-Recommended flow:
+Flujo recomendado:
 
-1. Attach relevant files or selections in the IDE to confirm the boundary.
-2. Choose Cloud to continue the longer task.
-3. Inspect the plan, progress, and verification results in Cloud.
-4. Return to the IDE or web and inspect the reviewable result.
-5. Fetch the branch or use a pull request to obtain the change.
-6. Rerun tests in a trusted local environment and review manually before merging.
+1. Adjunta los archivos o la selección pertinentes en el IDE y confirma primero los límites del problema.
+2. Elige Cloud para continuar con la tarea más larga.
+3. Consulta en Cloud el plan, el progreso y los resultados de las comprobaciones.
+4. Vuelve al IDE o a la web para examinar los resultados.
+5. Recupera la rama o consigue los cambios mediante una PR.
+6. Vuelve a ejecutar las pruebas en un entorno local de confianza y revisa los cambios antes de fusionarlos.
 
-“Complete” in the cloud means remote execution ended. It does not mean the code is ready to merge. Remote dependencies, operating-system behavior, or credentials can differ from local and CI environments.
+Que una tarea figure como «completada» en Cloud solo significa que terminó la ejecución remota; no garantiza que el código esté listo para fusionarse. Las dependencias, el sistema operativo o las credenciales remotas pueden diferir de las de tu entorno local o CI y revelar problemas específicos del entorno.
 
-## Conflicts and security
+## Conflictos y seguridad
 
-- Do not let local and cloud runs modify the same file simultaneously.
-- Do not paste production credentials into prompts; use environment Secrets.
-- Do not treat Cloud internet access as a default capability; configure allowed domains per environment.
-- Pushing, opening a PR, and merging are separate actions. Keep a human or CI gate before merging.
+- Evita modificar el mismo archivo a la vez en local y en Cloud después de delegar la tarea.
+- No pegues claves de producción en el prompt; usa los secretos del entorno.
+- No des por hecho que Cloud tiene acceso a la red; configúralo según la lista de destinos permitidos del entorno.
+- Enviar cambios, abrir una PR y fusionarla son acciones distintas. La fusión debe seguir sujeta a revisión humana o a los controles de CI.
 
-Next, read [Cloud environments](/es/guide/web-and-cloud/cloud-environments/) and [Create pull requests](/es/guide/web-and-cloud/create-pull-requests/).
+Continúa con [Entornos de Cloud](/es/guide/web-and-cloud/cloud-environments/) y [Crear pull requests](/es/guide/web-and-cloud/create-pull-requests/).
 
-## Official sources
+## Fuentes oficiales
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE, Cloud
-
-**Last verified:** 2026-08-26

@@ -3,7 +3,7 @@ title: Rota dos primeiros 30 minutos
 description: Uma rota de 30 minutos para consultar direto no primeiro uso.
 locale: pt
 source_locale: zh-CN
-source_revision: 5363190
+source_revision: 7d1061d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

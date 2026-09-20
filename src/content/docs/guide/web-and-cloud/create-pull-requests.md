@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 title: 创建 Pull Request
 description: 把 Cloud 结果交付为可审查、可验证且不自动合并的 PR。
 sidebar:
@@ -62,11 +66,3 @@ UI 改动补真实截图，行为改动补复现步骤，迁移改动补兼容�
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud、GitHub
-
-**最近核验：** 2026-08-26

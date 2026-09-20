@@ -3,7 +3,7 @@ title: Instalación y actualizaciones de la CLI
 description: Instala, actualiza y confirma la versión activa.
 locale: es
 source_locale: zh-cn
-source_revision: 6b8ceaf
+source_revision: be3f2c4
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

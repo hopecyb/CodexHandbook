@@ -3,7 +3,7 @@ title: 最初のタスクを実行する
 description: 明確なプロンプトで小さな変更を 1 回完了する。
 locale: ja
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

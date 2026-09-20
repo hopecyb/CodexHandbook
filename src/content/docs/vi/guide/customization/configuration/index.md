@@ -3,7 +3,7 @@ title: Cấu hình
 description: Trang mô tả tệp cấu hình và profiles — phân rõ hành vi nào nên vào cấu hình, hành vi nào không.
 locale: vi
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

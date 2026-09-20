@@ -3,7 +3,7 @@ title: Créer votre premier Skill
 description: Un Skill pr-review soumissable from scratch, avec tests et partage équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: d6ef72a
+source_revision: 14414f5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

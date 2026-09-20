@@ -1,21 +1,20 @@
 ---
-title: Codex Handbook
+title: Codex / AI Agent Practical Handbook
 head:
   - tag: title
-    content: Codex Handbook
-description: Codex Handbook turns product basics, prompting, Skills, and real cases into reusable methods for describing tasks, guiding execution, and checking results.
+    content: Codex / AI Agent Practical Handbook
+description: A Codex-centered AI Agent handbook that helps individuals, creators, developers, and teams turn a successful collaboration into a reusable, verifiable method that can be handed off.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: en
 source_locale: zh-CN
-reviewed_at: 2026-07-26
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Turn ideas into results <br /> with Codex
-  tagline: Move from product basics and clear prompts to reusable Skills and real case reviews, turning every task into a method you can run, check, and hand off.
+  title: Use Codex <br /> to turn one successful collaboration into a reusable method
+  tagline: This Codex-centered AI Agent handbook takes you from defining a task through execution, verification, review, and handoff, helping you turn ideas into dependable results.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,45 +36,37 @@ hero:
         </div>
       </div>
   actions:
-    - text: Start here
+    - text: Make a weekly report you can check
       icon: right-arrow
+      link: /en/cases/analyze-a-spreadsheet/
+    - text: Start here
+      variant: secondary
       link: /en/guide/start-here/
-    - text: View on GitHub
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="Handbook positioning">
-	<p>Codex is more than a tool that edits code. It can help you understand materials, generate content, build prototypes, handle documents, review changes, automate repetitive work, and serve as an execution partner in team collaboration.</p>
-	<p>This handbook is organized into four modules—product guide, prompting, Skills, and real-world cases—so readers at every level can find their next step.</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>Four modules</p>
-		<h2 id="modules-heading">Start by module</h2>
+		<p>Choose a task and leave with a result</p>
+		<h2 id="tasks-heading">What would you like to finish today?</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/en/guide/">
-			<strong>Codex Guide</strong>
-			<span>Install clients, understand permissions, complete your first task.</span>
+	<div class="path-grid">
+		<a class="path-card" href="/en/cases/analyze-a-spreadsheet/">
+			<strong>Make a weekly sales report</strong>
+			<span>Complete materials · Reference script run and checked. Practice refunds, deduplication, and period comparisons with 46 rows of synthetic data; deliver a report and reconciliation log.</span>
 		</a>
-		<a class="module-card" href="/en/prompts/">
-			<strong>Prompts</strong>
-			<span>Clarify goals, context, constraints, and acceptance criteria—with copyable templates.</span>
+		<a class="path-card" href="/en/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>Fix a bug and pass the tests</strong>
+			<span>Complete exercise · Includes a historical verification record. Start with a failing test, then deliver the smallest fix, regression results, and a review note.</span>
 		</a>
-		<a class="module-card" href="/en/skills/">
-			<strong>Skills</strong>
-			<span>Package repeatable methods; extend with Plugins, MCP, and Hooks.</span>
-		</a>
-		<a class="module-card" href="/en/cases/">
-			<strong>Cases</strong>
-			<span>Learn from real tasks—bug fixes, writing, automation, and more.</span>
+		<a class="path-card" href="/en/cases/write-an-article/">
+			<strong>Write an article</strong>
+			<span>Complete materials · Author-checked sources. Use three synthetic sources to practice factual citations, conflicting versions, and revision; deliver an article and a fact sheet.</span>
 		</a>
 	</div>
+	<p>Reference weekly report: net amount <strong>¥4,644.75</strong>, with refunds and anomalies explained. <a href="/downloads/sales-weekly-report/summary.md">View the reference report</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Download all materials</a>. Figures come from synthetic teaching data. Estimated practice time is 30–45 minutes; it has not been timed with readers.</p>
+	<p><a href="/en/cases/">Browse cases and materials by task</a> · <a href="/en/guide/learning-paths/">Learn by role</a> · <a href="/en/guide/reference/">Consult the reference guide</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
@@ -86,41 +77,49 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	<div class="path-grid">
 		<a class="path-card" href="/en/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>Beginner</strong>
-			<span>Get to know Codex, complete your first task, and learn how to inspect and undo results.</span>
+			<span>Use one set of downloadable materials to create an event notice, review mistakes, and recover a copy. No programming required; each step has acceptance criteria.</span>
 		</a>
 		<a class="path-card" href="/en/guide/learning-paths/creator/">
 			<strong>Creator</strong>
-			<span>Starter guides and templates for research, writing, images, presentations, and publishing. (More steps coming.)</span>
+			<span>Use one source pack to make a fact sheet, article, and editable eight-slide presentation, then save a reusable task brief. Includes downloads and step-by-step checks.</span>
 		</a>
 		<a class="path-card" href="/en/guide/learning-paths/developer/">
 			<strong>Developer</strong>
-			<span>Understand codebases, implement features, run tests, review changes, and handle complex tasks. (More steps coming.)</span>
+			<span>Understand a shopping-cart bug, save failing and passing tests, review a minimal fix, then write a handoff. Includes three fillable templates.</span>
 		</a>
 		<a class="path-card" href="/en/guide/learning-paths/team/">
 			<strong>Team</strong>
-			<span>Shared instructions, permission boundaries, quality standards, and team automation. (More steps coming.)</span>
+			<span>Run a small pilot, sample results, and rehearse rollback over ten working days before deciding whether to expand. Includes six fillable templates.</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>Capability map</p>
-		<h2 id="map-heading">Capabilities you'll master step by step</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>Look up a problem directly</p><h2 id="lookup-heading">Find the next action</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/en/guide/reference/troubleshooting/"><strong>Installation, login, or execution failed</strong><span>Find a diagnostic path by symptom, or follow a recovery exercise with logs.</span></a>
+		<a class="path-card" href="/en/guide/reference/"><strong>Check commands, permissions, and terms</strong><span>Open the reference index to check scope and sources.</span></a>
+		<a class="path-card" href="/en/guide/verification/"><strong>Decide whether a result is complete</strong><span>Check factual, file, and test evidence; record what remains unconfirmed.</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> Write task prompts with clear goals, explicit boundaries, and verifiable outcomes</li>
-		<li><span>02</span> Manage files, context, terminal, browser, and external materials</li>
-		<li><span>03</span> Extend Codex with Skills, Plugins, MCP, and Hooks</li>
-		<li><span>04</span> Organize long tasks, multi-Agent collaboration, retrospectives, and handoffs</li>
-		<li><span>05</span> Establish security, verification, and governance in personal and team settings</li>
-	</ul>
 </section>
 
-<AboutHandbook title="Open collaboration">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>Take reusable assets with you</p>
+		<h2 id="assets-heading">Finish reading and start doing</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/en/prompts/templates/"><strong>Task prompt templates</strong><span>Reuse by task type: understanding, research, creation, editing, diagnosis, and automation.</span></a>
+		<a class="path-card" href="/en/skills/examples/"><strong>Skill examples</strong><span>Start with readable examples and examine inputs, outputs, boundaries, and tests.</span></a>
+		<a class="path-card" href="/en/cases/use-cases/case-study-template/"><strong>Case review template</strong><span>Record goals, execution, human checks, verification, failure handling, and the next improvement.</span></a>
+		<a class="path-card" href="/en/guide/verification/"><strong>Acceptance checklist</strong><span>Turn “it looks done” into a result you can recheck, revert, and hand off.</span></a>
+	</div>
+</section>
 
-The handbook is authored in Simplified Chinese as the source language. Traditional Chinese, English, French, Japanese, Korean, and other versions will follow. Content is labeled with status, verification dates, and applicable products—so readers know what they can follow directly and what needs a second look.
+<AboutHandbook title="Sources, updates, and contributions">
 
-[Browse learning paths](/en/guide/learning-paths/)
+The handbook is maintained by open-source contributors, with Simplified Chinese as the source language. Product descriptions, author-designed teaching materials, and actual run records are labeled separately. A script passing does not establish model performance or show that readers can complete the exercise. Check each page's record for the scope of its verification.
+
+[Content updates](/en/guide/updates/) · [Version and verification policy](/en/guide/start-here/handbook-version-policy/) · [Contribute](/en/guide/contributing/)
 
 </AboutHandbook>

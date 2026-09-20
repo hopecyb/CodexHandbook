@@ -1,15 +1,22 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "La documentación de planes de Codex en OpenAI Help Center sigue indicando que la App de escritorio admite agents de Codex en paralelo, worktrees integrados y delegación en la nube. Esta página solo resume el patrón «exploración en paralelo, aislamiento por directorios, evitar push paralelo y fusión humana», sin depender de un flujo de UI concreto."
+  checkedAt: "2026-07-26"
 title: Coordinar varios Agents
 description: Caso de colaboración con exploración en paralelo, división del trabajo y fusión de resultados.
 locale: es
 source_locale: zh-CN
-source_revision: 5abc786
+source_revision: 7b143fc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Coordinar varios Agents
 
 ## Metadatos
 
@@ -49,10 +56,3 @@ Distintos Agents modifican distintas ramas en distintos [git worktree](/es/guide
 
 - [Coordinación multi-Agent](/es/cases/workflows/multi-agent-coordination/)
 - [Subagents](/es/guide/agent-work/subagents/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** La documentación de planes de Codex en OpenAI Help Center sigue indicando que la App de escritorio admite agents de Codex en paralelo, worktrees integrados y delegación en la nube. Esta página solo resume el patrón «exploración en paralelo, aislamiento por directorios, evitar push paralelo y fusión humana», sin depender de un flujo de UI concreto.

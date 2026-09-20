@@ -3,7 +3,7 @@ title: 설정
 description: 설정 파일과 profiles 설명 페이지 — 어떤 동작을 설정에 두고, 무엇을 두면 안 되는지 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

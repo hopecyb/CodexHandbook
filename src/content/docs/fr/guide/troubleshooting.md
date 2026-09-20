@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Routage par symptôme uniquement vers chapitres installation, connexion, permissions, Contexte et qualité des résultats ; chemins liés vérifiés ; la page ne dépend pas de codes d'erreur, versions ou libellés d'interface spécifiques."
+  checkedAt: "2026-07-26"
 title: Dépannage
 description: Orienter les symptômes vers les bons tutoriels et pages produit.
 sidebar:
   order: 18
 locale: fr
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ Pas besoin de diagnostiquer CLI vs IDE vs Cloud vs permissions vs Prompt d'abord
 - Point de départ minimal quand vous ne pouvez pas classer l'erreur
 - Problèmes d'installation, permissions, Contexte ou description de Tâche
 
-# Dépannage
 
 | Symptôme | Aller vers |
 |---|---|
@@ -62,10 +66,3 @@ Mieux vaut souvent faire une pause, classer le problème, puis ouvrir une page c
 Triage avant réparation.
 
 Plus de référence : [FAQ](/fr/guide/reference/faq/) · [Référence des erreurs](/fr/guide/reference/error-reference/) · [Docs officielles Codex](https://developers.openai.com/codex)
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Routage par symptôme uniquement vers chapitres installation, connexion, permissions, Contexte et qualité des résultats ; chemins liés vérifiés ; la page ne dépend pas de codes d'erreur, versions ou libellés d'interface spécifiques.  
-**Dernière vérification :** 2026-07-26

@@ -3,7 +3,7 @@ title: Seguridad
 description: 'Página sobre riesgos a nivel de equipo, superficie de ataque e ideas de mitigación: primero dónde está el riesgo, después los controles.'
 locale: es
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

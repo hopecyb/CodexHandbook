@@ -1,54 +1,42 @@
 ---
 title: MCP
-description: Páginas sobre conectar ferramentas e fontes de dados externas — quando MCP é realmente necessário.
+description: Conecte ferramentas e contexto de terceiros ao ChatGPT e ao Codex com controle de acesso.
 locale: pt
 source_locale: zh-CN
-source_revision: ff68431
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 8d9ec38
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+O MCP (Model Context Protocol) resolve a questão de como um Agent usa ferramentas e dados fora do repositório. Ele não define, por si só, um fluxo de trabalho.
 
-MCP (Model Context Protocol) answers “how can an Agent call tools and data outside the repository?” It does not define a workflow.
+## Para quem é
 
-## Who it is for
+- Desenvolvedores que querem consultar documentação, designs, tickets ou ferramentas internas pelo Codex.
+- Equipes que precisam padronizar ferramentas externas, OAuth e permissões mínimas.
+- Responsáveis por investigar casos em que o servidor está configurado, mas as ferramentas não aparecem ou falham.
 
-- Individual developers who want Codex to query documentation, designs, tickets, or internal tools.
-- Teams that need consistent external-tool configuration, OAuth, and least privilege.
-- Maintainers diagnosing “the server is configured, but its tools are unavailable or calls fail.”
+Se a tarefa só precisa ler ou escrever no repositório atual, comece com os recursos internos de arquivos e terminal. Conecte o MCP quando precisar de contexto ou ações de terceiros.
 
-If the task only reads and writes the current repository, start with built-in file and terminal capabilities. Add MCP only when third-party context or action is required.
+## Ordem de leitura
 
-## Reading order
+1. [Visão geral do MCP](/pt/skills/mcp/mcp-overview/): diferencie as responsabilidades de MCP, Skill e Plugin.
+2. [Conectar um servidor MCP](/pt/skills/mcp/connect-an-mcp-server/): adicione o primeiro servidor pelo CLI ou por `config.toml`.
+3. [Depurar uma conexão MCP](/pt/skills/mcp/debugging-mcp/): investigue as camadas de configuração, inicialização, autenticação e ferramentas.
 
-1. [MCP overview](/pt/skills/mcp/mcp-overview/): separate the responsibilities of MCP, Skills, and Plugins
-2. [Connect an MCP server](/pt/skills/mcp/connect-an-mcp-server/): connect the first server with the CLI or `config.toml`
-3. [Debug MCP](/pt/skills/mcp/debugging-mcp/): diagnose configuration, startup, authentication, and tool layers
+## Limites de suporte atuais
 
-## Current support boundaries
+- O aplicativo ChatGPT para desktop, o Codex CLI e a extensão IDE compartilham a configuração MCP no mesmo Codex host.
+- Os clientes Codex locais aceitam servidores STDIO e Streamable HTTP.
+- O ChatGPT Web não lê o `~/.codex/config.toml` local; ele usa ferramentas MCP remotas fornecidas por Plugins instalados.
 
-- The ChatGPT desktop App, Codex CLI, and IDE integration share MCP configuration when they use the same Codex host.
-- Local Codex clients support STDIO and Streamable HTTP servers.
-- ChatGPT Web does not read local `~/.codex/config.toml`; it uses remote MCP tools supplied by installed Plugins.
+## Três pontos para lembrar
 
-## Three rules
+1. O MCP expõe ferramentas, mas não define um procedimento confiável. Registre procedimentos estáveis em uma Skill ou em `AGENTS.md`.
+2. O que um servidor pode fazer depende das ferramentas que ele expõe e do alcance das credenciais associadas.
+3. Na primeira conexão, comece com acesso somente leitura, um ambiente de teste e poucas ferramentas. Não faça o teste com um token de administrador de produção.
 
-1. MCP exposes tools; it does not define a reliable process. Put durable workflows in a Skill or `AGENTS.md`.
-2. Server capability depends on its exposed tools and the scope of the underlying credential.
-3. Begin with read-only tools, a test tenant, and a small tool set. Do not experiment with a production administrator token.
-
-## Official sources
+## Fontes oficiais
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-- [Model Context Protocol specification](https://modelcontextprotocol.io/)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP tools through Plugins
-
-**Verification scope:** Client support, shared configuration, transport types, and CLI commands
-
-**Last verified:** 2026-08-25
+- [Especificação do Model Context Protocol](https://modelcontextprotocol.io/)

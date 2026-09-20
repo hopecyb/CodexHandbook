@@ -3,7 +3,7 @@ title: PDF và tài liệu
 description: Phạm vi, công cụ và điểm nghiệm thu khi để Codex đọc, tóm tắt hoặc tạo tài liệu dạng PDF.
 locale: vi
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

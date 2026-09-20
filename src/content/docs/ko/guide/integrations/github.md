@@ -3,7 +3,7 @@ title: GitHub 통합
 description: "저장소 연결, PR, Review, CI — Codex가 GitHub 워크플로에서 차지하는 위치."
 locale: ko
 source_locale: zh-CN
-source_revision: 5585550
+source_revision: ece7161
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

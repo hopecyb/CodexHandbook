@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは、インストール、ログイン、権限、コンテキスト、結果品質の各章へ症状で振り分けるナビゲーションに限定。リンク先パスは個別確認済み。具体的なエラーコード、バージョン、UI 文言には依存しない。"
+  checkedAt: "2026-07-26"
 title: トラブルシューティング
 description: 症状から該当チュートリアルと製品ページへ案内する。
 sidebar:
   order: 18
 locale: ja
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ reviewed_at: 2026-08-26
 - エラー種別がわからないときの最小の始め方
 - インストール、権限、コンテキスト、タスク記述のどれに当たるか
 
-# トラブルシューティング
 
 | 症状 | 行き先 |
 |---|---|
@@ -62,10 +66,3 @@ reviewed_at: 2026-08-26
 トラブルシューティングは、すぐ直すことより先に分類することから始めます。
 
 参考：[FAQ](/ja/guide/reference/faq/) · [エラーリファレンス](/ja/guide/reference/error-reference/) · [公式 Codex ドキュメント](https://developers.openai.com/codex)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは、インストール、ログイン、権限、コンテキスト、結果品質の各章へ症状で振り分けるナビゲーションに限定。リンク先パスは個別確認済み。具体的なエラーコード、バージョン、UI 文言には依存しない。  
-**最終検証：** 2026-07-26

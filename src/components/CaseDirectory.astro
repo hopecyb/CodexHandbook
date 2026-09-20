@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+const locale = Astro.locals.starlightRoute.locale ?? 'root';
+const prefix = locale === 'root' ? '' : `${locale}/`;
+const labels: Record<string, string[]> = {
+  root: ['办公分析','内容创作','软件开发','团队自动化','编辑审阅','来源核对','示例实跑','入门','进阶','高级','个案例','筛选案例','任务类型','全部任务','关键词','例如：周报、PPTX、Bug','筛选','重置','当前显示全部案例；启用 JavaScript 后可筛选，也可以使用浏览器页面查找。','没有符合当前类型和关键词的案例。清空关键词或点击重置查看全部。','难度未标注','历史核验 · 见正文','示例流程 · 未登记实跑','产物','见任务说明','有下载材料','准备方式见正文'],
+  'zh-tw': ['辦公分析','內容創作','軟體開發','團隊自動化','編輯審閱','來源核對','示例實跑','入門','進階','高階','個案例','篩選案例','任務類型','全部任務','關鍵詞','例如：週報、PPTX、Bug','篩選','重設','目前顯示全部案例；啟用 JavaScript 後可篩選，也可以使用瀏覽器頁面尋找。','沒有符合目前類型和關鍵詞的案例。清空關鍵詞或按重設查看全部。','難度未標註','歷史核驗 · 見正文','示例流程 · 未登記實跑','產物','見任務說明','有下載材料','準備方式見正文'],
+  en: ['Office analysis','Content creation','Software development','Team automation','Editorial review','Sources checked','Example run tested','Beginner','Intermediate','Advanced','case studies','Filter case studies','Task type','All tasks','Keywords','For example: report, PPTX, bug','Filter','Reset','All cases are shown. Enable JavaScript to filter them, or use your browser’s Find feature.','No cases match. Clear the keywords or reset the filters.','Level unspecified','Historical verification · see article','Example workflow · no run recorded','Outputs','See task description','Download available','See article for preparation'],
+  fr: ['Analyse bureautique','Création de contenu','Développement logiciel','Automatisation d’équipe','Relecture éditoriale','Sources vérifiées','Exemple testé','Débutant','Intermédiaire','Avancé','études de cas','Filtrer les études de cas','Type de tâche','Toutes les tâches','Mots-clés','Par exemple : rapport, PPTX, bug','Filtrer','Réinitialiser','Tous les cas sont affichés. Activez JavaScript pour filtrer ou utilisez la recherche du navigateur.','Aucun cas correspondant. Effacez les mots-clés ou réinitialisez les filtres.','Niveau non indiqué','Vérification antérieure · voir l’article','Exemple de procédure · aucun essai enregistré','Livrables','Voir la description','Téléchargement disponible','Voir la préparation dans l’article'],
+  de: ['Büroanalyse','Inhalte erstellen','Softwareentwicklung','Teamautomatisierung','Redaktionell geprüft','Quellen geprüft','Beispiel getestet','Einsteiger','Mittelstufe','Fortgeschritten','Fallbeispiele','Fallbeispiele filtern','Aufgabentyp','Alle Aufgaben','Suchbegriffe','Zum Beispiel: Bericht, PPTX, Bug','Filtern','Zurücksetzen','Alle Beispiele werden angezeigt. Aktivieren Sie JavaScript zum Filtern oder nutzen Sie die Browsersuche.','Keine passenden Beispiele. Löschen Sie die Suchbegriffe oder setzen Sie die Filter zurück.','Niveau nicht angegeben','Frühere Prüfung · siehe Artikel','Beispielablauf · kein Testlauf dokumentiert','Ergebnisse','Siehe Aufgabenbeschreibung','Download verfügbar','Vorbereitung siehe Artikel'],
+  es: ['Análisis de oficina','Creación de contenido','Desarrollo de software','Automatización de equipos','Revisión editorial','Fuentes verificadas','Ejemplo probado','Principiante','Intermedio','Avanzado','casos prácticos','Filtrar casos prácticos','Tipo de tarea','Todas las tareas','Palabras clave','Por ejemplo: informe, PPTX, bug','Filtrar','Restablecer','Se muestran todos los casos. Activa JavaScript para filtrarlos o usa la búsqueda del navegador.','No hay casos coincidentes. Borra las palabras clave o restablece los filtros.','Nivel sin indicar','Verificación anterior · consulta el artículo','Flujo de ejemplo · sin ejecución registrada','Resultados','Consulta la descripción','Descarga disponible','Consulta la preparación en el artículo'],
+  pt: ['Análise de escritório','Criação de conteúdo','Desenvolvimento de software','Automação de equipe','Revisão editorial','Fontes verificadas','Exemplo testado','Iniciante','Intermediário','Avançado','estudos de caso','Filtrar estudos de caso','Tipo de tarefa','Todas as tarefas','Palavras-chave','Por exemplo: relatório, PPTX, bug','Filtrar','Redefinir','Todos os casos são exibidos. Ative o JavaScript para filtrar ou use a busca do navegador.','Nenhum caso encontrado. Apague as palavras-chave ou redefina os filtros.','Nível não informado','Verificação anterior · veja o artigo','Fluxo de exemplo · sem execução registrada','Resultados','Veja a descrição','Download disponível','Veja a preparação no artigo'],
+  ja: ['オフィス分析','コンテンツ制作','ソフトウェア開発','チームの自動化','編集レビュー','出典確認済み','実行例を検証済み','初級','中級','上級','件のケース','ケースを絞り込む','タスクの種類','すべてのタスク','キーワード','例：週報、PPTX、バグ','絞り込む','リセット','現在、すべてのケースを表示しています。JavaScript を有効にすると絞り込みができます。ブラウザー内検索も使えます。','該当するケースがありません。キーワードを消すか、条件をリセットしてください。','難易度未設定','過去の検証 · 本文参照','手順例 · 実行記録なし','成果物','タスクの説明を参照','ダウンロード資料あり','準備方法は本文を参照'],
+  ko: ['사무 분석','콘텐츠 제작','소프트웨어 개발','팀 자동화','편집 검토','출처 확인','예제 실행 검증','초급','중급','고급','개 사례','사례 필터링','작업 유형','모든 작업','키워드','예: 주간 보고서, PPTX, 버그','필터','초기화','현재 모든 사례를 표시합니다. JavaScript를 켜면 필터링할 수 있으며 브라우저 검색도 사용할 수 있습니다.','일치하는 사례가 없습니다. 키워드를 지우거나 필터를 초기화하세요.','난이도 미표기','이전 검증 · 본문 참조','예시 절차 · 실행 기록 없음','결과물','작업 설명 참조','다운로드 자료 있음','준비 방법은 본문 참조'],
+  vi: ['Phân tích văn phòng','Sáng tạo nội dung','Phát triển phần mềm','Tự động hóa nhóm','Biên tập rà soát','Đã kiểm tra nguồn','Đã chạy thử ví dụ','Cơ bản','Trung cấp','Nâng cao','tình huống','Lọc tình huống','Loại tác vụ','Tất cả tác vụ','Từ khóa','Ví dụ: báo cáo, PPTX, lỗi','Lọc','Đặt lại','Đang hiển thị tất cả tình huống. Bật JavaScript để lọc hoặc dùng chức năng tìm kiếm của trình duyệt.','Không có tình huống phù hợp. Xóa từ khóa hoặc đặt lại bộ lọc.','Chưa ghi độ khó','Xác minh trước đây · xem bài viết','Quy trình ví dụ · chưa ghi nhận lần chạy','Sản phẩm','Xem mô tả tác vụ','Có tài liệu tải xuống','Xem cách chuẩn bị trong bài'],
+};
+const l = labels[locale] ?? labels.root;
+const outputSeparator = ['root','zh-tw','ja','ko'].includes(locale) ? '：' : ': ';
+const categories = {office:l[0], creation:l[1], development:l[2], team:l[3]};
+const states = {editorial:l[4],'source-checked':l[5],'run-tested':l[6]};
+const levels = {beginner:l[7],intermediate:l[8],advanced:l[9]};
+const docs = await getCollection('docs');
+const localized = new Map(docs.map(entry => [entry.id, entry]));
+const entries = docs.filter(({id,data}) => id.startsWith('cases/') && !!data.caseCategory && !['planned','draft','archived'].includes(data.editorialStatus ?? ''))
+  .map(source => {
+    const page = localized.get(`${prefix}${source.id}`);
+    return page ? { ...page, caseCategory: source.data.caseCategory, directoryOrder: source.data.directoryOrder } : null;
+  })
+  .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
+	.sort((a,b)=>(a.directoryOrder ?? 999)-(b.directoryOrder ?? 999));
+---
+<case-directory data-count-label={l[10]}>
+	<form hidden role="search" aria-label={l[11]}>
+		<div class="control"><label for="case-category">{l[12]}</label><select id="case-category" name="category"><option value="all">{l[13]}</option>{Object.entries(categories).map(([key,label])=><option value={key}>{label}</option>)}</select></div>
+		<div class="control"><label for="case-query">{l[14]}</label><input id="case-query" type="search" name="q" placeholder={l[15]} /></div>
+		<button type="submit">{l[16]}</button><button type="button" data-reset>{l[17]}</button>
+	</form>
+	<noscript><p>{l[18]}</p></noscript>
+	<p data-count role="status" aria-live="polite">{entries.length} {l[10]}</p>
+	<p data-empty hidden>{l[19]}</p>
+	<ul class="case-list">{entries.map(({id,data,caseCategory}) => <li data-case data-category={caseCategory} data-search={[data.title,data.description,...(data.outputs ?? []),categories[caseCategory!]].join(' ').toLocaleLowerCase()}>
+		<div class="case-meta"><span>{categories[caseCategory!]}</span><span>{data.level ? levels[data.level] : l[20]}</span><span>{data.verification ? states[data.verification.kind] : data.legacyVerification ? l[21] : l[22]}</span></div>
+		<h3><a href={`/${id.replace(/\/index$/,'')}/`}>{data.title}</a></h3>
+		<p>{data.description}</p>
+		<p class="outputs">{l[23]}{outputSeparator}{(data.outputs ?? []).join(' · ') || l[24]} · {data.assets?.length ? l[25] : l[26]}</p>
+	</li>)}</ul>
+</case-directory>
+<style>
+	case-directory {display:block;margin-block:1.5rem;}
+	form {display:flex;flex-wrap:wrap;gap:.75rem;align-items:end;padding:1rem;background:var(--sl-color-gray-6);border:1px solid var(--sl-color-hairline-light);border-radius:.5rem;}
+	[hidden] {display:none !important;}
+	.control {display:grid;gap:.3rem;font-size:var(--sl-text-sm);flex:1 1 12rem;min-width:0;}
+	select,input,button {font:inherit;min-height:2.6rem;border:1px solid var(--sl-color-gray-4);border-radius:.3rem;padding:.45rem .65rem;color:var(--sl-color-text);background:var(--sl-color-bg);max-width:100%;}
+	button {cursor:pointer;} :is(input,select,button):focus-visible {outline:2px solid var(--sl-color-accent-high);outline-offset:3px;}
+	.case-list {list-style:none;padding:0;display:grid;gap:1rem;margin:0;}
+	.case-list li {margin:0;padding:1.1rem 1.25rem;border:1px solid var(--sl-color-hairline-light);border-radius:.5rem;}
+	h3 {margin:.4rem 0;font-size:1.2rem;} p {margin:.4rem 0;}
+	.case-meta {display:flex;flex-wrap:wrap;gap:.4rem 1rem;font-size:.85rem;color:var(--sl-color-gray-2);}
+	.outputs {font-size:.9rem;color:var(--sl-color-gray-2);overflow-wrap:anywhere;}
+</style>
+<script>
+	class CaseDirectory extends HTMLElement {
+		connectedCallback() {
+			if (this.dataset.ready) return;
+			this.dataset.ready = 'true';
+			const form = this.querySelector('form')!;
+			const category = form.elements.namedItem('category') as HTMLSelectElement;
+			const query = form.elements.namedItem('q') as HTMLInputElement;
+			const cards = [...this.querySelectorAll<HTMLElement>('[data-case]')];
+			const render = () => {
+				const terms = query.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+				let count = 0;
+				for (const card of cards) {
+					card.hidden = !(category.value === 'all' || card.dataset.category === category.value) || !terms.every(term => card.dataset.search!.includes(term));
+					if (!card.hidden) count++;
+				}
+				this.querySelector('[data-count]')!.textContent = `${count} ${this.dataset.countLabel}`;
+				(this.querySelector('[data-empty]') as HTMLElement).hidden = count > 0;
+			};
+			const restore = () => {
+				const params = new URL(location.href).searchParams;
+				const value = params.get('category') ?? 'all';
+				category.value = [...category.options].some(o=>o.value===value) ? value : 'all';
+				query.value = params.get('q') ?? '';
+				render();
+			};
+			const update = (replace = false) => {
+				const url = new URL(location.href);
+				category.value === 'all' ? url.searchParams.delete('category') : url.searchParams.set('category',category.value);
+				query.value.trim() ? url.searchParams.set('q',query.value.trim()) : url.searchParams.delete('q');
+				if(url.href !== location.href) history[replace ? 'replaceState' : 'pushState']({},'',url);
+				render();
+			};
+			form.addEventListener('submit',event=>{event.preventDefault();update();});
+			category.addEventListener('change',()=>update());
+			query.addEventListener('input',()=>update(true));
+			this.querySelector('[data-reset]')!.addEventListener('click',()=>{query.value='';category.value='all';update();query.focus();});
+			window.addEventListener('popstate',restore);
+			restore();form.hidden = false;
+		}
+	}
+	customElements.define('case-directory',CaseDirectory);
+</script>

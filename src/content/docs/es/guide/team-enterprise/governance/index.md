@@ -3,7 +3,7 @@ title: Gobernanza
 description: 'Página de políticas, límites y reglas organizacionales: primero qué se puede hacer, qué no, y quién responde.'
 locale: es
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

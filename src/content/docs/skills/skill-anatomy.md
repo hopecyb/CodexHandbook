@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "当前 Codex 运行时技能说明仍以 `SKILL.md` 为核心文件，并允许按需扩展脚本与参考资料；本页聚焦目录职责划分，未绑定易变产品入口。"
+  checkedAt: "2026-07-26"
 title: Skill 结构
 description: SKILL.md、references/、templates/、scripts/ 的职责与示例。
 ---
@@ -9,7 +14,6 @@ description: SKILL.md、references/、templates/、scripts/ 的职责与示例�
 
 这样更方便阅读、修改和复用，也不容易越写越乱。
 
-# Skill 结构
 
 ## 目录结构
 
@@ -119,9 +123,3 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 可以先用 `SKILL.md` 跑通，再在真的变复杂时，把资料、模板和脚本逐步拆出去。
 
 完整动手练习：[创建第一个 Skill](/skills/create-your-first-skill/)。
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 当前 Codex 运行时技能说明仍以 `SKILL.md` 为核心文件，并允许按需扩展脚本与参考资料；本页聚焦目录职责划分，未绑定易变产品入口。  
-**最近核验：** 2026-07-26

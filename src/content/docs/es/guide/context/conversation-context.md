@@ -3,7 +3,7 @@ title: Contexto de la conversación
 description: Cómo se acumula y caduca la información en el mismo hilo.
 locale: es
 source_locale: zh-CN
-source_revision: 5c0569d
+source_revision: 3968049
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

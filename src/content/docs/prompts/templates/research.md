@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供研究类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 研究模板
 description: 带引用的调研与对比。
 ---
-
-# 研究模板
 
 研究类任务和普通问答的差别，在于你要的不只是答案，还要答案从哪里来。
 
@@ -41,10 +44,3 @@ description: 带引用的调研与对比。
 
 - [带引用的研究案例](/cases/research-with-sources/)
 - [验证](/guide/verification/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供研究类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

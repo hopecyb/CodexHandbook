@@ -1,12 +1,20 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "le code de départ a été vérifié avec un échec attendu sur trois tests ; les trois tests de la solution de référence réussissent. La chaîne de preuves suit le rouge, la cause racine, la correction minimale, le vert, la régression et la révision humaine."
+  checkedAt: "2026-08-25"
 title: "Cas pratique : corriger un bug avec vérification"
 description: Utilisez un bug exécutable de calcul de remise pour reproduire le rouge, localiser la cause racine, effectuer la correction minimale, vérifier le vert, lancer la régression et réviser le diff.
 locale: fr
 source_locale: zh-CN
-source_revision: 91d8575
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 42d842e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Il ne s'agit pas d'un modèle de prompt dans lequel il suffirait de remplacer des noms de fichiers. Vous allez exécuter un véritable code de départ, observer l'échec d'un test, puis examiner comment la correction de référence fait réussir la même suite.
@@ -42,6 +50,8 @@ Il ne s'agit pas d'un modèle de prompt dans lequel il suffirait de remplacer de
 Les deux chemins de retour sont essentiels : l'échec d'un test concerné ramène à la correction minimale ; l'échec de la régression ou de la révision du diff ramène à l'analyse de la cause racine. Ne supprimez jamais une assertion et n'élargissez jamais les modifications uniquement pour obtenir le vert.
 
 ## 2. Préparer le matériel
+
+Pour suivre tout le parcours, consultez le [parcours développeur](/fr/guide/learning-paths/developer/). Il relie cet exercice à la lecture du code, à la revue et aux modèles de transfert, et demande de travailler dans une copie `work/` séparée. Le nouveau [résumé d’exécution du 18 septembre 2026](/downloads/developer-path/run-record.json) consigne une nouvelle vérification du point de départ et de la solution de référence. La date du 25 août 2026 ci-dessous correspond à la vérification initiale du cas.
 
 ```text
 examples/complete-workflows/developer/verified-bug-fix/
@@ -191,10 +201,3 @@ du plan avant de modifier.
 - [Exécuter les tests](/fr/guide/quality/run-tests/)
 - [Réviser les diffs](/fr/guide/quality/review-diffs/)
 - [Définir les critères de fin](/fr/prompts/define-done/)
-
----
-
-**Statut :** verified
-**Produits concernés :** CLI / IDE
-**Base de vérification :** le code de départ a été vérifié avec un échec attendu sur trois tests ; les trois tests de la solution de référence réussissent. La chaîne de preuves suit le rouge, la cause racine, la correction minimale, le vert, la régression et la révision humaine.
-**Dernière vérification :** 2026-08-25

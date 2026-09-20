@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- 设计假设：沿用已有书本品牌，以具体任务和产物作为主入口。所有新增课程均是规划。
+     三方向：任务优先（推荐）、路径优先、查阅优先。无外部依赖，无真实用户数据。 -->
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>下一章 · Codex 指南手册设计预览</title>
+  <link rel="icon" href="assets/logo.png"><link rel="stylesheet" href="prototype.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="review-bar"><span>中文站 · 内容与页面设计 <b>2026.09</b></span><a href="README.md">规划说明 ↗</a></div>
+  <header class="site-header">
+    <a class="brand" href="#home"><img src="assets/logo.png" width="36" height="36" alt=""><span>Codex <strong>指南手册</strong></span></a>
+    <nav aria-label="主导航">
+      <a href="#paths" data-route="paths">开始学习</a><a href="#library" data-route="library">实战案例</a>
+      <a href="https://codexhandbook.com/skills/examples/" target="_blank" rel="noopener">Skills ↗</a>
+      <a href="https://codexhandbook.com/guide/reference/" target="_blank" rel="noopener">查手册 ↗</a>
+    </nav>
+    <button id="theme-toggle" class="quiet" aria-label="切换为深色外观">深色</button>
+  </header>
+  <div class="preview-note"><span class="dot"></span>设计预览 · 新案例为规划，非已上线课程。<a href="#roadmap">查看内容排期 →</a></div>
+  <main id="main" tabindex="-1"></main>
+  <footer><span>Codex 指南手册 <span class="muted">/ 把一次成功，变成下一次的方法。</span></span><a href="https://codexhandbook.com/" target="_blank" rel="noopener">查看现有网站 ↗</a></footer>
+  <dialog id="brief-dialog" aria-labelledby="brief-title"><div id="brief-body"></div><form method="dialog"><button class="primary">关闭选题说明</button></form></dialog>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <script src="prototype.js"></script>
+</body>
+</html>

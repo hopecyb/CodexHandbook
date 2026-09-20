@@ -1,17 +1,21 @@
 ---
+prev: false
+next:
+  link: /ko/skills/overview/
+  label: Skills 개요
 title: Skills
 description: Codex Skills를 사용·작성·테스트·유지하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: bd382e8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: dd408f5
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Skills
 
 Skills는 안정된 방법, 참고 자료, 템플릿, 스크립트를 재사용 가능한 능력으로 패키징하는 데 씁니다.
+
+가치는 Codex에 기능을 하나 더하는 데 그치지 않습니다. 작업 흐름의 입력과 출력, 권한 경계, 테스트 방법을 분명하게 할 수 있습니다.
 
 ## 권장 순서
 
@@ -25,3 +29,9 @@ Skills는 안정된 방법, 참고 자료, 템플릿, 스크립트를 재사용 
 8. [Hooks](/ko/skills/hooks/) · [MCP](/ko/skills/mcp/) · [Plugins](/ko/skills/plugins/) · [Automations](/ko/skills/automations/)
 9. [보안과 버전](/ko/skills/security/)
 10. [Skill 예시](/ko/skills/examples/) 둘러보기
+
+## 바로 활용할 자료
+
+- [Skill 구조 안내](/ko/skills/skill-anatomy/): 설명, 실행 조건, 작업 흐름, 리소스 경계를 명확히 합니다.
+- [Skill 예시 모음](/ko/skills/examples/): 글쓰기, 조사, 검토, 자동화 등의 참고 사례입니다.
+- [보안과 버전](/ko/skills/security/): Skill을 공유하거나 확장하기 전에 권한, 외부 입력, 유지 관리 책임을 확인합니다.

@@ -3,7 +3,7 @@ title: Saída estruturada
 description: Fazer o exec produzir resultados parseáveis por máquina — para passos seguintes, painéis e portões de qualidade.
 locale: pt
 source_locale: zh-CN
-source_revision: aa19d49
+source_revision: e80b5d7
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

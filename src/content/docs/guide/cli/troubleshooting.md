@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center 当前 CLI 入门与配置资料仍覆盖安装、认证、权限/沙盒与工作目录等常见问题来源；本页采取按症状分成安装、登录、权限、目录四类的排查法，属于稳定的故障分流框架。"
+  checkedAt: "2026-07-26"
 title: CLI 排障
 description: 认证、权限与命令失败排查。
 sidebar:
@@ -49,10 +54,3 @@ CLI 很多问题不是命令不会跑，而是你在错误的仓库或错误的�
 CLI 排障时，先分清这是安装问题、登录问题、权限问题，还是目录问题，排查通常会顺一些。
 
 官方说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
-
----
-
-**状态：** verified  
-**适用产品：** CLI  
-**核验依据：** OpenAI Help Center 当前 CLI 入门与配置资料仍覆盖安装、认证、权限/沙盒与工作目录等常见问题来源；本页采取按症状分成安装、登录、权限、目录四类的排查法，属于稳定的故障分流框架。  
-**最近核验：** 2026-07-26

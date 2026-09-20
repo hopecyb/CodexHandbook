@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明为什么验证步骤要进入任务验收；示例句式与检查顺序已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 运行测试
 description: 让验证步骤成为任务的一部分。
 sidebar:
@@ -68,10 +73,3 @@ sidebar:
 ```
 
 验证可以很轻，但不能缺；否则“做完”很难成立。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明为什么验证步骤要进入任务验收；示例句式与检查顺序已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: Permisos y Aprobaciones
 description: Explica cuándo Codex necesita que apruebes una operación.
 locale: es
 source_locale: zh-CN
-source_revision: 0870303
+source_revision: 5b1b5f8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

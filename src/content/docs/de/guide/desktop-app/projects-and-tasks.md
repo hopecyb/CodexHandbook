@@ -3,7 +3,7 @@ title: Projekte und Aufgaben
 description: Projekte und Aufgaben in der App verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: 088dad1
+source_revision: 6a1f17f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

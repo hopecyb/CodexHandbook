@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Os use cases atuais do Codex em OpenAI Developers ainda incluem “Understand large codebases”, com foco em seguir o caminho principal, identificar módulos críticos e localizar ficheiros relevantes; o exemplo desta página é exploração só de leitura, alinhado com o posicionamento oficial atual."
+  checkedAt: "2026-07-26"
 title: Compreender um código-base
 description: Explore um repositório desconhecido em modo só de leitura e construa um mapa cognitivo acionável.
 locale: pt
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Compreender um código-base
 
 ## Metadados
 
@@ -45,9 +53,3 @@ Não altere código. Leia @src/ e @README e, em no máximo 8 pontos, explique:
 
 - [Modelo de compreensão](/pt/prompts/templates/understand/)
 - [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Understand large codebases”, com foco em seguir o caminho principal, identificar módulos críticos e localizar ficheiros relevantes; o exemplo desta página é exploração só de leitura, alinhado com o posicionamento oficial atual.  
-**Última verificação:** 2026-07-26

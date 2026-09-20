@@ -3,7 +3,7 @@ title: Den richtigen Mechanismus wählen
 description: "Temporärer Prompt, AGENTS.md, Erinnerung, Skill, MCP — wohin gehört welche Schicht; ein Entscheidungsrahmen."
 locale: de
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

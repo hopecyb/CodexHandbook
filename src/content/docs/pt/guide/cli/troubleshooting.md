@@ -3,7 +3,7 @@ title: Resolução de problemas na CLI
 description: Investigar falhas de autenticação, Permissão e comandos.
 locale: pt
 source_locale: zh-CN
-source_revision: 0d016f1
+source_revision: 57b062f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

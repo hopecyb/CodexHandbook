@@ -1,24 +1,22 @@
 ---
 title: Terminal integrado
-description: Usar o terminal na App em conjunto com as Tarefas.
+description: Executa comandos no projeto ou worktree atual e verifica os resultados das tarefas com saídas reais.
 locale: pt
 source_locale: zh-CN
-source_revision: 918b2bf
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 727e93e
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
+Cada conversa na aplicação de desktop do ChatGPT tem um terminal associado ao projeto ou worktree atual. Não serve apenas para ver registos: é também a janela de evidências onde verificas as conclusões do Codex.
 
-Every chat in the ChatGPT desktop App has a terminal scoped to the current project or worktree. It is not just a place to view logs. It is also the evidence window you use to verify Codex's conclusions.
+Podes abri-lo pelo ícone de terminal no canto superior direito da aplicação ou premindo `Ctrl` e a tecla de acento grave ao mesmo tempo. O ChatGPT pode ler a saída atual do terminal, pelo que também lhe podes pedir que analise uma compilação falhada ou um servidor de desenvolvimento em execução.
 
-Open it from the terminal icon in the upper-right corner of the App, or press `Ctrl` and the backtick key together. ChatGPT can read the current terminal output, so you can ask it to analyze a failed build or a running development server.
+## Fluxo mínimo de verificação
 
-## Minimal verification flow
-
-In a JavaScript project, you might run:
+Num projeto JavaScript, podes executar pela ordem indicada:
 
 ```bash
 git status --short
@@ -26,48 +24,39 @@ pnpm test
 pnpm run lint
 ```
 
-Commands differ between projects. Check `README.md`, `package.json`, or the project rules first. Put the confirmed commands in the prompt:
+Os comandos variam entre projetos. Consulta primeiro `README.md`, `package.json` ou as regras do projeto. Inclui no prompt os comandos que confirmaste:
 
 ```text
-After the change, run pnpm test and pnpm run lint.
-Report the exit status of each command. If either fails, do not claim that
-the task is complete.
+Depois da alteração, executa pnpm test e pnpm run lint.
+Indica o estado de saída de cada comando. Se algum falhar, não afirmes que a tarefa está concluída.
 ```
 
-Record at least what ran, whether it exited successfully, the first meaningful error for each failure, and which checks did not run.
+Na aceitação, regista pelo menos o que foi executado, se terminou com êxito, o primeiro erro relevante de cada falha e as verificações que não chegaram a ser executadas.
 
-## Handling long-running processes
+## Como lidar com processos longos
 
-A development server keeps running; that does not mean the command is stuck. After starting it, check:
+Um servidor de desenvolvimento continua a executar; isso não significa que o comando tenha bloqueado. Depois de o iniciar, verifica:
 
-- whether the output includes a local URL;
-- whether the page opens in a browser;
-- whether runtime errors subsequently appear in the terminal.
+- se a saída mostra um endereço local;
+- se a página abre no navegador;
+- se surgem mais tarde erros de execução no terminal.
 
-Send an interrupt signal when you need to stop it. Do not start duplicate servers only because no new output has appeared for a while.
+Envia um sinal de interrupção quando precisares de o parar. Não arranques vários servidores só porque a saída deixou de apresentar novidades por algum tempo.
 
-## Reusable Actions
+## Actions reutilizáveis
 
-If you frequently run the same command, define an Action in the local environment. It becomes a shortcut in the desktop App and runs in the integrated terminal. Actions are suitable for low-risk verification such as `test`, `lint`, and `build`. Do not use them to hide production deployment or database deletion operations.
+Se executas muitas vezes o mesmo comando, podes definir uma Action no ambiente local. Ela aparece como atalho na aplicação de desktop e é executada no terminal integrado. É adequada para verificações de baixo risco como `test`, `lint` e `build`, mas não para ocultar ações de publicação em produção ou de limpeza da base de dados.
 
-## Security boundary
+## Limites de segurança
 
-- Do not paste production secrets into a chat or terminal history.
-- For an unfamiliar command, first ask for its purpose, impact, and rollback approach.
-- Do not blindly rerun deletion, migration, or deployment commands in production.
-- A command being executable in the terminal does not mean it has business authorization.
+- Não coloques segredos de produção na conversa nem no histórico do terminal.
+- Para um comando que não compreendes, pede primeiro uma explicação do objetivo, do alcance do impacto e de como o reverter.
+- Não voltes a executar às cegas comandos de eliminação, migração ou publicação em produção.
+- O facto de um comando poder ser executado no terminal não significa que tenha autorização para a operação de negócio.
 
-The official documentation lists common commands such as `git status`, `git pull --rebase`, tests, and linting. Your project's own documentation remains the final authority for its commands.
+A documentação oficial inclui comandos comuns como `git status`, `git pull --rebase`, testes e lint. Para os comandos deste projeto, a fonte final deve ser a própria documentação do projeto.
 
-## Official sources
+## Fontes oficiais
 
-- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
-- [Local environments](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26
+- [Terminal integrado](https://learn.chatgpt.com/docs/integrated-terminal)
+- [Ambientes locais](https://learn.chatgpt.com/docs/environments/local)

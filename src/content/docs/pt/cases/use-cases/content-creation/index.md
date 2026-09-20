@@ -3,7 +3,7 @@ title: Criação de conteúdo
 description: Entrada para casos de documentação, artigos e ativos de conteúdo — foco em revisão, reescrita e aceitação de artefatos.
 locale: pt
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

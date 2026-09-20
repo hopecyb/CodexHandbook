@@ -1,28 +1,39 @@
 ---
 title: "Âmbito e prioridade de AGENTS.md"
-description: Vários ficheiros, monorepo e «regras do projeto vs Prompt da conversa» — quem manda.
+description: "Compreenda exatamente como as regras globais, da raiz do projeto e do diretório atual são encontradas e combinadas."
+contentType: reference
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "As regras oficiais de descoberta e combinação foram verificadas ponto por ponto; o exemplo de diretórios e as sugestões para confirmar o carregamento são didáticos e não representam testes em todos os clientes."
+  evidence:
+    - label: "AGENTS.md"
+      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: 698ab44
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: b5f31cc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
+O Codex constrói uma cadeia de instruções no início de cada execução. Primeiro, importa compreender a ordem de descoberta dos próprios ficheiros `AGENTS.md`, em vez de presumir uma classificação que misture políticas da organização, configuração e prompts.
 
-Codex builds an instruction chain at the start of every run. The important model is not a guessed ranking that mixes organization policy, configuration, and prompts; first understand how `AGENTS.md` files themselves are discovered.
+## Ordem oficial de descoberta
 
-## Official discovery order
+1. **Nível global**: no diretório pessoal do Codex (por predefinição, `~/.codex`), procura primeiro `AGENTS.override.md` e, se este não existir, lê `AGENTS.md`. Neste nível, usa apenas o primeiro ficheiro não vazio.
+2. **Nível do projeto**: da raiz do projeto (normalmente a raiz Git) até ao diretório de trabalho atual, verifica em cada diretório `AGENTS.override.md`, `AGENTS.md` e os nomes alternativos configurados. Usa, no máximo, um ficheiro por diretório.
+3. **Combinação**: concatena os conteúdos da raiz até ao diretório atual. Os ficheiros mais próximos deste surgem mais tarde e, por isso, podem substituir orientações anteriores.
 
-1. **Global layer:** in Codex home (default `~/.codex`), Codex looks for `AGENTS.override.md` and falls back to `AGENTS.md`; it uses only the first non-empty file.
-2. **Project layer:** from the project root (usually the Git root) down to the current working directory, each directory is checked for `AGENTS.override.md`, `AGENTS.md`, and configured fallback names; at most one is loaded per directory.
-3. **Merge:** content is concatenated from root to current directory. Files closer to the current directory appear later and can therefore override earlier guidance.
+O Codex ignora ficheiros vazios. O carregamento para quando o conteúdo combinado atinge `project_doc_max_bytes`, cujo limite predefinido é 32 KiB.
 
-Empty files are skipped. Loading stops when merged content reaches `project_doc_max_bytes`, whose default is 32 KiB.
-
-## Monorepo example
+## Exemplo de monorepo
 
 ```text
 repo/
@@ -36,52 +47,45 @@ repo/
         └── AGENTS.override.md
 ```
 
-When started from `services/payments`, the root `AGENTS.md` loads first. Because that directory contains `AGENTS.override.md`, its sibling `AGENTS.md` is ignored.
+Ao iniciar em `services/payments`, o `AGENTS.md` da raiz é carregado primeiro. Se existir `AGENTS.override.md` nesse diretório, o `AGENTS.md` do mesmo diretório é ignorado.
 
-Put repository-wide rules—package manager, common tests, and security exclusions—at the root. Nested files should contain only incremental service rules. Do not duplicate 80% of the content.
+Coloque no ficheiro da raiz as regras de todo o repositório, como o gestor de pacotes, os testes comuns e as restrições de segurança. Os ficheiros aninhados devem conter apenas regras adicionais do serviço. Evite duplicar 80 % do conteúdo.
 
-## How task prompts fit
+## Como articular o prompt da tarefa
 
-`AGENTS.md` holds lasting, version-controlled project conventions. The prompt holds the current goal, scope, and acceptance criteria:
-
-```text
-Follow the applicable AGENTS.md files. For this task, modify only
-services/payments/retry.ts and its tests. Do not rotate credentials.
-Run make test-payments and report the actual result.
-```
-
-A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, do not guess from “ignore previous rules.” Ask Codex to list loaded instruction sources, then narrow the task.
-
-## Verify what actually loaded
-
-Start a new session in the target directory and ask:
+`AGENTS.md` contém convenções duradouras do projeto que podem ser versionadas. O prompt define o objetivo, o âmbito e os critérios de aceitação desta tarefa. Por exemplo:
 
 ```text
-Before working, list the AGENTS.md / AGENTS.override.md sources loaded for this
-run in order, then summarize the additional constraints from each. Do not edit files.
+Segue os ficheiros AGENTS.md aplicáveis. Nesta tarefa, altera apenas
+services/payments/retry.ts e os seus testes. Não faças rotação de chaves.
+Executa make test-payments e comunica o resultado real.
 ```
 
-`AGENTS.md` is read at startup. After changing it, verify in a new run or chat; do not assume a current session hot-reloads it.
+Um prompt não pode disponibilizar capacidades impedidas pelos limites do sistema, da organização, da sandbox ou das permissões. Perante um conflito, peça ao Codex para enumerar as fontes das instruções relevantes e o âmbito de cada uma. Distinga as convenções predefinidas do projeto, que podem ser ajustadas, dos limites reais de execução. Se o âmbito for claro, estiver autorizado e não houver conflito com instruções de nível superior, prossiga; indique o bloqueio concreto apenas quando faltarem mesmo informações ou permissões. Veja a comparação completa em [Prioridade do contexto](/pt/guide/context/context-priority/).
 
-## Fallback names and capacity
+## Verificar o que foi realmente carregado
 
-To use an existing `TEAM_GUIDE.md`:
+Inicie uma nova sessão no diretório de destino e pergunte:
+
+```text
+Antes de começares, enumera por ordem as fontes AGENTS.md / AGENTS.override.md
+carregadas nesta execução e resume separadamente as restrições acrescentadas
+por cada ficheiro. Não alteres ficheiros.
+```
+
+`AGENTS.md` é lido no arranque. Depois de o alterar, verifique numa nova execução ou sessão; não presuma que a sessão atual foi atualizada automaticamente.
+
+## Nomes alternativos e capacidade
+
+Se já existir um ficheiro `TEAM_GUIDE.md`, pode configurar:
 
 ```toml
 project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]
 project_doc_max_bytes = 65536
 ```
 
-A fallback applies only when no higher-priority file exists in the same directory. Remove duplicate and irrelevant background before increasing capacity so important rules are not crowded out.
+Um nome alternativo só é usado quando não existe no mesmo diretório um ficheiro de prioridade superior. Antes de aumentar o limite, remova duplicações e informação de contexto irrelevante para evitar que regras importantes fiquem de fora.
 
-## Official source
+## Fonte oficial
 
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE, Cloud
-
-**Last verified:** 2026-08-26

@@ -3,10 +3,9 @@ title: Rà soát diff
 description: Cách đọc thay đổi và đặt câu hỏi.
 locale: vi
 source_locale: zh-CN
-source_revision: 7dc8ee8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f7f953f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -33,6 +32,21 @@ Khi đọc diff, ưu tiên xem:
 4. Có khóa bí mật hoặc dấu vết gỡ lỗi còn sót không?
 
 Giao diện phía sản phẩm: [Diff, bình luận và rà soát](/vi/guide/desktop-app/diffs-comments-and-review/)
+
+## Kiểm tra chất lượng mã do AI tạo
+
+Ngoài việc xem **tệp nào đã thay đổi**, hãy kiểm tra xem chính thay đổi đó có phù hợp với dự án không:
+
+| Mục kiểm tra | Cần xem gì |
+|---|---|
+| Tên gọi | Tên biến, hàm, tệp có nói rõ mục đích, thay vì lặp `data`, `temp`, `helper`? |
+| Ranh giới hàm | Có dồn nhiều trách nhiệm vào một hàm lớn? |
+| Xử lý lỗi | Khi thất bại có ngữ cảnh hữu ích hay ngoại lệ bị nuốt mất? |
+| Kiểm thử | Có thêm bài kiểm thử chứng minh hành vi, thay vì chỉ sửa phần triển khai? |
+| Chú thích | Có giải thích «vì sao» thay vì nhắc lại mã? |
+| Tính đơn giản | Có đưa vào lớp trừu tượng chưa cần thiết chỉ để trông đầy đủ hơn? |
+
+Để rà soát nhanh, bạn có thể yêu cầu Codex xem lại diff theo bảng này và chỉ liệt kê rủi ro, không tiếp tục sửa tệp.
 
 ## Hiểu lầm thường gặp
 

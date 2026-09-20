@@ -3,7 +3,7 @@ title: CLI
 description: Hướng dẫn tối thiểu dùng được cho lối vào dòng lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: f654474
+source_revision: 53f6387
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

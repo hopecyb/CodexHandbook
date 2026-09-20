@@ -3,7 +3,7 @@ title: Tham chiếu lỗi
 description: "Chỉ mục học lỗi thường gặp, mã thoát và dạng thất bại — trỏ tới xử lý sự cố, không thay hỗ trợ chính thức."
 locale: vi
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

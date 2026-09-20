@@ -1,154 +1,148 @@
 ---
-title: "Référence des commandes CLI"
-description: Sous-commandes et flags Codex CLI courants — index d'apprentissage, pas substitut à la doc officielle.
+title: Référence des commandes CLI
+description: Index des principales commandes et options de Codex CLI, en complément de la documentation officielle.
 locale: fr
 source_locale: zh-CN
-source_revision: bdc537d
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 6091bcc
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Command reference helps you pick an entry point—not memorize every flag:
+Cette référence sert surtout à choisir un point d'entrée, sans apprendre tous les paramètres par cœur :
 
-> **Should I use interactive entry or a one-shot command?**
+> **Dois-je ouvrir une session interactive ou lancer une commande ponctuelle ?**
 
-This page indexes the current Stable **Codex CLI** entry points for search and comparison. Continue to run `codex --help` and each subcommand's `--help`; use [Developer commands](https://learn.chatgpt.com/docs/developer-commands) for complete maturity and parameter details.
+Cette page recense les points d'entrée actuellement **Stable** de Codex CLI pour faciliter la recherche et la comparaison. Avant de les utiliser, exécutez `codex --help` et le `--help` de chaque sous-commande. La liste complète des paramètres et de leur niveau de maturité figure dans les [Developer commands](https://learn.chatgpt.com/docs/developer-commands).
 
-## When to use this page
+## Quand utiliser cette page
 
-- Interactive vs one-shot command
-- Chat-style vs script-style task
-- You know CLI is right but not which entry
+- Pour choisir entre une session interactive et une commande ponctuelle.
+- Pour déterminer si la tâche se prête à une conversation ou à un script.
+- Quand vous savez que le CLI convient, mais hésitez sur la commande.
 
-## Entry choice
+## Choisir un point d'entrée
 
-- Chat while you work: `codex`
-- One task, result when done: `codex exec`
+- Pour discuter et intervenir au fil du travail : `codex`.
+- Pour confier une tâche unique et récupérer le résultat à la fin : `codex exec`.
 
-For new CLI users, that split solves most entry questions.
+Cette distinction répond déjà à la plupart des questions des personnes qui débutent avec le CLI.
 
-## Stable command overview
+## Aperçu des commandes Stable
 
-| Entry | Purpose | Detail |
+| Commande | Usage | Détails |
 |---|---|---|
-| `codex` | Interactive TUI session | [Interactive mode](/fr/guide/cli/interactive-mode/) |
-| `codex exec` / `codex e` | Non-interactive single/pipeline task | [Non-interactive mode](/fr/guide/cli/non-interactive-mode/) |
-| `codex doctor` | Generate an installation, configuration, authentication, runtime, Git, and terminal diagnostic report | [CLI troubleshooting](/fr/guide/cli/troubleshooting/) |
-| `codex login` / `codex logout` | Manage authentication | [Sign-in and authentication](/fr/guide/getting-started/sign-in-and-authentication/) |
-| `codex resume` / `codex fork` | Continue or fork a saved session | [Handoff and resume](/fr/guide/agent-work/handoff-and-resume/) |
-| `codex mcp` | Manage MCP servers | [Connect an MCP server](/fr/skills/mcp/connect-an-mcp-server/) |
-| `codex plugin` | Install, list, and remove Plugins | [Plugins](/fr/skills/plugins/) |
+| `codex` | Session TUI interactive | [Mode interactif](/fr/guide/cli/interactive-mode/) |
+| `codex exec` / `codex e` | Tâche non interactive, ponctuelle ou en pipeline | [Mode non interactif](/fr/guide/cli/non-interactive-mode/) |
+| `codex doctor` | Rapport de diagnostic sur l'installation, la configuration, l'authentification, l'environnement d'exécution, Git et le terminal | [Dépannage du CLI](/fr/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | Gestion de l'authentification | [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | Reprise ou bifurcation d'une session enregistrée | [Transfert et reprise](/fr/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | Gestion des serveurs MCP | [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Installation, liste et suppression des Plugins | [Plugins](/fr/skills/plugins/) |
 
-:::caution[Different maturity levels]
-The official reference also contains Experimental, Beta, and Deprecated commands. This beginner reference does not mix them into the Stable list; confirm maturity and risk before using one.
+:::caution[Niveaux de maturité différents]
+La référence officielle contient aussi des commandes Experimental, Beta et Deprecated. Cette liste de base ne les mélange pas aux commandes Stable ; vérifiez leur maturité et leurs risques avant de les employer.
 :::
 
-## Common misconceptions
+## Idées reçues
 
-### 1. You do not need to memorize everything
+### 1. Inutile de mémoriser toutes les commandes
 
-Know which entry class fits the task; look up flags when needed.
+Repérez d'abord la catégorie adaptée à votre tâche, puis consultez `--help` pour les options nécessaires.
 
-### 2. `codex exec` is not just “advanced `codex`”
+### 2. `codex exec` n'est pas une version avancée de `codex`
 
-It targets unattended scripts and CI—not a stronger chat mode.
+Il vise plutôt les scripts, la CI et les exécutions sans surveillance ; il ne s'agit pas d'un mode interactif plus puissant.
 
-### 3. Seeing a flag ≠ you should use it now
+### 3. Voir une option ne signifie pas qu'il faut l'activer
 
-Many flags depend on version, environment, and security policy—understand intent first.
+De nombreuses options dépendent de la version, de l'environnement et de la politique de sécurité. Comprenez leur effet avant de les choisir.
 
-### 4. Command reference ≠ tutorial
+### 4. Une référence de commandes n'est pas un tutoriel
 
-It is:
+Elle fournit :
 
-- An entry map
-- A parameter index
-- A pointer to deeper pages
+- une carte des points d'entrée ;
+- un index des paramètres ;
+- des liens vers les pages plus détaillées.
 
-## Interactive mode (conceptual)
+## Mode interactif : principe
 
 ```bash
-# Start interactive session at repo root (illustrative)
+# Démarrer une session interactive à la racine du dépôt (exemple)
 codex
 
-# Common in-session actions (per TUI)
-# - Enter task description
-# - / slash commands → see slash-commands page
-# - Approve shell / file write requests
+# Actions courantes dans la session (selon la TUI)
+# - Saisir la description de la tâche
+# - Utiliser les commandes / : voir la page slash-commands
+# - Approuver les demandes d'exécution shell ou d'écriture de fichiers
 ```
 
-Slash commands: [Slash command reference](/fr/guide/reference/slash-commands/)
+Voir la [référence des commandes slash](/fr/guide/reference/slash-commands/).
 
-## Entry decision flow
+## Choisir la commande
 
-1. Run `codex --help`
-2. Choose interactive or `exec`
-3. For a subcommand, read its `--help`
+Pour débuter avec le CLI :
 
-Avoid drowning in the full flag table on day one.
+1. Lancez `codex --help`.
+2. Choisissez entre le mode interactif et `exec`.
+3. Consultez le `--help` de la sous-commande retenue.
 
-## Quick start
+Vous éviterez ainsi de vous perdre immédiatement dans la liste complète des options.
 
-1. `codex --help`
-2. Chat while working → `codex`
-3. CI or scripts → study `codex exec`
+## Démarrage rapide
 
-## Non-interactive exec (conceptual)
+1. Lancez `codex --help`.
+2. Pour discuter pendant le travail, lancez `codex`.
+3. Pour la CI ou les scripts, étudiez `codex exec`.
+
+## `exec` non interactif : principe
 
 ```bash
-# Working directory and one-shot prompt
-codex exec --cd /path/to/repo "Your complete task description"
+# Répertoire de travail et instruction ponctuelle (exemple)
+codex exec --cd /path/to/repo "Description complète de votre tâche"
 
-# Current common flags
-# --cd, -C       working directory
-# --model        pin model
-# --sandbox      sandbox policy
-# --ask-for-approval, -a  approval policy
-# stdin pipe     read prompt from file or upstream command
+# Options courantes
+# --cd, -C       répertoire de travail
+# --model        modèle choisi
+# --sandbox      politique de bac à sable
+# --ask-for-approval, -a  politique d'approbation
+# Entrée standard  instruction lue depuis un fichier ou une autre commande
 ```
 
-Security: [Human approval patterns](/fr/cases/workflows/human-approval-patterns/)
+Sécurité : [modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/).
 
-## Configuration and auth (conceptual)
+## Configuration et authentification : principe
 
-| Action | Notes |
+| Action | Précision |
 |---|---|
-| Sign in | Same as [Sign-in and authentication](/fr/guide/getting-started/sign-in-and-authentication/) |
-| Config files | User/project level—see [Configuration reference](/fr/guide/reference/configuration-reference/) |
-| MCP | [Connect MCP](/fr/skills/mcp/connect-an-mcp-server/) |
+| Se connecter | Voir [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/) |
+| Fichiers de configuration | Niveaux utilisateur et projet : [Référence de configuration](/fr/guide/reference/configuration-reference/) |
+| MCP | [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/) |
 
-## Exit codes and automation
+## Codes de sortie et automatisation
 
-Non-interactive mode usually uses **exit codes** for CI:
+Le mode non interactif communique généralement le résultat à la CI par son **code de sortie** :
 
-- `0`: completed per agreement
-- Non-`0`: failure or needs human—check stderr/logs
+- `0` : tâche accomplie selon les critères convenus ;
+- code différent de `0` : échec ou intervention humaine nécessaire ; consultez les journaux.
 
-CLI command pages help you pick entry and intent—not memorize parameters.
+Les pages de commandes CLI servent à choisir une entrée et à comprendre son usage, sans apprendre tous les paramètres par cœur.
 
-Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/fr/cases/workflows/diagnose-before-fixing/).
+Dans la CI, conservez stderr et les journaux pour [diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/).
 
-## vs in-chat slash commands
+## Commandes terminal et commandes slash dans la session
 
-| | `codex` terminal | In-session `/` |
+| | Terminal `codex` | `/` dans une session |
 |---|---|---|
-| Docs | This page + product guide | [slash-commands](/fr/guide/reference/slash-commands/) |
-| Best for | Scripts, CI | Interactive exploration |
+| Documentation | Cette page et le guide produit | [Commandes slash](/fr/guide/reference/slash-commands/) |
+| Usage adapté | Scripts et CI | Exploration interactive |
 
-## Troubleshooting
+## Dépannage
 
-| Symptom | See |
+| Problème | Consulter |
 |---|---|
-| Command not found | [Install CLI](/fr/guide/getting-started/install-cli/) |
-| Config not applied | [CLI configuration](/fr/guide/cli/configuration/) |
-| Approval blocks CI | Tighten prompt + read-only sandbox |
+| Commande introuvable | [Installer le CLI](/fr/guide/getting-started/install-cli/) |
+| Configuration non appliquée | [Configuration du CLI](/fr/guide/cli/configuration/) |
+| Approbation bloquant la CI | Préciser l'instruction et utiliser un bac à sable en lecture seule |
 
-[CLI troubleshooting](/fr/guide/cli/troubleshooting/)
-
----
-
-**Status:** outdated
-**Products:** CLI
-**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.
-**Last verified:** 2026-07-26
+[Dépannage du CLI](/fr/guide/cli/troubleshooting/)

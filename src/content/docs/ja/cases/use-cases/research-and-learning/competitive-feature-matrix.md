@@ -3,7 +3,7 @@ title: "事例: 競合機能マトリクス"
 description: 出典付き調査と表出力——非エンジニアも再利用できるワークフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: d90f5f1
+source_revision: b74008b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

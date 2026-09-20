@@ -3,7 +3,7 @@ title: Token, Contexto e Compactação
 description: Entenda a janela de Contexto, o uso e a Compactação.
 locale: pt
 source_locale: zh-CN
-source_revision: b33848c
+source_revision: da31a01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

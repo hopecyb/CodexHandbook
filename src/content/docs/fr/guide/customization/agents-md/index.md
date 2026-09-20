@@ -3,7 +3,7 @@ title: AGENTS.md
 description: Vue d'ensemble des instructions projet à long terme — pour qui elles sont et quel problème elles résolvent avant d'écrire le contenu.
 locale: fr
 source_locale: zh-CN
-source_revision: ce5c1af
+source_revision: cb6371f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Elige tu ruta
 description: Elige una ruta de lectura según rol, Tarea o entrada de producto.
 locale: es
 source_locale: zh-CN
-source_revision: 612639b
+source_revision: 680d473
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

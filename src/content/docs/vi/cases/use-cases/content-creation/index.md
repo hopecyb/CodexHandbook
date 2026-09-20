@@ -3,7 +3,7 @@ title: Sáng tạo nội dung
 description: Lối vào case về tài liệu, bài viết và tài sản nội dung — trọng tâm review, viết lại và nghiệm thu Artifact.
 locale: vi
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

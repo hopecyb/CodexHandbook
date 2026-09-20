@@ -3,7 +3,7 @@ title: 個人の好み
 description: ユーザーレベル設定、デフォルトモデル、UI の習慣——チーム約束をリポジトリを汚さない。
 locale: ja
 source_locale: zh-CN
-source_revision: e447e66
+source_revision: c381051
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

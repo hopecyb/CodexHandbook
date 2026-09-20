@@ -3,7 +3,7 @@ title: First 30 minutes
 description: A 30-minute path you can follow on day one.
 locale: en
 source_locale: zh-CN
-source_revision: 5363190
+source_revision: 7d1061d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26

@@ -3,7 +3,7 @@ title: Presentaciones
 description: Generar, revisar y exportar diapositivas y guiones — convenciones de estructura, plantilla maestra y notas del orador.
 locale: es
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

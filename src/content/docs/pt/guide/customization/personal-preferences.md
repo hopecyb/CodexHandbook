@@ -3,10 +3,9 @@ title: Preferências pessoais
 description: Configuração de utilizador, modelo predefinido e hábitos de interface, sem poluir as convenções de equipa no repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: e447e66
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: c381051
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
@@ -34,6 +33,16 @@ Se estas três classes não forem separadas, depois aparece facilmente:
 - Na sua máquina corre tudo bem, mas os colegas não conseguem reproduzir
 - Pensa que a regra já está em vigor, mas na verdade só a sua máquina a cobre
 - Leva definições permissivas para projetos mais sérios
+
+## O que pertence às preferências pessoais
+
+| Configuração | Exemplo |
+|---|---|
+| Modelo e nível de raciocínio por defeito | Desempenho do computador e plano pessoal |
+| Tema, tipos de letra e notificações | [Definições](/pt/guide/desktop-app/settings/) da app de desktop |
+| Ferramentas MCP pessoais | Acesso só de leitura a base local, concedido com cuidado |
+| Caminho da biblioteca pessoal de Skills | Manter distinto dos Plugins da equipa |
+| Aliases do terminal e diretório habitual para iniciar `codex` | Ver [Configuração da CLI](/pt/guide/cli/configuration/) |
 
 ## Conteúdo de equipa que não deve ficar só na camada pessoal
 

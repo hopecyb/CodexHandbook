@@ -1,15 +1,16 @@
 ---
 title: Codex ガイド
+prev: false
+next:
+  link: /ja/guide/start-here/
+  label: ここから始める
 description: Codex の理解、クライアントの選択、最初のタスクの完了、権限・コンテキスト・検証の理解。
 locale: ja
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Codex ガイド
 
 ここでは、Codex とは何か、何に向いているか、そして初回利用から安定したワークフローへの移行方法を説明します。
 
@@ -23,6 +24,12 @@ reviewed_at: 2026-08-26
 - 最初にどのクライアントを選ぶべきか
 - 最初のタスクを終えたあと、次に何を補うべきか
 - 権限、コンテキスト、検証の問題が起きたとき、どの章に戻るべきか
+
+## 持ち帰れる資料
+
+- [初心者向け安全チェックリスト](/ja/guide/getting-started/beginner-safety-checklist/)
+- [クライアントの選び方](/ja/guide/choose-your-client/)
+- [結果の検証と完了条件](/ja/guide/verification/)
 
 ## 推奨順序
 

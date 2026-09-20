@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "La página de inicio de OpenAI Developers sigue enfatizando usar Codex para construir, probar, revisar y entregar cambios; esta página descompone la Verificación en revisar diffs, ejecutar pruebas, validar fuentes y definir hecho, y se cruzó con los capítulos de calidad del sitio."
+  checkedAt: "2026-07-26"
 title: Verificación
 description: Revisa diffs, ejecuta pruebas, valida fuentes y define el criterio de hecho.
 sidebar:
   order: 17
 locale: es
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Verificación
 
 El error más frecuente de muchos principiantes la primera vez con Codex es **tratar «dijo que está hecho» como si realmente lo estuviera**.
 
@@ -96,10 +100,3 @@ Si no sabes por dónde empezar, lee por defecto [Definición de hecho](/es/guide
 La Verificación confirma que este resultado se puede usar, se puede confiar en él y se puede entregar.
 
 Cómo escribir criterios de aceptación en el Prompt: [definir el criterio de hecho](/es/prompts/define-done/). Casos de extremo a extremo: [casos prácticos](/es/cases/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** La página de inicio de OpenAI Developers sigue enfatizando usar Codex para construir, probar, revisar y entregar cambios; esta página descompone la Verificación en revisar diffs, ejecutar pruebas, validar fuentes y definir hecho, y se cruzó con los capítulos de calidad del sitio.  
-**Última verificación:** 2026-07-26

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "plus-19",
+    "label": "ChatGPT Plus",
+    "amount": "19.99",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "go",
+    "label": "ChatGPT Go",
+    "amount": "8.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "credits-100",
+    "label": "100 Credits",
+    "amount": "4.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "pro-5x",
+    "label": "ChatGPT Pro 5x",
+    "amount": "100.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "pro-20x",
+    "label": "ChatGPT Pro 20x",
+    "amount": "200.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "plus-200",
+    "label": "ChatGPT Plus",
+    "amount": "200.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "credits-500",
+    "label": "500 Credits",
+    "amount": "20.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  },
+  {
+    "id": "credits-1000",
+    "label": "1000 Credits",
+    "amount": "40.00",
+    "currency": "USD",
+    "region": "US",
+    "channel": "App Store",
+    "checkedAt": "2026-09-18",
+    "source": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+    "period": null,
+    "tax": null
+  }
+]

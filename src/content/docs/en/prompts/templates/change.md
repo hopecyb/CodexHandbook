@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides a change-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Change template
 description: Bounded iteration on existing work.
 locale: en
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Change template
 
 For "change a little on what already exists."
 
@@ -64,10 +68,3 @@ Change prompts need "what to change" and "where changes are allowed."
 
 - [Define done](/en/prompts/define-done/)
 - [Constraints and boundaries](/en/prompts/constraints-and-boundaries/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a change-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

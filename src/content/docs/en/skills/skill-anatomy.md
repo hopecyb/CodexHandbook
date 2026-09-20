@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Current Codex runtime still centers skills on `SKILL.md` with optional scripts and references; this page covers directory roles, not volatile product entry points."
+  checkedAt: "2026-07-26"
 title: Skill anatomy
 description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
 locale: en
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 The first time you open a Skill directory, folders look familiar—but it is not always obvious why they are laid out this way.
@@ -15,7 +19,6 @@ This page explains how to separate main flow, long docs, templates, and scripts 
 
 That makes reading, editing, and reuse easier and avoids a mess as you grow.
 
-# Skill anatomy
 
 ## Directory layout
 
@@ -36,6 +39,18 @@ my-skill/
 
 At first you may only need `SKILL.md`.  
 Split out `references/`, `templates/`, and `scripts/` when things actually get complex.
+
+## Load on demand instead of all at once
+
+A maintainable Skill usually has three layers:
+
+| Layer | Contents | When used |
+|---|---|---|
+| Metadata | Name, description, trigger situations | Helps Codex decide whether to use it |
+| Main instructions | Required steps, prohibitions, definition of done | Read first when the Skill is triggered |
+| Supporting files | Templates, references, scripts, examples | Open or run only when the task needs them |
+
+This keeps the trigger description short during ordinary work and loads details only for execution. The distinction matters more as the number of Skills grows.
 
 ## Minimal SKILL.md example
 
@@ -112,10 +127,3 @@ Do not turn every template into a Skill. Preserve the ones with repeated use, cl
 | Scripts | Complexity analysis, link checks, coverage counts, formatting checks |
 
 A good Skill is not just a longer prompt. It splits reusable work into readable, testable, maintainable parts.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still centers skills on `SKILL.md` with optional scripts and references; this page covers directory roles, not volatile product entry points.  
-**Last verified:** 2026-07-26

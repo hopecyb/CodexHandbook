@@ -3,7 +3,7 @@ title: Configuração
 description: Página de orientação sobre ficheiros de configuração e profiles — o que deve e não deve ir para a configuração.
 locale: pt
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

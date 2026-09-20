@@ -1,48 +1,39 @@
 ---
-title: "Context Engineering (kỹ thuật ngữ cảnh)"
-date: 2025-09-29
-year: 2025
-summary: "Context Engineering thiết kế những gì mô hình nhìn thấy: lịch sử, tài liệu, kết quả công cụ và bộ nhớ."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+title: "Context Engineering (kỹ thuật quản lý ngữ cảnh)"
+description: "Ngữ cảnh gồm tác vụ, chỉ dẫn, tệp, kết quả truy xuất và đầu ra công cụ. Cần quyết định nội dung nào đưa vào tác vụ hiện tại, nội dung nào đọc khi cần và nội dung nào giữ lại sau khi nén."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Các sự kiện và mô tả dự án dưới đây đã được đối chiếu với nguồn sơ cấp. Gợi ý học tập là nhận định của tác giả; đối chiếu nguồn không đồng nghĩa với việc đã thử nghiệm sản phẩm."
+  evidence:
+    - label: "Bài viết về kỹ thuật quản lý ngữ cảnh"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Sự kiện và phạm vi có thể kiểm chứng
 
-# Context Engineering (kỹ thuật ngữ cảnh)
+**Ngày: 2025-09-29 · Loại: bài viết kỹ thuật.** Anthropic công bố *Effective context engineering for AI agents*, bàn về cách tổ chức ngữ cảnh mà Agent cần. Ngày đăng bài không phải ngày khái niệm này ra đời.
 
-- Mốc thời gian chính:
-  - Application-engineering inflection: 2025-09-01
-- Tài liệu chính thức:
-  - https://platform.openai.com/docs/guides/conversation-state
-  - https://platform.openai.com/docs/guides/retrieval
-- Ghi chú: Mục này ghi lại điểm chuyển trong việc áp dụng và ý nghĩa hiện tại của khái niệm này trong kỹ thuật ứng dụng AI.
+Nguồn: [Bài viết về kỹ thuật quản lý ngữ cảnh](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Đã kiểm tra vào 2026-09-18; ngày nguồn được công bố và ngày trang này được kiểm tra mang ý nghĩa khác nhau.
 
-## Nó Là Gì
+## Nó giải quyết vấn đề gì
 
-Context Engineering thiết kế những gì mô hình nhìn thấy: lịch sử, tài liệu, kết quả công cụ và bộ nhớ.
+Ngữ cảnh gồm tác vụ, chỉ dẫn, tệp, kết quả truy xuất và đầu ra công cụ. Cần quyết định nội dung nào đưa vào tác vụ hiện tại, nội dung nào đọc khi cần và nội dung nào giữ lại sau khi nén.
 
-## Nó Đưa Kỹ Thuật Ứng Dụng AI Từ Bước Nào Sang Bước Nào
+## Gợi ý học tập và giới hạn áp dụng
 
-Nó đưa tối ưu hóa từ viết prompt hay hơn sang thiết kế toàn bộ môi trường ngữ cảnh.
+Phần sau là nhận định giảng dạy của trang này, không phải số đo về mức độ phổ biến trong ngành hay hiệu quả:
 
-## Hiện Đang Ở Giai Đoạn Nào
+Ưu tiên sự thật và đường dẫn đến bằng chứng liên quan tới quyết định hiện tại. Thêm nội dung có thể gây nhiễu; bản tóm tắt sau khi nén không thay thế được tệp quan trọng. Khi mục tiêu bị lệch, hãy kiểm tra sản phẩm hiện có và các ràng buộc trước khi bổ sung prompt.
 
-Hiện tại tôi đánh dấu mục này là `emerging`.
+## Bài tập thực hành
 
-Nó đang nổi lên và rất quan trọng cho RAG, bộ nhớ agent và nhiệm vụ dài.
+[Giữ ngữ cảnh tập trung](/vi/guide/context/keep-context-focused/): liệt kê các tệp bắt buộc đọc, tài liệu tham khảo khi cần và phần không liên quan cho tác vụ hiện tại. Lưu mục tiêu, việc đã hoàn thành, câu hỏi chưa giải quyết và đường dẫn bằng chứng làm bản ghi bàn giao.
 
-## Nó Có Thể Thay Thế Điều Gì
-
-Nó thay thế việc đổ tài liệu và lịch sử vào ngữ cảnh mà không chọn lọc hay nén.
-
-## Điều Gì Có Thể Thay Thế Nó
-
-Nó sẽ được hấp thụ vào trình quản lý ngữ cảnh tự động và runtime có trạng thái.
+[Quay lại lộ trình và cách dùng mốc ngày](/vi/ai-roadmap/)

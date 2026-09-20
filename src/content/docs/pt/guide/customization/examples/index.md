@@ -3,7 +3,7 @@ title: Exemplos
 description: Compreender com exemplos reais como escrever configuração e AGENTS.md — não só princípios abstratos.
 locale: pt
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

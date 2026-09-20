@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "A página inicial da OpenAI Developers ainda enfatiza construir, testar, revisar e entregar mudanças com o Codex; esta página desmonta a Verificação em revisar Diff, rodar testes, validar fontes e definição de pronto, cruzada com os capítulos de qualidade do site."
+  checkedAt: "2026-07-26"
 title: Verificação
 description: Revisar Diff, rodar testes, validar fontes e definir critérios de conclusão.
 locale: pt
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 17
 ---
 
-# Verificação
 
 O erro mais fácil na primeira vez com o Codex é **tratar «ele disse que terminou» como «terminou de verdade»**.
 
@@ -96,10 +100,3 @@ Se não souber por onde começar, leia por padrão [Definição de pronto](/pt/g
 Verificação existe para confirmar que o resultado realmente serve, que você se atreve a usar e que dá para entregar.
 
 Como escrever critérios de aceite no Prompt: [Definir critérios de conclusão](/pt/prompts/define-done/). Casos ponta a ponta: [Casos práticos](/pt/cases/).
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** A página inicial da OpenAI Developers ainda enfatiza construir, testar, revisar e entregar mudanças com o Codex; esta página desmonta a Verificação em revisar Diff, rodar testes, validar fontes e definição de pronto, cruzada com os capítulos de qualidade do site.  
-**Última verificação:** 2026-07-26

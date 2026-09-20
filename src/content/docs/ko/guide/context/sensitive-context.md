@@ -3,7 +3,7 @@ title: 민감 컨텍스트
 description: 키, 개인정보, 공유하면 안 되는 자료.
 locale: ko
 source_locale: zh-CN
-source_revision: 909b1ff
+source_revision: a83db07
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Seleção e ficheiros abertos
 description: Usar código selecionado e ficheiros abertos para delimitar com precisão o alcance das Tarefas no IDE.
 locale: pt
 source_locale: zh-CN
-source_revision: 032d53f
+source_revision: b6b264f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

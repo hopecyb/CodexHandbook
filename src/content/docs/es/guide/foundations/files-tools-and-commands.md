@@ -3,7 +3,7 @@ title: Archivos, Herramientas y comandos
 description: Explica cómo Codex lee y escribe archivos, ejecuta comandos y usa Herramientas.
 locale: es
 source_locale: zh-CN
-source_revision: 8c0e875
+source_revision: 9d65338
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

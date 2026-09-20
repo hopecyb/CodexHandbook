@@ -3,7 +3,7 @@ title: Install the CLI
 description: Install Codex CLI, check its version and sign-in state, and run a first repository task.
 locale: en
 source_locale: zh-CN
-source_revision: b12f7d0
+source_revision: 564bd75
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

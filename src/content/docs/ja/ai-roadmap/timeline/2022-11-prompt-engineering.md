@@ -1,48 +1,39 @@
 ---
-title: "Prompt Engineering（プロンプト工学）"
-date: 2022-11-30
-year: 2022
-summary: "大規模言語モデルは確率的であり、同じプロンプトでも結果が揺れる。Prompt Engineering は役割、形式、制約を設計してこの揺れを抑え、出力をより安定して制御可能にする。Agent、Function Calling、Skills など後続の考え方の土台にもなる。"
-phase: mainstream
-trend: absorbed
-signal: well-calibrated
-tags: [prompt-engineering, llm, prompting, workflow, reliability]
-authored_by: ai-assisted
+title: "Prompt Engineering（プロンプトエンジニアリング）"
+description: "プロンプトは目標、必要な背景、制約、出力要件をモデルに伝えます。例は期待する結果を示す助けになりますが、長く書けば結果が良くなるとは限りません。"
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  evidence:
+    - label: "ChatGPTの公開発表"
+      href: "https://openai.com/index/chatgpt/"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 1028eec
+source_revision: 225d837
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 確認可能な出来事と範囲
 
-# Prompt Engineering（プロンプト工学）
+**日付：2022-11-30 · 種別：製品公開。** OpenAIはChatGPTの研究プレビューを公開しました。本サイトはこの一般向けの製品公開を学習の入口とし、プロンプト手法の発明日とは呼びません。
 
-- 重要な日付:
-  - Mainstream milestone: 2022-11-30 (ChatGPT public launch)
-- 公式リファレンス:
-  - https://platform.openai.com/docs/guides/prompt-engineering
-  - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- 注記: この項目は、Prompt Engineering が AI アプリケーション工学の基礎手法になった時点と意味を記録する。具体的なテンプレートや技法は Guide で展開する。
+出典：[ChatGPTの公開発表](https://openai.com/index/chatgpt/)。確認日は2026-09-18です。出典の公開日と本ページの確認日は意味が異なります。
 
-## それは何か
+## 何を解決するか
 
-Prompt Engineering は、入力指示を体系的に設計し、モデルの制御性、一貫性、タスク完了率を高めるための工学的手法である。きれいな一文を書くことではなく、役割定義、文脈整理、出力制約、分解、フィードバックを再利用できるプロセスとして組み立てることに意味がある。
+プロンプトは目標、必要な背景、制約、出力要件をモデルに伝えます。例は期待する結果を示す助けになりますが、長く書けば結果が良くなるとは限りません。
 
-## AI アプリケーション工学をどこからどこへ進めたか
+## 学習上の助言と適用範囲
 
-AI アプリケーションは「自然言語で頼んで結果を祈る」段階から、「構造化された入力を設計して目標出力を安定して得る」段階へ進んだ。これにより、個人の勘に依存していたモデル利用が、テンプレート、パターン、評価基準を持つ共同作業へ変わった。
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定した結果ではありません。
 
-## 現在の段階
+まず成果物を明確にし、次にモデルに不足している情報を補います。単純なタスクはそのまま実行し、重要な不明点があれば先に確認します。毎回最初に計画を書くことや、各段階で確認を待つことを普遍的な規則にはしないでください。
 
-現時点では、この項目を `mainstream` と見なしている。
+## 実践演習
 
-ほぼすべての LLM アプリケーションで基礎能力になっている。一方でモデルが賢くなるほど、過度に細かい指示は逆効果になることもある。現在は構造化出力、Tool Calling、ワークフロー編成、Skills などに吸収され、点の技法からシステム層へ移っている。
+[3組のプロンプト比較教材](/ja/prompts/comparison-lab/)：固定した入力を1組選び、A/Bの出力を別々に保存して、同じ基準で照合します。教材は用意されていますが、本サイトではモデルの効果をまだ実測していません。
 
-## 置き換える可能性があるもの
-
-初期の「ランダムなチャットボックスとしてモデルを試す」使い方を置き換えた。チームでは、うまく聞ける人だけが成果を出す属人的知識を、タスク定義と出力基準に変換した。
-
-## それを置き換える可能性があるもの
-
-完全に消える可能性は低い。タスクグラフ標準、自動プロンプト最適化、より制約されたモデルインターフェースが成熟しても、中核思想はそれらの内部に埋め込まれる。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

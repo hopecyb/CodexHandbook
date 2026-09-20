@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers の現在の Codex use cases には「Review GitHub pull requests」が含まれており、人間のレビュー前に回帰と潜在的な問題を捕捉することを強調しています。本ページの例は diff の構造化レビューと P0/P1 およびファイルパスの出力のみを要求し、特定の UI や固定コマンドに依存しません。"
+  checkedAt: "2026-07-26"
 title: PR をレビューする
 description: マージ前に Codex で構造化された diff レビューを行う。
 locale: ja
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# PR をレビューする
 
 ## メタ情報
 
@@ -44,10 +52,3 @@ reviewed_at: 2026-08-26
 
 - [レビューテンプレート](/ja/prompts/templates/review/)
 - [マージ前レビュー](/ja/cases/workflows/review-before-merge/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の現在の Codex use cases には「Review GitHub pull requests」が含まれており、人間のレビュー前に回帰と潜在的な問題を捕捉することを強調しています。本ページの例は diff の構造化レビューと P0/P1 およびファイルパスの出力のみを要求し、特定の UI や固定コマンドに依存しません。

@@ -3,15 +3,21 @@ title: Ein Codex Pet erstellen
 description: "Verstehe die Erstellung eines Codex Pet über Assets, Spritesheet, Metadaten und Lizenzierung."
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: b2e0dbd
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 57e9aca
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Format- und Wiederherstellungsgrenzen wurden ergänzt; Installation, Animationswiedergabe und Deinstallation wurden hier aber noch nicht mit einem konkreten Client und Pet-Paket getestet. Verzeichnisse und Menüs sind anhand der Zielversion zu prüfen."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Ein Codex Pet erstellen
+Diese Site hat die Kompatibilität eines bestimmten Clients und Pet-Pakets noch nicht getestet. Notiere zuerst Versionen und Herkunft und prüfe die tatsächlichen Ergebnisse mit dem [Kompatibilitäts- und Wiederherstellungsprotokoll](/de/guide/reference/resource-compatibility/). Die Abbildung erklärt nur den Aufbau; sie ist keine Formatgarantie für jede Version.
+
 
 Ein Codex Pet zu erstellen bedeutet nicht nur, ein schönes Bild zu erzeugen. Ziel ist ein Paket, das Codex erkennen, laden, animieren und zwischen Zuständen umschalten kann. Denke daran als Kombination aus Metadaten, Animationsatlas sowie Quellen- und Lizenzhinweisen.
 
@@ -29,15 +35,9 @@ Die übliche Minimalstruktur ist:
 
 Eine Spritesheet kombiniert viele Animationsframes in einem großen Bild. Der Client muss nicht dutzende kleine Dateien laden, sondern schneidet Frames anhand von Zeile und Spalte aus dem Bild und spielt sie nacheinander ab.
 
-Viele Codex-Pet-Pakete verwenden diese Atlas-Konvention:
+Prüfe Atlas-Spezifikation und Versionsfelder zusammen. Eine ältere Abbildung auf dieser Site verwendet 8 Spalten × 9 Zeilen mit 192 × 208 px pro Frame (insgesamt 1536 × 1872 px). Das ist keine allgemeingültige Spezifikation für alle Clients. Besorge vor dem Erstellen der Dateien die Formatbeschreibung für die Zielversion des Clients oder Erstellungswerkzeugs und bestätige Raster, Aktionszuordnung und Versionsfelder.
 
-- 8 Spalten x 9 Zeilen
-- 192 x 208 px pro Frame
-- 1536 x 1872 px Gesamtbild
-- 72 Frames
-- WebP oder ein anderes vom Quellwerkzeug ausdrücklich unterstütztes Bildformat
-
-Das sind verbreitete Konventionen, keine dauerhaften Regeln. Prüfe vor dem Erstellen den tatsächlichen Vertrag deines Codex-Clients, Generators oder der Ressourcenquelle.
+Ein erweiterter Atlas entsteht nicht dadurch, dass nur die Bildhöhe geändert und die alten Metadaten beibehalten werden. Fehlt eine nachvollziehbare Formatbeschreibung, unterbrich die Erstellung und kläre das Format, statt Kompatibilität aus der Abbildung abzuleiten.
 
 ## Assets vorbereiten
 
@@ -53,7 +53,7 @@ Wenn Assets aus Fan-Art, Spielen, Anime, Marken oder Werken anderer stammen, pr�
 
 ## Aufgabe von `pet.json`
 
-`pet.json` sollte mindestens das Pet identifizieren und auf die Spritesheet verweisen. Ein Minimalbeispiel:
+Das folgende Beispiel zeigt nur Identität und Pfad zur Grafik, nicht ein vollständig getestetes installierbares Paket. Das tatsächliche Format kann auch Versionsfelder verlangen:
 
 ```json
 {
@@ -70,7 +70,7 @@ Empfehlungen:
 - Ordnername und `id` gleich halten.
 - `spritesheetPath` als relativen Pfad nutzen.
 - `description` konkret und verständlich schreiben.
-- Autor, Version, Quelle und Lizenz in zusätzlichen Metadaten behalten.
+- Bewahre Autor, Version, Herkunft und Lizenz in der README- oder LICENSE-Datei des Pakets auf; gehe nicht davon aus, dass der Client beliebige zusätzliche Felder akzeptiert.
 
 `pet.json` speichert nicht die Animation selbst. Es sagt dem Client, wer das Paket ist, wo die Assets liegen und wie sie interpretiert werden sollen.
 

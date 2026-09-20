@@ -1,6 +1,7 @@
 ---
-import { currentYear, currencies, languages, plans, regions, translations, updatedAt } from '../../data/chatgptPricing';
+import { currentYear, languages, translations } from '../../data/chatgptPricing';
 import '../../styles/chatgpt-pricing.css';
+import quotes from '../../data/chatgptPriceQuotes.json';
 import PricingFooter from './PricingFooter.astro';
 import {
 	standaloneHref,
@@ -8,7 +9,7 @@ import {
 	standaloneLocaleFromLang,
 	type StandaloneLocaleCode,
 } from '../../utils/standalonePages';
-import type { SiteLang } from '../../utils/siteNav';
+import { readerNavItems, pickLabel, type SiteLang } from '../../utils/siteNav';
 
 interface Props {
 	initialLanguage: SiteLang;
@@ -20,7 +21,6 @@ const currentLocale = standaloneLocaleFromLang(initialLanguage);
 const languageRoutes = Object.fromEntries(
 	languages.map((language) => [language.code, standaloneHrefForLang('chatgpt-pricing', language.code as SiteLang)]),
 );
-const initialLanguageOption = languages.find((language) => language.code === initialLanguage) ?? languages[0];
 const currentPath = standaloneHref('chatgpt-pricing', currentLocale);
 const canonicalUrl = `https://codexhandbook.com${currentPath}`;
 
@@ -29,7 +29,11 @@ function localizedPath(path: string, locale: StandaloneLocaleCode = currentLocal
 	return `/${locale}${path}`;
 }
 
-const topbarLinks = [
+const chinese = initialLanguage === 'zh-CN' || initialLanguage === 'zh-TW';
+const topbarLinks: {href: string; key?: string; label?: string; current?: boolean}[] = chinese ? [
+  ...readerNavItems(initialLanguage).slice(0,3).map(item => ({href: localizedPath(item.href), label: pickLabel(item.label, initialLanguage)})),
+  {href: currentPath, key: 'pricingNav', current: true},
+] : [
 	{ href: localizedPath('/guide/'), key: 'guide' },
 	{ href: localizedPath('/prompts/'), key: 'prompts' },
 	{ href: localizedPath('/skills/'), key: 'skills' },
@@ -38,6 +42,33 @@ const topbarLinks = [
 	{ href: localizedPath('/pets/'), key: 'pets' },
 	{ href: localizedPath('/theme/'), key: 'theme' },
 ];
+const traditional = initialLanguage === 'zh-TW';
+const copy = traditional ? {
+ title: 'ChatGPT 價格來源與快照', subtitle: '按來源查看已核對的公開標價，購買前核對實際結帳資訊。',
+ scope: '目前已核對美國 App Store 公開內購清單。其他地區、渠道與訂閱週期暫無核驗資料；未換算匯率，也未用套餐比例推算價格。',
+ item:'內購項目原名', price:'來源標價', region:'地區與渠道', date:'核對日期', source:'查看來源',
+ unknown:'清單未標明週期和稅費口徑；以結帳頁為準。', ambiguity:'Plus 有兩個同名標價，來源未解釋差異，不能將其中一個自行認定為年付。',
+ heading:'已核對的公開清單', missing:'暫無核驗資料', other:'其他地區或渠道', us:'美國 App Store', all:'全部已核對項目', filter:'查看範圍',
+ notes:'如何使用這份資料', historical:'這是標註日期的來源快照，不是即時報價。金額保留原幣種，清單不證明你的帳號可購買全部項目。',
+ noData:'此範圍尚無帶來源的價格記錄。請在實際購買渠道核對，不沿用美國價格或舊的換算值。',
+} : chinese ? {
+ title: 'ChatGPT 价格来源与快照', subtitle: '按来源查看已核对的公开标价，购买前核对实际结账信息。',
+ scope: '目前已核对美国 App Store 公开内购清单。其他地区、渠道与订阅周期暂无核验数据；未换算汇率，也未用套餐比例推算价格。',
+ item:'内购项目原名', price:'来源标价', region:'地区与渠道', date:'核对日期', source:'查看来源',
+ unknown:'清单未标明周期和税费口径；以结账页为准。', ambiguity:'Plus 有两个同名标价，来源未解释差异，不能将其中一个自行认定为年付。',
+ heading:'已核对的公开清单', missing:'暂无核验数据', other:'其他地区或渠道', us:'美国 App Store', all:'全部已核对项目', filter:'查看范围',
+ notes:'如何使用这份数据', historical:'这是标注日期的来源快照，不是实时报价。金额保留原币种，清单不证明你的账号可购买全部项目。',
+ noData:'此范围尚无带来源的价格记录。请在实际购买渠道核对，不沿用美国价格或旧的换算值。',
+} : {
+ title:'ChatGPT price sources and snapshots', subtitle:'Source-checked public listings. Confirm the final price at checkout.',
+ scope:'Coverage: the US App Store in-app purchase list. Other regions, channels and subscription periods are not verified. No currency conversions or proportional estimates are used.',
+ item:'Listed item name', price:'Listed price', region:'Region and channel', date:'Checked on', source:'View source',
+ unknown:'The list does not specify billing periods or tax treatment. Check at checkout.', ambiguity:'Plus appears at two prices under the same name. The source does not explain the difference; neither is assumed to be annual.',
+ heading:'Source-checked public list', missing:'No verified data', other:'Other regions or channels', us:'US App Store', all:'All verified items', filter:'Coverage',
+ notes:'Using this reference', historical:'This is a dated source snapshot, not a live quote. Original currencies are preserved. The list does not guarantee account eligibility for every item.',
+ noData:'No sourced price records are available for this selection. Check your purchase channel; US prices and old conversions do not apply.',
+};
+
 ---
 
 <!doctype html>
@@ -45,8 +76,8 @@ const topbarLinks = [
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>{translations[initialLanguage].title} | Codex 指南手册</title>
-		<meta name="description" content={translations[initialLanguage].subtitle} />
+		<title>{copy.title} | Codex 指南手册</title>
+		<meta name="description" content={copy.subtitle} />
 		<link rel="canonical" href={canonicalUrl} />
 		{
 			languages.map((language) => (
@@ -58,9 +89,6 @@ const topbarLinks = [
 			))
 		}
 		<link rel="alternate" hreflang="x-default" href="https://codexhandbook.com/chatgpt-pricing/" />
-		<link href="https://cdn.jsdelivr.net/npm/gridjs@6.2.0/dist/theme/mermaid.min.css" rel="stylesheet" />
-		<script src="https://cdn.jsdelivr.net/npm/gridjs@6.2.0/dist/gridjs.umd.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" defer></script>
 	</head>
 	<body>
 		<main class="pricing-shell">
@@ -78,7 +106,7 @@ const topbarLinks = [
 							{
 								topbarLinks.map((link) => (
 									<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
-										{t(link.key)}
+										{link.label ?? t(link.key!)}
 									</a>
 								))
 							}
@@ -89,168 +117,66 @@ const topbarLinks = [
 					{
 						topbarLinks.map((link) => (
 							<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
-								{t(link.key)}
+								{link.label ?? t(link.key!)}
 							</a>
 						))
 					}
 				</div>
 			</nav>
 
-			<section class="hero">
-				<div>
-					<p class="eyebrow">App Store Price Radar</p>
-					<h1 data-i18n="title">{t('title')}</h1>
-					<p data-i18n="subtitle">{t('subtitle')}</p>
-				</div>
-				<div class="control-panel" aria-label="Filters">
-					<label>
-						<span data-i18n="currency">{t('currency')}</span>
-						<div class="custom-select" data-dropdown="currency">
-							<select id="currency-select" class="native-select" aria-hidden="true" tabindex="-1">
-								{currencies.map((currency) => <option value={currency.code}>{currency.flag} {currency.code}</option>)}
-							</select>
-							<button class="custom-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
-								<span class="custom-select__icon" data-selected-icon>{currencies[0].flag}</span>
-								<span class="custom-select__text">
-									<strong data-selected-label>{currencies[0].code}</strong>
-									<small data-selected-meta>{currencies[0].name}</small>
-								</span>
-								<span class="custom-select__chevron" aria-hidden="true"></span>
-							</button>
-							<div class="custom-select__menu" role="listbox" aria-label="Currency options">
-								{currencies.map((currency, index) => (
-									<button
-										type="button"
-										class="custom-select__option"
-										role="option"
-										data-value={currency.code}
-										aria-selected={index === 0 ? 'true' : 'false'}
-									>
-										<span class="custom-select__option-icon">{currency.flag}</span>
-										<span>
-											<strong>{currency.code}</strong>
-											<small>{currency.name}</small>
-										</span>
-									</button>
-								))}
-							</div>
-						</div>
-					</label>
-					<label>
-						<span data-i18n="language">{t('language')}</span>
-						<div class="custom-select" data-dropdown="language">
-							<select id="language-select" class="native-select" aria-hidden="true" tabindex="-1">
-								{
-									languages.map((language) => (
-										<option value={language.code} selected={language.code === initialLanguage}>
-											{language.label}
-										</option>
-									))
-								}
-							</select>
-							<button class="custom-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
-								<span class="custom-select__icon" data-selected-icon>{initialLanguageOption.short}</span>
-								<span class="custom-select__text">
-									<strong data-selected-label>{initialLanguageOption.label}</strong>
-									<small data-selected-meta>{initialLanguageOption.code}</small>
-								</span>
-								<span class="custom-select__chevron" aria-hidden="true"></span>
-							</button>
-							<div class="custom-select__menu" role="listbox" aria-label="Language options">
-								{languages.map((language) => (
-									<button
-										type="button"
-										class="custom-select__option"
-										role="option"
-										data-value={language.code}
-										aria-selected={language.code === initialLanguage ? 'true' : 'false'}
-									>
-										<span class="custom-select__option-icon">{language.short}</span>
-										<span>
-											<strong>{language.label}</strong>
-											<small>{language.code}</small>
-										</span>
-									</button>
-								))}
-							</div>
-						</div>
-					</label>
-				</div>
-			</section>
+            <section class="hero">
+                <div>
+                    <p class="eyebrow">Source-checked · 2026-09-18</p>
+                    <h1>{copy.title}</h1>
+                    <p>{copy.subtitle}</p>
+                </div>
+            </section>
+            <nav class="snapshot-languages" aria-label={t('language')}>
+                {languages.map(language => <a href={languageRoutes[language.code]} aria-current={language.code === initialLanguage ? 'page' : undefined}>{language.label}</a>)}
+            </nav>
+            {!chinese && initialLanguage !== 'en' && <p lang="en">This updated price reference is currently available in English and Chinese. Navigation remains localized.</p>}
+            <p class="snapshot-notice">{copy.scope}</p>
+            <div class="snapshot-filter" hidden>
+                <label for="quote-scope">{copy.filter}</label>
+                <select id="quote-scope"><option value="US">{copy.us}</option><option value="other">{copy.other}</option></select>
+            </div>
+            <section id="verified-quotes" aria-labelledby="quotes-heading">
+                <h2 id="quotes-heading">{copy.heading}</h2>
+                <div class="snapshot-table" tabindex="0" role="region" aria-label={copy.heading}>
+                    <table>
+                        <caption>{copy.us} · USD · 2026-09-18</caption>
+                        <thead><tr><th scope="col">{copy.item}</th><th scope="col">{copy.price}</th><th scope="col">{copy.region}</th><th scope="col">{copy.date}</th><th scope="col">{copy.source}</th></tr></thead>
+                        <tbody>{quotes.map(quote => <tr><th scope="row">{quote.label}</th><td>{quote.currency} {quote.amount}</td><td>{copy.us}</td><td><time datetime={quote.checkedAt}>{quote.checkedAt}</time></td><td><a href={quote.source} target="_blank" rel="noopener noreferrer">App Store ↗</a></td></tr>)}</tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="missing-quotes" hidden aria-live="polite"><h2>{copy.missing}</h2><p>{copy.noData}</p></section>
+            <section class="snapshot-notes" aria-labelledby="notes-heading">
+                <h2 id="notes-heading">{copy.notes}</h2>
+                <p>{copy.historical}</p><p>{copy.unknown}</p><p>{copy.ambiguity}</p>
+                <p><a href="https://apps.apple.com/us/app/chatgpt/id6448311069" target="_blank" rel="noopener noreferrer">{copy.source} · Apple App Store</a></p>
+            </section>
 
-			<section class="plan-tabs" aria-label="Plans">
-				{plans.map((plan, index) => (
-					<button type="button" class="plan-tab" data-plan={plan.id} aria-pressed={index === 0 ? 'true' : 'false'}>
-						{plan.label}
-					</button>
-				))}
-			</section>
-
-			<section class="stats-grid" aria-label="Price summary">
-				<article class="stat-card stat-card--lowest">
-					<span data-i18n="lowest">{t('lowest')}</span>
-					<strong id="lowest-price">¥109.86</strong>
-					<small id="lowest-region">🇵🇭 菲律宾</small>
-				</article>
-				<article class="stat-card">
-					<span data-i18n="highest">{t('highest')}</span>
-					<strong id="highest-price">¥211.18</strong>
-					<small id="highest-region">🇨🇴 哥伦比亚</small>
-				</article>
-				<article class="stat-card">
-					<span data-i18n="saving">{t('saving')}</span>
-					<strong id="saving-value">48%</strong>
-					<small data-i18n="sourceOnly">{t('sourceOnly')}</small>
-				</article>
-				<article class="stat-card">
-					<span data-i18n="median">{t('median')}</span>
-					<strong id="median-price">¥145.77</strong>
-					<small><span data-i18n="updated">{t('updated')}</span>：<time datetime={updatedAt}>{updatedAt}</time></small>
-				</article>
-			</section>
-
-			<section class="content-grid">
-				<article class="table-card">
-					<div class="section-title">
-						<div>
-							<p data-i18n="plan">{t('plan')}</p>
-							<h2 id="table-title" data-i18n="tableTitle">{t('tableTitle')}</h2>
-						</div>
-						<div class="section-badges">
-							<span id="active-plan-label">ChatGPT Plus 1月</span>
-							<span data-i18n="regionCount">{t('regionCount')}</span>
-						</div>
-					</div>
-					<div id="price-grid" class="price-grid"></div>
-				</article>
-
-				<aside class="chart-card">
-					<div class="section-title">
-						<div>
-							<p>Histogram</p>
-							<h2 data-i18n="chartTitle">{t('chartTitle')}</h2>
-						</div>
-					</div>
-					<div class="chart" aria-label="Price distribution">
-						<canvas id="chart"></canvas>
-					</div>
-					<div class="legend" aria-label="Legend">
-						<span><i class="legend-min"></i><span data-i18n="min">{t('min')}</span></span>
-						<span><i class="legend-low"></i><span data-i18n="low">{t('low')}</span></span>
-						<span><i class="legend-normal"></i><span data-i18n="normal">{t('normal')}</span></span>
-						<span><i class="legend-high"></i><span data-i18n="high">{t('high')}</span></span>
-						<span><i class="legend-max"></i><span data-i18n="max">{t('max')}</span></span>
-					</div>
-					<p class="note" data-i18n="source">{t('source')}</p>
-				</aside>
-			</section>
 		</main>
 
 		<PricingFooter year={currentYear} locale={currentLocale} lang={initialLanguage} />
 
-		<script is:inline define:vars={{ currencies, plans, regions, translations, languages, initialLanguage, languageRoutes }}>
-			window.__CHATGPT_PRICING__ = { currencies, plans, regions, translations, languages, initialLanguage, languageRoutes };
-		</script>
 		<script src="/scripts/chatgpt-pricing.js" defer></script>
 	</body>
 </html>
+
+<style>
+.snapshot-languages { display:flex; flex-wrap:wrap; gap:.6rem 1rem; margin-block:1rem; }
+.snapshot-languages a[aria-current="page"] { font-weight:700; text-decoration-thickness:3px; }
+.snapshot-notice { padding:1rem; border-left:3px solid var(--brand); background:white; line-height:1.8; }
+.snapshot-filter { margin:1.5rem 0; }
+.snapshot-filter label { margin-inline-end:1rem; }
+.snapshot-filter select { max-width:100%; padding:.5rem; }
+.snapshot-table { overflow-x:auto; border:1px solid var(--line); border-radius:12px; background:white; }
+table { width:100%; border-collapse:collapse; text-align:left; }
+caption { text-align:left; padding:1rem; font-weight:600; }
+th, td { padding:1rem; border-top:1px solid var(--line); white-space:nowrap; }
+.snapshot-notes { line-height:1.8; max-width:60rem; margin-top:2rem; }
+[hidden] { display:none !important; }
+@media(max-width:600px) { th,td { padding:.75rem; } }
+</style>

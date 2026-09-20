@@ -3,7 +3,7 @@ title: Plugins im Überblick
 description: Verstehe Bestandteile, unterstützte Oberflächen, Installationsprüfung und Vertrauensgrenzen eines Plugins.
 locale: de
 source_locale: zh-CN
-source_revision: b2c5dae
+source_revision: a514206
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Prompt-Grundlagen
 description: Die grundlegenden Bausteine eines guten Prompts.
 locale: de
 source_locale: zh-CN
-source_revision: b2a486e
+source_revision: eb86b2a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

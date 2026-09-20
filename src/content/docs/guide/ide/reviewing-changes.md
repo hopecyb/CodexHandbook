@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: IDE 中审查变更
 description: 在源码旁核对差异，并用只读 reviewer 检查工作树。
 sidebar:
@@ -47,11 +51,3 @@ IDE 适合在源码旁快速阅读摘要和聚焦 diff，但“改动出现在�
 
 - [代码审查](https://learn.chatgpt.com/docs/code-review)
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-
----
-
-**状态：** verified
-
-**适用产品：** IDE
-
-**最近核验：** 2026-08-26

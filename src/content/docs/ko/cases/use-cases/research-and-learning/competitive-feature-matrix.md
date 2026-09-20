@@ -3,7 +3,7 @@ title: "사례: 경쟁 제품 기능 비교표"
 description: 출처가 있는 리서치와 표 산출물—비개발 독자도 재사용할 수 있는 워크플로입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d90f5f1
+source_revision: b74008b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

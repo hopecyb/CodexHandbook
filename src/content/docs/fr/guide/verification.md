@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "La page d'accueil OpenAI Developers met encore l'accent sur construire, tester, revoir et livrer des changements avec Codex ; cette page divise la Vérification en revue des diffs, lancer les tests, valider les sources et définition du terminé — recoupée avec les chapitres qualité du site."
+  checkedAt: "2026-07-26"
 title: Vérification
 description: Revoir les diffs, lancer les tests, valider les sources et définir le terminé.
 sidebar:
   order: 17
 locale: fr
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Vérification
 
 Erreur courante des débutants : **traiter « Codex a dit que c'est fait » comme réellement fait.**
 
@@ -94,10 +98,3 @@ Incertain où commencer : par défaut vers [définition du terminé](/fr/guide/q
 La Vérification confirme que le résultat est utilisable, fiable et livrable.
 
 Comment écrire l'acceptation dans les Prompts : [définir le terminé](/fr/prompts/define-done/). Exemples de bout en bout : [cas](/fr/cases/).
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** La page d'accueil OpenAI Developers met encore l'accent sur construire, tester, revoir et livrer des changements avec Codex ; cette page divise la Vérification en revue des diffs, lancer les tests, valider les sources et définition du terminé — recoupée avec les chapitres qualité du site.  
-**Dernière vérification :** 2026-07-26

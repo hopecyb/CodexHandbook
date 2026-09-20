@@ -1,39 +1,37 @@
 ---
-title: Ambiente Cloud
-description: Composição, ciclo de vida e pontos de configuração de equipa do ambiente remoto de execução do Codex Cloud.
+title: Ambientes Cloud
+description: Configura o runtime, as dependências, o setup, a cache e o ponto de partida do repositório no Codex Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: f7c7188
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 1745f70
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
+Um ambiente Cloud define o que o Codex instala e executa para um repositório. Não herda as definições do teu computador. Se algo funciona localmente mas falha no Cloud, compara primeiro o runtime, as dependências, as variáveis e a rede.
 
-A Cloud environment defines what Codex installs and runs for a repository. It does not inherit your laptop configuration. When work passes locally but fails in Cloud, compare runtimes, dependencies, variables, and network access first.
+## Ordem de execução em cada conversa
 
-## Execution order for each chat
+1. Criar um contentor e fazer checkout do ramo ou commit SHA selecionado.
+2. Executar o setup script; ao reutilizar uma cache, também pode executar o maintenance script.
+3. Aplicar a política de acesso à Internet.
+4. O Agent executa comandos, edita e verifica em ciclo, lendo os ficheiros `AGENTS.md` aplicáveis.
+5. Devolver a resposta e o diff para que possas continuar a conversa ou criar um PR.
 
-1. Create a container and check out the selected branch or commit SHA.
-2. Run the setup script; when restoring a cache, optionally run the maintenance script.
-3. Apply the internet policy.
-4. Run the Agent loop to execute commands, edit, and verify while loading applicable `AGENTS.md` files.
-5. Return the answer and diff for follow-up or PR creation.
+A imagem `universal` predefinida traz instaladas linguagens, pacotes e ferramentas comuns. Podes fixar versões de Python, Node.js e outras nas definições do ambiente, ou instalar dependências adicionais com o setup script.
 
-The default `universal` image includes common languages, packages, and tools. Pin Python, Node.js, and other versions in environment settings, and install additional dependencies in the setup script.
+## Configuração mínima reproduzível
 
-## Minimal reproducible configuration
-
-For a pnpm project, pin the same Node.js version as CI and configure:
+Num projeto pnpm, fixa primeiro a mesma versão de Node.js usada pelo CI e depois fornece:
 
 ```bash
 corepack enable
 pnpm install --frozen-lockfile
 ```
 
-At the repository root, put validation rules in `AGENTS.md`:
+Escreve no `AGENTS.md` da raiz do repositório:
 
 ```md
 ## Validation
@@ -43,43 +41,35 @@ At the repository root, put validation rules in `AGENTS.md`:
 - Do not update the lockfile unless dependency changes are requested.
 ```
 
-Setup and Agent run in separate Bash sessions. A temporary `export` in setup does not automatically persist. Configure non-sensitive values as environment variables or persist them through shell configuration as the official guidance recommends.
+O setup e a fase do Agent decorrem em sessões Bash separadas. Um `export` temporário feito no setup não continua automaticamente na fase seguinte. Configura os valores não sensíveis nas definições do ambiente ou persiste-os na configuração da shell segundo as recomendações oficiais.
 
-## Cache and maintenance
+## Cache e maintenance
 
-Cloud may cache container state for up to 12 hours to accelerate new and follow-up chats. After restoring a cache, it checks out the chat's selected branch and can run a maintenance script to refresh dependencies.
+O Cloud pode guardar o estado do contentor em cache por até 12 horas para acelerar conversas novas e seguimentos. Ao restaurar a cache, faz checkout do ramo indicado para a conversa e pode executar um maintenance script para atualizar dependências.
 
-Changing setup, maintenance, environment variables, or Secrets invalidates the cache automatically. Use **Reset cache** when repository changes make a cache incompatible. In Business and Enterprise, users with access to an environment may share its cache; resetting it can affect others in the workspace.
+Alterações ao setup, maintenance, variáveis de ambiente ou secrets invalidam automaticamente a cache. Se uma alteração no repositório a tornar incompatível, usa **Reset cache** manualmente. Nos planos Business e Enterprise, a cache de um ambiente pode ser partilhada por utilizadores com acesso a esse ambiente; repô-la pode afetar outras pessoas do espaço de trabalho.
 
-## Environment variables and Secrets
+## Variáveis de ambiente e Secret
 
-- Environment variables are available during setup and the Agent phase.
-- Secrets are decrypted only for setup and removed before the Agent starts.
-- Setup has internet access.
-- Agent internet access is off by default and can be enabled per environment.
+- As variáveis de ambiente estão disponíveis tanto no setup como na fase do Agent.
+- Um Secret só é desencriptado durante o setup e é removido antes de o Agent começar.
+- O setup tem acesso à Internet.
+- O Agent começa sem acesso à Internet, que pode ser ativado separadamente em cada ambiente.
 
-These boundaries are easy to confuse. See [Secrets and environment variables](/pt/guide/web-and-cloud/secrets-and-variables/).
+Estes limites confundem-se facilmente. O capítulo seguinte explica-os em [Secrets e variáveis de ambiente](/pt/guide/web-and-cloud/secrets-and-variables/).
 
-## Alignment checklist
+## Lista de alinhamento
 
-| Check | Target |
+| Verificação | Objetivo |
 |---|---|
-| Starting branch/commit | Matches the task |
-| Runtime versions | Match CI or production constraints |
-| Lockfile | Frozen installation |
-| Setup | Repeatable, non-interactive, fail fast |
-| Verification commands | Recorded in `AGENTS.md` |
-| Network | Only required domains and methods for the Agent |
+| Ramo/commit de partida | Corresponde à descrição da tarefa |
+| Versões do runtime | Correspondem às restrições de CI ou produção |
+| lockfile | Instalação com versões fixas |
+| setup | Repetível, não interativo e interrompido imediatamente em caso de erro |
+| Comandos de verificação | Registados em `AGENTS.md` |
+| Rede | O Agent só tem acesso aos domínios e métodos necessários |
 
-## Official sources
+## Fontes oficiais
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-- [codex-universal image](https://github.com/openai/codex-universal)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26
+- [Imagem codex-universal](https://github.com/openai/codex-universal)

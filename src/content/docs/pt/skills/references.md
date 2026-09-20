@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "O runtime atual do Codex lê sob demanda o corpo do Skill e o material relacionado; a descrição de `references/` aqui é um princípio estável de organização documental."
+  checkedAt: "2026-07-26"
 title: Diretório references/
 description: Organize documentação longa de referência no Skill com divulgação progressiva.
 locale: pt
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Não é só «colocar mais documentos»: é guardar à parte o que **não precisa ser lido sempre, mas é útil em algum passo**, e abrir sob demanda.
 
-# Diretório references/
 
 Quando o corpo de `SKILL.md` fica longo demais, mova normas detalhadas, APIs e checklists para `references/` e cite nos passos sob demanda.
 
@@ -73,10 +77,3 @@ O fluxo principal ainda deve permanecer em `SKILL.md`; senão, na primeira leitu
 - Fluxo principal em `SKILL.md`; referências carregadas sob demanda
 - Um arquivo, um tema — facilita a manutenção
 - Não repita em references os passos que já estão em SKILL.md
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** O runtime atual do Codex lê sob demanda o corpo do Skill e o material relacionado; a descrição de `references/` aqui é um princípio estável de organização documental.  
-**Última Verificação:** 2026-07-26

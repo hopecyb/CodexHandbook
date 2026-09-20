@@ -3,7 +3,7 @@ title: Nhập và xuất giọng nói
 description: Tình huống, giới hạn và lưu ý riêng tư khi tương tác với Codex bằng giọng nói.
 locale: vi
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

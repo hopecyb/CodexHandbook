@@ -3,7 +3,7 @@ title: Lệnh và lối tắt
 description: Lệnh con CLI, thao tác trong phiên và thói quen bàn phím — hướng dẫn theo sản phẩm; tham số đầy đủ xem khu tham chiếu.
 locale: vi
 source_locale: zh-CN
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Review GitHub pull requests“ und betonen das Auffangen von Regressionen und potenziellen Problemen vor der menschlichen Prüfung. Das Beispiel auf dieser Seite verlangt nur eine strukturierte Diff-Prüfung mit P0/P1 und Dateipfaden und hängt nicht an einer bestimmten Oberfläche oder festen Befehlen."
+  checkedAt: "2026-07-26"
 title: Einen PR prüfen
 description: Vor dem Merge eine strukturierte Diff-Prüfung mit Codex durchführen.
 locale: de
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Einen PR prüfen
 
 ## Metadaten
 
@@ -44,9 +52,3 @@ Ausgabe als Checklist mit P0/P1 und Dateipfaden.
 
 - [Prüf-Vorlage](/de/prompts/templates/review/)
 - [Prüfung vor dem Merge](/de/cases/workflows/review-before-merge/)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Review GitHub pull requests“ und betonen das Auffangen von Regressionen und potenziellen Problemen vor der menschlichen Prüfung. Das Beispiel auf dieser Seite verlangt nur eine strukturierte Diff-Prüfung mit P0/P1 und Dateipfaden und hängt nicht an einer bestimmten Oberfläche oder festen Befehlen.  
-**Zuletzt geprüft:** 2026-07-26

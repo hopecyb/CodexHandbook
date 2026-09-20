@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "已按本仓库当前 webhooks 子章节结构与入口链接交叉复核；本页仅说明 Webhook 在集成里承担“事件触发器”角色，不把具体事件字段或实现细节写成固定契约。"
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: 事件触发集成的说明页，说明 Webhook 负责接收通知，不替代工作流设计。
 ---
@@ -10,7 +15,7 @@ description: 事件触发集成的说明页，说明 Webhook 负责接收通知�
 
 ## 本组入口
 
-- [Webhooks 概述](/guide/developer-platform/webhooks/overview/)
+- [Webhook 与任务事件的边界](/guide/developer-platform/webhooks/overview/)：分清本地执行结果、App Server 事件和自建 HTTP 回调；本组不提供未经核验的统一 Cloud Webhook 契约。
 
 ## 本组内容
 
@@ -19,10 +24,3 @@ description: 事件触发集成的说明页，说明 Webhook 负责接收通知�
 - 为什么 Webhook 只是触发器，不是完整自动化方案
 
 Webhook 更像门铃，告诉你“事情发生了”；后面怎么处理，还得你自己把流程接上。
-
----
-
-**状态：** verified  
-**适用产品：** API / Cloud  
-**核验依据：** 已按本仓库当前 webhooks 子章节结构与入口链接交叉复核；本页仅说明 Webhook 在集成里承担“事件触发器”角色，不把具体事件字段或实现细节写成固定契约。  
-**最近核验：** 2026-07-26

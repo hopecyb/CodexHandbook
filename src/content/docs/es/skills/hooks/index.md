@@ -3,7 +3,7 @@ title: Hooks
 description: Ejecuta scripts o herramientas MCP en puntos del ciclo de vida de Codex para comprobar, registrar y aplicar políticas.
 locale: es
 source_locale: zh-cn
-source_revision: c768708
+source_revision: a0312e9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

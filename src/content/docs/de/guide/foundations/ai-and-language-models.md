@@ -3,7 +3,7 @@ title: KI und Sprachmodelle
 description: "Verstehe, wie Sprachmodelle Antworten aus dem Kontext erzeugen."
 locale: de
 source_locale: zh-CN
-source_revision: 1951620
+source_revision: ccdac83
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

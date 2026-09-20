@@ -3,7 +3,7 @@ title: Gestión de tareas largas
 description: Tareas grandes de varias horas o sesiones — puntos de control, compactación, delegación y condiciones de salida.
 locale: es
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

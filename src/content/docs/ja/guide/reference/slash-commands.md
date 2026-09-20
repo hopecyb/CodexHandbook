@@ -3,7 +3,7 @@ title: スラッシュコマンドとショートカット入口
 description: / コマンドと $ Skill 呼び出し——学習向け早見。完全パラメータ手册の代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: 9debf5c
+source_revision: a34c90f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

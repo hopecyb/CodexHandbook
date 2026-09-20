@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "当前 Codex 运行时允许技能配合脚本与确定性命令执行；本页强调“稳定动作脚本化、流程仍由 Skill 约束”的原则，和现行能力一致。"
+  checkedAt: "2026-07-26"
 title: scripts/ 与测试
 description: 在 Skill 中加入确定性脚本，并验证其行为。
 ---
@@ -7,7 +12,6 @@ description: 在 Skill 中加入确定性脚本，并验证其行为。
 
 固定动作适合交给脚本，判断和协作流程留给 Skill。
 
-# scripts/ 与测试
 
 当某步骤必须确定性执行（跑测试、生成 diff、校验格式）时，在 `scripts/` 中提供脚本，并在 `SKILL.md` 中说明何时调用。
 
@@ -72,9 +76,3 @@ Skill 还要测试“什么时候调用、怎么调用、输出是否符合预�
 能稳定重复执行的动作，不要只靠文字描述。先把脚本跑通，再确认 Skill 调用没问题。
 
 脚本继承当前审批策略；见 [命令规则](/guide/customization/rules/command-rules/) 与 [Skill 安全](/skills/security/)。
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 当前 Codex 运行时允许技能配合脚本与确定性命令执行；本页强调“稳定动作脚本化、流程仍由 Skill 约束”的原则，和现行能力一致。  
-**最近核验：** 2026-07-26

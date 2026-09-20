@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册已核验的计划、上下文、验证与多任务协作章节逐段交叉复核；本页仅保留稳定的协作流程原则，不把某一端当前界面或入口当作长期契约。"
+  checkedAt: "2026-07-26"
 title: Agent 工作
 description: 让 Codex 像一个可协作的执行者工作，而不是一次性回答机器。
 sidebar:
@@ -92,9 +97,3 @@ Agent 工作更看重任务能不能在计划、执行、纠偏和收尾这几�
 
 ## 参考来源
 - OpenAI Codex 官方任务协作与执行说明
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册已核验的计划、上下文、验证与多任务协作章节逐段交叉复核；本页仅保留稳定的协作流程原则，不把某一端当前界面或入口当作长期契约。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: 非対話モード
 description: バッチ、スクリプト、パイプラインの説明ページ——向くタスクを先に理解し、具体コマンドと出力設計を見る。
 locale: ja
 source_locale: zh-CN
-source_revision: e226a62
+source_revision: 2d542c9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

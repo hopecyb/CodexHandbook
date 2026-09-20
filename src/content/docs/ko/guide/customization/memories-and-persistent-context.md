@@ -3,7 +3,7 @@ title: 기억과 지속 컨텍스트
 description: Codex가 세션을 넘어 선호와 사실을 어떻게 기억하는지 — 능력, 경계, 팀 규범.
 locale: ko
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

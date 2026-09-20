@@ -1,61 +1,51 @@
 ---
-title: 파일 다루기
-description: Codex가 명확한 범위 안에서 파일을 읽고 쓰게 합니다.
-locale: ko
-source_locale: zh-CN
-source_revision: 7920b62
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "파일 다루기"
+description: "지정한 파일에만 한 줄을 추가하고 실제 변경 사항을 확인합니다."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 20
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "고정 실습 자료와 작성자의 참고 결과를 마련했습니다. 임시 디렉터리에서 파일 작업 스크립트를 실행했지만, 독립적인 모델 또는 학습자의 완주 테스트는 아직 하지 않았습니다."
+  evidence:
+    - label: "작성자의 파일 작업 기록"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/ko/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Codex와 대화하기"
+next:
+  link: "/ko/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "명확한 작업 지시하기"
+locale: ko
+source_locale: zh-CN
+source_revision: "ec5c2d3"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## 이 단계의 목표
+## 사전 조건
 
-파일 이름을 지정하고, 통제된 편집을 한 번 끝냅니다.
+첫 단계를 마쳤고 `work`에 원본 파일 세 개가 그대로 있어야 합니다. 작업 디렉터리 밖의 `starter`는 기준 자료로 보관하세요.
 
-이 단계부터 작업은 “채팅만”에서 “실제로 파일을 건드리는” 쪽으로 바뀝니다. 초점도 목표 설명에서 범위 통제로 옮겨갑니다.
-
-## 연습
+## 검증 가능한 편집 한 번 하기
 
 ```text
-hello.md만 편집하세요：문두에 날짜 주석 한 줄을 추가하세요(오늘 날짜).
-다른 파일은 바꾸지 말고, 명령도 실행하지 마세요.
-끝나면 바꾼 줄을 나열하세요.
+notice.md의 첫 줄에만 다음 상태 주석을 추가하세요.
+<!-- 状态：练习草稿，未发布 -->
+원래 본문은 글자 하나도 바꾸지 마세요. 다른 파일을 수정하거나 새 파일을 만들지 마세요.
+끝나면 변경 위치를 설명하세요. 게시하거나 알림을 보내지 마세요.
 ```
 
-차이를 확인한 뒤 수락하세요. 관련：[파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
+현재 클라이언트의 차이 보기 또는 편집기에서 원본과 한 줄씩 대조하세요. 여기서는 작은 변경 한 번만 요구하며, 별도의 '먼저 계획하고 단계마다 확인하는' 절차는 필요하지 않습니다.
 
-## 연습 포인트
+## 완료 조건
 
-여기서는 주로 세 가지를 봅니다.
+notice.md만 변경되었고 추가된 내용은 정확히 주석 한 줄이어야 합니다. 다른 두 파일은 그대로 유지됩니다. [두 번째 단계 결과](/downloads/first-project/references/step-2-notice.md)와 비교하세요. Markdown 렌더링에서는 주석이 숨겨질 수 있으므로 원본 텍스트를 확인해야 합니다.
 
-- 어느 파일만 고칠지 지정
-- 추가로 하지 말 동작을 지정
-- 끝난 뒤 변경을 분명히 말하게 요구
+모델이 본문을 바꿨다면 `starter`의 원본으로 notice.md만 복원하고 이 단계를 다시 수행하세요. 프로젝트 전체를 초기화하지 마세요. [실행 취소와 복구](/ko/guide/getting-started/undo-and-recover/)를 참고하세요.
 
-이 세 가지가 합쳐지면, 가장 기본적인 “통제된 편집” 능력입니다.
-
-## 흔한 오해
-
-### 1. 작은 파일 하나만 고치는 건 의미가 없다
-
-범위가 작을수록, 경계를 넘었는지 보기 쉽습니다.
-
-### 2. 파일 이름을 쓰면 다른 곳은 절대 건드리지 않는다
-
-그렇게만 생각하면 안 됩니다.
-
-그래서 뒤에는 diff 확인이 함께 필요합니다.
-
-처음 파일을 건드릴 때 중요한 것은 많이 고치는 것이 아니라, 변경 경계를 분명히 하고 검사하기 쉽게 하는 것입니다.
-
-다음 단계：[명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
-
----
-
-**상태：** verified  
-**적용 제품：** App / CLI / IDE  
-**검증 근거：** 본 핸드북에서 검증된 파일과 폴더 컨텍스트, 결과 확인, 초보자 경로 장을 교차 확인했습니다. 페이지 내용은 “명확한 범위에서 통제된 편집을 한 번 하는” 안정된 연습 방법으로 한정합니다.  
-**최근 검증：** 2026-07-26
+[실습 패키지와 준비 안내](/ko/guide/learning-paths/beginner/)

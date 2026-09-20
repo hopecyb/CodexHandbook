@@ -3,7 +3,7 @@ title: Tabelas e folhas de cálculo
 description: Ler, limpar, analisar e exportar CSV, Excel e dados tabulares — sem partir estrutura nem encoding.
 locale: pt
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

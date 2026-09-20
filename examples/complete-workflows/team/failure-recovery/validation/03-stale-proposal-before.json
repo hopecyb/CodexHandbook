@@ -1,0 +1,10 @@
+{
+  "phase": "before",
+  "command": [
+    "<PYTHON>",
+    "<WORK>/03-stale-proposal/issue-triage/scripts/dry_run.py"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "FAIL: Stale input hash\n"
+}

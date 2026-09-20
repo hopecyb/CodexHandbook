@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前已核验的文件与目录上下文、验证产物、约束边界等章节交叉复核；本页只确认“列、类型、空值、日期、验收方式都应显式说明”的稳定表格处理原则，不把某个库或平台当作唯一实现。"
+  checkedAt: "2026-07-26"
 title: 表格与电子表格
 description: CSV、Excel 与表格类数据的读取、清洗、分析与导出——避免破坏结构与编码。
 sidebar:
@@ -121,9 +126,3 @@ sidebar:
 
 ## 参考来源
 - [定义约束](/prompts/constraints-and-boundaries/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前已核验的文件与目录上下文、验证产物、约束边界等章节交叉复核；本页只确认“列、类型、空值、日期、验收方式都应显式说明”的稳定表格处理原则，不把某个库或平台当作唯一实现。  
-**最近核验：** 2026-07-26

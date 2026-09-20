@@ -3,7 +3,7 @@ title: Environment Variables
 description: Purpose, layering, and security of Codex-related environment variables—supplement to configuration reference.
 locale: en
 source_locale: zh-CN
-source_revision: 603ee7b
+source_revision: 58fd37b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

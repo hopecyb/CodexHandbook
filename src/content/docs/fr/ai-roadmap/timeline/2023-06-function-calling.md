@@ -1,59 +1,40 @@
 ---
-title: Function Calling
-date: 2023-06-13
-year: 2023
-summary: "Les modèles sont fondamentalement des générateurs de texte : ils peuvent décrire des actions, pas les exécuter. Function Calling introduit un « menu de capacités » qui permet au modèle de choisir des outils et de remplir des arguments structurés. Une réponse devient alors une action exécutable."
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+title: "Function Calling (appel de fonctions)"
+description: "Le modèle peut proposer un nom de fonction et des arguments structurés ; l'application les valide et décide de l'exécution. Générer les arguments, obtenir l'autorisation et exécuter sont trois étapes distinctes."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Les faits ci-dessous ont été vérifiés dans la source primaire ; les conseils pédagogiques relèvent du jugement de l'auteur et ne constituent pas un test du produit en conditions réelles."
+  evidence:
+    - label: "Annonce du lancement de l'appel de fonctions"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling
+## Événement vérifiable et portée
 
-- Date de publication officielle : 2023-06-13
-- Références officielles :
-  - Annonce OpenAI : https://openai.com/index/function-calling-and-other-api-updates/
-  - Guide de documentation OpenAI : https://platform.openai.com/docs/guides/function-calling
-- Note d'évolution : cette ligne de capacité a ensuite été généralisée dans le récit plus large de `Tool Use`. Voir `2025-03-tool-use`.
+**Date : 13 juin 2023 · Type : lancement de produit.** OpenAI a annoncé l'ajout de l'appel de fonctions à l'API Chat Completions de l'époque. Cette date correspond à la publication de l'API d'un fournisseur précis, pas au début de tous les appels d'outils.
 
-## Ce que c'est
+Source : [annonce du lancement de l'appel de fonctions](https://openai.com/index/function-calling-and-other-api-updates/). Vérification effectuée le 18 septembre 2026 ; la date de publication de la source et celle de cette vérification ont des sens différents.
 
-Function Calling est une capacité qui force la sortie du modèle à respecter des signatures de fonction strictes (schéma JSON de paramètres) et à déclencher l'exécution d'outils ou d'API externes.
+## Quel problème cela résout
 
-Sa valeur centrale n'est pas l'action de « appeler une fonction » en soi. Le point clé est de convertir l'intention du modèle en requêtes d'interface structurées, exécutables, vérifiables et traçables.
+Le modèle peut proposer un nom de fonction et des arguments structurés ; l'application les valide et décide de l'exécution. Générer les arguments, obtenir l'autorisation et exécuter sont trois étapes distinctes.
 
-## Le passage qu'il a permis
+## Conseils d'apprentissage et limites d'application
 
-Il a fait passer l'ingénierie des applications IA de « le modèle donne des suggestions en langage naturel » à « le modèle produit des instructions exécutables qui entrent dans les pipelines système ».
+Ce qui suit est une appréciation pédagogique de ce site, pas une mesure de l'adoption dans le secteur ni de l'efficacité :
 
-Avant Function Calling, beaucoup de systèmes devaient reparcourir le texte produit par le modèle, une opération fragile et difficile à contrôler. Après son arrivée, les développeurs ont pu organiser l'exécution directement autour de signatures, de validation de paramètres et de gestion d'erreurs, ce qui a fortement amélioré la fiabilité.
+Privilégiez des entrées vérifiables, une portée d'autorisation explicite et des réponses en cas d'échec. Un JSON valide ne garantit ni la justesse sémantique des arguments ni l'autorisation d'écrire dans un système externe. Les noms de modèles et exemples d'API figurant dans l'annonce historique ne sont pas un guide de configuration actuel.
 
-Cette étape a rendu les systèmes d'agents, l'orchestration de workflows et l'automatisation métier véritablement ingénierables.
+## Exercice pratique
 
-## Son stade actuel
+[Simulation de suggestions de tri des Issues](/fr/cases/use-cases/team-automation/issue-triage-suggestions/) : vérifiez que les suggestions structurées sur des Issues synthétiques correspondent aux entrées ; conservez une file de vérification humaine. L'exercice teste les limites des données sans appeler l'API historique ni utiliser son étiquette de version.
 
-Je marque actuellement Function Calling comme `mainstream`.
-
-L'invocation structurée d'outils est devenue une capacité de base des systèmes LLM de production, et la plupart des applications IA sérieuses en dépendent sous une forme ou une autre.
-
-Sa frontière s'étend aussi des appels d'arguments de fonction vers une interaction plus large avec les outils, contexte dans lequel apparaît ensuite le récit Tool Use.
-
-## Ce qu'il pourrait remplacer
-
-Il remplace des chaînes fragiles du type « instruction textuelle + parsing par regex + rattrapage manuel ».
-
-À mesure que ce pattern mûrit, les développeurs s'appuient moins sur des contraintes de prompt lâches et davantage sur des interfaces typées avec boucles de feedback d'exécution.
-
-## Ce qui pourrait le remplacer
-
-Il sera plus probablement absorbé par des abstractions de plus haut niveau qu'éliminé.
-
-Les futurs cadres de Tool Use, protocoles d'orchestration multi-outils et environnements d'exécution standardisés intégreront probablement Function Calling comme couche fondatrice.
+[Retour à la feuille de route et aux conventions de date](/fr/ai-roadmap/)

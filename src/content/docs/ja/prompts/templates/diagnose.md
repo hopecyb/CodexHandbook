@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは診断系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 診断テンプレート
 description: 根因を特定してから修正を議論する。
 locale: ja
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 診断テンプレート
 
 診断タスクのよくある誤解は、口では「先に調査」と言いながら、実際は直す前提で進めることです。
 
@@ -50,10 +54,3 @@ reviewed_at: 2026-08-26
 
 - [修正前に診断する](/ja/cases/workflows/diagnose-before-fixing/)
 - [バグ修正の事例](/ja/cases/fix-a-bug/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは診断系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

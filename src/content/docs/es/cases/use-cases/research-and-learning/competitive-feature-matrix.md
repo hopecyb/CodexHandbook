@@ -3,7 +3,7 @@ title: "Caso: matriz de funciones de competencia"
 description: Investigación con citas y salida tabular — un flujo reutilizable también para lectores no técnicos.
 locale: es
 source_locale: zh-CN
-source_revision: d90f5f1
+source_revision: b74008b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

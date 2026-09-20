@@ -3,7 +3,7 @@ title: Chính sách sử dụng chấp nhận được
 description: "Thỏa thuận cấp đội về Codex được làm gì và không được làm gì — căn chỉnh với kiểm soát kỹ thuật và đào tạo."
 locale: vi
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

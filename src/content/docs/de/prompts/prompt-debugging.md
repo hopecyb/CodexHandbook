@@ -3,7 +3,7 @@ title: Prompt-Debugging
 description: Bei abweichenden Ergebnissen Prompt-Probleme eingrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 9b92e1f
+source_revision: a4fb74f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

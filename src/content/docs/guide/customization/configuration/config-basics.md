@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI Help Center 当前配置材料仍直接使用 `~/.codex/config.toml` 与 `~/.codex/.env`，并说明桌面 App/IDE 可能需要重启后读取这些设置；本页内容同时避免绑定易变键名，只保留“用户级配置、托管策略、模型/审批/沙盒等常见配置意图”的稳定框架。"
+  checkedAt: "2026-07-26"
 title: 配置基础
 description: Codex 配置文件位置、常用项与审批/沙盒/模型设置入门。
 sidebar:
@@ -126,9 +131,3 @@ sidebar:
 
 ## 参考来源
 - OpenAI Codex 配置文档
----
-
-**状态：** verified  
-**适用产品：** CLI / App  
-**核验依据：** OpenAI Help Center 当前配置材料仍直接使用 `~/.codex/config.toml` 与 `~/.codex/.env`，并说明桌面 App/IDE 可能需要重启后读取这些设置；本页内容同时避免绑定易变键名，只保留“用户级配置、托管策略、模型/审批/沙盒等常见配置意图”的稳定框架。  
-**最近核验：** 2026-07-26

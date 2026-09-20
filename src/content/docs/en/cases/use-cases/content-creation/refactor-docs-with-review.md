@@ -3,7 +3,7 @@ title: Refactor docs with review
 description: Case study—batch link and section updates in an Astro/Starlight docs project; small diffs and build verification.
 locale: en
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

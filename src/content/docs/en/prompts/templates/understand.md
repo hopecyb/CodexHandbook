@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides an understand-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Understand template
 description: Build shared understanding before making changes.
 locale: en
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Understand template
 
 Many tasks stall because there's no shared baseline understanding yet.
 
@@ -55,10 +59,3 @@ The understand template helps narrow the next task scope.
 
 - [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/)
 - [Understand a codebase case](/en/cases/understand-a-codebase/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an understand-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

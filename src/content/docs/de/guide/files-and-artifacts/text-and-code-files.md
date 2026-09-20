@@ -3,7 +3,7 @@ title: Text- und Codedateien
 description: "Quellcode, Config und Dokument-Textdateien mit Codex korrekt lesen und schreiben."
 locale: de
 source_locale: zh-CN
-source_revision: a6005dd
+source_revision: 1537793
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center 当前 Codex CLI 入门文档仍明确区分 approval modes，并把读文件、写文件、执行命令等动作按风险分层；本页仅解释审批为何存在、何时应谨慎批准，以及用户如何判断影响范围，不声明固定产品默认值。"
+  checkedAt: "2026-07-26"
 title: 权限与审批
 description: 解释 Codex 何时需要你批准操作。
 sidebar:
@@ -68,10 +73,3 @@ Codex 不应在未获同意时执行高风险操作。**审批** 是人机协作
 官方策略与默认值可能变化，请核对 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
 
 审批的作用，是让“能不能做”这件事始终由你决定。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Help Center 当前 Codex CLI 入门文档仍明确区分 approval modes，并把读文件、写文件、执行命令等动作按风险分层；本页仅解释审批为何存在、何时应谨慎批准，以及用户如何判断影响范围，不声明固定产品默认值。  
-**最近核验：** 2026-07-26

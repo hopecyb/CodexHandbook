@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "El runtime actual de Codex sigue permitiendo referenciar Skills por nombre de forma explícita y hacer match automático cuando encaja; OpenAI Help «Skills in ChatGPT» también confirma que los Skills se usan automáticamente cuando ayudan. Esta página se centra en formas de activación y principios de redacción."
+  checkedAt: "2026-07-26"
 title: Usar un Skill
 description: Activación explícita e implícita de Skills, y claves para escribir bien description.
 locale: es
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Un malentendido habitual al empezar es pensar: «una vez instalado, ya funciona 
 
 Un Skill puede invocarse **por nombre explícito** o, en el escenario adecuado, ser **elegido automáticamente** por el modelo. Distinguir ambas formas de activación evita rodeos al depurar.
 
-# Usar un Skill
 
 ## Formas de activación
 
@@ -87,9 +91,3 @@ tras leer esa `description`, deberías saber «cuándo usarlo y cuándo no».
 Si tras leerla parece que «sirve para casi todo», suele ser demasiado genérica.
 
 Más conceptos: [Descripción general de Skills](/es/skills/overview/).
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** El runtime actual de Codex sigue permitiendo referenciar Skills por nombre de forma explícita y hacer match automático cuando encaja; OpenAI Help «Skills in ChatGPT» también confirma que los Skills se usan automáticamente cuando ayudan. Esta página se centra en formas de activación y principios de redacción.  
-**Última verificación:** 2026-07-26

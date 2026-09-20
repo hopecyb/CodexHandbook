@@ -3,7 +3,7 @@ title: Spezifikationsgetriebene Arbeit
 description: Zuerst eine abnahmefähige Spezifikation schreiben, dann Codex nach Plan umsetzen lassen — geeignet für klar umrissene Lieferaufgaben.
 locale: de
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

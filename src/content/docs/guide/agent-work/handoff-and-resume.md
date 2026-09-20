@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前对长期任务、持续目标与 Codex 协作形态的公开说明交叉复核；页面内容仅保留“交接摘要应帮助下一次继续工作”的稳定方法，不把某一产品端的具体交接按钮或流程写成固定规则。"
+  checkedAt: "2026-07-26"
 title: 交接与恢复
 description: 跨会话继续未完成工作。
 sidebar:
@@ -82,10 +87,3 @@ sidebar:
 这样可以避免依赖已经压缩、遗漏或变形的旧上下文。
 
 好的交接不是复述历史，而是让下一次打开任务的人立刻知道：现在在哪、下一步干什么、做完怎么验。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前对长期任务、持续目标与 Codex 协作形态的公开说明交叉复核；页面内容仅保留“交接摘要应帮助下一次继续工作”的稳定方法，不把某一产品端的具体交接按钮或流程写成固定规则。  
-**最近核验：** 2026-07-26

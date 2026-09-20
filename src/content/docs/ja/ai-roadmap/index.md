@@ -1,77 +1,48 @@
 ---
 title: AI アプリケーションロードマップ
-description: Prompt Engineering、RAG、MCP、Multi-agent、Context Engineering、Skills など、AI アプリケーション工学の節目を時系列で理解する。
+description: 論文、製品発表、技術記事、筆者の学習提案を区別し、各テーマから実践へ進みます。
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-08
-reviewed_at: 2026-08-26
-source_revision: 0333168
+source_revision: 7544287
+translation_status: draft
+translated_at: 2026-09-20
+prev: false
+next:
+  link: /ja/ai-roadmap/timeline/
+  label: 出来事とテーマの索引
 ---
 
-# AI アプリケーションロードマップ
+このマップでは、確認可能な公開上の出来事と学習上の提案を分けています。**日付が示すのは表に載せた論文、発表、記事だけです。概念の誕生、業界への普及、機能の成熟を自動的に意味するものではありません。** 異なる技術は併用でき、時系列が必須の学習順序になるわけでもありません。
 
-これは AI アプリケーション工学の知識マップです。モデルのパラメータ数、ランキング、単発の製品発表ではなく、主要な方法論を逆時系列でつなぎます。再利用でき、検証できる Agent 工学システムから、それを支えた実践へとさかのぼって読みます。
+各テーマのページには一次資料、適用範囲の限界、サイト内の演習があります。出典の確認はソフトウェアの実行テストではありません。元の URL は維持しているため、URL 内の年月と修正後の出来事の日付が異なる場合があります。本文の日付を基準にしてください。
 
-<div class="roadmap-timeline">
-  <article>
-    <time>2026-04</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2026-04-skills/">Skills（スキル）</a></h3>
-    <p>Skills は、プロンプト、手順、例、スクリプト、リソースを再利用可能なワークフロー単位としてまとめます。毎回「どうやるか」を説明し直すのではなく、チームの経験を蓄積するための仕組みです。</p>
-    <p><strong>学習ポイント：</strong>SKILL.md、段階的開示、依存リソース、再利用境界、チーム規約。</p>
-  </article>
-  <article>
-    <time>2026-02</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2026-02-harness-engineering/">Harness Engineering（実行ハーネス工学）</a></h3>
-    <p>Harness Engineering は、モデルが安定してタスクを完了するための環境を設計します。ツール、コンテキスト、検証フィードバック、失敗からの復旧、品質ゲート、回帰確認が対象です。</p>
-    <p><strong>学習ポイント：</strong>タスクハーネス、検証フィードバック、失敗復旧、品質ゲート。</p>
-  </article>
-  <article>
-    <time>2026-01</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2026-01-openspec/">OpenSpec（仕様駆動開発）</a> / <a href="/ja/ai-roadmap/timeline/2026-01-openclaw/">OpenClaw（個人 AI アシスタントゲートウェイ）</a></h3>
-    <p>この 2 つは異なる方向を示します。OpenSpec は要件と設計を追跡可能な仕様成果物にし、OpenClaw は個人アシスタント、チャネル、ツールゲートウェイを統合します。</p>
-    <p><strong>学習ポイント：</strong>仕様駆動開発、ゲートウェイ、セッション、チャネル、追跡可能な成果物。</p>
-  </article>
-  <article>
-    <time>2025-09</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2025-09-context-engineering/">Context Engineering（コンテキスト工学）</a></h3>
-    <p>Context Engineering は「どうプロンプトを書くか」から「モデルに何を、どの順序で見せ、何を圧縮または除外するか」へ焦点を移します。</p>
-    <p><strong>学習ポイント：</strong>コンテキスト優先度、検索戦略、圧縮、記憶、ファイル選択。</p>
-  </article>
-  <article>
-    <time>2025-06</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2025-06-multi-agent/">Multi-agent（マルチエージェント協調）</a></h3>
-    <p>Multi-agent は、調査、実装、レビュー、検証、要約などの役割に複雑な仕事を分けます。目的は構造化、並列化、相互チェックです。</p>
-    <p><strong>学習ポイント：</strong>役割境界、引き継ぎ形式、衝突解決、レビューと検証。</p>
-  </article>
-  <article>
-    <time>2025-03</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2025-03-tool-use/">Tool Use（ツール利用）</a></h3>
-    <p>Tool Use は、モデルがタスク中にツールを選び、呼び出し、結果を読み、次の推論へ進む方法を扱います。単発回答から多段実行への橋渡しです。</p>
-    <p><strong>学習ポイント：</strong>ツール選択、呼び出しチェーン、状態管理、ツール失敗後の復旧。</p>
-  </article>
-  <article>
-    <time>2024-11</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2024-11-mcp/">MCP（モデルコンテキストプロトコル）</a></h3>
-    <p>MCP は、ツール、リソース、プロンプトの接続をプロトコル化します。価値は単に統合数を増やすことではなく、統合を再利用可能で発見可能、統制可能にすることです。</p>
-    <p><strong>学習ポイント：</strong>server/client、tools、resources、prompts、権限、デバッグ。</p>
-  </article>
-  <article>
-    <time>2023-11</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2023-11-rag/">RAG（検索拡張生成）</a></h3>
-    <p>RAG は、取得した資料に回答を根拠づけます。AI を「話せる」状態から「追跡可能な根拠で答える」状態へ進めます。</p>
-    <p><strong>学習ポイント：</strong>チャンク分割、ベクトル検索、再ランキング、引用、コンテキスト圧縮。</p>
-  </article>
-  <article>
-    <time>2023-06</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2023-06-function-calling/">Function Calling（関数呼び出し）</a></h3>
-    <p>Function Calling は、モデルをテキスト回答から構造化パラメータによる外部機能呼び出しへ進めました。AI が実システムに入るための重要な一歩です。</p>
-    <p><strong>学習ポイント：</strong>schema 設計、パラメータ検証、ツール境界、エラー返却。</p>
-  </article>
-  <article>
-    <time>2022-11</time>
-    <h3><a href="/ja/ai-roadmap/timeline/2022-11-prompt-engineering/">Prompt Engineering（プロンプト工学）</a></h3>
-    <p>AI アプリケーション工学の出発点は入力制御です。タスク目標、コンテキスト、制約、例、出力形式を明示し、モデルの振る舞いを安定させます。</p>
-    <p><strong>学習ポイント：</strong>タスク分解、役割設定、few-shot 例、出力形式、失敗時の再試行。</p>
-  </article>
-</div>
+## 確認可能な出来事
+
+| 日付 | 種類 | テーマと具体的な出来事 |
+|---|---|---|
+| 2026-02-11 | 技術記事 | [Harness Engineering（実行ハーネス工学）](/ja/ai-roadmap/timeline/2026-02-harness-engineering/): Harness engineering の技術記事 |
+| 2025-10-16 | 技術記事 | [Skills（スキル）](/ja/ai-roadmap/timeline/2026-04-skills/): Agent Skills の公開紹介 |
+| 2025-09-29 | 技術記事 | [Context Engineering（コンテキスト工学）](/ja/ai-roadmap/timeline/2025-09-context-engineering/): コンテキスト工学の記事 |
+| 2025-06-13 | 技術記事 | [Multi-agent（マルチエージェント協調）](/ja/ai-roadmap/timeline/2025-06-multi-agent/): マルチ Agent 調査システムの技術記事 |
+| 2025-03-11 | 製品発表 | [Tool Use（ツール利用）](/ja/ai-roadmap/timeline/2025-03-tool-use/): Agent ツールの発表 |
+| 2024-11-25 | プロトコル公開 | [MCP（モデルコンテキストプロトコル）](/ja/ai-roadmap/timeline/2024-11-mcp/): MCP の公開発表 |
+| 2023-06-13 | 製品発表 | [Function Calling（関数呼び出し）](/ja/ai-roadmap/timeline/2023-06-function-calling/): Function Calling の公開発表 |
+| 2022-11-30 | 製品発表 | [Prompt Engineering（プロンプト工学）](/ja/ai-roadmap/timeline/2022-11-prompt-engineering/): ChatGPT の公開発表 |
+| 2020-05-22 | 論文発表 | [RAG（検索拡張生成）](/ja/ai-roadmap/timeline/2023-11-rag/): RAG の原論文と投稿履歴 |
+
+## 個別のプロジェクト
+
+次のプロジェクトは、確認できていない初公開日によって順序を付けず、個別に読んでください。
+
+- [OpenSpec](/ja/ai-roadmap/timeline/2026-01-openspec/): プロジェクトの公式リリースページには v1.0.0（The OPSX Release）のリリースノートがあります。今回の確認では、このバージョンからプロジェクトの初公開日を推定せず、証拠で確認できない npm の初公開日も採用しません。
+- [OpenClaw](/ja/ai-roadmap/timeline/2026-01-openclaw/): このページでは、OpenClaw の公式リポジトリをプロジェクトの同定と説明の情報源とします。初公開を確認するのに十分な証拠が得られなかったため、初公開日は表示しません。
+
+## 現在のタスクに合わせて演習を選ぶ
+
+- 初めて使う場合：[初心者パス](/ja/guide/learning-paths/)から始めましょう。先に年表をすべて学ぶ必要はありません。
+- タスクの指示を改善する場合：[プロンプト比較教材](/ja/prompts/comparison-lab/)で出力と採点を保存します。このサイトにはモデルの有効性を実測した結論はまだありません。
+- 資料による裏付けが必要な場合：[出典付き記事](/ja/cases/write-an-article/)で結論と証拠の対応を練習します。
+- 安定した再利用が必要な場合：[Skill の例](/ja/skills/examples/)を選び、入力、境界、検証記録を確認します。
+- 実行が繰り返し失敗する場合：[失敗復旧ラボ](/ja/guide/reference/troubleshooting/failure-recovery-lab/)でログを読み、一度に一つの変数だけを修正する練習をします。
+
+テーマの学習価値は現在のタスクで決まります。この欄では、共通の測定根拠がない「rising」「emerging」などのラベルで業界全体を段階分けしません。

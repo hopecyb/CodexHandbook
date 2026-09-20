@@ -1,12 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Cross-checked against the handbook’s current status system, completed rounds of review, and the official-first principle. This page describes internal standards for promoting pages to `verified` and for downgrading them."
+  checkedAt: "2026-07-26"
 title: Verify Technical Content
-description: How to mark pages verified—in reproduction steps, official sources, and dates.
+description: Distinguish editorial status, source checks, and example runs; record scope, environment, and evidence.
 locale: en
 source_locale: zh-CN
-source_revision: abada81
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: cfb077d
+translation_status: draft
+translated_at: 2026-09-20
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Updated contribution guidance for the site’s new metadata fields; this does not mean every product mechanism cited here was rerun.
 sidebar:
   order: 30
 ---
@@ -50,11 +58,27 @@ Verification prevents readers following stale docs into traps.
 
 ## Common misconceptions
 
-### `verified` means evidence, not confidence
+### Editorial status and verification method are separate fields
 
-Not a tone—it is an evidence state.
+`editorialStatus` records writing and review progress. `verification.kind` records which kind of check was actually performed; readers cannot infer from `verified` that an example was run.
 
-Mark `verified` only after reproduction, official cross-check, and scope/date alignment.
+| Verification method | Supported conclusion | Required evidence |
+|---|---|---|
+| `editorial` | Structure, wording, or internal references were reviewed | Check summary and date |
+| `source-checked` | Facts within the stated scope agree with the sources | Specific source links, summary, and date |
+| `run-tested` | The example ran in the recorded environment | Environment, execution and review records, summary, and date |
+
+`run-tested` does not guarantee that the example works on every platform. The summary must say what was and was not checked; an independent calculation self-check is not a review by a second author. Old records without evidence remain in `legacyVerification` and do not automatically imply any new verification status.
+
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Checked the structure and internal links; the example has not been run.
+```
+
+Source checks and runs use an `evidence` list whose entries each contain `label` and `href`. Runs also require `environment`, specifying the system, relevant client version, and dependency versions. The build rejects run records that lack an environment or evidence links. A link’s existence alone does not prove that the evidence is sufficient; maintainers must read the record.
 
 ### Community articles inform topics, not facts
 
@@ -84,9 +108,9 @@ Verify the **full operational path**.
 
 1. **State scope**: product (App/CLI/IDE/Cloud), OS, CLI version
 2. **Reproduce step by step**: from zero or clean worktree
-3. **Official basis**: at least one OpenAI doc or Help Center link
+3. **Official basis**: cite specific official sources for product facts; for stable method exercises, use real inputs and check records without claiming official endorsement
 4. **Community sources**: community articles for topics only—facts from official
-5. **Update date**: footer `Last verified: YYYY-MM-DD`
+5. **Update date**: set `verification.checkedAt` only to the actual check date; do not bulk-refresh old dates and pass them off as renewed review
 6. **Independent review**: `verified` ideally confirmed by someone other than author
 
 ## Verification order
@@ -120,9 +144,3 @@ Re-check quarterly or on major releases:
 - [Official resources](/en/guide/reference/official-resources/)
 
 `verified` means checked against stated current basis with traceable evidence—not author gut feel alone.
-
----
-
-**Status:** verified  
-**Verification basis:** Cross-checked handbook status system, completed review practice, and official-first principle; describes internal standards for promoting pages to `verified` and when to downgrade.  
-**Last verified:** 2026-07-26

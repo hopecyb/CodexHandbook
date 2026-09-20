@@ -1,166 +1,74 @@
 ---
-title: Planificación
-description: Haz que Codex explique primero pasos, riesgos y verificación antes de decidir si ejecutar.
-locale: es
-source_locale: zh-CN
-source_revision: 75099ef
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Planificar: aclarar la ejecución y la verificación"
+description: "Usa un plan para resolver alcance, dependencias y decisiones; distingue planificar de esperar aprobación y sigue dentro de la autorización existente."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Esta página propone una forma de trabajar contrastada con la clasificación de tareas y los permisos; no afirma un comportamiento predeterminado de ningún cliente ni mejoras de eficiencia medidas."
 sidebar:
   order: 10
+locale: es
+source_locale: zh-CN
+source_revision: 8696afd
+translation_status: draft
+translated_at: 2026-09-20
 ---
+Un plan es una ruta de ejecución que puedes examinar y ajustar. Ayuda a detectar pronto lagunas de alcance, dependencias y aceptación, pero una tarea más grande no implica esperar confirmación repetidamente.
 
-Cuando dices directamente «empieza a cambiar», los problemas habituales son:
+Empieza por la [clasificación de tareas](/es/prompts/ask-for-a-plan/): completar directamente, planificar y ejecutar dentro de la autorización existente, o limitarte a proponer una solución esta vez. Una petición explícita de «primero un plan, sin modificar archivos» debe seguir siendo de solo lectura. Si se pide implementar, no basta con entregar un plan.
 
-- La ruta está mal pensada
-- El alcance se amplió de más
-- Los riesgos no se expusieron a tiempo
-- El método de verificación no basta en absoluto
+## Un plan suficientemente preciso
 
-Planificar es sacar primero «cómo piensa hacerlo» para que lo veas.
-
-El sentido de planificar es convertir «yo creía que harías esto» en un **artefacto intermedio revisable**. Sobre todo en tareas complejas, lo que realmente apruebas es una ruta de ejecución, no solo pulsar un botón de «empezar».
-
-## Qué confirmas al pedir un plan primero
-
-Cuando pides a Codex «primero un plan», en realidad confirmas dos cosas:
-
-- Si ha entendido de verdad tu objetivo
-- Si la ruta que quiere seguir es una que estás dispuesto a asumir
-
-## Qué debe incluir al menos un plan válido
-
-| Elemento | Función |
+| Elemento | Qué concretar |
 |---|---|
-| Pasos | Que la tarea tenga orden, no que se lance a hacer todo a la vez |
-| Archivos o alcance implicados | Exponer de antemano la superficie de impacto |
-| Riesgos y puntos por confirmar | Evitar tratar hipótesis como hechos |
-| Método de verificación | Que «terminado» se pueda demostrar |
+| Objetivo | Comportamiento observable al terminar |
+| Alcance | Archivos, entradas y exclusiones pertinentes |
+| Orden | Dependencias reales, sin convertir cada llamada a una herramienta en un paso |
+| Verificación | Salidas o comprobaciones que demuestren la finalización |
+| Decisiones | Solo las cuestiones sin resolver que afectan al resultado |
 
-Si solo dice «cambia A, luego B», sin riesgos ni verificación, se parece más a una lista de tareas que a un plan de verdad.
+Para añadir una agrupación de datos a un informe existente, el plan puede ser «comprobar definiciones → cambiar agregación y presentación → contrastar totales y grupos con una muestra». No hace falta pedir permiso por separado para leer cada archivo, hacer cada edición o ejecutar cada prueba.
 
-## Errores habituales
+## Dos solicitudes de planificación diferentes
 
-### 1. ¿Un plan es solo listar pasos?
-
-Un plan realmente útil también debe decirte al menos:
-
-- Qué archivos o zonas afecta
-- Dónde hay incertidumbre
-- Cómo demostrar al terminar que de verdad está hecho
-
-### 2. Las tareas pequeñas nunca necesitan planificación
-
-Tampoco es absoluto. Algunas tareas, aunque el cambio sea pequeño, si:
-
-- No conoces bien el repositorio
-- Implican permisos o aprobación
-- Si se desvía, cuesta mucho recuperar
-
-entonces sigue valiendo la pena parar un momento y que lo explique antes de tocar nada.
-
-### 3. ¿Pedir un plan primero es solo un trámite?
-
-Solo si de verdad lo revisas. Si pides un plan y no miras alcance, riesgos ni verificación, ese paso se vuelve formal; pero si con él detectas desviaciones pronto, suele haber mucho menos retrabajo.
-
-## Cuándo hay que planificar primero
-
-- Implica varios archivos o módulos
-- No conoces bien el repositorio
-- Necesitas aprobación humana antes de ejecutar
-- El cambio puede afectar comportamiento en producción o reglas de colaboración del equipo
-- Ya sientes que «si esto se tuerce, será difícil de arreglar»
-
-Un cambio pequeño de redacción puede no necesitar un plan formal, pero en tareas medianas o grandes conviene parar primero.
-
-## Cómo decidir si no estás seguro
-
-Si no sabes si planificar primero, pregúntate:
-
-> **Si ahora empieza a hacerlo directamente y se desvía, ¿me costará mucho recuperarlo?**
-
-Si la respuesta es «sí», pide el plan primero.
-
-## Forma recomendada de pedir un plan
-
-Pide primero el plan a Codex, no que empiece a trabajar:
+**La solución aún no está decidida:**
 
 ```text
-Primero no cambies archivos. Da un plan basado en el repositorio actual, con:
-1. Comprensión del objetivo
-2. Pasos numerados
-3. Archivos implicados
-4. Riesgos o puntos por confirmar
-5. Cómo verificar cada paso
+En esta ocasión, analiza solo en modo de lectura dos opciones de exportación según dependencias, compatibilidad y mantenimiento.
+Recomienda una e indica qué decisiones debo tomar. No modifiques la implementación.
 ```
 
-Una formulación más completa está en [Pedir un plan](/es/prompts/ask-for-a-plan/).
-
-## Qué revisas
-
-Al mirar el plan, no te quedes en «¿suena bien?»; mira estas preguntas:
-
-1. ¿Ha entendido el objetivo real?
-2. ¿Es razonable el alcance de impacto?
-3. ¿Se saltó comprobaciones previas obvias?
-4. ¿El método de verificación basta para demostrar que está hecho?
-
-Mucho retrabajo no viene de una mala implementación, sino de haber aprobado un plan difuso.
-
-Mirar el plan primero suele aclarar ruta y riesgos antes de tocar archivos, y con menos coste.
-
-## Cómo dar feedback al plan
-
-No hace falta reescribir el plan entero; basta señalar la desviación:
+**El alcance está decidido y hay que implementar:**
 
 ```text
-Conserva el paso 1; no hagas todavía el refactor del paso 2.
-Separa el cambio de base de datos en un paso independiente.
-Añade un plan de rollback si falla.
-Solo análisis de lectura; no entres a implementar.
+Completa la exportación CSV según los requisitos existentes. Primero examina el repositorio y da un plan breve;
+después implementa y verifica de forma continua dentro del alcance acordado, sin esperar tras cada paso.
+Si necesitas un servicio nuevo, cambiar la interfaz pública o ampliar el acceso a datos, explica antes la razón concreta.
 ```
 
-Esta «corrección a pequeños pasos» suele ser más eficiente que «tirar todo y empezar de cero».
+Estos son ejemplos creados para este manual. Que aparezca un cuadro de aprobación depende de las herramientas, políticas y permisos reales.
 
-## Frontera entre plan y ejecución
+## Ajustar el plan durante la ejecución
 
-Un hábito de colaboración importante es separar ambos:
+- Detalle normal de implementación: actualiza el plan y continúa dentro del alcance autorizado.
+- Premisa inicial falsa: explica pruebas e impacto y propone una alternativa dentro del alcance.
+- Decisión que corresponde al usuario: haz una pregunta concreta y sigue con el trabajo independiente de la respuesta.
+- Acción externa no autorizada: prepara un resultado revisable y solicita autorización antes de realizarla.
 
-- **Fase de plan**: se permite explorar, listar opciones y exponer incertidumbre
-- **Fase de ejecución**: avanzar por la ruta ya confirmada
+No detengas el trabajo por un problema que solo podría aparecer, ni sigas el plan hasta ignorar un cambio real de alcance.
 
-Si durante la ejecución cambia la premisa, vuelve al plan; no fuerces. Ver [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/).
+## Dar comentarios sobre un plan
 
-## En tareas de alto riesgo, añade tres puntos
+```text
+Mantén los pasos 1 y 2, pero quita la refactorización.
+Esta vez haz solo una vista previa local; no publiques.
+Añade una comprobación: el formato antiguo de archivos sigue siendo legible.
+```
 
-Si la tarea toca muchos archivos, sistemas externos, permisos, automatización o reglas de equipo, el plan debe añadir:
+Los comentarios modifican solo lo que mencionan expresamente. Las restricciones y criterios no retirados siguen vigentes. Si se interrumpe la tarea, registra archivos actuales, comprobaciones completadas y siguiente paso en una [nota de entrega](/es/guide/agent-work/handoff-and-resume/).
 
-| Punto extra | Por qué importa |
-|---|---|
-| Límite de permisos | Qué es solo lectura y qué requiere confirmación humana |
-| Forma de recuperación | Cómo volver a un estado seguro si el camino era erróneo |
-| Despliegue por fases | Validar antes en carpeta de prueba, proyecto ejemplo o alcance pequeño |
+## Volver a las pruebas al terminar
 
-Pide el plan por fases: análisis solo lectura, cambio mínimo, verificación y rollback. Cualquier escritura externa o masiva debe listarse antes, no ejecutarse directamente.
-
-## Errores frecuentes
-
-- El plan no tiene método de verificación
-- Pasar del plan a la ejecución sin confirmación
-- Meter varios objetivos independientes en el mismo plan
-- Cuando hace falta confirmación, solo escribir «ya empiezo»
-
-## Combinaciones recomendadas
-
-- Necesitas la cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
-- Necesitas formular bien el prompt: ver [Pedir un plan](/es/prompts/ask-for-a-plan/)
-- Necesitas corregir a mitad de camino: ver [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/)
-- Necesitas normas a largo plazo: ver [Qué es AGENTS.md](/es/guide/customization/agents-md/what-is-agents-md/)
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con la forma de trabajo actual de OpenAI Developers para Codex («entender primero, luego planificar, luego ejecutar y verificar») y con los capítulos ya verificados de prompts, calidad y flujos de este manual; el contenido se limita a métodos estables de planificación de tareas y no cita parámetros de versión variables.  
-**Última verificación:** 2026-07-26
+Comprueba que el objetivo se cumplió de verdad, no solo que se marcaron todos los pasos. Registra las pruebas no ejecutadas, vistas previas no inspeccionadas y hechos no verificados. Consulta [Explorar → Planificar → Ejecutar → Verificar](/es/cases/workflows/explore-plan-execute-verify/).

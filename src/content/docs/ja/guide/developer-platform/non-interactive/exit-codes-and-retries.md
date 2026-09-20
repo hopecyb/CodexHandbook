@@ -3,7 +3,7 @@ title: 終了コードと再試行
 description: パイプラインで codex exec の成否を正しく解釈——いつ再試行し、いつ即失敗するか。
 locale: ja
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

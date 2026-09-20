@@ -3,7 +3,7 @@ title: Cơ bản về Agent
 description: Giải thích Agent gọi công cụ quanh mục tiêu và lặp để tiến tới như thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: cb6933a
+source_revision: 5cfa120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

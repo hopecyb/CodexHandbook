@@ -3,7 +3,7 @@ title: Images et captures d'écran
 description: Fournir des captures et entrées design à Codex ; gérer les fichiers image dans les Tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

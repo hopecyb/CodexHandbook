@@ -1,65 +1,60 @@
 ---
-title:  Ajustes
-description:  Opciones habituales de la App de escritorio.
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
+title: Configuración
+description: Ajusta el comportamiento diario, los atajos de teclado, las notificaciones y la apariencia de la aplicación de escritorio.
 locale: es
 source_locale: zh-CN
-source_revision: c599d50
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 7a6d2fe
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 90
 ---
 
-Settings personalize App behavior. They are not the complete Codex permission configuration. Keep the defaults at first and change a setting only after you understand its scope.
+La página de configuración permite personalizar el comportamiento de la aplicación, pero no reúne todos los permisos de Codex. Mantén primero los valores predeterminados y modifica cada opción solo cuando entiendas su alcance.
 
-Press `Cmd + ,` on macOS or `Ctrl + ,` on Windows, or open Settings from the application menu.
+En macOS, pulsa `Cmd + ,`; en Windows, `Ctrl + ,`. También puedes abrir Settings desde el menú de la aplicación.
 
-## Four sections to check first
+## Cuatro apartados que conviene revisar primero
 
 ### General
 
-- Whether `Cmd + Enter` is required to submit a multiline prompt.
-- Whether **Prevent sleep while running** lets a local long-running task continue while you are away.
-- Follow-up behavior determines whether a new message steers the current run immediately or is queued for the next turn.
+- Si debes pulsar `Cmd + Enter` para enviar un prompt de varias líneas.
+- Si **Prevent sleep while running** permite que una tarea local larga continúe cuando te apartas del ordenador.
+- **Follow-up behavior** determina si un nuevo mensaje orienta inmediatamente la ejecución actual o queda en cola para el siguiente turno.
 
-The last setting changes what happens when you add a clarification. Steer the current run for an urgent correction. Start a separate chat for an unrelated requirement.
+La última opción cambia el efecto de añadir una aclaración. Para una corrección urgente, orienta la ejecución actual. Si se trata de un requisito nuevo y ajeno al trabajo en curso, abre otra conversación.
 
 ### Keyboard shortcuts
 
-Search commands, change bindings, or restore defaults. If an online shortcut differs from your App, use the binding displayed here.
+Puedes buscar comandos, cambiar atajos o restablecer los valores predeterminados. Si un atajo publicado en internet no coincide con el de tu equipo, utiliza la combinación que aparece aquí.
 
 ### Notifications
 
-Choose when turn-completion notifications appear and whether to notify for permission requests and questions. See [Notifications and Activity](/es/guide/desktop-app/notifications/) for detailed recommendations.
+Define cuándo aparecen las notificaciones al terminar un turno y si recibes avisos de solicitudes de permisos o preguntas. Encontrarás recomendaciones completas en [Notificaciones y vista de actividad](/es/guide/desktop-app/notifications/).
 
 ### Appearance
 
-Choose light, dark, or system appearance, and adjust the accent color, background, foreground, UI font, code font, and font size. For long code reviews, prioritize contrast and readable type over theme effects.
+Puedes elegir un tema claro, oscuro o el del sistema y ajustar el color de acento, fondo, primer plano, fuente de la interfaz, fuente del código y tamaño de letra. En una revisión larga de código, prioriza el contraste y la legibilidad antes que el aspecto del tema.
 
-## What these settings do not control
+## Qué no se resuelve aquí
 
-- Repository rules belong in `AGENTS.md`.
-- Persistent CLI and Agent configuration primarily belongs in `config.toml`.
-- The sandbox, approval policy, and organization policy jointly determine whether files, networks, and commands are available.
-- Managed organization policy may restrict what an individual can select.
+- Las reglas del repositorio se escriben en `AGENTS.md`.
+- La configuración persistente de la CLI y del Agent se escribe principalmente en `config.toml`.
+- La disponibilidad de archivos, red y comandos depende en conjunto del sandbox, las aprobaciones y la política de la organización.
+- Las políticas administradas de la organización pueden limitar las opciones que cada persona puede elegir.
 
-A visible setting therefore does not guarantee that the current task has the corresponding permission. When an operation is denied, read [Permissions and sandboxing](/es/guide/permissions-and-sandbox/) before expanding access.
+Por tanto, que una opción aparezca en Settings no garantiza que la tarea actual tenga ese permiso. Si se rechaza una operación, lee primero [Permisos y sandbox](/es/guide/permissions-and-sandbox/) antes de ampliar el acceso.
 
-## Verify each change
+## Verificar los cambios
 
-Change one class of settings at a time and verify it with a low-risk chat. Record the previous value. If behavior differs from your expectation, restore the default first, then check the App version, operating-system permissions, and organization policy.
+Cambia solo una clase de opciones cada vez y comprueba el resultado con una conversación de bajo riesgo. Anota el valor anterior antes de continuar. Si el comportamiento no es el esperado, restablece primero el valor predeterminado y después revisa la versión de la aplicación, los permisos del sistema operativo y la política de la organización.
 
-## Official sources
+## Fuentes oficiales
 
-- [ChatGPT desktop App settings](https://learn.chatgpt.com/docs/app/settings)
-- [Codex configuration basics](https://learn.chatgpt.com/docs/config)
-- [Permissions](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26
+- [Configuración de la aplicación de escritorio ChatGPT](https://learn.chatgpt.com/docs/app/settings)
+- [Conceptos básicos de configuración de Codex](https://learn.chatgpt.com/docs/config)
+- [Permisos](https://learn.chatgpt.com/docs/permissions)

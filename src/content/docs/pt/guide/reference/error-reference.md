@@ -3,7 +3,7 @@ title: Referência de erros e avisos
 description: Índice de aprendizagem de mensagens de erro habituais, códigos de saída e causas de falha — aponta a páginas de diagnóstico; não substitui o suporte oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

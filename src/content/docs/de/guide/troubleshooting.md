@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite verteilt nur nach Symptom auf Kapitel zu Installation, Login, Berechtigung, Kontext und Ergebnisqualität; verlinkte Kapitelpfade wurden einzeln geprüft, und die Seite hängt nicht von konkreten Fehlercodes, Versionsnummern oder UI-Texten ab."
+  checkedAt: "2026-07-26"
 title: Fehlerbehebung
 description: "Nach Symptomen zu den passenden Tutorials und Produktseiten finden."
 locale: de
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ Du musst nicht zuerst entscheiden, ob CLI, IDE, Cloud, Berechtigung oder Prompt 
 - Wenn die Fehlerklasse unklar ist: minimaler Einstieg in die Suche
 - Welche Probleme zu Installation, Berechtigung, Kontext oder Aufgabenbeschreibung gehören
 
-# Fehlerbehebung
 
 | Symptom | Weiter zu |
 |---|---|
@@ -62,10 +66,3 @@ Besser kurz stoppen, die Lage einordnen, dann zur passenden Seite.
 Fehlerbehebung heißt zuerst klassifizieren — nicht sofort „reparieren“.
 
 Mehr: [FAQ](/de/guide/reference/faq/) · [Fehlerreferenz](/de/guide/reference/error-reference/) · [Offizielle Codex-Doku](https://developers.openai.com/codex)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite verteilt nur nach Symptom auf Kapitel zu Installation, Login, Berechtigung, Kontext und Ergebnisqualität; verlinkte Kapitelpfade wurden einzeln geprüft, und die Seite hängt nicht von konkreten Fehlercodes, Versionsnummern oder UI-Texten ab.  
-**Zuletzt überprüft:** 2026-07-26

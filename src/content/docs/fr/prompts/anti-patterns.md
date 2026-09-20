@@ -3,7 +3,7 @@ title: Anti-patterns de Prompt
 description: Formulations floues, dépassement de permissions et demandes de « raisonnement caché » à éviter.
 locale: fr
 source_locale: zh-CN
-source_revision: 6aba346
+source_revision: 8e89a5a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

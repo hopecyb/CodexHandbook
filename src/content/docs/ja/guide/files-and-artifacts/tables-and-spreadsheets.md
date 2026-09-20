@@ -3,7 +3,7 @@ title: 表とスプレッドシート
 description: CSV、Excel、表形式データの読み取り、クレンジング、分析、エクスポート。構造とエンコーディングを壊さないために。
 locale: ja
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 title: 连接 GitHub
 description: 以最小仓库范围为 Codex Cloud 配置 GitHub 访问。
 sidebar:
@@ -56,11 +60,3 @@ Codex 会发布标准 GitHub review。自动审查需要在 Codex Settings 单�
 
 - [Codex Cloud 快速开始](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud、GitHub
-
-**最近核验：** 2026-08-26

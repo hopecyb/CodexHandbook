@@ -3,7 +3,7 @@ title: Route für die ersten 30 Minuten
 description: "Eine 30-Minuten-Route zum direkten Einstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 5363190
+source_revision: 7d1061d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

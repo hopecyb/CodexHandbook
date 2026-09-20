@@ -1,0 +1,23 @@
+{
+  "test_command": "node --test cart.test.js",
+  "before": {
+    "cwd": "input",
+    "exit_code": 1,
+    "passed": 2,
+    "failed": 1
+  },
+  "after": {
+    "cwd": "output",
+    "exit_code": 0,
+    "passed": 3,
+    "failed": 0
+  },
+  "test_copy_cmp_exit_code": 0,
+  "diff_exit_code": 1,
+  "not_run": [
+    "lint",
+    "build",
+    "additional tests"
+  ]
+}
+

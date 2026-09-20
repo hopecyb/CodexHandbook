@@ -3,7 +3,7 @@ title: Konfigurationsreferenz
 description: 'Konzeptindex zu Codex-Config-Schlüsseln auf Nutzer- und Projektebene — Pfade und Felder nach offizieller Dokumentation.'
 locale: de
 source_locale: zh-CN
-source_revision: ebf25a6
+source_revision: 8f692ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

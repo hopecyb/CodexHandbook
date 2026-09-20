@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは変更系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 変更テンプレート
 description: 既存の上で境界のある反復変更。
 locale: ja
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 変更テンプレート
 
 「既存のものを少し直す」タスク向けです。
 
@@ -66,10 +70,3 @@ reviewed_at: 2026-08-26
 
 - [完了基準の定義](/ja/prompts/define-done/)
 - [制約と境界](/ja/prompts/constraints-and-boundaries/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは変更系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

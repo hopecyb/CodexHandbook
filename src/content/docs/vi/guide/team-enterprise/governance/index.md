@@ -3,7 +3,7 @@ title: Quản trị
 description: "Trang giải thích chính sách, ranh giới và quy tắc tổ chức — nêu rõ được làm gì, không được làm gì, ai chịu trách nhiệm."
 locale: vi
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

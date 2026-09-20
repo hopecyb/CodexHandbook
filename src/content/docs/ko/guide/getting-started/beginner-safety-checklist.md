@@ -3,7 +3,7 @@ title: 초보자 안전 체크리스트
 description: 첫 사용 전에 반드시 볼 안전 점검 항목.
 locale: ko
 source_locale: zh-CN
-source_revision: 5add3bd
+source_revision: 75bfe4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

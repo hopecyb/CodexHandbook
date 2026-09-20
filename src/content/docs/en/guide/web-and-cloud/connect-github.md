@@ -3,7 +3,7 @@ title: Connect GitHub
 description: Configure GitHub access for Codex Cloud with the smallest repository scope.
 locale: en
 source_locale: zh-CN
-source_revision: b811894
+source_revision: b126a7e
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

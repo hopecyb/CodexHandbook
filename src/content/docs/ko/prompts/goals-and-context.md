@@ -3,7 +3,7 @@ title: 목표와 배경 제공하기
 description: Codex가 무엇을 완료해야 하는지, 왜 중요한지 알게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6ec9636
+source_revision: 0a5141f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

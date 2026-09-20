@@ -1,0 +1,47 @@
+{
+  "environment": {
+    "python": "3.12.11",
+    "os": "Darwin",
+    "arch": "arm64"
+  },
+  "designed_failures_actually_executed": true,
+  "original_inputs_unchanged": true,
+  "cases": [
+    {
+      "case": "01-source-changed",
+      "diagnosis": "固定来源与已知哈希不一致",
+      "single_change": "恢复误改来源文件的已知原始字节，未改哈希索引",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "02-unmapped-citation",
+      "diagnosis": "文章编号不在事实表中",
+      "single_change": "回查 P1 与事实表后，只修复误写的引用编号",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "03-stale-proposal",
+      "diagnosis": "当前输入与建议记录中的哈希不匹配",
+      "single_change": "替换为已对照当前固定输入复核的整份参考建议，不直接重算哈希掩盖旧结论",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "04-wrong-site-scope",
+      "diagnosis": "误把同一个状态文件用于另一个站点目录",
+      "single_change": "仅将 --site 改回状态绑定的原目录；不删状态",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "case": "05-corrupt-state",
+      "diagnosis": "状态 JSON 被截断，不能安全读取基线",
+      "single_change": "仅恢复本次运行前保存的已知完好备份，保留原站点和命令",
+      "before": 3,
+      "after": 0
+    }
+  ],
+  "limits": "No model, network, authentication or real production incident was exercised."
+}

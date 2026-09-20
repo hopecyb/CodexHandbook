@@ -1,0 +1,9 @@
+[
+  {"request":"审查我当前未提交的代码改动，不要修改文件", "expected":"trigger", "mode":"working-tree"},
+  {"request":"只看已暂存的改动", "expected":"trigger", "mode":"staged"},
+  {"request":"只审未暂存内容", "expected":"trigger", "mode":"unstaged"},
+  {"request":"审查当前分支相对 release 的提交", "expected":"trigger", "mode":"branch", "base":"release"},
+  {"request":"review 一下", "expected":"clarify-if-scope-ambiguous"},
+  {"request":"帮我润色这篇中文文章", "expected":"do-not-trigger"},
+  {"request":"给购物车新增优惠券功能", "expected":"do-not-trigger"}
+]

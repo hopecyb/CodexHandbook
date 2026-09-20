@@ -3,7 +3,7 @@ title: 'Fix a bug: where to start'
 description: Choose the bug-fix path that matches your situation and continue to the complete runnable case.
 locale: en
 source_locale: zh-CN
-source_revision: 27c707b
+source_revision: 405a687
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

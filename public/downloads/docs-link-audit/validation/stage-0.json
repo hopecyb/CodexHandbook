@@ -1,0 +1,28 @@
+{
+  "scope": "static-local-html",
+  "local_pass": false,
+  "html_files": 2,
+  "checked_local_references": 4,
+  "findings": [
+    {
+      "file": "index.html",
+      "line": 4,
+      "url": "/missing/",
+      "reason": "missing-target"
+    },
+    {
+      "file": "index.html",
+      "line": 5,
+      "url": "/guide/#old-anchor",
+      "reason": "missing-fragment"
+    }
+  ],
+  "unchecked": [
+    {
+      "file": "index.html",
+      "line": 6,
+      "url": "https://example.com/",
+      "reason": "external-or-nonlocal-scheme"
+    }
+  ]
+}

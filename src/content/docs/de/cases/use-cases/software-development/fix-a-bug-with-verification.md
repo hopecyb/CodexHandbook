@@ -1,12 +1,20 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "Beim Ausgangsbeispiel wurde der erwartete Fehlschlag von 1 der 3 Tests verifiziert; bei der Referenzlösung wurde das Bestehen aller 3 Tests verifiziert. Die Seite ordnet die Nachweiskette nach rotem Test, Ursache, minimalem Fix, grünem Test, Regression und manueller Prüfung."
+  checkedAt: "2026-08-25"
 title: 'Fallbeispiel: Bugfix mit Verifikation'
 description: Behebe einen ausführbaren Fehler in einer Rabattberechnung anhand einer roten Reproduktion, Ursachenanalyse, minimalen Korrektur, grünen Regressionstests und einer Diff-Prüfung.
 locale: de
 source_locale: zh-CN
-source_revision: 91d8575
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 42d842e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Dies ist keine Prompt-Vorlage, die allein durch das Austauschen von Dateinamen vollständig wird. Du arbeitest mit echtem Ausgangscode aus dem Repository, beobachtest zunächst einen fehlschlagenden Test und prüfst anschließend, wie die Referenzkorrektur dieselbe Testsuite zum Bestehen bringt.
@@ -42,6 +50,8 @@ Dies ist keine Prompt-Vorlage, die allein durch das Austauschen von Dateinamen v
 Die beiden Rückwege im Diagramm sind entscheidend: Schlagen die relevanten Tests fehl, kehrst du zum minimalen Fix zurück. Schlägt die vollständige Regression oder die Diff-Prüfung fehl, gehst du zurück zur Ursachenanalyse. Entferne keine Assertions und vergrößere nicht den Änderungsumfang, nur um möglichst schnell grüne Tests zu erhalten.
 
 ## 2. Materialien vorbereiten
+
+Für die vollständige Lernreihenfolge nutze den [Entwicklerpfad](/de/guide/learning-paths/developer/). Er verbindet diese Übung mit Codelektüre, Review und Übergabevorlagen und verlangt eine separate `work/`-Kopie. Die neue [Laufzusammenfassung vom 18.09.2026](/downloads/developer-path/run-record.json) dokumentiert die erneute Prüfung von Referenz-Ausgangsstand und Lösung. Das Datum 25.08.2026 weiter unten gehört zur ursprünglichen Fallprüfung.
 
 Beispielverzeichnis:
 
@@ -192,10 +202,3 @@ Untersuche zuerst nur lesend Ursache und Risiken. Warte mit Änderungen, bis ich
 - [Tests ausführen](/de/guide/quality/run-tests/)
 - [Diffs prüfen](/de/guide/quality/review-diffs/)
 - [Fertigstellungskriterien definieren](/de/prompts/define-done/)
-
----
-
-**Status:** verified  
-**Unterstützte Produkte:** CLI / IDE  
-**Prüfgrundlage:** Beim Ausgangsbeispiel wurde der erwartete Fehlschlag von 1 der 3 Tests verifiziert; bei der Referenzlösung wurde das Bestehen aller 3 Tests verifiziert. Die Seite ordnet die Nachweiskette nach rotem Test, Ursache, minimalem Fix, grünem Test, Regression und manueller Prüfung.
-**Zuletzt geprüft:** 2026-08-25

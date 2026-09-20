@@ -1,49 +1,115 @@
 ---
-title: Qu'est-ce que Codex
-description: Expliquer en langage simple ce que Codex peut faire, ce qu'il ne peut pas, et les principaux points d'entrée.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page explique uniquement ce qu'est Codex, les tâches adaptées et la manière de collaborer avec lui ; ses liens internes et notions ont été vérifiés, sans conserver de valeurs par défaut détaillées susceptibles de changer."
+  checkedAt: "2026-07-26"
+title: Qu'est-ce que Codex ?
+description: Une présentation simple de ce que Codex peut faire, de ses limites et de ses points d'accès.
 locale: fr
 source_locale: zh-CN
-source_revision: 6c6582f
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: "a491834"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 2
 ---
 
-Codex est l'**Agent de codage et de travail IA** d'OpenAI : vous lui donnez un objectif, et il combine les fichiers du projet, les outils et vos Approbations pour lire, modifier, exécuter des commands, générer des Artefacts et vous laisser inspecter les résultats.
+Codex est l'**agent de programmation et de travail IA d'OpenAI**. Donnez-lui un objectif : il peut utiliser les fichiers du projet, des outils et vos approbations pour lire et modifier du contenu, exécuter des commandes et produire un résultat. Il vous présente ensuite le processus et les changements pour vérification.
 
-La documentation produit officielle se trouve sur [OpenAI Codex](https://developers.openai.com/codex). Ce handbook est un guide open source communautaire pour l'apprentissage et la pratique systématiques — il **ne remplace pas** la documentation officielle d'OpenAI.
+Il ressemble à un collègue numérique capable d'utiliser des outils. Vous définissez l'objectif, les limites et les critères d'acceptation ; il recherche, modifie des fichiers et exécute les étapes. La décision finale vous revient.
 
-## Ce qu'il peut faire
+Pour la documentation officielle du produit, consultez [OpenAI Codex](https://developers.openai.com/codex). Ce manuel est un guide communautaire open source pour apprendre et pratiquer, pas un remplacement de la documentation officielle.
 
-- **Comprendre** : Résumer les informations dans les dépôts, documents, feuilles de calcul et captures d'écran
-- **Créer et modifier** : Rédiger des brouillons, modifier du code, générer des pages et de la configuration
-- **Exécuter** : Lancer des commands terminal, rechercher et naviguer — avec votre autorisation
-- **Collaborer** : Poursuivre les Tâches entre App, CLI, IDE, Cloud et autres points d'entrée
-- **Étendre** : Connecter des flux de travail répétables et des systèmes externes via Skills, Plugins, MCP, Hooks et plus (chapitres avancés à suivre)
+## Quelle différence avec une conversation IA ordinaire ?
 
-## Ce qu'il ne peut pas faire (important)
+Beaucoup voient d'abord Codex comme « une IA conversationnelle plus puissante ». La principale différence est sa capacité à agir.
 
-- Il ne peut pas remplacer votre responsabilité finale sur les faits, la sécurité et les décisions métier
-- Il ne peut pas garantir qu'une seule génération soit entièrement correcte ; les résultats doivent être vérifiables
-- Il ne peut pas contourner le Bac à sable, le réseau ou les politiques de l'organisation sans autorisation
-- Il ne doit pas être traité comme un « pipeline de publication automatique sans revue »
-
-## Principaux points d'entrée
-
-| Point d'entrée | Idéal pour |
+| Outil habituel | Une façon de le comprendre |
 |---|---|
-| Application de bureau | Par défaut pour les débutants ; projets visuels, Tâches et revue de Diff |
+| Robot conversationnel ordinaire | Donne des conseils, explique des notions, rédige du texte |
+| Codex | En plus de répondre, peut **lire et modifier des fichiers, exécuter des commandes et créer des livrables** |
+
+Les outils conversationnels répondent surtout. Codex peut agir directement dans les limites que vous autorisez.
+
+## Quelles tâches lui conviennent ?
+
+Si une tâche demande plus qu'une discussion — lire des documents, modifier quelque chose, exécuter des étapes ou produire un résultat — Codex peut vous aider.
+
+Si vous souhaitez seulement une explication, une idée courte ou un conseil général, une IA conversationnelle classique peut suffire.
+
+## À quoi peut-il servir ?
+
+Même si vous ne programmez pas, pensez à ces exemples :
+
+- **Lire et organiser des informations :** résumer documents, comptes rendus, captures d'écran et tableaux
+- **Rédiger et réviser :** améliorer un article, compléter un sommaire, modifier une documentation
+- **Créer de petits projets :** construire une page, changer une configuration, ajouter un modèle
+- **Chercher et corriger un problème :** localiser une erreur et déterminer quoi examiner ensuite
+- **Automatiser un travail répétitif :** lui confier une première exécution d'un processus établi
+
+Les développeurs peuvent l'intégrer à leur travail ; les autres peuvent l'utiliser comme assistant capable d'exécuter des étapes.
+
+## Que peut-il faire ?
+
+- **Comprendre :** résumer les informations de dépôts, documents, tableaux et captures
+- **Créer et modifier :** rédiger, changer du code, générer des pages et des configurations
+- **Exécuter :** lancer des commandes, chercher et naviguer avec votre autorisation
+- **Collaborer :** poursuivre des tâches entre App, CLI, IDE et Cloud
+- **Étendre :** relier des processus répétitifs et des systèmes externes avec Skills, Plugins, MCP et Hooks (les chapitres avancés seront complétés ensuite)
+
+## Que ne peut-il pas faire ? (Important)
+
+- Remplacer votre responsabilité finale sur les faits, la sécurité et les décisions métier
+- Garantir un résultat parfait du premier coup ; le résultat doit être vérifiable
+- Contourner sans autorisation le bac à sable, le réseau ou les règles de l'organisation
+- Servir de « chaîne de publication automatique sans vérification »
+
+## Une règle de jugement simple
+
+Utilisez Codex comme assistant sans lui céder la responsabilité.
+
+Laissez-le rechercher ou modifier, puis confirmez :
+
+- A-t-il modifié le bon endroit ?
+- A-t-il mal compris votre objectif ?
+- Les faits qu'il donne sont-ils fiables ?
+- Ses changements peuvent-ils avoir des effets secondaires ?
+
+## Un déroulement courant
+
+Le processus ressemble souvent à ceci :
+
+1. Vous énoncez un objectif.
+2. Codex répond ou propose un plan.
+3. S'il doit modifier des fichiers ou exécuter des commandes, il peut demander votre approbation.
+4. Une fois terminé, il indique ce qui a changé.
+5. Vous vérifiez que le résultat correspond à vos attentes.
+
+Un exemple complet figure dans [Exécuter sa première tâche](/fr/guide/getting-started/run-your-first-task/).
+
+## Principaux points d'accès
+
+| Point d'accès | Adapté à |
+|---|---|
+| Application de bureau | Choix de départ pour les débutants ; projets, tâches et revue des différences en mode visuel |
 | CLI | Utilisateurs du terminal, scripts et automatisation |
-| Extension IDE | Travailler avec les fichiers ouverts et les sélections dans l'éditeur |
-| Web / Cloud | Connecter des dépôts, environnements cloud et Tâches de longue durée |
-| Mobile et à distance | Surveillance, Approbations et suivi léger |
+| Extension IDE | Travail sur les fichiers ouverts et les sélections dans l'éditeur |
+| Web / Cloud | Dépôts connectés, environnements cloud et longues tâches |
+| Mobile et accès distant | Surveillance, approbations et suivi léger |
 
-Consultez la [comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) pour un tableau côte à côte. Pour les relations entre concepts, voir la [carte des capacités](/fr/guide/start-here/codex-capability-map/).
+Consultez le [comparatif des fonctions](/fr/guide/reference/feature-comparison/) et la [carte des capacités](/fr/guide/start-here/) pour relier les notions.
 
----
+## Pour continuer
 
-**Statut :** review  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-25
+Si vous ne retenez que trois points :
+
+1. Codex ne se limite pas à discuter ; il peut agir après autorisation.
+2. Définissez l'objectif, les limites et les critères de fin d'une tâche.
+3. Vérifiez chaque résultat au lieu de lui faire confiance aveuglément.
+
+Continuez avec :
+
+1. [Choisir un client Codex](/fr/guide/choose-your-client/)
+2. [Terminologie pour débutants](/fr/guide/start-here/terminology-for-beginners/)
+3. [Exécuter sa première tâche](/fr/guide/getting-started/run-your-first-task/)

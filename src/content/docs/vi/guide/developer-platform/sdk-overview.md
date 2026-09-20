@@ -1,97 +1,88 @@
 ---
-title: Tổng quan SDK
-description: "Khởi tạo Tác vụ Codex trong ứng dụng qua SDK chính thức — khái niệm xác thực, phiên và xử lý lỗi."
-locale: vi
-source_locale: zh-CN
-source_revision: a701e2d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: 'Tổng quan SDK: tác vụ cục bộ và tích hợp ứng dụng'
+description: Phân biệt Codex SDK, CLI không tương tác, App Server và dịch vụ tác vụ từ xa do bạn tự xây dựng.
+contentType: reference
+audiences: [developer]
+level: intermediate
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Đã đối chiếu nơi thực thi, giao diện thread và ranh giới tích hợp với tài liệu SDK và App Server chính thức. Ví dụ tối thiểu chỉ được kiểm tra cú pháp; chưa gọi mô hình có xác thực.
+  evidence:
+    - label: Tài liệu Codex SDK chính thức
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: Tài liệu Codex App Server chính thức
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: vi
+source_locale: zh-CN
+source_revision: e888ae6
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-SDK (tên và ngôn ngữ lấy theo [tài liệu chính thức](https://developers.openai.com/codex)) cho phép bạn tạo Tác vụ, polling trạng thái, lấy kết quả trong **dịch vụ của chính bạn**, thay vì chỉ dựa vào TUI terminal.
+Codex SDK cho phép chương trình điều khiển Codex Agent cục bộ. “Cục bộ” là máy chạy SDK và Agent: máy của bạn hoặc CI runner do bạn quản lý. Đừng coi đó là dịch vụ HTTP được OpenAI lưu trữ để tạo tác vụ Cloud, thăm dò trạng thái và tải thành phẩm. Xem [tài liệu SDK chính thức](https://learn.chatgpt.com/docs/codex-sdk).
 
-Nếu lần đầu thấy «SDK», hãy hiểu đó là bộ công cụ để chương trình gọi Codex, không phải giao diện để người bấm từng bước.
+## Chọn điểm vào theo mục tiêu tích hợp
 
-Nói cách khác, nó phù hợp khi «hệ thống của bạn gọi Codex». Nếu chỉ tạm giao một Tác vụ, thường chưa cần SDK.
-
-## Trang này sẽ nói gì
-
-- Khi nào dùng SDK thay vì CLI `exec`
-- Xác thực và cô lập tenant
-- Cách phối hợp với Webhook và hàng đợi
-
-Tổng quan nền tảng: [Nền tảng dành cho nhà phát triển](/vi/guide/developer-platform/)
-
-## SDK vs CLI
-
-| | SDK | CLI `exec` |
+| Mục tiêu | Bắt đầu từ | Bạn vẫn phải phụ trách |
 |---|---|---|
-| Vị trí tích hợp | Backend, công cụ nội bộ | Shell, GitHub Actions |
-| Quản lý trạng thái | Code của bạn chịu trách nhiệm | Mã thoát tiến trình |
-| Phù hợp | Sản phẩm đa tenant, UI tùy chỉnh | Pipeline đơn giản |
+| Chạy một tác vụ trong script | [`codex exec`](/vi/guide/developer-platform/non-interactive/codex-exec/) | Thư mục làm việc, đầu vào, mã thoát và lưu sản phẩm |
+| Chạy và tiếp tục tác vụ bằng chương trình | Codex SDK | Vòng đời chương trình, môi trường, xử lý lỗi và xác minh |
+| Tạo ứng dụng có phiên, phê duyệt và sự kiện truyền trực tiếp | App Server | Tương tác, kết nối, xử lý danh tính và triển khai |
+| Cung cấp nền tảng tác vụ từ xa cho nhiều người dùng | Kiến trúc dịch vụ tự xây | Hàng đợi, cách ly tenant, thông tin xác thực, lưu trữ, hủy và callback |
 
-Nhiều đội **CI dùng CLI, sản phẩm dùng SDK**.
+Hàng cuối là lựa chọn thiết kế, không phải khả năng nền tảng lưu trữ sẵn trong SDK. Tài liệu chính thức dùng SDK cho tự động hóa và CI, App Server cho tích hợp ứng dụng sâu hơn. App Server trao đổi yêu cầu và sự kiện qua JSON-RPC hai chiều. Xem [tài liệu App Server](https://learn.chatgpt.com/docs/app-server).
 
-## Hiểu nhầm thường gặp
+## Lệnh gọi TypeScript SDK tối thiểu
 
-### 1. SDK và CLI khác nhau thế nào
+Gói TypeScript chính thức là `@openai/codex-sdk`, yêu cầu Node.js 18 trở lên. Ví dụ dưới dùng cú pháp module JavaScript để thể hiện giao diện cơ bản của cùng gói; không phải dịch vụ production hoàn chỉnh.
 
-Có thể hiểu đại khái như sau:
+Cài phụ thuộc trong thư mục luyện tập riêng, giữ lại phiên bản thực tế và lockfile:
 
-- **CLI**: người hoặc script gọi trong terminal
-- **SDK**: bạn viết code, nhúng năng lực Codex vào dịch vụ của mình
+```sh
+npm init -y
+npm install --save-exact @openai/codex-sdk
+npm ls @openai/codex-sdk
+```
 
-### 2. Tôi có nên học SDK trước không
+Chuẩn bị `README.md` không chứa thông tin nhạy cảm và lưu nội dung sau thành `example.mjs`:
 
-Thường thì không.
+```js
+import { Codex } from '@openai/codex-sdk';
 
-Nếu chỉ muốn học dùng Codex trước, lối vào cục bộ và chế độ tương tác CLI thường phù hợp hơn làm bước đầu.
+const agent = new Codex();
+const session = agent.startThread();
+const answer = await session.run(
+  'Chỉ đọc README.md trong thư mục hiện tại và tóm tắt mục đích bằng ba ý tiếng Trung; không sửa tệp hoặc thực hiện thao tác bên ngoài.'
+);
+console.log(answer.finalResponse);
+```
 
-### 3. Khi nào SDK mới đáng dùng
+Sau đó chạy `node example.mjs`. Trước khi chạy, hãy hoàn tất xác thực theo môi trường và kiểm tra sandbox cùng chính sách phê duyệt thực tế. “Chỉ đọc” trong prompt là ràng buộc tác vụ, không thay thế giới hạn thực thi. Lệnh gọi mô hình có thể tiêu tốn hạn mức tài khoản; trang này chưa chạy cài đặt hoặc lệnh gọi thay bạn.
 
-Ví dụ khi bạn bắt đầu cần:
+Tên phương thức và trường trả về đã được đối chiếu với [ví dụ chính thức](https://learn.chatgpt.com/docs/codex-sdk). Trang này chỉ kiểm tra cú pháp JavaScript, chưa khóa rồi kiểm thử một bản SDK phát hành cụ thể và không đưa ra kết quả thành công giả. Khi tự tái hiện, hãy ghi phiên bản gói, CLI/runtime, hệ thống, cách xác thực không ghi thông tin bí mật, và kết quả.
 
-- Khởi tạo Tác vụ Codex trong sản phẩm nội bộ
-- Tự quản lý trạng thái và kết quả Tác vụ
-- Làm UI, quyền và quy trình tùy chỉnh
+## Tiếp tục và khôi phục tác vụ
 
-SDK phù hợp «nối hệ thống cho chương trình», không phù hợp làm lối vào chính lần đầu dùng Codex.
+Có thể gọi `run()` lần nữa trên cùng đối tượng thread; ID thread đã có có thể đưa vào `resumeThread()`. Khả năng khôi phục phụ thuộc môi trường lưu trạng thái; đừng coi ID là URL Cloud có thể truy vấn từ máy bất kỳ. Cũng có giao diện Python chính thức; hãy xem riêng tên và phụ thuộc của nó trong tài liệu tương ứng, không trộn mã hai ngôn ngữ. Xem [lệnh gọi thread và giao diện theo ngôn ngữ](https://learn.chatgpt.com/docs/codex-sdk).
 
-## Khái niệm cốt lõi (độc lập ngôn ngữ)
+Sau khi khôi phục, trước hết đối chiếu tệp hiện tại với mô tả lịch sử; xem [Bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/).
 
-1. **Xác thực**: API key tổ chức hoặc OAuth ủy quyền — tuân theo scope tối thiểu
-2. **Tác vụ / Thread**: mỗi yêu cầu người dùng có ID theo dõi được
-3. **Chiến lược công cụ**: máy chủ chỉ định Sandbox và Phê duyệt, thống nhất với client
-4. **Kết quả**: lịch sử tin nhắn, Diff tệp, URL artifact (tùy API)
-5. **Lỗi**: phân biệt có thể thử lại (429) và không thử lại (400)
+## Kiểm tra gì sau khi gọi thành công
 
-Chỉ mục lỗi: [Tham chiếu lỗi và thông báo](/vi/guide/reference/error-reference/)
+1. **Vị trí chạy:** ghi thư mục làm việc và tệp thực sự đã đọc/sửa, không chỉ prompt.
+2. **Kết quả:** kiểm tra câu trả lời, diff và kiểm thử. Có `finalResponse` không đồng nghĩa đã nghiệm thu nghiệp vụ.
+3. **Loại lỗi:** phân biệt lỗi phụ thuộc/tiến trình cục bộ, xác thực, dịch vụ mô hình và xác minh tác vụ; đừng gộp mọi lỗi thành 400/429.
+4. **Ảnh hưởng của retry:** kiểm tra xem đã có tệp hoặc tác động bên ngoài chưa trước khi quyết định thử lại; đừng gửi lại cùng yêu cầu một cách mù quáng.
+5. **Quyền:** bạn chịu trách nhiệm về môi trường và công cụ khả dụng. Tên SDK không tự mang lại Cloud, quản trị tổ chức hoặc cách ly nhiều tenant.
 
-## Checklist tích hợp tối thiểu
+Đây là các mục kiểm tra tích hợp mà trang này gợi ý, không phải danh sách trường trả về của SDK. Trường thực tế phải theo kiểu dữ liệu của phiên bản đã cài và tài liệu chính thức.
 
-- [ ] Thử trên staging với repo chỉ đọc
-- [ ] Làm sạch log; không ghi đầy đủ Prompt người dùng nếu có PII
-- [ ] Timeout và hủy: người dùng rời trang thì dừng được Tác vụ
-- [ ] Ghim phiên bản SDK và model ID
+## Quan hệ với callback, hàng đợi và chạy từ xa
 
-## Nối với CI/CD
+Runner của bạn có thể chạy SDK, rồi dịch vụ của bạn gửi thông báo hoàn tất. Khi đó trạng thái hàng đợi, callback HTTP, định dạng chữ ký và chính sách retry thuộc giao thức hệ thống của bạn. Luồng sự kiện App Server cũng không thể dùng trực tiếp như địa chỉ Webhook.
 
-SDK kích hoạt Cloud hoặc remote runner, hoặc CI gọi ngược dịch vụ của bạn để cập nhật trạng thái PR. Mẫu ví dụ xem [Tự động hóa review mã](/vi/guide/developer-platform/ci-cd/code-review-automation/).
-
-## Lỗi thường gặp
-
-- Dùng session cookie trên trình duyệt người dùng làm API key
-- Không giới hạn đồng thời, đỉnh lưu lượng làm hết quota
-- Tự động merge PR do SDK tạo ra
-
-## Nguồn tham chiếu
-- OpenAI Codex SDK reference
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** API  
-**Cơ sở kiểm chứng:** Đã đối chiếu với mô tả công khai hiện tại của OpenAI Developers về Codex API/mô hình và use case nền tảng nhà phát triển, cùng các chương nền tảng, CI/CD và chế độ không tương tác đã kiểm chứng trong sổ tay này; trang chỉ xác nhận nguyên tắc phân công ổn định rằng SDK phù hợp tích hợp theo chương trình, quản lý trạng thái và UI tùy chỉnh.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Đọc tiếp [Ranh giới Webhook và sự kiện tác vụ](/vi/guide/developer-platform/webhooks/overview/) cùng [Script và pipeline](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/). Trang này không hứa lệnh gọi SDK tự tạo tác vụ Codex Cloud, URL thành phẩm hoặc ủy quyền OAuth.

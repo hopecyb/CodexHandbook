@@ -3,7 +3,7 @@ title: 적합한 메커니즘 고르기
 description: 임시 프롬프트, AGENTS.md, 기억, Skill, MCP를 어느 계층에 둘지 판단 프레임으로 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

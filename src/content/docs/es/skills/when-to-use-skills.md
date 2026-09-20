@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help «Skills in ChatGPT» confirma que un Skill es un workflow reutilizable y compartible; el runtime actual de Codex también hace match por nombre y descripción. Esta página es sobre principios de selección, sin depender de UI volátil."
+  checkedAt: "2026-07-26"
 title: Cuándo usar Skills
 description: Decide si una tarea encaja como Skill, y cómo se reparte el trabajo con comandos slash y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Al empezar con Skills, la pregunta habitual es: ¿merece la pena convertir esto 
 
 Si lo conviertes todo en Skill, el sistema se vuelve pesado; si no consolidas lo que debería repetirse, seguirás repitiendo a mano las mismas instrucciones. Esta página ayuda a decidir cuándo fijar un flujo.
 
-# Cuándo usar Skills
 
 ## Encaja encapsularlo como Skill
 
@@ -81,9 +85,3 @@ Así el Skill sale más sólido: nace de repetición real, no de un diseño en v
 Un Skill encaja mejor para flujos que «se repiten, deben ser consistentes y no quieres volver a explicarlos cada vez».
 
 Selección de método: [Cómo elegir el método de extensión](/es/skills/choosing-an-extension-method/). Consolidar flujos: [Convertir un flujo en Skill](/es/cases/workflows/turn-a-workflow-into-a-skill/).
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** OpenAI Help «Skills in ChatGPT» confirma que un Skill es un workflow reutilizable y compartible; el runtime actual de Codex también hace match por nombre y descripción. Esta página es sobre principios de selección, sin depender de UI volátil.  
-**Última verificación:** 2026-07-26

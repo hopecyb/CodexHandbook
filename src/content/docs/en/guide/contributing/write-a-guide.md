@@ -1,12 +1,15 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  basis: "Checked against the current documentation frontmatter, former footer status system, cross-link conventions, and sidebar maintenance in this repository. This page describes handbook writing conventions and structural guidance, not product-version details."
+  checkedAt: "2026-07-26"
 title: Write a Guide Page
 description: Structure, frontmatter, and cross-link conventions for new handbook guides.
 locale: en
 source_locale: zh-CN
-source_revision: 9b6d47f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: fe93490
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -21,11 +24,13 @@ Common blockers:
 - Tutorial vs policy vs index summary
 - How to actually help newcomers
 
+The sections below separate these questions so you can write a guide that readers understand and contributors can maintain.
+
 ## Role of a guide page
 
-A guide is not “dump information.” It should move readers from “I know this topic exists” to “I know when to use it, what to read first, and what to avoid.”
+A guide is not finished when you dump information onto a page. It should move readers from “I know this topic exists” to “I roughly know when to use it, what to read first, and what to avoid.”
 
-Not only a bullet list or command sheet—it should show next steps.
+It is more than a list of facts or commands: it should also show readers where to go next.
 
 ## Frontmatter
 
@@ -36,15 +41,17 @@ description: One sentence on what problem this page solves
 ---
 ```
 
-Optional unified footer (match existing pages):
+New pages record editorial status and the verification method in frontmatter. Do not add a free-text verification footer:
 
-```markdown
----
-
-**Status:** planned | draft | review | verified | outdated | archived
-**Products:** App / CLI / IDE / Cloud
-**Last verified:** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Checked the content structure; replace with the checks actually performed and their date.
 ```
+
+To mark source checks or an example run, follow [Verify technical content](/en/guide/contributing/verify-technical-content/) and include the relevant links and environment. Quote dates as `YYYY-MM-DD` strings.
 
 ## Recommended structure
 
@@ -65,17 +72,17 @@ Product how-tos may be step-heavy; concept pages may use tables and diagrams.
 
 ### Not every page is an encyclopedia
 
-Lead with:
+When writing your first guide, it is easy to include everything you know and lose the main point. A more useful sequence is:
 
 - Main problem
 - What readers misunderstand
 - One usable approach or decision rule
 
-Better for newcomers than every detail at once.
+This usually helps newcomers more than presenting every detail at once.
 
 ### Write for readers, not only yourself
 
-Bridge for first-time visitors:
+You know the context, but first-time readers do not. Add the information that bridges that gap:
 
 - Who it is for
 - What they can solve after reading
@@ -83,17 +90,17 @@ Bridge for first-time visitors:
 
 ### Guides do not replace official docs
 
-Community handbook helps understanding and landing—but volatile facts need official verification.
+The community handbook can help readers understand, connect, and apply the material. Facts that may change still need to be checked against official documentation.
 
 ## Cross-links
 
-- Internal links use root paths: `/cases/workflows/explore-plan-execute-verify/`
+- Internal links use root paths: `/en/cases/workflows/explore-plan-execute-verify/`
 - Link to authoritative pages; avoid long duplication
 - Register new pages in chapter `index.md` and `astro.config.mjs` sidebar
 
 ## Tone
 
-- Simplified Chinese is source; English translations follow source structure
+- English, aimed at practitioners
 - Acknowledge uncertainty (“per official documentation”)
 - Avoid “magic prompt” narrative
 
@@ -112,9 +119,3 @@ A good guide tells first-time readers why the page exists, what to read first, a
 
 ## Reference sources
 - OpenAI Codex official documentation
-```
----
-
-**Status:** verified
-**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.
-**Last verified:** 2026-07-26

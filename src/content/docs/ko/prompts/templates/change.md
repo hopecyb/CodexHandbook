@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 수정류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 수정 템플릿
 description: 기존 기반에서 경계가 있는 반복을 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 수정 템플릿
 
 이 템플릿은 “기존 것을 조금 고치는” 작업에 맞습니다.
 
@@ -66,10 +70,3 @@ reviewed_at: 2026-08-26
 
 - [완료 기준 정의](/ko/prompts/define-done/)
 - [제약과 경계](/ko/prompts/constraints-and-boundaries/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 수정류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

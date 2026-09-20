@@ -1,100 +1,90 @@
 ---
-title: Depurar conexões MCP
-description: Passos sistemáticos quando o servidor MCP não sobe, a ferramenta dá timeout ou o resultado parece errado.
+title: Depurar uma ligação MCP
+description: "Localiza falhas MCP em quatro camadas: configuração, transporte, autenticação e ferramentas."
 locale: pt
 source_locale: zh-CN
-source_revision: 829c1e9
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: d35b635
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+É comum resumir todas as falhas MCP a “a ferramenta não funciona”. É mais rápido identificar primeiro em que camada ocorre a falha e depois alterar apenas uma variável de cada vez.
 
-“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
-
-## Preserve four pieces of evidence
+## Guardar primeiro quatro evidências
 
 ```bash
 codex mcp list
 codex mcp --help
-node --version    # only for a Node.js STDIO server
-python3 --version # only for a Python STDIO server
+node --version   # apenas se o servidor STDIO usar Node.js
+python3 --version # apenas se o servidor STDIO usar Python
 ```
 
-Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
+Regista também o nome do servidor, se usa STDIO ou Streamable HTTP, a mensagem de erro exata e em que ambiente aconteceu (aplicação de desktop, CLI ou IDE). Não guardes o token completo.
 
-## Four-layer triage
+## Diagnóstico em quatro camadas
 
-| Layer | Symptom | First check |
+| Camada | Sintoma típico | Primeira verificação |
 |---|---|---|
-| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
-| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
-| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
-| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+| Configuração | O servidor não aparece na lista | Caminho do ficheiro, sintaxe TOML, nome do servidor, `enabled` |
+| Arranque/ligação | Tempo limite da inicialização esgotado | Comando STDIO e PATH, ou URL HTTP, TLS e proxy |
+| Autenticação | 401/403 ou pedido de início de sessão | Estado OAuth, variável de ambiente do token, scope |
+| Ferramenta | O servidor está online, mas a chamada falha | Nome da ferramenta, argumentos, allowlist e tempo limite |
 
-## 1. Confirm configuration loaded
+## 1. Confirmar que a configuração foi lida
 
-- User file: `~/.codex/config.toml`.
-- Project file: `.codex/config.toml`, loaded only for a trusted project.
-- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
-- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+- O ficheiro do utilizador é `~/.codex/config.toml`.
+- O ficheiro do projeto é `.codex/config.toml` e só é carregado em projetos de confiança.
+- A aplicação de desktop, a CLI e o IDE partilham a configuração no mesmo Codex host. Não mantenhas três cópias que acabam por divergir.
+- Consulta o estado real com `codex mcp list` ou `/mcp` na sessão. A existência de um ficheiro não comprova o sucesso da ligação.
 
-## 2. STDIO startup failure
+## 2. O servidor STDIO não arranca
 
-Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+Verifica se `command` está disponível no PATH, se a versão do runtime cumpre os requisitos do servidor, se `cwd` existe e se a origem das dependências é fiável.
 
-Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+Executar diretamente o comando de arranque mostra apenas que o executável consegue iniciar. Um servidor MCP pode parecer não terminar porque está à espera de entrada do protocolo; isso pode ser normal e não equivale a testar uma chamada completa de ferramenta.
 
-Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+Só aumentes `startup_timeout_sec` se a inicialização for realmente lenta. O valor predefinido é 10 segundos; um valor arbitrariamente alto pode apenas esconder um comando incorreto.
 
-## 3. Streamable HTTP connection failure
+## 3. Falha na ligação Streamable HTTP
 
-Check in order:
+Verifica pela seguinte ordem:
 
-1. URL and TLS certificate.
-2. Corporate proxy or VPN.
-3. Existence of the environment variable named by `bearer_token_env_var`.
-4. Whether OAuth needs `codex mcp login <server-name>` again.
-5. Whether server logs received initialization.
+1. A URL e o certificado TLS
+2. O proxy da empresa ou a VPN
+3. Se existe a variável de ambiente apontada por `bearer_token_env_var`
+4. Se o OAuth exige nova execução de `codex mcp login <server-name>`
+5. Se os registos do servidor receberam o pedido de inicialização
 
-Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+Não mudes o token para um valor estático em `http_headers` como medida de “depuração temporária”. Pode acabar no ficheiro de configuração ou numa captura de ecrã.
 
-## 4. Server online, tool unavailable
+## 4. O servidor está online, mas a ferramenta não funciona
 
-| Symptom | Check |
+| Sintoma | Verificação |
 |---|---|
-| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
-| Tool not found | Server version, renamed tool, stale session list |
-| Argument validation | Tool schema rather than old prompt fields |
-| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
-| Empty result | Verify source-system visibility and filters with the same identity |
+| As ferramentas não aparecem | `enabled_tools` / `disabled_tools` e lista devolvida pelo servidor |
+| Tool not found | Versão do servidor, mudança de nome da ferramenta ou lista antiga mantida pela sessão |
+| Falha na validação dos argumentos | Conferir o schema da ferramenta em vez de adivinhar campos a partir de um prompt antigo |
+| Chamada excede o tempo limite | Reduzir a consulta e depois verificar `tool_timeout_sec`; valor predefinido: 60 segundos |
+| Resultado vazio | Verificar no sistema de origem, com a mesma conta, o âmbito dos dados e os filtros |
 
-## Minimal reproduction prompt
+## Prompt de reprodução mínima
 
 ```text
-Inspect only MCP server <server-name>:
-1. Report visible tool names.
-2. Call <readonly-tool> with <minimal-arguments>.
-3. Preserve the error type and server message, but redact credentials.
-4. Do not call another server or write.
+Verifica apenas o servidor MCP <server-name>:
+1. Indica os nomes das ferramentas atualmente visíveis.
+2. Chama <readonly-tool> usando apenas <minimal-arguments>.
+3. Preserva o tipo de erro e a mensagem do servidor, mas oculta as credenciais.
+4. Não chames outros servidores nem executes operações de escrita.
 ```
 
-## Acceptance after repair
+## Critérios para concluir a depuração
 
-- [ ] `codex mcp list` shows expected state.
-- [ ] One read-only tool succeeds with minimal arguments.
-- [ ] The root cause names a layer rather than “restart fixed it.”
-- [ ] Temporary tokens, debug logs, and broad permissions are removed.
-- [ ] Team configuration and repair notes are updated.
+- [ ] O estado apresentado por `codex mcp list` corresponde ao esperado.
+- [ ] Uma ferramenta só de leitura funciona com o mínimo de argumentos.
+- [ ] A causa raiz foi atribuída a uma camada concreta, não apenas a “reiniciar resolveu”.
+- [ ] Tokens temporários, registos de debug e permissões amplas foram retirados.
+- [ ] A configuração da equipa e as instruções de correção foram atualizadas.
 
-## Official source
+## Fonte oficial
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE
-
-**Last verified:** 2026-08-25

@@ -3,7 +3,7 @@ title: 위협 모델
 description: 팀 환경에서 Codex의 주요 위험면입니다. 데이터, 도구, 확장, 공급망을 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4e63649
+source_revision: 4ec320d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

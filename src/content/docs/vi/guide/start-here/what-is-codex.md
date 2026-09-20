@@ -3,7 +3,7 @@ title: Codex là gì
 description: Giải thích bằng ngôn ngữ đời thường Codex làm được gì, không làm được gì, và các lối vào chính.
 locale: vi
 source_locale: zh-CN
-source_revision: 6c6582f
+source_revision: a491834
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

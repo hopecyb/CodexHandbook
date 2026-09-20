@@ -3,7 +3,7 @@ title: 프레젠테이션
 description: 슬라이드·발표 원고의 생성·개정·보내기 — 구조, 마스터, 발표 메모 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

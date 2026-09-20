@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de alteração; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de alteração
 description: Iterar com limites sobre o que já existe.
 locale: pt
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de alteração
 
 Este template serve tarefas do tipo «alterar um pouco o que já existe».
 
@@ -66,10 +70,3 @@ Num Prompt de alteração, além de «o que mudar», diga «até onde é permiti
 
 - [Definir o concluído](/pt/prompts/define-done/)
 - [Restrições e limites](/pt/prompts/constraints-and-boundaries/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de alteração; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

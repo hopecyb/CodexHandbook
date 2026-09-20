@@ -1,48 +1,40 @@
 ---
-title: "OpenClaw (Gateway für persönliche KI-Assistenten)"
-date: 2026-01-29
-year: 2026
-summary: "OpenClaw bündelt Eingänge wie Messaging, E-Mail und Kommandozeile in einem Gateway für persönliche Assistenten."
-phase: emerging
-trend: rising
-signal: over-hyped
-adoption_effort: integration-heavy
-tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
-authored_by: ai-assisted
+title: "OpenClaw (Projekt für persönliche KI-Assistenten)"
+description: "Dieses Thema behandelt Grenzen, die beim Anschluss eines persönlichen Assistenten an Kanäle, Unterhaltungen und externe Fähigkeiten zu verwalten sind. Unterstützte Kanäle, Installationswege und Berechtigungen ändern sich je nach Projektversion; maßgeblich sind die Hinweise zur jeweiligen Version."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die unten genannten Ereignis- und Projektangaben wurden anhand der Primärquelle geprüft. Die Lernempfehlungen sind eine Einschätzung des Autors und kein praktischer Produkttest."
+  evidence:
+    - label: "Offizielles OpenClaw-Repository"
+      href: "https://github.com/openclaw/openclaw"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2435d64
+source_revision: "8868140"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# OpenClaw (Gateway für persönliche KI-Assistenten)
+## Überprüfbares Ereignis und Geltungsbereich
 
-- Wichtige Daten:
-  - Project release / public visibility: 2026-01-29
-- Offizielle Referenzen:
-  - https://github.com/jimleuk/openclaw
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+**Art: Projektthema · keine Sortierung nach Erstveröffentlichung.** Diese Seite nutzt das offizielle OpenClaw-Repository als Quelle für Identität und Beschreibung des Projekts. Bei dieser Prüfung lagen keine ausreichenden Belege für das Datum der ersten Veröffentlichung vor; deshalb wird kein solches Datum angegeben.
 
-## Was Es Ist
+Quelle: [offizielles OpenClaw-Repository](https://github.com/openclaw/openclaw). Überprüft am 18.09.2026; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-OpenClaw bündelt Eingänge wie Messaging, E-Mail und Kommandozeile in einem Gateway für persönliche Assistenten.
+## Welches Problem wird behandelt?
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+Dieses Thema behandelt Grenzen, die beim Anschluss eines persönlichen Assistenten an Kanäle, Unterhaltungen und externe Fähigkeiten zu verwalten sind. Unterstützte Kanäle, Installationswege und Berechtigungen ändern sich je nach Projektversion; maßgeblich sind die Hinweise zur jeweiligen Version.
 
-Es bewegt Design von kanalgetrennten Bots zu einem Assistenten mit gemeinsamer Tool-Schicht.
+## Lernempfehlungen und Grenzen
 
-## In Welcher Phase Es Jetzt Ist
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-Aktuell ordne ich diesen Punkt als `emerging` ein.
+Zeichnen Sie bei der Bewertung solcher Projekte zuerst Nachrichtenquellen, Datenziele, Speicherorte von Zugangsdaten und erlaubte externe Aktionen auf. Eine Anbindung über mehrere Kanäle vergrößert den zu verwaltenden Bereich; eine mögliche Verbindung erlaubt noch kein automatisches Senden oder Ändern.
 
-Es ist aufstrebend und sichtbar, aber operativer Wert muss sich beweisen.
+## Praktische Übung
 
-## Was Es Ersetzen Könnte
+[Erweiterungsmethode auswählen](/de/skills/choosing-an-extension-method/): Listen Sie die für eine geplante Integration benötigten Fähigkeiten auf, prüfen Sie, ob eine Erweiterungsmethode mit kleinerem Umfang ausreicht, und formulieren Sie einen Stopp- und Rücknahmeplan. Diese Seite bietet weder einen praktischen OpenClaw-Installationstest noch eine Kompatibilitätsgarantie.
 
-Es kann verstreute Bots, Einzel-Skripte und kanalgebundene Automationen ersetzen.
-
-## Was Es Ersetzen Könnte
-
-Es könnte in OS-Assistenten oder persönliche Agent-Plattformen aufgehen.
+[Zurück zur Roadmap und den Datumsregeln](/de/ai-roadmap/)

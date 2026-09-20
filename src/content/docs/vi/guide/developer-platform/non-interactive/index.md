@@ -3,7 +3,7 @@ title: Chế độ không tương tác
 description: "Trang giải thích cho batch, script và pipeline: hiểu nó phù hợp Tác vụ nào trước, rồi mới xem lệnh và thiết kế đầu ra."
 locale: vi
 source_locale: zh-CN
-source_revision: e226a62
+source_revision: 2d542c9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App / Mobile；Codex 桌面与 CLI；IDE 扩展不支持 Plugin"
+  checkedAt: "2026-08-26"
 title: Plugins
 description: 浏览、安装和治理可复用的 Skills、连接器、MCP、Hooks 与任务模板组合。
 ---
@@ -37,11 +41,3 @@ Plugin 是能力组合与分发单元。它可以包含 Skills、连接器、MCP
 ## 官方来源
 
 - [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT Web / 桌面 App / Mobile；Codex 桌面与 CLI；IDE 扩展不支持 Plugin
-
-**最近核验：** 2026-08-26

@@ -3,7 +3,7 @@ title: 非対話モード
 description: codex exec とスクリプトパイプライン連携——CI、定期実行、自動化パイプライン向け。
 locale: ja
 source_locale: zh-CN
-source_revision: a1cefbe
+source_revision: 1f37961
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "이 페이지는 핸드북 내부의 저위험 입문 연습입니다. 파일 하나만 수정하도록 제한하고, 네트워크를 금지하며, diff를 읽고 인수 기준에 따라 항목별로 검사하도록 요구합니다. 관련 선행 장(설치, 연습 프로젝트, 검증)은 교차 확인을 마쳤으며, 특정 제품 버전 세부 사항에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 첫 번째 작업
 description: 명확한 프롬프트로 작은 수정을 완료하고, 결과를 검사하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 첫 번째 작업
 
 아래 예시는 기본값이 **데스크톱 App**입니다. CLI/IDE에서도 같은 프롬프트를 사용할 수 있습니다.
 
@@ -52,9 +59,3 @@ reviewed_at: 2026-08-26
 - [프롬프트 기초](/ko/prompts/basics/)
 - [검증](/ko/guide/verification/)
 - [여기서 시작하기](/ko/guide/start-here/)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 핸드북 내부의 저위험 입문 연습입니다. 파일 하나만 수정하도록 제한하고, 네트워크를 금지하며, diff를 읽고 인수 기준에 따라 항목별로 검사하도록 요구합니다. 관련 선행 장(설치, 연습 프로젝트, 검증)은 교차 확인을 마쳤으며, 특정 제품 버전 세부 사항에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI API 当前模型文档仍将 `Web search` 列为可用工具能力之一；本页只强调“搜索用于补充事实、优先原始来源、结论要回到原文核对”的方法，不依赖具体产品界面。"
+  checkedAt: "2026-07-26"
 title: Web 搜索
 description: 用搜索补充事实并标注来源。
 sidebar:
@@ -72,10 +77,3 @@ Web 搜索适合补事实，不适合替你直接下最终结论。
 ```
 
 搜索给你线索和来源，最后还是要回到原文核对。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI API 当前模型文档仍将 `Web search` 列为可用工具能力之一；本页只强调“搜索用于补充事实、优先原始来源、结论要回到原文核对”的方法，不依赖具体产品界面。  
-**最近核验：** 2026-07-26

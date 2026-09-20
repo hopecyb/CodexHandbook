@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "現在のトラブルシューティング入口と、ログイン、クライアント選択、結果確認、コンテキスト、権限の各章を照合しました。このページは症状から次のページへ案内する索引であり、特定のエラーや製品の動作を永続的な仕様として示すものではありません。"
+  checkedAt: "2026-07-26"
 title: トラブルシュート索引
 description: 症状から該当チュートリアルと製品ページへ。
 locale: ja
 source_locale: zh-CN
-source_revision: 55a1e60
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 7327724
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 110
 ---
@@ -24,6 +28,10 @@ sidebar:
 | コンテキストが混乱 | [フォーカスを保つ](/ja/guide/context/keep-context-focused/) |
 | 権限/サンドボックスの疑問 | [権限](/ja/guide/foundations/permissions-and-approvals/) · [サンドボックス](/ja/guide/foundations/sandbox-and-network/) |
 
+## ログをたどる演習
+
+[5つの失敗回復演習](/ja/guide/reference/troubleshooting/failure-recovery-lab/)には、ダウンロードできる入力と実際のコマンドログがあります。出典の意図しない変更、引用番号、提案と入力の対応付け、ディレクトリ範囲、状態の破損を扱います。各例に、変える要因を一つに絞った修正と回復記録があります。これらは設計されたローカル演習であり、クライアントのログイン障害やネットワーク事故ではありません。
+
 ## 問題の類が分からないとき
 
 次で分類：
@@ -36,10 +44,3 @@ sidebar:
 対応ページへより早く着地できます。
 
 公式サポートとドキュメント：[https://developers.openai.com/codex](https://developers.openai.com/codex)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本リポジトリ現行トラブルシュート入口、ログイン/クライアント選択、結果確認、コンテキスト、権限関連章を相互確認。「症状から次ページへ」索引作用のみ。具体エラーや製品挙動を長期契約として書かない。  
-**最終検証：** 2026-07-26

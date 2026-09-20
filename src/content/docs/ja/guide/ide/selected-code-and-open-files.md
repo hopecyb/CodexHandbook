@@ -3,7 +3,7 @@ title: 選択範囲と開いているファイル
 description: 選択したコードと開いているファイルで IDE タスクの範囲を正確に限定する。
 locale: ja
 source_locale: zh-CN
-source_revision: 032d53f
+source_revision: b6b264f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

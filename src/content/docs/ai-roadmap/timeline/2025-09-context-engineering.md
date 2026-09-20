@@ -1,57 +1,29 @@
 ---
-title: Context Engineering（上下文工程）
-date: 2025-09-29
-year: 2025
-summary: 'prompt 解决的是"怎么问"，但大模型能表现多好，很大程度取决于它"看到了什么"。context engineering 的意义，是把对话历史、外部知识、工具返回结果等信息，有策略地组织和筛选后塞进模型的"视野"里，让它在正确的信息下做出更准确的判断——是 RAG、Agent 记忆管理等技术的核心支撑。'
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+title: "Context Engineering（上下文工程）"
+description: "上下文包含任务、指令、文件、检索结果与工具输出。需要决定哪些内容进入当前任务、哪些按需读取，以及压缩后应保留什么。"
+contentType: "guide"
+editorialStatus: "review"
+verification: {"kind": "source-checked", "checkedAt": "2026-09-18", "summary": "已核对下列一手来源中的事件或项目说明；学习建议是作者判断，未将来源核对标为产品实跑。", "evidence": [{"label": "上下文工程文章", "href": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"}]}
 ---
 
-# Context Engineering
+## 可核对的事件与范围
 
-- 概念系统化公开时间：2025-09-29
-- 官方资料：
-  - Anthropic Engineering: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-  - OpenAI Cookbook（Session Memory）: https://developers.openai.com/cookbook/examples/agents_sdk/session_memory
-  - OpenAI Cookbook（Personalization）: https://developers.openai.com/cookbook/examples/agents_sdk/context_personalization
-  - OpenAI 官网案例（Consensus）: https://openai.com/index/consensus/
-- 说明：此条目用于记录 Context Engineering 作为工程概念进入主流讨论的时间节点与阶段意义，具体实现细节应放在 Guide 中展开。
+**日期：2025-09-29 · 类型：工程文章。** Anthropic 发表 Effective context engineering for AI agents，讨论如何组织 Agent 所需上下文。文章日期不是概念诞生日期。
 
-## 它是什么
+来源：[上下文工程文章](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。核对日期为 2026-09-18；来源发表日期与本页核对日期含义不同。
 
-Context Engineering（上下文工程）是一种围绕“模型在执行任务时到底看到什么信息”的系统化工程方法。
+## 它解决什么问题
 
-它关注的不是单条提示词润色，而是整套上下文生命周期：信息选择、结构组织、注入时机、上下文长度控制、记忆更新、历史压缩与检索策略。
+上下文包含任务、指令、文件、检索结果与工具输出。需要决定哪些内容进入当前任务、哪些按需读取，以及压缩后应保留什么。
 
-核心问题是：在有限上下文窗口内，如何给模型“最有效、最相关、最及时”的信息组合，从而稳定完成复杂任务。
+## 学习建议与适用边界
 
-## 它把 AI 应用工程从哪一步推进到了哪一步
+以下是本站的教学判断，不是行业普及率或效果测量：
 
-它把 AI 应用工程从“主要围绕 prompt wording 优化输出”推进到了“围绕上下文系统设计任务执行环境”。
+优先提供与当前判断有关的事实和证据入口。更多内容可能带来噪声；压缩摘要不能替代关键文件。发生目标漂移时，先核对现有产物与约束，再追加提示。
 
-在这个阶段，团队开始把“记忆管理、检索策略、上下文剪裁、状态传递、历史压缩”当作一等工程对象，而不是附属技巧。模型效果不再只取决于一句提示词写得好不好，而更取决于上下文系统是否设计合理。
+## 动手练习
 
-这使得 AI 开发从“对话技巧”进一步进入“信息编排工程”阶段。
+[保持上下文聚焦](/guide/context/keep-context-focused/)：为当前任务列出必读文件、按需参考和无关材料；保存目标、已完成内容、未决问题与证据路径作为交接记录。
 
-## 现在看，它处于什么阶段
-
-目前我把 Context Engineering 标记为 `emerging`。
-
-原因是它已经被头部团队明确命名并给出工程实践框架，且 OpenAI 与 Anthropic 的公开资料都在强化这条路径；但行业内在术语边界、最佳实践标准和统一实现范式上仍在快速演化。
-
-换句话说，它已经成为高质量 Agent 系统的核心共识之一，但还没有完全固化成跨平台统一规范。
-
-## 它可能替代什么
-
-它可能替代“只靠手工 prompt 调参解决复杂任务问题”的开发方式。
-
-随着上下文工程化普及，团队会更少讨论“这句话怎么改”，更多讨论“上下文怎么构建、更新、裁剪和验证”。这会显著减少随机性，提高任务连续性与可维护性。
-
-## 它可能被什么替代
-
-未来它更可能被更高抽象层吸收，而不是被完全淘汰。
-
-例如，自动上下文调度器、统一记忆总线、可观测上下文策略引擎等能力，可能把当前大量手工上下文设计工作进一步平台化与产品化。但“上下文决定系统上限”的核心思想仍会长期存在。
+[返回路线图与日期口径](/ai-roadmap/)

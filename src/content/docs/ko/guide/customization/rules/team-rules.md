@@ -3,7 +3,7 @@ title: 팀 규칙 정책
 description: 조직·저장소·개인 사이에서 명령·경로 규칙을 계층 거버넌스 — 심사 가능, 롤백 가능.
 locale: ko
 source_locale: zh-CN
-source_revision: 3843326
+source_revision: bae8bd2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

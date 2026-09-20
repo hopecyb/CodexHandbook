@@ -3,7 +3,7 @@ title: Ajouter un exemple de Prompt
 description: Soumettre des Prompts reproductibles à examples/prompts avec métadonnées et critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: cd78464
+source_revision: 15dabd2
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

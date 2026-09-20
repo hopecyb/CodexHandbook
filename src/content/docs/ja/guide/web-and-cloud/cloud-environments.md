@@ -3,7 +3,7 @@ title: Cloud 環境
 description: Codex Cloud の runtime、依存関係、setup、cache、リポジトリの開始点を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: f7c7188
+source_revision: 1745f70
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

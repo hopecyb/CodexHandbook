@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前已核验的验证产物、完成定义、处理不确定性与文件产物章节交叉复核；本页聚焦“生成不等于可交付、必须打开验收、明确是否应提交”的稳定验收方法。"
+  checkedAt: "2026-07-26"
 title: 生成物验收
 description: 对 Codex 新建或导出的文件、报告与构建产物做系统化验收。
 sidebar:
@@ -107,9 +112,3 @@ Agent 完成任务时可能新建报告、脚本、静态站点、测试数据�
 
 ## 参考来源
 - [处理不确定性](/guide/quality/handle-uncertainty/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前已核验的验证产物、完成定义、处理不确定性与文件产物章节交叉复核；本页聚焦“生成不等于可交付、必须打开验收、明确是否应提交”的稳定验收方法。  
-**最近核验：** 2026-07-26

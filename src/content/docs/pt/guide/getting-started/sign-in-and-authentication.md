@@ -1,81 +1,74 @@
 ---
-title: Entrar e autenticação
-description: Conclua o login e confirme o estado de identidade e Permissão.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Conferido com a página oficial atual de Authentication para os dois métodos de autenticação local, com ChatGPT e API key, o requisito de autenticação com ChatGPT no Cloud, os comandos da CLI, a partilha da cache de credenciais e os limites de armazenamento."
+  checkedAt: "2026-08-26"
+title: Início de sessão e autenticação
+description: Escolher o método de autenticação adequado nos clientes locais e no Cloud e verificar com segurança a identidade ativa.
 locale: pt
 source_locale: zh-CN
-source_revision: e17d14f
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: ea83fa6
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
+Ao usar modelos da OpenAI, o Codex oferece duas formas de autenticação pessoal:
 
-Codex supports two personal sign-in methods when using OpenAI models:
+- **Iniciar sessão com ChatGPT**: utiliza a quota da subscrição e herda as permissões e políticas de dados do workspace ChatGPT.
+- **Iniciar sessão com API key**: cobra segundo a utilização da API e herda as políticas de dados e administração da API organization.
 
-- **Sign in with ChatGPT:** use subscription allowance and inherit ChatGPT workspace permissions and data policy.
-- **Sign in with an API key:** use usage-based API billing and inherit the API organization's data and administration policy.
+O trabalho local na aplicação de ambiente de trabalho ChatGPT, no Codex CLI e nas integrações IDE suporta ambos os métodos. **O Codex Cloud exige autenticação com ChatGPT.**
 
-Local work in the ChatGPT desktop App, Codex CLI, and IDE integrations supports both methods. **Codex Cloud requires ChatGPT sign-in.**
+## Iniciar sessão com ChatGPT
 
-## Sign in with ChatGPT
+Os clientes locais abrem o navegador para a autorização e devolvem depois as credenciais ao cliente:
 
-Local clients open a browser for authorization, then return credentials to the client:
+- Aplicação de ambiente de trabalho: na página de sessão terminada, escolha continuar a iniciar sessão.
+- CLI: execute `codex login`.
+- IDE: na página de sessão terminada, escolha iniciar sessão com ChatGPT.
 
-- Desktop App: choose to continue signing in from the signed-out page.
-- CLI: run `codex login`.
-- IDE: select ChatGPT sign-in from the signed-out page.
+Depois, confirme a conta e o workspace ativos, sobretudo se coexistirem um espaço pessoal e o workspace da empresa.
 
-Afterward, inspect the active account and workspace, especially when a personal space and company workspace share one email address.
+## Iniciar sessão com uma API key
 
-## Sign in with an API key
-
-After creating a key in OpenAI Platform, do not put it directly in command history. The CLI accepts it through standard input:
+Depois de criar uma key na OpenAI Platform, não a escreva diretamente no histórico de comandos. Na CLI, use a entrada padrão:
 
 ```bash
 printenv OPENAI_API_KEY | codex login --with-api-key
 ```
 
-In the desktop App, choose the alternate sign-in method. In the IDE, choose **Use API Key**. API-key sign-in is suitable for local work and trusted CI, but does not provide capabilities that depend on a ChatGPT workspace or Cloud.
+Na aplicação de ambiente de trabalho, escolha «iniciar sessão de outra forma»; no IDE, escolha **Use API Key**. A API key é adequada para trabalho local e CI de confiança, mas não dá acesso às capacidades que dependem de um workspace ChatGPT ou do Cloud.
 
-## Inspect and clear CLI identity
+## Verificar e terminar a sessão na CLI
 
 ```bash
 codex login status
 codex logout
 ```
 
-CLI and IDE share cached sign-in information. Signing out from one may require signing in again when the other next starts.
+A CLI e o IDE partilham informação de autenticação em cache. Se terminar a sessão num deles, poderá ter de voltar a iniciar sessão quando abrir o outro.
 
-## Credential security
+## Segurança das credenciais
 
-- Never commit `~/.codex/auth.json` or paste it into a ticket, chat, or log.
-- Prefer operating-system credential storage. Treat tokens in file storage as passwords.
-- Use dedicated, revocable CI credentials rather than a long-lived personal key.
-- Codex Cloud accesses code repositories directly, so enable MFA for the account. Organization SSO should enforce MFA.
-- Do not use a personal key to bypass organization restrictions; inspect the workspace and managed policy first.
+- Não inclua `~/.codex/auth.json` num commit nem o cole num pedido de suporte, conversa ou log.
+- Prefira o armazenamento de credenciais do sistema operativo; trate os tokens guardados em ficheiros como palavras-passe.
+- Na CI, use credenciais próprias e revogáveis, em vez de reutilizar uma key pessoal de longa duração.
+- O Codex Cloud acede diretamente aos repositórios de código; ative MFA na conta. Em organizações com SSO, o administrador deve exigir MFA.
+- Não use uma key pessoal para contornar restrições da organização; confirme primeiro o workspace e as políticas administradas.
 
-## Signed in but still unable to use a feature
+## Sessão iniciada, mas a função continua indisponível
 
-Check in this order:
+Verifique por esta ordem:
 
-1. Is the correct account or API organization active?
-2. Are you in the correct ChatGPT workspace?
-3. Does the target capability require ChatGPT sign-in rather than an API key?
-4. Do the plan, seat, role, or administrator policy restrict access?
-5. Only then inspect client cache, network, and version.
+1. A conta ou a API organization ativa é a correta?
+2. Está no workspace ChatGPT certo?
+3. A função pretendida exige autenticação com ChatGPT em vez de API key?
+4. O plano, o lugar, o papel ou a política do administrador limita o acesso?
+5. Só depois verifique a cache do cliente, a rede e a versão.
 
-The CLI has dedicated sign-in logs for support and troubleshooting. Inspect those logs for sensitive data before sharing them.
+A CLI tem logs próprios de autenticação que podem ajudar o suporte oficial ou a resolução de problemas de login. Antes de os partilhar, confirme que não contêm informação sensível.
 
-See [Accounts, plans, and access](/pt/guide/getting-started/account-plans-and-access/) for plan boundaries and the [official Authentication page](https://learn.chatgpt.com/docs/auth) for current details.
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the current Authentication documentation for ChatGPT and API-key local sign-in, the Cloud ChatGPT requirement, CLI commands, shared credential caching, and storage boundaries.
-
-**Last verified:** 2026-08-26
+Consulte [Conta, planos e acesso](/pt/guide/getting-started/account-plans-and-access/) para os limites dos planos e a [página oficial de Authentication](https://learn.chatgpt.com/docs/auth) para os detalhes atuais.

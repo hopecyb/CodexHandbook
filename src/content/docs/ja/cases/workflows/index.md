@@ -3,7 +3,7 @@ title: ワークフロー手法
 description: 繰り返し可能な協働方法——単一製品 UI に縛られず、チェックポイントと受け入れを重視する。
 locale: ja
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

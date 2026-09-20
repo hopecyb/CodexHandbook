@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI Help Center 当前仍将 IDE extension 作为与本地工具配对使用的主要入口之一；本页并未假设特定编辑器按钮，而是总结工作区、打开文件、选区、`@` 文件和项目规则共同构成 IDE 上下文的稳定方法论。"
+  checkedAt: "2026-07-26"
 title: 编辑器上下文
 description: IDE 扩展如何把打开的文件、工作区与项目规则传给 Codex。
 sidebar:
@@ -69,9 +74,3 @@ IDE 上下文会帮你，但不会替你猜；文件范围越准，结果一般�
 
 ## 参考来源
 - [文件与目录上下文](/guide/context/file-and-folder-context/)
----
-
-**状态：** verified  
-**适用产品：** IDE  
-**核验依据：** OpenAI Help Center 当前仍将 IDE extension 作为与本地工具配对使用的主要入口之一；本页并未假设特定编辑器按钮，而是总结工作区、打开文件、选区、`@` 文件和项目规则共同构成 IDE 上下文的稳定方法论。  
-**最近核验：** 2026-07-26

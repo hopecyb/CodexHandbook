@@ -3,7 +3,7 @@ title: Progreso y reorientación
 description: Si a mitad de la ejecución la dirección se desvía, cómo recuperar a Codex con instrucciones cortas.
 locale: es
 source_locale: zh-CN
-source_revision: 6813a5b
+source_revision: c9ea3be
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

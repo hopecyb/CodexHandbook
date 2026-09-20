@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página é um exercício de introdução de baixo risco no manual: altera apenas um ficheiro, proíbe rede, exige ler o diff e verificar ponto a ponto segundo os critérios de aceitação; os capítulos prévios (instalação, projeto de prática, verificação) foram cruzados; o conteúdo não depende de detalhes de versão de produto."
+  checkedAt: "2026-07-26"
 title: Primeira tarefa
 description: Conclua uma pequena alteração com um prompt claro e aprenda a rever o resultado.
 locale: pt
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Primeira tarefa
 
 Os exemplos abaixo pressupõem a **App de ambiente de trabalho**; o mesmo prompt funciona no CLI/IDE.
 
@@ -52,9 +59,3 @@ Se faltar informação, pergunte-me primeiro — não invente.
 - [Fundamentos de prompts](/pt/prompts/basics/)
 - [Verificação](/pt/guide/verification/)
 - [Começar aqui](/pt/guide/start-here/)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página é um exercício de introdução de baixo risco no manual: altera apenas um ficheiro, proíbe rede, exige ler o diff e verificar ponto a ponto segundo os critérios de aceitação; os capítulos prévios (instalação, projeto de prática, verificação) foram cruzados; o conteúdo não depende de detalhes de versão de produto.  
-**Última verificação:** 2026-07-26

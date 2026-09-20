@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de création ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de création
 description: Implémenter une fonctionnalité, un texte ou un artefact from scratch.
 locale: fr
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de création
 
 Deux pièges en création from scratch :
 
@@ -65,10 +69,3 @@ Le pire : démarrer sans « quoi » et « pour qui ».
 
 - [Travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/)
 - [Définir le terminé](/fr/prompts/define-done/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de création ; liens et structure revus ; pas de faits volatils produit.

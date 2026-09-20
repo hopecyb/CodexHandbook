@@ -3,7 +3,7 @@ title: 여러 Agent 협업
 description: 병렬 탐색, 분업 실행, 결과 병합—언제 쪼개고, 어떻게 인수할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Skills overview
 description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
 locale: en
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "Recoupement avec la structure actuelle de la sous-section webhooks et les liens d'entrée dans ce dépôt ; cette page ne décrit les webhooks que comme triggers d'événements dans l'intégration, sans fixer les champs d'événements ou contrats d'implémentation."
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: Intégration événementielle — les webhooks reçoivent des notifications ; ils ne remplacent pas le design de flux de travail.
 locale: fr
 source_locale: zh-CN
-source_revision: b718fb3
+source_revision: 68cb29b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,10 +30,3 @@ Dans l'intégration Codex, cela répond à « quand un événement externe arriv
 - Pourquoi un webhook n'est qu'un trigger, pas un design d'automatisation complet
 
 Un webhook est comme une sonnette — il dit « quelque chose a arrivé » ; vous connectez encore le flux de travail.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** API / Cloud  
-**Base de vérification :** Recoupement avec la structure actuelle de la sous-section webhooks et les liens d'entrée dans ce dépôt ; cette page ne décrit les webhooks que comme triggers d'événements dans l'intégration, sans fixer les champs d'événements ou contrats d'implémentation.  
-**Dernière vérification :** 2026-07-26

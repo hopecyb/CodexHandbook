@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "Cross-checked against the current developer-platform chapter structure, navigation entries, and related CLI/CI/SDK pages in this repo; this page only describes the stable split that the developer platform targets engineering integration, without claiming specific parameters or runtime behavior."
+  checkedAt: "2026-07-26"
 title: Developer Platform
 description: Embed Codex into your engineering stack with SDK, non-interactive CLI, and CI/CD—for integration developers.
 sidebar:
   order: 50
 locale: en
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 The **Developer Platform** is for people who want to **productize** Codex into pipelines: custom apps, batch review, release gates, internal developer portals. For everyday “write a prompt to fix a bug,” start with [Getting started](/en/guide/getting-started/).
@@ -40,13 +44,15 @@ It is aimed at scenarios like:
 
 ```text
 Your system (CI / internal platform / SaaS)
-        ↓ API or CLI
-Codex (model + tools + policy)
+        ↓ Local SDK / CLI, or an App Server client
+Controlled execution environment (model calls + tools + policy)
         ↓
 Git provider / tickets / artifact store
 ```
 
 ## Design principles
+
+The Codex SDK runs a local Agent. A remote runner, queue, and HTTP callback that you build are design choices in your integration system. Do not infer a unified hosted cloud-task API from the diagram. See the [SDK overview](/en/guide/developer-platform/sdk-overview/) for the basis and a minimal call.
 
 1. **Idempotent and retryable**: repeated review of the same PR should yield comparable results
 2. **Least privilege**: CI tokens read-only or scoped to specific repos
@@ -85,9 +91,3 @@ The developer platform chapter is about wiring Codex into systems. For your firs
 
 ## Reference sources
 - OpenAI Codex API / SDK official documentation
----
-
-**Status:** verified  
-**Products:** API / CLI / Cloud  
-**Verification basis:** Cross-checked against the current developer-platform chapter structure, navigation entries, and related CLI/CI/SDK pages in this repo; this page only describes the stable split that the developer platform targets engineering integration, without claiming specific parameters or runtime behavior.  
-**Last verified:** 2026-07-26

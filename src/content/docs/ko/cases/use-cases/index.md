@@ -3,7 +3,7 @@ title: 시나리오와 사례 라이브러리
 description: 엔드투엔드 실제 작업—준비, 실행, 검증, 실패 복구와 회고입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6349392
+source_revision: 1e284bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

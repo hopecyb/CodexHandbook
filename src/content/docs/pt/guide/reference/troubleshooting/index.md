@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Conferido com as páginas atuais de solução de problemas e com as seções de login, escolha do cliente, revisão dos resultados, contexto e permissões. Esta página apenas leva do sintoma à próxima leitura; não trata erros específicos nem comportamentos do produto como garantias permanentes."
+  checkedAt: "2026-07-26"
 title: Índice de resolução de problemas
 description: Localiza o tutorial ou a página de produto certa a partir do sintoma.
 locale: pt
 source_locale: zh-CN
-source_revision: 55a1e60
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 7327724
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 110
 ---
@@ -24,6 +28,10 @@ Procurar por sintoma é mais rápido do que vasculhar o site inteiro.
 | Contexto confuso | [Manter o foco](/pt/guide/context/keep-context-focused/) |
 | Dúvidas de Permissão / Sandbox | [Permissões](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox](/pt/guide/foundations/sandbox-and-network/) |
 
+## Acompanhe os registros passo a passo
+
+Os [cinco exercícios de recuperação de falhas](/pt/guide/reference/troubleshooting/failure-recovery-lab/) oferecem entradas para download e registros reais de comandos. Eles tratam alterações involuntárias nas fontes, numeração de citações, associação de sugestões às entradas, limites de diretórios e estado danificado. Cada caso registra uma correção de variável única e a recuperação. São exercícios locais planejados, não incidentes de login ou rede.
+
 ## Quando não sabes a que categoria pertence
 
 Se não consegues classificar o problema de imediato, tenta estas perguntas:
@@ -36,10 +44,3 @@ Se não consegues classificar o problema de imediato, tenta estas perguntas:
 Assim costumas cair mais depressa na página certa.
 
 Suporte e documentação oficiais: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com as páginas de entrada de diagnóstico, login/escolha de cliente, verificação de resultados, Contexto e Permissões; esta página só indexa «do sintoma para a página seguinte», sem fixar erros concretos ou comportamentos de produto como contrato de longo prazo.  
-**Última verificação:** 2026-07-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: 安装与首次使用
 description: 认识 ChatGPT 桌面应用中的项目、聊天、Codex 与审查入口。
 sidebar:
@@ -61,11 +65,3 @@ sidebar:
 
 - [ChatGPT 桌面应用](https://learn.chatgpt.com/docs/app)
 - [代码审查](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**最近核验：** 2026-08-26

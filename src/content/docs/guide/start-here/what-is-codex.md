@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅解释 Codex 的基本定位、适用任务与协作方式；站内链接与概念表述已复查，且正文未保留细粒度、易变的产品默认值。"
+  checkedAt: "2026-07-26"
 title: Codex 是什么
 description: 用通俗语言解释 Codex 能做什么、不能做什么，以及主要使用入口。
 sidebar:
@@ -103,10 +108,3 @@ Codex 是 OpenAI 提供的 **AI 编程与工作 Agent**。你给它一个目标�
 1. [选择 Codex 客户端](/guide/choose-your-client/)
 2. [给初学者的术语](/guide/start-here/terminology-for-beginners/)
 3. [运行第一次任务](/guide/getting-started/run-your-first-task/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅解释 Codex 的基本定位、适用任务与协作方式；站内链接与概念表述已复查，且正文未保留细粒度、易变的产品默认值。  
-**最近核验：** 2026-07-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 생성류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 생성 템플릿
 description: 기능, 원고, 산출물을 처음부터 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 생성 템플릿
 
 처음부터 만드는 작업에서 가장 흔히 생기는 문제는 둘입니다.
 
@@ -65,10 +69,3 @@ reviewed_at: 2026-08-26
 
 - [명세 주도 작업](/ko/cases/workflows/specification-driven-work/)
 - [완료 기준 정의](/ko/prompts/define-done/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 생성류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

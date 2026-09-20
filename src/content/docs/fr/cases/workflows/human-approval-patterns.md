@@ -1,91 +1,69 @@
 ---
-title: Modèles d'approbation humaine
-description: Quand approuver, refuser ou mettre Codex en pause — et comment rédiger ces règles clairement.
+title: "Modes d’approbation humaine"
+description: "Distinguez l’autorisation de la tâche de l’approbation d’un outil ; préparez le résultat à examiner avant de suspendre une action précise nécessitant une autorisation."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Les rôles distincts du bac à sable et des approbations ont été vérifiés. Les modes de collaboration ci-dessous sont des recommandations du manuel, pas des règles uniformes de dialogue pour tous les clients."
+  evidence:
+    - label: "Guide officiel sur le bac à sable et les approbations"
+      href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: fr
 source_locale: zh-CN
-source_revision: 0e37633
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f60dbb5
+translation_status: draft
+translated_at: 2026-09-20
 ---
+L’approbation doit correspondre à une action précise et à ses effets. L’autorisation de la tâche décrit ce que l’utilisateur veut obtenir ; l’approbation de l’outil détermine si une action peut être exécutée dans l’environnement actuel. Écrire un fichier, lancer une commande ou accéder au réseau n’exige pas systématiquement une nouvelle question. Le comportement dépend du périmètre autorisé, des politiques d’outils et du bac à sable. Voir le [guide officiel](https://learn.chatgpt.com/docs/agent-approvals-security).
 
-L'approbation sert à réserver les actions irréversibles aux humains. Cette page rassemble des modèles courants.
+## Trois modes de collaboration explicites
 
-## Niveaux d'approbation
+| Mode | Ce qui peut continuer | Quand attendre |
+|---|---|---|
+| Analyse en lecture seule | Lire, comparer et préparer une proposition | Ne pas modifier l’implémentation sans autorisation de l’utilisateur |
+| Mise en œuvre dans le périmètre autorisé | Modifier la zone définie, vérifier et préparer un résultat examinable | Information indispensable manquante, changement de périmètre ou nouvelle action non autorisée |
+| Approbation distincte pour l’action finale | Terminer brouillons, builds, aperçus et préparation du retour arrière | Avant publication, envoi ou autre action expressément réservée |
 
-```text
-Zone automatiquement sûre (lecture, analyse, planification)
-    ↓
-Zone de confirmation par prompt (écriture de fichiers, exécution de commandes, réseau)
-    ↓
-Zone humaine obligatoire (push, suppression de données, envoi externe, modification de config production)
-```
+Ce sont des accords de collaboration, pas de nouveaux modes du produit. Si une autorisation claire reste valable, ne la redemandez pas. Si une politique impose une approbation interactive, suivez le mécanisme en place.
 
-Le comportement des dialogues varie selon l'[entrée produit](/fr/guide/) ; les principes restent les mêmes.
-
-## Modèle 1 : Planifier d'abord, exécuter ensuite
+## Mode 1 : ne proposer qu’un plan cette fois
 
 ```text
-Règle : ne pas modifier les fichiers du dépôt tant que je n'ai pas dit « approuver le plan ».
+Cette fois, travaille en lecture seule : examine le projet et propose des modifications. Ne change pas le code et ne crée pas de commit.
+Si une vérification écrit un cache, une capture ou un fichier de sortie, signale-le ; ne suppose pas que tout « test » est en lecture seule.
 ```
 
-Adapté à : codebase peu familière, production, gros diff.
+Ce mode convient lorsque l’objectif n’est pas arrêté et que des solutions doivent être comparées. Même en lecture seule, vérifiez les effets réels des commandes. N’associez pas sans vérification « tests autorisés » et « aucune écriture sur disque ».
 
-## Modèle 2 : Liste blanche de commandes
-
-Dans [AGENTS.md](/fr/guide/customization/agents-md/writing-effective-instructions/) :
-
-```md
-Autorisé sans redemander : pnpm test, pnpm lint, git status, git diff
-Confirmation obligatoire à chaque fois : git push, npm publish, database migrate
-```
-
-En cas de conflit avec la politique hébergée, la règle **la plus stricte** l'emporte.
-
-## Modèle 3 : Fusion en deux phases
-
-1. Codex ouvre une PR brouillon ou une branche locale
-2. CI humain + revue, puis fusion
-
-Cloud : voir [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/).
-
-## Modèle 4 : Reconnaissance en lecture seule
+## Mode 2 : terminer le travail local sans pauses répétées
 
 ```text
-Ce tour en lecture seule : peut lire des fichiers, lancer des tests, curl l'API locale ;
-interdiction d'écrire sur le disque et de faire git commit.
+Tu peux modifier ces trois documents et les liens internes associés, puis exécuter les vérifications de build existantes.
+Achève le travail dans ce périmètre sans attendre à chaque étape ; règle les détails ordinaires et signale-les.
+Ne publie pas le site et n’envoie pas de messages. Explique d’abord tout choix nécessaire ou action hors périmètre.
 ```
 
-Pour l'audit, l'apprentissage d'un projet inconnu, le diagnostic de production.
+La modification et la vérification sont déjà autorisées ici : inutile de redemander avant chaque écriture. L’autorisation d’une commande précise dépend toujours de l’environnement ; un prompt ne peut contourner un refus.
 
-## Quand refuser et recommencer
+## Mode 3 : approuver une publication précise
 
-| Signal | Suggestion |
-|---|---|
-| Le plan ne correspond pas à l'objectif | Refuser l'exécution ; demander un plan révisé |
-| Dérive du périmètre | Arrêter ; découper la tâche |
-| Tests ignorés | Refuser la fusion ; exiger une vérification |
-| Impossible d'expliquer une commande | Refuser ; exiger une explication |
+Préparez d’abord une version examinable, puis indiquez :
 
-## Rapport avec Automations
+- La version ou le livrable exact à publier et ses résultats de vérification.
+- L’environnement cible, le destinataire ou les personnes concernées.
+- Les effets externes prévus et la méthode de récupération nécessaire.
+- Les autorisations ou conditions encore manquantes.
 
-Les tâches sans surveillance doivent aussi prévoir des points de confirmation humaine — voir [Tâches planifiées et en arrière-plan](/fr/skills/automations/scheduled-tasks/).
+Approuver « cette version sur le site de test » n’autorise pas toute version future en production. À l’inverse, une même action déjà clairement approuvée ne doit pas susciter une nouvelle demande à cause d’un modèle générique.
 
-## Erreurs courantes
+## Continuer après un refus
 
-- Cocher « toujours autoriser » à long terme sans se rappeler le risque
-- Approbation de façade — ne pas lire le diff
-- Dire verbalement « ne fais pas n'importe quoi » au lieu d'un mode explicite
+Conservez le refus d’origine et distinguez autorisation manquante, interdiction par politique et panne d’environnement. Continuez si une solution plus étroite reste valide pour la tâche. Ne contournez pas la même restriction en changeant d’outil, d’orthographe de commande ou de prompt. Si une action de l’utilisateur est nécessaire, expliquez l’action bloquée, la raison et les options suivantes.
 
-## Liste de contrôle d'acceptation
+## Ce que vérifie la personne chargée de la revue
 
-- [ ] Mode d'approbation déclaré avant le début de la tâche
-- [ ] Opérations à haut risque avec revue par une seconde personne ou garde CI
-- [ ] Politique d'équipe unifiée pour `git push` et commandes similaires
+Elle vérifie que périmètre et résultat correspondent, que les contrôles ont réellement eu lieu et que les effets externes sont compris. Un plan n’est pas une approbation automatique et « aucune anomalie » ne garantit pas un risque nul.
 
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les orientations officielles actuelles d'OpenAI Developers sur l'autonomie et les limites d'approbation, ainsi que les chapitres vérifiés sur l'approbation, les règles de commande, les PR et l'automatisation ; cette page confirme uniquement les principes stables de collaboration — quelles actions continuent automatiquement et lesquelles s'arrêtent pour approbation humaine.
+Pour la méthode, voir la [classification des tâches](/fr/prompts/ask-for-a-plan/) ; pour les conflits d’instructions, la [priorité du contexte](/fr/guide/context/context-priority/) ; pour les workflows sans surveillance, les [mécanismes d’arrêt, d’échec et de notification](/fr/skills/automations/scheduled-tasks/).

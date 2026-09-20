@@ -3,7 +3,7 @@ title: 出典付きリサーチ
 description: Codex で検索、比較、ファクトチェックを行い——出典と結論が追跡可能な成果物を得る。
 locale: ja
 source_locale: zh-CN
-source_revision: ba7014d
+source_revision: feadad6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

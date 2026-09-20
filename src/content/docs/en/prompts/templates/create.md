@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Create template
 description: Build features, documents, or artifacts from scratch.
 locale: en
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Create template
 
 From-scratch tasks often fail in two ways:
 
@@ -65,10 +69,3 @@ In create tasks, the riskiest move is starting before "what to build and for who
 
 - [Specification-driven work](/en/cases/workflows/specification-driven-work/)
 - [Define done](/en/prompts/define-done/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

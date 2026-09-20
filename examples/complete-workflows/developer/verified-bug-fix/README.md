@@ -29,6 +29,8 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 
 ## 练习方式
 
+[开发者路径配套材料](path-materials/README.md)提供代码阅读、修复审查与交接模板，以及作者填写的参考和本次测试记录。它们配合本目录代码使用，不是另外一套练习。
+
 1. 阅读 [`brief.md`](brief.md)，不要先看 `solution/`。
 2. 用 [`prompts/01-explore.md`](prompts/01-explore.md) 让 Codex 只读定位根因。
 3. 复制 `starter/` 到你自己的临时练习目录，再执行修复提示词。

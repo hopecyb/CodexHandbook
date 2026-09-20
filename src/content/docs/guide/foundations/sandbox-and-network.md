@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center 当前 Codex CLI 文档仍把 Full Auto 描述为“sandboxed, network-disabled environment scoped to the current directory”，并与审批模式区分；本页只说明沙箱和网络是两道不同的风险边界，以及新手应如何收紧访问范围。"
+  checkedAt: "2026-07-26"
 title: 沙箱与网络
 description: 理解执行隔离、网络访问与风险边界。
 sidebar:
@@ -62,10 +67,3 @@ sidebar:
 产品侧设置入口见桌面 App [设置](/guide/desktop-app/settings/)；官方细节见 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
 
 刚开始用时，宁可先多限制一点，也别在还没看懂风险的时候一下把门全打开。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Help Center 当前 Codex CLI 文档仍把 Full Auto 描述为“sandboxed, network-disabled environment scoped to the current directory”，并与审批模式区分；本页只说明沙箱和网络是两道不同的风险边界，以及新手应如何收紧访问范围。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: Images and Screenshots
 description: Provide screenshots and design inputs to Codex; manage image files in tasks.
 locale: en
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

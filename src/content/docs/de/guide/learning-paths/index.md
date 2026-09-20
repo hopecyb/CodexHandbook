@@ -1,14 +1,17 @@
 ---
+prev: false
+next:
+  link: /de/guide/learning-paths/beginner/01-talk-to-codex/
+  label: Einsteigerpfad beginnen
 title: Lernpfade
 description: Leseordnung nach Rolle orchestrieren und auf die maßgeblichen Texte verlinken.
 sidebar:
   order: 5
 locale: de
 source_locale: zh-CN
-source_revision: 05e85de
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f14e3a0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Lernpfade **ordnen nur die Reihenfolge** — sie kopieren keine Langtexte aus Produkthandbuch oder Fachkapiteln.
@@ -19,24 +22,32 @@ Dieses Kapitel liefert kein neues Wissen; es hilft, Umwege zu vermeiden.
 
 ## Was dieses Kapitel leistet
 
-- Bin ich Einsteiger, Creator, Entwickler oder Team-Treiber — welche Linie?
+- Bin ich Einsteiger, Creator, Entwickler oder Teamverantwortlicher — welchen Pfad wähle ich?
 - Worin unterscheiden sich die Leseordnungen der Rollen?
-- Was lohnt jetzt, was später?
+- Was lohnt sich jetzt, was später?
 
-## Verfügbare MVP-Pfade
+## Einsteigerpfad mit festen Materialien
 
-- **Einsteiger (vollständige fünf Schritte)**
+[Laden Sie dieselben Übungsmaterialien für eine Veranstaltungsankündigung herunter](/downloads/first-project/first-project-1.0.0.zip) und erstellen Sie in fünf Schritten die Ankündigung sowie Prüf- und Wiederherstellungsprotokolle. Programmierkenntnisse sind nicht erforderlich. Unabhängige Leser haben den vollständigen Pfad noch nicht durchlaufen und geprüft.
+
+- **Einsteiger (fünf Schritte)**
   1. [Mit Codex sprechen](/de/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [Mit Dateien arbeiten](/de/guide/learning-paths/beginner/02-work-with-files/)
   3. [Klare Aufgaben geben](/de/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [Ergebnisse prüfen](/de/guide/learning-paths/beginner/04-review-results/)
   5. [Erstes kleines Projekt abschließen](/de/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Überblick (tiefe Schritte folgen später)
+## Praxispfad für Creator
 
-- [Creator](/de/guide/learning-paths/creator/)
-- [Entwickler](/de/guide/learning-paths/developer/)
-- [Team](/de/guide/learning-paths/team/)
+Der [Creator-Pfad](/de/guide/learning-paths/creator/) hat vier aufeinanderfolgende Meilensteine: Quellen und Faktentabelle → Artikel mit Quellen → bearbeitbare Präsentation mit acht Folien → wiederverwendbare Aufgabenbeschreibung. Für Artikel und Präsentation gibt es jeweils eigene Downloads; jeder Schritt hat Abschlusskriterien. Unabhängige Leser haben den gesamten Pfad noch nicht durchlaufen und geprüft.
+
+## Praxispfad für Entwickler
+
+Der [Entwicklerpfad](/de/guide/learning-paths/developer/) nutzt die Warenkorb-Bug-Übung: Code lesen → korrigieren und testen → Diff prüfen → Übergabe vorbereiten. Er bietet drei ausfüllbare Vorlagen und eine Autorenreferenz. Die Referenztests wurden erneut ausgeführt; eine Prüfung durch unabhängige Leser steht noch aus.
+
+## Teampfad: zweiwöchiger Pilot und Einführungsentscheidung
+
+- [Team](/de/guide/learning-paths/team/): Charta → manuelle Validierung → Stichproben → Rollback-Übung → Entscheidung über Einführung, Fortsetzung oder Stopp, mit sechs Vorlagen.
 
 ## Pfad für fortgeschrittene Operatoren
 
@@ -80,10 +91,3 @@ So wählen:
 - Vor allem Team-Rollout und Risiko: [Team-Pfad](/de/guide/learning-paths/team/)
 
 Lernpfade entscheiden anhand des „jetzt wichtigsten Problems“, was als Nächstes gelesen wird.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Gegen die aktuelle Learning-Paths-Struktur, Rolleneinstiege und den Einsteiger-Stufenpfad abgeglichen; diese Seite navigiert nur „Leseordnung nach Rolle“, ohne volatile Produktdetails.  
-**Zuletzt geprüft:** 2026-07-26

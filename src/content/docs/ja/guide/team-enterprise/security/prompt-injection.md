@@ -3,7 +3,7 @@ title: Prompt 注入
 description: 信頼できないテキストがコンテキストに入るとき——識別、緩和、チーム政策要点。
 locale: ja
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 'Corregir un bug: por dónde empezar'
 description: Elige la ruta de corrección que corresponda a tu situación y continúa con el caso completo y ejecutable.
 locale: es
 source_locale: zh-cn
-source_revision: 27c707b
+source_revision: 405a687
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

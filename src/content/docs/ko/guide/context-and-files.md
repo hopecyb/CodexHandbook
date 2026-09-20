@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "이 페이지는 사이트 내 내비게이션·방법 총괄입니다. 「작업 요구·파일 자료·프로젝트 규칙·이전 대화가 함께 컨텍스트를 이룬다」는 틀을 현재 컨텍스트·파일 처리 장과 항목별로 교차 확인했으며, 쉽게 변하는 인터페이스 세부에는 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 컨텍스트와 파일
 description: 프로젝트·파일·대화 컨텍스트와 흔한 입력 유형을 관리합니다.
 sidebar:
   order: 15
 locale: ko
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 컨텍스트와 파일
 
 컨텍스트란, Codex가 이 순간에 보고·참고·그에 따라 행동할 수 있는 정보입니다.
 
@@ -83,10 +87,3 @@ Codex도 같습니다. 컨텍스트를 못 다루면, 좋은 프롬프트도 노
 3. 손에 든 자료 유형에 맞춰 해당 파일 장을 읽습니다
 
 컨텍스트는 Codex가 판단할 때 손옆의 정보 더미입니다. 맞게 주면 결과도 맞게 나오기 쉽습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 사이트 내 내비게이션·방법 총괄입니다. 「작업 요구·파일 자료·프로젝트 규칙·이전 대화가 함께 컨텍스트를 이룬다」는 틀을 현재 컨텍스트·파일 처리 장과 항목별로 교차 확인했으며, 쉽게 변하는 인터페이스 세부에는 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

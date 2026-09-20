@@ -3,7 +3,7 @@ title: ルール
 description: allow/deny、コマンドルール、チーム方針の説明ページ——何を止め、何を注意させるかを先に分ける。
 locale: ja
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

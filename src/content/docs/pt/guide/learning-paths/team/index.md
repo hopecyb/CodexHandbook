@@ -1,74 +1,85 @@
 ---
-title: Percurso de equipa (visão geral)
-description: Visão geral da rota de adoção em equipa; passos aprofundados a completar depois.
-locale: pt
-source_locale: zh-CN
-source_revision: 5d835b8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Percurso de equipa: piloto de duas semanas, amostragem e decisão de expansão"
+description: "Comece por uma tarefa de baixo risco e reúna, em dez dias úteis, provas sobre papéis, execuções, revisão, reversão e expansão limitada."
+contentType: path
+audiences: [team]
+level: intermediate
+outputs: [markdown, csv]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "O percurso de duas semanas, seis modelos e três cenários de exceção foram analisados pelo autor num exercício de mesa. Não houve piloto real de equipa, revisão independente nem medição de ganhos de produtividade."
+assets:
+  - path: /downloads/two-week-pilot/two-week-pilot-1.0.0.zip
+    purpose: "Plano do piloto, lista de tarefas, ficha de revisão, incidente e reversão, decisão e calendário de dez dias"
+    license: CC0-1.0
+    version: 1.0.0
 sidebar:
   order: 30
+locale: pt
+source_locale: zh-CN
+source_revision: "3b46738"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-> Estado MVP: esta página é uma visão geral. Conteúdo aprofundado sobre documentação partilhada, governação e métricas virá em marcos posteriores (incluindo a parte 11).
+Comece por uma tarefa limitada cujo resultado possa ser verificado. Use duas semanas para reunir provas de que vale a pena expandir o uso. Aqui, duas semanas correspondem a dez dias úteis. Se houver poucas tarefas, prolongue o piloto; não declare sucesso só porque o prazo terminou.
 
-Se te preocupas sobretudo com a equipa usar o Codex de forma mais estável, podes começar por este percurso.
+[Descarregar modelos do piloto de duas semanas](/downloads/two-week-pilot/two-week-pilot-1.0.0.zip) · [Instruções](/downloads/two-week-pilot/README.md) · [Calendário de dez dias](/downloads/two-week-pilot/templates/06-schedule.md)
 
-## Situações adequadas
+## Antes de começar: escolher tarefa e responsáveis
 
-- Quem quer introduzir o Codex na colaboração da equipa
-- Quem gere Aprovação, risco, normas e qualidade
-- Quem quer reduzir «cada um usa à sua maneira e o resultado fica incontrolável»
+Considere [sugestões de triagem de Issues](/pt/cases/use-cases/team-automation/issue-triage-suggestions/) ou uma [verificação local de ligações](/pt/cases/use-cases/team-automation/scheduled-link-check/). Primeiro execute manualmente com entradas sintéticas, mantendo a revisão humana e a saída local.
 
-## O que podes ler agora
+Designe responsável, executante, revisor, administrador do sistema e contacto de segurança, com substitutos. É possível acumular papéis, mas decisões sobre escritas externas ou incidentes de segurança devem ter revisão independente. Sem revisor, limite o trabalho a entradas sintéticas e rascunhos locais e registe-o como autoavaliação do autor.
 
-- [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
-- [Contexto sensível](/pt/guide/context/sensitive-context/)
-- [Definição de concluído](/pt/guide/quality/definition-of-done/)
+Pré-requisitos: saber guardar registos, avaliar resultados, parar a execução e indicar os dados e ações permitidos. Se as permissões forem incertas, conclua primeiro a preparação local sem expandir por conta própria para sistemas de produção.
 
-## Mal-entendidos frequentes
+## D1–D2: estabelecer o plano e executar manualmente
 
-### 1. O percurso de equipa é só tornar as regras mais rígidas
+Preencha o [plano do piloto](/downloads/two-week-pilot/templates/01-charter.md) e a [lista de tarefas](/downloads/two-week-pilot/templates/02-tasks.csv): problema de negócio, referência manual, âmbito das entradas, ações permitidas, exclusões, método de revisão, condições de paragem e conservação de registos.
 
-Regras mais rígidas são só uma parte.
+Defina condições concretas de correção antes de executar. Não adote um limiar geral como «80% de aprovação bastam para lançar». Reveja individualmente resultados de alto risco; descreva no plano o método de amostragem e a justificação para as outras tarefas.
 
-O mais difícil é tratar isto em conjunto:
+Condição de conclusão: uma execução manual tem entrada, saída, verificação real e responsável. A equipa distingue sucesso, falha e pausa. Só depois passe a uma amostra limitada.
 
-- Como controlar Permissões
-- Em que camada pôr as regras
-- Como aceitar resultados
-- Como a equipa forma hábitos consistentes
+## D3–D5: registar execuções e fazer a primeira revisão
 
-### 2. Se alguém sabe usar o Codex, a equipa segue naturalmente
+Use a [ficha de revisão](/downloads/two-week-pilot/templates/03-review.csv) para guardar cada execução, falha, interrupção, versão da entrada, configuração, prova e razão para aceitar, alterar ou rejeitar o resultado.
 
-Na prática raramente é tão simples.
+Pelo [método de avaliação de fluxos de trabalho](/pt/guide/quality/workflow-evaluation/), examine separadamente ativação, limites, formato e qualidade. Registe à parte o tempo de espera do modelo e o retrabalho humano. Ao comparar com a referência manual, confirme que dificuldade e entradas são comparáveis; mantenha como desconhecido o que não puder comparar.
 
-A adoção em equipa precisa de:
+Em D5, examine tipos de falha e cobertura da amostra. Perante um problema grave de limites, pause e acrescente casos de reprodução e regressão; não apague falhas registadas nem esconda problemas baixando o padrão.
 
-- Documentação partilhada
-- Regras executáveis
-- Formas claras de revisão e aceitação
+Condição de conclusão: os primeiros resultados têm revisões consultáveis e cada problema tem responsável e estado. Se persistir um problema grave, permaneça nesta fase.
 
-## Ordem de leitura sugerida
+## D6–D8: expansão limitada e ensaio de reversão
 
-Se vais avançar pelo ângulo da equipa, lê nesta ordem:
+Acrescente amostras ou tipos de tarefas dentro do âmbito aprovado. Altere um fator principal de cada vez; não amplie permissões, troque de modelo e mude de tarefa em simultâneo. Registe versões da configuração para identificar a origem das alterações.
 
-1. [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
-2. [Contexto sensível](/pt/guide/context/sensitive-context/)
-3. [Personalização e configuração do projeto](/pt/guide/customization/)
-4. [Definição de concluído](/pt/guide/quality/definition-of-done/)
-5. [Equipa e empresa](/pt/guide/team-enterprise/)
+Use o [modelo de incidente e reversão](/downloads/two-week-pilot/templates/04-incident.md) para ensaiar a pausa, verificar processos e filas ativos, conservar provas, restaurar uma versão conhecida como boa e voltar a verificar. Parar novas execuções não desfaz efeitos externos já ocorridos.
 
-Este percurso valoriza limites, regras e aceitação — não só empurrar o volume de uso.
+Pode começar pelo [exercício de recuperação de falhas](/pt/guide/reference/troubleshooting/failure-recovery-lab/) num diretório isolado. Se o agendamento real, a revogação de permissões ou a entrega de mensagens não foram testados, registe essa lacuna. Um ensaio local não prova que a reversão funciona em produção.
 
-## Passos planeados (esquema)
+Condição de conclusão: a equipa explica quem pausa, como confirmar a paragem, como preservar o estado de deduplicação e quando é permitida a retoma. Depois passe à revisão independente e à decisão.
 
-Documentação partilhada → Permissões e governação → Fluxos padronizados → Qualidade e segurança → Divulgação e métricas
+## D9–D10: decidir expandir, continuar ou parar
 
----
+Peça ao revisor que examine resultados críticos, enviesamento da amostra e problemas por resolver. Preencha a [decisão do piloto](/downloads/two-week-pilot/templates/05-decision.md).
 
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com Permissões/Aprovação, Contexto sensível, configuração personalizada, definição de concluído e equipa/empresa; o conteúdo limita-se à «visão geral da rota de leitura para adoção em equipa», sem declarar implementações concretas de governação.  
-**Última verificação:** 2026-07-26
+| Decisão | O que explicar |
+|---|---|
+| Expansão limitada | Tarefas, pessoas e permissões sustentadas pelas provas; amostragem contínua e responsabilidade pela reversão |
+| Continuar o piloto | Amostras ou provas de recuperação em falta, responsável e data da próxima revisão |
+| Parar | Como desativar o agendamento, tratar permissões, conservar registos e gerir eventos pendentes |
+
+Explique ponto a ponto os critérios de D1, sem compensar um erro grave com uma média global favorável. Se faltar revisão independente, a amostra for insuficiente ou a referência não for comparável, declare a limitação e não publique alegações de melhoria da produtividade da equipa.
+
+Condição de conclusão: uma decisão regista responsável, provas, âmbito e próximo passo. Mesmo a expansão se aplica apenas às tarefas e condições verificadas; não autoriza todos os membros a automatizar todo o trabalho.
+
+## Como os modelos foram verificados
+
+O autor realizou [três exercícios de mesa](/downloads/two-week-pilot/references/tabletop-review.md): um resultado correto mas sem permissão, uma amostra insuficiente e eventos ainda por entregar após desativar o agendamento. Servem para testar se os modelos cobrem os pontos de decisão; não são casos reais de equipa nem resultados de duas semanas de operação.
+
+Quando alterar regras do projeto, leia [configuração do projeto](/pt/guide/customization/) e [definição de concluído](/pt/guide/quality/definition-of-done/) e incorpore no processo partilhado os requisitos concretos aprendidos no piloto.

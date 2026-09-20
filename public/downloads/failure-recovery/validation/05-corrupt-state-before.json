@@ -1,0 +1,14 @@
+{
+  "phase": "before",
+  "command": [
+    "<PYTHON>",
+    "<WORK>/05-corrupt-state/quiet-link-monitor/scripts/run_once.py",
+    "--site",
+    "<WORK>/05-corrupt-state/quiet-link-monitor/fixtures/fixed",
+    "--state",
+    "<WORK>/05-corrupt-state/state.json"
+  ],
+  "exit_code": 3,
+  "stdout": "{\"status\": \"stopped\", \"error\": \"Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\", \"external_actions\": []}\n",
+  "stderr": ""
+}

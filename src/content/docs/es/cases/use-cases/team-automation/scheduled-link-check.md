@@ -1,92 +1,91 @@
 ---
-title: "Caso: comprobación programada de enlaces de documentación"
-description: Escanea enlaces rotos del sitio con Codex no interactivo o CI — caso de entrada a la automatización de equipo.
+caseCategory: team
+directoryOrder: 100
+title: 'Caso: comprobación de enlaces de documentación y recuperación ante fallos'
+description: Descarga un ejercicio de enlaces HTML estáticos, corrige paso a paso una página ausente y un ancla rota, y prepara una ejecución periódica.
+contentType: case
+audiences:
+- developer
+- team
+level: intermediate
+outputs:
+- json
+- html
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: '2026-09-18'
+  summary: Pasaron siete pruebas del script. En una copia temporal, al corregir un problema cada vez, los fallos bajaron de dos a uno y luego a cero. No se comprobaron enlaces externos en línea ni se ejecutó un CI o programador real.
+  environment: Python 3.12.11 / Darwin arm64; biblioteca estándar y HTML estático sintético original, sin token.
+  evidence:
+  - label: Registro real de ejecución y recuperación
+    href: /downloads/docs-link-audit/validation/record.md
+assets:
+- path: /downloads/docs-link-audit/docs-link-audit-1.0.0.zip
+  purpose: Script de comprobación de enlaces, entradas defectuosas, solución de referencia, pruebas y registro de recuperación paso a paso
+  license: CC0-1.0
+  version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: e8fa8bd
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0d21aa9
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-## Metadatos
+Antes de programar una comprobación periódica, confirma que el script detecta problemas y explica qué revisó. El ejercicio empieza con dos enlaces rotos deliberadamente. Cambia un destino cada vez y observa el resultado.
 
-| Campo | Contenido |
-|---|---|
-| Público | Maintainers de equipo, Technical Writers |
-| Cliente | CLI + GitHub Actions |
-| Tiempo estimado | 45–90 minutos (incluye la primera config de CI) |
-| Fecha de verificación | 2026-07-25 |
+[Descargar el paquete completo](/downloads/docs-link-audit/docs-link-audit-1.0.0.zip) · [README](/downloads/docs-link-audit/README.md) · [Registro real de recuperación](/downloads/docs-link-audit/validation/recovery.json)
 
-## 1. Objetivo y contexto
+## Ejecuta primero el ejemplo defectuoso
 
-**Objetivo:** Comprobar cada semana enlaces internos del sitio de docs y enlaces externos clave; informar de enlaces rotos en PR o issue.
+Necesitas Python 3.10+, sin dependencias externas, clave de API ni red. En el directorio extraído, ejecuta:
 
-**Criterios de éxito:**
-
-- CI o workflow programado reproducible
-- Lista estructurada de enlaces rotos (archivo, número de línea, URL)
-- No modifica archivos ajenos ni hace push
-
-**Fuera de alcance:** Crawler de todo el sitio, páginas tras login, pruebas de rendimiento.
-
-## 2. Preparación
-
-- El código fuente del sitio de docs está en un repo Git (p. ej. `src/content/docs/` de este manual)
-- Ya existe `npm run build` o un script de link checker (opcional)
-- `GITHUB_TOKEN` de solo lectura y `OPENAI_API_KEY` en secrets de la org
-
-## 3. Flujo de trabajo
-
-### Explorar
-
-```text
-Lee @src/content/docs/ y los scripts de package.json existentes.
-Indica si ya hay link check; si no, sugiere el esquema mínimo: enlaces internos markdown + muestreo de enlaces externos a docs oficiales.
-No modifiques archivos.
+```sh
+python3 scripts/check_links.py fixtures/site
 ```
 
-### Planificar
+Se espera el código de salida 1. El informe incluye archivo, línea, URL y motivo: `/missing/` en la línea 4 de `index.html` no tiene página de destino, y `#old-anchor` en la línea 5 no existe en la página destino. Otro enlace externo aparece en `unchecked`; no se cuenta silenciosamente como correcto.
 
-```text
-Propón un plan: ruta del archivo de prompt, nombre del workflow de CI, campos del JSON estructurado de salida.
-Espera mi confirmación antes de crear archivos.
+## Corrige un problema cada vez
+
+Copia `fixtures/site` en tu directorio `work/` y conserva la entrada original. Cambia primero `/missing/` por `/guide/` y ejecuta:
+
+```sh
+python3 scripts/check_links.py work
 ```
 
-### Ejecutar
+Todavía sale con código 1, pero solo queda el problema del ancla. Cambia `#old-anchor` por `#install` y repite: el código será 0. Compara con `solution/site` y la [referencia de revisión humana](/downloads/docs-link-audit/solution/review.md) para confirmar que no modificaste nada más.
 
-- Añadir `prompts/ci/link-check.md`
-- Añadir `.github/workflows/docs-link-check.yml` (esquema; ver [Scripts y pipelines](/es/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Usar [codex exec](/es/guide/developer-platform/non-interactive/codex-exec/) o script puro + reclasificación secundaria con Codex
+La comprobación real del autor produjo 2, luego 1 y finalmente 0 fallos, sin alterar el hash del ejemplo original. [JSON anterior a la corrección](/downloads/docs-link-audit/validation/stage-0.json) · [JSON posterior](/downloads/docs-link-audit/validation/stage-2.json)
 
-### Verificar
+## Comprende el resultado y sus límites
 
-- Una pasada local de `codex exec`
-- `workflow_dispatch` manual en CI
-- Insertar a propósito un enlace roto y confirmar `pass: false`
+| Resultado | Significado | Siguiente paso |
+|---|---|---|
+| Salida 0 | Las referencias locales pasan | Lee `unchecked`; no demuestra que los enlaces externos sean accesibles |
+| Salida 1 | Se detectó página o ancla ausente, o ruta fuera de límites | Confirma el propósito de cada enlace y corrígelo |
+| Salida 2 | La comprobación no pudo terminar | Revisa directorio, resultado de compilación, errores de lectura o etiqueta `base` no admitida |
 
-## 4. Fallo y recuperación
+El script lee el HTML generado y admite `index.html` de directorio, rutas relativas y desde la raíz, y anclas HTML. No analiza rutas JavaScript dinámicas, URL de CSS, `srcset` ni reescrituras propias de frameworks. Se detiene ante `base href` para evitar interpretar mal las rutas relativas. Las URL externas y otros protocolos se marcan expresamente como no comprobados.
 
-| Problema | Tratamiento |
-|---|---|
-| Sitio externo con 503 temporal | Distingue enlace duro vs fallo blando; defínelo en el prompt |
-| Fallo al parsear JSON | Endurece las restricciones de [salida estructurada](/es/guide/developer-platform/non-interactive/structured-output/) |
-| Cuota agotada | Pasa a cron semanal + comprobación incremental |
+Ejecuta las siete pruebas incluidas:
 
-## 5. Captura para reutilizar
+```sh
+python3 validation/test_links.py
+```
 
-- Tras la tercera ejecución correcta, captura como Skill: `docs-link-audit`
-- Las [reglas de comandos del equipo](/es/guide/customization/rules/team-rules/) permiten `npm run build` y git en solo lectura
+En un proyecto real, compílalo primero según sus instrucciones y pasa el directorio de salida al script. Este sitio ya tiene un comprobador propio de referencias internas; este paquete didáctico no sustituye todas las validaciones adecuadas al framework.
 
-## 6. Capítulos relacionados
+## Después intégralo en un proceso periódico
 
-- [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/)
-- [Tareas programadas de Automations](/es/skills/automations/scheduled-tasks/)
-- [Ruta de aprendizaje de equipo](/es/guide/learning-paths/team/)
+Da a tu programador existente la secuencia «compilar proyecto → comprobar enlaces → guardar código de salida y JSON», con directorio de trabajo y entorno de dependencias fijos. Si falla la compilación, detente en vez de leer salidas antiguas. Evita escrituras simultáneas en el mismo registro.
 
----
+Ejecuta manualmente una vez, actívalo manualmente en el entorno de programación de destino y solo después configura la periodicidad. Compara el resultado con el anterior: guarda silencio si no hay cambios y prepara un resumen si aparecen fallos nuevos, errores de comprobación o recuperación. El envío de notificaciones sigue sujeto a la autorización concedida.
 
-**Estado:** verified  
-**Productos aplicables:** CLI  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de modo no interactivo, scripts y pipelines, salida estructurada, reglas de equipo y automatización. El contenido se limita al caso estable de automatización de equipo «comprobación programada de enlaces, informe estructurado y parada ante fallos».
+El paquete no creó tareas programadas, no envió avisos, no modificó un sitio real ni ejecutó CI. Estas instrucciones de programación son una guía de integración, no prueba de ejecución del programador. Consulta la [guía de tareas programadas](/es/skills/automations/scheduled-tasks/).
+
+## Cómo tratar los enlaces externos
+
+Define por separado el alcance y frecuencia autorizados para revisarlos. Un 404, una restricción de autenticación, un tiempo de espera y un fallo temporal del servicio tienen significados distintos. Una solicitud fallida no basta para eliminar un enlace. El paquete no comprobó enlaces externos reales ni presentó respuestas simuladas como fallos reales de red.
+
+Al combinarlo con el [ejercicio de clasificación de issues](/es/cases/use-cases/team-automation/issue-triage-suggestions/), genera primero un informe local y notas de revisión humana antes de decidir si crear un ticket.

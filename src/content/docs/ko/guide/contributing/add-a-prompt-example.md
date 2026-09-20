@@ -3,7 +3,7 @@ title: 프롬프트 예시 추가
 description: examples/prompts에 재현 가능한 프롬프트를 제출 — 메타데이터와 검증 기준 포함.
 locale: ko
 source_locale: zh-CN
-source_revision: cd78464
+source_revision: 15dabd2
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

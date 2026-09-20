@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers의 현재 Codex use cases에는 여전히 “Automate bug triage”, “Turn feedback into actions” 등 반복 가능한 자동화 시나리오가 포함됩니다. 이 페이지는 일일 보고서를 “고정 형식 Markdown + 명확한 종료 코드 + 재사용 가능한 스크립트 또는 Skill”로 정의하며, 특정 통합에 의존하지 않는 안정적인 자동화 워크플로 패턴입니다."
+  checkedAt: "2026-07-26"
 title: 일일 보고서 자동화
 description: 반복되는 요약 작업을 재사용 가능한 스크립트 또는 Skill로 고정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 일일 보고서 자동화
 
 ## 메타 정보
 
@@ -38,9 +46,3 @@ reviewed_at: 2026-08-26
 
 - [자동화 Skill 예시](/ko/skills/examples/automation-skill/)
 - [예약 작업](/ko/skills/automations/scheduled-tasks/)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 Codex use cases에는 여전히 “Automate bug triage”, “Turn feedback into actions” 등 반복 가능한 자동화 시나리오가 포함됩니다. 이 페이지는 일일 보고서를 “고정 형식 Markdown + 명확한 종료 코드 + 재사용 가능한 스크립트 또는 Skill”로 정의하며, 특정 통합에 의존하지 않는 안정적인 자동화 워크플로 패턴입니다.  
-**최근 검증:** 2026-07-26

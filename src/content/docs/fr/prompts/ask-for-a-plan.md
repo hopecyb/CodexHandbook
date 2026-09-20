@@ -1,154 +1,118 @@
 ---
-title: Demander un plan d'abord
-description: Avant que Codex n'agisse, faites-lui exposer les étapes, les risques et la validation.
+title: "Quand agir directement et quand demander un plan"
+description: "Choisir entre exécution directe, planification et approbation d’une action précise selon le périmètre, l’incertitude et l’impact externe, avec deux comparaisons de prompts."
+contentType: prompt
+audiences: [beginner, developer, creator]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Les trois catégories de tâches et les deux comparaisons sont des conseils de collaboration éditoriaux. Les limites d’autorisation et d’exécution ont été vérifiées ; il ne s’agit pas de modes fixes du client ni d’une expérience sur le taux de réussite du modèle."
 locale: fr
 source_locale: zh-CN
-source_revision: 0a2c7c7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 706f11b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Beaucoup de problèmes ne viennent pas de l'impossibilité de faire, mais d'un **démarrage trop rapide**. Un « aide-moi à corriger » mélange souvent exploration, plan et exécution — et vous ne validez qu'en regardant le diff.
+Demander un plan dépend des décisions qui restent à prendre. Une modification au périmètre clair et facile à annuler peut être exécutée directement. Si la démarche est incertaine, planifiez d'abord. Avant une action précise qui exige une autorisation supplémentaire, arrêtez-vous. Demander un plan n'implique pas d'attendre une réponse de l'utilisateur après chaque étape.
 
-Dans ce cas, il est plus efficace de demander d'abord un plan plutôt que d'allonger indéfiniment le besoin.
+## Commencer par classer la tâche
 
-## Quand demander un plan est indispensable
+| Catégorie | Critères | Consignes recommandées | Quand s'arrêter |
+|---|---|---|---|
+| Exécuter directement | Entrées, périmètre et critères d'acceptation clairs ; modification réversible | Préciser où intervenir, ce qui constitue l'achèvement et les exclusions | Si le travail sort du périmètre ou si une information indispensable manque |
+| Planifier d'abord | Choix d'architecture, périmètre incertain ou plusieurs étapes interdépendantes | Examiner l'état actuel, puis proposer la démarche, les effets et la vérification | Si un arbitrage revient à l'utilisateur ou si celui-ci demande expressément de revoir le plan d'abord |
+| Action soumise à approbation | Une action précise aurait un effet externe non autorisé ou franchirait une limite de permission | Préparer un résultat examinable, puis nommer l'action, sa cible et ses effets | Avant cette action, en conservant le travail préparatoire déjà fait |
 
-| Scénario | Pourquoi |
-|---|---|
-| Plusieurs fichiers ou modules | risque de toucher des zones non concernées |
-| Dépôt inconnu | confirmer d'abord le périmètre compris |
-| Besoin encore flou | faire émerger les désaccords tôt |
-| Approbation avant exécution | séparer « autorisation d'exécuter » et « discussion d'approche » |
-| Actions à haut risque | voir d'abord rollback et validation |
+« Trois fichiers sont concernés » n'est pas un seuil d'approbation universel : un seul fichier de configuration de production peut avoir un effet considérable. Pour les fenêtres de confirmation du produit et les permissions réelles, voir [Permissions et bac à sable](/fr/guide/permissions-and-sandbox/). Ce tableau n'est pas la configuration des permissions de tous les clients.
 
-Une typo ou un libellé ponctuel n'exige pas forcément un plan formel — mais dès que « une dérive serait pénible », ça vaut le coup de faire une pause.
+## Comparaison 1 : corriger un texte local
 
-## Ce qu'un bon plan doit couvrir au minimum
+Tâche : corriger deux fautes dans le README sans changer sa structure.
 
-Même en version minimale, ces quatre points :
-
-1. étapes
-2. fichiers ou périmètre concernés
-3. risques ou points à confirmer
-4. comment valider chaque étape
-
-Sans le point 4, c'est plutôt une todo qu'un plan vérifiable.
-
-## Trois formulations courantes
-
-### Version minimale
+**Contre-exemple avec trop d'arrêts :**
 
 ```text
-Ne modifie pas le code pour l'instant. Donne-moi d'abord un plan en 3 à 5 étapes : quels fichiers seront touchés et comment valider chaque étape.
+Dresse d'abord un plan et attends mon accord avant de lire les fichiers.
+Après lecture, indique les deux changements prévus et attends mon accord.
+Arrête-toi après chaque changement pour me demander, puis demande si tu dois vérifier.
 ```
 
-Convient quand la direction est déjà claire et que vous voulez voir le découpage.
+Ces attentes n'apportent aucune décision nécessaire ; elles fragmentent une tâche déjà clairement autorisée.
 
-### Version recommandée
+**Formulation au périmètre précis :**
 
 ```text
-N'exécute pas encore. Sur la base du dépôt actuel, propose un plan avec :
-1. compréhension de l'objectif
-2. étapes numérotées
-3. fichiers ou répertoires concernés
-4. risques et points à confirmer
-5. méthode de validation
-
-Ne modifie aucun fichier avant que je réponde « exécute selon le plan ».
+Dans le corps de README.md, remplace les deux occurrences de « 帐户 » par « 账户 ».
+Préserve les blocs de code, les liens et le reste du contenu. Effectue directement
+les modifications, vérifie le diff et indique où tu es intervenu. Si tu ne
+trouves pas exactement deux occurrences, explique l'écart avant de poursuivre ;
+n'élargis pas la tâche à une révision complète du texte.
 ```
 
-Convient au développement quotidien, refonte de docs, réécriture de Prompts, ajustement de config.
+L'acceptation porte sur deux changements exacts et l'absence de modifications annexes. En général, cette tâche ne nécessite pas de nouveaux tests ; effectuez les vérifications adaptées selon les règles du projet.
 
-### Version haut risque
+## Comparaison 2 : modifier puis publier un site
+
+Tâche : mettre à jour trois tutoriels et les publier sur le site de production. Il faut distinguer la préparation du contenu de l'effet de la publication.
+
+**Contre-exemple à l'autorisation imprécise :**
 
 ```text
-Ne fais aucune modification pour l'instant. Produis un plan et indique séparément :
-- quelle étape risque le plus une régression
-- comment revenir en arrière en cas d'échec
-- quelles actions nécessitent ma confirmation
-- quels tests ou contrôles manuels prouvent la fin
+Écris d'abord un plan, puis modifie tout le site et mets-le en ligne.
 ```
 
-Convient aux incidents prod, config de permissions, scripts d'automatisation, refactors multi-modules.
+Cette demande ne précise ni les contenus à modifier, ni la destination de publication, ni l'autorisation de remplacer la version en ligne.
 
-## Un plan n'est pas meilleur parce qu'il est long
-
-Vous voulez un intermédiaire **approuvable, corrigeable, exécutable** — pas un mémo interminable.
-
-Trois tests de qualité :
-
-- pouvez-vous dire clairement « ne fais pas l'étape 2, fais autre chose »
-- voyez-vous d'un coup d'œil les zones critiques touchées
-- savez-vous comment valider avant de commencer
-
-Sinon, le plan n'est pas assez concret.
-
-## Comment commenter un plan
-
-Pas besoin de tout réécrire — orientez comme avec un collègue.
-
-Phrases utiles :
+**Formulation aux limites concrètes :**
 
 ```text
-Garde les étapes 1 et 2, supprime l'étape 3.
-Sépare les changements base de données en une étape à part.
-Commence par une analyse en lecture seule, pas l'implémentation.
-Ajoute tests de régression et plan de rollback au plan.
+Mets à jour ces trois tutoriels et corrige leurs liens internes associés.
+Lis l'état actuel et présente un plan bref, puis effectue les modifications,
+la compilation et la vérification de l'aperçu dans ces fichiers et la navigation
+concernée, sans attendre à chaque étape. Livre l'aperçu, un résumé des changements
+et les résultats de vérification. La publication en production n'est pas encore
+autorisée. Une fois la préparation terminée, indique la version à publier,
+l'environnement cible et la méthode de retour arrière, puis attends ma
+confirmation pour l'action de publication.
 ```
 
-C'est souvent plus économe en contexte que « recommence ».
+Dans ce cas, terminez le travail local avant de demander l'autorisation finale de publier. Si l'utilisateur a déjà explicitement autorisé la cible et l'action de publication précises, déterminez selon la politique en vigueur s'il est possible de poursuivre ; ne redemandez pas la même autorisation uniquement parce que ce modèle contient une demande de confirmation.
 
-## Bénéfices par rapport à « commencer directement »
+Ces deux comparaisons sont des exemples pédagogiques, ni des sorties réelles du modèle ni des mesures d'efficacité.
 
-| Plan d'abord | Commencer directement |
-|---|---|
-| détecte les malentendus tôt | la mauvaise direction apparaît souvent trop tard |
-| facilite approbation et collaboration | vous ne voyez que le diff final |
-| aide à découper en sous-tâches | plusieurs objectifs se mélangent |
-| la validation est visible à l'avance | on pense aux tests à la fin |
+## Quand se limiter au plan
 
-Beaucoup de workflows séparent « exploration » et « plan ». Voir [Explorer — planifier — exécuter — vérifier](/fr/cases/workflows/explore-plan-execute-verify/).
+Si vous comparez encore des solutions, avez besoin d'un arbitrage budgétaire ou souhaitez explicitement examiner la conception avant de passer à l'exécution, limitez la tâche au plan :
 
-## Problèmes fréquents des plans
+```text
+Pour ce tour, fais uniquement une proposition. Lis l'implémentation existante,
+présente deux options, leur impact et leurs critères de vérification. Signale
+les arbitrages qui nécessitent réellement ma décision. Ne modifie pas
+l'implémentation. Passe à l'exécution une fois l'approche choisie.
+```
 
-### Actions sans limites
+Cette limite de phase explicite doit être respectée. L'autonomie habituelle de l'agent ne permet pas de passer directement à l'implémentation.
 
-Ex. « mettre à jour la doc et optimiser la structure » sans dire quels répertoires — le plan grossit vite.
+## Que conserver dans un plan
 
-### Implémentation sans validation
+Un plan suffisant expose l'objectif, le périmètre touché, les étapes, la vérification et les arbitrages non résolus. Une réponse déjà connue n'a pas à devenir une question en attente de confirmation. Une tâche courte et peu risquée n'a pas besoin d'une section de retour arrière uniquement pour satisfaire un modèle.
 
-Ex. « modifier la logique, les styles, committer » sans dire comment prouver que rien n'est cassé.
+Si une situation nouvelle apparaît pendant l'exécution, distinguez les détails ordinaires de mise en œuvre d'un changement d'objectif. Réglez les petits problèmes dans le périmètre initial et expliquez-les. Pour une nouvelle dépendance, un changement plus large, une modification d'interface ou une nouvelle action externe, vérifiez d'abord si l'autorisation couvre toujours l'action.
 
-### Liste de tâches sans points à confirmer
-
-Un bon plan admet l'incertitude au lieu de prétendre que tout est acquis.
-
-## Combinaisons recommandées
-
-- chaîne d'exécution formelle : [Planification](/fr/guide/agent-work/planning/)
-- plan réutilisable : [Anatomie d'une tâche](/fr/prompts/task-anatomy/)
-- corriger en cours de route : [Progression et pilotage](/fr/guide/agent-work/progress-and-steering/)
-- définir l'acceptation : [Définir le terminé](/fr/prompts/define-done/)
-
-## Convention d'équipe utile
-
-Dans `AGENTS.md`, vous pouvez écrire :
+## Règles par défaut à inscrire dans les conventions du projet
 
 ```md
-- Changements touchant plus de 3 fichiers : plan d'abord
-- Pas de commandes destructives sans confirmation
-- Le plan doit inclure la validation
+- Exécuter directement les tâches au périmètre clair et réversibles, avec une
+  vérification adaptée.
+- Pour les tâches complexes, présenter d'abord un plan bref ; attendre seulement
+  si l'utilisateur veut d'abord l'examiner ou si un arbitrage nécessaire l'exige.
+- Avancer sans confirmations répétées, tant que l'on reste dans le périmètre autorisé.
+- Expliquer le problème précis si une donnée essentielle manque, si le périmètre
+  est dépassé ou si une action non autorisée est requise.
+- Ne pas considérer la fin des modifications locales comme une autorisation
+  automatique de publier, d'envoyer des messages ou de supprimer des données.
 ```
 
-« Demander un plan d'abord » devient alors la norme, pas un rappel ponctuel.
-
-## Sources de référence
-- Documentation officielle OpenAI Codex — planification et exécution
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page décrit uniquement la méthode de collaboration « plan d'abord » ; liens internes et structure d'exemple revus ; le corps ne dépend pas de faits volatils produit.
+Ces conseils de travail peuvent être ajustés ; ils ne remplacent pas les règles système, les politiques de l'organisation ni le bac à sable. Voir [Priorité du contexte](/fr/guide/context/context-priority/), [Planification](/fr/guide/agent-work/planning/) et [Schémas d'approbation humaine](/fr/cases/workflows/human-approval-patterns/).

@@ -3,7 +3,7 @@ title: Installation et première utilisation
 description: Découvrez les points d'entrée projet, conversation, Codex et révision dans l'App de bureau ChatGPT.
 locale: fr
 source_locale: zh-CN
-source_revision: d61c2fa
+source_revision: 080436d
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

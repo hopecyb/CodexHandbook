@@ -3,7 +3,7 @@ title: 제약 정의하기
 description: 수정 가능 범위, 스타일, 금지 사항을 제한합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 617fa41
+source_revision: 0ca4700
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

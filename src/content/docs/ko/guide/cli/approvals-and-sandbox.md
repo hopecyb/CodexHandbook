@@ -3,7 +3,7 @@ title: 승인과 샌드박스
 description: CLI에서 shell·디스크 쓰기·네트워크 요청의 승인 전략과, 샌드박스가 Agent 동작을 제한하는 방식.
 locale: ko
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

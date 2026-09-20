@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明如何要求并检查来源可追溯性；站内链接与方法表述已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 核验来源
 description: 对研究结论要求可追溯依据。
 sidebar:
@@ -39,10 +44,3 @@ sidebar:
 - 是否已经过时
 
 在研究类任务里，来源本身就是结论可信度的一部分。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明如何要求并检查来源可追溯性；站内链接与方法表述已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

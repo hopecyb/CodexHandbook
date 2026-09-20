@@ -1,64 +1,57 @@
 ---
-title:  Instalar la extensión IDE
-description:  Instala la extensión de Codex en un editor compatible.
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "La guía oficial actual de inicio rápido para IDE enumera VS Code, Cursor, Windsurf y VS Code Insiders, además de las integraciones propias de Xcode y JetBrains. Esta página separa las instrucciones según esas dos formas de acceso."
+  checkedAt: "2026-08-26"
+title: Instalar la integración con el IDE
+description: Habilita Codex en editores compatibles con VS Code, Xcode o IDE de JetBrains.
 locale: es
 source_locale: zh-CN
-source_revision: 1196b38
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: e8f88ec
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 50
 ---
 
-Current IDE support has more than one installation path:
+Actualmente no hay una única forma de instalar la integración con el IDE:
 
-| IDE | Installation or activation |
+| IDE | Instalación o activación |
 |---|---|
-| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Install or enable the Codex extension |
-| Xcode | Select Codex Agent in Xcode's coding assistant |
-| JetBrains IDEs | Select Codex in AI Chat |
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Instalar o habilitar la extensión Codex |
+| Xcode | Seleccionar Codex Agent en el coding assistant de Xcode |
+| IDE de JetBrains | Seleccionar Codex en AI Chat |
 
-Use the entry for your IDE on the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide). Do not infer button locations from a different IDE.
+Entra por la opción oficial para tu IDE desde la [página oficial de Codex IDE](https://learn.chatgpt.com/docs/codex/ide). No deduzcas la posición de los botones a partir de capturas de otro editor.
 
-## VS Code-compatible editors
+## Editores compatibles con VS Code
 
-1. Install the Codex extension from the official Marketplace entry.
-2. Open the root of a real project workspace.
-3. Select the Codex icon. If it is missing, open the Command Palette and run `Codex: Open Codex Sidebar`.
-4. Sign in with ChatGPT or an API key.
+1. Instala la extensión Codex desde su entrada oficial en el Marketplace.
+2. Abre la raíz del workspace de un proyecto real.
+3. Selecciona el icono de Codex. Si no aparece, abre la Command Palette y ejecuta `Codex: Open Codex Sidebar`.
+4. Inicia sesión con ChatGPT o una API key.
 
-## Xcode and JetBrains
+## Xcode y JetBrains
 
-- Xcode: open the coding assistant, start a chat, and select Codex as the Agent.
-- JetBrains: open AI Chat and select Codex.
+- Xcode: abre el coding assistant, crea una conversación y selecciona Codex como Agent.
+- JetBrains: abre AI Chat y selecciona Codex.
 
-These entry points are provided by their respective IDEs and do not have the same interface as the VS Code extension.
+Estas opciones las ofrece cada IDE. Su interfaz no será exactamente igual a la de la extensión de VS Code.
 
-## Check editor context after installation
+## Comprobar el contexto después de instalar
 
-Open a source file, select a short section, and ask:
+Abre un archivo de código, selecciona un fragmento corto y pregunta:
 
 ```text
-Explain only the inputs, outputs, and failure paths of the current selection.
-Do not edit files. Cite the relevant symbol names.
+Explica solo las entradas, las salidas y las rutas de error de la selección actual, sin modificar archivos. Cita los nombres de las funciones correspondientes.
 ```
 
-If the answer is unrelated to the selection, check:
+Si la respuesta no se relaciona claramente con el fragmento seleccionado, comprueba primero:
 
-- whether the expected project root is open;
-- whether the file or selection is attached to the composer;
-- whether the correct identity and workspace are active;
-- whether another AI extension conflicts with the integration or shortcuts.
+- que está abierta la raíz del proyecto correcto;
+- que el archivo o la selección se han adjuntado al composer;
+- que la identidad y el workspace activos son los esperados;
+- que no hay otra extensión de IA o un atajo de teclado que interfiera.
 
-Continue with the [local IDE task workflow](/es/guide/ide/local-task-workflow/). See [Supported editors](/es/guide/ide/supported-editors/) for the complete support matrix.
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Verification basis:** The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
-
-**Last verified:** 2026-08-26
+Después, sigue el [flujo de tareas locales en el IDE](/es/guide/ide/local-task-workflow/). Para ver todo el ámbito de compatibilidad, consulta [Editores compatibles](/es/guide/ide/supported-editors/).

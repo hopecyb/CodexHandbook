@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは調査系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 調査テンプレート
 description: 出典付きの調査と比較。
 locale: ja
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 調査テンプレート
 
 調査タスクと普通の Q&A の違いは、答えだけでなく**どこから来た答えか**も欲しいことです。
 
@@ -47,10 +51,3 @@ reviewed_at: 2026-08-26
 
 - [出典付き調査の事例](/ja/cases/research-with-sources/)
 - [検証](/ja/guide/verification/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは調査系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

@@ -1,166 +1,74 @@
 ---
-title: Planung
-description: "Zuerst Schritte, Risiken und Überprüfung klären lassen — dann entscheiden, ob ausgeführt wird."
-locale: de
-source_locale: zh-CN
-source_revision: 75099ef
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Planung: Ausführung und Prüfung klar benennen"
+description: "Nutze Pläne für Umfang, Abhängigkeiten und Entscheidungen, unterscheide Planung vom Warten und arbeite innerhalb bestehender Befugnisse weiter."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Diese Seite enthält Arbeitsmethoden, die mit Aufgabenklassifizierung und Berechtigungen abgeglichen wurden; sie behauptet weder ein Standardverhalten bestimmter Clients noch gemessene Effizienzgewinne."
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: 8696afd
+translation_status: draft
+translated_at: 2026-09-20
 ---
+Ein Plan beschreibt einen Ausführungsweg, den man prüfen und anpassen kann. Er macht Lücken bei Umfang, Abhängigkeiten und Abnahme früh sichtbar. Eine größere Aufgabe bedeutet aber nicht, dass man immer wieder auf Bestätigung warten muss.
 
-Bei „fang einfach an zu ändern“ passiert oft:
+Entscheide zunächst anhand der [Aufgabenklassifizierung](/de/prompts/ask-for-a-plan/): direkt erledigen, planen und dann innerhalb der erteilten Befugnis ausführen oder in dieser Runde nur einen Vorschlag liefern. Eine ausdrückliche Bitte um „erst einen Plan, keine Dateiänderungen“ bleibt lesend. Ein Implementierungsauftrag sollte nicht mit dem Plan allein enden.
 
-- falsche Route
-- zu großer Umfang
-- Risiken nicht vorab sichtbar
-- Überprüfung unzureichend
+## Ein ausreichend genauer Plan
 
-Planung holt „wie ich vorgehen will“ zuerst zur Ansicht.
-
-Sinn der Planung: „Ich dachte, du machst X“ wird zu einem **reviewbaren Zwischenartefakt**. Bei komplexen Aufgaben genehmigen Sie einen Ausführungspfad — nicht nur einen Start-Button.
-
-## Was „zuerst Plan“ bestätigt
-
-Zwei Dinge:
-
-- Ob das Ziel wirklich verstanden wurde
-- Ob Sie die vorgeschlagene Route tragen wollen
-
-## Was ein brauchbarer Plan mindestens enthält
-
-| Element | Rolle |
+| Bestandteil | Wie konkret? |
 |---|---|
-| Schritte | Reihenfolge, kein Blindstart |
-| Betroffene Dateien oder Umfang | Wirkungsfläche vorab |
-| Risiken und offene Punkte | Annahme nicht als Fakt |
-| Überprüfung | „Fertig“ beweisbar |
+| Ziel | Beobachtbares Verhalten nach Abschluss |
+| Umfang | Betroffene Dateien, Eingaben und Ausschlüsse |
+| Reihenfolge | Echte Abhängigkeiten statt jedes Tool-Aufrufs als Schritt |
+| Prüfung | Ausgaben oder Kontrollen als Nachweis |
+| Entscheidungen | Nur offene Fragen, die das Ergebnis beeinflussen |
 
-Nur „ändere A, dann B“ ohne Risiko und Überprüfung ist eher Todo-Liste als echter Plan.
+Für eine neue Datengruppierung in einem Bericht reicht etwa „Definitionen prüfen → Aggregation und Darstellung ändern → Summen und Gruppen an einem Beispiel abgleichen“. Nicht für jedes Lesen, Bearbeiten oder Testen ist eine eigene Genehmigung nötig.
 
-## Häufige Fallen
+## Zwei unterschiedliche Planungsanfragen
 
-### 1. Plan = Schritte auflisten?
-
-Brauchbare Pläne sagen auch:
-
-- Welche Dateien/Bereiche
-- Wo Unsicherheit
-- Wie Fertigstellung bewiesen wird
-
-### 2. Kleine Aufgaben brauchen nie Planung?
-
-Nicht absolut. Auch bei kleinen Änderungen, wenn:
-
-- Repo unbekannt
-- Freigabe/Berechtigungen involviert
-- Drift schwer rückholbar
-
-Trotzdem kurz stoppen und erklären lassen.
-
-### 3. Plan zuerst = nur Formalität?
-
-Nur wenn Sie nicht reviewen. Schauen Sie Umfang, Risiko und Überprüfung — dann entdecken Sie Abweichungen früher und sparen Nacharbeit.
-
-## Wann Planung Pflicht
-
-- Mehrere Dateien oder Module
-- Unvertrautes Repo
-- Menschliche Freigabe vor Ausführung
-- Mögliche Online- oder Teamregel-Wirkung
-- Gefühl: „wenn das daneben geht, schwer aufräumen“
-
-Kleine Copy-Änderungen brauchen keinen Formalplan; mittelgroße und große Aufgaben besser zuerst stoppen.
-
-## Unsicher? So entscheiden
-
-Fragen Sie:
-
-> **Wenn es jetzt direkt startet und danebenliegt — kann ich das schwer aufräumen?**
-
-Antwort „ja“ → zuerst Plan.
-
-## Empfohlene Plananfrage
-
-Zuerst Plan, nicht Start:
+**Lösung noch offen:**
 
 ```text
-Noch keine Dateien ändern. Bitte Plan auf Basis des aktuellen Repos mit:
-1. Zielverständnis
-2. Nummerierte Schritte
-3. Betroffene Dateien
-4. Risiken oder offene Punkte
-5. Überprüfung je Schritt
+Analysiere in dieser Runde nur lesend zwei Exportlösungen hinsichtlich Abhängigkeiten, Kompatibilität und Wartungskosten.
+Empfiehl eine Lösung und nenne die Entscheidungen, die ich treffen muss. Ändere die Implementierung nicht.
 ```
 
-Ausführlicher: [Zuerst einen Plan verlangen](/de/prompts/ask-for-a-plan/).
-
-## Was Sie reviewen
-
-Nicht nur „klingt richtig“, sondern:
-
-1. Echtes Ziel verstanden?
-2. Wirkungsbereich vernünftig?
-3. Offensichtliche Vorchecks übersprungen?
-4. Überprüfung reicht zum Beweis?
-
-Viele Nacharbeiten kommen von genehmigten unscharfen Plänen.
-
-Plan zuerst klärt Route und Risiko vor Dateiänderungen — günstiger.
-
-## Feedback zum Plan
-
-Nicht den ganzen Plan umschreiben — Abweichungen zeigen:
+**Umfang steht fest, Implementierung nötig:**
 
 ```text
-Schritt 1 behalten; Refactor in Schritt 2 noch nicht.
-DB-Änderung als eigenen Schritt.
-Rollback bei Fehlschlag ergänzen.
-Nur lesen/analysieren, noch keine Umsetzung.
+Setze den CSV-Export gemäß bestehenden Anforderungen um. Prüfe zuerst das Repository und erläutere einen kurzen Plan.
+Implementiere und prüfe danach innerhalb des vereinbarten Umfangs fortlaufend; warte nicht nach jedem Schritt.
+Falls ein neuer Dienst, eine Änderung der öffentlichen Schnittstelle oder mehr Datenzugriff nötig ist, erläutere zuerst den konkreten Grund.
 ```
 
-„Kleine Kurskorrektur“ ist meist effizienter als „alles neu“.
+Dies sind Beispiele des Handbuchs. Ob eine Genehmigungsabfrage erscheint, hängt von den tatsächlichen Tools, Richtlinien und Berechtigungen ab.
 
-## Grenze Plan vs. Ausführung
+## Während der Ausführung anpassen
 
-Wichtige Kollaborationsgewohnheit:
+- Gewöhnliches Implementierungsdetail: Plan aktualisieren und innerhalb des genehmigten Umfangs weiterarbeiten.
+- Ursprüngliche Annahme falsch: Beleg und Auswirkung erläutern und eine Alternative im Umfang anbieten.
+- Entscheidung liegt beim Nutzer: konkret fragen und unabhängige Arbeit fortsetzen.
+- Nicht autorisierte externe Aktion: prüfbares Ergebnis vorbereiten und vor der Aktion die entsprechende Befugnis einholen.
 
-- **Planphase**: explorieren, Optionen, Unsicherheit sichtbar machen
-- **Ausführungsphase**: bestätigten Pfad vorantreiben
+Ein möglicherweise auftretendes Problem ist kein Grund, die Arbeit einzustellen. Ein tatsächlicher Umfangswechsel darf aber auch nicht zugunsten des Plans ignoriert werden.
 
-Ändern sich Prämissen unterwegs → zurück zur Planung, nicht durchbrechen. Siehe [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/).
+## Rückmeldung zu einem Plan
 
-## Hochrisiko-Pläne brauchen drei Zusatzpunkte
+```text
+Behalte Schritte 1 und 2, streiche aber das Refactoring.
+Erstelle diesmal nur eine lokale Vorschau; veröffentliche nichts.
+Ergänze als Abnahmebedingung: Das alte Dateiformat lässt sich weiterhin lesen.
+```
 
-Wenn eine Aufgabe viele Dateien, externe Systeme, Berechtigungen, Automatisierungsskripte oder Teamregeln berührt, sollte der Plan zusätzlich enthalten:
+Rückmeldung ändert nur ausdrücklich Betroffenes. Nicht zurückgenommene Grenzen und Abschlusskriterien bleiben gültig. Bei Unterbrechung gehören aktuelle Dateien, erledigte Prüfungen und nächster Schritt in die [Übergabenotiz](/de/guide/agent-work/handoff-and-resume/).
 
-| Zusatzpunkt | Warum wichtig |
-|---|---|
-| Berechtigungsgrenze | Was nur lesend ist und was menschliche Bestätigung braucht |
-| Wiederherstellung | Wie man bei falscher Richtung in einen sicheren Zustand zurückkehrt |
-| Stufenweiser Rollout | Erst in Testordner, Beispielprojekt oder kleinem Umfang prüfen |
+## Zum Schluss die Belege prüfen
 
-Fordern Sie Phasen an: nur lesende Analyse, minimale Änderung, Verifikation, Rollback. Externe oder massenhafte Schreibaktionen zuerst auflisten, nicht direkt ausführen.
-
-## Häufige Fehler
-
-- Plan ohne Überprüfung
-- Ohne Bestätigung von Plan zu Ausführung
-- Mehrere unabhängige Ziele in einem Plan
-- Statt Bestätigung nur „ich fange an“
-
-## Empfohlene Kombinationen
-
-- Vollständige Hauptkette: [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
-- Prompt klar: [Zuerst einen Plan verlangen](/de/prompts/ask-for-a-plan/)
-- Korrektur unterwegs: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/)
-- Langfristige Normen: [Was ist AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/)
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Beschreibung von Codex „verstehen → planen → ausführen und prüfen“ sowie verifizierte Prompt-, Qualitäts- und Workflow-Kapitel; stabile Planungsmethoden, keine volatilen Versionsparameter.  
-**Zuletzt geprüft:** 2026-07-26
+Prüfe, ob das Ziel tatsächlich erreicht wurde, statt nur alle Schritte abzuhaken. Nicht gelaufene Tests, ungeprüfte Vorschauen und ungeklärte Fakten müssen genannt werden. Der vollständige Ablauf steht unter [Erkunden → Planen → Ausführen → Prüfen](/de/cases/workflows/explore-plan-execute-verify/).

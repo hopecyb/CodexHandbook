@@ -3,7 +3,7 @@ title: Artifact-first work
 description: Agree on final artifact shape and path first, then derive steps—good for docs, config, reports, and other deliverables.
 locale: en
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

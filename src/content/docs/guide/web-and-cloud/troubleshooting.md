@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud 排障
 description: 按仓库、setup、网络、Agent 与交付五层定位 Cloud 失败。
 sidebar:
@@ -70,11 +74,3 @@ Cloud 重试会重新消耗时间，但不会自动补齐缺失的权限、依�
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud
-
-**最近核验：** 2026-08-26

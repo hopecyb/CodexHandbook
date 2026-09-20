@@ -3,7 +3,7 @@ title: Chẩn đoán trước khi sửa
 description: Sự cố production và bug cứng đầu — dựng chuỗi bằng chứng trước, rồi mới động dao.
 locale: vi
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de compreensão; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de compreensão
 description: Construa compreensão primeiro; só depois altere.
 locale: pt
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de compreensão
 
 Muitas tarefas emperram porque ainda não há compreensão partilhada mínima.
 
@@ -55,10 +59,3 @@ O valor deste template é fechar primeiro o alcance da próxima tarefa.
 
 - [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
 - [Caso: entender um código-base](/pt/cases/understand-a-codebase/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de compreensão; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

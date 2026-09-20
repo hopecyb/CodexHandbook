@@ -3,7 +3,7 @@ title: Secrets et variables d'environnement
 description: Choisissez correctement entre les Secrets de setup Cloud et les variables ordinaires disponibles pendant toute la conversation.
 locale: fr
 source_locale: zh-CN
-source_revision: 08f8d64
+source_revision: 78937be
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

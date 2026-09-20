@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "Cross-checked against current webhooks subsection structure and entry links in this repo; this page only describes webhooks as event triggers in integration, without fixing event fields or implementation contracts."
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: Event-driven integration—webhooks receive notifications; they do not replace workflow design.
 locale: en
 source_locale: zh-CN
-source_revision: b718fb3
+source_revision: 68cb29b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -25,10 +30,3 @@ In Codex integration, it answers “when an external event arrives, how do we tr
 - Why a webhook is only a trigger, not a full automation design
 
 A webhook is like a doorbell—it says “something happened”; you still connect the workflow.
-
----
-
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against current webhooks subsection structure and entry links in this repo; this page only describes webhooks as event triggers in integration, without fixing event fields or implementation contracts.  
-**Last verified:** 2026-07-26

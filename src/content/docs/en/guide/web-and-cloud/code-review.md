@@ -3,7 +3,7 @@ title: Code review in Cloud and GitHub
 description: Review a Cloud diff and use Codex on GitHub as a high-signal supplementary reviewer.
 locale: en
 source_locale: zh-CN
-source_revision: a74296a
+source_revision: ea6796a
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

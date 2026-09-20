@@ -3,7 +3,7 @@ title: Tableaux et tableurs
 description: Lire, nettoyer, analyser et exporter CSV, Excel et données tabulaires — sans casser la structure ou l'encodage.
 locale: fr
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

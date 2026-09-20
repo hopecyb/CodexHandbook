@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "当前 Codex 运行时仍支持项目内技能目录、以 `SKILL.md` 定义技能，以及显式调用进行试跑；本页是首个 Skill 的稳定入门练习。"
+  checkedAt: "2026-07-26"
 title: 创建第一个 Skill
 description: 从零做一个可提交的 pr-review Skill，含测试与团队共享步骤。
 ---
@@ -142,9 +147,3 @@ git commit -m "docs: add pr-review skill for Codex"
 
 ## 参考来源
 - OpenAI Codex Skills 官方示例与 `skill-creator`（若环境提供）
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 当前 Codex 运行时仍支持项目内技能目录、以 `SKILL.md` 定义技能，以及显式调用进行试跑；本页是首个 Skill 的稳定入门练习。  
-**最近核验：** 2026-07-26

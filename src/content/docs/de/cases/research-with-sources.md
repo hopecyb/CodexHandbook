@@ -3,7 +3,7 @@ title: Recherche mit Quellen
 description: Mit Codex suchen, vergleichen und Fakten prüfen — nachvollziehbare Quellen und Schlussfolgerungen liefern.
 locale: de
 source_locale: zh-CN
-source_revision: ba7014d
+source_revision: feadad6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

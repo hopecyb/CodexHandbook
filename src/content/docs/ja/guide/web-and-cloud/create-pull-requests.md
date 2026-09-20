@@ -3,7 +3,7 @@ title: Pull Request を作成する
 description: Cloud の結果を、レビューと検証が可能で自動 merge されない PR として引き渡します。
 locale: ja
 source_locale: zh-CN
-source_revision: 70996a7
+source_revision: 39371d4
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

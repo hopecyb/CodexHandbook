@@ -31,44 +31,70 @@ hero:
         </div>
       </div>
   actions:
-    - text: 从这里开始
+    - text: 做一份可核对的周报
       icon: right-arrow
+      link: /cases/analyze-a-spreadsheet/
+    - text: 从这里开始
+      variant: secondary
       link: /guide/start-here/
-    - text: 在 GitHub 上查看
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="手册定位">
-	<p>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为个人和团队的 AI Agent 执行伙伴。</p>
-	<p>本手册不追求堆积功能说明，而是关注一条可复用的工作链：明确目标，提供上下文，设置边界，让 Agent 执行，检查结果，再把经验沉淀成模板、Skill 或案例。</p>
+<section class="home-section" aria-labelledby="tasks-heading">
+	<div class="section-heading">
+		<p>选一个任务，带走一份成果</p>
+		<h2 id="tasks-heading">今天想完成什么？</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/cases/analyze-a-spreadsheet/">
+			<strong>做一份销售周报</strong>
+			<span>完整材料 · 参考脚本已实跑。用 46 行合成数据练习退款、去重与环比，交付周报和核对台账。</span>
+		</a>
+		<a class="path-card" href="/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>修复一个 Bug 并通过测试</strong>
+			<span>完整练习 · 含历史验证记录。从失败测试出发，交付最小修复、回归结果和审查说明。</span>
+		</a>
+		<a class="path-card" href="/cases/write-an-article/">
+			<strong>写一篇文章</strong>
+			<span>完整材料 · 作者来源自检。用三份合成资料练习事实引用、版本冲突与修订，交付文章和事实表。</span>
+		</a>
+	</div>
+	<p>周报参考成果：本期净额 <strong>4,644.75 元</strong>，含退款与异常说明。<a href="/downloads/sales-weekly-report/summary.md">查看参考周报</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">下载完整材料</a>。数字来自合成教学数据，预计练习 30—45 分钟，尚未经过读者计时测试。</p>
+	<p><a href="/cases/">按任务查看案例与材料状态</a> · <a href="/guide/learning-paths/">按角色学习</a> · <a href="/guide/reference/">查参考手册</a></p>
 </section>
 
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>四个模块</p>
-		<h2 id="modules-heading">四个模块，各自解决一个关键问题</h2>
+		<p>选择你的路径</p>
+		<h2 id="paths-heading">按你的目标开始</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/guide/">
-			<strong>Codex 指南</strong>
-			<span>理解能力边界，选择入口，安全完成任务并验收结果。</span>
+	<div class="path-grid">
+		<a class="path-card" href="/guide/learning-paths/beginner/01-talk-to-codex/">
+			<strong>初学者</strong>
+			<span>用同一套下载材料完成活动通知、错误复核和副本恢复。无需编程，每步都有验收标准。</span>
 		</a>
-		<a class="module-card" href="/prompts/">
-			<strong>提示词</strong>
-			<span>把目标、背景、约束和完成标准写成可执行、可调试的任务说明。</span>
+		<a class="path-card" href="/guide/learning-paths/creator/">
+			<strong>创作者</strong>
+			<span>用同一组资料完成事实表、文章、八页演示稿，再保存可复用的任务说明。含下载材料与逐步验收。</span>
 		</a>
-		<a class="module-card" href="/skills/">
-			<strong>Skills</strong>
-			<span>把稳定工作流封装成可复用能力，并管理权限、安全边界与测试。</span>
+		<a class="path-card" href="/guide/learning-paths/developer/">
+			<strong>开发者</strong>
+			<span>读懂一个购物车 Bug，保存红绿测试，审查最小修复，再写交接记录。含三份可填写模板。</span>
 		</a>
-		<a class="module-card" href="/cases/">
-			<strong>实战案例</strong>
-			<span>沿着目标、提示、执行、纠偏、验收和复盘学习完整链路。</span>
+		<a class="path-card" href="/guide/learning-paths/team/">
+			<strong>团队</strong>
+			<span>用十个工作日完成小范围试点、抽检和回退演练，再决定是否推广。含六份可填写模板。</span>
 		</a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>遇到问题，直接查</p><h2 id="lookup-heading">找到下一步操作</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/guide/reference/troubleshooting/"><strong>安装、登录或执行失败</strong><span>按症状找到排查入口，或跟做带日志的恢复练习。</span></a>
+		<a class="path-card" href="/guide/reference/"><strong>查命令、权限与术语</strong><span>进入参考目录，核对适用范围和来源。</span></a>
+		<a class="path-card" href="/guide/verification/"><strong>判断结果是否完成</strong><span>检查事实、文件和测试证据，保留尚未确认的问题。</span></a>
 	</div>
 </section>
 
@@ -85,75 +111,10 @@ import AboutHandbook from '../../components/AboutHandbook.astro';
 	</div>
 </section>
 
-<section class="home-section" aria-labelledby="paths-heading">
-	<div class="section-heading">
-		<p>选择你的路径</p>
-		<h2 id="paths-heading">按你的目标开始</h2>
-	</div>
-	<div class="path-grid">
-		<a class="path-card" href="/guide/learning-paths/beginner/01-talk-to-codex/">
-			<strong>初学者</strong>
-			<span>认识 Codex、完成第一次任务、学会检查和撤回结果。</span>
-		</a>
-		<a class="path-card" href="/guide/learning-paths/creator/">
-			<strong>创作者</strong>
-			<span>研究、写作、图片、演示与发布的起步指南与模板。（更多步骤持续更新）</span>
-		</a>
-		<a class="path-card" href="/guide/learning-paths/developer/">
-			<strong>开发者</strong>
-			<span>理解代码库、实现需求、测试、审查与复杂任务处理。（更多步骤持续更新）</span>
-		</a>
-		<a class="path-card" href="/guide/learning-paths/team/">
-			<strong>团队</strong>
-			<span>共享说明、权限边界、质量标准与团队自动化。（更多步骤持续更新）</span>
-		</a>
-	</div>
-</section>
+<AboutHandbook title="来源、更新与共建">
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>能力地图</p>
-		<h2 id="map-heading">你会逐步掌握这些能力</h2>
-	</div>
-	<ul>
-		<li><span>01</span> 写出目标清楚、边界明确、可验收的任务提示词</li>
-		<li><span>02</span> 管理文件、上下文、终端、浏览器和外部资料</li>
-		<li><span>03</span> 使用 Skills、Plugins、MCP 和 Hooks 扩展 Codex</li>
-		<li><span>04</span> 组织长任务、多 Agent 协作、复盘和交接</li>
-		<li><span>05</span> 在个人项目与团队场景中建立安全、验证和治理机制</li>
-	</ul>
-</section>
+手册由开源贡献者维护，以简体中文为源语言。产品说明、作者设计的教学材料和实际运行记录分别标注；脚本通过不等于模型效果或读者通关。核验范围见各页记录。
 
-<section class="home-section home-evidence" aria-labelledby="evidence-heading">
-	<div class="section-heading">
-		<p>可引用信息</p>
-		<h2 id="evidence-heading">Codex 指南手册适合谁？</h2>
-	</div>
-	<div class="evidence-grid">
-		<section aria-labelledby="evidence-beginners">
-			<h3 id="evidence-beginners">第一次使用 Codex 应该先读什么？</h3>
-			<p>如果你刚开始接触 Codex，建议先从术语、客户端选择、权限边界和第一次任务开始。手册把这些内容拆成短章节，避免一上来就陷入模型、终端、配置文件和团队规则的细节。</p>
-		</section>
-		<section aria-labelledby="evidence-teams">
-			<h3 id="evidence-teams">团队如何把 Codex 用得更稳定？</h3>
-			<p>团队读者可以优先关注项目说明、审批边界、代码审查、验证标准和安全治理。每个工作流都强调可复核结果、明确交接和人工确认，帮助协作者把经验沉淀到仓库或团队文档里。</p>
-		</section>
-		<section aria-labelledby="evidence-sources">
-			<h3 id="evidence-sources">内容依据来自哪里？</h3>
-			<p>手册会把产品事实与实践建议分开：产品能力以 <a href="https://developers.openai.com/codex">OpenAI Codex 官方文档</a>、<a href="https://help.openai.com/">OpenAI Help Center</a> 和仓库内核验记录为主要依据；方法类内容来自真实任务复盘、示例提示词和可重复执行的 Skills 工作流。</p>
-		</section>
-		<section aria-labelledby="evidence-author">
-			<h3 id="evidence-author">谁维护这份手册？</h3>
-			<p>Codex 指南手册由开源贡献者维护，源内容以简体中文编写，并通过 GitHub 记录修改历史。页面会标注核验日期、翻译状态和适用范围，便于读者判断内容是否需要再次复核。</p>
-		</section>
-	</div>
-	<p class="home-evidence__meta">作者：Codex Handbook contributors · 首次发布：2026-07-26 · 最近更新：2026-08-01</p>
-</section>
-
-<AboutHandbook title="开源共建">
-
-手册以简体中文为源语言，后续会持续扩展繁体中文、英语、法语、日语、韩语等版本。内容会标注状态、核验日期和适用产品，让读者知道哪些内容可以直接照做，哪些内容需要复核。
-
-[浏览学习路径](/guide/learning-paths/)
+[内容更新](/guide/updates/) · [版本与验证方式](/guide/start-here/handbook-version-policy/) · [参与贡献](/guide/contributing/)
 
 </AboutHandbook>

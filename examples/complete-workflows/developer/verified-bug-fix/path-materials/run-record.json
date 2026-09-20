@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-09-18",
+  "node": "v22.16.0",
+  "system": "Darwin",
+  "machine": "arm64",
+  "runs": [
+    {
+      "folder": "starter",
+      "command": "node --test starter/cart.test.js",
+      "exitCode": 1,
+      "tests": 3,
+      "pass": 2,
+      "fail": 1
+    },
+    {
+      "folder": "solution",
+      "command": "node --test solution/cart.test.js",
+      "exitCode": 0,
+      "tests": 3,
+      "pass": 3,
+      "fail": 0
+    }
+  ],
+  "identicalTests": true,
+  "scope": "作者重新运行参考练习；不是读者测试或独立人工审查",
+  "pathRehearsal": {
+    "location": "temporary isolated directory",
+    "testExitCodes": [
+      1,
+      0
+    ],
+    "implementationAndTestDiffExitCodes": [
+      1,
+      0
+    ],
+    "starterUnchanged": true,
+    "matchesReferenceSolution": true,
+    "scope": "作者按路径创建副本、执行最小修复和命令；未包含独立读者交接"
+  }
+}

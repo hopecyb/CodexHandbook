@@ -3,7 +3,7 @@ title: Threat Model
 description: Main risk surfaces for Codex in team environments—data, tools, extensions, and supply chain.
 locale: en
 source_locale: zh-CN
-source_revision: 4e63649
+source_revision: 4ec320d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -1,140 +1,130 @@
 ---
 title: Modo não interativo
-description: Integrar com scripts e pipelines via codex exec — adequado a CI, tarefas agendadas e automação.
+description: Integra o Codex com scripts e pipelines através de codex exec, para CI, tarefas agendadas e automação.
 locale: pt
 source_locale: zh-CN
-source_revision: a1cefbe
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 1f37961
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
+O modo não interativo permite que o Codex conclua uma tarefa **sem uma conversa num TTY**. É a entrada para quem quer usar um Agent em scripts e CI.
 
-Non-interactive mode lets Codex complete a task **without a TTY conversation**. It is the developer entry point for scripts and CI.
+Em vez de uma conversa com várias trocas, entregas a tarefa completa para execução de uma só vez. Funciona mais como uma invocação por comando.
 
-Instead of a back-and-forth chat, you submit the entire task for one command-style run.
+## Nesta página
 
-## What this page covers
+- Quando usar o modo não interativo em vez de uma sessão interativa de `codex`
+- Que requisitos adicionais de segurança e aprovação se aplicam a trabalho sem supervisão
+- Como se relaciona com a [configuração](/pt/guide/cli/configuration/)
 
-- When to use non-interactive execution instead of an interactive `codex` session.
-- Additional safety and approval requirements for unattended work.
-- Its relationship to [configuration](/pt/guide/cli/configuration/).
+## Cenários adequados
 
-## Suitable tasks
-
-| Suitable | Unsuitable |
+| Adequado | Inadequado |
 |---|---|
-| Fixed review prompt in CI | Requirements need multiple clarification rounds |
-| Nightly documentation link check | Exploratory refactoring |
-| Code generation from a predefined template | Ambiguous product decisions |
+| Executar em CI um prompt de revisão fixo | Requisitos que precisam de várias rondas de esclarecimento |
+| Verificação noturna de links da documentação | Refatoração exploratória |
+| Gerar código a partir de um modelo predefinido | Decisões de produto muito ambíguas |
 
-## Core model
+## Conceito principal
 
-A non-interactive run normally:
+Uma execução não interativa normalmente:
 
-1. receives a **complete task description** from arguments or stdin;
-2. runs in a specified working directory;
-3. reports process success or failure through an exit code;
-4. emits logs or structured output for downstream consumers.
+1. Recebe uma **descrição completa da tarefa** por argumentos ou stdin.
+2. Executa no diretório de trabalho indicado.
+3. Usa o código de saída para indicar sucesso ou falha.
+4. Produz registos ou resultados estruturados para etapas posteriores.
 
-The current entry point is `codex exec`. After an upgrade, rerun `codex exec --help` to verify every flag used by scripts.
+A entrada não interativa atual é `codex exec`. Depois de atualizares a CLI, volta a executar `codex exec --help` para confirmar os parâmetros utilizados pelos scripts.
 
-## Minimal working example
+## Exemplo mínimo funcional (ilustrativo)
 
 ```bash
-# Run one read-only review at the repository root
-codex exec --cd . "List security risks in the diff against main; do not modify files"
+# Executar uma revisão só de leitura na raiz do repositório
+codex exec --cd . "Lista os riscos de segurança no diff em relação a main; não alteres ficheiros"
 ```
 
-`codex exec` uses a read-only sandbox by default. Progress is written to `stderr`, while the final Agent response goes to `stdout`, so you can redirect only the final result:
+Por predefinição, `codex exec` usa uma sandbox só de leitura. Durante a execução, o progresso vai para `stderr` e a resposta final do Agent vai para `stdout`. Por isso, podes redirecionar o resultado final para uma etapa seguinte:
 
 ```bash
-codex exec --cd . "Write release notes for the last 10 commits" > release-notes.md
+codex exec --cd . "Cria notas de lançamento para os últimos 10 commits" > release-notes.md
 ```
 
-Practical guidance:
+Sugestões práticas:
 
-- In a shell script, `cd` to a clean worktree first.
-- Put the task in a heredoc or versioned `prompts/` file.
-- Capture the exit code and fail CI when the process fails.
+- Num script shell, faz primeiro `cd` para uma cópia de trabalho limpa.
+- Guarda a tarefa num heredoc ou num ficheiro `prompts/` com controlo de versões.
+- Captura o código de saída e faz o CI falhar quando o processo falhar.
 
-## Safety design
+## Segurança
 
-Unattended means **you are not present to deny an action**:
+Sem supervisão significa **que não estás presente para recusar uma ação**:
 
-| Principle | Implementation |
+| Princípio | Prática |
 |---|---|
-| Least privilege | Read-only token and constrained sandbox |
-| No push | CI opens a PR or uploads an artifact |
-| Fixed prompt | Do not concatenate unsanitized PR text directly into the prompt |
-| Audit | Preserve logs and diff artifacts |
+| Privilégio mínimo | Token só de leitura e sandbox limitada |
+| Sem push | O CI apenas abre um PR ou carrega um artifact |
+| Prompt fixo | Não concatenar diretamente texto não sanitizado da descrição de um PR, devido ao risco de injeção |
+| Auditoria | Conservar registos e artifacts de diff |
 
-See [Human approval patterns](/pt/cases/workflows/human-approval-patterns/) and the `08-developer-platform/non-interactive/` roadmap section.
+Consulta [Padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/) e a secção `08-developer-platform/non-interactive/` do roteiro.
 
-## Interactive comparison
+## Comparação com o modo interativo
 
-| | Interactive | Non-interactive |
+| | Modo interativo | Modo não interativo |
 |---|---|---|
-| Entry | `codex` TUI | `exec` / pipeline |
-| Human in the loop | Strong | Weak; design beforehand |
-| Good for learning | Yes | No |
-| Good for CI | No | Yes |
+| Entrada | TUI `codex` | `exec` / pipeline |
+| Participação humana | Forte | Fraca; deve ser planeada antes |
+| Adequado para aprender | Sim | Não |
+| Adequado para CI | Não | Sim |
 
-See [CLI interactive mode](/pt/guide/cli/interactive-mode/).
+Uso interativo: [Modo interativo da CLI](/pt/guide/cli/interactive-mode/).
 
-## Convert an interactive task
+## Converter uma tarefa interativa
 
-Do not paste a whole chat history into a script. Compress it into a small specification:
+Não coloques todo o histórico de uma conversa num script. É mais seguro condensá-lo numa pequena especificação:
 
-| Element | What to state |
+| Elemento | O que escrever |
 |---|---|
-| Goal | The single outcome |
-| Input | Files, diff, logs, or stdin to read |
-| Prohibitions | No edits, internet, push, or CI interruption |
-| Output | Text summary, JSON, report file, or exit result |
-| Acceptance | Commands that must pass and strings that must not appear |
+| Objetivo | O que esta execução deve fazer, e só isso |
+| Entradas | Que ficheiros, diff, registos ou stdin deve ler |
+| Proibições | Não alterar ficheiros, não aceder à Internet, não fazer push, não interromper CI, etc. |
+| Saída | Resumo de texto, JSON, ficheiro de relatório ou código de saída |
+| Aceitação | Que comandos têm de passar e que termos não podem aparecer |
 
-A non-interactive prompt should read like a work order: clear boundary, complete input, explicit failure conditions. Keep tasks that still require product judgment, design tradeoffs, or permission decisions interactive.
+Um prompt não interativo deve parecer uma tarefa bem especificada: limites claros, entradas completas e condições de falha explícitas. Se ainda for necessário decidir sobre o produto, escolher um design ou confirmar permissões, mantém a tarefa no modo interativo.
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. It is more efficient, so should beginners learn it first?
+### 1. É mais eficiente; devo aprendê-lo primeiro?
 
-No. It runs quickly with little room for clarification.
+Não é aconselhável. Para quem começa, o modo não interativo costuma ser demasiado rápido e rígido, com pouco espaço para esclarecer a tarefa durante a execução.
 
-### 2. What is the main difference?
+### 2. Qual é a principal diferença em relação ao modo interativo?
 
-- **Interactive:** ask, adjust, and approve during the run.
-- **Non-interactive:** execute once from a predefined specification.
+A distinção essencial é:
 
-### 3. When should I avoid it?
+- **Modo interativo**: ainda podes perguntar, ajustar e aprovar durante a execução.
+- **Modo não interativo**: aproxima-se de uma execução única, adequada a processos previamente definidos.
 
-Wait if you:
+### 3. Em que casos devo evitá-lo por enquanto?
 
-- are still learning to write a task;
-- do not know how to accept the result;
-- lack a basic model of approvals, sandboxing, and permissions.
+Se ainda estás numa destas fases, espera:
 
-Use non-interactive mode for automation after interactive workflows are familiar.
+- Ainda não sabes formular bem um prompt.
+- Ainda não sabes como aceitar ou rejeitar um resultado.
+- Ainda não tens noções básicas de aprovações, sandbox e permissões.
 
-## Common mistakes
+O modo não interativo é útil para automação, mas não para as primeiras experiências. Aprende primeiro a usar bem o modo interativo e só depois integra-o em scripts.
 
-- Pasting an interactive session's full history into one exec call.
-- Giving CI production credentials and write access.
-- Leaving the CLI version unpinned so pipeline behavior changes unexpectedly.
+## Erros frequentes
 
-## Reference
+- Copiar integralmente o longo histórico de uma sessão interativa para uma única chamada `exec`.
+- Dar ao CI credenciais de produção e permissões de escrita.
+- Não fixar a versão da CLI, permitindo que o comportamento do pipeline mude inesperadamente.
 
-- OpenAI Codex CLI documentation
+## Fonte de referência
 
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Verification basis:** Compared with current Non-interactive mode documentation for `codex exec`, `--cd`, the default read-only sandbox, `stderr` progress, and `stdout` final response.
-
-**Last verified:** 2026-08-26
+- Documentação da CLI do OpenAI Codex

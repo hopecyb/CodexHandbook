@@ -1,0 +1,14 @@
+{
+  "description": "合成回归场景：错误暂存后在工作树恢复，最终工作树与 HEAD 相同，但暂存提交仍有错误。",
+  "base_files": {
+    "cart.py": "def total(amount, percent):\n    return amount * (1 - percent / 100)\n",
+    "notes.md": "base-note\n"
+  },
+  "branch_file": "notes.md",
+  "branch_content": "branch-only-note\n",
+  "staged_file": "cart.py",
+  "staged_content": "def total(amount, percent):\n    return amount * (1 - percent)\n",
+  "unstaged_content": "def total(amount, percent):\n    return amount * (1 - percent / 100)\n",
+  "untracked_file": "new file.md",
+  "untracked_content": "Synthetic new file requiring separate review.\n"
+}

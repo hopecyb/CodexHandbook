@@ -1,42 +1,53 @@
 ---
+prev: false
+next:
+  link: /vi/guide/learning-paths/beginner/01-talk-to-codex/
+  label: Bắt đầu lộ trình người mới
 title: Lộ trình học
 description: Sắp xếp thứ tự đọc theo vai trò và liên kết tới nội dung chính thức.
 sidebar:
   order: 5
 locale: vi
 source_locale: zh-CN
-source_revision: 05e85de
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f14e3a0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Lộ trình học **chỉ sắp xếp thứ tự**, không sao chép bài dài của sổ tay sản phẩm hay chuyên đề năng lực.
+Lộ trình học **chỉ sắp xếp thứ tự đọc**, không sao chép các bài dài của sổ tay sản phẩm hay hướng dẫn tính năng.
 
-Lần đầu thấy chương «Lộ trình học», có thể cảm giác chỉ thêm một lớp mục lục. Nó chủ yếu trả lời: bạn hiện giống loại người dùng nào nhất, tiếp theo nên đọc theo thứ tự nào.
+Lần đầu xem chương này, bạn có thể nghĩ đây chỉ là thêm một lớp mục lục. Mục đích của nó là giúp bạn xác định mình hiện giống nhóm người dùng nào nhất và nên đọc tiếp theo thứ tự nào.
 
-Chương này không bổ sung kiến thức mới; chủ yếu giúp bạn ít đi đường vòng.
+Chương này không thêm kiến thức sản phẩm mới; nó giúp bạn bớt đi đường vòng.
 
-## Chương này đang làm gì
+## Chương này làm gì
 
-- Tôi là người mới, người sáng tạo, nhà phát triển hay người đẩy đội — nên đi đường nào
-- Thứ tự đọc của các vai trò khác nhau thế nào
-- Nội dung nào đáng đọc ngay, cái nào để sau
+- Giúp người mới, người sáng tạo, nhà phát triển và người phụ trách nhóm chọn lộ trình
+- Cho thấy thứ tự đọc khác nhau theo vai trò
+- Phân biệt nội dung nên đọc ngay với nội dung có thể để sau
 
-## Lộ trình MVP dùng được
+## Lộ trình người mới với bộ tài liệu cố định
 
-- **Người mới (đủ năm bước)**
+[Tải cùng một bộ tài liệu luyện tập thông báo sự kiện](/downloads/first-project/first-project-1.0.0.zip), rồi hoàn thành thông báo, kiểm tra và biên bản khôi phục qua năm bước. Không cần lập trình. Chưa có người đọc độc lập hoàn thành và kiểm chứng toàn bộ lộ trình.
+
+- **Người mới (năm bước)**
   1. [Trò chuyện với Codex](/vi/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [Làm việc với tệp](/vi/guide/learning-paths/beginner/02-work-with-files/)
-  3. [Giao Tác vụ rõ ràng](/vi/guide/learning-paths/beginner/03-give-clear-tasks/)
+  3. [Giao tác vụ rõ ràng](/vi/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [Xem xét kết quả](/vi/guide/learning-paths/beginner/04-review-results/)
   5. [Hoàn thành dự án nhỏ đầu tiên](/vi/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Tổng quan (bước sâu sẽ bổ sung sau)
+## Lộ trình thực hành cho người sáng tạo
 
-- [Người sáng tạo](/vi/guide/learning-paths/creator/)
-- [Nhà phát triển](/vi/guide/learning-paths/developer/)
-- [Đội](/vi/guide/learning-paths/team/)
+[Lộ trình người sáng tạo](/vi/guide/learning-paths/creator/) có bốn mốc liên tiếp: tài liệu và bảng dữ kiện → bài viết có nguồn → bản trình chiếu tám trang có thể chỉnh sửa → bản mô tả tác vụ có thể tái sử dụng. Bài viết và bản trình chiếu có bộ tài liệu tải xuống riêng; mỗi bước có điều kiện hoàn thành. Chưa có người đọc độc lập hoàn thành và kiểm chứng toàn bộ lộ trình.
+
+## Lộ trình thực hành cho nhà phát triển
+
+[Lộ trình nhà phát triển](/vi/guide/learning-paths/developer/) dùng lại bài tập lỗi giỏ hàng: đọc mã → sửa và kiểm thử → xem diff → chuẩn bị bàn giao. Lộ trình cung cấp ba mẫu có thể điền và ví dụ tham chiếu của tác giả. Các bài kiểm thử tham chiếu đã được chạy lại; việc người đọc độc lập hoàn thành lộ trình vẫn chưa được kiểm chứng.
+
+## Lộ trình nhóm: thử nghiệm hai tuần và quyết định triển khai
+
+- [Nhóm](/vi/guide/learning-paths/team/): điều lệ → xác minh thủ công → kiểm tra mẫu → diễn tập quay lui → quyết định triển khai, tiếp tục hoặc dừng; kèm sáu mẫu.
 
 ## Lộ trình người vận hành nâng cao
 
@@ -80,10 +91,3 @@ Nếu chưa chắc đi lộ trình nào, chọn theo cách này:
 - Chủ yếu nghĩ đội triển khai thế nào, kiểm soát rủi ro thế nào: xem [Lộ trình đội](/vi/guide/learning-paths/team/)
 
 Lộ trình học chính là quyết định đọc gì tiếp theo theo «vấn đề quan trọng nhất lúc này».
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc thư mục learning paths hiện tại, trang lối vào từng vai trò và lộ trình từng bước cho người mới trong kho này; trang chỉ đóng vai trò điều hướng «sắp xếp thứ tự đọc theo vai trò», không chứa chi tiết hành vi sản phẩm dễ biến đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

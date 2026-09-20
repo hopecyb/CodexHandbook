@@ -1,0 +1,8 @@
+{
+  "file": "starter/sales.csv",
+  "sha256": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80",
+  "rows": 46,
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "synthetic": true
+}

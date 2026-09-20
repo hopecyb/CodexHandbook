@@ -3,7 +3,7 @@ title: Konfiguration
 description: "Einstiegsseite zu Config und Profiles: welche Verhaltensweisen in die Config gehören — und welche nicht."
 locale: de
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

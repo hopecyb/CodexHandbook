@@ -1,15 +1,16 @@
 ---
 title: Hướng dẫn Codex
+prev: false
+next:
+  link: /vi/guide/start-here/
+  label: Bắt đầu từ đây
 description: "Nhận biết Codex, chọn client, hoàn thành tác vụ đầu tiên, và hiểu quyền, ngữ cảnh cùng kiểm chứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Hướng dẫn Codex
 
 Ở đây giúp bạn hiểu Codex là gì, phù hợp làm gì, và cách chuyển dần từ lần dùng đầu tiên sang quy trình làm việc ổn định.
 
@@ -23,6 +24,12 @@ Bạn không cần hiểu hết mọi thuật ngữ, sản phẩm và quy trình
 - Tôi nên chọn client nào trước
 - Xong tác vụ đầu tiên rồi, bước tiếp theo nên bổ sung năng lực gì
 - Khi gặp vấn đề về quyền, ngữ cảnh, kiểm chứng thì quay lại chương nào
+
+## Tài liệu có thể sử dụng
+
+- [Danh sách an toàn cho người mới](/vi/guide/getting-started/beginner-safety-checklist/)
+- [Cách chọn ứng dụng khách](/vi/guide/choose-your-client/)
+- [Xác minh kết quả và tiêu chí hoàn thành](/vi/guide/verification/)
 
 ## Thứ tự gợi ý
 

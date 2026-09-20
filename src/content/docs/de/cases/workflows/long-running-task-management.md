@@ -3,7 +3,7 @@ title: Lange Aufgaben verwalten
 description: "Große Aufgaben über Stunden oder mehrere Sitzungen — Prüfpunkte, Komprimierung, Delegation und Exit-Kriterien."
 locale: de
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

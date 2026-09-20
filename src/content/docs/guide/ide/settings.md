@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: IDE 扩展设置
 description: 区分共享 Agent 配置与 VS Code 系编辑器行为设置。
 sidebar:
@@ -51,11 +55,3 @@ IDE 里有两层设置：
 
 - [Codex IDE 设置参考](https://learn.chatgpt.com/docs/ide/settings)
 - [配置基础](https://learn.chatgpt.com/docs/config)
-
----
-
-**状态：** verified
-
-**适用产品：** IDE
-
-**最近核验：** 2026-08-26

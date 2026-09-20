@@ -1,34 +1,63 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page only explains how working with an agent differs from ordinary chat; its internal links, concepts, and analogies have been checked, and it does not rely on volatile product facts."
+  checkedAt: "2026-07-26"
 title: Agent basics
-description: How an Agent works toward a goal by calling tools and iterating.
+description: How an agent uses tools and iterates toward a goal.
 locale: en
 source_locale: zh-CN
-reviewed_at: 2026-07-26
-source_revision: cb6933a
-translation_status: reviewed
-translated_at: 2026-07-26
+source_revision: "5cfa120"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
 
-An **Agent** doesn't end with one Q&A turn. It: understands the goal → chooses tools → observes results → adjusts the next step—until done or until it needs you.
+An **agent** keeps working toward a goal: understand the goal → choose a tool → observe the result → adjust the next step, until the work is done or it needs your input.
 
-## Agent vs ordinary chat
+An ordinary AI is more like someone who answers questions. An agent is more like someone who takes on a task and works through it step by step.
+
+## Agent versus ordinary chat
 
 | | Ordinary chat | Agent |
 |---|---|---|
-| Output | Mostly text suggestions | Can read/write files, run commands, change the repo |
-| Process | One reply | Multiple tool calls |
-| Risk | Misleading advice | Can also break files or run dangerous commands |
-| Your role | Read | Set boundaries, approve, accept |
+| Output | Mainly written advice | Can read and write files, run commands, and change a repository |
+| Process | One response | Multiple tool calls |
+| Risk | Misleading advice | Can also damage files or run dangerous commands |
+| Your role | Read the answer | Set boundaries, approve actions, and review results |
+
+## A simple analogy
+
+Compare them this way:
+
+- **Ordinary chat:** asking a friend “How do I solve this?”
+- **Agent:** asking a colleague to make a first pass and then reviewing it together
+
+In agent mode, pay closer attention to:
+
+- What it can access
+- Whether it should propose a plan first
+- How you will review its work
+
+## Why the distinction matters
+
+Many mistakes begin with one assumption:
+
+> Thinking it is “only talking”
+
+Once it starts reading or changing files and running commands, it is participating in real work rather than merely offering advice in a chat window.
+
+If you are new to agents, also read:
+
+1. [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/)
+2. [Run your first task](/en/guide/getting-started/run-your-first-task/)
+3. [Review the result](/en/guide/getting-started/review-the-result/)
 
 ## Related concepts
 
-- Skill / Plugin / MCP: extend **what it can do** and **what it connects to**—advanced chapters to follow; see the [capability map](/en/guide/start-here/codex-capability-map/) for how they differ
+- Skills, plugins, and MCP extend “what it can do” and “what it can connect to”: see [Extensions and automation](/en/skills/) and the [capability map](/en/guide/start-here/codex-capability-map/)
 - Human approval: see [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/)
 
----
-
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+An agent can take several steps toward a goal; it does more than return a paragraph of text.

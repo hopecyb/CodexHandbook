@@ -3,7 +3,7 @@ title: 먼저 진단한 뒤 수정
 description: 프로덕션 문제와 고질적인 bug—먼저 증거 사슬을 만든 뒤 손댑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

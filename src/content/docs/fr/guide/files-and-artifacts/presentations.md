@@ -3,7 +3,7 @@ title: Présentations
 description: Générer et réviser slides et decks — structure, masters et notes du présentateur.
 locale: fr
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

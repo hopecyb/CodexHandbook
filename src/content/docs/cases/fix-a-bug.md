@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "本页作为入口只维护路径选择和稳定工程闭环；示例的预期失败与通过命令已在当前仓库实际运行验证。"
+  checkedAt: "2026-08-25"
 title: 修复 Bug：从哪里开始
 description: 选择适合当前问题的 Bug 修复路径，并进入带可运行材料的完整案例。
 ---
@@ -41,10 +46,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 完整材料位于 [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix)。
-
----
-
-**状态：** verified  
-**适用产品：** CLI / IDE  
-**核验依据：** 本页作为入口只维护路径选择和稳定工程闭环；示例的预期失败与通过命令已在当前仓库实际运行验证。
-**最近核验：** 2026-08-25

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明 Agent 与普通聊天的协作差异；站内链接与概念、类比表达已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: Agent 基础
 description: 解释 Agent 如何围绕目标调用工具并迭代推进。
 sidebar:
@@ -51,10 +56,3 @@ sidebar:
 - 人工审批：见 [权限与审批](/guide/foundations/permissions-and-approvals/)
 
 Agent 的特点，是它能围绕目标连续做几步事，不只是回你一段话。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明 Agent 与普通聊天的协作差异；站内链接与概念、类比表达已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

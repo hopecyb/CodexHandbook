@@ -3,7 +3,7 @@ title: Ejemplo de configuración de Hooks
 description: Crea un guardián PreToolUse comprobable con un archivo hooks.json real y un script de la biblioteca estándar de Python.
 locale: es
 source_locale: zh-cn
-source_revision: 5a86fd4
+source_revision: 06e9fa2
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

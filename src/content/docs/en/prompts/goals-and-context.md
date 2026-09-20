@@ -3,7 +3,7 @@ title: Goals and context
 description: Tell Codex what to accomplish and why it matters.
 locale: en
 source_locale: zh-CN
-source_revision: 6ec9636
+source_revision: 0a5141f
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

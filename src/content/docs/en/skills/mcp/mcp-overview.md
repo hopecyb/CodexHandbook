@@ -3,7 +3,7 @@ title: MCP overview
 description: Understand MCP clients, servers, tools, authentication, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 7b8726f
+source_revision: 37e55d9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

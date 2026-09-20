@@ -3,7 +3,7 @@ title: "Sortie structurée"
 description: Faire produire exec des résultats parseables par machine pour étapes aval, dashboards et portes.
 locale: fr
 source_locale: zh-CN
-source_revision: aa19d49
+source_revision: e80b5d7
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

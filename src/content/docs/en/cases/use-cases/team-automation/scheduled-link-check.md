@@ -1,92 +1,87 @@
 ---
-title: "Case study: Scheduled documentation link check"
-description: Non-interactive Codex or CI to scan for dead site links—a team automation starter case.
+caseCategory: team
+directoryOrder: 100
+title: 'Case: Documentation Link Checking and Failure Recovery'
+description: Download a static HTML link-checking exercise, fix a missing page and broken anchor step by step, then prepare a recurring run.
+contentType: case
+audiences: [developer, team]
+level: intermediate
+outputs: [json, html]
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: '2026-09-18'
+  summary: Seven script tests passed. In a temporary copy, fixing one issue at a time reduced failures from two to one to zero. External links were not checked online, and no real CI or scheduler was run.
+  environment: Python 3.12.11 / Darwin arm64; standard library and original synthetic static HTML, without tokens.
+  evidence:
+    - label: Actual run and recovery record
+      href: /downloads/docs-link-audit/validation/record.md
+assets:
+  - path: /downloads/docs-link-audit/docs-link-audit-1.0.0.zip
+    purpose: Link checker, broken inputs, reference fix, tests, and step-by-step recovery record
+    license: CC0-1.0
+    version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: e8fa8bd
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 0d21aa9
 ---
 
-## Metadata
+Before scheduling a check, confirm that the script can actually find problems and explain what it checked. This exercise begins with two deliberately broken links. Change one target at a time and observe how the result changes.
 
-| Field | Content |
-|---|---|
-| Audience | Team maintainers, technical writers |
-| Client | CLI + GitHub Actions |
-| Estimated time | 45–90 minutes (including first CI setup) |
-| Verification date | 2026-07-25 |
+[Download the complete exercise pack](/downloads/docs-link-audit/docs-link-audit-1.0.0.zip) · [README](/downloads/docs-link-audit/README.md) · [Actual recovery record](/downloads/docs-link-audit/validation/recovery.json)
 
-## 1. Goal and context
+## Run the broken fixture first
 
-**Goal:** Weekly automatic check of in-site links and key external links; report dead links via PR or issue.
+You need Python 3.10+, with no third-party dependency, API key, or network access. In the extracted directory, run:
 
-**Success criteria:**
-
-- CI or scheduled workflow runs repeatably
-- Structured dead-link list (file, line, URL)
-- No unrelated file changes, no push
-
-**Out of scope:** Full-site crawl, logged-in pages, performance testing.
-
-## 2. Preparation
-
-- Docs site source in a Git repo (e.g. this handbook `src/content/docs/`)
-- Existing `npm run build` or link-check script (optional)
-- Read-only `GITHUB_TOKEN` and `OPENAI_API_KEY` in org secrets
-
-## 3. Workflow
-
-### Explore
-
-```text
-Read @src/content/docs/ and existing package.json scripts.
-List whether link check exists; if not, suggest minimal approach: markdown internal links + sample official doc externals.
-Do not change files.
+```sh
+python3 scripts/check_links.py fixtures/site
 ```
 
-### Plan
+Expect exit code 1. The report identifies the file, line number, URL, and reason: `/missing/` on line 4 of `index.html` has no corresponding page, and `#old-anchor` on line 5 does not exist on its target page. Another external link appears under `unchecked`; it is not silently counted as passing.
 
-```text
-Give plan: prompt file path, CI workflow name, structured JSON output fields.
-Wait for my confirmation before creating files.
+## Fix one issue at a time
+
+Copy `fixtures/site` to your own `work/` directory, preserving the original inputs. First change `/missing/` to `/guide/` and run:
+
+```sh
+python3 scripts/check_links.py work
 ```
 
-### Execute
+It still exits with 1, but only the anchor problem remains. Change `#old-anchor` to `#install` and rerun; it exits with 0. Compare against `solution/site` and the [human-review reference](/downloads/docs-link-audit/solution/review.md) to confirm you changed nothing else.
 
-- Add `prompts/ci/link-check.md`
-- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Use [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
+The author's actual checks found 2, then 1, then 0 failures, while the original fixture hash stayed the same. [Before-fix JSON](/downloads/docs-link-audit/validation/stage-0.json) · [After-fix JSON](/downloads/docs-link-audit/validation/stage-2.json)
 
-### Verify
+## Understand the result and its limits
 
-- Local `codex exec` once
-- CI manual `workflow_dispatch`
-- Insert a dead link on purpose; confirm `pass: false`
+| Result | Meaning | Next step |
+|---|---|---|
+| Exit 0 | Local references pass | Read `unchecked`; this does not establish that external links are reachable |
+| Exit 1 | Missing page, anchor, or out-of-bounds path detected | Confirm what each link should mean, then fix it |
+| Exit 2 | The check could not finish | Check the directory, build output, read errors, or an unsupported `base` tag |
 
-## 4. Failure and recovery
+The script reads built HTML and supports directory `index.html` files, relative and root paths, and HTML anchors. It does not parse dynamic JavaScript routes, CSS URLs, `srcset`, or framework-specific rewrites. It stops on `base href` to avoid interpreting relative paths incorrectly. External URLs and other protocols are explicitly reported as unchecked.
 
-| Issue | Action |
-|---|---|
-| External site temporary 503 | Distinguish hard dead links vs soft failures in prompt |
-| JSON parse failure | Tighten [structured output](/en/guide/developer-platform/non-interactive/structured-output/) constraints |
-| Quota exhausted | Switch to weekly schedule + incremental checks |
+Run the seven bundled tests:
 
-## 5. Capture
+```sh
+python3 validation/test_links.py
+```
 
-- After third successful run, capture as Skill: `docs-link-audit`
-- Team [command rules](/en/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
+For a real project, build it according to its instructions first, then pass the output directory to the script. This site already has a dedicated internal-reference checker; the teaching package does not replace all validation appropriate to your framework.
 
-## 6. Related chapters
+## Add it to a recurring workflow afterward
 
-- [Long-running task management](/en/cases/workflows/long-running-task-management/)
-- [Automations scheduled tasks](/en/skills/automations/scheduled-tasks/)
-- [Team learning path](/en/guide/learning-paths/team/)
+Give your existing scheduler “build project → check links → save exit code and JSON,” with a fixed working directory and dependency environment. Stop if the build fails rather than reading old output. Avoid concurrent writes to the same record.
 
----
+Run it manually once, then trigger it manually in the target scheduling environment, and only then set a recurring schedule. Compare this result with the last: stay quiet if nothing changed, and prepare a change summary for new failures, check errors, or recovery. Sending an actual notification still depends on the authorized scope.
 
-**Status:** verified  
-**Applicable products:** CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified non-interactive mode, scripts and pipelines, structured output, team rules, and automation chapters; content is limited to the stable team automation case of scheduled link checks, structured reports, and failure stop conditions.
+The package has not created a scheduled task, sent notifications, modified a real site, or run CI. These scheduling steps are integration guidance, not evidence of a scheduler run. See the [scheduled tasks guide](/en/skills/automations/scheduled-tasks/) next.
+
+## Handling external links
+
+Set a separately authorized scope and frequency for checking external links. A 404, authentication restriction, timeout, and temporary service failure mean different things. One failed request is not sufficient reason to remove a link. This package has not checked real external links or presented simulated responses as real network failures.
+
+When combining this with the [issue triage exercise](/en/cases/use-cases/team-automation/issue-triage-suggestions/), produce a local report and human-review notes before deciding whether to create a ticket.

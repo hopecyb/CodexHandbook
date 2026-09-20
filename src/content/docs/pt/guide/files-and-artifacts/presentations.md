@@ -3,7 +3,7 @@ title: Apresentações
 description: Gerar, rever e exportar diapositivos e decks — acordos de estrutura, master e notas de apresentação.
 locale: pt
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

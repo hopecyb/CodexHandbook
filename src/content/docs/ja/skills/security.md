@@ -3,7 +3,7 @@ title: Skill のセキュリティとバージョン
 description: インストール元、権限境界、アップグレードとロールバック——チーム Skill をガバナンス可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: 8e8c837
+source_revision: a3c81ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

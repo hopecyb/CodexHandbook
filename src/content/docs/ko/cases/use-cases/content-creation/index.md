@@ -3,7 +3,7 @@ title: 콘텐츠 창작
 description: 문서, 글, 콘텐츠 자산 사례 진입점입니다. 검토, 개작, 산출물 인수를 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

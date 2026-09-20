@@ -1,78 +1,74 @@
 ---
-title: Ủy thác và theo dõi
-description: "Giao Tác vụ cho Cloud từ App, IDE hoặc điện thoại — rồi xem xét, phê duyệt và lặp lại sau khi rời bàn làm việc."
+legacyVerification:
+  status: "verified"
+  products: "Cloud、App、IDE、CLI"
+  checkedAt: "2026-08-26"
+title: Giao việc và theo dõi
+description: Khởi chạy một tác vụ Cloud độc lập, rồi điều chỉnh hướng thực hiện và nghiệm thu trong cùng cuộc trò chuyện.
 locale: vi
 source_locale: zh-CN
-source_revision: 681ea7d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "38b322f"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
-Delegation does not mean throwing a problem over the wall. It means giving an independent Cloud chat the goal, constraints, environment, and completion standard. The task can run in the background while you inspect logs, add context, request changes, and finally review the diff.
+Giao việc không có nghĩa là bỏ mặc vấn đề. Bạn cần đưa mục tiêu, ràng buộc, môi trường và tiêu chí hoàn thành vào một cuộc trò chuyện Cloud độc lập. Tác vụ có thể chạy ở chế độ nền; bạn có thể xem nhật ký, bổ sung bối cảnh, yêu cầu chỉnh sửa và cuối cùng đánh giá diff.
 
-## When delegation fits
+## Khi nào nên giao việc
 
-- Builds or tests take a long time.
-- Inputs are already in a remote repository.
-- Scripts can recreate the environment.
-- Work can progress independently of your current task.
-- You will review the result instead of merging it directly.
+- Tác vụ cần thời gian xây dựng hoặc kiểm thử khá lâu;
+- Đầu vào đã nằm trong kho mã từ xa;
+- Có thể dựng lại môi trường bằng tập lệnh;
+- Tác vụ có thể tiến hành độc lập với công việc hiện tại;
+- Bạn sẵn sàng đánh giá kết quả trước khi hợp nhất.
 
-Keep tasks local when they depend on uncommitted local state, a local service, or continuous human interaction.
+Nếu tác vụ phụ thuộc vào thay đổi cục bộ chưa commit, dịch vụ chạy trên máy của bạn hoặc thao tác liên tục của con người, hãy giữ tác vụ ở môi trường cục bộ trước.
 
-## Complete delegation prompt
-
-```text
-Goal: Fix issue #42, where a sign-in request still holds a connection after 30 seconds.
-Starting point: branch fix/42-timeout in acme/api.
-Scope: packages/auth/** and the corresponding tests.
-Do not: upgrade dependencies, change the public API, or push to main.
-Verification: pnpm test --filter auth; pnpm typecheck.
-Completion: show the root cause, diff, commands, and exit results. Do not merge.
-```
-
-After starting, confirm the environment and branch. Follow up only when a premise is missing or the run is drifting:
+## Một lời nhắc giao việc đầy đủ
 
 ```text
-Additional constraint: Do not change the global HTTP client. Keep the fix in the
-auth adapter. Explain how this changes the current approach before continuing.
+Mục tiêu: sửa lỗi ở issue #42 khiến yêu cầu đăng nhập vẫn giữ kết nối sau 30 giây.
+Điểm bắt đầu: nhánh fix/42-timeout của acme/api.
+Phạm vi: packages/auth/** và các bài kiểm thử tương ứng.
+Không được: nâng cấp phần phụ thuộc, thay đổi API công khai, push lên main.
+Xác minh: pnpm test --filter auth; pnpm typecheck.
+Hoàn thành: trình bày nguyên nhân gốc, diff, các lệnh và kết quả thoát;
+không tự động hợp nhất.
 ```
 
-Use the same chat to correct the same goal because it retains context. Start a new chat for an independent goal. Parallel tasks must not write the same branch or file set.
-
-## After the result arrives
-
-1. Read the summary and complete diff.
-2. Compare changed paths with the allowed scope.
-3. Inspect actual output for each verification command.
-4. Ask for explanations of failures or skipped checks.
-5. Give a specific follow-up in the same chat when needed.
-6. Once criteria pass, create a PR and hand control to CI and human review.
-
-Cloud work can start from Web, IDE, GitHub, GitLab (Beta), Linear, or Slack. The official Cloud page also describes starting and reviewing work from Codex CLI. The repository, environment, network, and review boundaries remain the same across entry points.
-
-## Follow up on failures
-
-Do not say only “try again.” Include evidence and the next decision:
+Sau khi khởi chạy, hãy xác nhận môi trường và nhánh đã chọn là đúng. Trong lúc chạy, chỉ theo dõi khi phát hiện thiếu tiền đề hoặc hướng thực hiện bị lệch:
 
 ```text
-The test fails at retry.test.ts:48. Explain whether this change caused it.
-If so, fix only that regression and rerun the auth tests. Otherwise, preserve
-the failure and record it explicitly.
+Ràng buộc bổ sung: không sửa HTTP client dùng chung; chỉ sửa trong auth adapter.
+Trước khi tiếp tục, hãy giải thích ràng buộc này thay đổi phương án hiện tại ra sao.
 ```
 
-## Official sources
+Cùng một cuộc trò chuyện giữ lại bối cảnh đã có, phù hợp để sửa hướng cho cùng mục tiêu; mục tiêu hoàn toàn độc lập nên dùng cuộc trò chuyện mới. Các tác vụ song song không nên ghi vào cùng một nhánh hoặc cùng tập tệp.
+
+## Khi có kết quả
+
+1. Đọc bản tóm tắt và toàn bộ diff;
+2. Đối chiếu các đường dẫn đã thay đổi với phạm vi được phép;
+3. Xem đầu ra thực tế của từng lệnh xác minh;
+4. Yêu cầu giải thích các bước thất bại hoặc chưa chạy;
+5. Nếu cần sửa, đưa yêu cầu cụ thể trong cùng cuộc trò chuyện;
+6. Khi đạt tiêu chí, tạo PR rồi để CI và người đánh giá tiếp quản.
+
+Có thể khởi chạy tác vụ Cloud từ Web, IDE, GitHub, GitLab (Beta), Linear hoặc Slack; trang Cloud chính thức cũng cho biết có thể bắt đầu và đánh giá công việc từ Codex CLI. Dù dùng lối vào nào, các ranh giới về kho mã, môi trường, mạng và đánh giá vẫn giữ nguyên.
+
+## Theo dõi khi có lỗi
+
+Đừng chỉ nói “thử lại”. Hãy cung cấp bằng chứng lỗi và bước tiếp theo:
+
+```text
+Bài kiểm thử thất bại ở retry.test.ts:48. Trước tiên hãy giải thích lỗi này
+có phải do thay đổi lần này gây ra không. Nếu có, chỉ sửa hồi quy đó và chạy lại
+các bài kiểm thử auth. Nếu không, giữ nguyên lỗi và ghi nhận rõ ràng.
+```
+
+## Tài liệu chính thức
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Cloud, App, IDE, CLI
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Công việc kéo dài](https://learn.chatgpt.com/docs/long-running-work)

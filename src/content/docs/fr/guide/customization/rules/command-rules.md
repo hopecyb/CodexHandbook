@@ -3,7 +3,7 @@ title: "Règles de commandes"
 description: Allow/deny au niveau commande pour les appels shell et outils — plus exécutable qu'un accord verbal.
 locale: fr
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Current Codex runtime supports guiding use of bundled files in skills; this page discusses stable output-template practice, not current client UI or install flows."
+  checkedAt: "2026-07-26"
 title: templates/ directory
 description: Provide output templates and report skeletons inside a Skill.
 locale: en
 source_locale: zh-CN
-source_revision: 9f93d04
+source_revision: 82a9e01
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 If `references/` is more about **what to consult on input**, `templates/` is more about **what the output should look like**. Fixed structure and easy review belong here.
 
-# templates/ directory
 
 `templates/` holds output formats the Skill reuses—review reports, changelog skeletons, research comparison tables, and similar.
 
@@ -78,9 +82,3 @@ If output rarely repeats or structure varies a lot, forcing a template can const
 If you have said "output in this structure" two or three times in a row, make `templates/`.
 
 The core value of `templates/` is stable output structure for reuse and review.
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime supports guiding use of bundled files in skills; this page discusses stable output-template practice, not current client UI or install flows.  
-**Last verified:** 2026-07-26

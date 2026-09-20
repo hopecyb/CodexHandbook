@@ -1,0 +1,22 @@
+[
+  {
+    "request": "用给定三份资料写中文介绍，保留来源",
+    "expected": "trigger"
+  },
+  {
+    "request": "按风格样本修改这篇有事实引用的文章",
+    "expected": "trigger"
+  },
+  {
+    "request": "只修正文中的一个错字",
+    "expected": "do-not-trigger"
+  },
+  {
+    "request": "审查当前 Git 已暂存差异",
+    "expected": "do-not-trigger"
+  },
+  {
+    "request": "把这篇文章发布到公众号",
+    "expected": "not-publication-authorization-from-skill"
+  }
+]

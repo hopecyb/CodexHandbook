@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确区分“local workflows run on your device”和“cloud tasks run in OpenAI-managed environments”；《ChatGPT Work and Codex》也确认 Work on web/mobile runs in the cloud。本页只总结本地与云端任务的适用场景与权衡，不绑定具体套餐或入口细节。"
+  checkedAt: "2026-07-26"
 title: 本地与云端
 description: 对比本地任务与 Cloud 任务的适用场景。
 sidebar:
@@ -70,10 +75,3 @@ sidebar:
 很多初学者会从 **本地 + 桌面 App** 开始。Cloud 细节见 [Web 与 Cloud 概述](/guide/web-and-cloud/)。在 App 内切换见 [本地与云端任务](/guide/desktop-app/local-and-cloud-tasks/)。
 
 本地更适合先看懂流程、改小东西。云端更适合更长、更标准化、远程协作更多的任务。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确区分“local workflows run on your device”和“cloud tasks run in OpenAI-managed environments”；《ChatGPT Work and Codex》也确认 Work on web/mobile runs in the cloud。本页只总结本地与云端任务的适用场景与权衡，不绑定具体套餐或入口细节。  
-**最近核验：** 2026-07-26

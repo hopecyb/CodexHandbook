@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供审查类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 审查模板
 description: 结构化审查 diff 与变更风险。
 ---
-
-# 审查模板
 
 审查类任务最容易跑偏的地方，是一开始就变成“顺手帮你改了”。
 
@@ -47,10 +50,3 @@ description: 结构化审查 diff 与变更风险。
 
 - [合并前审查](/cases/workflows/review-before-merge/)
 - [审查 PR 案例](/cases/review-a-pr/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供审查类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

@@ -1,29 +1,45 @@
 ---
-title: Liste de contrôle sécurité pour débutants
-description: Vérifications de sécurité à passer en revue avant votre première utilisation.
-locale: fr
-source_locale: zh-CN
-source_revision: 5add3bd
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Vérifié à la lumière des chapitres du manuel sur l'approbation, le bac à sable et le réseau, l'examen des résultats et l'annulation. Cette page traite des précautions initiales et des exercices à faible risque, sans dépendre d'une interface particulière.
+  checkedAt: '2026-07-26'
+title: Liste de sécurité pour débuter
+description: Vérifications à faire avant votre première utilisation de Codex.
 sidebar:
   order: 120
+locale: fr
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 75bfe4d
 ---
 
-Vérifiez avant de commencer :
+Avant d'utiliser Codex pour la première fois, demandez-vous : « Si une erreur survient, son coût sera-t-il trop élevé ? » Cette liste réduit les enjeux de votre premier exercice.
 
-- [ ] J'utilise un répertoire d'entraînement jetable, pas un dépôt de production
-- [ ] Le répertoire ne contient pas de vraies clés, mots de passe ou données privées clients
-- [ ] Je comprends que les opérations à haut risque nécessitent mon Approbation
-- [ ] Je n'approuverai pas des commands ou requêtes réseau que je ne comprends pas
-- [ ] Je prévois d'examiner les Diff avant d'accepter les résultats
-- [ ] Je sais comment [annuler](/fr/guide/getting-started/undo-and-recover/)
+À vérifier avant de commencer :
 
-Concepts : [Permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/).
+- [ ] J'utilise un dossier d'exercice dont je peux me passer, et non un dépôt de production.
+- [ ] Le dossier ne contient aucune véritable clé, aucun mot de passe ni aucune donnée privée de clients.
+- [ ] Je comprends que les actions à haut risque peuvent nécessiter mon approbation.
+- [ ] Je n'approuverai pas une commande ou une requête réseau que je ne comprends pas.
+- [ ] Je compte examiner les différences avant d'accepter le résultat.
+- [ ] Je sais comment [annuler les changements](/fr/guide/getting-started/undo-and-recover/).
 
----
+Pour les notions utiles, voir [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/) et [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/).
 
-**Statut :** review  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-25
+## Idées reçues
+
+### 1. Cette liste n'est-elle utile qu'aux personnes particulièrement prudentes ?
+
+Elle s'adresse justement aux débutants. Lors d'un premier essai, on surestime facilement ce que l'on pense pouvoir comprendre.
+
+### 2. Éviter les commandes manifestement dangereuses suffit-il ?
+
+Les erreurs les plus courantes au début sont plutôt de choisir le mauvais projet, d'inclure des fichiers sensibles, de ne pas examiner le diff ou de ne pas prévoir comment revenir en arrière.
+
+### 3. Puis-je apprendre au fur et à mesure sans rien vérifier d'abord ?
+
+Vous pouvez apprendre en pratiquant, mais parcourir ces quelques points avant de commencer rendra l'exercice plus sûr.
+
+Pour votre première tâche avec Codex, réduisez le coût d'une erreur ; la suite en sera plus facile.

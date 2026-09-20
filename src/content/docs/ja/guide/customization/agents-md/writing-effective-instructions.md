@@ -3,7 +3,7 @@ title: 効果的なプロジェクト指示の書き方
 description: AGENTS.md 執筆チェックリスト——短く、硬く、実行可能に、検証可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: 2d236a3
+source_revision: 63dd711
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Travail piloté par la spécification
 description: Rédiger d'abord une spécification vérifiable, puis faire implémenter Codex selon le plan — adapté aux livraisons à besoin clair.
 locale: fr
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

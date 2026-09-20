@@ -1,37 +1,36 @@
 ---
-title: Loại sự kiện Hook
-description: Điểm kích hoạt Hook trên chuỗi thực thi Codex — để kiểm tra, nhật ký và chặn đúng giai đoạn.
+title: Các loại sự kiện Hook
+description: Chọn sự kiện theo vòng đời phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con.
 locale: vi
 source_locale: zh-CN
-source_revision: 7da5c40
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 07f4965
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
+Khi chọn Hook, câu hỏi đầu tiên không phải “viết script thế nào” mà là “xử lý trước hay sau khi tác dụng phụ xảy ra”. Đặt sai điểm sự kiện thì dù script hoàn thiện đến đâu, nó cũng có thể chỉ báo cáo được sau sự việc.
 
-![Codex Hook lifecycle and key events](/diagrams/hook-lifecycle-events-vi.svg)
+![Vòng đời Codex Hook và các sự kiện quan trọng](/diagrams/hook-lifecycle-events-zh-cn.svg)
 
-## Current events
+## Danh sách sự kiện hiện tại
 
-| Event | When it runs | Matcher filters | Common use |
+| Sự kiện | Khi nào xảy ra | Matcher lọc gì | Công dụng thường gặp |
 |---|---|---|---|
-| `SessionStart` | Session start or resume | `startup`, `resume`, `clear`, `compact` | Environment notes, restored context |
-| `SubagentStart` | Subagent starts | Subagent type | Add subagent constraints |
-| `UserPromptSubmit` | User submits a prompt | Unsupported; configuration is ignored | Secret scan, development context |
-| `PreToolUse` | Before a supported local tool runs | Tool name | Deny or rewrite the call |
-| `PermissionRequest` | Codex is about to request approval | Tool name | Allow, deny, or defer to normal approval |
-| `PostToolUse` | After a supported local tool returns | Tool name | Record results, feed later reasoning |
-| `PreCompact` | Before context compaction | `manual` / `auto` | Save state before compaction |
-| `PostCompact` | After context compaction | `manual` / `auto` | Restore required context |
-| `SubagentStop` | A subagent is about to stop | Subagent type | Require another check |
-| `Stop` | Main task turn is about to stop | Unsupported; configuration is ignored | Require more main-thread verification |
-| `SessionEnd` | Main thread ends | Currently `other` | Fast closing log; does not run for subagents |
+| `SessionStart` | Khi phiên bắt đầu hoặc được tiếp tục | `startup`, `resume`, `clear`, `compact` | Thông tin môi trường, khôi phục ngữ cảnh |
+| `SubagentStart` | Khi Agent con khởi chạy | Loại Agent con | Bổ sung ràng buộc cho Agent con |
+| `UserPromptSubmit` | Khi người dùng gửi prompt | Không hỗ trợ; cấu hình sẽ bị bỏ qua | Quét khóa, bổ sung ngữ cảnh phát triển |
+| `PreToolUse` | Trước khi công cụ cục bộ được hỗ trợ chạy | Tên công cụ | Từ chối hoặc sửa lời gọi |
+| `PermissionRequest` | Khi Codex chuẩn bị yêu cầu phê duyệt | Tên công cụ | Cho phép, từ chối hoặc chuyển về quy trình phê duyệt bình thường |
+| `PostToolUse` | Sau khi công cụ cục bộ được hỗ trợ trả về | Tên công cụ | Ghi kết quả, đưa phản hồi cho bước suy luận tiếp theo |
+| `PreCompact` | Trước khi nén ngữ cảnh | `manual` / `auto` | Lưu trạng thái trước khi nén |
+| `PostCompact` | Sau khi nén ngữ cảnh | `manual` / `auto` | Bổ sung lại ngữ cảnh cần thiết |
+| `SubagentStop` | Khi Agent con chuẩn bị kết thúc | Loại Agent con | Yêu cầu thêm một lượt kiểm tra |
+| `Stop` | Khi lượt tác vụ chính chuẩn bị kết thúc | Không hỗ trợ; cấu hình sẽ bị bỏ qua | Yêu cầu luồng chính tiếp tục kiểm tra |
+| `SessionEnd` | Khi luồng chính kết thúc | Hiện là `other` | Ghi log kết thúc nhanh; không chạy cho Agent con |
 
-## Tool matchers
+## Matcher cho công cụ
 
-Common values include:
+Các giá trị thường gặp gồm:
 
 ```text
 Bash
@@ -41,50 +40,42 @@ mcp__filesystem__read_file
 mcp__filesystem__.*
 ```
 
-Shell and unified command execution match `Bash`. `apply_patch` can also match the aliases `Edit` or `Write`. MCP and other local function tools match their actual tool names.
+Lệnh shell và lệnh thực thi hợp nhất đều khớp với `Bash`. `apply_patch` cũng có thể khớp qua bí danh `Edit` hoặc `Write`. MCP và các công cụ hàm cục bộ khác khớp theo tên công cụ thực tế.
 
-## Three events commonly confused
+## Ba sự kiện dễ nhầm lẫn nhất
 
 ### PreToolUse
 
-Input contains `tool_name`, `tool_use_id`, and tool-specific `tool_input`. It can return:
+Đầu vào gồm `tool_name`, `tool_use_id` và `tool_input` tùy theo công cụ. Sự kiện này có thể:
 
-- `permissionDecision: "deny"`: stop a supported call.
-- `permissionDecision: "allow"` plus `updatedInput`: rewrite supported input.
-- `additionalContext`: add model context without blocking.
+- `permissionDecision: "deny"`: chặn lời gọi công cụ được hỗ trợ.
+- `permissionDecision: "allow"` + `updatedInput`: sửa đầu vào của công cụ được hỗ trợ.
+- `additionalContext`: không chặn, chỉ bổ sung ngữ cảnh cho mô hình.
 
-Plain stdout is ignored; output the documented JSON. Exit code `2` with stderr can also block and provide a reason.
+Văn bản stdout thông thường sẽ bị bỏ qua; phải xuất JSON theo định dạng chính thức. Mã thoát `2` kèm stderr cũng có thể chặn và nêu lý do.
 
 ### PermissionRequest
 
-This runs only when Codex was already going to request approval for shell escalation, managed networking, or a similar action. It can allow, deny, or leave the decision to the normal approval UI. It does not replace general `PreToolUse` policy.
+Chỉ kích hoạt khi Codex vốn đã chuẩn bị yêu cầu phê duyệt, chẳng hạn nâng quyền shell hoặc truy cập mạng được quản lý. Nó có thể allow, deny hoặc không đưa ra quyết định để giao diện phê duyệt thông thường tiếp tục. Đừng dùng nó thay cho chính sách công cụ tổng quát của `PreToolUse`.
 
 ### PostToolUse
 
-The tool has already run, and the event fires even when Bash exits non-zero. Returning block or exiting `2` can replace feedback for the model, but cannot undo a command, file write, or external action.
+Công cụ đã chạy; ngay cả khi Bash kết thúc với mã khác không, sự kiện này vẫn kích hoạt. Trả về block hoặc thoát bằng mã `2` ở đây chỉ thay phản hồi và yêu cầu mô hình xử lý, không thể hoàn tác lệnh, việc ghi tệp hoặc thao tác bên ngoài.
 
-## Stop is not an undo button
+## Stop không phải nút “từ chối kết thúc”
 
-`decision: "block"` for `Stop` automatically creates a continuation prompt from the reason, asking Codex to run another turn. It does not roll back completed side effects. Check `stop_hook_active` to prevent an infinite loop.
+`decision: "block"` của `Stop` có nghĩa là dựa trên reason, hệ thống tự tạo một prompt tiếp tục để Codex thực hiện thêm một lượt. Nó không hoàn tác tác dụng phụ của công cụ đã chạy. Script phải kiểm tra `stop_hook_active` để tránh lặp tiếp tục vô hạn.
 
-## Event-selection exercise
+## Bài tập chọn sự kiện
 
-| Need | Choose | Why |
+| Nhu cầu | Lựa chọn | Lý do |
 |---|---|---|
-| Stop a suspected token from being written | `PreToolUse` matching `apply_patch|Edit|Write` | Must act before the write |
-| Measure shell failure rate | `PostToolUse` matching `Bash` | Needs the result |
-| Save key decisions before automatic compaction | `PreCompact` | Runs before compaction |
-| Do not close until tests have run | `Stop` | Continue the current task |
-| Send a 30-second network request at shutdown | Not `SessionEnd` | Maximum three seconds; closing events should stay short |
+| Chặn việc ghi chuỗi nghi là token vào tệp | `PreToolUse` khớp `apply_patch|Edit|Write` | Phải xử lý trước khi ghi |
+| Thống kê tỷ lệ lệnh shell thất bại | `PostToolUse` khớp `Bash` | Cần kết quả thoát |
+| Lưu quyết định quan trọng trước khi ngữ cảnh tự nén | `PreCompact` | Xảy ra trước khi nén |
+| Không cho lượt tác vụ kết thúc khi chưa chạy xong kiểm thử | `Stop` | Cần tiếp tục lượt tác vụ hiện tại |
+| Gửi yêu cầu mạng 30 giây khi luồng chính kết thúc | Không phù hợp với `SessionEnd` | Tối đa 3 giây, không nên đặt tác vụ dài trong sự kiện kết thúc |
 
-## Official source
+## Nguồn chính thức
 
-- [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Environments using a local Codex host
-
-**Kiểm chứng gần nhất:** 2026-08-25
+- [OpenAI: Sự kiện Hook và matcher](https://learn.chatgpt.com/docs/hooks)

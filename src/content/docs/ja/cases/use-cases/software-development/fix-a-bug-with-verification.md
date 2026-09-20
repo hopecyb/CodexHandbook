@@ -1,12 +1,20 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "開始サンプルは 3 件中 1 件が予期どおり失敗し、参考解答は 3 件すべて通過することを確認済みです。本ページは RED、根本原因、最小修正、GREEN、回帰、人によるレビューの証拠チェーンで構成しています。"
+  checkedAt: "2026-08-25"
 title: "事例：検証付き Bug 修正"
 description: 実行可能な割引計算の Bug で、RED の再現、根本原因、最小修正、GREEN、回帰、diff レビューを行います。
 locale: ja
 source_locale: zh-CN
-source_revision: 91d8575
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 42d842e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 これはファイル名を置き換えるだけのプロンプトテンプレートではありません。リポジトリにある実際の開始コードを使い、まずテスト失敗を確認し、同じテストが参考修正によって通過する過程を追います。
@@ -42,6 +50,8 @@ reviewed_at: 2026-08-26
 図で重要なのは 2 つの戻り経路です。関連テストが失敗したら最小修正へ戻り、全回帰または diff レビューが失敗したら根本原因分析へ戻ります。早く GREEN にするためにアサーションを削除したり、変更範囲を広げたりしないでください。
 
 ## 2. 準備する資料
+
+学習の全体の順序は[開発者向け学習パス](/ja/guide/learning-paths/developer/)を参照してください。この演習をコード読解、レビュー、引き継ぎテンプレートにつなぎ、独立した`work/`コピーで練習するよう求めています。新しい[2026-09-18実行概要](/downloads/developer-path/run-record.json)には、参照用の初期状態と解答を再検証した記録があります。以下の2026-08-25は元のケースの検証日です。
 
 サンプルのディレクトリ：
 
@@ -192,10 +202,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 - [テストを実行する](/ja/guide/quality/run-tests/)
 - [差分をレビューする](/ja/guide/quality/review-diffs/)
 - [完了条件を定義する](/ja/prompts/define-done/)
-
----
-
-**状態：** verified  
-**対象製品：** CLI / IDE  
-**検証根拠：** 開始サンプルは 3 件中 1 件が予期どおり失敗し、参考解答は 3 件すべて通過することを確認済みです。本ページは RED、根本原因、最小修正、GREEN、回帰、人によるレビューの証拠チェーンで構成しています。
-**最終検証：** 2026-08-25

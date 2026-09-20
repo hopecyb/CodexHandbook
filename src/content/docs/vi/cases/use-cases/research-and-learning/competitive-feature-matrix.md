@@ -3,7 +3,7 @@ title: "Case: bảng so sánh tính năng đối thủ"
 description: Nghiên cứu có trích dẫn và đầu ra bảng — quy trình người không phải kỹ sư cũng tái sử dụng được.
 locale: vi
 source_locale: zh-CN
-source_revision: d90f5f1
+source_revision: b74008b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

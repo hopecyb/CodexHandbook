@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 연구류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 연구 템플릿
 description: 인용이 있는 조사와 비교입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 연구 템플릿
 
 연구류 작업과 일반 Q&A의 차이는, 답이 필요할 뿐 아니라 답이 어디서 왔는지도 필요하다는 점입니다.
 
@@ -47,10 +51,3 @@ reviewed_at: 2026-08-26
 
 - [출처 있는 연구 사례](/ko/cases/research-with-sources/)
 - [검증](/ko/guide/verification/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 연구류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

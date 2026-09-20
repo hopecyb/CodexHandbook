@@ -3,7 +3,7 @@ title: Compactación del Contexto
 description: Qué se conserva y qué se pierde tras compactar una conversación larga.
 locale: es
 source_locale: zh-CN
-source_revision: 329ca4d
+source_revision: c6c9d03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

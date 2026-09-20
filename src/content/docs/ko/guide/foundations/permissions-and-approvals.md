@@ -3,7 +3,7 @@ title: 권한과 승인
 description: Codex가 언제 작업 승인을 필요로 하는지 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0870303
+source_revision: 5b1b5f8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

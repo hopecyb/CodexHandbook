@@ -3,7 +3,7 @@ title: Grundlagen
 description: "Eine gemeinsame Sprache für Modelle, Agent, Werkzeuge, Berechtigungen und Überprüfung aufbauen."
 locale: de
 source_locale: zh-CN
-source_revision: cf898a2
+source_revision: b4d4b2b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

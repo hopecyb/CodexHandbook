@@ -3,7 +3,7 @@ title: エディターコンテキスト
 description: IDE 拡張が開いているファイル、ワークスペース、プロジェクトルールを Codex に渡す仕組み。
 locale: ja
 source_locale: zh-CN
-source_revision: b6d208f
+source_revision: 6d1b248
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

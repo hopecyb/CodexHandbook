@@ -3,12 +3,16 @@ title: Hoàn tác và khôi phục
 description: Lùi lại an toàn khi kết quả không hài lòng.
 locale: vi
 source_locale: zh-CN
-source_revision: b76bcfc
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 5e7a06e
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Đã đối chiếu với các chương nhập môn được xác minh về phê duyệt, kiểm tra kết quả, khôi phục lỗi và Git/không gian làm việc. Trang chỉ mô tả phương pháp ổn định «tạm dừng, xem phạm vi, ưu tiên hoàn tác, trở về trạng thái an toàn» mà không coi nút hoàn tác của client cụ thể là giao diện cố định.
+  checkedAt: '2026-07-26'
 ---
 
 Lần đầu dùng Codex, nhiều người lo nhất: nó sửa sai rồi, tôi còn quay lại được không?
@@ -65,8 +69,6 @@ Các cách làm sau sẽ hạ rõ xác suất «sửa sai rồi khó thu dọn»
 - Mỗi bước xong kiểm ngay — đừng tích nhiều thay đổi rồi mới xem cùng lúc
 - Trước thao tác rủi ro cao xác nhận trước
 
-Làm sai bản thân không đáng sợ. Chưa nhìn rõ phạm vi thay đổi đã sửa tiếp mới phiền hơn.
-
 ## Xem điểm khôi phục như công cụ khám phá
 
 Khôi phục không chỉ để chữa lỗi sau khi xảy ra. Nó cũng hữu ích trước khi thử hướng khác.
@@ -78,11 +80,17 @@ Nên tạo điểm khôi phục khi:
 - Thử script tự động hóa hoặc thay thế hàng loạt
 - Không chắc yêu cầu có sớm đổi hướng không
 
-Nhịp an toàn hơn: xác nhận trạng thái an toàn hiện tại, yêu cầu Codex nêu file sẽ ảnh hưởng, tạo điểm khôi phục hoặc xác nhận trạng thái Git, sửa phạm vi nhỏ, review diff và kết quả kiểm chứng, rồi quyết định giữ, rollback hoặc thử hướng khác.
+Trình tự an toàn hơn là:
 
----
+```text
+Xác nhận trạng thái an toàn hiện tại
+→ Yêu cầu Codex nêu các tệp sẽ bị ảnh hưởng
+→ Tạo điểm khôi phục hoặc kiểm tra trạng thái Git
+→ Thực hiện thay đổi trong phạm vi nhỏ
+→ Rà soát diff và kết quả kiểm chứng
+→ Giữ lại, hoàn tác hoặc thử cách khác
+```
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các nguyên tắc nhập môn liên quan phê duyệt, kiểm tra kết quả, khôi phục khi thất bại và Git/cây làm việc đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ xác nhận phương pháp lùi ổn định «tạm dừng trước, xem phạm vi, ưu tiên hoàn tác, rồi khôi phục về trạng thái an toàn» — không viết lối vào hoàn tác của một client cụ thể thành hợp đồng cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Nếu client hỗ trợ checkpoint hoặc phát lại, bạn có thể ưu tiên tính năng tích hợp đó. Với dự án Git, một branch, stash hoặc commit nhỏ cũng có thể làm điểm khôi phục. Điều cốt yếu không phải nhớ một lệnh cụ thể mà là không mở rộng sửa đổi khi chưa hiểu rõ phạm vi ảnh hưởng.
+
+Lỗi tự nó không đáng sợ. Tiếp tục sửa khi chưa biết phạm vi thay đổi sẽ khiến việc khôi phục khó hơn.

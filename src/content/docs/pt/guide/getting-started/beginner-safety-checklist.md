@@ -3,7 +3,7 @@ title: Lista de segurança para iniciantes
 description: Itens de segurança para conferir antes do primeiro uso.
 locale: pt
 source_locale: zh-CN
-source_revision: 5add3bd
+source_revision: 75bfe4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

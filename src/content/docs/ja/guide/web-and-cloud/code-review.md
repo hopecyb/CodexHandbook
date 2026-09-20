@@ -3,7 +3,7 @@ title: Cloud と GitHub のコードレビュー
 description: Cloud の diff をレビューし、GitHub で Codex による高シグナルの追加 review を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: a74296a
+source_revision: ea6796a
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

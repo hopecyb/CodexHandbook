@@ -3,7 +3,7 @@ title: Les 30 premières minutes
 description: Un parcours de 30 minutes à suivre dès le premier jour.
 locale: fr
 source_locale: zh-CN
-source_revision: 5363190
+source_revision: 7d1061d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

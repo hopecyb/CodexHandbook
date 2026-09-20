@@ -3,7 +3,7 @@ title: 인수인계와 재개
 description: 세션을 넘어 미완료 작업을 이어갑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b92008e
+source_revision: f4cbe6a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

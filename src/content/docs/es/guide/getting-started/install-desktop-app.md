@@ -1,67 +1,56 @@
 ---
-title:  Instalar la App de escritorio
-description:  Instala y abre la aplicación de escritorio de Codex.
+title: Instalar la aplicación de escritorio
+description: Instala la aplicación de escritorio de ChatGPT y abre en ella un espacio de trabajo de Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 89d6303
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 974842f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
 ---
 
-In this handbook, “desktop App” means the **Codex workspace in the current ChatGPT desktop App**. Official versions are available for macOS, Windows, and Linux.
+En este manual, «aplicación de escritorio» se refiere al **espacio de trabajo de Codex dentro de la aplicación de escritorio de ChatGPT**. OpenAI ofrece versiones para macOS, Windows y Linux.
 
-## Installation
+## Pasos de instalación
 
-1. Open the [official ChatGPT desktop App documentation](https://learn.chatgpt.com/docs/app).
-2. Download the installer for your operating system from the official entry point.
-3. Install and open ChatGPT, then sign in with your ChatGPT account or another available method.
-4. Start a chat, create a project, or open a practice folder.
-5. Open Codex, create a task, and describe the result you need.
+1. Abre la [documentación oficial de la aplicación de escritorio de ChatGPT](https://learn.chatgpt.com/docs/app).
+2. Descarga desde el sitio oficial el instalador que corresponda a tu sistema operativo.
+3. Instala y abre ChatGPT; inicia sesión con tu cuenta de ChatGPT u otro método disponible.
+4. Inicia una conversación, crea un proyecto o abre una carpeta de práctica.
+5. Entra en Codex, crea una tarea y describe el resultado que necesitas.
 
-Do not download installers from third-party sites in search results. On managed devices, follow your organization's software distribution and update policy.
+No descargues instaladores de sitios de terceros que aparezcan en los resultados de búsqueda. Si tu empresa gestiona sus dispositivos, sigue su política de distribución y actualización del software.
 
-## Minimal post-installation check
+## Comprobación mínima después de instalar
 
-Prepare a practice directory with no secrets and confirm that:
+Prepara una carpeta de práctica sin claves secretas y confirma que:
 
-- the App opens and shows the current account or workspace;
-- you can open the directory or add files to a project;
-- you can create a Codex task and receive a response;
-- file access covers only what the task needs;
-- you can locate task results, file changes, and approval controls.
+- la aplicación se abre y muestra la cuenta o el espacio de trabajo actual;
+- puedes abrir la carpeta o añadir archivos al proyecto;
+- puedes crear una tarea de Codex y recibir una respuesta;
+- el acceso a archivos cubre solo lo necesario para esta tarea;
+- encuentras los resultados, los cambios de archivos y la interfaz de aprobación.
 
-Use this read-only smoke test:
+Puedes usar esta tarea de solo lectura como prueba inicial:
 
 ```text
-Read this directory without modifying files. Tell me which files it contains,
-what kind of project it may be, and which filenames support your conclusion.
+Lee esta carpeta sin modificar archivos. Dime qué archivos contiene,
+qué tipo de proyecto podría ser y en qué nombres de archivo te basaste.
 ```
 
-## Common issues
+## Problemas frecuentes
 
-### The App opens but Codex is missing
+### La aplicación se abre, pero no aparece Codex
 
-Check the current account, workspace, and plan access, then whether the organization disabled the capability. Reinstallation does not bypass account or administrator policy.
+Comprueba primero la cuenta, el espacio de trabajo y el acceso disponible en tu plan. Verifica también si tu organización ha desactivado esa función. No intentes eludir las políticas de la cuenta o del administrador reinstalando repetidamente.
 
-### The operating system requests file, accessibility, or app-control access
+### El sistema solicita acceso a archivos, accesibilidad o control de aplicaciones
 
-Decide whether the current task actually requires it. Opening a practice directory does not justify unrelated disk or system access. See [Permissions and sandboxing](/es/guide/permissions-and-sandbox/).
+Comprueba si la tarea actual necesita realmente ese permiso. Para abrir una carpeta de práctica no hace falta conceder acceso a discos o funciones del sistema que no guardan relación con ella. Consulta [Permisos y sandbox](/es/guide/permissions-and-sandbox/) para decidir.
 
-### The interface differs from a screenshot
+### La interfaz instalada no coincide con las capturas
 
-The App evolves quickly. Define success as being able to sign in, select a work location, start a task, and review its result—not finding a button at a fixed coordinate.
+La aplicación de escritorio cambia con frecuencia. Considera que la instalación funciona si puedes iniciar sesión, elegir el lugar de trabajo, iniciar una tarea y revisar su resultado. No dependas de la ubicación fija de un botón.
 
-See [Installation and first use](/es/guide/desktop-app/installation-and-interface/) for the interface and [Desktop App troubleshooting](/es/guide/desktop-app/troubleshooting/) for failures.
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Verification basis:** The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
-
-**Last verified:** 2026-08-26
+Para conocer la interfaz, consulta [Instalación e interfaz](/es/guide/desktop-app/installation-and-interface/). Si algo falla, visita [Solución de problemas de la aplicación de escritorio](/es/guide/desktop-app/troubleshooting/).

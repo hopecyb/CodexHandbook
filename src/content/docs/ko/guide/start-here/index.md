@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "이 페이지는 시작 순서와 읽기 입구만 설명합니다. 사이트 내 링크·장 계층·안내 구조를 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 여기서부터 시작
 description: Codex가 무엇인지, 누구에게 맞는지 이해하고 학습 경로를 고릅니다.
 sidebar:
   order: 1
 locale: ko
 source_locale: zh-CN
-source_revision: b7997c5
+source_revision: 016d023
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 여기서부터 시작
 
 이 핸드북은 주로 **AI 초보자**를 대상으로 합니다. 터미널·Git·Agent를 이미 안다고 가정하지 않지만, 앞으로 만나게 될 역량은 단계적으로 풀어 설명합니다.
 
@@ -83,10 +87,3 @@ reviewed_at: 2026-08-26
 같은 지식은 권위 있는 본문을 한 곳만 두고, 경로·사례는 요약과 링크로 중복을 피합니다.
 
 이 장은 시작 단계의 순서와 경계를 설명하며, 눈에 띄는 위험도 미리 짚어 둡니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 시작 순서와 읽기 입구만 설명합니다. 사이트 내 링크·장 계층·안내 구조를 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

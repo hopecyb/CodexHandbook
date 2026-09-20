@@ -1,65 +1,58 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Conferido com as páginas oficiais atuais de Pricing e Authentication. Esta página descreve os modos de acesso e a ordem de diagnóstico sem fixar preços, limites ou listas de funções que mudam frequentemente."
+  checkedAt: "2026-08-26"
 title: Conta, planos e acesso
-description: Entenda formas de login, planos e pré-requisitos de acesso.
+description: Distinguir os planos ChatGPT, a utilização de API key e as permissões do workspace da organização.
 locale: pt
 source_locale: zh-CN
-source_revision: 7e2e8e6
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: ecfa8f9
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
+Atualmente, o Codex pode ser usado através de um **plano ChatGPT** ou de uma **API key com cobrança por utilização**. Os dois métodos, porém, não oferecem exatamente os mesmos pontos de acesso nem os mesmos limites de administração.
 
-Codex can currently be used through a **ChatGPT plan** or with **usage-based API-key billing**, but the two methods do not expose identical entry points or governance boundaries.
+## Escolher primeiro o método de acesso
 
-## Choose an access method first
-
-| Method | Best for | Availability boundary |
+| Método | Adequado para | Limites de acesso |
 |---|---|---|
-| Sign in with ChatGPT | Personal interactive work, desktop, Cloud, and organization workspaces | Governed by ChatGPT plan limits, workspace roles, and administrator policies |
-| Sign in with an API key | Local Codex, scripts, and CI | Billed by API usage; some ChatGPT-workspace or Cloud features are unavailable |
+| Iniciar sessão com ChatGPT | Trabalho interativo pessoal, ambiente de trabalho, Cloud e workspaces de organizações | Sujeito aos limites do plano ChatGPT, aos papéis no workspace e às políticas do administrador |
+| Usar uma API key | Codex local, scripts e CI | Cobrado pela utilização da API; algumas capacidades dependentes do workspace ChatGPT ou do Cloud não estão disponíveis |
 
-The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This handbook does not duplicate the price table; consult the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
+A página oficial atual de Pricing inclui ChatGPT Work e Codex em planos como Free, Go, Plus, Pro, Business, Edu e Enterprise, mas preços, limites, modelos e funções incluídas podem mudar. Este manual não reproduz a tabela de preços. Consulte diretamente a [página oficial de Pricing atualizada](https://learn.chatgpt.com/docs/pricing).
 
-## Why an account may still lack access
+## Porque pode ter conta e continuar sem acesso
 
-Signing in is only the first layer. Final access also depends on:
+O início de sessão é apenas a primeira etapa. O acesso final também depende de:
 
-1. whether the current plan includes the target client or feature;
-2. whether the product is available in your region;
-3. whether your organization assigned the required seat, role, and workspace permission;
-4. whether managed configuration restricts sign-in methods, models, or local capabilities;
-5. whether usage has reached the current window or weekly limit.
+1. O plano atual incluir o ponto de acesso ou a função pretendida.
+2. O produto estar disponível na sua região.
+3. A organização lhe ter atribuído o lugar, o papel e as permissões necessários no workspace.
+4. O administrador restringir o método de autenticação, o modelo ou as capacidades locais através de configuração administrada.
+5. A utilização ter atingido o limite da janela atual ou o limite semanal.
 
-## Personal access checklist
+## Lista de verificação para utilizadores individuais
 
-- You can sign in to the correct ChatGPT account on an official page.
-- You know whether usage consumes plan limits or usage-based API billing.
-- The target client shows the expected identity.
-- When a limit appears, you inspect current usage instead of reinstalling the client repeatedly.
+- Consegue iniciar sessão na conta ChatGPT correta numa página oficial.
+- Sabe se está a usar a quota do plano ou a pagar pela utilização da API.
+- Vê a identidade correta no cliente pretendido.
+- Quando aparece um aviso de limite, consulta a utilização atual em vez de reinstalar repetidamente o cliente.
 
-## Team and enterprise checklist
+## Lista de verificação para equipas e empresas
 
-- You selected the correct workspace rather than a personal space under the same email.
-- An administrator configured membership, seats, and roles.
-- SSO, MFA, retention, and regional policies satisfy organization requirements.
-- Managed configuration does not force a different local sign-in method.
-- The API key belongs to the correct API organization and is not confused with ChatGPT workspace policy.
+- Selecionou o workspace correto, e não o espaço pessoal associado ao mesmo endereço de email.
+- O administrador configurou membros, lugares e papéis.
+- SSO, MFA, retenção de dados e políticas regionais cumprem os requisitos da organização.
+- A configuração administrada não impõe outro método de autenticação local.
+- A API key pertence à API organization correta, sem confundir as suas políticas com as do workspace ChatGPT.
 
-## Example diagnosis
+## Um exemplo de diagnóstico
 
-If the CLI works with an API key but the Cloud button is unavailable, installation may be fine. Cloud requires ChatGPT sign-in and is governed by ChatGPT plan and workspace access; API keys primarily cover local and programmatic workflows.
+Se a CLI aceitar uma API key, mas o botão do Cloud estiver indisponível, isso não significa necessariamente que a instalação falhou. O Cloud exige autenticação com ChatGPT e está sujeito ao plano ChatGPT e às permissões do workspace; a API key destina-se sobretudo a fluxos locais e programáticos.
 
-Next, read [Sign-in and authentication](/pt/guide/getting-started/sign-in-and-authentication/).
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
-
-**Last verified:** 2026-08-26
+A seguir, consulte [Início de sessão e autenticação](/pt/guide/getting-started/sign-in-and-authentication/).

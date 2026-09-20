@@ -1,57 +1,53 @@
 ---
-title: 結果をレビューする
-description: diff の確認、検証の実行、追問の習慣を身につけます。
-locale: ja
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "結果をレビューする"
+description: "固定の誤りを含む例で間違いを探す練習をし、自分の案内文を確認します。"
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "固定の教材と筆者による参照結果を用意しました。一時ディレクトリでファイル操作スクリプトを実行済みですが、独立したモデルや読者による完走テストはまだ行っていません。"
+  evidence:
+    - label: "筆者によるファイル操作の記録"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/ja/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "明確なタスクを伝える"
+next:
+  link: "/ja/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "最初の小さなプロジェクトを完成させる"
+locale: ja
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## このステップの目標
+## まず、既知の誤りがあるサンプルを見る
 
-「ざっと見て通す」を、固定のチェック動作に変えることです。
+[筆者が意図的に誤りを入れた案内文](/downloads/first-project/references/flawed-notice.md)を開き、`facts.md` と比べて、誤った文、対応する事実番号、修正方法を記録してください。このサンプルはモデルの出力ではなく、特定のプロンプトが必ず失敗することも示しません。
 
-チェックリスト：[結果の確認](/ja/guide/getting-started/review-the-result/) · [差分のレビュー](/ja/guide/quality/review-diffs/)
+実際の作業ディレクトリの権限をわざと緩めて、範囲外の変更を誘発しないでください。固定の誤りサンプルだけで、間違いを見つける練習と繰り返しの比較ができます。
 
-多くの人はこのステップを飛ばします。Codex を安定して使えるかは、結果を review できるかに左右されることが多いです。
+## 次に、自分の成果物を確認する
 
-## 練習
+パッケージ内の `templates/review.md` を作業ディレクトリ外の新しい `records` フォルダーにコピーし、次の項目を一つずつ記入します。
 
-意図的に越境しやすい曖昧なプロンプトを与え、計画を観察します。越境するステップは拒否し、制約を書き直してから再実行します。
+- 時刻、場所、定員、費用、準備事項は正しいか。
+- 申込方法は不明のままか。事実番号は本文の根拠になっているか。
+- 変更したのは notice.md だけか。元の事実ファイルとメモは変わっていないか。
+- 追加のファイル作成や削除、外部への送信はないか。
 
-## 練習の重点
+不明な項目は「未確認」と記入してください。モデルが「完了」と言っただけで合格にしないでください。
 
-ここで主に練習するのは次の 3 点です。
+## 完了条件
 
-- 越境の準備があるか見抜く
-- 拒否すべきタイミングを知る
-- 曖昧なタスクを絞り込んでからやり直す方法を知る
+誤りサンプルの事実誤認4点を自力で指摘してから、[確認用の解答](/downloads/first-project/references/review-key.md)を見ます。4点は終了時刻、人数、架空の申込方法、任意の本の持参を必須とした点です。自分の案内文に問題があれば、修正後に再確認してください。
 
-一度で完璧な結果を期待するより、こちらが直接的です。
+実際に記入した確認記録を保存してください。筆者の参考例を、自分が完了した証拠としてコピーしないでください。関連：[差分を確認する](/ja/guide/quality/review-diffs/)。
 
-## よくある誤解
-
-### 1. review は後の本番プロジェクトで必要になる
-
-review の習慣を早く身につけるほど、後で結果を盲信しにくくなります。
-
-### 2. 計画を出してくれたので、自分で判断する必要はない
-
-それでも判断は必要です。
-
-計画は補助であり、触れてはいけない範囲に触れていないかは自分で見る必要があります。
-
-結果のレビューは余分な動作ではなく、利用プロセスの一部です。
-
-次のステップ：[最初の小さなプロジェクトを完了する](/ja/guide/learning-paths/beginner/05-complete-first-project/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**検証根拠：** 本ハンドブックの現行検証済み結果の確認、差分のレビュー、初心者パス章を相互に照合済み。本ページは「越境を見抜き、不適切なステップを拒否し、タスクを絞り込んで再実行する」安定したレビュー習慣の訓練のみを担う。  
-**最終検証：** 2026-07-26
+[練習パッケージと準備](/ja/guide/learning-paths/beginner/)

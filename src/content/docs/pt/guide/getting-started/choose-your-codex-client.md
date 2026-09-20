@@ -1,43 +1,31 @@
 ---
 title: Escolher o cliente Codex
-description: Faça a primeira escolha entre App, CLI, IDE e Cloud.
+description: Escolha rapidamente entre o aplicativo para desktop, o CLI, a integração com IDE e o Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: 960d5d3
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: d316380
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
+Comece por identificar onde acontece a maior parte do seu trabalho:
 
-Start with where most of the work happens:
-
-| You mainly work in | Start here |
+| Você trabalha principalmente | Comece por aqui |
 |---|---|
-| The desktop, managing projects, files, and multiple tasks | **ChatGPT desktop App** |
-| A terminal, running Git, tests, and scripts | **Codex CLI** |
-| VS Code, a compatible editor, Xcode, or JetBrains | **IDE integration** |
-| A connected remote repository and isolated environment | **Codex Cloud** |
+| No desktop, gerenciando projetos, arquivos e várias tarefas | **Aplicativo ChatGPT para desktop** |
+| No terminal, executando Git, testes e scripts | **Codex CLI** |
+| No VS Code, em um editor compatível, no Xcode ou no JetBrains | **Integração com IDE** |
+| Em um repositório remoto conectado e em um ambiente isolado | **Codex Cloud** |
 
-If this is your first time and you have no strong preference, start with the desktop App. It makes tasks, files, diffs, and approvals easier to see. This choice is not permanent: one workflow can start in the IDE, use the CLI for verification, and continue a long task in the desktop App or Cloud.
+Se esta for sua primeira vez e você não tiver preferência clara, pode começar pelo aplicativo para desktop. Nele, é mais fácil visualizar tarefas, arquivos, diffs e aprovações. A escolha não é definitiva: um mesmo fluxo pode começar no IDE, usar o CLI para verificar o resultado e continuar uma tarefa longa no aplicativo para desktop ou no Cloud.
 
-For the complete decision diagram, combined workflows, and verification steps, read [Choose a Codex client](/pt/guide/choose-your-client/). For a feature-by-feature comparison, see [Feature comparison](/pt/guide/reference/feature-comparison/).
+Para ver o diagrama completo de decisão, exemplos de combinação e etapas de verificação, leia [Escolher um cliente Codex](/pt/guide/choose-your-client/). Para comparar cada recurso, consulte a [comparação de funcionalidades](/pt/guide/reference/feature-comparison/).
 
-Then continue to the relevant setup page:
+Depois, escolha a página de instalação correspondente:
 
-- [Install the desktop App](/pt/guide/getting-started/install-desktop-app/)
-- [Install the CLI](/pt/guide/getting-started/install-cli/)
-- [Install an IDE integration](/pt/guide/getting-started/install-ide-extension/)
-- [Learn about Codex Cloud](/pt/guide/web-and-cloud/)
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the four current official entry points. This page keeps only the quick beginner decision and navigation; detailed capabilities are maintained in the main client-selection and feature-comparison pages.
-
-**Last verified:** 2026-08-26
+- [Instalar o aplicativo para desktop](/pt/guide/getting-started/install-desktop-app/)
+- [Instalar o CLI](/pt/guide/getting-started/install-cli/)
+- [Instalar a integração com IDE](/pt/guide/getting-started/install-ide-extension/)
+- [Conhecer o Codex Cloud](/pt/guide/web-and-cloud/)

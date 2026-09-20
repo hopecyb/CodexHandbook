@@ -3,7 +3,7 @@ title: acceptable use 政策
 description: チームレベルで Codex に何をさせ、何をさせないか——技術と研修と整合。
 locale: ja
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

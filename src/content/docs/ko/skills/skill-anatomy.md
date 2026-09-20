@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "현재 Codex 런타임 스킬 설명은 여전히 `SKILL.md`를 핵심 파일로 쓰며, 필요 시 스크립트와 참고 자료를 확장할 수 있습니다. 이 페이지는 디렉터리 역할 구분에 초점을 두며, 자주 바뀌는 제품 입구에 묶이지 않습니다."
+  checkedAt: "2026-07-26"
 title: Skill 구조
 description: SKILL.md, references/, templates/, scripts/의 역할과 예시.
 locale: ko
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Skill 디렉터리를 처음 볼 때 흔한 느낌은 「폴더는 다 아는데, 왜 이렇게 나눠 두는지 모르겠다」입니다.
@@ -15,7 +19,6 @@ Skill 디렉터리를 처음 볼 때 흔한 느낌은 「폴더는 다 아는데
 
 읽기·수정·재사용이 쉬워지고, 갈수록 어수선해지는 것도 줄일 수 있습니다.
 
-# Skill 구조
 
 ## 디렉터리 구조
 
@@ -36,6 +39,18 @@ my-skill/
 
 처음에는 `SKILL.md` 하나만으로도 충분합니다.  
 나중에 정말 복잡해지면 `references/`, `templates/`, `scripts/`를 분리하세요.
+
+## 한꺼번에 모두 읽지 않고 필요할 때 불러오기
+
+관리하기 쉬운 Skill은 보통 세 계층으로 나눕니다.
+
+| 계층 | 내용 | 사용 시점 |
+|---|---|---|
+| 메타정보 | 이름, 설명, 실행이 필요한 상황 | Codex가 사용할지 판단할 때 |
+| 핵심 지침 | 필수 단계, 금지 사항, 완료 기준 | Skill이 실행되면 먼저 읽기 |
+| 부속 자료 | 템플릿, 참고 자료, 스크립트, 예시 | 작업에 실제로 필요할 때만 열거나 실행 |
+
+평소에는 짧은 실행 설명만 보이고, 실행할 때 세부 내용을 불러옵니다. Skill이 많아질수록 이런 구분이 중요해집니다.
 
 ## SKILL.md 최소 예시
 
@@ -112,10 +127,3 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 | 스크립트 | 복잡도 분석, 링크 검사, 커버리지 집계, 포맷 검사 |
 
 좋은 Skill은 더 긴 프롬프트가 아니라, 재사용 과정을 읽기 쉽고 테스트 가능하며 유지보수 가능한 부분으로 나눈 것입니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 현재 Codex 런타임 스킬 설명은 여전히 `SKILL.md`를 핵심 파일로 쓰며, 필요 시 스크립트와 참고 자료를 확장할 수 있습니다. 이 페이지는 디렉터리 역할 구분에 초점을 두며, 자주 바뀌는 제품 입구에 묶이지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -3,7 +3,7 @@ title: Erinnerungen und persistenter Kontext
 description: "Wie Codex Vorlieben und Fakten über Sessions merkt: Fähigkeiten, Grenzen und Teamnormen."
 locale: de
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

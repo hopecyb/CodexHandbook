@@ -3,7 +3,7 @@ title: Artefato primeiro
 description: Acordar primeiro a forma e o caminho do artefato final, depois derivar os passos — adequado a documentação, configuração, relatórios e entregáveis semelhantes.
 locale: pt
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

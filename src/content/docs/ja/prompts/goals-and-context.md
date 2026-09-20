@@ -3,7 +3,7 @@ title: 目標とコンテキストを伝える
 description: Codex に何を達成し、なぜ重要かを知らせる。
 locale: ja
 source_locale: zh-CN
-source_revision: 6ec9636
+source_revision: 0a5141f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

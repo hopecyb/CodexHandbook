@@ -3,7 +3,7 @@ title: 보안
 description: 팀 수준 위험, 공격면, 방어 관점 설명 페이지입니다. 위험이 어디에 있는지 먼저 이해한 뒤 통제 수단을 이야기하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

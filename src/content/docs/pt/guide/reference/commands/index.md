@@ -3,19 +3,24 @@ title: Referência de comandos CLI
 description: Consulta rápida de subcomandos e parâmetros habituais do CLI Codex — índice de aprendizagem, não substitui o manual oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: bdc537d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6091bcc
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 'Conferido com a tabela oficial atual de Developer commands: só são listadas entradas Stable e foram verificados --cd / -C, sandbox e aprovação. Comandos experimentais ou obsoletos ficam fora.'
+  checkedAt: '2026-08-26'
 ---
+
 
 A página de referência de comandos serve sobretudo para escolher a entrada, não para memorizar parâmetros de uma vez:
 
 > **Agora devo usar a entrada interativa ou a de comando único?**
 
-Esta página resume as entradas habituais do **CLI Codex** para procurar e contrastar. **Nomes de comando, parâmetros e valores por omissão mudam com a versão**; antes de executar, corre `codex --help` e o `--help` do subcomando, e prevalece a [documentação OpenAI Codex](https://developers.openai.com/codex).
+Esta página reúne as entradas **Stable** atuais do Codex CLI para consulta e comparação. Antes de executar, consulta `codex --help` e o `--help` de cada subcomando; a maturidade e os parâmetros completos seguem [Developer commands](https://learn.chatgpt.com/docs/developer-commands).
 
 ## Quando usá-la
 
@@ -32,16 +37,20 @@ Usos habituais:
 
 Para quem começa com o CLI, isso já resolve a maior parte da escolha de entrada.
 
-## Resumo de comandos (esquema)
+## Visão geral dos comandos Stable
 
 | Entrada | Uso | Detalhe |
 |---|---|---|
 | `codex` | Sessão TUI interativa | [Modo interativo](/pt/guide/cli/interactive-mode/) |
-| `codex exec` (ou equivalente) | Tarefa não interativa única / por pipeline | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
-| Relacionado com configuração | Ler/escrever configuração de utilizador/projeto | [Configuração do CLI](/pt/guide/cli/configuration/) |
+| `codex exec` / `codex e` | Tarefa única ou em pipeline, não interativa | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
+| `codex doctor` | Gerar relatório de diagnóstico de instalação, configuração, autenticação, ambiente de execução, Git e terminal | [Diagnóstico do CLI](/pt/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | Gerir a autenticação | [Início de sessão e autenticação](/pt/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | Retomar ou bifurcar uma sessão guardada | [Passagem de contexto e retomada](/pt/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | Gerir servidores MCP | [Ligar MCP](/pt/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Instalar, listar e remover plugins | [Plugins](/pt/skills/plugins/) |
 
-:::caution[Sensível à versão]
-Os nomes de parâmetros da tabela seguinte são redações habituais em documentação comunitária e **não garantem coincidir com o teu CLI instalado**. Após atualizar, volta a contrastar `--help`.
+:::caution[Níveis de maturidade diferentes]
+A referência oficial também contém comandos Experimental, Beta e Deprecated. Esta consulta básica não os mistura com os Stable; confirma a maturidade e os riscos antes de os usar.
 :::
 
 ## Mal-entendidos frequentes
@@ -103,15 +112,15 @@ Mais leve do que afundar-te de golpe no detalhe de parâmetros.
 ## Exec não interativo (conceito)
 
 ```bash
-# Diretório de trabalho e Prompt único (esquema)
-codex exec --cd /path/to/repo "a tua descrição completa da Tarefa"
+# Diretório de trabalho e prompt único (exemplo)
+codex exec --cd /path/to/repo "a tua descrição completa da tarefa"
 
-# Intenções habituais (nomes de parâmetro conforme o oficial)
-# --cd          diretório de trabalho
-# --model        modelo fixo
-# --sandbox      política de Sandbox
-# --approval     política de Aprovação (especialmente importante sem supervisão)
-# pipeline stdin  ler o Prompt a partir de um ficheiro ou um comando a montante
+# Parâmetros habituais atuais
+# --cd, -C       diretório de trabalho
+# --model        fixar o modelo
+# --sandbox      política de sandbox
+# --ask-for-approval, -a  política de aprovação
+# pipeline stdin  ler o prompt de um ficheiro ou comando anterior
 ```
 
 Segurança: [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
@@ -151,10 +160,3 @@ Não ignores stderr em CI; conserva logs para [diagnosticar primeiro](/pt/cases/
 | Aprovação bloqueia CI | Endurecer o Prompt + Sandbox só de leitura |
 
 [Diagnóstico do CLI](/pt/guide/cli/troubleshooting/)
-
----
-
-**Estado:** outdated  
-**Produtos aplicáveis:** CLI  
-**Nota de revisão:** Embora se tenha escrito o mais possível como «mapa de entradas», o núcleo continua a girar em torno de `codex`, `codex exec`, comandos `/` de sessão e intenções de parâmetros; são detalhes de produto do CLI muito voláteis; restaurar-se-á `verified` quando houver documentação oficial de comandos da versão mais recente.  
-**Última verificação:** 2026-07-26

@@ -1,77 +1,71 @@
 ---
-title: "Comparaison des fonctionnalités"
-description: Comparaison des capacités entre App, CLI, IDE et Cloud.
-locale: fr
-source_locale: zh-CN
-source_revision: f2f0528
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Comparaison effectuée avec les pages officielles actuelles sur l’App, le CLI, l’IDE, le Cloud, l’authentification et les tarifs. Le tableau ne retient que les capacités clairement décrites concernant le lieu de travail, le contexte, la revue et la connexion ; il évite de classer des fonctions changeantes comme fortes, moyennes ou faibles."
+  checkedAt: "2026-08-26"
+title: Comparaison des fonctionnalités
+description: Comparer l’App de bureau, le CLI, l’IDE et le Cloud selon le lieu de travail, l’environnement d’exécution et la méthode de revue.
 sidebar:
   order: 30
+locale: fr
+source_locale: zh-CN
+source_revision: b3d30b0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-This table compares only **stable primary workflows**. It does not turn rapidly changing small features into permanent promises. Decide with the [client-selection diagram](/fr/guide/choose-your-client/), then confirm differences here.
+Ce tableau compare uniquement les **principaux modes de travail relativement stables**. Il ne transforme pas de petites fonctions qui changent vite en promesses durables. Servez-vous d’abord du [schéma de choix du client](/fr/guide/choose-your-client/) pour décider, puis vérifiez ici les différences.
 
-## Core comparison
+## Comparaison principale
 
-| Entry | Where work happens | Strongest context | Primary review | Typical tasks |
+| Point d’entrée | Lieu de travail | Contexte principal | Méthode de revue | Tâches typiques |
 |---|---|---|---|---|
-| ChatGPT desktop App | Local projects, chats, and files | Open folders, projects, and tasks | Task summary, files, diff, approval UI | Multi-project coordination, long tasks, file and computer operations |
-| Codex CLI | Current terminal and local repository | Working directory, command output, Git state | Terminal commands, diff, result summary | Exploration, editing, testing, scripts, CI |
-| IDE integration | Current editor | Open files, selection, recent conversation | Change summary and diff beside code | Local explanation, incremental edits, editor review |
-| Codex Cloud | Isolated remote environment | Connected repository and environment configuration | Cloud logs, summary, diff, PR | Long background tasks, parallel attempts, remote collaboration |
+| Application de bureau ChatGPT | Projets, conversations et fichiers locaux | Dossiers ouverts, projets et tâches | Résumé de la tâche, fichiers, diff et interface d’approbation | Coordination de plusieurs projets, tâches longues, opérations sur fichiers et ordinateur |
+| Codex CLI | Terminal actuel et dépôt local | Répertoire de travail, sortie des commandes et état Git | Commandes, diff et résumé des résultats dans le terminal | Exploration, modification, tests, scripts et CI |
+| Intégration IDE | Éditeur actuel | Fichiers ouverts, sélection et conversation récente | Résumé des modifications et diff à côté du code | Explication locale, changements progressifs et revue dans l’éditeur |
+| Codex Cloud | Environnement distant isolé | Dépôt connecté et configuration de l’environnement | Journaux Cloud, résumé, diff et PR | Tâches longues en arrière-plan, essais parallèles et collaboration à distance |
 
-## Installation and identity
+## Installation et identité
 
-| Item | Desktop App | CLI | IDE | Cloud |
+| Élément | App de bureau | CLI | IDE | Cloud |
 |---|---|---|---|---|
-| Entry | macOS / Windows / Linux desktop App | Local command line | VS Code-compatible extension; separate Xcode and JetBrains integrations | Web and supported remote integrations |
-| ChatGPT sign-in | Supported | Supported | Supported | Required |
-| Local API-key sign-in | Supported | Supported | Supported | Not supported |
-| Primary billing | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan and workspace permissions |
+| Accès | Application de bureau macOS / Windows / Linux | Ligne de commande locale | Extension compatible VS Code ; intégrations propres à Xcode et JetBrains | Web et intégrations distantes compatibles |
+| Connexion ChatGPT | Prise en charge | Prise en charge | Prise en charge | Obligatoire |
+| Connexion locale par clé API | Prise en charge | Prise en charge | Prise en charge | Non prise en charge |
+| Mode de facturation principal | Abonnement ChatGPT ou consommation API | Abonnement ChatGPT ou consommation API | Abonnement ChatGPT ou consommation API | Abonnement ChatGPT et permissions de l’espace de travail |
 
-Local work signed in with an API key follows different billing, administration, and data-handling policies from ChatGPT sign-in. API keys also do not provide ChatGPT-workspace or Cloud capabilities. Use live official pages for current plans and limits.
+Le travail local connecté avec une clé API suit des règles de facturation, d’administration et de traitement des données différentes de la connexion ChatGPT. Une clé API ne donne pas non plus accès aux capacités exigeant un espace de travail ChatGPT ou le Cloud. Pour les abonnements et quotas actuels, consultez toujours les pages officielles à jour.
 
-## Common combinations
+## Combinaisons courantes
 
-### Personal development loop
-
-```text
-IDE locates a local issue → CLI runs a precise test → desktop App reviews long work and the diff
-```
-
-### Remote team loop
+### Cycle de développement individuel
 
 ```text
-Start from GitHub / GitLab / Linear / Slack → run in isolated Cloud
-→ human reviews summary and diff → create PR
+L’IDE repère un problème local → le CLI exécute un test ciblé → l’App de bureau examine la tâche longue et le diff
 ```
 
-### Beginner learning loop
+### Cycle d’équipe à distance
 
 ```text
-Open a practice folder in the desktop App → request a small task
-→ inspect permission request → inspect diff → run verification
+Démarrer depuis GitHub / GitLab / Linear / Slack → exécuter dans un Cloud isolé
+→ une personne examine le résumé et le diff → créer une PR
 ```
 
-## Do not use the matrix instead of checking reality
+### Parcours d’apprentissage débutant
 
-Plugins, Scheduled tasks, notifications, models, and organization policies evolve quickly. Check the current client and official documentation for:
+```text
+Ouvrir un dossier d’exercice dans l’App de bureau → demander une petite tâche
+→ examiner la demande de permission → examiner le diff → lancer la vérification
+```
 
-- whether a feature appears for the current account;
-- whether plan, region, or administrator policy restricts it;
-- current command, shortcut, or UI names;
-- whether API-key sign-in supports a ChatGPT or Cloud feature.
+## Ne remplacez pas la vérification sur place par ce tableau
 
-Keep the rule simple: **IDE for local code, CLI for terminal loops, desktop App for local task coordination, Cloud for isolated remote execution.**
+Plugins, Scheduled tasks, notifications, modèles et politiques d’organisation évoluent rapidement. Consultez directement le client actuel et la documentation officielle pour savoir :
 
----
+- si une fonctionnalité apparaît sur le compte utilisé ;
+- si elle dépend de l’abonnement, de la région ou des règles de l’administrateur ;
+- quels sont les noms actuels des commandes, raccourcis ou éléments d’interface ;
+- si une connexion par clé API donne accès à une capacité ChatGPT ou Cloud donnée.
 
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with current App, CLI, IDE, Cloud, Authentication, and Pricing documentation. The matrix keeps explicit work-location, context, review, and sign-in boundaries instead of guessing volatile features as strong, medium, or weak.
-
-**Last verified:** 2026-08-26
+Le principe de choix reste simple : **l’IDE pour le code local, le CLI pour les cycles dans le terminal, l’App de bureau pour coordonner les tâches locales et le Cloud pour une exécution distante isolée.**

@@ -1,15 +1,22 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Aktuelle Codex-Planunterlagen im OpenAI Help Center beschreiben weiterhin parallele Codex-Agents in der Desktop-App, integrierte Worktree-Unterstützung und Cloud-Delegation. Diese Seite fasst nur das Koordinationsmuster „parallel erkunden, Verzeichnisgrenzen isolieren, paralleles Push vermeiden, Schlussfolgerungen manuell zusammenführen“ zusammen und hängt nicht an einem einzelnen UI-Ablauf."
+  checkedAt: "2026-07-26"
 title: Mehrere Agents koordinieren
 description: Fallbeispiel zu paralleler Erkundung, Arbeitsteilung und Zusammenführung der Ergebnisse.
 locale: de
 source_locale: zh-CN
-source_revision: 5abc786
+source_revision: 7b143fc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mehrere Agents koordinieren
 
 ## Metadaten
 
@@ -49,9 +56,3 @@ Verschiedene Agents ändern in unterschiedlichen [git worktrees](/de/guide/deskt
 
 - [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/)
 - [Subagents](/de/guide/agent-work/subagents/)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Aktuelle Codex-Planunterlagen im OpenAI Help Center beschreiben weiterhin parallele Codex-Agents in der Desktop-App, integrierte Worktree-Unterstützung und Cloud-Delegation. Diese Seite fasst nur das Koordinationsmuster „parallel erkunden, Verzeichnisgrenzen isolieren, paralleles Push vermeiden, Schlussfolgerungen manuell zusammenführen“ zusammen und hängt nicht an einem einzelnen UI-Ablauf.  
-**Zuletzt geprüft:** 2026-07-26

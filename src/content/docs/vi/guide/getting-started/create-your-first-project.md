@@ -3,7 +3,7 @@ title: Tạo dự án luyện tập đầu tiên
 description: Chuẩn bị một thư mục luyện tập an toàn có thể bỏ.
 locale: vi
 source_locale: zh-CN
-source_revision: b461719
+source_revision: 43dcbdb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

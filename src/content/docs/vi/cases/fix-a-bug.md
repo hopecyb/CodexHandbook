@@ -3,7 +3,7 @@ title: Sửa Bug
 description: Từ test thất bại đến sửa tối thiểu và hồi quy — vòng lặp phổ biến nhất của nhà phát triển.
 locale: vi
 source_locale: zh-CN
-source_revision: 27c707b
+source_revision: 405a687
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

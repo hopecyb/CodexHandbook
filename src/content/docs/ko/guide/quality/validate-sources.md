@@ -3,7 +3,7 @@ title: 출처 검증
 description: 연구 결론에 추적 가능한 근거를 요구합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 35bd9a6
+source_revision: 6884531
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 不確実性の扱い
 description: 情報不足のときは質問を求め、推測で補わない。
 locale: ja
 source_locale: zh-CN
-source_revision: ea6795e
+source_revision: 839ce22
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

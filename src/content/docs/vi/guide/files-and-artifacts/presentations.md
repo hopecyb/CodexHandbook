@@ -3,7 +3,7 @@ title: Bài trình bày
 description: Tạo, chỉnh bản và xuất slide và bài diễn — ước định cấu trúc, master và ghi chú diễn thuyết.
 locale: vi
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

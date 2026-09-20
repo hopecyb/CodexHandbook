@@ -3,7 +3,7 @@ title: 생성물 검증
 description: Codex가 새로 만들거나보낸 파일·보고서·빌드 산출물을 체계적으로 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4b46d0b
+source_revision: 7401176
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

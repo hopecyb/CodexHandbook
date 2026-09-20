@@ -37,6 +37,7 @@ export function rehypeLocaleInternalLinks() {
 				) {
 					if (
 						!href.startsWith('/_') &&
+						!href.startsWith('/downloads/') &&
 						!href.startsWith('/favicon') &&
 						!href.startsWith('/icon') &&
 						!href.startsWith('/apple-touch') &&

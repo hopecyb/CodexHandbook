@@ -1,29 +1,27 @@
 ---
-title: Exemplos de Skills
-description: Entradas para exemplos de Skills de escrita, revisão, pesquisa e automação.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página de navegação reúne exemplos de escrita, revisão, pesquisa e automação que os Codex Skills atuais podem executar."
+  checkedAt: "2026-07-26"
+title: "Exemplos de Skills"
+description: "Acesso a quatro exemplos de Skills: escrita, revisão, pesquisa e automação."
 locale: pt
 source_locale: zh-CN
-source_revision: 346b14d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 490db95
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Exemplos de Skills
+Confira o estado dos materiais antes de escolher um exemplo. Os pacotes completos incluem entradas, referências e scripts de validação. Um esqueleto ainda precisa de recursos e verificações reais; sozinho, não é um fluxo de trabalho verificado.
 
-Estes exemplos servem melhor para observar a estrutura e depois adaptar às restrições do seu projeto e da equipe.
+| Exemplo | Estado do material | O que foi verificado |
+|---|---|---|
+| [Skill de escrita](/pt/skills/examples/writing-skill/) | Pacote source-backed-writer completo para download | Oito testes de regressão estrutural passaram; fatos e estilo foram conferidos pelo autor, mas a qualidade do modelo não foi medida. |
+| [Skill de revisão](/pt/skills/examples/review-skill/) | Pacote scoped-review completo para download | Sete testes de regressão do escopo do diff passaram; roteamento do modelo e taxa de detecção não foram medidos. |
+| [Skill de pesquisa](/pt/skills/examples/research-skill/) | Pacote evidence-research completo para download | Oito testes de estrutura de fontes e evidências passaram; a qualidade da pesquisa do modelo não foi medida. |
+| [Skill de automação](/pt/skills/examples/automation-skill/) | Pacote quiet-link-monitor completo para download | Oito testes de estado passaram; agendamento e entrega reais não foram testados. |
 
-| Exemplo | Descrição |
-|---|---|
-| [Skill de escrita](/pt/skills/examples/writing-skill/) | Fluxo estruturado de texto longo |
-| [Skill de revisão](/pt/skills/examples/review-skill/) | Revisão de PR / diff (exemplo completo) |
-| [Skill de pesquisa](/pt/skills/examples/research-skill/) | Saída de pesquisa com citações |
-| [Skill de automação](/pt/skills/examples/automation-skill/) | Tarefas repetidas e fluxos agendados |
+Página relacionada: [Crie seu primeiro Skill](/pt/skills/create-your-first-skill/).
 
-Página relacionada: [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/).
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** Esta é uma página de navegação de exemplos; escrita, revisão, pesquisa e automação são tipos comuns de workflow que Codex/Skills suportam hoje.  
-**Última Verificação:** 2026-07-26
+Use o [método de avaliação de fluxos de trabalho](/pt/guide/quality/workflow-evaluation/) para registrar separadamente acionamento, limites, formato, qualidade e tempo. O sucesso dos scripts de exemplo não comprova uma taxa geral de sucesso do modelo.

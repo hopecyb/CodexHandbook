@@ -3,7 +3,7 @@ title: IDE-Erweiterung
 description: Codex im Editor nutzen — Installation, Kontext, lokale und Cloud-Aufgaben, Überprüfung und Einstellungen.
 locale: de
 source_locale: zh-CN
-source_revision: 66307a0
+source_revision: 4772f3f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

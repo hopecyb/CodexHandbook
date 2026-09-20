@@ -3,7 +3,7 @@ title: 컨텍스트 초점 유지
 description: 범위 제어, 새 스레드, 인수인계.
 locale: ko
 source_locale: zh-CN
-source_revision: 042a77f
+source_revision: 5a55fa8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

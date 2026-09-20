@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "현재 Codex 런타임은 스킬 이름으로 명시 참조하고 적절한 장면에서 자동 매칭을 지원합니다. OpenAI Help 《Skills in ChatGPT》도 Skills가 도움이 될 때 자동 사용된다고 확인합니다. 이 페이지는 트리거 방식과 작성 원칙 중심입니다."
+  checkedAt: "2026-07-26"
 title: Skill 사용하기
 description: Skill의 명시적·암시적 트리거와 좋은 description 작성 요점.
 locale: ko
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Skill을 처음 접할 때 흔한 오해는 「설치하면 알아서 동작한�
 
 Skill은 당신이 **명시적으로 지명**해 호출할 수도 있고, 적절한 장면에서 모델이 **자동으로 선택**할 수도 있습니다. 두 트리거를 구분하면 조사 경로를 줄일 수 있습니다.
 
-# Skill 사용하기
 
 ## 트리거 방식
 
@@ -87,9 +91,3 @@ $pr-review 현재 커밋되지 않은 변경을 검토해 주세요
 한 줄을 읽어도 「뭐든 할 수 있을 것 같다」면 대개 너무 막연한 것입니다.
 
 개념은 [Skills 개요](/ko/skills/overview/)를 더 참고하세요.
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 현재 Codex 런타임은 스킬 이름으로 명시 참조하고 적절한 장면에서 자동 매칭을 지원합니다. OpenAI Help 《Skills in ChatGPT》도 Skills가 도움이 될 때 자동 사용된다고 확인합니다. 이 페이지는 트리거 방식과 작성 원칙 중심입니다.  
-**최근 검증:** 2026-07-26

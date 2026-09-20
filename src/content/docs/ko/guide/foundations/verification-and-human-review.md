@@ -3,7 +3,7 @@ title: 검증과 사람 검토
 description: 결과가 확인 가능해야 하는 이유와 재검토 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: 19de747
+source_revision: bfe4036
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

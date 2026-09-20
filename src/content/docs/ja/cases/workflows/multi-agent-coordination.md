@@ -3,7 +3,7 @@ title: マルチ Agent 協調
 description: 並列探索、分担実行、結果統合——いつ分割し、どう検証するか。
 locale: ja
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

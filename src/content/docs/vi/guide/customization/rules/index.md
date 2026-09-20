@@ -3,7 +3,7 @@ title: Quy tắc
 description: Trang mô tả allow/deny, quy tắc lệnh và chiến lược nhóm — phân rõ cái nào nên chặn, cái nào nên nhắc.
 locale: vi
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

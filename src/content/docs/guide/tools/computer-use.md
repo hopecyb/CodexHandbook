@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex（视版本、地区与权限）"
+  basis: "OpenAI Help Center 当前关于 Codex 计划与桌面能力的资料仍将 Computer Use 作为 Codex 相关功能之一；Business 发布说明也确认 2026-05-29 起 Codex 在 Windows 端支持 Computer Use。本文仅总结其风险模型、适用场景和审批边界，并未声明所有平台或账号默认可用。"
+  checkedAt: "2026-07-26"
 title: Computer Use
 description: 通过屏幕与输入设备操作 GUI 的高级能力——适用场景、风险与审批。
 sidebar:
@@ -136,10 +141,3 @@ Computer Use 几乎等价于**把键盘鼠标交给 Agent**：
 - [ ] prompt 写明允许操作的应用与禁止项
 - [ ] 任务后检查无意外文件/网络连接
 - [ ] 组织策略允许该能力
-
----
-
-**状态：** verified  
-**适用产品：** App / Codex（视版本、地区与权限）  
-**核验依据：** OpenAI Help Center 当前关于 Codex 计划与桌面能力的资料仍将 Computer Use 作为 Codex 相关功能之一；Business 发布说明也确认 2026-05-29 起 Codex 在 Windows 端支持 Computer Use。本文仅总结其风险模型、适用场景和审批边界，并未声明所有平台或账号默认可用。  
-**最近核验：** 2026-07-26

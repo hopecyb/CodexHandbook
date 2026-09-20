@@ -1,48 +1,40 @@
 ---
-title: "OpenSpec (phát triển theo đặc tả)"
-date: 2026-01-26
-year: 2026
-summary: "OpenSpec đặt đặc tả trước triển khai để con người và AI thống nhất ý định, thiết kế và tiêu chí chấp nhận."
-phase: emerging
-trend: rising
-signal: well-calibrated
-adoption_effort: ready-to-use
-tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
-authored_by: ai-assisted
+title: OpenSpec (phát triển dựa trên đặc tả)
+description: OpenSpec là một dự án cụ thể để tổ chức đặc tả và tạo tác thay đổi. Phát triển dựa trên đặc tả là phương pháp làm việc rộng hơn; một phiên bản dự án không phải nguồn gốc của phương pháp.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Đã đối chiếu sự kiện hoặc mô tả dự án trong nguồn sơ cấp dưới đây; lời khuyên học tập là nhận định của tác giả, và việc kiểm tra nguồn không được trình bày như kiểm thử sản phẩm thực tế.
+  evidence:
+  - label: Ghi chú phát hành OpenSpec v1.0.0
+    href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 033715b
+source_revision: 1a34023
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# OpenSpec (phát triển theo đặc tả)
+## Sự kiện có thể kiểm chứng và phạm vi
 
-- Mốc thời gian chính:
-  - Project release / public visibility: 2026-01-26
-- Tài liệu chính thức:
-  - https://github.com/openspec/openspec
-- Ghi chú: Mục này ghi lại điểm chuyển trong việc áp dụng và ý nghĩa hiện tại của khái niệm này trong kỹ thuật ứng dụng AI.
+**Loại: phiên bản dự án · Không xếp theo ngày phát hành đầu tiên.** Trang phát hành chính thức của dự án có ghi chú cho v1.0.0 (The OPSX Release). Lần kiểm tra này không suy ra ngày phát hành đầu tiên của dự án từ phiên bản đó, cũng không giữ lại ngày phát hành npm đầu tiên mà bằng chứng được xem xét lần này chưa xác nhận.
 
-## Nó Là Gì
+Nguồn: [Ghi chú phát hành OpenSpec v1.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0). Đối chiếu ngày 2026-09-18; ngày công bố nguồn và ngày kiểm tra trang này mang ý nghĩa khác nhau.
 
-OpenSpec đặt đặc tả trước triển khai để con người và AI thống nhất ý định, thiết kế và tiêu chí chấp nhận.
+## Bài viết giải quyết vấn đề gì
 
-## Nó Đưa Kỹ Thuật Ứng Dụng AI Từ Bước Nào Sang Bước Nào
+OpenSpec là một dự án cụ thể để tổ chức đặc tả và tạo tác thay đổi. Phát triển dựa trên đặc tả là phương pháp làm việc rộng hơn; một phiên bản dự án không phải nguồn gốc của phương pháp.
 
-Nó đưa phát triển từ yêu cầu code trong chat sang làm việc theo đặc tả có thể rà soát.
+## Gợi ý học tập và giới hạn áp dụng
 
-## Hiện Đang Ở Giai Đoạn Nào
+Những điều sau là nhận định sư phạm của trang này, không phải phép đo mức độ phổ biến trong ngành hoặc hiệu quả:
 
-Hiện tại tôi đánh dấu mục này là `emerging`.
+Khi yêu cầu có nhiều ràng buộc hoặc cần bàn giao giữa nhiều người, trước hết hãy lưu mục tiêu, phạm vi, tiêu chí nghiệm thu và vấn đề chưa quyết. Thay đổi đơn giản không cần máy móc áp dụng toàn bộ quy trình đặc tả. Lệnh cụ thể thay đổi theo phiên bản dự án; hãy dùng tài liệu của đúng phiên bản.
 
-Nó đang nổi lên và càng giá trị khi AI tạo code nhanh hơn.
+## Bài tập thực hành
 
-## Nó Có Thể Thay Thế Điều Gì
+[Quy trình dựa trên đặc tả](/vi/cases/workflows/specification-driven-work/): viết đặc tả có thể nghiệm thu cho một thay đổi, rồi đối chiếu từng phần triển khai với đặc tả. Bài tập trên trang này giới thiệu phương pháp; nó không có nghĩa OpenSpec đã được cài đặt hoặc chạy thực tế tại đây.
 
-Nó thay thế các quyết định bị mất trong lịch sử hội thoại.
-
-## Điều Gì Có Thể Thay Thế Nó
-
-Nó có thể tích hợp với IDE, issue, test và nền tảng phát triển theo đặc tả.
+[Quay lại lộ trình và quy ước ngày tháng](/vi/ai-roadmap/).

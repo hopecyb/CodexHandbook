@@ -3,22 +3,21 @@ title: Política de versão do handbook
 description: Explica o status do conteúdo, a data de verificação e como as atualizações contínuas funcionam.
 locale: pt
 source_locale: zh-CN
-source_revision: 3f4e05e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: a608dc3
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 8
 ---
 
 ## Atualização contínua
 
-Este handbook não fica congelado a um único número de versão do Codex por longo prazo. O produto muda, por isso as páginas usam status e data de verificação para indicar a confiabilidade atual.
+Este handbook não fica congelado indefinidamente em uma única versão do Codex. O produto muda; por isso, cada página explica o que foi verificado por meio de status, data de verificação e evidências específicas. A data, por si só, não é uma nota de confiabilidade.
 
 ## Conteúdo
 
 - Por que este handbook não pode pressupor que nada muda
-- Como ler o status e a data de verificação no final da página
+- Como ler o status e a data de verificação no início da página
 - Em quem confiar quando houver conflito com o oficial
 
 ## Status da página
@@ -41,9 +40,11 @@ Este handbook não fica congelado a um único número de versão do Codex por lo
 - `outdated`: pode ter sido correto antes, mas agora desconfie de desatualização
 - `archived`: mantido como referência, não como conteúdo principal atual
 
-## As três linhas do rodapé
+## Registro de verificação e atualização do conteúdo
 
-Na fase MVP, cada página marca no final: **Status / Produtos aplicáveis / Última verificação**. Conteúdo que envelhece rápido (instalação, conta, Permissão, modelo) deve incluir links oficiais.
+No início de cada página aparecem separadamente o status editorial, o método de verificação, a data da verificação e as evidências aplicáveis. `editorial` indica revisão editorial, `source-checked` indica conferência de fontes e `run-tested` indica que um exemplo foi executado no ambiente registrado. Nenhum desses métodos substitui os outros. As notas históricas ficam separadas e não se tornam automaticamente evidência de uma execução atual.
+
+[Atualizações e correções do conteúdo](/pt/guide/updates/) explica mudanças específicas e seus efeitos. No fim das páginas com texto em chinês, é possível abrir um rascunho de correção no GitHub com informações da página atual. Verifique-o e remova dados sensíveis antes de enviar.
 
 ## Base oficial
 
@@ -57,7 +58,7 @@ Estes conteúdos mudam com mais facilidade:
 
 - Forma de instalação
 - Fluxos de login e conta
-- Permissão, modelos, itens de configuração
+- Permissões, modelos e opções de configuração
 - Comportamento de Cloud e das entradas de produto
 
 ### 2. `review` não significa que não se pode ler
@@ -75,15 +76,8 @@ Dá para separar assim:
 
 Se suspeitar que uma página está desatualizada, olhe estas três coisas:
 
-1. O status do rodapé é `review`, `verified` ou `outdated`?
+1. O status editorial no início da página é `review`, `verified` ou `outdated`?
 2. A data da última verificação está longe de hoje?
-3. O tema é conceitual, ou é instalação, configuração, Permissão — coisas que mudam fácil?
+3. O tema é conceitual, ou é instalação, configuração, permissões — coisas que mudam fácil?
 
 Sempre que envolver comportamento, parâmetros e regras atuais, a documentação oficial vigente prevalece.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Revisado conforme o sistema de 6 status adotado por este handbook, as regras de rodapé e o princípio de prioridade oficial; esta página explica a política de versão do site e o método de leitura, sem depender de parâmetros de versão de produto específicos.  
-**Última verificação:** 2026-07-26

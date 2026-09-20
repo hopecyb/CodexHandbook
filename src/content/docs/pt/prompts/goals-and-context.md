@@ -3,7 +3,7 @@ title: Objetivos e contexto
 description: Faça o Codex saber o que concluir e por que importa.
 locale: pt
 source_locale: zh-CN
-source_revision: 6ec9636
+source_revision: 0a5141f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

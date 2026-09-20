@@ -3,7 +3,7 @@ title: Ưu tiên Artifact
 description: Thỏa thuận hình thức và đường dẫn Artifact cuối trước, rồi suy ngược bước — phù hợp tài liệu, cấu hình, báo cáo và thành phẩm tương tự.
 locale: vi
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

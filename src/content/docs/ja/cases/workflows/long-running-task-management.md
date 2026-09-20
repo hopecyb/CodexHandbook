@@ -3,7 +3,7 @@ title: 長時間タスク管理
 description: 数時間・複数セッションにまたがる大タスク——チェックポイント、圧縮、委任、終了条件。
 locale: ja
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

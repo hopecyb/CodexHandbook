@@ -3,10 +3,9 @@ title: 対話モード
 description: ターミナルで Codex と会話しながらタスクを実行する。
 locale: ja
 source_locale: zh-CN
-source_revision: 794dd7c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 822e8f7
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -23,6 +22,19 @@ sidebar:
 4. `/` 系ショートカット（ある場合）でセッション管理——現行 CLI のヘルプを正とする
 
 プロンプトの考え方は引き続き有効：[プロンプト](/ja/prompts/)
+
+## 対話モードに向くタスク
+
+対話モードは、作業を進めながら判断する必要がある場合に適しています。
+
+| タスクの状態 | 対話が役立つ理由 |
+|---|---|
+| 要件がまだ固まっていない | 途中で明確にできる |
+| 次の手順を決める前に diff を見たい | 段階的に承認したり、範囲を絞ったりできる |
+| プロジェクトで初めて手順を試す | 何を読み、何を変えたか確認しやすい |
+| 権限、外部ツール、ファイル書き込みが関係する | 重要な地点で人が判断できる |
+
+やり取りによる判断が不要なほどタスクが安定したら、[非対話モード](/ja/guide/cli/non-interactive-mode/)や自動化を検討します。
 
 ## よくある誤解
 

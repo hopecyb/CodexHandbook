@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "已对照当前官方桌面 App Slash commands 与 Developer commands，明确不同工作面的命令集合并不相同；列出的命令均来自当前官方表，最终可用性仍以 composer 补全为准。"
+  checkedAt: "2026-08-26"
 title: 斜杠命令与快捷入口
 description: / 命令与 $ Skill 调用——学习向速查，非完整参数手册。
 sidebar:
@@ -108,13 +113,3 @@ ChatGPT Web 有自己的 composer 命令菜单，不能假设桌面 App 或 CLI 
 斜杠命令可以看成聊天里的快捷入口，先看当前环境实际提供什么，比死记命令名有用。
 
 CLI 子命令见 [CLI 交互模式](/guide/cli/interactive-mode/) 与 [非交互模式](/guide/cli/non-interactive-mode/)。完整参数表见 [CLI 命令参考](/guide/reference/commands/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE
-
-**核验依据：** 已对照当前官方桌面 App Slash commands 与 Developer commands，明确不同工作面的命令集合并不相同；列出的命令均来自当前官方表，最终可用性仍以 composer 补全为准。
-
-**最近核验：** 2026-08-26

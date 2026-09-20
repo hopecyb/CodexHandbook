@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "input_rows": 46,
+  "included_rows": 44,
+  "regions": [
+    {
+      "region": "华东",
+      "prior_cny": "911.75",
+      "current_cny": "1281.25",
+      "change_cny": "369.50",
+      "change_percent": "40.53"
+    },
+    {
+      "region": "华南",
+      "prior_cny": "1571.50",
+      "current_cny": "2101.75",
+      "change_cny": "530.25",
+      "change_percent": "33.74"
+    },
+    {
+      "region": "西南",
+      "prior_cny": "0.00",
+      "current_cny": "1261.75",
+      "change_cny": "1261.75",
+      "change_percent": "N/A"
+    },
+    {
+      "region": "总计",
+      "prior_cny": "2483.25",
+      "current_cny": "4644.75",
+      "change_cny": "2161.50",
+      "change_percent": "87.04"
+    }
+  ],
+  "top_products": [
+    {
+      "rank": "1",
+      "product": "台灯",
+      "current_cny": "1661.75"
+    },
+    {
+      "rank": "2",
+      "product": "收纳盒",
+      "current_cny": "1561.75"
+    },
+    {
+      "rank": "3",
+      "product": "笔记本",
+      "current_cny": "1421.25"
+    }
+  ],
+  "input_sha256": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+}

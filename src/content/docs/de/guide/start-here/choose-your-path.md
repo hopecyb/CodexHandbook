@@ -3,7 +3,7 @@ title: Deinen Pfad wählen
 description: "Wähle den Leseweg nach Rolle, Aufgabe und Produkteinstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 612639b
+source_revision: 680d473
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

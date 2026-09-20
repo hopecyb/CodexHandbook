@@ -3,7 +3,7 @@ title: AGENTS.md trong Monorepo
 description: Mẫu đặt chỉ thị dự án, phạm vi và lệnh kiểm thử trong cấu trúc một kho nhiều gói.
 locale: vi
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

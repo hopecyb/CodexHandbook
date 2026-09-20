@@ -1,60 +1,51 @@
 ---
-title: Codex와 대화하기
-description: 자연어로 목표와 제한을 설명하는 연습을 합니다.
-locale: ko
-source_locale: zh-CN
-source_revision: 3648830
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Codex와 대화하기"
+description: "같은 연습 자료를 준비하고 먼저 파일과 미확정 사항을 읽기 전용으로 파악합니다."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 10
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "고정 자료와 작성자 참고 자료는 준비되었습니다. 임시 디렉터리에서 파일 작업 스크립트를 실행했지만, 독립적인 모델 또는 독자 완료 테스트는 아직 하지 않았습니다."
+  evidence:
+    - label: "작성자의 파일 작업 기록"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/ko/guide/learning-paths/beginner/"
+  label: "초보자 학습 경로와 자료"
+next:
+  link: "/ko/guide/learning-paths/beginner/02-work-with-files/"
+  label: "파일 다루기"
+locale: ko
+source_locale: zh-CN
+source_revision: 827a5d2
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 자료 준비하기
 
-## 이 단계의 목표
+[전체 연습 패키지를 다운로드](/downloads/first-project/first-project-1.0.0.zip)하세요. 압축을 푼 뒤 `starter` 폴더 전체를 새 `work` 폴더로 복사하고 Codex가 `work`를 열게 하세요. 그 안에는 `facts.md`, `notice.md`, `private-note.md` 세 파일만 있으며 모두 학습용으로 만든 합성 자료입니다.
 
-완전한 문장으로 **무엇을 원하는지**와 **무엇을 원하지 않는지**를 말하세요. 단어 몇 개만 던지지 마세요.
+원본 `starter`는 보관하세요. 작성자의 정답이 들어 있는 `references`를 이번 단계의 입력으로 사용하지 마세요. 아직 Git, 터미널, 추가 의존성은 필요 없으며 편집기에서 파일을 열면 됩니다.
 
-Codex와 처음 대화할 때, 많은 사람이 검색창처럼 키워드만 던집니다. 이 단계는 그 습관을 바꿉니다.
-
-## 연습
-
-연습 프로젝트에 이렇게 말하세요.
+## 첫 작업 요청하기
 
 ```text
-현재 폴더에 어떤 파일이 있는지, 각 파일이 대략 무엇을 하는지 세 문장으로 설명해 주세요.
-어떤 파일도 수정하지 마세요.
+현재 디렉터리의 facts.md, notice.md, private-note.md만 읽으세요.
+각 파일의 용도를 세 문장으로 설명하고 행사 정보에서 아직 결정되지 않은 내용을 짚으세요.
+파일을 추가, 수정, 삭제하지 마세요. 네트워크에 접속하거나 내용을 게시 또는 전송하지 마세요.
 ```
 
-## 이 단계에서 익히는 것
+이번에는 명시적인 읽기 전용 연습이므로 읽기와 쓰기 경계를 적었습니다. 다른 작업은 실제 의도에 맞게 권한을 부여해야 하며, 이 문장을 모든 요청에 기계적으로 붙일 필요는 없습니다.
 
-여기서 익히는 것은 프롬프트를 더 예쁘게 쓰는 법이 아니라, 가장 기본적인 두 가지입니다.
+## 완료 조건
 
-- 목표를 완전하게 말하기
-- 경계를 분명히 말하기
+답변이 사실의 근거, 편집할 안내문, 보관할 메모를 정확히 구분하고 신청 방법이 알려지지 않았다고 짚어야 합니다. 세 파일은 `starter` 원본과 같아야 하며 새 파일이나 삭제된 파일이 없어야 합니다.
 
-읽기 전용 작업이라도 “어떤 파일도 수정하지 마세요”를 분명히 쓰는 편이 좋습니다.
+의문이 있으면 파일을 직접 열어 확인한 다음 [작성자의 파일 설명](/downloads/first-project/references/folder-map.md)을 보세요. 표현이 달라도 괜찮지만 파일 용도나 신청 방법을 지어내면 안 됩니다.
 
-## 배우는 것
-
-- 읽기 전용 작업도 「수정하지 말 것」을 분명히 써야 함
-- 모호한 요청은 모호한 답을 받음
-
-## 흔한 오해
-
-### 1. 이런 연습은 너무 단순해서 할 필요 없다
-
-읽기 전용 작업조차 분명히 말하지 못하면, 나중에 수정 작업을 할 때 더 빗나가기 쉽습니다.
-
-### 2. 파일을 고칠 때만 제한을 쓰면 된다
-
-읽기, 설명, 요약 같은 작업에도 경계가 필요합니다.
-
-다음 단계：[파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/) · 원리：[프롬프트 기초](/ko/prompts/basics/)
-
----
-
-**상태：** verified  
-**적용 제품：** App / CLI / IDE  
-**검증 근거：** 본 핸드북에서 검증된 프롬프트 기초, 입문 안전, 초보자 경로 장을 교차 확인했습니다. 이 페이지는 “완전한 문장으로 목표와 경계를 말하는” 안정된 입문 방법만 훈련합니다.  
-**최근 검증：** 2026-07-26
+[연습 패키지와 준비 안내](/ko/guide/learning-paths/beginner/)

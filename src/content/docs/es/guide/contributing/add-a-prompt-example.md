@@ -3,7 +3,7 @@ title: Añadir un ejemplo de prompt
 description: Enviar prompts reproducibles a examples/prompts, con metadatos y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: cd78464
+source_revision: 15dabd2
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

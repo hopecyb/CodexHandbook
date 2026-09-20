@@ -3,7 +3,7 @@ title: Sécurité et versions des Skills
 description: Source d'installation, limites de permission, mise à niveau et rollback pour gouverner les Skills d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 8e8c837
+source_revision: a3c81ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

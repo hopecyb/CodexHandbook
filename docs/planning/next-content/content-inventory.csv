@@ -1,0 +1,282 @@
+﻿path,title,group,body_chars,status,verified_on,h1_count,headings,signals,audit_scope
+src/content/docs/ai-roadmap/index.md,AI 应用路线图,ai-roadmap,3196,,,1,,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2022-11-prompt-engineering.md,Prompt Engineering（提示词工程）,ai-roadmap/timeline,1302,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2023-06-function-calling.md,Function Calling（函数调用）,ai-roadmap/timeline,999,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2023-11-rag.md,RAG（检索增强生成）,ai-roadmap/timeline,1053,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2024-11-mcp.md,MCP（Model Context Protocol）,ai-roadmap/timeline,954,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2025-03-tool-use.md,Tool Use（工具调用）,ai-roadmap/timeline,1099,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 为什么要单独成篇 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2025-06-multi-agent.md,Multi-agent（多智能体协作）,ai-roadmap/timeline,1478,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 为什么时间点是 2025-06-13 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2025-09-context-engineering.md,Context Engineering（上下文工程）,ai-roadmap/timeline,1391,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2026-01-openclaw.md,OpenClaw（个人 AI 助手网关）,ai-roadmap/timeline,1049,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2026-01-openspec.md,OpenSpec（规范驱动开发）,ai-roadmap/timeline,1105,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2026-02-harness-engineering.md,Harness Engineering（驾驭工程）,ai-roadmap/timeline,917,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/2026-04-skills.md,Skills（技能）,ai-roadmap/timeline,1346,,,1,它是什么 / 它把 AI 应用工程从哪一步推进到了哪一步 / 现在看，它处于什么阶段 / 它可能替代什么 / 它可能被什么替代,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/ai-roadmap/timeline/index.md,时间线,ai-roadmap/timeline,845,,,1,节点,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/analyze-a-spreadsheet.md,分析表格,cases/analyze-a-spreadsheet.md,686,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐提示词 / 3. 验证 / 4. 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/automate-a-daily-report.md,自动化日报,cases/automate-a-daily-report.md,731,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 3. 推荐提示词 / 4. 沉淀,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/build-a-website.md,搭建网站,cases/build-a-website.md,765,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐提示词 / 3. 验证 / 4. 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/coordinate-multiple-agents.md,协调多 Agent,cases/coordinate-multiple-agents.md,793,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐模式 / 3. 协调规则（建议写入 AGENTS.md） / 4. 相关,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/create-a-slide-deck.md,制作幻灯片,cases/create-a-slide-deck.md,670,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐提示词 / 3. 验证 / 4. 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/first-task.md,第一个任务,cases/first-task.md,765,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 准备 / 3. 推荐提示词 / 4. 执行与检查 / 5. 下一步,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/fix-a-bug.md,修复 Bug：从哪里开始,cases/fix-a-bug.md,1314,verified,2026-08-25,2,先判断你现在缺哪一步 / 最小闭环 / 可直接练习,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/index.md,实战案例,cases,829,,,1,案例格式 / 可拿走的资产 / 入门与通用 / 创作与办公 / 开发与协作,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/research-with-sources.md,带引用的研究,cases/research-with-sources.md,1160,verified,2026-07-26,0,这篇解决什么问题 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/review-a-pr.md,审查 PR,cases/review-a-pr.md,802,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐提示词 / 3. 团队沉淀 / 4. 相关,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/understand-a-codebase.md,理解代码库,cases/understand-a-codebase.md,708,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 推荐提示词 / 3. 验证 / 4. 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/case-study-template.md,案例模板,cases/use-cases,795,verified,2026-07-26,0,元信息 / 1. 目标与背景 / 2. 准备 / 3. 工作流（EPXV） / 4. 失败与恢复 / 5. 沉淀 / 6. 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/content-creation/index.md,内容创作,cases/use-cases,362,verified,2026-07-26,0,本组入口 / 这组重点,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/content-creation/refactor-docs-with-review.md,带审查地重构文档站,cases/use-cases,1261,verified,2026-07-26,0,元数据 / 背景 / 准备 / 任务 prompt（示例） / 执行要点 / 检查 / 失败恢复 / 复盘 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/index.md,场景与案例库,cases/use-cases,1215,verified,2026-07-26,0,案例 vs 教程 / 如何使用 / 已有 starter 案例 / 贡献方向,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/research-and-learning/competitive-feature-matrix.md,案例：竞品功能对比表,cases/use-cases,986,verified,2026-07-26,0,元信息 / 1. 目标与背景 / 2. 准备 / 3. 工作流 / 4. 失败与恢复 / 5. 沉淀 / 6. 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/research-and-learning/index.md,研究与学习,cases/use-cases,377,verified,2026-07-26,0,本组入口 / 这组重点,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/software-development/fix-a-bug-with-verification.md,案例：带验证的 Bug 修复,cases/use-cases,3577,verified,2026-08-25,0,元信息 / 1. 目标与背景 / 2. 准备材料 / 3. 第一步：复现红灯 / 4. 第二步：只读探索 / 5. 第三步：计划并执行最小修复 / 6. 第四步：验证绿灯 / 7. 第五步：Review / 8. 失败与恢复 / 9. 从练习迁移到真实仓库 / 10. 沉淀 / 11. 相关章节,含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/software-development/index.md,软件开发,cases/use-cases,380,verified,2026-07-26,0,本组入口 / 这组重点,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/team-automation/index.md,团队自动化,cases/use-cases,461,verified,2026-07-26,0,本组入口 / 这组重点,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/team-automation/issue-triage-suggestions.md,案例：Issue 分流与标签建议,cases/use-cases,1358,verified,2026-07-26,0,元信息 / 1. 目标与背景 / 2. 准备 / 3. 工作流（EPXV 摘要） / 4. 失败与恢复 / 5. 沉淀 / 6. 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/use-cases/team-automation/scheduled-link-check.md,案例：定时文档链接检查,cases/use-cases,1671,verified,2026-07-26,0,元信息 / 1. 目标与背景 / 2. 准备 / 3. 工作流 / 4. 失败与恢复 / 5. 沉淀 / 6. 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/artifact-first-work.md,产物优先,cases/workflows,979,verified,2026-07-26,0,这页重点 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单,明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/brainstorm-before-building.md,先头脑风暴再动手,cases/workflows,1381,verified,2026-07-26,0,这篇解决什么问题 / 适合谁 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/diagnose-before-fixing.md,先诊断再修复,cases/workflows,825,verified,2026-07-26,0,何时用 / 步骤 / 提示词模板 / 与 EPXV 的关系 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/explore-plan-execute-verify.md,探索—计划—执行—验证,cases/workflows,1503,verified,2026-07-26,0,四阶段概览 / ① 探索 / ② 计划 / ③ 执行 / ④ 验证 / 按任务规模裁剪 / 与 EPXV 案例模板 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/failure-recovery.md,失败恢复,cases/workflows,1519,verified,2026-07-26,0,这页重点 / 失败信号 / 最小可用恢复流程 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/human-approval-patterns.md,人工审批模式,cases/workflows,1287,verified,2026-07-26,0,审批分层 / 模式一：先计划后执行 / 模式二：白名单命令 / 模式三：两阶段合并 / 模式四：只读侦察 / 何时拒绝并重来 / 与 Automations 的关系 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/index.md,工作流方法,cases/workflows,1714,verified,2026-07-26,0,为什么需要工作流 / 核心工作流 / 与工作流相关的其他章节 / 设计原则,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/long-running-task-management.md,长任务管理,cases/workflows,1306,verified,2026-07-26,0,这页重点 / 长任务信号 / 三阶段管理 / 退出条件（自动化必备） / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/multi-agent-coordination.md,多 Agent 协作,cases/workflows,1047,verified,2026-07-26,0,何时拆分 / 协作模式 / 协调规则（建议写入 AGENTS.md） / 验收 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/research-with-sources.md,带引用的研究,cases/workflows,1174,verified,2026-07-26,0,这页重点 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/review-before-merge.md,合并前审查,cases/workflows,1327,verified,2026-07-26,0,这页重点 / 最小可用做法 / 推荐审查维度 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/specification-driven-work.md,规格驱动工作,cases/workflows,1152,verified,2026-07-26,0,这页重点 / 最小可用规格模板 / 目标 / 范围 / 接口/行为 / 验收标准 / 约束 / 推荐工作流 / 与测试驱动配合 / 常见错误 / 安全边界 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/test-driven-work.md,测试驱动工作,cases/workflows,1341,verified,2026-07-26,0,这页重点 / 适合谁 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/workflows/turn-a-workflow-into-a-skill.md,把工作流沉淀为 Skill,cases/workflows,1653,verified,2026-07-26,0,这篇解决什么问题 / 适合沉淀的信号 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/cases/write-an-article.md,写文章,cases/write-an-article.md,730,verified,2026-07-26,1,元信息 / 1. 目标与背景 / 2. 工作流（EPXV） / 3. 沉淀,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/agent-work/handoff-and-resume.md,交接与恢复,guide/agent-work,1103,verified,2026-07-26,0,交接到底在留什么 / 交接时至少要留下什么 / 常见误会 / 恢复时怎么做更稳,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/agent-work/index.md,Agent 工作,guide/agent-work,1568,verified,2026-07-26,0,这章在讲什么 / 推荐阅读顺序 / 一个常用框架 / 常见误会 / 本章与其他章节的关系 / 先跑通这个最小流程 / 常见误区 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/agent-work/planning.md,规划,guide/agent-work,2369,verified,2026-07-26,0,先出计划在确认什么 / 一份合格计划至少应包含什么 / 常见误区 / 什么时候必须先规划 / 拿不准时怎么判断 / 推荐的计划请求方式 / 你在审什么 / 如何给计划反馈 / 计划与执行的边界 / 高风险任务的计划要多三项 / 常见错误 / 推荐搭配,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/agent-work/progress-and-steering.md,进度与引导,guide/agent-work,1952,verified,2026-07-26,0,引导在做什么 / 什么是“引导” / 最常用的一条模板 / 常见误区 / 为什么小步纠偏更有效 / 什么时候先引导，什么时候回到规划 / 三种常见引导方式 / 一个好引导应尽量包含什么 / 什么时候该回到“重新规划” / 常见错误 / 推荐搭配,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/agent-work/subagents.md,子 Agent,guide/agent-work,2435,verified,2026-08-26,0,先理解三层关系 / 当前在哪里使用 / 什么时候值得拆 / 主 Agent 的职责不会消失 / 写一份可验收的委托契约 / 一个三路并行例子 / 需要并行写时如何隔离 / 验收清单 / 与其他能力配合,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/choose-your-client.md,选择 Codex 客户端,guide/choose-your-client.md,1988,verified,2026-08-26,0,30 秒做出选择 / 四个入口分别解决什么问题 / 它们不是四选一 / 两个常见场景 / 选择后立即验证,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/approvals-and-sandbox.md,审批与沙盒,guide/cli,2008,verified,2026-07-26,0,本页内容 / 审批和沙盒分别在管什么 / 审批发生在何时 / 沙盒档位（概念） / 交互 vs 非交互 / 与 allow/deny 规则 / 常见错误 / 常见误会 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/commands-and-shortcuts.md,命令与快捷方式,guide/cli,2331,verified,2026-08-26,1,本页内容 / 先分清什么 / 命令入口一览 / 常见误会 / 交互会话中的「快捷」 / Shell 层快捷（推荐） / 可以这样熟悉 / 与 IDE / App 的分工 / 常见错误 / 验收清单 / 参考来源,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/configuration.md,CLI 配置,guide/cli,2000,verified,2026-07-26,0,本页内容 / CLI 配置在管什么 / 配置放在哪 / 常见误会 / 常改项说明 / 一个够用的配置顺序 / 项目与 CLI 对齐 / 排障 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/index.md,CLI,guide/cli,858,verified,2026-07-26,0,第一次使用先分清什么,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/installation-and-updates.md,CLI 安装与更新,guide/cli,892,verified,2026-08-26,0,安装后至少检查这 3 件事 / 常见误会 / 可以按这个顺序检查,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/interactive-mode.md,交互模式,guide/cli,990,verified,2026-07-26,0,适合交互模式的任务 / 常见误会 / 第一次使用时的简单场景,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/non-interactive-mode.md,非交互模式,guide/cli,2139,verified,2026-08-26,1,本页内容 / 适用场景 / 核心概念 / 最小可用示例（示意） / 安全设计 / 与交互模式对比 / 把交互任务改成非交互任务 / 常见误会 / 常见错误 / 参考来源,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/cli/troubleshooting.md,CLI 排障,guide/cli,857,verified,2026-07-26,0,先分 4 类 / 常见误会 / 排查顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/compaction.md,上下文压缩,guide/context,914,verified,2026-07-26,0,为什么这会影响结果 / 压缩后最该重申什么 / 常见误会 / 压缩后怎么补救,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/context-priority.md,上下文优先级,guide/context,730,verified,2026-07-26,0,“优先级”到底在说什么 / 常见误会 / 冲突时怎么写更清楚,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/conversation-context.md,对话上下文,guide/context,1095,verified,2026-07-26,0,为什么它有用 / 为什么它也会出问题 / 什么时候该主动重述关键约束 / 常见误会 / 主题切换时怎么处理,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/file-and-folder-context.md,文件与目录上下文,guide/context,1241,verified,2026-07-26,0,为什么范围很重要 / 为什么要划清文件范围 / 一个简单例子 / 常见误会 / 提示词里最好补上的三件事 / 可直接使用的写法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/index.md,上下文,guide/context,857,verified,2026-07-26,0,这章为什么特别重要 / 这章怎么读 / 本章导航,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/keep-context-focused.md,保持上下文聚焦,guide/context,1305,verified,2026-07-26,0,为什么会越聊越乱 / 为什么任务会越做越偏 / 基本做法 / 看到这些信号就该收口 / 这些做法分别解决什么问题 / 马上就能用的收口写法 / 常见误区,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/project-context.md,项目上下文,guide/context,1354,verified,2026-07-26,0,它具体指什么 / 为什么这里容易出问题 / 怎么和当前任务区分 / 常见误会 / 常见放置位置 / 怎么判断要不要放进项目上下文 / 整理时优先放什么,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context/sensitive-context.md,敏感上下文,guide/context,1249,verified,2026-07-26,0,为什么要先判断 / 拿不准时怎么判断 / 不要靠“应该没事吧” / 最容易被忽略的内容 / 脱敏到什么程度才够用 / 必须提供时，怎么做更稳 / 如果已经不小心给出去了,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/context-and-files.md,上下文与文件,guide/context-and-files.md,1617,verified,2026-07-26,1,上下文包括什么 / 常见问题来源 / 上下文管理 / 文件与产物 / 文件与产物 / 建议阅读顺序,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/contributing/add-a-prompt-example.md,添加提示词示例,guide/contributing,1993,verified,2026-07-26,0,本页内容 / 收录标准 / 文件命名 / 必填元数据（YAML frontmatter） / 正文必备小节 / 常见误会 / 验收标准示例 / 验收标准 / 质量门槛 / 提交流程 / PR 检查,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/contributing/index.md,参与贡献,guide/contributing,1958,verified,2026-07-26,0,本页内容 / 什么样的贡献最有价值 / 贡献类型 / 常见误会 / 基本原则 / 第一次贡献，可以这样开始 / 本地开发 / 行为准则 / 相关链接,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/contributing/verify-technical-content.md,核验技术内容,guide/contributing,1757,verified,2026-07-26,0,本页内容 / “核验”在检查什么 / 状态含义 / 常见误会 / 核验清单 / 核验顺序 / 易变信息 / 失败时 / 相关,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/contributing/write-a-guide.md,撰写指南页,guide/contributing,1718,planned,2026-07-26,0,本页内容 / 指南页的作用 / Frontmatter / 推荐结构 / 常见误会 / 交叉链接 / 语气 / 写作顺序 / 核验 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/agents-md/index.md,AGENTS.md,guide/customization,637,verified,2026-07-26,0,推荐顺序 / 先看这几点,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/agents-md/scope-and-precedence.md,AGENTS.md 作用域与优先级,guide/customization,1559,verified,2026-08-26,0,官方发现顺序 / Monorepo 示例 / 任务提示词怎么配合 / 验证实际加载内容 / fallback 与容量 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/agents-md/what-is-agents-md.md,什么是 AGENTS.md,guide/customization,2364,verified,2026-07-26,1,一个核心概念 / 最小可用做法 / 构建与测试 / 代码风格 / 禁止 / 完成定义 / 常见误会 / 放哪里 / 与 Skill、斜杠命令的区别 / 怎么判断该写哪里 / 常见错误 / 安全边界 / 参考来源,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/agents-md/writing-effective-instructions.md,写好项目指令,guide/customization,2280,verified,2026-07-26,3,内容 / 推荐结构 / 快速开始（3–5 行） / 必须遵守 / 代码与目录 / 完成定义 / 禁止事项 / 写作原则 / 完成定义 / 什么叫“好指令” / 团队 playbook 片段示例 / PR 与 Git / 与 Codex 协作 / 常见错误 / 常见误会 / 改写时先抓这几点 / 从一次任务沉淀成项目规则 / 维护节奏 / 延伸阅读,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/choosing-the-right-mechanism.md,选择合适的机制,guide/customization,3220,verified,2026-07-26,0,简表 / 五步判断法 / 常见组合，而不是二选一 / 一个更实用的判断矩阵 / 三个典型例子 / 最容易踩的坑 / 推荐落地顺序 / 延伸阅读 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/configuration/config-basics.md,配置基础,guide/customization,2270,verified,2026-07-26,0,本页内容 / 配置到底在管什么 / 配置层级 / 常见误会 / 常改的配置意图 / 最小可用做法 / 怎么判断该放哪 / 与 CLI 专题的关系 / 常见错误 / 安全边界 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/configuration/index.md,配置,guide/customization,492,verified,2026-07-26,0,推荐顺序 / 这组在解决什么问题,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/configuration/profiles.md,配置 Profile,guide/customization,1539,verified,2026-08-26,3,最小示例 / Profile 适合什么 / 不要与 Permission Profile 混淆 / 团队使用边界 / 验收 / 官方依据,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/examples/index.md,示例,guide/customization,440,verified,2026-07-26,0,本组入口 / 这组最适合什么时候看,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/examples/monorepo-agents-md.md,Monorepo 中的 AGENTS.md,guide/customization,2236,verified,2026-07-26,0,这篇会讲什么 / 这类仓库为什么更需要分层说明 / 推荐结构（示例） / 常见误会 / 子包 AGENTS.md 模板片段 / 范围 / 开发 / 依赖 / 任务 prompt 配合 / Cloud 与 CI / 常见错误 / 怎么判断该写在根目录还是子包目录 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/index.md,个性化与项目配置,guide/customization,2711,verified,2026-07-26,0,内容 / 适合谁 / 这一章在处理什么 / 常见分层（概念） / 常见误会 / 本章导航 / 建议顺序 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/memories-and-persistent-context.md,记忆与持久上下文,guide/customization,2143,verified,2026-07-26,0,内容 / 记忆适合拿来做什么 / 记忆适合存什么 / 常见误会 / 与相关机制对比 / 怎么分层放信息 / 推荐使用方式 / 怎么判断该不该存进记忆 / 安全边界 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/personal-preferences.md,个人偏好,guide/customization,1845,verified,2026-07-26,0,内容 / 为什么要区分这一层 / 适合放在个人偏好的内容 / 不应只放个人层的团队内容 / 推荐实践 / 常见误会 / 判断是否该放个人层 / 与记忆功能 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/project-instructions.md,项目说明,guide/customization,1615,verified,2026-07-26,0,内容 / 项目上下文的组成 / 基本做法 / 为什么重要 / 与「对话上下文」的分工 / 常见错误 / 常见误会 / 分工建议 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/rules/allow-and-deny-patterns.md,允许与拒绝规则,guide/customization,1662,verified,2026-07-26,0,内容 / 规则到底在做什么 / 规则类型（概念） / 推荐分层 / 常见误会 / 团队示例（示意，非复制即用） / 常见错误 / 起步建议 / 安全边界,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/rules/command-rules.md,命令规则,guide/customization,2432,verified,2026-07-26,0,这篇会讲什么 / 命令规则到底在管什么 / 先理解一个核心概念 / 常见误会 / 最小可用做法 / 推荐工作流 / 常见错误 / 安全边界 / 验收清单 / 相关章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/rules/index.md,规则,guide/customization,530,verified,2026-07-26,0,推荐顺序 / 这组在帮你解决什么,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/customization/rules/team-rules.md,团队规则策略,guide/customization,2481,verified,2026-07-26,0,内容 / 团队规则策略的作用 / 适合谁 / 常见误会 / 推荐分层模型 / 基本做法 / 推荐工作流：规则变更 / 与 Hooks、CI 对齐 / 常见错误 / 判断规则该放哪一层 / 安全边界 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/diffs-comments-and-review.md,差异、评论与审查,guide/desktop-app,1047,verified,2026-08-26,0,两层审查 / 一份可复用的审查标准 / 用逐行评论减少歧义 / 暂存与撤销 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/index.md,桌面 App,guide/desktop-app,1515,verified,2026-07-26,0,本章内容 / 先认出这三件事 / 常见误会 / 上手顺序 / 本章,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/installation-and-interface.md,安装与首次使用,guide/desktop-app,1330,verified,2026-08-26,0,先认识三个对象 / 完成第一次真实任务 / Chat、Work 与 Codex 怎么选 / 失败时先查什么 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/integrated-terminal.md,集成终端,guide/desktop-app,1049,verified,2026-08-26,0,最小验证流程 / 长进程怎么处理 / 可复用 Action / 安全边界 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/local-and-cloud-tasks.md,本地与云端任务,guide/desktop-app,729,verified,2026-07-26,0,常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/notifications.md,通知与活动视图,guide/desktop-app,912,verified,2026-08-26,0,建议配置 / 用 Activity 视图处理多个聊天 / 通知出现后做什么 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/parallel-agents.md,并行聊天与 Agent,guide/desktop-app,1234,verified,2026-08-26,0,先判断能不能并行 / 从简单到复杂 / 长任务与 Goal 模式 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/projects-and-tasks.md,项目与任务,guide/desktop-app,1043,verified,2026-07-26,0,项目 / 任务 / 常见误会 / 常用顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/settings.md,设置,guide/desktop-app,1117,verified,2026-08-26,0,新手先看四项 / 哪些不在这里解决 / 修改后的验收 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/troubleshooting.md,桌面 App 排障,guide/desktop-app,723,verified,2026-07-26,0,常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/desktop-app/worktrees.md,工作树,guide/desktop-app,1128,verified,2026-08-26,0,使用前提 / 在 App 中创建 / 两路并行示例 / 交付前检查 / 与定时任务和 Remote 的关系 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/ci-cd/code-review-automation.md,代码审查自动化,guide/developer-platform,1878,verified,2026-07-26,0,这篇会讲什么 / 先理解它的定位 / 推荐架构 / 常见误会 / Prompt 模板要点 / 权限与安全 / 质量门禁 / 与 Cloud 的关系 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/ci-cd/index.md,CI/CD,guide/developer-platform,430,verified,2026-07-26,0,本组入口 / 本组内容,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/index.md,开发者平台,guide/developer-platform,2142,verified,2026-07-26,0,这篇会讲什么 / 与产品手册的分工 / 典型架构（概念） / 设计原则 / 本章导航 / 常见误会 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/non-interactive/codex-exec.md,codex exec,guide/developer-platform,2924,verified,2026-08-26,0,本页内容 / `exec` 在做什么 / 它为什么存在 / 最小可用做法 / 最容易忽略的现实 / 常见误会 / 推荐工作流 / 可以把它当成什么 / 与交互模式对比 / 拿不准时怎么选 / 常见错误 / 安全边界 / 验收清单 / 相关章节 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/non-interactive/exit-codes-and-retries.md,退出码与重试,guide/developer-platform,2079,verified,2026-08-26,0,本页内容 / 退出码到底在告诉你什么 / 常见误会 / 推荐语义（概念） / 退出码捕获模板（bash） / 幂等与副作用 / 拿不准时怎么判断 / 常见错误 / 验收清单 / 相关章节 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/non-interactive/index.md,非交互模式,guide/developer-platform,678,verified,2026-07-26,0,推荐顺序 / 这组最适合解决什么问题,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/non-interactive/scripts-and-pipelines.md,脚本与流水线,guide/developer-platform,2608,verified,2026-08-26,0,本页内容 / 这里要解决什么 / 为什么很多团队不直接“把 prompt 贴进 CI 页面” / 常见误会 / 最小可用 Shell 片段 / 最值得先养成的习惯 / GitHub Actions：使用官方 Action / 推荐工作流 / 怎么判断 / 常见错误 / 安全边界 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/non-interactive/structured-output.md,结构化输出,guide/developer-platform,2121,verified,2026-07-26,0,本页内容 / 常见误会 / 一个直接的区分 / 最小可用做法 / 常见坑 / 推荐工作流 / 怎么判断 / 与 SDK 对比 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/sdk-overview.md,SDK 概述,guide/developer-platform,1612,verified,2026-07-26,0,这篇会讲什么 / SDK vs CLI / 常见误会 / 核心概念（语言无关） / 最小集成检查清单 / 与 CI/CD 衔接 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/webhooks/index.md,Webhooks,guide/developer-platform,448,verified,2026-07-26,0,本组入口 / 本组内容,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/developer-platform/webhooks/overview.md,Webhook 概述,guide/developer-platform,2505,verified,2026-07-26,0,这篇会讲什么 / 先理解它在做什么 / 常见误会 / 何时用 Webhook / 典型事件（概念） / 接收端最小要求 / 与 CI 的关系 / 常见错误 / 怎么判断要不要用 / 安全边界 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/generated-artifacts.md,生成物验收,guide/files-and-artifacts,1583,verified,2026-07-26,0,本页内容 / 生成物类型 / 这里说的“生成物”是什么 / 验收流程 / 常见误会 / 与 Git 的关系 / 常用验收顺序 / 不可信生成物 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/images-and-screenshots.md,图像与截图,guide/files-and-artifacts,1830,verified,2026-07-26,0,本页内容 / 输入图像的场景 / 图片真正补的是什么 / 质量要求 / 常见误会 / 仓库中的图像 / 可以直接套用的写法 / 隐私与安全 / 参考来源 / 验收 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/index.md,文件与产物,guide/files-and-artifacts,1764,verified,2026-07-26,0,章节导航 / 这一章在讲什么 / 统一原则 / 常见误会 / 建议阅读顺序 / 与工具的关系,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/pdf-and-documents.md,PDF 与文档,guide/files-and-artifacts,1788,verified,2026-07-26,0,本页内容 / 为什么 PDF 特别容易出问题 / 读取 PDF / 常见误会 / 生成或更新 PDF / 可以直接套用的写法 / 与仓库策略 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/presentations.md,演示文稿,guide/files-and-artifacts,2270,verified,2026-07-26,0,本页内容 / 先定交付格式 / 推荐工作流 / 为什么演示稿最好先控结构 / 常见误会 / 常用制作顺序 / Prompt 要点 / 验收 / 哪些最适合交给 Codex，哪些最好你自己拍板 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/tables-and-spreadsheets.md,表格与电子表格,guide/files-and-artifacts,1873,verified,2026-07-26,0,本页内容 / 格式选择 / 读取与分析 / 为什么表格任务特别容易悄悄做错 / 写入与清洗 / 常见误会 / 交代表格任务时，把这些说清 / 与验证 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/files-and-artifacts/text-and-code-files.md,文本与代码文件,guide/files-and-artifacts,1526,verified,2026-07-26,0,本页内容 / 文件类型与注意点 / 为什么这类文件最容易出问题 / 推荐 prompt 结构 / 常见误会 / 编码与换行 / 担心它改多时，可以直接这样限制 / 审查要点 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/agent-basics.md,Agent 基础,guide/foundations,1040,verified,2026-07-26,0,Agent 与普通聊天的区别 / 一个直观类比 / 为什么要分清这个区别 / 相关概念,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/ai-and-language-models.md,AI 与语言模型,guide/foundations,1014,verified,2026-07-26,0,它在做什么 / 对使用者意味着什么 / 常见误会 / 和「搜索引擎」的差别,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/common-misconceptions.md,常见误解,guide/foundations,1217,verified,2026-07-26,0,先把理解放正 / 最容易踩的三个坑 / 你可以这样自查,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/files-tools-and-commands.md,文件、工具与命令,guide/foundations,1432,verified,2026-07-26,0,这三个词先分开看 / 常见工作过程 / 常见误会 / 一个简单的判断法 / 使用原则,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/goals-context-and-actions.md,目标、上下文与行动,guide/foundations,1226,verified,2026-07-26,0,这四块各管什么 / 常见误会 / 不知道怎么写时，可以按这个顺序整理 / 小例子,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/index.md,基础概念,guide/foundations,1612,verified,2026-07-26,0,本章地图 / 常见误会 / 不想一口气读完的话,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/local-vs-cloud.md,本地与云端,guide/foundations,1384,verified,2026-07-26,0,使用感受 / 为什么很多初学者先从本地开始 / 常见误会 / 拿不准时怎么选,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/models-and-reasoning.md,模型与推理,guide/foundations,972,verified,2026-07-26,0,先把这两个词分开 / 常见误会 / 拿不准时怎么选,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/permissions-and-approvals.md,权限与审批,guide/foundations,1117,verified,2026-07-26,0,你需要关心的 / 它在管什么 / 常见误会 / 使用时的简单原则 / 分层说明,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/sandbox-and-network.md,沙箱与网络,guide/foundations,1121,verified,2026-07-26,0,为什么这两个限制很重要 / 起步建议 / 常见误会 / 更直观的看法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/threads-tasks-and-projects.md,线程、任务与项目,guide/foundations,969,verified,2026-07-26,0,先把三层关系分开 / 实践建议 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/tokens-context-and-compaction.md,Token、上下文与压缩,guide/foundations,1032,verified,2026-07-26,0,把这三个词分开看 / 常见误会 / 遇到这种情况怎么办 / 实践,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/foundations/verification-and-human-review.md,验证与人工复核,guide/foundations,842,verified,2026-07-26,0,人工复核到底在看什么 / 常见误会 / 复核时看这几步,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/account-plans-and-access.md,账号、套餐与访问,guide/getting-started,1221,verified,2026-08-26,0,先选访问方式 / 有账号为什么仍可能不能用 / 个人用户检查清单 / 团队与企业用户检查清单 / 一个判断例子,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/beginner-safety-checklist.md,初学者安全清单,guide/getting-started,751,verified,2026-07-26,0,常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/choose-your-codex-client.md,选择 Codex 客户端,guide/getting-started,798,verified,2026-08-26,0,,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/create-your-first-project.md,创建第一个练习项目,guide/getting-started,784,verified,2026-07-26,0,推荐做法 / 为什么先建练习项目 / 常见误会 / 练习项目怎么选,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/first-30-minutes.md,前三十分钟路线,guide/getting-started,1641,verified,2026-07-26,0,这 30 分钟要完成什么 / 每一段时间要完成什么 / 常见误会和卡点 / 完成标志 / 如果卡住,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/index.md,快速上手,guide/getting-started,1519,verified,2026-07-26,0,这一章包含什么 / 步骤 / 常见误会 / 建议顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/install-cli.md,安装 CLI,guide/getting-started,1137,verified,2026-08-26,0,macOS / Linux 官方独立安装器 / 安装后检查 / 出错时按顺序排查,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/install-desktop-app.md,安装桌面 App,guide/getting-started,1092,verified,2026-08-26,0,安装步骤 / 安装后做一次最小检查 / 常见问题,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/install-ide-extension.md,安装 IDE 集成,guide/getting-started,1107,verified,2026-08-26,0,VS Code 兼容编辑器 / Xcode 与 JetBrains / 安装后做一次上下文检查,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/review-the-result.md,检查结果,guide/getting-started,822,verified,2026-07-26,0,检查清单 / 常见漏看点 / 检查顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/run-your-first-task.md,运行第一次任务,guide/getting-started,1381,verified,2026-07-26,0,为什么第一次任务要选这么小 / 示例任务 / 提示词各部分的作用 / 常见误会 / 执行时注意 / 执行顺序 / 做完以后你应该检查什么 / 如果它做错了,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/sign-in-and-authentication.md,登录与身份验证,guide/getting-started,1468,verified,2026-08-26,0,使用 ChatGPT 登录 / 使用 API key 登录 / 检查与退出 CLI 身份 / 凭据安全 / 登录成功但仍不能使用,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/getting-started/undo-and-recover.md,撤销与恢复,guide/getting-started,1290,verified,2026-07-26,0,区分“撤销”和“恢复” / 第一次做错时的处理顺序 / 不熟 Git 的话，可以先这么做 / 预防比补救更重要 / 把恢复点当成探索工具,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/cloud-task-workflow.md,IDE 中的云端任务,guide/ide,1373,verified,2026-08-26,0,什么时候委托 / 委托前清单 / 端到端示例 / 冲突与安全 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/editor-context.md,编辑器上下文,guide/ide,1387,verified,2026-07-26,0,本页内容 / 推荐工作流 / 与 CLI 的差异 / 常见疑问 / 敏感信息 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/index.md,IDE 扩展,guide/ide,1050,verified,2026-07-26,0,章节导航 / 先留意这几件事,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/installation.md,安装与启用 IDE 集成,guide/ide,1210,verified,2026-08-26,0,VS Code 系安装与验收 / 常见故障 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/local-task-workflow.md,本地任务工作流,guide/ide,1408,verified,2026-07-26,0,推荐流程 / 示例 prompt（示意） / 何时改用其他入口 / 常见错误 / 常见疑问,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/reviewing-changes.md,IDE 中审查变更,guide/ide,1105,verified,2026-08-26,0,完成一次本地审查 / 示例：给 reviewer 明确标准 / 验收清单 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/selected-code-and-open-files.md,选区与打开文件,guide/ide,1550,verified,2026-07-26,0,本页内容 / 三种限定方式 / 最小可用做法 / 多文件任务 / 常见疑问 / 与审查配合 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/settings.md,IDE 扩展设置,guide/ide,1436,verified,2026-08-26,0,打开设置 / 值得先理解的设置 / 配置优先级的实际理解 / 修改后验证 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/supported-editors.md,支持的编辑器,guide/ide,1358,verified,2026-08-26,0,当前支持方式 / IDE 入口最适合什么 / 多编辑器团队如何保持一致 / 不在列表中的编辑器,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/ide/troubleshooting.md,IDE 排障,guide/ide,852,verified,2026-07-26,0,先分 3 类 / 常见误会 / 排查顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/index.md,Codex 指南,guide,1392,,,1,这一部分会讲什么 / 可拿走的资产 / 推荐顺序 / 常见误会 / 产品入口 / 更多专题,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/integrations/github.md,GitHub 集成,guide/integrations,1982,verified,2026-07-26,0,能力地图 / 推荐团队规范 / GitHub × Codex（可放入 AGENTS.md） / Cloud vs 本地 Git / Review 工作流 / 常见误会 / 安全 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/integrations/index.md,集成（概述）,guide/integrations,2937,verified,2026-07-26,0,集成到底在改变什么 / 常见误会 / 集成前先回答三个问题 / 常见集成类型 / 落地前怎么判断 / 推荐落地顺序 / 一个最小可用集成方案 / 风险控制清单 / 本章导航 / 与其他章节的关系 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/01-talk-to-codex.md,与 Codex 对话,guide/learning-paths,648,verified,2026-07-26,0,本步目标 / 练习 / 这一步在练什么 / 学到什么 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/02-work-with-files.md,处理文件,guide/learning-paths,665,verified,2026-07-26,0,本步目标 / 练习 / 练习重点 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/03-give-clear-tasks.md,给出清晰任务,guide/learning-paths,636,verified,2026-07-26,0,本步目标 / 练习 / 练习重点 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/04-review-results.md,审查结果,guide/learning-paths,673,verified,2026-07-26,0,本步目标 / 练习 / 练习重点 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/05-complete-first-project.md,完成第一个小项目,guide/learning-paths,649,verified,2026-07-26,0,本步目标 / 完成后 / 练习重点 / 常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/beginner/index.md,初学者路径,guide/learning-paths,654,verified,2026-07-26,0,推荐顺序 / 这组适合谁,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/creator/index.md,创作者路径（概览）,guide/learning-paths,979,verified,2026-07-26,0,适合的情况 / 现在可以读 / 常见误会 / 建议阅读顺序 / 规划中的步骤（大纲）,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/developer/index.md,开发者路径（概览）,guide/learning-paths,1028,verified,2026-07-26,0,适合的情况 / 现在可以读 / 常见误会 / 建议阅读顺序 / 规划中的步骤（大纲）,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/index.md,学习路径,guide/learning-paths,2245,verified,2026-07-26,0,这章在做什么 / MVP 可用路径 / 概览（深度步骤后续补齐） / 高级操作者路径 / 常见误会 / 拿不准时怎么选,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/learning-paths/team/index.md,团队路径（概览）,guide/learning-paths,1007,verified,2026-07-26,0,适合的情况 / 现在可以读 / 常见误会 / 建议阅读顺序 / 规划中的步骤（大纲）,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/permissions-and-sandbox.md,权限与沙箱,guide/permissions-and-sandbox.md,2219,verified,2026-08-26,0,先记住这个区别 / 一次动作如何通过安全边界 / 本地执行与 Cloud 的边界不同 / 看到审批请求时，按四步判断 / 一个具体例子：安装依赖 / 在提示词里声明边界 / 常见误区,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/definition-of-done.md,完成定义,guide/quality,843,verified,2026-07-26,0,为什么这一步重要 / 常见误会 / 一个简版模板,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/handle-uncertainty.md,处理不确定性,guide/quality,981,verified,2026-07-26,0,什么叫“不确定” / 判断方式 / 常见误会 / 可直接补充的句式 / 再补一条,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/index.md,质量与验证,guide/quality,788,verified,2026-07-26,0,阅读顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/review-diffs.md,审查差异,guide/quality,1168,verified,2026-07-26,0,diff 在看什么 / AI 生成代码的质量检查 / 常见误会 / 检查顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/run-tests.md,运行测试,guide/quality,857,verified,2026-07-26,0,测试要回答什么 / 常见误会 / 验证顺序 / 可直接放进提示词的一句 / 需要时再补一句,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/validate-sources.md,核验来源,guide/quality,522,verified,2026-07-26,0,常见误会,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/quality/verify-artifacts.md,验证产物,guide/quality,1023,verified,2026-07-26,0,为什么要单独验证产物 / 按产物类型检查 / 常见误会 / 直接套用 / 检查顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/commands/index.md,CLI 命令参考,guide/reference,3077,verified,2026-08-26,12,什么时候用 / 入口选择 / Stable 命令总览 / 常见误会 / 交互模式（概念） / 入口判断 / 快速上手 / 非交互 exec（概念） / 配置与认证（概念） / 退出码与自动化 / 与聊天斜杠命令的区别 / 排障,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/configuration-reference/index.md,配置项参考,guide/reference,3573,verified,2026-07-26,0,一个判断原则 / 配置层级 / 这些层级分别在管什么 / 配置域索引（概念） / 常见误会 / 与环境变量 / 判断是否该进配置 / 调整行为时的判断方法 / 常见场景 / 变更纪律 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/environment-variables.md,环境变量,guide/reference,3053,verified,2026-07-26,0,本页内容 / 判断方式 / 适合放环境变量的内容 / 不要把环境变量当万能抽屉 / `.env` 到底是什么 / 不适合仅靠环境变量的内容 / 常见误会 / 分层与优先级（概念） / 一个常用判断顺序 / 常见场景 / 常用场景 / 安全清单 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/error-reference.md,错误与提示参考,guide/reference,3377,verified,2026-07-26,0,看到报错时，先怎么读 / 认证与账号 / 常见误会 / CLI 与命令 / 先分类别 / 使用方式 / 权限与沙盒 / Cloud 与 GitHub / MCP 与扩展 / 上下文与模型 / 如何使用本页 / 报告问题时附带这些会更方便 / 排错顺序 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/faq.md,常见问题,guide/reference,1604,verified,2026-07-26,0,什么时候看 / 常见误会 / 使用方式,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/feature-comparison.md,功能对照,guide/reference,1600,verified,2026-08-26,0,核心对照 / 安装与身份 / 常见组合 / 不要用矩阵替代现场确认,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/glossary.md,术语表,guide/reference,1009,verified,2026-07-26,0,使用方式 / 常见误会 / 遇到不懂的词时,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/index.md,参考资料,guide/reference,1001,verified,2026-07-26,0,怎么用 / 学习向索引 / 技术速查 / 排障与外链,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/keyboard-shortcuts.md,键盘快捷方式,guide/reference,1293,verified,2026-08-26,0,桌面应用 / IDE / CLI / 学习顺序 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/official-resources.md,官方资源,guide/reference,919,verified,2026-07-26,0,什么时候优先看官方 / 常见误会 / 使用方式 / 不确定先看哪边时,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/permission-matrix/index.md,权限矩阵,guide/reference,2421,verified,2026-08-26,0,先分清三套机制 / 本地内置 Permission Profiles / 最小权限示例 / 按动作评估 / 团队核对方法 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/slash-commands.md,斜杠命令与快捷入口,guide/reference,2064,verified,2026-08-26,0,概念区分 / 直接区分三者 / 它是什么 / 常见误会 / 当前常见入口 / 使用时注意 / 直接试的方法 / 第一次可以这样试 / 与 CLI 命令的区别,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/reference/troubleshooting/index.md,故障排查索引,guide/reference,1124,verified,2026-07-26,0,不知道问题属于哪类时,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/choose-your-path.md,选择你的路径,guide/start-here,1267,verified,2026-07-26,0,按角色 / 按任务 / 按产品 / 常见误会 / 拿不准时怎么选,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/codex-capability-map.md,能力地图,guide/start-here,1578,verified,2026-07-26,0,整体结构 / 常见误会 / 起步顺序 / 模块与权威章节,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/handbook-version-policy.md,手册版本策略,guide/start-here,1184,verified,2026-07-26,0,持续更新 / 内容 / 页面状态 / 页面状态怎么读 / 文末三行 / 官方依据 / 常见误会 / 怎么判断一页是否可靠,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/index.md,从这里开始,guide/start-here,1800,verified,2026-07-26,1,内容 / 建议阅读顺序 / 常见误会 / 前三十分钟路线 / 接下来怎么读 / 本站如何分层,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/prerequisites.md,开始前需要什么,guide/start-here,1364,verified,2026-07-26,0,必备 / 你不需要先具备什么 / 常见误会 / 建议 / 参考来源 / 一个常见起步顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/terminology-for-beginners.md,给初学者的术语,guide/start-here,1623,verified,2026-07-26,0,最先要认识的几个词 / 换成更直白的说法 / 怎么用 / 可以分组来看 / 这些词可以晚点看,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/what-is-codex.md,Codex 是什么,guide/start-here,2061,verified,2026-07-26,0,它和普通 AI 聊天有什么区别 / 什么任务适合交给它 / 可以用在哪些事情上 / 能做什么 / 不能做什么（重要） / 使用时的基本判断 / 常见流程 / 主要使用入口 / 接着看,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/start-here/who-is-this-handbook-for.md,这份手册适合谁,guide/start-here,1149,verified,2026-07-26,0,四类读者 / 这四类人不用分得太细 / 主要面向 / 常见误会 / 不适合把手册当成什么 / 适合哪些人,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/governance/acceptable-use.md,可接受使用政策,guide/team-enterprise,1682,verified,2026-07-26,0,内容 / AUP 在管什么 / 常见误会 / 建议覆盖的议题 / 基本结构 / 与技术控制对齐 / 常见错误 / 判断一条 AUP 是否有效 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/governance/index.md,治理,guide/team-enterprise,422,verified,2026-07-26,0,本组入口 / 这组页面主要回答什么问题,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/index.md,团队与企业,guide/team-enterprise,2146,verified,2026-07-26,0,本章内容 / 适合阅读的人 / 治理模型（概念） / 本章导航（起步） / 与个性化配置的关系 / 常见错误 / 验收清单 / 常见误会,仍有延期承诺,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/security/index.md,安全,guide/team-enterprise,572,verified,2026-07-26,0,推荐顺序 / 适合先看的人,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/security/plugin-and-mcp-risk.md,Plugin 与 MCP 风险,guide/team-enterprise,1677,verified,2026-07-26,0,内容 / 风险分类 / 团队批准流程（推荐） / 最小实践 / 常见错误 / 常见误会 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/security/prompt-injection.md,Prompt 注入,guide/team-enterprise,2108,verified,2026-07-26,0,内容 / 为什么这件事和普通使用者也有关 / 怎么识别 / 遇到可疑内容时怎么处理 / 一个简单的区分法 / 缓解策略 / 判断思路 / 最小可用 CI 原则 / 常见错误 / 验收清单 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/team-enterprise/security/threat-model.md,威胁模型,guide/team-enterprise,2452,verified,2026-07-26,0,内容 / 为什么不要把它当成“安全同学的事” / 资产与边界 / 两个核心问题 / 一个场景 / 威胁概览 / 优先纳入威胁模型的情况 / 第一次落地时不要贪大求全 / 推荐分层控制 / 常见错误 / 最小版本 / 验收清单 / 相关章节 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/browser.md,浏览器工具,guide/tools,1986,verified,2026-07-26,0,它适合解决什么问题 / 本页内容 / 能力概览 / 与其他工具对比 / 常见误会 / 判断标准 / 推荐工作流 / 可直接使用的写法 / 安全边界 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/computer-use.md,Computer Use,guide/tools,2043,verified,2026-07-26,0,本页内容 / 能力边界 / 它和别的工具有什么区别 / 常见误会 / 风险模型 / 怎么判断该不该用它 / 推荐使用方式 / 与浏览器工具选择 / 可以直接套用的写法 / 常见错误 / 验收清单,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/image-generation.md,图像生成,guide/tools,1590,verified,2026-07-26,0,本页内容 / 适用场景 / 图像生成适合做什么 / 推荐工作流 / 常见误会 / 可以怎么写 / 文件与仓库 / 安全与合规 / 参考来源 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/index.md,工具,guide/tools,1111,verified,2026-07-26,0,为什么要先了解工具 / 章节导航 / 建议阅读顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/shell-and-terminal.md,Shell 与终端,guide/tools,1030,verified,2026-07-26,0,为什么它既强大也危险 / 为什么终端风险更高 / 适合用终端的情况 / 常见误会 / 可以直接套用的写法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/tool-selection.md,工具选择,guide/tools,1154,verified,2026-07-26,0,选工具时在看什么 / 拿不准时怎么选 / 常见误会 / 可直接使用的写法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/voice.md,语音输入与输出,guide/tools,1510,verified,2026-07-26,0,本页内容 / 适用场景 / 语音适合做什么 / 使用建议 / 常见误会 / 一个常用说法顺序 / 隐私 / 与多模态的关系 / 常见错误,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/tools/web-search.md,Web 搜索,guide/tools,897,verified,2026-07-26,0,搜索适合做什么 / 常见误会 / 搜索顺序 / 可直接使用的提示语,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/troubleshooting.md,故障排查,guide/troubleshooting.md,1349,verified,2026-07-26,1,可以在这里做什么 / 不知道从哪查时的分法 / 常见误会,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/verification.md,验证,guide/verification.md,1578,verified,2026-07-26,1,验证到底在看什么 / 常见误区 / 如果还没有自己的流程，可以按这个顺序检查 / 核心主题 / 不同任务，验证重点不一样,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/cloud-environments.md,Cloud 环境,guide/web-and-cloud,1617,verified,2026-08-26,0,每次聊天的执行顺序 / 最小可复现配置 / Validation / 缓存与 maintenance / 环境变量和 Secret / 对齐清单 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/code-review.md,Cloud 与 GitHub 代码审查,guide/web-and-cloud,1485,verified,2026-08-26,0,两种审查 / 审查顺序 / 仓库特有规则 / Code Review Rules / 自动 review 的边界 / 验收清单 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/connect-github.md,连接 GitHub,guide/web-and-cloud,1207,verified,2026-08-26,0,连接步骤 / 连接前后检查 / GitHub 上的两类用法 / 权限异常怎么判断 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/create-pull-requests.md,创建 Pull Request,guide/web-and-cloud,1143,verified,2026-08-26,0,从任务到 PR / 可复用任务模板 / 创建前检查 / PR 描述至少回答 / 创建后 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/delegate-and-follow-up.md,委托与跟进,guide/web-and-cloud,1169,verified,2026-08-26,0,什么时候适合委托 / 一个完整委托 / 结果出来后 / 失败的跟进方式 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/index.md,Web 与 Cloud（概述）,guide/web-and-cloud,1556,verified,2026-08-26,0,一次 Cloud 任务经过什么 / 本地还是 Cloud / 建议学习顺序 / 第一次练习 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/internet-access.md,互联网访问,guide/web-and-cloud,1302,verified,2026-08-26,0,为什么默认关闭 / 配置选项 / 最小开放示例 / 与 Secret 的关键关系 / 验收清单 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/secrets-and-variables.md,Secrets 与环境变量,guide/web-and-cloud,1368,verified,2026-08-26,0,正确示例：安装私有包 / 不正确示例 / 配置检查 / 与 CI 的关系 / 泄露后的动作 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/guide/web-and-cloud/troubleshooting.md,Cloud 排障,guide/web-and-cloud,1649,verified,2026-08-26,0,五层分诊 / 先保留证据 / 高频问题 / 何时退回本地 / 解决后的验收 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/index.mdx,Codex / AI Agent 实战手册,home,4375,,,0,,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/pets/create.mdx,制作 Codex Pet,pets/create.mdx,1489,,,1,spritesheet 是什么 / 准备素材 / `pet.json` 负责什么 / 本地检查 / 授权和来源,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/pets/index.mdx,Codex 宠物,pets/index.mdx,832,,,1,它通常由什么组成 / 为什么需要了解它 / 阅读路径,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/pets/install.mdx,安装 Codex Pet,pets/install.mdx,1254,,,1,安装流程背后的逻辑 / 为什么经常安装失败 / 更新和卸载的本质 / 安全提醒,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/anti-patterns.md,提示词反模式,prompts/anti-patterns.md,969,verified,2026-07-26,0,为什么这些说法特别容易翻车 / 常见误区 / 反模式怎么换成更清楚的说法 / 一个够用的替换公式,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/ask-for-a-plan.md,先要计划,prompts/ask-for-a-plan.md,2026,verified,2026-07-26,0,什么时候一定要先要计划 / 一个好计划至少应包含什么 / 三种常用提法 / 计划不是越长越好 / 你可以怎么批计划 / 与“直接开始做”相比，有什么收益 / 计划最容易出的问题 / 推荐搭配 / 一个团队内很好用的约定 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/basics.md,提示词基础,prompts/basics.md,1115,verified,2026-07-26,0,内容 / 可以把提示词看成什么 / 三级写法（实例库也会沿用） / 常见误区 / 一个够用的最小结构 / 什么时候该用极简版，什么时候该用完整版,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/constraints-and-boundaries.md,定义约束,prompts/constraints-and-boundaries.md,1171,verified,2026-07-26,0,内容 / 常用约束 / 怎么区分“目标”和“约束” / 常见误区 / 一个够用的写法 / 什么时候约束要写得更细,明确为骨架；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/define-done.md,定义完成标准,prompts/define-done.md,1006,verified,2026-07-26,0,为什么很多任务最后会说不清到底做完没 / 常见误区 / 一种常用写法 / 判断方法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/goals-and-context.md,提供目标与背景,prompts/goals-and-context.md,1009,verified,2026-07-26,0,为什么“目标”和“背景”不能混着说 / 常见误解 / 一个够用的写法 / 怎么检查自己写得够不够清楚,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/index.md,提示词,prompts,701,,,1,推荐顺序 / 可拿走的资产,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/long-running-tasks.md,长任务提示,prompts/long-running-tasks.md,947,verified,2026-07-26,0,为什么长任务特别容易跑偏 / 常见误解 / 一个够用的分段思路 / 一个更实用的写法,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/prompt-debugging.md,提示词排错,prompts/prompt-debugging.md,1088,verified,2026-07-26,0,先定位问题在哪 / 当结果不对，按序问： / 每一条在查什么 / 常见误区 / 一个够用的补救顺序,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/prompting-with-images.md,图像提示,prompts/prompting-with-images.md,2389,verified,2026-07-26,0,适合用图像提示的场景 / 图像提示的四段结构 / 三种常用模板 / 想让它看得更准，要补哪些文字 / 多张图怎么给最好 / 图像提示最容易犯的错 / 和其他页面怎么配合 / 一条实用经验 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/task-anatomy.md,好任务的结构,prompts/task-anatomy.md,2239,verified,2026-08-25,0,适合谁 / 任务结构 / 推荐模板 / 每一段的作用 / 常见误解 / 最小任务模板 / 从模糊请求到可执行任务 / 如何检查自己的任务说明 / 下一步,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/automate.md,自动化模板,prompts/templates,734,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/change.md,修改模板,prompts/templates,780,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 这个模板在防什么 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/create.md,创建模板,prompts/templates,795,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/diagnose.md,诊断模板,prompts/templates,651,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/index.md,提示词模板,prompts/templates,1795,verified,2026-07-26,1,模板怎么用 / 从模板升级为工作流 / 快速判断：这个任务该写成什么 / 常见误区,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/research.md,研究模板,prompts/templates,581,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/review.md,审查模板,prompts/templates,654,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/prompts/templates/understand.md,理解模板,prompts/templates,735,verified,2026-07-26,1,模板 / 什么时候适合用这个模板 / 常见误区 / 相关,正文H1需检查重复；含输入占位符,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/automations/index.md,Scheduled tasks,skills/automations,744,verified,2026-08-26,0,先判断是否适合 / 当前管理入口 / 本组入口 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/automations/scheduled-tasks.md,定时任务完整指南,skills/automations,2723,verified,2026-08-26,0,适合谁 / 支持边界 / 1. 选择独立任务还是聊天内任务 / 2. 选择运行材料 / 3. 先手动验证 / 4. 一份可直接改写的任务提示词 / 5. 权限和人工复核 / 6. 设计“无变化”、失败和停止 / Scheduled task 不是事件驱动 CI / 验收清单 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/capability-map.md,扩展能力地图,skills/capability-map.md,2977,verified,2026-08-25,0,系统架构 / 八类职责 / 一次任务怎样组合这些能力 / 常见对应关系 / 从一次成功到团队资产 / 当前产品边界 / 官方依据,明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/choosing-an-extension-method.md,如何选择扩展方式,skills/choosing-an-extension-method.md,3194,verified,2026-08-25,0,选择图 / 七个判断问题 / 场景对照 / 成本维度 / 反模式 / 常见问题 / 最小落地练习 / 延伸阅读 / 官方依据,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/create-your-first-skill.md,创建第一个 Skill,skills/create-your-first-skill.md,2160,verified,2026-07-26,1,适合谁 / 为什么推荐从 `pr-review` 开始 / 目标成果 / 最低目标 / 步骤 / 输入 / 流程 / 禁止 / 常见误解 / 验收清单 / 下一步 / 参考来源,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/examples/automation-skill.md,示例：自动化 Skill,skills/examples,558,verified,2026-07-26,1,SKILL.md 骨架 / 流程 / scripts/ / 相关,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/examples/index.md,Skill 示例,skills/examples,530,verified,2026-07-26,1,,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/examples/research-skill.md,示例：研究 Skill,skills/examples,469,verified,2026-07-26,1,SKILL.md 骨架 / 流程 / 相关,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/examples/review-skill.md,示例：审查 Skill,skills/examples,622,verified,2026-07-26,2,SKILL.md / 输入 / 流程 / 禁止 / 试用,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/examples/writing-skill.md,示例：写作 Skill,skills/examples,463,verified,2026-07-26,1,SKILL.md 骨架 / 流程 / 禁止 / 相关,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/hooks/hook-event-types.md,Hook 事件类型,skills/hooks,2147,verified,2026-08-25,0,当前事件清单 / 工具 matcher / 三个最容易混淆的事件 / Stop 不是“拒绝结束”按钮 / 事件选择练习 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/hooks/hooks-examples.md,Hook 配置示例,skills/hooks,2131,verified,2026-08-25,0,目标与边界 / 1. 配置 hooks.json / 2. 拒绝输出 / 3. 运行测试 / 4. 在项目中启用 / 从提醒升级到阻断 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/hooks/hooks-overview.md,Hooks 概述,skills/hooks,2124,verified,2026-08-25,0,配置从哪里来 / 非托管 Hook 必须审查 / 两种可执行处理器 / 运行时行为 / 与其他安全层的关系 / 采纳顺序 / 验收清单 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/hooks/index.md,Hooks,skills/hooks,901,verified,2026-08-25,0,这一组解决什么 / 阅读顺序 / 最短判断 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/index.md,Skills,skills,887,,,1,推荐顺序 / 可拿走的资产,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/mcp/connect-an-mcp-server.md,连接 MCP 服务器,skills/mcp,2015,verified,2026-08-25,0,开始前 / 路径 A：用 CLI 添加 STDIO 服务器 / 路径 B：直接编辑 config.toml / OAuth 服务器 / 三种客户端怎样查看 / 验证提示词 / 最小权限选项 / 失败时 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/mcp/debugging-mcp.md,调试 MCP 连接,skills/mcp,1890,verified,2026-08-25,0,先保存四项证据 / 四层分诊 / 1. 确认配置确实被读取 / 2. STDIO 服务器启动失败 / 3. Streamable HTTP 连接失败 / 4. 服务器在线但工具不可用 / 最小复现提示词 / 排障完成的验收 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/mcp/index.md,MCP,skills/mcp,1072,verified,2026-08-25,0,适合谁 / 阅读顺序 / 当前支持边界 / 先记住三条 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/mcp/mcp-overview.md,MCP 概述,skills/mcp,1856,verified,2026-08-25,0,一条调用链 / 当前支持的服务器方式 / MCP、Skill、Plugin 怎么组合 / 什么时候值得接 MCP / 安全分级 / 接入前检查表 / 下一步 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/overview.md,Skills 概述,skills/overview.md,2200,verified,2026-07-26,0,核心概念 / Skill 目录结构 / 步骤 / 存放位置 / 触发方式 / 推荐工作流 / 常见困惑 / 安全边界 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/plugins/index.md,Plugins,skills/plugins,982,verified,2026-08-26,0,适合谁 / 当前支持表面 / 阅读入口 / 安装前先问 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/plugins/plugins-overview.md,Plugins 概述,skills/plugins,2326,verified,2026-08-26,0,Plugin 可以包含什么 / 与 Skill、MCP 的区别 / 安装与首次验证 / 低风险验证提示词 / 团队采纳流程 / 不要忽略的边界 / 什么时候不必做 Plugin / 验收清单 / 官方来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/references.md,references/ 目录,skills/references.md,1183,verified,2026-07-26,1,示例 / 它在做什么 / 什么时候值得拆出 `references/` / 常见误解 / 原则,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/scripts-and-tests.md,scripts/ 与测试,skills/scripts-and-tests.md,1209,verified,2026-07-26,1,示例 / 什么情况下该考虑 `scripts/` / 测试建议 / 常见误解 / 常见验证顺序,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/security.md,Skill 安全与版本,skills/security.md,1957,verified,2026-07-26,0,内容 / 为什么普通使用者也需要知道 / 威胁模型（简化） / 安装前先检查什么 / 安装原则 / 常见误区 / 版本与升级 / 团队习惯 / 与 `$skill` 调用 / 团队治理清单 / 常见错误 / 参考来源,,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/skill-anatomy.md,Skill 结构,skills/skill-anatomy.md,2353,verified,2026-07-26,1,目录结构 / 每一层分别做什么 / 按需加载，而不是一次全塞进去 / SKILL.md 最小示例 / 步骤 / 常见误区 / 各目录职责 / 何时拆分目录 / 从模板长成 Skill / 可复用 Skill 常见组件,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/templates.md,templates/ 目录,skills/templates.md,1148,verified,2026-07-26,1,示例 / 它在做什么 / 什么时候值得用 `templates/` / 常见误区 / 何时值得单独建 `templates/`,正文H1需检查重复；明确为骨架,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/use-a-skill.md,使用 Skill,skills/use-a-skill.md,1426,verified,2026-07-26,1,触发方式 / 怎么区分两种触发方式 / 示例 / 常见误解 / 常见测试顺序 / 写好 description / 判断 description 是否清楚,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/skills/when-to-use-skills.md,何时使用 Skills,skills/when-to-use-skills.md,1313,verified,2026-07-26,1,适合封装为 Skill / 适合做成 Skill 的条件 / 不太适合 / 常见误区 / 可以怎么试 / 与其他扩展方式对比,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定
+src/content/docs/theme/index.md,Codex主题皮肤,theme,3634,,,1,Codex Dream Skin 是什么 / 安装和上手 / 换图和主题管理 / 它是怎么做到的 / 写在最后,正文H1需检查重复,结构扫描；标记为复核线索，不构成事实错误判定

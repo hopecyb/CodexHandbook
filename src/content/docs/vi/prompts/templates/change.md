@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu sửa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu sửa
 description: Lặp có ranh giới trên nền hiện có.
 locale: vi
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu sửa
 
 Mẫu này phù hợp tác vụ «sửa một chút trên cái đã có».
 
@@ -66,10 +70,3 @@ Prompt kiểu sửa ngoài «sửa gì» còn phải nói rõ «chỉ được s
 
 - [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/)
 - [Ràng buộc và ranh giới](/vi/prompts/constraints-and-boundaries/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu sửa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

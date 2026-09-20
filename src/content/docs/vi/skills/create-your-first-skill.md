@@ -3,7 +3,7 @@ title: Tạo Skill đầu tiên
 description: Làm từ đầu một Skill pr-review có thể commit, gồm kiểm thử và chia sẻ nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: d6ef72a
+source_revision: 14414f5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

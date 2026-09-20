@@ -1,15 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe el uso de plantillas; se han revisado enlaces y tipología, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantillas de Prompts
 description: Esqueletos reutilizables por tipo de tarea — comprender, crear, modificar, diagnosticar, revisar, investigar, automatizar.
 locale: es
 source_locale: zh-CN
-source_revision: 3dbc237
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: fae2ed3
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Plantillas de Prompts
 
 Ante una «plantilla», hay dos reacciones habituales:
 
@@ -56,6 +59,27 @@ Algunos Prompts se usan una sola vez; otros se repiten tanto que conviene estabi
 
 La plantilla encaja cuando una persona inicia la tarea; Skill cuando el proceso se repite; Hook cuando el chequeo debe dispararse solo; MCP cuando hace falta acceder a sistemas externos.
 
+## Decisión rápida: ¿en qué formato conviene convertir esta tarea?
+
+Hazte cuatro preguntas:
+
+1. ¿Se hará solo una vez?
+2. ¿Los pasos serán casi iguales la próxima vez?
+3. ¿Tiene un formato de salida o una lista de comprobación fija?
+4. ¿Necesita un sistema externo, un script o una comprobación automática?
+
+| Situación | Forma recomendada |
+|---|---|
+| Trabajo puntual que aún requiere conversación | Prompt completo |
+| Trabajo frecuente que todavía se ajusta | Plantilla |
+| Proceso estable y salida definida | Skill |
+| Otro rol independiente debe investigar a fondo | Subagente |
+| Se necesitan datos de un sistema externo | MCP, preferiblemente primero en solo lectura |
+| Hay que comprobar siempre un punto del proceso | Hook |
+| El equipo necesita un paquete compartido | Plugin |
+
+Un prompt más largo no es necesariamente mejor. Merece la pena reutilizar tareas comprobadas repetidas veces, con límites y criterios de aceptación claros.
+
 ## Ideas erróneas habituales
 
 ### 1. La plantilla se copia tal cual
@@ -77,10 +101,3 @@ Para quien empieza, «suficiente sin ser voluminosa» basta.
 Elige primero el tipo correcto y adáptalo a tu tarea; no sustituyas la tarea por la plantilla.
 
 Principios de escritura: [Fundamentos de Prompts](/es/prompts/basics/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe el uso de plantillas; se han revisado enlaces y tipología, y el cuerpo no depende de hechos volátiles del producto.

@@ -3,7 +3,7 @@ title: AI と言語モデル
 description: 言語モデルがコンテキストに基づいて応答を生成する仕組みを理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: 1951620
+source_revision: ccdac83
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

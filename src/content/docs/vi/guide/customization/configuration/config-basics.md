@@ -3,7 +3,7 @@ title: Cơ bản cấu hình
 description: Vị trí tệp cấu hình Codex, mục thường dùng và nhập môn cài đặt phê duyệt/Sandbox/mô hình.
 locale: vi
 source_locale: zh-CN
-source_revision: 6c67645
+source_revision: ee00ab5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

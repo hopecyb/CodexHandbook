@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Integrations"
+  basis: "OpenAI Help Center 当前插件与应用说明仍强调：Codex/ChatGPT 的集成能力通过 plugins、apps 与 app templates 接入，且管理员可分别控制角色访问、读写动作、确认要求和数据边界。本页内容聚焦集成设计原则、权限分层与落地顺序，不依赖某个特定外部系统的瞬时界面。"
+  checkedAt: "2026-07-26"
 title: 集成（概述）
 description: GitHub、工单系统、聊天工具与内部平台接进 Codex 时，理清边界、权限和回路设计。
 sidebar:
@@ -190,9 +195,3 @@ Codex 的集成价值，不只是多连一个工具，也在于把 Agent 放进�
 
 ## 参考来源
 - OpenAI Codex 官方集成与开发者文档
----
-
-**状态：** verified  
-**适用产品：** Integrations  
-**核验依据：** OpenAI Help Center 当前插件与应用说明仍强调：Codex/ChatGPT 的集成能力通过 plugins、apps 与 app templates 接入，且管理员可分别控制角色访问、读写动作、确认要求和数据边界。本页内容聚焦集成设计原则、权限分层与落地顺序，不依赖某个特定外部系统的瞬时界面。  
-**最近核验：** 2026-07-26

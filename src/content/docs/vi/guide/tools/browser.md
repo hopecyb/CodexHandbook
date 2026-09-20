@@ -3,7 +3,7 @@ title: Công cụ trình duyệt
 description: Để Codex mở trang web, kiểm trạng thái UI và kiểm chứng hành vi frontend — năng lực và ranh giới.
 locale: vi
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

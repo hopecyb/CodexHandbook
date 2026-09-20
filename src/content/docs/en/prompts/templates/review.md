@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides a review-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Review template
 description: Structured review of diffs and change risk.
 locale: en
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Review template
 
 Review tasks often derail when they become "I'll fix it for you."
 
@@ -53,10 +57,3 @@ The review template surfaces risk by dimension—not vague "good or bad."
 
 - [Review before merge](/en/cases/workflows/review-before-merge/)
 - [Review a PR case](/en/cases/review-a-pr/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a review-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

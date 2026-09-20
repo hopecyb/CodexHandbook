@@ -1,64 +1,58 @@
 ---
-title: Tài khoản, gói và quyền truy cập
-description: Hiểu cách đăng nhập, gói và tiền đề truy cập.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu với các trang Pricing và Authentication chính thức hiện tại; trang này ghi lại mô hình truy cập và thứ tự khắc phục sự cố, không cố định giá, hạn mức hoặc danh sách tính năng thay đổi thường xuyên."
+  checkedAt: "2026-08-26"
+title: Tài khoản, gói dịch vụ và quyền truy cập
+description: Phân biệt hạn mức gói ChatGPT, mức sử dụng API key và quyền của workspace tổ chức.
 locale: vi
 source_locale: zh-CN
-source_revision: 7e2e8e6
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: ecfa8f9
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
-Codex can currently be used through a **ChatGPT plan** or with **usage-based API-key billing**, but the two methods do not expose identical entry points or governance boundaries.
+Hiện có thể dùng Codex qua **gói ChatGPT** hoặc **API key tính phí theo mức sử dụng**, nhưng hai cách này không có cùng điểm truy cập và phạm vi quản trị.
 
-## Choose an access method first
+## Chọn phương thức truy cập trước
 
-| Method | Best for | Availability boundary |
+| Phương thức | Phù hợp với | Giới hạn sử dụng |
 |---|---|---|
-| Sign in with ChatGPT | Personal interactive work, desktop, Cloud, and organization workspaces | Governed by ChatGPT plan limits, workspace roles, and administrator policies |
-| Sign in with an API key | Local Codex, scripts, and CI | Billed by API usage; some ChatGPT-workspace or Cloud features are unavailable |
+| Đăng nhập bằng ChatGPT | Tương tác cá nhân, ứng dụng máy tính, Cloud, workspace tổ chức | Theo hạn mức gói ChatGPT, vai trò trong workspace và chính sách của quản trị viên |
+| Đăng nhập bằng API key | Codex cục bộ, script và CI | Tính phí theo mức sử dụng API; không dùng được một số tính năng phụ thuộc vào workspace ChatGPT hoặc Cloud |
 
-The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This handbook does not duplicate the price table; consult the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
+Trang Pricing chính thức hiện tại đưa ChatGPT Work và Codex vào các gói Free, Go, Plus, Pro, Business, Edu, Enterprise. Tuy nhiên, giá, hạn mức, mô hình và tính năng đi kèm có thể thay đổi. Sổ tay này không sao chép bảng giá; hãy xem trực tiếp [trang Pricing chính thức được cập nhật](https://learn.chatgpt.com/docs/pricing).
 
-## Why an account may still lack access
+## Vì sao có tài khoản mà vẫn có thể không dùng được
 
-Signing in is only the first layer. Final access also depends on:
+Đăng nhập chỉ là lớp đầu tiên. Quyền truy cập cuối cùng còn phụ thuộc vào:
 
-1. whether the current plan includes the target client or feature;
-2. whether the product is available in your region;
-3. whether your organization assigned the required seat, role, and workspace permission;
-4. whether managed configuration restricts sign-in methods, models, or local capabilities;
-5. whether usage has reached the current window or weekly limit.
+1. Gói hiện tại có bao gồm điểm truy cập hoặc tính năng bạn cần không.
+2. Sản phẩm hiện tại có khả dụng tại khu vực của bạn không.
+3. Tổ chức đã cấp cho bạn seat, vai trò và quyền trong workspace chưa.
+4. Quản trị viên có hạn chế phương thức đăng nhập, mô hình hoặc tính năng cục bộ bằng cấu hình được quản lý không.
+5. Mức sử dụng của bạn có chạm hạn mức của cửa sổ hiện tại hoặc hạn mức tuần không.
 
-## Personal access checklist
+## Danh sách kiểm tra cho người dùng cá nhân
 
-- You can sign in to the correct ChatGPT account on an official page.
-- You know whether usage consumes plan limits or usage-based API billing.
-- The target client shows the expected identity.
-- When a limit appears, you inspect current usage instead of reinstalling the client repeatedly.
+- Đăng nhập được đúng tài khoản ChatGPT trên trang chính thức.
+- Biết mình đang dùng hạn mức gói hay API tính phí theo mức sử dụng.
+- Thấy đúng danh tính trong ứng dụng cần dùng.
+- Khi nhận thông báo hết hạn mức, kiểm tra mức sử dụng hiện tại thay vì cài lại ứng dụng nhiều lần.
 
-## Team and enterprise checklist
+## Danh sách kiểm tra cho nhóm và doanh nghiệp
 
-- You selected the correct workspace rather than a personal space under the same email.
-- An administrator configured membership, seats, and roles.
-- SSO, MFA, retention, and regional policies satisfy organization requirements.
-- Managed configuration does not force a different local sign-in method.
-- The API key belongs to the correct API organization and is not confused with ChatGPT workspace policy.
+- Đã chọn đúng workspace, không phải không gian cá nhân dùng cùng địa chỉ email.
+- Quản trị viên đã cấu hình thành viên, seat và vai trò.
+- SSO, MFA, chính sách lưu giữ dữ liệu và khu vực đáp ứng yêu cầu của tổ chức.
+- Cấu hình được quản lý không ép phương thức đăng nhập cục bộ sang cách khác.
+- API key thuộc đúng API organization; đừng nhầm chính sách của tổ chức API với chính sách workspace ChatGPT.
 
-## Example diagnosis
+## Một ví dụ để phân biệt
 
-If the CLI works with an API key but the Cloud button is unavailable, installation may be fine. Cloud requires ChatGPT sign-in and is governed by ChatGPT plan and workspace access; API keys primarily cover local and programmatic workflows.
+Nếu CLI đăng nhập được bằng API key nhưng nút Cloud không khả dụng, đó chưa chắc là lỗi cài đặt. Cloud yêu cầu đăng nhập bằng ChatGPT và chịu sự kiểm soát của gói ChatGPT cùng quyền trong workspace; API key chủ yếu dùng cho quy trình cục bộ và lập trình.
 
-Next, read [Sign-in and authentication](/vi/guide/getting-started/sign-in-and-authentication/).
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE / Cloud
-
-**Căn cứ kiểm chứng:** Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Bước tiếp theo: [Đăng nhập và xác thực](/vi/guide/getting-started/sign-in-and-authentication/).

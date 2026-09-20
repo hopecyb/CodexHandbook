@@ -1,0 +1,6 @@
+[
+ {"request":"反复检查已构建文档站，只报告新增问题和恢复","expected":"trigger"},
+ {"request":"排查重复链接检查为什么总发相同通知","expected":"trigger"},
+ {"request":"写一份销售日报","expected":"do-not-trigger"},
+ {"request":"安装真实定时任务并发消息","expected":"needs-explicit-schedule-and-delivery-scope-not-provided-by-this-skill"}
+]

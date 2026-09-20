@@ -453,124 +453,13 @@
 	display: none;
 }
 
-/* Fixed pagination bar — bottom sheet on mobile, article-aligned on desktop */
-.pagination-spacer {
-	height: 6.5rem;
-}
-
-.pagination-bar {
-	position: fixed;
-	z-index: calc(var(--sl-z-index-navbar) - 1);
-	inset-block-end: 0;
-	inset-inline-start: 0;
-	inset-inline-end: 0;
-	padding: 0.75rem max(1rem, var(--sl-content-pad-x)) max(1rem, env(safe-area-inset-bottom));
-	background: linear-gradient(
-		to top,
-		var(--sl-color-bg) 65%,
-		color-mix(in srgb, var(--sl-color-bg) 85%, transparent) 85%,
-		transparent
-	);
-	pointer-events: none;
-}
-
-.pagination-bar .pagination-links {
-	max-width: var(--sl-content-width);
-	margin-inline: auto;
-	padding-inline: 0;
-	pointer-events: auto;
-}
-
-.pagination-bar .pagination-links a {
-	min-width: 0;
-	white-space: normal;
-	box-shadow: var(--sl-shadow-sm);
-}
-
-html[data-has-sidebar] .site-footer {
-	padding-block-end: calc(6.5rem + 1.5rem);
-}
-
+/* Keep next steps in the document flow so they never cover reading content. */
+.pagination-spacer { height: 1rem; }
+.pagination-bar { width: 100%; padding-block: 1rem; }
+.pagination-bar .pagination-links { max-width: var(--sl-content-width); margin-inline: auto; }
+.pagination-bar .pagination-links a { min-width: 0; white-space: normal; }
 @media (max-width: 49.999rem) {
-	.pagination-spacer {
-		height: 7.25rem;
-	}
-
-	.pagination-bar {
-		z-index: var(--sl-z-index-navbar);
-		padding-block-start: 0.75rem;
-		background: linear-gradient(
-			to top,
-			var(--sl-color-bg) 78%,
-			color-mix(in srgb, var(--sl-color-bg) 88%, transparent) 92%,
-			transparent
-		);
-	}
-
-	.pagination-bar .pagination-links {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 0.625rem;
-		width: min(100%, 34rem);
-	}
-
-	.pagination-bar .pagination-links a {
-		align-items: center;
-		justify-content: center;
-		min-height: 4.25rem;
-		padding: 0.75rem 0.7rem;
-		text-align: start;
-		line-height: 1.25;
-	}
-
-	.pagination-bar .pagination-links a:only-child {
-		grid-column: 1 / -1;
-	}
-
-	.pagination-bar .pagination-links a span {
-		min-width: 0;
-	}
-
-	.pagination-bar .pagination-links .link-title {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		overflow: hidden;
-	}
-
-	html[data-has-sidebar] .site-footer {
-		padding-block-end: calc(7.25rem + 1rem);
-	}
-}
-
-@media (min-width: 50rem) {
-	html[data-has-sidebar] .pagination-bar {
-		inset-inline-start: var(--sl-content-inline-start, var(--sl-sidebar-width));
-	}
-}
-
-@media (min-width: 72rem) {
-	html[data-has-sidebar][data-has-toc] .pagination-bar {
-		--pagination-bar-width: min(
-			calc(100vw - var(--sl-sidebar-width) - var(--sl-toc-width)),
-			calc(
-				var(--sl-content-width) +
-					(100vw - var(--sl-content-width) - var(--sl-sidebar-width) - var(--sl-toc-width)) / 2
-			)
-		);
-		inset-inline-end: auto;
-		width: var(--pagination-bar-width);
-	}
-
-	html[data-has-sidebar][data-has-toc] .pagination-bar .pagination-links {
-		width: min(100%, var(--sl-content-width));
-		margin-inline-start: auto;
-		margin-inline-end: 0;
-	}
-
-	html[data-has-sidebar] .scroll-to-top {
-		inset-block-end: calc(5.75rem + 1rem);
-	}
+  .pagination-bar .pagination-links { display: grid; grid-template-columns: 1fr; gap: .75rem; }
 }
 
 @media (min-width: 72rem) {

@@ -3,7 +3,7 @@ title: Nghiên cứu có nguồn trích dẫn
 description: Dùng Codex để truy xuất, so sánh và kiểm tra sự thật — tạo nguồn và kết luận có thể truy vết.
 locale: vi
 source_locale: zh-CN
-source_revision: ba7014d
+source_revision: feadad6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

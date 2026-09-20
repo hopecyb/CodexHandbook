@@ -1,17 +1,21 @@
 ---
+prev: false
+next:
+  link: /vi/skills/overview/
+  label: Tổng quan Skills
 title: Skills
 description: Học cách dùng, viết, kiểm thử và duy trì Codex Skills.
 locale: vi
 source_locale: zh-CN
-source_revision: bd382e8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: dd408f5
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Skills
 
 Skills dùng để đóng gói phương pháp ổn định, tài liệu tham chiếu, template và script thành năng lực có thể tái sử dụng.
+
+Giá trị của Skills không chỉ là giúp Codex làm thêm một việc: chúng còn xác định rõ đầu vào, đầu ra, giới hạn quyền và cách kiểm thử của một quy trình.
 
 ## Thứ tự khuyến nghị
 
@@ -25,3 +29,9 @@ Skills dùng để đóng gói phương pháp ổn định, tài liệu tham chi
 8. [Hooks](/vi/skills/hooks/) · [MCP](/vi/skills/mcp/) · [Plugins](/vi/skills/plugins/) · [Automations](/vi/skills/automations/)
 9. [Bảo mật và phiên bản](/vi/skills/security/)
 10. Duyệt [ví dụ Skill](/vi/skills/examples/)
+
+## Tài liệu có thể dùng ngay
+
+- [Cấu trúc Skill](/vi/skills/skill-anatomy/): làm rõ chỉ dẫn, điều kiện kích hoạt, quy trình và giới hạn tài nguyên.
+- [Bộ ví dụ Skill](/vi/skills/examples/): tham khảo cho viết, nghiên cứu, rà soát, tự động hóa và các tình huống khác.
+- [Bảo mật và phiên bản](/vi/skills/security/): kiểm tra quyền, đầu vào bên ngoài và trách nhiệm bảo trì trước khi chia sẻ hoặc mở rộng Skill.

@@ -3,7 +3,7 @@ title: Acceptable-Use-Policy
 description: Auf Team-Ebene vereinbaren, was Codex darf und was nicht — abgestimmt mit Technik und Training.
 locale: de
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

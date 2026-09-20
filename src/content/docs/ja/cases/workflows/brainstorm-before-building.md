@@ -3,7 +3,7 @@ title: 構築前にブレインストーム
 description: コードや長文を書く前に、構造化された探索で案を収束させる——手戻りを減らす。
 locale: ja
 source_locale: zh-CN
-source_revision: 9bf8989
+source_revision: 9c5e679
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

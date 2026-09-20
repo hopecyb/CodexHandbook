@@ -3,7 +3,7 @@ title: 샌드박스와 네트워크
 description: 실행 격리·네트워크 접근과 위험 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b3d6d57
+source_revision: 5937622
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

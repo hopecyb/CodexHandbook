@@ -3,7 +3,7 @@ title: Création de contenu
 description: Point d'entrée des cas de documentation, d'articles et d'actifs de contenu — revue, réécriture et validation des livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

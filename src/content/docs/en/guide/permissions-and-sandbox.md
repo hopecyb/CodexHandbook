@@ -3,7 +3,7 @@ title: Permissions and sandboxing
 description: Use one decision chain to understand sandboxing, approvals, network access, and local versus cloud execution.
 locale: en
 source_locale: zh-CN
-source_revision: 6b29dc6
+source_revision: 6b5fcb8
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

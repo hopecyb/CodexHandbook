@@ -1,23 +1,26 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Terminal tích hợp
-description: Dùng terminal trong App để phối hợp tác vụ.
+description: Chạy lệnh trong dự án hoặc worktree hiện tại và xác minh kết quả tác vụ bằng đầu ra thực tế.
 locale: vi
 source_locale: zh-CN
-source_revision: 918b2bf
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 727e93e
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
-Every chat in the ChatGPT desktop App has a terminal scoped to the current project or worktree. It is not just a place to view logs. It is also the evidence window you use to verify Codex's conclusions.
+Mỗi cuộc trò chuyện trong ứng dụng ChatGPT trên máy tính đều có một terminal gắn với dự án hoặc worktree hiện tại. Đây không chỉ là nơi “xem log”, mà còn là cửa sổ bằng chứng để bạn kiểm tra kết luận của Codex.
 
-Open it from the terminal icon in the upper-right corner of the App, or press `Ctrl` and the backtick key together. ChatGPT can read the current terminal output, so you can ask it to analyze a failed build or a running development server.
+Bạn có thể mở bằng biểu tượng terminal ở góc trên bên phải ứng dụng, hoặc nhấn đồng thời `Ctrl` và phím dấu huyền. ChatGPT có thể đọc đầu ra của terminal hiện tại, nên bạn cũng có thể nhờ nó phân tích bản build lỗi hoặc máy chủ phát triển đang chạy.
 
-## Minimal verification flow
+## Quy trình xác minh tối thiểu
 
-In a JavaScript project, you might run:
+Trong một dự án JavaScript, bạn có thể chạy lần lượt:
 
 ```bash
 git status --short
@@ -25,48 +28,39 @@ pnpm test
 pnpm run lint
 ```
 
-Commands differ between projects. Check `README.md`, `package.json`, or the project rules first. Put the confirmed commands in the prompt:
+Lệnh ở mỗi dự án có thể khác nhau. Trước tiên hãy xem `README.md`, `package.json` hoặc quy tắc dự án. Đưa các lệnh đã xác nhận vào prompt:
 
 ```text
-After the change, run pnpm test and pnpm run lint.
-Report the exit status of each command. If either fails, do not claim that
-the task is complete.
+Sau khi sửa, hãy chạy pnpm test và pnpm run lint.
+Báo cáo trạng thái thoát của từng lệnh; nếu lệnh nào thất bại, đừng khẳng định tác vụ đã hoàn thành.
 ```
 
-Record at least what ran, whether it exited successfully, the first meaningful error for each failure, and which checks did not run.
+Khi nghiệm thu, tối thiểu hãy ghi lại: đã chạy gì, lệnh có thoát thành công không, thông báo lỗi hữu ích đầu tiên khi thất bại và những kiểm tra nào chưa được chạy.
 
-## Handling long-running processes
+## Xử lý tiến trình chạy lâu
 
-A development server keeps running; that does not mean the command is stuck. After starting it, check:
+Máy chủ phát triển chạy liên tục không có nghĩa là lệnh bị treo. Sau khi khởi động, hãy kiểm tra:
 
-- whether the output includes a local URL;
-- whether the page opens in a browser;
-- whether runtime errors subsequently appear in the terminal.
+- Đầu ra có hiện địa chỉ cục bộ không.
+- Trình duyệt có mở được trang không.
+- Sau đó terminal có báo lỗi lúc chạy không.
 
-Send an interrupt signal when you need to stop it. Do not start duplicate servers only because no new output has appeared for a while.
+Chỉ gửi tín hiệu ngắt khi cần dừng. Đừng khởi động lặp nhiều máy chủ chỉ vì tạm thời chưa có đầu ra mới.
 
-## Reusable Actions
+## Action có thể tái sử dụng
 
-If you frequently run the same command, define an Action in the local environment. It becomes a shortcut in the desktop App and runs in the integrated terminal. Actions are suitable for low-risk verification such as `test`, `lint`, and `build`. Do not use them to hide production deployment or database deletion operations.
+Nếu thường xuyên chạy cùng một lệnh, bạn có thể định nghĩa Action trong môi trường cục bộ. Nó sẽ xuất hiện như thao tác nhanh trong ứng dụng máy tính và chạy ở terminal tích hợp. Action phù hợp để gói các bước xác minh ít rủi ro như `test`, `lint`, `build`, nhưng không phù hợp để che giấu thao tác phát hành lên production hoặc dọn dẹp cơ sở dữ liệu.
 
-## Security boundary
+## Ranh giới an toàn
 
-- Do not paste production secrets into a chat or terminal history.
-- For an unfamiliar command, first ask for its purpose, impact, and rollback approach.
-- Do not blindly rerun deletion, migration, or deployment commands in production.
-- A command being executable in the terminal does not mean it has business authorization.
+- Đừng dán khóa production vào cuộc trò chuyện hoặc lịch sử terminal.
+- Với lệnh chưa hiểu, trước tiên hãy yêu cầu giải thích mục tiêu, phạm vi ảnh hưởng và cách hoàn tác.
+- Đừng chạy lại một cách mù quáng các lệnh xóa, migration hoặc phát hành trong môi trường production.
+- Terminal có thể chạy lệnh không có nghĩa là lệnh đó đã được phê duyệt về mặt nghiệp vụ.
 
-The official documentation lists common commands such as `git status`, `git pull --rebase`, tests, and linting. Your project's own documentation remains the final authority for its commands.
+Các lệnh thường gặp trong tài liệu chính thức gồm `git status`, `git pull --rebase`, kiểm thử và lint; với dự án này, tài liệu riêng của dự án phải là nguồn quyết định lệnh cuối cùng.
 
-## Official sources
+## Nguồn chính thức
 
-- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
-- [Local environments](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Terminal tích hợp](https://learn.chatgpt.com/docs/integrated-terminal)
+- [Môi trường cục bộ](https://learn.chatgpt.com/docs/environments/local)

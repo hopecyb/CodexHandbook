@@ -1,71 +1,43 @@
 ---
 title: AI 应用路线图
-description: 用时间线理解 Prompt Engineering、RAG、MCP、Multi-agent、Context Engineering、Skills 等 AI 应用工程节点。
+prev: false
+next:
+  link: /ai-roadmap/timeline/
+  label: 事件与主题索引
+description: 区分论文、产品发布、工程文章和作者学习建议，并从每个主题进入实践。
 ---
 
-# AI 应用路线图
+这张地图把可核对的公开事件与学习建议分开。**日期只指表中列出的论文、公告或文章，不自动代表概念诞生、行业普及或能力成熟。** 不同技术可以同时使用，时间先后也不是必须依次升级的学习顺序。
 
-这是一张面向 AI 应用工程的知识地图。它不追模型参数、榜单或单次产品发布，而是把关键方法按时间倒序串起来：从可复用、可验证的 Agent 工程系统，回看这些能力怎样一步步长出来。
+每个主题页提供一手来源、适用边界和站内练习。来源核对不等于软件实跑；原有 URL 保留，其中的年月可能与修订后的事件日期不同，请以正文为准。
 
-<div class="roadmap-timeline">
-  <article>
-    <time>2026-04</time>
-    <h3><a href="/ai-roadmap/timeline/2026-04-skills/">Skills（技能）</a></h3>
-    <p>Skills 把提示词、步骤、示例、脚本和资源打包成可复用工作流单元。它解决的是组织经验如何沉淀的问题：不再每次重新解释“怎么做”，而是让 AI 遇到熟悉任务时直接调用成熟方法。</p>
-    <p><strong>学习重点：</strong>SKILL.md、渐进披露、依赖资源、复用边界、团队规范。</p>
-  </article>
-  <article>
-    <time>2026-02</time>
-    <h3><a href="/ai-roadmap/timeline/2026-02-harness-engineering/">Harness Engineering（驾驭工程）</a></h3>
-    <p>Harness Engineering 关注如何构建一套能稳定驱动模型完成任务的环境：工具、上下文、反馈、错误恢复、质量门槛和回归检查。它把 AI 应用从“偶尔跑出好结果”推向“可重复交付结果”。</p>
-    <p><strong>学习重点：</strong>任务脚手架、验证反馈、失败恢复、质量门槛。</p>
-  </article>
-  <article>
-    <time>2026-01</time>
-    <h3><a href="/ai-roadmap/timeline/2026-01-openspec/">OpenSpec（规范驱动开发）</a> / <a href="/ai-roadmap/timeline/2026-01-openclaw/">OpenClaw（个人 AI 助手网关）</a></h3>
-    <p>2026 年初的两个节点代表两条方向：OpenSpec 把需求和设计固化成规格工件，OpenClaw 把个人助手、多渠道入口和工具网关串起来。一个强调“先对齐再实现”，一个强调“统一入口与运行环境”。</p>
-    <p><strong>学习重点：</strong>spec-driven development、网关、会话、渠道、可追踪工件。</p>
-  </article>
-  <article>
-    <time>2025-09</time>
-    <h3><a href="/ai-roadmap/timeline/2025-09-context-engineering/">Context Engineering（上下文工程）</a></h3>
-    <p>Context Engineering 把注意力从“怎么写提示词”转向“模型应该看到什么、按什么顺序看到、哪些内容应该被压缩或排除”。在长任务和代码库协作里，它往往决定上限。</p>
-    <p><strong>学习重点：</strong>上下文优先级、检索策略、压缩、记忆、文件选择。</p>
-  </article>
-  <article>
-    <time>2025-06</time>
-    <h3><a href="/ai-roadmap/timeline/2025-06-multi-agent/">Multi-agent（多智能体协作）</a></h3>
-    <p>Multi-agent 把复杂任务拆给多个角色：研究、实现、审查、验证、总结。它不是为了“看起来更智能”，而是为了让复杂工作具备分工、并行和互相检查的结构。</p>
-    <p><strong>学习重点：</strong>角色边界、交接格式、冲突解决、审查与验证。</p>
-  </article>
-  <article>
-    <time>2025-03</time>
-    <h3><a href="/ai-roadmap/timeline/2025-03-tool-use/">Tool Use（工具使用）</a></h3>
-    <p>Tool Use 关注模型如何在任务过程中选择工具、调用工具、读取返回结果，并继续下一步推理。它是从“单次响应”走向“多步骤执行”的关键节点。</p>
-    <p><strong>学习重点：</strong>工具选择、调用链、状态管理、工具失败后的恢复。</p>
-  </article>
-  <article>
-    <time>2024-11</time>
-    <h3><a href="/ai-roadmap/timeline/2024-11-mcp/">MCP（模型上下文协议）</a></h3>
-    <p>MCP 把工具、资源和提示词的接入方式协议化。它的价值不只在“多接几个工具”，而在于让工具接入从一次性胶水代码，变成可复用、可发现、可治理的接口层。</p>
-    <p><strong>学习重点：</strong>server/client、tools、resources、prompts、权限与调试。</p>
-  </article>
-  <article>
-    <time>2023-11</time>
-    <h3><a href="/ai-roadmap/timeline/2023-11-rag/">RAG（检索增强生成）</a></h3>
-    <p>RAG 让模型回答不再只依赖训练记忆，而是把检索到的资料放进上下文。它把 AI 应用从“会说”推向“有依据地说”，尤其适合知识库、客服、研究和企业内部文档场景。</p>
-    <p><strong>学习重点：</strong>切片、向量检索、重排、引用、上下文压缩。</p>
-  </article>
-  <article>
-    <time>2023-06</time>
-    <h3><a href="/ai-roadmap/timeline/2023-06-function-calling/">Function Calling（函数调用）</a></h3>
-    <p>Function Calling 把“让模型回答”推进到“让模型按结构化参数调用外部能力”。这一步让 AI 可以进入真实系统：查订单、建任务、发请求、更新记录，而不是停留在聊天窗口里。</p>
-    <p><strong>学习重点：</strong>schema 设计、参数校验、工具边界、错误回传。</p>
-  </article>
-  <article>
-    <time>2022-11</time>
-    <h3><a href="/ai-roadmap/timeline/2022-11-prompt-engineering/">Prompt Engineering（提示词工程）</a></h3>
-    <p>AI 应用工程的起点不是“模型变聪明”，而是人开始学会把任务目标、上下文、约束、示例和输出格式写进提示词里。它解决的是输入控制问题：如何让同一个模型在不同任务里更稳定地听懂意图。</p>
-    <p><strong>学习重点：</strong>任务拆解、角色设定、few-shot 示例、输出格式、失败重试。</p>
-  </article>
-</div>
+## 可核对的事件
+
+| 日期 | 类型 | 主题与具体事件 |
+|---|---|---|
+| 2026-02-11 | 工程文章 | [Harness Engineering（驾驭工程）](/ai-roadmap/timeline/2026-02-harness-engineering/)：Harness engineering 工程文章 |
+| 2025-10-16 | 工程文章 | [Skills（技能）](/ai-roadmap/timeline/2026-04-skills/)：Agent Skills 公开介绍 |
+| 2025-09-29 | 工程文章 | [Context Engineering（上下文工程）](/ai-roadmap/timeline/2025-09-context-engineering/)：上下文工程文章 |
+| 2025-06-13 | 工程文章 | [Multi-agent（多智能体协作）](/ai-roadmap/timeline/2025-06-multi-agent/)：多 Agent 研究系统工程文章 |
+| 2025-03-11 | 产品发布 | [Tool Use（工具使用）](/ai-roadmap/timeline/2025-03-tool-use/)：Agent 工具发布公告 |
+| 2024-11-25 | 协议公开 | [MCP（模型上下文协议）](/ai-roadmap/timeline/2024-11-mcp/)：MCP 公开公告 |
+| 2023-06-13 | 产品发布 | [Function Calling（函数调用）](/ai-roadmap/timeline/2023-06-function-calling/)：函数调用发布公告 |
+| 2022-11-30 | 产品发布 | [Prompt Engineering（提示词工程）](/ai-roadmap/timeline/2022-11-prompt-engineering/)：ChatGPT 发布公告 |
+| 2020-05-22 | 论文发表 | [RAG（检索增强生成）](/ai-roadmap/timeline/2023-11-rag/)：RAG 原论文与提交历史 |
+
+## 项目专题
+
+以下项目单独阅读，不用未经确认的首发日期组织先后。
+
+- [OpenSpec（规范驱动开发）](/ai-roadmap/timeline/2026-01-openspec/)：项目官方发布页提供 v1.0.0（The OPSX Release）的版本说明。本次核对不以该版本推定项目首发日期，也不保留未经本次证据确认的 npm 首发日期。
+- [OpenClaw（个人 AI 助手项目）](/ai-roadmap/timeline/2026-01-openclaw/)：本页以 OpenClaw 官方仓库为项目身份与说明来源。本次没有获得足以确认项目首次发布的证据，因此不展示首发日期。
+
+## 按当前任务选择练习
+
+- 第一次使用：从[新手路径](/guide/learning-paths/)开始，不必先学完时间线。
+- 改善任务说明：用[提示词对照材料](/prompts/comparison-lab/)保存输出与评分；尚无本站模型效果实测结论。
+- 需要资料支持：从[带来源的文章](/cases/write-an-article/)练习结论与证据对应。
+- 需要稳定复用：选择[Skill 示例](/skills/examples/)，核对输入、边界与验证记录。
+- 执行反复失败：用[失败恢复实录](/guide/reference/troubleshooting/failure-recovery-lab/)练习读取日志与单变量修正。
+
+主题的学习价值由任务决定。本栏目不再用缺少统一测量依据的 rising、emerging 等标签给全行业划阶段。

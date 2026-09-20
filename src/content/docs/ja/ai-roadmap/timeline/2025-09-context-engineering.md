@@ -1,48 +1,39 @@
 ---
-title: "Context Engineering（コンテキスト工学）"
-date: 2025-09-29
-year: 2025
-summary: "Prompt Engineering が「どう頼むか」に注目するなら、Context Engineering は「モデルに何を見せるか」を設計する。履歴、検索知識、ツール出力を体系的に整理し、モデルが正しい情報で推論できるようにする。"
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+title: "Context Engineering（コンテキストエンジニアリング）"
+description: "コンテキストにはタスク、指示、ファイル、検索結果、ツール出力が含まれます。今のタスクに含めるもの、必要時に読むもの、圧縮後に残すものを決める必要があります。"
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  evidence:
+    - label: "コンテキストエンジニアリングの記事"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 確認可能な出来事と範囲
 
-# Context Engineering（コンテキスト工学）
+**日付：2025-09-29 · 種別：エンジニアリング記事。** Anthropicは、エージェントに必要なコンテキストの整理を論じた*Effective context engineering for AI agents*を公開しました。記事の日付は概念の誕生日ではありません。
 
-- 重要な日付:
-  - Application-engineering inflection: 2025-09-01
-- 公式リファレンス:
-  - https://platform.openai.com/docs/guides/conversation-state
-  - https://platform.openai.com/docs/guides/retrieval
-- 注記: この項目は、コンテキスト設計が Prompt Engineering とは別の中核能力として認識され始めた段階を記録する。
+出典：[コンテキストエンジニアリングの記事](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)。確認日は2026-09-18です。出典の公開日と本ページの確認日は意味が異なります。
 
-## それは何か
+## 何を解決するか
 
-Context Engineering は、モデルへ渡す会話履歴、システム指示、検索結果、ファイル、ツール出力、メモリを選び、圧縮し、順序づけ、更新する設計である。
+コンテキストにはタスク、指示、ファイル、検索結果、ツール出力が含まれます。今のタスクに含めるもの、必要時に読むもの、圧縮後に残すものを決める必要があります。
 
-## AI アプリケーション工学をどこからどこへ進めたか
+## 学習上の助言と適用範囲
 
-AI アプリケーションは「主にプロンプト文面を調整する」段階から、「タスク実行環境としてのコンテキスト全体を設計する」段階へ進んだ。
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定した結果ではありません。
 
-## 現在の段階
+現在の判断に関係する事実と、その根拠への入口を優先します。情報を増やしすぎると雑音になることがあり、圧縮した要約は重要なファイルの代わりにはなりません。目標がずれたときは、指示を追加する前に既存の成果物と制約を確認します。
 
-現時点では、この項目を `emerging` と見なしている。
+## 実践演習
 
-新興だが急速に重要になっている。RAG、Agent メモリ、長文処理、マルチターン作業では、モデル能力よりコンテキスト品質が結果を左右する場面が多い。
+[コンテキストを絞る](/ja/guide/context/keep-context-focused/)：現在のタスクに必読のファイル、必要に応じて参照する資料、無関係なものを列挙します。目標、完了したこと、未解決の問題、根拠の場所を引き継ぎ記録として残します。
 
-## 置き換える可能性があるもの
-
-長い履歴や文書をそのまま詰め込む雑なやり方を置き換える。情報の選別、圧縮、配置が明示的な設計対象になる。
-
-## それを置き換える可能性があるもの
-
-自動コンテキスト管理、長期記憶システム、状態付き Agent ランタイムに吸収される可能性がある。ただし「何を見せるか」を決める思想は残る。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

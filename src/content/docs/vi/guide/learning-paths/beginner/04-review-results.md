@@ -1,57 +1,53 @@
 ---
-title: Xem xét kết quả
-description: "Nuôi thói quen kiểm tra Diff, chạy Kiểm chứng và hỏi lại."
-locale: vi
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Xem xét kết quả"
+description: "Luyện tìm lỗi trên một mẫu sai cố định, rồi rà soát thông báo của chính bạn."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Đã bổ sung đủ tài liệu cố định và kết quả tham khảo của tác giả. Script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa có bài kiểm tra hoàn thành độc lập với mô hình hoặc người học."
+  evidence:
+    - label: "Bản ghi thao tác tệp của tác giả"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/vi/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Giao tác vụ rõ ràng"
+next:
+  link: "/vi/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "Hoàn thành dự án nhỏ đầu tiên"
+locale: vi
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Mục tiêu bước này
+## Trước tiên, xem một mẫu đã biết có lỗi
 
-Đổi «nhìn một cái là qua» thành hành động kiểm tra cố định.
+Mở [thông báo có lỗi do tác giả thiết kế](/downloads/first-project/references/flawed-notice.md), đối chiếu với `facts.md`, rồi ghi lại câu sai, số thứ tự dữ kiện tương ứng và cách sửa. Mẫu này không phải đầu ra của mô hình và không chứng minh một lời nhắc cụ thể chắc chắn thất bại.
 
-Danh sách: [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/) · [Xem xét Diff](/vi/guide/quality/review-diffs/)
+Đừng cố ý nới quyền của thư mục làm việc thực tế để gây ra thay đổi ngoài phạm vi. Mẫu sai cố định đã đủ để luyện nhận diện lỗi và so sánh kết quả nhiều lần.
 
-Nhiều người bỏ qua bước này. Dùng Codex có ổn hay không thường phụ thuộc bạn có review kết quả không.
+## Sau đó kiểm tra sản phẩm của bạn
 
-## Bài luyện
+Sao chép `templates/review.md` trong gói vào thư mục `records` mới nằm ngoài thư mục làm việc, rồi điền từng mục:
 
-Cố ý đưa một Prompt mơ hồ dễ vượt ranh giới, quan sát kế hoạch; từ chối bước vượt ranh giới, viết lại ràng buộc rồi chạy lại.
+- Thời gian, địa điểm, số chỗ, chi phí và các việc cần chuẩn bị có chính xác không?
+- Cách đăng ký vẫn để là chưa biết và số thứ tự dữ kiện có hỗ trợ nội dung không?
+- Có phải chỉ notice.md thay đổi, còn dữ kiện và ghi chú gốc giữ nguyên không?
+- Có tệp nào được tạo hoặc xóa thêm, hay thông tin nào được gửi ra ngoài không?
 
-## Trọng tâm luyện
+Với mục chưa rõ, hãy ghi 'chưa kiểm tra'; đừng đánh dấu đạt chỉ vì mô hình nói 'đã xong'.
 
-Ở đây chủ yếu luyện:
+## Điều kiện hoàn thành
 
-- Thấy nó có chuẩn bị vượt ranh giới không
-- Biết khi nào nên từ chối
-- Biết cách siết Tác vụ mơ hồ rồi chạy lại
+Tự chỉ ra bốn lỗi dữ kiện trong mẫu sai rồi mới xem [đáp án rà soát](/downloads/first-project/references/review-key.md): giờ kết thúc, số người tham gia, cách đăng ký bị bịa ra và việc biến mang sách tự nguyện thành bắt buộc. Nếu thông báo của bạn có lỗi, hãy sửa rồi kiểm tra lại.
 
-Điều này trực tiếp hơn là kỳ vọng nó làm đẹp ngay từ lần đầu.
+Lưu bản ghi rà soát bạn thực sự đã làm, không sao chép kết quả tham khảo của tác giả làm bằng chứng mình đã hoàn thành. Liên quan: [Xem xét diff](/vi/guide/quality/review-diffs/).
 
-## Hiểu nhầm thường gặp
-
-### 1. Review chỉ cần khi dự án chính thức về sau
-
-Càng sớm nuôi thói quen review, càng ít mù tin kết quả về sau.
-
-### 2. Nó đã đưa kế hoạch rồi thì không cần tự phán
-
-Cũng không được.
-
-Kế hoạch chỉ là hỗ trợ; bạn vẫn phải xem nó có đụng phạm vi không nên đụng không.
-
-Xem xét kết quả không phải hành động phụ; nó vốn là một phần của quá trình dùng.
-
-Bước tiếp: [Hoàn thành dự án nhỏ đầu tiên](/vi/guide/learning-paths/beginner/05-complete-first-project/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương kiểm tra kết quả, xem xét Diff và lộ trình người mới đã kiểm chứng trong sổ tay; trang chỉ luyện thói quen xem xét ổn định «thấy vượt ranh giới, từ chối bước không phù hợp, rồi siết lại Tác vụ».  
-**Kiểm chứng gần nhất:** 2026-07-26
+[Gói thực hành và hướng dẫn chuẩn bị](/vi/guide/learning-paths/beginner/)

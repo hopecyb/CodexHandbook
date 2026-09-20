@@ -3,7 +3,7 @@ title: Développement logiciel
 description: Point d'entrée des cas de modification de code, correction de bugs et ajout de vérifications — contrôle du périmètre, tests et retour arrière.
 locale: fr
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

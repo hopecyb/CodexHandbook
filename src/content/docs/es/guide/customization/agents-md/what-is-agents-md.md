@@ -3,7 +3,7 @@ title: Qué es AGENTS.md
 description: Archivo de instrucciones persistentes a nivel de proyecto — el «contrato de colaboración» para Codex, no una enciclopedia de arquitectura.
 locale: es
 source_locale: zh-CN
-source_revision: c4bc1cc
+source_revision: 49b7d04
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

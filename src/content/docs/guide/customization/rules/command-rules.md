@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI 当前 Codex CLI 文档仍把命令执行、审批模式与沙盒隔离作为核心安全边界；本页将命令规则定位为“把高低风险命令分开管理”的工程模式，并把 JSON 片段明确标为示意，不把特定语法写成官方事实。"
+  checkedAt: "2026-07-26"
 title: 命令规则
 description: 用命令级 allow/deny 约束 shell 与工具调用——比口头约定更可执行。
 sidebar:
@@ -114,10 +119,3 @@ sidebar:
 - [团队规则策略](/guide/customization/rules/team-rules/)
 - [CLI 审批与沙盒](/guide/cli/approvals-and-sandbox/)
 - [权限矩阵](/guide/reference/permission-matrix/)
-
----
-
-**状态：** verified  
-**适用产品：** CLI / App  
-**核验依据：** OpenAI 当前 Codex CLI 文档仍把命令执行、审批模式与沙盒隔离作为核心安全边界；本页将命令规则定位为“把高低风险命令分开管理”的工程模式，并把 JSON 片段明确标为示意，不把特定语法写成官方事实。  
-**最近核验：** 2026-07-26

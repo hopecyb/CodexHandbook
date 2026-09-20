@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "全平台"
+  basis: "OpenAI 当前插件与外部访问文档持续强调：外部来源内容、网站访问、外部 app 数据和高风险动作都应通过权限与确认边界控制；本页据此把 prompt 注入定义为“不可信文本改变 Agent 行为”的风险，并给出识别、只读优先和人工审批等缓解模式。"
+  checkedAt: "2026-07-26"
 title: Prompt 注入
 description: 当不可信文本进入上下文时——识别、缓解与团队政策要点。
 sidebar:
@@ -120,9 +125,3 @@ sidebar:
 ## 参考来源
 - OWASP LLM Top 10（Prompt Injection）
 - OpenAI 官方安全指南
----
-
-**状态：** verified  
-**适用产品：** 全平台  
-**核验依据：** OpenAI 当前插件与外部访问文档持续强调：外部来源内容、网站访问、外部 app 数据和高风险动作都应通过权限与确认边界控制；本页据此把 prompt 注入定义为“不可信文本改变 Agent 行为”的风险，并给出识别、只读优先和人工审批等缓解模式。  
-**最近核验：** 2026-07-26

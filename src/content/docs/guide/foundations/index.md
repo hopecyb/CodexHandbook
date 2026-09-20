@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明基础概念章节的结构与阅读顺序；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 基础概念
 description: 建立模型、Agent、工具、权限与验证的共同语言。
 sidebar:
@@ -61,10 +66,3 @@ sidebar:
 5. [验证与人工复核](/guide/foundations/verification-and-human-review/)
 
 把这几页看明白，已经够支撑日常使用了。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明基础概念章节的结构与阅读顺序；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

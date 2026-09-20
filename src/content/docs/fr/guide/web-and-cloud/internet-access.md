@@ -3,7 +3,7 @@ title: Accès à Internet
 description: Distinguez la connectivité du setup de celle de l'Agent, puis limitez les risques par domaine et méthode HTTP.
 locale: fr
 source_locale: zh-CN
-source_revision: 1e2d815
+source_revision: 5bbb905
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

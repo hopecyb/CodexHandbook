@@ -3,7 +3,7 @@ title: Đầu ra có cấu trúc
 description: "Để `exec` tạo kết quả máy parse được — cho bước sau, dashboard và cổng kiểm soát."
 locale: vi
 source_locale: zh-CN
-source_revision: aa19d49
+source_revision: e80b5d7
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

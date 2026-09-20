@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API"
+  basis: "OpenAI API 当前模型/对比文档仍列出 `Structured outputs` 能力；本页内容限定在“为非交互任务设计稳定输出接口”的通用实践，示例中的 JSON schema、校验与降级策略属于工程模式说明。"
+  checkedAt: "2026-07-26"
 title: 结构化输出
 description: 让 exec 产出机器可解析的结果——供下游步骤、仪表盘与门禁使用。
 sidebar:
@@ -117,9 +122,3 @@ echo "$result" | jq -e '.pass == true'
 
 ## 参考来源
 - OpenAI structured outputs 通用实践（概念对齐）
----
-
-**状态：** verified  
-**适用产品：** CLI / API  
-**核验依据：** OpenAI API 当前模型/对比文档仍列出 `Structured outputs` 能力；本页内容限定在“为非交互任务设计稳定输出接口”的通用实践，示例中的 JSON schema、校验与降级策略属于工程模式说明。  
-**最近核验：** 2026-07-26

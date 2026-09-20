@@ -3,7 +3,7 @@ title: ローカルと Cloud タスク
 description: App でローカル実行と Cloud 実行を切り替える。
 locale: ja
 source_locale: zh-CN
-source_revision: 95e2382
+source_revision: 741f686
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

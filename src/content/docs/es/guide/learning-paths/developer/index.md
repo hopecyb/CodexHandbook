@@ -1,67 +1,126 @@
 ---
-title: Ruta para desarrolladores (resumen)
-description: Resumen de la ruta relacionada con desarrollo de software; los pasos en profundidad se completarán más adelante.
-locale: es
-source_locale: zh-CN
-source_revision: b5b5ac7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Ruta de desarrollo: leer código, corregir, revisar y entregar"
+description: "Un ejercicio de carrito con un bug une lectura de código, pruebas rojo/verde, revisión del diff y entrega, con tres plantillas para rellenar."
+contentType: path
+audiences: [developer]
+level: beginner
+outputs: [javascript, markdown, test-log]
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: "2026-09-18"
+  summary: "Se volvió a ejecutar el ejercicio de referencia: al inicio falló una de tres pruebas, tras la corrección pasaron las tres y los dos archivos de pruebas eran idénticos. El autor revisó las plantillas, pero ningún lector independiente ha completado aún la ruta."
+  environment: "Node.js v22.16.0 / Darwin arm64; node:test integrado, sin dependencias de terceros."
+  evidence:
+    - label: "Resumen de ejecución real"
+      href: /downloads/developer-path/run-record.json
+    - label: "Referencia de revisión del autor y límites del alcance"
+      href: /downloads/developer-path/review-reference.md
 sidebar:
   order: 20
+prev:
+  link: /es/guide/learning-paths/
+  label: "Elegir una ruta de aprendizaje"
+next:
+  link: /es/cases/use-cases/software-development/fix-a-bug-with-verification/
+  label: "Iniciar una corrección de bug verificada"
+locale: es
+source_locale: zh-CN
+source_revision: 22d8bd3
+translation_status: draft
+translated_at: 2026-09-20
 ---
+Con un pequeño ejercicio de carrito completarás cuatro tareas: explicar el código, corregir un error, revisar las diferencias y entregar las pruebas. No necesitas aprender antes todos los clientes, ajustes ni funciones multiagente.
 
-> Estado MVP: esta página es un resumen. Los cinco pasos completos se completarán en hitos posteriores.
+Requisitos: poder leer JavaScript sencillo y ejecutar pruebas Node.js en un terminal local. El entorno de referencia usa Node.js 22.16.0 y no requiere dependencias de terceros. Puedes usar la CLI, un IDE u otro cliente que acceda a archivos locales y al terminal; Node.js determina el comportamiento de las pruebas.
 
-Si quieres usar Codex sobre todo para cambiar código, entender proyectos y corregir problemas, puedes empezar por esta ruta.
+## Preparar el código y el directorio de pruebas
 
-## Casos adecuados
+Usa `examples/complete-workflows/developer/verified-bug-fix/` del [repositorio fuente del manual](https://github.com/hopecyb/CodexHandbook). Lee primero `brief.md` y `README.md`, sin mirar `solution/`. Los pasos completos están en [Corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
-- Quien necesita leer código, cambiarlo y ejecutar pruebas
-- Quien quiere integrar Codex en un flujo de desarrollo real
-- Quien quiere dominar el flujo de «escribir la Tarea, revisar el diff, ejecutar la Verificación»
+Desde el directorio del ejercicio:
 
-## Qué puedes leer ahora
+```sh
+# work/ todavía no debe existir; si ya tienes un ejercicio, elige otro nombre y no lo sobrescribas.
+cp -R starter work
+mkdir -p evidence
+```
 
-- [Primeros pasos](/es/guide/getting-started/) y [CLI](/es/guide/cli/) / [IDE](/es/guide/ide/)
-- [Ejecutar pruebas](/es/guide/quality/run-tests/) · [Revisar diferencias](/es/guide/quality/review-diffs/)
-- [Planificación del Agent](/es/guide/agent-work/planning/)
+Corrige el error en `work/`. Conserva `starter/` como estado inicial que falla y `solution/` como solución de referencia. Guarda las plantillas siguientes en `evidence/`. Las plantillas descargables no incluyen todo el código: utilízalas junto con el ejercicio del repositorio.
 
-## Malentendidos frecuentes
+| Hito | Requisito previo | Resultado | Criterio de finalización |
+|---|---|---|---|
+| 1. Leer código | `brief.md` y `starter/` | `code-map.md` | Entrada, recorrido de datos, fallo y causa respaldados por archivos |
+| 2. Corregir y verificar | Causa y pruebas sin modificar | `work/cart.js`, `red.txt`, `green.txt` | Reproducir el fallo antes de superar las mismas pruebas |
+| 3. Revisar el diff | Cambios y dos salidas de pruebas | `review.md`, diff de implementación | Expectativas y API intactas, sin cambios ajenos |
+| 4. Entregar | Pruebas de los tres hitos anteriores | `handoff.md` | La siguiente persona encuentra los archivos actuales y repite el paso siguiente |
 
-### 1. La ruta para desarrolladores es dejar que empiece a escribir código
+## 1. Leer el código y crear un mapa verificable
 
-Lo que más afecta a la calidad suele ser:
+[Descarga la plantilla de lectura de código](/downloads/developer-path/code-map-template.md). Pide a Codex que lea `brief.md`, `starter/cart.js` y `starter/cart.test.js` y explique sin modificar nada el punto de entrada, el recorrido de datos, la entrada que activa el fallo, los valores real y esperado, la línea causante y los límites del alcance.
 
-- Si entendió el alcance
-- Si definiste el criterio de finalización
-- Si al final revisaste el diff y el resultado de la Verificación con atención
+Guarda el resultado en `evidence/code-map.md`. Solo hay dos archivos principales, así que no hace falta un diagrama de arquitectura complejo. Para completar el paso, explica que `10` significa diez por ciento, por qué la implementación errónea convierte un subtotal de 40 en -360 y por qué debería dar 36.
 
-### 2. Sé escribir código, así que puedo saltarme los conceptos básicos
+Puedes consultar la [referencia de lectura del autor](/downloads/developer-path/code-map-reference.md), pero comprueba tus conclusiones en el código real. Solo después modifica la implementación.
 
-Mejor no saltártelos del todo.
+## 2. Guardar el rojo y hacer la corrección mínima
 
-La forma de trabajar de Codex no es como el autocompletado de un editor; conceptos como Permiso, Contexto y llamadas a Herramientas siguen afectando el resultado.
+Ejecuta estos comandos desde `verified-bug-fix/`:
 
-## Orden de lectura sugerido
+```sh
+node --test work/cart.test.js > evidence/red.txt 2>&1
+```
 
-Si vas a usar Codex en desarrollo, lee en este orden:
+Se espera código de salida 1: falla una de las tres pruebas. Abre `evidence/red.txt` y confirma que la prueba del descuento muestra -360 como valor real y 36 como esperado. Si todas pasan, comprueba si usaste la solución de referencia o modificaste algún archivo antes; no supongas que reprodujiste el fallo.
 
-1. [Primeros pasos](/es/guide/getting-started/)
-2. [CLI](/es/guide/cli/) o [IDE](/es/guide/ide/)
-3. [Trabajo con Agent](/es/guide/agent-work/)
-4. [Ejecutar pruebas](/es/guide/quality/run-tests/)
-5. [Revisar diferencias](/es/guide/quality/review-diffs/)
+Puedes delimitar directamente toda la ejecución:
 
-Esta ruta prioriza cambios controlables y resultados verificables, no solo «que empiece a escribir».
+```text
+A partir de brief.md y evidence/code-map.md, corrige solo la conversión del porcentaje en work/cart.js.
+Mantén la firma de la función y las aserciones de work/cart.test.js. No añadas dependencias ni refactorices.
+Después ejecuta node --test work/cart.test.js y guarda la salida real en evidence/green.txt.
+Si el resultado no es el esperado, conserva la prueba del fallo y localiza la causa; no cambies las aserciones para adaptarlas a la implementación.
+Entrega un resumen de cambios y resultados de las pruebas. No hagas commit ni push.
+```
 
-## Pasos planificados (esquema)
+Para terminar, las tres pruebas originales deben pasar con código de salida 0 y el cambio debe limitarse a la causa. Un comando de prueba fallido también puede generar un registro; que exista `green.txt` no demuestra que las pruebas hayan pasado.
 
-Entender el repositorio → Corrección e implementación → Pruebas y revisión → Flujos automatizados → Desarrollo multi-Agent
+## 3. Revisar diferencias y omisiones
 
----
+[Descarga la plantilla de revisión](/downloads/developer-path/review-template.md) e indica la comparación real: el `starter/` conservado frente a tu `work/`, no `main` por defecto. Tampoco depende de si el repositorio tiene cambios sin confirmar.
 
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con las páginas de entrada de desarrollo, trabajo con Agent, ejecución de pruebas y revisión de diferencias; esta página es solo un resumen del orden de lectura para desarrolladores y no promete comportamientos por defecto de implementaciones o herramientas.  
-**Última verificación:** 2026-07-26
+```sh
+diff -u starter/cart.js work/cart.js
+diff -u starter/cart.test.js work/cart.test.js
+```
+
+El primer comando debería mostrar la conversión del porcentaje; código de salida 1 significa que hay diferencias, no un fallo del comando. El segundo no debería mostrar nada y debe devolver 0. Pide a Codex una revisión de solo lectura del diff real y de los registros rojo/verde; anota hallazgos, pruebas, aspectos no cubiertos y decisiones en `evidence/review.md`.
+
+Comprueba que las pruebas no se hayan relajado, que la API siga igual y que no haya dependencias adicionales ni cambios ajenos. La precisión monetaria, los impuestos y las entradas inválidas quedan fuera del ejercicio; superar tres pruebas no demuestra seguridad en producción. Compara con la [referencia de revisión del autor](/downloads/developer-path/review-reference.md).
+
+## 4. Escribir la entrega y recuperar desde los archivos
+
+[Descarga la plantilla de entrega](/downloads/developer-path/handoff-template.md). En `evidence/handoff.md`, indica el directorio actual, archivos modificados, restricciones vigentes, rutas de pruebas, siguiente comando y resultado esperado. En un proyecto Git real, añade rama, commit y estado del árbol de trabajo.
+
+Una tarea de solo lectura tras la entrega puede ser:
+
+```text
+Lee evidence/handoff.md y comprueba primero que los archivos actuales de work/ coincidan con la descripción de la entrega.
+Desde la raíz del ejercicio, ejecuta node --test work/cart.test.js y registra el código de salida real y el resumen.
+Compara implementación y pruebas de work con starter. Si el estado difiere, explica la diferencia; no reutilices un resultado verde anterior.
+No modifiques código ni hagas commit o push.
+```
+
+Puedes hacerlo en una tarea nueva o pedir a otra persona que lo verifique. Reabrirlo tú mismo solo es un ensayo de recuperación, no una revisión humana independiente. Consulta el [registro de entrega del autor](/downloads/developer-path/handoff-reference.md).
+
+La entrega se completa cuando el archivo por sí solo permite encontrar código, pruebas y límites, y ejecutar el resultado actual. Si aún no se ha ejecutado esta comprobación, deja «pendiente de verificación tras la entrega» en el registro.
+
+## A qué paso volver si surge un problema
+
+- No encuentras un archivo: comprueba el directorio del terminal y si existe `work/`; vuelve a la preparación.
+- No hay rojo: revisa el estado inicial y las pruebas; el verde de la solución de referencia no reproduce el fallo.
+- Las pruebas pasan solo después de modificarlas: restaura las aserciones originales y vuelve a analizar la causa.
+- Hay cambios ajenos: conserva el diff, reduce la corrección y repite las pruebas.
+- La entrega no coincide con los archivos: usa los archivos actuales como referencia, actualiza el registro y sigue.
+
+En un proyecto real, añade a esta estructura las comprobaciones lint, de tipos y la batería completa exigidas por el repositorio. Determina su necesidad y comandos según las instrucciones reales del proyecto. Este ejercicio no incluye esas comprobaciones, así que no inventes resultados aprobados.

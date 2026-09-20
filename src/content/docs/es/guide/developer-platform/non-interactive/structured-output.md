@@ -3,7 +3,7 @@ title: Salida estructurada
 description: Hacer que exec produzca resultados parseables por máquina — para pasos posteriores, paneles y puertas de calidad.
 locale: es
 source_locale: zh-CN
-source_revision: aa19d49
+source_revision: e80b5d7
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

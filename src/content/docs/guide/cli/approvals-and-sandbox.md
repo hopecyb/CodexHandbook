@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center 当前 CLI 入门文档仍按 approval modes 区分读写、命令执行与沙盒/网络边界；本页聚焦审批与沙盒的概念、交互和无人值守场景的风险差异，没有把具体按钮文案或模式名写成固定事实。"
+  checkedAt: "2026-07-26"
 title: 审批与沙盒
 description: CLI 中 shell、写盘与联网请求的批准策略，以及沙盒如何限制 Agent 行为。
 sidebar:
@@ -104,9 +109,3 @@ CI 必读：[非交互模式](/guide/cli/non-interactive-mode/) · [人工审批
 
 ## 参考来源
 - OpenAI Codex CLI 安全与沙盒文档
----
-
-**状态：** verified  
-**适用产品：** CLI  
-**核验依据：** OpenAI Help Center 当前 CLI 入门文档仍按 approval modes 区分读写、命令执行与沙盒/网络边界；本页聚焦审批与沙盒的概念、交互和无人值守场景的风险差异，没有把具体按钮文案或模式名写成固定事实。  
-**最近核验：** 2026-07-26

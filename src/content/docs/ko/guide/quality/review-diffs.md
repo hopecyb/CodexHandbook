@@ -3,10 +3,9 @@ title: diff 심사
 description: 변경을 읽고 질문하는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: 7dc8ee8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f7f953f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -33,6 +32,21 @@ diff를 읽을 때 중점:
 4. 키나 디버그 잔여물이 있는가?
 
 제품 측 뷰: [diff, 코멘트와 심사](/ko/guide/desktop-app/diffs-comments-and-review/)
+
+## AI 생성 코드의 품질 점검
+
+**어떤 파일을 바꿨는지**뿐 아니라 변경 내용이 이 프로젝트에 어울리는지도 확인합니다.
+
+| 점검 항목 | 확인할 내용 |
+|---|---|
+| 이름 | 변수·함수·파일 이름이 의도를 드러내는가? `data`, `temp`, `helper`만 반복하지 않는가? |
+| 함수 경계 | 여러 책임을 거대한 함수 하나에 넣지 않았는가? |
+| 오류 처리 | 실패 시 유용한 맥락을 주는가? 예외를 무시하지 않는가? |
+| 테스트 | 구현만 바꾸지 않고 동작을 증명하는 테스트를 추가했는가? |
+| 주석 | 코드를 반복하지 않고 ‘왜’를 설명하는가? |
+| 단순화 | 당장 필요하지 않은 추상화를 완성도를 위해 도입하지 않았는가? |
+
+빠르게 검토하려면 Codex에 이 표대로 자기 diff를 다시 살펴보게 하고, 파일을 더 수정하지 말고 위험만 나열하도록 요청하세요.
 
 ## 흔한 오해
 

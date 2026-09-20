@@ -3,7 +3,7 @@ title: Agent 기초
 description: Agent가 목표를 중심으로 도구를 호출하며 반복 추진하는 방식을 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: cb6933a
+source_revision: 5cfa120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

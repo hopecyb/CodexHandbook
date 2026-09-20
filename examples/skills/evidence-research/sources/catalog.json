@@ -1,0 +1,27 @@
+[
+  {
+    "id": "P",
+    "path": "01-product.md",
+    "sha256": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+    "synthetic": true
+  },
+  {
+    "id": "I",
+    "path": "02-interview.md",
+    "sha256": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+    "synthetic": true
+  },
+  {
+    "id": "C",
+    "path": "03-changelog.md",
+    "sha256": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e",
+    "synthetic": true
+  },
+  {
+    "id": "M",
+    "path": "missing-followup.md",
+    "sha256": null,
+    "synthetic": true,
+    "note": "教学设计：维护者补充说明未提供；不是实际网站故障"
+  }
+]

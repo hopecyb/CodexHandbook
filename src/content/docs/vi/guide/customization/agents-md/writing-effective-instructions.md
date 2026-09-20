@@ -3,7 +3,7 @@ title: Viết chỉ thị dự án tốt
 description: Danh sách viết AGENTS.md — ngắn, cứng, thực thi được, kiểm chứng được.
 locale: vi
 source_locale: zh-CN
-source_revision: 2d236a3
+source_revision: 63dd711
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

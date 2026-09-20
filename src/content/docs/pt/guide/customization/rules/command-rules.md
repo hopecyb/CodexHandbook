@@ -3,7 +3,7 @@ title: Regras de comandos
 description: Constranger chamadas shell e a Ferramentas com allow/deny ao nível do comando — mais executável do que acordos orais.
 locale: pt
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

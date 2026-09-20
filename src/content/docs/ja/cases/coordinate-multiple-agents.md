@@ -1,15 +1,22 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center の現在の Codex プラン資料は、デスクトップ App が並列 Codex agents、組み込み worktree サポート、クラウド委任をサポートすると説明しています。本ページは「並列探索、ディレクトリ境界の分離、並列 push の回避、人間による結論のマージ」という協働パターンのみをまとめており、単一の UI フローに依存しません。"
+  checkedAt: "2026-07-26"
 title: 複数 Agent の調整
 description: 並列探索、分担実行、結果のマージ——協働ケース。
 locale: ja
 source_locale: zh-CN
-source_revision: 5abc786
+source_revision: 7b143fc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 複数 Agent の調整
 
 ## メタ情報
 
@@ -49,10 +56,3 @@ Agent 2：案 B の長所短所と工数
 
 - [複数 Agent 協働](/ja/cases/workflows/multi-agent-coordination/)
 - [サブ Agent](/ja/guide/agent-work/subagents/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Help Center の現在の Codex プラン資料は、デスクトップ App が並列 Codex agents、組み込み worktree サポート、クラウド委任をサポートすると説明しています。本ページは「並列探索、ディレクトリ境界の分離、並列 push の回避、人間による結論のマージ」という協働パターンのみをまとめており、単一の UI フローに依存しません。

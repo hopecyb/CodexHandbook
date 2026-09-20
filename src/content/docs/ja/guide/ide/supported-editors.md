@@ -3,7 +3,7 @@ title: 対応エディタ
 description: VS Code 互換拡張、Xcode 統合、JetBrains 統合を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: 1f0b54d
+source_revision: 7b82896
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

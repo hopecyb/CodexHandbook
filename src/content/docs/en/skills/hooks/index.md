@@ -3,7 +3,7 @@ title: Hooks
 description: Run scripts or MCP tools at Codex lifecycle points for checks, logging, and policy control.
 locale: en
 source_locale: zh-CN
-source_revision: c768708
+source_revision: a0312e9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

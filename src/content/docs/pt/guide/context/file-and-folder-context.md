@@ -3,7 +3,7 @@ title: Contexto de ficheiros e pastas
 description: Indicar ficheiros relevantes e evitar ruído irrelevante.
 locale: pt
 source_locale: zh-CN
-source_revision: 9bd2e62
+source_revision: e9148a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

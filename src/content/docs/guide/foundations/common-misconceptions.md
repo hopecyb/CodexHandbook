@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅澄清常见使用误解；站内链接、对照表与概念边界已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 常见误解
 description: 澄清把 Codex 当作万能黑盒的几类误区。
 sidebar:
@@ -71,10 +76,3 @@ Codex 最值钱的，是帮你节省重复劳动、信息整理和执行成本�
 Codex 很强，但放在明确目标和边界里更好用，不会替你省掉理解和判断。
 
 下一步：[快速上手](/guide/getting-started/)。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅澄清常见使用误解；站内链接、对照表与概念边界已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

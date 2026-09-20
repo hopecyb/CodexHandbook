@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "OpenAI Help Center 当前桌面应用说明仍明确区分项目/项目上下文与具体 chat/work/codex 会话，并说明可在桌面应用中打开本地文件夹或项目开始工作；本页仅解释“项目是工作场地，任务是本次委托”的概念分层。"
+  checkedAt: "2026-07-26"
 title: 项目与任务
 description: 在 App 中管理项目与任务。
 sidebar:
@@ -79,10 +84,3 @@ sidebar:
 2. 确认任务目标只讲一件主要事情
 3. 补限制范围和完成标准
 4. 开始后重点看计划、工具调用和改动结果
-
----
-
-**状态：** verified  
-**适用产品：** App  
-**核验依据：** OpenAI Help Center 当前桌面应用说明仍明确区分项目/项目上下文与具体 chat/work/codex 会话，并说明可在桌面应用中打开本地文件夹或项目开始工作；本页仅解释“项目是工作场地，任务是本次委托”的概念分层。  
-**最近核验：** 2026-07-26

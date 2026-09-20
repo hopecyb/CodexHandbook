@@ -1,48 +1,39 @@
 ---
 title: "Harness Engineering (engenharia do ambiente de execução)"
-date: 2026-02-11
-year: 2026
-summary: "Harness Engineering projeta o sistema ao redor do modelo: ferramentas, memória, erros, avaliação, permissões e logs."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+description: "Esta página trata do ambiente de execução em torno do modelo: conhecimento acessível do projeto, ferramentas, testes, feedback, estado e recuperação de erros. Além da capacidade do modelo, o ambiente influencia a conclusão das tarefas."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Os eventos e as descrições de projetos abaixo foram verificados em fontes primárias. As orientações de aprendizagem são avaliações do autor; verificar fontes não equivale a testar o produto."
+  evidence:
+    - label: "Artigo sobre harness engineering"
+      href: "https://openai.com/index/harness-engineering/"
 locale: pt
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Evento verificável e escopo
 
-# Harness Engineering (engenharia do ambiente de execução)
+**Data: 2026-02-11 · Tipo: artigo de engenharia.** A OpenAI publicou *Harness engineering: leveraging Codex in an agent-first world*, que apresenta a experiência de uma equipe na construção de um ambiente e de ciclos de feedback para agentes. A data se refere ao artigo; não indica que esses métodos de engenharia surgiram pela primeira vez então.
 
-- Datas importantes:
-  - Application-engineering inflection: 2026-02-01
-- Referências oficiais:
-  - https://platform.openai.com/docs/guides/evals
-  - https://platform.openai.com/docs/guides/tools
-- Nota: Esta entrada registra o ponto de adoção e o significado atual deste conceito na engenharia de aplicações de IA.
+Fonte: [artigo sobre harness engineering](https://openai.com/index/harness-engineering/). Verificado em 2026-09-18; a data de publicação da fonte e a data de verificação desta página têm significados diferentes.
 
-## O Que É
+## Que problema resolve
 
-Harness Engineering projeta o sistema ao redor do modelo: ferramentas, memória, erros, avaliação, permissões e logs.
+Esta página trata do ambiente de execução em torno do modelo: conhecimento acessível do projeto, ferramentas, testes, feedback, estado e recuperação de erros. Além da capacidade do modelo, o ambiente influencia a conclusão das tarefas.
 
-## De Que Etapa para Que Etapa Isso Levou a Engenharia de Aplicações de IA
+## Orientações de aprendizagem e limites
 
-Moveu a engenharia de prompts isolados para um ambiente completo de execução.
+O texto a seguir é uma avaliação didática deste site, não uma medida de adoção no setor nem de eficácia:
 
-## Em Que Estágio Está Agora
+Primeiro estabeleça verificações capazes de detectar erros; só depois amplie o alcance da execução automática. Testes aprovados sustentam apenas os comportamentos que cobrem; não garantem que todos os requisitos estejam corretos nem que todas as falhas tenham sido descartadas. A experiência da equipe e as estimativas de eficiência no artigo não devem ser extrapoladas diretamente para este site.
 
-Atualmente marco este item como `emerging`.
+## Exercício prático
 
-É emergente, mas necessário para agentes confiáveis em produção.
+[Método de avaliação de fluxos de trabalho e conjunto de amostras](/pt/guide/quality/workflow-evaluation/): escolha uma amostra e registre separadamente o acionamento, os limites, o formato, a qualidade e o tempo gasto, anexando evidências da saída. Deixe as dimensões não executadas marcadas como não executadas.
 
-## O Que Pode Substituir
-
-Substitui tentar corrigir cada falha apenas com mais prompt.
-
-## O Que Pode Substituí-lo
-
-Vai se fundir a runtimes de agentes, motores de workflow e sistemas de avaliação.
+[Voltar ao roteiro e aos critérios de datas](/pt/ai-roadmap/)

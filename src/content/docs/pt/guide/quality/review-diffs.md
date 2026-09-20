@@ -3,10 +3,9 @@ title: Revisar diffs
 description: Como ler alterações e fazer perguntas.
 locale: pt
 source_locale: zh-CN
-source_revision: 7dc8ee8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f7f953f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
@@ -33,6 +32,21 @@ Ao ler o diff, foque-se em:
 4. Há segredos ou resíduos de debug?
 
 Vista no produto: [Diffs, comentários e revisão](/pt/guide/desktop-app/diffs-comments-and-review/)
+
+## Verificar a qualidade do código gerado por IA
+
+Além de **quais arquivos** foram alterados, avalie se as mudanças combinam com o projeto:
+
+| Ponto de verificação | O que observar |
+|---|---|
+| Nomes | Variáveis, funções e arquivos exprimem intenção, em vez de espalhar `data`, `temp` e `helper`? |
+| Limites das funções | Várias responsabilidades foram reunidas em uma função grande? |
+| Tratamento de erros | Falhas trazem contexto útil ou exceções são ignoradas? |
+| Testes | Há testes que comprovam o comportamento, em vez de apenas mudar a implementação? |
+| Comentários | Explicam o «porquê» em vez de repetir o código? |
+| Simplificação | Foram criadas abstrações desnecessárias no momento? |
+
+Para uma revisão rápida, peça ao Codex para reavaliar o diff com base nesta tabela e listar apenas riscos, sem continuar a editar arquivos.
 
 ## Mal-entendidos habituais
 

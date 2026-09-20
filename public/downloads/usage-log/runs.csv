@@ -1,0 +1,1 @@
+run_id,task_id,input_hash,client_version,model_label,reasoning_setting,billing_route,started_at,ended_at,elapsed_seconds,human_review_minutes,human_rework_minutes,task_result,retry_of,usage_evidence,price_source,price_checked_at,currency,actual_api_charge,estimated_api_charge,estimate_assumptions,notes

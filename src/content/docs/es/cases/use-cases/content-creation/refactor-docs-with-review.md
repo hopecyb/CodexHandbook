@@ -3,7 +3,7 @@ title: Refactorizar un sitio de docs con revisión
 description: "Caso: actualizar en lote enlaces y capítulos en un proyecto Astro/Starlight — diffs pequeños y verificación por build."
 locale: es
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: IDE 統合をインストールする
 description: VS Code 互換エディタ、Xcode、JetBrains IDE で Codex を有効にします。
 locale: ja
 source_locale: zh-CN
-source_revision: 1196b38
+source_revision: e8f88ec
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

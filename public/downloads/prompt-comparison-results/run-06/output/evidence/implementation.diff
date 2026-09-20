@@ -1,0 +1,11 @@
+--- input/cart.js	2026-09-18 09:27:00
++++ output/cart.js	2026-09-18 10:18:23
+@@ -1,6 +1,6 @@
+ export function calculateTotal(lines, discountPercent = 0) {
+ 	const subtotal = lines.reduce((sum, line) => sum + line.price * line.quantity, 0);
+-	const discount = subtotal * discountPercent;
++	const discount = subtotal * (discountPercent / 100);
+ 
+ 	return subtotal - discount;
+ }
+

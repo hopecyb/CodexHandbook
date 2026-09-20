@@ -3,7 +3,7 @@ title: Plugins
 description: Explora, instala y gobierna paquetes reutilizables de Skills, conectores, MCP, Hooks y plantillas de tareas.
 locale: es
 source_locale: zh-cn
-source_revision: 33c9fe2
+source_revision: 8917a59
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

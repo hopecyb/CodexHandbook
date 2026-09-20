@@ -3,7 +3,7 @@ title: O que você precisa antes de começar
 description: Conta, dispositivo, projeto de prática e limites mínimos de segurança.
 locale: pt
 source_locale: zh-CN
-source_revision: c8a032b
+source_revision: 5fbedb8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

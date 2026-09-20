@@ -1,4 +1,13 @@
 ---
+caseCategory: development
+directoryOrder: 50
+contentType: case
+outputs: [code, tests, markdown]
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "起始示例已验证为 3 个测试中 1 个预期失败，参考答案已验证为 3 个全部通过；页面按红灯、根因、最小修复、绿灯、回归与人工审查组织证据链。"
+  checkedAt: "2026-08-25"
 title: 案例：带验证的 Bug 修复
 description: 用可运行的折扣计算 Bug 完成红灯复现、根因定位、最小修复、绿灯回归和 diff 审查。
 ---
@@ -36,6 +45,8 @@ description: 用可运行的折扣计算 Bug 完成红灯复现、根因定位�
 图中最关键的是两条返回路径：相关测试失败时回到最小修复；全量回归或 diff 审查失败时回到根因分析。不要为了尽快变绿而删除断言或扩大改动。
 
 ## 2. 准备材料
+
+如果需要完整学习顺序，使用[开发者路径](/guide/learning-paths/developer/)：它将本练习与代码阅读、审查、交接模板连接起来，并要求在独立 `work/` 副本练习。新增[2026-09-18 运行摘要](/downloads/developer-path/run-record.json)记录了参考起点与答案的重新验证；下方 2026-08-25 是原案例核验日期。
 
 示例目录：
 
@@ -186,10 +197,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 - [运行测试](/guide/quality/run-tests/)
 - [审查差异](/guide/quality/review-diffs/)
 - [定义完成标准](/prompts/define-done/)
-
----
-
-**状态：** verified  
-**适用产品：** CLI / IDE  
-**核验依据：** 起始示例已验证为 3 个测试中 1 个预期失败，参考答案已验证为 3 个全部通过；页面按红灯、根因、最小修复、绿灯、回归与人工审查组织证据链。
-**最近核验：** 2026-08-25

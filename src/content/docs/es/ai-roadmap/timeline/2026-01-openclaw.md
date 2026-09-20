@@ -1,48 +1,40 @@
 ---
-title: "OpenClaw (pasarela de asistente personal de IA)"
-date: 2026-01-29
-year: 2026
-summary: "OpenClaw apunta a unificar entradas como mensajería, correo y línea de comandos en una pasarela de asistente personal."
-phase: emerging
-trend: rising
-signal: over-hyped
-adoption_effort: integration-heavy
-tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
-authored_by: ai-assisted
+title: "OpenClaw (proyecto de asistente personal de IA)"
+description: "Este tema trata los límites que hay que gestionar cuando un asistente personal se conecta a canales, conversaciones y capacidades externas. Los canales compatibles, la instalación y los permisos cambian según la versión del proyecto; consulta las notas de la versión correspondiente."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Los datos del evento y del proyecto que aparecen abajo se contrastaron con la fuente primaria; las recomendaciones didácticas son criterio del autor y no se presentan como una prueba real del producto."
+  evidence:
+    - label: "Repositorio oficial de OpenClaw"
+      href: "https://github.com/openclaw/openclaw"
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2435d64
+source_revision: "8868140"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# OpenClaw (pasarela de asistente personal de IA)
+## Evento verificable y alcance
 
-- Fechas clave:
-  - Project release / public visibility: 2026-01-29
-- Referencias oficiales:
-  - https://github.com/jimleuk/openclaw
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+**Tipo: tema sobre un proyecto · sin ordenar por fecha de primera publicación.** Esta página usa el repositorio oficial de OpenClaw como fuente para identificar y describir el proyecto. En esta revisión no se encontró evidencia suficiente para confirmar su primera fecha de publicación, por lo que no se muestra ninguna.
 
-## Qué Es
+Fuente: [repositorio oficial de OpenClaw](https://github.com/openclaw/openclaw). Verificado el 18 de septiembre de 2026; la fecha de publicación de la fuente y la de verificación de esta página tienen significados distintos.
 
-OpenClaw apunta a unificar entradas como mensajería, correo y línea de comandos en una pasarela de asistente personal.
+## Qué problema aborda
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+Este tema trata los límites que hay que gestionar cuando un asistente personal se conecta a canales, conversaciones y capacidades externas. Los canales compatibles, la instalación y los permisos cambian según la versión del proyecto; consulta las notas de la versión correspondiente.
 
-Movió el diseño desde bots separados por canal hacia un asistente único con herramientas compartidas.
+## Recomendaciones de aprendizaje y límites de uso
 
-## En Qué Etapa Está Ahora
+Lo siguiente es un criterio didáctico de este sitio, no una medición de adopción sectorial ni de eficacia:
 
-Actualmente lo marco como `emerging`.
+Al evaluar este tipo de proyectos, traza primero el origen de los mensajes, el destino de los datos, la ubicación de las credenciales y las acciones externas permitidas. Conectar varios canales amplía el ámbito que hay que gestionar; poder conectarse no autoriza envíos ni modificaciones automáticas.
 
-Es emergente y con mucho interés, pero su valor operativo aún debe probarse.
+## Ejercicio práctico
 
-## Qué Podría Reemplazar
+[Cómo elegir un método de extensión](/es/skills/choosing-an-extension-method/): enumera las capacidades necesarias para una integración prevista, comprueba si ya existe una extensión de alcance más reducido y escribe un plan para detener y revertir el cambio. Esta página no presenta una prueba de instalación de OpenClaw ni garantiza compatibilidad.
 
-Puede reemplazar bots dispersos, scripts sueltos y automatizaciones por canal.
-
-## Qué Podría Reemplazarlo
-
-Podría ser absorbido por asistentes del sistema operativo o plataformas de agentes personales.
+[Volver a la hoja de ruta y los criterios de fecha](/es/ai-roadmap/)

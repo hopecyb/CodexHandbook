@@ -3,7 +3,7 @@ title: Content creation
 description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
 locale: en
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

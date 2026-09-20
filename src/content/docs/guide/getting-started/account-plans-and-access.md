@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照当前官方 Pricing 与 Authentication 页面；本页记录访问模型和排查顺序，不固化价格、额度或高波动功能清单。"
+  checkedAt: "2026-08-26"
 title: 账号、套餐与访问
 description: 区分 ChatGPT 计划、API key 用量和组织工作区权限。
 sidebar:
@@ -46,13 +51,3 @@ Codex 当前可通过 **ChatGPT 计划**或 **API key 按量计费**使用，但
 如果 CLI 能用 API key 登录，但 Cloud 按钮不可用，这不一定是安装故障。Cloud 要求 ChatGPT 登录，并受 ChatGPT 计划和工作区权限控制；API key 主要覆盖本地与程序化流程。
 
 下一步见 [登录与身份验证](/guide/getting-started/sign-in-and-authentication/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照当前官方 Pricing 与 Authentication 页面；本页记录访问模型和排查顺序，不固化价格、额度或高波动功能清单。
-
-**最近核验：** 2026-08-26

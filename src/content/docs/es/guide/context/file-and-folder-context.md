@@ -3,7 +3,7 @@ title: Contexto de archivos y carpetas
 description: Señalar archivos relevantes y evitar ruido irrelevante.
 locale: es
 source_locale: zh-CN
-source_revision: 9bd2e62
+source_revision: e9148a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Herramienta de navegador
 description: Dejar que Codex abra páginas web, compruebe el estado de la UI y verifique comportamiento frontend — capacidades y límites.
 locale: es
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de revue ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de revue
 description: Revoir un diff et les risques de changement de façon structurée.
 locale: fr
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de revue
 
 Dérive fréquente : la revue devient « je corrige en passant ».
 
@@ -53,10 +57,3 @@ Le modèle **fait sortir les risques par axes fixes**, pas un « c'est bien ou p
 
 - [Revue avant fusion](/fr/cases/workflows/review-before-merge/)
 - [Cas : revoir une PR](/fr/cases/review-a-pr/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de revue ; liens et structure revus ; pas de faits volatils produit.

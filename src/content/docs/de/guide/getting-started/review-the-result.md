@@ -3,7 +3,7 @@ title: Ergebnis prüfen
 description: "Änderungen lesen, Artefakte validieren und annehmen oder anpassen."
 locale: de
 source_locale: zh-CN
-source_revision: cb5b5d9
+source_revision: a215910
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

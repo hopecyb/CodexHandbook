@@ -3,7 +3,7 @@ title: 拡張機能マップ
 description: タスク、ルール、手順、ツール、ガード、配布、起動、並行処理という八つの責務から Codex の拡張システムを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: fa5604a
+source_revision: 183812c
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Plugins
 description: Browse, install, and govern reusable bundles of Skills, connectors, MCP, Hooks, and task templates.
 locale: en
 source_locale: zh-CN
-source_revision: 33c9fe2
+source_revision: 8917a59
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

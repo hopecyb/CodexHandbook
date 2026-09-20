@@ -3,7 +3,7 @@ title: Presentations
 description: Generate and revise slides and decks—structure, masters, and speaker notes.
 locale: en
 source_locale: zh-CN
-source_revision: 791b567
+source_revision: fb319fa
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

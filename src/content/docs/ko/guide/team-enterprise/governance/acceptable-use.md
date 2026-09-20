@@ -3,7 +3,7 @@ title: 허용 가능한 사용 정책
 description: 팀 차원에서 Codex가 무엇을 할 수 있고 무엇을 하면 안 되는지 약속하며, 기술·교육과 맞춥니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

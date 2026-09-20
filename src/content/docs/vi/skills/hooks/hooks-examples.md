@@ -1,30 +1,29 @@
 ---
 title: Ví dụ cấu hình Hook
-description: Khung cấu hình và script Hook có thể chỉnh — quét khóa, nhật ký kiểm toán, kiểm tra định dạng.
+description: Dùng hooks.json thực tế và script Python chỉ dùng thư viện chuẩn để tạo rào chắn PreToolUse có thể kiểm thử.
 locale: vi
 source_locale: zh-CN
-source_revision: 5a86fd4
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 06e9fa2
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
+Chương này đã loại bỏ tên sự kiện và trường cấu hình minh họa của phiên bản cũ. Các ví dụ tuân theo cấu trúc `hooks.json` chính thức hiện tại và có bài kiểm thử chạy được.
 
-Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
+Các tệp đầy đủ nằm tại [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-## Goal and boundary
+## Mục tiêu và ranh giới
 
-Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
+Mục tiêu: khi đầu vào lệnh của `Bash` hoặc `apply_patch` chứa một chuỗi thử nghiệm trông giống AWS Access Key ID, từ chối trước khi công cụ chạy.
 
-This demonstrates Hook input, output, and test structure only:
+Đây chỉ là ví dụ về đầu vào, đầu ra và cấu trúc kiểm thử của Hook:
 
-- It does not replace a professional secret scanner.
-- The regular expression has false positives and false negatives.
-- It does not scan hosted tools.
-- It must not log complete tool input.
+- Không thay thế công cụ quét secret chuyên dụng.
+- Biểu thức chính quy có thể báo nhầm hoặc bỏ sót.
+- Không quét Hosted tools.
+- Không nên ghi log toàn bộ đầu vào công cụ.
 
-## 1. Configure hooks.json
+## 1. Cấu hình hooks.json
 
 ```json
 {
@@ -47,11 +46,11 @@ This demonstrates Hook input, output, and test structure only:
 }
 ```
 
-In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
+Khi dùng thật trong kho lưu trữ, bạn thường đặt cấu hình ở `.codex/hooks.json` và script trong `.codex/hooks/`. Ví dụ này giữ đường dẫn `examples` để có thể kiểm tra trực tiếp bộ tệp đầy đủ trong kho của tài liệu hướng dẫn.
 
-## 2. Denial output
+## 2. Đầu ra khi từ chối
 
-The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
+Script đọc JSON sự kiện từ stdin và chỉ kiểm tra `tool_input.command`. Khi phát hiện chuỗi phù hợp, nó xuất:
 
 ```json
 {
@@ -63,50 +62,42 @@ The script reads event JSON from stdin and checks only `tool_input.command`. On 
 }
 ```
 
-On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+Nếu không phát hiện, script thoát với mã `0` và không xuất nội dung. Văn bản stdout thông thường không tạo thành quyết định `PreToolUse` hợp lệ.
 
-## 3. Run tests
+## 3. Chạy kiểm thử
 
 ```bash
 python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
+Kết quả mong đợi: ba bài kiểm thử đạt, bao phủ lệnh bình thường, chuỗi nghi là khóa và `tool_input` không phải dictionary.
 
-You can also pipe a fixture manually:
+Bạn cũng có thể đưa fixture vào thủ công:
 
 ```bash
 printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
   | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-Normal input produces no stdout.
+Đầu vào bình thường sẽ không tạo stdout.
 
-## 4. Enable it in a project
+## 4. Bật trong dự án
 
-1. Put configuration and script in the target repository using a stable repository-relative path.
-2. Run unit tests and one real normal command in an isolated repository.
-3. Start Codex and open `/hooks` to inspect the source and exact definition.
-4. After trusting it, verify both a normal pass and test-string denial.
-5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
+1. Đưa cấu hình và script vào kho mục tiêu, rồi đổi sang đường dẫn ổn định trong kho đó.
+2. Chạy kiểm thử đơn vị và một lệnh bình thường thực tế trong kho cô lập.
+3. Khởi chạy Codex, mở `/hooks` để rà soát nguồn và định nghĩa chính xác.
+4. Sau khi tin cậy, kiểm tra riêng trường hợp “bình thường được phép” và “chuỗi thử nghiệm bị từ chối”.
+5. Sau khi sửa script, rà soát lại; thay đổi hash sẽ đưa Hook không được quản lý trở về trạng thái chờ tin cậy.
 
-## From warning to blocking
+## Từ nhắc nhở đến chặn thao tác
 
-Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
+Nhóm sản xuất thường bắt đầu bằng kiểm toán hoặc bổ sung ngữ cảnh mà không chặn, rồi mới nâng lên deny. Trước khi nâng cấp, ít nhất hãy trả lời:
 
-- Do fixtures cover known false positives?
-- Is a timeout or crash understandable to the user?
-- Does CI or service policy also enforce the rule?
-- Are bypass and emergency recovery auditable?
+- Fixture có bao phủ các trường hợp báo nhầm đã biết không?
+- Người dùng có hiểu được khi script hết thời gian chờ hoặc gặp lỗi không?
+- Quy tắc này có được CI hoặc chính sách phía máy chủ hỗ trợ không?
+- Việc bỏ qua quy tắc và khôi phục khẩn cấp có thể kiểm toán được không?
 
-## Official source
+## Nguồn chính thức
 
-- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
-
-**Kiểm chứng gần nhất:** 2026-08-25
+- [OpenAI: Cấu hình Hooks và đầu ra PreToolUse](https://learn.chatgpt.com/docs/hooks)

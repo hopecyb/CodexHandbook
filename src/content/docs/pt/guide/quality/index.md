@@ -1,16 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página apresenta somente a estrutura e a ordem de leitura da seção de qualidade e verificação. Os links internos e os conceitos foram revisados; o texto não depende de detalhes variáveis do produto, como versões, preços ou interface."
+  checkedAt: "2026-07-26"
 title: Qualidade e Verificação
 description: Revisão, testes e definição de concluído.
 sidebar:
   order: 21
 locale: pt
 source_locale: zh-CN
-source_revision: 967fdd6
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 401b6a6
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
 Muita gente, ao usar o Codex, concentra-se em «consegue fazer?» e ignora outra pergunta: depois de feito, como confirmar que desta vez se pode mesmo aceitar?
 
 É isso que este grupo trata. Qualidade e Verificação existem para evitar «parece concluído, mas ainda não está estável».
@@ -20,6 +23,8 @@ Muita gente, ao usar o Codex, concentra-se em «consegue fazer?» e ignora outra
 - [Verificar Artefatos](/pt/guide/quality/verify-artifacts/)
 - [Validar fontes](/pt/guide/quality/validate-sources/)
 - [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/)
+- [Uso, tempo e escolha do modelo](/pt/guide/quality/usage-time-and-model-choice/)
+- [Avaliação de fluxos de trabalho e 20 amostras](/pt/guide/quality/workflow-evaluation/)
 - [Definição de concluído](/pt/guide/quality/definition-of-done/)
 
 ## Ordem de leitura
@@ -32,10 +37,3 @@ Na primeira leitura, pode seguir esta ordem:
 4. Veja [Definição de concluído](/pt/guide/quality/definition-of-done/) — clarifique «quando é que está mesmo concluído»
 
 Sem verificação, «concluído» muitas vezes é só parecer concluído por agora.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só descreve a estrutura e a ordem de leitura do capítulo de qualidade e Verificação; ligações internas e formulação conceptual foram revistas, e o corpo não depende de factos voláteis de produto (versão, preço, UI).  
-**Última verificação:** 2026-07-26

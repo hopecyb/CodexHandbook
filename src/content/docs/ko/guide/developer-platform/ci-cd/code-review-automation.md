@@ -3,7 +3,7 @@ title: 코드 리뷰 자동화
 description: CI 또는 PR 흐름에 Codex 리뷰를 연결합니다——프롬프트, 권한, 사람 게이트입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

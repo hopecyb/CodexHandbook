@@ -3,7 +3,7 @@ title: Trabajo orientado a artefactos
 description: Acuerda primero la forma y la ruta del entregable final, luego deduce los pasos — ideal para docs, configs e informes.
 locale: es
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

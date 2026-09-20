@@ -1,67 +1,56 @@
 ---
-title: Cài Desktop App
-description: Cài và mở ứng dụng desktop Codex.
+title: Cài ứng dụng máy tính
+description: Cài ứng dụng ChatGPT trên máy tính và mở không gian làm việc Codex trong đó.
 locale: vi
 source_locale: zh-CN
-source_revision: 89d6303
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 974842f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
-In this handbook, “desktop App” means the **Codex workspace in the current ChatGPT desktop App**. Official versions are available for macOS, Windows, and Linux.
+Trong tài liệu này, “ứng dụng máy tính” chỉ **không gian làm việc Codex trong ứng dụng ChatGPT trên máy tính**. Có phiên bản chính thức cho macOS, Windows và Linux.
 
-## Installation
+## Các bước cài đặt
 
-1. Open the [official ChatGPT desktop App documentation](https://learn.chatgpt.com/docs/app).
-2. Download the installer for your operating system from the official entry point.
-3. Install and open ChatGPT, then sign in with your ChatGPT account or another available method.
-4. Start a chat, create a project, or open a practice folder.
-5. Open Codex, create a task, and describe the result you need.
+1. Mở [tài liệu chính thức về ứng dụng ChatGPT trên máy tính](https://learn.chatgpt.com/docs/app).
+2. Tải bộ cài đúng hệ điều hành từ nơi chính thức.
+3. Cài và mở ChatGPT, đăng nhập bằng tài khoản ChatGPT hoặc cách khác được hỗ trợ.
+4. Tạo cuộc trò chuyện, tạo dự án hoặc mở một thư mục thực hành.
+5. Vào Codex, tạo tác vụ và mô tả kết quả bạn cần.
 
-Do not download installers from third-party sites in search results. On managed devices, follow your organization's software distribution and update policy.
+Đừng tải bộ cài từ trang bên thứ ba trong kết quả tìm kiếm. Nếu thiết bị công ty do quản trị viên triển khai, hãy tuân theo chính sách phân phối và cập nhật phần mềm của tổ chức.
 
-## Minimal post-installation check
+## Kiểm tra tối thiểu sau khi cài
 
-Prepare a practice directory with no secrets and confirm that:
+Chuẩn bị một thư mục thực hành không chứa khóa bí mật rồi xác nhận:
 
-- the App opens and shows the current account or workspace;
-- you can open the directory or add files to a project;
-- you can create a Codex task and receive a response;
-- file access covers only what the task needs;
-- you can locate task results, file changes, and approval controls.
+- Ứng dụng mở bình thường và hiển thị tài khoản hoặc không gian làm việc hiện tại.
+- Bạn mở được thư mục đó hoặc thêm tệp vào dự án.
+- Bạn tạo được tác vụ Codex và nhận câu trả lời.
+- Quyền truy cập tệp chỉ bao phủ phạm vi cần thiết cho tác vụ này.
+- Bạn tìm được kết quả tác vụ, thay đổi tệp và nơi phê duyệt.
 
-Use this read-only smoke test:
+Có thể dùng tác vụ chỉ đọc sau để thử nhanh:
 
 ```text
-Read this directory without modifying files. Tell me which files it contains,
-what kind of project it may be, and which filenames support your conclusion.
+Chỉ đọc thư mục này, không sửa tệp. Hãy cho tôi biết thư mục có những tệp nào,
+đây có thể là dự án gì và bạn dựa vào tên tệp nào để nhận định.
 ```
 
-## Common issues
+## Vấn đề thường gặp
 
-### The App opens but Codex is missing
+### Ứng dụng mở được nhưng không thấy Codex
 
-Check the current account, workspace, and plan access, then whether the organization disabled the capability. Reinstallation does not bypass account or administrator policy.
+Trước tiên kiểm tra tài khoản, không gian làm việc và quyền truy cập theo gói dịch vụ. Sau đó xem tổ chức có tắt tính năng liên quan hay không. Đừng cài lại nhiều lần để tìm cách vượt qua chính sách tài khoản hoặc quản trị viên.
 
-### The operating system requests file, accessibility, or app-control access
+### Hệ thống yêu cầu quyền với tệp, trợ năng hoặc điều khiển ứng dụng
 
-Decide whether the current task actually requires it. Opening a practice directory does not justify unrelated disk or system access. See [Permissions and sandboxing](/vi/guide/permissions-and-sandbox/).
+Xem tác vụ hiện tại có thật sự cần quyền đó không. Nếu chỉ mở thư mục thực hành, không cần tiện tay cấp quyền với ổ đĩa hoặc tính năng hệ thống không liên quan. Xem [Quyền và sandbox](/vi/guide/permissions-and-sandbox/) để quyết định.
 
-### The interface differs from a screenshot
+### Giao diện sau khi cài khác ảnh chụp
 
-The App evolves quickly. Define success as being able to sign in, select a work location, start a task, and review its result—not finding a button at a fixed coordinate.
+Ứng dụng máy tính thay đổi khá nhanh. Hãy coi việc cài đặt thành công khi bạn đăng nhập được, chọn được nơi làm việc, bắt đầu tác vụ và rà soát kết quả. Đừng phụ thuộc vào vị trí cố định của một nút.
 
-See [Installation and first use](/vi/guide/desktop-app/installation-and-interface/) for the interface and [Desktop App troubleshooting](/vi/guide/desktop-app/troubleshooting/) for failures.
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App
-
-**Căn cứ kiểm chứng:** The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Xem chi tiết ở [Cài đặt và giao diện](/vi/guide/desktop-app/installation-and-interface/); nếu gặp lỗi, xem [Xử lý sự cố ứng dụng máy tính](/vi/guide/desktop-app/troubleshooting/).

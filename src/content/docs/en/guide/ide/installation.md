@@ -3,7 +3,7 @@ title: Install and enable the IDE integration
 description: Open Codex correctly in VS Code-family editors, Xcode, and JetBrains IDEs.
 locale: en
 source_locale: zh-CN
-source_revision: fb7ff84
+source_revision: 85e1691
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

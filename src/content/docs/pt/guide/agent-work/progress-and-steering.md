@@ -3,7 +3,7 @@ title: Progresso e reorientação
 description: Quando a direção desvia a meio da execução, como puxar o Codex de volta com instruções curtas.
 locale: pt
 source_locale: zh-CN
-source_revision: 6813a5b
+source_revision: c9ea3be
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

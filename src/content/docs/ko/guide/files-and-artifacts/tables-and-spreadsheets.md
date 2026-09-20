@@ -3,7 +3,7 @@ title: 표와 스프레드시트
 description: CSV, Excel과 표형 데이터의 읽기·정제·분석·보내기 — 구조와 인코딩을 깨지 않게.
 locale: ko
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

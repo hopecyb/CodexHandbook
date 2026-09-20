@@ -3,7 +3,7 @@ title: Text and Code Files
 description: Have Codex read and write source, config, and documentation text files correctly.
 locale: en
 source_locale: zh-CN
-source_revision: a6005dd
+source_revision: 1537793
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

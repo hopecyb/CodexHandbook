@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前已核验的 EPXV、规划、规格驱动与提示词章节交叉复核；本页只描述“先发散、再收敛、再进入计划”的稳定协作方法，不依赖具体产品入口细节。"
+  checkedAt: "2026-07-26"
 title: 先头脑风暴再动手
 description: 在写代码或长文之前，用结构化探索收敛方案——降低返工。
 ---
@@ -76,10 +81,3 @@ description: 在写代码或长文之前，用结构化探索收敛方案——�
 - [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
 - [规格驱动工作](/cases/workflows/specification-driven-work/)
 - [询问计划](/prompts/ask-for-a-plan/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前已核验的 EPXV、规划、规格驱动与提示词章节交叉复核；本页只描述“先发散、再收敛、再进入计划”的稳定协作方法，不依赖具体产品入口细节。  
-**最近核验：** 2026-07-26

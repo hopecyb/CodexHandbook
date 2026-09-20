@@ -1,131 +1,67 @@
 ---
-title: Webhooks Overview
-description: Connect Codex task state to internal systems via HTTP callbacks—events, signatures, and idempotency.
-locale: en
-source_locale: zh-CN
-source_revision: 78f037e
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+title: Webhooks and Task Event Boundaries
+description: Distinguish local Codex results, App Server events, and HTTP callbacks that you design yourself.
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: The execution and event models of the SDK and App Server were checked. The HTTP callback section is guidance for a custom architecture; it does not claim a unified Codex Cloud webhook contract exists.
+  evidence:
+    - label: Official SDK documentation
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: App Server protocol and events
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 8a84ab8
 ---
 
-**Webhooks** let Codex or Cloud send HTTP callbacks when task state changes—driving ticket updates, Slack notifications, or internal approval UIs. This chapter is the event-integration entry for the [developer platform](/en/guide/developer-platform/).
+You can notify an internal system after a task ends through a program return value, process exit status, event stream, or HTTP callback. Identify the sender and protocol first, then decide whether you need a webhook.
 
-## What this page covers
+## Do not conflate these three mechanisms
 
-- Webhooks vs polling with the SDK
-- Common events and payload fields (conceptual)
-- Signature verification, replay, and idempotency
+| Mechanism | How results are received | Boundary |
+|---|---|---|
+| Local SDK or CLI execution | Program result or process status | Not a hosted HTTP callback API |
+| App Server events | JSON-RPC notifications over an established connection | Connect, initialize, and handle messages according to the protocol |
+| Callback from your own runner | An HTTP request sent by your service | You define event names, signatures, retries, and storage |
 
-## What it does
+App Server's `turn/completed` is a protocol notification. The final status may be completed, interrupted, or failed. Check the status and business result before triggering a deployment based on the event name alone. See the [official event documentation](https://learn.chatgpt.com/docs/app-server).
 
-If webhooks are new: when task state changes, Codex notifies your system instead of you polling “is it done yet?”
+This page has not verified a unified Codex Cloud webhook registration endpoint, signature header, or `task.completed` event contract. It therefore provides no URL, header, or event table presented as an official interface. If a specific product you use offers webhooks, integrate against that product's versioned documentation.
 
-Best when something else must happen after a task ends.
+## When a custom callback is useful
 
-:::note
-Webhook paths, event names, and signature algorithms follow [official API docs](https://developers.openai.com/codex).
-:::
+A single CI task can usually continue from its exit status and saved output. It needs no public receiver merely because it is “asynchronous.”
 
-## Common misconceptions
+If your system schedules work across processes and updates a ticket when a task ends, you can design an internal flow like this:
 
-### Webhooks are not the default for all automation
-
-For a single `codex exec`, exit codes are usually enough—no webhook needed.
-
-Webhooks fit better:
-
-- Long tasks
-- Multi-step orchestration
-- Notifying or driving other systems when done
-
-### Receiving a callback does not mean trust it
-
-Without signature verification, idempotency, and timeout handling, you risk forged requests, duplicate delivery, or instability.
-
-## When to use webhooks
-
-| Fits | Does not fit |
-|---|---|
-| Task-complete notifications to internal systems | Strong real-time token streaming |
-| Integration with existing event buses | Simple cron that only needs `exec` exit codes |
-| Multi-step flows (complete → trigger deploy) | No public endpoint and no queue |
-
-Simple pipelines: [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/) only. Productized multi-tenant services often combine **SDK + Webhook**.
-
-## Typical events (conceptual)
-
-| Event | Use |
-|---|---|
-| `task.completed` | Fetch results, update PR status |
-| `task.failed` | Alert, retry queue |
-| `task.needs_approval` | Push to human approval UI |
-| `review.posted` | Sync code review conclusions |
-
-Payload should include: `task_id`, status, timestamp, repo/project id; **avoid** full prompts in webhook body if they contain PII.
-
-## Minimum receiver requirements
-
-1. **HTTPS** endpoint; verify official signature header (e.g. `X-Signature` + HMAC)
-2. **Idempotency**: process each `event_id` once
-3. **Fast 2xx**: heavy logic in async queue
-4. **Log redaction**: no keys or full user input
-
-Sketch (pseudocode):
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+Your queue → controlled runner executes SDK/CLI → saves result and status
+                                               → your notification service → internal ticket
 ```
 
-## Relationship to CI
+This is a handbook architecture suggestion, not a deployment feature built into the SDK. For its runtime and integration boundary, see the [SDK overview](/en/guide/developer-platform/sdk-overview/).
 
-- In-CI `codex exec` usually **does not** need webhooks—exit codes suffice
-- Cloud long tasks and mobile approval scenarios fit webhooks to internal systems
+## What a custom protocol must define
 
-## Common mistakes
+- **Identity and integrity:** Specify how the receiver authenticates the sender using a reviewed scheme; do not invent an “official signature header.”
+- **Stable IDs and deduplication:** Record the task ID, event ID, and attempt number so a repeated delivery does not repeat an external effect.
+- **Status and version:** Distinguish execution completion, failure, interruption, and business acceptance; record the payload version.
+- **Durable receipt:** Acknowledge only after the event is reliably stored or queued. Retry failures instead of returning success and then losing the event.
+- **Data scope:** Send only the result summary and safe references needed downstream; keep credentials out of logs.
+- **Stop conditions:** Set a retry limit, a human takeover path, and a way to cancel subsequent actions.
 
-- No signature verification; forged callbacks
-- Handler exceeds platform timeout → duplicate delivery
-- Synchronous second Codex run inside webhook handler
-- Webhook URL exposed in client frontend
+These are design requirements to implement and verify, not a runnable example. This page does not connect a ticket system, send messages, or create a deployment workflow automatically.
 
-## How to decide
+## Minimum acceptance scenarios
 
-Ask:
+In a test environment, check successful results, execution failure, cancellation, duplicate events, invalid identity, and a temporarily unavailable receiver. Verify that repeated delivery causes only one business effect, cancellation is not treated as success, and an unaccepted generated result is not published automatically.
 
-1. Do I need proactive notification on task state changes?
-2. After a task ends, is there a system-level next step to automate?
-3. Do I have a backend that can safely receive HTTP callbacks?
-
-More “yes” answers → webhooks matter more.
-
-## Security boundaries
-
-- See [Threat model](/en/guide/team-enterprise/security/threat-model/) and [Acceptable use](/en/guide/team-enterprise/governance/acceptable-use/)
-- Rotate webhook secrets on an ops calendar
-
-## Acceptance checklist
-
-- [ ] Signature failure returns 4xx
-- [ ] Idempotency table or dedupe key implemented
-- [ ] Async worker and DLQ configured
-- [ ] Aligned with [structured output](/en/guide/developer-platform/non-interactive/structured-output/) field conventions
-
-Webhooks connect task state changes to other systems—after signature verification, idempotency, and async handling are in place.
-
-## Reference sources
-- OpenAI Codex / Cloud API event documentation
----
-
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ public developer-platform and event-driven integration guidance, plus verified Webhooks section, CI/CD, structured output, and team security pages in this handbook; confirms stable principles: webhooks for status notification, receivers must verify signatures, enforce idempotency, and process asynchronously.  
-**Last verified:** 2026-07-26
+For concrete exercises, start with the [issue triage case](/en/cases/use-cases/team-automation/issue-triage-suggestions/) and [scheduled link check](/en/cases/use-cases/team-automation/scheduled-link-check/). Check each page for the status of its materials.

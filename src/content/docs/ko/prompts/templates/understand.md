@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 이해류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 이해 템플릿
 description: 먼저 인지를 세운 뒤 변경에 손댑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 이해 템플릿
 
 많은 작업이 막히는 이유는, 가장 기본적인 공통 이해조차 세우지 못해서입니다.
 
@@ -55,10 +59,3 @@ reviewed_at: 2026-08-26
 
 - [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
 - [코드베이스 이해 사례](/ko/cases/understand-a-codebase/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 이해류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

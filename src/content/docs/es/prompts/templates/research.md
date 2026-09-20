@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de investigación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de investigación
 description: Investigación y comparación con citas.
 locale: es
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de investigación
 
 La diferencia con una pregunta ordinaria es que no solo quieres la respuesta, sino de dónde viene.
 
@@ -47,10 +51,3 @@ Una restricción clave de esta plantilla: cada conclusión importante debe rastr
 
 - [Caso: investigar con fuentes](/es/cases/research-with-sources/)
 - [Verificación](/es/guide/verification/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de investigación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

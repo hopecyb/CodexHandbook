@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供创建类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 创建模板
 description: 从零实现功能、文稿或产物。
 ---
-
-# 创建模板
 
 从零创建的任务，最容易出现两个问题：
 
@@ -59,10 +62,3 @@ description: 从零实现功能、文稿或产物。
 
 - [规格驱动工作](/cases/workflows/specification-driven-work/)
 - [定义完成标准](/prompts/define-done/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供创建类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

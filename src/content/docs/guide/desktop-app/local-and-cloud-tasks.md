@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "OpenAI Help Center 当前《ChatGPT Work and Codex》与《Using Codex with your ChatGPT plan》都明确区分 local workflows 与 cloud tasks；本页只在桌面 App 语境下概括“本地更适合快速迭代，Cloud 更适合远程仓库与长任务”的选型原则。"
+  checkedAt: "2026-07-26"
 title: 本地与云端任务
 description: 在 App 中切换本地与 Cloud 执行。
 sidebar:
@@ -40,10 +45,3 @@ sidebar:
 - 不想占用本机
 
 桌面 App 里如果本地就能完成，通常用本地；任务更长、更偏远程，或者需要统一环境时，再考虑 Cloud。
-
----
-
-**状态：** verified  
-**适用产品：** App  
-**核验依据：** OpenAI Help Center 当前《ChatGPT Work and Codex》与《Using Codex with your ChatGPT plan》都明确区分 local workflows 与 cloud tasks；本页只在桌面 App 语境下概括“本地更适合快速迭代，Cloud 更适合远程仓库与长任务”的选型原则。  
-**最近核验：** 2026-07-26

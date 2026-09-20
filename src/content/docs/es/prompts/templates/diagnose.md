@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de diagnóstico; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de diagnóstico
 description: Localizar primero la causa raíz y luego hablar de la corrección.
 locale: es
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de diagnóstico
 
 El error habitual en diagnóstico es decir «primero investiga» y, en la práctica, dejar que corrija ya.
 
@@ -50,10 +54,3 @@ La plantilla de diagnóstico exige primero explicar por qué se rompe y luego c�
 
 - [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/)
 - [Caso: corregir un bug](/es/cases/fix-a-bug/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de diagnóstico; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

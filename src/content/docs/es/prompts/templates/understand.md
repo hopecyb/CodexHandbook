@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de comprensión; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de comprensión
 description: Construir primero el mapa mental y luego cambiar.
 locale: es
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de comprensión
 
 Muchas tareas se atascan porque aún no hay una comprensión compartida mínima.
 
@@ -55,10 +59,3 @@ El valor de esta plantilla es acotar primero el alcance de la siguiente tarea.
 
 - [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
 - [Caso: comprender un repositorio](/es/cases/understand-a-codebase/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de comprensión; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

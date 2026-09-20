@@ -3,7 +3,7 @@ title: Chọn công cụ
 description: Khi nào dùng terminal, tìm kiếm, trình duyệt hoặc công cụ khác.
 locale: vi
 source_locale: zh-CN
-source_revision: 64967ca
+source_revision: 9fdb366
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

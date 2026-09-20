@@ -1,47 +1,40 @@
 ---
 title: "Function Calling (gọi hàm)"
-date: 2023-06-13
-year: 2023
-summary: "Function Calling cho phép mô hình chọn hàm có sẵn và điền tham số có cấu trúc."
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+description: "Mô hình có thể xuất tên hàm dự định gọi và các tham số có cấu trúc; ứng dụng xác thực chúng rồi quyết định có thực thi hay không. Tạo tham số, được cấp quyền và thực thi là ba bước riêng biệt."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Các sự kiện và mô tả dự án bên dưới đã được đối chiếu với nguồn gốc; lời khuyên học tập là nhận định của tác giả và không được trình bày như kết quả chạy thử sản phẩm."
+  evidence:
+    - label: "Thông báo ra mắt chức năng gọi hàm"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling (gọi hàm)
+## Sự kiện có thể kiểm chứng và phạm vi
 
-- Mốc thời gian chính:
-  - OpenAI function calling release: 2023-06-13
-- Tài liệu chính thức:
-  - https://openai.com/index/function-calling-and-other-api-updates/
-- Ghi chú: Mục này ghi lại điểm chuyển trong việc áp dụng và ý nghĩa hiện tại của khái niệm này trong kỹ thuật ứng dụng AI.
+**Ngày: 13/06/2023 · Loại: ra mắt sản phẩm.** OpenAI công bố chức năng gọi hàm cho Chat Completions API vào thời điểm đó. Ngày này đánh dấu lần phát hành API của một nhà cung cấp cụ thể, không phải điểm khởi đầu của mọi hình thức gọi công cụ.
 
-## Nó Là Gì
+Nguồn: [thông báo ra mắt chức năng gọi hàm](https://openai.com/index/function-calling-and-other-api-updates/). Đối chiếu ngày 18/09/2026; ngày nguồn được công bố và ngày trang này được kiểm chứng có ý nghĩa khác nhau.
 
-Function Calling cho phép mô hình chọn hàm có sẵn và điền tham số có cấu trúc.
+## Chức năng này giải quyết vấn đề gì
 
-## Nó Đưa Kỹ Thuật Ứng Dụng AI Từ Bước Nào Sang Bước Nào
+Mô hình có thể xuất tên hàm dự định gọi và các tham số có cấu trúc; ứng dụng xác thực chúng rồi quyết định có thực thi hay không. Tạo tham số, được cấp quyền và thực thi là ba bước riêng biệt.
 
-Nó đưa ứng dụng từ phản hồi văn bản sang chỉ thị có thể đi vào hệ thống thật.
+## Gợi ý học tập và giới hạn áp dụng
 
-## Hiện Đang Ở Giai Đoạn Nào
+Sau đây là nhận định giảng dạy của trang này, không phải phép đo mức độ phổ biến hay hiệu quả trong ngành:
 
-Hiện tại tôi đánh dấu mục này là `mainstream`.
+Ưu tiên thiết kế đầu vào có thể xác thực, phạm vi quyền rõ ràng và phản hồi khi thất bại. JSON hợp lệ không có nghĩa là tham số đúng về mặt ngữ nghĩa, cũng không có nghĩa là đã được phép ghi vào hệ thống bên ngoài. Tên mô hình và ví dụ API trong thông báo cũ không phải hướng dẫn cấu hình hiện tại.
 
-Nó đã là mẫu mainstream và là nền của Tool Use cùng agent.
+## Bài thực hành
 
-## Nó Có Thể Thay Thế Điều Gì
+[Chạy thử gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/): kiểm tra các gợi ý có cấu trúc cho Issue tổng hợp có gắn với đầu vào hay không; duy trì hàng đợi để con người rà soát. Bài này xác minh ranh giới dữ liệu mà không gọi API hay dùng nhãn phát hành cũ.
 
-Nó thay thế việc parse văn bản tự do bằng quy tắc mong manh để gọi API.
-
-## Điều Gì Có Thể Thay Thế Nó
-
-Nó sẽ được hấp thụ vào runtime công cụ có quyền, trạng thái và phục hồi lỗi.
+[Quay lại lộ trình và quy ước về ngày tháng](/vi/ai-roadmap/)

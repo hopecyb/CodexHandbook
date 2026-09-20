@@ -3,7 +3,7 @@ title: Team automation
 description: Entry for in-team repetitive automation cases—triggers, notifications, approvals, and stop conditions.
 locale: en
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

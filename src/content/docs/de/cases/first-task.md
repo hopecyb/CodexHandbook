@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite ist eine risikoarme Einstiegsübung im Handbuch: beschränkt auf das Ändern einer einzelnen Datei, ohne Netz, mit der Anforderung, den Diff zu lesen und jedes Akzeptanzkriterium zu prüfen. Die zugehörigen Vorkapitel (Installation, Übungsprojekt, Überprüfung) wurden kreuzgeprüft; der Inhalt hängt nicht von produktspezifischen Versionsdetails ab."
+  checkedAt: "2026-07-26"
 title: Erste Aufgabe
 description: Mit einem klaren Prompt eine kleine Änderung abschließen und das Ergebnis prüfen lernen.
 locale: de
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Erste Aufgabe
 
 Das folgende Beispiel geht standardmäßig von der **Desktop-App** aus; CLI und IDE können denselben Prompt verwenden.
 
@@ -52,9 +59,3 @@ Wenn Informationen fehlen, frag mich zuerst; rate nicht.
 - [Prompt-Grundlagen](/de/prompts/basics/)
 - [Überprüfung](/de/guide/verification/)
 - [Hier starten](/de/guide/start-here/)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite ist eine risikoarme Einstiegsübung im Handbuch: beschränkt auf das Ändern einer einzelnen Datei, ohne Netz, mit der Anforderung, den Diff zu lesen und jedes Akzeptanzkriterium zu prüfen. Die zugehörigen Vorkapitel (Installation, Übungsprojekt, Überprüfung) wurden kreuzgeprüft; der Inhalt hängt nicht von produktspezifischen Versionsdetails ab.  
-**Zuletzt geprüft:** 2026-07-26

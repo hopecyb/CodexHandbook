@@ -3,7 +3,7 @@ title: コンテキストの焦点を保つ
 description: 範囲の制御、新しいスレッドの開始、引き継ぎ。
 locale: ja
 source_locale: zh-CN
-source_revision: 042a77f
+source_revision: 5a55fa8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

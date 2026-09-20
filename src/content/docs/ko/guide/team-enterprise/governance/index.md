@@ -3,7 +3,7 @@ title: 거버넌스
 description: 정책, 경계, 조직 규칙 설명 페이지입니다. 무엇을 할 수 있고, 무엇을 하면 안 되며, 누가 책임지는지 먼저 분명히 하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

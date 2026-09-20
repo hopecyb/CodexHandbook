@@ -3,7 +3,7 @@ title: 사례 템플릿
 description: Codex 사례를 작성·회고하는 통일 구조—팀 정착과 비교를 쉽게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a430fba
+source_revision: 74ef905
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,50 +1,40 @@
 ---
 title: Hooks
-description: Adicione checagens, logs e bloqueios em nós fixos de execução — quando bloquear e quando só registrar.
+description: Execute scripts ou ferramentas MCP em pontos do ciclo de vida do Codex para verificar, registrar e aplicar políticas.
 locale: pt
 source_locale: zh-CN
-source_revision: c768708
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a0312e9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+Um Hook é um manipulador automático do ciclo de vida do Codex. Ele pode executar um script ou uma ferramenta MCP quando a sessão começa, um prompt é enviado, uma ferramenta é chamada ou termina, o contexto é compactado, um subagente para ou a thread principal termina.
 
-A Hook is an automatic handler in the Codex lifecycle. It can run a script or MCP tool when a session starts, a prompt is submitted, before or after a tool call, around context compaction, when a subagent stops, or when the main thread ends.
+## O que este conjunto de páginas resolve
 
-## What this section solves
+- Como escolher o evento correto sem inventar nomes como `pre_tool`, que não existem.
+- Como distinguir o bloqueio antes da execução do feedback após a execução.
+- Como começar por um Hook testável e de baixo risco.
+- Como examinar os limites de confiança de Hooks do projeto e de Hooks incluídos em Plugins.
 
-- Choose a real event rather than inventing a name such as `pre_tool`.
-- Separate blocking before execution from feedback after execution.
-- Start with a testable, low-risk Hook.
-- Review the trust boundary of project Hooks and Hooks bundled in Plugins.
+## Ordem de leitura
 
-## Reading order
+1. [Visão geral dos Hooks](/pt/skills/hooks/hooks-overview/): entenda as camadas de configuração, a confiança e o comportamento de execução.
+2. [Tipos de evento de Hook](/pt/skills/hooks/hook-event-types/): escolha o evento e o matcher conforme o ciclo de vida.
+3. [Exemplos de configuração de Hook](/pt/skills/hooks/hooks-examples/): execute um exemplo de proteção `PreToolUse` que pode ser testado com testes unitários.
 
-1. [Hooks overview](/pt/skills/hooks/hooks-overview/): configuration layers, trust, and runtime behavior
-2. [Hook event types](/pt/skills/hooks/hook-event-types/): choose events and matchers by lifecycle position
-3. [Hook examples](/pt/skills/hooks/hooks-examples/): run a unit-tested `PreToolUse` guard
+## Critério rápido
 
-## Fastest decision
-
-| Goal | Consider first |
+| Objetivo | Considere primeiro |
 |---|---|
-| Deny or rewrite tool input before execution | `PreToolUse` |
-| Decide when Codex is about to request elevated permission | `PermissionRequest` |
-| Log or add feedback after a tool finishes | `PostToolUse` |
-| Check a submitted prompt or add context | `UserPromptSubmit` |
-| Require the main thread or a subagent to continue another turn | `Stop` / `SubagentStop` |
+| Recusar ou alterar a entrada antes de executar uma ferramenta | `PreToolUse` |
+| Decidir quando o Codex está prestes a pedir ampliação de permissões | `PermissionRequest` |
+| Registrar ou acrescentar feedback após a ferramenta terminar | `PostToolUse` |
+| Verificar ou acrescentar contexto quando um prompt é enviado | `UserPromptSubmit` |
+| Pedir que a thread principal ou um subagente continue por mais um turno | `Stop` / `SubagentStop` |
 
-Hooks do not replace sandboxing, approvals, command rules, or service-side permissions. They are an additional guardrail, and some managed-tool paths do not pass through local tool Hooks.
+Hooks não substituem o sandbox, a aprovação, as regras de comando nem as permissões do servidor. São uma camada adicional de proteção, e alguns caminhos de ferramentas gerenciadas não passam por Hooks locais de ferramentas.
 
-## Official source
+## Fonte oficial
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; trust review and `/hooks` management follow the Codex CLI documentation
-
-**Last verified:** 2026-08-25

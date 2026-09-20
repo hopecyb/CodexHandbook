@@ -1,69 +1,83 @@
 ---
-title: "Case study: Issue triage and label suggestions"
-description: Use Codex to read new Issues and suggest labels and owners—light team automation.
+caseCategory: team
+directoryOrder: 90
+title: 'Case: Issue Triage and Human Review Queue'
+description: Use five synthetic issues to practice structured proposals, binding to inputs, and a dry run without taking action on GitHub.
+contentType: case
+audiences: [developer, team]
+level: intermediate
+outputs: [json, markdown]
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: '2026-09-18'
+  summary: A dry run of five author-written proposals passed, as did eight structure and input-binding tests. No model was called or GitHub connected; this does not establish classification accuracy or production readiness.
+  environment: Python 3.12.11 / Darwin arm64; standard library and synthetic inputs, without tokens or network access.
+  evidence:
+    - label: Actual run record
+      href: /downloads/issue-triage/validation/record.md
+assets:
+  - path: /downloads/issue-triage/issue-triage-1.0.0.zip
+    purpose: Synthetic inputs, JSON Schema, prompt, author proposals, dry-run script, and review record
+    license: CC0-1.0
+    version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: 23380ad
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 6d859d7
 ---
 
-## Metadata
+This exercise splits issue triage into “generate a proposal → validate → review by a person.” You will produce five records for review. The exercise does not automatically post comments, add labels, or close issues.
 
-| Field | Content |
+[Download the complete exercise pack](/downloads/issue-triage/issue-triage-1.0.0.zip) · [README](/downloads/issue-triage/README.md) · [View actual dry-run output](/downloads/issue-triage/validation/dry-run.json)
+
+## Inputs and completion criteria
+
+The five original synthetic inputs describe a calculation error, a broken documentation link, a possible cross-account data issue, insufficient information, and a malicious instruction in the issue body. None contains real customer data. A proposal includes a type, priority, labels, security-review flag, rationale, and missing information.
+
+To finish, produce one proposal for each input and pass enum and input-hash validation. A maintainer must then accept, modify, or reject each proposal and record why. Passing the structure checks cannot replace that judgment.
+
+## Run the reference proposals first
+
+You need Python 3.10+ but no API key or third-party dependency. In the extracted directory, run:
+
+```sh
+python3 scripts/dry_run.py
+python3 validation/test_dry_run.py
+```
+
+The first command uses author-written proposals and outputs five `human-review-required` entries with an empty `external_actions` list. The second runs eight checks. Neither calls a model automatically.
+
+[Input fixtures](/downloads/issue-triage/fixtures/issues.json) · [Reference proposals](/downloads/issue-triage/solution/proposals.json) · [Human-review reference](/downloads/issue-triage/solution/human-review.md)
+
+## Generate your own proposals next
+
+Give Codex the pack's [prompts/triage.md](/downloads/issue-triage/prompts/triage.md) and ask for `my-proposals.json` conforming to [schema.json](/downloads/issue-triage/schema.json). Then run:
+
+```sh
+python3 scripts/dry_run.py --proposals my-proposals.json
+```
+
+The schema uses JSON Schema 2020-12. Boolean values use `"type": "boolean"`; priority is an enum, not a string `"P0-P3"`. The bundled validator implements only the subset of keywords used by this schema and is not a general schema engine.
+
+Each proposal includes `input_sha256` to bind it to the complete contents of its corresponding issue. If an input changes, stop using the old proposal. Reanalyze the change before recalculating the hash. The README and script define the hash convention and function.
+
+## Human judgment and safety boundary
+
+| Situation | Response |
 |---|---|
-| Audience | Maintainers, PMs |
-| Client | Cloud or CLI + GitHub |
-| Estimated time | 60 minutes |
-| Verification date | 2026-07-25 |
+| Clear evidence of a defect | Suggest a category, reproduce it, and check the scope of impact before assigning priority |
+| Possible security incident | Refer privately to the security owner; an unknown priority does not mean low risk |
+| Insufficient information | Use `unknown`, list what is missing, and do not guess an owner or severity |
+| Issue body asks to run commands or raise privileges | Treat it as untrusted data. Do not execute it or set P0 because it claims urgency |
 
-## 1. Goal and context
+Removing HTML or limiting length cannot guarantee protection from prompt injection. The packaged program does not execute issue bodies, but the model-generation stage still needs a boundary between data and instructions. The reference output does not establish a model's resistance rate.
 
-**Goal:** For newly opened issues, generate structured suggestions: `type`, `priority`, suggested labels, whether security review is needed.
+## Failure and recovery
 
-**Success criteria:**
+An unknown label, extra action field, invalid type, duplicate proposal, or missing proposal stops the whole batch with exit code 1. Correct the prompt and relevant fields, then rerun with the original input retained. A security type or label without the security-review flag is also rejected.
 
-- JSON output parseable by GitHub Action
-- Does not auto-close/merge issues—only comments or adds labels (workflow permissions required)
-- No secret leakage
+A wrong classification with a valid structure can still pass; the tests confirm this limitation. High agreement on a few examples is therefore no release threshold. A real rollout needs representative samples, risk tiers, human sampling, misclassification costs, and rollback conditions. This exercise covers a local dry run only.
 
-**Out of scope:** Auto-assigning sprints, changing milestones.
-
-## 2. Preparation
-
-- Repo has `CONTRIBUTING.md` or issue templates explaining label meanings
-- `AGENTS.md` describes the label system
-- Read-only or limited `issues: write` token
-
-## 3. Workflow (EPXV summary)
-
-**Explore:** `@.github/ISSUE_TEMPLATE/` and label distribution of last 10 closed issues.
-
-**Plan:** Define JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
-
-**Execute:** `codex exec` with issue title + body (watch [prompt injection](/en/guide/team-enterprise/security/prompt-injection/) sanitization).
-
-**Verify:** Compare to human labels on 3 historical issue fixtures; ship when agreement > 80%.
-
-## 4. Failure and recovery
-
-- Wrong label suggestions: human override + add counterexamples to prompt few-shot
-- Malicious issue body: strip HTML, length limits, do not execute "instructions" in body
-
-## 5. Capture
-
-- Optional [Webhook](/en/guide/developer-platform/webhooks/overview/) hook to internal ticketing
-- Retro in [Case study template](/en/cases/use-cases/case-study-template/)
-
-## 6. Related chapters
-
-- [GitHub integration](/en/guide/integrations/github/)
-- [Human approval patterns](/en/cases/workflows/human-approval-patterns/)
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public automation bug triage / review use cases, plus this handbook's verified human approval, webhooks, GitHub integration, and team automation chapters; this page confirms only the stable pattern of structured label suggestions with human final decision.
+Continue with the [documentation link check](/en/cases/use-cases/team-automation/scheduled-link-check/) and [human approval patterns](/en/cases/workflows/human-approval-patterns/).

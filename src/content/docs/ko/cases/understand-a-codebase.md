@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers의 현재 Codex use cases에는 여전히 “Understand large codebases”가 포함되며, 주 경로 추적, 핵심 모듈 식별, 관련 파일 빠른 위치 찾기가 강조됩니다. 이 페이지 예시는 읽기 전용 탐색 시나리오이며, 공식 현재 포지셔닝과 일치합니다."
+  checkedAt: "2026-07-26"
 title: 코드베이스 이해하기
 description: 낯선 저장소를 읽기 전용으로 탐색해, 실행 가능한 인지 지도를 만듭니다.
 locale: ko
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 코드베이스 이해하기
 
 ## 메타 정보
 
@@ -45,9 +53,3 @@ reviewed_at: 2026-08-26
 
 - [이해 템플릿](/ko/prompts/templates/understand/)
 - [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 Codex use cases에는 여전히 “Understand large codebases”가 포함되며, 주 경로 추적, 핵심 모듈 식별, 관련 파일 빠른 위치 찾기가 강조됩니다. 이 페이지 예시는 읽기 전용 탐색 시나리오이며, 공식 현재 포지셔닝과 일치합니다.  
-**최근 검증:** 2026-07-26

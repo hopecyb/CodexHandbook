@@ -3,7 +3,7 @@ title: 불확실성 다루기
 description: 정보가 부족할 때는 지어내지 말고 질문을 요구합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ea6795e
+source_revision: 839ce22
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

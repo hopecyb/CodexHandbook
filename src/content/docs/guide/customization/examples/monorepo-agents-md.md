@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前 `AGENTS.md`、文件目录上下文与 Cloud 环境章节交叉复核；本页内容限定为 monorepo 分层说明的示例模式与命令组织方法，不把具体产品入口或托管实现当作固定契约。"
+  checkedAt: "2026-07-26"
 title: Monorepo 中的 AGENTS.md
 description: 在单仓库多包结构下放置项目指令、作用域与测试命令的示例模式。
 sidebar:
@@ -121,10 +126,3 @@ Monorepo 在 Cloud 上常因**未在根安装**或 filter 错误而失败。在�
 - [ ] 跨包任务在 prompt 中写清允许路径
 
 Monorepo 里的 AGENTS.md 不需要一味集中；更合适的做法，是让“全局共识”和“目录局部规则”各自放在合适的位置。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前 `AGENTS.md`、文件目录上下文与 Cloud 环境章节交叉复核；本页内容限定为 monorepo 分层说明的示例模式与命令组织方法，不把具体产品入口或托管实现当作固定契约。  
-**最近核验：** 2026-07-26

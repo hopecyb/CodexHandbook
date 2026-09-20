@@ -1,14 +1,26 @@
 ---
-title: Geltungsbereich und Rangfolge von AGENTS.md
-description: Verstehe genau, wie globale Regeln, Regeln im Projektstamm und Regeln des aktuellen Verzeichnisses gefunden und zusammengeführt werden.
-sidebar:
-  order: 20
+title: "Geltungsbereich und Rangfolge von AGENTS.md"
+description: "Verstehe genau, wie globale Regeln, Regeln im Projektstamm und Regeln des aktuellen Verzeichnisses gefunden und zusammengeführt werden."
+contentType: reference
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Die offiziellen Regeln zur Erkennung und Zusammenführung wurden einzeln abgeglichen. Verzeichnisbeispiele und Hinweise zur Ladeprüfung dienen der Lehre; sie behaupten keine Tests über verschiedene Clients hinweg."
+  evidence:
+    - label: "AGENTS.md"
+      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 locale: de
 source_locale: zh-CN
-source_revision: 698ab44
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: b5f31cc
+translation_status: draft
+translated_at: 2026-09-20
+sidebar:
+  order: 20
 ---
 
 Codex baut zu Beginn jedes Laufs eine Anweisungskette auf. Entscheidend ist keine spekulative Rangliste aus „Organisationsrichtlinie, Konfiguration und Prompt“, sondern zunächst die genaue Erkennungsreihenfolge von `AGENTS.md` selbst.
@@ -48,7 +60,7 @@ Befolge alle anwendbaren AGENTS.md-Dateien. Ändere bei dieser Aufgabe nur servi
 Rotiere keine Zugangsdaten. Führe make test-payments aus und berichte das tatsächliche Ergebnis.
 ```
 
-Ein Prompt kann unveränderliche System-, Organisations-, Sandbox- oder Berechtigungsgrenzen nicht in verfügbare Funktionen umwandeln. Versuche bei Konflikten nicht, die Rangfolge mit „Ignoriere die vorherigen Regeln“ zu erraten. Lass Codex zuerst die geladenen Anweisungsquellen auflisten und grenze anschließend die Aufgabe ein.
+Ein Prompt kann unveränderliche System-, Organisations-, Sandbox- oder Berechtigungsgrenzen nicht in verfügbare Funktionen umwandeln. Lass Codex bei Konflikten die relevanten Anweisungsquellen und deren Geltungsbereiche auflisten. Unterscheide anpassbare Projektvorgaben von tatsächlichen Ausführungsgrenzen. Ist der Umfang klar, liegt die Autorisierung bereits vor und besteht kein Konflikt mit höherrangigen Anweisungen, arbeite weiter. Nenne einen konkreten Hinderungsgrund erst, wenn Informationen oder Berechtigungen wirklich fehlen. Den vollständigen Vergleich findest du unter [Kontextpriorität](/de/guide/context/context-priority/).
 
 ## Tatsächlich geladene Inhalte verifizieren
 
@@ -75,11 +87,3 @@ Ein Fallback gilt nur, wenn im selben Verzeichnis keine Datei höherer Prioritä
 ## Offizielle Grundlage
 
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App, CLI, IDE, Cloud
-
-**Zuletzt geprüft:** 2026-08-26

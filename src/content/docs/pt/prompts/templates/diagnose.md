@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de diagnóstico; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de diagnóstico
 description: Localize a causa-raiz antes de discutir a correção.
 locale: pt
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de diagnóstico
 
 O equívoco comum em tarefas de diagnóstico: dizer «primeiro investigue», mas na prática esperar que corrija já.
 
@@ -50,10 +54,3 @@ O template de diagnóstico pede primeiro *por que* quebrou; só depois discute *
 
 - [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/)
 - [Caso: corrigir um bug](/pt/cases/fix-a-bug/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de diagnóstico; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

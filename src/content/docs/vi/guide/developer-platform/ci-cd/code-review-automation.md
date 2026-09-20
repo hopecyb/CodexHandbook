@@ -3,7 +3,7 @@ title: Tự động hóa review mã
 description: "Nối review Codex vào quy trình CI hoặc PR — Prompt, quyền và cổng người."
 locale: vi
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

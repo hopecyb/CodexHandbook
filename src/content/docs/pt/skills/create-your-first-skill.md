@@ -3,7 +3,7 @@ title: Criar seu primeiro Skill
 description: Crie do zero um Skill pr-review commitável, com testes e compartilhamento em equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: d6ef72a
+source_revision: 14414f5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

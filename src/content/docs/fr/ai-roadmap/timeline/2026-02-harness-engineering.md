@@ -1,55 +1,39 @@
 ---
-title: Harness Engineering
-date: 2026-02-11
-year: 2026
-summary: "Les prompts contrôlent la manière dont le modèle parle, et le contexte contrôle ce qu'il voit — mais aucun des deux ne garantit la fiabilité. Harness Engineering construit le système autour : orchestration d'outils, mémoire, gestion d'erreurs et suivi d'état. Au lieu d'espérer que les prompts corrigent les échecs, il les traite au niveau système."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering (ingénierie de l’environnement d’exécution)"
+description: "Cette page traite de l’environnement d’exécution autour du modèle : connaissances du projet accessibles, outils, tests, retours, état et récupération après erreur. Au-delà des capacités du modèle, cet environnement influe sur l’achèvement des tâches."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Les événements et descriptions de projet ci-dessous ont été vérifiés dans des sources primaires. Les conseils pédagogiques relèvent du jugement de l’auteur ; cette vérification ne signifie pas que le produit a été testé ici."
+  evidence:
+    - label: "Article sur le harness engineering"
+      href: "https://openai.com/index/harness-engineering/"
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Événement vérifiable et portée
 
-# Harness Engineering
+**Date : 2026-02-11 · Type : article d’ingénierie.** OpenAI a publié *Harness engineering: leveraging Codex in an agent-first world*, qui présente l’expérience d’une équipe dans la construction d’un environnement et de retours autour des agents. Cette date est celle de l’article, pas celle de la première apparition de ces méthodes d’ingénierie.
 
-- Date de publication du concept : 2026-02-11
-- Introduction officielle : https://openai.com/index/harness-engineering/
-- Note : cette entrée enregistre le concept Harness Engineering introduit dans l'article d'OpenAI et sa portée. Les outils et processus concrets doivent être développés dans le Guide.
+Source : [article sur le harness engineering](https://openai.com/index/harness-engineering/). Vérification effectuée le 2026-09-18 ; la date de publication de la source et la date de vérification de cette page n’ont pas la même signification.
 
-## Ce que c'est
+## Quel problème cela résout-il ?
 
-Harness Engineering est une approche d'ingénierie IA orientée production, qui insiste non seulement sur l'amélioration des réponses du modèle, mais sur la construction d'un environnement complet capable de piloter l'achèvement fiable des tâches.
+Cette page traite de l’environnement d’exécution autour du modèle : connaissances du projet accessibles, outils, tests, retours, état et récupération après erreur. Au-delà des capacités du modèle, cet environnement influe sur l’achèvement des tâches.
 
-Cet environnement inclut généralement décomposition de tâche, organisation du contexte, intégration d'outils, feedback de validation, reprise après échec, gates de qualité et boucles d'itération. Le but est une livraison contrôlable, pas des résultats chanceux occasionnels.
+## Conseils d’apprentissage et limites
 
-## Le passage qu'il a permis
+Ce qui suit est un choix pédagogique de ce site, et non une mesure de l’adoption dans le secteur ou de l’efficacité :
 
-Il a fait passer l'ingénierie des applications IA de « optimiser prompts et sorties one-shot » à « optimiser les systèmes de tâches et environnements d'exécution ».
+Mettez d’abord en place des contrôles capables de détecter les erreurs, puis élargissez le champ de l’exécution automatisée. Des tests réussis n’étayent que les comportements qu’ils couvrent ; ils ne garantissent ni la justesse de toutes les exigences ni l’absence de toute panne. L’expérience de l’équipe et les estimations de productivité de l’article ne se transposent pas directement à ce site.
 
-Dans ce paradigme, la question clé n'est plus « comment mieux demander au modèle », mais « comment construire un système de méthodes qui maintient le travail du modèle fiable dans le temps ». Évaluation, outils, contexte, processus et régression deviennent des objets d'ingénierie de premier ordre.
+## Exercice pratique
 
-## Son stade actuel
+[Méthode d’évaluation des workflows et jeu d’exemples](/fr/guide/quality/workflow-evaluation/) : choisissez un exemple et notez séparément le déclenchement, les limites, le format, la qualité et le temps passé, avec les preuves de sortie. Laissez les dimensions non exécutées marquées comme telles.
 
-Je marque actuellement Harness Engineering comme `emerging`.
-
-Le concept a été clairement proposé et se diffuse rapidement, mais ses frontières, sa méthodologie et ses standards pratiques sont encore en formation. Les équipes implémentent le « Harness » à des profondeurs très différentes.
-
-En bref, c'est un signal de tendance fort, pas encore un consensus par défaut totalement stabilisé.
-
-## Ce qu'il pourrait remplacer
-
-Il peut remplacer les styles de développement IA centrés sur les astuces de prompt ponctuelles.
-
-À mesure que ce paradigme se diffuse, les équipes discutent moins de « comment réécrire ce prompt » et davantage de « comment rendre le système stable, régressable et améliorable en continu ».
-
-## Ce qui pourrait le remplacer
-
-Il sera plutôt absorbé par des abstractions supérieures que renversé.
-
-Des frameworks de workflows d'agents automatisés, plateformes d'orchestration qualité au niveau système et protocoles d'exécution de tâches plus contraints pourraient industrialiser les capacités centrales de Harness Engineering.
+[Retour à la feuille de route et aux conventions de date](/fr/ai-roadmap/)

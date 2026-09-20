@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "이 페이지는 증상별로 설치·로그인·권한·컨텍스트·결과 품질 장으로 분기하는 내비게이션만 담당합니다. 링크된 장 경로를 항목별로 확인했으며, 구체 오류 코드·버전 번호·인터페이스 문구에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 문제 해결
 description: 증상별로 해당 튜토리얼·제품 페이지로 안내합니다.
 sidebar:
   order: 18
 locale: ko
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ reviewed_at: 2026-08-26
 - 오류 종류를 모를 때 최소로 어떻게 시작할지
 - 어떤 문제가 설치·권한·컨텍스트·작업 설명 문제인지
 
-# 문제 해결
 
 | 증상 | 이동 |
 |---|---|
@@ -62,10 +66,3 @@ reviewed_at: 2026-08-26
 문제 해결은 먼저 분류하는 일이지, 당장 고치기부터가 아닙니다.
 
 더 보기: [FAQ](/ko/guide/reference/faq/) · [오류 참고](/ko/guide/reference/error-reference/) · [공식 Codex 문서](https://developers.openai.com/codex)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 증상별로 설치·로그인·권한·컨텍스트·결과 품질 장으로 분기하는 내비게이션만 담당합니다. 링크된 장 경로를 항목별로 확인했으며, 구체 오류 코드·버전 번호·인터페이스 문구에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -3,7 +3,7 @@ title: 子 Agent
 description: 境界が明確なサブタスクを独立したコンテキストに委任し、主 Agent が証拠の集約、競合の解決、検収を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: d65f0ec
+source_revision: a3f2be5
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

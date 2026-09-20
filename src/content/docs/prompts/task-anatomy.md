@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明任务结构方法；示例与站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-08-25"
 title: 好任务的结构
 description: 目标、背景、输入、约束、验收与权限边界。
 ---
@@ -134,10 +139,3 @@ description: 目标、背景、输入、约束、验收与权限边界。
 - [约束与边界](/prompts/constraints-and-boundaries/)
 - [先要计划](/prompts/ask-for-a-plan/)
 - [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明任务结构方法；示例与站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-08-25

@@ -3,7 +3,7 @@ title: スクリプトとパイプライン
 description: shell、Makefile、GitHub Actions で codex exec を編成——再現可能、監査可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ce1e940
+source_revision: 07aeb4f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

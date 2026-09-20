@@ -3,7 +3,7 @@ title: エラーとメッセージリファレンス
 description: 常见エラー、終了コード、失敗原因の学習向け索引——公式サポートの代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

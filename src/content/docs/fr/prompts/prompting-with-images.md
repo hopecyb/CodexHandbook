@@ -3,7 +3,7 @@ title: Prompts avec images
 description: Comment formuler une demande quand vous donnez à Codex des captures, maquettes ou photos de tableau blanc.
 locale: fr
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

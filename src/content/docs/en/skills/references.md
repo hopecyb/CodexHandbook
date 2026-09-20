@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Current Codex runtime explicitly uses on-demand reads of skill body and related material; this page describes stable documentation organization for `references/`."
+  checkedAt: "2026-07-26"
 title: references/ directory
 description: Organize long reference docs in a Skill for progressive disclosure.
 locale: en
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 It is not just "extra files"; it is material that is **not always needed immediately but matters at a specific step**, loaded when needed.
 
-# references/ directory
 
 When `SKILL.md` grows too long, move detailed standards, API notes, and checklists to `references/` and reference them from steps as needed.
 
@@ -73,10 +77,3 @@ The main process should still live in `SKILL.md` so first-time readers know how 
 - Main flow stays in `SKILL.md`; references load on demand
 - One file, one topic—easier maintenance
 - Avoid repeating SKILL.md steps inside references
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime explicitly uses on-demand reads of skill body and related material; this page describes stable documentation organization for `references/`.  
-**Last verified:** 2026-07-26

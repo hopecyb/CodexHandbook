@@ -3,7 +3,7 @@ title: MCP
 description: Conecta herramientas y contexto de terceros a ChatGPT y Codex con acceso controlado.
 locale: es
 source_locale: zh-cn
-source_revision: ff68431
+source_revision: 8d9ec38
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

@@ -1,63 +1,39 @@
 ---
-title: Context Engineering
-date: 2025-09-29
-year: 2025
-summary: "Prompt engineering se concentre sur « comment demander », mais la performance du modèle dépend largement de « ce qu'il voit ». Context Engineering organise systématiquement historique, connaissances récupérées et sorties d'outils pour que le modèle raisonne sur les bonnes informations. C'est l'ossature de RAG et des mémoires d'agents."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+title: "Context Engineering (ingénierie du contexte)"
+description: "Le contexte comprend la tâche, les instructions, les fichiers, les résultats de recherche et les sorties d’outils. Il faut choisir quoi fournir maintenant, quoi consulter au besoin et quoi conserver après compression."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Les événements et descriptions de projet ci-dessous ont été vérifiés dans des sources primaires. Les conseils pédagogiques relèvent du jugement de l’auteur ; cette vérification ne signifie pas que le produit a été testé ici."
+  evidence:
+    - label: "Article sur l’ingénierie du contexte"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Événement vérifiable et portée
 
-# Context Engineering
+**Date : 2025-09-29 · Type : article d’ingénierie.** Anthropic a publié *Effective context engineering for AI agents*, consacré à l’organisation du contexte nécessaire à un agent. La date de l’article n’est pas celle de la naissance du concept.
 
-- Date de cadrage public systématique : 2025-09-29
-- Références officielles :
-  - Anthropic Engineering : https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-  - OpenAI Cookbook (Session Memory) : https://developers.openai.com/cookbook/examples/agents_sdk/session_memory
-  - OpenAI Cookbook (Personalization) : https://developers.openai.com/cookbook/examples/agents_sdk/context_personalization
-  - Cas OpenAI (Consensus) : https://openai.com/index/consensus/
-- Note : cette entrée situe l'arrivée de Context Engineering dans la discussion d'ingénierie mainstream. Les détails d'implémentation doivent être développés dans le Guide.
+Source : [article sur l’ingénierie du contexte](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Vérification effectuée le 2026-09-18 ; la date de publication de la source et la date de vérification de cette page n’ont pas la même signification.
 
-## Ce que c'est
+## Quel problème cela résout-il ?
 
-Context Engineering est une approche d'ingénierie systématique centrée sur l'information que le modèle voit réellement pendant l'exécution d'une tâche.
+Le contexte comprend la tâche, les instructions, les fichiers, les résultats de recherche et les sorties d’outils. Il faut choisir quoi fournir pour la tâche en cours, quoi consulter au besoin et quoi conserver après compression.
 
-Son focus n'est pas de polir une ligne de prompt, mais de gérer tout le cycle de vie du contexte : sélection d'information, structure, moment d'injection, contrôle de longueur, mises à jour mémoire, compression d'historique et stratégie de retrieval.
+## Conseils d’apprentissage et limites
 
-La question centrale est : comment fournir le mélange de contexte le plus efficace, pertinent et opportun dans une fenêtre limitée, afin de terminer des tâches complexes de manière fiable ?
+Ce qui suit est un choix pédagogique de ce site, et non une mesure de l’adoption dans le secteur ou de l’efficacité :
 
-## Le passage qu'il a permis
+Privilégiez les faits et les chemins vers les preuves utiles à la décision actuelle. Ajouter du contenu peut aussi créer du bruit ; un résumé compressé ne remplace pas les fichiers essentiels. Si l’objectif dérive, vérifiez les livrables et les contraintes existants avant d’ajouter un nouveau prompt.
 
-Il a fait passer l'ingénierie des applications IA de « optimiser surtout la formulation du prompt » à « concevoir l'environnement d'exécution de tâche comme un système de contexte ».
+## Exercice pratique
 
-À ce stade, les équipes traitent gestion mémoire, stratégie de retrieval, découpe de contexte, transfert d'état et compression d'historique comme des objets d'ingénierie de premier ordre, et non comme des techniques annexes. La qualité du modèle ne dépend plus seulement de la formulation, mais de la qualité de conception du système de contexte.
+[Maintenir un contexte ciblé](/fr/guide/context/keep-context-focused/) : listez les fichiers indispensables à la tâche, les références à consulter au besoin et les éléments sans rapport. Consignez l’objectif, le travail terminé, les questions ouvertes et les chemins vers les preuves dans un document de passation.
 
-Cela pousse le développement IA de la tactique conversationnelle vers l'ingénierie d'orchestration de l'information.
-
-## Son stade actuel
-
-Je marque actuellement Context Engineering comme `emerging`.
-
-Les équipes de tête l'ont clairement nommé et ont partagé des cadres pratiques ; les documents publics d'OpenAI et Anthropic renforcent cette direction. Mais les frontières terminologiques, standards de bonnes pratiques et conventions d'implémentation évoluent encore rapidement.
-
-En bref, c'est désormais un consensus central pour les systèmes d'agents de haute qualité, mais pas encore une norme interplateforme totalement standardisée.
-
-## Ce qu'il pourrait remplacer
-
-Il peut remplacer les styles de développement qui tentent de résoudre les tâches complexes principalement par ajustement manuel de prompts.
-
-À mesure qu'il se diffuse, les équipes passent moins de temps à demander « comment réécrire cette phrase » et davantage à concevoir, mettre à jour, réduire et valider le contexte. Cela réduit l'aléatoire et améliore continuité et maintenabilité.
-
-## Ce qui pourrait le remplacer
-
-Il sera plutôt absorbé par des abstractions supérieures que remplacé.
-
-Des planificateurs automatiques de contexte, bus mémoire unifiés et moteurs observables de politique de contexte pourraient plateformiser le travail manuel actuel. L'idée centrale selon laquelle le contexte fixe le plafond du système restera.
+[Retour à la feuille de route et aux conventions de date](/fr/ai-roadmap/)

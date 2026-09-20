@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE、Cloud"
+  checkedAt: "2026-08-26"
 title: IDE 中的云端任务
 description: 从 IDE 把长任务委托给 Codex Cloud，并回到可审查结果。
 sidebar:
@@ -61,11 +65,3 @@ IDE 可以把快速迭代留在本地，也可以连接 Codex web，把耗时更
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**状态：** verified
-
-**适用产品：** IDE、Cloud
-
-**最近核验：** 2026-08-26

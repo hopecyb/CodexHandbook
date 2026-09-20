@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: 集成终端
 description: 在当前项目或工作树中运行命令，并用真实输出验证任务结果。
 sidebar:
@@ -55,11 +59,3 @@ pnpm run lint
 
 - [集成终端](https://learn.chatgpt.com/docs/integrated-terminal)
 - [本地环境](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**最近核验：** 2026-08-26

@@ -1,71 +1,65 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Web e Cloud (visão geral)
-description: Navegação de entrada para Tarefas Cloud, ambientes, Secrets e revisão de PR.
-sidebar:
-  order: 13
+description: O percurso das tarefas remotas, da ligação ao repositório e do ambiente reproduzível à revisão e ao Pull Request.
 locale: pt
 source_locale: zh-CN
-source_revision: 5861c62
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 8fe7bea
+translation_status: draft
+translated_at: "2026-09-20"
+sidebar:
+  order: 13
 ---
 
+O Codex Cloud executa tarefas de programação em ambientes de nuvem isolados. É adequado para tarefas longas em segundo plano, tentativas paralelas e trabalho iniciado a partir do GitHub, GitLab (Beta), Linear ou Slack. Não controla remotamente o seu computador nem vê automaticamente os ficheiros locais que ainda não foram enviados para o repositório remoto.
 
-Codex Cloud runs coding tasks in isolated cloud environments. It is useful for long background tasks, parallel attempts, and work started from GitHub, GitLab (Beta), Linear, or Slack. It does not remotely control your computer or automatically see local unpushed files.
-
-## Cloud task lifecycle
+## Etapas de uma tarefa Cloud
 
 ```text
-Sign in with ChatGPT
-  → connect GitHub / GitLab
-  → create a repository environment
-  → check out the selected branch or commit
-  → run the setup script to install dependencies
-  → let the Agent modify and verify within the network policy
-  → inspect the summary, logs, and diff
-  → follow up or create a PR
-  → merge after human review and CI
+Iniciar sessão com o ChatGPT
+  → ligar o GitHub / GitLab
+  → criar um ambiente para o repositório
+  → fazer checkout do branch ou commit escolhido
+  → instalar dependências com o setup script
+  → deixar o Agent modificar e verificar dentro da política de rede
+  → examinar o resumo, os logs e o diff
+  → pedir alterações ou criar um PR
+  → juntar após revisão humana e CI
 ```
 
-Cloud provides isolation, reproducibility, and parallelism. It does not remove review.
+O valor do Cloud está no isolamento, na reprodutibilidade e no paralelismo; a revisão continua a ser necessária.
 
-## Local or Cloud
+## Local ou Cloud
 
-| Choose local | Choose Cloud |
+| Escolher local | Escolher Cloud |
 |---|---|
-| Work depends on uncommitted files or local services | Inputs are in a remote repository |
-| You must interact with a process in real time | The task can run independently in the background |
-| The change is small and fast | Work requires multiple build/test steps or parallel attempts |
-| A required tool exists only on this computer | Scripts can recreate the environment |
+| Depende de ficheiros ainda não confirmados ou de serviços locais | Os dados de entrada já estão no repositório remoto |
+| É preciso interagir com um processo em tempo real | A tarefa pode correr autonomamente em segundo plano |
+| Alteração rápida e de âmbito reduzido | Compilação, testes ou tentativas paralelas com várias etapas |
+| Uma ferramenta necessária só existe neste computador | O ambiente pode ser recriado por scripts |
 
-Read [Local and cloud execution](/pt/guide/foundations/local-vs-cloud/) before choosing.
+Leia primeiro [Execução local e na nuvem](/pt/guide/foundations/local-vs-cloud/) para compreender os limites de execução.
 
-## Recommended learning order
+## Ordem de aprendizagem recomendada
 
-1. [Connect GitHub](/pt/guide/web-and-cloud/connect-github/): authorize only required repositories.
-2. [Cloud environments](/pt/guide/web-and-cloud/cloud-environments/): pin tools, versions, and setup.
-3. [Secrets and environment variables](/pt/guide/web-and-cloud/secrets-and-variables/): separate setup-only Secrets from ordinary variables.
-4. [Internet access](/pt/guide/web-and-cloud/internet-access/): Agent access is off by default; open only required domains and methods.
-5. [Delegate and follow up](/pt/guide/web-and-cloud/delegate-and-follow-up/): send goals, constraints, and acceptance criteria.
-6. [Create pull requests](/pt/guide/web-and-cloud/create-pull-requests/) and [Code review](/pt/guide/web-and-cloud/code-review/): turn a result into a mergeable deliverable.
-7. [Cloud troubleshooting](/pt/guide/web-and-cloud/troubleshooting/): diagnose repository, setup, network, and task layers.
+1. [Ligar o GitHub](/pt/guide/web-and-cloud/connect-github/): autorizar apenas os repositórios necessários;
+2. [Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/): fixar ferramentas, versões e setup;
+3. [Secrets e variáveis de ambiente](/pt/guide/web-and-cloud/secrets-and-variables/): distinguir Secrets da instalação das variáveis usadas na execução;
+4. [Acesso à Internet](/pt/guide/web-and-cloud/internet-access/): o Agent começa sem acesso à rede; abrir apenas os domínios e métodos necessários;
+5. [Delegar e acompanhar](/pt/guide/web-and-cloud/delegate-and-follow-up/): definir objetivo, restrições e critérios de aceitação;
+6. [Criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/) e [Revisão de código](/pt/guide/web-and-cloud/code-review/): transformar o resultado num artefacto pronto para integrar;
+7. [Resolver problemas no Cloud](/pt/guide/web-and-cloud/troubleshooting/): localizar falhas nas camadas do repositório, setup, rede e tarefa.
 
-When starting from the desktop App or IDE, also read [Local and cloud tasks](/pt/guide/desktop-app/local-and-cloud-tasks/) or [Cloud tasks from the IDE](/pt/guide/ide/cloud-task-workflow/).
+Se iniciar a tarefa a partir da aplicação de ambiente de trabalho ou do IDE, consulte também [Tarefas locais e na nuvem](/pt/guide/desktop-app/local-and-cloud-tasks/) e [Tarefas Cloud no IDE](/pt/guide/ide/cloud-task-workflow/).
 
-## First exercise
+## Primeiro exercício
 
-Use a test repository with no production credentials. Ask Codex only to fix documentation links and run the link checker. Success means the environment starts, the diff contains only expected files, command output is visible, and the result can become a PR. A page showing “complete” is not sufficient acceptance evidence.
+Escolha um repositório de teste sem credenciais de produção. Peça ao Codex apenas que corrija ligações da documentação e execute a verificação de ligações. O êxito significa que o ambiente arrancou, o diff inclui apenas os ficheiros esperados, a saída do comando está visível e é possível criar um PR com o resultado. A indicação «concluído» na página não deve ser o único critério de aceitação.
 
-## Official sources
+## Fontes oficiais
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26
+- [Ambientes Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)

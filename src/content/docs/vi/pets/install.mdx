@@ -3,15 +3,21 @@ title: Cài đặt Codex Pet
 description: "Hiểu thư mục cài đặt, luồng kích hoạt và ranh giới an toàn của Codex Pets."
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: e0d8ef4
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 730c599
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Đã bổ sung giới hạn về định dạng và khôi phục, nhưng trang chưa thử cài đặt, phát hoạt ảnh hoặc gỡ bỏ với một ứng dụng khách và gói Pet cụ thể. Hãy kiểm tra thư mục và menu theo phiên bản đích."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Cài đặt Codex Pet
+Trang này chưa thử khả năng tương thích của một ứng dụng khách và gói Pet cụ thể. Trước tiên hãy ghi phiên bản và nguồn, rồi dùng [hồ sơ tương thích và khôi phục](/vi/guide/reference/resource-compatibility/) để đối chiếu kết quả thực tế. Hình minh họa chỉ giải thích cấu trúc, không phải hợp đồng định dạng cho mọi phiên bản.
+
 
 Cài đặt Codex Pet về bản chất là đặt một gói tài nguyên mà client đọc được vào thư mục đã quy ước. Khi client khởi động hoặc làm mới cài đặt, nó đọc thư mục này, tìm metadata rồi tải các asset hoạt ảnh tương ứng.
 
@@ -32,7 +38,7 @@ Một Pet thường là thư mục cục bộ có ít nhất hai tệp:
 1. Lấy gói: xác nhận nó có ít nhất `pet.json` và spritesheet.
 2. Đặt vào thư mục Pets: vị trí phổ biến là `~/.codex/pets/<pet-id>/`.
 3. Cho client đọc lại: khởi động lại Codex hoặc làm mới cài đặt Pets.
-4. Chọn trong giao diện: thường ở Settings -> Appearance -> Pets.
+4. Tìm mục chọn Pet trong ứng dụng khách hiện tại; tên và vị trí menu thay đổi theo phiên bản. Nếu không có mục này, trước hết hãy kiểm tra phiên bản đó có hỗ trợ Pets không.
 
 Trên Windows, thư mục thường nằm dưới `.codex\pets\<pet-id>\` trong thư mục người dùng. Nếu bạn đã cấu hình `CODEX_HOME`, hãy theo thư mục Pets mà client hiện tại hiển thị.
 
@@ -46,13 +52,13 @@ Nếu cài xong mà pet không xuất hiện, hãy kiểm tra:
 - Codex đã được khởi động lại, hoặc cài đặt Pets đã được làm mới chưa.
 - Windows, WSL hoặc `CODEX_HOME` tùy chỉnh có đang trỏ sang thư mục khác không.
 
-Phần lớn lỗi không phải do “pet hỏng”, mà do client không đọc được một bộ tài nguyên đầy đủ ở vị trí dự kiến.
+Nếu đường dẫn và tệp đều đúng, hãy kiểm tra tiếp phiên bản định dạng, khả năng hỗ trợ của ứng dụng khách và lỗi tải thực tế.
 
 ## Cập nhật và gỡ bỏ
 
 Trước khi cập nhật, hãy sao lưu thư mục cũ. Sau khi xác nhận gói mới dùng được, thay `pet.json` và spritesheet.
 
-Khi gỡ bỏ, xóa thư mục `~/.codex/pets/<pet-id>/`, rồi khởi động lại Codex hoặc làm mới cài đặt Pets.
+Trước khi tắt Pet tùy chỉnh, hãy chuyển về Pet có sẵn hoặc ẩn Pets. Sau đó chuyển gói tùy chỉnh tới vị trí sao lưu nằm ngoài thư mục mà ứng dụng khách quét. Làm mới hoặc khởi động lại và xác nhận gói không còn xuất hiện. Muốn khôi phục, đưa gói gốc trở lại và kiểm tra lại. Chỉ xóa bản sao lưu khi chắc chắn không cần nữa. Quy trình này chưa được thử trên phiên bản ứng dụng khách được trang này ghi nhận.
 
 ## Nhắc nhở an toàn
 

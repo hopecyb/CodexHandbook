@@ -1,0 +1,186 @@
+{
+  "created_at": "2026-09-18T02:13:14.007343+00:00",
+  "runs": [
+    {
+      "run_id": "run-01",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "9164960fcc303d1f1878084f0d559bf4665c5ec2207b2549cb218bc4e9d802b0",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-02",
+      "case": "article",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "4a7ef91950b01390d7a3c487ae1241c223ae1ccabbae4b7708b5091382aef58e",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-03",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "898aba379cd7648a6dd1827ce714cd40ac945528ce52bb0842ca48b3373f4b21",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-04",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "4cfce8515a9b66959ca7067c9bfbb10e51fa5b2d9b8fd9ca2170c4ac40120a18",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-05",
+      "case": "article",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "7a80076524591b4c8cd3a2d4e99fc2494297fc5c144333ae739c53985f6e2e1d",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-06",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "7ef0f65a536db062142f98bf6522438ecda3127d67e131e71176fb7e5578553c",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-07",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "4cfce8515a9b66959ca7067c9bfbb10e51fa5b2d9b8fd9ca2170c4ac40120a18",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-08",
+      "case": "article",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "7a80076524591b4c8cd3a2d4e99fc2494297fc5c144333ae739c53985f6e2e1d",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-09",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "7ef0f65a536db062142f98bf6522438ecda3127d67e131e71176fb7e5578553c",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-10",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "9164960fcc303d1f1878084f0d559bf4665c5ec2207b2549cb218bc4e9d802b0",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-11",
+      "case": "article",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "4a7ef91950b01390d7a3c487ae1241c223ae1ccabbae4b7708b5091382aef58e",
+      "status": "prepared"
+    },
+    {
+      "run_id": "run-12",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "898aba379cd7648a6dd1827ce714cd40ac945528ce52bb0842ca48b3373f4b21",
+      "status": "prepared"
+    }
+  ],
+  "protocol": {
+    "runs": 12,
+    "order": "A1, B1, B2, A2 per case; three cases parallel within each wave",
+    "agent_context": "fresh fork_turns=none each run",
+    "model_override": null,
+    "reasoning_override": null,
+    "model_label": null,
+    "permissions": "same inherited tools; only assigned run directory; no external network or communications",
+    "time_limit_seconds": 900,
+    "retries": "no automatic retries; failures retained",
+    "review": "same five axes; primary-agent review not blind; no human reviewer yet",
+    "isolation_limit": "instruction-scoped directories and new context, not OS-level filesystem isolation"
+  }
+}

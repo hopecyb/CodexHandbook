@@ -3,7 +3,7 @@ title: Ngữ cảnh hội thoại
 description: Thông tin trong cùng một thread tích lũy và hết hiệu lực thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5c0569d
+source_revision: 3968049
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

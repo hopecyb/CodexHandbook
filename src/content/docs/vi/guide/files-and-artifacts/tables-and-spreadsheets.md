@@ -3,7 +3,7 @@ title: Bảng và bảng tính
 description: Đọc, làm sạch, phân tích và xuất dữ liệu dạng CSV, Excel và bảng — tránh phá cấu trúc và mã hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: f9b9dfc
+source_revision: b08adec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

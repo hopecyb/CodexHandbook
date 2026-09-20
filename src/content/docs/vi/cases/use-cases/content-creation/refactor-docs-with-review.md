@@ -3,7 +3,7 @@ title: Refactor site tài liệu kèm review
 description: "Case: cập nhật hàng loạt liên kết và chương trong dự án tài liệu Astro/Starlight — diff nhỏ từng bước, kiểm chứng bằng build."
 locale: vi
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 리서치와 학습
 description: 출처가 있는 조사, 비교, 학습형 사례 진입점입니다. 검색, 인용, 결론 경계를 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 862362f
+source_revision: a0be881
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

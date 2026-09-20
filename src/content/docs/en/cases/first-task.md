@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details."
+  checkedAt: "2026-07-26"
 title: First task
 description: Complete a small change with a clear prompt and learn how to review results.
 locale: en
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# First task
 
 The example below assumes the **Desktop App** by default; CLI/IDE can use the same prompt.
 
@@ -52,10 +59,3 @@ If information is insufficient, ask me first; do not guess.
 - [Prompt basics](/en/prompts/basics/)
 - [Verification](/en/guide/verification/)
 - [Start here](/en/guide/start-here/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details.

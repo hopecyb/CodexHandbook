@@ -3,7 +3,7 @@ title: 먼저 브레인스토밍한 뒤 손대기
 description: 코드나 긴 글을 쓰기 전에, 구조화된 탐색으로 방안을 수렴합니다—재작업을 줄입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9bf8989
+source_revision: 9c5e679
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

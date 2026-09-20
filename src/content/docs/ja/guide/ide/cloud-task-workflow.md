@@ -3,7 +3,7 @@ title: IDE の Cloud タスク
 description: IDE から長時間タスクを Codex Cloud へ委任し、レビュー可能な結果へ戻ります。
 locale: ja
 source_locale: zh-CN
-source_revision: ea8a618
+source_revision: d5369b5
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

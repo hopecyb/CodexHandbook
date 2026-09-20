@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center 当前配置材料仍使用 `~/.codex/config.toml` 和 `~/.codex/.env` 作为可核实例；本页同时避免绑定具体字段名，只总结 CLI 常见配置意图、层级分工与风险边界，因此可按概念页标为 `verified`。"
+  checkedAt: "2026-07-26"
 title: CLI 配置
 description: 模型、沙盒、审批与 MCP——在终端里统一 Codex 行为。
 sidebar:
@@ -112,9 +117,3 @@ CLI 可能在执行 shell、写盘、联网前询问。团队应在 `AGENTS.md` 
 
 ## 参考来源
 - OpenAI Codex CLI configuration
----
-
-**状态：** verified  
-**适用产品：** CLI  
-**核验依据：** OpenAI Help Center 当前配置材料仍使用 `~/.codex/config.toml` 和 `~/.codex/.env` 作为可核实例；本页同时避免绑定具体字段名，只总结 CLI 常见配置意图、层级分工与风险边界，因此可按概念页标为 `verified`。  
-**最近核验：** 2026-07-26

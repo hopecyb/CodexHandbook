@@ -1,48 +1,39 @@
 ---
-title: "Harness Engineering (Ausführungs-Harness)"
-date: 2026-02-11
-year: 2026
-summary: "Harness Engineering gestaltet das System um das Modell: Tools, Speicher, Fehler, Evaluation, Rechte und Logs."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering (Ausführungsumgebung für Agenten)"
+description: "Hier geht es um die Ausführungsumgebung rund um das Modell: verfügbares Projektwissen, Tools, Tests, Feedback, Zustand und Fehlerbehebung. Neben der Modellleistung beeinflusst auch die Umgebung, ob eine Aufgabe abgeschlossen wird."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die nachstehenden Ereignisse und Projektangaben wurden anhand von Primärquellen geprüft. Die Lernempfehlungen sind Einschätzungen der Redaktion; die Quellenprüfung bedeutet keinen eigenen Produkttest."
+  evidence:
+    - label: "Fachartikel über Harness Engineering"
+      href: "https://openai.com/index/harness-engineering/"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Nachprüfbares Ereignis und Geltungsbereich
 
-# Harness Engineering (Ausführungs-Harness)
+**Datum: 2026-02-11 · Typ: Fachartikel zur Entwicklung.** OpenAI veröffentlichte *Harness engineering: leveraging Codex in an agent-first world* über die Erfahrungen eines Teams beim Aufbau einer Umgebung und von Feedback für Agenten. Das Datum gehört zum Artikel und bedeutet nicht, dass die betreffenden technischen Methoden damals erstmals entstanden.
 
-- Wichtige Daten:
-  - Application-engineering inflection: 2026-02-01
-- Offizielle Referenzen:
-  - https://platform.openai.com/docs/guides/evals
-  - https://platform.openai.com/docs/guides/tools
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+Quelle: [Fachartikel über Harness Engineering](https://openai.com/index/harness-engineering/). Geprüft am 2026-09-18; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-## Was Es Ist
+## Welches Problem wird damit gelöst?
 
-Harness Engineering gestaltet das System um das Modell: Tools, Speicher, Fehler, Evaluation, Rechte und Logs.
+Hier geht es um die Ausführungsumgebung rund um das Modell: verfügbares Projektwissen, Tools, Tests, Feedback, Zustand und Fehlerbehebung. Neben der Modellleistung beeinflusst auch die Umgebung, ob eine Aufgabe abgeschlossen wird.
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+## Lernempfehlung und Geltungsgrenzen
 
-Es bewegt Engineering von isolierten Prompts zu einer vollständigen Ausführungsumgebung.
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-## In Welcher Phase Es Jetzt Ist
+Richte zuerst Prüfungen ein, die Fehler erkennen können, und erweitere erst danach den Umfang automatisierter Ausführung. Bestandene Tests belegen nur die von ihnen abgedeckten Verhaltensweisen; sie garantieren weder, dass alle Anforderungen korrekt erfüllt sind, noch, dass alle Fehler ausgeschlossen wurden. Die Erfahrungen und Effizienzschätzungen des Teams im Artikel lassen sich nicht direkt auf diese Website übertragen.
 
-Aktuell ordne ich diesen Punkt als `emerging` ein.
+## Praktische Übung
 
-Es ist aufstrebend, aber für zuverlässige Agenten in Produktion notwendig.
+[Methode und Beispielsammlung zur Workflow-Bewertung](/de/guide/quality/workflow-evaluation/): Wähle ein Beispiel und erfasse Auslösung, Grenzen, Format, Qualität und Zeitaufwand getrennt, jeweils mit Belegen aus der Ausgabe. Nicht ausgeführte Dimensionen bleiben als nicht ausgeführt gekennzeichnet.
 
-## Was Es Ersetzen Könnte
-
-Es ersetzt den Versuch, jeden Fehler nur mit mehr Prompt zu beheben.
-
-## Was Es Ersetzen Könnte
-
-Es verschmilzt mit Agent-Runtimes, Workflow-Engines und Evaluationssystemen.
+[Zurück zur Roadmap und ihren Datumsregeln](/de/ai-roadmap/)

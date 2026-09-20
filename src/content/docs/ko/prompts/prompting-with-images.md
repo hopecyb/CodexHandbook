@@ -3,7 +3,7 @@ title: 이미지 프롬프트
 description: Codex에 스크린샷, 디자인 시안, 화이트보드를 줄 때 실행 가능한 결과를 얻기 쉬운 질문법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

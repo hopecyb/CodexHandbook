@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI 当前帮助中心仍确认 IDE extension 为正式入口之一；本页按“扩展无响应 / 登录状态 / 工作区与上下文”三类分流 IDE 问题，属于稳定的排障框架，而不是特定错误码手册。"
+  checkedAt: "2026-07-26"
 title: IDE 排障
 description: 扩展加载、上下文与同步问题。
 sidebar:
@@ -55,10 +60,3 @@ IDE 出问题时，先分清是“扩展没起来”，还是“扩展起来了�
 IDE 排障最常见的根因，多半是工作区、登录状态或上下文源头不对，不一定真是插件损坏。
 
 官方说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
-
----
-
-**状态：** verified  
-**适用产品：** IDE  
-**核验依据：** OpenAI 当前帮助中心仍确认 IDE extension 为正式入口之一；本页按“扩展无响应 / 登录状态 / 工作区与上下文”三类分流 IDE 问题，属于稳定的排障框架，而不是特定错误码手册。  
-**最近核验：** 2026-07-26

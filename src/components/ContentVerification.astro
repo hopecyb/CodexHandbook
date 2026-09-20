@@ -1,0 +1,39 @@
+---
+const { entry } = Astro.locals.starlightRoute;
+const { verification, legacyVerification, editorialStatus } = entry.data;
+const traditional = entry.id.startsWith('zh-tw/');
+const cn = !/^(en|de|es|fr|ja|ko|pt|vi)\//.test(entry.id);
+const labels = traditional
+	? { editorial: '編輯審閱', 'source-checked': '來源核對', 'run-tested': '示例實跑' }
+	: { editorial: '编辑审阅', 'source-checked': '来源核对', 'run-tested': '示例实跑' };
+const statusLabels = traditional
+	? { planned: '規劃', draft: '草稿', review: '待複核', verified: '已核對', outdated: '待更新', archived: '歸檔' }
+	: { planned: '规划', draft: '草稿', review: '待复核', verified: '已核对', outdated: '待更新', archived: '归档' };
+---
+
+{cn && (verification || legacyVerification || editorialStatus) && (
+	<aside class="verification" aria-label={traditional ? '內容核驗記錄' : '内容核验记录'} data-pagefind-ignore>
+		{editorialStatus && <p>{traditional ? '編輯狀態' : '编辑状态'}：{statusLabels[editorialStatus]}</p>}
+		{verification ? <>
+			<p><strong>{labels[verification.kind]}</strong> · <time datetime={verification.checkedAt}>{verification.checkedAt}</time></p>
+			<p>{verification.summary}</p>
+			{(verification.environment || verification.evidence.length > 0) && <details>
+				<summary>{traditional ? '查看驗證環境與證據' : '查看验证环境与证据'}</summary>
+				{verification.environment && <p>{traditional ? '驗證環境' : '验证环境'}：{verification.environment}</p>}
+				{verification.evidence.length > 0 && <ul>{verification.evidence.map(item => <li><a href={item.href}>{item.label}</a></li>)}</ul>}
+			</details>}
+		</> : <p>{traditional ? '尚未登記結構化驗證證據；不代表本頁示例已實跑。' : '尚未登记结构化验证证据；不代表本页示例已实跑。'}</p>}
+		{legacyVerification && <details>
+			<summary>{traditional ? '歷史核驗說明' : '历史核验说明'}{legacyVerification.checkedAt ? ` · ${legacyVerification.checkedAt}` : ''}</summary>
+			<p>{traditional ? '原狀態' : '原状态'}：{legacyVerification.status}</p>
+			{legacyVerification.products && <p>{traditional ? '原適用範圍聲明' : '原适用范围声明'}：{legacyVerification.products}</p>}
+			{legacyVerification.basis && <p>{legacyVerification.basis}</p>}
+		</details>}
+	</aside>
+)}
+
+<style>
+	.verification { margin-block: 1rem; padding: .8rem 1rem; border-inline-start: 3px solid var(--sl-color-accent); background: var(--sl-color-gray-6); font-size: var(--sl-text-sm); overflow-wrap: anywhere; }
+	p, ul { margin: .3rem 0; }
+	summary { cursor: pointer; }
+</style>

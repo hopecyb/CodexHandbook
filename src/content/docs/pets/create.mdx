@@ -1,11 +1,18 @@
 ---
 title: 制作 Codex Pet
 description: "从素材、spritesheet、元数据和授权四个角度理解 Codex Pet 的制作原理。"
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 已补充格式与恢复边界；尚无本站客户端安装、动画播放或卸载实测记录，目录与菜单应以目标版本为准。
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# 制作 Codex Pet
+本站尚未完成具体客户端与宠物包的兼容测试。请先记录版本与来源，使用[兼容及恢复记录](/guide/reference/resource-compatibility/)核对实际结果。示意图只解释结构，不代表所有版本的格式契约。
+
 
 制作 Codex Pet 的目标不是单独得到一张好看的图片，而是得到一个 Codex 能识别、能播放、能切换状态的资源包。你可以把它理解成“元数据 + 动画图集 + 授权说明”的组合。
 
@@ -23,15 +30,9 @@ import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
 Spritesheet 是把多帧动画合并到一张大图里的做法。客户端不需要加载几十张小图，而是按行列坐标从大图中裁切每一帧，再连续播放。
 
-很多 Codex Pet 资源使用以下 atlas 约定：
+图集规格与版本字段必须一起核对。本站旧示意图采用 8 列 × 9 行、每帧 192 × 208 px（整图 1536 × 1872 px）；它不能用作所有客户端的通用规格。制作前应获取目标客户端或制作工具对应版本的格式说明，确认行列数、动作映射和版本字段，再生成素材。
 
-- 8 列 x 9 行
-- 每帧 192 x 208 px
-- 整图 1536 x 1872 px
-- 72 帧
-- WebP 或来源工具明确支持的图片格式
-
-这些规格是常见约定，不是永远不变的规则。制作前先确认当前 Codex 客户端、生成工具或资源来源使用的实际契约。
+扩展图集不能仅修改图片高度而沿用旧元数据。缺少可追溯的格式说明时，先停止制作并查明契约，不凭示意图推断兼容。
 
 ## 准备素材
 
@@ -47,7 +48,7 @@ Spritesheet 是把多帧动画合并到一张大图里的做法。客户端不�
 
 ## `pet.json` 负责什么
 
-`pet.json` 至少要说明宠物身份和 spritesheet 路径。一个最小示例：
+下面只演示身份与素材路径字段，不是已经验证可安装的完整包；实际格式可能还需要版本字段：
 
 ```json
 {
@@ -64,7 +65,7 @@ Spritesheet 是把多帧动画合并到一张大图里的做法。客户端不�
 - 文件夹名和 `id` 一致。
 - `spritesheetPath` 使用相对路径。
 - `description` 写清楚这个宠物是什么，不写空泛描述。
-- 额外元数据中保留作者、版本、来源和许可。
+- 在随包 README 或 LICENSE 中保留作者、版本、来源和许可；不要假定客户端接受任意扩展字段。
 
 `pet.json` 的作用不是保存动画本身，而是告诉客户端“这个包是谁、素材在哪里、应该怎么解释”。当素材路径、文件名或目录结构不一致时，客户端通常就无法加载。
 

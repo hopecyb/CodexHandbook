@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "Recoupement avec la structure actuelle du chapitre plateforme développeur, les entrées de navigation et les pages CLI/CI/SDK liées dans ce dépôt ; cette page ne décrit que la division stable que la plateforme développeur vise l'intégration d'ingénierie, sans prétendre à des paramètres ou comportement d'exécution spécifiques."
+  checkedAt: "2026-07-26"
 title: "Plateforme développeur"
 description: Intégrez Codex dans votre stack d'ingénierie avec SDK, CLI non interactif et CI/CD — pour les développeurs d'intégration.
 sidebar:
   order: 50
 locale: fr
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 La **Plateforme développeur** est pour ceux qui veulent **industrialiser** Codex dans les pipelines : apps personnalisées, revue par lot, portes de release, portails développeur internes. Pour l'usage quotidien « écrire un prompt pour corriger un bug », commencez par [Premiers pas](/fr/guide/getting-started/).
@@ -40,13 +44,15 @@ Il vise des scénarios comme :
 
 ```text
 Votre système (CI / plateforme interne / SaaS)
-        ↓ API ou CLI
-Codex (modèle + outils + politique)
+        ↓ SDK / CLI local, ou client App Server
+Environnement d’exécution contrôlé (appels au modèle + outils + politique)
         ↓
 Fournisseur Git / tickets / stockage d'artefacts
 ```
 
 ## Principes de design
+
+Le SDK Codex exécute un Agent local. Un runner distant, une file et des rappels HTTP que vous créez relèvent de la conception de votre système d’intégration. Ne déduisez pas de ce schéma l’existence d’une API unifiée de tâches cloud hébergées. Voir la [présentation du SDK](/fr/guide/developer-platform/sdk-overview/) pour les sources et un appel minimal.
 
 1. **Idempotent et réessayable** : une revue répétée du même PR devrait donner des résultats comparable
 2. **Privilège minimum** : tokens CI en lecture seule ou limités à des dépôts spécifiques
@@ -85,9 +91,3 @@ Le chapitre plateforme développeur traite le câblage de Codex dans les systèm
 
 ## Sources de référence
 - Documentation officielle API / SDK OpenAI Codex
----
-
-**Statut :** vérifié  
-**Produits concernés :** API / CLI / Cloud  
-**Base de vérification :** Recoupement avec la structure actuelle du chapitre plateforme développeur, les entrées de navigation et les pages CLI/CI/SDK liées dans ce dépôt ; cette page ne décrit que la division stable que la plateforme développeur vise l'intégration d'ingénierie, sans prétendre à des paramètres ou comportement d'exécution spécifiques.  
-**Dernière vérification :** 2026-07-26

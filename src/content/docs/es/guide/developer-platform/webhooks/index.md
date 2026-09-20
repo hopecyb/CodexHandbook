@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "Contrastado con la estructura actual del subcapítulo webhooks y sus enlaces de entrada; esta página solo aclara que el Webhook actúa como «disparador de eventos» en la integración, sin fijar campos de evento ni detalles de implementación como contrato."
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: 'Página de integración disparada por eventos: el Webhook recibe notificaciones; no sustituye el diseño del flujo de trabajo.'
 locale: es
 source_locale: zh-CN
-source_revision: b718fb3
+source_revision: 68cb29b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,10 +30,3 @@ En integraciones de Codex, resuelve «llegó un evento externo → cómo dispara
 - Por qué el Webhook es solo un disparador, no una automatización completa
 
 Un Webhook es más un timbre: te dice «pasó algo»; cómo lo tratas después lo defines tú en el flujo.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** API / Cloud  
-**Base de verificación:** Contrastado con la estructura actual del subcapítulo webhooks y sus enlaces de entrada; esta página solo aclara que el Webhook actúa como «disparador de eventos» en la integración, sin fijar campos de evento ni detalles de implementación como contrato.  
-**Última verificación:** 2026-07-26

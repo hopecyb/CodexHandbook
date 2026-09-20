@@ -1,79 +1,74 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 title: Tạo Pull Request
-description: "Từ Tác vụ Cloud tới PR có thể review — mô tả, phạm vi và cổng merge của người."
+description: Chuyển kết quả Cloud thành PR có thể đánh giá và xác minh, không tự động hợp nhất.
 locale: vi
 source_locale: zh-CN
-source_revision: 70996a7
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "39371d4"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
 ---
 
-Inspect the summary and diff after a Cloud task. Create a pull request only when the result satisfies scope and verification criteria; otherwise, continue correcting it in the same chat.
+Sau khi tác vụ Cloud hoàn tất, hãy kiểm tra bản tóm tắt và diff trước. Chỉ tạo Pull Request khi kết quả đáp ứng phạm vi và tiêu chí xác minh; nếu chưa đạt, tiếp tục sửa trong cùng cuộc trò chuyện.
 
-## From task to PR
+## Từ tác vụ đến PR
 
 ```text
-Select environment and starting branch
-  → run the Cloud task
-  → review summary, logs, and diff
-  → follow up if needed
+Chọn môi trường và nhánh bắt đầu
+  → chạy tác vụ Cloud
+  → xem bản tóm tắt, nhật ký và diff
+  → theo dõi và yêu cầu sửa nếu cần
   → Create Pull Request
-  → CI + supplementary Codex review + human review
-  → a person decides whether to merge
+  → CI + Codex review bổ sung + đánh giá của con người
+  → con người quyết định có hợp nhất hay không
 ```
 
-Tell Codex to “create a PR, do not merge,” but do not rely on a natural-language constraint alone. Enable branch protection and required checks in the repository.
+Hãy ghi rõ trong lời nhắc “tạo PR, không hợp nhất”, nhưng đừng chỉ dựa vào ràng buộc bằng ngôn ngữ tự nhiên. Kho mã cũng cần bật bảo vệ nhánh và các bước kiểm tra bắt buộc.
 
-## Reusable task template
+## Mẫu tác vụ có thể dùng lại
 
 ```text
-Goal: Fix the sign-in timeout regression in issue #42.
-Starting point: main.
-Scope: packages/auth/** and the corresponding tests only.
-Do not: upgrade dependencies, change the public API, or write directly to main.
-Verification: pnpm test --filter auth; pnpm typecheck.
-Deliverable: Create a PR to main, but do not merge it.
-The PR description must include the root cause, change summary, test commands
-and results, risks, and rollback approach.
+Mục tiêu: sửa hồi quy khiến đăng nhập hết thời gian chờ ở issue #42.
+Điểm bắt đầu: main.
+Phạm vi: chỉ packages/auth/** và các bài kiểm thử tương ứng.
+Không được: nâng cấp phần phụ thuộc, thay đổi API công khai, ghi trực tiếp vào main.
+Xác minh: pnpm test --filter auth; pnpm typecheck.
+Bàn giao: tạo PR vào main, nhưng không hợp nhất.
+Mô tả PR phải gồm nguyên nhân gốc, tóm tắt thay đổi, lệnh và kết quả kiểm thử,
+rủi ro cùng cách hoàn tác.
 ```
 
-## Before creation
+## Kiểm tra trước khi tạo
 
-- [ ] Starting commit is correct and no required local input remains unpushed.
-- [ ] Diff contains only the task scope.
-- [ ] The new branch name is recognizable and does not overwrite another person's work.
-- [ ] Tests actually ran and failures are not hidden by the summary.
-- [ ] No credentials, temporary logs, caches, or unrelated formatting.
-- [ ] A large change is split into independently reviewable PRs.
+- [ ] Commit bắt đầu là đúng; không bỏ sót đầu vào cục bộ chưa được push
+- [ ] Diff chỉ chứa những thay đổi thuộc phạm vi tác vụ
+- [ ] Tên nhánh mới dễ nhận biết và không ghi đè công việc của người khác
+- [ ] Các bài kiểm thử đã thực sự chạy, lỗi không bị che trong bản tóm tắt
+- [ ] Không có thông tin xác thực, nhật ký tạm, bộ nhớ đệm hoặc thay đổi định dạng không liên quan
+- [ ] Thay đổi lớn đã được chia thành các PR có thể đánh giá độc lập
 
-## Minimum PR description
+## Mô tả PR tối thiểu phải trả lời
 
-1. Why the change is required.
-2. What actually changed.
-3. How it was verified, including commands and results.
-4. Risks, limitations, and rollback.
-5. What was explicitly not done.
+1. Vì sao cần thay đổi;
+2. Thực tế đã thay đổi những gì;
+3. Đã xác minh bằng cách nào, gồm lệnh và kết quả;
+4. Rủi ro, giới hạn và cách hoàn tác;
+5. Những việc nào được xác định rõ là chưa làm.
 
-Add real screenshots for UI changes, reproduction steps for behavior changes, and compatibility and rollback details for migrations.
+Với thay đổi giao diện, thêm ảnh chụp màn hình thực tế; với thay đổi hành vi, thêm các bước tái hiện; với thay đổi có di chuyển dữ liệu hoặc hệ thống, giải thích khả năng tương thích và cách hoàn tác.
 
-## After creation
+## Sau khi tạo
 
-Wait for required checks, request supplementary review with `@codex review`, and have a person with context inspect the main diff. Return specific comments to the same PR branch; do not create an unrelated duplicate branch.
+Đợi các bước kiểm tra bắt buộc hoàn tất, dùng `@codex review` để yêu cầu đánh giá bổ sung, rồi nhờ người nắm bối cảnh kiểm tra diff chính. Khi cần sửa, đưa các bình luận cụ thể trở lại cùng nhánh PR; đừng tạo một nhánh không liên quan khiến xuất hiện hai bộ kết quả.
 
-Opening and merging a PR are separate permission boundaries. Cloud being able to create a PR does not justify bypassing the team's merge policy.
+Mở PR và hợp nhất PR là hai ranh giới quyền hạn khác nhau. Cloud có thể tạo PR không có nghĩa là được bỏ qua chính sách hợp nhất của nhóm.
 
-## Official sources
+## Tài liệu chính thức
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Cloud, GitHub
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Đánh giá Pull Request trên GitHub](https://learn.chatgpt.com/docs/third-party/github)

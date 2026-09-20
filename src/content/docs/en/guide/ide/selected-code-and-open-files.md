@@ -3,7 +3,7 @@ title: Selection and open files
 description: Using selected code and open files to narrow IDE task scope precisely.
 locale: en
 source_locale: zh-CN
-source_revision: 032d53f
+source_revision: b6b264f
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

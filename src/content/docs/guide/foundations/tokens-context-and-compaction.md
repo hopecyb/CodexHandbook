@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明 token、上下文窗口与压缩的基本概念；站内链接与示例表述已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: Token、上下文与压缩
 description: 理解上下文窗口、占用与压缩。
 sidebar:
@@ -58,10 +63,3 @@ sidebar:
 - 原理与操作建议见 [上下文压缩](/guide/context/compaction/) 与 [保持上下文聚焦](/guide/context/keep-context-focused/)
 
 这里先讲概念。具体怎么控制，可以接着看 `05`。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明 token、上下文窗口与压缩的基本概念；站内链接与示例表述已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

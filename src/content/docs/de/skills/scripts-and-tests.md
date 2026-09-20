@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-Laufzeit erlaubt Skills mit Skripten und deterministischen Befehlen; das Prinzip „stabile Aktionen skripten, Ablauf bleibt Skill-gesteuert“ passt zur aktuellen Fähigkeit."
+  checkedAt: "2026-07-26"
 title: scripts/ und Tests
 description: Deterministische Skripte im Skill ergänzen und ihr Verhalten prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Am Anfang landet oft alles in `SKILL.md`. Bei einfachen Abläufen okay — sobal
 
 Feste Aktionen → Skript; Urteil und Koordination → Skill.
 
-# scripts/ und Tests
 
 Muss ein Schritt deterministisch laufen (Tests, Diff erzeugen, Format prüfen), gehört das Skript nach `scripts/`, und `SKILL.md` sagt, wann es aufgerufen wird.
 
@@ -76,9 +80,3 @@ So trennst du „Skript kaputt“ von „Skill-Integration falsch“.
 Stabile, wiederholbare Aktionen nicht nur in Prosa belassen. Zuerst Skript durchziehen, dann Skill-Aufruf prüfen.
 
 Skripte erben die aktuelle Freigabe-Politik; siehe [Befehlsregeln](/de/guide/customization/rules/command-rules/) und [Skill-Sicherheit](/de/skills/security/).
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuelle Codex-Laufzeit erlaubt Skills mit Skripten und deterministischen Befehlen; das Prinzip „stabile Aktionen skripten, Ablauf bleibt Skill-gesteuert“ passt zur aktuellen Fähigkeit.  
-**Zuletzt geprüft:** 2026-07-26

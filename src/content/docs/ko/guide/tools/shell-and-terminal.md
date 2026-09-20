@@ -3,7 +3,7 @@ title: Shell과 터미널
 description: 명령 실행의 능력과 위험.
 locale: ko
 source_locale: zh-CN
-source_revision: 0b4d40a
+source_revision: 1438fc7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

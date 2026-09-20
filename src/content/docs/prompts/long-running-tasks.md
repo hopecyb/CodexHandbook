@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明长任务拆分与交接方法；站内链接与阶段示例已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 长任务提示
 description: 拆分阶段、检查点与交接信息。
 ---
@@ -71,10 +76,3 @@ description: 拆分阶段、检查点与交接信息。
 更合适的做法，是让每一段都能停下来检查，而不是一口气做完。
 
 配合：[进度与引导](/guide/agent-work/progress-and-steering/) · [交接与恢复](/guide/agent-work/handoff-and-resume/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明长任务拆分与交接方法；站内链接与阶段示例已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

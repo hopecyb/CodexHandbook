@@ -1,73 +1,63 @@
 ---
 title: Ligar o GitHub
-description: Associar o Codex Cloud a repositórios GitHub — Permissões, branches e ambiente.
+description: Configura o acesso do Codex Cloud ao GitHub com o menor conjunto de repositórios necessário.
 locale: pt
 source_locale: zh-CN
-source_revision: b811894
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: b126a7e
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
+Antes de criar um ambiente para um repositório, o Codex Cloud precisa de uma ligação ao GitHub ou ao GitLab (Beta). O âmbito da autorização do GitHub determina que repositórios consegue ver. Um clone local e as alterações ainda não enviadas para o remoto ficam fora desse âmbito.
 
-Codex Cloud connects to GitHub or GitLab (Beta) before creating an environment for a repository. The GitHub authorization scope determines which repositories it can see. A local clone and unpushed changes are outside that scope.
+## Passos para ligar
 
-## Connect
+1. Abre o Codex Cloud e inicia sessão com uma conta ChatGPT.
+2. Liga o GitHub quando a aplicação o pedir.
+3. No ecrã de autorização do GitHub, seleciona a organização e **apenas os repositórios necessários**.
+4. Volta ao Codex, seleciona o repositório e cria um ambiente Cloud.
+5. Usa uma tarefa só de leitura ou com uma pequena alteração para verificar o clone, o ramo e o diff.
+6. Se precisares de revisão de PR, ativa Code review para o repositório em Codex Settings.
 
-1. Open Codex Cloud and sign in with a ChatGPT account.
-2. Connect GitHub when prompted.
-3. In GitHub authorization, select the organization and **only the required repositories**.
-4. Return to Codex, select the repository, and create a Cloud environment.
-5. Verify checkout, branch, and diff with a read-only or small-change task.
-6. To use PR review, enable Code review for the repository in Codex Settings.
+Autoriza apenas os repositórios necessários para esta tarefa. Para repositórios de equipa, confirma também que a organização permite instalar a integração, que a tua conta tem as permissões adequadas e que a proteção dos ramos se mantém.
 
-Authorize only repositories needed for the work. For team repositories, confirm that the organization permits the integration, your account has the required access, and branch protection remains enabled.
+## Verificações antes e depois de ligar
 
-## Before and after connecting
+- [ ] O repositório de destino não é um fork com o mesmo nome escolhido por engano.
+- [ ] O ramo predefinido e o ponto de partida da tarefa estão confirmados.
+- [ ] As alterações locais necessárias já foram enviadas ou estão expressamente excluídas da tarefa.
+- [ ] Escritas diretas no ramo principal sem revisão estão bloqueadas.
+- [ ] O ambiente não contém credenciais de produção com permissões totais.
+- [ ] A primeira tarefa altera apenas ficheiros de baixo risco.
 
-- [ ] The target is not an unintended fork with the same name.
-- [ ] The default branch and task starting point are known.
-- [ ] Required local changes are pushed or explicitly excluded.
-- [ ] Direct, unreviewed writes to the main branch are blocked.
-- [ ] The environment has no unrestricted production credentials.
-- [ ] The first task changes only a low-risk file.
+## Duas formas de usar o GitHub
 
-## Two GitHub workflows
+### Pedir ao Cloud que implemente uma tarefa
 
-### Let Cloud implement a task
+No Codex Cloud, seleciona o ambiente do repositório e o ramo de partida e descreve o objetivo. Quando a tarefa terminar, revê o diff antes de criar um PR.
 
-Select the repository environment and starting branch in Codex Cloud, then describe the goal. Review the diff before creating a PR.
+### Pedir ao Codex que reveja um PR
 
-### Let Codex review a PR
-
-After enabling Code review, comment on the PR:
+Depois de ativares Code review para o repositório, escreve num comentário do PR:
 
 ```text
 @codex review
 ```
 
-Codex posts a standard GitHub review. Automatic review must be enabled separately in Codex Settings. Teams can add repository-specific rules under `## Code Review Rules` in `AGENTS.md`.
+O Codex publica uma revisão padrão do GitHub. A revisão automática tem de ser ativada separadamente em Codex Settings. A equipa pode acrescentar regras específicas do repositório em `## Code Review Rules` no `AGENTS.md`.
 
-## Diagnose permission errors
+## Como diagnosticar erros de permissão
 
-- Repository missing: inspect the GitHub repository scope.
-- Organization repository returns 403: inspect organization policy, SSO, and integration installation.
-- Automatic review cannot be enabled: confirm the required GitHub push or admin permission.
-- Cloud cannot see a local commit: Cloud checks out the remote repository; push it to an explicit branch.
+- **O repositório não aparece na lista**: verifica o âmbito dos repositórios autorizados no GitHub.
+- **Um repositório da organização devolve 403**: verifica as políticas da organização, o SSO e a permissão para instalar a integração.
+- **Não é possível ativar a revisão automática**: confirma que tens as permissões GitHub push ou admin necessárias à configuração.
+- **O Cloud não vê um commit local**: o Cloud faz checkout apenas do repositório remoto; envia primeiro o commit para um ramo explícito.
 
-Do not grant access to every private repository to resolve one 403. Identify the exact target and missing permission first.
+Não autorizes todos os repositórios privados só para resolver um erro 403. Identifica primeiro o repositório pretendido e a permissão específica em falta.
 
-## Official sources
+## Fontes oficiais
 
-- [Codex Cloud quickstart](https://learn.chatgpt.com/docs/cloud)
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26
+- [Início rápido do Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Revisão de Pull Requests do GitHub](https://learn.chatgpt.com/docs/third-party/github)

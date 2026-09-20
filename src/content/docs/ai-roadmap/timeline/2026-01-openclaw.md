@@ -1,54 +1,29 @@
 ---
-title: OpenClaw（个人 AI 助手网关）
-date: 2026-01-29
-year: 2026
-summary: 把微信、邮件、命令行等各种入口统一接入，让同一个 AI 助手在任何地方都能帮你调工具、处理任务。
-phase: emerging
-trend: rising
-signal: over-hyped
-adoption_effort: integration-heavy
-tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
-authored_by: ai-assisted
+title: "OpenClaw（个人 AI 助手项目）"
+description: "此专题用于讨论个人助手接入渠道、会话与外部能力时需要管理的边界。具体支持渠道、安装方式和权限随项目版本变化，以对应版本说明为准。"
+contentType: "guide"
+editorialStatus: "review"
+verification: {"kind": "source-checked", "checkedAt": "2026-09-18", "summary": "已核对下列一手来源中的事件或项目说明；学习建议是作者判断，未将来源核对标为产品实跑。", "evidence": [{"label": "OpenClaw 官方仓库", "href": "https://github.com/openclaw/openclaw"}]}
 ---
 
-# OpenClaw
+## 可核对的事件与范围
 
-- 重要时间点：
-  - npm 首发（`openclaw@0.0.1`）：2026-01-29
-  - 稳定通道早期版本（如 `2026.1.29`）：2026-01-30
-- 官方资料：
-  - https://github.com/openclaw/openclaw
-  - https://openclaw.ai
-  - https://docs.openclaw.ai/start/getting-started
-  - https://www.npmjs.com/package/openclaw
-- 说明：此条目记录 OpenClaw 作为“个人 AI 助手 + 多渠道网关”工程形态进入公开可安装阶段的时间节点与意义。
+**类型：项目专题 · 不按首发日期排序。** 本页以 OpenClaw 官方仓库为项目身份与说明来源。本次没有获得足以确认项目首次发布的证据，因此不展示首发日期。
 
-## 它是什么
+来源：[OpenClaw 官方仓库](https://github.com/openclaw/openclaw)。核对日期为 2026-09-18；来源发表日期与本页核对日期含义不同。
 
-OpenClaw 是一个可在个人设备上运行的 AI 助手系统。官方将其描述为 personal AI assistant，并以 Gateway 作为控制平面来统一会话、渠道、工具和事件。
+## 它解决什么问题
 
-它强调本地优先与多渠道接入：在统一网关下连接聊天渠道、工具调用、会话管理与自动化能力，而不是把能力散落在单一聊天应用里。
+此专题用于讨论个人助手接入渠道、会话与外部能力时需要管理的边界。具体支持渠道、安装方式和权限随项目版本变化，以对应版本说明为准。
 
-## 它把 AI 应用工程从哪一步推进到了哪一步
+## 学习建议与适用边界
 
-它把“单客户端里的 AI 对话”推进到了“跨渠道、可路由、可运维的个人助手系统”。
+以下是本站的教学判断，不是行业普及率或效果测量：
 
-从工程角度看，OpenClaw 把常见个人 AI 使用场景中的几件事合在了一起：消息入口聚合、会话隔离、工具权限边界、以及持续运行网关。这使个人开发者也可以在单机或自管环境下构建更接近生产形态的 assistant runtime。
+评估这类项目时，先画出消息来源、数据去向、凭证位置和允许的外部动作。跨渠道接入会扩大需要管理的范围；能够连接不代表可以自动发送或修改。
 
-## 现在看，它处于什么阶段
+## 动手练习
 
-目前我把 OpenClaw 标记为 `emerging`。
+[扩展方式怎么选](/skills/choosing-an-extension-method/)：列出一个拟接入场景需要的能力，比较是否已有更小范围的扩展方式，并写出停止与撤销方案。本站没有在此页提供 OpenClaw 安装实测或兼容性保证。
 
-依据是：它已经具备明确 CLI、持续更新版本线、文档体系和多渠道集成能力；但从生态成熟度看，仍处于快速迭代阶段，配置规范、默认安全策略和团队级最佳实践还在持续收敛。
-
-## 它可能替代什么
-
-它可能替代一部分“每个平台单独配一个 bot/agent”的碎片化方式。
-
-对于个人或小团队，它提供了统一入口，减少渠道与工具层面的重复配置和分散运维成本。
-
-## 它可能被什么替代
-
-如果未来主流操作系统或主流协作平台原生提供统一的个人 AI runtime（含多渠道、权限治理、工具编排），OpenClaw 这类自管网关形态可能被上层平台能力吸收。
-
-但在可定制、自托管与跨渠道控制需求持续存在的情况下，这一类网关型项目仍有长期价值。
+[返回路线图与日期口径](/ai-roadmap/)

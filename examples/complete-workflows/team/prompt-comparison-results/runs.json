@@ -1,0 +1,409 @@
+{
+  "runs": [
+    {
+      "run_id": "run-01",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "9164960fcc303d1f1878084f0d559bf4665c5ec2207b2549cb218bc4e9d802b0",
+      "status": "completed",
+      "start": "2026-09-18T02:13:40.562192+00:00",
+      "end": "2026-09-18T02:16:27.378242+00:00",
+      "elapsed_seconds": 166.82,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "tool": "functions.exec",
+          "error": "SyntaxError: Invalid or unexpected token; no shell command executed"
+        },
+        {
+          "tool": "exec_command",
+          "exit_code": 1,
+          "error": "FileNotFoundError reading data-dictionary.md at run root; resolved by using input/data-dictionary.md"
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/region-summary.csv",
+        "output/row-ledger.csv",
+        "output/top-products.csv",
+        "output/weekly-report.md"
+      ]
+    },
+    {
+      "run_id": "run-02",
+      "case": "article",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "4a7ef91950b01390d7a3c487ae1241c223ae1ccabbae4b7708b5091382aef58e",
+      "status": "completed",
+      "start": "2026-09-18T02:13:53.398438+00:00",
+      "end": "2026-09-18T02:16:24.076194+00:00",
+      "elapsed_seconds": 150.68,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "tool": "functions.exec",
+          "error": "SyntaxError: Invalid or unexpected token",
+          "effect": "Generation command did not execute; corrected and rerun successfully."
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/拾页1.2介绍.md"
+      ]
+    },
+    {
+      "run_id": "run-03",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 1,
+      "wave": 1,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "898aba379cd7648a6dd1827ce714cd40ac945528ce52bb0842ca48b3373f4b21",
+      "status": "complete",
+      "start": "2026-09-18T02:13:58.478109+00:00",
+      "end": "2026-09-18T02:14:57+00:00",
+      "elapsed_seconds": 58.52,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "command_number": 2,
+          "error": "zsh:21: unmatched `",
+          "exit_code": 1,
+          "recovered": true
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/cart.js",
+        "output/cart.test.js",
+        "output/package.json"
+      ]
+    },
+    {
+      "run_id": "run-04",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "4cfce8515a9b66959ca7067c9bfbb10e51fa5b2d9b8fd9ca2170c4ac40120a18",
+      "status": "complete",
+      "start": "2026-09-18T02:16:58.987104+00:00",
+      "end": "2026-09-18T02:20:58+00:00",
+      "elapsed_seconds": 239.01,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "command": "cat data-dictionary.md; cat input/sales.csv",
+          "error": "cat: data-dictionary.md: No such file or directory",
+          "recovery": "Located and read input/data-dictionary.md within assigned directory."
+        },
+        {
+          "tool": "apply_patch",
+          "error": "invalid patch: multiple operations target telemetry/tool-log.md",
+          "recovery": "Replaced duplicate delete/add operation with update operation."
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/reconciliation.md",
+        "output/region-summary.csv",
+        "output/row-ledger.csv",
+        "output/top-products.csv",
+        "output/verification.md",
+        "output/weekly-report.md"
+      ]
+    },
+    {
+      "run_id": "run-05",
+      "case": "article",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "7a80076524591b4c8cd3a2d4e99fc2494297fc5c144333ae739c53985f6e2e1d",
+      "status": "completed",
+      "start": "2026-09-18T02:17:12.108092+00:00",
+      "end": "2026-09-18T02:19:23+00:00",
+      "elapsed_seconds": 130.89,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/fact-table.md",
+        "output/introduction.md",
+        "output/open-questions.md"
+      ]
+    },
+    {
+      "run_id": "run-06",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 1,
+      "wave": 2,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "7ef0f65a536db062142f98bf6522438ecda3127d67e131e71176fb7e5578553c",
+      "status": "complete",
+      "start": "2026-09-18T02:17:22.401043+00:00",
+      "end": "2026-09-18T02:19:03+00:00",
+      "elapsed_seconds": 100.6,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "tool": "apply_patch",
+          "error": "invalid patch: multiple operations target telemetry/tool-log.md",
+          "recovery": "Replaced content via single Update File patch; successful."
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/README.md",
+        "output/cart.js",
+        "output/cart.test.js",
+        "output/evidence/after.log",
+        "output/evidence/before.log",
+        "output/evidence/implementation.diff",
+        "output/evidence/results.json",
+        "output/package.json"
+      ]
+    },
+    {
+      "run_id": "run-07",
+      "case": "sales",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "4cfce8515a9b66959ca7067c9bfbb10e51fa5b2d9b8fd9ca2170c4ac40120a18",
+      "status": "completed",
+      "start": "2026-09-18T02:21:38.851964+00:00",
+      "end": "2026-09-18T02:24:17.427512+00:00",
+      "elapsed_seconds": 158.58,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "command": "cat data-dictionary.md && cat input/sales.csv",
+          "exit_code": 1,
+          "stderr": "cat: data-dictionary.md: No such file or directory",
+          "resolution": "Read input/data-dictionary.md instead."
+        }
+      ],
+      "telemetry_limitations": [
+        "Tool log includes exact read commands but summarizes Python heredoc bodies rather than preserving their full source."
+      ],
+      "output_paths": [
+        "output/checks.md",
+        "output/reconciliation.md",
+        "output/region-summary.csv",
+        "output/row-ledger.csv",
+        "output/top-products.csv",
+        "output/weekly-report.md"
+      ]
+    },
+    {
+      "run_id": "run-08",
+      "case": "article",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "7a80076524591b4c8cd3a2d4e99fc2494297fc5c144333ae739c53985f6e2e1d",
+      "status": "completed",
+      "start": "2026-09-18T02:21:42+00:00",
+      "end": "2026-09-18T02:23:56+00:00",
+      "elapsed_seconds": 134.0,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/fact-table.md",
+        "output/introduction.md",
+        "output/unresolved.md"
+      ]
+    },
+    {
+      "run_id": "run-09",
+      "case": "bug",
+      "variant": "B",
+      "repetition": 2,
+      "wave": 3,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "7ef0f65a536db062142f98bf6522438ecda3127d67e131e71176fb7e5578553c",
+      "status": "complete",
+      "start": "2026-09-18T02:21:58+00:00",
+      "end": "2026-09-18T02:23:09.292316+00:00",
+      "elapsed_seconds": 71.29,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/README.md",
+        "output/after.exit-code.txt",
+        "output/after.stderr.log",
+        "output/after.stdout.log",
+        "output/before.exit-code.txt",
+        "output/before.stderr.log",
+        "output/before.stdout.log",
+        "output/cart.js",
+        "output/cart.test.js",
+        "output/implementation.diff",
+        "output/package.json"
+      ]
+    },
+    {
+      "run_id": "run-10",
+      "case": "sales",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/data-dictionary.md": "95e62fc2cb2bb8c707d4e97b8466413f98206fc89b082311e0313b97766fbe9a",
+        "input/sales.csv": "e2ad0770e43d1bab02f2c61d5d24f5a96a0c9f80dcf878d7aac00fe41c2e0c80"
+      },
+      "task_sha256": "9164960fcc303d1f1878084f0d559bf4665c5ec2207b2549cb218bc4e9d802b0",
+      "status": "completed",
+      "start": "2026-09-18T02:24:52.648028+00:00",
+      "end": "2026-09-18T02:27:54+00:00",
+      "elapsed_seconds": 181.35,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "error": "cat: data-dictionary.md: No such file or directory",
+          "resolution": "Located and read input/data-dictionary.md."
+        },
+        {
+          "error": "apply_patch verification failed: invalid patch: multiple operations target telemetry/tool-log.md",
+          "resolution": "Appended remaining execution results with an Update File patch."
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/region-summary.csv",
+        "output/row-ledger.csv",
+        "output/top-products.csv",
+        "output/weekly-report.md"
+      ]
+    },
+    {
+      "run_id": "run-11",
+      "case": "article",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/02-interview.md": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206",
+        "input/01-product.md": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1",
+        "input/index.csv": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4",
+        "input/03-changelog.md": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+      },
+      "task_sha256": "4a7ef91950b01390d7a3c487ae1241c223ae1ccabbae4b7708b5091382aef58e",
+      "status": "completed",
+      "start": "2026-09-18T02:25:03+00:00",
+      "end": "2026-09-18T02:26:42+00:00",
+      "elapsed_seconds": 99.0,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [
+        {
+          "tool": "apply_patch",
+          "error": "invalid patch: multiple operations target telemetry/tool-log.md",
+          "recovered": true
+        }
+      ],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/shiye-1.2-introduction.md"
+      ]
+    },
+    {
+      "run_id": "run-12",
+      "case": "bug",
+      "variant": "A",
+      "repetition": 2,
+      "wave": 4,
+      "input_hashes": {
+        "input/cart.js": "49f570f0de08111887ac0f3975afdfee10a6f2857b211b13fa06eabff5e1ff42",
+        "input/package.json": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+        "input/cart.test.js": "0e0062aaded6a36f8e945a36d699437cd4d3c0a065298b7f32bc054514451958"
+      },
+      "task_sha256": "898aba379cd7648a6dd1827ce714cd40ac945528ce52bb0842ca48b3373f4b21",
+      "status": "completed",
+      "start": "2026-09-18T02:25:16+00:00",
+      "end": "2026-09-18T02:26:21.467920+00:00",
+      "elapsed_seconds": 65.47,
+      "actual_model_label": null,
+      "reasoning_setting": null,
+      "human_rework_minutes": null,
+      "tool_failures": [],
+      "telemetry_limitations": [],
+      "output_paths": [
+        "output/cart.js",
+        "output/cart.test.js",
+        "output/package.json"
+      ]
+    }
+  ]
+}

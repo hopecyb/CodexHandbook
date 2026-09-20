@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Verstehen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Verstehen-Vorlage
 description: Zuerst Orientierung aufbauen, dann ändern.
 locale: de
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Verstehen-Vorlage
 
 Viele Aufgaben stocken, weil noch kein gemeinsames Mindestverständnis da ist.
 
@@ -55,10 +59,3 @@ Wert der Verstehen-Vorlage: den Scope der nächsten Aufgabe zuerst eingrenzen.
 
 - [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
 - [Codebase verstehen (Fall)](/de/cases/understand-a-codebase/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Verstehen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

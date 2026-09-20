@@ -3,7 +3,7 @@ title: 용어집
 description: 핸드북에서 자주 쓰는 용어의 짧은 정의입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c07a94c
+source_revision: ae4b794
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

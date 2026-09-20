@@ -3,7 +3,7 @@ title: "Ziel, Kontext und Aktionen"
 description: "Eine gelungene Interaktion in Ziel, Hintergrund, Aktionen und Abnahme zerlegen."
 locale: de
 source_locale: zh-CN
-source_revision: 656b931
+source_revision: 280cea9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

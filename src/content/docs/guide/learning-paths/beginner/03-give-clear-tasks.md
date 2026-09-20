@@ -1,52 +1,39 @@
 ---
-title: 给出清晰任务
-description: 用目标、背景、约束、验收标准组织提示词。
-sidebar:
-  order: 30
+title: "给出清晰任务"
+description: "根据固定事实制作通知，保留未知信息。"
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
+sidebar: {"order": 30}
+verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。", "evidence": [{"label": "作者文件操作记录", "href": "/downloads/first-project/validation/record.json"}]}
+prev: {"link": "/guide/learning-paths/beginner/02-work-with-files/", "label": "处理文件"}
+next: {"link": "/guide/learning-paths/beginner/04-review-results/", "label": "审查结果"}
 ---
 
-## 本步目标
+## 前置条件
 
-按稳定框架写一条提示词。
+已完成第二步。`facts.md` 提供七项编号事实，`notice.md` 已有未发布状态注释。
 
-框架详见：[好任务的结构](/prompts/task-anatomy/)
+## 用明确标准整理通知
 
-前两步主要解决“把任务说清楚”，这一步继续处理“把任务说得更稳定”。
+```text
+仅以本目录 facts.md 为依据，整理 notice.md 为活动通知。
+保留“练习草稿，未发布”的状态注释。
+包含时间、地点、名额、费用、准备事项和“待确认”部分。
+每个事实标出对应 F 编号；不确定的信息保留未知，
+不补二维码、电话或报名链接。
+只改 notice.md，不改 facts.md、private-note.md，不新增文件，
+不联网，不发布或发送。
+完成后列出改动及对应依据；如发现资料冲突，说明冲突并保留待确认。
+```
 
-## 练习
+目标是可核对的通知，背景是虚构教学活动，输入是 facts.md，边界是只改 notice.md。验收条件具体到内容与文件，不靠“写得专业一点”代替。
 
-自选一个小改动（例如整理 `hello.md` 列表），写出包含：目标、背景、输入、约束、验收、权限边界。先要求计划，再允许执行。
+## 完成条件
 
-## 练习重点
+时间为 2026-10-17 14:00—15:30，地点为资料中的虚构阅览室，名额 18 人、免费、自愿带书；报名方式保持待确认。逐项核对引用编号是否真的支持对应句子。
 
-这里不是练模板本身，而是把一个任务拆成几块稳定信息：
+先自己核对，再看[作者参考通知](/downloads/first-project/references/notice.md)。文风无需相同，正确事实、未决项和改动范围必须一致。若有错，只修正具体问题，不让模型重写事实文件以迎合结果。
 
-- 要做什么
-- 基于什么材料做
-- 不能怎么做
-- 什么样才算完成
-
-这几块信息写清楚以后，复杂任务一般也会更稳定。
-
-## 常见误会
-
-### 1. 任务越短越显得自然
-
-自然不一定更稳。
-
-第一次练习时，稍微结构化一点，反而更容易减少误解。
-
-### 2. 有目标就够了，验收可以不写
-
-没有验收，你会更难判断结果到底是“没做完”还是“只是你不满意”。
-
-清晰任务的关键，在于目标、限制和完成标准同时出现。
-
-下一步：[审查结果](/guide/learning-paths/beginner/04-review-results/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 已按本手册当前已核验的好任务结构、规划与初学者路径章节交叉复核；本页聚焦“把目标、背景、约束与验收标准同时写清楚”的稳定提示词训练方法。  
-**最近核验：** 2026-07-26
+[练习包与准备说明](/guide/learning-paths/beginner/)

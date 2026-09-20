@@ -3,7 +3,7 @@ title: Recherche avec sources
 description: Utiliser Codex pour la recherche, la comparaison et la vérification des faits — produire des sources et conclusions traçables.
 locale: fr
 source_locale: zh-CN
-source_revision: ba7014d
+source_revision: feadad6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

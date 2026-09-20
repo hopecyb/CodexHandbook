@@ -3,7 +3,7 @@ title: Reprise après échec
 description: Quand une tâche dévie, les tests passent au rouge ou le contexte s'épuise — comment revenir en arrière en sécurité et continuer.
 locale: fr
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

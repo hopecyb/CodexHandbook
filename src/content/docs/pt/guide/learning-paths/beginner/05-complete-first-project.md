@@ -1,59 +1,58 @@
 ---
 title: Concluir o primeiro projeto pequeno
-description: Encadeia os passos de arranque numa entrega completa.
-locale: pt
-source_locale: zh-CN
-source_revision: f5de354
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+description: Entregue o aviso, a revisão e o registro de recuperação, em vez de escrever apenas impressões sobre o aprendizado.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 50
+verification:
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: Os materiais fixos e a referência do autor foram completados; o script de operações com arquivos em um diretório temporário foi executado, mas ainda não houve testes independentes com modelo ou leitores.
+  evidence:
+  - label: Registro de operações com arquivos do autor
+    href: /downloads/first-project/validation/record.json
+prev:
+  link: /pt/guide/learning-paths/beginner/04-review-results/
+  label: Revisar resultados
+next:
+  link: /pt/cases/analyze-a-spreadsheet/
+  label: Continuar com o relatório semanal de vendas
+locale: pt
+source_locale: zh-CN
+source_revision: cc1139b
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-## Objetivo deste passo
+## Pré-requisitos
 
-Na pasta de prática, entrega um artefato pequeno e completo — por exemplo uma página `practice-report.md`:
+O aviso passou por uma revisão item a item, facts.md e private-note.md permanecem inalterados, e records guarda seu próprio registro de revisão.
 
-- Indica que cliente usaste
-- Lista três Tarefas bem-sucedidas
-- Escreve a capacidade que queres aprender a seguir (Prompt / Contexto / qualidade)
+## Pratique uma recuperação
 
-Isto não é um «trabalho escolar» — é encadear os passos anteriores e fechar um ciclo independente.
+1. Copie toda a pasta `work` para uma nova pasta `backup-final` e confirme que os três arquivos estão presentes.
+2. Faça outra cópia em uma nova pasta `recovery-drill`. Apenas nessa cópia de exercício, altere notice.md para uma “versão errada para o exercício de recuperação”. Mantenha a pasta work real inalterada.
+3. Abra o arquivo do exercício para confirmar que ele realmente mudou e depois copie o notice.md correto de backup-final por cima dele.
+4. Compare um a um os três arquivos de recovery-drill com o backup para confirmar que o conteúdo é igual. Verifique também que work não mudou.
 
-## Depois de concluir
+Um gerenciador de arquivos e um editor bastam. Confirme antes que o caminho de destino é mesmo a cópia do exercício. Se já existir uma pasta com o mesmo nome, escolha outro para não sobrescrever conteúdo. Se não conseguir confirmar a recuperação, registre “não confirmado”.
 
-- Revisa o [mapa de capacidades](/pt/guide/start-here/codex-capability-map/)
-- Aprofunda a [App de ambiente de trabalho](/pt/guide/desktop-app/) ou [Prompts](/pt/prompts/)
+## Salve um resultado pronto para repassar
 
-## Foco do exercício
+Copie `templates/handoff.md` para records. Preencha conforme os fatos a versão do cliente, os arquivos finais, as fontes, as evidências da revisão, o método de inscrição pendente e o resultado da recuperação. Guarde as instruções da tarefa que usou para poder trocar os materiais na próxima vez.
 
-Três pontos principais:
+A entrega inclui o notice.md final, o facts.md original, seus próprios review.md e handoff.md e instruções reutilizáveis. Esses são arquivos didáticos; não autorizam publicação real.
 
-- Não só sabes enviar um pedido
-- Também controlas o âmbito, verificas o resultado e resumes a experiência
+## O que conta como concluído
 
-Chegado aqui, normalmente já consegues concluir sozinho um projeto pequeno.
+O aviso tem base factual e não inventa o que ainda é desconhecido; o escopo das alterações está correto; os erros do exemplo defeituoso foram identificados; a recuperação foi de fato executada e registrada; e o repasse permite que outra pessoa encontre as fontes e pendências. Escrever apenas “três tarefas concluídas” não comprova a conclusão.
 
-## Mal-entendidos frequentes
+O [registro de validação das operações com arquivos](/downloads/first-project/validation/record.json) e o [script de reprodução](/downloads/first-project/validation/reproduce.py) do autor comprovam somente o processo de referência de cópia e recuperação em um diretório temporário. O exercício principal não requer Python e esses registros não substituem sua própria execução.
 
-### 1. O primeiro projeto pequeno tem de parecer impressionante
+Continue com o [relatório semanal de vendas](/pt/cases/analyze-a-spreadsheet/) ou o [percurso para criadores](/pt/guide/learning-paths/creator/).
 
-Pequeno e completo vale mais do que grande e descontrolado.
-
-### 2. Gerar um artefato basta para «concluir»
-
-Mais importante é conseguires explicar:
-
-- Como o fizeste trabalhar
-- Como julgaste que estava certo
-- Que capacidade queres completar a seguir
-
-O valor do primeiro projeto pequeno não está no tamanho da peça — está em teres fechado um ciclo completo de colaboração.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com mapa de capacidades, verificação de resultados e os cinco passos de principiante; o conteúdo limita-se ao método estável de «encadear os passos anteriores num ciclo pequeno que se possa resumir».  
-**Última verificação:** 2026-07-26
+[Pacote de exercícios e orientações de preparação](/pt/guide/learning-paths/beginner/).

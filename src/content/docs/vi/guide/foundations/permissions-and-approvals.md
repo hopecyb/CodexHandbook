@@ -3,7 +3,7 @@ title: Quyền và phê duyệt
 description: Giải thích khi nào Codex cần bạn phê duyệt thao tác.
 locale: vi
 source_locale: zh-CN
-source_revision: 0870303
+source_revision: 5b1b5f8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

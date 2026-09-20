@@ -3,7 +3,7 @@ title: Rules
 description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
 locale: en
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

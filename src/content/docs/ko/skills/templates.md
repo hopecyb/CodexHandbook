@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "현재 Codex 런타임은 스킬에서 첨부 파일 사용을 안내할 수 있습니다. 이 페이지는 출력 템플릿이라는 안정적인 작성법을 다루며, 현재 클라이언트 UI나 설치 절차에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: templates/ 디렉터리
 description: Skill에서 출력 템플릿과 보고서 골격을 제공합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9f93d04
+source_revision: 82a9e01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 `references/`가 「입력할 때 무엇을 참고할지」에 가깝다면, `templates/`는 「출력할 때 어떤 모습인지」에 가깝습니다. 고정 구조가 필요하고 재검토하기 쉬운 결과는 여기에 두기 좋습니다.
 
-# templates/ 디렉터리
 
 `templates/`는 Skill 실행 시 재사용하는 출력 형식을 둡니다. 예: 검토 보고서, changelog 골격, 연구 비교표.
 
@@ -78,9 +82,3 @@ review-skill/
 「이 구조로 출력해 주세요」를 연속 두세 번 반복한다면 `templates/`로 만들 가치가 있습니다.
 
 `templates/`의 핵심 가치는 출력 구조를 안정시켜 이후 재사용을 쉽게 하는 것입니다.
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 현재 Codex 런타임은 스킬에서 첨부 파일 사용을 안내할 수 있습니다. 이 페이지는 출력 템플릿이라는 안정적인 작성법을 다루며, 현재 클라이언트 UI나 설치 절차에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

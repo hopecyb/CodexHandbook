@@ -3,7 +3,7 @@ title: 로컬 작업 워크플로
 description: IDE에서 열린 파일과 선택 영역을 바탕으로 로컬 Codex 작업을 시작하고, 따라가며, 마칩니다.
 locale: ko
 source_locale: zh-CN
-source_revision: f9abb5b
+source_revision: 0264d4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

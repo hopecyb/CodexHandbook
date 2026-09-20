@@ -3,7 +3,7 @@ title: Plugins overview
 description: Understand Plugin components, supported surfaces, installation verification, and trust boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: b2c5dae
+source_revision: a514206
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

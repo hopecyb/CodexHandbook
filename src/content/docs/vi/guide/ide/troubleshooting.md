@@ -3,7 +3,7 @@ title: Xử lý sự cố IDE
 description: Tải tiện ích, ngữ cảnh và vấn đề đồng bộ.
 locale: vi
 source_locale: zh-CN
-source_revision: 438b4f5
+source_revision: ebb21de
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

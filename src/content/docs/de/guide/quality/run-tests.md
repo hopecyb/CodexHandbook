@@ -3,7 +3,7 @@ title: Tests ausführen
 description: Überprüfungsschritte zum Teil der Aufgabe machen.
 locale: de
 source_locale: zh-CN
-source_revision: 13d4ba5
+source_revision: 8b1e5c7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

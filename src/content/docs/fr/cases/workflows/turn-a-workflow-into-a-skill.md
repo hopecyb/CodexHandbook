@@ -3,7 +3,7 @@ title: Transformer un flux de travail en Skill
 description: La troisième répétition du même flux mérite un Skill — déclencheur, instructions et acceptation au même endroit.
 locale: fr
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

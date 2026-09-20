@@ -3,7 +3,7 @@ title: Long-running tasks
 description: Phases, checkpoints, and handoff information.
 locale: en
 source_locale: zh-CN
-source_revision: b8e9c9b
+source_revision: 4e656af
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

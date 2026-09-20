@@ -3,7 +3,7 @@ title: Escrever instruções eficazes
 description: Checklist de escrita para AGENTS.md — curto, rígido, executável, verificável.
 locale: pt
 source_locale: zh-CN
-source_revision: 2d236a3
+source_revision: 63dd711
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

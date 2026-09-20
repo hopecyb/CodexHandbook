@@ -1,139 +1,138 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Đã đối chiếu tài liệu Non-interactive mode chính thức hiện tại để xác minh `codex exec`, `--cd`, sandbox chỉ đọc mặc định, tiến độ qua `stderr` và phản hồi cuối qua `stdout`."
+  checkedAt: "2026-08-26"
 title: Chế độ không tương tác
-description: Tích hợp bằng codex exec và pipeline script — phù hợp CI, tác vụ định kỳ và pipeline tự động.
+description: Tích hợp codex exec vào script và pipeline, phù hợp với CI, tác vụ định kỳ và quy trình tự động.
 locale: vi
 source_locale: zh-CN
-source_revision: a1cefbe
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "1f37961"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
-Non-interactive mode lets Codex complete a task **without a TTY conversation**. It is the developer entry point for scripts and CI.
+Chế độ không tương tác cho phép Codex hoàn thành tác vụ **mà không cần hội thoại trong TTY**. Đây là cách nhà phát triển đưa Agent vào script và CI.
 
-Instead of a back-and-forth chat, you submit the entire task for one command-style run.
+Nói đơn giản, thay vì trò chuyện qua lại, bạn giao toàn bộ tác vụ để Codex thực hiện trong một lần chạy.
 
-## What this page covers
+Cách dùng này giống một lệnh gọi đơn lẻ hơn.
 
-- When to use non-interactive execution instead of an interactive `codex` session.
-- Additional safety and approval requirements for unattended work.
-- Its relationship to [configuration](/vi/guide/cli/configuration/).
+## Nội dung trang này
 
-## Suitable tasks
+- Khi nào nên dùng chế độ không tương tác thay vì phiên `codex` tương tác
+- Các yêu cầu bổ sung về an toàn và phê duyệt khi chạy không có người giám sát
+- Mối liên hệ với [cấu hình](/vi/guide/cli/configuration/)
 
-| Suitable | Unsuitable |
+## Trường hợp phù hợp
+
+| Phù hợp | Không phù hợp |
 |---|---|
-| Fixed review prompt in CI | Requirements need multiple clarification rounds |
-| Nightly documentation link check | Exploratory refactoring |
-| Code generation from a predefined template | Ambiguous product decisions |
+| Chạy lời nhắc đánh giá cố định trong CI | Yêu cầu cần làm rõ qua nhiều lượt |
+| Kiểm tra liên kết tài liệu hằng đêm | Tái cấu trúc mang tính thăm dò |
+| Tạo mã từ mẫu định sẵn | Quyết định sản phẩm còn nhiều điểm mơ hồ |
 
-## Core model
+## Khái niệm cốt lõi
 
-A non-interactive run normally:
+Một lần chạy không tương tác thường:
 
-1. receives a **complete task description** from arguments or stdin;
-2. runs in a specified working directory;
-3. reports process success or failure through an exit code;
-4. emits logs or structured output for downstream consumers.
+1. Nhận **mô tả tác vụ đầy đủ** từ tham số hoặc stdin
+2. Chạy trong thư mục làm việc được chỉ định
+3. Dùng mã thoát để báo thành công hoặc thất bại
+4. Xuất nhật ký hoặc kết quả có cấu trúc cho bước tiếp theo sử dụng
 
-The current entry point is `codex exec`. After an upgrade, rerun `codex exec --help` to verify every flag used by scripts.
+Lối vào không tương tác hiện tại là `codex exec`. Sau khi nâng cấp CLI, bạn vẫn nên chạy `codex exec --help` để kiểm tra lại các tham số trong script.
 
-## Minimal working example
+## Ví dụ tối thiểu có thể chạy (minh họa)
 
 ```bash
-# Run one read-only review at the repository root
-codex exec --cd . "List security risks in the diff against main; do not modify files"
+# Chạy một lượt đánh giá chỉ đọc tại thư mục gốc của kho mã
+codex exec --cd . "Liệt kê rủi ro bảo mật trong diff so với main; không sửa tệp"
 ```
 
-`codex exec` uses a read-only sandbox by default. Progress is written to `stderr`, while the final Agent response goes to `stdout`, so you can redirect only the final result:
+`codex exec` mặc định dùng sandbox chỉ đọc. Trong lúc chạy, tiến độ được ghi vào `stderr`, còn phản hồi cuối cùng của Agent được ghi vào `stdout`; vì vậy bạn có thể chuyển hướng riêng kết quả cuối cho bước tiếp theo:
 
 ```bash
-codex exec --cd . "Write release notes for the last 10 commits" > release-notes.md
+codex exec --cd . "Tạo ghi chú phát hành từ 10 commit gần nhất" > release-notes.md
 ```
 
-Practical guidance:
+Gợi ý thực hành:
 
-- In a shell script, `cd` to a clean worktree first.
-- Put the task in a heredoc or versioned `prompts/` file.
-- Capture the exit code and fail CI when the process fails.
+- Trong shell script, trước tiên `cd` vào một bản sao làm việc sạch
+- Đặt nội dung tác vụ trong heredoc hoặc tệp `prompts/` được quản lý phiên bản
+- Ghi nhận mã thoát và đánh dấu CI thất bại khi lệnh lỗi
 
-## Safety design
+## Thiết kế an toàn
 
-Unattended means **you are not present to deny an action**:
+Chạy không người giám sát nghĩa là **không có bạn ở đó để từ chối thao tác**:
 
-| Principle | Implementation |
+| Nguyên tắc | Cách thực hiện |
 |---|---|
-| Least privilege | Read-only token and constrained sandbox |
-| No push | CI opens a PR or uploads an artifact |
-| Fixed prompt | Do not concatenate unsanitized PR text directly into the prompt |
-| Audit | Preserve logs and diff artifacts |
+| Quyền tối thiểu | Token chỉ đọc, sandbox có giới hạn |
+| Không push | CI chỉ mở PR hoặc tải artifact lên |
+| Lời nhắc cố định | Không nối trực tiếp văn bản PR chưa được xử lý an toàn vào lời nhắc vì có nguy cơ prompt injection |
+| Khả năng kiểm toán | Giữ lại nhật ký và artifact chứa diff |
 
-See [Human approval patterns](/vi/cases/workflows/human-approval-patterns/) and the `08-developer-platform/non-interactive/` roadmap section.
+Xem [mẫu phê duyệt của con người](/vi/cases/workflows/human-approval-patterns/) và lộ trình `08-developer-platform/non-interactive/`.
 
-## Interactive comparison
+## So sánh với chế độ tương tác
 
-| | Interactive | Non-interactive |
+| | Chế độ tương tác | Chế độ không tương tác |
 |---|---|---|
-| Entry | `codex` TUI | `exec` / pipeline |
-| Human in the loop | Strong | Weak; design beforehand |
-| Good for learning | Yes | No |
-| Good for CI | No | Yes |
+| Lối vào | TUI `codex` | `exec` / pipeline |
+| Con người tham gia trong lúc chạy | Nhiều | Ít, cần thiết kế trước |
+| Phù hợp để học | Có | Không |
+| Phù hợp với CI | Không | Có |
 
-See [CLI interactive mode](/vi/guide/cli/interactive-mode/).
+Cách dùng tương tác: [Chế độ tương tác của CLI](/vi/guide/cli/interactive-mode/)
 
-## Convert an interactive task
+## Chuyển tác vụ tương tác thành tác vụ không tương tác
 
-Do not paste a whole chat history into a script. Compress it into a small specification:
+Đừng đưa nguyên lịch sử trò chuyện dài vào script. Cách ổn định hơn là rút thành một bản đặc tả ngắn:
 
-| Element | What to state |
+| Thành phần | Cách viết |
 |---|---|
-| Goal | The single outcome |
-| Input | Files, diff, logs, or stdin to read |
-| Prohibitions | No edits, internet, push, or CI interruption |
-| Output | Text summary, JSON, report file, or exit result |
-| Acceptance | Commands that must pass and strings that must not appear |
+| Mục tiêu | Lần này chỉ làm việc gì |
+| Đầu vào | Đọc tệp, diff, nhật ký hoặc stdin nào |
+| Điều cấm | Không sửa tệp, không vào mạng, không push, không làm gián đoạn CI, v.v. |
+| Đầu ra | Tóm tắt văn bản, JSON, tệp báo cáo hoặc mã thoát |
+| Nghiệm thu | Lệnh nào bắt buộc thành công, chuỗi nào không được xuất hiện |
 
-A non-interactive prompt should read like a work order: clear boundary, complete input, explicit failure conditions. Keep tasks that still require product judgment, design tradeoffs, or permission decisions interactive.
+Lời nhắc không tương tác nên giống một phiếu công việc: ranh giới rõ, đầu vào đầy đủ và điều kiện thất bại cụ thể. Tác vụ vẫn cần quyết định sản phẩm, cân nhắc thiết kế hoặc xác nhận quyền nên được xử lý ở chế độ tương tác trước.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. It is more efficient, so should beginners learn it first?
+### 1. Chế độ không tương tác hiệu quả hơn, vậy có nên học trước không?
 
-No. It runs quickly with little room for clarification.
+Không nên.
 
-### 2. What is the main difference?
+Với người lần đầu sử dụng, chế độ này thường quá nhanh và cứng nhắc, gần như không có chỗ để làm rõ yêu cầu giữa chừng.
 
-- **Interactive:** ask, adjust, and approve during the run.
-- **Non-interactive:** execute once from a predefined specification.
+### 2. Khác biệt lớn nhất với chế độ tương tác là gì?
 
-### 3. When should I avoid it?
+Có thể hiểu khác biệt cốt lõi như sau:
 
-Wait if you:
+- **Chế độ tương tác**: có thể hỏi thêm, điều chỉnh và phê duyệt trong lúc chạy
+- **Chế độ không tương tác**: gần với thực thi một lần, phù hợp quy trình đã định sẵn
 
-- are still learning to write a task;
-- do not know how to accept the result;
-- lack a basic model of approvals, sandboxing, and permissions.
+### 3. Khi nào tôi nên tạm thời tránh dùng?
 
-Use non-interactive mode for automation after interactive workflows are familiar.
+Hãy khoan dùng nếu bạn:
 
-## Common mistakes
+- Chưa quen cách viết lời nhắc
+- Chưa biết cách nghiệm thu kết quả
+- Chưa hiểu cơ bản về phê duyệt, sandbox và quyền hạn
 
-- Pasting an interactive session's full history into one exec call.
-- Giving CI production credentials and write access.
-- Leaving the CLI version unpinned so pipeline behavior changes unexpectedly.
+Chế độ không tương tác phù hợp với tự động hóa, ít phù hợp cho lần đầu khám phá. Hãy quen với chế độ tương tác rồi mới đưa nó vào script.
 
-## Reference
+## Lỗi thường gặp
 
-- OpenAI Codex CLI documentation
+- Đưa nguyên lịch sử dài của phiên tương tác vào một lần gọi exec
+- Dùng thông tin xác thực sản xuất và quyền ghi trong CI
+- Không cố định phiên bản CLI khiến hành vi pipeline bất ngờ thay đổi
 
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** CLI
-
-**Căn cứ kiểm chứng:** Compared with current Non-interactive mode documentation for `codex exec`, `--cd`, the default read-only sandbox, `stderr` progress, and `stdout` final response.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+## Nguồn tham khảo
+- Tài liệu OpenAI Codex CLI

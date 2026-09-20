@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明官方资源优先级与入口使用方式；已复查 OpenAI 官方文档主入口仍可用，且正文未保留易过时的细粒度操作步骤。"
+  checkedAt: "2026-07-26"
 title: 官方资源
 description: OpenAI / Codex 官方文档与入口链接。
 sidebar:
@@ -67,10 +72,3 @@ sidebar:
 3. 如果两边冲突，以官方为准
 
 这样方向会更清楚，也能少踩到过期信息。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明官方资源优先级与入口使用方式；已复查 OpenAI 官方文档主入口仍可用，且正文未保留易过时的细粒度操作步骤。  
-**最近核验：** 2026-07-26

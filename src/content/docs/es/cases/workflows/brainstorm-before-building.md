@@ -3,7 +3,7 @@ title: Lluvia de ideas antes de construir
 description: Antes de escribir código o textos largos, explora de forma estructurada y converge en un plan — menos retrabajo.
 locale: es
 source_locale: zh-CN
-source_revision: 9bf8989
+source_revision: 9c5e679
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

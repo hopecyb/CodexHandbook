@@ -3,7 +3,7 @@ title: 데스크톱 App 문제 해결
 description: 설치·로그인·작업 실패의 흔한 대응.
 locale: ko
 source_locale: zh-CN
-source_revision: ca74b6c
+source_revision: c298f9f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides a diagnose-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Diagnose template
 description: Find root cause before discussing fixes.
 locale: en
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Diagnose template
 
 A common diagnose mistake: you say "investigate first" but still expect an immediate fix.
 
@@ -50,10 +54,3 @@ The diagnose template requires explaining why it's broken before how to fix it.
 
 - [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/)
 - [Fix a bug case](/en/cases/fix-a-bug/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a diagnose-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

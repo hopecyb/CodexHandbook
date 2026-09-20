@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前对项目上下文、任务边界与审批/沙盒约束的公开说明交叉复核；页面内容限定为 `AGENTS.md` 的用途、边界与常见写法，不包含未证实的强制优先级细节。"
+  checkedAt: "2026-07-26"
 title: 什么是 AGENTS.md
 description: 项目级持久指令文件——给 Codex 的「协作合同」，不是架构百科。
 sidebar:
@@ -122,9 +127,3 @@ sidebar:
 
 ## 参考来源
 - OpenAI Codex 项目上下文说明
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前对项目上下文、任务边界与审批/沙盒约束的公开说明交叉复核；页面内容限定为 `AGENTS.md` 的用途、边界与常见写法，不包含未证实的强制优先级细节。  
-**最近核验：** 2026-07-26

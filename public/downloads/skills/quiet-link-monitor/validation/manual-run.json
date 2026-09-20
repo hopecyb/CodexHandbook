@@ -1,0 +1,20 @@
+[
+  {
+    "stage": "broken",
+    "exit_code": 1,
+    "event_kind": "findings-changed",
+    "external_actions": []
+  },
+  {
+    "stage": "repeat",
+    "exit_code": 1,
+    "event_kind": null,
+    "external_actions": []
+  },
+  {
+    "stage": "fixed",
+    "exit_code": 0,
+    "event_kind": "recovered",
+    "external_actions": []
+  }
+]

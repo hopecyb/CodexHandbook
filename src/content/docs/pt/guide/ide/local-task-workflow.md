@@ -3,7 +3,7 @@ title: Fluxo de Tarefas locais
 description: Iniciar, acompanhar e concluir Tarefas locais do Codex no IDE a partir de ficheiros abertos e seleções.
 locale: pt
 source_locale: zh-CN
-source_revision: f9abb5b
+source_revision: 0264d4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Governance
 description: Policies, boundaries, and org rules—what is allowed, what is not, and who is accountable.
 locale: en
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

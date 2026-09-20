@@ -3,7 +3,7 @@ title: Web and Cloud overview
 description: The remote-task path from repository connection and reproducible environments to review and pull requests.
 locale: en
 source_locale: zh-CN
-source_revision: 5861c62
+source_revision: 8fe7bea
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

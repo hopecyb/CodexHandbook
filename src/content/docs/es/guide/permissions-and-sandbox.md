@@ -1,116 +1,111 @@
 ---
-title:  Permisos y Sandbox
-description:  Entiende Aprobaciones, aislamiento de ejecución y límites de red para usar Codex con seguridad.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Se contrastó con la documentación actual de Codex sobre el sandbox, las aprobaciones y la seguridad; esta página distingue los límites de ejecución del sistema operativo, la política de aprobación, las restricciones de la tarea y la revisión humana, y explica por separado los modelos de red local y Cloud."
+  checkedAt: "2026-08-26"
+title: Permisos y sandbox
+description: Entiende el sandbox, las aprobaciones, el acceso a la red y los límites de ejecución local y en Cloud mediante una secuencia de decisiones.
 locale: es
 source_locale: zh-CN
-source_revision: 6b29dc6
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 6b5fcb8
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 14
 ---
 
-Using Codex safely requires two control layers: **the sandbox determines the maximum technical reach, while the approval policy determines whether Codex asks before crossing the current boundary.**
+Para usar Codex con seguridad, hay que tener en cuenta dos controles: **el sandbox determina hasta dónde puede llegar técnicamente; la política de aprobación determina si debe preguntarte antes de cruzar el límite actual.**
 
-![Codex sandbox and approval flow: an action meets the sandbox boundary, requests human approval when crossing it, and ultimately leaves verification evidence](/diagrams/sandbox-approval-flow-es.svg)
+![Flujo del sandbox y las aprobaciones de Codex: una acción pasa por el límite del sandbox, solicita aprobación humana si lo cruza y deja pruebas para verificar el resultado](/diagrams/sandbox-approval-flow-es.svg)
 
-## Remember this distinction
+## Recuerda esta distinción
 
-| Control | Question it answers | Typical objects |
+| Control | Pregunta que responde | Elementos habituales |
 |---|---|---|
-| Sandbox | What can this action reach at most? | Project files, outside paths, system capabilities, network |
-| Approval policy | Must a person be asked before crossing the current boundary? | Installing dependencies, network access, external writes, launching apps |
-| Task constraint | What should and should not happen in this task? | Allowed directories, forbidden actions, acceptance commands |
-| Human review | Is the executed result acceptable? | Diff, logs, tests, external side effects |
+| Sandbox | ¿Hasta dónde puede llegar esta acción? | Archivos del proyecto, rutas externas, funciones del sistema, red |
+| Política de aprobación | ¿Hay que preguntar a una persona antes de cruzar el límite actual? | Instalar dependencias, acceder a la red, escribir fuera del proyecto, iniciar aplicaciones |
+| Restricciones de la tarea | ¿Qué debe hacerse y qué debe evitarse en este trabajo? | Directorios modificables, acciones prohibidas, comandos de validación |
+| Revisión humana | ¿Es aceptable el resultado de lo ejecutado? | Diff, registros, pruebas, efectos en sistemas externos |
 
-Task constraints do not replace a sandbox, and a sandbox does not replace final review. They respectively control intent, execution boundaries, and acceptance.
+Las restricciones de la tarea no sustituyen al sandbox, y el sandbox tampoco sustituye a la revisión final. Cada uno se ocupa, respectivamente, de la intención, los límites de ejecución y la aceptación del resultado.
 
-## How an action passes through the boundary
+## Cómo atraviesa una acción los límites de seguridad
 
-When Codex is about to run a command or call a tool:
+Cuando Codex se dispone a ejecutar un comando o usar una herramienta, puedes entender el proceso así:
 
-1. Determine whether the action is inside the current sandbox.
-2. If it is, execute it and record output; no prompt is necessarily shown.
-3. If it is outside, request permission according to policy or deny it.
-4. You may deny it, request a narrower action, or approve only this explicit operation.
-5. After execution, inspect the diff, tests, and external-system state to verify the task result.
+1. Primero se comprueba si la acción está dentro de lo permitido por el sandbox actual.
+2. Si está dentro, se ejecuta y se registra la salida; puede que no aparezca ningún aviso.
+3. Si supera el límite, se solicita permiso según la política de aprobación o se deniega directamente.
+4. Puedes rechazarla, pedir una acción más acotada o aprobar solo esa operación concreta.
+5. Después de ejecutarla, revisa el diff, las pruebas y el estado de los sistemas externos para confirmar que el resultado cumple el objetivo.
 
-The sandbox also constrains child processes and commands started by Codex. An action inside a script does not bypass the boundary.
+El sandbox también limita los subprocesos y comandos que inicia Codex. No supongas que una acción elude ese límite por ejecutarse dentro de un script.
 
-## Local and Cloud boundaries differ
+## Los límites son distintos en local y en Cloud
 
-| Environment | Primary isolation | Network | What to inspect |
+| Entorno | Aislamiento principal | Acceso a la red | Qué debes revisar |
 |---|---|---|---|
-| Local App / CLI / IDE task | Operating-system sandbox and current approval policy | Local tasks should not assume internet access; approve or configure it explicitly | Workspace scope, command, outside path, network purpose |
-| Cloud task | OpenAI-managed isolated container | Setup can use configured internet; Agent access is off by default unless enabled | Repository, environment, allowed domains, returned diff, verification evidence |
+| Tareas locales en App / CLI / IDE | Sandbox del sistema operativo y política de aprobación vigente | Por lo general, una tarea local no debería depender de Internet de forma predeterminada; aprueba o configura el acceso cuando haga falta | Alcance del espacio de trabajo, comandos, rutas externas y motivo del acceso a la red |
+| Tareas en Cloud | Contenedor aislado gestionado por OpenAI | La fase de configuración puede acceder a la red según el entorno; la fase del Agent tiene la red desactivada de forma predeterminada, salvo que se habilite expresamente | Repositorio, configuración del entorno, dominios permitidos, diff devuelto y pruebas de verificación |
 
-Cloud Secrets are for setup and are removed before the Agent phase. Keep least privilege and do not add unrelated production credentials to a task environment.
+Los secretos del entorno Cloud se usan en la fase de configuración y se eliminan antes de que comience la fase del Agent. Aun así, aplica el principio de mínimo privilegio y no incluyas credenciales de producción ajenas a la tarea.
 
-## Four checks for an approval request
+## Cómo evaluar una solicitud de aprobación en cuatro pasos
 
-### 1. Compare with the task
+### 1. Compárala con la tarea
 
-Does this action directly serve the current goal? “It may be useful” is not enough.
+¿Esta acción contribuye realmente al objetivo actual? Que «podría ser útil» no basta para aprobarla.
 
-### 2. Compare with scope
+### 2. Comprueba su alcance
 
-Does it reach the project, an outside directory, the network, or a system application? Specific paths, domains, and commands are easier to judge.
+¿Quiere acceder al proyecto actual, a un directorio externo, a la red o a una aplicación del sistema? Cuanto más concretas sean la ruta, el dominio y el comando, más fácil será decidir.
 
-### 3. Compare side effects
+### 3. Comprueba los efectos secundarios
 
-Is it read-only, or will it write files, install software, send data, or change remote state? External side effects deserve more caution than reversible local edits.
+¿Solo lee, o también escribe archivos, instala software, envía datos o modifica un sistema remoto? Los efectos externos suelen exigir más cautela que los cambios locales que se pueden revertir.
 
-### 4. Compare verification and recovery
+### 4. Comprueba cómo verificar y revertir
 
-How will success be verified? Can failure be rolled back? If neither is clear, ask Codex to explain or propose a smaller alternative.
+¿Cómo confirmarás que se completó correctamente? ¿Podrás deshacerlo si falla? Si no hay respuesta, pide primero a Codex una explicación o una alternativa de menor alcance.
 
-## Example: dependency installation
+## Un ejemplo concreto: instalar dependencias
 
-Suppose Codex requests:
+Supón que Codex solicita ejecutar:
 
 ```bash
 pnpm install
 ```
 
-Do not judge only by familiarity. Confirm that:
+No te fijes solo en si conoces el comando. Comprueba:
 
-- the task actually requires missing dependencies;
-- the command runs in the correct repository;
-- you know which package registry it will contact;
-- you know whether it will change the lockfile;
-- a test or build will verify the installation.
+- Que la tarea actual realmente necesita las dependencias que faltan.
+- Que el comando se ejecutará en el directorio del repositorio correcto.
+- A qué registro de paquetes necesita acceder.
+- Si modificará el archivo de bloqueo.
+- Qué pruebas o compilación se ejecutarán después.
 
-If the task only verifies existing code and dependencies are already installed, deny the request and ask it to use the current environment first.
+Si solo hay que verificar el código existente y las dependencias ya están instaladas, puedes rechazar la solicitud y pedir que se use primero el entorno actual.
 
-## Declare boundaries in the prompt
+## Declara los límites en el prompt
+
+Puedes incluir directamente el alcance permitido en la tarea:
 
 ```text
-Modify only src/auth and tests/auth.
-Use installed dependencies first; do not access the internet or upgrade versions.
-If an outside path or network is necessary, explain the purpose, target, and
-smallest operation before requesting it.
-Run pnpm test --filter auth and report output and remaining risks.
+Modifica solo src/auth y tests/auth.
+Usa primero las dependencias ya instaladas; no accedas a la red ni actualices versiones.
+Si necesitas acceder a rutas externas al proyecto o a la red, explica antes el propósito, el destino y la operación mínima necesaria.
+Al terminar, ejecuta pnpm test --filter auth e informa de la salida del comando y de los riesgos restantes.
 ```
 
-This makes intent explicit, but the actual execution boundary still comes from the sandbox, approval policy, and managed team configuration.
+Esto aclara la intención, pero las limitaciones efectivas de ejecución siguen dependiendo del sandbox, la política de aprobación y la configuración administrada por el equipo.
 
-## Common misconceptions
+## Errores de interpretación frecuentes
 
-- **An approval prompt always means danger:** normal installation, networking, or outside writes may require approval; necessity and scope are what matter.
-- **No prompt means complete safety:** the action may already be within the sandbox, but its result still needs review.
-- **One approval grants permanent access:** duration and scope depend on the product and policy; read the request.
-- **Subagents have separate permissions:** they inherit the main task's sandbox and permission mode.
-- **Hooks replace the sandbox:** Hooks add guardrails and auditing; they do not replace operating-system enforcement.
+- **Si aparece una solicitud de aprobación, la acción es necesariamente peligrosa:** una instalación, una conexión de red o una escritura fuera del proyecto normales también pueden requerir aprobación; lo decisivo es su necesidad y alcance.
+- **Si no aparece una solicitud, la acción es totalmente segura:** puede que la acción ya esté permitida por el sandbox; aun así, revisa los cambios reales.
+- **Una aprobación concede acceso permanente:** la duración y el alcance dependen del producto y la política concretos; lee con atención la solicitud.
+- **Un subagente tiene otros permisos:** los subagentes heredan el sandbox y el modo de permisos de la tarea principal; no adquieren privilegios superiores por sí solos.
+- **Los Hooks sustituyen al sandbox:** un Hook añade protección y auditoría, pero no sustituye al aislamiento impuesto por el sistema operativo.
 
-See [CLI approvals and sandboxing](/es/guide/cli/approvals-and-sandbox/) and [Desktop App settings](/es/guide/desktop-app/settings/) for product settings, and [Constraints and boundaries](/es/prompts/constraints-and-boundaries/) for task wording.
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with current Codex sandbox, approval, and security guidance. This page separates operating-system boundaries, approval policy, task constraints, and human review, and explains the different local and Cloud network models.
-
-**Last verified:** 2026-08-26
+Para los ajustes del producto, consulta [Aprobaciones y sandbox de CLI](/es/guide/cli/approvals-and-sandbox/) y [Configuración de la aplicación de escritorio](/es/guide/desktop-app/settings/). Para redactar tareas, consulta [Restricciones y límites](/es/prompts/constraints-and-boundaries/).

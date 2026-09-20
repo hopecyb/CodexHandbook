@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册当前已核验的客户端选择、工作流、扩展方式、Cloud GitHub 流程与斜杠命令相关入口逐项交叉复核；本页仅作为高频问题导航，不单独声明易变的产品默认值。"
+  checkedAt: "2026-07-26"
 title: 常见问题
 description: 上手与使用中的高频问题。
 sidebar:
@@ -75,10 +80,3 @@ FAQ 主要在做两件事：
 3. 再顺着链接进对应专题
 
 一般会比在侧边栏里来回翻省力一些。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册当前已核验的客户端选择、工作流、扩展方式、Cloud GitHub 流程与斜杠命令相关入口逐项交叉复核；本页仅作为高频问题导航，不单独声明易变的产品默认值。  
-**最近核验：** 2026-07-26

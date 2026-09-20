@@ -1,58 +1,54 @@
 ---
-title: Klare Aufgaben geben
-description: 'Prompts mit Ziel, Kontext, Einschränkungen und Abnahmekriterien strukturieren.'
-locale: de
-source_locale: zh-CN
-source_revision: 7048d91
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Klare Aufgaben geben"
+description: "Erstelle eine Ankündigung aus festen Fakten und lasse unbekannte Angaben offen."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 30
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Die festen Materialien und die Autorenreferenz sind vollständig; Dateivorgänge wurden in einem temporären Verzeichnis ausgeführt. Ein unabhängiger Test mit einem Modell oder Lernenden steht noch aus."
+  evidence:
+    - label: "Dateioperationsprotokoll des Autors"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/de/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Mit Dateien arbeiten"
+next:
+  link: "/de/guide/learning-paths/beginner/04-review-results/"
+  label: "Ergebnisse prüfen"
+locale: de
+source_locale: zh-CN
+source_revision: 664fdf7
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Voraussetzungen
 
-## Ziel dieses Schritts
+Schließe zuerst Schritt zwei ab. `facts.md` enthält sieben nummerierte Fakten und `notice.md` hat bereits einen Kommentar, der es als unveröffentlicht kennzeichnet.
 
-Einen Prompt nach stabilem Rahmen schreiben.
+## Ankündigung nach klaren Kriterien überarbeiten
 
-Rahmen: [Anatomie einer guten Aufgabe](/de/prompts/task-anatomy/)
+```text
+Verwende ausschließlich facts.md in diesem Verzeichnis als Grundlage und gestalte notice.md als Veranstaltungsankündigung.
+Behalte den genauen Statuskommentar <!-- 状态：练习草稿，未发布 --> unverändert bei.
+Nenne Zeit, Ort, Teilnehmerzahl, Kosten, Vorbereitung und einen Abschnitt „Noch zu bestätigen“.
+Kennzeichne jeden Fakt mit der passenden F-Nummer. Lass unsichere Angaben offen;
+ergänze keinen QR-Code, keine Telefonnummer und keinen Anmeldelink.
+Ändere nur notice.md. Ändere weder facts.md noch private-note.md, lege keine Dateien an,
+greife nicht auf das Netzwerk zu und veröffentliche oder versende nichts.
+Liste anschließend die Änderungen und ihre Belege auf. Falls Angaben einander widersprechen, beschreibe den Widerspruch und lass ihn zur Klärung offen.
+```
 
-Die ersten beiden Schritte klärten „Aufgabe aussprechen“; hier geht es um „Aufgabe stabiler aussprechen“.
+Das Ziel ist eine nachprüfbare Ankündigung, der Hintergrund eine fiktive Lernveranstaltung, die Eingabe `facts.md` und die Grenze, nur `notice.md` zu ändern. Die Abnahmekriterien beziehen sich konkret auf Inhalt und Dateien, statt nur „professioneller schreiben“ zu verlangen.
 
-## Übung
+## Abschlusskriterien
 
-Wählen Sie eine kleine Änderung (z. B. Liste in `hello.md` aufräumen) und schreiben Sie: Ziel, Hintergrund, Eingaben, Einschränkungen, Abnahme, Berechtigungsgrenze. Zuerst Plan verlangen, dann Ausführen erlauben.
+Die Zeit ist 2026-10-17 von 14:00 bis 15:30, der Ort der fiktive Leseraum aus dem Material, die Teilnehmerzahl 18, die Teilnahme kostenlos und das Mitbringen eines Buches freiwillig. Die Anmeldemethode bleibt zu bestätigen. Prüfe für jede zitierte F-Nummer, ob sie den jeweiligen Satz tatsächlich stützt.
 
-## Übungsfokus
+Prüfe zuerst selbst und sieh dann die [Referenzankündigung des Autors](/downloads/first-project/references/notice.md) an. Der Stil muss nicht gleich sein, doch Fakten, offene Punkte und Änderungsumfang müssen übereinstimmen. Bei Fehlern korrigiere nur das konkrete Problem; lass das Modell nicht die Faktendatei passend zum Ergebnis umschreiben.
 
-Nicht die Vorlage selbst — die Aufgabe in stabile Informationsblöcke teilen:
-
-- Was tun
-- Auf welcher Grundlage
-- Was nicht
-- Was „fertig“ bedeutet
-
-Stehen diese Blöcke, werden auch komplexere Aufgaben stabiler.
-
-## Häufige Missverständnisse
-
-### 1. Je kürzer, desto natürlicher
-
-Natürlich heißt nicht stabiler.
-
-Beim ersten Üben etwas mehr Struktur reduziert Missverständnisse oft.
-
-### 2. Ziel reicht, Abnahme optional
-
-Ohne Abnahme schwer zu sagen: „nicht fertig“ oder „nur unzufrieden“.
-
-Klare Aufgaben brauchen Ziel, Grenzen und Fertigkriterien zugleich.
-
-Weiter: [Ergebnisse prüfen](/de/guide/learning-paths/beginner/04-review-results/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Gegen geprüfte Aufgabenstruktur-, Planungs- und Einsteigerpfad-Seiten abgeglichen; Fokus auf stabile Prompt-Übung „Ziel, Kontext, Einschränkungen und Abnahme zugleich“.  
-**Zuletzt geprüft:** 2026-07-26
+[Übungspaket und Vorbereitung](/de/guide/learning-paths/beginner/)

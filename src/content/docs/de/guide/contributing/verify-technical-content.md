@@ -1,12 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Mit dem aktuellen Statussystem des Handbuchs, mehreren abgeschlossenen Prüfrunden und dem Vorrang offizieller Quellen abgeglichen. Diese Seite beschreibt interne Standards für die Einstufung als `verified` und für eine Herabstufung."
+  checkedAt: "2026-07-26"
 title: Technische Inhalte prüfen
-description: "Seiten als verified markieren — mit Reproduktionsschritten, offiziellen Belegen und Datum."
+description: Redaktionellen Status, Quellenabgleich und Probeläufe unterscheiden; Umfang, Umgebung und Prüfbelege dokumentieren.
 locale: de
 source_locale: zh-CN
-source_revision: abada81
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: cfb077d
+translation_status: draft
+translated_at: 2026-09-20
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Beitragsregeln an die neuen Metadatenfelder der Website angepasst; das bedeutet nicht, dass sämtliche hier genannten Produktmechanismen erneut getestet wurden.
 sidebar:
   order: 30
 ---
@@ -50,11 +58,27 @@ Prüfung ist keine Editiermanie — sie verhindert, dass Lesende alten Docs folg
 
 ## Häufige Missverständnisse
 
-### `verified` = Belege, nicht nur Selbstsicherheit
+### Redaktioneller Status und Prüfart sind zwei verschiedene Felder
 
-Kein Tonfall — ein Evidenzstatus.
+`editorialStatus` hält den Fortschritt beim Schreiben und Prüfen fest. `verification.kind` beschreibt, welche Art von Prüfung tatsächlich erfolgt ist; aus `verified` lässt sich nicht ableiten, dass ein Beispiel ausgeführt wurde.
 
-Nur nach Reproduktion, Abgleich mit offiziellen Belegen, passendem Umfang und Datum → `verified`.
+| Prüfart | Zulässige Schlussfolgerung | Erforderliche Belege |
+|---|---|---|
+| `editorial` | Struktur, Formulierung oder interne Verweise wurden geprüft | Prüfzusammenfassung und Datum |
+| `source-checked` | Fakten im angegebenen Umfang stimmen mit den Quellen überein | Konkrete Quellenlinks, Zusammenfassung und Datum |
+| `run-tested` | Das Beispiel wurde in der dokumentierten Umgebung ausgeführt | Umgebung, Ausführungs- und Prüfprotokolle, Zusammenfassung und Datum |
+
+`run-tested` garantiert keine allgemeine Gültigkeit für alle Plattformen. Die Zusammenfassung muss erklären, was geprüft und was nicht geprüft wurde; eine eigenständige Nachrechnung ist keine Prüfung durch eine zweite Person. Alte Einträge ohne Belege bleiben in `legacyVerification` und werden keiner neuen Prüfart automatisch zugeordnet.
+
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Struktur und interne Links geprüft; das Beispiel wurde nicht ausgeführt.
+```
+
+Quellenabgleiche und Probeläufe verwenden eine `evidence`-Liste, deren Einträge jeweils `label` und `href` enthalten. Probeläufe benötigen außerdem `environment` mit System, relevanter Clientversion und Versionen der Abhängigkeiten. Der Build weist Probelauf-Einträge ohne Umgebung oder Beleglinks zurück. Dass ein Link existiert, beweist noch nicht die Aussagekraft des Belegs; die Verantwortlichen müssen den Eintrag lesen.
 
 ### Community-Artikel helfen verstehen, ersetzen keine Faktenprüfung
 
@@ -84,9 +108,9 @@ Als **ganze Operationskette** prüfen, nicht nur Wortlaut.
 
 1. **Umfang nennen**: Produkt (App/CLI/IDE/Cloud), OS, CLI-Version
 2. **Schrittweise reproduzieren**: von Null oder sauberem Worktree
-3. **Offizieller Beleg**: mindestens ein OpenAI-Docs- oder Help-Center-Link
+3. **Offizielle Grundlage**: Produktfakten mit konkreten offiziellen Quellen belegen; für stabile Methodenübungen echte Eingaben und Prüfprotokolle verwenden, ohne eine offizielle Bestätigung vorzutäuschen
 4. **Community-Quellen**: Community-Artikel nur als Themenreferenz; Fakten offiziell
-5. **Datum**: Footer `Zuletzt geprüft: YYYY-MM-DD`
+5. **Datum aktualisieren**: `verification.checkedAt` nur auf das tatsächliche Prüfdatum setzen; alte Daten nicht massenhaft auffrischen und als erneute Prüfung ausgeben
 6. **Unabhängiges Review**: `verified` idealerweise zweite Person ≠ Autor
 
 ## Prüfreihenfolge
@@ -120,9 +144,3 @@ Quartalsweise oder bei Major-Release neu prüfen:
 - [Offizielle Ressourcen](/de/guide/reference/official-resources/)
 
 `verified` heißt: „nach aktuellen Belegen wirklich geprüft und nachvollziehbar“ — Autor-Selbstvertrauen reicht nicht.
-
----
-
-**Status:** verified  
-**Prüfgrundlage:** Gegen aktuelles Statussystem, abgeschlossene Review-Runden und „offiziell zuerst“ abgeglichen; interne Standards und Herabstufungsprinzipien für `verified`.  
-**Zuletzt geprüft:** 2026-07-26

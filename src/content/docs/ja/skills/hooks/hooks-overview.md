@@ -1,93 +1,88 @@
 ---
-title: Hooks 概要
-description: Agent の重要ノードに検証、ログ、監査を挿入し、チームのセキュリティとコンプライアンスを補完する。
+legacyVerification:
+  status: "verified"
+  products: "ローカル Codex ホストを使用する環境。CLI は信頼管理用の `/hooks` を提供"
+  checkedAt: "2026-08-25"
+title: Hooks の概要
+description: Hook の設定の検出、信頼審査、ハンドラー、安全上の境界を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: 169a1ec
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: ac7889b
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
-Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
+Hooks を使うと、Codex の Agent ループ中にコマンドスクリプトや、接続済み MCP サーバーのツールを実行できます。代表的な用途は、プロンプト内の秘密情報の検査、ツール呼び出しの制御、監査ログ、セッションの要約、終了前の検証です。
 
-![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-ja.svg)
+![Codex Hook のライフサイクル：セッション、ターン、ツール呼び出し、コンテキスト圧縮、サブエージェントのイベント](/diagrams/hook-lifecycle-events-ja.svg)
 
-The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
+図で最も重要な違いは、`PreToolUse` は対応するローカルツールの実行前に入力を拒否または変更できる一方、`PostToolUse` は実行後に発生し、すでに生じた副作用を取り消せないことです。
 
-## Configuration discovery
+## 設定の検出元
 
-Codex looks beside active configuration layers for:
+Codex は有効な設定レイヤーの近くで次を探します。
 
 - `~/.codex/hooks.json`
-- `[hooks]` in `~/.codex/config.toml`
+- `~/.codex/config.toml` 内の `[hooks]`
 - `<repo>/.codex/hooks.json`
-- `[hooks]` in `<repo>/.codex/config.toml`
-- Hooks bundled with enabled Plugins
-- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
+- `<repo>/.codex/config.toml` 内の `[hooks]`
+- 有効な Plugin に同梱された Hook
+- システムポリシー、MDM、Cloud、`requirements.toml` を通じて管理者が配布する managed Hook
 
-Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
+プロジェクトの `.codex/` は、そのプロジェクトが信頼されている場合にのみ読み込まれます。複数の出所から一致する Hook があればすべて実行されます。優先度の高い設定レイヤーが低いレイヤーの Hook 一式を上書きするわけではありません。
 
-When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
+同じレイヤーに `hooks.json` とインラインの `[hooks]` がある場合、Codex は両者を統合し、起動時に警告を表示します。可能な限り、1 つのレイヤーではどちらか一方の形式を使ってください。
 
-## Review every unmanaged Hook
+## 非管理 Hook は必ず審査する
 
-Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
+Codex は Hook 定義の hash に基づいて信頼を記録します。新規または変更された非管理 Hook は審査待ちとして扱われ、利用者が新しい定義を信頼するまでスキップされます。
 
-Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
+CLI では `/hooks` を使って出所を確認し、変更を審査し、個別の非管理 Hook を信頼または無効化できます。Plugin に同梱された Hook も同じ信頼手続きを通ります。Managed Hook は組織ポリシーによって信頼されるため、利用者は個人用の Hook ブラウザーから無効化できません。
 
-## Two executable handlers
+## 実行可能な 2 種類のハンドラー
 
-| Handler | Purpose | Boundary |
+| ハンドラー | 用途 | 主な境界 |
 |---|---|---|
-| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
-| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
+| `command` | stdin でイベントの JSON を受け取るローカルスクリプトを実行 | スクリプト自体がローカルプロセスの権限を持つため、依存関係と出力を審査する |
+| `mcp_tool` | 接続済み MCP サーバーのツールを呼び出す | サーバーの起動や再接続は行わず、`SessionEnd` では使用できない |
 
-The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
+現在の公式説明では、`prompt` と `agent` のハンドラーは設定として解析されても実行時にはスキップされます。動作する設定として記載しないでください。
 
-## Runtime behavior
+## 実行時の動作
 
-- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
-- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
-- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
-- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
+- 一致する複数の `command` Hook は並行して起動します。1 つの Hook が、すでに一致した別の Hook の起動を阻止することはできません。
+- 多くの Hook の `timeout` はデフォルトで 600 秒です。`SessionEnd` はデフォルト 1 秒、最大 3 秒です。本番環境のガードスクリプトでも、短いタイムアウトを明示的に設定してください。
+- `command` Hook の作業ディレクトリはセッションの `cwd` です。サブディレクトリから起動しても相対パスが壊れないよう、リポジトリのスクリプトは Git のルートからパスを解決します。
+- 非同期 Hook はログや分析に適していますが、トリガーとなった操作をブロック、承認、変更、制御することはできません。
 
-## Relationship to other security layers
+## 他の安全レイヤーとの関係
 
-| Layer | Responsibility |
+| レイヤー | 担当すること |
 |---|---|
-| Sandbox | Filesystem, network, and system capability boundary |
-| Approval | Human decision before high-risk actions |
-| Command rules | Declarative allow/deny for known command patterns |
-| Hook | Custom, testable logic at lifecycle points |
-| Service permission | Final external-system read/write authority |
+| サンドボックス | ファイル、ネットワーク、システム機能の境界 |
+| 承認 | 高リスク操作の実行前に人が判断すること |
+| コマンドルール | 既知のコマンドパターンに対する宣言的な許可・拒否 |
+| Hook | ライフサイクル上の節目で実行する、カスタムのテスト可能なロジック |
+| サーバー側の権限 | 外部システムで最終的に許される読み書き |
 
-Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
+Hook がカバーするツールの範囲は、完全な安全境界ではありません。公式文書によると、一部の専用ツールの経路はデフォルトの Hook 経路を通らない場合があります。WebSearch のような Hosted tool も、ローカルの `PreToolUse` / `PostToolUse` を通りません。
 
-## Adoption order
+## 導入する順序
 
-1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
-2. Use `systemMessage` or additional context for high-confidence warnings.
-3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
-4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
+1. まず `PostToolUse` または `SessionEnd` で機密情報を除いたログを取り、実際の動作を観察します。
+2. 確度の高い問題には、`systemMessage` または追加コンテキストで注意を促します。
+3. ルールが明確で、スクリプトに fixture があり、誤検知を許容できる場合に限って `PreToolUse` でブロックします。
+4. Hook を CI、コミット前チェック、サーバー側の権限と整合させ、矛盾するポリシーを作らないようにします。
 
-## Acceptance checklist
+## 検収チェックリスト
 
-- [ ] Event names come from the current official list.
-- [ ] Matchers cover only required tools or sources.
-- [ ] Scripts have fixture tests and readable errors.
-- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
-- [ ] Failure, timeout, and disabled paths were exercised.
-- [ ] The team understands trust changes shown by `/hooks`.
+- [ ] イベント名は現在の公式リストにあるものを使用している。
+- [ ] matcher は必要なツールまたは出所だけを対象にしている。
+- [ ] スクリプトには固定入力のテストと理解しやすいエラーメッセージがある。
+- [ ] ログには token、完全なプロンプト、機密性の高いツール引数を保存しない。
+- [ ] Hook の失敗、タイムアウト、無効化の経路を試している。
+- [ ] チームが `/hooks` に表示される信頼状態の変化を理解している。
 
-## Official source
+## 公式情報
 
-- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
-
-**Last verified:** 2026-08-25
+- [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)

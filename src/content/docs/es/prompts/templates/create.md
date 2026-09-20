@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de creación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de creación
 description: Implementar de cero una función, un texto o un artefacto.
 locale: es
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de creación
 
 En tareas de creación desde cero, los dos problemas más fáciles son:
 
@@ -65,10 +69,3 @@ Lo peor en creación: empezar sin aclarar «qué» y «para quién».
 
 - [Trabajo guiado por especificación](/es/cases/workflows/specification-driven-work/)
 - [Definir el terminado](/es/prompts/define-done/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de creación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

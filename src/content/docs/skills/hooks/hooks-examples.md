@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "使用本地 Codex host 的环境；信任管理使用 Codex CLI `/hooks`"
+  checkedAt: "2026-08-25"
 title: Hook 配置示例
 description: 用真实 hooks.json 和标准库 Python 脚本实现可测试的 PreToolUse 守护栏。
 ---
@@ -96,11 +100,3 @@ printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{
 ## 官方来源
 
 - [OpenAI：Hooks 配置与 PreToolUse 输出](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状态：** verified
-
-**适用产品：** 使用本地 Codex host 的环境；信任管理使用 Codex CLI `/hooks`
-
-**最近核验：** 2026-08-25

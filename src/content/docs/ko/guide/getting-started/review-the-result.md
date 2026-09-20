@@ -3,7 +3,7 @@ title: 결과 확인
 description: 변경을 읽고 산출물을 검증한 뒤 수락하거나 수정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: cb5b5d9
+source_revision: a215910
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

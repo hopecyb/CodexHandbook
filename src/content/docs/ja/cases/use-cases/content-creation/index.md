@@ -3,7 +3,7 @@ title: コンテンツ制作
 description: ドキュメント、記事、コンテンツ資産の事例入口——レビュー、リライト、成果物検証に焦点。
 locale: ja
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

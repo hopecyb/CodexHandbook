@@ -3,7 +3,7 @@ title: Hooks
 description: Führe Skripte oder MCP-Werkzeuge im Codex-Lebenszyklus für Prüfungen, Protokollierung und Richtliniensteuerung aus.
 locale: de
 source_locale: zh-CN
-source_revision: c768708
+source_revision: a0312e9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

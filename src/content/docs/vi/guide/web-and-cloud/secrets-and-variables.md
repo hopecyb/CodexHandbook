@@ -1,28 +1,27 @@
 ---
 title: Secrets và biến môi trường
-description: "Tiêm an toàn API key, token và cấu hình không nhạy cảm vào Cloud."
+description: Chọn đúng Secret chỉ dùng trong Cloud setup và biến môi trường thông thường tồn tại suốt cuộc trò chuyện.
 locale: vi
 source_locale: zh-CN
-source_revision: 08f8d64
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 78937be
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
-Cloud environment variables and Secrets have different lifecycles. That distinction determines what they can support safely; masking in the UI is not the only difference.
+Biến môi trường và Secret trong Cloud có vòng đời khác nhau. Sự khác biệt đó quyết định chúng có thể hỗ trợ điều gì một cách an toàn, chứ không chỉ là giao diện có che giá trị hay không.
 
-| Type | Available phase | Suitable content |
+| Loại | Giai đoạn thấy được | Nội dung phù hợp |
 |---|---|---|
-| Environment variable | Setup and Agent | Non-sensitive configuration such as run mode or a public API base URL |
-| Secret | Setup script only | Private-package tokens and credentials needed to install dependencies |
+| Biến môi trường | Suốt setup và Agent | Cấu hình không nhạy cảm, như chế độ chạy hoặc địa chỉ gốc API công khai |
+| Secret | Chỉ trong setup script | Token gói riêng tư, thông tin xác thực cần để cài phần phụ thuộc |
 
-A Secret is stored with additional encryption, decrypted only while the task runs, and removed before the Agent phase begins. It is not a general credential channel for letting an Agent call a production API at runtime.
+Secret được lưu với lớp mã hóa bổ sung, chỉ được giải mã khi tác vụ chạy và bị loại bỏ trước khi giai đoạn Agent bắt đầu. Nó không phải kênh thông tin xác thực chung để Agent gọi API sản xuất trong lúc chạy.
 
-## Correct example: install a private package
+## Ví dụ đúng: cài gói riêng tư
 
-Create an `NPM_TOKEN` Secret in environment settings. The setup script uses it to create temporary authentication configuration and install dependencies:
+Tạo Secret `NPM_TOKEN` trong cài đặt môi trường. Setup script dùng nó để tạo cấu hình xác thực tạm thời và cài phần phụ thuộc:
 
 ```bash
 set -euo pipefail
@@ -31,44 +30,36 @@ pnpm install --frozen-lockfile
 rm -f ~/.npmrc
 ```
 
-The Agent no longer needs the token and uses the installed dependencies. Never `echo` a Secret into setup logs.
+Agent không cần token ở giai đoạn tiếp theo; nó chỉ dùng phần phụ thuộc đã cài. Không được `echo` Secret vào nhật ký setup.
 
-## Incorrect example
+## Ví dụ sai
 
 ```text
-Configure a production API_KEY as an ordinary environment variable, then ask
-the Agent to curl the external service and verify a real order.
+Đặt API_KEY sản xuất thành biến môi trường thông thường,
+rồi để Agent dùng curl gọi giao diện ngoài để kiểm tra đơn hàng thật.
 ```
 
-This exposes a sensitive value throughout the Agent phase and creates exfiltration and accidental-operation risk when network access is open. Use fixtures, mocks, narrowly scoped temporary test credentials, or keep authenticated preparation in setup.
+Cách này khiến giá trị nhạy cảm tồn tại suốt giai đoạn Agent; nếu mở mạng, nó có thể bị gửi ra ngoài hoặc gây thao tác nhầm. Hãy dùng dữ liệu thử, mock, thông tin xác thực thử nghiệm tạm thời với quyền rất hẹp hoặc giới hạn phần chuẩn bị cần xác thực trong setup.
 
-## Configuration review
+## Kiểm tra cấu hình
 
-1. List the values actually needed in setup and Agent phases.
-2. Use a Secret for sensitive values used only during installation.
-3. Use environment variables for non-sensitive settings the Agent must access.
-4. Never place values in prompts, issues, PRs, the repository, or `AGENTS.md`.
-5. Run a secret scanner and inspect setup logs.
-6. Rotate credentials and delete those no longer required.
+1. Liệt kê giá trị setup và Agent thật sự cần.
+2. Giá trị nhạy cảm chỉ dùng để cài đặt phải là Secret.
+3. Thiết lập không nhạy cảm mà Agent cần dùng phải là biến môi trường.
+4. Không ghi giá trị vào prompt, issue, PR, kho mã hoặc `AGENTS.md`.
+5. Chạy công cụ quét Secret và kiểm tra nhật ký setup.
+6. Định kỳ xoay vòng và xóa thông tin xác thực không còn dùng.
 
-Setup runs in a separate Bash session. A normal `export` does not persist automatically into the Agent phase. Configure non-sensitive values that must span the chat as environment variables instead of relying on temporary shell state.
+Setup chạy trong phiên Bash riêng; lệnh `export` thông thường không tự kéo dài sang giai đoạn Agent. Giá trị không nhạy cảm cần có suốt cuộc trò chuyện phải được cấu hình trực tiếp thành biến môi trường, thay vì dựa vào trạng thái shell tạm thời.
 
-## Relationship to CI
+## Quan hệ với CI
 
-GitHub Actions Secrets and Codex Cloud Secrets are separate stores and do not synchronize automatically. Reusing variable **names** can simplify documentation, but do not copy one over-privileged production token into both systems.
+GitHub Actions Secrets và Codex Cloud Secrets là hai kho lưu trữ khác nhau, không tự đồng bộ. Có thể dùng cùng **tên** biến cho dễ ghi tài liệu, nhưng đừng sao chép cùng một token sản xuất có quyền rộng hơn nhu cầu tác vụ.
 
-## After exposure
+## Khi bị lộ
 
-Revoke or rotate the credential immediately, then remove it from logs, chats, issues, and Git history. Deleting the current file alone cannot retract a Secret that has already propagated.
+Lập tức thu hồi hoặc xoay vòng thông tin xác thực, rồi xử lý nội dung đã lộ trong nhật ký, cuộc trò chuyện, issue và lịch sử Git. Chỉ xóa tệp hiện tại không thể thu hồi Secret đã lan truyền.
 
-## Official source
+## Nguồn chính thức
 
-- [Cloud environments: variables and Secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Cloud
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Cloud environments: variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)

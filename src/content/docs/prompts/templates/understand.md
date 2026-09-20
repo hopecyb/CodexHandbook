@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供理解类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 理解模板
 description: 先建立认知，再动手改动。
 ---
-
-# 理解模板
 
 很多任务卡住，是因为还没建立起最基本的共同理解。
 
@@ -49,10 +52,3 @@ description: 先建立认知，再动手改动。
 
 - [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
 - [理解代码库案例](/cases/understand-a-codebase/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供理解类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

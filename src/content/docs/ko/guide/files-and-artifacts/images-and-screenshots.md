@@ -3,7 +3,7 @@ title: 이미지와 스크린샷
 description: Codex에 스크린샷·디자인 시안을 제공하고, 작업 중 이미지 파일을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

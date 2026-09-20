@@ -3,7 +3,7 @@ title: Writing Effective Project Instructions
 description: AGENTS.md writing checklist—short, hard, executable, verifiable.
 locale: en
 source_locale: zh-CN
-source_revision: 2d236a3
+source_revision: 63dd711
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

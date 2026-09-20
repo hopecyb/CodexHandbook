@@ -3,7 +3,7 @@ title: 仕様駆動の作業
 description: 受け入れ可能な仕様を先に明確に書き、Codex に計画どおり実装させる——要件が明確な納品タスクに適する。
 locale: ja
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

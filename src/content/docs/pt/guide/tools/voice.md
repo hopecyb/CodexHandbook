@@ -3,7 +3,7 @@ title: Entrada e saída de voz
 description: Cenários, limitações e cuidados de privacidade ao interagir com o Codex por voz.
 locale: pt
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

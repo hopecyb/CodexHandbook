@@ -3,7 +3,7 @@ title: Phối hợp nhiều Agent
 description: Khám phá song song, phân công thực thi và gộp kết quả — khi nào tách, cách nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

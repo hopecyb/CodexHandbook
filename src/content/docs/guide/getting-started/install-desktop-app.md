@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "当前官方 App 快速开始明确提供 macOS、Windows、Linux 下载，并要求登录后选择聊天、项目或文件夹；本页不固定易变化的按钮坐标和安装包名称。"
+  checkedAt: "2026-08-26"
 title: 安装桌面 App
 description: 安装 ChatGPT 桌面 App，并在其中打开 Codex 工作区。
 sidebar:
@@ -48,13 +53,3 @@ sidebar:
 桌面 App 更新较快，以“能登录、能选择工作位置、能发起任务、能审查结果”为成功标准，不要依赖某个按钮的固定位置。
 
 详细界面见 [安装与界面](/guide/desktop-app/installation-and-interface/)，失败时见 [桌面 App 排障](/guide/desktop-app/troubleshooting/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**核验依据：** 当前官方 App 快速开始明确提供 macOS、Windows、Linux 下载，并要求登录后选择聊天、项目或文件夹；本页不固定易变化的按钮坐标和安装包名称。
-
-**最近核验：** 2026-08-26

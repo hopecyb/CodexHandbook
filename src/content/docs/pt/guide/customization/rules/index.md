@@ -3,7 +3,7 @@ title: Regras
 description: Página de orientação sobre allow/deny, regras de comandos e política de equipa — o que bloquear e o que apenas lembrar.
 locale: pt
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

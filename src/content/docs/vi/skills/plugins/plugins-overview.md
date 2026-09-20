@@ -1,112 +1,107 @@
 ---
-title: Tổng quan Plugins
-description: Đóng gói Skills, MCP và connector ứng dụng — tiện nhóm phân phối và quản lý thống nhất.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / ứng dụng máy tính / Mobile; Codex trên máy tính và CLI; phần mở rộng IDE không hỗ trợ Plugin"
+  checkedAt: "2026-08-26"
+title: Tổng quan về Plugins
+description: Tìm hiểu thành phần, nền tảng hỗ trợ, cách cài đặt và xác minh, cùng ranh giới tin cậy của Plugin.
 locale: vi
 source_locale: zh-CN
-source_revision: b2c5dae
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a514206
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
-ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
+ChatGPT và Codex dùng chung danh mục Plugin công khai. Plugin kết hợp một nhóm khả năng liên quan thành quy trình có thể tìm kiếm và cài đặt; nó không tạo ra giao thức gọi công cụ mới.
 
-## Plugin contents
+## Plugin có thể chứa những gì
 
-| Component | Role | Installer review |
+| Thành phần | Vai trò | Người cài đặt cần kiểm tra |
 |---|---|---|
-| Skills | Reusable steps, references, scripts | Instruction fit and script trust |
-| Connectors | GitHub, Slack, Drive, and other services | OAuth scopes, writes, external data |
-| MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
-| Browser extensions | Browser capability for a workflow | Browser access and necessity |
-| Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
-| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
+| Skills | Các bước, tài liệu tham khảo và script có thể tái sử dụng | Hướng dẫn có phù hợp với tác vụ hiện tại không, script có đáng tin cậy không |
+| Connectors | Kết nối với GitHub, Slack, Google Drive và các công cụ khác | OAuth scope, thao tác đọc/ghi, phạm vi dữ liệu bên ngoài |
+| MCP servers | Định nghĩa công cụ, xác thực và trả về dữ liệu có cấu trúc | Nguồn máy chủ, danh sách công cụ, log và quyền |
+| Browser extensions | Cung cấp khả năng trình duyệt cho quy trình cụ thể | Phạm vi truy cập trình duyệt và mức độ cần thiết |
+| Hooks | Chạy lệnh hoặc công cụ MCP tại các thời điểm trong vòng đời tác vụ | Xem xét và tin cậy định nghĩa chính xác trước khi bật |
+| Scheduled task templates | Cung cấp điểm khởi đầu tái sử dụng trên các nền tảng hỗ trợ tác vụ định kỳ | Tần suất, quyền, điều kiện dừng và bước con người rà soát |
 
-## Difference from Skill and MCP
+## Khác với Skill và MCP thế nào
 
-| Mechanism | Main question | PR review example |
+| Cơ chế | Câu hỏi chính | Ví dụ trong một bộ quy trình rà soát PR |
 |---|---|---|
-| Skill | Which steps? | Read diff, verify evidence, rank risk |
-| MCP / Connector | Which external tools? | Read GitHub PR and comments |
-| Hook | Which lifecycle check? | Scan secrets after a write |
-| Plugin | How is the bundle installed and distributed? | Team PR-review package |
+| Skill | Nên làm việc theo các bước nào? | Đọc diff, xác minh bằng chứng, sắp xếp theo mức rủi ro |
+| MCP / Connector | Có thể gọi công cụ bên ngoài nào? | Đọc PR và bình luận trên GitHub |
+| Hook | Kiểm tra ở thời điểm nào trong vòng đời? | Quét khóa bí mật sau khi ghi tệp |
+| Plugin | Cài đặt và phân phối các khả năng đó cùng nhau thế nào? | “Bộ rà soát PR” của nhóm |
 
-A Plugin is a distribution layer, not the final execution step. See [Capability map](/vi/skills/capability-map/).
+Plugin là lớp phân phối, không phải bước cuối cùng trong chuỗi thực thi. Xem sơ đồ tại [Bản đồ khả năng mở rộng](/vi/skills/capability-map/).
 
-## Install and verify
+## Cài đặt và xác minh lần đầu
 
-### ChatGPT Web / desktop App
+### ChatGPT Web / ứng dụng máy tính
 
-1. Open Plugins.
-2. Inspect publisher, description, and contents.
-3. Install; review each external authorization separately.
-4. Verify at low risk in a new Chat, Work, or Codex task.
+1. Mở tab Plugins.
+2. Xem nhà phát hành, mô tả và các khả năng đi kèm.
+3. Cài đặt; nếu cần kết nối dịch vụ bên ngoài, hãy xem xét riêng phạm vi cấp quyền.
+4. Xác minh bằng một tác vụ ít rủi ro trong Chat, Work hoặc Codex mới.
 
 ### Codex CLI
 
-1. Enter `/plugins`.
-2. Install from a configured marketplace.
-3. **Start a new session**, then verify the installed Skill or tool.
+1. Nhập `/plugins` để mở trình duyệt Plugin.
+2. Cài đặt từ marketplace đã cấu hình.
+3. **Bắt đầu phiên mới**, rồi xác minh Skill hoặc công cụ được cài cùng gói.
 
-The IDE integration does not support Plugins. Manage them in the desktop App or CLI.
+Phần mở rộng IDE hiện không hỗ trợ Plugin. Không nên viết hướng dẫn khắc phục việc “không tìm thấy mục này trong IDE”; hãy dùng ứng dụng ChatGPT trên máy tính hoặc Codex CLI để quản lý Plugin.
 
-## Low-risk prompt
+## Prompt xác minh ít rủi ro
 
 ```text
-Inspect only newly installed <plugin-name>; do not write:
-1. List related Skills and tools.
-2. Mark each tool read-only or externally mutating.
-3. Use test data or one read-only query.
-4. Name the component used and authorizations still requiring human review.
+Chỉ kiểm tra <plugin-name> vừa cài, không ghi dữ liệu:
+1. Liệt kê Skills và công cụ liên quan đến Plugin này trong tác vụ hiện tại;
+2. Cho biết từng công cụ chỉ đọc hay có thể gây tác động bên ngoài;
+3. Thực hiện một lệnh gọi tối thiểu bằng dữ liệu thử nghiệm hoặc truy vấn chỉ đọc;
+4. Báo cáo thành phần thực sự đã dùng và liệt kê những quyền vẫn cần con người xác nhận.
 ```
 
-Do not send messages, change states, delete data, or bulk-write during first verification.
+Nếu Plugin cần kết nối bên ngoài, lần xác minh đầu tiên không được gửi tin nhắn, thay đổi trạng thái, xóa dữ liệu hoặc ghi hàng loạt tệp.
 
-## Team adoption
+## Quy trình áp dụng trong nhóm
 
-1. **Inventory:** Skills, connectors, MCP, browser extensions, Hooks, templates.
-2. **Provenance:** marketplace, repository, publisher, update policy.
-3. **Least privilege:** test account and read-only scopes.
-4. **Pilot:** non-production project or small team.
-5. **Hook review:** inspect bundled Hook hash and behavior in `/hooks`.
-6. **Exit record:** disable, uninstall, rollback, revoke OAuth.
+1. **Kiểm kê thành phần:** liệt kê Skills, connector, MCP, phần mở rộng trình duyệt, Hooks và mẫu.
+2. **Xác minh nguồn:** kiểm tra marketplace, kho mã, nhà phát hành và chính sách cập nhật.
+3. **Cấp quyền tối thiểu:** thử bằng tài khoản kiểm thử và scope chỉ đọc.
+4. **Thử nghiệm tách biệt:** dùng trước trong dự án phi production hoặc nhóm nhỏ.
+5. **Rà soát Hook:** dùng `/hooks` để kiểm tra hash và hành vi của Hook đi kèm Plugin.
+6. **Ghi rõ cách rút lui:** mô tả các bước tắt, gỡ cài đặt, hoàn tác và thu hồi OAuth.
 
-## Boundaries
+## Những ranh giới không nên bỏ qua
 
-- Successful installation does not prove safety or data fit.
-- External authorization is a separate high-risk step.
-- Plugin Hooks run alongside matching Hooks from other sources.
-- Workspace administrators can restrict Plugins and tools.
-- Mobile uses installed Plugins but should not be assumed to have full management.
+- Cài đặt thành công không có nghĩa thành phần an toàn hoặc phù hợp với dữ liệu hiện tại.
+- Plugin có thể nhắc bạn kết nối dịch vụ bên ngoài; cấp quyền là một bước riêng có rủi ro cao.
+- Hook của Plugin chạy cùng các Hook phù hợp từ nguồn khác, không tự động thay thế Hook cũ.
+- Quản trị viên workspace có thể kiểm soát Plugin và công cụ nào được phép dùng; danh mục cá nhân nhìn thấy không đồng nghĩa với phạm vi tổ chức cho phép.
+- Mobile phù hợp để dùng Plugin đã có trên tài khoản; đừng giả định nó có giao diện quản lý đầy đủ.
 
-## When not to build a Plugin
+## Khi nào chưa cần tạo Plugin
 
-- One simple `SKILL.md` with no distribution problem.
-- One personal experimental script.
-- Unstable permission and update policy.
-- Users work only in the IDE integration.
+- Chỉ có một `SKILL.md` đơn giản, không cần kết hợp hoặc phân phối.
+- Script cá nhân dùng một lần và vẫn đang thử nghiệm nhanh.
+- Chính sách quyền và nâng cấp chưa ổn định.
+- Người dùng mục tiêu chỉ làm việc trong phần mở rộng IDE.
 
-Stabilize one Skill or MCP workflow before bundling it.
+Trước tiên hãy xác minh một Skill hoặc quy trình MCP đơn lẻ cho ổn định, rồi mới cân nhắc kết hợp và phân phối; cách này thường dễ rà soát hơn.
 
-## Acceptance checklist
+## Danh sách kiểm tra nghiệm thu
 
-- [ ] Target surface supports Plugins.
-- [ ] Publisher and source are traceable.
-- [ ] External connections and OAuth scopes reviewed.
-- [ ] Plugin Hooks reviewed and trusted.
-- [ ] Read-only minimal task succeeds.
-- [ ] New session discovers expected Skill/tool.
-- [ ] Team has disable, rollback, revocation steps.
+- [ ] Nền tảng mục tiêu hỗ trợ Plugin.
+- [ ] Có thể truy xuất nhà phát hành và nguồn gốc.
+- [ ] Đã xem xét kết nối bên ngoài và OAuth scope.
+- [ ] Đã rà soát và tin cậy Hook của Plugin.
+- [ ] Tác vụ tối thiểu chỉ đọc chạy thành công.
+- [ ] Phiên mới tìm thấy Skill hoặc công cụ như dự kiến.
+- [ ] Nhóm có hướng dẫn tắt, hoàn tác và thu hồi quyền.
 
-## Official sources
+## Nguồn chính thức
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
-
-**Kiểm chứng gần nhất:** 2026-08-26

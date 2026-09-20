@@ -1,58 +1,40 @@
 ---
-title: OpenSpec (Spec-Driven Development)
-date: 2026-01-26
-year: 2026
-summary: AI can generate code quickly, but the reasoning behind “why it’s done this way” often gets lost in conversation history. OpenSpec introduces a spec-first approach — define what to build and how to build it before implementation — so both humans and AI stay aligned. Every change is traceable, replacing intuition-driven coding with explicit, documented decisions.
-phase: emerging
-trend: rising
-signal: well-calibrated
-adoption_effort: ready-to-use
-tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
-authored_by: ai-assisted
+title: OpenSpec (specification-driven development)
+description: OpenSpec is a specific project for organizing specifications and change artifacts. Specification-driven development is a broader way of working; a project release is not the origin of the method.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: The event or project description in the primary source below was checked; learning advice is the author’s judgment, and source checking is not presented as a product test.
+  evidence:
+  - label: OpenSpec v1.0.0 release notes
+    href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: 033715b
+source_revision: 1a34023
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# OpenSpec
+## Verifiable event and scope
 
-- Important dates:
-  - First release (npm 0.1.0): 2025-09-06
-  - Version 1.0.0 release: 2026-01-26
-- Official references:
-  - https://github.com/Fission-AI/OpenSpec
-  - https://www.npmjs.com/package/@fission-ai/openspec
-  - https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md
-- Note: This entry records public evolution milestones and phase significance of OpenSpec as a spec-driven AI development framework.
+**Type: project release · Not ordered by initial release date.** The project’s official release page provides notes for v1.0.0 (The OPSX Release). This check does not infer the project’s initial release date from that version, nor does it retain a claimed initial npm release date that the evidence reviewed here does not confirm.
 
-## What It Is
+Source: [OpenSpec v1.0.0 release notes](https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0). Checked on 2026-09-18; the source publication date and this page’s check date mean different things.
 
-OpenSpec is a spec-driven development framework (SDD) for AI coding collaboration.
+## What problem it addresses
 
-According to its official docs, it uses artifacts such as `proposal.md`, `specs/`, `design.md`, and `tasks.md` to separate "why this," "what to build," "how to design," and "how to execute" into an iterative, maintainable process instead of leaving key decisions only in chat context.
+OpenSpec is a specific project for organizing specifications and change artifacts. Specification-driven development is a broader way of working; a project release is not the origin of the method.
 
-## What Step It Moved AI Application Engineering From and To
+## Learning advice and limits of applicability
 
-It moved many teams from "prompt and edit code immediately" toward "produce spec artifacts first, then implement and archive."
+The following is this site’s teaching judgment, not a measure of industry adoption or effectiveness:
 
-Its default path is `/opsx:propose -> /opsx:apply -> /opsx:archive`. This links requirement clarification, solution design, task breakdown, and final archival into one workflow, reducing semantic drift in multi-person or long-cycle collaboration.
+When requirements involve several constraints or handoffs between people, record the goal, scope, acceptance criteria, and open questions first. Simple changes do not need a full specification process imposed mechanically. Specific commands change between project versions, so use the documentation for the version at hand.
 
-## What Stage It Is In Now
+## Hands-on exercise
 
-I currently mark OpenSpec as `emerging`.
+[Specification-driven workflow](/en/cases/workflows/specification-driven-work/): write an acceptance-testable specification for one change, then map the implementation to it item by item. This site’s exercise introduces the method; it does not mean OpenSpec has been installed or run here.
 
-It already has an installable CLI, a clear artifact model, integration paths across tools, and a 1.0.0 release on 2026-01-26. But it is still an evolving ecosystem project, and organizational rollout and governance patterns are still forming.
-
-## What It Might Replace
-
-It can replace part of AI development habits that rely only on chat logs for requirement management, as well as weakly connected processes split across docs, task systems, and temporary prompts.
-
-In iterative and collaborative work, artifact-driven pipelines like OpenSpec make requirement-design-implementation relations more traceable.
-
-## What Might Replace It
-
-If a more unified standard protocol appears that combines specification, execution, verification, and archival, OpenSpec may be absorbed by higher-level platform capabilities.
-
-For example, workflow systems deeply integrated with IDEs and agent runtimes may further standardize practices that are currently repo-artifact centered.
+[Back to the roadmap and its dating convention](/en/ai-roadmap/).

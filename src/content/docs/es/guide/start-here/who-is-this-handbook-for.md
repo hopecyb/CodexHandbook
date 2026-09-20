@@ -3,7 +3,7 @@ title: Para quién es este handbook
 description: Explica cómo pueden usar este handbook principiantes, creadores, desarrolladores y equipos.
 locale: es
 source_locale: zh-CN
-source_revision: 41e8ab8
+source_revision: 95272c3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

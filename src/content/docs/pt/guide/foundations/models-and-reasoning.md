@@ -3,10 +3,9 @@ title: Modelos e Raciocínio
 description: Fatores a considerar ao escolher modelo e intensidade de Raciocínio.
 locale: pt
 source_locale: zh-CN
-source_revision: 001ea32
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0cbc9dc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 90
 ---
@@ -15,7 +14,7 @@ Modelos disponíveis e níveis de «Raciocínio / pensamento» mudam com atualiz
 
 - **Dificuldade da Tarefa**: reescrita simples vs decisão de arquitetura em vários arquivos
 - **Latência e custo**: maior intensidade de Raciocínio em geral é mais lenta e mais cara
-- **Verificabilidade**: quanto mais difícil a Tarefa, mais deve forçar plano e testes
+- **Verificabilidade**: tarefas complexas precisam de critérios de aceitação claros, com planejamento e verificação conforme a necessidade.
 
 Na primeira vez que vê «modelo», «intensidade de Raciocínio», «nível de pensamento», muita gente pergunta: quanto mais alto, melhor?
 
@@ -36,13 +35,9 @@ Fixe um ponto: Tarefas simples e complexas nem sempre cabem no mesmo nível.
 Não necessariamente.  
 Se a Tarefa é só ajustar uma frase de copy ou completar um parágrafo pequeno, intensidade alta demais pode só deixar mais lento e mais caro — sem ser mais útil.
 
-### 2. Mais Raciocínio permite menos Verificação?
+### 2. Mais raciocínio permite verificar menos?
 
-Quanto mais complexa a Tarefa, mais você deveria:
-
-- Pedir um plano primeiro
-- Rodar testes
-- Olhar o Diff
+Adapte a verificação ao resultado: em código, confira testes e diff; em artigos, confronte afirmações com as fontes; em planilhas, confira os critérios de cálculo. Planeje primeiro quando for preciso ponderar caminhos diferentes. Pausar a cada etapa não deve ser o padrão.
 
 ### 3. Escolha de modelo é coisa de especialista?
 
@@ -62,9 +57,4 @@ O mais importante é julgar: esta Tarefa vale pagar mais tempo e custo por «pen
 
 Este handbook não se vincula a nomes de marketing de modelos. Use a lista atual do seu cliente e [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** A documentação atual de modelos da OpenAI e as entradas Codex/desenvolvedor tratam escolha de modelo, velocidade/custo e diferenças de capacidade como itens configuráveis; esta página não vincula modelos específicos nem níveis fixos — só mantém o princípio estável de equilibrar complexidade da Tarefa, latência/custo e verificabilidade.  
-**Última verificação:** 2026-07-26
+Para registrar essa escolha, veja [Uso, tempo e escolha do modelo](/guide/quality/usage-time-and-model-choice/). Essa página, atualmente disponível em chinês, separa limite da assinatura, custo da API, espera e retrabalho humano.

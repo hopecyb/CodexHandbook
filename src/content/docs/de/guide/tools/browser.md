@@ -3,7 +3,7 @@ title: Browser-Werkzeug
 description: "Webseiten öffnen, UI-Status prüfen und Frontend-Verhalten verifizieren — Fähigkeiten und Grenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

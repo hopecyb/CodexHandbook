@@ -3,7 +3,7 @@ title: Nén ngữ cảnh
 description: Hội thoại dài sau khi nén giữ gì, mất gì.
 locale: vi
 source_locale: zh-CN
-source_revision: 329ca4d
+source_revision: c6c9d03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

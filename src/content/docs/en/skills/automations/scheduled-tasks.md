@@ -3,7 +3,7 @@ title: Complete Scheduled tasks guide
 description: Choose standalone or in-chat scheduling and configure projects, worktrees, permissions, prompts, and human review.
 locale: en
 source_locale: zh-CN
-source_revision: 7b79596
+source_revision: fa792dc
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

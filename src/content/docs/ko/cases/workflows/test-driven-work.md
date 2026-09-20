@@ -3,7 +3,7 @@ title: 테스트 주도 작업
 description: 먼저 실패 테스트를 정의하거나 보완한 뒤 구현을 유도합니다—Codex 수정을 객관적으로 인수할 수 있게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

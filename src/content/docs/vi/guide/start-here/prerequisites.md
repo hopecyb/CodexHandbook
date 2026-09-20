@@ -3,7 +3,7 @@ title: Cần gì trước khi bắt đầu
 description: Tài khoản, thiết bị, dự án luyện tập và giới hạn an toàn tối thiểu.
 locale: vi
 source_locale: zh-CN
-source_revision: c8a032b
+source_revision: 5fbedb8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

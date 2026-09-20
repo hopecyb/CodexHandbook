@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明长对话压缩后的风险与补救方法；概念、示例与站内链接已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 上下文压缩
 description: 长对话压缩后保留什么、丢失什么。
 sidebar:
@@ -71,10 +76,3 @@ sidebar:
 概念层：[Token、上下文与压缩](/guide/foundations/tokens-context-and-compaction/)
 
 长任务里，最关键的限制不要只说一次；压缩后，重要规则值得主动再说一遍。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明长对话压缩后的风险与补救方法；概念、示例与站内链接已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

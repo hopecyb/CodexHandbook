@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明质量与验证章节的结构与阅读顺序；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 质量与验证
 description: 审查、测试与完成定义。
 sidebar:
@@ -14,6 +19,8 @@ sidebar:
 - [验证产物](/guide/quality/verify-artifacts/)
 - [核验来源](/guide/quality/validate-sources/)
 - [处理不确定性](/guide/quality/handle-uncertainty/)
+- [用量、耗时与模型选择](/guide/quality/usage-time-and-model-choice/)
+- [工作流评估与20条样本](/guide/quality/workflow-evaluation/)
 - [完成定义](/guide/quality/definition-of-done/)
 
 ## 阅读顺序
@@ -26,10 +33,3 @@ sidebar:
 4. 看 [完成定义](/guide/quality/definition-of-done/)，明确“怎样才算真的完成”
 
 如果没有检查，“完成”很多时候只是暂时看起来像完成。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明质量与验证章节的结构与阅读顺序；站内链接与概念表述已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

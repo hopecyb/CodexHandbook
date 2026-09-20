@@ -1,48 +1,40 @@
 ---
-title: "OpenSpec (desarrollo guiado por especificaciones)"
-date: 2026-01-26
-year: 2026
-summary: "OpenSpec pone especificaciones antes de la implementación para que humanos e IA compartan intención, diseño y criterios."
-phase: emerging
-trend: rising
-signal: well-calibrated
-adoption_effort: ready-to-use
-tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
-authored_by: ai-assisted
+title: OpenSpec (desarrollo guiado por especificaciones)
+description: OpenSpec es un proyecto concreto para organizar especificaciones y artefactos de cambio. El desarrollo guiado por especificaciones es un método de trabajo más amplio; una versión del proyecto no marca el origen del método.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Se comprobó el acontecimiento o la descripción del proyecto en la fuente primaria que figura abajo; los consejos de aprendizaje son una valoración del autor y esta comprobación de fuentes no se presenta como una prueba del producto.
+  evidence:
+  - label: Notas de la versión OpenSpec v1.0.0
+    href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 033715b
+source_revision: 1a34023
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# OpenSpec (desarrollo guiado por especificaciones)
+## Acontecimiento verificable y alcance
 
-- Fechas clave:
-  - Project release / public visibility: 2026-01-26
-- Referencias oficiales:
-  - https://github.com/openspec/openspec
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+**Tipo: versión del proyecto · No se ordena por la fecha del primer lanzamiento.** La página oficial de versiones del proyecto incluye las notas de v1.0.0 (The OPSX Release). Esta comprobación no deduce de esa versión la fecha de lanzamiento inicial del proyecto ni conserva una supuesta fecha de primera publicación en npm que las pruebas revisadas aquí no confirman.
 
-## Qué Es
+Fuente: [Notas de la versión OpenSpec v1.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0). Comprobado el 2026-09-18; la fecha de publicación de la fuente y la fecha de comprobación de esta página tienen significados distintos.
 
-OpenSpec pone especificaciones antes de la implementación para que humanos e IA compartan intención, diseño y criterios.
+## Qué problema aborda
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+OpenSpec es un proyecto concreto para organizar especificaciones y artefactos de cambio. El desarrollo guiado por especificaciones es un método de trabajo más amplio; una versión del proyecto no marca el origen del método.
 
-Movió el desarrollo desde pedir código en chat hacia trabajar contra una especificación revisable.
+## Consejos de aprendizaje y límites de aplicación
 
-## En Qué Etapa Está Ahora
+Lo siguiente es un criterio didáctico de este sitio, no una medida de adopción en el sector ni de eficacia:
 
-Actualmente lo marco como `emerging`.
+Cuando los requisitos impliquen varias restricciones o entregas entre personas, registra primero el objetivo, el alcance, los criterios de aceptación y los asuntos pendientes. Una modificación sencilla no exige imponer mecánicamente un proceso completo de especificación. Los comandos concretos cambian entre versiones del proyecto; utiliza la documentación de la versión correspondiente.
 
-Es emergente y gana valor cuanto más rápida se vuelve la generación de código.
+## Ejercicio práctico
 
-## Qué Podría Reemplazar
+[Flujo guiado por especificaciones](/es/cases/workflows/specification-driven-work/): redacta una especificación verificable para un cambio y relaciona cada parte de la implementación con ella. El ejercicio del sitio presenta el método; no significa que OpenSpec se haya instalado o ejecutado aquí.
 
-Reemplaza decisiones perdidas en historiales de conversación.
-
-## Qué Podría Reemplazarlo
-
-Puede integrarse en IDEs, issues, pruebas y plataformas de desarrollo guiado por especificación.
+[Volver a la hoja de ruta y sus criterios de fecha](/es/ai-roadmap/).

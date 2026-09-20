@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供诊断类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 诊断模板
 description: 先定位根因，再讨论修复。
 ---
-
-# 诊断模板
 
 诊断类任务常见的误区，是嘴上说“先排查”，实际还是默认它直接修。
 
@@ -44,10 +47,3 @@ description: 先定位根因，再讨论修复。
 
 - [先诊断再修复](/cases/workflows/diagnose-before-fixing/)
 - [修复 Bug 案例](/cases/fix-a-bug/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供诊断类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

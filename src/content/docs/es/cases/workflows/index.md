@@ -3,7 +3,7 @@ title: Métodos de flujo de trabajo
 description: Métodos de colaboración repetibles — no atados a una sola interfaz de producto, con puntos de control y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

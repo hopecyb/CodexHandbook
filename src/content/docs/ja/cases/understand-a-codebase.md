@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers の現在の Codex use cases には「Understand large codebases」が含まれており、主経路の追跡、重要モジュールの特定、関連ファイルの迅速な発見が重点です。本ページの例は読み取り専用の探索シナリオであり、公式の現在の位置づけと一致しています。"
+  checkedAt: "2026-07-26"
 title: コードベースを理解する
 description: 読み取り専用で未知のリポジトリを探索し、行動可能な認知マップを構築する。
 locale: ja
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# コードベースを理解する
 
 ## メタ情報
 
@@ -45,10 +53,3 @@ reviewed_at: 2026-08-26
 
 - [理解テンプレート](/ja/prompts/templates/understand/)
 - [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の現在の Codex use cases には「Understand large codebases」が含まれており、主経路の追跡、重要モジュールの特定、関連ファイルの迅速な発見が重点です。本ページの例は読み取り専用の探索シナリオであり、公式の現在の位置づけと一致しています。

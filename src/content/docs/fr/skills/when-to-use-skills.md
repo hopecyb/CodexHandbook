@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help « Skills in ChatGPT » confirme le Skill comme workflow réutilisable ; le runtime Codex matche nom et description. Page de principes de choix, sans UI versionnée."
+  checkedAt: "2026-07-26"
 title: Quand utiliser les Skills
 description: Juger si une tâche mérite un Skill, et la répartition avec commandes slash et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Question fréquente au début : est-ce que ça vaut le coup de faire un Skill ?
 
 Tout transformer en Skill alourdit ; ne rien figer force à répéter les mêmes consignes. Cette page aide à décider quand solidifier un flux.
 
-# Quand utiliser les Skills
 
 ## Bon candidat pour un Skill
 
@@ -78,10 +82,3 @@ Un Skill issu de répétition réelle tient mieux qu'un design sur le papier.
 Les Skills figent ce qui se répète, doit rester cohérent, et qu'on ne veut pas réexpliquer.
 
 Voir [Choisir une méthode d'extension](/fr/skills/choosing-an-extension-method/) et [Transformer un workflow en Skill](/fr/cases/workflows/turn-a-workflow-into-a-skill/).
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** OpenAI Help « Skills in ChatGPT » confirme le Skill comme workflow réutilisable ; le runtime Codex matche nom et description. Page de principes de choix, sans UI versionnée.

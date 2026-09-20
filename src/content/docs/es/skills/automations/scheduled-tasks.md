@@ -3,7 +3,7 @@ title: Guía completa de Scheduled tasks
 description: Elige entre una tarea independiente o dentro de un chat y configura proyectos, worktrees, permisos, prompts y revisión humana.
 locale: es
 source_locale: zh-cn
-source_revision: 7b79596
+source_revision: fa792dc
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

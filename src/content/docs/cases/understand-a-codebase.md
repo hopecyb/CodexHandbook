@@ -1,9 +1,16 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers 当前 Codex use cases 仍包含“Understand large codebases”，重点是追踪主路径、识别关键模块并快速定位相关文件；本页示例属于只读探索场景，与官方当前定位一致。"
+  checkedAt: "2026-07-26"
 title: 理解代码库
 description: 只读探索陌生仓库，建立可行动的认知地图。
 ---
-
-# 理解代码库
 
 ## 元信息
 
@@ -39,9 +46,3 @@ description: 只读探索陌生仓库，建立可行动的认知地图。
 
 - [理解模板](/prompts/templates/understand/)
 - [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Understand large codebases”，重点是追踪主路径、识别关键模块并快速定位相关文件；本页示例属于只读探索场景，与官方当前定位一致。  
-**最近核验：** 2026-07-26

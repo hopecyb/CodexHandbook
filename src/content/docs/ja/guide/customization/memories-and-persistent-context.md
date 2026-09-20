@@ -3,7 +3,7 @@ title: メモリと永続コンテキスト
 description: Codex がセッションをまたいで好みと事実を覚える仕組み——能力、境界、チーム規範。
 locale: ja
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

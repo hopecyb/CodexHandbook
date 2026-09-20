@@ -1,11 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers 首页当前仍强调使用 Codex 构建、测试、审查与交付变更；本页将验证拆成审查差异、运行测试、核验来源与完成定义，已与站内质量章节交叉核对。"
+  checkedAt: "2026-07-26"
 title: 验证
 description: 审查差异、运行测试、核验来源与定义完成标准。
 sidebar:
   order: 17
 ---
-
-# 验证
 
 很多新手第一次用 Codex，最容易犯的错，是**看到它说完成了，就当成真的完成了**。
 
@@ -90,10 +93,3 @@ Codex 的输出必须可检查。验证不是可选步骤，而是每次任务�
 验证是为了确认这份结果真的能用、敢用、交得出去。
 
 在提示词里如何写验收标准，见 [定义完成标准](/prompts/define-done/)。端到端案例见 [实战案例](/cases/)。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Developers 首页当前仍强调使用 Codex 构建、测试、审查与交付变更；本页将验证拆成审查差异、运行测试、核验来源与完成定义，已与站内质量章节交叉核对。  
-**最近核验：** 2026-07-26

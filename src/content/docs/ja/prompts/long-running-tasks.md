@@ -3,7 +3,7 @@ title: 長時間タスクのプロンプト
 description: フェーズ分割、チェックポイント、引き継ぎ情報。
 locale: ja
 source_locale: zh-CN
-source_revision: b8e9c9b
+source_revision: 4e656af
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

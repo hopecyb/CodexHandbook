@@ -3,7 +3,7 @@ title: Spracheingabe und -ausgabe
 description: "Szenarien, Grenzen und Privacy bei Sprachinteraktion mit Codex."
 locale: de
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

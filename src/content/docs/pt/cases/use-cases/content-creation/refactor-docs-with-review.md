@@ -3,7 +3,7 @@ title: Refatorar um site de documentação com revisão
 description: "Caso: atualizar ligações e capítulos em lote num projeto de documentação Astro/Starlight — diffs pequenos, verificação por build."
 locale: pt
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

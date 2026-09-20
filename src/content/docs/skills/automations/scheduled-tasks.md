@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App；CLI 与 IDE 用于准备和测试"
+  checkedAt: "2026-08-26"
 title: 定时任务完整指南
 description: 选择独立任务或聊天内任务，配置本地项目、worktree、权限、提示词和复核闭环。
 ---
@@ -131,11 +135,3 @@ Git 仓库可以选择：
 
 - [OpenAI：Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI：Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT Web / 桌面 App；CLI 与 IDE 用于准备和测试
-
-**最近核验：** 2026-08-26

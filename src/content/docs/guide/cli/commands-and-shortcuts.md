@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "已对照当前官方 Developer commands 与 Non-interactive mode 页面，核实 `codex`、`codex exec`、`--cd` / `-C` 和会话内斜杠入口；快捷键仍引导读者以当前补全和 `--help` 为准。"
+  checkedAt: "2026-08-26"
 title: 命令与快捷方式
 description: CLI 子命令、会话内操作与键盘习惯——产品向说明，完整参数见参考区。
 sidebar:
@@ -130,12 +135,3 @@ IDE：[本地任务工作流](/guide/ide/local-task-workflow/)
 
 ## 参考来源
 - OpenAI Codex CLI 文档
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**核验依据：** 已对照当前官方 Developer commands 与 Non-interactive mode 页面，核实 `codex`、`codex exec`、`--cd` / `-C` 和会话内斜杠入口；快捷键仍引导读者以当前补全和 `--help` 为准。
-
-**最近核验：** 2026-08-26

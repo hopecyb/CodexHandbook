@@ -1,77 +1,68 @@
 ---
-title: Tác vụ Cloud trong IDE
-description: Ủy thác tác vụ Cloud từ IDE, theo dõi trạng thái và rà soát đầu ra từ xa.
+title: Tác vụ Cloud từ IDE
+description: Giao tác vụ dài từ IDE cho Codex Cloud và quay lại xem kết quả có thể rà soát.
 locale: vi
 source_locale: zh-CN
-source_revision: ea8a618
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: d5369b5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
-The IDE can keep quick iteration local or connect to Codex web to delegate longer work to Cloud. The entry point remains the editor, but execution environment, repository state, and network boundaries move to the cloud.
+Bạn có thể giữ những lần chỉnh sửa nhanh ở máy cục bộ trong IDE, hoặc kết nối với Codex web để giao tác vụ mất nhiều thời gian hơn cho Cloud. Điểm bắt đầu vẫn nằm trong trình soạn thảo, nhưng môi trường thực thi, trạng thái kho lưu trữ và giới hạn truy cập mạng lúc này thuộc về môi trường Cloud.
 
-## When to delegate
+## Khi nào nên giao tác vụ
 
-| Keep local | Delegate to Cloud |
+| Giữ ở máy cục bộ | Giao cho Cloud |
 |---|---|
-| You need rapid back-and-forth with the current selection | The task has many steps or runs for a long time |
-| It depends on uncommitted local state | Inputs already exist in a remote repository or can be uploaded |
-| It requires a local-only tool | The cloud environment can recreate dependencies and verification |
-| You need to control a live local process | You want to continue other work locally |
+| Cần chỉnh sửa qua lại nhanh với vùng chọn hiện tại | Tác vụ có nhiều bước hoặc chạy lâu |
+| Phụ thuộc vào các thay đổi cục bộ chưa commit | Dữ liệu đầu vào đã có trong kho lưu trữ từ xa hoặc có thể tải lên |
+| Bắt buộc dùng công cụ chỉ có trên máy của bạn | Môi trường Cloud có thể thiết lập lại các thư viện phụ thuộc và chạy bước kiểm tra |
+| Cần tương tác với tiến trình theo thời gian thực | Muốn tiếp tục làm việc khác ở máy cục bộ |
 
-Cloud does not automatically have your uncommitted local files, credentials, or running processes. State explicitly which repository, branch, and commit the task starts from.
+Cloud không tự động có các tệp chưa commit, thông tin đăng nhập hoặc tiến trình đang chạy trên máy bạn. Trước khi giao tác vụ, phải nêu rõ kho lưu trữ, nhánh và commit dùng làm điểm bắt đầu.
 
-## Delegation checklist
+## Danh sách kiểm tra trước khi giao tác vụ
 
-- [ ] Signed in with a ChatGPT account; Codex Cloud does not accept API-key sign-in.
-- [ ] GitHub is connected, or the currently supported GitLab Beta integration is in use.
-- [ ] The cloud environment can run setup and verification scripts.
-- [ ] Required variables and Secrets are configured in the environment, not pasted into the prompt.
-- [ ] Uncommitted local changes are handled or explicitly excluded.
-- [ ] Goal, allowed paths, exclusions, and acceptance commands are explicit.
+- [ ] Đã đăng nhập bằng tài khoản ChatGPT; Codex Cloud không hỗ trợ đăng nhập bằng API key.
+- [ ] Đã kết nối GitHub hoặc đang dùng tích hợp GitLab Beta hiện được hỗ trợ.
+- [ ] Môi trường Cloud có thể chạy các tập lệnh cài đặt và kiểm tra.
+- [ ] Các biến và secret cần thiết đã được cấu hình trong môi trường, không ghi vào prompt.
+- [ ] Đã xử lý các thay đổi cục bộ chưa commit, hoặc đã nêu rõ chúng không thuộc tác vụ.
+- [ ] Đã ghi rõ mục tiêu, các đường dẫn được phép sửa, phần cấm thay đổi và lệnh nghiệm thu.
 
-## End-to-end example
+## Ví dụ từ đầu đến cuối
 
 ```text
-Goal: Fix the retry module waiting one extra time after reaching its limit.
-Starting point: acme/retry-service, branch fix/retry-limit.
-Scope: Modify only src/retry.ts and its tests.
-Constraints: Do not upgrade dependencies, change the public API, or push to main.
-Acceptance: Run pnpm test -- retry and pnpm typecheck; show the diff and command results.
+Mục tiêu: sửa mô-đun thử lại vẫn chờ thêm một lần sau khi đã đạt giới hạn.
+Điểm bắt đầu: kho lưu trữ acme/retry-service, nhánh fix/retry-limit.
+Phạm vi: chỉ sửa src/retry.ts và các bài kiểm thử tương ứng.
+Ràng buộc: không nâng cấp thư viện phụ thuộc, không sửa API công khai, không push lên main.
+Nghiệm thu: chạy pnpm test -- retry và pnpm typecheck; hiển thị diff và kết quả các lệnh.
 ```
 
-Recommended flow:
+Quy trình đề xuất:
 
-1. Attach relevant files or selections in the IDE to confirm the boundary.
-2. Choose Cloud to continue the longer task.
-3. Inspect the plan, progress, and verification results in Cloud.
-4. Return to the IDE or web and inspect the reviewable result.
-5. Fetch the branch or use a pull request to obtain the change.
-6. Rerun tests in a trusted local environment and review manually before merging.
+1. Đính kèm tệp hoặc vùng chọn liên quan trong IDE và xác nhận phạm vi vấn đề trước.
+2. Chọn Cloud để tiếp tục xử lý tác vụ dài hơn.
+3. Xem kế hoạch, tiến độ và kết quả kiểm tra trong Cloud.
+4. Quay lại IDE hoặc Web để xem kết quả có thể rà soát.
+5. Kéo nhánh về hoặc lấy thay đổi qua PR.
+6. Chạy lại các bài kiểm thử trong môi trường cục bộ đáng tin cậy và rà soát thủ công trước khi merge.
 
-“Complete” in the cloud means remote execution ended. It does not mean the code is ready to merge. Remote dependencies, operating-system behavior, or credentials can differ from local and CI environments.
+Trạng thái “hoàn thành” trong Cloud chỉ cho biết quá trình thực thi từ xa đã kết thúc, không có nghĩa là mã đã sẵn sàng để merge. Thư viện phụ thuộc, hệ điều hành hoặc thông tin đăng nhập từ xa có thể khác môi trường cục bộ hay CI và làm lộ ra những khác biệt môi trường.
 
-## Conflicts and security
+## Xung đột và bảo mật
 
-- Do not let local and cloud runs modify the same file simultaneously.
-- Do not paste production credentials into prompts; use environment Secrets.
-- Do not treat Cloud internet access as a default capability; configure allowed domains per environment.
-- Pushing, opening a PR, and merging are separate actions. Keep a human or CI gate before merging.
+- Sau khi giao tác vụ, đừng để máy cục bộ và Cloud cùng sửa một tệp.
+- Đừng dán khóa production vào prompt; hãy dùng secret của môi trường.
+- Đừng mặc định Cloud có quyền truy cập mạng; hãy cấu hình theo danh sách đích được phép của môi trường.
+- Push, mở PR và merge là các hành động khác nhau. Việc merge vẫn phải qua cổng kiểm soát của con người hoặc CI.
 
-Next, read [Cloud environments](/vi/guide/web-and-cloud/cloud-environments/) and [Create pull requests](/vi/guide/web-and-cloud/create-pull-requests/).
+Đọc tiếp [Môi trường Cloud](/vi/guide/web-and-cloud/cloud-environments/) và [Tạo pull request](/vi/guide/web-and-cloud/create-pull-requests/).
 
-## Official sources
+## Nguồn chính thức
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** IDE, Cloud
-
-**Kiểm chứng gần nhất:** 2026-08-26

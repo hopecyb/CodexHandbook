@@ -3,7 +3,7 @@ title: Fallvorlage
 description: Einheitliche Struktur zum Schreiben und Retrospektieren von Codex-Fällen — erleichtert Team-Verstetigung und Vergleich.
 locale: de
 source_locale: zh-CN
-source_revision: a430fba
+source_revision: 74ef905
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

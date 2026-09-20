@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này là bài luyện tập nội bộ rủi ro thấp của sổ tay: giới hạn chỉ sửa một tệp, cấm mạng, yêu cầu đọc được diff và kiểm tra từng tiêu chí nghiệm thu; các chương tiền đề liên quan (cài đặt, dự án luyện tập, kiểm chứng) đã đối chiếu chéo; nội dung không phụ thuộc chi tiết phiên bản sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 title: Tác vụ đầu tiên
 description: Dùng prompt rõ ràng để hoàn thành một thay đổi nhỏ và học cách kiểm tra kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Tác vụ đầu tiên
 
 Ví dụ sau mặc định dùng **App máy tính**; CLI/IDE cũng có thể dùng cùng một đoạn prompt.
 
@@ -52,9 +59,3 @@ Nếu thiếu thông tin, hãy hỏi tôi trước; đừng đoán.
 - [Cơ bản về prompt](/vi/prompts/basics/)
 - [Kiểm chứng](/vi/guide/verification/)
 - [Bắt đầu từ đây](/vi/guide/start-here/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này là bài luyện tập nội bộ rủi ro thấp của sổ tay: giới hạn chỉ sửa một tệp, cấm mạng, yêu cầu đọc được diff và kiểm tra từng tiêu chí nghiệm thu; các chương tiền đề liên quan (cài đặt, dự án luyện tập, kiểm chứng) đã đối chiếu chéo; nội dung không phụ thuộc chi tiết phiên bản sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

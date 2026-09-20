@@ -3,7 +3,7 @@ title: Aceitação de Artefatos gerados
 description: Aceitação sistemática de ficheiros, relatórios e saídas de build novos ou exportados pelo Codex.
 locale: pt
 source_locale: zh-CN
-source_revision: 4b46d0b
+source_revision: 7401176
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

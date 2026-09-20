@@ -1,29 +1,27 @@
 ---
-title: Skill examples
-description: Entry points for writing, review, research, and automation Skill examples.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This index lists writing, review, research, and automation workflows that current Codex Skills can support."
+  checkedAt: "2026-07-26"
+title: "Skill examples"
+description: "Entry points for four Skill examples: writing, review, research, and automation."
 locale: en
 source_locale: zh-CN
-source_revision: 346b14d
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: 490db95
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Skill examples
+Check the state of the materials before choosing an example. Complete packages include inputs, references, and validation scripts. A skeleton still needs resources and real checks; it is not a verified workflow on its own.
 
-These examples are best for studying structure, then adapting to your project and team constraints.
+| Example | Materials | What was checked |
+|---|---|---|
+| [Writing Skill](/en/skills/examples/writing-skill/) | Complete source-backed-writer download package | Eight structural regression checks passed; facts and style were self-checked by the author, while model quality was not measured. |
+| [Review Skill](/en/skills/examples/review-skill/) | Complete scoped-review download package | Seven diff-scope regression checks passed; model routing and detection rate were not measured. |
+| [Research Skill](/en/skills/examples/research-skill/) | Complete evidence-research download package | Eight source-and-evidence structural checks passed; model research quality was not measured. |
+| [Automation Skill](/en/skills/examples/automation-skill/) | Complete quiet-link-monitor download package | Eight state tests passed; live scheduling and delivery were not tested. |
 
-| Example | Description |
-|---|---|
-| [Writing Skill](/en/skills/examples/writing-skill/) | Structured long-form writing workflow |
-| [Review Skill](/en/skills/examples/review-skill/) | PR / diff review (full example) |
-| [Research Skill](/en/skills/examples/research-skill/) | Research output with citations |
-| [Automation Skill](/en/skills/examples/automation-skill/) | Repeat tasks and scheduled flows |
+Related page: [Create your first Skill](/en/skills/create-your-first-skill/).
 
-Related: [Create your first Skill](/en/skills/create-your-first-skill/).
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Navigation page only; listed writing, review, research, and automation examples are common workflow types current Codex/Skills can carry.  
-**Last verified:** 2026-07-26
+Use the [workflow evaluation method](/en/guide/quality/workflow-evaluation/) to record triggering, boundaries, format, quality, and time separately. Passing the example scripts does not establish an overall model success rate.

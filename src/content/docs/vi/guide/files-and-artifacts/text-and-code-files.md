@@ -3,7 +3,7 @@ title: Tệp văn bản và mã
 description: Để Codex đọc/ghi đúng nguồn, cấu hình và tệp văn bản dạng tài liệu.
 locale: vi
 source_locale: zh-CN
-source_revision: a6005dd
+source_revision: 1537793
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 承認とサンドボックス
 description: CLI における shell、書き込み、ネットワーク要求の承認方針と、サンドボックスによる Agent 制限。
 locale: ja
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 명령과 단축
 description: CLI 하위 명령, 세션 내 조작, 키보드 습관—제품 지향 설명. 전체 매개변수는 참고 구역을 보세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

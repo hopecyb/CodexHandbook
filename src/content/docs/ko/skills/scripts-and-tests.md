@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "현재 Codex 런타임은 스킬이 스크립트와 결정적 명령 실행을 함께 쓰도록 허용합니다. 이 페이지는 「안정 동작은 스크립트화하고, 절차는 Skill이 제약한다」는 원칙을 강조하며 현행 능력과 일치합니다."
+  checkedAt: "2026-07-26"
 title: scripts/와 테스트
 description: Skill에 결정적 스크립트를 넣고 동작을 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Skill을 처음 만들 때 흔한 방법은 모든 것을 `SKILL.md`에 쓰는 �
 
 고정 동작은 스크립트에 맡기고, 판단과 협업 절차는 Skill에 남기세요.
 
-# scripts/와 테스트
 
 어떤 단계가 결정적으로 실행되어야 할 때(테스트 실행, diff 생성, 형식 검증) `scripts/`에 스크립트를 두고, `SKILL.md`에서 언제 호출하는지 설명하세요.
 
@@ -78,9 +82,3 @@ Skill은 「언제 호출하는지, 어떻게 호출하는지, 출력이 기대�
 안정적으로 반복 실행할 동작은 텍스트 설명에만 맡기지 마세요. 스크립트를 먼저 통과시킨 뒤 Skill 호출을 확인하세요.
 
 스크립트는 현재 승인 정책을 상속합니다. [명령 규칙](/ko/guide/customization/rules/command-rules/)과 [Skill 보안](/ko/skills/security/)을 참고하세요.
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 현재 Codex 런타임은 스킬이 스크립트와 결정적 명령 실행을 함께 쓰도록 허용합니다. 이 페이지는 「안정 동작은 스크립트화하고, 절차는 Skill이 제약한다」는 원칙을 강조하며 현행 능력과 일치합니다.  
-**최근 검증:** 2026-07-26

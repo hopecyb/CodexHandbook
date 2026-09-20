@@ -17,6 +17,15 @@
 
 ## 维护规则
 
+### 演示稿案例预览（2026-09-18）
+
+- 公开路径：`public/downloads/article-to-slides/previews/slide-01.png` 至 `slide-08.png`，接入 `/cases/create-a-slide-deck/`；第一页展示最终成果，第六页展示冲突证据，其余逐页链接可查看。
+- 来源：`examples/complete-workflows/creator/article-to-slides/solution/source-backed-writing.pptx`，由原生文本对象构成；用 LibreOfficeDev 26.8.0.0.alpha0 导出 PDF 后渲染 PNG，八页均已目视检查。无生成式位图或外来图片。
+- 许可：本站原创合成教学资料，CC0 1.0。字体 Arial Unicode MS 只在本机使用，不随包分发。文件哈希与环境见同包 `validation/manifest.json`、`validation/record.md`。
+- 状态：integrated。预览和下载包由 `scripts/package-teaching-examples.py` 从同一源目录生成，预览不替代可编辑源稿。
+
+### 通用规则
+
 - 新图先确定正文要解释的关系，再制作资产。
 - SVG 需要 `<title>`、`<desc>`、`role="img"`、稳定 `viewBox` 和中文系统字体栈。
 - 生成式位图需额外记录最终提示词、生成方式和版权检查结果。

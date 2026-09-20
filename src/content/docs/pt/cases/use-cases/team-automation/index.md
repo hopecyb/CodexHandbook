@@ -3,7 +3,7 @@ title: Automatização de equipa
 description: Entrada para casos de automatizar tarefas repetidas na equipa — foco em gatilhos, notificações, aprovação e condições de paragem.
 locale: pt
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

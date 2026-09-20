@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供修改类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 修改模板
 description: 在现有基础上做有边界的迭代。
 ---
-
-# 修改模板
 
 这个模板适合“在现有东西上改一点”的任务。
 
@@ -60,10 +63,3 @@ description: 在现有基础上做有边界的迭代。
 
 - [定义完成标准](/prompts/define-done/)
 - [约束与边界](/prompts/constraints-and-boundaries/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供修改类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

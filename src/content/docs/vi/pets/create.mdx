@@ -3,15 +3,21 @@ title: Tạo Codex Pet
 description: "Hiểu nguyên lý tạo Codex Pet qua asset, spritesheet, metadata và giấy phép."
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: b2e0dbd
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 57e9aca
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Đã bổ sung giới hạn về định dạng và khôi phục, nhưng trang chưa thử cài đặt, phát hoạt ảnh hoặc gỡ bỏ với một ứng dụng khách và gói Pet cụ thể. Hãy kiểm tra thư mục và menu theo phiên bản đích."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Tạo Codex Pet
+Trang này chưa thử khả năng tương thích của một ứng dụng khách và gói Pet cụ thể. Trước tiên hãy ghi phiên bản và nguồn, rồi dùng [hồ sơ tương thích và khôi phục](/vi/guide/reference/resource-compatibility/) để đối chiếu kết quả thực tế. Hình minh họa chỉ giải thích cấu trúc, không phải hợp đồng định dạng cho mọi phiên bản.
+
 
 Mục tiêu của việc tạo Codex Pet không phải chỉ là có một tấm ảnh đẹp, mà là có một gói tài nguyên mà Codex nhận diện được, tải được, phát được và chuyển đổi được giữa các trạng thái. Có thể hiểu nó là tổ hợp “metadata + atlas hoạt ảnh + ghi chú nguồn và giấy phép”.
 
@@ -29,15 +35,9 @@ Cấu trúc tối thiểu thường là:
 
 Spritesheet là cách gộp nhiều frame hoạt ảnh vào một ảnh lớn. Client không cần tải hàng chục tệp nhỏ; nó cắt từng frame từ ảnh lớn theo tọa độ hàng và cột, rồi phát liên tiếp.
 
-Nhiều tài nguyên Codex Pet dùng quy ước atlas sau:
+Hãy kiểm tra đặc tả atlas cùng với các trường phiên bản. Hình minh họa cũ trên trang này dùng 8 cột × 9 hàng, mỗi khung 192 × 208 px (cả ảnh 1536 × 1872 px); đây không phải đặc tả chung cho mọi ứng dụng khách. Trước khi tạo tài nguyên, hãy lấy tài liệu định dạng tương ứng với phiên bản ứng dụng khách hoặc công cụ, rồi xác nhận lưới khung, ánh xạ động tác và các trường phiên bản.
 
-- 8 cột x 9 hàng
-- Mỗi frame 192 x 208 px
-- Toàn ảnh 1536 x 1872 px
-- 72 frame
-- WebP hoặc định dạng ảnh được công cụ nguồn hỗ trợ rõ ràng
-
-Những thông số này là quy ước thường gặp, không phải luật bất biến. Trước khi tạo, hãy xác nhận hợp đồng thực tế mà client Codex, công cụ tạo hoặc nguồn tài nguyên hiện đang dùng.
+Không thể mở rộng atlas bằng cách chỉ đổi chiều cao ảnh mà giữ nguyên siêu dữ liệu cũ. Nếu thiếu tài liệu định dạng có thể truy vết, hãy dừng việc tạo và xác định hợp đồng định dạng thay vì suy ra tính tương thích từ hình minh họa.
 
 ## Chuẩn bị asset
 
@@ -53,7 +53,7 @@ Nếu asset đến từ fan art, trò chơi, anime, thương hiệu hoặc tác 
 
 ## `pet.json` chịu trách nhiệm gì
 
-`pet.json` tối thiểu cần mô tả định danh pet và đường dẫn spritesheet. Ví dụ tối thiểu:
+Ví dụ dưới đây chỉ minh họa trường nhận dạng và đường dẫn tài nguyên; nó không phải gói hoàn chỉnh đã được xác minh cài đặt được. Định dạng thực tế có thể còn yêu cầu trường phiên bản:
 
 ```json
 {
@@ -70,7 +70,7 @@ Khuyến nghị:
 - Tên thư mục khớp với `id`.
 - `spritesheetPath` dùng đường dẫn tương đối.
 - `description` mô tả rõ pet là gì.
-- Metadata bổ sung nên giữ tác giả, phiên bản, nguồn và giấy phép.
+- Giữ thông tin tác giả, phiên bản, nguồn và giấy phép trong README hoặc LICENSE đi kèm gói; đừng mặc định ứng dụng khách chấp nhận trường bổ sung tùy ý.
 
 `pet.json` không lưu hoạt ảnh. Nó nói với client “gói này là ai, asset ở đâu và nên được hiểu như thế nào”.
 

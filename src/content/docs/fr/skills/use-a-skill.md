@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Le runtime Codex supporte encore référence explicite par nom et match automatique ; OpenAI Help confirme l'usage automatique quand utile. Page sur déclenchement et rédaction."
+  checkedAt: "2026-07-26"
 title: Utiliser un Skill
 description: Déclenchement explicite et implicite, et bien rédiger description.
 locale: fr
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Idée reçue : « installé = actif tout seul ». Utiliser un Skill, c'est faire
 
 Déclenchement **explicite** (vous nommez) ou **implicite** (le modèle choisit). La distinction évite des heures de dépannage.
 
-# Utiliser un Skill
 
 ## Modes de déclenchement
 
@@ -78,10 +82,3 @@ Après lecture de `description`, on doit savoir **quand oui, quand non**.
 Si « ça fait tout » → trop vague.
 
 Voir [Vue d'ensemble des Skills](/fr/skills/overview/).
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Le runtime Codex supporte encore référence explicite par nom et match automatique ; OpenAI Help confirme l'usage automatique quand utile. Page sur déclenchement et rédaction.

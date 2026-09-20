@@ -3,7 +3,7 @@ title: Installation and first use
 description: Learn the project, chat, Codex, and review entry points in the ChatGPT desktop App.
 locale: en
 source_locale: zh-CN
-source_revision: d61c2fa
+source_revision: 080436d
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

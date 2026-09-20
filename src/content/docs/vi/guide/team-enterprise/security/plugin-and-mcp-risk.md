@@ -3,7 +3,7 @@ title: Rủi ro Plugin và MCP
 description: "Mở rộng truy cập được gì, đội phê duyệt và giám sát thế nào — góc nhìn rủi ro thống nhất cho Skills, Plugin và MCP."
 locale: vi
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

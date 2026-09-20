@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: 安装与启用 IDE 集成
 description: 在 VS Code 系编辑器、Xcode 与 JetBrains IDE 中正确打开 Codex。
 sidebar:
@@ -46,11 +50,3 @@ IDE 入口分成两类，安装方式不能混用：
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [IDE 设置](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**状态：** verified
-
-**适用产品：** IDE
-
-**最近核验：** 2026-08-26

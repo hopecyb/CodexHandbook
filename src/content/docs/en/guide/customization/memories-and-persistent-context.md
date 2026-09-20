@@ -3,7 +3,7 @@ title: Memories and Persistent Context
 description: How Codex remembers preferences and facts across sessions—capabilities, boundaries, and team norms.
 locale: en
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

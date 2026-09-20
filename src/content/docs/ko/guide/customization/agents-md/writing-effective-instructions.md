@@ -3,7 +3,7 @@ title: 프로젝트 지침 잘 쓰기
 description: AGENTS.md 작성 체크리스트 — 짧고, 단단하고, 실행 가능하고, 검증 가능하게.
 locale: ko
 source_locale: zh-CN
-source_revision: 2d236a3
+source_revision: 63dd711
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

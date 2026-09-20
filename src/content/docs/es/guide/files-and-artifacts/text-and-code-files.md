@@ -3,7 +3,7 @@ title: Archivos de texto y código
 description: Haz que Codex lea y escriba correctamente código fuente, configuración y documentos de texto.
 locale: es
 source_locale: zh-CN
-source_revision: a6005dd
+source_revision: 1537793
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

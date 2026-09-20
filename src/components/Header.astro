@@ -1,4 +1,5 @@
 ---
+import MobileMainNav from './MobileMainNav.astro';
 import config from 'virtual:starlight/user-config';
 import context from 'virtual:starlight/project-context';
 import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
@@ -12,7 +13,7 @@ import { localizedUrl } from '../utils/localizedUrl';
 import {
 	getSiteLang,
 	isNavItemVisible,
-	mainNavItems,
+	readerNavItems,
 	pickLabel,
 	uiLabels,
 	type NavItem,
@@ -26,7 +27,8 @@ const locale = Astro.locals.starlightRoute.locale ?? 'root';
 const normalizedLocale = locale === 'root' ? undefined : locale;
 const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
-const visibleMainNavItems = mainNavItems.filter((item) => isNavItemVisible(item, lang));
+const visibleMainNavItems = readerNavItems(lang);
+const isChinese = lang === 'zh-CN' || lang === 'zh-TW';
 const toolsNavItem: NavItem = {
 	href: '/guide/tools/',
 	label: {
@@ -40,15 +42,15 @@ const navItemsWithTools = [
 	...(isNavItemVisible(toolsNavItem, lang) ? [toolsNavItem] : []),
 ];
 const primaryNavItems = visibleMainNavItems.filter((item) =>
-	['/guide/', '/cases/', '/ai-roadmap/'].includes(item.href),
+	(isChinese ? ['/cases/', '/guide/learning-paths/', '/guide/reference/'] : ['/guide/', '/cases/', '/ai-roadmap/']).includes(item.href),
 );
-const leadingPrimaryNavItems = primaryNavItems.filter((item) => item.href === '/guide/');
-const trailingPrimaryNavItems = primaryNavItems.filter((item) => item.href !== '/guide/');
+const leadingPrimaryNavItems = primaryNavItems.filter((item) => isChinese || item.href === '/guide/');
+const trailingPrimaryNavItems = primaryNavItems.filter((item) => !isChinese && item.href !== '/guide/');
 const capabilityNavItems = navItemsWithTools.filter((item) =>
-	['/prompts/', '/skills/', '/guide/tools/'].includes(item.href),
+	(isChinese ? ['/guide/', '/prompts/', '/skills/', '/guide/tools/'] : ['/prompts/', '/skills/', '/guide/tools/']).includes(item.href),
 );
 const resourceNavItems = visibleMainNavItems.filter((item) =>
-	['/chatgpt-pricing/', '/pets/', '/theme/'].includes(item.href),
+	(isChinese ? ['/ai-roadmap/', '/chatgpt-pricing/', '/pets/', '/theme/'] : ['/chatgpt-pricing/', '/pets/', '/theme/']).includes(item.href),
 );
 
 function localizeHref(item: { href: string; global?: boolean; standalonePage?: StandalonePageId }) {
@@ -59,6 +61,7 @@ function localizeHref(item: { href: string; global?: boolean; standalonePage?: S
 
 function isActive(prefix: string) {
 	const path = stripLocalePrefix(Astro.url.pathname, normalizedLocale);
+	if (isChinese && prefix.replace(/\/$/, '') === '/guide' && /^\/guide\/(learning-paths|reference)(\/|$)/.test(path)) return false;
 	const normalizedPrefix = prefix.replace(/\/$/, '');
 	return path === normalizedPrefix || path === `${normalizedPrefix}/` || path.startsWith(`${normalizedPrefix}/`);
 }
@@ -149,16 +152,7 @@ const isResourcesActive = resourceNavItems.some((item) => isActive(item.prefix))
 						<span class="sr-only">{pickLabel(uiLabels.menu, lang)}</span>
 						<Icon name="bars" aria-hidden="true" />
 					</summary>
-					<nav class="mobile-nav__panel" aria-label={pickLabel(uiLabels.mainNav, lang)}>
-						{visibleMainNavItems.map((item) => (
-							<a
-								href={localizeHref(item)}
-								aria-current={isActive(item.prefix) ? 'page' : undefined}
-							>
-								{pickLabel(item.label, lang)}
-							</a>
-						))}
-					</nav>
+					<div class="mobile-nav__panel"><MobileMainNav /></div>
 				</details>
 			)
 		}
@@ -384,26 +378,10 @@ const isResourcesActive = resourceNavItems.some((item) => isActive(item.prefix))
 			}
 		}
 
-		@media (min-width: 72rem) {
-			.header {
-				position: relative;
-				grid-template-columns: minmax(0, 1fr) var(--header-search-width) auto;
-			}
+        @media (min-width: 50rem) {
+            .title-wrapper :global(.site-title) { min-width: 0; overflow: hidden; }
+            .title-wrapper :global(.site-title span) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        }
 
-			.main-nav {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-
-			.header-search {
-				grid-column: 2;
-			}
-
-			.header-controls {
-				grid-column: 3;
-			}
-		}
 	}
 </style>

@@ -3,7 +3,7 @@ title: Acceptable Use Policy
 description: Team-level agreement on what Codex may and may not do—aligned with technical controls and training.
 locale: en
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

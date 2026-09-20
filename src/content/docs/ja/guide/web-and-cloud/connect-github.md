@@ -3,7 +3,7 @@ title: GitHub を接続する
 description: 最小限のリポジトリ範囲で Codex Cloud の GitHub アクセスを設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: b811894
+source_revision: b126a7e
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

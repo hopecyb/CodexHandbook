@@ -1,44 +1,39 @@
 ---
-title: Automations
-description: Planification, événements et exécution en arrière-plan — ce qui convient à l'automatisation et ce qui exige une relecture humaine.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web et application de bureau ; CLI et IDE servent seulement à préparer et tester, sans interface de gestion"
+  checkedAt: "2026-08-26"
+title: Tâches planifiées
+description: Répéter à une heure prévue, dans ChatGPT, une tâche déjà vérifiée.
 locale: fr
 source_locale: zh-CN
-source_revision: f32c13f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 759c38e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
+Une Scheduled task (tâche planifiée) permet à ChatGPT de répéter un travail en arrière-plan selon un calendrier. Elle convient aux rapports périodiques, aux suivis continus et à l’entretien récurrent. Ce n’est pas un système générique de webhooks, d’événements de dépôt ou d’automatisation CI.
 
-## Decide whether it fits
+## Vérifier d’abord si ce mécanisme convient
 
-| Suitable | Unsuitable |
+| Adapté | Peu adapté |
 |---|---|
-| Stable input sources and reviewable output | The problem must be redefined on every run |
-| Driven by time or interval | Must trigger exactly on Git push or PR creation |
-| Read-only checks, summaries, and drafts | Unattended main-branch merges or bulk deletion |
-| Explicit no-change and stop conditions | Infinite retry after failure |
+| Sources d’entrée stables et sortie vérifiable | Problème à redéfinir à chaque exécution |
+| Déclenchement par heure ou intervalle | Déclenchement exact lors d’un push Git ou de l’ouverture d’une PR |
+| Contrôles en lecture seule, résumés et brouillons | Fusion non supervisée sur la branche principale ou suppressions en masse |
+| Condition claire pour « aucun changement » et pour l’arrêt | Nouvelles tentatives sans limite après un échec |
 
-## Current management surfaces
+## Points d’entrée actuels pour la gestion
 
-- Create and manage Scheduled tasks in ChatGPT Web or the desktop App.
-- Codex CLI and IDE have no Scheduled management UI; use them to test prompts, Skills, or scripts first.
-- The desktop App can run a task against a local project or isolated worktree, but the computer must be awake, the App running, and the project still on disk.
-- A Web task can use uploaded context, connected tools, Skills, and Plugins, but cannot read a local folder directly.
+- Créez et gérez les tâches planifiées depuis ChatGPT Web ou l’application de bureau.
+- Codex CLI et l’extension IDE n’ont pas d’interface de gestion des Scheduled tasks ; ils sont utiles pour tester d’abord un prompt, un Skill ou un script.
+- L’application de bureau peut faire travailler une tâche dans un projet local ou un worktree isolé, à condition que la machine soit allumée, que l’application fonctionne et que le projet soit encore sur le disque.
+- Une tâche planifiée sur le Web peut utiliser un contexte téléversé, des outils connectés, des Skills et des Plugins, mais n’accède pas directement à un dossier local de l’ordinateur.
 
-## In this section
+## Dans cette section
 
-- [Complete Scheduled tasks guide](/fr/skills/automations/scheduled-tasks/): choose an execution mode, write a durable prompt, and define permissions and acceptance
+- [Guide complet des tâches planifiées](/fr/skills/automations/scheduled-tasks/) : choisir le mode d’exécution, rédiger un prompt durable, définir permissions et critères d’acceptation.
 
-## Official source
+## Source officielle
 
-- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
-
-**Last verified:** 2026-08-26
+- [OpenAI : Scheduled tasks](https://learn.chatgpt.com/docs/automations)

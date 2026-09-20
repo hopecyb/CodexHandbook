@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "O runtime atual do Codex ainda permite referência explícita pelo nome do Skill e matching automático em cenários adequados; o OpenAI Help *Skills in ChatGPT* também confirma que Skills são usados automaticamente quando ajudam. Esta página foca em formas de disparo e princípios de escrita."
+  checkedAt: "2026-07-26"
 title: Usar um Skill
 description: Disparo explícito e implícito de Skills, e como escrever um bom description.
 locale: pt
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Quem começa com Skill costuma achar que «depois de instalar, ele ativa sozinho
 
 O Skill pode ser chamado por você de forma **explícita**, ou **escolhido automaticamente** pelo modelo em cenários adequados. Separar esses dois disparos evita muita confusão na investigação.
 
-# Usar um Skill
 
 ## Formas de disparo
 
@@ -87,9 +91,3 @@ depois de ler o `description`, deve ficar óbvio «quando usar» e «quando não
 Se, após ler, ainda parecer que «serve para tudo», provavelmente está vago demais.
 
 Mais conceitos em [Visão geral de Skills](/pt/skills/overview/).
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** O runtime atual do Codex ainda permite referência explícita pelo nome do Skill e matching automático em cenários adequados; o OpenAI Help *Skills in ChatGPT* também confirma que Skills são usados automaticamente quando ajudam. Esta página foca em formas de disparo e princípios de escrita.  
-**Última Verificação:** 2026-07-26

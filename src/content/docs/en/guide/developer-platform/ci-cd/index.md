@@ -3,7 +3,7 @@ title: CI/CD
 description: Connect Codex to continuous integration and release workflows—start with low-risk automation.
 locale: en
 source_locale: zh-CN
-source_revision: fb8b1b7
+source_revision: 4aeb424
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

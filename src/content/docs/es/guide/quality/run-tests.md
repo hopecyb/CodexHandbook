@@ -3,7 +3,7 @@ title: Ejecutar tests
 description: Haz que los pasos de verificación formen parte de la tarea.
 locale: es
 source_locale: zh-CN
-source_revision: 13d4ba5
+source_revision: 8b1e5c7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

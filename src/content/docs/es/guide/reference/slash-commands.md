@@ -1,122 +1,115 @@
 ---
-title:  Comandos slash y entradas rápidas
-description:  Llamadas a comandos / y Skills $ — consulta de aprendizaje, no un manual completo de parámetros.
+title: Comandos de barra y accesos rápidos
+description: Guía rápida para aprender los comandos / y las llamadas a Skills con $, sin pretender ser un manual completo de parámetros.
 locale: es
 source_locale: zh-CN
-source_revision: 9debf5c
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a34c90f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
 
-A first list of slash commands can look like jargon to memorize. It is easier to treat them as shortcuts that explicitly enter a known flow.
+La primera vez que aparecen los comandos de barra, es fácil pensar que hay que memorizar una jerga complicada. Resulta más sencillo verlos como accesos rápidos que puedes invocar expresamente.
 
-They usually start a fixed mode or built-in workflow. Slash commands (`/command`) relate to `$name` invocation of a [Skill](/es/skills/overview/), but they are not the same. Exact lists **vary by product and access**, and differ across the desktop App, CLI, IDE, and ChatGPT Web. Use the current composer's `/` completion and official documentation.
+Suelen servir para entrar rápidamente en un modo concreto o un flujo integrado. Los comandos de barra (`/command`) están relacionados con la invocación de una [Skill](/es/skills/overview/) mediante `$name`, pero no son lo mismo. Las listas **cambian según el producto y los permisos de acceso**; además, la aplicación de escritorio, la CLI, el IDE y ChatGPT Web ofrecen conjuntos diferentes. Antes de usarlos, consulta las sugerencias que aparecen al escribir `/` en el campo de mensaje actual y la documentación oficial.
 
-## Distinguish the entry points
+## Distinción de conceptos
 
-| Entry | Who invokes it | Typical use |
+| Acceso | Quién lo inicia | Uso habitual |
 |---|---|---|
-| Slash command such as `/review` | You type `/` | Built-in or configured fixed flow |
-| `$skill-name` | You or the model | Project or user Skill |
-| Natural language | You | General task |
+| Comandos de barra como `/review` | Tú escribes `/` | Flujos integrados o configurados |
+| `$skill-name` | Tú o el modelo | Skill del proyecto o del usuario |
+| Lenguaje natural | Tú | Tareas generales |
 
-## The direct distinction
+## Cómo distinguir los tres
 
-- `/command`: explicitly choose a shortcut in the chat.
-- `$skill`: you or the model names a Skill.
-- Natural language: describe the need and let the model choose how to work.
+- `/comando`: eliges expresamente un acceso rápido en el chat.
+- `$skill`: tú o el modelo indicáis que se use una Skill concreta.
+- Lenguaje natural: describes lo que necesitas y dejas que el modelo decida cómo hacerlo.
 
-Use `/command` when you already know the flow and want to enter it quickly.
+Si quieres entrar más rápido en un flujo que ya conoces, prueba su `/comando`.
 
-## What it is
+## Qué es
 
-- Not a terminal command.
-- Not hidden jargon.
-- A text entry point comparable to a shortcut button in the composer.
+- No es un comando de terminal.
+- No es una jerga misteriosa.
+- Puedes entenderlo como un «botón de acceso rápido» dentro del chat.
 
-It fits when:
+Resulta especialmente útil cuando:
 
-- you know which flow you want;
-- you do not want to restate the same intent each time.
+- Ya sabes a qué flujo quieres entrar.
+- No quieres volver a explicar la misma intención cada vez.
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. Slash commands are terminal commands
+### 1. Los comandos de barra son comandos de terminal
 
-They are composer shortcuts, not `codex ...` shell commands.
+Son accesos rápidos de la interfaz de chat, no comandos `codex ...` que debas ejecutar en una shell.
 
-### 2. The slash-command list never changes
+### 2. La lista de comandos de barra nunca cambia
 
-Commands vary by product, version, and environment. The current completion list is more reliable.
+Los comandos disponibles pueden variar entre productos, versiones y entornos. Es más fiable consultar la **lista de sugerencias** del entorno actual.
 
-### 3. A slash command bypasses approval and sandboxing
+### 3. Un comando de barra evita las aprobaciones y el sandbox
 
-Any underlying file write, command, or network action remains subject to current policy.
+Si desencadena escritura de archivos, ejecución de comandos o acceso a la red, sigue sujeto a las políticas vigentes.
 
-### 4. You must know slash commands to use Codex well
+### 4. Si no conozco los comandos de barra, ¿usaré mal Codex?
 
-Natural language handles most tasks. Slash commands accelerate a known workflow after you become familiar with it.
+Puedes hacer la mayoría de las tareas con lenguaje natural. Los comandos de barra sirven sobre todo para acelerar flujos fijos cuando ya tienes algo de experiencia.
 
-## Common current entries
+## Accesos habituales en la actualidad
 
-### Desktop App / IDE
+### Aplicación de escritorio / IDE
 
-- `/plan`: enter multistep planning mode.
-- `/review`: review uncommitted changes or compare with a base branch.
-- `/status`: show chat ID, context usage, and rate limits.
-- `/mcp`: inspect MCP connection state.
-- `/init`: scaffold `AGENTS.md` for the current project.
+- `/plan`: cambia al modo de planificación de varios pasos.
+- `/review`: revisa los cambios sin confirmar o compáralos con una rama base.
+- `/status`: muestra el ID del chat, el uso del contexto y los límites de uso.
+- `/mcp`: muestra el estado de las conexiones MCP.
+- `/init`: crea una estructura inicial de `AGENTS.md` para el proyecto actual.
 
-### CLI-specific session controls
+### Control de sesión propio de la CLI
 
-- `/permissions`: adjust the current session's permission mode.
-- `/agent`: inspect or switch Agent threads.
-- `/model`: choose the current model.
-- `/status`: inspect current session settings.
+- `/permissions`: ajusta el modo de permisos de la sesión actual.
+- `/agent`: consulta o cambia la conversación del agente.
+- `/model`: selecciona el modelo actual.
+- `/status`: comprueba la configuración de la sesión actual.
 
-ChatGPT Web has its own composer command menu. Do not assume App or CLI commands exist there under the same name.
+ChatGPT Web tiene su propio menú de comandos en el campo de mensaje. No supongas que los comandos de la aplicación de escritorio o la CLI estarán disponibles en Web con el mismo nombre.
 
-## Usage guidance
+## Recomendaciones de uso
 
-1. Type `/` and inspect what the current environment supports instead of memorizing an old list.
-2. Turn a durable team workflow into a **Skill plus documentation** so it does not depend on experts knowing a command name.
-3. Writes triggered by slash commands remain subject to sandboxing and approvals.
+1. **Escribe primero `/`** para ver qué admite el entorno actual, en lugar de memorizar una lista que puede quedar obsoleta.
+2. Para los flujos fijos del equipo, crea preferentemente una **Skill y documentación**, de modo que el nombre del comando no sea un conocimiento exclusivo de los veteranos.
+3. Las operaciones de escritura activadas por comandos de barra siguen sujetas al sandbox y a las aprobaciones.
 
-## Try it directly
+## Cómo probarlo directamente
 
-1. Type `/`.
-2. Inspect the available entries.
-3. Choose one whose name and purpose are clear.
+Puedes empezar así:
 
-## A useful first exercise
+1. Escribe `/`.
+2. Mira qué ofrece el entorno actual.
+3. Elige un comando cuyo nombre y finalidad entiendas.
 
-1. Type `/` and inspect what the current environment offers.
-2. Try one command with an understandable purpose.
-3. Observe whether it changes mode or runs a workflow.
-4. If the team must reuse it long-term, consider turning the process into a Skill.
+## Una primera prueba
 
-Slash commands provide quick entry points; Skills preserve reusable workflows.
+Si es la primera vez, sigue este orden:
 
-## Difference from CLI commands
+1. Escribe `/` y observa las opciones disponibles.
+2. Prueba una cuyo propósito comprendas.
+3. Observa si cambia el modo o ejecuta un flujo.
+4. Si el equipo necesitará reutilizar ese flujo durante mucho tiempo, considera convertirlo en una Skill.
 
-| | In-chat `/` | Terminal `codex …` |
+Así se ve mejor la función de cada uno: los comandos de barra son accesos rápidos y las Skills sirven para reutilizar flujos a largo plazo.
+
+## Diferencia respecto a los comandos de la CLI
+
+| | `/` en el chat | `codex …` en el terminal |
 |---|---|---|
-| Context | Current session and attached files | Directory selected with `--cd` / `-C` |
-| Best for | Interactive exploration | Scripts and CI |
+| Contexto | Sesión actual y archivos adjuntos | Directorio indicado con `--cd` / `-C` |
+| Más útil para | Exploración interactiva | Scripts y CI |
 
-Treat slash commands as chat shortcuts. Inspecting the current environment is more useful than memorizing names.
+Piensa en los comandos de barra como accesos rápidos del chat. Consultar qué ofrece realmente el entorno actual es más útil que memorizar nombres.
 
-See [CLI interactive mode](/es/guide/cli/interactive-mode/), [non-interactive mode](/es/guide/cli/non-interactive-mode/), and the [CLI command reference](/es/guide/reference/commands/).
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE
-
-**Verification basis:** Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
-
-**Last verified:** 2026-08-26
+Para los subcomandos de la CLI, consulta [Modo interactivo de la CLI](/es/guide/cli/interactive-mode/) y [Modo no interactivo](/es/guide/cli/non-interactive-mode/). La tabla completa de parámetros está en la [Referencia de comandos de la CLI](/es/guide/reference/commands/).

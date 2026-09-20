@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang chủ OpenAI Developers hiện vẫn nhấn mạnh dùng Codex để xây, kiểm thử, rà soát và giao thay đổi; trang này tách kiểm chứng thành rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa hoàn thành — đã đối chiếu chéo với các chương chất lượng nội bộ."
+  checkedAt: "2026-07-26"
 title: Kiểm chứng
 description: Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành.
 locale: vi
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 17
 ---
 
-# Kiểm chứng
 
 Nhiều người mới lần đầu dùng Codex, sai dễ nhất là **thấy nó nói đã xong thì coi như thật sự đã xong**.
 
@@ -96,10 +100,3 @@ Nếu không biết nên bắt đầu từ mục nào, mặc định đọc [Đ�
 Kiểm chứng là để xác nhận kết quả này thật sự dùng được, dám dùng, giao đi được.
 
 Cách viết tiêu chí nghiệm thu trong Prompt xem [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/). Case đầu-cuối xem [Case thực chiến](/vi/cases/).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn nhấn mạnh dùng Codex để xây, kiểm thử, rà soát và giao thay đổi; trang này tách kiểm chứng thành rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa hoàn thành — đã đối chiếu chéo với các chương chất lượng nội bộ.  
-**Kiểm chứng gần nhất:** 2026-07-26

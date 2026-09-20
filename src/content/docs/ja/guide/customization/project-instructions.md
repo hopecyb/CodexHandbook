@@ -3,7 +3,7 @@ title: プロジェクト説明
 description: AGENTS.md 以外のプロジェクトレベルコンテキスト——README、docs、会話参照の分担。
 locale: ja
 source_locale: zh-CN
-source_revision: e2c79fe
+source_revision: 76b0fde
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

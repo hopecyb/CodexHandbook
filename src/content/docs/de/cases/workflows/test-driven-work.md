@@ -3,7 +3,7 @@ title: Testgetriebene Arbeit
 description: Zuerst fehlschlagende Tests definieren oder ergänzen, dann die Implementierung treiben — damit Codex-Änderungen objektiv abnehmbar sind.
 locale: de
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

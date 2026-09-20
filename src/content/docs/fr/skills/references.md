@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Le runtime lit skill et références à la demande ; organisation documentaire stable."
+  checkedAt: "2026-07-26"
 title: Répertoire references/
 description: Organiser la longue doc de référence dans un Skill pour la divulgation progressive.
 locale: fr
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Ce n'est pas « plus de fichiers », c'est isoler ce qui est **utile à une étape** mais pas **nécessaire tout de suite**.
 
-# Répertoire references/
 
 Quand `SKILL.md` devient trop long, déplacez normes détaillées, API, checklists vers `references/`, citées dans les étapes.
 
@@ -77,10 +81,3 @@ Le flux d'exécution doit rester dans `SKILL.md`.
 « **Quelle étape d'abord** » → `SKILL.md`
 
 `references/` raccourcit le principal ; le détail s'ouvre quand il faut.
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Le runtime lit skill et références à la demande ; organisation documentaire stable.

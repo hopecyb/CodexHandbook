@@ -1,15 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die Nutzung von Vorlagen; interne Links und Vorlagenkategorien wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Prompt-Vorlagen
 description: 'Wiederverwendbare Prompt-Gerüste nach Aufgabentyp — Verstehen, Erstellen, Ändern, Diagnostizieren, Review, Recherchieren, Automatisieren.'
 locale: de
 source_locale: zh-CN
-source_revision: 3dbc237
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: fae2ed3
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Prompt-Vorlagen
 
 Bei „Vorlage“ gibt es oft zwei Reaktionen:
 
@@ -54,6 +57,27 @@ Manche Prompts werden nur einmal gebraucht. Andere wiederholen sich so oft, dass
 
 Vorlagen passen zu manuell gestarteten Aufgaben; Skills zu wiederholten Abläufen; Hooks zu automatischen Prüfungen an festen Punkten; MCP zu externen Systemen.
 
+## Schnelle Entscheidung: In welche Form gehört diese Aufgabe?
+
+Stelle dir vier Fragen:
+
+1. Wird die Aufgabe nur einmal erledigt?
+2. Sind die Schritte beim nächsten Mal im Wesentlichen gleich?
+3. Gibt es ein festes Ausgabeformat oder eine Prüfliste?
+4. Braucht sie ein externes System, Skript oder automatische Kontrolle?
+
+| Situation | Empfohlene Form |
+|---|---|
+| Einmalige Arbeit, die noch besprochen werden muss | Vollständiger Prompt |
+| Wiederkehrende Arbeit, die noch angepasst wird | Vorlage |
+| Stabiler Ablauf mit festem Ausgabeformat | Skill |
+| Eine unabhängige Rolle soll tief recherchieren | Sub-Agent |
+| Daten aus externem System nötig | MCP, möglichst zuerst nur lesend |
+| An einem Punkt ist jedes Mal eine Prüfung nötig | Hook |
+| Einheitliches Paket für das Team | Plugin |
+
+Ein längerer Prompt ist nicht automatisch besser. Wiederverwendbar sind Aufgaben, die du mehrfach geprüft hast und deren Grenzen und Abnahmekriterien klar sind.
+
 ## Häufige Irrtümer
 
 ### 1. Vorlage = 1:1 kopieren
@@ -75,10 +99,3 @@ Für Einsteiger: „ausreichend, nicht aufgebläht“.
 Zuerst den richtigen Typ wählen, dann zur eigenen Aufgabe machen — die Vorlage selbst ist nicht die Aufgabe.
 
 Schreibprinzipien: [Prompt-Grundlagen](/de/prompts/basics/) und [Aufgabenstruktur](/de/prompts/task-anatomy/).
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur die Nutzung von Vorlagen; interne Links und Vorlagenkategorien wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

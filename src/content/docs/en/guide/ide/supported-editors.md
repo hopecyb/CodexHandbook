@@ -3,7 +3,7 @@ title: Supported editors
 description: Distinguish the VS Code-compatible extension from Xcode and JetBrains integrations.
 locale: en
 source_locale: zh-CN
-source_revision: 1f0b54d
+source_revision: 7b82896
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

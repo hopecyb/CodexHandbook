@@ -3,7 +3,7 @@ title: 設定の基礎
 description: Codex 設定ファイルの場所、よく使う項目、承認／サンドボックス／モデル設定の入門。
 locale: ja
 source_locale: zh-CN
-source_revision: 6c67645
+source_revision: ee00ab5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

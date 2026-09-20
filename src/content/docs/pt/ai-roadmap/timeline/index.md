@@ -1,28 +1,32 @@
 ---
-title: Linha do tempo
-description: Índice dos principais marcos da engenharia de aplicações de IA.
+title: Índice de eventos e temas
+description: Explore temas de engenharia de aplicações de IA por eventos datados sem tratar a publicação como origem dos conceitos.
 locale: pt
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-08
-reviewed_at: 2026-08-26
-source_revision: 78e55cc
+source_revision: 847b43b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Linha do tempo
+Este mapa separa eventos públicos verificáveis de recomendações de aprendizagem. **Cada data refere-se apenas ao artigo, anúncio ou trabalho académico da sua linha; não assinala automaticamente o nascimento de um conceito, a sua adoção no setor ou a maturidade de uma capacidade.** É possível usar várias técnicas em conjunto, e a ordem cronológica não é uma sequência obrigatória de estudo ou evolução.
 
-Leia estes nós pelos pontos de adoção em engenharia de aplicações. Cada artigo explica o que é uma capacidade, que avanço trouxe para a engenharia de aplicações de IA, em que fase está agora e o que pode absorvê-la ou substituí-la.
+Cada página temática apresenta fontes primárias, limites de aplicação e um exercício neste site. Conferir fontes não equivale a executar software. Os URL existentes são mantidos; o ano e mês neles incluídos podem diferir da data corrigida do evento. Consulte o texto da página.
 
-## Nós
+| Data | Tipo | Tema e evento concreto |
+|---|---|---|
+| 2026-02-11 | Artigo de engenharia | [Harness Engineering (engenharia do ambiente de execução)](/pt/ai-roadmap/timeline/2026-02-harness-engineering/): Artigo sobre harness engineering |
+| 2025-10-16 | Artigo de engenharia | [Skills (competências)](/pt/ai-roadmap/timeline/2026-04-skills/): Apresentação pública de Agent Skills |
+| 2025-09-29 | Artigo de engenharia | [Context Engineering (engenharia de contexto)](/pt/ai-roadmap/timeline/2025-09-context-engineering/): Artigo sobre engenharia de contexto |
+| 2025-06-13 | Artigo de engenharia | [Multi-agent (colaboração entre agentes)](/pt/ai-roadmap/timeline/2025-06-multi-agent/): Artigo de engenharia sobre um sistema de investigação multiagente |
+| 2025-03-11 | Lançamento de produto | [Tool Use (uso de ferramentas)](/pt/ai-roadmap/timeline/2025-03-tool-use/): Anúncio do lançamento de ferramentas para agentes |
+| 2024-11-25 | Anúncio público de protocolo | [MCP (protocolo de contexto de modelo)](/pt/ai-roadmap/timeline/2024-11-mcp/): Anúncio público de MCP |
+| 2023-06-13 | Lançamento de produto | [Function Calling (chamadas de função)](/pt/ai-roadmap/timeline/2023-06-function-calling/): Anúncio do lançamento de chamadas de função |
+| 2022-11-30 | Lançamento de produto | [Prompt Engineering (engenharia de prompts)](/pt/ai-roadmap/timeline/2022-11-prompt-engineering/): Anúncio do lançamento do ChatGPT |
+| 2020-05-22 | Publicação académica | [RAG (geração aumentada por recuperação)](/pt/ai-roadmap/timeline/2023-11-rag/): Trabalho original sobre RAG e histórico de submissão |
 
-1. [Prompt Engineering (engenharia de prompts)](/pt/ai-roadmap/timeline/2022-11-prompt-engineering/)
-2. [Function Calling (chamadas de função)](/pt/ai-roadmap/timeline/2023-06-function-calling/)
-3. [RAG (geração aumentada por recuperação)](/pt/ai-roadmap/timeline/2023-11-rag/)
-4. [MCP (protocolo de contexto de modelo)](/pt/ai-roadmap/timeline/2024-11-mcp/)
-5. [Tool Use (uso de ferramentas)](/pt/ai-roadmap/timeline/2025-03-tool-use/)
-6. [Multi-agent (colaboração entre agentes)](/pt/ai-roadmap/timeline/2025-06-multi-agent/)
-7. [Context Engineering (engenharia de contexto)](/pt/ai-roadmap/timeline/2025-09-context-engineering/)
-8. [OpenSpec (desenvolvimento orientado por especificação)](/pt/ai-roadmap/timeline/2026-01-openspec/)
-9. [OpenClaw (gateway de assistente pessoal de IA)](/pt/ai-roadmap/timeline/2026-01-openclaw/)
-10. [Harness Engineering (engenharia do ambiente de execução)](/pt/ai-roadmap/timeline/2026-02-harness-engineering/)
-11. [Skills (habilidades)](/pt/ai-roadmap/timeline/2026-04-skills/)
+## Projetos não ordenados pela data do primeiro lançamento
+
+- [OpenSpec (desenvolvimento orientado por especificações)](/pt/ai-roadmap/timeline/2026-01-openspec/): A página oficial de lançamentos do projeto apresenta as notas da v1.0.0 (The OPSX Release). Esta verificação não deduz dessa versão a data do primeiro lançamento do projeto nem mantém uma data de primeira publicação no npm que não tenha sido confirmada pelas provas aqui analisadas.
+- [OpenClaw (projeto de assistente pessoal de IA)](/pt/ai-roadmap/timeline/2026-01-openclaw/): Esta página usa o repositório oficial do OpenClaw como fonte da identidade e descrição do projeto. Esta verificação não obteve provas suficientes para confirmar o primeiro lançamento; por isso, não apresenta essa data.
+
+[Escolher um exercício segundo a tarefa](/pt/ai-roadmap/#escolher-um-exercício-para-a-tarefa-atual)

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT 桌面 App / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: 连接 MCP 服务器
 description: 用 CLI 或 config.toml 配置、鉴权并验证第一个 MCP 服务器。
 ---
@@ -94,11 +98,3 @@ codex mcp login <server-name>
 ## 官方来源
 
 - [OpenAI：连接 Codex 与 MCP 服务器](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT 桌面 App / Codex CLI / IDE
-
-**最近核验：** 2026-08-25

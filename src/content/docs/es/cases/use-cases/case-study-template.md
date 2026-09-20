@@ -3,7 +3,7 @@ title: Plantilla de caso
 description: Estructura unificada para redactar y hacer retrospectiva de casos de Codex — facilita la captura y la comparación en el equipo.
 locale: es
 source_locale: zh-CN
-source_revision: a430fba
+source_revision: 74ef905
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

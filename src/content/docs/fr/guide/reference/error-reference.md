@@ -3,7 +3,7 @@ title: "Référence d'erreurs"
 description: Index d'apprentissage des erreurs courantes, codes de sortie et modes d'échec — pointe vers dépannage, pas support officiel.
 locale: fr
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

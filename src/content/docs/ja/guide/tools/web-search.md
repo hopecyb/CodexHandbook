@@ -3,7 +3,7 @@ title: Web 検索
 description: 検索で事実を補い、出典を明記する。
 locale: ja
 source_locale: zh-CN
-source_revision: 559d082
+source_revision: 7adcb92
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

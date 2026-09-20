@@ -3,7 +3,7 @@ title: マージ前レビュー
 description: merge 前に Codex で構造化 diff とリスクレビューを行う——人間と機械の役割分担を明確にする。
 locale: ja
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

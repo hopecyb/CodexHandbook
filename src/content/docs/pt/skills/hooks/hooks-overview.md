@@ -1,94 +1,88 @@
 ---
-title: Visão geral de Hooks
-description: Insira validação, logs e auditoria nos nós-chave do Agent — complemente segurança e conformidade da equipe.
+legacyVerification:
+  status: "verified"
+  products: "Ambientes que usam um host Codex local; a CLI fornece `/hooks` para gerir a confiança"
+  checkedAt: "2026-08-25"
+title: Visão geral dos Hooks
+description: Compreender a descoberta da configuração, a revisão de confiança, os processadores e os limites de segurança dos Hooks.
 locale: pt
 source_locale: zh-CN
-source_revision: 169a1ec
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: ac7889b
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
+Os Hooks permitem executar scripts de comando ou ferramentas de servidores MCP já ligados durante o ciclo do Agent Codex. Usos comuns incluem detetar segredos em prompts, aplicar regras às chamadas de ferramentas, manter logs de auditoria, resumir sessões e verificar o trabalho antes da paragem.
 
-Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
+![Ciclo de vida dos Hooks Codex: sessões, turnos, chamadas de ferramentas, compactação e eventos dos subagentes](/diagrams/hook-lifecycle-events-pt.svg)
 
-![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-en.svg)
+A distinção mais importante no diagrama é que `PreToolUse` pode recusar ou alterar a entrada de uma ferramenta local suportada antes da execução. `PostToolUse` ocorre depois e não consegue desfazer os efeitos já produzidos.
 
-The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
+## Onde se encontra a configuração
 
-## Configuration discovery
-
-Codex looks beside active configuration layers for:
+O Codex procura Hooks junto às camadas de configuração ativas:
 
 - `~/.codex/hooks.json`
-- `[hooks]` in `~/.codex/config.toml`
+- `[hooks]` em `~/.codex/config.toml`
 - `<repo>/.codex/hooks.json`
-- `[hooks]` in `<repo>/.codex/config.toml`
-- Hooks bundled with enabled Plugins
-- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
+- `[hooks]` em `<repo>/.codex/config.toml`
+- Hooks incluídos em Plugins ativados
+- Hooks administrados distribuídos por política do sistema, MDM, Cloud ou `requirements.toml`
 
-Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
+O conteúdo `.codex/` de um projeto só é carregado se o projeto for considerado de confiança. Todos os Hooks correspondentes de várias fontes são executados; uma camada de maior prioridade não substitui em bloco os Hooks de uma camada inferior.
 
-When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
+Se uma camada contiver simultaneamente `hooks.json` e uma secção `[hooks]` integrada, o Codex combina-os e apresenta um aviso no arranque. Sempre que possível, use apenas uma das formas em cada camada.
 
-## Review every unmanaged Hook
+## Rever todos os Hooks não administrados
 
-Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
+O Codex regista a confiança com base no hash da definição do Hook. Hooks não administrados novos ou alterados ficam pendentes de revisão e são ignorados até o utilizador confiar na nova definição.
 
-Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
+Na CLI, `/hooks` permite ver as fontes, rever alterações, confiar num Hook não administrado individual ou desativá-lo. Os Hooks de Plugins seguem o mesmo processo de confiança. Os Hooks administrados são considerados de confiança pela política da organização e não podem ser desativados no navegador pessoal de Hooks do utilizador.
 
-## Two executable handlers
+## Dois processadores executáveis
 
-| Handler | Purpose | Boundary |
+| Processador | Utilização | Limite principal |
 |---|---|---|
-| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
-| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
+| `command` | Executar um script local que recebe o JSON do evento por stdin | O script tem capacidades de processo local; rever dependências e saída |
+| `mcp_tool` | Chamar uma ferramenta de um servidor MCP já ligado | Não inicia nem volta a ligar o servidor; não é suportado em `SessionEnd` |
 
-The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
+Segundo a documentação oficial atual, os processadores `prompt` e `agent` podem ser analisados, mas são ignorados. Não os inclua numa configuração que deva funcionar.
 
-## Runtime behavior
+## Comportamento durante a execução
 
-- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
-- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
-- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
-- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
+- Vários Hooks `command` correspondentes começam em paralelo; um Hook não consegue impedir o arranque de outro que já corresponda.
+- O `timeout` predefinido da maioria dos Hooks é 600 segundos. Em `SessionEnd`, é 1 segundo, com um máximo de 3 segundos. Scripts de proteção em produção devem definir explicitamente um timeout mais curto.
+- O diretório de trabalho de um Hook `command` é o `cwd` da sessão. Resolva os caminhos dos scripts do repositório a partir da raiz Git para que um arranque numa subpasta não quebre caminhos relativos.
+- Hooks assíncronos servem para logs e análise, mas não podem bloquear, aprovar, alterar ou controlar a operação que os acionou.
 
-## Relationship to other security layers
+## Relação com outras camadas de segurança
 
-| Layer | Responsibility |
+| Camada | Responsabilidade |
 |---|---|
-| Sandbox | Filesystem, network, and system capability boundary |
-| Approval | Human decision before high-risk actions |
-| Command rules | Declarative allow/deny for known command patterns |
-| Hook | Custom, testable logic at lifecycle points |
-| Service permission | Final external-system read/write authority |
+| Sandbox | Limites de acesso a ficheiros, rede e capacidades do sistema |
+| Aprovação | Decisão humana antes de ações de alto risco |
+| Regras de comandos | Permitir ou recusar declarativamente padrões de comandos conhecidos |
+| Hook | Lógica personalizada e testável em pontos do ciclo de vida |
+| Permissões do serviço | Autoridade final de leitura e escrita em sistemas externos |
 
-Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
+A cobertura de ferramentas pelos Hooks não constitui uma fronteira de segurança completa. A documentação oficial indica que alguns percursos de ferramentas especializadas podem contornar o percurso Hook predefinido; ferramentas alojadas, como WebSearch, também não passam pelos Hooks locais `PreToolUse` ou `PostToolUse`.
 
-## Adoption order
+## Ordem de adoção
 
-1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
-2. Use `systemMessage` or additional context for high-confidence warnings.
-3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
-4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
+1. Comece com logs expurgados em `PostToolUse` ou `SessionEnd` para observar o comportamento real.
+2. Para problemas de elevada confiança, use `systemMessage` ou contexto adicional como aviso.
+3. Bloqueie em `PreToolUse` apenas se a regra for inequívoca, o script tiver fixtures e os falsos positivos forem aceitáveis.
+4. Alinhe os Hooks com a CI, as verificações antes do commit e as permissões do serviço para evitar políticas contraditórias.
 
-## Acceptance checklist
+## Lista de verificação
 
-- [ ] Event names come from the current official list.
-- [ ] Matchers cover only required tools or sources.
-- [ ] Scripts have fixture tests and readable errors.
-- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
-- [ ] Failure, timeout, and disabled paths were exercised.
-- [ ] The team understands trust changes shown by `/hooks`.
+- [ ] Os nomes dos eventos vêm da lista oficial atual.
+- [ ] Os matchers abrangem apenas as ferramentas ou fontes necessárias.
+- [ ] Os scripts têm testes com entradas fixas e mensagens de erro compreensíveis.
+- [ ] Os logs não guardam tokens, prompts completos nem parâmetros sensíveis de ferramentas.
+- [ ] Os percursos de falha, timeout e desativação dos Hooks foram testados.
+- [ ] A equipa compreende o significado das alterações de confiança apresentadas em `/hooks`.
 
-## Official source
+## Fonte oficial
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
-
-**Last verified:** 2026-08-25

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "使用本地 Codex host 的环境"
+  checkedAt: "2026-08-25"
 title: Hook 事件类型
 description: 按会话、任务轮次、工具调用、压缩和子 Agent 生命周期选择事件。
 ---
@@ -74,11 +78,3 @@ Shell 与统一执行命令匹配为 `Bash`。`apply_patch` 也可以用别名 `
 ## 官方来源
 
 - [OpenAI：Hooks 事件与 matcher](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状态：** verified
-
-**适用产品：** 使用本地 Codex host 的环境
-
-**最近核验：** 2026-08-25

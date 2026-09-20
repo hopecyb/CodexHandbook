@@ -3,7 +3,7 @@ title: Cơ bản về Prompt
 description: Các thành phần cơ bản của một Prompt tốt.
 locale: vi
 source_locale: zh-CN
-source_revision: b2a486e
+source_revision: eb86b2a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

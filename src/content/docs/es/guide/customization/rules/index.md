@@ -3,7 +3,7 @@ title: Reglas
 description: Página de introducción a allow/deny, reglas de comandos y política de equipo — primero aclara qué hay que bloquear y qué hay que recordar.
 locale: es
 source_locale: zh-CN
-source_revision: 1b6534d
+source_revision: 9ac6185
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

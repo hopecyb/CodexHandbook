@@ -3,7 +3,7 @@ title: Erste Aufgabe ausführen
 description: "Mit klaren Prompts eine kleine Änderung abschließen."
 locale: de
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

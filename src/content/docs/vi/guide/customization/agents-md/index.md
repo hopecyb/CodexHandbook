@@ -3,7 +3,7 @@ title: AGENTS.md
 description: Trang mô tả chỉ thị dài hạn cấp dự án — phân rõ viết cho ai, giải quyết gì, rồi mới viết nội dung.
 locale: vi
 source_locale: zh-CN
-source_revision: ce5c1af
+source_revision: cb6371f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

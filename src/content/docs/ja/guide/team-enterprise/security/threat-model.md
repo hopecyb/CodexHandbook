@@ -3,7 +3,7 @@ title: 脅威モデル
 description: チーム環境での Codex 主要リスク面——データ、ツール、拡張、サプライチェーン。
 locale: ja
 source_locale: zh-CN
-source_revision: 4e63649
+source_revision: 4ec320d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

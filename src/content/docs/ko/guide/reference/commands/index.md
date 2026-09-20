@@ -3,19 +3,24 @@ title: CLI 명령 참고
 description: Codex CLI의 자주 쓰는 하위 명령과 파라미터 빠른 조회——학습용 색인이며 공식 매뉴얼을 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: bdc537d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6091bcc
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 현재 공식 Developer commands 성숙도 표와 대조해 Stable 명령만 수록하고 --cd / -C, 샌드박스, 승인 매개변수를 확인했습니다. 실험적이거나 지원이 중단된 명령은 기본 빠른 참조에서 제외했습니다.
+  checkedAt: '2026-08-26'
 ---
+
 
 명령 참고 페이지는 입구를 가리는 데 쓰며, 처음부터 파라미터를 외울 필요는 없습니다.
 
 > **지금은 대화형 입구를 쓸까, 단발 명령 입구를 쓸까?**
 
-이 페이지는 **Codex CLI**의 자주 쓰는 입구를 모아 검색·대조하기 쉽게 합니다. **명령 이름, 파라미터, 기본값은 버전에 따라 바뀌므로**, 실행 전에 반드시 `codex --help`와 하위 명령 `--help`를 돌리고, [OpenAI Codex 문서](https://developers.openai.com/codex)를 기준으로 하세요.
+이 페이지는 현재 **Stable**인 Codex CLI 진입점을 검색하고 비교할 수 있도록 정리합니다. 실행 전 `codex --help`와 하위 명령의 `--help`를 확인하고, 전체 성숙도와 매개변수는 [Developer commands](https://learn.chatgpt.com/docs/developer-commands)를 기준으로 삼으세요.
 
 ## 언제 쓰나
 
@@ -32,16 +37,20 @@ reviewed_at: 2026-08-26
 
 CLI를 처음 쓰는 사람에게, 이 단계만으로도 입구 선택의 대부분이 풀립니다.
 
-## 명령 총괄(예시)
+## Stable 명령 개요
 
-| 입구 | 용도 | 상세 |
+| 진입점 | 용도 | 상세 안내 |
 |---|---|---|
 | `codex` | 대화형 TUI 세션 | [대화형 모드](/ko/guide/cli/interactive-mode/) |
-| `codex exec`(또는 동등) | 비대화형 단발/파이프 작업 | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
-| 설정 관련 | 사용자/프로젝트 설정 읽기·쓰기 | [CLI 설정](/ko/guide/cli/configuration/) |
+| `codex exec` / `codex e` | 비대화형 단일 작업 또는 파이프라인 | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
+| `codex doctor` | 설치, 설정, 인증, 실행 환경, Git, 터미널 진단 보고서 생성 | [CLI 문제 해결](/ko/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | 인증 관리 | [로그인과 인증](/ko/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | 저장된 세션 이어가기 또는 분기 | [인계와 재개](/ko/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | MCP 서버 관리 | [MCP 연결](/ko/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Plugin 설치, 목록 확인, 제거 | [Plugins](/ko/skills/plugins/) |
 
-:::caution[버전 민감]
-아래 표의 파라미터 이름은 커뮤니티 문서의 흔한 서술이며, **설치한 CLI와 일치한다고 보장하지 않습니다**. 업그레이드 후 `--help`를 다시 확인하세요.
+:::caution[서로 다른 성숙도]
+공식 참조에는 Experimental, Beta, Deprecated 명령도 있습니다. 이 기본 빠른 참조에는 Stable 명령과 섞어 넣지 않았습니다. 사용 전 성숙도와 위험을 확인하세요.
 :::
 
 ## 흔한 오해
@@ -103,15 +112,15 @@ CLI를 처음 쓸 때 이 순서로 보세요.
 ## 비대화형 exec(개념)
 
 ```bash
-# 작업 디렉터리와 단발 프롬프트 지정(예시)
-codex exec --cd /path/to/repo "완전한 작업 설명"
+# 작업 디렉터리와 단일 프롬프트(예시)
+codex exec --cd /path/to/repo "전체 작업 설명"
 
-# 흔한 의도(파라미터 이름은 공식 기준)
-# --cd          작업 디렉터리
+# 현재 자주 쓰는 매개변수
+# --cd, -C       작업 디렉터리
 # --model        모델 고정
 # --sandbox      샌드박스 정책
-# --approval     승인 정책(무인 운영 시 특히 중요)
-# stdin 파이프   파일이나 상위 명령에서 프롬프트 읽기
+# --ask-for-approval, -a  승인 정책
+# stdin 파이프   파일 또는 이전 명령에서 프롬프트 읽기
 ```
 
 보안：[사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)
@@ -151,10 +160,3 @@ CI에서 stderr를 무시하지 마세요. 로그를 남겨 [진단 우선](/ko/
 | 승인 때문에 CI가 멈춤 | 프롬프트를 조이고 + 읽기 전용 샌드박스 |
 
 [CLI 장애 분석](/ko/guide/cli/troubleshooting/)
-
----
-
-**상태：** outdated  
-**적용 제품：** CLI  
-**재검토 설명：** 이 페이지는 “입구 지도”로 쓰려 했지만, 핵심은 여전히 `codex`, `codex exec`, 세션 안 `/` 명령과 관련 파라미터 의도입니다. 모두 현행 CLI의 변동이 큰 제품 세부이므로, 최신판 공식 명령 문서를 보강한 뒤 `verified`로 되돌리세요.  
-**최근 검증：** 2026-07-26

@@ -1,30 +1,33 @@
 ---
-title: Exemples de configuration Hook
-description: Configurations et squelettes de scripts Hook adaptables — scan de secrets, journal d'audit, validation de format.
+title: Exemples de configuration de Hooks
+description: Mettre en place un garde-fou PreToolUse testable avec un vrai hooks.json et un script Python de la bibliothèque standard.
+legacyVerification:
+  status: "verified"
+  products: "Environnements utilisant un hôte Codex local ; gestion de la confiance avec `/hooks` dans Codex CLI"
+  checkedAt: "2026-08-25"
 locale: fr
 source_locale: zh-CN
-source_revision: 5a86fd4
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 06e9fa2
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
+Ce chapitre ne contient plus les anciens noms d’événements et champs de configuration donnés à titre indicatif. L’exemple suit la structure officielle actuelle de `hooks.json` et comprend des tests exécutables.
 
-Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
+Les fichiers complets se trouvent dans [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-## Goal and boundary
+## Objectif et limites
 
-Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
+Objectif : si l’entrée d’une commande `Bash` ou `apply_patch` contient une chaîne de test ressemblant à un AWS Access Key ID, refuser l’appel avant l’exécution de l’outil.
 
-This demonstrates Hook input, output, and test structure only:
+Cet exemple montre uniquement la structure des entrées, sorties et tests d’un Hook :
 
-- It does not replace a professional secret scanner.
-- The regular expression has false positives and false negatives.
-- It does not scan hosted tools.
-- It must not log complete tool input.
+- il ne remplace pas un détecteur de secrets professionnel ;
+- l’expression régulière peut produire des faux positifs et des faux négatifs ;
+- il n’analyse pas les outils hébergés ;
+- il ne doit pas enregistrer l’entrée complète de l’outil.
 
-## 1. Configure hooks.json
+## 1. Configurer hooks.json
 
 ```json
 {
@@ -47,11 +50,11 @@ This demonstrates Hook input, output, and test structure only:
 }
 ```
 
-In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
+Dans un dépôt qui utilise réellement ce Hook, placez généralement la configuration dans `.codex/hooks.json` et le script dans `.codex/hooks/`. Le chemin `examples/` est conservé ici pour pouvoir vérifier directement les fichiers complets du dépôt de ce manuel.
 
-## 2. Denial output
+## 2. Sortie de refus
 
-The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
+Le script lit le JSON de l’événement sur stdin et n’examine que `tool_input.command`. En cas de correspondance, il affiche :
 
 ```json
 {
@@ -63,50 +66,42 @@ The script reads event JSON from stdin and checks only `tool_input.command`. On 
 }
 ```
 
-On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+Sans correspondance, il se termine avec le code `0` et sans sortie. Un texte ordinaire sur stdout ne constitue pas une décision `PreToolUse` valide.
 
-## 3. Run tests
+## 3. Exécuter les tests
 
 ```bash
 python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
+Résultat attendu : trois tests réussissent, couvrant une commande normale, une clé suspecte et un `tool_input` qui n’est pas un dictionnaire.
 
-You can also pipe a fixture manually:
+Vous pouvez aussi fournir manuellement une fixture :
 
 ```bash
 printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
   | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-Normal input produces no stdout.
+Une entrée normale ne produit rien sur stdout.
 
-## 4. Enable it in a project
+## 4. Activer le Hook dans un projet
 
-1. Put configuration and script in the target repository using a stable repository-relative path.
-2. Run unit tests and one real normal command in an isolated repository.
-3. Start Codex and open `/hooks` to inspect the source and exact definition.
-4. After trusting it, verify both a normal pass and test-string denial.
-5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
+1. Placez la configuration et le script dans le dépôt cible, puis utilisez un chemin stable à l’intérieur de ce dépôt.
+2. Exécutez les tests unitaires et une vraie commande normale dans un dépôt isolé.
+3. Démarrez Codex et ouvrez `/hooks` pour examiner la provenance et la définition exacte.
+4. Après avoir accordé votre confiance, vérifiez séparément qu’une entrée normale passe et que la chaîne de test est refusée.
+5. Examinez à nouveau le Hook après une modification du script : un changement de hash remet un Hook non géré en attente de confiance.
 
-## From warning to blocking
+## Passer d’un avertissement à un blocage
 
-Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
+En production, les équipes commencent généralement par un audit ou un ajout de contexte qui ne bloque rien, puis passent à `deny`. Avant ce changement, répondez au moins à ces questions :
 
-- Do fixtures cover known false positives?
-- Is a timeout or crash understandable to the user?
-- Does CI or service policy also enforce the rule?
-- Are bypass and emergency recovery auditable?
+- Les fixtures couvrent-elles les faux positifs connus ?
+- Un délai dépassé ou un plantage du script est-il compréhensible pour l’utilisateur ?
+- La règle est-elle également appliquée par CI ou par une politique côté serveur ?
+- Le contournement et la reprise d’urgence sont-ils vérifiables dans les journaux ?
 
-## Official source
+## Source officielle
 
-- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
-
-**Last verified:** 2026-08-25
+- [OpenAI : configuration des Hooks et sortie PreToolUse](https://learn.chatgpt.com/docs/hooks)

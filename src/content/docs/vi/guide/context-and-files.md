@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này là tổng quan điều hướng và phương pháp nội bộ; khung «yêu cầu tác vụ, tài liệu tệp, quy tắc dự án, hội thoại lịch sử cùng cấu thành ngữ cảnh» đã đối chiếu chéo từng mục với các chương ngữ cảnh và xử lý tệp hiện tại, không phụ thuộc chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Ngữ cảnh và tệp
 description: Quản lý ngữ cảnh dự án, tệp, hội thoại, cùng các loại đầu vào phổ biến.
 locale: vi
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 15
 ---
 
-# Ngữ cảnh và tệp
 
 Ngữ cảnh là thông tin Codex ở khoảnh khắc này thấy được, tham khảo được, và có thể dựa vào đó để hành động.
 
@@ -81,10 +85,3 @@ Không cần đọc hết một hơi. Có thể đọc theo thứ tự này:
 3. Theo loại tài liệu đang cầm trên tay, rồi đọc chương tệp tương ứng
 
 Ngữ cảnh chính là đống thông tin Codex đang cầm khi phán đoán; đưa đúng thì kết quả cũng dễ làm đúng hơn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này là tổng quan điều hướng và phương pháp nội bộ; khung «yêu cầu tác vụ, tài liệu tệp, quy tắc dự án, hội thoại lịch sử cùng cấu thành ngữ cảnh» đã đối chiếu chéo từng mục với các chương ngữ cảnh và xử lý tệp hiện tại, không phụ thuộc chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

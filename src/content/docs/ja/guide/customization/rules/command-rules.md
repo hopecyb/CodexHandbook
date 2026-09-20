@@ -3,7 +3,7 @@ title: コマンドルール
 description: コマンドレベルの allow/deny で shell とツール呼び出しを制約——口頭約束より実行可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

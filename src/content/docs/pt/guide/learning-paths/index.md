@@ -1,42 +1,53 @@
 ---
+prev: false
+next:
+  link: /pt/guide/learning-paths/beginner/01-talk-to-codex/
+  label: Começar o percurso de principiante
 title: Percursos de aprendizagem
 description: Organiza a ordem de leitura por papel e liga ao conteúdo principal.
 sidebar:
   order: 5
 locale: pt
 source_locale: zh-CN
-source_revision: 05e85de
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f14e3a0
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Os percursos de aprendizagem **só organizam a ordem** — não replicam o texto longo dos manuais de produto ou dos tópicos de capacidades.
+Os percursos de aprendizagem **só organizam a ordem de leitura**; não repetem os artigos longos do manual do produto nem das guias de capacidades.
 
-Na primeira vez que vês o capítulo «percursos de aprendizagem», pode parecer só mais uma camada de índice. O essencial é responder: a que tipo de utilizador te assemelhas agora, e em que ordem ler a seguir.
+À primeira vista, este capítulo pode parecer mais uma camada de índice. Na prática, responde a duas perguntas: com que tipo de utilizador te identificas agora e em que ordem deves continuar a ler?
 
-Este capítulo não acrescenta conhecimento novo; ajuda-te a evitar desvios.
+Este capítulo não acrescenta conhecimento novo sobre o produto; ajuda-te a evitar desvios.
 
 ## O que este capítulo faz
 
-- Se és principiante, criador, desenvolvedor ou impulsor de equipa, que linha seguir
-- Que diferenças há na ordem de leitura entre papéis
-- Que conteúdo vale a pena ler agora e o que podes deixar para depois
+- Ajuda principiantes, criadores, desenvolvedores e responsáveis de equipa a escolher um percurso
+- Mostra como a ordem de leitura varia conforme o papel
+- Distingue o que vale a pena ler agora do que pode esperar
 
-## Percursos MVP disponíveis
+## Percurso de principiante com materiais fixos
 
-- **Principiante (cinco passos completos)**
+[Descarrega o mesmo conjunto de materiais para praticar um anúncio de evento](/downloads/first-project/first-project-1.0.0.zip) e conclui o anúncio, a revisão e o registo de recuperação em cinco passos. Não é preciso programar. Leitores independentes ainda não concluíram e validaram o percurso completo.
+
+- **Principiante (cinco passos)**
   1. [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [Trabalhar com ficheiros](/pt/guide/learning-paths/beginner/02-work-with-files/)
-  3. [Dar Tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/)
+  3. [Dar tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [Rever resultados](/pt/guide/learning-paths/beginner/04-review-results/)
   5. [Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Visão geral (passos aprofundados a completar depois)
+## Percurso prático para criadores
 
-- [Criador](/pt/guide/learning-paths/creator/)
-- [Desenvolvedor](/pt/guide/learning-paths/developer/)
-- [Equipa](/pt/guide/learning-paths/team/)
+O [percurso de criador](/pt/guide/learning-paths/creator/) tem quatro marcos consecutivos: materiais e tabela de factos → artigo com fontes → apresentação editável de oito diapositivos → instruções de tarefa reutilizáveis. O artigo e a apresentação têm materiais descarregáveis próprios, e cada passo tem critérios de conclusão. Leitores independentes ainda não validaram o percurso completo.
+
+## Percurso prático para desenvolvedores
+
+O [percurso de desenvolvedor](/pt/guide/learning-paths/developer/) reutiliza o exercício do bug do carrinho de compras: ler o código → corrigir e testar → rever o diff → preparar a passagem. Inclui três modelos para preencher e uma referência do autor. Os testes de referência foram executados novamente; falta verificar se leitores independentes concluem o percurso.
+
+## Percurso da equipa: piloto de duas semanas e decisão de expansão
+
+- [Equipa](/pt/guide/learning-paths/team/): carta → validação manual → verificações por amostragem → ensaio de reversão → decisão de expandir, continuar ou parar, com seis modelos.
 
 ## Percurso de operador avançado
 
@@ -80,10 +91,3 @@ Se não souberes que percurso seguir, usa isto:
 - Estás a pensar em como a equipa adopta e controla riscos: vê o [percurso de equipa](/pt/guide/learning-paths/team/)
 
 O percurso decide o que ler a seguir segundo «o problema mais importante agora».
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com a estrutura atual de learning paths, as páginas de entrada por papel e o percurso passo a passo de principiante; esta página só organiza a ordem de leitura por papel e não inclui detalhes de produto voláteis.  
-**Última verificação:** 2026-07-26

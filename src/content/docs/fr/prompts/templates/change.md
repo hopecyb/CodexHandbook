@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de modification ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de modification
 description: Itérer sur l'existant avec des limites claires.
 locale: fr
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de modification
 
 Pour « changer un peu quelque chose qui existe déjà ».
 
@@ -64,10 +68,3 @@ Un Prompt de modification dit **quoi** changer et **jusqu'où** seulement.
 
 - [Définir le terminé](/fr/prompts/define-done/)
 - [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de modification ; liens et structure revus ; pas de faits volatils produit.

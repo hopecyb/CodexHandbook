@@ -3,7 +3,7 @@ title: Política de regras de equipa
 description: Governar regras de comandos e caminhos em camadas entre organização, repositório e indivíduo — revisável e reversível.
 locale: pt
 source_locale: zh-CN
-source_revision: 3843326
+source_revision: bae8bd2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

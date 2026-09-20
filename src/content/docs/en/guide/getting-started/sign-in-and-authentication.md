@@ -3,7 +3,7 @@ title: Sign-in and authentication
 description: Choose the correct sign-in method for local clients and Cloud, then inspect the active identity safely.
 locale: en
 source_locale: zh-CN
-source_revision: e17d14f
+source_revision: ea83fa6
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

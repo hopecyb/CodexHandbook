@@ -3,7 +3,7 @@ title: セキュリティ
 description: チーム級リスク、攻撃面、防御思路の説明ページ——リスクを先に理解し、制御を決める。
 locale: ja
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

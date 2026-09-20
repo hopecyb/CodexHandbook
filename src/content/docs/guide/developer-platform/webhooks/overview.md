@@ -1,127 +1,62 @@
 ---
-title: Webhook 概述
-description: 用 HTTP 回调把 Codex 任务状态接入内部系统——事件、签名与幂等。
+title: Webhook 与任务事件的边界
+description: 区分 Codex 本地执行结果、App Server 事件和自行设计的 HTTP 回调。
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: 已核对 SDK 与 App Server 的执行和事件模型；HTTP 回调部分为自建架构建议，不宣称存在统一的 Codex Cloud Webhook 契约。
+  evidence:
+    - label: SDK 官方文档
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: App Server 协议与事件
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
 ---
 
-**Webhook** 让你在 Codex 或 Cloud 任务状态变化时，向自有服务发送 HTTP 回调，驱动工单更新、Slack 通知或内部审批台。本章是 [开发者平台](/guide/developer-platform/) 的事件集成入口。
+任务结束后通知内部系统，可以通过程序返回值、进程退出状态、事件流或 HTTP 回调实现。先确定发送方与协议，再决定是否需要 Webhook。
 
-## 这篇会讲什么
+## 三种机制不要混用
 
-- Webhook 与轮询 SDK 的取舍
-- 常见事件与载荷字段（概念）
-- 验证签名、重放与幂等
+| 机制 | 接收方式 | 边界 |
+|---|---|---|
+| 本地 SDK / CLI 执行 | 程序结果或进程状态 | 不是托管 HTTP 回调接口 |
+| App Server 事件 | 连接中的 JSON-RPC 通知 | 需按协议建立连接、初始化并处理消息 |
+| 自建 runner 回调 | 你的服务发 HTTP 请求 | 事件名、签名、重试和存储由你定义 |
 
-## 先理解它在做什么
+App Server 的 `turn/completed` 是协议通知，最终状态可能为完成、中断或失败。接收后仍应检查状态与业务结果，而不是仅凭事件名就触发部署。[官方事件说明](https://learn.chatgpt.com/docs/app-server)
 
-如果你第一次接触 Webhook，可以先把它理解成：任务状态一有变化，Codex 主动通知你的系统，而不是你自己反复去查询“好了没”。
+本文没有核验某个统一的 Codex Cloud Webhook 注册端点、签名头或 `task.completed` 事件契约。因此不提供伪装成官方接口的 URL、Header 或事件表。若你使用的具体产品已提供 Webhook，应按那个产品的版本化文档接入。
 
-它很适合“任务一结束，后面还有别的系统动作要接上”的场景。
+## 什么时候需要自建回调
 
-:::note
-Webhook 路径、事件名与签名算法以 [官方 API 文档](https://developers.openai.com/codex) 为准。
-:::
+一次 CI 任务通常可由退出状态与保存的输出继续下一步；不必为了“异步”二字增加公网接收端。
 
-## 常见误会
+若你的系统跨进程调度任务，任务结束后还要更新工单，可以设计以下内部链路：
 
-### Webhook 不是所有自动化的默认答案
-
-如果你只是单次跑一个 `codex exec`，看退出码就够了，通常不需要 Webhook。
-
-Webhook 更适合：
-
-- 长任务
-- 多步骤编排
-- 任务结束后还要通知或驱动别的系统
-
-### 收到回调，不代表就能直接信
-
-很多新手会把 Webhook 当成“官方发来的消息，应该可以直接用”。
-
-但如果你不做签名验证、幂等和超时处理，就可能被伪造请求、重复投递或系统抖动拖出问题。
-
-## 何时用 Webhook
-
-| 适合 | 不适合 |
-|---|---|
-| 任务完成通知内部系统 | 需要强实时逐字流式输出 |
-| 与现有事件总线集成 | 简单 cron 只需 `exec` 退出码 |
-| 多步骤编排（完成 → 触发部署） | 无公网可达 endpoint 且不愿用队列 |
-
-简单流水线可只用 [脚本与流水线](/guide/developer-platform/non-interactive/scripts-and-pipelines/)；产品化多租户服务常 **SDK + Webhook** 组合。
-
-## 典型事件（概念）
-
-| 事件 | 用途 |
-|---|---|
-| `task.completed` | 拉取结果、更新 PR 状态 |
-| `task.failed` | 告警、重试队列 |
-| `task.needs_approval` | 推送到人工审批 UI |
-| `review.posted` | 同步代码审查结论 |
-
-载荷应包含：`task_id`、状态、时间戳、仓库/项目标识；**避免**在 webhook body 中放完整 prompt 若含 PII。
-
-## 接收端最小要求
-
-1. **HTTPS** 终端，校验官方签名头（如 `X-Signature` + HMAC）
-2. **幂等**：同一 `event_id` 只处理一次
-3. **快速 2xx**：重逻辑放队列异步处理
-4. **日志脱敏**：不记录密钥与完整用户输入
-
-示意（伪代码）：
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+自有队列 → 受控 runner 执行 SDK/CLI → 保存结果与状态
+                                   → 自有通知服务 → 内部工单
 ```
 
-## 与 CI 的关系
+这是本站给出的架构建议，不是 SDK 自带部署功能。SDK 的运行位置与集成边界见[SDK 概述](/guide/developer-platform/sdk-overview/)。
 
-- CI 内 `codex exec` 通常**不需要** webhook，靠退出码即可
-- Cloud 长任务、移动端审批场景更适合 webhook 推送到内部系统
+## 自建协议需要明确什么
 
-## 常见错误
+- **身份与完整性**：规定接收方如何验证发送方，使用经过审查的认证方案，不随意臆造“官方签名头”。
+- **稳定 ID 与去重**：记录任务 ID、事件 ID、尝试次数，重复投递不重复产生外部效果。
+- **状态与版本**：区分执行完成、失败、中断和业务验收结果；记录载荷版本。
+- **持久接收**：只在事件可靠入库或入队后确认接收；失败可重试，不能先返回成功再丢事件。
+- **数据范围**：只发送下游需要的结果摘要与安全引用，日志不记录凭证。
+- **停止条件**：设置重试上限、人工接管和撤销后续动作的机制。
 
-- 无签名验证，伪造回调
-- 处理超过平台超时导致重复投递
-- 在 webhook handler 里同步跑第二次 Codex
-- 把 webhook URL 暴露在客户端前端
+这些是待实现和验证的设计要求，不是可直接运行的示例。本页不自动连接工单、发送消息或创建部署流程。
 
-## 怎么判断要不要用
+## 最小验收场景
 
-如果你不确定当前场景要不要上 Webhook，可以先问：
+在测试环境至少检查成功结果、执行失败、取消、重复事件、错误身份和接收端暂时不可用。验证重复投递只产生一次业务效果，取消不会被当作成功，未验收的生成结果不会直接发布。
 
-1. 我是不是需要在任务状态变化时被主动通知
-2. 任务结束后，是不是还有系统级下一步要自动衔接
-3. 我是不是已经有能安全接收 HTTP 回调的后端
-
-这三条越多是“是”，Webhook 越有意义。
-
-## 安全边界
-
-- 见 [威胁模型](/guide/team-enterprise/security/threat-model/) 与 [可接受使用](/guide/team-enterprise/governance/acceptable-use/)
-- Rotate webhook secret 纳入运维日历
-
-## 验收清单
-
-- [ ] 签名验证失败返回 4xx
-- [ ] 幂等表或 dedupe key 已实现
-- [ ] 异步 worker 与 DLQ（死信）已配置
-- [ ] 与 [结构化输出](/guide/developer-platform/non-interactive/structured-output/) 字段约定一致
-
-Webhook 适合把任务状态变化接进别的系统，同时要先把签名校验、幂等和异步处理这些基础做好。
-
-## 参考来源
-- OpenAI Codex / Cloud API 事件文档
----
-
-**状态：** verified  
-**适用产品：** API / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前关于开发者平台与事件驱动集成的公开说明，以及本手册已核验的 Webhooks 分组页、CI/CD、结构化输出与团队安全边界章节交叉复核；本页仅确认“Webhook 适合状态通知，接收端应做签名校验、幂等与异步处理”的稳定集成原则。  
-**最近核验：** 2026-07-26
+具体练习可从[Issue 分流案例](/cases/use-cases/team-automation/issue-triage-suggestions/)与[定时链接检查](/cases/use-cases/team-automation/scheduled-link-check/)入手；两者的材料状态以各自页面为准。

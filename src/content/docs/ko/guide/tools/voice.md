@@ -3,7 +3,7 @@ title: 음성 입력과 출력
 description: 음성으로 Codex와 상호작용하는 장면, 제한, 프라이버시 주의.
 locale: ko
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

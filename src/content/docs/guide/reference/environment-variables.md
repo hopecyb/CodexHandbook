@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE / Cloud"
+  basis: "OpenAI Help Center 当前配置文档仍给出 `~/.codex/.env`、CI/运行时注入与平台 Secret 的现代表达方式；本页聚焦“哪些值适合放环境变量、哪些不该放、`.env` 只是本地容器”这些稳定原则，而未把某个具体变量名列表写死。"
+  checkedAt: "2026-07-26"
 title: 环境变量
 description: Codex 相关环境变量的用途、分层与安全——配置参考的补充索引。
 sidebar:
@@ -168,9 +173,3 @@ MCP 进程常继承父进程环境；在配置中引用 `$VAR` 而非写死值�
 
 ## 参考来源
 - OpenAI Codex configuration / environment 文档
----
-
-**状态：** verified  
-**适用产品：** CLI / App / IDE / Cloud  
-**核验依据：** OpenAI Help Center 当前配置文档仍给出 `~/.codex/.env`、CI/运行时注入与平台 Secret 的现代表达方式；本页聚焦“哪些值适合放环境变量、哪些不该放、`.env` 只是本地容器”这些稳定原则，而未把某个具体变量名列表写死。  
-**最近核验：** 2026-07-26

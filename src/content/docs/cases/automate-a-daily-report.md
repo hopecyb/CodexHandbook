@@ -1,9 +1,16 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers 当前 Codex use cases 仍包含“Automate bug triage”“Turn feedback into actions”等可重复自动化场景；本页把日报定义为“固定格式 Markdown + 明确退出码 + 可复用脚本或 Skill”，属于稳定的自动化工作流模式，而非依赖某个特定集成。"
+  checkedAt: "2026-07-26"
 title: 自动化日报
 description: 把重复汇总工作固化为可复用脚本或 Skill。
 ---
-
-# 自动化日报
 
 ## 元信息
 
@@ -32,9 +39,3 @@ description: 把重复汇总工作固化为可复用脚本或 Skill。
 
 - [自动化 Skill 示例](/skills/examples/automation-skill/)
 - [定时任务](/skills/automations/scheduled-tasks/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Automate bug triage”“Turn feedback into actions”等可重复自动化场景；本页把日报定义为“固定格式 Markdown + 明确退出码 + 可复用脚本或 Skill”，属于稳定的自动化工作流模式，而非依赖某个特定集成。  
-**最近核验：** 2026-07-26

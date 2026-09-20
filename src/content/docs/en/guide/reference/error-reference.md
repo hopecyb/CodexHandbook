@@ -3,7 +3,7 @@ title: Error Reference
 description: Learning index of common errors, exit codes, and failure modes—points to troubleshooting, not official support.
 locale: en
 source_locale: zh-CN
-source_revision: 24f3f25
+source_revision: 955c0a6
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

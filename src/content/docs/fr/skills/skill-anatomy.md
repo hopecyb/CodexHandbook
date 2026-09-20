@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Le runtime centre encore les skills sur `SKILL.md` avec scripts et références optionnels ; page sur les rôles des répertoires, sans entrée produit versionnée."
+  checkedAt: "2026-07-26"
 title: Anatomie d'un Skill
 description: Rôles de SKILL.md, references/, templates/, scripts/ avec exemples.
 locale: fr
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Première impression d'un répertoire Skill : « je connais les dossiers, mais pourquoi cette organisation ? »
@@ -15,7 +19,6 @@ Cette page explique comment séparer **flux principal, longue doc, modèles, scr
 
 Plus lisible, modifiable et réutilisable.
 
-# Anatomie d'un Skill
 
 ## Structure
 
@@ -36,6 +39,18 @@ my-skill/
 
 Au début, un seul `SKILL.md` suffit.  
 `references/`, `templates/`, `scripts/` quand la complexité grandit.
+
+## Charger selon les besoins, pas tout à la fois
+
+Un Skill facile à maintenir comporte généralement trois couches :
+
+| Couche | Contenu | Moment d'utilisation |
+|---|---|---|
+| Métadonnées | Nom, description, situations de déclenchement | Aident Codex à décider s'il faut l'utiliser |
+| Instructions principales | Étapes obligatoires, interdictions, définition du travail terminé | À lire d'abord lorsque le Skill est déclenché |
+| Fichiers complémentaires | Modèles, références, scripts, exemples | À ouvrir ou exécuter seulement si la tâche en a besoin |
+
+La description de déclenchement reste ainsi courte au quotidien ; les détails ne sont chargés qu'au moment de l'exécution. Cette séparation devient plus importante à mesure que les Skills se multiplient.
 
 ## Exemple minimal SKILL.md
 
@@ -111,10 +126,3 @@ Ne transformez pas chaque modèle en Skill. Gardez ceux qui se répètent, avec 
 | Scripts | Analyse complexité, liens, couverture, formatage |
 
 Un bon Skill n'est pas juste un prompt plus long : il découpe un processus réutilisable en pièces lisibles, testables et maintenables.
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Le runtime centre encore les skills sur `SKILL.md` avec scripts et références optionnels ; page sur les rôles des répertoires, sans entrée produit versionnée.

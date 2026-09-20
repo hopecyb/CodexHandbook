@@ -3,7 +3,7 @@ title: 선택 영역과 열린 파일
 description: 선택한 코드와 열린 파일로 IDE 작업 범위를 정확히 한정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 032d53f
+source_revision: b6b264f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

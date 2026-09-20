@@ -1,48 +1,40 @@
 ---
-title: "Multi-agent（マルチエージェント協調）"
-date: 2025-06-13
-year: 2025
-summary: "単一 Agent はコンテキスト長と逐次実行に制限される。Multi-agent システムは複雑なタスクを複数の役割へ分け、調査、分析、執筆、レビューを並行させる。長く複雑なワークフローの上限を大きく引き上げる。"
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [multi-agent, agent, orchestration, collaboration, llmops]
-authored_by: ai-assisted
+title: Multi-agent（複数エージェントの協働）
+description: 複数の Agent が独立した検索、分析、レビューを担当し、合意した引き継ぎ形式で結果をまとめられる。一方、調整や重複作業、共有状態には追加のコストがかかる。
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の一次資料に記載された出来事やプロジェクトの説明を確認済み。学習上の提案は筆者の判断であり、資料の確認を製品の実地検証とは扱っていない。
+  evidence:
+  - label: 複数 Agent による調査システムのエンジニアリング記事
+    href: https://www.anthropic.com/engineering/multi-agent-research-system
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: df11adc
+source_revision: f24f2f5
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# Multi-agent（マルチエージェント協調）
+## 確認できる出来事と範囲
 
-- 重要な日付:
-  - Application-engineering inflection: 2025-06-01
-- 公式リファレンス:
-  - https://openai.github.io/openai-agents-python/multi_agent/
-  - https://www.anthropic.com/engineering/built-multi-agent-research-system
-- 注記: この項目は、複数 Agent 協調が研究実験から実務的なワークフロー設計へ広がった段階を記録する。
+**日付：2025-06-13 · 種別：エンジニアリング記事。** Anthropic は複数 Agent による調査システムの開発経験を公開した。この日付が示すのは記事の公開であり、業界全体がこの日に主流化の段階へ入ったことではない。
 
-## それは何か
+出典：[複数 Agent による調査システムのエンジニアリング記事](https://www.anthropic.com/engineering/multi-agent-research-system)。確認日：2026-09-18。資料の公開日と本ページの確認日は意味が異なる。
 
-Multi-agent は、複数の Agent に異なる役割、文脈、ツール、判断責任を持たせ、ひとつのタスクを協調して解く設計である。並列調査、専門家レビュー、分担執筆、批判役などに使われる。
+## どの問題に取り組むか
 
-## AI アプリケーション工学をどこからどこへ進めたか
+複数の Agent が独立した検索、分析、レビューを担当し、合意した引き継ぎ形式で結果をまとめられる。一方、調整や重複作業、共有状態には追加のコストがかかる。
 
-AI アプリケーションは「単一 Agent が順番に処理する」段階から、「複数ロールが並行して協力する」段階へ進んだ。これにより、探索範囲、専門性、検証密度を高めやすくなった。
+## 学習上の提案と適用範囲
 
-## 現在の段階
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定したものではない。
 
-現時点では、この項目を `emerging` と見なしている。
+独立して実行できる部分課題がある場合に限って並列化を検討する。依存関係が強い、同じファイルを編集する、個別に成果を検証できないといった課題では、まず一つの Agent を使う。ベンダーが自社の評価で示した利益を、本サイトの演習の成功率としてそのまま扱うことはできない。
 
-新興で上昇中である。効果は大きいが、タスク分解、通信コスト、重複作業、結論統合、失敗時の責任範囲にはまだ設計余地がある。
+## 実践演習
 
-## 置き換える可能性があるもの
+[複数 Agent の調整フロー](/ja/cases/coordinate-multiple-agents/)：まず役割ごとの入力、出力、依存関係を明記したタスク分割表を作り、その後で並列化する価値があるか判断する。これは手順の例であり、本サイトが効果を測定した複数 Agent 実験ではない。
 
-単一プロンプトや単一 Agent にすべてを押し込む長大ワークフローの一部を置き換える。
-
-## それを置き換える可能性があるもの
-
-より厳密なオーケストレーション、ワークフローエンジン、評価付き Harness に吸収される可能性がある。将来は「複数 Agent」という見せ方より、役割付き実行グラフとして扱われるかもしれない。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)。

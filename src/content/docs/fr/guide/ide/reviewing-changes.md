@@ -3,7 +3,7 @@ title: Réviser les modifications dans l'IDE
 description: Examiner les différences à côté du code source et utiliser le relecteur en lecture seule pour contrôler le worktree.
 locale: fr
 source_locale: zh-CN
-source_revision: 1ca9ffe
+source_revision: a6badd5
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

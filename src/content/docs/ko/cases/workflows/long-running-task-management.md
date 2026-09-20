@@ -3,7 +3,7 @@ title: 긴 작업 관리
 description: 수 시간 또는 여러 세션에 걸친 큰 작업—검사 지점, 압축, 위임, 종료 조건입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

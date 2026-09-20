@@ -1,100 +1,91 @@
 ---
 title: MCP 概要
-description: Model Context Protocol。Codex が外部ツールとデータソースに安全に接続する。
+description: MCP クライアント、サーバー、ツール、認証、安全上の境界を理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 7b8726f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 37e55d9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
+MCP は、モデルが外部の機能を使おうとする要求を、構造化されたツール呼び出しに変えます。外部のドキュメント、ブラウザー、Figma、課題管理システム、社内サービスを接続する場合に適しています。
 
-## Call chain
+## 一回の呼び出しの流れ
 
 ```text
-Codex in a task
-  -> MCP client provided by the Codex host
-  -> MCP server: local process or remote service
-  -> external system: docs, design, tickets, internal API
-  -> structured result returned to the task
+タスク内の Codex
+  -> MCP クライアント（Codex host が提供）
+  -> MCP サーバー（ローカルプロセスまたはリモートサービス）
+  -> 外部システム（ドキュメント、デザイン、課題、社内 API）
+  -> 構造化された結果がタスクに返る
 ```
 
-| Component | Responsible for | Not responsible for |
+| 構成要素 | 担当すること | 担当しないこと |
 |---|---|---|
-| Codex host | Read configuration, connect servers, expose tools to the Agent | Defining the server's business permissions |
-| MCP server | Define tools, authentication, arguments, and structured results | Automatically making every tool safe |
-| Skill | Define when and how to use tools | Establishing network connections |
-| Plugin | Compose and distribute Skills, connectors, MCP, and related capabilities | Acting as another tool protocol |
+| Codex host | 設定の読み込み、サーバーへの接続、Agent へのツール提供 | サーバーの業務権限の定義 |
+| MCP サーバー | ツール、認証、引数、構造化された結果の定義 | ツールの安全性の自動保証 |
+| Skill | ツールをいつ、どの手順で使うかの指定 | ネットワーク接続の確立 |
+| Plugin | Skills、コネクター、MCP などの機能の組み合わせと配布 | 別のツールプロトコルとしての動作 |
 
-## Supported server transports
+## 現在サポートされるサーバー方式
 
 ### STDIO
 
-Codex starts a local process and communicates over standard input/output. This fits local development tools and services that run only on the current computer.
+Codex がローカルプロセスを起動し、標準入力と標準出力で通信します。ローカルの開発ツールや、そのマシンだけで動くサービスに適しています。
 
-Review the command, dependency source, and forwarded environment variables because the process inherits the local execution environment.
+主な注意点は、プロセスがローカルの実行環境を引き継ぐことです。コマンド、依存パッケージの提供元、転送される環境変数を確認してください。
 
 ### Streamable HTTP
 
-Codex connects to a remote URL. Current documentation supports Bearer tokens, OAuth, and ChatGPT session authentication for trusted first-party servers.
+Codex がリモートアドレスに接続します。現在の公式ドキュメントでは、Bearer token、OAuth、および信頼できる OpenAI 提供サーバーでの ChatGPT セッション認証がサポートされています。
 
-The service receives tool arguments. Verify TLS, identity, logging, retention, and tool permissions.
+主な注意点は、リモートサービスがツールの引数を受け取ることです。TLS、相手の身元、ログ、データの保存期間、ツール権限を確認してください。
 
-## Combining MCP, Skills, and Plugins
+## MCP、Skill、Plugin の組み合わせ
 
-For a weekly high-priority issue check:
+「優先度の高い課題を毎週確認する」場合を例にします。
 
-| Layer | Content |
+| 層 | 内容 |
 |---|---|
-| MCP | Expose `search_issues`, `get_issue`, and related tools |
-| Skill | Define filters, evidence, and report format |
-| Plugin | Distribute the Skill, connector, and MCP definition |
-| Scheduled task | Run the verified task at a fixed time |
+| MCP | `search_issues`、`get_issue` などのツールを提供 |
+| Skill | 絞り込み条件、根拠の要件、報告形式を規定 |
+| Plugin | Skill、コネクター、MCP の定義をチームに配布 |
+| Scheduled task | 検証済みのタスクを決まった時刻に実行 |
 
-These are orthogonal responsibilities, not an upgrade ladder. See the [capability map](/ja/skills/capability-map/).
+これらは異なる役割を担い、下位から上位へ進む段階ではありません。全体の関係は[拡張機能マップ](/ja/skills/capability-map/)を参照してください。
 
-## When MCP is worthwhile
+## MCP を接続する価値がある場合
 
-| Worthwhile | Not yet |
+| 接続する価値がある | まだ必要ない |
 |---|---|
-| Repeated access to one external system | One public web lookup |
-| Structured arguments and results are required | Repository file tools are enough |
-| OAuth or granular tool control is required | Only privileged writes exist, with no test environment |
-| A team needs one reusable connection | Server provenance cannot be reviewed |
+| 同じ外部システムを繰り返し照会する | 公開ウェブページを一度だけ調べる |
+| 構造化されたツール引数と結果が必要 | リポジトリ内のファイル操作で足りる |
+| OAuth または細かなツール制御が必要 | 強い書き込み権限の API しかなく、テスト環境もない |
+| チームで同じ接続を再利用する必要がある | サーバーの提供元を確認できない |
 
-## Security stages
+## セキュリティの段階
 
-1. **Read-only trial:** public docs or test tenant, query tools only.
-2. **Team validation:** restricted project, role, and tool allowlist; record failures and latency.
-3. **Limited writes:** reversible small writes with human approval.
-4. **Governed operation:** revocable authorization, reviewable config, redacted logs, environment isolation.
+1. **読み取り専用の試用**：公開ドキュメントかテスト用テナントで、照会ツールだけを有効にします。
+2. **チームでの検証**：プロジェクト、役割、ツールの許可リストを限定し、失敗と所要時間を記録します。
+3. **限定的な書き込み**：元に戻せる小範囲の書き込みに、人による承認を残します。
+4. **管理された運用**：権限の撤回、設定のレビュー、ログの機密情報除去、環境ごとの分離を可能にします。
 
-Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_token_env_var`, or forwarded environment variables.
+token をプロンプト、Git、静的な HTTP header に書かないでください。OAuth、`bearer_token_env_var`、環境変数の転送を優先します。
 
-## Pre-connection checklist
+## 接続前のチェックリスト
 
-- [ ] Server source, version, and startup command are reviewable.
-- [ ] Read and write tools are identified.
-- [ ] A test tenant or least-privilege identity is used.
-- [ ] Remote logging of arguments and results is understood.
-- [ ] Writes have approval, rollback, and audit paths.
-- [ ] The team can disable the server and revoke access.
+- [ ] サーバーの提供元、バージョン、起動コマンドを確認できます。
+- [ ] ツール一覧で読み取りと書き込みを区別しました。
+- [ ] テスト用テナントまたは最小権限のアカウントを使用します。
+- [ ] どの引数と結果がリモートログに残るか明確にしました。
+- [ ] 書き込みには承認、ロールバック、監査の経路があります。
+- [ ] チームがサーバーを無効化し、権限を撤回する方法を知っています。
 
-## Next step
+## 次のステップ
 
-[Connect an MCP server](/ja/skills/mcp/connect-an-mcp-server/), beginning read-only, then verify with `codex mcp list` and `/mcp`.
+[MCP サーバーに接続する](/ja/skills/mcp/connect-an-mcp-server/)に進み、まず読み取り専用のサーバーを一つ接続してから、`codex mcp list` と `/mcp` で確認してください。
 
-## Official sources
+## 公式資料
 
-- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
-
-**Last verified:** 2026-08-25
+- [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)

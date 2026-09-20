@@ -3,7 +3,7 @@ title: Internet access
 description: Separate setup connectivity from Agent connectivity and constrain risk by domain and HTTP method.
 locale: en
 source_locale: zh-CN
-source_revision: 1e2d815
+source_revision: 5bbb905
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

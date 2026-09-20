@@ -1,4 +1,12 @@
 ---
+caseCategory: development
+directoryOrder: 75
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "已按本手册当前已核验的内容产物、EPXV、构建验收与案例模板章节交叉复核；本页内容限定为“多文件文档站小步修改、构建验证与失败恢复”的稳定内容工程案例。"
+  checkedAt: "2026-07-26"
 title: 带审查地重构文档站
 description: 案例：在 Astro/Starlight 文档项目中批量更新链接与章节——小步 diff、构建验证。
 ---
@@ -68,9 +76,3 @@ description: 案例：在 Astro/Starlight 文档项目中批量更新链接与�
 
 ## 参考来源
 - 本仓库实际 M2 文档迭代流程
----
-
-**状态：** verified  
-**适用产品：** CLI / IDE  
-**核验依据：** 已按本手册当前已核验的内容产物、EPXV、构建验收与案例模板章节交叉复核；本页内容限定为“多文件文档站小步修改、构建验证与失败恢复”的稳定内容工程案例。  
-**最近核验：** 2026-07-26

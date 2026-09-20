@@ -1,17 +1,21 @@
 ---
+prev: false
+next:
+  link: /es/skills/overview/
+  label: Resumen de Skills
 title: Skills
 description: Aprende a usar, escribir, probar y mantener Codex Skills.
 locale: es
 source_locale: zh-CN
-source_revision: bd382e8
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: dd408f5
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Skills
 
 Los Skills encapsulan métodos estables, material de referencia, plantillas y scripts en capacidades reutilizables.
+
+Su valor no consiste solo en darle otra capacidad a Codex: también proporciona a un flujo de trabajo entradas, salidas, límites de permisos y métodos de prueba claros.
 
 ## Orden recomendado
 
@@ -25,3 +29,9 @@ Los Skills encapsulan métodos estables, material de referencia, plantillas y sc
 8. [Hooks](/es/skills/hooks/) · [MCP](/es/skills/mcp/) · [Plugins](/es/skills/plugins/) · [Automations](/es/skills/automations/)
 9. [Seguridad y versiones](/es/skills/security/)
 10. Explorar [ejemplos de Skills](/es/skills/examples/)
+
+## Recursos para llevarte
+
+- [Estructura de un Skill](/es/skills/skill-anatomy/): explica instrucciones, condiciones de activación, flujo de trabajo y límites de recursos.
+- [Ejemplos de Skills](/es/skills/examples/): referencias para redacción, investigación, revisión, automatización y otros escenarios.
+- [Seguridad y versiones](/es/skills/security/): comprueba permisos, entradas externas y responsabilidades de mantenimiento antes de compartir o ampliar un Skill.

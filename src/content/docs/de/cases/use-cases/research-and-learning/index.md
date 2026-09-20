@@ -3,7 +3,7 @@ title: Recherche und Lernen
 description: Einstieg zu Recherche-, Vergleichs- und Lernfällen mit Quellen — Fokus auf Suche, Zitation und Grenzen der Schlussfolgerung.
 locale: de
 source_locale: zh-CN
-source_revision: 862362f
+source_revision: a0be881
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

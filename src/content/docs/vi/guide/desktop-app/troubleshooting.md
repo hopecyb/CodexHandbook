@@ -3,7 +3,7 @@ title: Xử lý sự cố ứng dụng Desktop
 description: Xử lý thường gặp khi cài đặt, đăng nhập và tác vụ thất bại.
 locale: vi
 source_locale: zh-CN
-source_revision: ca74b6c
+source_revision: c298f9f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

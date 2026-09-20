@@ -1,82 +1,73 @@
 ---
-title: Agent song song
-description: Đẩy nhiều tác vụ Agent cùng lúc mà không kéo mình vào xung đột merge và rối rà soát.
+title: Cuộc trò chuyện và Agent chạy song song
+description: Dùng cuộc trò chuyện và worktree riêng để thực hiện đồng thời những tác vụ độc lập có thể nghiệm thu riêng.
 locale: vi
 source_locale: zh-CN
-source_revision: 6f0977b
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 2336db1
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
-The basic unit of parallel work is a chat with its own context, messages, result, and goal. A task is suitable for parallel execution when **its parts are independent, have clear file boundaries, and can be accepted separately**, not merely because it has many steps.
+Đơn vị cơ bản của công việc song song là một cuộc trò chuyện có ngữ cảnh, tin nhắn, kết quả và mục tiêu riêng. Một việc không phù hợp để chạy song song chỉ vì nó có nhiều bước. **Các tác vụ phải độc lập, có ranh giới tệp rõ ràng và có thể nghiệm thu riêng**.
 
-![Orchestration diagram in which the main thread delegates independent work to several subagents and consolidates evidence and conflicts](/diagrams/subagent-orchestration-vi.svg)
+![Sơ đồ luồng chính giao việc độc lập cho nhiều Agent con rồi tổng hợp bằng chứng và xung đột](/diagrams/subagent-orchestration-vi.svg)
 
-## Decide whether work can run in parallel
+## Trước tiên, xem có thể chạy song song không
 
-| Can run in parallel | Should remain sequential |
+| Có thể chạy song song | Nên làm tuần tự |
 |---|---|
-| Two read-only investigations | The second task depends on the first task's conclusion |
-| Code and documentation have non-overlapping directories | Both tasks modify the same core file |
-| Two approaches produce separate prototypes | Requirements are still changing frequently |
-| Each task has independent tests | Correctness can only be established after joint integration |
+| Hai cuộc khảo sát chỉ đọc | Việc sau phụ thuộc kết luận của việc trước |
+| Mã và tài liệu ở thư mục không chồng lấn | Cùng sửa một tệp cốt lõi |
+| Tạo nguyên mẫu riêng cho hai phương án | Yêu cầu vẫn thay đổi thường xuyên |
+| Mỗi việc có bài kiểm thử độc lập | Chỉ biết đúng sai sau khi tích hợp cùng nhau |
 
-The official guidance recommends avoiding two chats that write to the same data source. Use separate Git worktrees for parallel coding.
+Hướng dẫn chính thức khuyên tránh để hai cuộc trò chuyện ghi vào cùng nguồn dữ liệu. Khi lập trình song song, hãy dùng các Git worktree khác nhau.
 
-## Progress from simple to complex
+## Từ đơn giản đến phức tạp
 
-### 1. Start with parallel read-only tasks
-
-```text
-Task: Analyze the latest failure in the authentication module. Do not edit files.
-Scope: src/auth/** and the corresponding tests.
-Deliverable: root-cause hypotheses, evidence paths, remaining uncertainty,
-and recommended verification commands.
-```
-
-Read-only tasks do not create merge conflicts and are a good first exercise.
-
-### 2. Then parallelize write tasks
-
-For each chat, define the goal, file ownership, exclusions, and acceptance criteria:
+### 1. Bắt đầu bằng tác vụ chỉ đọc
 
 ```text
-Goal: Document authentication error codes.
-Ownership: docs/auth/** only.
-Do not modify: src/**, lockfiles, or shared configuration.
-Acceptance: run pnpm check:links and report the result.
+Tác vụ: chỉ phân tích lỗi gần nhất của mô-đun xác thực; không sửa tệp.
+Phạm vi: src/auth/** và các bài kiểm thử liên quan.
+Bàn giao: giả thuyết nguyên nhân, đường dẫn bằng chứng, điểm chưa chắc chắn
+          và lệnh kiểm chứng được đề xuất.
 ```
 
-Put each coding chat in a separate [worktree](/vi/guide/desktop-app/worktrees/). Assign shared configuration to the main chat or one designated owner.
+Tác vụ chỉ đọc không gây xung đột hợp nhất, phù hợp cho lần thực hành đầu tiên.
 
-### 3. Consolidate centrally
+### 2. Sau đó mới chạy song song tác vụ ghi
 
-Do not concatenate results without review. The main chat should verify:
+Với mỗi cuộc trò chuyện, ghi rõ mục tiêu, quyền sở hữu tệp, vùng cấm và tiêu chí nghiệm thu:
 
-1. that each task stayed within its boundary;
-2. that its evidence and tests are reproducible;
-3. that conclusions do not conflict;
-4. whether integration tests must be rerun after merging.
+```text
+Mục tiêu: bổ sung tài liệu về mã lỗi xác thực.
+Quyền sở hữu: chỉ docs/auth/**.
+Không được: sửa src/**, tệp khóa và cấu hình dùng chung.
+Nghiệm thu: chạy pnpm check:links và báo kết quả.
+```
 
-## Long-running work and Goal mode
+Cuộc trò chuyện lập trình nên dùng [worktree](/vi/guide/desktop-app/worktrees/) riêng. Cấu hình dùng chung do cuộc trò chuyện chính hoặc một người được chỉ định quản lý.
 
-Enter `/goal` in the desktop App, CLI, or IDE to start Goal mode. A goal should define the outcome, constraints, and verification criteria. Each chat has its own goal. Parallel execution does not expand sandbox access or permissions; work still pauses when an operation requires a decision.
+### 3. Cuối cùng, tổng hợp và kiểm tra
 
-For finer-grained tool orchestration, see [Subagents](/vi/guide/agent-work/subagents/).
+Đừng chỉ ghép các kết quả lại. Cuộc trò chuyện chính cần kiểm tra:
 
-## Official sources
+1. Mỗi việc có bàn giao đúng ranh giới không.
+2. Bằng chứng và kiểm thử có thể tái hiện không.
+3. Các kết luận có mâu thuẫn không.
+4. Sau khi kết hợp có cần chạy thêm kiểm thử tích hợp không.
 
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
+## Tác vụ dài và chế độ Goal
+
+Nhập `/goal` trong ứng dụng máy tính, CLI hoặc IDE để bắt đầu chế độ Goal. Mục tiêu nên gồm kết quả, giới hạn và tiêu chí kiểm chứng. Mỗi cuộc trò chuyện có mục tiêu riêng. Chạy song song không mở rộng sandbox hay quyền; thao tác cần quyết định vẫn sẽ tạm dừng.
+
+Để xem cách điều phối chi tiết hơn ở cấp công cụ, đọc [Agent con](/vi/guide/agent-work/subagents/).
+
+## Nguồn chính thức
+
+- [Tác vụ dài](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
-- [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App, CLI, IDE
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Agent con](https://learn.chatgpt.com/docs/agent-configuration/subagents)

@@ -3,7 +3,7 @@ title: Sécurité
 description: Risques au niveau équipe, surface d'attaque et défenses — comprendre où vit le risque avant les contrôles.
 locale: fr
 source_locale: zh-CN
-source_revision: b0896a2
+source_revision: 91ed6a3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

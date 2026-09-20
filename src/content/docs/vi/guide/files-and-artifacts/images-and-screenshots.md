@@ -3,7 +3,7 @@ title: Hình ảnh và ảnh chụp màn hình
 description: Cung cấp ảnh chụp, bản thiết kế cho Codex và quản lý tệp ảnh trong tác vụ.
 locale: vi
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

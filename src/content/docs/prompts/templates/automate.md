@@ -1,9 +1,12 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页提供自动化类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 自动化模板
 description: 重复任务与可复用流程。
 ---
-
-# 自动化模板
 
 自动化类任务常见的误区，是只想着“能不能自动跑”，却没先想：
 
@@ -55,10 +58,3 @@ description: 重复任务与可复用流程。
 
 - [长任务提示](/prompts/long-running-tasks/)
 - [自动化日报案例](/cases/automate-a-daily-report/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页提供自动化类任务模板；站内链接与模板结构已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

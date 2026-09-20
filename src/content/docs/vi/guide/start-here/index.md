@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả thứ tự khởi đầu và lối vào đọc; liên kết nội bộ, phân tầng chương và cấu trúc dẫn hướng đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Bắt đầu từ đây
 description: Hiểu Codex là gì, dành cho ai, và chọn lộ trình học của bạn.
 locale: vi
 source_locale: zh-CN
-source_revision: b7997c5
+source_revision: 016d023
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 1
 ---
 
-# Bắt đầu từ đây
 
 Cẩm nang này chủ yếu viết cho **người mới bắt đầu với AI**: không giả định bạn đã biết dùng terminal, Git hay Agent, nhưng sẽ lần lượt làm rõ các năng lực bạn sẽ gặp sau này.
 
@@ -83,10 +87,3 @@ Nếu muốn làm ngay, xem [Lộ trình ba mươi phút đầu](/vi/guide/getti
 Mỗi kiến thức chỉ giữ một bản chính thức; lộ trình và case dùng tóm tắt kèm liên kết để tránh trùng lặp.
 
 Chương này chủ yếu làm rõ thứ tự và ranh giới giai đoạn khởi đầu, đồng thời nêu sớm một số rủi ro rõ ràng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả thứ tự khởi đầu và lối vào đọc; liên kết nội bộ, phân tầng chương và cấu trúc dẫn hướng đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

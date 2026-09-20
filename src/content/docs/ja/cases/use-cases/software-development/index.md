@@ -3,7 +3,7 @@ title: ソフトウェア開発
 description: コード変更、バグ修正、検証事例の入口——範囲制御、テスト、ロールバック。
 locale: ja
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "使用本地 Codex host 的环境；CLI 提供 `/hooks` 信任管理"
+  checkedAt: "2026-08-25"
 title: Hooks 概述
 description: 理解 Hook 的配置发现、信任审查、处理器与安全边界。
 ---
@@ -77,11 +81,3 @@ Hook 的工具覆盖不是完整安全边界。官方文档明确指出，某些
 ## 官方来源
 
 - [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状态：** verified
-
-**适用产品：** 使用本地 Codex host 的环境；CLI 提供 `/hooks` 信任管理
-
-**最近核验：** 2026-08-25

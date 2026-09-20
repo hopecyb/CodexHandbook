@@ -3,7 +3,7 @@ title: Hiểu nhầm thường gặp
 description: Làm rõ vài hiểu nhầm khi coi Codex như hộp đen vạn năng.
 locale: vi
 source_locale: zh-CN
-source_revision: 83a9c4c
+source_revision: 700e57b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

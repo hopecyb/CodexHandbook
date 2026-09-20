@@ -3,7 +3,7 @@ title: テスト駆動の作業
 description: まず失敗テストを定義または補完し、実装を駆動する——Codex の変更を客観的に受け入れ可能にする。
 locale: ja
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

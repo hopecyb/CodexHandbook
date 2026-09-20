@@ -1,53 +1,56 @@
 ---
-title: Review mã Cloud
-description: "Xem xét Diff, PR và gợi ý review tự động từ Tác vụ Cloud."
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
+title: Đánh giá mã trên Cloud và GitHub
+description: Xem xét diff trên Cloud và dùng Codex trên GitHub để bổ sung một lượt đánh giá tập trung vào các vấn đề quan trọng.
 locale: vi
 source_locale: zh-CN
-source_revision: a74296a
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: ea6796a
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
 ---
 
-A completed Cloud task provides a summary and diff. You can follow up, request changes, or create a PR. Completion is not merge approval; project CI, branch protection, and human judgment still apply.
+Khi một tác vụ Cloud hoàn tất, bạn sẽ nhận được bản tóm tắt và diff. Bạn có thể hỏi tiếp, yêu cầu chỉnh sửa hoặc tạo PR. Việc hoàn tất tác vụ không đồng nghĩa với chấp thuận hợp nhất: quyết định cuối cùng vẫn phải dựa trên CI, quy tắc bảo vệ nhánh của dự án và đánh giá của con người.
 
-## Two review types
+## Hai hình thức đánh giá
 
-| Type | What it examines | Outcome |
+| Hình thức | Nội dung xem xét | Kết quả |
 |---|---|---|
-| Cloud result review | Task summary, logs, and diff | Decide whether to follow up or create a PR |
-| GitHub Codex review | PR diff and connected-repository `AGENTS.md` rules | Publish a GitHub code review |
+| Đánh giá kết quả Cloud | Bản tóm tắt, nhật ký và diff của tác vụ | Quyết định tiếp tục chỉnh sửa hay tạo PR |
+| Codex review trên GitHub | Diff của PR thuộc kho mã đã kết nối và các quy tắc trong `AGENTS.md` | Đăng một lượt code review trên GitHub |
 
-Comment on a GitHub PR:
+Bình luận trong PR trên GitHub:
 
 ```text
 @codex review
 ```
 
-Codex posts findings as a normal GitHub review. The current official guidance says GitHub comments focus on high-priority P0/P1 issues; when no issue is found, Codex may leave only a reaction. Few comments are not a reason to skip human review.
+Codex đăng các phát hiện dưới dạng một lượt review GitHub thông thường. Theo tài liệu chính thức hiện tại, bình luận trên GitHub tập trung vào vấn đề ưu tiên cao P0/P1; nếu không phát hiện vấn đề, Codex có thể chỉ để lại một reaction. Ít bình luận không phải là lý do để bỏ qua đánh giá của con người.
 
-## Review order
+## Thứ tự đánh giá
 
-1. **Scope:** do files, directories, dependencies, and generated artifacts match the task?
-2. **Behavior:** do success, failure, and boundary paths satisfy the requirement?
-3. **Security:** inspect authentication, authorization, input handling, credentials, and outbound network access.
-4. **Evidence:** which tests actually ran, and were failures disclosed?
-5. **Rollback:** can the change be reverted narrowly, or does it mix unrelated refactoring?
+1. **Phạm vi**: tệp, thư mục, phần phụ thuộc và các tệp được tạo có đúng với tác vụ không;
+2. **Hành vi**: các trường hợp bình thường, lỗi và biên có đáp ứng yêu cầu không;
+3. **Bảo mật**: kiểm tra xác thực, quyền truy cập, xử lý đầu vào, thông tin xác thực và kết nối mạng ra ngoài;
+4. **Bằng chứng**: những bài kiểm thử nào đã thực sự chạy, các lỗi có được công khai không;
+5. **Khả năng hoàn tác**: có thể hoàn tác trong phạm vi nhỏ không, có lẫn phần tái cấu trúc không liên quan không.
 
-Example prompt:
+Ví dụ về lời nhắc:
 
 ```text
-Review this PR. Report only findings that could cause wrong behavior, data loss,
-a security issue, or a compatibility regression. Each finding must include
-severity, exact location, trigger condition, and impact. Do not report style
-preferences as defects.
+Đánh giá PR này. Chỉ báo cáo những phát hiện có thể gây ra hành vi sai,
+hỏng dữ liệu, vấn đề bảo mật hoặc hồi quy tương thích.
+Mỗi phát hiện phải nêu mức độ nghiêm trọng, vị trí cụ thể, điều kiện gây lỗi
+và tác động. Đừng coi sở thích về phong cách là lỗi.
 ```
 
-## Repository-specific rules
+## Quy tắc riêng của kho mã
 
-Add this to the applicable `AGENTS.md`:
+Thêm vào `AGENTS.md` trong thư mục áp dụng:
 
 ```md
 ## Code Review Rules
@@ -58,29 +61,21 @@ Add this to the applicable `AGENTS.md`:
   Safe path: keep tokens in the credential provider and redact diagnostic output.
 ```
 
-Root rules apply across the repository; a nested `AGENTS.md` can add service-specific checks. Begin with two or three stable rules that describe a safe path rather than a long list of volatile function names.
+Quy tắc ở thư mục gốc áp dụng cho toàn bộ kho mã; `AGENTS.md` lồng bên trong có thể bổ sung các bước kiểm tra cụ thể cho từng dịch vụ. Hãy bắt đầu với hai hoặc ba quy tắc ổn định lâu dài, nêu rõ cách xử lý an toàn, thay vì liệt kê quá nhiều tên hàm dễ lỗi thời.
 
-## Automatic-review boundary
+## Giới hạn của review tự động
 
-Users with the required GitHub push or admin permission can enable automatic reviews for a repository in Codex Settings. Automatic review is a supplementary gate and should not have automatic merge authority. High-risk repositories still need required reviewers, CI, and branch protection.
+Người dùng có quyền push hoặc quyền admin cần thiết trên GitHub có thể bật review tự động cho kho mã trong Codex Settings. Review tự động là một lớp kiểm tra bổ sung và không nên có quyền tự động hợp nhất. Với kho mã có rủi ro cao, vẫn cần giữ người đánh giá bắt buộc, CI và bảo vệ nhánh.
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] A person reviewed the main logic diff.
-- [ ] P0/P1 findings are fixed or the risk is accepted in writing.
-- [ ] CI passes and any rerun is explained.
-- [ ] No Secrets, unintended generated files, or unrelated lockfile changes.
-- [ ] Task, PR description, and actual diff agree.
+- [ ] Một người đã đọc diff của phần logic chính
+- [ ] Các phát hiện P0/P1 đã được sửa hoặc rủi ro đã được chấp nhận bằng văn bản
+- [ ] CI đã qua và có thể giải thích mọi lần chạy lại sau lỗi
+- [ ] Không có Secret, tệp được tạo ngoài ý muốn hoặc thay đổi lockfile không liên quan
+- [ ] Mô tả tác vụ, mô tả PR và các thay đổi thực tế khớp nhau
 
-## Official sources
+## Tài liệu chính thức
 
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-- [Cross-client code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Cloud, GitHub
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Đánh giá Pull Request trên GitHub](https://learn.chatgpt.com/docs/third-party/github)
+- [Đánh giá mã trên nhiều ứng dụng](https://learn.chatgpt.com/docs/code-review)

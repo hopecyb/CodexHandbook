@@ -1,62 +1,39 @@
 ---
-title: Context Engineering
-date: 2025-09-29
-year: 2025
-summary: 'Prompt engineering focuses on “how to ask,” but model performance largely depends on “what it sees.” Context engineering systematically organizes conversation history, retrieved knowledge, and tool outputs, ensuring the model reasons over the right information. It is the backbone of RAG and agent memory systems.'
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+title: "Context Engineering"
+description: "Context includes the task, instructions, files, retrieved results, and tool outputs. You need to decide what belongs in the current task, what to read on demand, and what to retain after compaction."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "The events and project descriptions below were checked against primary sources. Learning advice is the author’s judgment; source checking does not mean the product was tested here."
+  evidence:
+    - label: "Article on context engineering"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Verifiable event and scope
 
-# Context Engineering
+**Date: 2025-09-29 · Type: engineering article.** Anthropic published *Effective context engineering for AI agents*, discussing how to organize the context an agent needs. The article’s date is not the date the concept was invented.
 
-- Date of systematic public framing: 2025-09-29
-- Official references:
-  - Anthropic Engineering: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-  - OpenAI Cookbook (Session Memory): https://developers.openai.com/cookbook/examples/agents_sdk/session_memory
-  - OpenAI Cookbook (Personalization): https://developers.openai.com/cookbook/examples/agents_sdk/context_personalization
-  - OpenAI case (Consensus): https://openai.com/index/consensus/
-- Note: This entry records when Context Engineering entered mainstream engineering discussion. Implementation details should be expanded in the Guide.
+Source: [article on context engineering](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). Checked on 2026-09-18; the source publication date and this page’s checking date have different meanings.
 
-## What It Is
+## What problem it addresses
 
-Context Engineering is a systematic engineering approach centered on what information a model actually sees during task execution.
+Context includes the task, instructions, files, retrieved results, and tool outputs. You need to decide what belongs in the current task, what to read on demand, and what to retain after compaction.
 
-Its focus is not polishing a single prompt line, but managing the full context lifecycle: information selection, structure, injection timing, context length control, memory updates, history compression, and retrieval strategy.
+## Learning advice and limits
 
-The core question is how to provide the most effective, relevant, and timely context mix within limited context windows so complex tasks can be completed reliably.
+The following is this site’s teaching judgment, not a measure of industry adoption or effectiveness:
 
-## What Step It Moved AI Application Engineering From and To
+Prioritize facts and paths to evidence that matter to the current decision. More content can add noise; a compacted summary cannot replace key files. If the goal drifts, check the existing work and constraints before adding another prompt.
 
-It moved AI application engineering from "primarily optimize prompt wording" to "design task execution environments as context systems."
+## Hands-on exercise
 
-At this stage, teams treat memory management, retrieval strategy, context trimming, state transfer, and history compression as first-class engineering objects instead of side techniques. Model quality is no longer determined only by wording quality, but by context-system design quality.
+[Keep context focused](/en/guide/context/keep-context-focused/): list the files essential to the current task, references to consult as needed, and irrelevant material. Save the goal, completed work, open questions, and evidence paths as a handoff record.
 
-This pushes AI development from conversational tactics into information orchestration engineering.
-
-## What Stage It Is In Now
-
-I currently mark Context Engineering as `emerging`.
-
-Leading teams have clearly named it and shared practical frameworks, and both OpenAI and Anthropic public materials reinforce this direction. But terminology boundaries, best-practice standards, and implementation conventions are still evolving quickly.
-
-In short, it is now a core consensus for high-quality agent systems, but not yet a fully standardized cross-platform norm.
-
-## What It Might Replace
-
-It can replace development styles that try to solve complex tasks mainly through manual prompt tweaking.
-
-As context engineering spreads, teams spend less time asking "how to rewrite this sentence" and more time on how context is built, updated, trimmed, and validated. That reduces randomness and improves continuity and maintainability.
-
-## What Might Replace It
-
-It is more likely to be absorbed by higher abstractions than fully replaced.
-
-Capabilities such as automatic context schedulers, unified memory buses, and observable context policy engines may platformize today's manual context design work. The core idea that context determines system ceiling will remain.
+[Return to the roadmap and its date conventions](/en/ai-roadmap/)

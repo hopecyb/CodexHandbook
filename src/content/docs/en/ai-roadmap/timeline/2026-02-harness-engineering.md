@@ -1,54 +1,39 @@
 ---
-title: Harness Engineering
-date: 2026-02-11
-year: 2026
-summary: 'Prompts control how the model speaks, and context controls what it sees — but neither guarantees reliability. Harness engineering builds the surrounding system: tool orchestration, memory, error handling, and state tracking. Instead of hoping prompts fix failures, it eliminates them at the system level, making agents production-ready.'
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering"
+description: "This page focuses on the execution environment around the model: accessible project knowledge, tools, tests, feedback, state, and error recovery. Beyond model capability, the environment also affects whether a task can be completed."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "The events and project descriptions below were checked against primary sources. Learning advice is the author’s judgment; source checking does not mean the product was tested here."
+  evidence:
+    - label: "Harness engineering article"
+      href: "https://openai.com/index/harness-engineering/"
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Verifiable event and scope
 
-# Harness Engineering
+**Date: 2026-02-11 · Type: engineering article.** OpenAI published *Harness engineering: leveraging Codex in an agent-first world*, describing a team’s experience building an environment and feedback around agents. The date belongs to the article; it does not mean these engineering methods first appeared then.
 
-- Public concept date: 2026-02-11
-- Official introduction: https://openai.com/index/harness-engineering/
-- Note: This entry records the Harness Engineering concept introduced in the OpenAI article and its phase significance. Concrete tooling and process details should be expanded in the Guide.
+Source: [harness engineering article](https://openai.com/index/harness-engineering/). Checked on 2026-09-18; the source publication date and this page’s checking date have different meanings.
 
-## What It Is
+## What problem it addresses
 
-Harness Engineering is a production-oriented AI engineering approach that emphasizes not only improving model answers, but building a full environment that can reliably drive task completion.
+This page focuses on the execution environment around the model: accessible project knowledge, tools, tests, feedback, state, and error recovery. Beyond model capability, the environment also affects whether a task can be completed.
 
-This environment usually includes task decomposition, context organization, tool integration, validation feedback, failure recovery, quality gates, and iteration loops. The goal is controllable delivery, not occasional lucky outputs.
+## Learning advice and limits
 
-## What Step It Moved AI Application Engineering From and To
+The following is this site’s teaching judgment, not a measure of industry adoption or effectiveness:
 
-It moved AI application engineering from "optimize prompts and one-shot outputs" to "optimize task systems and execution environments."
+First establish checks that can detect errors, then expand the scope of automated execution. Passing tests supports only the behavior they cover; it cannot guarantee that every requirement is correct or every failure ruled out. The team’s experience and efficiency estimates in the article should not be directly extrapolated to this site.
 
-In this paradigm, the key question is no longer "how to ask the model better," but "how to build a method system that keeps model work reliable over time." Evaluation, tools, context, process, and regression become equal first-class engineering objects.
+## Hands-on exercise
 
-## What Stage It Is In Now
+[Workflow evaluation method and sample set](/en/guide/quality/workflow-evaluation/): choose one sample and separately record triggering, boundaries, format, quality, and time spent, with output evidence. Leave dimensions that were not run marked as not run.
 
-I currently mark Harness Engineering as `emerging`.
-
-The concept has been clearly proposed and is spreading quickly, but boundaries, methodology, and practice standards are still forming across the industry. Different teams implement "Harness" at very different depths.
-
-In short, it is a strong trend signal, but not yet a fully settled default consensus.
-
-## What It Might Replace
-
-It can replace AI development styles centered on single-point prompt tricks.
-
-As this paradigm spreads, teams discuss less "how to rewrite this prompt" and more "how to make the system stable, regressable, and continuously improvable."
-
-## What Might Replace It
-
-It is more likely to be absorbed by higher abstractions than overturned.
-
-Automated agent workflow frameworks, system-level quality orchestration platforms, and stronger constrained task-execution protocols may productize and standardize the core capabilities of Harness Engineering.
+[Return to the roadmap and its date conventions](/en/ai-roadmap/)

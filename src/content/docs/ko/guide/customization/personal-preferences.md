@@ -3,7 +3,7 @@ title: 개인 선호
 description: 사용자급 설정, 기본 모델과 UI 습관 — 저장소의 팀 약속을 오염시키지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e447e66
+source_revision: c381051
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

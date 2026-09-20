@@ -3,7 +3,7 @@ title: "Bases de la configuration"
 description: Emplacements des fichiers de configuration Codex, paramètres courants et introduction aux approbations, bac à sable et modèles.
 locale: fr
 source_locale: zh-CN
-source_revision: 6c67645
+source_revision: ee00ab5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

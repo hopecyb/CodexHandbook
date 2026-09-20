@@ -1,54 +1,44 @@
 ---
 title: Plugins
-description: Páginas sobre distribuição de extensões em equipe — Plugin é camada de empacotamento, não um tipo novo de capacidade.
+description: Explore, instale e gerencie conjuntos reutilizáveis de Skills, conectores, MCP, Hooks e modelos de tarefa.
 locale: pt
 source_locale: zh-CN
-source_revision: 33c9fe2
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 8917a59
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+Um Plugin é uma unidade para combinar e distribuir recursos. Ele pode incluir Skills, conectores, servidores MCP, extensões de navegador, Hooks e modelos de Scheduled task. O trabalho em si continua sendo executado por esses componentes.
 
-A Plugin is a unit of capability composition and distribution. It may contain Skills, connectors, MCP servers, browser extensions, Hooks, and Scheduled task templates; those components still perform the actual work.
+## Para quem é
 
-## Who it is for
+- Pessoas que querem instalar um conjunto pronto de recursos a partir de um catálogo público.
+- Mantenedores que precisam distribuir procedimentos, ferramentas e proteções da equipe como uma unidade versionada.
+- Administradores que examinam a origem, as permissões de serviços externos e os Hooks de um Plugin.
 
-- Users installing a ready-made capability bundle from a public directory.
-- Maintainers distributing team workflows, tools, and guardrails as one versioned unit.
-- Administrators reviewing source, external-service permissions, and Plugin Hooks.
+## Superfícies atualmente compatíveis
 
-## Current support surfaces
-
-| Surface | Browse/install | Use |
+| Superfície | Explorar/instalar | Usar |
 |---|---|---|
-| ChatGPT Web and desktop App | Plugins tab | Chat and Work |
-| ChatGPT Mobile | Not a primary management surface | Use Plugins already installed on the account |
-| Codex in the ChatGPT desktop App | Plugins tab | Codex tasks |
-| Codex CLI | `/plugins` browser; start a new session after installation | Codex environment |
-| IDE integration | **Plugins not supported** | Use MCP, Skills, and other IDE-supported capabilities separately |
+| ChatGPT Web e aplicativo para desktop | Aba Plugins | Chat e Work |
+| ChatGPT Mobile | Não é a principal interface de gerenciamento | Plugins já disponíveis na conta |
+| Codex no aplicativo ChatGPT para desktop | Aba Plugins | Tarefas do Codex |
+| Codex CLI | Navegador `/plugins`; abra uma nova sessão após instalar | Ambiente Codex |
+| Extensão IDE | **Não aceita Plugins** | Pode usar separadamente MCP, Skills e outros recursos disponíveis no IDE |
 
-## Reading entry points
+## Por onde começar a leitura
 
-- [Plugins overview](/pt/skills/plugins/plugins-overview/): components, support boundaries, installation verification, and security review
-- [Capability map](/pt/skills/capability-map/): compare Plugins, Skills, MCP, Hooks, and Scheduled tasks
+- [Visão geral dos Plugins](/pt/skills/plugins/plugins-overview/): componentes, compatibilidade, verificação da instalação e análise de segurança.
+- [Mapa dos recursos de extensão](/pt/skills/capability-map/): compare Plugin, Skill, MCP, Hook e Scheduled task.
 
-## Before installation
+## Perguntas antes de instalar
 
-1. Who is the source and maintainer?
-2. Which Skills, connectors, MCP servers, browser capabilities, and Hooks are included?
-3. Which external accounts and scopes does it request?
-4. Were its Hooks reviewed and trusted in `/hooks`?
-5. How will the team disable, upgrade, roll back, and revoke it?
+1. Quem é a fonte e quem mantém o Plugin?
+2. Quais Skills, conectores, servidores MCP, recursos de navegador e Hooks ele contém?
+3. É preciso conectar contas externas? Que escopos de acesso receberá?
+4. Os Hooks foram examinados e considerados confiáveis em `/hooks`?
+5. Como a equipe desativa, atualiza, reverte e revoga as autorizações?
 
-## Official source
+## Fonte oficial
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; Plugins are not supported in the IDE integration
-
-**Last verified:** 2026-08-26

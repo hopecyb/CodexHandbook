@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App / Mobile；Codex 桌面与 CLI；IDE 扩展不支持 Plugin"
+  checkedAt: "2026-08-26"
 title: Plugins 概述
 description: 理解 Plugin 的组成、支持表面、安装验证和信任边界。
 ---
@@ -96,11 +100,3 @@ IDE 扩展当前不支持 Plugin。不要写“在 IDE 里找不到入口”的�
 
 - [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT Web / 桌面 App / Mobile；Codex 桌面与 CLI；IDE 扩展不支持 Plugin
-
-**最近核验：** 2026-08-26

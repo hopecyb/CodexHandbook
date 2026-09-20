@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers의 현재 Codex use cases에는 여전히 “Review GitHub pull requests”가 포함되며, 사람 검토 전에 회귀와 잠재 문제를 잡아내는 점을 강조합니다. 이 페이지 예시는 diff에 대한 구조화 검토, P0/P1과 파일 경로 출력만 요구하며, 특정 UI나 고정 명령에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: PR 검토하기
 description: 병합 전에 Codex로 구조화된 diff 검토를 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# PR 검토하기
 
 ## 메타 정보
 
@@ -44,9 +52,3 @@ checklist를 출력하고 P0/P1을 표시하며, 파일 경로를 붙이세요.
 
 - [검토 템플릿](/ko/prompts/templates/review/)
 - [병합 전 검토](/ko/cases/workflows/review-before-merge/)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 Codex use cases에는 여전히 “Review GitHub pull requests”가 포함되며, 사람 검토 전에 회귀와 잠재 문제를 잡아내는 점을 강조합니다. 이 페이지 예시는 diff에 대한 구조화 검토, P0/P1과 파일 경로 출력만 요구하며, 특정 UI나 고정 명령에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

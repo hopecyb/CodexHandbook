@@ -1,47 +1,40 @@
 ---
 title: "Function Calling (Funktionsaufrufe)"
-date: 2023-06-13
-year: 2023
-summary: "Function Calling lässt das Modell verfügbare Funktionen auswählen und strukturierte Argumente ausfüllen."
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+description: "Das Modell kann einen Funktionsnamen und strukturierte Argumente für einen vorgeschlagenen Aufruf ausgeben. Die Anwendung prüft sie und entscheidet über die Ausführung. Argumente erzeugen, eine Berechtigung erhalten und ausführen sind drei getrennte Schritte."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die unten genannten Ereignis- und Projektangaben wurden anhand der Primärquelle geprüft. Die Lernempfehlungen sind eine Einschätzung des Autors und kein praktischer Produkttest."
+  evidence:
+    - label: "Ankündigung zur Einführung von Function Calling"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling (Funktionsaufrufe)
+## Überprüfbares Ereignis und Geltungsbereich
 
-- Wichtige Daten:
-  - OpenAI function calling release: 2023-06-13
-- Offizielle Referenzen:
-  - https://openai.com/index/function-calling-and-other-api-updates/
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+**Datum: 13.06.2023 · Art: Produktveröffentlichung.** OpenAI kündigte Function Calling für die damalige Chat Completions API an. Dieses Datum bezeichnet die API-Veröffentlichung eines bestimmten Anbieters, nicht den Ursprung aller Tool-Aufrufe.
 
-## Was Es Ist
+Quelle: [Ankündigung zur Einführung von Function Calling](https://openai.com/index/function-calling-and-other-api-updates/). Überprüft am 18.09.2026; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-Function Calling lässt das Modell verfügbare Funktionen auswählen und strukturierte Argumente ausfüllen.
+## Welches Problem wird gelöst?
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+Das Modell kann einen Funktionsnamen und strukturierte Argumente für einen vorgeschlagenen Aufruf ausgeben. Die Anwendung prüft sie und entscheidet über die Ausführung. Argumente erzeugen, eine Berechtigung erhalten und ausführen sind drei getrennte Schritte.
 
-Es bewegte Anwendungen von reinen Textantworten zu Anweisungen, die echte Systeme ausführen können.
+## Lernempfehlungen und Grenzen
 
-## In Welcher Phase Es Jetzt Ist
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-Aktuell ordne ich diesen Punkt als `mainstream` ein.
+Entwerfen Sie vorrangig überprüfbare Eingaben, klare Berechtigungsbereiche und Fehlerantworten. Gültiges JSON bedeutet weder, dass Argumente inhaltlich richtig sind, noch, dass ein Schreibzugriff auf externe Systeme erlaubt ist. Modellnamen und API-Beispiele aus der historischen Ankündigung sind keine aktuelle Konfigurationsanleitung.
 
-Es ist Mainstream und Grundlage für Tool Use und Agenten.
+## Praktische Übung
 
-## Was Es Ersetzen Könnte
+[Trockenlauf für Vorschläge zur Issue-Triage](/de/cases/use-cases/team-automation/issue-triage-suggestions/): Prüfen Sie, ob strukturierte Vorschläge für synthetische Issues an ihre Eingaben gebunden sind, und behalten Sie eine Warteschlange für die menschliche Prüfung bei. Die Übung testet Datengrenzen, ohne die historische API oder Versionsbezeichnung aufzurufen.
 
-Es ersetzt fragiles Parsen freier Texte, um APIs auszulösen.
-
-## Was Es Ersetzen Könnte
-
-Es wird in Tool-Runtimes mit Berechtigungen, Zustand und Fehlerbehebung aufgehen.
+[Zurück zur Roadmap und den Datumsregeln](/de/ai-roadmap/)

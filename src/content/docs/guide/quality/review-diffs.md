@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明 diff 审查时应关注的范围与风险；站内链接与检查顺序已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 审查差异
 description: 如何读变更并提问。
 sidebar:
@@ -73,10 +78,3 @@ diff 能直接回答几个关键问题：
 4. 再看风格和命名是否协调
 
 先看清它实际改了什么，再按改动内容决定是否接受这次结果。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明 diff 审查时应关注的范围与风险；站内链接与检查顺序已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

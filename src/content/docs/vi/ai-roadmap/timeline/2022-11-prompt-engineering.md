@@ -1,48 +1,39 @@
 ---
-title: "Prompt Engineering (kỹ thuật prompt)"
-date: 2022-11-30
-year: 2022
-summary: "Prompt Engineering thiết kế chỉ dẫn, ngữ cảnh, ràng buộc và định dạng để mô hình dễ kiểm soát hơn."
-phase: mainstream
-trend: absorbed
-signal: well-calibrated
-tags: [prompt-engineering, llm, prompting, workflow, reliability]
-authored_by: ai-assisted
+title: "Prompt Engineering (kỹ thuật thiết kế prompt)"
+description: "Prompt truyền cho mô hình mục tiêu, bối cảnh cần thiết, ràng buộc và yêu cầu đầu ra. Ví dụ có thể làm rõ kỳ vọng, nhưng viết dài hơn không bảo đảm kết quả tốt hơn."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Các sự kiện và mô tả dự án dưới đây đã được đối chiếu với nguồn sơ cấp. Gợi ý học tập là nhận định của tác giả; đối chiếu nguồn không đồng nghĩa với việc đã thử nghiệm sản phẩm."
+  evidence:
+    - label: "Thông báo ra mắt ChatGPT"
+      href: "https://openai.com/index/chatgpt/"
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 1028eec
+source_revision: 225d837
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Sự kiện và phạm vi có thể kiểm chứng
 
-# Prompt Engineering (kỹ thuật prompt)
+**Ngày: 2022-11-30 · Loại: ra mắt sản phẩm.** OpenAI công bố bản xem trước nghiên cứu của ChatGPT. Trang này dùng sự kiện sản phẩm công khai đó làm điểm bắt đầu học tập, không gọi đó là ngày phát minh ra phương pháp viết prompt.
 
-- Mốc thời gian chính:
-  - Mainstream milestone: 2022-11-30 (ChatGPT public launch)
-- Tài liệu chính thức:
-  - https://platform.openai.com/docs/guides/prompt-engineering
-  - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Ghi chú: Mục này ghi lại điểm chuyển trong việc áp dụng và ý nghĩa hiện tại của khái niệm này trong kỹ thuật ứng dụng AI.
+Nguồn: [Thông báo ra mắt ChatGPT](https://openai.com/index/chatgpt/). Đã kiểm tra vào 2026-09-18; ngày nguồn được công bố và ngày trang này được kiểm tra mang ý nghĩa khác nhau.
 
-## Nó Là Gì
+## Nó giải quyết vấn đề gì
 
-Prompt Engineering thiết kế chỉ dẫn, ngữ cảnh, ràng buộc và định dạng để mô hình dễ kiểm soát hơn.
+Prompt truyền cho mô hình mục tiêu, bối cảnh cần thiết, ràng buộc và yêu cầu đầu ra. Ví dụ có thể làm rõ kỳ vọng, nhưng viết dài hơn không bảo đảm kết quả tốt hơn.
 
-## Nó Đưa Kỹ Thuật Ứng Dụng AI Từ Bước Nào Sang Bước Nào
+## Gợi ý học tập và giới hạn áp dụng
 
-Nó đưa việc dùng mô hình từ hỏi bằng ngôn ngữ tự nhiên rồi chờ may mắn sang thiết kế đầu vào có thể tái sử dụng và kiểm chứng.
+Phần sau là nhận định giảng dạy của trang này, không phải số đo về mức độ phổ biến trong ngành hay hiệu quả:
 
-## Hiện Đang Ở Giai Đoạn Nào
+Trước hết hãy nêu rõ cần bàn giao gì, rồi bổ sung thông tin mà mô hình còn thiếu. Với tác vụ đơn giản, hãy thực hiện trực tiếp; nếu còn điều quan trọng chưa rõ, hãy hỏi làm rõ trước. Đừng xem việc luôn viết kế hoạch trước mỗi tác vụ hoặc chờ xác nhận ở từng bước là quy tắc chung.
 
-Hiện tại tôi đánh dấu mục này là `mainstream`.
+## Bài tập thực hành
 
-Hiện đây là năng lực nền tảng và được hấp thụ vào structured output, gọi công cụ, điều phối workflow và Skills.
+[Ba bộ tài liệu so sánh prompt](/vi/prompts/comparison-lab/): chọn một đầu vào cố định, lưu riêng đầu ra A/B và đối chiếu theo cùng tiêu chí. Tài liệu đã sẵn có; trang này chưa có kết luận dựa trên đo lường thực tế về hiệu quả mô hình.
 
-## Nó Có Thể Thay Thế Điều Gì
-
-Nó thay thế cách dùng mô hình như một hộp chat ngẫu nhiên.
-
-## Điều Gì Có Thể Thay Thế Nó
-
-Nó khó biến mất; nhiều khả năng sẽ nằm bên trong các lớp giao diện và tối ưu hóa cao hơn.
+[Quay lại lộ trình và cách dùng mốc ngày](/vi/ai-roadmap/)

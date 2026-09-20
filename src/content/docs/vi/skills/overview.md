@@ -3,7 +3,7 @@ title: Tổng quan Skills
 description: Dùng SKILL.md để dạy Codex workflow tái sử dụng — viết một lần, gọi khi cần.
 locale: vi
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

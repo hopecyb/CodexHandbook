@@ -3,7 +3,7 @@ title: Descripción general de Skills
 description: Enseña a Codex flujos de trabajo reutilizables con SKILL.md; escríbelo una vez y llámalo cuando haga falta.
 locale: es
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

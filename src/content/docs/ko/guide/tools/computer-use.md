@@ -3,7 +3,7 @@ title: Computer Use
 description: 화면과 입력 장치로 GUI를 조작하는 고급 능력 — 적용 장면, 위험, 승인.
 locale: ko
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Recuperación ante fallos
 description: Cuando la tarea se desvía, los tests fallan o se agota el contexto — cómo retroceder con seguridad y continuar.
 locale: es
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

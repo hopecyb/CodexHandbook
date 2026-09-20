@@ -1,93 +1,84 @@
 ---
-title: Tổng quan Hooks
-description: Chèn kiểm tra, nhật ký và kiểm toán tại nút then chốt của Agent — bổ sung bảo mật và tuân thủ nhóm.
+title: Tổng quan về Hooks
+description: Tìm hiểu cách phát hiện cấu hình, rà soát tin cậy, bộ xử lý và ranh giới bảo mật của Hook.
 locale: vi
 source_locale: zh-CN
-source_revision: 169a1ec
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: ac7889b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
+Hooks cho phép chạy script lệnh hoặc công cụ của máy chủ MCP đã kết nối tại các điểm trong vòng lặp Agent của Codex. Các ứng dụng thường gặp gồm quét khóa trong prompt, áp dụng chính sách gọi công cụ, ghi nhật ký kiểm toán, tóm tắt phiên và kiểm tra trước khi dừng.
 
-![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-vi.svg)
+![Vòng đời Codex Hook: các sự kiện phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con](/diagrams/hook-lifecycle-events-zh-cn.svg)
 
-The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
+Điểm khác biệt quan trọng nhất trong hình là: `PreToolUse` có thể từ chối hoặc sửa đầu vào trước khi công cụ cục bộ được hỗ trợ thực thi; `PostToolUse` xảy ra sau khi công cụ hoàn thành nên không thể hoàn tác tác dụng phụ đã xảy ra.
 
-## Configuration discovery
+## Cấu hình đến từ đâu
 
-Codex looks beside active configuration layers for:
+Codex tìm ở cạnh các lớp cấu hình đang hoạt động:
 
 - `~/.codex/hooks.json`
-- `[hooks]` in `~/.codex/config.toml`
+- `[hooks]` trong `~/.codex/config.toml`
 - `<repo>/.codex/hooks.json`
-- `[hooks]` in `<repo>/.codex/config.toml`
-- Hooks bundled with enabled Plugins
-- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
+- `[hooks]` trong `<repo>/.codex/config.toml`
+- Hook đi kèm Plugin đã được bật
+- Managed Hook do quản trị viên cung cấp qua hệ thống, MDM, Cloud hoặc `requirements.toml`
 
-Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
+`.codex/` ở cấp dự án chỉ được tải khi dự án đáng tin cậy. Các Hook khớp từ nhiều nguồn sẽ cùng chạy; cấu hình có ưu tiên cao không ghi đè toàn bộ nhóm Hook ở mức ưu tiên thấp.
 
-When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
+Nếu cùng một lớp cấu hình có cả `hooks.json` lẫn `[hooks]` nội tuyến, chúng sẽ được hợp nhất và xuất hiện cảnh báo khi khởi động. Nên chọn một cách biểu diễn cho mỗi lớp.
 
-## Review every unmanaged Hook
+## Hook không được quản lý phải được rà soát
 
-Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
+Codex ghi nhận trạng thái tin cậy theo hash của định nghĩa Hook. Hook không được quản lý vừa thêm hoặc sửa sẽ bị đánh dấu chờ rà soát và bị bỏ qua cho đến khi người dùng tin cậy định nghĩa mới.
 
-Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
+Trong CLI, dùng `/hooks` để xem nguồn, rà soát thay đổi, tin cậy hoặc tắt từng Hook không được quản lý. Hook đi kèm Plugin cũng đi qua quy trình tin cậy này. Managed Hook được tin cậy theo chính sách tổ chức; người dùng không thể tắt chúng trong trình duyệt Hook cá nhân.
 
-## Two executable handlers
+## Hai loại bộ xử lý có thể thực thi
 
-| Handler | Purpose | Boundary |
+| Bộ xử lý | Công dụng | Ranh giới quan trọng |
 |---|---|---|
-| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
-| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
+| `command` | Chạy script cục bộ, nhận JSON sự kiện từ stdin | Bản thân script có khả năng của tiến trình cục bộ; phải rà soát thư viện phụ thuộc và đầu ra |
+| `mcp_tool` | Gọi công cụ trong máy chủ MCP đã kết nối | Không tự khởi động hoặc kết nối lại máy chủ; không hỗ trợ `SessionEnd` |
 
-The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
+Theo tài liệu chính thức hiện tại, bộ xử lý `prompt` và `agent` có thể được phân tích cú pháp nhưng sẽ bị bỏ qua; không nên đưa chúng vào cấu hình cần chạy thật.
 
-## Runtime behavior
+## Hành vi khi chạy
 
-- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
-- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
-- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
-- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
+- Nhiều command Hook khớp sẽ khởi chạy đồng thời; một Hook không thể ngăn Hook khớp khác đã bắt đầu.
+- `timeout` mặc định của phần lớn Hook là 600 giây; `SessionEnd` mặc định 1 giây và tối đa 3 giây. Script bảo vệ dùng trong sản xuất vẫn nên chủ động đặt thời gian chờ ngắn hơn.
+- Thư mục làm việc của command Hook là `cwd` của phiên. Script trong kho lưu trữ nên tìm thư mục gốc Git để tránh lỗi đường dẫn tương đối khi khởi chạy từ thư mục con.
+- Hook bất đồng bộ phù hợp để ghi log và phân tích, nhưng không thể chặn, phê duyệt, sửa đầu vào hoặc điều khiển thao tác đã kích hoạt nó.
 
-## Relationship to other security layers
+## Quan hệ với các lớp bảo mật khác
 
-| Layer | Responsibility |
+| Lớp | Vai trò |
 |---|---|
-| Sandbox | Filesystem, network, and system capability boundary |
-| Approval | Human decision before high-risk actions |
-| Command rules | Declarative allow/deny for known command patterns |
-| Hook | Custom, testable logic at lifecycle points |
-| Service permission | Final external-system read/write authority |
+| Sandbox | Ranh giới khả năng truy cập tệp, mạng và hệ thống |
+| Phê duyệt | Quyết định của con người trước thao tác rủi ro cao |
+| Quy tắc lệnh | Khai báo allow/deny cho mẫu lệnh đã biết |
+| Hook | Chạy logic tùy chỉnh, có thể kiểm thử tại các điểm vòng đời |
+| Quyền phía máy chủ | Hệ thống bên ngoài cuối cùng cho phép những thao tác đọc/ghi nào |
 
-Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
+Phạm vi bao phủ công cụ của Hook không phải ranh giới bảo mật đầy đủ. Tài liệu chính thức nêu rõ một số đường đi công cụ chuyên biệt có thể bỏ qua đường đi Hook mặc định; Hosted tool (ví dụ WebSearch) cũng không đi qua `PreToolUse` / `PostToolUse` cục bộ.
 
-## Adoption order
+## Thứ tự áp dụng
 
-1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
-2. Use `systemMessage` or additional context for high-confidence warnings.
-3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
-4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
+1. Dùng `PostToolUse` hoặc `SessionEnd` để ghi log đã loại bỏ dữ liệu nhạy cảm, trước hết quan sát hành vi thực tế.
+2. Với vấn đề có độ tin cậy cao, dùng `systemMessage` hoặc ngữ cảnh bổ sung để nhắc nhở.
+3. Chỉ chặn tại `PreToolUse` khi quy tắc xác định rõ, script có fixture và mức báo nhầm chấp nhận được.
+4. Căn chỉnh Hook với CI, kiểm tra trước commit và quyền phía máy chủ để tránh ba bộ chính sách mâu thuẫn nhau.
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] Event names come from the current official list.
-- [ ] Matchers cover only required tools or sources.
-- [ ] Scripts have fixture tests and readable errors.
-- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
-- [ ] Failure, timeout, and disabled paths were exercised.
-- [ ] The team understands trust changes shown by `/hooks`.
+- [ ] Tên sự kiện lấy từ danh sách chính thức hiện tại.
+- [ ] Matcher chỉ bao phủ công cụ hoặc nguồn cần thiết.
+- [ ] Script có bài kiểm thử với đầu vào cố định và thông báo lỗi dễ hiểu.
+- [ ] Log không lưu token, toàn bộ prompt hoặc tham số công cụ nhạy cảm.
+- [ ] Đã diễn tập các trường hợp Hook lỗi, hết thời gian chờ và bị tắt.
+- [ ] Nhóm hiểu việc thay đổi trạng thái tin cậy trong `/hooks` có nghĩa gì.
 
-## Official source
+## Nguồn chính thức
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Environments using a local Codex host; CLI provides `/hooks` trust management
-
-**Kiểm chứng gần nhất:** 2026-08-25

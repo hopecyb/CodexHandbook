@@ -1,15 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains template usage only; in-site links and template categories were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Prompt templates
 description: Reusable prompt skeletons by task type—understand, create, change, diagnose, review, research, automate.
 locale: en
 source_locale: zh-CN
-source_revision: 3dbc237
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: fae2ed3
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Prompt templates
 
 People often react two ways to "templates":
 
@@ -54,6 +57,27 @@ Some prompts are one-off. Others repeat often enough that they should be stabili
 
 Templates fit human-initiated tasks; Skills fit repeated processes; Hooks fit automatic checks at fixed points; MCP fits access to external systems.
 
+## Quick choice: what should this task become?
+
+Ask four questions:
+
+1. Will you do it only once?
+2. Will the steps be much the same next time?
+3. Is there a fixed output format or checklist?
+4. Does it need an external system, script, or automatic guard?
+
+| Situation | Suggested form |
+|---|---|
+| One-off work that still needs discussion | A complete prompt |
+| Repeated work still being adjusted | A template |
+| Stable process and fixed output | A Skill |
+| An independent role must investigate deeply | A subagent |
+| External-system data is needed | MCP, preferably read-only first |
+| A check must run at a lifecycle point every time | A Hook |
+| The team needs one distributed package | A Plugin |
+
+Longer prompts are not automatically better. What is worth reusing is a task you have checked repeatedly, with clear boundaries and acceptance criteria.
+
 ## Common misconceptions
 
 ### 1. Templates are copy-paste artifacts
@@ -75,10 +99,3 @@ For beginners, "enough but not bloated" is fine.
 Pick the right type first, then adapt it—don't treat the template itself as the task.
 
 Writing principles: [Prompt basics](/en/prompts/basics/) and [Task anatomy](/en/prompts/task-anatomy/).
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains template usage only; in-site links and template categories were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

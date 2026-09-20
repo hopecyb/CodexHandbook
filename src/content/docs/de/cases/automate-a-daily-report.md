@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin wiederholbare Automatisierungsszenarien wie „Automate bug triage“ und „Turn feedback into actions“. Diese Seite definiert den Tagesbericht als „Markdown in festem Format + klarer Exit-Code + wiederverwendbares Skript oder Skill“ — ein stabiles Automatisierungs-Workflow-Muster, das nicht von einer einzelnen Integration abhängt."
+  checkedAt: "2026-07-26"
 title: Einen Tagesbericht automatisieren
 description: Wiederkehrende Zusammenfassungsarbeit als wiederverwendbares Skript oder Skill verfestigen.
 locale: de
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Einen Tagesbericht automatisieren
 
 ## Metadaten
 
@@ -42,9 +50,3 @@ Einschränkungen: Nur lesend auf git; kein push; scripts/generate-daily.sh berei
 
 - [Beispiel Automatisierungs-Skill](/de/skills/examples/automation-skill/)
 - [Geplante Aufgaben](/de/skills/automations/scheduled-tasks/)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin wiederholbare Automatisierungsszenarien wie „Automate bug triage“ und „Turn feedback into actions“. Diese Seite definiert den Tagesbericht als „Markdown in festem Format + klarer Exit-Code + wiederverwendbares Skript oder Skill“ — ein stabiles Automatisierungs-Workflow-Muster, das nicht von einer einzelnen Integration abhängt.  
-**Zuletzt geprüft:** 2026-07-26

@@ -3,7 +3,7 @@ title: CLI 設定
 description: モデル、サンドボックス、承認、MCP——ターミナルで Codex の挙動を統一する。
 locale: ja
 source_locale: zh-CN
-source_revision: 48f3288
+source_revision: 0a9b2ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page provides an automate-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Automate template
 description: Repeatable tasks and reusable flows.
 locale: en
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Automate template
 
 A common automate mistake: focus on "can it run automatically" without:
 
@@ -61,10 +65,3 @@ The automate template aims for safe, sustained operation.
 
 - [Long-running tasks](/en/prompts/long-running-tasks/)
 - [Automate a daily report case](/en/cases/automate-a-daily-report/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an automate-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

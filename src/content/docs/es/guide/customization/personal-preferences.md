@@ -3,10 +3,9 @@ title: Preferencias personales
 description: Configuración de usuario, modelo por defecto y hábitos de interfaz — sin contaminar las convenciones del equipo en el repositorio.
 locale: es
 source_locale: zh-CN
-source_revision: e447e66
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: c381051
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
@@ -34,6 +33,16 @@ Si no se separan, después es fácil que pase:
 - En tu máquina todo fluye, pero los compañeros no pueden reproducirlo
 - Crees que la regla ya aplica, cuando en realidad solo te está cubriendo tu máquina
 - Llevas ajustes permisivos a un proyecto más serio
+
+## Qué conviene guardar como preferencia personal
+
+| Ajuste | Ejemplo |
+|---|---|
+| Modelo y nivel de razonamiento predeterminados | Rendimiento del equipo y plan personal |
+| Tema, fuentes y notificaciones | [Ajustes](/es/guide/desktop-app/settings/) de la aplicación de escritorio |
+| Herramientas MCP personales | Acceso de solo lectura a una base local, autorizado con cuidado |
+| Ruta de la biblioteca personal de Skills | Mantenerla distinta de los Plugins del equipo |
+| Alias de terminal y directorio habitual de inicio de `codex` | Ver [Configuración de la CLI](/es/guide/cli/configuration/) |
 
 ## Contenido de equipo que no debe vivir solo en la capa personal
 

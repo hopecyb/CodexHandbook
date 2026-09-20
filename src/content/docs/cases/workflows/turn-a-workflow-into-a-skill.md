@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "已按 OpenAI Developers 当前公开的“Save workflows as skills”相关 use cases，以及本手册已核验的 Skills、自动化、命令规则与扩展风险章节交叉复核；页面内容限定为“重复流程何时沉淀成 Skill、如何组织说明与验收”的稳定方法。"
+  checkedAt: "2026-07-26"
 title: 把工作流沉淀为 Skill
 description: 第三次重复的流程值得写成 Skill——触发、说明与验收一体化。
 ---
@@ -63,9 +68,3 @@ description: 第三次重复的流程值得写成 Skill——触发、说明与�
 
 ## 参考来源
 - 仓库内 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) 与 [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** 已按 OpenAI Developers 当前公开的“Save workflows as skills”相关 use cases，以及本手册已核验的 Skills、自动化、命令规则与扩展风险章节交叉复核；页面内容限定为“重复流程何时沉淀成 Skill、如何组织说明与验收”的稳定方法。  
-**最近核验：** 2026-07-26

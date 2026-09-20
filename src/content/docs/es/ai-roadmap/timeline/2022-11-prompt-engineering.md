@@ -1,48 +1,39 @@
 ---
 title: "Prompt Engineering (ingeniería de prompts)"
-date: 2022-11-30
-year: 2022
-summary: "Prompt Engineering diseña instrucciones, contexto, restricciones y formatos para que el modelo produzca resultados más controlables."
-phase: mainstream
-trend: absorbed
-signal: well-calibrated
-tags: [prompt-engineering, llm, prompting, workflow, reliability]
-authored_by: ai-assisted
+description: "Un prompt comunica al modelo el objetivo, el contexto necesario, las restricciones y los requisitos de salida. Los ejemplos pueden aclarar lo esperado, pero más extensión no garantiza mejores resultados."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Los eventos y las descripciones de proyectos siguientes se comprobaron con fuentes primarias. Los consejos de aprendizaje son criterios del autor; verificar las fuentes no equivale a haber probado el producto."
+  evidence:
+    - label: "Anuncio del lanzamiento de ChatGPT"
+      href: "https://openai.com/index/chatgpt/"
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 1028eec
+source_revision: 225d837
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Evento verificable y alcance
 
-# Prompt Engineering (ingeniería de prompts)
+**Fecha: 2022-11-30 · Tipo: lanzamiento de producto.** OpenAI lanzó la versión preliminar de investigación de ChatGPT. Este sitio toma ese acontecimiento público como punto de partida para aprender, sin presentarlo como la fecha en que se inventaron los métodos para redactar prompts.
 
-- Fechas clave:
-  - Mainstream milestone: 2022-11-30 (ChatGPT public launch)
-- Referencias oficiales:
-  - https://platform.openai.com/docs/guides/prompt-engineering
-  - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+Fuente: [anuncio del lanzamiento de ChatGPT](https://openai.com/index/chatgpt/). Comprobado el 2026-09-18; la fecha de publicación de la fuente y la fecha de comprobación de esta página tienen significados distintos.
 
-## Qué Es
+## Qué problema resuelve
 
-Prompt Engineering diseña instrucciones, contexto, restricciones y formatos para que el modelo produzca resultados más controlables.
+Un prompt comunica al modelo el objetivo, el contexto necesario, las restricciones y los requisitos de salida. Los ejemplos pueden aclarar lo esperado, pero más extensión no garantiza mejores resultados.
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+## Consejos para aprender y límites de aplicación
 
-Movió el uso de modelos desde pedir en lenguaje natural y esperar suerte hacia diseñar entradas reutilizables y evaluables.
+Lo siguiente es un criterio didáctico de este sitio, no una medición de adopción en el sector ni de eficacia:
 
-## En Qué Etapa Está Ahora
+Explica primero qué debes entregar y después añade la información que le falta al modelo. Ejecuta directamente las tareas sencillas; aclara antes las incógnitas importantes. No conviertas en regla universal escribir un plan antes de cada tarea ni esperar confirmación en cada paso.
 
-Actualmente lo marco como `mainstream`.
+## Ejercicio práctico
 
-Hoy es una capacidad base y se absorbe en salidas estructuradas, llamadas a herramientas, orquestación y Skills.
+[Tres conjuntos para comparar prompts](/es/prompts/comparison-lab/): elige una entrada fija, guarda por separado las salidas A/B y evalúalas con los mismos criterios. El material está preparado; este sitio aún no ha medido los resultados de los modelos.
 
-## Qué Podría Reemplazar
-
-Reemplaza el uso improvisado del modelo como una caja de chat aleatoria.
-
-## Qué Podría Reemplazarlo
-
-No desaparecerá; quedará envuelto por capas de interfaz y optimización más altas.
+[Volver a la hoja de ruta y sus criterios de fechas](/es/ai-roadmap/)

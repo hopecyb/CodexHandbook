@@ -3,7 +3,7 @@ title: PDF and Documents
 description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
 locale: en
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

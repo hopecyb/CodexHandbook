@@ -3,7 +3,7 @@ title: "Politique d'usage acceptable"
 description: Accord au niveau équipe sur ce que Codex peut et ne peut pas faire — aligné avec les contrôles techniques et la formation.
 locale: fr
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,91 +1,69 @@
 ---
-title: Padrões de aprovação humana
-description: Quando aprovar, rejeitar ou pedir ao Codex para pausar — e como documentar essas regras com clareza.
+title: "Padrões de aprovação humana"
+description: "Distinga autorização da tarefa de aprovação de ferramenta; prepare um resultado revisável antes de pausar para uma ação concreta que exija autorização."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Foram verificadas as funções distintas do sandbox e da aprovação. Os padrões de colaboração abaixo são recomendações do manual, não regras uniformes de diálogo para todos os clientes."
+  evidence:
+    - label: "Orientação oficial sobre sandbox e aprovações"
+      href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: pt
 source_locale: zh-CN
-source_revision: 0e37633
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f60dbb5
+translation_status: draft
+translated_at: 2026-09-20
 ---
+A aprovação deve corresponder a uma ação específica e a seus efeitos. A autorização da tarefa diz o que o usuário quer concluir; a aprovação da ferramenta determina se uma ação pode ocorrer no ambiente atual. Escrever arquivo, executar comando ou acessar a rede não exige perguntar a cada vez por natureza. O comportamento depende do escopo autorizado, da política de ferramentas e do sandbox. Veja a [orientação oficial](https://learn.chatgpt.com/docs/agent-approvals-security).
 
-A aprovação serve para deixar operações irreversíveis na decisão humana. Esta página reúne algumas práticas comuns.
+## Três formas de colaboração que podem ser escolhidas
 
-## Camadas de aprovação
+| Forma | O que pode continuar | Quando esperar |
+|---|---|---|
+| Análise somente de leitura | Ler, comparar e formar uma proposta | Não alterar a implementação sem autorização do usuário |
+| Implementação dentro do escopo autorizado | Alterar a área indicada, verificar e preparar resultado revisável | Falta informação essencial, o escopo muda ou surge ação não autorizada |
+| Aprovação separada da ação final | Concluir rascunhos, builds, prévias e preparação de recuperação | Antes de publicar, enviar ou outra ação expressamente reservada |
 
-```text
-Zona automática segura (ler, analisar, planear)
-    ↓
-Zona de confirmação pedida (escrever ficheiros, correr comandos, rede)
-    ↓
-Zona de intervenção humana obrigatória (push, apagar dados, enviar para fora, alterar configuração de produção)
-```
+São acordos de colaboração, não nomes de novos modos do produto. Não peça de novo uma autorização clara que ainda vale. Se uma política obrigatória exigir aprovação interativa, siga esse mecanismo.
 
-O comportamento concreto dos diálogos varia conforme o [ponto de entrada do produto](/pt/guide/); o princípio é o mesmo.
-
-## Padrão 1: planear antes de executar
+## Padrão 1: nesta vez apenas propor
 
 ```text
-Regra: sem ver a minha «aprovação do plano», não modificar ficheiros do repositório.
+Nesta vez, trabalhe somente em leitura: examine o projeto e proponha alterações. Não mude o código nem faça commit.
+Se uma verificação escrever cache, snapshot ou arquivo de saída, explique; não presuma que todo “teste” é somente de leitura.
 ```
 
-Adequado a: código-base desconhecido, relacionado com produção, diffs grandes.
+É adequado quando o objetivo ainda não foi definido e alternativas precisam ser comparadas. Mesmo em tarefa só de leitura, observe os efeitos reais dos comandos. Não combine “testes podem rodar” e “nada pode ser escrito no disco” sem conferir.
 
-## Padrão 2: lista branca de comandos
-
-Em [AGENTS.md](/pt/guide/customization/agents-md/writing-effective-instructions/), declare:
-
-```md
-Permitidos sem voltar a perguntar: pnpm test, pnpm lint, git status, git diff
-Confirmação obrigatória de cada vez: git push, npm publish, migrate de base de dados
-```
-
-Em conflito com a política de hosting, prevalece a **mais estrita**.
-
-## Padrão 3: fusão em duas fases
-
-1. O Codex abre um draft PR ou um ramo local
-2. Fusão só após CI + review humana a passar
-
-Cenários Cloud em [criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/).
-
-## Padrão 4: reconhecimento só de leitura
+## Padrão 2: concluir continuamente o trabalho local
 
 ```text
-Esta ronda é só de leitura: pode ler ficheiros, correr testes, curl a APIs locais;
-proibido escrever em disco e git commit.
+Você pode alterar estes três documentos e os links internos relacionados e rodar as verificações de build existentes.
+Conclua dentro desse escopo sem esperar a cada etapa; resolva detalhes comuns de implementação e relate-os.
+Não publique o site nem envie mensagens. Explique antes qualquer escolha necessária ou ação fora do escopo.
 ```
 
-Usado em auditorias, aprendizagem de projetos desconhecidos e diagnóstico de problemas de produção.
+Aqui alterar e verificar já estão autorizados; não é necessário perguntar antes de cada escrita. A permissão para um comando específico ainda depende do ambiente; um prompt não contorna uma recusa.
 
-## Quando rejeitar e recomeçar
+## Padrão 3: aprovar uma publicação específica
 
-| Sinal | Sugestão |
-|---|---|
-| Plano desalinhado com o objetivo | Recusar execução; pedir revisão do plano |
-| Âmbito das alterações a crescer | Parar; dividir a tarefa |
-| Testes saltados | Recusar fusão; exigir verificação complementar |
-| Impossível explicar um comando | Recusar; exigir explicação |
+Prepare antes uma versão revisável e apresente:
 
-## Relação com Automations
+- A versão ou o artefato exato a publicar e os resultados de verificação.
+- O ambiente de destino, destinatário ou pessoas afetadas.
+- Os efeitos externos esperados e a forma de recuperação necessária.
+- As autorizações ou condições que ainda faltam.
 
-Tarefas sem supervisão também devem manter pontos de confirmação humana no desenho; ver [tarefas agendadas e em segundo plano](/pt/skills/automations/scheduled-tasks/).
+Aprovar “esta versão no site de teste” não autoriza qualquer versão futura no site de produção. Por outro lado, se a mesma ação já foi aprovada claramente, um modelo genérico não deve pedir confirmação outra vez.
 
-## Erros comuns
+## Continuar após uma recusa
 
-- Marcar «permitir sempre» a longo prazo e esquecer o risco
-- Aprovação formal sem ler o diff
-- Usar «não faças disparates» oral em vez de um padrão explícito
+Guarde a recusa original e diferencie autorização ausente, proibição por política e falha de ambiente. Continue se conseguir restringir o trabalho a uma abordagem ainda válida para a tarefa. Não contorne a mesma restrição trocando ferramenta, grafia do comando ou texto do prompt. Se o usuário realmente precisar agir, explique ação bloqueada, motivo e próximos passos possíveis.
 
-## Lista de aceitação
+## O que a pessoa revisora verifica
 
-- [ ] Antes de iniciar a tarefa, declarar qual o padrão de aprovação
-- [ ] Operações de alto risco com segundo revisor ou CI
-- [ ] Política unificada da equipa para `git push` e comandos semelhantes
+Confira se escopo e resultado coincidem, se a verificação ocorreu de fato e se os efeitos externos são compreendidos. Ter um plano não concede aprovação automática; “nenhum achado” não garante risco zero.
 
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com a orientação oficial atual da OpenAI Developers sobre autonomy / approval boundaries e com os capítulos já verificados deste manual sobre aprovação, regras de comando, PRs e automatização; esta página confirma apenas o princípio estável de colaboração «que ações podem continuar automaticamente e quais devem parar para aprovação humana».  
-**Última verificação:** 2026-07-26
+Para a forma de trabalho, veja [classificação de tarefas](/pt/prompts/ask-for-a-plan/); para conflitos de instruções, [prioridade do contexto](/pt/guide/context/context-priority/); fluxos sem supervisão também precisam de [mecanismos de parada, falha e notificação](/pt/skills/automations/scheduled-tasks/).

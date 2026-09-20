@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已对照 ChatGPT 桌面 App、Codex CLI、IDE 和 Cloud 当前官方说明；本页按工作位置和交互方式给出选择建议，并区分 VS Code 兼容扩展与 Xcode、JetBrains 各自的集成方式。"
+  checkedAt: "2026-08-26"
 title: 选择 Codex 客户端
 description: 按工作发生的位置与交互方式，在桌面 App、CLI、IDE 扩展和 Cloud 之间选择。
 sidebar:
@@ -87,13 +92,3 @@ Cloud 适合已连接远程仓库、希望任务离开本机独立运行的场�
 5. 确认你知道如何拒绝或收窄权限请求。
 
 完整对照见 [功能对照](/guide/reference/feature-comparison/)，安全边界见 [权限与沙箱](/guide/permissions-and-sandbox/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE / Cloud
-
-**核验依据：** 已对照 ChatGPT 桌面 App、Codex CLI、IDE 和 Cloud 当前官方说明；本页按工作位置和交互方式给出选择建议，并区分 VS Code 兼容扩展与 Xcode、JetBrains 各自的集成方式。
-
-**最近核验：** 2026-08-26

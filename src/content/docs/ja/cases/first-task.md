@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページはハンドブック内部の低リスク入門練習です。1 ファイルのみの変更、ネットワーク禁止、diff の読み解きと受け入れ基準による項目確認を限定しています。関連する前提章（インストール、練習プロジェクト、検証）との相互参照を完了し、内容は特定の製品バージョンの詳細に依存しません。"
+  checkedAt: "2026-07-26"
 title: 最初のタスク
 description: 明確なプロンプトで小さな変更を完了し、結果の確認方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 最初のタスク
 
 以下の例は **デスクトップ App** を前提としています。CLI/IDE でも同じプロンプトが使えます。
 
@@ -52,10 +59,3 @@ reviewed_at: 2026-08-26
 - [プロンプトの基礎](/ja/prompts/basics/)
 - [検証](/ja/guide/verification/)
 - [ここから始める](/ja/guide/start-here/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページはハンドブック内部の低リスク入門練習です。1 ファイルのみの変更、ネットワーク禁止、diff の読み解きと受け入れ基準による項目確認を限定しています。関連する前提章（インストール、練習プロジェクト、検証）との相互参照を完了し、内容は特定の製品バージョンの詳細に依存しません。

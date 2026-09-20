@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de automatización; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de automatización
 description: Tareas repetidas y flujos reutilizables.
 locale: es
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de automatización
 
 El error habitual en automatización es pensar solo en «¿puede correr solo?» y no en:
 
@@ -61,10 +65,3 @@ El valor de esta plantilla es que pueda correr de forma segura y duradera.
 
 - [Prompts para tareas largas](/es/prompts/long-running-tasks/)
 - [Caso: automatizar un informe diario](/es/cases/automate-a-daily-report/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de automatización; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

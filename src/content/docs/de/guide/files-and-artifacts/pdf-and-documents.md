@@ -3,7 +3,7 @@ title: PDF und Dokumente
 description: "Umfang, Werkzeuge und Abnahme, wenn Codex PDF-Dokumente liest, zusammenfasst oder erzeugt."
 locale: de
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: 工作树
 description: 用 Git worktree 隔离并行聊天，并安全回到本地工作区。
 sidebar:
@@ -54,11 +58,3 @@ git diff --stat
 
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [长任务与并行聊天](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**状态：** verified
-
-**适用产品：** App
-
-**最近核验：** 2026-08-26

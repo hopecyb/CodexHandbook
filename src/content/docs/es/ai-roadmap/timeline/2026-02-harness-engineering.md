@@ -1,48 +1,39 @@
 ---
-title: "Harness Engineering (ingeniería del arnés de ejecución)"
-date: 2026-02-11
-year: 2026
-summary: "Harness Engineering diseña el sistema que rodea al modelo: herramientas, memoria, errores, evaluación, permisos y logs."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [harness, harness-engineering, agent, quality, llmops]
-authored_by: ai-assisted
+title: "Harness Engineering (ingeniería del entorno de ejecución)"
+description: "Esta página se centra en el entorno de ejecución que rodea al modelo: conocimiento del proyecto accesible, herramientas, pruebas, comentarios, estado y recuperación de errores. Además de la capacidad del modelo, el entorno influye en si una tarea puede completarse."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Los eventos y las descripciones de proyectos siguientes se comprobaron con fuentes primarias. Los consejos de aprendizaje son criterios del autor; verificar las fuentes no equivale a haber probado el producto."
+  evidence:
+    - label: "Artículo sobre harness engineering"
+      href: "https://openai.com/index/harness-engineering/"
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: c47e003
+source_revision: 268e611
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Evento verificable y alcance
 
-# Harness Engineering (ingeniería del arnés de ejecución)
+**Fecha: 2026-02-11 · Tipo: artículo de ingeniería.** OpenAI publicó *Harness engineering: leveraging Codex in an agent-first world*, sobre la experiencia de un equipo al construir un entorno y ciclos de comentarios para agentes. La fecha corresponde al artículo; no significa que esos métodos de ingeniería aparecieran por primera vez entonces.
 
-- Fechas clave:
-  - Application-engineering inflection: 2026-02-01
-- Referencias oficiales:
-  - https://platform.openai.com/docs/guides/evals
-  - https://platform.openai.com/docs/guides/tools
-- Nota: Esta entrada registra el punto de adopción y el significado actual de este concepto en la ingeniería de aplicaciones de IA.
+Fuente: [artículo sobre harness engineering](https://openai.com/index/harness-engineering/). Comprobado el 2026-09-18; la fecha de publicación de la fuente y la fecha de comprobación de esta página tienen significados distintos.
 
-## Qué Es
+## Qué problema resuelve
 
-Harness Engineering diseña el sistema que rodea al modelo: herramientas, memoria, errores, evaluación, permisos y logs.
+Esta página se centra en el entorno de ejecución que rodea al modelo: conocimiento del proyecto accesible, herramientas, pruebas, comentarios, estado y recuperación de errores. Además de la capacidad del modelo, el entorno influye en si una tarea puede completarse.
 
-## De Qué Paso a Qué Paso Movió la Ingeniería de Aplicaciones de IA
+## Consejos para aprender y límites de aplicación
 
-Movió la ingeniería desde optimizar prompts aislados hacia optimizar un entorno de ejecución completo.
+Lo siguiente es un criterio didáctico de este sitio, no una medición de adopción en el sector ni de eficacia:
 
-## En Qué Etapa Está Ahora
+Primero establece comprobaciones capaces de detectar errores y después amplía el alcance de la ejecución automática. Superar las pruebas solo respalda los comportamientos que cubren; no garantiza que todos los requisitos sean correctos ni que se hayan descartado todos los fallos. La experiencia del equipo y sus estimaciones de eficiencia en el artículo no se pueden extrapolar directamente a este sitio.
 
-Actualmente lo marco como `emerging`.
+## Ejercicio práctico
 
-Es emergente pero necesario para agentes fiables en producción.
+[Método de evaluación de flujos de trabajo y conjunto de muestras](/es/guide/quality/workflow-evaluation/): elige una muestra y registra por separado el desencadenante, los límites, el formato, la calidad y el tiempo empleado, adjuntando pruebas de la salida. Deja marcadas como no ejecutadas las dimensiones que no hayas probado.
 
-## Qué Podría Reemplazar
-
-Reemplaza intentar arreglar cada fallo solo con más prompt.
-
-## Qué Podría Reemplazarlo
-
-Se fusionará con runtimes de agentes, motores de workflow y sistemas de evaluación.
+[Volver a la hoja de ruta y sus criterios de fechas](/es/ai-roadmap/)

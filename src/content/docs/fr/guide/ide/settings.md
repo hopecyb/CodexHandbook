@@ -3,7 +3,7 @@ title: Paramètres de l'intégration IDE
 description: Distinguer la configuration partagée de l'Agent des paramètres de comportement des éditeurs de la famille VS Code.
 locale: fr
 source_locale: zh-CN
-source_revision: d4a3506
+source_revision: 6f28910
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

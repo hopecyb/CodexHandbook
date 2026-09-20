@@ -3,7 +3,7 @@ title: Tự động hóa nhóm
 description: Lối vào case tự động hóa tác vụ lặp lại trong nhóm — trọng tâm điều kiện kích hoạt, thông báo, phê duyệt và điều kiện dừng.
 locale: vi
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

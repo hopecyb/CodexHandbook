@@ -3,7 +3,7 @@ title: Traspaso y reanudación
 description: Continuar trabajo incompleto entre sesiones.
 locale: es
 source_locale: zh-CN
-source_revision: b92008e
+source_revision: f4cbe6a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

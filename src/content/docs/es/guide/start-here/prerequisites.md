@@ -3,7 +3,7 @@ title: Qué necesitas antes de empezar
 description: Cuenta, dispositivo, proyecto de práctica y línea base de seguridad.
 locale: es
 source_locale: zh-CN
-source_revision: c8a032b
+source_revision: 5fbedb8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

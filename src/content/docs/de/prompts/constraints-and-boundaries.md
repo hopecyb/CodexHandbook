@@ -3,7 +3,7 @@ title: Constraints definieren
 description: Änderbaren Scope, Stil und Verbote eingrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 617fa41
+source_revision: 0ca4700
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

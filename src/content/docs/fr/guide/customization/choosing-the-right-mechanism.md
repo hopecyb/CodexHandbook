@@ -3,7 +3,7 @@ title: "Choisir le bon mécanisme"
 description: Cadre de décision pour où placer les prompts temporaires, AGENTS.md, la mémoire, les Skills et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

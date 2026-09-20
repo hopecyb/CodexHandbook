@@ -3,7 +3,7 @@ title: Trabajo impulsado por tests
 description: Define o completa primero tests que fallen y deja que impulsen la implementación — para que los cambios de Codex se puedan aceptar de forma objetiva.
 locale: es
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

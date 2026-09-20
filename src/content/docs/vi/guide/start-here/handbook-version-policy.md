@@ -3,22 +3,21 @@ title: Chính sách phiên bản cẩm nang
 description: Giải thích trạng thái nội dung, ngày kiểm chứng và cách cập nhật liên tục.
 locale: vi
 source_locale: zh-CN
-source_revision: 3f4e05e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: a608dc3
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 8
 ---
 
 ## Cập nhật liên tục
 
-Cẩm nang này không gắn với một số phiên bản Codex duy nhất để đóng băng lâu dài. Sản phẩm sẽ thay đổi, nên các trang dùng trạng thái và ngày kiểm chứng để đánh dấu mức độ tin cậy hiện tại.
+Cẩm nang này không cố định lâu dài ở một phiên bản Codex duy nhất. Sản phẩm thay đổi, nên mỗi trang dùng trạng thái, ngày kiểm chứng và bằng chứng cụ thể để cho biết phạm vi đã kiểm tra. Chỉ riêng ngày tháng không phải điểm đánh giá độ tin cậy.
 
 ## Nội dung
 
 - Vì sao cẩm nang này không thể giả định mãi không đổi
-- Cách đọc trạng thái và ngày kiểm chứng ở cuối trang
+- Cách đọc trạng thái và ngày kiểm chứng ở đầu trang
 - Khi xung đột với tài liệu chính thức thì tin ai
 
 ## Trạng thái trang
@@ -41,9 +40,11 @@ Cẩm nang này không gắn với một số phiên bản Codex duy nhất đ�
 - `outdated`: trước đây có thể đúng, nhưng giờ cần cảnh giác lỗi thời
 - `archived`: giữ để tham khảo, không coi là nội dung dòng chính hiện tại
 
-## Ba dòng cuối trang
+## Hồ sơ kiểm chứng và cập nhật nội dung
 
-Ở giai đoạn MVP, mỗi trang ghi cuối trang: **Trạng thái / Sản phẩm áp dụng / Kiểm chứng gần nhất**. Nội dung dễ lỗi thời (cài đặt, tài khoản, quyền, model) nên kèm liên kết chính thức.
+Đầu mỗi trang hiển thị riêng trạng thái biên tập, phương pháp kiểm chứng, ngày kiểm chứng và bằng chứng áp dụng. `editorial` là rà soát biên tập, `source-checked` là đối chiếu nguồn, còn `run-tested` là chạy thử ví dụ trong môi trường đã ghi. Không phương pháp nào thay thế phương pháp nào. Ghi chú lịch sử được giữ riêng và không tự động trở thành bằng chứng chạy thử hiện tại.
+
+[Cập nhật và đính chính nội dung](/vi/guide/updates/) giải thích các thay đổi cụ thể và tác động của chúng. Ở cuối các trang có nội dung tiếng Trung, người đọc có thể mở bản nháp đính chính trên GitHub kèm thông tin trang hiện tại. Cần kiểm tra và xóa dữ liệu nhạy cảm trước khi gửi.
 
 ## Cơ sở chính thức
 
@@ -75,15 +76,8 @@ Có thể phân như sau:
 
 Nếu lo một trang đã lỗi thời, xem ba việc này:
 
-1. Trạng thái cuối trang là `review`, `verified` hay `outdated`
+1. Trạng thái biên tập ở đầu trang là `review`, `verified` hay `outdated`
 2. Ngày kiểm chứng gần nhất cách hiện tại xa không
 3. Đang nói khái niệm, hay đang nói cài đặt, cấu hình, quyền — những thứ dễ đổi
 
 Phàm liên quan hành vi, tham số và quy tắc mới nhất, cuối cùng đều phải lấy tài liệu chính thức hiện hành làm chuẩn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Đã đối chiếu với hệ thống 6 trạng thái hiện dùng của cẩm nang, quy tắc ghi chú chân trang và nguyên tắc ưu tiên tài liệu chính thức; trang này giải thích chính sách phiên bản nội bộ và cách đọc, không phụ thuộc tham số phiên bản sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,57 +1,48 @@
 ---
-title: Thông báo
-description: Theo dõi nhắc hoàn thành tác vụ dài và cần phê duyệt.
+title: Thông báo và màn hình Activity
+description: Cấu hình nhắc khi tác vụ hoàn tất, khi cần cấp quyền và khi chờ câu trả lời.
 locale: vi
 source_locale: zh-CN
-source_revision: 0869db2
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 4a1c672
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
 ---
 
-Notifications tell you when a task needs attention. They do not replace review. The desktop App can notify you when a turn completes and can separately control alerts for permission requests and questions.
+Thông báo cho biết khi nào bạn cần quay lại xử lý tác vụ; nó không thay bạn rà soát kết quả. Ứng dụng máy tính cho phép đặt thông báo khi một lượt làm việc kết thúc và điều khiển riêng thông báo yêu cầu quyền hoặc câu hỏi.
 
-## Recommended configuration
+## Cấu hình đề xuất
 
-Open **Settings → Notifications**:
+Mở **Settings → Notifications**:
 
-| Event | Recommendation | Reason |
+| Sự kiện | Đề xuất | Lý do |
 |---|---|---|
-| Turn completion | Notify when running in the background | You do not need to watch a long task continuously |
-| Permission | Enable | An unanswered approval request pauses the task |
-| Question | Enable | Codex needs your response when key context is missing |
+| Turn completion | Báo khi chạy nền | Không cần liên tục theo dõi tác vụ dài |
+| Permission | Bật | Tác vụ sẽ dừng nếu yêu cầu phê duyệt chưa được xử lý |
+| Question | Bật | Bạn cần trả lời khi Codex thiếu ngữ cảnh quan trọng |
 
-The operating system must also allow the ChatGPT desktop App to send notifications. Enabling them inside the App is not enough if the OS denies permission.
+Hệ điều hành cũng phải cho phép ứng dụng ChatGPT trên máy tính gửi thông báo. Nếu hệ thống chặn, bạn vẫn không nhận được thông báo dù đã bật trong ứng dụng.
 
-## Manage multiple chats in Activity
+## Dùng Activity để xử lý nhiều cuộc trò chuyện
 
-When Activity is available, select the bell in the sidebar to view chats that are unread, running, or awaiting a response. The shortcut is:
+Khi Activity khả dụng, chọn biểu tượng chuông ở thanh bên để xem cuộc trò chuyện chưa đọc, đang chạy hoặc đang chờ trả lời. Phím tắt là:
 
 - macOS: `Cmd + Option + U`
 - Windows: `Ctrl + Alt + U`
 
-Filters depend on the current interface and may include Work, Chat, Pinned, and Scheduled. A useful processing order is: awaiting permission or input → failed → completed and awaiting review → still running.
+Bộ lọc thay đổi theo giao diện hiện tại và có thể gồm Work, Chat, Pinned và Scheduled. Thứ tự xử lý nên là: chờ quyền hoặc thông tin → thất bại → đã hoàn tất nhưng chưa rà soát → vẫn đang chạy.
 
-## What to do after a notification
+## Làm gì sau khi nhận thông báo
 
-- **Completed:** open the diff and verification output; a notification is not an acceptance result.
-- **Permission request:** confirm the command, target resource, impact, and reversibility.
-- **Awaiting an answer:** add only the context needed; do not expand the task incidentally.
-- **Failed:** find the first meaningful error, then decide whether to retry or adjust the constraints.
+- **Hoàn tất:** mở diff và đầu ra kiểm chứng; đừng coi thông báo là kết luận nghiệm thu.
+- **Yêu cầu quyền:** kiểm tra lệnh, tài nguyên đích, phạm vi ảnh hưởng và khả năng hoàn tác.
+- **Chờ câu trả lời:** chỉ bổ sung ngữ cảnh cần thiết, không tiện tay mở rộng tác vụ.
+- **Thất bại:** tìm lỗi có ý nghĩa đầu tiên rồi mới quyết định thử lại hay chỉnh giới hạn.
 
-CLI and IDE notifications work differently. The IDE has no separate notification settings. The CLI can use advanced configuration for TUI or external-program completion notifications. Desktop settings are not a global switch.
+Cơ chế thông báo của CLI và IDE khác nhau: IDE không có mục cài đặt thông báo riêng; CLI có thể dùng cấu hình nâng cao để quyết định thông báo hoàn tất qua TUI hoặc chương trình ngoài. Đừng coi cài đặt của ứng dụng máy tính là công tắc chung cho mọi môi trường.
 
-## Official sources
+## Nguồn chính thức
 
-- [Notifications](https://learn.chatgpt.com/docs/notifications)
-- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Thông báo](https://learn.chatgpt.com/docs/notifications)
+- [Cài đặt ứng dụng máy tính](https://learn.chatgpt.com/docs/app/settings)

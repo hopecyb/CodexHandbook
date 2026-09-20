@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle pour l'automatisation ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle d'automatisation
 description: Tâches répétées et flux réutilisables.
 locale: fr
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle d'automatisation
 
 Piège fréquent : penser « est-ce que ça peut tourner seul » sans demander :
 
@@ -61,10 +65,3 @@ La valeur du modèle : tenir dans le temps en sécurité.
 
 - [Prompts pour tâches longues](/fr/prompts/long-running-tasks/)
 - [Cas : automatiser un rapport quotidien](/fr/cases/automate-a-daily-report/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle pour l'automatisation ; liens et structure revus ; pas de faits volatils produit.

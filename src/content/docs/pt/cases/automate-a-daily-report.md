@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Os use cases atuais do Codex em OpenAI Developers ainda incluem “Automate bug triage” e “Turn feedback into actions”; esta página define o relatório diário como «Markdown de formato fixo + código de saída claro + script ou Skill reutilizável» — um padrão estável de fluxo automatizado, sem depender de uma integração específica."
+  checkedAt: "2026-07-26"
 title: Automatizar um relatório diário
 description: Transforme trabalho de resumo repetitivo num script ou Skill reutilizável.
 locale: pt
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Automatizar um relatório diário
 
 ## Metadados
 
@@ -42,9 +50,3 @@ Restrições: git só de leitura; não fazer push; fornecer scripts/generate-dai
 
 - [Exemplo de Skill de automatização](/pt/skills/examples/automation-skill/)
 - [Tarefas agendadas](/pt/skills/automations/scheduled-tasks/)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Automate bug triage” e “Turn feedback into actions”; esta página define o relatório diário como «Markdown de formato fixo + código de saída claro + script ou Skill reutilizável» — um padrão estável de fluxo automatizado, sem depender de uma integração específica.  
-**Última verificação:** 2026-07-26

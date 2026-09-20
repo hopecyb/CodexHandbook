@@ -1,15 +1,16 @@
 ---
 title: Guide Codex
+prev: false
+next:
+  link: /fr/guide/start-here/
+  label: Commencer ici
 description: Comprenez Codex, choisissez un client, réalisez votre première Tâche et apprenez les Permissions, le Contexte et la Vérification.
 locale: fr
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Guide Codex
 
 Cette section vous aide à comprendre ce qu'est Codex, à quoi il sert et comment passer de la première utilisation à un flux de travail stable.
 
@@ -23,6 +24,12 @@ Vous n'avez pas besoin de connaître tous les termes, produits et flux de travai
 - Quel client choisir en premier
 - Quoi apprendre après votre première Tâche
 - Où revenir pour les questions de Permission, Contexte et Vérification
+
+## Ressources à emporter
+
+- [Liste de sécurité pour débuter](/fr/guide/getting-started/beginner-safety-checklist/)
+- [Méthode de choix du client](/fr/guide/choose-your-client/)
+- [Vérification des résultats et définition du travail terminé](/fr/guide/verification/)
 
 ## Ordre recommandé
 

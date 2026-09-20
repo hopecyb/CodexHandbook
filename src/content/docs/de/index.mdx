@@ -1,21 +1,20 @@
 ---
-title: Codex Handbuch
+title: Codex / AI Agent Praxishandbuch
 head:
   - tag: title
-    content: Codex Handbuch
-description: Codex Handbook macht Produktgrundlagen, Prompting, Skills und echte Fälle zu wiederverwendbaren Methoden — Aufgaben beschreiben, Ausführung steuern und Ergebnisse prüfen.
+    content: Codex / AI Agent Praxishandbuch
+description: Ein Codex-zentriertes KI-Agenten-Handbuch, das Einzelnen, Kreativen, Entwicklern und Teams hilft, erfolgreiche Zusammenarbeit in wiederverwendbare, überprüfbare und übertragbare Verfahren zu verwandeln.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: de
 source_locale: zh-CN
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Ideen mit Codex <br /> in Ergebnisse verwandeln
-  tagline: Von Produktgrundlagen und klaren Prompts zu wiederverwendbaren Skills und echten Fall-Reviews — mach aus jeder Aufgabe eine Methode, die du ausführen, prüfen und übergeben kannst.
+  title: Mit Codex <br /> erfolgreiche Zusammenarbeit wiederverwendbar machen
+  tagline: Von der klaren Aufgabe über Ausführung, Prüfung und Auswertung bis zur Übergabe hilft dieses Handbuch, Ideen zuverlässig in Ergebnisse umzusetzen.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,90 +36,90 @@ hero:
         </div>
       </div>
   actions:
-    - text: Hier starten
+    - text: Einen überprüfbaren Wochenbericht erstellen
       icon: right-arrow
+      link: /de/cases/analyze-a-spreadsheet/
+    - text: Hier beginnen
+      variant: secondary
       link: /de/guide/start-here/
-    - text: Auf GitHub ansehen
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="Positionierung des Handbuchs">
-	<p>Codex ist mehr als ein Tool, das Code ändert. Es hilft dir, Unterlagen zu verstehen, Inhalte zu erzeugen, Prototypen zu bauen, Dateien zu bearbeiten, Änderungen zu prüfen, wiederkehrende Arbeit zu automatisieren und in der Teamzusammenarbeit als Ausführungspartner zu dienen.</p>
-	<p>Dieses Handbuch ist in vier Module gegliedert — Produktleitfaden, Prompting, Skills und Praxis-Fälle — damit Leserinnen und Leser auf jedem Niveau den nächsten Schritt finden.</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>Vier Module</p>
-		<h2 id="modules-heading">Nach Modul starten</h2>
+		<p>Eine Aufgabe wählen und ein Ergebnis mitnehmen</p>
+		<h2 id="tasks-heading">Was möchten Sie heute abschließen?</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/de/guide/">
-			<strong>Codex Leitfaden</strong>
-			<span>Clients installieren, Berechtigungen verstehen, die erste Aufgabe abschließen.</span>
+	<div class="path-grid">
+		<a class="path-card" href="/de/cases/analyze-a-spreadsheet/">
+			<strong>Einen wöchentlichen Verkaufsbericht erstellen</strong>
+			<span>Vollständige Materialien · Referenzskript ausgeführt und geprüft. Mit 46 synthetischen Datenzeilen Rückerstattungen, Dubletten und Periodenvergleiche üben; Bericht und Abgleichprotokoll abgeben.</span>
 		</a>
-		<a class="module-card" href="/de/prompts/">
-			<strong>Prompts</strong>
-			<span>Ziele, Kontext, Grenzen und Akzeptanzkriterien klar machen — mit kopierbaren Vorlagen.</span>
+		<a class="path-card" href="/de/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>Einen Bug beheben und Tests bestehen</strong>
+			<span>Vollständige Übung · Mit historischem Prüfprotokoll. Von einem fehlgeschlagenen Test zur kleinsten Korrektur, Regressionsergebnissen und Prüfnote.</span>
 		</a>
-		<a class="module-card" href="/de/skills/">
-			<strong>Skills</strong>
-			<span>Wiederholbare Methoden paketieren; mit Plugins, MCP und Hooks erweitern.</span>
-		</a>
-		<a class="module-card" href="/de/cases/">
-			<strong>Fälle</strong>
-			<span>Aus echten Aufgaben lernen — Bugfixes, Schreiben, Automatisierung und mehr.</span>
+		<a class="path-card" href="/de/cases/write-an-article/">
+			<strong>Einen Artikel schreiben</strong>
+			<span>Vollständige Materialien · Quellen vom Autor geprüft. An drei synthetischen Quellen Faktenbelege, widersprüchliche Versionen und Überarbeitung üben; Artikel und Faktentabelle abgeben.</span>
 		</a>
 	</div>
+	<p>Referenz-Wochenbericht: Nettobetrag <strong>¥4,644.75</strong>, mit Erläuterung von Rückerstattungen und Auffälligkeiten. <a href="/downloads/sales-weekly-report/summary.md">Referenzbericht ansehen</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Alle Materialien herunterladen</a>. Die Zahlen stammen aus synthetischen Übungsdaten. Geschätzte Dauer 30–45 Minuten; mit Lesern wurde sie nicht gemessen.</p>
+	<p><a href="/de/cases/">Fälle und Materialien nach Aufgabe durchsuchen</a> · <a href="/de/guide/learning-paths/">Nach Rolle lernen</a> · <a href="/de/guide/reference/">Nachschlagewerk öffnen</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>Pfad wählen</p>
-		<h2 id="paths-heading">Nach deinem Ziel starten</h2>
+		<p>Wählen Sie Ihren Lernpfad</p>
+		<h2 id="paths-heading">Starten Sie mit Ihrem Ziel</h2>
 	</div>
 	<div class="path-grid">
 		<a class="path-card" href="/de/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>Einsteiger</strong>
-			<span>Codex kennenlernen, die erste Aufgabe abschließen und Ergebnisse prüfen sowie rückgängig machen.</span>
+			<span>Mit einem herunterladbaren Materialpaket eine Ankündigung erstellen, Fehler prüfen und eine Kopie wiederherstellen. Kein Programmieren nötig; jeder Schritt hat Abnahmekriterien.</span>
 		</a>
 		<a class="path-card" href="/de/guide/learning-paths/creator/">
-			<strong>Creator</strong>
-			<span>Startleitfäden und Vorlagen für Recherche, Schreiben, Bilder, Präsentationen und Veröffentlichung. (Weitere Schritte folgen.)</span>
+			<strong>Kreative</strong>
+			<span>Aus einem Quellenpaket Faktentabelle, Artikel und editierbare Präsentation mit acht Folien erstellen, dann eine wiederverwendbare Aufgabenbeschreibung sichern. Downloads und schrittweise Prüfungen inklusive.</span>
 		</a>
 		<a class="path-card" href="/de/guide/learning-paths/developer/">
 			<strong>Entwickler</strong>
-			<span>Codebasis verstehen, Features umsetzen, Tests laufen lassen, Änderungen prüfen und komplexe Aufgaben steuern. (Weitere Schritte folgen.)</span>
+			<span>Einen Warenkorb-Bug verstehen, rote und grüne Tests sichern, die kleinste Korrektur prüfen und eine Übergabe schreiben. Drei ausfüllbare Vorlagen inklusive.</span>
 		</a>
 		<a class="path-card" href="/de/guide/learning-paths/team/">
 			<strong>Team</strong>
-			<span>Geteilte Anweisungen, Berechtigungsgrenzen, Qualitätsstandards und Team-Automatisierung. (Weitere Schritte folgen.)</span>
+			<span>In zehn Arbeitstagen einen kleinen Pilot durchführen, Stichproben prüfen und Rücknahme üben, bevor über eine Ausweitung entschieden wird. Sechs ausfüllbare Vorlagen inklusive.</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>Fähigkeitenkarte</p>
-		<h2 id="map-heading">Das wirst du Schritt für Schritt beherrschen</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>Problem direkt nachschlagen</p><h2 id="lookup-heading">Nächsten Schritt finden</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/de/guide/reference/troubleshooting/"><strong>Installation, Anmeldung oder Ausführung fehlgeschlagen</strong><span>Nach Symptom zum Diagnoseeinstieg oder zu einer Wiederherstellungsübung mit Protokollen.</span></a>
+		<a class="path-card" href="/de/guide/reference/"><strong>Befehle, Berechtigungen und Begriffe prüfen</strong><span>Im Referenzverzeichnis Geltungsbereich und Quellen nachlesen.</span></a>
+		<a class="path-card" href="/de/guide/verification/"><strong>Prüfen, ob ein Ergebnis fertig ist</strong><span>Fakten, Dateien und Tests belegen und offene Punkte festhalten.</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> Aufgaben-Prompts mit klaren Zielen, expliziten Grenzen und prüfbaren Ergebnissen schreiben</li>
-		<li><span>02</span> Dateien, Kontext, Terminal, Browser und externe Materialien verwalten</li>
-		<li><span>03</span> Codex mit Skills, Plugins, MCP und Hooks erweitern</li>
-		<li><span>04</span> Lange Aufgaben, Multi-Agent-Zusammenarbeit, Retrospektiven und Übergaben organisieren</li>
-		<li><span>05</span> Sicherheit, Überprüfung und Governance in persönlichen und Team-Kontexten aufbauen</li>
-	</ul>
 </section>
 
-<AboutHandbook title="Offene Zusammenarbeit">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>Wiederverwendbare Hilfsmittel mitnehmen</p>
+		<h2 id="assets-heading">Nach dem Lesen direkt loslegen</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/de/prompts/templates/"><strong>Vorlagen für Aufgabenprompts</strong><span>Nach Aufgabentyp wiederverwenden: Verstehen, Recherche, Erstellen, Ändern, Diagnose und Automatisierung.</span></a>
+		<a class="path-card" href="/de/skills/examples/"><strong>Skill-Beispiele</strong><span>Mit lesbaren Beispielen beginnen und Eingaben, Ausgaben, Grenzen und Tests prüfen.</span></a>
+		<a class="path-card" href="/de/cases/use-cases/case-study-template/"><strong>Vorlage für Fallauswertung</strong><span>Ziele, Ausführung, menschliche Kontrolle, Verifikation, Fehlerbehandlung und nächste Verbesserung dokumentieren.</span></a>
+		<a class="path-card" href="/de/guide/verification/"><strong>Abnahmeliste</strong><span>Aus «sieht fertig aus» ein nachprüfbares, rücknehmbares und übertragbares Ergebnis machen.</span></a>
+	</div>
+</section>
 
-Das Handbuch wird auf vereinfachtem Chinesisch als Quellsprache geschrieben. Es folgen Versionen in traditionellem Chinesisch, Englisch, Französisch, Japanisch, Koreanisch, Spanisch, Deutsch und weiteren Sprachen. Inhalte sind mit Status, Prüfdatum und geltenden Produkten gekennzeichnet — damit klar ist, was du direkt nachmachen kannst und was eine zweite Prüfung verdient.
+<AboutHandbook title="Quellen, Aktualisierungen und Mitwirkung">
 
-[Lernpfade erkunden](/de/guide/learning-paths/)
+Dieses Handbuch wird von Open-Source-Mitwirkenden gepflegt; Ausgangssprache ist vereinfachtes Chinesisch. Produktbeschreibungen, vom Autor entworfene Lernmaterialien und tatsächliche Laufprotokolle werden getrennt gekennzeichnet. Ein erfolgreiches Skript beweist weder Modellleistung noch den Abschluss durch Lernende. Der Nachweis auf jeder Seite nennt den Prüfungsumfang.
+
+[Aktualisierungen](/de/guide/updates/) · [Versions- und Prüfrichtlinie](/de/guide/start-here/handbook-version-policy/) · [Mitwirken](/de/guide/contributing/)
 
 </AboutHandbook>

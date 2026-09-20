@@ -3,7 +3,7 @@ title: Scripts y pipelines
 description: Orquestar codex exec en shell, Makefile y GitHub Actions — repetible y auditable.
 locale: es
 source_locale: zh-CN
-source_revision: ce1e940
+source_revision: 07aeb4f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

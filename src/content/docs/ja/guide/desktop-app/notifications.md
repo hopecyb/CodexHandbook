@@ -3,7 +3,7 @@ title: 通知と Activity ビュー
 description: タスク完了、権限リクエスト、回答待ちの通知を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 0869db2
+source_revision: 4a1c672
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

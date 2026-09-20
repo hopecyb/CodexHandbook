@@ -3,7 +3,7 @@ title: Dokumentationssite mit Prüfung refactoren
 description: "Fall: In einem Astro/Starlight-Docs-Projekt Links und Kapitel batchweise aktualisieren — kleine Diffs, Build-Überprüfung."
 locale: de
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

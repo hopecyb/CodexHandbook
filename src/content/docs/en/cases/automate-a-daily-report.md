@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers' current Codex use cases still include repeatable automation scenarios such as \"Automate bug triage\" and \"Turn feedback into actions\"; this page defines the daily report as \"fixed-format Markdown + clear exit code + reusable script or Skill\"—a stable automation workflow pattern, not dependent on any specific integration."
+  checkedAt: "2026-07-26"
 title: Automate a daily report
 description: Turn repetitive summarization into a reusable script or Skill.
 locale: en
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Automate a daily report
 
 ## Meta information
 
@@ -38,10 +46,3 @@ Constraints: Read-only git; do not push; provide scripts/generate-daily.sh for r
 
 - [Automation Skill example](/en/skills/examples/automation-skill/)
 - [Scheduled tasks](/en/skills/automations/scheduled-tasks/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include repeatable automation scenarios such as "Automate bug triage" and "Turn feedback into actions"; this page defines the daily report as "fixed-format Markdown + clear exit code + reusable script or Skill"—a stable automation workflow pattern, not dependent on any specific integration.

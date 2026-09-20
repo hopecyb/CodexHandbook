@@ -3,7 +3,7 @@ title: "Vue d'ensemble des Skills"
 description: Enseigner des workflows réutilisables à Codex via SKILL.md — écrire une fois, invoquer à la demande.
 locale: fr
 source_locale: zh-CN
-source_revision: 75eaa78
+source_revision: e526d62
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

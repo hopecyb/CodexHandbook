@@ -1,53 +1,48 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web, bureau et mobile ; Codex bureau et CLI ; Plugins non pris en charge dans l’extension IDE"
+  checkedAt: "2026-08-26"
 title: Plugins
-description: Distribution d'extensions en équipe — les Plugins sont une couche de packaging, pas un nouveau type de capacité.
+description: Parcourir, installer et gérer des ensembles réutilisables de Skills, connecteurs, MCP, Hooks et modèles de tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: 33c9fe2
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 8917a59
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-A Plugin is a unit of capability composition and distribution. It may contain Skills, connectors, MCP servers, browser extensions, Hooks, and Scheduled task templates; those components still perform the actual work.
+Un Plugin regroupe et distribue des capacités. Il peut comprendre des Skills, des connecteurs, des serveurs MCP, des extensions de navigateur, des Hooks et des modèles de Scheduled tasks. Ce sont ces composants qui exécutent le travail.
 
-## Who it is for
+## Pour qui ?
 
-- Users installing a ready-made capability bundle from a public directory.
-- Maintainers distributing team workflows, tools, and guardrails as one versioned unit.
-- Administrators reviewing source, external-service permissions, and Plugin Hooks.
+- Les personnes qui souhaitent installer depuis un catalogue public un ensemble de capacités prêtes à l’emploi.
+- Les responsables qui veulent distribuer processus, outils et garde-fous d’équipe comme une unité versionnée.
+- Les administrateurs chargés d’examiner la provenance, les permissions des services externes et les Hooks d’un Plugin.
 
-## Current support surfaces
+## Surfaces actuellement prises en charge
 
-| Surface | Browse/install | Use |
+| Surface | Parcourir et installer | Utiliser |
 |---|---|---|
-| ChatGPT Web and desktop App | Plugins tab | Chat and Work |
-| ChatGPT Mobile | Not a primary management surface | Use Plugins already installed on the account |
-| Codex in the ChatGPT desktop App | Plugins tab | Codex tasks |
-| Codex CLI | `/plugins` browser; start a new session after installation | Codex environment |
-| IDE integration | **Plugins not supported** | Use MCP, Skills, and other IDE-supported capabilities separately |
+| ChatGPT Web et application de bureau | Onglet Plugins | Chat et Work |
+| ChatGPT Mobile | Pas un point d’entrée principal pour la gestion | Utiliser les Plugins déjà installés sur le compte |
+| Codex dans l’application de bureau ChatGPT | Onglet Plugins | Tâches Codex |
+| Codex CLI | Navigateur `/plugins` ; ouvrir une nouvelle session après installation | Environnement Codex |
+| Extension IDE | **Plugins non pris en charge** | Utilisation séparée des capacités prises en charge par l’IDE, comme MCP ou Skill |
 
-## Reading entry points
+## Par où commencer ?
 
-- [Plugins overview](/fr/skills/plugins/plugins-overview/): components, support boundaries, installation verification, and security review
-- [Capability map](/fr/skills/capability-map/): compare Plugins, Skills, MCP, Hooks, and Scheduled tasks
+- [Présentation des Plugins](/fr/skills/plugins/plugins-overview/) : comprendre les composants, la prise en charge, la vérification de l’installation et l’examen de sécurité.
+- [Carte des capacités d’extension](/fr/skills/capability-map/) : comparer Plugin, Skill, MCP, Hook et Scheduled task.
 
-## Before installation
+## Questions à poser avant l’installation
 
-1. Who is the source and maintainer?
-2. Which Skills, connectors, MCP servers, browser capabilities, and Hooks are included?
-3. Which external accounts and scopes does it request?
-4. Were its Hooks reviewed and trusted in `/hooks`?
-5. How will the team disable, upgrade, roll back, and revoke it?
+1. Quelle est la provenance du Plugin et qui le maintient ?
+2. Quels Skills, connecteurs, MCP, capacités de navigateur et Hooks contient-il ?
+3. Faut-il connecter un compte externe et quelles permissions cela donnera-t-il ?
+4. Les Hooks ont-ils été examinés et approuvés dans `/hooks` ?
+5. Comment l’équipe peut-elle le désactiver, le mettre à jour, revenir à une version précédente et retirer les autorisations ?
 
-## Official source
+## Source officielle
 
-- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; Plugins are not supported in the IDE integration
-
-**Last verified:** 2026-08-26
+- [OpenAI : Plugins](https://learn.chatgpt.com/docs/plugins)

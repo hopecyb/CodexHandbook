@@ -3,7 +3,7 @@ title: Éditeurs pris en charge
 description: Distinguer l'extension compatible avec VS Code des intégrations Xcode et JetBrains.
 locale: fr
 source_locale: zh-CN
-source_revision: 1f0b54d
+source_revision: 7b82896
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

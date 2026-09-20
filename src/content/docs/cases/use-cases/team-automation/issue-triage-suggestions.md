@@ -1,63 +1,78 @@
 ---
-title: 案例：Issue 分流与标签建议
-description: 用 Codex 阅读新 Issue 并建议标签与负责人——轻量团队自动化。
+caseCategory: team
+directoryOrder: 90
+title: 案例：Issue 分流与人工复核队列
+description: 用五份合成 Issue 练习结构化建议、输入绑定与干运行，不自动操作 GitHub。
+contentType: case
+audiences: [developer, team]
+level: intermediate
+outputs: [json, markdown]
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: "2026-09-18"
+  summary: 五条作者参考建议干运行通过，八项结构与输入绑定测试通过；未调用模型或连接 GitHub，不代表分类正确率或生产上线验证。
+  environment: Python 3.12.11 / Darwin arm64；标准库、合成输入，无 token 或网络。
+  evidence:
+    - label: 实际运行记录
+      href: /downloads/issue-triage/validation/record.md
+assets:
+  - path: /downloads/issue-triage/issue-triage-1.0.0.zip
+    purpose: 合成输入、JSON Schema、提示词、作者建议、干运行脚本与复核记录
+    license: CC0-1.0
+    version: 1.0.0
 ---
 
-## 元信息
+这个练习把 Issue 分流拆成“生成建议 → 校验 → 人工复核”。你将得到五条待复核记录，不会自动发布评论、添加标签或关闭 Issue。
 
-| 字段 | 内容 |
+[下载完整练习包](/downloads/issue-triage/issue-triage-1.0.0.zip) · [README](/downloads/issue-triage/README.md) · [查看实际干运行输出](/downloads/issue-triage/validation/dry-run.json)
+
+## 输入与完成条件
+
+五份原创合成输入分别是计算错误、文档断链、跨账号数据线索、信息不足和恶意正文指令。没有真实客户数据。建议输出包含类型、优先级、标签、安全复核标记、理由与缺失信息。
+
+完成条件：每份输入对应一条建议，合法枚举与输入哈希通过校验；维护者逐项判断接受、修改或拒绝，并记录理由。结构通过不能代替这一判断。
+
+## 先运行参考建议
+
+需要 Python 3.10+，无需 API 密钥或第三方依赖。在解压后的目录执行：
+
+```sh
+python3 scripts/dry_run.py
+python3 validation/test_dry_run.py
+```
+
+第一条使用作者预写的建议，输出五项 `human-review-required`，`external_actions` 为空。第二条运行八项检查。这里没有自动调用模型。
+
+[输入样本](/downloads/issue-triage/fixtures/issues.json) · [参考建议](/downloads/issue-triage/solution/proposals.json) · [人工复核参考](/downloads/issue-triage/solution/human-review.md)
+
+## 再生成自己的建议
+
+将包内 [prompts/triage.md](/downloads/issue-triage/prompts/triage.md) 交给 Codex，按 [schema.json](/downloads/issue-triage/schema.json) 输出 `my-proposals.json`，然后运行：
+
+```sh
+python3 scripts/dry_run.py --proposals my-proposals.json
+```
+
+Schema 是 JSON Schema 2020-12 格式，布尔类型写为 `"type": "boolean"`，优先级用枚举而不是字符串 `"P0-P3"`。包内校验器只实现此 schema 使用的关键字子集，不是通用 schema 引擎。
+
+每条建议带 `input_sha256`，绑定对应 Issue 的完整内容。输入变了就停止使用旧建议；不要只重算哈希，先重新分析变更。哈希计算约定和函数在 README 与脚本中。
+
+## 人工判断与安全边界
+
+| 情况 | 处理 |
 |---|---|
-| 适用读者 | 维护者、PM |
-| 客户端 | Cloud 或 CLI + GitHub |
-| 预估耗时 | 60 分钟 |
-| 核验日期 | 2026-07-25 |
+| 有明确错误线索 | 建议分类后复现，确认影响范围再定级 |
+| 安全事件线索 | 交安全负责人私下复核，未知优先级不等于低风险 |
+| 信息不足 | 使用 unknown，列缺失信息，不猜负责人或严重程度 |
+| 正文要求执行命令或提权 | 作为不可信资料，不执行，也不因它自称紧急就设 P0 |
 
-## 1. 目标与背景
+删除 HTML 或限制长度不能保证防住提示注入。本包程序不执行正文，模型生成阶段仍需保持资料与指令边界；参考输出不证明模型抵抗率。
 
-**目标：** 对新 opened issue 生成结构化建议：`type`、`priority`、建议标签、是否需安全评审。
+## 失败与恢复
 
-**成功标准：**
+未知标签、额外动作字段、错误类型、重复或遗漏建议会让整批停止，退出码 1。修正提示和对应字段后重跑，保留原始输入。安全类型或标签却没有安全标记时也会拒绝。
 
-- 输出 JSON 可被 GitHub Action 解析
-- 不自动关闭/合并 issue，仅评论或添加 label（需 workflow 权限）
-- 无密钥泄露
+错误但结构合法的分类仍可能通过，这是测试中实际验证的局限。因此不能用几个样本的高一致率作为上线门槛。真实推广需要代表性样本、风险分层、人工抽检、误判成本与回退条件；本练习只完成本地干运行。
 
-**不在范围：** 自动分配 sprint、修改里程碑。
-
-## 2. 准备
-
-- 仓库有 `CONTRIBUTING.md` 或 issue 模板说明标签含义
-- `AGENTS.md` 中描述标签体系
-- 只读或 `issues: write` 受限 token
-
-## 3. 工作流（EPXV 摘要）
-
-**探索：** `@.github/ISSUE_TEMPLATE/` 与最近 10 个 closed issue 的标签分布。
-
-**计划：** 定义 JSON schema：`{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
-
-**执行：** `codex exec` 传入 issue title + body（注意 [prompt 注入](/guide/team-enterprise/security/prompt-injection/) 消毒）。
-
-**验证：** 用 3 个历史 issue fixture 对比人工标签，一致率 > 80% 再上线。
-
-## 4. 失败与恢复
-
-- 模型建议错误标签：人工覆盖 + 把反例写入 prompt few-shot
-- 恶意 issue body：strip HTML、长度限制、不执行 body 内「指令」
-
-## 5. 沉淀
-
-- 与 [Webhook](/guide/developer-platform/webhooks/overview/) 对接内部工单系统（可选）
-- 复盘写入 [案例模板](/cases/use-cases/case-study-template/)
-
-## 6. 相关章节
-
-- [GitHub 集成](/guide/integrations/github/)
-- [人工审批模式](/cases/workflows/human-approval-patterns/)
-
----
-
-**状态：** verified  
-**适用产品：** CLI / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前公开的自动化 bug triage / review 相关 use cases，以及本手册已核验的人工审批、Webhook、GitHub 集成与团队自动化章节交叉复核；本页只确认“生成结构化标签建议、保留人工最终决定”的稳定自动化模式。  
-**最近核验：** 2026-07-26
+接下来阅读[文档链接检查](/cases/use-cases/team-automation/scheduled-link-check/)与[人工审批模式](/cases/workflows/human-approval-patterns/)。

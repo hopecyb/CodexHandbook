@@ -3,7 +3,7 @@ title: Test-driven work
 description: Define or add failing tests first, then drive implementation—objective acceptance for Codex changes.
 locale: en
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明完成定义的作用与写法；概念、示例和清单表达已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 完成定义
 description: 团队与个人共用的完成清单思路。
 sidebar:
@@ -75,10 +80,3 @@ sidebar:
 ```
 
 “完成定义”主要是把“做到什么程度才算做完”讲清楚，免得你和 Codex 的判断不一致。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明完成定义的作用与写法；概念、示例和清单表达已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

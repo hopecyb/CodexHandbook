@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page fournit un modèle de recherche ; liens et structure revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèle de recherche
 description: Enquête et comparaison avec citations.
 locale: fr
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Modèle de recherche
 
 La recherche n'est pas une Q&R simple : vous voulez la réponse **et** d'où elle vient.
 
@@ -47,10 +51,3 @@ Règle clé : chaque conclusion importante doit être **traçable** — pas seul
 
 - [Cas : recherche avec sources](/fr/cases/research-with-sources/)
 - [Vérification](/fr/guide/verification/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page fournit un modèle de recherche ; liens et structure revus ; pas de faits volatils produit.

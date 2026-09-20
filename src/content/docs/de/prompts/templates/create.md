@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Erstellen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Erstellen-Vorlage
 description: Feature, Text oder Artefakt von null umsetzen.
 locale: de
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Erstellen-Vorlage
 
 Bei Aufgaben von null treten oft zwei Probleme auf:
 
@@ -65,10 +69,3 @@ Am riskantesten: starten, bevor „was“ und „für wen“ klar sind.
 
 - [Spezifikationsgetriebenes Arbeiten](/de/cases/workflows/specification-driven-work/)
 - [Fertigstellungsstandard definieren](/de/prompts/define-done/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Erstellen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

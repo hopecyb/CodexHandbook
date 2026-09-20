@@ -1,91 +1,69 @@
 ---
-title: Mẫu phê duyệt của người
-description: Khi nào phê duyệt, từ chối hoặc yêu cầu Codex dừng, và cách viết rõ các quy tắc đó.
+title: "Các cách phê duyệt của con người"
+description: "Phân biệt quyền giao tác vụ với phê duyệt công cụ; chuẩn bị kết quả có thể rà soát trước khi dừng ở một thao tác cụ thể cần được phép."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Đã đối chiếu vai trò riêng của sandbox và phê duyệt. Các cách cộng tác dưới đây là đề xuất của sổ tay, không phải quy tắc hộp thoại thống nhất của mọi ứng dụng khách."
+  evidence:
+    - label: "Hướng dẫn chính thức về sandbox và phê duyệt"
+      href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: vi
 source_locale: zh-CN
-source_revision: 0e37633
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f60dbb5
+translation_status: draft
+translated_at: 2026-09-20
 ---
+Việc phê duyệt phải gắn với thao tác cụ thể và tác động của nó. Quyền giao tác vụ nói người dùng muốn hoàn thành việc gì; phê duyệt công cụ quyết định thao tác nào có thể chạy trong môi trường hiện tại. Ghi tệp, chạy lệnh hoặc truy cập mạng không tự nhiên đòi hỏi phải hỏi lại mỗi lần. Hành vi thực tế do phạm vi được phép, chính sách công cụ và sandbox cùng quyết định. Xem [hướng dẫn chính thức](https://learn.chatgpt.com/docs/agent-approvals-security).
 
-Vai trò của phê duyệt là để người quyết các thao tác không đảo ngược được. Trang này sắp xếp vài cách làm phổ biến.
+## Ba cách cộng tác có thể lựa chọn rõ ràng
 
-## Phân tầng phê duyệt
+| Cách | Có thể tiếp tục làm gì | Khi nào chờ |
+|---|---|---|
+| Phân tích chỉ đọc | Đọc, so sánh, xây dựng phương án | Chưa được người dùng cho phép triển khai thì không sửa |
+| Triển khai trong phạm vi được phép | Sửa phần đã chỉ định, kiểm chứng phù hợp, chuẩn bị sản phẩm có thể rà soát | Thiếu thông tin thiết yếu, phạm vi thay đổi hoặc xuất hiện hành động mới chưa được phép |
+| Phê duyệt riêng bước cuối | Hoàn thành bản nháp, build, xem trước và chuẩn bị khôi phục | Trước khi đăng tải, gửi hoặc thao tác khác đã dành riêng cho phê duyệt |
 
-```text
-Vùng an toàn tự động (đọc, phân tích, kế hoạch)
-    ↓
-Vùng nhắc xác nhận (ghi tệp, chạy lệnh, lên mạng)
-    ↓
-Vùng bắt buộc người (push, xóa dữ liệu, gửi ra ngoài, sửa cấu hình production)
-```
+Đây là thỏa thuận cộng tác, không phải tên chế độ sản phẩm mới. Nếu quyền đã được cấp rõ ràng và còn hiệu lực, đừng xin lại. Nếu chính sách bắt buộc yêu cầu phê duyệt tương tác, hãy tuân theo cơ chế đó.
 
-Hành vi hộp thoại cụ thể khác theo [lối vào sản phẩm](/vi/guide/); nguyên tắc thì giống nhau.
-
-## Mẫu một: Kế hoạch trước, thực thi sau
+## Cách 1: lượt này chỉ đưa phương án
 
 ```text
-Quy tắc: Chưa thấy tôi «phê duyệt kế hoạch» thì không được sửa tệp trong kho.
+Lượt này chỉ đọc: kiểm tra dự án và đề xuất chỉnh sửa. Không sửa mã hoặc commit.
+Nếu bước kiểm tra ghi cache, snapshot hay tệp đầu ra, hãy nói rõ; đừng coi mọi “kiểm thử” là chỉ đọc.
 ```
 
-Phù hợp: chưa quen codebase, liên quan production, diff lớn.
+Phù hợp khi mục tiêu chưa chốt và cần so sánh phương án. Ngay cả tác vụ chỉ đọc cũng phải xem tác dụng phụ thực tế của lệnh. Đừng kết hợp “được chạy kiểm thử” với “không được ghi gì lên đĩa” mà không kiểm tra.
 
-## Mẫu hai: Lệnh whitelist
-
-Trong [AGENTS.md](/vi/guide/customization/agents-md/writing-effective-instructions/) ghi rõ:
-
-```md
-Cho phép không cần hỏi lại: pnpm test, pnpm lint, git status, git diff
-Mỗi lần phải xác nhận: git push, npm publish, database migrate
-```
-
-Khi xung đột với chính sách quản trị, lấy bên **nghiêm hơn**.
-
-## Mẫu ba: Merge hai giai đoạn
-
-1. Codex mở draft PR hoặc nhánh cục bộ
-2. Người + CI + review đạt rồi mới merge
-
-Kịch bản Cloud xem [tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/).
-
-## Mẫu bốn: Thám sát chỉ đọc
+## Cách 2: liên tục hoàn thành việc cục bộ
 
 ```text
-Vòng này chỉ đọc: được đọc tệp, chạy test, curl API cục bộ;
-Cấm ghi đĩa và git commit.
+Bạn được sửa ba tài liệu này và liên kết nội bộ liên quan, rồi chạy các bước kiểm tra build hiện có.
+Hoàn thành liên tục trong phạm vi đó, tự xử lý chi tiết triển khai thông thường và báo cáo.
+Không đăng tải trang hay gửi tin nhắn. Giải thích trước lựa chọn cần thiết hoặc thao tác ngoài phạm vi.
 ```
 
-Dùng cho audit, học dự án lạ, chẩn đoán sự cố production.
+Ở đây đã cho phép sửa và kiểm chứng, nên không cần hỏi lại trước mỗi lần ghi. Một lệnh cụ thể có được phép không vẫn phụ thuộc môi trường thực thi; prompt không thể vượt qua lời từ chối.
 
-## Khi nào từ chối và làm lại
+## Cách 3: phê duyệt thao tác đăng tải cụ thể
 
-| Tín hiệu | Gợi ý |
-|---|---|
-| Kế hoạch lệch mục tiêu | Từ chối thực thi, yêu cầu sửa kế hoạch |
-| Phạm vi thay đổi lan rộng | Dừng, tách tác vụ |
-| Test bị bỏ qua | Từ chối merge, yêu cầu bổ sung kiểm chứng |
-| Không giải thích được một lệnh | Từ chối, yêu cầu giải thích |
+Trước tiên hoàn thành phiên bản có thể rà soát, rồi cung cấp:
 
-## Quan hệ với Automations
+- Phiên bản hoặc sản phẩm chính xác sẽ đăng và kết quả kiểm chứng.
+- Môi trường đích, người nhận hoặc đối tượng bị ảnh hưởng.
+- Tác động bên ngoài dự kiến và cách khôi phục cần thiết.
+- Quyền hoặc điều kiện hiện còn thiếu.
 
-Tác vụ không người trông cũng phải giữ điểm xác nhận của người khi thiết kế; xem [tác vụ theo lịch và nền](/vi/skills/automations/scheduled-tasks/).
+Cho phép “đăng phiên bản này lên trang thử nghiệm” không đồng nghĩa cho phép mọi phiên bản sau lên trang production. Ngược lại, nếu chính thao tác đó đã được duyệt rõ ràng, đừng vì mẫu chung mà yêu cầu xác nhận lặp lại.
 
-## Lỗi thường gặp
+## Sau khi bị từ chối
 
-- Lâu dài tick «luôn cho phép» rồi quên rủi ro
-- Phê duyệt hình thức, không đọc diff
-- Dùng miệng «đừng lung tung» thay cho mẫu rõ ràng
+Giữ nguyên thông tin từ chối và phân biệt thiếu quyền, chính sách cấm, lỗi môi trường. Nếu có thể thu hẹp việc làm thành cách vẫn hợp lệ cho tác vụ, hãy tiếp tục. Đừng đổi công cụ, cách viết lệnh hay prompt để vượt cùng một hạn chế. Nếu thật sự cần người dùng hành động, nêu thao tác bị chặn, lý do và bước tiếp theo có thể chọn.
 
-## Checklist nghiệm thu
+## Người rà soát kiểm tra gì
 
-- [ ] Trước khi bắt đầu tác vụ đã tuyên bố dùng mẫu phê duyệt nào
-- [ ] Thao tác rủi ro cao có người thứ hai review hoặc CI chặn
-- [ ] Nhóm có chính sách thống nhất cho lệnh như `git push`
+Xem phạm vi và kết quả có khớp, kiểm chứng có thật sự chạy, tác động bên ngoài đã được hiểu chưa. Có kế hoạch không đồng nghĩa tự động phê duyệt; “không có phát hiện” cũng không bảo đảm rủi ro bằng không.
 
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo hướng dẫn mô hình chính thức hiện tại về autonomy / approval boundaries trên OpenAI Developers, cùng các chương phê duyệt, quy tắc lệnh, PR và tự động hóa đã kiểm chứng của sổ tay; trang này chỉ xác nhận nguyên tắc cộng tác ổn định “thao tác nào được tự tiếp tục, thao tác nào phải dừng để người duyệt”.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Cách làm xem [phân loại tác vụ](/vi/prompts/ask-for-a-plan/); xung đột chỉ dẫn xem [ưu tiên ngữ cảnh](/vi/guide/context/context-priority/); quy trình không giám sát còn cần [cơ chế dừng, thất bại và thông báo](/vi/skills/automations/scheduled-tasks/).

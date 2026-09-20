@@ -3,7 +3,7 @@ title: 파일·도구·명령
 description: Codex가 파일을 읽고 쓰고, 명령을 실행하고, 도구를 쓰는 방식을 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 8c0e875
+source_revision: 9d65338
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

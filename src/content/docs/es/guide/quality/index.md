@@ -1,16 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe la estructura y el orden de lectura de la sección de calidad y verificación. Se revisaron los enlaces internos y los conceptos; el texto no depende de detalles cambiantes del producto, como versiones, precios o interfaz."
+  checkedAt: "2026-07-26"
 title: Calidad y verificación
 description: Revisión, tests y definición de hecho.
 sidebar:
   order: 21
 locale: es
 source_locale: zh-CN
-source_revision: 967fdd6
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 401b6a6
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
 Al usar Codex, mucha gente se centra en «¿puede hacerlo?» y deja de lado otra pregunta: una vez hecho, ¿cómo confirmas que esta vez sí se puede aceptar?
 
 Eso es lo que trata este grupo. Hacer calidad y verificación sirve para evitar «parece terminado, pero aún no está estable».
@@ -20,6 +23,8 @@ Eso es lo que trata este grupo. Hacer calidad y verificación sirve para evitar 
 - [Verificar artefactos](/es/guide/quality/verify-artifacts/)
 - [Validar fuentes](/es/guide/quality/validate-sources/)
 - [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
+- [Uso, tiempo y elección de modelo](/es/guide/quality/usage-time-and-model-choice/)
+- [Evaluación de flujos de trabajo y 20 muestras](/es/guide/quality/workflow-evaluation/)
 - [Definición de hecho](/es/guide/quality/definition-of-done/)
 
 ## Orden de lectura
@@ -32,10 +37,3 @@ La primera vez, puedes leer en este orden:
 4. Mira [Definición de hecho](/es/guide/quality/definition-of-done/) y aclara «qué cuenta como realmente terminado»
 
 Sin comprobación, «hecho» muchas veces solo parece hecho de momento.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la estructura y el orden de lectura del capítulo de calidad y verificación; se han revisado enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos variables de producto (versión, precio o interfaz).  
-**Última verificación:** 2026-07-26

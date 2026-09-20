@@ -3,7 +3,7 @@ title: Verificação e revisão humana
 description: Por que o resultado precisa ser verificável e como revisar.
 locale: pt
 source_locale: zh-CN
-source_revision: 19de747
+source_revision: bfe4036
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

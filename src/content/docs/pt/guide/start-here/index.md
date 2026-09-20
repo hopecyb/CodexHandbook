@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só explica a ordem inicial e as entradas de leitura; links internos, camadas de capítulos e estrutura de orientação foram revisados, e o texto não depende de fatos de produto que mudam com frequência."
+  checkedAt: "2026-07-26"
 title: Comece aqui
 description: Entenda o que é o Codex, para quem serve e escolha seu caminho de aprendizagem.
 locale: pt
 source_locale: zh-CN
-source_revision: b7997c5
+source_revision: 016d023
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 1
 ---
 
-# Comece aqui
 
 Este handbook é escrito principalmente para **iniciantes em IA**: não pressupõe que você saiba usar terminal, Git ou Agents, mas explica aos poucos as capacidades que você vai encontrar depois.
 
@@ -83,10 +87,3 @@ Se quiser pôr a mão na massa agora, veja a [Rota dos primeiros 30 minutos](/pt
 Cada conhecimento tem uma página autoritativa; caminhos e casos usam resumos com links para evitar duplicação.
 
 Esta seção explica principalmente a ordem e os limites do começo, e também antecipa alguns riscos evidentes.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica a ordem inicial e as entradas de leitura; links internos, camadas de capítulos e estrutura de orientação foram revisados, e o texto não depende de fatos de produto que mudam com frequência.  
-**Última verificação:** 2026-07-26

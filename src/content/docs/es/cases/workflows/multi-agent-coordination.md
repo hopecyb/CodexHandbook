@@ -3,7 +3,7 @@ title: Coordinación multi-Agent
 description: Exploración en paralelo, división de ejecución y fusión de resultados — cuándo dividir y cómo aceptar.
 locale: es
 source_locale: zh-CN
-source_revision: e4d0f69
+source_revision: 00989e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

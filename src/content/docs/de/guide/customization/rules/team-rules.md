@@ -3,7 +3,7 @@ title: Teamregel-Strategie
 description: "Befehls- und Pfadregeln zwischen Organisation, Repo und Person schichten — reviewbar, rückrollbar."
 locale: de
 source_locale: zh-CN
-source_revision: 3843326
+source_revision: bae8bd2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

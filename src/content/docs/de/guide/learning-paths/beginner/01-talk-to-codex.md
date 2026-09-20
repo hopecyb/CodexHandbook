@@ -1,60 +1,51 @@
 ---
-title: Mit Codex sprechen
-description: Mit natürlicher Sprache Ziele und Grenzen üben.
-locale: de
-source_locale: zh-CN
-source_revision: 3648830
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Mit Codex sprechen"
+description: "Bereite dieselben Übungsmaterialien vor und beginne mit einem rein lesenden Verständnis der Dateien und offenen Fragen."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 10
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Die festen Materialien und die Autorenreferenz sind vollständig; Dateivorgänge wurden in einem temporären Verzeichnis ausgeführt. Ein unabhängiger Test mit einem Modell oder Lernenden steht noch aus."
+  evidence:
+    - label: "Dateioperationsprotokoll des Autors"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/de/guide/learning-paths/beginner/"
+  label: "Einsteigerpfad und Materialien"
+next:
+  link: "/de/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Mit Dateien arbeiten"
+locale: de
+source_locale: zh-CN
+source_revision: 827a5d2
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Materialien vorbereiten
 
-## Ziel dieses Schritts
+[Lade das vollständige Übungspaket herunter](/downloads/first-project/first-project-1.0.0.zip). Entpacke es, kopiere den gesamten Ordner `starter` in einen neuen Ordner namens `work` und lass Codex `work` öffnen. Darin liegen nur drei Dateien: `facts.md`, `notice.md` und `private-note.md`. Alle sind synthetisches Lernmaterial.
 
-In vollständigen Sätzen sagen, **was Sie wollen** und **was nicht** — nicht nur ein paar Wörter hinwerfen.
+Bewahre den ursprünglichen Ordner `starter` auf. Verwende `references` mit den Antworten des Autors bei diesem Schritt nicht als Eingabe. Git, Terminal und weitere Abhängigkeiten brauchst du noch nicht; ein Editor zum Öffnen der Dateien genügt.
 
-Beim ersten Gespräch behandeln viele Codex wie eine Suchleiste und werfen Keywords. Dieser Schritt bricht die Gewohnheit.
-
-## Übung
-
-Zum Übungsprojekt sagen:
+## Erste Aufgabe senden
 
 ```text
-Erkläre in drei Sätzen, welche Dateien im aktuellen Ordner liegen und wofür jede ungefähr da ist.
-Ändere keine Dateien.
+Lies im aktuellen Verzeichnis nur facts.md, notice.md und private-note.md.
+Erkläre in drei Sätzen den Zweck jeder Datei und nenne anschließend, was bei den Veranstaltungsangaben noch offen ist.
+Füge keine Dateien hinzu, ändere oder lösche keine Dateien. Greife nicht auf das Netzwerk zu und veröffentliche oder versende keine Inhalte.
 ```
 
-## Was hier geübt wird
+Diese Übung ist ausdrücklich nur zum Lesen gedacht; deshalb ist die Grenze für Lese- und Schreibzugriffe genannt. Erteile bei anderen Aufgaben die Berechtigung entsprechend der tatsächlichen Absicht und hänge diesen Satz nicht mechanisch an jede Anfrage an.
 
-Zwei Grundfähigkeiten — nicht „schönere Prompts“:
+## Abschlusskriterien
 
-- Ziel vollständig sagen
-- Grenzen klar sagen
+Die Antwort unterscheidet korrekt zwischen Faktenquelle, zu bearbeitender Ankündigung und privater Notiz und erkennt, dass die Anmeldemethode unbekannt ist. Alle drei Dateien stimmen weiterhin mit den Originalen in `starter` überein; es wurden keine Dateien hinzugefügt oder gelöscht.
 
-Auch bei Read-only-Aufgaben am besten explizit „keine Dateien ändern“.
+Öffne bei Fragen die Dateien selbst und sieh anschließend in die [Dateierläuterung des Autors](/downloads/first-project/references/folder-map.md). Eine andere Formulierung ist in Ordnung; der Zweck einer Datei oder eine Anmeldemethode darf nicht erfunden werden.
 
-## Was Sie lernen
-
-- Auch Read-only braucht „nicht ändern“
-- Vage Anfragen → vage Antworten
-
-## Häufige Missverständnisse
-
-### 1. Die Übung ist zu einfach
-
-Wenn schon Read-only unklar bleibt, laufen Änderungsaufgaben später leichter schief.
-
-### 2. Grenzen nur bei Dateiänderungen
-
-Auch Lesen, Erklären, Zusammenfassen brauchen Grenzen.
-
-Weiter: [Mit Dateien arbeiten](/de/guide/learning-paths/beginner/02-work-with-files/) · Grundlagen: [Prompt-Grundlagen](/de/prompts/basics/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Gegen geprüfte Prompt-Grundlagen, Einstiegssicherheit und Einsteigerpfad abgeglichen; trainiert nur die stabile Methode „Ziele und Grenzen in vollständigen Sätzen“.  
-**Zuletzt geprüft:** 2026-07-26
+[Übungspaket und Vorbereitung](/de/guide/learning-paths/beginner/)

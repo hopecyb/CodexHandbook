@@ -3,7 +3,7 @@ title: インストールと初回利用
 description: ChatGPT デスクトップ App のプロジェクト、チャット、Codex、レビューの入口を理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: d61c2fa
+source_revision: 080436d
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

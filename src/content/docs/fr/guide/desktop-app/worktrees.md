@@ -3,7 +3,7 @@ title: Worktrees
 description: Isolez les conversations parallèles avec des worktrees Git, puis revenez sans risque au checkout local.
 locale: fr
 source_locale: zh-CN
-source_revision: f050c32
+source_revision: 3569716
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

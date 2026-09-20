@@ -3,6 +3,7 @@ import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
 import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro';
 import { getActiveModule } from '../utils/activeModule';
 import { filterSidebarByModule, getSidebarHash } from '../utils/filterSidebar';
+import { learningPathSidebar } from '../utils/learningPathSidebar.mjs';
 import { localizeSidebarLabels } from '../utils/localizeSidebar';
 import MobileMainNav from './MobileMainNav.astro';
 import ModuleSidebarPersister from './ModuleSidebarPersister.astro';
@@ -11,9 +12,8 @@ const { sidebar } = Astro.locals.starlightRoute;
 const locale = Astro.locals.starlightRoute.locale;
 const normalizedLocale = !locale || locale === 'root' ? undefined : locale;
 const activeModule = getActiveModule(Astro.url.pathname, normalizedLocale);
-const filteredSidebar = localizeSidebarLabels(
-	filterSidebarByModule(sidebar, activeModule, normalizedLocale),
-);
+const filteredSidebar = learningPathSidebar(sidebar, Astro.url.pathname, normalizedLocale)
+	?? localizeSidebarLabels(filterSidebarByModule(sidebar, activeModule, normalizedLocale));
 const hash = getSidebarHash(filteredSidebar);
 ---
 

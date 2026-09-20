@@ -3,7 +3,7 @@ title: Reglas de permitir y denegar
 description: Restringe con reglas de comandos y rutas lo que el Agent puede ejecutar — hábitos personales y línea roja del equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 0ae6680
+source_revision: 521ecc9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

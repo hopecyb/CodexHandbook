@@ -3,7 +3,7 @@ title: Monorepo의 AGENTS.md
 description: 단일 저장소 다중 패키지에서 프로젝트 지침·범위·테스트 명령을 두는 예시 패턴.
 locale: ko
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

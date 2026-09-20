@@ -3,7 +3,7 @@ title: 허용과 거부 규칙
 description: 명령·경로 규칙으로 Agent가 실행할 수 있는 조작을 제약 — 개인 습관과 팀 하한선.
 locale: ko
 source_locale: zh-CN
-source_revision: 0ae6680
+source_revision: 521ecc9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

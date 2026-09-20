@@ -3,7 +3,7 @@ title: コードレビュー自動化
 description: CI または PR フローに Codex レビューを接続——prompt、権限、人工ゲート。
 locale: ja
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

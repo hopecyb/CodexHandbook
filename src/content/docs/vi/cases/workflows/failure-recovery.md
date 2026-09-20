@@ -3,7 +3,7 @@ title: Phục hồi thất bại
 description: Khi tác vụ lệch hướng, test đỏ hoặc ngữ cảnh hết — cách hoàn tác an toàn rồi tiếp tục.
 locale: vi
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,22 +3,21 @@ title: Versionsstrategie des Handbooks
 description: "Erklärt Inhaltsstatus, Prüfdatum und wie laufende Updates funktionieren."
 locale: de
 source_locale: zh-CN
-source_revision: 3f4e05e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: a608dc3
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 8
 ---
 
 ## Laufende Aktualisierung
 
-Dieses Handbook ist nicht langfristig an eine einzelne Codex-Versionsnummer gebunden. Das Produkt ändert sich — deshalb markieren Seiten Status und Prüfdatum, wie verlässlich der Stand gerade ist.
+Dieses Handbook bleibt nicht dauerhaft an eine einzige Codex-Versionsnummer gebunden. Das Produkt ändert sich. Deshalb erläutern Seiten mit Status, Prüfdatum und konkreten Belegen, was geprüft wurde. Das Datum allein ist keine Bewertung der Verlässlichkeit.
 
 ## Inhalt
 
 - Warum dieses Handbook nicht von ewiger Unveränderlichkeit ausgehen kann
-- Wie Status und Prüfdatum am Seitenende zu lesen sind
+- Wie du Status und Prüfdatum am Seitenanfang liest
 - Wem du glaubst, wenn Handbook und Offizielles kollidieren
 
 ## Seitenstatus
@@ -41,9 +40,11 @@ Dieses Handbook ist nicht langfristig an eine einzelne Codex-Versionsnummer gebu
 - `outdated`: war vielleicht richtig — jetzt auf Veralten achten
 - `archived`: als Referenz behalten, nicht als aktuelle Hauptlinie
 
-## Die drei Zeilen am Seitenende
+## Prüfprotokoll und Inhaltsaktualisierung
 
-In der MVP-Phase steht am Ende jeder Seite: **Status / Geeignete Produkte / Zuletzt überprüft**. Schnell veraltende Themen (Installation, Konto, Berechtigungen, Modelle) sollten offizielle Links mitführen.
+Am Seitenanfang werden Redaktionsstatus, Prüfmethode, Prüfdatum und anwendbare Belege getrennt angezeigt. `editorial` steht für redaktionelle Prüfung, `source-checked` für Quellenabgleich und `run-tested` für einen Beispieltest in der dokumentierten Umgebung. Diese Methoden ersetzen einander nicht. Historische Hinweise bleiben separat und werden nicht automatisch zu Nachweisen eines aktuellen Testlaufs.
+
+[Inhaltsaktualisierungen und Korrekturen](/de/guide/updates/) erläutert konkrete Änderungen und ihre Auswirkungen. Am Ende chinesischer Textseiten lässt sich ein GitHub-Korrekturentwurf mit Informationen zur aktuellen Seite öffnen. Vor dem Absenden musst du ihn prüfen und sensible Daten entfernen.
 
 ## Offizielle Grundlage
 
@@ -75,15 +76,8 @@ So aufteilen:
 
 Wenn du fürchtest, eine Seite sei veraltet, prüfe drei Dinge:
 
-1. Ist der Status am Ende `review`, `verified` oder `outdated`?
+1. Steht am Seitenanfang als Redaktionsstatus `review`, `verified` oder `outdated`?
 2. Wie weit liegt „Zuletzt überprüft“ zurück?
 3. Geht es um Konzepte — oder um Installation, Konfiguration, Berechtigungen (schnell veränderlich)?
 
 Bei aktuellem Verhalten, Parametern und Regeln gilt am Ende immer die aktuelle offizielle Dokumentation.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Anhand des aktuell verwendeten 6-Status-Systems, der Footer-Regeln und des „Offizielle zuerst“-Prinzips dieses Handbooks geprüft; die Seite erklärt die Versionsstrategie und Lesemethode der Site und hängt nicht von konkreten Produktversionsparametern ab.  
-**Zuletzt überprüft:** 2026-07-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "OpenAI Developers 首页当前仍将 Codex 描述为可用于测试、审查并准备交付变更；官方 Codex use cases 也仍包含“Review GitHub pull requests”场景。本页仅总结安全接入 CI 的原则与门禁模式，不宣称固定命令或唯一实现。"
+  checkedAt: "2026-07-26"
 title: 代码审查自动化
 description: 在 CI 或 PR 流程中接入 Codex 审查——提示词、权限与人工门禁。
 sidebar:
@@ -99,9 +104,3 @@ PR opened / updated
 
 ## 参考来源
 - OpenAI Codex CI 示例
----
-
-**状态：** verified  
-**适用产品：** CLI / API / Cloud  
-**核验依据：** OpenAI Developers 首页当前仍将 Codex 描述为可用于测试、审查并准备交付变更；官方 Codex use cases 也仍包含“Review GitHub pull requests”场景。本页仅总结安全接入 CI 的原则与门禁模式，不宣称固定命令或唯一实现。  
-**最近核验：** 2026-07-26

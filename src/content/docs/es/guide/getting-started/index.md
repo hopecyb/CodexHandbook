@@ -5,7 +5,7 @@ sidebar:
   order: 4
 locale: es
 source_locale: zh-CN
-source_revision: 283b8cb
+source_revision: 13861eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

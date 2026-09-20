@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明手册面向的读者与使用场景；站内链接与读者分层表述已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 这份手册适合谁
 description: 说明初学者、创作者、开发者与团队如何使用本手册。
 sidebar:
@@ -84,10 +89,3 @@ sidebar:
 - 你不是做开发出身，但想把 AI 真正接到日常工作里
 
 下一步：[选择你的路径](/guide/start-here/choose-your-path/)。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明手册面向的读者与使用场景；站内链接与读者分层表述已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

@@ -1,48 +1,40 @@
 ---
-title: "OpenSpec(명세 주도 개발)"
-date: 2026-01-26
-year: 2026
-summary: "AI는 코드를 빠르게 생성하지만 “왜 이렇게 만들었는가”는 대화 이력 속에 묻히기 쉽다. OpenSpec은 구현 전에 무엇을 만들고 어떻게 만들지 명세로 정의해 사람과 AI의 이해를 맞춘다."
-phase: emerging
-trend: rising
-signal: well-calibrated
-adoption_effort: ready-to-use
-tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
-authored_by: ai-assisted
+title: OpenSpec(명세 주도 개발)
+description: OpenSpec은 명세와 변경 산출물을 정리하는 특정 프로젝트다. 명세 주도 개발은 더 넓은 작업 방식이며, 프로젝트의 한 버전이 그 방법의 기원은 아니다.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 아래 일차 출처의 사건 또는 프로젝트 설명을 확인했다. 학습 조언은 작성자의 판단이며, 출처 확인을 제품의 실제 실행 검증으로 표시하지 않았다.
+  evidence:
+  - label: OpenSpec v1.0.0 릴리스 노트
+    href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 033715b
+source_revision: 1a34023
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# OpenSpec(명세 주도 개발)
+## 확인 가능한 사건과 범위
 
-- 주요 날짜:
-  - Project release / public visibility: 2026-01-26
-- 공식 참고 자료:
-  - https://github.com/openspec/openspec
-- 참고: 이 항목은 AI 지원 개발에서 spec-first 워크플로가 중요해지는 흐름을 기록한다.
+**유형: 프로젝트 버전 · 최초 공개일 순서가 아님.** 프로젝트의 공식 릴리스 페이지에는 v1.0.0(The OPSX Release)의 릴리스 노트가 있다. 이번 확인에서는 이 버전을 근거로 프로젝트의 최초 공개일을 추정하지 않으며, 이번에 검토한 증거로 확인되지 않은 npm 최초 공개일도 남기지 않는다.
 
-## 무엇인가
+출처: [OpenSpec v1.0.0 릴리스 노트](https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0). 확인일은 2026-09-18이다. 출처의 발표일과 이 페이지의 확인일은 서로 다른 의미를 가진다.
 
-OpenSpec은 요구사항, 설계, 작업, 구현 판단을 먼저 명세로 작성하고 그 명세를 AI와 사람이 공유하는 개발 방식이다. 대화 속에 흘러가는 결정을 추적 가능한 산출물로 바꾼다.
+## 어떤 문제를 해결하는가
 
-## AI 애플리케이션 엔지니어링을 어디에서 어디로 옮겼나
+OpenSpec은 명세와 변경 산출물을 정리하는 특정 프로젝트다. 명세 주도 개발은 더 넓은 작업 방식이며, 프로젝트의 한 버전이 그 방법의 기원은 아니다.
 
-AI 애플리케이션 개발은 “채팅으로 요청하고 코드를 받는” 단계에서 “명세를 기준으로 구현, 리뷰, 변경을 진행하는” 단계로 이동했다.
+## 학습 조언과 적용 범위
 
-## 현재 단계
+다음은 이 사이트의 교육적 판단이며, 업계 보급률이나 효과 측정 결과가 아니다.
 
-현재 이 항목은 `emerging` 단계로 본다.
+요구사항에 여러 제약이나 사람 사이의 인계가 있다면 먼저 목표, 범위, 인수 기준, 미해결 항목을 기록한다. 간단한 변경에 완전한 명세 절차를 기계적으로 추가할 필요는 없다. 구체적인 명령은 프로젝트 버전에 따라 달라지므로 해당 버전의 문서를 사용한다.
 
-신흥이며 상승 중이다. AI 코딩 속도가 빨라질수록 명세, 변경 근거, 수용 조건을 남기는 가치가 커진다.
+## 실습
 
-## 대체할 수 있는 것
+[명세 주도 작업 흐름](/ko/cases/workflows/specification-driven-work/): 변경 하나에 대해 검증 가능한 명세를 쓰고 구현을 명세의 각 항목과 연결한다. 사이트의 실습은 방법을 소개할 뿐, OpenSpec을 설치하거나 실제 실행했다는 뜻은 아니다.
 
-긴 대화 이력에 의존하는 요구 관리와 구현 후 이유를 알기 어려운 즉흥적 AI 코딩을 대체한다.
-
-## 그것을 대체할 수 있는 것
-
-IDE, Issue, 테스트, 설계 리뷰와 연결된 더 강한 명세 주도 플랫폼에 흡수될 수 있다.
+[로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/).

@@ -3,7 +3,7 @@ title: Lokaler Aufgaben-Workflow
 description: In der IDE lokale Codex-Aufgaben starten, begleiten und abschließen — basierend auf geöffneten Dateien und Auswahl.
 locale: de
 source_locale: zh-CN
-source_revision: f9abb5b
+source_revision: 0264d4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

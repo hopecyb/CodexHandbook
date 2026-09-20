@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページは理解系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: 理解テンプレート
 description: 認識を揃えてから変更に入る。
 locale: ja
 source_locale: zh-CN
-source_revision: c723d45
+source_revision: 228971d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 理解テンプレート
 
 多くのタスクが止まるのは、最低限の共通理解がまだないからです。
 
@@ -55,10 +59,3 @@ reviewed_at: 2026-08-26
 
 - [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
 - [コードベース理解の事例](/ja/cases/understand-a-codebase/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは理解系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

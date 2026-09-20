@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu tạo; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu tạo
 description: Triển khai từ đầu chức năng, bản thảo hoặc Artifact.
 locale: vi
 source_locale: zh-CN
-source_revision: 96c864e
+source_revision: c47ebbf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu tạo
 
 Tác vụ tạo từ đầu dễ gặp hai vấn đề:
 
@@ -65,10 +69,3 @@ Trong tác vụ tạo, tình huống dễ lỗi nhất là chưa nói rõ «làm
 
 - [Công việc dẫn bởi đặc tả](/vi/cases/workflows/specification-driven-work/)
 - [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu tạo; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

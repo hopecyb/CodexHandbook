@@ -3,7 +3,7 @@ title: Chọn cơ chế phù hợp
 description: Prompt tạm, AGENTS.md, bộ nhớ, Skill, MCP nên đặt tầng nào — một khung phán đoán nói rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

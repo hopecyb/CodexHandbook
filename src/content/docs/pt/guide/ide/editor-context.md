@@ -3,7 +3,7 @@ title: Contexto do editor
 description: Como a extensão IDE passa ao Codex os ficheiros abertos, a área de trabalho e as regras do projeto.
 locale: pt
 source_locale: zh-CN
-source_revision: b6d208f
+source_revision: 6d1b248
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

@@ -3,7 +3,7 @@ title: 画像とスクリーンショット
 description: Codex にスクリーンショットやデザイン稿を渡し、タスク中の画像ファイルを管理する。
 locale: ja
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

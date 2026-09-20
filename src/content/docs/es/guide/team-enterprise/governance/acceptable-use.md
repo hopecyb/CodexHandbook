@@ -3,7 +3,7 @@ title: Política de uso aceptable
 description: Acuerdos a nivel de equipo sobre qué puede y qué no puede hacer Codex, alineados con tecnología y formación.
 locale: es
 source_locale: zh-CN
-source_revision: 1ce50b9
+source_revision: 0409154
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Quy tắc cho phép và từ chối
 description: Dùng quy tắc lệnh và đường dẫn để ràng buộc thao tác Agent thực thi được — thói cá nhân và đường cơ sở nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 0ae6680
+source_revision: 521ecc9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

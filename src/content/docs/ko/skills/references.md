@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "현재 Codex 런타임은 스킬 본문과 관련 자료를 필요에 따라 읽는 방식을 명확히 씁니다. 이 페이지의 `references/` 설명은 안정적인 문서 구성 원칙입니다."
+  checkedAt: "2026-07-26"
 title: references/ 디렉터리
 description: Skill에서 긴 참고 문서를 정리해 점진적 공개를 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 「문서를 몇 개 더 넣는」 것만이 아니라, **매번 당장 읽지는 않지만 어떤 단계에서 실제로 유용한** 자료를 따로 모아 두고 필요할 때 읽게 하는 데도 의미가 있습니다.
 
-# references/ 디렉터리
 
 `SKILL.md` 본문이 너무 길면 상세 규범, API 설명, 체크리스트를 `references/`로 옮기고, 단계에서 필요에 따라 인용하세요.
 
@@ -73,10 +77,3 @@ Skill을 읽을 때 긴 배경 설명에 먼저 눌리지 않고, 세부 사항�
 - 주 절차는 `SKILL.md`에, 참고 자료는 필요 시 로드
 - 파일당 한 주제에 초점을 두어 유지보수하기 쉽게
 - references에서 SKILL.md에 이미 있는 단계를 반복하지 말 것
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 현재 Codex 런타임은 스킬 본문과 관련 자료를 필요에 따라 읽는 방식을 명확히 씁니다. 이 페이지의 `references/` 설명은 안정적인 문서 구성 원칙입니다.  
-**최근 검증:** 2026-07-26

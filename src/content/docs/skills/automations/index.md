@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App；CLI 与 IDE 仅用于准备和测试，不提供管理界面"
+  checkedAt: "2026-08-26"
 title: Scheduled tasks
 description: 在 ChatGPT 中按时间重复运行已经验证过的任务。
 ---
@@ -28,11 +32,3 @@ Scheduled task（定时任务）让 ChatGPT 在后台按计划重复工作。它
 ## 官方来源
 
 - [OpenAI：Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT Web / 桌面 App；CLI 与 IDE 仅用于准备和测试，不提供管理界面
-
-**最近核验：** 2026-08-26

@@ -1,100 +1,91 @@
 ---
-title: Vue d'ensemble MCP
-description: Model Context Protocol — connecter Codex en sécurité à des outils et sources de données externes.
+title: Vue d'ensemble de MCP
+description: Comprendre le client, le serveur, les outils, l'authentification et les limites de sécurité de MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 7b8726f
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 37e55d9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
+MCP transforme le souhait d'un modèle d'utiliser une capacité externe en appel d'outil structuré. Il convient pour accéder à des documents tiers, à un navigateur, à Figma, à un système de tickets ou à des services internes.
 
-## Call chain
+## Chaîne d'appel
 
 ```text
-Codex in a task
-  -> MCP client provided by the Codex host
-  -> MCP server: local process or remote service
-  -> external system: docs, design, tickets, internal API
-  -> structured result returned to the task
+Codex dans une tâche
+  -> client MCP (fourni par le Codex host)
+  -> serveur MCP (processus local ou service distant)
+  -> système externe (documents, conception, tickets, API interne)
+  -> résultat structuré renvoyé à la tâche
 ```
 
-| Component | Responsible for | Not responsible for |
+| Composant | Ce dont il est responsable | Ce dont il n'est pas responsable |
 |---|---|---|
-| Codex host | Read configuration, connect servers, expose tools to the Agent | Defining the server's business permissions |
-| MCP server | Define tools, authentication, arguments, and structured results | Automatically making every tool safe |
-| Skill | Define when and how to use tools | Establishing network connections |
-| Plugin | Compose and distribute Skills, connectors, MCP, and related capabilities | Acting as another tool protocol |
+| Codex host | Lire la configuration, connecter les serveurs et proposer les outils à l'Agent | Définir les permissions métier du serveur |
+| Serveur MCP | Définir les outils, l'authentification, les arguments et les résultats structurés | Garantir automatiquement la sécurité des outils |
+| Skill | Préciser quand et dans quel ordre utiliser les outils | Établir une connexion réseau |
+| Plugin | Regrouper et distribuer Skills, Connectors, MCP et autres capacités | Constituer un autre protocole d'outils |
 
-## Supported server transports
+## Transports de serveur actuellement pris en charge
 
 ### STDIO
 
-Codex starts a local process and communicates over standard input/output. This fits local development tools and services that run only on the current computer.
+Codex lance un processus local et communique avec lui par l'entrée et la sortie standard. Cette méthode convient aux outils de développement locaux et aux services qui ne tournent que sur la machine actuelle.
 
-Review the command, dependency source, and forwarded environment variables because the process inherits the local execution environment.
+Point de vigilance : ce processus hérite de l'environnement d'exécution local. Il faut examiner la commande, la provenance des dépendances et les variables d'environnement qui lui sont transmises.
 
 ### Streamable HTTP
 
-Codex connects to a remote URL. Current documentation supports Bearer tokens, OAuth, and ChatGPT session authentication for trusted first-party servers.
+Codex se connecte à une adresse distante. La documentation officielle actuelle confirme la prise en charge des Bearer tokens, d'OAuth et de l'authentification par session ChatGPT pour les serveurs de confiance fournis par OpenAI.
 
-The service receives tool arguments. Verify TLS, identity, logging, retention, and tool permissions.
+Point de vigilance : le service distant reçoit les arguments des outils. Vérifiez TLS, l'identité, les journaux, la conservation des données et les permissions des outils.
 
-## Combining MCP, Skills, and Plugins
+## Associer MCP, Skill et Plugin
 
-For a weekly high-priority issue check:
+Prenons la vérification hebdomadaire des tickets prioritaires :
 
-| Layer | Content |
+| Couche | Contenu |
 |---|---|
-| MCP | Expose `search_issues`, `get_issue`, and related tools |
-| Skill | Define filters, evidence, and report format |
-| Plugin | Distribute the Skill, connector, and MCP definition |
-| Scheduled task | Run the verified task at a fixed time |
+| MCP | Fournit des outils tels que `search_issues` et `get_issue` |
+| Skill | Fixe les filtres, les preuves requises et le format du rapport |
+| Plugin | Distribue à l'équipe le Skill, le Connector et la définition MCP |
+| Scheduled task | Exécute à heure fixe la tâche déjà vérifiée |
 
-These are orthogonal responsibilities, not an upgrade ladder. See the [capability map](/fr/skills/capability-map/).
+Ces mécanismes ont des responsabilités distinctes : ils ne forment pas une échelle de progression. Consultez la [carte des capacités d'extension](/fr/skills/capability-map/) pour la vue d'ensemble.
 
-## When MCP is worthwhile
+## Quand connecter MCP vaut la peine
 
-| Worthwhile | Not yet |
+| Utile | Pas encore nécessaire |
 |---|---|
-| Repeated access to one external system | One public web lookup |
-| Structured arguments and results are required | Repository file tools are enough |
-| OAuth or granular tool control is required | Only privileged writes exist, with no test environment |
-| A team needs one reusable connection | Server provenance cannot be reviewed |
+| Consulter plusieurs fois le même système externe | Consulter une seule page Web publique |
+| Avoir besoin d'arguments et de résultats d'outils structurés | Les opérations sur les fichiers du dépôt suffisent |
+| Avoir besoin d'OAuth ou d'un contrôle fin des outils | Seules des opérations d'écriture très privilégiées existent, sans environnement de test |
+| Permettre à l'équipe de réutiliser une connexion commune | Impossible de vérifier la provenance du serveur |
 
-## Security stages
+## Niveaux de sécurité
 
-1. **Read-only trial:** public docs or test tenant, query tools only.
-2. **Team validation:** restricted project, role, and tool allowlist; record failures and latency.
-3. **Limited writes:** reversible small writes with human approval.
-4. **Governed operation:** revocable authorization, reviewable config, redacted logs, environment isolation.
+1. **Essai en lecture seule** : documents publics ou espace de test ; seuls les outils de consultation sont activés.
+2. **Validation en équipe** : limiter projet, rôles et liste d'outils autorisés ; consigner les échecs et les durées.
+3. **Écritures limitées** : petites modifications réversibles avec approbation humaine.
+4. **Exploitation gouvernée** : autorisations révocables, configuration vérifiable, journaux expurgés et environnements isolés.
 
-Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_token_env_var`, or forwarded environment variables.
+N'inscrivez pas de token dans un prompt, dans Git ou dans un en-tête HTTP statique. Préférez OAuth, `bearer_token_env_var` ou la transmission d'une variable d'environnement.
 
-## Pre-connection checklist
+## Liste de contrôle avant connexion
 
-- [ ] Server source, version, and startup command are reviewable.
-- [ ] Read and write tools are identified.
-- [ ] A test tenant or least-privilege identity is used.
-- [ ] Remote logging of arguments and results is understood.
-- [ ] Writes have approval, rollback, and audit paths.
-- [ ] The team can disable the server and revoke access.
+- [ ] La provenance, la version et la commande de démarrage du serveur peuvent être examinées.
+- [ ] Les outils de lecture et d'écriture sont distingués dans la liste.
+- [ ] Un espace de test ou un compte aux permissions minimales est utilisé.
+- [ ] Les arguments et résultats susceptibles d'apparaître dans les journaux distants sont identifiés.
+- [ ] Les écritures disposent de procédures d'approbation, de retour arrière et d'audit.
+- [ ] L'équipe sait désactiver le serveur et révoquer les autorisations.
 
-## Next step
+## Étape suivante
 
-[Connect an MCP server](/fr/skills/mcp/connect-an-mcp-server/), beginning read-only, then verify with `codex mcp list` and `/mcp`.
+Passez à [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/) : commencez par un serveur en lecture seule, puis vérifiez la connexion avec `codex mcp list` et `/mcp`.
 
-## Official sources
+## Sources officielles
 
-- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
-
-**Last verified:** 2026-08-25
+- [OpenAI : Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI : Plugins](https://learn.chatgpt.com/docs/plugins)

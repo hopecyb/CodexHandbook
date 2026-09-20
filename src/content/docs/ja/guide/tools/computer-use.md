@@ -3,7 +3,7 @@ title: Computer Use
 description: 画面と入力デバイスで GUI を操作する上級能力——適用シナリオ、リスク、承認。
 locale: ja
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

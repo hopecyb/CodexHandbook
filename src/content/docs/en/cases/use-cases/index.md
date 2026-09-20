@@ -3,7 +3,7 @@ title: Scenarios and case library
 description: End-to-end real tasks—prep, execution, verification, failure recovery, and retrospectives.
 locale: en
 source_locale: zh-CN
-source_revision: 6349392
+source_revision: 1e284bb
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

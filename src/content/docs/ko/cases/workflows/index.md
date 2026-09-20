@@ -3,7 +3,7 @@ title: 워크플로 방법
 description: 반복 가능한 협업 방법—단일 제품 UI에 묶이지 않으며, 검사 지점과 인수를 강조합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

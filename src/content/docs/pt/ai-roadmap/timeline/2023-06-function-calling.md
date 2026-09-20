@@ -1,47 +1,40 @@
 ---
 title: "Function Calling (chamadas de função)"
-date: 2023-06-13
-year: 2023
-summary: "Function Calling permite que o modelo escolha uma função disponível e preencha argumentos estruturados."
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+description: "O modelo pode propor o nome de uma função e argumentos estruturados; a aplicação valida-os e decide se executa. Gerar argumentos, obter autorização e executar são três etapas distintas."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Os dados do evento e do projeto abaixo foram conferidos na fonte primária; as recomendações didáticas são um juízo do autor e não constituem um teste prático do produto."
+  evidence:
+    - label: "Anúncio de lançamento das chamadas de função"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: pt
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling (chamadas de função)
+## Evento verificável e âmbito
 
-- Datas importantes:
-  - OpenAI function calling release: 2023-06-13
-- Referências oficiais:
-  - https://openai.com/index/function-calling-and-other-api-updates/
-- Nota: Esta entrada registra o ponto de adoção e o significado atual deste conceito na engenharia de aplicações de IA.
+**Data: 13 de junho de 2023 · Tipo: lançamento de produto.** A OpenAI anunciou chamadas de função para a API Chat Completions da época. Essa data corresponde ao lançamento da API de um fornecedor específico, não ao início de todas as chamadas de ferramentas.
 
-## O Que É
+Fonte: [anúncio de lançamento das chamadas de função](https://openai.com/index/function-calling-and-other-api-updates/). Verificado em 18 de setembro de 2026; a data de publicação da fonte e a data de verificação desta página têm significados diferentes.
 
-Function Calling permite que o modelo escolha uma função disponível e preencha argumentos estruturados.
+## Que problema resolve
 
-## De Que Etapa para Que Etapa Isso Levou a Engenharia de Aplicações de IA
+O modelo pode propor o nome de uma função e argumentos estruturados; a aplicação valida-os e decide se executa. Gerar argumentos, obter autorização e executar são três etapas distintas.
 
-Moveu aplicações de respostas textuais para instruções que sistemas reais podem executar.
+## Recomendações de aprendizagem e limites de aplicação
 
-## Em Que Estágio Está Agora
+O que se segue é uma avaliação didática deste site, não uma medição da adoção no setor nem da eficácia:
 
-Atualmente marco este item como `mainstream`.
+Dê prioridade a entradas verificáveis, âmbitos de permissão explícitos e respostas em caso de falha. Um JSON válido não significa que os argumentos estejam semanticamente corretos nem que a escrita num sistema externo esteja autorizada. Os nomes de modelos e exemplos de API do anúncio histórico não servem de guia de configuração atual.
 
-Já é mainstream e serve de base para Tool Use e agentes.
+## Exercício prático
 
-## O Que Pode Substituir
+[Simulação de sugestões para triagem de Issues](/pt/cases/use-cases/team-automation/issue-triage-suggestions/): verifique se as sugestões estruturadas para Issues sintéticas correspondem às entradas e mantenha uma fila de revisão humana. O exercício testa os limites dos dados sem chamar a API histórica nem usar a sua etiqueta de lançamento.
 
-Substitui o parsing frágil de texto livre para acionar APIs.
-
-## O Que Pode Substituí-lo
-
-Será absorvido por runtimes de ferramentas com permissões, estado e recuperação.
+[Voltar ao roteiro e aos critérios de data](/pt/ai-roadmap/)

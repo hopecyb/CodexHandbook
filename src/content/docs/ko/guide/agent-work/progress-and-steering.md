@@ -3,7 +3,7 @@ title: 진행과 유도
 description: 실행 중 방향이 빗나가면, 짧은 지시로 Codex를 올바른 궤도로 되돌립니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6813a5b
+source_revision: c9ea3be
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

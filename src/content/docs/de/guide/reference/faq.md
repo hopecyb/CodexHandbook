@@ -3,7 +3,7 @@ title: FAQ
 description: Häufige Fragen beim Einstieg und in der Nutzung.
 locale: de
 source_locale: zh-CN
-source_revision: 3f915e9
+source_revision: eb8bf4e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

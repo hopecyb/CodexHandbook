@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ đảm nhận vai trò phân luồng theo triệu chứng tới các chương cài đặt, đăng nhập, quyền, ngữ cảnh và chất lượng kết quả; đường dẫn các chương được liên kết đã kiểm từng mục, và trang không phụ thuộc mã lỗi cụ thể, số phiên bản hay văn bản giao diện."
+  checkedAt: "2026-07-26"
 title: Xử lý sự cố
 description: Định vị theo triệu chứng tới hướng dẫn và trang sản phẩm tương ứng.
 locale: vi
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ Bạn không cần ngay từ đầu phán đoán là vấn đề CLI, IDE, Cloud
 - Khi không phán đoán được loại lỗi, tối thiểu nên bắt đầu xử lý thế nào
 - Những vấn đề nào thuộc cài đặt, quyền, ngữ cảnh hoặc mô tả tác vụ
 
-# Xử lý sự cố
 
 | Triệu chứng | Đi tới |
 |---|---|
@@ -62,10 +66,3 @@ Thường không bằng dừng lại một chút, phán đoán trước mình th
 Xử lý sự cố phân loại trước — không nhất thiết phải bắt đầu sửa ngay.
 
 Thêm tham chiếu: [FAQ](/vi/guide/reference/faq/) · [Tham chiếu lỗi](/vi/guide/reference/error-reference/) · [Tài liệu Codex chính thức](https://developers.openai.com/codex)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ đảm nhận vai trò phân luồng theo triệu chứng tới các chương cài đặt, đăng nhập, quyền, ngữ cảnh và chất lượng kết quả; đường dẫn các chương được liên kết đã kiểm từng mục, và trang không phụ thuộc mã lỗi cụ thể, số phiên bản hay văn bản giao diện.  
-**Kiểm chứng gần nhất:** 2026-07-26

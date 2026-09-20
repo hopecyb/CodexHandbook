@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de revisão; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de revisão
 description: Revisão estruturada de diffs e riscos de mudança.
 locale: pt
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de revisão
 
 O desvio mais fácil numa tarefa de revisão é começar já a «corrigir por si».
 
@@ -53,10 +57,3 @@ O foco deste template é trazer riscos à superfície por dimensões fixas — n
 
 - [Rever antes de fazer merge](/pt/cases/workflows/review-before-merge/)
 - [Caso: rever um PR](/pt/cases/review-a-pr/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de revisão; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

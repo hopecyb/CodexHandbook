@@ -3,7 +3,7 @@ title: Méthodes de flux de travail
 description: Méthodes de collaboration reproductibles — non liées à une seule interface produit, avec points de contrôle et critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

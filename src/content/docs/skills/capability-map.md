@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App / Codex CLI / IDE（具体机制支持面见正文）"
+  basis: "已按 2026-08-25 可访问的 OpenAI 官方 Skills、Plugins、MCP、Hooks、Scheduled tasks 与 Subagents 文档重构职责模型和入口边界。"
+  checkedAt: "2026-08-25"
 title: 扩展能力地图
 description: 从任务、规则、流程、工具、守护、分发、触发和并行八个职责理解 Codex 扩展系统。
 ---
@@ -89,10 +94,3 @@ MCP、Hook 和子 Agent 不是这条沉淀阶梯上的必经阶段。只有任�
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [Codex 子 Agent](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**状态：** verified
-**适用产品：** ChatGPT Web / 桌面 App / Codex CLI / IDE（具体机制支持面见正文）
-**核验依据：** 已按 2026-08-25 可访问的 OpenAI 官方 Skills、Plugins、MCP、Hooks、Scheduled tasks 与 Subagents 文档重构职责模型和入口边界。
-**最近核验：** 2026-08-25

@@ -3,7 +3,7 @@ title: IDE 拡張の設定
 description: 共有する Agent 設定と VS Code 系エディタの動作設定を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: d4a3506
+source_revision: 6f28910
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

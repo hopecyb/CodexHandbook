@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-Laufzeit liest Skill-Text und zugehörige Materialien bei Bedarf; die Beschreibung von `references/` ist ein stabiles Organisationsprinzip."
+  checkedAt: "2026-07-26"
 title: Verzeichnis references/
 description: Lange Referenzdokumente im Skill für Progressive Disclosure organisieren.
 locale: de
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Es geht nicht nur um „mehr Dateien“, sondern darum, Inhalte **nicht jedes Mal sofort zu lesen, an einem Schritt aber nützlich** separat zu halten und bei Bedarf zu öffnen.
 
-# Verzeichnis references/
 
 Wird der `SKILL.md`-Fließtext zu lang, gehören detaillierte Normen, API-Hinweise und Checklisten nach `references/` und werden in den Schritten bei Bedarf referenziert.
 
@@ -73,10 +77,3 @@ Der Hauptablauf bleibt in `SKILL.md` — sonst weiß niemand beim ersten Lesen, 
 - Hauptablauf in `SKILL.md`, Referenzen bei Bedarf laden
 - Eine Datei, ein Thema — wartbar
 - In references keine bereits in SKILL.md stehenden Schritte wiederholen
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Die aktuelle Codex-Laufzeit liest Skill-Text und zugehörige Materialien bei Bedarf; die Beschreibung von `references/` ist ein stabiles Organisationsprinzip.  
-**Zuletzt geprüft:** 2026-07-26

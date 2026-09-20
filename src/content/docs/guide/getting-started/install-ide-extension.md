@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "当前官方 IDE 快速开始明确列出 VS Code、Cursor、Windsurf、VS Code Insiders，以及 Xcode 和 JetBrains 的各自集成方式；本页按这两类路径拆分安装说明。"
+  checkedAt: "2026-08-26"
 title: 安装 IDE 集成
 description: 在 VS Code 兼容编辑器、Xcode 或 JetBrains IDE 中启用 Codex。
 sidebar:
@@ -45,13 +50,3 @@ sidebar:
 - 编辑器是否同时启用了会冲突的 AI 扩展或快捷键
 
 接着学习 [IDE 本地任务工作流](/guide/ide/local-task-workflow/)；完整支持范围见 [支持的编辑器](/guide/ide/supported-editors/)。
-
----
-
-**状态：** verified
-
-**适用产品：** IDE
-
-**核验依据：** 当前官方 IDE 快速开始明确列出 VS Code、Cursor、Windsurf、VS Code Insiders，以及 Xcode 和 JetBrains 的各自集成方式；本页按这两类路径拆分安装说明。
-
-**最近核验：** 2026-08-26

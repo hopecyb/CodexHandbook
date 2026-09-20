@@ -3,7 +3,7 @@ title: Creación de contenido
 description: Entrada a casos de documentación, artículos y activos de contenido — énfasis en revisión, reescritura y aceptación de artefactos.
 locale: es
 source_locale: zh-CN
-source_revision: 9f70ff0
+source_revision: 5ad38bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Prompts con imágenes
 description: Cómo preguntar al dar a Codex capturas, diseños o fotos de pizarra para obtener resultados ejecutables.
 locale: es
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Riscos de Plugin e MCP
 description: "A que podem aceder as extensões e como a equipa as aprova e monitoriza — um olhar unificado a Skills, Plugin e MCP."
 locale: pt
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

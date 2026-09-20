@@ -1,60 +1,51 @@
 ---
-title: Hablar con Codex
-description: Practica explicar objetivos y límites en lenguaje natural.
-locale: es
-source_locale: zh-CN
-source_revision: 3648830
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Hablar con Codex"
+description: "Prepara los mismos materiales de práctica y empieza por comprender los archivos y las incógnitas en modo de solo lectura."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 10
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Los materiales fijos y la referencia del autor están completos; las operaciones con archivos se ejecutaron en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo o lectores."
+  evidence:
+    - label: "Registro de operaciones con archivos del autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/es/guide/learning-paths/beginner/"
+  label: "Ruta para principiantes y materiales"
+next:
+  link: "/es/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Trabajar con archivos"
+locale: es
+source_locale: zh-CN
+source_revision: 827a5d2
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Preparar los materiales
 
-## Objetivo de este paso
+[Descarga el paquete de práctica completo](/downloads/first-project/first-project-1.0.0.zip). Descomprímelo, copia toda la carpeta `starter` en una carpeta nueva llamada `work` y haz que Codex abra `work`. Solo contiene tres archivos: `facts.md`, `notice.md` y `private-note.md`; todos son materiales didácticos sintéticos.
 
-Usa oraciones completas para decir **qué quieres** y **qué no quieres**; no te limites a unas pocas palabras.
+Conserva el `starter` original. No uses `references`, que contiene las respuestas del autor, como entrada en este paso. Todavía no necesitas Git, terminal ni dependencias adicionales; basta con abrir los archivos en un editor.
 
-La primera vez que hablas con Codex, mucha gente lo trata como un cuadro de búsqueda y solo suelta palabras clave. Este paso sirve para corregir ese hábito.
-
-## Ejercicio
-
-Di a tu proyecto de práctica:
+## Enviar la primera tarea
 
 ```text
-Explica en tres frases qué archivos hay en la carpeta actual y qué hace aproximadamente cada uno.
-No modifiques ningún archivo.
+Lee únicamente facts.md, notice.md y private-note.md del directorio actual.
+En tres frases, explica para qué sirve cada archivo e indica qué dato del evento sigue sin decidirse.
+No añadas, modifiques ni elimines archivos. No accedas a la red ni publiques o envíes contenido.
 ```
 
-## Qué se practica aquí
+Este ejercicio es expresamente de solo lectura, por eso se indican los límites de lectura y escritura. En otras tareas, autoriza según la intención real; no añadas esta frase mecánicamente a todas las solicitudes.
 
-Se practican dos cosas básicas, no «escribir un Prompt más bonito»:
+## Criterios para completar el paso
 
-- Formular el objetivo por completo
-- Dejar claros los límites
+La respuesta distingue correctamente la fuente de hechos, el aviso pendiente de edición y la nota privada, e indica que se desconoce cómo inscribirse. Los tres archivos siguen siendo idénticos a los originales de `starter`; no se han añadido ni eliminado archivos.
 
-Aunque la Tarea sea de solo lectura, conviene escribir explícitamente «no modifiques ningún archivo».
+Si tienes dudas, abre los archivos y compruébalo directamente; después consulta la [explicación de archivos del autor](/downloads/first-project/references/folder-map.md). La redacción puede variar, pero no se debe inventar la función de un archivo ni la forma de inscripción.
 
-## Qué aprendes
-
-- Las Tareas de solo lectura también necesitan un «no modificar» explícito
-- Las peticiones vagas producen respuestas vagas
-
-## Malentendidos frecuentes
-
-### 1. Este ejercicio es demasiado simple; no hace falta
-
-Si ni siquiera las Tareas de solo lectura se formulan con claridad, las Tareas de modificación se desvían con más facilidad.
-
-### 2. Solo hace falta escribir límites cuando se modifican archivos
-
-Las Tareas de solo lectura, explicación o resumen también necesitan límites.
-
-Siguiente: [Trabajar con archivos](/es/guide/learning-paths/beginner/02-work-with-files/) · Conceptos: [Fundamentos del Prompt](/es/prompts/basics/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con los capítulos ya verificados de fundamentos del Prompt, seguridad de entrada y ruta para principiantes; esta página solo entrena el método estable de «decir objetivo y límites con oraciones completas».  
-**Última verificación:** 2026-07-26
+[Paquete de práctica e instrucciones de preparación](/es/guide/learning-paths/beginner/)

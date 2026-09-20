@@ -3,7 +3,7 @@ title: Travail piloté par les tests
 description: Définir ou ajouter d'abord des tests en échec, puis guider l'implémentation — acceptation objective des modifications Codex.
 locale: fr
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

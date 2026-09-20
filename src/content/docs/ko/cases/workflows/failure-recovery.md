@@ -3,7 +3,7 @@ title: 실패 복구
 description: 작업이 빗나가거나, 테스트가 빨간색이 되거나, 컨텍스트가 소진될 때—안전하게 되돌리고 이어 가는 방법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a03b8c5
+source_revision: d5e79dd
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

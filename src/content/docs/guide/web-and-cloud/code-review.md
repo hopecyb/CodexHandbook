@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 title: Cloud 与 GitHub 代码审查
 description: 审查 Cloud diff，并在 GitHub 用 Codex 做高信号补充 review。
 sidebar:
@@ -69,11 +73,3 @@ Codex 会以普通 GitHub review 的形式发布发现。当前官方说明 GitH
 
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 - [跨客户端代码审查](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud、GitHub
-
-**最近核验：** 2026-08-26

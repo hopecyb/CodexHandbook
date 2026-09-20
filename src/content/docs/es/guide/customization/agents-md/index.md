@@ -3,7 +3,7 @@ title: AGENTS.md
 description: Página de introducción a las instrucciones persistentes a nivel de proyecto — primero aclara para quién es y qué problema resuelve, luego escribe el contenido.
 locale: es
 source_locale: zh-CN
-source_revision: ce5c1af
+source_revision: cb6371f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

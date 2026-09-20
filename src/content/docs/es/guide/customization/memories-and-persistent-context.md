@@ -3,7 +3,7 @@ title: Memorias y contexto persistente
 description: Cómo Codex recuerda preferencias y hechos entre sesiones — capacidades, límites y normas de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 039bc98
+source_revision: 7a689ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

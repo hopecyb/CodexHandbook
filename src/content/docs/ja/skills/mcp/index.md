@@ -3,7 +3,7 @@ title: MCP
 description: サードパーティのツールとコンテキストを、制御された方法で ChatGPT と Codex に接続します。
 locale: ja
 source_locale: zh-CN
-source_revision: ff68431
+source_revision: 8d9ec38
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

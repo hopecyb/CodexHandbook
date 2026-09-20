@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI 当前 Codex/插件权限文档持续强调读写动作、审批、源边界与角色访问控制的分层思路；本页未声明具体规则文件语法，而是将 allow/deny 解释为一类执行边界模式，并与沙盒、审批和团队审查流程区分。"
+  checkedAt: "2026-07-26"
 title: 允许与拒绝规则
 description: 用命令与路径规则约束 Agent 能执行的操作——个人习惯与团队底线。
 sidebar:
@@ -102,10 +107,3 @@ sidebar:
 - 变更规则走 PR，像改 CI 一样对待
 
 好的 allow/deny 规则，是提前把哪些动作合理、哪些动作不该发生说清楚。
-
----
-
-**状态：** verified  
-**适用产品：** CLI / App  
-**核验依据：** OpenAI 当前 Codex/插件权限文档持续强调读写动作、审批、源边界与角色访问控制的分层思路；本页未声明具体规则文件语法，而是将 allow/deny 解释为一类执行边界模式，并与沙盒、审批和团队审查流程区分。  
-**最近核验：** 2026-07-26

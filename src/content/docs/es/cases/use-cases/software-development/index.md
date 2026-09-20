@@ -3,7 +3,7 @@ title: Desarrollo de software
 description: Entrada a casos de cambiar código, corregir bugs y añadir verificación — énfasis en control de alcance, tests y rollback.
 locale: es
 source_locale: zh-CN
-source_revision: 84208b9
+source_revision: a3d7f4c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud / App / CLI"
+  basis: "OpenAI Developers 当前 Codex use cases 仍包含“Review GitHub pull requests”；OpenAI Help Center 的插件与集成说明也持续强调：外部仓库访问取决于底层 app 权限、角色访问与动作边界。本页只总结 GitHub 仓库、分支、PR、Review 与 CI 的协作位置，以及本地与 Cloud 在代码可见性上的差异。"
+  checkedAt: "2026-07-26"
 title: GitHub 集成
 description: 仓库连接、PR、Review 与 CI——Codex 在 GitHub 工作流中的位置。
 sidebar:
@@ -94,9 +99,3 @@ GitHub 集成的重点，是让 Codex 接入现有的代码协作流程。
 
 ## 参考来源
 - OpenAI Codex GitHub 集成文档
----
-
-**状态：** verified  
-**适用产品：** Cloud / App / CLI  
-**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Review GitHub pull requests”；OpenAI Help Center 的插件与集成说明也持续强调：外部仓库访问取决于底层 app 权限、角色访问与动作边界。本页只总结 GitHub 仓库、分支、PR、Review 与 CI 的协作位置，以及本地与 Cloud 在代码可见性上的差异。  
-**最近核验：** 2026-07-26

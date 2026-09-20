@@ -1,60 +1,40 @@
 ---
-title: OpenClaw (passerelle d'assistant IA personnel)
-date: 2026-01-29
-year: 2026
-summary: "Unifie des points d'entrée comme WeChat, l'e-mail et la ligne de commande dans une interface unique, afin que le même assistant IA puisse accéder aux outils et traiter les tâches de manière cohérente entre environnements."
-phase: emerging
-trend: rising
-signal: over-hyped
-adoption_effort: integration-heavy
-tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
-authored_by: ai-assisted
+title: "OpenClaw (projet d'assistant IA personnel)"
+description: "Ce dossier examine les limites à gérer quand un assistant personnel se connecte à des canaux, des conversations et des capacités externes. Les canaux pris en charge, les méthodes d'installation et les permissions varient selon la version du projet ; consultez les notes de la version concernée."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Les faits ci-dessous ont été vérifiés dans la source primaire ; les conseils pédagogiques relèvent du jugement de l'auteur et ne constituent pas un test du produit en conditions réelles."
+  evidence:
+    - label: "Dépôt officiel d'OpenClaw"
+      href: "https://github.com/openclaw/openclaw"
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2435d64
+source_revision: "8868140"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# OpenClaw
+## Événement vérifiable et portée
 
-- Dates importantes :
-  - Première publication npm (`openclaw@0.0.1`) : 2026-01-29
-  - Première version de canal stable (par exemple `2026.1.29`) : 2026-01-30
-- Références officielles :
-  - https://github.com/openclaw/openclaw
-  - https://openclaw.ai
-  - https://docs.openclaw.ai/start/getting-started
-  - https://www.npmjs.com/package/openclaw
-- Note : cette entrée situe le moment où OpenClaw devient installable publiquement comme forme d'ingénierie « assistant IA personnel + passerelle multicanal ».
+**Type : dossier sur un projet · sans classement par date de première publication.** Cette page s'appuie sur le dépôt officiel d'OpenClaw pour identifier et décrire le projet. La présente vérification n'a pas trouvé de preuves suffisantes pour confirmer sa première date de publication ; celle-ci n'est donc pas indiquée.
 
-## Ce que c'est
+Source : [dépôt officiel d'OpenClaw](https://github.com/openclaw/openclaw). Vérification effectuée le 18 septembre 2026 ; la date de publication de la source et celle de cette vérification ont des sens différents.
 
-OpenClaw est un système d'assistant IA qui fonctionne sur des appareils personnels. Officiellement, il est positionné comme assistant IA personnel avec un plan de contrôle Gateway qui unifie sessions, canaux, outils et événements.
+## Quel problème cela résout
 
-Il met l'accent sur le local-first et l'accès multicanal : canaux de chat, appels d'outils, gestion de sessions et automatisation passent sous une même passerelle au lieu d'être dispersés dans des applications de chat séparées.
+Ce dossier examine les limites à gérer quand un assistant personnel se connecte à des canaux, des conversations et des capacités externes. Les canaux pris en charge, les méthodes d'installation et les permissions varient selon la version du projet ; consultez les notes de la version concernée.
 
-## Le passage qu'il a permis
+## Conseils d'apprentissage et limites d'application
 
-Il a déplacé « le chat IA dans un client unique » vers « un système d'assistant personnel multicanal, routable et exploitable ».
+Ce qui suit est une appréciation pédagogique de ce site, pas une mesure de l'adoption dans le secteur ni de l'efficacité :
 
-Du point de vue ingénierie, OpenClaw combine agrégation d'entrées de messages, isolation de sessions, frontières de permissions d'outils et runtime gateway toujours actif. Cela permet à des développeurs individuels de construire des runtimes d'assistant locaux ou auto-hébergés plus proches de formes de production.
+Pour évaluer un tel projet, cartographiez d'abord les sources des messages, les destinations des données, l'emplacement des identifiants et les actions externes autorisées. La connexion à plusieurs canaux élargit le périmètre à gérer ; pouvoir se connecter n'autorise pas l'envoi ou la modification automatiques.
 
-## Son stade actuel
+## Exercice pratique
 
-Je marque actuellement OpenClaw comme `emerging`.
+[Choisir une méthode d'extension](/fr/skills/choosing-an-extension-method/) : énumérez les capacités requises pour une intégration envisagée, vérifiez s'il existe une méthode d'extension plus restreinte, puis rédigez un plan d'arrêt et de retour arrière. Cette page ne présente ni essai d'installation d'OpenClaw ni garantie de compatibilité.
 
-Il possède déjà une CLI claire, des mises à jour continues, une documentation et des capacités d'intégration multicanal. Mais la maturité de l'écosystème reste précoce : conventions de configuration, politiques de sécurité par défaut et bonnes pratiques d'équipe convergent encore.
-
-## Ce qu'il pourrait remplacer
-
-Il peut remplacer une partie des configurations fragmentées où chaque plateforme possède son propre bot ou agent.
-
-Pour des individus et petites équipes, il fournit un point d'entrée unifié et réduit la configuration répétée ainsi que l'exploitation dispersée entre canaux et outils.
-
-## Ce qui pourrait le remplacer
-
-Si les systèmes d'exploitation ou plateformes collaboratives dominants fournissent nativement des runtimes IA personnels unifiés avec accès multicanal, permissions et orchestration d'outils, des passerelles auto-gérées comme OpenClaw pourraient être absorbées par ces couches plateforme.
-
-Mais tant que personnalisation, auto-hébergement et contrôle intercanal restent importants, les projets de type gateway gardent une valeur durable.
+[Retour à la feuille de route et aux conventions de date](/fr/ai-roadmap/)

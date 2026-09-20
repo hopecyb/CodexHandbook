@@ -1,137 +1,81 @@
 ---
-title: Temas de Codex
-description: "Entiende qué es Codex Dream Skin, cómo instalarlo y cambiar fondos, por qué usa inyección CDP y qué límites de seguridad conviene revisar antes de usar temas."
+title: "Temas de Codex"
+description: "Comprueba la fuente, la versión, las interacciones y la recuperación de un tema de terceros, distinguiendo lo que afirma el proyecto de las pruebas de este manual."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Se consultaron el repositorio, las versiones y la guía de instalación del proyecto. No se instaló el tema, ni se probaron la interfaz o la recuperación tras desinstalar; no se garantiza compatibilidad."
+  evidence:
+    - label: "Descripción del proyecto Dream Skin"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin
+    - label: "Instrucciones de instalación y retirada en macOS"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md
+    - label: "Paquetes publicados e historial de versiones"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: 8c0e360
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: "4ecfa1c"
 ---
 
-# Temas de Codex
+Codex Dream Skin es un tema de escritorio de terceros. Su documentación dice que inyecta cambios visuales mediante una conexión CDP local sin modificar el paquete oficial. Es la descripción del proyecto; este manual no ha verificado el comportamiento de archivos y red ni la compatibilidad de la interfaz en todas las versiones.
 
-Cambiar la piel de Codex suena como un detalle para que se vea mejor, pero detrás hay una solución completa de temas para escritorio: mantiene las interacciones nativas de Codex, no modifica el paquete oficial e inyecta desde fuera el fondo, los colores y la atmósfera visual en la interfaz real.
+![Ilustración del aspecto del tema](/theme/codex-dream-skin/article/codex-dream-skin-home.jpg)
 
-## Qué es Codex Dream Skin
+La ilustración ya alojada aquí no es una prueba de esta revisión de versión. Tampoco demuestra que el cuadro de entrada, los botones de aprobación y todas las vistas de tareas funcionen correctamente.
 
-Codex Dream Skin es un proyecto open source para cambiar el aspecto de la app de escritorio de Codex. Coloca un fondo 16:9 detrás de Codex y se adapta automáticamente al modo claro u oscuro, la posición del foco y la paleta. La barra lateral, las tarjetas sugeridas, el selector de proyectos y el cuadro de entrada siguen siendo controles nativos interactivos.
+## Versión y estado de verificación
 
-![Codex Dream Skin aplica un fondo 16:9 a la pantalla inicial de Codex](/theme/codex-dream-skin/article/codex-dream-skin-home.jpg)
+| Elemento | Resultado de esta revisión |
+|---|---|
+| Fuente | [Repositorio del proyecto](https://github.com/Fei-Away/Codex-Dream-Skin) y [versiones publicadas](https://github.com/Fei-Away/Codex-Dream-Skin/releases) |
+| Versión observada | [v1.5.18](https://github.com/Fei-Away/Codex-Dream-Skin/releases/tag/v1.5.18), comprobada el 18-09-2026, commit `34335d27d54300eccb325cc652f6c93fef428b84`; no instalada |
+| Cliente local | Info.plist leído sin modificar: 26.911.61220, build 9647, identificador com.openai.codex |
+| Combinación tema/cliente probada | Ninguna; instalación, interacciones y retirada no probadas |
+| Compatibilidad con Windows | No probada por este manual |
+| Resultado de recuperación | No probado; a continuación hay pasos y criterios de aceptación |
 
-_Pantalla inicial real de Codex tras aplicar el tema; la barra lateral, las tarjetas y el cuadro de entrada siguen siendo controles nativos._
+Las notas de la versión mencionan que algunas correcciones de interfaz se comprobaron con macOS Codex 26.901.41123. Es distinta de la 26.911.61220 registrada aquí, así que no demuestra compatibilidad de esta combinación. El enlace de instalación para macOS está fijado a v1.5.18; consulta la etiqueta correspondiente para otras versiones.
 
-Es muy distinto de la antigua forma de modificar binarios para cambiar el aspecto:
+Leer la versión del cliente aporta información del entorno, no prueba la compatibilidad del tema. Usa el [registro de compatibilidad y recuperación](/es/guide/reference/resource-compatibility/) para guardar tus propias pruebas.
 
-| Enfoque | Modifica archivos oficiales | Rompe la firma | Controles nativos | Libertad de imagen |
-| --- | --- | --- | --- | --- |
-| Inyección CDP (Dream Skin) | No | No | Sí | Alta |
-| Modificar `app.asar` | Sí | Sí | Parcial | Media |
-| Modo claro/oscuro oficial | No | No | Sí | Ninguna |
+## Antes de instalar
 
-Modificar `app.asar` era una práctica común: desempaquetar los recursos de Codex, cambiar CSS e imágenes y volver a empaquetar. El problema es que la firma deja de ser válida, cada actualización de Codex puede obligar a repetir el proceso y el software de seguridad puede bloquearlo.
+1. Elige una versión concreta en las publicaciones del proyecto. Anota nombre del paquete, URL de descarga y SHA-256. Si el autor proporciona un archivo de sumas, compáralo con el paquete. Un hash coincidente prueba que los archivos coinciden, no que el programa sea seguro.
+2. Guarda las versiones del cliente y del sistema, la configuración del tema y copias de imágenes personalizadas que tengas derecho a usar. Anota dónde se encuentra la copia de seguridad.
+3. Comprueba primero la pantalla de inicio, las tareas, la entrada, el desplazamiento, la búsqueda y la interfaz de aprobaciones sin tema como referencia.
+4. Lee las instrucciones de instalación, actualización y retirada correspondientes a la versión elegida. La documentación de la rama main puede ser más reciente que el instalador.
 
-La inyección CDP no modifica los binarios oficiales. Inyecta estilos y scripts desde fuera de Codex mediante un puerto de depuración, sin tocar `.app`, `app.asar` ni la firma de código.
+En macOS, consulta la [guía de instalación del proyecto](https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md); en Windows, la [guía para Windows](https://github.com/Fei-Away/Codex-Dream-Skin/blob/main/docs/install-windows.md). No atribuyas por defecto un aviso de «dañado» o un bloqueo del sistema a la falta de firma. Comprueba fuente, integridad del paquete y error concreto antes de seguir.
 
-Puede cambiar temas, cambiar fondos, guardar varias apariencias y restaurar el aspecto oficial con una acción.
+## Qué comprobar después de cambiar una imagen
 
-No hace estas cosas:
+El proyecto ofrece gestión de fondos y temas; los nombres de menús dependen de la versión. Usa imágenes para las que tengas derechos y comprueba los modos claro y oscuro, el tamaño de ventana y las páginas de tareas reales.
 
-- El instalador no escribe en silencio una API Key ni una Base URL de terceros; el tema y la configuración de relay se mantienen separados.
-- No modifica el directorio oficial de instalación ni la firma.
-- CDP solo se enlaza a `127.0.0.1`; mientras el tema esté activo, evita ejecutar programas locales de origen desconocido.
+- ¿Siguen siendo legibles, clicables y enfocables el cuadro de entrada, los botones y la información de aprobación?
+- ¿Oculta el fondo resultados de búsqueda, salidas largas, diffs de código o errores?
+- Tras cambiar de página y reiniciar, ¿coincide el tema mostrado con el elegido?
+- Al desactivar el tema, ¿vuelve la interfaz original y sigue reproduciéndose el problema?
 
-El proyecto declara que no es un producto oficial de OpenAI. Al elegir restaurar y desinstalar, Codex vuelve al aspecto oficial y la conexión CDP se corta.
+Si el contenido queda oculto o los controles dejan de funcionar, deja de usar el tema y sigue la recuperación. No ocultes el problema superponiendo más estilos.
 
-Enlaces del proyecto:
+## Desinstalación y recuperación
 
-| Tipo | URL | Uso |
-| --- | --- | --- |
-| GitHub del proyecto | [github.com/Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) | Ver código fuente, README, issues y guías de instalación |
-| Sitio del proyecto | [codex-dream-skin.org](https://codex-dream-skin.org/) | Leer descripción del proyecto, explicación técnica, límites de seguridad y tutoriales |
-| Descargas | [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) | Descargar instaladores macOS `.dmg` y Windows `.exe` |
-| Biblioteca de temas / Studio online | [DreamSkin.cc](https://dreamskin.cc/) | Explorar temas, probarlos online, crear y enviar temas |
+La guía de macOS del proyecto pide usar primero «Restaurar original y desinstalar» en la barra de menús y luego retirar la aplicación del tema. Los temas e imágenes del usuario se pueden conservar o eliminar por separado. Guarda antes los recursos personalizados. En Windows, sigue la guía de la versión correspondiente y no reutilices las rutas de macOS.
 
-## Instalación y primeros pasos
+Estas son recomendaciones del manual para comprobar la recuperación, no el registro de una prueba ya realizada:
 
-Antes de instalar, abre Codex una vez y confirma que la app de escritorio inicia, permite iniciar sesión y se cierra correctamente. Así la herramienta puede encontrar el entorno local correcto.
+1. Guarda el trabajo del cliente y anota el tema actual y los archivos que quieres conservar.
+2. Usa el proceso de recuperación del tema y conserva los avisos de éxito, fallo o estado sin confirmar.
+3. Abre Codex de nuevo desde su acceso habitual y comprueba fondo, texto, entrada y navegación entre tareas.
+4. Confirma que el tema ya no arranca automáticamente ni vuelve a inyectarse. Si hacen falta comprobaciones técnicas, examina procesos y conexiones de depuración sin cerrar indiscriminadamente otros procesos con nombre parecido.
+5. Retira la aplicación solo después de pasar las comprobaciones. Conserva las imágenes personalizadas hasta decidir por separado que ya no las necesitas.
 
-### macOS
+Una copia de seguridad, la salida del desinstalador o el cierre de la ventana del tema no prueban por sí solos la recuperación. Si el resultado es incierto, guarda los registros y consulta los Issues del proyecto; no afirmes que se restauró. No borres todo el directorio de configuración de Codex para desinstalar el tema.
 
-En macOS normalmente se descarga el `.dmg` desde Releases del proyecto. Después de instalar, arrastra `Codex Dream Skin.app` a Applications y gestiona temas, fondos y restauración desde la barra de menús.
+## Alcance de estas conclusiones
 
-Si el sistema dice que la app está "dañada" o no puede abrirse, suele ser Gatekeeper bloqueando una app sin firmar. Permítela en Ajustes del sistema > Privacidad y seguridad solo después de confirmar que la fuente es confiable.
-
-### Windows
-
-En Windows normalmente se descarga el instalador desde Releases, o se sigue el flujo PowerShell documentado por el proyecto. Tras instalar, abre la herramienta desde la bandeja del sistema para gestionar temas y fondos.
-
-Si SmartScreen muestra una advertencia azul, la causa habitual es la falta de certificado de firma de código. Continúa solo si confías en la fuente.
-
-### Problemas frecuentes
-
-| Síntoma | Causa | Solución |
-| --- | --- | --- |
-| macOS dice que la app está "dañada" | App sin firmar bloqueada por Gatekeeper | Ajustes del sistema -> Privacidad y seguridad -> Abrir igualmente |
-| Advertencia azul de Windows SmartScreen | Falta certificado de firma | Más información -> Ejecutar de todos modos |
-| No hay efecto tras instalar | Codex no se abrió una vez antes | Abre Codex, inicia sesión, sal y luego instala Dream Skin |
-| El tema falla tras actualizar Codex | La actualización pudo cambiar rutas internas | Descarga el instalador más reciente e instala encima |
-
-Instalar encima no borra los temas ni las imágenes guardadas.
-
-## Fondos y gestión de temas
-
-Después de instalar, usa "Cambiar fondo" desde la barra de menús de macOS o la bandeja de Windows y elige una imagen.
-
-![Vista previa y cambio de temas en Codex Dream Skin](/theme/codex-dream-skin/article/codex-dream-skin-gallery.jpg)
-
-_Tras cambiar la imagen, revisa inicio, barra lateral, cuadro de entrada y páginas de tareas para asegurarte de que el uso real sigue siendo claro y legible._
-
-Después de elegir la imagen, el motor analiza localmente brillo, color dominante, posición de foco y qué lado tiene menos información visual; luego genera variables de tema adaptadas a esa imagen. Los temas pueden guardarse, nombrarse y cambiarse con una acción.
-
-Gothic Void Crusade es el tema predeterminado del instalador público y fue aportado por la comunidad. También puedes importar cualquier fondo puro 16:9.
-
-Reglas para imágenes:
-
-- Recomendado: `2560 x 1440` en 16:9, sin ventanas, barras laterales, texto ni logos incrustados.
-- Evita colocar el sujeto principal sobre el cuadro de entrada, la barra lateral o las tarjetas sugeridas de Codex.
-- Evita fondos demasiado brillantes, recargados o de contraste extremo.
-- Antes de compartir o vender, confirma derechos de imagen, personajes, marcas, fuentes e IP.
-
-Las imágenes que no cumplan la composición también funcionan, pero el contenido nativo puede tapar el sujeto o perder legibilidad.
-
-## Cómo funciona
-
-### Inyección CDP
-
-CDP, Chrome DevTools Protocol, es el protocolo de depuración remota usado por Chromium. Las herramientas de desarrollo de Chrome lo usan para depurar páginas móviles: el navegador abre un puerto local y herramientas externas pueden inyectar CSS y JavaScript.
-
-Codex para escritorio está construido con Electron, también basado en Chromium. El flujo de Dream Skin puede simplificarse así:
-
-![Flujo de inyección CDP del artículo](/theme/codex-dream-skin/article/cdp-injection-flow.png)
-
-```text
-Iniciar la herramienta de temas
-  -> Abrir Codex con un endpoint CDP local
-  -> Conectar con el proceso renderer de Chromium de Codex
-  -> Inyectar CSS de tema y DOM decorativo
-  -> Codex sigue funcionando y la capa de tema controla la apariencia
-```
-
-Al detener el inyector, valida PID, ruta del ejecutable y hora de inicio para evitar cerrar otro proceso por error.
-
-El CSS inyectado mantiene la interacción nativa de barra lateral, cuadro de entrada y tarjetas. El fondo queda debajo de los controles y una capa translúcida ayuda a conservar la legibilidad.
-
-### Colores adaptativos: cálculo local, sin subir datos
-
-Al cambiar una imagen, Dream Skin la reduce localmente en Canvas, extrae color dominante, brillo y foco, y calcula variables CSS en HSL, como color de acento, secundario y resaltado.
-
-En modo oscuro parte de un color dominante oscuro para calcular acentos, secundarios y grises neutros. En modo claro hace lo inverso: parte de grises claros y calcula texto y acentos más oscuros. Al cambiar la imagen, la paleta completa se recalcula automáticamente.
-
-Con conciencia de ruta, la página inicial conserva el fondo completo y el degradado; al entrar en una tarea, el fondo pasa a una capa ambiental de baja interferencia para dar prioridad visual al contenido.
-
-## Para terminar
-
-La idea de la inyección CDP es aplicar estilos desde fuera de la app sin modificar binarios oficiales. No solo sirve para Codex: en teoría, cualquier app basada en Electron podría personalizar temas de forma similar si expone un puerto CDP.
-
-La necesidad de personalizar el entorno de desarrollo es real. Un buen tema no solo debe verse más interesante; también debe preservar interacciones nativas, poder restaurarse, poder inspeccionarse y no mezclar mejoras visuales con configuración del modelo.
+CDP puede modificar el contenido de la página, así que «no cambia el paquete oficial» no implica que no afecte al uso. Vuelve a verificar tras cambios de interfaz. Revisa por versión las afirmaciones del proyecto sobre procesamiento local, acceso a red y recuperación. Este manual no promete que las imágenes nunca se suban, que todas las versiones puedan restaurarse con un clic ni que una actualización por sobrescritura no pierda datos.

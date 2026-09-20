@@ -3,7 +3,7 @@ title: Phương pháp quy trình
 description: Phương pháp cộng tác có thể lặp lại — không gắn một giao diện sản phẩm duy nhất; nhấn mạnh điểm kiểm tra và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

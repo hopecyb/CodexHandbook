@@ -3,7 +3,7 @@ title: Command Rules
 description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
 locale: en
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

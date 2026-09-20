@@ -3,22 +3,21 @@ title: Política de versiones del handbook
 description: Explica el estado del contenido, las fechas de verificación y cómo se actualiza de forma continua.
 locale: es
 source_locale: zh-CN
-source_revision: 3f4e05e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: a608dc3
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 8
 ---
 
 ## Actualización continua
 
-Este handbook no se congela a largo plazo a un número de versión concreto de Codex. El producto cambia, así que cada página marca su fiabilidad actual con un estado y una fecha de verificación.
+Este handbook no queda congelado indefinidamente en una sola versión de Codex. El producto cambia; por eso, cada página explica el alcance de lo comprobado mediante su estado, fecha de verificación y pruebas concretas. La fecha por sí sola no es una puntuación de fiabilidad.
 
 ## Contenido
 
 - Por qué este handbook no puede asumir que nada cambie nunca
-- Cómo leer el estado y la fecha de verificación al final de la página
+- Cómo leer el estado y la fecha de verificación al principio de la página
 - A quién creer si hay conflicto con lo oficial
 
 ## Estados de página
@@ -41,9 +40,11 @@ Este handbook no se congela a largo plazo a un número de versión concreto de C
 - `outdated`: pudo ser correcto antes; ahora conviene desconfiar de lo caduco
 - `archived`: se conserva como referencia, no como contenido de la línea principal actual
 
-## Las tres líneas del pie
+## Registro de verificación y actualización del contenido
 
-En la fase MVP, cada página marca al final: **Estado / Productos aplicables / Última verificación**. El contenido que caduca pronto (instalación, cuentas, permisos, modelos) debería enlazar a lo oficial.
+Al principio de cada página se muestran por separado el estado editorial, el método de verificación, la fecha de verificación y las pruebas aplicables. `editorial` indica revisión editorial; `source-checked`, comprobación de fuentes; y `run-tested`, ejecución de un ejemplo en el entorno documentado. Ningún método sustituye a otro. Las notas históricas se conservan por separado y no se convierten automáticamente en pruebas de una ejecución actual.
+
+[Actualizaciones y correcciones del contenido](/es/guide/updates/) explica los cambios concretos y sus efectos. Al final de las páginas con texto chino se puede abrir un borrador de corrección en GitHub con información de la página actual. Hay que revisarlo y quitar los datos sensibles antes de enviarlo.
 
 ## Base oficial
 
@@ -75,15 +76,8 @@ Puedes repartirlo así:
 
 Si te preocupa que una página esté desactualizada, mira estas tres cosas:
 
-1. Si el estado del pie es `review`, `verified` u `outdated`
+1. Si el estado editorial al principio es `review`, `verified` u `outdated`
 2. Si la fecha de última verificación está lejos de hoy
 3. Si habla de conceptos, o de instalación, configuración y permisos, que cambian con facilidad
 
 Cuando se trate del comportamiento, parámetros y reglas más recientes, al final manda la documentación oficial actual.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Se revisó según el sistema de 6 estados que usa este handbook, las reglas del pie de página y el principio de prioridad oficial; esta página explica la política de versiones del sitio y el método de lectura, y no depende de parámetros de versión concretos del producto.  
-**Última verificación:** 2026-07-26

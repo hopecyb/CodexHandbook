@@ -1,58 +1,40 @@
 ---
-title: Function Calling
-date: 2023-06-13
-year: 2023
-summary: 'Models are fundamentally text generators — they can describe actions but cannot execute them. Function calling introduces a “capability menu,” allowing the model to choose tools and fill in structured arguments when needed. This turns plain responses into real, executable actions, marking the shift from “just talking” to “actually doing.”'
-phase: mainstream
-trend: stable
-signal: well-calibrated
-tags: [function-calling, tools, api, orchestration, reliability]
-authored_by: ai-assisted
+title: "Function Calling"
+description: "A model can output a proposed function name and structured arguments; the application validates them and decides whether to execute. Generating arguments, obtaining authorization, and executing are three separate steps."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "The event and project details below were checked against the primary source; learning advice is the author's judgment and was not marked as a live product test."
+  evidence:
+    - label: "Function calling launch announcement"
+      href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: 2624937
+source_revision: c362c48
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Function Calling
+## Verifiable event and scope
 
-- Official release date: 2023-06-13
-- Official references:
-  - OpenAI announcement: https://openai.com/index/function-calling-and-other-api-updates/
-  - OpenAI docs guide: https://platform.openai.com/docs/guides/function-calling
-- Evolution note: This capability line was later generalized into the broader `Tool Use` narrative. See `2025-03-tool-use`.
+**Date: 2023-06-13 · Type: product launch.** OpenAI announced function calling for the Chat Completions API available at the time. This date marks one vendor's API release, not the beginning of all tool calling.
 
-## What It Is
+Source: [Function calling launch announcement](https://openai.com/index/function-calling-and-other-api-updates/). Checked on 2026-09-18; the source publication date and this page's verification date mean different things.
 
-Function Calling is a capability that makes model output strictly follow function signatures (JSON parameter schema) and trigger external tool/API execution.
+## What problem it addresses
 
-Its core value is not the act of "calling a function" itself. The key is converting model intent into executable, verifiable, and traceable structured interface requests.
+A model can output a proposed function name and structured arguments; the application validates them and decides whether to execute. Generating arguments, obtaining authorization, and executing are three separate steps.
 
-## What Step It Moved AI Application Engineering From and To
+## Learning advice and scope
 
-It moved AI application engineering from "the model gives natural-language suggestions" to "the model outputs executable instructions that enter system pipelines."
+The following is this site's teaching judgment, not a measurement of industry adoption or effectiveness:
 
-Before Function Calling, many systems had to parse model text again, which was brittle and hard to control. After it, developers could organize execution directly around signatures, parameter validation, and error handling, significantly improving reliability.
+Prioritize inputs that can be validated, explicit permission scopes, and failure responses. Valid JSON does not mean the arguments are semantically correct, nor does it grant permission to write to an external system. Model names and API examples in the historical launch post are not current configuration guidance.
 
-This step made Agent systems, workflow orchestration, and business automation truly engineerable.
+## Hands-on exercise
 
-## What Stage It Is In Now
+[Dry-run Issue triage suggestions](/en/cases/use-cases/team-automation/issue-triage-suggestions/): check that structured suggestions for synthetic Issues are tied to their inputs; keep a human review queue. This exercise tests data boundaries without calling the historical API or release label.
 
-I currently mark Function Calling as `mainstream`.
-
-Structured tool invocation has become a baseline capability of production LLM systems, and most serious AI applications depend on it in some form.
-
-Its capability boundary is also expanding from function argument calls toward broader tool interaction, which is the context for the later Tool Use narrative.
-
-## What It Might Replace
-
-It replaces brittle chains like "text instruction + regex parsing + manual fallback."
-
-As this pattern matures, developers rely less on loose prompt constraints and more on typed interfaces with execution feedback loops.
-
-## What Might Replace It
-
-It is more likely to be absorbed by higher-level abstractions than fully eliminated.
-
-Future frameworks for broader Tool Use, multi-tool orchestration protocols, and standardized execution environments will likely internalize Function Calling as a foundational layer.
+[Return to the roadmap and date conventions](/en/ai-roadmap/)

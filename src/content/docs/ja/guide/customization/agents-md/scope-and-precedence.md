@@ -1,14 +1,26 @@
 ---
-title: AGENTS.md のスコープと優先順位
-description: グローバル、プロジェクトルート、現在のディレクトリにあるルールが、どのように検出・統合されるかを正確に理解します。
+title: "AGENTS.md のスコープと優先順位"
+description: "グローバル、プロジェクトルート、現在のディレクトリにあるルールが、どのように検出・統合されるかを正確に理解します。"
+contentType: reference
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "公式の検出・統合ルールを項目ごとに照合しました。ディレクトリ例と読み込み確認の案内は学習用であり、複数のクライアントで実行検証したという主張ではありません。"
+  evidence:
+    - label: "AGENTS.md"
+      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 locale: ja
 source_locale: zh-CN
-source_revision: 698ab44
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: b5f31cc
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
 Codex は実行を開始するたびに、指示のチェーンを組み立てます。重要なのは、「組織ポリシー、設定、プロンプト」を含む推測上の順位表ではなく、まず `AGENTS.md` 自体の検出順序を正確に理解することです。
@@ -48,7 +60,7 @@ repo/
 シークレットのローテーションは行わず、make test-payments を実行して実際の結果を報告してください。
 ```
 
-プロンプトを書いても、システム、組織、サンドボックス、権限による越えられない境界が利用可能になるわけではありません。競合があるときは「以前のルールを無視して」の一言で優先順位を推測せず、まず Codex に読み込んだ instruction sources を列挙させ、その後でタスク範囲を狭めてください。
+プロンプトを書いても、システム、組織、サンドボックス、権限による越えられない境界が利用可能になるわけではありません。競合があるときは、関係する指示の出典と適用範囲を Codex に列挙させてください。調整できるプロジェクトの既定ルールと、実際の実行制限を区別します。範囲が明確で、すでに許可され、上位の指示とも競合しないなら作業を続けます。情報や権限が本当に足りない場合にだけ、具体的な妨げを説明してください。詳しい対照は[コンテキストの優先順位](/ja/guide/context/context-priority/)を参照してください。
 
 ## 実際に読み込まれた内容を確認する
 
@@ -75,11 +87,3 @@ fallback は、同じディレクトリにより優先度の高いファイル�
 ## 公式情報
 
 - [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-
----
-
-**ステータス：** verified
-
-**対象製品：** App、CLI、IDE、Cloud
-
-**最終確認：** 2026-08-26

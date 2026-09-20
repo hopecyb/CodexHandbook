@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu tự động hóa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu tự động hóa
 description: Tác vụ lặp và quy trình tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu tự động hóa
 
 Hiểu lầm thường gặp của tác vụ tự động hóa: chỉ nghĩ «có chạy tự động được không», mà chưa nghĩ:
 
@@ -61,10 +65,3 @@ Giá trị của mẫu tự động hóa là để nó chạy lâu dài và an t
 
 - [Prompt cho tác vụ dài](/vi/prompts/long-running-tasks/)
 - [Case tự động hóa báo cáo ngày](/vi/cases/automate-a-daily-report/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu tự động hóa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

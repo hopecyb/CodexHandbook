@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅总览能力模块与权威章节归属；站内链接、结构图与模块映射已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 能力地图
 description: 总览提示词、工具、扩展、多 Agent 与治理等能力模块。
 sidebar:
@@ -73,10 +78,3 @@ Skills、MCP、Hooks、自动化当然都很强，但它们解决的更多是效
 | 阅读顺序 | [学习路径](/guide/learning-paths/) |
 
 扩展选型总图见 [扩展能力地图](/skills/capability-map/)，产品对照见 [功能对照](/guide/reference/feature-comparison/)。不同入口的能力差异放在功能对照页。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅总览能力模块与权威章节归属；站内链接、结构图与模块映射已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

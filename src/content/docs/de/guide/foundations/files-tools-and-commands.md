@@ -3,7 +3,7 @@ title: "Dateien, Werkzeuge und Befehle"
 description: "Erklärt, wie Codex Dateien liest und schreibt, Befehle ausführt und Werkzeuge nutzt."
 locale: de
 source_locale: zh-CN
-source_revision: 8c0e875
+source_revision: 9d65338
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

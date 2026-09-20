@@ -3,7 +3,7 @@ title: PDF et documents
 description: Périmètre, outils et Vérification lorsque Codex lit, résume ou génère des PDF et longs documents.
 locale: fr
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

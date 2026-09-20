@@ -3,7 +3,7 @@ title: 画像プロンプト
 description: Codex にスクリーンショット、デザイン稿、ホワイトボード画像を渡すとき、実行しやすい結果を得る質問の仕方。
 locale: ja
 source_locale: zh-CN
-source_revision: 979c08c
+source_revision: 953a69b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

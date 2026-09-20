@@ -1,62 +1,40 @@
 ---
-title: Tool Use
-date: 2025-03-11
-year: 2025
-summary: 'This is not a brand-new concept, but a system-level generalization of function calling. Function calling answers “how to call,” while tool use expands “what can be called.” Tools now include search engines, code interpreters, browsers, and databases. It extends the model’s capability boundary from language to all callable external resources.'
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [tool-use, tools, agent, orchestration, function-calling]
-authored_by: ai-assisted
+title: "Tool Use"
+description: "Tool use involves selecting a tool, constructing arguments, executing it, reading its result, and deciding what to do next. One successful call does not mean the whole task is complete; execution errors and issues found by business checks must also be distinguished."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "The event and project details below were checked against the primary source; learning advice is the author's judgment and was not marked as a live product test."
+  evidence:
+    - label: "Announcement of new tools for agents"
+      href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-reviewed_at: 2026-08-26
-source_revision: 902c66c
+source_revision: efd508a
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Tool Use
+## Verifiable event and scope
 
-- Capability upgrade milestone: 2025-03-11
-- Official references:
-  - OpenAI (New tools for building agents): https://openai.com/index/new-tools-for-building-agents/
-  - Anthropic (Tool use overview): https://docs.anthropic.com/en/docs/build-with-claude/tool-use
-- Evolution note: This entry records the capability generalization from `Function Calling -> Tool Use`, not a separate underlying mechanism disconnected from Function Calling.
+**Date: 2025-03-11 · Type: product launch.** OpenAI released new tools for agents, including the Responses API, built-in tools, and Agents SDK. This announcement marks one vendor's product release, not the invention of model tool use.
 
-## What It Is
+Source: [announcement of new tools for agents](https://openai.com/index/new-tools-for-building-agents/). Checked on 2026-09-18; the source publication date and this page's verification date mean different things.
 
-Tool Use is a broader interaction paradigm where models do more than emit one set of function arguments. They can choose, call, combine, and coordinate multiple external tools during task execution.
+## What problem it addresses
 
-In this paradigm, function calling is one specific tool interaction form. Engineering focus expands to ecosystem access, invocation strategy, execution feedback, and multi-step collaboration.
+Tool use involves selecting a tool, constructing arguments, executing it, reading its result, and deciding what to do next. One successful call does not mean the whole task is complete; execution errors and issues found by business checks must also be distinguished.
 
-## What Step It Moved AI Application Engineering From and To
+## Learning advice and scope
 
-It moved AI application engineering from "structured calls to a single function/API" to "task-oriented orchestration across multiple tools."
+The following is this site's teaching judgment, not a measurement of industry adoption or effectiveness:
 
-That expands engineering focus from parameter correctness to tool selection, call order, context transfer, failure recovery, and result synthesis. System complexity rises, but so does capability ceiling.
+Give repeatable checks to explicit tools, and retain exit codes, output, and recovery procedures. First demonstrate that the manual steps work; then consider scheduling and notifications.
 
-## Why It Deserves Its Own Entry
+## Hands-on exercise
 
-Tool Use and Function Calling are on the same capability line, but Tool Use represents boundary expansion and an engineering focus shift.
+[Five failure-recovery walkthroughs](/en/guide/reference/troubleshooting/failure-recovery-lab/): reproduce a set of failures, read the before logs, change only one variable, and compare the after results. The exercise uses local scripts and does not require calling the APIs in the announcement.
 
-Function Calling emphasizes "make one call correctly." Tool Use emphasizes "use a full tool system effectively." Splitting them into separate timeline entries makes this upgrade inflection visible.
-
-## What Stage It Is In Now
-
-I currently mark Tool Use as `emerging`.
-
-Major platforms are clearly pushing it as a core capability direction, but cross-platform protocols, observability standards, and cost-control practices are still evolving quickly.
-
-The trend is clear, but best practices are not fully settled.
-
-## What It Might Replace
-
-It can replace part of semi-automated flows built as "single function call + manual step stitching."
-
-As Tool Use matures, systems will rely more on model-driven dynamic multi-tool collaboration and less on hardcoded orchestration in business logic.
-
-## What Might Replace It
-
-It is more likely to be absorbed into higher-level execution standards than disappear.
-
-Unified task-graph protocols, standardized agent communication layers, and system-level execution governance platforms may further abstract today's Tool Use patterns.
+[Return to the roadmap and date conventions](/en/ai-roadmap/)

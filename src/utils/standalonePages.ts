@@ -44,9 +44,9 @@ export const standalonePages: Record<StandalonePageId, StandalonePage> = {
 		defaultLang: 'zh-CN',
 		supportedLocales: ['root', 'en', 'zh-tw', 'fr', 'ja', 'ko', 'es', 'de', 'pt', 'vi'],
 		label: {
-			'zh-CN': 'ChatGPT全球价格',
+			'zh-CN': 'ChatGPT 价格参考',
 			en: 'ChatGPT Global Prices',
-			'zh-TW': 'ChatGPT全球價格',
+			'zh-TW': 'ChatGPT 價格參考',
 			fr: 'Prix mondiaux ChatGPT',
 			ja: 'ChatGPT 世界価格',
 			ko: 'ChatGPT 글로벌 가격',

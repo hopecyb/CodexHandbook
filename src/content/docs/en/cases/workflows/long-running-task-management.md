@@ -3,7 +3,7 @@ title: Long-running task management
 description: Large tasks across hours or sessions—checkpoints, compaction, delegation, and exit conditions.
 locale: en
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

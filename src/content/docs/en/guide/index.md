@@ -1,15 +1,16 @@
 ---
 title: Codex guide
+prev: false
+next:
+  link: /en/guide/start-here/
+  label: Start here
 description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
 locale: en
 source_locale: zh-CN
-source_revision: 6019b85
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+source_revision: 297497e
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
-# Codex guide
 
 This section helps you understand what Codex is, what it is good for, and how to move from first use to a stable workflow.
 
@@ -23,6 +24,12 @@ You do not need every term, product, and workflow upfront. Find your current sta
 - Which client to pick first
 - What to learn after your first task
 - Where to return for permissions, context, and verification questions
+
+## Assets you can use
+
+- [Beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/)
+- [How to choose a client](/en/guide/choose-your-client/)
+- [Result verification and definition of done](/en/guide/verification/)
 
 ## Recommended order
 

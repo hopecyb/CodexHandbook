@@ -3,7 +3,7 @@ title: Examples
 description: Learn how configuration and AGENTS.md should be written from real examples, not abstract principles alone.
 locale: en
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

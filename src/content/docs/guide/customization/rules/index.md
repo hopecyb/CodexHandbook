@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / Cloud"
+  basis: "已按本仓库当前 rules 子章节结构与入口链接交叉复核；本页只承担“按 allow/deny、命令规则、团队规则分组导航”的作用，不单独声明具体规则实现或默认拦截行为。"
+  checkedAt: "2026-07-26"
 title: 规则
 description: allow/deny、命令规则与团队策略的说明页，先分清哪些该拦、哪些该提醒。
 ---
@@ -20,10 +25,3 @@ description: allow/deny、命令规则与团队策略的说明页，先分清哪
 - 团队里怎样保证大家面对同类风险时是同一套边界
 
 规则是为了把边界说死，让系统按边界执行。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / Cloud  
-**核验依据：** 已按本仓库当前 rules 子章节结构与入口链接交叉复核；本页只承担“按 allow/deny、命令规则、团队规则分组导航”的作用，不单独声明具体规则实现或默认拦截行为。  
-**最近核验：** 2026-07-26

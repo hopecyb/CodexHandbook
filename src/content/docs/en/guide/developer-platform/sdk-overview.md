@@ -1,97 +1,88 @@
 ---
-title: SDK Overview
-description: Start Codex tasks from your application via the official SDK—authentication, sessions, and error-handling concepts.
-locale: en
-source_locale: zh-CN
-source_revision: a701e2d
-translation_status: reviewed
-translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+title: 'SDK Overview: Local Tasks and Client Integration'
+description: Distinguish the Codex SDK, non-interactive CLI, App Server, and a remote task service you build yourself.
+contentType: reference
+audiences: [developer]
+level: intermediate
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Execution location, thread interfaces, and integration boundaries were checked against official SDK and App Server documentation. The minimal example was syntax-checked only; no authenticated model call was made.
+  evidence:
+    - label: Official Codex SDK documentation
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: Official Codex App Server documentation
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: e888ae6
 ---
 
-The SDK (name and language per [official docs](https://developers.openai.com/codex)) lets you create tasks, poll status, and fetch results from **your own service**, not only via the terminal TUI.
+The Codex SDK lets a program control a local Codex Agent. “Local” means the machine running the SDK and agent, which could be your computer or a CI runner you manage. Do not assume this is a hosted HTTP service for creating cloud tasks, polling them, and downloading artifacts. See the [official SDK documentation](https://learn.chatgpt.com/docs/codex-sdk).
 
-If “SDK” is new to you, think of it as a development toolkit for programs to call Codex—not a UI you click through.
+## Choose an entry point for your integration goal
 
-In other words, it fits when **your system calls Codex**. For one-off tasks, you usually do not need the SDK yet.
-
-## What this page covers
-
-- When to use the SDK vs CLI `exec`
-- Authentication and tenant isolation
-- How to pair with webhooks and queues
-
-Platform overview: [Developer platform](/en/guide/developer-platform/)
-
-## SDK vs CLI
-
-| | SDK | CLI `exec` |
+| Goal | Start with | You still manage |
 |---|---|---|
-| Integration point | Backend services, internal tools | Shell, GitHub Actions |
-| State management | Your code owns it | Process exit code |
-| Best for | Multi-tenant products, custom UI | Simple pipelines |
+| Run one task in a script | [`codex exec`](/en/guide/developer-platform/non-interactive/codex-exec/) | Working directory, input, exit status, and artifact storage |
+| Run and continue tasks from a program | Codex SDK | Program lifecycle, environment, failure handling, and verification |
+| Build a client with sessions, approvals, and streaming events | App Server | Client interactions, connections, identity handling, and deployment |
+| Offer a multi-user remote task platform | Your own service architecture | Queues, tenant isolation, credentials, storage, cancellation, and callbacks |
 
-Many teams use **CLI in CI, SDK in product**.
+The last row is an engineering choice, not a hosted platform capability bundled with the SDK. Official guidance positions the SDK for automation and CI, and App Server for deeper client integration. App Server exchanges requests and events over bidirectional JSON-RPC. See the [App Server documentation](https://learn.chatgpt.com/docs/app-server).
 
-## Common misconceptions
+## A minimal TypeScript SDK call
 
-### 1. What is the difference between SDK and CLI?
+The official TypeScript package is `@openai/codex-sdk` and requires Node.js 18 or newer. The following example uses JavaScript module syntax to show the same package's basic interface. It is not a complete production service.
 
-Roughly:
+Install the dependency in a dedicated practice directory, retaining the resolved version and lockfile:
 
-- **CLI**: humans or scripts call from the terminal
-- **SDK**: you write code to embed Codex in your service
+```sh
+npm init -y
+npm install --save-exact @openai/codex-sdk
+npm ls @openai/codex-sdk
+```
 
-### 2. Should I learn the SDK first?
+Prepare a `README.md` without sensitive information, then save the following as `example.mjs`:
 
-Usually not.
+```js
+import { Codex } from '@openai/codex-sdk';
 
-If you mainly want to learn Codex, local entry points and interactive CLI are usually a better first step.
+const agent = new Codex();
+const session = agent.startThread();
+const answer = await session.run(
+  'Read only README.md in the current directory and summarize its purpose in three bullets. Do not modify files or perform external actions.'
+);
+console.log(answer.finalResponse);
+```
 
-### 3. When is the SDK worth it?
+Run `node example.mjs` afterward. Authenticate for your chosen environment and check the actual sandbox and approval settings before running. “Read only” in the prompt is a task constraint, not a substitute for execution-environment restrictions. A model call may consume account usage; this page has not installed the package or made the call for you.
 
-When you start hitting needs like:
+The method names and response field were checked against the [official example](https://learn.chatgpt.com/docs/codex-sdk). This handbook syntax-checked the JavaScript only; it did not pin and test a particular SDK release or invent successful output. When reproducing the example, record the package version, CLI/runtime, operating system, authentication method (without credentials), and result.
 
-- Triggering Codex tasks from your product
-- Managing task state and results yourself
-- Building custom UI, permissions, and workflows
+## Continue and resume tasks
 
-The SDK fits “connecting systems programmatically,” not as the main entry for first-time Codex users.
+Call `run()` again on the same thread object to continue it. You can pass an existing thread ID to `resumeThread()` to resume. Which threads can be resumed depends on where their state is stored. Do not treat an ID as a cloud URL queryable from any machine. Official documentation also covers a Python interface; check its own method names and dependencies instead of mixing code from the two languages. See [thread calls and language interfaces](https://learn.chatgpt.com/docs/codex-sdk).
 
-## Core concepts (language-agnostic)
+After resuming, check whether the current files still match the history. See [handoff and resumption](/en/guide/agent-work/handoff-and-resume/).
 
-1. **Authentication**: org API key or OAuth delegation—follow least scope
-2. **Task / thread**: one user request maps to a traceable ID
-3. **Tool policy**: server-side sandbox and approval aligned with clients
-4. **Results**: message history, file diffs, artifact URLs (per API)
-5. **Errors**: distinguish retryable (429) from non-retryable (400)
+## What to check after a successful call
 
-Error index: [Error reference](/en/guide/reference/error-reference/)
+1. **Execution location:** Record the working directory and files actually read or changed, not only the prompt.
+2. **Task result:** Inspect the response, file diff, and tests. A `finalResponse` does not mean the business acceptance criteria passed.
+3. **Failure category:** Distinguish local dependency or process failures, authentication failures, model service errors, and task verification failures. Do not reduce every exception to 400 or 429.
+4. **Retry effects:** Check whether files or external effects already exist before retrying; do not simply resubmit the same request.
+5. **Permissions:** You control the runtime and available tools. The SDK name does not grant Cloud access, organization administration, or multi-tenant isolation.
 
-## Minimal integration checklist
+These are handbook integration checks, not a list of SDK response fields. Refer to the installed version's types and official documentation for actual fields.
 
-- [ ] Trial on staging with a read-only repo
-- [ ] Log redaction; do not log full user prompts if they contain PII
-- [ ] Timeout and cancel: abort when the user leaves the page
-- [ ] Pin SDK and model IDs
+## Callbacks, queues, and remote execution
 
-## Connecting to CI/CD
+Your own runner can execute the SDK and then have your service deliver a completion notification. In that arrangement, queue state, HTTP callbacks, signature formats, and retry policy belong to your system protocol. App Server's streaming events are not directly usable as a webhook address.
 
-The SDK can trigger Cloud or remote runners, or CI can callback your service to update PR status. Example patterns: [Code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/).
-
-## Common mistakes
-
-- Using browser session cookies as API keys
-- No concurrency limits, spiking quota under load
-- Auto-merging PRs produced by the SDK
-
-## Reference sources
-- OpenAI Codex SDK reference
----
-
-**Status:** verified  
-**Products:** API  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public Codex API/model and developer-platform use cases, plus verified developer-platform overview, CI/CD, and non-interactive chapters in this handbook; this page only confirms the stable split that the SDK fits programmatic integration, state management, and custom UI.  
-**Last verified:** 2026-07-26
+Continue with [webhooks and task event boundaries](/en/guide/developer-platform/webhooks/overview/) and [scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/). This page does not promise that an SDK call automatically creates a Codex Cloud task, generates an artifact URL, or provides OAuth delegation.

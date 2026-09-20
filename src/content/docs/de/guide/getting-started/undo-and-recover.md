@@ -1,14 +1,18 @@
 ---
 title: Rückgängig machen und wiederherstellen
-description: "Bei unbefriedigendem Ergebnis sicher zurückrollen."
+description: Bei unbefriedigendem Ergebnis sicher zurückrollen.
 locale: de
 source_locale: zh-CN
-source_revision: b76bcfc
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 5e7a06e
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Gegen die verifizierten Einstiegsabschnitte zu Freigaben, Ergebnisprüfung, Fehlerwiederherstellung und Git/Arbeitsbereich abgeglichen. Diese Seite beschreibt nur das stabile Vorgehen „anhalten, Umfang prüfen, Rückgängig bevorzugen, sicheren Zustand wiederherstellen“ und legt keinen festen Undo-Einstieg eines Clients fest.
+  checkedAt: '2026-07-26'
 ---
 
 Beim ersten Codex-Einsatz fürchten viele: Es ändert falsch — komme ich zurück?
@@ -65,8 +69,6 @@ Diese Praktiken senken die Chance, dass Fehler schwer aufräumbar werden:
 - Nach jedem Schritt prüfen — nicht viele Änderungen auf einmal ansehen
 - Vor riskanten Operationen bestätigen
 
-Fehler selbst sind nicht schlimm. Ohne klaren Änderungsumfang weiterzuändern — das wird unangenehm.
-
 ## Wiederherstellungspunkte als Explorationswerkzeug
 
 Wiederherstellung ist nicht nur Fehlerbehebung. Sie hilft auch, bevor alternative Wege ausprobiert werden.
@@ -78,11 +80,17 @@ Geeignete Momente:
 - Automatisierungsskripte oder Batch-Ersetzungen testen
 - Mit baldiger Anforderungsänderung rechnen
 
-Sicherer Rhythmus: sicheren Zustand bestätigen, betroffene Dateien nennen lassen, Wiederherstellungspunkt oder Git-Status prüfen, klein ändern, Diff und Verifikation prüfen, dann behalten, zurückrollen oder anderen Weg testen.
+Ein sicherer Ablauf ist:
 
----
+```text
+Aktuellen sicheren Zustand bestätigen
+→ Codex die betroffenen Dateien nennen lassen
+→ Wiederherstellungspunkt anlegen oder Git-Status prüfen
+→ In kleinem Umfang ausführen
+→ Diff und Prüfergebnisse ansehen
+→ Behalten, zurückrollen oder einen anderen Weg versuchen
+```
 
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Einstiegsprinzipien zu Freigabe, Ergebnisprüfung, Fehlerwiederherstellung und Git/Arbeitsbaum abgeglichen; diese Seite bestätigt nur die stabile Rückrollmethode „zuerst stoppen, Umfang sehen, Undo bevorzugen, dann sicheren Zustand wiederherstellen“ und schreibt keinen festen Undo-Einstieg eines Clients als Vertrag fest.  
-**Zuletzt überprüft:** 2026-07-26
+Wenn der Client Checkpoints oder eine Wiedergabefunktion anbietet, können Sie diese eingebauten Möglichkeiten zuerst nutzen. In einem Git-Projekt eignen sich auch ein Branch, Stash oder kleiner Commit als Wiederherstellungspunkt. Entscheidend ist nicht ein bestimmter Befehl, sondern dass Sie Änderungen nicht ausweiten, solange deren Folgen unklar sind.
+
+Fehler selbst sind nicht schlimm. Ohne klaren Änderungsumfang weiterzuändern, macht die Wiederherstellung schwieriger.

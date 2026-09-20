@@ -1,0 +1,14 @@
+{
+  "phase": "after",
+  "command": [
+    "<PYTHON>",
+    "<WORK>/04-wrong-site-scope/quiet-link-monitor/scripts/run_once.py",
+    "--site",
+    "<WORK>/04-wrong-site-scope/quiet-link-monitor/fixtures/fixed",
+    "--state",
+    "<WORK>/04-wrong-site-scope/state.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"checked\",\n  \"exit_code\": 0,\n  \"new_event\": null,\n  \"state_file\": \"/private<WORK>/04-wrong-site-scope/state.json\",\n  \"external_actions\": []\n}\n",
+  "stderr": ""
+}

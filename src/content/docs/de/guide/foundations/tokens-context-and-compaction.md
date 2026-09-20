@@ -3,7 +3,7 @@ title: "Token, Kontext und Komprimierung"
 description: "Verstehe Kontextfenster, Belegung und Komprimierung."
 locale: de
 source_locale: zh-CN
-source_revision: b33848c
+source_revision: da31a01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: 最初の 30 分ルート
 description: 初回利用時にそのまま参照できる 30 分ルート。
 locale: ja
 source_locale: zh-CN
-source_revision: 5363190
+source_revision: 7d1061d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Contexte de l'éditeur
 description: Comment l'intégration IDE transmet à Codex les fichiers ouverts, le contexte de l'espace de travail et les règles du projet.
 locale: fr
 source_locale: zh-CN
-source_revision: b6d208f
+source_revision: 6d1b248
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

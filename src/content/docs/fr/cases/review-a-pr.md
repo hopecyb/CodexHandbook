@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 70
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Les cas d'usage Codex actuels d'OpenAI Developers incluent toujours « Review GitHub pull requests », en mettant l'accent sur la détection des régressions et des problèmes potentiels avant la revue humaine ; cet exemple ne demande qu'une revue structurée du diff avec P0/P1 et chemins de fichiers, sans dépendre d'une interface ou d'une commande fixe."
+  checkedAt: "2026-07-26"
 title: Examiner une PR
 description: Utiliser Codex pour une revue structurée du diff avant la fusion.
 locale: fr
 source_locale: zh-CN
-source_revision: 29b081c
+source_revision: 84638f0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Examiner une PR
 
 ## Métadonnées
 
@@ -44,10 +52,3 @@ Produisez une checklist, marquez P0/P1, avec les chemins de fichiers.
 
 - [Modèle de revue](/fr/prompts/templates/review/)
 - [Revue avant fusion](/fr/cases/workflows/review-before-merge/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Les cas d'usage Codex actuels d'OpenAI Developers incluent toujours « Review GitHub pull requests », en mettant l'accent sur la détection des régressions et des problèmes potentiels avant la revue humaine ; cet exemple ne demande qu'une revue structurée du diff avec P0/P1 et chemins de fichiers, sans dépendre d'une interface ou d'une commande fixe.

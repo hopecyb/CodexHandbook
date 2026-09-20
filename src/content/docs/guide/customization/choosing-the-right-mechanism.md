@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按本手册已核验的 `AGENTS.md`、上下文、Skills、MCP 与质量章节交叉复核；本页只保留“临时要求、项目规则、个人偏好、流程封装、外部能力应分层存放”的稳定判断框架。"
+  checkedAt: "2026-07-26"
 title: 选择合适的机制
 description: 临时提示、AGENTS.md、记忆、Skill、MCP 该放哪一层，用一个判断框架讲清楚。
 sidebar:
@@ -199,9 +204,3 @@ sidebar:
 
 ## 参考来源
 - OpenAI Codex 官方文档（以当前版本为准）
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按本手册已核验的 `AGENTS.md`、上下文、Skills、MCP 与质量章节交叉复核；本页只保留“临时要求、项目规则、个人偏好、流程封装、外部能力应分层存放”的稳定判断框架。  
-**最近核验：** 2026-07-26

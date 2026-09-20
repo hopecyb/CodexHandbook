@@ -3,7 +3,7 @@ title: CLI 설치와 업데이트
 description: 설치, 업그레이드, 버전 확인.
 locale: ko
 source_locale: zh-CN
-source_revision: 6b8ceaf
+source_revision: be3f2c4
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

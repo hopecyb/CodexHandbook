@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help《Skills in ChatGPT》确认 Skill 是可复用、可分享的 workflow；当前 Codex 运行时也按技能名称与描述进行匹配。本页主要是选型原则，不依赖易变界面。"
+  checkedAt: "2026-07-26"
 title: 何时使用 Skills
 description: 判断任务是否适合封装为 Skill，以及与斜杠命令、MCP 的分工。
 ---
@@ -7,7 +12,6 @@ description: 判断任务是否适合封装为 Skill，以及与斜杠命令、M
 
 如果什么都做成 Skill，会越来越重；如果该沉淀的不沉淀，又会一直重复手工说同样的话。这里主要帮你判断什么时候该把流程固化下来。
 
-# 何时使用 Skills
 
 ## 适合封装为 Skill
 
@@ -75,9 +79,3 @@ description: 判断任务是否适合封装为 Skill，以及与斜杠命令、M
 Skill 更适合沉淀“会重复、要一致、又不想每次重新讲一遍”的流程。
 
 扩展方式选型见 [如何选择扩展方式](/skills/choosing-an-extension-method/)。工作流沉淀见 [把流程变成 Skill](/cases/workflows/turn-a-workflow-into-a-skill/)。
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Help《Skills in ChatGPT》确认 Skill 是可复用、可分享的 workflow；当前 Codex 运行时也按技能名称与描述进行匹配。本页主要是选型原则，不依赖易变界面。  
-**最近核验：** 2026-07-26

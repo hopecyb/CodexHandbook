@@ -3,7 +3,7 @@ title: AGENTS.md in einem Monorepo
 description: "Beispielmuster für Projektanweisungen, Geltungsbereich und Testbefehle in Single-Repo-Multi-Package-Strukturen."
 locale: de
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

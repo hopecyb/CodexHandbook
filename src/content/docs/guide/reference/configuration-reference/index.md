@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE"
+  basis: "OpenAI Help Center 当前配置材料仍明确存在 `~/.codex/config.toml` 与 `~/.codex/.env` 这类用户级配置载体；本页同时明确把自己定位为“概念索引”，避免把具体键名、路径优先级或旧版字段写成固定事实，因此可标为 `verified`。"
+  checkedAt: "2026-07-26"
 title: 配置项参考
 description: Codex 用户级与项目级配置键的概念索引——路径与字段以官方文档为准。
 sidebar:
@@ -217,9 +222,3 @@ Cloud Secrets：[Secrets 与环境变量](/guide/web-and-cloud/secrets-and-varia
 
 ## 参考来源
 - OpenAI Codex configuration reference
----
-
-**状态：** verified  
-**适用产品：** CLI / App / IDE  
-**核验依据：** OpenAI Help Center 当前配置材料仍明确存在 `~/.codex/config.toml` 与 `~/.codex/.env` 这类用户级配置载体；本页同时明确把自己定位为“概念索引”，避免把具体键名、路径优先级或旧版字段写成固定事实，因此可标为 `verified`。  
-**最近核验：** 2026-07-26

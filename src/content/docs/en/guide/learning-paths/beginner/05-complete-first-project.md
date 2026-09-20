@@ -1,31 +1,58 @@
 ---
-title: Complete Your First Small Project
-description: Chain the onboarding steps into one end-to-end delivery.
-locale: en
-source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-25
-reviewed_at: 2026-08-26
+title: Complete your first small project
+description: Deliver the notice, review, and recovery record, not just reflections on what you learned.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 50
-source_revision: f5de354
+verification:
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: The fixed materials and author reference are complete; the temporary-directory file-operation script was run, but independent model and reader completion tests have not been performed.
+  evidence:
+  - label: Author file-operation record
+    href: /downloads/first-project/validation/record.json
+prev:
+  link: /en/guide/learning-paths/beginner/04-review-results/
+  label: Review results
+next:
+  link: /en/cases/analyze-a-spreadsheet/
+  label: Continue with a weekly sales report
+locale: en
+source_locale: zh-CN
+source_revision: cc1139b
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-## Goal for this step
+## Prerequisites
 
-Deliver a small but complete artifact in your practice directory—for example, a one-page `practice-report.md`:
+The notice has passed an item-by-item review, facts.md and private-note.md remain unchanged, and records contains your own review record.
 
-- Which client you used
-- Three successful tasks
-- One capability you want to learn next (prompting / context / quality)
+## Practice recovery once
 
-## When you finish
+1. Copy the entire `work` folder to a new `backup-final` folder and confirm that all three files are present.
+2. Copy it again to a new `recovery-drill` folder. Only in this practice copy, change notice.md to an “incorrect version for the recovery drill.” Keep the real work folder unchanged.
+3. Open the practice file to confirm it really changed, then copy the correct notice.md from backup-final over it.
+4. Compare all three files in recovery-drill with the backup one by one to confirm their contents match. Also verify that work did not change.
 
-- Revisit the [capability map](/en/guide/start-here/codex-capability-map/)
-- Go deeper into the [desktop App](/en/guide/desktop-app/) or [prompting](/en/prompts/)
+A file manager and editor are enough. First confirm that the target path is the practice copy. If a folder with the same name already exists, choose a new name to avoid overwriting other content. If you cannot confirm the recovery result, record it as “unconfirmed.”
 
----
+## Save a handoff-ready result
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+Copy `templates/handoff.md` into records. Fill in the client version, final files, sources, review evidence, unresolved registration method, and recovery result according to what actually happened. Save the task instructions you used so you can replace the materials next time.
+
+Deliver the final notice.md, original facts.md, your own review.md and handoff.md, and reusable task instructions. These are teaching files; they do not authorize real publication.
+
+## What counts as complete
+
+The notice is based on facts and does not invent unknowns; the scope of changes is correct; you have identified the errors in the faulty sample; you actually performed and recorded the recovery drill; and the handoff lets another person find the sources and open questions. Writing only “three tasks succeeded” does not prove completion.
+
+The author’s [file-operation validation record](/downloads/first-project/validation/record.json) and [reproduction script](/downloads/first-project/validation/reproduce.py) prove only the reference copying and recovery process in a temporary directory. The main exercise does not require Python, and these records do not replace your own work.
+
+Continue with the [weekly sales report](/en/cases/analyze-a-spreadsheet/) or [creator path](/en/guide/learning-paths/creator/).
+
+[Exercise package and preparation guide](/en/guide/learning-paths/beginner/).

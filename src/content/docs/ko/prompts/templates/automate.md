@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 자동화류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 자동화 템플릿
 description: 반복 작업과 재사용 가능한 프로세스입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 자동화 템플릿
 
 자동화류 작업의 흔한 오해는 “자동으로 돌릴 수 있는지”만 생각하고, 다음을 먼저 생각하지 않는 것입니다.
 
@@ -61,10 +65,3 @@ reviewed_at: 2026-08-26
 
 - [장시간 작업 프롬프트](/ko/prompts/long-running-tasks/)
 - [일일 보고서 자동화 사례](/ko/cases/automate-a-daily-report/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 자동화류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

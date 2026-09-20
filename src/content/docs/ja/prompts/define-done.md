@@ -3,7 +3,7 @@ title: 完了基準を定義する
 description: 検査可能な完了条件を書く。
 locale: ja
 source_locale: zh-CN
-source_revision: b9d3ef1
+source_revision: 5d963e0
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

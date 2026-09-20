@@ -3,7 +3,7 @@ title: Câu hỏi thường gặp
 description: Câu hỏi tần suất cao khi bắt đầu và dùng hàng ngày.
 locale: vi
 source_locale: zh-CN
-source_revision: 3f915e9
+source_revision: eb8bf4e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

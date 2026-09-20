@@ -3,7 +3,7 @@ title: Regras de permitir e negar
 description: Constranger com regras de comandos e caminhos as operações que o Agent pode executar — hábitos pessoais e linha de base da equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 0ae6680
+source_revision: 521ecc9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

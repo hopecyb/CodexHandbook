@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página oferece um template de tarefas de pesquisa; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Template de pesquisa
 description: Investigação e comparação com citações.
 locale: pt
 source_locale: zh-CN
-source_revision: d71c760
+source_revision: 40960ec
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Template de pesquisa
 
 A diferença entre pesquisa e pergunta comum: você quer não só a resposta, mas de onde veio.
 
@@ -47,10 +51,3 @@ Restrição crítica deste template: cada conclusão importante tem de rastrear 
 
 - [Caso: pesquisar com fontes](/pt/cases/research-with-sources/)
 - [Verificação](/pt/guide/verification/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página oferece um template de tarefas de pesquisa; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

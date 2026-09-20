@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Hướng dẫn kỹ năng runtime Codex hiện tại vẫn lấy `SKILL.md` làm file lõi và cho phép mở rộng script cùng tài liệu tham chiếu khi cần; trang này tập trung phân vai thư mục, không gắn lối vào sản phẩm hay đổi."
+  checkedAt: "2026-07-26"
 title: Cấu trúc Skill
 description: Vai trò và ví dụ của SKILL.md, references/, templates/, scripts/.
 locale: vi
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Lần đầu nhìn thư mục Skill, cảm giác thường là"thư mục thì quen, nhưng không biết vì sao xếp vậy".
@@ -15,7 +19,6 @@ Trang này giải thích cách tách"quy trình chính, mô tả dài, template,
 
 Như vậy dễ đọc, sửa và tái dùng hơn, cũng ít bị viết càng lúc càng loạn.
 
-# Cấu trúc Skill
 
 ## Cấu trúc thư mục
 
@@ -36,6 +39,18 @@ my-skill/
 
 Ban đầu thậm chí chỉ cần một `SKILL.md`.  
 Sau này thật sự phức tạp hơn mới tách `references/`, `templates/`, `scripts/`.
+
+## Chỉ tải khi cần, không đưa tất cả vào một lần
+
+Một Skill dễ bảo trì thường có ba lớp:
+
+| Lớp | Nội dung | Khi sử dụng |
+|---|---|---|
+| Siêu dữ liệu | Tên, mô tả, tình huống kích hoạt | Giúp Codex quyết định có dùng Skill hay không |
+| Hướng dẫn chính | Bước bắt buộc, điều cấm, tiêu chí hoàn thành | Đọc đầu tiên khi Skill được kích hoạt |
+| Tệp hỗ trợ | Mẫu, tài liệu tham khảo, tập lệnh, ví dụ | Chỉ mở hoặc chạy khi tác vụ thật sự cần |
+
+Nhờ đó phần mô tả kích hoạt hằng ngày vẫn ngắn, còn chi tiết chỉ được tải lúc thực hiện. Càng có nhiều Skill, việc phân lớp càng quan trọng.
 
 ## Ví dụ tối thiểu SKILL.md
 
@@ -112,10 +127,3 @@ Nhiều nhóm không bắt đầu bằng việc “thiết kế Skill”, mà b�
 | Script | Phân tích độ phức tạp, kiểm link, thống kê coverage, kiểm format |
 
 Một Skill tốt không chỉ là Prompt dài hơn, mà là tách quy trình tái dùng thành các phần dễ đọc, kiểm thử được và dễ bảo trì.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** Hướng dẫn kỹ năng runtime Codex hiện tại vẫn lấy `SKILL.md` làm file lõi và cho phép mở rộng script cùng tài liệu tham chiếu khi cần; trang này tập trung phân vai thư mục, không gắn lối vào sản phẩm hay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

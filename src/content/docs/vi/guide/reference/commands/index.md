@@ -1,21 +1,26 @@
 ---
 title: Tham chiếu lệnh CLI
-description: "Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức."
+description: Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức.
 locale: vi
 source_locale: zh-CN
-source_revision: bdc537d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6091bcc
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Đã đối chiếu bảng mức độ trưởng thành hiện tại của Developer commands chính thức, chỉ liệt kê mục Stable và kiểm tra --cd / -C, sandbox, tham số phê duyệt. Lệnh thử nghiệm hoặc đã ngừng dùng không nằm trong bảng cơ bản.
+  checkedAt: '2026-08-26'
 ---
+
 
 Tham chiếu lệnh giúp chọn lối vào — không phải thuộc mọi flag:
 
 > **Tôi nên dùng lối tương tác hay lệnh một lần?**
 
-Trang này lập chỉ mục các lối vào **Codex CLI** phổ biến để tìm và so sánh. **Tên, flag và mặc định đổi theo phiên bản** — chạy `codex --help` và `--help` của lệnh con, và theo [tài liệu OpenAI Codex](https://developers.openai.com/codex).
+Trang này tổng hợp các lối vào **Stable** hiện tại của Codex CLI để tiện tra cứu và so sánh. Trước khi chạy, hãy xem `codex --help` và `--help` của từng lệnh con; danh sách đầy đủ về mức độ trưởng thành và tham số theo [Developer commands](https://learn.chatgpt.com/docs/developer-commands).
 
 ## Khi nào dùng trang này
 
@@ -30,16 +35,20 @@ Trang này lập chỉ mục các lối vào **Codex CLI** phổ biến để t�
 
 Với người mới CLI, phân chia này giải hầu hết câu hỏi lối vào.
 
-## Tổng quan lệnh (minh họa)
+## Tổng quan lệnh Stable
 
-| Lối vào | Mục tiêu | Chi tiết |
+| Lối vào | Mục đích | Chi tiết |
 |---|---|---|
 | `codex` | Phiên TUI tương tác | [Chế độ tương tác](/vi/guide/cli/interactive-mode/) |
-| `codex exec` (hoặc tương đương) | Tác vụ không tương tác một lần/pipeline | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
-| Cấu hình | Đọc/ghi config người dùng/dự án | [Cấu hình CLI](/vi/guide/cli/configuration/) |
+| `codex exec` / `codex e` | Tác vụ đơn lẻ hoặc pipeline không tương tác | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
+| `codex doctor` | Tạo báo cáo chẩn đoán cài đặt, cấu hình, xác thực, môi trường chạy, Git và terminal | [Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | Quản lý xác thực | [Đăng nhập và xác thực](/vi/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | Tiếp tục hoặc phân nhánh phiên đã lưu | [Bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | Quản lý máy chủ MCP | [Kết nối MCP](/vi/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Cài đặt, liệt kê và gỡ Plugin | [Plugins](/vi/skills/plugins/) |
 
-:::caution[Nhạy cảm phiên bản]
-Tên tham số dưới đây phản ánh tài liệu cộng đồng phổ biến — **có thể không khớp CLI bạn đã cài**. Đối chiếu lại `--help` sau khi nâng cấp.
+:::caution[Các mức độ trưởng thành khác nhau]
+Tài liệu chính thức còn có lệnh Experimental, Beta và Deprecated. Bảng cơ bản này không trộn chúng với lệnh Stable; hãy xác nhận mức độ trưởng thành và rủi ro trước khi dùng.
 :::
 
 ## Hiểu nhầm thường gặp
@@ -95,15 +104,15 @@ Tránh chìm trong bảng flag đầy đủ ngày đầu.
 ## Exec không tương tác (khái niệm)
 
 ```bash
-# Thư mục làm việc và Prompt một lần (minh họa)
-codex exec --cd /path/to/repo "Mô tả Tác vụ đầy đủ của bạn"
+# Thư mục làm việc và prompt một lần (ví dụ)
+codex exec --cd /path/to/repo "mô tả đầy đủ tác vụ của bạn"
 
-# Ý định phổ biến (tên flag theo tài liệu chính thức)
-# --cd          thư mục làm việc
-# --model        ghim mô hình
-# --sandbox      chính sách Sandbox
-# --approval     chính sách phê duyệt (then chốt khi không giám sát)
-# stdin pipe     đọc Prompt từ tệp hoặc lệnh phía trước
+# Các tham số thường dùng hiện nay
+# --cd, -C       thư mục làm việc
+# --model        cố định mô hình
+# --sandbox      chính sách sandbox
+# --ask-for-approval, -a  chính sách phê duyệt
+# stdin pipe     đọc prompt từ tệp hoặc lệnh phía trước
 ```
 
 Bảo mật: [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/)
@@ -143,10 +152,3 @@ Trang lệnh CLI giúp chọn lối vào và ý định — không thuộc tham 
 | Phê duyệt chặn CI | Siết Prompt + Sandbox chỉ đọc |
 
 [Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/)
-
----
-
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú đối chiếu:** Viết như bản đồ lối vào nhưng vẫn tập trung `codex`, `codex exec`, `/` trong phiên và ý định tham số — chi tiết CLI biến động cao; khôi phục `verified` sau tài liệu lệnh chính thức mới nhất.  
-**Kiểm chứng gần nhất:** 2026-07-26

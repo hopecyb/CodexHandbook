@@ -3,7 +3,7 @@ title: Governance
 description: 'Erläuterungsseite zu Policy, Grenzen und Organisationsregeln — zuerst klar: was erlaubt ist, was nicht, und wer verantwortlich ist.'
 locale: de
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

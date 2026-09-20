@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers の現在の Codex use cases には「Automate bug triage」「Turn feedback into actions」などの繰り返し自動化シナリオが含まれています。本ページは日報を「固定形式 Markdown + 明確な終了コード + 再利用可能なスクリプトまたは Skill」と定義しており、特定の統合に依存しない安定した自動化ワークフローパターンです。"
+  checkedAt: "2026-07-26"
 title: 日報の自動化
 description: 繰り返しの集計作業を再利用可能なスクリプトまたは Skill に固定化する。
 locale: ja
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 日報の自動化
 
 ## メタ情報
 
@@ -38,10 +46,3 @@ reviewed_at: 2026-08-26
 
 - [自動化 Skill の例](/ja/skills/examples/automation-skill/)
 - [定期タスク](/ja/skills/automations/scheduled-tasks/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の現在の Codex use cases には「Automate bug triage」「Turn feedback into actions」などの繰り返し自動化シナリオが含まれています。本ページは日報を「固定形式 Markdown + 明確な終了コード + 再利用可能なスクリプトまたは Skill」と定義しており、特定の統合に依存しない安定した自動化ワークフローパターンです。

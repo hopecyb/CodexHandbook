@@ -1,64 +1,57 @@
 ---
-title: Cài phần mở rộng IDE
-description: Cài phần mở rộng Codex trong trình soạn thảo được hỗ trợ.
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Trang bắt đầu nhanh chính thức hiện tại cho IDE liệt kê rõ VS Code, Cursor, Windsurf, VS Code Insiders, cùng cách tích hợp riêng cho Xcode và JetBrains; trang này chia hướng dẫn cài đặt theo hai nhóm đó."
+  checkedAt: "2026-08-26"
+title: Cài đặt tích hợp IDE
+description: Bật Codex trong trình soạn thảo tương thích với VS Code, Xcode hoặc JetBrains IDE.
 locale: vi
 source_locale: zh-CN
-source_revision: 1196b38
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: e8f88ec
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
 ---
 
-Current IDE support has more than one installation path:
+Hiện nay không phải mọi IDE đều cài đặt theo cùng một cách:
 
-| IDE | Installation or activation |
+| IDE | Cách cài đặt hoặc bật |
 |---|---|
-| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Install or enable the Codex extension |
-| Xcode | Select Codex Agent in Xcode's coding assistant |
-| JetBrains IDEs | Select Codex in AI Chat |
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Cài đặt hoặc bật phần mở rộng Codex |
+| Xcode | Chọn Codex Agent trong coding assistant của Xcode |
+| JetBrains IDEs | Chọn Codex trong AI Chat |
 
-Use the entry for your IDE on the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide). Do not infer button locations from a different IDE.
+Từ [trang Codex IDE chính thức](https://learn.chatgpt.com/docs/codex/ide), mở hướng dẫn tương ứng với IDE của bạn. Đừng đoán vị trí nút dựa trên ảnh chụp màn hình của IDE khác.
 
-## VS Code-compatible editors
+## Trình soạn thảo tương thích với VS Code
 
-1. Install the Codex extension from the official Marketplace entry.
-2. Open the root of a real project workspace.
-3. Select the Codex icon. If it is missing, open the Command Palette and run `Codex: Open Codex Sidebar`.
-4. Sign in with ChatGPT or an API key.
+1. Cài đặt phần mở rộng Codex từ mục Marketplace chính thức.
+2. Mở thư mục gốc của workspace trong một dự án thực.
+3. Chọn biểu tượng Codex; nếu không thấy, mở Command Palette và chạy `Codex: Open Codex Sidebar`.
+4. Đăng nhập bằng ChatGPT hoặc API key.
 
-## Xcode and JetBrains
+## Xcode và JetBrains
 
-- Xcode: open the coding assistant, start a chat, and select Codex as the Agent.
-- JetBrains: open AI Chat and select Codex.
+- Xcode: mở coding assistant, tạo cuộc trò chuyện mới và chọn Codex làm Agent.
+- JetBrains: mở AI Chat và chọn Codex.
 
-These entry points are provided by their respective IDEs and do not have the same interface as the VS Code extension.
+Các điểm truy cập này do từng IDE cung cấp, nên giao diện sẽ không hoàn toàn giống phần mở rộng của VS Code.
 
-## Check editor context after installation
+## Kiểm tra ngữ cảnh sau khi cài đặt
 
-Open a source file, select a short section, and ask:
+Mở một tệp mã nguồn, chọn một đoạn mã ngắn rồi hỏi:
 
 ```text
-Explain only the inputs, outputs, and failure paths of the current selection.
-Do not edit files. Cite the relevant symbol names.
+Chỉ giải thích đầu vào, đầu ra và các đường dẫn lỗi của vùng mã đang chọn; đừng sửa tệp. Hãy dẫn tên các hàm liên quan.
 ```
 
-If the answer is unrelated to the selection, check:
+Nếu câu trả lời rõ ràng không liên quan đến vùng chọn, trước tiên hãy kiểm tra:
 
-- whether the expected project root is open;
-- whether the file or selection is attached to the composer;
-- whether the correct identity and workspace are active;
-- whether another AI extension conflicts with the integration or shortcuts.
+- Bạn đã mở đúng thư mục gốc của dự án chưa.
+- Tệp hoặc vùng chọn đã được đính kèm vào composer chưa.
+- Tài khoản đăng nhập và workspace hiện tại có đúng không.
+- Trình soạn thảo có đang bật các phần mở rộng AI hoặc phím tắt gây xung đột không.
 
-Continue with the [local IDE task workflow](/vi/guide/ide/local-task-workflow/). See [Supported editors](/vi/guide/ide/supported-editors/) for the complete support matrix.
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** IDE
-
-**Căn cứ kiểm chứng:** The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Tiếp theo, xem [Quy trình tác vụ cục bộ trong IDE](/vi/guide/ide/local-task-workflow/); phạm vi hỗ trợ đầy đủ nằm ở [Trình soạn thảo được hỗ trợ](/vi/guide/ide/supported-editors/).

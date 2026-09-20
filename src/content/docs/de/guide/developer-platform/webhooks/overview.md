@@ -1,133 +1,67 @@
 ---
-title: Webhooks-Überblick
-description: 'Per HTTP-Callback Codex-Aufgabenstatus in interne Systeme bringen — Ereignisse, Signatur und Idempotenz.'
-locale: de
-source_locale: zh-CN
-source_revision: 78f037e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: Grenzen von Webhooks und Aufgabeneignissen
+description: Lokale Codex-Ergebnisse, App-Server-Ereignisse und selbst entworfene HTTP-Rückrufe unterscheiden.
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: Ausführungs- und Ereignismodell von SDK und App Server wurden geprüft. HTTP-Rückrufe sind eine Empfehlung für eine eigene Architektur; ein einheitlicher Codex-Cloud-Webhook-Vertrag wird nicht behauptet.
+  evidence:
+    - label: Offizielle SDK-Dokumentation
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: App-Server-Protokoll und -Ereignisse
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: 8a84ab8
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-**Webhooks** lassen Sie bei Statusänderungen von Codex- oder Cloud-Aufgaben HTTP-Callbacks an eigene Dienste senden — für Ticket-Updates, Slack-Benachrichtigungen oder interne Freigabe-UIs. Dieses Kapitel ist der Einstieg in Ereignisintegration der [Entwicklerplattform](/de/guide/developer-platform/).
+Nach Abschluss einer Aufgabe kannst du ein internes System per Programm-Rückgabewert, Prozessstatus, Ereignisstream oder HTTP-Rückruf benachrichtigen. Bestimme zuerst Absender und Protokoll und entscheide dann, ob ein Webhook nötig ist.
 
-## Was diese Seite behandelt
+## Drei Mechanismen nicht verwechseln
 
-- Abwägung Webhook vs. SDK-Polling
-- Typische Ereignisse und Payload-Felder (Konzept)
-- Signaturprüfung, Replay und Idempotenz
+| Mechanismus | Empfang | Grenze |
+|---|---|---|
+| Lokale SDK-/CLI-Ausführung | Programmergebnis oder Prozessstatus | Keine gehostete HTTP-Rückruf-API |
+| App-Server-Ereignisse | JSON-RPC-Benachrichtigungen in einer bestehenden Verbindung | Verbindung aufbauen, initialisieren und Nachrichten protokollgemäß verarbeiten |
+| Rückruf des eigenen Runners | HTTP-Anfrage deines Dienstes | Ereignisnamen, Signaturen, Retries und Speicherung selbst festlegen |
 
-## Zuerst verstehen, was passiert
+`turn/completed` ist eine App-Server-Protokollbenachrichtigung; der Endstatus kann abgeschlossen, unterbrochen oder fehlgeschlagen sein. Prüfe Status und fachliches Ergebnis, bevor du allein wegen des Ereignisnamens eine Bereitstellung auslöst. Siehe die [offizielle Ereignisdokumentation](https://learn.chatgpt.com/docs/app-server).
 
-Wenn Sie Webhooks zum ersten Mal sehen: Bei Statusänderung benachrichtigt Codex Ihr System aktiv — statt dass Sie ständig „schon fertig?“ abfragen.
+Diese Seite hat weder einen einheitlichen Codex-Cloud-Endpunkt für Webhook-Registrierung noch Signatur-Header oder einen Vertrag für `task.completed` verifiziert. Deshalb werden keine URLs, Header oder Ereignistabellen als offizielle Schnittstelle dargestellt. Wenn dein konkretes Produkt Webhooks anbietet, verwende dessen versionierte Dokumentation.
 
-Gut geeignet, wenn nach Aufgabenende weitere Systemaktionen anschließen sollen.
+## Wann ein eigener Rückruf sinnvoll ist
 
-:::note
-Webhook-Pfade, Ereignisnamen und Signaturalgorithmen richten sich nach der [offiziellen API-Dokumentation](https://developers.openai.com/codex).
-:::
+Eine einzelne CI-Aufgabe kann meist anhand ihres Exit-Status und der gespeicherten Ausgabe fortgesetzt werden. Allein das Wort „asynchron“ erfordert keinen öffentlichen Empfänger.
 
-## Häufige Missverständnisse
+Wenn dein System Aufgaben prozessübergreifend plant und danach ein Ticket aktualisieren soll, kann die interne Kette so aussehen:
 
-### Webhook ist nicht die Standardantwort für jede Automatisierung
-
-Für einen einmaligen `codex exec` reicht oft der Exit-Code — kein Webhook nötig.
-
-Webhooks eignen sich eher für:
-
-- Lange Aufgaben
-- Mehrstufige Orchestrierung
-- Nach Aufgabenende Benachrichtigung oder Ansteuerung anderer Systeme
-
-### Ein Callback heißt nicht, dass man ihm blind vertrauen darf
-
-Anfänger behandeln Webhooks oft als „offizielle Nachricht, also direkt nutzbar“.
-
-Ohne Signaturprüfung, Idempotenz und Timeout-Handling riskieren Sie gefälschte Requests, Doppelzustellung oder Systemjitter.
-
-## Wann Webhooks
-
-| Geeignet | Weniger geeignet |
-|---|---|
-| Interne Systeme bei Aufgabenende benachrichtigen | Stark echtzeitiges Token-Streaming nötig |
-| Anbindung an bestehende Event-Busse | Einfacher Cron braucht nur `exec`-Exit-Code |
-| Mehrstufige Orchestrierung (fertig → Deploy) | Kein öffentlich erreichbarer Endpoint und keine Queue |
-
-Einfache Pipelines reichen oft mit [Skripten und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/); produktisierte Multi-Tenant-Dienste kombinieren oft **SDK + Webhook**.
-
-## Typische Ereignisse (Konzept)
-
-| Ereignis | Nutzen |
-|---|---|
-| `task.completed` | Ergebnis holen, PR-Status aktualisieren |
-| `task.failed` | Alarm, Retry-Queue |
-| `task.needs_approval` | An menschliche Freigabe-UI pushen |
-| `review.posted` | Code-Review-Ergebnis synchronisieren |
-
-Payload sollte enthalten: `task_id`, Status, Zeitstempel, Repo-/Projektkennung; **keine** vollständigen Prompts mit PII im Webhook-Body.
-
-## Minimale Anforderungen am Empfänger
-
-1. **HTTPS**-Endpoint, offizielle Signaturheader prüfen (z. B. `X-Signature` + HMAC)
-2. **Idempotenz**: dieselbe `event_id` nur einmal verarbeiten
-3. **Schnelles 2xx**: schwere Logik asynchron in die Queue
-4. **Log-Redaktion**: keine Secrets und keine vollständigen Nutzereingaben loggen
-
-Skizze (Pseudocode):
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+Eigene Warteschlange → kontrollierter Runner mit SDK/CLI → Ergebnis und Status speichern
+                                                     → eigener Benachrichtigungsdienst → internes Ticket
 ```
 
-## Verhältnis zu CI
+Dies ist eine Architektur-Empfehlung dieser Website und keine SDK-Bereitstellungsfunktion. Ausführungsort und Integrationsgrenzen beschreibt der [SDK-Überblick](/de/guide/developer-platform/sdk-overview/).
 
-- `codex exec` in CI braucht meist **keinen** Webhook — Exit-Code reicht
-- Lange Cloud-Aufgaben und mobile Freigaben eignen sich besser für Webhook-Push an interne Systeme
+## Was ein eigenes Protokoll festlegen muss
 
-## Häufige Fehler
+- **Identität und Integrität:** Definiere die Prüfung des Absenders durch den Empfänger und nutze eine geprüfte Authentifizierung. Erfinde keinen „offiziellen Signatur-Header“.
+- **Stabile IDs und Deduplizierung:** Protokolliere Aufgaben-ID, Ereignis-ID und Versuchszahl; doppelte Zustellung darf keine externen Wirkungen verdoppeln.
+- **Status und Version:** Trenne Abschluss, Fehler, Unterbrechung und fachliche Abnahme; versioniere die Nutzdaten.
+- **Dauerhafter Empfang:** Bestätige erst nach zuverlässiger Speicherung oder Einreihung. Fehler müssen wiederholbar sein; bestätige keinen Empfang und verliere anschließend das Ereignis.
+- **Datenumfang:** Übertrage nur benötigte Zusammenfassungen und sichere Referenzen; protokolliere keine Zugangsdaten.
+- **Stoppbedingungen:** Begrenze Retries und lege menschliche Übernahme sowie Rücknahme späterer Aktionen fest.
 
-- Keine Signaturprüfung → gefälschte Callbacks
-- Verarbeitung länger als Plattform-Timeout → Doppelzustellung
-- Im Webhook-Handler synchron einen zweiten Codex-Lauf starten
-- Webhook-URL im Client-Frontend exponieren
+Diese Punkte sind noch zu implementierende und zu prüfende Entwurfsanforderungen, kein direkt ausführbares Beispiel. Die Seite verbindet nicht automatisch Ticketsysteme, sendet keine Nachrichten und erstellt keinen Deployment-Ablauf.
 
-## Wie entscheiden, ob Sie Webhooks brauchen
+## Minimale Abnahmeszenarien
 
-Wenn unklar, fragen Sie:
+Teste mindestens Erfolg, Ausführungsfehler, Abbruch, Duplikate, falsche Identität und vorübergehende Unerreichbarkeit des Empfängers. Wiederholte Zustellung darf nur eine fachliche Wirkung haben; ein Abbruch darf nicht als Erfolg gelten, und ungeprüfte generierte Ergebnisse dürfen nicht direkt veröffentlicht werden.
 
-1. Brauche ich aktive Benachrichtigung bei Statusänderungen?
-2. Gibt es nach Aufgabenende einen systemweiten nächsten Schritt?
-3. Habe ich bereits ein Backend, das HTTP-Callbacks sicher empfangen kann?
-
-Je mehr „ja“, desto sinnvoller der Webhook.
-
-## Sicherheitsgrenzen
-
-- Siehe [Bedrohungsmodell](/de/guide/team-enterprise/security/threat-model/) und [Acceptable Use](/de/guide/team-enterprise/governance/acceptable-use/)
-- Rotation des Webhook-Secrets in den Ops-Kalender aufnehmen
-
-## Abnahme-Checkliste
-
-- [ ] Signaturfehler → 4xx
-- [ ] Idempotenz-Tabelle oder Dedupe-Key implementiert
-- [ ] Asynchroner Worker und DLQ (Dead Letter) konfiguriert
-- [ ] Feldkonventionen mit [Strukturierter Ausgabe](/de/guide/developer-platform/non-interactive/structured-output/) abgestimmt
-
-Webhooks bringen Aufgabenstatus in andere Systeme — zuerst Signaturprüfung, Idempotenz und asynchrone Verarbeitung absichern.
-
-## Quellen
-- OpenAI Codex / Cloud API Event-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** API / Cloud  
-**Prüfgrundlage:** Gegen aktuelle öffentliche Hinweise der OpenAI Developers zu Entwicklerplattform und ereignisgesteuerter Integration sowie gegen geprüfte Webhooks-Gruppen-, CI/CD-, Strukturierte-Ausgabe- und Team-Sicherheitsseiten abgeglichen; diese Seite bestätigt nur das stabile Prinzip „Webhooks für Statusbenachrichtigung; Empfänger mit Signatur, Idempotenz und asynchroner Verarbeitung“.  
-**Zuletzt geprüft:** 2026-07-26
+Üben kannst du mit dem [Fall zur Issue-Sortierung](/de/cases/use-cases/team-automation/issue-triage-suggestions/) und der [geplanten Linkprüfung](/de/cases/use-cases/team-automation/scheduled-link-check/); der Materialstatus steht jeweils auf der zugehörigen Seite.

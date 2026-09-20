@@ -3,7 +3,7 @@ title: Configuración
 description: Página de introducción a archivos de configuración y profiles — qué comportamientos van en configuración y cuáles no.
 locale: es
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Review trước khi merge
 description: Trước khi merge, dùng Codex làm review diff và rủi ro có cấu trúc — phân công người-máy rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

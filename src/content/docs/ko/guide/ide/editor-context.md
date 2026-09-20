@@ -3,7 +3,7 @@ title: 에디터 컨텍스트
 description: IDE 확장이 열린 파일·워크스페이스·프로젝트 규칙을 Codex에 전달하는 방식.
 locale: ko
 source_locale: zh-CN
-source_revision: b6d208f
+source_revision: 6d1b248
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

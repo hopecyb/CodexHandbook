@@ -1,79 +1,75 @@
 ---
 title: Delegar e acompanhar
-description: Entregar Tarefas ao Cloud a partir da App, IDE ou telemóvel, e continuar a ver, Aprovar e iterar longe do computador.
+description: Inicie uma tarefa Cloud capaz de avançar autonomamente e use a mesma conversa para corrigir a direção e verificar o resultado.
+legacyVerification:
+  status: "verified"
+  products: "Cloud、App、IDE、CLI"
+  checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: 681ea7d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 38b322f
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
 ---
 
+Delegar não é «atirar o problema para longe». É entregar objetivo, restrições, ambiente e critérios de conclusão a uma conversa Cloud independente. A tarefa pode decorrer em segundo plano enquanto consulta registos, acrescenta contexto, pede alterações e, no fim, revê o diff.
 
-Delegation does not mean throwing a problem over the wall. It means giving an independent Cloud chat the goal, constraints, environment, and completion standard. The task can run in the background while you inspect logs, add context, request changes, and finally review the diff.
+## Quando faz sentido delegar
 
-## When delegation fits
+- A tarefa exige uma compilação ou testes demorados.
+- As entradas já se encontram num repositório remoto.
+- O ambiente pode ser recriado por scripts.
+- A tarefa pode avançar independentemente do trabalho atual.
+- Está disposto a rever o resultado antes de qualquer merge, em vez de o fundir diretamente.
 
-- Builds or tests take a long time.
-- Inputs are already in a remote repository.
-- Scripts can recreate the environment.
-- Work can progress independently of your current task.
-- You will review the result instead of merging it directly.
+Mantenha no ambiente local as tarefas que dependem de alterações ainda não submetidas, de um serviço no seu computador ou de intervenção humana contínua.
 
-Keep tasks local when they depend on uncommitted local state, a local service, or continuous human interaction.
-
-## Complete delegation prompt
-
-```text
-Goal: Fix issue #42, where a sign-in request still holds a connection after 30 seconds.
-Starting point: branch fix/42-timeout in acme/api.
-Scope: packages/auth/** and the corresponding tests.
-Do not: upgrade dependencies, change the public API, or push to main.
-Verification: pnpm test --filter auth; pnpm typecheck.
-Completion: show the root cause, diff, commands, and exit results. Do not merge.
-```
-
-After starting, confirm the environment and branch. Follow up only when a premise is missing or the run is drifting:
+## Um pedido de delegação completo
 
 ```text
-Additional constraint: Do not change the global HTTP client. Keep the fix in the
-auth adapter. Explain how this changes the current approach before continuing.
+Objetivo: corrigir o problema #42, em que um pedido de início de sessão
+continua a ocupar uma ligação após 30 segundos.
+Ponto de partida: branch fix/42-timeout em acme/api.
+Âmbito: packages/auth/** e os testes correspondentes.
+Proibido: atualizar dependências, alterar a API pública ou fazer push para main.
+Verificação: pnpm test --filter auth; pnpm typecheck.
+Conclusão: mostrar a causa raiz, o diff, os comandos e os respetivos códigos
+de saída; não fazer merge automaticamente.
 ```
 
-Use the same chat to correct the same goal because it retains context. Start a new chat for an independent goal. Parallel tasks must not write the same branch or file set.
-
-## After the result arrives
-
-1. Read the summary and complete diff.
-2. Compare changed paths with the allowed scope.
-3. Inspect actual output for each verification command.
-4. Ask for explanations of failures or skipped checks.
-5. Give a specific follow-up in the same chat when needed.
-6. Once criteria pass, create a PR and hand control to CI and human review.
-
-Cloud work can start from Web, IDE, GitHub, GitLab (Beta), Linear, or Slack. The official Cloud page also describes starting and reviewing work from Codex CLI. The repository, environment, network, and review boundaries remain the same across entry points.
-
-## Follow up on failures
-
-Do not say only “try again.” Include evidence and the next decision:
+Depois de iniciar, confirme que o ambiente e a branch estão corretos. Durante a execução, só faça um pedido de seguimento se faltar uma premissa ou se a tarefa se estiver a desviar:
 
 ```text
-The test fails at retry.test.ts:48. Explain whether this change caused it.
-If so, fix only that regression and rerun the auth tests. Otherwise, preserve
-the failure and record it explicitly.
+Restrição adicional: não alteres o cliente HTTP global. Limita a correção
+ao auth adapter. Antes de continuar, explica como isto muda o plano atual.
 ```
 
-## Official sources
+A mesma conversa conserva o contexto e serve para corrigir o mesmo objetivo. Para um objetivo completamente independente, abra outra conversa. Tarefas paralelas não devem escrever na mesma branch nem no mesmo conjunto de ficheiros.
+
+## Quando o resultado chegar
+
+1. Leia o resumo e o diff completo.
+2. Compare os caminhos alterados com o âmbito permitido.
+3. Examine a saída real de cada comando de verificação.
+4. Peça explicação para verificações falhadas ou não executadas.
+5. Se precisar de alterações, faça um pedido de seguimento específico na mesma conversa.
+6. Quando os critérios estiverem cumpridos, crie um PR e deixe o CI e a revisão humana assumirem o controlo.
+
+É possível iniciar trabalho Cloud pelo Web, IDE, GitHub, GitLab (Beta), Linear ou Slack. A página oficial do Cloud também descreve como iniciar e rever trabalho a partir do Codex CLI. Os limites de repositório, ambiente, rede e revisão mantêm-se, independentemente do ponto de entrada.
+
+## Como acompanhar uma falha
+
+Não diga apenas «tenta outra vez». Forneça a prova da falha e a decisão seguinte:
+
+```text
+O teste falhou em retry.test.ts:48. Explica primeiro se a falha foi causada
+por esta alteração. Se foi, corrige apenas essa regressão e volta a executar
+os testes de auth. Se não foi, mantém a falha e regista-a explicitamente.
+```
+
+## Fontes oficiais
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, App, IDE, CLI
-
-**Last verified:** 2026-08-26
+- [Trabalho de longa duração](https://learn.chatgpt.com/docs/long-running-work)

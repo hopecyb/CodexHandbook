@@ -3,7 +3,7 @@ title: Code Review Automation
 description: Wire Codex into CI or PR workflows—prompts, permissions, and human gates.
 locale: en
 source_locale: zh-CN
-source_revision: d8ddd16
+source_revision: aa8b33e
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

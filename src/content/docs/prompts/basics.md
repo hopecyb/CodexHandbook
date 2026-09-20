@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅涉及通用提示词方法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。"
+  checkedAt: "2026-07-26"
 title: 提示词基础
 description: 好提示词的基本组成。
 ---
@@ -94,10 +99,3 @@ description: 好提示词的基本组成。
 好提示词的核心，就是减少猜测、跑偏和越界。
 
 示例见 [运行第一次任务](/cases/first-task/) 与 [好任务的结构](/prompts/task-anatomy/)。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅涉及通用提示词方法；站内链接已复查，且正文不依赖产品版本、价格或界面等易变事实。  
-**最近核验：** 2026-07-26

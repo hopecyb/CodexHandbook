@@ -1,4 +1,19 @@
 // @ts-check
+import { pluginFramesTexts } from '@astrojs/starlight/expressive-code';
+
+// Register only these locales: Starlight's default-language fallback would otherwise
+// apply Chinese code labels to locales without their own Expressive Code strings.
+pluginFramesTexts.overrideTexts("zh-CN", {
+  "copyButtonCopied": "已复制",
+  "copyButtonTooltip": "复制到剪贴板",
+  "terminalWindowFallbackTitle": "终端窗口"
+});
+pluginFramesTexts.overrideTexts("zh-TW", {
+  "copyButtonCopied": "已複製",
+  "copyButtonTooltip": "複製到剪貼簿",
+  "terminalWindowFallbackTitle": "終端視窗"
+});
+
 import { defineConfig } from 'astro/config';
 import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';

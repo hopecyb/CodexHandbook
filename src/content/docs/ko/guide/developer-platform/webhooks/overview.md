@@ -1,133 +1,67 @@
 ---
-title: Webhook 개요
-description: HTTP 콜백으로 Codex 작업 상태를 내부 시스템에 연결합니다——이벤트, 서명, 멱등입니다.
-locale: ko
-source_locale: zh-CN
-source_revision: 78f037e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: Webhook과 작업 이벤트의 경계
+description: Codex의 로컬 실행 결과, App Server 이벤트, 직접 설계한 HTTP 콜백을 구분한다.
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: SDK와 App Server의 실행 및 이벤트 모델을 확인했다. HTTP 콜백은 자체 구축 구조에 대한 조언이며 통일된 Codex Cloud Webhook 계약이 있다고 주장하지 않는다.
+  evidence:
+    - label: SDK 공식 문서
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: App Server 프로토콜과 이벤트
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: ko
+source_locale: zh-CN
+source_revision: 8a84ab8
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-**Webhook**은 Codex 또는 Cloud 작업 상태가 바뀔 때 자체 서비스로 HTTP 콜백을 보내, 이슈 갱신, Slack 알림, 내부 승인대 등을 구동하게 합니다. 이 장은 [개발자 플랫폼](/ko/guide/developer-platform/)의 이벤트 통합 입구입니다.
+작업이 끝나면 프로그램 반환값, 프로세스 종료 상태, 이벤트 스트림 또는 HTTP 콜백으로 내부 시스템에 알릴 수 있다. 먼저 발신자와 프로토콜을 정한 뒤 Webhook 필요 여부를 결정한다.
 
-## 이 페이지에서 다루는 내용
+## 세 가지 메커니즘을 혼동하지 않기
 
-- Webhook과 SDK 폴링의 선택
-- 흔한 이벤트와 페이로드 필드(개념)
-- 서명 검증, 재전송, 멱등
+| 메커니즘 | 받는 방법 | 경계 |
+|---|---|---|
+| 로컬 SDK / CLI 실행 | 프로그램 결과 또는 프로세스 상태 | 호스팅 HTTP 콜백 API가 아님 |
+| App Server 이벤트 | 연결 중의 JSON-RPC 알림 | 프로토콜에 따라 연결·초기화·메시지 처리가 필요 |
+| 자체 runner 콜백 | 자신의 서비스가 보내는 HTTP 요청 | 이벤트 이름, 서명, 재시도, 저장을 직접 정의 |
 
-## 먼저 무엇을 하는지 이해하세요
+App Server의 `turn/completed`는 프로토콜 알림이다. 최종 상태는 완료, 중단 또는 실패일 수 있다. 이벤트 이름만 보고 배포하지 말고 상태와 업무 결과를 확인한다. [공식 이벤트 설명](https://learn.chatgpt.com/docs/app-server)을 참고한다.
 
-Webhook을 처음 본다면, 작업 상태가 바뀔 때 Codex가 당신의 시스템에 먼저 알리고, 당신이 “끝났나”를 반복 조회하지 않아도 되는 구조로 이해하면 됩니다.
+이 문서는 통일된 Codex Cloud Webhook 등록 엔드포인트, 서명 헤더 또는 `task.completed` 이벤트 계약을 검증하지 않았다. 그러므로 URL, Header, 이벤트 표를 공식 인터페이스처럼 제시하지 않는다. 특정 제품에 Webhook이 있다면 그 제품의 버전별 문서에 따라 연결한다.
 
-“작업이 끝나면 다른 시스템 동작이 이어져야 하는” 시나리오에 잘 맞습니다.
+## 자체 콜백이 필요한 경우
 
-:::note
-Webhook 경로, 이벤트 이름, 서명 알고리즘은 [공식 API 문서](https://developers.openai.com/codex)를 기준으로 합니다.
-:::
+한 번의 CI 작업은 보통 종료 상태와 저장된 출력으로 다음 단계에 진행할 수 있다. “비동기”라는 이유만으로 공개 수신점을 만들 필요는 없다.
 
-## 흔한 오해
+프로세스 간 작업을 예약하고 완료 후 티켓을 업데이트해야 한다면 다음 내부 흐름을 설계할 수 있다.
 
-### Webhook이 모든 자동화의 기본 답은 아닙니다
-
-한 번 `codex exec`를 돌리고 종료 코드만 보면 되는 경우, 보통 Webhook은 필요 없습니다.
-
-Webhook이 더 맞는 경우는 다음과 같습니다.
-
-- 긴 작업
-- 다단계 오케스트레이션
-- 작업 종료 후 다른 시스템을 알리거나 구동해야 할 때
-
-### 콜백을 받았다고 바로 믿으면 안 됩니다
-
-많은 초보자가 Webhook을 “공식에서 온 메시지이니 바로 써도 된다”고 생각합니다.
-
-서명 검증, 멱등, 타임아웃 처리를 하지 않으면, 위조 요청, 중복 전달, 시스템 흔들림에 문제가 생길 수 있습니다.
-
-## 언제 Webhook을 쓰나요
-
-| 적합 | 부적합 |
-|---|---|
-| 작업 완료를 내부 시스템에 알림 | 강한 실시간 토큰 단위 스트리밍이 필요할 때 |
-| 기존 이벤트 버스와 통합 | 단순 cron으로 `exec` 종료 코드만 필요할 때 |
-| 다단계 오케스트레이션(완료 → 배포 트리거) | 공개 endpoint가 없고 큐도 쓰기 싫을 때 |
-
-단순 파이프라인은 [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/)만으로도 됩니다. 제품화된 멀티테넌트 서비스는 종종 **SDK + Webhook**을 함께 씁니다.
-
-## 전형적인 이벤트(개념)
-
-| 이벤트 | 용도 |
-|---|---|
-| `task.completed` | 결과 가져오기, PR 상태 갱신 |
-| `task.failed` | 알림, 재시도 큐 |
-| `task.needs_approval` | 사람 승인 UI로 전달 |
-| `review.posted` | 코드 리뷰 결론 동기화 |
-
-페이로드에는 `task_id`, 상태, 타임스탬프, 저장소/프로젝트 식별자가 포함되어야 합니다. PII가 있으면 webhook body에 전체 프롬프트를 넣지 **마세요**.
-
-## 수신단 최소 요구
-
-1. **HTTPS** 엔드포인트, 공식 서명 헤더 검증(예: `X-Signature` + HMAC)
-2. **멱등**：같은 `event_id`는 한 번만 처리
-3. **빠른 2xx**：무거운 로직은 큐에 넣어 비동기 처리
-4. **로그 마스킹**：키와 전체 사용자 입력을 기록하지 않음
-
-예시(의사코드):
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+자체 대기열 → 통제된 runner가 SDK/CLI 실행 → 결과와 상태 저장
+                                      → 자체 알림 서비스 → 내부 티켓
 ```
 
-## CI와의 관계
+이는 사이트가 제안하는 구조이지 SDK의 기본 배포 기능이 아니다. 실행 위치와 통합 범위는 [SDK 개요](/ko/guide/developer-platform/sdk-overview/)에 있다.
 
-- CI 안의 `codex exec`는 보통 webhook이 **필요 없고**, 종료 코드면 충분합니다
-- Cloud 장시간 작업, 모바일 승인 시나리오는 webhook으로 내부 시스템에 푸시하는 편이 맞습니다
+## 자체 프로토콜에 명시할 사항
 
-## 흔한 실수
+- **신원과 무결성:** 수신자가 발신자를 검증하는 방법을 정하고 검토한 인증 방식을 사용한다. 임의의 “공식 서명 헤더”를 만들어내지 않는다.
+- **안정적인 ID와 중복 제거:** 작업 ID, 이벤트 ID, 시도 횟수를 기록하고 중복 전송으로 외부 효과를 반복하지 않는다.
+- **상태와 버전:** 실행 완료, 실패, 중단, 업무 인수를 구분하고 payload 버전을 기록한다.
+- **지속적인 수신:** 이벤트를 안정적으로 저장하거나 대기열에 넣은 뒤에만 수신 확인을 보낸다. 실패는 재시도 가능해야 하며 성공을 먼저 반환한 뒤 이벤트를 잃으면 안 된다.
+- **데이터 범위:** 다음 시스템에 필요한 결과 요약과 안전한 참조만 보내고 로그에 자격 증명을 남기지 않는다.
+- **중단 조건:** 재시도 상한, 사람의 인계, 후속 행동 취소 방법을 정한다.
 
-- 서명 검증 없이 위조 콜백을 받는 것
-- 플랫폼 타임아웃보다 오래 처리해 재전달이 나는 것
-- webhook handler 안에서 동기적으로 Codex를 한 번 더 돌리는 것
-- webhook URL을 클라이언트 프론트에 노출하는 것
+이는 구현하고 검증해야 할 설계 요건이지 바로 실행 가능한 예제가 아니다. 이 페이지가 티켓을 자동 연결하거나 메시지를 보내거나 배포 흐름을 만들지는 않는다.
 
-## 쓸지 말지 판단하는 법
+## 최소 인수 시나리오
 
-지금 시나리오에 Webhook이 필요한지 모르겠다면, 먼저 물어보세요.
+테스트 환경에서 성공, 실행 실패, 취소, 중복 이벤트, 잘못된 신원, 수신 측 일시 장애를 확인한다. 중복 전달은 업무 효과를 한 번만 내고, 취소를 성공으로 취급하지 않으며, 검증되지 않은 생성 결과를 곧바로 게시하지 않아야 한다.
 
-1. 작업 상태가 바뀔 때 능동적으로 알림을 받아야 하는가
-2. 작업 종료 후 시스템 수준의 다음 단계가 자동으로 이어져야 하는가
-3. HTTP 콜백을 안전하게 받을 백엔드가 이미 있는가
-
-“예”가 많을수록 Webhook의 의미가 커집니다.
-
-## 보안 경계
-
-- [위협 모델](/ko/guide/team-enterprise/security/threat-model/)과 [허용 가능한 사용](/ko/guide/team-enterprise/governance/acceptable-use/)을 보세요
-- webhook secret 로테이션을 운영 캘린더에 넣으세요
-
-## 검수 체크리스트
-
-- [ ] 서명 검증 실패 시 4xx 반환
-- [ ] 멱등 테이블 또는 dedupe key 구현
-- [ ] 비동기 worker와 DLQ(dead letter)구성
-- [ ] [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/) 필드 약속과 일치
-
-Webhook은 작업 상태 변화를 다른 시스템에 연결하는 데 맞습니다. 다만 서명 검증, 멱등, 비동기 처리 같은 기초를 먼저 갖추세요.
-
-## 참고 출처
-- OpenAI Codex / Cloud API 이벤트 문서
----
-
-**상태：** verified  
-**적용 제품：** API / Cloud  
-**검증 근거：** OpenAI Developers의 개발자 플랫폼·이벤트 드리븐 통합 공개 설명과, 본 핸드북에서 검증된 Webhooks 그룹 페이지, CI/CD, 구조화 출력, 팀 보안 경계 장을 교차 확인했습니다. 이 페이지는 “Webhook은 상태 알림에 적합하며, 수신단은 서명 검증·멱등·비동기 처리를 해야 한다”는 안정된 통합 원칙만 확인합니다.  
-**최근 검증：** 2026-07-26
+연습은 [Issue 분류 사례](/ko/cases/use-cases/team-automation/issue-triage-suggestions/)와 [예약된 링크 검사](/ko/cases/use-cases/team-automation/scheduled-link-check/)로 시작할 수 있다. 자료 상태는 각 페이지를 따른다.

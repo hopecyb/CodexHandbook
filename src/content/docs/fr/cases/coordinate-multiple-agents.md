@@ -1,15 +1,22 @@
 ---
+caseCategory: team
+directoryOrder: 115
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "La documentation actuelle des offres Codex d'OpenAI Help Center indique toujours que l'application de bureau prend en charge les agents Codex parallèles, le support worktree intégré et la délégation cloud ; cette page résume uniquement le mode de collaboration « exploration parallèle, isolation par frontières de répertoire, éviter le push parallèle, fusion manuelle des conclusions », sans dépendre d'un flux d'interface unique."
+  checkedAt: "2026-07-26"
 title: Coordonner plusieurs agents
 description: Cas de collaboration avec exploration parallèle, exécution partagée et fusion des résultats.
 locale: fr
 source_locale: zh-CN
-source_revision: 5abc786
+source_revision: 7b143fc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Coordonner plusieurs agents
 
 ## Métadonnées
 
@@ -49,10 +56,3 @@ Différents agents modifient des branches distinctes dans des [git worktree](/fr
 
 - [Coordination multi-agents](/fr/cases/workflows/multi-agent-coordination/)
 - [Sous-agents](/fr/guide/agent-work/subagents/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** La documentation actuelle des offres Codex d'OpenAI Help Center indique toujours que l'application de bureau prend en charge les agents Codex parallèles, le support worktree intégré et la délégation cloud ; cette page résume uniquement le mode de collaboration « exploration parallèle, isolation par frontières de répertoire, éviter le push parallèle, fusion manuelle des conclusions », sans dépendre d'un flux d'interface unique.

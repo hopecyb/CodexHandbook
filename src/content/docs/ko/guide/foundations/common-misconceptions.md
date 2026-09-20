@@ -3,7 +3,7 @@ title: 흔한 오해
 description: Codex를 만능 블랙박스로 보는 몇 가지 오해를 바로잡습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 83a9c4c
+source_revision: 700e57b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

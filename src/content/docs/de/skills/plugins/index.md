@@ -3,7 +3,7 @@ title: Plugins
 description: Durchsuche, installiere und verwalte wiederverwendbare Pakete aus Skills, Connectoren, MCP, Hooks und Aufgabenvorlagen.
 locale: de
 source_locale: zh-CN
-source_revision: 33c9fe2
+source_revision: 8917a59
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

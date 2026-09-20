@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "Gegen die aktuelle developer-platform-Struktur dieses Repos, Navigationseinträge und verwandte CLI-/CI-/SDK-Seiten abgeglichen; diese Seite beschreibt nur die stabile Arbeitsteilung „Entwicklerplattform für Engineering-Integration“, ohne konkrete Parameter oder Laufzeitverhalten zu behaupten."
+  checkedAt: "2026-07-26"
 title: Entwicklerplattform
 description: 'Codex mit SDK, nicht-interaktivem CLI und CI/CD in die Engineering-Landschaft einbetten — für Integrationsentwickler.'
 sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Die **Entwicklerplattform** richtet sich an alle, die Codex **produktisieren** und in Pipelines bringen wollen: eigene Apps, Batch-Reviews, Release-Gates, interne Entwicklerportale. Für den Alltag „einen Prompt schreiben und einen Bug fixen“ starten Sie bei [Erste Schritte](/de/guide/getting-started/).
@@ -40,13 +44,15 @@ Es passt besonders zu diesen Szenarien:
 
 ```text
 Entwicklersystem (CI / interne Plattform / SaaS)
-        ↓ API oder CLI
-Codex (Modell + Werkzeuge + Policy)
+        ↓ Lokales SDK / CLI oder App-Server-Client
+Kontrollierte Ausführungsumgebung (Modellaufrufe + Werkzeuge + Richtlinien)
         ↓
 Git-Anbieter / Tickets / Artifact-Store
 ```
 
 ## Designprinzipien
+
+Das Codex SDK führt einen lokalen Agent aus. Ein selbst gebauter Remote-Runner, eine Warteschlange und HTTP-Callbacks sind Bestandteile des eigenen Integrationssystems. Aus dem Diagramm lässt sich keine einheitliche gehostete Cloud-Task-API ableiten. Grundlage und Minimalaufruf stehen in der [SDK-Übersicht](/de/guide/developer-platform/sdk-overview/).
 
 1. **Idempotenz und Wiederholbarkeit**: Mehrfache Reviews desselben PR sollten vergleichbar sein
 2. **Least Privilege**: CI-Token nur lesend oder auf Repos beschränkt
@@ -85,9 +91,3 @@ Dieses Kapitel behandelt „wie man Codex in Systeme einbindet“. Für den erst
 
 ## Quellen
 - Offizielle OpenAI-Codex-API-/SDK-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** API / CLI / Cloud  
-**Prüfgrundlage:** Gegen die aktuelle developer-platform-Struktur dieses Repos, Navigationseinträge und verwandte CLI-/CI-/SDK-Seiten abgeglichen; diese Seite beschreibt nur die stabile Arbeitsteilung „Entwicklerplattform für Engineering-Integration“, ohne konkrete Parameter oder Laufzeitverhalten zu behaupten.  
-**Zuletzt geprüft:** 2026-07-26

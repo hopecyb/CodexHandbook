@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit den aktuellen Troubleshooting-Einstiegen und Abschnitten zu Anmeldung, Clientwahl, Ergebnisprüfung, Kontext und Berechtigungen abgeglichen. Diese Seite dient nur als Wegweiser vom Symptom zur nächsten Seite; konkrete Fehler oder Produktverhalten werden nicht als dauerhafte Zusagen dargestellt."
+  checkedAt: "2026-07-26"
 title: Troubleshooting-Index
 description: Symptome den passenden Tutorials und Produktseiten zuordnen.
 locale: de
 source_locale: zh-CN
-source_revision: 55a1e60
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 7327724
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 110
 ---
@@ -24,6 +28,10 @@ Nach Symptom suchen ist schneller als die ganze Site durchzuklicken.
 | Kontext chaotisch | [Kontext fokussiert halten](/de/guide/context/keep-context-focused/) |
 | Fragen zu Berechtigung/Sandbox | [Berechtigungen](/de/guide/foundations/permissions-and-approvals/) · [Sandbox](/de/guide/foundations/sandbox-and-network/) |
 
+## Mit Logs Schritt für Schritt üben
+
+Die [fünf Übungen zur Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/) enthalten herunterladbare Eingaben und echte Befehlslogs. Sie behandeln unbeabsichtigte Änderungen an Quellen, Zitatnummern, die Bindung von Vorschlägen an Eingaben, Verzeichnisgrenzen und beschädigten Zustand. Jeder Fall dokumentiert eine Korrektur mit nur einer veränderten Größe und die Wiederherstellung. Es sind konzipierte lokale Übungen, keine Anmelde- oder Netzwerkvorfälle.
+
 ## Wenn die Kategorie unklar ist
 
 Zuerst einordnen:
@@ -36,10 +44,3 @@ Zuerst einordnen:
 So landet man schneller auf der richtigen Seite.
 
 Offizieller Support und Docs: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Gegen aktuelle Troubleshooting-Einstiege, Login/Clientwahl, Ergebnisprüfung, Kontext und Berechtigungen abgeglichen; nur Index „Symptom → nächste Seite“, keine langfristigen Verträge zu konkreten Fehlern oder Produktverhalten.  
-**Zuletzt geprüft:** 2026-07-26

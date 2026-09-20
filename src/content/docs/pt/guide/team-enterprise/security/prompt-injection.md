@@ -3,7 +3,7 @@ title: Injeção de Prompt
 description: Quando texto não fiável entra no Contexto — identificação, mitigação e pontos de política de equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

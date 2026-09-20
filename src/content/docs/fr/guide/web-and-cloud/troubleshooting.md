@@ -3,7 +3,7 @@ title: Dépannage de Cloud
 description: Diagnostiquez les échecs Cloud dans les couches dépôt, setup, réseau, Agent et livraison.
 locale: fr
 source_locale: zh-CN
-source_revision: 4ba9a4d
+source_revision: 019fac1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

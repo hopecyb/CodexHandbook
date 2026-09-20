@@ -90,7 +90,12 @@ const sourceFiles = [
 	...['README.md', 'STYLE_GUIDE.md', 'CONTRIBUTING.md']
 		.map((file) => path.join(root, file))
 		.filter((file) => fs.existsSync(file)),
-].sort();
+].filter((file) => {
+	// Frozen telemetry records local machine links verbatim, not site routes.
+	// Preserve it for audit; exported artifacts have a separate hash/link check.
+	const relative = path.relative(root, file).split(path.sep).join('/');
+	return !/^docs\/planning\/next-content\/experiments\/[^/]+\/run-\d+\/telemetry\//.test(relative);
+}).sort();
 
 const failures = [];
 let checked = 0;
@@ -126,5 +131,5 @@ if (failures.length > 0) {
 	}
 	process.exitCode = 1;
 } else {
-	console.log(`Checked ${checked} internal links and image references across ${sourceFiles.length} source files.`);
+	console.log(`Checked ${checked} internal links and image references across ${sourceFiles.length} source files (archived experiment telemetry excluded).`);
 }

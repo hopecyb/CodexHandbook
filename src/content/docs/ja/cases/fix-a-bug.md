@@ -3,7 +3,7 @@ title: Bug 修正：どこから始めるか
 description: 現在の問題に合う Bug 修正経路を選び、実行可能な資料を使う完全な事例へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: 27c707b
+source_revision: 405a687
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

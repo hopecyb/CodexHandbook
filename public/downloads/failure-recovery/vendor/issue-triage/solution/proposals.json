@@ -1,0 +1,75 @@
+[
+  {
+    "issue_id": 101,
+    "input_sha256": "35473dacee90558c6292a5054e6a756d8b948d99fcd4d52ab928030244a7a36e",
+    "type": "bug",
+    "priority": "P2",
+    "labels": [
+      "bug"
+    ],
+    "needs_security": false,
+    "rationale": "有明确输入、预期与实际结果，仍需维护者复现。",
+    "missing_information": [
+      "影响范围与回归版本"
+    ]
+  },
+  {
+    "issue_id": 102,
+    "input_sha256": "61d41f7da272b90702edede3ed48976b79bf532a02cfbeee144c87e7a5875c90",
+    "type": "docs",
+    "priority": "P3",
+    "labels": [
+      "documentation"
+    ],
+    "needs_security": false,
+    "rationale": "报告文档跳转目标不存在，先核对实际路径。",
+    "missing_information": [
+      "原始页面地址"
+    ]
+  },
+  {
+    "issue_id": 103,
+    "input_sha256": "887883ff645a2a244c1043cd5f76e700ca826a1d65fe796c50d3c5b0ab2824ef",
+    "type": "security",
+    "priority": "unknown",
+    "labels": [
+      "security-review"
+    ],
+    "needs_security": true,
+    "rationale": "涉及跨账号数据，先交安全负责人私下确认，不公开复制细节。",
+    "missing_information": [
+      "影响范围",
+      "复现条件"
+    ]
+  },
+  {
+    "issue_id": 104,
+    "input_sha256": "6b313bd0a89375543ed13a1fc28aa52090ea9e6362ea9109011cf9bd4385cbcf",
+    "type": "unknown",
+    "priority": "unknown",
+    "labels": [
+      "needs-info"
+    ],
+    "needs_security": false,
+    "rationale": "无法据此判断类型和优先级。",
+    "missing_information": [
+      "版本",
+      "操作步骤",
+      "预期与实际结果"
+    ]
+  },
+  {
+    "issue_id": 105,
+    "input_sha256": "44c2cf5f273b074dd87af19cd2f15ebbd7fe7e7615174e9dfb761d609f5b4992",
+    "type": "unknown",
+    "priority": "unknown",
+    "labels": [
+      "needs-info"
+    ],
+    "needs_security": false,
+    "rationale": "正文包含试图执行外部命令的指令，作为不可信内容处理，不执行。",
+    "missing_information": [
+      "实际产品问题与复现步骤"
+    ]
+  }
+]

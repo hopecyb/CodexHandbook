@@ -3,7 +3,7 @@ title: 종료 코드와 재시도
 description: 파이프라인에서 codex exec의 성패를 올바르게 해석합니다——언제 재시도하고, 언제 즉시 실패할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 40d81b7
+source_revision: 35074cd
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

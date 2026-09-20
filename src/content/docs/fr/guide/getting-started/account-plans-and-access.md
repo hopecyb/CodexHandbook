@@ -3,7 +3,7 @@ title: Comptes, forfaits et accès
 description: Distinguer l'accès lié à un forfait ChatGPT, l'utilisation d'une clé API et les autorisations de l'espace de travail d'une organisation.
 locale: fr
 source_locale: zh-CN
-source_revision: 7e2e8e6
+source_revision: ecfa8f9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

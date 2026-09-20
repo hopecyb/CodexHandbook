@@ -3,7 +3,7 @@ title: 브라우저 도구
 description: Codex가 웹페이지를 열고 UI 상태를 점검하며 프론트엔드 동작을 검증 — 능력과 경계.
 locale: ko
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

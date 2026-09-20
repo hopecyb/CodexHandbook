@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "O runtime atual do Codex permite Skills com scripts e comandos determinísticos; o princípio «ações estáveis em script, fluxo ainda governado pelo Skill» alinha-se às capacidades atuais."
+  checkedAt: "2026-07-26"
 title: scripts/ e testes
 description: Adicione scripts determinísticos a um Skill e valide o comportamento.
 locale: pt
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ No começo de um Skill, é comum colocar tudo em `SKILL.md`. Fluxos simples acei
 
 Ações fixas vão para script; julgamento e colaboração ficam no Skill.
 
-# scripts/ e testes
 
 Quando um passo deve ser determinístico (rodar testes, gerar diff, validar formato), coloque o script em `scripts/` e diga em `SKILL.md` quando chamá-lo.
 
@@ -78,9 +82,3 @@ Assim fica mais fácil separar «script quebrado» de «integração do Skill er
 Ações que devem se repetir de forma estável não dependam só de texto. Faça o script funcionar primeiro; depois confirme a chamada pelo Skill.
 
 Scripts herdam a política atual de Aprovação; veja [regras de comando](/pt/guide/customization/rules/command-rules/) e [Segurança de Skills](/pt/skills/security/).
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** O runtime atual do Codex permite Skills com scripts e comandos determinísticos; o princípio «ações estáveis em script, fluxo ainda governado pelo Skill» alinha-se às capacidades atuais.  
-**Última Verificação:** 2026-07-26

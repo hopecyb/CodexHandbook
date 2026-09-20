@@ -3,7 +3,7 @@ title: Cómo elegir un método de extensión
 description: Elige entre prompts, AGENTS.md, Skills, MCP, Hooks, Plugins o Scheduled tasks según lo que deba persistir.
 locale: es
 source_locale: zh-cn
-source_revision: 461cac4
+source_revision: 28ae6f5
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

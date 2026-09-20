@@ -1,61 +1,51 @@
 ---
-title: Mit Dateien arbeiten
-description: Codex Dateien in einem klaren Bereich lesen und schreiben lassen.
-locale: de
-source_locale: zh-CN
-source_revision: 7920b62
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Mit Dateien arbeiten"
+description: "Fügen Sie nur in der angegebenen Datei eine Zeile hinzu und prüfen Sie die tatsächliche Änderung."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 20
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Die festen Materialien und das Referenzergebnis des Autors sind vorhanden. Das Skript für Dateioperationen in einem temporären Verzeichnis wurde ausgeführt; ein unabhängiger Test mit einem Modell oder Lernenden steht noch aus."
+  evidence:
+    - label: "Protokoll der Dateioperationen des Autors"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/de/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Mit Codex sprechen"
+next:
+  link: "/de/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Klare Aufgaben formulieren"
+locale: de
+source_locale: zh-CN
+source_revision: "ec5c2d3"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Ziel dieses Schritts
+## Voraussetzungen
 
-Dateiname angeben und eine kontrollierte Bearbeitung abschließen.
+Sie haben Schritt eins abgeschlossen und in `work` liegen noch die drei ursprünglichen Dateien. Bewahren Sie `starter` außerhalb des Arbeitsverzeichnisses als Ausgangsbasis auf.
 
-Ab hier wird aus „nur chatten“ „wirklich Dateien anfassen“ — der Fokus wechselt von Zielbeschreibung zu Bereichskontrolle.
-
-## Übung
+## Eine überprüfbare Änderung vornehmen
 
 ```text
-Bearbeite nur hello.md: Am Anfang eine Datumszeile (heutiges Datum) als Kommentar einfügen.
-Keine anderen Dateien ändern, keine Befehle ausführen.
-Danach die geänderten Zeilen auflisten.
+Füge nur in der ersten Zeile von notice.md folgenden Statuskommentar hinzu:
+<!-- 状态：练习草稿，未发布 -->
+Erhalte den ursprünglichen Text Zeichen für Zeichen. Ändere keine anderen Dateien und lege keine neuen an.
+Nenne anschließend die Stelle der Änderung. Veröffentliche nichts und sende keine Benachrichtigung.
 ```
 
-Diff prüfen, dann annehmen. Verwandt: [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
+Vergleichen Sie die Datei in der Diff-Ansicht Ihres Clients oder im Editor Zeile für Zeile mit dem Original. Hier ist nur eine kleine Änderung erforderlich; ein zusätzlicher Ablauf nach dem Muster „erst planen, dann jeden Schritt bestätigen“ ist nicht nötig.
 
-## Übungsfokus
+## Abschlusskriterien
 
-Drei Dinge:
+Nur notice.md wurde geändert, und hinzugekommen ist genau eine Kommentarzeile; die beiden anderen Dateien bleiben unverändert. Vergleichen Sie mit dem [Ergebnis von Schritt zwei](/downloads/first-project/references/step-2-notice.md). Der Kommentar kann in gerendertem Markdown verborgen sein; prüfen Sie daher den Rohtext.
 
-- Nur welche Datei ändern
-- Welche Extra-Aktionen nicht
-- Danach Änderungen klar benennen lassen
+Falls das Modell den Text ändert, stellen Sie notice.md aus dem Original in `starter` wieder her und wiederholen Sie diesen Schritt. Stellen Sie nur diese Übungsdatei wieder her, nicht das gesamte Projekt. Siehe [Änderungen rückgängig machen und wiederherstellen](/de/guide/getting-started/undo-and-recover/).
 
-Zusammen: grundlegende „kontrollierte Bearbeitung“.
-
-## Häufige Missverständnisse
-
-### 1. Eine kleine Datei lohnt sich nicht
-
-Je kleiner der Bereich, desto leichter sehen Sie Grenzverletzungen.
-
-### 2. Mit Dateiname rührt es nichts anderes an
-
-Nicht blind darauf vertrauen.
-
-Deshalb danach Diff prüfen.
-
-Beim ersten Dateieingriff zählt nicht Menge, sondern klare Änderungsgrenze und Prüfbarkeit.
-
-Weiter: [Klare Aufgaben geben](/de/guide/learning-paths/beginner/03-give-clear-tasks/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Gegen geprüfte Datei-/Ordnerkontext-, Ergebnisprüfungs- und Einsteigerpfad-Seiten abgeglichen; Inhalt auf „eine kontrollierte Bearbeitung im klaren Bereich“ begrenzt.  
-**Zuletzt geprüft:** 2026-07-26
+[Übungspaket und Vorbereitung](/de/guide/learning-paths/beginner/)

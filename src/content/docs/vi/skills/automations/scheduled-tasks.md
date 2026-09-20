@@ -1,148 +1,142 @@
 ---
-title: Tác vụ hẹn giờ và nền
-description: Automations — chạy Codex không người trực dưới điều kiện kích hoạt; phải thiết kế Phê duyệt và điều kiện thoát.
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / ứng dụng máy tính; CLI và IDE dùng để chuẩn bị và kiểm thử"
+  checkedAt: "2026-08-26"
+title: Hướng dẫn đầy đủ về tác vụ định kỳ
+description: Chọn tác vụ độc lập hoặc tác vụ trong cuộc trò chuyện, cấu hình dự án cục bộ, worktree, quyền, prompt và quy trình rà soát.
 locale: vi
 source_locale: zh-CN
-source_revision: 7b79596
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: fa792dc
+translation_status: draft
+translated_at: "2026-09-20"
 ---
 
-The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
+Phần khó thực sự của tác vụ định kỳ không phải là “chạy lúc mấy giờ”, mà là bảo đảm mỗi lần chạy không có người giám sát đều có đầu vào ổn định, quyền hạn hẹp, đầu ra có thể rà soát và điều kiện dừng.
 
-![Safety loop from manual verification to scheduling, human review, and adjustment](/diagrams/scheduled-task-safety-loop-vi.svg)
+![Vòng lặp an toàn từ xác minh thủ công đến chạy định kỳ, con người rà soát và điều chỉnh](/diagrams/scheduled-task-safety-loop-vi.svg)
 
-## Who it is for
+## Phù hợp với ai
 
-- Individuals producing daily or weekly reports, checking docs, or following PRs.
-- Developers running maintenance against a local project or isolated worktree.
-- Maintainers reviewing permissions, failure handling, and shared Skills.
+- Người dùng cá nhân muốn tạo báo cáo, kiểm tra tài liệu hoặc theo dõi PR hằng ngày hoặc hằng tuần.
+- Lập trình viên cần chạy tác vụ bảo trì định kỳ trong dự án cục bộ hoặc worktree tách biệt.
+- Người bảo trì đánh giá quyền, cách xử lý thất bại và Skill dùng chung trong nhóm.
 
-## Support boundaries
+## Giới hạn hỗ trợ
 
-| Surface | Capability | Constraint |
+| Nền tảng | Có thể làm gì | Giới hạn quan trọng |
 |---|---|---|
-| ChatGPT Web | Create, manage, inspect runs; use uploads, connected tools, Skills, Plugins | Cannot directly access local folders |
-| ChatGPT desktop App | Create and manage; select local project or Git worktree | Computer awake, App running, project present |
-| Codex CLI | Prepare and manually test prompts, Skills, scripts | No Scheduled management UI |
-| IDE integration | Verify commands and edits in workspace | No Scheduled management UI |
+| ChatGPT Web | Tạo, quản lý, xem lần chạy; dùng tệp tải lên, công cụ kết nối, Skills, Plugins | Không truy cập trực tiếp thư mục trên máy cục bộ |
+| Ứng dụng ChatGPT trên máy tính | Tạo, quản lý; có thể chọn dự án cục bộ hoặc Git worktree | Tác vụ dùng tệp cục bộ cần máy đang bật, ứng dụng đang chạy và dự án vẫn tồn tại |
+| Codex CLI | Chuẩn bị và kiểm thử thủ công prompt, Skill, script | Không có giao diện quản lý Scheduled |
+| Phần mở rộng IDE | Xác minh lệnh và thay đổi trong workspace | Không có giao diện quản lý Scheduled |
 
-## 1. Standalone or in-chat
+## 1. Chọn tác vụ độc lập hay tác vụ trong cuộc trò chuyện
 
-### Standalone Scheduled task
+### Scheduled task độc lập
 
-Each run starts from the saved prompt and appears separately in Scheduled. Use for independent reports and health checks; one task may cover several projects.
+Mỗi lần chạy bắt đầu từ prompt đã lưu và xuất hiện như một lần chạy riêng trong Scheduled. Phù hợp với báo cáo ngày, báo cáo tuần và kiểm tra sức khỏe dự án độc lập với nhau; một tác vụ cũng có thể bao phủ nhiều dự án.
 
-### In-chat Scheduled task
+### Scheduled task trong cuộc trò chuyện
 
-Return to one chat on schedule and retain context. Use for polling long work, following a PR, or continuing research.
+Theo lịch, tác vụ quay lại cùng cuộc trò chuyện và tiếp tục dùng ngữ cảnh hiện có. Phù hợp để thăm dò tác vụ dài, theo dõi trạng thái PR, nghiên cứu liên tục hoặc công việc cần giữ lại các trao đổi trước đó.
 
-Choose standalone when each run should restart; choose in-chat when one question needs continuity.
+Tiêu chí chọn: nếu mỗi lần chạy cần “bắt đầu lại”, hãy chọn tác vụ độc lập; nếu cần tiếp tục ngữ cảnh của cùng một vấn đề, hãy chọn tác vụ trong cuộc trò chuyện.
 
-## 2. Choose material
+## 2. Chọn tài liệu và môi trường chạy
 
-### Web
+### Chạy trên Web
 
-Put durable instructions in the prompt or Skill and provide uploads, a Project, or connected services. “Read latest.csv from my desktop” cannot work on Web.
+Đưa hướng dẫn lâu dài vào prompt tác vụ hoặc Skill, và đặt tài liệu cần dùng trong tệp tải lên, Project hoặc dịch vụ đã kết nối. Đừng viết “đọc latest.csv trên màn hình máy tính của tôi”; Web không thể truy cập trực tiếp đường dẫn cục bộ.
 
-### Local project in the desktop App
+### Dùng dự án cục bộ trong ứng dụng máy tính
 
-For a Git repository:
+Với kho Git, bạn có thể chọn:
 
-- **Local project:** work in the primary checkout, potentially touching open edits.
-- **Dedicated worktree:** isolate background edits from unfinished work.
+- **Dự án cục bộ:** làm việc trực tiếp trong checkout chính, có thể chạm vào tệp bạn đang sửa.
+- **Worktree riêng:** tách thay đổi chạy nền khỏi công việc chưa hoàn tất, phù hợp với tác vụ sẽ sửa tệp.
 
-Non-Git projects run directly in their directory. Archive unneeded high-frequency runs so worktrees do not accumulate.
+Dự án không dùng Git chạy trực tiếp trong thư mục dự án. Các tác vụ worktree chạy thường xuyên sẽ tích lũy cây làm việc; hãy lưu trữ những lần chạy không còn cần thiết để tránh giữ lại quá nhiều worktree ngoài ý muốn.
 
-## 3. Verify manually first
+## 3. Xác minh thủ công trước
 
-Run the identical prompt, model, reasoning effort, and tools in a normal chat. Confirm:
+Trong cuộc trò chuyện thông thường, trước tiên hãy chạy đúng cùng prompt, mô hình, mức độ suy luận và công cụ. Tối thiểu cần xác nhận:
 
-- inputs remain clear without live explanation;
-- no-change exits quietly;
-- output is quickly reviewable;
-- commands, Skills, and connected tools work;
-- missing access or material causes an explicit stop, not guessing.
+- Đầu vào vẫn rõ ràng khi không có lời giải thích thêm tại chỗ.
+- Khi “không có thay đổi”, tác vụ kết thúc yên lặng.
+- Con người có thể rà soát đầu ra nhanh chóng.
+- Lệnh, Skill và công cụ kết nối đều hoạt động.
+- Khi thiếu quyền hoặc tài liệu, tác vụ dừng và giải thích thay vì đoán.
 
-Inspect the first scheduled runs before changing prompt or frequency.
+Xem vài lần chạy định kỳ đầu tiên, rồi điều chỉnh prompt hoặc tần suất.
 
-## 4. Reusable task prompt
+## 4. Mẫu prompt tác vụ có thể chỉnh sửa ngay
 
 ```text
-Create a standalone Scheduled task:
+Hãy tạo một Scheduled task độc lập:
 
-Name: Weekly documentation broken-link check
-Time: Monday 09:00 in the current timezone
-Location: dedicated worktree for the current Git project
+Tên: Kiểm tra liên kết tài liệu bị hỏng hằng tuần
+Thời gian: Thứ Hai hằng tuần lúc 09:00, theo múi giờ hiện tại
+Nơi chạy: worktree riêng của dự án Git hiện tại
 
-Every run:
-1. Read only docs/, src/content/docs/, examples/, and public/diagrams/.
-2. Run pnpm check:links.
-3. If it passes, report file and link counts; do not edit.
-4. If it fails, list source file, broken target, and suggested fix; do not fix.
-5. No internet, installs, commit, push, or PR.
-6. If command/dependency is missing or result uncertain, stop and name the
-   exact item requiring human attention.
+Mỗi lần chạy, hãy:
+1. Chỉ đọc docs/, src/content/docs/, examples/ và public/diagrams/.
+2. Chạy pnpm check:links.
+3. Nếu kiểm tra thành công, chỉ báo cáo số tệp và số liên kết đã kiểm tra; không sửa tệp.
+4. Nếu kiểm tra thất bại, liệt kê kết quả theo “tệp nguồn, đích không hợp lệ, cách sửa đề xuất”; không tự động sửa liên kết.
+5. Không truy cập mạng, không cài phụ thuộc, không commit, không push, không tạo PR.
+6. Nếu không có lệnh, thiếu phụ thuộc hoặc kết quả không chắc chắn, hãy dừng và nêu rõ việc cần người xử lý.
 
-Completion: end after one reviewable report; do not retry.
+Điều kiện hoàn thành: kết thúc lần chạy này sau khi xuất một báo cáo có thể rà soát; không thử lại nhiều lần.
 ```
 
-This defines time, project, read scope, command, branches, prohibitions, and stop condition. Scheduling only retriggers the task; it does not replace its specification.
+Mẫu này ghi rõ thời gian, dự án, phạm vi đọc, lệnh, nhánh thành công/thất bại, hành động bị cấm và điều kiện kết thúc. Lịch chỉ kích hoạt lại tác vụ; nó không thay thế mô tả tác vụ.
 
-## 5. Permissions and review
+## 5. Quyền và rà soát của con người
 
-Scheduled tasks run unattended with default sandbox settings.
+Tác vụ định kỳ chạy không có người giám sát và sử dụng cài đặt sandbox mặc định.
 
-| Sandbox | Common result |
+| Chế độ sandbox | Kết quả thường gặp |
 |---|---|
-| read-only | File edits, network, and local App control fail |
-| workspace-write | Workspace writes work; outside writes, network, and App control fail by default |
+| read-only | Các lệnh gọi sửa tệp, truy cập mạng hoặc điều khiển ứng dụng cục bộ thất bại |
+| workspace-write | Có thể ghi trong workspace; việc ghi ngoài workspace, truy cập mạng hoặc điều khiển ứng dụng mặc định thất bại |
 
-Start with the narrowest mode that works. Add explicit allowlists rather than granting broad access after one failure.
+Bắt đầu bằng quyền hẹp nhất vẫn hoàn thành được tác vụ. Nếu cần mạng hoặc truy cập tệp rộng hơn, hãy định nghĩa allowlist rõ ràng; đừng nâng cả tác vụ lên quyền cao chỉ để tránh một lần thất bại.
 
-Keep human review for:
+Nên giữ bước con người rà soát đối với:
 
-- sending or publishing externally;
-- production-state changes;
-- merging PRs or pushing main;
-- bulk deletion, migration, or permission changes;
-- unexpected diffs or failed tests.
+- Gửi tin nhắn ra ngoài hoặc xuất bản nội dung.
+- Thay đổi trạng thái production.
+- Merge PR hoặc push nhánh chính.
+- Xóa hàng loạt, migration hoặc thay đổi quyền.
+- Diff vượt phạm vi dự kiến hoặc kiểm thử thất bại.
 
-## 6. No-change, failure, and stop
+## 6. Thiết kế các nhánh “không thay đổi”, thất bại và dừng
 
-A durable task defines:
+Tác vụ chạy lâu dài phải xác định ba trường hợp:
 
-1. **Finding:** evidence, severity, next step.
-2. **No change:** concise scope report without invented issues.
-3. **Unable:** missing material or access, then stop for a person.
+1. **Có phát hiện:** xuất bằng chứng, mức độ nghiêm trọng và bước tiếp theo.
+2. **Không thay đổi:** báo cáo ngắn gọn phạm vi đã kiểm tra, không tạo vấn đề giả.
+3. **Không thể hoàn thành:** nêu tài liệu/quyền còn thiếu, dừng và chờ con người.
 
-For in-chat polling, add termination such as PR merged/closed, three identical failures, or approval required.
+Với tác vụ thăm dò trong cuộc trò chuyện, cần thêm điều kiện kết thúc, chẳng hạn “dừng khi PR được merge, đóng, gặp cùng một lỗi trong 3 lần liên tiếp hoặc cần con người phê duyệt”.
 
-## Scheduled is not event-driven CI
+## Scheduled task không phải CI kích hoạt theo sự kiện
 
-Use GitHub Actions, CI, webhooks, or Codex SDK when execution must follow a push, PR, or release event immediately. Minute-by-minute polling is not precise event triggering.
+Nếu tác vụ phải chạy ngay sau một sự kiện trong kho mã như `push`, tạo PR hoặc hoàn tất phát hành, hãy dùng GitHub Actions, CI, webhook hoặc Codex SDK làm điểm kích hoạt. Đừng coi việc “thăm dò mỗi phút” là bộ kích hoạt sự kiện chính xác.
 
-## Acceptance checklist
+## Danh sách kiểm tra nghiệm thu
 
-- [ ] Prompt passed completely in a normal chat.
-- [ ] Standalone or in-chat mode selected.
-- [ ] Web material or local project is available at runtime.
-- [ ] Default sandbox suffices, or extra access has a reason.
-- [ ] Finding, no-change, failure, and stop paths are explicit.
-- [ ] First three runs received human sampling.
-- [ ] Frequent worktrees have archive and cleanup policy.
-- [ ] Critical writes retain human confirmation.
+- [ ] Prompt đã chạy thành công trọn vẹn trong cuộc trò chuyện thông thường.
+- [ ] Đã chọn tác vụ độc lập hoặc tác vụ trong cuộc trò chuyện.
+- [ ] Tài liệu trên Web hoặc dự án cục bộ có sẵn lúc chạy.
+- [ ] Sandbox mặc định đủ dùng; quyền bổ sung có lý do rõ ràng.
+- [ ] Đã ghi rõ điều kiện có phát hiện, không thay đổi, thất bại và dừng.
+- [ ] Con người đã kiểm tra ngẫu nhiên ba lần chạy đầu tiên.
+- [ ] Worktree tần suất cao có chiến lược lưu trữ và dọn dẹp.
+- [ ] Các thao tác ghi quan trọng vẫn yêu cầu con người xác nhận.
 
-## Official sources
+## Nguồn chính thức
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** ChatGPT Web / desktop App; CLI and IDE prepare and test
-
-**Kiểm chứng gần nhất:** 2026-08-26

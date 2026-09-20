@@ -3,7 +3,7 @@ title: CLI 구성
 description: "모델, 샌드박스, 승인, MCP—터미널에서 Codex 동작을 통일합니다."
 locale: ko
 source_locale: zh-CN
-source_revision: 48f3288
+source_revision: 0a9b2ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

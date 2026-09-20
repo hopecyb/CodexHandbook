@@ -3,7 +3,7 @@ title: 로컬과 클라우드
 description: 로컬 작업과 Cloud 작업의 적합한 장면을 비교합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c61d0ea
+source_revision: 1a0ea54
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

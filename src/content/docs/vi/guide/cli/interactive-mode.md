@@ -3,10 +3,9 @@ title: Chế độ tương tác
 description: Trò chuyện với Codex và thực thi tác vụ trong terminal.
 locale: vi
 source_locale: zh-CN
-source_revision: 794dd7c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 822e8f7
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -23,6 +22,19 @@ Sau khi khởi phiên tương tác:
 4. Dùng lệnh tắt kiểu `/` (nếu có) để quản phiên — lấy theo trợ giúp CLI hiện tại
 
 Phương pháp Prompt vẫn áp dụng: [Prompt](/vi/prompts/)
+
+## Tác vụ phù hợp với chế độ tương tác
+
+Chế độ tương tác hợp với công việc cần quyết định trong lúc làm:
+
+| Tình trạng tác vụ | Vì sao tương tác hữu ích |
+|---|---|
+| Yêu cầu chưa hoàn toàn rõ | Có thể làm rõ giữa chừng |
+| Cần xem diff trước khi quyết định bước tiếp | Có thể phê duyệt từng bước hoặc thu hẹp phạm vi |
+| Lần đầu thử một quy trình trong dự án | Dễ quan sát Codex đã đọc và sửa gì |
+| Có quyền hạn, công cụ ngoài hoặc khả năng ghi tệp | Con người có thể kiểm soát tại các điểm quan trọng |
+
+Khi tác vụ đã ổn định và không cần trao đổi qua lại, hãy cân nhắc [chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) hoặc tự động hóa.
 
 ## Hiểu nhầm thường gặp
 

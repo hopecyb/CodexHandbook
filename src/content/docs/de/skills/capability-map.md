@@ -3,7 +3,7 @@ title: Karte der Erweiterungsfunktionen
 description: Verstehe das Codex-Erweiterungssystem anhand der acht Aufgaben Aufgabe, Regeln, Workflow, Werkzeuge, Schutz, Verteilung, Auslösung und Parallelisierung.
 locale: de
 source_locale: zh-CN
-source_revision: fa5604a
+source_revision: 183812c
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

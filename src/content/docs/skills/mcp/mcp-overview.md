@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT 桌面 App / Codex CLI / IDE；ChatGPT Web 通过 Plugin 使用远程 MCP 工具"
+  checkedAt: "2026-08-25"
 title: MCP 概述
 description: 理解 MCP 客户端、服务器、工具、鉴权与安全边界。
 ---
@@ -84,11 +88,3 @@ Codex 连接一个远程地址。当前官方文档确认支持 Bearer token、O
 
 - [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT 桌面 App / Codex CLI / IDE；ChatGPT Web 通过 Plugin 使用远程 MCP 工具
-
-**最近核验：** 2026-08-25

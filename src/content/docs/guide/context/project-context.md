@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页仅说明项目级长期上下文的沉淀方式；概念、示例与边界表述已复查，且正文不依赖易变产品事实。"
+  checkedAt: "2026-07-26"
 title: 项目上下文
 description: 项目说明与目录级背景。
 sidebar:
@@ -115,10 +120,3 @@ sidebar:
 - 默认验证方式
 
 凡是下次大概率还会用到的说明，都值得沉到项目上下文里，不必每次重新打一遍。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页仅说明项目级长期上下文的沉淀方式；概念、示例与边界表述已复查，且正文不依赖易变产品事实。  
-**最近核验：** 2026-07-26

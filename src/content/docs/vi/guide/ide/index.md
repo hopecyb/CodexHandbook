@@ -3,7 +3,7 @@ title: Tiện ích IDE
 description: Dùng Codex trong trình soạn thảo — cài đặt, ngữ cảnh, tác vụ local và Cloud, rà soát và cài đặt.
 locale: vi
 source_locale: zh-CN
-source_revision: 66307a0
+source_revision: 4772f3f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

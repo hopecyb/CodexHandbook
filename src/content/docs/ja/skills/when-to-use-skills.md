@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help《Skills in ChatGPT》が Skill を再利用可能・共有可能な workflow と確認。現在の Codex ランタイムもスキル名と説明でマッチング。本ページは選定原則が中心で、変わりやすい UI に依存しない。"
+  checkedAt: "2026-07-26"
 title: いつ Skill を使うか
 description: タスクが Skill としてパッケージ化に適しているかの判断、およびスラッシュコマンド・MCP との役割分担。
 locale: ja
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Skill を初めて使うとき、よくある疑問は「これをわざわざ S
 
 何でも Skill にすると重くなり、固めるべきものを固めないと同じことを繰り返し手動で説明することになります。ここではいつフローを固定化すべきかの判断を扱います。
 
-# いつ Skill を使うか
 
 ## Skill としてパッケージ化に向いている場合
 
@@ -81,10 +85,3 @@ Skill を初めて使うとき、よくある疑問は「これをわざわざ S
 Skill は「繰り返す・一貫させたい・毎回説明し直したくない」フローの固定化に向いています。
 
 拡張方式の選定は [拡張方式の選び方](/ja/skills/choosing-an-extension-method/)。ワークフローの Skill 化は [フローを Skill にする](/ja/cases/workflows/turn-a-workflow-into-a-skill/)。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Help《Skills in ChatGPT》が Skill を再利用可能・共有可能な workflow と確認。現在の Codex ランタイムもスキル名と説明でマッチング。本ページは選定原則が中心で、変わりやすい UI に依存しない。

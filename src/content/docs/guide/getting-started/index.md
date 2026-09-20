@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "OpenAI Developers 首页当前仍将 Codex定位为可用于理解代码库、构建功能、测试与审查变更；本页同时只提供入门顺序与站内导航，不依赖易变命令或界面细节。"
+  checkedAt: "2026-07-26"
 title: 快速上手
 description: 从账号与安装到第一次可检查的任务。
 sidebar:
@@ -66,10 +71,3 @@ sidebar:
 6. 学会撤回或修正
 
 这个闭环走通以后，再学更复杂的内容会轻松一些。
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** OpenAI Developers 首页当前仍将 Codex定位为可用于理解代码库、构建功能、测试与审查变更；本页同时只提供入门顺序与站内导航，不依赖易变命令或界面细节。  
-**最近核验：** 2026-07-26

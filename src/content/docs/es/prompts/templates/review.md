@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de revisión; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de revisión
 description: Revisión estructurada de diffs y riesgo del cambio.
 locale: es
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de revisión
 
 Lo más fácil de desviarse en revisión es que de entrada se convierta en «ya te lo cambié de paso».
 
@@ -53,10 +57,3 @@ El foco de esta plantilla es sacar riesgos por dimensiones fijas, no evaluar en 
 
 - [Revisar antes de fusionar](/es/cases/workflows/review-before-merge/)
 - [Caso: revisar un PR](/es/cases/review-a-pr/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de revisión; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

@@ -1,15 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cette page décrit uniquement l'usage des modèles ; liens et typologie revus ; pas de faits volatils produit."
+  checkedAt: "2026-07-26"
 title: Modèles de Prompts
 description: Squelettes réutilisables par type de tâche — comprendre, créer, modifier, diagnostiquer, revoir, rechercher, automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: 3dbc237
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: fae2ed3
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Modèles de Prompts
 
 Deux réactions fréquentes aux « modèles » :
 
@@ -54,6 +57,27 @@ Certains prompts ne servent qu'une fois. D'autres reviennent assez souvent pour 
 
 Le modèle convient aux tâches lancées par une personne ; le Skill aux processus répétés ; le Hook aux contrôles automatiques ; MCP à l'accès aux systèmes externes.
 
+## Choix rapide : quelle forme donner à cette tâche ?
+
+Posez-vous quatre questions :
+
+1. Cette tâche ne sera-t-elle effectuée qu'une fois ?
+2. Les étapes seront-elles presque identiques la prochaine fois ?
+3. Existe-t-il un format de sortie ou une liste de vérification fixe ?
+4. Faut-il un système externe, un script ou un contrôle automatique ?
+
+| Situation | Forme conseillée |
+|---|---|
+| Travail unique qui demande encore une discussion | Consigne complète |
+| Travail répété, mais encore en cours d'ajustement | Modèle |
+| Processus stable et sortie définie | Skill |
+| Rôle indépendant chargé d'approfondir | Sous-agent |
+| Données d'un système externe nécessaires | MCP, d'abord en lecture seule si possible |
+| Vérification obligatoire à chaque étape donnée | Hook |
+| Ensemble à distribuer à l'équipe | Plugin |
+
+Une consigne plus longue n'est pas forcément meilleure. Ce qui mérite d'être réutilisé, c'est une tâche déjà vérifiée à plusieurs reprises, dont les limites et critères d'acceptation sont clairs.
+
 ## Idées reçues
 
 ### 1. Copier tel quel
@@ -75,10 +99,3 @@ Il ne décide pas :
 Choisissez le type, puis personnalisez — ne substituez pas la tâche par le modèle.
 
 Principes : [Bases des Prompts](/fr/prompts/basics/) et [Anatomie d'une tâche](/fr/prompts/task-anatomy/).
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page décrit uniquement l'usage des modèles ; liens et typologie revus ; pas de faits volatils produit.

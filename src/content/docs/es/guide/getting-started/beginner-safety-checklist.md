@@ -3,7 +3,7 @@ title: Lista de seguridad para principiantes
 description: Comprobaciones de seguridad obligatorias antes del primer uso.
 locale: es
 source_locale: zh-CN
-source_revision: 5add3bd
+source_revision: 75bfe4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

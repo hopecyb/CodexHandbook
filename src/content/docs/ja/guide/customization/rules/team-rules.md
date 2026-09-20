@@ -3,7 +3,7 @@ title: チームルール方針
 description: 組織、リポジトリ、個人の間でコマンドとパスルールを層分け——レビュー可能、ロールバック可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: 3843326
+source_revision: bae8bd2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Thư viện kịch bản và case
 description: Tác vụ thực tế đầu-cuối — chuẩn bị, thực thi, kiểm chứng, phục hồi thất bại và rút kinh nghiệm.
 locale: vi
 source_locale: zh-CN
-source_revision: 6349392
+source_revision: 1e284bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

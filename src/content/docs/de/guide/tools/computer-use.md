@@ -3,7 +3,7 @@ title: Computer Use
 description: "Fortgeschrittene GUI-Bedienung über Bildschirm und Eingabegeräte — Szenarien, Risiken und Freigabe."
 locale: de
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

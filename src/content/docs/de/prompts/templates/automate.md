@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Automatisierungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Automatisieren-Vorlage
 description: Wiederholaufgaben und wiederverwendbare Abläufe.
 locale: de
 source_locale: zh-CN
-source_revision: 4f14d7a
+source_revision: 2aff2e7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Automatisieren-Vorlage
 
 Typischer Irrtum bei Automatisierung: nur „kann es automatisch laufen?“ — ohne vorher zu klären:
 
@@ -61,10 +65,3 @@ Wert der Vorlage: langfristig und sicher laufen lassen.
 
 - [Prompts für lange Aufgaben](/de/prompts/long-running-tasks/)
 - [Täglichen Report automatisieren (Fall)](/de/cases/automate-a-daily-report/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Automatisierungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

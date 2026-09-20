@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Current Codex runtime allows skills to work with scripts and deterministic commands; this page's principle—script stable actions, Skill constrains flow—matches current capability."
+  checkedAt: "2026-07-26"
 title: scripts/ and tests
 description: Add deterministic scripts to a Skill and verify their behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Early on, it is tempting to put everything in `SKILL.md`. That works for simple 
 
 Hand fixed actions to scripts; leave judgment and collaboration to the Skill.
 
-# scripts/ and tests
 
 When a step must run deterministically (run tests, generate diff, validate format), provide a script under `scripts/` and document when to call it in `SKILL.md`.
 
@@ -78,9 +82,3 @@ That separates "script is broken" from "Skill integration is wrong."
 Do not rely on prose alone for actions that must repeat reliably. Get scripts working first, then confirm Skill invocation.
 
 Scripts inherit the current approval policy; see [command rules](/en/guide/customization/rules/command-rules/) and [Skill security](/en/skills/security/).
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime allows skills to work with scripts and deterministic commands; this page's principle—script stable actions, Skill constrains flow—matches current capability.  
-**Last verified:** 2026-07-26

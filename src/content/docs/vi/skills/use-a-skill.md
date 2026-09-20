@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Runtime Codex hiện tại vẫn hỗ trợ tham chiếu tường minh theo tên kỹ năng và khớp tự động trong kịch bản phù hợp; OpenAI Help\"Skills in ChatGPT\"cũng xác nhận Skills được dùng tự động khi hữu ích. Trang này tập trung cách kích hoạt và nguyên tắc viết."
+  checkedAt: "2026-07-26"
 title: Dùng Skill
 description: Kích hoạt Skill tường minh và ngầm, cùng điểm then chốt khi viết description.
 locale: vi
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Khi mới làm quen Skill, hiểu lầm thường gặp là"cài xong là nó t�
 
 Skill vừa có thể được bạn **chỉ tên tường minh**, vừa có thể được model **tự chọn** trong kịch bản phù hợp. Phân biệt hai cách kích hoạt giúp giảm vòng lặp điều tra.
 
-# Dùng Skill
 
 ## Cách kích hoạt
 
@@ -87,9 +91,3 @@ Một tiêu chuẩn hay dùng:
 Nếu đọc xong vẫn thấy"có vẻ làm được mọi thứ", thì thường là quá chung.
 
 Thêm khái niệm: [Tổng quan Skills](/vi/skills/overview/).
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** Runtime Codex hiện tại vẫn hỗ trợ tham chiếu tường minh theo tên kỹ năng và khớp tự động trong kịch bản phù hợp; OpenAI Help"Skills in ChatGPT"cũng xác nhận Skills được dùng tự động khi hữu ích. Trang này tập trung cách kích hoạt và nguyên tắc viết.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  checkedAt: "2026-08-26（本机 `codex-cli 0.148.0`）"
 title: 配置 Profile
 description: 用独立配置文件为 Codex CLI 叠加一组命名设置。
 sidebar:
@@ -72,11 +76,3 @@ Profile 只保存一组配置起点。它不会覆盖组织 requirements，也�
 
 - [Codex 配置 schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
 - [Codex CLI 源码中的配置层](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**最近核验：** 2026-08-26（本机 `codex-cli 0.148.0`）

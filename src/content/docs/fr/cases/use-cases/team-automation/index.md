@@ -3,7 +3,7 @@ title: Automatisation d'équipe
 description: Point d'entrée des cas d'automatisation de tâches répétitives en équipe — déclencheurs, notifications, approbations et conditions d'arrêt.
 locale: fr
 source_locale: zh-CN
-source_revision: c95ca8c
+source_revision: e596dcc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

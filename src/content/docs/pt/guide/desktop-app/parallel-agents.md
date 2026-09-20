@@ -1,83 +1,73 @@
 ---
-title: Agents em paralelo
-description: Avançar várias Tarefas de Agent ao mesmo tempo sem cair em conflitos de merge nem em caos de revisão.
+title: Conversas e Agents em paralelo
+description: Use conversas e worktrees separados para avançar tarefas independentes que podem ser avaliadas individualmente.
 locale: pt
 source_locale: zh-CN
-source_revision: 6f0977b
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 2336db1
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
+A unidade básica do trabalho em paralelo é uma conversa com contexto, mensagens, resultados e objetivo próprios. Uma tarefa não é adequada ao paralelismo apenas por ter muitas etapas. As tarefas precisam ser **independentes entre si, ter limites claros de arquivos e poder ser avaliadas separadamente**.
 
-The basic unit of parallel work is a chat with its own context, messages, result, and goal. A task is suitable for parallel execution when **its parts are independent, have clear file boundaries, and can be accepted separately**, not merely because it has many steps.
+![Diagrama em que a conversa principal distribui tarefas independentes entre subagentes e reúne evidências e conflitos](/diagrams/subagent-orchestration-pt.svg)
 
-![Orchestration diagram in which the main thread delegates independent work to several subagents and consolidates evidence and conflicts](/diagrams/subagent-orchestration-pt.svg)
+## Primeiro, avalie se é possível trabalhar em paralelo
 
-## Decide whether work can run in parallel
-
-| Can run in parallel | Should remain sequential |
+| Pode ser paralelo | Deve continuar em sequência |
 |---|---|
-| Two read-only investigations | The second task depends on the first task's conclusion |
-| Code and documentation have non-overlapping directories | Both tasks modify the same core file |
-| Two approaches produce separate prototypes | Requirements are still changing frequently |
-| Each task has independent tests | Correctness can only be established after joint integration |
+| Duas pesquisas somente leitura | A segunda depende da conclusão da primeira |
+| Código e documentação em diretórios separados | Alterações simultâneas no mesmo arquivo central |
+| Protótipos separados para duas soluções | Requisitos ainda mudam com frequência |
+| Cada parte tem testes independentes | Só é possível avaliar após integrar tudo |
 
-The official guidance recommends avoiding two chats that write to the same data source. Use separate Git worktrees for parallel coding.
+A orientação oficial recomenda evitar que duas conversas gravem na mesma fonte de dados. Para programar em paralelo, use worktrees Git diferentes.
 
-## Progress from simple to complex
+## Do simples ao complexo
 
-### 1. Start with parallel read-only tasks
-
-```text
-Task: Analyze the latest failure in the authentication module. Do not edit files.
-Scope: src/auth/** and the corresponding tests.
-Deliverable: root-cause hypotheses, evidence paths, remaining uncertainty,
-and recommended verification commands.
-```
-
-Read-only tasks do not create merge conflicts and are a good first exercise.
-
-### 2. Then parallelize write tasks
-
-For each chat, define the goal, file ownership, exclusions, and acceptance criteria:
+### 1. Comece com tarefas somente leitura
 
 ```text
-Goal: Document authentication error codes.
-Ownership: docs/auth/** only.
-Do not modify: src/**, lockfiles, or shared configuration.
-Acceptance: run pnpm check:links and report the result.
+Tarefa: analise apenas a falha mais recente do módulo de autenticação; não altere arquivos.
+Escopo: src/auth/** e os testes correspondentes.
+Entrega: hipótese da causa raiz, caminhos das evidências, pontos ainda incertos
+         e comandos de verificação sugeridos.
 ```
 
-Put each coding chat in a separate [worktree](/pt/guide/desktop-app/worktrees/). Assign shared configuration to the main chat or one designated owner.
+Tarefas somente leitura não geram conflitos de mesclagem e são adequadas para o primeiro exercício.
 
-### 3. Consolidate centrally
+### 2. Depois, distribua tarefas de escrita
 
-Do not concatenate results without review. The main chat should verify:
+Defina para cada conversa o objetivo, os arquivos sob sua responsabilidade, as áreas proibidas e os critérios de aceitação:
 
-1. that each task stayed within its boundary;
-2. that its evidence and tests are reproducible;
-3. that conclusions do not conflict;
-4. whether integration tests must be rerun after merging.
+```text
+Objetivo: complementar a documentação dos códigos de erro de autenticação.
+Responsabilidade: apenas docs/auth/**.
+Proibido: alterar src/**, arquivos de lock e configurações compartilhadas.
+Aceitação: execute pnpm check:links e relate o resultado.
+```
 
-## Long-running work and Goal mode
+Cada conversa que programa deve usar um [worktree](/pt/guide/desktop-app/worktrees/) separado. A conversa principal ou um único responsável designado modifica a configuração compartilhada.
 
-Enter `/goal` in the desktop App, CLI, or IDE to start Goal mode. A goal should define the outcome, constraints, and verification criteria. Each chat has its own goal. Parallel execution does not expand sandbox access or permissions; work still pauses when an operation requires a decision.
+### 3. Reúna e confira os resultados
 
-For finer-grained tool orchestration, see [Subagents](/pt/guide/agent-work/subagents/).
+Não junte as entregas sem análise. A conversa principal deve verificar:
 
-## Official sources
+1. se cada parte respeitou seus limites;
+2. se as evidências e os testes podem ser reproduzidos;
+3. se as conclusões se contradizem;
+4. se a integração exige novos testes.
 
-- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
+## Tarefas longas e modo Goal
+
+Digite `/goal` no aplicativo para desktop, no CLI ou no IDE para iniciar o modo Goal. O objetivo deve definir resultado, restrições e critérios de verificação. Cada conversa tem seu próprio objetivo. A execução paralela não amplia o sandbox nem as permissões; ações que exigem uma decisão ainda serão pausadas.
+
+Para uma coordenação mais detalhada no nível das ferramentas, veja [Subagentes](/pt/guide/agent-work/subagents/).
+
+## Fontes oficiais
+
+- [Tarefas longas](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
-- [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26
+- [Subagentes](https://learn.chatgpt.com/docs/agent-configuration/subagents)

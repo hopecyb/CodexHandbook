@@ -1,19 +1,26 @@
 ---
 import DocIllustration from './DocIllustration.astro';
+import ContentVerification from './ContentVerification.astro';
 
 const { starlightRoute } = Astro.locals;
 const title = starlightRoute.entry.data.title;
 const entryId = starlightRoute.entry.id;
+const moduleId = entryId.replace(/^(en|de|es|fr|ja|ko|pt|vi|zh-tw)\//, '').replace(/\/index$/, '');
+const showIllustration = ['guide', 'prompts', 'skills', 'cases'].includes(moduleId);
 const PAGE_TITLE_ID = '_top';
 ---
 
 <div class="doc-title-block">
 	<h1 id={PAGE_TITLE_ID}>{title}</h1>
-	<DocIllustration title={title} entryId={entryId} />
+	<ContentVerification />
+	{showIllustration && <div class="module-illustration" data-pagefind-ignore><DocIllustration title={title} entryId={entryId} /></div>}
 </div>
 
 <style>
 	@layer starlight.core {
+		.module-illustration {
+			max-width: 34rem;
+		}
 		.doc-title-block {
 			display: flex;
 			flex-direction: column;

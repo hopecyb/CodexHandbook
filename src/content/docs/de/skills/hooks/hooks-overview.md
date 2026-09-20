@@ -3,7 +3,7 @@ title: Hooks im Überblick
 description: Verstehe Konfigurationserkennung, Vertrauensprüfung, Handler und Sicherheitsgrenzen von Hooks.
 locale: de
 source_locale: zh-CN
-source_revision: 169a1ec
+source_revision: ac7889b
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

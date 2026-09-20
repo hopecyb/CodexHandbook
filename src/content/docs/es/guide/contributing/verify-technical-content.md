@@ -1,12 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "Contrastado con el sistema actual de estados del manual, varias rondas de revisión ya completadas y el principio de prioridad de las fuentes oficiales. Esta página describe los criterios internos para elevar una página a `verified` y para rebajarla."
+  checkedAt: "2026-07-26"
 title: Verificar contenido técnico
-description: Cómo marcar una página como verified, con pasos de reproducción, base oficial y fecha.
+description: Distingue el estado editorial, la consulta de fuentes y la ejecución de ejemplos; registra alcance, entorno y evidencias.
 locale: es
 source_locale: zh-CN
-source_revision: abada81
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: cfb077d
+translation_status: draft
+translated_at: 2026-09-20
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Normas de contribución actualizadas según los nuevos campos de metadatos del sitio; esto no significa que se hayan vuelto a ejecutar todos los mecanismos del producto citados aquí.
 sidebar:
   order: 30
 ---
@@ -50,11 +58,27 @@ Así que verificar no es manía editorial: es evitar que el lector tropiece con 
 
 ## Malentendidos habituales
 
-### `verified` representa evidencia, no solo confianza
+### El estado editorial y el método de verificación son dos campos distintos
 
-No es un tono: es un estado de evidencia.
+`editorialStatus` registra el avance de la redacción y revisión. `verification.kind` indica qué tipo de comprobación se hizo realmente; de `verified` no se puede deducir que se haya ejecutado un ejemplo.
 
-Solo cuando de verdad has reproducido, contrastado bases oficiales y confirmado que el alcance de la página y la fecha cuadran, conviene marcar `verified`.
+| Método de verificación | Conclusión que permite | Evidencia obligatoria |
+|---|---|---|
+| `editorial` | Se revisaron la estructura, la redacción o las referencias internas | Resumen de la revisión y fecha |
+| `source-checked` | Los hechos dentro del alcance indicado coinciden con las fuentes | Enlaces a fuentes concretas, resumen y fecha |
+| `run-tested` | El ejemplo se ejecutó en el entorno registrado | Entorno, registros de ejecución y revisión, resumen y fecha |
+
+`run-tested` no garantiza que el ejemplo funcione en todas las plataformas. El resumen debe explicar qué se verificó y qué no; una comprobación propia mediante un cálculo independiente no equivale a la revisión de una segunda persona. Los registros antiguos sin evidencia permanecen en `legacyVerification` y no implican automáticamente ninguno de los nuevos estados de verificación.
+
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: Se revisaron la estructura y los enlaces internos; el ejemplo aún no se ha ejecutado.
+```
+
+La consulta de fuentes y las ejecuciones usan una lista `evidence`; cada elemento contiene `label` y `href`. Las ejecuciones también requieren `environment`, con el sistema, la versión del cliente pertinente y las versiones de las dependencias. La compilación rechaza registros de ejecución sin entorno o enlaces de evidencia. Que exista un enlace no basta para considerar suficiente la evidencia: los responsables deben leer el registro.
 
 ### Los artículos de la comunidad ayudan a entender, pero no sustituyen la verificación de hechos
 
@@ -84,9 +108,9 @@ Así que hay que verificar por «cadena completa de operación», no solo escane
 
 1. **Marcar el alcance**: producto (App/CLI/IDE/Cloud), OS, número de versión de CLI
 2. **Reproducir paso a paso**: seguir desde cero o desde un worktree limpio
-3. **Base oficial**: al menos un enlace a documentación oficial de OpenAI o al centro de ayuda
+3. **Base oficial**: citar fuentes oficiales concretas para los hechos del producto; en ejercicios de método estables, usar entradas reales y registros de comprobación sin atribuirles un aval oficial inexistente
 4. **Fuentes de la comunidad**: si te apoyas en materiales comunitarios, solo como referencia temática; los hechos prevalecen oficiales
-5. **Actualizar la fecha**: pie `Última verificación: YYYY-MM-DD`
+5. **Actualizar la fecha**: `verification.checkedAt` solo debe reflejar la fecha real de la comprobación; no actualices fechas antiguas en lote haciéndolas pasar por una nueva revisión
 6. **Revisión independiente**: para `verified` se recomienda confirmación de una segunda persona distinta del autor
 
 ## Orden de verificación
@@ -122,9 +146,3 @@ Lo siguiente hay que reverificar cada trimestre o con cada major:
 - [Recursos oficiales](/es/guide/reference/official-resources/)
 
 `verified` significa «verificado de verdad según la base actual anotada, y hay base que se puede rastrear». Que el autor solo «sienta que es fiable» no basta.
-
----
-
-**Estado:** verificado  
-**Base de verificación:** Contrastado con el sistema de estados actual del manual, las prácticas de revisión por lotes ya hechas y el principio de prioridad oficial; esta página describe el estándar interno de verificación y los principios de degradación para subir una página a `verified`.  
-**Última verificación:** 2026-07-26

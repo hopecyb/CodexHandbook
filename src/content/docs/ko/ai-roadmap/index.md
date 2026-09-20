@@ -1,77 +1,48 @@
 ---
 title: AI 애플리케이션 로드맵
-description: Prompt Engineering, RAG, MCP, Multi-agent, Context Engineering, Skills 등 AI 애플리케이션 엔지니어링의 주요 지점을 이해합니다.
+description: 논문, 제품 발표, 엔지니어링 글과 작성자의 학습 제안을 구분하고 각 주제에서 실습으로 이어집니다.
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-08
-reviewed_at: 2026-08-26
-source_revision: 0333168
+source_revision: 7544287
+translation_status: draft
+translated_at: 2026-09-20
+prev: false
+next:
+  link: /ko/ai-roadmap/timeline/
+  label: 사건과 주제 색인
 ---
 
-# AI 애플리케이션 로드맵
+이 지도는 확인할 수 있는 공개 사건과 학습 제안을 구분합니다. **날짜는 표에 적힌 논문, 발표 또는 글에만 해당합니다. 개념의 탄생, 업계 확산, 기능의 성숙을 자동으로 뜻하지 않습니다.** 여러 기술을 함께 사용할 수 있으며, 시간 순서가 반드시 따라야 할 학습 순서도 아닙니다.
 
-이 문서는 AI 애플리케이션 엔지니어링을 위한 지식 지도입니다. 모델 파라미터, 벤치마크 순위, 개별 제품 출시를 따라가는 대신, 핵심 방법론을 역순 시간대로 연결합니다. 재사용 가능하고 검증 가능한 Agent 엔지니어링 시스템에서 출발해, 그것을 가능하게 한 실천을 되짚습니다.
+각 주제 페이지에는 1차 출처, 적용 범위의 한계, 사이트 내 실습이 있습니다. 출처 확인은 소프트웨어를 실제 실행한 것과 다릅니다. 기존 URL은 유지하므로 URL의 연월이 수정된 사건 날짜와 다를 수 있습니다. 본문 날짜를 기준으로 삼으세요.
 
-<div class="roadmap-timeline">
-  <article>
-    <time>2026-04</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2026-04-skills/">Skills(스킬)</a></h3>
-    <p>Skills는 프롬프트, 단계, 예시, 스크립트, 리소스를 재사용 가능한 워크플로 단위로 묶습니다. 매번 “어떻게 할지” 다시 설명하지 않고 팀의 경험을 축적하게 해줍니다.</p>
-    <p><strong>학습 포인트:</strong> SKILL.md, 점진적 공개, 의존 리소스, 재사용 경계, 팀 규칙.</p>
-  </article>
-  <article>
-    <time>2026-02</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2026-02-harness-engineering/">Harness Engineering(실행 하네스 엔지니어링)</a></h3>
-    <p>Harness Engineering은 모델이 안정적으로 작업을 끝내도록 환경을 설계합니다. 도구, 컨텍스트, 검증 피드백, 실패 복구, 품질 게이트, 회귀 점검을 포함합니다.</p>
-    <p><strong>학습 포인트:</strong> 작업 하네스, 검증 피드백, 실패 복구, 품질 게이트.</p>
-  </article>
-  <article>
-    <time>2026-01</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2026-01-openspec/">OpenSpec(명세 주도 개발)</a> / <a href="/ko/ai-roadmap/timeline/2026-01-openclaw/">OpenClaw(개인 AI 어시스턴트 게이트웨이)</a></h3>
-    <p>두 노드는 서로 다른 방향을 가리킵니다. OpenSpec은 요구사항과 설계를 추적 가능한 명세 산출물로 만들고, OpenClaw는 개인 어시스턴트, 채널, 도구 게이트웨이를 통합합니다.</p>
-    <p><strong>학습 포인트:</strong> spec-driven development, 게이트웨이, 세션, 채널, 추적 가능한 산출물.</p>
-  </article>
-  <article>
-    <time>2025-09</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2025-09-context-engineering/">Context Engineering(컨텍스트 엔지니어링)</a></h3>
-    <p>Context Engineering은 “프롬프트를 어떻게 쓸까”에서 “모델이 무엇을, 어떤 순서로 보고, 무엇을 압축하거나 제외해야 할까”로 초점을 옮깁니다.</p>
-    <p><strong>학습 포인트:</strong> 컨텍스트 우선순위, 검색 전략, 압축, 메모리, 파일 선택.</p>
-  </article>
-  <article>
-    <time>2025-06</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2025-06-multi-agent/">Multi-agent(다중 에이전트 협업)</a></h3>
-    <p>Multi-agent는 복잡한 작업을 조사, 구현, 리뷰, 검증, 요약 같은 역할로 나눕니다. 핵심은 구조화, 병렬화, 상호 점검입니다.</p>
-    <p><strong>학습 포인트:</strong> 역할 경계, 인계 형식, 충돌 해결, 리뷰와 검증.</p>
-  </article>
-  <article>
-    <time>2025-03</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2025-03-tool-use/">Tool Use(도구 사용)</a></h3>
-    <p>Tool Use는 모델이 작업 중 도구를 선택하고 호출하며 결과를 읽고 다음 추론을 이어가는 방식을 다룹니다. 단발 응답에서 다단계 실행으로 넘어가는 다리입니다.</p>
-    <p><strong>학습 포인트:</strong> 도구 선택, 호출 체인, 상태 관리, 도구 실패 후 복구.</p>
-  </article>
-  <article>
-    <time>2024-11</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2024-11-mcp/">MCP(모델 컨텍스트 프로토콜)</a></h3>
-    <p>MCP는 도구, 리소스, 프롬프트의 접속 방식을 프로토콜로 만듭니다. 더 많은 도구를 붙이는 것보다, 통합을 재사용 가능하고 발견 가능하며 통제 가능하게 만드는 데 가치가 있습니다.</p>
-    <p><strong>학습 포인트:</strong> server/client, tools, resources, prompts, 권한, 디버깅.</p>
-  </article>
-  <article>
-    <time>2023-11</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2023-11-rag/">RAG(검색 증강 생성)</a></h3>
-    <p>RAG는 검색한 자료에 답변을 근거 짓습니다. AI를 “말할 수 있는 시스템”에서 “추적 가능한 근거로 답하는 시스템”으로 밀어 올립니다.</p>
-    <p><strong>학습 포인트:</strong> 청킹, 벡터 검색, 재정렬, 인용, 컨텍스트 압축.</p>
-  </article>
-  <article>
-    <time>2023-06</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2023-06-function-calling/">Function Calling(함수 호출)</a></h3>
-    <p>Function Calling은 모델이 텍스트로만 답하는 단계에서 구조화된 파라미터로 외부 기능을 호출하는 단계로 나아가게 했습니다. AI가 실제 시스템에 들어가는 핵심 단계입니다.</p>
-    <p><strong>학습 포인트:</strong> schema 설계, 파라미터 검증, 도구 경계, 오류 반환.</p>
-  </article>
-  <article>
-    <time>2022-11</time>
-    <h3><a href="/ko/ai-roadmap/timeline/2022-11-prompt-engineering/">Prompt Engineering(프롬프트 엔지니어링)</a></h3>
-    <p>AI 애플리케이션 엔지니어링의 출발점은 입력 제어입니다. 작업 목표, 컨텍스트, 제약, 예시, 출력 형식을 명확히 해 모델 행동을 더 안정적으로 만듭니다.</p>
-    <p><strong>학습 포인트:</strong> 작업 분해, 역할 설정, few-shot 예시, 출력 형식, 실패 재시도.</p>
-  </article>
-</div>
+## 확인 가능한 사건
+
+| 날짜 | 유형 | 주제와 구체적 사건 |
+|---|---|---|
+| 2026-02-11 | 엔지니어링 글 | [Harness Engineering(실행 하네스 엔지니어링)](/ko/ai-roadmap/timeline/2026-02-harness-engineering/): Harness engineering 엔지니어링 글 |
+| 2025-10-16 | 엔지니어링 글 | [Skills(스킬)](/ko/ai-roadmap/timeline/2026-04-skills/): Agent Skills 공개 소개 |
+| 2025-09-29 | 엔지니어링 글 | [Context Engineering(컨텍스트 엔지니어링)](/ko/ai-roadmap/timeline/2025-09-context-engineering/): 컨텍스트 엔지니어링 글 |
+| 2025-06-13 | 엔지니어링 글 | [Multi-agent(다중 에이전트 협업)](/ko/ai-roadmap/timeline/2025-06-multi-agent/): 다중 Agent 연구 시스템 엔지니어링 글 |
+| 2025-03-11 | 제품 발표 | [Tool Use(도구 사용)](/ko/ai-roadmap/timeline/2025-03-tool-use/): Agent 도구 발표 |
+| 2024-11-25 | 프로토콜 공개 | [MCP(모델 컨텍스트 프로토콜)](/ko/ai-roadmap/timeline/2024-11-mcp/): MCP 공개 발표 |
+| 2023-06-13 | 제품 발표 | [Function Calling(함수 호출)](/ko/ai-roadmap/timeline/2023-06-function-calling/): Function Calling 발표 |
+| 2022-11-30 | 제품 발표 | [Prompt Engineering(프롬프트 엔지니어링)](/ko/ai-roadmap/timeline/2022-11-prompt-engineering/): ChatGPT 발표 |
+| 2020-05-22 | 논문 발표 | [RAG(검색 증강 생성)](/ko/ai-roadmap/timeline/2023-11-rag/): RAG 원논문과 제출 이력 |
+
+## 개별 프로젝트
+
+다음 프로젝트는 확인되지 않은 최초 공개일로 순서를 정하지 않고 각각 읽습니다.
+
+- [OpenSpec](/ko/ai-roadmap/timeline/2026-01-openspec/): 프로젝트 공식 릴리스 페이지에는 v1.0.0(The OPSX Release)의 버전 설명이 있습니다. 이번 검토는 해당 버전으로 프로젝트의 최초 공개일을 추정하지 않으며, 확인한 증거로 뒷받침되지 않는 npm 최초 공개일도 유지하지 않습니다.
+- [OpenClaw](/ko/ai-roadmap/timeline/2026-01-openclaw/): 이 페이지는 OpenClaw 공식 저장소를 프로젝트의 정체성과 설명을 확인하는 출처로 사용합니다. 최초 공개를 확인할 충분한 증거를 확보하지 못했으므로 그 날짜를 표시하지 않습니다.
+
+## 현재 작업에 맞는 실습 선택
+
+- 처음 사용한다면 [초보자 경로](/ko/guide/learning-paths/)에서 시작하세요. 연표 전체를 먼저 공부할 필요는 없습니다.
+- 작업 설명을 개선하려면 [프롬프트 비교 자료](/ko/prompts/comparison-lab/)로 출력과 점수를 기록하세요. 이 사이트에는 모델 효과에 대한 실측 결론이 아직 없습니다.
+- 자료의 뒷받침이 필요하면 [출처가 있는 글](/ko/cases/write-an-article/)로 주장과 증거를 대응시키는 연습을 하세요.
+- 안정적인 재사용이 필요하면 [Skill 예시](/ko/skills/examples/)를 선택해 입력, 경계, 검증 기록을 확인하세요.
+- 실행이 계속 실패한다면 [실패 복구 실습](/ko/guide/reference/troubleshooting/failure-recovery-lab/)에서 로그를 읽고 한 번에 변수 하나만 바꾸는 연습을 하세요.
+
+주제의 학습 가치는 현재 작업에 따라 달라집니다. 이 섹션은 공통 측정 근거가 없는 “rising”, “emerging” 같은 꼬리표로 업계 전체를 단계별로 나누지 않습니다.

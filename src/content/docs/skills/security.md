@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "OpenAI Help《Skills in ChatGPT》确认 Skills 可包含 instructions、supporting files 和 code，上传前后仍需用户自行审查来源与风险；本页安全治理建议与该原则一致。"
+  checkedAt: "2026-07-26"
 title: Skill 安全与版本
 description: 安装来源、权限边界、升级与回滚，让团队 Skill 可治理。
 ---
@@ -111,9 +116,3 @@ Plugin 可把 Skill 打包统一分发：[Plugins 概述](/skills/plugins/plugin
 
 ## 参考来源
 - OpenAI Codex Skills 安全指引
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** OpenAI Help《Skills in ChatGPT》确认 Skills 可包含 instructions、supporting files 和 code，上传前后仍需用户自行审查来源与风险；本页安全治理建议与该原则一致。  
-**最近核验：** 2026-07-26

@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só faz a triagem por sintoma para capítulos de instalação, login, Permissão, Contexto e qualidade do resultado; os caminhos dos capítulos linkados foram checados item a item, e a página não depende de códigos de erro, números de versão ou textos de interface específicos."
+  checkedAt: "2026-07-26"
 title: Solução de problemas
 description: Localize o tutorial e a página de produto certos a partir do sintoma.
 locale: pt
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ Não precisa julgar de cara se é CLI, IDE, Cloud, Permissão ou Prompt. Classif
 - Se não souber a categoria do erro, o mínimo para começar a investigar
 - Quais problemas são de instalação, Permissão, Contexto ou descrição da Tarefa
 
-# Solução de problemas
 
 | Sintoma | Ir para |
 |---|---|
@@ -62,10 +66,3 @@ Em geral é melhor parar, julgar a categoria e só então ir à página correspo
 Investigar começa por classificar — não precisa sair consertando de imediato.
 
 Mais referência: [FAQ](/pt/guide/reference/faq/) · [Referência de erros](/pt/guide/reference/error-reference/) · [Documentação oficial do Codex](https://developers.openai.com/codex)
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só faz a triagem por sintoma para capítulos de instalação, login, Permissão, Contexto e qualidade do resultado; os caminhos dos capítulos linkados foram checados item a item, e a página não depende de códigos de erro, números de versão ou textos de interface específicos.  
-**Última verificação:** 2026-07-26

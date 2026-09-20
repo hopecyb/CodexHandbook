@@ -1,0 +1,6 @@
+{
+  "scale": {"0":"未满足或与证据矛盾","1":"部分满足，需要修正","2":"满足且可回查","null":"未运行或无法判断"},
+  "dimensions": ["task_correctness","evidence_traceability","scope_control","uncertainty_handling","reproducibility"],
+  "measurement": ["elapsed_seconds","human_rework_minutes","actual_model_label","client_version","reasoning_setting","input_hashes","output_paths","tool_failures"],
+  "rules": ["A/B使用同一评分项，不按篇幅或语气打分","没有运行不得填零分或零耗时","保存失败和中断，不只保留最佳输出","未知模型或设置保留null，不推测"]
+}

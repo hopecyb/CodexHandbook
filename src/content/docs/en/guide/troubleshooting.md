@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Symptom routing only to install, login, permissions, context, and result-quality chapters; linked paths checked; page does not depend on specific error codes, versions, or UI copy."
+  checkedAt: "2026-07-26"
 title: Troubleshooting
 description: Route symptoms to the right tutorial and product pages.
 sidebar:
   order: 18
 locale: en
 source_locale: zh-CN
-source_revision: d1ad457
+source_revision: 72c56da
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -21,7 +26,6 @@ You do not need to diagnose CLI vs IDE vs Cloud vs permissions vs prompting firs
 - Minimal starting point when you cannot classify the error
 - Problems that are install, permissions, context, or task-description issues
 
-# Troubleshooting
 
 | Symptom | Go to |
 |---|---|
@@ -62,10 +66,3 @@ Usually better to pause, classify the problem, then open one targeted page.
 Triage before repair.
 
 More reference: [FAQ](/en/guide/reference/faq/) · [Error reference](/en/guide/reference/error-reference/) · [Official Codex docs](https://developers.openai.com/codex)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Symptom routing only to install, login, permissions, context, and result-quality chapters; linked paths checked; page does not depend on specific error codes, versions, or UI copy.  
-**Last verified:** 2026-07-26

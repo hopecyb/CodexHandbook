@@ -3,7 +3,7 @@ title: Phê duyệt và Sandbox
 description: Chiến lược phê duyệt yêu cầu shell, ghi đĩa và mạng trong CLI, và Sandbox hạn chế hành vi Agent thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

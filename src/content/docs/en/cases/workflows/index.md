@@ -3,7 +3,7 @@ title: Workflow methods
 description: Repeatable collaboration methods—not tied to a single product UI, emphasizing checkpoints and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: 2306981
+source_revision: d058896
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

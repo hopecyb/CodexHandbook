@@ -3,7 +3,7 @@ title: CLI-Konfiguration
 description: Modell, Sandbox, Freigabe und MCP — Codex-Verhalten im Terminal vereinheitlichen.
 locale: de
 source_locale: zh-CN
-source_revision: 48f3288
+source_revision: 0a9b2ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Bảo mật và phiên bản Skill
 description: Nguồn cài đặt, ranh giới Quyền, nâng cấp và rollback — để Skill nhóm có thể quản trị.
 locale: vi
 source_locale: zh-CN
-source_revision: 8e8c837
+source_revision: a3c81ed
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

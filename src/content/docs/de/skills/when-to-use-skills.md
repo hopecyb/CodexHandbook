@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help „Skills in ChatGPT“ bestätigt Skills als wiederverwendbare, teilbare Workflows; die aktuelle Codex-Laufzeit matched Skills nach Name und Beschreibung. Diese Seite ist vor allem Auswahlprinzip und hängt nicht an volatiler UI."
+  checkedAt: "2026-07-26"
 title: Wann Skills einsetzen
 description: Entscheiden, ob eine Aufgabe als Skill lohnt — und wie Skills, Slash-Befehle und MCP sich teilen.
 locale: de
 source_locale: zh-CN
-source_revision: 6cdbeae
+source_revision: 5e688f4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ Beim Einstieg in Skills lautet die typische Frage: Lohnt es sich, genau das als 
 
 Alles zum Skill zu machen wird schwer; was man absichern sollte und nicht absichert, wiederholt man endlos manuell. Hier geht es vor allem darum, wann Abläufe festgeschrieben werden sollten.
 
-# Wann Skills einsetzen
 
 ## Gut als Skill geeignet
 
@@ -81,9 +85,3 @@ Solche Skills sind robuster, weil sie aus echter Wiederholung kommen, nicht aus 
 Skills eignen sich für Abläufe, die „sich wiederholen, konsistent sein sollen und nicht jedes Mal neu erklärt werden müssen“.
 
 Auswahl der Erweiterungsmethode: [Erweiterungsmethode wählen](/de/skills/choosing-an-extension-method/). Workflow absichern: [Ablauf zum Skill machen](/de/cases/workflows/turn-a-workflow-into-a-skill/).
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** OpenAI Help „Skills in ChatGPT“ bestätigt Skills als wiederverwendbare, teilbare Workflows; die aktuelle Codex-Laufzeit matched Skills nach Name und Beschreibung. Diese Seite ist vor allem Auswahlprinzip und hängt nicht an volatiler UI.  
-**Zuletzt geprüft:** 2026-07-26

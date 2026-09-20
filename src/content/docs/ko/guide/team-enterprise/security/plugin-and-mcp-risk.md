@@ -3,7 +3,7 @@ title: Plugin과 MCP 위험
 description: 확장이 무엇에 접근할 수 있는지, 팀이 어떻게 승인·모니터링하는지——Skills, Plugin, MCP의 통합 위험 관점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

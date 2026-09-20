@@ -3,7 +3,7 @@ title: Team Rules Policy
 description: Layer governance of command and path rules across organization, repo, and individual—reviewable and rollback-friendly.
 locale: en
 source_locale: zh-CN
-source_revision: 3843326
+source_revision: bae8bd2
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

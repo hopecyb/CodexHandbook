@@ -3,7 +3,7 @@ title: Bắt đầu nhanh
 description: Từ tài khoản và cài đặt đến tác vụ đầu tiên có thể kiểm tra.
 locale: vi
 source_locale: zh-CN
-source_revision: 283b8cb
+source_revision: 13861eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Runtime Codex hiện tại rõ ràng đọc thân kỹ năng và tài liệu liên quan khi cần; phần giải thích `references/` trên trang này thuộc nguyên tắc tổ chức tài liệu ổn định."
+  checkedAt: "2026-07-26"
 title: Thư mục references/
 description: Tổ chức tài liệu tham chiếu dài trong Skill để tiết lộ dần.
 locale: vi
 source_locale: zh-CN
-source_revision: c595507
+source_revision: 955bfa7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Nó không chỉ là"nhét thêm vài tài liệu", mà còn để tách những tài liệu **không phải lần nào cũng phải đọc ngay, nhưng ở một bước nào đó thật sự hữu ích**, chỉ đọc khi cần.
 
-# Thư mục references/
 
 Khi thân `SKILL.md` quá dài, hãy chuyển quy chuẩn chi tiết, mô tả API, checklist sang `references/`, rồi trích dẫn khi cần trong các bước.
 
@@ -73,10 +77,3 @@ Quy trình chính vẫn nên ở `SKILL.md`, nếu không người khác lần �
 - Quy trình chính giữ trong `SKILL.md`, tài liệu tham chiếu tải khi cần
 - Mỗi file tập trung một chủ đề, dễ bảo trì
 - Tránh lặp lại các bước đã có trong SKILL.md bên trong references
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** Runtime Codex hiện tại rõ ràng đọc thân kỹ năng và tài liệu liên quan khi cần; phần giải thích `references/` trên trang này thuộc nguyên tắc tổ chức tài liệu ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26

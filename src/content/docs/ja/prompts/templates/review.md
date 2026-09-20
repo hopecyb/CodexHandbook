@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本ページはレビュー系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  checkedAt: "2026-07-26"
 title: レビューテンプレート
 description: diff と変更リスクを構造化してレビューする。
 locale: ja
 source_locale: zh-CN
-source_revision: 0c747c3
+source_revision: e89989d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# レビューテンプレート
 
 レビュータスクが外れやすいのは、いきなり「ついでに直す」モードになることです。
 
@@ -53,10 +57,3 @@ reviewed_at: 2026-08-26
 
 - [マージ前レビュー](/ja/cases/workflows/review-before-merge/)
 - [PR レビューの事例](/ja/cases/review-a-pr/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページはレビュー系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

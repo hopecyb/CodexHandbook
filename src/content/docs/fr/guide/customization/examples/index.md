@@ -3,7 +3,7 @@ title: Exemples
 description: Apprendre comment la configuration et AGENTS.md doivent être écrits à partir d'exemples réels, pas seulement des principes abstraits.
 locale: fr
 source_locale: zh-CN
-source_revision: d454969
+source_revision: c33809f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

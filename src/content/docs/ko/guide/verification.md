@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers 홈은 현재에도 Codex로 구축·테스트·검토·변경 인도를 강조합니다. 이 페이지는 검증을 diff 검토·테스트 실행·출처 확인·완료 정의로 나누었으며, 사이트 내 품질 장과 교차 확인했습니다."
+  checkedAt: "2026-07-26"
 title: 검증
 description: diff 검토·테스트 실행·출처 확인과 완료 기준을 정의합니다.
 sidebar:
   order: 17
 locale: ko
 source_locale: zh-CN
-source_revision: 915ee03
+source_revision: 470dc27
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 검증
 
 초보자가 Codex를 처음 쓸 때 가장 흔한 실수는 **「완료했다」는 말을 진짜 완료로 믿는 것**입니다.
 
@@ -96,10 +100,3 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 검증은 이 결과가 정말 쓸 수 있고, 믿을 수 있고, 넘길 수 있는지 확인하는 일입니다.
 
 프롬프트에서 수락 기준을 쓰는 방법은 [완료 기준 정의](/ko/prompts/define-done/)를 보세요. 엔드투엔드 사례는 [실전 사례](/ko/cases/)를 보세요.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers 홈은 현재에도 Codex로 구축·테스트·검토·변경 인도를 강조합니다. 이 페이지는 검증을 diff 검토·테스트 실행·출처 확인·완료 정의로 나누었으며, 사이트 내 품질 장과 교차 확인했습니다.  
-**최근 검증:** 2026-07-26

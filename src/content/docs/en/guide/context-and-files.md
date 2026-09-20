@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Navigation and methodology page; framework that task requirements, file material, project rules, and conversation history form context cross-checked with current context and file-handling chapters—not dependent on volatile UI details."
+  checkedAt: "2026-07-26"
 title: Context and files
 description: Managing projects, files, conversation context, and common input types.
 sidebar:
   order: 15
 locale: en
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
-# Context and files
 
 **Context** is what Codex can see, reference, and act on at this moment.
 
@@ -80,10 +84,3 @@ No need to read everything at once:
 3. Read file-type chapters matching what you are working with
 
 Context is the pile of information Codex judges from—get it right and results are easier to get right.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Navigation and methodology page; framework that task requirements, file material, project rules, and conversation history form context cross-checked with current context and file-handling chapters—not dependent on volatile UI details.  
-**Last verified:** 2026-07-26

@@ -3,7 +3,7 @@ title: Persönliche Vorlieben
 description: Benutzerkonfiguration, Standardmodell und UI-Gewohnheiten — ohne Teamvereinbarungen im Repo zu verunreinigen.
 locale: de
 source_locale: zh-CN
-source_revision: e447e66
+source_revision: c381051
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

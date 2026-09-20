@@ -3,7 +3,7 @@ title: Turn a workflow into a Skill
 description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
 locale: en
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

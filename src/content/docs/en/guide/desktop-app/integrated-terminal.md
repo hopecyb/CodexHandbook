@@ -3,7 +3,7 @@ title: Integrated terminal
 description: Run commands in the current project or worktree and verify task results with real output.
 locale: en
 source_locale: zh-CN
-source_revision: 918b2bf
+source_revision: 727e93e
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

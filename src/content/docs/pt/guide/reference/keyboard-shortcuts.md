@@ -1,40 +1,42 @@
 ---
-title: Atalhos de teclado
-description: "Índice de aprendizagem de atalhos habituais na App, TUI do CLI e extensão IDE — conforme a versão atual."
-locale: pt
-source_locale: zh-CN
-source_revision: 0edf4f3
-translation_status: reviewed
-translated_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "App, CLI e IDE"
+  checkedAt: "2026-08-26"
+title: "Atalhos de teclado"
+description: "Lista apenas os atalhos do App e da IDE que podem ser conferidos na documentação oficial atual."
 sidebar:
   order: 90
-reviewed_at: 2026-08-26
+locale: pt
+source_locale: zh-CN
+source_revision: 4f812d9
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+Os atalhos variam conforme a plataforma, o cliente e as configurações personalizadas. Esta página reúne apenas as combinações descritas explicitamente na documentação oficial atual; para a lista completa, consulte **Keyboard Shortcuts** no aplicativo.
 
-Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
+## Aplicativo para desktop
 
-## Desktop App
-
-| Action | macOS | Windows |
+| Ação | macOS | Windows |
 |---|---|---|
-| Open Settings | `Cmd + ,` | `Ctrl + ,` |
-| Open/close Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
-| Open integrated terminal | `Ctrl` + backtick | `Ctrl` + backtick |
-| Open App command palette | `Cmd + K` | Check Keyboard Shortcuts |
-| Clear terminal display | `Ctrl + L` | `Ctrl + L` |
+| Abrir Settings | `Cmd + ,` | `Ctrl + ,` |
+| Abrir ou fechar Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Abrir o terminal integrado | `Ctrl` + tecla de acento grave | `Ctrl` + tecla de acento grave |
+| Abrir a paleta de comandos do aplicativo | `Cmd + K` | Consulte Keyboard Shortcuts |
+| Limpar a exibição do terminal | `Ctrl + L` | `Ctrl + L` |
 
-`Cmd + K` opens the App command palette; it does not clear the terminal.
+`Cmd + K` abre a paleta de comandos do aplicativo; não limpa o terminal.
 
-Keyboard Shortcuts in Settings can search by command or key, change a binding, and restore defaults. After customization, the local binding takes precedence over an online reference card.
+A seção Keyboard Shortcuts em Settings permite procurar pelo nome do comando, descobrir comandos pela combinação de teclas, alterar as associações e restaurar os padrões. Depois de personalizar um atalho, a configuração local prevalece sobre as listas de referência disponíveis na internet.
 
 ## IDE
 
-In VS Code-family editors, `chatgpt.composerEnterBehavior` determines how Enter and `Cmd/Ctrl + Enter` submit multiline prompts. Do not assume every computer uses the same send key.
+Nos editores da família VS Code, a configuração `chatgpt.composerEnterBehavior` determina como Enter e `Cmd/Ctrl + Enter` enviam prompts com várias linhas. Não presuma que todas as máquinas usam a mesma combinação para enviar.
 
-While Codex is running, `chatgpt.followUpQueueMode` determines whether a new message queues or steers immediately. Press `Cmd/Ctrl + Shift + Enter` for a single send that reverses the current default.
+Enquanto o Codex está executando uma tarefa, `chatgpt.followUpQueueMode` determina se uma nova mensagem entra na fila ou orienta imediatamente a execução. Para inverter o comportamento padrão em um único envio, pressione `Cmd/Ctrl + Shift + Enter`.
 
-If the Codex sidebar is missing, run this from the editor Command Palette:
+Se não encontrar a barra lateral do Codex, execute este comando na paleta de comandos do editor:
 
 ```text
 Codex: Open Codex Sidebar
@@ -42,25 +44,17 @@ Codex: Open Codex Sidebar
 
 ## CLI
 
-Use the current CLI TUI's `/help` and on-screen hints. This page does not guess `y`, `n`, or other approval keys because terminal, mode, and version affect interaction.
+Consulte `/help` e as instruções exibidas na interface textual da versão atual do CLI. Esta página não presume teclas de aprovação como `y` ou `n`, pois o terminal, o modo e a versão podem alterar a interação.
 
-The general terminal signal `Ctrl + C` may interrupt a command or session. Inspect current state rather than treating it as a side-effect-free Back key.
+O sinal comum de terminal `Ctrl + C` pode interromper um comando ou uma sessão em execução. Confira o estado atual antes de usá-lo; não o trate como uma tecla de “voltar” sem efeitos colaterais.
 
-## Learning order
+## Ordem de aprendizagem
 
-First learn to open Settings and Activity, open the terminal, and submit multiline prompts. Search in the App for other frequent actions. Team documentation should name actions rather than force the same customized bindings on everyone.
+Comece por aprender a abrir Settings, consultar Activity, abrir o terminal e enviar prompts com várias linhas. Para outras ações frequentes, pesquise os atalhos no aplicativo. A documentação da equipe deve mencionar os nomes das ações, sem exigir que todas as pessoas usem as mesmas teclas personalizadas.
 
-## Official sources
+## Fontes oficiais
 
-- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
-- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
-- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
-- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26
+- [Configurações do aplicativo para desktop](https://learn.chatgpt.com/docs/app/settings)
+- [Notificações e Activity](https://learn.chatgpt.com/docs/notifications)
+- [Terminal integrado](https://learn.chatgpt.com/docs/integrated-terminal)
+- [Configurações da IDE](https://learn.chatgpt.com/docs/ide/settings)

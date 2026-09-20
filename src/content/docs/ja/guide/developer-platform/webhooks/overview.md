@@ -1,129 +1,67 @@
 ---
-title: Webhook 概要
-description: HTTP コールバックで Codex タスク状態を内部システムに接続——イベント、署名、冪等。
-locale: ja
-source_locale: zh-CN
-source_revision: 78f037e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: Webhook とタスクイベントの境界
+description: Codex のローカル実行結果、App Server イベント、自分で設計する HTTP コールバックを区別する。
+contentType: reference
+audiences: [developer]
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: SDK と App Server の実行・イベントモデルを確認した。HTTP コールバックは自作構成への提案であり、統一された Codex Cloud Webhook 契約の存在を主張しない。
+  evidence:
+    - label: SDK 公式文書
+      href: https://learn.chatgpt.com/docs/codex-sdk
+    - label: App Server のプロトコルとイベント
+      href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
+locale: ja
+source_locale: zh-CN
+source_revision: 8a84ab8
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-**Webhook** で、Codex または Cloud タスクの状態変化時に自社サービスへ HTTP コールバックを送り、チケット更新、Slack 通知、内部承認台を駆動できます。本章は [開発者プラットフォーム](/ja/guide/developer-platform/) のイベント統合入口です。
+タスク終了後はプログラムの戻り値、プロセスの終了状態、イベントストリーム、HTTP コールバックで内部システムに知らせられる。まず送信者とプロトコルを決め、それから Webhook が必要か判断する。
 
-## このページで扱うこと
+## 3つの仕組みを混同しない
 
-- Webhook と SDK ポーリングの使い分け
-- 一般的なイベントとペイロードフィールド（概念）
-- 署名検証、リプレイ、冪等
+| 仕組み | 受信方法 | 境界 |
+|---|---|---|
+| ローカル SDK / CLI 実行 | プログラムの結果やプロセス状態 | ホスト型 HTTP コールバック API ではない |
+| App Server イベント | 接続上の JSON-RPC 通知 | プロトコルに沿って接続、初期化、メッセージ処理が必要 |
+| 自作 runner のコールバック | 自分のサービスが送る HTTP 要求 | イベント名、署名、再試行、保存を自分で定義する |
 
-## 何をするか
+App Server の `turn/completed` はプロトコル通知であり、最終状態は完了、中断、失敗のいずれかになりうる。イベント名だけでデプロイせず、状態と業務上の結果を確認する。[公式イベント説明](https://learn.chatgpt.com/docs/app-server)を参照。
 
-初見では：タスク状態が変わると Codex が自システムに通知し、自分で「終わったか」を繰り返し問い合わせない。
+このページでは統一された Codex Cloud の Webhook 登録エンドポイント、署名ヘッダー、`task.completed` イベント契約を確認していない。そのため、URL、Header、イベント表を公式インターフェースとして提示しない。特定の製品が Webhook を提供する場合は、その製品のバージョン付き文書に従う。
 
-「タスク終了後に別システム動作を続ける」シーン向きです。
+## 自作コールバックが必要な場合
 
-:::note
-Webhook パス、イベント名、署名アルゴリズムは [公式 API ドキュメント](https://developers.openai.com/codex) を基準に。
-:::
+一回の CI タスクなら、通常は終了状態と保存した出力から次へ進める。「非同期」であるだけでは公開受信口は不要。
 
-## よくある誤解
+複数プロセスでタスクをスケジュールし、終了後にチケットを更新するなら、次の内部経路を設計できる。
 
-### Webhook はすべての自動化のデフォルト答案ではない
-
-単発 `codex exec` なら終了コードで足り、通常 Webhook 不要。
-
-Webhook 向き：
-
-- 長時間タスク
-- 多段オーケストレーション
-- 終了後に通知や他システム駆動
-
-### コールバックを受けたらそのまま信じてよいわけではない
-
-署名検証、冪等、タイムアウト処理をしないと、偽造、重複配信、システム揺らぎで問題が出ます。
-
-## いつ Webhook を使うか
-
-| 向く | 向かない |
-|---|---|
-| タスク完了を内部システムに通知 | 強リアルタイムの逐字ストリーミング出力 |
-| 既存イベントバスと統合 | 単純 cron は `exec` 終了コードで足りる |
-| 多段編成（完了 → デプロイ起動） | 公網到達 endpoint がなくキューも使わない |
-
-単純パイプラインは [スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/) で足りることが多い。マルチテナント製品は **SDK + Webhook** 組み合わせが一般的です。
-
-## 典型イベント（概念）
-
-| イベント | 用途 |
-|---|---|
-| `task.completed` | 結果取得、PR 状態更新 |
-| `task.failed` | アラート、再試行キュー |
-| `task.needs_approval` | 人工承認 UI へプッシュ |
-| `review.posted` | コードレビュー結論を同期 |
-
-ペイロードに含めるべきもの：`task_id`、状態、タイムスタンプ、リポジトリ／プロジェクト識別。**PII を含む完全 prompt を webhook body に入れない。**
-
-## 受信側の最小要求
-
-1. **HTTPS** エンドポイント。公式署名ヘッダ（例：`X-Signature` + HMAC）を検証
-2. **冪等**：同一 `event_id` は一度だけ処理
-3. **迅速 2xx**：重い処理はキューで非同期
-4. **ログ脱敏**：秘密鍵と完全ユーザー入力を記録しない
-
-示意（疑似コード）：
-
-```python
-def handle(request):
-    verify_signature(request.headers, request.body)
-    event = parse_json(request.body)
-    if already_processed(event["id"]):
-        return 200
-    enqueue(process_codex_event, event)
-    return 200
+```text
+自前のキュー → 管理下の runner が SDK/CLI を実行 → 結果と状態を保存
+                                              → 自前の通知サービス → 内部チケット
 ```
 
-## CI との関係
+これは当サイトの構成案であり、SDK 付属のデプロイ機能ではない。実行場所と統合境界は[SDK 概要](/ja/guide/developer-platform/sdk-overview/)を参照。
 
-- CI 内 `codex exec` は通常**Webhook 不要**。終了コードで足りる
-- Cloud 長時間タスク、モバイル承認シーンは webhook で内部システムへプッシュ向き
+## 自作プロトコルに必要な定義
 
-## よくあるミス
+- **本人確認と完全性：** 受信者が送信者を検証する方法を決め、検討済みの認証方式を使う。架空の「公式署名ヘッダー」を作らない。
+- **安定した ID と重複排除：** タスク ID、イベント ID、試行回数を記録し、重複配送で外部効果を重ねない。
+- **状態と版：** 実行の完了、失敗、中断と業務上の受け入れ結果を区別し、ペイロードに版を付ける。
+- **確実な受信：** イベントを確実に保存またはキューへ入れてから受信確認する。失敗時は再試行できるようにし、成功を返してからイベントを失わない。
+- **データ範囲：** 下流に必要な要約と安全な参照だけを送り、ログに資格情報を残さない。
+- **停止条件：** 再試行上限、人への引き継ぎ、後続操作を取り消す仕組みを定める。
 
-- 署名検証なし。偽造コールバック
-- 処理がプラットフォームタイムアウト超過で重複配信
-- webhook handler で同期的に第二回 Codex を実行
-- webhook URL をクライアントフロントに露出
+これらは実装・検証すべき設計要件であり、すぐに実行できる例ではない。このページはチケットを自動接続したり、メッセージを送ったり、デプロイを作成したりしない。
 
-## 使うべきかの判断
+## 最小受け入れシナリオ
 
-1. タスク状態変化で能動通知が必要か
-2. 終了後にシステム級の次ステップを自動接続するか
-3. HTTP コールバックを安全に受けられるバックエンドがあるか
+テスト環境で成功、実行失敗、取り消し、重複イベント、誤った本人確認、受信側の一時停止を最低限確認する。重複配送が業務効果を1回しか起こさないこと、取り消しを成功と扱わないこと、未承認の生成結果を直接公開しないことを確認する。
 
-「はい」が多いほど Webhook の意味が大きいです。
-
-## セキュリティ境界
-
-- [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) と [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) を参照
-- webhook secret のローテーションを運用カレンダーに
-
-## 受け入れチェックリスト
-
-- [ ] 署名検証失敗で 4xx を返す
-- [ ] 冪等テーブルまたは dedupe key を実装
-- [ ] 非同期 worker と DLQ（デッドレター）を設定
-- [ ] [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) フィールド約束と一致
-
-Webhook はタスク状態変化を別システムに接続する向き。署名検証、冪等、非同期処理の基礎を先に整えること。
-
-## 参考
-- OpenAI Codex / Cloud API イベントドキュメント
----
-
-**状態：** verified  
-**対象製品：** API / Cloud  
-**検証根拠：** OpenAI Developers の現行開発者プラットフォームとイベント駆動統合の公開説明、および本ハンドブックで検証済みの Webhooks 分组、CI/CD、構造化出力、チームセキュリティ境界章を相互確認。「Webhook は状態通知向き。受信側は署名検証、冪等、非同期処理を行う」安定統合原則のみ確認。  
-**最終検証：** 2026-07-26
+練習には[Issue 振り分け事例](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)と[定期リンクチェック](/ja/cases/use-cases/team-automation/scheduled-link-check/)を利用できる。各資料の状態はそれぞれのページを参照。

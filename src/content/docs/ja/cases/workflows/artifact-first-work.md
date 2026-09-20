@@ -3,7 +3,7 @@ title: 成果物優先
 description: まず最終成果物の形とパスを約束し、ステップを逆算する——ドキュメント、設定、レポートなどの成果物に適する。
 locale: ja
 source_locale: zh-CN
-source_revision: 5a1e1e0
+source_revision: e57c215
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

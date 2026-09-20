@@ -3,7 +3,7 @@ title: Modo no interactivo
 description: 'Página sobre lotes, scripts y pipelines: primero qué Tareas encajan, después comandos y diseño de salida.'
 locale: es
 source_locale: zh-CN
-source_revision: e226a62
+source_revision: 2d542c9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,16 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "このページは品質と検証の章の構成と読む順序だけを説明します。内部リンクと概念の記述を確認済みで、バージョン、価格、画面など変わりやすい製品情報には依存しません。"
+  checkedAt: "2026-07-26"
 title: 品質と検証
 description: レビュー、テスト、完了の定義。
 sidebar:
   order: 21
 locale: ja
 source_locale: zh-CN
-source_revision: 967fdd6
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 401b6a6
+translation_status: draft
+translated_at: 2026-09-20
 ---
-
 Codex を使うとき、多くの人は「作れるかどうか」に注目しがちですが、もう一つの問いを見落としやすいです。作ったあと、今回の結果を本当に受け取れるかどうか。
 
 この一連の内容は、その問いに答えるものです。品質と検証は、「見た目は完了したが、まだ安定していない」状態を避けるためのものです。
@@ -20,6 +23,8 @@ Codex を使うとき、多くの人は「作れるかどうか」に注目し�
 - [成果物の検証](/ja/guide/quality/verify-artifacts/)
 - [出典の確認](/ja/guide/quality/validate-sources/)
 - [不確実性の扱い](/ja/guide/quality/handle-uncertainty/)
+- [使用量・所要時間・モデルの選択](/ja/guide/quality/usage-time-and-model-choice/)
+- [ワークフロー評価と20件のサンプル](/ja/guide/quality/workflow-evaluation/)
 - [完了の定義](/ja/guide/quality/definition-of-done/)
 
 ## 読み順
@@ -32,10 +37,3 @@ Codex を使うとき、多くの人は「作れるかどうか」に注目し�
 4. [完了の定義](/ja/guide/quality/definition-of-done/) で、「どうなったら本当に完了か」を明確にする
 
 確認がないと、「完了」は多くの場合、一時的に完了したように見えるだけです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは品質と検証章の構成と読み順のみを説明する。サイト内リンクと概念表現は再確認済みであり、本文は製品バージョン、価格、UI など変わりやすい事実に依存しない。  
-**最終検証：** 2026-07-26

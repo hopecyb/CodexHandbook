@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "已按 OpenAI Developers 当前对长任务、验证与分步推进的描述，以及本手册已核验的规划、质量与上下文章节交叉复核；本页只保留“局部纠偏优于整段推倒”的稳定协作原则。"
+  checkedAt: "2026-07-26"
 title: 进度与引导
 description: 执行途中发现方向偏了，如何用短指令把 Codex 拉回正确轨道。
 sidebar:
@@ -153,10 +158,3 @@ sidebar:
 - 需要把流程写成完整主链路：见 [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
 - 需要把任务拆给别人：见 [子 Agent](/guide/agent-work/subagents/)
 - 任务中断后再继续：见 [交接与恢复](/guide/agent-work/handoff-and-resume/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 已按 OpenAI Developers 当前对长任务、验证与分步推进的描述，以及本手册已核验的规划、质量与上下文章节交叉复核；本页只保留“局部纠偏优于整段推倒”的稳定协作原则。  
-**最近核验：** 2026-07-26

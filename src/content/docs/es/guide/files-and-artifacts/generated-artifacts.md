@@ -3,7 +3,7 @@ title: Aceptación de artefactos generados
 description: Aceptación sistemática de archivos, informes y salidas de build nuevos o exportados por Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 4b46d0b
+source_revision: 7401176
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página ofrece una plantilla de tareas de modificación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Plantilla de modificación
 description: Iterar con límites sobre lo existente.
 locale: es
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Plantilla de modificación
 
 Esta plantilla encaja en tareas de «cambiar un poco sobre lo que ya hay».
 
@@ -66,10 +70,3 @@ Un Prompt de modificación, además de «qué cambiar», debe aclarar «hasta d�
 
 - [Definir el terminado](/es/prompts/define-done/)
 - [Restricciones y límites](/es/prompts/constraints-and-boundaries/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página ofrece una plantilla de tareas de modificación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

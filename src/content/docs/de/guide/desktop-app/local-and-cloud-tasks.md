@@ -3,7 +3,7 @@ title: Lokale und Cloud-Aufgaben
 description: Zwischen lokaler und Cloud-Ausführung in der App wechseln.
 locale: de
 source_locale: zh-CN
-source_revision: 95e2382
+source_revision: 741f686
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

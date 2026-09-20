@@ -1,15 +1,22 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página es un ejercicio introductorio de bajo riesgo del manual: limitada a editar un solo archivo, sin red, exige leer el diff y comprobar cada criterio de aceptación. Los capítulos previos (instalación, proyecto de práctica, verificación) se han contrastado; el contenido no depende de detalles de versión del producto."
+  checkedAt: "2026-07-26"
 title: Primera tarea
 description: Completa un cambio pequeño con un prompt claro y aprende a revisar el resultado.
 locale: es
 source_locale: zh-CN
-source_revision: a9bcbce
+source_revision: 0495ceb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Primera tarea
 
 El ejemplo siguiente asume la **App de escritorio** por defecto; CLI e IDE pueden usar el mismo prompt.
 
@@ -52,10 +59,3 @@ Si falta información, pregúntame primero; no inventes.
 - [Fundamentos de prompts](/es/prompts/basics/)
 - [Verificación](/es/guide/verification/)
 - [Empieza aquí](/es/guide/start-here/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página es un ejercicio introductorio de bajo riesgo del manual: limitada a editar un solo archivo, sin red, exige leer el diff y comprobar cada criterio de aceptación. Los capítulos previos (instalación, proyecto de práctica, verificación) se han contrastado; el contenido no depende de detalles de versión del producto.

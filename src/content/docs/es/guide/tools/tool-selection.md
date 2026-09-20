@@ -3,7 +3,7 @@ title: Selección de herramientas
 description: Cuándo usar terminal, búsqueda, navegador u otras herramientas.
 locale: es
 source_locale: zh-CN
-source_revision: 64967ca
+source_revision: 9fdb366
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

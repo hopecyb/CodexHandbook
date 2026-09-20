@@ -1,48 +1,40 @@
 ---
 title: "Tool Use（ツール利用）"
-date: 2025-03-11
-year: 2025
-summary: "Tool Use は完全に新しい概念ではなく、Function Calling をシステムレベルへ広げたものだ。Function Calling が「どう呼ぶか」に答えるなら、Tool Use は「何を呼べるか」を広げる。検索、コード実行、ブラウザ、データベースなどが対象になる。"
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [tool-use, tools, agent, orchestration, function-calling]
-authored_by: ai-assisted
+description: "ツール利用には、ツールの選択、引数の構成、実行、結果の読み取り、次の手順の判断が含まれます。呼び出しが一度成功してもタスク全体が完了したとは限りません。実行エラーと業務上の確認で見つかった問題も区別する必要があります。"
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。"
+  evidence:
+    - label: "エージェント向け新ツールの発表"
+      href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: ja
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 902c66c
+source_revision: efd508a
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Tool Use（ツール利用）
+## 確認可能な出来事と範囲
 
-- 重要な日付:
-  - Engineering inflection: 2025-03-11 (Responses API and built-in tools)
-- 公式リファレンス:
-  - https://openai.com/index/new-tools-for-building-agents/
-  - https://platform.openai.com/docs/guides/tools
-- 注記: この項目は組み込みツールと Agent 構築ツールの公開が、ツール利用を一般的なアプリ設計要素に押し上げた時点を記録する。
+**日付：2025年3月11日 · 種別：製品発表。** OpenAI は Responses API、組み込みツール、Agents SDK を含むエージェント向け新ツールを発表しました。この発表は特定の事業者による製品上の節目であり、モデルによるツール利用の発明日ではありません。
 
-## それは何か
+出典：[エージェント向け新ツールの発表](https://openai.com/index/new-tools-for-building-agents/)。確認日は2026年9月18日です。出典の公開日と本ページの確認日は意味が異なります。
 
-Tool Use は、モデルが外部能力を選択し、呼び出し、結果を読み取り、次の行動へ反映する設計パターンである。関数呼び出しより広く、検索、ファイル処理、コード実行、ブラウザ操作、データベース操作などを含む。
+## 何を解決するか
 
-## AI アプリケーション工学をどこからどこへ進めたか
+ツール利用には、ツールの選択、引数の構成、実行、結果の読み取り、次の手順の判断が含まれます。呼び出しが一度成功してもタスク全体が完了したとは限りません。実行エラーと業務上の確認で見つかった問題も区別する必要があります。
 
-AI アプリケーションは「単一関数を構造化して呼ぶ」段階から、「目的に応じて複数ツールを編成して実行する」段階へ進んだ。モデルは会話相手だけでなく、外部環境を操作する実行主体に近づいた。
+## 学習上の助言と適用範囲
 
-## 現在の段階
+以下は本サイトの教育上の判断であり、業界での普及率や効果を測定した結果ではありません。
 
-現時点では、この項目を `emerging` と見なしている。
+繰り返せる確認作業は目的が明確なツールに任せ、終了コード、出力、復旧手順を残してください。まず手動の手順が機能することを確かめ、その後にスケジュール実行や通知を検討します。
 
-主流へ向かう新興段階である。主要 API と Agent フレームワークでは中心機能になりつつあるが、信頼性と権限設計はまだ重要な課題として残る。
+## 実践演習
 
-## 置き換える可能性があるもの
+[5種類の障害復旧演習](/ja/guide/reference/troubleshooting/failure-recovery-lab/)：複数の障害を再現し、変更前のログを読み、一つの変数だけを変更して、変更後の結果を確認します。この演習はローカルスクリプトを使い、発表に記載された API の呼び出しは不要です。
 
-人が検索、コピー、貼り付け、実行、確認を手作業でつなぐワークフローの一部を置き換える。
-
-## それを置き換える可能性があるもの
-
-Harness Engineering や Agent ランタイムに吸収され、ツール単位ではなく、状態、チェックポイント、失敗回復を持つ実行システムとして扱われるようになる。
+[ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

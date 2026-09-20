@@ -3,7 +3,7 @@ title: AGENTS.md란
 description: 프로젝트급 지속 지침 파일 — Codex를 위한 「협업 계약」이며, 아키텍처 백과가 아닙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c4bc1cc
+source_revision: 49b7d04
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

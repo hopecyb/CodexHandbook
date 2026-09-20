@@ -3,7 +3,7 @@ title: Revisa el resultado
 description: Lee los cambios, valida el artefacto y decide aceptar o modificar.
 locale: es
 source_locale: zh-CN
-source_revision: cb5b5d9
+source_revision: a215910
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

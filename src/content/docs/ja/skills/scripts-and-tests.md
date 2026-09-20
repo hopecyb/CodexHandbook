@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "現在の Codex ランタイムはスキルとスクリプト・決定論的コマンドの併用を許可。本ページの「安定動作はスクリプト化、フローは Skill で制約」は現行能力と一致。"
+  checkedAt: "2026-07-26"
 title: scripts/ とテスト
 description: Skill に決定的なスクリプトを追加し、挙動を検証する。
 locale: ja
 source_locale: zh-CN
-source_revision: 5a7da46
+source_revision: 900e6e4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 固定動作はスクリプトに、判断と協業フローは Skill に残します。
 
-# scripts/ とテスト
 
 ステップを決定的に実行する必要があるとき（テスト実行、diff 生成、形式検証）、`scripts/` にスクリプトを置き、`SKILL.md` でいつ呼ぶかを書きます。
 
@@ -75,10 +79,3 @@ my-skill/
 安定反復が必要な動作は文章だけに頼らない。スクリプトを先に通し、その後 Skill 呼び出しを確認。
 
 スクリプトは現在の承認ポリシーを継承。[コマンドルール](/ja/guide/customization/rules/command-rules/) と [Skill セキュリティ](/ja/skills/security/) を参照。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現在の Codex ランタイムはスキルとスクリプト・決定論的コマンドの併用を許可。本ページの「安定動作はスクリプト化、フローは Skill で制約」は現行能力と一致。

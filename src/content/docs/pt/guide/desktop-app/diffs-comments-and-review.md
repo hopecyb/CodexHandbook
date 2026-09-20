@@ -1,73 +1,69 @@
 ---
-title: Diff, comentários e revisão
-description: Ler mudanças e deixar comentários de revisão.
+title: Diferenças, comentários e revisão
+description: Antes de fazer commit ou push, use o painel de revisão para confirmar as alterações reais e deixar comentários por linha.
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE"
+  checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: 3efee20
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 32ee40c
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
 ---
 
+O resumo da conversa é a explicação do Codex sobre o trabalho; o diff de Git mostra o que realmente mudou nos ficheiros. O painel de revisão da App de desktop permite ver diferenças, acrescentar comentários a linhas específicas e decidir que alterações preparar, reverter, submeter ou enviar.
 
-A chat summary is Codex's explanation of the work. A Git diff is what actually changed in the files. The desktop App's review pane shows diffs, lets you add line-level comments, and lets you choose which changes to stage, revert, commit, or push.
+O projeto tem de estar num repositório Git para utilizar o painel de revisão completo e `/review`.
 
-The project must be in a Git repository to use the full review pane and `/review`.
+## Dois níveis de revisão
 
-## Two review layers
+Primeiro, verifique pessoalmente o âmbito das alterações. Depois, invoque um reviewer independente para procurar problemas na implementação:
 
-First inspect the scope yourself, then invoke an independent reviewer to look for implementation issues:
+1. Abra o painel de revisão e examine a quantidade de ficheiros e os respetivos caminhos.
+2. Escolha **Last turn** para confirmar exatamente o que mudou nesta interação.
+3. Alterne entre **Unstaged**, **Staged**, **Commit** e **Branch** para confirmar o âmbito da revisão.
+4. Execute `/review` na área de entrada.
+5. Escolha comparar com uma branch de referência, rever alterações ainda não submetidas, inspecionar um commit específico ou usar critérios personalizados.
+6. Leia as conclusões por ordem de prioridade e só depois decida o que corrigir.
 
-1. Open the review pane and check the number and paths of changed files.
-2. Select **Last turn** to see exactly what changed in the latest turn.
-3. Switch between **Unstaged**, **Staged**, **Commit**, and **Branch** to confirm the review scope.
-4. Run `/review` in the input area.
-5. Choose whether to compare against a base branch, review uncommitted changes, inspect a specific commit, or apply custom criteria.
-6. Read the findings in priority order, then decide what to fix.
+O reviewer de `/review` é, por predefinição, apenas de leitura e não modifica o worktree. Se depois pedir ao Codex que corrija uma conclusão, continuam a aplicar-se as regras originais de sandbox e aprovação.
 
-The `/review` reviewer is read-only by default and does not modify the worktree. If you subsequently ask Codex to fix a finding, the original sandbox and approval rules still apply.
-
-## Reusable review criteria
-
-```text
-Review the current uncommitted changes. Focus on:
-- changes outside the task scope;
-- behavioral regressions, edge cases, or security issues;
-- whether tests cover failure paths;
-- whether the documentation matches the implementation.
-
-List findings first, ordered by severity. For each finding, provide the file,
-location, evidence, and the smallest reasonable fix.
-If you find no issues, say so explicitly and list any remaining test gaps.
-```
-
-## Reduce ambiguity with line comments
-
-Hover over a suspicious line, select the **+** that appears, and write specific feedback. After leaving all comments, send one explicit instruction:
+## Critérios de revisão reutilizáveis
 
 ```text
-Address the line comments I left. Keep the change set minimal, rerun the
-relevant tests, and show the new diff when finished.
+Revê as alterações ainda não submetidas, concentrando-te em:
+- alterações fora do âmbito da tarefa;
+- regressões de comportamento, casos-limite ou problemas de segurança;
+- cobertura dos caminhos de falha pelos testes;
+- coerência entre documentação e implementação.
+
+Apresenta primeiro os problemas por ordem de gravidade. Para cada um,
+indica ficheiro, localização, prova e a menor correção razoável.
+Se não encontrares problemas, diz isso explicitamente e aponta os riscos
+de teste ainda não cobertos.
 ```
 
-Useful comments identify a risk or acceptance condition, such as "What does this return for an empty array?" A comment that only says "This is wrong" is usually insufficient.
+## Reduzir ambiguidades com comentários por linha
 
-## Staging and reverting
+Passe o cursor sobre uma linha suspeita, selecione o **+** que aparece e escreva um comentário concreto. Depois de deixar todos os comentários, envie uma instrução clara:
 
-The review pane can stage, unstage, or revert an entire diff, a file, or an individual hunk. Reverting discards changes. Before doing so, confirm that the changes were not already present when the task began.
+```text
+Resolve os comentários que deixei nas linhas. Mantém as alterações tão
+limitadas quanto possível; no fim, volta a executar os testes relevantes
+e apresenta o novo diff.
+```
 
-Use a consistent acceptance order: scope → behavior → tests → security → maintainability. See [Review diffs](/pt/guide/quality/review-diffs/) for more techniques.
+Um comentário útil explicita o risco ou a condição de aceitação, por exemplo: «O que devolve isto quando o array está vazio?». Dizer apenas «Isto está errado» costuma ser insuficiente.
 
-## Official sources
+## Preparar e reverter alterações
 
-- [Code review](https://learn.chatgpt.com/docs/code-review)
+O painel de revisão permite preparar, retirar da preparação ou reverter o diff inteiro, um ficheiro ou um hunk isolado. Reverter descarta alterações. Antes de o fazer, confirme que não está a descartar alterações do utilizador que já existiam antes de a tarefa começar.
 
----
+Use uma ordem de aceitação consistente: âmbito → comportamento → testes → segurança → facilidade de manutenção. Para mais métodos, consulte [Rever diferenças](/pt/guide/quality/review-diffs/).
 
-**Status:** verified
+## Fonte oficial
 
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26
+- [Revisão de código](https://learn.chatgpt.com/docs/code-review)

@@ -3,7 +3,7 @@ title: Quy trình tác vụ local
 description: Trong IDE, khởi, theo dõi và hoàn thành tác vụ Codex local dựa trên tệp mở và vùng chọn.
 locale: vi
 source_locale: zh-CN
-source_revision: f9abb5b
+source_revision: 0264d4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

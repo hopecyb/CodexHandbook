@@ -3,7 +3,7 @@ title: Accounts, plans, and access
 description: Distinguish ChatGPT plan access, API-key usage, and organization workspace permissions.
 locale: en
 source_locale: zh-CN
-source_revision: 7e2e8e6
+source_revision: ecfa8f9
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

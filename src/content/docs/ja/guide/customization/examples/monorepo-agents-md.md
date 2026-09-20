@@ -3,7 +3,7 @@ title: Monorepo での AGENTS.md
 description: 単一リポジトリ複数パッケージ構造でのプロジェクト指示、スコープ、テストコマンドの例パターン。
 locale: ja
 source_locale: zh-CN
-source_revision: b6c73e9
+source_revision: a9fb1d7
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

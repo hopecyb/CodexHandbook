@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center 当前 CLI 入门资料仍将 Codex CLI 描述为终端入口，并区分交互使用与更自动化的命令行工作流；本页只作为 CLI 章节导航，概述交互与非交互两类使用方式，不绑定具体参数或安装命令。"
+  checkedAt: "2026-07-26"
 title: CLI
 description: 命令行入口的最小可用说明。
 sidebar:
@@ -35,10 +40,3 @@ CLI 适合终端用户与脚本、CI 集成。
 2. **非交互模式**：把 Codex 当成命令接入脚本或 CI
 
 如果只是第一次试用，通常先用交互模式更顺手。等需要自动化时，再看非交互模式。
-
----
-
-**状态：** verified  
-**适用产品：** CLI  
-**核验依据：** OpenAI Help Center 当前 CLI 入门资料仍将 Codex CLI 描述为终端入口，并区分交互使用与更自动化的命令行工作流；本页只作为 CLI 章节导航，概述交互与非交互两类使用方式，不绑定具体参数或安装命令。  
-**最近核验：** 2026-07-26

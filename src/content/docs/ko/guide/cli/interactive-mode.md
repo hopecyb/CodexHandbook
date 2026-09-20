@@ -3,10 +3,9 @@ title: 대화형 모드
 description: 터미널에서 Codex와 대화하며 작업을 실행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 794dd7c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 822e8f7
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -23,6 +22,19 @@ CLI의 흔한 사용법 중 하나입니다.
 4. `/` 계열 단축 명령(있는 경우)으로 세션을 관리합니다—현행 CLI 도움말 기준
 
 프롬프트 방법은 그대로 적용됩니다: [프롬프트](/ko/prompts/)
+
+## 대화형 모드에 맞는 작업
+
+진행하면서 판단해야 하는 작업에는 대화형 모드가 잘 맞습니다.
+
+| 작업 상태 | 대화가 도움이 되는 이유 |
+|---|---|
+| 요구 사항이 아직 완전히 정해지지 않음 | 도중에 내용을 명확히 할 수 있음 |
+| 다음 단계를 정하기 전에 diff를 봐야 함 | 단계적으로 승인하거나 범위를 좁힐 수 있음 |
+| 프로젝트에서 절차를 처음 시도함 | Codex가 무엇을 읽고 바꿨는지 보기 쉬움 |
+| 권한, 외부 도구 또는 파일 쓰기가 관련됨 | 중요한 지점에서 사람이 판단할 수 있음 |
+
+주고받으며 결정할 필요가 없을 만큼 작업이 안정되면 [비대화형 모드](/ko/guide/cli/non-interactive-mode/)나 자동화를 고려하세요.
 
 ## 흔한 오해
 

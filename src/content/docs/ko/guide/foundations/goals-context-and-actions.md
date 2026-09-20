@@ -3,7 +3,7 @@ title: 목표·컨텍스트·행동
 description: 성공적인 상호작용을 목표·배경·행동·수락으로 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 656b931
+source_revision: 280cea9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

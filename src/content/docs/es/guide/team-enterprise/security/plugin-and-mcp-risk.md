@@ -3,7 +3,7 @@ title: Riesgos de Plugin y MCP
 description: Qué pueden acceder las extensiones y cómo las aprueba y monitoriza el equipo — una mirada unificada a Skills, Plugin y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

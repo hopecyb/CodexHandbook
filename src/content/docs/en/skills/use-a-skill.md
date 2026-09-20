@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Current Codex runtime still supports explicit skill references and automatic matching when appropriate; OpenAI Help \"Skills in ChatGPT\" also confirms Skills are used automatically when helpful. This page focuses on triggers and writing principles."
+  checkedAt: "2026-07-26"
 title: Use a Skill
 description: Explicit and implicit Skill triggers, and how to write a good description.
 locale: en
 source_locale: zh-CN
-source_revision: fa190cf
+source_revision: ef92b69
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ A common early mistake is thinking "once installed, it just works." Using a Skil
 
 A Skill can be **named explicitly** or **chosen automatically** when the scene fits. Knowing both avoids debugging dead ends.
 
-# Use a Skill
 
 ## Trigger modes
 
@@ -86,9 +90,3 @@ A useful bar: after reading `description`, you know when to use it and when not 
 If it still sounds like "does everything," it is probably too broad.
 
 More concepts: [Skills overview](/en/skills/overview/).
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still supports explicit skill references and automatic matching when appropriate; OpenAI Help "Skills in ChatGPT" also confirms Skills are used automatically when helpful. This page focuses on triggers and writing principles.  
-**Last verified:** 2026-07-26

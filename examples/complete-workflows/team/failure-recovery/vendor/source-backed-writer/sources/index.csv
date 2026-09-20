@@ -1,0 +1,4 @@
+source_id,file,title,date,synthetic,license,sha256
+P,01-product.md,拾页 1.2 产品说明,2026-09-10,true,CC0-1.0,187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1
+I,02-interview.md,合成访谈,2026-09-11,true,CC0-1.0,2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206
+C,03-changelog.md,拾页 1.2 版本摘要,2026-09-12,true,CC0-1.0,f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e

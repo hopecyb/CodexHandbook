@@ -1,64 +1,54 @@
 ---
-title:  Editores compatibles
-description:  Qué editores admite la extensión IDE de Codex, cómo elegir y limitaciones habituales.
+title: Editores compatibles
+description: Distingue entre la extensión compatible con VS Code y las integraciones de Xcode y JetBrains.
 locale: es
 source_locale: zh-CN
-source_revision: 1f0b54d
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 7b82896
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
 ---
 
-Codex enters mainstream editors through different mechanisms: the Codex extension for VS Code-family editors, and native integration entry points for Xcode and JetBrains IDEs.
+Codex llega a los principales editores de distintas maneras: la familia VS Code utiliza la extensión de Codex, mientras que Xcode y los IDE de JetBrains tienen sus propios puntos de integración.
 
-## Current support paths
+## Formas de acceso actuales
 
-| Editor | Codex entry | How to open |
+| Editor | Acceso a Codex | Cómo abrirlo |
 |---|---|---|
-| Visual Studio Code | Codex extension | Codex icon or `Codex: Open Codex Sidebar` |
-| Cursor | Compatible Codex extension | Codex icon or Command Palette |
-| Windsurf | Compatible Codex extension | Codex icon or Command Palette |
-| Visual Studio Code Insiders | Codex extension | Extensions panel and Codex sidebar |
-| Xcode | Xcode coding assistant integration | Start a chat and select Codex Agent |
-| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
+| Visual Studio Code | Extensión de Codex | Icono de Codex o `Codex: Open Codex Sidebar` |
+| Cursor | Extensión de Codex compatible | Icono de Codex o paleta de comandos |
+| Windsurf | Extensión de Codex compatible | Icono de Codex o paleta de comandos |
+| Visual Studio Code Insiders | Extensión de Codex | Panel de extensiones y barra lateral de Codex |
+| Xcode | Integración del coding assistant de Xcode | Inicia un chat y selecciona Codex Agent |
+| IDE de JetBrains | Integración de JetBrains AI Chat | Abre AI Chat y selecciona Codex |
 
-Installation entry points and minimum versions can change. Start from the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide) rather than inferring official support from similarly named third-party extensions.
+Los puntos de instalación y las versiones mínimas pueden cambiar. Parte siempre de la [página oficial de Codex IDE](https://learn.chatgpt.com/docs/codex/ide); no deduzcas que una extensión de terceros cuenta con soporte oficial solo porque tenga un nombre parecido.
 
-## Best uses for the IDE entry point
+## Para qué resulta más útil el acceso desde el IDE
 
-- Attach the currently open file or selection directly to a question.
-- Explain, modify, and follow up on local code.
-- Review summaries and changes beside source code.
-- Keep small tasks local and delegate longer work when it grows.
+- Añadir directamente a una pregunta el archivo abierto o una selección.
+- Explicar o modificar una parte del código y continuar la conversación.
+- Revisar resúmenes y cambios junto al código fuente.
+- Mantener las tareas pequeñas en el entorno local y delegar las más grandes a flujos de trabajo más largos.
 
-Example:
+Ejemplo:
 
 ```text
-Inspect the retry loop in the current selection.
-Explain the termination condition first, then make the smallest change.
-Modify only the current file and its corresponding test.
-Report the diff and test command; do not upgrade dependencies.
+Examina el bucle de reintentos de la selección actual.
+Explica primero la condición de terminación y luego haz el cambio mínimo; modifica solo el archivo actual y su prueba correspondiente.
+Al terminar, informa del diff y del comando de prueba. No actualices las dependencias.
 ```
 
-## Keep multiple editors consistent
+## Mantener la coherencia en equipos con varios editores
 
-1. Put build, test, and formatting commands in repository `AGENTS.md` or contribution docs.
-2. Constrain file scope in prompts rather than relying on an IDE-specific button.
-3. Accept against the Git diff and the same test set, not merely “it runs in my IDE.”
-4. Write editor-specific instructions only when exact UI guidance is necessary.
+1. Escribe los comandos de compilación, pruebas y formato en `AGENTS.md` del repositorio o en la guía de contribución.
+2. Limita en el prompt los archivos que se pueden modificar, sin depender de un botón exclusivo de un IDE.
+3. Para la aceptación final, revisa el diff de Git y ejecuta el mismo conjunto de pruebas, en lugar de conformarte con «funciona en mi IDE».
+4. Escribe instrucciones específicas de cada IDE solo cuando sea necesario indicar controles exactos de la interfaz.
 
-## Editors outside the list
+## Editores que no figuran en la lista
 
-For editors outside this list, use [Codex CLI](/es/guide/cli/) or the [desktop App](/es/guide/desktop-app/). Do not force-install the VS Code package into an incompatible editor or treat a third-party integration as an OpenAI feature by default.
+Usa preferentemente [Codex CLI](/es/guide/cli/) o la [aplicación de escritorio](/es/guide/desktop-app/). No fuerces la instalación de la extensión de VS Code en un editor incompatible ni des por hecho que una integración de terceros es una función oficial de OpenAI.
 
-See [Install and enable the IDE integration](/es/guide/getting-started/install-ide-extension/) for installation and [Editor context](/es/guide/ide/editor-context/) for context behavior.
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26
+Consulta [Instalar la integración en el IDE](/es/guide/getting-started/install-ide-extension/) para ver los pasos de instalación y [Contexto del editor](/es/guide/ide/editor-context/) para aprender a usar el contexto.

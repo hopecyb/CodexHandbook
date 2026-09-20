@@ -1,48 +1,39 @@
 ---
-title: "Prompt Engineering (Prompt-Engineering)"
-date: 2022-11-30
-year: 2022
-summary: "Prompt Engineering gestaltet Anweisungen, Kontext, Einschränkungen und Ausgabeformate, damit Modelle kontrollierbarer arbeiten."
-phase: mainstream
-trend: absorbed
-signal: well-calibrated
-tags: [prompt-engineering, llm, prompting, workflow, reliability]
-authored_by: ai-assisted
+title: "Prompt Engineering"
+description: "Ein Prompt übermittelt dem Modell Ziel, nötigen Kontext, Vorgaben und Anforderungen an die Ausgabe. Beispiele können Erwartungen verdeutlichen, doch mehr Text garantiert keine besseren Ergebnisse."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Die nachstehenden Ereignisse und Projektangaben wurden anhand von Primärquellen geprüft. Die Lernempfehlungen sind Einschätzungen der Redaktion; die Quellenprüfung bedeutet keinen eigenen Produkttest."
+  evidence:
+    - label: "Ankündigung der Veröffentlichung von ChatGPT"
+      href: "https://openai.com/index/chatgpt/"
 locale: de
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 1028eec
+source_revision: 225d837
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Nachprüfbares Ereignis und Geltungsbereich
 
-# Prompt Engineering (Prompt-Engineering)
+**Datum: 2022-11-30 · Typ: Produktveröffentlichung.** OpenAI veröffentlichte die Forschungsvorschau von ChatGPT. Diese Website nutzt das öffentliche Produktereignis als Einstieg ins Lernen und bezeichnet es nicht als Erfindungsdatum von Prompt-Methoden.
 
-- Wichtige Daten:
-  - Mainstream milestone: 2022-11-30 (ChatGPT public launch)
-- Offizielle Referenzen:
-  - https://platform.openai.com/docs/guides/prompt-engineering
-  - https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
-- Hinweis: Dieser Eintrag dokumentiert den Adoptionswendepunkt und die aktuelle Bedeutung dieses Konzepts in der KI-Anwendungsentwicklung.
+Quelle: [Ankündigung der Veröffentlichung von ChatGPT](https://openai.com/index/chatgpt/). Geprüft am 2026-09-18; das Veröffentlichungsdatum der Quelle und das Prüfdatum dieser Seite haben unterschiedliche Bedeutungen.
 
-## Was Es Ist
+## Welches Problem wird damit gelöst?
 
-Prompt Engineering gestaltet Anweisungen, Kontext, Einschränkungen und Ausgabeformate, damit Modelle kontrollierbarer arbeiten.
+Ein Prompt übermittelt dem Modell Ziel, nötigen Kontext, Vorgaben und Anforderungen an die Ausgabe. Beispiele können Erwartungen verdeutlichen, doch mehr Text garantiert keine besseren Ergebnisse.
 
-## Von Welchem Schritt zu Welchem Schritt Es KI-Anwendungsentwicklung Bewegt Hat
+## Lernempfehlung und Geltungsgrenzen
 
-Es bewegte die Nutzung von einfachem Nachfragen und Hoffen hin zu wiederverwendbaren, prüfbaren Eingaben.
+Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung der Verbreitung oder Wirksamkeit in der Branche:
 
-## In Welcher Phase Es Jetzt Ist
+Beschreibe zuerst das gewünschte Ergebnis und ergänze dann die Informationen, die dem Modell fehlen. Einfache Aufgaben können direkt ausgeführt werden; wichtige offene Fragen sollten zuerst geklärt werden. Einen Plan vor jeder Aufgabe oder eine Bestätigung nach jedem Schritt als allgemeine Regel zu behandeln, ist nicht sinnvoll.
 
-Aktuell ordne ich diesen Punkt als `mainstream` ein.
+## Praktische Übung
 
-Heute ist es Basiskompetenz und wird in strukturierte Ausgaben, Tool Calling, Orchestrierung und Skills eingebettet.
+[Drei Prompt-Vergleichssätze](/de/prompts/comparison-lab/): Wähle eine feste Eingabe, speichere die A/B-Ausgaben getrennt und bewerte sie nach denselben Kriterien. Das Übungsmaterial ist vorhanden; diese Website hat noch keine Ergebnisse mit Modellen gemessen.
 
-## Was Es Ersetzen Könnte
-
-Es ersetzt improvisierte Nutzung des Modells als zufällige Chatbox.
-
-## Was Es Ersetzen Könnte
-
-Es verschwindet nicht, sondern wird von höheren Schnittstellen- und Optimierungsschichten umschlossen.
+[Zurück zur Roadmap und ihren Datumsregeln](/de/ai-roadmap/)

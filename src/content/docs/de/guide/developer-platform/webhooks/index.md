@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "Gegen die aktuelle Webhooks-Unterstruktur und Einstiegslinks abgeglichen; diese Seite beschreibt nur die Rolle „Ereignis-Trigger“ in der Integration, ohne Ereignisfelder oder Implementierungsdetails als festen Vertrag zu setzen."
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: 'Erläuterungsseite zur ereignisgesteuerten Integration: Webhooks empfangen Benachrichtigungen und ersetzen keine Workflow-Gestaltung.'
 locale: de
 source_locale: zh-CN
-source_revision: b718fb3
+source_revision: 68cb29b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,10 +30,3 @@ In Codex-Integrationen löst es „ein externes Ereignis ist da — wie starte i
 - Warum ein Webhook nur Trigger ist, keine vollständige Automatisierung
 
 Ein Webhook ist eher die Türklingel: „Es ist etwas passiert.“ Was danach passiert, müssen Sie selbst verdrahten.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** API / Cloud  
-**Prüfgrundlage:** Gegen die aktuelle Webhooks-Unterstruktur und Einstiegslinks abgeglichen; diese Seite beschreibt nur die Rolle „Ereignis-Trigger“ in der Integration, ohne Ereignisfelder oder Implementierungsdetails als festen Vertrag zu setzen.  
-**Zuletzt geprüft:** 2026-07-26

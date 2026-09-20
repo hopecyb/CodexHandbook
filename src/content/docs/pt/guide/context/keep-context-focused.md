@@ -3,7 +3,7 @@ title: Manter o Contexto focado
 description: Controlar o alcance, abrir Threads novas e fazer transferência.
 locale: pt
 source_locale: zh-CN
-source_revision: 042a77f
+source_revision: 5a55fa8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

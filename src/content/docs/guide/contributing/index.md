@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "已按本仓库当前目录结构、侧边栏维护方式、页面状态体系与贡献流程逐项复核；本页内容属于手册维护规则，不依赖某一 Codex 产品端的易变 UI 行为。"
+  checkedAt: "2026-07-26"
 title: 参与贡献
 description: 如何为本手册贡献正文、案例、提示词实例与翻译——流程与质量标准。
 sidebar:
@@ -100,9 +104,3 @@ pnpm build
 
 - 仓库：<https://github.com/hopecyb/CodexHandbook>
 - [章节大纲](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（仓库规划文档）
-
----
-
-**状态：** verified  
-**核验依据：** 已按本仓库当前目录结构、侧边栏维护方式、页面状态体系与贡献流程逐项复核；本页内容属于手册维护规则，不依赖某一 Codex 产品端的易变 UI 行为。  
-**最近核验：** 2026-07-26

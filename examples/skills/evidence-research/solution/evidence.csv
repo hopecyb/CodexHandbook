@@ -1,0 +1,5 @@
+claim_id,status,statement,source_ids,locators,note
+R1,supported,拾页1.2只支持Markdown与纯文本输入,P,P1,仅限合成产品说明的能力范围
+R2,conflict,诊断默认开关无法确认,P;C,P3;C2;C3,描述相反且未解释正式版与测试版范围
+R3,unknown,上传字段未提供,P;C,P3;C2,不能据本地索引推断不会上传笔记
+R4,unavailable,维护者补充说明未取得,M,,本地教学文件故意缺失不是实际网络故障

@@ -1,65 +1,56 @@
 ---
-title: Rever mudanças no IDE
-description: Ler Diff, comentar e aceitar/rejeitar sugestões do Codex no editor.
+title: Rever alterações no IDE
+description: Conferir o diff junto do código e usar um reviewer em modo só de leitura para examinar a árvore de trabalho.
 locale: pt
 source_locale: zh-CN
-source_revision: 1ca9ffe
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: a6badd5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
 ---
 
+O IDE é adequado para ler rapidamente o resumo ao lado do código e examinar um diff específico. Contudo, uma alteração aparecer no editor não significa que tenha passado na aceitação. Verifica primeiro o diff, executa os testes e só depois decide o que manter.
 
-The IDE is useful for reading summaries beside source code and focusing on a diff. A change appearing in the editor is not the same as acceptance. Inspect the diff, run tests, and then decide what to keep.
+## Fazer uma revisão local completa
 
-## Complete a local review
+1. Lê o resumo do resultado, mas não o uses em substituição do diff.
+2. Expande as linhas alteradas e verifica cada ficheiro afetado.
+3. Mantém as edições necessárias e pede alterações adicionais para tudo o que estiver fora do âmbito.
+4. Executa `/review` na área de entrada.
+5. Escolhe comparar com um ramo de base ou rever as alterações ainda não confirmadas.
+6. Executa os testes do projeto e as verificações estáticas no terminal do IDE.
+7. Por fim, confirma novamente o estado com as ferramentas Git.
 
-1. Read the result summary, but do not substitute it for the diff.
-2. Expand changed lines and inspect every affected file.
-3. Keep required edits and request follow-up changes for anything outside scope.
-4. Run `/review` in the input area.
-5. Compare against a base branch or review uncommitted changes.
-6. Run project tests and static checks in the IDE terminal.
-7. Confirm the final Git state with Git tools.
+`/review` só aparece quando o projeto aberto é um repositório Git. Apresenta os problemas por ordem de prioridade e não modifica a árvore de trabalho. No IDE podes escolher:
 
-`/review` appears only when the open project is a Git repository. It reports findings by priority and does not modify the worktree. In the IDE you can choose:
+- **Review against a base branch**: compara o ramo atual com o ramo de base escolhido.
+- **Review uncommitted changes**: verifica as alterações atuais da árvore de trabalho.
 
-- **Review against a base branch:** compare the current branch with the selected base.
-- **Review uncommitted changes:** inspect current worktree changes.
+Por predefinição, o resultado aparece na conversa atual. Define `chatgpt.reviewDelivery` como `detached` para abrir uma conversa de revisão separada.
 
-Results appear in the current chat by default. Set `chatgpt.reviewDelivery` to `detached` to open a separate review chat.
-
-## Prompt with explicit reviewer criteria
+## Exemplo: dar critérios claros ao reviewer
 
 ```text
-Review the current uncommitted changes. Prioritize defects that could cause
-wrong behavior, data loss, or security issues. Ignore pure style preferences.
-Every finding must include a file location, trigger condition, and verifiable
-impact. If there are no findings, state the remaining test gaps.
+Revê as alterações atuais ainda não confirmadas. Procura primeiro defeitos que possam causar
+comportamento incorreto, corrupção de dados ou problemas de segurança. Ignora preferências
+puramente de estilo. Cada problema encontrado deve indicar o local no ficheiro, a condição
+que o desencadeia e o impacto verificável. Se não encontrares problemas, indica as lacunas
+que ainda restam nos testes.
 ```
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Changed files match the allowed task scope.
-- [ ] No accidental deletion, whole-file formatting, or sensitive files.
-- [ ] Failure paths and edge cases are covered.
-- [ ] Required tests, lint, and type checks pass.
-- [ ] High-priority reviewer findings are fixed or explicitly accepted.
-- [ ] `git diff --check` and `git status --short` are clean as expected.
+- [ ] Os ficheiros alterados respeitam o âmbito permitido pela tarefa.
+- [ ] Não há eliminações inesperadas, formatação integral de ficheiros nem ficheiros sensíveis.
+- [ ] Os caminhos de falha e os casos limite estão cobertos.
+- [ ] Testes, lint e verificação de tipos passam conforme as regras do projeto.
+- [ ] Os problemas de alta prioridade encontrados pelo reviewer foram corrigidos ou o risco foi aceite explicitamente.
+- [ ] Os resultados de `git diff --check` e `git status --short` estão conforme o esperado.
 
-For line comments, staging, or hunk-level reverts, use [Diffs, comments, and review](/pt/guide/desktop-app/diffs-comments-and-review/). For the general method, see [Review diffs](/pt/guide/quality/review-diffs/).
+Para comentar linha a linha, preparar alterações ou reverter por hunk, passa para [Diffs, comentários e revisão](/pt/guide/desktop-app/diffs-comments-and-review/) na aplicação de desktop. O método geral está em [Rever diffs](/pt/guide/quality/review-diffs/).
 
-## Official sources
+## Fontes oficiais
 
-- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Revisão de código](https://learn.chatgpt.com/docs/code-review)
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

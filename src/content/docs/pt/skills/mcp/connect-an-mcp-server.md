@@ -1,40 +1,38 @@
 ---
-title: Conectar um servidor MCP
-description: Configure, autentique, valide e resolva problemas — conecte com segurança a primeira ferramenta MCP.
+title: Ligar um servidor MCP
+description: Configura, autentica e verifica o primeiro servidor MCP com a CLI ou o config.toml.
 locale: pt
 source_locale: zh-CN
-source_revision: 972ccc3
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 0675d33
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+Este capítulo usa as interfaces oficiais atuais para completar o ciclo mínimo: **adicionar o servidor → consultar a configuração → confirmar as ferramentas numa sessão → fazer uma chamada só de leitura**.
 
-This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
+## Antes de começar
 
-## Before starting
+- Lê a [Visão geral de MCP](/pt/skills/mcp/mcp-overview/).
+- Confirma que `codex mcp --help` funciona no teu computador.
+- Para a primeira ligação, escolhe uma origem fiável e um cenário só de leitura.
+- Não escrevas tokens reais no histórico de comandos, nos prompts nem no repositório.
 
-- Read the [MCP overview](/pt/skills/mcp/mcp-overview/).
-- Confirm `codex mcp --help` runs.
-- Use a trusted source and read-only scenario first.
-- Never put a real token in history, prompts, or the repository.
+## Caminho A: adicionar um servidor STDIO com a CLI
 
-## Path A: add a STDIO server with the CLI
-
-The official example uses the Context7 documentation server:
+O exemplo oficial usa o servidor de documentação Context7:
 
 ```bash
 codex mcp add context7 -- npx -y @upstash/context7-mcp
 codex mcp list
 ```
 
-This writes the server to Codex configuration. Everything after `--` is the STDIO startup command. The first run may download an npm package, so verify its name and source first.
+O comando escreve o servidor na configuração do Codex. Depois de `--` vem o comando que inicia o servidor STDIO. A primeira execução pode descarregar um pacote npm; confirma antes o nome e a origem do pacote.
 
-## Path B: edit config.toml
+## Caminho B: editar diretamente o config.toml
 
-User configuration defaults to `~/.codex/config.toml`. A trusted project may also use `.codex/config.toml`.
+A configuração do utilizador fica, por predefinição, em `~/.codex/config.toml`. Num projeto de confiança também podes usar `.codex/config.toml` ao nível do projeto.
 
-STDIO:
+Exemplo STDIO:
 
 ```toml
 [mcp_servers.context7]
@@ -44,7 +42,7 @@ startup_timeout_sec = 10
 tool_timeout_sec = 60
 ```
 
-Remote Streamable HTTP:
+Exemplo remoto de Streamable HTTP:
 
 ```toml
 [mcp_servers.internal_docs]
@@ -53,59 +51,51 @@ bearer_token_env_var = "INTERNAL_DOCS_TOKEN"
 enabled_tools = ["search_docs", "get_doc"]
 ```
 
-Replace the illustrative name, URL, and tools with actual server documentation. `bearer_token_env_var` stores an environment-variable name, not the token.
+`internal_docs`, o endereço e os nomes das ferramentas são apenas exemplos da estrutura. Substitui-os pelos valores reais indicados na documentação do teu servidor. `bearer_token_env_var` guarda o **nome da variável de ambiente**, não o próprio token.
 
-## OAuth servers
+## Servidores OAuth
 
-After configuring an OAuth-capable server, run:
+Depois de configurares um servidor que suporta OAuth, executa:
 
 ```bash
 codex mcp login <server-name>
 ```
 
-The desktop App and IDE MCP lists also mark OAuth servers and offer Authenticate.
+As listas de servidores MCP na aplicação de desktop e no IDE também assinalam os que precisam de OAuth e apresentam uma ação Authenticate.
 
-## Inspect from each client
+## Como consultar nos três clientes
 
-| Surface | Configuration or inspection |
+| Ambiente | Entrada para configuração ou consulta |
 |---|---|
-| ChatGPT desktop App | Settings -> MCP servers; Restart after saving; use `/mcp` |
-| Codex CLI | `codex mcp add/list/login`; use `/mcp` in TUI |
-| IDE integration | Gear -> MCP servers; Restart extension after saving |
+| Aplicação de desktop do ChatGPT | Settings → MCP servers; depois de guardar, Restart; usa `/mcp` para ver a ligação |
+| Codex CLI | `codex mcp add/list/login`; no TUI, usa `/mcp` |
+| Extensão IDE | Menu da roda dentada → MCP servers; depois de guardar, Restart extension |
 
-They share configuration on one Codex host. ChatGPT Web does not read local configuration.
+Os três partilham a configuração no mesmo Codex host; não é preciso manter três ficheiros separados. O ChatGPT Web não lê a configuração local.
 
-## Verification prompt
+## Prompt de verificação
 
 ```text
-Use only the currently connected MCP server:
-1. List tool names related to development-documentation search.
-2. Use one read-only tool to find basic Node.js test-runner usage.
-3. Name the tool actually called.
-4. Do not write or connect another service.
+Usa apenas o servidor MCP atualmente ligado para fazer estas verificações:
+1. Lista os nomes das ferramentas disponíveis para consultar documentação de desenvolvimento.
+2. Escolhe uma ferramenta só de leitura e procura a utilização básica do test runner de Node.js.
+3. Indica que ferramenta foi realmente chamada.
+4. Não executes escritas nem ligues outros serviços.
 ```
 
-Evidence: the server appears in `codex mcp list` or `/mcp`, a read-only tool returns structured data, and no unrelated permission is requested.
+As evidências de aceitação são: o servidor aparece em `codex mcp list` ou `/mcp`, uma ferramenta só de leitura devolve um resultado estruturado e não há pedidos de permissões irrelevantes.
 
-## Least-privilege options
+## Opções de privilégio mínimo
 
-- `enabled_tools`: allow only listed tools.
-- `disabled_tools`: exclude more tools after the allowlist.
-- `enabled = false`: keep configuration but disable temporarily.
-- `required = true`: fail startup if an essential server cannot initialize.
+- `enabled_tools`: permite apenas as ferramentas da lista.
+- `disabled_tools`: exclui ferramentas adicionais depois da allowlist.
+- `enabled = false`: conserva a configuração, mas desativa temporariamente o servidor.
+- `required = true`: faz falhar o arranque se o servidor não iniciar; adequado apenas quando é uma dependência indispensável.
 
-## On failure
+## Se falhar
 
-Record the exact error and diagnose configuration, process/network, authentication, and individual tools in [Debug MCP](/pt/skills/mcp/debugging-mcp/). Change one field at a time.
+Não alteres vários campos ao mesmo tempo por adivinhação. Regista o erro exato e segue [Depurar uma ligação MCP](/pt/skills/mcp/debugging-mcp/) para verificar, pela ordem, a leitura da configuração, o processo ou a rede, a autenticação e uma ferramenta individual.
 
-## Official source
+## Fonte oficial
 
-- [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE
-
-**Last verified:** 2026-08-25
+- [OpenAI: ligar o Codex a um servidor MCP](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)

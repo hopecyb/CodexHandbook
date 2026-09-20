@@ -3,7 +3,7 @@ title: Gestion des tâches longues
 description: Grandes tâches sur plusieurs heures ou sessions — points de contrôle, compression, délégation et conditions de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: 199bbe5
+source_revision: c2a9887
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

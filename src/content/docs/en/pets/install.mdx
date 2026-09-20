@@ -3,15 +3,21 @@ title: Install a Codex Pet
 description: "Understand the install folder, activation flow, and safety boundaries for Codex Pets."
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: e0d8ef4
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 730c599
+contentType: guide
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "We added boundaries for file formats and recovery, but have not tested installation, animation playback, or removal with a specific client and pet package. Check directories and menus against the target version."
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 
-# Install a Codex Pet
+This site has not completed compatibility tests for a specific client and pet package. Record their versions and sources first, then use the [compatibility and recovery record](/en/guide/reference/resource-compatibility/) to check actual results. The illustration explains the structure; it is not a file-format contract for every version.
+
 
 Installing a Codex Pet means placing a client-readable resource package into a known folder. When the client starts or refreshes settings, it reads that folder, finds the metadata, and loads the matching animation assets.
 
@@ -32,7 +38,7 @@ A Pet is usually a local folder with at least two files:
 1. Get the package: confirm it contains at least `pet.json` and a spritesheet.
 2. Put it in the Pets folder: a common path is `~/.codex/pets/<pet-id>/`.
 3. Let the client read it again: restart Codex or refresh Pets settings.
-4. Select it in the UI: usually Settings -> Appearance -> Pets.
+4. Find the Pet selection control in your current client; menu names and positions vary by version. If no control appears, check whether that version supports Pets.
 
 On Windows, the folder is usually under `.codex\pets\<pet-id>\` in your user directory. If you use `CODEX_HOME`, follow the Pets folder shown by your current client.
 
@@ -46,13 +52,13 @@ If the pet does not appear after installation, check:
 - Codex was restarted, or the Pets settings were refreshed.
 - Windows, WSL, or a custom `CODEX_HOME` is not pointing at a different directory.
 
-Most failures mean the client did not find a complete package in the expected place, not that the idea of the pet is broken.
+If the paths and files check out, investigate the format version, client support, and actual loading errors.
 
 ## Update and Remove
 
 Back up the old folder before updating. After the new package works, replace `pet.json` and the spritesheet.
 
-To remove a pet, delete its `~/.codex/pets/<pet-id>/` folder, then restart Codex or refresh the Pets settings.
+Before disabling a custom Pet, switch to a built-in Pet or hide Pets. Then move the custom package to a backup location outside the Pets scan directory. Refresh or restart and confirm it no longer appears. To restore it, put the original package back and verify it again. Delete the backup only when you no longer need it. This procedure has not been tested with a client version recorded by this site.
 
 ## Safety Notes
 

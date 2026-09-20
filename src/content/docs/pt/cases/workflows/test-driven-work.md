@@ -3,7 +3,7 @@ title: Trabalho orientado por testes
 description: Defina ou complete primeiro os testes em falha e deixe-os conduzir a implementação — para que as alterações do Codex sejam objetivamente aceitáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 9fb480f
+source_revision: 4eb568d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

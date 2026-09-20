@@ -3,10 +3,9 @@ title: Modo interactivo
 description: Conversar con Codex en la terminal y ejecutar Tareas.
 locale: es
 source_locale: zh-CN
-source_revision: 794dd7c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 822e8f7
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 20
 ---
@@ -23,6 +22,19 @@ Tras iniciar la sesión interactiva:
 4. Usa comandos rápidos tipo `/` (si existen) para gestionar la sesión — según la ayuda actual de la CLI
 
 Siguen valiendo los métodos de Prompt: [Prompts](/es/prompts/)
+
+## Tareas adecuadas para el modo interactivo
+
+Este modo encaja especialmente con trabajos en los que decides sobre la marcha:
+
+| Estado de la tarea | Por qué ayuda la interacción |
+|---|---|
+| Los requisitos aún no están del todo claros | Puedes precisarlos durante el trabajo |
+| Debes examinar un diff antes de decidir el siguiente paso | Puedes aprobar poco a poco o reducir el alcance |
+| Pruebas un flujo por primera vez en un proyecto | Es más fácil observar qué lee y cambia Codex |
+| Hay permisos, herramientas externas o posibles escrituras | Una persona puede controlar los puntos importantes |
+
+Si la tarea ya es estable y no requiere decisiones de ida y vuelta, considera el [modo no interactivo](/es/guide/cli/non-interactive-mode/) o la automatización.
 
 ## Malentendidos frecuentes
 

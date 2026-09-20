@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "A documentação de Skills no runtime atual do Codex ainda tem `SKILL.md` como arquivo central e permite estender com scripts e referências sob demanda; esta página foca na divisão de responsabilidades dos diretórios, sem amarrar a entradas voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Anatomia de um Skill
 description: Papéis e exemplos de SKILL.md, references/, templates/ e scripts/.
 locale: pt
 source_locale: zh-CN
-source_revision: d22c83b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 50ca48c
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 Na primeira vez que se olha um diretório Skill, a sensação comum é «reconheço as pastas, mas não sei por que estão assim».
@@ -15,7 +19,6 @@ Esta página explica como separar «fluxo principal, documentação longa, templ
 
 Fica mais fácil de ler, alterar e reutilizar — e menos propenso a virar bagunça.
 
-# Anatomia de um Skill
 
 ## Estrutura de diretórios
 
@@ -36,6 +39,18 @@ my-skill/
 
 No início, um único `SKILL.md` basta.  
 Quando realmente ficar complexo, aí separe `references/`, `templates/`, `scripts/`.
+
+## Carregar conforme a necessidade, não tudo de uma vez
+
+Um Skill fácil de manter costuma ter três camadas:
+
+| Camada | Conteúdo | Quando usar |
+|---|---|---|
+| Metadados | Nome, descrição e situações de acionamento | Ajudam o Codex a decidir se deve usar o Skill |
+| Instruções principais | Etapas obrigatórias, proibições e definição de conclusão | Ler primeiro quando o Skill for acionado |
+| Arquivos auxiliares | Templates, referências, scripts e exemplos | Abrir ou executar somente quando a tarefa precisar |
+
+Assim, a descrição de acionamento permanece curta no uso cotidiano; os detalhes só são carregados durante a execução. Essa divisão se torna mais importante conforme aumenta o número de Skills.
 
 ## Exemplo mínimo de SKILL.md
 
@@ -112,10 +127,3 @@ Não transformes cada template em Skill. Vale a pena quando há repetição, cri
 | Scripts | Complexidade, links, cobertura, formatação |
 
 Um bom Skill não é só um Prompt mais longo: separa trabalho reutilizável em partes legíveis, testáveis e manuteníveis.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** A documentação de Skills no runtime atual do Codex ainda tem `SKILL.md` como arquivo central e permite estender com scripts e referências sob demanda; esta página foca na divisão de responsabilidades dos diretórios, sem amarrar a entradas voláteis do produto.  
-**Última Verificação:** 2026-07-26

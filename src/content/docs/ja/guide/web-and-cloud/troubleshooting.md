@@ -3,7 +3,7 @@ title: Cloud のトラブルシューティング
 description: リポジトリ、setup、ネットワーク、Agent、成果物の 5 層に分けて Cloud の失敗原因を特定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 4ba9a4d
+source_revision: 019fac1
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

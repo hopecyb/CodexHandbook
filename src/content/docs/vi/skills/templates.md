@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Runtime Codex hiện tại hỗ trợ hướng dẫn dùng file kèm trong kỹ năng; trang này bàn về cách viết template đầu ra ổn định, không phụ thuộc giao diện client hay quy trình cài đặt hiện tại."
+  checkedAt: "2026-07-26"
 title: Thư mục templates/
 description: Cung cấp template đầu ra và khung báo cáo trong Skill.
 locale: vi
 source_locale: zh-CN
-source_revision: 9f93d04
+source_revision: 82a9e01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Nếu `references/` thiên về"tham chiếu gì lúc đầu vào", thì `templates/` thiên về "đầu ra trông thế nào". Kết quả cần cấu trúc cố định, dễ đối chiếu lại đều phù hợp đặt ở đây.
 
-# Thư mục templates/
 
 `templates/` chứa định dạng đầu ra mà Skill tái dùng khi chạy, ví dụ báo cáo review, khung changelog, bảng so sánh nghiên cứu.
 
@@ -78,9 +82,3 @@ Nếu một loại kết quả gần như không lặp, hoặc cấu trúc mỗi
 Nếu liên tiếp hai ba lần đều lặp"xuất theo cấu trúc này", thì đáng làm thành `templates/`.
 
 Giá trị cốt lõi của `templates/` là làm cấu trúc đầu ra ổn định, sau đó cũng dễ tái dùng hơn.
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở Kiểm chứng:** Runtime Codex hiện tại hỗ trợ hướng dẫn dùng file kèm trong kỹ năng; trang này bàn về cách viết template đầu ra ổn định, không phụ thuộc giao diện client hay quy trình cài đặt hiện tại.  
-**Kiểm chứng gần nhất:** 2026-07-26

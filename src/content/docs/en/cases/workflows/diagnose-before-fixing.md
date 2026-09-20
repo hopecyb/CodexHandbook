@@ -3,7 +3,7 @@ title: Diagnose before fixing
 description: Production issues and stubborn bugs—build an evidence chain before changing code.
 locale: en
 source_locale: zh-CN
-source_revision: bd7e38b
+source_revision: 18193b0
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

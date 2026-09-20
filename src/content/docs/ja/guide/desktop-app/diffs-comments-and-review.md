@@ -3,7 +3,7 @@ title: 差分、コメント、レビュー
 description: commit または push の前にレビューパネルで実際の変更を確認し、行単位のフィードバックを伝えます。
 locale: ja
 source_locale: zh-CN
-source_revision: 3efee20
+source_revision: 32ee40c
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

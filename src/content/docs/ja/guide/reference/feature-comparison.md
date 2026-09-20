@@ -3,7 +3,7 @@ title: 機能比較
 description: 作業面、実行場所、レビュー方法の観点から、デスクトップ App、CLI、IDE、Cloud を比較します。
 locale: ja
 source_locale: zh-CN
-source_revision: f2f0528
+source_revision: b3d30b0
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

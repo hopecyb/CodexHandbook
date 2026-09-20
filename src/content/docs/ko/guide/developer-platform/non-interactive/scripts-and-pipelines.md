@@ -3,7 +3,7 @@ title: 스크립트와 파이프라인
 description: shell, Makefile, GitHub Actions에서 codex exec를 오케스트레이션합니다——반복 가능하고 감사 가능합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ce1e940
+source_revision: 07aeb4f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

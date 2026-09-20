@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "使用本地 Codex host 的环境；信任审查与 `/hooks` 管理以 Codex CLI 官方说明为准"
+  checkedAt: "2026-08-25"
 title: Hooks
 description: 在 Codex 生命周期中运行脚本或 MCP 工具，完成检查、记录和策略控制。
 ---
@@ -33,11 +37,3 @@ Hook 不能替代沙箱、审批、命令规则或服务端权限。它是额外
 ## 官方来源
 
 - [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状态：** verified
-
-**适用产品：** 使用本地 Codex host 的环境；信任审查与 `/hooks` 管理以 Codex CLI 官方说明为准
-
-**最近核验：** 2026-08-25

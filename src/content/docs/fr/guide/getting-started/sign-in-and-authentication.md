@@ -3,7 +3,7 @@ title: Connexion et authentification
 description: Choisir la bonne méthode de connexion pour les clients locaux et Cloud, puis vérifier l'identité active en toute sécurité.
 locale: fr
 source_locale: zh-CN
-source_revision: e17d14f
+source_revision: ea83fa6
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

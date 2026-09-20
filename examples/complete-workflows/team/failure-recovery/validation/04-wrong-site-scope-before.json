@@ -1,0 +1,14 @@
+{
+  "phase": "before",
+  "command": [
+    "<PYTHON>",
+    "<WORK>/04-wrong-site-scope/quiet-link-monitor/scripts/run_once.py",
+    "--site",
+    "<WORK>/04-wrong-site-scope/quiet-link-monitor/fixtures/broken",
+    "--state",
+    "<WORK>/04-wrong-site-scope/state.json"
+  ],
+  "exit_code": 3,
+  "stdout": "{\"status\": \"stopped\", \"error\": \"State version/site mismatch\", \"external_actions\": []}\n",
+  "stderr": ""
+}

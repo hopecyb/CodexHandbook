@@ -3,7 +3,7 @@ title: Cẩm nang này dành cho ai
 description: Giải thích cách người mới, người sáng tạo, nhà phát triển và nhóm dùng cẩm nang này.
 locale: vi
 source_locale: zh-CN
-source_revision: 41e8ab8
+source_revision: 95272c3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

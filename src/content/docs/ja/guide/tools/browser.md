@@ -3,7 +3,7 @@ title: ブラウザツール
 description: Codex に Web ページを開かせ、UI 状態を確認し、フロントエンドの動作を検証する——能力と境界。
 locale: ja
 source_locale: zh-CN
-source_revision: 97ba90e
+source_revision: 802f889
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

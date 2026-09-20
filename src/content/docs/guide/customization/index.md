@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI 当前帮助中心与 Codex 相关配置材料仍明确存在用户级 `~/.codex` 配置、组织级托管能力与项目级协作说明的分层；本页已将“优先级”改写为更保守的常见分层说明，避免把特定实现细节写成绝对规则。"
+  checkedAt: "2026-07-26"
 title: 个性化与项目配置
 description: 个人偏好、AGENTS.md、配置与规则优先级——让 Codex 长期按你的方式工作。
 sidebar:
@@ -111,9 +116,3 @@ Rules 细目已起步；更多配置细页会随自定义模块持续补充。
 
 ## 参考来源
 - OpenAI Codex 文档：[https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI 当前帮助中心与 Codex 相关配置材料仍明确存在用户级 `~/.codex` 配置、组织级托管能力与项目级协作说明的分层；本页已将“优先级”改写为更保守的常见分层说明，避免把特定实现细节写成绝对规则。  
-**最近核验：** 2026-07-26

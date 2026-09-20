@@ -3,7 +3,7 @@ title: Installer et activer l'intégration IDE
 description: Ouvrir correctement Codex dans les éditeurs de la famille VS Code, Xcode et les IDE JetBrains.
 locale: fr
 source_locale: zh-CN
-source_revision: fb7ff84
+source_revision: 85e1691
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

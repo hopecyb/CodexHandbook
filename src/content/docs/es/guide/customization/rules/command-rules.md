@@ -3,7 +3,7 @@ title: Reglas de comandos
 description: Restringe llamadas a shell y herramientas con allow/deny a nivel de comando — más ejecutable que un acuerdo oral.
 locale: es
 source_locale: zh-CN
-source_revision: e82113c
+source_revision: fdb8651
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

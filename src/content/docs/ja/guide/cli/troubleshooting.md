@@ -3,7 +3,7 @@ title: CLI トラブルシューティング
 description: 認証、権限、コマンド失敗の切り分け。
 locale: ja
 source_locale: zh-CN
-source_revision: 0d016f1
+source_revision: 57b062f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

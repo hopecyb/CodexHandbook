@@ -3,7 +3,7 @@ title: Approbations et Bac à sable
 description: Politique d'Approbation CLI pour shell, disque et réseau — et comment le Bac à sable limite le comportement de l'Agent.
 locale: fr
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

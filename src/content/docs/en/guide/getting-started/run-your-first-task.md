@@ -3,7 +3,7 @@ title: Run your first task
 description: Complete a small change with a clear prompt.
 locale: en
 source_locale: zh-CN
-source_revision: 766820b
+source_revision: f203611
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26

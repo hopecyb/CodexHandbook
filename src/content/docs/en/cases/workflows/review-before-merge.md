@@ -3,7 +3,7 @@ title: Review before merge
 description: Structured diff and risk review with Codex before merge—clear human–machine roles.
 locale: en
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

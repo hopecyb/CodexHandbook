@@ -1,99 +1,90 @@
 ---
-title: Déboguer les connexions MCP
-description: Dépannage systématique quand les serveurs MCP ne démarrent pas, les outils expirent ou les résultats semblent incorrects.
+title: Déboguer une connexion MCP
+description: "Localiser une panne MCP parmi quatre niveaux : configuration, transport, authentification et outils."
 locale: fr
 source_locale: zh-CN
-source_revision: 829c1e9
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: d35b635
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
+On résume souvent une panne MCP par « l'outil ne fonctionne pas ». Il est plus efficace de déterminer d'abord à quel niveau l'échec se produit, puis de ne modifier qu'une seule variable à la fois.
 
-## Preserve four pieces of evidence
+## Conserver d'abord quatre éléments de preuve
 
 ```bash
 codex mcp list
 codex mcp --help
-node --version    # only for a Node.js STDIO server
-python3 --version # only for a Python STDIO server
+node --version   # uniquement si le serveur STDIO utilise Node.js
+python3 --version # uniquement si le serveur STDIO utilise Python
 ```
 
-Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
+Notez également le nom du serveur, le transport utilisé (STDIO ou Streamable HTTP), le message d'erreur exact et l'interface où le problème survient (App de bureau, CLI ou IDE). Ne consignez jamais le token complet.
 
-## Four-layer triage
+## Diagnostic en quatre niveaux
 
-| Layer | Symptom | First check |
+| Niveau | Symptôme courant | Première vérification |
 |---|---|---|
-| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
-| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
-| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
-| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+| Configuration | Serveur absent de la liste | Chemin du fichier, syntaxe TOML, nom du serveur, `enabled` |
+| Démarrage ou connexion | Délai d'initialisation dépassé | Commande STDIO et PATH, ou URL HTTP, TLS et proxy |
+| Authentification | Erreur 401/403 ou demande de connexion | État OAuth, variable d'environnement du token, scope |
+| Outil | Serveur en ligne, mais appel en échec | Nom de l'outil, arguments, liste d'autorisation, délai d'expiration |
 
-## 1. Confirm configuration loaded
+## 1. Vérifier que la configuration est bien chargée
 
-- User file: `~/.codex/config.toml`.
-- Project file: `.codex/config.toml`, loaded only for a trusted project.
-- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
-- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+- Le fichier utilisateur est `~/.codex/config.toml`.
+- Le fichier du projet est `.codex/config.toml` ; il n'est chargé que pour un projet de confiance.
+- L'App de bureau, la CLI et l'IDE partagent la configuration sur un même Codex host. Évitez trois copies qui divergent.
+- Consultez l'état réel avec `codex mcp list` ou `/mcp` dans la session. L'existence du fichier ne prouve pas que la connexion fonctionne.
 
-## 2. STDIO startup failure
+## 2. Le serveur STDIO ne démarre pas
 
-Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+Vérifiez que `command` est disponible dans PATH, que la version du runtime répond aux exigences du serveur, que `cwd` existe et que la provenance des dépendances est fiable.
 
-Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+Exécuter directement la commande de démarrage montre seulement que le programme se lance. Un serveur MCP peut sembler ne jamais se terminer parce qu'il attend une entrée du protocole : cela peut être normal et ne constitue pas un test complet d'appel d'outil.
 
-Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+N'augmentez `startup_timeout_sec` que si l'initialisation est réellement lente. Sa valeur par défaut est de 10 secondes ; une valeur arbitrairement élevée masque parfois une mauvaise commande.
 
-## 3. Streamable HTTP connection failure
+## 3. La connexion Streamable HTTP échoue
 
-Check in order:
+Vérifiez dans cet ordre :
 
-1. URL and TLS certificate.
-2. Corporate proxy or VPN.
-3. Existence of the environment variable named by `bearer_token_env_var`.
-4. Whether OAuth needs `codex mcp login <server-name>` again.
-5. Whether server logs received initialization.
+1. L'URL et le certificat TLS
+2. Le proxy d'entreprise ou le VPN
+3. L'existence de la variable d'environnement désignée par `bearer_token_env_var`
+4. La nécessité éventuelle de relancer `codex mcp login <server-name>` pour OAuth
+5. La réception de la demande d'initialisation dans les journaux du serveur
 
-Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+Ne remplacez pas le token par une valeur statique dans `http_headers` sous prétexte de « dépanner temporairement ». Il risque de finir dans le fichier de configuration ou une capture d'écran.
 
-## 4. Server online, tool unavailable
+## 4. Le serveur est en ligne, mais l'outil reste inutilisable
 
-| Symptom | Check |
+| Symptôme | Vérification |
 |---|---|
-| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
-| Tool not found | Server version, renamed tool, stale session list |
-| Argument validation | Tool schema rather than old prompt fields |
-| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
-| Empty result | Verify source-system visibility and filters with the same identity |
+| Aucun outil n'apparaît | `enabled_tools` / `disabled_tools` et liste renvoyée par le serveur |
+| Tool not found | Version du serveur, renommage de l'outil, ancienne liste conservée par la session |
+| Échec de validation des arguments | Comparer avec le schema de l'outil au lieu de deviner les champs depuis un ancien prompt |
+| Appel expiré | Réduire la requête, puis vérifier `tool_timeout_sec` ; valeur par défaut : 60 secondes |
+| Résultat vide | Vérifier dans le système source, avec le même compte, le périmètre des données et les filtres |
 
-## Minimal reproduction prompt
+## Prompt de reproduction minimale
 
 ```text
-Inspect only MCP server <server-name>:
-1. Report visible tool names.
-2. Call <readonly-tool> with <minimal-arguments>.
-3. Preserve the error type and server message, but redact credentials.
-4. Do not call another server or write.
+Vérifie uniquement le serveur MCP <server-name> :
+1. Indique les noms des outils actuellement visibles.
+2. Appelle <readonly-tool> avec seulement <minimal-arguments>.
+3. Conserve le type d'erreur et le message du serveur tels quels, mais masque les identifiants.
+4. N'appelle aucun autre serveur et n'effectue aucune écriture.
 ```
 
-## Acceptance after repair
+## Critères de résolution
 
-- [ ] `codex mcp list` shows expected state.
-- [ ] One read-only tool succeeds with minimal arguments.
-- [ ] The root cause names a layer rather than “restart fixed it.”
-- [ ] Temporary tokens, debug logs, and broad permissions are removed.
-- [ ] Team configuration and repair notes are updated.
+- [ ] L'état dans `codex mcp list` correspond aux attentes.
+- [ ] Un outil en lecture seule réussit avec un minimum d'arguments.
+- [ ] La cause racine est située à un niveau précis, et ne se résume pas à « un redémarrage a réglé le problème ».
+- [ ] Les tokens temporaires, journaux de débogage et permissions étendues ont été retirés.
+- [ ] La configuration de l'équipe et les consignes de correction ont été mises à jour.
 
-## Official source
+## Source officielle
 
-- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE
-
-**Last verified:** 2026-08-25
+- [OpenAI : Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)

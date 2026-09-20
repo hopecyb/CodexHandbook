@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "본 페이지는 진단류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  checkedAt: "2026-07-26"
 title: 진단 템플릿
 description: 먼저 근본 원인을 찾은 뒤 수정을 논의합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# 진단 템플릿
 
 진단류 작업의 흔한 오해는, 말로는 “먼저 조사”라고 하면서도 실제로는 바로 고치길 기대하는 것입니다.
 
@@ -50,10 +54,3 @@ reviewed_at: 2026-08-26
 
 - [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/)
 - [버그 수정 사례](/ko/cases/fix-a-bug/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 진단류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

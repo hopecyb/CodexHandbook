@@ -3,7 +3,7 @@ title: PDF e documentos
 description: Âmbito, Ferramentas e pontos de aceitação ao pedir ao Codex para ler, resumir ou gerar documentos PDF.
 locale: pt
 source_locale: zh-CN
-source_revision: a086570
+source_revision: 1f4f82b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

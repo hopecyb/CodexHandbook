@@ -1,46 +1,49 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Cây làm việc
-description: Dùng cây làm việc cô lập để thử thay đổi song song.
+description: Dùng Git worktree để tách biệt các cuộc trò chuyện song song và quay lại vùng làm việc cục bộ một cách an toàn.
 locale: vi
 source_locale: zh-CN
-source_revision: f050c32
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "3569716"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
 ---
 
-A Git worktree gives one repository multiple independent checkout directories. Each directory has its own files and branch state while sharing the repository's Git metadata. Worktrees let coding chats run in parallel without overwriting one another's files.
+Cây làm việc (worktree) cho phép cùng một kho Git có nhiều thư mục checkout độc lập. Mỗi thư mục có tệp và trạng thái nhánh riêng, nhưng dùng chung dữ liệu Git của kho mã. Nhờ vậy, nhiều cuộc trò chuyện lập trình có thể tiến hành song song mà không ghi đè tệp của nhau.
 
-## Prerequisites
+## Điều kiện sử dụng
 
-- The project must be in a Git repository.
-- Each task boundary must be independently describable and verifiable.
-- Parallel tasks should not modify the same core files.
+- Dự án phải nằm trong một kho Git;
+- Phạm vi của từng tác vụ phải có thể mô tả và nghiệm thu độc lập;
+- Các tác vụ song song không nên sửa cùng một nhóm tệp cốt lõi.
 
-If you are learning Codex for the first time, complete tasks sequentially in Local mode. Introduce worktrees when waiting time or file conflicts become an actual problem.
+Nếu bạn mới thực hành với Codex, trước tiên hãy hoàn thành tác vụ tuần tự ở chế độ Local. Chỉ dùng cây làm việc khi thời gian chờ hoặc xung đột tệp thực sự trở thành vấn đề.
 
-## Create a worktree in the App
+## Tạo trong ứng dụng
 
-1. Select **Worktree** below the input area of a new chat.
-2. Choose a starting branch: the main branch, a feature branch, or the current branch with unstaged changes.
-3. Submit the prompt; the App creates a Git worktree.
-4. Inspect, test, and review the work in its independent chat.
-5. Use **Handoff** when you are ready to return to the local checkout.
+1. Chọn **Worktree** bên dưới vùng nhập của cuộc trò chuyện mới;
+2. Chọn nhánh bắt đầu: có thể là nhánh chính, nhánh tính năng hoặc nhánh hiện tại có thay đổi chưa stage;
+3. Gửi lời nhắc để ứng dụng tạo Git worktree;
+4. Kiểm tra, kiểm thử và đánh giá trong cuộc trò chuyện độc lập đó;
+5. Khi sẵn sàng quay lại thư mục checkout cục bộ, dùng **Handoff**.
 
-A worktree created by default uses a detached HEAD. Codex can still work there, but define the destination branch and merge approach before preserving or sharing commits.
+Cây làm việc được tạo theo mặc định ở trạng thái detached HEAD. Codex vẫn có thể làm việc ở đó, nhưng trước khi giữ lại hoặc chia sẻ commit, bạn cần xác định rõ nhánh đích và cách hợp nhất.
 
-## Two parallel tasks
+## Ví dụ hai tác vụ song song
 
-| Chat | Worktree task | File ownership | Acceptance |
+| Cuộc trò chuyện | Tác vụ trong cây làm việc | Quyền sở hữu tệp | Nghiệm thu |
 |---|---|---|---|
-| A | Fix a sign-in error | `src/auth/**` | Authentication tests pass |
-| B | Extend authentication docs | `docs/auth/**` | Link check passes |
+| A | Sửa lỗi đăng nhập | `src/auth/**` | Kiểm thử xác thực thành công |
+| B | Bổ sung tài liệu xác thực | `docs/auth/**` | Kiểm tra liên kết thành công |
 
-Do not let both chats modify a shared lockfile or configuration file. If that is unavoidable, assign the change to one chat and let the other provide analysis only.
+Đừng để A và B cùng sửa một lockfile hoặc tệp cấu hình dùng chung. Nếu thật sự cần, hãy thống nhất để một cuộc trò chuyện sửa tệp, còn cuộc trò chuyện kia chỉ cung cấp kết quả phân tích.
 
-## Pre-handoff checks
+## Kiểm tra trước khi bàn giao
 
 ```bash
 git status --short
@@ -48,23 +51,15 @@ git diff --check
 git diff --stat
 ```
 
-Then run the task-specific tests. Use Handoff, commit, or merge only after you know which chat produced each change, which branch should receive it, and whether verification passed.
+Sau đó chạy các bài kiểm thử phù hợp với tác vụ. Chỉ Handoff, commit hoặc hợp nhất khi bạn đã biết rõ mỗi thay đổi đến từ cuộc trò chuyện nào, nhánh đích là gì và kết quả xác minh có đạt hay không.
 
-## Scheduled tasks and Remote
+## Liên hệ với tác vụ định kỳ và Remote
 
-- A scheduled task in a Git repository can use a dedicated background worktree to avoid conflicts with current work.
-- Remote can control a worktree chat on a connected computer from a mobile device. The repository and commands remain on that computer or in its remote development environment.
-- A non-Git project has no worktree isolation; a scheduled task operates directly in the project directory.
+- Tác vụ định kỳ trong kho Git có thể dùng cây làm việc nền riêng để tránh xung đột với công việc hiện tại;
+- Remote cho phép điều khiển cuộc trò chuyện trong cây làm việc trên máy tính đã kết nối từ thiết bị di động; kho mã và lệnh vẫn ở trên máy tính đó hoặc trong môi trường phát triển từ xa của máy;
+- Dự án không dùng Git không có cơ chế tách biệt bằng cây làm việc; tác vụ định kỳ sẽ dùng trực tiếp thư mục dự án.
 
-## Official sources
+## Tài liệu chính thức
 
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
-- [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Công việc kéo dài và các cuộc trò chuyện song song](https://learn.chatgpt.com/docs/long-running-work)

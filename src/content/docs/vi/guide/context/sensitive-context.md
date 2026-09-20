@@ -3,7 +3,7 @@ title: Ngữ cảnh nhạy cảm
 description: Khóa bí mật, quyền riêng tư và tài liệu không được chia sẻ.
 locale: vi
 source_locale: zh-CN
-source_revision: 909b1ff
+source_revision: a83db07
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

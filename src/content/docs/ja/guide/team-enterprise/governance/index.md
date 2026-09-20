@@ -3,7 +3,7 @@ title: ガバナンス
 description: 政策、境界、組織ルールの説明ページ——何ができ、何ができず、誰が責任を持つかを先に明確に。
 locale: ja
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: GitHub-Integration
 description: "Repo-Anbindung, PR, Review und CI — Codex in GitHub-Workflows."
 locale: de
 source_locale: zh-CN
-source_revision: 5585550
+source_revision: ece7161
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

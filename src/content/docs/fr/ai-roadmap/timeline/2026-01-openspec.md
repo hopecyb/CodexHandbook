@@ -1,59 +1,40 @@
 ---
-title: OpenSpec (développement piloté par spécification)
-date: 2026-01-26
-year: 2026
-summary: "L'IA génère du code rapidement, mais le raisonnement derrière « pourquoi c'est fait ainsi » se perd souvent dans l'historique de conversation. OpenSpec introduit une approche spec-first : définir quoi construire et comment le construire avant l'implémentation, afin que humains et IA restent alignés."
-phase: emerging
-trend: rising
-signal: well-calibrated
-adoption_effort: ready-to-use
-tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
-authored_by: ai-assisted
+title: OpenSpec (développement guidé par les spécifications)
+description: OpenSpec est un projet précis qui organise les spécifications et les éléments de changement. Le développement guidé par les spécifications est une méthode plus large ; une version du projet n’est pas l’origine de cette méthode.
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: L’événement ou la description du projet dans la source primaire ci-dessous a été vérifié ; les conseils pédagogiques relèvent du jugement de l’auteur et cette vérification des sources n’est pas présentée comme un essai du produit.
+  evidence:
+  - label: Notes de version d’OpenSpec v1.0.0
+    href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: fr
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 033715b
+source_revision: 1a34023
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-# OpenSpec
+## Événement vérifiable et portée
 
-- Dates importantes :
-  - Première publication (npm 0.1.0) : 2025-09-06
-  - Publication de la version 1.0.0 : 2026-01-26
-- Références officielles :
-  - https://github.com/Fission-AI/OpenSpec
-  - https://www.npmjs.com/package/@fission-ai/openspec
-  - https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md
-- Note : cette entrée enregistre les jalons publics et la portée d'OpenSpec comme framework de développement IA piloté par spécification.
+**Type : version du projet · Non classée selon la date de première publication.** La page officielle des versions du projet contient les notes de la v1.0.0 (The OPSX Release). Cette vérification ne déduit pas la date de première publication du projet à partir de cette version et ne reprend pas une prétendue date de première publication sur npm que les éléments examinés ici ne confirment pas.
 
-## Ce que c'est
+Source : [Notes de version d’OpenSpec v1.0.0](https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0). Vérification effectuée le 2026-09-18 ; la date de publication de la source et la date de vérification de cette page ont des sens différents.
 
-OpenSpec est un framework de développement piloté par spécification (Spec-Driven Development, SDD) pour la collaboration de codage avec l'IA.
+## Quel problème résout-il ?
 
-D'après sa documentation officielle, il utilise des artefacts comme `proposal.md`, `specs/`, `design.md` et `tasks.md` pour séparer « pourquoi ceci », « quoi construire », « comment concevoir » et « comment exécuter » dans un processus itératif et maintenable, au lieu de laisser les décisions clés uniquement dans le contexte de chat.
+OpenSpec est un projet précis qui organise les spécifications et les éléments de changement. Le développement guidé par les spécifications est une méthode plus large ; une version du projet n’est pas l’origine de cette méthode.
 
-## Le passage qu'il a permis
+## Conseils d’apprentissage et limites d’application
 
-Il a déplacé beaucoup d'équipes de « prompter puis modifier immédiatement le code » vers « produire d'abord des artefacts de spécification, puis implémenter et archiver ».
+Ce qui suit est un choix pédagogique de ce site, et non une mesure de diffusion dans le secteur ou d’efficacité :
 
-Son chemin par défaut est `/opsx:propose -> /opsx:apply -> /opsx:archive`. Il relie clarification des besoins, conception de solution, découpage des tâches et archivage final dans un même workflow, réduisant la dérive sémantique dans les collaborations longues ou multi-personnes.
+Lorsque les besoins comportent plusieurs contraintes ou des transmissions entre personnes, consignez d’abord l’objectif, le périmètre, les critères d’acceptation et les questions en suspens. Un changement simple ne nécessite pas systématiquement un processus complet de spécification. Les commandes précises varient selon la version du projet ; utilisez la documentation de la version concernée.
 
-## Son stade actuel
+## Exercice pratique
 
-Je marque actuellement OpenSpec comme `emerging`.
+[Processus guidé par les spécifications](/fr/cases/workflows/specification-driven-work/) : rédigez pour un changement une spécification dont les critères sont vérifiables, puis associez chaque élément de l’implémentation à la spécification. L’exercice du site présente la méthode ; il ne signifie pas qu’OpenSpec a été installé ou exécuté ici.
 
-Il dispose déjà d'une CLI installable, d'un modèle d'artefacts clair, de chemins d'intégration entre outils et d'une version 1.0.0 publiée le 2026-01-26. Mais l'écosystème évolue encore, et les modes de déploiement organisationnel ainsi que les patterns de gouvernance restent en formation.
-
-## Ce qu'il pourrait remplacer
-
-Il peut remplacer une partie des habitudes de développement IA qui s'appuient seulement sur les journaux de chat pour gérer les exigences, ainsi que des processus faiblement connectés dispersés entre docs, systèmes de tâches et prompts temporaires.
-
-Dans le travail itératif et collaboratif, des pipelines pilotés par artefacts comme OpenSpec rendent les relations exigences-conception-implémentation plus traçables.
-
-## Ce qui pourrait le remplacer
-
-Si un protocole standard plus unifié apparaît pour combiner spécification, exécution, vérification et archivage, OpenSpec pourrait être absorbé par des capacités plateforme de plus haut niveau.
-
-Par exemple, des systèmes de workflow profondément intégrés aux IDE et runtimes d'agents pourraient standardiser davantage des pratiques aujourd'hui centrées sur les artefacts du dépôt.
+[Retour à la feuille de route et à la convention de datation](/fr/ai-roadmap/).

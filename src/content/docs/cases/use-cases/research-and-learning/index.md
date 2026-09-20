@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / Cloud"
+  basis: "已按本仓库当前 research-and-learning 案例入口与带来源研究/验证来源章节交叉复核；本页仅承担研究案例组的导航与重点提示作用。"
+  checkedAt: "2026-07-26"
 title: 研究与学习
 description: 带来源的调研、对比和学习型案例入口，重点看检索、引用和结论边界。
 ---
@@ -16,10 +21,3 @@ description: 带来源的调研、对比和学习型案例入口，重点看检�
 - 怎样要求来源和引用
 - 怎样把“我觉得”变成“我查到的证据”
 - 怎样限制结论别超出资料本身能支持的范围
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / Cloud  
-**核验依据：** 已按本仓库当前 research-and-learning 案例入口与带来源研究/验证来源章节交叉复核；本页仅承担研究案例组的导航与重点提示作用。  
-**最近核验：** 2026-07-26

@@ -3,7 +3,7 @@ title: Erstes Übungsprojekt anlegen
 description: "Ein wegwerfbares, sicheres Übungsverzeichnis vorbereiten."
 locale: de
 source_locale: zh-CN
-source_revision: b461719
+source_revision: 43dcbdb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

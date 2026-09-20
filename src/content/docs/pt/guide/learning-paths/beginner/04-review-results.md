@@ -1,57 +1,53 @@
 ---
-title: Rever resultados
-description: Cria o hábito de verificar o Diff, correr a Verificação e fazer perguntas de seguimento.
-locale: pt
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Rever resultados"
+description: "Pratique a identificação de erros num exemplo fixo e depois reveja o seu próprio aviso."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores."
+  evidence:
+    - label: "Registo das operações com ficheiros do autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/pt/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Dar tarefas claras"
+next:
+  link: "/pt/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "Concluir o primeiro pequeno projeto"
+locale: pt
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Objetivo deste passo
+## Comece por um exemplo com erros conhecidos
 
-Troca «olhar de relance e seguir» por ações de verificação fixas.
+Abra o [aviso com erros preparado pelo autor](/downloads/first-project/references/flawed-notice.md), compare-o com `facts.md` e registe cada frase errada, o número do facto correspondente e como a corrigir. Este exemplo não é uma saída do modelo e não demonstra que um determinado prompt tenha necessariamente de falhar.
 
-Listas: [Verificar o resultado](/pt/guide/getting-started/review-the-result/) · [Rever Diffs](/pt/guide/quality/review-diffs/)
+Não flexibilize deliberadamente as permissões do seu diretório de trabalho real para provocar alterações fora do âmbito. O exemplo fixo já permite treinar a identificação de erros e comparar resultados de forma repetível.
 
-Muita gente salta este passo. Usar o Codex de forma estável depende muitas vezes de saberes fazer review do resultado.
+## Depois reveja o seu próprio resultado
 
-## Exercício
+Copie `templates/review.md` do pacote para uma nova pasta `records` fora do diretório de trabalho e preencha cada ponto:
 
-Dá de propósito um Prompt vago e fácil de ultrapassar limites; observa o plano; recusa passos fora de âmbito; reescreve as restrições e volta a correr.
+- A hora, o local, a lotação, o custo e a preparação estão corretos?
+- O modo de inscrição continua desconhecido e os números dos factos sustentam o texto?
+- Só notice.md foi alterado? Os factos e a nota originais mantêm-se iguais?
+- Foram criados ou eliminados outros ficheiros, ou enviado algo para o exterior?
 
-## Foco do exercício
+Marque os pontos desconhecidos como «não verificados»; não os considere aprovados só porque o modelo diz «concluído».
 
-Aqui treinas sobretudo:
+## Condições de conclusão
 
-- Ver se se prepara para ultrapassar limites
-- Saber quando recusar
-- Saber apertar uma Tarefa vaga e tentar outra vez
+Identifique autonomamente os quatro erros factuais do exemplo e depois consulte a [chave de revisão](/downloads/first-project/references/review-key.md): a hora de fim, o número de participantes, um modo de inscrição inventado e a transformação da sugestão de levar um livro voluntariamente numa obrigação. Se o seu aviso tiver problemas, corrija-os e volte a verificar.
 
-Isto é mais direto do que esperar que saia perfeito à primeira.
+Guarde o registo de revisão que realmente preencheu; não copie a referência do autor como prova de conclusão. Relacionado: [Rever diferenças](/pt/guide/quality/review-diffs/).
 
-## Mal-entendidos frequentes
-
-### 1. Review só é preciso em projetos «a sério» mais tarde
-
-Quanto mais cedo criares o hábito de review, menos confias às cegas no resultado.
-
-### 2. Se já deu um plano, não preciso de julgar
-
-Também não.
-
-O plano só ajuda — ainda tens de ver se toca em âmbito que não deveria.
-
-Rever o resultado não é um extra: faz parte do processo de uso.
-
-Seguinte: [Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com verificação de resultados, revisão de Diffs e percurso de principiante; esta página só treina o hábito estável de «detetar ultrapassagem, recusar passos inadequados e apertar a Tarefa».  
-**Última verificação:** 2026-07-26
+[Pacote de exercícios e preparação](/pt/guide/learning-paths/beginner/)

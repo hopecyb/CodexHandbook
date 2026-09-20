@@ -3,7 +3,7 @@ title: ローカルタスクのワークフロー
 description: IDE で開いているファイルと選択範囲に基づき、ローカル Codex タスクを開始・追跡・完了する。
 locale: ja
 source_locale: zh-CN
-source_revision: f9abb5b
+source_revision: 0264d4d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

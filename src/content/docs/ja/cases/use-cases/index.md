@@ -3,7 +3,7 @@ title: シナリオと事例ライブラリ
 description: 準備から実行、検証、失敗回復、振り返りまでの実タスク一式。
 locale: ja
 source_locale: zh-CN
-source_revision: 6349392
+source_revision: 1e284bb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT 桌面 App / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: 调试 MCP 连接
 description: 按配置、传输、鉴权和工具四层定位 MCP 故障。
 ---
@@ -83,11 +87,3 @@ python3 --version # 仅当 STDIO 服务器使用 Python
 ## 官方来源
 
 - [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT 桌面 App / Codex CLI / IDE
-
-**最近核验：** 2026-08-25

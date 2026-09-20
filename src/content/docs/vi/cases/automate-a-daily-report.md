@@ -1,15 +1,23 @@
 ---
+caseCategory: team
+directoryOrder: 110
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Use cases Codex hiện tại trên OpenAI Developers vẫn gồm các kịch bản tự động hóa lặp lại như “Automate bug triage”, “Turn feedback into actions”; trang này định nghĩa báo cáo hàng ngày là “Markdown định dạng cố định + mã thoát rõ + script/Skill tái sử dụng được” — mô hình quy trình tự động hóa ổn định, không phụ thuộc một tích hợp cụ thể."
+  checkedAt: "2026-07-26"
 title: Tự động hóa báo cáo hàng ngày
 description: Cố định công việc tổng hợp lặp lại thành script hoặc Skill có thể tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: f03ed59
+source_revision: 7ed7b8a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Tự động hóa báo cáo hàng ngày
 
 ## Siêu dữ liệu
 
@@ -42,9 +50,3 @@ Ràng buộc: Chỉ đọc git; không push; cung cấp scripts/generate-daily.s
 
 - [Ví dụ Skill tự động hóa](/vi/skills/examples/automation-skill/)
 - [Tác vụ theo lịch](/vi/skills/automations/scheduled-tasks/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm các kịch bản tự động hóa lặp lại như “Automate bug triage”, “Turn feedback into actions”; trang này định nghĩa báo cáo hàng ngày là “Markdown định dạng cố định + mã thoát rõ + script/Skill tái sử dụng được” — mô hình quy trình tự động hóa ổn định, không phụ thuộc một tích hợp cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

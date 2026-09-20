@@ -3,7 +3,7 @@ title: Prompt injection
 description: Cuando texto no confiable entra en el Contexto — identificación, mitigación y puntos de política de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Tâches Cloud depuis l'IDE
 description: Déléguer depuis l'IDE une tâche longue à Codex Cloud, puis revenir à un résultat prêt à être révisé.
 locale: fr
 source_locale: zh-CN
-source_revision: ea8a618
+source_revision: d5369b5
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

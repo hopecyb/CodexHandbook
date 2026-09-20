@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 60
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Understand large codebases”, trọng tâm là theo dõi đường đi chính, nhận diện module then chốt và nhanh chóng định vị tệp liên quan; ví dụ trang này thuộc kịch bản khám phá chỉ đọc, khớp định vị hiện tại của tài liệu chính thức."
+  checkedAt: "2026-07-26"
 title: Hiểu codebase
 description: Khám phá kho mã lạ ở chế độ chỉ đọc để xây bản đồ nhận thức có thể hành động.
 locale: vi
 source_locale: zh-CN
-source_revision: cb227a1
+source_revision: c89ee30
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Hiểu codebase
 
 ## Siêu dữ liệu
 
@@ -45,9 +53,3 @@ Chưa sửa code. Đọc @src/ và @README, nêu trong tối đa 8 điểm:
 
 - [Mẫu hiểu codebase](/vi/prompts/templates/understand/)
 - [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Understand large codebases”, trọng tâm là theo dõi đường đi chính, nhận diện module then chốt và nhanh chóng định vị tệp liên quan; ví dụ trang này thuộc kịch bản khám phá chỉ đọc, khớp định vị hiện tại của tài liệu chính thức.  
-**Kiểm chứng gần nhất:** 2026-07-26

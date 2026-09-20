@@ -3,7 +3,7 @@ title: Entrée et sortie vocales
 description: Quand utiliser la voix avec Codex, limitations et considérations de confidentialité.
 locale: fr
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

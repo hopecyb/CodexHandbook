@@ -3,7 +3,7 @@ title: "Injection de prompt"
 description: Quand du texte non fiable entre dans le contexte — reconnaissance, mitigation et essentiels de politique d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

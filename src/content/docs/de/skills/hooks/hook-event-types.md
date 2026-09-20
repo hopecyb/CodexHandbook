@@ -3,7 +3,7 @@ title: Hook-Ereignistypen
 description: Wähle Ereignisse für Sitzung, Aufgabenrunde, Werkzeugaufruf, Komprimierung und Subagent-Lebenszyklus.
 locale: de
 source_locale: zh-CN
-source_revision: 7da5c40
+source_revision: 07f4965
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

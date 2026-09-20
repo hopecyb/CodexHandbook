@@ -4,7 +4,7 @@ title: Commands and shortcuts
 description: CLI subcommands, in-session actions, and keyboard habits—product-oriented; full flags in reference.
 locale: en
 source_locale: zh-CN
-source_revision: 6a36a12
+source_revision: 2896e32
 translation_status: reviewed
 translated_at: 2026-08-26
 ---

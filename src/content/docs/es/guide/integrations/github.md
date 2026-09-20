@@ -3,7 +3,7 @@ title: Integración con GitHub
 description: Conexión de repositorio, PR, Review y CI — el lugar de Codex en el flujo de GitHub.
 locale: es
 source_locale: zh-CN
-source_revision: 5585550
+source_revision: ece7161
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

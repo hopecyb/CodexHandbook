@@ -1,77 +1,48 @@
 ---
 title: AI application roadmap
-description: Understand Prompt Engineering, RAG, MCP, Multi-agent, Context Engineering, Skills, and other applied AI engineering milestones.
+description: Distinguish papers, product launches, engineering articles, and the author’s learning suggestions; then move from each topic into practice.
 locale: en
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-08
-reviewed_at: 2026-08-26
-source_revision: 0333168
+source_revision: 7544287
+translation_status: draft
+translated_at: 2026-09-20
+prev: false
+next:
+  link: /en/ai-roadmap/timeline/
+  label: Events and topic index
 ---
 
-# AI application roadmap
+This map separates verifiable public events from learning suggestions. **Dates refer only to the papers, announcements, or articles listed in the table. They do not automatically mark when a concept was invented, adopted across an industry, or became mature.** Different techniques can be used together; chronological order is not a required learning sequence.
 
-This is a knowledge map for applied AI engineering. It does not track model parameter counts, benchmark scoreboards, or every product launch. Instead, it reads the key methods in reverse chronological order: from reusable, verifiable agent systems back to the practices that made them possible.
+Each topic page offers primary sources, scope limits, and a practice exercise on this site. Checking sources is not the same as running software. The original URLs are retained; a year or month in a URL may differ from the corrected event date. Follow the date in the article text.
 
-<div class="roadmap-timeline">
-  <article>
-    <time>2026-04</time>
-    <h3><a href="/en/ai-roadmap/timeline/2026-04-skills/">Skills (Reusable Workflows)</a></h3>
-    <p>Skills package prompts, steps, examples, scripts, and resources into reusable workflow units. They help teams preserve "how we do this" instead of re-explaining it every time.</p>
-    <p><strong>Focus:</strong> SKILL.md, progressive disclosure, dependency resources, reuse boundaries, and team conventions.</p>
-  </article>
-  <article>
-    <time>2026-02</time>
-    <h3><a href="/en/ai-roadmap/timeline/2026-02-harness-engineering/">Harness Engineering (Execution Harness)</a></h3>
-    <p>Harness Engineering designs the environment that lets models complete tasks reliably: tools, context, feedback, recovery, quality gates, and regression checks.</p>
-    <p><strong>Focus:</strong> task harnesses, verification feedback, failure recovery, and quality gates.</p>
-  </article>
-  <article>
-    <time>2026-01</time>
-    <h3><a href="/en/ai-roadmap/timeline/2026-01-openspec/">OpenSpec (Spec-Driven Development)</a> / <a href="/en/ai-roadmap/timeline/2026-01-openclaw/">OpenClaw (Personal AI Assistant Gateway)</a></h3>
-    <p>These two nodes point in different directions: OpenSpec turns requirements and design into trackable specification artifacts; OpenClaw unifies personal assistants, channels, and tool gateways.</p>
-    <p><strong>Focus:</strong> spec-driven development, gateways, sessions, channels, and traceable work artifacts.</p>
-  </article>
-  <article>
-    <time>2025-09</time>
-    <h3><a href="/en/ai-roadmap/timeline/2025-09-context-engineering/">Context Engineering (Context Design)</a></h3>
-    <p>Context Engineering shifts attention from "how to write the prompt" to "what the model should see, in what order, and what should be compressed or excluded." In long tasks, it often sets the ceiling.</p>
-    <p><strong>Focus:</strong> context priority, retrieval strategy, compression, memory, and file selection.</p>
-  </article>
-  <article>
-    <time>2025-06</time>
-    <h3><a href="/en/ai-roadmap/timeline/2025-06-multi-agent/">Multi-agent (Agent Collaboration)</a></h3>
-    <p>Multi-agent workflows split complex work across roles such as research, implementation, review, verification, and summary. The point is structure, parallelism, and mutual checking.</p>
-    <p><strong>Focus:</strong> role boundaries, handoff formats, conflict resolution, review, and verification.</p>
-  </article>
-  <article>
-    <time>2025-03</time>
-    <h3><a href="/en/ai-roadmap/timeline/2025-03-tool-use/">Tool Use (Tool Orchestration)</a></h3>
-    <p>Tool Use asks how a model chooses tools, calls them, reads results, and continues the task. It is the bridge from one-shot answers to multi-step execution.</p>
-    <p><strong>Focus:</strong> tool selection, call chains, state, and recovery after tool failure.</p>
-  </article>
-  <article>
-    <time>2024-11</time>
-    <h3><a href="/en/ai-roadmap/timeline/2024-11-mcp/">MCP (Model Context Protocol)</a></h3>
-    <p>MCP turns tools, resources, and prompts into protocol-level surfaces. Its value is not only more integrations; it is making integrations reusable, discoverable, and governable.</p>
-    <p><strong>Focus:</strong> servers, clients, tools, resources, prompts, permissions, and debugging.</p>
-  </article>
-  <article>
-    <time>2023-11</time>
-    <h3><a href="/en/ai-roadmap/timeline/2023-11-rag/">RAG (Retrieval-Augmented Generation)</a></h3>
-    <p>RAG grounds answers in retrieved material. It is the step from "the model can talk" to "the system can answer with traceable evidence," especially for knowledge bases and internal documents.</p>
-    <p><strong>Focus:</strong> chunking, retrieval, reranking, citations, and context compression.</p>
-  </article>
-  <article>
-    <time>2023-06</time>
-    <h3><a href="/en/ai-roadmap/timeline/2023-06-function-calling/">Function Calling (Structured Tool Calls)</a></h3>
-    <p>Function Calling moved models from answering in text to calling external capabilities with structured parameters. That is what lets AI enter real systems instead of staying inside a chat box.</p>
-    <p><strong>Focus:</strong> schemas, validation, tool boundaries, and error feedback.</p>
-  </article>
-  <article>
-    <time>2022-11</time>
-    <h3><a href="/en/ai-roadmap/timeline/2022-11-prompt-engineering/">Prompt Engineering (Prompt Design)</a></h3>
-    <p>The applied AI story starts with input control: making task goals, constraints, examples, context, and output formats explicit enough for the model to behave consistently.</p>
-    <p><strong>Focus:</strong> task framing, role setting, few-shot examples, output formats, and retry patterns.</p>
-  </article>
-</div>
+## Verifiable events
+
+| Date | Type | Topic and specific event |
+|---|---|---|
+| 2026-02-11 | Engineering article | [Harness Engineering (Execution Harness)](/en/ai-roadmap/timeline/2026-02-harness-engineering/): Harness engineering article |
+| 2025-10-16 | Engineering article | [Skills (Reusable Workflows)](/en/ai-roadmap/timeline/2026-04-skills/): Public introduction of Agent Skills |
+| 2025-09-29 | Engineering article | [Context Engineering (Context Design)](/en/ai-roadmap/timeline/2025-09-context-engineering/): Article on context engineering |
+| 2025-06-13 | Engineering article | [Multi-agent (Agent Collaboration)](/en/ai-roadmap/timeline/2025-06-multi-agent/): Engineering article on a multi-agent research system |
+| 2025-03-11 | Product launch | [Tool Use (Tool Orchestration)](/en/ai-roadmap/timeline/2025-03-tool-use/): Announcement of agent tools |
+| 2024-11-25 | Public protocol release | [MCP (Model Context Protocol)](/en/ai-roadmap/timeline/2024-11-mcp/): Public announcement of MCP |
+| 2023-06-13 | Product launch | [Function Calling (Structured Tool Calls)](/en/ai-roadmap/timeline/2023-06-function-calling/): Function calling launch announcement |
+| 2022-11-30 | Product launch | [Prompt Engineering (Prompt Design)](/en/ai-roadmap/timeline/2022-11-prompt-engineering/): ChatGPT launch announcement |
+| 2020-05-22 | Paper publication | [RAG (Retrieval-Augmented Generation)](/en/ai-roadmap/timeline/2023-11-rag/): Original RAG paper and submission history |
+
+## Project topics
+
+Read the following projects separately rather than ordering them by an unconfirmed first-release date.
+
+- [OpenSpec](/en/ai-roadmap/timeline/2026-01-openspec/): The project’s official release page documents v1.0.0 (The OPSX Release). This review does not infer the project’s first release date from that version or retain an npm first-release date unsupported by the evidence reviewed.
+- [OpenClaw](/en/ai-roadmap/timeline/2026-01-openclaw/): This page uses the official OpenClaw repository as the source for the project’s identity and description. This review did not find enough evidence to confirm its first release, so no first-release date is shown.
+
+## Choose an exercise for your current task
+
+- First time using Codex: start with the [beginner path](/en/guide/learning-paths/); you do not need to study the entire timeline first.
+- Improve task instructions: use the [prompt comparison materials](/en/prompts/comparison-lab/) to save outputs and scores. This site has no measured conclusion about model effectiveness.
+- Need supporting sources: use the [sourced-article exercise](/en/cases/write-an-article/) to practice matching claims to evidence.
+- Need reliable reuse: choose a [Skill example](/en/skills/examples/) and check its inputs, boundaries, and verification record.
+- Repeated execution failures: use the [failure-recovery lab](/en/guide/reference/troubleshooting/failure-recovery-lab/) to practice reading logs and changing one variable at a time.
+
+The value of a topic for learning depends on your task. This section no longer uses labels such as “rising” or “emerging” to divide the entire industry into stages without a common measurement basis.

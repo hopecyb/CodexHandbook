@@ -3,7 +3,7 @@ title: What Is AGENTS.md
 description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
 locale: en
 source_locale: zh-CN
-source_revision: c4bc1cc
+source_revision: 49b7d04
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -78,7 +78,7 @@
 2. [上下文与文件](./src/content/docs/guide/context-and-files.md)
 3. [Prompts](./src/content/docs/prompts/index.md)
 4. [Skills](./src/content/docs/skills/index.md)
-5. [Cases](./src/content/docs/cases/index.md)
+5. [Cases](./src/content/docs/cases/index.mdx)
 
 这条路径适合第一次接触 Codex 的人，能帮你先建立稳定的基础认知，再进入实战部分。
 
@@ -115,7 +115,7 @@
 | [Guide](./src/content/docs/guide/index.md) | 从零开始理解 Codex 的使用路径 |
 | [Prompts](./src/content/docs/prompts/index.md) | 学习如何清晰描述任务与边界 |
 | [Skills](./src/content/docs/skills/index.md) | 学习如何把经验沉淀成可复用能力 |
-| [Cases](./src/content/docs/cases/index.md) | 通过真实任务理解端到端工作流 |
+| [Cases](./src/content/docs/cases/index.mdx) | 通过真实任务理解端到端工作流 |
 | [Examples](./examples/README.md) | 直接复用提示词与示例资产 |
 | [内容架构](./docs/planning/content-architecture.md) | 快速理解整站信息设计 |
 | [章节大纲](./docs/planning/chapter-outline.md) | 查看主题覆盖范围 |

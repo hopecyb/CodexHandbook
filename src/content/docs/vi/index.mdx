@@ -1,21 +1,20 @@
 ---
-title: Sổ tay Codex
+title: Sổ tay thực hành Codex / AI Agent
 head:
   - tag: title
-    content: Sổ tay Codex
-description: Codex Handbook biến nền tảng sản phẩm, prompting, Skills và case thực tế thành phương pháp tái sử dụng để mô tả tác vụ, dẫn dắt thực thi và kiểm chứng kết quả.
+    content: Sổ tay thực hành Codex / AI Agent
+description: Sổ tay AI Agent lấy Codex làm trung tâm, giúp cá nhân, người sáng tạo, lập trình viên và nhóm biến một lần cộng tác thành công thành phương pháp tái sử dụng, kiểm chứng và bàn giao được.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: vi
 source_locale: zh-CN
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Biến ý tưởng thành kết quả <br /> với Codex
-  tagline: Từ nền tảng sản phẩm và Prompt rõ ràng đến Skills tái sử dụng được và đánh giá case thực tế — biến mỗi tác vụ thành phương pháp bạn có thể chạy, kiểm chứng và bàn giao.
+  title: Dùng Codex <br /> biến lần cộng tác thành công thành phương pháp dùng lại
+  tagline: Từ xác định tác vụ đến thực thi, kiểm chứng, rà soát và bàn giao, sổ tay giúp biến ý tưởng thành kết quả ổn định.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,90 +36,90 @@ hero:
         </div>
       </div>
   actions:
-    - text: Bắt đầu tại đây
+    - text: Làm báo cáo tuần có thể đối chiếu
       icon: right-arrow
+      link: /vi/cases/analyze-a-spreadsheet/
+    - text: Bắt đầu tại đây
+      variant: secondary
       link: /vi/guide/start-here/
-    - text: Xem trên GitHub
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="Định vị sổ tay">
-	<p>Codex không chỉ là công cụ sửa code. Nó giúp bạn hiểu tài liệu, tạo nội dung, dựng prototype, xử lý tệp, xem xét thay đổi, tự động hóa việc lặp lại, và trở thành đối tác thực thi trong hợp tác nhóm.</p>
-	<p>Sổ tay này được tổ chức thành bốn mô-đun — hướng dẫn sản phẩm, prompting, Skills và case thực tế — để độc giả ở mọi trình độ tìm được bước tiếp theo.</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>Bốn mô-đun</p>
-		<h2 id="modules-heading">Bắt đầu theo mô-đun</h2>
+		<p>Chọn một tác vụ, nhận một kết quả</p>
+		<h2 id="tasks-heading">Hôm nay bạn muốn hoàn thành gì?</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/vi/guide/">
-			<strong>Hướng dẫn Codex</strong>
-			<span>Cài client, hiểu Quyền, hoàn thành Tác vụ đầu tiên.</span>
+	<div class="path-grid">
+		<a class="path-card" href="/vi/cases/analyze-a-spreadsheet/">
+			<strong>Làm báo cáo doanh thu tuần</strong>
+			<span>Đủ tài liệu · Script tham khảo đã chạy và kiểm tra. Với 46 dòng dữ liệu tổng hợp, luyện xử lý hoàn tiền, bỏ trùng và so sánh kỳ; giao báo cáo cùng sổ đối chiếu.</span>
 		</a>
-		<a class="module-card" href="/vi/prompts/">
-			<strong>Prompts</strong>
-			<span>Làm rõ mục tiêu, Ngữ cảnh, ràng buộc và tiêu chí nghiệm thu — kèm mẫu sao chép được.</span>
+		<a class="path-card" href="/vi/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>Sửa lỗi và cho kiểm thử đạt</strong>
+			<span>Đủ bài thực hành · Có bản ghi kiểm chứng trước đây. Bắt đầu từ bài kiểm thử lỗi, giao bản sửa tối thiểu, kết quả hồi quy và ghi chú rà soát.</span>
 		</a>
-		<a class="module-card" href="/vi/skills/">
-			<strong>Skills</strong>
-			<span>Đóng gói phương pháp ổn định; mở rộng bằng Plugins, MCP và Hooks.</span>
-		</a>
-		<a class="module-card" href="/vi/cases/">
-			<strong>Case</strong>
-			<span>Học từ tác vụ thực — sửa bug, viết bài, tự động hóa và hơn thế.</span>
+		<a class="path-card" href="/vi/cases/write-an-article/">
+			<strong>Viết một bài báo</strong>
+			<span>Đủ tài liệu · Tác giả tự kiểm tra nguồn. Dùng ba nguồn tổng hợp luyện trích dẫn sự kiện, giải quyết phiên bản xung đột và chỉnh sửa; giao bài viết cùng bảng dữ kiện.</span>
 		</a>
 	</div>
+	<p>Báo cáo tuần tham khảo có giá trị ròng <strong>¥4,644.75</strong>, và giải thích các khoản hoàn tiền, bất thường. <a href="/downloads/sales-weekly-report/summary.md">Xem báo cáo tham khảo</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Tải toàn bộ tài liệu</a>. Con số đến từ dữ liệu giảng dạy tổng hợp. Dự kiến thực hành 30–45 phút; chưa đo thời gian với người học.</p>
+	<p><a href="/vi/cases/">Xem tình huống và tài liệu theo tác vụ</a> · <a href="/vi/guide/learning-paths/">Học theo vai trò</a> · <a href="/vi/guide/reference/">Tra cứu sổ tay tham khảo</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
 		<p>Chọn lộ trình</p>
-		<h2 id="paths-heading">Bắt đầu theo mục tiêu của bạn</h2>
+		<h2 id="paths-heading">Bắt đầu theo mục tiêu</h2>
 	</div>
 	<div class="path-grid">
 		<a class="path-card" href="/vi/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>Người mới</strong>
-			<span>Làm quen Codex, hoàn thành Tác vụ đầu tiên, học cách kiểm tra và hoàn tác kết quả.</span>
+			<span>Dùng cùng một bộ tài liệu tải về để làm thông báo sự kiện, kiểm tra lỗi và khôi phục bản sao. Không cần lập trình; mỗi bước có tiêu chí nghiệm thu.</span>
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/creator/">
 			<strong>Người sáng tạo</strong>
-			<span>Hướng dẫn khởi đầu và mẫu cho nghiên cứu, viết, hình ảnh, thuyết trình và xuất bản. (Các bước bổ sung sẽ cập nhật.)</span>
+			<span>Dùng một bộ nguồn làm bảng dữ kiện, bài viết và bản trình bày tám trang có thể sửa, rồi lưu mô tả tác vụ dùng lại. Có tài liệu và kiểm tra từng bước.</span>
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/developer/">
-			<strong>Developer</strong>
-			<span>Hiểu codebase, triển khai tính năng, chạy test, review thay đổi và xử lý tác vụ phức tạp. (Các bước bổ sung sẽ cập nhật.)</span>
+			<strong>Lập trình viên</strong>
+			<span>Hiểu lỗi giỏ hàng, lưu kiểm thử thất bại rồi thành công, rà soát bản sửa nhỏ nhất và viết bàn giao. Có ba mẫu điền sẵn.</span>
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/team/">
 			<strong>Nhóm</strong>
-			<span>Hướng dẫn dùng chung, ranh giới Quyền, chuẩn chất lượng và tự động hóa nhóm. (Các bước bổ sung sẽ cập nhật.)</span>
+			<span>Trong mười ngày làm việc, chạy thử quy mô nhỏ, kiểm tra mẫu và diễn tập hoàn tác rồi quyết định có mở rộng. Có sáu mẫu để điền.</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>Bản đồ năng lực</p>
-		<h2 id="map-heading">Những năng lực bạn sẽ nắm dần</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>Tra cứu trực tiếp theo vấn đề</p><h2 id="lookup-heading">Tìm bước tiếp theo</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/vi/guide/reference/troubleshooting/"><strong>Cài đặt, đăng nhập hoặc thực thi thất bại</strong><span>Tìm lối chẩn đoán theo triệu chứng hoặc làm bài phục hồi có nhật ký.</span></a>
+		<a class="path-card" href="/vi/guide/reference/"><strong>Kiểm tra lệnh, quyền và thuật ngữ</strong><span>Mở mục lục tham khảo để xem phạm vi và nguồn.</span></a>
+		<a class="path-card" href="/vi/guide/verification/"><strong>Xác định kết quả đã xong chưa</strong><span>Kiểm tra bằng chứng về dữ kiện, tệp và kiểm thử; lưu điều chưa xác nhận.</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> Viết Prompt tác vụ có mục tiêu rõ, ranh giới tường minh và kết quả có thể kiểm chứng</li>
-		<li><span>02</span> Quản lý tệp, Ngữ cảnh, terminal, trình duyệt và tài liệu bên ngoài</li>
-		<li><span>03</span> Mở rộng Codex bằng Skills, Plugins, MCP và Hooks</li>
-		<li><span>04</span> Tổ chức tác vụ dài, hợp tác nhiều Agent, đánh giá lại và bàn giao</li>
-		<li><span>05</span> Xây dựng an toàn, Kiểm chứng và quản trị trong bối cảnh cá nhân và nhóm</li>
-	</ul>
 </section>
 
-<AboutHandbook title="Cộng tác mã nguồn mở">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>Mang theo tài nguyên dùng lại</p>
+		<h2 id="assets-heading">Đọc xong là có thể bắt tay làm</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/vi/prompts/templates/"><strong>Mẫu lời nhắc tác vụ</strong><span>Dùng lại theo loại tác vụ: tìm hiểu, nghiên cứu, tạo, sửa, chẩn đoán và tự động hóa.</span></a>
+		<a class="path-card" href="/vi/skills/examples/"><strong>Ví dụ Skill</strong><span>Bắt đầu từ ví dụ dễ đọc, xem đầu vào, đầu ra, ranh giới và cách kiểm thử.</span></a>
+		<a class="path-card" href="/vi/cases/use-cases/case-study-template/"><strong>Mẫu tổng kết tình huống</strong><span>Ghi mục tiêu, thực thi, kiểm tra của người, xác minh, xử lý thất bại và cải tiến lần sau.</span></a>
+		<a class="path-card" href="/vi/guide/verification/"><strong>Danh sách nghiệm thu</strong><span>Biến 'trông như đã xong' thành kết quả có thể kiểm tra lại, hoàn tác và bàn giao.</span></a>
+	</div>
+</section>
 
-Sổ tay lấy tiếng Trung giản thể làm ngôn ngữ nguồn. Các phiên bản tiếng Trung phồn thể, Anh, Pháp, Nhật, Hàn, Tây Ban Nha, Đức, Bồ Đào Nha, Việt và khác sẽ được mở rộng tiếp. Nội dung được gắn trạng thái, ngày kiểm chứng và sản phẩm áp dụng — để bạn biết phần nào làm theo trực tiếp, phần nào cần đọc lại.
+<AboutHandbook title="Nguồn, cập nhật và đóng góp">
 
-[Duyệt lộ trình học](/vi/guide/learning-paths/)
+Sổ tay do cộng tác viên nguồn mở duy trì, lấy tiếng Trung giản thể làm ngôn ngữ nguồn. Mô tả sản phẩm, tài liệu giảng dạy do tác giả thiết kế và bản ghi chạy thực tế được đánh dấu riêng. Script chạy thành công không chứng minh hiệu quả mô hình hay người học hoàn thành bài. Xem bản ghi từng trang để biết phạm vi kiểm chứng.
+
+[Cập nhật nội dung](/vi/guide/updates/) · [Chính sách phiên bản và kiểm chứng](/vi/guide/start-here/handbook-version-policy/) · [Đóng góp](/vi/guide/contributing/)
 
 </AboutHandbook>

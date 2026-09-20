@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE"
+  checkedAt: "2026-08-26"
 title: 并行聊天与 Agent
 description: 用独立聊天和工作树并行推进可独立验收的任务。
 sidebar:
@@ -65,11 +69,3 @@ sidebar:
 - [长任务](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [子 Agent](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**状态：** verified
-
-**适用产品：** App、CLI、IDE
-
-**最近核验：** 2026-08-26

@@ -3,7 +3,7 @@ title: Brainstorm trước rồi mới làm
 description: Trước khi viết code hoặc bài dài, dùng khám phá có cấu trúc để hội tụ phương án — giảm làm lại.
 locale: vi
 source_locale: zh-CN
-source_revision: 9bf8989
+source_revision: 9c5e679
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

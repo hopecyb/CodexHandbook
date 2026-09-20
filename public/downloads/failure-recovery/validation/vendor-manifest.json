@@ -1,0 +1,122 @@
+[
+  {
+    "file": "vendor/source-backed-writer/scripts/check_article.py",
+    "origin": "examples/skills/source-backed-writer/scripts/check_article.py",
+    "sha256": "e1a1929201f9047185a1772a9e347905547dced85539a9416c271081e3e6c117"
+  },
+  {
+    "file": "vendor/source-backed-writer/sources/02-interview.md",
+    "origin": "examples/skills/source-backed-writer/sources/02-interview.md",
+    "sha256": "2971654f2115227e42708f57942b08fa50dcc0944def8ccddb494eece64e7206"
+  },
+  {
+    "file": "vendor/source-backed-writer/sources/01-product.md",
+    "origin": "examples/skills/source-backed-writer/sources/01-product.md",
+    "sha256": "187d67916e4b616575c9cd2734b9afe28faa31ed784766b132f943e4759710e1"
+  },
+  {
+    "file": "vendor/source-backed-writer/sources/index.csv",
+    "origin": "examples/skills/source-backed-writer/sources/index.csv",
+    "sha256": "5780be172f9d66b68636326fe9cfbf587a3deaa844e11d42b850acf376e08ac4"
+  },
+  {
+    "file": "vendor/source-backed-writer/sources/03-changelog.md",
+    "origin": "examples/skills/source-backed-writer/sources/03-changelog.md",
+    "sha256": "f282bb014623589fcc721f36cb35d732aa2cb0296586905f23df146b6c4e1d2e"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/claim-map.csv",
+    "origin": "examples/skills/source-backed-writer/solution/claim-map.csv",
+    "sha256": "6c3d2aaf08a8153a5e2a50086dcccf8738969480812d9442e419ca6ce591a678"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/outline.md",
+    "origin": "examples/skills/source-backed-writer/solution/outline.md",
+    "sha256": "7f1a24f18ac9ac0adfb3ea482949e72a8e7e86ee2f0225a9da1fec0a456eecba"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/draft.md",
+    "origin": "examples/skills/source-backed-writer/solution/draft.md",
+    "sha256": "5acec47094bc05a3b57cd9704864e503650c18133c52983f2c7fddcd75bb2eca"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/article.md",
+    "origin": "examples/skills/source-backed-writer/solution/article.md",
+    "sha256": "5e43321d08347e961adfc71e3311da37a6511bfd41db78bf3b3dbbea93b7063c"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/revision.diff",
+    "origin": "examples/skills/source-backed-writer/solution/revision.diff",
+    "sha256": "e057bd822e4fdc49f8c5e166232869153df802a124f4b7e621dc6703d7253f8f"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/revision-notes.md",
+    "origin": "examples/skills/source-backed-writer/solution/revision-notes.md",
+    "sha256": "dbabebc77aed940d993c0d1f03026cd1e9d7a2839844e9178abffe14f27f4ef5"
+  },
+  {
+    "file": "vendor/source-backed-writer/solution/unresolved.md",
+    "origin": "examples/skills/source-backed-writer/solution/unresolved.md",
+    "sha256": "3706b9bbf5f13769162aa3becea6c1b285319649082c862917f3742838f10a99"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/scripts/run_once.py",
+    "origin": "examples/skills/quiet-link-monitor/scripts/run_once.py",
+    "sha256": "c4ab8ca304d78832e246c209fd79474299ec60798af4ef74332c385c18450b35"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/scripts/check_links.py",
+    "origin": "examples/skills/quiet-link-monitor/scripts/check_links.py",
+    "sha256": "afceb2f529c361d9a953f9a8210056f8438f8871a715ef816d0ed70771f2ff09"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/fixtures/trigger-cases.json",
+    "origin": "examples/skills/quiet-link-monitor/fixtures/trigger-cases.json",
+    "sha256": "87dfaccd5d4cf2b6a2f477d94b514a2d6a02e61b27dba2348a42ac733529d56d"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/fixtures/broken/index.html",
+    "origin": "examples/skills/quiet-link-monitor/fixtures/broken/index.html",
+    "sha256": "a613faeecdd3e03cfe11b6d9ac4307ae6f3f9807108bad687fb1dd54b698c149"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/fixtures/fixed/index.html",
+    "origin": "examples/skills/quiet-link-monitor/fixtures/fixed/index.html",
+    "sha256": "ee48b9404d04687c75c44b3dd6c592a5aa725f6d26d3fd814fc322ce25ba0d16"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/fixtures/broken/guide/index.html",
+    "origin": "examples/skills/quiet-link-monitor/fixtures/broken/guide/index.html",
+    "sha256": "3de33b9eb0fd8d33c60673b81d42bfd60d5131c0a7e7153ca382ca0fdc917ab1"
+  },
+  {
+    "file": "vendor/quiet-link-monitor/fixtures/fixed/guide/index.html",
+    "origin": "examples/skills/quiet-link-monitor/fixtures/fixed/guide/index.html",
+    "sha256": "3de33b9eb0fd8d33c60673b81d42bfd60d5131c0a7e7153ca382ca0fdc917ab1"
+  },
+  {
+    "file": "vendor/issue-triage/scripts/dry_run.py",
+    "origin": "examples/complete-workflows/team/issue-triage/scripts/dry_run.py",
+    "sha256": "6029195d51cf846ae49612c28b0f941ea635121fca5e89611d890d72488bacf6"
+  },
+  {
+    "file": "vendor/issue-triage/schema.json",
+    "origin": "examples/complete-workflows/team/issue-triage/schema.json",
+    "sha256": "295191645bb71e920960eeee80eddc35eec0fa3d9bcdf3cb49e4ec2b883fceb6"
+  },
+  {
+    "file": "vendor/issue-triage/fixtures/issues.json",
+    "origin": "examples/complete-workflows/team/issue-triage/fixtures/issues.json",
+    "sha256": "de6c39eea7ebbbdb1b3656c8ceda297ef8edddba29a1bc3b294b55934d0e3e6b"
+  },
+  {
+    "file": "vendor/issue-triage/solution/proposals.json",
+    "origin": "examples/complete-workflows/team/issue-triage/solution/proposals.json",
+    "sha256": "04599dde564b782f7050b9745838dc8acc887dffeb2eef68992bb7a6a1f1fa8a"
+  },
+  {
+    "file": "vendor/issue-triage/solution/human-review.md",
+    "origin": "examples/complete-workflows/team/issue-triage/solution/human-review.md",
+    "sha256": "540c48ad61fff041caa0914d6ad242ea5c626e5312dcac142c99c625cbde79fe"
+  }
+]

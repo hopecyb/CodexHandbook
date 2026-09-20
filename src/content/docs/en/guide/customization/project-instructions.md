@@ -3,7 +3,7 @@ title: Project Instructions
 description: Project-level context beyond AGENTS.md—how README, docs, and conversation references divide labor.
 locale: en
 source_locale: zh-CN
-source_revision: e2c79fe
+source_revision: 76b0fde
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

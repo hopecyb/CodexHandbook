@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "已对照当前官方 Non-interactive mode 与 Developer commands，核实 `codex exec` 为 Stable、`--cd` / `-C`、默认只读沙箱、`workspace-write`、JSONL 与 schema 输出方式。"
+  checkedAt: "2026-08-26"
 title: codex exec
 description: 非交互执行入口——在脚本与 CI 中单次下发完整任务。
 sidebar:
@@ -159,12 +164,3 @@ codex exec --cd . --sandbox workspace-write "修复失败测试，只修改 src/
 
 ## 参考来源
 - OpenAI Codex CLI 文档
----
-
-**状态：** verified
-
-**适用产品：** CLI
-
-**核验依据：** 已对照当前官方 Non-interactive mode 与 Developer commands，核实 `codex exec` 为 Stable、`--cd` / `-C`、默认只读沙箱、`workspace-write`、JSONL 与 schema 输出方式。
-
-**最近核验：** 2026-08-26

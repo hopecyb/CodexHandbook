@@ -1,154 +1,118 @@
 ---
-title: Xin kế hoạch trước
-description: Trước khi Codex chỉnh sửa, hãy để nó nêu rõ các bước, rủi ro và cách kiểm chứng.
+title: "Khi nào thực hiện ngay và khi nào cần lập kế hoạch trước"
+description: "Dựa vào phạm vi, độ bất định và tác động bên ngoài để chọn thực hiện ngay, lập kế hoạch trước hoặc chờ phê duyệt một hành động cụ thể; kèm hai cặp prompt đối chiếu."
+contentType: prompt
+audiences: [beginner, developer, creator]
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: "Ba loại tác vụ và hai cặp đối chiếu là khuyến nghị biên tập về cách cộng tác. Đã kiểm tra ranh giới cấp quyền và thực thi; đây không phải chế độ cố định của ứng dụng khách hay thí nghiệm đo tỷ lệ thành công của mô hình."
 locale: vi
 source_locale: zh-CN
-source_revision: 0a2c7c7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 706f11b
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-Nhiều vấn đề không phải không làm được—chỉ là **bắt đầu quá nhanh**. Một câu «giúp tôi sửa» dễ trộn khám phá, lập kế hoạch và thực thi; cuối cùng bạn chỉ còn nghiệm thu thụ động trong diff.
+Có cần lập kế hoạch trước hay không phụ thuộc vào những quyết định còn bỏ ngỏ. Thay đổi có phạm vi rõ ràng và dễ hoàn tác có thể thực hiện ngay. Nếu chưa rõ hướng đi, hãy lập kế hoạch trước. Dừng lại trước một hành động cụ thể cần thêm quyền cho phép. Yêu cầu lập kế hoạch không có nghĩa là phải chờ người dùng trả lời sau từng bước.
 
-Lúc này cách hiệu quả hơn là yêu cầu kế hoạch trước, thay vì viết yêu cầu ngày càng dài.
+## Trước tiên hãy xác định loại tác vụ
 
-## Khi nào nhất định phải xin kế hoạch trước
+| Loại | Dấu hiệu nhận biết | Nên nêu rõ | Khi nào tạm dừng |
+|---|---|---|---|
+| Thực hiện ngay | Đầu vào, phạm vi và tiêu chí nghiệm thu rõ ràng; có thể hoàn tác thay đổi | Vị trí sửa, điều kiện hoàn thành và phần loại trừ | Khi vượt phạm vi hoặc thiếu thông tin thiết yếu |
+| Lập kế hoạch trước | Có lựa chọn kiến trúc, phạm vi chưa rõ hoặc nhiều bước ảnh hưởng lẫn nhau | Khảo sát hiện trạng rồi nêu lộ trình, tác động và cách kiểm tra | Khi cần người dùng quyết định một phương án hoặc người dùng yêu cầu xem kế hoạch trước |
+| Hành động cần phê duyệt | Một hành động cụ thể tạo tác động bên ngoài chưa được cho phép hoặc chạm giới hạn quyền thực thi | Chuẩn bị kết quả để xem xét rồi nêu rõ hành động, đối tượng và tác động | Trước hành động đó; giữ lại phần chuẩn bị đã hoàn tất |
 
-| Tình huống | Vì sao |
-|---|---|
-| Xuyên nhiều tệp hoặc mô-đun | Dễ đụng nhầm vùng không liên quan |
-| Bạn chưa quen codebase | Xác nhận trước phạm vi nó hiểu |
-| Yêu cầu còn dao động | Để bất đồng lộ ra sớm |
-| Cần phê duyệt rồi mới thực thi | Tách «ủy quyền thực thi» khỏi «thảo luận hướng» |
-| Liên quan thao tác rủi ro cao | Xem trước phương án rollback và kiểm chứng |
+“Liên quan đến ba tệp” không phải ngưỡng phê duyệt chung; chỉ một tệp cấu hình môi trường production cũng có thể gây tác động lớn. Xem [Quyền và sandbox](/vi/guide/permissions-and-sandbox/) về hộp thoại của sản phẩm và quyền thực thi thực tế. Đừng xem bảng này là cấu hình quyền của mọi ứng dụng khách.
 
-Typo nhỏ hoặc sửa copy đơn điểm chưa hẳn cần kế hoạch chính thức, nhưng cứ khi bạn thấy «làm lệch sẽ rất phiền», đáng dừng lại trước.
+## Đối chiếu 1: sửa câu chữ cục bộ
 
-## Một kế hoạch tốt tối thiểu nên có gì
+Tác vụ: sửa hai lỗi chữ trong README mà không thay đổi cấu trúc.
 
-Bản tối thiểu cũng nên phủ bốn mục:
-
-1. Các bước
-2. Tệp hoặc phạm vi liên quan
-3. Rủi ro hoặc điểm cần xác nhận
-4. Cách kiểm chứng từng bước
-
-Thiếu mục 4 thì gần như chỉ còn «danh sách việc», chưa phải kế hoạch có thể nghiệm thu.
-
-## Ba cách hỏi thường dùng
-
-### Bản tối giản
+**Ví dụ phản diện với quá nhiều lần tạm dừng:**
 
 ```text
-Chưa sửa code. Trước hết đưa kế hoạch 3–5 bước: sẽ sửa tệp nào, mỗi bước kiểm chứng thế nào.
+Trước khi đọc tệp, hãy lập kế hoạch và chờ tôi phê duyệt.
+Đọc xong, hãy liệt kê hai chỗ định sửa và chờ tôi phê duyệt lần nữa.
+Sau mỗi chỗ sửa lại dừng hỏi tôi, rồi hỏi có cần kiểm tra không.
 ```
 
-Phù hợp: bạn đã biết hướng đại thể, chỉ muốn xem nó sẽ tách thế nào.
+Những lần chờ này không giúp quyết định điều gì cần thiết; chúng chỉ chia nhỏ một việc đã được cho phép và xác định rõ.
 
-### Bản khuyến nghị
+**Cách yêu cầu với phạm vi rõ ràng:**
 
 ```text
-Chưa thực thi. Dựa trên kho hiện tại, đưa kế hoạch gồm:
-1. Hiểu mục tiêu
-2. Các bước có đánh số
-3. Tệp hoặc thư mục liên quan
-4. Rủi ro và mục cần xác nhận
-5. Cách kiểm chứng
-
-Trước khi tôi trả lời «thực thi theo kế hoạch», đừng sửa tệp.
+Trong phần nội dung của README.md, đổi hai chỗ “帐户” thành “账户”.
+Giữ nguyên khối mã, liên kết và mọi nội dung khác. Sửa trực tiếp,
+kiểm tra diff và báo cáo đã sửa ở đâu. Nếu số chỗ khớp thực tế không
+phải hai, trước tiên hãy giải thích chênh lệch; đừng mở rộng thành
+việc biên tập toàn bộ tài liệu.
 ```
 
-Phù hợp: phát triển hàng ngày, chỉnh tài liệu, viết lại Prompt, điều chỉnh cấu hình.
+Nghiệm thu đòi hỏi đúng hai thay đổi chính xác và nội dung không liên quan vẫn nguyên vẹn. Loại thay đổi này thường không cần thêm bài kiểm thử; hãy kiểm tra thích hợp theo quy tắc hiện có của dự án.
 
-### Bản rủi ro cao
+## Đối chiếu 2: sửa và xuất bản trang web
+
+Tác vụ: cập nhật ba bài hướng dẫn và xuất bản lên trang production. Cần tách việc chuẩn bị nội dung khỏi tác động của xuất bản.
+
+**Ví dụ phản diện với quyền cho phép chưa rõ:**
 
 ```text
-Chưa thay đổi gì. Trước hết xuất kế hoạch và nêu riêng:
-- Bước nào dễ gây hồi quy nhất
-- Nếu thất bại thì rollback thế nào
-- Thao tác nào cần tôi xác nhận
-- Kiểm thử hoặc kiểm tra thủ công nào chứng minh đã xong
+Trước tiên viết kế hoạch, sau đó sửa toàn bộ trang web và đưa lên production.
 ```
 
-Phù hợp: sự cố production, cấu hình quyền, script tự động hóa, tái cấu trúc xuyên mô-đun.
+Lời yêu cầu này không nêu nội dung nào cần sửa, xuất bản đến đâu, hay có được phép thay thế phiên bản đang hoạt động không.
 
-## Kế hoạch không phải càng dài càng tốt
-
-Bạn cần một sản phẩm trung gian **có thể phê duyệt, chỉnh hướng và thực thi**—không phải một đề án dài.
-
-Đánh giá kế hoạch có dùng được không bằng ba điểm:
-
-- Bạn có nói rõ được «bỏ bước 2, đổi sang cách khác» không
-- Bạn có nhìn ra ngay vùng then chốt nó sẽ đụng không
-- Bạn có biết cách nghiệm thu trước khi bắt đầu không
-
-Nếu chưa được, kế hoạch vẫn chưa đủ cụ thể.
-
-## Bạn có thể phê duyệt kế hoạch thế nào
-
-Không cần viết lại cả đoạn—chỉ cần định hướng như dẫn đồng nghiệp.
-
-Câu dẫn thường dùng:
+**Cách yêu cầu với ranh giới cụ thể:**
 
 ```text
-Giữ bước 1 và 2, bỏ bước 3.
-Tách thay đổi cơ sở dữ liệu thành một bước riêng.
-Chỉ phân tích chỉ-đọc trước, chưa vào triển khai.
-Bổ sung kiểm thử hồi quy và phương án rollback vào kế hoạch.
+Cập nhật ba bài hướng dẫn này và sửa các liên kết nội bộ liên quan.
+Đọc hiện trạng, đưa ra kế hoạch ngắn, rồi liên tục hoàn thành việc
+sửa trong các tệp này và phần điều hướng liên quan, build và kiểm tra
+bản xem trước mà không phải chờ sau từng bước. Giao bản xem trước,
+tóm tắt thay đổi và kết quả xác minh. Việc xuất bản lên production
+chưa được cho phép. Khi chuẩn bị xong, nêu phiên bản sẽ xuất bản,
+môi trường đích và cách hoàn tác, rồi chờ tôi xác nhận hành động
+xuất bản.
 ```
 
-Cách này tiết kiệm ngữ cảnh hơn «làm lại từ đầu», và dễ kéo kết quả về đúng hướng.
+Lúc này nên hoàn tất công việc cục bộ trước khi xin quyền xuất bản cuối cùng. Nếu người dùng đã cho phép rõ ràng đích và hành động xuất bản cụ thể, hãy dựa vào chính sách hiện hành để quyết định có thể tiếp tục hay không; đừng xin lại cùng một quyền chỉ vì mẫu này có câu chờ xác nhận.
 
-## So với «bắt đầu làm luôn», lợi ích là gì
+Hai cặp đối chiếu trên chỉ là ví dụ hướng dẫn, không phải đầu ra thực tế của mô hình hay phép đo hiệu suất.
 
-| Xin kế hoạch trước | Bắt đầu luôn |
-|---|---|
-| Phát hiện hiểu nhầm sớm | Thường sau khi sửa xong mới thấy lệch hướng |
-| Thuận phê duyệt và cộng tác | Bạn chỉ xem thụ động diff cuối |
-| Dễ tách thành tác vụ con | Dễ trộn nhiều mục tiêu |
-| Cách kiểm chứng hiện rõ sớm | Thường đến cuối mới nhớ kiểm thử |
+## Khi nào chỉ lập kế hoạch
 
-Nhiều workflow tách riêng «khám phá» và «kế hoạch». Xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/).
+Nếu bạn còn so sánh các phương án, cần quyết định ngân sách hoặc nói rõ muốn xem thiết kế trước, có thể giới hạn tác vụ ở phần kế hoạch:
 
-## Vấn đề dễ gặp nhất ở kế hoạch
+```text
+Lần này chỉ lập phương án. Đọc cách triển khai hiện tại rồi đưa ra
+hai lựa chọn, phạm vi ảnh hưởng và cách nghiệm thu. Chỉ ra những
+đánh đổi thực sự cần tôi quyết định. Không sửa phần triển khai.
+Chỉ thực hiện sau khi đã chọn phương án.
+```
 
-### Chỉ có hành động, không có ranh giới
+Phải tuân theo giới hạn giai đoạn đã nêu rõ này. Việc tác nhân thường có quyền tự chủ không cho phép bỏ qua để chuyển thẳng sang triển khai.
 
-Ví dụ «cập nhật tài liệu và tối ưu cấu trúc» nhưng không nói sửa thư mục nào, không đụng mô-đun nào. Kế hoạch kiểu này dễ phình to.
+## Nên giữ gì trong kế hoạch
 
-### Chỉ có triển khai, không có kiểm chứng
+Một kế hoạch đủ dùng nêu rõ mục tiêu, phạm vi ảnh hưởng, các bước, cách kiểm tra và những lựa chọn chưa được giải quyết. Không cần biến câu trả lời đã biết thành câu hỏi chờ xác nhận. Tác vụ ngắn, ít rủi ro cũng không cần thêm mục hoàn tác chỉ để điền mẫu.
 
-Ví dụ «sửa logic component, cập nhật style, commit» nhưng không viết cách chứng minh hành vi không hỏng.
+Khi có tình huống mới trong lúc thực hiện, hãy phân biệt chi tiết triển khai thông thường với thay đổi mục tiêu. Xử lý và giải thích các vấn đề nhỏ trong phạm vi ban đầu. Nếu xuất hiện phụ thuộc mới, phạm vi sửa rộng hơn, thay đổi giao diện hoặc một hành động bên ngoài mới, trước tiên hãy xem chúng còn nằm trong quyền đã được cho phép không.
 
-### Chỉ có danh sách việc, không có mục cần xác nhận
-
-Kế hoạch tốt thừa nhận sự không chắc chắn; không giả vờ mọi tiền đề đã đứng vững.
-
-## Nên kết hợp với
-
-- Cần chuỗi thực thi chính thức: [Lập kế hoạch](/vi/guide/agent-work/planning/)
-- Cần viết kế hoạch tái sử dụng được: [Cấu trúc tác vụ](/vi/prompts/task-anatomy/)
-- Cần chỉnh hướng giữa chừng: [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/)
-- Cần định nghĩa nghiệm thu rõ: [Định nghĩa hoàn thành](/vi/prompts/define-done/)
-
-## Một thỏa thuận nội bộ nhóm rất hữu dụng
-
-Bạn có thể ghi rõ trong `AGENTS.md`:
+## Quy tắc mặc định có thể ghi vào hướng dẫn dự án
 
 ```md
-- Thay đổi liên quan từ 3 tệp trở lên: xuất kế hoạch trước
-- Không chạy lệnh phá hủy khi chưa xác nhận
-- Kế hoạch phải ghi cách kiểm chứng
+- Thực hiện ngay tác vụ có phạm vi rõ ràng và có thể hoàn tác, rồi kiểm tra
+  ở mức phù hợp.
+- Với tác vụ phức tạp, nêu kế hoạch ngắn trước. Chỉ chờ phản hồi khi
+  người dùng muốn duyệt trước hoặc có đánh đổi cần họ quyết định.
+- Tiếp tục trong phạm vi đã được cho phép, không hỏi lại ở từng bước.
+- Nêu vấn đề cụ thể khi thiếu dữ liệu quan trọng, vượt phạm vi hoặc
+  cần hành động chưa được cho phép.
+- Không xem việc hoàn thành chỉnh sửa cục bộ là tự động được phép
+  xuất bản, gửi tin nhắn hoặc xóa dữ liệu.
 ```
 
-Như vậy «xin kế hoạch trước» không còn là nhắc tạm thời, mà thành mặc định của nhóm.
-
-## Nguồn tham khảo
-- Tư duy kế hoạch và thực thi trong tài liệu chính thức OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả phương pháp cộng tác «xuất kế hoạch trước»; liên kết nội bộ và cấu trúc ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Đây là gợi ý về cách làm việc có thể điều chỉnh, không thay thế quy tắc hệ thống, chính sách tổ chức hay sandbox. Xem [Thứ tự ưu tiên của ngữ cảnh](/vi/guide/context/context-priority/), [Lập kế hoạch](/vi/guide/agent-work/planning/) và [Mẫu phê duyệt của con người](/vi/cases/workflows/human-approval-patterns/).

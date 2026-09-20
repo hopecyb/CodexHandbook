@@ -3,7 +3,7 @@ title: Conectar un servidor MCP
 description: Configura, autentica y verifica el primer servidor MCP mediante la CLI o config.toml.
 locale: es
 source_locale: zh-cn
-source_revision: 972ccc3
+source_revision: 0675d33
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

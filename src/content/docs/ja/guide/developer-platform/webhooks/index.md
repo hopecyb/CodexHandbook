@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / Cloud"
+  basis: "本リポジトリ現行 webhooks サブ章の構造と入口リンクを相互確認。Webhook が統合で「イベントトリガー」役を担うことのみ説明。具体イベントフィールドや実装細部を固定契約として書かない。"
+  checkedAt: "2026-07-26"
 title: Webhooks
 description: イベントトリガー統合の説明ページ——Webhook は通知を受け取る。ワークフロー設計の代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: b718fb3
+source_revision: 68cb29b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,10 +29,3 @@ Codex 統合では「外部イベントが来たら、後続フローをどう�
 - Webhook はトリガーだけで、完全自動化方案ではない理由
 
 Webhook はドアベルのようなもの。「何かが起きた」と知らせる。後処理は自分でフローを接続する。
-
----
-
-**状態：** verified  
-**対象製品：** API / Cloud  
-**検証根拠：** 本リポジトリ現行 webhooks サブ章の構造と入口リンクを相互確認。Webhook が統合で「イベントトリガー」役を担うことのみ説明。具体イベントフィールドや実装細部を固定契約として書かない。  
-**最終検証：** 2026-07-26

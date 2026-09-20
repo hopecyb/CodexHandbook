@@ -3,7 +3,7 @@ title: Thread, tác vụ và dự án
 description: Làm rõ quan hệ giữa phiên hội thoại, tác vụ và không gian làm việc dự án.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f3b436
+source_revision: f5ded6a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

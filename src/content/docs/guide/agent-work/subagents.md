@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "已对照 Codex 当前子 Agent 官方说明；本页明确子 Agent 的上下文隔离、权限继承、活动入口、token 成本与并行写冲突，并把最终汇总和验证责任保留给主 Agent。"
+  checkedAt: "2026-08-26"
 title: 子 Agent
 description: 把边界清楚的子任务委托给独立上下文，并由主 Agent 汇总证据、处理冲突和验收。
 sidebar:
@@ -116,13 +121,3 @@ CLI 中可以用 `/agent` 查看或切换线程；IDE 在支持的界面中显�
 - **工作树** 隔离并行文件修改；它解决的是工作区冲突，不是上下文问题。
 
 继续阅读 [多 Agent 协作](/cases/workflows/multi-agent-coordination/) 和 [交接与恢复](/guide/agent-work/handoff-and-resume/)。
-
----
-
-**状态：** verified
-
-**适用产品：** App / CLI / IDE
-
-**核验依据：** 已对照 Codex 当前子 Agent 官方说明；本页明确子 Agent 的上下文隔离、权限继承、活动入口、token 成本与并行写冲突，并把最终汇总和验证责任保留给主 Agent。
-
-**最近核验：** 2026-08-26

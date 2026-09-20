@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex（视版本与权限）"
+  basis: "OpenAI Help Center 当前已发布桌面 App 内置浏览器说明，确认可在 Work 或 Codex 中打开网页、切换标签、下载文件、使用注释模式，并按站点逐项审批访问。本页内容聚焦浏览器工具的适用场景、与搜索/Computer Use 的区别以及安全边界。"
+  checkedAt: "2026-07-26"
 title: 浏览器工具
 description: 让 Codex 打开网页、检查 UI 状态与验证前端行为——能力与边界。
 sidebar:
@@ -110,10 +115,3 @@ sidebar:
 - [ ] 访问范围在 prompt 中写死
 - [ ] 关键视觉问题有截图或文字说明
 - [ ] 与单元/E2E 测试结论一致或已知差异已记录
-
----
-
-**状态：** verified  
-**适用产品：** App / Codex（视版本与权限）  
-**核验依据：** OpenAI Help Center 当前已发布桌面 App 内置浏览器说明，确认可在 Work 或 Codex 中打开网页、切换标签、下载文件、使用注释模式，并按站点逐项审批访问。本页内容聚焦浏览器工具的适用场景、与搜索/Computer Use 的区别以及安全边界。  
-**最近核验：** 2026-07-26

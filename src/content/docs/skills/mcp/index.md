@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT 桌面 App / Codex CLI / IDE；ChatGPT Web 通过 Plugin 使用远程 MCP 工具"
+  basis: "客户端支持、共享配置、传输方式与 CLI 命令"
+  checkedAt: "2026-08-25"
 title: MCP
 description: 用受控方式把第三方工具和上下文接入 ChatGPT 与 Codex。
 ---
@@ -35,13 +40,3 @@ MCP（Model Context Protocol）解决的是“Agent 怎样调用仓库外的工�
 
 - [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [Model Context Protocol 规范](https://modelcontextprotocol.io/)
-
----
-
-**状态：** verified
-
-**适用产品：** ChatGPT 桌面 App / Codex CLI / IDE；ChatGPT Web 通过 Plugin 使用远程 MCP 工具
-
-**核验范围：** 客户端支持、共享配置、传输方式与 CLI 命令
-
-**最近核验：** 2026-08-25

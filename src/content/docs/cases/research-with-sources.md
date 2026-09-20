@@ -1,4 +1,13 @@
 ---
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs: [markdown]
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Developers 当前 Codex use cases 仍包含“Learn a new concept”，强调把密集材料转成可复核的学习或研究产出；本页同时要求每个结论附 URL 或仓库文件路径，并显式标出待确认项，符合当前“带来源研究”最佳实践。"
+  checkedAt: "2026-07-26"
 title: 带引用的研究
 description: 用 Codex 做检索、比较与事实核验——产出可追溯的来源与结论。
 ---
@@ -57,10 +66,3 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 
 - [处理不确定性](/guide/quality/handle-uncertainty/)
 - [案例：文档重构与审查](/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Learn a new concept”，强调把密集材料转成可复核的学习或研究产出；本页同时要求每个结论附 URL 或仓库文件路径，并显式标出待确认项，符合当前“带来源研究”最佳实践。  
-**最近核验：** 2026-07-26

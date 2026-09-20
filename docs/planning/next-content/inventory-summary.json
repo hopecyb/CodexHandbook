@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-18",
+  "pages": 281,
+  "modules": {
+    "ai-roadmap": 13,
+    "cases": 37,
+    "guide": 178,
+    "index.mdx": 1,
+    "pets": 3,
+    "prompts": 19,
+    "skills": 29,
+    "theme": 1
+  },
+  "flags": {
+    "正文H1需检查重复": 61,
+    "含输入占位符": 14,
+    "明确为骨架": 9,
+    "仍有延期承诺": 6
+  }
+}

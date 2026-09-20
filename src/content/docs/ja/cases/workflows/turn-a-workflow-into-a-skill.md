@@ -3,7 +3,7 @@ title: ワークフローを Skill にする
 description: 同じフローが3回目なら Skill の価値——トリガー、指示、受け入れを一箇所に。
 locale: ja
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

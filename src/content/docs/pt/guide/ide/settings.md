@@ -1,68 +1,58 @@
 ---
 title: Definições da extensão IDE
-description: Entradas de configuração no IDE para modelo, Aprovação, Contexto e comportamento da extensão.
+description: Distingue a configuração partilhada do Agent das definições de comportamento dos editores da família VS Code.
 locale: pt
 source_locale: zh-CN
-source_revision: d4a3506
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6f28910
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
 ---
 
+No IDE existem duas camadas de definições:
 
-IDE settings have two layers:
-
-| Layer | Location | Controls |
+| Camada | Localização | O que controla |
 |---|---|---|
-| Codex Agent settings | `config.toml` | Model, reasoning effort, permissions, sandbox, MCP, and personalization; shared with the CLI |
-| Editor settings | VS Code settings with `chatgpt.*` | Sidebar, message queueing, send key, review delivery, language, and fonts |
+| Definições do Codex Agent | `config.toml` | Modelo, intensidade de raciocínio, permissões, sandbox, MCP e personalização; partilhadas com a CLI |
+| Definições do editor | Sistema de definições do VS Code, com chaves `chatgpt.*` | Barra lateral, fila de mensagens, tecla de envio, apresentação do review, idioma e fontes |
 
-Keep repository rules in `AGENTS.md`, not in one person's editor settings.
+As regras do repositório continuam a pertencer ao `AGENTS.md`, não às definições pessoais do editor.
 
-## Open settings
+## Abrir as definições
 
-Select the gear in the Codex sidebar, then **Codex Settings**. Change common Agent options in the panel or select **Open config.toml** to edit the active configuration layer.
+Seleciona a roda dentada na barra lateral do Codex e depois **Codex Settings**. Podes alterar opções comuns do Agent no painel ou escolher **Open config.toml** para editar a camada de configuração atualmente ativa.
 
-Change editor behavior in the editor's Settings by searching `@ext:openai.chatgpt`, `Codex`, or a specific key.
+Para alterar o comportamento do editor, procura nas Settings por `@ext:openai.chatgpt`, `Codex` ou pelo nome de uma chave específica.
 
-## Settings worth understanding first
+## Definições que vale a pena compreender primeiro
 
-| Key | Default | Change it when |
+| Chave | Valor predefinido | Quando alterar |
 |---|---:|---|
-| `chatgpt.openOnStartup` | `false` | You want the extension to focus the sidebar at startup |
-| `chatgpt.followUpQueueMode` | `queue` | Set `steer` to let a new message steer the current run |
-| `chatgpt.composerEnterBehavior` | `enter` | Multiline prompts are often sent accidentally |
-| `chatgpt.reviewDelivery` | `inline` | Set `detached` to show `/review` in a separate chat |
-| `chatgpt.localeOverride` | automatic | You need a fixed UI language |
-| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | The repository and toolchain are in WSL2 |
+| `chatgpt.openOnStartup` | `false` | Queres que a extensão foque a barra lateral ao arrancar |
+| `chatgpt.followUpQueueMode` | `queue` | Muda para `steer` se quiseres que uma mensagem nova oriente a execução em curso |
+| `chatgpt.composerEnterBehavior` | `enter` | Envias prompts com várias linhas por engano com frequência |
+| `chatgpt.reviewDelivery` | `inline` | Usa `detached` para mostrar `/review` numa conversa separada |
+| `chatgpt.localeOverride` | Automático | Precisas de fixar o idioma da interface |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | O repositório e a cadeia de ferramentas estão no WSL2 |
 
-`chatgpt.cliExecutable` is for Codex CLI development. Ordinary users should not override the extension's bundled executable; some features may stop working.
+`chatgpt.cliExecutable` destina-se apenas ao desenvolvimento da Codex CLI. Utilizadores comuns não devem substituir manualmente o executável incluído na extensão, pois algumas funcionalidades podem deixar de funcionar.
 
-## How to reason about configuration precedence
+## Como entender a prioridade da configuração
 
-- Organization policy defines limits that cannot be exceeded.
-- `config.toml` sets Agent defaults.
-- `AGENTS.md` supplies repository and directory rules.
-- Editor settings change only the IDE experience.
-- A one-off prompt adds the current task's goal and boundary.
+- As políticas da organização definem limites que não podem ser ultrapassados.
+- `config.toml` determina o comportamento predefinido do Agent.
+- `AGENTS.md` fornece regras do repositório e dos diretórios.
+- As definições do editor só alteram a experiência no IDE.
+- Um prompt pontual acrescenta objetivos e limites à tarefa atual.
 
-If a setting appears ineffective, identify which layer you changed and check whether a higher-level policy constrains it. See [Scope and precedence](/pt/guide/customization/agents-md/scope-and-precedence/) for the full model.
+Se uma definição parecer não produzir efeito, confirma primeiro qual a camada que alteraste e depois verifica se uma política superior a limita. A explicação completa está em [Âmbito e precedência](/pt/guide/customization/agents-md/scope-and-precedence/).
 
-## Verify changes
+## Verificar após uma alteração
 
-Change one setting class at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
+Altera apenas uma definição de cada vez. Por exemplo, depois de definir `chatgpt.reviewDelivery` como `detached`, executa `/review` num repositório Git e confirma se abre uma conversa de revisão separada. Regista o valor anterior; se o resultado não corresponder ao esperado, repõe-no e reinicia o editor.
 
-## Official sources
+## Fontes oficiais
 
-- [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-- [Configuration basics](https://learn.chatgpt.com/docs/config)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26
+- [Referência das definições do Codex IDE](https://learn.chatgpt.com/docs/ide/settings)
+- [Fundamentos da configuração](https://learn.chatgpt.com/docs/config)

@@ -1,21 +1,20 @@
 ---
-title: Codex 핸드북
+title: Codex / AI Agent 실전 핸드북
 head:
   - tag: title
-    content: Codex 핸드북
-description: Codex Handbook는 제품 기초, 프롬프팅, Skills, 실제 사례를 재사용 가능한 방법으로 정리해 작업을 설명하고, 실행을 안내하며, 결과를 검증하도록 돕습니다.
+    content: Codex / AI Agent 실전 핸드북
+description: Codex를 중심으로 개인, 창작자, 개발자, 팀이 성공적인 협업을 재사용하고 검증하고 인계할 수 있는 방법으로 바꾸는 AI Agent 실전 안내서입니다.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: ko
 source_locale: zh-CN
-source_revision: 704fd1a
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: 776b241
 hero:
-  title: Codex로 <br /> 아이디어를 결과로
-  tagline: 제품 기초와 명확한 프롬프트에서 재사용 가능한 Skills와 실제 사례 회고까지 — 매 작업을 실행하고, 검증하고, 넘길 수 있는 방법으로 만드세요.
+  title: Codex로 <br /> 한 번의 성공을 재사용 가능한 방법으로
+  tagline: 작업을 명확히 하는 것부터 실행, 검증, 검토, 인계까지 아이디어를 안정적인 결과로 만드는 안내서입니다.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -37,90 +36,90 @@ hero:
         </div>
       </div>
   actions:
-    - text: 여기서 시작
+    - text: 검증 가능한 주간 보고서 만들기
       icon: right-arrow
+      link: /ko/cases/analyze-a-spreadsheet/
+    - text: 여기서 시작
+      variant: secondary
       link: /ko/guide/start-here/
-    - text: GitHub에서 보기
-      icon: external
-      variant: minimal
-      link: https://github.com/hopecyb/CodexHandbook
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
 
-<section class="home-section home-section-lead" aria-label="핸드북 포지셔닝">
-	<p>Codex는 코드를 고치는 도구 이상입니다. 자료를 이해하고, 콘텐츠를 만들고, 프로토타입을 만들고, 문서를 다루고, 변경을 검토하고, 반복 작업을 자동화하며, 팀 협업의 실행 파트너가 될 수 있습니다.</p>
-	<p>이 핸드북은 네 모듈 — 제품 가이드, 프롬프팅, Skills, 실전 사례 — 로 구성해 기초가 다른 독자도 다음 단계를 찾을 수 있게 합니다.</p>
-</section>
-
-<section class="home-section" aria-labelledby="modules-heading">
+<section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
-		<p>네 모듈</p>
-		<h2 id="modules-heading">모듈별로 시작</h2>
+		<p>작업을 고르고 결과물을 가져가기</p>
+		<h2 id="tasks-heading">오늘 무엇을 완성하고 싶나요?</h2>
 	</div>
-	<div class="module-grid">
-		<a class="module-card" href="/ko/guide/">
-			<strong>Codex 가이드</strong>
-			<span>클라이언트를 설치하고, 권한을 이해하며, 첫 작업을 완료합니다.</span>
+	<div class="path-grid">
+		<a class="path-card" href="/ko/cases/analyze-a-spreadsheet/">
+			<strong>주간 매출 보고서 만들기</strong>
+			<span>전체 자료 제공 · 참고 스크립트 실행 및 확인 완료. 합성 데이터 46행으로 환불, 중복 제거, 기간 비교를 연습하고 보고서와 대조 기록을 만듭니다.</span>
 		</a>
-		<a class="module-card" href="/ko/prompts/">
-			<strong>프롬프트</strong>
-			<span>목표·컨텍스트·제약·수락 기준을 분명히 하고, 복사 가능한 템플릿을 제공합니다.</span>
+		<a class="path-card" href="/ko/cases/use-cases/software-development/fix-a-bug-with-verification/">
+			<strong>버그를 고치고 테스트 통과하기</strong>
+			<span>전체 실습 제공 · 이전 검증 기록 포함. 실패 테스트에서 시작해 최소 수정, 회귀 결과, 검토 메모를 제출합니다.</span>
 		</a>
-		<a class="module-card" href="/ko/skills/">
-			<strong>Skills</strong>
-			<span>안정된 방법을 패키징하고 Plugins, MCP, Hooks로 확장합니다.</span>
-		</a>
-		<a class="module-card" href="/ko/cases/">
-			<strong>실전 사례</strong>
-			<span>버그 수정, 글쓰기, 자동화 등 실제 작업에서 배웁니다.</span>
+		<a class="path-card" href="/ko/cases/write-an-article/">
+			<strong>글 한 편 쓰기</strong>
+			<span>전체 자료 제공 · 작성자가 출처 자체 점검. 합성 자료 세 개로 사실 인용, 버전 충돌, 수정을 연습하고 글과 사실표를 만듭니다.</span>
 		</a>
 	</div>
+	<p>참고 주간 보고서의 순액 <strong>¥4,644.75</strong>, 이며 환불과 이상 항목을 설명합니다. <a href="/downloads/sales-weekly-report/summary.md">참고 보고서 보기</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">전체 자료 다운로드</a>. 수치는 교육용 합성 데이터에서 나왔습니다. 예상 실습 시간은 30~45분이며 독자 대상으로 시간을 측정하지 않았습니다.</p>
+	<p><a href="/ko/cases/">작업별 사례와 자료 보기</a> · <a href="/ko/guide/learning-paths/">역할별 학습</a> · <a href="/ko/guide/reference/">참조 설명서 보기</a></p>
 </section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>경로 선택</p>
-		<h2 id="paths-heading">목표에 맞춰 시작</h2>
+		<p>학습 경로 선택</p>
+		<h2 id="paths-heading">목표에 따라 시작</h2>
 	</div>
 	<div class="path-grid">
 		<a class="path-card" href="/ko/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>초보자</strong>
-			<span>Codex를 알아보고, 첫 작업을 완료하며, 결과 확인과 취소를 배웁니다.</span>
+			<span>같은 다운로드 자료로 행사 안내문을 만들고 오류를 검토하고 사본을 복구합니다. 프로그래밍은 필요 없으며 단계마다 인수 기준이 있습니다.</span>
 		</a>
 		<a class="path-card" href="/ko/guide/learning-paths/creator/">
 			<strong>창작자</strong>
-			<span>리서치, 글쓰기, 이미지, 발표, 게시를 위한 시작 가이드와 템플릿. (추가 단계는 계속 업데이트)</span>
+			<span>한 자료 묶음으로 사실표, 글, 편집 가능한 8장 발표 자료를 만든 뒤 재사용 가능한 작업 지시를 저장합니다. 다운로드와 단계별 검사가 포함됩니다.</span>
 		</a>
 		<a class="path-card" href="/ko/guide/learning-paths/developer/">
 			<strong>개발자</strong>
-			<span>코드베이스 이해, 기능 구현, 테스트, 리뷰, 복잡한 작업 처리. (추가 단계는 계속 업데이트)</span>
+			<span>장바구니 버그를 이해하고 실패·성공 테스트를 보관하며 최소 수정안을 검토한 뒤 인계 문서를 씁니다. 작성 가능한 템플릿 세 개를 제공합니다.</span>
 		</a>
 		<a class="path-card" href="/ko/guide/learning-paths/team/">
 			<strong>팀</strong>
-			<span>공유 지침, 권한 경계, 품질 기준, 팀 자동화. (추가 단계는 계속 업데이트)</span>
+			<span>근무일 열흘 동안 작은 파일럿과 표본 검토, 복구 연습을 진행한 뒤 확대 여부를 정합니다. 작성 가능한 템플릿 여섯 개가 있습니다.</span>
 		</a>
 	</div>
 </section>
 
-<section class="home-section home-map" aria-labelledby="map-heading">
-	<div class="section-heading">
-		<p>역량 지도</p>
-		<h2 id="map-heading">단계적으로 익힐 능력</h2>
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>문제에서 바로 찾아보기</p><h2 id="lookup-heading">다음 행동 찾기</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/ko/guide/reference/troubleshooting/"><strong>설치, 로그인 또는 실행 실패</strong><span>증상별 진단 경로를 찾거나 로그가 있는 복구 실습을 진행하세요.</span></a>
+		<a class="path-card" href="/ko/guide/reference/"><strong>명령, 권한, 용어 확인</strong><span>참조 목차에서 적용 범위와 출처를 확인하세요.</span></a>
+		<a class="path-card" href="/ko/guide/verification/"><strong>결과가 완료됐는지 판단</strong><span>사실, 파일, 테스트 증거를 확인하고 미확인 항목을 남기세요.</span></a>
 	</div>
-	<ul>
-		<li><span>01</span> 목표가 분명하고 경계가 명확하며 검증 가능한 작업 프롬프트 작성</li>
-		<li><span>02</span> 파일, 컨텍스트, 터미널, 브라우저, 외부 자료 관리</li>
-		<li><span>03</span> Skills, Plugins, MCP, Hooks로 Codex 확장</li>
-		<li><span>04</span> 긴 작업, 다중 Agent 협업, 회고, 인수인계 조직</li>
-		<li><span>05</span> 개인·팀 장면에서 안전, 검증, 거버넌스 구축</li>
-	</ul>
 </section>
 
-<AboutHandbook title="오픈소스 공동 구축">
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>재사용 가능한 자료 가져가기</p>
+		<h2 id="assets-heading">읽은 뒤 바로 시작하기</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/ko/prompts/templates/"><strong>작업 프롬프트 템플릿</strong><span>이해, 조사, 생성, 수정, 진단, 자동화 등 작업 유형별로 재사용합니다.</span></a>
+		<a class="path-card" href="/ko/skills/examples/"><strong>Skill 예시</strong><span>읽기 쉬운 예시에서 입력, 출력, 경계, 테스트를 살펴봅니다.</span></a>
+		<a class="path-card" href="/ko/cases/use-cases/case-study-template/"><strong>사례 회고 템플릿</strong><span>목표, 실행, 사람의 확인, 검증, 실패 처리, 다음 개선을 기록합니다.</span></a>
+		<a class="path-card" href="/ko/guide/verification/"><strong>인수 체크리스트</strong><span>'끝난 것 같다'를 다시 확인하고 되돌리고 인계할 수 있는 결과로 바꿉니다.</span></a>
+	</div>
+</section>
 
-핸드북은 중국어 간체를 소스 언어로 하며, 이후 중국어 번체, 영어, 프랑스어, 일본어, 한국어 등 버전을 계속 확장합니다. 콘텐츠에는 상태, 검증 날짜, 적용 제품이 표시되어 바로 따라해도 되는 것과 재확인이 필요한 것을 구분할 수 있습니다.
+<AboutHandbook title="출처, 업데이트와 기여">
 
-[학습 경로 둘러보기](/ko/guide/learning-paths/)
+이 핸드북은 오픈소스 기여자가 관리하며 간체 중국어가 원문입니다. 제품 설명, 작성자가 만든 교육 자료, 실제 실행 기록을 따로 표시합니다. 스크립트 통과만으로 모델 성능이나 독자의 실습 완주가 증명되지는 않습니다. 각 페이지의 기록에서 검증 범위를 확인하세요.
+
+[내용 업데이트](/ko/guide/updates/) · [버전과 검증 정책](/ko/guide/start-here/handbook-version-policy/) · [기여하기](/ko/guide/contributing/)
 
 </AboutHandbook>

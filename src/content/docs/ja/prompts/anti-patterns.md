@@ -3,7 +3,7 @@ title: プロンプトのアンチパターン
 description: 避けるべき曖昧さ、権限の逸脱、隠れた推論の要求。
 locale: ja
 source_locale: zh-CN
-source_revision: 6aba346
+source_revision: 8e89a5a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

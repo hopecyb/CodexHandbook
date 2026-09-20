@@ -3,7 +3,7 @@ title: Desktop-App
 description: Installation, Oberfläche und tägliche Workflows der Desktop-App.
 locale: de
 source_locale: zh-CN
-source_revision: a3f2555
+source_revision: f6bc627
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

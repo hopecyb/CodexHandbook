@@ -1,130 +1,123 @@
 ---
-title: Subagent
-description: Ủy thác tác vụ con cho ngữ cảnh độc lập — khi nào tách, bàn giao thế nào, nghiệm thu thế nào.
+title: Agent con
+description: Giao các tác vụ con có ranh giới rõ ràng cho ngữ cảnh độc lập, để Agent chính tổng hợp bằng chứng, xử lý xung đột và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: d65f0ec
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: a3f2be5
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
-A **subagent** is an independent work unit started by the main Agent for a defined subproblem. It has its own context and returns conclusions and evidence to the main thread. The main Agent retains global decisions and final acceptance.
+**Agent con (Subagent)** là đơn vị làm việc độc lập do Agent chính khởi chạy để xử lý một vấn đề con cụ thể. Mỗi Agent con có ngữ cảnh riêng và gửi lại kết luận cùng bằng chứng cho luồng chính khi hoàn thành. Agent chính vẫn chịu trách nhiệm về các quyết định tổng thể và nghiệm thu cuối cùng.
 
-![Codex subagent orchestration: the main Agent delegates bounded work, subagents return evidence, and the main Agent consolidates and verifies](/diagrams/subagent-orchestration-vi.svg)
+![Kiến trúc điều phối Agent con trong Codex: Agent chính phân công tác vụ con có ranh giới rõ ràng, Agent con trả về bằng chứng, Agent chính tổng hợp và kiểm tra](/diagrams/subagent-orchestration-zh-cn.svg)
 
-## Three isolation layers
+## Trước hết, hiểu ba lớp quan hệ
 
-| Layer | Isolated? | Meaning |
+| Lớp | Có tách biệt không? | Ý nghĩa |
 |---|---|---|
-| Conversation context | Yes | Each subagent focuses on its task without carrying every main-thread detail |
-| Sandbox and permission mode | Inherited | Independent execution does not grant higher access |
-| Workspace files | Not necessarily | Agents may see one workspace; concurrent writes can conflict |
+| Ngữ cảnh hội thoại | Có | Mỗi Agent con tập trung vào tác vụ riêng, không cần mang theo mọi chi tiết của luồng chính |
+| Sandbox và chế độ quyền | Kế thừa | Chạy độc lập không giúp Agent con có quyền cao hơn |
+| Tệp trong không gian làm việc | Không nhất thiết | Nhiều Agent có thể nhìn thấy cùng một không gian làm việc; ghi đồng thời vào cùng một tệp sẽ gây xung đột |
 
-The key rule is: **context isolation is not file isolation.** Divide ownership by directory, component, or worktree before parallel edits.
+Điều quan trọng nhất là: **tách biệt ngữ cảnh không đồng nghĩa với tách biệt tệp.** Nếu muốn sửa mã song song, trước tiên hãy phân quyền sở hữu theo thư mục, thành phần hoặc worktree.
 
-## Current availability
+## Hiện có thể dùng ở đâu
 
-Current Codex versions provide subagents by default, with activity visible in relevant desktop App, CLI, and IDE surfaces. UI details change; the stable pattern is to ask Codex to delegate independent work while the main thread consolidates it.
+Các phiên bản Codex hiện tại cung cấp Agent con theo mặc định. Bạn có thể xem hoạt động của chúng trong giao diện tương ứng của ứng dụng máy tính, CLI và IDE. Chi tiết giao diện có thể thay đổi, nhưng cách dùng ổn định là yêu cầu Codex giao rõ các tác vụ con độc lập, còn luồng chính chịu trách nhiệm tổng hợp.
 
-Use `/agent` in the CLI to inspect or switch threads. Supporting IDE surfaces show background Agents, and the desktop App displays task thread activity. Exact controls depend on client and account.
+Trong CLI, có thể dùng `/agent` để xem hoặc chuyển luồng; IDE hiển thị Agent chạy nền trong các giao diện được hỗ trợ; ứng dụng máy tính hiển thị hoạt động của các luồng trong tác vụ. Việc có thấy một điều khiển cụ thể hay không phụ thuộc vào phiên bản ứng dụng và khả năng của tài khoản hiện tại.
 
-## When to split work
+## Khi nào nên chia việc
 
-Consider a subagent when at least two apply:
+Nếu tác vụ con đáp ứng hai trong ba điều kiện sau, hãy cân nhắc tách ra:
 
-1. The task can be described independently without frequent synchronization.
-2. It has an explicit deliverable such as a file list, test result, or one-page conclusion.
-3. It can run in parallel, or deep isolation greatly reduces main-thread noise.
+1. Có thể mô tả độc lập, không cần thường xuyên đồng bộ chi tiết với luồng chính.
+2. Có đầu ra rõ ràng, chẳng hạn danh sách tệp, kết quả kiểm thử hoặc kết luận dài một trang.
+3. Có thể làm song song với tác vụ khác, hoặc việc đào sâu riêng giúp giảm đáng kể nhiễu trong luồng chính.
 
-### Good parallel work
+### Công việc phù hợp để làm song song
 
-- Read-only mapping of frontend, backend, and tests.
-- Independent investigation of unrelated failing tests.
-- Evidence collection for two technical options.
-- Dedicated security, performance, or documentation review.
+- Rà soát chỉ đọc riêng phần frontend, backend và phạm vi kiểm thử.
+- Điều tra đồng thời nhiều bài kiểm thử lỗi không phụ thuộc nhau.
+- Thu thập bằng chứng riêng cho hai phương án kỹ thuật.
+- Giao vai trò chuyên trách rà soát bảo mật, phân tích hiệu năng hoặc kiểm tra tài liệu.
 
-### Keep in the main thread
+### Công việc nên giữ trong luồng chính
 
-- Requirements are unclear and need user dialogue.
-- Steps must run strictly in sequence.
-- Edits concentrate in one file or code region.
-- “Look around” has no completion criterion.
+- Yêu cầu chưa rõ và cần liên tục trao đổi với người dùng.
+- Nhiều bước phải thực hiện theo thứ tự nghiêm ngặt.
+- Các thay đổi tập trung nhiều vào cùng một tệp hoặc đoạn mã.
+- Tác vụ con không có tiêu chí hoàn thành rõ ràng, chỉ là “xem thử”.
 
-Subagents add token and consolidation costs. Do not parallelize a small task that one clear thread handles well.
+Agent con làm tăng lượng token tiêu thụ và công sức tổng hợp. Với tác vụ nhỏ có thể hoàn thành trong một luồng rõ ràng, không cần chia việc chỉ để chạy song song.
 
-## Main Agent responsibilities remain
+## Trách nhiệm của Agent chính vẫn còn nguyên
 
-The main Agent retains:
+Agent chính luôn phải giữ bốn trách nhiệm:
 
-- global goal, user constraints, and final decisions;
-- subtask boundaries and file ownership;
-- resolution of conflicting conclusions;
-- merged tests, build, and risk reporting.
+- Mục tiêu tổng thể, các ràng buộc của người dùng và quyết định cuối cùng.
+- Ranh giới tác vụ con và quyền sở hữu tệp.
+- Lựa chọn khi kết luận của nhiều Agent mâu thuẫn.
+- Kiểm thử, build và giải thích rủi ro sau khi hợp nhất.
 
-A subagent reporting “done” is a subtask signal, not proof that the whole task is complete.
+Agent con báo “hoàn thành” chỉ là tín hiệu cho tác vụ con đó, không phải bằng chứng toàn bộ công việc đã xong.
 
-## Write an acceptable delegation contract
+## Viết thỏa thuận giao việc có thể nghiệm thu
+
+Đây là một tác vụ điều tra chỉ đọc:
 
 ```text
-Start one subagent to analyze session refresh in packages/auth, read-only.
+Hãy khởi chạy một Agent con để phân tích chỉ đọc logic làm mới session trong packages/auth.
 
-Scope: packages/auth and corresponding tests; do not edit.
-Question: Can an old token be reused after refresh failure?
-Deliver: conclusion, key files and lines, reproduction path, recommended test.
-Verification: every claim must be checkable in source or existing tests.
-Return: under 500 words; the main thread decides whether to edit.
+Phạm vi: packages/auth và các bài kiểm thử tương ứng; không sửa tệp.
+Câu hỏi: sau khi làm mới thất bại, token cũ có còn khả năng được tái sử dụng không?
+Đầu ra: kết luận, tệp và số dòng quan trọng, đường đi tái hiện được, bài kiểm thử đề xuất.
+Kiểm chứng: mọi kết luận đều phải đối chiếu được với mã nguồn hoặc bài kiểm thử hiện có.
+Phản hồi: không quá 500 chữ; luồng chính quyết định có sửa hay không.
 ```
 
-It defines responsibility, scope, question, prohibition, verification, and decision owner.
+Yêu cầu này nêu rõ sáu điều: phụ trách việc gì, xem ở đâu, trả lời câu hỏi nào, không được làm gì, kiểm chứng ra sao và ai ra quyết định.
 
-## Three-way example
+## Ví dụ làm song song theo ba hướng
 
-For an intermittent sign-in regression:
+Giả sử chức năng đăng nhập thỉnh thoảng bị lỗi hồi quy, Agent chính có thể chia như sau:
 
-| Subtask | Permission and scope | Deliverable |
+| Tác vụ con | Quyền và phạm vi | Đầu ra |
 |---|---|---|
-| A: code path | Read-only `src/auth/` | Call chain from entry to failure branch |
-| B: test evidence | Read-only tests and logs | Smallest stable reproduction |
-| C: recent changes | Read-only related Git history | Most likely introducing change and evidence |
+| A: đường đi mã nguồn | Chỉ đọc `src/auth/` | Chuỗi lời gọi từ điểm vào đến nhánh gây lỗi |
+| B: bằng chứng kiểm thử | Chỉ đọc bài kiểm thử và log | Bài kiểm thử tối thiểu tái hiện ổn định |
+| C: thay đổi gần đây | Chỉ đọc lịch sử Git liên quan | Thay đổi có khả năng cao nhất gây lỗi hồi quy và căn cứ |
 
-After all return, compare evidence before choosing a repair. Do not let A, B, and C all edit `src/auth/session.ts`.
+Khi cả ba trả kết quả, Agent chính nên so sánh bằng chứng trước khi chọn hướng sửa. Đừng để A, B và C cùng sửa `src/auth/session.ts`.
 
-## Isolate parallel writes
+## Cách tách biệt khi cần ghi song song
 
-1. Split writes into non-overlapping directories or components.
-2. Assign separate worktrees or branches.
-3. State the exact files each Agent owns.
-4. Let the main Agent merge and rerun verification.
+Ưu tiên giảm xung đột theo thứ tự sau:
 
-Passing isolated tests does not prove the merged combination works.
+1. Chia các tác vụ ghi theo thư mục hoặc thành phần không chồng lấp.
+2. Cấp worktree hoặc nhánh riêng cho từng phần triển khai song song.
+3. Ghi rõ danh sách tệp mà mỗi Agent được phép sửa.
+4. Để Agent chính hợp nhất và chạy lại các bước kiểm tra sau khi hợp nhất.
 
-## Acceptance checklist
+Ngay cả khi từng tác vụ con đều vượt qua bài kiểm thử riêng, phần kết hợp sau khi hợp nhất vẫn có thể lỗi. Vì vậy, không được bỏ qua bước kiểm tra cuối cùng.
 
-- Does the result answer the original question without expanding scope?
-- Does it include verifiable file locations, logs, or tests?
-- Did it obey read-only, directory, and command constraints?
-- Are conflicting results explicitly resolved?
-- Were full tests and build rerun after merging?
-- Are unresolved issues and residual risks stated?
+## Danh sách nghiệm thu
 
-## Combine with other capabilities
+- Kết quả trả về có giải đáp câu hỏi ban đầu thay vì mở rộng phạm vi không?
+- Có đính kèm vị trí tệp, log hoặc kiểm thử làm bằng chứng có thể đối chiếu không?
+- Có tuân thủ giới hạn chỉ đọc, thư mục hoặc lệnh không?
+- Các kết quả có mâu thuẫn không và mâu thuẫn đã được xử lý rõ ràng chưa?
+- Đã chạy lại đầy đủ kiểm thử và build sau khi hợp nhất chưa?
+- Đã nêu các vấn đề chưa giải quyết và rủi ro còn lại chưa?
 
-- **Skill** preserves a subtask method and output format.
-- **MCP** gives controlled external tools or data.
-- **Hook** adds guards at subagent start, stop, or tool calls.
-- **Worktree** isolates file edits; it solves workspace conflicts, not context.
+## Kết hợp với các khả năng khác
 
-Continue with [Multi-agent coordination](/vi/cases/workflows/multi-agent-coordination/) and [Handoff and resume](/vi/guide/agent-work/handoff-and-resume/).
+- **Skill** chuẩn hóa phương pháp và định dạng đầu ra của tác vụ con, chẳng hạn danh sách kiểm tra khi rà soát mã.
+- **MCP** cung cấp công cụ hoặc dữ liệu bên ngoài được kiểm soát cho Agent con.
+- **Hook** bổ sung quy tắc bảo vệ khi Agent con bắt đầu, dừng hoặc gọi công cụ.
+- **Worktree** tách biệt các thay đổi tệp song song; nó giải quyết xung đột trong không gian làm việc, không phải vấn đề ngữ cảnh.
 
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE
-
-**Căn cứ kiểm chứng:** Compared with current subagent documentation; explains context isolation, inherited permissions, activity entry points, token cost, write conflicts, and main-Agent final responsibility.
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Đọc tiếp [Phối hợp nhiều Agent](/vi/cases/workflows/multi-agent-coordination/) và [Bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/).

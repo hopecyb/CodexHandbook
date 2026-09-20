@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud 环境
 description: 配置 Codex Cloud 的运行时、依赖、setup、缓存和仓库起点。
 sidebar:
@@ -68,11 +72,3 @@ Cloud 最多缓存容器状态 12 小时，以加速新聊天和跟进。缓存�
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [codex-universal 镜像](https://github.com/openai/codex-universal)
-
----
-
-**状态：** verified
-
-**适用产品：** Cloud
-
-**最近核验：** 2026-08-26

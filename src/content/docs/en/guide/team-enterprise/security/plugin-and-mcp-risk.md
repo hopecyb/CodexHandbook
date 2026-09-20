@@ -3,7 +3,7 @@ title: Plugin and MCP Risk
 description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: 7e3cb49
+source_revision: bf027ad
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này cung cấp mẫu tác vụ kiểu chẩn đoán; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mẫu chẩn đoán
 description: Định vị nguyên nhân gốc trước khi bàn sửa.
 locale: vi
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Mẫu chẩn đoán
 
 Hiểu lầm thường gặp của tác vụ chẩn đoán: miệng nói «kiểm tra trước» nhưng vẫn mặc định để nó sửa luôn.
 
@@ -50,10 +54,3 @@ Mẫu chẩn đoán yêu cầu nó nói vì sao hỏng trước, rồi mới bà
 
 - [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/)
 - [Case sửa Bug](/vi/cases/fix-a-bug/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu chẩn đoán; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

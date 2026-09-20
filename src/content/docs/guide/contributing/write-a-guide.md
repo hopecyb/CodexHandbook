@@ -1,4 +1,8 @@
 ---
+legacyVerification:
+  status: "verified"
+  basis: "已按本仓库当前文档 frontmatter、页脚状态体系、交叉链接习惯与 sidebar 维护方式复核；本页描述的是手册正文写作规范与结构建议，不依赖具体产品版本细节。"
+  checkedAt: "2026-07-26"
 title: 撰写指南页
 description: 新手册正文的结构、frontmatter 与交叉链接约定。
 sidebar:
@@ -32,15 +36,17 @@ description: 一句话说明本文解决的问题
 ---
 ```
 
-可选在文末使用统一页脚（与现有页一致）：
+新页面在 frontmatter 记录编辑状态和验证方式，不再附自由文本核验页脚：
 
-```markdown
----
-
-**状态：** planned | draft | review | verified | outdated | archived
-**适用产品：** App / CLI / IDE / Cloud
-**最近核验：** YYYY-MM-DD
+```yaml
+editorialStatus: review
+verification:
+  kind: editorial
+  checkedAt: "2026-09-18"
+  summary: 已检查内容结构；替换为本页实际完成的检查和日期。
 ```
+
+需要标记来源核对或示例实跑时，按[核验技术内容](/guide/contributing/verify-technical-content/)补齐链接和环境。日期应使用带引号的 `YYYY-MM-DD` 字符串。
 
 ## 推荐结构
 
@@ -115,8 +121,3 @@ description: 一句话说明本文解决的问题
 ## 参考来源
 - OpenAI Codex 官方文档
 ```
----
-
-**状态：** verified  
-**核验依据：** 已按本仓库当前文档 frontmatter、页脚状态体系、交叉链接习惯与 sidebar 维护方式复核；本页描述的是手册正文写作规范与结构建议，不依赖具体产品版本细节。  
-**最近核验：** 2026-07-26

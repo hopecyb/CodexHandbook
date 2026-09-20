@@ -1,72 +1,67 @@
 ---
-title: Diff, bình luận và rà soát
-description: Đọc thay đổi và để lại ý kiến rà soát.
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE"
+  checkedAt: "2026-08-26"
+title: Diff, bình luận và đánh giá
+description: Kiểm tra thay đổi thực tế và để lại phản hồi theo từng dòng trong ngăn đánh giá trước khi commit hoặc push.
 locale: vi
 source_locale: zh-CN
-source_revision: 3efee20
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: "32ee40c"
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
 ---
 
-A chat summary is Codex's explanation of the work. A Git diff is what actually changed in the files. The desktop App's review pane shows diffs, lets you add line-level comments, and lets you choose which changes to stage, revert, commit, or push.
+Bản tóm tắt trong cuộc trò chuyện là cách Codex giải thích công việc; diff Git mới cho thấy các tệp thực sự đã thay đổi thế nào. Ngăn đánh giá của ứng dụng trên máy tính có thể hiển thị diff, thêm bình luận theo từng dòng và cho bạn quyết định phần nào cần stage, hoàn tác, commit hoặc push.
 
-The project must be in a Git repository to use the full review pane and `/review`.
+Dự án phải nằm trong một kho Git thì mới dùng được đầy đủ ngăn đánh giá và `/review`.
 
-## Two review layers
+## Hai lớp đánh giá
 
-First inspect the scope yourself, then invoke an independent reviewer to look for implementation issues:
+Trước tiên, bạn tự kiểm tra phạm vi thay đổi; sau đó gọi một reviewer độc lập để tìm vấn đề trong phần triển khai:
 
-1. Open the review pane and check the number and paths of changed files.
-2. Select **Last turn** to see exactly what changed in the latest turn.
-3. Switch between **Unstaged**, **Staged**, **Commit**, and **Branch** to confirm the review scope.
-4. Run `/review` in the input area.
-5. Choose whether to compare against a base branch, review uncommitted changes, inspect a specific commit, or apply custom criteria.
-6. Read the findings in priority order, then decide what to fix.
+1. Mở ngăn đánh giá, xem số lượng và đường dẫn của các tệp đã thay đổi;
+2. Chọn **Last turn** để xác định chính xác lượt này đã thay đổi gì;
+3. Chuyển giữa **Unstaged**, **Staged**, **Commit** hoặc **Branch** để xác nhận phạm vi đánh giá;
+4. Chạy `/review` trong vùng nhập;
+5. Chọn so sánh với nhánh gốc, đánh giá thay đổi chưa commit, chỉ định commit hoặc dùng tiêu chí tùy chỉnh;
+6. Đọc các phát hiện theo thứ tự ưu tiên rồi quyết định có sửa hay không.
 
-The `/review` reviewer is read-only by default and does not modify the worktree. If you subsequently ask Codex to fix a finding, the original sandbox and approval rules still apply.
+Reviewer của `/review` mặc định chỉ có quyền đọc và không sửa cây làm việc. Nếu sau đó bạn yêu cầu Codex sửa các phát hiện, các quy tắc sandbox và phê duyệt ban đầu vẫn áp dụng.
 
-## Reusable review criteria
-
-```text
-Review the current uncommitted changes. Focus on:
-- changes outside the task scope;
-- behavioral regressions, edge cases, or security issues;
-- whether tests cover failure paths;
-- whether the documentation matches the implementation.
-
-List findings first, ordered by severity. For each finding, provide the file,
-location, evidence, and the smallest reasonable fix.
-If you find no issues, say so explicitly and list any remaining test gaps.
-```
-
-## Reduce ambiguity with line comments
-
-Hover over a suspicious line, select the **+** that appears, and write specific feedback. After leaving all comments, send one explicit instruction:
+## Một bộ tiêu chí đánh giá có thể dùng lại
 
 ```text
-Address the line comments I left. Keep the change set minimal, rerun the
-relevant tests, and show the new diff when finished.
+Hãy đánh giá các thay đổi hiện chưa commit, tập trung kiểm tra:
+- Có thay đổi nào vượt phạm vi tác vụ không;
+- Có hồi quy hành vi, trường hợp biên hoặc vấn đề bảo mật không;
+- Kiểm thử có bao phủ các đường dẫn thất bại không;
+- Tài liệu và phần triển khai có nhất quán không.
+
+Trước tiên liệt kê vấn đề theo mức độ nghiêm trọng; mỗi vấn đề nêu tệp,
+vị trí, bằng chứng và đề xuất cách sửa nhỏ nhất.
+Nếu không phát hiện vấn đề, hãy nói rõ và liệt kê rủi ro kiểm thử còn bỏ ngỏ.
 ```
 
-Useful comments identify a risk or acceptance condition, such as "What does this return for an empty array?" A comment that only says "This is wrong" is usually insufficient.
+## Dùng bình luận theo dòng để tránh mơ hồ
 
-## Staging and reverting
+Di chuột lên dòng đáng ngờ, chọn dấu **+** xuất hiện rồi viết phản hồi cụ thể. Sau khi ghi xong mọi bình luận, hãy gửi một chỉ dẫn rõ ràng:
 
-The review pane can stage, unstage, or revert an entire diff, a file, or an individual hunk. Reverting discards changes. Before doing so, confirm that the changes were not already present when the task began.
+```text
+Xử lý các bình luận theo dòng tôi đã để lại. Giữ phạm vi thay đổi ở mức nhỏ nhất,
+sau đó chạy lại các bài kiểm thử liên quan và hiển thị diff mới.
+```
 
-Use a consistent acceptance order: scope → behavior → tests → security → maintainability. See [Review diffs](/vi/guide/quality/review-diffs/) for more techniques.
+Bình luận hữu ích cần nêu rủi ro hoặc điều kiện nghiệm thu, ví dụ: “Nếu mảng rỗng thì đoạn này trả về gì?” Chỉ ghi “Chỗ này sai” thường không đủ.
 
-## Official sources
+## Stage và hoàn tác
 
-- [Code review](https://learn.chatgpt.com/docs/code-review)
+Ngăn đánh giá có thể stage, bỏ stage hoặc hoàn tác toàn bộ diff, một tệp hay một hunk riêng lẻ. Hoàn tác sẽ loại bỏ thay đổi; trước khi thao tác, hãy xác nhận đó không phải thay đổi của người dùng đã có từ trước khi tác vụ bắt đầu.
 
----
+Nên giữ thứ tự nghiệm thu nhất quán: phạm vi → hành vi → kiểm thử → bảo mật → khả năng bảo trì. Xem thêm [Đánh giá diff](/vi/guide/quality/review-diffs/).
 
-**Trạng thái:** verified
+## Tài liệu chính thức
 
-**Áp dụng cho:** App, CLI, IDE
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Đánh giá mã](https://learn.chatgpt.com/docs/code-review)

@@ -3,12 +3,16 @@ title: Deshacer y recuperar
 description: Retrocede con seguridad cuando el resultado no convence.
 locale: es
 source_locale: zh-CN
-source_revision: b76bcfc
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 5e7a06e
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Contrastado con los apartados verificados de introducción a aprobaciones, revisión del resultado, recuperación de fallos y Git/árbol de trabajo. Esta página solo describe el método estable «pausar, comprobar el alcance, preferir deshacer y recuperar un estado seguro», sin fijar como contrato el control de deshacer de ningún cliente.
+  checkedAt: '2026-07-26'
 ---
 
 La primera vez que usas Codex, la preocupación más habitual es: si se equivoca, ¿puedo volver atrás?
@@ -65,8 +69,6 @@ Estas prácticas bajan mucho la probabilidad de «equivocarse y no poder arregla
 - Revisa tras cada paso; no acumules muchos cambios para mirarlos juntos
 - Confirma antes las operaciones de alto riesgo
 
-Equivocarse no es terrible. Seguir cambiando sin ver el alcance del Diff sí lo es.
-
 ## Usa puntos de recuperación para explorar
 
 Recuperar no sirve solo para errores. También ayuda antes de explorar caminos alternativos.
@@ -78,11 +80,17 @@ Buenos momentos:
 - Probar scripts de automatización o reemplazos masivos
 - Sospechar que el requisito cambiará pronto
 
-Ritmo más seguro: confirmar estado seguro, pedir a Codex archivos afectados, crear punto de recuperación o revisar Git, cambiar poco, revisar diff y verificación, y decidir conservar, revertir o probar otra ruta.
+Una secuencia más segura es:
 
----
+```text
+Confirmar el estado seguro actual
+→ Pedir a Codex que indique qué archivos afectará
+→ Crear un punto de recuperación o comprobar el estado de Git
+→ Ejecutar un cambio pequeño
+→ Revisar el diff y los resultados de verificación
+→ Conservar, revertir o probar otra opción
+```
 
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con los principios de inicio ya verificados de Aprobación, revisión de resultados, recuperación ante fallos y Git/árbol de trabajo; esta página solo confirma el método estable de «pausar, mirar el alcance, deshacer primero y luego recuperar un estado seguro», sin fijar la entrada de deshacer de un cliente concreto como contrato.  
-**Última verificación:** 2026-07-26
+Si el cliente ofrece puntos de control o reproducción, puedes dar prioridad a esas funciones integradas. En un proyecto Git también sirven como punto de recuperación una rama, un stash o un commit pequeño. Lo importante no es memorizar un comando, sino no ampliar los cambios cuando aún no entiendes su alcance.
+
+Equivocarse no es terrible. Seguir cambiando sin conocer el alcance dificulta mucho más la recuperación.

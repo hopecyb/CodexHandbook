@@ -3,7 +3,7 @@ title: AGENTS.md
 description: Overview of project-level long-term instructions—who they are for and what problem they solve before you write content.
 locale: en
 source_locale: zh-CN
-source_revision: ce5c1af
+source_revision: cb6371f
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

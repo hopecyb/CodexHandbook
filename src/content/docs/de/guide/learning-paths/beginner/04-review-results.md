@@ -1,57 +1,53 @@
 ---
-title: Ergebnisse prüfen
-description: 'Gewohnheit aufbauen: Diff prüfen, Verifikation ausführen, nachfragen.'
-locale: de
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Ergebnisse prüfen"
+description: "Üben Sie das Finden von Fehlern an einem festen fehlerhaften Beispiel und prüfen Sie danach Ihre eigene Ankündigung."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Die festen Materialien und das Referenzergebnis des Autors sind vorhanden. Das Skript für Dateioperationen in einem temporären Verzeichnis wurde ausgeführt; ein unabhängiger Test mit einem Modell oder Lernenden steht noch aus."
+  evidence:
+    - label: "Protokoll der Dateioperationen des Autors"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/de/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Klare Aufgaben formulieren"
+next:
+  link: "/de/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "Das erste kleine Projekt abschließen"
+locale: de
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Ziel dieses Schritts
+## Zuerst ein bekannt fehlerhaftes Beispiel ansehen
 
-„Kurz drüberschauen und durchwinken“ durch feste Prüfhandlungen ersetzen.
+Öffnen Sie die [vom Autor absichtlich fehlerhaft erstellte Ankündigung](/downloads/first-project/references/flawed-notice.md), vergleichen Sie sie mit `facts.md` und notieren Sie jeden falschen Satz, die zugehörige Fakt-Nummer und die Korrektur. Das Beispiel ist keine Modellausgabe und belegt nicht, dass ein bestimmter Prompt zwangsläufig scheitert.
 
-Checklisten: [Ergebnis prüfen](/de/guide/getting-started/review-the-result/) · [Diffs reviewen](/de/guide/quality/review-diffs/)
+Lockern Sie die Berechtigungen Ihres echten Arbeitsverzeichnisses nicht absichtlich, um Änderungen außerhalb des erlaubten Bereichs hervorzurufen. Das feste fehlerhafte Beispiel reicht aus, um Fehlererkennung zu üben und Ergebnisse wiederholt zu vergleichen.
 
-Viele überspringen diesen Schritt. Ob Codex stabil wird, hängt oft davon ab, ob Sie Ergebnisse reviewen.
+## Danach das eigene Ergebnis prüfen
 
-## Übung
+Kopieren Sie `templates/review.md` aus dem Paket in einen neuen Ordner `records` außerhalb des Arbeitsverzeichnisses und füllen Sie jeden Punkt aus:
 
-Geben Sie absichtlich einen vagen Prompt, der leicht über Grenzen geht; beobachten Sie den Plan; lehnen Sie Grenzverletzungen ab, verschärfen Sie die Einschränkungen und laufen Sie erneut.
+- Sind Uhrzeit, Ort, Teilnehmerzahl, Kosten und Vorbereitung korrekt?
+- Bleibt die Anmeldeart unbekannt, und stützen die Fakt-Nummern den Text?
+- Wurde nur notice.md geändert? Sind die ursprünglichen Fakten und die Notiz unverändert?
+- Wurden zusätzliche Dateien erstellt oder gelöscht oder Daten nach außen gesendet?
 
-## Übungsfokus
+Kennzeichnen Sie unbekannte Punkte als nicht geprüft. Bewerten Sie sie nicht nur deshalb als bestanden, weil das Modell „fertig“ sagt.
 
-Hier trainieren Sie:
+## Abschlusskriterien
 
-- Erkennen, ob Grenzverletzung geplant ist
-- Wann ablehnen
-- Wie vage Aufgaben straffen und erneut starten
+Benennen Sie die vier sachlichen Fehler im Beispiel eigenständig und sehen Sie dann in den [Prüfschlüssel](/downloads/first-project/references/review-key.md): Endzeit, Teilnehmerzahl, erfundene Anmeldeart und die Umdeutung des freiwilligen Mitbringens eines Buchs zu einer Pflicht. Falls Ihre eigene Ankündigung Fehler enthält, korrigieren und prüfen Sie sie erneut.
 
-Direkter, als zu hoffen, dass es beim ersten Mal „schön“ wird.
+Bewahren Sie Ihr tatsächlich ausgefülltes Prüfprotokoll auf; kopieren Sie die Referenz des Autors nicht als Nachweis für einen eigenen Abschluss. Weitere Hinweise: [Diffs prüfen](/de/guide/quality/review-diffs/).
 
-## Häufige Missverständnisse
-
-### 1. Review erst bei echten Projekten
-
-Je früher die Review-Gewohnheit, desto weniger blindes Vertrauen später.
-
-### 2. Es gibt schon einen Plan — kein eigenes Urteil nötig
-
-Doch.
-
-Der Plan hilft nur; Sie prüfen weiterhin, ob der Bereich stimmt.
-
-Ergebnisse prüfen ist kein Extra — Teil der Nutzung.
-
-Weiter: [Erstes kleines Projekt abschließen](/de/guide/learning-paths/beginner/05-complete-first-project/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Gegen geprüfte Ergebnisprüfungs-, Diff-Review- und Einsteigerpfad-Seiten abgeglichen; trainiert die stabile Review-Gewohnheit „Grenzverletzung sehen, ablehnen, Aufgabe straffen“.  
-**Zuletzt geprüft:** 2026-07-26
+[Übungspaket und Vorbereitung](/de/guide/learning-paths/beginner/)

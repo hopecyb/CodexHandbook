@@ -3,7 +3,7 @@ title: Convertir un flujo de trabajo en Skill
 description: La tercera repetición de un proceso merece convertirse en Skill — disparador, instrucciones y aceptación en uno.
 locale: es
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

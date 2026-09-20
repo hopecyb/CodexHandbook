@@ -3,7 +3,7 @@ title: キーボードショートカット
 description: 現在の公式文書で確認できる App と IDE のショートカット操作だけを掲載します。
 locale: ja
 source_locale: zh-CN
-source_revision: 0edf4f3
+source_revision: 4f812d9
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

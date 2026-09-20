@@ -3,7 +3,7 @@ title: CI/CD
 description: 지속적 통합과 릴리스 흐름에 Codex를 연결합니다. 먼저 저위험 자동화부터 하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: fb8b1b7
+source_revision: 4aeb424
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

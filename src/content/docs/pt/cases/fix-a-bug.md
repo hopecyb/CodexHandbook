@@ -1,57 +1,48 @@
 ---
-title: Corrigir um bug
-description: Do teste em falha à correção mínima e regressão — o ciclo mais comum para programadores.
+title: "Corrigir um bug: por onde começar"
+description: Escolha o caminho adequado ao problema e siga para o caso completo com materiais executáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 27c707b
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: 405a687
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
+Esta é uma página inicial curta. As etapas completas, o código executável, as evidências dos testes antes e depois da correção e os prompts de cada fase ficam em [Corrigir um bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/). Assim, evitamos que duas páginas repitam o mesmo conteúdo e acabem divergindo.
 
-This is a short entry page. The complete steps, runnable code, red/green test evidence, and phase-specific prompts are maintained in [Verified bug fixing](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/) so the two pages do not drift.
+## Descubra qual etapa falta
 
-## Identify the missing step
-
-| Current situation | Start here |
+| Situação atual | Comece por aqui |
 |---|---|
-| You only know the result is wrong; there is no stable reproduction | [Diagnose before fixing](/pt/cases/workflows/diagnose-before-fixing/) |
-| A test fails reliably | [Verified bug fixing](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/) |
-| You do not know the module | [Understand a codebase](/pt/cases/understand-a-codebase/) |
-| The fix is complete and ready to merge | [Review a PR](/pt/cases/review-a-pr/) |
-| The test itself is unstable | Read [Run tests](/pt/guide/quality/run-tests/) first; a flaky test is not repair evidence |
+| Você sabe que o resultado está errado, mas ainda não consegue reproduzir o problema de forma estável | [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/) |
+| Já existe um teste que falha de modo consistente | [Corrigir um bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| O módulo envolvido ainda é desconhecido | [Entender a base de código](/pt/cases/understand-a-codebase/) |
+| A correção está pronta para ser mesclada | [Revisar um PR](/pt/cases/review-a-pr/) |
+| O próprio teste é instável | Leia primeiro [Executar testes](/pt/guide/quality/run-tests/) e não trate um teste instável como evidência da correção |
 
-## Minimal evidence loop
+## Ciclo mínimo de verificação
 
-Keep this evidence chain in any language or framework:
+Independentemente da linguagem ou do framework, preserve esta sequência de evidências:
 
-1. Reproduce the original failure reliably with an explicit command.
-2. Save the failing assertion, error output, and input conditions.
-3. Explain the root cause before making the smallest repair.
-4. Make the original failing test and new boundary tests pass.
-5. Run broader regression checks.
-6. Read the diff manually and reject unrelated changes.
+1. Reproduza o problema original de forma estável com um comando claro.
+2. Guarde a asserção que falhou, a saída do erro e as condições de entrada.
+3. Explique a causa raiz antes de fazer a menor correção possível.
+4. Faça passar o teste que falhava e novos testes de casos limites.
+5. Execute verificações de regressão mais amplas.
+6. Leia o diff manualmente para confirmar que não há alterações sem relação com o problema.
 
-Step 4 without step 1 does not prove that the test covers the original issue. A green full suite without diff review also does not prove that the change scope is correct.
+Cumprir o passo 4 sem o passo 1 não prova que o teste cobria o problema original. Da mesma forma, uma suíte inteira verde sem revisão do diff não prova que o escopo da alteração está correto.
 
-## Practice directly
+## Exercício pronto para executar
 
-The repository includes a JavaScript shopping-cart discount example with no third-party dependencies:
+O repositório inclui um exemplo de desconto em carrinho de compras em JavaScript, sem dependências de terceiros:
 
 ```bash
-# Starter: one test is expected to fail
+# Código inicial: espera-se que um teste falhe
 node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-# Reference solution: all three tests are expected to pass
+# Correção de referência: espera-se que os três testes passem
 node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-The complete materials are in [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Status:** verified
-**Applies to:** CLI / IDE
-**Verification basis:** This entry page maintains only path selection and a stable engineering loop. The expected failing and passing commands were run in the current repository.
-**Last verified:** 2026-08-25
+O material completo está em [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).

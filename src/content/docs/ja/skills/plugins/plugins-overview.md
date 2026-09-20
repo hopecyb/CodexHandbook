@@ -1,112 +1,107 @@
 ---
-title: Plugins 概要
-description: Skill、MCP、アプリコネクタをパッケージ化し、チームが統一配布・管理しやすくする。
+title: Plugins の概要
+description: Plugin の構成要素、対応する利用環境、インストール後の確認、信頼の境界を理解します。
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張機能は Plugin 非対応"
+  checkedAt: "2026-08-26"
 locale: ja
 source_locale: zh-CN
-source_revision: b2c5dae
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: a514206
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
+ChatGPT と Codex は共通の公開 Plugin ディレクトリを使用します。Plugin は関連する機能をまとめて、見つけてインストールできるワークフローにするものです。新しいツール呼び出しプロトコルを作るものではありません。
 
-## Plugin contents
+## Plugin に含められるもの
 
-| Component | Role | Installer review |
+| 構成要素 | 役割 | インストールする人が確認すべきこと |
 |---|---|---|
-| Skills | Reusable steps, references, scripts | Instruction fit and script trust |
-| Connectors | GitHub, Slack, Drive, and other services | OAuth scopes, writes, external data |
-| MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
-| Browser extensions | Browser capability for a workflow | Browser access and necessity |
-| Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
-| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
+| Skills | 再利用できる手順、参考資料、スクリプト | 指示が現在のタスクに合うか、スクリプトを信頼できるか |
+| Connectors | GitHub、Slack、Google Drive などのツールに接続 | OAuth scope、読み書きの操作、外部データの範囲 |
+| MCP servers | ツールの定義、認証、構造化データの返却 | サーバーの出典、ツール一覧、ログ、権限 |
+| Browser extensions | 特定のワークフロー向けにブラウザー機能を提供 | ブラウザーへのアクセス範囲と必要性 |
+| Hooks | ライフサイクルの節目でコマンドや MCP ツールを実行 | 有効化前に定義そのものを確認し、信頼すること |
+| Scheduled task templates | 定期タスクに対応する環境で使える再利用可能なひな形 | 頻度、権限、終了条件、人による確認 |
 
-## Difference from Skill and MCP
+## Skill や MCP との違い
 
-| Mechanism | Main question | PR review example |
+| 仕組み | 主に答える問い | PR レビューの組み合わせでの例 |
 |---|---|---|
-| Skill | Which steps? | Read diff, verify evidence, rank risk |
-| MCP / Connector | Which external tools? | Read GitHub PR and comments |
-| Hook | Which lifecycle check? | Scan secrets after a write |
-| Plugin | How is the bundle installed and distributed? | Team PR-review package |
+| Skill | どの手順で作業するか | diff を読み、根拠を確認し、リスク順に並べる |
+| MCP / Connector | どの外部ツールを呼べるか | GitHub の PR とコメントを読む |
+| Hook | ライフサイクルのどこで確認するか | ファイル書き込み後にシークレットを検査する |
+| Plugin | これらの機能をどう一緒にインストール・配布するか | チーム向けの「PR レビューパック」 |
 
-A Plugin is a distribution layer, not the final execution step. See [Capability map](/ja/skills/capability-map/).
+Plugin は配布のための層であり、実行経路の最後の段階ではありません。関係は[拡張機能マップ](/ja/skills/capability-map/)を参照してください。
 
-## Install and verify
+## インストールと初回確認
 
-### ChatGPT Web / desktop App
+### ChatGPT Web / デスクトップ App
 
-1. Open Plugins.
-2. Inspect publisher, description, and contents.
-3. Install; review each external authorization separately.
-4. Verify at low risk in a new Chat, Work, or Codex task.
+1. Plugins タブを開きます。
+2. 公開者、説明、含まれる機能を確認します。
+3. インストールします。外部サービスへの接続を求められたら、その承認範囲を別に確認します。
+4. 新しい Chat、Work、または Codex タスクで、リスクの低い確認を行います。
 
 ### Codex CLI
 
-1. Enter `/plugins`.
-2. Install from a configured marketplace.
-3. **Start a new session**, then verify the installed Skill or tool.
+1. `/plugins` と入力して Plugin ブラウザーを開きます。
+2. 設定済みの marketplace からインストールします。
+3. **新しいセッションを開始**してから、同梱された Skill やツールを確認します。
 
-The IDE integration does not support Plugins. Manage them in the desktop App or CLI.
+IDE 拡張機能は現在 Plugin に対応していません。「IDE に入口が見つからない」というトラブルシューティングを書くのではなく、ChatGPT デスクトップ App または Codex CLI で Plugin を管理してください。
 
-## Low-risk prompt
+## リスクの低い確認用プロンプト
 
 ```text
-Inspect only newly installed <plugin-name>; do not write:
-1. List related Skills and tools.
-2. Mark each tool read-only or externally mutating.
-3. Use test data or one read-only query.
-4. Name the component used and authorizations still requiring human review.
+インストールしたばかりの <plugin-name> だけを確認し、書き込みは行わないでください。
+1. このタスクで関連する Skills とツールを列挙してください。
+2. 各ツールが読み取り専用か、外部に副作用を生む可能性があるか説明してください。
+3. テストデータか読み取り専用の問い合わせで最小の呼び出しを一度行ってください。
+4. 実際に使用した構成要素と、引き続き人の確認が必要な承認を報告してください。
 ```
 
-Do not send messages, change states, delete data, or bulk-write during first verification.
+Plugin に外部接続が必要な場合、初回確認ではメッセージ送信、状態変更、データ削除、ファイルの一括書き込みを行わないでください。
 
-## Team adoption
+## チームへの導入手順
 
-1. **Inventory:** Skills, connectors, MCP, browser extensions, Hooks, templates.
-2. **Provenance:** marketplace, repository, publisher, update policy.
-3. **Least privilege:** test account and read-only scopes.
-4. **Pilot:** non-production project or small team.
-5. **Hook review:** inspect bundled Hook hash and behavior in `/hooks`.
-6. **Exit record:** disable, uninstall, rollback, revoke OAuth.
+1. **構成要素を洗い出す**：Skills、Connectors、MCP、Browser extensions、Hooks、テンプレートを一覧にします。
+2. **出典を確認する**：marketplace、リポジトリ、公開者、更新方針を確かめます。
+3. **権限を最小にする**：テスト用アカウントと読み取り専用 scope で試します。
+4. **隔離して試行する**：まず本番以外のプロジェクトか小規模なチームで使います。
+5. **Hook を確認する**：`/hooks` で Plugin 同梱 Hook の hash と動作を調べます。
+6. **終了手順を記録する**：無効化、アンインストール、ロールバック、OAuth 承認の取り消しを明記します。
 
-## Boundaries
+## 見落としてはいけない境界
 
-- Successful installation does not prove safety or data fit.
-- External authorization is a separate high-risk step.
-- Plugin Hooks run alongside matching Hooks from other sources.
-- Workspace administrators can restrict Plugins and tools.
-- Mobile uses installed Plugins but should not be assumed to have full management.
+- インストール成功は、構成要素の安全性や現在のデータへの適合性を証明しません。
+- Plugin が外部サービスとの接続を促すことがあります。その承認は別の、リスクの高い段階です。
+- Plugin の Hook は、ほかの出典から来た一致する Hook とともに動作します。古い Hook を自動で置き換えません。
+- Workspace の管理者は使える Plugin やツールを制限できます。個人に見える一覧と組織の許可範囲は同じとは限りません。
+- Mobile ではアカウントにある Plugin を利用できますが、完全な管理画面があるとは考えないでください。
 
-## When not to build a Plugin
+## Plugin を作る必要がない場合
 
-- One simple `SKILL.md` with no distribution problem.
-- One personal experimental script.
-- Unstable permission and update policy.
-- Users work only in the IDE integration.
+- 単純な `SKILL.md` が一つあるだけで、組み合わせや配布の課題がない場合。
+- 一度きりの個人用スクリプトをまだ素早く試している場合。
+- 権限と更新の方針がまだ安定していない場合。
+- 対象ユーザーが IDE 拡張機能だけを使う場合。
 
-Stabilize one Skill or MCP workflow before bundling it.
+個別の Skill や MCP ワークフローを安定させてから組み合わせて配布するほうが、通常は確認しやすくなります。
 
-## Acceptance checklist
+## 受け入れ確認リスト
 
-- [ ] Target surface supports Plugins.
-- [ ] Publisher and source are traceable.
-- [ ] External connections and OAuth scopes reviewed.
-- [ ] Plugin Hooks reviewed and trusted.
-- [ ] Read-only minimal task succeeds.
-- [ ] New session discovers expected Skill/tool.
-- [ ] Team has disable, rollback, revocation steps.
+- [ ] 対象の利用環境が Plugin に対応している。
+- [ ] 公開者と出典を追跡できる。
+- [ ] 外部接続と OAuth scope を確認した。
+- [ ] Plugin の Hook を確認し、信頼した。
+- [ ] 最小の読み取り専用タスクに成功した。
+- [ ] 新しいセッションで予定した Skill またはツールが見つかる。
+- [ ] チームが無効化、ロールバック、承認取り消しの手順を持っている。
 
-## Official sources
+## 公式資料
 
-- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
-
-**Last verified:** 2026-08-26
+- [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
+- [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)

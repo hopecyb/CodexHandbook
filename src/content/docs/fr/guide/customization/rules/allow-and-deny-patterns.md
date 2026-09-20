@@ -3,7 +3,7 @@ title: "Règles Allow et Deny"
 description: Contraindre ce que l'Agent peut exécuter avec des règles de commandes et de chemins — habitudes personnelles et lignes de base d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 0ae6680
+source_revision: 521ecc9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

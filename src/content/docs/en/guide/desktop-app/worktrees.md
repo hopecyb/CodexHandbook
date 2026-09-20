@@ -3,7 +3,7 @@ title: Worktrees
 description: Isolate parallel chats with Git worktrees and return safely to the local checkout.
 locale: en
 source_locale: zh-CN
-source_revision: f050c32
+source_revision: 3569716
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

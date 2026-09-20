@@ -3,7 +3,7 @@ title: Vue d'ensemble de Web et Cloud
 description: Parcourez le flux de tâches distantes, de la connexion du dépôt et d'un environnement reproductible jusqu'à la révision et à la pull request.
 locale: fr
 source_locale: zh-CN
-source_revision: 5861c62
+source_revision: 8fe7bea
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26

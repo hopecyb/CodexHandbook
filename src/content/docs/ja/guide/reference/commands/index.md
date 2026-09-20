@@ -1,21 +1,26 @@
 ---
 title: CLI コマンドリファレンス
-description: Codex CLI 常用サブコマンドとパラメータ早見——学習向け索引。公式手册の代替ではない。
+description: Codex CLI の主なサブコマンドと引数の早見表。学習用の索引であり、公式資料の代わりではありません。
 locale: ja
 source_locale: zh-CN
-source_revision: bdc537d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 6091bcc
+translation_status: draft
+translated_at: '2026-09-20'
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現行の公式 Developer commands の成熟度表と照合し、Stable の入口だけを列挙しました。--cd / -C、サンドボックス、承認の引数も確認済みです。Experimental や非推奨のコマンドは基本一覧に含めません。
+  checkedAt: '2026-08-26'
 ---
+
 
 コマンドリファレンスは入口判断用。パラメータ暗記より先に：
 
 > **今は対話入口か、単発コマンド入口か？**
 
-本ページは **Codex CLI** 常用入口をまとめ、検索と対照を助けます。**コマンド名、パラメータ、デフォルト値はバージョンで変わります**。実行前に必ず `codex --help` とサブコマンド `--help` を実行し、[OpenAI Codex ドキュメント](https://developers.openai.com/codex) を基準にしてください。
+このページは、現在 **Stable** とされる Codex CLI の入口を検索・比較しやすいようまとめたものです。実行前には `codex --help` と各サブコマンドの `--help` を確認し、成熟度と引数の全容は [Developer commands](https://learn.chatgpt.com/docs/developer-commands) を参照してください。
 
 ## いつ使うか
 
@@ -28,18 +33,22 @@ reviewed_at: 2026-08-26
 - 見ながら話しながら修正：`codex`
 - タスクを一度渡して終了時に結果：`codex exec`
 
-CLI 初心者なら、この一步で多くの入口選択問題は解けます。
+CLI 初心者なら、この区別で入口の選択はほぼできます。
 
-## コマンド概要（示意）
+## Stable コマンド一覧
 
-| 入口 | 用途 | 詳説 |
+| 入口 | 用途 | 詳細 |
 |---|---|---|
 | `codex` | 対話型 TUI セッション | [対話モード](/ja/guide/cli/interactive-mode/) |
-| `codex exec`（または同等） | 非対話単発/パイプラインタスク | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
-| 設定関連 | ユーザー/プロジェクト設定の読み書き | [CLI 設定](/ja/guide/cli/configuration/) |
+| `codex exec` / `codex e` | 非対話の単発タスク・パイプライン | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
+| `codex doctor` | インストール、設定、認証、実行環境、Git、端末の診断レポートを生成 | [CLI のトラブルシューティング](/ja/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | 認証を管理 | [サインインと認証](/ja/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | 保存されたセッションを再開・分岐 | [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | MCP サーバーを管理 | [MCP の接続](/ja/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Plugin のインストール、一覧表示、削除 | [Plugins](/ja/skills/plugins/) |
 
-:::caution[バージョン敏感]
-下表パラメータ名はコミュニティ文書の常见表記。**インストールした CLI と一致しない可能性があります**。更新後 `--help` を再確認。
+:::caution[成熟度の違い]
+公式リファレンスには Experimental、Beta、Deprecated のコマンドもあります。この基本一覧には Stable と混在させていません。必要なときは成熟度とリスクを先に確認してください。
 :::
 
 ## よくある誤解
@@ -65,7 +74,7 @@ CLI 初心者なら、この一步で多くの入口選択問題は解けます�
 ## 対話モード（概念）
 
 ```bash
-# リポジトリルートで対話セッション起動（示意）
+# リポジトリのルートで対話セッションを起動（例）
 codex
 
 # セッション内の常见操作（TUI を基準に）
@@ -97,15 +106,15 @@ CLI 初心者は：
 ## 非対話 exec（概念）
 
 ```bash
-# 作業ディレクトリと単発 prompt 指定（示意）
-codex exec --cd /path/to/repo "完全なタスク説明"
+# 作業ディレクトリと単発の prompt（例）
+codex exec --cd /path/to/repo "タスクの完全な説明"
 
-# 常见意図（パラメータ名は公式を基準に）
-# --cd          作業ディレクトリ
-# --model        モデル固定
+# 現在よく使う引数
+# --cd, -C       作業ディレクトリ
+# --model        モデルを固定
 # --sandbox      サンドボックス方針
-# --approval     承認方針（無人運用で特に重要）
-# stdin パイプ   ファイルまたは上流コマンドから prompt 読み取り
+# --ask-for-approval, -a  承認方針
+# stdin パイプ   ファイルまたは前段のコマンドから prompt を読む
 ```
 
 セキュリティ：[人工承認パターン](/ja/cases/workflows/human-approval-patterns/)
@@ -145,10 +154,3 @@ CI で stderr を無視しない。ログ保持は [診断優先](/ja/cases/work
 | CI で承認が止まる | prompt 絞り込み + 読み取り専用サンドボックス |
 
 [CLI トラブルシュート](/ja/guide/cli/troubleshooting/)
-
----
-
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 入口地図として書いているが、核心は `codex`、`codex exec`、セッション内 `/` コマンドと関連パラメータ意図。これらは現行 CLI の高変動製品細部。最新公式コマンド文書補足後に `verified` へ戻す。  
-**最終検証：** 2026-07-26

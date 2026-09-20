@@ -1,9 +1,11 @@
 ---
 title: Codex 指南
+prev: false
+next:
+  link: /guide/start-here/
+  label: 从这里开始
 description: 认识 Codex、选择客户端、完成第一次任务，并理解权限、上下文和验证。
 ---
-
-# Codex 指南
 
 这里帮助你理解 Codex 和 AI Agent 是什么、适合做什么，以及怎么从第一次使用逐步过渡到安全、稳定、可验收的工作流。
 

@@ -3,7 +3,7 @@ title: Imágenes y capturas
 description: Proporciona capturas y diseños a Codex, y gestiona archivos de imagen en la tarea.
 locale: es
 source_locale: zh-CN
-source_revision: b5ab733
+source_revision: adc2b88
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

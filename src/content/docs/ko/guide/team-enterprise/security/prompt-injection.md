@@ -3,7 +3,7 @@ title: 프롬프트 주입
 description: 신뢰할 수 없는 텍스트가 컨텍스트에 들어올 때——식별, 완화, 팀 정책 요점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 432173c
+source_revision: fdb83d1
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

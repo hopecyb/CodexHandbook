@@ -1,9 +1,15 @@
 ---
+caseCategory: office
+directoryOrder: 120
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "本页是手册内部的低风险入门练习：限定只改一个文件、禁止联网、要求读懂 diff 并按验收标准逐条检查；相关前置章节（安装、练习项目、验证）已完成交叉核对，内容不依赖具体产品版本细节。"
+  checkedAt: "2026-07-26"
 title: 第一个任务
 description: 用清晰提示词完成一次小改动，并学会检查结果。
 ---
-
-# 第一个任务
 
 以下示例默认 **桌面 App**；CLI/IDE 同样可用同一段提示词。
 
@@ -46,9 +52,3 @@ description: 用清晰提示词完成一次小改动，并学会检查结果。
 - [提示词基础](/prompts/basics/)
 - [验证](/guide/verification/)
 - [从这里开始](/guide/start-here/)
----
-
-**状态：** verified  
-**适用产品：** App / CLI / IDE / Cloud  
-**核验依据：** 本页是手册内部的低风险入门练习：限定只改一个文件、禁止联网、要求读懂 diff 并按验收标准逐条检查；相关前置章节（安装、练习项目、验证）已完成交叉核对，内容不依赖具体产品版本细节。  
-**最近核验：** 2026-07-26

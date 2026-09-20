@@ -3,7 +3,7 @@ title: 委任と follow-up
 description: 独立して実行できる Cloud タスクを開始し、同じチャットで方向と検収結果を修正します。
 locale: ja
 source_locale: zh-CN
-source_revision: 681ea7d
+source_revision: 38b322f
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

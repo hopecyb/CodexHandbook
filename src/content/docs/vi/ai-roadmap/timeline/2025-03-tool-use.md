@@ -1,48 +1,40 @@
 ---
 title: "Tool Use (sử dụng công cụ)"
-date: 2025-03-11
-year: 2025
-summary: "Tool Use để mô hình chọn, gọi và đọc công cụ như tìm kiếm, chạy mã, trình duyệt và cơ sở dữ liệu."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [tool-use, tools, agent, orchestration, function-calling]
-authored_by: ai-assisted
+description: "Sử dụng công cụ gồm chọn công cụ, tạo tham số, thực thi, đọc kết quả và quyết định bước tiếp theo. Một lần gọi thành công chưa có nghĩa toàn bộ tác vụ đã hoàn tất; cũng cần phân biệt lỗi thực thi với vấn đề do bước kiểm tra nghiệp vụ phát hiện."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Các sự kiện và mô tả dự án bên dưới đã được đối chiếu với nguồn gốc; lời khuyên học tập là nhận định của tác giả và không được trình bày như kết quả chạy thử sản phẩm."
+  evidence:
+    - label: "Thông báo ra mắt các công cụ mới cho Agent"
+      href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 902c66c
+source_revision: efd508a
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# Tool Use (sử dụng công cụ)
+## Sự kiện có thể kiểm chứng và phạm vi
 
-- Mốc thời gian chính:
-  - Engineering inflection: 2025-03-11 (Responses API and built-in tools)
-- Tài liệu chính thức:
-  - https://openai.com/index/new-tools-for-building-agents/
-  - https://platform.openai.com/docs/guides/tools
-- Ghi chú: Mục này ghi lại điểm chuyển trong việc áp dụng và ý nghĩa hiện tại của khái niệm này trong kỹ thuật ứng dụng AI.
+**Ngày: 11/03/2025 · Loại: ra mắt sản phẩm.** OpenAI công bố các công cụ mới cho Agent, gồm Responses API, công cụ tích hợp sẵn và Agents SDK. Thông báo này là một mốc sản phẩm của một nhà cung cấp cụ thể, không phải ngày mô hình bắt đầu sử dụng công cụ.
 
-## Nó Là Gì
+Nguồn: [thông báo ra mắt các công cụ mới cho Agent](https://openai.com/index/new-tools-for-building-agents/). Đối chiếu ngày 18/09/2026; ngày nguồn được công bố và ngày trang này được kiểm chứng có ý nghĩa khác nhau.
 
-Tool Use để mô hình chọn, gọi và đọc công cụ như tìm kiếm, chạy mã, trình duyệt và cơ sở dữ liệu.
+## Chức năng này giải quyết vấn đề gì
 
-## Nó Đưa Kỹ Thuật Ứng Dụng AI Từ Bước Nào Sang Bước Nào
+Sử dụng công cụ gồm chọn công cụ, tạo tham số, thực thi, đọc kết quả và quyết định bước tiếp theo. Một lần gọi thành công chưa có nghĩa toàn bộ tác vụ đã hoàn tất; cũng cần phân biệt lỗi thực thi với vấn đề do bước kiểm tra nghiệp vụ phát hiện.
 
-Nó đưa hệ thống từ gọi một hàm đơn lẻ sang điều phối nhiều năng lực để hoàn thành nhiệm vụ.
+## Gợi ý học tập và giới hạn áp dụng
 
-## Hiện Đang Ở Giai Đoạn Nào
+Sau đây là nhận định giảng dạy của trang này, không phải phép đo mức độ phổ biến hay hiệu quả trong ngành:
 
-Hiện tại tôi đánh dấu mục này là `emerging`.
+Giao các bước kiểm tra lặp lại được cho công cụ có mục đích rõ ràng, đồng thời lưu mã thoát, đầu ra và cách phục hồi. Hãy chứng minh các bước thủ công hoạt động trước, rồi mới cân nhắc lên lịch và gửi thông báo.
 
-Nó đang trở thành mainstream trong API và framework agent.
+## Bài thực hành
 
-## Nó Có Thể Thay Thế Điều Gì
+[Năm bài thực hành phục hồi sau lỗi](/vi/guide/reference/troubleshooting/failure-recovery-lab/): tái hiện một nhóm lỗi, đọc nhật ký trước thay đổi, chỉ sửa một biến rồi kiểm tra kết quả sau thay đổi. Bài thực hành dùng script cục bộ và không yêu cầu gọi API trong thông báo.
 
-Nó thay thế nhiều luồng thủ công: tìm, sao chép, chạy và kiểm tra.
-
-## Điều Gì Có Thể Thay Thế Nó
-
-Nó sẽ nằm trong harness và runtime agent có trạng thái và phục hồi.
+[Quay lại lộ trình và quy ước về ngày tháng](/vi/ai-roadmap/)

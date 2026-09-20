@@ -3,7 +3,7 @@ title: Configuration
 description: Vue d'ensemble des fichiers de configuration et des profils — quel comportement appartient à la configuration et quel ne l'appartient pas.
 locale: fr
 source_locale: zh-CN
-source_revision: 73d4bd8
+source_revision: 4d18d5e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

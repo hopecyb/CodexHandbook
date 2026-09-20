@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "API / CLI / Cloud"
+  basis: "Đã đối chiếu chéo với cấu trúc chương developer-platform hiện tại, các lối vào điều hướng và các trang CLI/CI/SDK liên quan trong kho này; trang chỉ làm rõ phân công ổn định rằng nền tảng nhà phát triển hướng tới tích hợp kỹ thuật, không tuyên bố tham số hay hành vi runtime cụ thể."
+  checkedAt: "2026-07-26"
 title: Nền tảng dành cho nhà phát triển
 description: "Tích hợp Codex vào hệ thống kỹ thuật bằng SDK, CLI chế độ không tương tác và CI/CD — dành cho nhà phát triển tích hợp."
 sidebar:
   order: 50
 locale: vi
 source_locale: zh-CN
-source_revision: 2e1e79b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: f58851e
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
 **Nền tảng dành cho nhà phát triển** dành cho người muốn **sản phẩm hóa** Codex vào pipeline: ứng dụng tùy chỉnh, review hàng loạt, cổng phát hành, cổng thông tin nội bộ. Việc hàng ngày kiểu «viết một Prompt để sửa bug» vẫn bắt đầu từ [Bắt đầu nhanh](/vi/guide/getting-started/).
@@ -40,13 +44,15 @@ Nó nghiêng về các tình huống như:
 
 ```text
 Hệ thống của bạn (CI / nền tảng nội bộ / SaaS)
-        ↓ API hoặc CLI
-Codex (mô hình + công cụ + chính sách)
+        ↓ SDK / CLI cục bộ hoặc ứng dụng khách App Server
+Môi trường thực thi có kiểm soát (lời gọi mô hình + công cụ + chính sách)
         ↓
 Nhà cung cấp Git / ticket / kho artifact
 ```
 
 ## Nguyên tắc thiết kế
+
+Codex SDK chạy một Agent cục bộ. Runner từ xa, hàng đợi và HTTP callback do bạn tự xây dựng là lựa chọn thiết kế của hệ thống tích hợp. Đừng suy ra từ sơ đồ rằng có một API thống nhất cho tác vụ đám mây được lưu trữ. Xem căn cứ và lời gọi tối thiểu trong [tổng quan SDK](/vi/guide/developer-platform/sdk-overview/).
 
 1. **Idempotent và có thể thử lại**: review cùng một PR nhiều lần nên so sánh được
 2. **Quyền tối thiểu**: token CI chỉ đọc hoặc giới hạn theo repo
@@ -85,9 +91,3 @@ Chương nền tảng nhà phát triển nói về «cách nối Codex vào hệ
 
 ## Nguồn tham chiếu
 - Tài liệu chính thức OpenAI Codex API / SDK
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** API / CLI / Cloud  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc chương developer-platform hiện tại, các lối vào điều hướng và các trang CLI/CI/SDK liên quan trong kho này; trang chỉ làm rõ phân công ổn định rằng nền tảng nhà phát triển hướng tới tích hợp kỹ thuật, không tuyên bố tham số hay hành vi runtime cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

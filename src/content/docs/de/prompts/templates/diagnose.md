@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Diagnose-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Diagnostizieren-Vorlage
 description: Zuerst Ursache finden, dann Fix besprechen.
 locale: de
 source_locale: zh-CN
-source_revision: b89ce2b
+source_revision: 2491371
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Diagnostizieren-Vorlage
 
 Typischer Irrtum bei Diagnose: man sagt „erst prüfen“, meint aber stillschweigend „direkt fixen“.
 
@@ -50,10 +54,3 @@ Die Vorlage verlangt zuerst, warum es kaputt ist — dann erst, wie ändern.
 
 - [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/)
 - [Bug-Fix-Fall](/de/cases/fix-a-bug/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Diagnose-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

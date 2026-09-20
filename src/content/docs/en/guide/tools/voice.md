@@ -3,7 +3,7 @@ title: Voice input and output
 description: When to use voice with Codex, limitations, and privacy considerations.
 locale: en
 source_locale: zh-CN
-source_revision: f94ad9e
+source_revision: 192bba2
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

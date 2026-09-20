@@ -1,99 +1,90 @@
 ---
-title: MCP 接続のデバッグ
-description: MCP サーバーが起動しない、ツールがタイムアウトする、結果が異常なときの体系的な切り分け手順。
+title: MCP 接続をデバッグする
+description: 設定、通信、認証、ツールの四層に分けて MCP の障害を特定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 829c1e9
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+source_revision: d35b635
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
+MCP の障害は「ツールが使えない」の一言にまとめられがちです。まずどの層で失敗しているかを判断し、その後は一度に一つの変数だけを変更するほうが早く解決できます。
 
-## Preserve four pieces of evidence
+## まず四つの証拠を保存する
 
 ```bash
 codex mcp list
 codex mcp --help
-node --version    # only for a Node.js STDIO server
-python3 --version # only for a Python STDIO server
+node --version   # STDIO サーバーが Node.js を使う場合のみ
+python3 --version # STDIO サーバーが Python を使う場合のみ
 ```
 
-Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
+加えて、サーバー名、通信方式が STDIO か Streamable HTTP か、エラーの原文、発生した環境がデスクトップ App・CLI・IDE のどれかを記録します。token の全文は記録しないでください。
 
-## Four-layer triage
+## 四層で切り分ける
 
-| Layer | Symptom | First check |
+| 層 | 典型的な症状 | 最初に確認すること |
 |---|---|---|
-| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
-| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
-| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
-| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+| 設定 | サーバーが一覧にない | ファイルパス、TOML 構文、サーバー名、`enabled` |
+| 起動・接続 | 初期化がタイムアウトする | STDIO コマンドと PATH、または HTTP URL、TLS、プロキシ |
+| 認証 | 401/403、ログイン要求 | OAuth の状態、token の環境変数、scope |
+| ツール | サーバーはオンラインだが呼び出しに失敗 | ツール名、引数、許可リスト、ツールのタイムアウト |
 
-## 1. Confirm configuration loaded
+## 1. 設定が実際に読み込まれているか確認する
 
-- User file: `~/.codex/config.toml`.
-- Project file: `.codex/config.toml`, loaded only for a trusted project.
-- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
-- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+- ユーザー単位のファイルは `~/.codex/config.toml` です。
+- プロジェクト単位のファイルは `.codex/config.toml` で、信頼できるプロジェクトでのみ読み込まれます。
+- デスクトップ App、CLI、IDE は同じ Codex host で設定を共有します。内容が食い違う三つのコピーを作らないでください。
+- `codex mcp list` またはセッション内の `/mcp` で実際の状態を確認します。「ファイルが存在する」だけでは成功の証拠になりません。
 
-## 2. STDIO startup failure
+## 2. STDIO サーバーが起動しない
 
-Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+`command` が PATH 上にあるか、ランタイムのバージョンがサーバーの要件を満たすか、`cwd` が存在するか、依存パッケージの提供元を信頼できるか確認します。
 
-Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+起動コマンドを直接実行しても、実行ファイルを起動できることしか証明できません。MCP サーバーがプロトコル入力を待ち続け、終了しないように見えるのは正常な場合があります。完全なツール呼び出しのテストと混同しないでください。
 
-Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+初期化が実際に遅い場合に限って `startup_timeout_sec` を引き上げます。既定値は 10 秒です。理由なく大きくすると、誤ったコマンドを隠してしまいます。
 
-## 3. Streamable HTTP connection failure
+## 3. Streamable HTTP の接続に失敗する
 
-Check in order:
+次の順に確認します。
 
-1. URL and TLS certificate.
-2. Corporate proxy or VPN.
-3. Existence of the environment variable named by `bearer_token_env_var`.
-4. Whether OAuth needs `codex mcp login <server-name>` again.
-5. Whether server logs received initialization.
+1. URL と TLS 証明書
+2. 会社のプロキシまたは VPN
+3. `bearer_token_env_var` が指す環境変数の有無
+4. OAuth で `codex mcp login <server-name>` を再実行する必要があるか
+5. サーバーのログに初期化リクエストが届いているか
 
-Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+「一時的な調査」のために token を静的な `http_headers` の値へ移さないでください。設定ファイルやスクリーンショットに残りやすくなります。
 
-## 4. Server online, tool unavailable
+## 4. サーバーはオンラインだがツールを使えない
 
-| Symptom | Check |
+| 症状 | 確認すること |
 |---|---|
-| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
-| Tool not found | Server version, renamed tool, stale session list |
-| Argument validation | Tool schema rather than old prompt fields |
-| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
-| Empty result | Verify source-system visibility and filters with the same identity |
+| ツールがまったく表示されない | `enabled_tools` / `disabled_tools`、サーバーが返すツール一覧 |
+| Tool not found | サーバーのバージョン、ツール名の変更、セッションに残る古い一覧 |
+| 引数の検証に失敗 | 古いプロンプトから項目を推測せず、ツールの schema を確認 |
+| 呼び出しがタイムアウト | クエリを小さくしてから `tool_timeout_sec` を確認。既定値は 60 秒 |
+| 結果が空 | 同じアカウントで元のシステムのデータ範囲とフィルター条件を確認 |
 
-## Minimal reproduction prompt
+## 最小再現用プロンプト
 
 ```text
-Inspect only MCP server <server-name>:
-1. Report visible tool names.
-2. Call <readonly-tool> with <minimal-arguments>.
-3. Preserve the error type and server message, but redact credentials.
-4. Do not call another server or write.
+MCP サーバー <server-name> だけを確認してください。
+1. 現在表示されるツール名を報告してください。
+2. <readonly-tool> を呼び出し、引数には <minimal-arguments> だけを使ってください。
+3. エラーの種類とサーバーのメッセージはそのまま残し、認証情報は隠してください。
+4. ほかのサーバーを呼び出さず、書き込みも行わないでください。
 ```
 
-## Acceptance after repair
+## 調査完了の基準
 
-- [ ] `codex mcp list` shows expected state.
-- [ ] One read-only tool succeeds with minimal arguments.
-- [ ] The root cause names a layer rather than “restart fixed it.”
-- [ ] Temporary tokens, debug logs, and broad permissions are removed.
-- [ ] Team configuration and repair notes are updated.
+- [ ] `codex mcp list` に期待どおりの状態が表示されます。
+- [ ] 読み取り専用ツールが一つ、最小の引数で成功します。
+- [ ] 根本原因を「再起動したら直った」ではなく、具体的な層で説明できます。
+- [ ] 一時的な token、デバッグログ、広い権限を撤回しました。
+- [ ] チームの設定と修正手順を更新しました。
 
-## Official source
+## 公式資料
 
-- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE
-
-**Last verified:** 2026-08-25
+- [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)

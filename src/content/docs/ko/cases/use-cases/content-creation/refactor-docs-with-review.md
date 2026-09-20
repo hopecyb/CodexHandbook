@@ -3,7 +3,7 @@ title: 검토와 함께 문서 사이트 리팩터
 description: "사례: Astro/Starlight 문서 프로젝트에서 링크와 장을 일괄 갱신—작은 걸음 diff, 빌드 검증."
 locale: ko
 source_locale: zh-CN
-source_revision: 3acaf23
+source_revision: db44ca3
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

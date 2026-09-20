@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Desktop Voice（视计划与工作区设置）"
+  basis: "OpenAI Help Center 当前《ChatGPT Voice》与《ChatGPT Work and Codex》都明确说明：Voice 可在桌面 App 中与 Work / Codex 配合，用于启动任务、跟进进度和协调工作；能力与可用性受计划、工作区设置与版本影响。本页内容聚焦语音的适用场景、隐私注意与“口述后回到文字确认”的方法。"
+  checkedAt: "2026-07-26"
 title: 语音输入与输出
 description: 用语音与 Codex 交互的场景、限制与隐私注意。
 sidebar:
@@ -99,10 +104,3 @@ sidebar:
 - 在语音里描述未脱敏的生产事故细节
 
 语音适合起步和跟进，不适合代替精确指令、敏感信息处理和最终验收。
-
----
-
-**状态：** verified  
-**适用产品：** App / Desktop Voice（视计划与工作区设置）  
-**核验依据：** OpenAI Help Center 当前《ChatGPT Voice》与《ChatGPT Work and Codex》都明确说明：Voice 可在桌面 App 中与 Work / Codex 配合，用于启动任务、跟进进度和协调工作；能力与可用性受计划、工作区设置与版本影响。本页内容聚焦语音的适用场景、隐私注意与“口述后回到文字确认”的方法。  
-**最近核验：** 2026-07-26

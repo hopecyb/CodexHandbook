@@ -1,92 +1,91 @@
 ---
-title: "Case: kiểm tra liên kết tài liệu theo lịch"
-description: Dùng Codex không tương tác hoặc CI quét liên kết chết trong site — case nhập môn tự động hóa nhóm.
+caseCategory: team
+directoryOrder: 100
+title: 'Tình huống: kiểm tra liên kết tài liệu và khôi phục khi thất bại'
+description: Tải bài tập kiểm tra liên kết HTML tĩnh, sửa từng bước trang thiếu và anchor hỏng, rồi chuẩn bị chạy định kỳ.
+contentType: case
+audiences:
+- developer
+- team
+level: intermediate
+outputs:
+- json
+- html
+editorialStatus: review
+verification:
+  kind: run-tested
+  checkedAt: '2026-09-18'
+  summary: Bảy bài kiểm tra tập lệnh đều đạt. Trên bản sao tạm, sửa từng lỗi một khiến số lỗi giảm từ hai xuống một rồi về không. Không kiểm tra liên kết ngoài qua mạng, cũng không chạy CI hay bộ lập lịch thật.
+  environment: Python 3.12.11 / Darwin arm64; thư viện chuẩn và HTML tĩnh tổng hợp do tác giả tạo, không dùng token.
+  evidence:
+  - label: Bản ghi chạy và khôi phục thực tế
+    href: /downloads/docs-link-audit/validation/record.md
+assets:
+- path: /downloads/docs-link-audit/docs-link-audit-1.0.0.zip
+  purpose: Tập lệnh kiểm tra liên kết, đầu vào lỗi, bản sửa tham chiếu, bài kiểm tra và bản ghi khôi phục từng bước
+  license: CC0-1.0
+  version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: e8fa8bd
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+source_revision: 0d21aa9
+translation_status: draft
+translated_at: '2026-09-20'
 ---
 
-## Siêu dữ liệu
+Trước khi lập lịch kiểm tra định kỳ, hãy xác nhận tập lệnh thực sự phát hiện lỗi và giải thích những gì đã kiểm tra. Bài tập bắt đầu bằng hai liên kết cố ý bị hỏng. Mỗi lần chỉ sửa một đích và quan sát kết quả thay đổi.
 
-| Trường | Nội dung |
-|---|---|
-| Đối tượng | Maintainer nhóm, Technical Writer |
-| Client | CLI + GitHub Actions |
-| Thời gian ước tính | 45–90 phút (kể cả cấu hình CI lần đầu) |
-| Ngày kiểm chứng | 2026-07-25 |
+[Tải trọn bộ bài tập](/downloads/docs-link-audit/docs-link-audit-1.0.0.zip) · [README](/downloads/docs-link-audit/README.md) · [Bản ghi khôi phục thực tế](/downloads/docs-link-audit/validation/recovery.json)
 
-## 1. Mục tiêu và ngữ cảnh
+## Chạy mẫu bị lỗi trước
 
-**Mục tiêu:** Mỗi tuần tự kiểm tra liên kết trong site tài liệu và liên kết ngoài then chốt; báo cáo liên kết chết bằng PR hoặc issue.
+Cần Python 3.10+, không cần thư viện bên thứ ba, khóa API hoặc mạng. Trong thư mục đã giải nén, chạy:
 
-**Tiêu chí thành công:**
-
-- CI hoặc workflow theo lịch chạy lại được
-- Xuất danh sách liên kết chết có cấu trúc (tệp, số dòng, URL)
-- Không sửa tệp không liên quan, không push
-
-**Ngoài phạm vi:** Crawler cả site, trang sau đăng nhập, kiểm thử hiệu năng.
-
-## 2. Chuẩn bị
-
-- Mã nguồn site tài liệu trong kho Git (ví dụ sổ tay này `src/content/docs/`)
-- Đã có `npm run build` hoặc script link checker (tùy chọn)
-- `GITHUB_TOKEN` chỉ đọc và `OPENAI_API_KEY` đặt trong org secrets
-
-## 3. Quy trình
-
-### Khám phá
-
-```text
-Đọc @src/content/docs/ và scripts hiện có trong package.json.
-Liệt kê hiện có link check chưa; nếu chưa, đề xuất phương án tối thiểu: liên kết nội bộ markdown + lấy mẫu liên kết ngoài tài liệu chính thức.
-Không sửa tệp.
+```sh
+python3 scripts/check_links.py fixtures/site
 ```
 
-### Lập kế hoạch
+Mã thoát dự kiến là 1. Báo cáo nêu tệp, số dòng, URL và lý do: `/missing/` ở dòng 4 của `index.html` không có trang tương ứng; `#old-anchor` ở dòng 5 không tồn tại trên trang đích. Một liên kết ngoài khác nằm trong `unchecked`, không được âm thầm tính là đạt.
 
-```text
-Đưa kế hoạch: đường dẫn tệp prompt, tên CI workflow, các trường JSON đầu ra có cấu trúc.
-Đợi tôi xác nhận rồi mới tạo tệp.
+## Mỗi lần sửa một lỗi
+
+Sao chép `fixtures/site` vào `work/` của bạn và giữ đầu vào gốc. Đầu tiên thay `/missing/` bằng `/guide/`, rồi chạy:
+
+```sh
+python3 scripts/check_links.py work
 ```
 
-### Thực thi
+Mã thoát vẫn là 1 nhưng chỉ còn lỗi anchor. Thay `#old-anchor` bằng `#install` rồi chạy lại: mã thoát là 0. Đối chiếu `solution/site` và [tài liệu rà soát thủ công](/downloads/docs-link-audit/solution/review.md) để chắc chắn không sửa nội dung khác.
 
-- Thêm `prompts/ci/link-check.md`
-- Thêm `.github/workflows/docs-link-check.yml` (minh họa, xem [script và pipeline](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Dùng [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/) hoặc script thuần + Codex phân loại lần hai
+Lần tự kiểm tra thực tế của tác giả ghi nhận lần lượt 2, 1, 0 lỗi; mã băm của mẫu gốc không đổi. [JSON trước sửa](/downloads/docs-link-audit/validation/stage-0.json) · [JSON sau sửa](/downloads/docs-link-audit/validation/stage-2.json)
 
-### Kiểm chứng
+## Hiểu kết quả và giới hạn
 
-- Chạy `codex exec` cục bộ một lần
-- CI thủ công `workflow_dispatch`
-- Cố ý chèn liên kết chết, xác nhận `pass: false`
+| Kết quả | Ý nghĩa | Bước tiếp theo |
+|---|---|---|
+| Thoát 0 | Tham chiếu nội bộ đạt | Đọc `unchecked`; không thể suy ra liên kết ngoài truy cập được |
+| Thoát 1 | Phát hiện trang hoặc anchor thiếu, hay đường dẫn vượt phạm vi | Xác nhận ý định của từng liên kết rồi sửa |
+| Thoát 2 | Không hoàn thành kiểm tra | Kiểm tra thư mục, đầu ra build, lỗi đọc hoặc thẻ `base` không hỗ trợ |
 
-## 4. Thất bại và phục hồi
+Tập lệnh đọc HTML sau khi build, hỗ trợ `index.html` trong thư mục, đường dẫn tương đối và từ gốc, cùng anchor HTML. Nó không phân tích tuyến JavaScript động, URL trong CSS, `srcset` hoặc quy tắc viết lại riêng của framework. Gặp `base href` nó sẽ dừng để tránh hiểu sai đường dẫn tương đối. URL ngoài và giao thức khác được ghi rõ là chưa kiểm tra.
 
-| Vấn đề | Xử lý |
-|---|---|
-| Site ngoài tạm 503 | Phân biệt liên kết chết cứng và thất bại mềm; định nghĩa trong prompt |
-| Parse JSON thất bại | Thắt chặt ràng buộc [đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/) |
-| Hết hạn mức | Đổi lịch tuần + kiểm tra tăng dần |
+Chạy bảy bài kiểm tra đi kèm:
 
-## 5. Đóng gói lại
+```sh
+python3 validation/test_links.py
+```
 
-- Sau lần thứ ba chạy thông thì đóng gói Skill: `docs-link-audit`
-- [Quy tắc lệnh](/vi/guide/customization/rules/team-rules/) của nhóm cho phép `npm run build` và git chỉ đọc
+Với dự án thật, hãy build theo hướng dẫn của dự án trước rồi đưa thư mục đầu ra cho tập lệnh. Trang này đã có bộ kiểm tra tham chiếu nội bộ riêng; bộ bài tập không thay thế tất cả bước xác thực phù hợp với framework.
 
-## 6. Chương liên quan
+## Sau đó đưa vào quy trình định kỳ
 
-- [Quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/)
-- [Tác vụ theo lịch Automations](/vi/skills/automations/scheduled-tasks/)
-- [Lộ trình nhóm](/vi/guide/learning-paths/team/)
+Giao cho bộ lập lịch hiện có chuỗi “build dự án → kiểm tra liên kết → lưu mã thoát và JSON”, cố định thư mục làm việc và môi trường phụ thuộc. Nếu build thất bại, dừng lại thay vì đọc đầu ra cũ. Tránh ghi đồng thời vào cùng một bản ghi.
 
----
+Trước tiên chạy thủ công một lần, sau đó kích hoạt thủ công trong môi trường lập lịch đích, cuối cùng mới đặt chu kỳ. So sánh với lần trước: không thay đổi thì giữ im lặng; có lỗi mới, lỗi kiểm tra hoặc phục hồi thì chuẩn bị tóm tắt thay đổi. Gửi thông báo thật vẫn phải tuân theo phạm vi được phép.
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương chế độ không tương tác, script và pipeline, đầu ra có cấu trúc, quy tắc nhóm và tự động hóa đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case tự động hóa nhóm ổn định “kiểm tra liên kết theo lịch, báo cáo có cấu trúc và dừng khi thất bại”.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Bộ bài tập không tạo tác vụ định kỳ, gửi thông báo, sửa trang thật hoặc chạy CI. Các bước lập lịch ở đây là hướng dẫn tích hợp, không phải bằng chứng bộ lập lịch đã chạy. Xem tiếp [hướng dẫn tác vụ định kỳ](/vi/skills/automations/scheduled-tasks/).
+
+## Xử lý liên kết ngoài
+
+Đặt phạm vi và tần suất kiểm tra liên kết ngoài được cho phép riêng. Mã 404, hạn chế xác thực, hết thời gian chờ và lỗi dịch vụ tạm thời có ý nghĩa khác nhau. Một lần truy cập thất bại không đủ để xóa liên kết. Bộ bài tập không kiểm tra liên kết ngoài thật và không trình bày phản hồi mô phỏng như lỗi mạng có thật.
+
+Khi kết hợp với [bài tập phân loại issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/), hãy tạo báo cáo cục bộ và ý kiến rà soát của con người trước khi quyết định tạo ticket.

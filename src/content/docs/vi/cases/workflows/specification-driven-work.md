@@ -3,7 +3,7 @@ title: Làm việc theo đặc tả
 description: Viết rõ đặc tả nghiệm thu được trước, rồi để Codex triển khai theo kế hoạch — phù hợp tác vụ giao có nhu cầu rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

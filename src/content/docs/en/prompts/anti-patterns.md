@@ -3,7 +3,7 @@ title: Prompt anti-patterns
 description: Vague phrasing, over-permissioning, and hidden-reasoning requests to avoid.
 locale: en
 source_locale: zh-CN
-source_revision: 6aba346
+source_revision: 8e89a5a
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Tarefas locais e Cloud
 description: Alternar execução local e Cloud na App.
 locale: pt
 source_locale: zh-CN
-source_revision: 95e2382
+source_revision: 741f686
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

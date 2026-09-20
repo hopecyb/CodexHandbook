@@ -3,7 +3,7 @@ title: Choosing the Right Mechanism
 description: A decision framework for where temporary prompts, AGENTS.md, memory, Skills, and MCP belong.
 locale: en
 source_locale: zh-CN
-source_revision: 99ae41f
+source_revision: 5fad7cb
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

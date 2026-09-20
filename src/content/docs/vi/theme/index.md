@@ -1,137 +1,81 @@
 ---
-title: Giao diện Codex
-description: "Hiểu Codex Dream Skin là gì, cách cài đặt và đổi nền, vì sao dùng CDP injection, và ranh giới an toàn cần kiểm tra trước khi dùng theme."
+title: "Giao diện chủ đề Codex"
+description: "Kiểm tra nguồn, phiên bản, khả năng tương tác và cách khôi phục của giao diện bên thứ ba; phân biệt lời mô tả dự án với kiểm thử của sổ tay."
+contentType: guide
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-09-18"
+  summary: "Đã đọc kho mã, trang phát hành và tài liệu cài đặt của dự án. Chưa cài giao diện, thử tương tác hoặc chạy quy trình gỡ và khôi phục; không bảo đảm tương thích."
+  evidence:
+    - label: "Mô tả dự án Dream Skin"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin
+    - label: "Hướng dẫn cài và gỡ trên macOS"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md
+    - label: "Gói phát hành và lịch sử phiên bản"
+      href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: vi
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-07-29
-reviewed_at: 2026-08-26
-source_revision: 8c0e360
+translation_status: draft
+translated_at: 2026-09-20
+source_revision: "4ecfa1c"
 ---
 
-# Giao diện Codex
+Codex Dream Skin là dự án giao diện bên thứ ba cho ứng dụng máy tính. Tài liệu dự án nói rằng nó thay đổi diện mạo qua kết nối CDP cục bộ mà không sửa gói cài đặt chính thức. Đây là cách dự án mô tả; sổ tay chưa xác minh hành vi tệp, mạng hoặc độ tương thích giao diện trên mọi phiên bản.
 
-Đổi skin cho Codex nghe như một việc nhỏ để giao diện đẹp hơn. Nhưng Codex Dream Skin thực chất là một giải pháp theme đầy đủ cho desktop: giữ nguyên tương tác gốc của Codex, không sửa gói cài đặt chính thức, và dùng injection từ bên ngoài để đưa nền, màu sắc và không khí thị giác vào giao diện thật.
+![Hình minh họa diện mạo giao diện](/theme/codex-dream-skin/article/codex-dream-skin-home.jpg)
 
-## Codex Dream Skin là gì
+Hình minh họa sẵn có trên trang không phải bằng chứng kiểm thử phiên bản lần này. Nó cũng không chứng minh ô nhập, nút phê duyệt và mọi màn hình tác vụ đều hoạt động tốt.
 
-Codex Dream Skin là dự án mã nguồn mở để đổi giao diện cho app Codex trên desktop. Nó đặt một hình nền 16:9 phía sau Codex và tự thích ứng với chế độ sáng/tối, vị trí trọng tâm và bảng màu. Sidebar, thẻ gợi ý, chọn dự án và ô nhập vẫn là control gốc có thể tương tác.
+## Phiên bản và trạng thái kiểm chứng
 
-![Codex Dream Skin áp dụng nền 16:9 cho màn hình chính Codex](/theme/codex-dream-skin/article/codex-dream-skin-home.jpg)
+| Mục | Kết quả kiểm tra lần này |
+|---|---|
+| Nguồn | [Kho mã dự án](https://github.com/Fei-Away/Codex-Dream-Skin) và [trang phát hành](https://github.com/Fei-Away/Codex-Dream-Skin/releases) |
+| Bản phát hành quan sát | [v1.5.18](https://github.com/Fei-Away/Codex-Dream-Skin/releases/tag/v1.5.18), đối chiếu 18/09/2026, commit `34335d27d54300eccb325cc652f6c93fef428b84`; chưa cài |
+| Thông tin client cục bộ | Đọc Info.plist ở chế độ chỉ đọc: 26.911.61220, build 9647, định danh com.openai.codex |
+| Tổ hợp giao diện và client đã thử | Không có; chưa thử cài, tương tác, gỡ |
+| Tương thích Windows | Sổ tay chưa thử |
+| Kết quả khôi phục | Chưa thử; quy trình và cách nghiệm thu ở dưới |
 
-_Màn hình chính thật của Codex sau khi áp theme; sidebar, thẻ gợi ý và ô nhập vẫn là control gốc._
+Ghi chú phát hành nói một số sửa đổi giao diện đã được kiểm tra với macOS Codex 26.901.41123 ở thượng nguồn. Phiên bản này khác 26.911.61220 được ghi ở đây nên không thể suy ra tổ hợp này tương thích. Liên kết cài đặt macOS trên trang cố định ở v1.5.18; với bản khác hãy xem tag tương ứng.
 
-Cách này rất khác với kiểu cũ là sửa binary để đổi skin:
+Chỉ đọc phiên bản client là thông tin môi trường, không phải bằng chứng tương thích giao diện. Dùng [bản ghi tương thích và khôi phục tài nguyên](/vi/guide/reference/resource-compatibility/) để lưu kết quả tự thử.
 
-| Cách làm | Sửa file chính thức | Làm hỏng chữ ký | Control gốc dùng được | Tự do đổi ảnh |
-| --- | --- | --- | --- | --- |
-| CDP injection (Dream Skin) | Không | Không | Có | Cao |
-| Sửa `app.asar` | Có | Có | Một phần | Trung bình |
-| Sáng/tối chính thức | Không | Không | Có | Không |
+## Chuẩn bị trước khi cài
 
-Sửa `app.asar` từng là cách phổ biến: mở gói tài nguyên của Codex, đổi CSS và ảnh rồi đóng gói lại. Vấn đề là chữ ký mất hiệu lực, mỗi lần Codex cập nhật có thể phải làm lại, và phần mềm bảo mật có thể chặn.
+1. Chọn phiên bản rõ ràng từ trang phát hành; ghi tên gói, địa chỉ tải và SHA-256. Nếu nhà phát hành có tệp checksum, so sánh với gói tải về. Hash khớp chỉ chứng minh tệp trùng nhau, không chứng minh chương trình an toàn.
+2. Lưu phiên bản client, hệ điều hành, cài đặt giao diện và bản sao ảnh tùy chỉnh bạn có quyền dùng; ghi vị trí sao lưu.
+3. Trước tiên kiểm tra màn hình chính, tác vụ, ô nhập, cuộn, tìm kiếm và phê duyệt ở giao diện gốc làm mốc đối chiếu.
+4. Đọc hướng dẫn cài, cập nhật và gỡ đúng bản phát hành. Tài liệu nhánh main có thể mới hơn bộ cài.
 
-CDP injection không sửa binary chính thức. Nó inject style và script từ bên ngoài Codex qua cổng debug, không chạm vào `.app`, `app.asar` hay chữ ký code.
+Trên macOS, xem [hướng dẫn cài của dự án](https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md); trên Windows, xem [hướng dẫn Windows](https://github.com/Fei-Away/Codex-Dream-Skin/blob/main/docs/install-windows.md). Đừng tự quy cảnh báo 'bị hỏng' hay bị hệ thống chặn là do thiếu chữ ký. Hãy kiểm tra nguồn, tính toàn vẹn gói và lỗi cụ thể rồi mới quyết định tiếp tục.
 
-Có thể làm: đổi skin, đổi nền, lưu nhiều theme, khôi phục giao diện chính thức bằng một thao tác.
+## Cần kiểm tra gì sau khi đổi ảnh
 
-Không làm:
+Dự án có chức năng quản lý ảnh nền và giao diện; tên menu tùy phiên bản. Hãy dùng ảnh bạn có quyền sử dụng và kiểm tra chế độ sáng/tối, co giãn cửa sổ và màn hình tác vụ thực tế.
 
-- Script cài đặt không âm thầm ghi API Key hoặc Base URL bên thứ ba; skin và cấu hình relay tách biệt.
-- Không sửa thư mục cài đặt chính thức và chữ ký.
-- CDP chỉ bind vào `127.0.0.1`; khi theme đang chạy vẫn nên tránh chương trình local không rõ nguồn gốc.
+- Ô nhập, nút và thông tin phê duyệt còn đọc được, nhấp được và lấy nét được không?
+- Ảnh nền có che kết quả tìm kiếm, đầu ra dài, diff mã hoặc thông báo lỗi không?
+- Sau khi chuyển trang và khởi động lại, giao diện hiện ra có đúng lựa chọn không?
+- Sau khi tắt giao diện, màn hình gốc có trở lại và vấn đề có còn tái hiện không?
 
-Dự án nói rõ đây không phải sản phẩm chính thức của OpenAI. Khi chọn khôi phục và gỡ cài đặt, Codex quay về giao diện chính thức và kết nối CDP bị ngắt.
+Nếu nội dung bị che hoặc không thao tác được, hãy dừng sử dụng và thực hiện khôi phục. Đừng thêm lớp kiểu khác để che vấn đề.
 
-Liên kết dự án:
+## Gỡ và khôi phục
 
-| Loại | URL | Mục đích |
-| --- | --- | --- |
-| GitHub dự án | [github.com/Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) | Xem mã nguồn, README, issue và hướng dẫn cài đặt |
-| Website dự án | [codex-dream-skin.org](https://codex-dream-skin.org/) | Đọc mô tả dự án, nguyên lý, ranh giới an toàn và hướng dẫn |
-| Tải xuống | [GitHub Releases](https://github.com/Fei-Away/Codex-Dream-Skin/releases) | Tải bộ cài macOS `.dmg` và Windows `.exe` |
-| Thư viện theme / Online Studio | [DreamSkin.cc](https://dreamskin.cc/) | Duyệt theme, thử online, tạo và gửi theme |
+Tài liệu macOS của dự án yêu cầu chọn 'Khôi phục gốc và gỡ cài đặt' trên thanh menu trước khi xóa ứng dụng giao diện. Giao diện và ảnh của người dùng được giữ hoặc dọn riêng. Hãy sao lưu tài nguyên tùy chỉnh trước. Windows phải theo tài liệu của phiên bản tương ứng, không dùng đường dẫn macOS.
 
-## Cài đặt và bắt đầu
+Các bước sau là cách sổ tay đề xuất nghiệm thu khôi phục, không phải bản ghi chạy thử đã hoàn thành:
 
-Trước khi cài, hãy mở Codex một lần và xác nhận app desktop khởi động, đăng nhập và thoát bình thường. Như vậy công cụ theme sẽ tìm được đúng môi trường Codex local.
+1. Lưu công việc trong client, ghi giao diện đang dùng và các tệp cần giữ.
+2. Dùng quy trình khôi phục của công cụ; giữ thông báo hoàn tất, thất bại hoặc trạng thái chưa rõ.
+3. Mở lại Codex qua lối vào thông thường, kiểm tra nền, chữ, ô nhập và điều hướng tác vụ.
+4. Xác nhận công cụ không tự khởi động hoặc bơm lại giao diện. Khi cần kiểm tra kỹ thuật, xem tiến trình và kết nối gỡ lỗi, không tùy tiện kết thúc tiến trình cùng tên.
+5. Chỉ xóa ứng dụng sau khi nghiệm thu đạt. Giữ ảnh tùy chỉnh cho đến khi quyết định riêng là không cần nữa.
 
-### macOS
+Có bản sao lưu, chương trình gỡ kết thúc hoặc cửa sổ giao diện đóng đều chưa đủ chứng minh khôi phục thành công. Nếu kết quả chưa rõ, lưu nhật ký và xem Issue của dự án, không ghi 'đã khôi phục'. Đừng xóa toàn bộ thư mục cấu hình Codex để gỡ giao diện.
 
-Trên macOS, thường tải file `.dmg` từ Releases của dự án. Sau khi cài, kéo `Codex Dream Skin.app` vào Applications, rồi quản lý theme, đổi nền và khôi phục giao diện chính thức từ thanh menu.
+## Phạm vi áp dụng
 
-Nếu hệ thống báo app "bị hỏng" hoặc không thể mở, thường là Gatekeeper chặn app chưa ký. Chỉ cho phép mở trong System Settings > Privacy & Security sau khi đã xác nhận nguồn đáng tin.
-
-### Windows
-
-Trên Windows, thường tải bộ cài từ Releases hoặc làm theo quy trình PowerShell trong tài liệu dự án. Sau khi cài, mở công cụ từ system tray để quản lý theme và đổi nền.
-
-Nếu SmartScreen hiện cảnh báo xanh, nguyên nhân thường là bộ cài thiếu chứng chỉ ký code. Chỉ tiếp tục khi nguồn đáng tin.
-
-### Vấn đề thường gặp
-
-| Hiện tượng | Nguyên nhân | Cách xử lý |
-| --- | --- | --- |
-| macOS báo app "bị hỏng" | App chưa ký bị Gatekeeper chặn | System Settings -> Privacy & Security -> Open Anyway |
-| Windows SmartScreen cảnh báo xanh | Thiếu chứng chỉ ký code | More info -> Run anyway |
-| Cài xong không có hiệu lực | Codex chưa từng được mở trước đó | Mở Codex, đăng nhập, thoát, rồi cài Dream Skin |
-| Theme lỗi sau khi Codex cập nhật | Bản cập nhật có thể đổi đường dẫn nội bộ | Tải bộ cài mới nhất và cài đè |
-
-Cài đè không xóa theme và ảnh đã lưu.
-
-## Đổi nền và quản lý theme
-
-Sau khi cài, chọn "Change Background" từ thanh menu macOS hoặc system tray Windows, rồi chọn một ảnh.
-
-![Xem trước và đổi theme trong Codex Dream Skin](/theme/codex-dream-skin/article/codex-dream-skin-gallery.jpg)
-
-_Sau khi đổi ảnh, hãy kiểm tra trang chủ, sidebar, ô nhập và trang task để đảm bảo khi dùng thật vẫn rõ và dễ đọc._
-
-Khi chọn ảnh, engine phân tích local độ sáng, màu chủ đạo, vị trí trọng tâm và bên nào ít thông tin hơn, rồi tạo biến theme phù hợp với ảnh đó. Theme có thể lưu, đặt tên và chuyển bằng một thao tác.
-
-Gothic Void Crusade là theme mặc định trong bộ cài public, do cộng đồng đóng góp. Bạn cũng có thể import bất kỳ ảnh nền 16:9 thuần nào.
-
-Quy tắc ảnh:
-
-- Khuyến nghị `2560 x 1440` 16:9, không có cửa sổ, sidebar, chữ hoặc logo được chèn sẵn.
-- Không đặt chủ thể đè lên ô nhập, sidebar và khu vực thẻ gợi ý của Codex.
-- Tránh nền quá sáng, quá rối hoặc tương phản quá mạnh.
-- Trước khi chia sẻ công khai hoặc dùng thương mại, xác nhận quyền với ảnh nền, nhân vật, nhãn hiệu, font và IP.
-
-Ảnh không đạt bố cục vẫn dùng được, nhưng nội dung gốc có thể che chủ thể hoặc làm chữ khó đọc.
-
-## Cách hoạt động
-
-### CDP injection
-
-CDP, Chrome DevTools Protocol, là giao thức debug từ xa của trình duyệt Chromium. Chrome DevTools dùng CDP khi debug trang mobile từ xa: trình duyệt mở một cổng debug local, công cụ bên ngoài kết nối và inject CSS, JavaScript vào trang.
-
-Codex desktop được xây trên Electron, bên dưới cũng là Chromium. Luồng của Dream Skin có thể rút gọn như sau:
-
-![Sơ đồ CDP injection trong bài](/theme/codex-dream-skin/article/cdp-injection-flow.png)
-
-```text
-Khởi động công cụ theme
-  -> Mở Codex desktop với endpoint CDP local
-  -> Kết nối vào tiến trình renderer Chromium của Codex
-  -> Inject CSS theme và DOM trang trí
-  -> Codex tiếp tục chạy bình thường, giao diện do lớp theme đảm nhiệm
-```
-
-Khi dừng injector, công cụ kiểm tra đồng thời PID, đường dẫn executable và thời gian khởi động để tránh dừng nhầm tiến trình.
-
-CSS được inject giữ nguyên tương tác gốc của sidebar, ô nhập và thẻ gợi ý. Wallpaper nằm dưới control gốc, ở giữa có lớp gradient bán trong suốt để giữ độ dễ đọc.
-
-### Màu thích ứng: tính local, không upload
-
-Sau khi đổi ảnh, Dream Skin downsample ảnh local trong Canvas, trích xuất màu chủ đạo, độ sáng và vị trí trọng tâm, rồi tính các biến CSS trong không gian HSL, gồm màu nhấn, màu phụ, màu highlight.
-
-Ở dark mode, nó bắt đầu từ màu chủ đạo tối hơn; ở light mode, nó bắt đầu từ xám sáng trung tính rồi tính màu chữ và màu nhấn tối hơn. Khi ảnh đổi, toàn bộ bảng màu được tính lại tự động.
-
-Theo route, trang chủ giữ wallpaper đầy đủ và lớp gradient; khi vào trang task, nền tự chuyển thành lớp môi trường ít gây nhiễu để ưu tiên nội dung.
-
-## Kết luận
-
-Ý tưởng CDP injection là inject style từ bên ngoài ứng dụng mà không sửa binary chính thức. Cách này không chỉ áp dụng cho Codex; về lý thuyết, app Electron nào hỗ trợ cổng CDP debug cũng có thể tùy biến theme tương tự.
-
-Nhu cầu cá nhân hóa môi trường phát triển là thật. Một theme tốt không chỉ "ngầu hơn"; nó cần giữ tương tác gốc, có thể khôi phục, có thể kiểm tra, và không trộn cải tiến thị giác với cấu hình model.
+CDP có thể thay đổi nội dung trang; 'không sửa gói chính thức' không có nghĩa là không ảnh hưởng thao tác. Hãy kiểm tra lại sau khi giao diện cập nhật. Cần xem lời mô tả của dự án về xử lý cục bộ, mạng và cơ chế khôi phục theo từng phiên bản. Sổ tay không cam kết mọi tài nguyên đều không tải lên, mọi phiên bản đều khôi phục bằng một nhấp hoặc cập nhật đè không bao giờ mất dữ liệu.

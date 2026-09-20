@@ -1,0 +1,22 @@
+[
+  {
+    "request": "依据给定资料判断支持格式和诊断设置是否确定",
+    "expected": "trigger"
+  },
+  {
+    "request": "比较两份互相冲突的版本说明，列出未决问题",
+    "expected": "trigger"
+  },
+  {
+    "request": "一个来源打不开，其他材料是否足以支撑结论",
+    "expected": "trigger"
+  },
+  {
+    "request": "帮我写一首虚构诗歌",
+    "expected": "do-not-trigger"
+  },
+  {
+    "request": "只统计目录中的文件数",
+    "expected": "do-not-trigger"
+  }
+]

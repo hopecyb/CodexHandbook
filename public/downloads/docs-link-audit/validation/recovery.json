@@ -1,0 +1,24 @@
+{
+  "runs": [
+    {
+      "stage": 0,
+      "exit_code": 1,
+      "findings": 2
+    },
+    {
+      "stage": 1,
+      "exit_code": 1,
+      "findings": 1
+    },
+    {
+      "stage": 2,
+      "exit_code": 0,
+      "findings": 0
+    }
+  ],
+  "fixture_sha256": {
+    "site/index.html": "a613faeecdd3e03cfe11b6d9ac4307ae6f3f9807108bad687fb1dd54b698c149",
+    "site/guide/index.html": "3de33b9eb0fd8d33c60673b81d42bfd60d5131c0a7e7153ca382ca0fdc917ab1"
+  },
+  "original_fixtures_unchanged": true
+}

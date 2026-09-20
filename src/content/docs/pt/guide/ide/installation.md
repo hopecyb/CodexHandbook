@@ -1,64 +1,57 @@
 ---
-title: Instalar a extensão IDE
-description: Instalar a extensão nos editores suportados.
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
+title: Instalar e ativar a integração no IDE
+description: Abrir o Codex corretamente em editores da família VS Code, no Xcode e nos IDE da JetBrains.
 locale: pt
 source_locale: zh-CN
-source_revision: fb7ff84
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 85e1691
+translation_status: draft
+translated_at: "2026-09-20"
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
+Há dois tipos de acesso ao Codex a partir de um IDE; os métodos de instalação não são intercambiáveis.
 
-IDE entry points fall into two groups; their installation paths are not interchangeable:
-
-| Editor | Current entry | How to open |
+| Editor | Forma de acesso atual | Como abrir |
 |---|---|---|
-| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Codex extension | Select the Codex icon or run `Codex: Open Codex Sidebar` |
-| Xcode | Xcode coding assistant integration | Start a chat and select the Codex Agent |
-| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Extensão Codex | Selecionar o ícone do Codex ou executar `Codex: Open Codex Sidebar` |
+| Xcode | Integração com o coding assistant do Xcode | Criar uma conversa e selecionar o Codex agent |
+| IDE da JetBrains | Integração com o JetBrains AI Chat | Abrir o AI Chat e selecionar o Codex |
 
-See [Supported editors](/pt/guide/ide/supported-editors/) for the complete matrix.
+Consulte [Editores suportados](/pt/guide/ide/supported-editors/) para conhecer todo o âmbito de suporte e os pontos de acesso oficiais.
 
-## Install and verify in VS Code-family editors
+## Instalação e verificação em editores da família VS Code
 
-1. Install the Codex extension from the official Marketplace entry.
-2. Open a practice project rather than an empty window.
-3. Select the Codex icon. If it is not visible, run `Codex: Open Codex Sidebar` from the Command Palette.
-4. Authenticate with a ChatGPT account or API key.
-5. Start a chat, attach the current file, and ask a read-only question.
+1. Instale a extensão Codex a partir da ligação oficial para o Marketplace.
+2. Abra um projeto de teste, não uma janela vazia.
+3. Selecione o ícone do Codex. Se não aparecer, execute `Codex: Open Codex Sidebar` na Command Palette.
+4. Autentique-se com uma conta ChatGPT ou uma API key.
+5. Crie uma conversa, refira o ficheiro aberto e faça uma pergunta que só exija leitura.
 
-Minimal acceptance prompt:
+Prompt mínimo para verificar a integração:
 
 ```text
-Read only the file that is currently open. Do not edit code.
-Explain its responsibility, inputs, and outputs in three points, citing a symbol
-name for each point.
+Leia apenas o ficheiro que tenho aberto, sem modificar o código.
+Explique em três pontos a sua responsabilidade, as entradas e as saídas; em cada ponto, cite o nome de um símbolo concreto.
 ```
 
-A response that matches the current file and symbols indicates that editor context is arriving correctly. Create a Git checkpoint before a write task.
+Se a resposta corresponder ao ficheiro e aos símbolos abertos, o contexto do editor foi transmitido corretamente. Antes de pedir alterações, crie um ponto de controlo no Git.
 
-## Common failures
+## Problemas frequentes
 
-- **Sidebar missing:** run `Codex: Open Codex Sidebar` from the Command Palette.
-- **Wrong context:** confirm that the project window, current file, and selection belong to the expected repository.
-- **Repeated sign-in:** CLI and IDE share cached authentication; check the active account and sign in again.
-- **Windows toolchain in WSL:** enable `chatgpt.runCodexInWindowsSubsystemForLinux` only when needed; changing it reloads VS Code.
-- **Different third-party behavior:** verify compatibility with the VS Code extension. Do not copy the Xcode or JetBrains entry point into another editor.
+- **A barra lateral não aparece**: execute `Codex: Open Codex Sidebar` na Command Palette.
+- **O contexto está errado**: confirme que a janela do projeto, o ficheiro aberto e a seleção pertencem ao repositório esperado.
+- **O início de sessão repete-se**: a CLI e o IDE partilham a autenticação em cache; verifique a conta ativa e volte a iniciar sessão.
+- **A cadeia de ferramentas Windows está no WSL**: ative `chatgpt.runCodexInWindowsSubsystemForLinux` se necessário. Alterar esta definição reinicia o VS Code.
+- **Um editor de terceiros comporta-se de outra forma**: confirme primeiro se a sua versão é compatível com a extensão VS Code. Não copie para esse editor as instruções de acesso do Xcode ou da JetBrains.
 
-For the longer beginner path, see [Install an IDE integration](/pt/guide/getting-started/install-ide-extension/).
+Para um percurso mais detalhado de introdução, consulte [Instalar a integração no IDE](/pt/guide/getting-started/install-ide-extension/).
 
-## Official sources
+## Fontes oficiais
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26
+- [Definições do IDE](https://learn.chatgpt.com/docs/ide/settings)

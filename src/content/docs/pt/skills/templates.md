@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "O runtime atual do Codex permite que Skills orientem o uso de arquivos anexos; esta página trata do padrão estável de template de saída, sem depender da UI ou do fluxo de instalação do cliente."
+  checkedAt: "2026-07-26"
 title: Diretório templates/
 description: Forneça templates de saída e esqueletos de relatório no Skill.
 locale: pt
 source_locale: zh-CN
-source_revision: 9f93d04
+source_revision: 82a9e01
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -13,7 +18,6 @@ reviewed_at: 2026-08-26
 
 Se `references/` tende a «o que consultar na entrada», `templates/` tende a «como a saída deve parecer». Resultados com estrutura fixa e fáceis de revisar cabem bem aqui.
 
-# Diretório templates/
 
 `templates/` guarda formatos de saída reutilizados na execução do Skill — por exemplo relatório de revisão, esqueleto de changelog, tabela de comparação de pesquisa.
 
@@ -78,9 +82,3 @@ Se o resultado quase não se repete, ou a estrutura muda muito a cada vez, forç
 Se duas ou três vezes seguidas você repetir «saia nesta estrutura», vale virar `templates/`.
 
 O valor central de `templates/` é estrutura de saída estável e mais fácil de reutilizar.
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base da Verificação:** O runtime atual do Codex permite que Skills orientem o uso de arquivos anexos; esta página trata do padrão estável de template de saída, sem depender da UI ou do fluxo de instalação do cliente.  
-**Última Verificação:** 2026-07-26

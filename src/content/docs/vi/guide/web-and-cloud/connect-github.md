@@ -1,72 +1,67 @@
 ---
 title: Kết nối GitHub
-description: "Nối Codex Cloud với repo GitHub — quyền, nhánh và môi trường."
+description: Cấu hình quyền truy cập GitHub cho Codex Cloud với phạm vi kho mã tối thiểu.
+legacyVerification:
+  status: "verified"
+  products: "Cloud、GitHub"
+  checkedAt: "2026-08-26"
 locale: vi
 source_locale: zh-CN
-source_revision: b811894
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: b126a7e
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
-Codex Cloud connects to GitHub or GitLab (Beta) before creating an environment for a repository. The GitHub authorization scope determines which repositories it can see. A local clone and unpushed changes are outside that scope.
+Codex Cloud cần kết nối với GitHub hoặc GitLab (Beta) trước khi tạo môi trường cho một kho mã. Phạm vi ủy quyền GitHub quyết định Codex có thể nhìn thấy những kho mã nào. Bản clone trên máy và các thay đổi chưa push nằm ngoài phạm vi đó.
 
-## Connect
+## Các bước kết nối
 
-1. Open Codex Cloud and sign in with a ChatGPT account.
-2. Connect GitHub when prompted.
-3. In GitHub authorization, select the organization and **only the required repositories**.
-4. Return to Codex, select the repository, and create a Cloud environment.
-5. Verify checkout, branch, and diff with a read-only or small-change task.
-6. To use PR review, enable Code review for the repository in Codex Settings.
+1. Mở Codex Cloud và đăng nhập bằng tài khoản ChatGPT.
+2. Kết nối GitHub khi được yêu cầu.
+3. Trên màn hình ủy quyền của GitHub, chọn tổ chức và **chỉ những kho mã cần thiết**.
+4. Quay lại Codex, chọn kho mã đó và tạo môi trường Cloud.
+5. Dùng tác vụ chỉ đọc hoặc thay đổi nhỏ để kiểm tra checkout, nhánh và diff.
+6. Nếu cần review PR, bật Code review cho kho mã trong Codex Settings.
 
-Authorize only repositories needed for the work. For team repositories, confirm that the organization permits the integration, your account has the required access, and branch protection remains enabled.
+Chỉ ủy quyền những kho mã cần dùng cho tác vụ này. Với kho mã của nhóm, hãy kiểm tra thêm việc tổ chức có cho phép cài đặt tích hợp hay không, tài khoản của bạn có đủ quyền hay không và cơ chế bảo vệ nhánh vẫn được duy trì.
 
-## Before and after connecting
+## Kiểm tra trước và sau khi kết nối
 
-- [ ] The target is not an unintended fork with the same name.
-- [ ] The default branch and task starting point are known.
-- [ ] Required local changes are pushed or explicitly excluded.
-- [ ] Direct, unreviewed writes to the main branch are blocked.
-- [ ] The environment has no unrestricted production credentials.
-- [ ] The first task changes only a low-risk file.
+- [ ] Kho mã đích không phải một fork trùng tên bị chọn nhầm.
+- [ ] Đã xác nhận nhánh mặc định và điểm bắt đầu của tác vụ.
+- [ ] Các thay đổi cục bộ cần thiết đã được push hoặc được loại trừ rõ ràng khỏi tác vụ.
+- [ ] Nhánh chính chặn việc ghi trực tiếp khi chưa qua review.
+- [ ] Môi trường không chứa thông tin xác thực production với toàn quyền.
+- [ ] Tác vụ đầu tiên chỉ sửa tệp có rủi ro thấp.
 
-## Two GitHub workflows
+## Hai cách dùng GitHub
 
-### Let Cloud implement a task
+### Để Cloud thực hiện tác vụ
 
-Select the repository environment and starting branch in Codex Cloud, then describe the goal. Review the diff before creating a PR.
+Trong Codex Cloud, chọn môi trường của kho mã và nhánh bắt đầu rồi mô tả mục tiêu. Khi tác vụ kết thúc, xem diff trước khi tạo PR.
 
-### Let Codex review a PR
+### Để Codex review PR
 
-After enabling Code review, comment on the PR:
+Sau khi bật Code review cho kho mã, hãy bình luận trong PR:
 
 ```text
 @codex review
 ```
 
-Codex posts a standard GitHub review. Automatic review must be enabled separately in Codex Settings. Teams can add repository-specific rules under `## Code Review Rules` in `AGENTS.md`.
+Codex sẽ đăng một GitHub review thông thường. Cần bật review tự động riêng trong Codex Settings. Nhóm có thể ghi quy tắc riêng của kho mã vào mục `## Code Review Rules` trong `AGENTS.md`.
 
-## Diagnose permission errors
+## Chẩn đoán vấn đề về quyền
 
-- Repository missing: inspect the GitHub repository scope.
-- Organization repository returns 403: inspect organization policy, SSO, and integration installation.
-- Automatic review cannot be enabled: confirm the required GitHub push or admin permission.
-- Cloud cannot see a local commit: Cloud checks out the remote repository; push it to an explicit branch.
+- **Không thấy kho mã trong danh sách**: kiểm tra phạm vi kho mã đã ủy quyền trên GitHub.
+- **Kho mã của tổ chức trả về 403**: kiểm tra chính sách tổ chức, SSO và quyền cài đặt tích hợp.
+- **Không bật được review tự động**: xác nhận bạn có quyền GitHub push hoặc admin theo yêu cầu.
+- **Cloud không thấy commit cục bộ**: Cloud chỉ checkout từ kho mã từ xa; hãy push commit lên một nhánh xác định.
 
-Do not grant access to every private repository to resolve one 403. Identify the exact target and missing permission first.
+Đừng cấp quyền cho toàn bộ kho mã riêng tư chỉ để khắc phục một lỗi 403. Trước tiên hãy xác định kho mã đích và quyền cụ thể còn thiếu.
 
-## Official sources
+## Nguồn chính thức
 
-- [Codex Cloud quickstart](https://learn.chatgpt.com/docs/cloud)
-- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** Cloud, GitHub
-
-**Kiểm chứng gần nhất:** 2026-08-26
+- [Bắt đầu nhanh với Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Review Pull Request trên GitHub](https://learn.chatgpt.com/docs/third-party/github)

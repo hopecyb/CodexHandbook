@@ -1,15 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite liefert eine Vorlage für Änderungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Ändern-Vorlage
 description: Begrenzte Iteration auf Bestehendem.
 locale: de
 source_locale: zh-CN
-source_revision: e8cb4aa
+source_revision: 6faf299
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
-# Ändern-Vorlage
 
 Diese Vorlage passt zu „auf Bestehendem etwas ändern“.
 
@@ -66,10 +70,3 @@ Neben „was ändern“ muss klar sein: „nur bis wohin“.
 
 - [Fertigstellungsstandard definieren](/de/prompts/define-done/)
 - [Constraints und Grenzen](/de/prompts/constraints-and-boundaries/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Änderungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

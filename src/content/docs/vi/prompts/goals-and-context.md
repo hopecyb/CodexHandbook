@@ -3,7 +3,7 @@ title: Mục tiêu và ngữ cảnh
 description: Để Codex biết cần hoàn thành gì và vì sao điều đó quan trọng.
 locale: vi
 source_locale: zh-CN
-source_revision: 6ec9636
+source_revision: 0a5141f
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

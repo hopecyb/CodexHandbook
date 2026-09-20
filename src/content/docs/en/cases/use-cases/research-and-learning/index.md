@@ -3,7 +3,7 @@ title: Research and learning
 description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 862362f
+source_revision: a0be881
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

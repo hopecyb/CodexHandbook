@@ -3,7 +3,7 @@ title: 병합 전 검토
 description: merge 전에 Codex로 구조화된 diff와 위험 검토를 합니다—사람·기계 분업이 명확합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ce05ae9
+source_revision: 78d5c03
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

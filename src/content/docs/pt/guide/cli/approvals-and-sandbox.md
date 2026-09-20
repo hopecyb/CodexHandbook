@@ -3,7 +3,7 @@ title: Aprovação e Sandbox
 description: Estratégias de aprovação para shell, escrita em disco e pedidos de rede na CLI, e como o Sandbox limita o comportamento do Agent.
 locale: pt
 source_locale: zh-CN
-source_revision: 8ea7880
+source_revision: 35afd39
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

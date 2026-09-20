@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / 桌面 App / Codex CLI / IDE（支持面因机制不同）"
+  basis: "已按 2026-08-25 OpenAI 官方 Skills、Plugins、MCP、Hooks 与 Scheduled tasks 文档核对职责、产品入口和安全边界。"
+  checkedAt: "2026-08-25"
 title: 如何选择扩展方式
 description: 根据要持久化的对象选择提示词、AGENTS.md、Skill、MCP、Hook、Plugin 或 Scheduled task。
 ---
@@ -135,10 +140,3 @@ description: 根据要持久化的对象选择提示词、AGENTS.md、Skill、MC
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**状态：** verified
-**适用产品：** ChatGPT Web / 桌面 App / Codex CLI / IDE（支持面因机制不同）
-**核验依据：** 已按 2026-08-25 OpenAI 官方 Skills、Plugins、MCP、Hooks 与 Scheduled tasks 文档核对职责、产品入口和安全边界。
-**最近核验：** 2026-08-25

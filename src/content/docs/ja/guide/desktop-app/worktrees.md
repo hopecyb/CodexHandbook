@@ -3,7 +3,7 @@ title: worktree
 description: Git worktree で並行チャットを隔離し、安全にローカルワークスペースへ戻します。
 locale: ja
 source_locale: zh-CN
-source_revision: f050c32
+source_revision: 3569716
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

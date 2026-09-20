@@ -1,48 +1,40 @@
 ---
-title: "OpenClaw(개인 AI 어시스턴트 게이트웨이)"
-date: 2026-01-29
-year: 2026
-summary: "WeChat, 이메일, 명령줄 같은 여러 진입점을 하나로 묶어 같은 AI 어시스턴트가 환경을 넘어 일관되게 도구에 접근하고 작업을 처리하게 한다."
-phase: emerging
-trend: rising
-signal: over-hyped
-adoption_effort: integration-heavy
-tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
-authored_by: ai-assisted
+title: "OpenClaw(개인 AI 어시스턴트 프로젝트)"
+description: "이 주제에서는 개인 어시스턴트가 채널, 대화, 외부 기능에 연결될 때 관리해야 하는 경계를 다룹니다. 지원 채널, 설치 방법, 권한은 프로젝트 버전에 따라 달라지므로 해당 버전의 설명을 확인하세요."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "아래 사건과 프로젝트 설명은 1차 출처와 대조했습니다. 학습 조언은 작성자의 판단이며 실제 제품 실행 검증으로 표시하지 않았습니다."
+  evidence:
+    - label: "OpenClaw 공식 저장소"
+      href: "https://github.com/openclaw/openclaw"
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 2435d64
+source_revision: "8868140"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-# OpenClaw(개인 AI 어시스턴트 게이트웨이)
+## 확인 가능한 사건과 범위
 
-- 주요 날짜:
-  - Project release / public visibility: 2026-01-29
-- 공식 참고 자료:
-  - https://github.com/jimleuk/openclaw
-- 참고: 이 항목은 개인 AI 어시스턴트를 여러 채널의 관문으로 통합하려는 시도를 기록한다.
+**유형: 프로젝트 주제 · 최초 공개일 기준으로 정렬하지 않음.** 이 페이지는 OpenClaw 공식 저장소를 프로젝트의 정체성과 설명을 확인하는 출처로 사용합니다. 이번 확인에서는 프로젝트의 최초 공개일을 확정할 충분한 증거를 얻지 못했으므로 해당 날짜를 표시하지 않습니다.
 
-## 무엇인가
+출처: [OpenClaw 공식 저장소](https://github.com/openclaw/openclaw). 확인일은 2026년 9월 18일입니다. 출처의 게시일과 이 페이지의 확인일은 의미가 다릅니다.
 
-OpenClaw는 여러 메시지 진입점과 실행 환경을 하나의 개인 AI 어시스턴트 게이트웨이로 묶는 방향을 보여주는 프로젝트다. 사용자는 채널이 달라도 같은 어시스턴트와 도구층을 사용할 수 있다.
+## 어떤 문제를 다루는가
 
-## AI 애플리케이션 엔지니어링을 어디에서 어디로 옮겼나
+이 주제에서는 개인 어시스턴트가 채널, 대화, 외부 기능에 연결될 때 관리해야 하는 경계를 다룹니다. 지원 채널, 설치 방법, 권한은 프로젝트 버전에 따라 달라지므로 해당 버전의 설명을 확인하세요.
 
-AI 애플리케이션은 “채널마다 별도 봇이나 자동화를 두는” 단계에서 “개인 어시스턴트를 중심으로 진입점을 통합하는” 단계로 이동했다.
+## 학습 권장 사항과 적용 범위
 
-## 현재 단계
+다음 내용은 이 사이트의 교육적 판단이며 업계 보급률이나 효과를 측정한 결과가 아닙니다.
 
-현재 이 항목은 `emerging` 단계로 본다.
+이런 프로젝트를 평가할 때는 먼저 메시지 출처, 데이터 목적지, 자격 증명 위치, 허용된 외부 동작을 그려 보세요. 여러 채널에 연결하면 관리해야 할 범위가 넓어집니다. 연결할 수 있다는 사실이 자동 전송이나 수정을 허가하는 것은 아닙니다.
 
-신흥이며 관심은 높지만 실제 엔지니어링 가치는 검증 중이다. 개인 사용에는 매력적이지만 안정 운영, 권한, 보안, 채널 차이가 과제다.
+## 실습
 
-## 대체할 수 있는 것
+[확장 방법 선택하기](/ko/skills/choosing-an-extension-method/): 연결하려는 시나리오에 필요한 기능을 나열하고 범위가 더 작은 확장 방법이 있는지 비교한 뒤 중단 및 되돌리기 계획을 작성하세요. 이 페이지는 OpenClaw 설치 실측이나 호환성 보증을 제공하지 않습니다.
 
-채널별로 흩어진 봇, 단발성 스크립트, 알림 중심 자동화의 일부를 대체할 수 있다.
-
-## 그것을 대체할 수 있는 것
-
-OS 수준 AI 어시스턴트, 기업 ID와 권한을 갖춘 Agent 플랫폼, 표준화된 개인 런타임에 흡수될 수 있다.
+[로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/)

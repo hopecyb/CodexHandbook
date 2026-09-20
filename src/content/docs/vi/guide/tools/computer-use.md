@@ -3,7 +3,7 @@ title: Computer Use
 description: Năng lực nâng cao thao tác GUI qua màn hình và thiết bị nhập — tình huống, rủi ro và phê duyệt.
 locale: vi
 source_locale: zh-CN
-source_revision: c783afc
+source_revision: d4a2e11
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

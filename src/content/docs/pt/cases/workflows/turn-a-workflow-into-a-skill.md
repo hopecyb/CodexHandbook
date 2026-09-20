@@ -3,7 +3,7 @@ title: Consolidar um fluxo de trabalho como Skill
 description: Um fluxo repetido pela terceira vez merece um Skill — gatilho, instruções e aceitação num só pacote.
 locale: pt
 source_locale: zh-CN
-source_revision: bc54539
+source_revision: 3dd18c5
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

@@ -3,7 +3,7 @@ title: Governação
 description: Página sobre políticas, limites e regras organizacionais — clarifica o que se pode fazer, o que não se pode e quem é responsável.
 locale: pt
 source_locale: zh-CN
-source_revision: 51ffd69
+source_revision: 6c37ab4
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26

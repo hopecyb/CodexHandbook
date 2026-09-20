@@ -3,7 +3,7 @@ title: Specification-driven work
 description: Write an acceptance-ready spec first, then have Codex implement to plan—good for clear delivery tasks.
 locale: en
 source_locale: zh-CN
-source_revision: cbd6ef7
+source_revision: 70fd8a4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

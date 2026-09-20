@@ -1,48 +1,39 @@
 ---
 title: "Context Engineering(컨텍스트 엔지니어링)"
-date: 2025-09-29
-year: 2025
-summary: "Prompt Engineering이 “어떻게 물을까”에 초점을 둔다면 Context Engineering은 “모델에게 무엇을 보여줄까”를 설계한다. 이력, 검색 지식, 도구 출력을 체계적으로 구성해 모델이 올바른 정보 위에서 추론하게 한다."
-phase: emerging
-trend: rising
-signal: well-calibrated
-tags: [context-engineering, agent, memory, context-window, llmops]
-authored_by: ai-assisted
+description: "컨텍스트에는 작업, 지침, 파일, 검색 결과, 도구 출력이 포함됩니다. 지금 작업에 넣을 내용, 필요할 때 읽을 내용, 압축 후 남길 내용을 결정해야 합니다."
+contentType: "guide"
+editorialStatus: "review"
+verification:
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "아래 사건과 프로젝트 설명은 1차 자료로 확인했습니다. 학습 조언은 작성자의 판단이며, 출처 확인이 제품을 직접 시험했다는 뜻은 아닙니다."
+  evidence:
+    - label: "컨텍스트 엔지니어링 글"
+      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: ko
 source_locale: zh-CN
-translation_status: reviewed
-translated_at: 2026-08-09
-reviewed_at: 2026-08-26
-source_revision: 5fc2d08
+source_revision: d668433
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## 확인 가능한 사건과 범위
 
-# Context Engineering(컨텍스트 엔지니어링)
+**날짜: 2025-09-29 · 유형: 엔지니어링 글.** Anthropic은 에이전트에 필요한 컨텍스트를 구성하는 방법을 다룬 *Effective context engineering for AI agents*를 발표했습니다. 이 글의 발표일은 개념이 처음 생긴 날짜가 아닙니다.
 
-- 주요 날짜:
-  - Application-engineering inflection: 2025-09-01
-- 공식 참고 자료:
-  - https://platform.openai.com/docs/guides/conversation-state
-  - https://platform.openai.com/docs/guides/retrieval
-- 참고: 이 항목은 컨텍스트 설계가 Prompt Engineering과 구분되는 핵심 역량으로 인식되기 시작한 단계를 기록한다.
+출처: [컨텍스트 엔지니어링 글](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents). 확인일은 2026-09-18입니다. 출처의 발표일과 이 페이지의 확인일은 의미가 다릅니다.
 
-## 무엇인가
+## 어떤 문제를 해결하나
 
-Context Engineering은 모델에 전달할 대화 이력, 시스템 지시, 검색 결과, 파일, 도구 출력, 메모리를 선택하고 압축하며 순서를 정하고 갱신하는 설계다.
+컨텍스트에는 작업, 지침, 파일, 검색 결과, 도구 출력이 포함됩니다. 지금 작업에 넣을 내용, 필요할 때 읽을 내용, 압축 후 남길 내용을 결정해야 합니다.
 
-## AI 애플리케이션 엔지니어링을 어디에서 어디로 옮겼나
+## 학습 조언과 적용 범위
 
-AI 애플리케이션은 “주로 프롬프트 문구를 다듬는” 단계에서 “작업 실행 환경으로서 전체 컨텍스트를 설계하는” 단계로 이동했다.
+다음은 이 사이트의 교육적 판단이며, 업계 보급률이나 효과를 측정한 결과가 아닙니다.
 
-## 현재 단계
+현재 판단에 관련된 사실과 근거를 찾을 수 있는 경로를 우선 제공하세요. 내용이 많아지면 잡음도 늘 수 있고, 압축된 요약이 핵심 파일을 대신할 수는 없습니다. 목표가 어긋나면 프롬프트를 추가하기 전에 기존 결과물과 제약을 확인하세요.
 
-현재 이 항목은 `emerging` 단계로 본다.
+## 직접 해 보기
 
-신흥이지만 빠르게 중요해지고 있다. RAG, Agent 메모리, 장문 처리, 멀티턴 작업에서는 모델 성능보다 컨텍스트 품질이 결과를 좌우하는 경우가 많다.
+[컨텍스트 집중 유지](/ko/guide/context/keep-context-focused/): 현재 작업에 꼭 읽어야 할 파일, 필요할 때 참고할 자료, 무관한 자료를 구분하세요. 목표, 완료한 내용, 미해결 질문, 근거 경로를 인계 기록으로 남기세요.
 
-## 대체할 수 있는 것
-
-긴 기록이나 문서를 그대로 밀어 넣는 거친 방식을 대체한다. 정보 선택, 압축, 배치가 명시적인 설계 대상이 된다.
-
-## 그것을 대체할 수 있는 것
-
-자동 컨텍스트 관리, 장기 기억 시스템, 상태를 가진 Agent 런타임에 흡수될 수 있다. 다만 “무엇을 보여줄지”를 결정하는 사상은 남는다.
+[로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/)

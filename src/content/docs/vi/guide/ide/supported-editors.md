@@ -1,64 +1,54 @@
 ---
-title: Trình soạn thảo được hỗ trợ
-description: Tiện ích Codex IDE hỗ trợ trình soạn thảo nào, cách chọn và hạn chế thường gặp.
+title: Các trình soạn thảo được hỗ trợ
+description: Phân biệt tiện ích tương thích với VS Code, tích hợp Xcode và tích hợp JetBrains.
 locale: vi
 source_locale: zh-CN
-source_revision: 1f0b54d
-translation_status: reviewed
-translated_at: 2026-08-26
+source_revision: 7b82896
+translation_status: draft
+translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
 ---
 
-Codex enters mainstream editors through different mechanisms: the Codex extension for VS Code-family editors, and native integration entry points for Xcode and JetBrains IDEs.
+Codex hiện có mặt trong các trình soạn thảo phổ biến theo nhiều cách: họ VS Code dùng tiện ích Codex, còn Xcode và các IDE JetBrains có điểm truy cập tích hợp riêng.
 
-## Current support paths
+## Các cách truy cập hiện được hỗ trợ
 
-| Editor | Codex entry | How to open |
+| Trình soạn thảo | Điểm truy cập Codex | Cách mở |
 |---|---|---|
-| Visual Studio Code | Codex extension | Codex icon or `Codex: Open Codex Sidebar` |
-| Cursor | Compatible Codex extension | Codex icon or Command Palette |
-| Windsurf | Compatible Codex extension | Codex icon or Command Palette |
-| Visual Studio Code Insiders | Codex extension | Extensions panel and Codex sidebar |
-| Xcode | Xcode coding assistant integration | Start a chat and select Codex Agent |
-| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
+| Visual Studio Code | Tiện ích Codex | Biểu tượng Codex hoặc `Codex: Open Codex Sidebar` |
+| Cursor | Tiện ích Codex tương thích | Biểu tượng Codex hoặc Command Palette |
+| Windsurf | Tiện ích Codex tương thích | Biểu tượng Codex hoặc Command Palette |
+| Visual Studio Code Insiders | Tiện ích Codex | Bảng tiện ích và thanh bên Codex |
+| Xcode | Tích hợp coding assistant của Xcode | Tạo cuộc trò chuyện mới và chọn Codex Agent |
+| IDE JetBrains | Tích hợp JetBrains AI Chat | Mở AI Chat và chọn Codex |
 
-Installation entry points and minimum versions can change. Start from the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide) rather than inferring official support from similarly named third-party extensions.
+Điểm cài đặt và phiên bản tối thiểu có thể thay đổi. Hãy luôn bắt đầu từ [trang Codex IDE chính thức](https://learn.chatgpt.com/docs/codex/ide); đừng cho rằng một tiện ích bên thứ ba được hỗ trợ chính thức chỉ vì có tên tương tự.
 
-## Best uses for the IDE entry point
+## Điểm truy cập trong IDE phù hợp nhất với việc gì
 
-- Attach the currently open file or selection directly to a question.
-- Explain, modify, and follow up on local code.
-- Review summaries and changes beside source code.
-- Keep small tasks local and delegate longer work when it grows.
+- Đưa ngay tệp đang mở hoặc vùng chọn vào câu hỏi.
+- Giải thích, sửa một đoạn mã cụ thể và tiếp tục trao đổi.
+- Rà soát bản tóm tắt và các thay đổi ngay bên cạnh mã nguồn.
+- Giữ tác vụ nhỏ ở máy cục bộ và giao tác vụ lớn hơn cho quy trình chạy lâu hơn.
 
-Example:
+Ví dụ:
 
 ```text
-Inspect the retry loop in the current selection.
-Explain the termination condition first, then make the smallest change.
-Modify only the current file and its corresponding test.
-Report the diff and test command; do not upgrade dependencies.
+Kiểm tra vòng lặp thử lại trong vùng chọn hiện tại.
+Trước tiên giải thích điều kiện dừng, rồi thực hiện thay đổi nhỏ nhất; chỉ sửa tệp hiện tại và bài kiểm thử tương ứng.
+Khi xong, báo cáo diff và lệnh kiểm thử. Không nâng cấp các thư viện phụ thuộc.
 ```
 
-## Keep multiple editors consistent
+## Giữ quy trình nhất quán trong nhóm dùng nhiều trình soạn thảo
 
-1. Put build, test, and formatting commands in repository `AGENTS.md` or contribution docs.
-2. Constrain file scope in prompts rather than relying on an IDE-specific button.
-3. Accept against the Git diff and the same test set, not merely “it runs in my IDE.”
-4. Write editor-specific instructions only when exact UI guidance is necessary.
+1. Ghi các lệnh build, kiểm thử và định dạng vào `AGENTS.md` của kho lưu trữ hoặc tài liệu đóng góp.
+2. Giới hạn phạm vi tệp trong prompt, thay vì phụ thuộc vào nút riêng của một IDE.
+3. Khi nghiệm thu, kiểm tra Git diff và chạy cùng một bộ kiểm thử, thay vì chỉ xác nhận “chạy được trong IDE của tôi”.
+4. Chỉ viết hướng dẫn riêng cho từng IDE khi cần chỉ rõ các thành phần giao diện.
 
-## Editors outside the list
+## Trình soạn thảo không có trong danh sách
 
-For editors outside this list, use [Codex CLI](/vi/guide/cli/) or the [desktop App](/vi/guide/desktop-app/). Do not force-install the VS Code package into an incompatible editor or treat a third-party integration as an OpenAI feature by default.
+Ưu tiên dùng [Codex CLI](/vi/guide/cli/) hoặc [ứng dụng máy tính](/vi/guide/desktop-app/). Đừng cố cài tiện ích VS Code vào trình soạn thảo không tương thích, cũng đừng mặc định xem tích hợp bên thứ ba là tính năng chính thức của OpenAI.
 
-See [Install and enable the IDE integration](/vi/guide/getting-started/install-ide-extension/) for installation and [Editor context](/vi/guide/ide/editor-context/) for context behavior.
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** IDE
-
-**Kiểm chứng gần nhất:** 2026-08-26
+Xem [Cài đặt tích hợp IDE](/vi/guide/getting-started/install-ide-extension/) để biết các bước cài đặt và [Ngữ cảnh trình soạn thảo](/vi/guide/ide/editor-context/) để học cách sử dụng ngữ cảnh.

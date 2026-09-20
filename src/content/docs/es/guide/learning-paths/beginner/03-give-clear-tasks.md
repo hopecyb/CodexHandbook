@@ -1,58 +1,54 @@
 ---
-title: Dar Tareas claras
-description: Organiza el Prompt con objetivo, contexto, restricciones y criterios de aceptación.
-locale: es
-source_locale: zh-CN
-source_revision: 7048d91
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Dar tareas claras"
+description: "Prepara un aviso a partir de datos fijos y conserva como desconocida la información no confirmada."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 30
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Los materiales fijos y la referencia del autor están completos; las operaciones con archivos se ejecutaron en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo o lectores."
+  evidence:
+    - label: "Registro de operaciones con archivos del autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/es/guide/learning-paths/beginner/02-work-with-files/"
+  label: "Trabajar con archivos"
+next:
+  link: "/es/guide/learning-paths/beginner/04-review-results/"
+  label: "Revisar resultados"
+locale: es
+source_locale: zh-CN
+source_revision: 664fdf7
+translation_status: draft
+translated_at: 2026-09-20
 ---
+## Requisitos previos
 
-## Objetivo de este paso
+Completa primero el segundo paso. `facts.md` contiene siete datos numerados y `notice.md` ya incluye un comentario que indica que no se ha publicado.
 
-Escribe un Prompt siguiendo un marco estable.
+## Organizar el aviso con criterios precisos
 
-El marco está en: [Anatomía de una buena Tarea](/es/prompts/task-anatomy/)
+```text
+Usa únicamente facts.md de este directorio como fuente para convertir notice.md en un aviso del evento.
+Conserva sin cambios el comentario de estado exacto <!-- 状态：练习草稿，未发布 -->.
+Incluye fecha y hora, lugar, plazas, coste, preparativos y una sección «Pendiente de confirmar».
+Marca cada dato con su número F correspondiente. Deja como desconocido lo que no esté confirmado;
+no añadas código QR, teléfono ni enlace de inscripción.
+Modifica solo notice.md. No cambies facts.md ni private-note.md, no crees archivos,
+no accedas a la red ni publiques o envíes contenido.
+Al terminar, enumera los cambios y los datos que los respaldan. Si las fuentes se contradicen, explica el conflicto y déjalo pendiente de confirmar.
+```
 
-Los dos pasos anteriores se centraban en «decir la Tarea con claridad»; este paso sigue con «hacerla más estable».
+El objetivo es un aviso verificable; el contexto es un evento didáctico ficticio; la entrada es `facts.md`; el límite es modificar solo `notice.md`. Los criterios de aceptación especifican contenido y archivos, en lugar de sustituirlos por «escríbelo más profesionalmente».
 
-## Ejercicio
+## Criterios para completar el paso
 
-Elige un cambio pequeño (por ejemplo, ordenar la lista de `hello.md`) y escribe un Prompt que incluya: objetivo, contexto, entradas, restricciones, aceptación y límites de permiso. Pide primero un plan y solo después autoriza la ejecución.
+La fecha y hora son 2026-10-17 de 14:00 a 15:30; el lugar es la sala de lectura ficticia indicada en los materiales; hay 18 plazas, es gratuito y llevar un libro es opcional. La forma de inscripción sigue pendiente de confirmar. Comprueba uno por uno que cada número F citado respalde la frase correspondiente.
 
-## Puntos clave del ejercicio
+Comprueba el resultado por tu cuenta antes de consultar el [aviso de referencia del autor](/downloads/first-project/references/notice.md). El estilo no tiene que coincidir, pero sí los datos correctos, los puntos pendientes y el alcance de los cambios. Si hay un error, corrige el problema concreto; no permitas que el modelo reescriba el archivo de datos para ajustar la fuente al resultado.
 
-No se practica la plantilla en sí, sino dividir la Tarea en bloques de información estables:
-
-- Qué hay que hacer
-- Con qué material
-- Qué no se puede hacer
-- Qué cuenta como terminado
-
-Cuando estos bloques están claros, las Tareas complejas también suelen ser más estables.
-
-## Malentendidos frecuentes
-
-### 1. Cuanto más corta es la Tarea, más natural parece
-
-Natural no siempre es más estable.
-
-En el primer ejercicio, un poco más de estructura reduce malentendidos.
-
-### 2. Con el objetivo basta; la aceptación se puede omitir
-
-Sin aceptación, es más difícil saber si el resultado «no está terminado» o «simplemente no te gusta».
-
-La clave de una Tarea clara es que objetivo, límites y criterios de finalización aparezcan juntos.
-
-Siguiente: [Revisar resultados](/es/guide/learning-paths/beginner/04-review-results/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con los capítulos ya verificados de anatomía de una buena Tarea, planificación y ruta para principiantes; esta página se centra en el método estable de escribir a la vez objetivo, contexto, restricciones y criterios de aceptación.  
-**Última verificación:** 2026-07-26
+[Paquete de práctica e instrucciones de preparación](/es/guide/learning-paths/beginner/)

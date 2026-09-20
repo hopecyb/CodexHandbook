@@ -1,57 +1,53 @@
 ---
-title: Revisar resultados
-description: Crea el hábito de revisar el diff, ejecutar la Verificación y preguntar de nuevo.
-locale: es
-source_locale: zh-CN
-source_revision: 82d6754
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Revisar resultados"
+description: "Practica la detección de errores con un ejemplo fijo defectuoso y luego revisa tu propio aviso."
+contentType: "path"
+audiences: ["beginner"]
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
+verification:
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Ya están completos los materiales fijos y el resultado de referencia del autor. Se ejecutó el script de operaciones con archivos en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo ni con lectores."
+  evidence:
+    - label: "Registro de operaciones con archivos del autor"
+      href: "/downloads/first-project/validation/record.json"
+prev:
+  link: "/es/guide/learning-paths/beginner/03-give-clear-tasks/"
+  label: "Dar tareas claras"
+next:
+  link: "/es/guide/learning-paths/beginner/05-complete-first-project/"
+  label: "Completar tu primer proyecto pequeño"
+locale: es
+source_locale: zh-CN
+source_revision: "e426ec4"
+translation_status: draft
+translated_at: 2026-09-20
 ---
 
-## Objetivo de este paso
+## Primero, examina un ejemplo con errores conocidos
 
-Sustituye «mirar un momento y dar por bueno» por una comprobación fija.
+Abre el [aviso erróneo preparado por el autor](/downloads/first-project/references/flawed-notice.md), compáralo con `facts.md` y anota cada frase incorrecta, el número de dato correspondiente y cómo corregirla. El ejemplo no es una salida del modelo ni demuestra que un prompt determinado tenga que fallar.
 
-Listas: [Revisar el resultado](/es/guide/getting-started/review-the-result/) · [Revisar diferencias](/es/guide/quality/review-diffs/)
+No relajes deliberadamente los permisos de tu directorio de trabajo real para provocar cambios fuera de alcance. El ejemplo fijo ya sirve para practicar la detección de errores y comparar los resultados repetidamente.
 
-Mucha gente se salta este paso. Usar Codex con estabilidad suele depender de si sabes hacer review del resultado.
+## Después, revisa tu propio resultado
 
-## Ejercicio
+Copia `templates/review.md` del paquete a una carpeta nueva llamada `records` fuera del directorio de trabajo y completa cada punto:
 
-Da a propósito un Prompt vago fácil de sobrepasar, observa el plan; rechaza los pasos fuera de alcance, reescribe las restricciones y vuelve a ejecutar.
+- ¿Son correctos la hora, el lugar, el aforo, el coste y los preparativos?
+- ¿Sigue sin conocerse el método de inscripción y respaldan los números de dato el texto?
+- ¿Se cambió solo notice.md? ¿Siguen iguales los datos y la nota originales?
+- ¿Se crearon o borraron archivos adicionales o se envió algo fuera?
 
-## Puntos clave del ejercicio
+Marca los puntos desconocidos como «no comprobados»; no los des por correctos solo porque el modelo diga «terminado».
 
-Aquí se practica sobre todo:
+## Criterios de finalización
 
-- Detectar si se prepara a salir del alcance
-- Saber cuándo rechazar
-- Saber cómo acotar una Tarea vaga y volver a intentarlo
+Señala de manera independiente los cuatro errores de hecho del ejemplo y luego consulta la [clave de revisión](/downloads/first-project/references/review-key.md): la hora de finalización, el número de asistentes, un método de inscripción inventado y la conversión de traer un libro voluntariamente en una obligación. Si tu aviso tiene problemas, corrígelos y vuelve a comprobarlo.
 
-Eso es más directo que esperar que lo haga perfecto a la primera.
+Guarda el registro de revisión que realmente completaste; no copies la referencia del autor como prueba de haber terminado. Relacionado: [Revisar diferencias](/es/guide/quality/review-diffs/).
 
-## Malentendidos frecuentes
-
-### 1. El review solo hace falta en proyectos formales posteriores
-
-Cuanto antes se forme el hábito de review, menos se confiará a ciegas en el resultado.
-
-### 2. Si ya dio un plan, no hace falta juzgar tú
-
-Tampoco.
-
-El plan solo ayuda; sigues teniendo que ver si toca un alcance que no debía.
-
-Revisar el resultado no es un paso extra: forma parte del uso.
-
-Siguiente: [Completar el primer proyecto pequeño](/es/guide/learning-paths/beginner/05-complete-first-project/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con los capítulos ya verificados de revisión de resultados, revisión de diferencias y ruta para principiantes; esta página solo entrena el hábito estable de «detectar salidas de alcance, rechazar pasos inadecuados y acotar de nuevo la Tarea».  
-**Última verificación:** 2026-07-26
+[Paquete del ejercicio y preparación](/es/guide/learning-paths/beginner/)

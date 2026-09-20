@@ -1,9 +1,14 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página é visão geral de navegação e método do site; o framework «requisitos da Tarefa, material de arquivo, regras do projeto e histórico da conversa formam juntos o Contexto» foi cruzado item a item com os capítulos atuais de Contexto e de tratamento de arquivos, sem depender de detalhes voláteis de interface."
+  checkedAt: "2026-07-26"
 title: Contexto e arquivos
 description: Gerencie projeto, arquivos, Contexto de conversa e tipos comuns de entrada.
 locale: pt
 source_locale: zh-CN
-source_revision: 2007fae
+source_revision: 83f41eb
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -11,7 +16,6 @@ sidebar:
   order: 15
 ---
 
-# Contexto e arquivos
 
 Contexto é a informação que o Codex, neste momento, consegue ver, consultar e usar para agir.
 
@@ -81,10 +85,3 @@ Não precisa ler tudo de uma vez. Pode seguir esta ordem:
 3. Conforme o tipo de material em mãos, leia o capítulo de arquivo correspondente
 
 Contexto é o monte de informação que o Codex tem à mão ao julgar; se você der certo, o resultado também fica mais fácil de acertar.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página é visão geral de navegação e método do site; o framework «requisitos da Tarefa, material de arquivo, regras do projeto e histórico da conversa formam juntos o Contexto» foi cruzado item a item com os capítulos atuais de Contexto e de tratamento de arquivos, sem depender de detalhes voláteis de interface.  
-**Última verificação:** 2026-07-26
