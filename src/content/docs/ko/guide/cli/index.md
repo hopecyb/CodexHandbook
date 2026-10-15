@@ -5,7 +5,7 @@ sidebar:
   order: 11
 locale: ko
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -32,6 +32,8 @@ CLI는 터미널 사용자와 스크립트·CI 통합에 맞습니다.
 - [문제 해결](/ko/guide/cli/troubleshooting/)
 
 완전한 명령 참고는 [CLI 명령 참고](/ko/guide/reference/commands/)를 보세요.
+
+![일러스트: 작은 도우미가 터미널 창 위에 앉아 명령을 입력하고, 터미널은 스크립트와 테스트로 이어진다](/illustrations/cli.webp)
 
 ## 처음 사용할 때 먼저 구분할 것
 

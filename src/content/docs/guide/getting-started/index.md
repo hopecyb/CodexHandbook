@@ -16,6 +16,8 @@ sidebar:
 
 如果你最想解决的是“怎么开始”和“怎么避免一开始就做错”，这一章就是最直接的入口。
 
+![插画：四级台阶依次是准备电脑、登录、创建练习项目和完成第一个任务，小助手陪人一起往上走](/illustrations/getting-started.webp)
+
 ## 这一章包含什么
 
 - 第一次上手前最少要准备什么
@@ -26,7 +28,7 @@ sidebar:
 ## 步骤
 
 1. [账号、套餐与访问](/guide/getting-started/account-plans-and-access/)
-2. [选择客户端](/guide/getting-started/choose-your-codex-client/)
+2. [选择客户端](/guide/choose-your-client/)
 3. 安装：[桌面 App](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
 4. [登录](/guide/getting-started/sign-in-and-authentication/)
 5. [创建练习项目](/guide/getting-started/create-your-first-project/)

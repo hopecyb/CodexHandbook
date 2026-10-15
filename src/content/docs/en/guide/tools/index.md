@@ -12,12 +12,14 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 ---
 
 An agent uses **tools** to read files, run commands, search the web, and open a browser. Choosing the right tool and stating its boundaries helps avoid unplanned network access and excessive changes.
 
 Here, “tools” means capabilities Codex actually calls while carrying out a task. Conversation alone cannot complete every task. Some require files, commands, web research, or inspection of a real page.
+
+![Illustration: a set of tools laid out on a table—terminal, browser, search magnifier, image, microphone, and pointer—while a small assistant picks the right one](/illustrations/tools-overview.webp)
 
 ## Why understand tools first
 

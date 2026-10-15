@@ -3,7 +3,7 @@ title: Skills-Überblick
 description: Mit SKILL.md wiederverwendbare Workflows an Codex vermitteln — einmal schreiben, bei Bedarf aufrufen.
 locale: de
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 Ein **Skill** ist ein Verzeichnis mit `SKILL.md` (optional Skripte und Referenzen), das einen festen Ablauf zu einer Fähigkeit packt, die Codex **automatisch oder explizit** aufrufen kann.
 
 Er eignet sich für Methoden, die schon wiederholt vorkamen und weiter wiederverwendet werden sollen.
+
+![Illustration: Ein erfolgreicher Ablauf wird in einen Werkzeugkasten gepackt und als Kopie an mehrere Agenten weitergegeben](/illustrations/skills-toolkit.webp)
 
 ## Kernkonzepte
 

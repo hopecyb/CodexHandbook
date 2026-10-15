@@ -14,6 +14,8 @@ sidebar:
 
 这段内容可能来自 issue、网页、依赖注释、文档、用户粘贴文本，目的多半是诱导 Agent **忽略策略、泄露数据或执行危险命令**。它是 [威胁模型](/guide/team-enterprise/security/threat-model/) 里的高频风险，而且离真实工作并不远。
 
+![插画：网页里藏着一张泛红的可疑便签，被半透明护盾拦下，干净的内容才送到小助手手里](/illustrations/prompt-injection.webp)
+
 ## 内容
 
 - 注入与「正常用户指令」的区别

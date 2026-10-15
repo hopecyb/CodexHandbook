@@ -3,12 +3,14 @@ title: Visão geral de MCP
 description: Compreende o cliente, o servidor, as ferramentas, a autenticação e os limites de segurança do MCP.
 locale: pt
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 O MCP transforma a intenção de um modelo usar uma capacidade externa numa chamada de ferramenta estruturada. Serve para ligar documentação de terceiros, navegadores, Figma, sistemas de tickets ou serviços internos.
+
+![Ilustração: o assistente se conecta a um hub universal com cabos padrão ligados a banco de dados, calendário, quadro de chamados e nuvem](/illustrations/mcp-overview.webp)
 
 ## Uma cadeia de chamadas
 

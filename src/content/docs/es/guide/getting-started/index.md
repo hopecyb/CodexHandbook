@@ -5,7 +5,7 @@ sidebar:
   order: 4
 locale: es
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Por defecto usa la **App de escritorio**. Si prefieres el terminal o el editor, 
 
 Si lo que más te preocupa es «cómo empezar» y «cómo evitar equivocarte al principio», este capítulo es la entrada más directa.
 
+![Ilustración: cuatro escalones —preparar el equipo, iniciar sesión, crear un proyecto de práctica y terminar la primera tarea— con un asistente al lado](/illustrations/getting-started.webp)
+
 ## Qué incluye este capítulo
 
 - Qué preparar como mínimo antes del primer uso
@@ -27,7 +29,7 @@ Si lo que más te preocupa es «cómo empezar» y «cómo evitar equivocarte al 
 ## Pasos
 
 1. [Cuenta, planes y acceso](/es/guide/getting-started/account-plans-and-access/)
-2. [Elige un cliente](/es/guide/getting-started/choose-your-codex-client/)
+2. [Elige un cliente](/es/guide/choose-your-client/)
 3. Instala: [App de escritorio](/es/guide/getting-started/install-desktop-app/) · [CLI](/es/guide/getting-started/install-cli/) · [IDE](/es/guide/getting-started/install-ide-extension/)
 4. [Inicia sesión](/es/guide/getting-started/sign-in-and-authentication/)
 5. [Crea un proyecto de práctica](/es/guide/getting-started/create-your-first-project/)

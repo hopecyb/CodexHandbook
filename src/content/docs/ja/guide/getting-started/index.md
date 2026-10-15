@@ -3,7 +3,7 @@ title: クイックスタート
 description: アカウントとインストールから、最初の検証可能なタスクまで。
 locale: ja
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ sidebar:
 
 「どう始めるか」「最初から間違えないにはどうするか」を解決したいなら、この章が最も直接的な入口です。
 
+![イラスト：PC の準備、サインイン、練習プロジェクト作成、最初のタスク完了の四段の階段を、小さなアシスタントと一緒に上る](/illustrations/getting-started.webp)
+
 ## この章の内容
 
 - 初回利用前に最低限必要な準備
@@ -27,7 +29,7 @@ sidebar:
 ## ステップ
 
 1. [アカウント、プラン、アクセス](/ja/guide/getting-started/account-plans-and-access/)
-2. [クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/)
+2. [クライアントの選択](/ja/guide/choose-your-client/)
 3. インストール：[デスクトップ App](/ja/guide/getting-started/install-desktop-app/) · [CLI](/ja/guide/getting-started/install-cli/) · [IDE](/ja/guide/getting-started/install-ide-extension/)
 4. [ログイン](/ja/guide/getting-started/sign-in-and-authentication/)
 5. [練習プロジェクトの作成](/ja/guide/getting-started/create-your-first-project/)

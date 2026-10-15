@@ -12,6 +12,8 @@ description: 用 SKILL.md 把可复用工作流教给 Codex，写一次，按需
 
 它适合承载那些已经重复出现、以后还会继续复用的做事方法。
 
+![插画：一段成功的工作流被装进工具箱，再复制分发给多个 Agent 复用](/illustrations/skills-toolkit.webp)
+
 ## 核心概念
 
 ### 与斜杠命令的区别

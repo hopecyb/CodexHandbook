@@ -3,7 +3,7 @@ title: Skills overview
 description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
 locale: en
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
 
 It fits workflows that have already repeated and will likely repeat again.
+
+![Illustration: a successful workflow is packed into a toolbox, then copied and handed to several agents to reuse](/illustrations/skills-toolkit.webp)
 
 ## Core concepts
 

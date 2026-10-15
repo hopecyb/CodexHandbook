@@ -5,7 +5,7 @@ sidebar:
   order: 4
 locale: ko
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ reviewed_at: 2026-08-26
 - 편집기: [IDE](/ko/guide/ide/)
 - 클라우드 개요: [Web과 Cloud](/ko/guide/web-and-cloud/)
 
-아직 확신이 없으면 [Codex 클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)과 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요.
+아직 확신이 없으면 [Codex 클라이언트 선택](/ko/guide/choose-your-client/)과 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요.
 
 ## 흔한 오해
 

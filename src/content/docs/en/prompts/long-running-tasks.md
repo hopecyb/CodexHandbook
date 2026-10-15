@@ -3,7 +3,7 @@ title: Long-running tasks
 description: Phases, checkpoints, and handoff information.
 locale: en
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Phase 2: Minimal implementation
 Phase 3: Add tests and run …
 Stop after each phase for my confirmation.
 ```
+
+![Illustration: a long winding road with checkpoint flags; a small assistant with a backpack walks on while a person at a checkpoint holds a signpost to steer](/illustrations/long-running-tasks.webp)
 
 ## Why long tasks drift
 

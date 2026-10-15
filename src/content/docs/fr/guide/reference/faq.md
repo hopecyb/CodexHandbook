@@ -12,7 +12,7 @@ locale: fr
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 ---
 
 Pour une question ponctuelle, commencez par la FAQ. Elle ne remplace pas les chapitres complets : elle vous aide à trouver la prochaine page utile.
@@ -22,7 +22,7 @@ Pour une question ponctuelle, commencez par la FAQ. Elle ne remplace pas les cha
 Ouvrez-la si vous ne savez pas quelle page lire, si une question précise vous bloque sans justifier tout un chapitre, ou si vous voulez une première orientation.
 
 **Q : Quel client utiliser pour commencer ?**
-R : L'application de bureau. Voir [Choisir son client Codex](/fr/guide/getting-started/choose-your-codex-client/).
+R : L'application de bureau. Voir [Choisir son client Codex](/fr/guide/choose-your-client/).
 
 **Q : Puis-je accepter tous les changements sans les examiner ?**
 R : Mieux vaut éviter. Voir [Vérification et revue humaine](/fr/guide/foundations/verification-and-human-review/).

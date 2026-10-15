@@ -9,6 +9,8 @@ description: 学会使用、编写、测试和维护 Codex Skills。
 
 Skills 用来把稳定方法、参考资料、模板和脚本封装成可复用能力。它的价值不只是“让 Codex 多会一件事”，而是让一套工作流拥有清晰的输入、输出、权限边界和测试方法。
 
+![从一次提示到团队能力包：提示词与模板沉淀为 Skill、子 Agent、MCP 和 Hook，再通过 Plugin 与 Automation 在团队分发和自动运行](/diagrams/codex-capability-ladder-zh-cn.svg)
+
 ## 推荐顺序
 
 1. [Skills 概述](/skills/overview/)

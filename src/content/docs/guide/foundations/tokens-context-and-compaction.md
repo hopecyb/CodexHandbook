@@ -18,6 +18,8 @@ sidebar:
 
 当对话或文件太多，系统可能做 **压缩（compaction）**：保留摘要、丢掉细节。压缩后 Agent 可能「忘记」早期约束。
 
+![插画：一长卷对话进入压缩机，变成一张简短的摘要卡，刚好放进有限的窗口里](/illustrations/tokens-compaction.webp)
+
 ## 把这三个词分开看
 
 可以这样看：

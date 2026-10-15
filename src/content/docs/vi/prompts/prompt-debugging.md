@@ -3,7 +3,7 @@ title: Gỡ lỗi Prompt
 description: Khi kết quả lệch, định vị vấn đề Prompt thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Khi kết quả sai, nguyên nhân thường gặp gồm:
 - Tác vụ quá lớn mà chưa xin kế hoạch trước
 
 Trọng tâm gỡ lỗi Prompt là tìm xem lớp thông tin nào bị mất.
+
+![Minh họa: hai kết quả trên bàn làm việc — một trượt mục tiêu, một trúng — ở giữa thẻ nhiệm vụ đang được chỉnh bằng tua vít và kính lúp](/illustrations/prompt-debugging.webp)
 
 ## Định vị vấn đề nằm ở đâu trước
 

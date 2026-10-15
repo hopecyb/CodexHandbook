@@ -8,7 +8,7 @@ title: トラブルシュート索引
 description: 症状から該当チュートリアルと製品ページへ。
 locale: ja
 source_locale: zh-CN
-source_revision: 7327724
+source_revision: da350d0
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -23,7 +23,7 @@ sidebar:
 |---|---|
 | インストール失敗 | [デスクトップトラブルシュート](/ja/guide/desktop-app/troubleshooting/) · [CLI トラブルシュート](/ja/guide/cli/troubleshooting/) · [IDE トラブルシュート](/ja/guide/ide/troubleshooting/) |
 | ログイン/認証失敗 | [ログイン](/ja/guide/getting-started/sign-in-and-authentication/) |
-| どのクライアントを選ぶか分からない | [クライアント選択](/ja/guide/getting-started/choose-your-codex-client/) · [機能比較](/ja/guide/reference/feature-comparison/) |
+| どのクライアントを選ぶか分からない | [クライアント選択](/ja/guide/choose-your-client/) · [機能比較](/ja/guide/reference/feature-comparison/) |
 | 結果が範囲外/品質が悪い | [結果を確認](/ja/guide/getting-started/review-the-result/) · [プロンプトデバッグ](/ja/prompts/prompt-debugging/) · [元に戻す](/ja/guide/getting-started/undo-and-recover/) |
 | コンテキストが混乱 | [フォーカスを保つ](/ja/guide/context/keep-context-focused/) |
 | 権限/サンドボックスの疑問 | [権限](/ja/guide/foundations/permissions-and-approvals/) · [サンドボックス](/ja/guide/foundations/sandbox-and-network/) |

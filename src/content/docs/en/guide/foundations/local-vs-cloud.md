@@ -3,7 +3,7 @@ title: Local vs cloud
 description: Compare local tasks and Cloud tasks and when to use each.
 locale: en
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
@@ -20,6 +20,8 @@ If you just want to start using Codex, **local** is usually the easier first cho
 | Where it runs | Your machine / local environment | Cloud environment |
 | Best for | Fast iteration, local files, debugging with local secrets | Remote repos, long tasks, standardized environments |
 | Watch for | Local permissions and accidental edits | Environment setup, secret injection, network policy |
+
+![Illustration: on the left, working with the agent on your own computer; on the right, isolated cloud containers run in parallel and send results back](/illustrations/local-vs-cloud.webp)
 
 ## How they feel
 

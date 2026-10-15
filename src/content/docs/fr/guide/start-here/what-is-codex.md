@@ -8,7 +8,7 @@ title: Qu'est-ce que Codex ?
 description: Une présentation simple de ce que Codex peut faire, de ses limites et de ses points d'accès.
 locale: fr
 source_locale: zh-CN
-source_revision: "a491834"
+source_revision: 0f376b6
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -20,6 +20,8 @@ Codex est l'**agent de programmation et de travail IA d'OpenAI**. Donnez-lui un 
 Il ressemble à un collègue numérique capable d'utiliser des outils. Vous définissez l'objectif, les limites et les critères d'acceptation ; il recherche, modifie des fichiers et exécute les étapes. La décision finale vous revient.
 
 Pour la documentation officielle du produit, consultez [OpenAI Codex](https://developers.openai.com/codex). Ce manuel est un guide communautaire open source pour apprendre et pratiquer, pas un remplacement de la documentation officielle.
+
+![Illustration : vous remettez une fiche de tâche à Codex, qui avance entre ordinateur, documents et terminal en cochant chaque étape](/illustrations/what-is-codex.webp)
 
 ## Quelle différence avec une conversation IA ordinaire ?
 

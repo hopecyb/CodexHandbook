@@ -3,7 +3,7 @@ title: Prompt Injection
 description: When untrusted text enters context—recognition, mitigation, and team policy essentials.
 locale: en
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 “Prompt injection” means someone embeds content in context that misleads Codex.
 
 It may come from issues, web pages, dependency comments, docs, or pasted text—often to make the Agent **ignore policy, leak data, or run dangerous commands**. It is a frequent [threat model](/en/guide/team-enterprise/security/threat-model/) risk and closer to real work than many assume.
+
+![Illustration: a suspicious reddish note hidden in a web page is stopped by a translucent shield, and only clean content reaches the assistant](/illustrations/prompt-injection.webp)
 
 ## What this page covers
 

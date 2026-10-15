@@ -7,7 +7,7 @@ next:
 description: Conheça o Codex, escolha o cliente, complete a primeira Tarefa e entenda Permissão, Contexto e Verificação.
 locale: pt
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ Você não precisa dominar toda a terminologia, produtos e fluxos de antemão. E
 
 - [Lista de segurança para iniciantes](/pt/guide/getting-started/beginner-safety-checklist/)
 - [Como escolher um cliente](/pt/guide/choose-your-client/)
-- [Verificação de resultados e definição de conclusão](/pt/guide/verification/)
+- [Verificação de resultados e definição de conclusão](/pt/guide/quality/)
 
 ## Ordem recomendada
 
@@ -38,9 +38,9 @@ Você não precisa dominar toda a terminologia, produtos e fluxos de antemão. E
 3. [Escolher o cliente](/pt/guide/choose-your-client/)
 4. [Completar a primeira Tarefa](/pt/cases/first-task/)
 5. [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/)
-6. [Contexto e arquivos](/pt/guide/context-and-files/)
-7. [Verificação](/pt/guide/verification/)
-8. Em caso de problema, veja [Solução de problemas](/pt/guide/troubleshooting/)
+6. [Contexto e arquivos](/pt/guide/context/)
+7. [Verificação](/pt/guide/quality/)
+8. Em caso de problema, veja [Solução de problemas](/pt/guide/reference/troubleshooting/)
 
 ## Mal-entendidos comuns
 

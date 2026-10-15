@@ -1,4 +1,8 @@
 ---
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs: [markdown]
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"

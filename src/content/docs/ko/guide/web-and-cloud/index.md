@@ -5,12 +5,14 @@ sidebar:
   order: 13
 locale: ko
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 Codex Cloud는 격리된 클라우드 환경에서 코딩 작업을 실행합니다. 백그라운드의 긴 작업, 병렬 시도, GitHub·GitLab(Beta)·Linear·Slack에서 시작하는 작업에 적합합니다. 사용자 컴퓨터를 원격 제어하는 방식이 아니며, 로컬에서 아직 푸시하지 않은 파일도 자동으로 볼 수 없습니다.
+
+![일러스트: 브라우저의 저장소가 클라우드의 격리 컨테이너로 연결되고, 결과가 초록 체크가 붙은 풀 리퀘스트 카드로 돌아온다](/illustrations/web-and-cloud.webp)
 
 ## Cloud 작업의 흐름
 

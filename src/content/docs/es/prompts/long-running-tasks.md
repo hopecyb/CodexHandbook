@@ -3,7 +3,7 @@ title: Prompts para tareas largas
 description: Dividir en fases, checkpoints e información de traspaso.
 locale: es
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Fase 2: implementar el cambio mínimo
 Fase 3: añadir tests y ejecutar……
 Al final de cada fase, para y espera mi confirmación.
 ```
+
+![Ilustración: un largo camino sinuoso con banderas de control; un asistente con mochila avanza y una persona en un punto de control orienta la dirección](/illustrations/long-running-tasks.webp)
 
 ## Por qué las tareas largas se desvían con facilidad
 

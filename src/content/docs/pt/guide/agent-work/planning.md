@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: pt
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 Um plano é um caminho de execução que pode ser verificado e ajustado. Ele ajuda a encontrar cedo lacunas de escopo, dependências e aceitação, mas uma tarefa maior não exige pausas repetidas para pedir confirmação.
 
 Comece pela [classificação de tarefas](/pt/prompts/ask-for-a-plan/): concluir diretamente, planejar e depois executar dentro da autorização existente, ou apresentar apenas uma proposta nesta vez. Um pedido explícito de “primeiro o plano, sem alterar arquivos” permanece somente de leitura. Um pedido de implementação não deve terminar apenas com o plano.
+
+![Ilustração: um assistente desenha um plano passo a passo num quadro e uma pessoa aponta um passo para ajustar antes de começar](/illustrations/agent-planning.webp)
 
 ## Um plano suficientemente claro
 

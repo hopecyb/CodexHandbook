@@ -3,7 +3,7 @@ title: Ứng dụng Desktop
 description: Cài đặt, giao diện và quy trình làm việc hàng ngày của ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 Với ai chưa quen dòng lệnh hay plugin IDE, đây cũng là lối vào dễ bắt đầu hơn.
 
 Nó không chỉ «chat được», mà còn đưa dự án, thay đổi, phê duyệt và kiểm chứng vào cùng một giao diện nhìn thấy được.
+
+![Minh họa: bảng điều khiển trên máy tính với nhiều thẻ nhiệm vụ và vòng tiến độ, một thẻ mở ra hiển thị diff song song và công tắc phê duyệt](/illustrations/desktop-app.webp)
 
 ## Nội dung chương này
 

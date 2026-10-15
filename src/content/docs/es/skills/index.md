@@ -7,7 +7,7 @@ title: Skills
 description: Aprende a usar, escribir, probar y mantener Codex Skills.
 locale: es
 source_locale: zh-CN
-source_revision: dd408f5
+source_revision: 6f8df16
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -16,6 +16,8 @@ translated_at: 2026-09-20
 Los Skills encapsulan métodos estables, material de referencia, plantillas y scripts en capacidades reutilizables.
 
 Su valor no consiste solo en darle otra capacidad a Codex: también proporciona a un flujo de trabajo entradas, salidas, límites de permisos y métodos de prueba claros.
+
+![De un prompt a un paquete de equipo: prompts y plantillas se convierten en Skills, subagentes, MCP y Hooks, y llegan al equipo mediante Plugins y Automatizaciones](/diagrams/codex-capability-ladder-es.svg)
 
 ## Orden recomendado
 

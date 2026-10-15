@@ -3,13 +3,15 @@ title: Phục hồi thất bại
 description: Khi tác vụ lệch hướng, test đỏ hoặc ngữ cảnh hết — cách hoàn tác an toàn rồi tiếp tục.
 locale: vi
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 **Phục hồi thất bại** nói về việc sau khi tác vụ lệch hoặc bị ngắt, làm sao giữ hiện trường rồi tiếp tục tiến. Chương này đưa bộ bước **phát hiện → chặn thiệt hại → phục hồi → rút kinh nghiệm** có thể lặp lại; dùng kèm [hoàn tác và phục hồi](/vi/guide/getting-started/undo-and-recover/) cũng như [quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/).
+
+![Minh họa: tòa tháp khối đổ một nửa được người và trợ lý bình tĩnh xây lại theo danh sách, mũi tên hoàn tác đặt khối về nền vững](/illustrations/failure-recovery.webp)
 
 ## Trọng tâm trang này
 

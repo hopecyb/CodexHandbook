@@ -3,7 +3,7 @@ title: Quyền và phê duyệt
 description: Giải thích khi nào Codex cần bạn phê duyệt thao tác.
 locale: vi
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Codex không nên thực thi thao tác rủi ro cao khi chưa được đồng ý. **Phê duyệt** là cánh cổng trong cộng tác người–máy.
 
 Nếu Codex có thể đọc bất kỳ tệp nào, tùy ý lên mạng, tùy ý chạy lệnh — một khi hiểu sai tác vụ, cái giá sẽ rất cao.
+
+![Minh họa: bốn cánh cửa với quyền khác nhau — đọc tệp, ghi tệp, chạy lệnh, kết nối mạng — và một người chọn chìa khóa giao cho trợ lý](/illustrations/permissions-approvals.webp)
 
 ## Bạn cần quan tâm
 

@@ -3,7 +3,7 @@ title: Prompt 注入
 description: 信頼できないテキストがコンテキストに入るとき——識別、緩和、チーム政策要点。
 locale: ja
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 「Prompt 注入」は、Codex が見るコンテキストに誤導内容を仕込むことです。
 
 issue、ウェブ、依存コメント、文書、ユーザー貼り付けテキストなどから来て、Agent に**方針無視、データ漏洩、危険コマンド実行**を誘導する目的が多いです。[脅威モデル](/ja/guide/team-enterprise/security/threat-model/) の高頻度リスクで、実務に近い問題です。
+
+![イラスト：Web ページに隠れた赤みがかった怪しいメモが半透明の盾で止められ、きれいな内容だけがアシスタントに届く](/illustrations/prompt-injection.webp)
 
 ## 内容
 

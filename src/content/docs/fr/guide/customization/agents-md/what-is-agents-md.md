@@ -3,7 +3,7 @@ title: "Qu'est-ce que AGENTS.md"
 description: Fichier d'instructions projet persistant — un « contrat de collaboration » pour Codex, pas une encyclopédie d'architecture.
 locale: fr
 source_locale: zh-CN
-source_revision: 49b7d04
+source_revision: 47c5866
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 Considérez `AGENTS.md` comme les instructions pour « comment Codex doit travailler avec ce projet ».
 
 Ce n'est pas un document d'architecture avancé ni un handbook complet pour les nouveaux employés humains ; ce sont des règles de collaboration projet pour Codex.
+
+![Illustration : dans un dépôt en coupe, un guide est à la racine et des notes dans les sous-dossiers ; l’assistant lit le guide puis la note la plus proche](/illustrations/agents-md.webp)
 
 ## Un concept central
 

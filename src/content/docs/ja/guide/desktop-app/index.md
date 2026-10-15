@@ -5,7 +5,7 @@ sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ reviewed_at: 2026-08-26
 コマンドラインや IDE 拡張に慣れていない人にとっても、比較的取り組みやすい入口です。
 
 単なる「チャット」ではなく、プロジェクト、変更、承認、検証を同じ見える画面にまとめています。
+
+![イラスト：デスクトップの管理画面に複数のタスクカードと進捗リングが並び、一枚は左右比較の diff と承認スイッチを表示している](/illustrations/desktop-app.webp)
 
 ## 本章の内容
 

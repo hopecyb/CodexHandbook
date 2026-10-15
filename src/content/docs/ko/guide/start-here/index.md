@@ -10,7 +10,7 @@ sidebar:
   order: 1
 locale: ko
 source_locale: zh-CN
-source_revision: 016d023
+source_revision: 953fb89
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ reviewed_at: 2026-08-26
 
 
 이 핸드북은 주로 **AI 초보자**를 대상으로 합니다. 터미널·Git·Agent를 이미 안다고 가정하지 않지만, 앞으로 만나게 될 역량은 단계적으로 풀어 설명합니다.
+
+![일러스트: 출발점의 이정표가 여러 길을 가리키고, 펼쳐진 안내서 옆에서 작은 도우미가 손을 흔들며 맞이한다](/illustrations/start-here.webp)
 
 ## 내용
 
@@ -32,8 +34,8 @@ reviewed_at: 2026-08-26
 2. [클라이언트 선택](/ko/guide/choose-your-client/) — App, CLI, IDE, Cloud 중에서 고르기
 3. [첫 작업 완료](/ko/cases/first-task/) — 명확한 프롬프트로 작은 변경을 하고 결과 확인
 4. [권한과 샌드박스](/ko/guide/permissions-and-sandbox/) — 승인·격리·네트워크 경계 이해
-5. [컨텍스트와 파일](/ko/guide/context-and-files/) — 유효한 입력 제공하기
-6. [결과 검증](/ko/guide/verification/) — 검토와 테스트 습관 들이기
+5. [컨텍스트와 파일](/ko/guide/context/) — 유효한 입력 제공하기
+6. [결과 검증](/ko/guide/quality/) — 검토와 테스트 습관 들이기
 
 ## 흔한 오해
 
@@ -64,7 +66,7 @@ reviewed_at: 2026-08-26
 | 10–25분 | [첫 작업 사례](/ko/cases/first-task/)에 따라 연습 |
 | 25–30분 | [프롬프트 기초](/ko/prompts/basics/)를 훑고 더 명확한 작업 쓰기 준비 |
 
-막히면 [문제 해결](/ko/guide/troubleshooting/)을 확인하세요.
+막히면 [문제 해결](/ko/guide/reference/troubleshooting/)을 확인하세요.
 
 ## 다음에 어떻게 읽을까
 

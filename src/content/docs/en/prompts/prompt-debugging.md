@@ -3,7 +3,7 @@ title: Prompt debugging
 description: How to locate prompt problems when results drift.
 locale: en
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ When results are wrong, common causes include:
 - task too large without asking for a plan first
 
 Prompt debugging finds which layer of information was lost.
+
+![Illustration: two outputs side by side on a workbench—one misses the target, one hits it—while the task card between them is adjusted with a screwdriver and magnifier](/illustrations/prompt-debugging.webp)
 
 ## Locate the problem first
 

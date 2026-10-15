@@ -7,12 +7,14 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ja
 source_locale: zh-CN
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 ChatGPT と Codex は共通の公開 Plugin ディレクトリを使用します。Plugin は関連する機能をまとめて、見つけてインストールできるワークフローにするものです。新しいツール呼び出しプロトコルを作るものではありません。
+
+![イラスト：リボン付きの拡張パッケージがレールで複数の作業台へ運ばれ、一つは開封され、一つはきれいに取り外される](/illustrations/plugins-overview.webp)
 
 ## Plugin に含められるもの
 

@@ -3,7 +3,7 @@ title: Skills 개요
 description: SKILL.md로 재사용 가능한 워크플로를 Codex에 가르칩니다. 한 번 쓰고, 필요할 때 호출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 **Skill**은 `SKILL.md`를 담은 디렉터리(스크립트와 참고 자료를 추가할 수 있음)로, 고정된 절차를 Codex가 **자동 또는 명시적으로 호출**할 수 있는 능력으로 패키징한 것입니다.
 
 이미 반복되었고 앞으로도 계속 쓸 작업 방식을 담기에 적합합니다.
+
+![일러스트: 성공한 워크플로를 도구 상자에 담아 여러 에이전트에게 복제해 나눠 주고 재사용한다](/illustrations/skills-toolkit.webp)
 
 ## 핵심 개념
 

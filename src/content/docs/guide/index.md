@@ -24,7 +24,7 @@ description: 认识 Codex、选择客户端、完成第一次任务，并理解�
 
 - [新手安全检查清单](/guide/getting-started/beginner-safety-checklist/)
 - [客户端选择方法](/guide/choose-your-client/)
-- [结果验证与定义完成](/guide/verification/)
+- [结果验证与定义完成](/guide/quality/)
 
 ## 推荐顺序
 
@@ -33,9 +33,9 @@ description: 认识 Codex、选择客户端、完成第一次任务，并理解�
 3. [选择客户端](/guide/choose-your-client/)
 4. [完成第一个任务](/cases/first-task/)
 5. [权限与沙箱](/guide/permissions-and-sandbox/)
-6. [上下文与文件](/guide/context-and-files/)
-7. [验证](/guide/verification/)
-8. 遇到问题查看 [故障排查](/guide/troubleshooting/)
+6. [上下文与文件](/guide/context/)
+7. [验证](/guide/quality/)
+8. 遇到问题查看 [故障排查](/guide/reference/troubleshooting/)
 
 ## 常见误会
 

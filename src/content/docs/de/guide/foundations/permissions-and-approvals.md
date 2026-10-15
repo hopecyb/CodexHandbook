@@ -3,7 +3,7 @@ title: Berechtigungen und Freigaben
 description: "Erklärt, wann Codex deine Zustimmung für Operationen braucht."
 locale: de
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Codex sollte riskante Operationen nicht ohne Zustimmung ausführen. **Freigabe** ist das Tor in der Mensch-Maschine-Zusammenarbeit.
 
 Könnte Codex beliebige Dateien lesen, ungehindert online gehen und beliebig Befehle ausführen, wäre der Preis bei falschem Aufgabenverständnis hoch.
+
+![Illustration: vier Türen mit unterschiedlichen Rechten – Dateien lesen, schreiben, Befehle ausführen, online gehen – ein Mensch wählt den Schlüssel](/illustrations/permissions-approvals.webp)
 
 ## Worauf du achten solltest
 

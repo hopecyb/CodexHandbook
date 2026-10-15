@@ -2,38 +2,104 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Trang này chỉ mô tả cấu trúc và thứ tự đọc của phần chất lượng và kiểm chứng. Liên kết nội bộ và cách diễn đạt khái niệm đã được rà soát; nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi như phiên bản, giá hay giao diện."
+  basis: "Trang chủ OpenAI Developers hiện vẫn nhấn mạnh dùng Codex để xây, kiểm thử, rà soát và giao thay đổi; trang này tách kiểm chứng thành rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa hoàn thành — đã đối chiếu chéo với các chương chất lượng nội bộ."
   checkedAt: "2026-07-26"
 title: Chất lượng và kiểm chứng
-description: Rà soát, kiểm thử và định nghĩa hoàn thành.
+description: Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành.
 sidebar:
   order: 21
 locale: vi
 source_locale: zh-CN
-source_revision: 401b6a6
+source_revision: 90d62fb
 translation_status: draft
 translated_at: 2026-09-20
 ---
-Khi dùng Codex, nhiều người chỉ tập trung vào “nó có làm được không”, mà bỏ qua câu hỏi khác: sau khi làm xong, làm sao xác nhận lần này thật sự có thể nhận?
 
-Nhóm nội dung này nói đúng việc đó. Làm chất lượng và kiểm chứng là để tránh trạng thái “trông như đã xong, nhưng chưa ổn”.
 
-- [Rà soát diff](/vi/guide/quality/review-diffs/)
-- [Chạy kiểm thử](/vi/guide/quality/run-tests/)
-- [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/)
-- [Xác minh nguồn](/vi/guide/quality/validate-sources/)
-- [Xử lý sự không chắc chắn](/vi/guide/quality/handle-uncertainty/)
+Nhiều người mới lần đầu dùng Codex, sai dễ nhất là **thấy nó nói đã xong thì coi như thật sự đã xong**.
+
+Kiểm chứng chính là: không nhìn nó nói thế nào — mà nhìn kết quả có thật sự thỏa yêu cầu của bạn không.
+
+Đầu ra của Codex phải kiểm tra được. Kiểm chứng không phải bước tùy chọn — mà là một phần của vòng khép kín mỗi tác vụ.
+
+![Minh họa: kính lúp soi các dòng thêm và xóa trong diff, bên cạnh là danh sách kiểm tra có một mục bị đánh dấu và các bài kiểm thử đạt](/illustrations/verification.webp)
+
+## Kiểm chứng thực sự đang xem gì
+
+Dù bạn đang sửa mã, viết tài liệu hay tra cứu — cuối cùng đều phải trả lời cùng một câu hỏi:
+
+> **Việc này bây giờ rốt cuộc là «trông gần đúng», hay «đã giao được»?**
+
+Nhiều lần làm lại không phải vì model hoàn toàn làm sai, mà vì:
+
+- Sửa vào chỗ không nên sửa
+- Sửa sót một nửa
+- Nói đã tra tài liệu, nhưng nguồn không đáng tin
+- Trang mở được, nhưng quy trình thực tế chưa chạy thông
+- Tài liệu viết ra rồi, nhưng người mới không làm theo được
+
+Vì vậy vai trò của kiểm chứng là **khóa rủi ro trước khi giao hàng**.
+
+## Hiểu nhầm thường gặp
+
+### 1. Chỉ cần chạy được là tính hoàn thành
+
+«Chạy được» chỉ nói nó chưa báo lỗi ngay — không có nghĩa:
+
+- Logic đúng
+- Phạm vi đúng
+- Không đưa hồi quy
+- Khớp kết quả bạn vốn cần
+
+### 2. Model tự nói «đã kiểm chứng» thì có thể yên tâm
+
+Bạn phải xem nó **thật sự đã làm kiểm chứng gì**. Ví dụ:
+
+- Có thật sự chạy kiểm thử không
+- Có thật sự đọc Diff không
+- Có thật sự mở artifact để kiểm không
+- Có đưa nguồn truy được không
+
+### 3. Chỉ lập trình viên mới cần kiểm chứng?
+
+Viết bài, làm bảng, tạo cấu hình, sắp xếp tài liệu, viết mô tả PR — đều cần kiểm chứng. Chỉ khác cách kiểm chứng.
+
+## Nếu chưa có quy trình riêng, có thể kiểm theo thứ tự này
+
+Nếu giờ bạn chưa có quy trình riêng, có thể dùng thứ tự này trước:
+
+1. Xem kết quả có lệch chủ đề không
+2. Xem phạm vi thay đổi có quá lớn không
+3. Chạy các kiểm tra tự động được
+4. Cuối cùng nhìn bằng góc người — có giao được không
+
+Có thể hiểu là:
+
+- **Hướng có đúng không**
+- **Sửa có nhiều không**
+- **Máy đã kiểm chưa**
+- **Người thật sự dám nhận không**
+
+## Chủ đề cốt lõi
+
+- [Rà soát Diff](/vi/guide/quality/review-diffs/) — đọc Diff, xác nhận phạm vi và rủi ro
+- [Chạy kiểm thử](/vi/guide/quality/run-tests/) — hồi quy tự động
+- [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/) — tài liệu, cấu hình, sản phẩm tạo ra
+- [Kiểm chứng nguồn](/vi/guide/quality/validate-sources/) — kết luận dạng nghiên cứu truy được
+- [Xử lý bất định](/vi/guide/quality/handle-uncertainty/) — khi model không chắc thì sao
+- [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/) — thế nào gọi là «đã xong»
 - [Mức sử dụng, thời gian và chọn mô hình](/vi/guide/quality/usage-time-and-model-choice/)
 - [Đánh giá quy trình và 20 mẫu](/vi/guide/quality/workflow-evaluation/)
-- [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/)
 
-## Thứ tự đọc
+## Tác vụ khác nhau, trọng tâm kiểm chứng khác nhau
 
-Lần đầu xem, có thể đọc theo thứ tự này:
+- **Sửa mã**: xem Diff, rồi chạy kiểm thử, rồi qua tay các đường then chốt
+- **Viết tài liệu**: xem có phù hợp độc giả mục tiêu không, liên kết dùng được không, bước có thật sự làm theo được không
+- **Làm nghiên cứu**: xem nguồn có thật không, có mới không, kết luận có vượt bằng chứng không
+- **Tạo cấu hình hoặc script**: xem tiền đề môi trường, phạm vi quyền, cách khôi phục sau khi thất bại
 
-1. Xem [Rà soát diff](/vi/guide/quality/review-diffs/), xác nhận nó thực sự đã đổi gì
-2. Xem [Chạy kiểm thử](/vi/guide/quality/run-tests/), xác nhận có làm hỏng thứ gì khác không
-3. Xem [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/), xác nhận kết quả có đúng thứ bạn muốn không
-4. Xem [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/), làm rõ “thế nào mới thật sự là hoàn thành”
+Nếu không biết nên bắt đầu từ mục nào, mặc định đọc [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/).
 
-Nếu không kiểm tra, “hoàn thành” nhiều khi chỉ tạm thời trông như đã xong.
+Kiểm chứng là để xác nhận kết quả này thật sự dùng được, dám dùng, giao đi được.
+
+Cách viết tiêu chí nghiệm thu trong Prompt xem [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/). Case đầu-cuối xem [Case thực chiến](/vi/cases/).

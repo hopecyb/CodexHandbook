@@ -9,31 +9,47 @@ const labels = traditional
 const statusLabels = traditional
 	? { planned: '規劃', draft: '草稿', review: '待複核', verified: '已核對', outdated: '待更新', archived: '歸檔' }
 	: { planned: '规划', draft: '草稿', review: '待复核', verified: '已核对', outdated: '待更新', archived: '归档' };
+const t = traditional
+	? { label: '內容核驗記錄', status: '編輯狀態', evidence: '查看驗證環境與證據', environment: '驗證環境', lastChecked: '最後核對', notes: '核對說明', legacyNote: '這是舊版核對記錄，尚未登記結構化證據，不代表本頁示例已實跑。', scope: '適用範圍' }
+	: { label: '内容核验记录', status: '编辑状态', evidence: '查看验证环境与证据', environment: '验证环境', lastChecked: '最后核对', notes: '核对说明', legacyNote: '这是旧版核对记录，尚未登记结构化证据，不代表本页示例已实跑。', scope: '适用范围' };
 ---
 
-{cn && (verification || legacyVerification || editorialStatus) && (
-	<aside class="verification" aria-label={traditional ? '內容核驗記錄' : '内容核验记录'} data-pagefind-ignore>
-		{editorialStatus && <p>{traditional ? '編輯狀態' : '编辑状态'}：{statusLabels[editorialStatus]}</p>}
-		{verification ? <>
-			<p><strong>{labels[verification.kind]}</strong> · <time datetime={verification.checkedAt}>{verification.checkedAt}</time></p>
-			<p>{verification.summary}</p>
-			{(verification.environment || verification.evidence.length > 0) && <details>
-				<summary>{traditional ? '查看驗證環境與證據' : '查看验证环境与证据'}</summary>
-				{verification.environment && <p>{traditional ? '驗證環境' : '验证环境'}：{verification.environment}</p>}
-				{verification.evidence.length > 0 && <ul>{verification.evidence.map(item => <li><a href={item.href}>{item.label}</a></li>)}</ul>}
-			</details>}
-		</> : <p>{traditional ? '尚未登記結構化驗證證據；不代表本頁示例已實跑。' : '尚未登记结构化验证证据；不代表本页示例已实跑。'}</p>}
-		{legacyVerification && <details>
-			<summary>{traditional ? '歷史核驗說明' : '历史核验说明'}{legacyVerification.checkedAt ? ` · ${legacyVerification.checkedAt}` : ''}</summary>
-			<p>{traditional ? '原狀態' : '原状态'}：{legacyVerification.status}</p>
-			{legacyVerification.products && <p>{traditional ? '原適用範圍聲明' : '原适用范围声明'}：{legacyVerification.products}</p>}
-			{legacyVerification.basis && <p>{legacyVerification.basis}</p>}
+{cn && verification && (
+	<aside class="verification" aria-label={t.label} data-pagefind-ignore>
+		{editorialStatus && <p>{t.status}：{statusLabels[editorialStatus]}</p>}
+		<p><strong>{labels[verification.kind]}</strong> · <time datetime={verification.checkedAt}>{verification.checkedAt}</time></p>
+		<p>{verification.summary}</p>
+		{(verification.environment || verification.evidence.length > 0) && <details>
+			<summary>{t.evidence}</summary>
+			{verification.environment && <p>{t.environment}：{verification.environment}</p>}
+			{verification.evidence.length > 0 && <ul>{verification.evidence.map(item => <li><a href={item.href}>{item.label}</a></li>)}</ul>}
 		</details>}
 	</aside>
+)}
+
+{cn && !verification && (legacyVerification || editorialStatus) && (
+	<details class="verification-meta" aria-label={t.label} data-pagefind-ignore>
+		<summary>
+			{legacyVerification?.checkedAt && <span>{t.lastChecked} <time datetime={legacyVerification.checkedAt}>{legacyVerification.checkedAt}</time></span>}
+			{editorialStatus && <span>{t.status}：{statusLabels[editorialStatus]}</span>}
+			{legacyVerification && <span class="verification-meta__more">{t.notes}</span>}
+		</summary>
+		{legacyVerification && <div class="verification-meta__body">
+			<p>{t.legacyNote}</p>
+			{legacyVerification.products && <p>{t.scope}：{legacyVerification.products}</p>}
+			{legacyVerification.basis && <p>{legacyVerification.basis}</p>}
+		</div>}
+	</details>
 )}
 
 <style>
 	.verification { margin-block: 1rem; padding: .8rem 1rem; border-inline-start: 3px solid var(--sl-color-accent); background: var(--sl-color-gray-6); font-size: var(--sl-text-sm); overflow-wrap: anywhere; }
 	p, ul { margin: .3rem 0; }
 	summary { cursor: pointer; }
+	.verification-meta { margin-block: .5rem 0; color: var(--sl-color-gray-3); font-size: var(--sl-text-xs); overflow-wrap: anywhere; }
+	.verification-meta summary { display: flex; flex-wrap: wrap; gap: .25rem 1rem; list-style: none; }
+	.verification-meta summary::-webkit-details-marker { display: none; }
+	.verification-meta__more { text-decoration: underline dotted; text-underline-offset: .2em; }
+	.verification-meta summary:hover { color: var(--sl-color-gray-2); }
+	.verification-meta__body { margin-block-start: .5rem; padding: .6rem .8rem; border-radius: .375rem; background: var(--sl-color-gray-6); color: var(--sl-color-gray-2); font-size: var(--sl-text-sm); }
 </style>

@@ -8,7 +8,7 @@ title: Application de bureau
 description: Installation, interface et utilisation quotidienne de l'application de bureau.
 locale: fr
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -20,6 +20,8 @@ L'application de bureau est le point de départ par défaut pour les débutants 
 Si la ligne de commande ou les extensions d'éditeur vous sont peu familières, c'est aussi une entrée plus facile à prendre en main.
 
 Elle ne sert pas seulement à discuter. Elle réunit les projets, les modifications, les approbations et les vérifications dans une même interface visible.
+
+![Illustration : un tableau de bord de bureau avec plusieurs fiches de tâches et anneaux de progression, l’une ouverte sur un diff et un bouton d’approbation](/illustrations/desktop-app.webp)
 
 ## Contenu de ce chapitre
 

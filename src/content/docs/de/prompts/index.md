@@ -7,12 +7,14 @@ title: Prompts
 description: 'Lerne, Aufgaben, Hintergrund, Eingaben, Constraints und Abnahmekriterien klar zu formulieren.'
 locale: de
 source_locale: zh-CN
-source_revision: b4393c7
+source_revision: 2280f53
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 Der Prompt-Bereich zeigt, wie du Aufgaben so beschreibst, dass Codex Ziel, Kontext, Grenzen und Abschlusskriterien kennt. Ein guter Prompt lässt außerdem Unsicherheit während der Ausführung sichtbar werden, ermöglicht nötige Rückfragen und verlangt ein überprüfbares Ergebnis.
+
+![Illustration: Vier Puzzleteile – Ziel, Kontext, Grenzen und Abnahmekriterium – fügen sich zu einer vollständigen Aufgabenkarte für den Agenten](/illustrations/task-brief.webp)
 
 ## Empfohlene Reihenfolge
 

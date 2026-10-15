@@ -3,7 +3,7 @@ title: Codex là gì
 description: Giải thích bằng ngôn ngữ đời thường Codex làm được gì, không làm được gì, và các lối vào chính.
 locale: vi
 source_locale: zh-CN
-source_revision: a491834
+source_revision: 0f376b6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex là **Agent lập trình và làm việc bằng AI** do OpenAI cung cấp.
 Nó giống một đồng nghiệp số biết dùng công cụ. Bạn chịu trách nhiệm nêu mục tiêu, ranh giới và tiêu chí chấp nhận; nó tìm tài liệu, sửa tệp, chạy các bước — nhưng quyết định cuối cùng vẫn thuộc về bạn.
 
 Tài liệu sản phẩm chính thức lấy [OpenAI Codex](https://developers.openai.com/codex) làm chuẩn; cẩm nang này là hướng dẫn mã nguồn mở của cộng đồng, giúp học có hệ thống và bắt tay làm thực tế, không thay thế tài liệu chính thức.
+
+![Minh họa: bạn giao cho Codex một thẻ nhiệm vụ, nó làm việc qua máy tính, tài liệu và terminal rồi đánh dấu từng bước](/illustrations/what-is-codex.webp)
 
 ## Khác gì so với chat AI thông thường
 

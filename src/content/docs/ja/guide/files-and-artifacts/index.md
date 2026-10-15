@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: ja
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex の主な成果は、多くの場合 **リポジトリ内のファイル�
 同じ「ファイル」でも、タイプによって伝え方と検証方法が異なります。
 
 「コードを直す」「表を処理する」「スクリーンショットを生成する」「PPT をエクスポートする」はどれもファイルタスクのように見えますが、最も失敗しやすいポイントはそれぞれ違います。
+
+![イラスト：コード、画像、PDF、表、スライドがベルトコンベアで流れ、小さなアシスタントが一つずつチェックする](/illustrations/files-and-artifacts.webp)
 
 ## セクション案内
 

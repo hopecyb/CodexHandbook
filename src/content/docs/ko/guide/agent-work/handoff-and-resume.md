@@ -3,7 +3,7 @@ title: 인수인계와 재개
 description: 세션을 넘어 미완료 작업을 이어갑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ sidebar:
 - 본인이 어디까지 했는지 잊음
 - Codex가 어떤 제약이 아직 유효한지 모름
 - 새 대화가 옛 컨텍스트를 흩뜨려 처음부터 빙빙 돎
+
+![일러스트: 한 에이전트가 인수인계 노트와 진행 카드를 다른 에이전트에게 건넨다. 뒤에는 넘어가는 달력과 책갈피 꽂힌 작업 보드](/illustrations/handoff-and-resume.webp)
 
 ## 인수인계가 남기는 것
 

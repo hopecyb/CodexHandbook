@@ -27,13 +27,13 @@ prev:
   link: /ja/cases/
   label: 実践課題を選ぶ
 next:
-  link: /ja/guide/verification/
+  link: /ja/guide/quality/
   label: 結果の検証を学ぶ
 locale: ja
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 この演習では、売上週報、地域別集計、商品ランキング、行ごとのクレンジング台帳を作ります。入力はこのサイト用に作った架空のデータで、実際の顧客情報は不要です。
@@ -135,4 +135,4 @@ net_salesがゼロ未満の有効なレコードを確認し、計上すべき�
 
 自分のプロンプトと修正記録を保存してください。データを差し替える前に、項目と基準を確認し直します。この演習の固定検証器は任意の企業データには使えません。
 
-続けて[結果の検証](/ja/guide/verification/)を読むか、[実践ケース](/ja/cases/)へ戻ります。
+続けて[結果の検証](/ja/guide/quality/)を読むか、[実践ケース](/ja/cases/)へ戻ります。

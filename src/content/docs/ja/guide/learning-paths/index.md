@@ -7,7 +7,7 @@ title: 学習パス
 description: 役割ごとに読む順序を整理し、正本の本文へリンクします。
 locale: ja
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -19,6 +19,8 @@ sidebar:
 初めてこの章を見ると、目次が一段増えただけに感じるかもしれません。ここで答えるのは、今の自分がどのタイプの利用者に近いか、次に何をどの順で読むかです。
 
 この章は新しい製品知識を追加するのではなく、遠回りを減らします。
+
+![イラスト：同じ本から伸びる四つの道——初心者・クリエイター・開発者・チーム——が山頂で合流する](/illustrations/learning-paths.webp)
 
 ## この章で扱うこと
 

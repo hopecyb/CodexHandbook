@@ -8,7 +8,7 @@ title: Índice de diagnóstico
 description: Localizar el tutorial o la página de producto según el síntoma.
 locale: es
 source_locale: zh-CN
-source_revision: 7327724
+source_revision: da350d0
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -23,7 +23,7 @@ Orientarte por síntoma suele ser más rápido que ir y venir por todo el sitio.
 |---|---|
 | Fallo de instalación | [Diagnóstico de escritorio](/es/guide/desktop-app/troubleshooting/) · [Diagnóstico de CLI](/es/guide/cli/troubleshooting/) · [Diagnóstico de IDE](/es/guide/ide/troubleshooting/) |
 | Fallo de inicio de sesión/autenticación | [Iniciar sesión](/es/guide/getting-started/sign-in-and-authentication/) |
-| No sé qué cliente elegir | [Elegir cliente](/es/guide/getting-started/choose-your-codex-client/) · [Comparación de funciones](/es/guide/reference/feature-comparison/) |
+| No sé qué cliente elegir | [Elegir cliente](/es/guide/choose-your-client/) · [Comparación de funciones](/es/guide/reference/feature-comparison/) |
 | Resultado fuera de alcance / muy malo | [Revisar el resultado](/es/guide/getting-started/review-the-result/) · [Depurar el Prompt](/es/prompts/prompt-debugging/) · [Deshacer](/es/guide/getting-started/undo-and-recover/) |
 | Contexto confuso | [Mantener el foco](/es/guide/context/keep-context-focused/) |
 | Dudas de Permiso/Sandbox | [Permisos](/es/guide/foundations/permissions-and-approvals/) · [Sandbox](/es/guide/foundations/sandbox-and-network/) |

@@ -5,7 +5,7 @@ sidebar:
   order: 10
 locale: pt
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ A App de desktop é o ponto de entrada padrão para iniciantes: permite ver proj
 Também é uma entrada mais fácil se você não estiver familiarizado com a linha de comando ou com plugins do IDE.
 
 Não se limita a «poder conversar»: reúne projeto, mudanças, Aprovação e Verificação numa mesma interface visível.
+
+![Ilustração: um painel de controle no desktop com vários cartões de tarefas e anéis de progresso; um deles mostra um diff lado a lado e um botão de aprovação](/illustrations/desktop-app.webp)
 
 ## Conteúdo deste capítulo
 

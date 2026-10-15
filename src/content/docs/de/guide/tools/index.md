@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ Der Agent liest Dateien, führt Befehle aus, sucht im Netz, öffnet den Browser 
 
 „Werkzeug“ meint Fähigkeiten, die Codex beim Ausführen wirklich aufruft. Nicht jede Aufgabe endet im Dialog.  
 Manche brauchen Dateien, manche Befehle, manche Webseiten, manche echte Seitenansicht.
+
+![Illustration: ein Werkzeugset auf dem Tisch – Terminal, Browser, Lupe, Bild, Mikrofon und Mauszeiger – ein kleiner Assistent wählt das passende](/illustrations/tools-overview.webp)
 
 ## Warum Werkzeuge zuerst verstehen
 

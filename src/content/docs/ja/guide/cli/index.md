@@ -5,7 +5,7 @@ sidebar:
   order: 11
 locale: ja
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -32,6 +32,8 @@ CLI はターミナルユーザーと、スクリプト・CI 連携に向いて�
 - [トラブルシューティング](/ja/guide/cli/troubleshooting/)
 
 完全なコマンドリファレンスは [CLI コマンドリファレンス](/ja/guide/reference/commands/)。
+
+![イラスト：小さなアシスタントがターミナルの上に座ってコマンドを打ち、ターミナルはスクリプトやテストにつながっている](/illustrations/cli.webp)
 
 ## 最初に区別すること
 

@@ -3,7 +3,7 @@ title: 스레드·작업·프로젝트
 description: 세션·작업·프로젝트 작업 공간의 관계를 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ sidebar:
 - 왜 「같은 프로젝트」인데도 새 스레드를 권하는지
 
 프로젝트는 어디서 일할지, 스레드는 어느 대화를 따라갈지, 작업은 이번에 무엇을 시킬지를 정합니다. 세 층을 나누면 사용 습관이 훨씬 분명해집니다.
+
+![일러스트: 단면도 속 큰 프로젝트 상자에 여러 작업 폴더가 있고, 각 폴더에는 대화 스레드가 몇 개씩 들어 있다](/illustrations/threads-tasks-projects.webp)
 
 ## 세 층 관계를 먼저 나누기
 

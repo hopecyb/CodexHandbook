@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 Ein Plan beschreibt einen Ausführungsweg, den man prüfen und anpassen kann. Er macht Lücken bei Umfang, Abhängigkeiten und Abnahme früh sichtbar. Eine größere Aufgabe bedeutet aber nicht, dass man immer wieder auf Bestätigung warten muss.
 
 Entscheide zunächst anhand der [Aufgabenklassifizierung](/de/prompts/ask-for-a-plan/): direkt erledigen, planen und dann innerhalb der erteilten Befugnis ausführen oder in dieser Runde nur einen Vorschlag liefern. Eine ausdrückliche Bitte um „erst einen Plan, keine Dateiänderungen“ bleibt lesend. Ein Implementierungsauftrag sollte nicht mit dem Plan allein enden.
+
+![Illustration: Ein Assistent skizziert einen Schrittplan am Whiteboard, ein Mensch zeigt vor Arbeitsbeginn auf einen Schritt, der angepasst werden soll](/illustrations/agent-planning.webp)
 
 ## Ein ausreichend genauer Plan
 

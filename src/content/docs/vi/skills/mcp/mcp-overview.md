@@ -7,12 +7,14 @@ title: Tổng quan MCP
 description: Tìm hiểu MCP client, máy chủ, công cụ, xác thực và ranh giới an toàn.
 locale: vi
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: draft
 translated_at: "2026-09-20"
 ---
 
 MCP biến mong muốn “mô hình cần dùng một khả năng bên ngoài” thành một lệnh gọi công cụ có cấu trúc. Nó phù hợp để kết nối tài liệu bên thứ ba, trình duyệt, Figma, hệ thống quản lý phiếu công việc hoặc dịch vụ nội bộ.
+
+![Minh họa: trợ lý cắm vào bộ chia chung, các cáp chuẩn nối tới cơ sở dữ liệu, lịch, bảng công việc và ổ đám mây](/illustrations/mcp-overview.webp)
 
 ## Một chuỗi lệnh gọi
 

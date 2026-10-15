@@ -3,7 +3,7 @@ title: スレッド、タスクとプロジェクト
 description: セッション、タスク、プロジェクト作業領域の関係を整理する。
 locale: ja
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ sidebar:
 - 同じプロジェクト内なのに、なぜ新しいスレッドを勧められるのか
 
 プロジェクトはどこで作業するか、スレッドはどの会話を引き継ぐか、タスクは今回何をしてほしいかを決めます。この三層を分けると、使い方の習慣がはっきりします。
+
+![イラスト：断面図で、大きなプロジェクト箱に複数のタスクフォルダーがあり、それぞれに会話スレッドが入っている](/illustrations/threads-tasks-projects.webp)
 
 ## 三層の関係を分ける
 

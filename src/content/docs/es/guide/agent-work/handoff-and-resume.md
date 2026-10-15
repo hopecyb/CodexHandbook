@@ -3,7 +3,7 @@ title: Traspaso y reanudación
 description: Continuar trabajo incompleto entre sesiones.
 locale: es
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Si no haces traspaso, la próxima vez que abras es fácil que ocurran tres cosas
 - Tú mismo olvidas hasta dónde llegaste
 - Codex no sabe qué restricciones siguen vigentes
 - La nueva ronda de conversación dispersa el contexto viejo y vuelves a dar vueltas desde cero
+
+![Ilustración: un agente entrega notas de traspaso y una tarjeta de progreso a otro, con un calendario y un tablero de tareas con marcador detrás](/illustrations/handoff-and-resume.webp)
 
 ## Qué deja realmente el traspaso
 

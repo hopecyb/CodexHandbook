@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: vi
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ Agent dùng **Công cụ** để đọc tệp, chạy lệnh, tìm trên mạng,
 
 “Công cụ” ở đây là năng lực Codex thật sự gọi khi thực thi tác vụ. Không phải mọi tác vụ chỉ dựa vào hội thoại.  
 Có tác vụ cần đọc tệp, có tác vụ cần chạy lệnh, có tác vụ cần xem trang web, có tác vụ cần nhìn trang thật.
+
+![Minh họa: bộ công cụ trên bàn — terminal, trình duyệt, kính lúp tìm kiếm, hình ảnh, micro và con trỏ — trợ lý nhỏ chọn công cụ phù hợp](/illustrations/tools-overview.webp)
 
 ## Vì sao cần hiểu công cụ trước
 

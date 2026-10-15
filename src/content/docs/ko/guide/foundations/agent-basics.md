@@ -3,7 +3,7 @@ title: Agent 기초
 description: Agent가 목표를 중심으로 도구를 호출하며 반복 추진하는 방식을 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 **Agent**는 목표를 중심으로 계속 앞으로 갑니다. 목표 이해 → 도구 선택 → 결과 관찰 → 다음 조정, 완료되거나 당신 개입이 필요할 때까지.
 
 일반 AI는 질문에 답하는 사람에 가깝고, Agent는 일을 받은 뒤 한 걸음씩 밀어가는 사람에 가깝습니다.
+
+![일러스트: 왼쪽은 묻고 답하는 일반 채팅, 오른쪽은 파일 읽기, 도구 사용, 결과 확인, 수정을 반복하는 에이전트 루프](/illustrations/agent-basics.webp)
 
 ## Agent와 일반 채팅의 차이
 

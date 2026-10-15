@@ -7,12 +7,14 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: fr
 source_locale: zh-CN
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 ChatGPT et Codex utilisent le même catalogue public de Plugins. Un Plugin regroupe des capacités liées dans un flux de travail repérable et installable ; il n’invente pas un nouveau protocole d’appel d’outils.
+
+![Illustration : des paquets d’extension enrubannés circulent sur un rail vers plusieurs postes ; l’un est déballé, un autre retiré proprement](/illustrations/plugins-overview.webp)
 
 ## Ce qu’un Plugin peut contenir
 

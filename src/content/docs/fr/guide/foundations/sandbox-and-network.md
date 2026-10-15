@@ -8,7 +8,7 @@ title: Bac à sable et réseau
 description: Comprendre l'isolation d'exécution, l'accès réseau et les limites de risque.
 locale: fr
 source_locale: zh-CN
-source_revision: '5937622'
+source_revision: 2cf2c46
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 « Bac à sable » et « réseau » désignent deux choses différentes : le premier limite ce que Codex peut toucher, tandis que le second limite les destinations auxquelles il peut se connecter.
 
 Le **bac à sable** restreint l'accès de l'agent au système de fichiers et à certaines fonctions du système, ce qui réduit la portée d'une erreur. **L'accès réseau** ajoute un autre risque : des informations sensibles présentes dans l'instruction pourraient être exposées, ou des données non fiables pourraient être récupérées.
+
+![Illustration : l’agent travaille dans un bac à sable vitré et présente une demande, une personne dehors appuie sur approuver ; le câble réseau est débranché](/illustrations/sandbox-and-approval.webp)
 
 ## Pourquoi ces limites comptent
 

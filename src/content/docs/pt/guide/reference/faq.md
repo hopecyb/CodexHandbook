@@ -3,7 +3,7 @@ title: Perguntas frequentes
 description: Perguntas frequentes ao começar e ao usar.
 locale: pt
 source_locale: zh-CN
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -22,7 +22,7 @@ Perante situações como:
 - Só queres uma orientação de direção
 
 **P: Que cliente usar ao começar?**  
-R: A App de ambiente de trabalho. Ver [Escolher o cliente](/pt/guide/getting-started/choose-your-codex-client/).
+R: A App de ambiente de trabalho. Ver [Escolher o cliente](/pt/guide/choose-your-client/).
 
 **P: Posso saltar a verificação e aceitar todas as alterações?**  
 R: Melhor não. Ver [Verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/).

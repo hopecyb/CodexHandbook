@@ -7,7 +7,7 @@ title: Skills
 description: Codex Skill の利用、作成、テスト、保守の方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: dd408f5
+source_revision: 6f8df16
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -16,6 +16,8 @@ translated_at: 2026-09-20
 Skill は、安定した手法、参考資料、テンプレート、スクリプトを再利用可能な能力としてパッケージ化するために使います。
 
 価値は「Codexにできることを一つ増やす」だけではありません。一連の作業に明確な入力、出力、権限の境界、テスト方法を与えられます。
+
+![一度きりのプロンプトからチーム能力パックへ：プロンプトとテンプレートが Skill・サブエージェント・MCP・Hook になり、Plugin と Automation でチームに展開される](/diagrams/codex-capability-ladder-ja.svg)
 
 ## 推奨順序
 

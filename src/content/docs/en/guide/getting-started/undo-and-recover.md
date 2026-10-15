@@ -8,7 +8,7 @@ title: Undo and recover
 description: Safely roll back when the result is unsatisfactory.
 locale: en
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ When the result is outside the agreed scope or its quality is poor:
 3. Start a new thread, tighten the constraints, and try again.
 
 Often it helps to keep the scope small in advance: allow only a few files, state what must not change, and review a plan before execution.
+
+![Illustration: a rewind arrow circles a stack of version snapshots, an older version slides back into place, and a safety net catches a crumpled page](/illustrations/undo-and-recover.webp)
 
 ## Distinguish “undo” from “recover”
 

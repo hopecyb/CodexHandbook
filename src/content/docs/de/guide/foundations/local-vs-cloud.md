@@ -3,7 +3,7 @@ title: Lokal und Cloud
 description: "Vergleicht Einsatzszenarien für lokale Aufgaben und Cloud-Aufgaben."
 locale: de
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Willst du Codex zuerst nur in Gang bringen, ist **lokal** meist einfacher.
 | Laufort | Deine Maschine / lokale Umgebung | Cloud-Umgebung |
 | Geeignet für | Schnelle Iteration, lokale Dateien, Debugging mit lokalen Secrets | Remote-Repos, lange Aufgaben, standardisierte Umgebung |
 | Achtung | Lokale Berechtigungen und Fehländerungsrisiko | Umgebungskonfiguration, Secret-Injection, Netzwerkpolitik |
+
+![Illustration: links die Arbeit mit dem Agenten am eigenen Rechner, rechts isolierte Cloud-Container, die parallel laufen und Ergebnisse zurückschicken](/illustrations/local-vs-cloud.webp)
 
 ## Nutzungserlebnis
 

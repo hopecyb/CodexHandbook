@@ -8,7 +8,7 @@ title: Hier starten
 description: "Verstehe, was Codex ist, für wen es geeignet ist, und wähle deinen Lernpfad."
 locale: de
 source_locale: zh-CN
-source_revision: 016d023
+source_revision: 953fb89
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 
 
 Dieses Handbook richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht voraus, dass du Terminal, Git oder Agent beherrschst — die Fähigkeiten, die du später brauchst, werden Schritt für Schritt erklärt.
+
+![Illustration: Ein Wegweiser am Startpunkt zeigt auf mehrere Routen, daneben ein offener Leitfaden und ein winkender Assistent](/illustrations/start-here.webp)
 
 ## Inhalt
 
@@ -32,8 +34,8 @@ Dieses Handbook richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht vor
 2. [Client wählen](/de/guide/choose-your-client/) — Zwischen App, CLI, IDE und Cloud entscheiden
 3. [Erste Aufgabe abschließen](/de/cases/first-task/) — Mit klaren Prompts eine kleine Änderung machen und das Ergebnis prüfen
 4. [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/) — Freigabe, Isolation und Netzwerkgrenzen verstehen
-5. [Kontext und Dateien](/de/guide/context-and-files/) — Effektive Eingaben liefern lernen
-6. [Ergebnisse überprüfen](/de/guide/verification/) — Überprüfungs- und Testgewohnheiten aufbauen
+5. [Kontext und Dateien](/de/guide/context/) — Effektive Eingaben liefern lernen
+6. [Ergebnisse überprüfen](/de/guide/quality/) — Überprüfungs- und Testgewohnheiten aufbauen
 
 ## Häufige Missverständnisse
 
@@ -64,7 +66,7 @@ Verstehen, kleines Üben und Ergebnisse prüfen gehören zusammen.
 | 10–25 Min. | Die Übung aus dem [Fallbeispiel erste Aufgabe](/de/cases/first-task/) absolvieren |
 | 25–30 Min. | [Prompt-Grundlagen](/de/prompts/basics/) ansehen und klarere Aufgaben vorbereiten |
 
-Bei Problemen siehe [Fehlerbehebung](/de/guide/troubleshooting/).
+Bei Problemen siehe [Fehlerbehebung](/de/guide/reference/troubleshooting/).
 
 ## Wie weiterlesen
 

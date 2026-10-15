@@ -5,6 +5,7 @@ import { getActiveModule } from '../utils/activeModule';
 import { filterSidebarByModule, getSidebarHash } from '../utils/filterSidebar';
 import { learningPathSidebar } from '../utils/learningPathSidebar.mjs';
 import { localizeSidebarLabels } from '../utils/localizeSidebar';
+import { orderSidebarGroups } from '../utils/orderSidebar';
 import MobileMainNav from './MobileMainNav.astro';
 import ModuleSidebarPersister from './ModuleSidebarPersister.astro';
 
@@ -13,7 +14,7 @@ const locale = Astro.locals.starlightRoute.locale;
 const normalizedLocale = !locale || locale === 'root' ? undefined : locale;
 const activeModule = getActiveModule(Astro.url.pathname, normalizedLocale);
 const filteredSidebar = learningPathSidebar(sidebar, Astro.url.pathname, normalizedLocale)
-	?? localizeSidebarLabels(filterSidebarByModule(sidebar, activeModule, normalizedLocale));
+	?? localizeSidebarLabels(await orderSidebarGroups(filterSidebarByModule(sidebar, activeModule, normalizedLocale)));
 const hash = getSidebarHash(filteredSidebar);
 ---
 

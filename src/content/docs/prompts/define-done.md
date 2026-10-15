@@ -75,4 +75,4 @@ description: 写出可检查的完成条件。
 
 说到底，就是别让“到底算不算做完”只能靠猜。
 
-把验证命令写进标准，Agent 才更可能主动去跑：[运行测试](/guide/verification/)
+把验证命令写进标准，Agent 才更可能主动去跑：[运行测试](/guide/quality/)

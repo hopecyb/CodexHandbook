@@ -7,12 +7,14 @@ title: Prompts
 description: Học cách nêu rõ tác vụ, bối cảnh, đầu vào, ràng buộc và tiêu chí nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: b4393c7
+source_revision: 2280f53
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 Phần prompt hướng dẫn cách diễn đạt tác vụ để Codex hiểu mục tiêu, bối cảnh, ranh giới và tiêu chí hoàn thành. Một prompt hữu ích cũng giúp làm rõ điều chưa chắc chắn trong lúc thực hiện, yêu cầu xác nhận khi cần và trả về kết quả có thể kiểm tra.
+
+![Minh họa: bốn mảnh ghép — mục tiêu, bối cảnh, ràng buộc và tiêu chí hoàn thành — ghép thành một thẻ nhiệm vụ đầy đủ giao cho agent](/illustrations/task-brief.webp)
 
 ## Thứ tự khuyến nghị
 

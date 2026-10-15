@@ -3,13 +3,15 @@ title: Introducción a los Plugins
 description: Comprende los componentes de un Plugin, las superficies compatibles, la verificación de la instalación y los límites de confianza.
 locale: es
 source_locale: zh-cn
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 ChatGPT y Codex usan el mismo catálogo público de Plugins. Un Plugin compone capacidades relacionadas en un flujo de trabajo que se puede descubrir e instalar; no inventa un nuevo protocolo para llamar a herramientas.
+
+![Ilustración: paquetes de extensión con lazo viajan por un riel hasta varias estaciones de trabajo; uno se abre y otro se retira limpiamente](/illustrations/plugins-overview.webp)
 
 ## Qué puede contener un Plugin
 

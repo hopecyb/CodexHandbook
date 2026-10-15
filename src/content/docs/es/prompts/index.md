@@ -7,12 +7,14 @@ title: Prompts
 description: Aprende a formular con claridad la tarea, el contexto, las entradas, las restricciones y los criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: b4393c7
+source_revision: 2280f53
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 La sección de prompts explica cómo expresar una tarea para que Codex conozca el objetivo, el contexto, los límites y los criterios de finalización. Un buen prompt también permite señalar incertidumbres durante la ejecución, pedir confirmación cuando sea necesaria y entregar un resultado comprobable.
+
+![Ilustración: cuatro piezas de puzle —objetivo, contexto, límites y criterio de terminado— forman una tarjeta de tarea completa para el agente](/illustrations/task-brief.webp)
 
 ## Orden recomendado
 

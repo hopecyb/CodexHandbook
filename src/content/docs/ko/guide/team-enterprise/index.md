@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: ko
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ reviewed_at: 2026-08-26
 - 어디까지 할 수 있는가
 - 문제가 나면 어떻게 추적하는가
 - 고위험 확장은 어떻게 승인하는가
+
+![일러스트: 팀이 공유 규칙을 두고 여러 에이전트와 협업하고, 주변에는 가드레일, 검토대에서는 사람이 승인한다](/illustrations/team-guardrails.webp)
 
 ## 이 장 내용
 

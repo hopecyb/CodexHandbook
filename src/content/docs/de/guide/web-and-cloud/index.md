@@ -5,13 +5,15 @@ sidebar:
   order: 13
 locale: de
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 Codex Cloud führt Codierungsaufgaben in isolierten Cloud-Umgebungen aus. Es eignet sich für Langzeitaufgaben im Hintergrund, parallele Versuche und Arbeit, die über GitHub, GitLab (Beta), Linear oder Slack gestartet wird. Cloud steuert nicht einfach deinen Rechner aus der Ferne und sieht lokale noch nicht gepushte Dateien nicht automatisch.
+
+![Illustration: Ein Repository im Browser verbindet sich mit isolierten Cloud-Containern; das Ergebnis kommt als Pull-Request-Karte mit grünem Haken zurück](/illustrations/web-and-cloud.webp)
 
 ## Ablauf einer Cloud-Aufgabe
 

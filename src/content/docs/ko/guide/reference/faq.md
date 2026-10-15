@@ -3,7 +3,7 @@ title: 자주 묻는 질문
 description: 입문과 사용 중의 고빈도 질문입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -22,7 +22,7 @@ sidebar:
 - 방향 판단만 먼저 얻고 싶음
 
 **Q：처음에는 어떤 클라이언트를 써야 하나요?**  
-A：데스크톱 App. [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)을 보세요.
+A：데스크톱 App. [클라이언트 선택](/ko/guide/choose-your-client/)을 보세요.
 
 **Q：확인을 건너뛰고 변경을 전부 수락해도 되나요?**  
 A：하지 않는 편이 좋습니다. [검증과 사람 재검토](/ko/guide/foundations/verification-and-human-review/)를 보세요.

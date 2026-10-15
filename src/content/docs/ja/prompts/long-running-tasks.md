@@ -3,7 +3,7 @@ title: 長時間タスクのプロンプト
 description: フェーズ分割、チェックポイント、引き継ぎ情報。
 locale: ja
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ reviewed_at: 2026-08-26
 フェーズ 3：テストを足して実行……
 各フェーズの終わりに一旦止めて、私の確認を待って。
 ```
+
+![イラスト：曲がりくねった長い道にチェックポイントの旗が立ち、リュックのアシスタントが進み、人が道しるべで方向を調整する](/illustrations/long-running-tasks.webp)
 
 ## なぜ長時間タスクは逸脱しやすいか
 

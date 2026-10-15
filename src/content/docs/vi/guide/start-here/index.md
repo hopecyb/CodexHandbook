@@ -8,7 +8,7 @@ title: Bắt đầu từ đây
 description: Hiểu Codex là gì, dành cho ai, và chọn lộ trình học của bạn.
 locale: vi
 source_locale: zh-CN
-source_revision: 016d023
+source_revision: 953fb89
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 
 
 Cẩm nang này chủ yếu viết cho **người mới bắt đầu với AI**: không giả định bạn đã biết dùng terminal, Git hay Agent, nhưng sẽ lần lượt làm rõ các năng lực bạn sẽ gặp sau này.
+
+![Minh họa: biển chỉ đường ở điểm xuất phát trỏ tới nhiều lối đi, cạnh cuốn hướng dẫn mở và một trợ lý nhỏ vẫy chào](/illustrations/start-here.webp)
 
 ## Nội dung
 
@@ -32,8 +34,8 @@ Cẩm nang này chủ yếu viết cho **người mới bắt đầu với AI**:
 2. [Chọn client](/vi/guide/choose-your-client/) — chọn giữa App, CLI, IDE, Cloud
 3. [Hoàn thành tác vụ đầu tiên](/vi/cases/first-task/) — dùng Prompt rõ ràng để làm thay đổi nhỏ và kiểm tra kết quả
 4. [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/) — hiểu phê duyệt, cô lập và ranh giới mạng
-5. [Ngữ cảnh và tệp](/vi/guide/context-and-files/) — học cung cấp đầu vào hiệu quả
-6. [Kiểm chứng kết quả](/vi/guide/verification/) — hình thành thói quen rà soát và kiểm thử
+5. [Ngữ cảnh và tệp](/vi/guide/context/) — học cung cấp đầu vào hiệu quả
+6. [Kiểm chứng kết quả](/vi/guide/quality/) — hình thành thói quen rà soát và kiểm thử
 
 ## Hiểu nhầm thường gặp
 
@@ -64,7 +66,7 @@ Chưa đủ. Hiểu, thực hành phạm vi nhỏ và kiểm tra kết quả c�
 | 10–25 phút | Làm bài theo [case tác vụ đầu tiên](/vi/cases/first-task/) |
 | 25–30 phút | Xem [cơ bản về Prompt](/vi/prompts/basics/), chuẩn bị viết tác vụ rõ hơn |
 
-Khi bị kẹt, xem [Xử lý sự cố](/vi/guide/troubleshooting/).
+Khi bị kẹt, xem [Xử lý sự cố](/vi/guide/reference/troubleshooting/).
 
 ## Đọc tiếp như thế nào
 

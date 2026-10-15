@@ -11,7 +11,7 @@ title: First task
 description: Complete a small change with a clear prompt and learn how to review results.
 locale: en
 source_locale: zh-CN
-source_revision: 0495ceb
+source_revision: 38f925b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -57,5 +57,5 @@ If information is insufficient, ask me first; do not guess.
 ## 5. Next steps
 
 - [Prompt basics](/en/prompts/basics/)
-- [Verification](/en/guide/verification/)
+- [Verification](/en/guide/quality/)
 - [Start here](/en/guide/start-here/)

@@ -3,7 +3,7 @@ title: 権限と承認
 description: Codex がいつ操作の承認を求めるかを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Codex は同意なしに高リスク操作を実行すべきではありません。**承認** は人と機械の協業におけるゲートです。
 
 Codex が任意のファイルを読み、自由にネットワークへ出て、任意のコマンドを実行できると、タスクを誤解したときの代償は大きくなります。
+
+![イラスト：ファイルを読む・書く・コマンドを実行する・ネットに接続する、権限の異なる四つの扉と、どの鍵を渡すか決める人](/illustrations/permissions-approvals.webp)
 
 ## 気にすべきこと
 

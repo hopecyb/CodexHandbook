@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: pt
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ Questões centrais:
 - Até onde pode ir
 - Como rastrear quando algo corre mal
 - Como aprovar extensões de alto risco
+
+![Ilustração: uma equipe trabalha com vários agentes sob regras compartilhadas, dentro de proteções, com uma pessoa aprovando na revisão](/illustrations/team-guardrails.webp)
 
 ## Conteúdo deste capítulo
 

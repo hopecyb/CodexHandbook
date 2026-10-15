@@ -3,7 +3,7 @@ title: Bắt đầu nhanh
 description: Từ tài khoản và cài đặt đến tác vụ đầu tiên có thể kiểm tra.
 locale: vi
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Mặc định đi **Desktop App**. Nếu bạn quen terminal hoặc trình soạ
 
 Nếu bạn muốn giải quyết trước «làm sao bắt đầu» và «làm sao tránh làm sai ngay từ đầu», chương này là lối vào trực tiếp nhất.
 
+![Minh họa: bốn bậc thang — chuẩn bị máy, đăng nhập, tạo dự án luyện tập, hoàn thành nhiệm vụ đầu tiên — có trợ lý nhỏ đi cùng](/illustrations/getting-started.webp)
+
 ## Chương này gồm gì
 
 - Trước lần đầu bắt tay tối thiểu cần chuẩn bị gì
@@ -27,7 +29,7 @@ Nếu bạn muốn giải quyết trước «làm sao bắt đầu» và «làm 
 ## Các bước
 
 1. [Tài khoản, gói và quyền truy cập](/vi/guide/getting-started/account-plans-and-access/)
-2. [Chọn client](/vi/guide/getting-started/choose-your-codex-client/)
+2. [Chọn client](/vi/guide/choose-your-client/)
 3. Cài đặt: [Desktop App](/vi/guide/getting-started/install-desktop-app/) · [CLI](/vi/guide/getting-started/install-cli/) · [IDE](/vi/guide/getting-started/install-ide-extension/)
 4. [Đăng nhập](/vi/guide/getting-started/sign-in-and-authentication/)
 5. [Tạo dự án luyện tập](/vi/guide/getting-started/create-your-first-project/)

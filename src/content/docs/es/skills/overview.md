@@ -3,7 +3,7 @@ title: Descripción general de Skills
 description: Enseña a Codex flujos de trabajo reutilizables con SKILL.md; escríbelo una vez y llámalo cuando haga falta.
 locale: es
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 Un **Skill** es un directorio que contiene `SKILL.md` (y, opcionalmente, scripts y material de referencia) que empaqueta un flujo fijo en una capacidad que Codex puede **invocar automáticamente o de forma explícita**.
 
 Encaja con métodos de trabajo que ya se han repetido y que seguirán reutilizándose.
+
+![Ilustración: un flujo exitoso se guarda en una caja de herramientas y se reparte en copias a varios agentes para reutilizarlo](/illustrations/skills-toolkit.webp)
 
 ## Conceptos clave
 

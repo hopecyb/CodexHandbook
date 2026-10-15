@@ -8,7 +8,7 @@ title: What is Codex?
 description: A plain-language introduction to what Codex can and cannot do and where to use it.
 locale: en
 source_locale: zh-CN
-source_revision: "a491834"
+source_revision: 0f376b6
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -20,6 +20,8 @@ Codex is OpenAI's **AI coding and work agent**. Give it a goal, and it can use p
 It is like a digital colleague who can use tools. You describe the goal, boundaries, and acceptance criteria; it researches, edits files, and carries out steps. You make the final decision.
 
 For official product documentation, see [OpenAI Codex](https://developers.openai.com/codex). This handbook is an open-source community guide for systematic learning and practical use, not a replacement for the official documentation.
+
+![Illustration: you hand Codex a task card, and it works through the laptop, documents, and terminal, checking off each step](/illustrations/what-is-codex.webp)
 
 ## How is it different from ordinary AI chat?
 

@@ -5,7 +5,7 @@ sidebar:
   order: 4
 locale: ko
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ reviewed_at: 2026-08-26
 
 「어떻게 시작할지」「처음에 어떻게 실수하지 않을지」가 가장 궁금하다면, 이 장이 가장 직접적인 입구입니다.
 
+![일러스트: 컴퓨터 준비, 로그인, 연습 프로젝트 만들기, 첫 작업 완료로 이어지는 네 계단을 작은 도우미와 함께 오른다](/illustrations/getting-started.webp)
+
 ## 이 장에 포함된 것
 
 - 첫 시작 전에 최소한 무엇을 준비할지
@@ -27,7 +29,7 @@ reviewed_at: 2026-08-26
 ## 단계
 
 1. [계정·플랜·접근](/ko/guide/getting-started/account-plans-and-access/)
-2. [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)
+2. [클라이언트 선택](/ko/guide/choose-your-client/)
 3. 설치: [데스크톱 App](/ko/guide/getting-started/install-desktop-app/) · [CLI](/ko/guide/getting-started/install-cli/) · [IDE](/ko/guide/getting-started/install-ide-extension/)
 4. [로그인](/ko/guide/getting-started/sign-in-and-authentication/)
 5. [연습 프로젝트 만들기](/ko/guide/getting-started/create-your-first-project/)

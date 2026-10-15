@@ -7,12 +7,14 @@ title: Visão geral dos Plugins
 description: Compreender os componentes, os ambientes suportados, a instalação, a verificação e os limites de confiança dos Plugins.
 locale: pt
 source_locale: zh-CN
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: draft
 translated_at: "2026-09-20"
 ---
 
 O ChatGPT e o Codex usam o mesmo catálogo público de Plugins. Um Plugin reúne capacidades relacionadas num fluxo de trabalho que se pode descobrir e instalar; não inventa um novo protocolo de chamadas de ferramentas.
+
+![Ilustração: pacotes de extensão com laço seguem num trilho até várias estações; um é aberto e outro removido de forma limpa](/illustrations/plugins-overview.webp)
 
 ## O que um Plugin pode incluir
 

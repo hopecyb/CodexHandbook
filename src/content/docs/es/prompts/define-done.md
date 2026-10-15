@@ -3,7 +3,7 @@ title: Definir el terminado
 description: Escribe condiciones de terminado comprobables.
 locale: es
 source_locale: zh-CN
-source_revision: 5d963e0
+source_revision: e97e854
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -76,7 +76,7 @@ Si no, casi seguro sigue siendo demasiado vago.
 
 Al final, no dejes que «¿cuenta como terminado?» dependa de adivinar.
 
-Incluye los comandos de verificación en los criterios para que el Agent tenga más probabilidad de ejecutarlos: [Ejecutar tests](/es/guide/verification/)
+Incluye los comandos de verificación en los criterios para que el Agent tenga más probabilidad de ejecutarlos: [Ejecutar tests](/es/guide/quality/)
 
 ---
 

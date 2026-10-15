@@ -3,7 +3,7 @@ title: "Vue d'ensemble des Skills"
 description: Enseigner des workflows réutilisables à Codex via SKILL.md — écrire une fois, invoquer à la demande.
 locale: fr
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 Un **Skill** est un répertoire contenant `SKILL.md` (scripts et références optionnels), qui empaquette un flux fixe en capacité **appelable automatiquement ou explicitement** par Codex.
 
 Il convient aux méthodes déjà répétées et qui le seront encore.
+
+![Illustration : un workflow réussi est rangé dans une boîte à outils, puis copié et remis à plusieurs agents pour être réutilisé](/illustrations/skills-toolkit.webp)
 
 ## Concepts clés
 

@@ -3,13 +3,15 @@ title: MCP im Überblick
 description: Verstehe MCP-Client, Server, Werkzeuge, Authentifizierung und Sicherheitsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 MCP wandelt den Wunsch eines Modells nach einer externen Funktion in einen strukturierten Werkzeugaufruf um. Es eignet sich zur Einbindung von Drittanbieterdokumentation, Browsern, Figma, Ticketsystemen und internen Diensten.
+
+![Illustration: Der Assistent steckt an einem universellen Hub, dessen Standardkabel zu Datenbank, Kalender, Ticketboard und Cloud-Speicher führen](/illustrations/mcp-overview.webp)
 
 ## Aufrufkette
 

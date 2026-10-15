@@ -5,7 +5,7 @@ sidebar:
   order: 16
 locale: ja
 source_locale: zh-CN
-source_revision: e085884
+source_revision: d2baf42
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ reviewed_at: 2026-08-26
 コンテキストとは、モデルが「この瞬間に有効に使える情報」のことです。コンテキストを管理できないと、どんなに良いプロンプトでもノイズに埋もれます。
 
 実際の使い方に置き換えると、Codex が現在本当に見えていること、参照できること、それに基づいて判断することを指します。あなたが知っていても今回のタスクに提供していない内容は、コンテキストには含まれません。
+
+![イラスト：プロジェクトのルール、選んだファイル、会話の三層がエージェントに流れ込み、無関係なものは漏斗で除かれる](/illustrations/context-layers.webp)
 
 ## この章が特に重要な理由
 

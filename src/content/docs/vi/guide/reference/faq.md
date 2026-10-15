@@ -3,7 +3,7 @@ title: Câu hỏi thường gặp
 description: Câu hỏi tần suất cao khi bắt đầu và dùng hàng ngày.
 locale: vi
 source_locale: zh-CN
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -22,7 +22,7 @@ Gặp các tình huống sau có thể lật FAQ trước:
 - Muốn có phán đoán hướng trước
 
 **H: Mới bắt đầu nên dùng client nào?**  
-Đ: App máy tính. Xem [Chọn client](/vi/guide/getting-started/choose-your-codex-client/).
+Đ: App máy tính. Xem [Chọn client](/vi/guide/choose-your-client/).
 
 **H: Có thể bỏ kiểm tra và chấp nhận mọi thay đổi một lúc không?**  
 Đ: Tốt nhất không. Xem [Kiểm chứng và review của người](/vi/guide/foundations/verification-and-human-review/).

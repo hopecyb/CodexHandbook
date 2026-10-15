@@ -3,7 +3,7 @@ title: Prompt cho tác vụ dài
 description: Tách giai đoạn, checkpoint và thông tin bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Giai đoạn 2: Triển khai thay đổi tối thiểu
 Giai đoạn 3: Bổ sung kiểm thử và chạy……
 Mỗi giai đoạn xong thì dừng, chờ tôi xác nhận.
 ```
+
+![Minh họa: con đường dài quanh co có cờ trạm kiểm tra, trợ lý đeo ba lô tiến bước, một người ở trạm giơ biển chỉ hướng](/illustrations/long-running-tasks.webp)
 
 ## Vì sao tác vụ dài dễ lệch hướng
 

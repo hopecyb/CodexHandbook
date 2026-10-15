@@ -35,7 +35,7 @@
   <text x="383" y="166" text-anchor="middle" class="node-title">模板</text>
   <text x="383" y="183" text-anchor="middle" class="node-note">保住任务结构</text>
   <path d="M 246 169 L 300 169" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
-  <text x="260" y="158" class="small">反复出现</text>
+  <text x="290" y="140" text-anchor="middle" class="small">反复出现</text>
 
   <rect data-graph-role="container" x="48" y="236" width="864" height="132" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
   <text x="66" y="262" class="lane-label">稳定流程</text>

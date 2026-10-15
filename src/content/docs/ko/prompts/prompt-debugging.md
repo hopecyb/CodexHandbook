@@ -3,7 +3,7 @@ title: 프롬프트 디버깅
 description: 결과가 어긋날 때 프롬프트 문제를 어떻게 찾는지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ reviewed_at: 2026-08-26
 - 작업이 큰데 먼저 계획을 요청하지 않음
 
 프롬프트 디버깅의 핵심은, 어느 층의 정보가 빠졌는지 찾는 것입니다.
+
+![일러스트: 작업대 위 두 결과물 중 왼쪽은 과녁을 벗어나고 오른쪽은 명중하며, 가운데 작업 카드를 드라이버와 돋보기로 조정한다](/illustrations/prompt-debugging.webp)
 
 ## 먼저 문제가 어디에 있는지 찾기
 

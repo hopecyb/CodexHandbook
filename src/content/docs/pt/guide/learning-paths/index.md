@@ -9,7 +9,7 @@ sidebar:
   order: 5
 locale: pt
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -19,6 +19,8 @@ Os percursos de aprendizagem **só organizam a ordem de leitura**; não repetem 
 À primeira vista, este capítulo pode parecer mais uma camada de índice. Na prática, responde a duas perguntas: com que tipo de utilizador te identificas agora e em que ordem deves continuar a ler?
 
 Este capítulo não acrescenta conhecimento novo sobre o produto; ajuda-te a evitar desvios.
+
+![Ilustração: quatro caminhos que saem do mesmo livro — iniciante, criador, desenvolvedor e equipe — se encontram no topo](/illustrations/learning-paths.webp)
 
 ## O que este capítulo faz
 

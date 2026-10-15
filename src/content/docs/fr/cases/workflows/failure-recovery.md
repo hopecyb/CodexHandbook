@@ -3,13 +3,15 @@ title: Reprise après échec
 description: Quand une tâche dévie, les tests passent au rouge ou le contexte s'épuise — comment revenir en arrière en sécurité et continuer.
 locale: fr
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 La **reprise après échec** couvre comment stabiliser la situation après qu'une tâche a dévié ou s'est interrompue. Ce chapitre propose des étapes reproductibles **détecter → limiter les dégâts → récupérer → tirer les leçons**, à associer à [Annuler et récupérer](/fr/guide/getting-started/undo-and-recover/) et à la [Gestion des tâches longues](/fr/cases/workflows/long-running-task-management/).
+
+![Illustration : une tour de blocs à moitié effondrée est reconstruite calmement selon une liste, une flèche de retour replace un bloc sur une base stable](/illustrations/failure-recovery.webp)
 
 ## Ce que couvre cette page
 

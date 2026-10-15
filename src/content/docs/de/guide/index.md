@@ -7,7 +7,7 @@ next:
 description: "Codex kennenlernen, Client wählen, erste Aufgabe abschließen und Berechtigungen, Kontext sowie Überprüfung verstehen."
 locale: de
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ Du musst nicht zuerst alle Begriffe, Produkte und Workflows kennen. Finde deine 
 
 - [Sicherheitscheckliste für Einsteiger](/de/guide/getting-started/beginner-safety-checklist/)
 - [Methode zur Client-Wahl](/de/guide/choose-your-client/)
-- [Ergebnisse prüfen und Fertig-Kriterien](/de/guide/verification/)
+- [Ergebnisse prüfen und Fertig-Kriterien](/de/guide/quality/)
 
 ## Empfohlene Reihenfolge
 
@@ -38,9 +38,9 @@ Du musst nicht zuerst alle Begriffe, Produkte und Workflows kennen. Finde deine 
 3. [Client wählen](/de/guide/choose-your-client/)
 4. [Erste Aufgabe abschließen](/de/cases/first-task/)
 5. [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/)
-6. [Kontext und Dateien](/de/guide/context-and-files/)
-7. [Überprüfung](/de/guide/verification/)
-8. Bei Problemen: [Fehlerbehebung](/de/guide/troubleshooting/)
+6. [Kontext und Dateien](/de/guide/context/)
+7. [Überprüfung](/de/guide/quality/)
+8. Bei Problemen: [Fehlerbehebung](/de/guide/reference/troubleshooting/)
 
 ## Häufige Missverständnisse
 

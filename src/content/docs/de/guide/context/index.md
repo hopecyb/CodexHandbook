@@ -3,7 +3,7 @@ title: Kontext
 description: Projekt-, Datei- und Gesprächskontext verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: e085884
+source_revision: d2baf42
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Kontext ist die Information, die das Modell «jetzt wirksam nutzen kann». Ohne Kontextmanagement ertrinken auch gute Prompts im Rauschen.
 
 In der Praxis: Was Codex diesmal wirklich sieht, worauf es sich beziehen kann, wonach es urteilt. Was du weißt, aber nicht bereitgestellt hast, zählt nicht als Kontext dieser Aufgabe.
+
+![Illustration: Projektregeln, ausgewählte Dateien und Gespräch fließen in drei Schichten zum Agenten, ein Trichter filtert Irrelevantes heraus](/illustrations/context-layers.webp)
 
 ## Warum dieses Kapitel besonders wichtig ist
 

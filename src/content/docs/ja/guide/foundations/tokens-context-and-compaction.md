@@ -3,7 +3,7 @@ title: Token、コンテキストと圧縮
 description: コンテキストウィンドウ、占有、圧縮を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 **Token** はモデルがテキストを処理する際の計量単位です。**コンテキストウィンドウ** は、一度に有効活用できる情報の上限です。
 
 会話やファイルが多すぎると、システムは **圧縮（compaction）** を行う場合があります。要約を残し、詳細を捨てます。圧縮後、Agent は初期の制約を「忘れる」ことがあります。
+
+![イラスト：長い会話の巻物がプレス機を通り、限られた枠に収まる短い要約カードになる](/illustrations/tokens-compaction.webp)
 
 ## 3 つの言葉を分けて見る
 

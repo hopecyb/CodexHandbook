@@ -3,7 +3,7 @@ title: Prompts für lange Aufgaben
 description: 'Phasen aufteilen, Checkpoints und Übergabeinformationen.'
 locale: de
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Phase 2: Minimale Änderung umsetzen
 Phase 3: Tests ergänzen und ausführen……
 Nach jeder Phase stoppen und auf meine Bestätigung warten.
 ```
+
+![Illustration: eine lange, kurvige Straße mit Kontrollpunkt-Fahnen; ein Assistent mit Rucksack geht voran, ein Mensch am Kontrollpunkt weist die Richtung](/illustrations/long-running-tasks.webp)
 
 ## Warum lange Aufgaben leicht abdriften
 

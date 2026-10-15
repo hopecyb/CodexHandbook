@@ -3,7 +3,7 @@ title: Escolha seu caminho
 description: Escolha a rota de leitura por papel, Tarefa e entrada de produto.
 locale: pt
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ Há muitas entradas; escolha a que estiver mais perto do problema atual.
 - Editor: [IDE](/pt/guide/ide/)
 - Visão geral na nuvem: [Web e Cloud](/pt/guide/web-and-cloud/)
 
-Se ainda estiver em dúvida, veja [Escolher o cliente Codex](/pt/guide/getting-started/choose-your-codex-client/) e [Comparação de recursos](/pt/guide/reference/feature-comparison/).
+Se ainda estiver em dúvida, veja [Escolher o cliente Codex](/pt/guide/choose-your-client/) e [Comparação de recursos](/pt/guide/reference/feature-comparison/).
 
 ## Mal-entendidos comuns
 

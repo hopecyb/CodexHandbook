@@ -3,7 +3,7 @@ title: Schnellstart
 description: "Von Konto und Installation bis zur ersten prüfbaren Aufgabe."
 locale: de
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Standardweg: **Desktop-App**. Wenn du eher Terminal oder Editor gewohnt bist, ge
 
 Wenn deine Hauptfrage „Wie starte ich?“ und „Wie vermeide ich frühe Fehler?“ ist, ist dieses Kapitel der direkteste Einstieg.
 
+![Illustration: vier ansteigende Stufen – Rechner einrichten, anmelden, Übungsprojekt anlegen, erste Aufgabe erledigen – ein kleiner Assistent geht mit](/illustrations/getting-started.webp)
+
 ## Was dieses Kapitel enthält
 
 - Was du vor dem ersten Einstieg mindestens vorbereiten musst
@@ -27,7 +29,7 @@ Wenn deine Hauptfrage „Wie starte ich?“ und „Wie vermeide ich frühe Fehle
 ## Schritte
 
 1. [Konto, Tarif und Zugang](/de/guide/getting-started/account-plans-and-access/)
-2. [Client wählen](/de/guide/getting-started/choose-your-codex-client/)
+2. [Client wählen](/de/guide/choose-your-client/)
 3. Installation: [Desktop-App](/de/guide/getting-started/install-desktop-app/) · [CLI](/de/guide/getting-started/install-cli/) · [IDE](/de/guide/getting-started/install-ide-extension/)
 4. [Anmelden](/de/guide/getting-started/sign-in-and-authentication/)
 5. [Übungsprojekt anlegen](/de/guide/getting-started/create-your-first-project/)

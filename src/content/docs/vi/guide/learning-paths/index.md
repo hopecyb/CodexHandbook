@@ -9,7 +9,7 @@ sidebar:
   order: 5
 locale: vi
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -19,6 +19,8 @@ Lộ trình học **chỉ sắp xếp thứ tự đọc**, không sao chép các
 Lần đầu xem chương này, bạn có thể nghĩ đây chỉ là thêm một lớp mục lục. Mục đích của nó là giúp bạn xác định mình hiện giống nhóm người dùng nào nhất và nên đọc tiếp theo thứ tự nào.
 
 Chương này không thêm kiến thức sản phẩm mới; nó giúp bạn bớt đi đường vòng.
+
+![Minh họa: bốn con đường xuất phát từ cùng một cuốn sách — người mới, nhà sáng tạo, lập trình viên và nhóm — gặp nhau trên đỉnh núi](/illustrations/learning-paths.webp)
 
 ## Chương này làm gì
 

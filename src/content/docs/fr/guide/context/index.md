@@ -8,7 +8,7 @@ title: "Contexte"
 description: "Gérer le contexte du projet, des fichiers et de la conversation."
 locale: fr
 source_locale: zh-CN
-source_revision: "e085884"
+source_revision: d2baf42
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 Le contexte est l'information que le modèle peut **utiliser efficacement maintenant**. S'il est mal géré, même un bon prompt se perd dans le bruit.
 
 En pratique, il s'agit de ce que Codex a effectivement vu pendant cette tâche, peut consulter et peut utiliser pour décider. Ce que vous savez mais ne lui avez pas fourni ne fait pas partie du contexte de cette tâche.
+
+![Illustration : règles du projet, fichiers choisis et conversation descendent vers l’agent en trois couches, un entonnoir écarte le superflu](/illustrations/context-layers.webp)
 
 ## Pourquoi ce chapitre est important
 

@@ -9,7 +9,7 @@ sidebar:
   order: 5
 locale: ko
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -19,6 +19,8 @@ translated_at: 2026-09-20
 처음 보면 목차가 한 단계 더 생긴 것처럼 느껴질 수 있습니다. 지금 어떤 유형의 사용자에 가까운지, 다음에 무엇을 어떤 순서로 읽을지 알려 주는 장입니다.
 
 새로운 제품 지식을 추가하기보다 돌아가는 길을 줄이는 역할을 합니다.
+
+![일러스트: 같은 책에서 출발한 네 갈래 길 — 입문자, 크리에이터, 개발자, 팀 — 이 정상에서 만난다](/illustrations/learning-paths.webp)
 
 ## 이 장이 하는 일
 

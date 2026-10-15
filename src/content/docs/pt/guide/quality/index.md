@@ -2,38 +2,104 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Esta página apresenta somente a estrutura e a ordem de leitura da seção de qualidade e verificação. Os links internos e os conceitos foram revisados; o texto não depende de detalhes variáveis do produto, como versões, preços ou interface."
+  basis: "A página inicial da OpenAI Developers ainda enfatiza construir, testar, revisar e entregar mudanças com o Codex; esta página desmonta a Verificação em revisar Diff, rodar testes, validar fontes e definição de pronto, cruzada com os capítulos de qualidade do site."
   checkedAt: "2026-07-26"
 title: Qualidade e Verificação
-description: Revisão, testes e definição de concluído.
+description: Revisar Diff, rodar testes, validar fontes e definir critérios de conclusão.
 sidebar:
   order: 21
 locale: pt
 source_locale: zh-CN
-source_revision: 401b6a6
+source_revision: 90d62fb
 translation_status: draft
 translated_at: 2026-09-20
 ---
-Muita gente, ao usar o Codex, concentra-se em «consegue fazer?» e ignora outra pergunta: depois de feito, como confirmar que desta vez se pode mesmo aceitar?
 
-É isso que este grupo trata. Qualidade e Verificação existem para evitar «parece concluído, mas ainda não está estável».
 
-- [Revisar diffs](/pt/guide/quality/review-diffs/)
-- [Correr testes](/pt/guide/quality/run-tests/)
-- [Verificar Artefatos](/pt/guide/quality/verify-artifacts/)
-- [Validar fontes](/pt/guide/quality/validate-sources/)
-- [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/)
+O erro mais fácil na primeira vez com o Codex é **tratar «ele disse que terminou» como «terminou de verdade»**.
+
+Verificação é: não olhar o que ele diz — olhar se o resultado realmente atende ao que você pediu.
+
+A saída do Codex precisa ser verificável. Verificação não é passo opcional — faz parte do fechamento de cada Tarefa.
+
+![Ilustração: uma lupa examina linhas adicionadas e removidas de um diff, ao lado de uma lista com um item sinalizado e testes aprovados](/illustrations/verification.webp)
+
+## O que a Verificação realmente olha
+
+Seja alterando código, escrevendo docs ou pesquisando, no fim você responde à mesma pergunta:
+
+> **Isto agora está «mais ou menos parecido» — ou «já pode ser entregue»?**
+
+Muito retrabalho não vem de o modelo errar por completo, e sim de:
+
+- Alterar o que não deveria
+- Alterar só pela metade
+- Dizer que consultou fontes, mas as fontes não são confiáveis
+- A página abrir, mas o fluxo real não passar
+- A documentação existir, mas não servir para um iniciante seguir
+
+Por isso o papel da Verificação é **fechar o risco antes da entrega**.
+
+## Equívocos comuns
+
+### 1. Se roda, está concluído
+
+«Roda» só diz que não quebrou de imediato — não significa:
+
+- Lógica correta
+- Alcance correto
+- Sem regressão
+- Conformidade com o resultado que você queria
+
+### 2. Se o modelo diz «já verifiquei», pode relaxar
+
+Você precisa ver **que Verificação ele fez de fato**. Por exemplo:
+
+- Rodou testes de verdade?
+- Leu o Diff de verdade?
+- Abriu o Artefato e checou de verdade?
+- Deu fontes rastreáveis?
+
+### 3. Verificação é só para programadores?
+
+Escrever artigos, montar tabelas, gerar configuração, organizar material, escrever descrição de PR — tudo precisa de Verificação. Só muda o método.
+
+## Se ainda não tem um fluxo próprio, use esta ordem
+
+Se ainda não tem fluxo próprio, comece por esta ordem:
+
+1. Ver se o resultado desviou do tema
+2. Ver se o alcance da mudança ficou grande demais
+3. Rodar as checagens automáticas possíveis
+4. Por último, com olhar humano: dá para entregar?
+
+Dá para entender como:
+
+- **A direção está certa?**
+- **Alterou demais?**
+- **A máquina já checou?**
+- **A pessoa realmente se atreve a receber?**
+
+## Temas centrais
+
+- [Revisar Diff](/pt/guide/quality/review-diffs/) — ler o Diff, confirmar alcance e risco
+- [Rodar testes](/pt/guide/quality/run-tests/) — regressão automática
+- [Verificar Artefatos](/pt/guide/quality/verify-artifacts/) — docs, configuração, gerados
+- [Validar fontes](/pt/guide/quality/validate-sources/) — conclusões de pesquisa rastreáveis
+- [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/) — o que fazer quando o modelo está incerto
+- [Definição de pronto](/pt/guide/quality/definition-of-done/) — o que significa «terminou»
 - [Uso, tempo e escolha do modelo](/pt/guide/quality/usage-time-and-model-choice/)
 - [Avaliação de fluxos de trabalho e 20 amostras](/pt/guide/quality/workflow-evaluation/)
-- [Definição de concluído](/pt/guide/quality/definition-of-done/)
 
-## Ordem de leitura
+## Tarefas diferentes, focos de Verificação diferentes
 
-Na primeira leitura, pode seguir esta ordem:
+- **Alterar código**: olhar Diff, rodar testes, passar à mão pelos caminhos-chave
+- **Escrever docs**: ver se serve ao leitor-alvo, se os links funcionam, se os passos realmente dão para seguir
+- **Pesquisar**: ver se as fontes são reais e atuais, se a conclusão ultrapassa a evidência
+- **Gerar configuração ou scripts**: ver premissas de ambiente, alcance de Permissão, como recuperar após falha
 
-1. Veja [Revisar diffs](/pt/guide/quality/review-diffs/) — confirme o que foi alterado de facto
-2. Veja [Correr testes](/pt/guide/quality/run-tests/) — confirme se algo se partiu
-3. Veja [Verificar Artefatos](/pt/guide/quality/verify-artifacts/) — confirme se o resultado é o que queria
-4. Veja [Definição de concluído](/pt/guide/quality/definition-of-done/) — clarifique «quando é que está mesmo concluído»
+Se não souber por onde começar, leia por padrão [Definição de pronto](/pt/guide/quality/definition-of-done/).
 
-Sem verificação, «concluído» muitas vezes é só parecer concluído por agora.
+Verificação existe para confirmar que o resultado realmente serve, que você se atreve a usar e que dá para entregar.
+
+Como escrever critérios de aceite no Prompt: [Definir critérios de conclusão](/pt/prompts/define-done/). Casos ponta a ponta: [Casos práticos](/pt/cases/).

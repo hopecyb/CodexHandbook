@@ -8,7 +8,7 @@ title: "Context"
 description: "Manage project, file, and conversation context."
 locale: en
 source_locale: zh-CN
-source_revision: "e085884"
+source_revision: d2baf42
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 Context is the information the model can **effectively use right now**. Poor context management can drown even a good prompt in noise.
 
 In practice, it means what Codex has actually seen in this task, what it can refer to, and what it can use to make decisions. Information you know but have not supplied is not part of this task's context.
+
+![Illustration: project rules, selected files, and conversation flow down into the agent in three layers while a funnel filters out irrelevant clutter](/illustrations/context-layers.webp)
 
 ## Why this chapter matters
 

@@ -3,12 +3,14 @@ title: Vue d'ensemble de MCP
 description: Comprendre le client, le serveur, les outils, l'authentification et les limites de sécurité de MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 MCP transforme le souhait d'un modèle d'utiliser une capacité externe en appel d'outil structuré. Il convient pour accéder à des documents tiers, à un navigateur, à Figma, à un système de tickets ou à des services internes.
+
+![Illustration : l’assistant se branche sur un hub universel relié par des câbles standard à une base de données, un agenda, un tableau de tickets et un cloud](/illustrations/mcp-overview.webp)
 
 ## Chaîne d'appel
 

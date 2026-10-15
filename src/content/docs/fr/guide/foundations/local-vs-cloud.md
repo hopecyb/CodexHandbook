@@ -3,7 +3,7 @@ title: Local vs cloud
 description: Comparer les Tâches locales et Cloud et quand utiliser chacune.
 locale: fr
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Si vous voulez juste commencer à utiliser Codex, le **local** est généralemen
 | Où ça s'exécute | Votre machine / environnement local | Environnement cloud |
 | Idéal pour | Itération rapide, fichiers locaux, débogage avec secrets locaux | Dépôts distants, longues Tâches, environnements standardisés |
 | À surveiller | Permissions locales et modifications accidentelles | Configuration d'environnement, injection de secrets, politique réseau |
+
+![Illustration : à gauche, travail avec l’agent sur votre ordinateur ; à droite, des conteneurs cloud isolés en parallèle qui renvoient les résultats](/illustrations/local-vs-cloud.webp)
 
 ## Comment elles se ressentent
 

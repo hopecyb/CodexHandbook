@@ -27,13 +27,13 @@ prev:
   link: /de/cases/
   label: Praxisaufgabe auswählen
 next:
-  link: /de/guide/verification/
+  link: /de/guide/quality/
   label: Ergebnisse überprüfen lernen
 locale: de
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 In dieser Übung erstellst du einen wöchentlichen Verkaufsbericht, eine regionale Zusammenfassung, eine Produkt-Rangliste und ein zeilenweises Bereinigungsprotokoll. Die Eingaben sind eigens erstellte synthetische Daten; echte Kundendaten sind nicht nötig.
@@ -138,4 +138,4 @@ Original-CSV noch den Prüfer, um den Fehler zu beseitigen.
 
 Bewahre Prompts und Korrekturprotokoll auf. Vor dem Austausch der Daten bestätige Felder und Regeln erneut. Der feste Prüfer dieser Übung eignet sich nicht für beliebige Unternehmensdaten.
 
-Weiter zu [Ergebnisse prüfen](/de/guide/verification/) oder zurück zu den [Praxisbeispielen](/de/cases/).
+Weiter zu [Ergebnisse prüfen](/de/guide/quality/) oder zurück zu den [Praxisbeispielen](/de/cases/).

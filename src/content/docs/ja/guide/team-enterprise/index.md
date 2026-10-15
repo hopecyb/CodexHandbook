@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: ja
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ reviewed_at: 2026-08-26
 - どこまでできるか
 - 問題時にどう追跡するか
 - 高リスク拡張をどう承認するか
+
+![イラスト：チームが共有ルールのもとで複数のエージェントと協働し、周囲にはガードレール、レビュー台で人が承認する](/illustrations/team-guardrails.webp)
 
 ## 本章の内容
 

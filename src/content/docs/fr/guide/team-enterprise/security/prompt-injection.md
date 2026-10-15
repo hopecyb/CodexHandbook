@@ -3,7 +3,7 @@ title: "Injection de prompt"
 description: Quand du texte non fiable entre dans le contexte — reconnaissance, mitigation et essentiels de politique d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 « Injection de prompt » signifie que quelqu'un intègre du contenu dans le contexte qui induit Codex en erreur.
 
 Cela peut venir d'issues, pages web, commentaires de dépendances, docs ou texte collé — souvent pour faire que l'Agent **ignore la politique, fuite des données ou exécute des commandes dangereuses**. C'est un risque fréquent du [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) et plus proche du travail réel que beaucoup supposent.
+
+![Illustration : une note suspecte rougeâtre cachée dans une page web est arrêtée par un bouclier, seul le contenu sain atteint l’assistant](/illustrations/prompt-injection.webp)
 
 ## Ce que cette page couvre
 

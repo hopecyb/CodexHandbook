@@ -8,7 +8,7 @@ title: CLI
 description: Introduction pratique à l'utilisation de Codex en ligne de commande.
 locale: fr
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -36,6 +36,8 @@ Si vous débutez totalement avec le terminal, la CLI ne doit pas forcément êtr
 - [Dépannage](/fr/guide/cli/troubleshooting/)
 
 Pour la liste complète, voir la [référence des commandes CLI](/fr/guide/reference/commands/).
+
+![Illustration : un petit assistant assis sur une fenêtre de terminal tape des commandes, reliée à des scripts et des tests](/illustrations/cli.webp)
 
 ## Distinguer d'abord les deux modes
 

@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: en
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex often produces **file changes in the repo** or **new artifacts** (docs, im
 “Files” are not all the same—different types need different instructions and verification.
 
 “Edit code,” “handle spreadsheets,” “generate screenshots,” and “export slides” all look like file tasks, but failure modes differ.
+
+![Illustration: code, images, PDFs, spreadsheets, and slides ride a conveyor past a small assistant who checks each one](/illustrations/files-and-artifacts.webp)
 
 ## Section navigation
 

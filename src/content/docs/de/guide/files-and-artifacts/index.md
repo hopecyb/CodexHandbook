@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Die Kernausgabe von Codex sind oft **Dateiänderungen im Repo** oder **neu erzeu
 Auch „Datei“ heißt: unterschiedliche Typen brauchen unterschiedliche Auftrag- und Abnahmemethoden.
 
 „Code ändern“, „Tabelle bearbeiten“, „Screenshot erzeugen“, „PPT exportieren“ wirken alle wie Dateiaufgaben — die typischen Fehlerstellen unterscheiden sich.
+
+![Illustration: Code, Bilder, PDFs, Tabellen und Folien laufen auf einem Band an einem Assistenten vorbei, der jedes Stück prüft](/illustrations/files-and-artifacts.webp)
 
 ## Kapitel-Navigation
 

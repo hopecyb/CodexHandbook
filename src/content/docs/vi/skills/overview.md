@@ -3,7 +3,7 @@ title: Tổng quan Skills
 description: Dùng SKILL.md để dạy Codex workflow tái sử dụng — viết một lần, gọi khi cần.
 locale: vi
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 **Skill** là một thư mục chứa `SKILL.md` (có thể kèm script và tài liệu tham chiếu), đóng gói một quy trình cố định thành năng lực mà Codex có thể **gọi tự động hoặc tường minh**.
 
 Nó phù hợp để chứa những cách làm đã lặp lại và sẽ tiếp tục được tái sử dụng.
+
+![Minh họa: một quy trình thành công được đóng vào hộp công cụ rồi nhân bản giao cho nhiều agent dùng lại](/illustrations/skills-toolkit.webp)
 
 ## Khái niệm cốt lõi
 

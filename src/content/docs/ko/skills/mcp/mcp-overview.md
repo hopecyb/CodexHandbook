@@ -3,12 +3,14 @@ title: MCP 개요
 description: MCP 클라이언트, 서버, 도구, 인증, 보안 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 MCP는 “모델이 외부 기능을 사용하려 한다”는 요청을 구조화된 도구 호출로 바꿉니다. 타사 문서, 브라우저, Figma, 이슈 시스템, 내부 서비스를 연결할 때 적합합니다.
+
+![일러스트: 도우미가 범용 허브에 연결되고, 표준 케이블이 데이터베이스, 캘린더, 티켓 보드, 클라우드 드라이브로 이어진다](/illustrations/mcp-overview.webp)
 
 ## 한 번의 호출 흐름
 

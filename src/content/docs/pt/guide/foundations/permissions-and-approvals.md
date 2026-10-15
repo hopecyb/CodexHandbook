@@ -3,7 +3,7 @@ title: Permissões e Aprovação
 description: Explica quando o Codex precisa da sua Aprovação para operar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 O Codex não deve executar operações de alto risco sem consentimento. A **Aprovação** é a trava na colaboração humano–máquina.
 
 Se o Codex pudesse ler qualquer arquivo, acessar a rede à vontade e rodar comandos à vontade, o custo de entender mal a Tarefa seria alto.
+
+![Ilustração: quatro portas com permissões diferentes — ler, escrever, executar comandos, acessar a rede — e uma pessoa escolhendo qual chave entregar](/illustrations/permissions-approvals.webp)
 
 ## O que você precisa acompanhar
 

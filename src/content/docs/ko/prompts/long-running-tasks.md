@@ -3,7 +3,7 @@ title: 장시간 작업 프롬프트
 description: 단계 분할, 체크포인트, 인수인계 정보입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ reviewed_at: 2026-08-26
 단계 3: 테스트 보완 및 실행……
 각 단계가 끝나면 멈추고 제 확인을 기다리세요.
 ```
+
+![일러스트: 체크포인트 깃발이 꽂힌 긴 굽은 길을 배낭 멘 도우미가 걸어가고, 체크포인트의 사람이 이정표로 방향을 잡아 준다](/illustrations/long-running-tasks.webp)
 
 ## 왜 장시간 작업이 특히 이탈하기 쉬운가
 

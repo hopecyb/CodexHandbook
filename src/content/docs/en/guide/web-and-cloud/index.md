@@ -3,7 +3,7 @@ title: Web and Cloud overview
 description: The remote-task path from repository connection and reproducible environments to review and pull requests.
 locale: en
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ sidebar:
 ---
 
 Codex Cloud runs coding tasks in isolated cloud environments. It is useful for long background tasks, parallel attempts, and work started from GitHub, GitLab (Beta), Linear, or Slack. It does not remotely control your computer or automatically see local unpushed files.
+
+![Illustration: a repository in the browser links to isolated cloud containers that run the task, and the result returns as a pull request card with a green check](/illustrations/web-and-cloud.webp)
 
 ## Cloud task lifecycle
 

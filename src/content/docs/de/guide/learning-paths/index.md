@@ -9,7 +9,7 @@ sidebar:
   order: 5
 locale: de
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -19,6 +19,8 @@ Lernpfade **ordnen nur die Reihenfolge** — sie kopieren keine Langtexte aus Pr
 Beim ersten Blick auf „Lernpfade“ wirkt es wie noch ein Verzeichnis. Eigentlich beantwortet es: Welchem Nutzertyp ähneln Sie jetzt am meisten — und in welcher Reihenfolge sollten Sie weiterlesen?
 
 Dieses Kapitel liefert kein neues Wissen; es hilft, Umwege zu vermeiden.
+
+![Illustration: Vier Wege aus demselben Buch – Einsteiger, Creator, Entwickler und Team – treffen sich auf dem Gipfel](/illustrations/learning-paths.webp)
 
 ## Was dieses Kapitel leistet
 

@@ -3,13 +3,15 @@ title: Introducción a MCP
 description: Comprende clientes, servidores, herramientas, autenticación y límites de seguridad de MCP.
 locale: es
 source_locale: zh-cn
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 MCP convierte «el modelo quiere usar una capacidad externa» en una llamada estructurada a una herramienta. Sirve para conectar documentación de terceros, navegadores, Figma, gestores de incidencias y servicios internos.
+
+![Ilustración: el asistente se conecta a un concentrador universal con cables estándar hacia una base de datos, un calendario, un tablero de tickets y una nube](/illustrations/mcp-overview.webp)
 
 ## Cadena de llamada
 

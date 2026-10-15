@@ -3,7 +3,7 @@ title: Transferência e retoma
 description: Continuar trabalho inacabado entre sessões.
 locale: pt
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Sem Transferência, ao reabrir da próxima vez acontecem facilmente três coisas
 - Você próprio esqueceu onde ficou
 - O Codex não sabe que restrições ainda valem
 - A nova conversa dispersa o Contexto antigo e volta a dar voltas do zero
+
+![Ilustração: um agente entrega notas de passagem e um cartão de progresso a outro, com um calendário e um quadro de tarefas marcado ao fundo](/illustrations/handoff-and-resume.webp)
 
 ## O que a Transferência deixa de facto
 

@@ -8,7 +8,7 @@ title: Choisir votre parcours
 description: Choisir une lecture selon votre rôle, votre tâche ou le produit.
 locale: fr
 source_locale: zh-CN
-source_revision: "680d473"
+source_revision: 51ccd00
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -43,7 +43,7 @@ Choisissez l'entrée la plus proche de votre question actuelle.
 - Éditeur : [IDE](/fr/guide/ide/)
 - Présentation du cloud : [Web et Cloud](/fr/guide/web-and-cloud/)
 
-En cas de doute, consultez [Choisir un client Codex](/fr/guide/getting-started/choose-your-codex-client/) et le [comparatif des fonctions](/fr/guide/reference/feature-comparison/).
+En cas de doute, consultez [Choisir un client Codex](/fr/guide/choose-your-client/) et le [comparatif des fonctions](/fr/guide/reference/feature-comparison/).
 
 ## Idées reçues
 

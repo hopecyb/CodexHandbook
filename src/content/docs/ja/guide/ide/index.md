@@ -5,7 +5,7 @@ sidebar:
   order: 12
 locale: ja
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ IDE 拡張は**書きながら diff を見る**作業に向いています。フ
 普段からエディターでコードやドキュメントを書いているなら、IDE が最も自然な入口になることが多いです。
 
 現在開いているファイルと選択範囲をそのまま引き継げるため、「小さな範囲の修正」タスクでスコープを絞りやすくなります。
+
+![イラスト：エディターでコードを選択すると、サイドパネルの小さなアシスタントがその場の修正案と承認ボタンを示す](/illustrations/ide.webp)
 
 ## 章のナビゲーション
 
@@ -29,7 +31,7 @@ IDE 拡張は**書きながら diff を見る**作業に向いています。フ
 | 設定 | [設定](/ja/guide/ide/settings/) |
 | トラブルシューティング | [トラブルシューティング](/ja/guide/ide/troubleshooting/) |
 
-入門ショートカット：[IDE 拡張のインストール](/ja/guide/getting-started/install-ide-extension/) · [クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/)
+入門ショートカット：[IDE 拡張のインストール](/ja/guide/getting-started/install-ide-extension/) · [クライアントの選択](/ja/guide/choose-your-client/)
 
 ## 最初に押さえておくこと
 

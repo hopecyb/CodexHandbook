@@ -8,7 +8,7 @@ title: Permissions and approvals
 description: Understand when Codex needs your approval to act.
 locale: en
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 Codex should not perform high-risk operations without consent. **Approval** is the gate in collaboration between you and Codex.
 
 If Codex could read any file, use the network freely, and run arbitrary commands, a misunderstanding of your task could be costly.
+
+![Illustration: four doors with different access—read files, write files, run commands, go online—and a person deciding which key to hand the assistant](/illustrations/permissions-approvals.webp)
 
 ## What you need to consider
 

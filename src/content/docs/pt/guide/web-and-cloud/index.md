@@ -7,7 +7,7 @@ title: Web e Cloud (visão geral)
 description: O percurso das tarefas remotas, da ligação ao repositório e do ambiente reproduzível à revisão e ao Pull Request.
 locale: pt
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: draft
 translated_at: "2026-09-20"
 sidebar:
@@ -15,6 +15,8 @@ sidebar:
 ---
 
 O Codex Cloud executa tarefas de programação em ambientes de nuvem isolados. É adequado para tarefas longas em segundo plano, tentativas paralelas e trabalho iniciado a partir do GitHub, GitLab (Beta), Linear ou Slack. Não controla remotamente o seu computador nem vê automaticamente os ficheiros locais que ainda não foram enviados para o repositório remoto.
+
+![Ilustração: um repositório no navegador se conecta a contêineres isolados na nuvem; o resultado volta como um pull request com marca verde](/illustrations/web-and-cloud.webp)
 
 ## Etapas de uma tarefa Cloud
 

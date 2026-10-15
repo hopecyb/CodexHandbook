@@ -3,7 +3,7 @@ title: 로컬과 클라우드
 description: 로컬 작업과 Cloud 작업의 적합한 장면을 비교합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Codex를 먼저 쓰기만 원한다면, 보통 **로컬**이 더 수월합니다
 | 실행 위치 | 당신 기기 / 로컬 환경 | 클라우드 환경 |
 | 적합 | 빠른 반복, 로컬 파일, 로컬 키가 필요한 디버깅 | 원격 저장소 연결, 장기 작업, 표준 환경 |
 | 주의 | 로컬 권한과 오수정 위험 | 환경 설정, 키 주입, 네트워크 정책 |
+
+![일러스트: 왼쪽은 내 컴퓨터에서 에이전트와 작업, 오른쪽은 클라우드의 격리된 컨테이너가 병렬로 실행하고 결과를 돌려보낸다](/illustrations/local-vs-cloud.webp)
 
 ## 사용 체감
 

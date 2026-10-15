@@ -3,7 +3,7 @@ title: Sandbox und Netzwerk
 description: "Verstehe Ausführungsisolation, Netzwerkzugriff und Risikogrenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 5937622
+source_revision: 2cf2c46
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 „Sandbox“ und „Netzwerk“ sind zwei verschiedene Dinge: Die Sandbox begrenzt, wohin es greifen darf; das Netzwerk begrenzt, wohin es verbinden darf.
 
 Die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann, und verkleinert die Fläche für Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Informationen aus dem Prompt können abfließen, oder unzuverlässige Daten können hereinkommen.
+
+![Illustration: Der Agent arbeitet in einer Glas-Sandbox und hält eine Anfrage hoch, draußen drückt ein Mensch auf Freigabe; das Netzwerkkabel ist getrennt](/illustrations/sandbox-and-approval.webp)
 
 ## Warum diese beiden Limits wichtig sind
 

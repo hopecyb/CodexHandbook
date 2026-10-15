@@ -3,13 +3,15 @@ title: Plugins overview
 description: Understand Plugin components, supported surfaces, installation verification, and trust boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
+
+![Illustration: ribboned extension packages travel along a track to be installed on several workstations, one being unpacked and one cleanly removed](/illustrations/plugins-overview.webp)
 
 ## Plugin contents
 

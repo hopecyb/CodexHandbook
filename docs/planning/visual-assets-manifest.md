@@ -4,7 +4,8 @@
 
 | 资产 | 类型 | 对应页面 | 教学目的 | 源文件 | 状态 |
 |---|---|---|---|---|---|
-| `codex-capability-ladder-zh-cn.svg` | 能力演进图 | `/skills/capability-map/`（历史） | 从一次任务到复用资产 | 同名 SVG | retained |
+| `codex-capability-ladder-zh-cn.svg` | 能力演进图 | `/skills/` | 从一次任务到复用资产；2026-10 修正节点文字重叠与多语言溢出 | 同名 SVG | integrated |
+| `ai-roadmap-assets/ai-application-roadmap.svg` | 时间线 | `/ai-roadmap/`（仅简体中文） | 按时间倒序总览代表事件 | 同名 SVG | integrated（待多语言） |
 | `codex-work-system-architecture-zh-cn.svg` | 系统架构图 | `/skills/capability-map/` | 区分规则、流程、工具、触发和分发层 | `docs/visual-sources/codex-work-system-architecture.html` | integrated |
 | `extension-selection-map-zh-cn.svg` | 决策图 | `/skills/choosing-an-extension-method/` | 根据需求选择提示词、AGENTS.md、Skill、MCP、Hook、Plugin 或 Scheduled task | 同名 SVG | integrated |
 | `task-execution-loop-zh-cn.svg` | 流程图 | `/prompts/task-anatomy/` | 解释任务说明如何经过执行与验证形成反馈闭环 | 同名 SVG | integrated |
@@ -14,6 +15,49 @@
 | `codex-client-selection-zh-cn.svg` | 选择图 | `/guide/choose-your-client/` | 按工作位置与交互方式选择 App、CLI、IDE 或 Cloud | 同名 SVG | integrated |
 | `sandbox-approval-flow-zh-cn.svg` | 流程图 | `/guide/permissions-and-sandbox/` | 解释沙箱内执行、越界审批、拒绝后的收窄与最终验证 | 同名 SVG | integrated |
 | `subagent-orchestration-zh-cn.svg` | 架构图 | `/guide/agent-work/subagents/` | 解释上下文隔离、权限继承、共享工作区、证据汇总与最终验收 | 同名 SVG | integrated |
+
+## 概念插画（2026-10）
+
+不含文字的 AI 生成插画，所有语言共用同一张图，替代文字按语言分别撰写。生成工具为 `codex-img`，提示词与统一画风记录在 [illustrations-prompts.json](illustrations-prompts.json)，原始 PNG 存于本地 `temp/illustrations-src/`（不入库），站点使用 1600px 宽的 WebP。
+
+| 资产 | 对应页面 | 教学目的 |
+|---|---|---|
+| `illustrations/what-is-codex.webp` | `/guide/start-here/what-is-codex/` | 把任务交给会用工具的 Agent |
+| `illustrations/agent-basics.webp` | `/guide/foundations/agent-basics/` | 普通聊天与 Agent 循环的区别 |
+| `illustrations/context-layers.webp` | `/guide/context/` | 规则、文件、对话三层上下文与噪音过滤 |
+| `illustrations/sandbox-and-approval.webp` | `/guide/foundations/sandbox-and-network/` | 沙箱边界、网络隔离与人工批准 |
+| `illustrations/local-vs-cloud.webp` | `/guide/foundations/local-vs-cloud/` | 本地执行与云端隔离并行 |
+| `illustrations/verification.webp` | `/guide/quality/` | 审查 diff、清单与测试 |
+| `illustrations/task-brief.webp` | `/prompts/` | 目标、上下文、约束、完成标准组成任务 |
+| `illustrations/skills-toolkit.webp` | `/skills/overview/` | 成功流程封装为可复用 Skill |
+| `illustrations/cases-deliverables.webp` | `/cases/` | 练习以可交付成果结束 |
+| `illustrations/handoff-and-resume.webp` | `/guide/agent-work/handoff-and-resume/` | 交接与恢复不丢进度 |
+| `illustrations/learning-paths.webp` | `/guide/learning-paths/` | 按角色选择学习路径 |
+| `illustrations/team-guardrails.webp` | `/guide/team-enterprise/` | 团队协作中的规则与审查 |
+| `illustrations/start-here.webp` | `/guide/start-here/` | 入门起点与路线选择 |
+| `illustrations/getting-started.webp` | `/guide/getting-started/` | 安装、登录、项目、首个任务 |
+| `illustrations/undo-and-recover.webp` | `/guide/getting-started/undo-and-recover/` | 版本快照与恢复 |
+| `illustrations/permissions-approvals.webp` | `/guide/foundations/permissions-and-approvals/` | 读、写、执行、联网四级权限 |
+| `illustrations/tokens-compaction.webp` | `/guide/foundations/tokens-context-and-compaction/` | 上下文上限与压缩 |
+| `illustrations/threads-tasks-projects.webp` | `/guide/foundations/threads-tasks-and-projects/` | 项目、任务、线程的层级 |
+| `illustrations/desktop-app.webp` | `/guide/desktop-app/` | 并行任务与 diff 审批 |
+| `illustrations/cli.webp` | `/guide/cli/` | 终端、脚本与测试 |
+| `illustrations/ide.webp` | `/guide/ide/` | 编辑器内的就地修改 |
+| `illustrations/web-and-cloud.webp` | `/guide/web-and-cloud/` | 云端隔离执行与 PR |
+| `illustrations/tools-overview.webp` | `/guide/tools/` | 按任务选择工具 |
+| `illustrations/files-and-artifacts.webp` | `/guide/files-and-artifacts/` | 多种文件类型的检查 |
+| `illustrations/agent-planning.webp` | `/guide/agent-work/planning/` | 先计划后执行 |
+| `illustrations/agents-md.webp` | `/guide/customization/agents-md/what-is-agents-md/` | 项目说明文件与作用域 |
+| `illustrations/prompt-injection.webp` | `/guide/team-enterprise/security/prompt-injection/` | 拦截隐藏指令 |
+| `illustrations/mcp-overview.webp` | `/skills/mcp/mcp-overview/` | 标准协议连接外部服务 |
+| `illustrations/plugins-overview.webp` | `/skills/plugins/plugins-overview/` | 扩展的打包、安装与卸载 |
+| `illustrations/prompt-debugging.webp` | `/prompts/prompt-debugging/` | 对比产出并调整任务说明 |
+| `illustrations/long-running-tasks.webp` | `/prompts/long-running-tasks/` | 检查点与中途纠偏 |
+| `illustrations/failure-recovery.webp` | `/cases/workflows/failure-recovery/` | 按清单回退与重建 |
+
+首页卡片配图（960px 宽，装饰性，`alt=""`）：`home-weekly-report`、`home-bug-fix`、`home-article`（任务卡片），`home-path-beginner`、`home-path-creator`、`home-path-developer`、`home-path-team`（角色卡片）。
+
+插画只表达概念，不承载需要读者核对的事实；涉及步骤、界面或数据的内容仍使用带文字的 SVG 或真实截图。
 
 ## 维护规则
 

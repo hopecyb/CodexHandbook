@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: es
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ El Agent usa **herramientas** para leer archivos, ejecutar comandos, buscar en l
 
 Aquí «herramienta» son las capacidades que Codex invoca al ejecutar de verdad una tarea. No todas las tareas se completan solo con diálogo.  
 Algunas leen archivos, otras ejecutan comandos, otras consultan páginas web, otras miran la página real.
+
+![Ilustración: herramientas sobre la mesa —terminal, navegador, lupa de búsqueda, imagen, micrófono y puntero— y un asistente que elige la adecuada](/illustrations/tools-overview.webp)
 
 ## Por qué conviene conocer primero las herramientas
 

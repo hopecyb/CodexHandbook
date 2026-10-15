@@ -3,7 +3,7 @@ title: AGENTS.md là gì
 description: Tệp chỉ thị bền cấp dự án — «hợp đồng cộng tác» cho Codex, không phải bách khoa kiến trúc.
 locale: vi
 source_locale: zh-CN
-source_revision: 49b7d04
+source_revision: 47c5866
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 Có thể hiểu `AGENTS.md` là sổ hướng dẫn “dự án này muốn Codex phối hợp thế nào”.
 
 Nó không phải tài liệu kiến trúc nâng cao, cũng không phải sổ tay đầy đủ cho nhân viên mới, mà là quy tắc cộng tác dự án cho Codex.
+
+![Minh họa: trong cây thư mục kho mã dạng cắt lớp, gốc có cuốn hướng dẫn, thư mục con có ghi chú; trợ lý đọc hướng dẫn rồi đọc ghi chú gần nhất](/illustrations/agents-md.webp)
 
 ## Một khái niệm cốt lõi
 

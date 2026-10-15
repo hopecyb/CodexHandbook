@@ -7,7 +7,7 @@ next:
 description: Codex の理解、クライアントの選択、最初のタスクの完了、権限・コンテキスト・検証の理解。
 locale: ja
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ translated_at: 2026-09-20
 
 - [初心者向け安全チェックリスト](/ja/guide/getting-started/beginner-safety-checklist/)
 - [クライアントの選び方](/ja/guide/choose-your-client/)
-- [結果の検証と完了条件](/ja/guide/verification/)
+- [結果の検証と完了条件](/ja/guide/quality/)
 
 ## 推奨順序
 
@@ -38,9 +38,9 @@ translated_at: 2026-09-20
 3. [クライアントの選択](/ja/guide/choose-your-client/)
 4. [最初のタスクを完了する](/ja/cases/first-task/)
 5. [権限とサンドボックス](/ja/guide/permissions-and-sandbox/)
-6. [コンテキストとファイル](/ja/guide/context-and-files/)
-7. [検証](/ja/guide/verification/)
-8. 問題が起きたら [トラブルシューティング](/ja/guide/troubleshooting/) を確認
+6. [コンテキストとファイル](/ja/guide/context/)
+7. [検証](/ja/guide/quality/)
+8. 問題が起きたら [トラブルシューティング](/ja/guide/reference/troubleshooting/) を確認
 
 ## よくある誤解
 

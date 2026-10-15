@@ -3,12 +3,14 @@ title: MCP 概要
 description: MCP クライアント、サーバー、ツール、認証、安全上の境界を理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 MCP は、モデルが外部の機能を使おうとする要求を、構造化されたツール呼び出しに変えます。外部のドキュメント、ブラウザー、Figma、課題管理システム、社内サービスを接続する場合に適しています。
+
+![イラスト：アシスタントが共通のハブにつながり、標準ケーブルがデータベース、カレンダー、チケットボード、クラウドドライブへ伸びる](/illustrations/mcp-overview.webp)
 
 ## 一回の呼び出しの流れ
 

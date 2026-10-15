@@ -3,7 +3,7 @@ title: Bàn giao và khôi phục
 description: Tiếp tục công việc chưa xong qua các phiên.
 locale: vi
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Nếu không bàn giao, lần sau mở lại dễ xảy ra ba việc:
 - Bản thân bạn quên đã tới đâu
 - Codex không biết ràng buộc nào vẫn còn hiệu lực
 - Vòng hội thoại mới làm tản ngữ cảnh cũ, lại vòng từ đầu
+
+![Minh họa: một agent trao ghi chú bàn giao và thẻ tiến độ cho agent khác, phía sau là lịch đang lật và bảng công việc có đánh dấu](/illustrations/handoff-and-resume.webp)
 
 ## Bàn giao thật sự để lại gì
 

@@ -50,5 +50,5 @@ description: 用清晰提示词完成一次小改动，并学会检查结果。
 ## 5. 下一步
 
 - [提示词基础](/prompts/basics/)
-- [验证](/guide/verification/)
+- [验证](/guide/quality/)
 - [从这里开始](/guide/start-here/)

@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: ko
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ Agent는 **도구**로 파일을 읽고, 명령을 돌리고, 웹을 검색하�
 
 여기의 “도구”는 Codex가 작업을 실제로 실행할 때 호출하는 능력입니다. 모든 작업이 대화만으로 끝나지는 않습니다.  
 어떤 작업은 파일을 읽고, 어떤 작업은 명령을 돌리고, 어떤 작업은 웹을 찾고, 어떤 작업은 실제 페이지를 봅니다.
+
+![일러스트: 책상에 터미널, 브라우저, 검색 돋보기, 이미지, 마이크, 포인터가 놓여 있고 작은 도우미가 알맞은 도구를 고른다](/illustrations/tools-overview.webp)
 
 ## 왜 도구를 먼저 알아야 하나
 

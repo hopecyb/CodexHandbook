@@ -3,7 +3,7 @@ title: Depuração de Prompts
 description: Como localizar o problema no Prompt quando o resultado se desvia.
 locale: pt
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Quando o resultado falha, causas comuns:
 - a tarefa é grande demais e não pediu plano primeiro
 
 O foco da depuração de Prompts é descobrir **qual camada de informação faltou**.
+
+![Ilustração: dois resultados lado a lado na bancada — um erra o alvo, outro acerta — enquanto o cartão de tarefa é ajustado com chave de fenda e lupa](/illustrations/prompt-debugging.webp)
 
 ## Localize primeiro onde está o problema
 

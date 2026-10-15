@@ -11,6 +11,8 @@ sidebar:
 
 Codex Cloud 在隔离的云环境中执行编码任务，适合后台长任务、并行尝试和从 GitHub、GitLab（Beta）、Linear 或 Slack 发起的工作。它不是“远程控制你的电脑”，也不会自动看到本地未推送的文件。
 
+![插画：浏览器里的仓库连到云端隔离容器执行任务，结果以带绿勾的 Pull Request 卡片返回](/illustrations/web-and-cloud.webp)
+
 ## 一次 Cloud 任务经过什么
 
 ```text

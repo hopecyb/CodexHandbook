@@ -3,7 +3,7 @@ title: Web と Cloud（概要）
 description: リポジトリ接続、再現可能な環境、レビュー、Pull Request までのリモートタスクの流れを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 ---
 
 Codex Cloud は隔離されたクラウド環境でコーディングタスクを実行します。バックグラウンドの長時間タスク、並行した試行、GitHub、GitLab（Beta）、Linear、Slack から開始する作業に適しています。「PC を遠隔操作する」ものではなく、ローカルでまだ push していないファイルを自動的に参照することもありません。
+
+![イラスト：ブラウザー上のリポジトリがクラウドの隔離コンテナにつながり、結果が緑のチェック付きプルリクエストとして戻る](/illustrations/web-and-cloud.webp)
 
 ## 一つの Cloud タスクの流れ
 

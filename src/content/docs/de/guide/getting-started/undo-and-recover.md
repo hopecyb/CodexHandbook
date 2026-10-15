@@ -3,7 +3,7 @@ title: Rückgängig machen und wiederherstellen
 description: Bei unbefriedigendem Ergebnis sicher zurückrollen.
 locale: de
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Wenn Ergebnis Grenzen überschreitet oder Qualität nicht reicht:
 3. Neuen Thread öffnen, Einschränkungen enger setzen, erneut versuchen
 
 Oft hilft vorher schon: Umfang klein halten — wenige Dateien, Verbote klar, zuerst Plan, dann ausführen.
+
+![Illustration: Ein Rückspulpfeil umkreist Versionsstände, eine ältere Version gleitet zurück, ein Sicherheitsnetz fängt eine zerknüllte Seite auf](/illustrations/undo-and-recover.webp)
 
 ## „Rückgängig“ und „Wiederherstellen“ unterscheiden
 

@@ -5,7 +5,7 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ reviewed_at: 2026-08-26
 명령줄이나 IDE 확장에 익숙하지 않은 사람에게도 비교적 접근하기 쉬운 입구입니다.
 
 단순히 “채팅할 수 있다”는 수준이 아니라, 프로젝트·변경·승인·검증을 같은 화면에서 볼 수 있게 모아 둡니다.
+
+![일러스트: 데스크톱 관제 화면에 작업 카드와 진행 링이 나란히 있고, 그중 하나가 펼쳐져 좌우 비교 diff와 승인 스위치를 보여 준다](/illustrations/desktop-app.webp)
 
 ## 이 장의 내용
 

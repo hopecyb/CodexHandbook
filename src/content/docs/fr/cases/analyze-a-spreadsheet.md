@@ -27,13 +27,13 @@ prev:
   link: /fr/cases/
   label: Choisir un exercice pratique
 next:
-  link: /fr/guide/verification/
+  link: /fr/guide/quality/
   label: Apprendre à vérifier les résultats
 locale: fr
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 Dans cet exercice, vous livrerez un rapport hebdomadaire des ventes, une synthèse régionale, un classement des produits et un registre de nettoyage ligne par ligne. Les données sont fictives et créées pour ce site ; aucune donnée client réelle n’est nécessaire.
@@ -138,4 +138,4 @@ pour faire disparaître l’échec.
 
 Conservez vos prompts et notes de correction. Avant de remplacer les données, vérifiez à nouveau champs et méthode. Le vérificateur fixe de cet exercice n’est pas applicable à toutes les données d’entreprise.
 
-Poursuivez avec [la vérification des résultats](/fr/guide/verification/) ou revenez aux [cas pratiques](/fr/cases/).
+Poursuivez avec [la vérification des résultats](/fr/guide/quality/) ou revenez aux [cas pratiques](/fr/cases/).

@@ -3,7 +3,7 @@ title: 샌드박스와 네트워크
 description: 실행 격리·네트워크 접근과 위험 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5937622
+source_revision: 2cf2c46
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 「샌드박스」와 「네트워크」는 사실 두 가지입니다. 샌드박스는 어디에 닿을 수 있는지, 네트워크는 어디에 연결할 수 있는지를 제한합니다.
 
 **샌드박스**는 Agent가 닿을 수 있는 파일 시스템과 일부 시스템 능력을 제한해 오조작 면을 줄입니다. **네트워크 접근**은 또 다른 위험 층입니다. 프롬프트의 민감 정보가 유출되거나, 신뢰할 수 없는 데이터를 가져올 수 있습니다.
+
+![일러스트: 유리 샌드박스 안의 에이전트가 요청 카드를 들고, 밖의 사람이 승인 버튼을 누른다. 네트워크 케이블은 뽑혀 잠겨 있다](/illustrations/sandbox-and-approval.webp)
 
 ## 왜 이 제한이 중요한가
 

@@ -8,7 +8,7 @@ title: Autorisations et approbations
 description: Comprendre quand Codex doit vous demander d'approuver une action.
 locale: fr
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 Codex ne devrait pas effectuer d'opérations risquées sans votre accord. **L'approbation** est le point de contrôle de votre collaboration avec Codex.
 
 Si Codex pouvait lire n'importe quel fichier, accéder librement au réseau et exécuter toute commande, une mauvaise compréhension de la tâche pourrait coûter cher.
+
+![Illustration : quatre portes aux droits différents – lire, écrire, exécuter des commandes, aller en ligne – une personne choisit quelle clé confier](/illustrations/permissions-approvals.webp)
 
 ## Ce qu'il faut prendre en compte
 

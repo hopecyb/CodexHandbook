@@ -3,7 +3,7 @@ title: Tiện ích IDE
 description: Dùng Codex trong trình soạn thảo — cài đặt, ngữ cảnh, tác vụ local và Cloud, rà soát và cài đặt.
 locale: vi
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Nếu bạn vốn viết mã hoặc sửa tài liệu trong trình soạn thảo
 
 Nó mang theo trực tiếp tệp đang mở và vùng chọn, nên nhiều tác vụ «sửa phạm vi nhỏ» dễ giữ phạm vi hơn.
 
+![Minh họa: một đoạn mã được chọn trong trình soạn thảo, trợ lý nhỏ ở bảng bên đề xuất sửa tại chỗ kèm nút chấp nhận](/illustrations/ide.webp)
+
 ## Điều hướng chương
 
 | Chủ đề | Trang |
@@ -29,7 +31,7 @@ Nó mang theo trực tiếp tệp đang mở và vùng chọn, nên nhiều tác
 | Cấu hình | [Cài đặt](/vi/guide/ide/settings/) |
 | Xử lý sự cố | [Xử lý sự cố](/vi/guide/ide/troubleshooting/) |
 
-Lối tắt bắt đầu: [Cài đặt tiện ích IDE](/vi/guide/getting-started/install-ide-extension/) · [Chọn client](/vi/guide/getting-started/choose-your-codex-client/)
+Lối tắt bắt đầu: [Cài đặt tiện ích IDE](/vi/guide/getting-started/install-ide-extension/) · [Chọn client](/vi/guide/choose-your-client/)
 
 ## Trước hết chú ý vài việc
 

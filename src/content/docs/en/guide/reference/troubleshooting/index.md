@@ -12,7 +12,7 @@ translation_status: draft
 translated_at: 2026-09-20
 sidebar:
   order: 110
-source_revision: 7327724
+source_revision: da350d0
 ---
 
 If you encounter a problem but do not know whether to look in the App, CLI, IDE, or Cloud section, start here.
@@ -23,7 +23,7 @@ Finding a path by symptom is faster than searching through the whole site.
 |---|---|
 | Installation failed | [Desktop troubleshooting](/en/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/en/guide/cli/troubleshooting/) · [IDE troubleshooting](/en/guide/ide/troubleshooting/) |
 | Sign-in / authentication failed | [Sign in](/en/guide/getting-started/sign-in-and-authentication/) |
-| Unsure which client to choose | [Choose your client](/en/guide/getting-started/choose-your-codex-client/) · [Feature comparison](/en/guide/reference/feature-comparison/) |
+| Unsure which client to choose | [Choose your client](/en/guide/choose-your-client/) · [Feature comparison](/en/guide/reference/feature-comparison/) |
 | Results out of scope / poor quality | [Review the result](/en/guide/getting-started/review-the-result/) · [Prompt debugging](/en/prompts/prompt-debugging/) · [Undo](/en/guide/getting-started/undo-and-recover/) |
 | Context confusion | [Keep context focused](/en/guide/context/keep-context-focused/) |
 | Permissions / sandbox questions | [Permissions](/en/guide/foundations/permissions-and-approvals/) · [Sandbox](/en/guide/foundations/sandbox-and-network/) |

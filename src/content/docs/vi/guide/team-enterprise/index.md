@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: vi
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ Nếu hiện bạn còn dùng cá nhân hoặc đang làm quen cách dùng cơ b
 - Phạm vi làm được đến đâu
 - Khi sự cố thì lần theo thế nào
 - Phê duyệt mở rộng rủi ro cao thế nào
+
+![Minh họa: một nhóm cộng tác với nhiều agent quanh bộ quy tắc chung, có rào chắn bảo vệ và một người ký duyệt tại khâu rà soát](/illustrations/team-guardrails.webp)
 
 ## Nội dung chương
 

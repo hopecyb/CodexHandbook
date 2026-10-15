@@ -3,7 +3,7 @@ title: ローカルとクラウド
 description: ローカルタスクと Cloud タスクの適用シーンを比較する。
 locale: ja
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ sidebar:
 | 実行場所 | あなたのマシン / ローカル環境 | クラウド環境 |
 | 向いていること | 素早い反復、ローカルファイル、端末固有の鍵を使うデバッグ | リモートリポジトリ接続、長時間タスク、標準化された環境 |
 | 注意点 | ローカル権限と誤変更のリスク | 環境設定、鍵の注入、ネットワークポリシー |
+
+![イラスト：左は自分の PC でエージェントと作業、右はクラウドの隔離コンテナが並行実行して結果を送り返す](/illustrations/local-vs-cloud.webp)
 
 ## 使い心地の違い
 

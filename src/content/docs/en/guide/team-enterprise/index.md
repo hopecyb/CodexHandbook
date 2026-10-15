@@ -6,7 +6,7 @@ sidebar:
   order: 70
 locale: en
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 ---
@@ -21,6 +21,8 @@ Key questions:
 - What scope is allowed
 - How to trace incidents
 - How high-risk extensions are approved
+
+![Illustration: a team works with several agents around shared rules, inside guardrails, with a review station where a person signs off](/illustrations/team-guardrails.webp)
 
 ## What this chapter covers
 

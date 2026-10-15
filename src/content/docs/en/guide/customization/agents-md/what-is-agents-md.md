@@ -3,7 +3,7 @@ title: What Is AGENTS.md
 description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
 locale: en
 source_locale: zh-CN
-source_revision: 49b7d04
+source_revision: 47c5866
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 Think of `AGENTS.md` as instructions for “how Codex should work with this project.”
 
 It is not an advanced architecture document or a complete handbook for new human hires; it is project collaboration rules for Codex.
+
+![Illustration: in a cutaway repository tree, a guidebook sits at the root and notes are pinned in subfolders; the assistant reads the guidebook, then the nearest note](/illustrations/agents-md.webp)
 
 ## One Core Concept
 

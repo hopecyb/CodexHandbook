@@ -8,7 +8,7 @@ title: Commencer ici
 description: Découvrir ce qu'est Codex, à qui il s'adresse et quel parcours choisir.
 locale: fr
 source_locale: zh-CN
-source_revision: "016d023"
+source_revision: 953fb89
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -16,6 +16,8 @@ sidebar:
 ---
 
 Ce manuel s'adresse surtout aux **débutants en IA**. Il ne suppose pas que vous connaissiez le terminal, Git ou les agents ; il introduit progressivement les capacités que vous rencontrerez.
+
+![Illustration : au départ du sentier, un panneau indique plusieurs itinéraires près d’un guide ouvert, un petit assistant accueille le lecteur](/illustrations/start-here.webp)
 
 ## Ce que vous apprendrez
 
@@ -30,8 +32,8 @@ Ce manuel s'adresse surtout aux **débutants en IA**. Il ne suppose pas que vous
 2. [Choisir un client](/fr/guide/choose-your-client/) — choisir entre App, CLI, IDE et Cloud
 3. [Terminer votre première tâche](/fr/cases/first-task/) — effectuer une petite modification avec un prompt clair et la vérifier
 4. [Autorisations et bac à sable](/fr/guide/permissions-and-sandbox/) — comprendre l'approbation, l'isolation et les limites réseau
-5. [Contexte et fichiers](/fr/guide/context-and-files/) — fournir des éléments utiles
-6. [Vérifier les résultats](/fr/guide/verification/) — prendre l'habitude de réviser et tester
+5. [Contexte et fichiers](/fr/guide/context/) — fournir des éléments utiles
+6. [Vérifier les résultats](/fr/guide/quality/) — prendre l'habitude de réviser et tester
 
 ## Idées reçues
 
@@ -62,7 +64,7 @@ Associez la compréhension à une pratique limitée et à la vérification du r�
 | 10–25 min | Terminer l'[exemple de première tâche](/fr/cases/first-task/) |
 | 25–30 min | Parcourir les [bases des prompts](/fr/prompts/basics/) pour mieux formuler vos tâches |
 
-En cas de blocage, consultez le [dépannage](/fr/guide/troubleshooting/).
+En cas de blocage, consultez le [dépannage](/fr/guide/reference/troubleshooting/).
 
 ## Que lire ensuite
 

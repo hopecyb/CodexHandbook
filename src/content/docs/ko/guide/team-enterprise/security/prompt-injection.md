@@ -3,7 +3,7 @@ title: 프롬프트 주입
 description: 신뢰할 수 없는 텍스트가 컨텍스트에 들어올 때——식별, 완화, 팀 정책 요점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 “프롬프트 주입”은 Codex가 보게 될 컨텍스트에, Codex를 오도하는 내용을 집어넣는 행위입니다.
 
 그 내용은 issue, 웹페이지, 의존성 주석, 문서, 사용자가 붙여 넣은 텍스트에서 올 수 있으며, 목적은 대개 Agent가 **정책을 무시하고, 데이터를 유출하고, 위험한 명령을 실행**하도록 유도하는 것입니다. [위협 모델](/ko/guide/team-enterprise/security/threat-model/)에서 빈도가 높은 위험이며, 실제 업무와 멀리 있지 않습니다.
+
+![일러스트: 웹 페이지에 숨은 붉은 의심 메모가 반투명 방패에 막히고, 깨끗한 내용만 도우미에게 전달된다](/illustrations/prompt-injection.webp)
 
 ## 내용
 

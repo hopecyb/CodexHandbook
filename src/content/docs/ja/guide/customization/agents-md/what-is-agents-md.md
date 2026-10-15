@@ -3,7 +3,7 @@ title: AGENTS.md とは
 description: プロジェクトレベル永続指示ファイル——Codex への「協業契約」。アーキテクチャ百科ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: 49b7d04
+source_revision: 47c5866
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 「このプロジェクトで Codex にどう協力してほしいか」の説明書と考えてください。
 
 高度なアーキテクチャ文書でも、新人向け完全マニュアルでもなく、Codex 向けのプロジェクト協業ルールです。
+
+![イラスト：リポジトリの断面で、ルートに手引書、サブフォルダーにメモがあり、アシスタントは手引書を読んでから最も近いメモを読む](/illustrations/agents-md.webp)
 
 ## 一つの核心概念
 

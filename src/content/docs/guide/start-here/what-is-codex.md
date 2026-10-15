@@ -16,6 +16,8 @@ Codex 是 OpenAI 提供的 **AI 编程与工作 Agent**。你给它一个目标�
 
 官方产品文档以 [OpenAI Codex](https://developers.openai.com/codex) 为准；这份手册是社区开源指南，方便系统学习和实际上手，不替代官方文档。
 
+![插画：你把一张任务卡交给 Codex，它在电脑、文档和终端之间逐项完成并打勾](/illustrations/what-is-codex.webp)
+
 ## 它和普通 AI 聊天有什么区别
 
 很多人刚看到 Codex，会把它理解成“更强一点的聊天 AI”。差别主要在执行能力。

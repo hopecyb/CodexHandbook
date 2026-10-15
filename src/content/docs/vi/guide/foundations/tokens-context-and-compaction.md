@@ -3,7 +3,7 @@ title: Token, ngữ cảnh và nén
 description: Hiểu cửa sổ ngữ cảnh, mức chiếm dụng và nén.
 locale: vi
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ Ba từ phổ biến phía sau chính là Token, ngữ cảnh, nén.
 **Token** là đơn vị đo khi model xử lý văn bản. **Cửa sổ ngữ cảnh** là trần thông tin có thể dùng hiệu quả trong một lần.
 
 Khi hội thoại hoặc tệp quá nhiều, hệ thống có thể làm **nén (compaction)**: giữ tóm tắt, bỏ chi tiết. Sau khi nén, Agent có thể «quên» ràng buộc sớm.
+
+![Minh họa: cuộn hội thoại dài đi qua máy nén và trở thành thẻ tóm tắt ngắn vừa khít trong khung cửa sổ giới hạn](/illustrations/tokens-compaction.webp)
 
 ## Tách ba từ này
 

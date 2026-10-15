@@ -10,6 +10,8 @@ description: 任务跑偏、测试变红或上下文耗尽时——如何安全�
 
 **失败恢复**讲的是任务跑偏或中断后，怎么把现场收住，再继续往前走。本章给出一套可重复的 **检测 → 止损 → 恢复 → 复盘** 步骤，可和 [撤销与恢复](/guide/getting-started/undo-and-recover/) 以及 [长任务管理](/cases/workflows/long-running-task-management/) 配合使用。
 
+![插画：倒了一半的积木塔被人和小助手按清单冷静地重建，回退箭头把一块积木放回稳定的底座](/illustrations/failure-recovery.webp)
+
 ## 这页重点
 
 - 何时该 `git stash`、回退 commit、开新线程

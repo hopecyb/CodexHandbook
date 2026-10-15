@@ -3,7 +3,7 @@ title: Prompt-Debugging
 description: Bei abweichenden Ergebnissen Prompt-Probleme eingrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Wenn das Ergebnis nicht passt, oft weil:
 - Aufgabe zu groß, ohne zuerst Plan zu verlangen
 
 Prompt-Debugging heißt: herausfinden, **welche Informationsebene fehlt**.
+
+![Illustration: zwei Ergebnisse auf der Werkbank – eines verfehlt das Ziel, eines trifft – dazwischen wird die Aufgabenkarte mit Schraubendreher und Lupe justiert](/illustrations/prompt-debugging.webp)
 
 ## Zuerst lokalisieren
 

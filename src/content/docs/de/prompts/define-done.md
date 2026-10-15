@@ -3,7 +3,7 @@ title: Fertigstellungsstandard definieren
 description: Prüfbare Fertigstellungsbedingungen formulieren.
 locale: de
 source_locale: zh-CN
-source_revision: 5d963e0
+source_revision: e97e854
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -76,7 +76,7 @@ Wenn nicht, ist es meist noch zu vage.
 
 Kurz: „fertig?“ darf kein Rätselraten sein.
 
-Schreib Verifikationsbefehle in den Standard — dann führt der Agent sie eher aus: [Tests ausführen](/de/guide/verification/)
+Schreib Verifikationsbefehle in den Standard — dann führt der Agent sie eher aus: [Tests ausführen](/de/guide/quality/)
 
 ---
 

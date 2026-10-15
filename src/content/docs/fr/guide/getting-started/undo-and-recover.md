@@ -8,7 +8,7 @@ title: Annuler et revenir à un état sûr
 description: Revenir en arrière sans risque quand le résultat ne convient pas.
 locale: fr
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Si le résultat sort du périmètre prévu ou manque de qualité :
 3. Ouvrez une nouvelle conversation, resserrez les contraintes et réessayez.
 
 Souvent, il vaut mieux réduire le périmètre dès le départ : limiter les fichiers modifiables, préciser les interdictions et examiner un plan avant l'exécution.
+
+![Illustration : une flèche de retour entoure des versions successives, une ancienne version reprend sa place, un filet rattrape une page froissée](/illustrations/undo-and-recover.webp)
 
 ## Distinguer « annuler » et « récupérer »
 

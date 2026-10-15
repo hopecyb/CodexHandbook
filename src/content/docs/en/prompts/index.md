@@ -7,12 +7,14 @@ title: Prompts
 description: Learn how to state tasks, context, inputs, constraints, and acceptance criteria clearly.
 locale: en
 source_locale: zh-CN
-source_revision: b4393c7
+source_revision: 2280f53
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 The prompts section explains how to state a task so Codex knows its goal, context, boundaries, and completion criteria. A useful prompt also lets uncertainty surface during execution, makes room for necessary confirmation, and asks for a result you can inspect.
+
+![Illustration: four puzzle pieces—goal, context, constraints, and definition of done—snap into one complete task card for the agent](/illustrations/task-brief.webp)
 
 ## Recommended order
 

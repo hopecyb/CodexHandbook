@@ -27,7 +27,7 @@ prev:
   link: /cases/
   label: 选择实战任务
 next:
-  link: /guide/verification/
+  link: /guide/quality/
   label: 学会验证结果
 ---
 
@@ -128,4 +128,4 @@ python3 validation/check.py --output my-output
 
 保留自己的提示词与纠偏记录，下次替换数据前重新确认字段和口径。本练习的固定校验器不适用于任意企业数据。
 
-继续阅读[验证结果](/guide/verification/)或返回[实战案例](/cases/)。
+继续阅读[验证结果](/guide/quality/)或返回[实战案例](/cases/)。

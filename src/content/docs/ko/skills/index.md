@@ -7,7 +7,7 @@ title: Skills
 description: Codex Skills를 사용·작성·테스트·유지하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: dd408f5
+source_revision: 6f8df16
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -16,6 +16,8 @@ translated_at: 2026-09-20
 Skills는 안정된 방법, 참고 자료, 템플릿, 스크립트를 재사용 가능한 능력으로 패키징하는 데 씁니다.
 
 가치는 Codex에 기능을 하나 더하는 데 그치지 않습니다. 작업 흐름의 입력과 출력, 권한 경계, 테스트 방법을 분명하게 할 수 있습니다.
+
+![한 번의 프롬프트에서 팀 역량 패키지로: 프롬프트와 템플릿이 Skill, 서브에이전트, MCP, Hook이 되고 Plugin과 Automation으로 팀에 배포된다](/diagrams/codex-capability-ladder-ko.svg)
 
 ## 권장 순서
 

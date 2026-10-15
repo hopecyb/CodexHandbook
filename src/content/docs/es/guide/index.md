@@ -7,7 +7,7 @@ next:
 description: "Entiende Codex, elige un cliente, completa tu primera Tarea y aprende Permisos, Contexto y Verificación."
 locale: es
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ No necesitas dominar de entrada todos los términos, productos y flujos. Encuent
 
 - [Lista de seguridad para principiantes](/es/guide/getting-started/beginner-safety-checklist/)
 - [Cómo elegir un cliente](/es/guide/choose-your-client/)
-- [Verificación de resultados y criterios de finalización](/es/guide/verification/)
+- [Verificación de resultados y criterios de finalización](/es/guide/quality/)
 
 ## Orden recomendado
 
@@ -38,9 +38,9 @@ No necesitas dominar de entrada todos los términos, productos y flujos. Encuent
 3. [Elige un cliente](/es/guide/choose-your-client/)
 4. [Completa la primera Tarea](/es/cases/first-task/)
 5. [Permisos y Sandbox](/es/guide/permissions-and-sandbox/)
-6. [Contexto y archivos](/es/guide/context-and-files/)
-7. [Verificación](/es/guide/verification/)
-8. Si hay problemas, consulta [Resolución de problemas](/es/guide/troubleshooting/)
+6. [Contexto y archivos](/es/guide/context/)
+7. [Verificación](/es/guide/quality/)
+8. Si hay problemas, consulta [Resolución de problemas](/es/guide/reference/troubleshooting/)
 
 ## Malentendidos frecuentes
 

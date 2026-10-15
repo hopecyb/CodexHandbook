@@ -3,13 +3,15 @@ title: Failure recovery
 description: When tasks drift, tests go red, or context runs out—how to roll back safely and continue.
 locale: en
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
 ---
 
 **Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/en/guide/getting-started/undo-and-recover/) and [Long-running task management](/en/cases/workflows/long-running-task-management/).
+
+![Illustration: a half-toppled block tower is calmly rebuilt by a person and an assistant following a checklist, with a rollback arrow returning a block to a stable base](/illustrations/failure-recovery.webp)
 
 ## What this page covers
 

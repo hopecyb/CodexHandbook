@@ -11,6 +11,9 @@ description: 区分论文、产品发布、工程文章和作者学习建议，�
 
 每个主题页提供一手来源、适用边界和站内练习。来源核对不等于软件实跑；原有 URL 保留，其中的年月可能与修订后的事件日期不同，请以正文为准。
 
+
+![AI 应用工程路线图：按时间倒序列出 Skills、Harness Engineering、OpenSpec 与 OpenClaw、上下文工程、多智能体协作、工具使用、MCP、RAG、函数调用和提示词工程](/ai-roadmap-assets/ai-application-roadmap.svg)
+
 ## 可核对的事件
 
 | 日期 | 类型 | 主题与具体事件 |

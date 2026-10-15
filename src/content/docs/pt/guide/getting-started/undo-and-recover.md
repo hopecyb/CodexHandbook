@@ -3,7 +3,7 @@ title: Desfazer e recuperar
 description: Volte com segurança quando o resultado não satisfizer.
 locale: pt
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Quando o resultado ultrapassa o alcance ou a qualidade não serve:
 3. Abra uma Thread nova, aperte as restrições e tente de novo
 
 Muitas vezes, reduzir o alcance de antemão economiza esforço — por exemplo mexer em poucos arquivos, escrever o que é proibido, ver o plano antes de executar.
+
+![Ilustração: uma seta de voltar circunda versões salvas, uma versão anterior volta ao lugar e uma rede de segurança apara uma página amassada](/illustrations/undo-and-recover.webp)
 
 ## Separar «desfazer» e «recuperar»
 

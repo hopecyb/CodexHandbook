@@ -3,7 +3,7 @@ title: Prompts para tarefas longas
 description: Divida em fases, checkpoints e informação de transferência.
 locale: pt
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Fase 2: implementar a mudança mínima
 Fase 3: acrescentar testes e executar…
 No fim de cada fase, pare e espere a minha confirmação.
 ```
+
+![Ilustração: uma longa estrada sinuosa com bandeiras de verificação; um assistente de mochila avança e uma pessoa num ponto de controle orienta a direção](/illustrations/long-running-tasks.webp)
 
 ## Por que tarefas longas desviam com facilidade
 

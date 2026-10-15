@@ -3,7 +3,7 @@ title: パスを選ぶ
 description: 役割、タスク、製品入口に応じて読むルートを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ sidebar:
 - エディタ：[IDE](/ja/guide/ide/)
 - クラウド概要：[Web と Cloud](/ja/guide/web-and-cloud/)
 
-まだ迷う場合は [Codex クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/) と [機能対照](/ja/guide/reference/feature-comparison/) を参照してください。
+まだ迷う場合は [Codex クライアントの選択](/ja/guide/choose-your-client/) と [機能対照](/ja/guide/reference/feature-comparison/) を参照してください。
 
 ## よくある誤解
 

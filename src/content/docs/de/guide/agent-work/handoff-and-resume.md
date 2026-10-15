@@ -3,7 +3,7 @@ title: Übergabe und Fortsetzen
 description: Unvollendete Arbeit über Sessions hinweg fortsetzen.
 locale: de
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Ohne Übergabe passiert beim Wiederöffnen leicht:
 - Sie selbst vergessen, wo Sie standen
 - Codex weiß nicht, welche Constraints noch gelten
 - Neuer Dialog zerstreut alten Kontext und kreist wieder von vorn
+
+![Illustration: Ein Agent übergibt Übergabenotizen und eine Fortschrittskarte an einen anderen, dahinter ein Kalender und ein Aufgabenboard mit Lesezeichen](/illustrations/handoff-and-resume.webp)
 
 ## Was Übergabe hinterlässt
 

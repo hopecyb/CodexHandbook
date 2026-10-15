@@ -8,7 +8,7 @@ title: Empieza aquí
 description: Entiende qué es Codex, para quién sirve y elige tu ruta de aprendizaje.
 locale: es
 source_locale: zh-CN
-source_revision: 016d023
+source_revision: 953fb89
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 
 
 Este handbook está pensado sobre todo para **principiantes en IA**: no asume que sepas usar la terminal, Git o Agents, pero te irá explicando paso a paso lo que necesitarás después.
+
+![Ilustración: en el inicio del sendero, un poste señala varias rutas junto a una guía abierta y un pequeño asistente que da la bienvenida](/illustrations/start-here.webp)
 
 ## Contenido
 
@@ -32,8 +34,8 @@ Este handbook está pensado sobre todo para **principiantes en IA**: no asume qu
 2. [Elige un cliente](/es/guide/choose-your-client/) — App, CLI, IDE o Cloud
 3. [Completa tu primera Tarea](/es/cases/first-task/) — un cambio pequeño con un Prompt claro y revisión del resultado
 4. [Permisos y Sandbox](/es/guide/permissions-and-sandbox/) — aprobación, aislamiento y límites de red
-5. [Contexto y archivos](/es/guide/context-and-files/) — cómo dar entradas útiles
-6. [Verificación](/es/guide/verification/) — hábitos de revisión y pruebas
+5. [Contexto y archivos](/es/guide/context/) — cómo dar entradas útiles
+6. [Verificación](/es/guide/quality/) — hábitos de revisión y pruebas
 
 ## Malentendidos frecuentes
 
@@ -64,7 +66,7 @@ No basta. Hay que combinar comprensión, práctica en pequeño y comprobación d
 | 10–25 min | Sigue el [caso de la primera Tarea](/es/cases/first-task/) |
 | 25–30 min | Mira [Fundamentos de prompts](/es/prompts/basics/) para escribir Tareas más claras |
 
-Si te atascas, consulta [Solución de problemas](/es/guide/troubleshooting/).
+Si te atascas, consulta [Solución de problemas](/es/guide/reference/troubleshooting/).
 
 ## Qué leer después
 

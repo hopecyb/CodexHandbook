@@ -497,18 +497,10 @@
 	}
 }
 
-.splash .hero {
-	padding-block: clamp(3rem, 8vw, 6.5rem) clamp(2.5rem, 6vw, 5rem);
-}
-
-.splash .hero h1 {
-	letter-spacing: 0;
-}
-
 .home-section {
 	width: min(100%, 72rem);
 	margin-inline: auto;
-	margin-block: clamp(3.5rem, 7vw, 6rem);
+	margin-block: clamp(2.5rem, 5vw, 4.5rem);
 }
 
 .home-section-lead {
@@ -549,7 +541,7 @@
 .module-grid,
 .path-grid {
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
 	gap: 1rem;
 }
 
@@ -557,7 +549,7 @@
 	display: flex;
 	min-height: 10rem;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 1rem;
 	padding: 1.1rem;
 	border: 1px solid var(--sl-color-gray-6);
@@ -597,7 +589,7 @@ html[data-theme='light'] .module-card strong {
 	display: flex;
 	min-height: 11rem;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 1.25rem;
 	padding: 1.1rem;
 	border: 1px solid var(--sl-color-gray-6);
@@ -708,11 +700,6 @@ html[data-theme='light'] .path-card strong {
 }
 
 @media (max-width: 64rem) {
-	.module-grid,
-	.path-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
 	.home-map {
 		grid-template-columns: 1fr;
 	}
@@ -727,9 +714,7 @@ html[data-theme='light'] .path-card strong {
 }
 
 @media (max-width: 44rem) {
-	.home-section-lead,
-	.module-grid,
-	.path-grid {
+	.home-section-lead {
 		grid-template-columns: 1fr;
 	}
 
@@ -743,7 +728,7 @@ html[data-theme='light'] .path-card strong {
 	}
 
 	.hero-html .home-hero-art {
-		width: min(18rem, 82vw);
+		width: min(11rem, 45vw);
 	}
 
 	.hero-html .home-hero-art__book {
@@ -842,5 +827,202 @@ html[data-theme='light'] .path-card strong {
 
 	.roadmap-timeline article {
 		padding: 0.9rem;
+	}
+}
+
+@media (max-width: 49.999rem) {
+	.hero-html .home-hero-art {
+		width: min(11rem, 45vw);
+	}
+
+	/* Decorative notes are sized for the desktop art and cover the book at this size. */
+	.hero-html .home-hero-art__note {
+		display: none;
+	}
+}
+
+/* Narrow screens: logo-only site title and icon-only language picker. */
+@media (max-width: 49.999rem) {
+	.header .site-title span {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+	}
+
+	starlight-lang-select .sl-select {
+		--sl-inline-padding: 0;
+		width: 2.375rem;
+	}
+
+	starlight-lang-select .sl-select-trigger {
+		display: grid;
+		place-items: center;
+		padding: 0.5rem;
+		border-color: transparent;
+		background-color: transparent;
+	}
+
+	starlight-lang-select .sl-select-value,
+	starlight-lang-select .sl-select-trigger .caret {
+		display: none;
+	}
+
+	starlight-lang-select .sl-select-trigger .label-icon {
+		position: static;
+		font-size: 1.05rem;
+		transform: none;
+	}
+
+	starlight-lang-select .sl-select-menu {
+		inset-inline: auto 0;
+		width: max-content;
+		min-width: 10rem;
+	}
+}
+
+/* Concept illustrations: full column width, rounded like the cards. */
+.sl-markdown-content p > img[src^='/illustrations/'] {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	margin-block: 1.5rem;
+	border: 1px solid var(--sl-color-gray-6);
+	border-radius: 0.75rem;
+	background: #0f172a;
+}
+
+/* Tall timeline graphic: keep it readable without filling several screens. */
+.sl-markdown-content img[src^='/ai-roadmap-assets/'] {
+	display: block;
+	width: min(100%, 34rem);
+	height: auto;
+	margin: 1.5rem auto;
+	border: 1px solid var(--sl-color-gray-6);
+	border-radius: 0.75rem;
+}
+
+/* Click-to-zoom for diagrams (see zoomable-diagrams script in astro.config.mjs). */
+.sl-markdown-content img[data-zoomable] {
+	cursor: zoom-in;
+}
+
+.diagram-zoom {
+	margin: auto;
+	width: min(96vw, 90rem);
+	max-width: none;
+	max-height: 94vh;
+	padding: 0;
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 0.75rem;
+	background: var(--sl-color-bg);
+	overflow: auto;
+}
+
+.diagram-zoom::backdrop {
+	background: rgb(2 6 23 / 0.8);
+}
+
+.diagram-zoom img {
+	display: block;
+	width: 100%;
+	min-width: 48rem;
+	height: auto;
+	cursor: zoom-out;
+}
+
+.diagram-zoom:has(img[src^='/ai-roadmap-assets/']) {
+	width: min(96vw, 56rem);
+}
+
+.diagram-zoom:has(img[src^='/ai-roadmap-assets/']) img {
+	min-width: 0;
+}
+
+/* Homepage: picture cards for tasks and roles. */
+.path-card:has(> img) {
+	gap: 0.75rem;
+	padding-block-start: 0;
+	overflow: hidden;
+}
+
+.path-card > img {
+	display: block;
+	width: calc(100% + 2.2rem);
+	max-width: none;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	margin: 0 -1.1rem 0.35rem;
+	object-fit: cover;
+	border-block-end: 1px solid var(--sl-color-gray-6);
+	transition: transform 0.3s ease;
+}
+
+.path-card:hover > img {
+	transform: scale(1.03);
+}
+
+/* Homepage: lookup and asset sections as a plain index list, not another wall of cards. */
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-grid {
+	grid-template-columns: 1fr;
+	gap: 0;
+	border-block-end: 1px solid var(--sl-color-gray-6);
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card {
+	display: grid;
+	grid-template-columns: minmax(10rem, 16rem) minmax(0, 1fr) 1.25rem;
+	align-items: baseline;
+	gap: 0.25rem 1.5rem;
+	min-height: auto;
+	padding: 0.95rem 0.25rem;
+	border: 0;
+	border-block-start: 1px solid var(--sl-color-gray-6);
+	border-radius: 0;
+	background: none;
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card strong {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card span {
+	color: var(--sl-color-gray-3);
+	font-size: var(--sl-text-sm);
+	line-height: 1.6;
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card::after {
+	color: var(--sl-color-gray-4);
+	content: '→';
+	opacity: 0;
+	transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card:hover {
+	background: none;
+	transform: none;
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card:hover strong {
+	color: var(--sl-color-accent-high);
+}
+
+:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card:hover::after {
+	opacity: 1;
+	transform: translateX(0.2rem);
+}
+
+@media (max-width: 44rem) {
+	:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	:is([aria-labelledby='lookup-heading'], [aria-labelledby='assets-heading']) .path-card::after {
+		display: none;
 	}
 }

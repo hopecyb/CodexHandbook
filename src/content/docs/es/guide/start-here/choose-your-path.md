@@ -3,7 +3,7 @@ title: Elige tu ruta
 description: Elige una ruta de lectura según rol, Tarea o entrada de producto.
 locale: es
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ Hay muchas entradas: elige primero la que más se acerque a tu problema actual.
 - Editor: [IDE](/es/guide/ide/)
 - Resumen cloud: [Web y Cloud](/es/guide/web-and-cloud/)
 
-Si aún no lo tienes claro, mira [Elige un cliente de Codex](/es/guide/getting-started/choose-your-codex-client/) y [Comparación de funciones](/es/guide/reference/feature-comparison/).
+Si aún no lo tienes claro, mira [Elige un cliente de Codex](/es/guide/choose-your-client/) y [Comparación de funciones](/es/guide/reference/feature-comparison/).
 
 ## Malentendidos frecuentes
 

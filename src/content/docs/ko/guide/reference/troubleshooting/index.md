@@ -8,7 +8,7 @@ title: 장애 분석 색인
 description: 증상별로 대응 튜토리얼과 제품 페이지로 안내합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7327724
+source_revision: da350d0
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -23,7 +23,7 @@ sidebar:
 |---|---|
 | 설치 실패 | [데스크톱 장애 분석](/ko/guide/desktop-app/troubleshooting/) · [CLI 장애 분석](/ko/guide/cli/troubleshooting/) · [IDE 장애 분석](/ko/guide/ide/troubleshooting/) |
 | 로그인/인증 실패 | [로그인](/ko/guide/getting-started/sign-in-and-authentication/) |
-| 어느 클라이언트를 고를지 모름 | [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/) · [기능 대조](/ko/guide/reference/feature-comparison/) |
+| 어느 클라이언트를 고를지 모름 | [클라이언트 선택](/ko/guide/choose-your-client/) · [기능 대조](/ko/guide/reference/feature-comparison/) |
 | 결과가 경계를 넘거나 매우 나쁨 | [결과 확인](/ko/guide/getting-started/review-the-result/) · [프롬프트 디버깅](/ko/prompts/prompt-debugging/) · [실행 취소](/ko/guide/getting-started/undo-and-recover/) |
 | 컨텍스트가 혼란스러움 | [초점 유지](/ko/guide/context/keep-context-focused/) |
 | 권한/샌드박스 의문 | [권한](/ko/guide/foundations/permissions-and-approvals/) · [샌드박스](/ko/guide/foundations/sandbox-and-network/) |

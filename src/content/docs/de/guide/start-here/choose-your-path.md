@@ -3,7 +3,7 @@ title: Deinen Pfad wählen
 description: "Wähle den Leseweg nach Rolle, Aufgabe und Produkteinstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ Es gibt viele Einstiege; wähle zuerst den, der deiner aktuellen Frage am nächs
 - Editor: [IDE](/de/guide/ide/)
 - Cloud-Überblick: [Web und Cloud](/de/guide/web-and-cloud/)
 
-Wenn du unsicher bist, schau dir [Codex-Client wählen](/de/guide/getting-started/choose-your-codex-client/) und den [Funktionsvergleich](/de/guide/reference/feature-comparison/) an.
+Wenn du unsicher bist, schau dir [Codex-Client wählen](/de/guide/choose-your-client/) und den [Funktionsvergleich](/de/guide/reference/feature-comparison/) an.
 
 ## Häufige Missverständnisse
 

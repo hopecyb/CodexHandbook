@@ -8,7 +8,7 @@ title: Desktop app
 description: Installation, interface, and everyday workflows for the desktop app.
 locale: en
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -20,6 +20,8 @@ The desktop app is the default starting point for beginners: it gives you visibl
 It is also an approachable entry point if you are not familiar with the command line or IDE extensions.
 
 It does more than let you chat. It brings projects, changes, approvals, and verification into one visible interface.
+
+![Illustration: a desktop control center with several task cards and progress rings side by side, one expanded to show a side-by-side diff and an approval toggle](/illustrations/desktop-app.webp)
 
 ## What this chapter covers
 

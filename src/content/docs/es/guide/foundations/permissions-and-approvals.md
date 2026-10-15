@@ -3,7 +3,7 @@ title: Permisos y Aprobaciones
 description: Explica cuándo Codex necesita que apruebes una operación.
 locale: es
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Codex no debería ejecutar operaciones de alto riesgo sin consentimiento. La **Aprobación** es la compuerta de la colaboración entre persona y máquina.
 
 Si Codex pudiera leer cualquier archivo, conectarse a la red a voluntad y ejecutar cualquier comando, el coste de entender mal una Tarea sería alto.
+
+![Ilustración: cuatro puertas con distintos permisos —leer, escribir, ejecutar comandos, conectarse— y una persona que decide qué llave entregar](/illustrations/permissions-approvals.webp)
 
 ## Qué te importa
 

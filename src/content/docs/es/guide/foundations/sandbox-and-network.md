@@ -3,7 +3,7 @@ title: Sandbox y red
 description: Entiende el aislamiento de ejecución, el acceso a la red y los límites de riesgo.
 locale: es
 source_locale: zh-CN
-source_revision: 5937622
+source_revision: 2cf2c46
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 «Sandbox» y «red» son en realidad dos cosas: el Sandbox limita a dónde puede tocar; la red, a dónde puede conectarse.
 
 El **Sandbox** limita el sistema de archivos y parte de las capacidades del sistema a las que puede llegar el Agent, y reduce la superficie de errores. El **acceso a la red** es otra capa de riesgo: puede filtrar información sensible del Prompt o traer datos no fiables.
+
+![Ilustración: el agente trabaja en un sandbox de cristal y muestra una solicitud mientras una persona fuera pulsa aprobar; el cable de red está desconectado](/illustrations/sandbox-and-approval.webp)
 
 ## Por qué importan estos dos límites
 

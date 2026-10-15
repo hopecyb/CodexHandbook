@@ -5,7 +5,7 @@ sidebar:
   order: 16
 locale: pt
 source_locale: zh-CN
-source_revision: e085884
+source_revision: d2baf42
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ reviewed_at: 2026-08-26
 O Contexto é a informação que o modelo «consegue utilizar de forma eficaz neste momento». Se o Contexto estiver mal gerido, até o melhor Prompt fica afogado em ruído.
 
 No uso real, é o que o Codex está mesmo a ver agora, o que pode usar como referência e o que usa para decidir. O que você sabe mas não lhe forneceu nesta Tarefa **não** conta como Contexto desta ocasião.
+
+![Ilustração: regras do projeto, arquivos selecionados e conversa chegam ao agente em três camadas enquanto um funil filtra o irrelevante](/illustrations/context-layers.webp)
 
 ## Por que este capítulo importa especialmente
 

@@ -8,7 +8,7 @@ title: "Index de dépannage"
 description: Trouver le bon tutoriel ou page produit par symptôme.
 locale: fr
 source_locale: zh-CN
-source_revision: 7327724
+source_revision: da350d0
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -23,7 +23,7 @@ Chercher par symptôme est plus rapide que parcourir tout le site.
 |---|---|
 | Installation échouée | [Dépannage App de bureau](/fr/guide/desktop-app/troubleshooting/) · [Dépannage CLI](/fr/guide/cli/troubleshooting/) · [Dépannage IDE](/fr/guide/ide/troubleshooting/) |
 | Échec connexion / authentification | [Connexion](/fr/guide/getting-started/sign-in-and-authentication/) |
-| Incertain quel client choisir | [Choisir votre client](/fr/guide/getting-started/choose-your-codex-client/) · [Comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) |
+| Incertain quel client choisir | [Choisir votre client](/fr/guide/choose-your-client/) · [Comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) |
 | Résultats hors portée / qualité faible | [Revoir le résultat](/fr/guide/getting-started/review-the-result/) · [Débogage prompt](/fr/prompts/prompt-debugging/) · [Annuler](/fr/guide/getting-started/undo-and-recover/) |
 | Confusion de contexte | [Garder le contexte focalisé](/fr/guide/context/keep-context-focused/) |
 | Questions permissions / bac à sable | [Permissions](/fr/guide/foundations/permissions-and-approvals/) · [Bac à sable](/fr/guide/foundations/sandbox-and-network/) |

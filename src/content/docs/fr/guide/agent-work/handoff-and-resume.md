@@ -10,7 +10,7 @@ sidebar:
   order: 40
 locale: fr
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -23,6 +23,8 @@ Sans passation, rouvrir la tâche peut provoquer trois problèmes :
 - Vous oubliez où vous en étiez.
 - Codex ignore quelles contraintes restent valables.
 - La nouvelle conversation disperse l’ancien contexte et recommence les mêmes détours.
+
+![Illustration : un agent remet ses notes de passation et une fiche d’avancement à un autre, avec un calendrier et un tableau de tâches marqué derrière](/illustrations/handoff-and-resume.webp)
 
 ## Que conserve exactement une passation ?
 

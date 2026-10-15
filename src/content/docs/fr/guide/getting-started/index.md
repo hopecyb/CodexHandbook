@@ -8,7 +8,7 @@ title: Premiers pas
 description: Du compte et de l'installation à une première tâche vérifiable.
 locale: fr
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -21,6 +21,8 @@ Le parcours par défaut utilise l'**application de bureau**. Si vous préférez 
 
 Si vos premières questions sont « Comment commencer ? » et « Comment éviter les erreurs dès le départ ? », ce chapitre est l'entrée la plus directe.
 
+![Illustration : quatre marches – préparer l’ordinateur, se connecter, créer un projet d’essai, terminer la première tâche – avec un petit assistant](/illustrations/getting-started.webp)
+
 ## Contenu de ce chapitre
 
 - Le minimum à préparer avant une première utilisation
@@ -31,7 +33,7 @@ Si vos premières questions sont « Comment commencer ? » et « Comment éviter
 ## Étapes
 
 1. [Compte, forfaits et accès](/fr/guide/getting-started/account-plans-and-access/)
-2. [Choisir votre client](/fr/guide/getting-started/choose-your-codex-client/)
+2. [Choisir votre client](/fr/guide/choose-your-client/)
 3. Installer : [application de bureau](/fr/guide/getting-started/install-desktop-app/) · [CLI](/fr/guide/getting-started/install-cli/) · [IDE](/fr/guide/getting-started/install-ide-extension/)
 4. [Se connecter](/fr/guide/getting-started/sign-in-and-authentication/)
 5. [Créer un projet d'entraînement](/fr/guide/getting-started/create-your-first-project/)

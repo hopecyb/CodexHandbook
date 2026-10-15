@@ -9,7 +9,7 @@ sidebar:
   order: 5
 locale: es
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -19,6 +19,8 @@ Las rutas de aprendizaje **solo organizan el orden de lectura**; no duplican los
 Al ver este capítulo por primera vez, puede parecer otra capa de índice. En realidad responde a qué tipo de usuario te pareces ahora y en qué orden te conviene leer.
 
 No añade conocimientos nuevos sobre el producto; te ayuda a evitar rodeos.
+
+![Ilustración: cuatro caminos que parten del mismo libro —principiante, creador, desarrollador y equipo— se unen en la cima](/illustrations/learning-paths.webp)
 
 ## Qué hace este capítulo
 

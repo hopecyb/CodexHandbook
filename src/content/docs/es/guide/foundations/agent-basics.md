@@ -3,7 +3,7 @@ title: Fundamentos de Agent
 description: Explica cómo un Agent llama Herramientas e itera alrededor de un objetivo.
 locale: es
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Un **Agent** avanza de forma continua hacia un objetivo: entenderlo → elegir Herramientas → observar el resultado → ajustar el siguiente paso, hasta terminar o hasta que tú intervengas.
 
 La IA normal se parece más a alguien que responde preguntas; un Agent, a alguien que, al recibir una Tarea, la lleva paso a paso.
+
+![Ilustración: a la izquierda, un chat de pregunta y respuesta; a la derecha, un agente en bucle que lee archivos, usa herramientas, revisa y corrige](/illustrations/agent-basics.webp)
 
 ## Diferencia entre Agent y un chat normal
 

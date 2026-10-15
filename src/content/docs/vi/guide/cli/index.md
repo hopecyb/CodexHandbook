@@ -3,7 +3,7 @@ title: CLI
 description: Hướng dẫn tối thiểu dùng được cho lối vào dòng lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -32,6 +32,8 @@ Với người mới hoàn toàn chưa quen terminal, CLI không phải trạm �
 - [Xử lý sự cố](/vi/guide/cli/troubleshooting/)
 
 Tham chiếu lệnh đầy đủ: [Tham chiếu lệnh CLI](/vi/guide/reference/commands/).
+
+![Minh họa: trợ lý nhỏ ngồi trên cửa sổ terminal gõ lệnh, terminal nối với script và kiểm thử](/illustrations/cli.webp)
 
 ## Lần đầu dùng — phân rõ gì trước
 

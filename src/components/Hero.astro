@@ -100,7 +100,7 @@ if (image) {
 		.hero > img,
 		.hero > .hero-html {
 			object-fit: contain;
-			width: min(70%, 20rem);
+			width: min(45%, 11rem);
 			height: auto;
 			margin-inline: auto;
 		}
@@ -126,6 +126,14 @@ if (image) {
 			line-height: var(--sl-line-height-headings);
 			font-weight: 600;
 			color: var(--sl-color-white);
+			letter-spacing: 0;
+			text-wrap: balance;
+		}
+
+		/* Chinese titles mark break points with <wbr>; keep words like 复用 intact. */
+		h1:lang(zh) {
+			word-break: keep-all;
+			overflow-wrap: anywhere;
 		}
 
 		.tagline {
@@ -143,7 +151,7 @@ if (image) {
 			.hero {
 				grid-template-columns: 7fr 4fr;
 				gap: 3%;
-				padding-block: clamp(2.5rem, calc(1rem + 10vmin), 10rem);
+				padding-block: clamp(2.5rem, calc(1rem + 8vmin), 6rem) clamp(1rem, 4vmin, 3rem);
 			}
 
 			.hero > img,

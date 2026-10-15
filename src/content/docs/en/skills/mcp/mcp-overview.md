@@ -3,13 +3,15 @@ title: MCP overview
 description: Understand MCP clients, servers, tools, authentication, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 37e55d9
+source_revision: 98a0626
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
 ---
 
 MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
+
+![Illustration: the assistant plugs into a universal hub whose standard cables connect to a database, a calendar, a ticket board, and a cloud drive](/illustrations/mcp-overview.webp)
 
 ## Call chain
 

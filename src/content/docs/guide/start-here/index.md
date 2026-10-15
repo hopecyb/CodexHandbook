@@ -12,6 +12,8 @@ sidebar:
 
 这份手册主要写给 **AI 初学者**：不假设你会用终端、Git 或 Agent，但会把后面要碰到的能力逐步讲清楚。
 
+![插画：小路起点立着指向多条路线的路标，旁边摊开一本指南，小助手招手迎接读者](/illustrations/start-here.webp)
+
 ## 内容
 
 - 弄清 Codex 能做什么、不能做什么
@@ -25,8 +27,8 @@ sidebar:
 2. [选择客户端](/guide/choose-your-client/) — 在 App、CLI、IDE、Cloud 之间做选择
 3. [完成第一个任务](/cases/first-task/) — 用清晰提示词完成小改动并检查结果
 4. [权限与沙箱](/guide/permissions-and-sandbox/) — 理解审批、隔离与网络边界
-5. [上下文与文件](/guide/context-and-files/) — 学会提供有效输入
-6. [验证结果](/guide/verification/) — 养成审查与测试习惯
+5. [上下文与文件](/guide/context/) — 学会提供有效输入
+6. [验证结果](/guide/quality/) — 养成审查与测试习惯
 
 ## 常见误会
 
@@ -57,7 +59,7 @@ sidebar:
 | 10–25 分 | 按 [第一个任务案例](/cases/first-task/) 完成练习 |
 | 25–30 分 | 浏览 [提示词基础](/prompts/basics/)，准备写更清楚的任务 |
 
-卡住时可查看 [故障排查](/guide/troubleshooting/)。
+卡住时可查看 [故障排查](/guide/reference/troubleshooting/)。
 
 ## 接下来怎么读
 

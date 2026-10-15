@@ -3,13 +3,15 @@ title: Recuperación ante fallos
 description: Cuando la tarea se desvía, los tests fallan o se agota el contexto — cómo retroceder con seguridad y continuar.
 locale: es
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 **Recuperación ante fallos** trata de cómo contener la situación cuando una tarea se desvía o se interrumpe, y luego seguir adelante. Este capítulo ofrece un ciclo repetible **detectar → contener → recuperar → retrospectiva**, combinable con [Deshacer y recuperar](/es/guide/getting-started/undo-and-recover/) y [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/).
+
+![Ilustración: una torre de bloques medio caída se reconstruye con calma siguiendo una lista, y una flecha de reversión devuelve un bloque a una base estable](/illustrations/failure-recovery.webp)
 
 ## Enfoque de esta página
 

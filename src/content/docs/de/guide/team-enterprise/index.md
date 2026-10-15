@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: de
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ Im Mittelpunkt stehen diese Fragen:
 - Welche Bereiche sind erreichbar?
 - Wie lassen sich Probleme nachvollziehen?
 - Wie werden Erweiterungen mit hohem Risiko genehmigt?
+
+![Illustration: Ein Team arbeitet mit mehreren Agenten nach gemeinsamen Regeln innerhalb von Leitplanken, an einer Prüfstation zeichnet ein Mensch ab](/illustrations/team-guardrails.webp)
 
 ## Inhalt dieses Kapitels
 

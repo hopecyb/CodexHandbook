@@ -3,7 +3,7 @@ title: 권한과 승인
 description: Codex가 언제 작업 승인을 필요로 하는지 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5b1b5f8
+source_revision: 1beec63
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승인**은 사람·Agent 협업의 게이트입니다.
 
 어떤 파일이든 읽고, 마음대로 네트워크에 연결하고, 마음대로 명령을 실행할 수 있다면, 작업을 잘못 이해했을 때 대가가 큽니다.
+
+![일러스트: 파일 읽기, 쓰기, 명령 실행, 네트워크 접속 등 권한이 다른 네 개의 문과 어떤 열쇠를 건넬지 고르는 사람](/illustrations/permissions-approvals.webp)
 
 ## 신경 쓸 것
 

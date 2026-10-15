@@ -32,6 +32,8 @@ CLI 适合终端用户与脚本、CI 集成。
 
 完整命令参考见 [CLI 命令参考](/guide/reference/commands/)。
 
+![插画：小助手坐在终端窗口上敲命令，终端连着脚本和测试](/illustrations/cli.webp)
+
 ## 第一次使用先分清什么
 
 第一阶段先分清这两种模式：

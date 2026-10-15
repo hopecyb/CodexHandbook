@@ -3,7 +3,7 @@ title: Define done
 description: Write checkable completion conditions.
 locale: en
 source_locale: zh-CN
-source_revision: 5d963e0
+source_revision: e97e854
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26
@@ -76,7 +76,7 @@ If not, it's probably still too vague.
 
 Bottom line: don't let "is it done?" depend on guessing.
 
-Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/en/guide/verification/)
+Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/en/guide/quality/)
 
 ---
 

@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: fr
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 Un plan est un parcours d’exécution que l’on peut vérifier et ajuster. Il aide à repérer tôt les lacunes de périmètre, de dépendances et de critères d’acceptation. Une tâche plus importante n’exige pas pour autant des pauses répétées pour demander confirmation.
 
 Commencez par la [classification des tâches](/fr/prompts/ask-for-a-plan/) : terminer directement, planifier puis exécuter dans le cadre autorisé, ou ne produire qu’une proposition pour cette fois. Une demande explicite de « proposer d’abord, sans modifier les fichiers » reste en lecture seule. Une demande d’implémentation ne doit pas se terminer avec un plan seulement.
+
+![Illustration : un assistant trace un plan étape par étape au tableau, une personne désigne une étape à ajuster avant de commencer](/illustrations/agent-planning.webp)
 
 ## Un plan suffisamment précis
 

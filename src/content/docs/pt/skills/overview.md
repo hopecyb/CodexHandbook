@@ -3,7 +3,7 @@ title: Visão geral de Skills
 description: Ensine workflows reutilizáveis ao Codex com SKILL.md — escreva uma vez, chame sob demanda.
 locale: pt
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 **Skill** é um diretório que contém `SKILL.md` (opcionalmente scripts e material de referência). Empacota um fluxo fixo em uma capacidade que o Codex pode **chamar automaticamente ou de forma explícita**.
 
 Serve para métodos de trabalho que já se repetem e continuarão sendo reutilizados.
+
+![Ilustração: um fluxo bem-sucedido é guardado numa caixa de ferramentas e entregue em cópias a vários agentes para reutilização](/illustrations/skills-toolkit.webp)
 
 ## Conceitos centrais
 

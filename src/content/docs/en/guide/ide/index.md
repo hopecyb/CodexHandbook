@@ -8,7 +8,7 @@ title: IDE extension
 description: 'Use Codex in your editor: installation, context, local and cloud tasks, review, and settings.'
 locale: en
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -20,6 +20,8 @@ The IDE extension suits work where you **write and inspect the diff side by side
 If you normally write code or edit documents in an editor, the IDE is often the most natural place to start.
 
 It can use the file you currently have open and your selection as context, which makes many small, focused changes easier to keep within scope.
+
+![Illustration: a selected block of code in the editor, with a small assistant in the side panel proposing an inline change and an accept button](/illustrations/ide.webp)
 
 ## Chapter navigation
 
@@ -33,7 +35,7 @@ It can use the file you currently have open and your selection as context, which
 | Configuration | [Settings](/en/guide/ide/settings/) |
 | Troubleshooting | [Troubleshooting](/en/guide/ide/troubleshooting/) |
 
-Quick start: [Install the IDE extension](/en/guide/getting-started/install-ide-extension/) · [Choose a Codex client](/en/guide/getting-started/choose-your-codex-client/)
+Quick start: [Install the IDE extension](/en/guide/getting-started/install-ide-extension/) · [Choose a Codex client](/en/guide/choose-your-client/)
 
 ## What to notice first
 

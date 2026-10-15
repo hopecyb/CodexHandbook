@@ -12,7 +12,7 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 ---
 
 For a scattered question, start with the FAQ. It does not reproduce whole chapters; it helps you find where to go next.
@@ -22,7 +22,7 @@ For a scattered question, start with the FAQ. It does not reproduce whole chapte
 Use the FAQ when there are too many pages to choose from, a specific issue is holding you up but does not warrant a full chapter, or you want an initial direction.
 
 **Q: Which client should I use first?**
-A: The desktop app. See [Choose Your Codex Client](/en/guide/getting-started/choose-your-codex-client/).
+A: The desktop app. See [Choose Your Codex Client](/en/guide/choose-your-client/).
 
 **Q: Can I accept every change without checking it?**
 A: Better not. See [Verification and Human Review](/en/guide/foundations/verification-and-human-review/).

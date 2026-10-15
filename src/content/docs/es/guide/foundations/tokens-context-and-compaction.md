@@ -3,7 +3,7 @@ title: Token, Contexto y Compactación
 description: Entiende la ventana de Contexto, su ocupación y la Compactación.
 locale: es
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ Detrás suelen aparecer tres palabras: Token, Contexto y Compactación.
 Un **Token** es la unidad con la que el modelo procesa texto. La **ventana de Contexto** es el tope de información que puede usar con eficacia de una vez.
 
 Cuando hay demasiada conversación o demasiados archivos, el sistema puede hacer **Compactación (compaction)**: conservar un resumen y descartar detalles. Tras compactar, el Agent puede «olvidar» restricciones tempranas.
+
+![Ilustración: un largo rollo de conversación entra en una prensa y sale como una tarjeta de resumen que cabe en una ventana limitada](/illustrations/tokens-compaction.webp)
 
 ## Mira estos tres términos por separado
 

@@ -11,7 +11,7 @@ title: Primera tarea
 description: Completa un cambio pequeño con un prompt claro y aprende a revisar el resultado.
 locale: es
 source_locale: zh-CN
-source_revision: 0495ceb
+source_revision: 38f925b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -57,5 +57,5 @@ Si falta información, pregúntame primero; no inventes.
 ## 5. Siguientes pasos
 
 - [Fundamentos de prompts](/es/prompts/basics/)
-- [Verificación](/es/guide/verification/)
+- [Verificación](/es/guide/quality/)
 - [Empieza aquí](/es/guide/start-here/)

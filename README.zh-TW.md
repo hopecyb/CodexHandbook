@@ -73,7 +73,7 @@
 建議按這個順序開始：
 
 1. [Guide 首頁](./src/content/docs/guide/index.md)
-2. [上下文與檔案](./src/content/docs/guide/context-and-files.md)
+2. [上下文與檔案](./src/content/docs/guide/context/index.md)
 3. [Prompts](./src/content/docs/prompts/index.md)
 4. [Skills](./src/content/docs/skills/index.md)
 5. [Cases](./src/content/docs/cases/index.md)

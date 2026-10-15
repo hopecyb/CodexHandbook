@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: fr
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ Questions clés :
 - Quelle portée est autorisée
 - Comment tracer les incidents
 - Comment les extensions à haut risque sont approuvées
+
+![Illustration : une équipe travaille avec plusieurs agents autour de règles communes, protégée par des garde-fous, une personne valide à la relecture](/illustrations/team-guardrails.webp)
 
 ## Ce que ce chapitre couvre
 

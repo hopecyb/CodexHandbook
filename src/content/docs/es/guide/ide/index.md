@@ -5,7 +5,7 @@ sidebar:
   order: 12
 locale: es
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ La extensión IDE conviene cuando **escribes y miras el diff a la vez**: abres a
 Si sueles escribir código o editar documentación en el editor, el IDE suele ser la entrada más natural.
 
 Trae directamente el archivo abierto y la selección actuales, así que muchas Tareas de «cambio de alcance reducido» son más fáciles de acotar.
+
+![Ilustración: un bloque de código seleccionado en el editor; en el panel lateral, un asistente propone un cambio con un botón de aceptar](/illustrations/ide.webp)
 
 ## Navegación del capítulo
 
@@ -29,7 +31,7 @@ Trae directamente el archivo abierto y la selección actuales, así que muchas T
 | Configuración | [Ajustes](/es/guide/ide/settings/) |
 | Resolución de problemas | [Resolución de problemas](/es/guide/ide/troubleshooting/) |
 
-Atajos de inicio: [Instalar la extensión IDE](/es/guide/getting-started/install-ide-extension/) · [Elegir cliente](/es/guide/getting-started/choose-your-codex-client/)
+Atajos de inicio: [Instalar la extensión IDE](/es/guide/getting-started/install-ide-extension/) · [Elegir cliente](/es/guide/choose-your-client/)
 
 ## Presta atención a esto primero
 

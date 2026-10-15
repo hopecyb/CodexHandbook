@@ -14,6 +14,8 @@ sidebar:
 
 普通 AI 更像回答问题的人，Agent 更像接到任务后会一步步往下做的人。
 
+![插画：左边是一问一答的普通聊天，右边是 Agent 循环执行——读文件、用工具、检查结果、修改产出](/illustrations/agent-basics.webp)
+
 ## Agent 与普通聊天的区别
 
 | | 普通聊天 | Agent |

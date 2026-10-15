@@ -38,7 +38,7 @@ sidebar:
 - 编辑器：[IDE](/guide/ide/)
 - 云端概述：[Web 与 Cloud](/guide/web-and-cloud/)
 
-如果暂时拿不准，可以看看 [选择 Codex 客户端](/guide/getting-started/choose-your-codex-client/) 和 [功能对照](/guide/reference/feature-comparison/)。
+如果暂时拿不准，可以看看 [选择 Codex 客户端](/guide/choose-your-client/) 和 [功能对照](/guide/reference/feature-comparison/)。
 
 ## 常见误会
 

@@ -3,7 +3,7 @@ title: Token, Contexto e Compactação
 description: Entenda a janela de Contexto, o uso e a Compactação.
 locale: pt
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ Por trás disso aparecem três termos comuns: Token, Contexto e Compactação.
 **Token** é a unidade de medida do texto processado pelo modelo. A **janela de Contexto** é o limite de informação que dá para usar de forma eficaz de uma vez.
 
 Quando a conversa ou os arquivos crescem demais, o sistema pode fazer **Compactação (compaction)**: manter um resumo e descartar detalhes. Depois da Compactação, o Agent pode «esquecer» restrições iniciais.
+
+![Ilustração: um longo rolo de conversa passa por uma prensa e sai como um cartão de resumo que cabe numa janela limitada](/illustrations/tokens-compaction.webp)
 
 ## Separe estes três termos
 

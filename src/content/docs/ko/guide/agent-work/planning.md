@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 계획은 확인하고 조정할 수 있는 실행 경로입니다. 범위, 의존성, 완료 기준의 빈틈을 미리 찾는 데 도움이 되지만, 작업이 크다는 이유로 확인을 반복해서 기다릴 필요는 없습니다.
 
 먼저 [작업 분류](/ko/prompts/ask-for-a-plan/)에 따라 바로 완료할지, 계획 후 이미 받은 권한 안에서 실행할지, 이번에는 방안만 제시할지 정하세요. “먼저 방안을 제시하고 파일은 수정하지 말라”는 명시적 요청은 읽기 전용으로 유지해야 합니다. 구현을 요청받았다면 계획만 내고 끝내면 안 됩니다.
+
+![일러스트: 작은 도우미가 화이트보드에 단계별 계획을 그리고, 사람이 시작 전에 한 단계를 가리키며 조정을 요청한다](/illustrations/agent-planning.webp)
 
 ## 충분한 계획의 구성 요소
 

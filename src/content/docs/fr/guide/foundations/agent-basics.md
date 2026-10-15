@@ -8,7 +8,7 @@ title: Les bases des agents
 description: Comment un agent utilise des outils et progresse vers un objectif.
 locale: fr
 source_locale: zh-CN
-source_revision: "5cfa120"
+source_revision: 14ab120
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 Un **agent** continue d'agir pour atteindre un objectif : comprendre l'objectif → choisir un outil → observer le résultat → ajuster l'étape suivante, jusqu'à ce que le travail soit terminé ou qu'il ait besoin de vous.
 
 Une IA conversationnelle ressemble plutôt à quelqu'un qui répond à des questions. Un agent ressemble davantage à une personne à qui l'on confie une tâche et qui avance étape par étape.
+
+![Illustration : à gauche, un simple échange question-réponse ; à droite, un agent en boucle qui lit des fichiers, utilise des outils, vérifie et corrige](/illustrations/agent-basics.webp)
 
 ## Agent et conversation ordinaire
 

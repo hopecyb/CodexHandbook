@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: pt
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ O núcleo do que o Codex produz costuma ser **alterações de ficheiros no repos
 Também sendo «ficheiros», tipos diferentes pedem formas diferentes de encomendar e de aceitar.
 
 «Alterar código», «tratar tabelas», «gerar ecrãs», «exportar PPT» parecem todos Tarefas de ficheiros, mas os pontos onde mais se erra não são os mesmos.
+
+![Ilustração: código, imagens, PDFs, planilhas e slides passam numa esteira diante de um assistente que confere cada um](/illustrations/files-and-artifacts.webp)
 
 ## Navegação do capítulo
 

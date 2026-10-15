@@ -3,7 +3,7 @@ title: Começar a usar
 description: Da conta e da instalação até a primeira Tarefa verificável.
 locale: pt
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ O padrão é o **App desktop**. Se você prefere terminal ou editor, as páginas
 
 Se o que mais importa agora é «como começar» e «como evitar errar de cara», este capítulo é a entrada mais direta.
 
+![Ilustração: quatro degraus — preparar o computador, entrar, criar um projeto de prática e concluir a primeira tarefa — com um assistente ao lado](/illustrations/getting-started.webp)
+
 ## O que este capítulo inclui
 
 - O mínimo a preparar antes do primeiro uso
@@ -27,7 +29,7 @@ Se o que mais importa agora é «como começar» e «como evitar errar de cara»
 ## Passos
 
 1. [Conta, planos e acesso](/pt/guide/getting-started/account-plans-and-access/)
-2. [Escolher o cliente](/pt/guide/getting-started/choose-your-codex-client/)
+2. [Escolher o cliente](/pt/guide/choose-your-client/)
 3. Instalar: [App desktop](/pt/guide/getting-started/install-desktop-app/) · [CLI](/pt/guide/getting-started/install-cli/) · [IDE](/pt/guide/getting-started/install-ide-extension/)
 4. [Entrar](/pt/guide/getting-started/sign-in-and-authentication/)
 5. [Criar o projeto de prática](/pt/guide/getting-started/create-your-first-project/)

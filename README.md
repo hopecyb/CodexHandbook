@@ -75,7 +75,7 @@
 推荐按这个顺序开始：
 
 1. [Guide 首页](./src/content/docs/guide/index.md)
-2. [上下文与文件](./src/content/docs/guide/context-and-files.md)
+2. [上下文与文件](./src/content/docs/guide/context/index.md)
 3. [Prompts](./src/content/docs/prompts/index.md)
 4. [Skills](./src/content/docs/skills/index.md)
 5. [Cases](./src/content/docs/cases/index.mdx)

@@ -3,7 +3,7 @@ title: Thread, Tarefa e projeto
 description: Esclareça a relação entre sessão, Tarefa e área de trabalho do projeto.
 locale: pt
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ Muita gente mistura estes termos — e o problema mais comum fica assim:
 - Por que «no mesmo projeto» ainda se recomenda abrir uma Thread nova
 
 O projeto define *onde* ele trabalha; a Thread define *ao longo de qual conversa* ele continua; a Tarefa define *o que* você quer que ele faça desta vez. Separar as três camadas deixa muitos hábitos de uso bem mais claros.
+
+![Ilustração: vista em corte de uma grande caixa de projeto com várias pastas de tarefas, cada uma com algumas conversas](/illustrations/threads-tasks-projects.webp)
 
 ## Separe as três camadas primeiro
 

@@ -8,7 +8,7 @@ title: CLI
 description: A practical introduction to the command-line client.
 locale: en
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -36,6 +36,8 @@ If you are entirely new to terminals, the CLI does not have to be your first sto
 - [Troubleshooting](/en/guide/cli/troubleshooting/)
 
 For the full command listing, see the [CLI command reference](/en/guide/reference/commands/).
+
+![Illustration: a small assistant sits on a terminal window typing commands, with the terminal connected to scripts and tests](/illustrations/cli.webp)
 
 ## Distinguish these modes first
 

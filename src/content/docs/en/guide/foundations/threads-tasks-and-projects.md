@@ -8,7 +8,7 @@ title: Threads, tasks, and projects
 description: Understand how conversations, tasks, and project workspaces relate.
 locale: en
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -28,6 +28,8 @@ People often blur these terms together, then wonder:
 - Why start a new thread in the same project?
 
 The project determines where Codex works, the thread determines which conversation it continues, and the task defines what you want done now. Keeping the three separate makes many habits easier to understand.
+
+![Illustration: a cutaway view of a large project box holding several task folders, each containing a few conversation threads](/illustrations/threads-tasks-projects.webp)
 
 ## Separate the three levels
 

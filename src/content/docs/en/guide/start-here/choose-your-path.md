@@ -8,7 +8,7 @@ title: Choose your path
 description: Choose a reading route by role, task, or product.
 locale: en
 source_locale: zh-CN
-source_revision: "680d473"
+source_revision: 51ccd00
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -43,7 +43,7 @@ Choose whichever entry is closest to your current question.
 - Editor: [IDE](/en/guide/ide/)
 - Cloud overview: [Web and Cloud](/en/guide/web-and-cloud/)
 
-If you are unsure, see [Choose a Codex client](/en/guide/getting-started/choose-your-codex-client/) and the [feature comparison](/en/guide/reference/feature-comparison/).
+If you are unsure, see [Choose a Codex client](/en/guide/choose-your-client/) and the [feature comparison](/en/guide/reference/feature-comparison/).
 
 ## Common misconceptions
 

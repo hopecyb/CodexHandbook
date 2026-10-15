@@ -5,7 +5,7 @@ sidebar:
   order: 12
 locale: ko
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ IDE 확장은 **쓰면서 diff를 보는** 방식에 맞습니다. 파일을 열
 평소 에디터에서 코드를 쓰거나 문서를 고친다면, IDE가 가장 자연스러운 입구인 경우가 많습니다.
 
 현재 열린 파일과 선택 영역을 바로 가져가므로, 많은 “작은 범위 수정” 작업을 범위 안에 가두기 쉽습니다.
+
+![일러스트: 편집기에서 선택한 코드에 대해 사이드 패널의 작은 도우미가 즉석 수정안과 수락 버튼을 제시한다](/illustrations/ide.webp)
 
 ## 장 탐색
 
@@ -29,7 +31,7 @@ IDE 확장은 **쓰면서 diff를 보는** 방식에 맞습니다. 파일을 열
 | 구성 | [설정](/ko/guide/ide/settings/) |
 | 문제 해결 | [문제 해결](/ko/guide/ide/troubleshooting/) |
 
-입문 지름길: [IDE 확장 설치](/ko/guide/getting-started/install-ide-extension/) · [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)
+입문 지름길: [IDE 확장 설치](/ko/guide/getting-started/install-ide-extension/) · [클라이언트 선택](/ko/guide/choose-your-client/)
 
 ## 먼저 이 몇 가지에 주의하세요
 

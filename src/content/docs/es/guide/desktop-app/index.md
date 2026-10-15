@@ -5,7 +5,7 @@ sidebar:
   order: 10
 locale: es
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ La App de escritorio es el punto de entrada por defecto para principiantes: perm
 También es una entrada más fácil de usar si no estás familiarizado con la línea de comandos o con los plugins del IDE.
 
 No se limita a «poder chatear»: reúne proyecto, cambios, Aprobación y Verificación en una misma interfaz visible.
+
+![Ilustración: un centro de control de escritorio con varias tarjetas de tareas y anillos de progreso; una muestra un diff comparado y un interruptor de aprobación](/illustrations/desktop-app.webp)
 
 ## Contenido de este capítulo
 

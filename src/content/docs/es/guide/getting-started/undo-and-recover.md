@@ -3,7 +3,7 @@ title: Deshacer y recuperar
 description: Retrocede con seguridad cuando el resultado no convence.
 locale: es
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Cuando el resultado se sale del alcance o la calidad no sirve:
 3. Abre un Hilo nuevo, aprieta las restricciones y vuelve a intentarlo
 
 Muchas veces, reducir el alcance de antemano ahorra trabajo: tocar pocos archivos, escribir prohibiciones claras, ver el plan antes de ejecutar.
+
+![Ilustración: una flecha de retroceso rodea instantáneas de versiones, una versión anterior vuelve a su sitio y una red atrapa una página arrugada](/illustrations/undo-and-recover.webp)
 
 ## Distinguir «deshacer» y «recuperar»
 

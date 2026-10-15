@@ -3,7 +3,7 @@ title: Prompt injection
 description: Cuando texto no confiable entra en el Contexto — identificación, mitigación y puntos de política de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 La «Prompt injection» es meter en el Contexto que Codex verá contenido diseñado para engañarlo.
 
 Ese contenido puede venir de issues, páginas web, comentarios de dependencias, documentación o texto pegado por el usuario, y suele buscar que el Agent **ignore la política, filtre datos o ejecute comandos peligrosos**. Es un riesgo frecuente del [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/) y no está lejos del trabajo real.
+
+![Ilustración: una nota sospechosa rojiza escondida en una página web es detenida por un escudo y solo el contenido limpio llega al asistente](/illustrations/prompt-injection.webp)
 
 ## Contenido
 

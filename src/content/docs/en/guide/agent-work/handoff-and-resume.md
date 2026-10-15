@@ -10,7 +10,7 @@ sidebar:
   order: 40
 locale: en
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -23,6 +23,8 @@ Without a handoff, reopening the task can cause three problems:
 - You forget how far the work got.
 - Codex does not know which constraints still apply.
 - The new conversation scatters the old context and repeats earlier detours.
+
+![Illustration: one agent hands handoff notes and a progress card to another, with a turning calendar and a bookmarked task board behind them](/illustrations/handoff-and-resume.webp)
 
 ## What a handoff preserves
 

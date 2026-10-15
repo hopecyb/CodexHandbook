@@ -3,7 +3,7 @@ title: Desktop-App
 description: Installation, Oberfläche und tägliche Workflows der Desktop-App.
 locale: de
 source_locale: zh-CN
-source_revision: f6bc627
+source_revision: d1a9007
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Die Desktop-App ist der Standardeinstieg für Einsteiger: Projekte, Aufgaben, Di
 Wer die Kommandozeile oder IDE-Erweiterungen noch nicht kennt, findet hier oft den leichteren Einstieg.
 
 Sie ist mehr als „nur chatten“: Projekte, Änderungen, Freigaben und Überprüfung liegen in derselben sichtbaren Oberfläche.
+
+![Illustration: eine Desktop-Zentrale mit mehreren Aufgabenkarten und Fortschrittsringen, eine aufgeklappt mit Diff-Ansicht und Freigabeschalter](/illustrations/desktop-app.webp)
 
 ## In diesem Kapitel
 

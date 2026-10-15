@@ -3,7 +3,7 @@ title: Dépannage des Prompts
 description: Quand le résultat dévie, comment localiser le problème dans le Prompt.
 locale: fr
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Résultat incorrect : causes fréquentes :
 - tâche trop grosse sans plan d'abord
 
 Le dépannage consiste à voir **quelle couche d'information manque**.
+
+![Illustration : deux résultats sur l’établi, l’un rate la cible, l’autre la touche ; entre eux, la fiche de tâche est réglée au tournevis et à la loupe](/illustrations/prompt-debugging.webp)
 
 ## Localiser la couche
 

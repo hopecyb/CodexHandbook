@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: vi
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 Kế hoạch là một đường thực thi có thể kiểm tra và điều chỉnh. Nó giúp phát hiện sớm thiếu sót về phạm vi, phụ thuộc và nghiệm thu, nhưng tác vụ lớn hơn không đồng nghĩa phải liên tục chờ xác nhận.
 
 Trước tiên dựa vào [phân loại tác vụ](/vi/prompts/ask-for-a-plan/) để quyết định: làm xong ngay, lập kế hoạch rồi thực hiện trong quyền đã được cấp, hay lượt này chỉ đưa phương án. Yêu cầu rõ “đưa phương án trước, không sửa tệp” phải giữ ở chế độ chỉ đọc. Yêu cầu triển khai thì không nên kết thúc bằng một bản kế hoạch.
+
+![Minh họa: trợ lý nhỏ vẽ kế hoạch từng bước trên bảng trắng, một người chỉ vào một bước để điều chỉnh trước khi bắt đầu](/illustrations/agent-planning.webp)
 
 ## Kế hoạch đủ dùng
 

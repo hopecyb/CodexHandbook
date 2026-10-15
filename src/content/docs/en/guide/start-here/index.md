@@ -8,7 +8,7 @@ title: Start here
 description: Learn what Codex is, who it is for, and which learning path to choose.
 locale: en
 source_locale: zh-CN
-source_revision: "016d023"
+source_revision: 953fb89
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -16,6 +16,8 @@ sidebar:
 ---
 
 This handbook is primarily for **AI beginners**. It does not assume you know the terminal, Git, or agents, but it introduces the capabilities you will encounter step by step.
+
+![Illustration: a trailhead signpost points to several routes beside an open guidebook, with a small assistant waving the reader in](/illustrations/start-here.webp)
 
 ## What you will learn
 
@@ -30,8 +32,8 @@ This handbook is primarily for **AI beginners**. It does not assume you know the
 2. [Choose a client](/en/guide/choose-your-client/) — choose among App, CLI, IDE, and Cloud
 3. [Complete your first task](/en/cases/first-task/) — make a small change with a clear prompt and review it
 4. [Permissions and sandbox](/en/guide/permissions-and-sandbox/) — understand approval, isolation, and network boundaries
-5. [Context and files](/en/guide/context-and-files/) — provide useful input
-6. [Verify results](/en/guide/verification/) — build review and testing habits
+5. [Context and files](/en/guide/context/) — provide useful input
+6. [Verify results](/en/guide/quality/) — build review and testing habits
 
 ## Common misconceptions
 
@@ -62,7 +64,7 @@ Combine understanding with small-scope practice and review of the results.
 | 10–25 min | Complete the [first-task example](/en/cases/first-task/) |
 | 25–30 min | Browse [Prompt basics](/en/prompts/basics/) and prepare to write clearer tasks |
 
-If you get stuck, see [Troubleshooting](/en/guide/troubleshooting/).
+If you get stuck, see [Troubleshooting](/en/guide/reference/troubleshooting/).
 
 ## What to read next
 

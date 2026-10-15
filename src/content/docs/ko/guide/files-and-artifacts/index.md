@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: ko
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex의 핵심 산출은 종종 **저장소 안 파일 변경**이거나 **새�
 같은 “파일”이라도 유형마다 설명 방식과 검증 방법이 다릅니다.
 
 “코드 수정”, “표 처리”, “스크린샷 생성”, “PPT보내기”는 모두 파일 작업처럼 보이지만, 가장 틀리기 쉬운 지점은 같지 않습니다.
+
+![일러스트: 코드, 이미지, PDF, 표, 슬라이드가 컨베이어를 따라 지나가고 작은 도우미가 하나씩 확인한다](/illustrations/files-and-artifacts.webp)
 
 ## 장 탐색
 

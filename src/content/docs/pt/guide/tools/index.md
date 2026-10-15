@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: pt
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ O Agent usa **Ferramentas** para ler ficheiros, correr comandos, pesquisar na re
 
 Aqui, «Ferramenta» é a capacidade que o Codex chama de facto ao executar a Tarefa. Nem todas as Tarefas se resolvem só com diálogo.  
 Umas leem ficheiros, outras correm comandos, outras consultam páginas web, outras veem a página real.
+
+![Ilustração: ferramentas sobre a mesa — terminal, navegador, lupa de busca, imagem, microfone e ponteiro — e um assistente escolhendo a certa](/illustrations/tools-overview.webp)
 
 ## Porque conhecer as Ferramentas primeiro
 

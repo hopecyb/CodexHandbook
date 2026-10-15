@@ -21,6 +21,8 @@ sidebar:
 - 出问题时怎么追踪
 - 高风险扩展怎么审批
 
+![插画：团队和多个 Agent 围着共享规则协作，四周有防护栏，审查台由人签字确认](/illustrations/team-guardrails.webp)
+
 ## 本章内容
 
 - 小团队试点到组织推广的路径

@@ -3,7 +3,7 @@ title: "Token, Kontext und Komprimierung"
 description: "Verstehe Kontextfenster, Belegung und Komprimierung."
 locale: de
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ Drei häufige Wörter dahinter: Token, Kontext, Komprimierung.
 **Token** ist die Maßeinheit, mit der Modelle Text verarbeiten. Das **Kontextfenster** ist die Obergrenze der Information, die einmal effektiv genutzt werden kann.
 
 Bei zu viel Gespräch oder zu vielen Dateien kann das System **Komprimierung (compaction)** machen: Zusammenfassung behalten, Details verwerfen. Danach kann der Agent frühe Einschränkungen „vergessen“.
+
+![Illustration: Eine lange Gesprächsrolle läuft durch eine Presse und kommt als kurze Zusammenfassung heraus, die in ein begrenztes Fenster passt](/illustrations/tokens-compaction.webp)
 
 ## Diese drei Wörter trennen
 

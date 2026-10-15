@@ -3,7 +3,7 @@ title: Chọn đường đi của bạn
 description: Chọn lộ trình đọc theo vai trò, tác vụ và lối vào sản phẩm.
 locale: vi
 source_locale: zh-CN
-source_revision: 680d473
+source_revision: 51ccd00
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -39,7 +39,7 @@ Có nhiều lối vào; chọn cái gần với vấn đề hiện tại nhất 
 - Trình soạn thảo: [IDE](/vi/guide/ide/)
 - Tổng quan đám mây: [Web và Cloud](/vi/guide/web-and-cloud/)
 
-Nếu tạm thời chưa chắc, xem [Chọn client Codex](/vi/guide/getting-started/choose-your-codex-client/) và [So sánh tính năng](/vi/guide/reference/feature-comparison/).
+Nếu tạm thời chưa chắc, xem [Chọn client Codex](/vi/guide/choose-your-client/) và [So sánh tính năng](/vi/guide/reference/feature-comparison/).
 
 ## Hiểu nhầm thường gặp
 

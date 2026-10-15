@@ -27,13 +27,13 @@ prev:
   link: /ko/cases/
   label: 실습 과제 선택
 next:
-  link: /ko/guide/verification/
+  link: /ko/guide/quality/
   label: 결과 검증 배우기
 locale: ko
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 이번 연습에서는 판매 주간 보고서, 지역별 요약, 제품 순위, 행별 데이터 정리 장부를 만듭니다. 입력은 이 사이트에서 만든 합성 데이터이며 실제 고객 정보는 필요하지 않습니다.
@@ -136,4 +136,4 @@ net_sales가 0보다 작은 유효 기록을 확인하고 포함해야 하는지
 
 자신의 프롬프트와 수정 기록을 보관하세요. 다음에 데이터를 바꾸기 전에 필드와 계산 기준을 다시 확인하세요. 이 연습의 고정 검증기는 임의의 기업 데이터에 적용되지 않습니다.
 
-계속 [결과 검증](/ko/guide/verification/)을 읽거나 [실습 사례](/ko/cases/)로 돌아가세요.
+계속 [결과 검증](/ko/guide/quality/)을 읽거나 [실습 사례](/ko/cases/)로 돌아가세요.

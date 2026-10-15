@@ -3,7 +3,7 @@ title: CLI
 description: Minimale Einstiegsbeschreibung für den Kommandozeilen-Zugang.
 locale: de
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -32,6 +32,8 @@ Für Einsteiger ohne Terminalkenntnis ist die CLI keine Pflicht-Erste-Station; k
 - [Fehlerbehebung](/de/guide/cli/troubleshooting/)
 
 Vollständige Befehlsreferenz: [CLI-Befehlsreferenz](/de/guide/reference/commands/).
+
+![Illustration: Ein kleiner Assistent sitzt auf einem Terminalfenster und tippt Befehle, verbunden mit Skripten und Tests](/illustrations/cli.webp)
 
 ## Was beim ersten Einsatz trennen
 

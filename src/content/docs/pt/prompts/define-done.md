@@ -3,7 +3,7 @@ title: Definir o concluído
 description: Escreva condições de conclusão verificáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5d963e0
+source_revision: e97e854
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -76,7 +76,7 @@ Se não, ainda está demasiado vago.
 
 No fundo: não deixe «está feito?» depender de adivinhação.
 
-Inclua comandos de verificação nos critérios — assim o Agent tem mais probabilidade de os executar: [Correr testes](/pt/guide/verification/)
+Inclua comandos de verificação nos critérios — assim o Agent tem mais probabilidade de os executar: [Correr testes](/pt/guide/quality/)
 
 ---
 

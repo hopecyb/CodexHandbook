@@ -8,7 +8,7 @@ title: Tokens, context, and compaction
 description: Understand context windows, information volume, and compaction.
 locale: en
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -22,6 +22,8 @@ Three common terms behind this are tokens, context, and compaction.
 A **token** is a unit used to measure text the model processes. The **context window** is the limit on information it can use effectively at one time.
 
 When a conversation or its files become too large, the system may perform **compaction**: retain a summary and drop details. Afterward, the agent may “forget” earlier constraints.
+
+![Illustration: a long scroll of conversation goes into a press and comes out as a short summary card that fits inside a limited window](/illustrations/tokens-compaction.webp)
 
 ## Look at the three terms separately
 

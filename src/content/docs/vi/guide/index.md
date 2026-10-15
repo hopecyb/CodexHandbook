@@ -7,7 +7,7 @@ next:
 description: "Nhận biết Codex, chọn client, hoàn thành tác vụ đầu tiên, và hiểu quyền, ngữ cảnh cùng kiểm chứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ Bạn không cần hiểu hết mọi thuật ngữ, sản phẩm và quy trình
 
 - [Danh sách an toàn cho người mới](/vi/guide/getting-started/beginner-safety-checklist/)
 - [Cách chọn ứng dụng khách](/vi/guide/choose-your-client/)
-- [Xác minh kết quả và tiêu chí hoàn thành](/vi/guide/verification/)
+- [Xác minh kết quả và tiêu chí hoàn thành](/vi/guide/quality/)
 
 ## Thứ tự gợi ý
 
@@ -38,9 +38,9 @@ Bạn không cần hiểu hết mọi thuật ngữ, sản phẩm và quy trình
 3. [Chọn client](/vi/guide/choose-your-client/)
 4. [Hoàn thành tác vụ đầu tiên](/vi/cases/first-task/)
 5. [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/)
-6. [Ngữ cảnh và tệp](/vi/guide/context-and-files/)
-7. [Kiểm chứng](/vi/guide/verification/)
-8. Gặp vấn đề xem [Xử lý sự cố](/vi/guide/troubleshooting/)
+6. [Ngữ cảnh và tệp](/vi/guide/context/)
+7. [Kiểm chứng](/vi/guide/quality/)
+8. Gặp vấn đề xem [Xử lý sự cố](/vi/guide/reference/troubleshooting/)
 
 ## Hiểu nhầm thường gặp
 

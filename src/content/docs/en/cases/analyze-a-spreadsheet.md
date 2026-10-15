@@ -27,13 +27,13 @@ prev:
   link: /en/cases/
   label: Choose a hands-on task
 next:
-  link: /en/guide/verification/
+  link: /en/guide/quality/
   label: Learn to verify results
 locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 In this exercise, deliver a weekly sales report, a regional summary, a product ranking, and a row-by-row cleaning ledger. The input is synthetic data made for this handbook; no real customer records are needed.
@@ -136,4 +136,4 @@ the original CSV or validator to make the failure disappear.
 
 Keep your prompts and correction record. Before substituting new data, check fields and definitions again. This exercise's fixed validator is not suitable for arbitrary company data.
 
-Continue with [verifying results](/en/guide/verification/) or return to the [cases](/en/cases/).
+Continue with [verifying results](/en/guide/quality/) or return to the [cases](/en/cases/).

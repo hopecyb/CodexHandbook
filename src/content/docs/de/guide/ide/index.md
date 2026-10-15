@@ -3,7 +3,7 @@ title: IDE-Erweiterung
 description: Codex im Editor nutzen — Installation, Kontext, lokale und Cloud-Aufgaben, Überprüfung und Einstellungen.
 locale: de
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ Arbeitest du ohnehin im Editor an Code oder Dokumenten, ist die IDE oft der nat�
 
 Sie nimmt geöffnete Dateien und die Auswahl direkt mit — deshalb lassen sich viele „kleine Änderungs“-Aufgaben leichter eingrenzen.
 
+![Illustration: markierter Code im Editor, ein kleiner Assistent in der Seitenleiste schlägt eine Änderung vor, daneben eine Übernehmen-Schaltfläche](/illustrations/ide.webp)
+
 ## Kapitelnavigation
 
 | Thema | Seite |
@@ -29,7 +31,7 @@ Sie nimmt geöffnete Dateien und die Auswahl direkt mit — deshalb lassen sich 
 | Konfiguration | [Einstellungen](/de/guide/ide/settings/) |
 | Fehlerbehebung | [Fehlerbehebung](/de/guide/ide/troubleshooting/) |
 
-Schnellstart: [IDE-Erweiterung installieren](/de/guide/getting-started/install-ide-extension/) · [Client wählen](/de/guide/getting-started/choose-your-codex-client/)
+Schnellstart: [IDE-Erweiterung installieren](/de/guide/getting-started/install-ide-extension/) · [Client wählen](/de/guide/choose-your-client/)
 
 ## Diese Punkte zuerst beachten
 

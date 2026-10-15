@@ -3,7 +3,7 @@ title: よくある質問
 description: 入門と利用時の高頻度質問。
 locale: ja
 source_locale: zh-CN
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,7 +20,7 @@ sidebar:
 - まず方向判断が欲しい
 
 **Q：最初はどのクライアントを使う？**  
-A：デスクトップ App。[クライアント選択](/ja/guide/getting-started/choose-your-codex-client/) を参照。
+A：デスクトップ App。[クライアント選択](/ja/guide/choose-your-client/) を参照。
 
 **Q：チェックを飛ばしてすべての変更を受け入れていい？**  
 A：推奨しません。[検証と人工复核](/ja/guide/foundations/verification-and-human-review/) を参照。

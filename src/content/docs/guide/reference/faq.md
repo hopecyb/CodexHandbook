@@ -21,7 +21,7 @@ sidebar:
 - 想先要一个方向判断
 
 **Q：刚开始该用哪个客户端？**  
-A：桌面 App。见 [选择客户端](/guide/getting-started/choose-your-codex-client/)。
+A：桌面 App。见 [选择客户端](/guide/choose-your-client/)。
 
 **Q：可以跳过检查直接接受全部改动吗？**  
 A：最好不要。见 [验证与人工复核](/guide/foundations/verification-and-human-review/)。

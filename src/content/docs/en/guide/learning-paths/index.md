@@ -11,7 +11,7 @@ translation_status: draft
 translated_at: 2026-09-20
 sidebar:
   order: 5
-source_revision: f14e3a0
+source_revision: 2f7ff71
 ---
 
 Learning paths **organize reading order only**; they do not duplicate long articles from the product handbook or capability guides.
@@ -19,6 +19,8 @@ Learning paths **organize reading order only**; they do not duplicate long artic
 At first, this chapter may look like another layer of navigation. Its purpose is to answer which kind of user you most resemble right now and what to read next.
 
 It does not add new product knowledge. It helps you avoid unnecessary detours.
+
+![Illustration: four paths from the same book—beginner, creator, developer, and team—meet at the summit](/illustrations/learning-paths.webp)
 
 ## What this chapter does
 

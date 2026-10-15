@@ -3,7 +3,7 @@ title: 完了基準を定義する
 description: 検査可能な完了条件を書く。
 locale: ja
 source_locale: zh-CN
-source_revision: 5d963e0
+source_revision: e97e854
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -76,7 +76,7 @@ reviewed_at: 2026-08-26
 
 要するに、「完了したか」を推測頼みにしないことです。
 
-検証コマンドを基準に書くと、Agent が自ら実行しやすくなります：[テストの実行](/ja/guide/verification/)
+検証コマンドを基準に書くと、Agent が自ら実行しやすくなります：[テストの実行](/ja/guide/quality/)
 
 ---
 

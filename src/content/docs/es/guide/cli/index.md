@@ -5,7 +5,7 @@ sidebar:
   order: 11
 locale: es
 source_locale: zh-CN
-source_revision: 53f6387
+source_revision: a80ef7e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -32,6 +32,8 @@ Para un principiante que no domina la terminal, la CLI no es una primera parada 
 - [Resolución de problemas](/es/guide/cli/troubleshooting/)
 
 La referencia completa de comandos está en [Referencia de comandos CLI](/es/guide/reference/commands/).
+
+![Ilustración: un pequeño asistente sentado sobre una ventana de terminal escribe comandos, conectada a scripts y pruebas](/illustrations/cli.webp)
 
 ## Qué distinguir en el primer uso
 

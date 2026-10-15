@@ -5,7 +5,7 @@ sidebar:
   order: 16
 locale: ko
 source_locale: zh-CN
-source_revision: e085884
+source_revision: d2baf42
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ reviewed_at: 2026-08-26
 컨텍스트는 모델이 「지금 효과적으로 쓸 수 있는 정보」입니다. 컨텍스트를 못 다루면, 아무리 좋은 프롬프트도 노이즈에 묻힙니다.
 
 실제 사용에서는 Codex가 지금 실제로 무엇을 보고, 무엇을 참고하며, 무엇을 근거로 판단하는지입니다. 당신이 알지만 이번에 넘겨주지 않은 내용은, 이번 작업의 컨텍스트가 아닙니다.
+
+![일러스트: 프로젝트 규칙, 선택한 파일, 대화가 세 층으로 에이전트에 전달되고 관련 없는 잡동사니는 깔때기로 걸러진다](/illustrations/context-layers.webp)
 
 ## 이 장이 특히 중요한 이유
 

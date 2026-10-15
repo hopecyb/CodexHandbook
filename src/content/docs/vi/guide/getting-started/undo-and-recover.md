@@ -3,7 +3,7 @@ title: Hoàn tác và khôi phục
 description: Lùi lại an toàn khi kết quả không hài lòng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Khi kết quả vượt phạm vi hoặc chất lượng không ổn:
 3. Mở Thread mới, thắt ràng buộc rồi thử lại
 
 Nhiều khi thu hẹp phạm vi trước sẽ đỡ hơn — ví dụ chỉ đụng ít tệp, viết rõ mục cấm, xem kế hoạch rồi mới thực thi.
+
+![Minh họa: mũi tên tua lại quanh chồng bản lưu, một phiên bản cũ trượt về chỗ, lưới an toàn đỡ lấy trang giấy bị vò](/illustrations/undo-and-recover.webp)
 
 ## Phân biệt «hoàn tác» và «khôi phục»
 

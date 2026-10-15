@@ -3,7 +3,7 @@ title: "Thread, Aufgabe und Projekt"
 description: "Klärt die Beziehung zwischen Sitzung, Aufgabe und Projekt-Arbeitsbereich."
 locale: de
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ Viele vermischen diese Wörter. Typische Folgen:
 - Warum empfiehlt man im „selben Projekt“ trotzdem einen neuen Thread?
 
 Das Projekt entscheidet, wo es arbeitet; der Thread, welchem Gespräch es folgt; die Aufgabe, was du diesmal willst. Diese drei Schichten zu trennen macht Nutzungsmuster deutlich klarer.
+
+![Illustration: Schnittansicht einer großen Projektbox mit mehreren Aufgabenordnern, die jeweils einige Gesprächsverläufe enthalten](/illustrations/threads-tasks-projects.webp)
 
 ## Die drei Schichten zuerst trennen
 

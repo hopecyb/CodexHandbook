@@ -8,7 +8,7 @@ title: Sandbox and network
 description: Understand execution isolation, network access, and risk boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: '5937622'
+source_revision: 2cf2c46
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 “Sandbox” and “network” refer to different things: the sandbox limits what Codex can touch, while network controls where it can connect.
 
 The **sandbox** limits which parts of the filesystem and certain system capabilities the agent can access, reducing the scope of mistakes. **Network access** creates another risk: sensitive information in the prompt could be exposed, or untrusted data could be retrieved.
+
+![Illustration: the agent works inside a glass sandbox and holds up a request card while a person outside presses approve; the network cable is unplugged and locked](/illustrations/sandbox-and-approval.webp)
 
 ## Why these limits matter
 

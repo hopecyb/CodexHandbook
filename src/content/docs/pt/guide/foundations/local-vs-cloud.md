@@ -3,7 +3,7 @@ title: Local e Cloud
 description: Compara cenários adequados para Tarefas locais e Tarefas Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Se você só quer começar a usar o Codex, costuma ser mais simples começar pel
 | Onde roda | Sua máquina / ambiente local | Ambiente Cloud |
 | Ideal para | Iteração rápida, arquivos locais, debug que precisa de chaves locais | Conectar repositórios remotos, Tarefas longas, ambientes padronizados |
 | Atenção | Permissão local e risco de alteração errada | Configuração de ambiente, injeção de chaves, política de rede |
+
+![Ilustração: à esquerda, trabalho com o agente no seu computador; à direita, contêineres isolados na nuvem rodam em paralelo e devolvem resultados](/illustrations/local-vs-cloud.webp)
 
 ## Sensação de uso
 

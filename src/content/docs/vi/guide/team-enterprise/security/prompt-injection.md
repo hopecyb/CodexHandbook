@@ -3,7 +3,7 @@ title: Prompt injection
 description: "Khi văn bản không đáng tin vào Ngữ cảnh — nhận diện, giảm thiểu và điểm chính sách đội."
 locale: vi
 source_locale: zh-CN
-source_revision: fdb83d1
+source_revision: 3e44fdf
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 «Prompt injection» nghĩa là ai đó nhúng nội dung vào Ngữ cảnh khiến Codex hiểu sai.
 
 Nó có thể đến từ issue, trang web, chú thích dependency, tài liệu hoặc văn bản dán — thường nhằm để Agent **bỏ qua chính sách, lộ dữ liệu hoặc chạy lệnh nguy hiểm**. Đây là rủi ro thường gặp của [mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) và gần công việc thật hơn nhiều người nghĩ.
+
+![Minh họa: ghi chú đáng ngờ màu đỏ giấu trong trang web bị lá chắn mờ chặn lại, chỉ nội dung sạch mới đến được trợ lý](/illustrations/prompt-injection.webp)
 
 ## Trang này sẽ nói gì
 

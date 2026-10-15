@@ -27,13 +27,13 @@ prev:
   link: /es/cases/
   label: Elegir una tarea práctica
 next:
-  link: /es/guide/verification/
+  link: /es/guide/quality/
   label: Aprender a verificar resultados
 locale: es
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 En este ejercicio entregarás un informe semanal de ventas, un resumen por región, una clasificación de productos y un registro de limpieza por fila. La entrada son datos sintéticos preparados para este sitio; no necesitas datos reales de clientes.
@@ -138,4 +138,4 @@ el fallo.
 
 Conserva tus prompts y el registro de corrección. Antes de sustituir los datos, vuelve a confirmar campos y reglas. El validador fijo de este ejercicio no sirve para cualquier dato empresarial.
 
-Continúa con [verificar resultados](/es/guide/verification/) o vuelve a los [casos prácticos](/es/cases/).
+Continúa con [verificar resultados](/es/guide/quality/) o vuelve a los [casos prácticos](/es/cases/).

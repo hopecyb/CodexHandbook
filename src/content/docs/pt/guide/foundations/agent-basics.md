@@ -3,7 +3,7 @@ title: Fundamentos de Agent
 description: Explica como o Agent chama Ferramentas e avança de forma iterativa em torno de um objetivo.
 locale: pt
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 O **Agent** continua trabalhando em torno do objetivo: entender o objetivo → escolher Ferramentas → observar o resultado → ajustar o próximo passo, até concluir ou precisar da sua intervenção.
 
 A IA comum se parece mais com alguém que responde perguntas; o Agent se parece mais com alguém que, ao receber a Tarefa, avança passo a passo.
+
+![Ilustração: à esquerda, um chat de pergunta e resposta; à direita, um agente em ciclo que lê arquivos, usa ferramentas, verifica e corrige](/illustrations/agent-basics.webp)
 
 ## Diferença entre Agent e chat comum
 

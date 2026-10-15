@@ -3,7 +3,7 @@ title: プロンプトのトラブルシューティング
 description: 結果がずれたとき、プロンプトのどこに問題があるかを特定する。
 locale: ja
 source_locale: zh-CN
-source_revision: a4fb74f
+source_revision: efc3015
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -17,6 +17,8 @@ reviewed_at: 2026-08-26
 - タスクが大きすぎて、先に計画を求めていない
 
 プロンプトのトラブルシューティングは、どの層の情報が欠けたかを見つけることです。
+
+![イラスト：作業台に並ぶ二つの成果物——左は的を外し、右は命中——その間でタスクカードをドライバーと虫眼鏡で調整している](/illustrations/prompt-debugging.webp)
 
 ## まず問題の層を特定する
 

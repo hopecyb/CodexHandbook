@@ -11,7 +11,7 @@ title: Tác vụ đầu tiên
 description: Dùng prompt rõ ràng để hoàn thành một thay đổi nhỏ và học cách kiểm tra kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: 0495ceb
+source_revision: 38f925b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -57,5 +57,5 @@ Nếu thiếu thông tin, hãy hỏi tôi trước; đừng đoán.
 ## 5. Bước tiếp theo
 
 - [Cơ bản về prompt](/vi/prompts/basics/)
-- [Kiểm chứng](/vi/guide/verification/)
+- [Kiểm chứng](/vi/guide/quality/)
 - [Bắt đầu từ đây](/vi/guide/start-here/)

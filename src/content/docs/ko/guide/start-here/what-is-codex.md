@@ -5,7 +5,7 @@ sidebar:
   order: 2
 locale: ko
 source_locale: zh-CN
-source_revision: a491834
+source_revision: 0f376b6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex는 OpenAI가 제공하는 **AI 프로그래밍·업무 Agent**입니다. �
 도구를 쓰는 디지털 동료에 가깝습니다. 목표·경계·수락 기준은 당신이 정하고, 자료 조사·파일 수정·단계 실행은 맡기되, 최종 결정은 당신이 합니다.
 
 공식 제품 문서는 [OpenAI Codex](https://developers.openai.com/codex)를 기준으로 합니다. 이 핸드북은 체계적 학습과 실습을 위한 커뮤니티 오픈소스 가이드이며, 공식 문서를 대체하지 않습니다.
+
+![일러스트: 작업 카드를 Codex에 건네면 노트북, 문서, 터미널을 오가며 단계를 하나씩 완료한다](/illustrations/what-is-codex.webp)
 
 ## 일반 AI 채팅과 무엇이 다른가
 

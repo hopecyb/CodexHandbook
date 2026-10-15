@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: fr
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex produit souvent des **changements de fichiers dans le repo** ou de **nouve
 Les « fichiers » ne sont pas tous identiques — différents types nécessitent différentes instructions et Vérifications.
 
 « Éditer du code », « traiter des tableurs », « générer des captures » et « exporter des slides » ressemblent tous à des Tâches de fichiers, mais les modes d'échec diffèrent.
+
+![Illustration : code, images, PDF, tableurs et diapositives défilent sur un tapis devant un petit assistant qui vérifie chaque élément](/illustrations/files-and-artifacts.webp)
 
 ## Navigation de la section
 

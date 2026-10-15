@@ -8,7 +8,7 @@ title: Mẫu nghiên cứu
 description: Khảo sát và so sánh kèm trích dẫn.
 locale: vi
 source_locale: zh-CN
-source_revision: 40960ec
+source_revision: 729d4cc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -49,5 +49,5 @@ Mẫu nghiên cứu có một ràng buộc then chốt: mỗi kết luận quan 
 
 ## Liên quan
 
-- [Case nghiên cứu kèm nguồn](/vi/cases/research-with-sources/)
-- [Kiểm chứng](/vi/guide/verification/)
+- [Case nghiên cứu kèm nguồn](/vi/cases/workflows/research-with-sources/)
+- [Kiểm chứng](/vi/guide/quality/)

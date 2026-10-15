@@ -3,13 +3,15 @@ title: 실패 복구
 description: 작업이 빗나가거나, 테스트가 빨간색이 되거나, 컨텍스트가 소진될 때—안전하게 되돌리고 이어 가는 방법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 **실패 복구**는 작업이 빗나가거나 중단된 뒤, 현장을 수습하고 다시 앞으로 나아가는 방법을 다룹니다. 이 장은 반복 가능한 **감지 → 손실 차단 → 복구 → 회고** 단계를 제시하며, [취소와 복구](/ko/guide/getting-started/undo-and-recover/) 및 [긴 작업 관리](/ko/cases/workflows/long-running-task-management/)와 함께 쓸 수 있습니다.
+
+![일러스트: 반쯤 무너진 블록 탑을 사람과 도우미가 체크리스트대로 차분히 다시 쌓고, 되돌리기 화살표가 블록을 안정된 받침으로 옮긴다](/illustrations/failure-recovery.webp)
 
 ## 이 페이지의 초점
 

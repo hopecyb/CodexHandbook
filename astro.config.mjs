@@ -51,7 +51,25 @@ const legacyRedirects = {
 	'/de/roadmap': '/de/ai-roadmap',
 	'/pt/roadmap': '/pt/ai-roadmap',
 	'/vi/roadmap': '/vi/ai-roadmap',
+	...localizedRedirects({
+		// 2026-10 dedupe: duplicate pages merged into the page that keeps the topic.
+		'/guide/getting-started/choose-your-codex-client': '/guide/choose-your-client',
+		'/cases/research-with-sources': '/cases/workflows/research-with-sources',
+		'/guide/context-and-files': '/guide/context',
+		'/guide/troubleshooting': '/guide/reference/troubleshooting',
+		'/guide/verification': '/guide/quality',
+	}),
 };
+
+/** Expand root-locale redirects to every locale prefix. */
+function localizedRedirects(map) {
+	const prefixes = ['', '/en', '/zh-tw', '/fr', '/ja', '/ko', '/es', '/de', '/pt', '/vi'];
+	return Object.fromEntries(
+		prefixes.flatMap((prefix) =>
+			Object.entries(map).map(([from, to]) => [`${prefix}${from}`, `${prefix}${to}`]),
+		),
+	);
+}
 
 const siteUrl = 'https://codexhandbook.com';
 const legacyRedirectPaths = new Set(Object.keys(legacyRedirects));
@@ -212,6 +230,36 @@ export default defineConfig({
 						})();
 					`,
 				},
+				{
+					tag: 'script',
+					attrs: { type: 'module' },
+					// zoomable-diagrams: open text-bearing diagrams full size in a dialog.
+					content: `
+						const selector = '.sl-markdown-content img[src^="/diagrams/"], .sl-markdown-content img[src^="/ai-roadmap-assets/"]';
+						const dialog = document.createElement('dialog');
+						dialog.className = 'diagram-zoom';
+						dialog.addEventListener('click', () => dialog.close());
+						const mark = () => document.querySelectorAll(selector).forEach((img) => {
+							img.dataset.zoomable = '';
+							img.tabIndex = 0;
+							img.setAttribute('role', 'button');
+						});
+						const open = (img) => {
+							dialog.replaceChildren(Object.assign(new Image(), { src: img.currentSrc || img.src, alt: img.alt }));
+							if (!dialog.isConnected) document.body.append(dialog);
+							dialog.showModal();
+						};
+						document.addEventListener('click', (event) => {
+							const img = event.target.closest?.(selector);
+							if (img) open(img);
+						});
+						document.addEventListener('keydown', (event) => {
+							const img = event.target.closest?.(selector);
+							if (img && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); open(img); }
+						});
+						mark();
+					`,
+				},
 			],
 			customCss: ['./src/styles/custom.css'],
 			components: {
@@ -261,7 +309,7 @@ export default defineConfig({
 						pt: 'Guia Codex',
 						vi: 'Hướng dẫn Codex',
 					},
-					items: [{ autogenerate: { directory: 'guide' } }],
+					items: [{ autogenerate: { directory: 'guide', collapsed: true } }],
 				},
 				{
 					label: '提示词',
@@ -276,7 +324,7 @@ export default defineConfig({
 						pt: 'Prompts',
 						vi: 'Prompts',
 					},
-					items: [{ autogenerate: { directory: 'prompts' } }],
+					items: [{ autogenerate: { directory: 'prompts', collapsed: true } }],
 				},
 				{
 					label: 'Skills',
@@ -291,7 +339,7 @@ export default defineConfig({
 						pt: 'Skills',
 						vi: 'Skills',
 					},
-					items: [{ autogenerate: { directory: 'skills' } }],
+					items: [{ autogenerate: { directory: 'skills', collapsed: true } }],
 				},
 				{
 					label: '实战案例',
@@ -306,7 +354,7 @@ export default defineConfig({
 						pt: 'Casos práticos',
 						vi: 'Case thực tế',
 					},
-					items: [{ autogenerate: { directory: 'cases' } }],
+					items: [{ autogenerate: { directory: 'cases', collapsed: true } }],
 				},
 				{
 					label: 'AI 应用路线图',
@@ -321,7 +369,7 @@ export default defineConfig({
 						pt: 'Roteiro de IA',
 						vi: 'Lộ trình AI',
 					},
-					items: [{ autogenerate: { directory: 'ai-roadmap' } }],
+					items: [{ autogenerate: { directory: 'ai-roadmap', collapsed: true } }],
 				},
 				{
 					label: 'Codex 宠物',
@@ -336,7 +384,7 @@ export default defineConfig({
 						pt: 'Pets do Codex',
 						vi: 'Thú cưng Codex',
 					},
-					items: [{ autogenerate: { directory: 'pets' } }],
+					items: [{ autogenerate: { directory: 'pets', collapsed: true } }],
 				},
 				{
 					label: 'Codex主题皮肤',
@@ -351,7 +399,7 @@ export default defineConfig({
 						pt: 'Temas do Codex',
 						vi: 'Giao diện Codex',
 					},
-					items: [{ autogenerate: { directory: 'theme' } }],
+					items: [{ autogenerate: { directory: 'theme', collapsed: true } }],
 				},
 			],
 		}),

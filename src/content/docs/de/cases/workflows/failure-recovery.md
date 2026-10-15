@@ -3,13 +3,15 @@ title: Fehlerwiederherstellung
 description: "Wenn die Aufgabe driftet, Tests rot werden oder der Kontext erschöpft ist — sicher zurücksetzen und weitermachen."
 locale: de
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 **Fehlerwiederherstellung** beschreibt, wie man nach Drift oder Unterbrechung den Zustand sichert und weitergeht. Dieses Kapitel gibt einen wiederholbaren Ablauf **Erkennen → Schaden begrenzen → Wiederherstellen → Retro**, kombinierbar mit [Rückgängig machen und wiederherstellen](/de/guide/getting-started/undo-and-recover/) sowie [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/).
+
+![Illustration: Ein halb umgestürzter Klotzturm wird von Mensch und Assistent nach Checkliste ruhig wieder aufgebaut, ein Rückkehrpfeil setzt einen Klotz auf eine stabile Basis](/illustrations/failure-recovery.webp)
 
 ## Schwerpunkte dieser Seite
 

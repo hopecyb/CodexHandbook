@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 計画とは、確認して調整できる実行経路です。範囲、依存関係、受け入れ条件の不足を早期に見つけられますが、タスクが大きいからといって確認待ちを繰り返す必要はありません。
 
 まず[タスクの分類](/ja/prompts/ask-for-a-plan/)に従い、直接完了するか、計画後に既存の権限内で実行するか、今回は提案のみとするか決めます。「先に案を示し、ファイルは変更しない」という明示的な依頼は読み取り専用です。実装依頼なら計画だけで終えてはいけません。
+
+![イラスト：小さなアシスタントがホワイトボードに手順の計画を描き、作業前に人が一つの手順を指して修正を求める](/illustrations/agent-planning.webp)
 
 ## 十分な計画に必要なもの
 

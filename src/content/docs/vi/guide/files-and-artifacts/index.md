@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: vi
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ reviewed_at: 2026-08-26
 Cùng là “tệp”, loại khác nhau cần cách giao và nghiệm thu khác nhau.
 
 “Sửa mã”, “xử lý bảng”, “tạo ảnh chụp”, “xuất PPT” đều trông như tác vụ tệp, nhưng chỗ dễ sai nhất không giống nhau.
+
+![Minh họa: mã nguồn, hình ảnh, PDF, bảng tính và slide chạy trên băng chuyền qua trợ lý nhỏ kiểm tra từng thứ](/illustrations/files-and-artifacts.webp)
 
 ## Điều hướng chương
 

@@ -8,7 +8,7 @@ title: Modèle de recherche
 description: Enquête et comparaison avec citations.
 locale: fr
 source_locale: zh-CN
-source_revision: 40960ec
+source_revision: 729d4cc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -49,5 +49,5 @@ Règle clé : chaque conclusion importante doit être **traçable** — pas seul
 
 ## Voir aussi
 
-- [Cas : recherche avec sources](/fr/cases/research-with-sources/)
-- [Vérification](/fr/guide/verification/)
+- [Cas : recherche avec sources](/fr/cases/workflows/research-with-sources/)
+- [Vérification](/fr/guide/quality/)

@@ -3,7 +3,7 @@ title: Local và đám mây
 description: Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Nếu chỉ muốn bắt đầu dùng Codex trước, thường chọn **local**
 | Vị trí chạy | Máy / môi trường local của bạn | Môi trường đám mây |
 | Phù hợp | Lặp nhanh, tệp máy local, gỡ lỗi cần khóa máy local | Kết nối kho từ xa, tác vụ dài, môi trường chuẩn hóa |
 | Lưu ý | Quyền máy local và rủi ro sửa nhầm | Cấu hình môi trường, tiêm khóa, chính sách mạng |
+
+![Minh họa: bên trái làm việc với agent trên máy của bạn, bên phải các container đám mây cô lập chạy song song rồi gửi kết quả về](/illustrations/local-vs-cloud.webp)
 
 ## Cảm giác khi dùng
 

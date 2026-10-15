@@ -3,12 +3,14 @@ title: Plugins 개요
 description: Plugin의 구성, 지원 환경, 설치 확인, 신뢰 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a514206
+source_revision: 4efe5a8
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 ChatGPT와 Codex는 같은 공개 Plugin 디렉터리를 사용합니다. Plugin은 관련 기능을 발견하고 설치할 수 있는 워크플로로 묶습니다. 새로운 도구 호출 프로토콜을 만드는 것은 아닙니다.
+
+![일러스트: 리본이 달린 확장 패키지가 레일을 따라 여러 작업대로 설치되고, 하나는 개봉 중, 하나는 깔끔하게 제거된다](/illustrations/plugins-overview.webp)
 
 ## Plugin에 들어갈 수 있는 것
 

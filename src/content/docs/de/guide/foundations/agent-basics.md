@@ -3,7 +3,7 @@ title: Agent-Grundlagen
 description: "Erklärt, wie ein Agent um ein Ziel herum Werkzeuge aufruft und iterativ vorgeht."
 locale: de
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Ein **Agent** arbeitet fortlaufend um ein Ziel herum: Ziel verstehen → Werkzeug wählen → Ergebnis beobachten → nächsten Schritt anpassen — bis fertig oder bis du eingreifen musst.
 
 Gewöhnliche KI wirkt eher wie jemand, der Fragen beantwortet; ein Agent eher wie jemand, der nach Auftrag Schritt für Schritt weitermacht.
+
+![Illustration: links ein einfacher Frage-Antwort-Chat, rechts eine Agentenschleife: Dateien lesen, Werkzeuge nutzen, Ergebnisse prüfen, überarbeiten](/illustrations/agent-basics.webp)
 
 ## Unterschied zwischen Agent und gewöhnlichem Chat
 

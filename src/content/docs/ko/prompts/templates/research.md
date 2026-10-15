@@ -8,7 +8,7 @@ title: 연구 템플릿
 description: 인용이 있는 조사와 비교입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 40960ec
+source_revision: 729d4cc
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -49,5 +49,5 @@ reviewed_at: 2026-08-26
 
 ## 관련
 
-- [출처 있는 연구 사례](/ko/cases/research-with-sources/)
-- [검증](/ko/guide/verification/)
+- [출처 있는 연구 사례](/ko/cases/workflows/research-with-sources/)
+- [검증](/ko/guide/quality/)

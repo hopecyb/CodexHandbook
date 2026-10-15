@@ -3,7 +3,7 @@ title: Sandbox và mạng
 description: Hiểu cô lập thực thi, truy cập mạng và ranh giới rủi ro.
 locale: vi
 source_locale: zh-CN
-source_revision: 5937622
+source_revision: 2cf2c46
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 «Sandbox» và «mạng» thực ra nói về hai việc: Sandbox giới hạn nó được chạm chỗ nào; mạng giới hạn nó được kết nối tới đâu.
 
 **Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được, giảm mặt phẳng thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
+
+![Minh họa: agent làm việc trong hộp cát bằng kính, giơ thẻ yêu cầu, người bên ngoài bấm phê duyệt; dây mạng đã được rút và khóa](/illustrations/sandbox-and-approval.webp)
 
 ## Vì sao hai giới hạn này quan trọng
 

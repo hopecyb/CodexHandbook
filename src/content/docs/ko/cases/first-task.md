@@ -11,7 +11,7 @@ title: 첫 번째 작업
 description: 명확한 프롬프트로 작은 수정을 완료하고, 결과를 검사하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0495ceb
+source_revision: 38f925b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -57,5 +57,5 @@ reviewed_at: 2026-08-26
 ## 5. 다음 단계
 
 - [프롬프트 기초](/ko/prompts/basics/)
-- [검증](/ko/guide/verification/)
+- [검증](/ko/guide/quality/)
 - [여기서 시작하기](/ko/guide/start-here/)

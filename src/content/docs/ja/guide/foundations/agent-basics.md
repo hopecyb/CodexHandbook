@@ -3,7 +3,7 @@ title: Agent の基礎
 description: Agent が目標を中心にツールを呼び出し、反復して進める仕組みを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 **Agent** は目標を中心に継続して作業します。目標の理解 → ツールの選択 → 結果の観察 → 次の一手の調整、という流れを、完了するかあなたの介入が必要になるまで繰り返します。
 
 普通の AI は質問に答える人に近く、Agent はタスクを受け取って一歩ずつ進める人に近いです。
+
+![イラスト：左は一問一答のチャット、右はファイルを読み、ツールを使い、結果を確かめ、修正するエージェントのループ](/illustrations/agent-basics.webp)
 
 ## Agent と普通のチャットの違い
 

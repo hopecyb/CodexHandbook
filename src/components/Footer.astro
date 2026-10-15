@@ -9,6 +9,8 @@ import { Icon } from '@astrojs/starlight/components';
 const { pagination, entry } = Astro.locals.starlightRoute;
 const traditional = entry.id.startsWith('zh-tw/');
 const chinese = !/^(en|de|es|fr|ja|ko|pt|vi)\//.test(entry.id);
+// The splash homepage already links updates and contributing in its about block.
+const showFeedback = chinese && entry.data.template !== 'splash';
 const correction = feedbackUrl({ pathname: Astro.url.pathname, title: entry.data.title, verificationDate: entry.data.verification?.checkedAt });
 const updatesPath = traditional ? '/zh-tw/guide/updates/' : '/guide/updates/';
 const hasPagination = Boolean(pagination.prev || pagination.next);
@@ -18,7 +20,7 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 	<div class="meta sl-flex">
 		<EditLink />
 		<LastUpdated />
-		{chinese && <span class="feedback-links" data-pagefind-ignore>
+		{showFeedback && <span class="feedback-links" data-pagefind-ignore>
 			<a href={correction} target="_blank" rel="noopener noreferrer">{traditional ? '回報本頁問題（GitHub 草稿）' : '反馈本页问题（GitHub 草稿）'}</a>
 			{' · '}<a href={updatesPath}>{traditional ? '內容更新' : '内容更新'}</a>
 		</span>}

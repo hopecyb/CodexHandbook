@@ -8,7 +8,7 @@ title: Agent basics
 description: How an agent uses tools and iterates toward a goal.
 locale: en
 source_locale: zh-CN
-source_revision: "5cfa120"
+source_revision: 14ab120
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -18,6 +18,8 @@ sidebar:
 An **agent** keeps working toward a goal: understand the goal → choose a tool → observe the result → adjust the next step, until the work is done or it needs your input.
 
 An ordinary AI is more like someone who answers questions. An agent is more like someone who takes on a task and works through it step by step.
+
+![Illustration: on the left, a plain question-and-answer chat; on the right, an agent loop that reads files, uses tools, checks results, and revises output](/illustrations/agent-basics.webp)
 
 ## Agent versus ordinary chat
 

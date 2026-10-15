@@ -27,13 +27,13 @@ prev:
   link: /pt/cases/
   label: Escolher tarefa prática
 next:
-  link: /pt/guide/verification/
+  link: /pt/guide/quality/
   label: Aprender a verificar resultados
 locale: pt
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 Neste exercício, entregue um relatório semanal de vendas, resumo por região, ranking de produtos e registro de limpeza linha a linha. Os dados de entrada são sintéticos e criados para este site; não são necessários dados reais de clientes.
@@ -137,4 +137,4 @@ antes e depois. Não mude o CSV original nem o validador para ocultar a falha.
 
 Guarde seus prompts e registro de correção. Antes de trocar os dados, confirme novamente campos e critérios. O validador fixo deste exercício não serve para quaisquer dados corporativos.
 
-Continue em [verificar resultados](/pt/guide/verification/) ou volte aos [casos práticos](/pt/cases/).
+Continue em [verificar resultados](/pt/guide/quality/) ou volte aos [casos práticos](/pt/cases/).

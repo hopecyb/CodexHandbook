@@ -3,7 +3,7 @@ title: 取り消しと復元
 description: 結果に不満があるときに安全に戻す。
 locale: ja
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Codex を初めて使うとき、多くの人が最も心配するのは「間�
 3. 新しいスレッドを開き、制約を厳しくして再試行
 
 多くの場合、事前に範囲を小さくしておく方が楽です。例えば少数ファイルだけ、禁止事項を明記、計画を先に見てから実行。
+
+![イラスト：巻き戻しの矢印がバージョンの束を囲み、古い版が元の位置に戻り、下のセーフティネットが丸めた紙を受け止める](/illustrations/undo-and-recover.webp)
 
 ## 「取り消し」と「復元」の区別
 

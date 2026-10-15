@@ -5,12 +5,14 @@ sidebar:
   order: 13
 locale: vi
 source_locale: zh-CN
-source_revision: 8fe7bea
+source_revision: 86fa0ac
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 Codex Cloud chạy tác vụ lập trình trong môi trường đám mây tách biệt. Nó phù hợp với tác vụ dài chạy nền, nhiều phương án song song và công việc bắt đầu từ GitHub, GitLab (Beta), Linear hoặc Slack. Nó không điều khiển máy của bạn từ xa và cũng không tự thấy những tệp cục bộ chưa đẩy lên kho mã.
+
+![Minh họa: kho mã trên trình duyệt nối tới các container đám mây cô lập, kết quả trả về dưới dạng thẻ pull request có dấu tích xanh](/illustrations/web-and-cloud.webp)
 
 ## Một tác vụ Cloud diễn ra như thế nào
 

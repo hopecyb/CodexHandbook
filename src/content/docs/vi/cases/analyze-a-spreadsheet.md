@@ -27,13 +27,13 @@ prev:
   link: /vi/cases/
   label: Chọn bài tập thực hành
 next:
-  link: /vi/guide/verification/
+  link: /vi/guide/quality/
   label: Học cách xác minh kết quả
 locale: vi
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 2b4f164
+source_revision: 68729f6
 ---
 
 Trong bài này, bạn tạo báo cáo bán hàng tuần, tổng hợp theo vùng, xếp hạng sản phẩm và sổ làm sạch từng dòng. Đầu vào là dữ liệu giả lập do trang này tạo; không cần dữ liệu khách hàng thật.
@@ -136,4 +136,4 @@ Không sửa CSV gốc hoặc bộ kiểm tra để làm mất lỗi.
 
 Giữ prompt và ghi chép sửa sai của bạn. Trước khi thay dữ liệu lần sau, xác nhận lại trường và quy tắc. Bộ kiểm tra cố định của bài này không áp dụng cho mọi dữ liệu doanh nghiệp.
 
-Tiếp tục [xác minh kết quả](/vi/guide/verification/) hoặc trở về [các tình huống thực hành](/vi/cases/).
+Tiếp tục [xác minh kết quả](/vi/guide/quality/) hoặc trở về [các tình huống thực hành](/vi/cases/).

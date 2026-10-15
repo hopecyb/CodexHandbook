@@ -3,7 +3,7 @@ title: Hilos, Tareas y proyectos
 description: Aclara la relación entre sesión, Tarea y espacio de trabajo del proyecto.
 locale: es
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ Mucha gente mezcla estos términos, y entonces aparecen problemas típicos:
 - por qué, «en el mismo proyecto», aún conviene abrir un hilo nuevo
 
 El proyecto decide dónde trabaja; el hilo, a lo largo de qué conversación sigue; la Tarea, qué quieres que haga esta vez. Separar estas tres capas aclara mucho los hábitos de uso.
+
+![Ilustración: vista en corte de una gran caja de proyecto con varias carpetas de tareas, cada una con algunos hilos de conversación](/illustrations/threads-tasks-projects.webp)
 
 ## Separa primero las tres capas
 

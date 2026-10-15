@@ -12,12 +12,14 @@ locale: fr
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-09-20
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 ---
 
 Un agent utilise des **outils** pour lire des fichiers, exécuter des commandes, effectuer des recherches sur le Web ou ouvrir un navigateur. Bien choisir l'outil et préciser ses limites aide à éviter un accès réseau imprévu ou des modifications excessives.
 
 Ici, « outils » désigne les capacités réellement appelées par Codex pendant l'exécution. Une conversation seule ne suffit pas à toutes les tâches : certaines exigent de lire des fichiers, lancer des commandes, consulter des pages ou inspecter une véritable interface.
+
+![Illustration : des outils posés sur la table – terminal, navigateur, loupe, image, micro et pointeur – un petit assistant choisit le bon](/illustrations/tools-overview.webp)
 
 ## Pourquoi comprendre les outils d'abord
 

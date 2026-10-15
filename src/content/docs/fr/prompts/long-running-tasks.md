@@ -3,7 +3,7 @@ title: Prompts pour tâches longues
 description: Découper en phases, points de contrôle et informations de passation.
 locale: fr
 source_locale: zh-CN
-source_revision: 4e656af
+source_revision: 450ed9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -25,6 +25,8 @@ Phase 2 : changement minimal
 Phase 3 : tests et exécution…
 À la fin de chaque phase, attends ma confirmation.
 ```
+
+![Illustration : une longue route sinueuse jalonnée de drapeaux ; un assistant avec sac à dos avance, une personne à un point de contrôle indique la direction](/illustrations/long-running-tasks.webp)
 
 ## Pourquoi les longues tâches dérivent
 

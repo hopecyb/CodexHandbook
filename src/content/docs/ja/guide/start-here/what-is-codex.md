@@ -3,7 +3,7 @@ title: Codex とは
 description: Codex が何をできて、何ができないか、主な利用入口をわかりやすく説明。
 locale: ja
 source_locale: zh-CN
-source_revision: a491834
+source_revision: 0f376b6
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ Codex は OpenAI が提供する **AI プログラミングと作業 Agent** で
 ツールを使えるデジタル同僚のような存在です。あなたは目標、境界、検証基準を説明します。Codex は資料の調査、ファイルの変更、ステップの実行を担当しますが、最終判断はあなたが行います。
 
 公式製品ドキュメントは [OpenAI Codex](https://developers.openai.com/codex) が基準です。このハンドブックはコミュニティのオープンソースガイドで、体系的な学習と実践的な利用を支援しますが、公式ドキュメントの代替ではありません。
+
+![イラスト：タスクカードを Codex に渡すと、PC・ドキュメント・ターミナルを使って一つずつ完了させていく](/illustrations/what-is-codex.webp)
 
 ## 普通の AI チャットとの違い
 

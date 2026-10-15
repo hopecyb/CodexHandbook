@@ -8,7 +8,7 @@ title: ここから始める
 description: Codex とは何か、誰向けかを理解し、学習パスを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 016d023
+source_revision: 953fb89
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 
 
 このハンドブックは主に **AI 初心者** 向けに書かれています。ターミナル、Git、Agent の使用を前提としませんが、後で出会う能力は段階的に説明していきます。
+
+![イラスト：出発点の道しるべが複数のルートを指し、開いたガイドブックの横で小さなアシスタントが手を振って迎える](/illustrations/start-here.webp)
 
 ## 内容
 
@@ -32,8 +34,8 @@ sidebar:
 2. [クライアントの選択](/ja/guide/choose-your-client/) — App、CLI、IDE、Cloud から選ぶ
 3. [最初のタスクを完了する](/ja/cases/first-task/) — 明確なプロンプトで小さな変更を行い、結果を確認する
 4. [権限とサンドボックス](/ja/guide/permissions-and-sandbox/) — 承認、隔離、ネットワーク境界を理解する
-5. [コンテキストとファイル](/ja/guide/context-and-files/) — 有効な入力の提供方法を学ぶ
-6. [結果の検証](/ja/guide/verification/) — レビューとテストの習慣を身につける
+5. [コンテキストとファイル](/ja/guide/context/) — 有効な入力の提供方法を学ぶ
+6. [結果の検証](/ja/guide/quality/) — レビューとテストの習慣を身につける
 
 ## よくある誤解
 
@@ -64,7 +66,7 @@ sidebar:
 | 10–25 分 | [最初のタスクケース](/ja/cases/first-task/) に沿って練習を完了する |
 | 25–30 分 | [プロンプトの基礎](/ja/prompts/basics/) をざっと見て、より明確なタスクの書き方を準備する |
 
-詰まったら [トラブルシューティング](/ja/guide/troubleshooting/) を確認してください。
+詰まったら [トラブルシューティング](/ja/guide/reference/troubleshooting/) を確認してください。
 
 ## 次に読むもの
 

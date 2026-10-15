@@ -8,7 +8,7 @@ title: Conversations, tâches et projets
 description: Comprendre le lien entre conversations, tâches et espaces de travail.
 locale: fr
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -28,6 +28,8 @@ Ces notions sont souvent confondues. On se demande alors :
 - Pourquoi ouvrir une nouvelle conversation dans le même projet ?
 
 Le projet détermine où Codex travaille, la conversation détermine quel échange il poursuit, et la tâche précise ce que vous lui demandez maintenant. Distinguer ces trois niveaux facilite bien des décisions.
+
+![Illustration : vue en coupe d’une grande boîte projet contenant plusieurs dossiers de tâches, chacun avec quelques fils de conversation](/illustrations/threads-tasks-projects.webp)
 
 ## Distinguer les trois niveaux
 

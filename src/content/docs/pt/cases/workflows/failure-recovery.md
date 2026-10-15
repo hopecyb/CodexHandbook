@@ -3,13 +3,15 @@ title: Recuperação de falhas
 description: Quando a tarefa se desvia, os testes ficam vermelhos ou o contexto se esgota — como recuar com segurança e continuar.
 locale: pt
 source_locale: zh-CN
-source_revision: d5e79dd
+source_revision: 847e22a
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
 ---
 
 **Recuperação de falhas** trata de como estabilizar a cena quando a tarefa se desvia ou é interrompida e depois avançar. Este capítulo oferece um ciclo repetível **detetar → conter → recuperar → retrospectiva**, combinável com [desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/) e [gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/).
+
+![Ilustração: uma torre de blocos meio caída é reconstruída com calma seguindo uma lista, e uma seta de reversão devolve um bloco a uma base estável](/illustrations/failure-recovery.webp)
 
 ## Foco desta página
 

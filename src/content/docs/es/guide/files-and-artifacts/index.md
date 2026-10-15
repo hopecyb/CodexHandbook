@@ -5,7 +5,7 @@ sidebar:
   order: 30
 locale: es
 source_locale: zh-CN
-source_revision: f84f83a
+source_revision: 543d14e
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ La producción central de Codex suele ser **cambios de archivos en el repositori
 Aunque todos sean «archivos», cada tipo pide una forma distinta de encargar la tarea y de aceptarla.
 
 «Cambiar código», «tratar una tabla», «generar capturas» o «exportar un PPT» parecen tareas de archivo, pero los puntos donde más se falla no son los mismos.
+
+![Ilustración: código, imágenes, PDF, hojas de cálculo y diapositivas pasan por una cinta ante un asistente que revisa cada uno](/illustrations/files-and-artifacts.webp)
 
 ## Navegación del capítulo
 

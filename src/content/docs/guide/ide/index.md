@@ -16,6 +16,8 @@ IDE 扩展适合**边写边看 diff**：打开文件、选中代码、在侧边�
 
 它会直接带上你当前打开的文件和选区，所以很多“小范围修改”任务更容易收住范围。
 
+![插画：编辑器里选中一段代码，侧边栏的小助手给出就地修改建议，旁边是接受按钮](/illustrations/ide.webp)
+
 ## 章节导航
 
 | 主题 | 页面 |
@@ -28,7 +30,7 @@ IDE 扩展适合**边写边看 diff**：打开文件、选中代码、在侧边�
 | 配置 | [设置](/guide/ide/settings/) |
 | 排障 | [排障](/guide/ide/troubleshooting/) |
 
-入门捷径：[安装 IDE 扩展](/guide/getting-started/install-ide-extension/) · [选择客户端](/guide/getting-started/choose-your-codex-client/)
+入门捷径：[安装 IDE 扩展](/guide/getting-started/install-ide-extension/) · [选择客户端](/guide/choose-your-client/)
 
 ## 先留意这几件事
 

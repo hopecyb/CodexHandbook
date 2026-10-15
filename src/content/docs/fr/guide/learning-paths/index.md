@@ -7,7 +7,7 @@ title: Parcours d'apprentissage
 description: Ordre de lecture organisé par rôle, avec liens vers le contenu de référence.
 locale: fr
 source_locale: zh-CN
-source_revision: f14e3a0
+source_revision: 2f7ff71
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -19,6 +19,8 @@ Les parcours d'apprentissage **organisent uniquement l'ordre de lecture** ; ils 
 Ce chapitre peut d'abord sembler ajouter un niveau de navigation. Il répond surtout à deux questions : à quel type d'utilisateur ressemblez-vous aujourd'hui et dans quel ordre devriez-vous lire la suite ?
 
 Il n'apporte pas de nouvelles connaissances sur le produit ; il vous aide à éviter les détours.
+
+![Illustration : quatre chemins partant du même livre – débutant, créateur, développeur et équipe – se rejoignent au sommet](/illustrations/learning-paths.webp)
 
 ## Ce que fait ce chapitre
 

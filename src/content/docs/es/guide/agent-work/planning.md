@@ -11,13 +11,15 @@ sidebar:
   order: 10
 locale: es
 source_locale: zh-CN
-source_revision: 8696afd
+source_revision: a129229
 translation_status: draft
 translated_at: 2026-09-20
 ---
 Un plan es una ruta de ejecución que puedes examinar y ajustar. Ayuda a detectar pronto lagunas de alcance, dependencias y aceptación, pero una tarea más grande no implica esperar confirmación repetidamente.
 
 Empieza por la [clasificación de tareas](/es/prompts/ask-for-a-plan/): completar directamente, planificar y ejecutar dentro de la autorización existente, o limitarte a proponer una solución esta vez. Una petición explícita de «primero un plan, sin modificar archivos» debe seguir siendo de solo lectura. Si se pide implementar, no basta con entregar un plan.
+
+![Ilustración: un asistente dibuja un plan por pasos en una pizarra y una persona señala un paso para ajustarlo antes de empezar](/illustrations/agent-planning.webp)
 
 ## Un plan suficientemente preciso
 

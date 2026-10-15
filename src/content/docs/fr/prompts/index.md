@@ -7,12 +7,14 @@ title: Prompts
 description: Apprenez à formuler clairement la tâche, le contexte, les entrées, les contraintes et les critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: b4393c7
+source_revision: 2280f53
 translation_status: draft
 translated_at: 2026-09-20
 ---
 
 La section sur les prompts explique comment formuler une tâche pour que Codex comprenne l’objectif, le contexte, les limites et les critères de fin. Un bon prompt laisse aussi apparaître les incertitudes pendant l’exécution, prévoit les confirmations nécessaires et demande un résultat vérifiable.
+
+![Illustration : quatre pièces de puzzle – objectif, contexte, contraintes et critère de fin – forment une fiche de tâche complète pour l’agent](/illustrations/task-brief.webp)
 
 ## Ordre recommandé
 

@@ -8,7 +8,7 @@ title: Getting started
 description: From account and installation to your first verifiable task.
 locale: en
 source_locale: zh-CN
-source_revision: 13861eb
+source_revision: 62fb65d
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -21,6 +21,8 @@ The default path uses the **desktop app**. If you prefer a terminal or editor, t
 
 If your main questions are “How do I begin?” and “How do I avoid mistakes at the start?”, this chapter is the most direct entry point.
 
+![Illustration: four rising steps—set up the computer, sign in, create a practice project, finish the first task—with a small assistant walking alongside](/illustrations/getting-started.webp)
+
 ## What this chapter covers
 
 - The minimum preparation before using Codex for the first time
@@ -31,7 +33,7 @@ If your main questions are “How do I begin?” and “How do I avoid mistakes 
 ## Steps
 
 1. [Account, plans, and access](/en/guide/getting-started/account-plans-and-access/)
-2. [Choose your client](/en/guide/getting-started/choose-your-codex-client/)
+2. [Choose your client](/en/guide/choose-your-client/)
 3. Install: [Desktop app](/en/guide/getting-started/install-desktop-app/) · [CLI](/en/guide/getting-started/install-cli/) · [IDE](/en/guide/getting-started/install-ide-extension/)
 4. [Sign in](/en/guide/getting-started/sign-in-and-authentication/)
 5. [Create a practice project](/en/guide/getting-started/create-your-first-project/)

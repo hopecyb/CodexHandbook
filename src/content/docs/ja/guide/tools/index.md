@@ -5,7 +5,7 @@ sidebar:
   order: 20
 locale: ja
 source_locale: zh-CN
-source_revision: 0e5a4ad
+source_revision: 5939a9d
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -15,6 +15,8 @@ Agent は**ツール**を通じてファイルを読み、コマンドを実行�
 
 ここでいう「ツール」とは、Codex が実際にタスクを実行するときに呼び出す能力のことです。すべてのタスクが会話だけで完結するわけではありません。  
 タスクによってはファイルを読む必要があり、コマンドを実行する必要があり、Web ページを調べる必要があり、実際のページを見る必要があります。
+
+![イラスト：机に並んだ道具——ターミナル、ブラウザー、検索の虫眼鏡、画像、マイク、ポインター——から小さなアシスタントが適切なものを選ぶ](/illustrations/tools-overview.webp)
 
 ## なぜ先にツールを理解するのか
 

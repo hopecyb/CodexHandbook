@@ -7,7 +7,7 @@ next:
 description: Codex를 이해하고, 클라이언트를 고르고, 첫 작업을 마친 뒤 권한·컨텍스트·검증을 익힙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ translated_at: 2026-09-20
 
 - [초보자 안전 점검 목록](/ko/guide/getting-started/beginner-safety-checklist/)
 - [클라이언트 선택 방법](/ko/guide/choose-your-client/)
-- [결과 검증과 완료 기준](/ko/guide/verification/)
+- [결과 검증과 완료 기준](/ko/guide/quality/)
 
 ## 권장 순서
 
@@ -38,9 +38,9 @@ translated_at: 2026-09-20
 3. [클라이언트 선택](/ko/guide/choose-your-client/)
 4. [첫 작업 완료](/ko/cases/first-task/)
 5. [권한과 샌드박스](/ko/guide/permissions-and-sandbox/)
-6. [컨텍스트와 파일](/ko/guide/context-and-files/)
-7. [검증](/ko/guide/verification/)
-8. 문제가 생기면 [문제 해결](/ko/guide/troubleshooting/)을 확인합니다
+6. [컨텍스트와 파일](/ko/guide/context/)
+7. [검증](/ko/guide/quality/)
+8. 문제가 생기면 [문제 해결](/ko/guide/reference/troubleshooting/)을 확인합니다
 
 ## 흔한 오해
 

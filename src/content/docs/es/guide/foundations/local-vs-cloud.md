@@ -3,7 +3,7 @@ title: Local frente a Cloud
 description: Compara cuándo encajan las Tareas locales y las Tareas Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: 1a0ea54
+source_revision: 9569b3c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ Si solo quieres empezar a usar Codex, suele ser más sencillo empezar por **loca
 | Dónde se ejecuta | Tu máquina / entorno local | Entorno Cloud |
 | Encaja cuando | Iteración rápida, archivos locales, depuración que necesita claves locales | Conectar repositorios remotos, Tareas largas, entornos estandarizados |
 | Atención | Permisos locales y riesgo de ediciones erróneas | Configuración del entorno, inyección de claves, políticas de red |
+
+![Ilustración: a la izquierda, trabajo con el agente en tu equipo; a la derecha, contenedores aislados en la nube que trabajan en paralelo y devuelven resultados](/illustrations/local-vs-cloud.webp)
 
 ## Cómo se siente al usarlo
 

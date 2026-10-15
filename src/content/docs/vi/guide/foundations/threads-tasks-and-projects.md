@@ -3,7 +3,7 @@ title: Thread, tác vụ và dự án
 description: Làm rõ quan hệ giữa phiên hội thoại, tác vụ và không gian làm việc dự án.
 locale: vi
 source_locale: zh-CN
-source_revision: f5ded6a
+source_revision: c360452
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -24,6 +24,8 @@ Nhiều người trộn các từ này thành một cục — vấn đề phổ 
 - Vì sao «cùng một dự án» vẫn khuyên tôi mở Thread mới
 
 Dự án quyết định nó làm việc ở đâu; Thread quyết định nó tiếp tục theo đoạn hội thoại nào; tác vụ quyết định lần này bạn thực sự muốn nó làm gì. Tách ba tầng này ra, nhiều thói quen dùng sẽ rõ hơn nhiều.
+
+![Minh họa: hình cắt lớp một hộp dự án lớn chứa nhiều thư mục nhiệm vụ, mỗi thư mục có vài luồng hội thoại](/illustrations/threads-tasks-projects.webp)
 
 ## Tách quan hệ ba tầng trước
 

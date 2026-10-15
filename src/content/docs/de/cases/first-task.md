@@ -11,7 +11,7 @@ title: Erste Aufgabe
 description: Mit einem klaren Prompt eine kleine Änderung abschließen und das Ergebnis prüfen lernen.
 locale: de
 source_locale: zh-CN
-source_revision: 0495ceb
+source_revision: 38f925b
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -57,5 +57,5 @@ Wenn Informationen fehlen, frag mich zuerst; rate nicht.
 ## 5. Nächste Schritte
 
 - [Prompt-Grundlagen](/de/prompts/basics/)
-- [Überprüfung](/de/guide/verification/)
+- [Überprüfung](/de/guide/quality/)
 - [Hier starten](/de/guide/start-here/)

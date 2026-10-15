@@ -13,12 +13,14 @@ translation_status: draft
 translated_at: 2026-09-20
 sidebar:
   order: 10
-source_revision: 8696afd
+source_revision: a129229
 ---
 
 A plan is an execution path you can inspect and adjust. It helps reveal gaps in scope, dependencies, and acceptance criteria early. A larger task does not automatically call for repeated pauses to seek confirmation.
 
 Start with [task classification](/en/prompts/ask-for-a-plan/): complete the task directly, plan and then execute within the authorization already given, or produce a proposal only in this round. A request that explicitly says “propose a plan first; do not edit files” should remain read-only. A request to implement something should not end with only a plan.
+
+![Illustration: a small assistant sketches a step-by-step plan on a whiteboard while a person points at one step to adjust it before work starts](/illustrations/agent-planning.webp)
 
 ## A plan that is detailed enough
 

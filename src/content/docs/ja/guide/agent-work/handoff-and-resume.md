@@ -3,7 +3,7 @@ title: 引き継ぎと再開
 description: 未完了の作業をセッションをまたいで続ける。
 locale: ja
 source_locale: zh-CN
-source_revision: f4cbe6a
+source_revision: 1ee17e9
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,6 +20,8 @@ sidebar:
 - 自分がどこまで進めたか忘れる
 - Codex がどの制約がまだ有効か分からない
 - 新しい会話が古いコンテキストを散らし、また最初から回る
+
+![イラスト：エージェントが引き継ぎノートと進捗カードを別のエージェントに渡す。背後にはめくれるカレンダーとしおり付きのタスクボード](/illustrations/handoff-and-resume.webp)
 
 ## 引き継ぎで残すもの
 

@@ -3,7 +3,7 @@ title: AGENTS.md란
 description: 프로젝트급 지속 지침 파일 — Codex를 위한 「협업 계약」이며, 아키텍처 백과가 아닙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 49b7d04
+source_revision: 47c5866
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -16,6 +16,8 @@ sidebar:
 `AGENTS.md`를 “이 프로젝트에서 Codex가 어떻게 협력하길 바라는지”의 설명서로 이해하면 됩니다.
 
 고급 아키텍처 문서도, 인간 신입용 완전한 핸드북도 아니며, Codex를 위한 프로젝트 협업 규칙입니다.
+
+![일러스트: 저장소 단면에서 루트에는 안내서, 하위 폴더에는 메모가 있고, 도우미는 안내서를 먼저 읽고 가장 가까운 메모를 읽는다](/illustrations/agents-md.webp)
 
 ## 핵심 개념 하나
 

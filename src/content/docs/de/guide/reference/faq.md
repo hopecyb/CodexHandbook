@@ -3,7 +3,7 @@ title: FAQ
 description: Häufige Fragen beim Einstieg und in der Nutzung.
 locale: de
 source_locale: zh-CN
-source_revision: eb8bf4e
+source_revision: c9d7ed8
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -20,7 +20,7 @@ Bei losen Einzelfragen zuerst FAQ. Kein vollständiges System — hilft schnell 
 - Zuerst eine Richtungsentscheidung
 
 **Q: Welchen Client zuerst?**  
-A: Desktop-App. Siehe [Client wählen](/de/guide/getting-started/choose-your-codex-client/).
+A: Desktop-App. Siehe [Client wählen](/de/guide/choose-your-client/).
 
 **Q: Prüfung überspringen und alle Änderungen annehmen?**  
 A: Besser nicht. Siehe [Verifikation und Menschen-Review](/de/guide/foundations/verification-and-human-review/).

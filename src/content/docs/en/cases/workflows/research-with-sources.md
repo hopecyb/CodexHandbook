@@ -3,7 +3,7 @@ title: Research with sources
 description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
 locale: en
 source_locale: zh-CN
-source_revision: a075687
+source_revision: a6fd201
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-08-26

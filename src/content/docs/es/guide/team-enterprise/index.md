@@ -5,7 +5,7 @@ sidebar:
   order: 70
 locale: es
 source_locale: zh-CN
-source_revision: d5ee0b9
+source_revision: b44c5d1
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-08-26
@@ -21,6 +21,8 @@ Las preguntas centrales son:
 - Hasta dónde puede llegar
 - Cómo rastrear problemas
 - Cómo aprobar extensiones de alto riesgo
+
+![Ilustración: un equipo trabaja con varios agentes según reglas compartidas, dentro de barreras de seguridad, con una persona que aprueba en revisión](/illustrations/team-guardrails.webp)
 
 ## Contenido del capítulo
 

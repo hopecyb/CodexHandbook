@@ -3,7 +3,7 @@ title: 실행 취소와 복구
 description: 결과가 마음에 들지 않을 때 안전하게 되돌립니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5e7a06e
+source_revision: 8aa3171
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -26,6 +26,8 @@ Codex를 처음 쓸 때 많은 사람이 가장 걱정하는 것은: 잘못 고�
 3. 새 스레드를 열고, 제약을 조인 뒤 다시 시도합니다
 
 많은 경우, 범위를 미리 좁혀 두면 더 수월합니다. 예: 파일 소수만, 금지 항목을 분명히, 계획을 본 뒤 실행.
+
+![일러스트: 되감기 화살표가 버전 스냅숏 묶음을 감싸고, 이전 버전이 제자리로 돌아오며, 안전망이 구겨진 종이를 받아 낸다](/illustrations/undo-and-recover.webp)
 
 ## 「실행 취소」와 「복구」 구분
 

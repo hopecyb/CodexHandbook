@@ -3,7 +3,7 @@ title: Ngữ cảnh
 description: Quản lý ngữ cảnh dự án, tệp và hội thoại.
 locale: vi
 source_locale: zh-CN
-source_revision: e085884
+source_revision: d2baf42
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 Ngữ cảnh là thông tin mô hình «lúc này có thể dùng hiệu quả». Quản ngữ cảnh kém, Prompt hay đến mấy cũng bị nhiễu nhấn chìm.
 
 Trong dùng thực tế, nó chính là Codex lần này thật sự thấy gì, tham chiếu được gì, và sẽ dựa vào đó phán đoán gì. Nội dung bạn biết nhưng chưa cung cấp cho nó không tính là ngữ cảnh của tác vụ lần này.
+
+![Minh họa: quy tắc dự án, tệp được chọn và hội thoại đi vào agent theo ba lớp, một phễu lọc bỏ thông tin không liên quan](/illustrations/context-layers.webp)
 
 ## Vì sao chương này đặc biệt quan trọng
 

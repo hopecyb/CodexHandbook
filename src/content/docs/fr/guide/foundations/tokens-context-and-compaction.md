@@ -8,7 +8,7 @@ title: Tokens, contexte et compaction
 description: Comprendre la fenêtre de contexte, son occupation et la compaction.
 locale: fr
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -22,6 +22,8 @@ Trois termes reviennent ici : tokens, contexte et compaction.
 Un **token** est une unité servant à mesurer le texte traité par le modèle. La **fenêtre de contexte** désigne la quantité maximale d'informations qu'il peut exploiter efficacement à un moment donné.
 
 Quand une conversation ou ses fichiers deviennent trop volumineux, le système peut effectuer une **compaction** : garder un résumé et perdre des détails. L'agent peut alors « oublier » des contraintes formulées plus tôt.
+
+![Illustration : un long rouleau de conversation passe dans une presse et ressort en courte fiche de synthèse qui tient dans une fenêtre limitée](/illustrations/tokens-compaction.webp)
 
 ## Distinguer les trois notions
 

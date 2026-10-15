@@ -3,7 +3,7 @@ title: Cơ bản về Agent
 description: Giải thích Agent gọi công cụ quanh mục tiêu và lặp để tiến tới như thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5cfa120
+source_revision: 14ab120
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 **Agent** sẽ liên tục làm quanh mục tiêu: hiểu mục tiêu → chọn công cụ → quan sát kết quả → điều chỉnh bước tiếp theo, cho đến khi hoàn thành hoặc cần bạn can thiệp.
 
 AI thông thường giống người trả lời câu hỏi; Agent giống người nhận việc rồi làm từng bước.
+
+![Minh họa: bên trái là trò chuyện hỏi–đáp, bên phải là agent lặp lại việc đọc tệp, dùng công cụ, kiểm tra kết quả và chỉnh sửa](/illustrations/agent-basics.webp)
 
 ## Khác biệt giữa Agent và chat thông thường
 

@@ -9,6 +9,8 @@ description: 理解 Plugin 的组成、支持表面、安装验证和信任边�
 
 ChatGPT 与 Codex 使用同一公共 Plugin 目录。Plugin 把一组相关能力组合成可发现、可安装的工作流，而不是发明一种新的工具调用协议。
 
+![插画：系着丝带的扩展包沿轨道送到多台工作站安装，一个正在拆封，一个被干净地卸载](/illustrations/plugins-overview.webp)
+
 ## Plugin 可以包含什么
 
 | 部分 | 作用 | 安装者应检查 |

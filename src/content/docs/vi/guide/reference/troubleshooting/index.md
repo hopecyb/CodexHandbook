@@ -8,7 +8,7 @@ title: Chỉ mục xử lý sự cố
 description: "Định vị tới tutorial và trang sản phẩm tương ứng theo triệu chứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 7327724
+source_revision: da350d0
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:
@@ -23,7 +23,7 @@ Tìm hướng theo triệu chứng nhanh hơn lật qua lại cả site.
 |---|---|
 | Cài đặt fail | [Xử lý sự cố máy tính](/vi/guide/desktop-app/troubleshooting/) · [Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/) · [Xử lý sự cố IDE](/vi/guide/ide/troubleshooting/) |
 | Đăng nhập / xác thực fail | [Đăng nhập](/vi/guide/getting-started/sign-in-and-authentication/) |
-| Không biết chọn client nào | [Chọn client](/vi/guide/getting-started/choose-your-codex-client/) · [Đối chiếu tính năng](/vi/guide/reference/feature-comparison/) |
+| Không biết chọn client nào | [Chọn client](/vi/guide/choose-your-client/) · [Đối chiếu tính năng](/vi/guide/reference/feature-comparison/) |
 | Kết quả vượt ranh giới / rất tệ | [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/) · [Gỡ lỗi Prompt](/vi/prompts/prompt-debugging/) · [Hoàn tác](/vi/guide/getting-started/undo-and-recover/) |
 | Ngữ cảnh rối | [Giữ tập trung](/vi/guide/context/keep-context-focused/) |
 | Thắc mắc quyền / Sandbox | [Quyền](/vi/guide/foundations/permissions-and-approvals/) · [Sandbox](/vi/guide/foundations/sandbox-and-network/) |

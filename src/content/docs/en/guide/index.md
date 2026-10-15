@@ -7,7 +7,7 @@ next:
 description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
 locale: en
 source_locale: zh-CN
-source_revision: 297497e
+source_revision: aa277f2
 translation_status: draft
 translated_at: 2026-09-20
 ---
@@ -29,7 +29,7 @@ You do not need every term, product, and workflow upfront. Find your current sta
 
 - [Beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/)
 - [How to choose a client](/en/guide/choose-your-client/)
-- [Result verification and definition of done](/en/guide/verification/)
+- [Result verification and definition of done](/en/guide/quality/)
 
 ## Recommended order
 
@@ -38,9 +38,9 @@ You do not need every term, product, and workflow upfront. Find your current sta
 3. [Choose your client](/en/guide/choose-your-client/)
 4. [Complete your first task](/en/cases/first-task/)
 5. [Permissions and sandbox](/en/guide/permissions-and-sandbox/)
-6. [Context and files](/en/guide/context-and-files/)
-7. [Verification](/en/guide/verification/)
-8. When stuck, see [Troubleshooting](/en/guide/troubleshooting/)
+6. [Context and files](/en/guide/context/)
+7. [Verification](/en/guide/quality/)
+8. When stuck, see [Troubleshooting](/en/guide/reference/troubleshooting/)
 
 ## Common misconceptions
 

@@ -8,7 +8,7 @@ title: Extension IDE
 description: 'Utiliser Codex dans l''éditeur : installation, contexte, tâches locales et cloud, revue et réglages.'
 locale: fr
 source_locale: zh-CN
-source_revision: 4772f3f
+source_revision: c2fa50b
 translation_status: draft
 translated_at: '2026-09-20'
 sidebar:
@@ -20,6 +20,8 @@ L'extension IDE convient au travail où l'on **écrit tout en examinant le diff*
 Si vous écrivez habituellement du code ou modifiez des documents dans un éditeur, l'IDE est souvent le point de départ le plus naturel.
 
 Le fichier ouvert et la sélection actuelle peuvent servir de contexte, ce qui aide à limiter la portée des petites modifications.
+
+![Illustration : un bloc de code sélectionné dans l’éditeur ; dans le panneau latéral, un assistant propose une modification avec un bouton d’acceptation](/illustrations/ide.webp)
 
 ## Navigation du chapitre
 
@@ -33,7 +35,7 @@ Le fichier ouvert et la sélection actuelle peuvent servir de contexte, ce qui a
 | Configuration | [Paramètres](/fr/guide/ide/settings/) |
 | Dépannage | [Dépannage](/fr/guide/ide/troubleshooting/) |
 
-Pour commencer : [installer l'extension IDE](/fr/guide/getting-started/install-ide-extension/) · [choisir un client Codex](/fr/guide/getting-started/choose-your-codex-client/)
+Pour commencer : [installer l'extension IDE](/fr/guide/getting-started/install-ide-extension/) · [choisir un client Codex](/fr/guide/choose-your-client/)
 
 ## Trois points à remarquer d'abord
 

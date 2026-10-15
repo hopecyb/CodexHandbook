@@ -3,7 +3,7 @@ title: Sandbox e rede
 description: Entenda isolamento de execução, acesso à rede e limites de risco.
 locale: pt
 source_locale: zh-CN
-source_revision: 5937622
+source_revision: 2cf2c46
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -14,6 +14,8 @@ sidebar:
 «Sandbox» e «rede» são duas coisas distintas: o Sandbox limita *onde* ele pode tocar; a rede limita *aonde* ele pode se conectar.
 
 O **Sandbox** restringe o sistema de arquivos e parte das capacidades de sistema que o Agent alcança, reduzindo a superfície de erro. O **acesso à rede** é outra camada de risco: pode vazar informação sensível no Prompt ou puxar dados não confiáveis.
+
+![Ilustração: o agente trabalha numa sandbox de vidro e mostra um pedido enquanto uma pessoa fora aperta aprovar; o cabo de rede está desconectado](/illustrations/sandbox-and-approval.webp)
 
 ## Por que estes dois limites importam
 

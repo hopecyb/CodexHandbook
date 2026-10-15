@@ -3,7 +3,7 @@ title: Skills 概要
 description: SKILL.md で再利用可能なワークフローを Codex に教え、一度書けば必要に応じて呼び出せるようにする。
 locale: ja
 source_locale: zh-CN
-source_revision: e526d62
+source_revision: 3147d2c
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -12,6 +12,8 @@ reviewed_at: 2026-08-26
 **Skill** は `SKILL.md` を含むディレクトリ（スクリプトや参考資料を追加可能）で、一連の固定フローを Codex が**自動または明示的に呼び出せる**能力としてパッケージ化したものです。
 
 すでに繰り返し現れ、今後も使い続ける作業方法に向いています。
+
+![イラスト：うまくいったワークフローを道具箱に詰め、複製して複数のエージェントに配り再利用する](/illustrations/skills-toolkit.webp)
 
 ## コア概念
 

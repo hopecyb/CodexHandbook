@@ -3,7 +3,7 @@ title: Token·컨텍스트·압축
 description: 컨텍스트 창·점유와 압축을 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: da31a01
+source_revision: cd44efe
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-08-26
@@ -18,6 +18,8 @@ sidebar:
 **Token**은 모델이 텍스트를 처리하는 계량 단위입니다. **컨텍스트 창**은 한 번에 효과적으로 쓸 수 있는 정보 상한입니다.
 
 대화나 파일이 너무 많으면 시스템이 **압축(compaction)**을 할 수 있습니다. 요약을 남기고 세부을 버립니다. 압축 후 Agent는 초반 제약을 「잊을」 수 있습니다.
+
+![일러스트: 긴 대화 두루마리가 압축기를 거쳐 제한된 창에 쏙 들어가는 짧은 요약 카드가 된다](/illustrations/tokens-compaction.webp)
 
 ## 세 단어를 나누어 보기
 
