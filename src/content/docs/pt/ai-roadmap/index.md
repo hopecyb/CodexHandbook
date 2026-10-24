@@ -3,9 +3,9 @@ title: Roteiro de aplicações de IA
 description: Distingue artigos científicos, lançamentos de produtos, artigos de engenharia e sugestões de aprendizagem do autor, ligando cada tema à prática.
 locale: pt
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /pt/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 Este mapa separa eventos públicos verificáveis de sugestões de aprendizagem. **As datas referem-se apenas aos artigos científicos, anúncios ou textos da tabela. Não indicam automaticamente quando um conceito surgiu, se difundiu no setor ou atingiu maturidade.** Diferentes técnicas podem ser usadas em conjunto; a cronologia não é uma ordem de aprendizagem obrigatória.
 
 Cada página temática oferece fontes primárias, limites de aplicação e um exercício do site. Conferir fontes não é o mesmo que executar software. As URLs originais são mantidas; o ano ou mês no endereço pode diferir da data corrigida do evento. Siga a data indicada no texto.
+
+![Roteiro de engenharia de aplicações de IA: Harness Engineering, Skills, engenharia de contexto, colaboração multiagente, uso de ferramentas, MCP, chamadas de função, engenharia de prompts e RAG em ordem cronológica inversa, com as mesmas datas da tabela abaixo](/diagrams/ai-application-roadmap-pt.svg)
 
 ## Eventos verificáveis
 

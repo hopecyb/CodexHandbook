@@ -5,7 +5,7 @@
 | 资产 | 类型 | 对应页面 | 教学目的 | 源文件 | 状态 |
 |---|---|---|---|---|---|
 | `codex-capability-ladder-zh-cn.svg` | 能力演进图 | `/skills/` | 从一次任务到复用资产；2026-10 修正节点文字重叠与多语言溢出 | 同名 SVG | integrated |
-| `ai-roadmap-assets/ai-application-roadmap.svg` | 时间线 | `/ai-roadmap/`（仅简体中文） | 按时间倒序总览代表事件 | 同名 SVG | integrated（待多语言） |
+| `ai-application-roadmap-zh-cn.svg` | 时间线 | `/ai-roadmap/` | 按时间倒序总览代表事件；2026-10 日期与事件表对齐，接入多语言生成 | 同名 SVG，标签见 `scripts/i18n/diagram-labels.*.json` | integrated |
 | `codex-work-system-architecture-zh-cn.svg` | 系统架构图 | `/skills/capability-map/` | 区分规则、流程、工具、触发和分发层 | `docs/visual-sources/codex-work-system-architecture.html` | integrated |
 | `extension-selection-map-zh-cn.svg` | 决策图 | `/skills/choosing-an-extension-method/` | 根据需求选择提示词、AGENTS.md、Skill、MCP、Hook、Plugin 或 Scheduled task | 同名 SVG | integrated |
 | `task-execution-loop-zh-cn.svg` | 流程图 | `/prompts/task-anatomy/` | 解释任务说明如何经过执行与验证形成反馈闭环 | 同名 SVG | integrated |

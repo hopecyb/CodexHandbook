@@ -1,0 +1,117 @@
+<svg lang="en" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1440" width="900" height="1440" role="img" aria-labelledby="title desc">
+  <title id="title">AI application engineering roadmap</title>
+  <desc id="desc">A reverse-chronological vertical timeline from Harness Engineering, Skills, context engineering, multi-agent collaboration, tool use, MCP, function calling, and prompt engineering back to RAG. Each date refers only to the paper, announcement, or article that was published.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title { fill: #111827; font-size: 26.9px; font-weight: 700; }
+    .subtitle { fill: #4b5563; font-size: 13.4px; }
+    .year { fill: #2563eb; font-size: 15.1px; font-weight: 700; }
+    .node-title { fill: #111827; font-size: 15.1px; font-weight: 700; }
+    .node-date { fill: #6b7280; font-size: 10.9px; }
+    .node-body { fill: #374151; font-size: 11.8px; }
+  </style>
+  <defs>
+    <marker id="arrow-main" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <polygon points="0 0, 12 4.5, 0 9" fill="#2563eb"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#111827" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1440" fill="#ffffff"/>
+  <rect x="42" y="34" width="816" height="132" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="72" y="86" class="title">AI application engineering roadmap</text>
+  <text x="72" y="122" class="subtitle">Newest first. Dates refer only to the papers, announcements, or articles in the table, not to when a concept was born.</text>
+  <text x="72" y="148" class="subtitle">Read top to bottom: harness and reuse → collaboration → tool protocol → input control → grounding.</text>
+
+  <line x1="224" y1="218" x2="224" y2="1398" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-main)"/>
+
+  <g transform="translate(70 1325)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2020</text>
+  </g>
+  <g transform="translate(70 1179)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2022</text>
+  </g>
+  <g transform="translate(70 1033)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2023</text>
+  </g>
+  <g transform="translate(70 887)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2024</text>
+  </g>
+  <g transform="translate(70 558)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2025</text>
+  </g>
+  <g transform="translate(70 229)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2026</text>
+  </g>
+  <g transform="translate(240 202)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#dc2626"/>
+    <text x="28" y="32" class="node-title">Harness Engineering (Execution Harness)</text>
+    <text x="28" y="55" class="node-date">2026-02-11 · Verifiable execution environment</text>
+    <text x="28" y="78" class="node-body">Combine tools, context, feedback, recovery, and quality gates into a stable task scaffold.</text>
+  </g>
+  <g transform="translate(240 348)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Skills (Reusable Workflows)</text>
+    <text x="28" y="55" class="node-date">2025-10-16 · Reusable workflow units</text>
+    <text x="28" y="78" class="node-body">Package prompts, steps, examples, scripts, and resources so AI reuses experience reliably.</text>
+  </g>
+  <g transform="translate(240 470)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
+    <text x="28" y="32" class="node-title">Context Engineering (Context Design)</text>
+    <text x="28" y="55" class="node-date">2025-09-29 · Context design</text>
+    <text x="28" y="78" class="node-body">From “write a good prompt” to “design what the model sees, and in what priority.”</text>
+  </g>
+  <g transform="translate(240 592)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Multi-agent (Agent Collaboration)</text>
+    <text x="28" y="55" class="node-date">2025-06-13 · Role collaboration</text>
+    <text x="28" y="78" class="node-body">Split research, implementation, review, and verification across roles to run work in parallel.</text>
+  </g>
+  <g transform="translate(240 714)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#0d9488"/>
+    <text x="28" y="32" class="node-title">Tool Use (Tool Orchestration)</text>
+    <text x="28" y="55" class="node-date">2025-03-11 · Multi-tool execution</text>
+    <text x="28" y="78" class="node-body">The model picks tools during a task, calls them, reads the results, and keeps reasoning.</text>
+  </g>
+  <g transform="translate(240 860)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
+    <text x="28" y="32" class="node-title">MCP (Model Context Protocol)</text>
+    <text x="28" y="55" class="node-date">2024-11-25 · Tool protocol</text>
+    <text x="28" y="78" class="node-body">Expose tools, resources, prompts, and context via a protocol, not one-off integrations.</text>
+  </g>
+  <g transform="translate(240 1006)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Function Calling (Structured Tool Calls)</text>
+    <text x="28" y="55" class="node-date">2023-06-13 · Structured actions</text>
+    <text x="28" y="78" class="node-body">Beyond text: the model calls functions, APIs, and actions with parseable arguments.</text>
+  </g>
+  <g transform="translate(240 1152)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
+    <text x="28" y="32" class="node-title">Prompt Engineering (Prompt Design)</text>
+    <text x="28" y="55" class="node-date">2022-11-30 · Input control</text>
+    <text x="28" y="78" class="node-body">Guide the model to usable output with task instructions, examples, and format constraints.</text>
+  </g>
+  <g transform="translate(240 1298)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#f97316"/>
+    <text x="28" y="32" class="node-title">RAG (Retrieval-Augmented Generation)</text>
+    <text x="28" y="55" class="node-date">2020-05-22 · Knowledge grounding</text>
+    <text x="28" y="78" class="node-body">Retrieve sources into context to cut hallucination and make answers traceable.</text>
+  </g>
+</svg>

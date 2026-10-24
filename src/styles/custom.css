@@ -896,7 +896,7 @@ html[data-theme='light'] .path-card strong {
 }
 
 /* Tall timeline graphic: keep it readable without filling several screens. */
-.sl-markdown-content img[src^='/ai-roadmap-assets/'] {
+.sl-markdown-content img[src^='/diagrams/ai-application-roadmap-'] {
 	display: block;
 	width: min(100%, 34rem);
 	height: auto;
@@ -934,11 +934,11 @@ html[data-theme='light'] .path-card strong {
 	cursor: zoom-out;
 }
 
-.diagram-zoom:has(img[src^='/ai-roadmap-assets/']) {
+.diagram-zoom:has(img[src^='/diagrams/ai-application-roadmap-']) {
 	width: min(96vw, 56rem);
 }
 
-.diagram-zoom:has(img[src^='/ai-roadmap-assets/']) img {
+.diagram-zoom:has(img[src^='/diagrams/ai-application-roadmap-']) img {
 	min-width: 0;
 }
 

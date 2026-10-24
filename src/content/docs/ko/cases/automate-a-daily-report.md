@@ -12,12 +12,11 @@ title: 일일 보고서 자동화
 description: 반복되는 요약 작업을 재사용 가능한 스크립트 또는 Skill로 고정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## 메타 정보
 
@@ -33,7 +32,7 @@ reviewed_at: 2026-08-26
 
 **성공 기준:** 한 명령 또는 Skill로 고정 형식 Markdown을 산출하고, 실패 시 명확한 종료 코드가 있어야 합니다.
 
-## 3. 권장 프롬프트
+## 2. 권장 프롬프트
 
 ```text
 목표：어제부터 지금까지의 일일 보고서 Markdown을 생성하세요.
@@ -42,7 +41,7 @@ reviewed_at: 2026-08-26
 제약：git만 읽기. push하지 마세요. 반복 실행을 위해 scripts/generate-daily.sh 를 제공하세요.
 ```
 
-## 4. 정착
+## 3. 정착
 
 - [자동화 Skill 예시](/ko/skills/examples/automation-skill/)
 - [예약 작업](/ko/skills/automations/scheduled-tasks/)

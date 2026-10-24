@@ -12,12 +12,11 @@ title: Automatiser un rapport quotidien
 description: Transformer un travail de synthèse répétitif en script ou Skill réutilisable.
 locale: fr
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## Métadonnées
 
@@ -33,7 +32,7 @@ reviewed_at: 2026-08-26
 
 **Critères de succès :** Une commande ou un Skill produit un Markdown au format fixe ; en cas d'échec, code de sortie explicite.
 
-## 3. Prompt recommandé
+## 2. Prompt recommandé
 
 ```text
 Objectif : générer un rapport quotidien Markdown d'hier à aujourd'hui.
@@ -42,7 +41,7 @@ Sortie : reports/daily-YYYY-MM-DD.md
 Contraintes : git en lecture seule ; ne pas push ; fournir scripts/generate-daily.sh pour exécution répétée.
 ```
 
-## 4. Capitalisation
+## 3. Capitalisation
 
 - [Exemple de Skill d'automatisation](/fr/skills/examples/automation-skill/)
 - [Tâches planifiées](/fr/skills/automations/scheduled-tasks/)

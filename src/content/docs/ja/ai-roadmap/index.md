@@ -3,9 +3,9 @@ title: AI アプリケーションロードマップ
 description: 論文、製品発表、技術記事、筆者の学習提案を区別し、各テーマから実践へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /ja/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 このマップでは、確認可能な公開上の出来事と学習上の提案を分けています。**日付が示すのは表に載せた論文、発表、記事だけです。概念の誕生、業界への普及、機能の成熟を自動的に意味するものではありません。** 異なる技術は併用でき、時系列が必須の学習順序になるわけでもありません。
 
 各テーマのページには一次資料、適用範囲の限界、サイト内の演習があります。出典の確認はソフトウェアの実行テストではありません。元の URL は維持しているため、URL 内の年月と修正後の出来事の日付が異なる場合があります。本文の日付を基準にしてください。
+
+![AI アプリケーション工学ロードマップ：Harness Engineering、Skills、コンテキスト工学、マルチエージェント協調、ツール利用、MCP、関数呼び出し、プロンプト工学、RAG を新しい順に並べ、日付は下の表と一致](/diagrams/ai-application-roadmap-ja.svg)
 
 ## 確認可能な出来事
 

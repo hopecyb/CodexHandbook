@@ -12,12 +12,11 @@ title: Tự động hóa báo cáo hàng ngày
 description: Cố định công việc tổng hợp lặp lại thành script hoặc Skill có thể tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## Siêu dữ liệu
 
@@ -33,11 +32,7 @@ reviewed_at: 2026-08-26
 
 **Tiêu chí thành công:** Một lệnh hoặc Skill tạo được Markdown định dạng cố định; thất bại có mã thoát rõ ràng.
 
-## 2. Mẫu tham chiếu
-
-Nhóm đã có case tương tự: [kiểm tra liên kết tài liệu theo lịch](/vi/cases/use-cases/team-automation/scheduled-link-check/).
-
-## 3. Prompt đề xuất
+## 2. Prompt đề xuất
 
 ```text
 Mục tiêu: Tạo Markdown báo cáo hàng ngày từ hôm qua đến nay.
@@ -46,7 +41,7 @@ Nội dung: tóm tắt git log, trạng thái CI (nếu đọc được), danh s
 Ràng buộc: Chỉ đọc git; không push; cung cấp scripts/generate-daily.sh để chạy lại dễ dàng.
 ```
 
-## 4. Đóng gói lại
+## 3. Đóng gói lại
 
 - [Ví dụ Skill tự động hóa](/vi/skills/examples/automation-skill/)
 - [Tác vụ theo lịch](/vi/skills/automations/scheduled-tasks/)

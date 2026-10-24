@@ -29,6 +29,7 @@ const diagramNames = [
 	'scheduled-task-safety-loop',
 	'sandbox-approval-flow',
 	'subagent-orchestration',
+	'ai-application-roadmap',
 ];
 
 const locales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko'];

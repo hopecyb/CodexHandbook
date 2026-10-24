@@ -7,7 +7,7 @@ title: Écrire une page guide
 description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du handbook.
 locale: fr
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

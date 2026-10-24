@@ -12,12 +12,11 @@ title: Automate a daily report
 description: Turn repetitive summarization into a reusable script or Skill.
 locale: en
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-26
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## Meta information
 
@@ -33,7 +32,7 @@ reviewed_at: 2026-08-26
 
 **Success criteria:** One command or Skill produces Markdown in a fixed format; failures have clear exit codes.
 
-## 3. Recommended prompt
+## 2. Recommended prompt
 
 ```text
 Goal: Generate a daily report Markdown for yesterday through today.
@@ -42,7 +41,7 @@ Output: reports/daily-YYYY-MM-DD.md
 Constraints: Read-only git; do not push; provide scripts/generate-daily.sh for repeat runs.
 ```
 
-## 4. Capture for reuse
+## 3. Capture for reuse
 
 - [Automation Skill example](/en/skills/examples/automation-skill/)
 - [Scheduled tasks](/en/skills/automations/scheduled-tasks/)

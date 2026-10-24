@@ -120,4 +120,3 @@ verification:
 
 ## 参考来源
 - OpenAI Codex 官方文档
-```

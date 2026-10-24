@@ -12,12 +12,11 @@ title: Automatizar un informe diario
 description: Convierte el resumen repetitivo en un script o Skill reutilizable.
 locale: es
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## Metadatos
 
@@ -33,11 +32,7 @@ reviewed_at: 2026-08-26
 
 **Criterios de éxito:** Un comando o Skill produce Markdown con formato fijo; los fallos tienen códigos de salida claros.
 
-## 2. Patrón de referencia
-
-El equipo ya tiene un caso similar: [Comprobación programada de enlaces](/es/cases/use-cases/team-automation/scheduled-link-check/).
-
-## 3. Prompt recomendado
+## 2. Prompt recomendado
 
 ```text
 Objetivo: Generar el Markdown del informe diario de ayer a hoy.
@@ -46,7 +41,7 @@ Salida: reports/daily-YYYY-MM-DD.md
 Restricciones: git en solo lectura; no hacer push; proporcionar scripts/generate-daily.sh para repeticiones.
 ```
 
-## 4. Captura para reutilizar
+## 3. Captura para reutilizar
 
 - [Ejemplo de Skill de automatización](/es/skills/examples/automation-skill/)
 - [Tareas programadas](/es/skills/automations/scheduled-tasks/)

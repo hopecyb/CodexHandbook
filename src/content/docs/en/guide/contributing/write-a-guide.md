@@ -7,7 +7,7 @@ title: Write a Guide Page
 description: Structure, frontmatter, and cross-link conventions for new handbook guides.
 locale: en
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

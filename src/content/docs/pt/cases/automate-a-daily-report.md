@@ -12,12 +12,11 @@ title: Automatizar um relatório diário
 description: Transforme trabalho de resumo repetitivo num script ou Skill reutilizável.
 locale: pt
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## Metadados
 
@@ -33,11 +32,7 @@ reviewed_at: 2026-08-26
 
 **Critérios de sucesso:** Um comando ou Skill produz Markdown em formato fixo; falhas têm código de saída claro.
 
-## 2. Paradigma de referência
-
-A equipa já tem um caso semelhante: [verificação agendada de ligações na documentação](/pt/cases/use-cases/team-automation/scheduled-link-check/).
-
-## 3. Prompt recomendado
+## 2. Prompt recomendado
 
 ```text
 Objetivo: gerar o relatório diário em Markdown desde ontem até agora.
@@ -46,7 +41,7 @@ Saída: reports/daily-YYYY-MM-DD.md
 Restrições: git só de leitura; não fazer push; fornecer scripts/generate-daily.sh para reexecução.
 ```
 
-## 4. Consolidação
+## 3. Consolidação
 
 - [Exemplo de Skill de automatização](/pt/skills/examples/automation-skill/)
 - [Tarefas agendadas](/pt/skills/automations/scheduled-tasks/)

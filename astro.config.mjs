@@ -235,7 +235,7 @@ export default defineConfig({
 					attrs: { type: 'module' },
 					// zoomable-diagrams: open text-bearing diagrams full size in a dialog.
 					content: `
-						const selector = '.sl-markdown-content img[src^="/diagrams/"], .sl-markdown-content img[src^="/ai-roadmap-assets/"]';
+						const selector = '.sl-markdown-content img[src^="/diagrams/"]';
 						const dialog = document.createElement('dialog');
 						dialog.className = 'diagram-zoom';
 						dialog.addEventListener('click', () => dialog.close());

@@ -3,9 +3,9 @@ title: AI 애플리케이션 로드맵
 description: 논문, 제품 발표, 엔지니어링 글과 작성자의 학습 제안을 구분하고 각 주제에서 실습으로 이어집니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /ko/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 이 지도는 확인할 수 있는 공개 사건과 학습 제안을 구분합니다. **날짜는 표에 적힌 논문, 발표 또는 글에만 해당합니다. 개념의 탄생, 업계 확산, 기능의 성숙을 자동으로 뜻하지 않습니다.** 여러 기술을 함께 사용할 수 있으며, 시간 순서가 반드시 따라야 할 학습 순서도 아닙니다.
 
 각 주제 페이지에는 1차 출처, 적용 범위의 한계, 사이트 내 실습이 있습니다. 출처 확인은 소프트웨어를 실제 실행한 것과 다릅니다. 기존 URL은 유지하므로 URL의 연월이 수정된 사건 날짜와 다를 수 있습니다. 본문 날짜를 기준으로 삼으세요.
+
+![AI 애플리케이션 엔지니어링 로드맵: Harness Engineering, Skills, 컨텍스트 엔지니어링, 다중 에이전트 협업, 도구 사용, MCP, 함수 호출, 프롬프트 엔지니어링, RAG를 최신순으로 나열하며 날짜는 아래 표와 같음](/diagrams/ai-application-roadmap-ko.svg)
 
 ## 확인 가능한 사건
 

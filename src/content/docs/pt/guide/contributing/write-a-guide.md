@@ -7,7 +7,7 @@ title: Escrever uma página de guia
 description: Estrutura, frontmatter e acordos de ligações cruzadas para o corpo novo do manual.
 locale: pt
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

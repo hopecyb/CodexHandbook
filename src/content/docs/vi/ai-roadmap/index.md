@@ -3,9 +3,9 @@ title: Lộ trình ứng dụng AI
 description: Phân biệt bài nghiên cứu, công bố sản phẩm, bài kỹ thuật và gợi ý học tập của tác giả, rồi đi từ mỗi chủ đề đến thực hành.
 locale: vi
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /vi/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 Bản đồ này tách các sự kiện công khai có thể kiểm chứng khỏi gợi ý học tập. **Ngày tháng chỉ nói đến bài nghiên cứu, thông báo hoặc bài viết liệt kê trong bảng. Chúng không tự động là ngày một khái niệm ra đời, được phổ biến trong ngành hay đạt độ chín về năng lực.** Các kỹ thuật khác nhau có thể dùng cùng lúc; thứ tự thời gian cũng không phải trình tự học bắt buộc.
 
 Mỗi trang chủ đề có nguồn gốc, giới hạn áp dụng và bài tập trên trang. Đối chiếu nguồn không đồng nghĩa với chạy thử phần mềm. URL cũ được giữ lại, nên năm tháng trong URL có thể khác ngày sự kiện đã hiệu chỉnh. Hãy lấy nội dung bài làm chuẩn.
+
+![Lộ trình kỹ thuật ứng dụng AI: Harness Engineering, Skills, kỹ thuật ngữ cảnh, phối hợp đa tác nhân, sử dụng công cụ, MCP, gọi hàm, kỹ thuật prompt và RAG theo thứ tự thời gian ngược, cùng ngày với bảng bên dưới](/diagrams/ai-application-roadmap-vi.svg)
 
 ## Sự kiện có thể kiểm chứng
 

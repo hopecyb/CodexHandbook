@@ -3,9 +3,9 @@ title: Feuille de route des applications IA
 description: Distinguer articles scientifiques, lancements de produits, articles d’ingénierie et conseils d’apprentissage de l’auteur, puis passer de chaque sujet à la pratique.
 locale: fr
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /fr/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 Cette carte sépare les événements publics vérifiables des conseils d’apprentissage. **Les dates désignent uniquement les articles, annonces ou publications du tableau. Elles n’indiquent pas automatiquement la naissance d’une notion, sa diffusion dans le secteur ou la maturité d’une capacité.** Plusieurs techniques peuvent coexister ; l’ordre chronologique n’est pas un parcours d’apprentissage obligatoire.
 
 Chaque page thématique présente des sources primaires, des limites d’application et un exercice sur ce site. Vérifier des sources ne revient pas à exécuter un logiciel. Les URL d’origine sont conservées ; leur année ou leur mois peut différer de la date corrigée de l’événement. Référez-vous au texte de la page.
+
+![Feuille de route de l’ingénierie des applications IA : Harness Engineering, Skills, ingénierie du contexte, collaboration multi-agents, utilisation d’outils, MCP, appel de fonctions, ingénierie des prompts et RAG, du plus récent au plus ancien, avec les mêmes dates que le tableau ci-dessous](/diagrams/ai-application-roadmap-fr.svg)
 
 ## Événements vérifiables
 

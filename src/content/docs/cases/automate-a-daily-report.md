@@ -26,7 +26,7 @@ description: 把重复汇总工作固化为可复用脚本或 Skill。
 
 **成功标准：** 一条命令或 Skill 可产出固定格式 Markdown；失败有明确退出码。
 
-## 3. 推荐提示词
+## 2. 推荐提示词
 
 ```text
 目标：生成昨日至今的日报 Markdown。
@@ -35,7 +35,7 @@ description: 把重复汇总工作固化为可复用脚本或 Skill。
 约束：只读 git；不要 push；提供 scripts/generate-daily.sh 便于重复运行。
 ```
 
-## 4. 沉淀
+## 3. 沉淀
 
 - [自动化 Skill 示例](/skills/examples/automation-skill/)
 - [定时任务](/skills/automations/scheduled-tasks/)

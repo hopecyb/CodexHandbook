@@ -3,9 +3,9 @@ title: Hoja de ruta de aplicaciones de IA
 description: Distingue artículos académicos, lanzamientos de productos, artículos de ingeniería y recomendaciones de aprendizaje del autor, y conecta cada tema con la práctica.
 locale: es
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /es/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 Este mapa separa los eventos públicos verificables de las recomendaciones de aprendizaje. **Las fechas se refieren solo a los artículos académicos, anuncios o textos de la tabla. No indican automáticamente cuándo nació un concepto, cuándo se generalizó en el sector ni cuándo maduró una capacidad.** Pueden usarse distintas técnicas a la vez; la cronología no es un orden de aprendizaje obligatorio.
 
 Cada página temática ofrece fuentes primarias, límites de aplicación y una práctica del sitio. Comprobar fuentes no equivale a ejecutar software. Se conservan las URL originales; el año o mes de una URL puede diferir de la fecha corregida del evento. Prevalece el texto de la página.
+
+![Hoja de ruta de ingeniería de aplicaciones de IA: Harness Engineering, Skills, ingeniería del contexto, colaboración multiagente, uso de herramientas, MCP, llamadas a funciones, ingeniería de prompts y RAG en orden cronológico inverso, con las mismas fechas que la tabla siguiente](/diagrams/ai-application-roadmap-es.svg)
 
 ## Eventos verificables
 

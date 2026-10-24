@@ -7,7 +7,7 @@ title: Viết trang hướng dẫn
 description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

@@ -7,7 +7,7 @@ title: ガイドページの執筆
 description: 新しいハンドブック本文の構造、frontmatter、相互リンクの約束事。
 locale: ja
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

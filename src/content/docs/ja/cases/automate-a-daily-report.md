@@ -12,12 +12,11 @@ title: 日報の自動化
 description: 繰り返しの集計作業を再利用可能なスクリプトまたは Skill に固定化する。
 locale: ja
 source_locale: zh-CN
-source_revision: 7ed7b8a
+source_revision: 2149e0a
 translation_status: reviewed
-translated_at: 2026-07-28
+translated_at: 2026-10-24
 reviewed_at: 2026-08-26
 ---
-
 
 ## メタ情報
 
@@ -33,7 +32,7 @@ reviewed_at: 2026-08-26
 
 **成功基準：** 1 コマンドまたは Skill で固定形式の Markdown を出力できること。失敗時に明確な終了コードがあること。
 
-## 3. 推奨プロンプト
+## 2. 推奨プロンプト
 
 ```text
 目標：昨日から今日までの日報 Markdown を生成する。
@@ -42,7 +41,7 @@ reviewed_at: 2026-08-26
 制約：git は読み取りのみ。push しない。繰り返し実行用に scripts/generate-daily.sh を提供する。
 ```
 
-## 4. 蓄積
+## 3. 蓄積
 
 - [自動化 Skill の例](/ja/skills/examples/automation-skill/)
 - [定期タスク](/ja/skills/automations/scheduled-tasks/)

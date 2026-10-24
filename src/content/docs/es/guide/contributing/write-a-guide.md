@@ -7,7 +7,7 @@ title: Escribir una página de guía
 description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
 source_locale: zh-CN
-source_revision: fe93490
+source_revision: dd22df1
 translation_status: draft
 translated_at: 2026-09-20
 sidebar:

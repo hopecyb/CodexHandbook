@@ -3,9 +3,9 @@ title: Roadmap für KI-Anwendungen
 description: Unterscheidet wissenschaftliche Arbeiten, Produktankündigungen, Engineering-Artikel und Lernempfehlungen des Autors und führt von jedem Thema zur Praxis.
 locale: de
 source_locale: zh-CN
-source_revision: 7544287
+source_revision: f66e3ba
 translation_status: draft
-translated_at: 2026-09-20
+translated_at: 2026-10-24
 prev: false
 next:
   link: /de/ai-roadmap/timeline/
@@ -15,6 +15,8 @@ next:
 Diese Karte trennt überprüfbare öffentliche Ereignisse von Lernempfehlungen. **Die Daten beziehen sich nur auf die in der Tabelle genannten Arbeiten, Ankündigungen oder Artikel. Sie bezeichnen nicht automatisch die Entstehung eines Konzepts, seine Verbreitung in der Branche oder die Reife einer Fähigkeit.** Verschiedene Techniken lassen sich gleichzeitig nutzen; die Chronologie ist keine verpflichtende Lernreihenfolge.
 
 Jede Themenseite nennt Primärquellen, Geltungsgrenzen und eine Übung auf dieser Website. Quellenabgleich ist kein Software-Testlauf. Die ursprünglichen URLs bleiben erhalten; Jahr oder Monat im Pfad können vom korrigierten Ereignisdatum abweichen. Maßgeblich ist der Text der Seite.
+
+![Roadmap für KI-Anwendungsentwicklung: Harness Engineering, Skills, Kontext-Engineering, Multi-Agent-Zusammenarbeit, Tool-Nutzung, MCP, Funktionsaufrufe, Prompt-Engineering und RAG in umgekehrter zeitlicher Reihenfolge, mit denselben Daten wie die Tabelle unten](/diagrams/ai-application-roadmap-de.svg)
 
 ## Überprüfbare Ereignisse
 
