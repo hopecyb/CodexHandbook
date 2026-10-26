@@ -3,17 +3,23 @@ title: Projektanweisungen schreiben
 description: "Schreib-Checkliste für AGENTS.md — kurz, hart, ausführbar, überprüfbar."
 locale: de
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: "63dd711"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die aktuelle AGENTS.md-Serie sowie Kontext- und Workflow-Kapitel dieses Repos; diese Seite erklärt nur stabile Schreibprinzipien und Pflege-Rhythmus und macht keine langfristigen
+    Versprechen zu Client-Implementierungsdetails.
+  checkedAt: '2026-07-26'
 ---
 
 Gute Projektanweisungen ähneln eher einer **Checkliste**. Ziel: Codex macht beim ersten Versuch weniger vorhersehbare Fehler.
 
-Beim ersten Entwurf schreiben viele viele Ideen — die wirklich kritischen Constraints bleiben unklar.
+Beim ersten Entwurf schreiben viele Ideen — die wirklich kritischen Constraints bleiben unklar.
 
 ## Inhalt
 
@@ -66,7 +72,7 @@ Sicherstellen, dass Tests bestehen
 ## Definition of Done
 - `pnpm lint` und `pnpm test` ohne Fehler
 - Neue API mit Unit-Tests
-- Nutzer sichtbare Änderungen mit manuellen Testschritten (Browser + Mobil)
+- Für Nutzer sichtbare Änderungen mit manuellen Testschritten (Browser + Mobil)
 ```
 
 ### 4. „Warum“ möglichst in einem Satz
@@ -85,7 +91,7 @@ Mensch und Codex sollen schnell greifen:
 - Was nicht tun
 - Wann es fertig ist
 
-Bleibt nach dem Lesen unklar, welchen Befehl man zuerst läuft, was tabu ist und wann man fertig ist — noch nicht gut genug.
+Bleibt nach dem Lesen unklar, welchen Befehl man zuerst ausführt, was tabu ist und wann man fertig ist — noch nicht gut genug.
 
 ## Beispiel-Ausschnitt Team-Playbook
 
@@ -117,7 +123,7 @@ Zu verstreut, zu lang, zu enzyklopädisch — die wirklich hochprioren Regeln ge
 
 ### 2. Reicht „bitte Normen beachten“ als Anweisung?
 
-Meist nicht ausführbar.  
+Meist nicht ausführbar.
 Besser direkt:
 
 - echte Befehle
@@ -126,7 +132,7 @@ Besser direkt:
 
 ### 3. Hintergrund und Ausführungsregeln beliebig mischen?
 
-Besser nicht.  
+Besser nicht.
 Stattdessen:
 
 - Regeln nach vorne
@@ -158,21 +164,14 @@ Gute Projektanweisungen gewinnen nicht durch Menge, sondern dadurch, dass kritis
 
 ## Von einer Aufgabe zur Projektregel
 
-Nicht jeder gute Prompt gehört direkt in `AGENTS.md`. Entscheiden Sie zuerst, welche Ebene ihn besitzen sollte.
+Nicht jeder gute Prompt gehört direkt in `AGENTS.md`. Entscheiden Sie zuerst, auf welche Ebene er gehört.
 
 | Wiederkehrender Inhalt | Besserer Ort |
 |---|---|
 | „Generated-Verzeichnisse nicht ändern“ | Verbot in `AGENTS.md` |
 | „Jeden PR im festen Format prüfen“ | Skill oder Prompt-Vorlage |
 | „Nach dem Schreiben formatieren“ | Hook |
-| „Vor dem Coden Linear/Jira lesen“ | MCP + passender Skill |
+| „Beim Nachschlagen von Tickets zuerst Linear/Jira lesen“ | MCP + passender Skill |
 | „Ich bevorzuge chinesische Erklärungen“ | Erinnerung oder persönliche Präferenz |
 
 `AGENTS.md` passt für langlebige, gemeinsame und prüfbare Regeln. Prozesslogik kann in Skills, automatische Checks in Hooks, externer Zugriff in MCP.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die aktuelle AGENTS.md-Serie sowie Kontext- und Workflow-Kapitel dieses Repos; diese Seite erklärt nur stabile Schreibprinzipien und Pflege-Rhythmus und macht keine langfristigen Versprechen zu Client-Implementierungsdetails.  
-**Zuletzt geprüft:** 2026-07-26

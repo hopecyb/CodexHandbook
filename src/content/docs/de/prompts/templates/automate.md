@@ -4,14 +4,14 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Diese Seite liefert eine Vorlage für Automatisierungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
   checkedAt: "2026-07-26"
-title: Automatisieren-Vorlage
+title: Automatisierungsvorlage
 description: Wiederholaufgaben und wiederverwendbare Abläufe.
 locale: de
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: "2aff2e7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -21,12 +21,12 @@ Typischer Irrtum bei Automatisierung: nur „kann es automatisch laufen?“ — 
 - Wer sieht das Ergebnis?
 - Kann es bei Fehlern sicher stoppen?
 
-Kern der Automatisieren-Vorlage: auch bei Problemen steuerbar bleiben.
+Kern der Automatisierungsvorlage: auch bei Problemen steuerbar bleiben.
 
 ## Vorlage
 
 ```text
-Ziel: 【Wiederholaufgabe】 automatisieren als 【Skript/Skill/Zeitplan】.
+Ziel: 【Wiederholaufgabe】 automatisieren als 【Skript/Skill/zeitgesteuerte Aufgabe】.
 Trigger: 【manuell / Zeitplan / CI】
 Eingaben: 【Datenquelle, Config-Dateien】
 Constraints:

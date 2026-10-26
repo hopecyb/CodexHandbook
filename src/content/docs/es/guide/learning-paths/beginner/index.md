@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: '1b7fbb3'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Practica con materiales de un evento ficticio, desde leer archivos hasta entregar un aviso verificable. No necesitas aprender Git ni programación, ni instalar dependencias antes.

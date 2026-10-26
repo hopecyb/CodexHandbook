@@ -3,8 +3,8 @@ title: CLI コマンドリファレンス
 description: Codex CLI の主なサブコマンドと引数の早見表。学習用の索引であり、公式資料の代わりではありません。
 locale: ja
 source_locale: zh-CN
-source_revision: 6091bcc
-translation_status: draft
+source_revision: '6091bcc'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 50
@@ -13,10 +13,10 @@ legacyVerification:
   products: CLI
   basis: 現行の公式 Developer commands の成熟度表と照合し、Stable の入口だけを列挙しました。--cd / -C、サンドボックス、承認の引数も確認済みです。Experimental や非推奨のコマンドは基本一覧に含めません。
   checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
-
-コマンドリファレンスは入口判断用。パラメータ暗記より先に：
+コマンドリファレンスは、どの実行方法を使うか判断するための索引です。引数を覚える前に、次を確認してください。
 
 > **今は対話入口か、単発コマンド入口か？**
 
@@ -77,7 +77,7 @@ CLI 初心者なら、この区別で入口の選択はほぼできます。
 # リポジトリのルートで対話セッションを起動（例）
 codex
 
-# セッション内の常见操作（TUI を基準に）
+# セッション内のよくある操作（TUI を基準に）
 # - タスク説明を入力
 # - / スラッシュコマンド → slash-commands ページ
 # - shell / ファイル書き込み要求の承認
@@ -93,7 +93,7 @@ CLI 初心者は：
 2. 対話か `exec` か決める
 3. サブコマンドを使うときだけその `--help`
 
-最初からパラメータ表に沈まない。
+最初から引数の一覧を読み込む必要はありません。
 
 ## 今すぐ始めるなら
 
@@ -117,14 +117,14 @@ codex exec --cd /path/to/repo "タスクの完全な説明"
 # stdin パイプ   ファイルまたは前段のコマンドから prompt を読む
 ```
 
-セキュリティ：[人工承認パターン](/ja/cases/workflows/human-approval-patterns/)
+セキュリティ：[人による承認パターン](/ja/cases/workflows/human-approval-patterns/)
 
 ## 設定と認証（概念）
 
 | 操作 | 説明 |
 |---|---|
 | ログイン | [ログインと認証](/ja/guide/getting-started/sign-in-and-authentication/) と一致 |
-| 設定ファイル | ユーザー級 / プロジェクト級。[設定リファレンス](/ja/guide/reference/configuration-reference/) |
+| 設定ファイル | ユーザーレベル / プロジェクトレベル。[設定リファレンス](/ja/guide/reference/configuration-reference/) |
 | MCP | [MCP 接続](/ja/skills/mcp/connect-an-mcp-server/) |
 
 ## 終了コードと自動化
@@ -132,7 +132,7 @@ codex exec --cd /path/to/repo "タスクの完全な説明"
 非対話モードは一般に**終了コード**で成功/失敗を表し、CI が利用します。
 
 - `0`：約束どおり完了
-- 非 `0`：失敗または人工介入必要——ログ artifact を確認
+- 非 `0`：失敗または人の対応が必要。保存されたログを確認
 
 CLI コマンドページは入口判断と意図検索用。パラメータ暗記で入門しない。
 
@@ -149,7 +149,7 @@ CI で stderr を無視しない。ログ保持は [診断優先](/ja/cases/work
 
 | 現象 | 行き先 |
 |---|---|
-| コマンド不存在 | [CLI インストール](/ja/guide/getting-started/install-cli/) |
+| コマンドが見つからない | [CLI インストール](/ja/guide/getting-started/install-cli/) |
 | 設定が効かない | [CLI 設定](/ja/guide/cli/configuration/) |
 | CI で承認が止まる | prompt 絞り込み + 読み取り専用サンドボックス |
 

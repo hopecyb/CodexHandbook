@@ -7,11 +7,12 @@ title: 설정 Profile
 description: 별도 설정 파일로 Codex CLI의 기본 사용자 설정 위에 이름을 붙인 설정 묶음을 덧씌웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6ab30c5
-translation_status: draft
+source_revision: '6ab30c5'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
 
 현재 Codex CLI의 `--profile <name>`은 `$CODEX_HOME/<name>.config.toml`을 기본 사용자 설정 위에 덧씌웁니다. 주로 CLI에서 사용하는 기능으로, 데스크톱 앱 전체에 적용되는 범용 “원클릭 모드”라고 설명해서는 안 됩니다.

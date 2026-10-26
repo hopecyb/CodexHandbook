@@ -8,11 +8,12 @@ title: Commencer ici
 description: Découvrir ce qu'est Codex, à qui il s'adresse et quel parcours choisir.
 locale: fr
 source_locale: zh-CN
-source_revision: 953fb89
-translation_status: draft
+source_revision: "953fb89"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 1
+reviewed_at: 2026-10-26
 ---
 
 Ce manuel s'adresse surtout aux **débutants en IA**. Il ne suppose pas que vous connaissiez le terminal, Git ou les agents ; il introduit progressivement les capacités que vous rencontrerez.

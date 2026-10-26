@@ -19,8 +19,9 @@ sidebar:
   order: 40
 locale: en
 source_locale: zh-CN
-source_revision: 13537ef
-translation_status: draft
+source_revision: '13537ef'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 

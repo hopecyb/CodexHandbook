@@ -3,12 +3,16 @@ title: Déléguer et poursuivre
 description: Lancez une tâche Cloud exécutable de manière autonome, puis utilisez la même conversation pour corriger sa direction et accepter le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: 38b322f
+source_revision: "38b322f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: Cloud, App, IDE, CLI
+  checkedAt: '2026-08-26'
 ---
 
 Déléguer ne consiste pas à se débarrasser d'un problème. Il s'agit de donner à une conversation Cloud indépendante l'objectif, les contraintes, l'environnement et les critères de fin. La tâche peut s'exécuter en arrière-plan pendant que vous consultez les journaux, ajoutez du contexte, demandez des corrections et révisez finalement le diff.
@@ -72,11 +76,3 @@ conserve l'échec et consigne-le explicitement.
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Travaux de longue durée](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** Cloud, App, IDE, CLI
-
-**Dernière vérification :** 2026-08-26

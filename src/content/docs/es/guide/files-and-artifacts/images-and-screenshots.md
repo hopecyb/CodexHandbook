@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Contrastado con materiales oficiales de OpenAI sobre entrada de imágenes y subida de archivos respecto a subida de capturas, marcado de focos, tamaño de archivo y privacidad; el cuerpo no conserva pasos de interfaz concretos que haya que contrastar versión a versión.
+  checkedAt: '2026-07-26'
 title: Imágenes y capturas
 description: Proporciona capturas y diseños a Codex, y gestiona archivos de imagen en la tarea.
 locale: es
 source_locale: zh-CN
-source_revision: adc2b88
+source_revision: "adc2b88"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -37,7 +42,7 @@ Profundidad: [Prompt con imágenes](/es/prompts/prompting-with-images/)
 Lo más valioso de una imagen es mostrar lo que cuesta describir solo con texto, por ejemplo:
 
 - Cómo está torcido el layout
-- Hasta dónde se aprieta el botón
+- Cómo queda comprimido el botón
 - Qué dice exactamente el diálogo
 
 Pero la imagen sola no le dice automáticamente a Codex:
@@ -51,7 +56,7 @@ Por eso la imagen suele ir acompañada de una frase directa.
 ## Requisitos de calidad
 
 - **Resolución**: texto legible; evita miniaturas borrosas
-- **Recorte**: quita escritorio ajeno y datos sensibles de la barra de notificaciones
+- **Recorte**: quita las partes irrelevantes del escritorio y datos sensibles de la barra de notificaciones
 - **Anotaciones**: flechas/círculos sirven, pero repite el punto clave en texto
 - **Varias imágenes**: súbelas emparejadas «actual / esperado»
 
@@ -114,7 +119,7 @@ No adivines lógica de negocio a partir de la captura; solo trata lo visual y el
 Para tareas del tipo «implementar según la imagen»:
 
 1. Compara en paralelo implementación y referencia (o abre la página con la [herramienta de navegador](/es/guide/tools/browser/))
-2. Comprueba responsive y modo oscuro (si se exige)
+2. Comprueba el diseño adaptable y modo oscuro (si se exige)
 3. [Verificar artefactos](/es/guide/quality/verify-artifacts/)
 
 ## Errores habituales
@@ -124,10 +129,3 @@ Para tareas del tipo «implementar según la imagen»:
 - Asumir que el modelo puede leer un enlace de Figma sin exportar
 
 Una buena captura no es solo «hay imagen». Imagen clara, foco claro y expectativa clara: así la tarea se hace bien con más facilidad.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / Cloud  
-**Base de verificación:** Contrastado con materiales oficiales de OpenAI sobre entrada de imágenes y subida de archivos respecto a subida de capturas, marcado de focos, tamaño de archivo y privacidad; el cuerpo no conserva pasos de interfaz concretos que haya que contrastar versión a versión.  
-**Última verificación:** 2026-07-26

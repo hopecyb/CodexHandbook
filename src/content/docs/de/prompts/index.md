@@ -7,8 +7,9 @@ title: Prompts
 description: 'Lerne, Aufgaben, Hintergrund, Eingaben, Constraints und Abnahmekriterien klar zu formulieren.'
 locale: de
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

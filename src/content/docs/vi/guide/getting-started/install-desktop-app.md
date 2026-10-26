@@ -1,13 +1,19 @@
 ---
-title: Cài ứng dụng máy tính
-description: Cài ứng dụng ChatGPT trên máy tính và mở không gian làm việc Codex trong đó.
-locale: vi
-source_locale: zh-CN
-source_revision: 974842f
-translation_status: draft
-translated_at: 2026-09-20
+title: "Cài ứng dụng máy tính"
+description: "Cài ứng dụng ChatGPT trên máy tính và mở không gian làm việc Codex trong đó."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "974842f"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 30
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Hướng dẫn bắt đầu nhanh chính thức hiện cung cấp bản tải xuống cho macOS, Windows và Linux, đồng thời yêu cầu chọn cuộc trò chuyện, dự án hoặc thư mục sau khi đăng nhập. Trang này không cố định vị trí nút hay tên bộ cài có thể thay đổi."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Trong tài liệu này, “ứng dụng máy tính” chỉ **không gian làm việc Codex trong ứng dụng ChatGPT trên máy tính**. Có phiên bản chính thức cho macOS, Windows và Linux.

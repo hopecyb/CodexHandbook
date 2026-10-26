@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về tác vụ dài hạn, mục tiêu liên tục và hình thái cộng tác Codex; nội dung trang chỉ giữ phương pháp ổn định “tóm tắt bàn giao phải giúp lần sau tiếp tục làm”, không viết nút hay quy trình bàn giao cụ thể của một client sản phẩm thành quy tắc cố định.", "checkedAt": "2026-07-26"}
 title: Bàn giao và khôi phục
 description: Tiếp tục công việc chưa xong qua các phiên.
 locale: vi
 source_locale: zh-CN
-source_revision: 1ee17e9
+source_revision: "1ee17e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -90,10 +91,3 @@ Sau khi dán tóm tắt vào thread mới, đừng sửa lớn ngay; làm ba vi�
 Như vậy tránh phụ thuộc ngữ cảnh cũ đã nén, thiếu hoặc méo.
 
 Bàn giao tốt không phải kể lại lịch sử, mà để người mở tác vụ lần sau biết ngay: đang ở đâu, bước tiếp theo làm gì, xong thì kiểm thế nào.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về tác vụ dài hạn, mục tiêu liên tục và hình thái cộng tác Codex; nội dung trang chỉ giữ phương pháp ổn định “tóm tắt bàn giao phải giúp lần sau tiếp tục làm”, không viết nút hay quy trình bàn giao cụ thể của một client sản phẩm thành quy tắc cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

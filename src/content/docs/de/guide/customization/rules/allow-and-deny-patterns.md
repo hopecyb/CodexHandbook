@@ -1,14 +1,20 @@
 ---
 title: Erlauben und Ablehnen
-description: "Mit Befehls- und Pfadregeln Agent-Operationen einschränken — persönliche Gewohnheiten und Team-Untergrenzen."
+description: "Mit Befehls- und Pfadregeln Agent-Operationen einschränken — persönliche Gewohnheiten und verbindliche Teamgrenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 521ecc9
+source_revision: "521ecc9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "CLI / App"
+  basis: Aktuelle OpenAI-Codex-/Plugin-Berechtigungsdokumentation betont weiterhin Schichtung von Lese-/Schreibaktionen, Freigabe, Quellengrenzen und rollenbasiertem Zugriff; diese Seite behauptet keine
+    konkrete Regelsyntax, sondern erklärt Allow/Deny als Enforcement-Grenzmuster und trennt sie von Sandbox, Freigabe und Team-Review.
+  checkedAt: '2026-07-26'
 ---
 
 **Rules (Regeln)** deklarieren in Config oder Projektdateien, welche Shell-Befehle, Pfade und Werkzeugaufrufe **erlaubt oder verboten** sind — weniger manuelle Freigabe-Klicks, zugleich weniger automatisierte Gefahr.
@@ -65,11 +71,11 @@ Sandbox begrenzt „wie weit man höchstens greifen darf“; Regeln vereinbaren 
 
 Beides zusammen nutzen — nicht eines als Ersatz für das andere.
 
-### Team-Untergrenzen dürfen nicht nur lokal leben
+### verbindliche Teamgrenzen dürfen nicht nur lokal leben
 
 Kennt nur Ihre lokale Regel „kein Push“, „kein `.env`“, können andere trotzdem reintreten.
 
-Team-Untergrenzen gehören möglichst dorthin, wo Review möglich ist.
+verbindliche Teamgrenzen gehören möglichst dorthin, wo Review möglich ist.
 
 ## Teambeispiel (schematisch, nicht Copy-Paste)
 
@@ -96,7 +102,7 @@ Regeln gehören in team-reviewbare Dateien — nicht nur mündliche Absprachen.
 
 Keine komplette Policy auf einmal. Zwei Schritte reichen zum Start:
 
-1. 3–5 täglich laufende, risikearme Befehle klar listen
+1. 3–5 täglich laufende, risikoarme Befehle klar listen
 2. Einige absolut unerwünschte Hochrisiko-Aktionen klar listen
 
 Minimale Grenze zuerst glattziehen, dann verfeinern.
@@ -108,10 +114,3 @@ Minimale Grenze zuerst glattziehen, dann verfeinern.
 - Regeländerungen per PR, wie CI-Änderungen behandeln
 
 Gute Allow-/Deny-Regeln machen vorab klar, welche Aktionen vernünftig sind und welche nicht vorkommen sollten.
-
----
-
-**Status:** verified  
-**Gilt für:** CLI / App  
-**Prüfgrundlage:** Aktuelle OpenAI-Codex-/Plugin-Berechtigungsdokumentation betont weiterhin Schichtung von Lese-/Schreibaktionen, Freigabe, Quellengrenzen und rollenbasiertem Zugriff; diese Seite behauptet keine konkrete Regelsyntax, sondern erklärt Allow/Deny als Enforcement-Grenzmuster und trennt sie von Sandbox, Freigabe und Team-Review.  
-**Zuletzt geprüft:** 2026-07-26

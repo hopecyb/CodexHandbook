@@ -1,18 +1,19 @@
 ---
-title: Tham chiếu lệnh CLI
-description: Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức.
-locale: vi
-source_locale: zh-CN
-source_revision: 6091bcc
-translation_status: draft
-translated_at: '2026-09-20'
+title: "Tham chiếu lệnh CLI"
+description: "Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "6091bcc"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 50
 legacyVerification:
-  status: verified
-  products: CLI
-  basis: Đã đối chiếu bảng mức độ trưởng thành hiện tại của Developer commands chính thức, chỉ liệt kê mục Stable và kiểm tra --cd / -C, sandbox, tham số phê duyệt. Lệnh thử nghiệm hoặc đã ngừng dùng không nằm trong bảng cơ bản.
-  checkedAt: '2026-08-26'
+  status: "verified"
+  products: "CLI"
+  basis: "Đã đối chiếu bảng mức độ trưởng thành hiện tại của Developer commands chính thức, chỉ liệt kê mục Stable và kiểm tra --cd / -C, sandbox, tham số phê duyệt. Lệnh thử nghiệm hoặc đã ngừng dùng không nằm trong bảng cơ bản."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -129,7 +130,7 @@ Bảo mật: [Mẫu phê duyệt của người](/vi/cases/workflows/human-appro
 
 Chế độ không tương tác thường dùng **mã thoát** cho CI:
 
-- `0`: hoàn thành theo thỏa thuận
+- `0`: tiến trình hoàn tất thành công; vẫn cần kiểm chứng kết quả nghiệp vụ
 - Khác `0`: thất bại hoặc cần người — kiểm stderr/log
 
 Trang lệnh CLI giúp chọn lối vào và ý định — không thuộc tham số.

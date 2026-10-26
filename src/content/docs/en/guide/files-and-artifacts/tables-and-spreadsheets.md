@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against verified file/folder context, verify-artifacts, constraints pages; stable principle: explicitly state columns, types, blanks, dates, verification—not a single library as the only implementation."
+  checkedAt: "2026-07-26"
 title: Tables and Spreadsheets
 description: Read, clean, analyze, and export CSV, Excel, and tabular data—without breaking structure or encoding.
 locale: en
 source_locale: zh-CN
-source_revision: b08adec
+source_revision: 'b08adec'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 40
 ---
@@ -121,9 +126,3 @@ For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
 
 ## Reference sources
 - [Define constraints](/en/prompts/constraints-and-boundaries/)
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, constraints pages; stable principle: explicitly state columns, types, blanks, dates, verification—not a single library as the only implementation.  
-**Last verified:** 2026-07-26

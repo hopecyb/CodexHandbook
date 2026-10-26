@@ -10,9 +10,10 @@ sidebar:
   order: 120
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 5a584b0
+source_revision: '5a584b0'
+reviewed_at: 2026-10-25
 ---
 
 This handbook is an open-source community guide. For product behavior, installers, and plans, rely on official sources:

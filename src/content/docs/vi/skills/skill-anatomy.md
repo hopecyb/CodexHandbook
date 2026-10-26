@@ -8,14 +8,15 @@ title: Cấu trúc Skill
 description: Vai trò và ví dụ của SKILL.md, references/, templates/, scripts/.
 locale: vi
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: "50ca48c"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
-Lần đầu nhìn thư mục Skill, cảm giác thường là"thư mục thì quen, nhưng không biết vì sao xếp vậy".
+Lần đầu nhìn thư mục Skill, cảm giác thường là “thư mục thì quen, nhưng không biết vì sao xếp vậy”.
 
-Trang này giải thích cách tách"quy trình chính, mô tả dài, template, script"ra các chỗ khác nhau, tránh nhét hết vào một file.
+Trang này giải thích cách tách “quy trình chính, mô tả dài, template, script” ra các chỗ khác nhau, tránh nhét hết vào một file.
 
 Như vậy dễ đọc, sửa và tái dùng hơn, cũng ít bị viết càng lúc càng loạn.
 
@@ -32,12 +33,12 @@ my-skill/
 
 ## Mỗi tầng làm gì
 
-- `SKILL.md`: hướng dẫn chính — nói với Codex"đây là gì, khi nào dùng, làm theo bước nào"
+- `SKILL.md`: hướng dẫn chính — nói với Codex “đây là gì, khi nào dùng, làm theo bước nào”
 - `references/`: tủ tài liệu dài — không nhét hết kiến thức nền vào file chính
 - `templates/`: khung đầu ra sẵn — tránh mỗi lần ứng biến
 - `scripts/`: bước chạy được xác định giao cho script — đừng chỉ dựa mô tả ngôn ngữ tự nhiên
 
-Ban đầu thậm chí chỉ cần một `SKILL.md`.  
+Ban đầu thậm chí chỉ cần một `SKILL.md`.
 Sau này thật sự phức tạp hơn mới tách `references/`, `templates/`, `scripts/`.
 
 ## Chỉ tải khi cần, không đưa tất cả vào một lần
@@ -75,7 +76,7 @@ Nhiều Skill tốt ban đầu chỉ có một `SKILL.md`; sau khi tái dùng nh
 
 ### 2. `references/` chỉ để nhét thêm nội dung
 
-Trọng tâm không phải"nhét nhiều", mà là đưa mô tả dài không nên luôn chiếm chú ý quy trình chính sang chỗ chỉ đọc khi cần.
+Trọng tâm không phải “nhét nhiều”, mà là đưa mô tả dài không nên luôn chiếm chú ý quy trình chính sang chỗ chỉ đọc khi cần.
 
 ### 3. `scripts/` càng tránh càng tốt
 
@@ -99,19 +100,16 @@ Có thể quyết theo thứ tự:
 3. Có định dạng đầu ra cố định bị lặp không
 4. Có bước đã ổn định đến mức phù hợp script hóa không
 
-Nếu trong bốn câu có một hai câu"có", có thể bắt đầu tách.
+Nếu trong bốn câu có một hai câu “có”, có thể bắt đầu tách.
 
-Có thể dùng `SKILL.md` chạy thông trước, rồi khi thật sự phức tạp mới dần tách tài liệu, template và script ra.
-
-Thực hành đầy đủ: [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/).
 ## Từ mẫu thành Skill
 
 Nhiều nhóm không bắt đầu bằng việc “thiết kế Skill”, mà bắt đầu từ một Prompt cứ phải sao chép nhiều lần. Có thể phát triển theo các bước:
 
 | Giai đoạn | Hình thái | Khi nào nâng cấp |
 |---|---|---|
-| Prompt một lần | Trong cuộc trò chuyện hiện tại | Chỉ dùng một lần |
-| Mẫu | Thư viện Prompt hoặc tài liệu nhóm | Tác vụ cùng loại lặp lại nhưng bước làm còn thay đổi |
+| Prompt một lần | Trong cuộc trò chuyện hiện tại | Chỉ dùng một lần, không cần tái sử dụng |
+| Mẫu | Thư viện Prompt hoặc tài liệu nhóm | tác vụ cùng loại lặp lại nhưng bước làm còn thay đổi |
 | Skill một tệp | Một `SKILL.md` | Quy trình ổn định, điều kiện kích hoạt rõ |
 | Thư mục Skill hoàn chỉnh | `SKILL.md` + `templates/` + `references/` + `scripts/` | Định dạng đầu ra, tài liệu tham khảo dài, kiểm tra xác định đều ổn định |
 
@@ -127,3 +125,7 @@ Nhiều nhóm không bắt đầu bằng việc “thiết kế Skill”, mà b�
 | Script | Phân tích độ phức tạp, kiểm link, thống kê coverage, kiểm format |
 
 Một Skill tốt không chỉ là Prompt dài hơn, mà là tách quy trình tái dùng thành các phần dễ đọc, kiểm thử được và dễ bảo trì.
+
+Có thể dùng `SKILL.md` chạy thành công trước, rồi khi thật sự phức tạp mới dần tách tài liệu, template và script ra.
+
+Thực hành đầy đủ: [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/).

@@ -12,8 +12,9 @@ title: "Tình huống: sửa lỗi có kiểm chứng"
 description: Dùng lỗi tính chiết khấu có thể chạy thử để tái hiện phép thử thất bại, tìm nguyên nhân, sửa tối thiểu, chạy kiểm thử hồi quy và xem xét diff.
 locale: vi
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: "42d842e"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -202,13 +203,3 @@ Trước tiên chỉ đọc để xác định nguyên nhân gốc và rủi ro;
 - [Chạy kiểm thử](/vi/guide/quality/run-tests/)
 - [Xem xét diff](/vi/guide/quality/review-diffs/)
 - [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** CLI / IDE
-
-**Căn cứ kiểm chứng:** Mã khởi đầu đã được kiểm chứng: 1 trong 3 phép thử thất bại như dự kiến. Đáp án tham khảo đã được kiểm chứng: cả 3 phép thử đều thành công. Trang trình bày chuỗi bằng chứng theo thứ tự phép thử thất bại, nguyên nhân gốc, bản sửa tối thiểu, phép thử thành công, kiểm thử hồi quy và xem xét thủ công.
-
-**Kiểm chứng gần nhất:** 2026-08-25

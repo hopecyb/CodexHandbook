@@ -1,28 +1,28 @@
 ---
-title: "Portée et priorité de AGENTS.md"
-description: "Comprendre précisément comment les règles globales, celles de la racine du projet et celles du répertoire courant sont découvertes et fusionnées."
+title: Portée et priorité de AGENTS.md
+description: Comprendre précisément comment les règles globales, celles de la racine du projet et celles du répertoire courant sont découvertes et fusionnées.
 contentType: reference
 editorialStatus: review
 verification:
   kind: source-checked
-  checkedAt: "2026-09-18"
-  summary: "Les règles officielles de découverte et de fusion ont été vérifiées point par point ; les exemples de répertoires et les conseils de vérification du chargement sont pédagogiques, sans prétendre avoir été testés sur tous les clients."
+  checkedAt: '2026-09-18'
+  summary: Les règles officielles de découverte et de fusion ont été vérifiées point par point ; les exemples de répertoires et les conseils de vérification du chargement sont pédagogiques, sans prétendre avoir été testés sur tous les clients.
   evidence:
-    - label: "AGENTS.md"
+    - label: AGENTS.md
       href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
 legacyVerification:
-  status: "verified"
-  products: "App、CLI、IDE、Cloud"
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App、CLI、IDE、Cloud
+  checkedAt: '2026-08-26'
 locale: fr
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
+source_revision: "b5f31cc"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
-
 Codex construit une chaîne d'instructions au début de chaque exécution. Il faut d'abord comprendre l'ordre de découverte des fichiers `AGENTS.md` eux-mêmes, plutôt que de supposer un classement mêlant politique d'organisation, configuration et prompts.
 
 ## Ordre officiel de découverte

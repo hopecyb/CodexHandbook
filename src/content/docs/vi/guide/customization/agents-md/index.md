@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với các chương ngữ cảnh dự án, quy trình và kiểm chứng đã kiểm chứng trong sổ tay; trang này chỉ nói định vị ổn định của `AGENTS.md` như quy tắc cộng tác dài hạn cấp dự án, không viết lối vào client cụ thể hoặc hiện thực quản trị thành hợp đồng dài hạn.", "checkedAt": "2026-07-26"}
 title: AGENTS.md
 description: Trang mô tả chỉ thị dài hạn cấp dự án — phân rõ viết cho ai, giải quyết gì, rồi mới viết nội dung.
 locale: vi
 source_locale: zh-CN
-source_revision: cb6371f
+source_revision: "cb6371f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Nhiều người lần đầu thấy `AGENTS.md` hiểu thành “thêm một Prompt dài hơn”.
@@ -27,11 +28,4 @@ Nó phù hợp mang những ước định bạn không muốn nói lại mỗi 
 - Nó nên ngắn, đúng, thực thi được, không nên nhét thành tài liệu dài
 - Nó có quan hệ ưu tiên với sở thích cá nhân và chiến lược quản trị nhóm
 
-Giá trị của `AGENTS.md` nằm ở việc hạ ước định dự án ổn định dài hạn xuống kho.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh dự án, quy trình và kiểm chứng đã kiểm chứng trong sổ tay; trang này chỉ nói định vị ổn định của `AGENTS.md` như quy tắc cộng tác dài hạn cấp dự án, không viết lối vào client cụ thể hoặc hiện thực quản trị thành hợp đồng dài hạn.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Giá trị của `AGENTS.md` nằm ở việc lưu các quy ước ổn định lâu dài của dự án trong kho.

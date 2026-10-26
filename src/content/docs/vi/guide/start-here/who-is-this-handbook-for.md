@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả đối tượng độc giả và tình huống sử dụng của cẩm nang; liên kết nội bộ và cách phân tầng độc giả đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Cẩm nang này dành cho ai
 description: Giải thích cách người mới, người sáng tạo, nhà phát triển và nhóm dùng cẩm nang này.
 locale: vi
 source_locale: zh-CN
-source_revision: 95272c3
+source_revision: "95272c3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 3
 ---
@@ -44,7 +49,7 @@ Vì vậy bốn nhóm độc giả này gần với bốn **tình huống sử d
 
 ## Đối tượng chính
 
-Nội dung chủ yếu viết cho **độc giả chưa quen terminal và Agent**. Nội dung cho nhà phát triển và nhóm không vì thế mà nông hơn — chỉ được triển khai dần theo lộ trình học.
+Nội dung chủ yếu viết cho **độc giả chưa quen terminal và Agent**. Nội dung cho nhà phát triển và nhóm vẫn giữ đầy đủ chiều sâu — chỉ được triển khai dần theo lộ trình học.
 
 ## Hiểu nhầm thường gặp
 
@@ -71,8 +76,8 @@ Phần «trước khi bắt đầu», «khái niệm nền tảng», «tác vụ
 Nhiều người đọc như sau:
 
 1. Đọc trang khởi đầu
-2. Chạy thông một tác vụ nhỏ đầu tiên
-3. Rồi nhảy đọc theo vai trò của mình
+2. Hoàn thành một tác vụ nhỏ đầu tiên
+3. Sau đó chọn đọc theo vai trò của mình
 
 ## Không nên coi cẩm nang là gì
 
@@ -90,10 +95,3 @@ Nếu bạn có các nhu cầu sau, cẩm nang đáng để xem:
 - Bạn không xuất thân từ phát triển, nhưng muốn đưa AI thật sự vào công việc hàng ngày
 
 Bước tiếp theo: [Chọn đường đi của bạn](/vi/guide/start-here/choose-your-path/).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả đối tượng độc giả và tình huống sử dụng của cẩm nang; liên kết nội bộ và cách phân tầng độc giả đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

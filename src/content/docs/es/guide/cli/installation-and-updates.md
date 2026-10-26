@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Comparado con el inicio rápido actual de la CLI para los puntos de entrada de macOS/Linux, Windows, npm y Homebrew, las rutas de actualización y el inicio de sesión con `codex`. Los comandos exactos se mantienen en la página de instalación para principiantes.
+  checkedAt: '2026-08-26'
 title: Instalación y actualizaciones de la CLI
 description: Instala, actualiza y confirma la versión activa.
 locale: es
-source_locale: zh-cn
-source_revision: be3f2c4
+source_locale: zh-CN
+source_revision: "be3f2c4"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -54,13 +59,3 @@ Después de instalar:
 El criterio práctico es que esta terminal pueda encontrar el comando y que la autenticación termine correctamente.
 
 Consulta también [Instalar la CLI](/es/guide/getting-started/install-cli/). Las instrucciones actuales de instalación y actualización están en [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). El instalador independiente oficial para macOS/Linux usa el mismo comando para instalar y actualizar; para Windows, npm o Homebrew, usa la pestaña correspondiente de la página vigente.
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** CLI
-
-**Base de verificación:** Comparado con el inicio rápido actual de la CLI para los puntos de entrada de macOS/Linux, Windows, npm y Homebrew, las rutas de actualización y el inicio de sesión con `codex`. Los comandos exactos se mantienen en la página de instalación para principiantes.
-
-**Última verificación:** 2026-08-26

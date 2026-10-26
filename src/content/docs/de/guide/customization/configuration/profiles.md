@@ -5,10 +5,14 @@ sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 6ab30c5
+source_revision: "6ab30c5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI"
+  checkedAt: 2026-08-26 (lokal mit `codex-cli 0.148.0`)
 ---
 
 Der aktuelle CLI-Parameter `--profile <name>` ergänzt die grundlegende Benutzerkonfiguration um `$CODEX_HOME/<name>.config.toml`. Er ist hauptsächlich für CLI-Szenarien gedacht und darf nicht als allgemeiner „Ein-Klick-Modus“ der Desktop-App beschrieben werden.
@@ -78,11 +82,3 @@ Konfigurationsprofile liegen im Codex-Home-Verzeichnis des Benutzers und sind in
 
 - [Codex-Konfigurationsschema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
 - [Konfigurationsebenen im Quellcode der Codex CLI](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Zuletzt geprüft:** 2026-08-26 (lokal mit `codex-cli 0.148.0`)

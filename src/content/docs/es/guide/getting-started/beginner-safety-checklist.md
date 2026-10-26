@@ -3,12 +3,17 @@ title: Lista de seguridad para principiantes
 description: Comprobaciones de seguridad obligatorias antes del primer uso.
 locale: es
 source_locale: zh-CN
-source_revision: 75bfe4d
+source_revision: '75bfe4d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 120
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Se cruzó con las secciones ya verificadas de Aprobación, Sandbox y red, revisión de resultados y deshacer/recuperar; esta página solo indica las premisas de seguridad y las prácticas de bajo riesgo que conviene confirmar antes del primer uso, sin depender de detalles de interfaz del producto.
+  checkedAt: '2026-07-26'
 ---
 
 Antes del primer uso, pregúntate: «Si se equivoca, ¿pagaré un precio demasiado alto?»
@@ -18,7 +23,7 @@ Esta lista existe para bajar el riesgo del primer uso.
 Marca antes de empezar:
 
 - [ ] Uso un directorio de práctica descartable, no un repositorio de producción
-- [ ] En el directorio no hay claves reales, contraseñas ni privacidad de clientes
+- [ ] En el directorio no hay claves reales, contraseñas ni datos privados de clientes
 - [ ] Entiendo que las operaciones de alto riesgo requieren mi Aprobación
 - [ ] No aprobaré comandos o peticiones de red que no entienda
 - [ ] Revisaré el Diff antes de aceptar el resultado
@@ -46,10 +51,3 @@ Los problemas más frecuentes la primera vez son:
 Puedes aprender usándolo, pero pasar por estos puntos antes de empezar es más seguro.
 
 La primera vez con Codex, baja primero el coste de equivocarte; después todo será más fácil.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con las secciones ya verificadas de Aprobación, Sandbox y red, revisión de resultados y deshacer/recuperar; esta página solo indica las premisas de seguridad y las prácticas de bajo riesgo que conviene confirmar antes del primer uso, sin depender de detalles de interfaz del producto.  
-**Última verificación:** 2026-07-26

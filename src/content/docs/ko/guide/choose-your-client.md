@@ -5,10 +5,15 @@ sidebar:
   order: 2
 locale: ko
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 현재 ChatGPT 데스크톱 App, Codex CLI, IDE, Cloud 공식 설명과 대조했습니다. 작업 위치와 상호작용 방식에 따라 선택 기준을 제시하며 VS Code 호환 확장과 Xcode, JetBrains 각각의 통합 방식을 구분합니다.
+  checkedAt: '2026-08-26'
 ---
 
 처음 Codex 진입점을 선택할 때 수십 개의 기능을 먼저 비교할 필요는 없습니다. 한 가지 질문부터 답하세요. **이번 작업은 주로 어디에서 이루어집니까?**
@@ -76,7 +81,7 @@ Cloud는 원격 저장소가 연결되어 있고 작업을 로컬 컴퓨터와 �
 
 ### 상황 1: 실제 프로젝트에서 처음 bug 수정하기
 
-데스크톱 App부터 사용하세요. 작업 대화, 변경, 권한 요청을 한곳에서 볼 수 있습니다. 전체 폐루프를 한 번 완료한 뒤 CLI나 IDE를 시도합니다.
+데스크톱 App부터 사용하세요. 작업 대화, 변경, 권한 요청을 한곳에서 볼 수 있습니다. 작업부터 검증까지의 전체 과정를 한 번 완료한 뒤 CLI나 IDE를 시도합니다.
 
 ### 상황 2: 팀에 고정 명령과 CI 규칙이 있는 경우
 
@@ -84,7 +89,7 @@ CLI를 우선 사용하고 설치, 테스트, 포맷 명령을 `AGENTS.md`에 �
 
 ## 선택한 뒤 즉시 검증하기
 
-클라이언트가 “열린다”는 사실만 확인하지 마세요. 연습용 저장소에서 다음 폐루프를 완료합니다.
+클라이언트가 “열린다”는 사실만 확인하지 마세요. 연습용 저장소에서 다음 과정를 완료합니다.
 
 1. Codex가 파일 하나를 읽고 설명하게 합니다.
 2. 되돌릴 수 있는 작은 수정을 요청합니다.
@@ -93,13 +98,3 @@ CLI를 우선 사용하고 설치, 테스트, 포맷 명령을 `AGENTS.md`에 �
 5. 권한 요청을 거부하거나 범위를 줄이는 방법을 아는지 확인합니다.
 
 전체 비교는 [기능 비교](/ko/guide/reference/feature-comparison/), 안전 경계는 [권한과 샌드박스](/ko/guide/permissions-and-sandbox/)를 참고하세요.
-
----
-
-**상태:** verified
-
-**적용 제품:** App / CLI / IDE / Cloud
-
-**검증 근거:** 현재 ChatGPT 데스크톱 App, Codex CLI, IDE, Cloud 공식 설명과 대조했습니다. 작업 위치와 상호작용 방식에 따라 선택 기준을 제시하며 VS Code 호환 확장과 Xcode, JetBrains 각각의 통합 방식을 구분합니다.
-
-**최근 검증:** 2026-08-26

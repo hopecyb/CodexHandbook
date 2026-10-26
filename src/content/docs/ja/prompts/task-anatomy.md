@@ -3,10 +3,15 @@ title: 良いタスクの構造
 description: 目標、背景、入力、制約、受け入れ基準、権限の境界を明確にします。
 locale: ja
 source_locale: zh-CN
-source_revision: 98c0511
+source_revision: "98c0511"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  basis: "このページはタスク構造の方法だけを扱います。例とサイト内リンクは再確認済みで、本文は製品バージョン、価格、画面など変化しやすい事実に依存していません。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  checkedAt: '2026-08-25'
 ---
 
 依頼に含める情報が増えると、説明が散らかりやすくなります。材料は多くても、結果、境界、受け入れ基準が混在していると、Codex は空白を自分で補うしかありません。
@@ -142,10 +147,3 @@ reviewed_at: 2026-08-26
 - [制約と境界](/ja/prompts/constraints-and-boundaries/)
 - [先に計画を求める](/ja/prompts/ask-for-a-plan/)
 - [調査—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**ステータス：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** このページはタスク構造の方法だけを扱います。例とサイト内リンクは再確認済みで、本文は製品バージョン、価格、画面など変化しやすい事実に依存していません。  
-**最終確認：** 2026-08-25

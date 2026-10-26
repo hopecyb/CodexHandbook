@@ -1,19 +1,24 @@
 ---
-title: Tham chiếu lỗi
+title: "Tham chiếu lỗi"
 description: "Chỉ mục học lỗi thường gặp, mã thoát và dạng thất bại — trỏ tới xử lý sự cố, không thay hỗ trợ chính thức."
-locale: vi
-source_locale: zh-CN
-source_revision: 955c0a6
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "955c0a6"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 100
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Định vị là chỉ mục phân loại lỗi, không phải từ điển đầy đủ; năm hạng mục đã đối chiếu chéo với các chương CLI, Cloud, quyền và cấu hình hiện tại — không yêu cầu bảng mã lỗi cố định."
+  checkedAt: "2026-07-26"
 ---
 
-Nhiều người cố định một dòng tiếng Anh rồi đoán. Phân loại vấn đề trước thường hiệu quả hơn.
+Nhiều người chỉ nhìn chằm chằm vào một dòng lỗi tiếng Anh rồi đoán nguyên nhân. Phân loại vấn đề trước thường hiệu quả hơn.
 
-Quyết định nó giống **auth, quyền, môi trường, mạng hay logic Tác vụ**. Trang này tóm tắt thông báo thường gặp và bước tiếp — không phải từ điển lỗi đầy đủ; hành vi mới nhất = tài liệu chính thức và đầu ra client.
+Quyết định nó giống **auth, quyền, môi trường, mạng hay logic Tác vụ**. Trang này tóm tắt thông báo thường gặp và bước tiếp — không phải từ điển lỗi đầy đủ; hành vi hiện tại phải được đối chiếu với tài liệu chính thức và đầu ra của ứng dụng khách.
 
 ## Cách đọc một lỗi
 
@@ -30,7 +35,7 @@ Chỉ mục toàn cục: [Xử lý sự cố](/vi/guide/reference/troubleshootin
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
 | Authentication failed / 401 | Token hết hạn, chưa đăng nhập | [Đăng nhập và xác thực](/vi/guide/getting-started/sign-in-and-authentication/) |
-| Chính sách tổ chức | Org tắt tính năng hoặc mô hình | Liên hệ admin; [Tài khoản và truy cập](/vi/guide/getting-started/account-plans-and-access/) |
+| Organization policy | Org tắt tính năng hoặc mô hình | Liên hệ admin; [Tài khoản và truy cập](/vi/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Quá thường xuyên hoặc hết quota | Thử lại sau; kiểm mức dùng gói |
 
 ## Hiểu nhầm thường gặp
@@ -151,9 +156,3 @@ Tránh trộn nhiều thay đổi.
 
 ## Nguồn tham chiếu
 - Tài liệu hỗ trợ OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Định vị là chỉ mục phân loại lỗi, không phải từ điển đầy đủ; năm hạng mục đã đối chiếu chéo với các chương CLI, Cloud, quyền và cấu hình hiện tại — không yêu cầu bảng mã lỗi cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

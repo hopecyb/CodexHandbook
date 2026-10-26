@@ -8,8 +8,9 @@ title: Prompt-Vorlagen
 description: 'Wiederverwendbare Prompt-Gerüste nach Aufgabentyp — Verstehen, Erstellen, Ändern, Diagnostizieren, Review, Recherchieren, Automatisieren.'
 locale: de
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: "fae2ed3"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -30,7 +31,7 @@ Ziel der Vorlagenseiten: Aufgabenstruktur halten, nicht die einzig richtige Antw
 3. Irrelevante Abschnitte streichen
 4. Aufgabenspezifische Constraints und Abnahme ergänzen
 
-Vorlagen sind Gerüst, keine Musterlösung.
+Vorlagen sind ein Gerüst, keine Musterlösung.
 
 | Vorlage | Wann |
 |---|---|
@@ -46,7 +47,7 @@ Vorlagen sind Gerüst, keine Musterlösung.
 
 Manche Prompts werden nur einmal gebraucht. Andere wiederholen sich so oft, dass sie stabilisiert werden sollten.
 
-| Wiederkehrende Aufgabe | Zuerst als | Stabil später als |
+| Wiederkehrende Aufgabe | Zuerst als | Nach Stabilisierung als |
 |---|---|---|
 | PR-Vorbereitung | Review-/Änderungsvorlage | Skill mit fester Checkliste |
 | API-Dokumentation erzeugen | Erstell-/Änderungsvorlage | Skill + Dokumentationsskript |

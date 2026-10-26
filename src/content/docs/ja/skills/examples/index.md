@@ -8,9 +8,10 @@ title: "Skillの例"
 description: "執筆、レビュー、調査、自動化の4種類のSkill例への入口。"
 locale: ja
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: "490db95"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 例を選ぶ前に、資料の状態を確認してください。完成したパッケージには入力、参考資料、検証スクリプトがあります。骨組みには資料と実際の確認を追加する必要があり、そのまま検証済みのワークフローとして使うことはできません。

@@ -1,18 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur, worauf Diff-Reviews bei Umfang und Risiken achten; interne Links und Prüfreihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Diffs prüfen
 description: Änderungen lesen und gezielte Fragen stellen.
 locale: de
 source_locale: zh-CN
-source_revision: f7f953f
-translation_status: draft
+source_revision: "f7f953f"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: 2026-10-26
 ---
 
 „Diff“ meint: welche Stellen Codex diesmal wirklich geändert hat.
 
-Viele schauen bei der ersten Abnahme nur die Zusammenfassung an, nicht die reale Änderung.  
+Viele schauen bei der ersten Abnahme nur die Zusammenfassung an, nicht die reale Änderung.
 Probleme erkennt man vor allem am Diff; „ich bin fertig“-Texte sind nur Referenz.
 
 ## Was der Diff zeigt
@@ -52,7 +58,7 @@ Für einen schnellen Review kannst du Codex bitten, seinen Diff anhand dieser Ta
 
 ### 1. Auch ohne tiefes Diff-Lesen lohnt sich Basis-Review
 
-Phase eins muss nicht jede Zeile Logik wie bei Senior-Devs lesen.  
+Am Anfang musst du nicht jede Codezeile wie ein erfahrener Entwickler prüfen.
 Schon diese drei Punkte sind wertvoll:
 
 - Welche Dateien
@@ -61,7 +67,7 @@ Schon diese drei Punkte sind wertvoll:
 
 ### 2. Nur eine Datei ≠ automatisch sicher
 
-Weniger Dateien heißt nicht automatisch richtig.  
+Weniger Dateien heißt nicht automatisch richtig.
 Aber der Umfang ist kleiner — leichter zu prüfen und zurückzunehmen.
 
 ### 3. „Nur eine kleine Änderung“ trotzdem ansehen
@@ -77,11 +83,4 @@ Beim ersten Diff:
 3. Ob klare Fehl-Löschungen, Temporärlogs, Debug-Reste
 4. Ob Stil und Namen passen
 
-Zuerst sehen, was wirklich geändert wurde — dann entscheiden, ob Sie das Ergebnis annehmen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur, worauf Diff-Reviews bei Umfang und Risiken achten; interne Links und Prüfreihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26
+Zuerst sehen, was wirklich geändert wurde — dann entscheiden, ob du das Ergebnis annimmst.

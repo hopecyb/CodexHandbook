@@ -12,8 +12,9 @@ verification:
       href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: vi
 source_locale: zh-CN
-source_revision: d668433
-translation_status: draft
+source_revision: "d668433"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 ## Sự kiện và phạm vi có thể kiểm chứng

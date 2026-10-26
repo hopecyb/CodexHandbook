@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de EPXV, recuperación ante fallos, instrucciones de proyecto y la estructura de la biblioteca de casos. Esta página solo ofrece una plantilla unificada para redactar y hacer retrospectiva; no declara comportamiento concreto del producto.
+  checkedAt: '2026-07-26'
 title: Plantilla de caso
-description: Estructura unificada para redactar y hacer retrospectiva de casos de Codex — facilita la captura y la comparación en el equipo.
+description: Estructura unificada para redactar y revisar casos de Codex, conservar lo aprendido y compararlos en equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: "74ef905"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Copia esta plantilla para crear una página de caso nueva o un documento interno de retrospectiva.
@@ -74,9 +79,3 @@ Antes de copiarla, elimina las secciones que no necesites según el lector y el 
 ## 6. Fuentes de referencia
 - Enlaces a documentación oficial
 - Si este caso se adapta de un tutorial externo (solo el tipo de tarea)
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de EPXV, recuperación ante fallos, instrucciones de proyecto y la estructura de la biblioteca de casos. Esta página solo ofrece una plantilla unificada para redactar y hacer retrospectiva; no declara comportamiento concreto del producto.

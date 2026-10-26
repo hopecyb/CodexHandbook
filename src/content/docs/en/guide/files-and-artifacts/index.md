@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against current files-and-artifacts subsection structure and verified verify-artifacts, definition-of-done, sensitive-context, and image-related pages; stable principle: choose instructions and verification by file type."
+  checkedAt: "2026-07-26"
 title: Files and Artifacts
 description: How Codex reads and writes file types, manages generated outputs, and what to verify.
 sidebar:
   order: 30
 locale: en
 source_locale: zh-CN
-source_revision: 543d14e
+source_revision: '543d14e'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Codex often produces **file changes in the repo** or **new artifacts** (docs, images, config). This section covers best practices by file type so you do not end up with “generated but unusable.”
@@ -92,10 +97,3 @@ Easier than reading the whole chapter at once.
 - Generate images: [Image generation](/en/guide/tools/image-generation/)
 
 File tasks often fail quietly—format, rules, or content drift while the file “exists.”
-
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against current files-and-artifacts subsection structure and verified verify-artifacts, definition-of-done, sensitive-context, and image-related pages; stable principle: choose instructions and verification by file type.  
-**Last verified:** 2026-07-26

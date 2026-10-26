@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App / Mobile; Codex Desktop und CLI; IDE-Erweiterung unterstützt keine Plugins"
+  checkedAt: "2026-08-26"
 title: Plugins
 description: Durchsuche, installiere und verwalte wiederverwendbare Pakete aus Skills, Connectoren, MCP, Hooks und Aufgabenvorlagen.
 locale: de
 source_locale: zh-CN
-source_revision: 8917a59
+source_revision: "8917a59"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein Plugin ist eine Einheit zum Bündeln und Verteilen von Funktionen. Es kann Skills, Connectoren, MCP-Server, Browsererweiterungen, Hooks und Vorlagen für Scheduled tasks enthalten. Die eigentliche Arbeit führen weiterhin diese enthaltenen Komponenten aus.
@@ -38,16 +42,8 @@ Ein Plugin ist eine Einheit zum Bündeln und Verteilen von Funktionen. Es kann S
 2. Welche Skills, Connectoren, MCP-Server, Browserfunktionen und Hooks sind enthalten?
 3. Müssen externe Konten verbunden werden, und welche Scopes erhält das Plugin?
 4. Wurden Hooks unter `/hooks` geprüft und als vertrauenswürdig markiert?
-5. Wie deaktiviert, aktualisiert und entfernt das Team das Plugin und widerruft Berechtigungen?
+5. Wie deaktiviert oder aktualisiert das Team das Plugin, setzt es auf eine frühere Version zurück und widerruft Berechtigungen?
 
 ## Offizielle Quelle
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App / Mobile; Codex Desktop und CLI; IDE-Erweiterung unterstützt keine Plugins
-
-**Zuletzt geprüft:** 2026-08-26

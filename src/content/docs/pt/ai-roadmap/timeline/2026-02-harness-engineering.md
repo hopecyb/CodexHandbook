@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/harness-engineering/"
 locale: pt
 source_locale: zh-CN
-source_revision: 268e611
-translation_status: draft
+source_revision: "268e611"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 ## Evento verificável e escopo

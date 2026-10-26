@@ -1,14 +1,18 @@
 ---
 title: インターネットアクセス
-description: インストール時と Agent 実行時のネットワークを区別し、ドメインと HTTP method でリスクを制限します。
+description: インストール時と Agent 実行時のネットワークを区別し、ドメインと HTTP メソッド でリスクを制限します。
 locale: ja
 source_locale: zh-CN
-source_revision: 5bbb905
+source_revision: "5bbb905"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Cloud には異なる二つのネットワークフェーズがあります。
@@ -22,7 +26,7 @@ Cloud には異なる二つのネットワークフェーズがあります。
 
 ## デフォルトで無効にする理由
 
-Agent のインターネットアクセスには、prompt injection、コードやデータの外部送信、悪意のある依存関係、ライセンスに適合しない内容がリポジトリへ入るリスクがあります。信頼できない issue、Web ページ、依存関係の README に、データ送信コマンドを実行させる指示が含まれる可能性もあります。
+Agent のインターネットアクセスには、プロンプトインジェクション、コードやデータの外部送信、悪意のある依存関係、ライセンスに適合しない内容がリポジトリへ入るリスクがあります。信頼できない issue、Web ページ、依存関係の README に、データ送信コマンドを実行させる指示が含まれる可能性もあります。
 
 原則は、タスクに必要な接続先と操作だけを許可し、作業ログをレビューすることです。
 
@@ -31,11 +35,11 @@ Agent のインターネットアクセスには、prompt injection、コード�
 Agent のインターネットアクセスは環境ごとに設定します。
 
 - **Off**：Agent のインターネットアクセスを完全にブロック
-- **On**：アクセスを許可し、ドメインと HTTP method で制限可能
+- **On**：アクセスを許可し、ドメインと HTTP メソッド で制限可能
 
 ドメイン一覧は空から開始するか、Common dependencies の preset、または All（unrestricted）を選択できます。本番リポジトリで unrestricted をトラブルシューティングの近道として使わないでください。
 
-タスクが文書またはコンテンツを読み取るだけなら、HTTP method を `GET`、`HEAD`、`OPTIONS` に制限します。これにより、データ送信や変更につながりうる `POST`、`PUT`、`PATCH`、`DELETE` をブロックできます。
+タスクが文書またはコンテンツを読み取るだけなら、HTTP メソッド を `GET`、`HEAD`、`OPTIONS` に制限します。これにより、データ送信や変更につながりうる `POST`、`PUT`、`PATCH`、`DELETE` をブロックできます。
 
 ## 最小限の許可例
 
@@ -56,8 +60,8 @@ Cloud Secret は Agent フェーズの前に削除されるため、Agent が se
 
 - [ ] Agent フェーズにインターネットが必要な理由を説明した
 - [ ] allowlist は必要なドメインだけを含む
-- [ ] HTTP method を最小の集合に制限した
-- [ ] 入力元を信頼できる、または prompt injection を考慮した
+- [ ] HTTP メソッド を最小の集合に制限した
+- [ ] 入力元を信頼できる、または プロンプトインジェクション を考慮した
 - [ ] ログにリポジトリ、環境、認証情報を送信するコマンドがない
 - [ ] 新しい依存関係の配布元、バージョン、ライセンスを確認した
 
@@ -65,11 +69,3 @@ Cloud Secret は Agent フェーズの前に削除されるため、Agent が se
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud
-
-**最終検証：** 2026-08-26

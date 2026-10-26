@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với loạt trang `AGENTS.md` hiện tại của kho, các chương ngữ cảnh và quy trình; trang này chỉ nói nguyên tắc viết ổn định và nhịp duy trì của chỉ thị dự án, không viết chi tiết hiện thực của một client thành cam kết dài hạn.", "checkedAt": "2026-07-26"}
 title: Viết chỉ thị dự án tốt
 description: Danh sách viết AGENTS.md — ngắn, cứng, thực thi được, kiểm chứng được.
 locale: vi
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: "63dd711"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -117,7 +118,7 @@ Quá phân tán, quá dài, quá giống bách khoa sẽ nhấn chìm quy tắc 
 
 ### 2. Chỉ viết “chú ý quy chuẩn” cũng tính chỉ thị?
 
-Loại câu này thường chưa thực thi được.  
+Loại câu này thường chưa thực thi được.
 Cách viết phù hợp hơn là đưa thẳng:
 
 - Lệnh thật
@@ -126,7 +127,7 @@ Cách viết phù hợp hơn là đưa thẳng:
 
 ### 3. Mô tả nền và quy tắc thực thi có trộn tùy ý?
 
-Cũng không khuyến nghị.  
+Cũng không khuyến nghị.
 Cách phù hợp hơn:
 
 - Quy tắc đặt trước
@@ -165,14 +166,7 @@ Không phải Prompt tốt nào cũng nên nhét thẳng vào `AGENTS.md`. Trư�
 | “Không sửa thư mục generated” | Mục cấm trong `AGENTS.md` |
 | “Mỗi PR review theo định dạng cố định” | Skill hoặc mẫu Prompt |
 | “Sau khi ghi file thì tự format” | Hook |
-| “Đọc Linear/Jira trước khi code” | MCP + Skill tương ứng |
+| “Đọc Linear/Jira trước khi xử lý ticket” | MCP + Skill tương ứng |
 | “Tôi thích giải thích bằng tiếng Trung” | Bộ nhớ hoặc sở thích cá nhân |
 
 `AGENTS.md` hợp nhất với quy tắc dài hạn, chia sẻ trong nhóm và kiểm chứng được. Nội dung quy trình có thể chuyển sang Skill; kiểm tra tự động giao cho Hook; truy cập hệ thống ngoài giao cho MCP.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với loạt trang `AGENTS.md` hiện tại của kho, các chương ngữ cảnh và quy trình; trang này chỉ nói nguyên tắc viết ổn định và nhịp duy trì của chỉ thị dự án, không viết chi tiết hiện thực của một client thành cam kết dài hạn.  
-**Kiểm chứng gần nhất:** 2026-07-26

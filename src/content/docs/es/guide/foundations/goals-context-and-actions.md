@@ -3,17 +3,22 @@ title: Objetivo, Contexto y acciones
 description: Descompone una interacción exitosa en objetivo, trasfondo, acciones y aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 280cea9
+source_revision: '280cea9'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica el marco de desglose de Tarea en objetivo, Contexto, acciones y aceptación; se revisaron enlaces internos y la estructura del ejemplo, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
 Algunas Tareas fluyen enseguida; otras se tuercen cuanto más hablas. La diferencia no es que el modelo se vuelva de pronto más listo o más torpe, sino si desglosaste bien la Tarea.
 
-En versión mínima: el objetivo dice «qué debe quedar al final», el Contexto «sobre qué bases», las acciones «qué puede hacer» y la aceptación «hasta dónde cuenta como hecho».
+En versión mínima: el objetivo dice «qué debe quedar al final», el Contexto «sobre qué bases», las acciones «qué puede hacer» y la aceptación «qué condiciones debe cumplir para considerarse terminado».
 
 Una interacción estable con Codex suele tener cuatro bloques:
 
@@ -88,11 +93,4 @@ Eso es más claro que solo escribir «ayúdame con este problema».
 > Acciones: puedes editar ese archivo; no instales dependencias.  
 > Aceptación: al abrir el archivo, los títulos van en niveles continuos de H1 a H3, sin saltos.
 
-Una Tarea estable al menos deja claros el objetivo, el Contexto, los límites de acción y la forma de aceptación.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica el marco de desglose de Tarea en objetivo, Contexto, acciones y aceptación; se revisaron enlaces internos y la estructura del ejemplo, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26
+Para que una tarea avance de forma fiable, deja claros el objetivo, el Contexto, los límites de acción y la forma de aceptación.

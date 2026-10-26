@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / App de escritorio / Codex CLI / IDE (la compatibilidad varía según el mecanismo)
+  basis: Comparado con la documentación oficial de OpenAI sobre Skills, Plugins, MCP, Hooks y Scheduled tasks el 2026-08-25.
+  checkedAt: '2026-08-25'
 title: Cómo elegir un método de extensión
 description: Elige entre prompts, AGENTS.md, Skills, MCP, Hooks, Plugins o Scheduled tasks según lo que deba persistir.
 locale: es
-source_locale: zh-cn
-source_revision: 28ae6f5
+source_locale: zh-CN
+source_revision: "28ae6f5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 El error más común es elegir primero el nombre de una tecnología y buscar después un problema al que aplicarla. Pregunta antes: **¿qué quiero conservar o qué debería suceder automáticamente?**
@@ -44,11 +49,11 @@ Crea un Skill con instrucciones reutilizables y, si hace falta, plantillas, refe
 
 ### 4. ¿Necesitas datos o acciones externas?
 
-Evalúa MCP o un Connector. Enumera las herramientas y los datos necesarios, empieza con solo lectura y privilegio mínimo, y evita una conexión adicional si bastan los archivos o comandos locales.
+Evalúa MCP o un Connector. Enumera las herramientas y los datos necesarios, empieza con solo lectura, privilegio mínimo y una configuración auditable, y evita una conexión adicional si bastan los archivos o comandos locales.
 
 ### 5. ¿Necesitas comprobar algo en un punto fijo del ciclo de vida?
 
-Usa un Hook, por ejemplo para aplicar una política antes de un comando, examinar un parche después de escribir o registrar un resumen final. Prueba los timeouts, fallos y falsos positivos.
+Usa un Hook, por ejemplo para aplicar una política antes de un comando, examinar un parche después de escribir o registrar un resumen final. Como los Hooks se ejecutan automáticamente, prueba los tiempos de espera, fallos y falsos positivos.
 
 ### 6. ¿Necesitas distribuir un conjunto de capacidades?
 
@@ -56,7 +61,7 @@ Usa un Plugin para agrupar Skills, conectores, MCP, Hooks y plantillas de Schedu
 
 ### 7. ¿La tarea ya funciona de forma estable manualmente y debe repetirse por tiempo?
 
-Crea una Scheduled task solo después de verificar el prompt, el Skill, los permisos y el formato de salida. Examina las primeras ejecuciones y conserva puertas humanas para publicar o fusionar.
+Crea una Scheduled task solo después de verificar el prompt, el Skill, los permisos y el formato de salida. Examina las primeras ejecuciones y conserva controles de aprobación humana antes de publicar o fusionar.
 
 ## Correspondencia de escenarios
 
@@ -100,7 +105,7 @@ No. Muchos problemas se resuelven con prompts claros, un alcance bien definido y
 
 ### 2. ¿Cuántas repeticiones justifican crear un Skill?
 
-No hay un número fijo. Importan más la estabilidad de los pasos, la claridad de los criterios de éxito y el coste de los fallos.
+No hay un número fijo. Importan más la estabilidad de los pasos, la claridad de los criterios de éxito y si el coste de los fallos justifica comprobaciones automáticas.
 
 ### 3. ¿Por dónde suele empezar una persona nueva?
 
@@ -119,7 +124,7 @@ Lo importante no es lo avanzado que parezca el mecanismo, sino que la responsabi
 Para revisar el diff antes de fusionar:
 
 1. Ejecuta dos veces un prompt y anota las comprobaciones que tienes que repetir.
-2. Incluye en `AGENTS.md` los comandos fijos del repositorio y la exclusión de archivos generados.
+2. Incluye en `AGENTS.md` los comandos fijos del repositorio, como `pnpm test`, y la prohibición de modificar directorios generados.
 3. Define en un Skill `pr-review` los pasos de revisión, los niveles de gravedad y el formato de salida.
 4. Añade MCP o un Connector solo si necesitas comentarios de GitHub o el estado de CI.
 5. Añade un Hook o una Scheduled task solo para comprobaciones automáticas en momentos fijos.
@@ -141,10 +146,3 @@ Por cada capa añadida, vuelve a preguntar: qué acceso nuevo incorpora, cómo s
 - [Hooks de Codex](https://learn.chatgpt.com/docs/hooks)
 - [Plugins de Codex](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Estado:** verified
-**Productos aplicables:** ChatGPT Web / App de escritorio / Codex CLI / IDE (la compatibilidad varía según el mecanismo)
-**Base de verificación:** Comparado con la documentación oficial de OpenAI sobre Skills, Plugins, MCP, Hooks y Scheduled tasks el 2026-08-25.
-**Última verificación:** 2026-08-25

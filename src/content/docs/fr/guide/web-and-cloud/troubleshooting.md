@@ -3,12 +3,16 @@ title: Dépannage de Cloud
 description: Diagnostiquez les échecs Cloud dans les couches dépôt, setup, réseau, Agent et livraison.
 locale: fr
 source_locale: zh-CN
-source_revision: 019fac1
+source_revision: "019fac1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Relancer une tâche Cloud prend plus de temps, mais n'ajoute ni autorisation, ni dépendance, ni configuration réseau manquantes. Commencez par identifier l'étape qui échoue.
@@ -28,12 +32,12 @@ Relancer une tâche Cloud prend plus de temps, mais n'ajoute ni autorisation, ni
 Consignez le dépôt, le commit de départ, le nom de l'environnement, l'étape en échec, la première erreur significative et la commande complète. Ne conservez pas uniquement « exit 1 ».
 
 ```text
-Environment: api-node22
-Starting point: main@abc123
-Stage: setup
-Command: pnpm install --frozen-lockfile
-First error: ERR_PNPM_FETCH_401 ...
-Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured
+Environnement : api-node22
+Point de départ : main@abc123
+Phase : setup
+Commande : pnpm install --frozen-lockfile
+Première erreur : ERR_PNPM_FETCH_401 ...
+Différence locale : ~/.npmrc est utilisé en local ; NPM_TOKEN n’est pas configuré dans Cloud
 ```
 
 Ce relevé indique une piste de correction au lieu de forcer l'exécution suivante à deviner à nouveau.
@@ -76,11 +80,3 @@ Si le problème dépend d'un service local, ou si deux exécutions consécutives
 - [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Accès Internet de l'Agent](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** Cloud
-
-**Dernière vérification :** 2026-08-26

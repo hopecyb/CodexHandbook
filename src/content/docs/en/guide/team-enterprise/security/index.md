@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Team / enterprise scenarios"
+  basis: "OpenAI plugin, app, and integration docs continue to emphasize risks from external connections, action permissions, source access, and approval boundaries; this page is security section navigation ordered threat model → Plugin/MCP → prompt injection."
+  checkedAt: "2026-07-26"
 title: Security
 description: Team-level risks, attack surface, and defenses—understand where risk lives before controls.
 locale: en
 source_locale: zh-CN
-source_revision: 91ed6a3
+source_revision: '91ed6a3'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Jumping into security detail without framing can leave you with vocabulary but not “what we are defending against.”
@@ -23,13 +28,6 @@ This section reads clearer as: where risk comes from → what layer to block or 
 
 - Team expanding Codex usage
 - You are adding third-party extensions, external tools, or shared rules
-- You need risks that “be careful” alone cannot fix
+- You want to understand risks that “be careful” alone cannot address
 
 Security pages help identify what must be controlled by system boundaries.
-
----
-
-**Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI plugin, app, and integration docs continue to emphasize risks from external connections, action permissions, source access, and approval boundaries; this page is security section navigation ordered threat model → Plugin/MCP → prompt injection.  
-**Last verified:** 2026-07-26

@@ -8,11 +8,12 @@ title: Contexte de projet
 description: Instructions du projet et contexte des dossiers.
 locale: fr
 source_locale: zh-CN
-source_revision: "fb3eb50"
-translation_status: draft
+source_revision: 'fb3eb50'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 Le « contexte de projet » désigne les informations de fond qui restent stables dans un projet et servent à de nombreuses tâches.

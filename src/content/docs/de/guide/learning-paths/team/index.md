@@ -20,8 +20,9 @@ sidebar:
 locale: de
 source_locale: zh-CN
 source_revision: "3b46738"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Beginnen Sie mit einer begrenzten Aufgabe, deren Ergebnis sich prüfen lässt. Sammeln Sie zwei Wochen lang Belege, ob eine breitere Nutzung sinnvoll ist. Zwei Wochen bedeuten hier zehn Arbeitstage. Bei zu wenigen Aufgaben verlängern Sie den Pilot; erklären Sie ihn nicht nur deshalb für erfolgreich, weil die Zeit abgelaufen ist.

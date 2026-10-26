@@ -1,17 +1,23 @@
 ---
 prev: false
 next:
-  link: /vi/guide/learning-paths/beginner/01-talk-to-codex/
-  label: Bắt đầu lộ trình người mới
-title: Lộ trình học
-description: Sắp xếp thứ tự đọc theo vai trò và liên kết tới nội dung chính thức.
+  link: "/vi/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Bắt đầu lộ trình người mới"
+title: "Lộ trình học"
+description: "Sắp xếp thứ tự đọc theo vai trò và liên kết tới nội dung chính thức."
 sidebar:
   order: 5
-locale: vi
-source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "2f7ff71"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu cấu trúc thư mục learning paths, các trang theo vai trò và từng bước của lộ trình người mới trong kho hiện tại. Trang này chỉ hướng dẫn thứ tự đọc theo vai trò, không chứa chi tiết hành vi sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-26"
 ---
 
 Lộ trình học **chỉ sắp xếp thứ tự đọc**, không sao chép các bài dài của sổ tay sản phẩm hay hướng dẫn tính năng.
@@ -76,7 +82,7 @@ Thân bài chịu trách nhiệm nói rõ; lộ trình học chịu trách nhi�
 
 ### 2. Tôi phải xác định mình thuộc một danh tính cố định trước
 
-Chỉ cần phán một việc:  
+Chỉ cần phán một việc:
 **Vấn đề chính bạn muốn giải quyết ngay giờ là gì.**
 
 ### 3. Một lộ trình phải học từ đầu đến cuối, không được nhảy
@@ -88,7 +94,7 @@ Lộ trình là thứ tự khuyến nghị, không phải quy trình bắt buộ
 Nếu chưa chắc đi lộ trình nào, chọn theo cách này:
 
 - Chưa chạy thông Tác vụ đầy đủ lần đầu: đi [Lộ trình người mới](/vi/guide/learning-paths/beginner/)
-- Chủ yếu muốn viết nội dung, làm đồ họa chữ, làm demo: xem [Lộ trình người sáng tạo](/vi/guide/learning-paths/creator/)
+- Chủ yếu muốn viết nội dung, làm nội dung kết hợp chữ và hình, làm bài trình chiếu: xem [Lộ trình người sáng tạo](/vi/guide/learning-paths/creator/)
 - Chủ yếu muốn sửa code, sửa bug, nhận dự án: xem [Lộ trình nhà phát triển](/vi/guide/learning-paths/developer/)
 - Chủ yếu nghĩ đội triển khai thế nào, kiểm soát rủi ro thế nào: xem [Lộ trình đội](/vi/guide/learning-paths/team/)
 

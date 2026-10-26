@@ -1,26 +1,27 @@
 ---
-title: Contexto da conversa
-description: Como a informação se acumula e deixa de valer na mesma Thread.
+title: contexto da conversa
+description: Como a informação se acumula e deixa de valer na mesma thread.
 locale: pt
 source_locale: zh-CN
-source_revision: 3968049
+source_revision: "3968049"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Esta página só explica como o contexto na mesma thread se acumula e se fecha; conceitos, exemplos e ligações internas foram revistos, e o corpo não depende de fatos voláteis do produto.", "checkedAt": "2026-07-26"}
 ---
 
-«Contexto da conversa» significa: o que disse antes com o Codex na mesma Tarefa continua a influenciar o que vem a seguir. Ajuda — e também traz risco.
+«Contexto da conversa» significa: o que disse antes com o Codex na mesma tarefa continua a influenciar o que vem a seguir. Ajuda — e também traz risco.
 
 ## Por que é útil
 
-A mesma Thread acumula:
+A mesma thread acumula:
 
 - Os seus objetivos e restrições
 - Conclusões da discussão a meio
 - Passos já executados
-- Informação-chave na saída das Ferramentas
+- Informação-chave na saída das ferramentas
 
 Por exemplo, se já disse «altere só a página inicial, não mexa no backend», em geral não precisa de repetir isso em cada frase.
 
@@ -31,43 +32,43 @@ O problema comum: **informação antiga não deixa automaticamente de valer.**
 Situações habituais:
 
 - Restrições que disse antes e depois esqueceu de atualizar
-- A direção da Tarefa já mudou, mas continua a conversar no Contexto antigo
+- A direção da tarefa já mudou, mas continua a conversar no contexto antigo
 - Uma conclusão temporária anterior deixou de ser válida, mas ainda influencia o julgamento seguinte
 
-Por isso o ponto não é alongar a conversa: quanto mais longa, mais precisa de fechar ativamente.
+Por isso o ponto não é alongar a conversa: quanto mais longa, mais importante é delimitar novamente o foco.
 
 ## Quando reafirmar restrições-chave
 
 Algumas coisas, mesmo já ditas, convém repetir em pontos-chave, por exemplo:
 
-- Antes de começar a alterar ficheiros de verdade
-- Depois de a direção da Tarefa mudar
+- Antes de começar a alterar arquivos de verdade
+- Depois de a direção da tarefa mudar
 - Quando a conversa já está longa
 - Quando percebe que começa a ignorar uma fronteira
 
 Em especial, estas informações merecem ser relembradas:
 
-- Só alterar que ficheiros
+- Só alterar que arquivos
 - O que não fazer
 - Qual o critério de conclusão
 - Que restrições ainda valem
 
 ## Mal-entendidos frequentes
 
-### 1. Quanto mais longa a mesma Thread, mais conveniente?
+### 1. Quanto mais longa a mesma thread, mais conveniente?
 
 Não necessariamente.
 
-Se o tema for sempre o mesmo, uma Thread longa é conveniente.  
-Se a Tarefa já mudou de direção, continuar na Thread antiga é mais fácil de desviar a Tarefa nova.
+Se o tema for sempre o mesmo, uma thread longa é conveniente.
+Se a tarefa já mudou de direção, continuar na thread antiga é mais fácil de desviar a tarefa nova.
 
 ### 2. Já disse — por que continua a errar?
 
-Porque a informação anterior pode ter sido diluída por conteúdo posterior, ou já não se encaixa bem na Tarefa atual.
+Porque a informação anterior pode ter sido diluída por conteúdo posterior, ou já não se encaixa bem na tarefa atual.
 
 Aí não diga só «não sabias?»; o mais eficaz é voltar a colocar as restrições que ainda importam.
 
-### 3. Quando abrir uma Thread nova
+### 3. Quando abrir uma thread nova
 
 Use este critério:
 
@@ -75,27 +76,20 @@ Use este critério:
 - O problema original já terminou
 - Você próprio sente que a conversa começou a ficar confusa
 
-Nesse caso, uma Thread nova costuma ficar mais limpa do que forçar a continuação.
+Nesse caso, uma thread nova costuma ficar mais limpa do que forçar a continuação.
 
 ## Como tratar quando o tema muda
 
 Quando o tema muda:
 
-1. Abra uma Thread nova
+1. Abra uma thread nova
 2. Cole só o resumo das restrições que ainda valem
-3. Não leve também o fundo já desatualizado
+3. Não leve também o contexto já desatualizado
 
-Se continuar na Thread original, pode enviar primeiro um «realinhamento» curto, por exemplo:
+Se continuar na thread original, pode enviar primeiro um «realinhamento» curto, por exemplo:
 
 ```text
-A partir de agora discutimos só a revisão da página inicial. O conteúdo anterior sobre a API do backend deixa de continuar. Nesta ronda alteramos só texto e estilos; não alteramos a estrutura de dados.
+A partir de agora discutimos só a revisão da página inicial. O conteúdo anterior sobre a API do backend deixa de continuar. Nesta rodada alteramos só texto e estilos; não alteramos a estrutura de dados.
 ```
 
-A mesma Thread prolonga a memória — e também arrasta bagagem antiga. Quando o tema muda, feche ativamente.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica como o Contexto na mesma Thread se acumula e se fecha; conceitos, exemplos e ligações internas foram revistos, e o corpo não depende de factos voláteis do produto.  
-**Última verificação:** 2026-07-26
+A mesma thread prolonga a memória — e também arrasta bagagem antiga. Quando o tema mudar, delimite novamente o foco.

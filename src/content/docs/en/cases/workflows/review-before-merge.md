@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE / Cloud"
+  basis: "Cross-checked against OpenAI Developers' current public code review / pull request use cases, plus this handbook's verified quality, diff review, and Cloud chapters; this page confirms only stable principles for structured pre-merge review, read-only review, and human final sign-off."
+  checkedAt: "2026-07-26"
 title: Review before merge
 description: Structured diff and risk review with Codex before merge—clear human–machine roles.
 locale: en
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: '78d5c03'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-**Review before merge** puts [quality and verification](/en/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
+**Review before merge** puts [quality and verification](/en/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not perform an automated merge.
 
 ## What's covered
 
@@ -70,10 +75,3 @@ Pair with [Review diffs](/en/guide/quality/review-diffs/); high-risk items follo
 
 - [Cloud code review](/en/guide/web-and-cloud/code-review/)
 - [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public code review / pull request use cases, plus this handbook's verified quality, diff review, and Cloud chapters; this page confirms only stable principles for structured pre-merge review, read-only review, and human final sign-off.

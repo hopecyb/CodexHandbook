@@ -1,10 +1,15 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Checked against the current official Non-interactive mode and Codex GitHub Action guidance. Corrected `--cd` and made separation of the API-key job from repository write permissions the default safety boundary."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-25"
 title: Scripts and Pipelines
 description: Orchestrate codex exec in shell, Makefile, and GitHub Actions—repeatable and auditable.
 locale: en
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: '07aeb4f'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -13,7 +18,7 @@ sidebar:
 
 This is about turning Codex from a one-off action into **steps your team can rerun, audit, and hand off**.
 
-Scripts fix the flow; pipelines repeat it on schedule or on events.
+Scripts define the workflow; pipelines repeat it on schedule or in response to events.
 
 This page shows how to embed [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/) in shell, Makefile, or CI pipelines.
 
@@ -45,11 +50,11 @@ Putting prompts, scripts, and rules in Git is version control for automation.
 
 ## Common misconceptions
 
-### Automation values stability, not speed first
+### Stabilize the workflow before automating it
 
 Many teams string everything together before prompts stabilize, success criteria are clear, or permissions are tight—then debugging gets painful.
 
-### Scripts fix the approach
+### Scripts make a process repeatable
 
 A good script turns steps people memorize into files everyone can read and review.
 
@@ -140,9 +145,3 @@ Do not rush “full auto” before the flow is stable; script first, then pipeli
 
 ## Reference sources
 - OpenAI Codex + GitHub integration docs
----
-
-**Status:** outdated
-**Products:** CLI
-**Review note:** The principle of versioning prompts, scripts, and pipelines in Git still holds, but examples depend on `codex exec`, CLI install, and GitHub Actions wiring—high-churn details; restore `verified` after current official pipeline docs are added.
-**Last verified:** 2026-07-26

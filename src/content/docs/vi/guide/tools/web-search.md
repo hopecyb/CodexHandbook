@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Tài liệu mô hình API OpenAI hiện tại vẫn liệt kê `Web search` là một năng lực công cụ khả dụng; trang này chỉ nhấn mạnh phương pháp “tìm kiếm để bổ sung thông tin thực tế, ưu tiên nguồn sơ cấp, kết luận phải quay lại nguyên văn đối chiếu”, không phụ thuộc giao diện sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 title: Tìm kiếm web
-description: Dùng tìm kiếm để bổ sung sự kiện và ghi nguồn.
+description: Dùng tìm kiếm để bổ sung thông tin thực tế và ghi nguồn.
 locale: vi
 source_locale: zh-CN
-source_revision: 7adcb92
+source_revision: "7adcb92"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
 
-Tìm kiếm web phù hợp bổ sung sự kiện, không phù hợp thay bạn đưa kết luận cuối cùng.
+Tìm kiếm web phù hợp bổ sung thông tin thực tế, không phù hợp thay bạn đưa kết luận cuối cùng.
 
 Phù hợp: tra tài liệu công khai, mã lỗi, ghi chú phiên bản. Không phù hợp: coi kết quả tìm kiếm là kết luận pháp lý/y tế cuối cùng.
 
@@ -31,7 +36,7 @@ Vai trò của nó là tìm tài liệu trước, rồi quay lại nguyên văn 
 
 ### 1. Nó tìm được kết quả có nghĩa câu trả lời đáng tin?
 
-Không thể xem vậy. Tìm được không bằng đáng tin; tóm tắt trôi cũng không bằng chính xác.
+Không thể xem vậy. Tìm được không bằng đáng tin; tóm tắt trôi chảy cũng không bằng chính xác.
 
 ### 2. Trường hợp nào phù hợp dùng tìm kiếm?
 
@@ -40,7 +45,7 @@ Tình huống thường gặp:
 - Tra tài liệu chính thức
 - Tra thông tin lỗi
 - Tra thay đổi phiên bản
-- Tra sự kiện trên trang công khai
+- Tra thông tin thực tế trên trang công khai
 
 ### 3. Tóm tắt trong kết quả tìm kiếm có trích trực tiếp được không?
 
@@ -65,7 +70,7 @@ lúc đó còn cần phối hợp công cụ khác hoặc kiểm chứng thủ c
 Có thể xử lý theo thứ tự:
 
 1. Tìm từ khóa sát vấn đề nhất trước
-2. Ưu tiên tài liệu chính thức hoặc nguồn gốc
+2. Ưu tiên tài liệu chính thức hoặc nguồn sơ cấp
 3. Mở nguyên văn xác nhận chi tiết
 4. Rồi quyết có đưa kết luận vào kết quả không
 
@@ -78,10 +83,3 @@ Hãy tìm kiếm trước và ưu tiên nguồn chính thức; khi đưa kết l
 ```
 
 Tìm kiếm cho bạn manh mối và nguồn; cuối cùng vẫn phải quay lại nguyên văn để đối chiếu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Tài liệu mô hình API OpenAI hiện tại vẫn liệt kê `Web search` là một năng lực công cụ khả dụng; trang này chỉ nhấn mạnh phương pháp “tìm kiếm để bổ sung sự kiện, ưu tiên nguồn gốc, kết luận phải quay lại nguyên văn đối chiếu”, không phụ thuộc giao diện sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

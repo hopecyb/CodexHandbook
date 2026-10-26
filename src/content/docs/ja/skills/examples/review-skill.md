@@ -24,9 +24,10 @@ assets:
   version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: "e29d1b3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 レビュー前に比較対象を明確にします。この Skill は「現在の未コミット変更」を「main に対するコミット」と取り違えたり、作業ツリーが正常に見えるためにステージ領域のエラーを見落としたりするのを防ぎます。
@@ -46,7 +47,7 @@ translated_at: '2026-09-20'
 
 ## インストールと最初の呼び出し
 
-Python 3.10 以降、Git、少なくとも 1 件のコミットがあるローカルの練習リポジトリが必要です。展開した `scoped-review/` を対象プロジェクトの `.agents/skills/` に置き、入口が `.agents/skills/scoped-review/SKILL.md` であることを確認します。同名の Skill があれば上書き前に比較してください。
+Python 3.10 以降、Git、少なくとも 1 件のコミットがあるローカルの練習リポジトリが必要です。展開した `scoped-review/` を対象プロジェクトの `.agents/skills/` に置き、入口が `.agents/skills/scoped-review/SKILL.md` であることを確認します。同名の Skill がある場合は先に比較し、上書きしないでください。
 
 ローカル Skill の検出と入口は[公式ガイド](https://learn.chatgpt.com/docs/build-skills)に従ってください。インストール後に選択可能か確認し、明示的に呼び出します。
 

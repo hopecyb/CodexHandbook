@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT-Desktop-App / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: MCP-Verbindungen debuggen
 description: Grenze MCP-Fehler auf Konfiguration, Transport, Authentifizierung oder Werkzeug ein.
 locale: de
 source_locale: zh-CN
-source_revision: d35b635
+source_revision: "d35b635"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 MCP-Fehler werden häufig nur als „Werkzeug funktioniert nicht“ beschrieben. Schneller ist es, zuerst die fehlerhafte Ebene zu bestimmen und dann genau eine Variable zu ändern.
@@ -42,7 +46,7 @@ Notiere außerdem Servername, STDIO oder Streamable HTTP, genauen Fehlertext und
 
 Prüfe, ob `command` in PATH liegt, die Laufzeitversion den Serveranforderungen entspricht, `cwd` existiert und die Abhängigkeitsquelle vertrauenswürdig ist.
 
-Das direkte Ausführen des Startbefehls beweist nur, dass die ausführbare Datei startet. Wenn ein MCP-Server auf Protokolleingaben wartet, ist ein dauerhaft laufender Prozess normal und noch kein vollständiger Test eines Werkzeugaufrufs.
+Das direkte Ausführen des Startbefehls beweist nur, dass die ausführbare Datei startet. Wenn ein MCP-Server auf Protokolleingaben wartet, kann ein dauerhaft laufender Prozess normal sein; dies ist noch kein vollständiger Test eines Werkzeugaufrufs.
 
 Erhöhe `startup_timeout_sec` nur bei einer nachgewiesen langsamen Initialisierung. Der Standardwert beträgt 10 Sekunden; ein sehr hoher Wert verdeckt häufig nur einen falschen Befehl.
 
@@ -89,11 +93,3 @@ Prüfe ausschließlich den MCP-Server <server-name>:
 ## Offizielle Quelle
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT-Desktop-App / Codex CLI / IDE
-
-**Zuletzt geprüft:** 2026-08-25

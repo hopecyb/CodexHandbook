@@ -3,30 +3,35 @@ title: Resolução de problemas no IDE
 description: Problemas de carregamento da extensão, Contexto e sincronização.
 locale: pt
 source_locale: zh-CN
-source_revision: ebb21de
+source_revision: "ebb21de"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: O centro de ajuda atual da OpenAI continua a confirmar a IDE extension como entrada formal; esta página tria problemas IDE em «extensão sem resposta / estado de login / área de trabalho e Contexto», um quadro estável de resolução de problemas, e não um manual de códigos de erro concretos.
+  checkedAt: '2026-07-26'
 ---
 
-A resolução de problemas no IDE difere da CLI num ponto:  
-muitos casos parecem «o plugin não funciona», mas na prática o desvio está na **área de trabalho, no estado de login ou no próprio Contexto do editor**.
+A resolução de problemas no IDE difere da CLI num ponto:
+muitos casos parecem «o plugin não funciona», mas na prática o desvio está na **área de trabalho, no estado de login ou no próprio contexto do editor**.
 
-Quando o IDE falha, distinga primeiro se «a extensão não arrancou» ou se «arrancou, mas o Contexto que recebeu está errado».
+Quando o IDE falha, distinga primeiro se «a extensão não arrancou» ou se «arrancou, mas o contexto que recebeu está errado».
 
 | Sintoma | Experimente primeiro |
 |---|---|
 | Extensão sem resposta | Atualize a extensão e o editor; veja os registos do extension host |
 | Estado de login perdido | Volte a autenticar |
-| Contexto incorreto | Confirme a raiz da área de trabalho aberta |
+| contexto incorreto | Confirme a raiz da área de trabalho aberta |
 
 ## Distinga primeiro 3 tipos
 
 - **Sem qualquer reação**: em geral problema de carregamento da extensão
 - **Abre mas não serve**: em geral login ou autenticação
-- **Resposta errada, altera o sítio errado**: em geral área de trabalho ou Contexto
+- **Resposta errada, altera o sítio errado**: em geral área de trabalho ou contexto
 
 ## Mal-entendidos frequentes
 
@@ -34,7 +39,7 @@ Quando o IDE falha, distinga primeiro se «a extensão não arrancou» ou se «a
 
 O ícone só mostra que está instalada; não prova que a sessão atual funciona de verdade.
 
-### 2. Contexto errado = o modelo compreende mal
+### 2. contexto errado = o modelo compreende mal
 
 Muitas vezes não é compreensão fraca: a raiz aberta, o alcance dos ficheiros escolhidos ou a própria área de trabalho é que estão errados.
 
@@ -58,13 +63,6 @@ Muitos problemas localizam-se já nesta etapa.
 3. Confirmar a raiz da área de trabalho atual e os ficheiros abertos
 4. Se ainda falhar, ver os registos da extensão
 
-A causa raiz mais comum na resolução de problemas IDE costuma ser área de trabalho, estado de login ou origem do Contexto errados — não necessariamente extensão danificada.
+A causa raiz mais comum na resolução de problemas IDE costuma ser área de trabalho, estado de login ou origem do contexto errados — não necessariamente extensão danificada.
 
 Documentação oficial: [OpenAI Codex](https://developers.openai.com/codex).
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** IDE  
-**Base de verificação:** O centro de ajuda atual da OpenAI continua a confirmar a IDE extension como entrada formal; esta página tria problemas IDE em «extensão sem resposta / estado de login / área de trabalho e Contexto», um quadro estável de resolução de problemas, e não um manual de códigos de erro concretos.  
-**Última verificação:** 2026-07-26

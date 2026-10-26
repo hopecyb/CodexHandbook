@@ -8,10 +8,10 @@ title: Understand template
 description: Build shared understanding before making changes.
 locale: en
 source_locale: zh-CN
-source_revision: 228971d
+source_revision: '228971d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -51,7 +51,7 @@ Also ask for:
 
 ### 2. More detail in the understand phase is always better
 
-Clear main line beats digging every detail immediately.
+Understanding the main flow matters more than investigating every detail at once.
 
 The understand template helps narrow the next task scope.
 

@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die Grundbegriffe Token, Kontextfenster und Komprimierung; interne Links und Beispielformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: "Token, Kontext und Komprimierung"
 description: "Verstehe Kontextfenster, Belegung und Komprimierung."
 locale: de
 source_locale: zh-CN
-source_revision: cd44efe
+source_revision: "cd44efe"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 100
 ---
 
-Beim ersten Lesen wirkt diese Seite vielleicht abstrakt — du musst die Tiefenmechanik nicht zuerst verstehen. Modelle haben kein unbegrenztes Gedächtnis. Wird Inhalt zu viel, zu verstreut oder zu lang, verliert es den Fokus; frühe wichtige Einschränkungen können langsam verblassen.
+Beim ersten Lesen wirkt diese Seite vielleicht abstrakt — du musst die Tiefenmechanik nicht zuerst verstehen. Modelle haben kein unbegrenztes Gedächtnis. Wird Inhalt zu viel, zu verstreut oder zu lang, verlieren sie den Fokus; frühe wichtige Einschränkungen können langsam verblassen.
 
 Drei häufige Wörter dahinter: Token, Kontext, Komprimierung.
 
@@ -66,10 +71,3 @@ Wenn du fürchtest, dass Schlüsselanforderungen verloren gehen:
 - Prinzipien und Tipps: [Kontext-Komprimierung](/de/guide/context/compaction/) und [Kontext fokussiert halten](/de/guide/context/keep-context-focused/)
 
 Hier zuerst die Begriffe. Wie du steuerst, steht weiter in `05`.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die Grundbegriffe Token, Kontextfenster und Komprimierung; interne Links und Beispielformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

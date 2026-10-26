@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / GitHub Actions"
+  basis: "Mit den aktuellen offiziellen Empfehlungen zum nicht interaktiven Modus und zur Codex GitHub Action abgeglichen. `--cd` wurde korrigiert; die Trennung des Jobs mit API-Key von Repository-Schreibberechtigungen ist die standardmäßige Sicherheitsgrenze."
+  checkedAt: "2026-08-26"
 title: Skripte und Pipelines
 description: Orchestriere codex exec wiederholbar und auditierbar in Shell, Makefile und GitHub Actions.
 sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: "07aeb4f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Diese Seite zeigt, wie aus einer einmaligen Codex-Aktion ein **wiederholbarer Teamablauf wird, der sich bei Problemen nachvollziehen und von anderen übernehmen lässt**.
@@ -142,12 +147,3 @@ Automatisiere einen noch instabilen Prozess nicht sofort vollständig. Halte die
 
 ## Quellen
 - Dokumentation zur Integration von OpenAI Codex und GitHub
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI / GitHub Actions
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Empfehlungen zum nicht interaktiven Modus und zur Codex GitHub Action abgeglichen. `--cd` wurde korrigiert; die Trennung des Jobs mit API-Key von Repository-Schreibberechtigungen ist die standardmäßige Sicherheitsgrenze.
-
-**Zuletzt geprüft:** 2026-08-26

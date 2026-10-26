@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Umgebungen mit lokalem Codex-Host"
+  checkedAt: "2026-08-25"
 title: Hook-Ereignistypen
 description: Wähle Ereignisse für Sitzung, Aufgabenrunde, Werkzeugaufruf, Komprimierung und Subagent-Lebenszyklus.
 locale: de
 source_locale: zh-CN
-source_revision: 07f4965
+source_revision: "07f4965"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die erste Frage bei der Hook-Auswahl lautet nicht „Wie schreibe ich das Skript?“, sondern „Muss die Nebenwirkung vor oder nach ihrem Auftreten behandelt werden?“ Ein falsch platziertes Ereignis kann selbst mit einem guten Skript nur noch nachträglich Bericht erstatten.
@@ -80,11 +84,3 @@ Das Werkzeug wurde bereits ausgeführt; bei Bash tritt das Ereignis auch nach ei
 ## Offizielle Quelle
 
 - [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host
-
-**Zuletzt geprüft:** 2026-08-25

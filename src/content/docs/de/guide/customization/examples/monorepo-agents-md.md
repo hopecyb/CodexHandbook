@@ -3,15 +3,21 @@ title: AGENTS.md in einem Monorepo
 description: "Beispielmuster für Projektanweisungen, Geltungsbereich und Testbefehle in Single-Repo-Multi-Package-Strukturen."
 locale: de
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle Kapitel zu `AGENTS.md`, Datei-/Ordnerkontext und Cloud-Umgebungen; Inhalt beschränkt auf Beispielmuster geschichteter Monorepo-Hinweise und Befehlsorganisation — keine
+    festen Verträge zu Produkteinstiegen oder Managed-Implementierungen.
+  checkedAt: '2026-07-26'
 ---
 
-In Monorepos koexistieren mehrere Apps, Shared Packages und Stacks — eine riesige `AGENTS.md` lässt den Agent leicht **das falsche Paket ändern** oder den falschen Test laufen. Diese Seite zeigt ein wiederverwendbares **geschichtetes Hinweis**-Muster (Beispiel, auf Ihr Repo zuschneiden).
+In Monorepos koexistieren mehrere Apps, Shared Packages und Stacks — eine riesige `AGENTS.md` lässt den Agent leicht **das falsche Paket ändern** oder den falschen Test laufen. Diese Seite zeigt ein wiederverwendbares Muster für **nach Verzeichnisebene gegliederte Anweisungen** (Beispiel, auf Ihr Repo zuschneiden).
 
 ## Was diese Seite behandelt
 
@@ -23,7 +29,7 @@ In Monorepos koexistieren mehrere Apps, Shared Packages und Stacks — eine ries
 
 Ist ein normales Repo wie ein Haus, ist ein Monorepo eher ein Gebäude.
 
-Verschiedene Räume, Bewohner, Regeln.  
+Verschiedene Räume, Bewohner, Regeln.
 Nur am Eingang einen überlangen Gesamtzettel zu kleben, führt bei Codex oft zu:
 
 - Alles sichtbar, aber unklar, welche Schicht jetzt gilt
@@ -127,10 +133,3 @@ Eher 1 → Root; eher 2/3 → Subpaket.
 - [ ] Paketübergreifende Aufgaben listen erlaubte Pfade im Prompt
 
 AGENTS.md im Monorepo muss nicht maximal zentral sein; besser „globaler Konsens“ und „lokale Verzeichnisregeln“ am richtigen Ort.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle Kapitel zu `AGENTS.md`, Datei-/Ordnerkontext und Cloud-Umgebungen; Inhalt beschränkt auf Beispielmuster geschichteter Monorepo-Hinweise und Befehlsorganisation — keine festen Verträge zu Produkteinstiegen oder Managed-Implementierungen.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Kreuzgeprüft gegen Struktur der files-and-artifacts-Unterkapitel sowie verifizierte Kapitel zu Artefaktprüfung, Definition of Done, sensiblem Kontext und Bildern; diese Seite erklärt nur das stabile Prinzip „Auftrag und Abnahme nach Dateityp wählen“."
+  checkedAt: "2026-07-26"
 title: Dateien und Artefakte
 description: "Wie Codex Dateitypen liest/schreibt, Generiertes verwaltet und abnimmt."
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 543d14e
+source_revision: "543d14e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die Kernausgabe von Codex sind oft **Dateiänderungen im Repo** oder **neu erzeugte Artefakte** (Dokumente, Bilder, Config). Dieses Thema beschreibt Best Practices je Dateityp — gegen „generiert, aber unbrauchbar“.
 
-Auch „Datei“ heißt: unterschiedliche Typen brauchen unterschiedliche Auftrag- und Abnahmemethoden.
+Unterschiedliche Dateitypen erfordern unterschiedliche Aufgabenbeschreibungen und Abnahmemethoden.
 
 „Code ändern“, „Tabelle bearbeiten“, „Screenshot erzeugen“, „PPT exportieren“ wirken alle wie Dateiaufgaben — die typischen Fehlerstellen unterscheiden sich.
 
@@ -36,15 +41,15 @@ Allgemeine Methode: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/
 
 Drei Dinge:
 
-- Wie Sie die Aufgabe klar stellen
+- Wie du die Aufgabe klar formulierst
 - Wo still und leise Fehler entstehen
-- Wie Sie am Ende abnehmen
+- Wie du am Ende das Ergebnis abnimmst
 
-Eher Bedienungsanleitung nach Dateityp — keine reine Feature-Liste.
+Das Kapitel ist eine nach Dateitypen geordnete Arbeitsanleitung und keine reine Funktionsliste.
 
 ## Einheitliche Prinzipien
 
-1. **Pfad klar**: Ausgabe pfad und Namensgebung im Prompt
+1. **Pfad klar**: Ausgabepfad und Namensgebung im Prompt
 2. **Format vereinbaren**: Extension, Encoding (UTF-8), Zeilenenden wie im Projekt
 3. **Volumenbewusst**: große Binärdateien nicht ins Git — oder LFS/CDN
 4. **Menschliche Abnahme**: Generieren ≠ fertig; Abgleich mit [Definition of Done](/de/guide/quality/definition-of-done/)
@@ -54,16 +59,16 @@ Eher Bedienungsanleitung nach Dateityp — keine reine Feature-Liste.
 
 ### 1. Datei erzeugt ≠ Aufgabe erledigt
 
-Oft liegt das Problem nicht an „ob generiert“, sondern:
+Häufig liegt das Problem nicht darin, ob eine Datei erzeugt wurde, sondern in folgenden Fragen:
 
 - Format richtig?
 - Inhalt korrekt?
 - Pfad richtig?
-- Downstream weiter nutzbar?
+- Kann die Datei im nächsten Verarbeitungsschritt verwendet werden?
 
 ### 2. Auftrag für alle Dateitypen gleich?
 
-Nein.  
+Nein.
 Zum Beispiel:
 
 - Code: Umfang, Logik, Tests
@@ -73,18 +78,18 @@ Zum Beispiel:
 
 ### 3. „Öffnet sich“ = in Ordnung?
 
-Nein.  
+Nein.
 „Öffnet sich“ ist nur die Basis — nicht automatisch commit-/release-/lieferbereit.
 
 ## Empfohlene Lesereihenfolge
 
 Beim ersten Dateieinsatz mit Codex:
 
-1. Den Dateityp finden, der Ihrer Aufgabe am nächsten kommt
+1. Den Dateityp finden, der deiner Aufgabe am nächsten kommt
 2. Typische Fehlerstellen dieses Typs lesen
 3. Passende Abnahme lesen
 
-So überfordert Sie das ganze Kapitel nicht auf einmal.
+So musst du nicht alle Informationen des Kapitels auf einmal verarbeiten.
 
 ## Bezug zu Werkzeugen
 
@@ -94,10 +99,3 @@ So überfordert Sie das ganze Kapitel nicht auf einmal.
 - Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/)
 
 Bei Dateiaufgaben ist oft schon etwas erzeugt — Format, Regeln oder Inhalt sind aber still abgewichen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen Struktur der files-and-artifacts-Unterkapitel sowie verifizierte Kapitel zu Artefaktprüfung, Definition of Done, sensiblem Kontext und Bildern; diese Seite erklärt nur das stabile Prinzip „Auftrag und Abnahme nach Dateityp wählen“.  
-**Zuletzt geprüft:** 2026-07-26

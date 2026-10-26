@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains goal and context writing only; in-site links and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Goals and context
 description: Tell Codex what to accomplish and why it matters.
 locale: en
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: '0a5141f'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many prompts look information-rich but still miss two things:
@@ -81,10 +86,3 @@ For context, check:
 Goal decides what to deliver; context explains why.
 
 Related: project-level background can live in [project context](/en/guide/context/project-context/) so you don't repeat long blocks in every prompt.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains goal and context writing only; in-site links and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

@@ -12,8 +12,9 @@ title: "Caso: correção de bug com verificação"
 description: "Use um bug executável no cálculo de descontos para reproduzir a falha, identificar a causa, fazer a menor correção, repetir os testes e revisar o diff."
 locale: pt
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: "42d842e"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -91,7 +92,7 @@ Expected values to be strictly equal:
 
 Se nenhum teste falhar, pare primeiro. Verifique se executou o arquivo de `starter/`, qual é a versão do Node.js e se os arquivos foram alterados antes. Sem um teste vermelho reproduzível, não há evidência de referência para o problema original.
 
-## 4. Segundo passo: investigação somente de leitura
+## 4. Segundo passo: pesquisa somente de leitura
 
 ### Explorar
 

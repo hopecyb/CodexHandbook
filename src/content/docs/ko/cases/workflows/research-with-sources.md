@@ -3,10 +3,20 @@ title: 출처가 있는 리서치
 description: Codex로 검색·비교·사실 검증을 하며—추적 가능한 출처와 결론을 산출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: 'a6fd201'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers의 현재 공개 Web search와 출처가 있는 리서치 관련 기능, 그리고 이 핸드북에서 이미 검증된 웹 검색, 출처 검증, 불확실성 다루기, 버전 정책 장을 교차 확인했습니다. 이 페이지는 “핵심 결론은 출처까지 추적 가능해야 하고, 충돌과 불확실성은 명시해야 한다”는 안정적인 리서치 방법만 확인합니다.
+  checkedAt: '2026-07-26'
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs:
+  - markdown
 ---
 
 **출처가 있는 리서치**는 핵심 결론마다 공식 문서, 논문, 저장소 파일 같은 구체 출처로 돌아갈 수 있어야 하며, 근거 없는 판단만 내놓아서는 안 된다고 요구합니다. 기술 선정, 경쟁 제품 비교, 문헌 리뷰, 정책 해석에 적합합니다.
@@ -21,10 +31,10 @@ reviewed_at: 2026-08-26
 
 ```text
 「이 저장소 시나리오에서 Rust와 Go의 적합성」을 조사하세요:
-1. 먼저 평가 차원(성능, 생태계, 팀 숙련도)을 나열
+1. 먼저 평가 항목(성능, 생태계, 팀 숙련도)을 나열
 2. 각 결론에 출처 URL 또는 @저장소 내 파일 경로를 붙임
 3. 검증할 수 없으면 「확인 필요」로 표시
-4. 마지막에 권장과 열린 질문을 제시
+4. 마지막에 추천안과 미해결 질문을 제시
 코드를 수정하지 마세요.
 ```
 
@@ -52,7 +62,7 @@ reviewed_at: 2026-08-26
 - 내부 미공개 자료는 통제되지 않는 MCP로 외부에 내보내면 안 됩니다
 - 가격, 버전, 지역 가용성 등 변동이 큰 사실은 [검증 날짜](/ko/guide/start-here/handbook-version-policy/)를 표시해야 합니다
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 핵심 결론에 클릭 가능하거나 추적 가능한 출처가 하나 이상 있음
 - [ ] 충돌 정보가 나란히 제시됨
@@ -63,10 +73,3 @@ reviewed_at: 2026-08-26
 
 - [불확실성 다루기](/ko/guide/quality/handle-uncertainty/)
 - [사례: 문서 리팩터와 검토](/ko/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 공개 Web search와 출처가 있는 리서치 관련 기능, 그리고 이 핸드북에서 이미 검증된 웹 검색, 출처 검증, 불확실성 다루기, 버전 정책 장을 교차 확인했습니다. 이 페이지는 “핵심 결론은 출처까지 추적 가능해야 하고, 충돌과 불확실성은 명시해야 한다”는 안정적인 리서치 방법만 확인합니다.  
-**최근 검증:** 2026-07-26

@@ -3,19 +3,24 @@ title: 適切な仕組みの選択
 description: 一時 prompt、AGENTS.md、メモリ、Skill、MCP をどの層に置くか——判断フレームで整理。
 locale: ja
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: "5fad7cb"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックで検証済みの `AGENTS.md`、コンテキスト、Skills、MCP、品質章を相互確認。「一時要求、プロジェクトルール、個人の好み、ワークフローのパッケージ化、外部能力は層分けして置く」という安定した判断フレームのみを残す。
+  checkedAt: "2026-07-26"
 ---
 
 多くのチームの問題は、**同じ情報を間違った場所に置く**ことです。リポジトリに書くべきルールをチャットに入れ、Skill にすべき手順を `AGENTS.md` に詰め、読み取り専用でよいデータに高権限 MCP を渡す。
 
 ここでは実務的な問いに焦点を当てます。
 
-> 「これは今後も繰り返す」と分かったとき、どの層に沈めるべきか？
+> 「これは今後も繰り返す」と分かったとき、どの層に定着させるべきか？
 
 ## 簡易表
 
@@ -170,7 +175,7 @@ API Token を会話に貼らない。
 
 ### `AGENTS.md` を百科事典にする
 
-ハード制約が目立たず、重要コマンドと禁止領域が埋もれる。`AGENTS.md` は短く、硬く、実行可能に。
+ハード制約が目立たず、重要コマンドと禁止領域が埋もれる。`AGENTS.md` は短く、明確に、実行可能に。
 
 ### Skill を「万能収納箱」にする
 
@@ -205,9 +210,3 @@ API Token を会話に貼らない。
 
 ## 参考
 - OpenAI Codex 公式ドキュメント（現行バージョンを基準に）
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ハンドブックで検証済みの `AGENTS.md`、コンテキスト、Skills、MCP、品質章を相互確認。「一時要求、プロジェクトルール、個人好み、プロセス封装、外部能力は層分けして置く」という安定した判断フレームのみを残す。  
-**最終検証：** 2026-07-26

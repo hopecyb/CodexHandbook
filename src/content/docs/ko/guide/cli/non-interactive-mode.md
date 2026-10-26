@@ -8,11 +8,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: "1f37961"
-translation_status: draft
+source_revision: '1f37961'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 비대화형 모드에서는 Codex가 **TTY 대화 없이** 작업을 완료할 수 있습니다. 개발자가 Agent를 스크립트와 CI에 연결할 때 사용하는 진입점입니다.

@@ -8,8 +8,9 @@ title: Local and cloud tasks
 description: Choose between local and cloud execution in the app.
 locale: en
 source_locale: zh-CN
-source_revision: 741f686
-translation_status: draft
+source_revision: '741f686'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 70

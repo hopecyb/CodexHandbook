@@ -9,10 +9,11 @@ description: Définitions courtes de termes courants comme tâche, contexte, bac
 locale: fr
 source_locale: zh-CN
 source_revision: "a18bacf"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 6
+reviewed_at: 2026-10-26
 ---
 
 Pour des définitions plus complètes, consultez le [glossaire](/fr/guide/reference/glossary/). Voici d'abord les termes les plus courants, ceux qui peuvent gêner la lecture.

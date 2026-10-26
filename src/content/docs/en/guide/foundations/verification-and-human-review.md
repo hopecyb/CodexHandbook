@@ -8,11 +8,12 @@ title: Verification and human review
 description: Why results need to be checkable and how to review them.
 locale: en
 source_locale: zh-CN
-source_revision: bfe4036
-translation_status: draft
+source_revision: 'bfe4036'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 110
+reviewed_at: 2026-10-25
 ---
 
 Codex can help you work faster, but it cannot take final responsibility for confirming the result.

@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu cách thu hẹp và giữ ngữ cảnh tập trung; khái niệm, cách viết cổng giai đoạn và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.", "checkedAt": "2026-07-26"}
 title: Giữ ngữ cảnh tập trung
 description: Kiểm soát phạm vi, mở thread mới và bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 5a55fa8
+source_revision: "5a55fa8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
@@ -62,7 +63,7 @@ Nếu xuất hiện các tình huống sau, hãy chủ động thu hẹp:
 Đừng trong cùng tác vụ yêu cầu cùng lúc:
 
 - Sửa bug
-- Đổi copy
+- Sửa nội dung
 - Refactor tiện tay
 - Rồi giúp tôi xem thêm một vấn đề mới
 
@@ -109,10 +110,3 @@ Nếu hướng đã đổi, đôi khi cố chat tiếp không sạch bằng mở
 Sửa càng nhiều, sau càng khó phán bước nào bắt đầu lệch.
 
 Tập trung ngữ cảnh không phải nói ít, mà giữ thông tin còn hiệu lực, kịp thu phần đã không quan trọng. Ngữ cảnh vừa rối, thực thi sau dễ lệch.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu cách thu hẹp và giữ ngữ cảnh tập trung; khái niệm, cách viết cổng giai đoạn và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

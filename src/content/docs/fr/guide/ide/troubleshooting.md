@@ -10,11 +10,11 @@ sidebar:
   order: 90
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: ebb21de
+source_revision: "ebb21de"
+reviewed_at: '2026-10-26'
 ---
-
 Le dépannage dans l'IDE diffère de celui de la CLI. Beaucoup de problèmes ressemblent à une « extension en panne », alors qu'ils viennent souvent de **l'espace de travail, de la connexion ou du contexte de l'éditeur**.
 
 Commencez par distinguer une extension qui n'a pas démarré d'une extension active mais alimentée par un mauvais contexte.

@@ -1,14 +1,19 @@
 ---
-title: Định nghĩa hoàn thành
-description: Tư duy danh sách hoàn thành dùng chung cho nhóm và cá nhân.
-locale: vi
-source_locale: zh-CN
-source_revision: f55e9f7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Định nghĩa hoàn thành"
+description: "Tư duy danh sách hoàn thành dùng chung cho nhóm và cá nhân."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "f55e9f7"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 60
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích vai trò và cách viết định nghĩa hoàn thành; khái niệm, ví dụ và diễn đạt danh sách đã được rà lại, và phần thân không phụ thuộc thông tin sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 “Định nghĩa hoàn thành” nghĩa rất thẳng: nói trước phải đạt đến mức nào thì lần này mới thật sự xong.
@@ -81,10 +86,3 @@ Tiêu chuẩn hoàn thành:
 ```
 
 “Định nghĩa hoàn thành” chủ yếu làm rõ “phải đạt mức nào mới tính là xong”, để phán đoán của bạn và Codex không lệch nhau.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ giải thích vai trò và cách viết định nghĩa hoàn thành; khái niệm, ví dụ và diễn đạt danh sách đã được rà lại, và phần thân không phụ thuộc sự kiện sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -8,10 +8,10 @@ title: Review template
 description: Structured review of diffs and change risk.
 locale: en
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: 'e89989d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

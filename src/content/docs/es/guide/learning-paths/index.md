@@ -1,17 +1,23 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Se cotejaron la estructura actual de learning paths, las páginas de entrada por rol y los pasos de la ruta para principiantes del repositorio. Esta página solo organiza el orden de lectura por rol; no describe comportamientos variables del producto."
+  checkedAt: "2026-07-26"
 prev: false
 next:
   link: /es/guide/learning-paths/beginner/01-talk-to-codex/
   label: Empezar la ruta para principiantes
 title: Rutas de aprendizaje
-description: Orden de lectura organizado por rol, con enlaces al contenido autoritativo.
+description: Orden de lectura organizado por rol, con enlaces al contenido de referencia.
 sidebar:
   order: 5
 locale: es
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: '2f7ff71'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Las rutas de aprendizaje **solo organizan el orden de lectura**; no duplican los artículos extensos del manual de producto ni de las guías de capacidades.
@@ -30,7 +36,7 @@ No añade conocimientos nuevos sobre el producto; te ayuda a evitar rodeos.
 
 ## Ruta para principiantes con materiales fijos
 
-[Descarga el mismo conjunto de materiales para practicar un anuncio de evento](/downloads/first-project/first-project-1.0.0.zip) y completa el anuncio, la revisión y el registro de recuperación en cinco pasos. No hace falta programar. Lectores independientes aún no han completado y validado toda la ruta.
+[Descarga el mismo conjunto de materiales para practicar un anuncio de evento](/downloads/first-project/first-project-1.0.0.zip) y completa el anuncio, la revisión y el registro de recuperación en cinco pasos. No hace falta programar. Aún no se ha probado la ruta completa con lectores independientes.
 
 - **Principiante (cinco pasos)**
   1. [Hablar con Codex](/es/guide/learning-paths/beginner/01-talk-to-codex/)
@@ -41,7 +47,7 @@ No añade conocimientos nuevos sobre el producto; te ayuda a evitar rodeos.
 
 ## Ruta práctica para creadores
 
-La [ruta para creadores](/es/guide/learning-paths/creator/) tiene cuatro hitos consecutivos: materiales y tabla de hechos → artículo con fuentes → presentación editable de ocho diapositivas → instrucciones de tarea reutilizables. El artículo y la presentación tienen materiales descargables independientes, y cada paso tiene criterios de finalización. Lectores independientes aún no han validado la ruta completa.
+La [ruta para creadores](/es/guide/learning-paths/creator/) tiene cuatro hitos consecutivos: materiales y tabla de hechos → artículo con fuentes → presentación editable de ocho diapositivas → instrucciones de tarea reutilizables. El artículo y la presentación tienen materiales descargables independientes, y cada paso tiene criterios de finalización. Aún no se ha probado la ruta completa con lectores independientes.
 
 ## Ruta práctica para desarrolladores
 
@@ -83,7 +89,7 @@ Basta con una pregunta:
 
 La ruta es un orden recomendado, no un flujo obligatorio. En la práctica puedes volver a otros capítulos con una pregunta concreta.
 
-## Cómo elegir si no tienes claro
+## Cómo elegir si no lo tienes claro
 
 Si no sabes qué ruta tomar, elige así:
 

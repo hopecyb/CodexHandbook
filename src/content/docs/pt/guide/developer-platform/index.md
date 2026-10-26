@@ -1,27 +1,28 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "API / CLI / Cloud"
-  basis: "Cruzado com a estrutura atual do capítulo developer-platform, as entradas de navegação e as páginas relacionadas de CLI/CI/SDK; esta página só clarifica a divisão estável de que a plataforma para desenvolvedores aponta à integração de engenharia, sem declarar parâmetros ou comportamentos de runtime concretos."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: API / CLI / Cloud
+  basis: Cruzado com a estrutura atual do capítulo developer-platform, as entradas de navegação e as páginas relacionadas de CLI/CI/SDK; esta página só clarifica a divisão estável de que a plataforma para desenvolvedores aponta à integração de engenharia, sem declarar parâmetros ou comportamentos de runtime concretos.
+  checkedAt: '2026-07-26'
 title: Plataforma para desenvolvedores
 description: Incorpora o Codex ao teu stack de engenharia com SDK, CLI não interativo e CI/CD — para desenvolvedores de integração.
 sidebar:
   order: 50
 locale: pt
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: "f58851e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
-A **plataforma para desenvolvedores** é para quem quer **productizar** o Codex em pipelines: apps à medida, revisão em lote, portões de release, portais internos de desenvolvimento. O uso quotidiano de «escrever um Prompt para corrigir um bug» continua a começar em [Primeiros passos](/pt/guide/getting-started/).
+A **plataforma para desenvolvedores** é para quem quer **integrar como produto** o Codex em pipelines: apps à medida, revisão em lote, portões de release, portais internos de desenvolvimento. O uso quotidiano de «escrever um prompt para corrigir um bug» continua a começar em [Primeiros passos](/pt/guide/getting-started/).
 
 Este capítulo não trata do uso diário do Codex, mas de como o ligar aos teus próprios sistemas.
 
 Orienta-se a cenários como:
 
-- Executar Tarefas automaticamente em CI
+- Executar tarefas automaticamente em CI
 - Integrar o Codex no teu backend ou ferramentas internas
 - Fazer do Codex parte do fluxo de trabalho da equipa
 
@@ -38,7 +39,7 @@ Orienta-se a cenários como:
 | Como executar `codex` no terminal | [Manual de produto CLI](/pt/guide/cli/) |
 | Como fazer revisão com exec em CI | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) + CI deste capítulo |
 | Como embutir um Agent na tua App | [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/) |
-| Modelo de Permissões e segurança | [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/) |
+| Modelo de permissões e segurança | [Padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/) |
 
 ## Arquitetura típica (conceito)
 
@@ -52,11 +53,11 @@ Fornecedor Git / tickets / repositório de artefatos
 
 ## Princípios de desenho
 
-O SDK do Codex executa um Agent local. Um runner remoto, uma fila e callbacks HTTP criados por você fazem parte do desenho do seu sistema de integração. Não conclua, a partir do diagrama, que existe uma API unificada de tarefas hospedadas na nuvem. Veja os fundamentos e uma chamada mínima na [visão geral do SDK](/pt/guide/developer-platform/sdk-overview/).
+O SDK do Codex executa um Agent local. Um runner remoto, uma fila e callbacks HTTP que cries fazem parte do desenho do teu sistema de integração. Não concluas, a partir do diagrama, que existe uma API unificada de tarefas hospedadas na nuvem. Consulta os fundamentos e uma chamada mínima na [visão geral do SDK](/pt/guide/developer-platform/sdk-overview/).
 
-1. **Idempotente e retentável**: revisões repetidas do mesmo PR devem ser comparáveis
+1. **Idempotência e possibilidade de repetir**: revisões repetidas do mesmo PR devem ser comparáveis
 2. **Privilégio mínimo**: token de CI só de leitura ou limitado a repositórios
-3. **Observável**: conservar versão do Prompt, modelo e artefato do Diff
+3. **Observável**: conservar versão do prompt, modelo e artefato do diff
 4. **Divisão humano-máquina**: comentário automático ≠ merge automático
 
 ## Navegação do capítulo

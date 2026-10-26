@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "API / CLI / Cloud"
-  basis: "本リポジトリ現行 developer-platform 章構造、ナビ入口、関連 CLI/CI/SDK 説明ページを相互確認。「開発者プラットフォームは工程化統合向け」という安定した分担のみ。具体パラメータやランタイム挙動は宣言しない。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: API / CLI / Cloud
+  basis: 本リポジトリ現行 developer-platform 章構造、ナビ入口、関連 CLI/CI/SDK 説明ページを相互確認。「開発者プラットフォームはシステムへの組み込みを行う開発者向け」という安定した分担のみ。具体パラメータやランタイム挙動は宣言しない。
+  checkedAt: '2026-07-26'
 title: 開発者プラットフォーム
 description: SDK、非対話 CLI、CI/CD で Codex をエンジニアリング体系に組み込む——統合開発者向け。
 sidebar:
   order: 50
 locale: ja
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: "f58851e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 **開発者プラットフォーム**は Codex を**製品化**してパイプラインに入れたい人向けです：カスタムアプリ、一括レビュー、リリースゲート、内部開発者ポータル。日常の「prompt でバグ修正」は [クイックスタート](/ja/guide/getting-started/) から始めてください。
@@ -38,7 +39,7 @@ translated_at: 2026-09-20
 | ターミナルで `codex` をどう走らせるか | [CLI 製品ハンドブック](/ja/guide/cli/) |
 | CI で exec レビューするには | [非対話モード](/ja/guide/cli/non-interactive-mode/) + 本章 CI |
 | 自社 App に Agent を埋め込むには | [SDK 概要](/ja/guide/developer-platform/sdk-overview/) |
-| 権限とセキュリティモデル | [人工承認パターン](/ja/cases/workflows/human-approval-patterns/) |
+| 権限とセキュリティモデル | [人による承認パターン](/ja/cases/workflows/human-approval-patterns/) |
 
 ## 典型アーキテクチャ（概念）
 

@@ -3,12 +3,17 @@ title: 프로젝트와 작업
 description: App에서 프로젝트와 작업을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6a1f17f
+source_revision: '6a1f17f'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App
+  basis: OpenAI Help Center 현행 데스크톱 앱 설명은 프로젝트/프로젝트 컨텍스트와 구체적 chat/work/codex 세션을 구분하며, 로컬 폴더나 프로젝트를 열어 시작할 수 있다고 안내합니다. 이 페이지는 “프로젝트는 작업장, 작업은 이번 위임”이라는 개념 층위만 설명합니다.
+  checkedAt: '2026-07-26'
 ---
 
 “프로젝트”와 “작업”은 단순해 보이지만, 처음 쓸 때 쉽게 혼동합니다. 프로젝트는 지금 다루는 파일이나 저장소이고, 작업은 이번에 Codex에게 맡기는 구체적 일입니다.
@@ -85,10 +90,3 @@ Codex가 이번엔 어떤 파일·어떤 저장소를 대상으로 일하는지 
 2. 작업 목표가 주요 한 가지만 말하는지 확인합니다
 3. 범위 제한과 완료 기준을 보완합니다
 4. 시작한 뒤 계획·도구 호출·변경 결과에 집중합니다
-
----
-
-**상태:** verified  
-**적용 제품:** App  
-**검증 근거:** OpenAI Help Center 현행 데스크톱 앱 설명은 프로젝트/프로젝트 컨텍스트와 구체적 chat/work/codex 세션을 구분하며, 로컬 폴더나 프로젝트를 열어 시작할 수 있다고 안내합니다. 이 페이지는 “프로젝트는 작업장, 작업은 이번 위임”이라는 개념 층위만 설명합니다.  
-**최근 검증:** 2026-07-26

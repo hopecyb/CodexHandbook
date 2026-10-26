@@ -9,10 +9,10 @@ description: "Ajusta la exploración, planificación, ejecución y verificación
 locale: es
 source_locale: zh-CN
 source_revision: "4a95760"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
-
 Esta es la forma de organizar tareas que recomienda el manual, desde «todavía no sé cómo hacerlo» hasta «listo para aceptar». Cuatro fases no implican cuatro aprobaciones. Una tarea pequeña con un alcance claro puede completarse sin interrupciones; se espera una decisión cuando el enfoque no está resuelto o falta una autorización necesaria. Empieza por los [niveles de tarea](/es/prompts/ask-for-a-plan/).
 
 ## Vista de las cuatro fases

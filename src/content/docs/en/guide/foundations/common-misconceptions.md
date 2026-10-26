@@ -8,11 +8,12 @@ title: Common misconceptions
 description: Clear up mistaken expectations that treat Codex as an all-purpose black box.
 locale: en
 source_locale: zh-CN
-source_revision: "700e57b"
-translation_status: draft
+source_revision: '700e57b'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 120
+reviewed_at: 2026-10-25
 ---
 
 Many people struggle with Codex at first because they have the wrong picture of it, not because they cannot operate it.

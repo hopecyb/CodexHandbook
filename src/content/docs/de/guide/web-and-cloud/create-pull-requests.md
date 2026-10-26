@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: Pull Requests erstellen
 description: Liefere ein Cloud-Ergebnis als prüfbaren und verifizierbaren PR aus, der nicht automatisch zusammengeführt wird.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 39371d4
+source_revision: "39371d4"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Prüfe nach Abschluss einer Cloud-Aufgabe zuerst Zusammenfassung und Diff. Erstelle erst dann einen Pull Request, wenn Ergebnis, Umfang und Verifikationskriterien erfüllt sind. Andernfalls korrigiere die Aufgabe im selben Chat.
@@ -68,11 +72,3 @@ PR-Erstellung und Zusammenführung sind zwei Berechtigungsgrenzen. Dass Cloud ei
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud, GitHub
-
-**Zuletzt geprüft:** 2026-08-26

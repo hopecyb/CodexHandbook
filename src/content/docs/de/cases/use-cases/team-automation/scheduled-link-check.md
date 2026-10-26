@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: 0d21aa9
-translation_status: draft
+source_revision: "0d21aa9"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Bevor Sie eine regelmäßige Prüfung planen, stellen Sie sicher, dass das Skript Fehler wirklich findet und angibt, was geprüft wurde. Diese Übung beginnt mit zwei absichtlich defekten Links. Ändern Sie jeweils nur ein Ziel und beobachten Sie das Ergebnis.

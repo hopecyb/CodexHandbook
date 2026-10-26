@@ -3,15 +3,20 @@ title: 検証と人的レビュー
 description: なぜ結果は検証可能でなければならないか、どうレビューするか。
 locale: ja
 source_locale: zh-CN
-source_revision: bfe4036
+source_revision: 'bfe4036'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページはなぜ結果に検証と人的レビューが必要かのみを説明。サイト内リンク、ステップ順序、概念表現を再確認済み。本文は変わりやすい製品事実に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
-Codex は作業を加速できますが、最終確認の責任を代わりにはできません。
+Codex は作業を加速できますが、最終確認の責任を肩代わりすることはできません。
 
 Codex は速度を上げますが、**検収を免除しません**。最低限、次をレビューしてください。
 
@@ -63,10 +68,3 @@ AI は速度を担当し、あなたは基準設定と最終判断を担当し�
 4. 残る最も重要なステップを、人の視点でもう一度確認する
 
 人的レビューの役割は、最終判断を結果に責任を持つ人に残すことです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページはなぜ結果に検証と人的レビューが必要かのみを説明。サイト内リンク、ステップ順序、概念表現を再確認済み。本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

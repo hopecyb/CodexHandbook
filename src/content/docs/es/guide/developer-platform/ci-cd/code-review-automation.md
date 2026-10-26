@@ -1,22 +1,27 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: La página de desarrolladores de OpenAI sigue describiendo Codex como usable para probar, revisar y preparar cambios listos para entregar; los casos de uso oficiales de Codex siguen incluyendo «Review GitHub pull requests». Esta página solo resume principios de conexión segura a CI y patrones de control, sin declarar un comando fijo ni una única implementación.
+  checkedAt: '2026-07-26'
 title: Automatización de revisión de código
-description: Conectar la revisión de Codex a CI o al flujo de PR — Prompt, Permisos y puerta humana.
+description: Conectar la revisión de Codex a CI o al flujo de PR — prompt, permisos y control humano.
 locale: es
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: "aa8b33e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
 
-Meter Codex en el **pipeline de Pull Request** puede pillar problemas evidentes antes de la review humana, pero **no sustituye** la revisión responsable ni las pruebas. Esta página describe patrones de automatización aplicables.
+Meter Codex en el **pipeline de Pull Request** puede detectar problemas evidentes antes de la revisión humana, pero **no sustituye** la revisión responsable ni las pruebas. Esta página describe patrones de automatización aplicables.
 
 ## Qué cubre esta página
 
 - Cómo llamar a Codex con seguridad en CI
-- Qué debe incluir el Prompt de revisión
+- Qué debe incluir el prompt de revisión
 - Cómo devolver el resultado al PR sin merge automático
 
 ## Primero entiende su papel
@@ -45,7 +50,7 @@ PR opened / updated
 
 ## Malentendidos frecuentes
 
-### Revisión automática ≠ Aprobación automática
+### Revisión automática ≠ aprobación automática
 
 Al integrar por primera vez, muchos equipos sobreestiman: si ya puede mirar solo, ¿también puede decidir solo?
 
@@ -57,7 +62,7 @@ Si el PR es pequeño, de poco valor, o las reglas aún no están claras, una rev
 
 Un buen punto de partida suele ser: revisión ligera del diff y ver si ahorra tiempo de forma estable.
 
-## Puntos clave de la plantilla de Prompt
+## Puntos clave de la plantilla de prompt
 
 ```text
 Eres asistente de revisión de código. Revisa solo el diff respecto a la rama base.
@@ -77,9 +82,9 @@ Versiona el archivo en `prompts/ci-review.md`.
 | Anti-inyección | No pegues la descripción del PR sin sanitizar en el system prompt |
 | Secretos | Guarda el token en GitHub Secrets |
 
-[Patrones de Aprobación humana](/es/cases/workflows/human-approval-patterns/) · [Variables de entorno](/es/guide/reference/environment-variables/)
+[Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/) · [Variables de entorno](/es/guide/reference/environment-variables/)
 
-## Puertas de calidad
+## Controles de calidad
 
 - Fallo del job de revisión ≠ bloquear el merge (puede ser advisory primero)
 - Distingue de los status checks obligatorios: tests en rojo deben bloquear; nits de IA pueden avisar
@@ -91,11 +96,11 @@ En repos complejos puedes correr pruebas completas en [Cloud](/es/guide/web-and-
 
 ## Errores frecuentes
 
-- CI con Permiso de escritura y Prompt inyectado con «haz push del fix»
-- Resultado de revisión tan largo que ahoga la review humana
+- CI con permiso de escritura y prompt inyectado con «haz push del fix»
+- Resultado de revisión tan largo que ahoga la revisión humana
 - Sin límite de tamaño del diff → timeout y cuota quemada
 
-Lo más valioso de la automatización de revisión es filtrar problemas evidentes antes de la review humana, no sustituir a la persona en la responsabilidad del merge.
+Lo más valioso de la automatización de revisión es filtrar problemas evidentes antes de la revisión humana, no sustituir a la persona en la responsabilidad del merge.
 
 ## Lista de aceptación
 
@@ -105,9 +110,3 @@ Lo más valioso de la automatización de revisión es filtrar problemas evidente
 
 ## Fuentes de referencia
 - Ejemplos de CI de OpenAI Codex
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI / API / Cloud  
-**Base de verificación:** La página de desarrolladores de OpenAI sigue describiendo Codex como usable para probar, revisar y preparar cambios listos para entregar; los casos de uso oficiales de Codex siguen incluyendo «Review GitHub pull requests». Esta página solo resume principios de conexión segura a CI y patrones de puerta, sin declarar un comando fijo ni una única implementación.  
-**Última verificación:** 2026-07-26

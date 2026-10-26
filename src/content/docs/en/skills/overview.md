@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Consistent with current Codex runtime Skill loading (`SKILL.md`, on-demand full skill file) and OpenAI Help \"Skills in ChatGPT\" defining Skills as reusable workflows; this page focuses on concepts and directory layout, not volatile UI."
+  checkedAt: "2026-07-26"
 title: Skills overview
 description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
 locale: en
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: '3147d2c'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
@@ -117,9 +122,3 @@ Skills are not required to get started—they shine when you organize flows that
 
 ## References
 - OpenAI Codex Skills documentation
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Consistent with current Codex runtime Skill loading (`SKILL.md`, on-demand full skill file) and OpenAI Help "Skills in ChatGPT" defining Skills as reusable workflows; this page focuses on concepts and directory layout, not volatile UI.  
-**Last verified:** 2026-07-26

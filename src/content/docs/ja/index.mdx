@@ -9,9 +9,10 @@ editUrl: false
 lastUpdated: false
 locale: ja
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
+source_revision: '75dd87a'
 hero:
   title: Codex で <br /> 成功した協働を再利用できる方法に
   tagline: タスクの明確化から実行、検証、振り返り、引き継ぎまで。アイデアを安定した成果に変えるための手引きです。
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -65,7 +67,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 			<span>教材一式あり · 筆者が出典を確認済み。3つの合成資料で事実の引用、版の矛盾、改稿を練習し、記事と事実表を作ります。</span>
 		</a>
 	</div>
-	<p>参考週報の純額は <strong>¥4,644.75</strong>, 。返金と例外の説明を含みます。<a href="/downloads/sales-weekly-report/summary.md">参考週報を見る</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">教材一式をダウンロード</a>. 数値は教育用の合成データです。所要時間は30～45分の見込みで、読者による計時は未実施です。</p>
+	<p>参考週報の純額は <strong>CNY 4,644.75</strong>。返金と例外の説明を含みます。<a href="/downloads/sales-weekly-report/summary.md">参考週報を見る</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">教材一式をダウンロード</a>。数値は教育用の合成データです。所要時間は30～45分の見込みで、読者による計時は未実施です。</p>
 	<p><a href="/ja/cases/">タスク別に事例と教材を見る</a> · <a href="/ja/guide/learning-paths/">役割別に学ぶ</a> · <a href="/ja/guide/reference/">リファレンスを調べる</a></p>
 </section>
 
@@ -81,11 +83,11 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>クリエイター</strong>
-			<span>一組の資料から事実表、記事、編集可能な8枚のプレゼン資料を作り、再利用できるタスク指示を保存します。教材と段階別の確認を用意。</span>
+			<span>一組の資料から事実表、記事、8枚のプレゼン資料を作り、再利用できるタスク指示を保存します。教材と段階別の確認を用意。</span>
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>開発者</strong>
-			<span>買い物かごのバグを理解し、失敗・成功テストを保存し、最小修正を確認して引き継ぎます。記入できるテンプレート3種付き。</span>
+			<span>買い物かごのバグを理解し、失敗・成功テストを保存し、最小修正を確認して引き継ぎ記録を書きます。記入できるテンプレート3種付き。</span>
 		</a>
 		<a class="path-card" href="/ja/guide/learning-paths/team/"><img src="/illustrations/home-path-team.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>チーム</strong>
@@ -97,6 +99,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 <section class="home-section" aria-labelledby="lookup-heading">
 	<div class="section-heading"><p>問題から直接調べる</p><h2 id="lookup-heading">次に行うことを見つける</h2></div>
 	<div class="path-grid">
+		<a class="path-card" href="/ja/guide/reference/model-selection/"><strong>モデルとプランを選ぶ</strong><span>会話、文章、表計算、プログラミングに合う出発点を選び、プランと実際の使用量を確認します。</span></a>
 		<a class="path-card" href="/ja/guide/reference/troubleshooting/"><strong>インストール、ログイン、実行に失敗した</strong><span>症状から調査手順を探すか、ログ付きの復旧演習を進めます。</span></a>
 		<a class="path-card" href="/ja/guide/reference/"><strong>コマンド、権限、用語を確認する</strong><span>リファレンス一覧で適用範囲と出典を調べます。</span></a>
 		<a class="path-card" href="/ja/guide/quality/"><strong>成果が完了したか判断する</strong><span>事実、ファイル、テストの証拠を確認し、未確認事項を残します。</span></a>
@@ -121,5 +124,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 この手引きはオープンソースの貢献者が維持し、簡体字中国語を原文としています。製品説明、筆者作成の教材、実際の実行記録は区別して表示します。スクリプトの成功だけでモデルの性能や読者の完走は証明できません。各ページの記録で検証範囲を確認してください。
 
 [内容の更新](/ja/guide/updates/) · [バージョンと検証方針](/ja/guide/start-here/handbook-version-policy/) · [貢献する](/ja/guide/contributing/)
+
+<ContentVerification />
 
 </AboutHandbook>

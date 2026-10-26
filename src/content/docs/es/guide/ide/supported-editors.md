@@ -3,13 +3,18 @@ title: Editores compatibles
 description: Distingue entre la extensión compatible con VS Code y las integraciones de Xcode y JetBrains.
 locale: es
 source_locale: zh-CN
-source_revision: 7b82896
-translation_status: draft
+source_revision: "7b82896"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: Se contrastaron los puntos de acceso específicos de VS Code, Cursor, Windsurf, VS Code Insiders, Xcode y los IDE de JetBrains con la página oficial actual de IDE, sin suponer que todas las integraciones ofrecen las mismas funciones.
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 Codex llega a los principales editores de distintas maneras: la familia VS Code utiliza la extensión de Codex, mientras que Xcode y los IDE de JetBrains tienen sus propios puntos de integración.
 
 ## Formas de acceso actuales

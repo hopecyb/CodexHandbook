@@ -3,13 +3,17 @@ title: Notificaciones y vista Activity
 description: Configura avisos de finalización de tareas, solicitudes de permisos y preguntas pendientes.
 locale: es
 source_locale: zh-CN
-source_revision: 4a1c672
-translation_status: draft
+source_revision: "4a1c672"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 Las notificaciones indican cuándo debes volver a atender una tarea; no sustituyen la revisión de los resultados. La aplicación de escritorio permite configurar avisos al terminar un turno y controlar por separado los de permisos y preguntas.
 
 ## Configuración recomendada

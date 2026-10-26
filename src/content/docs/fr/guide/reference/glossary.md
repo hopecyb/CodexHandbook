@@ -10,9 +10,10 @@ sidebar:
   order: 10
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: ae4b794
+source_revision: 'ae4b794'
+reviewed_at: '2026-10-26'
 ---
 
 | Terme | Définition |

@@ -3,13 +3,14 @@ title: Roadmap für KI-Anwendungen
 description: Unterscheidet wissenschaftliche Arbeiten, Produktankündigungen, Engineering-Artikel und Lernempfehlungen des Autors und führt von jedem Thema zur Praxis.
 locale: de
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
+source_revision: "f66e3ba"
+translation_status: reviewed
 translated_at: 2026-10-24
 prev: false
 next:
   link: /de/ai-roadmap/timeline/
   label: Ereignis- und Themenindex
+reviewed_at: 2026-10-26
 ---
 
 Diese Karte trennt überprüfbare öffentliche Ereignisse von Lernempfehlungen. **Die Daten beziehen sich nur auf die in der Tabelle genannten Arbeiten, Ankündigungen oder Artikel. Sie bezeichnen nicht automatisch die Entstehung eines Konzepts, seine Verbreitung in der Branche oder die Reife einer Fähigkeit.** Verschiedene Techniken lassen sich gleichzeitig nutzen; die Chronologie ist keine verpflichtende Lernreihenfolge.

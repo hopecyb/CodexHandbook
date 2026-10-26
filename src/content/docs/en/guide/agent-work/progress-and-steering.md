@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: c9ea3be
+source_revision: 'c9ea3be'
 ---
 
 When work starts drifting, two common reactions are to say nothing and let it continue, or to say “stop and start everything over.” Usually you can steer during execution instead: keep the parts that are already right and correct only what has gone off course.
@@ -39,7 +40,7 @@ Steering is a **local change in direction** for work already in progress. You ma
 A mid-task instruction can be short:
 
 ```text
-Stop at the current step. Keep A and B; undo the direction of changes to C;
+Stop at the current step. Keep A and B; abandon the current approach to changing C;
 next do only D. Do not start E.
 ```
 
@@ -140,4 +141,4 @@ When execution drifts, a short instruction can name what to keep, what to stop, 
 - To define the execution path: [Planning](/en/guide/agent-work/planning/).
 - For the full workflow: [Explore → Plan → Execute → Verify](/en/cases/workflows/explore-plan-execute-verify/).
 - To split work: [Subagents](/en/guide/agent-work/subagents/).
-- To continue after an interruption: [Handoff and Resumption](/en/guide/agent-work/handoff-and-resume/).
+- To continue after an interruption: [Handoff and resume](/en/guide/agent-work/handoff-and-resume/).

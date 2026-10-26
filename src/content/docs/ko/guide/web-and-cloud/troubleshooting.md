@@ -7,11 +7,12 @@ title: Cloud 문제 해결
 description: 저장소, setup, 네트워크, Agent 실행, 결과 전달의 다섯 단계에서 Cloud 실패 원인을 찾습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 019fac1
-translation_status: draft
+source_revision: "019fac1"
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 80
+reviewed_at: "2026-10-26"
 ---
 
 Cloud 작업을 다시 시도하면 시간이 다시 들지만, 빠진 권한이나 의존성, 네트워크 설정이 자동으로 채워지지는 않습니다. 먼저 어느 단계에서 실패했는지 판단하세요.

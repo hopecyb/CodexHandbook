@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against verified artifacts-first, validate-sources, images-and-screenshots, verify-artifacts pages; stable method: structure → copy → style and export."
+  checkedAt: "2026-07-26"
 title: Presentations
 description: Generate and revise slides and decks—structure, masters, and speaker notes.
 locale: en
 source_locale: zh-CN
-source_revision: fb319fa
+source_revision: 'fb319fa'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 50
 ---
@@ -85,7 +90,7 @@ Still human-check:
 
 ### 3. More on a slide ≠ more clarity
 
-Too many bullets, charts, and conclusions per slide hides the point.
+Too many bullets, charts, and conclusions on a slide hide the main point.
 
 ## Practical order for Codex
 
@@ -141,10 +146,3 @@ Images: [Images and screenshots](/en/guide/files-and-artifacts/images-and-screen
 - [ ] Outline approved before full generation
 - [ ] Opens in target environment without font breakage
 - [ ] Key data traceable to source files
-
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified artifacts-first, validate-sources, images-and-screenshots, verify-artifacts pages; stable method: structure → copy → style and export.  
-**Last verified:** 2026-07-26

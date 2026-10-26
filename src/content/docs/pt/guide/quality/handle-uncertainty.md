@@ -3,12 +3,17 @@ title: Lidar com incerteza
 description: Quando a informação falta, exigir perguntas em vez de inventar.
 locale: pt
 source_locale: zh-CN
-source_revision: 839ce22
+source_revision: "839ce22"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica princípios de perguntar e corrigir quando a informação falta; conceitos, frases de Prompt e ordem de tratamento foram revistos, e o corpo não depende de factos voláteis de produto.
+  checkedAt: '2026-07-26'
 ---
 
 Quando a informação não chega, confirme primeiro e só depois continue.
@@ -21,12 +26,12 @@ Se a premissa estiver errada, os passos seguintes desviam-se todos.
 Aqui, «incerteza» significa sobretudo:
 
 - Ainda não há evidência suficiente para confirmar
-- A informação relevante não está no Contexto atual
+- A informação relevante não está no contexto atual
 - Se continuar a adivinhar, o risco aumenta
 
 O melhor é declarar de antemão «quando parar primeiro para confirmar».
 
-Fixe no Prompt:
+Fixe no prompt:
 
 ```text
 Quando a informação for insuficiente, pergunte primeiro; não invente caminhos de ficheiros, APIs ou regras de negócio.
@@ -51,7 +56,7 @@ Conteúdo completo e fluido às vezes só está bem preenchido — não signific
 
 ### 2. Com informação incompleta, o ponto não é preencher o vazio
 
-Dar informação completa é melhor, mas na colaboração real a incompleção é comum.
+Dar informação completa é melhor, mas na colaboração real a informação incompleta é comum.
 
 O mais importante são duas coisas:
 
@@ -89,10 +94,3 @@ Se houver várias interpretações possíveis, liste primeiro os pontos de incer
 ```
 
 O pior é tratar a adivinhação como facto e avançar.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica princípios de perguntar e corrigir quando a informação falta; conceitos, frases de Prompt e ordem de tratamento foram revistos, e o corpo não depende de factos voláteis de produto.  
-**Última verificação:** 2026-07-26

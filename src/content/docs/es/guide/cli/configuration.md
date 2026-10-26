@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: El material de configuración de OpenAI Help Center sigue usando `~/.codex/config.toml` y `~/.codex/.env` como ejemplos verificables; esta página evita además atarse a nombres de campo concretos y solo resume intenciones habituales de configuración de la CLI, reparto por capas y límites de riesgo, por lo que puede marcarse como `verified` a nivel conceptual.
+  checkedAt: '2026-07-26'
 title: Configuración de la CLI
-description: Modelo, Sandbox, Aprobación y MCP — unificar el comportamiento de Codex en la terminal.
+description: Modelo, sandbox, aprobación y MCP — unificar el comportamiento de Codex en la terminal.
 locale: es
 source_locale: zh-CN
-source_revision: 0a9b2ad
+source_revision: "0a9b2ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
 ---
 
-La configuración de la CLI decide el **modelo por defecto, el directorio de trabajo, la severidad de Aprobación, los servidores MCP**, etc. Coincide conceptualmente con los [fundamentos de configuración](/es/guide/customization/configuration/config-basics/); esta página se centra en lo que más suelen cambiar los usuarios de terminal.
+La configuración de la CLI decide el **modelo por defecto, el directorio de trabajo, la nivel de exigencia de las aprobaciones, los servidores MCP**, etc. Coincide conceptualmente con los [fundamentos de configuración](/es/guide/customization/configuration/config-basics/); esta página se centra en lo que más suelen cambiar los usuarios de terminal.
 
 ## Contenido de esta página
 
@@ -27,7 +32,7 @@ Aquí se trata sobre todo de distinguir: **qué ajustes conviene fijar a largo p
 Puedes entenderla como «los hábitos de trabajo por defecto de Codex en la terminal».
 
 - Configuración del modelo: quién hace el trabajo por defecto
-- Sandbox y Aprobación: hasta dónde puede llegar por defecto y en qué paso necesita tu visto bueno
+- sandbox y aprobación: hasta dónde puede llegar por defecto y en qué paso necesita tu visto bueno
 - Directorio de trabajo: en qué proyecto trabaja por defecto
 - MCP y extensiones: qué capacidades externas puede tomar prestadas por defecto
 
@@ -37,9 +42,9 @@ Sin configurar nada, Codex sigue funcionando; solo que repetirás las mismas ele
 
 | Capa | Uso |
 |---|---|
-| Nivel de usuario | Defaults personales, entre proyectos |
+| Nivel de usuario | Valores predeterminados personales, entre proyectos |
 | Nivel de proyecto | Estrategia compartida del equipo (revisar antes de commit) |
-| Variables de entorno | Inyectar claves e interruptores en CI |
+| Variables de entorno | Inyectar claves y opciones de activación en CI |
 
 **Rutas y nombres de archivo** cambian con la versión de la CLI; manda la [documentación oficial](https://developers.openai.com/codex). Lo habitual es `config.toml` o un archivo equivalente bajo el directorio de usuario.
 
@@ -47,7 +52,7 @@ Sin configurar nada, Codex sigue funcionando; solo que repetirás las mismas ele
 
 ### No toda la configuración debe ir al proyecto
 
-Muchos principiantes mezclan «el modelo por defecto que me gusta», «rutas de mi máquina» y «la estrategia de Aprobación que el equipo debe cumplir».
+Muchos principiantes mezclan «el modelo por defecto que me gusta», «rutas de mi máquina» y «la estrategia de aprobación que el equipo debe cumplir».
 
 Más claro:
 
@@ -55,9 +60,9 @@ Más claro:
 - Lo que debe ser igual en este repo → nivel de proyecto
 - Solo para CI, scripts o una ejecución concreta → variables de entorno
 
-### Configurar no equivale a abrir Permisos de inmediato
+### Configurar no equivale a abrir permisos de inmediato
 
-Escribir una política en la configuración no significa que luego todas las acciones pasen sin condiciones. El comportamiento real también lo afectan la entrada del producto, el entorno de ejecución, las políticas gestionadas y el contenido de la Tarea.
+Escribir una política en la configuración no significa que luego todas las acciones pasen sin condiciones. El comportamiento real también lo afectan la entrada del producto, el entorno de ejecución, las políticas gestionadas y el contenido de la tarea.
 
 Así que la configuración es más una tendencia por defecto, no un privilegio permanente.
 
@@ -65,7 +70,7 @@ Así que la configuración es más una tendencia por defecto, no un privilegio p
 
 ### Modelo por defecto e intensidad de razonamiento
 
-Afectan a velocidad, coste y tasa de éxito en Tareas complejas. En escenarios con scripts conviene **fijar el modelo** para comparar logs.
+Afectan a velocidad, coste y tasa de éxito en tareas complejas. En escenarios con scripts conviene **fijar el modelo** para comparar logs.
 
 ### Sandbox y red
 
@@ -75,9 +80,9 @@ Afectan a velocidad, coste y tasa de éxito en Tareas complejas. En escenarios c
 | Estándar | Desarrollo diario |
 | Relajado | Solo entorno personal de confianza, y conforme a la política de la empresa |
 
-Conceptos: [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
+Conceptos: [sandbox y red](/es/guide/foundations/sandbox-and-network/)
 
-### Estrategia de Aprobación
+### Estrategia de aprobación
 
 La CLI puede preguntar antes de ejecutar shell, escribir en disco o conectar a la red. El equipo debería indicar en `AGENTS.md` qué comandos pueden pasar automáticamente de forma previsible — solo es efectivo si coincide con el comportamiento real del producto.
 
@@ -91,8 +96,8 @@ Al empezar no hace falta estudiar todos los campos de golpe. Este orden suele se
 
 1. Fija primero el modelo que más usas
 2. Confirma si el directorio de trabajo por defecto es el proyecto actual
-3. Decide si Aprobación y Sandbox van a ser conservadores o relajados
-4. Al final añade MCP, automatización u extensiones más avanzadas
+3. Decide si aprobación y sandbox van a ser conservadores o relajados
+4. Al final añade MCP, automatización o extensiones más avanzadas
 
 Ese orden se debe a que las dos primeras son más de uso diario y las dos últimas más de control de riesgo.
 
@@ -108,9 +113,9 @@ Evita «en la App corre y en CI falla»:
 
 | Fenómeno | Comprueba |
 |---|---|
-| La configuración no aplica | Si cambiaste la capa equivocada; si hace falta reiniciar |
+| La configuración no se aplica | Si cambiaste la capa equivocada; si hace falta reiniciar |
 | MCP no carga | Sintaxis JSON/TOML, rutas |
-| Aprobación demasiado frecuente | Modo Sandbox y allowlist |
+| aprobación demasiado frecuente | Modo sandbox y allowlist |
 
 Más: [Resolución de problemas de la CLI](/es/guide/cli/troubleshooting/)
 
@@ -118,9 +123,3 @@ Trata la configuración de la CLI como «hábitos de trabajo por defecto» y fij
 
 ## Fuentes de referencia
 - OpenAI Codex CLI configuration
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI  
-**Base de verificación:** El material de configuración de OpenAI Help Center sigue usando `~/.codex/config.toml` y `~/.codex/.env` como ejemplos verificables; esta página evita además atarse a nombres de campo concretos y solo resume intenciones habituales de configuración de la CLI, reparto por capas y límites de riesgo, por lo que puede marcarse como `verified` a nivel conceptual.  
-**Última verificación:** 2026-07-26

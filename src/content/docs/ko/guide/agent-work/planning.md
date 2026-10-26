@@ -11,9 +11,10 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: 'a129229'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 계획은 확인하고 조정할 수 있는 실행 경로입니다. 범위, 의존성, 완료 기준의 빈틈을 미리 찾는 데 도움이 되지만, 작업이 크다는 이유로 확인을 반복해서 기다릴 필요는 없습니다.
 

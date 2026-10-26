@@ -3,12 +3,17 @@ title: Computer Use
 description: 화면과 입력 장치로 GUI를 조작하는 고급 능력 — 적용 장면, 위험, 승인.
 locale: ko
 source_locale: zh-CN
-source_revision: d4a2e11
+source_revision: "d4a2e11"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / Codex(버전·지역·권한에 따라)
+  basis: OpenAI Help Center의 현재 Codex 요금제·데스크톱 능력 자료는 Computer Use를 Codex 관련 기능 중 하나로 둡니다. Business 릴리스 노트도 2026-05-29부터 Windows에서 Codex Computer Use를 지원한다고 확인합니다. 본문은 위험 모델·적용 장면·승인 경계만 요약하며, 모든 플랫폼·계정이 기본 사용 가능하다고 선언하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **Computer Use**는 Agent가 사람처럼 화면을 보고, 포인터를 움직이고, 글자를 입력하게 합니다. 브라우저나 터미널에 한정되지 않습니다. 능력이 가장 강하고, **위험과 승인 요구도 가장 높습니다**.
@@ -41,7 +46,7 @@ Computer Use는 화면·마우스·키보드 층에서 직접 동작하며, 브�
 
 적합:
 
-- API가 없는 소프트웨어의 반복 클릭 흐름(당신이 감독)
+- API가 없는 발표 소프트웨어의 반복 클릭 흐름(당신이 감독)
 - 앱 간 데이터 복사(컴플라이언스 전제)
 - 데스크톱 App 자체의 동작 검증
 
@@ -105,11 +110,11 @@ Computer Use는 거의 **키보드·마우스를 Agent에 넘기는 것**과 같
 
 1. **전용 환경**: 가상머신 또는 보조 사용자 계정, 화면에 프라이버시 창 없음
 2. **작업 최소화**: 「Calculator에서 수식 검증」 — 「모든 메일 처리」가 아님
-3. **사람이 루프에**: 보이게 두고, 언제든 중단 준비
+3. **사람의 감독**: 보이게 두고, 언제든 중단 준비
 4. **녹화/로그**: 팀 회고용(녹화에도 민감 정보)
 5. **끝난 뒤 점검**: 파일시스템, 클립보드, 열린 앱
 
-기업 환경은 기본 비활성일 수 있습니다. 호스팅 정책을 따릅니다.
+기업 환경은 기본 비활성일 수 있습니다. 조직의 관리 정책을 따릅니다.
 
 ## 브라우저 도구와의 선택
 
@@ -121,7 +126,7 @@ IDE 밖 앱을 조작?  → Computer Use(더 신중)
 
 [도구 선택](/ko/guide/tools/tool-selection/)을 보세요.
 
-## 바로 쓸 수 있는 쓰기
+## 바로 사용할 수 있는 요청 예시
 
 이렇게 쓰세요.
 
@@ -142,10 +147,3 @@ Calculator와 로컬 테스트 앱만 조작하고, 메일·채팅·파일 관�
 - [ ] prompt에 허용 앱과 금지 항목을 명시
 - [ ] 작업 후 예상치 못한 파일/네트워크 연결이 없음
 - [ ] 조직 정책이 해당 능력을 허용
-
----
-
-**상태:** verified  
-**적용 제품:** App / Codex(버전·지역·권한에 따라)  
-**검증 근거:** OpenAI Help Center의 현재 Codex 요금제·데스크톱 능력 자료는 Computer Use를 Codex 관련 기능 중 하나로 둡니다. Business 릴리스 노트도 2026-05-29부터 Windows에서 Codex Computer Use를 지원한다고 확인합니다. 본문은 위험 모델·적용 장면·승인 경계만 요약하며, 모든 플랫폼·계정이 기본 사용 가능하다고 선언하지 않습니다.  
-**최근 검증:** 2026-07-26

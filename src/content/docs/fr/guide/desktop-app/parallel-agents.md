@@ -3,14 +3,17 @@ title: Conversations et Agents en parallèle
 description: Utilisez des conversations et des worktrees indépendants pour faire avancer des tâches qui peuvent être acceptées séparément.
 locale: fr
 source_locale: zh-CN
-source_revision: 2336db1
+source_revision: "2336db1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
 ---
-
 L'unité de base du travail parallèle est une conversation qui possède son propre contexte, ses messages, son résultat et son objectif. Une tâche se prête à une exécution parallèle lorsque **ses parties sont indépendantes, possèdent des limites de fichiers claires et peuvent être acceptées séparément**, et non simplement parce qu'elle comporte de nombreuses étapes.
 
 ![Schéma d'orchestration où le fil principal délègue des travaux indépendants à plusieurs sous-agents, puis réunit les preuves et résout les conflits](/diagrams/subagent-orchestration-fr.svg)
@@ -72,11 +75,3 @@ Pour une orchestration plus fine des outils, consultez [Sous-agents](/fr/guide/a
 - [Travaux de longue durée](https://learn.chatgpt.com/docs/long-running-work)
 - [Worktrees Git](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Sous-agents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** App, CLI, IDE
-
-**Dernière vérification :** 2026-08-26

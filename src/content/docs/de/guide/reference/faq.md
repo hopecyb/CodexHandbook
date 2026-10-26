@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Gegen geprüfte Einstiege zu Clientwahl, Workflows, Erweiterungen, Cloud-GitHub und Slash-Befehlen abgeglichen; nur FAQ-Navigation, keine volatilen Produktdefaults."
+  checkedAt: "2026-07-26"
 title: FAQ
 description: Häufige Fragen beim Einstieg und in der Nutzung.
 locale: de
 source_locale: zh-CN
-source_revision: c9d7ed8
+source_revision: "c9d7ed8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -19,34 +24,34 @@ Bei losen Einzelfragen zuerst FAQ. Kein vollständiges System — hilft schnell 
 - Ein Problem blockiert, lohnt aber kein ganzes Kapitel
 - Zuerst eine Richtungsentscheidung
 
-**Q: Welchen Client zuerst?**  
+**Q: Welchen Client zuerst?**
 A: Desktop-App. Siehe [Client wählen](/de/guide/choose-your-client/).
 
-**Q: Prüfung überspringen und alle Änderungen annehmen?**  
+**Q: Prüfung überspringen und alle Änderungen annehmen?**
 A: Besser nicht. Siehe [Verifikation und Menschen-Review](/de/guide/foundations/verification-and-human-review/).
 
-**Q: Gibt es Standard-Prompt-Vorlagen?**  
+**Q: Gibt es Standard-Prompt-Vorlagen?**
 A: Framework ja, Magie nein. Siehe [Anatomie einer guten Aufgabe](/de/prompts/task-anatomy/).
 
-**Q: Handbuch und offizielle Docs widersprechen sich?**  
+**Q: Handbuch und offizielle Docs widersprechen sich?**
 A: Offiziell maßgeblich: [https://developers.openai.com/codex](https://developers.openai.com/codex); Issues willkommen.
 
-**Q: Unterschied AGENTS.md, Skill, MCP?**  
+**Q: Unterschied AGENTS.md, Skill, MCP?**
 A: Siehe [Erweiterungs-Fähigkeitskarte](/de/skills/capability-map/) und [Erweiterungsart wählen](/de/skills/choosing-an-extension-method/).
 
-**Q: Empfohlener Standardworkflow?**  
+**Q: Empfohlener Standardworkflow?**
 A: Default [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/).
 
-**Q: Cloud — GitHub verbinden, PR öffnen?**  
+**Q: Cloud — GitHub verbinden, PR öffnen?**
 A: Siehe [GitHub verbinden](/de/guide/web-and-cloud/connect-github/) und [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/).
 
-**Q: CLI in CI?**  
+**Q: CLI in CI?**
 A: Ja — Einstieg [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/), mit Freigabe und Berechtigungen planen.
 
-**Q: Welche Slash-Befehle?**  
+**Q: Welche Slash-Befehle?**
 A: Client-`/`-Completion maßgeblich; Lernübersicht [Slash-Befehle](/de/guide/reference/slash-commands/).
 
-**Q: Vollständige Creator-/Entwickler-/Team-Pfade?**  
+**Q: Vollständige Creator-/Entwickler-/Team-Pfade?**
 A: Einstiegspfade vorhanden; tiefe Cases in [Szenario-Cases](/de/cases/use-cases/), Team-Governance in Roadmap M6 `11-team-enterprise`.
 
 ## Häufige Missverständnisse
@@ -60,7 +65,7 @@ Für Einsteiger oft der schnellste Start.
 FAQ macht vor allem:
 
 - Richtungsurteil
-- Weiterleitung zur volleren Seite
+- Weiterleitung zur ausführlicheren Seite
 
 ### 3. Frage fehlt = Handbuch schweigt?
 
@@ -75,14 +80,7 @@ Oft verteilt auf:
 Wenn blockiert und unklar wohin:
 
 1. FAQ durchsuchen
-2. Nächste Frage finden
+2. Die am besten passende Frage finden
 3. Link zur Fachseite folgen
 
-Meist sparsamer als Seitenleisten-Herumklicken.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Gegen geprüfte Einstiege zu Clientwahl, Workflows, Erweiterungen, Cloud-GitHub und Slash-Befehlen abgeglichen; nur FAQ-Navigation, keine volatilen Produktdefaults.  
-**Zuletzt geprüft:** 2026-07-26
+Das spart meist Zeit gegenüber wiederholtem Suchen in der Seitenleiste.

@@ -2,19 +2,25 @@
 title: 'Percurso do criador: fontes, artigo, apresentação e reutilização'
 description: Use as mesmas fontes para produzir tabela de fatos, artigo, apresentação editável de oito slides e instruções reutilizáveis, com materiais e critérios de aceitação em cada etapa.
 contentType: path
-audiences: [creator, beginner]
+audiences:
+- creator
+- beginner
 level: beginner
-outputs: [markdown, csv, pptx, png]
+outputs:
+- markdown
+- csv
+- pptx
+- png
 editorialStatus: review
 verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Quatro marcos foram organizados a partir dos materiais reais do artigo e da apresentação, e a ligação entre entradas e saídas foi conferida. As validações individuais estão nos casos; o percurso completo ainda não foi cronometrado nem concluído de forma independente por leitores.
   evidence:
-    - label: Materiais do artigo e registro de verificação do autor
-      href: /downloads/source-backed-article/validation/record.md
-    - label: Registro do ambiente e da renderização da apresentação
-      href: /downloads/article-to-slides/validation/record.md
+  - label: Materiais do artigo e registro de verificação do autor
+    href: /downloads/source-backed-article/validation/record.md
+  - label: Registro do ambiente e da renderização da apresentação
+    href: /downloads/article-to-slides/validation/record.md
 sidebar:
   order: 10
 prev:
@@ -25,9 +31,10 @@ next:
   label: Começar a organizar três fontes
 locale: pt
 source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
+source_revision: "d1b46b1"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Use um conjunto de fontes para escrever um artigo, transformá-lo em apresentação editável e guardar instruções que poderá reutilizar. Cada etapa deixa arquivos com os quais você pode verificar se terminou.
@@ -107,7 +114,7 @@ Comece com o artigo e a apresentação já concluídos e conferidos. Crie `workf
 - Fatos e ambiente a reconfirmar:
 ```
 
-Faça uma adaptação pequena: mude o público de “autores individuais em seu primeiro teste” para “colegas preparando a revisão dos materiais”. Mantenha as fontes e gere novamente apenas o roteiro. Em `reuse-check.md`, registre mudanças de título, ênfase e ordem, além dos limites factuais inalterados. O exercício testa se o modelo se adapta à nova tarefa, sem afirmar que realizou nova pesquisa factual.
+Faça uma adaptação pequena: mude o público de “autores individuais em seu primeiro teste” para “colegas preparando a revisão dos materiais”. Mantenha as fontes e gere novamente apenas o roteiro. Em `reuse-check.md`, registre mudanças de título, ênfase e ordem, além dos limites factuais inalterados. O exercício testa se o modelo de instruções se adapta à nova tarefa, sem afirmar que realizou nova pesquisa factual.
 
 A etapa termina quando outra pessoa consegue achar entradas e saídas em `workflow.md` e sabe quando o trabalho está completo. O registro de adaptação deve apontar diferenças concretas e não continuar escrevendo para o público original. Se a sequência estiver estável, leia [Transformar um fluxo em Skill](/pt/cases/workflows/turn-a-workflow-into-a-skill/). O [exemplo de Skill de escrita](/pt/skills/examples/writing-skill/) oferece pacote completo com amostras de estilo, tabela de fatos e tratamento de conflitos; validação estrutural não substitui a revisão factual humana.
 

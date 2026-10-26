@@ -8,9 +8,10 @@ title: Carte des capacités d’extension
 description: "Comprendre les extensions de Codex à travers huit responsabilités : tâche, règles, processus, outils, garde-fous, distribution, déclenchement et parallélisme."
 locale: fr
 source_locale: zh-CN
-source_revision: 183812c
-translation_status: draft
+source_revision: '183812c'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Les mécanismes d’extension se confondent facilement, car ils apparaissent souvent dans un même flux de travail. Pourtant, ils ne répondent pas au même besoin.

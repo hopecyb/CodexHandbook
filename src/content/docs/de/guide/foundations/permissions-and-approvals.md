@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-CLI-Einstiegsdokumentation im OpenAI Help Center unterscheidet weiterhin approval modes und schichtet Aktionen wie Dateien lesen/schreiben und Befehle ausführen nach Risiko; diese Seite erklärt nur, warum Freigabe existiert, wann vorsichtig freigegeben werden sollte und wie Nutzer den Wirkungsbereich einschätzen — ohne feste Produktdefaults zu behaupten."
+  checkedAt: "2026-07-26"
 title: Berechtigungen und Freigaben
 description: "Erklärt, wann Codex deine Zustimmung für Operationen braucht."
 locale: de
 source_locale: zh-CN
-source_revision: 1beec63
+source_revision: "1beec63"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -22,7 +27,7 @@ Könnte Codex beliebige Dateien lesen, ungehindert online gehen und beliebig Bef
 - Darf es Pfade außerhalb des aktuellen Projekts lesen/schreiben?
 - Darf es online gehen?
 - Darf es bestimmte Shell-Befehle ausführen?
-- Hat das Team verpflichtende Politiken ausgegeben (Managed Config)?
+- Hat das Team verbindliche Richtlinien ausgegeben (Managed Config)?
 
 ## Was sie steuert
 
@@ -56,7 +61,7 @@ Prüfe mindestens diese drei Punkte:
 
 ### 3. Wenn ich ablehne — ist die ganze Aufgabe hin?
 
-In der Regel nicht. Du kannst ablehnen und es einen sichereren Weg weitermachen lassen.
+In der Regel nicht. Du kannst die Aktion ablehnen und Codex auf einem sichereren Weg fortfahren lassen.
 
 ## Einfache Prinzipien beim Nutzen
 
@@ -73,13 +78,6 @@ In der Regel nicht. Du kannst ablehnen und es einen sichereren Weg weitermachen 
 | Produktunterschiede | Wie Einstiege Bestätigungen zeigen | [Produkthandbuch](/de/guide/) |
 | Prompt-Strategie | Wie du Berechtigungsgrenzen in der Aufgabe angibst | [Einschränkungen definieren](/de/prompts/constraints-and-boundaries/) |
 
-Offizielle Politiken und Defaults können sich ändern — prüfe [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Offizielle Richtlinien und Defaults können sich ändern — prüfe [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Freigabe stellt sicher, dass „darf es das?“ am Ende immer bei dir bleibt.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Die aktuelle Codex-CLI-Einstiegsdokumentation im OpenAI Help Center unterscheidet weiterhin approval modes und schichtet Aktionen wie Dateien lesen/schreiben und Befehle ausführen nach Risiko; diese Seite erklärt nur, warum Freigabe existiert, wann vorsichtig freigegeben werden sollte und wie Nutzer den Wirkungsbereich einschätzen — ohne feste Produktdefaults zu behaupten.  
-**Zuletzt überprüft:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Đội / doanh nghiệp"
+  basis: "Tài liệu plugin, ứng dụng và tích hợp OpenAI vẫn phân biệt truy cập dữ liệu ngoài, quyền hành động, yêu cầu phê duyệt và ranh giới hệ thống nguồn; trang tổ chức rủi ro đội thành tài sản, ranh giới tin cậy, mối đe dọa điển hình và kiểm soát nhiều tầng — không phụ thuộc một toggle sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 title: Mô hình mối đe dọa
 description: "Các bề mặt rủi ro chính của Codex trong môi trường đội — dữ liệu, công cụ, mở rộng và chuỗi cung ứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 4ec320d
+source_revision: "4ec320d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -29,7 +34,7 @@ Nếu bạn xây dựng, vận hành nền tảng, viết tài liệu hoặc d�
 
 - Trao token quyền quá cao cho tự động hóa
 - Chạy hành động rủi ro cao trên đầu vào không đáng tin
-- Không biết dữ liệu nào có thể rời tổ chức
+- Không biết dữ liệu nào được phép xem và dữ liệu nào không được đưa ra ngoài
 - Thêm mở rộng vì tính năng mà bỏ qua quyền và nguồn gốc
 
 Mô hình hóa mối đe dọa giúp cố định ranh giới trước sự cố.
@@ -39,7 +44,7 @@ Mô hình hóa mối đe dọa giúp cố định ranh giới trước sự cố
 | Tài sản | Ví dụ |
 |---|---|
 | Mã nguồn và IP | Repo riêng, thiết kế chưa công bố |
-| Chứng chỉ | API key, `.env`, IAM cloud |
+| Thông tin xác thực | API key, `.env`, IAM cloud |
 | Dữ liệu người dùng | PII, nội dung ticket khách hàng |
 | Hạ tầng | CI, pipeline deploy production |
 
@@ -77,12 +82,12 @@ Khung này biến mô hình hóa mối đe dọa thành checklist rủi ro trư�
 | Quyền quá mức | Token, Sandbox quá rộng | Quyền tối thiểu, bảo vệ nhánh |
 | Exfiltration dữ liệu | Lệnh/MCP lộ repo | Chính sách mạng, DLP, Hook kiểm toán |
 | Mở rộng độc hại | Plugin/MCP chưa review | [Rủi ro mở rộng](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/) |
-| Chuỗi cung ứng | Can thiệp dependency/script | SCA sẵn có, code review |
+| Chuỗi cung ứng | Chèn mã độc vào thư viện phụ thuộc hoặc script | SCA sẵn có, code review |
 | Thao tác sai | Agent drop DB, push nhầm | Deny lệnh, CI no-push |
 
 ## Khi nào ưu tiên trong mô hình mối đe dọa
 
-Nếu một năng lực vừa:
+Cần ưu tiên đưa một năng lực vào mô hình mối đe dọa nếu nó đồng thời:
 
 - Chạm tài sản quan trọng
 - Thực thi hành động thật
@@ -132,7 +137,7 @@ Thiết lập:
 - Dữ liệu nhạy cảm deny mặc định
 - Tự động hóa chỉ đọc mặc định
 
-Đã loại bỏ nhiều rủi ro đội; tinh chỉnh quản trị sau.
+Những biện pháp này giúp giảm nhiều rủi ro ở cấp nhóm; có thể tiếp tục hoàn thiện cơ chế quản trị sau.
 
 ## Checklist nghiệm thu
 
@@ -147,9 +152,3 @@ Thiết lập:
 
 ## Nguồn tham chiếu
 - White paper bảo mật doanh nghiệp OpenAI (chính thức)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** Đội / doanh nghiệp  
-**Cơ sở kiểm chứng:** Tài liệu plugin, ứng dụng và tích hợp OpenAI vẫn phân biệt truy cập dữ liệu ngoài, quyền hành động, yêu cầu phê duyệt và ranh giới hệ thống nguồn; trang tổ chức rủi ro đội thành tài sản, ranh giới tin cậy, mối đe dọa điển hình và kiểm soát nhiều tầng — không phụ thuộc một toggle sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

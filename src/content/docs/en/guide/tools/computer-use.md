@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (version, region, and permission dependent)"
+  basis: "OpenAI Help Center materials on Codex plans and desktop capabilities still list Computer Use; Business release notes confirm Codex Computer Use on Windows from 2026-05-29. This page summarizes risk model, use cases, and approval boundaries—not claiming universal default availability."
+  checkedAt: "2026-07-26"
 title: Computer Use
 description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
 locale: en
 source_locale: zh-CN
-source_revision: d4a2e11
+source_revision: 'd4a2e11'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+sidebar:
+  order: 50
 ---
 
 **Computer Use** lets the Agent view the screen, move the pointer, and type—beyond browser or terminal alone. Most powerful capability; **highest risk and approval requirements**.
@@ -39,7 +46,7 @@ So the surface area of UI and information it can touch is usually larger.
 
 Good for:
 
-- Repetitive click flows in demo software without APIs (under supervision)
+- Repetitive click flows in presentation software without APIs (under supervision)
 - Copying data across apps (when compliant)
 - Verifying desktop App behavior itself
 
@@ -134,10 +141,3 @@ If a system confirmation appears, stop and explain before continuing.
 - [ ] Prompt lists allowed apps and prohibitions
 - [ ] Post-task check: no unexpected files/network
 - [ ] Org policy allows the capability
-
----
-
-**Status:** verified  
-**Applicable products:** App / Codex (version, region, and permission dependent)  
-**Verification basis:** OpenAI Help Center materials on Codex plans and desktop capabilities still list Computer Use; Business release notes confirm Codex Computer Use on Windows from 2026-05-29. This page summarizes risk model, use cases, and approval boundaries—not claiming universal default availability.  
-**Last verified:** 2026-07-26

@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: "6d859d7"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Diese Übung teilt die Issue-Triage in „Vorschlag erzeugen → validieren → menschlich prüfen“ auf. Sie erhalten fünf Einträge zur Prüfung. Kommentare, Labels und das Schließen von Issues erfolgen nicht automatisch.

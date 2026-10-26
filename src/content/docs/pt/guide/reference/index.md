@@ -5,10 +5,15 @@ sidebar:
   order: 60
 locale: pt
 source_locale: zh-CN
-source_revision: 0c9c971
+source_revision: "d45e640"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: 2026-10-25
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica o uso e as entradas da zona de referência; ligações internas e agrupamento de capítulos foram revistos, e o texto não declara valores por omissão que mudam com a versão.
+  checkedAt: '2026-07-26'
 ---
 
 Curto, preciso e pesquisável. Esta zona é sobretudo consulta rápida e índice; as explicações profundas ficam nos capítulos temáticos.
@@ -20,12 +25,14 @@ Há muito conteúdo em «Referência» — trata-a como caixa de ferramentas e �
 Há três tipos de conteúdo:
 
 - **Consolidar conceitos**: glossário, FAQ, comparação de funcionalidades
-- **Consultar regras concretas**: comandos, configuração, Permissões, variáveis de ambiente
+- **Consultar regras concretas**: comandos, configuração, permissões, variáveis de ambiente
 - **Quando algo falha**: mensagens de erro, diagnóstico, recursos oficiais
 
 Vem com uma pergunta concreta; não precisas de ler tudo de uma vez.
 
 ## Índice de aprendizagem
+
+- [Escolher modelos: um ponto de partida por tarefa](/pt/guide/reference/model-selection/)
 
 - [Glossário](/pt/guide/reference/glossary/)
 - [Perguntas frequentes](/pt/guide/reference/faq/)
@@ -36,7 +43,7 @@ Vem com uma pergunta concreta; não precisas de ler tudo de uma vez.
 
 - [Referência de comandos CLI](/pt/guide/reference/commands/)
 - [Referência de configuração](/pt/guide/reference/configuration-reference/)
-- [Matriz de Permissões](/pt/guide/reference/permission-matrix/)
+- [Matriz de permissões](/pt/guide/reference/permission-matrix/)
 - [Variáveis de ambiente](/pt/guide/reference/environment-variables/)
 - [Atalhos de teclado](/pt/guide/reference/keyboard-shortcuts/)
 - [Referência de erros e avisos](/pt/guide/reference/error-reference/)
@@ -47,14 +54,7 @@ Vem com uma pergunta concreta; não precisas de ler tudo de uma vez.
 - [Recursos oficiais](/pt/guide/reference/official-resources/)
 
 :::note[Sensível à versão]
-Comandos, chaves de configuração e Permissões por omissão mudam com o produto — cada página indica a data de verificação; confirma a documentação oficial antes de usar.
+Comandos, chaves de configuração e permissões por omissão mudam com o produto — cada página indica a data de verificação; confirma a documentação oficial antes de usar.
 :::
 
 A zona de referência não é o tutorial principal. Quando precisares de termos, configuração, comandos ou diagnóstico, volta aqui.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica o uso e as entradas da zona de referência; ligações internas e agrupamento de capítulos foram revistos, e o texto não declara valores por omissão que mudam com a versão.  
-**Última verificação:** 2026-07-26

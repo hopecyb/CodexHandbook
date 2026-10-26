@@ -1,17 +1,21 @@
 ---
-title: Definición de hecho
-description: Enfoque de checklist de hecho compartido por equipo e individuo.
+title: Definición de terminado
+description: Cómo definir una lista de criterios de finalización para uso personal y del equipo.
 locale: es
 source_locale: zh-CN
-source_revision: f55e9f7
+source_revision: "f55e9f7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica la función y la forma de escribir la definición de terminado; se han revisado conceptos, ejemplos y formulaciones de checklist, y el cuerpo no depende de hechos variables de producto.
+  checkedAt: '2026-07-26'
 ---
-
-«Definición de hecho» es directo: dejar claro de antemano hasta dónde hay que llegar para que esta vez cuente como realmente terminado.
+«Definición de terminado» es directo: dejar claro de antemano hasta dónde hay que llegar para que esta vez cuente como realmente terminado.
 
 Sin ese paso, lo habitual es:
 
@@ -31,9 +35,9 @@ Por ejemplo:
 
 Si no se aclara de antemano, es fácil que cada uno hable de lo suyo.
 
-Ejemplo mínimo de definición de hecho personal:
+Ejemplo mínimo de definición de terminado personal:
 
-- [ ] Diff revisado
+- [ ] diff revisado
 - [ ] Criterios de aceptación marcados uno a uno
 - [ ] Tests o verificación manual hechos
 - [ ] Ningún secreto entró en el repositorio
@@ -43,7 +47,7 @@ La versión de equipo se ampliará en un hito posterior de gobernanza.
 
 ## Malentendidos habituales
 
-### 1. La definición de hecho no tiene por qué ser formal ni compleja
+### 1. La definición de terminado no tiene por qué ser formal ni compleja
 
 En la primera fase, aunque solo escribas tres puntos ya sirve:
 
@@ -56,12 +60,12 @@ En la primera fase, aunque solo escribas tres puntos ya sirve:
 Puedes distinguirlo así:
 
 - **Objetivo**: qué resultado quieres
-- **Definición de hecho**: cómo demostrar que ese resultado ya se alcanzó
+- **Definición de terminado**: cómo demostrar que ese resultado ya se alcanzó
 
 Por ejemplo:
 
 - Objetivo: corregir el texto del botón de la home
-- Definición de hecho: solo cambia la home; el texto del botón pasa a la nueva versión; la vista previa de la página está bien
+- Definición de terminado: solo cambia la home; el texto del botón pasa a la nueva versión; la vista previa de la página está bien
 
 ### 3. No hace falta escribir mucho cada vez
 
@@ -74,17 +78,10 @@ Más importante que escribir largo es escribir claro.
 Puedes empezar con esta:
 
 ```text
-Criterios de hecho:
+Criterios de finalización:
 1. Solo modifica el alcance indicado
 2. El resultado cumple los requisitos que di
 3. Los pasos de verificación están hechos, y me dices cómo comprobarlo
 ```
 
-La «definición de hecho» aclara sobre todo «hasta dónde hay que llegar para darlo por terminado», para que tu juicio y el de Codex no diverjan.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la función y la forma de escribir la definición de hecho; se han revisado conceptos, ejemplos y formulaciones de checklist, y el cuerpo no depende de hechos variables de producto.  
-**Última verificación:** 2026-07-26
+La «definición de terminado» aclara sobre todo «hasta dónde hay que llegar para darlo por terminado», para que tu juicio y el de Codex no diverjan.

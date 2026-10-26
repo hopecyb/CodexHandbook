@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE"
+  checkedAt: "2026-08-26"
 title: Parallel chats and Agents
 description: Use independent chats and worktrees to advance tasks that can be accepted separately.
 locale: en
 source_locale: zh-CN
-source_revision: 2336db1
+source_revision: '2336db1'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -72,11 +76,3 @@ For finer-grained tool orchestration, see [Subagents](/en/guide/agent-work/subag
 - [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26

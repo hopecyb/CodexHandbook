@@ -8,8 +8,9 @@ title: Quality & Verification
 description: Review diffs, run tests, validate sources, and define done.
 locale: en
 source_locale: zh-CN
-source_revision: 90d62fb
-translation_status: draft
+source_revision: '90d62fb'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 sidebar:
   order: 21
@@ -38,7 +39,7 @@ Much rework happens because:
 - A page loads but the flow does not work
 - Docs exist but a newcomer cannot follow them
 
-Verification **keeps risk before delivery**.
+Verification **catches risks before delivery**.
 
 ## Common pitfalls
 

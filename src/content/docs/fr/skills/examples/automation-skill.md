@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: "6c758b9"
+reviewed_at: 2026-10-26
 ---
 
 Répéter un contrôle ne veut pas dire envoyer une notification à chaque fois. Ce Skill reprend l’[exercice de vérification des liens](/fr/cases/use-cases/team-automation/scheduled-link-check/) et consigne les changements, les reprises et les erreurs d’exécution. Si le résultat ne change pas, il reste silencieux.
@@ -91,7 +92,7 @@ Confirmez la réussite du build avant de contrôler sa dernière sortie. Si le b
 
 La planification réelle et la livraison des messages n’ont pas été testées. Les liens externes restent `unchecked` : un résultat local sain ne signifie pas que « tous les liens du site fonctionnent ».
 
-## Périmètre et réception
+## Périmètre et validation
 
 Les audits répétés de liens de documentation conviennent à ce Skill. Les rapports de ventes généraux, l’écriture créative et l’installation automatique en production sortent de son périmètre. Les cas de déclenchement sont des attentes de conception, sans mesure du routage par le modèle.
 

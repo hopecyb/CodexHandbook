@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 822e8f7
+source_revision: '822e8f7'
 ---
 
 In “interactive mode,” you talk back and forth with Codex in the terminal. It can explain and act, and it waits for your confirmation when needed. This is one common way to use the CLI.

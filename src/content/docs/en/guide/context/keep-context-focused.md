@@ -8,8 +8,9 @@ title: Keep context focused
 description: Control scope, start new threads, and hand off work.
 locale: en
 source_locale: zh-CN
-source_revision: "5a55fa8"
-translation_status: draft
+source_revision: '5a55fa8'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 60
@@ -48,7 +49,7 @@ You may think you are adding helpful information, while Codex sees an increasing
 - Give each task one goal
 - Periodically summarize “done / not done / constraints still in effect”
 - Use stage checkpoints for long tasks
-- Use [handoff and resume](/guide/agent-work/handoff-and-resume/) across sessions
+- Use [handoff and resume](/en/guide/agent-work/handoff-and-resume/) across sessions
 
 ## Signals that it is time to refocus
 

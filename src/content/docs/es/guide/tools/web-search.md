@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "La documentación actual de modelos de la OpenAI API sigue listando `Web search` como una capacidad de herramienta disponible; esta página solo enfatiza el método «buscar para complementar hechos, priorizar fuentes originales, volver al original a contrastar la conclusión» y no depende de una interfaz de producto concreta."
+  checkedAt: "2026-07-26"
 title: Búsqueda web
 description: Complementar hechos con búsqueda y citar fuentes.
 locale: es
 source_locale: zh-CN
-source_revision: 7adcb92
+source_revision: '7adcb92'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -23,7 +28,7 @@ La búsqueda ayuda sobre todo a localizar:
 
 - Dónde mirar
 - Qué información merece contrastarse más
-- Si hay una fuente más autoritativa
+- Si hay una fuente de mayor autoridad
 
 Su papel es sacar primero el material; después vuelves al original a contrastar.
 
@@ -31,7 +36,7 @@ Su papel es sacar primero el material; después vuelves al original a contrastar
 
 ### 1. ¿Si encuentra resultados, la respuesta es fiable?
 
-No. Encontrar ≠ creíble; un resumen fluido ≠ exacto.
+No. Encontrar un resultado no lo hace fiable; un resumen fluido tampoco garantiza exactitud.
 
 ### 2. ¿En qué casos encaja la búsqueda?
 
@@ -69,7 +74,7 @@ Puedes tratarlo en este orden:
 3. Abre el original y confirma el detalle
 4. Luego decide si la conclusión entra en el resultado
 
-## Prompt usable directamente
+## Prompt listo para usar
 
 Puedes añadir:
 
@@ -78,10 +83,3 @@ Busca primero y prioriza fuentes oficiales; al dar una conclusión, adjunta enla
 ```
 
 La búsqueda te da pistas y fuentes; al final hay que volver al original a contrastar.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** La documentación actual de modelos de la OpenAI API sigue listando `Web search` como una capacidad de herramienta disponible; esta página solo enfatiza el método «buscar para complementar hechos, priorizar fuentes originales, volver al original a contrastar la conclusión» y no depende de una interfaz de producto concreta.  
-**Última verificación:** 2026-07-26

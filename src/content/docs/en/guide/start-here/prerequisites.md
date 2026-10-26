@@ -8,11 +8,12 @@ title: What you need before starting
 description: Account, device, practice project, and safety basics.
 locale: en
 source_locale: zh-CN
-source_revision: "5fbedb8"
-translation_status: draft
+source_revision: '5fbedb8'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 5
+reviewed_at: 2026-10-25
 ---
 
 For most people new to Codex, the obstacle is not technical background but knowing how to take the first step.

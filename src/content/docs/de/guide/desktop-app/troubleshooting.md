@@ -1,12 +1,17 @@
 ---
-title: Desktop-App Fehlerbehebung
-description: Häufige Behandlung bei Installation, Anmeldung und Aufgabenfehlern.
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Aktuelle OpenAI-Desktop-Hilfe deckt weiterhin Installation, Anmeldung, Projektzugriff und lokale Dateiberechtigungen ab; diese Seite leitet Symptome zu Installation, Anmeldung, Berechtigungen, wartender Freigabe und Kontextumfang — ein stabiler Einstieg in die Fehlerbehebung."
+  checkedAt: "2026-07-26"
+title: Fehlerbehebung in der Desktop-App
+description: Häufige Probleme bei Installation, Anmeldung und Aufgaben beheben.
 locale: de
 source_locale: zh-CN
-source_revision: c298f9f
+source_revision: "c298f9f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 100
 ---
@@ -15,7 +20,7 @@ Bei der Fehlerbehebung zuerst die wahrscheinlichsten und einfachsten Ursachen pr
 
 | Symptom | Zuerst versuchen |
 |---|---|
-| Installation / Öffnen scheitert | Systemanforderungen und Official-Installer prüfen; neu starten und erneut versuchen |
+| Installation / Öffnen scheitert | Systemanforderungen und offizielles Installationspaket prüfen; neu starten und erneut versuchen |
 | Anmeldung scheitert | Netzwerk, Kontorechte, SSO prüfen; Sitzung leeren und neu anmelden |
 | Projektdateien unsichtbar | Korrekten Ordner und System-Dateiberechtigungen prüfen |
 | Aufgabe wartet dauernd auf Freigabe | In die Aufgabenansicht zurück und ausstehende Freigaben bearbeiten |
@@ -47,10 +52,3 @@ Zuerst den Rahmen enger ziehen:
 - bei Bedarf neuen Thread starten
 
 Fehlerbehebung beginnt bei den häufigsten, leichtesten Ursachen — nicht bei der komplexesten Theorie.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App  
-**Prüfgrundlage:** Aktuelle OpenAI-Desktop-Hilfe deckt weiterhin Installation, Anmeldung, Projektzugriff und lokale Dateiberechtigungen ab; diese Seite leitet Symptome zu Installation, Anmeldung, Berechtigungen, wartender Freigabe und Kontextumfang — ein stabiler Einstieg in die Fehlerbehebung.  
-**Zuletzt geprüft:** 2026-07-26

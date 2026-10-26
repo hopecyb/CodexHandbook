@@ -1,13 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã rà soát theo hệ thống sáu trạng thái, quy tắc ghi chú xác minh và nguyên tắc ưu tiên nguồn chính thức của cẩm nang. Trang giải thích chính sách phiên bản và cách đọc trong website, không phụ thuộc tham số của một phiên bản sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 title: Chính sách phiên bản cẩm nang
 description: Giải thích trạng thái nội dung, ngày kiểm chứng và cách cập nhật liên tục.
 locale: vi
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
+reviewed_at: 2026-10-26
 ---
 
 ## Cập nhật liên tục

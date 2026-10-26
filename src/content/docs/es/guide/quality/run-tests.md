@@ -3,14 +3,18 @@ title: Ejecutar tests
 description: Haz que los pasos de verificación formen parte de la tarea.
 locale: es
 source_locale: zh-CN
-source_revision: 8b1e5c7
+source_revision: "8b1e5c7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica por qué los pasos de verificación deben entrar en la aceptación de la tarea; se han revisado frases de ejemplo y el orden de comprobación, y el cuerpo no depende de hechos variables de producto.
+  checkedAt: '2026-07-26'
 ---
-
 Tras el cambio, hace falta alguna forma de confirmar que no se rompió nada de forma evidente.
 
 Esa «prueba» puede ser un test automático, un build correcto o un conjunto claro de pasos de verificación manual.
@@ -33,7 +37,7 @@ Un «hecho» sin verificación muchas veces es solo un juicio subjetivo.
 
 Aunque cambies sobre todo documentos, páginas, configuración o contenido, también necesitas una forma de verificación correspondiente.
 
-### 2. Si el repositorio no tiene tests, igual hay que aceptar
+### 2. Si el repositorio no tiene tests, aun así hay que verificar antes de aceptar
 
 Sin tests automáticos, al menos añade una de estas:
 
@@ -74,10 +78,3 @@ Dime qué verificaciones ejecutaste realmente; si no puedes ejecutarlas, explica
 ```
 
 La verificación puede ser ligera, pero no puede faltar; si no, «terminado» cuesta de sostener.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica por qué los pasos de verificación deben entrar en la aceptación de la tarea; se han revisado frases de ejemplo y el orden de comprobación, y el cuerpo no depende de hechos variables de producto.  
-**Última verificación:** 2026-07-26

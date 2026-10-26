@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: ko
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: 'efd508a'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## 확인 가능한 사건과 범위

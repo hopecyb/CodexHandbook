@@ -17,6 +17,7 @@ export const verification = z.object({
 });
 
 export const handbookSchema = z.object({
+	reviewed_at: z.preprocess(value => value instanceof Date ? value.toISOString().slice(0, 10) : value, date).optional(),
 	contentType: z.enum(['guide', 'reference', 'prompt', 'skill', 'case', 'path']).optional(),
 	audiences: z.array(z.string()).optional(),
 	task: z.string().optional(),

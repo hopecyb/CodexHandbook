@@ -3,12 +3,17 @@ title: 선택 영역과 열린 파일
 description: 선택한 코드와 열린 파일로 IDE 작업 범위를 정확히 한정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: 'b6b264f'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 이 페이지는 IDE 확장에서 가장 안정적인 범위 제어법—선택 영역·열린 파일·명시적 `@` 경로의 조합—을 다룹니다. 에디터에서 코드와 함께 일할 때의 범용 컨텍스트 구성이며, 특정 확장 버튼 이름에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 IDE 확장은 **작은 범위·고정밀도** 변경에 잘 맞습니다. 코드 한 구간을 선택하고 의도를 말하면, Codex가 인근 컨텍스트에서 수정합니다. 여기서는 선택 영역과 열린 파일로 범위를 조여 잘못된 곳을 고치지 않게 하는 방법을 다룹니다.
@@ -27,7 +32,7 @@ IDE 확장은 **작은 범위·고정밀도** 변경에 잘 맞습니다. 코드
 |---|---|---|
 | **선택 영역** | 단일 함수·컴포넌트, 오류 스택 근처 | `parseUser()`를 선택하고 빈 값 처리를 요청 |
 | **열린 파일** | 파일 안 여러 연관 지점을 이해해야 할 때 | `auth.ts` + `auth.test.ts` 열기 |
-| **@ 경로** | 다른 디렉터리·미개방 파일 | `@src/api/client.ts`와 백엔드 타입 맞추기 |
+| **@ 경로** | 다른 디렉터리·열지 않은 파일 | `@src/api/client.ts`와 백엔드 타입 맞추기 |
 
 개념 심화: [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
@@ -87,9 +92,3 @@ Prompt: 모듈 경계, 수정 금지 디렉터리 명시
 
 ## 참고 출처
 - [제약 정의](/ko/prompts/constraints-and-boundaries/)
----
-
-**상태:** verified  
-**적용 제품:** IDE  
-**검증 근거:** 이 페이지는 IDE 확장에서 가장 안정적인 범위 제어법—선택 영역·열린 파일·명시적 `@` 경로의 조합—을 다룹니다. 에디터에서 코드와 함께 일할 때의 범용 컨텍스트 구성이며, 특정 확장 버튼 이름에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

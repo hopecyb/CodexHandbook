@@ -3,12 +3,17 @@ title: Códigos de saída e retries
 description: Interpretar bem o sucesso ou a falha de codex exec no pipeline — quando fazer retry e quando falhar de imediato.
 locale: pt
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: "35074cd"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Foram removidos significados de códigos de saída específicos sem fundamento. A página usa apenas o sucesso ou a falha do processo e a saída de progresso e erros em `stderr` confirmados oficialmente; as conclusões da revisão são tratadas pela saída estruturada.
+  checkedAt: '2026-08-26'
 ---
 
 A CI depende do **código de saída do processo** para julgar se um passo teve sucesso. Este capítulo explica a semântica habitual de [codex exec](/pt/guide/developer-platform/non-interactive/codex-exec/), a estratégia de retries e o desenho idempotente.
@@ -21,7 +26,7 @@ A CI depende do **código de saída do processo** para julgar se um passo teve s
 
 ## O que o código de saída te diz realmente
 
-Se é a primeira vez, pensa no «código de saída» como um resultado breve que o programa deixa ao script e à CI quando a Tarefa termina.
+Se é a primeira vez, pensa no «código de saída» como um resultado breve que o programa deixa ao script e à CI quando a tarefa termina.
 
 Costuma não explicar muito; só diz ao pipeline:
 
@@ -42,7 +47,7 @@ Muitos principiantes tratam tudo o que não é `0` como a mesma falha.
 
 Na prática há que distinguir pelo menos:
 
-- A Tarefa partiu-se ao correr
+- A tarefa partiu-se ao correr
 - A política ou o Sandbox bloquearam-na
 - Um serviço externo falhou de forma temporária
 - Correu bem, mas a conclusão da revisão é «não passa»
@@ -51,39 +56,36 @@ O tratamento não é o mesmo; nem tudo se resolve com retry.
 
 ### «Retry automático» ≠ mais estabilidade
 
-Se a causa da falha não desaparece ao repetir —Permissão insuficiente, regra que bloqueia, Prompt mau—, o retry só gasta tempo e quota.
+Se a causa da falha não desaparece ao repetir —permissão insuficiente, regra que bloqueia, prompt mau—, o retry só gasta tempo e quota.
 
 ## Semântica recomendada (conceito)
 
 | Situação | Tratamento sugerido |
 |---|---|
-| `0` | A Tarefa terminou e cumpre o critério de sucesso do Prompt |
-| Diferente de `0` e o log mostra rejeição de policy/sandbox | **Não** fazer retry às cegas; corrige configuração ou Prompt |
-| Diferente de `0` e API 429/5xx | Retry limitado com backoff exponencial |
+| `0` | O processo `codex exec` terminou com sucesso; a aprovação do resultado de negócio ainda depende da saída estruturada |
+| Diferente de `0` e o log mostra rejeição de policy/sandbox | **Não** fazer retry às cegas; corrige configuração ou prompt |
+| Diferente de `0` e o runner confirmou uma falha temporária de rede ou serviço | Repetição limitada com espera progressiva |
 | Encontrou-se um P0 mas a execução teve sucesso | Usa `pass: false` da [saída estruturada](/pt/guide/developer-platform/non-interactive/structured-output/) + `exit 1` no script |
 
 «Encontrou-se um problema de segurança» não deveria depender de uma exceção tipo crash: deve ser **explícito** com `pass: false` em JSON e o script envolvente decidir o código de saída.
 
-## Template de retry (bash)
+## Modelo para capturar o código de saída (bash)
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-Alinha os códigos «não retentáveis» com a documentação oficial e mete-os em ramos `case`.
+Não atribuas significados a números sem definição oficial, como supor que `2` indica sempre uma falha de política. Se for preciso repetir, o runner externo deve decidir com base em tipos de erro que identifica de forma confiável e limitar o número de tentativas, a duração total e os efeitos colaterais.
 
 ## Idempotência e efeitos secundários
 
@@ -99,7 +101,7 @@ Se não souberes se uma falha merece retry, pergunta-te:
 
 1. Parece uma flutuação externa temporária?
 2. Mesmo que volte a correr, gerará comentários, escritas ou notificações duplicadas?
-3. A causa real é que alguém deve mudar configuração, Prompt ou Permissões?
+3. A causa real é que alguém deve mudar configuração, prompt ou permissões?
 
 Quanto mais perto de (1), mais sentido tem um retry limitado; quanto mais perto de (2) ou (3), mais convém parar e atacar a causa raiz.
 
@@ -107,7 +109,7 @@ Quanto mais perto de (1), mais sentido tem um retry limitado; quanto mais perto 
 
 - Ignorar o código de saída; CI sempre green
 - Retry sem limite em erros de política e queimar quota
-- Retry sem fixar Prompt/git sha; resultados incomparáveis
+- Retry sem fixar prompt/git sha; resultados incomparáveis
 
 Primeiro distingue «é uma falha temporária ou não melhorará ao repetir?» e depois decide. Nem toda a falha merece outra passagem.
 
@@ -125,9 +127,3 @@ Primeiro distingue «é uma falha temporária ou não melhorará ao repetir?» e
 
 ## Fontes de referência
 - Guia de retries da API da OpenAI (conceito)
----
-
-**Estado:** outdated  
-**Produtos aplicáveis:** CLI  
-**Nota de revisão:** A página dá conselhos de engenharia razoáveis sobre códigos de saída e retries, mas o exemplo assume semântica concreta (p. ex. `code=2`) e comportamento de `codex exec`; esses detalhes ainda carecem de base oficial vigente suficientemente sólida e devem verificar-se com a documentação nova do CLI antes de voltar a `verified`.  
-**Última verificação:** 2026-07-26

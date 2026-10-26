@@ -1,14 +1,18 @@
 ---
 title: 委任と follow-up
-description: 独立して実行できる Cloud タスクを開始し、同じチャットで方向と検収結果を修正します。
+description: 独立して実行できる Cloud タスクを開始し、同じチャットで方針を修正し、結果を検証します。
 locale: ja
 source_locale: zh-CN
-source_revision: 38b322f
+source_revision: "38b322f"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud、App、IDE、CLI
+  checkedAt: '2026-08-26'
 ---
 
 委任は「問題を投げる」ことではありません。目標、制約、環境、完了基準を独立した Cloud チャットへ渡すことです。タスクはバックグラウンドで実行できます。ログを確認し、コンテキストを追加し、修正を依頼し、最後に diff をレビューできます。
@@ -67,11 +71,3 @@ Cloud タスクは Web、IDE、GitHub、GitLab（Beta）、Linear、Slack から
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [長時間タスク](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud、App、IDE、CLI
-
-**最終検証：** 2026-08-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against OpenAI Developers’ current public description of project context, task boundaries, and approval/sandbox constraints; page content is limited to purpose, boundaries, and common patterns for `AGENTS.md`, without unverified mandatory precedence details."
+  checkedAt: "2026-07-26"
 title: What Is AGENTS.md
 description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
 locale: en
 source_locale: zh-CN
-source_revision: 47c5866
+source_revision: '47c5866'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -57,7 +62,7 @@ Create `AGENTS.md` at the repo root:
 - Describe verification steps in the PR description
 ```
 
-After saving, in a new task write only **this task’s delta**, for example: “Fix login page layout on Safari; accept per AGENTS.md.”
+After saving, in a new task write only **what is specific to this task**, for example: “Fix login page layout on Safari; verify completion according to AGENTS.md.”
 
 ## Common Misconceptions
 
@@ -130,9 +135,3 @@ For example:
 
 ## References
 - OpenAI Codex project context documentation
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context, task boundaries, and approval/sandbox constraints; page content is limited to purpose, boundaries, and common patterns for `AGENTS.md`, without unverified mandatory precedence details.  
-**Last verified:** 2026-07-26

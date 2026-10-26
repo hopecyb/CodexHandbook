@@ -2,7 +2,8 @@
 title: "Trò chuyện với Codex"
 description: "Chuẩn bị cùng một bộ tài liệu thực hành rồi bắt đầu bằng việc chỉ đọc để hiểu các tệp và những điều chưa rõ."
 contentType: "path"
-audiences: ["beginner"]
+audiences:
+  - "beginner"
 level: "beginner"
 editorialStatus: "review"
 sidebar:
@@ -20,15 +21,16 @@ prev:
 next:
   link: "/vi/guide/learning-paths/beginner/02-work-with-files/"
   label: "Làm việc với tệp"
-locale: vi
-source_locale: zh-CN
-source_revision: 827a5d2
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "827a5d2"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 ## Chuẩn bị tài liệu
 
-[Tải toàn bộ gói thực hành](/downloads/first-project/first-project-1.0.0.zip). Sau khi giải nén, sao chép nguyên thư mục `starter` thành một thư mục mới tên `work`, rồi cho Codex mở `work`. Trong đó chỉ có ba tệp `facts.md`, `notice.md` và `private-note.md`, đều là tài liệu học tập tổng hợp.
+[Tải toàn bộ gói thực hành](/downloads/first-project/first-project-1.0.0.zip). Sau khi giải nén, sao chép nguyên thư mục `starter` thành một thư mục mới tên `work`, rồi cho Codex mở `work`. Trong đó chỉ có ba tệp `facts.md`, `notice.md` và `private-note.md`, đều là tài liệu học tập hư cấu.
 
 Giữ lại `starter` gốc. Đừng dùng `references`, nơi chứa đáp án của tác giả, làm đầu vào cho bước này. Chưa cần Git, terminal hay thư viện phụ thuộc bổ sung; chỉ cần mở tệp bằng trình soạn thảo.
 

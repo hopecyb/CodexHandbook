@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: "1b7fbb3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Utilisez des documents relatifs à un événement fictif pour vous exercer à passer de la lecture de fichiers à la livraison d’une annonce vérifiable. Vous n’avez pas besoin de connaître Git ou la programmation ni d’installer des dépendances au préalable.

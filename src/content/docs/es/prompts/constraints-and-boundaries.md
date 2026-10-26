@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe cómo escribir restricciones y límites; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Restricciones y límites
 description: Limita el alcance editable, el estilo y las prohibiciones.
 locale: es
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: '0ca4700'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Muchas tareas fallan no porque el objetivo falte del todo, sino porque **los límites no están claros**.
 
 Si dices «ayúdame a cambiar esta página», Codex puede entender:
 
-- solo cambiar el copy
+- solo cambiar el texto
 - también retocar estilos
 - tocar componentes
 - añadir dependencias
@@ -49,8 +54,8 @@ Responden a: «¿qué no debe hacerse en absoluto?»
 Por ejemplo:
 
 ```text
-Objetivo: hacer más claro el copy del Hero de la home
-Restricciones: no cambiar el layout, no añadir dependencias, no modificar el comportamiento del CTA
+Objetivo: hacer más claro el texto de la sección principal de la página de inicio
+Restricciones: no cambiar el diseño, no añadir dependencias, no modificar el comportamiento del CTA
 ```
 
 Sin restricciones, Codex puede interpretar «hacerlo más claro» como un rediseño mucho mayor.
@@ -99,11 +104,4 @@ Conviene explicitarlas en estos casos:
 
 El objetivo dice a Codex qué hacer; la restricción dice hasta dónde.
 
-Escribe los límites de permiso junto con las restricciones para reducir extralimitaciones «de paso». Ver [Definir el terminado](/es/prompts/define-done/) y [Permisos y sandbox](/es/guide/permissions-and-sandbox/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe cómo escribir restricciones y límites; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles del producto.
+Escribe los límites de permiso junto con las restricciones para reducir extralimitaciones «de paso». Ver [Definir criterios de finalización](/es/prompts/define-done/) y [Permisos y sandbox](/es/guide/permissions-and-sandbox/).

@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: 0d21aa9
-translation_status: draft
+source_revision: '0d21aa9'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 정기 검사를 예약하기 전에 스크립트가 실제로 문제를 찾아내고 무엇을 검사했는지 설명하는지 확인하세요. 이 연습은 의도적으로 만든 끊어진 링크 두 개로 시작합니다. 대상 하나씩 수정하고 결과 변화를 관찰합니다.

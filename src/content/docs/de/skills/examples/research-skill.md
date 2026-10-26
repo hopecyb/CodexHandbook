@@ -21,8 +21,9 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: "cf2b232"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -32,7 +33,7 @@ Eine Quelle, die sich nicht öffnen lässt, eine Quelle ohne Aussage zum Sachver
 
 ## Feste Fragestellung und Materialien
 
-Das Paket verwendet das fiktive Werkzeug „拾页“ aus der [Artikelübung](/de/cases/write-an-article/). Untersuchen Sie Eingabeformate, die Standardeinstellung der Diagnose und Upload-Felder. Drei eigens erstellte synthetische Quellen liegen bei; eine vierte Wartungsnotiz im Katalog fehlt absichtlich. Suchen Sie keine echten Webseiten zum fiktiven Produkt und erfinden Sie keine Antwort.
+Das Paket verwendet das fiktive Werkzeug „Shiye (拾页)“ aus der [Artikelübung](/de/cases/write-an-article/). Untersuchen Sie Eingabeformate, die Standardeinstellung der Diagnose und Upload-Felder. Drei eigens erstellte synthetische Quellen liegen bei; eine vierte Erläuterung des Maintainers im Katalog fehlt absichtlich. Suchen Sie keine echten Webseiten zum fiktiven Produkt und erfinden Sie keine Antwort.
 
 | Belegstatus | Beispiel im Paket | Darstellung im Ergebnis |
 |---|---|---|
@@ -50,7 +51,7 @@ Legen Sie das vollständige Verzeichnis im Übungsprojekt unter `.agents/skills/
 ```text
 $evidence-research Prüfe anhand der Quellen in sources/catalog.json dieses Pakets,
 ob Eingabeformate, Diagnose-Standardeinstellung und Upload-Felder
-von 拾页 1.2 bestätigt werden können. Erstelle my-output/report.md
+von Shiye (拾页) 1.2 bestätigt werden können. Erstelle my-output/report.md
 und evidence.csv; kennzeichne Widersprüche und nicht erreichbare Quellen.
 Behalte die synthetische Identität bei und suche keine echten Webseiten
 zum fiktiven Produkt.

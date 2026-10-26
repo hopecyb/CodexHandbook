@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / Cloud"
+  basis: "Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas."
+  checkedAt: "2026-07-26"
 title: Research and learning
 description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: a0be881
+source_revision: 'a0be881'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Research tasks differ from ordinary Q&A in one way:
@@ -22,10 +27,3 @@ Research tasks differ from ordinary Q&A in one way:
 - How to require sources and citations
 - Turning "I think" into "what I found in evidence"
 - Keeping conclusions within what the material actually supports
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas.

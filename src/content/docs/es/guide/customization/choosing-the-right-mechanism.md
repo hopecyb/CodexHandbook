@@ -3,15 +3,19 @@ title: Elegir el mecanismo adecuado
 description: Prompt temporal, AGENTS.md, memoria, Skill y MCP — en qué capa va cada uno, con un marco de decisión claro.
 locale: es
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: "5fad7cb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Contrastado con los capítulos ya verificados de este manual sobre `AGENTS.md`, contexto, Skills, MCP y calidad; esta página conserva solo el marco estable de decisión: «requisitos temporales, reglas de proyecto, preferencias personales, encapsulación de flujos y capacidades externas deben vivir en capas distintas».'
+  checkedAt: '2026-07-26'
 ---
-
-El problema de muchos equipos suele ser **poner la misma información en el lugar equivocado**: reglas que deberían estar en el repositorio van al chat, flujos que deberían ser un Skill se meten en `AGENTS.md`, y datos que deberían conectarse solo lectura reciben un MCP de alto permiso.
+El problema de muchos equipos suele ser **poner la misma información en el lugar equivocado**: reglas que deberían estar en el repositorio van al chat, flujos que deberían ser un Skill se meten en `AGENTS.md`, y datos que deberían conectarse solo lectura reciben acceso mediante MCP con permisos excesivos.
 
 Aquí importa una pregunta práctica:
 
@@ -126,11 +130,11 @@ No lo hagas al revés. Las reglas de equipo no deberían vivir solo en la memori
 
 | Pregunta | Sí | No |
 |---|---|---|
-| ¿Solo afecta a la tarea actual? | Prompt | Sigue decidiendo |
+| ¿Solo afecta a la tarea actual? | prompt | Sigue decidiendo |
 | ¿Todos deben cumplirlo? | `AGENTS.md` / configuración del proyecto | Sigue decidiendo |
 | ¿Es un flujo repetible? | Skill | Sigue decidiendo |
 | ¿Necesita datos externos o acciones en tiempo real? | MCP | Sigue decidiendo |
-| ¿Es solo una preferencia personal a largo plazo? | Memoria / configuración de usuario | Prompt |
+| ¿Es solo una preferencia personal a largo plazo? | Memoria / configuración de usuario | prompt |
 
 Cuando un requisito cae en dos columnas a la vez, suele significar que debes **dividir en capas**, no forzar todo en el mismo sitio.
 
@@ -170,7 +174,7 @@ Enfoque más sólido:
 
 ### Convertir `AGENTS.md` en una enciclopedia
 
-El resultado: las restricciones duras no destacan y los comandos y zonas prohibidas importantes quedan ahogados. `AGENTS.md` encaja mejor corto, duro y ejecutable.
+El resultado: las restricciones duras no destacan y los comandos y zonas prohibidas importantes quedan ahogados. `AGENTS.md` encaja mejor breve, preciso y ejecutable.
 
 ### Usar Skill como «cajón de sastre»
 
@@ -205,9 +209,3 @@ Así es más fácil estabilizar primero el **consenso de colaboración** y ampli
 
 ## Referencias
 - Documentación oficial de OpenAI Codex (según la versión actual)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre `AGENTS.md`, contexto, Skills, MCP y calidad; esta página conserva solo el marco estable de decisión: «requisitos temporales, reglas de proyecto, preferencias personales, encapsulación de flujos y capacidades externas deben vivir en capas distintas».  
-**Última verificación:** 2026-07-26

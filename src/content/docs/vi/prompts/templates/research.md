@@ -8,12 +8,11 @@ title: Mẫu nghiên cứu
 description: Khảo sát và so sánh kèm trích dẫn.
 locale: vi
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: "729d4cc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Khác biệt giữa tác vụ nghiên cứu và hỏi đáp thường là: bạn không chỉ cần câu trả lời, còn cần câu trả lời đến từ đâu.
 
@@ -21,7 +20,7 @@ Khác biệt giữa tác vụ nghiên cứu và hỏi đáp thường là: bạn
 
 ```text
 Câu hỏi nghiên cứu: 【một câu】
-Chiều đánh giá: 【liệt kê 3–5 mục】
+Tiêu chí đánh giá: 【liệt kê 3–5 mục】
 Ràng buộc:
 - Mỗi kết luận kèm URL nguồn hoặc đường dẫn @trong kho
 - Không kiểm chứng được thì đánh dấu «cần xác nhận»

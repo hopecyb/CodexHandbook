@@ -1,6 +1,6 @@
 ---
 import { translations } from '../../data/chatgptPricing';
-import type { SiteLang } from '../../utils/siteNav';
+import { pickLabel, uiLabels, type SiteLang } from '../../utils/siteNav';
 import type { StandaloneLocaleCode } from '../../utils/standalonePages';
 
 interface Props {
@@ -33,13 +33,13 @@ const communityLinks = [
 ] as const;
 
 const trustLinks = [
-	{ href: '/contact/', key: 'contact' },
-	{ href: '/privacy-policy/', key: 'privacy' },
-	{ href: '/terms/', key: 'terms' },
+	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/contact/` : '/contact/', key: 'contact' },
+	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/privacy-policy/` : '/privacy-policy/', key: 'privacy' },
+	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/terms/` : '/terms/', key: 'terms' },
 ] as const;
 ---
 
-<footer class="pricing-footer" aria-label="Site footer">
+<footer class="pricing-footer" aria-label={pickLabel(uiLabels.siteFooter, lang)}>
 	<div class="pricing-footer__inner">
 		<div class="pricing-footer__grid">
 			<div class="pricing-footer__brand">

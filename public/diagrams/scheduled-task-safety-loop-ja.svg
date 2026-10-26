@@ -44,7 +44,7 @@
 
   <rect x="670" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#fb923c" stroke-width="1.5"/>
   <text x="760" y="190" text-anchor="middle" class="label">4. 資料を選択</text>
-  <text x="760" y="219" text-anchor="middle" class="note">Web：アップロードとコネクタ</text>
+  <text x="760" y="219" text-anchor="middle" class="note">Web：アップロードと接続したツール</text>
   <text x="760" y="243" text-anchor="middle" class="note">デスクトップ：プロジェクト / worktree</text>
   <text x="760" y="265" text-anchor="middle" class="tiny">Web からローカルディレクトリは読めない</text>
 

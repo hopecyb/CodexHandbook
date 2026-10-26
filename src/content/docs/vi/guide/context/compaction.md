@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu rủi ro và cách cứu sau khi nén hội thoại dài; khái niệm, ví dụ và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.", "checkedAt": "2026-07-26"}
 title: Nén ngữ cảnh
 description: Hội thoại dài sau khi nén giữ gì, mất gì.
 locale: vi
 source_locale: zh-CN
-source_revision: c6c9d03
+source_revision: "c6c9d03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
@@ -19,7 +20,7 @@ Nhiều người mới mặc định nghĩ:
 
 «Những gì đã nói trước, nó nên nhớ rất đầy đủ mãi.»
 
-Thực tế không luôn vậy.  
+Thực tế không luôn vậy.
 Tác vụ dài vào nén thường dễ mất hơn:
 
 - Hạn chế nhỏ rất chi tiết
@@ -69,7 +70,7 @@ Nếu tác vụ đã dài, giữa chừng có thể tự viết một tóm tắt
 Ràng buộc còn hiệu lực hiện tại:
 1. Chỉ sửa thư mục docs
 2. Đừng chỉnh cấu trúc routing
-3. Tiêu chí hoàn thành là cập nhật copy trang chủ và build qua
+3. Tiêu chí hoàn thành là cập nhật nội dung trang chủ và build qua
 ```
 
 Cách này ổn hơn tiếp tục dựa vào cả chuỗi hội thoại dài.
@@ -77,10 +78,3 @@ Cách này ổn hơn tiếp tục dựa vào cả chuỗi hội thoại dài.
 Tầng khái niệm: [Token, ngữ cảnh và nén](/vi/guide/foundations/tokens-context-and-compaction/)
 
 Trong tác vụ dài, hạn chế then chốt đừng chỉ nói một lần; sau nén, quy tắc quan trọng đáng chủ động nhắc lại.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu rủi ro và cách cứu sau khi nén hội thoại dài; khái niệm, ví dụ và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

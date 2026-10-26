@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against currently verified prompts, quality, agent work, and Skills chapters in this handbook; this page only provides method navigation and phase checkpoint guidance—not treating specific client flows as long-term contracts."
+  checkedAt: "2026-07-26"
 title: Workflow methods
 description: Repeatable collaboration methods—not tied to a single product UI, emphasizing checkpoints and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: d058896
+source_revision: 'd058896'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 [Prompts](/en/prompts/) teach you how to **say** things; workflows teach you how to **organize a whole task**. Methods in this chapter apply to App, CLI, IDE, and Cloud.
@@ -52,10 +57,3 @@ Without checkpoints, you risk: editing the wrong directory, skipping tests, mist
 2. **Default to small steps**: reviewable increments beat one huge change
 3. **Failures recoverable**: know how to undo and fork a thread to continue
 4. **Capture when possible**: third repetition of a flow → Skill or template
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified prompts, quality, agent work, and Skills chapters in this handbook; this page only provides method navigation and phase checkpoint guidance—not treating specific client flows as long-term contracts.

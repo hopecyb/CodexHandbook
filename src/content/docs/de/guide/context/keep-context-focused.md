@@ -3,12 +3,17 @@ title: Kontext fokussiert halten
 description: Rahmen steuern, neue Threads und Übergabe.
 locale: de
 source_locale: zh-CN
-source_revision: 5a55fa8
+source_revision: "5a55fa8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur Eingrenzen und Fokussieren des Kontexts; Konzepte, Phasenprüfpunkt-Formulierungen und interne Links geprüft, ohne volatile Produktfakten.
+  checkedAt: '2026-07-26'
 ---
 
 Viele Aufgaben werden im Gespräch chaotisch — oft weil der Kontext schon zerfasert ist.
@@ -35,7 +40,7 @@ Häufig:
 - mehrere Ziele in einem Gespräch
 - frühere Einschränkungen selbst vergessen
 - gelöste Themen belegen weiter Aufmerksamkeit
-- neue Anforderung zwischendurch, ohne neu zu schließen
+- neue Anforderung zwischendurch, ohne den Fokus neu festzulegen
 
 Du denkst, du ergänzt Infos — Codex sieht einen immer diffuseren Schwerpunkt.
 
@@ -43,12 +48,12 @@ Du denkst, du ergänzt Infos — Codex sieht einen immer diffuseren Schwerpunkt.
 
 - eine Aufgabe, ein Ziel
 - regelmäßig «erledigt / offen / weiter gültige Einschränkungen» zusammenfassen
-- lange Aufgaben mit Phasen-Toren
+- lange Aufgaben mit Phasenprüfpunkten
 - über Sitzungen hinweg: [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
-## Signale zum aktiven Schließen
+## Signale, dass der Kontext eingegrenzt werden sollte
 
-Dann schließen:
+Grenze den Kontext ein, wenn:
 
 - du musst selbst zurückscrollen, um den Stand zu kennen
 - im selben Thread läuft schon das zweite Problem
@@ -72,9 +77,9 @@ Getrennt = klarerer Rahmen, leichter prüfbar.
 
 Zwischenkalibrierung. Bei langen Aufgaben verhindert das, dass beide den Stand vergessen.
 
-### Phasen-Tore bei langen Aufgaben
+### Phasenprüfpunkte bei langen Aufgaben
 
-„Phasen-Tor“ = kleines Stück fertig, prüfen, dann weiter.
+„Phasenprüfpunkt“ = kleines Stück fertig, prüfen, dann weiter.
 
 Z. B. zuerst „nur lokalisieren“, dann „nur Vorschlag“, zuletzt „ändern“.
 
@@ -82,12 +87,12 @@ Z. B. zuerst „nur lokalisieren“, dann „nur Vorschlag“, zuletzt „änder
 
 Geht es nicht in einer Sitzung: kurzer Handoff mit Schlüsselstatus.
 
-## Sofort nutzbare Schließ-Formulierung
+## Direkt nutzbare Formulierung zur Fokussierung
 
 Zwischendurch:
 
 ```text
-Kurz schließen.
+Lass uns den aktuellen Stand und Fokus festhalten.
 Erledigt: A.
 Offen: B.
 Weiter gültige Einschränkungen: nur Frontend, keine API; keine neuen Abhängigkeiten installieren.
@@ -109,10 +114,3 @@ Bei neuer Richtung oft sauberer: neuer Thread.
 Je mehr geändert, desto schwerer zu sagen, ab welchem Schritt es schiefging.
 
 Kontextfokus heißt nicht weniger reden — gültige Infos behalten, Unwichtiges rechtzeitig streichen. Chaotischer Kontext → schiefe Ausführung.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Schließen und Fokus halten; Konzepte, Phasen-Tor-Formulierungen und interne Links geprüft, ohne volatile Produktfakten.  
-**Zuletzt geprüft:** 2026-07-26

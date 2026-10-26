@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Erklärt nur Zweck und Einstiege der Referenz; interne Links und Gruppierung geprüft; keine versionsvolatilen Defaults im Fließtext."
+  checkedAt: "2026-07-26"
 title: Referenz
 description: 'Einstiege zu Terminologie, Befehlen, Konfiguration, Berechtigungsmatrix, FAQ und Troubleshooting.'
 sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: 0c9c971
+source_revision: "d45e640"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: 2026-10-25
+reviewed_at: 2026-10-26
 ---
 
 Kurz, präzise, durchsuchbar. Dieser Bereich ist vor allem Nachschlagewerk und Index — Tiefe liegt in den Fachkapiteln.
 
-Die Referenzseiten sind viele; als Werkzeugkasten und Index nutzen, nicht von vorn bis hinten lesen.
+Es gibt viele Referenzseiten. Nutze sie als Werkzeugkasten und Index; du musst sie nicht von Anfang bis Ende lesen.
 
 ## Nutzung
 
@@ -27,6 +32,7 @@ Besser mit konkreter Frage kommen, als alles auf einmal lesen.
 
 ## Lernindex
 
+- [Modellwahl nach Aufgabe](/de/guide/reference/model-selection/)
 - [Glossar](/de/guide/reference/glossary/)
 - [FAQ](/de/guide/reference/faq/)
 - [Funktionsvergleich](/de/guide/reference/feature-comparison/)
@@ -47,14 +53,7 @@ Besser mit konkreter Frage kommen, als alles auf einmal lesen.
 - [Offizielle Ressourcen](/de/guide/reference/official-resources/)
 
 :::note[Versionsempfindlich]
-Befehle, Config-Schlüssel und Default-Berechtigungen ändern sich mit dem Produkt — Seiten tragen Prüfdaten; vor Nutzung offizielle Docs abgleichen.
+Befehle, Config-Schlüssel und Default-Berechtigungen ändern sich mit dem Produkt — die Seiten nennen das Datum der letzten Überprüfung; vor Nutzung offizielle Docs abgleichen.
 :::
 
 Die Referenz ist kein Haupt-Tutorial. Bei Terminologie, Config, Befehlen oder Troubleshooting zurückkommen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Erklärt nur Zweck und Einstiege der Referenz; interne Links und Gruppierung geprüft; keine versionsvolatilen Defaults im Fließtext.  
-**Zuletzt geprüft:** 2026-07-26

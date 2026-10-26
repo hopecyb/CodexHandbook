@@ -3,12 +3,17 @@ title: "Codes de sortie et retries"
 description: Interpréter succès et échec de codex exec dans les pipelines — quand retry vs fail fast.
 locale: fr
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: '35074cd'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Suppression des interprétations non étayées de codes de sortie particuliers. La page s’appuie uniquement sur la réussite ou l’échec du processus et sur la progression et les erreurs sur `stderr` confirmés par la documentation ; les conclusions métier sont traitées dans les résultats structurés.
+  checkedAt: '2026-08-26'
 ---
 
 La CI s'appuie sur les **codes de sortie de processus** pour juger le succès d'une étape. Cette page couvre la sémantique courante pour [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/), la stratégie de retry et le design idempotent.
@@ -57,33 +62,30 @@ Si l'échec ne disparaîtra pas au retry — permissions, blocages de politique,
 
 | Situation | Gestion suggérée |
 |---|---|
-| `0` | Tâche complétée et critères de succès du prompt atteints |
+| `0` | Le processus `codex exec` s’est terminé avec succès ; consultez encore le résultat structuré pour vérifier les critères métier |
 | Non-`0` avec deny politique/bac à sable dans les logs | **Ne pas** retry aveuglément ; corriger config ou prompt |
-| Non-`0` avec API 429/5xx | Retries backoff exponentiel limités |
+| Non-`0` et panne temporaire de réseau ou de service confirmée par le runner | Nouvelles tentatives limitées, avec délai progressif |
 | Problèmes P0 trouvés mais exécution réussie | Utiliser [sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/) `pass: false` + script wrapper `exit 1` |
 
 « Problème de sécurité trouvé » ne devrait pas reposer sur un crash — définir **explicitement** `pass: false` en JSON et laisser un script wrapper choisir le code de sortie.
 
-## Modèle de retry (bash)
+## Capturer le code de sortie (bash)
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Erreur de politique, pas de retry" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-Aligner les codes « ne pas retry » avec la doc officielle et brancher dans `case`.
+N’attribuez pas de signification à un nombre sans définition officielle : ne supposez pas, par exemple, que `2` indique toujours un refus de politique. Si une nouvelle tentative est nécessaire, laissez le runner externe décider à partir des catégories d’erreurs qu’il sait identifier de façon fiable. Limitez le nombre de tentatives, la durée totale et les effets de bord.
 
 ## Idempotence et effets de bord
 
@@ -107,7 +109,7 @@ Plus proche de (1) : retry limité peut aider. Plus proche de (2) ou (3) : arrê
 
 - Ignorer les codes de sortie ; CI toujours verte
 - Retry infini sur erreurs de politique, brûlant le quota
-- Retry sans prompt/git sha fixe, résultats non comparable
+- Retry sans prompt/git sha fixe, résultats non comparables
 
 Séparer d'abord « panne temporaire » de « retry n'aidera pas », puis décider si retry. Tous les échecs ne méritent pas un autre run.
 
@@ -125,9 +127,3 @@ Séparer d'abord « panne temporaire » de « retry n'aidera pas », puis décid
 
 ## Sources de référence
 - Orientations retry API OpenAI (conceptuel)
----
-
-**Statut :** obsolète  
-**Produits concernés :** CLI  
-**Note de révision :** Cette page donne des conseils d'ingénierie raisonnables sur codes de sortie et retries, mais les exemples supposent une sémantique de sortie spécifique (ex. `code=2`) et le comportement `codex exec` sans support officiel actuel fort ; restaurer `vérifié` après vérification de la nouvelle doc CLI.  
-**Dernière vérification :** 2026-07-26

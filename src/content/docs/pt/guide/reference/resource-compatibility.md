@@ -9,9 +9,10 @@ verification:
   summary: Oferece um procedimento de teste a preencher. Este site ainda não possui registro concluído de instalação e desinstalação de pets ou temas no cliente.
 locale: pt
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: "96ff34f"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 A compatibilidade diz respeito a uma combinação específica de versões. Um pacote com estrutura válida, imagens nas dimensões corretas ou uma interface que abre não comprovam, isoladamente, que os estados de animação funcionam ou que a desativação e a recuperação dão certo.
@@ -35,7 +36,7 @@ Nome e versão do recurso ou ferramenta:
 URL da fonte original e tag/commit correspondente:
 Nome do arquivo baixado e SHA-256:
 Autor dos recursos e licença:
-Estado antes da instalação e local do backup (ocultar antes de publicar):
+Estado antes da instalação e local do backup (remover dados sensíveis antes de publicar):
 Etapas de instalação realizadas:
 Evidências do carregamento e da interface:
 Verificações de animação ou interação:

@@ -24,9 +24,10 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: ad02d42
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "8b68d92"
+translation_status: reviewed
+reviewed_at: 2026-10-26
+translated_at: 2026-10-25
 ---
 
 Klären Sie zuerst, was Sie erfassen: das verbleibende Kontingent eines Kontos, die Kosten eines API-Aufrufs, Wartezeit oder menschlichen Aufwand für Prüfung und Nacharbeit. Diese Größen haben unterschiedliche Einheiten und sind nicht austauschbar.
@@ -75,3 +76,5 @@ Die bereitgestellten Tabellen enthalten noch keine gemessenen Läufe. Ohne passe
 Sichern Sie bisherige Ergebnisse, offene Punkte und den Wiedereinstieg. Prüfen Sie, ob die Aufgabe in wiederholten Versuchen feststeckt oder irrelevantes Material liest. Begrenzen Sie nicht notwendige Arbeiten entsprechend dem Ziel, aber behalten Sie Qualitäts- und Sicherheitskriterien bei. Lassen Sie entscheidende Prüfungen nicht aus, nur um vor Ende des Kontingents fertig zu werden.
 
 Wenn Sie fortfahren müssen, prüfen Sie zunächst Ihr aktuelles Kontingent und den Abrechnungsweg. Dieser Artikel schaltet nicht automatisch auf API-Abrechnung um, kauft keine Credits und ändert keine Kontoeinstellungen. Teams können im [zweiwöchigen Pilotpfad](/de/guide/learning-paths/team/) Gründe für die Wahl und Bedingungen für eine Rückkehr dokumentieren.
+
+Aktuelle Modelle, Unterschiede zwischen den Produkten und Aufgabenempfehlungen: [Modellwahl nach Aufgabe](/de/guide/reference/model-selection/).

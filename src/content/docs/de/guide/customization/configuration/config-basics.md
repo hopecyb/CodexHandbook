@@ -3,12 +3,18 @@ title: Konfigurationsgrundlagen
 description: "Ort der Codex-Config, häufige Optionen und Einstieg in Freigabe, Sandbox und Modell."
 locale: de
 source_locale: zh-CN
-source_revision: ee00ab5
+source_revision: "ee00ab5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "CLI / App"
+  basis: Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` und erwähnen, dass Desktop-App/IDE ggf. Neustart brauchen; diese Seite vermeidet volatile
+    Key-Namen und behält den stabilen Rahmen „Benutzerconfig, Managed Policy, gängige Absichten zu Modell/Freigabe/Sandbox“.
+  checkedAt: '2026-07-26'
 ---
 
 Config-Dateien lassen Codex-Verhalten lokal oder im Projekt **vereinheitlichen**, ohne Modell, Freigabestufe oder Sandbox-Richtlinie in jeder Session neu zu setzen.
@@ -39,7 +45,7 @@ Es steuert nicht die temporären Anforderungen einer einzelnen Aufgabe, sondern 
 | Projekt | Config-Fragmente im Repo oder `codex`-bezogene Projektdateien | Team-geteilte Sandbox-/Werkzeug-Richtlinien |
 | Managed | Von der Organisation ausgerollt | Pflichtfelder, die Personen nicht überschreiben dürfen |
 
-**Flüchtige Fakten** (Pfade, Feldnamen, TOML-Keys) richten Sie nach der [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex); diese Seite beschreibt Konzepte und Entscheidungsweise.
+**Veränderliche Angaben** (Pfade, Feldnamen und TOML-Schlüssel) prüfen Sie anhand der [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex); diese Seite beschreibt Konzepte und Entscheidungsweise.
 
 ## Häufige Missverständnisse
 
@@ -47,7 +53,7 @@ Es steuert nicht die temporären Anforderungen einer einzelnen Aufgabe, sondern 
 
 Beim ersten Kontakt wollen viele alles konfigurieren, was geht.
 
-Für Einsteiger reichen oft wenige Hochfrequenz-Einstellungen:
+Für Einsteiger reichen oft wenige häufig verwendete Einstellungen:
 
 - Standardmodell
 - Standard-Freigabe-/Sandbox-Richtlinie
@@ -132,9 +138,3 @@ Config eignet sich für Defaults, die Sie fast jedes Mal erneut wählen würden 
 
 ## Quellen
 - OpenAI-Codex-Konfigurationsdokumentation
----
-
-**Status:** verified  
-**Gilt für:** CLI / App  
-**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` und erwähnen, dass Desktop-App/IDE ggf. Neustart brauchen; diese Seite vermeidet volatile Key-Namen und behält den stabilen Rahmen „Benutzerconfig, Managed Policy, gängige Absichten zu Modell/Freigabe/Sandbox“.  
-**Zuletzt geprüft:** 2026-07-26

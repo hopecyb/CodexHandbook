@@ -3,14 +3,18 @@ title: Validar fuentes
 description: Exige fundamentos trazables para las conclusiones de investigación.
 locale: es
 source_locale: zh-CN
-source_revision: 6884531
+source_revision: "6884531"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica cómo exigir y comprobar la trazabilidad de fuentes; se han revisado enlaces internos y formulaciones de método, y el cuerpo no depende de hechos variables de producto.
+  checkedAt: '2026-07-26'
 ---
-
 Si la conclusión depende de hechos externos, no aceptes solo la conclusión: pide también las fuentes.
 
 Exige al Agent:
@@ -45,10 +49,3 @@ Al menos abre y confirma:
 - Si ya está desactualizada
 
 En tareas de investigación, la fuente es parte de la credibilidad de la conclusión.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica cómo exigir y comprobar la trazabilidad de fuentes; se han revisado enlaces internos y formulaciones de método, y el cuerpo no depende de hechos variables de producto.  
-**Última verificación:** 2026-07-26

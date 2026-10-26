@@ -10,9 +10,10 @@ verification:
   summary: "세 가지 작업 유형과 두 가지 비교는 이 사이트의 협업 권고입니다. 승인 및 실행 경계를 확인했지만 클라이언트의 고정 모드도, 모델 성공률을 측정한 실험도 아닙니다."
 locale: ko
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 계획을 먼저 요청할지는 아직 어떤 결정이 남아 있는지에 달려 있습니다. 범위가 명확하고 되돌리기 쉬운 변경은 바로 실행할 수 있습니다. 진행 경로가 불분명하면 먼저 계획을 세웁니다. 추가 승인이 필요한 구체적인 작업 앞에서는 멈춥니다. 계획을 요청한다는 것이 매 단계마다 사용자 답변을 기다린다는 뜻은 아닙니다.

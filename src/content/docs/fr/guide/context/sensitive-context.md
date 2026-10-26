@@ -8,11 +8,12 @@ title: Contexte sensible
 description: Secrets, vie privée et documents à ne pas partager.
 locale: fr
 source_locale: zh-CN
-source_revision: "a83db07"
-translation_status: draft
+source_revision: 'a83db07'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+reviewed_at: '2026-10-26'
 ---
 
 Traitez dès le départ comme sensible toute information que vous ne voudriez pas voir consultée, copiée, transmise ou conservée durablement dans l'historique d'une tâche.

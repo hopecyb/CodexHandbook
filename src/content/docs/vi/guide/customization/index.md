@@ -1,17 +1,18 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Tài liệu trung tâm trợ giúp và cấu hình liên quan Codex hiện tại của OpenAI vẫn khẳng định tồn tại phân tầng cấu hình cấp người dùng `~/.codex`, năng lực quản trị cấp tổ chức và mô tả cộng tác cấp dự án; trang này đã viết lại “ưu tiên” thành mô tả phân tầng thường gặp thận trọng hơn, tránh viết chi tiết hiện thực cụ thể thành quy tắc tuyệt đối.", "checkedAt": "2026-07-26"}
 title: Cá nhân hóa và cấu hình dự án
 description: Sở thích cá nhân, AGENTS.md, cấu hình và ưu tiên quy tắc — để Codex lâu dài làm việc theo cách của bạn.
 sidebar:
   order: 40
 locale: vi
 source_locale: zh-CN
-source_revision: 28adc49
+source_revision: "28adc49"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Codex không chỉ dựa vào “lần này hỏi thế nào”, mà còn dựa vào **cấu hình bền** để nhớ ước định của bạn và nhóm. Chương này chủ yếu phân biệt yêu cầu nào nên giữ trong hội thoại, yêu cầu nào nên hạ xuống dự án.
+Codex không chỉ dựa vào “lần này hỏi thế nào”, mà còn dựa vào **cấu hình được lưu lâu dài** để nhớ ước định của bạn và nhóm. Chương này chủ yếu phân biệt yêu cầu nào nên giữ trong hội thoại, yêu cầu nào nên lưu trong dự án.
 
 Nếu bạn đã bắt đầu lặp lại cùng một câu, ví dụ “đừng sửa thư mục này”, “chạy kiểm thử trước”, “mặc định dùng mô hình này”, chương này đang xử lý loại vấn đề đó.
 
@@ -59,11 +60,11 @@ Hiểu phân tầng giúp tránh bối rối «đã viết quy tắc mà không 
 
 ### 1. Chỉ cần tôi viết được Prompt là không cần cấu hình dài hạn?
 
-Tác vụ ngắn có lẽ tạm đủ, nhưng một khi bắt đầu cộng tác liên tục, bạn sẽ càng muốn hạ yêu cầu lặp xuống.
+Tác vụ ngắn có lẽ tạm đủ, nhưng một khi bắt đầu cộng tác liên tục, bạn sẽ càng muốn lưu lại các yêu cầu lặp lại.
 
 ### 2. Mọi quy tắc nhét vào `AGENTS.md` là được?
 
-Cũng sai.  
+Cũng sai.
 Có thứ phù hợp hơn đặt ở:
 
 - Sở thích cá nhân
@@ -117,9 +118,3 @@ Quy tắc không cần nhiều; đặt đúng chỗ quan trọng hơn.
 
 ## Nguồn tham khảo
 - Tài liệu OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Tài liệu trung tâm trợ giúp và cấu hình liên quan Codex hiện tại của OpenAI vẫn khẳng định tồn tại phân tầng cấu hình cấp người dùng `~/.codex`, năng lực quản trị cấp tổ chức và mô tả cộng tác cấp dự án; trang này đã viết lại “ưu tiên” thành mô tả phân tầng thường gặp thận trọng hơn, tránh viết chi tiết hiện thực cụ thể thành quy tắc tuyệt đối.  
-**Kiểm chứng gần nhất:** 2026-07-26

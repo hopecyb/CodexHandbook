@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+reviewed_at: 2026-10-26
+source_revision: "6c758b9"
 ---
 
 Executar uma verificação repetidamente não significa notificar a cada vez. Este Skill reutiliza o [exercício de verificação de links](/pt/cases/use-cases/team-automation/scheduled-link-check/) e registra mudanças, recuperação e erros de execução. Quando o resultado não muda, fica em silêncio.

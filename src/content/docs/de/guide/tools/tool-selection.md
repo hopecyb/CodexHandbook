@@ -1,21 +1,26 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Aufgabengesteuerte Werkzeugwahl: Projektinhalt → Datei, Befehle → Terminal, öffentliche Fakten → Suche, echte Seite → Browser; mit aktuellen Werkzeugkapiteln und Kategoriedefinitionen abgeglichen."
+  checkedAt: "2026-07-26"
 title: Werkzeugwahl
 description: "Wann Terminal, Suche, Browser oder andere Werkzeuge."
 locale: de
 source_locale: zh-CN
-source_revision: 9fdb366
+source_revision: "9fdb366"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
 
-„Werkzeugwahl“ heißt: Welche Weise ist für diese Sache wirksam und sicher.
+„Werkzeugwahl“ heißt: Mit welchem Werkzeug lässt sich die Aufgabe wirksam und sicher erledigen?
 
 Nach Aufgabentyp urteilen ist meist klarer.
 
-## Worauf die Wahl schaut
+## Worauf es bei der Wahl ankommt
 
 Vor allem:
 
@@ -32,7 +37,7 @@ Falsches Werkzeug muss nicht scheitern — oft langsamer, umständlicher, riskan
 | Öffentliche Fakten | Web-Suche |
 | Echten Seitenstatus sehen | Browser (fortgeschritten) |
 
-Im Prompt erlaubte und verbotene Werkzeuge nennen — weniger unerwünschtes Netz oder wilde Dependencies.
+Im Prompt erlaubte und verbotene Werkzeuge nennen — um nicht autorisierte Netzwerkzugriffe oder ungeplante Installationen von Abhängigkeiten zu vermeiden.
 
 ## Unsicher? So wählen
 
@@ -88,10 +93,3 @@ Bevorzugt Datei und Terminal; keine Netzsuche. Browser nur nach Begründung, wen
 ```
 
 Zuerst das kleinste, aufgabennahe Werkzeug — nicht sofort das mit größtem Wirkungsradius.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Aufgabengesteuerte Werkzeugwahl: Projektinhalt → Datei, Befehle → Terminal, öffentliche Fakten → Suche, echte Seite → Browser; mit aktuellen Werkzeugkapiteln und Kategoriedefinitionen abgeglichen.  
-**Zuletzt geprüft:** 2026-07-26

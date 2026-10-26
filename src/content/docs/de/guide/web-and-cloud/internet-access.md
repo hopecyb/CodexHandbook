@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Internetzugriff
 description: Unterscheide Netzwerkzugriff während der Installation von Agent-Netzwerkzugriff und begrenze Risiken nach Domain und HTTP-Methode.
 sidebar:
   order: 70
 locale: de
 source_locale: zh-CN
-source_revision: 5bbb905
+source_revision: "5bbb905"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Cloud besitzt zwei unterschiedliche Phasen mit Netzwerkzugriff:
@@ -65,11 +69,3 @@ Cloud-Secrets werden vor der Agent-Phase entfernt. Das reduziert das Risiko, das
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud
-
-**Zuletzt geprüft:** 2026-08-26

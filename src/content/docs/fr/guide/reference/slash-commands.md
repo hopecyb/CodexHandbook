@@ -8,11 +8,12 @@ title: Commandes slash et raccourcis
 description: Repères rapides sur les commandes `/` et l’invocation des Skills avec `$` ; ce n’est pas un manuel complet des paramètres.
 locale: fr
 source_locale: zh-CN
-source_revision: a34c90f
-translation_status: draft
+source_revision: 'a34c90f'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
 
 La première fois qu’on voit des commandes slash, on peut croire qu’il faut mémoriser tout un jargon. Il est plus simple de les considérer comme des raccourcis que l’on choisit explicitement.
@@ -69,7 +70,7 @@ Le langage naturel suffit à la plupart des tâches. Les commandes slash servent
 ### Application de bureau / IDE
 
 - `/plan` : passer en mode de planification à plusieurs étapes.
-- `/review` : examiner les modifications non validées ou comparer avec une branche de référence.
+- `/review` : examiner les modifications non commitées ou comparer avec une branche de référence.
 - `/status` : voir l’identifiant de la conversation, l’utilisation du contexte et les limites d’utilisation.
 - `/mcp` : consulter l’état des connexions MCP.
 - `/init` : créer une structure initiale `AGENTS.md` pour le projet actuel.

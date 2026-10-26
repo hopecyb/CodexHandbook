@@ -1,6 +1,6 @@
 <svg lang="en" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
   <title id="title">Codex sandbox and approval decision flow</title>
-  <desc id="desc">Codex proposes an action and checks the sandbox. In-scope actions run with evidence; out-of-scope actions request a human decision. Denial narrows or explains; approval permits only the stated action. Both paths end in verification.</desc>
+  <desc id="desc">Codex proposes an action and checks whether it is within the sandbox. In-scope actions run and leave evidence; out-of-scope actions follow the approval policy. After denial, narrow the action or explain the blocker; after approval, perform only the approved action. Both paths end in verification.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 25.2px; font-weight: 700; }

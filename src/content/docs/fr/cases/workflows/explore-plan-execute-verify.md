@@ -1,18 +1,18 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Recoupement avec les pages vérifiées du manuel sur la planification, le diagnostic, la définition de terminé, les tests et AGENTS.md ; cette page couvre la collaboration en quatre phases et ses points de contrôle, sans options produit susceptibles de changer."
-  checkedAt: "2026-07-26"
-title: "Explorer—planifier—exécuter—vérifier"
-description: "Adapter l'exploration, la planification, l'exécution et la vérification à la portée et aux incertitudes de la tâche, et préciser les décisions qui exigent une pause."
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les pages vérifiées du manuel sur la planification, le diagnostic, la définition de terminé, les tests et AGENTS.md ; cette page couvre la collaboration en quatre phases et ses points de contrôle, sans options produit susceptibles de changer.
+  checkedAt: '2026-07-26'
+title: Explorer—planifier—exécuter—vérifier
+description: Adapter l'exploration, la planification, l'exécution et la vérification à la portée et aux incertitudes de la tâche, et préciser les décisions qui exigent une pause.
 locale: fr
 source_locale: zh-CN
 source_revision: "4a95760"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
-
 C'est la méthode recommandée par ce manuel pour organiser une tâche, du moment où « on ne sait pas encore comment faire » jusqu'au résultat prêt à être accepté. Quatre phases ne signifient pas quatre approbations. Une petite tâche au périmètre clair peut être menée sans interruption ; il faut attendre une décision si la solution reste indéterminée ou si une autorisation nécessaire manque. Commencez par les [niveaux de tâche](/fr/prompts/ask-for-a-plan/).
 
 ## Aperçu des quatre phases

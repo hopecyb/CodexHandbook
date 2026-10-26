@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: "cf2b232"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Uma fonte que não abre, uma fonte que nada diz sobre um fato e duas fontes divergentes exigem tratamentos diferentes. Este Skill preserva essas distinções para mostrar quais conclusões são verificáveis e quais ainda precisam de evidência.
@@ -32,7 +33,7 @@ Uma fonte que não abre, uma fonte que nada diz sobre um fato e duas fontes dive
 
 ## Pergunta e materiais fixos
 
-O pacote reutiliza a ferramenta fictícia “拾页” do [exercício de artigo](/pt/cases/write-an-article/). Investigue formatos de entrada, configuração padrão do diagnóstico e campos enviados. Há três fontes sintéticas originais; a quarta nota de manutenção no catálogo falta intencionalmente. Não procure páginas reais desse produto fictício nem invente respostas.
+O pacote reutiliza a ferramenta fictícia “Shiye (拾页)” do [exercício de artigo](/pt/cases/write-an-article/). Investigue formatos de entrada, configuração padrão do diagnóstico e campos enviados. Há três fontes sintéticas originais; a quarta nota de manutenção no catálogo falta intencionalmente. Não procure páginas reais desse produto fictício nem invente respostas.
 
 | Estado da evidência | Exemplo no pacote | Como relatar |
 |---|---|---|

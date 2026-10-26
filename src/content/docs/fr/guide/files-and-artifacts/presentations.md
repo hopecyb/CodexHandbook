@@ -1,19 +1,24 @@
 ---
 title: Présentations
-description: Générer et réviser slides et decks — structure, masters et notes du présentateur.
+description: Générer, remanier et exporter des présentations — structure, masques de diapositives et notes du présentateur.
 locale: fr
 source_locale: zh-CN
-source_revision: fb319fa
+source_revision: 'fb319fa'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec les pages vérifiées artefacts-first, validate-sources, images-and-screenshots, verify-artifacts ; méthode stable : structure → texte → style et export.'
+  checkedAt: '2026-07-26'
 ---
 
 Les présentations (PPT, Keynote, Google Slides, Marp/Reveal, etc.) mettent l'accent sur la **structure narrative** et la **cohérence visuelle**. Les Agents excellent aux plans et premières versions ; les masters et règles de marque nécessitent encore une revue humaine.
 
-Avec Codex, la plus grande valeur est la structure initiale, l'ordre des slides et le récit — le polish final reste à vous.
+Avec Codex, la plus grande valeur est la structure initiale, l'ordre des slides et le récit — la mise au point finale reste à votre charge.
 
 ## Ce que cette page couvre
 
@@ -34,9 +39,9 @@ Indiquer le format dès le début pour que l'Agent ne mélange pas les chaînes 
 
 Choisir par audience :
 
-- Client, exec, collègues qui éditent dans Office : généralement `.pptx`
+- Clients, dirigeants ou collègues qui éditent dans Office : généralement `.pptx`
 - Version avec le code : généralement slides Markdown
-- Handout lecture seule : généralement export PDF
+- Document à diffuser en lecture seule : généralement export PDF
 
 ## Workflow recommandé
 
@@ -85,7 +90,7 @@ Encore vérifier par un humain :
 
 ### 3. Plus sur une slide ≠ plus de clarté
 
-Trop de puces, graphiques et conclusions par slide cache le point.
+Trop de puces, de graphiques et de conclusions sur une diapositive masquent le message principal.
 
 ## Ordre pratique pour Codex
 
@@ -98,22 +103,22 @@ Trop de puces, graphiques et conclusions par slide cache le point.
 
 Structure → texte → style est généralement plus facile à contrôler.
 
-## Essentiels du Prompt
+## Essentiels du prompt
 
-- **Audience** : ingénieurs vs exécutifs → profondeur terminologique
+- **Audience** : ingénieurs vs dirigeants → profondeur terminologique
 - **Limite de pages** : empêche le bruit de 80 slides
 - **Marque** : couleur primaire, chemin logo, pas de clipart si la politique dit non
 - **Graphiques** : citer les fichiers source ; données mises à jour pas fausses captures
 
 Exemple de ton :
 
-> « Plan jusqu'à 10 slides pour exécutifs non techniques ; une conclusion centrale par slide ; ajouter les notes du présentateur en dernier. »
+> « Plan jusqu'à 10 slides pour dirigeants non techniques ; une conclusion centrale par slide ; ajouter les notes du présentateur en dernier. »
 
 Mieux que « faire un super PPT ».
 
 Images : [Images et captures d'écran](/fr/guide/files-and-artifacts/images-and-screenshots/) ; génération pure : [Génération d'images](/fr/guide/tools/image-generation/).
 
-## Vérification
+## vérification
 
 - Taille de police lisible à la résolution de projection
 - Animation sobre (difficile à maintenir si excessive)
@@ -134,17 +139,10 @@ Images : [Images et captures d'écran](/fr/guide/files-and-artifacts/images-and-
 - Pas de plan — « faire un deck de rapport trimestriel »
 - Éditer `.pptx` à répétition sans source Markdown
 - Données de graphique incohérentes avec le CSV du repo
-- Un Prompt décide structure, design, conclusions et définitions de données
+- Un prompt décide structure, design, conclusions et définitions de données
 
 ## Checklist d'acceptation
 
 - [ ] Plan approuvé avant génération complète
 - [ ] S'ouvre dans l'environnement cible sans rupture de police
 - [ ] Données clés traçables vers les fichiers source
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec les pages vérifiées artefacts-first, validate-sources, images-and-screenshots, verify-artifacts ; méthode stable : structure → texte → style et export.  
-**Dernière vérification :** 2026-07-26

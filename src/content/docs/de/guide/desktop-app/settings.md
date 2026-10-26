@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Einstellungen
 description: Konfiguriere das alltägliche Verhalten, Tastenkombinationen, Benachrichtigungen und Erscheinungsbild der Desktop-App.
 sidebar:
   order: 90
 locale: de
 source_locale: zh-CN
-source_revision: 7a6d2fe
+source_revision: "7a6d2fe"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die Einstellungsseite passt das App-Verhalten an, umfasst aber nicht die gesamte Berechtigungskonfiguration von Codex. Behalte zunächst die Standardwerte bei und ändere sie erst, wenn du ihren Auswirkungsbereich kennst.
@@ -55,11 +59,3 @@ Eine sichtbare Einstellung bedeutet daher nicht, dass die aktuelle Aufgabe die e
 - [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/app/settings)
 - [Codex configuration basics](https://learn.chatgpt.com/docs/config)
 - [Permissions](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Zuletzt geprüft:** 2026-08-26

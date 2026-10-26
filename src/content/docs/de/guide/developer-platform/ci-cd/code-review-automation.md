@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "OpenAI Developers beschreibt Codex weiterhin für Testen, Review und die Vorbereitung von Änderungen; offizielle Use Cases enthalten weiterhin „Review GitHub pull requests“. Diese Seite fasst nur sichere CI-Anbindung und Gate-Muster zusammen und behauptet weder feste Befehle noch eine einzige Implementierung."
+  checkedAt: "2026-07-26"
 title: Code-Review-Automatisierung
 description: 'Codex-Review in CI- oder PR-Abläufe einbinden — Prompt, Berechtigungen und menschliche Gates.'
 locale: de
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: "aa8b33e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
 
-Codex in die **Pull-Request-Pipeline** zu legen, kann vor dem Menschen-Review offensichtliche Probleme fangen — **ersetzt** aber weder verantwortliches Review noch Tests. Diese Seite beschreibt umsetzbare Automatisierungsmuster.
+Codex in die **Pull-Request-Pipeline** einzubinden, kann vor der menschlichen Prüfung offensichtliche Probleme aufdecken — **ersetzt** aber weder verantwortliches Review noch Tests. Diese Seite beschreibt umsetzbare Automatisierungsmuster.
 
 ## Was diese Seite behandelt
 
@@ -81,9 +86,9 @@ Versioniert unter `prompts/ci-review.md` ablegen.
 
 ## Qualitätsgates
 
-- Fehlgeschlagener Review-Job ≠ Merge muss blockieren (zuerst advisory möglich)
-- Von erforderlichen Status Checks trennen: rote Tests blockieren, AI-nits warnen
-- Regelmäßig manuell mit AI-Review vergleichen (False Negatives / False Positives)
+- Fehlgeschlagener Review-Job ≠ Merge muss blockieren (zunächst nur beratend möglich)
+- Von erforderlichen Status Checks trennen: rote Tests blockieren, kleine KI-Hinweise warnen
+- Regelmäßig manuell mit KI-Review vergleichen (False Negatives / False Positives)
 
 ## Verhältnis zu Cloud
 
@@ -101,13 +106,7 @@ Der größte Nutzen der Code-Review-Automatisierung: vor dem Menschen-Review off
 
 - [ ] CI-Verhalten bei Fork-PRs ist sicher (keine Secret-Leaks)
 - [ ] Review-Ausgabe strukturiert und optional maschinenlesbar
-- [ ] Team-Dokumentation klärt die Rolle von AI-Review
+- [ ] Team-Dokumentation klärt die Rolle von KI-Review
 
 ## Quellen
 - OpenAI Codex CI-Beispiele
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI / API / Cloud  
-**Prüfgrundlage:** OpenAI Developers beschreibt Codex weiterhin für Testen, Review und die Vorbereitung von Änderungen; offizielle Use Cases enthalten weiterhin „Review GitHub pull requests“. Diese Seite fasst nur sichere CI-Anbindung und Gate-Muster zusammen und behauptet weder feste Befehle noch eine einzige Implementierung.  
-**Zuletzt geprüft:** 2026-07-26

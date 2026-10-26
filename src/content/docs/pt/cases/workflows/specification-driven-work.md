@@ -1,29 +1,30 @@
 ---
 title: Trabalho orientado por especificação
-description: Escreva primeiro uma especificação aceitável e deixe o Codex implementar conforme o plano — adequado a entregas com requisitos claros.
+description: Escreva primeiro uma especificação com critérios de aceitação verificáveis e deixe o Codex implementar conforme o plano — adequado a entregas com requisitos claros.
 locale: pt
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com os capítulos já verificados deste manual sobre brainstorm, EPXV, trabalho orientado por testes e `AGENTS.md`; o conteúdo limita-se ao método estável «escrever especificação com critérios de aceitação verificáveis primeiro, depois executar conforme a especificação».", "checkedAt": "2026-07-26"}
 ---
 
-**Trabalho orientado por especificação** significa preparar uma especificação curta — objetivo, âmbito, interfaces e critérios de aceitação — antes de alterar muitos ficheiros. Pode seguir [brainstorm](/pt/cases/workflows/brainstorm-before-building/) ou, com requisitos já clarificados, entrar diretamente em [EPXV](/pt/cases/workflows/explore-plan-execute-verify/).
+**Trabalho orientado por especificação** significa preparar uma especificação curta — objetivo, escopo, interfaces e critérios de aceitação — antes de alterar muitos arquivos. Pode seguir [brainstorm](/pt/cases/workflows/brainstorm-before-building/) ou, com requisitos já clarificados, entrar diretamente em [EPXV](/pt/cases/workflows/explore-plan-execute-verify/).
 
 ## Foco desta página
 
 - Quão detalhada deve ser a especificação
-- Como fazer o Codex seguir a especificação sem alargar o âmbito por conta própria
+- Como fazer o Codex seguir a especificação sem alargar o escopo por conta própria
 - Relação entre especificação, descrição de PR e issues
 
 ## Modelo mínimo de especificação
 
 ```markdown
 ## Objetivo
-Valor para o utilizador numa frase
+Valor para o usuário numa frase
 
-## Âmbito
+## Escopo
 - Inclui: …
 - Exclui: …
 
@@ -63,7 +64,7 @@ Os itens de aceitação na especificação devem ser, tanto quanto possível, **
 ## Erros comuns
 
 - Especificação tão longa como um documento de desenho — as restrições críticas ficam perdidas
-- O âmbito cresce em silêncio durante a execução sem atualizar a especificação
+- O escopo cresce em silêncio durante a execução sem atualizar a especificação
 - Critérios de aceitação vagos («mais fácil de usar») geram discussão
 - Conflito com as convenções de arquitetura em `AGENTS.md`
 
@@ -74,14 +75,7 @@ Os itens de aceitação na especificação devem ser, tanto quanto possível, **
 
 ## Lista de aceitação
 
-- [ ] Itens fora de âmbito explicitamente excluídos
+- [ ] Itens fora de escopo explicitamente excluídos
 - [ ] Pelo menos 3 critérios de aceitação verificáveis
 - [ ] Confirmação humana ou escrita antes da execução
-- [ ] Alterações sincronizadas de volta para o ficheiro de especificação
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre brainstorm, EPXV, trabalho orientado por testes e `AGENTS.md`; o conteúdo limita-se ao método estável «escrever especificação aceitável primeiro, depois executar conforme a especificação».  
-**Última verificação:** 2026-07-26
+- [ ] Alterações sincronizadas de volta para o arquivo de especificação

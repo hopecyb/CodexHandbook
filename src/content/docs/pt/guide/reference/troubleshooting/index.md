@@ -8,9 +8,10 @@ title: Índice de resolução de problemas
 description: Localiza o tutorial ou a página de produto certa a partir do sintoma.
 locale: pt
 source_locale: zh-CN
-source_revision: da350d0
-translation_status: draft
+source_revision: "da350d0"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 110
 ---
@@ -25,8 +26,8 @@ Procurar por sintoma é mais rápido do que vasculhar o site inteiro.
 | Falha de login / autenticação | [Iniciar sessão](/pt/guide/getting-started/sign-in-and-authentication/) |
 | Não sei que cliente escolher | [Escolher o cliente](/pt/guide/choose-your-client/) · [Comparação de funcionalidades](/pt/guide/reference/feature-comparison/) |
 | Resultado fora de âmbito / muito mau | [Verificar o resultado](/pt/guide/getting-started/review-the-result/) · [Depuração de Prompt](/pt/prompts/prompt-debugging/) · [Anular e recuperar](/pt/guide/getting-started/undo-and-recover/) |
-| Contexto confuso | [Manter o foco](/pt/guide/context/keep-context-focused/) |
-| Dúvidas de Permissão / Sandbox | [Permissões](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox](/pt/guide/foundations/sandbox-and-network/) |
+| contexto confuso | [Manter o foco](/pt/guide/context/keep-context-focused/) |
+| Dúvidas de permissão / Sandbox | [permissões](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox](/pt/guide/foundations/sandbox-and-network/) |
 
 ## Acompanhe os registros passo a passo
 
@@ -39,7 +40,7 @@ Se não consegues classificar o problema de imediato, tenta estas perguntas:
 1. É «não consigo entrar»?
 2. É «não corre»?
 3. É «correu mas o resultado está errado»?
-4. É «não sei que Ferramenta ou entrada escolher»?
+4. É «não sei que ferramenta ou entrada escolher»?
 
 Assim costumas cair mais depressa na página certa.
 

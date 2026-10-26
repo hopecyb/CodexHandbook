@@ -9,9 +9,10 @@ verification:
   summary: 記入用のテスト手順を示します。現時点で、当サイトが実施済みのペットやテーマのクライアントへのインストール・アンインストール記録はありません。
 locale: ja
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: '96ff34f'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 互換性は、具体的なバージョンの組み合わせについて判断する必要があります。パッケージ構造が正しいこと、画像サイズが適切なこと、画面が開くことだけでは、アニメーションの状態や無効化後の復旧まで正常に動くとは証明できません。

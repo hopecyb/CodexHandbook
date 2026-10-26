@@ -3,12 +3,17 @@ title: CLI をインストールする
 description: Codex CLI をインストールし、バージョン、ログイン状態、最初のリポジトリタスクを確認します。
 locale: ja
 source_locale: zh-CN
-source_revision: 564bd75
+source_revision: '564bd75'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現在の Codex CLI クイックスタートと認証文書を照合し、macOS / Linux の公式インストーラー、`codex` の起動手順、ChatGPT でのログイン、ログイン状態コマンドを確認しました。そのほかのインストール方法は、公式ページの最新タブへ案内します。
+  checkedAt: '2026-08-26'
 ---
 
 Codex CLI は、調査、変更、テスト、レビューをターミナル内で行う場合に適しています。公式インストールページでは macOS / Linux、Windows、npm、Homebrew の選択肢が提供されています。OS とソフトウェア管理方法に合うものを一つ選んでください。
@@ -58,13 +63,3 @@ codex
 API key を shell 履歴、チケット、チャットに貼り付けないでください。API key でログインする必要がある場合は、[ログインと認証](/ja/guide/getting-started/sign-in-and-authentication/)に従い、標準入力を使用してください。
 
 次に [CLI の対話モード](/ja/guide/cli/interactive-mode/) を学んでください。そのほかの問題は [CLI のトラブルシューティング](/ja/guide/cli/troubleshooting/) を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** CLI
-
-**検証根拠：** 現在の Codex CLI クイックスタートと認証文書を照合し、macOS / Linux の公式インストーラー、`codex` の起動手順、ChatGPT でのログイン、ログイン状態コマンドを確認しました。そのほかのインストール方法は、公式ページの最新タブへ案内します。
-
-**最終検証：** 2026-08-26

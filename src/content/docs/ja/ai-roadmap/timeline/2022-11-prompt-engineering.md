@@ -1,20 +1,21 @@
 ---
-title: "Prompt Engineering（プロンプトエンジニアリング）"
-description: "プロンプトは目標、必要な背景、制約、出力要件をモデルに伝えます。例は期待する結果を示す助けになりますが、長く書けば結果が良くなるとは限りません。"
-contentType: "guide"
-editorialStatus: "review"
+title: Prompt Engineering（プロンプトエンジニアリング）
+description: プロンプトは目標、必要な背景、制約、出力要件をモデルに伝えます。例は期待する結果を示す助けになりますが、長く書けば結果が良くなるとは限りません。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。
   evidence:
-    - label: "ChatGPTの公開発表"
-      href: "https://openai.com/index/chatgpt/"
+  - label: ChatGPTの公開発表
+    href: https://openai.com/index/chatgpt/
 locale: ja
 source_locale: zh-CN
-source_revision: 225d837
-translation_status: draft
+source_revision: "225d837"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## 確認可能な出来事と範囲
 

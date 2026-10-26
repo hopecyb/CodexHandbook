@@ -4,15 +4,16 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Trang chủ OpenAI Developers hiện vẫn nhấn mạnh dùng Codex để xây, kiểm thử, rà soát và giao thay đổi; trang này tách kiểm chứng thành rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa hoàn thành — đã đối chiếu chéo với các chương chất lượng nội bộ."
   checkedAt: "2026-07-26"
-title: Chất lượng và kiểm chứng
-description: Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành.
+title: "Chất lượng và kiểm chứng"
+description: "Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành."
 sidebar:
   order: 21
-locale: vi
-source_locale: zh-CN
-source_revision: 90d62fb
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "90d62fb"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -38,7 +39,7 @@ Nhiều lần làm lại không phải vì model hoàn toàn làm sai, mà vì:
 - Trang mở được, nhưng quy trình thực tế chưa chạy thông
 - Tài liệu viết ra rồi, nhưng người mới không làm theo được
 
-Vì vậy vai trò của kiểm chứng là **khóa rủi ro trước khi giao hàng**.
+Vì vậy vai trò của kiểm chứng là **khóa rủi ro trước khi bàn giao**.
 
 ## Hiểu nhầm thường gặp
 

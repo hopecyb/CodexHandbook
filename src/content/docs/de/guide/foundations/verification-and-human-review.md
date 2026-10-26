@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur, warum Ergebnisse Überprüfung und menschliche Kontrolle brauchen; interne Links, Schrittfolge und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Überprüfung und menschliche Kontrolle
 description: "Warum Ergebnisse prüfbar sein müssen und wie du nachkontrollierst."
 locale: de
 source_locale: zh-CN
-source_revision: bfe4036
+source_revision: "bfe4036"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 110
 ---
@@ -22,7 +27,7 @@ Codex erhöht Tempo, **ersetzt aber keine Abnahme**. Mindestens prüfen:
 
 ## Was menschliche Kontrolle wirklich prüft
 
-„Menschliche Kontrolle“ heißt nicht, alles noch einmal von Hand zu machen. Aus Lieferverantwortung reicht es, Folgendes zu bestätigen:
+„Menschliche Kontrolle“ heißt nicht, alles noch einmal von Hand zu machen. Aus Sicht der für die Lieferung verantwortlichen Person genügt es, Folgendes zu prüfen:
 
 - Hat es richtig geändert?
 - Hat es zu viel geändert?
@@ -43,7 +48,7 @@ Codex erhöht Tempo, **ersetzt aber keine Abnahme**. Mindestens prüfen:
 
 KI beschleunigt; du setzt Maßstäbe und gibst die letzte Freigabe.
 
-### 3. Braucht nur Code-Aufgaben Kontrolle?
+### 3. Brauchen nur Code-Aufgaben eine Kontrolle?
 
 Ebenso prüfen:
 
@@ -63,10 +68,3 @@ Bei wenig Zeit in dieser Reihenfolge:
 4. Den kritischsten Rest noch einmal menschlich
 
 Menschliche Kontrolle lässt die letzte Entscheidung bei der Person, die für das Ergebnis verantwortlich ist.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur, warum Ergebnisse Überprüfung und menschliche Kontrolle brauchen; interne Links, Schrittfolge und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

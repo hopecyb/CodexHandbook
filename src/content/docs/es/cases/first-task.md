@@ -5,16 +5,16 @@ contentType: case
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Esta página es un ejercicio introductorio de bajo riesgo del manual: limitada a editar un solo archivo, sin red, exige leer el diff y comprobar cada criterio de aceptación. Los capítulos previos (instalación, proyecto de práctica, verificación) se han contrastado; el contenido no depende de detalles de versión del producto."
+  basis: "Esta página es un ejercicio introductorio de bajo riesgo del manual: limitado a editar un solo archivo, sin red, exige leer el diff y comprobar cada criterio de aceptación. Los capítulos previos (instalación, proyecto de práctica, verificación) se han contrastado; el contenido no depende de detalles de versión del producto."
   checkedAt: "2026-07-26"
 title: Primera tarea
 description: Completa un cambio pequeño con un prompt claro y aprende a revisar el resultado.
 locale: es
 source_locale: zh-CN
-source_revision: 38f925b
+source_revision: '38f925b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -50,7 +50,7 @@ Si falta información, pregúntame primero; no inventes.
 
 ## 4. Ejecución y revisión
 
-1. Pide primero un plan breve (o solicítalo tú)
+1. Haz que Codex presente primero un plan breve; pídelo si no lo ofrece
 2. Al aprobar la escritura de archivos, confirma que la ruta es correcta
 3. Al terminar, contrasta el diff con cada criterio de aceptación
 

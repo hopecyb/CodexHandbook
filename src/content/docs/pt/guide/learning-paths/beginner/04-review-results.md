@@ -1,30 +1,32 @@
 ---
-title: "Rever resultados"
-description: "Pratique a identificação de erros num exemplo fixo e depois reveja o seu próprio aviso."
-contentType: "path"
-audiences: ["beginner"]
-level: "beginner"
-editorialStatus: "review"
+title: Rever resultados
+description: Pratique a identificação de erros num exemplo fixo e depois reveja o seu próprio aviso.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 40
 verification:
-  kind: "editorial"
-  checkedAt: "2026-09-18"
-  summary: "Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores."
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores.
   evidence:
-    - label: "Registo das operações com ficheiros do autor"
-      href: "/downloads/first-project/validation/record.json"
+  - label: Registo das operações com ficheiros do autor
+    href: /downloads/first-project/validation/record.json
 prev:
-  link: "/pt/guide/learning-paths/beginner/03-give-clear-tasks/"
-  label: "Dar tarefas claras"
+  link: /pt/guide/learning-paths/beginner/03-give-clear-tasks/
+  label: Dar tarefas claras
 next:
-  link: "/pt/guide/learning-paths/beginner/05-complete-first-project/"
-  label: "Concluir o primeiro pequeno projeto"
+  link: /pt/guide/learning-paths/beginner/05-complete-first-project/
+  label: Concluir o primeiro pequeno projeto
 locale: pt
 source_locale: zh-CN
 source_revision: "e426ec4"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## Comece por um exemplo com erros conhecidos

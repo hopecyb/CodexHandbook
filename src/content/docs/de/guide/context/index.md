@@ -3,12 +3,17 @@ title: Kontext
 description: Projekt-, Datei- und Gesprächskontext verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: d2baf42
+source_revision: "d2baf42"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 16
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur Kontextschichten und Lesepfade; interne Links und Konzepte wurden geprüft, der Text hängt nicht an Produktversion, Preisen oder UI.
+  checkedAt: '2026-07-26'
 ---
 
 Kontext ist die Information, die das Modell «jetzt wirksam nutzen kann». Ohne Kontextmanagement ertrinken auch gute Prompts im Rauschen.
@@ -47,10 +52,3 @@ Beim ersten systematischen Durchgang:
 - [Sensibler Kontext](/de/guide/context/sensitive-context/)
 
 Wiederkehrender Punkt: Kontext hängt davon ab, «was es diesmal wirklich gesehen hat». Meinst du, es «sollte» es wissen, hast es aber nicht bereitgestellt — dann zählt es nicht.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Kontextschichten und Lesepfade; interne Links und Konzepte wurden geprüft, der Text hängt nicht an Produktversion, Preisen oder UI.  
-**Zuletzt geprüft:** 2026-07-26

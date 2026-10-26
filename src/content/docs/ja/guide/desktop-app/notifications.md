@@ -3,12 +3,16 @@ title: 通知と Activity ビュー
 description: タスク完了、権限リクエスト、回答待ちの通知を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 4a1c672
+source_revision: "4a1c672"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: "2026-08-26"
 ---
 
 通知は「いつタスクへ戻って対応すべきか」を知らせるものであり、結果のレビューを代行するものではありません。デスクトップ App ではターン完了の通知を設定でき、権限リクエストと質問の通知も個別に制御できます。
@@ -47,11 +51,3 @@ CLI と IDE では通知の仕組みが異なります。IDE に独立した通�
 
 - [通知](https://learn.chatgpt.com/docs/notifications)
 - [デスクトップ App の設定](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**最終検証：** 2026-08-26

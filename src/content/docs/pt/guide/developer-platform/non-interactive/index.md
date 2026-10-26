@@ -3,10 +3,15 @@ title: Modo não interativo
 description: Página de orientação para lotes, scripts e pipelines — compreende primeiro que Tarefas encaixam, depois comandos e desenho da saída.
 locale: pt
 source_locale: zh-CN
-source_revision: 2d542c9
+source_revision: "2d542c9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: Cruzado com a estrutura atual do subcapítulo non-interactive e as ligações de entrada; esta página só explica que o modo não interativo serve a scripts, lotes e pipelines, sem comprometer parâmetros concretos de comandos.
+  checkedAt: '2026-07-26'
 ---
 
 Muita gente, na primeira vez que vê «modo não interativo», interpreta-o como «Codex normal sem chat».
@@ -22,15 +27,8 @@ O modo não interativo serve melhor para meter o Codex em scripts, CI ou process
 
 ## Que problemas este grupo resolve melhor
 
-- Como transformar uma Tarefa num passo de linha de comandos
+- Como transformar uma tarefa num passo de linha de comandos
 - Como a CI decide sucesso, falha ou necessidade de retry
 - Como tornar a saída mais fácil de processar por scripts seguintes
 
 Serve para scripts e pipelines receberem resultados de forma estável — não para conversas longas de ida e volta.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / API / Cloud  
-**Base de verificação:** Cruzado com a estrutura atual do subcapítulo non-interactive e as ligações de entrada; esta página só explica que o modo não interativo serve a scripts, lotes e pipelines, sem comprometer parâmetros concretos de comandos.  
-**Última verificação:** 2026-07-26

@@ -12,9 +12,10 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: ko
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: 'f60dbb5'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 승인은 구체적인 행동과 그 영향에 맞춰야 합니다. 작업 권한은 사용자가 무엇을 완료하길 원하는지, 도구 승인은 현재 환경에서 특정 행동을 실행할 수 있는지를 정합니다. 파일 쓰기, 명령 실행, 네트워크 접속이 언제나 매번 질문을 요구하는 것은 아닙니다. 실제 동작은 허가 범위, 도구 정책, 샌드박스에 따라 달라집니다. [공식 안내](https://learn.chatgpt.com/docs/agent-approvals-security)를 보세요.
 

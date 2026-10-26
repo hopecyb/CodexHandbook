@@ -3,8 +3,9 @@ title: Chỉ mục sự kiện và chủ đề
 description: Tìm hiểu các chủ đề kỹ thuật ứng dụng AI theo sự kiện có nguồn rõ ràng, không coi ngày công bố là nguồn gốc khái niệm.
 locale: vi
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: "847b43b"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

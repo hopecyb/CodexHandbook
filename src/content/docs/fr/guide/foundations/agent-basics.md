@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page explique uniquement la différence entre collaborer avec un agent et discuter normalement ; les liens internes, notions et analogies ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page explique uniquement la différence entre collaborer avec un agent et discuter normalement ; les liens internes, notions et analogies ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer.
+  checkedAt: '2026-07-26'
 title: Les bases des agents
 description: Comment un agent utilise des outils et progresse vers un objectif.
 locale: fr
 source_locale: zh-CN
-source_revision: 14ab120
-translation_status: draft
+source_revision: "14ab120"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
-
 Un **agent** continue d'agir pour atteindre un objectif : comprendre l'objectif → choisir un outil → observer le résultat → ajuster l'étape suivante, jusqu'à ce que le travail soit terminé ou qu'il ait besoin de vous.
 
 Une IA conversationnelle ressemble plutôt à quelqu'un qui répond à des questions. Un agent ressemble davantage à une personne à qui l'on confie une tâche et qui avance étape par étape.

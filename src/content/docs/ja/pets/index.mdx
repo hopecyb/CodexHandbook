@@ -1,17 +1,18 @@
 ---
 title: Codex ペット
-description: "Codex Pets の概要、仕組み、インストールや作成時に確認すべき点を理解します。"
+description: Codex Pets の概要、仕組み、インストールや作成時に確認すべき点を理解します。
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 8b03636
+source_revision: "8b03636"
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
-  summary: "形式と復旧の境界を追記しましたが、このサイトでは特定のクライアントとPetパッケージを使ったインストール、アニメーション再生、削除をまだ実測していません。ディレクトリとメニューは対象バージョンで確認してください。"
+  checkedAt: '2026-09-18'
+  summary: 形式と復旧の境界を追記しましたが、このサイトでは特定のクライアントとPetパッケージを使ったインストール、アニメーション再生、削除をまだ実測していません。ディレクトリとメニューは対象バージョンで確認してください。
+reviewed_at: '2026-10-26'
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
@@ -30,7 +31,7 @@ Codex ペットは、Codex クライアント内に表示されるアニメー�
 Pet は小さなローカルパッケージとして理解できます。
 
 - `pet.json`：ID、表示名、説明、アニメーション画像のパスなどのメタデータ。
-- `spritesheet.webp`：複数のアニメーションフレームをまとめた画像アトラス。
+- `spritesheet.webp`：複数のアニメーションフレームをまとめた画像アトラス。クライアントは固定のグリッドに沿って読み取ります。
 - ペットフォルダ：メタデータと素材を同じ場所に置くためのディレクトリ。
 
 この観点では、Codex Pet はネットワークで動くプログラムではなく、テーマ素材や小さな視覚ウィジェットに近いものです。

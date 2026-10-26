@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (versions- und berechtigungsabhängig)"
+  basis: "OpenAI Help Center beschreibt eingebauten Desktop-App-Browser (Work/Codex: Tabs, Download, Annotation, seitenweise Freigabe). Fokus: Szenarien, Unterschied zu Suche/Computer Use, Sicherheitsgrenzen."
+  checkedAt: "2026-07-26"
 title: Browser-Werkzeug
 description: "Webseiten öffnen, UI-Status prüfen und Frontend-Verhalten verifizieren — Fähigkeiten und Grenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -54,7 +59,7 @@ Auswahlhintergrund: [Werkzeugwahl](/de/guide/tools/tool-selection/)
 
 ### 1. Kein Ersatz für Automatisierungstests
 
-Hilft prüfen, screenshotten, etwas klicken — ersetzt kein Testsystem.
+Es hilft beim Prüfen von Seiten, beim Erstellen von Screenshots und bei einzelnen Interaktionen, ersetzt aber kein vollständiges Testsystem.
 
 ### 2. Öffnet sich ≠ in Ordnung
 
@@ -83,20 +88,20 @@ Dann oft besser als reine Textanalyse.
 
 1. **Lokales Frontend**: zuerst `npm run dev`, dann `http://localhost:PORT/path`
 2. **Aufgabe klar**: „Login-Formular bei 375px Overflow?“ statt „schau die Seite an“
-3. **Grenzen**: kein Outbound, kein Formular an Produktion
+3. **Grenzen**: kein Zugriff auf externe Websites, keine Formularübermittlung an Produktionssysteme
 4. **Abnahme**: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/) und Screenshots
 
 ## Direkt nutzbare Formulierung
 
 ```text
-Nur http://localhost:4321/guide/foundations/local-vs-cloud/ — Hero-Layout und Cover-Look prüfen.
-Kein Outbound, keine Formulare absenden.
-Bei Problemen Screenshot-Beleg und Änderungsvorschlag.
+Besuche ausschließlich http://localhost:4321/de/guide/foundations/local-vs-cloud/ und prüfe das Layout im ersten sichtbaren Bereich sowie die Wirkung des Titelbilds.
+Besuche keine externen Websites und sende keine Formulare ab.
+Belege Probleme mit Screenshots und schlage Korrekturen vor.
 ```
 
 ## Sicherheitsgrenzen
 
-- Default: Browser erreicht **alles, was Maschine/Umgebung erreicht** — inkl. Intranet-Admin
+- Gehe zunächst davon aus, dass der Browser **alles erreichen kann, worauf deine Maschine oder Umgebung Zugriff hat** — einschließlich interner Administrationsseiten
 - Im Prompt: `nur localhost` oder Domain-Allowlist
 - Keine untrusted-Repo-Aufgaben in Browserprofilen mit persönlichem Login
 - Cloud-Browser-Policy: [Cloud-Umgebungen](/de/guide/web-and-cloud/cloud-environments/) und Netzrichtlinie
@@ -114,10 +119,3 @@ Freigabe: [Berechtigungen und Freigabe](/de/guide/foundations/permissions-and-ap
 - [ ] Zugriffsradius im Prompt festgeschrieben
 - [ ] Kritische visuelle Probleme mit Screenshot oder Text
 - [ ] Konsistent mit Unit/E2E oder bekannte Differenz dokumentiert
-
----
-
-**Status:** verified  
-**Gilt für:** App / Codex (versions- und berechtigungsabhängig)  
-**Prüfgrundlage:** OpenAI Help Center beschreibt eingebauten Desktop-App-Browser (Work/Codex: Tabs, Download, Annotation, seitenweise Freigabe). Fokus: Szenarien, Unterschied zu Suche/Computer Use, Sicherheitsgrenzen.  
-**Zuletzt geprüft:** 2026-07-26

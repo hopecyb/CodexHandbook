@@ -29,9 +29,10 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: "e6a23bb"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Mục đích của việc đối chiếu là tìm ra yêu cầu nào ảnh hưởng đến sản phẩm bàn giao, không phải chứng minh prompt càng dài càng tốt. Trang này cung cấp ba bộ đầu vào cố định và hồ sơ của 12 lần chạy thực tế hoàn thành ngày 18 tháng 9 năm 2026. Mẫu nhỏ này chủ yếu cho thấy sự khác biệt về bằng chứng đi kèm sản phẩm; nó không đủ để xác lập hiệu quả chung.

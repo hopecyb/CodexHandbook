@@ -11,10 +11,11 @@ legacyVerification:
 title: "Caso: corrección de bugs con verificación"
 description: Usa un bug ejecutable en el cálculo de descuentos para reproducir el rojo, localizar la causa raíz, aplicar la reparación mínima, verificar el verde, ejecutar la regresión y revisar el diff.
 locale: es
-source_locale: zh-cn
-source_revision: 42d842e
-translation_status: draft
+source_locale: zh-CN
+source_revision: "42d842e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 No es una plantilla de prompt que se completa cambiando nombres de archivo. Ejecutarás código inicial real, observarás una prueba que falla y comprobarás cómo la reparación de referencia hace pasar la misma suite.
@@ -118,7 +119,7 @@ No cambies el nombre de la función, los parámetros, las aserciones, la estruct
 Después:
 1. ejecuta starter/cart.test.js;
 2. muestra el resumen real de las pruebas;
-3. explica la línea modificada;
+3. resume las líneas modificadas y explica el motivo;
 4. no hagas commit ni push.
 ```
 
@@ -155,7 +156,7 @@ Este ejercicio solo tiene una suite. En un repositorio real también debes ejecu
 ## 7. Revisión
 
 ```text
-Revisa esta reparación sin editar. Enumera primero los hallazgos:
+Revisa esta reparación sin editar. Enumera primero los hallazgos y después da una conclusión:
 - ¿Convierte el porcentaje en vez de debilitar las pruebas?
 - ¿Cambió la firma o lógica no relacionada?
 - ¿Están cubiertos el carrito vacío, la ausencia de descuento y el 10 %?
@@ -172,16 +173,16 @@ Confirma también que no aparecieron dependencias, registros de depuración, for
 | Se obtiene verde tras cambiar la prueba | Restaura la aserción; modifica solo la conversión del porcentaje |
 | La prueba relacionada sigue fallando | Compara los valores y la posición de `/ 100` |
 | La suite completa añade fallos | Vuelve a la causa raíz, al comportamiento público y al alcance |
-| La prueba es flaky | Estabiliza el entorno; una única ejecución en verde no es evidencia |
+| La prueba falla de forma intermitente | Estabiliza el entorno; una única ejecución en verde no es evidencia |
 
 ## 9. Trasladar el ejercicio a un repositorio real
 
 ```text
 Objetivo: corregir [comportamiento incorrecto observable].
 Reproducción: [comando exacto]; fallo estable: [aserción].
-Alcance: solo [implementación] y las pruebas necesarias; sin refactor ni actualización.
-Aceptación: pasan la prueba original y las de límites; pasa [comando completo]; diff limpio.
-Permisos: sin push, publicación ni datos de producción; detenerse antes de pedir acceso adicional.
+Alcance: solo [implementación] y las pruebas necesarias; sin refactorización ni actualización de dependencias.
+Aceptación: pasan la prueba original y las de límites; pasa [comando completo]; diff sin cambios ajenos a la tarea.
+Permisos: sin push, publicación ni datos de producción; si necesitas permisos adicionales, detente y explica por qué.
 Localiza la causa raíz y los riesgos en modo de solo lectura; espera la aprobación del plan antes de editar.
 ```
 

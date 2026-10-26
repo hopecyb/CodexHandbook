@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Notifications and Activity
 description: Configure alerts for completed tasks, permission requests, and questions awaiting a response.
 locale: en
 source_locale: zh-CN
-source_revision: 4a1c672
+source_revision: '4a1c672'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 80
 ---
@@ -47,11 +51,3 @@ CLI and IDE notifications work differently. The IDE has no separate notification
 
 - [Notifications](https://learn.chatgpt.com/docs/notifications)
 - [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26

@@ -3,12 +3,16 @@ title: Métodos de flujo de trabajo
 description: Métodos de colaboración repetibles — no atados a una sola interfaz de producto, con puntos de control y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: d058896
+source_revision: "d058896"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de prompts, calidad, trabajo con Agents y Skills de este manual. Esta página solo navega métodos y puntos de control por fase; no convierte flujos concretos de cliente en un contrato a largo plazo.
+  checkedAt: '2026-07-26'
 ---
-
 Los [prompts](/es/prompts/) enseñan **cómo formular**; los flujos de trabajo enseñan **cómo organizar toda una tarea**. Los métodos de este capítulo aplican a App, CLI, IDE y Cloud.
 
 ## Por qué hacen falta flujos de trabajo
@@ -27,7 +31,7 @@ Sin puntos de control es fácil: tocar el directorio equivocado, no ejecutar tes
 |---|---|
 | [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/) | Cadena principal genérica, adecuada para la mayoría de tareas |
 | [Lluvia de ideas antes de construir](/es/cases/workflows/brainstorm-before-building/) | Divergir y converger cuando la solución aún no está clara |
-| [Trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/) | Escribir una especificación aceptable antes de implementar |
+| [Trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/) | Escribir una especificación con criterios de aceptación verificables antes de implementar |
 | [Trabajo impulsado por tests](/es/cases/workflows/test-driven-work/) | Dejar que los tests impulsen la implementación |
 | [Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/) | Cuándo pausar, cuándo aprobar, cuándo rechazar |
 | [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/) | Evitar «arreglar a ciegas» |
@@ -52,10 +56,3 @@ Sin puntos de control es fácil: tocar el directorio equivocado, no ejecutar tes
 2. **Pasos pequeños por defecto:** un incremento revisable supera un cambio enorme de una sola vez
 3. **Fallos recuperables:** saber cómo deshacer y cómo hacer fork del hilo para continuar
 4. **Capturar lo repetible:** la tercera repetición de un proceso se escribe como Skill o plantilla
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de prompts, calidad, trabajo con Agents y Skills de este manual. Esta página solo navega métodos y puntos de control por fase; no convierte flujos concretos de cliente en un contrato a largo plazo.

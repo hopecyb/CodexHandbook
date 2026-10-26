@@ -8,11 +8,12 @@ title: Troubleshooting index
 description: Find the right tutorial or product page by symptom.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 110
-source_revision: da350d0
+source_revision: 'da350d0'
+reviewed_at: 2026-10-25
 ---
 
 If you encounter a problem but do not know whether to look in the App, CLI, IDE, or Cloud section, start here.

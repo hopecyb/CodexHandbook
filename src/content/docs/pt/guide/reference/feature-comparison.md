@@ -1,30 +1,31 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "A página foi comparada com a documentação oficial do App, CLI, IDE, Cloud, Authentication e Pricing disponível na data de verificação. A matriz se limita a capacidades explícitas, como local de trabalho, contexto, forma de revisão e limites de acesso; não classifica funcionalidades voláteis como fortes, médias ou fracas."
-  checkedAt: "2026-08-26"
-title: "Comparação de funcionalidades"
-description: "Compare o App para desktop, o CLI, a IDE e o Cloud por ambiente de trabalho, local de execução e forma de revisão."
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: A página foi comparada com a documentação oficial do App, CLI, IDE, Cloud, Authentication e Pricing disponível na data de verificação. A matriz se limita a capacidades explícitas, como local de trabalho, contexto, forma de revisão e limites de acesso; não classifica funcionalidades voláteis como fortes, médias ou fracas.
+  checkedAt: '2026-08-26'
+title: Comparação de funcionalidades
+description: Compare o App para desktop, o CLI, a IDE e o Cloud por ambiente de trabalho, local de execução e forma de revisão.
 sidebar:
   order: 30
 locale: pt
 source_locale: zh-CN
-source_revision: b3d30b0
-translation_status: draft
+source_revision: "b3d30b0"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Esta tabela compara apenas as **principais formas de trabalho que se mantêm relativamente estáveis**. Ela não transforma pequenas funcionalidades que mudam rapidamente em promessas permanentes. Use primeiro o [diagrama para escolher um cliente](/pt/guide/choose-your-client/) e depois confira as diferenças aqui.
 
 ## Comparação principal
 
-| Ponto de acesso | Onde o trabalho acontece | Contexto mais forte | Principal forma de revisão | Tarefas típicas |
+| Ponto de acesso | Onde o trabalho acontece | contexto mais forte | Principal forma de revisão | tarefas típicas |
 |---|---|---|---|---|
 | App do ChatGPT para desktop | Projetos, conversas e arquivos locais | Pastas, projetos e tarefas abertos | Resumo da tarefa, arquivos, diff e interface de aprovação | Coordenação entre projetos, tarefas longas, operações com arquivos e com o computador |
 | Codex CLI | Terminal atual e repositório local | Diretório de trabalho, saída dos comandos e estado do Git | Comandos, diff e resumo dos resultados no terminal | Investigação, alterações, testes, scripts e CI |
 | Integração com a IDE | Editor atual | Arquivos abertos, seleção e conversa recente | Resumo das alterações e diff ao lado do código | Explicações pontuais, alterações em etapas pequenas e revisão no editor |
-| Codex Cloud | Ambiente remoto isolado | Repositório conectado e configuração do ambiente | Logs, resumo, diff e PR na nuvem | Tarefas longas em segundo plano, tentativas paralelas e colaboração remota |
+| Codex Cloud | Ambiente remoto isolado | Repositório conectado e configuração do ambiente | Logs, resumo, diff e PR na nuvem | tarefas longas em segundo plano, tentativas paralelas e colaboração remota |
 
 ## Instalação e identidade
 

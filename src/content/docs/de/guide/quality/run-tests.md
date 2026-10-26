@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur, warum Überprüfungsschritte in die Aufgabenabnahme gehören; Beispielsätze und Reihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Tests ausführen
 description: Überprüfungsschritte zum Teil der Aufgabe machen.
 locale: de
 source_locale: zh-CN
-source_revision: 8b1e5c7
+source_revision: "8b1e5c7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
 
 Nach der Änderung braucht es einen Weg zu bestätigen, dass nichts Offensichtliches kaputt ist.
 
-Dieser „Beweis“ kann automatische Tests sein, ein erfolgreicher Build oder klare manuelle Schritte.
+Dieser Nachweis kann aus automatisierten Tests, einem erfolgreichen Build oder klar beschriebenen manuellen Prüfschritten bestehen.
 
 ## Was Tests beantworten
 
@@ -72,10 +77,3 @@ Sagen Sie, welche Überprüfungen Sie wirklich ausgeführt haben; wenn nicht mö
 ```
 
 Überprüfung darf leicht sein, aber nicht fehlen — sonst hält „fertig“ kaum.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur, warum Überprüfungsschritte in die Aufgabenabnahme gehören; Beispielsätze und Reihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26

@@ -8,15 +8,15 @@ title: Répertoire templates/
 description: Modèles de sortie et squelettes de rapport dans un Skill.
 locale: fr
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: '82a9e01'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 `templates/` ne sert pas qu'à « gagner du temps de mise en page » — il **stabilise** la sortie du Skill.
 
-Si `references/` = quoi consulter en entrée, `templates/` = à quoi ressemble la sortie. Résultats à structure fixe et revue facile → ici.
+`references/` définit les informations à consulter ; `templates/` définit la forme du résultat. Placez-y les formats qui doivent rester stables et faciles à vérifier.
 
 
 Formats réutilisés à l'exécution : rapport de revue, squelette changelog, tableau comparatif.
@@ -54,14 +54,14 @@ Si vous voulez toujours la même forme :
 - tableau de recherche
 - checklist de release
 
-Pas obligatoire au premier Skill.  
+Pas obligatoire au premier Skill.
 Dès que vous répétez « sors selon cette structure », extrayez un template.
 
 ## Idées reçues
 
 ### 1. template = cosmétique
 
-Aussi stabilité, comparaison, revue.
+Un modèle ne sert pas seulement à améliorer l’apparence : il stabilise les résultats et facilite leur comparaison et leur vérification.
 
 ### 2. template remplace les consignes dans SKILL.md
 

@@ -3,15 +3,16 @@ title: Crear un Pull Request
 description: Entrega los resultados de Cloud en un PR revisable y verificable que no se fusiona automáticamente.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: "39371d4"
-translation_status: draft
+source_revision: '39371d4'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: 2026-10-25
 ---
 
 Después de una tarea Cloud, examina primero el resumen y el diff. Crea un Pull Request cuando el resultado cumpla el alcance y los criterios de verificación; de lo contrario, sigue corrigiéndolo en la misma conversación.

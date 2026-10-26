@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page explique uniquement la structure et l'ordre de lecture du chapitre des notions fondamentales ; ses liens internes et notions ont été vérifiés, et elle ne dépend pas de faits changeants sur les versions, prix ou interfaces du produit."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page explique uniquement la structure et l'ordre de lecture du chapitre des notions fondamentales ; ses liens internes et notions ont été vérifiés, et elle ne dépend pas de faits changeants sur les versions, prix ou interfaces du produit.
+  checkedAt: '2026-07-26'
 title: Notions fondamentales
 description: Un vocabulaire commun pour les modèles, agents, outils, autorisations et vérifications.
 locale: fr
 source_locale: zh-CN
 source_revision: "b4d4b2b"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 3
+reviewed_at: '2026-10-26'
 ---
-
 Cette section rassemble les notions utilisées dans tout le manuel. Les différences entre interfaces sont décrites dans les [guides des produits](/fr/guide/) ; les techniques de rédaction des prompts figurent parmi les [compétences essentielles](/fr/guide/).
 
 Ces pages expliquent surtout le fonctionnement de Codex et la manière de collaborer avec lui.

@@ -1,12 +1,17 @@
 ---
 title: 워크플로 방법
-description: 반복 가능한 협업 방법—단일 제품 UI에 묶이지 않으며, 검사 지점과 인수를 강조합니다.
+description: 반복 가능한 협업 방법—단일 제품 UI에 묶이지 않으며, 검사 지점과 검수를 강조합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d058896
+source_revision: 'd058896'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 핸드북에서 이미 검증된 프롬프트, 품질, Agent 작업, Skills 장과 교차 확인했습니다. 이 페이지는 방법 안내와 단계별 검사 지점 설명만 담당하며, 구체 클라이언트 흐름을 장기 계약으로 쓰지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 [프롬프트](/ko/prompts/)는 **어떻게 말할지**를 가르칩니다. 워크플로는 **한 일을 어떻게 조직할지**를 가르칩니다. 이 장의 방법은 App, CLI, IDE, Cloud에 적용됩니다.
@@ -16,7 +21,7 @@ reviewed_at: 2026-08-26
 외부 튜토리얼에는 「한 번의 대화로 끝낸다」는 서사가 흔하지만, 실제 프로젝트에서는 더 자주 이렇게 됩니다:
 
 ```text
-탐색 → 계획 → 실행 → 검증 →(가능하면)인수인계 또는 자동화
+탐색 → 계획 → 실행 → 검증 → (필요에 따라) 인수인계 또는 자동화
 ```
 
 검사 지점이 없으면 잘못된 디렉터리를 고치거나, 테스트를 건너뛰거나, 잘못 병합하거나, 컨텍스트가 소진된 뒤 결론을 잃기 쉽습니다.
@@ -26,8 +31,8 @@ reviewed_at: 2026-08-26
 | 워크플로 | 무엇을 해결하는가 |
 |---|---|
 | [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/) | 일반 주 경로, 대부분의 작업에 적합 |
-| [먼저 브레인스토밍한 뒤 손대기](/ko/cases/workflows/brainstorm-before-building/) | 방안이 정해지기 전 발산과 수렴 |
-| [스펙 주도 작업](/ko/cases/workflows/specification-driven-work/) | 인수 가능한 스펙을 먼저 쓴 뒤 구현 |
+| [구현 전 브레인스토밍](/ko/cases/workflows/brainstorm-before-building/) | 방안이 정해지기 전 발산과 수렴 |
+| [스펙 주도 작업](/ko/cases/workflows/specification-driven-work/) | 검수 가능한 스펙을 먼저 쓴 뒤 구현 |
 | [테스트 주도 작업](/ko/cases/workflows/test-driven-work/) | 테스트를 먼저 두어 구현을 유도 |
 | [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/) | 언제 멈추고, 언제 승인하고, 언제 거절할지 |
 | [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/) | 「추측 수정」을 피함 |
@@ -51,11 +56,4 @@ reviewed_at: 2026-08-26
 1. **각 단계에 산출물이 있음**: 계획, diff, 테스트 보고, 결정 기록
 2. **기본은 작은 걸음**: 검토 가능한 증분이 한 번의 거대한 변경보다 낫습니다
 3. **실패는 복구 가능해야 함**: 어떻게 취소할지, 어떻게 스레드를 fork해 이어갈지 알아야 합니다
-4. **정착할 수 있으면 정착**: 세 번째 반복되는 흐름은 Skill 또는 템플릿으로 씁니다
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 핸드북에서 이미 검증된 프롬프트, 품질, Agent 작업, Skills 장과 교차 확인했습니다. 이 페이지는 방법 안내와 단계별 검사 지점 설명만 담당하며, 구체 클라이언트 흐름을 장기 계약으로 쓰지 않습니다.  
-**최근 검증:** 2026-07-26
+4. **재사용할 수 있도록 기록**: 세 번째 반복되는 흐름은 Skill 또는 템플릿으로 씁니다

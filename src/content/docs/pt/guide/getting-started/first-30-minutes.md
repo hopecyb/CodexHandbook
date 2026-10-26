@@ -3,12 +3,17 @@ title: Rota dos primeiros 30 minutos
 description: Uma rota de 30 minutos para consultar direto no primeiro uso.
 locale: pt
 source_locale: zh-CN
-source_revision: 7d1061d
+source_revision: "7d1061d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Cruzado com os capítulos já verificados deste handbook sobre lista de segurança, projeto de prática, primeira Tarefa, revisão de resultado e caminho do iniciante; esta página só oferece a rota estável de «nos primeiros trinta minutos, fechar o ciclo».
+  checkedAt: '2026-07-26'
 ---
 
 Se acabou de instalar e ainda não sabe como começar no primeiro dia, siga esta rota.
@@ -20,7 +25,7 @@ O objetivo dos primeiros 30 minutos é fechar o primeiro ciclo completo.
 | 0–5 min | Ler a [Lista de segurança](/pt/guide/getting-started/beginner-safety-checklist/) |
 | 5–10 min | [Instalar o App desktop](/pt/guide/getting-started/install-desktop-app/) e [entrar](/pt/guide/getting-started/sign-in-and-authentication/) |
 | 10–15 min | [Criar o projeto de prática](/pt/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/) e verificar |
+| 15–25 min | [Rodar a primeira tarefa](/pt/guide/getting-started/run-your-first-task/) e verificar |
 | 25–30 min | Abrir [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/) e entrar no caminho do iniciante |
 
 ## O que estes 30 minutos precisam concluir
@@ -56,7 +61,7 @@ Prepare primeiro um diretório pequeno que você entenda, para observar as mudan
 
 Neste intervalo confirme:
 
-- Ele realmente executou uma Tarefa
+- Ele realmente executou uma tarefa
 - Você consegue entender o resultado
 - Você sabe onde continuar perguntando, modificando ou desfazendo
 
@@ -66,7 +71,7 @@ Este passo liga o «primeiro sucesso» ao caminho de aprendizagem seguinte — e
 
 ## Mal-entendidos e pontos de travamento comuns
 
-### 1. Escolher uma primeira Tarefa grande demais
+### 1. Escolher uma primeira tarefa grande demais
 
 Na primeira vez, faça algo bem pequeno, por exemplo:
 
@@ -82,14 +87,14 @@ Entender importa — mas para iniciantes, obter uma experiência de «eu realmen
 
 ### 3. Ver o resultado e encerrar sem revisar
 
-O hábito mais valioso nos primeiros 30 minutos: por menor que seja a Tarefa, verificar o resultado de passagem.
+O hábito mais valioso nos primeiros 30 minutos: por menor que seja a tarefa, verificar o resultado de passagem.
 
 ## Sinais de conclusão
 
 Se depois de 30 minutos você já fez estas 4 coisas, esta rodada está concluída:
 
 1. Sabe em que diretório está operando
-2. Rodou pelo menos uma Tarefa real
+2. Rodou pelo menos uma tarefa real
 3. Olhou o resultado — não só a resposta
 4. Sabe que página ler a seguir
 
@@ -97,11 +102,4 @@ Se depois de 30 minutos você já fez estas 4 coisas, esta rodada está concluí
 
 Vá primeiro ao [índice de solução de problemas](/pt/guide/reference/troubleshooting/). Se for só conceito, volte a [O que você precisa antes de começar](/pt/guide/start-here/prerequisites/) e [Local e Cloud](/pt/guide/foundations/local-vs-cloud/).
 
-Nos primeiros 30 minutos, completar com as próprias mãos um ciclo de «dar a Tarefa, ver o resultado, julgar você mesmo» já vale muito.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste handbook sobre lista de segurança, projeto de prática, primeira Tarefa, revisão de resultado e caminho do iniciante; esta página só oferece a rota estável de «nos primeiros trinta minutos, fechar o ciclo».  
-**Última verificação:** 2026-07-26
+Nos primeiros 30 minutos, completar com as próprias mãos um ciclo de «dar a tarefa, ver o resultado, julgar você mesmo» já vale muito.

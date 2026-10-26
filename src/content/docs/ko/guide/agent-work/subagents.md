@@ -3,11 +3,17 @@ title: 서브 에이전트
 description: 경계가 명확한 하위 작업을 독립 컨텍스트에 위임하고, 주 Agent가 근거를 종합하고 충돌을 해결하며 최종 검수합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a3f2be5
-translation_status: draft
+source_revision: 'a3f2be5'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 현재 Codex 서브 에이전트 공식 설명과 대조했습니다. 이 페이지는 컨텍스트 격리, 권한 상속, 활동 화면, token 비용과 병렬 쓰기 충돌을 명확히 설명하며, 최종 종합과 검증 책임은 주 Agent에 둡니다.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 **서브 에이전트(Subagent)**는 주 Agent가 명확한 하위 문제 하나를 위해 시작하는 독립적인 작업 단위입니다. 자체 컨텍스트에서 작업하고 완료 후 결론과 근거를 주 스레드에 돌려줍니다. 전체적인 결정과 최종 검수 책임은 여전히 주 Agent에게 있습니다.

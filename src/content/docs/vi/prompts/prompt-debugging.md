@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả tư duy gỡ lỗi Prompt; liên kết nội bộ và thứ tự gỡ lỗi đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Gỡ lỗi Prompt
 description: Khi kết quả lệch, định vị vấn đề Prompt thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: efc3015
+source_revision: "efc3015"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Khi kết quả sai, nguyên nhân thường gặp gồm:
@@ -62,7 +67,7 @@ Tác vụ lớn thì thực thi thẳng thường lệch dễ hơn so với xin 
 
 ### 5. Công cụ có chọn sai không
 
-Ví dụ bạn muốn nó tập trung code local mà nó lại tìm mạng ngoài; hoặc bạn muốn nghiên cứu kèm trích dẫn mà nó chỉ trả lời theo ấn tượng.
+Ví dụ bạn muốn nó tập trung code local mà nó lại tìm mạng ngoài; hoặc bạn muốn nghiên cứu kèm trích dẫn mà nó chỉ trả lời theo trí nhớ thay vì kiểm tra nguồn.
 
 ## Hiểu lầm thường gặp
 
@@ -95,10 +100,3 @@ Nếu muốn kéo vấn đề về đúng hướng trước:
 Cốt lõi gỡ lỗi Prompt là tìm lớp thông tin then chốt nào chưa được truyền đúng—không phải viết câu phức tạp hơn.
 
 Nếu vẫn thất bại, thu hẹp về tái hiện một tệp, hoặc mở Thread mới nêu lại ràng buộc.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả tư duy gỡ lỗi Prompt; liên kết nội bộ và thứ tự gỡ lỗi đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

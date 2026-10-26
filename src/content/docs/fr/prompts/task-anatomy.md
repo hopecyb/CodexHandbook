@@ -8,9 +8,10 @@ title: "Anatomie d’une bonne tâche"
 description: Objectif, contexte, entrées, contraintes, acceptation et limites de permission.
 locale: fr
 source_locale: zh-CN
-source_revision: 98c0511
-translation_status: draft
+source_revision: "98c0511"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Quand une demande contient beaucoup d’informations sans structure, le résultat attendu, les limites et les critères d’acceptation se mélangent. Codex doit alors combler lui-même les vides.

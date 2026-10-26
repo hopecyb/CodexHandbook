@@ -3,17 +3,22 @@ title: Fundamentos de Agent
 description: Explica como o Agent chama Ferramentas e avança de forma iterativa em torno de um objetivo.
 locale: pt
 source_locale: zh-CN
-source_revision: 14ab120
+source_revision: "14ab120"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica a diferença de colaboração entre Agent e chat comum; links internos, conceitos e analogias foram revisados, e o texto não depende de fatos de produto voláteis.
+  checkedAt: '2026-07-26'
 ---
 
-O **Agent** continua trabalhando em torno do objetivo: entender o objetivo → escolher Ferramentas → observar o resultado → ajustar o próximo passo, até concluir ou precisar da sua intervenção.
+O **Agent** continua trabalhando em torno do objetivo: entender o objetivo → escolher ferramentas → observar o resultado → ajustar o próximo passo, até concluir ou precisar da sua intervenção.
 
-A IA comum se parece mais com alguém que responde perguntas; o Agent se parece mais com alguém que, ao receber a Tarefa, avança passo a passo.
+A IA comum se parece mais com alguém que responde perguntas; o Agent se parece mais com alguém que, ao receber a tarefa, avança passo a passo.
 
 ![Ilustração: à esquerda, um chat de pergunta e resposta; à direita, um agente em ciclo que lê arquivos, usa ferramentas, verifica e corrige](/illustrations/agent-basics.webp)
 
@@ -24,7 +29,7 @@ A IA comum se parece mais com alguém que responde perguntas; o Agent se parece 
 | Saída | Sobretudo sugestões em texto | Pode ler/escrever arquivos, rodar comandos, alterar o repositório |
 | Processo | Uma resposta | Várias chamadas de Ferramenta |
 | Risco | Sugestões enganosas | Também pode estragar arquivos ou executar comandos perigosos |
-| Seu papel | Ler | Definir limites, Aprovação, aceite |
+| Seu papel | Ler | Definir limites, aprovação, aceite |
 
 ## Uma analogia direta
 
@@ -49,20 +54,13 @@ Quando ele começa a ler arquivos, alterá-los e rodar comandos, deixa de ser s�
 
 No começo, leia também:
 
-1. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
-2. [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/)
+1. [permissões e aprovação](/pt/guide/foundations/permissions-and-approvals/)
+2. [Rodar a primeira tarefa](/pt/guide/getting-started/run-your-first-task/)
 3. [Revisar o resultado](/pt/guide/getting-started/review-the-result/)
 
 ## Conceitos relacionados
 
 - Skill / Plugin / MCP: ampliam «o que sabe fazer» e «a que se conecta» — veja [Extensão e automação](/pt/skills/) e [Mapa de capacidades](/pt/guide/start-here/codex-capability-map/)
-- Aprovação humana: veja [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+- aprovação humana: veja [permissões e aprovação](/pt/guide/foundations/permissions-and-approvals/)
 
 A característica do Agent é conseguir fazer vários passos seguidos em torno do objetivo — não só devolver um parágrafo.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica a diferença de colaboração entre Agent e chat comum; links internos, conceitos e analogias foram revisados, e o texto não depende de fatos de produto voláteis.  
-**Última verificação:** 2026-07-26

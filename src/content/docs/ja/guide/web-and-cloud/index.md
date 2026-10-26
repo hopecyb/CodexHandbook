@@ -3,12 +3,16 @@ title: Web と Cloud（概要）
 description: リポジトリ接続、再現可能な環境、レビュー、Pull Request までのリモートタスクの流れを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 86fa0ac
+source_revision: "86fa0ac"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 13
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Codex Cloud は隔離されたクラウド環境でコーディングタスクを実行します。バックグラウンドの長時間タスク、並行した試行、GitHub、GitLab（Beta）、Linear、Slack から開始する作業に適しています。「PC を遠隔操作する」ものではなく、ローカルでまだ push していないファイルを自動的に参照することもありません。
@@ -47,7 +51,7 @@ Cloud の価値は隔離、再現性、並行処理にあり、レビューを�
 1. [GitHub を接続する](/ja/guide/web-and-cloud/connect-github/)：必要なリポジトリだけを認可する。
 2. [Cloud 環境](/ja/guide/web-and-cloud/cloud-environments/)：ツール、バージョン、setup を固定する。
 3. [Secrets と環境変数](/ja/guide/web-and-cloud/secrets-and-variables/)：インストール時の Secret と実行時の変数を区別する。
-4. [インターネットアクセス](/ja/guide/web-and-cloud/internet-access/)：Agent フェーズはデフォルトでオフライン。ドメインと method を最小限だけ許可する。
+4. [インターネットアクセス](/ja/guide/web-and-cloud/internet-access/)：Agent フェーズはデフォルトでオフライン。ドメインと HTTP メソッド を最小限だけ許可する。
 5. [委任と follow-up](/ja/guide/web-and-cloud/delegate-and-follow-up/)：目標、制約、検収基準を使ってタスクを依頼する。
 6. [Pull Request を作成する](/ja/guide/web-and-cloud/create-pull-requests/)と[コードレビュー](/ja/guide/web-and-cloud/code-review/)：結果を merge 可能な成果物にする。
 7. [Cloud のトラブルシューティング](/ja/guide/web-and-cloud/troubleshooting/)：リポジトリ、setup、ネットワーク、タスクの四層で問題を特定する。
@@ -62,11 +66,3 @@ Cloud の価値は隔離、再現性、並行処理にあり、レビューを�
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Cloud 環境](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud
-
-**最終検証：** 2026-08-26

@@ -1,17 +1,18 @@
 ---
 legacyVerification:
-  status: "verified"
-  basis: "このリポジトリの現在の文書 frontmatter、従来のフッター状態体系、相互リンクの慣例、sidebar の保守方法に照らして確認済み。このページはハンドブック本文の執筆規約と構成上の助言を扱い、特定の製品バージョンの詳細には依存しません。"
-  checkedAt: "2026-07-26"
+  status: verified
+  basis: このリポジトリの現在の文書 frontmatter、従来のフッター状態体系、相互リンクの慣例、sidebar の保守方法に照らして確認済み。このページはハンドブック本文の執筆規約と構成上の助言を扱い、特定の製品バージョンの詳細には依存しません。
+  checkedAt: '2026-07-26'
 title: ガイドページの執筆
 description: 新しいハンドブック本文の構造、frontmatter、相互リンクの約束事。
 locale: ja
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: "dd22df1"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 本ページでは、`src/content/docs/` に**ガイド型**のページ（純粋な事例や参照表だけではないページ）を追加・改稿する方法を説明します。
@@ -104,7 +105,7 @@ verification:
 
 ## トーン
 
-- 日本語、実践者向け
+- 原文は簡体字中国語で、実践者向けに書く。日本語訳でも同じ読者を想定する
 - 不確実性を認める（「公式ドキュメントを正とする」）
 - 「万能プロンプト」の語りを使わない
 

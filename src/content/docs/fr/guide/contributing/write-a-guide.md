@@ -4,14 +4,15 @@ legacyVerification:
   basis: "Vérifié à partir du frontmatter actuel des documents du dépôt, de l’ancien système de statuts en pied de page, des liens croisés et de la gestion de la sidebar. Cette page décrit les conventions de rédaction et les conseils de structure du manuel, sans dépendre d’une version précise du produit."
   checkedAt: "2026-07-26"
 title: Écrire une page guide
-description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du handbook.
+description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du manuel.
 locale: fr
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: 'dd22df1'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 Cette page explique comment ajouter ou réviser des pages de style **guide** dans `src/content/docs/` (pas les cas purs ou les tableaux de référence purs).
@@ -95,14 +96,14 @@ Le manuel communautaire aide à comprendre, relier et mettre en pratique les inf
 ## Liens croisés
 
 - Les liens internes utilisent des chemins racine : `/fr/cases/workflows/explore-plan-execute-verify/`
-- Lier vers les pages autoritaires ; éviter la longue duplication
+- Lier vers les pages de référence faisant autorité ; éviter la longue duplication
 - Enregistrer les nouvelles pages dans l'`index.md` du chapitre et la sidebar `astro.config.mjs`
 
 ## Ton
 
-- Français, à destination des personnes qui passent à la pratique
+- Le texte source est rédigé en chinois simplifié pour les praticiens ; cette traduction s’adresse aux lecteurs francophones
 - Reconnaître l'incertitude (« selon la documentation officielle »)
-- Éviter le récit de « Prompt magique »
+- Éviter le récit de « prompt magique »
 
 ## Ordre d'écriture
 
@@ -111,7 +112,7 @@ Le manuel communautaire aide à comprendre, relier et mettre en pratique les inf
 3. Approche minimale, workflow ou règle de décision
 4. Liens croisés et sources de référence
 
-## Vérification
+## vérification
 
 Avant PR, lire [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/). Commandes, tarifs, permissions, etc. doivent être re-vérifiés.
 

@@ -8,13 +8,13 @@ title: Dépannage de l'application de bureau
 description: Solutions courantes aux problèmes d'installation, de connexion et de tâche.
 locale: fr
 source_locale: zh-CN
-source_revision: c298f9f
-translation_status: draft
+source_revision: "c298f9f"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
+reviewed_at: '2026-10-26'
 ---
-
 Pour résoudre un problème, commencez par les causes les plus probables et les plus faciles à traiter.
 
 | Symptôme | Première vérification |

@@ -3,12 +3,17 @@ title: CLI のインストールと更新
 description: インストール、アップグレード、バージョン確認。
 locale: ja
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: "be3f2c4"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現行の公式 CLI クイックスタートと照合し、macOS/Linux、Windows、npm、Homebrew のインストール方法、更新手順、`codex` のログインフローを確認済みです。具体的なコマンドは初心者向けインストールページでまとめて管理しています。
+  checkedAt: '2026-08-26'
 ---
 
 CLI を初めて入れるとき、多くの人は次の点でつまずきます。
@@ -56,11 +61,4 @@ CLI のインストール完了とは、一度コマンドが走ったことで�
 実務的な合格基準は、**現在のターミナルで見つかり、認証まで完了していること**です。
 
 関連：[CLI のインストール](/ja/guide/getting-started/install-cli/)
-公式のインストール・アップグレード説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
-
----
-
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 本ページはインストール後の確認手順を説明しているが、本文は依然として現行のインストール・更新・認証フローを前提としている。公式 CLI のインストール方法、認証手順、バージョン確認コマンドは変動が大きいため、最新の公式インストール資料を補うまでは `verified` とすべきではない。  
-**最終検証：** 2026-07-26
+公式のインストール・更新手順は [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) を参照してください。macOS/Linux の公式スタンドアロンインストーラーは、インストールと更新に同じコマンドを使います。Windows、npm、Homebrew の手順は、公式ページの該当タブを確認してください。

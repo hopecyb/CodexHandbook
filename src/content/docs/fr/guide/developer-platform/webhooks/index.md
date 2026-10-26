@@ -8,20 +8,20 @@ title: Webhooks
 description: Intégration événementielle — les webhooks reçoivent des notifications ; ils ne remplacent pas le design de flux de travail.
 locale: fr
 source_locale: zh-CN
-source_revision: 68cb29b
+source_revision: '68cb29b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
-« Webhook » semble abstrait.  
+« Webhook » semble abstrait.
 Simplement : quand quelque chose arrive, un système vous notifie activement.
 
 Dans l'intégration Codex, cela répond à « quand un événement externe arrive, comment déclencher la suite ? »
 
 ## Entrée de section
 
-- [Vue d'ensemble Webhooks](/fr/guide/developer-platform/webhooks/overview/)
+- [Limites des Webhooks et événements de tâche](/fr/guide/developer-platform/webhooks/overview/) : distinguer les résultats d’exécution locale, les événements App Server et les rappels HTTP personnalisés. Cette section ne fournit aucun contrat Cloud Webhook unifié non vérifié.
 
 ## Ce que cette section couvre
 
@@ -29,4 +29,4 @@ Dans l'intégration Codex, cela répond à « quand un événement externe arriv
 - Quoi câbler après qu'un événement arrive
 - Pourquoi un webhook n'est qu'un trigger, pas un design d'automatisation complet
 
-Un webhook est comme une sonnette — il dit « quelque chose a arrivé » ; vous connectez encore le flux de travail.
+Un webhook est comme une sonnette — il dit « quelque chose s’est produit » ; vous connectez encore le flux de travail.

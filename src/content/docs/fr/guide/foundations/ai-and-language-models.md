@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page explique uniquement les bases de la génération à partir du contexte par les modèles de langage ; ses liens internes et notions ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page explique uniquement les bases de la génération à partir du contexte par les modèles de langage ; ses liens internes et notions ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer.
+  checkedAt: '2026-07-26'
 title: IA et modèles de langage
 description: Comprendre comment les modèles de langage génèrent des réponses à partir du contexte.
 locale: fr
 source_locale: zh-CN
 source_revision: "ccdac83"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
-
 Un modèle de langage utilise les textes, fichiers et résultats d'outils que vous lui fournissez pour **prédire la sortie suivante la plus plausible**. Il sait compléter, organiser, rédiger et poursuivre un travail à partir du contexte. Il ne connaît pas spontanément les informations que vous ne lui avez pas données et ne garantit pas que chaque résultat soit exact.
 
 Un modèle de langage ne lit pas vos pensées et ne comprend pas automatiquement votre projet. Il ne peut produire qu'un résultat qui « semble plausible » à partir de ce que vous lui donnez.

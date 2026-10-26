@@ -12,9 +12,10 @@ verification:
     href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: 1a34023
-translation_status: draft
+source_revision: "1a34023"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 ## 確認できる出来事と範囲

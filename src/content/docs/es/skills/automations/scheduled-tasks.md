@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar"
+  checkedAt: "2026-08-26"
 title: Guía completa de Scheduled tasks
 description: Elige entre una tarea independiente o dentro de un chat y configura proyectos, worktrees, permisos, prompts y revisión humana.
 locale: es
-source_locale: zh-cn
-source_revision: fa792dc
+source_locale: zh-CN
+source_revision: 'fa792dc'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 La parte difícil de una Scheduled task no es elegir la hora. Es conseguir que cada ejecución desatendida tenga entradas estables, permisos limitados, resultados revisables y condiciones de parada.
@@ -21,7 +25,7 @@ La parte difícil de una Scheduled task no es elegir la hora. Es conseguir que c
 
 ## Límites de compatibilidad
 
-| Superficie | Qué permite | Restricción principal |
+| Cliente | Qué permite | Restricción principal |
 |---|---|---|
 | ChatGPT Web | Crear, gestionar y consultar ejecuciones; usar archivos cargados, herramientas conectadas, Skills y Plugins | No puede acceder directamente a carpetas locales |
 | App de escritorio de ChatGPT | Crear y gestionar; elegir un proyecto local o un Git worktree | El equipo debe estar encendido, la App en ejecución y el proyecto disponible |
@@ -139,11 +143,3 @@ Si la ejecución debe producirse inmediatamente después de un `push`, de la cre
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar
-
-**Última verificación:** 2026-08-26

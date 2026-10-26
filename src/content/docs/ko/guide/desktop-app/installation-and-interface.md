@@ -7,11 +7,12 @@ title: 설치와 첫 사용
 description: ChatGPT 데스크톱 앱의 프로젝트, 채팅, Codex, 검토 진입점을 알아봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 080436d
-translation_status: draft
+source_revision: '080436d'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 이 장은 ChatGPT 데스크톱 앱을 처음 여는 독자를 위한 것입니다. 모든 버튼을 외우기보다 **검토하고 검증할 수 있는 작은 작업 하나**를 끝내는 것이 목표입니다.

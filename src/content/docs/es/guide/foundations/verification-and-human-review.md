@@ -3,26 +3,31 @@ title: Verificación y revisión humana
 description: Por qué el resultado debe ser comprobable y cómo revisarlo.
 locale: es
 source_locale: zh-CN
-source_revision: bfe4036
+source_revision: 'bfe4036'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica por qué el resultado necesita verificación y revisión humana; se revisaron enlaces internos, el orden de pasos y las formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
 Codex puede acelerarte, pero no asume por ti la responsabilidad de la confirmación final.
 
 Codex aumenta la velocidad, pero **no te libera de la aceptación**. Como mínimo, revisa esto:
 
-1. Lee el [Diff](/es/guide/quality/review-diffs/): qué archivos cambió y si se pasó de rango
+1. Lee el [Diff](/es/guide/quality/review-diffs/): qué archivos cambió y si excedió el alcance permitido
 2. Comprueba según el criterio de terminado que definiste
 3. Si puedes ejecutar pruebas, hazlo: [Ejecutar pruebas](/es/guide/quality/run-tests/)
-4. Los hechos hacia fuera necesitan fuente: [Validar fuentes](/es/guide/quality/validate-sources/)
+4. Las afirmaciones destinadas a publicación externa requieren comprobar sus fuentes: [Validar fuentes](/es/guide/quality/validate-sources/)
 
 ## Qué mira realmente la revisión humana
 
-«Revisión humana» no significa rehacerlo todo. Desde quien responde por la entrega, basta confirmar:
+«Revisión humana» no significa rehacerlo todo. Desde la perspectiva de quien responde por la entrega, basta confirmar:
 
 - si cambió lo correcto
 - si cambió de más
@@ -50,23 +55,16 @@ También hay que revisar:
 - conclusiones de investigación
 - contenido de documentación
 - tablas y resúmenes
-- material de demos
+- material para presentaciones
 - configuración y scripts
 
 ## Pasos de revisión
 
 Si tienes poco tiempo, sigue este orden:
 
-1. Mira si el alcance se pasó de rango
+1. Comprueba si los cambios excedieron el alcance permitido
 2. Mira si el resultado cumple lo que pedías
 3. Prioriza la verificación automática cuando se pueda
 4. El paso más crítico que quede, pásalo otra vez con mirada humana
 
 La revisión humana deja la decisión final en quien de verdad responde por el resultado.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica por qué el resultado necesita verificación y revisión humana; se revisaron enlaces internos, el orden de pasos y las formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

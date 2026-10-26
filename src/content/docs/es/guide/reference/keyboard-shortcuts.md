@@ -3,11 +3,16 @@ title: Atajos de teclado
 description: Solo se incluyen los atajos de la aplicación y del IDE verificables en la documentación oficial vigente.
 locale: es
 source_locale: zh-CN
-source_revision: 4f812d9
-translation_status: draft
+source_revision: '4f812d9'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
 
 Los atajos varían según la plataforma, el cliente y la configuración personalizada. Esta página recoge únicamente las combinaciones que figuran de forma explícita en la documentación oficial actual. La lista completa se encuentra en **Keyboard Shortcuts** dentro de la aplicación.

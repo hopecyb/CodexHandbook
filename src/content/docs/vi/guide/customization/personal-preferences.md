@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Đã đối chiếu chéo với các chương chỉ thị dự án, Profiles, phân công cài đặt và ranh giới an toàn đã kiểm chứng trong sổ tay; trang này chỉ nói nguyên tắc phân tầng ổn định “thói quen cá nhân không nên làm bẩn quy tắc kho nhóm”, không viết giao diện cài đặt hiện tại của một client thành hợp đồng cố định.", "checkedAt": "2026-07-26"}
 title: Sở thích cá nhân
 description: Cấu hình cấp người dùng, mô hình mặc định và thói giao diện — tránh làm bẩn ước định nhóm trong kho.
 locale: vi
 source_locale: zh-CN
-source_revision: c381051
+source_revision: "c381051"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -66,7 +67,7 @@ Nếu thói mặc định khá lỏng, sang dự án khách hoặc dự án nhó
 
 ### 2. Sở thích cá nhân và quy tắc dự án gần giống nhau?
 
-Khác nhiều.  
+Khác nhiều.
 Sở thích cá nhân là “tôi quen vậy”; quy tắc dự án là “kho này mọi người nên cố vậy”.
 
 ### 3. Chỉ nhìn máy mình ổn chưa đủ để phán cài đặt này hợp lý
@@ -104,10 +105,3 @@ Nếu sản phẩm có «bộ nhớ» hoặc sở thích bền, xem [Bộ nhớ 
 - [ ] Nói được mỗi một ví dụ của ba tầng cá nhân vs dự án vs tổ chức
 - [ ] Ít nhất cấu hình Profile nghiêm cho một dự án khách
 - [ ] Trong kho không có khóa cá nhân
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương chỉ thị dự án, Profiles, phân công cài đặt và ranh giới an toàn đã kiểm chứng trong sổ tay; trang này chỉ nói nguyên tắc phân tầng ổn định “thói quen cá nhân không nên làm bẩn quy tắc kho nhóm”, không viết giao diện cài đặt hiện tại của một client thành hợp đồng cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

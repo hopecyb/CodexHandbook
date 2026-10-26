@@ -1,14 +1,18 @@
 ---
 title: Diagnosticar antes de corregir
-description: Problemas de producción y bugs persistentes — construye primero una cadena de evidencia, luego corta.
+description: Problemas de producción y bugs persistentes — construye primero una cadena de evidencia, después aplica la corrección.
 locale: es
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: "18193b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de planificación, calidad y recuperación ante fallos. Esta página solo confirma el método estable «cadena de evidencia primero, corrección mínima después», sin depender de una implementación concreta de producto.
+  checkedAt: '2026-07-26'
 ---
-
 Pedir a Codex que «arregle el bug» de entrada suele generar mucho retrabajo. El flujo de diagnóstico insiste en: **síntoma → hipótesis → evidencia → corrección mínima**.
 
 ## Cuándo usarlo
@@ -49,7 +53,7 @@ Corrige una sola causa raíz por vez; evita «refactorizar de paso».
 
 ### 6. Verificación de regresión
 
-Caso que fallaba + escenarios vecinos + tests que eviten la recidiva.
+Caso que fallaba + escenarios vecinos + tests que eviten que el fallo se repita.
 
 ## Plantilla de prompt
 
@@ -57,22 +61,15 @@ Caso que fallaba + escenarios vecinos + tests que eviten la recidiva.
 Sigue «diagnosticar antes de corregir»:
 1. Lee @path/to/failing-test y la implementación; explica la causa del fallo (cita números de línea del stack)
 2. Da 2 hipótesis y cómo verificarlas en solo lectura
-3. Tras confirmar la hipótesis, escribe la corrección; después solo ejecuta los tests relacionados
+3. Cuando yo confirme la hipótesis, escribe la corrección; después solo ejecuta los tests relacionados
 ```
 
 ## Relación con EPXV
 
-El diagnóstico es una versión más profunda de la fase **explorar**; en la fase de plan hay que dejar claro «qué hacer si la hipótesis es incorrecta».
+El diagnóstico es una versión más profunda de la fase **explorar**; en la fase de plan hay que dejar claro «cómo revertir los cambios si la hipótesis es incorrecta».
 
 ## Errores frecuentes
 
 - Cambiar código sin haber reproducido
 - Un solo patch que arregla tres problemas a la vez → imposible de revisar
 - Borrar logs temporales sin añadir un test permanente
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de planificación, calidad y recuperación ante fallos. Esta página solo confirma el método estable «cadena de evidencia primero, corrección mínima después», sin depender de una implementación concreta de producto.

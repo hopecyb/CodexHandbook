@@ -5,10 +5,15 @@ sidebar:
   order: 12
 locale: ja
 source_locale: zh-CN
-source_revision: c2fa50b
+source_revision: "c2fa50b"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: OpenAI Help Center の現行版《Using Codex with your ChatGPT plan》では、Codex IDE extension のサポートが引き続き明記されており、CLI やデスクトップ App と並ぶローカルクライアントであることも説明されている。本ページは IDE 章のナビゲーションに徹し、「現在のファイル、選択範囲、diff レビュー」という安定したワークフローを強調する。
+  checkedAt: "2026-07-26"
 ---
 
 IDE 拡張は**書きながら diff を見る**作業に向いています。ファイルを開き、コードを選択し、サイドバーでタスクを説明します。本章では、選定からレビューまでの一連の流れを扱います。
@@ -42,10 +47,3 @@ IDE 拡張は**書きながら diff を見る**作業に向いています。フ
 3. 変更後も diff は自分でレビューする
 
 IDE 拡張は「小さな範囲で、見ながら直す」タスクに向いていますが、スコープ管理とレビューは欠かせません。
-
----
-
-**状態：** verified  
-**対象製品：** IDE  
-**検証根拠：** OpenAI Help Center の現行版《Using Codex with your ChatGPT plan》では、Codex IDE extension のサポートが引き続き明記されており、CLI やデスクトップ App と並ぶローカルクライアントであることも説明されている。本ページは IDE 章のナビゲーションに徹し、「現在のファイル、選択範囲、diff レビュー」という安定したワークフローを強調する。  
-**最終検証：** 2026-07-26

@@ -10,11 +10,11 @@ sidebar:
   order: 55
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 140102c
+source_revision: "140102c"
+reviewed_at: '2026-10-26'
 ---
-
 L'intérêt d'une intégration ne tient pas seulement à l'ajout d'un outil. Elle place l'agent dans vos chaînes de travail existantes : hébergement du code, tickets, notifications, plateformes internes et bases de connaissances.
 
 Avant de connecter quoi que ce soit, décidez :

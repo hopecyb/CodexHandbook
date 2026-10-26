@@ -3,19 +3,24 @@ title: 基礎概念
 description: モデル、Agent、ツール、権限、検証の共通言語を身につける。
 locale: ja
 source_locale: zh-CN
-source_revision: b4d4b2b
+source_revision: 'b4d4b2b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 3
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは基礎概念章の構成と読み順のみを説明。サイト内リンクと概念表現を再確認済み。本文に製品バージョン、価格、画面など変わりやすい事実への依存はない。
+  checkedAt: '2026-07-26'
 ---
 
 このセクションでは、ハンドブック全体で繰り返し登場する基礎概念をまとめています。製品ごとの画面の違いは [製品ガイド](/ja/guide/) に、プロンプトの技法は [コア能力](/ja/guide/) に書いてあります。
 
 ここでは主に、Codex がどう動くか、そしてどう協業するかを説明します。
 
-## 本章の地図
+## 本章の構成
 
 1. [AI と言語モデル](/ja/guide/foundations/ai-and-language-models/)
 2. [Agent の基礎](/ja/guide/foundations/agent-basics/)
@@ -54,7 +59,7 @@ sidebar:
 もっと実用的な読み方は次のとおりです。
 
 - まず各概念が何の問題を解くのかを把握する
-- 実際の利用シーンを持ちながら理解する
+- 実際の利用場面を思い浮かべながら理解する
 
 ## 一度に全部読みたくない場合
 
@@ -67,10 +72,3 @@ sidebar:
 5. [検証と人的レビュー](/ja/guide/foundations/verification-and-human-review/)
 
 これらを理解できれば、日常利用には十分です。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは基礎概念章の構成と読み順のみを説明。サイト内リンクと概念表現を再確認済み。本文に製品バージョン、価格、画面など変わりやすい事実への依存はない。  
-**最終検証：** 2026-07-26

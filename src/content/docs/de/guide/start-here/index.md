@@ -8,16 +8,16 @@ title: Hier starten
 description: "Verstehe, was Codex ist, für wen es geeignet ist, und wähle deinen Lernpfad."
 locale: de
 source_locale: zh-CN
-source_revision: 953fb89
+source_revision: "953fb89"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 1
 ---
 
 
-Dieses Handbook richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht voraus, dass du Terminal, Git oder Agent beherrschst — die Fähigkeiten, die du später brauchst, werden Schritt für Schritt erklärt.
+Dieses Handbuch richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht voraus, dass du Terminal, Git oder Agent beherrschst — die Fähigkeiten, die du später brauchst, werden Schritt für Schritt erklärt.
 
 ![Illustration: Ein Wegweiser am Startpunkt zeigt auf mehrere Routen, daneben ein offener Leitfaden und ein winkender Assistent](/illustrations/start-here.webp)
 
@@ -41,7 +41,7 @@ Dieses Handbook richtet sich vor allem an **KI-Anfänger**: Wir setzen nicht vor
 
 ### 1. „Hier starten“ erklärt nicht alles auf einmal
 
-Dieses Kapitel klärt vor allem Einstieg und Reihenfolge — es stopft nicht den gesamten Inhalt auf einmal in dich hinein.
+Dieses Kapitel klärt vor allem Einstieg und Reihenfolge — es behandelt nicht sämtliche Inhalte auf einmal.
 
 ### 2. Auch wenn du viele Begriffe noch nicht kennst, kannst du weiterlesen
 
@@ -71,17 +71,17 @@ Bei Problemen siehe [Fehlerbehebung](/de/guide/reference/troubleshooting/).
 ## Wie weiterlesen
 
 1. [Was ist Codex](/de/guide/start-here/what-is-codex/)
-2. [Für wen ist dieses Handbook](/de/guide/start-here/who-is-this-handbook-for/)
+2. [Für wen ist dieses Handbuch](/de/guide/start-here/who-is-this-handbook-for/)
 3. [Deinen Pfad wählen](/de/guide/start-here/choose-your-path/)
 4. Weiter zu [Grundlagen](/de/guide/foundations/) und [Schnellstart](/de/guide/getting-started/)
 
 Wenn du direkt loslegen willst, schau dir die [Route für die ersten 30 Minuten](/de/guide/getting-started/first-30-minutes/) an und gehe die [Sicherheits-Checkliste für Anfänger](/de/guide/getting-started/beginner-safety-checklist/) durch.
 
-## Wie diese Site geschichtet ist
+## Wie diese Website aufgebaut ist
 
 | Schicht | Aufgabe | Einstieg |
 |---|---|---|
-| Lernpfade | Sag dir, in welcher Reihenfolge du liest | [Lernpfade](/de/guide/learning-paths/) |
+| Lernpfade | Zeigen die empfohlene Lesereihenfolge | [Lernpfade](/de/guide/learning-paths/) |
 | Produkthandbuch | Oberfläche und Bedienung | [Produkthandbuch](/de/guide/) |
 | Fähigkeitsthemen | Prinzipien und Methoden | [Kernfähigkeiten](/de/guide/) |
 | Referenz | Schnellnachschlagen | [Referenz](/de/guide/reference/) |

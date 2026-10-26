@@ -1,17 +1,18 @@
 ---
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 title: Tạo Pull Request
 description: Chuyển kết quả Cloud thành PR có thể đánh giá và xác minh, không tự động hợp nhất.
 locale: vi
 source_locale: zh-CN
 source_revision: "39371d4"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: 2026-10-26
 ---
 
 Sau khi tác vụ Cloud hoàn tất, hãy kiểm tra bản tóm tắt và diff trước. Chỉ tạo Pull Request khi kết quả đáp ứng phạm vi và tiêu chí xác minh; nếu chưa đạt, tiếp tục sửa trong cùng cuộc trò chuyện.

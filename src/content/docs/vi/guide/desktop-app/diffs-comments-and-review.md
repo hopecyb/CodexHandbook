@@ -8,7 +8,8 @@ description: Kiểm tra thay đổi thực tế và để lại phản hồi the
 locale: vi
 source_locale: zh-CN
 source_revision: "32ee40c"
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 50

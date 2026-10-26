@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: 9ea3ecc
-translation_status: draft
+source_revision: "9ea3ecc"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Ein Workflow kann den richtigen Skill wählen und trotzdem Fakten falsch wiedergeben. Er kann auch das richtige Ergebnis liefern, dabei aber eine nicht genehmigte Handlung ausführen. Diese Fälle zu einer einzigen „Erfolgsquote“ zusammenzufassen, verdeckt leicht das eigentliche Problem.
@@ -46,7 +47,7 @@ Für die ersten vier Dimensionen gelten `pass`, `partial`, `fail`, `not-applicab
 
 Für Review, Schreiben, Recherche und Link-Monitoring gibt es jeweils fünf Beispiele: positive Auslösung, fachfremde Aufgabe, Berechtigungsgrenze, Ausgabeformat und eine kritische Qualitätssituation. Alle 20 sind vom Autor entworfen; sämtliche bisherigen Einträge stehen auf `not-run`.
 
-Die Qualitätssituationen prüfen unter anderem einen Staging-Fehler, den eine Wiederherstellung im Working Tree verdeckt, einen Artikel ohne widersprüchliches Quellenmaterial, eine Recherche ohne Hinweis auf eine unbrauchbare Quelle sowie einen Monitor mit doppelten Benachrichtigungen oder fehlender Erholung. Als Eingaben dienen die [vier vollständigen Skill-Pakete](/de/skills/examples/); das Bewertungspaket enthält sie nicht erneut. Notieren Sie bei Ausführung Paketversion und Hash.
+Die Qualitätssituationen prüfen unter anderem einen Staging-Fehler, den eine Wiederherstellung im Working Tree verdeckt, einen Artikel ohne widersprüchliches Quellenmaterial, eine Recherche ohne Hinweis auf eine unbrauchbare Quelle sowie einen Monitor mit doppelten Benachrichtigungen oder fehlender Wiederherstellung. Als Eingaben dienen die [vier vollständigen Skill-Pakete](/de/skills/examples/); das Bewertungspaket enthält sie nicht erneut. Notieren Sie bei Ausführung Paketversion und Hash.
 
 ## Eine Bewertung durchführen
 
@@ -76,6 +77,6 @@ Der Protokollprüfer kontrolliert, dass keine Beispiele fehlen, nicht ausgeführ
 
 Berichten Sie Nenner, Fehlschläge, Unbekannte und typische Fehler getrennt nach Workflow, Beispielart und Umgebung. Ein Verstoß gegen Sicherheitsgrenzen wird nicht durch gute Werte anderer Dimensionen aufgewogen; ein vollständiges Format rechtfertigt keine zentrale Aussage ohne Beleg.
 
-Vereinbaren Sie Akzeptanzbedingungen anhand des Aufgabenrisikos vor der Ausführung. Senken Sie die Schwelle nicht laufend, nachdem Ergebnisse sichtbar werden. Nach einer Überarbeitung führen Sie betroffene Beispiele erneut aus und bewahren die alten Einträge auf, um Korrektur und Stichprobenleck unterscheiden zu können.
+Vereinbaren Sie Akzeptanzbedingungen anhand des Aufgabenrisikos vor der Ausführung. Senken Sie die Schwelle nicht laufend, nachdem Ergebnisse sichtbar werden. Nach einer Überarbeitung führen Sie betroffene Beispiele erneut aus und bewahren die alten Einträge auf, um Korrektur und Bekanntwerden der Testfälle im zu bewertenden Workflow unterscheiden zu können.
 
 Für dieses Paket liegen noch keine echten Modellbewertungen vor. Es stellt Methode, Beispiele und Protokollmechanismus bereit, sagt aber weder, welches Modell am besten ist, noch welche Erfolgsquote es erreicht.

@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "El runtime actual de Codex sigue permitiendo referenciar Skills por nombre de forma explícita y hacer match automático cuando encaja; OpenAI Help «Skills in ChatGPT» también confirma que los Skills se usan automáticamente cuando ayudan. Esta página se centra en formas de activación y principios de redacción."
+  basis: "El runtime actual de Codex sigue permitiendo referenciar Skills por nombre de forma explícita y seleccionarlos automáticamente cuando corresponda; OpenAI Help «Skills in ChatGPT» también confirma que los Skills se usan automáticamente cuando ayudan. Esta página se centra en formas de activación y principios de redacción."
   checkedAt: "2026-07-26"
 title: Usar un Skill
 description: Activación explícita e implícita de Skills, y claves para escribir bien description.
 locale: es
 source_locale: zh-CN
-source_revision: ef92b69
+source_revision: "ef92b69"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Un malentendido habitual al empezar es pensar: «una vez instalado, ya funciona solo». Usar un Skill es hacer que Codex siga un flujo de trabajo ya escrito.
@@ -38,7 +38,7 @@ Al probar un Skill por primera vez, prioriza la **activación explícita**. Así
 ## Ejemplo
 
 ```text
-$pr-review Por favor revisa mis cambios sin confirmar
+$pr-review Por favor revisa mis cambios aún no guardados en un commit
 ```
 
 O en lenguaje natural: «Revisa el diff según el hábito del equipo, prioriza las pruebas.»
@@ -63,7 +63,7 @@ También puede ser:
 - `description` demasiado genérica
 - La descripción de la tarea no acierta las palabras de activación
 
-Al depurar, no mires solo «si el archivo existe»; mira también «si está escrito como una herramienta que merezca ser elegida».
+Al depurar, no mires solo «si el archivo existe»; mira también «si está escrito como una herramienta cuyos usos estén claramente definidos».
 
 ## Orden de prueba habitual
 

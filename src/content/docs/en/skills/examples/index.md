@@ -8,9 +8,10 @@ title: "Skill examples"
 description: "Entry points for four Skill examples: writing, review, research, and automation."
 locale: en
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: '490db95'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Check the state of the materials before choosing an example. Complete packages include inputs, references, and validation scripts. A skeleton still needs resources and real checks; it is not a verified workflow on its own.

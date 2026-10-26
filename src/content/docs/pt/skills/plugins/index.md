@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / App para desktop / Mobile; Codex para desktop e CLI; a extensão IDE não suporta Plugins"
+  checkedAt: "2026-08-26"
 title: Plugins
 description: Explore, instale e gerencie conjuntos reutilizáveis de Skills, conectores, MCP, Hooks e modelos de tarefa.
 locale: pt
 source_locale: zh-CN
-source_revision: 8917a59
-translation_status: draft
+source_revision: "8917a59"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Um Plugin é uma unidade para combinar e distribuir recursos. Ele pode incluir Skills, conectores, servidores MCP, extensões de navegador, Hooks e modelos de Scheduled task. O trabalho em si continua sendo executado por esses componentes.
@@ -22,7 +27,7 @@ Um Plugin é uma unidade para combinar e distribuir recursos. Ele pode incluir S
 |---|---|---|
 | ChatGPT Web e aplicativo para desktop | Aba Plugins | Chat e Work |
 | ChatGPT Mobile | Não é a principal interface de gerenciamento | Plugins já disponíveis na conta |
-| Codex no aplicativo ChatGPT para desktop | Aba Plugins | Tarefas do Codex |
+| Codex no aplicativo ChatGPT para desktop | Aba Plugins | tarefas do Codex |
 | Codex CLI | Navegador `/plugins`; abra uma nova sessão após instalar | Ambiente Codex |
 | Extensão IDE | **Não aceita Plugins** | Pode usar separadamente MCP, Skills e outros recursos disponíveis no IDE |
 

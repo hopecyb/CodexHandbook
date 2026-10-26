@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página documenta un método estable para diseñar tareas. Se revisaron los ejemplos y enlaces internos, y el contenido no depende de interfaces, precios ni versiones cambiantes."
+  checkedAt: "2026-08-25"
 title: Estructura de una buena tarea
 description: Objetivo, contexto, entradas, restricciones, aceptación y límites de permisos.
 locale: es
-source_locale: zh-cn
-source_revision: 98c0511
+source_locale: zh-CN
+source_revision: '98c0511'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Cuando una solicitud contiene mucha información sin organizar, el resultado esperado, los límites y la aceptación acaban mezclados. Codex tiene entonces que completar los vacíos por su cuenta.
@@ -100,7 +105,7 @@ No define el público, el alcance editable ni qué significa «mejor». Aunque C
 ```text
 Objetivo: reescribir la primera pantalla de la página de inicio para que una
 persona que no conoce Codex entienda en 30 segundos qué es y por dónde empezar.
-Contexto: la página actual presupone que el lector ya conoce Agent, contexto y Skill.
+Contexto: la página actual presupone que el lector ya conoce Agent, contexto y Skill; las indicaciones de entrada no son lo bastante directas.
 Entrada: src/content/docs/guide/index.md
 Restricciones: modifica solo este archivo; no cambies la navegación, los estilos
 ni los componentes. Explica Agent en lenguaje sencillo la primera vez que aparezca.
@@ -109,8 +114,7 @@ Criterios de aceptación:
 - Se conservan el frontmatter y los niveles de encabezado.
 - No se añade jerga sin explicar.
 - pnpm build pasa correctamente.
-Permisos: se pueden leer páginas relacionadas del sitio; sin internet, instalaciones,
-cambios de configuración ni Git commit.
+Permisos: se pueden leer páginas relacionadas del sitio; sin internet, instalaciones de dependencias ni Git commit.
 Si falta información: enumérala junto con el alcance propuesto y espera confirmación.
 ```
 
@@ -131,7 +135,7 @@ Si falta información: enumérala junto con el alcance propuesto y espera confir
 - ¿Hace falta autorizar de antemano internet, instalaciones, escrituras externas o commits?
 - Cuando falte información, ¿el Agent debe preguntar, investigar o detenerse?
 
-Ajusta la plantilla al tamaño de la tarea. Una errata en un solo archivo necesita poco contexto; una migración entre módulos no puede reducirse a una frase con el objetivo.
+Ajusta la plantilla al tamaño de la tarea; cada sección que eliminas suprime también información para decidir. Una errata en un solo archivo necesita poco contexto; una migración entre módulos no puede reducirse a una frase con el objetivo.
 
 ## Siguientes pasos
 
@@ -139,10 +143,3 @@ Ajusta la plantilla al tamaño de la tarea. Una errata en un solo archivo necesi
 - [Restricciones y límites](/es/prompts/constraints-and-boundaries/)
 - [Pedir primero un plan](/es/prompts/ask-for-a-plan/)
 - [Explorar, planificar, ejecutar y verificar](/es/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**Estado:** verified
-**Productos aplicables:** App / CLI / IDE / Cloud
-**Base de verificación:** Esta página documenta un método estable para diseñar tareas. Se revisaron los ejemplos y enlaces internos, y el contenido no depende de interfaces, precios ni versiones cambiantes.
-**Última verificación:** 2026-08-25

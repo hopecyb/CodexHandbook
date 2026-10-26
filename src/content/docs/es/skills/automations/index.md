@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar tareas, pero no ofrecen una interfaz de gestión"
+  checkedAt: "2026-08-26"
 title: Scheduled tasks
 description: Repite en ChatGPT, según un horario, una tarea que ya se ha verificado.
 locale: es
-source_locale: zh-cn
-source_revision: 759c38e
+source_locale: zh-CN
+source_revision: '759c38e'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Una Scheduled task permite que ChatGPT repita trabajo en segundo plano según una programación. Es adecuada para informes periódicos, seguimientos continuos y mantenimiento recurrente. No equivale a un webhook genérico, a un evento del repositorio ni a un sistema de CI.
@@ -20,7 +24,7 @@ Una Scheduled task permite que ChatGPT repita trabajo en segundo plano según un
 | Comprobaciones de solo lectura, resúmenes y borradores | Fusiones desatendidas en la rama principal o eliminaciones masivas |
 | Condiciones explícitas para «sin cambios» y para detenerse | Reintentos infinitos después de un fallo |
 
-## Superficies de gestión actuales
+## Dónde gestionar las tareas
 
 - Crea y gestiona Scheduled tasks en ChatGPT Web o en la App de escritorio.
 - Codex CLI y el IDE no ofrecen una interfaz para gestionar Scheduled tasks; sí sirven para probar primero prompts, Skills o scripts.
@@ -34,11 +38,3 @@ Una Scheduled task permite que ChatGPT repita trabajo en segundo plano según un
 ## Fuente oficial
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar tareas, pero no ofrecen una interfaz de gestión
-
-**Última verificación:** 2026-08-26

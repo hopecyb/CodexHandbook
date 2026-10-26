@@ -4,14 +4,14 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Diese Seite liefert eine Vorlage für Änderungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
   checkedAt: "2026-07-26"
-title: Ändern-Vorlage
+title: Änderungsvorlage
 description: Begrenzte Iteration auf Bestehendem.
 locale: de
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: "6faf299"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -23,7 +23,7 @@ Bei Änderungsaufgaben zuerst die Änderungsgrenzen klar machen.
 
 ```text
 Ziel: An 【bestehender Funktion/Datei】 【konkrete Änderung】 umsetzen.
-Hintergrund: 【warum, Impact-Bereich】
+Hintergrund: 【warum, betroffener Umfang】
 Eingaben: @【relevante Dateipfade】
 Constraints:
 - 【API/Stil/Verhalten】 unverändert, außer ich erlaube es ausdrücklich

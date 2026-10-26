@@ -8,9 +8,10 @@ title: 계정, 요금제, 접근 권한
 description: ChatGPT 요금제, API key 사용량, 조직 작업 공간 권한을 구분합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: ecfa8f9
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: '7b123e5'
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -24,7 +25,7 @@ sidebar:
 | ChatGPT로 로그인 | 개인 대화형 사용, 데스크톱, Cloud, 조직 작업 공간 | ChatGPT 요금제 한도, 작업 공간 역할, 관리자 정책의 적용을 받음 |
 | API key 사용 | 로컬 Codex, 스크립트, CI | API 사용량에 따라 과금됨. ChatGPT 작업 공간이나 Cloud에 의존하는 일부 기능은 사용할 수 없음 |
 
-현재 공식 Pricing 페이지에는 ChatGPT Work와 Codex가 Free, Go, Plus, Pro, Business, Edu, Enterprise 등의 요금제에 포함되어 있습니다. 하지만 가격, 한도, 모델, 제공 기능은 바뀔 수 있습니다. 이 핸드북에 가격표를 복사하지 않으므로 [공식 실시간 Pricing 페이지](https://learn.chatgpt.com/docs/pricing)를 직접 확인하세요.
+현재 공식 Pricing 페이지에는 ChatGPT Work와 Codex가 Free, Go, Plus, Pro, Business, Edu, Enterprise 등의 요금제에 포함되어 있습니다. 하지만 가격, 한도, 모델, 제공 기능은 바뀔 수 있습니다. 이 페이지는 가격표를 유지하지 않습니다. [이 사이트의 요금제 선택과 가격 출처](/ko/chatgpt-pricing/)를 참고하고 [공식 실시간 Pricing 페이지](https://learn.chatgpt.com/docs/pricing)를 확인하세요.
 
 ## 계정이 있어도 사용하지 못할 수 있는 이유
 
@@ -56,3 +57,5 @@ sidebar:
 CLI에서는 API key로 로그인할 수 있지만 Cloud 버튼을 사용할 수 없다면, 반드시 설치 문제인 것은 아닙니다. Cloud에는 ChatGPT 로그인이 필요하고 ChatGPT 요금제와 작업 공간 권한이 적용됩니다. API key는 주로 로컬 및 프로그래밍 방식의 작업 흐름에 사용됩니다.
 
 다음에는 [로그인과 인증](/ko/guide/getting-started/sign-in-and-authentication/)을 읽어 보세요.
+
+현재 모델, 제품별 차이, 작업별 추천을 확인하세요: [모델 선택: 작업에 맞는 시작점](/ko/guide/reference/model-selection/).

@@ -12,12 +12,13 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
 legacyVerification:
   status: "verified"
-  products: "App、CLI、IDE、Cloud"
+  products: "App / CLI / IDE / Cloud"
   checkedAt: "2026-08-26"
 locale: en
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
+source_revision: 'b5f31cc'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 sidebar:
   order: 20

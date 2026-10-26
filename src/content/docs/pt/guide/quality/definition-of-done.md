@@ -3,12 +3,17 @@ title: Definição de concluído
 description: Abordagem de checklist de concluído partilhada por equipas e indivíduos.
 locale: pt
 source_locale: zh-CN
-source_revision: f55e9f7
+source_revision: "f55e9f7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica o papel e a forma de escrever a definição de concluído; conceitos, exemplos e checklists foram revistos, e o corpo não depende de factos voláteis de produto.
+  checkedAt: '2026-07-26'
 ---
 
 «Definição de concluído» é direto: declarar de antemão até que ponto conta como realmente concluído desta vez.
@@ -33,9 +38,9 @@ Se isto não for dito de antemão, cada um fala a sua língua.
 
 Exemplo mínimo pessoal de definição de concluído:
 
-- [ ] Diff revisto
+- [ ] diff revisto
 - [ ] Critérios de aceitação marcados um a um
-- [ ] Testes ou Verificação manual concluídos
+- [ ] Testes ou verificação manual concluídos
 - [ ] Sem segredos no repositório
 - [ ] Problemas a acompanhar já registados
 
@@ -81,10 +86,3 @@ Critérios de conclusão:
 ```
 
 A «definição de concluído» clarifica sobretudo «até que ponto conta como acabado», para o seu juízo e o do Codex não divergirem.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica o papel e a forma de escrever a definição de concluído; conceitos, exemplos e checklists foram revistos, e o corpo não depende de factos voláteis de produto.  
-**Última verificação:** 2026-07-26

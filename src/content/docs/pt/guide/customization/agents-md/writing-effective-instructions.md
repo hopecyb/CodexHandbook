@@ -3,12 +3,13 @@ title: Escrever instruções eficazes
 description: Checklist de escrita para AGENTS.md — curto, rígido, executável, verificável.
 locale: pt
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: "63dd711"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzada com as páginas atuais da série `AGENTS.md` deste repositório e com capítulos de contexto e fluxos de trabalho; esta página limita-se a princípios estáveis de escrita e ritmo de manutenção, sem transformar detalhes de implementação de um cliente concreto em compromisso permanente.", "checkedAt": "2026-07-26"}
 ---
 
 Instruções de projeto eficazes aproximam-se de uma **checklist**. O objetivo é o Codex cometer menos erros previsíveis já na primeira tentativa.
@@ -46,7 +47,7 @@ Declare explicitamente o que não fazer
 
 ### 1. Restrições rígidas à frente
 
-Coloque «obrigatório» e «proibido» no início do ficheiro. Com Contexto limitado, o modelo dá mais peso ao começo — a mesma lógica de [Prioridade de Contexto](/pt/guide/context/context-priority/).
+Coloque «obrigatório» e «proibido» no início do arquivo. Com contexto limitado, o modelo dá mais peso ao começo — a mesma lógica de [Prioridade de contexto](/pt/guide/context/context-priority/).
 
 ### 2. Comandos copiáveis
 
@@ -66,7 +67,7 @@ Garanta que os testes passam
 ## Definição de concluído
 - `pnpm lint` e `pnpm test` sem falhas
 - Novas APIs com testes unitários correspondentes
-- Alterações visíveis ao utilizador com passos de teste manual (navegador + telemóvel)
+- Alterações visíveis ao usuário com passos de teste manual (navegador + celular)
 ```
 
 ### 4. O «porquê» numa frase, no máximo
@@ -87,7 +88,7 @@ Boas instruções permitem a pessoas e ao Codex captar depressa:
 
 Se depois de ler ainda não souber que comando correr primeiro, o que não tocar e como saber que acabou, ainda não está suficientemente útil.
 
-## Fragmento de playbook de equipa
+## Fragmento de playbook de equipe
 
 ```md
 ## PR e Git
@@ -96,7 +97,7 @@ Se depois de ler ainda não souber que comando correr primeiro, o que não tocar
 - Antes do merge, review humano do diff é obrigatório, mesmo que o Codex já tenha corrido testes
 
 ## Colaboração com o Codex
-- Em Tarefas grandes, exigir primeiro «apresente o plano; espere a minha confirmação antes de alterar código»
+- Em tarefas grandes, exigir primeiro «apresente o plano; espere a minha confirmação antes de alterar código»
 - Em migrações de base de dados, emitir primeiro o SQL da migração para revisão humana
 ```
 
@@ -117,7 +118,7 @@ Demasiado disperso, longo ou enciclopédico afoga as regras de prioridade realme
 
 ### 2. Frases como «respeite as normas» contam como instrução?
 
-Normalmente não são executáveis.  
+Normalmente não são executáveis.
 Melhor escrever diretamente:
 
 - Comandos reais
@@ -126,7 +127,7 @@ Melhor escrever diretamente:
 
 ### 3. Pode misturar contexto de fundo e regras de execução à vontade?
 
-Também não se recomenda.  
+Também não se recomenda.
 Melhor:
 
 - Regras à frente
@@ -153,26 +154,19 @@ Boas instruções de projeto não se medem pela quantidade, e sim por restriçõ
 ## Leitura complementar
 
 - [Instruções do projeto](/pt/guide/customization/project-instructions/)
-- [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
 - [Definir concluído](/pt/prompts/define-done/)
 
 ## De uma tarefa a uma regra de projeto
 
-Nem todo bom Prompt deve entrar diretamente em `AGENTS.md`. Primeiro decide que camada deve ser dona dele.
+Nem todo bom prompt deve entrar diretamente em `AGENTS.md`. Primeiro decide que camada deve ser dona dele.
 
 | Conteúdo repetido | Melhor lugar |
 |---|---|
 | “Não alterar diretórios generated” | Proibição em `AGENTS.md` |
-| “Rever todo PR neste formato” | Skill ou template de Prompt |
-| “Formatar ficheiros depois de escrever” | Hook |
-| “Ler Linear/Jira antes de programar” | MCP + Skill correspondente |
+| “Rever todo PR neste formato” | Skill ou template de prompt |
+| “Formatar arquivos depois de escrever” | Hook |
+| “Consultar Linear/Jira ao pesquisar um ticket” | MCP + Skill correspondente |
 | “Prefiro explicações em chinês” | Memória ou preferência pessoal |
 
-`AGENTS.md` é melhor para regras duradouras, partilhadas e verificáveis. Processos podem ir para Skills; checks automáticos para Hooks; acesso externo para MCP.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com as páginas atuais da série `AGENTS.md` deste repositório e com capítulos de Contexto e fluxos de trabalho; esta página limita-se a princípios estáveis de escrita e ritmo de manutenção, sem transformar detalhes de implementação de um cliente concreto em compromisso permanente.  
-**Última verificação:** 2026-07-26
+`AGENTS.md` é melhor para regras duradouras, compartilhadas e verificáveis. Processos podem ir para Skills; checks automáticos para Hooks; acesso externo para MCP.

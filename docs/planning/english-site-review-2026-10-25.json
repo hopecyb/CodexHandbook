@@ -1,0 +1,2571 @@
+{
+  "reviewed_at": "2026-10-25",
+  "baseline": "Chinese source in this worktree",
+  "pages": [
+    {
+      "path": "ai-roadmap/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed invented synonym from source topic name.",
+        "Removed invented synonym.",
+        "Removed invented synonym.",
+        "Natural source-equivalent topic label.",
+        "Removed stronger orchestration interpretation.",
+        "Removed invented synonym.",
+        "Removed invented synonym.",
+        "Restored source project description.",
+        "Restored source project description."
+      ],
+      "source_sha1": "f66e3bad4ab12da72c8f00106c63551e5711f6e4",
+      "english_sha1": "e08fe7a017e29040b6a71bce36dd0961e4e06ecf"
+    },
+    {
+      "path": "ai-roadmap/timeline/2022-11-prompt-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "225d837da424943eeaf40dc5b20211114a04ccad",
+      "english_sha1": "424c993b82371ce3c90b42ce3ab00b361103484f"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-06-function-calling.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "without calling the historical API or release label.",
+          "after": "without calling the historical API or applying labels."
+        }
+      ],
+      "source_sha1": "c362c482fae69509d183337f97024accd3a8ae2f",
+      "english_sha1": "9eb1dab461be13b27a4a3550e0a317e7a1ba0dff"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-11-rag.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e79c0dfb504bae1d074fd4102e0b39d4fd861867",
+      "english_sha1": "6b572af9026100cd58dbdc6a469efd73e9a3e96a"
+    },
+    {
+      "path": "ai-roadmap/timeline/2024-11-mcp.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7d4d121871875ea14f594a7dad376ac445ef8cd2",
+      "english_sha1": "c658b7c43c7be6b8c29d34eec013da8156eeb03a"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-03-tool-use.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "efd508a3f54febdd32a96082c22541ab9599fa8b",
+      "english_sha1": "e099e55fcd4a0f13aae4736fe3d04da8cf348865"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-06-multi-agent.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f24f2f513051593fda55603236898385f3e0434b",
+      "english_sha1": "eff9b9fd6aafccbff21420aba95769f829136cfc"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-09-context-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "d668433ca4fb39a861554e9c4dfb72f6037a91d1",
+      "english_sha1": "bae6c4b10ff313ae8f145e85ac24df090e7fbacd"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openclaw.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "88681405417ba22667881c2a9d451b1404ba418a",
+      "english_sha1": "8847fbcb260f5ca870ce5d4f10641962b6b290f6"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openspec.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1a340238db5e5bc5a7fa398f41fd05c39174fbc8",
+      "english_sha1": "fa717930487b9f5175373890654d75770e699686"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-02-harness-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "268e6114ffcfffa8bdd744404cb788d2774e5bd9",
+      "english_sha1": "b80b0e650c7faa3e37a1b3223567bc7cc2b1a57c"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-04-skills.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "952fe584e0e5be2ddba981693dabe0722b148b77",
+      "english_sha1": "30b74f48da75782ee9ac7f57c809bc5ad014ba73"
+    },
+    {
+      "path": "ai-roadmap/timeline/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "847b43b89927981e9a1a8b553e7c93f26de2e3e2",
+      "english_sha1": "ebd7f8150f363bc87f90f604dbb70b43d7a6d370"
+    },
+    {
+      "path": "cases/analyze-a-spreadsheet.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified yuan amounts as CNY and restored descending product sort order."
+      ],
+      "source_sha1": "68729f6738cd7785fd596ce5c592eb3d5f782436",
+      "english_sha1": "a435e445db421447711cd3a56a669e89f3fadf1b"
+    },
+    {
+      "path": "cases/automate-a-daily-report.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2149e0a86259cdedf0ccc5fc423ca2cb5c3d50dc",
+      "english_sha1": "2d32e7328e380e175b28c16125c6c92a981cd181"
+    },
+    {
+      "path": "cases/build-a-website.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "55fd86a34549bfe5a71b72d990a44a1407f3f264",
+      "english_sha1": "08818bb4f69cc02fe87f436b32ccd5201a1d6d1c"
+    },
+    {
+      "path": "cases/coordinate-multiple-agents.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7b143fc4230464943bcc90001a95859db4f35715",
+      "english_sha1": "068faa6bab74debaca40ebe7fa55126caba19e92"
+    },
+    {
+      "path": "cases/create-a-slide-deck.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored direct links to the reuse milestone."
+      ],
+      "source_sha1": "7189374c7f17638c740091fc147a3c3bbddd5b6a",
+      "english_sha1": "8aa9e032c3ad5f77dec133acd08414ee324d6b6a"
+    },
+    {
+      "path": "cases/first-task.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "38f925bdca2b8f9c01777e69fd8f7341a5ae6c77",
+      "english_sha1": "9c3b61acf9166ede0cb922a3b533a22b32b3473b"
+    },
+    {
+      "path": "cases/fix-a-bug.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "405a6874270280bca5f9b3f789951785cbd05375",
+      "english_sha1": "9ad27ebe69b8d778fc0b6ed686d32c83be6628bd"
+    },
+    {
+      "path": "cases/index.mdx",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3c7676658d83b3ee0c1b93d14467281ffd0d8ac0",
+      "english_sha1": "6b191fdf93943c66da9239ed57eb54f0681688ba"
+    },
+    {
+      "path": "cases/review-a-pr.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "84638f0e9fa6dd5810cf6e89fda6484b9110a45b",
+      "english_sha1": "0a1a96789e693754e08a44458d9b6544f012bfce"
+    },
+    {
+      "path": "cases/understand-a-codebase.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c89ee30f1c341f4c290edf3a6a13f9cdf751d2cf",
+      "english_sha1": "121417b77e1ec70ed3d533326b9d53554f95bf94"
+    },
+    {
+      "path": "cases/use-cases/case-study-template.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "writing and retrospecting Codex cases—easier team capture and comparison.",
+          "after": "writing and reviewing Codex case studies so teams can record and compare their experience."
+        },
+        {
+          "before": "writing and retrospecting cases",
+          "after": "writing and reviewing cases"
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "74ef905d77bd1143a6a77fab2f7f0563750ba678",
+      "english_sha1": "8dafee38c72e73fc484ced31219e2f0f9b913659"
+    },
+    {
+      "path": "cases/use-cases/content-creation/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "How to avoid rewrite that only \"expands\" copy",
+          "after": "How to avoid rewrites that merely make the copy longer"
+        },
+        {
+          "before": "How build, review, and human check form a closed loop",
+          "after": "How building, reviewing, and rechecking form a complete workflow"
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "5ad38bb90f340913fbe4493d74500dcd79e70ed8",
+      "english_sha1": "560251174b8c3109e2b0144164161ec85ef02057"
+    },
+    {
+      "path": "cases/use-cases/content-creation/refactor-docs-with-review.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "The stack matches this handbook",
+          "after": "The stack is similar to this handbook"
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates.",
+        "Restored source structural metadata: caseCategory, directoryOrder, contentType"
+      ],
+      "source_sha1": "db44ca392b13e1b1c17913187fb073f9479ba508",
+      "english_sha1": "b333d9f29cc9f2d5e16979fffe5495e1613c784b"
+    },
+    {
+      "path": "cases/use-cases/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "1e284bb1ce8b5619e3d9a4c3fa13f47cf1321bce",
+      "english_sha1": "f006cdd9600ff8d6f7ab33b912a7398079f33f11"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/competitive-feature-matrix.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates.",
+        "Restored source structural metadata: caseCategory, directoryOrder, contentType"
+      ],
+      "source_sha1": "b74008b617eb81ffa84e11831c33636850c97f20",
+      "english_sha1": "84c47170ff90ec24f7de78f3fb540f74794cda14"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "a0be8814964db202ee5a54bb41c2f1e9a8f573d7",
+      "english_sha1": "0ffbc6eff57764d0486877ea40c90ee98cad4c71"
+    },
+    {
+      "path": "cases/use-cases/software-development/fix-a-bug-with-verification.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "make the smallest repair, verify green, regress, and review the diff.",
+          "after": "make the smallest fix, verify passing tests, run regression checks, and review the diff."
+        },
+        {
+          "before": "## 3. Reproduce red\n\n```bash",
+          "after": "## 3. Reproduce red\n\nRun from the repository root:\n\n```bash"
+        }
+      ],
+      "source_sha1": "42d842e1e98fbeaf2638e101e0836d2bc164ca31",
+      "english_sha1": "33fc4d3246f26c9e33e8d7fcf3411536e59c2971"
+    },
+    {
+      "path": "cases/use-cases/software-development/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "a3d7f4cf22db1578536ea1bbcb75ab85387975d0",
+      "english_sha1": "b0566afe4bc80b0ae6dc072b1f90aa594ff67ab7"
+    },
+    {
+      "path": "cases/use-cases/team-automation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "e596dcc60eacb83c2db8dc2844f6c51acbf5ee05",
+      "english_sha1": "a2e188d6484ca6009b648d793bec36a22c3f1bd1"
+    },
+    {
+      "path": "cases/use-cases/team-automation/issue-triage-suggestions.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6d859d72e617dd2f6f542899f9ecad722566c484",
+      "english_sha1": "abde8c21a7256e216722cffda92d9bb6b3dd6026"
+    },
+    {
+      "path": "cases/use-cases/team-automation/scheduled-link-check.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "0d21aa90878b849fea0a8b95d7410635f305211e",
+      "english_sha1": "2b5de3f52102698f1a6248867149e55485ac9d0c"
+    },
+    {
+      "path": "cases/workflows/artifact-first-work.md",
+      "status": "reviewed",
+      "findings": [
+        "Repaired incomplete English sentence.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "e57c21522070d6f320d626cc2670d8fcd44ba4b3",
+      "english_sha1": "c55a511ffeb0b17855e94039ed2ce7bb420b55c0"
+    },
+    {
+      "path": "cases/workflows/brainstorm-before-building.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural English phrasing.",
+        "Clarified actor and action.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "9c5e6798e3d8074f0bb414f0484828a29e7e55aa",
+      "english_sha1": "806f060c3763fb9eddb65191198c11dfa598b692"
+    },
+    {
+      "path": "cases/workflows/diagnose-before-fixing.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural equivalent of source qualified claim.",
+        "Grammar.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "18193b0e5bdfe64d7067a64c029be234bbdcea22",
+      "english_sha1": "85a16199ca18e54c8e0d5b08536bb4ca4e4704cd"
+    },
+    {
+      "path": "cases/workflows/explore-plan-execute-verify.md",
+      "status": "reviewed",
+      "findings": [
+        "Grammar."
+      ],
+      "source_sha1": "4a95760d2019656e0c4aa8afe7f7c694a033f716",
+      "english_sha1": "dbf49f4965f8f5e6b1888b2de9bae98e01d4d0ac"
+    },
+    {
+      "path": "cases/workflows/failure-recovery.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified dangerous command behavior from source.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "847e22a659f21cd7961a88c247ed1e99dbde1c40",
+      "english_sha1": "65d992108231cf12e5195d09646b48eaa83c4d88"
+    },
+    {
+      "path": "cases/workflows/human-approval-patterns.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f60dbb51d7d87200cd6a1e4932133b949a0d506a",
+      "english_sha1": "535cd672b65b582b9874dedd2d0fb66c2fca3bf7"
+    },
+    {
+      "path": "cases/workflows/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "d058896385a453f54574e130d265215d06928ca6",
+      "english_sha1": "c75e2b722643795da26352b78e290c7a9e273638"
+    },
+    {
+      "path": "cases/workflows/long-running-task-management.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "c2a98877e6b2d1c44e6590967b6bbecbf85e07a9",
+      "english_sha1": "afa583e9a974b63af4e0b2ac29f13ece38256ad9"
+    },
+    {
+      "path": "cases/workflows/multi-agent-coordination.md",
+      "status": "reviewed",
+      "findings": [
+        "Chinese requires unified CI, not a once-only restriction.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "00989e93d150de284fa2aa275da2ee2ad2cfc6f6",
+      "english_sha1": "44e1587e13d9456412bf0f5e167da56e5995d9b7"
+    },
+    {
+      "path": "cases/workflows/research-with-sources.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored case classification, ordering and output metadata from Chinese.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "a6fd20179671eccd1b50231f86151fe263be3749",
+      "english_sha1": "38e7ab78f1cb0aadbff1ba134475aac244087be2"
+    },
+    {
+      "path": "cases/workflows/review-before-merge.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source distinction between automated comments and automated merging; human final approval remains below.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "78d5c03b9e9c4c9532f5a0696afe5798c5e1e74e",
+      "english_sha1": "d71c57673154a343784b383bd2bbee4f6c59f185"
+    },
+    {
+      "path": "cases/workflows/specification-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "70fd8a4c8d4415c133e3588e02a110ef94b2b0e6",
+      "english_sha1": "6acc3771830307c6da2cfa92708f03c8d88fde2a"
+    },
+    {
+      "path": "cases/workflows/test-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "Grammar.",
+        "Restored text-only site scope; source not limited to marketing.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "4eb568d4682e2ebb5c3ae91b0365562657773561",
+      "english_sha1": "7e14ac466d2079d500bd75a4282111ae1dcbc7f8"
+    },
+    {
+      "path": "cases/workflows/turn-a-workflow-into-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "3dd18c585a8a4ccc138c57670ac5d0ebb955b020",
+      "english_sha1": "14a08d843577dae1f412b0411a377951210d3ae3"
+    },
+    {
+      "path": "cases/write-an-article.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced wording that implied inventing missing source content was permissible after checking."
+      ],
+      "source_sha1": "e2bb5eab19a97b0407e879cfa3c3fcc161f00071",
+      "english_sha1": "88d6fa5445db42bdf7923104388d77f1d166c848"
+    },
+    {
+      "path": "guide/agent-work/handoff-and-resume.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned glossary terminology.",
+        "Natural wording.",
+        "Localized example page route."
+      ],
+      "source_sha1": "1ee17e97b466300dd1d8c1e3af552f0ba1a04e45",
+      "english_sha1": "9f4414d84d79f56dfe7c06a71ec0586cc35bb804"
+    },
+    {
+      "path": "guide/agent-work/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Glossary consistency."
+      ],
+      "source_sha1": "3eb251e5d0206eb2c843167cf49bcb408e28fe94",
+      "english_sha1": "84a7b4f6bfb93d403c0f16b4f58ca4bc22dd53bb"
+    },
+    {
+      "path": "guide/agent-work/planning.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a129229ec5f74be4acd054021efff7b5621bc27a",
+      "english_sha1": "1719f9faac53e6b1754b72d510a1e87bd0aad026"
+    },
+    {
+      "path": "guide/agent-work/progress-and-steering.md",
+      "status": "reviewed",
+      "findings": [
+        "Glossary consistency.",
+        "Clarified abandoning approach rather than ambiguous undo direction."
+      ],
+      "source_sha1": "c9ea3be403e0fb288e2e4b6a263ca55f60f8eade",
+      "english_sha1": "3a5cc0aa0517c6e71edb117e6a434051b4e3a010"
+    },
+    {
+      "path": "guide/agent-work/subagents.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored separate in-depth investigation, not deeper isolation.",
+        "Restored meaning of 可验收.",
+        "Preserved source length unit rather than silently multiplying budget.",
+        "Removed free-text verification footer; migrated unchanged evidence below.",
+        "Stored legacy verification metadata to match Chinese."
+      ],
+      "source_sha1": "a3f2be543d9a53ba75d997ac27930682bc441153",
+      "english_sha1": "5cf4aaed67cab7b20d646ea526e841eb50a53c76"
+    },
+    {
+      "path": "guide/choose-your-client.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "e4c7057160e2e37640fc3d62956f5080821d08d4",
+      "english_sha1": "1715ffe7ed883bc96d9b5614fca929a39fcbeee3"
+    },
+    {
+      "path": "guide/cli/approvals-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates.",
+        "Restored source structural metadata: sidebar"
+      ],
+      "source_sha1": "35afd393bdd6a82067ca156b13ce1e8a4a156535",
+      "english_sha1": "0121eac26a5abaf4ad83f2b83f3b2ca28ea5326f"
+    },
+    {
+      "path": "guide/cli/commands-and-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced stale outdated footer with translated current Chinese verification record; preserved source check date.",
+        "Restored source structural metadata: sidebar"
+      ],
+      "source_sha1": "2896e32dd72717c020e05a11a108af7a1b1ee581",
+      "english_sha1": "02e9eb1561bc6a3f8dfd9e00bb8b25c620f005a0"
+    },
+    {
+      "path": "guide/cli/configuration.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "0a9b2adb1d7f8cf39a3d0320fc881a0173ca0046",
+      "english_sha1": "d56ef4d07a142a4eeb6636846b47365f8c5b7b5f"
+    },
+    {
+      "path": "guide/cli/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a80ef7ec24263dc43adf43eaaff0ed43843a4f8f",
+      "english_sha1": "82713b0708938bd26798718e56983b0cc8b1c476"
+    },
+    {
+      "path": "guide/cli/installation-and-updates.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "be3f2c43c8f8c2002f43c3179ae0c2a39cd71443",
+      "english_sha1": "80a383cf6da58091ba3e2cd100a933006c06910b"
+    },
+    {
+      "path": "guide/cli/interactive-mode.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "822e8f749813e7c889ac1a18245ba8f8cfb8a6c4",
+      "english_sha1": "5734081201e016b2bc335df7876a76adca9ac2e4"
+    },
+    {
+      "path": "guide/cli/non-interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "1f37961586b629eb8abb634cee3cfd9a1a29c473",
+      "english_sha1": "10d0e2c470a066a67bbf1f06f17a8b54fe575aca"
+    },
+    {
+      "path": "guide/cli/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "The command runs but cannot enter:",
+          "after": "The command runs but sign-in fails:"
+        },
+        {
+          "before": "You can enter but cannot act:",
+          "after": "You can sign in but cannot act:"
+        }
+      ],
+      "source_sha1": "57b062fbf03d96ba5ac5f174c7901b3c9c56cdce",
+      "english_sha1": "f9a813a7b3c800fe644f2fc46de52bea0b7a39cd"
+    },
+    {
+      "path": "guide/context/compaction.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c6c9d039e2f24fddc8851506d14598792d3ea613",
+      "english_sha1": "89aa1e69676979a287d232ebb650339298a30eaa"
+    },
+    {
+      "path": "guide/context/context-priority.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "13537ef1e83ebdd00a460ddb86f47bd70ef94ab7",
+      "english_sha1": "e4452704b598c5d37cfb6d751832d8fa906fa0f8"
+    },
+    {
+      "path": "guide/context/conversation-context.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3968049029137ca09b29a2ef6e06d5942c8432b3",
+      "english_sha1": "5467d8a0db79937a120d3ae13b2a6498c150fbc5"
+    },
+    {
+      "path": "guide/context/file-and-folder-context.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e9148a3c39971ea51c054904c71a85a043b12e50",
+      "english_sha1": "e8e130bb249e9972f69cfe4e63579ee9b51924e8"
+    },
+    {
+      "path": "guide/context/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "d2baf42aacc1cc32d9fd1008fab42fa1fccf0787",
+      "english_sha1": "57f4d56d1d8a9cec47d8587b9044f983eaf97fb3"
+    },
+    {
+      "path": "guide/context/keep-context-focused.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "](/guide/agent-work/handoff-and-resume/)",
+          "after": "](/en/guide/agent-work/handoff-and-resume/)"
+        }
+      ],
+      "source_sha1": "5a55fa8ae18a8ebd12405b8544993e032ab1c035",
+      "english_sha1": "81e0c4b3e5cd276ecd0aac77ff95da617c4db272"
+    },
+    {
+      "path": "guide/context/project-context.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "fb3eb503d35009991b8036ed78dbe400cdf96981",
+      "english_sha1": "f5553d7812791435297de13b0447951762f0ee3c"
+    },
+    {
+      "path": "guide/context/sensitive-context.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a83db07df4ed214c9e188115a155cc44e12c7415",
+      "english_sha1": "7dd4f4c2dd1996a9a118700ff613d4a69acddcad"
+    },
+    {
+      "path": "guide/contributing/add-a-prompt-example.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "15dabd2ef702824fd3c3df22feda65abfb67a6c9",
+      "english_sha1": "4678fb00079f9882a3d80299f1b23a7e69a920ee"
+    },
+    {
+      "path": "guide/contributing/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "1d4b3f2fbf07ac35cddf8cc8b6aadf1879d9c0ec",
+      "english_sha1": "ddd05c464178d1df88b6c892a81cdce2ff137ef7"
+    },
+    {
+      "path": "guide/contributing/verify-technical-content.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cfb077d7936df780c63776a042cfdb5714f49d2a",
+      "english_sha1": "a0995ac3efcefa22fdb5bb9d8e9724e1544d7bfc"
+    },
+    {
+      "path": "guide/contributing/write-a-guide.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "- English, aimed at practitioners",
+          "after": "- Write source pages in Simplified Chinese for practitioners; translate them into English for this locale"
+        }
+      ],
+      "source_sha1": "dd22df1e261f62aff1e7834feb7ae9461a7de44e",
+      "english_sha1": "4f6bf646a72dd7a242e783e0dde85a5170dfcacc"
+    },
+    {
+      "path": "guide/customization/agents-md/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed literal Chinese calque.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "cb6371feac1277ea7f0ef49c007c95ac20b2c333",
+      "english_sha1": "9789700550bf9008d7071ef2bd16a0bba065abbd"
+    },
+    {
+      "path": "guide/customization/agents-md/scope-and-precedence.md",
+      "status": "reviewed",
+      "findings": [
+        "Localized list punctuation."
+      ],
+      "source_sha1": "b5f31ccef118796ca886345293235a49fa35880a",
+      "english_sha1": "05b35879a656d98984b3e30df9ed360899645e84"
+    },
+    {
+      "path": "guide/customization/agents-md/what-is-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced unnecessary jargon.",
+        "Natural acceptance instruction.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "47c5866b932e13197a410f421680b3e900454e35",
+      "english_sha1": "9ed1d4a8e0e9ad45ae125b79fbcb1dd123e638f6"
+    },
+    {
+      "path": "guide/customization/agents-md/writing-effective-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural translation of 短、硬、可执行.",
+        "Natural translation.",
+        "Corrected trigger: looking up work items, not all coding.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date.",
+        "Restored source section order before maintenance and further reading."
+      ],
+      "source_sha1": "63dd7118aece2126ff211101eac865985bdf9f1d",
+      "english_sha1": "ec8d059a34b560bc26742fa2c2ab4e9c66868bab"
+    },
+    {
+      "path": "guide/customization/choosing-the-right-mechanism.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed literal translation.",
+        "Clarified persistence.",
+        "Natural English.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "5fad7cb6e5260f8f5dcfc57c214aa21627af5ebe",
+      "english_sha1": "c710fdae67f5406e2e68f6e791d5141ee27586db"
+    },
+    {
+      "path": "guide/customization/configuration/config-basics.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "ee00ab52d6ca47ee375c25949d29c9f11656945b",
+      "english_sha1": "4f69b02eea801ba7e39bdb7d06bb0f8b8dc12744"
+    },
+    {
+      "path": "guide/customization/configuration/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural meaning of repeated temporary instructions.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "4d18d5ebc89659b55d11fe67b8588d7dae8716e6",
+      "english_sha1": "dca5b4e29ca7d87f6d3a843381161afd1e821e11"
+    },
+    {
+      "path": "guide/customization/configuration/profiles.md",
+      "status": "reviewed",
+      "findings": [
+        "Grammar.",
+        "Migrated legacy footer.",
+        "Preserved local verification version in metadata."
+      ],
+      "source_sha1": "6ab30c571b29defc9f7482fd0d3f83ad92811be7",
+      "english_sha1": "798e1e74dd91e7a511b73220190d8ff9c611fbe5"
+    },
+    {
+      "path": "guide/customization/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural English.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "c33809fa4a4328def06f46f38856527156901a54",
+      "english_sha1": "d43bcdc07df950d2d885177f036454757ac31aa5"
+    },
+    {
+      "path": "guide/customization/examples/monorepo-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "a9fb1d70af6b95ea95b4992e8eb209dcff539db8",
+      "english_sha1": "b270162ce3b6a0679953a29a043ea8e98d0477f6"
+    },
+    {
+      "path": "guide/customization/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed calque.",
+        "Natural English.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "28adc494dc91633bd709afe2f3efaf3b71ac377d",
+      "english_sha1": "2f970fb9afd34c50a5f666ad9645b318f2e5d509"
+    },
+    {
+      "path": "guide/customization/memories-and-persistent-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored rule-file option omitted from source table.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "7a689ad7b9d601d4670512d1a12d4b9bd3513fe6",
+      "english_sha1": "6a06bb659152ec7fe398b855c58b24c16615dbb3"
+    },
+    {
+      "path": "guide/customization/personal-preferences.md",
+      "status": "reviewed",
+      "findings": [
+        "Fixed misleading grammatical subject.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "c38105102c7e9f573327c562c9494b36d129796b",
+      "english_sha1": "aa6d0d2f48c37c00e6e4e656c270f2d7a7926259"
+    },
+    {
+      "path": "guide/customization/project-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed literal calque.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "76b0fdeaaed05dc731f03f666878495a656bebda",
+      "english_sha1": "59168368210751a8838bf18b53ce3a800dc2848a"
+    },
+    {
+      "path": "guide/customization/rules/allow-and-deny-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected object: reduce confirmations, not operations.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "521ecc965f30064fa7945ed427bec058175cd55c",
+      "english_sha1": "fb4bc7a9fddc616fcaa6c93d3499a1e4d5055a4f"
+    },
+    {
+      "path": "guide/customization/rules/command-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified awkward source phrase using listed high-risk examples.",
+        "Natural English.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "fdb8651c9e5733cd8805de6083966031f491a796",
+      "english_sha1": "6457b0eb385a14334de0557655e30d7ef0390f2c"
+    },
+    {
+      "path": "guide/customization/rules/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "9ac618513bcb88699b4fb6c155569e34fa5dcf1b",
+      "english_sha1": "9e5f47d6434f027c574f1bac58c3bf69675df103"
+    },
+    {
+      "path": "guide/customization/rules/team-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed literal metaphor.",
+        "Grammar.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "bae8bd25ab403d08a187e25ff0f32446c454c291",
+      "english_sha1": "02b1f6feef68bebe86ee720ad9c6b12199e6924d"
+    },
+    {
+      "path": "guide/desktop-app/diffs-comments-and-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "32ee40c9ef59b045f7755e0ad428ac032763f3e6",
+      "english_sha1": "b057c1c4bf31ccd0ec8a0de7ca5277b6a4c9a942"
+    },
+    {
+      "path": "guide/desktop-app/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "d1a900709e5e6e7ae89c6f22e16110d1327dcbcd",
+      "english_sha1": "d0c2034ab049414452af16670fefb59f60363522"
+    },
+    {
+      "path": "guide/desktop-app/installation-and-interface.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "080436d19ee79ccb7ec100eb2e99b905600a165f",
+      "english_sha1": "640c1b01dd3a5e2416d66b927a41bc4b982d3434"
+    },
+    {
+      "path": "guide/desktop-app/integrated-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "727e93e89f388ad2038b189e58a74191d863ae04",
+      "english_sha1": "b8008531d5962b113e449ae9058c26cdc8d6ab19"
+    },
+    {
+      "path": "guide/desktop-app/local-and-cloud-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "741f686ed0413f8c07089e583503d7d9ce896bf4",
+      "english_sha1": "c713c4134c3eccf1c44aed9daa994382594a47b6"
+    },
+    {
+      "path": "guide/desktop-app/notifications.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "4a1c6723e0d62c79a3fe4ed63e1d290f93f7ce85",
+      "english_sha1": "81ef0f2a412f8a19f9a02300b566518c1897afaf"
+    },
+    {
+      "path": "guide/desktop-app/parallel-agents.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "2336db1d8dd20a9d20acde0eacee764ee1b8cdad",
+      "english_sha1": "f1170a3a0ff1bc1411154c2f5a5444cab6ba969b"
+    },
+    {
+      "path": "guide/desktop-app/projects-and-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6a1f17fdf701971889a40e35e2e2e21140187555",
+      "english_sha1": "6094f349707593fbe43f992eec3adff2ac52ae61"
+    },
+    {
+      "path": "guide/desktop-app/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored explicit caution, rather than implying expansion is expected next.",
+        "Restored omitted confirmation-before-next-change instruction.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "7a6d2fe2af99d8240c3752a954aa199c2857ea60",
+      "english_sha1": "1d31b20816980dfdb2ae9b33725b88a24a30aa3f"
+    },
+    {
+      "path": "guide/desktop-app/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c298f9f763f92ee64fff4872faf83c84ae57bf8d",
+      "english_sha1": "2ced557926c7f0dcd66d9d97d6e913ff4e66acdd"
+    },
+    {
+      "path": "guide/desktop-app/worktrees.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "35697161369237855deb8c0b2d06759839e1e013",
+      "english_sha1": "3abfd5d746967de47fc1296c45a74a9d0e3f9d12"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/code-review-automation.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "aa8b33e28ba705b41a3c6c73aedb542c8864dc9f",
+      "english_sha1": "5760a6f7d8df7a4e3880e8b3706441f6f43a072c"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "4aeb424dfd71913c5c4bb56b96eac5947d937417",
+      "english_sha1": "301bb462848295c0a70fce1bd8c90a0126f732d9"
+    },
+    {
+      "path": "guide/developer-platform/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f58851ea7d7c6ab01a534861e9657b8f6802e0a4",
+      "english_sha1": "b03fc3410f68775b5831d3b385e8ea162100a76c"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/codex-exec.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "6d7c481f40816755cedb3b90ae8a3c8e2dc2fa35",
+      "english_sha1": "34b47e754cdc672e8b45c80e51b0fe67a76828d0"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/exit-codes-and-retries.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced stale outdated footer with translated current Chinese verification record; preserved source check date."
+      ],
+      "source_sha1": "35074cd48d15f5958de20a39af9921c867cc2e34",
+      "english_sha1": "9273e90c00030e71beae37d2eb93a86dc25c2172"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "2d542c9177aff0d2cb04b57eb00371dd4f833a6c",
+      "english_sha1": "450f9d83917bc780057c329729fa6b815794760b"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/scripts-and-pipelines.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "### Automation values stability, not speed first",
+          "after": "### Stabilize the workflow before automating it"
+        },
+        {
+          "before": "Scripts fix the flow; pipelines repeat it on schedule or on events.",
+          "after": "Scripts define the workflow; pipelines repeat it on schedule or in response to events."
+        },
+        {
+          "before": "### Scripts fix the approach",
+          "after": "### Scripts make a process repeatable"
+        },
+        "Replaced stale outdated footer with translated current Chinese verification record; preserved source check date."
+      ],
+      "source_sha1": "07aeb4f2ef5902e8b8389ad6b29b1ee5fd8924e2",
+      "english_sha1": "230756d0617f4988b8cc95fc6ef5599e5772c240"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/structured-output.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "e80b5d78570e417fe1996cd261b5f7dd1064f9b4",
+      "english_sha1": "94b095ce49adb1be1b9ba7809a8e37aca06bf418"
+    },
+    {
+      "path": "guide/developer-platform/sdk-overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e888ae6743222bd35ed2162b30e88b8c4728b2f8",
+      "english_sha1": "f36bf0330c87b347666ba18a6e0e261275eae660"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "[Webhooks overview](/en/guide/developer-platform/webhooks/overview/)",
+          "after": "[Webhooks and task event boundaries](/en/guide/developer-platform/webhooks/overview/): distinguish local execution results, App Server events, and custom HTTP callbacks. This section does not provide an unverified, unified Cloud webhook contract."
+        }
+      ],
+      "source_sha1": "68cb29b9ea3b6d04baea22ee7311d1e3a28bea7b",
+      "english_sha1": "84fbf67437ef347cde7bf8a7c526a16e11eaffa4"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8a84ab85278c41fd4c91b2e092418e1f9ffdcb79",
+      "english_sha1": "e73fc2b8e8c95398211b02ccb508976fdd92b8f0"
+    },
+    {
+      "path": "guide/files-and-artifacts/generated-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Systematically accept files, reports, and build outputs",
+          "after": "Systematically verify files, reports, and build outputs"
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "7401176332de263f318ee791059b0f88e7f33834",
+      "english_sha1": "301add4df95abf115e58d2933e7f114d498db37a"
+    },
+    {
+      "path": "guide/files-and-artifacts/images-and-screenshots.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "adc2b88ae3cbd1ca8b5f6b93743eae7aa306ded3",
+      "english_sha1": "5be25f16d5d3658bba372c468436c1d19153b83e"
+    },
+    {
+      "path": "guide/files-and-artifacts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "543d14ef74a0606ae2eada7e8301cc692bed0100",
+      "english_sha1": "9655b57640577e770edda326f286520fe76e74dd"
+    },
+    {
+      "path": "guide/files-and-artifacts/pdf-and-documents.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "1f4f82bf8abadf2fdb17e4dd291fbcb03c6cfb2b",
+      "english_sha1": "8e52ca53894739b09945bfc4c00e3ef78d79e555"
+    },
+    {
+      "path": "guide/files-and-artifacts/presentations.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Too many bullets, charts, and conclusions per slide hides the point.",
+          "after": "Too many bullets, charts, and conclusions on a slide hide the main point."
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "fb319fa4325fdf0714e279786e4c631db7176984",
+      "english_sha1": "d113b78728eb5459605584f63653b1d82c264dd4"
+    },
+    {
+      "path": "guide/files-and-artifacts/tables-and-spreadsheets.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "b08adec53399435137ca964fb9c9e62e0c3c6e92",
+      "english_sha1": "a8bbe146da62c42d69f1ef33266774498f00b403"
+    },
+    {
+      "path": "guide/files-and-artifacts/text-and-code-files.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "153779381cf4528add19912ddefd3b8a361b7b5b",
+      "english_sha1": "31aa8b27f717b44212fffd2f601df01aaf158c58"
+    },
+    {
+      "path": "guide/foundations/agent-basics.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "14ab120de8d9c2ccda6ca1bc5b11bb3a3cd19ea6",
+      "english_sha1": "307bf4570ad9ec8fbd9456054dfc2d67e4c69098"
+    },
+    {
+      "path": "guide/foundations/ai-and-language-models.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ccdac83274caa0ab9896c3d935825a08375e3422",
+      "english_sha1": "b00c0d18821dffecd244a689a8c05ab0471ee5b8"
+    },
+    {
+      "path": "guide/foundations/common-misconceptions.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "700e57bbbe339545097cb200dfec6ad12a187e4d",
+      "english_sha1": "e406f68498c7f1ce8e7c2eb22cbc52e1cc6a2410"
+    },
+    {
+      "path": "guide/foundations/files-tools-and-commands.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "9d65338a1d2c6b153bdf9b23787e5d70300ee4fe",
+      "english_sha1": "8606796e54a5def0d1e56e1c82c549b9b0138251"
+    },
+    {
+      "path": "guide/foundations/goals-context-and-actions.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "280cea9aad517013ecd6a4e9f3ae5c9033ff60d2",
+      "english_sha1": "2e07bb05dba3bb70c71dba2feb1bdc1fbe752a09"
+    },
+    {
+      "path": "guide/foundations/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "b4d4b2b7ed5cf754697878e6927baa24587c233c",
+      "english_sha1": "6fa90ba0c582200e477ddd3938d484fef21a8211"
+    },
+    {
+      "path": "guide/foundations/local-vs-cloud.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "9569b3cd3e0376e051d2b2a602fdb6441bb3eac3",
+      "english_sha1": "39895c33aab85addcdf76f47762db253ef5a33d0"
+    },
+    {
+      "path": "guide/foundations/models-and-reasoning.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "0685b79ddb3d42b5ce213d39c3377ebeb66e56ec",
+      "english_sha1": "4d4022d27792c1b8560bccb273964a6481f5b51b"
+    },
+    {
+      "path": "guide/foundations/permissions-and-approvals.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1beec634597ecc6420228baa6d2034370486ccb6",
+      "english_sha1": "55772bcb29098f84e2defa92d6be25da79119d38"
+    },
+    {
+      "path": "guide/foundations/sandbox-and-network.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2cf2c465baf5c06599fb69453c52964e53bb3fb0",
+      "english_sha1": "edf230da74166308fe99cfbda1965b5fcc314fb1"
+    },
+    {
+      "path": "guide/foundations/threads-tasks-and-projects.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c3604521816c51ff402be4b05b68658be34dd249",
+      "english_sha1": "d71956dc8d0da23a58f0ea32e7e19e3e4b279171"
+    },
+    {
+      "path": "guide/foundations/tokens-context-and-compaction.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cd44efe761b775c4820fb5b0bb91ff0b7f76036d",
+      "english_sha1": "ebff57d570b5d1d60bca5a1f98897b92a49a232f"
+    },
+    {
+      "path": "guide/foundations/verification-and-human-review.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "bfe40369ed1ed780ca1d822d82420162501359cd",
+      "english_sha1": "e6ce4b14e406abb302fcbd1c7dcde8d5078d49d1"
+    },
+    {
+      "path": "guide/getting-started/account-plans-and-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "7b123e53f8fd45e9dfea8b69cae3e8ebe3f537f4",
+      "english_sha1": "480f78439f49d4962c82652901417849f744f213"
+    },
+    {
+      "path": "guide/getting-started/beginner-safety-checklist.md",
+      "status": "reviewed",
+      "findings": [
+        "high-risk actions may require my approval → high-risk actions require my approval"
+      ],
+      "source_sha1": "75bfe4dc2f24bc964c2cf0b3d5b72d179344deeb",
+      "english_sha1": "663a9e48a7a1dac0e1ae9e13ea1d8011ca0f9abd"
+    },
+    {
+      "path": "guide/getting-started/create-your-first-project.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "43dcbdbf1f0c8bc25ef872693ea4ac24b31c41fe",
+      "english_sha1": "d3c484d4219095b0a73ac25bd599195213825cde"
+    },
+    {
+      "path": "guide/getting-started/first-30-minutes.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "7d1061dedd2f2a18030d5ea47fb7a02ad326a954",
+      "english_sha1": "d5975044abd8761287136c2e4203baa10ac1de9e"
+    },
+    {
+      "path": "guide/getting-started/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "62fb65dbb62e033d2e6b77791de17bfff4f2e5c4",
+      "english_sha1": "2ea7f8941cc9d6c4a53535b07206de1d79e5b782"
+    },
+    {
+      "path": "guide/getting-started/install-cli.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "564bd757cf7cd36427a0bcb67628edc4f0a48683",
+      "english_sha1": "eb08b75a7eb6aae2c845106e00d7168cf469d6b8"
+    },
+    {
+      "path": "guide/getting-started/install-desktop-app.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "974842f06dba920506faa3e83cc8bb61b5ce33c1",
+      "english_sha1": "27611409b594cdf0a4d9f3503c10dde982120d6d"
+    },
+    {
+      "path": "guide/getting-started/install-ide-extension.md",
+      "status": "reviewed",
+      "findings": [
+        "Cite the relevant symbol names. → Cite the relevant function names.",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "e8f88eca639ca9121c3be98e21562256cae3bf41",
+      "english_sha1": "087f7a75f40657e7a9b45feeb6ce6cae85618e57"
+    },
+    {
+      "path": "guide/getting-started/review-the-result.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a215910a8148f3ab8ea7577df58708fcc9b924fe",
+      "english_sha1": "00e14726c4485190433ba13250fced74620c78b0"
+    },
+    {
+      "path": "guide/getting-started/run-your-first-task.md",
+      "status": "reviewed",
+      "findings": [
+        "Ask for a short plan first (or request one yourself) → Have Codex provide a short plan; ask for one if needed",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "f203611f4f654c69b744f59522f18b0e652f4e65",
+      "english_sha1": "b6666e0d6027c922a01faa5571a47147b522df0e"
+    },
+    {
+      "path": "guide/getting-started/sign-in-and-authentication.md",
+      "status": "reviewed",
+      "findings": [
+        "especially when a personal space and company workspace share one email address → especially when you use both a personal space and a company workspace",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "ea83fa685e18889503453627f23d1472ee306cbc",
+      "english_sha1": "3839cfba8d4b4a90c3abfb0ea69138efe05659bf"
+    },
+    {
+      "path": "guide/getting-started/undo-and-recover.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8aa3171c775ff30bfef121ba2af84e3dc49d5f31",
+      "english_sha1": "0f943c89470cb14d60e17fcffce464b3b0ef9a68"
+    },
+    {
+      "path": "guide/ide/cloud-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "d5369b54fa1bbc3745b8e884cfd47a1eb9aaf0e0",
+      "english_sha1": "5633831ec2d6ab6d11fbac7266fa8faa61e679b7"
+    },
+    {
+      "path": "guide/ide/editor-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored Chinese source verification date; English newer date unsupported.",
+        "Reviewed full pair.",
+        "Moved legacy verification footer into metadata, preserving source date.",
+        "Restored omitted translated verification basis from Chinese baseline."
+      ],
+      "source_sha1": "6d1b2484db79a7285d2d8a61fce317dbb4ad2fac",
+      "english_sha1": "769a7793ff630955ca052dbf34e41d8afe43dd0c"
+    },
+    {
+      "path": "guide/ide/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c2fa50b16ab891592f65320d58f780b488aab72c",
+      "english_sha1": "2f4d07499c5e0e57fed6481c19adcad7769835bb"
+    },
+    {
+      "path": "guide/ide/installation.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "85e1691cf888074bf8a7337d92f93626f8d80538",
+      "english_sha1": "08a21da3779a1ba8a6db8b0efb92aec69c6023bf"
+    },
+    {
+      "path": "guide/ide/local-task-workflow.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "0264d4d9c01773ef206b854e86b29ddaa1c415f4",
+      "english_sha1": "4981b3a0f2a516415a53ce63264acdd297377271"
+    },
+    {
+      "path": "guide/ide/reviewing-changes.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source data-corruption criterion.",
+        "Clarified acceptance of risk, not findings.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "a6badd55babfc2f72b7f8617995435c07a674972",
+      "english_sha1": "fed1708c20a3b3596ebf8e2ec7295d5c238b4635"
+    },
+    {
+      "path": "guide/ide/selected-code-and-open-files.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source sidebar order.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "b6b264f6221a4aafd40f578baae1e09094763380",
+      "english_sha1": "b77a8dfc3935733e0b857fe65b45badb77e35d06"
+    },
+    {
+      "path": "guide/ide/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored one-setting restriction rather than entire class.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "6f28910e6fa3f4373a61c4ca18395b836512a145",
+      "english_sha1": "dfe68a194c4c3eaee988962805537e07aa4cdadb"
+    },
+    {
+      "path": "guide/ide/supported-editors.md",
+      "status": "reviewed",
+      "findings": [
+        "Verified all support labels and command keys against source.",
+        "Moved legacy verification footer into metadata, preserving source date.",
+        "Restored omitted translated verification basis from Chinese baseline."
+      ],
+      "source_sha1": "7b82896e18ef0b7ca25f4839b60dd5db91d3c9a0",
+      "english_sha1": "d4a72725c25d14f4fb9610263206044ca0512d2c"
+    },
+    {
+      "path": "guide/ide/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ebb21de9c69cd0324be9967b00dfad5d14443c1b",
+      "english_sha1": "87dd48a6f25eb6981a8a110fe4a9750805cd5984"
+    },
+    {
+      "path": "guide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored AI Agents, safety, and acceptance criteria omitted from introduction."
+      ],
+      "source_sha1": "aa277f2de13e98eb2a57d9ee8bfa0472f948da65",
+      "english_sha1": "56ab31ae38ec2e8820e8f6c79b2cf769657f8257"
+    },
+    {
+      "path": "guide/integrations/github.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored sidebar order.",
+        "Restored source authorization actor.",
+        "Corrected uncommitted versus unpushed distinction.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "ece7161bc622d24c95c7a0fccee13fe30f5ac600",
+      "english_sha1": "0208791e7a1ba56d260a979219b68ce6632389ff"
+    },
+    {
+      "path": "guide/integrations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored introductory capability example; drafting guidance remains in rollout section."
+      ],
+      "source_sha1": "140102ce4bd9f260ecb2a23f767fd347a27ddbca",
+      "english_sha1": "06bcb4db553a1bfc8dddfdb4603c4fbb2ac0c3c3"
+    },
+    {
+      "path": "guide/learning-paths/beginner/01-talk-to-codex.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "827a5d22da1b0a743c5cb00fe8c70ebf40690f7d",
+      "english_sha1": "946fffc12398e685153e0d125e2864df3455587c"
+    },
+    {
+      "path": "guide/learning-paths/beginner/02-work-with-files.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ec5c2d3e765014553e501fca4909df22393b136e",
+      "english_sha1": "fc7dad4f0b9d36d9410a01a73b2a6691e49844f9"
+    },
+    {
+      "path": "guide/learning-paths/beginner/03-give-clear-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "664fdf72408db4d2edc0f72178e6a947486c4881",
+      "english_sha1": "c8cb4b136f4ce977646073f26afc33f33c8b4686"
+    },
+    {
+      "path": "guide/learning-paths/beginner/04-review-results.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e426ec4391083920b17726bdaf003ab666ac4606",
+      "english_sha1": "b0debab6e786bd9e29962767e985f9133d30f25b"
+    },
+    {
+      "path": "guide/learning-paths/beginner/05-complete-first-project.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cc1139b811a175f02ad577e4f66c53b42fa857b1",
+      "english_sha1": "b736218864e0e7457fd68e88e845c451105cfab4"
+    },
+    {
+      "path": "guide/learning-paths/beginner/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1b7fbb340d7860591f93663eb89697c812ab968d",
+      "english_sha1": "4ecff27fc43086c29670b29d63c33c7ac329afa2"
+    },
+    {
+      "path": "guide/learning-paths/creator/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected layout boundaries mistranslated as factual limitations."
+      ],
+      "source_sha1": "d1b46b13bb164a1929b59a4b530a88465504a06d",
+      "english_sha1": "5f0d3103fa5f825d5a6cf8f2ecd844ebc5176ab3"
+    },
+    {
+      "path": "guide/learning-paths/developer/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored untested status rather than asserting no independent reader has completed it."
+      ],
+      "source_sha1": "22d8bd3a0640952eee2c8961cb8d1f7f1b4461c6",
+      "english_sha1": "829306fa24117e3e467777417f805e0ec9d7f716"
+    },
+    {
+      "path": "guide/learning-paths/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored independent-subtask boundaries and team workflow meaning; removed unsupported operating-system metaphor.",
+        "Restored omitted source verification metadata with its original date."
+      ],
+      "source_sha1": "2f7ff714fd4c735cea5b69c88745809693c374ea",
+      "english_sha1": "4ed9082d4cf48c31af10d8a38dfbf9d1f47a559d"
+    },
+    {
+      "path": "guide/learning-paths/team/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3b467382b4f4ff1292c3df41cf9266f0b6c53ee1",
+      "english_sha1": "58afc3d37ae55cff793cfd65b434d6e6f5fdcb77"
+    },
+    {
+      "path": "guide/permissions-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "6b5fcb85ea71e861fab7a9376f24c1f1ac63fc2a",
+      "english_sha1": "3be1037047d755f4cd33bc96979dc1c6592815cd"
+    },
+    {
+      "path": "guide/quality/definition-of-done.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f55e9f7fd33e5d7d12ca0ae9c65d164e092c2b23",
+      "english_sha1": "5f3883cd1d39b242d252dc3f3a7483573f23a777"
+    },
+    {
+      "path": "guide/quality/handle-uncertainty.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "839ce22cc23151823d406f4b1269ba98fb471a7d",
+      "english_sha1": "dbf9dc176d580dea9c75e99179cd140b862d62e7"
+    },
+    {
+      "path": "guide/quality/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural English translation of risk control."
+      ],
+      "source_sha1": "90d62fb0bee5a2ab790e65bc41e794682af27d2f",
+      "english_sha1": "683c21864b87728954cee2b1ad368d73d62e0436"
+    },
+    {
+      "path": "guide/quality/review-diffs.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f7f953fd1cbb1be0341f29ca65e0a5f1214a9c36",
+      "english_sha1": "0b3a42e22db52adee78b0f319162ff0688fd8548"
+    },
+    {
+      "path": "guide/quality/run-tests.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8b1e5c73df651321134ff649516555f92ad6ceac",
+      "english_sha1": "809fd0b12d2610501f2a5cbbcf553cb336e86492"
+    },
+    {
+      "path": "guide/quality/usage-time-and-model-choice.md",
+      "status": "reviewed",
+      "findings": [
+        "Avoided ambiguous account meaning in usage article.",
+        "Labeled shared Chinese downloadable source material so English readers are not led to expect translated assets."
+      ],
+      "source_sha1": "8b68d9272061b5e610884b1b1d49763e7942d0bb",
+      "english_sha1": "c704da52e25fc04f6ae73576baf13dd4d9b7bfa2"
+    },
+    {
+      "path": "guide/quality/validate-sources.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "688453128f3263f3edb614a048d99db4467269e4",
+      "english_sha1": "4dbb2a667abf65315be8e9f29e5c9cca2110d2b0"
+    },
+    {
+      "path": "guide/quality/verify-artifacts.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7a6a12e8bcf87800bd77ecedbd6cb538a1df0994",
+      "english_sha1": "c197d543502eaae2a53dac49d363920ab53d2b40"
+    },
+    {
+      "path": "guide/quality/workflow-evaluation.md",
+      "status": "reviewed",
+      "findings": [
+        "Labeled shared Chinese downloadable source material so English readers are not led to expect translated assets."
+      ],
+      "source_sha1": "9ea3ecc3dab50c37a259150d95dfde4398bb66dc",
+      "english_sha1": "826fed21798368770facb49826fd547a9e508328"
+    },
+    {
+      "path": "guide/reference/commands/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Should I use interactive entry or a one-shot command? → Should I start an interactive session or run a one-shot command?",
+        "CLI command pages help you pick entry and intent—not memorize parameters. → Use this reference to choose an entry point and understand its purpose; you do not need to memorize the parameters.",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer.",
+        "Restored sidebar ordering from Chinese."
+      ],
+      "source_sha1": "6091bcce1c86ada657472a59d0e521b44275fb41",
+      "english_sha1": "7d113b6c5c09c20c257682afcf0c4bbd4a49e25e"
+    },
+    {
+      "path": "guide/reference/configuration-reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer.",
+        "Restored sidebar ordering from Chinese."
+      ],
+      "source_sha1": "8f692edfee650db27f6949558f972e96ea3f027b",
+      "english_sha1": "87394caea39cb1765950034cb1d3166f04797725"
+    },
+    {
+      "path": "guide/reference/environment-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer.",
+        "Restored sidebar ordering from Chinese."
+      ],
+      "source_sha1": "58fd37baf9b6cce4c7e14005a429d826a4ab2f0d",
+      "english_sha1": "aac378db5a04a47468e58c6c8873ecc57e7ae7d1"
+    },
+    {
+      "path": "guide/reference/error-reference.md",
+      "status": "reviewed",
+      "findings": [
+        "latest behavior is official docs and client output. → consult official documentation and client output for current behavior.",
+        "Confirm if approval was right; or change task → Decide whether to approve the action, or adjust the task",
+        "Many people stare at one English line and guess. → It is easy to stare at an error message and guess its cause.",
+        "Then ask with full context → If it still fails, ask for help or consult official documentation with the full context",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer.",
+        "Restored sidebar ordering from Chinese."
+      ],
+      "source_sha1": "955c0a6c0bc32870a1800cc06735d189e3e651be",
+      "english_sha1": "401315cc88c6aaad140896f4aaf26f692bd9d973"
+    },
+    {
+      "path": "guide/reference/faq.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c9d7ed80ca6311017e1e56560032b30c0e80af12",
+      "english_sha1": "949a30a987dfe80d3521500d6112e522062d9c21"
+    },
+    {
+      "path": "guide/reference/feature-comparison.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "b3d30b08174b9399a442efafef920bce8c116fcd",
+      "english_sha1": "11e7e0e40860d9af67febdf1bf36b1f27b47d738"
+    },
+    {
+      "path": "guide/reference/glossary.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ae4b7946102c0a2f06beda42289c9f5b99cab77e",
+      "english_sha1": "3898c13c03f502c79abc48384af0de006606bca5"
+    },
+    {
+      "path": "guide/reference/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "d45e64069cbf22b67669bfdba08239a7d14e864a",
+      "english_sha1": "d1dd31bb2e29ee72a75665018418269e7c6d9c42"
+    },
+    {
+      "path": "guide/reference/keyboard-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "4f812d968c4bd5158953d1ed1ef1e345f7ed8329",
+      "english_sha1": "f7f5ec69ed723823ac6e8b63634bd09e10ade7b6"
+    },
+    {
+      "path": "guide/reference/model-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "not performance or cost benchmarks. → not measurements of model success rates, speed, or cost.",
+        "Consider Astra if source conflicts or requirements remain unresolved → Consider Astra if source conflicts cannot be resolved or requirements are repeatedly missed",
+        "Analyze sales data and prepare a report → Analyze sales data and prepare a weekly report",
+        "Increase effort if refunds, duplicates, or comparisons remain wrong; keep independent calculations → Increase effort if refund handling, deduplication, or period-over-period calculations remain wrong; verify results with independent calculations",
+        "Consider Astra for difficult dependencies or repeated failed fixes → Consider Astra if dependencies across files are hard to locate or fixes repeatedly fail",
+        "Increase effort if conflicting evidence or task constraints remain unresolved → Increase effort if conflicting evidence cannot be reconciled or constraints are repeatedly missed",
+        "Think on Free / Go should not be equated with paid-plan capabilities. → Think on Free / Go should not be equated with the identically named capability on paid plans.",
+        "Compare the same inputs, tools, and acceptance criteria. → Compare the same inputs, permitted tool scope, and acceptance criteria.",
+        "workspace permissions, and allowance resets. → workspace permissions, and when your allowance resets."
+      ],
+      "source_sha1": "20eb508b9457c23c6f0cdad9725dc6eba1a2ad1a",
+      "english_sha1": "94e5ef8149dd62789ec057da5b7d0371150083ff"
+    },
+    {
+      "path": "guide/reference/official-resources.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "5a584b05a88b0e2b713141f413fbba156cb8887e",
+      "english_sha1": "a37e277da287eb6fdbf35f79193bf795864f5367"
+    },
+    {
+      "path": "guide/reference/permission-matrix/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Pin versions and domains → Pin versions and restrict network domains",
+        "and exclude sensitive files such as `.env` from a broader scope → and use more specific rules to exclude sensitive files such as `.env` from a broader scope",
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "c6ad6aa3300a06447252c4c24e7cab4aaa145d57",
+      "english_sha1": "267c76ffb30c7701a171cc5b7d5a70d75f3fd0e8"
+    },
+    {
+      "path": "guide/reference/resource-compatibility.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "96ff34fad102fa99f730b03a923d60a0b57610b6",
+      "english_sha1": "138da64be0bdafe54eebe67fefbf22527dc0b0b4"
+    },
+    {
+      "path": "guide/reference/slash-commands.md",
+      "status": "reviewed",
+      "findings": [
+        "Aligned legacy verification metadata with Chinese; retained original evidence date and removed stale footer."
+      ],
+      "source_sha1": "a34c90f40987fe0a9e8786a4d1199db20b7b22c8",
+      "english_sha1": "2764784e5bfa3731942a926230d3bd08b4c07180"
+    },
+    {
+      "path": "guide/reference/troubleshooting/failure-recovery-lab.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "fc9187249ccdaa507deb2098fb670cba5774311c",
+      "english_sha1": "1df610c92469028ac9c4fbddec4b9bb6170f5484"
+    },
+    {
+      "path": "guide/reference/troubleshooting/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "da350d03178d3d24eb07668a1623cf1e86560681",
+      "english_sha1": "889b8d6febf9529f94fdb74378d439cef6e215c7"
+    },
+    {
+      "path": "guide/start-here/choose-your-path.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "51ccd006cd3d17e1e52376c232ce81fbfc8f898f",
+      "english_sha1": "ce843c1c6050cce1bca6a344d6228205ed19a225"
+    },
+    {
+      "path": "guide/start-here/codex-capability-map.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1a4cd9862a170b876b18913d4ce359f2c627b83f",
+      "english_sha1": "883d6a6a7fe50099adc5aaf0168ce4e5cc3c5fbc"
+    },
+    {
+      "path": "guide/start-here/handbook-version-policy.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored omitted source verification metadata with its original date."
+      ],
+      "source_sha1": "a608dc3bdae273d10843a871230964c0ca5695f3",
+      "english_sha1": "6c731f233f9b87c0f227b7533ba28375ec9da89c"
+    },
+    {
+      "path": "guide/start-here/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "953fb894d443881b89d070b91cf6078feda6dab1",
+      "english_sha1": "05756257140629b8918304196bb60a45c7db35ad"
+    },
+    {
+      "path": "guide/start-here/prerequisites.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "5fbedb8fff2e1f117588363e33818786f80dee27",
+      "english_sha1": "6926f290e43184aead06bbc098e0679f1db79fc0"
+    },
+    {
+      "path": "guide/start-here/terminology-for-beginners.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a18bacf35607dca48ce12b0131c9960c34b72b47",
+      "english_sha1": "e15557ce61916c94c9b65a7ec1813a9ff70c8a4e"
+    },
+    {
+      "path": "guide/start-here/what-is-codex.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "0f376b6909520c4be7cf66bd5a4ab0c831f75d1d",
+      "english_sha1": "c525937dad906238c3ecea2cbb169e197e9fd1a0"
+    },
+    {
+      "path": "guide/start-here/who-is-this-handbook-for.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "95272c3957c1bc1766168437ab9d803d880160d1",
+      "english_sha1": "84ddf05984c07f6077488766ea4be779f2575721"
+    },
+    {
+      "path": "guide/team-enterprise/governance/acceptable-use.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified prohibition applies to outputs, not all advice.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "0409154f600cefd6290b913a10851596d660fcb6",
+      "english_sha1": "b938cb2526366cea2ca01f42e78dac15f2b5868d"
+    },
+    {
+      "path": "guide/team-enterprise/governance/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "6c37ab466e99484d1e8d3758a21a6a7f0fb1e5c5",
+      "english_sha1": "4a7a14304addcbc93a00fe69a17afbb19d2fa122"
+    },
+    {
+      "path": "guide/team-enterprise/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "b44c5d131e128bc26145c305b8f7dee2f31a88ad",
+      "english_sha1": "3409f3a86ff3e58038e895628181999e32ade9e4"
+    },
+    {
+      "path": "guide/team-enterprise/security/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Fixed inverted need for risks.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "91ed6a31b4cd55294242b23e5108b6ffb1c5f53b",
+      "english_sha1": "509c793096a0641edb7463f68501a0dfac13841f"
+    },
+    {
+      "path": "guide/team-enterprise/security/plugin-and-mcp-risk.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified risk assessment rather than instruction to grant union.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "bf027ad9af4036b0ed63b3a076f9f905359bd5c6",
+      "english_sha1": "954c0878002fddec64aabda81ecdb90b48cdd172"
+    },
+    {
+      "path": "guide/team-enterprise/security/prompt-injection.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected ambiguous/reversed warning signal.",
+        "Repaired broken sentence.",
+        "Avoided mistranslating main objective as thread.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "3e44fdf485efeec10a56b4e4e192eefd94d3ca3e",
+      "english_sha1": "43e2b8f8c62946b68c5a09a5ce13ca93e6f598d2"
+    },
+    {
+      "path": "guide/team-enterprise/security/threat-model.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored omitted read-access boundary.",
+        "Clarified review omission.",
+        "Fixed incomplete conditional.",
+        "Moved legacy verification footer into metadata to match Chinese structure; preserved evidence date."
+      ],
+      "source_sha1": "4ec320da6823dff5b1fb509fe24d74b1ee7301db",
+      "english_sha1": "74ca2199477fc7be612ae9981b48e4d8fd2caa35"
+    },
+    {
+      "path": "guide/tools/browser.md",
+      "status": "reviewed",
+      "findings": [
+        "Localized the example local page URL.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date.",
+        "Restored omitted sidebar order from Chinese source."
+      ],
+      "source_sha1": "802f88949188a105ea1ef7fda6bfb0f2ab375e78",
+      "english_sha1": "6c20ae383b8a907f415fa9bdc326e0d3807f86ee"
+    },
+    {
+      "path": "guide/tools/computer-use.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected presentation software mistranslated as demo software.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date.",
+        "Restored omitted sidebar order from Chinese source."
+      ],
+      "source_sha1": "d4a2e113970ec69e2d6e1cc70d93f137090c229a",
+      "english_sha1": "27a3dcb2bba3de96b7902a9aa17da6aa79147aa9"
+    },
+    {
+      "path": "guide/tools/image-generation.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected infringement guidance mistranslated as trademark-only restriction.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date.",
+        "Restored omitted sidebar order from Chinese source."
+      ],
+      "source_sha1": "ea275fa8bdb4c70221d513d632de9e86e4c7b04f",
+      "english_sha1": "2ff553624cc9740923ebca06b80f0c1921f3fb02"
+    },
+    {
+      "path": "guide/tools/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "5939a9d66e253f8a792e23a60a2490e33924e4b0",
+      "english_sha1": "20870573e1ad8844af1b508a74f83acfd57c93a8"
+    },
+    {
+      "path": "guide/tools/shell-and-terminal.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1438fc73c4678c5be99b62f71e9ab4d42fd8b756",
+      "english_sha1": "81a21892009254eb9d116e8ca34918a3b25888e0"
+    },
+    {
+      "path": "guide/tools/tool-selection.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "9fdb3667e5d250476fd6b61610f3e693af0222c8",
+      "english_sha1": "c34909ceb7e27ce60a8c5d49e09983cb9284285f"
+    },
+    {
+      "path": "guide/tools/voice.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date.",
+        "Restored omitted sidebar order from Chinese source."
+      ],
+      "source_sha1": "192bba2530ac12f4f50ae4744bf55a955277f46c",
+      "english_sha1": "94878cad38bc84cb9dfc54d1de7ce5c07d6a13ba"
+    },
+    {
+      "path": "guide/tools/web-search.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7adcb92c870d9328b94f96dc93b221b8de575ed2",
+      "english_sha1": "38a18f4a0c3f505480e959bd05e749c8cce0d7e9"
+    },
+    {
+      "path": "guide/updates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified 12-run sample count from source.",
+        "Labeled shared Chinese downloadable source material so English readers are not led to expect translated assets."
+      ],
+      "source_sha1": "3c99d357d9bcc10689701e6377c45c0b4c81f474",
+      "english_sha1": "21fc10aa148c5825041ba3f383ad1e186e9f4af4"
+    },
+    {
+      "path": "guide/web-and-cloud/cloud-environments.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "1745f70968380d47fb7eed0da80b51ecade18c5b",
+      "english_sha1": "646a01dbd529bbc87a50387a711d0a1d7961a07e"
+    },
+    {
+      "path": "guide/web-and-cloud/code-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored data corruption as a review criterion, rather than only data loss.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "ea6796af69e8aaa0dce7b12f924ac95e768a5090",
+      "english_sha1": "501d9bd2350782ff93bd04c62909c5b0df6b7122"
+    },
+    {
+      "path": "guide/web-and-cloud/connect-github.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "b126a7edeb42bd1c2de2bce168ab9abb258c7b88",
+      "english_sha1": "f08f0ee2ce9fa36de1749f338e4c73e300745922"
+    },
+    {
+      "path": "guide/web-and-cloud/create-pull-requests.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "39371d42d61452c60a6b8b37050af93a0030efcf",
+      "english_sha1": "a64cbcc3b47c198a3fb1e0d3257ac5b2c9ec4376"
+    },
+    {
+      "path": "guide/web-and-cloud/delegate-and-follow-up.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected description: verify results, not correct acceptance results.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "38b322f5f93e6fbaf3135f4b7cf1d9a3a8adf026",
+      "english_sha1": "863352bd17b98aa83150f395e35efacc403f36a3"
+    },
+    {
+      "path": "guide/web-and-cloud/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "86fa0ac0049e820eede82e587706267d9ae76021",
+      "english_sha1": "7db996ddef54da7db771daca1539ae43035916c4"
+    },
+    {
+      "path": "guide/web-and-cloud/internet-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "5bbb90556614ba1d7ad93f3dfb820e13e91ca32b",
+      "english_sha1": "837a0f5c64c31ff8b88713cea62cbaf8f038eb85"
+    },
+    {
+      "path": "guide/web-and-cloud/secrets-and-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "78937be04005c1c90a2d1356dccd2f92ba1ad4e7",
+      "english_sha1": "d24bba7f7d9769dbc052b295501094caf2ea4dad"
+    },
+    {
+      "path": "guide/web-and-cloud/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "019fac1ab6e72a31d044d13336844878dd5f54ac",
+      "english_sha1": "c8237c566c875a6c303b2c7dbde237c8a58259d4"
+    },
+    {
+      "path": "index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "¥4,644.75 → CNY 4,644.75",
+        "editable eight-slide presentation → eight-slide presentation"
+      ],
+      "source_sha1": "75dd87a279213ca7fd77e17918bbeebdca531b24",
+      "english_sha1": "83d9e322b5240469059a2e577dd7a6c57e247198"
+    },
+    {
+      "path": "pets/create.mdx",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "57e9aca9a8699f429ac8b2cb6ff36d79854d4aa8",
+      "english_sha1": "7b1e7fadc7f25c71068791447e8e0399cce35a28"
+    },
+    {
+      "path": "pets/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "`spritesheet.webp`: an image atlas that stores animation frames.",
+          "after": "`spritesheet.webp`: an image atlas that stores animation frames for the client to read on a fixed grid."
+        }
+      ],
+      "source_sha1": "8b036367092bc16ba78a217c6fc238a554444787",
+      "english_sha1": "65bb5f35db5337b5bec663d9f78847e2100e6347"
+    },
+    {
+      "path": "pets/install.mdx",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "730c599ff9c9d82b451a976f3c96eec9d9c6fd4d",
+      "english_sha1": "2625434efab67af8ca4881b78dc5fb36ff3fbc62"
+    },
+    {
+      "path": "prompts/anti-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced literal, misleading heading with natural English.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "8e89a5a0e2154a7403d009e78ea243b71fe91bc5",
+      "english_sha1": "51dd47946820c252f152a1cb2144519897f9a988"
+    },
+    {
+      "path": "prompts/ask-for-a-plan.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "706f11b6cf358cf6ec21a6fb458ed20783fc8d7e",
+      "english_sha1": "1102bee57beb1e8d204fe0b9a12ed2c6a90976d3"
+    },
+    {
+      "path": "prompts/basics.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "eb86b2a71d5c7c6ef2cb4d5c891c7234f7f10eec",
+      "english_sha1": "aa4725a1b642a248652de1cf52842e58847fd80a"
+    },
+    {
+      "path": "prompts/comparison-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "Clarified that fabricated-score check applies to blank records, not all input files."
+      ],
+      "source_sha1": "e6a23bbdbdd997a11ea55dbc290776fe0fa6abed",
+      "english_sha1": "e3cc75d9a6bf2dc9ebbd35527014248980b1a7ea"
+    },
+    {
+      "path": "prompts/constraints-and-boundaries.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "0ca4700f055f4efa23dc67e79a027c55df7ce363",
+      "english_sha1": "f740f15b60ef1526d3661f756adc7921ee692f01"
+    },
+    {
+      "path": "prompts/define-done.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "e97e8542b82bb8fb9c789d35796bf8ebfe8bee5a",
+      "english_sha1": "c639e2117eb1c8caa9c534adf47ba32ebcc7819a"
+    },
+    {
+      "path": "prompts/goals-and-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "0a5141fb751ba152107b3b74d166e1c57e64b9c9",
+      "english_sha1": "10a7f82de01ee937c9a0c5b0ebaa1c0a187e1b00"
+    },
+    {
+      "path": "prompts/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2280f53609b3990c823b4cfec03d55d3e57be4ca",
+      "english_sha1": "a38cf22c6911fd8d58c32ac7c6b9dc3bfa7e2062"
+    },
+    {
+      "path": "prompts/long-running-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored reporting after the minimal change is finished, not newly imposed per-batch reporting.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "450ed9d87331984da0e795e4dc42508b9d6b37c3",
+      "english_sha1": "c6267c6e1da548c4d0a04a51963ff95ee5f30da7"
+    },
+    {
+      "path": "prompts/prompt-debugging.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "efc301507107f6b3b27bef4cdd4cbea5399fa6c3",
+      "english_sha1": "e50c6710af20ca4260b5ce3c7588708f88756ae1"
+    },
+    {
+      "path": "prompts/prompting-with-images.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "953a69bb6a686f6c2f9713dfd76b24a1d86c2a7b",
+      "english_sha1": "2ef7d01a57ba4f2d65126119a5a79a853789931f"
+    },
+    {
+      "path": "prompts/task-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "Localized example source path and removed extra configuration prohibition absent from source.",
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "98c05110e79912d2b39c044e1800cbf484bf98c6",
+      "english_sha1": "4a3efe80a5b09b0296095d184859d65fb56b5db1"
+    },
+    {
+      "path": "prompts/templates/automate.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced ungrammatical automate mistake wording."
+      ],
+      "source_sha1": "2aff2e7eab78a8033b03e3c046c5a54de81385ea",
+      "english_sha1": "7d77bd8244336bcff5878f766073de3a2c3349a4"
+    },
+    {
+      "path": "prompts/templates/change.md",
+      "status": "reviewed",
+      "findings": [
+        "Improved unnatural introduction and replaced blast-radius jargon with affected scope."
+      ],
+      "source_sha1": "6faf299321f2d8390b0c30ab77d748f3b4716163",
+      "english_sha1": "08af3e419a80314cf83627cbdc332c68b2ce2f56"
+    },
+    {
+      "path": "prompts/templates/create.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c47ebbf5ce0f126207dc2df3546147c3d7c01a7f",
+      "english_sha1": "09f6ae030eb1f3f9b6e5130583308793ce04682c"
+    },
+    {
+      "path": "prompts/templates/diagnose.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected adjective in diagnostic-task introduction."
+      ],
+      "source_sha1": "24913711ff76b4fb5769435ab964ff5cedbefe03",
+      "english_sha1": "7642c56c6ee64ea23491d06e8821f515b2fdf8cd"
+    },
+    {
+      "path": "prompts/templates/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "fae2ed3a39853461104c3041ec66b944980d2f37",
+      "english_sha1": "01214dd4c08a5fa96739cf0674d851b62119cda8"
+    },
+    {
+      "path": "prompts/templates/research.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "729d4ccbe99aa7ec254fbe1077637d6b3b06f5ed",
+      "english_sha1": "f73a2dda576f9d05801e7b119b227a48e371911a"
+    },
+    {
+      "path": "prompts/templates/review.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e89989d7d069f0f96d12acd17b3ef488d2a8dad0",
+      "english_sha1": "11536afba7d92ce9eea53d7f7128e6ab63b8bdea"
+    },
+    {
+      "path": "prompts/templates/understand.md",
+      "status": "reviewed",
+      "findings": [
+        "Replaced literal main-line wording with natural explanation."
+      ],
+      "source_sha1": "228971d00d2d1654cb48daa4f9b3133115f1a63c",
+      "english_sha1": "b1bacdfd2c84e2e63baa24f8ced71c5bac5bcc71"
+    },
+    {
+      "path": "skills/automations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "759c38e68aa07c361740b1034d14dd1deb193cdc",
+      "english_sha1": "622711ea40ff243f4dbe35068c9c0bc6fc1297c3"
+    },
+    {
+      "path": "skills/automations/scheduled-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved existing verification footer to source-aligned metadata without changing evidence date."
+      ],
+      "source_sha1": "fa792dc3116b1fd95eee0e232a4a6b5b8534214c",
+      "english_sha1": "530ca984a68bbc9e0149889f6ae3cfbcb14c5687"
+    },
+    {
+      "path": "skills/capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "A Hook blocks real credentials or logs external calls.",
+          "after": "A Hook can block output containing real credentials or log external tool calls."
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "183812c1f14a29d1c672edcbd1d1f6a0bda51d07",
+      "english_sha1": "6a25c134c1a6d2d2458dffe8ffe263b07eca2033"
+    },
+    {
+      "path": "skills/choosing-an-extension-method.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Keep experimenting in prompts until success is stable.",
+          "after": "If success criteria are not yet defined, keep experimenting with prompts first."
+        },
+        {
+          "before": "**Unaccepted scheduling:** unattended code edits with no evidence, stop, or human review.",
+          "after": "**Scheduling without acceptance checks:** scheduled code edits with no stop conditions, run evidence, or human review."
+        },
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates.",
+        "Restored the source rationale for starting with a prompt: lowest cost and easy observation.",
+        "Restored auditable configuration as a source requirement for external connections."
+      ],
+      "source_sha1": "28ae6f55403a4955b4683b8d0464eae983245242",
+      "english_sha1": "2847e36e52a317324afd1de21ec05f9c98233bdd"
+    },
+    {
+      "path": "skills/create-your-first-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "14414f58af19e4ce863dfd6bda0125b9eafc91da",
+      "english_sha1": "ec442bc45319c764590ad95841697d9bc8dc890f"
+    },
+    {
+      "path": "skills/examples/automation-skill.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6c758b9400d375a74dd272bf0bc29314b33d8e6f",
+      "english_sha1": "ae0fba95a404dd10c4b4d99b6a8c3a073b68eee6"
+    },
+    {
+      "path": "skills/examples/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "490db95aaca6ec9bd3512750c46e7ae1f05b8cc1",
+      "english_sha1": "d8f42c8fbb5f4950b925f7875a32b0c040a1ffcf"
+    },
+    {
+      "path": "skills/examples/research-skill.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cf2b2325eaca8a3e73685de604b3675d5e91509f",
+      "english_sha1": "c2b640a7e7bb9d73fd260005842fe2c50f046b2e"
+    },
+    {
+      "path": "skills/examples/review-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored prohibition on overwriting existing Skill; corrected reversed branch-review exclusion."
+      ],
+      "source_sha1": "e29d1b3e20d114423d247d669175915f3caa67cb",
+      "english_sha1": "9429e656f03dcad62a1f7dfe10b6b39ccdfa5bb1"
+    },
+    {
+      "path": "skills/examples/writing-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored prohibition on overwriting existing Skill; corrected small-copy ambiguity."
+      ],
+      "source_sha1": "cbaec37837a757ffd65f1fba598430b60da8f045",
+      "english_sha1": "bd1555b2a185fc2b2d6ffc7bdf6b29772ca1fb60"
+    },
+    {
+      "path": "skills/hooks/hook-event-types.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored heading distinction: block schedules continuation, not just rejection.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "07f4965e40fd9fac6e5897b975934e7ea501df9d",
+      "english_sha1": "9f3dc49b2f64e000b7e476d283ac9790630b21de"
+    },
+    {
+      "path": "skills/hooks/hooks-examples.md",
+      "status": "reviewed",
+      "findings": [
+        "Removed unsupported requirement for relative rather than stable path.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "06e9fa2df03010c1cecfa2158876786675725913",
+      "english_sha1": "5c4f03ca4fcbda3597018731e182c10e0619cc50"
+    },
+    {
+      "path": "skills/hooks/hooks-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "ac7889bdf138a3f340fa8e43b8cc2a2de24c473f",
+      "english_sha1": "e61308de6a8c6b389f44c24529f8013a9f02bb64"
+    },
+    {
+      "path": "skills/hooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Distinguished hosted tools from organization-managed Hooks.",
+        "Moved legacy verification footer into metadata, preserving source date."
+      ],
+      "source_sha1": "a0312e9122c0b5a4b83e48f04cf85a03bc504c4d",
+      "english_sha1": "db9fee874907947b19ca526ad50d1fef0b6fc841"
+    },
+    {
+      "path": "skills/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Its value goes beyond",
+          "after": "Their value goes beyond"
+        }
+      ],
+      "source_sha1": "6f8df169518ceae6ecfcacc4bd4113d341f25a39",
+      "english_sha1": "e2d1eeed55fbfff183cb626f6079849b37bde9e5"
+    },
+    {
+      "path": "skills/mcp/connect-an-mcp-server.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "0675d339e67856591904a5744febe3c4e123fa73",
+      "english_sha1": "3684a839e364ad06217243ca1c4a962bd1c98c13"
+    },
+    {
+      "path": "skills/mcp/debugging-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "d35b635a0be59a796f9cda9236d4e8400ed7242c",
+      "english_sha1": "594781500851891e273ae58f7bb885fccc43274c"
+    },
+    {
+      "path": "skills/mcp/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "8d9ec38186a3b8d237ab68256c35070658912cbb",
+      "english_sha1": "5b54a068974aaa83a5f957d165f88dedea45be05"
+    },
+    {
+      "path": "skills/mcp/mcp-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "98a06262bb08c65536204bbbca3caeeaad822327",
+      "english_sha1": "a70638a9f2ed5af4473b6f1dbe5e75c2a453abdb"
+    },
+    {
+      "path": "skills/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "3147d2cbff3a63bc61f6dc437c261160cbd6e180",
+      "english_sha1": "edc949ea08bc51da4c2ddcc1a1003eae4a3f8771"
+    },
+    {
+      "path": "skills/plugins/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "8917a5982e8437ca01bc5c8fe2d8403722113c74",
+      "english_sha1": "a3109c6ab1cb062ec14d226a82ffa0048063bb09"
+    },
+    {
+      "path": "skills/plugins/plugins-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates.",
+        "Restored explicit non-override behavior of Plugin Hooks and the distinction between visible directory and organization-authorized scope.",
+        "Restored the supported-surface condition for scheduled-task templates."
+      ],
+      "source_sha1": "4efe5a8fc4379c743c013109ca3731fbd9425007",
+      "english_sha1": "29273d7667e8cf5929a8a67371ce505eec274db4"
+    },
+    {
+      "path": "skills/references.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "955bfa783f4963afa4dfc08d512f4997da10d00a",
+      "english_sha1": "4b427f9c7349031381f952e69d524978511bcae4"
+    },
+    {
+      "path": "skills/scripts-and-tests.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "export report on a fixed schedule",
+          "after": "export a report using a fixed procedure"
+        }
+      ],
+      "source_sha1": "900e6e472fb4226070730a80e620f0b06b3456b4",
+      "english_sha1": "10bacd8f944679433735b05ae3cd46bcb8d16316"
+    },
+    {
+      "path": "skills/security.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved historical verification footer into legacyVerification, matching the Chinese metadata without changing source verification dates."
+      ],
+      "source_sha1": "a3c81ed4e32687a385210da5e0da52656c4395dc",
+      "english_sha1": "e00ee18cbce3e817a853a1c1d0a49876a8c7e338"
+    },
+    {
+      "path": "skills/skill-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "The point is moving long material you should not always load into the main flow.",
+          "after": "The point is to move long explanations out of the main workflow and read them only when needed."
+        },
+        "Moved the next-step exercise link and closing advice after all instructional sections to match the source reading order."
+      ],
+      "source_sha1": "50ca48c3f95620e91f9d2c05e0655c83be40c7c4",
+      "english_sha1": "b84ed7bb541a290407d3d6f93830133735997f1e"
+    },
+    {
+      "path": "skills/templates.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "82a9e01cda3f91561e83f248408b2516409b1c7e",
+      "english_sha1": "44a5ace86954929632004ea332545ba05d1b348b"
+    },
+    {
+      "path": "skills/use-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "when the scene fits",
+          "after": "when the task fits"
+        },
+        {
+          "before": "They do not.\n",
+          "after": "They do not necessarily behave identically.\n"
+        }
+      ],
+      "source_sha1": "ef92b69f840e62c82a4f0992cf6757998ffdf6e1",
+      "english_sha1": "f1f56934bd0bcd7da43a3261d27ae47434eff447"
+    },
+    {
+      "path": "skills/when-to-use-skills.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "make the model misuse them and the team harder to maintain.",
+          "after": "increase the risk of incorrect selection and make them harder for the team to maintain."
+        }
+      ],
+      "source_sha1": "5e688f4a702320c350d4e642016feb8bb1dad6c2",
+      "english_sha1": "45a1e1d973ab647ce55321290556b6a323509dae"
+    },
+    {
+      "path": "theme/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "4ecfa1c03d8546339524f23af422801b6861bc3e",
+      "english_sha1": "7800349fa8251d148dcd8acd42fe100c0794eed5"
+    }
+  ]
+}

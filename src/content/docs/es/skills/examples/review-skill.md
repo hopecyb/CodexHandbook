@@ -24,9 +24,10 @@ assets:
   version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: 'e29d1b3'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Antes de revisar, define qué se va a comparar. Este Skill evita confundir «cambios locales sin confirmar» con «commits respecto de main», o pasar por alto un error preparado porque el árbol de trabajo parece correcto.
@@ -46,7 +47,7 @@ No supone `main` por defecto. Si la base no existe, informa de un error en vez d
 
 ## Instalación y primera invocación
 
-Necesitas Python 3.10+, Git y un repositorio local de práctica con al menos un commit. Coloca `scoped-review/` extraído en `.agents/skills/` del proyecto de destino y confirma que el punto de entrada es `.agents/skills/scoped-review/SKILL.md`. Si ya existe un Skill con ese nombre, compáralos antes de sobrescribirlo.
+Necesitas Python 3.10+, Git y un repositorio local de práctica con al menos un commit. Coloca `scoped-review/` extraído en `.agents/skills/` del proyecto de destino y confirma que el punto de entrada es `.agents/skills/scoped-review/SKILL.md`. Si ya existe un Skill con ese nombre, compáralos primero; no sobrescribas el existente.
 
 Consulta la [guía oficial](https://learn.chatgpt.com/docs/build-skills) para descubrir Skills locales y sus puntos de entrada. Comprueba que puede seleccionarse tras instalarlo e invócalo expresamente:
 

@@ -8,19 +8,20 @@ verification:
   checkedAt: "2026-09-18"
   summary: "공식 문서의 발견 및 병합 규칙을 항목별로 대조했습니다. 디렉터리 예시와 로딩 확인 안내는 교육용이며 모든 클라이언트에서 실행해 검증했다고 주장하지 않습니다."
   evidence:
-    - label: "AGENTS.md"
+    - label: "AGENTS.md 탐색, 재정의 및 검증에 관한 공식 규칙"
       href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
 legacyVerification:
   status: "verified"
-  products: "App、CLI、IDE、Cloud"
+  products: "App / CLI / IDE / Cloud"
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
+source_revision: 'b5f31cc'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
 
 Codex는 실행을 시작할 때마다 지침 체인을 구성합니다. 조직 정책, 설정, 프롬프트를 한데 섞어 우선순위를 추측하기보다 `AGENTS.md` 파일 자체를 어떤 순서로 찾는지 먼저 정확히 이해해야 합니다.
@@ -53,7 +54,7 @@ repo/
 
 ## 작업 프롬프트와 함께 사용하기
 
-`AGENTS.md`에는 오래 유지하며 버전 관리할 프로젝트 규칙을 담습니다. 프롬프트에는 이번 작업의 목표, 범위, 수락 기준을 담습니다. 예:
+`AGENTS.md`에는 오래 유지하며 버전 관리할 프로젝트 규칙을 담습니다. 프롬프트에는 이번 작업의 목표, 범위, 완료 기준을 담습니다. 예:
 
 ```text
 적용되는 AGENTS.md를 따르세요. 이번에는 services/payments/retry.ts와

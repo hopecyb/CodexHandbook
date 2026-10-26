@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "basis": "Đã rà từng mục theo thư mục `examples/` hiện tại của kho, frontmatter ví dụ, cách lập chỉ mục và quy trình đóng góp; yêu cầu trang đã khớp cấu trúc liên kết case/quy trình hiện có, không phụ thuộc hành vi dễ thay đổi của một client Codex nào.", "checkedAt": "2026-07-26"}
 title: Thêm ví dụ Prompt
 description: Gửi Prompt tái hiện được vào examples/prompts, kèm siêu dữ liệu và tiêu chuẩn nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: "15dabd2"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ví dụ Prompt nằm ở [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) gốc kho, được nội dung sổ tay liên kết. Quy chuẩn thiết kế xem [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
@@ -131,9 +132,3 @@ Thứ tự sau thường ổn hơn:
 - [ ] Ít nhất một trang case hoặc quy trình liên kết tới ví dụ này (tùy chọn nhưng khuyến nghị)
 
 Một ví dụ Prompt tốt phải để người khác làm theo tái hiện được và nhận kết quả gần tương tự.
-
----
-
-**Trạng thái:** verified  
-**Căn cứ kiểm chứng:** Đã rà từng mục theo thư mục `examples/` hiện tại của kho, frontmatter ví dụ, cách lập chỉ mục và quy trình đóng góp; yêu cầu trang đã khớp cấu trúc liên kết case/quy trình hiện có, không phụ thuộc hành vi dễ thay đổi của một client Codex nào.  
-**Kiểm chứng gần nhất:** 2026-07-26

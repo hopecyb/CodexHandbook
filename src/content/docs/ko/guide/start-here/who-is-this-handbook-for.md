@@ -5,10 +5,15 @@ sidebar:
   order: 3
 locale: ko
 source_locale: zh-CN
-source_revision: 95272c3
+source_revision: "95272c3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 핸드북의 독자·사용 장면만 설명합니다. 사이트 내 링크와 독자 계층 표현을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 이 핸드북은 Codex를 본격적으로 막 접하기 시작한 사람을 주로 대상으로 합니다.
@@ -28,7 +33,7 @@ reviewed_at: 2026-08-26
 | 독자 | 이 핸드북을 쓰는 방식 |
 |---|---|
 | AI 초보자 | 「무엇인가」부터 첫 안전 작업까지. 용어마다 설명이 있음 |
-| 창작자 | 조사·글쓰기·데모·프로토타입. 개요를 먼저 읽고 역량 주제로 |
+| 창작자 | 조사·글쓰기·발표 자료·프로토타입. 개요를 먼저 읽고 역량 주제로 |
 | 개발자 | 코드 이해·구현·테스트·리뷰·자동화 |
 | 팀 | 공유 설명·권한·품질·거버넌스(심화는 이후 마일스톤) |
 
@@ -90,10 +95,3 @@ reviewed_at: 2026-08-26
 - 개발 출신은 아니지만 AI를 일상 업무에 실제로 붙이고 싶을 때
 
 다음 단계: [경로 고르기](/ko/guide/start-here/choose-your-path/).
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 핸드북의 독자·사용 장면만 설명합니다. 사이트 내 링크와 독자 계층 표현을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

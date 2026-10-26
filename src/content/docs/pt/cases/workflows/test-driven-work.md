@@ -3,13 +3,14 @@ title: Trabalho orientado por testes
 description: Defina ou complete primeiro os testes em falha e deixe-os conduzir a implementação — para que as alterações do Codex sejam objetivamente aceitáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Cruzado com os capítulos já verificados deste manual sobre correr testes, definição de concluído, correção de bug com verificação e regras de comando; o conteúdo foca o método estável «fazer o teste falhar primeiro, depois conduzir a passagem com implementação mínima».", "checkedAt": "2026-07-26"}
 ---
 
-**Trabalho orientado por testes** (TDD ou «testes primeiro») consiste em fazer o teste falhar e depois, com a implementação mínima, fazê-lo passar. Adequado a código-bases com infraestrutura de testes e diretamente relacionado com cenários como [correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Trabalho orientado por testes** (TDD ou «testes primeiro») consiste em fazer o teste falhar e depois, com a implementação mínima, fazê-lo passar. Adequado a bases de código com infraestrutura de testes e diretamente relacionado com cenários como [correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Foco desta página
 
@@ -37,7 +38,7 @@ Prompt:
 
 ```text
 Siga TDD: primeiro escreva um teste em falha para «entrada vazia devolve []» em @src/foo.ts;
-corra o teste e confirme a falha antes de alterar a implementação; em cada passo, corra apenas o ficheiro de teste relacionado.
+corra o teste e confirme a falha antes de alterar a implementação; em cada passo, corra apenas o arquivo de teste relacionado.
 ```
 
 ## Fluxo recomendado
@@ -55,17 +56,17 @@ Combine com [diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before
 - Declarar concluído sem correr testes
 - Alterar testes para acomodar implementação errada
 - Correr um único teste e declarar a suíte toda verde
-- Correr repetidamente a suíte E2E lenta — use `-t` ou filtro por ficheiro
+- Correr repetidamente a suíte E2E lenta — use `-t` ou filtro por arquivo
 
 ## Limites de segurança
 
-- Comandos de teste devem estar no âmbito permitido pelas [regras de comando](/pt/guide/customization/rules/command-rules/)
+- Comandos de teste devem estar no escopo permitido pelas [regras de comando](/pt/guide/customization/rules/command-rules/)
 - Se testes de integração tocarem APIs de produção, a especificação deve proibi-lo ou exigir mock
 
 ## Lista de aceitação
 
 - [ ] Evidência de falha→sucesso nos testes (logs ou CI)
-- [ ] Suíte completa ou no âmbito acordado a passar
+- [ ] Suíte completa ou no escopo acordado a passar
 - [ ] Diff sem remoção irrelevante de testes
 - [ ] Consistente com [definir concluído](/pt/prompts/define-done/)
 
@@ -73,10 +74,3 @@ Combine com [diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before
 
 - [Correr testes](/pt/guide/quality/run-tests/)
 - [Caso: correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre correr testes, definição de concluído, correção de bug com verificação e regras de comando; o conteúdo foca o método estável «fazer o teste falhar primeiro, depois conduzir a passagem com implementação mínima».  
-**Última verificação:** 2026-07-26

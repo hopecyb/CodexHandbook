@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Zerlegung und Übergabe langer Aufgaben; interne Links und Phasenbeispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Prompts für lange Aufgaben
 description: 'Phasen aufteilen, Checkpoints und Übergabeinformationen.'
 locale: de
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: "450ed9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Lange Aufgaben scheitern oft so:
@@ -71,7 +76,7 @@ Vier Blöcke:
 
 ```text
 Phase 1: Recherchieren und Optionen listen, kein Code, auf Bestätigung warten
-Phase 2: Nur minimale Änderung, danach Impact melden
+Phase 2: Nur minimale Änderung, danach den betroffenen Umfang nennen
 Phase 3: Überprüfung ergänzen und relevante Checks laufen lassen
 Phase 4: Änderungen, Risiken und Folgeempfehlungen zusammenfassen
 ```
@@ -79,10 +84,3 @@ Phase 4: Änderungen, Risiken und Folgeempfehlungen zusammenfassen
 Besser: Jede Phase kann stoppen und geprüft werden — nicht alles in einem Rutsch.
 
 Dazu: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/) · [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Zerlegung und Übergabe langer Aufgaben; interne Links und Phasenbeispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,17 +1,22 @@
 ---
-title: Para quién es este handbook
-description: Explica cómo pueden usar este handbook principiantes, creadores, desarrolladores y equipos.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe a quién se dirige el manual y en qué escenarios se usa; se revisaron enlaces internos y la estratificación de lectores, y el cuerpo no depende de hechos de producto volátiles."
+  checkedAt: "2026-07-26"
+title: Para quién es este manual
+description: Explica cómo pueden usar este manual principiantes, creadores, desarrolladores y equipos.
 locale: es
 source_locale: zh-CN
-source_revision: 95272c3
+source_revision: '95272c3'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 3
 ---
 
-Este handbook está pensado sobre todo para quien empieza a usar Codex en serio.
+Este manual está pensado sobre todo para quien empieza a usar Codex en serio.
 
 No asume que ya sepas esto:
 
@@ -25,10 +30,10 @@ Si ya lo dominas, leerás más rápido; si no, el texto intenta que puedas segui
 
 ## Cuatro tipos de lectores
 
-| Lector | Cómo usarás este handbook |
+| Lector | Cómo usarás este manual |
 |---|---|
-| Principiante en IA | De «qué es» a la primera Tarea segura; los términos se explican |
-| Creador | Investigación, escritura, demos y prototipos; puedes leer el resumen y luego los temas de capacidades |
+| Principiante en IA | De «qué es» a la primera tarea segura; los términos se explican |
+| Creador | Investigación, escritura, presentaciones y prototipos; puedes leer el resumen y luego los temas de capacidades |
 | Desarrollador | Comprensión de código, implementación, pruebas, revisión y automatización |
 | Equipo | Documentación compartida, permisos, calidad y gobernanza (contenido profundo en hitos posteriores) |
 
@@ -48,7 +53,7 @@ El cuerpo del texto se escribe sobre todo para **lectores que no dominan la term
 
 ## Malentendidos frecuentes
 
-### 1. Este handbook no es solo para programadores
+### 1. Este manual no es solo para programadores
 
 Si en tu trabajo hay cosas como estas, también te sirve:
 
@@ -60,10 +65,10 @@ Si en tu trabajo hay cosas como estas, también te sirve:
 
 ### 2. Si ya tienes algo de base, también puedes leer las primeras páginas
 
-«Antes de empezar», «Fundamentos» y «Primera Tarea» no solo allanán el camino a quien parte de cero; también te ayudan a calibrar rápido:
+«Antes de empezar», «Fundamentos» y «Primera tarea» no solo allanan el camino a quien parte de cero; también te ayudan a calibrar rápido:
 
 - cómo funciona realmente Codex
-- cómo conviene plantear una Tarea
+- cómo conviene plantear una tarea
 - qué riesgos conviene evitar de antemano
 
 ### 3. No hace falta leerlo de cabo a rabo
@@ -71,10 +76,10 @@ Si en tu trabajo hay cosas como estas, también te sirve:
 Mucha gente lee así:
 
 1. Lee la página de arranque
-2. Completa una Tarea pequeña de punta a punta
+2. Completa una tarea pequeña de punta a punta
 3. Luego salta según tu propio rol
 
-## Para qué no sirve este handbook
+## Para qué no sirve este manual
 
 - Un changelog oficial completo de un solo producto
 - Un repositorio de scripts listos para producción sin verificación
@@ -85,15 +90,8 @@ Mucha gente lee así:
 Si te reconoces en esto, vale la pena leerlo:
 
 - Quieres empezar a usar Codex con seguridad
-- Ya sabes un poco, pero sientes que no planteas bien las Tareas
+- Ya sabes un poco, pero sientes que no planteas bien las tareas
 - Quieres convertir tu uso personal en un flujo reutilizable para el equipo
 - No vienes del desarrollo, pero quieres integrar la IA de verdad en el trabajo diario
 
 Siguiente paso: [Elige tu ruta](/es/guide/start-here/choose-your-path/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo describe a quién se dirige el handbook y en qué escenarios se usa; se revisaron enlaces internos y la estratificación de lectores, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

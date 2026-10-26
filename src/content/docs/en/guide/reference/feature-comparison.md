@@ -3,12 +3,17 @@ title: Feature comparison
 description: Compare the desktop App, CLI, IDE, and Cloud by work surface, execution location, and review method.
 locale: en
 source_locale: zh-CN
-source_revision: b3d30b0
+source_revision: 'b3d30b0'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Compared with current App, CLI, IDE, Cloud, Authentication, and Pricing documentation. The matrix keeps explicit work-location, context, review, and sign-in boundaries instead of guessing volatile features as strong, medium, or weak.
+  checkedAt: '2026-08-26'
 ---
 
 This table compares only **stable primary workflows**. It does not turn rapidly changing small features into permanent promises. Decide with the [client-selection diagram](/en/guide/choose-your-client/), then confirm differences here.
@@ -65,13 +70,3 @@ Plugins, Scheduled tasks, notifications, models, and organization policies evolv
 - whether API-key sign-in supports a ChatGPT or Cloud feature.
 
 Keep the rule simple: **IDE for local code, CLI for terminal loops, desktop App for local task coordination, Cloud for isolated remote execution.**
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with current App, CLI, IDE, Cloud, Authentication, and Pricing documentation. The matrix keeps explicit work-location, context, review, and sign-in boundaries instead of guessing volatile features as strong, medium, or weak.
-
-**Last verified:** 2026-08-26

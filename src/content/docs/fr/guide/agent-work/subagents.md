@@ -3,14 +3,18 @@ title: Sous-agents
 description: Déléguez un travail bien délimité à des contextes indépendants, puis laissez l'Agent principal réunir les preuves, résoudre les conflits et accepter le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: a3f2be5
+source_revision: "a3f2be5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: comparaison avec la documentation actuelle sur les sous-agents. Cette page explique l'isolation du contexte, l'héritage des autorisations, les points d'accès à l'activité, le coût en tokens, les conflits d'écriture et la responsabilité finale de l'Agent principal.
+  checkedAt: '2026-08-26'
 ---
-
 Un **sous-agent** est une unité de travail indépendante lancée par l'Agent principal pour traiter un sous-problème défini. Il dispose de son propre contexte et renvoie ses conclusions et ses preuves au fil principal. Les décisions globales et l'acceptation finale restent du ressort de l'Agent principal.
 
 ![Orchestration des sous-agents Codex : l'Agent principal délègue un travail délimité, les sous-agents renvoient des preuves, puis l'Agent principal les réunit et vérifie](/diagrams/subagent-orchestration-fr.svg)
@@ -119,13 +123,3 @@ La réussite des tests isolés ne garantit pas celle de l'ensemble une fois fusi
 - Un **worktree** isole les modifications de fichiers ; il résout les conflits de workspace, pas ceux de contexte.
 
 Poursuivez avec [Coordination multi-Agent](/fr/cases/workflows/multi-agent-coordination/) et [Passation et reprise](/fr/guide/agent-work/handoff-and-resume/).
-
----
-
-**Statut :** verified
-
-**Produits concernés :** App / CLI / IDE
-
-**Base de vérification :** comparaison avec la documentation actuelle sur les sous-agents. Cette page explique l'isolation du contexte, l'héritage des autorisations, les points d'accès à l'activité, le coût en tokens, les conflits d'écriture et la responsabilité finale de l'Agent principal.
-
-**Dernière vérification :** 2026-08-26

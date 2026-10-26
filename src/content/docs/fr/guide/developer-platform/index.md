@@ -10,9 +10,10 @@ sidebar:
   order: 50
 locale: fr
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: 'f58851e'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 La **Plateforme développeur** est pour ceux qui veulent **industrialiser** Codex dans les pipelines : apps personnalisées, revue par lot, portes de release, portails développeur internes. Pour l'usage quotidien « écrire un prompt pour corriger un bug », commencez par [Premiers pas](/fr/guide/getting-started/).
@@ -23,7 +24,7 @@ Il vise des scénarios comme :
 
 - Exécuter des tâches automatiquement en CI
 - Intégrer Codex dans votre backend ou outils internes
-- Faire Codex partie des flux de travail d'équipe
+- Intégrer Codex aux flux de travail de l’équipe
 
 ## Ce que ce chapitre couvre
 
@@ -54,7 +55,7 @@ Fournisseur Git / tickets / stockage d'artefacts
 
 Le SDK Codex exécute un Agent local. Un runner distant, une file et des rappels HTTP que vous créez relèvent de la conception de votre système d’intégration. Ne déduisez pas de ce schéma l’existence d’une API unifiée de tâches cloud hébergées. Voir la [présentation du SDK](/fr/guide/developer-platform/sdk-overview/) pour les sources et un appel minimal.
 
-1. **Idempotent et réessayable** : une revue répétée du même PR devrait donner des résultats comparable
+1. **Idempotent et réessayable** : une revue répétée du même PR devrait donner des résultats comparables
 2. **Privilège minimum** : tokens CI en lecture seule ou limités à des dépôts spécifiques
 3. **Observable** : retenir version du prompt, modèle, artefacts diff
 4. **Human-in-the-loop** : commentaires auto ≠ merge auto

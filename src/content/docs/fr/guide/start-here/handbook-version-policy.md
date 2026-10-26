@@ -1,22 +1,28 @@
 ---
-title: Politique de version du handbook
+title: Politique de version du manuel
 description: Statut du contenu, dates de vérification et mises à jour continues.
 locale: fr
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page a été vérifiée selon les six statuts du manuel, les règles d’affichage des mentions de vérification et la priorité accordée aux sources officielles. Elle décrit la politique de version et la méthode de lecture du site, sans dépendre de paramètres d’une version précise du produit.
+  checkedAt: '2026-07-26'
+reviewed_at: 2026-10-26
 ---
 
 ## Mises à jour continues
 
-Ce handbook n'est pas figé durablement sur une seule version de Codex. Le produit évolue : chaque page précise la portée des vérifications au moyen de son statut, de sa date de vérification et d'éléments concrets. La date seule n'est pas une note de fiabilité.
+Ce manuel n'est pas figé durablement sur une seule version de Codex. Le produit évolue : chaque page précise la portée des vérifications au moyen de son statut, de sa date de vérification et d'éléments concrets. La date seule n'est pas une note de fiabilité.
 
 ## Sommaire
 
-- Pourquoi ce handbook ne peut pas supposer que rien ne changera
+- Pourquoi ce manuel ne peut pas supposer que rien ne changera
 - Comment lire le statut et la date de vérification en haut d'une page
 - Quelle source suivre en cas de conflit avec la documentation officielle
 
@@ -52,7 +58,7 @@ Pour le comportement du produit, référez-vous à la [documentation Codex d'Ope
 
 ## Malentendus fréquents
 
-### 1. Une information inscrite dans le handbook ne reste pas forcément vraie indéfiniment
+### 1. Une information inscrite dans le manuel ne reste pas forcément vraie indéfiniment
 
 Ces sujets changent particulièrement vite :
 
@@ -67,7 +73,7 @@ Le contenu principal existe, mais n'a pas atteint le niveau de confirmation le p
 
 ### 3. En cas de conflit avec la documentation officielle, ne faites pas une moyenne des deux
 
-Consultez le handbook pour comprendre les notions et les parcours ; consultez la documentation officielle pour le comportement actuel et la syntaxe exacte des paramètres.
+Consultez le manuel pour comprendre les notions et les parcours ; consultez la documentation officielle pour le comportement actuel et la syntaxe exacte des paramètres.
 
 ## Comment juger la fiabilité d'une page
 

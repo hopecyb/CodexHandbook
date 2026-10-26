@@ -16,16 +16,17 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 source_revision: "4ecfa1c"
 ---
 
-Codex Dream Skin é um tema de desktop de terceiros. Segundo a documentação do projeto, injeta alterações visuais por uma ligação CDP local sem modificar o pacote oficial. Essa é a descrição do projeto; este manual não verificou comportamento de ficheiros, rede ou compatibilidade da interface em todas as versões.
+Codex Dream Skin é um tema de desktop de terceiros. Segundo a documentação do projeto, injeta alterações visuais por uma ligação CDP local sem modificar o pacote oficial. Essa é a descrição do projeto; este manual não verificou comportamento de arquivos, rede ou compatibilidade da interface em todas as versões.
 
 ![Ilustração do aspeto do tema](/theme/codex-dream-skin/article/codex-dream-skin-home.jpg)
 
-A ilustração já presente aqui não é prova desta verificação de versão. Também não demonstra que a caixa de entrada, os botões de aprovação e todas as vistas de tarefas funcionem corretamente.
+A ilustração já presente aqui não é prova desta verificação de versão. Também não demonstra que a campo de entrada, os botões de aprovação e todas as vistas de tarefas funcionem corretamente.
 
 ## Versão e estado da verificação
 
@@ -40,11 +41,11 @@ A ilustração já presente aqui não é prova desta verificação de versão. T
 
 As notas de versão referem que algumas correções de interface foram verificadas com o macOS Codex 26.901.41123. Esta versão difere da 26.911.61220 registada aqui, pelo que não comprova compatibilidade da combinação. A ligação macOS desta página está fixada em v1.5.18; para outras versões, consulte a tag correspondente.
 
-Ler a versão do cliente fornece contexto do ambiente, não prova compatibilidade do tema. Use o [registo de compatibilidade e recuperação](/pt/guide/reference/resource-compatibility/) para guardar os seus testes.
+Ler a versão do cliente fornece contexto do ambiente, não prova compatibilidade do tema. Use o [registro de compatibilidade e recuperação](/pt/guide/reference/resource-compatibility/) para guardar os seus testes.
 
 ## Antes de instalar
 
-1. Escolha uma versão definida nas publicações do projeto. Registe o nome do pacote, URL e SHA-256. Se o editor fornecer um ficheiro de verificações, compare-o com o pacote. Um hash igual mostra que os ficheiros correspondem, não que o programa é seguro.
+1. Escolha uma versão definida nas publicações do projeto. Registe o nome do pacote, URL e SHA-256. Se o editor fornecer um arquivo de checksums, compare-o com o pacote. Um hash igual mostra que os arquivos correspondem, não que o programa é seguro.
 2. Guarde versões do cliente e do sistema, definições do tema e cópias de imagens personalizadas que tem direito a usar. Registe o local do backup.
 3. Verifique primeiro a página inicial, tarefas, entrada, deslocação, pesquisa e aprovações sem tema como referência.
 4. Leia as instruções de instalação, atualização e remoção da versão escolhida. A documentação da branch main pode ser mais recente do que o instalador.
@@ -60,21 +61,21 @@ O projeto oferece gestão de imagens de fundo e temas; os nomes dos menus variam
 - Depois de mudar de página e reiniciar, o tema mostrado corresponde ao escolhido?
 - Depois de desligar o tema, a interface original regressa e o problema ainda se reproduz?
 
-Se houver conteúdos tapados ou controlos inoperantes, pare de usar o tema e siga a recuperação. Não esconda o problema acrescentando mais estilos.
+Se houver conteúdos tapados ou controles inoperantes, pare de usar o tema e siga a recuperação. Não esconda o problema acrescentando mais estilos.
 
 ## Remoção e recuperação
 
-O guia macOS do projeto pede «Restaurar original e desinstalar» na barra de menus antes de remover a aplicação do tema. Temas e imagens do utilizador podem ser guardados ou apagados separadamente. Faça backup dos recursos próprios antes. No Windows, siga o guia da versão respetiva, sem reutilizar caminhos macOS.
+O guia macOS do projeto pede «Restaurar original e desinstalar» na barra de menus antes de remover a aplicação do tema. Temas e imagens do usuário podem ser guardados ou apagados separadamente. Faça backup dos recursos próprios antes. No Windows, siga o guia da versão respetiva, sem reutilizar caminhos macOS.
 
-Os passos seguintes são recomendações deste manual para aceitar a recuperação, não um registo de testes já feitos:
+Os passos seguintes são recomendações deste manual para aceitar a recuperação, não um registro de testes já feitos:
 
-1. Guarde o trabalho no cliente e registe o tema atual e os ficheiros a manter.
+1. Guarde o trabalho no cliente e registe o tema atual e os arquivos a manter.
 2. Use o fluxo de recuperação da ferramenta e conserve as mensagens de conclusão, falha ou estado incerto.
 3. Abra o Codex pelo acesso normal e verifique fundo, texto, entrada e navegação nas tarefas.
 4. Confirme que a ferramenta não inicia automaticamente nem reinjeta o tema. Se necessário, examine processos e ligações de depuração sem terminar indiscriminadamente processos de nome semelhante.
-5. Remova a aplicação apenas depois dos controlos. Guarde imagens personalizadas até decidir separadamente que não precisa delas.
+5. Remova a aplicação apenas depois de passar nas verificações. Guarde imagens personalizadas até decidir separadamente que não precisa delas.
 
-Backup existente, saída do desinstalador ou fecho da janela do tema não provam, por si só, recuperação bem-sucedida. Se o resultado for incerto, guarde registos e consulte os Issues do projeto; não declare a restauração concluída. Não apague todo o diretório de configuração do Codex para remover o tema.
+Backup existente, saída do desinstalador ou fecho da janela do tema não provam, por si só, recuperação bem-sucedida. Se o resultado for incerto, guarde registros e consulte os Issues do projeto; não declare a restauração concluída. Não apague todo o diretório de configuração do Codex para remover o tema.
 
 ## Limites destas conclusões
 

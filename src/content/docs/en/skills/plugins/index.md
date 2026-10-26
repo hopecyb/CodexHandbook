@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; Plugins are not supported in the IDE integration"
+  checkedAt: "2026-08-26"
 title: Plugins
 description: Browse, install, and govern reusable bundles of Skills, connectors, MCP, Hooks, and task templates.
 locale: en
 source_locale: zh-CN
-source_revision: 8917a59
+source_revision: '8917a59'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 A Plugin is a unit of capability composition and distribution. It may contain Skills, connectors, MCP servers, browser extensions, Hooks, and Scheduled task templates; those components still perform the actual work.
@@ -43,11 +47,3 @@ A Plugin is a unit of capability composition and distribution. It may contain Sk
 ## Official source
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; Plugins are not supported in the IDE integration
-
-**Last verified:** 2026-08-26

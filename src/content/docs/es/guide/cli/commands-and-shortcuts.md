@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Comparado con las páginas oficiales actuales Developer commands y Non-interactive mode; se verificaron `codex`, `codex exec`, `--cd` / `-C` y los puntos de entrada slash dentro de la sesión. Los atajos siguen remitiendo al autocompletado y a `--help` vigentes.
+  checkedAt: '2026-08-26'
 title: Comandos y atajos
 description: Subcomandos de la CLI, acciones dentro de la sesión y hábitos de teclado; una guía de producto cuyos parámetros completos están en la referencia.
 locale: es
-source_locale: zh-cn
-source_revision: 2896e32
+source_locale: zh-CN
+source_revision: "2896e32"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
 ---
@@ -116,7 +121,7 @@ IDE: [flujo de tareas locales](/es/guide/ide/local-task-workflow/)
 ## Errores habituales
 
 - Iniciar en el directorio equivocado y modificar un proyecto vecino.
-- Ejecutar `/review`, que pertenece a la App, como subcomando de una terminal externa.
+- Ejecutar `/review`, que se usa dentro de la sesión, como subcomando de una terminal externa.
 - Pegar «prompts mágicos» de terceros sin revisar en una sesión interactiva.
 
 No necesitas conocer todos los comandos y atajos el primer día. Distingue entre «conversar mientras trabajo» y «ejecutar una vez», y la elección será mucho más sencilla.
@@ -129,12 +134,3 @@ No necesitas conocer todos los comandos y atajos el primer día. Distingue entre
 
 ## Fuentes de referencia
 - Documentación de OpenAI Codex CLI
----
-
-**Estado:** verified
-
-**Productos aplicables:** CLI
-
-**Base de verificación:** Comparado con las páginas oficiales actuales Developer commands y Non-interactive mode; se verificaron `codex`, `codex exec`, `--cd` / `-C` y los puntos de entrada slash dentro de la sesión. Los atajos siguen remitiendo al autocompletado y a `--help` vigentes.
-
-**Última verificación:** 2026-08-26

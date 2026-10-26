@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Worktrees
 description: Isolate parallel chats with Git worktrees and return safely to the local checkout.
 locale: en
 source_locale: zh-CN
-source_revision: 3569716
+source_revision: '3569716'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
 ---
@@ -60,11 +64,3 @@ Then run the task-specific tests. Use Handoff, commit, or merge only after you k
 
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26

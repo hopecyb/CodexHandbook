@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI (depending on version)"
+  basis: "Cross-checked against OpenAI Help Center’s current official ChatGPT Memory description and this handbook’s verified project instructions, personal preferences, and security boundary chapters; page content is limited to the stable principle that memory suits personal preferences and a few stable facts and does not replace repo rules or sensitive information management."
+  checkedAt: "2026-07-26"
 title: Memories and Persistent Context
 description: How Codex remembers preferences and facts across sessions—capabilities, boundaries, and team norms.
 locale: en
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: '7a689ad'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -87,7 +92,7 @@ Memory gets messy when information with different lifetimes and visibility is pu
 |---|---|
 | Personal explanation preference | Memory |
 | Team-wide rule | `AGENTS.md` or project config |
-| Directory-specific convention | Directory-level project instructions |
+| Directory-specific convention | Directory-level project instructions or rule files |
 | Temporary task goal | Current prompt or issue |
 | Reusable steps | Skill or prompt template |
 | Automatic check | Hook |
@@ -127,9 +132,3 @@ Memory is best for “personal preferences and a few stable facts you always rep
 
 ## References
 - OpenAI Codex memory documentation (per version)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI (depending on version)  
-**Verification basis:** Cross-checked against OpenAI Help Center’s current official ChatGPT Memory description and this handbook’s verified project instructions, personal preferences, and security boundary chapters; page content is limited to the stable principle that memory suits personal preferences and a few stable facts and does not replace repo rules or sensitive information management.  
-**Last verified:** 2026-07-26

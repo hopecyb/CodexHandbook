@@ -3,10 +3,15 @@ title: 긴 작업 관리
 description: 수 시간 또는 여러 세션에 걸친 큰 작업—검사 지점, 압축, 위임, 종료 조건입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: 'c2a9887'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers의 현재 장기 목표·긴 작업 협업 공개 use cases와, 이 핸드북에서 이미 검증된 인수인계 복구, 계획, 압축, 위임 장을 교차 확인했습니다. 이 페이지는 긴 작업의 검사 지점, 인계, 종료 조건 등 안정적인 방법만 설명합니다.
+  checkedAt: '2026-07-26'
 ---
 
 긴 작업에서 흔한 문제는 **컨텍스트가 가득 참**, **사람이 자리를 비움**, **방향이 표류함**, **언제 멈출지 모름**입니다. 이 페이지는 [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)을 수 시간 또는 여러 세션 시나리오에 놓아 봅니다.
@@ -32,7 +37,7 @@ reviewed_at: 2026-08-26
 
 ### 1. 계획 동결
 
-서면 계획을 산출합니다: 범위, 비목표, 마일스톤, 인수 명령. 사람이 확인한 뒤에 대규모 실행합니다.
+서면 계획을 산출합니다: 범위, 비목표, 마일스톤, 검증 명령. 사람이 확인한 뒤에 대규모 실행합니다.
 
 [계획](/ko/guide/agent-work/planning/) · [Subagent](/ko/guide/agent-work/subagents/)
 
@@ -62,17 +67,10 @@ reviewed_at: 2026-08-26
 
 - PROGRESS 파일이 없어 세션을 바꾼 뒤 반복 노동
 - 긴 작업에 비목표를 두지 않아 Agent가 겸사 「전체 저장소 정리」
-- Cloud 작업이 밤새 승인 없이 매달림
+- Cloud 작업이 승인을 기다리며 밤새 멈춰 있음
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 긴 작업 시작 전에 계획 문서가 있음
 - [ ] 최소 두 검사 지점에 검토 가능한 diff가 있음
 - [ ] 일시중지, 복구, 인계 방법을 알고 있음
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 장기 목표·긴 작업 협업 공개 use cases와, 이 핸드북에서 이미 검증된 인수인계 복구, 계획, 압축, 위임 장을 교차 확인했습니다. 이 페이지는 긴 작업의 검사 지점, 인계, 종료 조건 등 안정적인 방법만 설명합니다.  
-**최근 검증:** 2026-07-26

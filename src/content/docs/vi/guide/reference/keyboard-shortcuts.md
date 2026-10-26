@@ -3,15 +3,16 @@ legacyVerification:
   status: "verified"
   products: "App, CLI, IDE"
   checkedAt: "2026-08-26"
-title: Phím tắt bàn phím
-description: Chỉ liệt kê các phím tắt cho App và IDE có thể đối chiếu với tài liệu chính thức hiện hành.
-locale: vi
-source_locale: zh-CN
-source_revision: 4f812d9
-translation_status: draft
-translated_at: 2026-09-20
+title: "Phím tắt bàn phím"
+description: "Chỉ liệt kê các phím tắt cho App và IDE có thể đối chiếu với tài liệu chính thức hiện hành."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "4f812d9"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 90
+reviewed_at: "2026-10-26"
 ---
 
 Phím tắt thay đổi theo nền tảng, ứng dụng và thiết lập tùy chỉnh. Trang này chỉ ghi những tổ hợp được tài liệu chính thức hiện hành nêu rõ; để xem danh sách đầy đủ, hãy mở mục **Keyboard Shortcuts** trong ứng dụng.
@@ -58,11 +59,3 @@ Trước tiên, hãy nắm cách mở Settings, xem Activity, mở terminal và 
 - [Thông báo và Activity](https://learn.chatgpt.com/docs/notifications)
 - [Terminal tích hợp](https://learn.chatgpt.com/docs/integrated-terminal)
 - [Thiết lập IDE](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App, CLI, IDE
-
-**Kiểm chứng gần nhất:** 2026-08-26

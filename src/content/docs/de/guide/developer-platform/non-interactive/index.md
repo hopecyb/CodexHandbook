@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "Gegen die aktuelle non-interactive-Unterstruktur und Einstiegslinks abgeglichen; diese Seite übernimmt nur die Gruppenbeschreibung „Nicht-interaktiver Modus für Skripte, Batch und Pipelines“, ohne konkrete Befehlsparameter zu versprechen."
+  checkedAt: "2026-07-26"
 title: Nicht-interaktiver Modus
 description: 'Erläuterungsseite für Batch, Skripte und Pipelines — zuerst verstehen, wofür er geeignet ist, dann Befehle und Ausgabe gestalten.'
 locale: de
 source_locale: zh-CN
-source_revision: 2d542c9
+source_revision: "2d542c9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Viele verstehen „Nicht-interaktiver Modus“ zuerst als „Codex ohne Chat-Oberfläche“.
 
-Der Nicht-interaktive Modus eignet sich besser dafür, Codex in Skripte, CI oder Batch zu legen und mit einem Befehl eine Sache stabil abzuschließen.
+Der nicht interaktive Modus eignet sich besser dafür, Codex in Skripte, CI oder Stapelverarbeitung einzubinden und mit einem Befehl eine Sache stabil abzuschließen.
 
 ## Empfohlene Reihenfolge
 
@@ -27,10 +32,3 @@ Der Nicht-interaktive Modus eignet sich besser dafür, Codex in Skripte, CI oder
 - Wie macht man Ausgabe für Folgeskripte leichter verarbeitbar?
 
 Er eignet sich dafür, dass Skripte und Pipelines Ergebnisse stabil übernehmen — nicht für langes Hin-und-Her-Chatten.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI / API / Cloud  
-**Prüfgrundlage:** Gegen die aktuelle non-interactive-Unterstruktur und Einstiegslinks abgeglichen; diese Seite übernimmt nur die Gruppenbeschreibung „Nicht-interaktiver Modus für Skripte, Batch und Pipelines“, ohne konkrete Befehlsparameter zu versprechen.  
-**Zuletzt geprüft:** 2026-07-26

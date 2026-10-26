@@ -3,12 +3,17 @@ title: Accounts, plans, and access
 description: Distinguish ChatGPT plan access, API-key usage, and organization workspace permissions.
 locale: en
 source_locale: zh-CN
-source_revision: ecfa8f9
+source_revision: '7b123e5'
 translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+translated_at: 2026-10-24
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
+  checkedAt: '2026-08-26'
 ---
 
 Codex can currently be used through a **ChatGPT plan** or with **usage-based API-key billing**, but the two methods do not expose identical entry points or governance boundaries.
@@ -20,7 +25,7 @@ Codex can currently be used through a **ChatGPT plan** or with **usage-based API
 | Sign in with ChatGPT | Personal interactive work, desktop, Cloud, and organization workspaces | Governed by ChatGPT plan limits, workspace roles, and administrator policies |
 | Sign in with an API key | Local Codex, scripts, and CI | Billed by API usage; some ChatGPT-workspace or Cloud features are unavailable |
 
-The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This handbook does not duplicate the price table; consult the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
+The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This page does not maintain a price table; see [our plan selection and price sources](/en/chatgpt-pricing/) and check the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
 
 ## Why an account may still lack access
 
@@ -53,12 +58,5 @@ If the CLI works with an API key but the Cloud button is unavailable, installati
 
 Next, read [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/).
 
----
 
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
-
-**Last verified:** 2026-08-26
+For current model options, surface differences, and task recommendations: [Model selection: find a starting point](/en/guide/reference/model-selection/).

@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với mô tả hiện tại của OpenAI Developers về tác vụ dài, kiểm chứng và đẩy theo từng bước, cùng các chương kế hoạch, chất lượng và ngữ cảnh đã kiểm chứng trong sổ tay; trang này chỉ giữ nguyên tắc cộng tác ổn định “chỉnh cục bộ tốt hơn lật cả đoạn”.", "checkedAt": "2026-07-26"}
 title: Tiến độ và điều hướng
 description: Khi thực thi lệch hướng, dùng lệnh ngắn để kéo Codex về đúng quỹ đạo.
 locale: vi
 source_locale: zh-CN
-source_revision: c9ea3be
+source_revision: "c9ea3be"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -91,7 +92,7 @@ Hiệu quả hơn là chỉ rõ:
 Bạn có thể phán đoán vậy:
 
 - **Chỉ sai thứ tự, phạm vi lớn, dạng đầu ra sai**: điều hướng trước
-- **Mục tiêu đổi, tiền đề đổi, mặt ảnh hưởng đổi**: quay lại lập kế hoạch
+- **Mục tiêu đổi, tiền đề đổi, phạm vi ảnh hưởng đổi**: quay lại lập kế hoạch
 
 ## Ba cách điều hướng thường gặp
 
@@ -108,7 +109,7 @@ Trước hết chỉ xử lý trang đăng nhập, đừng mở rộng sang đă
 Khi việc nó làm không sai, nhưng trước sau chưa hợp:
 
 ```text
-Bổ sung kiểm chứng và kiểm thử trước, rồi mới tiếp tục sửa hiện thực.
+Bổ sung kiểm chứng và kiểm thử trước, rồi mới tiếp tục sửa phần triển khai.
 ```
 
 ### 3. Đổi dạng đầu ra
@@ -159,10 +160,3 @@ Khi phát hiện lệch trong thực thi, dùng lệnh ngắn nói rõ “giữ 
 - Cần viết quy trình thành chuỗi chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
 - Cần tách tác vụ cho người khác: xem [Subagent](/vi/guide/agent-work/subagents/)
 - Tác vụ gián đoạn rồi tiếp tục: xem [Bàn giao và khôi phục](/vi/guide/agent-work/handoff-and-resume/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả hiện tại của OpenAI Developers về tác vụ dài, kiểm chứng và đẩy theo từng bước, cùng các chương kế hoạch, chất lượng và ngữ cảnh đã kiểm chứng trong sổ tay; trang này chỉ giữ nguyên tắc cộng tác ổn định “chỉnh cục bộ tốt hơn lật cả đoạn”.  
-**Kiểm chứng gần nhất:** 2026-07-26

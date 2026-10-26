@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "현재 Codex 런타임은 스킬이 스크립트와 결정적 명령 실행을 함께 쓰도록 허용합니다. 이 페이지는 「안정 동작은 스크립트화하고, 절차는 Skill이 제약한다」는 원칙을 강조하며 현행 능력과 일치합니다."
+  basis: "현재 Codex 런타임은 스킬이 스크립트와 결정론적 명령 실행을 함께 쓰도록 허용합니다. 이 페이지는 「안정 동작은 스크립트화하고, 절차는 Skill이 제약한다」는 원칙을 강조하며 현행 능력과 일치합니다."
   checkedAt: "2026-07-26"
 title: scripts/와 테스트
-description: Skill에 결정적 스크립트를 넣고 동작을 검증합니다.
+description: Skill에 결정론적 스크립트를 넣고 동작을 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: '900e6e4'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Skill을 처음 만들 때 흔한 방법은 모든 것을 `SKILL.md`에 쓰는 것입니다. 간단한 절차에는 괜찮지만, 어떤 단계가 **안정·반복·검증 가능**하게 실행되어야 한다면 스크립트가 순수 텍스트 설명보다 더 신뢰할 수 있습니다.
@@ -19,7 +19,7 @@ Skill을 처음 만들 때 흔한 방법은 모든 것을 `SKILL.md`에 쓰는 �
 고정 동작은 스크립트에 맡기고, 판단과 협업 절차는 Skill에 남기세요.
 
 
-어떤 단계가 결정적으로 실행되어야 할 때(테스트 실행, diff 생성, 형식 검증) `scripts/`에 스크립트를 두고, `SKILL.md`에서 언제 호출하는지 설명하세요.
+어떤 단계가 결정론적으로 실행되어야 할 때(테스트 실행, diff 생성, 형식 검증) `scripts/`에 스크립트를 두고, `SKILL.md`에서 언제 호출하는지 설명하세요.
 
 ## 예시
 
@@ -45,7 +45,7 @@ my-skill/
 
 - 연습용 저장소에서 스크립트를 수동 실행해 종료 코드와 출력을 확인
 - Skill로 end-to-end 절차를 트리거해 예상대로 스크립트를 호출하는지 확인
-- 팀 장면: CI나 pre-commit에서 스크립트가 여전히 동작하는지 검증
+- 팀 환경: CI나 pre-commit에서 스크립트가 여전히 동작하는지 검증
 
 ## 흔한 오해
 

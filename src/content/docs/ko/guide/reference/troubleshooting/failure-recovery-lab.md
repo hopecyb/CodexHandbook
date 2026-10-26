@@ -9,7 +9,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: "2026-09-18"
-  summary: 의도적으로 설계한 실패 다섯 개를 실제로 실행하고 각각 한 변수만 수정해 다시 실행했습니다. 원본 입력 해시는 그대로였습니다. 운영 사고나 모델 성공률 실험이 아닙니다.
+  summary: 의도적으로 설계한 실패 다섯 개를 실제로 실행하고 각각 한 변수만 수정해 재실행에 성공했습니다. 원본 입력 해시는 그대로였습니다. 운영 사고나 모델 성공률 실험이 아닙니다.
   environment: Python 3.12.11 / Darwin arm64. 임시 복사본과 합성 입력을 사용했으며 네트워크나 모델 호출은 없었습니다.
   evidence:
     - label: 다섯 실제 실행의 요약
@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: 'fc91872'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 먼저 오류를 보존하고 어떤 층에서 실패했는지 판단한 뒤 한 변수만 바꾸어 다시 실행하세요. 이 페이지는 고정 입력 다섯 개로 그 과정을 보여 줍니다. 작성자가 일부러 만든 오류이며 로그는 실제 명령줄 실행에서 나온 것으로 고객 사고를 가장하지 않습니다.

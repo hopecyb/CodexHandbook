@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI’s current Codex/plugin permission documentation continues to emphasize layering among read/write actions, approval, source boundaries, and role-based access control; this page does not declare specific rule file syntax and explains allow/deny as an execution-boundary pattern, distinct from sandbox, approval, and team review flows."
+  checkedAt: "2026-07-26"
 title: Allow and Deny Rules
 description: Constrain what the Agent can run with command and path rules—personal habits and team bottom lines.
 locale: en
 source_locale: zh-CN
-source_revision: 521ecc9
+source_revision: '521ecc9'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -25,7 +30,7 @@ If “rules” feels abstract, start here: agree in advance what Codex may and m
 
 Their value is mainly twofold:
 
-- Reduce low-risk operations you confirm daily anyway
+- Reduce repeated approval requests for everyday low-risk operations
 - Block high-risk operations that should not run automatically
 
 ## Rule Types (Conceptual)
@@ -108,10 +113,3 @@ Run the minimum boundary first; refine later.
 - Rule changes go through PR; treat like CI changes
 
 Good allow/deny rules state in advance which actions are reasonable and which should not happen.
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex/plugin permission documentation continues to emphasize layering among read/write actions, approval, source boundaries, and role-based access control; this page does not declare specific rule file syntax and explains allow/deny as an execution-boundary pattern, distinct from sandbox, approval, and team review flows.  
-**Last verified:** 2026-07-26

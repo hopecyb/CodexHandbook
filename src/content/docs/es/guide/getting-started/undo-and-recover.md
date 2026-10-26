@@ -3,8 +3,8 @@ title: Deshacer y recuperar
 description: Retrocede con seguridad cuando el resultado no convence.
 locale: es
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: '8aa3171'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
@@ -13,6 +13,7 @@ legacyVerification:
   products: App / CLI / IDE
   basis: Contrastado con los apartados verificados de introducción a aprobaciones, revisión del resultado, recuperación de fallos y Git/árbol de trabajo. Esta página solo describe el método estable «pausar, comprobar el alcance, preferir deshacer y recuperar un estado seguro», sin fijar como contrato el control de deshacer de ningún cliente.
   checkedAt: '2026-07-26'
+reviewed_at: '2026-10-25'
 ---
 
 La primera vez que usas Codex, la preocupación más habitual es: si se equivoca, ¿puedo volver atrás?
@@ -22,8 +23,8 @@ En la mayoría de los casos sí, pero conviene retroceder con un método seguro.
 Cuando el resultado se sale del alcance o la calidad no sirve:
 
 1. Usa la capacidad de deshacer / restaurar cambios del cliente (según la UI actual)
-2. Si el proyecto está bajo Git: descarta los cambios del árbol de trabajo como sepas (los principiantes pueden no usar Git aún y apoyarse en el directorio de práctica)
-3. Abre un Hilo nuevo, aprieta las restricciones y vuelve a intentarlo
+2. Si el proyecto está bajo Git: descarta los cambios del árbol de trabajo con un método que conozcas (los principiantes pueden no usar Git aún y apoyarse en el directorio de práctica)
+3. Abre un Hilo nuevo, delimita mejor las restricciones y vuelve a intentarlo
 
 Muchas veces, reducir el alcance de antemano ahorra trabajo: tocar pocos archivos, escribir prohibiciones claras, ver el plan antes de ejecutar.
 

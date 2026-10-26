@@ -3,15 +3,16 @@ legacyVerification:
   status: "verified"
   products: "App"
   checkedAt: "2026-08-26"
-title: Cài đặt và bắt đầu sử dụng
-description: Làm quen với dự án, cuộc trò chuyện, Codex và nơi đánh giá thay đổi trong ứng dụng ChatGPT trên máy tính.
-locale: vi
-source_locale: zh-CN
+title: "Cài đặt và bắt đầu sử dụng"
+description: "Làm quen với dự án, cuộc trò chuyện, Codex và nơi đánh giá thay đổi trong ứng dụng ChatGPT trên máy tính."
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "080436d"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 10
+reviewed_at: "2026-10-26"
 ---
 
 Chương này dành cho người lần đầu mở ứng dụng ChatGPT trên máy tính. Mục tiêu không phải là ghi nhớ mọi nút bấm, mà là hoàn thành một **tác vụ nhỏ có thể đánh giá và xác minh**.

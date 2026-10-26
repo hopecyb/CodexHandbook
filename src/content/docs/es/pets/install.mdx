@@ -3,9 +3,10 @@ title: Instalar un Codex Pet
 description: "Entiende la carpeta de instalación, el flujo de activación y los límites de seguridad de Codex Pets."
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 730c599
+reviewed_at: 2026-10-25
+source_revision: "730c599"
 contentType: guide
 editorialStatus: review
 verification:
@@ -19,7 +20,7 @@ import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 Este sitio todavía no ha probado la compatibilidad de un cliente y un paquete Pet concretos. Anota primero sus versiones y procedencia, y usa el [registro de compatibilidad y recuperación](/es/guide/reference/resource-compatibility/) para comprobar los resultados reales. El esquema solo explica la estructura; no es un contrato de formato para todas las versiones.
 
 
-Instalar un Codex Pet significa colocar un paquete de recursos legible por el cliente en una carpeta conocida. Cuando el cliente arranca o refresca ajustes, lee esa carpeta, encuentra los metadatos y carga los assets de animación correspondientes.
+Instalar un Codex Pet significa colocar un paquete de recursos legible por el cliente en una carpeta conocida. Cuando el cliente arranca o refresca ajustes, lee esa carpeta, encuentra los metadatos y carga los recursos de animación correspondientes.
 
 <PetScienceFigure variant="install" locale="es" />
 
@@ -31,7 +32,7 @@ Un Pet suele ser una carpeta local con al menos dos archivos:
   spritesheet.webp
 ```
 
-`pet.json` describe el nombre, la descripción y la ruta de la spritesheet. `spritesheet.webp` guarda los frames de animación. Ambos archivos suelen estar en la misma carpeta, y `spritesheetPath` debe apuntar a un archivo real.
+`pet.json` describe el nombre, la descripción y la ruta de la spritesheet. `spritesheet.webp` guarda los fotogramas de animación. Ambos archivos suelen estar en la misma carpeta, y `spritesheetPath` debe apuntar a un archivo real.
 
 ## La lógica de instalación
 
@@ -62,6 +63,6 @@ Antes de desactivar un Pet personalizado, vuelve a uno integrado u oculta los Pe
 
 ## Seguridad
 
-No ejecutes directamente comandos shell remotos de origen desconocido. Un script de instalación puede escribir archivos locales o ejecutar comandos adicionales. Es más seguro descargar el paquete, revisar `pet.json`, confirmar la fuente y la licencia de los assets, y copiarlo manualmente a la carpeta Pets.
+No ejecutes directamente comandos shell remotos de origen desconocido. Un script de instalación puede escribir archivos locales o ejecutar comandos adicionales. Es más seguro descargar el paquete, revisar `pet.json`, confirmar la fuente y la licencia de los recursos, y copiarlo manualmente a la carpeta Pets.
 
 Entender la instalación como “copiar un paquete local de recursos” aclara los límites: los archivos se pueden revisar, los scripts deben leerse y la fuente y la licencia deben conservarse.

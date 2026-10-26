@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos/directorios, anatomía de buena tarea, revisión de diffs y ejecución de tests; esta página solo confirma el principio estable de «limitar rutas, mantener estilo y aclarar primero la verificación» para archivos de texto/código.
+  checkedAt: '2026-07-26'
 title: Archivos de texto y código
 description: Haz que Codex lea y escriba correctamente código fuente, configuración y documentos de texto.
 locale: es
 source_locale: zh-CN
-source_revision: 1537793
+source_revision: "1537793"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -27,7 +32,7 @@ Al hacer que Codex cambie texto o código, lo clave es cambiar el sitio correcto
 |---|---|
 | Código fuente `.ts` `.py` etc. | Sigue `AGENTS.md` y los patrones existentes |
 | Configuración `.json` `.yaml` `.toml` | Fácil romper la estructura; exige sintaxis válida |
-| Documentos `.md` | Rutas relativas de enlaces, normas de mezcla de idiomas |
+| Documentos `.md` | Rutas relativas de enlaces, normas para combinar chino e inglés |
 | Código generado | Indica si debe hacerse commit o ir a gitignore |
 
 Contexto: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
@@ -102,11 +107,4 @@ Si te preocupa que toque demasiado, exige estas tres cosas:
 - Edición de texto forzada sobre binarios o archivos minificados
 - Enlaces de documentación con rutas absolutas que provocan 404 internos
 
-En texto y código lo peor es cambiar mucho, disperso y difícil de revisar. Si dejas claros alcance, estilo y verificación, te ahorras muchos idas y vueltas.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos/directorios, anatomía de buena tarea, revisión de diffs y ejecución de tests; esta página solo confirma el principio estable de «limitar rutas, mantener estilo y aclarar primero la verificación» para archivos de texto/código.  
-**Última verificación:** 2026-07-26
+En texto y código lo peor es cambiar mucho, disperso y difícil de revisar. Si dejas claros alcance, estilo y verificación, te ahorras muchas idas y vueltas.

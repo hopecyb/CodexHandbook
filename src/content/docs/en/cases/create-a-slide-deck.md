@@ -27,13 +27,14 @@ prev:
   link: /en/cases/write-an-article/
   label: Complete the source-backed article first
 next:
-  link: /en/guide/learning-paths/creator/
+  link: /en/guide/learning-paths/creator/#4-save-instructions-you-can-reuse-next-time
   label: Save a reusable task brief
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 7189374
+source_revision: '7189374'
+reviewed_at: 2026-10-25
 ---
 
 Compress an article into an eight-slide presentation. Deliver a PPTX with editable text, previews, and speaker notes. Preserve the sources' limits and conflict rather than adding numbers or charts to fill slides.
@@ -133,4 +134,4 @@ The first problem really occurred during this work: LibreOffice initially could 
 - Sources, synthetic identities, author advice, and the unresolved conflict remain clear.
 - Your verification record distinguishes checks run from checks not run, and the deliverables remain local.
 
-Continue with the [creator path: save a reusable task brief](/en/guide/learning-paths/creator/). You can turn stable steps into your own template, then learn to [package a workflow as a Skill](/en/cases/workflows/turn-a-workflow-into-a-skill/).
+Continue with the [creator path: save a reusable task brief](/en/guide/learning-paths/creator/#4-save-instructions-you-can-reuse-next-time). You can turn stable steps into your own template, then learn to [package a workflow as a Skill](/en/cases/workflows/turn-a-workflow-into-a-skill/).

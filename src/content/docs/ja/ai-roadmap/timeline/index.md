@@ -3,9 +3,10 @@ title: 出来事とテーマの索引
 description: 公開された出来事を根拠に AI アプリケーション工学のテーマを読み、公開日を概念の起源と混同しない。
 locale: ja
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: "847b43b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 このマップは確認可能な公開の出来事と学習上の提案を分けます。**日付が指すのは各行に記載した論文・発表・記事だけです。概念の誕生、業界での普及、能力の成熟を自動的に意味するものではありません。** 複数の技術は併用できます。時系列は、必ずその順に学習または移行すべき順番でもありません。

@@ -2,7 +2,8 @@
 title: "Làm việc với tệp"
 description: "Chỉ thêm một dòng vào tệp được chỉ định và kiểm tra thay đổi thực tế."
 contentType: "path"
-audiences: ["beginner"]
+audiences:
+  - "beginner"
 level: "beginner"
 editorialStatus: "review"
 sidebar:
@@ -20,11 +21,12 @@ prev:
 next:
   link: "/vi/guide/learning-paths/beginner/03-give-clear-tasks/"
   label: "Giao tác vụ rõ ràng"
-locale: vi
-source_locale: zh-CN
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "ec5c2d3"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 ## Điều kiện tiên quyết

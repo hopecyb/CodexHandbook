@@ -8,10 +8,10 @@ title: scripts/ e testes
 description: Adicione scripts determinísticos a um Skill e valide o comportamento.
 locale: pt
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: "900e6e4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 No começo de um Skill, é comum colocar tudo em `SKILL.md`. Fluxos simples aceitam isso; mas quando um passo precisa ser **estável, repetível e verificável**, script é mais confiável do que só texto.
@@ -43,7 +43,7 @@ Ações como «rodar checagens», «gerar diff», «validar formato», «exporta
 
 ## Sugestões de teste
 
-- Rode o script manualmente num repositório de prática; confira código de saída e stdout
+- Rode o script manualmente num repositório de prática; confira código de saída e saída produzida
 - Dispare o fluxo ponta a ponta pelo Skill e veja se o script é chamado como esperado
 - Em equipe: valide no CI ou no pre-commit se o script ainda funciona
 
@@ -58,14 +58,14 @@ Se o script fixar um passo que era instável, o conjunto fica mais simples.
 Ainda precisa checar:
 
 - Se o Skill dispara corretamente
-- Se a política de Aprovação não bloqueia
+- Se a política de aprovação não bloqueia
 - Se ainda roda no ambiente da equipe ou no CI
 
 ### 3. «Testar o Skill» = testar o script
 
 Não basta.
 
-O script testa uma ação;  
+O script testa uma ação;
 o Skill ainda precisa testar «quando chamar, como chamar e se a saída bate com o esperado».
 
 ## Ordem comum de Verificação
@@ -73,7 +73,7 @@ o Skill ainda precisa testar «quando chamar, como chamar e se a saída bate com
 No começo, use esta ordem:
 
 1. Rode o script sozinho
-2. Veja se código de saída e stdout estão claros
+2. Veja se código de saída e saída produzida estão claros
 3. Deixe o Skill chamar o fluxo completo uma vez
 4. Teste de novo num ambiente mais próximo do real
 
@@ -81,4 +81,4 @@ Assim fica mais fácil separar «script quebrado» de «integração do Skill er
 
 Ações que devem se repetir de forma estável não dependam só de texto. Faça o script funcionar primeiro; depois confirme a chamada pelo Skill.
 
-Scripts herdam a política atual de Aprovação; veja [regras de comando](/pt/guide/customization/rules/command-rules/) e [Segurança de Skills](/pt/skills/security/).
+Scripts herdam a política atual de aprovação; veja [regras de comando](/pt/guide/customization/rules/command-rules/) e [Segurança de Skills](/pt/skills/security/).

@@ -36,7 +36,7 @@
   <text x="205" y="382" class="tiny">Diese Aufgabenart wiederholt sich</text>
   <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
   <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
-  <text x="190" y="447" text-anchor="middle" class="note">Wiederverwendbarer Ablauf, Referenzen und Skripte</text>
+  <text x="190" y="447" text-anchor="middle" class="note">Ablauf, Referenzen, Skripte wiederverwenden</text>
   <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
   <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
   <text x="190" y="553" text-anchor="middle" class="note">Regeln für jeden Projektzugriff</text>
@@ -62,7 +62,7 @@
   <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
   <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
   <text x="910" y="497" text-anchor="middle" class="note">Zeitgesteuert wiederholen</text>
-  <text x="910" y="518" text-anchor="middle" class="tiny">Aufgabe vor der Planung verifizieren</text>
+  <text x="910" y="518" text-anchor="middle" class="tiny">Aufgabe vor der zeitgesteuerten Ausführung prüfen</text>
 
   <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
   <text x="550" y="651" text-anchor="middle" class="note">Typische Kombination: AGENTS.md für Regeln + Skill für Ablauf + MCP für Werkzeuge + Hook für Grenzen</text>

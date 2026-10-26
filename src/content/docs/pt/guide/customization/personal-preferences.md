@@ -1,24 +1,26 @@
 ---
 title: Preferências pessoais
-description: Configuração de utilizador, modelo predefinido e hábitos de interface, sem poluir as convenções de equipa no repositório.
+description: Configuração de usuário, modelo predefinido e hábitos de interface, sem poluir as convenções de equipe no repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: c381051
-translation_status: draft
+source_revision: "c381051"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 40
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Cruzada com capítulos já verificados deste manual sobre instruções de projeto, Profiles, divisão de definições e limites de segurança; esta página explica apenas o princípio estável de que «hábitos pessoais não devem poluir as regras do repositório da equipe», sem transformar a UI atual de um cliente concreto num contrato fixo.", "checkedAt": "2026-07-26"}
 ---
 
-As **preferências pessoais** são definições que se aplicam na sua máquina em todos os projetos: modelo predefinido, tema, hábitos de Aprovação, caminhos de Skills pessoais, etc. Ao contrário de `AGENTS.md` no repositório, as preferências pessoais **não devem** assumir que os colegas têm as mesmas.
+As **preferências pessoais** são definições que se aplicam na sua máquina em todos os projetos: modelo predefinido, tema, hábitos de aprovação, caminhos de Skills pessoais, etc. Ao contrário de `AGENTS.md` no repositório, as preferências pessoais **não devem** assumir que os colegas têm as mesmas.
 
 ## Conteúdo
 
 - O que deve ficar na camada pessoal e o que na camada de projeto
 - Como combinar com [Profiles](/pt/guide/customization/configuration/profiles/) para mudar de cenário
-- Evitar que definições pessoais permissivas se infiltrem no repositório da equipa
+- Evitar que definições pessoais permissivas se infiltrem no repositório da equipe
 
-Visão geral de prioridade: [Personalização](/pt/guide/customization/) · [Âmbito e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/)
+Visão geral de prioridade: [Personalização](/pt/guide/customization/) · [Escopo e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/)
 
 ## Porque separar esta camada
 
@@ -26,7 +28,7 @@ Muita gente começa por misturar estas coisas:
 
 - Como eu gosto de trabalhar
 - O que este repositório exige
-- O que a empresa ou a equipa impõe
+- O que a empresa ou a equipe impõe
 
 Se estas três classes não forem separadas, depois aparece facilmente:
 
@@ -41,10 +43,10 @@ Se estas três classes não forem separadas, depois aparece facilmente:
 | Modelo e nível de raciocínio por defeito | Desempenho do computador e plano pessoal |
 | Tema, tipos de letra e notificações | [Definições](/pt/guide/desktop-app/settings/) da app de desktop |
 | Ferramentas MCP pessoais | Acesso só de leitura a base local, concedido com cuidado |
-| Caminho da biblioteca pessoal de Skills | Manter distinto dos Plugins da equipa |
+| Caminho da biblioteca pessoal de Skills | Manter distinto dos Plugins da equipe |
 | Aliases do terminal e diretório habitual para iniciar `codex` | Ver [Configuração da CLI](/pt/guide/cli/configuration/) |
 
-## Conteúdo de equipa que não deve ficar só na camada pessoal
+## Conteúdo de equipe que não deve ficar só na camada pessoal
 
 - Estilo de código, comandos de teste, estrutura de diretórios → **`AGENTS.md` do projeto**
 - Política obrigatória de Sandbox → **configuração do projeto ou gestão da organização**
@@ -61,11 +63,11 @@ Se estas três classes não forem separadas, depois aparece facilmente:
 
 ### 1. O que gosto no dia a dia não deve tornar-se automaticamente o default global
 
-Se o seu hábito predefinido for permissivo, em projetos de clientes ou de equipa pode deixar de ser adequado.
+Se o seu hábito predefinido for permissivo, em projetos de clientes ou de equipe pode deixar de ser adequado.
 
 ### 2. Preferências pessoais e regras de projeto são quase a mesma coisa?
 
-Diferem muito.  
+Diferem muito.
 Preferências pessoais são «eu costumo assim»; regras de projeto são «neste repositório todos devem tentar assim».
 
 ### 3. «Na minha máquina está bem» não basta para julgar se o conjunto é razoável
@@ -86,11 +88,11 @@ Quando não tiver a certeza se uma definição deve ir para a camada pessoal, pe
 
 Se a resposta às perguntas 2 ou 3 for preocupante, não faça disso o default global à ligeira.
 
-As preferências pessoais existem para lhe ficar à mão — não para substituir as regras da equipa, nem para levar definições permissivas a todos os projetos de uma vez.
+As preferências pessoais existem para lhe ficar à mão — não para substituir as regras da equipe, nem para levar definições permissivas a todos os projetos de uma vez.
 
 ## Relação com a função de memória
 
-Se o produto oferecer «memória» ou preferências persistentes, veja [Memórias e Contexto persistente](/pt/guide/customization/memories-and-persistent-context/). A memória serve para hábitos estáveis; **as restrições específicas do projeto devem continuar a basear-se nos ficheiros do repositório**.
+Se o produto oferecer «memória» ou preferências persistentes, veja [Memórias e contexto persistente](/pt/guide/customization/memories-and-persistent-context/). A memória serve para hábitos estáveis; **as restrições específicas do projeto devem continuar a basear-se nos arquivos do repositório**.
 
 ## Erros habituais
 
@@ -103,10 +105,3 @@ Se o produto oferecer «memória» ou preferências persistentes, veja [Memória
 - [ ] Consegue dar um exemplo de cada uma das três camadas: pessoal vs projeto vs organização
 - [ ] Configurou pelo menos um Profile estrito para um projeto de cliente
 - [ ] Não há segredos pessoais dentro do repositório
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre instruções de projeto, Profiles, divisão de definições e limites de segurança; esta página explica apenas o princípio estável de que «hábitos pessoais não devem poluir as regras do repositório da equipa», sem transformar a UI atual de um cliente concreto num contrato fixo.  
-**Última verificação:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite beschreibt ausschließlich eine Methode zur Aufgabenstruktur. Beispiele und interne Links wurden geprüft; der Text hängt nicht von veränderlichen Fakten wie Produktversion, Preis oder Oberfläche ab."
+  checkedAt: "2026-08-25"
 title: Struktur einer guten Aufgabe
 description: Ziel, Hintergrund, Eingaben, Einschränkungen, Abnahme und Berechtigungsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 98c0511
+source_revision: "98c0511"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Je mehr Informationen eine Anforderung enthält, desto leichter verliert sie ihre Struktur: Materialien, Ergebnis, Grenzen und Abnahme stehen ungeordnet nebeneinander, und Codex muss die Lücken selbst füllen.
@@ -140,10 +145,3 @@ Du kannst die Vorlage an die Größe der Aufgabe anpassen. Jeder ausgelassene Ab
 - [Einschränkungen und Grenzen](/de/prompts/constraints-and-boundaries/)
 - [Zuerst einen Plan anfordern](/de/prompts/ask-for-a-plan/)
 - [Untersuchen, planen, ausführen, verifizieren](/de/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**Status:** verified  
-**Unterstützte Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite beschreibt ausschließlich eine Methode zur Aufgabenstruktur. Beispiele und interne Links wurden geprüft; der Text hängt nicht von veränderlichen Fakten wie Produktversion, Preis oder Oberfläche ab.  
-**Zuletzt geprüft:** 2026-08-25

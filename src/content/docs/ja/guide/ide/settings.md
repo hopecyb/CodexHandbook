@@ -3,12 +3,16 @@ title: IDE 拡張の設定
 description: 共有する Agent 設定と VS Code 系エディタの動作設定を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: 6f28910
+source_revision: "6f28910"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: "2026-08-26"
 ---
 
 IDE には二つの設定レイヤーがあります。
@@ -57,11 +61,3 @@ Codex サイドバーで歯車を選択し、**Codex Settings** を選びます�
 
 - [Codex IDE 設定リファレンス](https://learn.chatgpt.com/docs/ide/settings)
 - [設定の基本](https://learn.chatgpt.com/docs/config)
-
----
-
-**状態：** verified
-
-**対象製品：** IDE
-
-**最終検証：** 2026-08-26

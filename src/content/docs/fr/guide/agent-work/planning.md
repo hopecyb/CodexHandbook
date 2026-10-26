@@ -1,19 +1,20 @@
 ---
-title: "Planifier : clarifier le parcours d’exécution et la vérification"
-description: "Utilisez un plan pour traiter le périmètre, les dépendances et les choix ; distinguez planification et attente, puis avancez dans le cadre déjà autorisé."
+title: 'Planifier : clarifier le parcours d’exécution et la vérification'
+description: Utilisez un plan pour traiter le périmètre, les dépendances et les choix ; distinguez planification et attente, puis avancez dans le cadre déjà autorisé.
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
-  summary: "Cette page propose une méthode de travail, recoupée avec la classification des tâches et les permissions ; elle ne prétend ni décrire le comportement par défaut d’un client ni mesurer un gain d’efficacité."
+  checkedAt: '2026-09-18'
+  summary: Cette page propose une méthode de travail, recoupée avec la classification des tâches et les permissions ; elle ne prétend ni décrire le comportement par défaut d’un client ni mesurer un gain d’efficacité.
 sidebar:
   order: 10
 locale: fr
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: "a129229"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 Un plan est un parcours d’exécution que l’on peut vérifier et ajuster. Il aide à repérer tôt les lacunes de périmètre, de dépendances et de critères d’acceptation. Une tâche plus importante n’exige pas pour autant des pauses répétées pour demander confirmation.
 

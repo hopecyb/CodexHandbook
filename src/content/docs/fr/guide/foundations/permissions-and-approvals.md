@@ -8,13 +8,13 @@ title: Autorisations et approbations
 description: Comprendre quand Codex doit vous demander d'approuver une action.
 locale: fr
 source_locale: zh-CN
-source_revision: 1beec63
-translation_status: draft
+source_revision: "1beec63"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 70
+reviewed_at: '2026-10-26'
 ---
-
 Codex ne devrait pas effectuer d'opérations risquées sans votre accord. **L'approbation** est le point de contrôle de votre collaboration avec Codex.
 
 Si Codex pouvait lire n'importe quel fichier, accéder librement au réseau et exécuter toute commande, une mauvaise compréhension de la tâche pourrait coûter cher.

@@ -8,14 +8,14 @@ title: Change template
 description: Bounded iteration on existing work.
 locale: en
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: '6faf299'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
-For "change a little on what already exists."
+Use this template for small changes to existing work.
 
 Change tasks should state edit boundaries first.
 
@@ -23,7 +23,7 @@ Change tasks should state edit boundaries first.
 
 ```text
 Goal: On 【existing feature/file】, complete 【specific change】.
-Context: 【why changing, blast radius】
+Context: 【reason for the change, affected scope】
 Inputs: @【relevant file paths】
 Constraints:
 - Keep 【API/style/behavior】 unchanged unless I explicitly allow

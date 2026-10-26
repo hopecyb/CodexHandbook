@@ -8,11 +8,12 @@ title: トラブルシュート索引
 description: 症状から該当チュートリアルと製品ページへ。
 locale: ja
 source_locale: zh-CN
-source_revision: da350d0
-translation_status: draft
+source_revision: 'da350d0'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 110
+reviewed_at: '2026-10-26'
 ---
 
 問題が出ても、App、CLI、IDE、Cloud のどのページを見るべきか分からないときは、ここから方向を探せます。

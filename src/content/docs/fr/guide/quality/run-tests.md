@@ -8,13 +8,13 @@ title: Exécuter les tests
 description: Intégrer les étapes de vérification à la tâche.
 locale: fr
 source_locale: zh-CN
-source_revision: 8b1e5c7
-translation_status: draft
+source_revision: "8b1e5c7"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
-
 Après une modification, il faut un moyen de vérifier qu'elle n'a rien cassé d'évident.
 
 Cette preuve peut prendre la forme de tests automatisés, d'une compilation réussie ou d'une série de vérifications manuelles précises.

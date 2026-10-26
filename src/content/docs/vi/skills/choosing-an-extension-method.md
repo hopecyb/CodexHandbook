@@ -5,26 +5,27 @@ legacyVerification:
   basis: "Đã đối chiếu vai trò, điểm truy cập sản phẩm và giới hạn an toàn với tài liệu chính thức của OpenAI về Skills, Plugins, MCP, Hooks và Scheduled tasks vào ngày 2026-08-25."
   checkedAt: "2026-08-25"
 title: Cách chọn phương thức mở rộng
-description: Chọn câu lệnh, AGENTS.md, Skill, MCP, Hook, Plugin hoặc Scheduled task dựa trên thứ bạn muốn duy trì hoặc tự động hóa.
+description: Chọn lời nhắc, AGENTS.md, Skill, MCP, Hook, Plugin hoặc Scheduled task dựa trên thứ bạn muốn duy trì hoặc tự động hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: 28ae6f5
-translation_status: draft
+source_revision: "28ae6f5"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Khi có nhiều cơ chế mở rộng, sai lầm thường gặp nhất là chọn tên công nghệ trước, rồi mới tìm vấn đề để áp dụng. Thứ tự vững chắc hơn là hỏi trước: **Rốt cuộc tôi muốn giữ lại điều gì, hoặc muốn điều gì tự động xảy ra?**
 
 Những tên gọi dễ bị nhầm lẫn với nhau nhất là:
 
-- Câu lệnh
+- Lời nhắc
 - AGENTS.md
 - Skill
 - MCP
 - Plugin
 - Scheduled task
 
-Cùng là “mở rộng Codex”, đôi khi một câu lệnh là đủ; chỉ trong một số trường hợp mới cần đến cơ chế phức tạp hơn.
+Cùng là “mở rộng Codex”, đôi khi một lời nhắc là đủ; chỉ trong một số trường hợp mới cần đến cơ chế phức tạp hơn.
 
 ## Sơ đồ lựa chọn
 
@@ -36,7 +37,7 @@ Cùng là “mở rộng Codex”, đôi khi một câu lệnh là đủ; chỉ 
 
 ### 1. Chỉ ảnh hưởng đến tác vụ hiện tại?
 
-Hãy dùng câu lệnh trước. Nêu rõ mục tiêu, đầu vào, phạm vi, tiêu chí nghiệm thu và quyền hạn. Cách này ít tốn công nhất và cũng dễ quan sát vấn đề thực tế nhất.
+Hãy dùng lời nhắc trước. Nêu rõ mục tiêu, đầu vào, phạm vi, tiêu chí nghiệm thu và quyền hạn. Cách này ít tốn công nhất và cũng dễ quan sát vấn đề thực tế nhất.
 
 ### 2. Có phải tuân thủ mỗi lần làm việc trong kho lưu trữ này?
 
@@ -44,7 +45,7 @@ Hãy ghi vào `AGENTS.md`, chẳng hạn lệnh kiểm thử, phong cách mã, t
 
 ### 3. Một loại tác vụ có các bước và đầu ra ổn định?
 
-Hãy tạo Skill. Skill phù hợp để lưu hướng dẫn có thể tái sử dụng, kèm mẫu, tài liệu tham khảo, tài nguyên hoặc tập lệnh hỗ trợ khi cần. Nếu chưa có tiêu chí thành công cố định, hãy tiếp tục thử nghiệm bằng câu lệnh trước.
+Hãy tạo Skill. Skill phù hợp để lưu hướng dẫn có thể tái sử dụng, kèm mẫu, tài liệu tham khảo, tài nguyên hoặc tập lệnh hỗ trợ khi cần. Nếu chưa có tiêu chí thành công cố định, hãy tiếp tục thử nghiệm bằng lời nhắc trước.
 
 ### 4. Cần dữ liệu hoặc thao tác ngoài kho lưu trữ?
 
@@ -60,7 +61,7 @@ Hãy cân nhắc Plugin. Plugin là lớp tập hợp và phân phối, có th�
 
 ### 7. Tác vụ đã chạy ổn định bằng tay và cần lặp lại theo thời gian?
 
-Lúc đó hãy tạo Scheduled task. Trước tiên kiểm chứng câu lệnh, Skill, quyền hạn và định dạng kết quả trong một tác vụ thông thường. Sau khi lên lịch, hãy kiểm tra vài lần chạy đầu tiên và giữ bước duyệt của con người trước khi xuất bản hoặc hợp nhất.
+Lúc đó hãy tạo Scheduled task. Trước tiên kiểm chứng lời nhắc, Skill, quyền hạn và định dạng kết quả trong một tác vụ thông thường. Sau khi lên lịch, hãy kiểm tra vài lần chạy đầu tiên và giữ bước duyệt của con người trước khi xuất bản hoặc hợp nhất.
 
 ## Đối chiếu theo tình huống
 
@@ -68,7 +69,7 @@ Lúc đó hãy tạo Scheduled task. Trước tiên kiểm chứng câu lệnh, 
 |---|---|
 | Thống nhất quy tắc kiểm thử và commit | AGENTS.md |
 | Danh sách kiểm tra trước mỗi lần hợp nhất | Skill `pr-review` |
-| Lấy ngữ cảnh ticket từ Linear | MCP + câu lệnh cho tác vụ |
+| Lấy ngữ cảnh ticket từ Linear | MCP + lời nhắc cho tác vụ |
 | Báo cáo phụ thuộc hằng tuần | Scheduled task → mở issue nháp |
 | Quét khóa bí mật trong bản vá sau khi ghi tệp | Hook hoặc CI; dùng cả hai trong tình huống rủi ro cao |
 | Cài đồng bộ quy trình xem xét và công cụ GitHub cho cả nhóm | Plugin (xem xét quyền hạn và Hooks trước khi cài) |
@@ -79,7 +80,7 @@ Lúc đó hãy tạo Scheduled task. Trước tiên kiểm chứng câu lệnh, 
 
 | Cơ chế | Công viết ban đầu | Công bảo trì | Rủi ro bảo mật |
 |---|---|---|---|
-| Câu lệnh | Thấp | Thấp | Thấp |
+| Lời nhắc | Thấp | Thấp | Thấp |
 | AGENTS.md | Trung bình | Trung bình | Thấp |
 | Skill | Trung bình | Trung bình | Thấp–trung bình |
 | MCP | Cao | Cao | Trung bình–cao |
@@ -100,7 +101,7 @@ Lúc đó hãy tạo Scheduled task. Trước tiên kiểm chứng câu lệnh, 
 
 ### 1. Tôi có nên cài Plugin và kết nối MCP ngay từ đầu?
 
-Nhiều vấn đề đã giải quyết được bằng cách dùng tốt câu lệnh, kiểm soát phạm vi và `AGENTS.md`.
+Nhiều vấn đề đã giải quyết được bằng cách dùng tốt lời nhắc, kiểm soát phạm vi và `AGENTS.md`.
 
 ### 2. Tác vụ cần lặp lại bao nhiêu lần mới đáng tạo Skill?
 
@@ -110,7 +111,7 @@ Không có con số cố định. Số lần lặp lại chỉ là một dấu h
 
 Phần lớn trường hợp sẽ bắt đầu với ba loại sau:
 
-- Câu lệnh
+- Lời nhắc
 - `AGENTS.md`
 - Skill
 
@@ -122,7 +123,7 @@ Thông thường chưa cần đến MCP hoặc tự động hóa không có ngư
 
 Lấy việc “xem xét diff hiện tại trước khi hợp nhất” làm ví dụ:
 
-1. Trước tiên chạy cùng một câu lệnh hai lần, ghi lại những mục kiểm tra phải nhắc lại mỗi lần.
+1. Trước tiên chạy cùng một lời nhắc hai lần, ghi lại những mục kiểm tra phải nhắc lại mỗi lần.
 2. Ghi các lệnh cố định của kho lưu trữ vào `AGENTS.md`, chẳng hạn `pnpm test` và quy định không sửa thư mục được tạo tự động.
 3. Ghi các bước xem xét, mức độ nghiêm trọng và định dạng đầu ra vào Skill `pr-review`.
 4. Chỉ thêm MCP/Connector khi cần bình luận trên GitHub PR hoặc xem trạng thái CI.
@@ -145,13 +146,3 @@ Mỗi khi thêm một lớp, hãy trả lời lại ba câu hỏi: đã thêm qu
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** ChatGPT Web / ứng dụng máy tính / Codex CLI / IDE (phạm vi hỗ trợ tùy theo cơ chế)
-
-**Căn cứ kiểm chứng:** Đã đối chiếu vai trò, điểm truy cập sản phẩm và giới hạn an toàn với tài liệu chính thức của OpenAI về Skills, Plugins, MCP, Hooks và Scheduled tasks vào ngày 2026-08-25.
-
-**Kiểm chứng gần nhất:** 2026-08-25

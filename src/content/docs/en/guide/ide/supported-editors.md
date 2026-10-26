@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  basis: "Checked the current official IDE page for the specific entry points in VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains IDEs without assuming identical capabilities across integrations."
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: Supported editors
 description: Distinguish the VS Code-compatible extension from Xcode and JetBrains integrations.
 locale: en
 source_locale: zh-CN
-source_revision: 7b82896
+source_revision: '7b82896'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -54,11 +59,3 @@ Report the diff and test command; do not upgrade dependencies.
 For editors outside this list, use [Codex CLI](/en/guide/cli/) or the [desktop App](/en/guide/desktop-app/). Do not force-install the VS Code package into an incompatible editor or treat a third-party integration as an OpenAI feature by default.
 
 See [Install and enable the IDE integration](/en/guide/getting-started/install-ide-extension/) for installation and [Editor context](/en/guide/ide/editor-context/) for context behavior.
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

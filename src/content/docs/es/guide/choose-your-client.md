@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Comparado con la documentación oficial actual de la App de escritorio de ChatGPT, Codex CLI, IDE y Cloud. La recomendación se basa en el lugar y el modelo de interacción, y distingue la extensión compatible con VS Code de las integraciones de Xcode y JetBrains."
+  checkedAt: "2026-08-26"
 title: Elegir un cliente de Codex
 description: Elige entre la App de escritorio, CLI, la integración IDE y Cloud según dónde y cómo se realiza el trabajo.
 locale: es
-source_locale: zh-cn
-source_revision: e4c7057
+source_locale: zh-CN
+source_revision: 'e4c7057'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 2
 ---
@@ -24,7 +29,7 @@ Al elegir por primera vez un punto de entrada de Codex, no empieces comparando d
 | En VS Code, editores compatibles, Xcode o JetBrains | **Integración IDE** | Preguntar con el contexto del editor, modificar y revisar en el mismo lugar |
 | En repositorios remotos conectados y entornos aislados | **Cloud** | Delegar ejecuciones remotas, trabajar en paralelo y revisar los resultados después |
 
-Si no tienes una preferencia clara, la **App de escritorio** suele ser el punto de partida más directo. Si ya trabajas habitualmente en una terminal o en VS Code, permanecer en esa superficie reduce los cambios de contexto.
+Si no tienes una preferencia clara, la **App de escritorio** suele ser el punto de partida más directo. Si ya trabajas habitualmente en una terminal o en VS Code, permanecer en ese entorno reduce los cambios de contexto.
 
 ## Qué resuelve cada punto de entrada
 
@@ -68,7 +73,7 @@ Un mismo flujo de trabajo puede pasar de un cliente a otro:
 1. Aclara en el IDE un problema local relacionado con el archivo actual.
 2. Delega una exploración larga en la App de escritorio o Cloud.
 3. Ejecuta en la CLI las comprobaciones estándar del equipo.
-4. Vuelve a la App de escritorio o a la superficie de revisión para inspeccionar el diff final.
+4. Vuelve a la App de escritorio o a la interfaz de revisión para inspeccionar el diff final.
 
 La pregunta no es «¿cuál es más potente?», sino **¿cuál está más cerca del contexto actual y hace que el resultado sea más fácil de verificar?**
 
@@ -93,13 +98,3 @@ No te limites a confirmar que el cliente se abre. Completa este ciclo en un repo
 5. Confirma que sabes rechazar o limitar una solicitud de permisos.
 
 Consulta la [comparación de funciones](/es/guide/reference/feature-comparison/) para ver la matriz completa y [Permisos y sandbox](/es/guide/permissions-and-sandbox/) para conocer los límites de ejecución.
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** App / CLI / IDE / Cloud
-
-**Base de verificación:** Comparado con la documentación oficial actual de la App de escritorio de ChatGPT, Codex CLI, IDE y Cloud. La recomendación se basa en el lugar y el modelo de interacción, y distingue la extensión compatible con VS Code de las integraciones de Xcode y JetBrains.
-
-**Última verificación:** 2026-08-26

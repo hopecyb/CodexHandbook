@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Worktrees
 description: Isoliere parallele Chats mit Git-Worktrees und kehre sicher in den lokalen Arbeitsbereich zurück.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 3569716
+source_revision: "3569716"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Mit Worktrees kann ein Git-Repository mehrere unabhängige Checkout-Verzeichnisse besitzen. Jedes Verzeichnis hat eigene Dateien und einen eigenen Branch-Status, nutzt aber dieselben Git-Metadaten des Repositorys. Dadurch können mehrere Codierungs-Chats parallel arbeiten, ohne ihre Dateien gegenseitig zu überschreiben.
@@ -60,11 +64,3 @@ Führe anschließend die aufgabenspezifischen Tests aus. Übergib, committe oder
 
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Zuletzt geprüft:** 2026-08-26

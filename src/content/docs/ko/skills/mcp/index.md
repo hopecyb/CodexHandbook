@@ -3,9 +3,15 @@ title: MCP
 description: 타사 도구와 컨텍스트를 통제된 방식으로 ChatGPT와 Codex에 연결합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 8d9ec38
-translation_status: draft
+source_revision: '8d9ec38'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT 데스크톱 App / Codex CLI / IDE; ChatGPT Web은 Plugin을 통해 원격 MCP 도구 사용
+  basis: 클라이언트 지원, 공유 설정, 전송 방식, CLI 명령
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP(Model Context Protocol)는 “Agent가 저장소 밖의 도구와 데이터를 어떻게 호출하는가”를 다룹니다. “작업 절차를 어떻게 작성하는가”를 정의하는 도구는 아닙니다.

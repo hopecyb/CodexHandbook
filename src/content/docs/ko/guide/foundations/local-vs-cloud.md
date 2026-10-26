@@ -1,17 +1,22 @@
 ---
 title: 로컬과 클라우드
-description: 로컬 작업과 Cloud 작업의 적합한 장면을 비교합니다.
+description: 로컬 작업과 Cloud 작업의 적합한 상황을 비교합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9569b3c
+source_revision: '9569b3c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center의 현재 《Using Codex with your ChatGPT plan》은 여전히 “local workflows run on your device”와 “cloud tasks run in OpenAI-managed environments”를 구분합니다. 《ChatGPT Work and Codex》도 Work on web/mobile이 클라우드에서 실행됨을 확인합니다. 이 페이지는 로컬·클라우드 작업의 적합한 상황과 트레이드오프만 요약하며, 특정 요금제나 접근 경로의 세부 사항에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
-「로컬」「클라우드」는 기술 용어처럼 들리지만, 간단히 말하면 로컬은 자기 컴퓨터에서, 클라우드는 원격 기계에서 일하는 것입니다.
+「로컬」「클라우드」는 기술 용어처럼 들리지만, 간단히 말하면 로컬은 자기 컴퓨터에서, 클라우드는 원격 컴퓨터에서 일하는 것입니다.
 
 Codex를 먼저 쓰기만 원한다면, 보통 **로컬**이 더 수월합니다.
 
@@ -25,10 +30,10 @@ Codex를 먼저 쓰기만 원한다면, 보통 **로컬**이 더 수월합니다
 
 ## 사용 체감
 
-대략 이렇게입니다.
+대략 이런 느낌입니다.
 
 - **로컬 작업**: 자기 컴퓨터 앞에서 Codex와 함께 현재 프로젝트를 고치는 느낌
-- **Cloud 작업**: 원격 작업기에 일을 맡기고 거기서 계속 돌리는 느낌
+- **Cloud 작업**: 원격 실행 환경에 일을 맡기고 거기서 계속 돌리는 느낌
 
 차이는 「위치」만이 아닙니다.
 
@@ -77,11 +82,4 @@ Codex를 먼저 쓰기만 원한다면, 보통 **로컬**이 더 수월합니다
 
 많은 초보자는 **로컬 + 데스크톱 App**부터 시작합니다. Cloud 세부는 [Web과 Cloud 개요](/ko/guide/web-and-cloud/)를 보세요. App에서 전환은 [로컬과 클라우드 작업](/ko/guide/desktop-app/local-and-cloud-tasks/)을 보세요.
 
-로컬은 흐름을 이해하고 작은 것을 고치는 데 더 맞습니다. 클라우드는 더 길고·더 표준화되고·원격 협업이 많은 작업에 더 맞습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Help Center의 현재 《Using Codex with your ChatGPT plan》은 여전히 “local workflows run on your device”와 “cloud tasks run in OpenAI-managed environments”를 구분합니다. 《ChatGPT Work and Codex》도 Work on web/mobile이 클라우드에서 실행됨을 확인합니다. 이 페이지는 로컬·클라우드 작업의 적합 장면과 트레이드오프만 요약하며, 구체 플랜이나 입구 세부에 묶이지 않습니다.  
-**최근 검증:** 2026-07-26
+로컬은 흐름을 이해하고 작은 것을 고치는 데 더 맞습니다. 클라우드는 시간이 오래 걸리고 표준화된 환경이나 원격 협업이 필요한 작업에 더 맞습니다.

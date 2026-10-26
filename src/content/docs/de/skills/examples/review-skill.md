@@ -24,12 +24,13 @@ assets:
   version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: "e29d1b3"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: '2026-09-20'
 ---
 
-Legen Sie vor einem Review fest, was verglichen wird. Dieser Skill verhindert, dass „aktuelle nicht commitete Änderungen“ mit „Commits relativ zu main“ verwechselt werden oder ein sauber wirkender Arbeitsbaum einen Fehler im Index verdeckt.
+Legen Sie vor einem Review fest, was verglichen wird. Dieser Skill verhindert, dass „aktuelle nicht committete Änderungen“ mit „Commits relativ zu main“ verwechselt werden oder ein sauber wirkender Arbeitsbaum einen Fehler im Index verdeckt.
 
 [scoped-review v1.0.0 herunterladen](/downloads/skills/scoped-review/scoped-review-1.0.0.zip) · [SKILL.md ansehen](/downloads/skills/scoped-review/SKILL.md) · [Installations- und Nutzungsanleitung](/downloads/skills/scoped-review/README.md)
 
@@ -39,8 +40,8 @@ Legen Sie vor einem Review fest, was verglichen wird. Dieser Skill verhindert, d
 |---|---|---|
 | Nur staged Änderungen prüfen | HEAD → Index | Unstaged Inhalt |
 | Nur unstaged Änderungen prüfen | Index → Arbeitsbaum | Staged Patch |
-| Aktuelle nicht commitete Änderungen prüfen | Beide Patches getrennt halten; neue Dateien auflisten | Inhalt neuer Dateien gesondert lesen |
-| Commits relativ zu einem benannten Branch prüfen | Eindeutige Merge-Base → HEAD | Lokale nicht commitete Inhalte |
+| Aktuelle nicht committete Änderungen prüfen | Beide Patches getrennt halten; neue Dateien auflisten | Inhalt neuer Dateien gesondert lesen |
+| Commits relativ zu einem benannten Branch prüfen | Eindeutige Merge-Base → HEAD | Lokale nicht committete Inhalte |
 
 `main` wird nicht als Standard angenommen. Fehlt die Basis, erscheint ein Fehler, statt den Umfang still zu ändern. Der Sammler liefert Belege; für die Beurteilung von Defekten müssen weiterhin relevanter Code und Tests gelesen werden.
 
@@ -51,7 +52,7 @@ Sie benötigen Python 3.10+, Git und ein lokales Übungs-Repository mit mindeste
 Für die Erkennung lokaler Skills und ihre Einstiegspunkte gilt die [offizielle Anleitung](https://learn.chatgpt.com/docs/build-skills). Prüfen Sie nach der Installation die Verfügbarkeit und rufen Sie ihn dann ausdrücklich auf:
 
 ```text
-$scoped-review Prüfe die aktuell nicht commiteten Codeänderungen in diesem Übungs-Repository.
+$scoped-review Prüfe die aktuell nicht committeten Codeänderungen in diesem Übungs-Repository.
 Ändere keine Dateien. Nenne zuerst Befunde und erläutere danach die Abdeckung
 von staged, unstaged und neuen Dateien.
 ```
@@ -68,7 +69,7 @@ Die synthetische Eingabe liegt in `fixtures/scenario.json`:
 
 Nun kann `git diff HEAD` keine Änderung zeigen, obwohl ein Commit des Index den Fehler einführen würde. Bei `amount=40, percent=10` ergibt die staged Version -360 statt 36.
 
-Ein korrektes Review benennt den Fehler in der staged Version und die Korrektur im unstaged Patch. Die vollständige [Autorreferenz](/downloads/skills/scoped-review/fixtures/expected-review.md) erklärt auch, warum der Branch-Modus nicht in dieses lokale Problem gehört; sie ist keine tatsächliche Modellausgabe.
+Ein korrektes Review benennt den Fehler in der staged Version und die Korrektur im unstaged Patch. Die vollständige [Autorreferenz](/downloads/skills/scoped-review/fixtures/expected-review.md) erklärt auch, warum dieses lokale Problem nicht in ein Branch-Review gehört; sie ist keine tatsächliche Modellausgabe.
 
 ## Enthaltene Prüfungen ausführen
 

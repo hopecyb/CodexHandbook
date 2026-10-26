@@ -54,35 +54,35 @@
   <g transform="translate(240 202)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#dc2626"/>
-    <text x="28" y="32" class="node-title">Harness Engineering (Execution Harness)</text>
+    <text x="28" y="32" class="node-title">Harness Engineering</text>
     <text x="28" y="55" class="node-date">2026-02-11 · Verifiable execution environment</text>
     <text x="28" y="78" class="node-body">Combine tools, context, feedback, recovery, and quality gates into a stable task scaffold.</text>
   </g>
   <g transform="translate(240 348)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
-    <text x="28" y="32" class="node-title">Skills (Reusable Workflows)</text>
+    <text x="28" y="32" class="node-title">Skills</text>
     <text x="28" y="55" class="node-date">2025-10-16 · Reusable workflow units</text>
     <text x="28" y="78" class="node-body">Package prompts, steps, examples, scripts, and resources so AI reuses experience reliably.</text>
   </g>
   <g transform="translate(240 470)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
-    <text x="28" y="32" class="node-title">Context Engineering (Context Design)</text>
+    <text x="28" y="32" class="node-title">Context Engineering</text>
     <text x="28" y="55" class="node-date">2025-09-29 · Context design</text>
     <text x="28" y="78" class="node-body">From “write a good prompt” to “design what the model sees, and in what priority.”</text>
   </g>
   <g transform="translate(240 592)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
-    <text x="28" y="32" class="node-title">Multi-agent (Agent Collaboration)</text>
+    <text x="28" y="32" class="node-title">Multi-agent</text>
     <text x="28" y="55" class="node-date">2025-06-13 · Role collaboration</text>
     <text x="28" y="78" class="node-body">Split research, implementation, review, and verification across roles to run work in parallel.</text>
   </g>
   <g transform="translate(240 714)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#0d9488"/>
-    <text x="28" y="32" class="node-title">Tool Use (Tool Orchestration)</text>
+    <text x="28" y="32" class="node-title">Tool Use</text>
     <text x="28" y="55" class="node-date">2025-03-11 · Multi-tool execution</text>
     <text x="28" y="78" class="node-body">The model picks tools during a task, calls them, reads the results, and keeps reasoning.</text>
   </g>
@@ -96,14 +96,14 @@
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
-    <text x="28" y="32" class="node-title">Function Calling (Structured Tool Calls)</text>
+    <text x="28" y="32" class="node-title">Function Calling</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Structured actions</text>
     <text x="28" y="78" class="node-body">Beyond text: the model calls functions, APIs, and actions with parseable arguments.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
-    <text x="28" y="32" class="node-title">Prompt Engineering (Prompt Design)</text>
+    <text x="28" y="32" class="node-title">Prompt Engineering</text>
     <text x="28" y="55" class="node-date">2022-11-30 · Input control</text>
     <text x="28" y="78" class="node-body">Guide the model to usable output with task instructions, examples, and format constraints.</text>
   </g>

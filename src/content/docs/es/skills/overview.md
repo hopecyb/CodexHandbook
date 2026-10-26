@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Las reglas actuales de carga de Skills en el runtime de Codex (`SKILL.md`, lectura bajo demanda del archivo completo) coinciden con la definición de Skill como workflow reutilizable en OpenAI Help «Skills in ChatGPT»; esta página se centra en conceptos y organización de directorios, sin depender de UI volátil.
+  checkedAt: '2026-07-26'
 title: Descripción general de Skills
 description: Enseña a Codex flujos de trabajo reutilizables con SKILL.md; escríbelo una vez y llámalo cuando haga falta.
 locale: es
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: "3147d2c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Un **Skill** es un directorio que contiene `SKILL.md` (y, opcionalmente, scripts y material de referencia) que empaqueta un flujo fijo en una capacidad que Codex puede **invocar automáticamente o de forma explícita**.
@@ -21,7 +26,7 @@ Encaja con métodos de trabajo que ya se han repetido y que seguirán reutilizá
 
 | | Comando slash | Skill |
 |---|---|---|
-| Activación | Escribes `/xxx` | Puedes llamar con `$name`, o el modelo hace match por la descripción |
+| Activación | Escribes `/xxx` | Puedes llamar con `$name`, o el modelo selecciona según la descripción |
 | Contexto | Suele expandirse de inmediato | **Divulgación progresiva**: en reposo solo ocupa nombre + descripción; el texto completo se lee al seleccionarlo |
 | Encaja con | Entradas fijas, frecuentes y que recuerdas | Flujos largos, con documentación, en los que quieres que el modelo decida cuándo usarlo |
 
@@ -29,7 +34,7 @@ Encaja con métodos de trabajo que ya se han repetido y que seguirán reutilizá
 
 Al arrancar, Codex solo ve el **name, description y ruta** de cada Skill; carga el `SKILL.md` completo solo cuando decide usarlo. Por eso el cuerpo puede incluir listas de comprobación detalladas sin saturar el contexto.
 
-Nota: la lista de Skills tiene un **presupuesto inicial de caracteres** (una fracción pequeña del contexto). Pon los escenarios de activación principales **al principio** de `description`, para que un recorte no rompa el match.
+Nota: la lista de Skills tiene un **presupuesto inicial de caracteres** (una fracción pequeña del contexto). Pon los escenarios de activación principales **al principio** de `description`, para que un recorte no impida la selección.
 
 ## Estructura del directorio de un Skill
 
@@ -80,7 +85,7 @@ Claves para escribir bien `description`:
 
 1. Detectas que un flujo ya se ha repetido varias veces
 2. Redactas `SKILL.md`, primero solo con pasos en texto
-3. Pruebas en una tarea pequeña con `$name` y match implícito
+3. Pruebas en una tarea pequeña con `$name` y selección implícita
 4. Cuando necesites determinismo, añades `scripts/`
 5. Lo envías a `.agents/skills/` y abres un PR para el equipo
 
@@ -105,7 +110,7 @@ Un Skill no es obligatorio al empezar; encaja mejor para organizar flujos que ya
 
 ## Límites de seguridad
 
-- Los scripts y las llamadas MCP dentro de un Skill heredan la política de Aprobación actual
+- Los scripts y las llamadas MCP dentro de un Skill heredan la política de aprobación actual
 - No codifiques secretos en el Skill; usa variables de entorno o autenticación MCP
 - El equipo debe revisar Skills de terceros como revisaría dependencias
 
@@ -117,9 +122,3 @@ Un Skill no es obligatorio al empezar; encaja mejor para organizar flujos que ya
 
 ## Fuentes de referencia
 - Documentación de OpenAI Codex Skills
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Las reglas actuales de carga de Skills en el runtime de Codex (`SKILL.md`, lectura bajo demanda del archivo completo) coinciden con la definición de Skill como workflow reutilizable en OpenAI Help «Skills in ChatGPT»; esta página se centra en conceptos y organización de directorios, sin depender de UI volátil.  
-**Última verificación:** 2026-07-26

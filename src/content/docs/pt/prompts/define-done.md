@@ -1,12 +1,17 @@
 ---
-title: Definir o concluído
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só descreve aceitação e critérios de conclusão; os links internos foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
+title: Definir critérios de conclusão
 description: Escreva condições de conclusão verificáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: e97e854
+source_revision: "e97e854"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Muita gente formula a tarefa dizendo «o que quero», mas não «até que ponto conta como feito». No fim, só se julga a olho se terminou.
@@ -25,14 +30,14 @@ Muitas vezes objetivo e critérios de conclusão se misturam.
 - **Objetivo:** que resultado você quer
 - **Critérios de conclusão:** como confirmar que esse resultado foi realmente atingido
 
-Por exemplo, «corrigir este bug» é objetivo;  
+Por exemplo, «corrigir este bug» é objetivo;
 «reproduzir de forma estável a correção, testes relacionados passam, sem novos erros no console» aproxima-se de critérios de conclusão.
 
 ## Ideias erradas habituais
 
 ### 1. Se o resultado «parece quase igual», está feito
 
-Em tarefas pequenas isto enterra armadilhas. «Parece quase» costuma omitir testes, casos limite e efeitos colaterais.
+Em tarefas pequenas isso pode esconder problemas. «Parece quase» costuma omitir testes, casos limite e efeitos colaterais.
 
 ### 2. Critérios de conclusão = elogiar o resultado em mais frases
 
@@ -55,7 +60,7 @@ Se não souber por onde começar, escolha entre estes 3 tipos:
 
 - **Checagem funcional:** o comportamento corresponde ao esperado?
 - **Checagem técnica:** build / testes / lint passam?
-- **Checagem de alcance:** só alterou o âmbito combinado?
+- **Checagem de alcance:** só alterou o escopo combinado?
 
 Por exemplo:
 
@@ -77,10 +82,3 @@ Se não, ainda está demasiado vago.
 No fundo: não deixe «está feito?» depender de adivinhação.
 
 Inclua comandos de verificação nos critérios — assim o Agent tem mais probabilidade de os executar: [Correr testes](/pt/guide/quality/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve aceitação e critérios de conclusão; os links internos foram revistos; o corpo não depende de factos voláteis do produto.

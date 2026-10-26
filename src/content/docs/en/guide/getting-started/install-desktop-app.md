@@ -3,12 +3,17 @@ title: Install the desktop App
 description: Install the ChatGPT desktop App and open a Codex workspace in it.
 locale: en
 source_locale: zh-CN
-source_revision: 974842f
+source_revision: '974842f'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App
+  basis: The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
+  checkedAt: '2026-08-26'
 ---
 
 In this handbook, “desktop App” means the **Codex workspace in the current ChatGPT desktop App**. Official versions are available for macOS, Windows, and Linux.
@@ -55,13 +60,3 @@ Decide whether the current task actually requires it. Opening a practice directo
 The App evolves quickly. Define success as being able to sign in, select a work location, start a task, and review its result—not finding a button at a fixed coordinate.
 
 See [Installation and first use](/en/guide/desktop-app/installation-and-interface/) for the interface and [Desktop App troubleshooting](/en/guide/desktop-app/troubleshooting/) for failures.
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Verification basis:** The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
-
-**Last verified:** 2026-08-26

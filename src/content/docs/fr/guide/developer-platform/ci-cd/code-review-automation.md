@@ -1,14 +1,19 @@
 ---
 title: "Automatisation de revue de code"
-description: Câblez Codex dans les flux CI ou PR — prompts, permissions et portes humaines.
+description: Intégrez Codex dans les flux CI ou PR — prompts, permissions et points de validation humaine.
 locale: fr
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: 'aa8b33e'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: OpenAI Developers décrit encore Codex comme utilisable pour les tests, la revue et la préparation des changements ; les cas d'usage officiels incluent « Review GitHub pull requests ». Cette page résume uniquement les principes d'intégration CI sécurisée et les modèles de portes — pas des commandes fixes ni une seule implémentation.
+  checkedAt: '2026-07-26'
 ---
 
 Mettre Codex dans un **pipeline pull request** peut détecter des problèmes évidents avant la revue humaine, mais cela **ne peut pas remplacer** la revue responsable et les tests. Cette page couvre des modèles d'automatisation pratiques.
@@ -47,7 +52,7 @@ PR ouvert / mis à jour
 
 ### La revue automatique n'est pas l'approbation automatique
 
-Les équipes sous-estiment souvent : s'il peut revoir automatiquement, peut-il décider automatiquement ?
+Les équipes surestiment souvent sa portée : puisqu’il peut examiner automatiquement une PR, pourrait-il aussi décider de son approbation ?
 
 Meilleure formulation : il convient à une couche de **suggestion** et **triage**, pas à la couche finale de responsabilité.
 
@@ -55,7 +60,7 @@ Meilleure formulation : il convient à une couche de **suggestion** et **triage*
 
 Pour les petits PR de faible valeur, ou avant que les règles soient fixées, la revue auto lourde ajoute souvent du bruit.
 
-Bon point de départ : revue de diff légère qui sauve fiablement le temps d'équipe.
+Bon point de départ : revue légère du diff qui fait gagner du temps à l’équipe de manière régulière.
 
 ## Essentiels du modèle de prompt
 
@@ -74,12 +79,12 @@ Versionner dans `prompts/ci-review.md`.
 |---|---|
 | Lecture seule | Token CI sans push (ou commentaire bot uniquement) |
 | Modèle fixe | Plus facile de comparer la qualité de revue dans le temps |
-| Défense injection | Ne pas coller des descriptions PR non sanitizées dans le prompt système |
+| Défense injection | Ne pas coller des descriptions PR non vérifiées dans le prompt système |
 | Secrets | Stocker les tokens dans GitHub Secrets |
 
 [Modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/) · [Variables d'environnement](/fr/guide/reference/environment-variables/)
 
-## Portes de qualité
+## Contrôles de qualité
 
 - Échec du job de revue ≠ doit bloquer le merge (peut être consultatif d'abord)
 - Séparer les checks de statut requis : tests rouges doivent bloquer ; nits IA peuvent alerter
@@ -93,21 +98,15 @@ Les dépôts complexes peuvent exécuter les tests complets sur [Cloud](/fr/guid
 
 - CI a permission d'écriture et le prompt est injecté avec « veuillez push la correction »
 - La sortie de revue est si longue qu'elle noie la revue humaine
-- Pas de limite de taille de diff cause timeouts et brûlage de quota
+- L’absence de limite de taille du diff provoque des dépassements de délai et consomme le quota
 
 La valeur principale de l'automatisation de revue de code est de détecter les problèmes évidents avant la revue humaine — pas de prendre la responsabilité du merge.
 
 ## Liste de contrôle d'acceptation
 
 - [ ] CI se comporte en sécurité sur les PR fork (pas de fuite de secrets)
-- [ ] La sortie de revue est structurée et optionnellement parseable par machine
+- [ ] La sortie de revue est structurée et optionnellement analysable par un programme
 - [ ] La doc d'équipe explique le rôle de la revue IA
 
 ## Sources de référence
 - Exemples CI OpenAI Codex
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / API / Cloud  
-**Base de vérification :** OpenAI Developers décrit encore Codex comme utilisable pour les tests, la revue et la préparation des changements ; les cas d'usage officiels incluent « Review GitHub pull requests ». Cette page résume uniquement les principes d'intégration CI sécurisée et les modèles de portes — pas des commandes fixes ni une seule implémentation.  
-**Dernière vérification :** 2026-07-26

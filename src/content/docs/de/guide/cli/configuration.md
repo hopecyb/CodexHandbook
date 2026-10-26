@@ -3,12 +3,18 @@ title: CLI-Konfiguration
 description: Modell, Sandbox, Freigabe und MCP — Codex-Verhalten im Terminal vereinheitlichen.
 locale: de
 source_locale: zh-CN
-source_revision: 0a9b2ad
+source_revision: "0a9b2ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` als prüfbare Beispiele; diese Seite bindet keine konkreten Feldnamen, sondern fasst Absicht,
+    Schichten und Risikogrenzen zusammen — daher als Konzeptseite `verified`.
+  checkedAt: '2026-07-26'
 ---
 
 CLI-Konfiguration steuert **Default-Modell, Arbeitsverzeichnis, Freigabestrenge, MCP-Server** usw. Konzeptuell wie [Konfigurationsgrundlagen](/de/guide/customization/configuration/config-basics/); Fokus hier auf häufige Terminal-Anpassungen.
@@ -41,7 +47,7 @@ Ohne Config arbeitet Codex trotzdem — du wiederholst nur häufiger dieselben E
 | Projektebene | geteilte Teamstrategie (vor Commit prüfen) |
 | Umgebungsvariablen | CI injiziert Secrets und Schalter |
 
-**Pfade und Dateinamen** ändern sich mit der CLI-Version — laut [Official-Dokumentation](https://developers.openai.com/codex). Häufig `config.toml` oder Äquivalent unter dem Benutzerverzeichnis.
+**Pfade und Dateinamen** ändern sich mit der CLI-Version — laut [offiziellen Dokumentation](https://developers.openai.com/codex). Häufig `config.toml` oder Äquivalent unter dem Benutzerverzeichnis.
 
 ## Häufige Missverständnisse
 
@@ -87,7 +93,7 @@ Gemeinsam mit [MCP-Server verbinden](/de/skills/mcp/connect-an-mcp-server/); nac
 
 ## Ausreichende Konfigurationsreihenfolge
 
-Am Anfang nicht alle Felder. Diese Reihenfolge ist leichter:
+Du musst nicht sofort alle Felder kennen. Beginne mit dieser Reihenfolge:
 
 1. Häufigstes Modell fixieren
 2. Default-Arbeitsverzeichnis = aktuelles Projekt?
@@ -118,9 +124,3 @@ CLI-Config = „Default-Arbeitsgewohnheiten“ — nur das fixieren, was du **fa
 
 ## Quellen
 - OpenAI Codex CLI configuration
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI  
-**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` als prüfbare Beispiele; diese Seite bindet keine konkreten Feldnamen, sondern fasst Absicht, Schichten und Risikogrenzen zusammen — daher als Konzeptseite `verified`.  
-**Zuletzt geprüft:** 2026-07-26

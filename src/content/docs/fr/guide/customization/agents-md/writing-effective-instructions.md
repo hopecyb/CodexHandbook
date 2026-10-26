@@ -1,16 +1,20 @@
 ---
-title: "Écrire des instructions projet efficaces"
+title: Écrire des instructions projet efficaces
 description: Liste de contrôle pour écrire AGENTS.md — court, strict, exécutable, vérifiable.
 locale: fr
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: "63dd711"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec la série `AGENTS.md` actuelle de ce dépôt, les chapitres contexte et flux de travail ; cette page ne décrit que des principes d'écriture stables et un rythme de maintenance pour les instructions projet et ne traite pas les détails d'implémentation d'un client comme une promesse à long terme.
+  checkedAt: '2026-07-26'
 ---
-
 Des instructions projet efficaces ressemblent à une **liste de contrôle**. L'objectif est que Codex fasse moins d'erreurs prévisibles dès la première tentative.
 
 Lors de la première écriture d'instructions projet, un problème courant est beaucoup d'idées mais des contraintes clés floues.
@@ -19,7 +23,7 @@ Lors de la première écriture d'instructions projet, un problème courant est b
 
 - À quoi devraient ressembler les instructions projet
 - Ce que signifie « court, strict, exécutable »
-- Les modèles qui confondent le plus Codex et les humains
+- Les formulations les plus difficiles à comprendre pour Codex et les humains
 
 ## Structure recommandée
 
@@ -75,7 +79,7 @@ Assurez-vous que les tests passent
 - Ne pas éditer `generated/` : généré par code ; les éditions manuelles sont écrasées au prochain build
 ```
 
-Le long contexte doit lier vers la doc officielle `docs/`.
+Pour les explications longues, ajoutez un lien vers la documentation de référence dans `docs/`.
 
 ## Ce que signifient « de bonnes instructions »
 
@@ -105,7 +109,7 @@ Si après lecture vous ne savez toujours pas quelle commande exécuter en premie
 | Erreur | Conséquence |
 |---|---|
 | Empiler une encyclopédie de framework | Les commandes de test clés sont ignorées |
-| Règles contradictoires | Le modèle choisit une au hasard |
+| Règles contradictoires | Le modèle en choisit une au hasard |
 | Lignes vagues comme « être élégant » | Impossible à vérifier |
 | Clés ou URLs internes incluses | Risque de fuite |
 
@@ -117,7 +121,7 @@ Trop dispersé, trop long, trop encyclopédique — et les règles prioritaires 
 
 ### 2. « Suivre les conventions » compte comme instruction ?
 
-Généralement pas assez exécutable.  
+Généralement pas assez exécutable.
 Mieux vaut donner :
 
 - Des commandes réelles
@@ -126,7 +130,7 @@ Mieux vaut donner :
 
 ### 3. Peut-on mélanger librement le contexte et les règles d'exécution ?
 
-Pas recommandé.  
+Pas recommandé.
 Mieux :
 
 - Règles en tête
@@ -165,14 +169,7 @@ Tous les bons prompts ne doivent pas aller dans `AGENTS.md`. Décidez d'abord qu
 | « Ne pas modifier les dossiers générés » | Interdit dans `AGENTS.md` |
 | « Relire chaque PR dans ce format » | Skill ou modèle de prompt |
 | « Formater après écriture » | Hook |
-| « Lire Linear/Jira avant de coder » | MCP + Skill associé |
+| « Consulter Linear/Jira avant de traiter un ticket » | MCP + Skill associé |
 | « Je préfère les explications en chinois » | Mémoire ou préférence personnelle |
 
 `AGENTS.md` convient aux règles durables, partagées et vérifiables. Les processus vont dans les Skills, les contrôles automatiques dans les Hooks, l'accès externe dans MCP.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Recoupement avec la série `AGENTS.md` actuelle de ce dépôt, les chapitres contexte et flux de travail ; cette page ne décrit que des principes d'écriture stables et un rythme de maintenance pour les instructions projet et ne traite pas les détails d'implémentation d'un client comme une promesse à long terme.  
-**Dernière vérification :** 2026-07-26

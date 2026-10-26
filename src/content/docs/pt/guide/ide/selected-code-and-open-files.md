@@ -3,22 +3,27 @@ title: Seleção e ficheiros abertos
 description: Usar código selecionado e ficheiros abertos para delimitar com precisão o alcance das Tarefas no IDE.
 locale: pt
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: "b6b264f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 'Esta página descreve o método mais estável de controlo de alcance na extensão IDE: a combinação de seleção, ficheiros abertos e caminhos `@` explícitos; trata-se de uma forma geral de organizar Contexto ao trabalhar com código no editor, sem depender do nome de um botão concreto da extensão.'
+  checkedAt: '2026-07-26'
 ---
 
-A extensão IDE encaixa bem em mudanças de **alcance pequeno e alta precisão**: seleciona um trecho de código, explica a intenção e o Codex altera no Contexto próximo. Aqui o foco é como usar seleção e ficheiros abertos para apertar o alcance e evitar alterar o sítio errado.
+A extensão IDE encaixa bem em mudanças de **alcance pequeno e alta precisão**: seleciona um trecho de código, explica a intenção e o Codex altera no contexto próximo. Aqui o foco é como usar seleção e ficheiros abertos para apertar o alcance e evitar alterar o sítio errado.
 
 A função da seleção é simples: dizer ao Codex para olhar sobretudo aqui, sem alargar o alcance por conta própria.
 
 ## Conteúdo desta página
 
 - Como escolher entre seleção, ficheiro inteiro e caminho `@`
-- Como organizar o Contexto em refatorações multi-ficheiro
+- Como organizar o contexto em refatorações multi-ficheiro
 - Como reduzir «alterou um monte de ficheiros irrelevantes»
 
 ## Três formas de delimitar
@@ -29,16 +34,16 @@ A função da seleção é simples: dizer ao Codex para olhar sobretudo aqui, se
 | **Ficheiro aberto** | Precisa de perceber várias relações no mesmo ficheiro | Abrir `auth.ts` + `auth.test.ts` |
 | **Caminho `@`** | Ficheiros noutros diretórios ou ainda não abertos | `@src/api/client.ts` alinhado com tipos do backend |
 
-Profundidade conceptual: [Contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
+Profundidade conceptual: [contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
 
 ## Prática mínima útil
 
-1. Selecione o **menor fragmento relevante** (em geral 10–80 linhas) e, no Prompt, deixe claros o objetivo e a [definição de concluído](/pt/prompts/define-done/)
+1. Selecione o **menor fragmento relevante** (em geral 10–80 linhas) e, no prompt, deixe claros o objetivo e a [definição de concluído](/pt/prompts/define-done/)
 2. Se envolver chamadores, abra ou `@` mais 1–2 ficheiros a montante
 3. Peça «altere só ficheiros relacionados com X; liste os ficheiros a modificar antes de começar»
-4. Na vista de Diff do IDE, aceite bloco a bloco; não aceite tudo de uma vez
+4. Na vista de diff do IDE, aceite bloco a bloco; não aceite tudo de uma vez
 
-## Tarefas multi-ficheiro
+## tarefas multi-ficheiro
 
 ```text
 Abrir: ficheiro de implementação + ficheiro de teste + definições de tipo
@@ -56,7 +61,7 @@ Não. Mas se já sabe que o foco está num trecho pequeno, a seleção costuma s
 
 ### 2. Selecionar mais não é necessariamente mais seguro
 
-Selecionar demais afrouxa outra vez o alcance; selecionar de menos pode faltar Contexto necessário. O critério prático é «o suficiente».
+Selecionar demais afrouxa outra vez o alcance; selecionar de menos pode faltar contexto necessário. O critério prático é «o suficiente».
 
 ### 3. Qual a diferença entre ficheiro aberto e caminho `@`?
 
@@ -69,7 +74,7 @@ Usar seleção e ficheiros abertos é, no fundo, evitar arrastar alcance irrelev
 
 ## Em conjunto com a revisão
 
-Antes de aceitar, confronte com [Rever Diff](/pt/guide/quality/review-diffs/):
+Antes de aceitar, confronte com [Rever diff](/pt/guide/quality/review-diffs/):
 
 - Só mudaram os ficheiros acordados?
 - Há eliminações inesperadas fora da seleção?
@@ -81,15 +86,9 @@ No produto: [Rever mudanças no IDE](/pt/guide/ide/reviewing-changes/)
 
 | Erro | Consequência |
 |---|---|
-| Selecionar milhares de linhas de um ficheiro inteiro | Desperdício de Contexto, superfície de mudança demasiado ampla |
+| Selecionar milhares de linhas de um ficheiro inteiro | Desperdício de contexto, superfície de mudança demasiado ampla |
 | Zero seleção e só «otimize um pouco» | O modelo alarga o alcance por si |
-| Aceitar todas as sugestões sem ler o Diff | Introduz desvio de estilo ou falhas de segurança |
+| Aceitar todas as sugestões sem ler o diff | Introduz desvio de estilo ou falhas de segurança |
 
 ## Fontes de referência
 - [Definir restrições](/pt/prompts/constraints-and-boundaries/)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** IDE  
-**Base de verificação:** Esta página descreve o método mais estável de controlo de alcance na extensão IDE: a combinação de seleção, ficheiros abertos e caminhos `@` explícitos; trata-se de uma forma geral de organizar Contexto ao trabalhar com código no editor, sem depender do nome de um botão concreto da extensão.  
-**Última verificação:** 2026-07-26

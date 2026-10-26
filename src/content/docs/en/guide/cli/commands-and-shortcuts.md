@@ -1,10 +1,17 @@
 ---
-reviewed_at: 2026-08-26
+sidebar:
+  order: 50
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Checked against the current official Developer commands and Non-interactive mode pages for `codex`, `codex exec`, `--cd` / `-C`, and in-session slash commands. Readers are still directed to current completion and `--help` for shortcuts."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-25"
 title: Commands and shortcuts
 description: CLI subcommands, in-session actions, and keyboard habits—product-oriented; full flags in reference.
 locale: en
 source_locale: zh-CN
-source_revision: 2896e32
+source_revision: '2896e32'
 translation_status: reviewed
 translated_at: 2026-08-26
 ---
@@ -127,9 +134,3 @@ You do not need every command and shortcut on day one. Clarify "chat while worki
 
 ## References
 - OpenAI Codex CLI documentation
----
-
-**Status:** outdated
-**Applicable products:** CLI
-**Review note:** Covers `codex`, `codex exec`, `/` command categories, and session shortcuts—details that shift by version; lacks strong current official command/shortcut documentation to verify; needs rewrite before verification.
-**Last verified:** 2026-07-26

@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE"
+  basis: "Cross-checked against the current learning-path directory structure, role entry pages, and step-by-step beginner path. This page only organizes reading order by role and contains no volatile product behavior details."
+  checkedAt: "2026-07-26"
 prev: false
 next:
   link: /en/guide/learning-paths/beginner/01-talk-to-codex/
@@ -7,11 +12,12 @@ title: Learning Paths
 description: Reading order organized by role, with links to authoritative content.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 5
-source_revision: 2f7ff71
+source_revision: '2f7ff71'
+reviewed_at: 2026-10-25
 ---
 
 Learning paths **organize reading order only**; they do not duplicate long articles from the product handbook or capability guides.
@@ -60,13 +66,13 @@ For people who already finish small Codex tasks and want to combine features int
 | 1 | Fast entry points | [Slash commands and quick entry](/en/guide/reference/slash-commands/) |
 | 2 | Durable project context | [AGENTS.md](/en/guide/customization/agents-md/) and [Memories and persistent context](/en/guide/customization/memories-and-persistent-context/) |
 | 3 | Reusable task behavior | [Skills overview](/en/skills/overview/) and [Skill anatomy](/en/skills/skill-anatomy/) |
-| 4 | Isolated work | [Subagents](/en/guide/agent-work/subagents/) and [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/) |
+| 4 | Independent subtasks | [Subagents](/en/guide/agent-work/subagents/) and [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/) |
 | 5 | External systems | [MCP overview](/en/skills/mcp/mcp-overview/) |
 | 6 | Automatic guardrails | [Hooks overview](/en/skills/hooks/hooks-overview/) |
 | 7 | Team distribution | [Plugins overview](/en/skills/plugins/plugins-overview/) |
 | 8 | Recovery and review | [Undo and recover](/en/guide/getting-started/undo-and-recover/) and [Review diffs](/en/guide/quality/review-diffs/) |
 
-Use this path when the goal is not "learn one feature," but "turn a recurring workflow into a small operating system": instructions define the norm, Skills define the method, MCP provides tools, subagents split work, Hooks guard the edges, and Plugins package the result for others.
+Use this path to turn occasional help from Codex into a repeatable team workflow: project instructions set lasting rules, Skills define methods, MCP provides external tools, subagents handle clearly bounded subtasks, Hooks protect critical steps, and Plugins distribute these capabilities to others.
 
 ## Common misconceptions
 

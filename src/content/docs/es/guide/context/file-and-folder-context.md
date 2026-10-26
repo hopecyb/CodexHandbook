@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica cómo limitar el alcance de archivos y directorios; las redacciones de ejemplo y los conceptos se han revisado, y el cuerpo no depende de hechos volátiles de producto (versión, precio o interfaz).
+  checkedAt: '2026-07-26'
 title: Contexto de archivos y carpetas
 description: Señalar archivos relevantes y evitar ruido irrelevante.
 locale: es
 source_locale: zh-CN
-source_revision: e9148a3
+source_revision: "e9148a3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -20,11 +25,11 @@ Puede que ya sepas que el problema está en cierto directorio, pero si el alcanc
 Cuando el alcance es demasiado grande, suelen aparecer a la vez:
 
 - Lee muchos archivos no relacionados
-- El Contexto se llena de información irrelevante
+- El contexto se llena de información irrelevante
 - Toma por objetivo otro archivo parecido
 - El alcance del cambio supera lo que esperabas
 
-Así que el Contexto de archivos y carpetas sirve para dibujarle límites.
+Así que el contexto de archivos y carpetas sirve para dibujarle límites.
 
 ## Por qué hay que acotar el alcance de archivos
 
@@ -54,7 +59,7 @@ Esa frase deja claro a la vez:
 ### 1. ¿Cuantos más archivos relevantes, mejor?
 
 Demasiado pocos le hacen adivinar; demasiados diluyen el foco.
-Lo más adecuado: **dar solo la parte que de verdad hace falta para completar la Tarea actual.**
+Lo más adecuado: **dar solo la parte que de verdad hace falta para completar la tarea actual.**
 
 ### 2. Si no sé dónde están los archivos relevantes, ¿qué hago?
 
@@ -83,12 +88,12 @@ No necesariamente, pero cuanto más concreto, mejor.
 - Solo sabes la zona aproximada: indica primero el directorio
 - No tienes ni idea: pídele primero solo localizar y explicar
 
-## Tres cosas que conviene añadir al Prompt
+## Tres cosas que conviene añadir al prompt
 
-Si te preocupa que cambie de más, puedes añadir en el Prompt estas tres:
+Si te preocupa que cambie de más, puedes añadir en el prompt estas tres:
 
-1. Solo mirar qué archivos o directorios
-2. No escanear dónde
+1. Qué archivos o directorios debe consultar únicamente
+2. Qué ubicaciones no debe explorar
 3. Antes de modificar, explicar qué archivos afectará
 
 En el IDE, comprueba que la raíz del workspace actual sea la correcta.
@@ -104,10 +109,3 @@ Si necesitas otros archivos, dime primero por qué y luego continúa.
 ```
 
 Señalar a Codex el alcance de archivos es reducir conjeturas, ruido y cambios erróneos.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica cómo limitar el alcance de archivos y directorios; las redacciones de ejemplo y los conceptos se han revisado, y el cuerpo no depende de hechos volátiles de producto (versión, precio o interfaz).  
-**Última verificación:** 2026-07-26

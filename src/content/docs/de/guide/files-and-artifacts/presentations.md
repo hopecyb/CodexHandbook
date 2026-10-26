@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Kreuzgeprüft gegen verifizierte Kapitel zu Artefakt-Priorität, Quellenvalidierung, Bildern und Artefaktprüfung; beschränkt auf „zuerst Struktur, dann Text, zuletzt Stil und Export“."
+  checkedAt: "2026-07-26"
 title: Präsentationen
-description: "Folien erzeugen, überarbeiten und exportieren — Struktur, Master und Speaker Notes."
+description: "Folien erzeugen, überarbeiten und exportieren — Struktur, Master und Sprechernotizen."
 locale: de
 source_locale: zh-CN
-source_revision: fb319fa
+source_revision: "fb319fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
 
-Präsentationen (PPT, Keynote, Google Slides, Marp/Reveal usw.) brauchen **Erzählstruktur** und **visuelle Konsistenz**. Der Agent kann Outline und Erstentwurf — Master und Brand bleiben menschliche Verantwortung.
+Präsentationen (PPT, Keynote, Google Slides, Marp/Reveal usw.) brauchen **Erzählstruktur** und **visuelle Konsistenz**. Der Agent kann Gliederung und ersten Entwurf liefern. Folienmaster und Markenrichtlinien müssen weiterhin Menschen prüfen.
 
-Wertvoll bei Codex: zuerst Struktur, Reihenfolge und Logik; den Feinschliff schließen Sie.
+Wertvoll bei Codex: zuerst Struktur, Reihenfolge und Logik; den endgültigen Feinschliff übernimmst du.
 
 ## Inhalt dieser Seite
 
@@ -30,7 +35,7 @@ Wertvoll bei Codex: zuerst Struktur, Reihenfolge und Logik; den Feinschliff schl
 | Google Slides | Live-Kollaboration (oft Export/MCP) |
 | PDF-Export | Nur-Lese-Verteilung |
 
-Format am Aufgabenanfang fest — keine gemischten Toolchains.
+Lege das Format zu Beginn fest, damit der Agent nicht mehrere Werkzeugketten vermischt.
 
 Nach Empfänger:
 
@@ -41,18 +46,18 @@ Nach Empfänger:
 ## Empfohlener Workflow
 
 ```text
-1. Outline: Audience, Dauer, 3–5 Kernbotschaften
-2. Pro Seite Titel + 3 Bullets, Notes-Stichpunkte
+1. Gliederung: Zielgruppe, Dauer, 3–5 Kernbotschaften
+2. Pro Folie ein Titel und drei Stichpunkte; Sprechernotizen ergänzen
 3. Tool wählen, Erstentwurf erzeugen
-4. Mensch: Master, Charts, Datenherkunft
-5. PDF exportieren, Probezeit
+4. Folienmaster, Diagramme und Datenquellen manuell prüfen
+5. PDF exportieren und den Vortrag mit Zeitmessung proben
 ```
 
-Wie [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/): Outline zuerst abnehmen, dann Details.
+Wie [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/): Gliederung zuerst abnehmen, dann Details.
 
 ## Warum zuerst Struktur
 
-Ohne Struktur-Kontrolle legt Codex leicht viele Seiten, aber:
+Ohne vorherige Strukturplanung erstellt Codex schnell viele Folien, doch dabei können folgende Probleme entstehen:
 
 - Reihenfolge chaotisch
 - Seitenzahl außer Kontrolle
@@ -62,7 +67,7 @@ Stabiler in 3 Schichten:
 
 1. Was soll diese Präsentation klar machen
 2. Welche Kernbotschaft trägt jede Seite
-3. Dann erst Text, Chart-Erklärungen, Notes füllen lassen
+3. Dann erst Text, Diagrammerläuterungen, Sprechernotizen füllen lassen
 
 ## Häufige Missverständnisse
 
@@ -74,44 +79,44 @@ Oft zählt mehr:
 - Fortschritt zwischen Seiten
 - Daten mit Quelle
 
-### 2. Ganzes Deck generiert = kein Menschen-Check?
+### 2. Ein vollständiger Entwurf ersetzt die menschliche Prüfung?
 
-Nein.  
+Nein.
 Menschlich prüfen:
 
-- Brand und Master
+- Markenrichtlinien und Folienmaster
 - kritische Schlussfolgerungen
-- Zahlen und Charts
+- Zahlen und Diagramme
 - externe Versandversion
 
 ### 3. Vollere Seite = mehr Information?
 
-Meist schwerer zu präsentieren.  
-Zu viele Bullets, Charts und Fazits auf einer Seite — Audience greift den Fokus nicht.
+Meist schwerer zu präsentieren.
+Zu viele Bullets, Diagramme und Fazits auf einer Seite — das Publikum erkennt die Kernaussage nicht.
 
 ## Typische Produktionsreihenfolge
 
 Anforderungen so geben:
 
-1. Wer Audience
-2. Wie lange
-3. Welche 3 Takeaways
-4. Zuerst Outline
-5. Nach Outline-OK Seiten ausarbeiten
-6. Zuletzt Notes, Visuals, Exportformat
+1. Wer die Zielgruppe ist
+2. Wie lange der Vortrag dauert der Vortrag dauert
+3. Welche drei Kernbotschaften das Publikum mitnehmen soll
+4. Zuerst eine Gliederung anfordern
+5. Nach Freigabe der Gliederung die Folien ausarbeiten
+6. Zuletzt Sprechernotizen, visuelle Vorgaben und Exportformat ergänzen
 
 So: zuerst Struktur, dann Text, zuletzt Stil.
 
 ## Prompt-Schwerpunkte
 
-- **Audience**: Technik vs. Management → Terminologietiefe
+- **Zielgruppe**: Technik vs. Management → Terminologietiefe
 - **Seitenobergrenze**: gegen 80 Seiten Fülltext
-- **Brand**: Primärfarbe, Logo-Pfad, kein Clipart (falls Policy)
-- **Datencharts**: Quelldatei nennen; aktualisierbar, kein erfundenes Screenshot
+- **Marke**: Primärfarbe, Logo-Pfad, kein Clipart (falls Policy)
+- **Datendiagramme**: Quelldatei nennen; aktualisierbar, keine erfundenen Daten in einem Screenshot
 
 Direkt so formulieren:
 
-> „Zuerst Outline max. 10 Seiten, Audience nicht-technisches Management, eine Kernbotschaft pro Seite, danach Speaker Notes.“
+> „Zuerst Gliederung max. 10 Seiten, Zielgruppe nicht-technisches Management, eine Kernbotschaft pro Seite, danach Sprechernotizen.“
 
 Stabiler als „mach ein cooles PPT“.
 
@@ -122,35 +127,28 @@ Bilder: [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screen
 - Schriftgröße unter Projektion lesbar
 - Animation maßvoll (zu viel schwer wartbar)
 - Zahlen konsistent mit [Quellen validieren](/de/guide/quality/validate-sources/)
-- Speaker Notes ausreichend (falls nötig)
+- Sprechernotizen ausreichend (falls nötig)
 
-## Was Codex, was Sie
+## Was Codex übernimmt und was du entscheidest
 
-| Besser Codex | Besser Sie |
+| Besser Codex | Besser selbst prüfen |
 |---|---|
-| Outline in Seiten | Finale Schlusswortwahl |
-| Seitentitel-Entwurf | Brand-Konsistenz |
-| Notes-Entwurf | Sensible Daten |
-| Chart-Beschreibungen | Externe Release-Version |
+| Gliederung auf Folien verteilen | Formulierung der endgültigen Schlussfolgerungen |
+| Seitentitel-Entwurf | Markenkonsistenz |
+| Entwurf der Sprechernotizen | Sensible Daten |
+| Diagrammbeschreibungen | Version für die externe Veröffentlichung |
 
-Diese Teilung spart Zeit und hält Qualität.
+Diese Aufgabenteilung spart Zeit und erleichtert die Qualitätskontrolle.
 
 ## Häufige Fehler
 
-- Ohne Outline direkt „Quartalsbericht-PPT“
+- Ohne Gliederung direkt „Quartalsbericht-PPT“
 - `.pptx` binär hin und her, ohne Markdown-Quelle
-- Chart-Daten weichen von Repo-CSV ab
-- Agent soll Struktur, Design, Fazit und Datenkaliber gleichzeitig entscheiden
+- Diagrammdaten weichen von Repo-CSV ab
+- Agent soll Struktur, Design, Fazit und Datendefinitionen gleichzeitig entscheiden
 
 ## Abnahmeliste
 
-- [ ] Outline menschlich bestätigt vor Volltext
-- [ ] In Ziel-Playback-Umgebung ohne Schriftchaos
+- [ ] Gliederung menschlich bestätigt vor Volltext
+- [ ] In vorgesehenen Präsentationsumgebung ohne Schriftchaos
 - [ ] Kritische Daten auf Quelldateien rückführbar
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Artefakt-Priorität, Quellenvalidierung, Bildern und Artefaktprüfung; beschränkt auf „zuerst Struktur, dann Text, zuletzt Stil und Export“.  
-**Zuletzt geprüft:** 2026-07-26

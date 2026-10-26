@@ -3,15 +3,16 @@ title: Conectar GitHub
 description: Configura el acceso de Codex Cloud a GitHub con el alcance mínimo de repositorios.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: b126a7e
-translation_status: draft
+source_revision: 'b126a7e'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: 2026-10-25
 ---
 
 Codex Cloud necesita conectarse primero a GitHub o GitLab (Beta) antes de crear un entorno para un repositorio. El alcance de la autorización de GitHub determina qué repositorios puede ver. Los clones locales y los cambios sin enviar quedan fuera de ese alcance.
@@ -22,7 +23,7 @@ Codex Cloud necesita conectarse primero a GitHub o GitLab (Beta) antes de crear 
 2. Conecta GitHub cuando se te solicite.
 3. En la pantalla de autorización de GitHub, elige la organización y **solo los repositorios necesarios**.
 4. Vuelve a Codex, selecciona el repositorio y crea un entorno Cloud.
-5. Comprueba el checkout, la rama y el diff mediante una tarea de solo lectura o con un cambio pequeño.
+5. Comprueba la clonación, la rama y el diff mediante una tarea de solo lectura o con un cambio pequeño.
 6. Si necesitas revisar PR, activa Code review para el repositorio en Codex Settings.
 
 Autoriza únicamente los repositorios necesarios para esta tarea. En repositorios de equipo, confirma además que la organización permite instalar la integración, que tu cuenta tiene los permisos adecuados y que se mantiene la protección de ramas.

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Web and Cloud overview
 description: The remote-task path from repository connection and reproducible environments to review and pull requests.
 locale: en
 source_locale: zh-CN
-source_revision: 86fa0ac
+source_revision: '86fa0ac'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 13
 ---
@@ -62,11 +66,3 @@ Use a test repository with no production credentials. Ask Codex only to fix docu
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

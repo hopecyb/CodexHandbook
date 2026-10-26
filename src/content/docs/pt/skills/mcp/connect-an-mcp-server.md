@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App ChatGPT para desktop / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: Ligar um servidor MCP
 description: Configura, autentica e verifica o primeiro servidor MCP com a CLI ou o config.toml.
 locale: pt
 source_locale: zh-CN
-source_revision: 0675d33
-translation_status: draft
+source_revision: "0675d33"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Este capítulo usa as interfaces oficiais atuais para completar o ciclo mínimo: **adicionar o servidor → consultar a configuração → confirmar as ferramentas numa sessão → fazer uma chamada só de leitura**.
@@ -14,7 +19,7 @@ Este capítulo usa as interfaces oficiais atuais para completar o ciclo mínimo:
 
 - Lê a [Visão geral de MCP](/pt/skills/mcp/mcp-overview/).
 - Confirma que `codex mcp --help` funciona no teu computador.
-- Para a primeira ligação, escolhe uma origem fiável e um cenário só de leitura.
+- Para a primeira ligação, escolhe uma origem confiável e um cenário só de leitura.
 - Não escrevas tokens reais no histórico de comandos, nos prompts nem no repositório.
 
 ## Caminho A: adicionar um servidor STDIO com a CLI
@@ -26,11 +31,11 @@ codex mcp add context7 -- npx -y @upstash/context7-mcp
 codex mcp list
 ```
 
-O comando escreve o servidor na configuração do Codex. Depois de `--` vem o comando que inicia o servidor STDIO. A primeira execução pode descarregar um pacote npm; confirma antes o nome e a origem do pacote.
+O comando escreve o servidor na configuração do Codex. Depois de `--` vem o comando que inicia o servidor STDIO. A primeira execução pode baixar um pacote npm; confirma antes o nome e a origem do pacote.
 
 ## Caminho B: editar diretamente o config.toml
 
-A configuração do utilizador fica, por predefinição, em `~/.codex/config.toml`. Num projeto de confiança também podes usar `.codex/config.toml` ao nível do projeto.
+A configuração do usuário fica, por padrão, em `~/.codex/config.toml`. Num projeto de confiança também podes usar `.codex/config.toml` ao nível do projeto.
 
 Exemplo STDIO:
 
@@ -71,7 +76,7 @@ As listas de servidores MCP na aplicação de desktop e no IDE também assinalam
 | Codex CLI | `codex mcp add/list/login`; no TUI, usa `/mcp` |
 | Extensão IDE | Menu da roda dentada → MCP servers; depois de guardar, Restart extension |
 
-Os três partilham a configuração no mesmo Codex host; não é preciso manter três ficheiros separados. O ChatGPT Web não lê a configuração local.
+Os três partilham a configuração no mesmo Codex host; não é preciso manter três arquivos separados. O ChatGPT Web não lê a configuração local.
 
 ## Prompt de verificação
 

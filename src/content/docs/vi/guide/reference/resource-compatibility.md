@@ -6,12 +6,13 @@ editorialStatus: review
 verification:
   kind: editorial
   checkedAt: "2026-09-18"
-  summary: Cung cấp quy trình thử nghiệm cần điền. Hiện trang này chưa có hồ sơ hoàn tất về việc cài đặt và gỡ thú cưng hoặc chủ đề trong ứng dụng khách.
+  summary: Cung cấp quy trình thử nghiệm cần điền. Hiện website này chưa có hồ sơ hoàn tất về việc cài đặt và gỡ thú cưng hoặc chủ đề trong ứng dụng khách.
 locale: vi
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: "96ff34f"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Tính tương thích phải gắn với một tổ hợp phiên bản cụ thể. Cấu trúc gói hợp lệ, ảnh đúng kích thước hoặc giao diện mở được đều không tự chứng minh rằng các trạng thái hoạt ảnh hay quá trình gỡ và khôi phục hoạt động bình thường.

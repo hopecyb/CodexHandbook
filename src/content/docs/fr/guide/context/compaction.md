@@ -8,11 +8,12 @@ title: "Compaction du contexte"
 description: "Ce que la compaction d'une longue conversation conserve et risque de perdre."
 locale: fr
 source_locale: zh-CN
-source_revision: "c6c9d03"
-translation_status: draft
+source_revision: 'c6c9d03'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+reviewed_at: '2026-10-26'
 ---
 
 La « compaction du contexte » signifie que, lorsqu'une conversation devient trop longue, le système conserve une version raccourcie des échanges précédents pour permettre à la tâche de continuer. En contrepartie, **des détails peuvent se perdre**.

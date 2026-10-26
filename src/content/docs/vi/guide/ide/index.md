@@ -1,14 +1,19 @@
 ---
-title: Tiện ích IDE
-description: Dùng Codex trong trình soạn thảo — cài đặt, ngữ cảnh, tác vụ local và Cloud, rà soát và cài đặt.
-locale: vi
-source_locale: zh-CN
-source_revision: c2fa50b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tiện ích IDE"
+description: "Dùng Codex trong trình soạn thảo — cài đặt, ngữ cảnh, tác vụ local và Cloud, rà soát và cài đặt."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "c2fa50b"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 12
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI Help Center hiện tại — *Using Codex with your ChatGPT plan* — vẫn nêu rõ hỗ trợ Codex IDE extension, và xếp nó ngang hàng CLI, Desktop App như client local; trang này chỉ là điều hướng chương IDE, nhấn mạnh cách làm ổn định «tệp hiện tại, vùng chọn và rà soát diff»."
+  checkedAt: "2026-07-26"
 ---
 
 Tiện ích IDE phù hợp **vừa viết vừa xem diff**: mở tệp, chọn mã, mô tả tác vụ ở thanh bên. Chương này phủ đường đi đầy đủ từ chọn loại đến rà soát.
@@ -42,10 +47,3 @@ Lần đầu dùng, có thể chú ý ba việc:
 3. Sửa xong vẫn phải tự rà soát diff
 
 Tiện ích IDE phù hợp tác vụ «phạm vi nhỏ, vừa xem vừa sửa», nhưng kiểm soát phạm vi và rà soát vẫn không thể thiếu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** IDE  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện tại — *Using Codex with your ChatGPT plan* — vẫn nêu rõ hỗ trợ Codex IDE extension, và xếp nó ngang hàng CLI, Desktop App như client local; trang này chỉ là điều hướng chương IDE, nhấn mạnh cách làm ổn định «tệp hiện tại, vùng chọn và rà soát diff».  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App / Codex CLI / IDE (support differs by mechanism)"
+  basis: "Compared against OpenAI Skills, Plugins, MCP, Hooks, and Scheduled tasks documentation on 2026-08-25."
+  checkedAt: "2026-08-25"
 title: Choose an extension method
 description: Choose prompts, AGENTS.md, Skills, MCP, Hooks, Plugins, or Scheduled tasks by what must persist.
 locale: en
 source_locale: zh-CN
-source_revision: 28ae6f5
+source_revision: '28ae6f5'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 The common mistake is selecting a technology name before identifying the problem. Ask first: **what must persist, or what should happen automatically?**
@@ -32,7 +37,7 @@ This is not an exclusive tree. A mature workflow may combine `AGENTS.md`, a Skil
 
 ### 1. Only this task?
 
-Use a prompt. State goal, input, scope, acceptance, and permissions.
+Use a prompt. State the goal, input, scope, acceptance criteria, and permissions. This has the lowest setup cost and makes actual problems easiest to observe.
 
 ### 2. Every run in this repository?
 
@@ -40,11 +45,11 @@ Use `AGENTS.md` for tests, style, prohibited directories, and install rules. Do 
 
 ### 3. Stable steps and output for a task class?
 
-Create a Skill with reusable instructions, templates, references, assets, or scripts. Keep experimenting in prompts until success is stable.
+Create a Skill with reusable instructions, templates, references, assets, or scripts. If success criteria are not yet defined, keep experimenting with prompts first.
 
 ### 4. External data or actions?
 
-Evaluate MCP or a Connector. List required tools and data, start read-only and least privilege, and avoid a connection when local files or commands suffice.
+Evaluate MCP or a Connector. List the tools and data actually needed, prioritize read-only access, the smallest scope, and auditable configuration, and avoid an extra connection when local files or commands suffice.
 
 ### 5. Check at a fixed lifecycle point?
 
@@ -87,7 +92,7 @@ Create a Scheduled task only after verifying prompt, Skill, permissions, and out
 
 - **Skill bloat:** dozens of overlapping descriptions.
 - **MCP hammer:** API integration where `git` suffices.
-- **Unaccepted scheduling:** unattended code edits with no evidence, stop, or human review.
+- **Scheduling without acceptance checks:** scheduled code edits with no stop conditions, run evidence, or human review.
 - **Rebuilding official connectors:** unnecessary custom MCP.
 - **Misplaced rule:** one-off requirement in `AGENTS.md`.
 - **Hook overload:** long business logic on every tool call.
@@ -141,10 +146,3 @@ For every added layer, ask: which access was added, how is it verified, and how 
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-**Applies to:** ChatGPT Web / desktop App / Codex CLI / IDE (support differs by mechanism)
-**Verification basis:** Compared against OpenAI Skills, Plugins, MCP, Hooks, and Scheduled tasks documentation on 2026-08-25.
-**Last verified:** 2026-08-25

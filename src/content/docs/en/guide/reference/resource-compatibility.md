@@ -9,9 +9,10 @@ verification:
   summary: Provides a test procedure to fill in. This site has no completed client installation or removal record for pets or themes yet.
 locale: en
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: '96ff34f'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Compatibility applies to a specific combination of versions. A valid package structure, correctly sized images, or an interface that opens does not, on its own, prove that animation states work or that removal and recovery succeed.

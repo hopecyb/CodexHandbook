@@ -3,12 +3,17 @@ title: GitHub 連携
 description: リポジトリ接続、PR、Review、CI——GitHub ワークフローにおける Codex の位置づけ。
 locale: ja
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: "ece7161"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Cloud / App / CLI
+  basis: OpenAI Developers の現行 Codex use cases には「Review GitHub pull requests」が含まれる。OpenAI Help Center のプラグイン・連携説明も、外部リポジトリアクセスが基盤アプリ権限、ロールアクセス、動作境界に依存することを強調している。本ページは GitHub リポジトリ、ブランチ、PR、Review、CI の協業位置と、ローカルと Cloud のコード可視性の差だけを要約する。
+  checkedAt: "2026-07-26"
 ---
 
 GitHub は Codex にとって最も一般的なコード協業面です。Cloud タスク、PR レビュー、Actions、ローカル push は、同じブランチと権限の上で動きます。
@@ -39,7 +44,7 @@ GitHub は Codex にとって最も一般的なコード協業面です。Cloud 
 - デフォルトで main を保護。Codex は feature ブランチのみ push
 - PR は issue にリンク。説明にテスト内容を含める
 - release bot の明示的許可がない限り、Codex に PR マージさせない
-- 鍵は GitHub Secrets / 環境 secrets を使い、プロンプトに入れない
+- シークレットは GitHub Secrets / 環境 secrets を使い、プロンプトに入れない
 ```
 
 ## Cloud vs ローカル Git
@@ -95,14 +100,8 @@ GitHub 連携の要点は、Codex を既存のコード協業フローに接続�
 ## よくあるミス
 
 - Cloud タスクが、ローカル未コミット変更の存在を前提にする
-- 未消毒の指示を PR 説明で実行させる（プロンプト注入）
+- 無害化していない指示を PR 説明で実行させる（プロンプト注入）
 - 1 つの PR にフォーマット変更と機能変更を混ぜる
 
 ## 参考ソース
 - OpenAI Codex GitHub 連携ドキュメント
----
-
-**状態：** verified  
-**対象製品：** Cloud / App / CLI  
-**検証根拠：** OpenAI Developers の現行 Codex use cases には「Review GitHub pull requests」が含まれる。OpenAI Help Center のプラグイン・連携説明も、外部リポジトリアクセスが基盤アプリ権限、ロールアクセス、動作境界に依存することを強調している。本ページは GitHub リポジトリ、ブランチ、PR、Review、CI の協業位置と、ローカルと Cloud のコード可視性の差だけを要約する。  
-**最終検証：** 2026-07-26

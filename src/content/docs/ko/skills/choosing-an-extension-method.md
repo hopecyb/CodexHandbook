@@ -8,9 +8,10 @@ legacyVerification:
   checkedAt: "2026-08-25"
 locale: ko
 source_locale: zh-CN
-source_revision: "28ae6f5"
-translation_status: draft
+source_revision: '28ae6f5'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 확장 방식이 많아질수록 흔한 실수는 먼저 기술 이름을 고른 뒤 거기에 맞는 문제를 찾는 것입니다. 더 안정적인 순서는 먼저 **무엇을 남겨 두고 싶은가, 또는 무엇이 자동으로 일어나야 하는가?**라고 묻는 것입니다.

@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Recoupé avec les descriptions actuelles d’OpenAI Developers sur les longues tâches, la vérification et l’avancement par étapes, ainsi qu’avec les chapitres vérifiés de ce manuel sur la planification, la qualité et le contexte. Cette page ne conserve que le principe stable selon lequel une correction locale vaut mieux qu’une reprise complète."
-  checkedAt: "2026-07-26"
-title: "Progression et réorientation"
-description: "Ramener Codex sur la bonne voie avec une instruction courte lorsqu’une tâche commence à dévier."
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupé avec les descriptions actuelles d’OpenAI Developers sur les longues tâches, la vérification et l’avancement par étapes, ainsi qu’avec les chapitres vérifiés de ce manuel sur la planification, la qualité et le contexte. Cette page ne conserve que le principe stable selon lequel une correction locale vaut mieux qu’une reprise complète.
+  checkedAt: '2026-07-26'
+title: Progression et réorientation
+description: Ramener Codex sur la bonne voie avec une instruction courte lorsqu’une tâche commence à dévier.
 sidebar:
   order: 20
 locale: fr
 source_locale: zh-CN
-source_revision: c9ea3be
-translation_status: draft
+source_revision: "c9ea3be"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 Quand l’exécution dévie, deux réactions sont fréquentes :
 

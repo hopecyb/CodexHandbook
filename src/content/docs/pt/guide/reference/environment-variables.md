@@ -3,12 +3,17 @@ title: Variáveis de ambiente
 description: Uso, camadas e segurança das variáveis de ambiente relacionadas com o Codex — índice complementar da referência de configuração.
 locale: pt
 source_locale: zh-CN
-source_revision: 58fd37b
+source_revision: "58fd37b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE / Cloud
+  basis: A documentação de configuração atual do OpenAI Help Center continua a oferecer expressões modernas de `~/.codex/.env`, injeção em CI/runtime e Secrets de plataforma; esta página centra-se em princípios estáveis —que valores encaixam em variáveis de ambiente, quais não, e que `.env` é só um contentor local— sem fixar uma lista concreta de nomes de variáveis.
+  checkedAt: '2026-07-26'
 ---
 
 As «variáveis de ambiente» levam a dois extremos: ou se veem como algo muito de baixo nível, ou se acredita que toda a configuração cabe aí. Em claro: uma variável de ambiente é uma forma de entregar valores ao programa em tempo de execução, especialmente adequada para informação sensível e interruptores.
@@ -58,14 +63,14 @@ Assim, ao diagnosticar, também sabes melhor onde olhar.
 
 Na primeira vez com variáveis de ambiente, o primeiro que se encontra costuma ser um ficheiro `.env`. Aí também há mais mal-entendidos.
 
-`.env` não é outro centro de configuração. É só um método habitual que muitas Ferramentas oferecem para **carregar variáveis de ambiente em lote** em desenvolvimento local.
+`.env` não é outro centro de configuração. É só um método habitual que muitas ferramentas oferecem para **carregar variáveis de ambiente em lote** em desenvolvimento local.
 
 Assim:
 
 - A variável de ambiente é «o valor em si»
 - `.env` é «um contentor habitual local para esses valores»
 
-Por tanto:
+Portanto:
 
 - Que `.env` seja cómodo não implica que seja seguro
 - `.env.example` é para nomes de exemplo, não para secrets reais
@@ -85,7 +90,7 @@ Servem bem para «valores»; não para carregar todo o conjunto de regras de equ
 
 ### 2. Meter em `.env` já é seguro?
 
-Se `.env` for commitado, se vir num ecrã partilhado ou se imprimir em logs, também se filtra.
+Se `.env` for commitado, se vir num ecrã partilhado ou se imprimir em logs, também pode haver vazamento de dados.
 
 ### 3. Após `unset` já não há risco?
 
@@ -134,10 +139,10 @@ Assim é menos fácil o «o valor está correto, mas está no sítio errado».
 | Depurar API de terceiros na máquina local | Variável de ambiente local ou `.env`, e ignorar no commit |
 | Exemplo de configuração partilhado pela equipa | Fazer commit de `.env.example`, não valores reais |
 | GitHub Actions / CI | Secret da plataforma |
-| Tarefa Cloud que chama um serviço privado | Cloud Secret |
+| tarefa Cloud que chama um serviço privado | Cloud Secret |
 | Servidor MCP que precisa de ler uma key | Variável de ambiente do processo pai ou injeção de Secret |
 
-Se não tiveres claro: os secrets reais, na medida do possível, não deveriam ficar a longo prazo como conteúdo de ficheiro ordinário no repo.
+Se não tiveres claro: os secrets reais, na medida do possível, não deveriam ficar a longo prazo como conteúdo de ficheiro comum no repo.
 
 ## Cenários de uso habituais
 
@@ -155,15 +160,15 @@ O processo MCP costuma herdar o ambiente do pai; na configuração referencia `$
 
 ### Cloud
 
-Os Secrets ao nível do repo configuram-se na consola Cloud; o nome deve coincidir com a referência dentro da Tarefa.
+Os Secrets ao nível do repo configuram-se na consola Cloud; o nome deve coincidir com a referência dentro da tarefa.
 
 As variáveis de ambiente encaixam em valores que mudam, são sensíveis ou só fazem falta em runtime; não carregam regras nem explicações a longo prazo.
 
 ## Lista de segurança
 
 - [ ] `.env` está em `.gitignore`
-- [ ] Desensibilizar tokens antes de imprimir logs
-- [ ] Rotacionar keys que se tenham filtrado
+- [ ] Ocultar tokens antes de imprimir logs
+- [ ] Substituir as chaves que tenham vazado
 - [ ] Scope de privilégio mínimo (token de CI só de leitura, etc.)
 
 ## Erros frequentes
@@ -174,9 +179,3 @@ As variáveis de ambiente encaixam em valores que mudam, são sensíveis ou só 
 
 ## Fontes de referência
 - Documentação de configuration / environment OpenAI Codex
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / App / IDE / Cloud  
-**Base de verificação:** A documentação de configuração atual do OpenAI Help Center continua a oferecer expressões modernas de `~/.codex/.env`, injeção em CI/runtime e Secrets de plataforma; esta página centra-se em princípios estáveis —que valores encaixam em variáveis de ambiente, quais não, e que `.env` é só um contentor local— sem fixar uma lista concreta de nomes de variáveis.  
-**Última verificação:** 2026-07-26

@@ -3,11 +3,17 @@ title: Instalar a integração com IDE
 description: Ative o Codex em editores compatíveis com VS Code, no Xcode ou em IDEs JetBrains.
 locale: pt
 source_locale: zh-CN
-source_revision: e8f88ec
-translation_status: draft
+source_revision: "e8f88ec"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: O guia rápido oficial atual para IDE lista VS Code, Cursor, Windsurf e VS Code Insiders, além das integrações próprias de Xcode e JetBrains. Esta página separa as instruções conforme esses dois caminhos de instalação.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 O suporte atual a IDEs não usa um único método de instalação:

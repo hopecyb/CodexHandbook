@@ -1,14 +1,20 @@
 ---
 title: Personalisierung und Projektkonfiguration
-description: Persönliche Vorlieben, AGENTS.md, Konfiguration und Regelpriorität — damit Codex dauerhaft nach Ihrer Weise arbeitet.
+description: Persönliche Vorlieben, AGENTS.md, Konfiguration und Regelpriorität — damit Codex dauerhaft nach Ihren Vorgaben arbeitet.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 28adc49
+source_revision: "28adc49"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Aktuelle OpenAI-Hilfecenter- und Codex-Konfigurationsmaterialien beschreiben weiterhin die Schichtung aus Benutzer-`~/.codex`, organisationsgesteuerten Fähigkeiten und projektbezogenen Kollaborationshinweisen;
+    diese Seite formuliert „Priorität“ bewusst konservativ als übliche Schichtung und vermeidet, implementierungsspezifische Details als absolute Regeln darzustellen.
+  checkedAt: '2026-07-26'
 ---
 
 Codex stützt sich nicht nur darauf, „wie Sie diesmal fragen“, sondern auch auf **persistente Konfiguration**, um Ihre und die Team-Vereinbarungen zu merken. Dieses Kapitel trennt vor allem, welche Anforderungen im Gespräch bleiben und welche ins Projekt wandern sollen.
@@ -59,11 +65,11 @@ Schichten zu verstehen, hilft gegen die Verwirrung „Regeln geschrieben, aber n
 
 ### 1. Solange ich gute Prompts schreibe, brauche ich keine langfristige Konfiguration?
 
-Für kurze Aufgaben reicht das vielleicht. Sobald die Zusammenarbeit andauert, wollen Sie wiederkehrende Anforderungen aber immer stärker „versenken“.
+Für kurze Aufgaben reicht das vielleicht. Sobald die Zusammenarbeit andauert, wollen Sie wiederkehrende Anforderungen aber dauerhaft festhalten.
 
 ### 2. Alles in `AGENTS.md` stopfen reicht?
 
-Auch nicht.  
+Auch nicht.
 Manches gehört besser in:
 
 - persönliche Vorlieben
@@ -117,9 +123,3 @@ Regeln müssen nicht zahlreich sein — der richtige Ort zählt mehr.
 
 ## Quellen
 - OpenAI-Codex-Dokumentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Aktuelle OpenAI-Hilfecenter- und Codex-Konfigurationsmaterialien beschreiben weiterhin die Schichtung aus Benutzer-`~/.codex`, organisationsgesteuerten Fähigkeiten und projektbezogenen Kollaborationshinweisen; diese Seite formuliert „Priorität“ bewusst konservativ als übliche Schichtung und vermeidet, implementierungsspezifische Details als absolute Regeln darzustellen.  
-**Zuletzt geprüft:** 2026-07-26

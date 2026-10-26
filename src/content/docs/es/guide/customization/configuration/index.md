@@ -3,12 +3,16 @@ title: Configuración
 description: Página de introducción a archivos de configuración y profiles — qué comportamientos van en configuración y cuáles no.
 locale: es
 source_locale: zh-CN
-source_revision: 4d18d5e
+source_revision: "4d18d5e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Contrastado con la estructura actual del subcapítulo de configuration de este repositorio y sus enlaces de entrada; esta página solo explica el principio de agrupación «la configuración gestiona comportamientos por defecto y preferencias estables; no sustituye aprobación ni reglas de proyecto», sin detalles de claves de configuración variables.
+  checkedAt: '2026-07-26'
 ---
-
 La primera vez que ves el grupo «configuración», es fácil pensar que solo habla de un montón de nombres de parámetros.
 
 En realidad resuelve una cosa: cómo debe trabajar Codex por defecto, sin tener que repetirlo cada vez de forma temporal.
@@ -25,10 +29,3 @@ En realidad resuelve una cosa: cómo debe trabajar Codex por defecto, sin tener 
 - Por qué algunas restricciones deben ir a reglas o aprobación, y no solo a notas de configuración
 
 La configuración encaja mejor con comportamientos por defecto y preferencias estables; no sustituye aprobación, reglas ni instrucciones del proyecto.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con la estructura actual del subcapítulo de configuration de este repositorio y sus enlaces de entrada; esta página solo explica el principio de agrupación «la configuración gestiona comportamientos por defecto y preferencias estables; no sustituye aprobación ni reglas de proyecto», sin detalles de claves de configuración variables.  
-**Última verificación:** 2026-07-26

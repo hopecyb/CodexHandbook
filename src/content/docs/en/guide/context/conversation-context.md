@@ -8,8 +8,9 @@ title: Conversation context
 description: How information accumulates and becomes outdated in one thread.
 locale: en
 source_locale: zh-CN
-source_revision: "3968049"
-translation_status: draft
+source_revision: '3968049'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 30

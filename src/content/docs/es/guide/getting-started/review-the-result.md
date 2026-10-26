@@ -3,12 +3,17 @@ title: Revisa el resultado
 description: Lee los cambios, valida el artefacto y decide aceptar o modificar.
 locale: es
 source_locale: zh-CN
-source_revision: a215910
+source_revision: 'a215910'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Se cruzó con las secciones ya verificadas de revisar diffs, definir hecho y deshacer/recuperar; esta página se centra en el método estable de «mirar alcance, resultado y efectos secundarios, y luego decidir si recibirlo».
+  checkedAt: '2026-07-26'
 ---
 
 Tras terminar la Tarea, muchos principiantes se saltan este paso.
@@ -34,11 +39,11 @@ Codex puede escribir un resumen fluido, pero lo importante es:
 
 - Si tocó el archivo equivocado
 - Si cambió algo que no autorizaste
-- Si el resultado cumple de verdad la aceptación
+- Si el resultado cumple de verdad los criterios de aceptación
 
 ### 2. Ves «casi» y aceptas al momento
 
-«Casi» deja agujeros pequeños después.  
+Aceptar algo que está «casi bien» puede dejar problemas para más adelante.
 Si solo falta un poco, mejor añade feedback preciso; no te conformes en silencio.
 
 ### 3. Ves que algo no encaja y no sabes cómo decirlo
@@ -58,10 +63,3 @@ En la primera práctica, puedes revisar así:
 3. **Efectos secundarios**: si introdujo cambios de más o errores nuevos
 
 En la aceptación, lo esencial es confirmar si este resultado se puede recibir con tranquilidad.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con las secciones ya verificadas de revisar diffs, definir hecho y deshacer/recuperar; esta página se centra en el método estable de «mirar alcance, resultado y efectos secundarios, y luego decidir si recibirlo».  
-**Última verificación:** 2026-07-26

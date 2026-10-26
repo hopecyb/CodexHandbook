@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Team / enterprise scenarios"
+  basis: "OpenAI enterprise plugin/app docs still treat role access, action permissions, approval, and source-system boundaries as governance prerequisites; this page defines the governance section role and entry only—does not claim specific org controls are on by default."
+  checkedAt: "2026-07-26"
 title: Governance
 description: Policies, boundaries, and org rules—what is allowed, what is not, and who is accountable.
 locale: en
 source_locale: zh-CN
-source_revision: 6c37ab4
+source_revision: '6c37ab4'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 In the Codex context, governance is mainly two things: what the team allows, and who handles problems when they arise.
@@ -28,10 +33,3 @@ That affects:
 - Why “everyone knows” is usually not enough
 
 Governance pages exist to state high-risk boundaries upfront—not leave teams guessing.
-
----
-
-**Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI enterprise plugin/app docs still treat role access, action permissions, approval, and source-system boundaries as governance prerequisites; this page defines the governance section role and entry only—does not claim specific org controls are on by default.  
-**Last verified:** 2026-07-26

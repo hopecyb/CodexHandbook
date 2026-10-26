@@ -8,12 +8,11 @@ title: Mẫu review
 description: Review có cấu trúc về diff và rủi ro thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: "e89989d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Chỗ dễ lệch nhất của tác vụ review là ngay từ đầu biến thành «tiện tay sửa giúp bạn».
 
@@ -23,7 +22,7 @@ Tìm vấn đề trước, rồi mới quyết có sửa hay không—ổn đị
 
 ```text
 Hãy review diff hiện tại so với 【main/nhánh mục tiêu】; chưa sửa code.
-Chiều:
+Tiêu chí:
 1. Có vượt phạm vi 【issue/đặc tả】 không
 2. Lỗi logic, biên, xử lý lỗi
 3. Bảo mật (khóa bí mật, injection, quyền)
@@ -51,7 +50,7 @@ Review còn nên xem:
 - Kiểm thử và tài liệu có theo kịp không
 - Có vấn đề bảo mật và biên không
 
-Trọng tâm mẫu review là lật rủi ro theo chiều cố định—không phải đánh giá chung «hay hay dở».
+Trọng tâm mẫu review là phát hiện rủi ro theo các tiêu chí cố định—không phải đánh giá chung «hay hay dở».
 
 ## Liên quan
 

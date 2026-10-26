@@ -7,9 +7,10 @@ title: Escribir una página de guía
 description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: "dd22df1"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -90,7 +91,7 @@ Así que hay que añadir a propósito este puente:
 
 - Para quién sirve la página
 - Qué debería poder resolver al terminar
-- Si solo quiere empezar, qué punto agarrar primero
+- Si solo quiere empezar, en qué punto centrarse primero
 
 ### Una página de guía no sustituye la documentación oficial
 
@@ -104,7 +105,7 @@ El manual de la comunidad puede ayudar a entender, encadenar y aterrizar; pero l
 
 ## Tono
 
-- Español orientado a quien practica
+- El texto fuente se redacta en chino simplificado y se dirige a quienes aplican lo aprendido
 - Reconocer la incertidumbre («prevalece la documentación oficial»)
 - No usar la narrativa del «prompt universal»
 

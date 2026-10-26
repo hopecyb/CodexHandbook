@@ -9,13 +9,13 @@ legacyVerification:
   basis: "Les cas d'usage Codex actuels d'OpenAI Developers incluent toujours « Understand large codebases », avec un accent sur le suivi du chemin principal, l'identification des modules clés et la localisation rapide des fichiers pertinents ; cet exemple relève d'une exploration en lecture seule, cohérente avec le positionnement officiel actuel."
   checkedAt: "2026-07-26"
 title: Comprendre une base de code
-description: Exploration en lecture seule d'un dépôt inconnu pour établir une carte cognitive actionnable.
+description: Exploration en lecture seule d'un dépôt inconnu pour établir une vue d’ensemble utile pour agir.
 locale: fr
 source_locale: zh-CN
-source_revision: c89ee30
+source_revision: "c89ee30"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -41,7 +41,7 @@ Ne modifiez pas encore le code. Lisez @src/ et @README, et expliquez en 8 points
 2. Responsabilités des répertoires principaux
 3. Points d'entrée de démarrage/tests
 4. Les 3 fichiers les plus pertinents pour [mon objectif]
-5. 3 questions à me confirmer
+5. 3 questions auxquelles je dois répondre
 ```
 
 ## 3. Vérification

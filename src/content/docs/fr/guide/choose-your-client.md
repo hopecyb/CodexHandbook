@@ -3,12 +3,17 @@ title: Choisir un client Codex
 description: Choisissez entre l'App de bureau, la CLI, l'intégration IDE et Cloud selon le lieu et la manière dont le travail s'effectue.
 locale: fr
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 2
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: comparaison avec la documentation officielle actuelle de l'App de bureau ChatGPT, de Codex CLI, des intégrations IDE et de Cloud. Les recommandations reposent sur le lieu et le mode de travail, et distinguent l'extension compatible VS Code des intégrations propres à Xcode et JetBrains.
+  checkedAt: '2026-08-26'
 ---
 
 Pour choisir votre premier point d'entrée Codex, inutile de comparer des dizaines de fonctionnalités. Commencez par répondre à une question : **où ce travail se déroule-t-il principalement ?**
@@ -84,7 +89,7 @@ Commencez par la CLI et consignez les commandes d'installation, de test et de fo
 
 ## Vérifier immédiatement votre choix
 
-Ne vous contentez pas de vérifier que le client s'ouvre. Realisez cette boucle dans un dépôt d'exercice :
+Ne vous contentez pas de vérifier que le client s'ouvre. Réalisez cette boucle dans un dépôt d'exercice :
 
 1. Demandez à Codex de lire et d'expliquer un fichier.
 2. Demandez une petite modification réversible.
@@ -93,13 +98,3 @@ Ne vous contentez pas de vérifier que le client s'ouvre. Realisez cette boucle 
 5. Assurez-vous de savoir refuser ou restreindre une demande d'autorisation.
 
 Consultez la [comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) pour la matrice complète et [Autorisations et bac à sable](/fr/guide/permissions-and-sandbox/) pour les limites d'exécution.
-
----
-
-**Statut :** verified
-
-**Produits concernés :** App / CLI / IDE / Cloud
-
-**Base de vérification :** comparaison avec la documentation officielle actuelle de l'App de bureau ChatGPT, de Codex CLI, des intégrations IDE et de Cloud. Les recommandations reposent sur le lieu et le mode de travail, et distinguent l'extension compatible VS Code des intégrations propres à Xcode et JetBrains.
-
-**Dernière vérification :** 2026-08-26

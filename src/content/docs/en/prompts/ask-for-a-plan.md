@@ -10,9 +10,10 @@ verification:
   summary: "The three task categories and two comparisons are editorial collaboration advice. Authorization and execution boundaries were checked; they are not fixed client modes, and no model success-rate experiment was performed."
 locale: en
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: '706f11b'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Whether to ask for a plan depends on which decisions remain open. A clearly scoped, reversible change can be done directly. Plan first when the route is uncertain. Stop before a specific action that needs additional authorization. Asking for a plan does not mean asking the user to reply after every step.

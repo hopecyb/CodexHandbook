@@ -7,11 +7,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: 5bbb905
-translation_status: draft
+source_revision: '5bbb905'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+reviewed_at: 2026-10-25
 ---
 
 Cloud tiene dos fases distintas de acceso a la red:

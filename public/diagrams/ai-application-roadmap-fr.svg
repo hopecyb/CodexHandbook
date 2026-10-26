@@ -70,7 +70,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
     <text x="28" y="32" class="node-title">Context Engineering (ingénierie du contexte)</text>
     <text x="28" y="55" class="node-date">2025-09-29 · Conception du contexte</text>
-    <text x="28" y="78" class="node-body">Passer de « bien écrire le prompt » à « choisir ce que le modèle voit, et dans quel ordre ».</text>
+    <text x="28" y="78" class="node-body">Passer de « bien écrire le prompt » à « choisir ce que le modèle voit, et selon quelles priorités ».</text>
   </g>
   <g transform="translate(240 592)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
@@ -91,14 +91,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP (protocole de contexte de modèle)</text>
     <text x="28" y="55" class="node-date">2024-11-25 · Protocole d’outils</text>
-    <text x="28" y="78" class="node-body">Exposer outils, ressources, prompts et contexte via un protocole, sans intégrations ad hoc.</text>
+    <text x="28" y="78" class="node-body">Exposer outils, ressources, prompts et contexte via un protocole pour réduire le coût des intégrations ad hoc.</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Function Calling (appel de fonctions)</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Actions structurées</text>
-    <text x="28" y="78" class="node-body">Le modèle ne produit plus seulement du texte : il appelle fonctions, API et actions métier.</text>
+    <text x="28" y="78" class="node-body">Le modèle ne produit plus seulement du texte : il appelle fonctions, API et actions métier avec des paramètres analysables.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>

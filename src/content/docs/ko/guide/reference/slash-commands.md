@@ -8,11 +8,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: a34c90f
-translation_status: draft
+source_revision: 'a34c90f'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
 
 슬래시 명령을 처음 보면 모두 외워야 하는 낯선 용어처럼 느껴질 수 있습니다. 필요한 기능을 이름으로 바로 불러오는 빠른 실행 메뉴라고 생각하면 이해하기 쉽습니다.

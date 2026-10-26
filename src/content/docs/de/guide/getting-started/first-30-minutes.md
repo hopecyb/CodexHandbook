@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Gegen die im Handbuch bereits geprüften Kapitel Sicherheits-Checkliste, Übungsprojekt, erste Aufgabe, Ergebnisprüfung und Anfänger-Pfad abgeglichen; diese Seite liefert nur die stabile Einstiegsroute „erste halbe Stunde zuerst den Kreislauf durchziehen“."
+  checkedAt: "2026-07-26"
 title: Route für die ersten 30 Minuten
 description: "Eine 30-Minuten-Route zum direkten Einstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 7d1061d
+source_revision: "7d1061d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 110
 ---
@@ -30,7 +35,7 @@ Nicht alle Funktionen lernen — diese Kette durchziehen:
 - Ins Produkt kommen
 - Codex an einem echten Verzeichnis arbeiten lassen
 - Ergebnis sehen
-- Entscheiden, ob annehmen lohnt
+- Entscheiden, ob du das Ergebnis annehmen kannst
 
 Sitzt diese Kette, fallen CLI, IDE, Cloud, Skills und Automatisierung leichter.
 
@@ -84,7 +89,7 @@ Verstehen zählt — für Anfänger zählt aber zuerst die Erfahrung „ich habe
 
 In den ersten 30 Minuten lohnt die Gewohnheit: Auch bei kleiner Aufgabe einmal prüfen.
 
-## Fertig-Kennzeichen
+## Abschlusskriterien
 
 Nach 30 Minuten gelten diese 4 Punkte als „diese Runde fertig“:
 
@@ -98,10 +103,3 @@ Nach 30 Minuten gelten diese 4 Punkte als „diese Runde fertig“:
 Zuerst zum [Fehlerbehebungs-Index](/de/guide/reference/troubleshooting/). Nur Konzept unklar → zurück zu [Was du vor dem Start brauchst](/de/guide/start-here/prerequisites/) und [Lokal und Cloud](/de/guide/foundations/local-vs-cloud/).
 
 In den ersten 30 Minuten lohnt schon ein handfester Kreislauf „Aufgabe stellen, Ergebnis sehen, selbst urteilen“.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Sicherheits-Checkliste, Übungsprojekt, erste Aufgabe, Ergebnisprüfung und Anfänger-Pfad abgeglichen; diese Seite liefert nur die stabile Einstiegsroute „erste halbe Stunde zuerst den Kreislauf durchziehen“.  
-**Zuletzt überprüft:** 2026-07-26

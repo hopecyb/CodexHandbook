@@ -3,12 +3,17 @@ title: IDE 문제 해결
 description: 확장 로드, 컨텍스트, 동기화 문제.
 locale: ko
 source_locale: zh-CN
-source_revision: ebb21de
+source_revision: 'ebb21de'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: OpenAI 현행 도움말은 IDE extension이 공식 사용 방식 중 하나임을 확인합니다. 이 페이지는 “확장 무응답 / 로그인 상태 / 워크스페이스와 컨텍스트” 세 갈래로 IDE 문제를 나누며, 특정 오류 코드 매뉴얼이 아닌 안정적인 문제 해결 틀입니다.
+  checkedAt: '2026-07-26'
 ---
 
 IDE 문제 해결은 CLI와 다릅니다.  
@@ -58,13 +63,6 @@ IDE에 문제가 생기면, “확장이 안 떴는지”와 “확장은 떴지
 3. 현재 워크스페이스 루트와 열린 파일을 확인합니다
 4. 그래도 안 되면 확장 로그를 봅니다
 
-IDE 문제의 가장 흔한 원인은 워크스페이스·로그인 상태·컨텍스트 출처가 틀린 경우이며, 확장이 망가진 경우는 상대적으로 적습니다.
+IDE 문제의 가장 흔한 원인은 워크스페이스·로그인 상태·컨텍스트 출처가 틀린 경우이며, 확장이 실제로 손상된 것이라고 단정할 수는 없습니다.
 
 공식 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
-
----
-
-**상태:** verified  
-**적용 제품:** IDE  
-**검증 근거:** OpenAI 현행 도움말은 IDE extension이 정식 입구 중 하나임을 확인합니다. 이 페이지는 “확장 무응답 / 로그인 상태 / 워크스페이스와 컨텍스트” 세 갈래로 IDE 문제를 나누며, 특정 오류 코드 매뉴얼이 아닌 안정적인 문제 해결 틀입니다.  
-**최근 검증:** 2026-07-26

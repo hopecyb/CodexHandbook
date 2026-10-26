@@ -91,14 +91,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP (protocolo de contexto de modelo)</text>
     <text x="28" y="55" class="node-date">2024-11-25 · Protocolo de herramientas</text>
-    <text x="28" y="78" class="node-body">Exponer herramientas, recursos, prompts y contexto como protocolo, sin integraciones ad hoc.</text>
+    <text x="28" y="78" class="node-body">Exponer herramientas, recursos, prompts y contexto mediante un protocolo reduce el coste de las integraciones ad hoc.</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Function Calling (llamadas a funciones)</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Acciones estructuradas</text>
-    <text x="28" y="78" class="node-body">El modelo no solo genera texto: llama funciones, API y acciones de negocio.</text>
+    <text x="28" y="78" class="node-body">El modelo no solo genera texto: llama funciones, API y acciones de negocio con parámetros que se pueden analizar.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>

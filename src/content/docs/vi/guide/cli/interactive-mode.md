@@ -1,10 +1,12 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn lấy khởi Codex trong terminal, vừa trò chuyện vừa thực thi, phê duyệt thao tác khi cần làm quy trình cơ bản; trang này chỉ nêu hình thái cơ bản của chế độ tương tác và gợi ý lần đầu, không phụ thuộc danh sách phím tắt cụ thể.", "checkedAt": "2026-07-26"}
 title: Chế độ tương tác
 description: Trò chuyện với Codex và thực thi tác vụ trong terminal.
 locale: vi
 source_locale: zh-CN
-source_revision: 822e8f7
-translation_status: draft
+source_revision: "822e8f7"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 20
@@ -42,12 +44,12 @@ Khi tác vụ đã ổn định và không cần trao đổi qua lại, hãy câ
 
 Không.
 
-Lối vào đổi sang terminal, nhưng chất lượng mô tả tác vụ vẫn quan trọng như cũ.  
+Lối vào đổi sang terminal, nhưng chất lượng mô tả tác vụ vẫn quan trọng như cũ.
 Mục tiêu, phạm vi hạn chế, tiêu chí hoàn thành — càng rõ càng ổn.
 
 ### 2. Vì sao nhấn «khởi trong thư mục dự án»?
 
-Vì CLI cần biết nó đang làm việc trong dự án nào.  
+Vì CLI cần biết nó đang làm việc trong dự án nào.
 Thư mục sai dễ dẫn tới:
 
 - Không thấy tệp cần xem
@@ -67,10 +69,3 @@ Lần đầu có thể làm tác vụ nhỏ kiểu:
 - Xong để nó nói đã sửa gì
 
 Chế độ tương tác CLI chính là chạy một luồng tác vụ dạng hội thoại trong terminal. Thư mục phải đúng, Prompt cũng phải rõ.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn lấy khởi Codex trong terminal, vừa trò chuyện vừa thực thi, phê duyệt thao tác khi cần làm quy trình cơ bản; trang này chỉ nêu hình thái cơ bản của chế độ tương tác và gợi ý lần đầu, không phụ thuộc danh sách phím tắt cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

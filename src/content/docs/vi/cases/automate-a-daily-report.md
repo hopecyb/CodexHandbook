@@ -12,10 +12,10 @@ title: Tự động hóa báo cáo hàng ngày
 description: Cố định công việc tổng hợp lặp lại thành script hoặc Skill có thể tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 2149e0a
+source_revision: "2149e0a"
 translation_status: reviewed
 translated_at: 2026-10-24
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 ## Siêu dữ liệu

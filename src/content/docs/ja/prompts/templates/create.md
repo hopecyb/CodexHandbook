@@ -8,10 +8,10 @@ title: 作成テンプレート
 description: 機能・原稿・成果物をゼロから作る。
 locale: ja
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 

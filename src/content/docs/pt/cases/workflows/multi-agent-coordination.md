@@ -3,20 +3,21 @@ title: Colaboração multi-Agent
 description: Exploração em paralelo, divisão de execução e fusão de resultados — quando dividir e como aceitar.
 locale: pt
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / Cloud", "basis": "Cruzado com a documentação pública atual de OpenAI Developers sobre multi-agent / subagents e com os capítulos já verificados deste manual sobre Subagents, transferência/retoma e trabalho em paralelo; o conteúdo limita-se ao método estável «quando dividir, como isolar limites, como sintetizar e aceitar com humanos», sem transformar beta ou entradas de UI atuais em contrato fixo.", "checkedAt": "2026-07-26"}
 ---
 
-Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento — não a alterar o mesmo ficheiro em simultâneo sem coordenação humana.
+Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento — não a alterar o mesmo arquivo em simultâneo sem coordenação humana.
 
 ## Quando dividir
 
 | Adequado | Inadequado |
 |---|---|
 | Estilo frontend + contrato de API backend em pesquisa paralela | Duas pessoas a alterar a mesma função |
-| Um corre testes, outro escreve documentação | Estado partilhado mutável sem lock |
+| Um corre testes, outro escreve documentação | Estado compartilhado mutável sem lock |
 | Explorar várias opções de implementação | Dependências sequenciais fortes ainda por clarificar |
 
 Capacidades de produto em [Agents em paralelo](/pt/guide/desktop-app/parallel-agents/) e [Subagents](/pt/guide/agent-work/subagents/).
@@ -60,10 +61,3 @@ Agents diferentes alteram ramos diferentes em [git worktrees](/pt/guide/desktop-
 
 - Três Agents em paralelo a alterar `package.json`
 - Sem passo de síntese — não se sabe a quem ouvir
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / Cloud  
-**Base de verificação:** Cruzado com a documentação pública atual de OpenAI Developers sobre multi-agent / subagents e com os capítulos já verificados deste manual sobre Subagents, transferência/retoma e trabalho em paralelo; o conteúdo limita-se ao método estável «quando dividir, como isolar limites, como sintetizar e aceitar com humanos», sem transformar beta ou entradas de UI atuais em contrato fixo.  
-**Última verificação:** 2026-07-26

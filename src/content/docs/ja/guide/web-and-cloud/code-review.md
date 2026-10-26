@@ -1,14 +1,18 @@
 ---
 title: Cloud と GitHub のコードレビュー
-description: Cloud の diff をレビューし、GitHub で Codex による高シグナルの追加 review を行います。
+description: Cloud の diff をレビューし、GitHub で Codex による重要な問題に絞った補足レビュー を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: ea6796a
+source_revision: "ea6796a"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud、GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Cloud タスクが終了すると要約と diff が表示されます。follow-up で質問、修正依頼、PR の作成ができます。タスクの完了は merge の承認を意味しません。最終的にはプロジェクトの CI、ブランチ保護、人による判断が必要です。
@@ -67,7 +71,7 @@ Codex は通常の GitHub review として指摘を投稿します。現在の�
 
 - [ ] 人が主要ロジックの diff を読んだ
 - [ ] P0 / P1 の指摘を修正したか、リスクを書面で受け入れた
-- [ ] CI が通り、失敗した再実行の履歴を説明できる
+- [ ] CI が通り、失敗と再実行の履歴を説明できる
 - [ ] Secret、意図しない生成物、無関係な lockfile 更新がない
 - [ ] タスク説明、PR 説明、実際の変更が一致する
 
@@ -75,11 +79,3 @@ Codex は通常の GitHub review として指摘を投稿します。現在の�
 
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 - [クライアント横断のコードレビュー](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud、GitHub
-
-**最終検証：** 2026-08-26

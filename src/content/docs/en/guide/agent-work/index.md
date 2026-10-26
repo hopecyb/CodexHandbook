@@ -10,9 +10,10 @@ sidebar:
   order: 31
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: 3eb251e
+source_revision: '3eb251e'
 ---
 
 Agent work asks how to carry a task to a **verifiably complete state**. This chapter covers when to plan first, when to split off subtasks, how to steer work that starts drifting, and how to hand it off or resume it.
@@ -31,7 +32,7 @@ These are collaboration methods, not a single product feature. The hard part of 
 1. [Planning](/en/guide/agent-work/planning/).
 2. [Progress and Steering](/en/guide/agent-work/progress-and-steering/).
 3. [Subagents](/en/guide/agent-work/subagents/).
-4. [Handoff and Resumption](/en/guide/agent-work/handoff-and-resume/).
+4. [Handoff and resume](/en/guide/agent-work/handoff-and-resume/).
 
 ## A useful framework
 

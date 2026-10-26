@@ -3,12 +3,17 @@ title: 불확실성 다루기
 description: 정보가 부족할 때는 지어내지 말고 질문을 요구합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 839ce22
+source_revision: '839ce22'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 정보 부족 시의 질문·궤도 수정 원칙만 설명합니다. 개념·프롬프트 문장·처리 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 정보가 부족하면, 먼저 확인하고 나서 계속합니다.
@@ -89,10 +94,3 @@ Codex를 쓸 때 가장 골치 아픈 경우 중 하나는, 빠진 정보를 그
 ```
 
 더 골치 아픈 경우는, 추측을 사실로 두고 계속 밀어붙이는 것입니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 정보 부족 시의 질문·궤도 수정 원칙만 설명합니다. 개념·프롬프트 문장·처리 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

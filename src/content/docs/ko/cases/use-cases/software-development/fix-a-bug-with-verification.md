@@ -12,9 +12,10 @@ title: "사례: 검증을 동반한 버그 수정"
 description: 실행 가능한 할인 계산 버그를 통해 실패 재현, 원인 파악, 최소 수정, 테스트 통과, 회귀 검사, diff 검토를 수행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: '42d842e'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 이 문서는 파일 이름만 바꿔 넣는 프롬프트 템플릿이 아닙니다. 저장소의 실제 시작 코드를 실행해 테스트 하나가 실패하는 것을 확인하고, 참고 수정안이 같은 테스트 묶음을 어떻게 통과시키는지 살펴봅니다.

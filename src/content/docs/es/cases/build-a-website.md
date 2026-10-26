@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: '55fd86a'
+reviewed_at: 2026-10-25
 ---
 
 Convierte la información de un evento en un sitio de una página que puedas abrir en el navegador. Entregarás una página estática local y un registro de aceptación. El evento y el lugar son ficticios; el método de inscripción sigue sin decidirse.
@@ -79,7 +80,7 @@ Ejecución opcional:
 python3 validation/reproduce.py
 ```
 
-El reproductor comprueba la página rota en un directorio temporal, sale con código 1 e informa `missing-fragment`. Luego cambia únicamente el `href`, vuelve a comprobar y sale con código 0. La fixture original permanece intacta. El [registro guardado](/downloads/reading-event/validation/recovery.json) contiene ambas comprobaciones.
+El script de reproducción comprueba la página rota en un directorio temporal, sale con código 1 e informa `missing-fragment`. Luego cambia únicamente el `href`, vuelve a comprobar y sale con código 0. La fixture original permanece intacta. El [registro guardado](/downloads/reading-event/validation/recovery.json) contiene ambas comprobaciones.
 
 No «repares» el problema eliminando el botón ni ignorando la prueba. Cambia solo el enlace de destino y compruébalo con un clic real. El script de enlaces no evalúa el diseño, los hechos ni la experiencia con teclado; revísalos por separado.
 

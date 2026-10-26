@@ -3,12 +3,17 @@ title: ローカルと Cloud タスク
 description: App でローカル実行と Cloud 実行を切り替える。
 locale: ja
 source_locale: zh-CN
-source_revision: 741f686
+source_revision: "741f686"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App
+  basis: OpenAI Help Center の現行版《ChatGPT Work and Codex》と《Using Codex with your ChatGPT plan》はいずれも local workflows と cloud tasks を明確に区別している。本ページはデスクトップ App の文脈で「ローカルは高速な反復に、Cloud はリモートリポジトリと長時間タスクに向く」という選定原則を要約するのみ。
+  checkedAt: "2026-07-26"
 ---
 
 ここで扱うのは、デスクトップ App でタスクがローカルマシンで動くのか、リモート環境で動くのかという点です。
@@ -46,10 +51,3 @@ App は入口にすぎず、タスクが必ずローカルで実行されるわ�
 - ローカルマシンのリソースを使いたくない
 
 デスクトップ App でローカルで完結できるなら、通常はローカルを使います。タスクが長く、リモート寄り、または環境統一が必要なときに Cloud を検討しましょう。
-
----
-
-**状態：** verified  
-**対象製品：** App  
-**検証根拠：** OpenAI Help Center の現行版《ChatGPT Work and Codex》と《Using Codex with your ChatGPT plan》はいずれも local workflows と cloud tasks を明確に区別している。本ページはデスクトップ App の文脈で「ローカルは高速な反復に、Cloud はリモートリポジトリと長時間タスクに向く」という選定原則を要約するのみ。  
-**最終検証：** 2026-07-26

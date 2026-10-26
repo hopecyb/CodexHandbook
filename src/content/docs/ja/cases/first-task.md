@@ -11,10 +11,10 @@ title: 最初のタスク
 description: 明確なプロンプトで小さな変更を完了し、結果の確認方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 38f925b
+source_revision: "38f925b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 

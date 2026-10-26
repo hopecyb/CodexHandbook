@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE, Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud tasks from the IDE
 description: Delegate a long task from the IDE to Codex Cloud and return to reviewable results.
 locale: en
 source_locale: zh-CN
-source_revision: d5369b5
+source_revision: 'd5369b5'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
 ---
@@ -67,11 +71,3 @@ Next, read [Cloud environments](/en/guide/web-and-cloud/cloud-environments/) and
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE, Cloud
-
-**Last verified:** 2026-08-26

@@ -9,8 +9,9 @@ verification:
   summary: Aus aktuellem Repository-Inhalt und Laufprotokollen zusammengestellt. Dies ist ein Änderungsprotokoll des Handbuchs, keine OpenAI-Produktankündigung und kein Nachweis einer Veröffentlichung der Website.
 locale: de
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: "3c99d35"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -26,7 +27,7 @@ Hier steht, was sich am Handbuch geändert hat, welche Tätigkeiten betroffen si
 | [Pfad für Kreative](/de/guide/learning-paths/creator/) und [Entwicklerpfad](/de/guide/learning-paths/developer/) folgen jetzt Arbeitsergebnissen | Jeder Schritt hat Material, Abnahmekriterien und einen nächsten Schritt; Entwickler können rote und grüne Tests dokumentieren | [Entwickler-Wiederholungslauf](/downloads/developer-path/run-record.json) |
 | [Vier Skill-Arten](/de/skills/examples/) besitzen vollständige Download-Pakete | Review, Schreiben, Recherche und Automatisierung haben Vorlagen und Prüfungen; Auslösebeispiele sind keine Routing-Messung | „Prüfumgebung und Belege“ auf den Detailseiten |
 | Die [Issue-Triage](/de/cases/use-cases/team-automation/issue-triage-suggestions/) korrigiert Schema und Startschwelle | „Drei Beispiele und 80 % Übereinstimmung“ gelten nicht mehr als Grundlage für den Betrieb; menschliche Prüfung bleibt empfohlen | [Trockenlauf-Protokoll](/downloads/issue-triage/validation/record.md) |
-| [Linkprüfung](/de/cases/use-cases/team-automation/scheduled-link-check/) und [Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/) enthalten Laufmaterial | Lokale Fehler und Erholung sind reproduzierbar; externe Links, echte Planung und Anmeldefehler wurden nicht geprüft | [Wiederherstellungsprotokoll](/downloads/failure-recovery/validation/record.md) |
+| [Linkprüfung](/de/cases/use-cases/team-automation/scheduled-link-check/) und [Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/) enthalten Laufmaterial | Lokale Fehler und ihre Behebung sind reproduzierbar; externe Links, tatsächliche zeitgesteuerte Ausführung und Anmeldefehler wurden nicht geprüft | [Wiederherstellungsprotokoll](/downloads/failure-recovery/validation/record.md) |
 
 ## 2026-09-18: Fallfilter und Navigation der Lernpfade
 

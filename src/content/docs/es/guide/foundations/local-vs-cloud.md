@@ -3,15 +3,20 @@ title: Local frente a Cloud
 description: Compara cuándo encajan las Tareas locales y las Tareas Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: 9569b3c
+source_revision: '9569b3c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center, en «Using Codex with your ChatGPT plan», sigue distinguiendo “local workflows run on your device” y “cloud tasks run in OpenAI-managed environments”; «ChatGPT Work and Codex» también confirma que Work en web/móvil corre en la nube. Esta página solo resume escenarios, ventajas y limitaciones de Tareas locales y Cloud, sin atarse a planes o detalles de entrada concretos.
+  checkedAt: '2026-07-26'
 ---
 
-«Local» y «Cloud» suenan a jerga técnica; en corto: local es trabajar en tu propio ordenador; Cloud, en una máquina remota.
+«Local» y «Cloud» suenan a jerga técnica; en pocas palabras: local es trabajar en tu propio ordenador; Cloud, en una máquina remota.
 
 Si solo quieres empezar a usar Codex, suele ser más sencillo empezar por **local**.
 
@@ -78,10 +83,3 @@ Cuando de verdad encuentres estas necesidades, pasa a Cloud:
 Muchos principiantes empiezan con **local + App de escritorio**. Detalles de Cloud: [Resumen de Web y Cloud](/es/guide/web-and-cloud/). Cambio dentro de la App: [Tareas locales y Cloud](/es/guide/desktop-app/local-and-cloud-tasks/).
 
 Local encaja mejor para entender el flujo y hacer cambios pequeños. Cloud, para Tareas más largas, más estandarizadas y con más colaboración remota.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** OpenAI Help Center, en «Using Codex with your ChatGPT plan», sigue distinguiendo “local workflows run on your device” y “cloud tasks run in OpenAI-managed environments”; «ChatGPT Work and Codex» también confirma que Work en web/móvil corre en la nube. Esta página solo resume escenarios y trade-offs de Tareas locales y Cloud, sin atarse a planes o detalles de entrada concretos.  
-**Última verificación:** 2026-07-26

@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: de
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: "c362c48"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 ## Überprüfbares Ereignis und Geltungsbereich
@@ -35,6 +36,6 @@ Entwerfen Sie vorrangig überprüfbare Eingaben, klare Berechtigungsbereiche und
 
 ## Praktische Übung
 
-[Trockenlauf für Vorschläge zur Issue-Triage](/de/cases/use-cases/team-automation/issue-triage-suggestions/): Prüfen Sie, ob strukturierte Vorschläge für synthetische Issues an ihre Eingaben gebunden sind, und behalten Sie eine Warteschlange für die menschliche Prüfung bei. Die Übung testet Datengrenzen, ohne die historische API oder Versionsbezeichnung aufzurufen.
+[Trockenlauf für Vorschläge zur Issue-Triage](/de/cases/use-cases/team-automation/issue-triage-suggestions/): Prüfen Sie, ob strukturierte Vorschläge für synthetische Issues an ihre Eingaben gebunden sind, und behalten Sie eine Warteschlange für die menschliche Prüfung bei. Die Übung testet Datengrenzen, ohne die historische API aufzurufen oder Labels zu veröffentlichen.
 
 [Zurück zur Roadmap und den Datumsregeln](/de/ai-roadmap/)

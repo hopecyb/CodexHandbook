@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins"
+  checkedAt: "2026-08-26"
 title: Plugins overview
 description: Understand Plugin components, supported surfaces, installation verification, and trust boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 4efe5a8
+source_revision: '4efe5a8'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
@@ -22,7 +26,7 @@ ChatGPT and Codex use one public Plugin directory. A Plugin composes related cap
 | MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
 | Browser extensions | Browser capability for a workflow | Browser access and necessity |
 | Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
-| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
+| Scheduled task templates | Reusable starting points for surfaces that support scheduled tasks | Frequency, permissions, stop conditions, human review |
 
 ## Difference from Skill and MCP
 
@@ -77,8 +81,8 @@ Do not send messages, change states, delete data, or bulk-write during first ver
 
 - Successful installation does not prove safety or data fit.
 - External authorization is a separate high-risk step.
-- Plugin Hooks run alongside matching Hooks from other sources.
-- Workspace administrators can restrict Plugins and tools.
+- Plugin Hooks run alongside matching Hooks from other sources; they do not automatically override existing Hooks.
+- Workspace administrators can restrict Plugins and tools. A directory you can browse is not necessarily the set your organization permits.
 - Mobile uses installed Plugins but should not be assumed to have full management.
 
 ## When not to build a Plugin
@@ -104,11 +108,3 @@ Stabilize one Skill or MCP workflow before bundling it.
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
-
-**Last verified:** 2026-08-26

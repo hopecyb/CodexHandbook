@@ -4,15 +4,16 @@ legacyVerification:
   products: "CLI"
   basis: "Đã đối chiếu với tài liệu bắt đầu nhanh và xác thực hiện tại của Codex CLI; xác minh trình cài đặt chính thức cho macOS/Linux, quy trình khởi chạy codex, đăng nhập ChatGPT và lệnh kiểm tra trạng thái đăng nhập. Với cách cài đặt khác, hướng người đọc đến các tab được cập nhật trên trang chính thức."
   checkedAt: "2026-08-26"
-title: Cài đặt CLI
-description: Cài đặt Codex CLI, kiểm tra phiên bản, trạng thái đăng nhập và tác vụ đầu tiên trong kho mã.
-locale: vi
-source_locale: zh-CN
-source_revision: 564bd75
-translation_status: draft
+title: "Cài đặt CLI"
+description: "Cài đặt Codex CLI, kiểm tra phiên bản, trạng thái đăng nhập và tác vụ đầu tiên trong kho mã."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "564bd75"
+translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:
   order: 40
+reviewed_at: "2026-10-26"
 ---
 
 Codex CLI phù hợp khi bạn muốn khám phá, chỉnh sửa, kiểm thử và rà soát ngay trong terminal. Trang cài đặt chính thức có các lựa chọn cho macOS/Linux, Windows, npm và Homebrew; hãy chọn cách phù hợp với hệ điều hành và cách quản lý phần mềm của bạn.

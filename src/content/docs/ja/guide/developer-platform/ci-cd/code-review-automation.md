@@ -1,14 +1,19 @@
 ---
 title: コードレビュー自動化
-description: CI または PR フローに Codex レビューを接続——prompt、権限、人工ゲート。
+description: CI または PR フローに Codex レビューを接続——prompt、権限、人による承認ゲート。
 locale: ja
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: "aa8b33e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: OpenAI Developers ホームは依然 Codex をテスト、レビュー、変更のデリバリー準備に使えると記述。公式 Codex ユースケースに「Review GitHub pull requests」が含まれる。本ページは CI 安全接続原則とゲートパターンのまとめのみ。固定コマンドや唯一実装を宣言しない。
+  checkedAt: '2026-07-26'
 ---
 
 **Pull Request パイプライン**に Codex を入れると、人間レビュー前に明らかな問題を拾えますが、**責任あるレビューとテストの代替にはなりません**。本ページは実装可能な自動化パターンを説明します。
@@ -72,10 +77,10 @@ diff が大きい場合は <パス一覧> だけレビュー。
 |---|---|
 | 読み取り専用 | CI token は push 不可（または bot コメントのみ） |
 | モデル固定 | 過去レビュー品質の比較のため |
-| 注入防止 | 未消毒 PR 説明を system prompt にそのまま結合しない |
+| 注入防止 | 未処理の PR 説明を system prompt にそのまま結合しない |
 | 秘密 | GitHub Secrets に token |
 
-[人工承認パターン](/ja/cases/workflows/human-approval-patterns/) · [環境変数](/ja/guide/reference/environment-variables/)
+[人による承認パターン](/ja/cases/workflows/human-approval-patterns/) · [環境変数](/ja/guide/reference/environment-variables/)
 
 ## 品質ゲート
 
@@ -90,10 +95,10 @@ diff が大きい場合は <パス一覧> だけレビュー。
 ## よくあるミス
 
 - CI に書き込み権限 + 注入された「fix を push して」prompt
-- レビュー結果が長すぎて真人レビューを埋没
+- レビュー結果が長すぎて人レビューを埋没
 - diff サイズ未制限でタイムアウトとクォータ消費
 
-コードレビュー自動化の価値は、真人 review の前に明らかな問題を拾うこと。真人のマージ責任の代替ではありません。
+コードレビュー自動化の価値は、人 review の前に明らかな問題を拾うこと。人のマージ責任の代替ではありません。
 
 ## 受け入れチェックリスト
 
@@ -103,9 +108,3 @@ diff が大きい場合は <パス一覧> だけレビュー。
 
 ## 参考
 - OpenAI Codex CI 例
----
-
-**状態：** verified  
-**対象製品：** CLI / API / Cloud  
-**検証根拠：** OpenAI Developers ホームは依然 Codex をテスト、レビュー、変更のデリバリー準備に使えると記述。公式 Codex ユースケースに「Review GitHub pull requests」が含まれる。本ページは CI 安全接続原則とゲートパターンのまとめのみ。固定コマンドや唯一実装を宣言しない。  
-**最終検証：** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos/directorios, verificación de artefactos, contexto sensible y tratamiento de imágenes/archivos; esta página solo confirma el principio estable «limitar el alcance del PDF, desconfiar de errores de OCR/maquetación y, tras generar, abrir de verdad para aceptar».
+  checkedAt: '2026-07-26'
 title: PDF y documentos
 description: Alcance, herramientas y puntos de aceptación al hacer que Codex lea, resuma o genere documentos tipo PDF.
 locale: es
 source_locale: zh-CN
-source_revision: 1f4f82b
+source_revision: "1f4f82b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -23,7 +28,7 @@ Al entregar un PDF a Codex, lo más habitual es una comprensión incompleta de l
 
 ## Por qué el PDF falla con especial facilidad
 
-Un PDF es más molesto que un archivo de texto porque puede mezclar:
+Un PDF es más complejo de procesar que un archivo de texto porque puede mezclar:
 
 - Imágenes escaneadas
 - Maquetación a varias columnas
@@ -44,7 +49,7 @@ Cuanto más claro digas «qué tramo mirar y qué resultado quieres», más esta
 
 ### Límites
 
-- Un PDF escaneado puede necesitar OCR; el resultado tiene errores y requiere muestreo humano
+- Un PDF escaneado puede necesitar OCR; el resultado puede contener errores y requiere comprobaciones humanas por muestreo
 - Maquetaciones complejas, varias columnas y notas a pie pierden estructura con facilidad
 - No metas un PDF enorme entero en una sola tarea; procesa por tramos o conviértelo antes en un esquema Markdown
 
@@ -67,7 +72,7 @@ El escaneado suele depender primero de OCR; si el OCR falla, el resumen, la extr
 Aún debes confirmar:
 
 - Si se abre
-- Si el texto tiene basura de encoding
+- Si el texto tiene caracteres ilegibles por errores de codificación
 - Si páginas, índice y tablas son correctos
 - Si las fuentes chinas (u otras) están realmente incrustadas
 
@@ -114,10 +119,3 @@ Si el OCR o el reconocimiento de maquetación son dudosos, márcalo con claridad
 - [ ] Tamaño del repo y política LFS cumplen la norma del equipo
 
 Con PDF, cuanto más claro el alcance, más estable. Tras generar, no mires solo si el archivo está: confirma que se abre bien y que el contenido es correcto de verdad.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos/directorios, verificación de artefactos, contexto sensible y tratamiento de imágenes/archivos; esta página solo confirma el principio estable «limitar el alcance del PDF, desconfiar de errores de OCR/maquetación y, tras generar, abrir de verdad para aceptar».  
-**Última verificación:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die Empfehlungen zu Zugang, Client-Vorbereitung und Übungsumgebung wurden anhand offizieller OpenAI-Einstiegs- und Datei-Upload-Unterlagen geprüft; der Text hält langfristig gültige Startprinzipien fest und hängt nicht von detaillierten Installationsschritten ab."
+  checkedAt: "2026-07-26"
 title: Was du vor dem Start brauchst
-description: "Konto, Gerät, Übungsprojekt und Sicherheitsgrundlinie."
+description: "Konto, Gerät, Übungsprojekt und grundlegende Sicherheitsregeln."
 locale: de
 source_locale: zh-CN
-source_revision: 5fbedb8
+source_revision: "5fbedb8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 5
 ---
@@ -15,7 +20,7 @@ Die meisten stecken bei Codex nicht an mangelndem Technikhintergrund fest — so
 
 ## Unbedingt nötig
 
-1. **Zugang zu OpenAI / Codex** (Konto und Tarif gemäß offizieller Angaben)
+1. **Zugang zu OpenAI / Codex** (Konto und Tarif gemäß den offiziellen Angaben)
 2. **Einen Rechner**, auf dem Desktop-App, CLI oder IDE-Erweiterung laufen können
 3. **Ein wegwerfbares Übungsverzeichnis** (nicht den ersten Versuch im Produktions-Repo machen)
 4. **Bereitschaft, Ergebnisse zu prüfen**: annehmen, anpassen oder rückgängig machen — nicht blind mergen
@@ -79,10 +84,3 @@ So kannst du vorgehen:
 5. Ergebnis prüfen und den nächsten Schritt entscheiden
 
 Vor dem Start: Die erste Aufgabe in einer sicheren, kleinen, rücknehmbaren Umgebung durchziehen ist effizienter, als zuerst einen Berg an Konzepten nachzuholen.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Die Empfehlungen zu Zugang, Client-Vorbereitung und Übungsumgebung wurden anhand offizieller OpenAI-Einstiegs- und Datei-Upload-Unterlagen geprüft; der Text hält langfristig gültige Startprinzipien fest und hängt nicht von feinkörnigen Installationsschritten ab.  
-**Zuletzt überprüft:** 2026-07-26

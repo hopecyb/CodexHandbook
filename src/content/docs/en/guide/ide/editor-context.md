@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  basis: "The current OpenAI Help Center still lists the IDE extension as a primary client paired with local tools. This page assumes no editor-specific button; it summarizes the stable method of combining workspace, open files, selections, @ files, and project rules as IDE context."
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-07-26"
 title: Editor context
 description: How the IDE integration supplies open files, workspace context, and project rules to Codex.
 locale: en
 source_locale: zh-CN
-source_revision: 6d1b248
+source_revision: '6d1b248'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -71,11 +76,3 @@ Redact logs and customer data before attaching them; the IDE cannot decide compl
 ## Reference
 
 - [File and folder context](/en/guide/context/file-and-folder-context/)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

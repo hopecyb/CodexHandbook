@@ -1,16 +1,20 @@
 ---
-title: "Règles Allow et Deny"
+title: Règles Allow et Deny
 description: Contraindre ce que l'Agent peut exécuter avec des règles de commandes et de chemins — habitudes personnelles et lignes de base d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 521ecc9
+source_revision: "521ecc9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: La documentation actuelle des permissions Codex/plugin d'OpenAI continue d'accentuer la couche entre actions lecture/écriture, approbation, frontières de source et contrôle d'accès basé sur les rôles ; cette page ne déclare pas une syntaxe de fichier de règles spécifique et explique allow/deny comme un modèle de frontière d'exécution, distinct du bac à sable, l'approbation et les flux de revue d'équipe.
+  checkedAt: '2026-07-26'
 ---
-
 Les **Rules** déclarent dans la configuration ou les fichiers projet quelles commandes shell, chemins et appels d'outils sont **autorisés ou interdits**, réduisant l'approbation manuelle à chaque fois tout en empêchant l'automatisation dangereuse.
 
 ## Contenu
@@ -25,7 +29,7 @@ Si « règles » semble abstrait, commencez ici : convenir à l'avance de ce que
 
 Leur valeur est principalement double :
 
-- Réduire les opérations à faible risque que vous confirmez quotidiennement de toute façon
+- Réduire les confirmations répétées pour les opérations quotidiennes à faible risque
 - Bloquer les opérations à haut risque qui ne devraient pas s'exécuter automatiquement
 
 ## Types de règles (conceptuels)
@@ -37,7 +41,7 @@ Leur valeur est principalement double :
 | Chemins | Interdire l'écriture `../`, interdire la lecture `~/.ssh` |
 | Réseau | Interdire l'outbound ou autoriser uniquement les domaines de registre |
 
-Comparer avec [Matrice des permissions](/fr/guide/reference/permission-matrix/) : les règles sont une application **configurable** ; la matrice décrit les **défauts typiques**.
+Comparer avec [Matrice des permissions](/fr/guide/reference/permission-matrix/) : les règles sont une application **configurable** ; la matrice décrit les **réglages par défaut courants**.
 
 ## Couches recommandées
 
@@ -104,14 +108,7 @@ Exécuter d'abord la frontière minimale ; affiner plus tard.
 ## Frontières de sécurité
 
 - Les règles **ne peuvent pas** remplacer la revue de code et la protection de branche
-- Les prompts malveillants peuvent tenter de contourner les règles — garder les défauts du bac à sable stricts
+- Les prompts malveillants peuvent tenter de contourner les règles — garder des restrictions strictes par défaut dans le bac à sable
 - Les changements de règles passent par PR ; traiter comme les changements CI
 
 De bonnes règles allow/deny indiquent à l'avance quelles actions sont raisonnables et quelles ne devraient pas arriver.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / App  
-**Base de vérification :** La documentation actuelle des permissions Codex/plugin d'OpenAI continue d'accentuer la couche entre actions lecture/écriture, approbation, frontières de source et contrôle d'accès basé sur les rôles ; cette page ne déclare pas une syntaxe de fichier de règles spécifique et explique allow/deny comme un modèle de frontière d'exécution, distinct du bac à sable, l'approbation et les flux de revue d'équipe.  
-**Dernière vérification :** 2026-07-26

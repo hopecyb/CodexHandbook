@@ -16,9 +16,10 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 source_revision: "4ecfa1c"
+reviewed_at: 2026-10-26
 ---
 
 Codex Dream Skin est un projet tiers de thème pour l'application de bureau. Selon sa documentation, il modifie l'apparence au moyen d'une connexion CDP locale sans changer le paquet officiel. Il s'agit de la description du projet ; ce manuel n'a pas vérifié le comportement des fichiers, du réseau ou de l'interface pour toutes les versions.
@@ -74,7 +75,7 @@ Les étapes suivantes sont des contrôles recommandés par ce manuel, et non un 
 4. Confirmez que l'outil ne se lance plus automatiquement et ne réinjecte pas le thème. Si une vérification technique est nécessaire, examinez processus et connexions de débogage sans tuer au hasard des processus de même nom.
 5. Ne retirez l'application qu'après ces contrôles. Gardez les images personnalisées jusqu'à décider séparément qu'elles ne sont plus utiles.
 
-Une sauvegarde, la fin de l'installeur ou la fermeture de la fenêtre du thème ne prouve pas à elle seule la restauration. Si le résultat reste incertain, gardez les journaux, consultez les Issues du projet et n'affirmez pas que l'état est rétabli. Ne supprimez pas tout le répertoire de configuration de Codex pour désinstaller le thème.
+Une sauvegarde, la fin du programme de désinstallation ou la fermeture de la fenêtre du thème ne prouve pas à elle seule la restauration. Si le résultat reste incertain, gardez les journaux, consultez les Issues du projet et n'affirmez pas que l'état est rétabli. Ne supprimez pas tout le répertoire de configuration de Codex pour désinstaller le thème.
 
 ## Portée de ces conclusions
 

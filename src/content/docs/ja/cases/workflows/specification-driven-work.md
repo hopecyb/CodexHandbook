@@ -3,10 +3,15 @@ title: 仕様駆動の作業
 description: 受け入れ可能な仕様を先に明確に書き、Codex に計画どおり実装させる——要件が明確な納品タスクに適する。
 locale: ja
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの現在検証済みのブレインストーム、EPXV、テスト駆動、`AGENTS.md` 関連章を相互参照して再確認済み。ページ内容は「先に受け入れ可能な仕様を書き、仕様どおり実行する」安定した作業方法に限定されています。
+  checkedAt: "2026-07-26"
 ---
 
 **仕様駆動**は、大量のファイル変更の前に、目標、範囲、インターフェース、受け入れ基準を記した短い仕様を準備することです。[ブレインストーム](/ja/cases/workflows/brainstorm-before-building/) の後に接続でき、すでに明確化された要件と組み合わせて [EPXV](/ja/cases/workflows/explore-plan-execute-verify/) に直接入ることもできます。
@@ -78,10 +83,3 @@ reviewed_at: 2026-08-26
 - [ ] 少なくとも 3 条の検査可能な受け入れ基準がある
 - [ ] 実行前に人間または文書による確認がある
 - [ ] 変更が仕様ファイルに同期されている
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの現在検証済みのブレインストーム、EPXV、テスト駆動、`AGENTS.md` 関連章を相互参照して再確認済み。ページ内容は「先に受け入れ可能な仕様を書き、仕様どおり実行する」安定した作業方法に限定されています。

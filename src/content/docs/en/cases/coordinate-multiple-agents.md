@@ -11,10 +11,10 @@ title: Coordinate multiple agents
 description: A collaboration case for parallel exploration, divided execution, and merging results.
 locale: en
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: '7b143fc'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

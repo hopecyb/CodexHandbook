@@ -3,12 +3,16 @@ title: Keyboard shortcuts
 description: Only current App and IDE shortcuts that can be verified in official documentation.
 locale: en
 source_locale: zh-CN
-source_revision: 4f812d9
+source_revision: '4f812d9'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
 ---
 
 Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
@@ -55,11 +59,3 @@ First learn to open Settings and Activity, open the terminal, and submit multili
 - [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
 - [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
 - [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26

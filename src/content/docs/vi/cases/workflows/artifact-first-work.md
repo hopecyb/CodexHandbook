@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương tệp và Artifact, định nghĩa hoàn thành, kiểm chứng Artifact đã kiểm chứng của sổ tay; nội dung trang tập trung phương pháp viết và giao ổn định “thỏa thuận thành phẩm trước, rồi suy ngược bước”.", "checkedAt": "2026-07-26"}
 title: Ưu tiên Artifact
 description: Thỏa thuận hình thức và đường dẫn Artifact cuối trước, rồi suy ngược bước — phù hợp tài liệu, cấu hình, báo cáo và thành phẩm tương tự.
 locale: vi
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: "e57c215"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Ưu tiên Artifact** là làm rõ hình thức và vị trí thành phẩm trước, rồi để Codex suy ngược bước. Phù hợp tài liệu Markdown, OpenAPI, script migration, dàn ý slide và tác vụ đầu ra rõ; cũng có thể kết hợp [làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/).
@@ -58,10 +59,3 @@ Artifact trực quan có thể yêu cầu ảnh chụp hoặc mô tả xem trư�
 - [ ] Định dạng khớp mẫu tham chiếu
 - [ ] Liên kết / mục lục / Frontmatter hợp lệ
 - [ ] Khớp [định nghĩa hoàn thành](/vi/prompts/define-done/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương tệp và Artifact, định nghĩa hoàn thành, kiểm chứng Artifact đã kiểm chứng của sổ tay; nội dung trang tập trung phương pháp viết và giao ổn định “thỏa thuận thành phẩm trước, rồi suy ngược bước”.  
-**Kiểm chứng gần nhất:** 2026-07-26

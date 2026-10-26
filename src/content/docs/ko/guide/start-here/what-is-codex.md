@@ -5,10 +5,15 @@ sidebar:
   order: 2
 locale: ko
 source_locale: zh-CN
-source_revision: 0f376b6
+source_revision: "0f376b6"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 Codex의 기본 역할·적합한 작업·협업 방식만 설명합니다. 사이트 내 링크와 개념 표현을 재확인했으며, 세밀하고 쉽게 변하는 제품 기본값은 본문에 두지 않았습니다.
+  checkedAt: '2026-07-26'
 ---
 
 Codex는 OpenAI가 제공하는 **AI 프로그래밍·업무 Agent**입니다. 목표를 주면 프로젝트 파일·도구·승인을 바탕으로 내용을 읽고 고치고, 명령을 실행하고, 결과를 만든 뒤, 과정과 변경을 당신에게 검토하도록 넘깁니다.
@@ -111,10 +116,3 @@ Codex를 조수로 쓰면 됩니다. 책임까지 넘기지 마세요.
 1. [Codex 클라이언트 선택](/ko/guide/choose-your-client/)
 2. [초보자를 위한 용어](/ko/guide/start-here/terminology-for-beginners/)
 3. [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 Codex의 기본 위치·적합 작업·협업 방식만 설명합니다. 사이트 내 링크와 개념 표현을 재확인했으며, 세밀하고 쉽게 변하는 제품 기본값은 본문에 두지 않았습니다.  
-**최근 검증:** 2026-07-26

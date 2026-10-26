@@ -7,9 +7,10 @@ title: Tổng quan MCP
 description: Tìm hiểu MCP client, máy chủ, công cụ, xác thực và ranh giới an toàn.
 locale: vi
 source_locale: zh-CN
-source_revision: 98a0626
-translation_status: draft
+source_revision: "98a0626"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 MCP biến mong muốn “mô hình cần dùng một khả năng bên ngoài” thành một lệnh gọi công cụ có cấu trúc. Nó phù hợp để kết nối tài liệu bên thứ ba, trình duyệt, Figma, hệ thống quản lý phiếu công việc hoặc dịch vụ nội bộ.
@@ -72,7 +73,7 @@ Ví dụ với tác vụ “kiểm tra phiếu công việc ưu tiên cao hằng
 ## Các mức độ an toàn
 
 1. **Thử nghiệm chỉ đọc:** dùng tài liệu công khai hoặc tenant thử nghiệm, chỉ bật công cụ truy vấn.
-2. **Nhóm xác minh:** giới hạn dự án, vai trò và allowlist công cụ; ghi nhận lỗi và thời gian chạy.
+2. **Xác minh trong nhóm:** giới hạn dự án, vai trò và allowlist công cụ; ghi nhận lỗi và thời gian chạy.
 3. **Ghi có giới hạn:** chỉ ghi trong phạm vi nhỏ có thể hoàn tác, vẫn yêu cầu phê duyệt của con người.
 4. **Vận hành có quản trị:** có thể thu hồi quyền, kiểm tra cấu hình, che dữ liệu nhạy cảm trong log và tách biệt theo môi trường.
 

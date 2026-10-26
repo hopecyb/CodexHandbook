@@ -7,12 +7,13 @@ next:
 description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
 locale: en
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: 'aa277f2'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
-This section helps you understand what Codex is, what it is good for, and how to move from first use to a stable workflow.
+This section explains what Codex and AI Agents are, what they are suited to, and how to move from first use to safe, stable workflows with clear acceptance criteria.
 
 If this is your first time opening the handbook, do not treat it as a book to read cover to cover. Use it as a map from first steps toward fluency.
 

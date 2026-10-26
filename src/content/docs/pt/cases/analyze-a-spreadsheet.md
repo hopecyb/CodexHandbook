@@ -31,9 +31,10 @@ next:
   label: Aprender a verificar resultados
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: "68729f6"
 ---
 
 Neste exercício, entregue um relatório semanal de vendas, resumo por região, ranking de produtos e registro de limpeza linha a linha. Os dados de entrada são sintéticos e criados para este site; não são necessários dados reais de clientes.

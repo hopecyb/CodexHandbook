@@ -3,10 +3,15 @@ title: Recherche et apprentissage
 description: Point d'entrée des cas de recherche sourcée, de comparaison et d'apprentissage — recherche, citation et limites des conclusions.
 locale: fr
 source_locale: zh-CN
-source_revision: a0be881
+source_revision: 'a0be881'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / Cloud
+  basis: Recoupement avec l'entrée research-and-learning actuelle du dépôt et les chapitres recherche sourcée/validation des sources ; cette page assure la navigation et les indications du groupe de cas recherche.
+  checkedAt: '2026-07-26'
 ---
 
 La différence majeure entre la recherche et une simple « question-réponse » :
@@ -22,10 +27,3 @@ La différence majeure entre la recherche et une simple « question-réponse » 
 - Comment exiger des sources et des citations
 - Comment transformer « je pense » en « preuve que j'ai trouvée »
 - Comment limiter les conclusions à ce que les sources peuvent réellement étayer
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec l'entrée research-and-learning actuelle du dépôt et les chapitres recherche sourcée/validation des sources ; cette page assure la navigation et les indications du groupe de cas recherche.

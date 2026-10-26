@@ -3,12 +3,17 @@ title: Run your first task
 description: Complete a small change with a clear prompt.
 locale: en
 source_locale: zh-CN
-source_revision: f203611
+source_revision: 'f203611'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-07-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Cross-checked against this handbook’s verified prompt basics, result review, undo and recovery, and practice-project chapters. This page covers a small, checkable, reversible first exercise.
+  checkedAt: '2026-07-26'
 ---
 
 The example below defaults to the **desktop App**; CLI/IDE can use the same prompt.
@@ -73,7 +78,7 @@ The first task is supposed to include:
 
 ## While it runs
 
-1. Ask for a short plan first (or request one yourself)
+1. Have Codex provide a short plan; ask for one if needed
 2. When approving file writes, confirm paths are correct
 3. When done, go to [Review the result](/en/guide/getting-started/review-the-result/)
 
@@ -114,9 +119,3 @@ Do not make more edits. Tell me exactly what you changed just now.
 ```
 
 Prompting basics: [Prompt basics](/en/prompts/basics/).
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26

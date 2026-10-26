@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Mit der aktuellen Reifegradtabelle unter Developer commands abgeglichen. Die Seite listet nur stabile Einstiege und verifiziert `--cd` / `-C` sowie Sandbox- und Genehmigungsparameter. Experimentelle und veraltete Befehle bleiben außerhalb der Grundlagenübersicht."
+  checkedAt: "2026-08-26"
 title: Referenz der CLI-Befehle
 description: Kurzübersicht häufiger Codex-CLI-Unterbefehle und Parameter als Lernindex, nicht als Ersatz für das offizielle Handbuch.
 sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: 6091bcc
+source_revision: "6091bcc"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Eine Befehlsreferenz hilft vor allem bei der Wahl des Einstiegs. Du musst nicht sofort alle Parameter auswendig lernen:
@@ -155,13 +160,3 @@ Ignoriere `stderr` in CI nicht. Bewahre Protokolle für [Erst diagnostizieren, d
 | Genehmigungsanfrage blockiert CI | Prompt enger fassen und schreibgeschützte Sandbox verwenden |
 
 [CLI-Fehlersuche](/de/guide/cli/troubleshooting/)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit der aktuellen Reifegradtabelle unter Developer commands abgeglichen. Die Seite listet nur stabile Einstiege und verifiziert `--cd` / `-C` sowie Sandbox- und Genehmigungsparameter. Experimentelle und veraltete Befehle bleiben außerhalb der Grundlagenübersicht.
-
-**Zuletzt geprüft:** 2026-08-26

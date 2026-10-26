@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE"
+  basis: "OpenAI Help Center Config-Material bestätigt weiterhin Träger wie `~/.codex/config.toml` und `~/.codex/.env`; Seite als Konzeptindex positioniert, ohne feste Schlüssel-, Pfadprioritäts- oder Altversionsfelder — daher `verified`."
+  checkedAt: "2026-07-26"
 title: Konfigurationsreferenz
 description: 'Konzeptindex zu Codex-Config-Schlüsseln auf Nutzer- und Projektebene — Pfade und Felder nach offizieller Dokumentation.'
 locale: de
 source_locale: zh-CN
-source_revision: 8f692ed
+source_revision: "8f692ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
@@ -21,7 +26,7 @@ Config-Dateien vereinheitlichen oft **Modell, Sandbox, Freigabe, MCP**. Dies ist
 
 In Config eher „**soll langfristig Verhalten prägen**“ — nicht:
 
-- Sensitive Werte
+- Vertrauliche Werte
 - Volle Teamregeltexte
 - Einmalige Aufgabenbeschreibungen
 
@@ -29,7 +34,7 @@ Drei Klassen:
 
 - **Langfristige Verhaltenspräferenzen** → meist Config
 - **Konkrete Aufgabenanforderungen** → Prompt / `AGENTS.md` / Skill
-- **Sensitive Werte** → Env-Var oder Secret
+- **Vertrauliche Werte** → Env-Var oder Secret
 
 Unklar: Ändern Sie langfristige Gewohnheiten von Codex — oder diese Aufgabe?
 
@@ -43,7 +48,7 @@ Unklar: Ändern Sie langfristige Gewohnheiten von Codex — oder diese Aufgabe?
 | Nutzer | `~/.codex/` usw. | Default-Modell, persönliche Freigabegewohnheiten |
 | Projekt | Config im Repo | Team-Sandbox, MCP-Liste |
 | Env-Vars | Shell / CI | Keys, temporäre Schalter |
-| Managed | Organisation | Nicht überschreibbare Zwangspolicy |
+| Managed | Organisation | Verbindliche, nicht überschreibbare Richtlinie |
 
 ## Was die Schichten steuern
 
@@ -88,7 +93,7 @@ Hintergrund: [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
 | Absicht | Erklärung |
 |---|---|
 | Vor Shell | Immer fragen / Trust-Liste / auto (risikoträchtig) |
-| Vor Schreibdatei | Ebenso |
+| Vor dem Schreiben einer Datei | Ebenso |
 | MCP-Tool-Aufrufe | Pro Server oder Tool |
 
 Hintergrund: [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/) · Matrix: [Berechtigungsmatrix](/de/guide/reference/permission-matrix/)
@@ -169,7 +174,7 @@ Vier Fragen:
 
 1. Soll es langfristig default wirken?
 2. Ist es sensitiv?
-3. Persönliche Gewohnheit oder geteilte Projektrege?
+3. Persönliche Gewohnheit oder gemeinsame Projektregel?
 4. Systemverhalten oder nur diese Aufgabe?
 
 Danach landet es seltener falsch.
@@ -200,7 +205,7 @@ Dann eher:
 | API-Key / Token | Env oder Secret |
 | MCP-Dienst verbinden | Projektconfig + Env |
 
-Klarer als nur Schlüssellisten starren.
+Das ist verständlicher, als nur auf eine Liste von Konfigurationsschlüsseln zu schauen.
 
 Cloud Secrets: [Secrets und Umgebungsvariablen](/de/guide/web-and-cloud/secrets-and-variables/)
 
@@ -211,7 +216,7 @@ Cloud Secrets: [Secrets und Umgebungsvariablen](/de/guide/web-and-cloud/secrets-
 3. Nach CLI-Upgrade offizielle Migration-Diffs
 4. Keine Keys in Config-Dateien committen
 
-Config für langfristige Defaults — nicht Sensitive, nicht Ersatz für Aufgabenbeschreibung und Teamregeln.
+Die Konfiguration enthält langfristige Standardwerte. Sie ist weder ein Speicher für vertrauliche Werte noch ein Ersatz für Aufgabenbeschreibungen und Teamregeln.
 
 ## Häufige Fehler
 
@@ -221,9 +226,3 @@ Config für langfristige Defaults — nicht Sensitive, nicht Ersatz für Aufgabe
 
 ## Quellen
 - OpenAI Codex configuration reference
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI / App / IDE  
-**Prüfgrundlage:** OpenAI Help Center Config-Material bestätigt weiterhin Träger wie `~/.codex/config.toml` und `~/.codex/.env`; Seite als Konzeptindex positioniert, ohne feste Schlüssel-, Pfadprioritäts- oder Altversionsfelder — daher `verified`.  
-**Zuletzt geprüft:** 2026-07-26

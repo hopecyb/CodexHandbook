@@ -45,7 +45,7 @@
   <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
   <text x="600" y="439" text-anchor="middle" class="note">Livrable : commande en échec et journaux</text>
   <text x="600" y="469" text-anchor="middle" class="tiny">Contexte indépendant · autorisations héritées</text>
-  <text x="600" y="491" text-anchor="middle" class="tiny">Les conclusions doivent être reproductibles</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Les conclusions doivent être vérifiables</text>
 
   <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1008" y="357" text-anchor="middle" class="label">Sous-agent C</text>
@@ -70,5 +70,5 @@
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">L'Agent principal synthétise, résout les conflits et vérifie</text>
   <text x="600" y="721" text-anchor="middle" class="note">Comparer les preuves → décider des modifications → fusionner → relancer tests et build</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Une sous-tâche terminée ne clôt pas la tâche ; seules des preuves reproductibles étayent la conclusion.</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Une sous-tâche terminée ne clôt pas la tâche ; seules des preuves vérifiables étayent la conclusion.</text>
 </svg>

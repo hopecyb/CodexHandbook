@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh thư mục tệp và môi trường Cloud hiện tại của sổ tay; nội dung trang giới hạn ở mẫu mô tả phân tầng monorepo và phương pháp tổ chức lệnh, không coi lối vào sản phẩm cụ thể hoặc hiện thực quản trị là hợp đồng cố định.", "checkedAt": "2026-07-26"}
 title: AGENTS.md trong Monorepo
 description: Mẫu đặt chỉ thị dự án, phạm vi và lệnh kiểm thử trong cấu trúc một kho nhiều gói.
 locale: vi
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -23,7 +24,7 @@ Trong Monorepo nhiều app, gói chia sẻ, stack kỹ thuật khác nhau cùng 
 
 Nếu kho thường như một căn nhà, monorepo giống hơn một tòa nhà.
 
-Trong tòa có phòng khác nhau, cư dân khác nhau, quy tắc khác nhau.  
+Trong tòa có phòng khác nhau, cư dân khác nhau, quy tắc khác nhau.
 Lúc đó nếu chỉ dán một tờ tổng dài ở cửa lớn, Codex dễ gặp hai vấn đề:
 
 - Thấy hết nhưng không biết tầng hiện tại nên tuân cái nào
@@ -127,10 +128,3 @@ Gần điều 1 hơn thì vào gốc; gần điều 2, 3 hơn thì phù hợp v�
 - [ ] Tác vụ xuyên gói trong Prompt viết rõ đường dẫn cho phép
 
 AGENTS.md trong Monorepo không cần tập trung một cục; cách phù hợp hơn là để “đồng thuận toàn cục” và “quy tắc cục bộ thư mục” mỗi thứ đặt đúng chỗ.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh thư mục tệp và môi trường Cloud hiện tại của sổ tay; nội dung trang giới hạn ở mẫu mô tả phân tầng monorepo và phương pháp tổ chức lệnh, không coi lối vào sản phẩm cụ thể hoặc hiện thực quản trị là hợp đồng cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

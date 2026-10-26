@@ -3,12 +3,16 @@ title: Transformer un flux de travail en Skill
 description: La troisième répétition du même flux mérite un Skill — déclencheur, instructions et acceptation au même endroit.
 locale: fr
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur « Save workflows as skills », ainsi que les chapitres vérifiés sur les Skills, l'automatisation, les règles de commande et les risques d'extension ; le contenu se limite aux conseils stables sur quand capitaliser des flux répétés en Skills et comment organiser instructions et acceptation.
+  checkedAt: '2026-07-26'
 ---
-
 Quand la même catégorie de tâche (contrôles de release, synchronisation de doc, scans de sécurité) est accomplie **une troisième fois** en copiant-collant des prompts, envisagez un [Skill](/fr/skills/overview/). Ce chapitre fait le lien entre les [méthodes de flux de travail](/fr/cases/workflows/) et le système d'extensions.
 
 ## Ce que résout cette page
@@ -17,7 +21,7 @@ Quand la même catégorie de tâche (contrôles de release, synchronisation de d
 - Ce qu'un Skill doit contenir (instructions, ressources, scripts)
 - Comment partager et versionner en équipe
 
-## Signaux qui valent la capitalisation
+## Quand formaliser un flux en Skill
 
 - Étapes fixes + liste d'acceptation fixe
 - Besoin de modèles ou scripts dans le dépôt
@@ -46,7 +50,7 @@ Extraire prompt et critères d'acceptation d'un cas réussi
     → placer dans examples/ du dépôt, plugin d'équipe ou bibliothèque de skills interne
 ```
 
-Comparer avec [Transformer un flux en automatisation](/fr/skills/automations/scheduled-tasks/) : les Skills sont une **guidance interactive** ; les Automations sont **planifiées/sans surveillance**.
+Comparer avec [Transformer un flux en automatisation](/fr/skills/automations/scheduled-tasks/) : les Skills fournissent des **instructions interactives** ; les Automations sont **planifiées/sans surveillance**.
 
 ## Erreurs courantes
 
@@ -69,9 +73,3 @@ Comparer avec [Transformer un flux en automatisation](/fr/skills/automations/sch
 
 ## Sources de référence
 - Dans le dépôt [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) et [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur « Save workflows as skills », ainsi que les chapitres vérifiés sur les Skills, l'automatisation, les règles de commande et les risques d'extension ; le contenu se limite aux conseils stables sur quand capitaliser des flux répétés en Skills et comment organiser instructions et acceptation.

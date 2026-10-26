@@ -1,12 +1,17 @@
 ---
-title: Depuración de Prompts
-description: Cómo localizar problemas del Prompt cuando el resultado se desvía.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe el enfoque de depuración de prompts; se han revisado enlaces y el orden de depuración, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
+title: Depuración de prompts
+description: Cómo localizar problemas del prompt cuando el resultado se desvía.
 locale: es
 source_locale: zh-CN
-source_revision: efc3015
+source_revision: 'efc3015'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Cuando el resultado no encaja, las causas habituales son:
@@ -16,7 +21,7 @@ Cuando el resultado no encaja, las causas habituales son:
 - el contexto está incompleto o desactualizado
 - la tarea es demasiado grande y no pediste un plan primero
 
-La depuración de Prompts consiste en encontrar qué capa de información falta.
+La depuración de prompts consiste en encontrar qué capa de información falta.
 
 ![Ilustración: dos resultados en un banco de trabajo, uno falla el blanco y otro acierta, mientras la tarjeta de tarea se ajusta con destornillador y lupa](/illustrations/prompt-debugging.webp)
 
@@ -46,7 +51,7 @@ Si el objetivo es vago («optimízalo un poco»), la desviación es habitual.
 
 ### 2. Si las restricciones están claras
 
-Muchos «se pasó de la raya» no vienen de que no sepa hacerlo, sino de que no dijiste «hasta dónde solo».
+Muchos «se pasó de la raya» no vienen de que no sepa hacerlo, sino de que no dijiste «hasta dónde puede actuar».
 
 ### 3. Si el contexto está desactualizado o en conflicto
 
@@ -66,7 +71,7 @@ Por ejemplo: querías foco en código local y se fue a buscar en la red; o pedí
 
 ## Ideas erróneas habituales
 
-### 1. Si el resultado falla, todo el Prompt está muerto
+### 1. Si el resultado falla, todo el prompt es inútil
 
 A menudo basta con un pequeño complemento:
 
@@ -74,7 +79,7 @@ A menudo basta con un pequeño complemento:
 - reducir el alcance
 - pedirle un plan primero
 
-### 2. Depurar es alargar el Prompt cada vez más
+### 2. Depurar es alargar el prompt cada vez más
 
 A veces hace falta quitar ruido y dejar solo los límites críticos.
 
@@ -87,18 +92,11 @@ En hilos muy largos, restricciones antiguas, información obsoleta y restos tras
 Para recuperar el rumbo:
 
 1. Reescribe el objetivo para que sea comprobable
-2. Añade «solo cambia dónde / no toques dónde»
+2. Indica qué partes se pueden modificar y cuáles no
 3. Si la tarea es grande, exige un plan primero
 4. Si sigue caótico, reduce a un solo archivo o a un único fallo reproducible
 5. Si no, abre un hilo nuevo y reafirma los límites críticos
 
-El núcleo de depurar Prompts es encontrar qué capa de información clave no se transmitió bien, no seguir complicando el texto.
+El núcleo de depurar prompts es encontrar qué capa de información clave no se transmitió bien, no seguir complicando el texto.
 
 Si sigue fallando, reduce a un fallo en un solo archivo o abre un hilo nuevo y reafirma las restricciones.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe el enfoque de depuración de Prompts; se han revisado enlaces y el orden de depuración, y el cuerpo no depende de hechos volátiles del producto.

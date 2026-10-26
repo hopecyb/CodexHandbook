@@ -3,12 +3,17 @@ title: Permisos y Aprobaciones
 description: Explica cuándo Codex necesita que apruebes una operación.
 locale: es
 source_locale: zh-CN
-source_revision: 1beec63
+source_revision: '1beec63'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: La documentación actual de introducción a Codex CLI en OpenAI Help Center sigue distinguiendo approval modes y estratificando por riesgo acciones como leer archivos, escribir archivos y ejecutar comandos; esta página solo explica por qué existe la Aprobación, cuándo conviene aprobar con cautela y cómo juzgar el alcance del impacto, sin declarar valores por defecto fijos del producto.
+  checkedAt: '2026-07-26'
 ---
 
 Codex no debería ejecutar operaciones de alto riesgo sin consentimiento. La **Aprobación** es la compuerta de la colaboración entre persona y máquina.
@@ -26,7 +31,7 @@ Si Codex pudiera leer cualquier archivo, conectarse a la red a voluntad y ejecut
 
 ## Qué controla
 
-Puedes ver la Aprobación como «la caja de confirmación antes de un paso peligroso».
+Puedes ver la Aprobación como «el cuadro de confirmación antes de un paso peligroso».
 
 Por ejemplo, en estos casos debería detenerse y preguntarte:
 
@@ -35,7 +40,7 @@ Por ejemplo, en estos casos debería detenerse y preguntarte:
 - va a acceder a rutas fuera del proyecto
 - va a leer o enviar contenido por la red
 
-Ver un popup o una petición de confirmación no significa que Codex haya fallado; muchas veces solo está respetando el límite de seguridad.
+Ver una ventana emergente o una petición de confirmación no significa que Codex haya fallado; muchas veces solo está respetando el límite de seguridad.
 
 ## Malentendidos frecuentes
 
@@ -58,7 +63,7 @@ Al menos mira estas tres cosas:
 
 En general, no. Puedes rechazar y pedirle que continúe de una forma más segura.
 
-## Principios sencillos al usar
+## Principios sencillos de uso
 
 - Si no lo entiendes, no apruebes todavía
 - Ten especial cuidado si sale del alcance del proyecto actual
@@ -76,10 +81,3 @@ En general, no. Puedes rechazar y pedirle que continúe de una forma más segura
 Las políticas oficiales y los valores por defecto pueden cambiar; comprueba [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 La Aprobación sirve para que «si se puede hacer» lo decidas siempre tú.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** La documentación actual de introducción a Codex CLI en OpenAI Help Center sigue distinguiendo approval modes y estratificando por riesgo acciones como leer archivos, escribir archivos y ejecutar comandos; esta página solo explica por qué existe la Aprobación, cuándo conviene aprobar con cautela y cómo juzgar el alcance del impacto, sin declarar valores por defecto fijos del producto.  
-**Última verificación:** 2026-07-26

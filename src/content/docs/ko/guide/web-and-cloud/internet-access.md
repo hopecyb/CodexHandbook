@@ -7,11 +7,12 @@ title: 인터넷 접근
 description: 설치 단계와 Agent 단계의 인터넷 접근을 구분하고 도메인과 HTTP 메서드로 위험을 제한합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5bbb905
-translation_status: draft
+source_revision: "5bbb905"
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 70
+reviewed_at: "2026-10-26"
 ---
 
 Cloud에는 인터넷을 사용하는 서로 다른 두 단계가 있습니다.
@@ -55,7 +56,7 @@ Agent 인터넷 접근은 환경별로 설정합니다.
 
 Cloud Secret은 Agent 단계가 시작되기 전에 제거됩니다. 따라서 Agent가 setup Secret을 직접 외부로 보낼 위험은 줄어듭니다. 하지만 일반 환경 변수, 저장소 내용, 작업 중 생성된 데이터는 여전히 외부로 보낼 수 있습니다. Secret의 수명 주기를 우회하려고 민감한 값을 일반 환경 변수인 것처럼 설정하지 마세요.
 
-## 승인 체크리스트
+## 완료 확인 체크리스트
 
 - [ ] Agent 단계에서 인터넷 접근이 필요한 이유를 설명했음
 - [ ] allowlist에 필요한 도메인만 포함했음

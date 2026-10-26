@@ -9,9 +9,10 @@ verification:
   summary: Méthode de test à renseigner. Ce site ne dispose actuellement d'aucun essai terminé d'installation et de désinstallation d'un animal ou d'un thème dans le client.
 locale: fr
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: '96ff34f'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 La compatibilité concerne une combinaison précise de versions. Une structure de paquet valide, des images aux bonnes dimensions ou une interface qui s'ouvre ne prouvent pas, à eux seuls, que les états d'animation fonctionnent ni que la désactivation et la restauration réussissent.

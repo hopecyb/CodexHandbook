@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Terminal hat höhere Aktionsfähigkeit und Risiko als Dateiedits; vor Freigabe Befehl verstehen, Schreibradius, Netz und Recovery klären — mit Berechtigungs-, Überprüfungs- und Werkzeugkapiteln abgeglichen."
+  checkedAt: "2026-07-26"
 title: Shell und Terminal
 description: Fähigkeiten und Risiken der Befehlsausführung.
 locale: de
 source_locale: zh-CN
-source_revision: 1438fc7
+source_revision: "1438fc7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -31,7 +36,7 @@ Vor Nutzung klären, was geändert wird.
 Stark und riskant. Prinzipien:
 
 - Vor Freigabe den Befehl verstehen
-- `rm -rf`, Force-Push, SSH-Config usw. verbieten — außer voll verstanden und nötig
+- `rm -rf`, Force-Push und Änderungen an der SSH-Konfiguration verbieten — außer voll verstanden und nötig
 - Verifikationsbefehle in Abnahmekriterien
 
 Produkteinstieg: [Integriertes Terminal](/de/guide/desktop-app/integrated-terminal/)
@@ -59,7 +64,7 @@ Geeignet:
 - Dateistatus
 - Vorhandene Projektskripte
 
-Weniger zuerst:
+Das Terminal ist dagegen nicht unbedingt die erste Wahl für:
 
 - Seitenoptik
 - Neueste öffentliche Quellen
@@ -95,14 +100,7 @@ Was tut dieser Befehl? Was ändert er? Was passiert, wenn er nicht läuft?
 ## Direkt nutzbare Formulierung
 
 ```text
-Vor dem Ausführen Zweck, Schreibzugriff, Netz und Wiederherstellung bei Fehlschlag erklären.
+Erkläre vor dem Ausführen den Zweck des Befehls, ob er Dateien schreibt oder auf das Netzwerk zugreift und wie sich Fehler rückgängig machen lassen.
 ```
 
 Vor dem Lauf klären, was der Befehl wo ändert.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Terminal hat höhere Aktionsfähigkeit und Risiko als Dateiedits; vor Freigabe Befehl verstehen, Schreibradius, Netz und Recovery klären — mit Berechtigungs-, Überprüfungs- und Werkzeugkapiteln abgeglichen.  
-**Zuletzt geprüft:** 2026-07-26

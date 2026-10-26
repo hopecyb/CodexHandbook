@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Diese Seite beschreibt die stabilste Rahmenkontrolle in der IDE-Erweiterung: Kombination aus Auswahl, geöffneten Dateien und expliziten `@`-Pfaden — allgemeines Kontext-Organisieren beim Arbeiten mit Code, unabhängig von konkreten Buttonnamen."
+  checkedAt: "2026-07-26"
 title: Auswahl und geöffnete Dateien
 description: Mit ausgewähltem Code und geöffneten Dateien den IDE-Aufgabenrahmen präzise setzen.
 locale: de
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: "b6b264f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -42,7 +47,7 @@ Tiefer: [Datei- und Ordner-Kontext](/de/guide/context/file-and-folder-context/)
 
 ```text
 Öffnen: Implementierung + Tests + Typdefinitionen
-Auswahl: optional — am Einstiegsfunktion beginnen
+Auswahl: optional — bei der Einstiegsfunktion beginnen
 Prompt: Modulgrenzen und verbotene Verzeichnisse nennen
 ```
 
@@ -87,9 +92,3 @@ Produktseite: [Änderungen in der IDE prüfen](/de/guide/ide/reviewing-changes/)
 
 ## Quellen
 - [Einschränkungen definieren](/de/prompts/constraints-and-boundaries/)
----
-
-**Status:** verified  
-**Anwendbare Produkte:** IDE  
-**Prüfgrundlage:** Diese Seite beschreibt die stabilste Rahmenkontrolle in der IDE-Erweiterung: Kombination aus Auswahl, geöffneten Dateien und expliziten `@`-Pfaden — allgemeines Kontext-Organisieren beim Arbeiten mit Code, unabhängig von konkreten Buttonnamen.  
-**Zuletzt geprüft:** 2026-07-26

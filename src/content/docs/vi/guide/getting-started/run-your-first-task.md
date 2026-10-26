@@ -1,14 +1,19 @@
 ---
-title: Chạy tác vụ đầu tiên
-description: Dùng Prompt rõ ràng để hoàn thành một thay đổi nhỏ.
-locale: vi
-source_locale: zh-CN
-source_revision: f203611
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Chạy tác vụ đầu tiên"
+description: "Dùng Prompt rõ ràng để hoàn thành một thay đổi nhỏ."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "f203611"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 80
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu chéo với các chương cơ bản Prompt, kiểm tra kết quả, hoàn tác/khôi phục và dự án luyện tập liên quan đã được kiểm chứng trong cẩm nang hiện tại; nội dung trang giới hạn ở phương pháp luyện tập ổn định «lần đầu chỉ làm tác vụ phạm vi nhỏ, kiểm tra được, hoàn tác được»."
+  checkedAt: "2026-07-26"
 ---
 
 Ví dụ dưới đây mặc định **Desktop App**; CLI/IDE cũng dùng được cùng một đoạn Prompt.
@@ -22,7 +27,7 @@ Tác vụ lần đầu làm nhỏ hơn sẽ ổn hơn. Chạy thông cả bộ q
 Tác vụ lần đầu tốt nhất thỏa ba điều kiện này:
 
 - Phạm vi thay đổi nhỏ
-- Kết quả một nhìn là kiểm được
+- Kết quả nhìn qua là kiểm được
 - Dù làm sai cũng dễ hoàn tác
 
 Vì vậy ở đây dùng một ví dụ luyện tập rất nhỏ.
@@ -57,7 +62,7 @@ Lần đầu quan trọng hơn là đi một vòng khép kín đầy đủ — k
 
 ### 2. Prompt đã viết ra rồi thì phía sau giao cho nó tự phát huy
 
-Trong tác vụ lần đầu, trọng tâm là giữ mắt vào ba việc:
+Trong tác vụ lần đầu, trọng tâm là theo dõi sát ba việc:
 
 - Phạm vi có vượt không
 - Nó có đang làm trên tệp bạn nói không
@@ -114,10 +119,3 @@ Tạm đừng sửa tiếp. Cho tôi biết vừa rồi bạn đã sửa những
 ```
 
 Nguyên lý Prompt: [Cơ bản về Prompt](/vi/prompts/basics/).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương cơ bản Prompt, kiểm tra kết quả, hoàn tác/khôi phục và dự án luyện tập liên quan đã được kiểm chứng trong cẩm nang hiện tại; nội dung trang giới hạn ở phương pháp luyện tập ổn định «lần đầu chỉ làm tác vụ phạm vi nhỏ, kiểm tra được, hoàn tác được».  
-**Kiểm chứng gần nhất:** 2026-07-26

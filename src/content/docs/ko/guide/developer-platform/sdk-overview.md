@@ -18,9 +18,10 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: e888ae6
-translation_status: draft
+source_revision: 'e888ae6'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Codex SDK를 사용하면 프로그램이 로컬 Codex Agent를 제어할 수 있다. 여기서 “로컬”은 SDK와 Agent가 실행되는 컴퓨터를 뜻하며, 개인 PC일 수도 관리하는 CI runner일 수도 있다. 이를 Cloud 작업 생성·상태 조회·산출물 다운로드를 제공하는 호스팅 HTTP 서비스로 해석하면 안 된다. [공식 SDK 문서](https://learn.chatgpt.com/docs/codex-sdk)를 참고한다.
@@ -74,7 +75,7 @@ console.log(answer.finalResponse);
 ## 호출이 성공한 뒤 확인할 사항
 
 1. **실행 위치:** 프롬프트만 남기지 말고 작업 폴더와 실제로 읽거나 바꾼 파일을 기록한다.
-2. **작업 결과:** 답변, 파일 차이, 테스트를 확인한다. `finalResponse`가 있다고 업무 인수가 끝난 것은 아니다.
+2. **작업 결과:** 답변, 파일 차이, 테스트를 확인한다. `finalResponse`가 있다고 업무 결과의 검증이 끝난 것은 아니다.
 3. **실패 유형:** 로컬 의존성·프로세스, 인증, 모델 서비스, 작업 검증 실패를 구분한다. 모든 예외를 400/429로 단순화하지 않는다.
 4. **재시도 영향:** 이미 파일이나 외부 효과가 생겼는지 확인한 후 재시도를 결정한다. 같은 요청을 무작정 반복하지 않는다.
 5. **권한:** 실행 환경과 사용 가능한 도구는 직접 책임진다. SDK라는 이름만으로 Cloud, 조직 관리, 다중 테넌트 격리가 생긴다고 추정하지 않는다.

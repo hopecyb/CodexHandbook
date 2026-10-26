@@ -3,12 +3,18 @@ title: Erinnerungen und persistenter Kontext
 description: "Wie Codex Vorlieben und Fakten über Sessions merkt: Fähigkeiten, Grenzen und Teamnormen."
 locale: de
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: "7a689ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: "App / CLI (versionsabhängig)"
+  basis: Kreuzgeprüft gegen aktuelle OpenAI-Help-Center-Hinweise zu ChatGPT Memory sowie verifizierte Kapitel zu Projektanweisungen, persönlichen Vorlieben und Sicherheitsgrenzen; Inhalt beschränkt auf
+    das stabile Prinzip „Erinnerung für persönliche Vorlieben und wenige stabile Fakten — kein Ersatz für Repo-Regeln und Geheimnisverwaltung“.
+  checkedAt: '2026-07-26'
 ---
 
 Einige Codex-Clients unterstützen **Erinnerung (Memory)**: Vorlieben oder Fakten, die Sie in mehreren Runden bestätigt haben, bleiben für spätere Sessions. Das ergänzt `AGENTS.md` und Projektkonfiguration, **ersetzt** aber keine versionierten Teamnormen.
@@ -105,7 +111,7 @@ Unsicher? Fragen Sie:
 
 1. Ist das eine persönliche Vorliebe, die ich oft wiederhole?
 2. Ist das kurzfristig relativ stabil?
-3. Stört es die Teamkollaboration, wenn andere es nicht sehen?
+3. Bleibt die Zusammenarbeit im Team unbeeinträchtigt, wenn andere diese Information nicht sehen?
 
 Nähern sich alle drei Antworten „ja“, passt Erinnerung eher.
 
@@ -124,10 +130,4 @@ Nähern sich alle drei Antworten „ja“, passt Erinnerung eher.
 Erinnerung eignet sich am besten für „persönliche Vorlieben und wenige stabile Fakten, die man sonst wiederholt“ — nicht als Ersatz für Repo-Doku, Teamregeln und Geheimnisverwaltung.
 
 ## Quellen
-- OpenAI-Codex-Memory-Dokumentation (versionabhängig)
----
-
-**Status:** verified  
-**Gilt für:** App / CLI (versionsabhängig)  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Help-Center-Hinweise zu ChatGPT Memory sowie verifizierte Kapitel zu Projektanweisungen, persönlichen Vorlieben und Sicherheitsgrenzen; Inhalt beschränkt auf das stabile Prinzip „Erinnerung für persönliche Vorlieben und wenige stabile Fakten — kein Ersatz für Repo-Regeln und Geheimnisverwaltung“.  
-**Zuletzt geprüft:** 2026-07-26
+- OpenAI-Codex-Memory-Dokumentation (versionsabhängig)

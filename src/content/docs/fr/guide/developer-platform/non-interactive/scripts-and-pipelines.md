@@ -3,17 +3,22 @@ title: "Scripts et pipelines"
 description: Orchestrer codex exec dans shell, Makefile et GitHub Actions — répétable et auditable.
 locale: fr
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: '07aeb4f'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / GitHub Actions
+  basis: 'Comparaison avec les recommandations officielles actuelles Non-interactive mode et Codex GitHub Action : correction de `--cd` et séparation par défaut du job contenant la clé API et des droits d’écriture du dépôt.'
+  checkedAt: '2026-08-26'
 ---
 
 Ceci traite de transformer Codex d'une action ponctuelle en **étapes que votre équipe peut relancer, auditer et transmettre**.
 
-Les scripts fixent le flux ; les pipelines le répètent sur schedule ou sur événements.
+Les scripts définissent le processus ; les pipelines le répètent selon un calendrier ou des événements.
 
 Cette page montre comment intégrer [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/) dans shell, Makefile ou pipelines CI.
 
@@ -33,7 +38,7 @@ Trois priorités :
 - Auditable
 - Transmissible
 
-## Pourquoi les équipes évitent de coller des prompts dans l'UI CI
+## Pourquoi les équipes évitent de coller les prompts directement dans l’interface de CI
 
 Difficile à maintenir :
 
@@ -53,7 +58,7 @@ Beaucoup enchaînent tout avant que les prompts stabilisent, les critères de su
 
 Un bon script transforme les étapes que les gens mémorisent en fichiers que tout le monde peut lire et revoir.
 
-## Snippet shell minimal
+## Extrait shell minimal
 
 ```bash
 #!/usr/bin/env bash
@@ -61,14 +66,14 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 Garder `prompts/ci/security-review.md` dans Git ; les changements passent par revue.
 
 ## Habitudes à former d'abord
 
-Ne visez pas « tout d'un coup ». Fixez ces trois d'abord :
+Ne visez pas « tout d'un coup ». Fixez d’abord ces trois éléments :
 
 1. Où vivent les fichiers prompt
 2. Comment l'entrée de script est appelée
@@ -76,7 +81,7 @@ Ne visez pas « tout d'un coup ». Fixez ces trois d'abord :
 
 Puis ajouter logs, schéma et notifications est beaucoup plus facile.
 
-## Sketch GitHub Actions
+## GitHub Actions : utiliser l’Action officielle
 
 ```yaml
 jobs:
@@ -84,24 +89,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # Pin version selon doc d'installation officielle
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-Ajuster la méthode d'installation et les scopes de permission aux exigences de sécurité org ; **ne pas** echo les secrets dans les workflows.
+Dans GitHub Actions, privilégiez l’Action officielle `openai/codex-action`. Ne définissez pas la clé API comme variable d’environnement de l’ensemble d’un job qui exécute le code du dépôt. Si une étape ultérieure doit écrire dans une PR, séparez les droits d’écriture et la clé dans des jobs différents, avec un artefact de patch pour transmettre le résultat.
 :::
 
 ## Couches recommandées
@@ -114,7 +114,7 @@ Ajuster la méthode d'installation et les scopes de permission aux exigences de 
 
 ## Comment décider
 
-Bon candidats pour scripts ou pipelines :
+Bons candidats pour les scripts ou les pipelines :
 
 - Vous le faites à répétition
 - Vous voulez que chaque run suive la même approche
@@ -145,9 +145,3 @@ Ne précipitez pas « full auto » avant que le flux soit stable ; script d'abor
 
 ## Sources de référence
 - Docs intégration OpenAI Codex + GitHub
----
-
-**Statut :** obsolète  
-**Produits concernés :** CLI  
-**Note de révision :** Le principe de versionner prompts, scripts et pipelines dans Git tient encore, mais les exemples dépendent de `codex exec`, installation CLI et câblage GitHub Actions — détails à haute volatilité ; restaurer `vérifié` après ajout de la doc pipeline officielle actuelle.  
-**Dernière vérification :** 2026-07-26

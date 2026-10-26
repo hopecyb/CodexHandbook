@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI
+  checkedAt: "2026-08-26 (local `codex-cli 0.148.0`)"
 title: Configuration profiles
 description: Layer a named settings file onto Codex CLI configuration.
 locale: en
 source_locale: zh-CN
-source_revision: 6ab30c5
+source_revision: '6ab30c5'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -56,7 +60,7 @@ Current help should describe the profile path and layering. If your version diff
 
 A profile only saves a configuration starting point. It cannot override organization requirements or make a prompt inherently safe. In particular, do not make `danger-full-access` an easy default profile.
 
-## Do not confuse Permission Profiles
+## Do not confuse these with Permission Profiles
 
 - **Configuration profile:** `--profile name` selects `<name>.config.toml` and may layer many Codex settings.
 - **Permission Profile (Beta):** `default_permissions` and `[permissions.<name>]` define filesystem and network boundaries.
@@ -78,11 +82,3 @@ Configuration profiles live in a user's Codex home and are not automatically pro
 
 - [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
 - [Configuration layers in Codex CLI source](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Last verified:** 2026-08-26 (local `codex-cli 0.148.0`)

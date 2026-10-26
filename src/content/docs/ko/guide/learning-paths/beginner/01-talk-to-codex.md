@@ -22,9 +22,10 @@ next:
   label: "파일 다루기"
 locale: ko
 source_locale: zh-CN
-source_revision: 827a5d2
-translation_status: draft
+source_revision: "827a5d2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 ## 자료 준비하기
 

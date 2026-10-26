@@ -3,12 +3,16 @@ title: Sécurité
 description: Risques au niveau équipe, surface d'attaque et défenses — comprendre où vit le risque avant les contrôles.
 locale: fr
 source_locale: zh-CN
-source_revision: 91ed6a3
+source_revision: "91ed6a3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: Scénarios équipe / entreprise
+  basis: La doc plugin, app et intégration OpenAI continue d'accentuer les risques des connexions externes, permissions d'actions, accès source et frontières d'approbation ; cette page est une navigation de section sécurité ordonnée modèle de menace → Plugin/MCP → injection de prompt.
+  checkedAt: '2026-07-26'
 ---
-
 Sauter dans le détail sécurité sans cadrage peut vous laisser avec du vocabulaire mais pas « ce que nous défendons ».
 
 Cette section se lit plus clairement comme : d'où vient le risque → quelle couche bloquer ou revoir.
@@ -23,13 +27,6 @@ Cette section se lit plus clairement comme : d'où vient le risque → quelle co
 
 - Équipe étendant l'usage Codex
 - Vous ajoutez extensions tierces, outils externes ou règles partagées
-- Vous avez besoin de risques que « soyez prudent » seul ne peut pas fixer
+- Vous voulez identifier les risques qu’un simple appel à la prudence ne permet pas de maîtriser
 
 Les pages sécurité aident à identifier ce qui doit être contrôlé par les frontières système.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** Scénarios équipe / entreprise  
-**Base de vérification :** La doc plugin, app et intégration OpenAI continue d'accentuer les risques des connexions externes, permissions d'actions, accès source et frontières d'approbation ; cette page est une navigation de section sécurité ordonnée modèle de menace → Plugin/MCP → injection de prompt.  
-**Dernière vérification :** 2026-07-26

@@ -3,9 +3,14 @@ title: MCP 개요
 description: MCP 클라이언트, 서버, 도구, 인증, 보안 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 98a0626
-translation_status: draft
+source_revision: '98a0626'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT 데스크톱 App / Codex CLI / IDE; ChatGPT Web은 Plugin을 통해 원격 MCP 도구 사용
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP는 “모델이 외부 기능을 사용하려 한다”는 요청을 구조화된 도구 호출로 바꿉니다. 타사 문서, 브라우저, Figma, 이슈 시스템, 내부 서비스를 연결할 때 적합합니다.

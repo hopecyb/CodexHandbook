@@ -1,14 +1,19 @@
 ---
-title: Đầu ra có cấu trúc
+title: "Đầu ra có cấu trúc"
 description: "Để `exec` tạo kết quả máy parse được — cho bước sau, dashboard và cổng kiểm soát."
-locale: vi
-source_locale: zh-CN
-source_revision: e80b5d7
-translation_status: reviewed
-translated_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "e80b5d7"
+translation_status: "reviewed"
+translated_at: "2026-08-26"
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "CLI / API"
+  basis: "Tài liệu mô hình/so sánh OpenAI API hiện tại vẫn liệt kê năng lực `Structured outputs`; nội dung trang giới hạn ở thực hành chung «thiết kế giao diện đầu ra ổn định cho Tác vụ không tương tác»; schema JSON, kiểm tra và hạ cấp trong ví dụ thuộc mô tả mẫu kỹ thuật."
+  checkedAt: "2026-07-26"
 ---
 
 Nhiều người lần đầu tự động hóa mặc định để Codex xuất một đoạn «nghe hợp lý». Người đọc còn ổn; script thì không thân thiện.
@@ -27,7 +32,7 @@ Tác vụ không tương tác nếu chỉ xuất văn bản tự do, phía sau k
 
 ### Đầu ra có cấu trúc để bước tiếp theo bắt được
 
-Nhiều người hiểu JSON, schema như chứng bệnh kỹ thuật.
+Nhiều người hiểu JSON, schema như sự cầu toàn về kỹ thuật.
 
 Lý do thực tế hơn: nếu bước sau cần script phán thành bại, bot đăng bình luận, dashboard hiển thị kết quả, bạn cần định dạng ổn định, không phải để chương trình đoán bạn đang nói gì mỗi lần.
 
@@ -92,7 +97,7 @@ Nó giải quyết «định dạng ổn định». Nếu Tác vụ vốn địn
 
 ## Cách phán đoán
 
-Nếu kết quả cần «chương trình bước sau» tiêu thụ tiếp, hãy cấu trúc hóa.  
+Nếu kết quả cần «chương trình bước sau» tiêu thụ tiếp, hãy cấu trúc hóa.
 Nếu kết quả chủ yếu để người đọc và thảo luận, văn bản tự do thường tự nhiên hơn.
 
 Chỉ cần kết quả còn phải giao tiếp cho chương trình xử lý, hãy để Codex trả ổn định theo trường đã hẹn.
@@ -123,9 +128,3 @@ Xem [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/).
 
 ## Nguồn tham chiếu
 - Thực hành chung OpenAI structured outputs (căn chỉnh khái niệm)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / API  
-**Cơ sở kiểm chứng:** Tài liệu mô hình/so sánh OpenAI API hiện tại vẫn liệt kê năng lực `Structured outputs`; nội dung trang giới hạn ở thực hành chung «thiết kế giao diện đầu ra ổn định cho Tác vụ không tương tác»; schema JSON, kiểm tra và hạ cấp trong ví dụ thuộc mô tả mẫu kỹ thuật.  
-**Kiểm chứng gần nhất:** 2026-07-26

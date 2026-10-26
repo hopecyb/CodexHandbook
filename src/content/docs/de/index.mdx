@@ -9,9 +9,10 @@ editUrl: false
 lastUpdated: false
 locale: de
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+reviewed_at: 2026-10-26
+translated_at: 2026-10-25
+source_revision: "75dd87a"
 hero:
   title: Mit Codex <br /> erfolgreiche Zusammenarbeit wiederverwendbar machen
   tagline: Von der klaren Aufgabe über Ausführung, Prüfung und Auswertung bis zur Übergabe hilft dieses Handbuch, Ideen zuverlässig in Ergebnisse umzusetzen.
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -58,14 +60,14 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		</a>
 		<a class="path-card" href="/de/cases/use-cases/software-development/fix-a-bug-with-verification/"><img src="/illustrations/home-bug-fix.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Einen Bug beheben und Tests bestehen</strong>
-			<span>Vollständige Übung · Mit historischem Prüfprotokoll. Von einem fehlgeschlagenen Test zur kleinsten Korrektur, Regressionsergebnissen und Prüfnote.</span>
+			<span>Vollständige Übung · Mit historischem Prüfprotokoll. Von einem fehlgeschlagenen Test zur kleinsten Korrektur, Regressionsergebnissen und Review-Notizen.</span>
 		</a>
 		<a class="path-card" href="/de/cases/write-an-article/"><img src="/illustrations/home-article.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Einen Artikel schreiben</strong>
 			<span>Vollständige Materialien · Quellen vom Autor geprüft. An drei synthetischen Quellen Faktenbelege, widersprüchliche Versionen und Überarbeitung üben; Artikel und Faktentabelle abgeben.</span>
 		</a>
 	</div>
-	<p>Referenz-Wochenbericht: Nettobetrag <strong>¥4,644.75</strong>, mit Erläuterung von Rückerstattungen und Auffälligkeiten. <a href="/downloads/sales-weekly-report/summary.md">Referenzbericht ansehen</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Alle Materialien herunterladen</a>. Die Zahlen stammen aus synthetischen Übungsdaten. Geschätzte Dauer 30–45 Minuten; mit Lesern wurde sie nicht gemessen.</p>
+	<p>Referenz-Wochenbericht: Nettobetrag <strong>4.644,75 CNY</strong>, mit Erläuterung von Rückerstattungen und Auffälligkeiten. <a href="/downloads/sales-weekly-report/summary.md">Referenzbericht ansehen</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Alle Materialien herunterladen</a>. Die Zahlen stammen aus synthetischen Übungsdaten. Geschätzte Dauer 30–45 Minuten; mit Lesern wurde sie nicht gemessen.</p>
 	<p><a href="/de/cases/">Fälle und Materialien nach Aufgabe durchsuchen</a> · <a href="/de/guide/learning-paths/">Nach Rolle lernen</a> · <a href="/de/guide/reference/">Nachschlagewerk öffnen</a></p>
 </section>
 
@@ -97,6 +99,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 <section class="home-section" aria-labelledby="lookup-heading">
 	<div class="section-heading"><p>Problem direkt nachschlagen</p><h2 id="lookup-heading">Nächsten Schritt finden</h2></div>
 	<div class="path-grid">
+		<a class="path-card" href="/de/guide/reference/model-selection/"><strong>Modell und Tarif auswählen</strong><span>Wählen Sie zuerst ein Modell für Chat, Schreiben, Tabellen oder Programmierung und prüfen Sie anschließend Tarif und tatsächliche Nutzung.</span></a>
 		<a class="path-card" href="/de/guide/reference/troubleshooting/"><strong>Installation, Anmeldung oder Ausführung fehlgeschlagen</strong><span>Nach Symptom zum Diagnoseeinstieg oder zu einer Wiederherstellungsübung mit Protokollen.</span></a>
 		<a class="path-card" href="/de/guide/reference/"><strong>Befehle, Berechtigungen und Begriffe prüfen</strong><span>Im Referenzverzeichnis Geltungsbereich und Quellen nachlesen.</span></a>
 		<a class="path-card" href="/de/guide/quality/"><strong>Prüfen, ob ein Ergebnis fertig ist</strong><span>Fakten, Dateien und Tests belegen und offene Punkte festhalten.</span></a>
@@ -115,6 +118,8 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		<a class="path-card" href="/de/guide/quality/"><strong>Abnahmeliste</strong><span>Aus «sieht fertig aus» ein nachprüfbares, rücknehmbares und übertragbares Ergebnis machen.</span></a>
 	</div>
 </section>
+
+<ContentVerification />
 
 <AboutHandbook title="Quellen, Aktualisierungen und Mitwirkung">
 

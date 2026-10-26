@@ -3,10 +3,15 @@ title: 画像プロンプト
 description: Codex にスクリーンショット、デザイン稿、ホワイトボード画像を渡すとき、実行しやすい結果を得る質問の仕方。
 locale: ja
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  basis: "OpenAI 公式の画像入力・ファイルアップロード資料に沿って構造・場面・注意点を再確認。本文は非公式ソースの場面に依存せず、版ごとに照合が必要な具体的 UI 詳細は含めない。"
+  status: verified
+  products: App / Cloud
+  checkedAt: '2026-07-26'
 ---
 
 「画像を見て作業する」失敗の多くは、モデルが見えていないのではなく、画像だけ渡して**図のどこに何を見てほしいか**を書いていないことにあります。
@@ -33,7 +38,7 @@ reviewed_at: 2026-08-26
 
 文字プロンプトと同様、構造化を保つのがおすすめです。
 
-### 1. 画像の身份
+### 1. 画像の内容と出所
 
 何の画像か、どこからかを伝えます。
 
@@ -112,7 +117,7 @@ reviewed_at: 2026-08-26
 - 「現状」か「目標」か
 - 既存デザインシステムへの準拠か
 
-「デスクトップ Chrome は正常で、iOS Safari だけ問題」は、画像を何枚足すより価値があることが多いです。
+「デスクトップ Chrome は正常で、iOS Safari だけ問題」は、スクリーンショットをもう1枚追加するより価値があることが多いです。
 
 ## 複数画像の渡し方
 
@@ -185,9 +190,3 @@ Codex が図から要件を全部逆算し、気にしていない細部まで�
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**状態：** verified  
-**対象製品：** App / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI 公式の画像入力・ファイルアップロード資料に沿って構造・場面・注意点を再確認。本文は非公式ソースの場面に依存せず、版ごとに照合が必要な具体的 UI 詳細は含めない。

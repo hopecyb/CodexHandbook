@@ -3,13 +3,17 @@ title: Instalar y activar la integración en el IDE
 description: Cómo abrir Codex correctamente en editores de la familia VS Code, Xcode y los IDE de JetBrains.
 locale: es
 source_locale: zh-CN
-source_revision: 85e1691
-translation_status: draft
+source_revision: "85e1691"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 Las opciones para usar Codex en un IDE se dividen en dos tipos; sus métodos de instalación no son intercambiables:
 
 | Editor | Acceso actual | Cómo abrirlo |

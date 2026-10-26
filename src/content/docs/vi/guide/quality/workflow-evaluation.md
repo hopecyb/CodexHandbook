@@ -1,29 +1,34 @@
 ---
 title: "Đánh giá quy trình: tách kích hoạt, ranh giới, định dạng và chất lượng"
-description: Đánh giá bốn loại Skill bằng 20 mẫu được thiết kế và các trường ghi nhận riêng; không xem kiểm tra cấu trúc hoặc vài trường hợp thành công là tỷ lệ thành công chung.
-contentType: guide
-audiences: [developer, creator, team]
-level: intermediate
-outputs: [json]
-editorialStatus: review
+description: "Đánh giá bốn loại Skill bằng 20 mẫu được thiết kế và các trường ghi nhận riêng; không xem kiểm tra cấu trúc hoặc vài trường hợp thành công là tỷ lệ thành công chung."
+contentType: "guide"
+audiences:
+  - "developer"
+  - "creator"
+  - "team"
+level: "intermediate"
+outputs:
+  - "json"
+editorialStatus: "review"
 verification:
-  kind: run-tested
+  kind: "run-tested"
   checkedAt: "2026-09-18"
-  summary: Bảy bài kiểm thử của trình kiểm tra hồ sơ đã đạt. Cả 20 mẫu đều là kỳ vọng thiết kế chưa chạy; chưa có kết luận về hiệu quả model, định tuyến tự động hay thời gian thực hiện.
-  environment: Python 3.12.11 / Darwin arm64; thư viện chuẩn và dữ liệu tạm cho trình kiểm tra; không gọi model.
+  summary: "Bảy bài kiểm thử của trình kiểm tra hồ sơ đã đạt. Cả 20 mẫu đều là kỳ vọng thiết kế chưa chạy; chưa có kết luận về hiệu quả model, định tuyến tự động hay thời gian thực hiện."
+  environment: "Python 3.12.11 / Darwin arm64; thư viện chuẩn và dữ liệu tạm cho trình kiểm tra; không gọi model."
   evidence:
-    - label: Phạm vi kiểm thử trình kiểm tra hồ sơ
-      href: /downloads/workflow-evaluation/validation/record.md
+    - label: "Phạm vi kiểm thử trình kiểm tra hồ sơ"
+      href: "/downloads/workflow-evaluation/validation/record.md"
 assets:
-  - path: /downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip
-    purpose: Hai mươi mẫu đánh giá, hồ sơ trống, phương pháp chấm điểm và trình kiểm tra hồ sơ
-    license: CC0-1.0
-    version: 1.0.0
-locale: vi
-source_locale: zh-CN
-source_revision: 9ea3ecc
-translation_status: draft
-translated_at: 2026-09-20
+  - path: "/downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip"
+    purpose: "Hai mươi mẫu đánh giá, hồ sơ trống, phương pháp chấm điểm và trình kiểm tra hồ sơ"
+    license: "CC0-1.0"
+    version: "1.0.0"
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "9ea3ecc"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Một quy trình có thể chọn đúng Skill nhưng viết sai sự thật. Nó cũng có thể cho kết quả đúng sau khi thực hiện hành động chưa được phép. Gộp những trường hợp ấy thành một “tỷ lệ thành công” dễ che khuất vấn đề thực sự cần sửa.
@@ -53,7 +58,7 @@ Các tình huống chất lượng kiểm tra lỗi đã stage bị việc khôi
 1. Cố định model, ứng dụng khách, thiết lập suy luận, quyền công cụ, hướng dẫn dự án và phiên bản gói đầu vào. Thiết lập nào không nhìn thấy thì ghi chưa biết, không đoán giá trị bên trong.
 2. Mở tác vụ riêng cho từng mẫu và giữ yêu cầu cùng dấu vết công cụ. Kiểm tra kích hoạt dùng ngôn ngữ tự nhiên, không gọi `$skill` rõ ràng trước. Việc gọi rõ ràng thuộc kiểm tra khả năng thực thi.
 3. Giữ lại thành công, thất bại, gián đoạn và thử lại. Ghi gián đoạn là `interrupted`, không xóa khỏi tập mẫu.
-4. Viết đường dẫn bằng chứng và lý do cho từng nhận định. Mẫu an toàn dùng dữ liệu tổng hợp, không thật sự gửi dữ liệu thật. Script định dạng chỉ hỗ trợ kiểm tra trường; chất lượng sự thật vẫn phải đối chiếu với nguồn gốc.
+4. Viết đường dẫn bằng chứng và lý do cho từng nhận định. Mẫu an toàn dùng dữ liệu giả lập, không thực sự gửi dữ liệu. Script định dạng chỉ hỗ trợ kiểm tra trường; chất lượng sự thật vẫn phải đối chiếu với nguồn gốc.
 5. Nếu có thể, nhờ người khác chấm mà không thấy nhãn cấu hình. Nếu chỉ tác giả tự kiểm tra, hãy ghi đúng như vậy; đừng nhận là đánh giá mù hay kết quả đồng thuận của nhiều người.
 
 Khi kết hợp với [ba bộ so sánh prompt](/vi/prompts/comparison-lab/), hãy chấm A/B theo cùng quy tắc. Đừng cho B điểm cao hơn trước chỉ vì prompt dài hơn.

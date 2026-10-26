@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Integrated terminal
 description: Run commands in the current project or worktree and verify task results with real output.
 locale: en
 source_locale: zh-CN
-source_revision: 727e93e
+source_revision: '727e93e'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
 ---
@@ -62,11 +66,3 @@ The official documentation lists common commands such as `git status`, `git pull
 
 - [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
 - [Local environments](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26

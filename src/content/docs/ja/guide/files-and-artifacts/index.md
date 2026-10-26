@@ -1,14 +1,19 @@
 ---
 title: ファイルと成果物
-description: Codex が各種ファイルの読み書き、生成物の管理、検証の要点を説明する。
+description: Codex による各種ファイルの読み書き、生成物の管理、検証の要点。
 sidebar:
   order: 30
 locale: ja
 source_locale: zh-CN
-source_revision: 543d14e
+source_revision: "543d14e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本リポジトリの現在の files-and-artifacts サブ章構成、および本ハンドブックで検証済みの成果物検証・完了の定義・機密コンテキスト・画像関連章と突き合わせて再確認済み。本ページはファイルタイプ別の伝え方と検証方法を選ぶ安定した原則のみを説明する。
+  checkedAt: '2026-07-26'
 ---
 
 Codex の主な成果は、多くの場合 **リポジトリ内のファイル変更** または **新しく生成された成果物**（ドキュメント、画像、設定）です。本セクションでは、ファイルタイプごとのベストプラクティスを説明し、「生成されたが使えない」事態を避ける方法を示します。
@@ -94,10 +99,3 @@ Codex で初めてファイルを扱うときは、次の順で読むとよい�
 - 画像の生成：[画像生成](/ja/guide/tools/image-generation/)
 
 ファイル系タスクでは、結果は出ているのに形式・ルール・内容が静かにずれている、ということがよくあります。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本リポジトリの現在の files-and-artifacts サブ章構成、および本ハンドブックで検証済みの成果物検証・完了の定義・機密コンテキスト・画像関連章と突き合わせて再確認済み。本ページはファイルタイプ別の伝え方と検証方法を選ぶ安定した原則のみを説明する。  
-**最終検証：** 2026-07-26

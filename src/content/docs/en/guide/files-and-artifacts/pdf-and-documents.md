@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against verified file/folder context, verify-artifacts, sensitive-context, and image/file handling pages; stable principles: limit scope, watch OCR/layout error, open and verify after generation."
+  checkedAt: "2026-07-26"
 title: PDF and Documents
 description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
 locale: en
 source_locale: zh-CN
-source_revision: 1f4f82b
+source_revision: '1f4f82b'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 30
 ---
@@ -112,10 +117,3 @@ If OCR or layout is uncertain, say so explicitly.
 - [ ] Repo size and LFS policy meet team norms
 
 For PDFs, narrower scope is steadier. After generation, open and confirm content—not just presence.
-
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, sensitive-context, and image/file handling pages; stable principles: limit scope, watch OCR/layout error, open and verify after generation.  
-**Last verified:** 2026-07-26

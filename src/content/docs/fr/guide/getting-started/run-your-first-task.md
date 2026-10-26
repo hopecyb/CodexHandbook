@@ -1,25 +1,30 @@
 ---
-title: Exécuter votre première Tâche
-description: Réaliser un petit changement avec un Prompt clair.
+title: Exécuter votre première tâche
+description: Réaliser un petit changement avec un prompt clair.
 locale: fr
 source_locale: zh-CN
-source_revision: f203611
+source_revision: 'f203611'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 'Recoupement avec les chapitres déjà vérifiés du manuel sur les bases des prompts, l’examen du résultat, l’annulation et les projets d’entraînement. La page décrit une méthode stable : commencer par une tâche limitée, vérifiable et réversible.'
+  checkedAt: '2026-07-26'
 ---
 
-L'exemple ci-dessous utilise par défaut l'**App de bureau** ; CLI/IDE peuvent utiliser le même Prompt.
+L'exemple ci-dessous utilise par défaut l'**App de bureau** ; vous pouvez utiliser le même prompt dans le CLI ou l’IDE.
 
 Beaucoup de personnes essaient de faire construire à Codex « un site web complet » ou « refactoriser tout le projet » dès la première exécution. Cela dérape souvent rapidement.
 
-Une petite première Tâche est plus sûre. Compléter la boucle entière une fois compte plus que de commencer grand.
+Une petite première tâche est plus sûre. Compléter la boucle entière une fois compte plus que de commencer grand.
 
-## Pourquoi garder la première Tâche si petite
+## Pourquoi garder la première tâche si petite
 
-Une bonne première Tâche répond généralement aux trois critères :
+Une bonne première tâche répond généralement aux trois critères :
 
 - Portée de changement réduite
 - Résultat vérifiable d'un coup d'œil
@@ -27,7 +32,7 @@ Une bonne première Tâche répond généralement aux trois critères :
 
 Cette page utilise donc un minuscule exemple d'entraînement.
 
-## Exemple de Tâche
+## Exemple de tâche
 
 Dans votre projet d'entraînement, dites à Codex :
 
@@ -38,9 +43,9 @@ Acceptation : Le fichier se termine par ce titre et exactement trois éléments 
 Si des informations manquent, demandez-moi d'abord — ne devinez pas.
 ```
 
-## Ce que fait chaque partie du Prompt
+## Ce que fait chaque partie du prompt
 
-Ce Prompt sépare plusieurs éléments critiques :
+Ce prompt sépare plusieurs éléments critiques :
 
 - **Objectif** : quoi faire
 - **Contraintes** : ce qui ne doit pas être modifié
@@ -51,21 +56,21 @@ Ce n'est pas un modèle fixe — cela rend simplement explicites les parties les
 
 ## Idées reçues courantes
 
-### 1. Une première Tâche plus grande vous apprend plus
+### 1. Une première tâche plus grande vous apprend plus
 
 La première exécution consiste à compléter la boucle entière, pas à faire le plus gros travail possible.
 
-### 2. Une fois le Prompt écrit, laissez-le improviser
+### 2. Une fois le prompt écrit, laissez-le improviser
 
-Pour la première Tâche, surveillez trois choses :
+Pour la première tâche, surveillez trois choses :
 
 - Si la portée reste dans les limites
 - S'il modifie les fichiers que vous avez nommés
 - Si le résultat correspond à l'acceptation
 
-### 3. S'il se trompe à la première Tâche, c'est que je fais mal
+### 3. S'il se trompe à la première tâche, c'est que je fais mal
 
-La première Tâche est censée inclure :
+La première tâche est censée inclure :
 
 - Repérer ce qui a mal tourné
 - Signaler le problème
@@ -73,8 +78,8 @@ La première Tâche est censée inclure :
 
 ## Pendant l'exécution
 
-1. Demandez d'abord un court plan (ou demandez-en un vous-même)
-2. Lors de l'Approbation des écritures de fichiers, confirmez que les chemins sont corrects
+1. Laissez Codex proposer un court plan, ou demandez-lui d’en fournir un
+2. Lors de l'approbation des écritures de fichiers, confirmez que les chemins sont corrects
 3. Une fois terminé, allez à [Examiner le résultat](/fr/guide/getting-started/review-the-result/)
 
 ## Ordre suggéré
@@ -82,7 +87,7 @@ La première Tâche est censée inclure :
 Suivez ces cinq étapes :
 
 1. Choisissez un projet d'entraînement sécurisé
-2. Donnez une petite Tâche qui ne touche qu'un seul fichier
+2. Donnez une petite tâche qui ne touche qu'un seul fichier
 3. Avant d'approuver, vérifiez ce qui va changer
 4. Après la fin, vérifiez portée et résultats
 5. Si vous n'êtes pas satisfait, annulez ou orientez avec une correction précise
@@ -97,7 +102,7 @@ Concentrez-vous sur trois choses :
 2. La fin du fichier contient-elle vraiment cette nouvelle section ?
 3. Y a-t-il exactement trois éléments de liste ?
 
-Si les trois passent, la petite première Tâche a globalement fonctionné.
+Si ces trois points sont satisfaits, votre première petite tâche est globalement réussie.
 
 ## S'il s'est trompé
 
@@ -113,10 +118,4 @@ Ou :
 Ne faites plus de modifications. Dites-moi exactement ce que vous venez de changer.
 ```
 
-Bases du prompting : [Bases du Prompt](/fr/prompts/basics/).
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-26
+Bases du prompting : [Bases du prompt](/fr/prompts/basics/).

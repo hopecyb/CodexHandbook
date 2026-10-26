@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "OpenAI Help \"Skills in ChatGPT\" confirms Skills can include instructions, supporting files, and code; users must review sources and risks before and after upload; this page's governance advice aligns with that principle."
+  checkedAt: "2026-07-26"
 title: Skill security and versioning
 description: Install sources, permission boundaries, upgrades and rollbacks—govern team Skills.
 locale: en
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: 'a3c81ed'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 A Skill is not just another prompt template.
@@ -117,9 +122,3 @@ Explicit `$name` calls are clear; for **model auto-selection**, limit available 
 
 ## References
 - OpenAI Codex Skills security guidance
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills can include instructions, supporting files, and code; users must review sources and risks before and after upload; this page's governance advice aligns with that principle.  
-**Last verified:** 2026-07-26

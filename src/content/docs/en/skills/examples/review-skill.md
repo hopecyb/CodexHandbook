@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: e29d1b3
+source_revision: 'e29d1b3'
+reviewed_at: 2026-10-25
 ---
 
 Decide what is being compared before reviewing. This Skill prevents “current uncommitted changes” from being mistaken for “commits relative to main,” and prevents a clean-looking working tree from hiding an error in the index.
@@ -43,7 +44,7 @@ It does not guess `main` as a default. A missing baseline produces an error inst
 
 ## Install and call it for the first time
 
-You need Python 3.10+, Git, and a local practice repository with at least one commit. Put the extracted `scoped-review/` under the target project's `.agents/skills/`, with its entry point at `.agents/skills/scoped-review/SKILL.md`. Compare any existing Skill with that name before overwriting.
+You need Python 3.10+, Git, and a local practice repository with at least one commit. Put the extracted `scoped-review/` under the target project's `.agents/skills/`, with its entry point at `.agents/skills/scoped-review/SKILL.md`. If a Skill with that name already exists, compare it first; do not overwrite it.
 
 Follow the [official guide](https://learn.chatgpt.com/docs/build-skills) for local Skill discovery and entry points. Confirm it is selectable after installation, then invoke it explicitly:
 
@@ -65,7 +66,7 @@ The synthetic input is in `fixtures/scenario.json`:
 
 At this point, looking only at `git diff HEAD` may show no change, but committing the index would still introduce the bug. For `amount=40, percent=10`, the staged version produces -360 instead of 36.
 
-A correct review reports both that the staged version is wrong and that the unstaged patch fixes it. The full [author reference](/downloads/skills/scoped-review/fixtures/expected-review.md) also explains why branch mode should not be mixed into this local problem; it is not actual model output.
+A correct review reports both that the staged version is wrong and that the unstaged patch fixes it. The full [author reference](/downloads/skills/scoped-review/fixtures/expected-review.md) also explains why this local issue should not be included in a branch-mode review; it is not actual model output.
 
 ## Run the bundled checks
 

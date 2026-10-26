@@ -3,10 +3,14 @@ title: Hooks
 description: Codex のライフサイクルでスクリプトまたは MCP ツールを実行し、チェック、記録、ポリシー制御を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: a0312e9
+source_revision: "a0312e9"
 translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+translated_at: "2026-08-26"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: ローカル Codex host を使用する環境。信頼のレビューと `/hooks` の管理については、Codex CLI の公式説明を基準にします
+  checkedAt: "2026-08-25"
 ---
 
 Hook は Codex のライフサイクルに組み込む自動ハンドラーです。セッション開始、プロンプト送信、ツール呼び出しの前後、コンテキスト圧縮、子 Agent の停止、メインスレッドの終了などの時点で、スクリプトまたは MCP ツールを実行できます。
@@ -34,16 +38,8 @@ Hook は Codex のライフサイクルに組み込む自動ハンドラーで�
 | プロンプト送信時にチェックする、またはコンテキストを補う | `UserPromptSubmit` |
 | メインスレッドまたは子 Agent にもう一度続行させる | `Stop` / `SubagentStop` |
 
-Hook はサンドボックス、承認、コマンドルール、サーバー側の権限の代わりにはなりません。Hook は追加のガードレイヤーであり、一部の管理対象ツールの経路はローカルのツール Hook を通りません。
+Hook はサンドボックス、承認、コマンドルール、サーバー側の権限の代わりにはなりません。Hook は追加のガードレイヤーであり、一部のホスト型ツール（Hosted tools）の経路はローカルのツール Hook を通りません。
 
 ## 公式情報
 
 - [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**状態：** verified
-
-**対象製品：** ローカル Codex host を使用する環境。信頼のレビューと `/hooks` の管理については、Codex CLI の公式説明を基準にします
-
-**最終検証：** 2026-08-25

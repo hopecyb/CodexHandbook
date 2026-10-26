@@ -8,9 +8,10 @@ title: Anatomie d'un Skill
 description: Rôles de SKILL.md, references/, templates/, scripts/ avec exemples.
 locale: fr
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: '50ca48c'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Première impression d'un répertoire Skill : « je connais les dossiers, mais pourquoi cette organisation ? »
@@ -37,7 +38,7 @@ my-skill/
 - `templates/` : squelettes de sortie, moins d'improvisation
 - `scripts/` : étapes déterministes en script, pas seulement en prose
 
-Au début, un seul `SKILL.md` suffit.  
+Au début, un seul `SKILL.md` suffit.
 `references/`, `templates/`, `scripts/` quand la complexité grandit.
 
 ## Charger selon les besoins, pas tout à la fois
@@ -99,10 +100,6 @@ Si une étape doit être stable et répétable, un script bat souvent la descrip
 
 Un ou deux « oui » → commencer à découper.
 
-D'abord `SKILL.md`, puis références, modèles et scripts au besoin.
-
-Exercice : [Créer votre premier Skill](/fr/skills/create-your-first-skill/).
-
 ## Du modèle au Skill
 
 Beaucoup d'équipes ne commencent pas par concevoir un Skill. Elles commencent par un prompt qu'elles copient souvent. Il peut évoluer par étapes :
@@ -125,4 +122,8 @@ Ne transformez pas chaque modèle en Skill. Gardez ceux qui se répètent, avec 
 | Références | Standards de code, glossaire, règles métier, notes API |
 | Scripts | Analyse complexité, liens, couverture, formatage |
 
-Un bon Skill n'est pas juste un prompt plus long : il découpe un processus réutilisable en pièces lisibles, testables et maintenables.
+Un bon Skill n’est pas seulement un prompt plus long : il organise un processus réutilisable en parties lisibles, testables et faciles à maintenir.
+
+Commencez par un `SKILL.md` fonctionnel, puis séparez progressivement les références, modèles et scripts lorsque la complexité le justifie.
+
+Exercice complet : [Créer votre premier Skill](/fr/skills/create-your-first-skill/).

@@ -8,13 +8,13 @@ title: Tokens, contexte et compaction
 description: Comprendre la fenêtre de contexte, son occupation et la compaction.
 locale: fr
 source_locale: zh-CN
-source_revision: cd44efe
-translation_status: draft
+source_revision: "cd44efe"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
+reviewed_at: '2026-10-26'
 ---
-
 Cette page peut sembler abstraite au début ; vous n'avez pas besoin de comprendre immédiatement les mécanismes internes. La mémoire d'un modèle n'est pas illimitée. Quand les informations s'accumulent et se dispersent, il peut perdre de vue l'essentiel et les contraintes anciennes peuvent s'estomper.
 
 Trois termes reviennent ici : tokens, contexte et compaction.

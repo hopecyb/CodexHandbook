@@ -9,9 +9,10 @@ editUrl: false
 lastUpdated: false
 locale: fr
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
+source_revision: '75dd87a'
 hero:
   title: Utilisez Codex <br /> pour rendre une collaboration réussie réutilisable
   tagline: De la définition de la tâche à l'exécution, la vérification, la revue et la transmission, ce guide vous aide à produire des résultats fiables.
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -65,7 +67,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 			<span>Supports complets · Sources revues par l'auteur. Trois sources synthétiques permettent de travailler citations factuelles, versions contradictoires et révision ; livrez l'article et un tableau des faits.</span>
 		</a>
 	</div>
-	<p>Rapport hebdomadaire de référence : montant net <strong>¥4,644.75</strong>, avec remboursements et anomalies expliqués. <a href="/downloads/sales-weekly-report/summary.md">Voir le rapport de référence</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Télécharger tous les supports</a>. Les chiffres proviennent de données synthétiques. Durée estimée : 30 à 45 minutes ; aucun chronométrage auprès de lecteurs n'a été réalisé.</p>
+	<p>Rapport hebdomadaire de référence : montant net <strong>4 644,75 CNY</strong>, avec remboursements et anomalies expliqués. <a href="/downloads/sales-weekly-report/summary.md">Voir le rapport de référence</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Télécharger tous les supports</a>. Les chiffres proviennent de données synthétiques. Durée estimée : 30 à 45 minutes ; aucun chronométrage auprès de lecteurs n'a été réalisé.</p>
 	<p><a href="/fr/cases/">Parcourir les cas et supports par tâche</a> · <a href="/fr/guide/learning-paths/">Apprendre selon son rôle</a> · <a href="/fr/guide/reference/">Consulter le guide de référence</a></p>
 </section>
 
@@ -81,7 +83,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		</a>
 		<a class="path-card" href="/fr/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Créateur</strong>
-			<span>Avec un seul ensemble de sources, créez un tableau des faits, un article et une présentation modifiable de huit diapositives, puis gardez une consigne réutilisable. Supports et contrôles inclus.</span>
+			<span>Avec un seul ensemble de sources, créez un tableau des faits, un article et une présentation de huit diapositives, puis gardez une consigne réutilisable. Supports et contrôles inclus.</span>
 		</a>
 		<a class="path-card" href="/fr/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Développeur</strong>
@@ -95,8 +97,9 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 </section>
 
 <section class="home-section" aria-labelledby="lookup-heading">
-	<div class="section-heading"><p>Consultez directement le problème</p><h2 id="lookup-heading">Trouvez la prochaine action</h2></div>
+	<div class="section-heading"><p>Un problème ? Consultez la référence adaptée</p><h2 id="lookup-heading">Trouvez la prochaine action</h2></div>
 	<div class="path-grid">
+		<a class="path-card" href="/fr/guide/reference/model-selection/"><strong>Choisir un modèle et une offre</strong><span>Partez de votre tâche : conversation, rédaction, tableaux ou programmation, puis vérifiez l’offre et l’utilisation réelle.</span></a>
 		<a class="path-card" href="/fr/guide/reference/troubleshooting/"><strong>Échec d'installation, de connexion ou d'exécution</strong><span>Choisissez le diagnostic selon le symptôme ou suivez un exercice de récupération accompagné de journaux.</span></a>
 		<a class="path-card" href="/fr/guide/reference/"><strong>Vérifier commandes, permissions et termes</strong><span>Consultez l'index de référence pour vérifier le périmètre et les sources.</span></a>
 		<a class="path-card" href="/fr/guide/quality/"><strong>Décider si un résultat est terminé</strong><span>Vérifiez les preuves factuelles, les fichiers et les tests ; consignez ce qui reste incertain.</span></a>
@@ -112,7 +115,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		<a class="path-card" href="/fr/prompts/templates/"><strong>Modèles de consignes de tâche</strong><span>Réutilisez-les selon le type de tâche : comprendre, rechercher, créer, modifier, diagnostiquer ou automatiser.</span></a>
 		<a class="path-card" href="/fr/skills/examples/"><strong>Exemples de Skills</strong><span>Partez d'exemples lisibles et examinez entrées, sorties, limites et tests.</span></a>
 		<a class="path-card" href="/fr/cases/use-cases/case-study-template/"><strong>Modèle de retour d'expérience</strong><span>Consignez objectifs, exécution, contrôles humains, vérification, gestion des échecs et prochaine amélioration.</span></a>
-		<a class="path-card" href="/fr/guide/quality/"><strong>Liste d'acceptation</strong><span>Transformez « cela semble terminé » en résultat contrôlable, réversible et transmissible.</span></a>
+		<a class="path-card" href="/fr/guide/quality/"><strong>Liste de vérification des critères d’acceptation</strong><span>Transformez « cela semble terminé » en résultat contrôlable, réversible et transmissible.</span></a>
 	</div>
 </section>
 
@@ -121,5 +124,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 Ce manuel est entretenu par des contributeurs open source, avec le chinois simplifié comme langue source. Des mentions distinctes signalent descriptions de produits, supports pédagogiques conçus par les auteurs et exécutions réelles. Un script réussi ne prouve ni la performance du modèle ni la réussite des lecteurs. Le relevé de chaque page précise la portée de sa vérification.
 
 [Mises à jour](/fr/guide/updates/) · [Politique de version et de vérification](/fr/guide/start-here/handbook-version-policy/) · [Contribuer](/fr/guide/contributing/)
+
+<ContentVerification />
 
 </AboutHandbook>

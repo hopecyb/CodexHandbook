@@ -1,6 +1,6 @@
 <svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
   <title id="title">Fluxo de sandbox Codex e decisão de aprovação</title>
-  <desc id="desc">Codex propõe uma ação e verifica o sandbox. Ações dentro do escopo rodam com evidências; ações fora do escopo solicitam decisão humana. A negação restringe ou explica; a aprovação permite apenas a ação declarada. Ambos os caminhos terminam em verificação.</desc>
+  <desc id="desc">O Codex propõe uma ação para concluir a tarefa e verifica se ela está dentro do sandbox. Dentro do escopo, pode executá-la e registrar evidências. Fora dele, solicita uma decisão humana conforme a política de aprovação. Após uma recusa, restringe a ação ou explica o impedimento; após a aprovação, executa apenas a ação autorizada. Ambos os caminhos terminam na verificação do resultado.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -57,7 +57,7 @@
   <path d="M521 386V445H684" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="574" y="430" class="edge">Aprovado</text>
   <rect x="518" y="445" width="332" height="122" rx="9" fill="#2a240b" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="684" y="483" text-anchor="middle" class="label">Executar apenas o escopo explicitamente aprovado</text>
+  <text x="684" y="483" text-anchor="middle" class="label">Só o escopo aprovado explicitamente</text>
   <text x="684" y="513" text-anchor="middle" class="note">Comando específico · caminho · domínio · duração</text>
   <text x="684" y="541" text-anchor="middle" class="tiny">Reavaliar cada novo cruzamento</text>
 

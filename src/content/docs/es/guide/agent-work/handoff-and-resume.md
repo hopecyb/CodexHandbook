@@ -3,14 +3,18 @@ title: Traspaso y reanudación
 description: Continuar trabajo incompleto entre sesiones.
 locale: es
 source_locale: zh-CN
-source_revision: 1ee17e9
+source_revision: "1ee17e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre tareas largas, objetivos sostenidos y formas de colaboración con Codex; el contenido solo conserva el método estable de que «el resumen de traspaso debe ayudar a continuar la próxima vez» y no convierte botones o flujos concretos de un cliente en reglas fijas.
+  checkedAt: '2026-07-26'
 ---
-
 Aquí se trata un problema muy habitual:
 
 > **Esta vez no se terminó; ¿cómo se sigue la próxima?**
@@ -58,7 +62,7 @@ Así, al continuar, no verás solo «a medias» sin saber si fue por falta de ti
 
 Suele no contar.
 
-En el hilo viejo hay mucha exploración, prueba y error y juicios de rama ya caducados. Lo valioso de verdad son las **conclusiones que siguen siendo válidas ahora**.
+En el hilo viejo hay mucha exploración, prueba y error y decisiones sobre alternativas que ya no son válidas. Lo valioso de verdad son las **conclusiones que siguen siendo válidas ahora**.
 
 ### 2. Cuanto más se escriba, mejor
 
@@ -77,7 +81,7 @@ Intenta traducir «termínalo» a una acción concreta, por ejemplo:
 
 - Ejecutar una vez `pnpm build`
 - Seguir completando `guide/verification.md`
-- Revisar la sensación visual de la imagen de cabecera de `/guide/foundations/local-vs-cloud/`
+- Revisar la sensación visual de la imagen de cabecera de `/es/guide/foundations/local-vs-cloud/`
 
 ## Cómo retomar con más estabilidad
 
@@ -90,10 +94,3 @@ Tras pegar el resumen en un hilo nuevo, no cambies a lo grande de inmediato; haz
 Así evitas depender de un contexto viejo ya compactado, incompleto o deformado.
 
 Un buen traspaso no es recontar la historia; es hacer que quien abra la tarea la próxima vez sepa al instante: dónde estás, qué hacer después y cómo verificar al terminar.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre tareas largas, objetivos sostenidos y formas de colaboración con Codex; el contenido solo conserva el método estable de que «el resumen de traspaso debe ayudar a continuar la próxima vez» y no convierte botones o flujos concretos de un cliente en reglas fijas.  
-**Última verificación:** 2026-07-26

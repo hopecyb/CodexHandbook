@@ -1,5 +1,5 @@
 ---
-title: Grenzen von Webhooks und Aufgabeneignissen
+title: Grenzen von Webhooks und Aufgabenereignissen
 description: Lokale Codex-Ergebnisse, App-Server-Ereignisse und selbst entworfene HTTP-Rückrufe unterscheiden.
 contentType: reference
 audiences: [developer]
@@ -17,9 +17,10 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 8a84ab8
-translation_status: draft
+source_revision: "8a84ab8"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Nach Abschluss einer Aufgabe kannst du ein internes System per Programm-Rückgabewert, Prozessstatus, Ereignisstream oder HTTP-Rückruf benachrichtigen. Bestimme zuerst Absender und Protokoll und entscheide dann, ob ein Webhook nötig ist.
@@ -32,7 +33,7 @@ Nach Abschluss einer Aufgabe kannst du ein internes System per Programm-Rückgab
 | App-Server-Ereignisse | JSON-RPC-Benachrichtigungen in einer bestehenden Verbindung | Verbindung aufbauen, initialisieren und Nachrichten protokollgemäß verarbeiten |
 | Rückruf des eigenen Runners | HTTP-Anfrage deines Dienstes | Ereignisnamen, Signaturen, Retries und Speicherung selbst festlegen |
 
-`turn/completed` ist eine App-Server-Protokollbenachrichtigung; der Endstatus kann abgeschlossen, unterbrochen oder fehlgeschlagen sein. Prüfe Status und fachliches Ergebnis, bevor du allein wegen des Ereignisnamens eine Bereitstellung auslöst. Siehe die [offizielle Ereignisdokumentation](https://learn.chatgpt.com/docs/app-server).
+`turn/completed` ist eine App-Server-Protokollbenachrichtigung; der Endstatus kann abgeschlossen, unterbrochen oder fehlgeschlagen sein. Prüfe nach dem Empfang weiterhin Status und fachliches Ergebnis. Löse eine Bereitstellung nicht allein aufgrund des Ereignisnamens aus. Siehe die [offizielle Ereignisdokumentation](https://learn.chatgpt.com/docs/app-server).
 
 Diese Seite hat weder einen einheitlichen Codex-Cloud-Endpunkt für Webhook-Registrierung noch Signatur-Header oder einen Vertrag für `task.completed` verifiziert. Deshalb werden keine URLs, Header oder Ereignistabellen als offizielle Schnittstelle dargestellt. Wenn dein konkretes Produkt Webhooks anbietet, verwende dessen versionierte Dokumentation.
 
@@ -54,7 +55,7 @@ Dies ist eine Architektur-Empfehlung dieser Website und keine SDK-Bereitstellung
 - **Identität und Integrität:** Definiere die Prüfung des Absenders durch den Empfänger und nutze eine geprüfte Authentifizierung. Erfinde keinen „offiziellen Signatur-Header“.
 - **Stabile IDs und Deduplizierung:** Protokolliere Aufgaben-ID, Ereignis-ID und Versuchszahl; doppelte Zustellung darf keine externen Wirkungen verdoppeln.
 - **Status und Version:** Trenne Abschluss, Fehler, Unterbrechung und fachliche Abnahme; versioniere die Nutzdaten.
-- **Dauerhafter Empfang:** Bestätige erst nach zuverlässiger Speicherung oder Einreihung. Fehler müssen wiederholbar sein; bestätige keinen Empfang und verliere anschließend das Ereignis.
+- **Dauerhafter Empfang:** Bestätige erst nach zuverlässiger Speicherung oder Einreihung. Bei einem Fehler muss eine erneute Zustellung möglich sein; bestätige keinen Empfang und verliere anschließend das Ereignis.
 - **Datenumfang:** Übertrage nur benötigte Zusammenfassungen und sichere Referenzen; protokolliere keine Zugangsdaten.
 - **Stoppbedingungen:** Begrenze Retries und lege menschliche Übernahme sowie Rücknahme späterer Aktionen fest.
 

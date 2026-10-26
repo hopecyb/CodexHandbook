@@ -24,11 +24,11 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: ad02d42
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "8b68d92"
+translation_status: reviewed
+translated_at: 2026-10-25
+reviewed_at: 2026-10-25
 ---
-
 Primero aclara qué estás registrando: el cupo restante de una cuenta, el coste de una llamada a la API, el tiempo de espera o el esfuerzo humano dedicado a revisar y rehacer. Son magnitudes con unidades distintas y no se sustituyen entre sí.
 
 [Descargar las plantillas de registro](/downloads/usage-log/usage-log-1.0.0.zip) · [Instrucciones](/downloads/usage-log/README.md)
@@ -75,3 +75,5 @@ Las hojas descargables actuales no contienen ninguna ejecución medida. Sin una 
 Guarda los resultados obtenidos, los asuntos pendientes y una forma de retomar. Comprueba si la tarea repite intentos sin avanzar o lee material irrelevante. Reduce el alcance no esencial según el objetivo, manteniendo los criterios de calidad y seguridad. No omitas comprobaciones importantes solo para acabar antes de agotar el cupo.
 
 Si necesitas continuar, comprueba tu cupo actual y la vía de facturación antes de elegir. Este artículo no cambia automáticamente a la facturación API, no compra créditos ni modifica ajustes de la cuenta. Los equipos pueden usar el [itinerario piloto de dos semanas](/es/guide/learning-paths/team/) para registrar motivos de elección y condiciones de reversión.
+
+Consulta los modelos actuales, las diferencias entre interfaces y las recomendaciones por tarea: [Elección de modelos: un punto de partida según la tarea](/es/guide/reference/model-selection/).

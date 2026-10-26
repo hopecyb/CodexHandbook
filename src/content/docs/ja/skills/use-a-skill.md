@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "現在の Codex ランタイムはスキル名の明示参照と適切な場面での自動マッチをサポート。OpenAI Help《Skills in ChatGPT》も Skills が有用なときに自動使用されることを確認。本ページはトリガー方式と書き方原則が中心。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の Codex ランタイムはスキル名の明示参照と適切な場面での自動マッチをサポート。OpenAI Help《Skills in ChatGPT》も Skills が有用なときに自動使用されることを確認。本ページはトリガー方式と書き方原則が中心。
+  checkedAt: '2026-07-26'
 title: Skill を使う
 description: Skill の明示的・暗黙的トリガー、および description の書き方の要点。
 locale: ja
 source_locale: zh-CN
-source_revision: ef92b69
+source_revision: "ef92b69"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Skill を初めて使うとき、よくある誤解は「入れたら自動で効く」ことです。Skill を使うとは、Codex に事前に書いた作業の型に従わせることです。

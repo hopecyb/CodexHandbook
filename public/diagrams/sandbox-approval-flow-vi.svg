@@ -18,12 +18,12 @@
   </defs>
   <rect width="1200" height="780" rx="8" fill="#020617"/>
   <rect width="1200" height="780" rx="8" fill="url(#grid)"/>
-  <text x="44" y="48" class="h1">Sandbox quản lý “được đi xa đến đâu”, phê duyệt quản lý “có hỏi trước khi vượt ranh giới không”</text>
-  <text x="44" y="75" class="sub">Ràng buộc tác vụ mô tả ý định; ranh giới hệ thống giới hạn thực thi; diff, kiểm thử và trạng thái ngoài dùng để chấp nhận cuối cùng.</text>
+  <text x="44" y="48" class="h1">Sandbox giới hạn hành động; phê duyệt quyết định có hỏi trước khi vượt giới hạn</text>
+  <text x="44" y="75" class="sub">Ràng buộc tác vụ nêu ý định; ranh giới hệ thống giới hạn thực thi; nghiệm thu bằng diff, kiểm thử và trạng thái bên ngoài.</text>
 
   <rect x="66" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="191" y="158" text-anchor="middle" class="label">Mục tiêu và ràng buộc tác vụ</text>
-  <text x="191" y="186" text-anchor="middle" class="note">Phạm vi cho phép · hành động cấm · tiêu chí chấp nhận</text>
+  <text x="191" y="186" text-anchor="middle" class="note">Phạm vi · việc cấm · nghiệm thu</text>
   <path d="M316 169H390" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="390" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="515" y="158" text-anchor="middle" class="label">Codex đề xuất hành động</text>
@@ -43,21 +43,21 @@
   <path d="M850 226V282H588" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
   <text x="864" y="258" class="edge">Không</text>
   <rect x="318" y="282" width="270" height="104" rx="9" fill="#07101f" stroke="#fb7185" stroke-width="1.5"/>
-  <text x="453" y="319" text-anchor="middle" class="label">Chính sách phê duyệt xử lý thế nào?</text>
+  <text x="453" y="319" text-anchor="middle" class="label">Chính sách phê duyệt xử lý ra sao?</text>
   <text x="453" y="348" text-anchor="middle" class="note">Hỏi người dùng hoặc từ chối theo chính sách</text>
   <text x="453" y="371" text-anchor="middle" class="tiny">Tiến trình con cũng chịu cùng ràng buộc sandbox</text>
 
   <path d="M385 386V445H214" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
   <text x="314" y="430" class="edge">Từ chối</text>
   <rect x="48" y="445" width="332" height="122" rx="9" fill="#2a1018" stroke="#fb7185" stroke-width="1.5"/>
-  <text x="214" y="483" text-anchor="middle" class="label">Thu hẹp hành động hoặc giải thích điểm chặn</text>
-  <text x="214" y="513" text-anchor="middle" class="note">Dùng đường dẫn trong workspace · dùng dependency hiện có</text>
+  <text x="214" y="483" text-anchor="middle" class="label">Thu hẹp hành động hoặc nêu trở ngại</text>
+  <text x="214" y="513" text-anchor="middle" class="note">Dùng đường dẫn workspace · dependency sẵn có</text>
   <text x="214" y="541" text-anchor="middle" class="tiny">Không âm thầm chuyển sang hành động thay thế rủi ro cao hơn</text>
 
   <path d="M521 386V445H684" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="574" y="430" class="edge">Phê duyệt</text>
   <rect x="518" y="445" width="332" height="122" rx="9" fill="#2a240b" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="684" y="483" text-anchor="middle" class="label">Chỉ thực hiện phạm vi được phê duyệt rõ ràng</text>
+  <text x="684" y="483" text-anchor="middle" class="label">Chỉ làm trong phạm vi đã duyệt rõ</text>
   <text x="684" y="513" text-anchor="middle" class="note">Lệnh cụ thể · đường dẫn · tên miền · thời hạn</text>
   <text x="684" y="541" text-anchor="middle" class="tiny">Hành động vượt ranh giới mới cần được đánh giá lại</text>
 
@@ -67,5 +67,5 @@
   <rect x="390" y="618" width="420" height="108" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="658" text-anchor="middle" class="label">Xác minh kết quả và tác dụng phụ bên ngoài</text>
   <text x="600" y="687" text-anchor="middle" class="note">diff · kiểm thử · nhật ký · trạng thái từ xa · khả năng khôi phục</text>
-  <text x="600" y="712" text-anchor="middle" class="tiny">Không có hộp thoại không có nghĩa là không cần rà soát; được phê duyệt cũng không có nghĩa là kết quả đúng.</text>
+  <text x="600" y="712" text-anchor="middle" class="tiny">Không hỏi vẫn cần rà soát; được duyệt chưa có nghĩa kết quả đúng.</text>
 </svg>

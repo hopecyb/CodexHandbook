@@ -3,10 +3,14 @@ title: Scheduled task 完全ガイド
 description: 独立タスクまたはチャット内タスクを選び、ローカルプロジェクト、worktree、権限、プロンプト、レビューの循環を設定する。
 locale: ja
 source_locale: zh-CN
-source_revision: fa792dc
+source_revision: "fa792dc"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / デスクトップ App。CLI と IDE は準備とテストに使用
+  checkedAt: '2026-08-26'
 ---
 
 Scheduled task で本当に難しいのは「何時に実行するか」ではありません。無人実行のたびに、安定した入力、狭い権限、レビュー可能な出力、停止条件をそろえることです。
@@ -21,7 +25,7 @@ Scheduled task で本当に難しいのは「何時に実行するか」では�
 
 ## 対応範囲
 
-| 表面 | できること | 主な制限 |
+| 利用環境 | できること | 主な制限 |
 |---|---|---|
 | ChatGPT Web | 実行の作成、管理、確認。アップロードファイル、接続ツール、Skills、Plugins を利用 | ローカルフォルダーには直接アクセスできない |
 | ChatGPT デスクトップ App | 作成、管理。ローカルプロジェクトまたは Git worktree を選択可能 | ローカルファイルのタスクには、マシンの起動、App の実行、プロジェクトの存在が必要 |
@@ -44,7 +48,7 @@ Scheduled task で本当に難しいのは「何時に実行するか」では�
 
 ### Web で実行する
 
-耐久性のある指示をタスクプロンプトまたは Skill に書き、必要な資料をアップロードファイル、Project、接続サービスに置きます。「デスクトップの latest.csv を読んで」のように書かないでください。Web はローカルパスに直接アクセスできません。
+継続して使える指示をタスクプロンプトまたは Skill に書き、必要な資料をアップロードファイル、Project、接続サービスに置きます。「デスクトップの latest.csv を読んで」のように書かないでください。Web はローカルパスに直接アクセスできません。
 
 ### デスクトップ App でローカルプロジェクトを使う
 
@@ -95,7 +99,7 @@ Scheduled task は無人で実行され、デフォルトのサンドボック�
 
 | サンドボックスモード | 典型的な結果 |
 |---|---|
-| read-only | ファイル変更、ネットワーク接続、本機 App の操作は失敗する |
+| read-only | ファイル変更、ネットワーク接続、ローカル App の操作は失敗する |
 | workspace-write | ワークスペース内は書き込める。ワークスペース外、ネットワーク、App 操作はデフォルトで失敗する |
 
 タスクを完了できる最小の権限から始めます。ネットワークや広いファイルアクセスが必要なら、明示的な allowlist を使い、一度の失敗を消すために全面的な高権限へ変更しないでください。
@@ -110,7 +114,7 @@ Scheduled task は無人で実行され、デフォルトのサンドボック�
 
 ## 6. 「変更なし」、失敗、停止を設計する
 
-耐久性のあるタスクには次の 3 つの経路が必要です。
+継続して実行するタスクには次の 3 つの経路が必要です。
 
 1. **発見あり**：証拠、重要度、次の手順を出力する。
 2. **変更なし**：検査範囲だけを簡潔に報告し、疑似的な問題を作らない。
@@ -137,11 +141,3 @@ Scheduled task は無人で実行され、デフォルトのサンドボック�
 
 - [OpenAI：Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI：Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**状態：** verified
-
-**対象製品：** ChatGPT Web / デスクトップ App。CLI と IDE は準備とテストに使用
-
-**最終確認：** 2026-08-26

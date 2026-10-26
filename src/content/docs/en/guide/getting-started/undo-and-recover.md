@@ -8,11 +8,12 @@ title: Undo and recover
 description: Safely roll back when the result is unsatisfactory.
 locale: en
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: '8aa3171'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
+reviewed_at: 2026-10-25
 ---
 
 A common worry when using Codex for the first time is: if it makes a bad change, can I go back?

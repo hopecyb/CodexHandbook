@@ -8,11 +8,12 @@ title: Review the result
 description: Read changes, verify the artifact, and decide whether to accept or revise.
 locale: en
 source_locale: zh-CN
-source_revision: a215910
-translation_status: draft
+source_revision: 'a215910'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 90
+reviewed_at: 2026-10-25
 ---
 
 Many beginners skip this step after Codex completes a task.

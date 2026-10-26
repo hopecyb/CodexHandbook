@@ -5,10 +5,15 @@ sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: d1a9007
+source_revision: "d1a9007"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  basis: OpenAI Help Center の現行版《Moving to the new ChatGPT desktop app》と《ChatGPT Work and Codex》はいずれも、デスクトップアプリに Chat/Work と Codex が同梱され、Codex は独立したビューを維持していると明記している。本ページはデスクトップ App 章のナビゲーションに徹し、「タスク入力」「変更確認」「承認」の 3 つの基本操作に焦点を当てる。
+  checkedAt: "2026-07-26"
 ---
 
 デスクトップ App は初心者向けのデフォルト入口です。プロジェクト、タスク、差分、承認を視覚的に扱えます。
@@ -56,9 +61,9 @@ reviewed_at: 2026-08-26
 - diff を見る場所
 - 承認／拒否する場所
 
-### 3. デスクトップ App は初心者向けだから、本番作業には向かない？
+### 3. デスクトップ App は初心者向けだから、実務には向かない？
 
-可視化されたレビューとプロセスの透明性を重視するなら、多くの本番作業もデスクトップ App でこなせます。
+可視化されたレビューとプロセスの透明性を重視するなら、多くの実務もデスクトップ App でこなせます。
 
 ## 学習の順序
 
@@ -89,10 +94,3 @@ reviewed_at: 2026-08-26
 入門はこちら：[デスクトップ App のインストール](/ja/guide/getting-started/install-desktop-app/)
 
 デスクトップ App は Codex との基本的な協業を先に通すのに向いており、その後にコマンドラインやより高度なワークフローを補えます。
-
----
-
-**状態：** verified  
-**対象製品：** App  
-**検証根拠：** OpenAI Help Center の現行版《Moving to the new ChatGPT desktop app》と《ChatGPT Work and Codex》はいずれも、デスクトップアプリに Chat/Work と Codex が同梱され、Codex は独立したビューを維持していると明記している。本ページはデスクトップ App 章のナビゲーションに徹し、「タスク入力」「変更確認」「承認」の 3 つの基本操作に焦点を当てる。  
-**最終検証：** 2026-07-26

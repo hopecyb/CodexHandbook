@@ -9,9 +9,10 @@ editUrl: false
 lastUpdated: false
 locale: ko
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
+source_revision: '75dd87a'
 hero:
   title: Codex로 <br /> 한 번의 성공을 재사용 가능한 방법으로
   tagline: 작업을 명확히 하는 것부터 실행, 검증, 검토, 인계까지 아이디어를 안정적인 결과로 만드는 안내서입니다.
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -65,7 +67,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 			<span>전체 자료 제공 · 작성자가 출처 자체 점검. 합성 자료 세 개로 사실 인용, 버전 충돌, 수정을 연습하고 글과 사실표를 만듭니다.</span>
 		</a>
 	</div>
-	<p>참고 주간 보고서의 순액 <strong>¥4,644.75</strong>, 이며 환불과 이상 항목을 설명합니다. <a href="/downloads/sales-weekly-report/summary.md">참고 보고서 보기</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">전체 자료 다운로드</a>. 수치는 교육용 합성 데이터에서 나왔습니다. 예상 실습 시간은 30~45분이며 독자 대상으로 시간을 측정하지 않았습니다.</p>
+	<p>참고 주간 보고서의 순액은 <strong>CNY 4,644.75</strong>이며 환불과 이상 항목을 설명합니다. <a href="/downloads/sales-weekly-report/summary.md">참고 보고서 보기</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">전체 자료 다운로드</a>. 수치는 교육용 합성 데이터에서 나왔습니다. 예상 실습 시간은 30~45분이며 독자 대상으로 시간을 측정하지 않았습니다.</p>
 	<p><a href="/ko/cases/">작업별 사례와 자료 보기</a> · <a href="/ko/guide/learning-paths/">역할별 학습</a> · <a href="/ko/guide/reference/">참조 설명서 보기</a></p>
 </section>
 
@@ -77,11 +79,11 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	<div class="path-grid">
 		<a class="path-card" href="/ko/guide/learning-paths/beginner/01-talk-to-codex/"><img src="/illustrations/home-path-beginner.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>초보자</strong>
-			<span>같은 다운로드 자료로 행사 안내문을 만들고 오류를 검토하고 사본을 복구합니다. 프로그래밍은 필요 없으며 단계마다 인수 기준이 있습니다.</span>
+			<span>같은 다운로드 자료로 행사 안내문을 만들고 오류를 검토하고 사본을 복구합니다. 프로그래밍은 필요 없으며 단계마다 검수 기준이 있습니다.</span>
 		</a>
 		<a class="path-card" href="/ko/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>창작자</strong>
-			<span>한 자료 묶음으로 사실표, 글, 편집 가능한 8장 발표 자료를 만든 뒤 재사용 가능한 작업 지시를 저장합니다. 다운로드와 단계별 검사가 포함됩니다.</span>
+			<span>한 자료 묶음으로 사실표, 글, 8장 발표 자료를 만든 뒤 재사용 가능한 작업 지시를 저장합니다. 다운로드와 단계별 검사가 포함됩니다.</span>
 		</a>
 		<a class="path-card" href="/ko/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>개발자</strong>
@@ -97,6 +99,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 <section class="home-section" aria-labelledby="lookup-heading">
 	<div class="section-heading"><p>문제에서 바로 찾아보기</p><h2 id="lookup-heading">다음 행동 찾기</h2></div>
 	<div class="path-grid">
+		<a class="path-card" href="/ko/guide/reference/model-selection/"><strong>모델과 요금제 선택</strong><span>대화, 글쓰기, 스프레드시트, 코딩에 맞는 시작점을 선택하고 요금제와 실제 사용량을 확인합니다.</span></a>
 		<a class="path-card" href="/ko/guide/reference/troubleshooting/"><strong>설치, 로그인 또는 실행 실패</strong><span>증상별 진단 경로를 찾거나 로그가 있는 복구 실습을 진행하세요.</span></a>
 		<a class="path-card" href="/ko/guide/reference/"><strong>명령, 권한, 용어 확인</strong><span>참조 목차에서 적용 범위와 출처를 확인하세요.</span></a>
 		<a class="path-card" href="/ko/guide/quality/"><strong>결과가 완료됐는지 판단</strong><span>사실, 파일, 테스트 증거를 확인하고 미확인 항목을 남기세요.</span></a>
@@ -112,7 +115,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		<a class="path-card" href="/ko/prompts/templates/"><strong>작업 프롬프트 템플릿</strong><span>이해, 조사, 생성, 수정, 진단, 자동화 등 작업 유형별로 재사용합니다.</span></a>
 		<a class="path-card" href="/ko/skills/examples/"><strong>Skill 예시</strong><span>읽기 쉬운 예시에서 입력, 출력, 경계, 테스트를 살펴봅니다.</span></a>
 		<a class="path-card" href="/ko/cases/use-cases/case-study-template/"><strong>사례 회고 템플릿</strong><span>목표, 실행, 사람의 확인, 검증, 실패 처리, 다음 개선을 기록합니다.</span></a>
-		<a class="path-card" href="/ko/guide/quality/"><strong>인수 체크리스트</strong><span>'끝난 것 같다'를 다시 확인하고 되돌리고 인계할 수 있는 결과로 바꿉니다.</span></a>
+		<a class="path-card" href="/ko/guide/quality/"><strong>검수 체크리스트</strong><span>'끝난 것 같다'를 다시 확인하고 되돌리고 인계할 수 있는 결과로 바꿉니다.</span></a>
 	</div>
 </section>
 
@@ -121,5 +124,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 이 핸드북은 오픈소스 기여자가 관리하며 간체 중국어가 원문입니다. 제품 설명, 작성자가 만든 교육 자료, 실제 실행 기록을 따로 표시합니다. 스크립트 통과만으로 모델 성능이나 독자의 실습 완주가 증명되지는 않습니다. 각 페이지의 기록에서 검증 범위를 확인하세요.
 
 [내용 업데이트](/ko/guide/updates/) · [버전과 검증 정책](/ko/guide/start-here/handbook-version-policy/) · [기여하기](/ko/guide/contributing/)
+
+<ContentVerification />
 
 </AboutHandbook>

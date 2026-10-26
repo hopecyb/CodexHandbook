@@ -3,12 +3,16 @@ title: Créer des pull requests
 description: Livrez le résultat d'une tâche Cloud sous forme de PR révisable et vérifiable, sans fusion automatique.
 locale: fr
 source_locale: zh-CN
-source_revision: 39371d4
+source_revision: "39371d4"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: Cloud, GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Après une tâche Cloud, examinez le résumé et le diff. Ne créez une pull request que si le résultat respecte le périmètre et les critères de vérification ; sinon, poursuivez les corrections dans la même conversation.
@@ -70,11 +74,3 @@ Ouvrir et fusionner une PR sont deux limites d'autorisation distinctes. La capac
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Révision de pull request GitHub](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** Cloud, GitHub
-
-**Dernière vérification :** 2026-08-26

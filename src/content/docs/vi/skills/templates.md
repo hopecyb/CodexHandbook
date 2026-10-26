@@ -8,15 +8,15 @@ title: Thư mục templates/
 description: Cung cấp template đầu ra và khung báo cáo trong Skill.
 locale: vi
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: "82a9e01"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-`templates/` không chỉ là thư mục"tiết kiệm chút thời gian trình bày". Tác dụng thực tế hơn là làm đầu ra của Skill ổn định hơn, không phải mỗi lần ứng biến.
+`templates/` không chỉ là thư mục “tiết kiệm chút thời gian trình bày”. Tác dụng thực tế hơn là làm đầu ra của Skill ổn định hơn, không phải mỗi lần ứng biến.
 
-Nếu `references/` thiên về"tham chiếu gì lúc đầu vào", thì `templates/` thiên về "đầu ra trông thế nào". Kết quả cần cấu trúc cố định, dễ đối chiếu lại đều phù hợp đặt ở đây.
+Nếu `references/` thiên về “tham chiếu gì lúc đầu vào”, thì `templates/` thiên về “đầu ra trông thế nào”. Kết quả cần cấu trúc cố định, dễ đối chiếu lại đều phù hợp đặt ở đây.
 
 
 `templates/` chứa định dạng đầu ra mà Skill tái dùng khi chạy, ví dụ báo cáo review, khung changelog, bảng so sánh nghiên cứu.
@@ -30,17 +30,17 @@ review-skill/
     └── review-report.md
 ```
 
-Trong `SKILL.md` chỉ dẫn:"Xuất kết luận review theo cấu trúc templates/review-report.md."
+Trong `SKILL.md` chỉ dẫn:“Xuất kết luận review theo cấu trúc templates/review-report.md.”
 
 ## Nó đang làm gì
 
-- `SKILL.md` chịu quy trình
-- `templates/` chịu hình dạng kết quả
+- `SKILL.md` phụ trách quy trình
+- `templates/` quy định cách trình bày kết quả
 
 Cũng có thể hiểu thẳng:
 
-- Skill quyết định"làm thế nào"
-- template quyết định"cuối cùng trình bày thế nào"
+- Skill quyết định “làm thế nào”
+- template quyết định “cuối cùng trình bày thế nào”
 
 Điều này giảm hai vấn đề thường gặp:
 
@@ -57,7 +57,7 @@ Nếu bạn thấy một loại kết quả mỗi lần đều muốn trông g�
 - Checklist phát hành
 
 Lần đầu làm Skill không nhất thiết phải có `templates/`.
-Nhưng hễ bắt đầu lặp lại"hãy xuất theo cấu trúc này", thì đáng tách riêng.
+Nhưng hễ bắt đầu lặp lại “hãy xuất theo cấu trúc này”, thì đáng tách riêng.
 
 ## Hiểu lầm thường gặp
 
@@ -79,6 +79,6 @@ Nếu một loại kết quả gần như không lặp, hoặc cấu trúc mỗi
 
 ## Khi nào đáng tạo riêng `templates/`
 
-Nếu liên tiếp hai ba lần đều lặp"xuất theo cấu trúc này", thì đáng làm thành `templates/`.
+Nếu liên tiếp hai ba lần đều lặp “xuất theo cấu trúc này”, thì đáng làm thành `templates/`.
 
 Giá trị cốt lõi của `templates/` là làm cấu trúc đầu ra ổn định, sau đó cũng dễ tái dùng hơn.

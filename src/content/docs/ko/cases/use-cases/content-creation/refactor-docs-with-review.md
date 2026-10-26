@@ -1,12 +1,20 @@
 ---
 title: 검토와 함께 문서 사이트 리팩터
-description: "사례: Astro/Starlight 문서 프로젝트에서 링크와 장을 일괄 갱신—작은 걸음 diff, 빌드 검증."
+description: "사례: Astro/Starlight 문서 프로젝트에서 링크와 장을 일괄 갱신—작은 단위의 diff, 빌드 검증."
 locale: ko
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: 'db44ca3'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: 이 핸드북에서 이미 검증된 콘텐츠 산출물, EPXV, 빌드 검증, 사례 템플릿 장과 교차 확인했습니다. 이 페이지 내용은 “여러 파일 문서 사이트를 작은 단위로 수정하고, 빌드 검증하며, 실패를 복구”하는 안정적인 콘텐츠 엔지니어링 사례로 한정됩니다.
+  checkedAt: '2026-07-26'
+caseCategory: development
+directoryOrder: 75
+contentType: case
 ---
 
 이 사례는 **콘텐츠 엔지니어링** 작업을 보여 줍니다: 여러 Markdown 파일, 사이드바 설정, 빌드 검증. 기술 스택은 이 핸드북과 비슷하지만, 시나리오는 임의의 정적 사이트로 옮길 수 있습니다.
@@ -30,7 +38,7 @@ reviewed_at: 2026-08-26
 2. 본문 상대 링크 수정
 3. `npm run build` 오류 제로
 
-사람은 slug를 놓치기 쉽습니다. Agent가 **체크리스트대로 실행 + 빌드 인수**하기에 적합합니다.
+사람은 slug를 놓치기 쉽습니다. Agent가 **체크리스트대로 실행 + 빌드 검증**하기에 적합합니다.
 
 ## 준비
 
@@ -43,7 +51,7 @@ reviewed_at: 2026-08-26
 ```text
 목표: 12-reference에 environment-variables.md를 추가하고 사이드바와 index 링크에 연결하세요.
 제약: src/content/docs 와 astro.config.mjs 만 수정하세요. 의존성을 업그레이드하지 마세요.
-인수: npm run build 성공; 죽은 링크 없음.
+완료 기준: npm run build 성공; 죽은 링크 없음.
 단계: 먼저 config를 고치고, 이어서 md를 쓰고, 마지막에 12-reference/index.md를 갱신하세요.
 ```
 
@@ -69,14 +77,8 @@ reviewed_at: 2026-08-26
 
 ## 회고
 
-- 같은 「새 장+사이드바」가 세 번째면 Skill로 정착
+- 같은 「새 장+사이드바」가 세 번째면 Skill로 정리
 - ROADMAP에서 완료 항목을 체크해 문서와 계획이 어긋나지 않게
 
 ## 참고 출처
 - 이 저장소의 실제 M2 문서 반복 흐름
----
-
-**상태:** verified  
-**적용 제품:** CLI / IDE  
-**검증 근거:** 이 핸드북에서 이미 검증된 콘텐츠 산출물, EPXV, 빌드 인수, 사례 템플릿 장과 교차 확인했습니다. 이 페이지 내용은 “여러 파일 문서 사이트를 작은 걸음으로 수정하고, 빌드 검증하며, 실패를 복구”하는 안정적인 콘텐츠 엔지니어링 사례로 한정됩니다.  
-**최근 검증:** 2026-07-26

@@ -1,17 +1,21 @@
 ---
-title: "Mémoires et contexte persistant"
+title: Mémoires et contexte persistant
 description: Comment Codex retient les préférences et les faits entre sessions — capacités, frontières et normes d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: "7a689ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI (selon version)
+  basis: Recoupement avec la description officielle actuelle de ChatGPT Memory du Help Center OpenAI et les chapitres vérifiés du handbook sur instructions projet, préférences personnelles et frontières de sécurité ; le contenu de la page se limite au principe stable que la mémoire convient aux préférences personnelles et quelques faits stables et ne remplace pas les règles du dépôt ou la gestion des informations sensibles.
+  checkedAt: '2026-07-26'
 ---
-
-Certains clients Codex supportent **Memory** : garder les préférences ou faits que vous confirmez sur plusieurs tours pour les sessions ultérieures. Cela complète `AGENTS.md` et la configuration projet, mais **ne peut pas** remplacer les normes d'équipe versionnées.
+Certains clients Codex prennent en charge la **mémoire (Memory)** : garder les préférences ou faits que vous confirmez sur plusieurs tours pour les sessions ultérieures. Cela complète `AGENTS.md` et la configuration projet, mais **ne peut pas** remplacer les normes d'équipe versionnées.
 
 ## Contenu
 
@@ -61,7 +65,7 @@ Ce contenu devrait retourner à :
 
 ### La mémoire n'est pas pour les informations sensibles
 
-Même si un client supporte la mémoire, vous ne devriez pas stocker :
+Même si un client prend en charge la mémoire, vous ne devriez pas stocker :
 
 - tokens
 - Données clients
@@ -120,16 +124,10 @@ Si les trois penchent vers « oui », la mémoire est un meilleur choix.
 ## Erreurs courantes
 
 - Mettre « la liste d'epics de cette semaine » uniquement en mémoire, invisible aux collaborateurs
-- Ne pas mettre à jour d'un côté quand la mémoire est en conflit avec `AGENTS.md`
+- Ne mettre à jour ni la mémoire ni `AGENTS.md` lorsqu’ils se contredisent
 - Supposer que la mémoire signifie « le modèle retient toujours le dépôt entier »
 
 La mémoire convient le mieux aux « préférences personnelles et quelques faits stables que vous répétez toujours » ; ce n'est pas un substitut à la documentation du dépôt, aux règles d'équipe ou à la gestion des informations sensibles.
 
 ## Références
 - Documentation mémoire OpenAI Codex (selon version)
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI (selon version)  
-**Base de vérification :** Recoupement avec la description officielle actuelle de ChatGPT Memory du Help Center OpenAI et les chapitres vérifiés du handbook sur instructions projet, préférences personnelles et frontières de sécurité ; le contenu de la page se limite au principe stable que la mémoire convient aux préférences personnelles et quelques faits stables et ne remplace pas les règles du dépôt ou la gestion des informations sensibles.  
-**Dernière vérification :** 2026-07-26

@@ -3,10 +3,15 @@ title: Skills 개요
 description: SKILL.md로 재사용 가능한 워크플로를 Codex에 가르칩니다. 한 번 쓰고, 필요할 때 호출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: '3147d2c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 현재 Codex 런타임의 Skill 로드 규칙(`SKILL.md`, 필요 시 전체 스킬 파일 읽기)과 OpenAI Help 《Skills in ChatGPT》의 Skill을 재사용 가능한 workflow로 정의한 내용이 일치합니다. 이 페이지는 개념과 디렉터리 구성 중심이며, 자주 바뀌는 UI에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **Skill**은 `SKILL.md`를 담은 디렉터리(스크립트와 참고 자료를 추가할 수 있음)로, 고정된 절차를 Codex가 **자동 또는 명시적으로 호출**할 수 있는 능력으로 패키징한 것입니다.
@@ -29,14 +34,14 @@ reviewed_at: 2026-08-26
 
 Codex는 시작 시 각 Skill의 **name, description, 경로**만 봅니다. 사용하기로 결정할 때만 전체 `SKILL.md`를 로드합니다. 따라서 본문에 자세한 체크리스트를 써도 컨텍스트를 가득 채우지 않습니다.
 
-주의: Skill 목록에는 **초기 문자 예산**(컨텍스트의 일부 정도)이 있습니다. `description`에서는 핵심 트리거 장면을 **맨 앞**에 써서, 잘린 뒤 매칭이 실패하지 않게 하세요.
+주의: Skill 목록에는 **초기 문자 예산**(컨텍스트의 일부 정도)이 있습니다. `description`에서는 핵심 트리거 상황을 **맨 앞**에 써서, 잘린 뒤 매칭이 실패하지 않게 하세요.
 
 ## Skill 디렉터리 구조
 
 ```text
 my-skill/
 ├── SKILL.md          # 필수
-├── scripts/          # 선택: 결정적 단계
+├── scripts/          # 선택: 결정론적 단계
 └── references/       # 선택: 긴 참고 문서
 ```
 
@@ -81,7 +86,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 1. 어떤 절차가 이미 몇 번 반복되었음을 발견
 2. `SKILL.md` 초안 작성, 우선 순수 텍스트 단계로
 3. 작은 작업에서 `$name`과 암시적 매칭을 시험
-4. 결정성이 필요할 때 `scripts/` 추가
+4. 결정론적 실행이 필요할 때 `scripts/` 추가
 5. `.agents/skills/`에 커밋하고 팀에 PR
 
 실습: [첫 Skill 만들기](/ko/skills/create-your-first-skill/)
@@ -117,9 +122,3 @@ Skill은 시작에 필수인 요소가 아니라, 이미 반복되는 절차를 
 
 ## 참고 출처
 - OpenAI Codex Skills 문서
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE  
-**검증 근거:** 현재 Codex 런타임의 Skill 로드 규칙(`SKILL.md`, 필요 시 전체 스킬 파일 읽기)과 OpenAI Help 《Skills in ChatGPT》의 Skill을 재사용 가능한 workflow로 정의한 내용이 일치합니다. 이 페이지는 개념과 디렉터리 구성 중심이며, 자주 바뀌는 UI에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

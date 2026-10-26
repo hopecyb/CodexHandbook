@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "This entry page maintains only path selection and a stable engineering loop. The expected failing and passing commands were run in the current repository."
+  checkedAt: "2026-08-25"
 title: 'Fix a bug: where to start'
 description: Choose the bug-fix path that matches your situation and continue to the complete runnable case.
 locale: en
 source_locale: zh-CN
-source_revision: 405a687
+source_revision: '405a687'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 This is a short entry page. The complete steps, runnable code, red/green test evidence, and phase-specific prompts are maintained in [Verified bug fixing](/en/cases/use-cases/software-development/fix-a-bug-with-verification/) so the two pages do not drift.
@@ -47,10 +52,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 The complete materials are in [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Status:** verified
-**Applies to:** CLI / IDE
-**Verification basis:** This entry page maintains only path selection and a stable engineering loop. The expected failing and passing commands were run in the current repository.
-**Last verified:** 2026-08-25

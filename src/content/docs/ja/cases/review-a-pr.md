@@ -12,10 +12,10 @@ title: PR をレビューする
 description: マージ前に Codex で構造化された diff レビューを行う。
 locale: ja
 source_locale: zh-CN
-source_revision: 84638f0
+source_revision: "84638f0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -38,7 +38,7 @@ reviewed_at: 2026-08-26
 ```text
 現在のブランチと main の diff を比較してください（まだコードを変更しないでください）：
 1. issue の範囲を超えていないか
-2. 明らかなセキュリティリスク（秘密鍵、インジェクション、権限）があるか
+2. 明らかなセキュリティリスク（シークレット、インジェクション、権限）があるか
 3. テストやドキュメントが不足していないか
 チェックリストを出力し、P0/P1 を付け、ファイルパスを添付してください。
 ```

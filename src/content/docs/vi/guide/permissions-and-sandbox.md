@@ -1,14 +1,19 @@
 ---
-title: Quyền và sandbox
-description: Hiểu sandbox, phê duyệt, truy cập mạng và ranh giới thực thi cục bộ so với Cloud qua một chuỗi quyết định.
+title: "Quyền và sandbox"
+description: "Hiểu sandbox, phê duyệt, truy cập mạng và ranh giới thực thi cục bộ so với Cloud qua một chuỗi quyết định."
 sidebar:
   order: 14
-locale: vi
-source_locale: zh-CN
-source_revision: 6b5fcb8
-translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "6b5fcb8"
+translation_status: "reviewed"
+translated_at: "2026-08-26"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu với tài liệu hiện hành về sandbox, phê duyệt và an toàn của Codex. Trang này phân biệt ranh giới thực thi cấp hệ điều hành, chính sách phê duyệt, ràng buộc tác vụ và bước con người rà soát, đồng thời giải thích riêng mô hình mạng cục bộ và Cloud."
+  checkedAt: "2026-08-26"
 ---
 
 Để dùng Codex an toàn, cần xem đồng thời hai lớp kiểm soát: **sandbox quyết định về mặt kỹ thuật có thể chạm tới đâu, còn chính sách phê duyệt quyết định có phải hỏi bạn trước khi vượt ranh giới hiện tại hay không.**
@@ -21,10 +26,10 @@ reviewed_at: 2026-08-26
 |---|---|---|
 | Sandbox | Hành động này có thể chạm tối đa đến đâu? | Tệp dự án, đường dẫn ngoài dự án, năng lực hệ thống, mạng |
 | Chính sách phê duyệt | Có phải hỏi con người trước khi vượt ranh giới hiện tại không? | Cài dependency, truy cập mạng, ghi thư mục ngoài, khởi động ứng dụng |
-| Ràng buộc tác vụ | Công việc lần này nên và không nên làm gì? | Thư mục được phép sửa, hành động cấm, lệnh chấp nhận |
+| Ràng buộc tác vụ | Công việc lần này nên và không nên làm gì? | Thư mục được phép sửa, hành động cấm, lệnh nghiệm thu |
 | Con người rà soát | Kết quả đã thực thi có chấp nhận được không? | diff, nhật ký, kiểm thử, tác dụng phụ bên ngoài |
 
-Ràng buộc tác vụ không thay thế sandbox; sandbox cũng không thay thế bước rà soát cuối. Chúng lần lượt phụ trách ý định, ranh giới thực thi và chấp nhận kết quả.
+Ràng buộc tác vụ không thay thế sandbox; sandbox cũng không thay thế bước rà soát cuối. Chúng lần lượt phụ trách ý định, ranh giới thực thi và nghiệm thu kết quả.
 
 ## Một hành động đi qua ranh giới an toàn thế nào
 
@@ -105,13 +110,3 @@ Khi hoàn tất, chạy pnpm test --filter auth và báo cáo đầu ra cùng r�
 - **Hooks có thể thay sandbox**: Hook là lớp bảo vệ và kiểm toán bổ sung, không thay thế cô lập cưỡng chế của hệ điều hành.
 
 Xem thiết lập sản phẩm tại [phê duyệt và sandbox CLI](/vi/guide/cli/approvals-and-sandbox/) và [cài đặt App máy tính](/vi/guide/desktop-app/settings/); xem cách viết tác vụ tại [ràng buộc và biên](/vi/prompts/constraints-and-boundaries/).
-
----
-
-**Trạng thái:** verified
-
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
-
-**Căn cứ xác minh:** Đã đối chiếu với tài liệu hiện hành về sandbox, phê duyệt và an toàn của Codex. Trang này phân biệt ranh giới thực thi cấp hệ điều hành, chính sách phê duyệt, ràng buộc tác vụ và bước con người rà soát, đồng thời giải thích riêng mô hình mạng cục bộ và Cloud.
-
-**Xác minh gần nhất:** 2026-08-26

@@ -7,11 +7,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: "1745f70"
-translation_status: draft
+source_revision: '1745f70'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: 2026-10-25
 ---
 
 Un entorno Cloud define qué instala y ejecuta Codex para un repositorio. No hereda la configuración de tu portátil. Si algo funciona en local pero falla en Cloud, compara primero las versiones de ejecución, las dependencias, las variables y el acceso a la red.
@@ -68,7 +69,7 @@ Estas diferencias se confunden a menudo. Se explican con más detalle en [Secret
 |---|---|
 | Rama o commit inicial | Coincide con la descripción de la tarea |
 | Versiones del entorno de ejecución | Coinciden con CI o las restricciones de producción |
-| Lockfile | Instalación con versiones fijadas |
+| Lockfile | Instalación sin modificar el archivo de bloqueo (`--frozen-lockfile`) |
 | Setup | Repetible, no interactivo y se detiene si falla |
 | Comandos de verificación | Indicados en `AGENTS.md` |
 | Red | Solo se permiten los dominios y métodos necesarios para el Agent |

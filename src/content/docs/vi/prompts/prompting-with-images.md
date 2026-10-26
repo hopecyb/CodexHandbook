@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Đã rà lại cấu trúc, tình huống và lưu ý theo tài liệu chính thức OpenAI về đầu vào hình ảnh và tải tệp; nội dung không còn phụ thuộc nguồn tình huống ngoài chính thức, và không giữ chi tiết giao diện cần đối chiếu từng phiên bản."
+  checkedAt: "2026-07-26"
 title: Prompt với hình ảnh
 description: Khi đưa Codex ảnh chụp màn hình, bản thiết kế hoặc ảnh bảng trắng, hỏi thế nào để dễ nhận kết quả thực thi được.
 locale: vi
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Nhiều tác vụ «xem hình rồi làm» thất bại không phải vì mô hình không thấy—mà vì chỉ đưa hình, **không nói muốn nó nhìn gì trong hình**.
@@ -22,7 +27,7 @@ Trọng tâm của Prompt hình ảnh là giúp Codex lập ba điểm:
 | Tình huống | Vai trò hình ảnh |
 |---|---|
 | Điều tra UI bug | Để Codex thấy vị trí và trạng thái bất thường |
-| Khôi phục thiết kế | Cung cấp layout, phân cấp, khoảng cách, không khí tham chiếu |
+| Triển khai theo thiết kế | Cung cấp layout, phân cấp, khoảng cách, không khí tham chiếu |
 | Giải thích ảnh chụp trong tài liệu | Để nó viết hướng dẫn hoặc tutorial dựa trên giao diện |
 | Sắp xếp bảng trắng / sơ đồ | Chuyển hình viết tay thành mô tả có cấu trúc |
 | So sánh hiện tại với kỳ vọng | Giúp nhận diện khác biệt thay vì đoán yêu cầu |
@@ -33,7 +38,7 @@ Nếu trọng tâm là «ngoại hình, vị trí, trạng thái thị giác», 
 
 Khuyến nghị giữ cấu trúc giống Prompt chữ:
 
-### 1. Danh tính hình ảnh
+### 1. Thông tin về hình ảnh
 
 Nói hình này là gì, đến từ đâu.
 
@@ -98,7 +103,7 @@ Nếu bắt đầu triển khai, ưu tiên giữ cấu trúc và phân cấp kh�
 ### 3. So sánh hiện tại vs kỳ vọng
 
 ```text
-Tôi sẽ tải hai hình: hình 1 là hiệu ứng hiện tại, hình 2 là kỳ vọng.
+Tôi sẽ tải hai hình: hình 1 là giao diện hiện tại, hình 2 là kỳ vọng.
 So sánh khác biệt về layout, phân cấp chữ, khoảng cách và gợi ý tương tác; đưa mức ưu tiên sửa.
 ```
 
@@ -109,8 +114,8 @@ Hình thường thiếu ngữ cảnh chạy, nên các thông tin sau rất hữ
 - Thiết bị hoặc trình duyệt
 - Trạng thái hiện tại có gồm hover / focus / lỗi không
 - Vị trí cuộn trang
-- Đây là «hiệu ứng hiện tại» hay «hiệu ứng mục tiêu»
-- Có khôi phục theo design system sẵn có không
+- Đây là «giao diện hiện tại» hay «giao diện mục tiêu»
+- Có cần tuân theo hệ thống thiết kế hiện có không
 
 Ví dụ câu «Chrome desktop bình thường, chỉ iOS Safari lỗi» thường có giá trị hơn thêm một ảnh chụp.
 
@@ -135,9 +140,9 @@ Hoặc:
 Ví dụ:
 
 ```text
-Hình 1: Hiệu ứng hiện tại desktop
-Hình 2: Hiệu ứng hiện tại mobile
-Hình 3: Hiệu ứng mục tiêu theo bản thiết kế
+Hình 1: Giao diện hiện tại desktop
+Hình 2: Giao diện hiện tại mobile
+Hình 3: Giao diện mục tiêu theo bản thiết kế
 ```
 
 Như vậy dễ hơn để nó nối quan hệ tương ứng.
@@ -185,9 +190,3 @@ Thường rõ hơn một câu «giúp tôi sửa», và dễ tiếp tục hơn v
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Cloud  
-**Cơ sở kiểm chứng:** Đã rà lại cấu trúc, tình huống và lưu ý theo tài liệu chính thức OpenAI về đầu vào hình ảnh và tải tệp; nội dung không còn phụ thuộc nguồn tình huống ngoài chính thức, và không giữ chi tiết giao diện cần đối chiếu từng phiên bản.  
-**Kiểm chứng gần nhất:** 2026-07-26

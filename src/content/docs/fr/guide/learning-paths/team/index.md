@@ -20,8 +20,9 @@ sidebar:
 locale: fr
 source_locale: zh-CN
 source_revision: "3b46738"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Commencez par une tâche limitée dont le résultat peut être vérifié. Pendant deux semaines, recueillez des éléments pour décider s'il vaut la peine d'étendre l'usage. Ici, deux semaines représentent dix jours ouvrés. Si le nombre de tâches est insuffisant, prolongez le pilote ; ne déclarez pas sa réussite simplement parce que le calendrier est terminé.
@@ -56,7 +57,7 @@ Condition de fin : les premiers résultats disposent de revues consultables, et 
 
 ## D6–D8 : extension limitée et exercice de retour arrière
 
-Ajoutez des échantillons ou des types de tâches dans le périmètre approuvé. Ne changez qu'un facteur important à la fois ; n'élargissez pas simultanément les permissions, le modèle et la tâche. Notez les versions de configuration pour pouvoir attribuer les changements.
+Ajoutez des échantillons ou des types de tâches dans le périmètre approuvé. Ne changez qu'un facteur important à la fois ; n'élargissez pas les permissions tout en changeant de modèle et de tâche. Notez les versions de configuration pour pouvoir attribuer les changements.
 
 Avec le [modèle d'incident et de retour arrière](/downloads/two-week-pilot/templates/04-incident.md), entraînez-vous à mettre les tâches en pause, vérifier les processus et files actifs, préserver les preuves, rétablir une version connue comme saine et revérifier. Empêcher de nouvelles exécutions n'annule pas les effets externes déjà produits.
 

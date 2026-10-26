@@ -13,8 +13,9 @@ verification:
 locale: es
 source_locale: zh-CN
 source_revision: "8868140"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 ## Evento verificable y alcance

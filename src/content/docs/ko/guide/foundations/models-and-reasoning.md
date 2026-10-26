@@ -3,18 +3,24 @@ title: 모델과 추론
 description: 모델과 추론 강도를 고를 때 고려할 요소.
 locale: ko
 source_locale: zh-CN
-source_revision: 0cbc9dc
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: '0685b79'
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 현재 OpenAI 모델 문서와 Codex 및 개발자용 인터페이스에서는 모델 선택, 속도와 비용, 능력 차이를 설정 시 고려할 요소로 다룹니다. 이 페이지는 특정 모델이나 고정된 수준에 의존하지 않고 작업의 복잡성, 지연과 비용, 검증 가능성을 비교하는 안정적인 선택 원칙만 유지합니다.
+  checkedAt: '2026-07-26'
 ---
 
 선택 가능한 모델과 「추론 / 사고」 단계는 제품 업데이트에 따라 바뀝니다. 고를 때 저울질하세요.
 
 - **작업 난이도**: 간단한 고쳐 쓰기 vs 다중 파일 아키텍처 결정
 - **지연과 비용**: 추론 강도가 높을수록 보통 더 느리고 비쌈
-- **검증 가능성**: 복잡한 작업은 인수 조건을 명확히 하고 필요에 따라 계획하고 검증하세요.
+- **검증 가능성**: 복잡한 작업은 완료 기준을 명확히 하고 필요에 따라 계획하고 검증하세요.
 
 「모델」「추론 강도」「사고 단계」를 처음 보면 많은 사람이 「높을수록 좋은가?」부터 묻습니다.
 
@@ -44,17 +50,19 @@ sidebar:
 초보자가 모델명을 깊게 파지 않아도, 적어도:
 
 - 작업이 복잡할수록 리듬을 당신이 통제해야 함
-- 모든 작업이 최고로 끌어올릴 가치는 없음
+- 모든 작업에 최고 설정을 쓸 필요는 없음
 
 ## 확신이 없을 때
 
 어떻게 고를지 모르겠다면:
 
-- **작은 수정 / 작은 이해 / 작은 요약**: 기본 또는 가벼운 설정
+- **작은 수정 / 좁은 범위의 이해 / 짧은 요약**: 기본 또는 가벼운 설정
 - **다중 파일 / 아키텍처 / 고위험 작업**: 더 높은 추론 강도를 고려하고, 계획·검증과 함께
 
 더 중요한 것은: 이번 작업이 「조금 더 생각」에 시간과 비용을 들일 가치가 있는지입니다.
 
-이 핸드북은 특정 모델 마케팅 이름에 묶이지 않습니다. 클라이언트 현재 목록과 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 기준으로 하세요.
+이 페이지는 안정적인 선택 원칙을 설명하며 구체적인 모델은 선택 가이드에서 별도로 관리합니다. 클라이언트의 현재 목록과 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 기준으로 하세요.
 
-선택을 구체적으로 기록하는 방법은 [사용량, 시간, 모델 선택](/guide/quality/usage-time-and-model-choice/)을 참고하세요. 현재 중국어로만 제공되는 이 페이지는 구독 한도, API 비용, 대기 시간, 사람의 재작업을 구분합니다.
+구체적인 기록 방법은 [사용량, 시간, 모델 선택](/ko/guide/quality/usage-time-and-model-choice/)을 참고하세요. 구독 한도, API 비용, 대기 시간, 사람의 재작업을 구분합니다.
+
+현재 모델, 제품별 차이, 작업별 추천을 확인하세요: [모델 선택: 작업에 맞는 시작점](/ko/guide/reference/model-selection/).

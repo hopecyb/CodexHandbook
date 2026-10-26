@@ -3,12 +3,17 @@ title: 権限と承認
 description: Codex がいつ操作の承認を求めるかを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: 1beec63
+source_revision: '1beec63'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center の現行 Codex CLI 入門ドキュメントは依然として approval modes を区別し、ファイル読み取り、書き込み、コマンド実行などをリスク層ごとに扱っている。本ページは承認がなぜ存在するか、いつ慎重に承認すべきか、影響範囲をどう判断するかのみを説明し、固定の製品デフォルト値は宣言しない。
+  checkedAt: '2026-07-26'
 ---
 
 Codex は同意なしに高リスク操作を実行すべきではありません。**承認** は人と機械の協業におけるゲートです。
@@ -76,10 +81,3 @@ Codex が任意のファイルを読み、自由にネットワークへ出て�
 公式ポリシーとデフォルト値は変わる可能性があります。[https://developers.openai.com/codex](https://developers.openai.com/codex) で確認してください。
 
 承認の役割は、「やってよいか」を常にあなたが決められるようにすることです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Help Center の現行 Codex CLI 入門ドキュメントは依然として approval modes を区別し、ファイル読み取り、書き込み、コマンド実行などをリスク層ごとに扱っている。本ページは承認がなぜ存在するか、いつ慎重に承認すべきか、影響範囲をどう判断するかのみを説明し、固定の製品デフォルト値は宣言しない。  
-**最終検証：** 2026-07-26

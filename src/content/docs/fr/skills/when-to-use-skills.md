@@ -8,15 +8,15 @@ title: Quand utiliser les Skills
 description: Juger si une tâche mérite un Skill, et la répartition avec commandes slash et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: '5e688f4'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Question fréquente au début : est-ce que ça vaut le coup de faire un Skill ?
 
-Tout transformer en Skill alourdit ; ne rien figer force à répéter les mêmes consignes. Cette page aide à décider quand solidifier un flux.
+Tout transformer en Skill alourdit ; ne rien figer force à répéter les mêmes consignes. Cette page aide à décider quand formaliser un processus.
 
 
 ## Bon candidat pour un Skill
@@ -30,7 +30,7 @@ Tout transformer en Skill alourdit ; ne rien figer force à répéter les mêmes
 
 Si les deux points suivants sont vrais, un Skill est souvent pertinent :
 
-- vous le refererez
+- vous le referez
 - vous voulez la même méthode la prochaine fois
 
 Exemples typiques :

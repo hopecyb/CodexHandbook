@@ -3,14 +3,18 @@ title: Verificar artefactos
 description: Comprueba documentos, páginas y otros artefactos generados.
 locale: es
 source_locale: zh-CN
-source_revision: 7a6a12e
+source_revision: "7a6a12e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica métodos de verificación orientados al entregable final; se han revisado enlaces internos, clasificación de artefactos y orden de comprobación, y el cuerpo no depende de hechos variables de producto.
+  checkedAt: '2026-07-26'
 ---
-
 Aquí «artefacto» es el contenido que entrega finalmente la tarea, por ejemplo:
 
 - Un documento
@@ -36,7 +40,7 @@ Algunos problemas no están en la capa de código, sino en la de presentación f
 Por ejemplo:
 
 - El código de la página corre, pero el layout está mal
-- La estructura del texto es correcta, pero se lee torpe
+- La estructura del texto es correcta, pero resulta poco natural
 - El formato del enlace es correcto, pero al abrirlo está mal
 - La tabla se generó, pero el orden de campos no encaja con el uso
 
@@ -79,7 +83,7 @@ Las capturas sirven para un vistazo rápido, pero muchos problemas solo aparecen
 Puedes exigir:
 
 ```text
-Al terminar, auto-revisa desde la perspectiva del artefacto final y dime qué abriste realmente, qué encontraste y qué aún no verificaste.
+Al terminar, revisa tu trabajo desde la perspectiva del artefacto final y dime qué abriste realmente, qué encontraste y qué aún no verificaste.
 ```
 
 ## Orden de comprobación
@@ -91,10 +95,3 @@ Puedes seguir este orden:
 3. Luego mira problemas pequeños de experiencia
 
 Que se ejecute solo dice que la base no está rota; si se puede entregar aún depende del efecto de uso final.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica métodos de verificación orientados al entregable final; se han revisado enlaces internos, clasificación de artefactos y orden de comprobación, y el cuerpo no depende de hechos variables de producto.  
-**Última verificación:** 2026-07-26

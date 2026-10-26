@@ -3,12 +3,16 @@ title: Recuperación ante fallos
 description: Cuando la tarea se desvía, los tests fallan o se agota el contexto — cómo retroceder con seguridad y continuar.
 locale: es
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de traspaso y reanudación, diagnóstico, reglas de comandos y referencia de errores. Esta página describe el método general de contención y continuación ante fallos; no fija un botón o comando concreto de un cliente.
+  checkedAt: '2026-07-26'
 ---
-
 **Recuperación ante fallos** trata de cómo contener la situación cuando una tarea se desvía o se interrumpe, y luego seguir adelante. Este capítulo ofrece un ciclo repetible **detectar → contener → recuperar → retrospectiva**, combinable con [Deshacer y recuperar](/es/guide/getting-started/undo-and-recover/) y [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/).
 
 ![Ilustración: una torre de bloques medio caída se reconstruye con calma siguiendo una lista, y una flecha de reversión devuelve un bloque a una base estable](/illustrations/failure-recovery.webp)
@@ -83,10 +87,3 @@ En escenarios multi-Agent, ver [Coordinación multi-Agent](/es/cases/workflows/m
 - [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/)
 - [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 - [Referencia de errores](/es/guide/reference/error-reference/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de traspaso y reanudación, diagnóstico, reglas de comandos y referencia de errores. Esta página describe el método general de contención y continuación ante fallos; no fija un botón o comando concreto de un cliente.

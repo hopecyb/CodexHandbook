@@ -31,9 +31,10 @@ next:
   label: Wiederverwendbare Anweisungen speichern
 locale: de
 source_locale: zh-CN
-source_revision: '7189374'
-translation_status: draft
+source_revision: "7189374"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Verdichte einen Artikel zu acht Folien und liefere eine PPTX mit bearbeitbarem Text, Vorschauen und Sprechernotizen. Bewahre Einschränkungen und Widersprüche der Quellen; erfinde keine Zahlen oder Diagramme, nur um Seiten zu füllen.
@@ -91,7 +92,7 @@ Die Referenz verwendet Arial Unicode MS. Ist diese Schrift bei dir nicht vorhand
 
 Öffne deine PPTX in Präsentationssoftware, speichere eine Testkopie, wähle wichtigen Text aus, ändere ihn, speichere und öffne die Datei erneut. Exportiere jede Folie als Vorschau und prüfe chinesische Zeichen, Umbrüche, Überlagerungen, Seitenzahl und Notizen. Acht ganzseitige Bilder sind kein Ersatz für eine bearbeitbare Präsentation.
 
-Die Referenz wurde mit LibreOffice headless importiert und exportiert. In einer temporären PPTX-Kopie wurde der native Titeltext von „eine“ zu „zwei“ geändert und nach dem Export wieder gelesen. Dies ist kein GUI-Klicktest und beweist nicht dasselbe Verhalten in jeder Software.
+Die Referenz wurde mit LibreOffice headless importiert und exportiert. In einer temporären PPTX-Kopie wurde der native Titeltext von „一份“ (eine Zusammenfassung) zu „两份“ (zwei Zusammenfassungen) geändert und nach dem Export wieder gelesen. Dies ist kein GUI-Klicktest und beweist nicht dasselbe Verhalten in jeder Software.
 
 ![Sechste Referenzfolie: gegensätzliche Standardeinstellungen zweier Quellen und eine ausdrücklich ungeklärte Schlussfolgerung](/downloads/article-to-slides/previews/slide-06.png)
 

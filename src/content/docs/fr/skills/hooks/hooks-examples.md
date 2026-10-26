@@ -2,16 +2,16 @@
 title: Exemples de configuration de Hooks
 description: Mettre en place un garde-fou PreToolUse testable avec un vrai hooks.json et un script Python de la bibliothèque standard.
 legacyVerification:
-  status: "verified"
-  products: "Environnements utilisant un hôte Codex local ; gestion de la confiance avec `/hooks` dans Codex CLI"
-  checkedAt: "2026-08-25"
+  status: verified
+  products: Environnements utilisant un hôte Codex local ; gestion de la confiance avec `/hooks` dans Codex CLI
+  checkedAt: '2026-08-25'
 locale: fr
 source_locale: zh-CN
-source_revision: 06e9fa2
-translation_status: draft
+source_revision: "06e9fa2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
-
 Ce chapitre ne contient plus les anciens noms d’événements et champs de configuration donnés à titre indicatif. L’exemple suit la structure officielle actuelle de `hooks.json` et comprend des tests exécutables.
 
 Les fichiers complets se trouvent dans [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).

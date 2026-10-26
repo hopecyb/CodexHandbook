@@ -12,9 +12,10 @@ verification:
     href: https://www.anthropic.com/engineering/multi-agent-research-system
 locale: ja
 source_locale: zh-CN
-source_revision: f24f2f5
-translation_status: draft
+source_revision: "f24f2f5"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 ## 確認できる出来事と範囲
@@ -31,7 +32,7 @@ translated_at: '2026-09-20'
 
 以下は本サイトの教育上の判断であり、業界での普及率や効果を測定したものではない。
 
-独立して実行できる部分課題がある場合に限って並列化を検討する。依存関係が強い、同じファイルを編集する、個別に成果を検証できないといった課題では、まず一つの Agent を使う。ベンダーが自社の評価で示した利益を、本サイトの演習の成功率としてそのまま扱うことはできない。
+独立して実行できる部分課題がある場合に限って並列化を検討する。依存関係が強い、同じファイルを編集する、個別に成果を検証できないといった課題では、まず一つの Agent を使う。ベンダーが自社の評価で示した効果を、本サイトの演習の成功率としてそのまま扱うことはできない。
 
 ## 実践演習
 

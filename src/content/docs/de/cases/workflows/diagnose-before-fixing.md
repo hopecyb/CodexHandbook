@@ -3,10 +3,16 @@ title: Zuerst diagnostizieren, dann fixen
 description: "Produktionsprobleme und hartnäckige Bugs — zuerst eine Beweiskette aufbauen, dann eingreifen."
 locale: de
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: "18193b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Planung, Qualität und Fehlerwiederherstellung. Diese Seite bestätigt nur die stabile Diagnosemethode „zuerst Beweiskette, dann minimale Korrektur“
+    und hängt nicht an einer konkreten Produkt-Client-Implementierung.
+  checkedAt: '2026-07-26'
 ---
 
 Codex sofort zum Bugfixen zu bringen, führt oft zu hoher Nacharbeit. Der Diagnose-Workflow betont: **Symptom → Hypothese → Evidenz → minimale Korrektur**.
@@ -69,10 +75,3 @@ Diagnose ist eine vertiefte **Erkunden**-Phase; in der Planungsphase muss auch k
 - Code ändern, bevor reproduziert
 - Ein Patch für drei Probleme zugleich → nicht reviewbar
 - Temporäre Logs löschen, ohne dauerhafte Tests nachzuziehen
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Planung, Qualität und Fehlerwiederherstellung. Diese Seite bestätigt nur die stabile Diagnosemethode „zuerst Beweiskette, dann minimale Korrektur“ und hängt nicht an einer konkreten Produkt-Client-Implementierung.  
-**Zuletzt geprüft:** 2026-07-26

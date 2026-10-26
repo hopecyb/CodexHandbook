@@ -1,17 +1,22 @@
 ---
 title: スラッシュコマンドとショートカット入口
-description: / コマンドと $ Skill 呼び出し——学習向け早見。完全パラメータ手册の代替ではない。
+description: / コマンドと $ Skill 呼び出し——学習向け早見。引数を網羅したマニュアルの代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: a34c90f
+source_revision: 'a34c90f'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 現在の公式 Desktop App Slash commands と Developer commands を照合し、作業面ごとにコマンドの集合が異なることを明確にしました。掲載したコマンドは現在の公式一覧に基づきますが、最終的な利用可否は composer の補完を基準にしてください。
+  checkedAt: '2026-08-26'
 ---
 
-初見のスラッシュコマンドは、覚えるべき呪文のように感じられます。能動的に点名できるショートカット入口と考えると分かりやすいです。
+初見のスラッシュコマンドは、覚えるべき呪文のように感じられます。名前を指定して呼び出せるショートカット入口と考えると分かりやすいです。
 
 固定モードや内蔵フローへ素早く入る用途が多いです。スラッシュコマンド（`/command`）と [Skill](/ja/skills/overview/) の `$name` 呼び出しは関連しますが同一ではありません。具体的な一覧は**製品とアクセス権限によって変わり**、デスクトップ App、CLI、IDE、ChatGPT Web でも異なります。使用前は、現在の composer の `/` 補完と公式ドキュメントを基準にしてください。
 
@@ -26,7 +31,7 @@ reviewed_at: 2026-08-26
 ## 三者の直接区別
 
 - `/コマンド`：チャットで能動的にショートカット入口を選ぶ
-- `$skill`：あなたまたはモデルが Skill を点名
+- `$skill`：あなたまたはモデルが Skill を名前で指定する
 - 自然言語：要件を直接伝え、モデルに判断させる
 
 既知フローへ素早く入りたいなら `/コマンド` が直接的です。
@@ -110,13 +115,3 @@ ChatGPT Web には独自の composer コマンドメニューがあります。�
 スラッシュコマンドはチャット内ショートカット入口。現在環境の実際の提供を見る方が、コマンド名の暗記より有用です。
 
 CLI サブコマンドは [CLI 対話モード](/ja/guide/cli/interactive-mode/) と [非対話モード](/ja/guide/cli/non-interactive-mode/)。完全パラメータ表は [CLI コマンドリファレンス](/ja/guide/reference/commands/)。
-
----
-
-**状態：** verified
-
-**対象製品：** App / CLI / IDE
-
-**検証根拠：** 現在の公式 Desktop App Slash commands と Developer commands を照合し、作業面ごとにコマンドの集合が異なることを明確にしました。掲載したコマンドは現在の公式一覧に基づきますが、最終的な利用可否は composer の補完を基準にしてください。
-
-**最終検証：** 2026-08-26

@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 5939a9d
+source_revision: "5939a9d"
+reviewed_at: 2026-10-26
 ---
 
 Un agent utilise des **outils** pour lire des fichiers, exécuter des commandes, effectuer des recherches sur le Web ou ouvrir un navigateur. Bien choisir l'outil et préciser ses limites aide à éviter un accès réseau imprévu ou des modifications excessives.

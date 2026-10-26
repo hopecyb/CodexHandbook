@@ -3,15 +3,20 @@ title: 承認とサンドボックス
 description: CLI における shell、書き込み、ネットワーク要求の承認方針と、サンドボックスによる Agent 制限。
 locale: ja
 source_locale: zh-CN
-source_revision: 35afd39
+source_revision: "35afd39"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: OpenAI Help Center の現行 CLI 入門資料は、approval modes で読み書き、コマンド実行、サンドボックス / ネットワーク境界を区別している。本ページは承認とサンドボックスの概念、対話と無人実行のリスク差に焦点を当て、具体的なボタン文言やモード名を固定事実としては書いていない。
+  checkedAt: '2026-07-26'
 ---
 
-CLI では Agent が **ファイルの読み書き、shell 実行、場合によってはネットワーク接続** ができます。承認とサンドボックスは、あなたと自動化のあいだの安全弁です。設定が不適切だと、対話では承認が多すぎるか、CI の無人実行でリスクが制御不能になります。
+CLI の Agent は **ファイルの読み書き、shell の実行、場合によってはネットワーク接続** ができます。承認とサンドボックスは、あなたと自動化のあいだの安全弁です。設定が不適切だと、対話では承認が多すぎるか、CI の無人実行でリスクが制御不能になります。
 
 ## 本ページの内容
 
@@ -110,9 +115,3 @@ CLI を学び始めたばかりなら、承認が多い方が安全なことも�
 
 ## 参考ソース
 - OpenAI Codex CLI セキュリティとサンドボックス資料
----
-
-**状態：** verified  
-**対象製品：** CLI  
-**検証根拠：** OpenAI Help Center の現行 CLI 入門資料は、approval modes で読み書き、コマンド実行、サンドボックス / ネットワーク境界を区別している。本ページは承認とサンドボックスの概念、対話と無人実行のリスク差に焦点を当て、具体的なボタン文言やモード名を固定事実としては書いていない。  
-**最終検証：** 2026-07-26

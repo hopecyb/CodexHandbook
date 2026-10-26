@@ -5,15 +5,20 @@ sidebar:
   order: 4
 locale: es
 source_locale: zh-CN
-source_revision: 62fb65d
+source_revision: '62fb65d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: La página de inicio de OpenAI Developers sigue situando Codex como herramienta para entender bases de código, construir funciones, probar y revisar cambios; esta página solo ofrece el orden de inicio y la navegación interna, sin depender de comandos o detalles de interfaz volátiles.
+  checkedAt: '2026-07-26'
 ---
 
 El objetivo es completar la primera Tarea en un **proyecto de práctica seguro**, y aprender a revisar, aceptar, modificar o deshacer.
 
-Por defecto usa la **App de escritorio**. Si prefieres el terminal o el editor, las páginas de instalación siguen aplicando; el ejemplo de la primera Tarea indicará las diferencias.
+Por defecto usa la **App de escritorio**. Si prefieres el terminal o el editor, las páginas de instalación también te sirven; el ejemplo de la primera Tarea indicará las diferencias.
 
 Si lo que más te preocupa es «cómo empezar» y «cómo evitar equivocarte al principio», este capítulo es la entrada más directa.
 
@@ -74,10 +79,3 @@ Puedes seguir este ciclo mínimo:
 6. Aprende a deshacer o corregir
 
 Cuando este ciclo funcione, aprender contenidos más complejos será más fácil.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** La página de inicio de OpenAI Developers sigue situando Codex como herramienta para entender bases de código, construir funciones, probar y revisar cambios; esta página solo ofrece el orden de inicio y la navegación interna, sin depender de comandos o detalles de interfaz volátiles.  
-**Última verificación:** 2026-07-26

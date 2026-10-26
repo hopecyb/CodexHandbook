@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Installation and first use
 description: Learn the project, chat, Codex, and review entry points in the ChatGPT desktop App.
 locale: en
 source_locale: zh-CN
-source_revision: 080436d
+source_revision: '080436d'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -67,11 +71,3 @@ Next, read [Diffs, comments, and review](/en/guide/desktop-app/diffs-comments-an
 
 - [ChatGPT desktop App](https://learn.chatgpt.com/docs/app)
 - [Code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26

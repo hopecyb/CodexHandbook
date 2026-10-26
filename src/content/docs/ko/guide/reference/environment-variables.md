@@ -3,22 +3,27 @@ title: 환경 변수
 description: Codex 관련 환경 변수의 용도, 계층, 보안——설정 참고의 보완 색인입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 58fd37b
+source_revision: '58fd37b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE / Cloud
+  basis: OpenAI Help Center의 현행 설정 문서는 여전히 `~/.codex/.env`, CI/런타임 주입, 플랫폼 Secret의 현대적 표현을 제공합니다. 이 페이지는 “어떤 값이 환경 변수에 맞는지, 무엇을 넣으면 안 되는지, `.env`는 로컬 컨테이너일 뿐”이라는 안정된 원칙에 초점을 두며, 구체 변수 이름 목록을 고정하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 “환경 변수”는 두 극단으로 가기 쉽습니다. 너무 저수준이라고 느끼거나, 모든 설정을 넣을 수 있다고 생각하는 것입니다. 직접 말하면, 환경 변수는 런타임에 값을 프로그램에 넘기는 방법이며, 민감 정보와 스위치에 특히 맞습니다.
 
-환경 변수는 **키 주입, 스위치 덮어쓰기, CI 적응**에 자주 쓰이며, 민감 값을 설정 파일이나 Git에 쓰지 않게 합니다. 이 페이지는 개념 색인입니다. 구체 변수 이름은 [공식 문서](https://developers.openai.com/codex)와 `codex --help`를 기준으로 합니다.
+환경 변수는 **키 주입, 스위치 덮어쓰기, CI 환경 대응**에 자주 쓰이며, 민감 값을 설정 파일이나 Git에 쓰지 않게 합니다. 이 페이지는 개념 색인입니다. 구체 변수 이름은 [공식 문서](https://developers.openai.com/codex)와 `codex --help`를 기준으로 합니다.
 
 ## 이 페이지 내용
 
 - 어떤 것을 config 파일 대신 환경 변수로 둘지
-- 사용자급, 프로젝트급, Cloud Secrets, CI의 역할 분담
+- 사용자 수준, 프로젝트 수준, Cloud Secrets, CI의 역할 분담
 - 흔한 이름 짓기와 유출 위험
 
 ## 판단 방식
@@ -69,12 +74,12 @@ sidebar:
 
 - `.env`가 편하다고 안전한 것은 아님
 - `.env.example`은 예시 이름을 두고, 실제 키는 두지 않음
-- 배포나 CI에서는 보통 Secret 관리자를 탐
+- 배포나 CI에서는 보통 Secret 관리자를 사용함
 
 ## 환경 변수만으로 부족한 내용
 
 - 코딩 규범, 디렉터리 구조 → `AGENTS.md`
-- 팀이 합의한 모델 기본값 → 프로젝트 설정(키가 아닌 부분)
+- 팀이 합의한 모델 기본값 → 프로젝트 설정(민감하지 않은 부분)
 - 복잡한 allowlist → [규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)
 
 ## 흔한 오해
@@ -111,7 +116,7 @@ sidebar:
     ↓ 덮어씀
 Shell / CI가 주입한 환경 변수
     ↓ 설정 파일과 병합(구체 규칙은 공식 기준)
-사용자급 / 프로젝트급 config 파일
+사용자 수준 / 프로젝트 수준 config 파일
 ```
 
 같은 키가 여러 곳에 있으면 **공식 문서의 우선순위**를 따릅니다. 장애 분석 때는 「유효 설정」을 출력하거나 로그를 보세요.
@@ -131,7 +136,7 @@ Shell / CI가 주입한 환경 변수
 
 | 시나리오 | 더 안전한 방법 |
 |---|---|
-| 본기에서 서드파티 API 디버깅 | 로컬 환경 변수 또는 `.env`, 커밋 무시 |
+| 로컬 컴퓨터에서 서드파티 API 디버깅 | 로컬 환경 변수 또는 `.env`, 커밋 대상에서 제외 |
 | 팀이 공유하는 예시 설정 | `.env.example` 커밋, 실제 값은 커밋하지 않음 |
 | GitHub Actions / CI | 플랫폼 Secret |
 | Cloud 작업이 사설 서비스를 호출 | Cloud Secret |
@@ -155,7 +160,7 @@ MCP 프로세스는 종종 부모 프로세스 환경을 상속합니다. 설정
 
 ### Cloud
 
-저장소급 Secrets를 Cloud 콘솔에서 구성하고, 이름이 작업 안 참조과 일치하게 하세요.
+저장소 수준 Secrets를 Cloud 콘솔에서 구성하고, 이름이 작업 안 참조와 일치하게 하세요.
 
 환경 변수는 바뀌고, 민감하며, 런타임에만 필요한 값을 두는 데 맞습니다. 장기 규칙이나 설명을 담는 용도가 아닙니다.
 
@@ -174,9 +179,3 @@ MCP 프로세스는 종종 부모 프로세스 환경을 상속합니다. 설정
 
 ## 참고 출처
 - OpenAI Codex configuration / environment 문서
----
-
-**상태：** verified  
-**적용 제품：** CLI / App / IDE / Cloud  
-**검증 근거：** OpenAI Help Center의 현행 설정 문서는 여전히 `~/.codex/.env`, CI/런타임 주입, 플랫폼 Secret의 현대적 표현을 제공합니다. 이 페이지는 “어떤 값이 환경 변수에 맞는지, 무엇을 넣으면 안 되는지, `.env`는 로컬 컨테이너일 뿐”이라는 안정된 원칙에 초점을 두며, 구체 변수 이름 목록을 고정하지 않습니다.  
-**최근 검증：** 2026-07-26

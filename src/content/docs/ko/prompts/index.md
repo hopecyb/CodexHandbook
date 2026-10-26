@@ -4,12 +4,13 @@ next:
   link: /ko/prompts/basics/
   label: 프롬프트 기본
 title: 프롬프트
-description: 작업, 배경, 입력, 제약, 수락 기준을 명확히 전달하는 방법을 배웁니다.
+description: 작업, 배경, 입력, 제약, 완료 기준을 명확히 전달하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 프롬프트 장은 Codex가 목표, 맥락, 범위와 완료 기준을 이해하도록 작업을 설명하는 방법을 다룹니다. 실행 중 불확실성을 드러내고 필요한 확인을 요청하며 검토할 수 있는 결과를 받는 방법도 포함합니다.

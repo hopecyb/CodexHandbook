@@ -12,9 +12,10 @@ verification:
       href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
 locale: ko
 source_locale: zh-CN
-source_revision: d668433
-translation_status: draft
+source_revision: 'd668433'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## 확인 가능한 사건과 범위
 

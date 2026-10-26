@@ -8,8 +8,9 @@ title: Verify artifacts
 description: Check generated documents, pages, and other deliverables.
 locale: en
 source_locale: zh-CN
-source_revision: 7a6a12e
-translation_status: draft
+source_revision: '7a6a12e'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 30

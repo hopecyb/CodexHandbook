@@ -1,10 +1,12 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Đã đối chiếu với tài liệu chính thức hiện tại về Agent con của Codex. Trang này nêu rõ việc tách biệt ngữ cảnh, kế thừa quyền, nơi xem hoạt động, chi phí token và xung đột khi ghi song song; Agent chính vẫn chịu trách nhiệm tổng hợp và kiểm chứng cuối cùng.", "checkedAt": "2026-08-26"}
 title: Agent con
 description: Giao các tác vụ con có ranh giới rõ ràng cho ngữ cảnh độc lập, để Agent chính tổng hợp bằng chứng, xử lý xung đột và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: a3f2be5
-translation_status: draft
+source_revision: "a3f2be5"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 30
@@ -12,7 +14,7 @@ sidebar:
 
 **Agent con (Subagent)** là đơn vị làm việc độc lập do Agent chính khởi chạy để xử lý một vấn đề con cụ thể. Mỗi Agent con có ngữ cảnh riêng và gửi lại kết luận cùng bằng chứng cho luồng chính khi hoàn thành. Agent chính vẫn chịu trách nhiệm về các quyết định tổng thể và nghiệm thu cuối cùng.
 
-![Kiến trúc điều phối Agent con trong Codex: Agent chính phân công tác vụ con có ranh giới rõ ràng, Agent con trả về bằng chứng, Agent chính tổng hợp và kiểm tra](/diagrams/subagent-orchestration-zh-cn.svg)
+![Kiến trúc điều phối Agent con trong Codex: Agent chính phân công tác vụ con có ranh giới rõ ràng, Agent con trả về bằng chứng, Agent chính tổng hợp và kiểm tra](/diagrams/subagent-orchestration-vi.svg)
 
 ## Trước hết, hiểu ba lớp quan hệ
 

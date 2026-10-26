@@ -1,19 +1,24 @@
 ---
-title: Xử lý sự không chắc chắn
-description: Khi thiếu thông tin thì yêu cầu hỏi, đừng bịa.
-locale: vi
-source_locale: zh-CN
-source_revision: 839ce22
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Xử lý sự không chắc chắn"
+description: "Khi thiếu thông tin thì yêu cầu hỏi, đừng bịa."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "839ce22"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 50
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả nguyên tắc hỏi và chỉnh hướng khi thiếu thông tin; khái niệm, câu Prompt và thứ tự xử lý đã được rà lại, và phần thân không phụ thuộc thông tin sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Khi thông tin chưa đủ, hãy xác nhận trước rồi mới tiếp tục.
 
-Một trong những tình huống khó chịu nhất khi dùng Codex là nó lấp chỗ trống bằng câu trả lời trông hợp lý.  
+Một trong những tình huống khó chịu nhất khi dùng Codex là nó lấp chỗ trống bằng câu trả lời trông hợp lý.
 Một khi tiền đề sai, các bước sau cũng lệch theo.
 
 ## “Không chắc chắn” nghĩa là gì
@@ -40,7 +45,7 @@ Nếu một kết luận thỏa bất kỳ điều nào sau đây, không nên �
 
 - Trong tệp hiện tại không tìm thấy bằng chứng
 - Bạn chưa cung cấp rõ quy tắc nghiệp vụ đó
-- Cần sự kiện bên ngoài nhưng chưa xác minh nguồn
+- Cần thông tin thực tế từ bên ngoài nhưng chưa xác minh nguồn
 - Đoán sai sẽ ảnh hưởng nhiều bước thực thi sau
 
 ## Hiểu lầm thường gặp
@@ -89,10 +94,3 @@ Nếu có nhiều cách hiểu khả dĩ, hãy liệt kê trước những đi�
 ```
 
 Tình huống phiền hơn là lấy phỏng đoán làm sự thật rồi đẩy tiếp.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ mô tả nguyên tắc hỏi và chỉnh hướng khi thiếu thông tin; khái niệm, câu Prompt và thứ tự xử lý đã được rà lại, và phần thân không phụ thuộc sự kiện sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

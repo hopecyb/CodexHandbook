@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite behandelt nur allgemeine Prompt-Methoden; interne Links wurden geprüft, und der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Prompt-Grundlagen
 description: Die grundlegenden Bausteine eines guten Prompts.
 locale: de
 source_locale: zh-CN
-source_revision: eb86b2a
+source_revision: "eb86b2a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Wenn du mit Prompts anfängst, fällt der Fokus leicht auf „klingt die Formulierung fortgeschritten?“.  
@@ -51,7 +56,8 @@ Wenn das unklar bleibt, retten auch elegante Sätze nichts.
 
 ### 1. Je länger der Prompt, desto besser
 
-Relevant zählt.  
+Entscheidend ist die Relevanz.
+
 Lange, irrelevante Hintergrundtexte verwässern die wirklich wichtigen Grenzen.
 
 ### 2. Wenn das Ziel da ist, kann der Rest wegfallen
@@ -73,7 +79,7 @@ Wenn du nicht alles auf einmal lernen willst, starte mit diesen 4 Sätzen:
 
 ```text
 Ziel: Was sollst du tun
-Scope: Was darfst du nur ändern
+Umfang: Welche Bereiche darfst du ändern
 Abnahme: Wann gilt es als fertig
 Bei Unsicherheit: zuerst fragen, nicht raten
 ```
@@ -100,10 +106,3 @@ Für die meisten Einsteiger ist der Start mit der **empfohlenen Version** meist 
 Der Kern eines guten Prompts: weniger Raten, weniger Abschweifen, weniger Grenzverletzung.
 
 Beispiele: [Erste Aufgabe ausführen](/de/cases/first-task/) und [Aufgabenstruktur](/de/prompts/task-anatomy/).
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite behandelt nur allgemeine Prompt-Methoden; interne Links wurden geprüft, und der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

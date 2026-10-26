@@ -3,15 +3,20 @@ title: Plugin과 MCP 위험
 description: 확장이 무엇에 접근할 수 있는지, 팀이 어떻게 승인·모니터링하는지——Skills, Plugin, MCP의 통합 위험 관점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: bf027ad
+source_revision: 'bf027ad'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / App / Cloud
+  basis: OpenAI Help Center의 현행 플러그인 문서는 app/plugin 능력이 역할 접근, 동작 통제, 확인 요구, 도메인/원천 경계, 하위 원천 시스템 권한에 함께 묶인다고 강조합니다. 이 페이지는 그 원칙을 Plugin과 MCP의 통합 위험 관점으로 매핑하고, 읽기 전용 우선·버전 고정·owner 명확·승인 목록을 주장합니다.
+  checkedAt: '2026-07-26'
 ---
 
-**Plugin**과 **MCP 서버**는 Codex를 외부 시스템에 연결합니다. 이슈, 데이터베이스, 내부 API가 여기에 해당합니다. 능력이 클수록 [위협 모델](/ko/guide/team-enterprise/security/threat-model/)에서의 유출·권한 초과면이 커집니다. 이 장은 [MCP 개요](/ko/skills/mcp/mcp-overview/), [Plugins 개요](/ko/skills/plugins/plugins-overview/)와 함께 읽으세요.
+**Plugin**과 **MCP 서버**는 Codex를 외부 시스템에 연결합니다. 이슈, 데이터베이스, 내부 API가 여기에 해당합니다. 능력이 클수록 [위협 모델](/ko/guide/team-enterprise/security/threat-model/)에서의 유출·권한 초과 위험이 커집니다. 이 장은 [MCP 개요](/ko/skills/mcp/mcp-overview/), [Plugins 개요](/ko/skills/plugins/plugins-overview/)와 함께 읽으세요.
 
 이런 단어를 처음 볼 때 정의를 급히 외울 필요는 없습니다. 먼저 이것만 잡으세요. Codex를 외부 시스템에 연결하면 능력도 커지고, 위험도 함께 커집니다.
 
@@ -34,14 +39,14 @@ sidebar:
 |---|---|---|
 | 데이터 읽기 | MCP가 고객 DB를 읽음 | 읽기 전용 계정, 행 수준 권한 |
 | 데이터 쓰기 | 이슈 자동 종료, 설정 변경 | 사람 승인, 이중 확인 |
-| 네트워크 | 임의 외부 연결 | 출구 allowlist |
-| 자격 증명 | OAuth token 디스크 저장 | 키 호스팅, 단기 token |
+| 네트워크 | 임의 외부 연결 | 외부 연결 allowlist |
+| 자격 증명 | OAuth token 디스크 저장 | 키 관리, 단기 token |
 | 공급망 | 서드파티 server 업데이트 오염 | 버전 고정, hash 잠금 |
 
 ## 팀 승인 흐름(권장)
 
 ```text
-신청(용도、데이터 등급、권한)→ 보안/아키텍처 review
+신청(용도, 데이터 등급, 권한)→ 보안/아키텍처 review
     → 「승인 목록」저장소 또는 내부 디렉터리에 진입
     → 버전 번호 고정 + 담당자
     → 분기별 재검토 또는 major 업그레이드 시 재검토
@@ -54,7 +59,7 @@ sidebar:
 1. **기본 거부**：목록에 없는 원격 MCP 설치
 2. **로컬 MCP**도 디스크 전체를 읽을 수 있음——전용 OS 사용자 또는 컨테이너 사용
 3. **로그**：tool 이름과 파라미터 요약 기록(마스킹), [Hook 감사](/ko/skills/hooks/hooks-examples/) 참고
-4. **Skill과 MCP 역할**：Skill은 흐름을 설명하고, MCP는 외부 연결을 실행——둘의 권한은 합집합이므로 가장 엄격한 정책을 취함
+4. **Skill과 MCP 역할**：Skill은 흐름을 설명하고, MCP는 외부 연결을 실행——둘의 권한은 합집합이므로 가장 엄격한 정책을 적용함
 
 ## 흔한 실수
 
@@ -97,9 +102,3 @@ sidebar:
 
 ## 참고 출처
 - [MCP 디버깅](/ko/skills/mcp/debugging-mcp/)
----
-
-**상태：** verified  
-**적용 제품：** CLI / App / Cloud  
-**검증 근거：** OpenAI Help Center의 현행 플러그인 문서는 app/plugin 능력이 역할 접근, 동작 통제, 확인 요구, 도메인/원천 경계, 하위 원천 시스템 권한에 함께 묶인다고 강조합니다. 이 페이지는 그 원칙을 Plugin과 MCP의 통합 위험 관점으로 매핑하고, 읽기 전용 우선·버전 고정·owner 명확·승인 목록을 주장합니다.  
-**최근 검증：** 2026-07-26

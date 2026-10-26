@@ -1,15 +1,16 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "ローカル Codex ホストを使用する環境。CLI は信頼管理用の `/hooks` を提供"
+  status: verified
+  products: ローカル Codex ホストを使用する環境。CLI は信頼管理用の `/hooks` を提供
   checkedAt: "2026-08-25"
 title: Hooks の概要
 description: Hook の設定の検出、信頼審査、ハンドラー、安全上の境界を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ac7889b
-translation_status: draft
+source_revision: "ac7889b"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Hooks を使うと、Codex の Agent ループ中にコマンドスクリプトや、接続済み MCP サーバーのツールを実行できます。代表的な用途は、プロンプト内の秘密情報の検査、ツール呼び出しの制御、監査ログ、セッションの要約、終了前の検証です。

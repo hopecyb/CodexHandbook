@@ -1,14 +1,19 @@
 ---
 title: 참고 자료
-description: 용어, 명령, 설정, 권한 매트릭스, FAQ, 장애 분석 입구입니다.
+description: 용어, 명령, 설정, 권한 매트릭스, FAQ, 문제 해결 안내입니다.
 sidebar:
   order: 60
 locale: ko
 source_locale: zh-CN
-source_revision: 0c9c971
+source_revision: 'd45e640'
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: 2026-10-25
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 참고 자료 구역의 용도와 접근 경로만 설명합니다. 사이트 내 링크와 장 그룹을 재확인했으며, 본문은 버전에 따라 바뀌는 구체 기본값을 단정하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 짧고, 정확하고, 검색 가능하게. 이 구역은 주로 빠른 조회와 색인이며, 깊은 설명은 각 특집 장에 둡니다.
@@ -19,7 +24,7 @@ reviewed_at: 2026-08-26
 
 여기에는 주로 세 종류가 있습니다.
 
-- **개념 먼저**：용어, FAQ, 기능 대조
+- **개념 먼저**：용어, FAQ, 기능 비교
 - **구체 규칙 조회**：명령, 설정, 권한, 환경 변수
 - **문제 날 때 조회**：오류 안내, 장애 분석, 공식 리소스
 
@@ -27,9 +32,10 @@ reviewed_at: 2026-08-26
 
 ## 학습용 색인
 
+- [모델 선택: 작업에 맞는 시작점](/ko/guide/reference/model-selection/)
 - [용어집](/ko/guide/reference/glossary/)
 - [자주 묻는 질문](/ko/guide/reference/faq/)
-- [기능 대조](/ko/guide/reference/feature-comparison/)
+- [기능 비교](/ko/guide/reference/feature-comparison/)
 - [슬래시 명령 빠른 조회](/ko/guide/reference/slash-commands/)
 
 ## 기술 빠른 조회
@@ -46,15 +52,8 @@ reviewed_at: 2026-08-26
 - [장애 분석 색인](/ko/guide/reference/troubleshooting/)
 - [공식 리소스](/ko/guide/reference/official-resources/)
 
-:::note[버전 민감]
+:::note[버전에 따라 변경될 수 있음]
 명령, 설정 키, 기본 권한은 제품 업데이트에 따라 바뀝니다. 각 페이지에 검증일이 있으니, 쓰기 전에 공식 문서를 확인하세요.
 :::
 
 참고 자료 구역은 메인 튜토리얼이 아닙니다. 용어, 설정, 명령, 장애 분석이 필요할 때 돌아오면 됩니다.
-
----
-
-**상태：** verified  
-**적용 제품：** App / CLI / IDE / Cloud  
-**검증 근거：** 이 페이지는 참고 자료 구역의 용도와 입구만 설명합니다. 사이트 내 링크와 장 그룹을 재확인했으며, 본문은 버전에 따라 바뀌는 구체 기본값을 단정하지 않습니다.  
-**최근 검증：** 2026-07-26

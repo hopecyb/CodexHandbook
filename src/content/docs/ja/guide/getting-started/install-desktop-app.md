@@ -3,12 +3,17 @@ title: デスクトップ App をインストールする
 description: ChatGPT デスクトップ App をインストールし、その中で Codex ワークスペースを開きます。
 locale: ja
 source_locale: zh-CN
-source_revision: 974842f
+source_revision: '974842f'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App
+  basis: 現在の公式 App クイックスタートでは macOS、Windows、Linux のダウンロードが提供され、ログイン後にチャット、プロジェクト、フォルダを選択するよう説明されています。このページでは、変わりやすいボタンの座標やインストーラー名を固定していません。
+  checkedAt: '2026-08-26'
 ---
 
 このハンドブックでいう「デスクトップ App」は、現在の **ChatGPT デスクトップ App 内にある Codex ワークスペース**を指します。公式には macOS、Windows、Linux 版が提供されています。
@@ -18,7 +23,7 @@ reviewed_at: 2026-08-26
 1. [ChatGPT デスクトップ App の公式説明](https://learn.chatgpt.com/docs/app)を開く。
 2. 公式の入口から、OS に合うインストーラーをダウンロードする。
 3. ChatGPT をインストールして開き、ChatGPT アカウントまたは利用可能な別の方法でログインする。
-4. 新しいチャット、プロジェクト、または練習用フォルダを開く。
+4. 新しいチャットやプロジェクトを作成するか、練習用フォルダを開く。
 5. Codex に入り、新しいタスクを作成して、得たい結果を説明する。
 
 検索結果に表示されるサードパーティのダウンロードサイトからインストーラーを入手しないでください。会社の端末が管理者によって一括管理されている場合は、組織のソフトウェア配布と更新ポリシーに従ってください。
@@ -54,13 +59,3 @@ Secret を含まない練習用ディレクトリを準備し、次を確認し�
 デスクトップ App は頻繁に更新されます。「ログインできる、作業場所を選べる、タスクを開始できる、結果をレビューできる」を成功基準にし、特定のボタン位置に依存しないでください。
 
 詳しい画面は[インストールとインターフェース](/ja/guide/desktop-app/installation-and-interface/)を、問題がある場合は[デスクトップ App のトラブルシューティング](/ja/guide/desktop-app/troubleshooting/)を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**検証根拠：** 現在の公式 App クイックスタートでは macOS、Windows、Linux のダウンロードが提供され、ログイン後にチャット、プロジェクト、フォルダを選択するよう説明されています。このページでは、変わりやすいボタンの座標やインストーラー名を固定していません。
-
-**最終検証：** 2026-08-26

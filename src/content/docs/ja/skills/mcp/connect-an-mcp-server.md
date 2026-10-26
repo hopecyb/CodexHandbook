@@ -3,9 +3,14 @@ title: MCP サーバーに接続する
 description: CLI または config.toml で最初の MCP サーバーを設定・認証・検証します。
 locale: ja
 source_locale: zh-CN
-source_revision: 0675d33
-translation_status: draft
+source_revision: "0675d33"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT デスクトップ App / Codex CLI / IDE
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 この章では、現在の公式インターフェースを使い、**サーバーを追加 → 設定を確認 → セッション内でツールを確認 → 読み取り専用の呼び出しを一度行う**という最小の一連の操作を完了します。

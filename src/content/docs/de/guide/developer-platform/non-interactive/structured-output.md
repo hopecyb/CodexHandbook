@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API"
+  basis: "In der aktuellen Modell- und Vergleichsdokumentation der OpenAI API ist die Funktion `Structured outputs` weiterhin aufgeführt. Diese Seite beschränkt sich auf die allgemeine Praxis, eine stabile Ausgabeschnittstelle für nicht interaktive Aufgaben zu gestalten. JSON-Schema, Validierung und Fallback-Strategie der Beispiele sind Engineering-Muster."
+  checkedAt: "2026-07-26"
 title: Strukturierte Ausgabe
 description: Lass exec maschinenlesbare Ergebnisse für nachgelagerte Schritte, Dashboards und Gates erzeugen.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: "e80b5d7"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Bei einer ersten Automatisierung lassen viele Personen Codex einen plausibel klingenden Text ausgeben. Menschen können ihn lesen, Skripte jedoch nur schwer zuverlässig verarbeiten.
@@ -92,7 +97,7 @@ Bei umfangreichen Ausgaben kannst du ein Feld für einen Dateipfad verlangen, de
 
 ## Entscheidungshilfe
 
-Wenn ein nachgelagertes Programm das Ergebnis weiterverarbeitet, sollte es nach Möglichkeit strukturiert sein.  
+Wenn ein nachgelagertes Programm das Ergebnis weiterverarbeitet, sollte es nach Möglichkeit strukturiert sein.
 Wenn Menschen das Ergebnis hauptsächlich lesen und diskutieren, ist Freitext häufig natürlicher.
 
 Sobald das Ergebnis an ein weiteres Programm übergeben wird, sollte Codex stabil die vereinbarten Felder liefern.
@@ -123,9 +128,3 @@ Siehe [SDK-Überblick](/de/guide/developer-platform/sdk-overview/).
 
 ## Quellen
 - Allgemeine Praxis für OpenAI Structured Outputs
----
-
-**Status:** verified  
-**Unterstützte Produkte:** CLI / API  
-**Prüfgrundlage:** In der aktuellen Modell- und Vergleichsdokumentation der OpenAI API ist die Funktion `Structured outputs` weiterhin aufgeführt. Diese Seite beschränkt sich auf die allgemeine Praxis, eine stabile Ausgabeschnittstelle für nicht interaktive Aufgaben zu gestalten. JSON-Schema, Validierung und Fallback-Strategie der Beispiele sind Engineering-Muster.  
-**Zuletzt geprüft:** 2026-07-26

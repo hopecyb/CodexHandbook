@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Mit den aktuellen offiziellen Tabellen für Slash commands in der Desktop-App und Developer commands abgeglichen. Die Seite stellt ausdrücklich klar, dass sich die Befehlssätze der Arbeitsoberflächen unterscheiden. Alle aufgeführten Befehle stammen aus der aktuellen offiziellen Tabelle; die endgültige Verfügbarkeit richtet sich weiterhin nach der Autovervollständigung im Composer."
+  checkedAt: "2026-08-26"
 title: Slash-Befehle und Schnelleinstiege
 description: Kurzübersicht zu /-Befehlen und $-Skill-Aufrufen zum Lernen, nicht als vollständiges Parameterhandbuch.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: a34c90f
+source_revision: "a34c90f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Beim ersten Kontakt wirken Slash-Befehle leicht wie eine Liste auswendig zu lernender Fachbegriffe. Einfacher ist es, sie als ausdrücklich aufrufbare Schnelleinstiege zu betrachten.
 
-Sie öffnen normalerweise schnell einen bestimmten Modus oder integrierten Ablauf. Slash-Befehle (`/command`) und der Aufruf eines [Skills](/de/skills/overview/) mit `$name` hängen zusammen, sind aber nicht identisch. Die konkrete Liste **ändert sich je nach Produkt und Zugriffsrechten**, und Desktop-App, CLI, IDE sowie ChatGPT Web bieten unterschiedliche Mengen. Maßgeblich sind die aktuelle Autovervollständigung nach `/` im Composer und die offizielle Dokumentation.
+Sie öffnen normalerweise schnell einen bestimmten Modus oder integrierten Ablauf. Slash-Befehle (`/command`) und der Aufruf eines [Skills](/de/skills/overview/) mit `$name` hängen zusammen, sind aber nicht identisch. Die konkrete Liste **ändert sich je nach Produkt und Zugriffsrechten**, und Desktop-App, CLI, IDE sowie ChatGPT Web bieten unterschiedliche Befehlssätze. Maßgeblich sind die aktuelle Autovervollständigung nach `/` im Composer und die offizielle Dokumentation.
 
 ## Begriffe unterscheiden
 
@@ -114,13 +119,3 @@ So wird die Aufgabenteilung deutlich: Slash-Befehle sind Schnelleinstiege, Skill
 Slash-Befehle sind Schnelleinstiege im Chat. Es ist hilfreicher, die tatsächlich verfügbaren Einträge der aktuellen Umgebung zu prüfen, als Namen auswendig zu lernen.
 
 CLI-Unterbefehle behandeln [Interaktiver CLI-Modus](/de/guide/cli/interactive-mode/) und [Nicht interaktiver Modus](/de/guide/cli/non-interactive-mode/). Eine vollständige Parameterübersicht bietet die [Referenz der CLI-Befehle](/de/guide/reference/commands/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Tabellen für Slash commands in der Desktop-App und Developer commands abgeglichen. Die Seite stellt ausdrücklich klar, dass sich die Befehlssätze der Arbeitsoberflächen unterscheiden. Alle aufgeführten Befehle stammen aus der aktuellen offiziellen Tabelle; die endgültige Verfügbarkeit richtet sich weiterhin nach der Autovervollständigung im Composer.
-
-**Zuletzt geprüft:** 2026-08-26

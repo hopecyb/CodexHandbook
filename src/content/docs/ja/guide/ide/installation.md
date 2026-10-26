@@ -3,12 +3,16 @@ title: IDE 統合をインストールして有効にする
 description: VS Code 系エディタ、Xcode、JetBrains IDE で Codex を正しく開きます。
 locale: ja
 source_locale: zh-CN
-source_revision: 85e1691
+source_revision: "85e1691"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: "2026-08-26"
 ---
 
 IDE の入口は二種類に分かれ、インストール方法を混同することはできません。
@@ -52,11 +56,3 @@ IDE の入口は二種類に分かれ、インストール方法を混同する�
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [IDE の設定](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**状態：** verified
-
-**対象製品：** IDE
-
-**最終検証：** 2026-08-26

@@ -2,13 +2,18 @@
 title: Utilisation, durée et choix du modèle
 description: Consignez séparément quota d'abonnement, coût API, attente et travail de reprise. Comparez les modèles sur les mêmes tâches sans confondre consommation et qualité.
 contentType: guide
-audiences: [beginner, creator, developer, team]
+audiences:
+  - beginner
+  - creator
+  - developer
+  - team
 level: intermediate
-outputs: [csv]
+outputs:
+  - csv
 editorialStatus: review
 verification:
   kind: source-checked
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: Les explications officielles sur l'utilisation, les tarifs API et la facturation du raisonnement ont été vérifiées. Les modèles de registre et le calcul sont pédagogiques ; aucune mesure de vitesse, de coût ou de temps économisé n'est fournie.
   evidence:
     - label: Utilisation et tarifs officiels de Codex
@@ -24,11 +29,11 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: ad02d42
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "8b68d92"
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
 ---
-
 Commencez par définir ce que vous mesurez : le quota restant sur un compte, le coût d'un appel API, le temps d'attente ou le temps humain consacré à la relecture et aux reprises. Ces éléments n'ont pas la même unité et ne sont pas interchangeables.
 
 [Télécharger les modèles de registre](/downloads/usage-log/usage-log-1.0.0.zip) · [Instructions](/downloads/usage-log/README.md)
@@ -75,3 +80,5 @@ Les feuilles téléchargeables actuelles ne contiennent aucune exécution mesur�
 Sauvegardez le travail accompli, les points ouverts et la manière de reprendre. Vérifiez que la tâche n'est pas prise dans des tentatives répétées ou la lecture de documents sans rapport. Réduisez le périmètre non essentiel selon l'objectif, tout en conservant les critères de qualité et de sécurité. Ne sautez pas les vérifications indispensables pour finir avant l'épuisement du quota.
 
 Si vous devez poursuivre, vérifiez votre quota actuel et votre mode de facturation avant de choisir. Cet article ne bascule pas automatiquement vers l'API, n'achète pas de crédits et ne modifie pas les paramètres du compte. Une équipe peut utiliser le [parcours pilote de deux semaines](/fr/guide/learning-paths/team/) pour noter les raisons du choix et les conditions de retour en arrière.
+
+Consultez les modèles actuels, les différences entre produits et les recommandations par tâche : [Choisir un modèle selon la tâche](/fr/guide/reference/model-selection/).

@@ -11,10 +11,10 @@ title: 여러 Agent 조율하기
 description: 병렬 탐색, 분업 실행, 결과 병합의 협업 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: "7b143fc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -34,7 +34,7 @@ reviewed_at: 2026-08-26
 
 ## 2. 권장 패턴
 
-### 병렬 탐색, 사람 선택
+### 병렬로 탐색하고 사람이 선택하기
 
 ```text
 Agent 1：방안 A의 장단점과 작업량

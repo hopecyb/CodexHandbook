@@ -3,12 +3,17 @@ title: Datei- und Ordner-Kontext
 description: Relevante Dateien benennen und irrelevantes Rauschen vermeiden.
 locale: de
 source_locale: zh-CN
-source_revision: e9148a3
+source_revision: "e9148a3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur, wie Datei- und Ordnerrahmen gesetzt werden; Beispieltexte und Konzepte wurden geprüft, ohne Abhängigkeit von Produktversion, Preisen oder UI.
+  checkedAt: '2026-07-26'
 ---
 
 Sag nicht nur „änder mal was“ — sag Codex, welche Dateien es ansehen und welche es meiden soll.
@@ -53,7 +58,7 @@ Das sagt zugleich:
 
 ### 1. Mehr relevante Dateien = besser?
 
-Zu wenig → Raten; zu viel → Fokus verwässert.  
+Zu wenig → Raten; zu viel → Fokus verwässert.
 Besser: **nur das, was die aktuelle Aufgabe wirklich braucht.**
 
 ### 2. Ich weiß nicht, welche Dateien relevant sind?
@@ -85,7 +90,7 @@ Nicht zwingend — so konkret wie möglich:
 
 ## Drei Dinge, die im Prompt oft fehlen
 
-Wenn du Überänderungen fürchtest, ergänze:
+Wenn du zu weitreichende Änderungen befürchtest, ergänze:
 
 1. Welche Dateien/Verzeichnisse nur ansehen
 2. Was nicht scannen
@@ -102,10 +107,3 @@ Brauchst du weitere Dateien, sag zuerst warum — dann weiter.
 ```
 
 Dateirahmen angeben = weniger Raten, Rauschen und Fehländerungen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur, wie Datei- und Ordnerrahmen gesetzt werden; Beispieltexte und Konzepte wurden geprüft, ohne Abhängigkeit von Produktversion, Preisen oder UI.  
-**Zuletzt geprüft:** 2026-07-26

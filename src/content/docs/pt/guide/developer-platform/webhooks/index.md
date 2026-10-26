@@ -1,27 +1,27 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "API / Cloud"
-  basis: "Cruzado com a estrutura atual do subcapítulo webhooks e as ligações de entrada; esta página só explica que o Webhook, na integração, é um «gatilho de eventos», sem fixar campos de evento ou detalhes de implementação como contrato permanente."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: API / Cloud
+  basis: Cruzado com a estrutura atual do subcapítulo webhooks e as ligações de entrada; esta página só explica que o Webhook, na integração, é um «gatilho de eventos», sem fixar campos de evento ou detalhes de implementação como contrato permanente.
+  checkedAt: '2026-07-26'
 title: Webhooks
 description: Página sobre integração por eventos — o Webhook recebe notificações; não substitui o desenho do fluxo de trabalho.
 locale: pt
 source_locale: zh-CN
-source_revision: 68cb29b
+source_revision: "68cb29b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
-A palavra `Webhook` pode parecer abstrata.  
+A palavra `Webhook` pode parecer abstrata.
 Em termos simples: quando acontece algo, o sistema envia-te uma notificação de propósito.
 
 No cenário de integração Codex, resolve «quando chega um evento externo, como disparar o fluxo seguinte».
 
 ## Entrada deste grupo
 
-- [Visão geral de Webhooks](/pt/guide/developer-platform/webhooks/overview/)
+- [Limites de Webhooks e eventos de tarefas](/pt/guide/developer-platform/webhooks/overview/): diferencie resultados locais, eventos do App Server e callbacks HTTP próprios. Este grupo não oferece um contrato unificado de Webhook Cloud sem verificação.
 
 ## Conteúdo deste grupo
 

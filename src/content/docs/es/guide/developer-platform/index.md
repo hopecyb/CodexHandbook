@@ -10,18 +10,19 @@ sidebar:
   order: 50
 locale: es
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: "f58851e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
-La **plataforma para desarrolladores** es para quienes quieren **productivizar** Codex en pipelines: apps a medida, revisión por lotes, puertas de release, portales internos. El uso cotidiano de «escribir un Prompt para corregir un bug» sigue empezando en [Primeros pasos](/es/guide/getting-started/).
+La **plataforma para desarrolladores** es para quienes quieren **integrar Codex como parte de un producto** en sus procesos: apps a medida, revisión por lotes, controles de publicación, portales internos. El uso cotidiano de «escribir un prompt para corregir un bug» sigue empezando en [Primeros pasos](/es/guide/getting-started/).
 
-Este capítulo no trata el uso diario de Codex, sino cómo enchufarlo en tus propios sistemas.
+Este capítulo no trata el uso diario de Codex, sino cómo integrarlo en tus propios sistemas.
 
 Se orienta a escenarios como:
 
-- Ejecutar Tareas automáticamente en CI
+- Ejecutar tareas automáticamente en CI
 - Integrar Codex en tu backend o herramientas internas
 - Hacer de Codex parte del flujo de trabajo del equipo
 
@@ -38,7 +39,7 @@ Se orienta a escenarios como:
 | Cómo ejecutar `codex` en la terminal | [Manual de producto CLI](/es/guide/cli/) |
 | Cómo hacer revisión con exec en CI | [Modo no interactivo](/es/guide/cli/non-interactive-mode/) + CI de este capítulo |
 | Cómo incrustar un Agent en tu App | [Resumen del SDK](/es/guide/developer-platform/sdk-overview/) |
-| Modelo de Permisos y seguridad | [Patrones de Aprobación humana](/es/cases/workflows/human-approval-patterns/) |
+| Modelo de permisos y seguridad | [Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/) |
 
 ## Arquitectura típica (concepto)
 
@@ -56,7 +57,7 @@ El SDK de Codex ejecuta un Agent local. Un ejecutor remoto, una cola y devolucio
 
 1. **Idempotente y reintentable**: revisiones repetidas del mismo PR deben ser comparables
 2. **Privilegio mínimo**: token de CI de solo lectura o limitado a repositorios
-3. **Observable**: conservar versión del Prompt, modelo y artefacto del diff
+3. **Observable**: conservar versión del prompt, modelo y artefacto del diff
 4. **División humano-máquina**: comentario automático ≠ merge automático
 
 ## Navegación del capítulo
@@ -81,13 +82,13 @@ Si ahora solo quieres empezar a usar Codex, puedes leerlo más tarde.
 Así:
 
 - **App / CLI / IDE**: entradas donde tú o tu equipo usáis Codex directamente
-- **Plataforma para desarrolladores**: enchufar Codex en otros sistemas y flujos
+- **Plataforma para desarrolladores**: integrar Codex en otros sistemas y flujos
 
 ### 3. ¿Qué página vale más la pena leer primero en este capítulo?
 
 Para formarte el concepto, prioriza [Resumen del SDK](/es/guide/developer-platform/sdk-overview/) y su relación con el [modo no interactivo](/es/guide/cli/non-interactive-mode/).
 
-Este capítulo habla de «cómo enchufar Codex en el sistema». Para el primer uso práctico, empieza por el contenido de primeros pasos.
+Este capítulo habla de «cómo integrar Codex en el sistema». Para el primer uso práctico, empieza por el contenido de primeros pasos.
 
 ## Fuentes de referencia
 - Documentación oficial de la API / SDK de OpenAI Codex

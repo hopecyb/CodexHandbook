@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur, wie nachvollziehbare Quellen verlangt und geprüft werden; interne Links und Methodenformulierung wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Quellen validieren
 description: Für Recherche-Schlussfolgerungen nachvollziehbare Belege verlangen.
 locale: de
 source_locale: zh-CN
-source_revision: 6884531
+source_revision: "6884531"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -45,10 +50,3 @@ Mindestens öffnen und prüfen:
 - Ist sie veraltet
 
 In Recherche-Aufgaben ist die Quelle selbst Teil der Glaubwürdigkeit.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur, wie nachvollziehbare Quellen verlangt und geprüft werden; interne Links und Methodenformulierung wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26

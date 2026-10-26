@@ -7,9 +7,10 @@ title: プロンプト
 description: タスク、背景、入力、制約、受け入れ基準を明確に伝える方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 プロンプトの章では、Codexが目的、背景、範囲、完了条件を理解できるようにタスクを伝える方法を扱います。実行中に不確実な点を明らかにし、必要な確認を求め、検証できる結果を返せるようにすることも大切です。

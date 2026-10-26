@@ -36,7 +36,7 @@
   <text x="205" y="382" class="tiny">Tác vụ cùng loại sẽ lặp lại</text>
   <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
   <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
-  <text x="190" y="447" text-anchor="middle" class="note">Quy trình, tài liệu tham khảo và script có thể tái sử dụng</text>
+  <text x="190" y="447" text-anchor="middle" class="note">Tái dùng quy trình, tài liệu, script</text>
   <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
   <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
   <text x="190" y="553" text-anchor="middle" class="note">Quy tắc phải tuân theo mỗi khi vào dự án</text>

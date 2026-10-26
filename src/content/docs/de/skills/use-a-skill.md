@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Die aktuelle Codex-Laufzeit unterstützt explizite Skill-Namen und Auto-Matching in passenden Szenarien; OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills bei Nutzen automatisch verwendet werden. Diese Seite fokussiert Auslösearten und Schreibprinzipien."
+  basis: "Die aktuelle Codex-Laufzeit unterstützt explizite Skill-Namen und die automatische Auswahl in passenden Situationen; OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills automatisch verwendet werden, wenn sie hilfreich sind. Diese Seite behandelt Auslösearten und Grundsätze für das Schreiben von Skills."
   checkedAt: "2026-07-26"
 title: Einen Skill nutzen
 description: Skills explizit und implizit auslösen — und description gut schreiben.
 locale: de
 source_locale: zh-CN
-source_revision: ef92b69
+source_revision: "ef92b69"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein häufiger Irrtum am Anfang: „Sobald er installiert ist, wirkt er von allein.“ Einen Skill nutzen heißt, Codex nach einem vorformulierten Arbeitsmuster handeln zu lassen.

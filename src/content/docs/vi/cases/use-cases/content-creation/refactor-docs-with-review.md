@@ -1,12 +1,16 @@
 ---
+caseCategory: development
+directoryOrder: 75
+contentType: case
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Đã đối chiếu chéo các chương Artifact nội dung, EPXV, nghiệm thu build và mẫu case đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case kỹ thuật nội dung ổn định “sửa site tài liệu nhiều tệp từng bước nhỏ, kiểm chứng build và phục hồi thất bại”.", "checkedAt": "2026-07-26"}
 title: Refactor site tài liệu kèm review
 description: "Case: cập nhật hàng loạt liên kết và chương trong dự án tài liệu Astro/Starlight — diff nhỏ từng bước, kiểm chứng bằng build."
 locale: vi
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: "db44ca3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Case này minh họa tác vụ **kỹ thuật nội dung**: Markdown nhiều tệp, cấu hình sidebar, kiểm chứng build. Tech stack giống sổ tay này, nhưng kịch bản chuyển được sang mọi static site.
@@ -74,9 +78,3 @@ Bước: Sửa config trước, rồi viết md, cuối cùng cập nhật 12-re
 
 ## Nguồn tham chiếu
 - Quy trình iteration tài liệu M2 thực tế của kho này
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / IDE  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương Artifact nội dung, EPXV, nghiệm thu build và mẫu case đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case kỹ thuật nội dung ổn định “sửa site tài liệu nhiều tệp từng bước nhỏ, kiểm chứng build và phục hồi thất bại”.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -3,10 +3,14 @@ title: Plugins
 description: 再利用可能な Skills、コネクタ、MCP、Hooks、タスクテンプレートの組み合わせを参照、インストール、管理します。
 locale: ja
 source_locale: zh-CN
-source_revision: 8917a59
+source_revision: "8917a59"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張は Plugin をサポートしません
+  checkedAt: '2026-08-26'
 ---
 
 Plugin は機能を組み合わせて配布する単位です。Skills、コネクタ、MCP サーバー、ブラウザ拡張、Hooks、Scheduled task のテンプレートを含めることができます。実際の作業を行うのは、Plugin に含まれるこれらのコンポーネントです。
@@ -43,11 +47,3 @@ Plugin は機能を組み合わせて配布する単位です。Skills、コネ�
 ## 公式情報
 
 - [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**状態：** verified
-
-**対象製品：** ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張は Plugin をサポートしません
-
-**最終検証：** 2026-08-26

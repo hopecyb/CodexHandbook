@@ -2,13 +2,16 @@
 title: Tipos de eventos de Hook
 description: Elige eventos de los ciclos de vida de sesión, turno, llamada a herramienta, compactación y subagent.
 locale: es
-source_locale: zh-cn
-source_revision: 07f4965
+source_locale: zh-CN
+source_revision: "07f4965"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: Entornos que usan un host de Codex local
+  checkedAt: '2026-08-25'
 ---
-
 La primera pregunta al elegir un Hook no es «¿cómo escribo el script?», sino «¿esto debe suceder antes o después del efecto secundario?». Un script asociado al evento equivocado quizá solo pueda informar del daño cuando ya se ha producido.
 
 ![Ciclo de vida de los Hooks de Codex y eventos principales](/diagrams/hook-lifecycle-events-es.svg)
@@ -63,7 +66,7 @@ Solo se ejecuta cuando Codex ya iba a solicitar aprobación para una elevación 
 
 La herramienta ya se ha ejecutado, y el evento se activa incluso si Bash termina con un código distinto de cero. Devolver un bloqueo o salir con `2` puede reemplazar el feedback dirigido al modelo, pero no deshacer un comando, una escritura de archivo ni una acción externa.
 
-## Stop no es un botón para deshacer
+## Stop no es un botón para impedir que termine la tarea
 
 En un evento `Stop`, `decision: "block"` crea automáticamente un prompt de continuación a partir del motivo y pide a Codex que ejecute otro turno. No revierte los efectos secundarios ya producidos. Comprueba `stop_hook_active` para evitar un bucle infinito.
 
@@ -80,11 +83,3 @@ En un evento `Stop`, `decision: "block"` crea automáticamente un prompt de cont
 ## Fuente oficial
 
 - [OpenAI: eventos y matchers de Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** Entornos que usan un host de Codex local
-
-**Última verificación:** 2026-08-25

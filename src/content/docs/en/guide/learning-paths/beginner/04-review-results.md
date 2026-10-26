@@ -22,9 +22,10 @@ next:
   label: "Complete your first small project"
 locale: en
 source_locale: zh-CN
-source_revision: "e426ec4"
-translation_status: draft
+source_revision: 'e426ec4'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 ## First, inspect a known flawed example

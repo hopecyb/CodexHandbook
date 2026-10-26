@@ -3,12 +3,17 @@ title: Slash commands and shortcuts
 description: A learning-oriented reference for slash commands and $ Skill invocation, not a complete parameter manual.
 locale: en
 source_locale: zh-CN
-source_revision: a34c90f
+source_revision: 'a34c90f'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
+  checkedAt: '2026-08-26'
 ---
 
 A first list of slash commands can look like jargon to memorize. It is easier to treat them as shortcuts that explicitly enter a known flow.
@@ -110,13 +115,3 @@ Slash commands provide quick entry points; Skills preserve reusable workflows.
 Treat slash commands as chat shortcuts. Inspecting the current environment is more useful than memorizing names.
 
 See [CLI interactive mode](/en/guide/cli/interactive-mode/), [non-interactive mode](/en/guide/cli/non-interactive-mode/), and the [CLI command reference](/en/guide/reference/commands/).
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE
-
-**Verification basis:** Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
-
-**Last verified:** 2026-08-26

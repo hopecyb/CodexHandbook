@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Esta página oferece um template de tarefas de criação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  basis: "Esta página oferece um template de tarefas de criação; links e estrutura foram revistos; o corpo não depende de fatos voláteis do produto."
   checkedAt: "2026-07-26"
 title: Template de criação
 description: Implementar do zero uma função, um texto ou um artefato.
 locale: pt
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 

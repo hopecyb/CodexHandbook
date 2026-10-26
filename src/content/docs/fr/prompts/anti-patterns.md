@@ -1,12 +1,17 @@
 ---
-title: Anti-patterns de Prompt
+title: Anti-patterns de prompt
 description: Formulations floues, dépassement de permissions et demandes de « raisonnement caché » à éviter.
 locale: fr
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: "8e89a5a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page résume des anti-patterns courants ; renvois et exemples revus ; pas de faits volatils produit.
+  checkedAt: '2026-07-26'
 ---
 
 On apprend souvent « comment bien écrire » — savoir ce qui **dérape le plus vite** fait gagner du temps.
@@ -16,10 +21,10 @@ Voici des pièges courants.
 | Anti-pattern | Pourquoi c'est risqué |
 |---|---|
 | « Optimise un peu » | pas d'objectif ni de limite |
-| « Tous les droits, débrouille-toi » | surface d'accident maximale |
+| « Tous les droits, débrouille-toi » | risque de conséquences accidentelles maximal |
 | « Ne me demande rien, finis tout » | saute clarification et approbation |
 | « Affiche tout ton raisonnement caché » | peu fiable et inutile pour valider |
-| coller des logs avec secrets | fuite de credentials |
+| coller des logs avec secrets | fuite d’identifiants d’authentification |
 
 ## Point commun
 
@@ -57,7 +62,7 @@ Optimise un peu
 ### Mieux
 
 ```text
-Rends le hero de la page d'accueil plus accessible aux débutants ; ce fichier uniquement ; garde la structure ; donne-moi le diff et le résultat du build.
+Rends le texte de la première section de la page d’accueil plus compréhensible pour les débutants ; ce fichier uniquement ; garde la structure ; donne-moi le diff et le résultat du build.
 ```
 
 ## Formule de remplacement
@@ -77,10 +82,3 @@ Ex. :
 La plupart des anti-patterns ne sont pas « mal écrits » — ils **omettent** limites et acceptation.
 
 Remplacez le flou par : objectif + contraintes + acceptation.
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page résume des anti-patterns courants ; renvois et exemples revus ; pas de faits volatils produit.

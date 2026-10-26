@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "OpenAI Help «Skills in ChatGPT» confirma que un Skill es un workflow reutilizable y compartible; el runtime actual de Codex también hace match por nombre y descripción. Esta página es sobre principios de selección, sin depender de UI volátil."
+  basis: "OpenAI Help «Skills in ChatGPT» confirma que un Skill es un workflow reutilizable y compartible; el runtime actual de Codex también selecciona según el nombre y la descripción. Esta página es sobre principios de selección, sin depender de UI volátil."
   checkedAt: "2026-07-26"
 title: Cuándo usar Skills
 description: Decide si una tarea encaja como Skill, y cómo se reparte el trabajo con comandos slash y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: "5e688f4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Al empezar con Skills, la pregunta habitual es: ¿merece la pena convertir esto en un Skill dedicado?
@@ -19,7 +19,7 @@ Al empezar con Skills, la pregunta habitual es: ¿merece la pena convertir esto 
 Si lo conviertes todo en Skill, el sistema se vuelve pesado; si no consolidas lo que debería repetirse, seguirás repitiendo a mano las mismas instrucciones. Esta página ayuda a decidir cuándo fijar un flujo.
 
 
-## Encaja encapsularlo como Skill
+## Cuándo conviene crear un Skill
 
 - El mismo flujo se ha repetido manualmente por tercera vez
 - Necesitas una lista de comprobación detallada, pero no quieres saturar el contexto cada vez
@@ -53,7 +53,7 @@ No son tareas complejas, pero sí muy reutilizables.
 ### 1. Si la tarea es importante, debe ser un Skill
 
 Importante no implica reutilizable.  
-Si es una tarea especial de una sola vez, convertirlo en Skill solo añade mantenimiento.
+Si es una tarea especial de una sola vez, convertirla en Skill puede añadir trabajo de mantenimiento.
 
 ### 2. Cuantos más Skills, mejor
 
@@ -80,7 +80,7 @@ Así el Skill sale más sólido: nace de repetición real, no de un diseño en v
 | Skill | Flujos reutilizables, divulgación progresiva |
 | MCP | Conectar APIs externas y fuentes de datos |
 | Hooks | Ejecutar automáticamente en puntos de evento concretos |
-| `AGENTS.md` | Convenios persistentes a nivel de proyecto |
+| `AGENTS.md` | Convenciones persistentes a nivel de proyecto |
 
 Un Skill encaja mejor para flujos que «se repiten, deben ser consistentes y no quieres volver a explicarlos cada vez».
 

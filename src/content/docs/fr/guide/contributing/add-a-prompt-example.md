@@ -1,30 +1,34 @@
 ---
-title: Ajouter un exemple de Prompt
-description: Soumettre des Prompts reproductibles à examples/prompts avec métadonnées et critères d'acceptation.
+title: Ajouter un exemple de prompt
+description: Soumettre des prompts reproductibles à examples/prompts avec métadonnées et critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: '15dabd2'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  basis: Recoupement du répertoire actuel `examples/`, du frontmatter des exemples, de leur indexation et du processus de contribution. Les exigences correspondent aux liens des cas et workflows existants et ne dépendent pas du comportement changeant d’un client Codex.
+  checkedAt: '2026-07-26'
 ---
 
-Les exemples de Prompt vivent à la racine du dépôt [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), liés depuis les pages du handbook. Spécification de design : [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
+Les exemples de prompt vivent à la racine du dépôt [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), liés depuis les pages du manuel. Spécification de design : [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Ce que cette page couvre
 
 Blocages courants :
 
-- Ce qui rend un Prompt « digne d'inclusion »
+- Ce qui rend un prompt « digne d'inclusion »
 - Quel format permet à d'autres de le réutiliser
 
 Cette page explique comment soumettre quelque chose que **d'autres peuvent essayer, apprendre et reproduire**.
 
 ## Critères d'inclusion
 
-Nous collectons des exemples reproductibles avec Contexte, limites et critères d'acceptation — pas des snippets d'inspiration.
+Nous collectons des exemples reproductibles avec contexte, limites et critères d'acceptation — pas des snippets d'inspiration.
 
 Un exemple solide répond à :
 
@@ -32,7 +36,7 @@ Un exemple solide répond à :
 - Exactement quoi dire
 - Comment juger le succès ensuite
 
-Les one-liners astucieux sans prérequis ou Vérification sont des notes — pas des exemples.
+Les formules astucieuses en une ligne sans prérequis ou vérification sont des notes — pas des exemples.
 
 ## Nommage des fichiers
 
@@ -47,7 +51,7 @@ Exemples de `category` : `development`, `research`, `meta-workflows`, `team`.
 ```yaml
 ---
 id: prompt.fix-bug-with-tests
-title: Fix Bug and Add Tests
+title: Corriger un bug et ajouter des tests
 content_type: prompt
 audience: [beginner, developer]
 difficulty: beginner
@@ -61,26 +65,26 @@ last_verified: YYYY-MM-DD
 ## Sections de corps requises
 
 1. **Cas d'usage**
-2. **Prérequis** (permissions, branche, fichiers de Contexte)
-3. **Prompt recommandé** (complet, prêt à copier-coller)
+2. **Prérequis** (permissions, branche, fichiers de contexte)
+3. **prompt recommandé** (complet, prêt à copier-coller)
 4. **Critères d'acceptation** (checklist, objectivement vérifiables)
 5. **Modes d'échec courants**
-6. **Pages handbook associées** (liens vers `src/content/docs/`)
+6. **Pages manuel associées** (liens vers `src/content/docs/`)
 
 Optionnel : variante minimale, décomposition pédagogique, variables remplaçables.
 
 ## Idées reçues courantes
 
-### Ne pas enfouir le Prompt
+### Ne pas enfouir le prompt
 
-Le contexte et la théorie sont bien — mais mettre le **Prompt copier-coller** en premier, puis prérequis et échecs, puis explication.
+Le contexte et la théorie sont bien — mais mettre le **prompt copier-coller** en premier, puis prérequis et échecs, puis explication.
 
 ### Utilisé une fois ≠ exemple complet
 
 Les lecteurs ne partagent pas vos hypothèses implicites. Indiquer :
 
 - Quel point d'entrée produit
-- Fichiers, captures ou Contexte requis
+- Fichiers, captures ou contexte requis
 - Si éditions, commandes ou réseau sont supposés autorisés
 
 ### Pas de vrais secrets dans les exemples
@@ -96,7 +100,7 @@ Enseigner la méthode — pas votre environnement de production.
 
 - [ ] Le test qui échouait passe maintenant
 - [ ] La suite de tests convenue passe
-- [ ] Le diff ne touche que les fichiers liés à la Tâche
+- [ ] Le diff ne touche que les fichiers liés à la tâche
 - [ ] Pas de `git push` exécuté
 ```
 
@@ -109,10 +113,10 @@ Enseigner la méthode — pas votre environnement de production.
 
 ## Flux de soumission
 
-1. Identifier la classe de Tâche réelle que cela résout
-2. Écrire un Prompt copier-coller
+1. Identifier la classe de tâche réelle que cela résout
+2. Écrire un prompt copier-coller
 3. Indiquer les prérequis et limites minimums
-4. Définir ce que le succès ressemble
+4. Définir les critères de réussite
 5. Vérifier les secrets et le répertoire correct
 
 ## Checklist PR
@@ -120,10 +124,4 @@ Enseigner la méthode — pas votre environnement de production.
 - [ ] Nouveau chemin de fichier indexé dans `examples/README.md` si l'index est maintenu
 - [ ] Au moins une page cas ou workflow lie l'exemple (optionnel mais recommandé)
 
-Un bon exemple de Prompt permet à quelqu'un de reproduire et obtenir un résultat similaire.
-
----
-
-**Statut :** vérifié  
-**Base de vérification :** Vérifié croisé layout `examples/` actuel, frontmatter d'exemple, indexation et flux de contribution ; aligné avec les patterns de liens cas/workflow — pas le comportement UI produit volatil.  
-**Dernière vérification :** 2026-07-26
+Un bon exemple de prompt permet à quelqu'un de reproduire et obtenir un résultat similaire.

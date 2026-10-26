@@ -3,10 +3,15 @@ title: 규칙
 description: allow/deny, 명령 규칙, 팀 정책 설명 페이지 — 무엇을 막고 무엇을 알릴지 먼저 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 9ac6185
+source_revision: '9ac6185'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / Cloud
+  basis: 본 저장소의 현재 rules 하위 구조와 진입 링크를 교차 확인했습니다. 이 페이지는 “allow/deny, 명령 규칙, 팀 규칙으로 묶어 탐색”하는 역할만 하며, 구체 규칙 구현이나 기본 차단 동작을 단독으로 선언하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 규칙 그룹은 초보자가 “Codex에 알림을 더 쓴다”로 오해하기 쉽습니다.
@@ -26,10 +31,3 @@ reviewed_at: 2026-08-26
 - 팀이 같은 유형의 위험에 같은 경계를 갖게 하는 방법
 
 규칙은 경계를 분명히 말해, 시스템이 경계대로 실행하게 합니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / Cloud  
-**검증 근거:** 본 저장소의 현재 rules 하위 구조와 진입 링크를 교차 확인했습니다. 이 페이지는 “allow/deny, 명령 규칙, 팀 규칙으로 묶어 탐색”하는 역할만 하며, 구체 규칙 구현이나 기본 차단 동작을 단독으로 선언하지 않습니다.  
-**최근 검증:** 2026-07-26

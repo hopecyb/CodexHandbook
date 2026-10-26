@@ -5,17 +5,22 @@ sidebar:
   order: 3
 locale: ko
 source_locale: zh-CN
-source_revision: b4d4b2b
+source_revision: 'b4d4b2b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 기초 개념 장의 구조와 읽기 순서만 설명합니다. 사이트 내 링크와 개념 표현을 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 변하는 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 이 파트는 핸드북 전체에서 반복되는 기초 개념을 한곳에 둡니다. 제품 UI 차이는 [제품 매뉴얼](/ko/guide/)에, 프롬프트 기법은 [핵심 역량](/ko/guide/)에 둡니다.
 
 여기에서는 Codex가 어떻게 작동하는지, 그리고 어떻게 협업하는지를 주로 설명합니다.
 
-## 이 장의 지도
+## 이 장의 구성
 
 1. [AI와 언어 모델](/ko/guide/foundations/ai-and-language-models/)
 2. [Agent 기초](/ko/guide/foundations/agent-basics/)
@@ -54,7 +59,7 @@ reviewed_at: 2026-08-26
 더 실용적인 읽기는:
 
 - 각 개념이 어떤 문제를 푸는지 먼저 알고
-- 실제 사용 장면을 들고 이해합니다
+- 실제 사용 상황을 떠올리며 이해합니다
 
 ## 한 번에 다 읽기 싫다면
 
@@ -67,10 +72,3 @@ reviewed_at: 2026-08-26
 5. [검증과 사람 검토](/ko/guide/foundations/verification-and-human-review/)
 
 이 몇 페이지만 이해해도 일상 사용을 지탱하기에 충분합니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 기초 개념 장의 구조와 읽기 순서만 설명합니다. 사이트 내 링크와 개념 표현을 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 변하는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -3,17 +3,17 @@ title: Diferencias, comentarios y revisión
 description: Antes de hacer commit o push, comprueba los cambios reales en el panel de revisión y deja comentarios por línea.
 legacyVerification:
   status: "verified"
-  products: "App、CLI、IDE"
+  products: "App / CLI / IDE"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: 32ee40c
-translation_status: draft
+source_revision: "32ee40c"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+reviewed_at: 2026-10-25
 ---
-
 El resumen de la conversación es la explicación de Codex sobre su trabajo; el diff de Git muestra lo que realmente cambió en los archivos. El panel de revisión de la aplicación de escritorio permite ver diferencias, añadir comentarios a líneas concretas y decidir qué cambios preparar, revertir, incluir en un commit o enviar.
 
 El proyecto debe estar en un repositorio Git para usar el panel de revisión completo y `/review`.
@@ -41,7 +41,7 @@ Revisa los cambios actuales sin commit, con atención a:
 - coherencia entre la documentación y la implementación.
 
 Enumera primero los problemas por gravedad. Para cada uno, indica archivo,
-ubicación, prueba y la menor corrección razonable.
+ubicación, evidencia y la menor corrección razonable.
 Si no encuentras problemas, dilo expresamente e indica los riesgos de prueba
 que sigan sin cubrirse.
 ```

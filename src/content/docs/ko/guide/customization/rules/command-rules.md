@@ -1,14 +1,19 @@
 ---
 title: 명령 규칙
-description: 명령급 allow/deny로 shell·도구 호출을 제약 — 구두 약속보다 실행 가능하게.
+description: 명령 수준의 allow/deny로 shell·도구 호출을 제약 — 구두 약속보다 실행 가능하게.
 locale: ko
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: 'fdb8651'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: OpenAI 현재 Codex CLI 문서는 명령 실행, 승인 모드, 샌드박스 격리를 핵심 보안 경계로 둡니다. 이 페이지는 명령 규칙을 “고·저위험 명령을 나눠 관리하는” 엔지니어링 패턴으로 두고, JSON 조각을 예시로 명시하며 특정 문법을 공식 사실처럼 쓰지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **명령 규칙**은 「Agent가 어떤 명령을, 어떤 인자로 실행할 수 있는지」에 초점을 둡니다. [허용과 거부 규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)의 가장 흔한 형태이며, 보통 팀이 심사할 수 있는 설정·규칙 파일에 둡니다.
@@ -51,13 +56,13 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 
 모두 “터미널에서 명령을 돌린다”처럼 보이지만 위험 수준이 완전히 다릅니다.
 
-### 총 진입점을 허용하면 종종 너무 많이 열림
+### 범용 셸 실행을 허용하면 종종 너무 많이 열림
 
-`bash`, `sh` 같은 총 진입점을 허용하면 편의만 보는 것처럼 느껴질 수 있습니다.
+`bash`, `sh` 같은 범용 셸 실행을 허용하면 편의만 보는 것처럼 느껴질 수 있습니다.
 
 규칙 관점에서는 뒤에 이어 붙일 수 있는 위험한 동작까지 함께 연 것과 같습니다.
 
-## 최소 가용 실천
+## 최소 실행 방법
 
 1. **위험한 쓰기·파괴 명령은 기본 거부**: `rm -rf`, `curl | bash`, `git push --force`
 2. **프로젝트 안 흔한 읽기/빌드 명령은 허용**: `git status`, `npm test`, `pnpm lint`
@@ -89,9 +94,9 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 | 단계 | 실천 |
 |---|---|
 | 목록화 | `package.json` scripts, Makefile, CI workflow에서 실제 명령 추출 |
-| 계층화 | 조직 하한선 deny → 프로젝트 allow 보완 → 개인 로컬 예외(있으면) |
+| 계층화 | 조직의 최소 안전 기준 deny → 프로젝트 allow 보완 → 개인 로컬 예외(있으면) |
 | 시범 실행 | 저위험 작업으로 「통과할 것은 통과, 막을 것은 막힘」 확인 |
-| 정렬 | 로컬 규칙과 [GitHub Action](/ko/guide/developer-platform/ci-cd/code-review-automation/)을 되도록 동일 원천으로 |
+| 일관성 확보 | 로컬 규칙과 [GitHub Action](/ko/guide/developer-platform/ci-cd/code-review-automation/)을 되도록 동일 원천으로 |
 
 ## 흔한 실수
 
@@ -120,10 +125,3 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 - [팀 규칙 정책](/ko/guide/customization/rules/team-rules/)
 - [CLI 승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)
 - [권한 매트릭스](/ko/guide/reference/permission-matrix/)
-
----
-
-**상태:** verified  
-**적용 제품:** CLI / App  
-**검증 근거:** OpenAI 현재 Codex CLI 문서는 명령 실행, 승인 모드, 샌드박스 격리를 핵심 보안 경계로 둡니다. 이 페이지는 명령 규칙을 “고·저위험 명령을 나눠 관리하는” 엔지니어링 패턴으로 두고, JSON 조각을 예시로 명시하며 특정 문법을 공식 사실처럼 쓰지 않습니다.  
-**최근 검증:** 2026-07-26

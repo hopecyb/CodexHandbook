@@ -7,14 +7,15 @@ title: Web e Cloud (visão geral)
 description: O percurso das tarefas remotas, da ligação ao repositório e do ambiente reproduzível à revisão e ao Pull Request.
 locale: pt
 source_locale: zh-CN
-source_revision: 86fa0ac
-translation_status: draft
+source_revision: "86fa0ac"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 sidebar:
   order: 13
 ---
 
-O Codex Cloud executa tarefas de programação em ambientes de nuvem isolados. É adequado para tarefas longas em segundo plano, tentativas paralelas e trabalho iniciado a partir do GitHub, GitLab (Beta), Linear ou Slack. Não controla remotamente o seu computador nem vê automaticamente os ficheiros locais que ainda não foram enviados para o repositório remoto.
+O Codex Cloud executa tarefas de programação em ambientes de nuvem isolados. É adequado para tarefas longas em segundo plano, tentativas paralelas e trabalho iniciado a partir do GitHub, GitLab (Beta), Linear ou Slack. Não controla remotamente o seu computador nem vê automaticamente os arquivos locais que ainda não foram enviados para o repositório remoto.
 
 ![Ilustração: um repositório no navegador se conecta a contêineres isolados na nuvem; o resultado volta como um pull request com marca verde](/illustrations/web-and-cloud.webp)
 
@@ -38,9 +39,9 @@ O valor do Cloud está no isolamento, na reprodutibilidade e no paralelismo; a r
 
 | Escolher local | Escolher Cloud |
 |---|---|
-| Depende de ficheiros ainda não confirmados ou de serviços locais | Os dados de entrada já estão no repositório remoto |
+| Depende de arquivos ainda não commitados ou de serviços locais | Os dados de entrada já estão no repositório remoto |
 | É preciso interagir com um processo em tempo real | A tarefa pode correr autonomamente em segundo plano |
-| Alteração rápida e de âmbito reduzido | Compilação, testes ou tentativas paralelas com várias etapas |
+| Alteração rápida e de escopo reduzido | Compilação, testes ou tentativas paralelas com várias etapas |
 | Uma ferramenta necessária só existe neste computador | O ambiente pode ser recriado por scripts |
 
 Leia primeiro [Execução local e na nuvem](/pt/guide/foundations/local-vs-cloud/) para compreender os limites de execução.
@@ -52,14 +53,14 @@ Leia primeiro [Execução local e na nuvem](/pt/guide/foundations/local-vs-cloud
 3. [Secrets e variáveis de ambiente](/pt/guide/web-and-cloud/secrets-and-variables/): distinguir Secrets da instalação das variáveis usadas na execução;
 4. [Acesso à Internet](/pt/guide/web-and-cloud/internet-access/): o Agent começa sem acesso à rede; abrir apenas os domínios e métodos necessários;
 5. [Delegar e acompanhar](/pt/guide/web-and-cloud/delegate-and-follow-up/): definir objetivo, restrições e critérios de aceitação;
-6. [Criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/) e [Revisão de código](/pt/guide/web-and-cloud/code-review/): transformar o resultado num artefacto pronto para integrar;
+6. [Criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/) e [Revisão de código](/pt/guide/web-and-cloud/code-review/): transformar o resultado num artefato pronto para integrar;
 7. [Resolver problemas no Cloud](/pt/guide/web-and-cloud/troubleshooting/): localizar falhas nas camadas do repositório, setup, rede e tarefa.
 
-Se iniciar a tarefa a partir da aplicação de ambiente de trabalho ou do IDE, consulte também [Tarefas locais e na nuvem](/pt/guide/desktop-app/local-and-cloud-tasks/) e [Tarefas Cloud no IDE](/pt/guide/ide/cloud-task-workflow/).
+Se iniciar a tarefa a partir da aplicação de ambiente de trabalho ou do IDE, consulte também [tarefas locais e na nuvem](/pt/guide/desktop-app/local-and-cloud-tasks/) e [tarefas Cloud no IDE](/pt/guide/ide/cloud-task-workflow/).
 
 ## Primeiro exercício
 
-Escolha um repositório de teste sem credenciais de produção. Peça ao Codex apenas que corrija ligações da documentação e execute a verificação de ligações. O êxito significa que o ambiente arrancou, o diff inclui apenas os ficheiros esperados, a saída do comando está visível e é possível criar um PR com o resultado. A indicação «concluído» na página não deve ser o único critério de aceitação.
+Escolha um repositório de teste sem credenciais de produção. Peça ao Codex apenas que corrija ligações da documentação e execute a verificação de ligações. O êxito significa que o ambiente arrancou, o diff inclui apenas os arquivos esperados, a saída do comando está visível e é possível criar um PR com o resultado. A indicação «concluído» na página não deve ser o único critério de aceitação.
 
 ## Fontes oficiais
 

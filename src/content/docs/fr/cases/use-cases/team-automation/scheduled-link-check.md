@@ -15,7 +15,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: '2026-09-18'
-  summary: Sept tests du script ont réussi. Dans une copie temporaire, corriger un problème à la fois a réduit les échecs de deux à un, puis à zéro. Les liens externes n'ont pas été vérifiés en ligne ; aucun véritable CI ni ordonnanceur n'a été exécuté.
+  summary: Sept tests du script ont réussi. Dans une copie temporaire, corriger un problème à la fois a réduit les échecs de deux à un, puis à zéro. Les liens externes n'ont pas été vérifiés en ligne ; aucun véritable pipeline CI ni ordonnanceur n'a été exécuté.
   environment: Python 3.12.11 / Darwin arm64 ; bibliothèque standard et HTML statique synthétique original, sans jeton.
   evidence:
   - label: Compte rendu réel d'exécution et de reprise
@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: 0d21aa9
-translation_status: draft
+source_revision: '0d21aa9'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Avant de programmer une vérification périodique, assurez-vous que le script détecte réellement les problèmes et précise ce qu'il a vérifié. Cet exercice commence avec deux liens volontairement cassés. Modifiez une cible à la fois et observez l'évolution du résultat.

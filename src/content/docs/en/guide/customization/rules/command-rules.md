@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI’s current Codex CLI documentation still treats command execution, approval modes, and sandbox isolation as core security boundaries; this page positions command rules as an engineering pattern for separating high- and low-risk commands and marks the JSON snippet as illustrative, not official syntax."
+  checkedAt: "2026-07-26"
 title: Command Rules
 description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
 locale: en
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: 'fdb8651'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -59,7 +64,7 @@ From a rules perspective, that usually allows many dangerous compositions afterw
 
 ## Minimum Viable Practice
 
-1. **Deny dangerous commands outside write operations by default**: `rm -rf`, `curl | bash`, `git push --force`
+1. **Deny dangerous commands beyond ordinary file edits by default**: `rm -rf`, `curl | bash`, `git push --force`
 2. **Allow common read-only/build commands in the project**: `git status`, `npm test`, `pnpm lint`
 3. **Put rules in Git**, consistent with “test commands” in `AGENTS.md`
 4. **Review rule changes in PR**, like Dockerfile changes
@@ -90,7 +95,7 @@ Illustrative (format per official configuration):
 |---|---|
 | Inventory | Extract real commands from `package.json` scripts, Makefile, CI workflow |
 | Layer | Organization deny baseline → project allow supplement → personal local exception (if any) |
-| Trial | Validate with low-risk tasks: “should approve does; should block blocks” |
+| Trial | Validate with low-risk tasks: “allowed actions pass and prohibited actions are blocked” |
 | Align | Local rules and [GitHub Action](/en/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
 
 ## Common Mistakes
@@ -120,10 +125,3 @@ Command rules are not “memorizing commands”—they separate daily actions fr
 - [Team Rules Policy](/en/guide/customization/rules/team-rules/)
 - [CLI Approval and Sandbox](/en/guide/cli/approvals-and-sandbox/)
 - [Permission Matrix](/en/guide/reference/permission-matrix/)
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex CLI documentation still treats command execution, approval modes, and sandbox isolation as core security boundaries; this page positions command rules as an engineering pattern for separating high- and low-risk commands and marks the JSON snippet as illustrative, not official syntax.  
-**Last verified:** 2026-07-26

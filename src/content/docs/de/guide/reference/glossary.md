@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Nur kurze Definitionen gängiger Handbuchbegriffe; Links und Definitionen geprüft; keine Abhängigkeit von Produktversion, Preis oder UI."
+  checkedAt: "2026-07-26"
 title: Glossar
 description: Kurze Definitionen häufig genutzter Handbuchbegriffe.
 locale: de
 source_locale: zh-CN
-source_revision: ae4b794
+source_revision: "ae4b794"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -24,7 +29,7 @@ sidebar:
 | Prompt | Text mit Ziel und Anforderungen an den Agenten |
 | Sandbox | Ausführungsisolation, die den Wirkungsbereich begrenzt |
 | Skill | Wiederverwendbares Spezialpaket aus Anweisungen und Ressourcen (fortgeschritten) |
-| Thread | Fortlaufendes Gespräch und akkumulierten Kontext |
+| Thread | Fortlaufendes Gespräch und der dabei angesammelte Kontext |
 | Token | Maßeinheit für Textverarbeitung im Modell |
 | Arbeitsbaum | Isoliertes Arbeitsverzeichnis für parallele Experimente |
 
@@ -32,7 +37,7 @@ Einsteigerfassung: [Terminologie für Einsteiger](/de/guide/start-here/terminolo
 
 ## Nutzung
 
-Nachschlage-Wörterbuch, kein vollständiges Tutorial.  
+Nachschlage-Wörterbuch, kein vollständiges Tutorial.
 Taucht auf einer anderen Seite ein Wort auf, das Sie nicht einordnen können — hier nachschlagen.
 
 Sind die meisten Begriffe noch fremd, zuerst [Terminologie für Einsteiger](/de/guide/start-here/terminology-for-beginners/).
@@ -62,10 +67,3 @@ Codex bringt neue Wörter mit. Zuerst ungefähre Bedeutung, Details später.
 3. Zur Fachseite für die volle Erklärung
 
 So unterbricht ein einzelner Begriff den Lesefluss weniger lange.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Nur kurze Definitionen gängiger Handbuchbegriffe; Links und Definitionen geprüft; keine Abhängigkeit von Produktversion, Preis oder UI.  
-**Zuletzt geprüft:** 2026-07-26

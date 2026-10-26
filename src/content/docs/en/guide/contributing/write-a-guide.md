@@ -7,8 +7,9 @@ title: Write a Guide Page
 description: Structure, frontmatter, and cross-link conventions for new handbook guides.
 locale: en
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: 'dd22df1'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -100,7 +101,7 @@ The community handbook can help readers understand, connect, and apply the mater
 
 ## Tone
 
-- English, aimed at practitioners
+- Write source pages in Simplified Chinese for practitioners; translate them into English for this locale
 - Acknowledge uncertainty (“per official documentation”)
 - Avoid “magic prompt” narrative
 

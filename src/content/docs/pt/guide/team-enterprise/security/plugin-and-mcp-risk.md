@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / Cloud"
+  basis: "A documentação atual de plugins no OpenAI Help Center continua a enfatizar que a capacidade de app/plugin está limitada por acesso por papel, controle de ações, requisitos de confirmação, limites de domínio/origem e permissões do sistema de origem; esta página mapeia esses princípios a um olhar unificado de risco Plugin/MCP e defende só leitura primeiro, versão fixa, owner claro e lista de aprovação."
+  checkedAt: "2026-07-26"
 title: Riscos de Plugin e MCP
-description: "A que podem aceder as extensões e como a equipa as aprova e monitoriza — um olhar unificado a Skills, Plugin e MCP."
+description: "A que podem aceder as extensões e como a equipe as aprova e monitoriza — um olhar unificado a Skills, Plugin e MCP."
 locale: pt
 source_locale: zh-CN
-source_revision: bf027ad
+source_revision: "bf027ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -25,20 +30,20 @@ Quer se chame Plugin ou MCP, a pergunta central é parecida:
 ## Conteúdo
 
 - Classificação de riscos de extensões
-- Lista de Aprovação e fixação de versões
+- Lista de aprovação e fixação de versões
 - Isolamento em depuração e incidentes
 
 ## Classificação de riscos
 
-| Tipo | Exemplo | Controlo |
+| Tipo | Exemplo | Controle |
 |---|---|---|
 | Leitura de dados | MCP lê a base de clientes | Conta só de leitura, permissões ao nível da linha |
-| Escrita de dados | Fechar tickets ou mudar configuração automaticamente | Aprovação humana, confirmação de dupla escrita |
+| Escrita de dados | Fechar tickets ou mudar configuração automaticamente | aprovação humana, confirmação de dupla escrita |
 | Rede | Ligações externas arbitrárias | Allowlist de saída |
 | Credenciais | Token OAuth em disco | Custódia de secrets, tokens de curta duração |
 | Cadeia de fornecimento | Atualização envenenada de um server de terceiros | Versão fixa, bloqueio por hash |
 
-## Fluxo de Aprovação da equipa (recomendado)
+## Fluxo de aprovação da equipe (recomendado)
 
 ```text
 Pedido (uso, classificação de dados, Permissões) → review de segurança/arquitetura
@@ -51,10 +56,10 @@ Um MCP experimental pessoal **não deve** partilhar o mesmo token que o reposit�
 
 ## Práticas mínimas
 
-1. **Negar por omissão** a instalação de MCP remotos fora da lista
-2. Um **MCP local** ainda pode ler todo o disco — usa um utilizador de SO dedicado ou um contentor
-3. **Registos**: nome da Ferramenta e resumo de parâmetros (sem dados sensíveis); ver [auditoria com Hook](/pt/skills/hooks/hooks-examples/)
-4. **Divisão Skill / MCP**: o Skill descreve o fluxo; o MCP executa a ligação externa — a política mais estrita ganha ao unir Permissões
+1. **Negar por padrão** a instalação de MCP remotos fora da lista
+2. Um **MCP local** ainda pode ler todo o disco — usa um usuário de SO dedicado ou um contêiner
+3. **Registros**: nome da ferramenta e resumo de parâmetros (sem dados sensíveis); ver [auditoria com Hook](/pt/skills/hooks/hooks-examples/)
+4. **Divisão Skill / MCP**: o Skill descreve o fluxo; o MCP executa a ligação externa — a política mais estrita ganha ao unir permissões
 
 ## Erros frequentes
 
@@ -68,8 +73,8 @@ Um MCP experimental pessoal **não deve** partilhar o mesmo token que o reposit�
 
 Na primeira fase, pouco.
 
-O comum é:  
-ambos põem o Codex em contacto com sistemas externos, por isso há que pensar em Permissões e riscos.
+O comum é:
+ambos põem o Codex em contato com sistemas externos, por isso há que pensar em permissões e riscos.
 
 ### 2. Porque se insiste tanto em «só leitura primeiro»?
 
@@ -87,19 +92,13 @@ Mesmo que a função pareça cómoda, continua a perguntar:
 - Se escreve de volta no sistema
 - Como se gerem as credenciais
 
-Com extensões externas, olha primeiro Permissões e limites; depois, se a função é potente.
+Com extensões externas, olha primeiro permissões e limites; depois, se a função é potente.
 
 ## Lista de aceitação
 
-- [ ] Há lista de Aprovação escrita ou fluxo equivalente
+- [ ] Há lista de aprovação escrita ou fluxo equivalente
 - [ ] Cada MCP de produção tem owner e classificação de dados
 - [ ] Alinhado com a política de [segurança de Skill](/pt/skills/security/)
 
 ## Fontes de referência
 - [Depurar MCP](/pt/skills/mcp/debugging-mcp/)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / App / Cloud  
-**Base de verificação:** A documentação atual de plugins no OpenAI Help Center continua a enfatizar que a capacidade de app/plugin está limitada por acesso por papel, controlo de ações, requisitos de confirmação, limites de domínio/origem e Permissões do sistema de origem; esta página mapeia esses princípios a um olhar unificado de risco Plugin/MCP e defende só leitura primeiro, versão fixa, owner claro e lista de Aprovação.  
-**Última verificação:** 2026-07-26

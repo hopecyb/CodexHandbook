@@ -3,13 +3,14 @@ prev: false
 next:
   link: /fr/prompts/basics/
   label: Bases des prompts
-title: Prompts
+title: prompts
 description: Apprenez à formuler clairement la tâche, le contexte, les entrées, les contraintes et les critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 La section sur les prompts explique comment formuler une tâche pour que Codex comprenne l’objectif, le contexte, les limites et les critères de fin. Un bon prompt laisse aussi apparaître les incertitudes pendant l’exécution, prévoit les confirmations nécessaires et demande un résultat vérifiable.
@@ -18,17 +19,17 @@ La section sur les prompts explique comment formuler une tâche pour que Codex c
 
 ## Ordre recommandé
 
-1. [Bases des Prompts](/fr/prompts/basics/)
+1. [Bases des prompts](/fr/prompts/basics/)
 2. [Quand exécuter directement et quand planifier d’abord](/fr/prompts/ask-for-a-plan/)
 3. [Anatomie d'une tâche](/fr/prompts/task-anatomy/)
 4. [Objectifs et contexte](/fr/prompts/goals-and-context/)
 5. [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
-6. [Définir le terminé](/fr/prompts/define-done/)
-7. [Prompts avec images](/fr/prompts/prompting-with-images/)
-8. [Prompts pour tâches longues](/fr/prompts/long-running-tasks/)
-9. [Dépannage des Prompts](/fr/prompts/prompt-debugging/)
+6. [Définir les critères de réussite](/fr/prompts/define-done/)
+7. [prompts avec images](/fr/prompts/prompting-with-images/)
+8. [prompts pour tâches longues](/fr/prompts/long-running-tasks/)
+9. [Dépannage des prompts](/fr/prompts/prompt-debugging/)
 10. [Anti-patterns](/fr/prompts/anti-patterns/)
-11. Utiliser les [modèles de Prompts](/fr/prompts/templates/) pour les tâches courantes
+11. Utiliser les [modèles de prompts](/fr/prompts/templates/) pour les tâches courantes
 
 ## Comparaison avec entrées fixes
 

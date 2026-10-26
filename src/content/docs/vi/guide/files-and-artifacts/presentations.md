@@ -1,19 +1,24 @@
 ---
-title: Bài trình bày
-description: Tạo, chỉnh bản và xuất slide và bài diễn — ước định cấu trúc, master và ghi chú diễn thuyết.
-locale: vi
-source_locale: zh-CN
-source_revision: fb319fa
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Bài trình bày"
+description: "Tạo, chỉnh bản và xuất slide và bài diễn — ước định cấu trúc, master và ghi chú diễn thuyết."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "fb319fa"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 50
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu chéo với các chương ưu tiên artifact, xác minh nguồn, hình ảnh và ảnh chụp, kiểm chứng artifact đã kiểm chứng trong sổ tay; nội dung trang giới hạn ở phương pháp làm bài trình bày ổn định “kiểm soát cấu trúc trước, rồi văn bản, cuối cùng kiểu dáng và xuất”."
+  checkedAt: "2026-07-26"
 ---
 
 Bài trình bày (PPT, Keynote, Google Slides, Marp/Reveal v.v.) nhấn mạnh **cấu trúc tường thuật** và **nhất quán hình ảnh**. Agent giỏi đưa dàn ý và bản nháp; master và quy chuẩn thương hiệu vẫn cần người nắm.
 
-Dùng Codex làm bài trình bày, giá trị nhất là dựng trước cấu trúc, thứ tự trang và logic kể; bản cuối vẫn bạn tự thu.
+Dùng Codex làm bài trình bày, giá trị nhất là dựng trước cấu trúc, thứ tự trang và logic kể; bạn vẫn cần tự rà soát và hoàn thiện bản cuối.
 
 ## Nội dung trang này
 
@@ -66,18 +71,18 @@ Thường đẩy theo 3 lớp này ổn hơn:
 
 ## Hiểu lầm thường gặp
 
-### 1. PPT càng hoa thì diễn đạt càng mạnh?
+### 1. PPT càng cầu kỳ thì truyền đạt càng hiệu quả?
 
 Nhiều khi thứ thật sự ảnh hưởng hiểu là:
 
 - Tiêu đề có nói rõ trọng tâm trong một câu không
-- Giữa trang với trang có quan hệ đẩy tiến không
+- Giữa trang với trang có mạch nội dung nối tiếp không
 - Dữ liệu có nguồn không
 
 ### 2. Agent đã tạo được cả bản nháp thì không cần người nắm?
 
-Cũng không.  
-Những phần sau tốt nhất nhất định người đi qua một lần:
+Cũng không.
+Những phần sau cần được con người rà soát ít nhất một lần:
 
 - Thương hiệu công ty và master
 - Kết luận then chốt
@@ -86,7 +91,7 @@ Những phần sau tốt nhất nhất định người đi qua một lần:
 
 ### 3. Một trang càng đầy nội dung càng thấy thông tin đủ?
 
-Thường ngược lại khó nói hơn.  
+Thường ngược lại khó nói hơn.
 Nếu một trang nhồi quá nhiều bullet, hình và kết luận, khán giả khó nắm trọng tâm ngay.
 
 ## Thứ tự làm thường dùng
@@ -100,7 +105,7 @@ Nếu giờ muốn để Codex giúp làm một bài trình bày, có thể đư
 5. Dàn ý xác nhận rồi mới để nó triển khai từng trang
 6. Cuối cùng mới bổ sung ghi chú diễn thuyết, yêu cầu hình ảnh và định dạng xuất
 
-Theo thứ tự này thường dễ thu hơn: kiểm soát cấu trúc trước, rồi văn bản, cuối cùng mới kiểu dáng.
+Theo thứ tự này thường dễ kiểm soát hơn: kiểm soát cấu trúc trước, rồi văn bản, cuối cùng mới kiểu dáng.
 
 ## Điểm Prompt
 
@@ -133,24 +138,17 @@ Nhu cầu ảnh xem [Hình ảnh và ảnh chụp màn hình](/vi/guide/files-an
 | Bản nháp ghi chú diễn thuyết | Dữ liệu nhạy cảm |
 | Văn bản chú thích biểu đồ | Bản phát hành đối ngoại |
 
-Phân công vậy thường tiết kiệm thời gian hơn, cuối cùng cũng dễ kẹp chất lượng.
+Phân công vậy thường tiết kiệm thời gian hơn, cuối cùng cũng dễ kiểm soát chất lượng.
 
 ## Lỗi thường gặp
 
 - Không có dàn ý mà «làm một PPT báo cáo quý»
 - `.pptx` nhị phân sửa tay lặp lại mà không giữ nguồn Markdown
 - Dữ liệu biểu đồ không khớp CSV trong kho
-- Một lần để Agent vừa quyết cấu trúc, thiết kế, kết luận và khẩu dữ liệu
+- Một lần để Agent vừa quyết cấu trúc, thiết kế, kết luận và quy ước tính toán dữ liệu
 
 ## Danh sách nghiệm thu
 
 - [ ] Dàn ý đã người xác nhận rồi mới sinh toàn văn
 - [ ] Mở trong môi trường phát mục tiêu không loạn font
 - [ ] Dữ liệu then chốt truy được về tệp nguồn
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ưu tiên artifact, xác minh nguồn, hình ảnh và ảnh chụp, kiểm chứng artifact đã kiểm chứng trong sổ tay; nội dung trang giới hạn ở phương pháp làm bài trình bày ổn định “kiểm soát cấu trúc trước, rồi văn bản, cuối cùng kiểu dáng và xuất”.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -3,9 +3,10 @@ title: Index des événements et des thèmes
 description: Explorer les thèmes de l’ingénierie des applications IA à partir d’événements datés, sans confondre publication et origine des concepts.
 locale: fr
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: '847b43b'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Cette carte distingue les événements publics vérifiables des conseils d’apprentissage. **Une date désigne uniquement l’article, l’annonce ou la publication scientifique de sa ligne ; elle ne marque pas automatiquement la naissance d’un concept, son adoption par le secteur ou la maturité d’une capacité.** Plusieurs techniques peuvent être utilisées ensemble, et l’ordre chronologique n’impose pas un parcours d’étude ou de mise à niveau.

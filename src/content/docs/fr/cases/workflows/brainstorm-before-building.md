@@ -3,19 +3,23 @@ title: Brainstormer avant de construire
 description: Exploration structurée pour converger vers une approche avant le code ou la rédaction longue — réduit les retours en arrière.
 locale: fr
 source_locale: zh-CN
-source_revision: 9c5e679
+source_revision: "9c5e679"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés sur l'EPXV, la planification, le travail piloté par la spécification et les prompts ; cette page décrit uniquement la méthode stable « diverger d'abord, converger, puis planifier », sans dépendre des détails d'entrée produit.
+  checkedAt: '2026-07-26'
 ---
-
 **Brainstormer avant de construire** convient aux tâches où l'objectif est flou ou où plusieurs approches existent : nouvelles fonctionnalités, refontes, sujets de contenu, choix techniques. Cela se relie à la phase ① Explorer de [exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/), mais met l'accent sur la **divergence et la convergence** plutôt que de lire immédiatement le code et modifier des fichiers.
 
 ## Ce que couvre cette page
 
-- Quand le brainstorm vaut la peine vs aller directement à l'EPXV
+- Quand une séance de brainstorming est utile et quand passer directement à l’EPXV
 - Comment borner la divergence et éviter les discussions vides
-- Livrables : tableau d'options, enregistrement de décision, plan des prochaines étapes
+- Livrables : tableau d'options, consignation des décisions, plan des prochaines étapes
 
 ## Public visé
 
@@ -82,10 +86,3 @@ Fixer une **limite de temps** : par exemple, terminer la divergence en 15 minute
 - [Exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/)
 - [Travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/)
 - [Demander un plan](/fr/prompts/ask-for-a-plan/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur l'EPXV, la planification, le travail piloté par la spécification et les prompts ; cette page décrit uniquement la méthode stable « diverger d'abord, converger, puis planifier », sans dépendre des détails d'entrée produit.

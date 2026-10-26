@@ -1,14 +1,18 @@
 ---
 title: Révision de code dans Cloud et GitHub
-description: Révisez un diff Cloud et utilisez Codex sur GitHub comme réviseur complémentaire à signal fort.
+description: Révisez un diff Cloud et utilisez Codex sur GitHub comme outil de revue complémentaire qui cible les problèmes importants.
 locale: fr
 source_locale: zh-CN
-source_revision: ea6796a
+source_revision: "ea6796a"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: Cloud, GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Une tâche Cloud terminée fournit un résumé et un diff. Vous pouvez poursuivre la conversation, demander des modifications ou créer une PR. La fin de la tâche ne vaut pas approbation de fusion : la CI, la protection des branches et le jugement humain restent applicables.
@@ -40,7 +44,7 @@ Exemple de prompt :
 
 ```text
 Révise cette PR. Signale uniquement les constats susceptibles de provoquer un
-comportement incorrect, une perte de données, une faille de sécurité ou une
+comportement incorrect, une corruption de données, une faille de sécurité ou une
 régression de compatibilité. Pour chaque constat, indique la gravité,
 l'emplacement exact, la condition de déclenchement et l'impact. Ne présente pas
 les préférences de style comme des défauts.
@@ -77,11 +81,3 @@ Les utilisateurs disposant des droits GitHub requis pour pousser ou administrer 
 
 - [Révision de pull request GitHub](https://learn.chatgpt.com/docs/third-party/github)
 - [Révision de code entre clients](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** Cloud, GitHub
-
-**Dernière vérification :** 2026-08-26

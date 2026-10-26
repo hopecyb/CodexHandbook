@@ -1,14 +1,19 @@
 ---
-title: Kiểm tra kết quả
-description: Đọc thay đổi, kiểm chứng artifact và quyết định chấp nhận hoặc sửa.
-locale: vi
-source_locale: zh-CN
-source_revision: a215910
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Kiểm tra kết quả"
+description: "Đọc thay đổi, kiểm chứng artifact và quyết định chấp nhận hoặc sửa."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "a215910"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 90
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu chéo với các chương rà soát Diff, định nghĩa hoàn thành và hoàn tác/khôi phục liên quan đã được kiểm chứng trong cẩm nang hiện tại; trang này tập trung vào phương pháp kiểm tra ổn định «xem phạm vi, xem kết quả, xem tác dụng phụ, rồi quyết định nhận hay không»."
+  checkedAt: "2026-07-26"
 ---
 
 Sau khi xong tác vụ, nhiều người mới bỏ qua bước này.
@@ -38,7 +43,7 @@ Codex có thể viết tóm tắt rất xuôi — nhưng thật sự quan trọn
 
 ### 2. Thấy «gần đúng» là chấp nhận ngay
 
-«Gần đúng» rất dễ để lại hố nhỏ phía sau.  
+«Gần đúng» rất dễ để lại vấn đề nhỏ về sau.
 Nếu chỉ lệch một chút, bổ sung một câu phản hồi chính xác sẽ tốt hơn — đừng tự im lặng chấp nhận đại.
 
 ### 3. Phát hiện chưa đúng nhưng không biết nói thế nào
@@ -58,10 +63,3 @@ Khi luyện lần đầu, có thể kiểm theo thứ tự này:
 3. **Xem tác dụng phụ**: có đưa thêm thay đổi thừa hoặc lỗi mới không
 
 Khi nghiệm thu, chủ yếu là xác nhận lần kết quả này có yên tâm nhận không.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương rà soát Diff, định nghĩa hoàn thành và hoàn tác/khôi phục liên quan đã được kiểm chứng trong cẩm nang hiện tại; trang này tập trung vào phương pháp kiểm tra ổn định «xem phạm vi, xem kết quả, xem tác dụng phụ, rồi quyết định nhận hay không».  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -3,22 +3,27 @@ title: Arquivos, Ferramentas e comandos
 description: Explica como o Codex lê e escreve arquivos, roda comandos e usa Ferramentas.
 locale: pt
 source_locale: zh-CN
-source_revision: 9d65338
+source_revision: "9d65338"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica a distinção conceitual entre arquivos, comandos e Ferramentas e o método de julgamento de risco; links internos e formulações de exemplo foram revisados, e o texto não depende de fatos de produto voláteis.
+  checkedAt: '2026-07-26'
 ---
 
-A maior diferença em relação a um chatbot comum é que ele age por meio de **Ferramentas**.
+A maior diferença em relação a um chatbot comum é que ele age por meio de **ferramentas**.
 
-Arquivos são onde ele altera coisas; comandos são como ele executa ações; Ferramentas são a porta de entrada para agir.
+Arquivos são onde ele altera coisas; comandos são como ele executa ações; ferramentas são a porta de entrada para agir.
 
-O Codex age no mundo real por meio de **Ferramentas**:
+O Codex age no mundo real por meio de **ferramentas**:
 
 - Ler/escrever arquivos do projeto
-- Rodar comandos no terminal (quando Permissão e política de Sandbox permitem)
+- Rodar comandos no terminal (quando permissão e política de Sandbox permitem)
 - Buscar na web, abrir o navegador etc. (conforme capacidade e política do produto)
 
 ## Separe estes três termos primeiro
@@ -27,7 +32,7 @@ O Codex age no mundo real por meio de **Ferramentas**:
 |---|---|
 | Arquivo | Conteúdo real do projeto: código, docs, configuração |
 | Comando | Uma ação no terminal: build, teste, busca |
-| Ferramenta | Porta de capacidade do Codex para ler/alterar arquivos, rodar comandos, buscar na web |
+| Ferramenta | Recurso disponível ao Codex para ler/alterar arquivos, rodar comandos, buscar na web |
 
 Outro ângulo:
 
@@ -37,14 +42,14 @@ Outro ângulo:
 
 ## Processo de trabalho comum
 
-Depois que você dá uma Tarefa, o Codex costuma fazer coisas assim:
+Depois que você dá uma tarefa, o Codex costuma fazer coisas assim:
 
 1. Ler alguns arquivos relacionados para entender a estrutura do projeto
 2. Se preciso, buscar texto, abrir diretórios, ver configuração
 3. Se precisar verificar o resultado, rodar um comando — por exemplo teste ou build
 4. Depois de alterar arquivos, entregar as mudanças para você revisar
 
-Por isso, quando ele «quer ler um arquivo» ou «quer rodar um comando», em geral está dando um passo normal da Tarefa.
+Por isso, quando ele «quer ler um arquivo» ou «quer rodar um comando», em geral está dando um passo normal da tarefa.
 
 ## Mal-entendidos comuns
 
@@ -54,9 +59,9 @@ Não necessariamente.
 
 Se pode ou não também depende de:
 
-- Quais Ferramentas a entrada de produto atual oferece
+- Quais ferramentas a entrada de produto atual oferece
 - Se o Sandbox permite
-- Se este passo precisa da sua Aprovação
+- Se este passo precisa da sua aprovação
 - Se a política da equipe impõe limites extras
 
 ### 2. Ele deveria rodar menos comandos e só alterar arquivos — mais rápido?
@@ -67,7 +72,7 @@ Não necessariamente.
 
 ### 3. E se eu não entendo o comando?
 
-Se não entender de imediato, pergunte de frente:
+Se não entender de imediato, pergunte diretamente:
 
 ```text
 O que este comando faz? O que ele altera? O que acontece se eu não rodá-lo?
@@ -86,22 +91,15 @@ Se alguma das três não tiver resposta, peça explicação primeiro.
 ## Princípios de uso
 
 1. **Alcance mínimo necessário**: indique diretórios e arquivos; evite «alterar o repositório inteiro à vontade»
-2. **Comandos perigosos precisam de Aprovação**: apagar, fazer push, alterar configuração do sistema etc.
-3. **Há método na escolha de Ferramentas**: veja [Escolha de Ferramentas](/pt/guide/tools/tool-selection/)
+2. **Comandos perigosos precisam de aprovação**: apagar, fazer push, alterar configuração do sistema etc.
+3. **Há método na escolha de ferramentas**: veja [Escolha de ferramentas](/pt/guide/tools/tool-selection/)
 
-Entradas de produto diferentes têm painéis de Ferramentas e formas de confirmação diferentes; detalhes nos guias de cada produto.
+Entradas de produto diferentes têm painéis de ferramentas e formas de confirmação diferentes; detalhes nos guias de cada produto.
 
-O Codex não só «fala» — ele age de verdade por arquivos, comandos e Ferramentas. Por isso alcance e risco precisam de atenção.
+O Codex não só «fala» — ele age de verdade por arquivos, comandos e ferramentas. Por isso alcance e risco precisam de atenção.
 
 Próximas leituras sugeridas:
 
-1. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+1. [permissões e aprovação](/pt/guide/foundations/permissions-and-approvals/)
 2. [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
-3. [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/)
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica a distinção conceitual entre arquivos, comandos e Ferramentas e o método de julgamento de risco; links internos e formulações de exemplo foram revisados, e o texto não depende de fatos de produto voláteis.  
-**Última verificação:** 2026-07-26
+3. [Rodar a primeira tarefa](/pt/guide/getting-started/run-your-first-task/)

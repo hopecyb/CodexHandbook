@@ -3,12 +3,17 @@ title: Local vs cloud
 description: Compare local tasks and Cloud tasks and when to use each.
 locale: en
 source_locale: zh-CN
-source_revision: 9569b3c
+source_revision: '9569b3c'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-07-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: The OpenAI Help Center article Using Codex with your ChatGPT plan distinguishes local workflows on your device from cloud tasks in OpenAI-managed environments. ChatGPT Work and Codex also confirms that Work on web and mobile runs in the cloud. This page summarizes use cases and tradeoffs without fixing plan or entry-point details.
+  checkedAt: '2026-07-26'
 ---
 
 “Local” and “cloud” can sound technical. Simply: local means work on your own computer; cloud means work on a remote machine.
@@ -78,9 +83,3 @@ Switch to Cloud when you actually need:
 Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud overview](/en/guide/web-and-cloud/). Switching in the App: [Local and cloud tasks](/en/guide/desktop-app/local-and-cloud-tasks/).
 
 Local is better for understanding the flow and making small changes. Cloud is better for longer, more standardized, more remote-collaborative work.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26

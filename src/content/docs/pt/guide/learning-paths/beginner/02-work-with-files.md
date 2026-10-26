@@ -1,30 +1,32 @@
 ---
-title: "Trabalhar com ficheiros"
-description: "Adicione uma linha apenas ao ficheiro indicado e observe a alteração real."
-contentType: "path"
-audiences: ["beginner"]
-level: "beginner"
-editorialStatus: "review"
+title: Trabalhar com ficheiros
+description: Adicione uma linha apenas ao ficheiro indicado e observe a alteração real.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 20
 verification:
-  kind: "editorial"
-  checkedAt: "2026-09-18"
-  summary: "Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores."
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores.
   evidence:
-    - label: "Registo das operações com ficheiros do autor"
-      href: "/downloads/first-project/validation/record.json"
+  - label: Registo das operações com ficheiros do autor
+    href: /downloads/first-project/validation/record.json
 prev:
-  link: "/pt/guide/learning-paths/beginner/01-talk-to-codex/"
-  label: "Conversar com o Codex"
+  link: /pt/guide/learning-paths/beginner/01-talk-to-codex/
+  label: Conversar com o Codex
 next:
-  link: "/pt/guide/learning-paths/beginner/03-give-clear-tasks/"
-  label: "Dar tarefas claras"
+  link: /pt/guide/learning-paths/beginner/03-give-clear-tasks/
+  label: Dar tarefas claras
 locale: pt
 source_locale: zh-CN
 source_revision: "ec5c2d3"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## Pré-requisitos

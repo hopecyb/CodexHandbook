@@ -1,13 +1,18 @@
 ---
-title: Thông báo và màn hình Activity
-description: Cấu hình nhắc khi tác vụ hoàn tất, khi cần cấp quyền và khi chờ câu trả lời.
-locale: vi
-source_locale: zh-CN
-source_revision: 4a1c672
-translation_status: draft
-translated_at: 2026-09-20
+title: "Thông báo và màn hình Activity"
+description: "Cấu hình nhắc khi tác vụ hoàn tất, khi cần cấp quyền và khi chờ câu trả lời."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "4a1c672"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 80
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Thông báo cho biết khi nào bạn cần quay lại xử lý tác vụ; nó không thay bạn rà soát kết quả. Ứng dụng máy tính cho phép đặt thông báo khi một lượt làm việc kết thúc và điều khiển riêng thông báo yêu cầu quyền hoặc câu hỏi.

@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit den aktuellen Codex-Informationen zu Sandbox, Genehmigungen und Sicherheit abgeglichen. Die Seite unterscheidet Ausführungsgrenzen des Betriebssystems, Genehmigungsrichtlinie, Aufgabeneinschränkungen und menschliches Review und beschreibt die unterschiedlichen Netzwerkmodelle für lokale Ausführung und Cloud."
+  checkedAt: "2026-08-26"
 title: Berechtigungen und Sandbox
 description: Verstehe Sandbox, Genehmigungen, Netzwerkzugriff sowie lokale und Cloud-Ausführungsgrenzen anhand einer Entscheidungskette.
 sidebar:
   order: 14
 locale: de
 source_locale: zh-CN
-source_revision: 6b5fcb8
+source_revision: "6b5fcb8"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Für eine sichere Nutzung von Codex musst du zwei Kontrollebenen gemeinsam betrachten: **Die Sandbox legt fest, welche Bereiche technisch erreichbar sind. Die Genehmigungsrichtlinie legt fest, ob Codex vor dem Überschreiten der aktuellen Grenze fragen muss.**
@@ -105,13 +110,3 @@ Damit ist die Absicht eindeutiger. Die tatsächlichen Ausführungsgrenzen werden
 - **Hooks ersetzen die Sandbox:** Hooks sind eine zusätzliche Schutz- und Auditebene, kein Ersatz für erzwungene Isolierung durch das Betriebssystem.
 
 Produktspezifische Einstellungen findest du unter [CLI-Genehmigungen und Sandbox](/de/guide/cli/approvals-and-sandbox/) und [Desktop-App-Einstellungen](/de/guide/desktop-app/settings/). Die Aufgabenformulierung behandelt [Einschränkungen und Grenzen](/de/prompts/constraints-and-boundaries/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-
-**Prüfgrundlage:** Mit den aktuellen Codex-Informationen zu Sandbox, Genehmigungen und Sicherheit abgeglichen. Die Seite unterscheidet Ausführungsgrenzen des Betriebssystems, Genehmigungsrichtlinie, Aufgabeneinschränkungen und menschliches Review und beschreibt die unterschiedlichen Netzwerkmodelle für lokale Ausführung und Cloud.
-
-**Zuletzt geprüft:** 2026-08-26

@@ -10,14 +10,15 @@ sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: "f58851e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
-Die **Entwicklerplattform** richtet sich an alle, die Codex **produktisieren** und in Pipelines bringen wollen: eigene Apps, Batch-Reviews, Release-Gates, interne Entwicklerportale. Für den Alltag „einen Prompt schreiben und einen Bug fixen“ starten Sie bei [Erste Schritte](/de/guide/getting-started/).
+Die **Entwicklerplattform** richtet sich an alle, die Codex **in produktive Abläufe integrieren** wollen: eigene Apps, Batch-Reviews, Release-Gates, interne Entwicklerportale. Für den Alltag „einen Prompt schreiben und einen Bug fixen“ beginne bei [Erste Schritte](/de/guide/getting-started/).
 
-Dieses Kapitel erklärt nicht den täglichen Umgang mit Codex, sondern wie Sie Codex in Ihre eigenen Systeme einbinden.
+Dieses Kapitel erklärt nicht den täglichen Umgang mit Codex, sondern wie du Codex in deine eigenen Systeme einbindest.
 
 Es passt besonders zu diesen Szenarien:
 
@@ -68,19 +69,19 @@ Das Codex SDK führt einen lokalen Agent aus. Ein selbst gebauter Remote-Runner,
 | Webhooks | [Überblick](/de/guide/developer-platform/webhooks/overview/) |
 | CI/CD | [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/) |
 
-Weitere `codex-sdk/`, `app-server/`, `architecture-patterns/` siehe [Kapitelübersicht](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
+Weitere `codex-sdk/`, `app-server/`, `architecture-patterns/` siehe [Kapitelübersicht](https://github.com/hopecyb/CodexHandbuch/blob/main/docs/planning/chapter-outline.md).
 
 ## Häufige Missverständnisse
 
 ### 1. Muss ich dieses Kapitel lernen, um Codex wirklich zu können?
 
-Wenn Sie Codex zunächst nur nutzen wollen, können Sie dieses Kapitel später lesen.
+Wenn du Codex zunächst nur nutzen möchtest, kannst du dieses Kapitel später lesen.
 
 ### 2. Wie verhält es sich zu CLI / App / IDE?
 
 So lässt sich die Rolle einordnen:
 
-- **App / CLI / IDE**: Einstiege, über die Sie oder Ihr Team Codex direkt nutzen
+- **App / CLI / IDE**: Einstiege, über die du oder dein Team Codex direkt nutzt
 - **Entwicklerplattform**: Codex erneut in andere Systeme und Abläufe einbinden
 
 ### 3. Welche Seite lohnt sich beim ersten Lesen am meisten?

@@ -5,33 +5,32 @@ legacyVerification:
   basis: "Trang này cung cấp mẫu tác vụ kiểu tạo; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
   checkedAt: "2026-07-26"
 title: Mẫu tạo
-description: Triển khai từ đầu chức năng, bản thảo hoặc Artifact.
+description: Triển khai từ đầu chức năng, bản thảo hoặc sản phẩm đầu ra.
 locale: vi
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Tác vụ tạo từ đầu dễ gặp hai vấn đề:
 
 - Mục tiêu lớn nhưng không có ranh giới
-- Thông tin chưa đủ mà đã vội để Codex bắt đầu sinh
+- Thông tin chưa đủ mà đã vội để Codex bắt đầu tạo nội dung
 
-Mẫu tạo cố định Artifact, mục đích dùng và ràng buộc trước, rồi mới bắt đầu.
+Mẫu tạo cố định sản phẩm đầu ra, mục đích dùng và ràng buộc trước, rồi mới bắt đầu.
 
 ## Mẫu
 
 ```text
-Mục tiêu: Tạo 【tên Artifact】 dùng cho 【mục đích/người dùng】.
+Mục tiêu: Tạo 【tên sản phẩm đầu ra】 dùng cho 【mục đích/người dùng】.
 Bối cảnh: 【quy ước sẵn có, phong cách thiết kế, giới hạn dependency】
 Đầu vào: 【đặc tả, phác thảo, tham chiếu @tệp】
 Ràng buộc:
 - Chỉ sửa/tạo trong 【phạm vi đường dẫn】
 - Không đưa vào 【mục loại trừ】
-- Thao tác rủi ro cao: chỉ chạy sau khi tôi phê duyệt
+- Chỉ thực hiện 【thao tác rủi ro cao cụ thể】 sau khi tôi phê duyệt
 Nghiệm thu:
 - 【kết quả quan sát được 1】
 - 【kết quả quan sát được 2】
@@ -57,7 +56,7 @@ Tạo từ đầu càng cần nói rõ:
 
 ### 2. Bối cảnh chỉ là trang trí tùy chọn
 
-Với tác vụ tạo, bối cảnh thường định hướng toàn bộ Artifact.
+Với tác vụ tạo, bối cảnh thường định hướng toàn bộ sản phẩm đầu ra.
 
 ### 3. Nghiệm thu viết «trông ổn» vẫn chưa đủ
 

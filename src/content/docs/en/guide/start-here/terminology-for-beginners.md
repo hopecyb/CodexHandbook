@@ -8,11 +8,12 @@ title: Terminology for beginners
 description: Short definitions of common terms such as task, context, sandbox, and Skill.
 locale: en
 source_locale: zh-CN
-source_revision: "a18bacf"
-translation_status: draft
+source_revision: 'a18bacf'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 6
+reviewed_at: 2026-10-25
 ---
 
 For more complete entries, see the [glossary](/en/guide/reference/glossary/). Here are the most common terms that can interrupt your reading.

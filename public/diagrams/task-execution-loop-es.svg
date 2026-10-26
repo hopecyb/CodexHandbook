@@ -1,6 +1,6 @@
 <svg lang="es" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
-  <title id="title">Ciclo de la especificación de tarea al resultado verificable</title>
-  <desc id="desc">Objetivo, contexto, entradas, restricciones, aceptación y permisos forman la tarea. Codex explora, planifica, ejecuta y verifica; el fallo vuelve con evidencia y el éxito entrega.</desc>
+  <title id="title">Ciclo de la descripción de la tarea al resultado verificable</title>
+  <desc id="desc">Objetivo, contexto, entradas, restricciones, criterios de aceptación y permisos forman la descripción de la tarea. Codex explora, planifica, ejecuta y verifica. Si la verificación falla, vuelve con evidencia a la descripción o al plan; si pasa, entrega el resultado.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }

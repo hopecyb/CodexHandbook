@@ -8,9 +8,10 @@ title: "Exemplos de Skills"
 description: "Acesso a quatro exemplos de Skills: escrita, revisão, pesquisa e automação."
 locale: pt
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: "490db95"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Confira o estado dos materiais antes de escolher um exemplo. Os pacotes completos incluem entradas, referências e scripts de validação. Um esqueleto ainda precisa de recursos e verificações reais; sozinho, não é um fluxo de trabalho verificado.

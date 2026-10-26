@@ -3,12 +3,16 @@ title: IDE の Cloud タスク
 description: IDE から長時間タスクを Codex Cloud へ委任し、レビュー可能な結果へ戻ります。
 locale: ja
 source_locale: zh-CN
-source_revision: d5369b5
+source_revision: "d5369b5"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE、Cloud
+  checkedAt: "2026-08-26"
 ---
 
 IDE では短い反復作業をローカルに残す一方、Codex web に接続して時間のかかるタスクを Cloud へ委任できます。入口はエディタ内にありますが、実行環境、リポジトリ状態、ネットワーク境界は Cloud のものに変わります。
@@ -67,11 +71,3 @@ Cloud の「完了」はリモート実行の終了を示すだけで、コー�
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**状態：** verified
-
-**対象製品：** IDE、Cloud
-
-**最終検証：** 2026-08-26

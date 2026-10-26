@@ -3,15 +3,20 @@ title: Hilos, Tareas y proyectos
 description: Aclara la relación entre sesión, Tarea y espacio de trabajo del proyecto.
 locale: es
 source_locale: zh-CN
-source_revision: c360452
+source_revision: 'c360452'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica la relación en tres capas entre proyecto, hilo y Tarea; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
-El vocabulario puede variar un poco entre productos; en este handbook lo entendemos así:
+El vocabulario puede variar un poco entre productos; en este manual lo entendemos así:
 
 - **Proyecto / espacio de trabajo**: la carpeta o la raíz del repositorio a la que Codex está vinculado
 - **Hilo / sesión**: una conversación continua; el Contexto se acumula
@@ -62,10 +67,3 @@ No.
 El hilo es como un contenedor; la Tarea es un trabajo concreto dentro de ese contenedor.
 
 El proyecto decide dónde trabaja; el hilo, qué historial recuerda; la Tarea, qué debe completar esta vez.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la relación en tres capas entre proyecto, hilo y Tarea; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: "6d859d7"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Este ejercicio divide la clasificación de issues en «generar una propuesta → validarla → revisarla por una persona». Obtendrás cinco registros para revisar. No se publican comentarios, se añaden etiquetas ni se cierran issues automáticamente.

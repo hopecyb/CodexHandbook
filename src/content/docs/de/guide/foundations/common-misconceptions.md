@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite räumt nur häufige Nutzungsmissverständnisse aus; interne Links, Vergleichstabelle und Konzeptgrenzen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Häufige Missverständnisse
 description: "Räumt Missverständnisse aus, Codex als allmächtige Blackbox zu behandeln."
 locale: de
 source_locale: zh-CN
-source_revision: 700e57b
+source_revision: "700e57b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 120
 ---
 
-Viele nutzen Codex anfangs schlecht — nicht weil die Bedienung fehlt, sondern weil die Erwartung schief sitzt.
+Viele nutzen Codex anfangs schlecht — nicht wegen fehlender Bedienkenntnisse, sondern wegen falscher Erwartungen.
 
 Zum Beispiel:
 
@@ -29,9 +34,9 @@ Es ist nicht:
 
 - Eine Blackbox mit automatischer Korrektheitsgarantie
 - Ein Gedankenleser ohne Kontextbedarf
-- Ein Verantwortungs-Transfergerät, das Folgen für dich trägt
+- Ein System, das dir die Verantwortung für die Folgen abnimmt
 
-Je klarer du gibst, desto stabiler; je mehr du erwartest, dass es alle Details selbst errät, desto leichter enttäuscht es.
+Je klarer du den Auftrag formulierst, desto zuverlässiger arbeitet es; je mehr du erwartest, dass es alle Details selbst errät, desto leichter enttäuscht es.
 
 | Missverständnis | Näher an der Praxis |
 |---|---|
@@ -39,8 +44,8 @@ Je klarer du gibst, desto stabiler; je mehr du erwartest, dass es alle Details s
 | „Je mystischer der Prompt, desto besser“ | Klares Ziel, Einschränkungen und Abnahme zählen mehr als Zaubersprüche |
 | „Volle Berechtigungen sind schneller“ | Mehr Berechtigung = größere Unfallfläche |
 | „Eine ultralange Sitzung löst alles“ | Alter Kontext verunreinigt neue Aufgaben |
-| „Cloud ist immer sicherer als lokal“ | Sicherheit hängt von Politik, Secrets und Prüfung ab — nicht vom Ort |
-| „Im Handbook steht es = offiziell“ | OpenAI-Doku ist maßgeblich; das Handbook hilft beim Lernen |
+| „Cloud ist immer sicherer als lokal“ | Sicherheit hängt von Richtlinien, Secrets und Prüfung ab — nicht vom Ort |
+| „Im Handbuch steht es = offiziell“ | OpenAI-Doku ist maßgeblich; das Handbuch hilft beim Lernen |
 
 ## Die drei häufigsten Fallen
 
@@ -48,7 +53,7 @@ Je klarer du gibst, desto stabiler; je mehr du erwartest, dass es alle Details s
 
 Flüssige Antworten heißen nicht, dass Dateien wirklich richtig geändert, Prüfungen gelaufen oder Abhängigkeiten geklärt sind.
 
-Nur den Antworttext reicht nicht — auch prüfen:
+Nur den Antworttext zu lesen reicht nicht — auch prüfen:
 
 - Was hat es wirklich geändert?
 - Hat es kritische Schritte wirklich ausgeführt?
@@ -77,10 +82,3 @@ Fehlt eine der drei, steigt die Fehlerwahrscheinlichkeit deutlich.
 Codex ist stark — in klaren Zielen und Grenzen noch besser. Verständnis und Urteil spart es dir nicht.
 
 Als Nächstes: [Schnellstart](/de/guide/getting-started/).
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite räumt nur häufige Nutzungsmissverständnisse aus; interne Links, Vergleichstabelle und Konzeptgrenzen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

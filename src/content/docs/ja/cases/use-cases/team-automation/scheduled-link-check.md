@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: 0d21aa9
-translation_status: draft
+source_revision: "0d21aa9"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 定期検査を設定する前に、スクリプトが本当に問題を発見し、何を調べたか説明できることを確認します。この演習は意図的なリンク切れ 2 件から始めます。対象を一つずつ直し、結果の変化を観察します。

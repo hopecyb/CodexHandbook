@@ -3,10 +3,14 @@ title: Scheduled tasks
 description: 検証済みのタスクを ChatGPT でスケジュールに従って繰り返し実行します。
 locale: ja
 source_locale: zh-CN
-source_revision: 759c38e
+source_revision: "759c38e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / デスクトップ App。CLI と IDE は準備とテストにのみ使用し、管理画面は提供しません
+  checkedAt: '2026-08-26'
 ---
 
 Scheduled task（定期タスク）を使うと、ChatGPT がバックグラウンドでスケジュールに従って作業を繰り返せます。定期レポート、継続的なフォローアップ、反復メンテナンスに向きますが、任意の webhook、リポジトリイベント、CI 自動化と同じものではありません。
@@ -34,11 +38,3 @@ Scheduled task（定期タスク）を使うと、ChatGPT がバックグラウ�
 ## 公式情報
 
 - [OpenAI：Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**状態：** verified
-
-**対象製品：** ChatGPT Web / デスクトップ App。CLI と IDE は準備とテストにのみ使用し、管理画面は提供しません
-
-**最終検証：** 2026-08-26

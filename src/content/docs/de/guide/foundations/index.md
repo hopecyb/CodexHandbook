@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Struktur und Lesereihenfolge des Grundlagenkapitels; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von Produktversion, Preisen oder UI und anderen schnell veränderlichen Fakten ab."
+  checkedAt: "2026-07-26"
 title: Grundlagen
 description: "Eine gemeinsame Sprache für Modelle, Agent, Werkzeuge, Berechtigungen und Überprüfung aufbauen."
 locale: de
 source_locale: zh-CN
-source_revision: b4d4b2b
+source_revision: "b4d4b2b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 3
 ---
 
-Dieser Teil bündelt die Grundlagenbegriffe, die das ganze Handbook immer wieder nutzt. Unterschiede der Produkt-UI stehen im [Produkthandbuch](/de/guide/); Prompt-Techniken in den [Kernfähigkeiten](/de/guide/).
+Dieser Teil bündelt die Grundlagenbegriffe, die das ganze Handbuch immer wieder nutzt. Unterschiede der Produkt-UI stehen im [Produkthandbuch](/de/guide/); Prompt-Techniken in den [Kernfähigkeiten](/de/guide/).
 
 Hier geht es vor allem darum, wie Codex arbeitet — und wie du mit ihm zusammenarbeitest.
 
@@ -67,10 +72,3 @@ Wenn du das Kapitel nicht in einem Rutsch lesen willst, starte mit diesen Seiten
 5. [Überprüfung und menschliche Kontrolle](/de/guide/foundations/verification-and-human-review/)
 
 Diese Seiten zu verstehen reicht schon für den Alltagseinsatz.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur Struktur und Lesereihenfolge des Grundlagenkapitels; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von Produktversion, Preisen oder UI und anderen schnell veränderlichen Fakten ab.  
-**Zuletzt überprüft:** 2026-07-26

@@ -7,9 +7,10 @@ title: Plugins
 description: Parcourir, installer et gérer des ensembles réutilisables de Skills, connecteurs, MCP, Hooks et modèles de tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: 8917a59
-translation_status: draft
+source_revision: '8917a59'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Un Plugin regroupe et distribue des capacités. Il peut comprendre des Skills, des connecteurs, des serveurs MCP, des extensions de navigateur, des Hooks et des modèles de Scheduled tasks. Ce sont ces composants qui exécutent le travail.

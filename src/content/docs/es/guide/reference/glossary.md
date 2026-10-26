@@ -3,12 +3,17 @@ title: Glosario
 description: Definiciones cortas de términos habituales del manual.
 locale: es
 source_locale: zh-CN
-source_revision: ae4b794
+source_revision: 'ae4b794'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo ofrece definiciones cortas de términos habituales del manual; se revisaron enlaces internos y definiciones, y el cuerpo no depende de versión de producto, precios ni hechos de interfaz variables.
+  checkedAt: '2026-07-26'
 ---
 
 | Término | Definición |
@@ -18,8 +23,8 @@ sidebar:
 | Diff | Vista de comparación antes/después de un cambio |
 | Tarea Cloud | Tarea ejecutada en un Entorno Cloud |
 | Contexto | Conjunto de información que el modelo puede usar en el momento |
-| Compactación | Proceso de resumir Contexto largo para ahorrar ventana |
-| Hook | Lógica personalizada en nodos del ciclo de vida (avanzado) |
+| Compactación | Proceso de resumir Contexto largo para liberar espacio en la ventana de contexto |
+| Hook | Lógica personalizada en puntos del ciclo de vida (avanzado) |
 | MCP | Protocolo para conectar Herramientas y datos externos (avanzado) |
 | Prompt | Texto de objetivo y requisitos para el Agent |
 | Sandbox | Aislamiento de ejecución que limita el alcance del impacto |
@@ -64,10 +69,3 @@ Puedes hacer esto:
 3. Ir a la página temática para la explicación completa
 
 Así un término no interrumpe demasiado el ritmo de lectura.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo ofrece definiciones cortas de términos habituales del manual; se revisaron enlaces internos y definiciones, y el cuerpo no depende de versión de producto, precios ni hechos de interfaz variables.  
-**Última verificación:** 2026-07-26

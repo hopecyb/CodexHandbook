@@ -8,11 +8,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: b3d30b0
-translation_status: draft
+source_revision: 'b3d30b0'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 이 표는 **안정적인 주요 작업 방식**만 비교하며, 빠르게 달라지는 세부 기능을 영구적인 약속처럼 제시하지 않습니다. 먼저 [클라이언트 선택 안내](/ko/guide/choose-your-client/)로 선택한 다음 여기에서 차이를 확인하세요.

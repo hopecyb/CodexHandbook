@@ -3,10 +3,19 @@ title: Dokumentationssite mit Prüfung refactoren
 description: "Fall: In einem Astro/Starlight-Docs-Projekt Links und Kapitel batchweise aktualisieren — kleine Diffs, Build-Überprüfung."
 locale: de
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: "db44ca3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+caseCategory: development
+directoryOrder: 75
+contentType: case
+legacyVerification:
+  status: verified
+  products: "CLI / IDE"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Content-Artefakten, EPXV, Build-Abnahme und Fallvorlage. Der Inhalt beschränkt sich auf den stabilen Content-Engineering-Fall „Mehrdatei-Docs-Site
+    in kleinen Schritten ändern, Build prüfen, Fehler wiederherstellen“.
+  checkedAt: '2026-07-26'
 ---
 
 Dieser Fall zeigt eine **Content-Engineering**-Aufgabe: Mehrdatei-Markdown, Sidebar-Config, Build-Überprüfung. Der Stack ähnelt diesem Handbuch; das Muster lässt sich auf jede Static Site übertragen.
@@ -28,9 +37,9 @@ Nach einem neuen Kapitel muss die Docs-Site:
 
 1. Sidebar-Slugs in `astro.config` aktualisieren
 2. Relative Links im Text korrigieren
-3. `npm run build` fehlerfrei
+3. `npm run build` fehlerfrei durchlaufen
 
-Menschen übersehen leicht Slugs; geeignet für Agent **nach Checkliste ausführen + Build-Abnahme**.
+Menschen übersehen leicht Slugs; hier kann ein Agent **eine Checkliste abarbeiten und das Ergebnis durch den Build prüfen**.
 
 ## Vorbereitung
 
@@ -74,9 +83,3 @@ Schritte: Zuerst Config, dann md, zuletzt 12-reference/index.md aktualisieren.
 
 ## Referenzquellen
 - Tatsächlicher M2-Docs-Iterationsablauf dieses Repos
----
-
-**Status:** verified  
-**Geeignete Produkte:** CLI / IDE  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Content-Artefakten, EPXV, Build-Abnahme und Fallvorlage. Der Inhalt beschränkt sich auf den stabilen Content-Engineering-Fall „Mehrdatei-Docs-Site in kleinen Schritten ändern, Build prüfen, Fehler wiederherstellen“.  
-**Zuletzt geprüft:** 2026-07-26

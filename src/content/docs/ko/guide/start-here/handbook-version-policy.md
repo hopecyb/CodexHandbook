@@ -5,9 +5,15 @@ sidebar:
   order: 8
 locale: ko
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 핸드북의 현재 6가지 상태 체계, 검증 정보 표시 규칙, 공식 문서 우선 원칙에 따라 검토했습니다. 이 페이지는 사이트의 버전 정책과 읽는 방법을 설명하며 특정 제품 버전의 매개변수에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
+reviewed_at: "2026-10-26"
 ---
 
 ## 지속 업데이트
@@ -37,8 +43,8 @@ translated_at: 2026-09-20
 - `draft`: 쓰는 중이나 아직 불안정
 - `review`: 본문은 갖춰졌으나 가장 강한 확인 단계는 아님
 - `verified`: 표시된 근거로 이미 검증됨
-- `outdated`: 예전에는 맞았을 수 있으나 지금은 시효에 주의
-- `archived`: 참고용으로 남김. 현재 주선 콘텐츠로 쓰지 않음
+- `outdated`: 예전에는 맞았을 수 있으나 지금은 정보가 오래되었을 수 있음
+- `archived`: 참고용으로 남김. 현재 주요 콘텐츠로 쓰지 않음
 
 ## 검증 기록과 콘텐츠 업데이트
 
@@ -74,7 +80,7 @@ translated_at: 2026-09-20
 
 ## 한 페이지가 믿을 만한지 판단하는 법
 
-시효가 걱정되면 세 가지를 보세요.
+내용이 오래되었을까 걱정되면 세 가지를 보세요.
 
 1. 페이지 맨 위의 편집 상태가 `review`, `verified`, `outdated` 중 무엇인지
 2. 최근 검증 날짜가 지금과 얼마나 먼지

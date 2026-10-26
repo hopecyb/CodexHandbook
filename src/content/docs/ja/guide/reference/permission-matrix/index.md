@@ -3,12 +3,16 @@ title: 権限マトリクス
 description: ローカルの Permission Profile、従来のサンドボックス、Cloud のネットワークポリシーを区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: c6ad6aa
+source_revision: 'c6ad6aa'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE, Cloud
+  checkedAt: '2026-08-26'
 ---
 
 「App / CLI / IDE / Cloud のどれが確認ダイアログを出すか」という固定表だけで権限を推測しないでください。実際の動作は、実行場所、有効な設定、組織の requirements、OS、タスクが行う操作の組み合わせで決まります。
@@ -70,7 +74,7 @@ enabled = true
 | テストを実行する | スクリプトの副作用 | スクリプトをレビューし、管理された環境を使用 |
 | 依存関係をインストールする | サプライチェーンとネットワーク接続 | バージョンを固定し、ドメインを制限 |
 | Git push / PR | 外部状態の変更 | 独立したブランチ、ブランチ保護、人によるレビュー |
-| MCP / Plugin ツール | 第三者へのデータ送信と書き込み操作 | 最小 scope、項目ごとの承認とログ |
+| MCP / Plugin ツール | 第三者のデータの取り扱いと書き込み操作 | 最小 scope、項目ごとの承認とログ |
 
 `AGENTS.md` には「push しない」と書けますが、技術的に強制する境界ではありません。ルールを sandbox / permissions、GitHub 権限、人によるレビューと組み合わせる必要があります。
 
@@ -90,11 +94,3 @@ Permission Profiles はまだ Beta です。アップグレード後は、この
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**ステータス：** verified
-
-**対象製品：** App、CLI、IDE、Cloud
-
-**最終確認：** 2026-08-26

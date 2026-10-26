@@ -1,26 +1,28 @@
 ---
-title: 'Tổng quan SDK: tác vụ cục bộ và tích hợp ứng dụng'
-description: Phân biệt Codex SDK, CLI không tương tác, App Server và dịch vụ tác vụ từ xa do bạn tự xây dựng.
-contentType: reference
-audiences: [developer]
-level: intermediate
-editorialStatus: review
+title: "Tổng quan SDK: tác vụ cục bộ và tích hợp ứng dụng"
+description: "Phân biệt Codex SDK, CLI không tương tác, App Server và dịch vụ tác vụ từ xa do bạn tự xây dựng."
+contentType: "reference"
+audiences:
+  - "developer"
+level: "intermediate"
+editorialStatus: "review"
 verification:
-  kind: source-checked
-  checkedAt: '2026-09-18'
-  summary: Đã đối chiếu nơi thực thi, giao diện thread và ranh giới tích hợp với tài liệu SDK và App Server chính thức. Ví dụ tối thiểu chỉ được kiểm tra cú pháp; chưa gọi mô hình có xác thực.
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Đã đối chiếu nơi thực thi, giao diện thread và ranh giới tích hợp với tài liệu SDK và App Server chính thức. Ví dụ tối thiểu chỉ được kiểm tra cú pháp; chưa gọi mô hình có xác thực."
   evidence:
-    - label: Tài liệu Codex SDK chính thức
-      href: https://learn.chatgpt.com/docs/codex-sdk
-    - label: Tài liệu Codex App Server chính thức
-      href: https://learn.chatgpt.com/docs/app-server
+    - label: "Tài liệu Codex SDK chính thức"
+      href: "https://learn.chatgpt.com/docs/codex-sdk"
+    - label: "Tài liệu Codex App Server chính thức"
+      href: "https://learn.chatgpt.com/docs/app-server"
 sidebar:
   order: 10
-locale: vi
-source_locale: zh-CN
-source_revision: e888ae6
-translation_status: draft
-translated_at: '2026-09-20'
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "e888ae6"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Codex SDK cho phép chương trình điều khiển Codex Agent cục bộ. “Cục bộ” là máy chạy SDK và Agent: máy của bạn hoặc CI runner do bạn quản lý. Đừng coi đó là dịch vụ HTTP được OpenAI lưu trữ để tạo tác vụ Cloud, thăm dò trạng thái và tải thành phẩm. Xem [tài liệu SDK chính thức](https://learn.chatgpt.com/docs/codex-sdk).

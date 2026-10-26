@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against OpenAI Developers' current public use cases for long-horizon goals and long-task collaboration, plus this handbook's verified handoff/resume, planning, compaction, and delegation chapters; this page covers only stable methods for checkpoints, handoff, and exit conditions on long tasks."
+  checkedAt: "2026-07-26"
 title: Long-running task management
 description: Large tasks across hours or sessions—checkpoints, compaction, delegation, and exit conditions.
 locale: en
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: 'c2a9887'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Long tasks often run into the same problems: **context fills up**, **people step away**, **direction drifts**, and **it's unclear when to stop**. This page applies [Explore–Plan–Execute–Verify](/en/cases/workflows/explore-plan-execute-verify/) to scenarios that span hours or multiple sessions.
@@ -69,10 +74,3 @@ After each milestone:
 - [ ] Plan document exists before the long task starts
 - [ ] At least two checkpoints have reviewable diffs
 - [ ] You know how to pause, resume, or hand off
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public use cases for long-horizon goals and long-task collaboration, plus this handbook's verified handoff/resume, planning, compaction, and delegation chapters; this page covers only stable methods for checkpoints, handoff, and exit conditions on long tasks.

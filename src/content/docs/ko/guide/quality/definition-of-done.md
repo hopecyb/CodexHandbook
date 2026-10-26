@@ -3,12 +3,17 @@ title: 완료 정의
 description: 팀과 개인이 공유하는 완료 체크리스트 사고방식.
 locale: ko
 source_locale: zh-CN
-source_revision: f55e9f7
+source_revision: 'f55e9f7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 완료 정의의 역할과 쓰기만 설명합니다. 개념·예시·체크리스트 표현을 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 “완료 정의”의 뜻은 단순합니다. 어느 정도까지 해야 이번이 진짜 완료인지 미리 말하는 것입니다.
@@ -67,7 +72,7 @@ sidebar:
 
 아닙니다.
 
-길게보다 분명하게가 더 중요합니다.
+길이보다 명확함이 더 중요합니다.
 
 ## 짧은 템플릿
 
@@ -81,10 +86,3 @@ sidebar:
 ```
 
 “완료 정의”는 “어느 정도까지면 끝난 것인지”를 분명히 말해, 당신과 Codex의 판단이 어긋나지 않게 합니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 완료 정의의 역할과 쓰기만 설명합니다. 개념·예시·체크리스트 표현을 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

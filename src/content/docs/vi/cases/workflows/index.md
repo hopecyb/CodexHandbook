@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương prompt, chất lượng, làm việc Agent và Skills đã kiểm chứng của sổ tay; trang này chỉ đảm nhận điều hướng phương pháp và điểm kiểm tra theo giai đoạn, không viết quy trình client cụ thể thành hợp đồng dài hạn.", "checkedAt": "2026-07-26"}
 title: Phương pháp quy trình
 description: Phương pháp cộng tác có thể lặp lại — không gắn một giao diện sản phẩm duy nhất; nhấn mạnh điểm kiểm tra và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: d058896
+source_revision: "d058896"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 [Prompt](/vi/prompts/) dạy bạn cách **nói**; quy trình dạy bạn cách **tổ chức cả một việc**. Phương pháp chương này áp dụng cho App, CLI, IDE và Cloud.
@@ -26,7 +27,7 @@ Không có điểm kiểm tra thì dễ: sửa sai thư mục, quên chạy test
 | Quy trình | Giải quyết vấn đề gì |
 |---|---|
 | [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/) | Chuỗi chính dùng chung, phù hợp hầu hết tác vụ |
-| [Brainstorm trước rồi mới làm](/vi/cases/workflows/brainstorm-before-building/) | Phân tán và hội tụ khi phương án chưa chốt |
+| [Brainstorm trước rồi mới làm](/vi/cases/workflows/brainstorm-before-building/) | Mở rộng ý tưởng rồi chọn lọc khi phương án chưa chốt |
 | [Làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/) | Viết đặc tả nghiệm thu được trước rồi mới triển khai |
 | [Làm việc theo test](/vi/cases/workflows/test-driven-work/) | Test trước dẫn dắt triển khai |
 | [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/) | Khi nào dừng, khi nào duyệt, khi nào từ chối |
@@ -52,10 +53,3 @@ Không có điểm kiểm tra thì dễ: sửa sai thư mục, quên chạy test
 2. **Mặc định bước nhỏ:** tăng dần review được tốt hơn một thay đổi khổng lồ
 3. **Thất bại phục hồi được:** biết cách hoàn tác, cách fork Thread để tiếp tục
 4. **Đóng gói được thì đóng gói:** quy trình lặp lần thứ ba viết thành Skill hoặc mẫu
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương prompt, chất lượng, làm việc Agent và Skills đã kiểm chứng của sổ tay; trang này chỉ đảm nhận điều hướng phương pháp và điểm kiểm tra theo giai đoạn, không viết quy trình client cụ thể thành hợp đồng dài hạn.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -3,10 +3,17 @@ title: Environment Variables
 description: Purpose, layering, and security of Codex-related environment variables—supplement to configuration reference.
 locale: en
 source_locale: zh-CN
-source_revision: 58fd37b
+source_revision: '58fd37b'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE / Cloud
+  basis: OpenAI Help Center still documents `~/.codex/.env`, CI/runtime injection, and platform Secrets; page focuses on stable principles—which values belong in env, what does not, `.env` as local container—without fixing a variable name list.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 80
 ---
 
 Environment variables sit at two extremes: “too low level” or “dump everything here.” Simply: they pass values into programs at runtime—especially secrets and switches.
@@ -159,9 +166,3 @@ Environment variables fit values that change, are sensitive, or are needed only 
 
 ## Reference sources
 - OpenAI Codex configuration / environment documentation
----
-
-**Status:** verified  
-**Products:** CLI / App / IDE / Cloud  
-**Verification basis:** OpenAI Help Center still documents `~/.codex/.env`, CI/runtime injection, and platform Secrets; page focuses on stable principles—which values belong in env, what does not, `.env` as local container—without fixing a variable name list.  
-**Last verified:** 2026-07-26

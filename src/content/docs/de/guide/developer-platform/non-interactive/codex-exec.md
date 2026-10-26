@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Mit den aktuellen offiziellen Seiten zum nicht interaktiven Modus und zu Developer commands abgeglichen. Verifiziert wurden der stabile Einstieg `codex exec`, `--cd` / `-C`, die standardmäßig schreibgeschützte Sandbox, `workspace-write` sowie JSONL- und Schema-Ausgaben."
+  checkedAt: "2026-08-26"
 title: codex exec
 description: Einstieg für nicht interaktive Ausführungen, der Skripten und CI einmalig eine vollständige Aufgabe übergibt.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 6d7c481
+source_revision: "6d7c481"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Während du mit dem interaktiven `codex` im Dialog arbeitest, übergibt **`codex exec`** eine Aufgabe in einem Durchlauf und liefert nach ihrer Ausführung ein Ergebnis zurück.
@@ -76,7 +81,7 @@ Grundregeln:
 
 ## Eine leicht übersehene Konsequenz
 
-Im interaktiven Modus kannst du nachträglich sagen: „So war das nicht gemeint.“  
+Im interaktiven Modus kannst du nachträglich sagen: „So war das nicht gemeint.“
 Im `exec`-Modus kann **eine ungenaue erste Beschreibung den gesamten Lauf in die falsche Richtung lenken**.
 
 Formuliere deshalb in einem `exec`-Prompt deutlicher als sonst:
@@ -146,7 +151,7 @@ Aus diesem Grund integrieren viele Teams den Befehl hinter `make review`, GitHub
 ## Sicherheitsgrenzen
 
 - Unbeaufsichtigte Ausführung schwächt [menschliche Genehmigungen](/de/cases/workflows/human-approval-patterns/); verwende standardmäßig Schreibschutz
-- Siehe [Sichere Zugangsdaten](/de/guide/developer-platform/ci-cd/code-review-automation/#sichere-zugangsdaten) im selben Kapitel
+- Siehe [Berechtigungen und Sicherheit](/de/guide/developer-platform/ci-cd/code-review-automation/#berechtigungen-und-sicherheit) im selben Kapitel
 
 ## Abnahmecheckliste
 
@@ -163,12 +168,3 @@ Aus diesem Grund integrieren viele Teams den Befehl hinter `make review`, GitHub
 
 ## Quellen
 - OpenAI-Dokumentation zur Codex CLI
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zum nicht interaktiven Modus und zu Developer commands abgeglichen. Verifiziert wurden der stabile Einstieg `codex exec`, `--cd` / `-C`, die standardmäßig schreibgeschützte Sandbox, `workspace-write` sowie JSONL- und Schema-Ausgaben.
-
-**Zuletzt geprüft:** 2026-08-26

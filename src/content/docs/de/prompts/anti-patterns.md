@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite fasst nur gängige Prompt-Anti-Patterns zusammen; Querverweise und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Prompt-Anti-Patterns
-description: 'Vage Formulierungen, Überschreitung von Grenzen und versteckte Reasoning-Anforderungen vermeiden.'
+description: 'Vage Formulierungen, Überschreitung von Grenzen und Anforderungen zur Offenlegung verborgener Denkprozesse vermeiden.'
 locale: de
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: "8e89a5a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Beim Lernen von Prompts liegt der Fokus leicht nur auf „wie schreiben“.  
@@ -48,7 +53,8 @@ Kurzfristig eine Runde weniger Dialog; danach oft:
 
 ### 3. Mehr Rechte = schnellerer Fortschritt
 
-Mehr Rechte = größere Fehlerradius.  
+Mehr Rechte = größerer möglicher Schadensumfang.
+
 Besonders bei unklarem Scope vergrößert große Berechtigung das Risiko mit.
 
 ## Anti-Patterns klarer umschreiben
@@ -62,7 +68,7 @@ Einfach mal optimieren
 ### Besser so
 
 ```text
-First-Screen-Text der Homepage für Einsteiger verständlicher machen,
+Formuliere den Text im ersten sichtbaren Bereich der Startseite für Einsteiger verständlicher,
 nur diese Datei, Struktur behalten; danach Diff und Build-Ergebnis.
 ```
 
@@ -83,10 +89,3 @@ Zum Beispiel:
 Die meisten Prompt-Anti-Patterns scheitern nicht an „schlechtem Stil“, sondern am Weglassen von Grenzen und Abnahme.
 
 Ersetze vage Wörter direkt durch Struktur: Ziel + Constraints + Abnahme.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite fasst nur gängige Prompt-Anti-Patterns zusammen; Querverweise und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

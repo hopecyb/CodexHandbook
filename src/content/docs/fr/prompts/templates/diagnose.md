@@ -8,10 +8,10 @@ title: Modèle de diagnostic
 description: Trouver la cause racine avant de discuter du correctif.
 locale: fr
 source_locale: zh-CN
-source_revision: 2491371
+source_revision: "2491371"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -29,7 +29,7 @@ Contraintes : ne modifie pas le code ; liste 2–3 causes possibles et comment l
 Sortie :
 1. cause la plus probable (avec preuves)
 2. étapes de vérification exécutables (commandes ou points de contrôle)
-3. ébauche de plan de correctif (après ma confirmation seulement)
+3. si l’hypothèse est confirmée, ébauche de plan de correction (à exécuter après mon accord)
 ```
 
 ## Quand l'utiliser

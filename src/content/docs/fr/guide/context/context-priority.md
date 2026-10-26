@@ -19,9 +19,10 @@ sidebar:
   order: 40
 locale: fr
 source_locale: zh-CN
-source_revision: "13537ef"
-translation_status: draft
+source_revision: '13537ef'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Pour répondre à « quelle instruction suivre ? », distinguez d'abord trois questions : quel rôle porte le message, comment les fichiers de projet sont chargés et ce que permet l'environnement d'exécution. « La dernière phrase l'emporte toujours » n'est pas une règle universelle. Un texte contenant « interdit » ne devient pas non plus automatiquement une permission système immuable.

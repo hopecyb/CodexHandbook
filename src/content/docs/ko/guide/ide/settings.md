@@ -3,11 +3,16 @@ title: IDE 확장 설정
 description: 공유 Agent 구성과 VS Code 계열 편집기의 동작 설정을 구분합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6f28910
-translation_status: draft
+source_revision: '6f28910'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 IDE에는 두 종류의 설정이 있습니다.

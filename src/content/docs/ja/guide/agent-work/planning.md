@@ -1,19 +1,20 @@
 ---
-title: "計画：実行経路と検証を明確にする"
-description: "計画で範囲、依存関係、判断を整理し、計画と承認待ちを区別して、既存の権限の中で作業を進めます。"
+title: 計画：実行経路と検証を明確にする
+description: 計画で範囲、依存関係、判断を整理し、計画と承認待ちを区別して、既存の権限の中で作業を進めます。
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
   checkedAt: "2026-09-18"
-  summary: "本ページは作業方法の提案であり、タスクの分類と権限の章と照合済みです。特定クライアントの既定動作や実測の効率向上は主張しません。"
+  summary: 本ページは作業方法の提案であり、タスクの分類と権限の章と照合済みです。特定クライアントの既定動作や実測の効率向上は主張しません。
 sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "a129229"
+translation_status: reviewed
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 計画とは、確認して調整できる実行経路です。範囲、依存関係、受け入れ条件の不足を早期に見つけられますが、タスクが大きいからといって確認待ちを繰り返す必要はありません。
 

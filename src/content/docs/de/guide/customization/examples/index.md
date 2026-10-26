@@ -3,13 +3,18 @@ title: Beispiele
 description: "Anhand realer Beispiele verstehen, wie Config und AGENTS.md geschrieben werden — nicht nur abstrakte Prinzipien."
 locale: de
 source_locale: zh-CN
-source_revision: c33809f
+source_revision: "c33809f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Geprüft gegen die aktuelle customization-Beispielgruppierung und Einstiegsstruktur; diese Seite navigiert und erklärt die Nutzung von Beispielen, ohne volatile Produktparameter oder Versionsverhalten.
+  checkedAt: '2026-07-26'
 ---
 
-Viele Prinzipien versteht man beim Lesen — im eigenen Repo weiß man dann nicht, wie man landet.
+Viele Prinzipien versteht man beim Lesen — im eigenen Repository bleibt aber oft unklar, wie man sie umsetzt.
 
 Diese Gruppe zeigt „wie andere es schreiben“ und hilft, abstrakte Regeln in konkretere Formulierungen zu verwandeln.
 
@@ -24,10 +29,3 @@ Diese Gruppe zeigt „wie andere es schreiben“ und hilft, abstrakte Regeln in 
 - Sie wollen zuerst ein reales Muster sehen und dann für Ihr Projekt anpassen
 
 Beispielseiten eignen sich zum Nachdenken über Ansätze — nicht zum Blindkopieren.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Geprüft gegen die aktuelle customization-Beispielgruppierung und Einstiegsstruktur; diese Seite navigiert und erklärt die Nutzung von Beispielen, ohne volatile Produktparameter oder Versionsverhalten.  
-**Zuletzt geprüft:** 2026-07-26

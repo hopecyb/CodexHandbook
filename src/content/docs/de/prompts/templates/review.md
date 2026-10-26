@@ -8,10 +8,10 @@ title: Review-Vorlage
 description: Diff und Änderungsrisiken strukturiert prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: "e89989d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -24,7 +24,7 @@ Probleme zuerst finden, dann entscheiden, ob geändert wird — das ist stabiler
 ```text
 Bitte den aktuellen Diff relativ zu 【main/Zielbranch】 reviewen — noch keinen Code ändern.
 Dimensionen:
-1. Überschreitet 【Issue/Spec】-Scope?
+1. Überschreitet die Änderung den Umfang von 【Issue/Spezifikation】?
 2. Logikfehler, Randfälle, Fehlerbehandlung
 3. Sicherheit (Secrets, Injection, Berechtigungen)
 4. Passen Tests und Docs zur Änderung?

@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "OpenAI Developers 홈은 현재에도 Codex로 구축·테스트·검토·변경 인도를 강조합니다. 이 페이지는 검증을 diff 검토·테스트 실행·출처 확인·완료 정의로 나누었으며, 사이트 내 품질 장과 교차 확인했습니다."
+  basis: "OpenAI Developers 홈은 현재에도 Codex로 구축·테스트·검토·변경 결과 전달를 강조합니다. 이 페이지는 검증을 diff 검토·테스트 실행·출처 확인·완료 정의로 나누었으며, 사이트 내 품질 장과 교차 확인했습니다."
   checkedAt: "2026-07-26"
 title: 품질과 검증
 description: diff 검토·테스트 실행·출처 확인과 완료 기준을 정의합니다.
@@ -10,9 +10,10 @@ sidebar:
   order: 21
 locale: ko
 source_locale: zh-CN
-source_revision: 90d62fb
-translation_status: draft
+source_revision: '90d62fb'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 
@@ -22,7 +23,7 @@ translated_at: 2026-09-20
 
 Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가 아니라, 매 작업 루프의 일부입니다.
 
-![일러스트: 돋보기로 diff의 추가·삭제 줄을 살피고, 옆에는 한 항목이 표시된 체크리스트와 통과한 테스트가 있다](/illustrations/verification.webp)
+![일러스트: 돋보기로 diff의 추가·삭제 줄을 살피고, 옆에는 검수 체크리스트와 시험관이 있으며 한 항목은 처리 대기로 표시되어 있다](/illustrations/verification.webp)
 
 ## 검증이 보는 것
 
@@ -38,7 +39,7 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 - 페이지는 열리지만 실제 흐름이 안 통함
 - 문서는 나왔지만 신입이 따라 하기 어려움
 
-그래서 검증의 역할은 **위험을 인도 전에 막는 것**입니다.
+그래서 검증의 역할은 **위험을 전달 전에 막는 것**입니다.
 
 ## 흔한 오해
 
@@ -71,7 +72,7 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 1. 결과가 주제에서 벗어나지 않았는지
 2. 변경 범위가 너무 크지 않은지
 3. 자동으로 돌릴 수 있는 검사를 실행
-4. 마지막으로 사람 관점에서 인도 가능한지
+4. 마지막으로 사람 관점에서 전달 가능한지
 
 이렇게 이해하면 됩니다.
 
@@ -102,4 +103,4 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 
 검증은 이 결과가 정말 쓸 수 있고, 믿을 수 있고, 넘길 수 있는지 확인하는 일입니다.
 
-프롬프트에서 수락 기준을 쓰는 방법은 [완료 기준 정의](/ko/prompts/define-done/)를 보세요. 엔드투엔드 사례는 [실전 사례](/ko/cases/)를 보세요.
+프롬프트에서 완료 기준을 쓰는 방법은 [완료 기준 정의](/ko/prompts/define-done/)를 보세요. 엔드투엔드 사례는 [실전 사례](/ko/cases/)를 보세요.

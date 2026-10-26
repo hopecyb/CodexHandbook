@@ -1,25 +1,27 @@
 ---
-title: Ranh giới Webhook và sự kiện tác vụ
-description: Phân biệt kết quả Codex chạy cục bộ, sự kiện App Server và callback HTTP do bạn tự thiết kế.
-contentType: reference
-audiences: [developer]
-editorialStatus: review
+title: "Ranh giới Webhook và sự kiện tác vụ"
+description: "Phân biệt kết quả Codex chạy cục bộ, sự kiện App Server và callback HTTP do bạn tự thiết kế."
+contentType: "reference"
+audiences:
+  - "developer"
+editorialStatus: "review"
 verification:
-  kind: source-checked
-  checkedAt: '2026-09-18'
-  summary: Đã kiểm tra mô hình thực thi và sự kiện của SDK và App Server. Phần callback HTTP là gợi ý cho kiến trúc tự xây, không khẳng định tồn tại hợp đồng Webhook Codex Cloud thống nhất.
+  kind: "source-checked"
+  checkedAt: "2026-09-18"
+  summary: "Đã kiểm tra mô hình thực thi và sự kiện của SDK và App Server. Phần callback HTTP là gợi ý cho kiến trúc tự xây, không khẳng định tồn tại hợp đồng Webhook Codex Cloud thống nhất."
   evidence:
-    - label: Tài liệu SDK chính thức
-      href: https://learn.chatgpt.com/docs/codex-sdk
-    - label: Giao thức và sự kiện App Server
-      href: https://learn.chatgpt.com/docs/app-server
+    - label: "Tài liệu SDK chính thức"
+      href: "https://learn.chatgpt.com/docs/codex-sdk"
+    - label: "Giao thức và sự kiện App Server"
+      href: "https://learn.chatgpt.com/docs/app-server"
 sidebar:
   order: 10
-locale: vi
-source_locale: zh-CN
-source_revision: 8a84ab8
-translation_status: draft
-translated_at: '2026-09-20'
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "8a84ab8"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Khi tác vụ kết thúc, có thể báo cho hệ thống nội bộ qua giá trị trả về của chương trình, trạng thái thoát, luồng sự kiện hoặc callback HTTP. Hãy xác định bên gửi và giao thức trước, sau đó mới quyết định có cần Webhook không.

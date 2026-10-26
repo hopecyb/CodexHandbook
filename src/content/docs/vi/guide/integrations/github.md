@@ -1,17 +1,22 @@
 ---
-title: Tích hợp GitHub
-description: Nối kho, PR, Review và CI — vị trí của Codex trong quy trình GitHub.
-locale: vi
-source_locale: zh-CN
-source_revision: ece7161
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tích hợp GitHub"
+description: "Nối kho, PR, Review và CI — vị trí của Codex trong quy trình GitHub."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "ece7161"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "Cloud / App / CLI"
+  basis: "Use cases Codex hiện tại của OpenAI Developers vẫn gồm “Review GitHub pull requests”; hướng dẫn plugin và tích hợp của OpenAI Help Center cũng liên tục nhấn mạnh: truy cập kho ngoài phụ thuộc quyền app nền, truy cập vai trò và ranh giới hành động. Trang này chỉ tóm tắt vị trí cộng tác của kho GitHub, nhánh, PR, Review và CI, cùng khác biệt về khả năng thấy mã giữa cục bộ và Cloud."
+  checkedAt: "2026-07-26"
 ---
 
-GitHub là mặt cộng tác mã phổ biến nhất của Codex: tác vụ Cloud, rà soát PR, Actions và push cục bộ đều quanh cùng một bộ nhánh và quyền.
+GitHub là nền tảng cộng tác mã phổ biến nhất của Codex: tác vụ Cloud, rà soát PR, Actions và push cục bộ đều quanh cùng một bộ nhánh và quyền.
 
 Ở đây chủ yếu nói Codex nối vào quy trình cộng tác “kho mã, nhánh, PR, Review” thế nào.
 
@@ -28,7 +33,7 @@ Dù bạn không phải lập trình viên kỳ cựu, cũng có thể xem trư�
 | Nối kho từ xa | Cài đặt Cloud | [Nối GitHub](/vi/guide/web-and-cloud/connect-github/) |
 | Sửa mã Cloud mở PR | Tác vụ Cloud | [Tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/) |
 | Rà soát diff cục bộ | App máy tính / IDE | [Diff và bình luận](/vi/guide/desktop-app/diffs-comments-and-review/) |
-| Chạy Codex trong CI | GitHub Actions | Lộ trình `08-developer-platform/ci-cd/` |
+| Chạy Codex trong CI | GitHub Actions | [CI/CD](/vi/guide/developer-platform/ci-cd/) |
 | PR tự bình luận rà soát | Actions + exec | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
 
 ## Quy chuẩn nhóm khuyến nghị
@@ -67,7 +72,7 @@ Mục đích phổ biến hơn:
 
 - Đọc ngữ cảnh kho
 - Giúp gom diff hoặc review
-- Hỗ trợ mở PR, sửa bình luận
+- Hỗ trợ mở PR, sửa theo bình luận
 
 ### 2. Tôi chưa hiểu lắm các từ PR, Review thì sao?
 
@@ -89,20 +94,14 @@ Trọng tâm tích hợp GitHub là để Codex nối vào quy trình cộng tá
 ## An toàn
 
 - Thu nhỏ tối đa scope GitHub Token
-- Giữ cảnh giác với mẫu Actions nhạy cảm như `pull_request_target` (mặt tiêm)
+- Giữ cảnh giác với mẫu Actions nhạy cảm như `pull_request_target` (nguy cơ prompt injection)
 - Chạy tự động hóa trên Fork PR cần chiến lược cách ly thêm
 
 ## Lỗi thường gặp
 
 - Tác vụ Cloud giả định thay đổi cục bộ chưa commit vẫn tồn tại
-- Để Codex thực thi lệnh chưa khử độc trong mô tả PR (tiêm Prompt)
+- Để Codex thực thi chỉ dẫn chưa được xử lý an toàn trong mô tả PR (tiêm Prompt)
 - Cùng một PR trộn định dạng và thay đổi chức năng
 
 ## Nguồn tham khảo
 - Tài liệu tích hợp GitHub OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** Cloud / App / CLI  
-**Căn cứ kiểm chứng:** Use cases Codex hiện tại của OpenAI Developers vẫn gồm “Review GitHub pull requests”; hướng dẫn plugin và tích hợp của OpenAI Help Center cũng liên tục nhấn mạnh: truy cập kho ngoài phụ thuộc quyền app nền, truy cập vai trò và ranh giới hành động. Trang này chỉ tóm tắt vị trí cộng tác của kho GitHub, nhánh, PR, Review và CI, cùng khác biệt về khả năng thấy mã giữa cục bộ và Cloud.  
-**Kiểm chứng gần nhất:** 2026-07-26

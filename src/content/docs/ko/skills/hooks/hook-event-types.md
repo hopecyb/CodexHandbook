@@ -7,9 +7,10 @@ legacyVerification:
   checkedAt: "2026-08-25"
 locale: ko
 source_locale: zh-CN
-source_revision: 07f4965
-translation_status: draft
+source_revision: '07f4965'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Hook을 고를 때 첫 질문은 “스크립트를 어떻게 작성할까?”가 아니라 “부작용이 생기기 전과 후 중 언제 처리해야 할까?”입니다. 이벤트를 잘못된 위치에 두면 스크립트가 아무리 좋아도 일이 끝난 뒤 보고만 할 수 있습니다.
@@ -74,7 +75,7 @@ Codex가 원래 shell 권한 상승이나 관리되는 네트워크 접근 등�
 
 | 요구 사항 | 선택 | 이유 |
 |---|---|---|
-| 의심스러운 token이 파일에 기록되는 것을 막기 | `PreToolUse`로 `apply_patch|Edit|Write` 매칭 | 파일 쓰기 전에 처리해야 함 |
+| 의심스러운 token이 파일에 기록되는 것을 막기 | `PreToolUse`로 `apply_patch\|Edit\|Write` 매칭 | 파일 쓰기 전에 처리해야 함 |
 | shell 실패율 집계 | `PostToolUse`로 `Bash` 매칭 | 종료 결과가 필요함 |
 | 자동 컨텍스트 압축 전 중요한 결정 저장 | `PreCompact` | 압축 전에 발생함 |
 | 테스트가 끝나기 전에 작업이 종료되지 않게 하기 | `Stop` | 현재 작업 차례를 계속해야 함 |

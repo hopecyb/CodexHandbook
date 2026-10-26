@@ -3,11 +3,16 @@ title: Rever alterações no IDE
 description: Conferir o diff junto do código e usar um reviewer em modo só de leitura para examinar a árvore de trabalho.
 locale: pt
 source_locale: zh-CN
-source_revision: a6badd5
-translation_status: draft
+source_revision: "a6badd5"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 O IDE é adequado para ler rapidamente o resumo ao lado do código e examinar um diff específico. Contudo, uma alteração aparecer no editor não significa que tenha passado na aceitação. Verifica primeiro o diff, executa os testes e só depois decide o que manter.

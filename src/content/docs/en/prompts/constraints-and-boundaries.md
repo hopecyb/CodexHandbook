@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains constraint and boundary writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Constraints and boundaries
 description: Limit what can change, style rules, and forbidden actions.
 locale: en
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: '0ca4700'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many tasks fail not because the goal was missing entirely, but because **boundaries were unclear**.
@@ -98,10 +103,3 @@ Be explicit when:
 Goal tells Codex what to do; constraints tell it where to stop.
 
 Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/en/prompts/define-done/) and [Permissions and sandbox](/en/guide/permissions-and-sandbox/).
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains constraint and boundary writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

@@ -1,21 +1,26 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "O runtime atual do Codex ainda suporta diretório de Skills no projeto, definição via `SKILL.md` e chamada explícita para testes; esta página é um exercício estável de primeiro Skill."
+  checkedAt: "2026-07-26"
 title: Criar seu primeiro Skill
-description: Crie do zero um Skill pr-review commitável, com testes e compartilhamento em equipe.
+description: Crie do zero um Skill pr-review pronto para versionar no Git, com testes e compartilhamento em equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: "14414f5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Se você já sabe atribuir Tarefas, mas ainda não fez um Skill de verdade, esta página cobre o básico do primeiro Skill.
+Se você já sabe atribuir tarefas, mas ainda não fez um Skill de verdade, esta página cobre o básico do primeiro Skill.
 
 Em 15–30 minutos, faça um Skill **reutilizável no repositório** — costuma ser mais direto do que ler muita teoria. Um bom ponto de partida é um Skill pequeno, com limites bem claros.
 
 ## Para quem é
 
-Já consegue completar a [primeira Tarefa](/pt/cases/first-task/) e está disposto a experimentar num repositório de teste.
+Já consegue completar a [primeira tarefa](/pt/cases/first-task/) e está disposto a experimentar num repositório de teste.
 
 ## Por que começar com `pr-review`
 
@@ -110,7 +115,7 @@ git add .agents/skills/pr-review
 git commit -m "docs: add pr-review skill for Codex"
 ```
 
-No README da equipe ou em `AGENTS.md`, acrescente: «Antes do merge, use `$pr-review`.»
+No README da equipe ou em `AGENTS.md`, acrescente: «Antes do merge, você pode usar `$pr-review`.»
 
 ## Equívocos comuns
 
@@ -137,7 +142,7 @@ Um Skill útil precisa ao menos:
 - [ ] `$pr-review` roda e não executa operações git perigosas
 - [ ] A saída traz conclusões por gravidade, não genéricas
 - [ ] `description` deixa o cenário de disparo claro em uma frase
-- [ ] Conferiu [Permissão e Aprovação](/pt/guide/permissions-and-sandbox/) quanto a necessidade de scripts (este exemplo não tem scripts)
+- [ ] Conferiu [permissão e aprovação](/pt/guide/permissions-and-sandbox/) quanto a necessidade de scripts (este exemplo não tem scripts)
 
 Começar com um Skill «pequeno e estável» facilita reutilizar um roteiro de trabalho claro.
 
@@ -148,9 +153,3 @@ Começar com um Skill «pequeno e estável» facilita reutilizar um roteiro de t
 
 ## Fontes
 - Exemplos oficiais OpenAI Codex Skills e `skill-creator` (se o ambiente fornecer)
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base da Verificação:** O runtime atual do Codex ainda suporta diretório de Skills no projeto, definição via `SKILL.md` e chamada explícita para testes; esta página é um exercício estável de primeiro Skill.  
-**Última Verificação:** 2026-07-26

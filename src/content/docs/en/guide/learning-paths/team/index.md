@@ -19,9 +19,10 @@ sidebar:
   order: 30
 locale: en
 source_locale: zh-CN
-source_revision: 3b46738
-translation_status: draft
+source_revision: '3b46738'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Start with one limited task whose results can be checked. Use two weeks to gather evidence for whether wider use is warranted. Here, two weeks means ten working days. If there are too few tasks, extend the pilot; do not declare success simply because the calendar ran out.

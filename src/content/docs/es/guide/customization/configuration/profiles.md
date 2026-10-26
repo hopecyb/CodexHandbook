@@ -7,13 +7,13 @@ title: Profiles de configuración
 description: Superpón un conjunto de ajustes con nombre a Codex CLI mediante un archivo de configuración independiente.
 locale: es
 source_locale: zh-CN
-source_revision: 6ab30c5
-translation_status: draft
+source_revision: "6ab30c5"
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 20
+reviewed_at: 2026-10-25
 ---
-
 En la versión actual de Codex CLI, `--profile <name>` superpone `$CODEX_HOME/<name>.config.toml` a la configuración básica del usuario. Se utiliza principalmente en CLI; no debe presentarse como un «modo de un clic» universal de la aplicación de escritorio.
 
 ## Ejemplo mínimo

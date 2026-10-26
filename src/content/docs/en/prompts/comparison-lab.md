@@ -29,9 +29,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: 'e6a23bb'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 The point of a comparison is to discover which requirements affect delivery, not to prove that longer prompts are better. This page provides three sets of fixed inputs and records from 12 actual runs completed on 2026-09-18. These samples mainly show differences in delivery evidence. They are too limited to establish general effects.
@@ -101,6 +102,6 @@ You can run the materials check:
 python3 scripts/check_materials.py
 ```
 
-The nine fixed input files, three pairs of additive A/B prompts, and blank records were checked for fabricated scores. This script makes no model calls and does not test prompt effectiveness.
+Checks covered the nine fixed input files, three pairs of additive A/B prompts, and the absence of fabricated scores in the blank records. This script makes no model calls and does not test prompt effectiveness.
 
 The 12 runs, criterion-level scores, and elapsed times have been recorded. Actual model labels, complete platform logs, and independent human review remain unavailable. The results package also contains `python3 scripts/check_results.py` to recheck saved artifacts without rerunning a model. For the full original exercises, see the [weekly report](/en/cases/analyze-a-spreadsheet/), [article](/en/cases/write-an-article/), and [developer path](/en/guide/learning-paths/developer/).

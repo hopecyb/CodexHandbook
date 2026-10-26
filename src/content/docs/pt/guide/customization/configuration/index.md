@@ -1,12 +1,13 @@
 ---
 title: Configuração
-description: Página de orientação sobre ficheiros de configuração e profiles — o que deve e não deve ir para a configuração.
+description: Página de orientação sobre arquivos de configuração e profiles — o que deve e não deve ir para a configuração.
 locale: pt
 source_locale: zh-CN
-source_revision: 4d18d5e
+source_revision: "4d18d5e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Cruzada com a estrutura atual do subcapítulo configuration e ligações de entrada neste repositório; esta página limita-se ao princípio de agrupamento «a configuração trata de comportamentos predefinidos e preferências estáveis, não substitui aprovação nem regras de projeto», sem detalhes de chaves de configuração voláteis.", "checkedAt": "2026-07-26"}
 ---
 
 Na primeira vez que vê o grupo «configuração», é fácil pensar que só se trata de uma lista de nomes de parâmetros.
@@ -20,15 +21,8 @@ O que resolve principalmente é isto: como o Codex deve trabalhar por defeito, e
 
 ## Que problema este grupo resolve
 
-- Que preferências encaixam em ficheiros de configuração
+- Que preferências encaixam em arquivos de configuração
 - Quando deve dividir vários profiles
-- Porque algumas restrições devem ir para regras ou Aprovação, e não só para notas de configuração
+- Porque algumas restrições devem ir para regras ou aprovação, e não só para notas de configuração
 
-A configuração serve melhor para comportamentos predefinidos e preferências estáveis; não substitui Aprovação, regras nem instruções do projeto.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzada com a estrutura atual do subcapítulo configuration e ligações de entrada neste repositório; esta página limita-se ao princípio de agrupamento «a configuração trata de comportamentos predefinidos e preferências estáveis, não substitui Aprovação nem regras de projeto», sem detalhes de chaves de configuração voláteis.  
-**Última verificação:** 2026-07-26
+A configuração serve melhor para comportamentos predefinidos e preferências estáveis; não substitui aprovação, regras nem instruções do projeto.

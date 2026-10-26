@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Cross-checked against OpenAI Developers' current public multi-agent / subagent material, plus this handbook's verified subagent, handoff/resume, and parallel-work chapters; content is limited to stable methods for when to split, how to isolate boundaries, and how humans roll up and verify—not fixed contracts for current beta or UI entry points."
+  checkedAt: "2026-07-26"
 title: Multi-agent coordination
 description: Parallel exploration, divided execution, and merging results—when to split and how to verify.
 locale: en
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: '00989e9'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Multi-agent setups fit parallel, loosely coupled sub-problems. They do not fit two agents editing the same file with no coordinator.
@@ -47,7 +52,7 @@ Different Agents edit different branches in separate [git worktrees](/en/guide/d
 
 - Each Agent has explicit directory boundaries
 - No parallel `git push`
-- Run CI once before merge
+- Run a coordinated CI check before merging
 - Conflicts resolved by humans—don't let Agents guess
 
 ## Acceptance
@@ -60,10 +65,3 @@ Different Agents edit different branches in separate [git worktrees](/en/guide/d
 
 - Three parallel Agents editing `package.json`
 - No rollup step—unclear whose conclusion to follow
-
----
-
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public multi-agent / subagent material, plus this handbook's verified subagent, handoff/resume, and parallel-work chapters; content is limited to stable methods for when to split, how to isolate boundaries, and how humans roll up and verify—not fixed contracts for current beta or UI entry points.

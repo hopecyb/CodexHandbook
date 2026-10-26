@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Umgebungen mit lokalem Codex-Host; `/hooks`-Vertrauensverwaltung in der CLI"
+  checkedAt: "2026-08-25"
 title: Hooks im Überblick
 description: Verstehe Konfigurationserkennung, Vertrauensprüfung, Handler und Sicherheitsgrenzen von Hooks.
 locale: de
 source_locale: zh-CN
-source_revision: ac7889b
+source_revision: "ac7889b"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Mit Hooks kannst du Befehlsskripte oder Werkzeuge verbundener MCP-Server innerhalb der Agent-Schleife von Codex ausführen. Typische Zwecke sind die Erkennung von Zugangsdaten im Prompt, Richtlinien für Werkzeugaufrufe, Auditprotokolle, Sitzungszusammenfassungen und Verifikation vor dem Ende.
@@ -83,11 +87,3 @@ Die Werkzeugabdeckung eines Hooks ist keine vollständige Sicherheitsgrenze. Die
 ## Offizielle Quelle
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host; `/hooks`-Vertrauensverwaltung in der CLI
-
-**Zuletzt geprüft:** 2026-08-25

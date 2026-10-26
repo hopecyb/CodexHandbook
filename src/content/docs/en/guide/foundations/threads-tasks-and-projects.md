@@ -8,11 +8,12 @@ title: Threads, tasks, and projects
 description: Understand how conversations, tasks, and project workspaces relate.
 locale: en
 source_locale: zh-CN
-source_revision: c360452
-translation_status: draft
+source_revision: 'c360452'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 60
+reviewed_at: 2026-10-25
 ---
 
 Different products may use slightly different terms. This handbook uses:

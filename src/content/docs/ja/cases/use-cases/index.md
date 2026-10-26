@@ -3,10 +3,15 @@ title: シナリオと事例ライブラリ
 description: 準備から実行、検証、失敗回復、振り返りまでの実タスク一式。
 locale: ja
 source_locale: zh-CN
-source_revision: 1e284bb
+source_revision: "1e284bb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本リポジトリの現行事例ライブラリ構造、領域インデックス、事例テンプレート、examples プロンプト入口と照合。本ページは実タスク種別で整理された事例へのナビゲーションのみ。
+  checkedAt: '2026-07-26'
 ---
 
 事例ライブラリが答えるのは：**「この実際の目標で Codex を最初から最後まで動かすとどう見えるか？」** 単一トピックの製品ドキュメントを補完します。
@@ -41,10 +46,3 @@ reviewed_at: 2026-08-26
 - 再現可能な手順（リポジトリ、ブランチ、コマンド）
 - 対象クライアントと検証日を明記
 - 検証不能な「一発成功」物語は避ける
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本リポジトリの現行事例ライブラリ構造、領域インデックス、事例テンプレート、examples プロンプト入口と照合。本ページは実タスク種別で整理された事例へのナビゲーションのみ。

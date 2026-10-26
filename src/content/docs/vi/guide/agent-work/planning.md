@@ -11,8 +11,9 @@ sidebar:
   order: 10
 locale: vi
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: "a129229"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 Kế hoạch là một đường thực thi có thể kiểm tra và điều chỉnh. Nó giúp phát hiện sớm thiếu sót về phạm vi, phụ thuộc và nghiệm thu, nhưng tác vụ lớn hơn không đồng nghĩa phải liên tục chờ xác nhận.

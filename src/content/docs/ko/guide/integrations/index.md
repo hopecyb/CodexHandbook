@@ -5,10 +5,15 @@ sidebar:
   order: 55
 locale: ko
 source_locale: zh-CN
-source_revision: 140102c
+source_revision: '140102c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: Integrations
+  basis: OpenAI Help Center의 현재 플러그인·앱 설명은 Codex/ChatGPT 통합 능력이 plugins, apps, app templates로 연결되며, 관리자가 역할 접근·읽기/쓰기 동작·확인 요구·데이터 경계를 각각 통제할 수 있다고 강조합니다. 이 페이지는 통합 설계 원칙, 권한 계층, 착수 순서에 초점을 두며, 특정 외부 시스템의 일시적 UI에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니다. Agent를 이미 쓰는 협업 체인 — 코드 호스팅, 티켓 흐름, 알림 시스템, 내부 플랫폼, 지식 베이스 — 안에 넣는 일입니다.
@@ -16,7 +21,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 손대기 전에 더 생각해 둘 것은:
 
 - 누가 이 자동화 체인을 트리거할 수 있는지
-- Codex가 무엇을 읽고, 무엇을 되쓸 수 있는지
+- Codex가 무엇을 읽고, 무엇을 다시 기록할 수 있는지
 - 오류 시 누가 알고, 누가 책임지며, 어떻게 롤백하는지
 
 ## 통합이 실제로 바꾸는 것
@@ -54,7 +59,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 - 먼저 데이터 읽기
 - 이어서 제안 생성
 - 그다음 사람 확인
-- 마지막에 자동 되쓰기 고려
+- 마지막에 자동 쓰기 고려
 
 경계와 책임을 말하기 더 쉽습니다.
 
@@ -102,7 +107,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 - CI에서 비대화형 심사
 - review comment를 중심으로 2차 수정
 
-진입점: [GitHub 통합](/ko/guide/integrations/github/)과 [Web와 Cloud](/ko/guide/web-and-cloud/).
+진입점: [GitHub 통합](/ko/guide/integrations/github/)과 [Web과 Cloud](/ko/guide/web-and-cloud/).
 
 ### 티켓과 프로젝트 관리
 
@@ -155,11 +160,11 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 1. 외부 출처 하나를 읽기 전용으로 연결
 2. Codex가 요약·제안을 생성하고, 직접 실행하지 않음
 3. 사람 승인과 알림을 추가
-4. 마지막에 외부 시스템 자동 되쓰기 고려
+4. 마지막에 외부 시스템 자동 쓰기 고려
 
 가치를 먼저 검증한 뒤 권한을 점진적으로 키우세요.
 
-## 최소 가용 통합 방안
+## 최소 실행 가능한 통합 방안
 
 「PR 심사 초안 자동 생성」 예:
 
@@ -173,7 +178,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 ## 위험 통제 체크리스트
 
 - [ ] 각 통합의 owner를 명시
-- [ ] 읽기 전용·코멘트·되쓰기 세 권한 등급을 구분
+- [ ] 읽기 전용·댓글·쓰기 세 권한 등급을 구분
 - [ ] 한 작업이 무엇을 읽고 썼는지 추적 가능
 - [ ] 실패 시 알림이 있고, 사람이 우연히 발견하기를 기대하지 않음
 - [ ] 민감 데이터가 관여하면 보안 평가를 거침
@@ -192,13 +197,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 - 확장 커넥터와 패키징 배포: [Plugins 개요](/ko/skills/plugins/plugins-overview/)
 - 외부 데이터 연결: [MCP 개요](/ko/skills/mcp/mcp-overview/)
 - 예약·백그라운드 실행: [예약과 백그라운드 작업](/ko/skills/automations/scheduled-tasks/)
-- 클라우드 저장소 협업: [Web와 Cloud](/ko/guide/web-and-cloud/)
+- 클라우드 저장소 협업: [Web과 Cloud](/ko/guide/web-and-cloud/)
 
 ## 참고 출처
 - OpenAI Codex 공식 통합·개발자 문서
----
-
-**상태:** verified  
-**적용 제품:** Integrations  
-**검증 근거:** OpenAI Help Center의 현재 플러그인·앱 설명은 Codex/ChatGPT 통합 능력이 plugins, apps, app templates로 연결되며, 관리자가 역할 접근·읽기/쓰기 동작·확인 요구·데이터 경계를 각각 통제할 수 있다고 강조합니다. 이 페이지는 통합 설계 원칙, 권한 계층, 착수 순서에 초점을 두며, 특정 외부 시스템의 일시적 UI에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

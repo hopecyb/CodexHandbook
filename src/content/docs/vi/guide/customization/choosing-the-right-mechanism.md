@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh, Skills, MCP và chất lượng đã kiểm chứng trong sổ tay; trang này chỉ giữ khung phán đoán ổn định “yêu cầu tạm, quy tắc dự án, sở thích cá nhân, đóng gói quy trình, năng lực ngoài nên đặt theo tầng”.", "checkedAt": "2026-07-26"}
 title: Chọn cơ chế phù hợp
 description: Prompt tạm, AGENTS.md, bộ nhớ, Skill, MCP nên đặt tầng nào — một khung phán đoán nói rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: "5fad7cb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -15,7 +16,7 @@ Nhiều vấn đề nhóm thường là **đặt cùng một thông tin sai ch�
 
 Ở đây quan tâm hơn một câu hỏi thực tế:
 
-> Khi bạn phát hiện “việc này sau này còn lặp lại”, nên hạ nó xuống tầng nào?
+> Khi bạn phát hiện “việc này sau này còn lặp lại”, nên lưu nó ở tầng nào?
 
 ## Bảng ngắn
 
@@ -47,7 +48,7 @@ Không phù hợp:
 - Kho cấm sửa thư mục
 - Mỗi lần rà soát PR đều xuất theo cùng một mẫu
 
-Loại quy tắc dài hạn này nên tiếp tục hạ xuống.
+Loại quy tắc dài hạn này nên được lưu ở tầng phù hợp hơn.
 
 ### 2. Đây là quy tắc cộng tác dự án, hay thói quen cá nhân?
 
@@ -87,7 +88,7 @@ Bước tái sử dụng được thường phù hợp hơn làm [Skill](/vi/ski
 
 ## Tổ hợp thường gặp, không phải chọn một trong hai
 
-Nhóm chín thường không chỉ dùng một cơ chế, mà tổ hợp.
+Nhóm có quy trình ổn định thường không chỉ dùng một cơ chế, mà tổ hợp.
 
 ### Tổ hợp 1: `AGENTS.md` + Skill
 
@@ -180,7 +181,7 @@ Một Skill vừa nhét review, phát hành, gỡ lỗi, viết báo ngày — c
 
 Thông tin đọc thẳng từ kho được thì không cần vì “cao cấp” mà nối thêm công cụ ngoài. MCP là mở rộng năng lực, không phải phần thưởng độ phức tạp.
 
-### Để bộ nhớ mang sự kiện nhóm
+### Để bộ nhớ mang thông tin chung của nhóm
 
 Ai nhớ trên tài khoản người đó; người đó rời hoặc đổi máy thì quy tắc biến mất. Loại thông tin này nên quay về kho.
 
@@ -205,9 +206,3 @@ Như vậy dễ ổn định **đồng thuận cộng tác** trước, rồi d�
 
 ## Nguồn tham khảo
 - Tài liệu chính thức OpenAI Codex (lấy phiên bản hiện tại làm chuẩn)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh, Skills, MCP và chất lượng đã kiểm chứng trong sổ tay; trang này chỉ giữ khung phán đoán ổn định “yêu cầu tạm, quy tắc dự án, sở thích cá nhân, đóng gói quy trình, năng lực ngoài nên đặt theo tầng”.  
-**Kiểm chứng gần nhất:** 2026-07-26

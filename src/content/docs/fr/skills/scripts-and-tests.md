@@ -4,17 +4,17 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Le runtime autorise scripts et commandes déterministes dans les skills ; principe « action stable scriptée, flux contraint par Skill » aligné avec les capacités actuelles."
   checkedAt: "2026-07-26"
-title: scripts/ et tests
+title: Scripts/ et tests
 description: Scripts déterministes dans un Skill et validation de leur comportement.
 locale: fr
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: '900e6e4'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
-Au début, tout dans `SKILL.md` — OK pour un flux simple. Dès qu'une étape doit être **stable, répétable et vérifiable**, un script bat la prose.
+Au début, on place souvent tout dans `SKILL.md`, ce qui convient à un processus simple. Dès qu’une étape doit s’exécuter de façon **stable, répétable et vérifiable**, un script est plus fiable qu’une simple description.
 
 Actions fixes → script ; jugement et collaboration → Skill.
 
@@ -61,7 +61,7 @@ Vérifier aussi :
 
 ### 3. tester le Skill = tester le script
 
-Le script = une action ; le Skill = quand, comment, sortie attendue.
+Tester le script ne suffit pas : il vérifie une action, tandis que le Skill doit aussi être testé sur le moment et la manière de l’appeler, ainsi que sur la conformité du résultat.
 
 ## Ordre de validation
 
@@ -70,7 +70,7 @@ Le script = une action ; le Skill = quand, comment, sortie attendue.
 3. flux complet via Skill
 4. environnement réaliste
 
-Sépare « script cassé » et « intégration Skill incorrecte ».
+Cette séquence permet de distinguer un défaut du script d’une mauvaise intégration au Skill.
 
 Actions répétables stables : ne pas compter sur le texte seul. Script d'abord, puis intégration Skill.
 

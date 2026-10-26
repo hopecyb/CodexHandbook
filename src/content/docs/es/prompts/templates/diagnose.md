@@ -8,10 +8,10 @@ title: Plantilla de diagnóstico
 description: Localizar primero la causa raíz y luego hablar de la corrección.
 locale: es
 source_locale: zh-CN
-source_revision: 2491371
+source_revision: '2491371'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -22,14 +22,14 @@ Esta plantilla separa «encontrar la causa» de «arreglar».
 ## Plantilla
 
 ```text
-Fenómeno: 【mensaje de error, test fallido, informe de usuario】
+Síntoma: 【mensaje de error, test fallido, informe de usuario】
 Contexto: 【cambios recientes, entorno, pasos de reproducción】
 Entradas: @【logs/tests/código relacionado】
 Restricciones: no cambies código todavía; lista 2–3 causas raíz posibles y cómo verificarlas.
 Salida:
 1. Causa raíz más probable (con evidencia)
 2. Pasos de verificación ejecutables (comandos o checkpoints)
-3. Si la verificación pasa, borrador del plan de corrección (espera mi confirmación antes de ejecutar)
+3. Si se confirma la causa, borrador del plan de corrección (espera mi confirmación antes de ejecutar)
 ```
 
 ## Cuándo usarla

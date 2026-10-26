@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ tổng quan các module năng lực và chỗ thuộc về chương chính thức; liên kết nội bộ, sơ đồ cấu trúc và ánh xạ module đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Bản đồ năng lực
 description: Tổng quan các module năng lực như Prompt, công cụ, mở rộng, đa Agent và quản trị.
 locale: vi
 source_locale: zh-CN
-source_revision: 1a4cd98
+source_revision: "1a4cd98"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 7
 ---
@@ -16,7 +21,7 @@ Cẩm nang có khá nhiều module; lần đầu dễ bị nhìn phân tán. Tra
 Hai chỗ kẹt phổ biến:
 
 - Đọc trang này trang kia, cuối cùng vẫn không biết nên bổ sung khối nào trước
-- Lao thẳng vào MCP, tự động hóa, mở rộng ngay từ đầu — phần nền tảng lại chưa được sắp xuôi
+- Lao thẳng vào MCP, tự động hóa, mở rộng ngay từ đầu — phần nền tảng lại chưa được hiểu rõ
 
 Sắp khung lớn trước, rồi mới tra chủ đề cụ thể sẽ đỡ tốn sức hơn nhiều.
 
@@ -38,17 +43,17 @@ Có thể coi Codex gồm ba tầng:
 
 - Tầng một: bạn mở lời thế nào để nó biết bạn cần gì
 - Tầng hai: nó dựa vào ngữ cảnh và công cụ nào để làm ra việc
-- Tầng ba: bạn lắng đọng cách cộng tác này thế nào để sau còn tái sử dụng
+- Tầng ba: bạn lưu lại cách cộng tác này thế nào để sau còn tái sử dụng
 
-Khi mới dùng, hai tầng đầu quan trọng hơn. Nói rõ tác vụ, chạy xuôi kết quả — rồi mới xem mở rộng nâng cao.
+Khi mới dùng, hai tầng đầu quan trọng hơn. Nói rõ tác vụ, kiểm tra để kết quả hoạt động đúng — rồi mới xem mở rộng nâng cao.
 
 ## Hiểu nhầm thường gặp
 
 ### Năng lực càng cao cấp không có nghĩa phải học trước
 
-Skills, MCP, Hooks, tự động hóa đương nhiên rất mạnh, nhưng chúng giải quyết chủ yếu việc phóng đại hiệu suất và tái sử dụng quy mô — không phải phần dễ bị kẹt nhất khi mới bắt tay.
+Skills, MCP, Hooks, tự động hóa đương nhiên rất mạnh, nhưng chúng giải quyết chủ yếu việc nâng cao hiệu suất và tái sử dụng quy mô — không phải phần dễ bị kẹt nhất khi mới bắt tay.
 
-Nếu các thao tác nền như Prompt, ngữ cảnh, chọn công cụ chưa được sắp xuôi, năng lực mở rộng phía sau cũng dễ dùng lệch.
+Nếu các thao tác nền như Prompt, ngữ cảnh, chọn công cụ chưa được hiểu rõ, năng lực mở rộng phía sau cũng dễ dùng lệch.
 
 ### Sơ đồ này cũng có thể dùng làm gợi ý thứ tự đọc
 
@@ -65,9 +70,9 @@ Không cần đọc hết từng trang theo mục lục site. Có thể đi theo
 3. Sau đó vào [Hướng dẫn bắt đầu](/vi/guide/getting-started/)
 4. Khi bị kẹt, quay lại [Khái niệm nền tảng](/vi/guide/foundations/) và [Lộ trình học](/vi/guide/learning-paths/)
 
-## Module và chương chính thức
+## Các mô-đun và chương tham chiếu chính
 
-| Năng lực | Vị trí chính thức |
+| Năng lực | Chương tham chiếu chính |
 |---|---|
 | Model, Agent, quyền, Sandbox | [Khái niệm nền tảng](/vi/guide/foundations/) |
 | Cách bấm, cách chạy ở từng lối vào | [Cẩm nang sản phẩm](/vi/guide/) |
@@ -79,10 +84,3 @@ Không cần đọc hết từng trang theo mục lục site. Có thể đi theo
 | Thứ tự đọc | [Lộ trình học](/vi/guide/learning-paths/) |
 
 Sơ đồ chọn mở rộng tổng thể xem [Bản đồ năng lực mở rộng](/vi/skills/capability-map/); đối chiếu sản phẩm xem [So sánh tính năng](/vi/guide/reference/feature-comparison/). Khác biệt năng lực giữa các lối vào nằm ở trang so sánh tính năng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ tổng quan các module năng lực và chỗ thuộc về chương chính thức; liên kết nội bộ, sơ đồ cấu trúc và ánh xạ module đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

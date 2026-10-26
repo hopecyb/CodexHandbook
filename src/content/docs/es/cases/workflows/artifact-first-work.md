@@ -3,12 +3,16 @@ title: Trabajo orientado a artefactos
 description: Acuerda primero la forma y la ruta del entregable final, luego deduce los pasos — ideal para docs, configs e informes.
 locale: es
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: "e57c215"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de archivos y artefactos, definir terminado y verificar artefactos. El contenido se centra en el método estable «acordar el entregable primero, luego deducir los pasos».
+  checkedAt: '2026-07-26'
 ---
-
 **Trabajo orientado a artefactos** consiste en dejar claras la forma y la ubicación del entregable antes de que Codex deduzca los pasos. Encaja con Markdown, OpenAPI, scripts de migración, esquemas de diapositivas y otras tareas con salida definida; también puede combinarse con [trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/).
 
 ## Enfoque de esta página
@@ -44,12 +48,12 @@ Para artefactos visuales puedes pedir capturas o notas de previsualización; ver
 
 - La ruta del artefacto no coincide con las convenciones del repo (directorio equivocado)
 - Generar solo un archivo e ignorar navegación y actualización del index
-- No contrastar con el ejemplo: estilos rotos
-- Artefactos binarios (pptx/docx) sin indicar cómo abrirlos para aceptar
+- No contrastar con el ejemplo: estilos incoherentes
+- Artefactos binarios (pptx/docx) sin indicar cómo abrirlos y comprobarlos manualmente
 
 ## Límites de seguridad
 
-- Si el generador incluye contenido con copyright de terceros, hace falta revisión humana de cumplimiento
+- Si el artefacto generado incluye contenido con copyright de terceros, hace falta revisión humana de cumplimiento
 - No sobrescribas rutas de configuración de producción; genera primero en una rama o bajo `draft/`
 
 ## Checklist de aceptación
@@ -58,10 +62,3 @@ Para artefactos visuales puedes pedir capturas o notas de previsualización; ver
 - [ ] Formato coherente con el ejemplo de referencia
 - [ ] Enlaces / índice / frontmatter válidos
 - [ ] Cumple [Definir terminado](/es/prompts/define-done/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de archivos y artefactos, definir terminado y verificar artefactos. El contenido se centra en el método estable «acordar el entregable primero, luego deducir los pasos».

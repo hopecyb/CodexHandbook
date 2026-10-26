@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Relecture croisée, section par section, avec les chapitres vérifiés de ce manuel sur la planification, le contexte, la vérification et la collaboration entre tâches. Cette page ne conserve que des principes de collaboration stables, sans transformer l’interface actuelle d’un client en contrat durable."
-  checkedAt: "2026-07-26"
-title: "Travail de l’agent"
-description: "Amener Codex à collaborer et à mener la tâche à terme, plutôt qu’à produire une réponse ponctuelle."
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Relecture croisée, section par section, avec les chapitres vérifiés de ce manuel sur la planification, le contexte, la vérification et la collaboration entre tâches. Cette page ne conserve que des principes de collaboration stables, sans transformer l’interface actuelle d’un client en contrat durable.
+  checkedAt: '2026-07-26'
+title: Travail de l’agent
+description: Amener Codex à collaborer et à mener la tâche à terme, plutôt qu’à produire une réponse ponctuelle.
 sidebar:
   order: 31
 locale: fr
 source_locale: zh-CN
-source_revision: 3eb251e
-translation_status: draft
+source_revision: "3eb251e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 Le travail de l’agent porte sur la façon de mener une tâche à un état **achevé et vérifiable**. Ce chapitre traite du moment où planifier, où confier une sous-tâche, comment corriger la trajectoire en cours de route et comment transmettre ou reprendre le travail.
 

@@ -5,17 +5,17 @@ legacyVerification:
   basis: "Cette page fournit un modèle de création ; liens et structure revus ; pas de faits volatils produit."
   checkedAt: "2026-07-26"
 title: Modèle de création
-description: Implémenter une fonctionnalité, un texte ou un artefact from scratch.
+description: Implémenter une fonctionnalité, un texte ou un artefact à partir de zéro.
 locale: fr
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
-Deux pièges en création from scratch :
+Deux pièges en création à partir de zéro :
 
 - objectif large sans limite
 - lancer la génération avant d'avoir assez d'info
@@ -41,7 +41,7 @@ Si information insuffisante : liste les hypothèses et demande, ne devine pas.
 
 ## Quand l'utiliser
 
-- page, composant, script ou doc from scratch
+- page, composant, script ou doc à partir de zéro
 - livrable connu, pas encore commencé
 - cadrer avant d'agir
 
@@ -68,4 +68,4 @@ Le pire : démarrer sans « quoi » et « pour qui ».
 ## Voir aussi
 
 - [Travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/)
-- [Définir le terminé](/fr/prompts/define-done/)
+- [Définir les critères de réussite](/fr/prompts/define-done/)

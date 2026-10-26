@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE"
+  checkedAt: "2026-08-26"
 title: Tastenkombinationen
 description: Nur aktuell in der offiziellen Dokumentation bestätigte Kurzbefehle für App und IDE.
 sidebar:
   order: 90
 locale: de
 source_locale: zh-CN
-source_revision: 4f812d9
+source_revision: "4f812d9"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Tastenkombinationen unterscheiden sich nach Plattform, Client und eigenen Einstellungen. Diese Seite enthält nur Kombinationen, die in der aktuellen offiziellen Dokumentation ausdrücklich beschrieben sind. Die vollständige Liste findest du in der App unter **Keyboard Shortcuts**.
@@ -55,11 +59,3 @@ Lerne zuerst, wie du Settings, Activity und Terminal öffnest und mehrzeilige Pr
 - [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
 - [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
 - [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App, CLI, IDE
-
-**Zuletzt geprüft:** 2026-08-26

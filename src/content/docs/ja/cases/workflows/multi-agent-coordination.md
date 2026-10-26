@@ -3,10 +3,15 @@ title: マルチ Agent 協調
 description: 並列探索、分担実行、結果統合——いつ分割し、どう検証するか。
 locale: ja
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: OpenAI Developers のマルチ Agent／サブエージェント公開資料と、本ハンドブックの検証済みサブエージェント、引き継ぎ、並列作業章を照合。分割タイミング、境界分離、人による統合・検証の安定方法のみで、現行ベータや UI 入口の固定契約には依存しない。
+  checkedAt: "2026-07-26"
 ---
 
 マルチ Agent は、並列で疎結合なサブ問題に向きます。コーディネータなしに同一ファイルを2体が編集する用途には向きません。
@@ -47,7 +52,7 @@ Agent 2：案 B の長所／短所と工数
 
 - 各 Agent に明示的なディレクトリ境界
 - 並列 `git push` 禁止
-- マージ前に CI を1回
+- マージ前に統合した状態で CI を実行する
 - コンフリクトは人が解決——Agent に推測させない
 
 ## 受け入れ
@@ -60,10 +65,3 @@ Agent 2：案 B の長所／短所と工数
 
 - 3 並列 Agent が `package.json` を編集
 - 統合ステップなし——どの結論に従うか不明
-
----
-
-**状態：** verified  
-**対象製品：** App / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers のマルチ Agent／サブエージェント公開資料と、本ハンドブックの検証済みサブエージェント、引き継ぎ、並列作業章を照合。分割タイミング、境界分離、人による統合・検証の安定方法のみで、現行ベータや UI 入口の固定契約には依存しない。

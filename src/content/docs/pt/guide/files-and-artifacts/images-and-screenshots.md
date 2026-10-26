@@ -3,34 +3,39 @@ title: Imagens e ecrãs
 description: Fornecer ecrãs e mockups ao Codex e gerir ficheiros de imagem nas Tarefas.
 locale: pt
 source_locale: zh-CN
-source_revision: adc2b88
+source_revision: "adc2b88"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Revista com materiais oficiais OpenAI sobre entrada de imagens e upload de ficheiros quanto a upload de ecrãs, anotações de foco, volume de ficheiros e cuidados de privacidade; o corpo não mantém passos de interface que exijam verificação versão a versão.
+  checkedAt: '2026-07-26'
 ---
 
 As imagens permitem ao Agent **ver** problemas de interface, intenção de design ou esboços de quadro branco. Esta página cobre entrada (imagens que fornece) e gestão de ficheiros de imagem no repositório; para gerar imagens novas, veja [Geração de imagens](/pt/guide/tools/image-generation/).
 
-Ao encomendar com ecrãs, o ideal é ele saber onde olhar e porque há problema aí.
+Ao encomendar com capturas de tela, o ideal é ele saber onde olhar e porque há problema aí.
 
 ## Conteúdo desta página
 
-- Como anexar ecrãs com mais eficácia
+- Como anexar capturas de tela com mais eficácia
 - Como usar mockups / exportações Figma
-- Problemas de volume de imagens no repositório e no Contexto
+- Problemas de volume de imagens no repositório e no contexto
 
 ## Cenários de imagem de entrada
 
 | Cenário | Prática |
 |---|---|
-| Bug de UI | Ecrã + descrição textual da zona anormal |
+| Bug de UI | Captura de tela + descrição textual da zona anormal |
 | Fidelidade ao design | Exportar PNG + indicar breakpoints e biblioteca de componentes |
 | Quadro branco de arquitetura | Foto nítida ou exportação + legenda |
 | Diálogo de erro | Texto de erro completo; evitar cortar só um canto |
 
-Profundidade: [Prompt com imagens](/pt/prompts/prompting-with-images/)
+Profundidade: [prompt com imagens](/pt/prompts/prompting-with-images/)
 
 ## O que a imagem realmente acrescenta
 
@@ -57,9 +62,9 @@ Por isso a imagem costuma precisar de uma frase direta a acompanhar.
 
 ## Mal-entendidos habituais
 
-### 1. Enviar o ecrã ≠ ele compreende automaticamente o problema
+### 1. Enviar o captura de tela ≠ ele compreende automaticamente o problema
 
-O ecrã dá evidência visual, mas é melhor acrescentar:
+O captura de tela dá evidência visual, mas é melhor acrescentar:
 
 - Onde está o problema
 - No que quer mudar
@@ -70,7 +75,7 @@ O ecrã dá evidência visual, mas é melhor acrescentar:
 Imagens originais demasiado grandes trazem dois problemas:
 
 - Demasiada informação irrelevante
-- Volume do repositório ou do Contexto mais pesado
+- Volume do repositório ou do contexto mais pesado
 
 ### 3. Só a imagem de design ainda não chega
 
@@ -95,15 +100,15 @@ Pode escrever assim:
 
 ```text
 A primeira imagem é a página atual; a segunda é o efeito desejado.
-Foque-se na zona do título do primeiro ecrã e no espaçamento dos botões.
-Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
+Foque-se na zona do título do primeiro captura de tela e no espaçamento dos botões.
+Não adivinhe lógica de negócio a partir do captura de tela; trate só visual e layout.
 ```
 
 ## Privacidade e segurança
 
-- Ecrãs podem conter dados de clientes, URLs internas, Tokens — mascara primeiro
-- Não envie ecrãs de configuração com segredos a Tarefas não fiáveis
-- [Contexto sensível](/pt/guide/context/sensitive-context/)
+- Capturas de tela podem conter dados de clientes, URLs internas, Tokens — oculte esses dados primeiro
+- Não envie capturas de tela de configuração com segredos a tarefas não fiáveis
+- [contexto sensível](/pt/guide/context/sensitive-context/)
 
 ## Referências
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -111,7 +116,7 @@ Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
 - OpenAI API Developer Quickstart: Analyze images and files
 ## Aceitação
 
-Para Tarefas «implementar segundo a imagem»:
+Para tarefas «implementar segundo a imagem»:
 
 1. Compare lado a lado implementação e imagem de referência (ou abra a página com a [Ferramenta de browser](/pt/guide/tools/browser/))
 2. Verifique responsivo e modo escuro (se exigido)
@@ -123,11 +128,4 @@ Para Tarefas «implementar segundo a imagem»:
 - Commit direto de originais 4K
 - Assumir que o modelo lê ligações Figma sem exportar
 
-Um bom ecrã não é só «ter imagem». Imagem clara, foco claro, expectativa clara — a Tarefa acerta com mais facilidade.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / Cloud  
-**Base de verificação:** Revista com materiais oficiais OpenAI sobre entrada de imagens e upload de ficheiros quanto a upload de ecrãs, anotações de foco, volume de ficheiros e cuidados de privacidade; o corpo não mantém passos de interface que exijam verificação versão a versão.  
-**Última verificação:** 2026-07-26
+Um bom captura de tela não é só «ter imagem». Imagem clara, foco claro, expectativa clara — a tarefa acerta com mais facilidade.

@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against currently verified planning, quality, and failure recovery chapters in this handbook; this page only confirms the stable diagnose method—evidence chain first, then minimal fix—not dependent on specific product client implementation."
+  checkedAt: "2026-07-26"
 title: Diagnose before fixing
 description: Production issues and stubborn bugs—build an evidence chain before changing code.
 locale: en
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: '18193b0'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Asking Codex to fix a bug immediately usually means high rework. The diagnose workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.
+Asking Codex to fix a bug immediately often leads to substantial rework. The diagnostic workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.
 
 ## When to use
 
@@ -69,10 +74,3 @@ Diagnosis is a deeper **Explore** phase; at Plan, also document "how to roll bac
 - Changing code without reproduction
 - One patch fixing three issues—hard to review
 - Removing temporary logs without adding permanent tests
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, quality, and failure recovery chapters in this handbook; this page only confirms the stable diagnose method—evidence chain first, then minimal fix—not dependent on specific product client implementation.

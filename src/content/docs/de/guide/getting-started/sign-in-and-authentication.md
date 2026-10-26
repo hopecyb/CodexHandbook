@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit der aktuellen offiziellen Authentication-Seite abgeglichen. Verifiziert wurden die beiden lokalen Anmeldemethoden ChatGPT und API-Key, die ChatGPT-Anforderung für Cloud, CLI-Befehle, gemeinsam genutzter Cache und Grenzen der Anmeldedatenspeicherung."
+  checkedAt: "2026-08-26"
 title: Anmeldung und Authentifizierung
 description: Wähle für lokale Clients und Cloud den richtigen Anmeldemodus und überprüfe die aktive Identität sicher.
 sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: ea83fa6
+source_revision: "ea83fa6"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Für die Verwendung von OpenAI-Modellen bietet Codex zwei persönliche Anmeldemethoden:
@@ -68,13 +73,3 @@ Untersuche das Problem in dieser Reihenfolge:
 Für die CLI stehen eigene Anmeldeprotokolle zur Verfügung, die du bei einer Supportanfrage oder Authentifizierungsfehlersuche verwenden kannst. Prüfe die Protokolle dennoch zuerst auf vertrauliche Informationen.
 
 Tarifgrenzen behandelt [Konten, Tarife und Zugriff](/de/guide/getting-started/account-plans-and-access/). Alle Einzelheiten findest du auf der [offiziellen Authentication-Seite](https://learn.chatgpt.com/docs/auth).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-
-**Prüfgrundlage:** Mit der aktuellen offiziellen Authentication-Seite abgeglichen. Verifiziert wurden die beiden lokalen Anmeldemethoden ChatGPT und API-Key, die ChatGPT-Anforderung für Cloud, CLI-Befehle, gemeinsam genutzter Cache und Grenzen der Anmeldedatenspeicherung.
-
-**Zuletzt geprüft:** 2026-08-26

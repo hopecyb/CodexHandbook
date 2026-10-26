@@ -3,12 +3,16 @@ title: Diagnostiquer avant de corriger
 description: Problèmes de production et bugs tenaces — établir une chaîne de preuves avant de toucher au code.
 locale: fr
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: "18193b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés sur la planification, la qualité et la reprise après échec ; cette page confirme uniquement la méthode stable « chaîne de preuves d'abord, puis correction minimale », sans dépendre de l'implémentation côté produit.
+  checkedAt: '2026-07-26'
 ---
-
 Demander à Codex de corriger un bug immédiatement entraîne souvent beaucoup de retours en arrière. Le flux de diagnostic met l'accent sur : **symptômes → hypothèses → preuves → correction minimale**.
 
 ## Quand l'utiliser
@@ -69,10 +73,3 @@ Le diagnostic est une version approfondie de la phase **Explorer** ; à l'étape
 - Modifier le code sans reproduction
 - Un seul patch corrigeant trois problèmes — difficile à revoir
 - Supprimer les journaux temporaires sans ajouter de tests permanents
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur la planification, la qualité et la reprise après échec ; cette page confirme uniquement la méthode stable « chaîne de preuves d'abord, puis correction minimale », sans dépendre de l'implémentation côté produit.

@@ -8,10 +8,10 @@ title: Directorio references/
 description: Organiza documentación de referencia larga en un Skill para divulgación progresiva.
 locale: es
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: "955bfa7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 `references/` encaja con material largo que no necesitas expandir cada vez, para que el flujo principal no quede largo y confuso.
@@ -19,7 +19,7 @@ reviewed_at: 2026-08-26
 No es solo «meter unos documentos más»: es guardar aparte lo que **no hay que leer siempre de inmediato, pero sí es útil en un paso concreto**, y abrirlo solo cuando haga falta.
 
 
-Cuando el cuerpo de `SKILL.md` se alarga demasiado, mueve normas detalladas, APIs y listas de comprobación a `references/`, y cítalos bajo demanda en los pasos.
+Cuando el cuerpo de `SKILL.md` se alarga demasiado, mueve normas detalladas, documentación de API y listas de comprobación a `references/`, y consúltalas cuando haga falta en los pasos.
 
 ## Ejemplo
 

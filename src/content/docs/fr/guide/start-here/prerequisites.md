@@ -9,10 +9,11 @@ description: Compte, appareil, projet d'exercice et principes de sécurité.
 locale: fr
 source_locale: zh-CN
 source_revision: "5fbedb8"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 5
+reviewed_at: 2026-10-26
 ---
 
 Pour la plupart des personnes qui découvrent Codex, la difficulté n'est pas leur bagage technique, mais le premier pas.

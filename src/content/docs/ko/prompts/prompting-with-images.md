@@ -3,10 +3,15 @@ title: 이미지 프롬프트
 description: Codex에 스크린샷, 디자인 시안, 화이트보드를 줄 때 실행 가능한 결과를 얻기 쉬운 질문법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: OpenAI 공식 이미지 입력·파일 업로드 자료를 기준으로 본 페이지의 구조, 장면, 주의사항을 재확인했습니다. 본문은 비공식 장면 출처에 의존하지 않으며, 버전별로 맞춰야 하는 구체 UI 세부사항은 남기지 않았습니다.
+  checkedAt: '2026-07-26'
 ---
 
 많은 “보고 일하기” 실패는 모델이 못 봐서가 아니라, 이미지만 주고 **무엇을 보라고 할지**를 말하지 않아서입니다.
@@ -33,7 +38,7 @@ reviewed_at: 2026-08-26
 
 텍스트 프롬프트처럼 구조화하는 것을 권장합니다.
 
-### 1. 이미지 정체
+### 1. 이미지의 성격과 출처
 
 이미지가 무엇인지, 어디서 왔는지 말합니다.
 
@@ -156,9 +161,9 @@ Codex가 이미지에서 모든 요구를 역추론하려다, 당신이 신경 �
 
 시안은 외형을 표현하지만, 데이터 출처·경계 조건·인터랙션 로직까지는 담지 못할 수 있습니다. 비즈니스 규칙은 글로 보완해야 합니다.
 
-### 이미지가 수락을 대체한다고 착각하기
+### 이미지가 결과 검증을 대체한다고 착각하기
 
-보고 구현해도, 최종적으로는 실제 페이지, diff, 브레이크포인트, 사용성을 봐야 합니다. 이미지는 입력이며, 수락 결과가 아닙니다.
+보고 구현해도, 최종적으로는 실제 페이지, diff, 브레이크포인트, 사용성을 봐야 합니다. 이미지는 입력이며, 검증 결과가 아닙니다.
 
 ## 다른 페이지와의 연계
 
@@ -185,9 +190,3 @@ Codex가 “디자인 리뷰처럼 이미지를 보기”를 원한다면, 먼�
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**상태:** verified  
-**적용 제품:** App / Cloud  
-**검증 근거:** OpenAI 공식 이미지 입력·파일 업로드 자료를 기준으로 본 페이지의 구조, 장면, 주의사항을 재확인했습니다. 본문은 비공식 장면 출처에 의존하지 않으며, 버전별로 맞춰야 하는 구체 UI 세부사항은 남기지 않았습니다.  
-**최근 검증:** 2026-07-26

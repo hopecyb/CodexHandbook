@@ -9,12 +9,13 @@ editUrl: false
 lastUpdated: false
 locale: vi
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+reviewed_at: 2026-10-26
+translated_at: 2026-10-25
+source_revision: "75dd87a"
 hero:
   title: Dùng Codex <br /> biến lần cộng tác thành công thành phương pháp dùng lại
-  tagline: Từ xác định tác vụ đến thực thi, kiểm chứng, rà soát và bàn giao, sổ tay giúp biến ý tưởng thành kết quả ổn định.
+  tagline: Đây là sổ tay thực hành AI Agent lấy Codex làm trọng tâm. Từ xác định tác vụ đến thực thi, kiểm chứng, rà soát và bàn giao, sổ tay giúp biến ý tưởng thành kết quả ổn định.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -62,10 +64,10 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		</a>
 		<a class="path-card" href="/vi/cases/write-an-article/"><img src="/illustrations/home-article.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Viết một bài báo</strong>
-			<span>Đủ tài liệu · Tác giả tự kiểm tra nguồn. Dùng ba nguồn tổng hợp luyện trích dẫn sự kiện, giải quyết phiên bản xung đột và chỉnh sửa; giao bài viết cùng bảng dữ kiện.</span>
+			<span>Đủ tài liệu · Tác giả tự kiểm tra nguồn. Dùng ba nguồn tổng hợp luyện trích dẫn dữ kiện, giải quyết phiên bản xung đột và chỉnh sửa; giao bài viết cùng bảng dữ kiện.</span>
 		</a>
 	</div>
-	<p>Báo cáo tuần tham khảo có giá trị ròng <strong>¥4,644.75</strong>, và giải thích các khoản hoàn tiền, bất thường. <a href="/downloads/sales-weekly-report/summary.md">Xem báo cáo tham khảo</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Tải toàn bộ tài liệu</a>. Con số đến từ dữ liệu giảng dạy tổng hợp. Dự kiến thực hành 30–45 phút; chưa đo thời gian với người học.</p>
+	<p>Báo cáo tuần tham khảo có giá trị ròng <strong>CNY 4,644.75</strong>, kèm giải thích các khoản hoàn tiền, bất thường. <a href="/downloads/sales-weekly-report/summary.md">Xem báo cáo tham khảo</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Tải toàn bộ tài liệu</a>. Con số đến từ dữ liệu giảng dạy tổng hợp. Dự kiến thực hành 30–45 phút; chưa đo thời gian với người học.</p>
 	<p><a href="/vi/cases/">Xem tình huống và tài liệu theo tác vụ</a> · <a href="/vi/guide/learning-paths/">Học theo vai trò</a> · <a href="/vi/guide/reference/">Tra cứu sổ tay tham khảo</a></p>
 </section>
 
@@ -81,11 +83,11 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Người sáng tạo</strong>
-			<span>Dùng một bộ nguồn làm bảng dữ kiện, bài viết và bản trình bày tám trang có thể sửa, rồi lưu mô tả tác vụ dùng lại. Có tài liệu và kiểm tra từng bước.</span>
+			<span>Dùng một bộ nguồn làm bảng dữ kiện, bài viết và bản trình bày tám trang, rồi lưu mô tả tác vụ dùng lại. Có tài liệu và kiểm tra từng bước.</span>
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Lập trình viên</strong>
-			<span>Hiểu lỗi giỏ hàng, lưu kiểm thử thất bại rồi thành công, rà soát bản sửa nhỏ nhất và viết bàn giao. Có ba mẫu điền sẵn.</span>
+			<span>Hiểu lỗi giỏ hàng, lưu kiểm thử thất bại rồi thành công, rà soát bản sửa nhỏ nhất và viết bàn giao. Có ba mẫu để điền.</span>
 		</a>
 		<a class="path-card" href="/vi/guide/learning-paths/team/"><img src="/illustrations/home-path-team.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Nhóm</strong>
@@ -97,6 +99,7 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 <section class="home-section" aria-labelledby="lookup-heading">
 	<div class="section-heading"><p>Tra cứu trực tiếp theo vấn đề</p><h2 id="lookup-heading">Tìm bước tiếp theo</h2></div>
 	<div class="path-grid">
+		<a class="path-card" href="/vi/guide/reference/model-selection/"><strong>Chọn model và xem gói</strong><span>Chọn điểm bắt đầu cho trò chuyện, viết, bảng tính hoặc lập trình, rồi kiểm tra gói và mức sử dụng thực tế.</span></a>
 		<a class="path-card" href="/vi/guide/reference/troubleshooting/"><strong>Cài đặt, đăng nhập hoặc thực thi thất bại</strong><span>Tìm lối chẩn đoán theo triệu chứng hoặc làm bài phục hồi có nhật ký.</span></a>
 		<a class="path-card" href="/vi/guide/reference/"><strong>Kiểm tra lệnh, quyền và thuật ngữ</strong><span>Mở mục lục tham khảo để xem phạm vi và nguồn.</span></a>
 		<a class="path-card" href="/vi/guide/quality/"><strong>Xác định kết quả đã xong chưa</strong><span>Kiểm tra bằng chứng về dữ kiện, tệp và kiểm thử; lưu điều chưa xác nhận.</span></a>
@@ -116,9 +119,13 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	</div>
 </section>
 
+<ContentVerification />
+
 <AboutHandbook title="Nguồn, cập nhật và đóng góp">
 
 Sổ tay do cộng tác viên nguồn mở duy trì, lấy tiếng Trung giản thể làm ngôn ngữ nguồn. Mô tả sản phẩm, tài liệu giảng dạy do tác giả thiết kế và bản ghi chạy thực tế được đánh dấu riêng. Script chạy thành công không chứng minh hiệu quả mô hình hay người học hoàn thành bài. Xem bản ghi từng trang để biết phạm vi kiểm chứng.
+
+Các tài liệu tải xuống là tệp thực hành gốc và có thể chứa tiếng Trung; chúng không được dịch cùng với các trang này.
 
 [Cập nhật nội dung](/vi/guide/updates/) · [Chính sách phiên bản và kiểm chứng](/vi/guide/start-here/handbook-version-policy/) · [Đóng góp](/vi/guide/contributing/)
 

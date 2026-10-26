@@ -3,12 +3,17 @@ title: テストの実行
 description: 検証ステップをタスクの一部にする。
 locale: ja
 source_locale: zh-CN
-source_revision: 8b1e5c7
+source_revision: "8b1e5c7"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは検証ステップをタスク検収に入れる理由のみを説明する。例の書き方と確認順序は再確認済みであり、本文は変わりやすい製品事実に依存しない。
+  checkedAt: "2026-07-26"
 ---
 
 変更後は、明らかに壊れていないことを確認する何らかの方法が必要です。
@@ -41,7 +46,7 @@ sidebar:
 - 起動成功
 - 明確な手動チェック手順
 
-### 3. 「小さな変更」だから検証を省略できる
+### 3. 「小さな変更」でも検証を省略できるとは限らない
 
 小さな変更でも副作用は起きます。特にプロジェクトにまだ慣れていないときはそうです。
 
@@ -74,10 +79,3 @@ sidebar:
 ```
 
 検証は軽くても構いませんが、欠けてはいけません。ないと「完了」は成立しにくくなります。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは検証ステップをタスク検収に入れる理由のみを説明する。例の書き方と確認順序は再確認済みであり、本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

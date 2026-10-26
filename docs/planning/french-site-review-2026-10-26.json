@@ -1,0 +1,3939 @@
+{
+  "reviewed_at": "2026-10-26",
+  "source_locale": "zh-CN",
+  "target_locale": "fr",
+  "scope": "Full Chinese/French text pairs for all 283 documents; shared UI, pricing, 11 diagrams, structured data and three legal/contact pages. Shared original downloads preserved.",
+  "pages": [
+    {
+      "path": "ai-roadmap/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "[OpenSpec]",
+          "after": "[OpenSpec (développement piloté par les spécifications)]"
+        },
+        {
+          "before": "[OpenClaw]",
+          "after": "[OpenClaw (projet d’assistant IA personnel)]"
+        }
+      ],
+      "source_sha1": "f66e3bad4ab12da72c8f00106c63551e5711f6e4",
+      "translation_sha1": "eaf44d0ad41ea6a01a684cb96f25a2a1476712e2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2022-11-prompt-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "225d837da424943eeaf40dc5b20211114a04ccad",
+      "translation_sha1": "f10a7472f206806b9e6f0cc96e9da9e6406b2fe6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-06-function-calling.md",
+      "status": "reviewed",
+      "findings": [
+        "sans appeler l'API historique ni utiliser son étiquette de version → sans appeler l'API historique ni publier de labels"
+      ],
+      "source_sha1": "c362c482fae69509d183337f97024accd3a8ae2f",
+      "translation_sha1": "816fccb0387695f2181fe47dde96181dd8969b35",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-11-rag.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "e79c0dfb504bae1d074fd4102e0b39d4fd861867",
+      "translation_sha1": "d609ca5cc28af24022949797f4624cdde2bbee5c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2024-11-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "7d4d121871875ea14f594a7dad376ac445ef8cd2",
+      "translation_sha1": "3ebd5af5248506673394de46adc5a48bcba6fbac",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-03-tool-use.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "efd508a3f54febdd32a96082c22541ab9599fa8b",
+      "translation_sha1": "a04257eb04dfe7ecae6d9e415fa1cdf65c32f571",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-06-multi-agent.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "f24f2f513051593fda55603236898385f3e0434b",
+      "translation_sha1": "ae764c0250c21ff456459a69ae6b7b11fdf67c6f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-09-context-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "d668433ca4fb39a861554e9c4dfb72f6037a91d1",
+      "translation_sha1": "f96022a73ce7a268f033995010ff949f2e9bda13",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openclaw.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "88681405417ba22667881c2a9d451b1404ba418a",
+      "translation_sha1": "887c95910f9541a7c9d219fd17e7e439f07fb7c1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openspec.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "1a340238db5e5bc5a7fa398f41fd05c39174fbc8",
+      "translation_sha1": "c790389a8df1f639848bce33ab978f689cdc1560",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-02-harness-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "268e6114ffcfffa8bdd744404cb788d2774e5bd9",
+      "translation_sha1": "93f8b736ba0bd9dcb497af37918957a2af9a80ec",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-04-skills.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "952fe584e0e5be2ddba981693dabe0722b148b77",
+      "translation_sha1": "f682edc3a0cf65e72109deccdc8308b78c8e0679",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "847b43b89927981e9a1a8b553e7c93f26de2e3e2",
+      "translation_sha1": "ad87593b4c10bbfc05ffd35dc96862aa3f5bc977",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/analyze-a-spreadsheet.md",
+      "status": "reviewed",
+      "findings": [
+        "le nombre\n d’enregistrements → le nombre\nd’enregistrements"
+      ],
+      "source_sha1": "68729f6738cd7785fd596ce5c592eb3d5f782436",
+      "translation_sha1": "5dd3520ced066b667bc2925c35e5d83a332bc083",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/automate-a-daily-report.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "2149e0a86259cdedf0ccc5fc423ca2cb5c3d50dc",
+      "translation_sha1": "1a16913ab3ef5fcabf06aeaed7e3aaf6559f94ae",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/build-a-website.md",
+      "status": "reviewed",
+      "findings": [
+        "modèle de réception → modèle de validation",
+        "compte rendu de réception → compte rendu de validation",
+        "critères de réception → critères de validation",
+        "Critère de réception → Critère de validation",
+        "la réception du résultat → la validation du résultat"
+      ],
+      "source_sha1": "55fd86a34549bfe5a71b72d990a44a1407f3f264",
+      "translation_sha1": "38bb2a945458fa2ebbd1187384c60e2b23a3cd4e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/coordinate-multiple-agents.md",
+      "status": "reviewed",
+      "findings": [
+        "du schéma A → de la solution A",
+        "du schéma B → de la solution B"
+      ],
+      "source_sha1": "7b143fc4230464943bcc90001a95859db4f35715",
+      "translation_sha1": "e51a747e477cb68054ed5dc0bd25255890d550f7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/create-a-slide-deck.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "7189374c7f17638c740091fc147a3c3bbddd5b6a",
+      "translation_sha1": "97c58e53a2d3bb3bd5e10a15d0a7f58be886afab",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/first-task.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "38f925bdca2b8f9c01777e69fd8f7341a5ae6c77",
+      "translation_sha1": "f706c1cc1393c28bfed7c0ff6e262967428dca4e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/fix-a-bug.md",
+      "status": "reviewed",
+      "findings": [
+        "# Starter: one test is expected to fail → # État initial : un test doit échouer",
+        "# Reference solution: all three tests are expected to pass → # Solution de référence : les trois tests doivent réussir",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "405a6874270280bca5f9b3f789951785cbd05375",
+      "translation_sha1": "4d62f74ea5526fe6e44a28cc42d5931df3a1fab2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "3c7676658d83b3ee0c1b93d14467281ffd0d8ac0",
+      "translation_sha1": "877a3947d523de3708c35f999e3c9bf286b10896",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/review-a-pr.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "84638f0e9fa6dd5810cf6e89fda6484b9110a45b",
+      "translation_sha1": "4eb6ff7dec0e40a85eeee44ddb8e876093bfbe32",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/understand-a-codebase.md",
+      "status": "reviewed",
+      "findings": [
+        "une carte cognitive actionnable → une vue d’ensemble utile pour agir",
+        "3 questions à me confirmer → 3 questions auxquelles je dois répondre"
+      ],
+      "source_sha1": "c89ee30f1c341f4c290edf3a6a13f9cdf751d2cf",
+      "translation_sha1": "21fda813ac2bd9a471acf82ebdd7f667460ecaa8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/case-study-template.md",
+      "status": "reviewed",
+      "findings": [
+        "rédiger et rétrospecter des cas Codex → rédiger et analyser des cas Codex",
+        "rédiger et rétrospecter des cas, → rédiger et analyser des cas,",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "74ef905d77bd1143a6a77fab2f7f0563750ba678",
+      "translation_sha1": "9419adc43a2fa810fae9ace4be7bf8b9c568e8f6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Comment build, revue et re-vérification forment une boucle fermée → Comment articuler compilation, revue et vérification finale",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "5ad38bb90f340913fbe4493d74500dcd79e70ed8",
+      "translation_sha1": "7c5676b006292f92d0059438b4920ed9f92d65d1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/refactor-docs-with-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date.",
+        "Restored source caseCategory",
+        "Restored source directoryOrder",
+        "Restored source contentType"
+      ],
+      "source_sha1": "db44ca392b13e1b1c17913187fb073f9479ba508",
+      "translation_sha1": "f4e95d5da8e4a9ce21f06005733788504866b6b6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Après achèvement, rétrospective avec le → Après avoir terminé, faire le bilan avec le",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "1e284bb1ce8b5619e3d9a4c3fa13f47cf1321bce",
+      "translation_sha1": "af78c308a3836dc423387ffb2521e36a3fa71089",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/competitive-feature-matrix.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date.",
+        "Restored source caseCategory",
+        "Restored source directoryOrder",
+        "Restored source contentType"
+      ],
+      "source_sha1": "b74008b617eb81ffa84e11831c33636850c97f20",
+      "translation_sha1": "4204c87304e740df005c893f6bd38019a1c55bd8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "a0be8814964db202ee5a54bb41c2f1e9a8f573d7",
+      "translation_sha1": "5a3707b49f5538f39aadc13f62d8b9c749c3c9df",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/fix-a-bug-with-verification.md",
+      "status": "reviewed",
+      "findings": [
+        "## 3. Reproduire le rouge\n\n```bash → ## 3. Reproduire le rouge\n\nExécutez cette commande à la racine du dépôt :\n\n```bash",
+        "Commence par les constats : → Commence par les constats, puis donne une conclusion :",
+        "aucune donnée de production ;\ns'arrêter avant tout accès supplémentaire. → aucune modification des données de production ;\ns'arrêter et expliquer le besoin avant de demander des autorisations supplémentaires.",
+        "Le test est flaky → Le test échoue de manière intermittente"
+      ],
+      "source_sha1": "42d842e1e98fbeaf2638e101e0836d2bc164ca31",
+      "translation_sha1": "1c52fc9b27e4d479c48b474af006839c27b88fdc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "a3d7f4cf22db1578536ea1bbcb75ab85387975d0",
+      "translation_sha1": "e74315e65fd45dd557884a894db3bb49d67c7cce",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "e596dcc60eacb83c2db8dc2844f6c51acbf5ee05",
+      "translation_sha1": "0c767106b8dcf240a19aa45e6802479dc77e0dc0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/issue-triage-suggestions.md",
+      "status": "reviewed",
+      "findings": [
+        "un indice de données entre comptes → un indice d’exposition de données entre comptes"
+      ],
+      "source_sha1": "6d859d72e617dd2f6f542899f9ecad722566c484",
+      "translation_sha1": "cb5aae87c6a0131194fce2142189b0bca26f44dc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/scheduled-link-check.md",
+      "status": "reviewed",
+      "findings": [
+        "aucun véritable CI ni ordonnanceur n'a été exécuté → aucun véritable pipeline CI ni ordonnanceur n'a été exécuté"
+      ],
+      "source_sha1": "0d21aa90878b849fea0a8b95d7410635f305211e",
+      "translation_sha1": "2d63923979139cb5cd2a37eb214ebefff4c3bd96",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/artifact-first-work.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Le contenu généré avec des droits tiers",
+          "after": "Les livrables contenant des œuvres de tiers protégées par le droit d’auteur"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "e57c21522070d6f320d626cc2670d8fcd44ba4b3",
+      "translation_sha1": "db354b4ed78ed9aaf8ee4c188e27940d5591bc4d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/brainstorm-before-building.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Quand le brainstorm vaut la peine vs aller directement à l'EPXV",
+          "after": "Quand une séance de brainstorming est utile et quand passer directement à l’EPXV"
+        },
+        {
+          "before": "enregistrement de décision",
+          "after": "consignation des décisions"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "9c5e6798e3d8074f0bb414f0484828a29e7e55aa",
+      "translation_sha1": "dbc96ad113536f5c6697dad679bcdf2e78337941",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/diagnose-before-fixing.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "18193b0e5bdfe64d7067a64c029be234bbdcea22",
+      "translation_sha1": "41865c4086ca597040daafd9d5cd030c0bb3b970",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/explore-plan-execute-verify.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "4a95760d2019656e0c4aa8afe7f7c694a033f716",
+      "translation_sha1": "d77b06abfed5333c30a8ae2cbd8dd270943206f4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/failure-recovery.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "quel sous-tâche",
+          "after": "quelle sous-tâche"
+        },
+        {
+          "before": "Comment empaqueter les informations d'échec",
+          "after": "Comment organiser les informations sur l’échec"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "847e22a659f21cd7961a88c247ed1e99dbde1c40",
+      "translation_sha1": "ed8e815602a397cf41790e126c44edef5eb41021",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/human-approval-patterns.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f60dbb51d7d87200cd6a1e4932133b949a0d506a",
+      "translation_sha1": "e71d774f6ac4fadeea1fc1eed23eb42a8bc2ea45",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "d058896385a453f54574e130d265215d06928ca6",
+      "translation_sha1": "410e85d9bb5af2514c2735b6986d24fbda582536",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/long-running-task-management.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Porte humaine | Doit @ quelqu'un avant de modifier la config production",
+          "after": "Validation humaine | Mentionner une personne avec @ avant de modifier la configuration de production"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "c2a98877e6b2d1c44e6590967b6bbecbf85e07a9",
+      "translation_sha1": "85ec869f2b6b1ff79886021dc880194c0c659767",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/multi-agent-coordination.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "00989e93d150de284fa2aa275da2ee2ad2cfc6f6",
+      "translation_sha1": "388ddf45dfb35b40db09baa5ec115ad13ef9c64f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/research-with-sources.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Comment associer [Valider les sources]",
+          "after": "Comment intégrer l’étape [Valider les sources]"
+        },
+        "Restored source verification metadata with French basis and original evidence date.",
+        "Restored source metadata: caseCategory",
+        "Restored source metadata: directoryOrder",
+        "Restored source metadata: contentType",
+        "Restored source metadata: outputs"
+      ],
+      "source_sha1": "a6fd20179671eccd1b50231f86151fe263be3749",
+      "translation_sha1": "78900dbe31e991041dec2b8a3e387b3a8fa054b5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/review-before-merge.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "CI (garde d'équipe)",
+          "after": "CI (contrôle obligatoire de l’équipe)"
+        },
+        {
+          "before": "Description complète de PR non désinfectée",
+          "after": "Description complète de PR sans traitement préalable"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "78d5c03b9e9c4c9532f5a0696afe5798c5e1e74e",
+      "translation_sha1": "cc5d97d08cc43b215ab3dbb0a88507df1ece020f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/specification-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "70fd8a4c8d4415c133e3588e02a110ef94b2b0e6",
+      "translation_sha1": "0e079a9603e62b901b7d3aedde136729998e93e7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/test-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "sur un site marketing",
+          "after": "sur un site purement rédactionnel"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "4eb568d4682e2ebb5c3ae91b0365562657773561",
+      "translation_sha1": "20fa29005230c048796697f8f8edac3e5f5fde8b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/turn-a-workflow-into-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "les Skills sont une **guidance interactive**",
+          "after": "les Skills fournissent des **instructions interactives**"
+        },
+        {
+          "before": "Signaux qui valent la capitalisation",
+          "after": "Quand formaliser un flux en Skill"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "3dd18c585a8a4ccc138c57670ac5d0ebb955b020",
+      "translation_sha1": "505073b207e4e6edeb5e5157fe5df00f2c9b6088",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/write-an-article.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "e2bb5eab19a97b0407e879cfa3c3fcc161f00071",
+      "translation_sha1": "510ed53888cf67ba7b25d7c1ff345a0768318aae",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/handoff-and-resume.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1ee17e97b466300dd1d8c1e3af552f0ba1a04e45",
+      "translation_sha1": "05c077805700b9dbb91f36c8b6e75b08f8443d29",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3eb251e5d0206eb2c843167cf49bcb408e28fe94",
+      "translation_sha1": "67940b2d7a29e0a722e3583a481494a1eabedd7b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/planning.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a129229ec5f74be4acd054021efff7b5621bc27a",
+      "translation_sha1": "815bf358cab5eb755e2dc1d91cdf3eb03845224a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/progress-and-steering.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c9ea3be403e0fb288e2e4b6a263ca55f60f8eade",
+      "translation_sha1": "1616a930716a4d64163ed7cb1b264c3a938fb9f2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/subagents.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "a3f2be543d9a53ba75d997ac27930682bc441153",
+      "translation_sha1": "95485e45e37cdb1bc5e272f4aa35d61693cde010",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/choose-your-client.md",
+      "status": "reviewed",
+      "findings": [
+        "Realisez → Réalisez",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "e4c7057160e2e37640fc3d62956f5080821d08d4",
+      "translation_sha1": "014a346d50272bae096b61639077ae3851525dcd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/approvals-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "Ensemble, ils façonnent si la CLI paraît conservatrice ou trop permissive. → Ensemble, ils déterminent si la CLI fonctionne de manière prudente ou trop permissive.",
+        "pas d'être demandé trop souvent → pas la fréquence des demandes",
+        "Une mauvaise configuration signifie des Prompts constants → Une mauvaise configuration entraîne des demandes de confirmation constantes",
+        "Restored source verification metadata and preserved original evidence date.",
+        "Restored source sidebar"
+      ],
+      "source_sha1": "35afd393bdd6a82067ca156b13ce1e8a4a156535",
+      "translation_sha1": "654be5717f5620c30812c1dcf9dc64d757d811d1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/commands-and-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "Cette clarté choisit généralement la bonne commande. → Cette distinction facilite le choix de la commande.",
+        "`codex exec` (ou équivalent) → `codex exec`",
+        "Les noms de sous-commandes changent selon la version — faites confiance à `codex --help`. → `codex` et `codex exec` sont actuellement des points d’entrée Stable. Pour les paramètres exacts, consultez `codex --help` et `codex exec --help`.",
+        "Restored source verification metadata and preserved original evidence date.",
+        "Restored source sidebar"
+      ],
+      "source_sha1": "2896e32dd72717c020e05a11a108af7a1b1ee581",
+      "translation_sha1": "100a0e64ab63122385200c6cd41a18a5106f898b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/configuration.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "0a9b2adb1d7f8cf39a3d0320fc881a0173ca0046",
+      "translation_sha1": "407fc12a6579e333deab6d572288d776da858372",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "a80ef7ec24263dc43adf43eaaff0ed43843a4f8f",
+      "translation_sha1": "d3c0ba9bee82280db74024d70537a8c7c242c9ff",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/installation-and-updates.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "be3f2c43c8f8c2002f43c3179ae0c2a39cd71443",
+      "translation_sha1": "6fc47459c5d0440868d7cab11c2f469b1bba5edd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "822e8f749813e7c889ac1a18245ba8f8cfb8a6c4",
+      "translation_sha1": "2f3e06115b8077db5910bdb6cdddfaa5c60f4fd0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/non-interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "# Run one read-only review at the repository root → # Exécuter une revue en lecture seule à la racine du dépôt",
+        "List security risks in the diff against main; do not modify files → Liste les risques de sécurité du diff par rapport à main ; ne modifie aucun fichier",
+        "Write release notes for the last 10 commits → Rédige les notes de version des 10 derniers commits",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "1f37961586b629eb8abb634cee3cfd9a1a29c473",
+      "translation_sha1": "f115edc9918477ab4726c5d9c5d57db66fd0c134",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "57b062fbf03d96ba5ac5f174c7901b3c9c56cdce",
+      "translation_sha1": "792c7c81863261237257925d7d43c52b1112dffc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/compaction.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "c6c9d039e2f24fddc8851506d14598792d3ea613",
+      "translation_sha1": "ee4dbeb7343c9eb8ad4437ee7dcea638e3f0abe3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/context-priority.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "13537ef1e83ebdd00a460ddb86f47bd70ef94ab7",
+      "translation_sha1": "f235d54180ba6cee9f1aae20031fbe4bc14f4eb3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/conversation-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "3968049029137ca09b29a2ef6e06d5942c8432b3",
+      "translation_sha1": "b777b46f47902394d8812e8bc3f6c7a56000a3a9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/file-and-folder-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "e9148a3c39971ea51c054904c71a85a043b12e50",
+      "translation_sha1": "810c61cb6828e7365a32a4b293ec319a2f59ef6b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "d2baf42aacc1cc32d9fd1008fab42fa1fccf0787",
+      "translation_sha1": "42d73601e810b512b611e750910e008493c0fee8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/keep-context-focused.md",
+      "status": "reviewed",
+      "findings": [
+        "(/guide/agent-work/handoff-and-resume/) → (/fr/guide/agent-work/handoff-and-resume/)"
+      ],
+      "source_sha1": "5a55fa8ae18a8ebd12405b8544993e032ab1c035",
+      "translation_sha1": "15e03182990e517ea0f9f394e5c48318b79b4d1c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/project-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "fb3eb503d35009991b8036ed78dbe400cdf96981",
+      "translation_sha1": "77a6f4ef54dfa0259d2bbca604daba2911a51ef4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/sensitive-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "a83db07df4ed214c9e188115a155cc44e12c7415",
+      "translation_sha1": "8393d4158df22be0f6fbdbb2db0c193fb9400c29",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/add-a-prompt-example.md",
+      "status": "reviewed",
+      "findings": [
+        "Définir ce que le succès ressemble → Définir les critères de réussite",
+        "Vérifié croisé layout `examples/` actuel, frontmatter d'exemple, indexation et flux de contribution ; aligné avec les patterns de liens cas/workflow — pas le comportement UI produit volatil. → Recoupement du répertoire actuel `examples/`, du frontmatter des exemples, de leur indexation et du processus de contribution. Les exigences correspondent aux liens des cas et workflows existants et ne dépendent pas du comportement changeant d’un client Codex.",
+        "Fix Bug and Add Tests → Corriger un bug et ajouter des tests",
+        "Les one-liners astucieux → Les formules astucieuses en une ligne",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "15dabd2ef702824fd3c3df22feda65abfb67a6c9",
+      "translation_sha1": "b1f70924a04221b2c88656872044b4651588c629",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/index.md",
+      "status": "reviewed",
+      "findings": [
+        "4. **Chaque slug sidebar** nécessite un fichier markdown ou `npm run build` échoue\n5. Les nouvelles pages doivent mettre à jour la sidebar `astro.config.mjs` → 4. Chaque nouvelle page doit avoir un frontmatter valide, un chemin de fichier et des liens croisés.\n5. Les quatre modules de la barre latérale lisent automatiquement les répertoires ; après l’ajout d’un fichier, lancez la compilation et vérifiez l’ordre et les entrées de navigation.",
+        "npm run build → pnpm build",
+        "Vérifié croisé structure de dépôt, maintenance sidebar, système de statut de page et flux de contribution ; règles de maintenance du handbook — pas le comportement UI Codex volatil. → Recoupement de la structure actuelle du dépôt, de la gestion de la barre latérale, des statuts des pages et du processus de contribution. Ces règles concernent la maintenance du manuel et ne dépendent pas du comportement changeant de l’interface d’un client Codex.",
+        "correction de copie → correction du texte",
+        "Des entrées de nav avec contenu mince → Des entrées de navigation dont le contenu ne guide pas suffisamment le lecteur",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "1d4b3f2fbf07ac35cddf8cc8b6aadf1879d9c0ec",
+      "translation_sha1": "de3d325be40371d2beb71170afd7abb6100586e2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/verify-technical-content.md",
+      "status": "reviewed",
+      "findings": [
+        "Les défauts de permission changent → Les permissions par défaut changent",
+        "Les articles communautaires informent les sujets, pas les faits → Les articles communautaires aident à comprendre, mais ne remplacent pas la vérification des faits",
+        "Vérifier croisé les faits volatils avec la doc officielle → Recouper les faits susceptibles de changer avec la documentation officielle"
+      ],
+      "source_sha1": "cfb077d7936df780c63776a042cfdb5714f49d2a",
+      "translation_sha1": "8ed271a6aec8e6ba83663da3ba1717045e1c10bd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/write-a-guide.md",
+      "status": "reviewed",
+      "findings": [
+        "pages autoritaires → pages de référence faisant autorité",
+        "Français, à destination des personnes qui passent à la pratique → Le texte source est rédigé en chinois simplifié pour les praticiens ; cette traduction s’adresse aux lecteurs francophones"
+      ],
+      "source_sha1": "dd22df1e261f62aff1e7834feb7ae9461a7de44e",
+      "translation_sha1": "2fd4739e9efedcc7db8117739ffe6aba2636cfdf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "cb6371feac1277ea7f0ef49c007c95ac20b2c333",
+      "translation_sha1": "8459e1a7526d09b08c1516ec28676617375bbe60",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/scope-and-precedence.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "b5f31ccef118796ca886345293235a49fa35880a",
+      "translation_sha1": "ba1d29c03493e4a8157c204ceb76173e1331040e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/what-is-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "un handbook complet",
+          "after": "un manuel complet"
+        },
+        {
+          "before": "le delta de cette tâche",
+          "after": "les particularités de cette tâche"
+        },
+        {
+          "before": "Si vous ne savez pas où une phrase appartient",
+          "after": "Si vous ne savez pas où placer une consigne"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "47c5866b932e13197a410f421680b3e900454e35",
+      "translation_sha1": "92a99897a24c24d96bc03f152f89a0f6b713399a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/writing-effective-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Les modèles qui confondent le plus Codex et les humains",
+          "after": "Les formulations les plus difficiles à comprendre pour Codex et les humains"
+        },
+        {
+          "before": "Le long contexte doit lier vers la doc officielle `docs/`.",
+          "after": "Pour les explications longues, ajoutez un lien vers la documentation de référence dans `docs/`."
+        },
+        {
+          "before": "Le modèle choisit une au hasard",
+          "after": "Le modèle en choisit une au hasard"
+        },
+        {
+          "before": "Lire Linear/Jira avant de coder",
+          "after": "Consulter Linear/Jira avant de traiter un ticket"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "63dd7118aece2126ff211101eac865985bdf9f1d",
+      "translation_sha1": "d51b047f652e83b47ca4c2eddfdf5ba0abfa50bd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/choosing-the-right-mechanism.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Si que d'autres ne le voient pas est acceptable",
+          "after": "Si les autres n’ont pas besoin d’y avoir accès"
+        },
+        {
+          "before": "Les règles d'équipe ne devraient pas vivre",
+          "after": "Les règles d’équipe ne devraient pas exister"
+        },
+        {
+          "before": "Ces règles à long terme doivent descendre plus bas.",
+          "after": "Placez ces règles durables dans les mécanismes décrits ci-dessous."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "5fad7cb6e5260f8f5dcfc57c214aa21627af5ebe",
+      "translation_sha1": "fa8ccbec0f9a421331f852f930b8593a81029c86",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/config-basics.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "ne pas relaxer par vous-même",
+          "after": "ne pas assouplir vous-même les restrictions"
+        },
+        {
+          "before": "La configuration convient aux défauts que vous répéteriez presque à chaque fois",
+          "after": "La configuration convient aux réglages par défaut que vous choisissez presque à chaque fois"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "ee00ab52d6ca47ee375c25949d29c9f11656945b",
+      "translation_sha1": "1ecfff21395a62705978b3b20951d3b9dc90318e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "quel comportement appartient à la configuration et quel ne l'appartient pas",
+          "after": "quels comportements relèvent de la configuration et lesquels n’en relèvent pas"
+        },
+        {
+          "before": "Quand diviser plusieurs profils",
+          "after": "Quand créer plusieurs profils"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "4d18d5ebc89659b55d11fe67b8588d7dae8716e6",
+      "translation_sha1": "72a90dd9755345a2831091c3343f2248ba2d68ef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/profiles.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6ab30c571b29defc9f7482fd0d3f83ad92811be7",
+      "translation_sha1": "dc81af53b133b34da71087b905483bb9c8d76665",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "c33809fa4a4328def06f46f38856527156901a54",
+      "translation_sha1": "863027adfb309c081985fad1fa465c49080ad658",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/monorepo-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Le point est de faire suivre les règles les frontières de répertoires clairement",
+          "after": "L’objectif est de délimiter clairement les règles selon les répertoires"
+        },
+        {
+          "before": "Liens propriétaire ou doc",
+          "after": "Responsable ou lien vers la documentation"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "a9fb1d70af6b95ea95b4992e8eb209dcff539db8",
+      "translation_sha1": "40f63ea4c66e57f11656b3cdc0d7bc6a4be20bcf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Qui annule qui",
+          "after": "Quelles règles priment"
+        },
+        {
+          "before": "ancrer les exigences répétées vers le bas",
+          "after": "conserver durablement les exigences répétées"
+        },
+        {
+          "before": "Relaxer le bac à sable",
+          "after": "Assouplir les restrictions du bac à sable"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "28adc494dc91633bd709afe2f3efaf3b71ac377d",
+      "translation_sha1": "cd2fe86e6edba4a6d34b4ab8a3b89be5c5402110",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/memories-and-persistent-context.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "supportent **Memory**",
+          "after": "prennent en charge la **mémoire (Memory)**"
+        },
+        {
+          "before": "un client supporte la mémoire",
+          "after": "un client prend en charge la mémoire"
+        },
+        {
+          "before": "Ne pas mettre à jour d'un côté quand la mémoire est en conflit avec `AGENTS.md`",
+          "after": "Ne mettre à jour ni la mémoire ni `AGENTS.md` lorsqu’ils se contredisent"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "7a689ad7b9d601d4670512d1a12d4b9bd3513fe6",
+      "translation_sha1": "fd42e36617c6e090f7135ff0008a0759dad9f989",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/personal-preferences.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "les préférences personnelles ne devraient **pas** supposer que les coéquipiers sont identiques",
+          "after": "vous ne devez **pas** supposer que vos coéquipiers utilisent les mêmes préférences"
+        },
+        {
+          "before": "paramètres personnels relaxés",
+          "after": "réglages personnels permissifs"
+        },
+        {
+          "before": "paramètres relaxés",
+          "after": "réglages permissifs"
+        },
+        {
+          "before": "les projets de pratique peuvent être relaxés",
+          "after": "les projets d’exercice peuvent utiliser un profil plus souple"
+        },
+        {
+          "before": "annuler temporairement les défauts personnels",
+          "after": "remplacer temporairement les réglages personnels par défaut"
+        },
+        {
+          "before": "un bon défaut global",
+          "after": "un bon réglage global par défaut"
+        },
+        {
+          "before": "habitudes par défaut sont relaxées",
+          "after": "réglages par défaut sont permissifs"
+        },
+        {
+          "before": "défauts que seul vous connaissez",
+          "after": "réglages par défaut que vous seul connaissez"
+        },
+        {
+          "before": "comme défaut global",
+          "after": "comme réglage global par défaut"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "c38105102c7e9f573327c562c9494b36d129796b",
+      "translation_sha1": "2c745743657c01d3328b22c827ae93871ee34220",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/project-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "autoritaire : série AGENTS de ce chapitre",
+          "after": "référence : série AGENTS de ce chapitre"
+        },
+        {
+          "before": "les instructions de run complètes",
+          "after": "les instructions complètes d’exécution"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "76b0fdeaaed05dc731f03f666878495a656bebda",
+      "translation_sha1": "724340f9dd86960c7f974f5606dec901713528fa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/allow-and-deny-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Réduire les opérations à faible risque que vous confirmez quotidiennement de toute façon",
+          "after": "Réduire les confirmations répétées pour les opérations quotidiennes à faible risque"
+        },
+        {
+          "before": "les **défauts typiques**",
+          "after": "les **réglages par défaut courants**"
+        },
+        {
+          "before": "garder les défauts du bac à sable stricts",
+          "after": "garder des restrictions strictes par défaut dans le bac à sable"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "521ecc965f30064fa7945ed427bec058175cd55c",
+      "translation_sha1": "d2b9a685779bca0814e58e836f44f3079ff1297a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/command-rules.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Le point est transformer",
+          "after": "L’objectif est de transformer"
+        },
+        {
+          "before": "(pass) exécution bac à sable / (reject) approbation ou blocage",
+          "after": "(autorisé) exécution dans le bac à sable / (refusé) approbation ou blocage"
+        },
+        {
+          "before": "doit approuver fait ; doit bloquer bloque",
+          "after": "les actions autorisées passent, les actions interdites sont bloquées"
+        },
+        {
+          "before": "garder les défauts du bac à sable stricts",
+          "after": "garder des restrictions strictes par défaut dans le bac à sable"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "fdb8651c9e5733cd8805de6083966031f491a796",
+      "translation_sha1": "ec2a560c2723703b961d33b6a083727b3a116ad2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "afin que le système s'exécute contre elles",
+          "after": "afin que le système les respecte pendant l’exécution"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "9ac618513bcb88699b4fb6c155569e34fa5dcf1b",
+      "translation_sha1": "49230b57e29ada7fbfb07e484b01d83afc08ed87",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/team-rules.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "revueable",
+          "after": "soumise à revue"
+        },
+        {
+          "before": "les individus peuvent relaxer quoi que ce soit",
+          "after": "les individus peuvent assouplir certaines restrictions"
+        },
+        {
+          "before": "faux autorisation",
+          "after": "autorisation erronée"
+        },
+        {
+          "before": "## Quelle couche une règle appartient",
+          "after": "## À quelle couche appartient une règle ?"
+        },
+        {
+          "before": "Machine personnelle relaxe le bac à sable",
+          "after": "Restrictions du bac à sable assouplies sur une machine personnelle"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "bae8bd25ab403d08a187e25ff0f32446c454c291",
+      "translation_sha1": "9394aae0e66d47165d0bd67a9a84d0c094622e48",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/diffs-comments-and-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "32ee40c9ef59b045f7755e0ad428ac032763f3e6",
+      "translation_sha1": "7ec7aebbd88b6f3d876dbcb6bfccc8f634d30566",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "d1a900709e5e6e7ae89c6f22e16110d1327dcbcd",
+      "translation_sha1": "9ceae5d62599a13a7b0c0a5e4bff905b7c9a107a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/installation-and-interface.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "section « Run locally »",
+          "after": "section « Exécution locale »"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "080436d19ee79ccb7ec100eb2e99b905600a165f",
+      "translation_sha1": "7404e1a23892d1cb1fa99c3477db18fb6907ed25",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/integrated-terminal.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "727e93e89f388ad2038b189e58a74191d863ae04",
+      "translation_sha1": "25105861d9949fa4493e507e0517412a4016d2f8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/local-and-cloud-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "741f686ed0413f8c07089e583503d7d9ce896bf4",
+      "translation_sha1": "b7815ab753e0fb0356cb3da0d240502eb21f2f29",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/notifications.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "4a1c6723e0d62c79a3fe4ed63e1d290f93f7ce85",
+      "translation_sha1": "287b06be10895a1b0fdb67479763ca0bea52d184",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/parallel-agents.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2336db1d8dd20a9d20acde0eacee764ee1b8cdad",
+      "translation_sha1": "d3c661648cbed39292251c7ed09a1e7441301ba0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/projects-and-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6a1f17fdf701971889a40e35e2e2e21140187555",
+      "translation_sha1": "2d7c02bdca41eae5a7422d2839c98558dc8a3387",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/settings.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7a6d2fe2af99d8240c3752a954aa199c2857ea60",
+      "translation_sha1": "21f1764c7565cda64160509e725b9c3591735e4b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c298f9f763f92ee64fff4872faf83c84ae57bf8d",
+      "translation_sha1": "7d830fd8a787f72dc85739ae0d64ed8a806327ee",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/worktrees.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "35697161369237855deb8c0b2d06759839e1e013",
+      "translation_sha1": "fd324dd853734245895240606fbc79a7a1672754",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/code-review-automation.md",
+      "status": "reviewed",
+      "findings": [
+        "Les équipes sous-estiment souvent : s'il peut revoir automatiquement, peut-il décider automatiquement ? → Les équipes surestiment souvent sa portée : puisqu’il peut examiner automatiquement une PR, pourrait-il aussi décider de son approbation ?",
+        "revue de diff légère qui sauve fiablement le temps d'équipe → revue légère du diff qui fait gagner du temps à l’équipe de manière régulière",
+        "portes humaines → points de validation humaine",
+        "Portes de qualité → Contrôles de qualité",
+        "non sanitizées → non vérifiées",
+        "parseable par machine → analysable par un programme",
+        "Pas de limite de taille de diff cause timeouts et brûlage de quota → L’absence de limite de taille du diff provoque des dépassements de délai et consomme le quota",
+        "Câblez Codex → Intégrez Codex",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "aa8b33e28ba705b41a3c6c73aedb542c8864dc9f",
+      "translation_sha1": "2ea888f525964ea7e9076b6e8582a62b9b9c3bf8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/index.md",
+      "status": "reviewed",
+      "findings": [
+        "En câblant Codex dans CI/CD, l'erreur la plus courante est vouloir auto-éditer, auto-push et auto-merge dès le premier jour. → Lors de l’intégration de Codex à la CI/CD, l’erreur la plus courante est de vouloir modifier, pousser et fusionner automatiquement dès le départ.",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "4aeb424dfd71913c5c4bb56b96eac5947d937417",
+      "translation_sha1": "d3daa23a60a48c1417ceba5d7e8083b180288b80",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Faire Codex partie des flux de travail d'équipe → Intégrer Codex aux flux de travail de l’équipe",
+        "résultats comparable → résultats comparables"
+      ],
+      "source_sha1": "f58851ea7d7c6ab01a534861e9657b8f6802e0a4",
+      "translation_sha1": "410e1acc990cae5f3dd706446ddb7762fc556d57",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/codex-exec.md",
+      "status": "reviewed",
+      "findings": [
+        "vous ne vous attendez pas à qu'il → vous ne vous attendez pas à ce qu’il",
+        "Principes : → La progression est écrite sur `stderr` et la réponse finale sur `stdout`. Utilisez `--json` pour transmettre le flux complet d’événements à un programme, ou `-o` / `--output-last-message` pour enregistrer seulement le dernier message dans un fichier. Ajoutez `--output-schema` si des champs stables sont nécessaires.\n\nPrincipes :",
+        "#permissions-and-security → #permissions-et-sécurité",
+        "non sanitizé → non vérifié",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "6d7c481f40816755cedb3b90ae8a3c8e2dc2fa35",
+      "translation_sha1": "00e5e35fe98da3f6ab2210a781495b84f6727a27",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/exit-codes-and-retries.md",
+      "status": "reviewed",
+      "findings": [
+        "Tâche complétée et critères de succès du prompt atteints → Le processus `codex exec` s’est terminé avec succès ; consultez encore le résultat structuré pour vérifier les critères métier",
+        "Non-`0` avec API 429/5xx | Retries backoff exponentiel limités → Non-`0` et panne temporaire de réseau ou de service confirmée par le runner | Nouvelles tentatives limitées, avec délai progressif",
+        "## Modèle de retry (bash)\n\n```bash\nmax=3\ndelay=10\nfor i in $(seq 1 $max); do\n  if codex exec --cd . \"$(cat \"$PROMPT\")\"; then\n    exit 0\n  fi\n  code=$?\n  if [ \"$code\" -eq 2 ]; then\n    echo \"Erreur de politique, pas de retry\" >&2\n    exit \"$code\"\n  fi\n  sleep $((delay * i))\ndone\nexit 1\n```\n\nAligner les codes « ne pas retry » avec la doc officielle et brancher dans `case`.\n\n → ## Capturer le code de sortie (bash)\n\n```bash\n#!/usr/bin/env bash\nset -uo pipefail\n\nlog_file=\"${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log\"\ncodex exec --cd . \"$(cat \"$PROMPT\")\" 2>\"$log_file\"\ncode=$?\n\nif [ \"$code\" -ne 0 ]; then\n  cat \"$log_file\" >&2\n  exit \"$code\"\nfi\n```\n\nN’attribuez pas de signification à un nombre sans définition officielle : ne supposez pas, par exemple, que `2` indique toujours un refus de politique. Si une nouvelle tentative est nécessaire, laissez le runner externe décider à partir des catégories d’erreurs qu’il sait identifier de façon fiable. Limitez le nombre de tentatives, la durée totale et les effets de bord.\n\n",
+        "résultats non comparable → résultats non comparables",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "35074cd48d15f5958de20a39af9921c867cc2e34",
+      "translation_sha1": "3db90d36b68f41c972b645fa8732a0b7601f8296",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "2d542c9177aff0d2cb04b57eb00371dd4f833a6c",
+      "translation_sha1": "1641acdb643231c89bb5b9393797954e0dae646f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/scripts-and-pipelines.md",
+      "status": "reviewed",
+      "findings": [
+        "codex exec --cd \"$ROOT\" \"$(cat \"$PROMPT_FILE\")\" → codex exec --cd \"$ROOT\" --ephemeral \"$(cat \"$PROMPT_FILE\")\"",
+        "## Sketch GitHub Actions\n\n```yaml\njobs:\n  codex-review:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      pull-requests: write\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n      - name: Install Codex CLI\n        run: |\n          # Pin version selon doc d'installation officielle\n          npm install -g @openai/codex@<pinned-version>\n      - name: Run review\n        env:\n          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        run: |\n          codex exec --cd . \"$(cat prompts/ci/pr-review.md)\"\n```\n\n:::caution\nAjuster la méthode d'installation et les scopes de permission aux exigences de sécurité org ; **ne pas** echo les secrets dans les workflows.\n:::\n\n → ## GitHub Actions : utiliser l’Action officielle\n\n```yaml\njobs:\n  codex-review:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n    steps:\n      - uses: actions/checkout@v5\n        with:\n          fetch-depth: 0\n      - name: Run review\n        uses: openai/codex-action@v1\n        with:\n          openai-api-key: ${{ secrets.OPENAI_API_KEY }}\n          prompt-file: prompts/ci/pr-review.md\n```\n\n:::caution\nDans GitHub Actions, privilégiez l’Action officielle `openai/codex-action`. Ne définissez pas la clé API comme variable d’environnement de l’ensemble d’un job qui exécute le code du dépôt. Si une étape ultérieure doit écrire dans une PR, séparez les droits d’écriture et la clé dans des jobs différents, avec un artefact de patch pour transmettre le résultat.\n:::\n\n",
+        "sur schedule ou sur événements → selon un calendrier ou des événements",
+        "Bon candidats pour scripts ou pipelines → Bons candidats pour les scripts ou les pipelines",
+        "Les scripts fixent le flux → Les scripts définissent le processus",
+        "Snippet shell minimal → Extrait shell minimal",
+        "Pourquoi les équipes évitent de coller des prompts dans l'UI CI → Pourquoi les équipes évitent de coller les prompts directement dans l’interface de CI",
+        "Fixez ces trois d'abord → Fixez d’abord ces trois éléments",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "07aeb4f2ef5902e8b8389ad6b29b1ee5fd8924e2",
+      "translation_sha1": "535ab7d44839f37c8a713e0eb5c110491caeb9f4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/structured-output.md",
+      "status": "reviewed",
+      "findings": [
+        "Faire produire exec des résultats parseables par machine pour étapes aval, dashboards et portes. → Faire produire à exec des résultats analysables par programme pour les étapes suivantes, les tableaux de bord et les contrôles de validation.",
+        "Pour grande sortie, exiger un champ chemin de fichier ; l'Agent écrit dans `artifacts/`, CI upload l'artefact. → Pour une sortie volumineuse, demandez un champ contenant le chemin du fichier ; l’Agent écrit dans `artifacts/`, puis la CI téléverse l’artefact.",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "e80b5d78570e417fe1996cd261b5f7dd1064f9b4",
+      "translation_sha1": "241a8f5d551b25e5a4764bb1958fe453cbd67fc8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/sdk-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "e888ae6743222bd35ed2162b30e88b8c4728b2f8",
+      "translation_sha1": "43155ed7164b6cc26ed90b15d18f6de5748dfde7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "- [Vue d'ensemble Webhooks](/fr/guide/developer-platform/webhooks/overview/) → - [Limites des Webhooks et événements de tâche](/fr/guide/developer-platform/webhooks/overview/) : distinguer les résultats d’exécution locale, les événements App Server et les rappels HTTP personnalisés. Cette section ne fournit aucun contrat Cloud Webhook unifié non vérifié.",
+        "quelque chose a arrivé → quelque chose s’est produit"
+      ],
+      "source_sha1": "68cb29b9ea3b6d04baea22ee7311d1e3a28bea7b",
+      "translation_sha1": "2da00d20b281e8d712c2f9bb8b244dd4ff483718",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Vérifiez l’état et le résultat métier avant de déclencher un déploiement sur le seul nom de l’événement. → Vérifiez l’état et le résultat métier ; ne déclenchez pas un déploiement sur le seul nom de l’événement."
+      ],
+      "source_sha1": "8a84ab85278c41fd4c91b2e092418e1f9ffdcb79",
+      "translation_sha1": "12ac8d603b753208dba80250eac05abba5a7d429",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/generated-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        "Accepter systématiquement les fichiers, rapports et sorties de build que Codex crée ou exporte. → Vérifier méthodiquement les fichiers, rapports et résultats de compilation créés ou exportés par Codex.",
+        "- exigences d'acceptation cas intégration sources externes\n → ",
+        "Fichiers que Codex a écrits de nouveau → Nouveaux fichiers créés par Codex",
+        "Vérifié croisé avec → Recoupement avec",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "7401176332de263f318ee791059b0f88e7f33834",
+      "translation_sha1": "5225ab982a24e56be9abb70a0c9d9f40aff3cab6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/images-and-screenshots.md",
+      "status": "reviewed",
+      "findings": [
+        "Focus sur la zone titre hero et l'espacement des boutons. → Concentre-toi sur le titre du premier écran et l’espacement des boutons.",
+        "Les bonnes captures sont image claire, focus clair, attente claire — pas seulement « il y a une image ». → Une bonne capture doit être lisible, montrer la zone à examiner et préciser le résultat attendu. La présence d’une image ne suffit pas.",
+        "Vérifié croisé avec → Recoupement avec",
+        "Fournir des captures et entrées design à Codex ; gérer les fichiers image dans les Tâches. → Fournir des captures et des maquettes à Codex et gérer les fichiers image dans les tâches.",
+        "Exploration profonde → Pour approfondir",
+        "Images dans le repo → Images dans le dépôt",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "adc2b88ae3cbd1ca8b5f6b93743eae7aa306ded3",
+      "translation_sha1": "c162f5b088d8539685dc50a877442d2758762788",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Les problèmes sont souvent pas → Les problèmes ne concernent souvent pas",
+        "Vérifié croisé avec → Recoupement avec",
+        "Fichier existe ≠ Tâche complète → Un fichier créé ne signifie pas que la tâche est terminée",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "543d14ef74a0606ae2eada7e8301cc692bed0100",
+      "translation_sha1": "888d1606d99eccab9e34681c7b9871612ce2190d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/pdf-and-documents.md",
+      "status": "reviewed",
+      "findings": [
+        "difficiles à diff → difficiles à comparer par diff",
+        "pour sauver le Contexte → pour économiser le contexte",
+        "Vérifié croisé avec → Recoupement avec",
+        "Politique repo → Politique du dépôt",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "1f4f82bf8abadf2fdb17e4dd291fbcb03c6cfb2b",
+      "translation_sha1": "08ca64edd1416a157a51c7e9b4194fd2325707a8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/presentations.md",
+      "status": "reviewed",
+      "findings": [
+        "Générer et réviser slides et decks — structure, masters et notes du présentateur. → Générer, remanier et exporter des présentations — structure, masques de diapositives et notes du présentateur.",
+        "le polish final reste à vous → la mise au point finale reste à votre charge",
+        "exécutifs → dirigeants",
+        "Client, exec, collègues → Clients, dirigeants ou collègues",
+        "Handout lecture seule → Document à diffuser en lecture seule",
+        "Trop de puces, graphiques et conclusions par slide cache le point. → Trop de puces, de graphiques et de conclusions sur une diapositive masquent le message principal.",
+        "Vérifié croisé avec → Recoupement avec",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "fb319fa4325fdf0714e279786e4c631db7176984",
+      "translation_sha1": "5754fc167865f0c573ca8847b614a67d188b19ac",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/tables-and-spreadsheets.md",
+      "status": "reviewed",
+      "findings": [
+        "Tâche : Résumer les revenus par région, sortie summary.csv → Tâche : agréger revenue par region et produire summary.csv",
+        "Vérifié croisé avec → Recoupement avec",
+        "Vérification des comptages et nombres → Vérification des chiffres et du nombre de lignes",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "b08adec53399435137ca964fb9c9e62e0c3c6e92",
+      "translation_sha1": "9c549f9c74eaaf1232d99a84e5941f4c39c801b4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/text-and-code-files.md",
+      "status": "reviewed",
+      "findings": [
+        "La plupart du travail de développement est des **fichiers texte et code** → La plupart des tâches de développement portent sur des **fichiers texte et code**",
+        "La clé est changer → La clé est de modifier",
+        "Pourquoi ces fichiers se trompent → Pourquoi ces fichiers posent problème",
+        "Petites éditions petites, explicables, révisables battent les refactors « en passant ». → Des modifications limitées, explicables et faciles à examiner sont généralement plus fiables qu’une vaste refonte faite « au passage ».",
+        "formateurs et linters → outils de formatage et linters",
+        "Vérifié croisé avec → Recoupement avec",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "153779381cf4528add19912ddefd3b8a361b7b5b",
+      "translation_sha1": "a6d3fc77a2201ca1c1ff015e62e6bbc0ebcc8ea7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/agent-basics.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "14ab120de8d9c2ccda6ca1bc5b11bb3a3cd19ea6",
+      "translation_sha1": "6fcf5f9376537651527f28399e29c2c8c569a8aa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/ai-and-language-models.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ccdac83274caa0ab9896c3d935825a08375e3422",
+      "translation_sha1": "a595259e76a560f5af1a5f73fc3d6a87a6dcda33",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/common-misconceptions.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "700e57bbbe339545097cb200dfec6ad12a187e4d",
+      "translation_sha1": "c0a5f74e1ec7a6b1c4a8729ba8cf3d4c55c0fefe",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/files-tools-and-commands.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "9d65338a1d2c6b153bdf9b23787e5d70300ee4fe",
+      "translation_sha1": "3c93644fee709474d9451c882037f8d4d3751e5e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/goals-context-and-actions.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "indique une direction, mais pas assez pour agir régulièrement.",
+          "after": "indique une direction, mais ne donne pas assez de précisions pour agir de façon fiable."
+        }
+      ],
+      "source_sha1": "280cea9aad517013ecd6a4e9f3ae5c9033ff60d2",
+      "translation_sha1": "cef8ff2f4fe1da5f336828f6f750304b8ae9b93b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "b4d4b2b7ed5cf754697878e6927baa24587c233c",
+      "translation_sha1": "a1dd01562d0702c294b9c750aaaa83d6391f000e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/local-vs-cloud.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Comparer les Tâches locales et Cloud et quand utiliser chacune.",
+          "after": "Comparer les tâches locales et cloud et savoir quand choisir chaque mode."
+        },
+        {
+          "before": "Tâche",
+          "after": "tâche"
+        },
+        {
+          "before": "## Comment elles se ressentent",
+          "after": "## À quoi ressemble le travail dans chaque environnement"
+        },
+        {
+          "before": "compléter la boucle de tâche",
+          "after": "mener une tâche jusqu’à sa vérification"
+        },
+        {
+          "before": "Cloud n'est pas automatiquement plus avancé ou plus « formel »",
+          "after": "Le cloud n’est pas forcément plus avancé ni plus adapté au travail professionnel"
+        },
+        {
+          "before": "pas du sentiment d'avancement",
+          "after": "pas d’une impression de sophistication"
+        },
+        {
+          "before": "envisagez alors cloud",
+          "after": "envisagez alors le cloud"
+        },
+        {
+          "before": "Passez à Cloud",
+          "after": "Passez au cloud"
+        },
+        {
+          "before": "Cloud convient mieux",
+          "after": "Le cloud convient mieux"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "9569b3cd3e0376e051d2b2a602fdb6441bb3eac3",
+      "translation_sha1": "32d24e7dafb22aa24fc540379600aa1da31de014",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/models-and-reasoning.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "0685b79ddb3d42b5ce213d39c3377ebeb66e56ec",
+      "translation_sha1": "d901e7fe21209ac111a4348d00bb9ceef349fb86",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/permissions-and-approvals.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1beec634597ecc6420228baa6d2034370486ccb6",
+      "translation_sha1": "9498fb159aff1de45651ea03ac558d18de8d3a1a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/sandbox-and-network.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2cf2c465baf5c06599fb69453c52964e53bb3fb0",
+      "translation_sha1": "fdef2cd5fe214edb0c3907b4532c1880678fbb48",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/threads-tasks-and-projects.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c3604521816c51ff402be4b05b68658be34dd249",
+      "translation_sha1": "800b9da4b33175a798152909bab289c3ad1b7b1d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/tokens-context-and-compaction.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cd44efe761b775c4820fb5b0bb91ff0b7f76036d",
+      "translation_sha1": "9fc5517e2fccd5a0d88a51c334fd42b0a0e3c6b3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/verification-and-human-review.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "bfe40369ed1ed780ca1d822d82420162501359cd",
+      "translation_sha1": "5f8c71748c2af8262094ec88f46cbef3a07cb75c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/account-plans-and-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "7b123e53f8fd45e9dfea8b69cae3e8ebe3f537f4",
+      "translation_sha1": "c381cffc640dd05f86f9912691d5d6a18af5e03a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/beginner-safety-checklist.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "75bfe4dc2f24bc964c2cf0b3d5b72d179344deeb",
+      "translation_sha1": "28821dccc772005eb1d0272a75d0846f1fd814a4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/create-your-first-project.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "43dcbdbf1f0c8bc25ef872693ea4ac24b31c41fe",
+      "translation_sha1": "4a3937f96f9ee7d0f3cfc4da3837a13faa5dc2f7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/first-30-minutes.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Tâche",
+          "after": "tâche"
+        },
+        {
+          "before": "N'entraînez-vous pas",
+          "after": "Ne vous entraînez pas"
+        },
+        {
+          "before": "un environnement d'expérimentation que vous pouvez annuler",
+          "after": "un environnement d’expérimentation dans lequel vous pouvez revenir en arrière"
+        },
+        {
+          "before": "## Ce que chaque bloc doit terminer",
+          "after": "## Ce que vous devez accomplir à chaque étape"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "7d1061dedd2f2a18030d5ea47fb7a02ad326a954",
+      "translation_sha1": "c4a891625539ec6018b5ed639406332e549eb1bf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "62fb65dbb62e033d2e6b77791de17bfff4f2e5c4",
+      "translation_sha1": "9a43602c26e4ef7e200ad734c011c89d1e2f8918",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-cli.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "La première tâche doit rester en lecture seule :",
+          "after": "La première tâche peut rester en lecture seule :"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "564bd757cf7cd36427a0bcb67628edc4f0a48683",
+      "translation_sha1": "d1d9efdc88c24665d7526fab3a126fd344851571",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-desktop-app.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "974842f06dba920506faa3e83cc8bb61b5ce33c1",
+      "translation_sha1": "6c9cb479367ab1d8929891b2a091770c2cd7e206",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-ide-extension.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Cite les noms de symboles pertinents.",
+          "after": "Cite les noms des fonctions pertinentes."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "e8f88eca639ca9121c3be98e21562256cae3bf41",
+      "translation_sha1": "84fdf4c4c2a43b035f6473e8960764fd60c0f571",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/review-the-result.md",
+      "status": "reviewed",
+      "findings": [
+        "la page, le document ou la sortie du code correspond-il → le résultat de la page, du document ou du code correspond-il"
+      ],
+      "source_sha1": "a215910a8148f3ab8ea7577df58708fcc9b924fe",
+      "translation_sha1": "af2b41ade60b3704b87fe5b3cec42708cb4e24cc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/run-your-first-task.md",
+      "status": "reviewed",
+      "findings": [
+        "Tâche → tâche",
+        "Prompt → prompt",
+        "Approbation → approbation",
+        "Demandez d'abord un court plan (ou demandez-en un vous-même) → Laissez Codex proposer un court plan, ou demandez-lui d’en fournir un",
+        "CLI/IDE peuvent utiliser le même prompt → vous pouvez utiliser le même prompt dans le CLI ou l’IDE",
+        "Si les trois passent, la petite première tâche a globalement fonctionné. → Si ces trois points sont satisfaits, votre première petite tâche est globalement réussie.",
+        "Restored source legacy verification metadata including French basis; retained original evidence date."
+      ],
+      "source_sha1": "f203611f4f654c69b744f59522f18b0e652f4e65",
+      "translation_sha1": "bc3ff3d869f7365c44990b714eb6d007ff0a95fb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/sign-in-and-authentication.md",
+      "status": "reviewed",
+      "findings": [
+        "depuis la page de déconnexion → depuis l’écran affiché lorsque vous êtes déconnecté",
+        "en particulier lorsqu'un espace personnel et un espace d'entreprise utilisent la même adresse e-mail. → en particulier si vous disposez à la fois d’un espace personnel et d’un espace d’entreprise.",
+        "Ne validez jamais `~/.codex/auth.json` dans un dépôt → N’ajoutez jamais `~/.codex/auth.json` à un commit",
+        "Le SSO de l'organisation doit l'imposer. → L’administrateur doit imposer la MFA pour le SSO de l’organisation.",
+        "Restored source legacy verification metadata including French basis; retained original evidence date."
+      ],
+      "source_sha1": "ea83fa685e18889503453627f23d1472ee306cbc",
+      "translation_sha1": "a96d2ef4d0e4b50616748e29b8c475507fc500f1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/undo-and-recover.md",
+      "status": "reviewed",
+      "findings": [
+        "Revenir en arrière sans risque → Revenir en arrière prudemment",
+        "une fonction de relecture → une fonction de retour à un état précédent"
+      ],
+      "source_sha1": "8aa3171c775ff30bfef121ba2af84e3dc49d5f31",
+      "translation_sha1": "cc3b005d059ca15bd097eaf3d491636e2bd36117",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/cloud-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "non validé",
+          "after": "non commité"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "d5369b54fa1bbc3745b8e884cfd47a1eb9aaf0e0",
+      "translation_sha1": "2fc1b8712174f3d0b781b5a18f82c7f902861b4d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/editor-context.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Masquez les journaux et les données client avant de les joindre",
+          "after": "Supprimez les informations sensibles des journaux et des données client avant de les joindre"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "6d1b2484db79a7285d2d8a61fce317dbb4ad2fac",
+      "translation_sha1": "e26d7189336d7bcfcd595b978c9c8c6add5c7809",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c2fa50b16ab891592f65320d58f780b488aab72c",
+      "translation_sha1": "e2583f5f64d64ecc8fe7daf2e782b113b9ed93cf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/installation.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "85e1691cf888074bf8a7337d92f93626f8d80538",
+      "translation_sha1": "62e370c6d0a8866291ee2f36a117c45fb3198720",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/local-task-workflow.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "0264d4d9c01773ef206b854e86b29ddaa1c415f4",
+      "translation_sha1": "b1aa3e940de6d3ce90e472eddcc541d60530f0d9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/reviewing-changes.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "non validées",
+          "after": "non commitées"
+        },
+        {
+          "before": "Les constats prioritaires du relecteur sont corrigés ou explicitement acceptés.",
+          "after": "Les problèmes prioritaires signalés par le relecteur sont corrigés ou leurs risques sont explicitement acceptés."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "a6badd55babfc2f72b7f8617995435c07a674972",
+      "translation_sha1": "b9f38d9fb53c4d8e10cae98bc9691507e5adf56c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/selected-code-and-open-files.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "de Tâche IDE",
+          "after": "d’une tâche dans l’IDE"
+        },
+        {
+          "before": "petites et haute précision",
+          "after": "limitées et précises"
+        },
+        {
+          "before": "le Contexte",
+          "after": "le contexte"
+        },
+        {
+          "before": "du Contexte",
+          "after": "du contexte"
+        },
+        {
+          "before": "Cross-répertoire, pas ouvert",
+          "after": "Fichiers dans d’autres répertoires ou non ouverts"
+        },
+        {
+          "before": "la focalisation est une petite région, la sélection bat un vague",
+          "after": "le problème concerne une petite zone, la sélectionner est plus précis qu’un vague"
+        },
+        "Restored source verification metadata with French basis and original evidence date.",
+        "Restored source metadata: sidebar"
+      ],
+      "source_sha1": "b6b264f6221a4aafd40f578baae1e09094763380",
+      "translation_sha1": "b872a6507d5c77afcb4d99883ff4df213b543ef1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/settings.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Ne modifiez qu'une catégorie de paramètres à la fois.",
+          "after": "Ne modifiez qu’un paramètre à la fois."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "6f28910e6fa3f4373a61c4ca18395b836512a145",
+      "translation_sha1": "1537e8d46342bd7cc17967073e9605c9958fde08",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/supported-editors.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "7b82896e18ef0b7ca25f4839b60dd5db91d3c9a0",
+      "translation_sha1": "93188e6ac2301ed3440236e3cb0bf02c1ec59a1e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ebb21de9c69cd0324be9967b00dfad5d14443c1b",
+      "translation_sha1": "6efadc8142ac53302208226d5ea3af0d6afe476a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Cette section vous aide à comprendre ce qu'est Codex, à quoi il sert et comment passer de la première utilisation à un flux de travail stable. → Cette section vous aide à comprendre ce que sont Codex et les agents IA, à quoi ils servent et comment passer de la première utilisation à des méthodes de travail sûres, stables et vérifiables.",
+        "handbook → manuel",
+        "Tâche → tâche",
+        "Permissions → autorisations",
+        "Permission → autorisation",
+        "Contexte → contexte",
+        "Vérification → vérification",
+        "Bac à sable → bac à sable"
+      ],
+      "source_sha1": "aa277f2de13e98eb2a57d9ee8bfa0472f948da65",
+      "translation_sha1": "5a44796e13eae5003eb66439a3aa86da2082a566",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/github.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "changements locaux non poussés existent",
+          "after": "modifications locales non commitées existent"
+        },
+        {
+          "before": "les Tâches Cloud",
+          "after": "les tâches Cloud"
+        },
+        {
+          "before": "nouvelle Tâche Codex",
+          "after": "nouvelle tâche Codex"
+        },
+        {
+          "before": "le Contexte du repo",
+          "after": "le contexte du dépôt"
+        },
+        "Restored source verification metadata with French basis and original evidence date.",
+        "Restored source metadata: sidebar"
+      ],
+      "source_sha1": "ece7161bc622d24c95c7a0fccee13fe30f5ac600",
+      "translation_sha1": "a841d91d2298a791679a42b1ffa354a6b35e6dd5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "140102ce4bd9f260ecb2a23f767fd347a27ddbca",
+      "translation_sha1": "276d6aecf2558322533e8df54697c70b8cfd0580",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/01-talk-to-codex.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "827a5d22da1b0a743c5cb00fe8c70ebf40690f7d",
+      "translation_sha1": "96c7685beff039d0c0fbb1bd29d1fc4a4b7041be",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/02-work-with-files.md",
+      "status": "reviewed",
+      "findings": [
+        "Comparez le fichier ligne par ligne → Le commentaire chinois signifie « État : brouillon d’exercice, non publié ». Conservez sa forme exacte pour pouvoir comparer le fichier aux supports fournis.\n\nComparez le fichier ligne par ligne"
+      ],
+      "source_sha1": "ec5c2d3e765014553e501fca4909df22393b136e",
+      "translation_sha1": "b82f8248a78a7c0a635ad318a1aed59c5777ba7f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/03-give-clear-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "664fdf72408db4d2edc0f72178e6a947486c4881",
+      "translation_sha1": "2ab5da407927d4815c718a403b7a6176ce887ffc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/04-review-results.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "e426ec4391083920b17726bdaf003ab666ac4606",
+      "translation_sha1": "c3b1e2f8555c4c6efddd6c012f63d2eec84d267e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/05-complete-first-project.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "cc1139b811a175f02ad577e4f66c53b42fa857b1",
+      "translation_sha1": "332ecdb4a07ef54e5c9e23288dc03732dfafbe8a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "1b7fbb340d7860591f93663eb89697c812ab968d",
+      "translation_sha1": "ee8792a6524124ba2ae34ee4e044908eabd0fe8c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/creator/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Tous les clients n’ont pas besoin des mêmes outils. → Il n’est pas supposé que tous les clients disposent des mêmes outils."
+      ],
+      "source_sha1": "d1b46b13bb164a1929b59a4b530a88465504a06d",
+      "translation_sha1": "f94839a49d921810c0a1b6beca7a92731fdd0905",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/developer/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "22d8bd3a0640952eee2c8961cb8d1f7f1b4461c6",
+      "translation_sha1": "db7e936cb6202b163780f4f5b73cdfe4f1629cee",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/index.md",
+      "status": "reviewed",
+      "findings": [
+        "les subagents découpent le travail → les sous-agents prennent en charge des sous-tâches aux limites claires",
+        "[Subagents] → [Sous-agents]",
+        "du handbook → du manuel",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "2f7ff714fd4c735cea5b69c88745809693c374ea",
+      "translation_sha1": "b00d6048fb43634cd74a3bafb63937aa4c746ee8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/team/index.md",
+      "status": "reviewed",
+      "findings": [
+        "n'élargissez pas simultanément les permissions, le modèle et la tâche. → n'élargissez pas les permissions tout en changeant de modèle et de tâche."
+      ],
+      "source_sha1": "3b467382b4f4ff1292c3df41cf9266f0b6c53ee1",
+      "translation_sha1": "a43067d279597484b3ffde863abe61bfe1634888",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/permissions-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "Question traitee → Question traitée",
+        "sont retires → sont retirés",
+        "moindre privilege → moindre privilège",
+        "Prevoir vérification → Prévoir vérification",
+        "accéder a Internet → accéder à Internet",
+        "\na jour les versions → \nà jour les versions",
+        "Executer pnpm → Exécuter pnpm",
+        "portée dependent → portée dépendent",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "6b5fcb85ea71e861fab7a9376f24c1f1ac63fc2a",
+      "translation_sha1": "407ee08d16962914f6ceaf31353ead92d4ee1909",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/definition-of-done.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f55e9f7fd33e5d7d12ca0ae9c65d164e092c2b23",
+      "translation_sha1": "9b45b323deebcaf71b6f96a8ede7d9043ee8d90f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/handle-uncertainty.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "839ce22cc23151823d406f4b1269ba98fb471a7d",
+      "translation_sha1": "4947db4a1e7ca77e60f5cbb0c1863f36e148daa2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Vérification",
+          "after": "vérification"
+        },
+        {
+          "before": "Tâche",
+          "after": "tâche"
+        },
+        {
+          "before": "Prompts",
+          "after": "prompts"
+        },
+        {
+          "before": "définir le terminé",
+          "after": "définir les critères de fin"
+        },
+        {
+          "before": "La vérification **retient le risque avant la livraison**.",
+          "after": "La vérification permet de **traiter les risques avant la livraison**."
+        },
+        {
+          "before": "Incertain où commencer : par défaut vers",
+          "after": "Si vous ne savez pas par où commencer, consultez la"
+        },
+        {
+          "before": "Accent de vérification par type de tâche",
+          "after": "Points de vérification selon le type de tâche"
+        }
+      ],
+      "source_sha1": "90d62fb0bee5a2ab790e65bc41e794682af27d2f",
+      "translation_sha1": "55d19ccfb3cbfa7255a2e91c5ba40dba0af81dda",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/review-diffs.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f7f953fd1cbb1be0341f29ca65e0a5f1214a9c36",
+      "translation_sha1": "cd03ca7521556457d737483ac892427faa80c61d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/run-tests.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8b1e5c73df651321134ff649516555f92ad6ceac",
+      "translation_sha1": "7a56fccfce07d044b40423031050a6ac6035ebbe",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/usage-time-and-model-choice.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8b68d9272061b5e610884b1b1d49763e7942d0bb",
+      "translation_sha1": "4028fe3c9c0495ed4626eb5fc20d59d9293d0094",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/validate-sources.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "688453128f3263f3edb614a048d99db4467269e4",
+      "translation_sha1": "aa060961dca16daf3178b1d8aa3c86f16e20819a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/verify-artifacts.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7a6a12e8bcf87800bd77ecedbd6cb538a1df0994",
+      "translation_sha1": "edd6193f8cdf097d68fcc41ad56d62549af06b8a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/workflow-evaluation.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "9ea3ecc3dab50c37a259150d95dfde4398bb66dc",
+      "translation_sha1": "c1fd013e9ac67be41b28debfb71795f045647160",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/commands/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source legacy verification metadata including French basis; retained original evidence date.",
+        "Restored sidebar"
+      ],
+      "source_sha1": "6091bcce1c86ada657472a59d0e521b44275fb41",
+      "translation_sha1": "197bbfb405fbdc0cbd3b38d2ab7b1201cfc1eff0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/configuration-reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source legacy verification metadata including French basis; retained original evidence date.",
+        "Rewrote clipped and anglicized French against the complete Chinese source; restored explanation detail.",
+        "Restored sidebar"
+      ],
+      "source_sha1": "8f692edfee650db27f6949558f972e96ea3f027b",
+      "translation_sha1": "2e7355c2932400540a48a77e1efbbe7013873428",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/environment-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source legacy verification metadata including French basis; retained original evidence date.",
+        "Rewrote clipped and anglicized French against the complete Chinese source; restored explanation detail.",
+        "Restored sidebar"
+      ],
+      "source_sha1": "58fd37baf9b6cce4c7e14005a429d826a4ab2f0d",
+      "translation_sha1": "e8ed00dfe6b7d29bf185ad7e57d536bdb691e673",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/error-reference.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source legacy verification metadata including French basis; retained original evidence date.",
+        "Rewrote clipped and anglicized French against the complete Chinese source; restored explanation detail.",
+        "Restored sidebar"
+      ],
+      "source_sha1": "955c0a6c0bc32870a1800cc06735d189e3e651be",
+      "translation_sha1": "e58e8782f6d68f8c807dada94fd8c0cd72a2c3c7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/faq.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "c9d7ed80ca6311017e1e56560032b30c0e80af12",
+      "translation_sha1": "0fbd55a2102b4444dc710f0e7651f101bfb57b62",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/feature-comparison.md",
+      "status": "reviewed",
+      "findings": [
+        "l’IDE pour le code local → l’IDE pour les modifications ciblées du code"
+      ],
+      "source_sha1": "b3d30b08174b9399a442efafef920bce8c116fcd",
+      "translation_sha1": "72d56554b9a2352105d3c3bb3dd04e14d55421bf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/glossary.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "ae4b7946102c0a2f06beda42289c9f5b99cab77e",
+      "translation_sha1": "0175a48b53e2130f29426acff8f7ac09afc44ec3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Courte, précise et interrogeable : → Des pages courtes, précises et faciles à rechercher :"
+      ],
+      "source_sha1": "d45e64069cbf22b67669bfdba08239a7d14e864a",
+      "translation_sha1": "df0d8da302c08c4c5d8b9b272aef11ae26a49395",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/keyboard-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "4f812d968c4bd5158953d1ed1ef1e345f7ed8329",
+      "translation_sha1": "4a35fe1abd6acd4ff34b68241246a0836a0dfbd3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/model-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "20eb508b9457c23c6f0cdad9725dc6eba1a2ad1a",
+      "translation_sha1": "72e119a4db8bdd98437c70ae84ffbc403383221b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/official-resources.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "5a584b05a88b0e2b713141f413fbba156cb8887e",
+      "translation_sha1": "3c82c4afdb46137162cb711795f7d1cfb804a49b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/permission-matrix/index.md",
+      "status": "reviewed",
+      "findings": [
+        "refus explicite des identifiants → interdiction explicite d’accéder aux fichiers d’identifiants",
+        "Écriture limitée à l’espace de travail visé, puis examen du diff → Écriture limitée à l’espace de travail visé, examiner d’abord le diff"
+      ],
+      "source_sha1": "c6ad6aa3300a06447252c4c24e7cab4aaa145d57",
+      "translation_sha1": "61d9b9a6d89e02f85814c2602061950aaae242b8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/resource-compatibility.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "96ff34fad102fa99f730b03a923d60a0b57610b6",
+      "translation_sha1": "5fada1ae05d623fbaa94ac6c0de2100ca0604695",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/slash-commands.md",
+      "status": "reviewed",
+      "findings": [
+        "modifications non validées → modifications non commitées"
+      ],
+      "source_sha1": "a34c90f40987fe0a9e8786a4d1199db20b7b22c8",
+      "translation_sha1": "2b7e36256ba357c17edde9c14ad57c797ab420c8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/failure-recovery-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "Complete Chinese/French pair reviewed; meaning, boundaries, examples and links align."
+      ],
+      "source_sha1": "fc9187249ccdaa507deb2098fb670cba5774311c",
+      "translation_sha1": "5659034c0ff9da11b79ec7c27679c46a13673981",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Trouver le bon tutoriel ou page produit par symptôme. → Trouver le tutoriel ou la page produit adaptés au symptôme.",
+        "Installation échouée → Échec de l’installation",
+        "Échec connexion / authentification → Échec de la connexion ou de l’authentification",
+        "Incertain quel client choisir → Hésitation sur le client à choisir",
+        "Résultats hors portée / qualité faible → Résultats hors périmètre ou de mauvaise qualité",
+        "Débogage prompt → Corriger un prompt",
+        "Questions permissions / bac à sable → Questions sur les permissions ou le bac à sable",
+        "Chaque cas consigne une correction à variable unique et la reprise. → Chaque cas consigne une correction portant sur une seule variable et le résultat de la récupération."
+      ],
+      "source_sha1": "da350d03178d3d24eb07668a1623cf1e86560681",
+      "translation_sha1": "33b81e72de6343a1bf312f771ef309fe29968e33",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/choose-your-path.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "51ccd006cd3d17e1e52376c232ce81fbfc8f898f",
+      "translation_sha1": "41fd87843f0952db6b6fdef2a94bd0b9a30e4bfa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/codex-capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "1a4cd9862a170b876b18913d4ce359f2c627b83f",
+      "translation_sha1": "e7f15c2da397b23298ec1db2a3130164a134a052",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/handbook-version-policy.md",
+      "status": "reviewed",
+      "findings": [
+        "handbook → manuel",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "a608dc3bdae273d10843a871230964c0ca5695f3",
+      "translation_sha1": "6e2156a879132b031798578dfeef820fa754b22d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "953fb894d443881b89d070b91cf6078feda6dab1",
+      "translation_sha1": "bc51dc8ab4f811840f5936cd80b0a4b2752e441b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/prerequisites.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "5fbedb8fff2e1f117588363e33818786f80dee27",
+      "translation_sha1": "136f41a88bb2e5bd8b9fcecb1769c6ac44db3ec5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/terminology-for-beginners.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "a18bacf35607dca48ce12b0131c9960c34b72b47",
+      "translation_sha1": "f76fd33980e458db76623b16b7dffc854015c4a7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/what-is-codex.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "0f376b6909520c4be7cf66bd5a4ab0c831f75d1d",
+      "translation_sha1": "965038fe217bb774b92a8417ab28616c0e64a02b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/who-is-this-handbook-for.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "95272c3957c1bc1766168437ab9d803d880160d1",
+      "translation_sha1": "7289bc0a395a68ffc894f7e7cc0119a7872f1952",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/acceptable-use.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "consensus org au lieu de jugement individuel",
+          "after": "accord au sein de l’organisation plutôt qu’un jugement individuel"
+        },
+        {
+          "before": "Outline de clauses starter (nécessite localisation juridique)",
+          "after": "Exemples de clauses pour un premier brouillon, à adapter avec le service juridique"
+        },
+        {
+          "before": "outline éducatif",
+          "after": "plan pédagogique"
+        },
+        {
+          "before": "Peut-elle mapper vers formation, config ou flux d'approbation ?",
+          "after": "Peut-elle se traduire en formation, en configuration ou en procédure d’approbation ?"
+        },
+        {
+          "before": "En violation, l'équipe peut détecter et répondre ?",
+          "after": "En cas de violation, l’équipe sait-elle la détecter et intervenir ?"
+        },
+        {
+          "before": "La valeur d'une AUP est des frontières d'équipe claires pour l'usage Codex — et l'alignement avec les contrôles réels.",
+          "after": "Une AUP est utile lorsqu’elle précise les limites d’utilisation de Codex dans l’équipe et correspond aux contrôles réellement en place."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "0409154f600cefd6290b913a10851596d660fcb6",
+      "translation_sha1": "cbfe40e0051f8400d2de3543b3d2e52fa7b88d60",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "règles org",
+          "after": "règles de l’organisation"
+        },
+        {
+          "before": "## Ce que ces pages répondent",
+          "after": "## Les questions auxquelles ces pages répondent"
+        },
+        {
+          "before": "frontières org",
+          "after": "limites de l’organisation"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "6c37ab466e99484d1e8d3758a21a6a7f0fb1e5c5",
+      "translation_sha1": "40778b5958be91012025e50a0178fe70bd881c75",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "pour scaler Codex",
+          "after": "pour déployer Codex à grande échelle"
+        },
+        {
+          "before": "est pour les leads engineering, plateforme et sécurité — faire passer Codex de la productivité individuelle à quelque chose que les équipes peuvent gérer, auditer et apprendre. Associer avec",
+          "after": "s’adresse aux responsables d’ingénierie et aux équipes plateforme et sécurité. Il explique comment passer d’un usage individuel à un usage d’équipe gérable, auditable et analysable après coup. À lire avec"
+        },
+        {
+          "before": "ce chapitre penche gouvernance et déploiement",
+          "after": "ce chapitre porte surtout sur la gouvernance et le déploiement"
+        },
+        {
+          "before": "Bac à sable personnel relaxé devient défaut org",
+          "after": "Présenter des restrictions locales assouplies du bac à sable comme le réglage par défaut de l’organisation"
+        },
+        {
+          "before": "Pas forcément une lecture profonde encore.",
+          "after": "Pas nécessairement en détail dès maintenant."
+        },
+        {
+          "before": "une fois Codex un système d'équipe",
+          "after": "une fois que Codex devient un système utilisé par une équipe"
+        },
+        {
+          "before": "Si vous préférez l'onboarding personnel d'abord, reporter ce chapitre jusqu'au déploiement équipe, permissions ou contrôle des risques.",
+          "after": "Si votre priorité est la prise en main individuelle, revenez à ce chapitre lorsque vous aborderez le déploiement en équipe, la gestion des permissions ou les risques."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "b44c5d131e128bc26145c305b8f7dee2f31a88ad",
+      "translation_sha1": "e50460fe279e88a6c36442d4df6139df06b0b6ef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Vous avez besoin de risques que « soyez prudent » seul ne peut pas fixer",
+          "after": "Vous voulez identifier les risques qu’un simple appel à la prudence ne permet pas de maîtriser"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "91ed6a31b4cd55294242b23e5108b6ffb1c5f53b",
+      "translation_sha1": "21280898662a7ac43162fbcf5ab367c5af98e9a6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/plugin-and-mcp-risk.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Ce que les extensions peuvent accéder",
+          "after": "Les ressources auxquelles les extensions peuvent accéder"
+        },
+        {
+          "before": "emprise excessive",
+          "after": "actions non autorisées"
+        },
+        {
+          "before": "Listes d'approbation et pin de version",
+          "after": "Listes d’approbation et versions fixes"
+        },
+        {
+          "before": "Isolation pendant debug et incidents",
+          "after": "Isolation pendant le débogage et les incidents"
+        },
+        {
+          "before": "permissions row-level",
+          "after": "permissions au niveau des lignes"
+        },
+        {
+          "before": "Outbound arbitraire",
+          "after": "Connexions sortantes arbitraires"
+        },
+        {
+          "before": "Liste d'autorisation egress",
+          "after": "Liste des destinations réseau autorisées"
+        },
+        {
+          "before": "Supply chain",
+          "after": "Chaîne d’approvisionnement"
+        },
+        {
+          "before": "Tampering mise à jour serveur tiers",
+          "after": "Mise à jour malveillante d’un serveur tiers"
+        },
+        {
+          "before": "Pin version, verrou hash",
+          "after": "Version fixe, verrouillage par hash"
+        },
+        {
+          "before": "pin version + propriétaire",
+          "after": "version fixe + responsable"
+        },
+        {
+          "before": "re-revue trimestrielle ou sur upgrade majeur",
+          "after": "nouvelle revue chaque trimestre ou à chaque mise à niveau majeure"
+        },
+        {
+          "before": "**Deny par défaut** les installs MCP distantes non listées",
+          "after": "**Refuser par défaut** l’installation de serveurs MCP distants absents de la liste"
+        },
+        {
+          "before": "résumé de paramètres (rédigé)",
+          "after": "résumé des paramètres expurgé des informations sensibles"
+        },
+        {
+          "before": "`DEBUG=*` en debug dump les tokens dans les logs CI",
+          "after": "Activer `DEBUG=*` pendant le débogage et exposer les tokens dans les journaux CI"
+        },
+        {
+          "before": "Rayon d'explosion plus faible sur les erreurs",
+          "after": "Conséquences moins graves en cas d’erreur"
+        },
+        {
+          "before": "Quelles données elle accède",
+          "after": "À quelles données elles accèdent"
+        },
+        {
+          "before": "Si elle écrit en retour",
+          "after": "Si elles écrivent dans le système externe"
+        },
+        {
+          "before": "pin de version",
+          "after": "versions fixes"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "bf027ad9af4036b0ed63b3a076f9f905359bd5c6",
+      "translation_sha1": "8ddecedcc839c7eccca77ef953a7f7140605a1a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/prompt-injection.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "ignore la politique, fuite des données ou exécute",
+          "after": "ignore les règles, divulgue des données ou exécute"
+        },
+        {
+          "before": "Myths courants",
+          "after": "Idées reçues courantes"
+        },
+        {
+          "before": "Aucun de ceux-ci est assez sûr.",
+          "after": "Aucune de ces suppositions n’offre une sécurité suffisante."
+        },
+        {
+          "before": "Tâche de revue de code orientée vers dump secrets, prompt système ou variables d'env",
+          "after": "Une revue de code détournée pour afficher des secrets, le prompt système ou des variables d’environnement"
+        },
+        {
+          "before": "Prose qui smuggle des instructions opérationnelles",
+          "after": "Un texte apparemment descriptif qui glisse des instructions d’action"
+        },
+        {
+          "before": "Si ça ressemble à « décrire un problème » vs « contrôler l'assistant », soyez prudent.",
+          "after": "Si le texte semble chercher à contrôler l’assistant plutôt qu’à décrire un problème, soyez vigilant."
+        },
+        {
+          "before": "Si secrets, emprise excessive, réseau, export ou commandes supplémentaires — défaut vers confirmation humaine",
+          "after": "Si le texte demande l’accès à des secrets, une action non autorisée, un accès réseau, un export de données ou des commandes supplémentaires, demander par défaut une confirmation humaine"
+        },
+        {
+          "before": "Beaucoup d'incidents sont des gens et Agent continuant sur du texte suspect.",
+          "after": "De nombreux incidents surviennent parce que les personnes et l’agent continuent à suivre un texte suspect."
+        },
+        {
+          "before": "attaques bas effort",
+          "after": "attaques rudimentaires"
+        },
+        {
+          "before": "Ne pas auto-hériter des « instructions opérationnelles » depuis des sources non fiables. Beaucoup d'injections sont prendre l'entrée externe pour des instructions formelles.",
+          "after": "N’adoptez pas automatiquement les instructions d’action provenant de sources non fiables. Beaucoup d’injections reposent sur la confusion entre une entrée externe et une instruction légitime."
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "3e44fdf485efeec10a56b4e4e192eefd94d3ca3e",
+      "translation_sha1": "139965a3425f6a3a353305ecbd82feb5f3bba51a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/threat-model.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "supply chain",
+          "after": "chaîne d’approvisionnement"
+        },
+        {
+          "before": "Ce chapitre mappe les surfaces de risque principales ; les contrôles vivent dans",
+          "after": "Ce chapitre présente les principaux risques ; les mesures de contrôle sont décrites dans"
+        },
+        {
+          "before": "## Pas seulement travail « équipe sécurité »",
+          "after": "## Ce n’est pas seulement l’affaire de l’équipe sécurité"
+        },
+        {
+          "before": "vous vous souciez quand les équipes :",
+          "after": "ces situations vous concernent aussi :"
+        },
+        {
+          "before": "Ajoutent des extensions pour les fonctionnalités sans permissions et provenance",
+          "after": "Ajoutent des extensions pour leurs fonctions sans vérifier leurs permissions ni leur provenance"
+        },
+        {
+          "before": "**Frontière de confiance :** modèle et extensions par défaut sur le côté **pas entièrement fiable** ; revue humaine et politique appliquent à la frontière.",
+          "after": "**Frontière de confiance :** le modèle et les extensions se trouvent par défaut du côté **non entièrement fiable** ; la revue humaine et les politiques font respecter cette frontière."
+        },
+        {
+          "before": "La plupart des contrôles enveloppent ces deux.",
+          "after": "La plupart des contrôles s’organisent autour de ces deux questions."
+        },
+        {
+          "before": "Issue/web malveillant oriente emprise excessive",
+          "after": "Une issue ou une page malveillante pousse à des actions non autorisées"
+        },
+        {
+          "before": "Commandes/MCP fuient le dépôt",
+          "after": "Des commandes ou outils MCP transmettent le contenu du dépôt à l’extérieur"
+        },
+        {
+          "before": "Supply chain",
+          "after": "Chaîne d’approvisionnement"
+        },
+        {
+          "before": "Tampering dépendance/script",
+          "after": "Dépendance ou script compromis"
+        },
+        {
+          "before": "Agent drop DB, mauvais push",
+          "after": "Suppression d’une base de données ou push erroné par l’agent"
+        },
+        {
+          "before": "ne shipent rien",
+          "after": "ne mettent rien en place"
+        },
+        {
+          "before": "Peur fuite DB prod → limiter creds prod et chemins d'export",
+          "after": "Risque de fuite de données de production → limiter les identifiants de production et les chemins d’export"
+        },
+        {
+          "before": "Peur mauvais push sur main",
+          "after": "Risque de push erroné sur main"
+        },
+        {
+          "before": "Peur issue/web oriente → renforcer entrée externe et revue lecture seule",
+          "after": "Risque de détournement par une issue ou une page → restreindre les entrées externes et les procédures de revue en lecture seule"
+        },
+        {
+          "before": "Collapser tout le risque sur",
+          "after": "Réduire tous les risques à"
+        },
+        {
+          "before": "Données sensibles denied par défaut",
+          "after": "Accès aux données très sensibles refusé par défaut"
+        },
+        {
+          "before": "toggle produit spécifique",
+          "after": "réglage précis d’un produit"
+        },
+        "Restored source verification metadata with French basis and original evidence date."
+      ],
+      "source_sha1": "4ec320da6823dff5b1fb509fe24d74b1ee7301db",
+      "translation_sha1": "84dbd47c211db994d9d0c48824c2fc9995d5cb5d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/browser.md",
+      "status": "reviewed",
+      "findings": [
+        "capturer des captures d'écran → faire des captures d'écran",
+        "Bon pour l'acceptation frontend, vérification de liens doc et comparaison de design — pas un substitut aux audits de sécurité ou à l'admin production occasionnelle. → Il convient à la validation du front-end, à la vérification de liens documentaires et à la comparaison avec une maquette. Il ne remplace pas un audit de sécurité et ne doit pas servir à manipuler sans précaution une interface d’administration en production.",
+        "Limites d'état → Limites explicites",
+        "la mise en page above-the-fold et l'apparence de l'image hero → la mise en page visible sans défilement et l’image d’en-tête",
+        "`localhost only` → `localhost uniquement`",
+        "résultats unit/E2E → résultats des tests unitaires/E2E",
+        "L'outil navigateur bat généralement l'analyse texte pure. → L’outil navigateur convient généralement mieux qu’une analyse de texte seule.",
+        "Tâche → tâche",
+        "Approbation → approbation",
+        "Prompt → prompt",
+        "Vérifier → vérifier",
+        "恢复中文对应核验元数据，保留原始证据日期",
+        "恢复侧栏排序"
+      ],
+      "source_sha1": "802f88949188a105ea1ef7fda6bfb0f2ab375e78",
+      "translation_sha1": "f7a4a18fa3a89d78fc59ded8b2e93a38ab92eeb1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/computer-use.md",
+      "status": "reviewed",
+      "findings": [
+        "logiciel de démo → logiciel de présentation",
+        "Tirer des infos sensibles à l'écran dans le flux de travail → Introduire dans le travail des informations sensibles visibles à l’écran",
+        "**Humain dans la boucle** : rester visible ; prêt à interrompre → **Supervision humaine** : garder l’exécution visible et se tenir prêt à l’interrompre",
+        "Mieux pour aide ad hoc, vérification de flux et étapes GUI sans API — pas pour automatisation de production stable longue durée sans surveillance. → Il convient davantage à une aide ponctuelle, à la vérification d’un processus et aux étapes graphiques sans API qu’à une automatisation de production stable, durable et sans surveillance.",
+        "Tâche → tâche",
+        "Approbation → approbation",
+        "Prompt → prompt",
+        "Vérifier → vérifier",
+        "恢复中文对应核验元数据，保留原始证据日期",
+        "恢复侧栏排序"
+      ],
+      "source_sha1": "d4a2e113970ec69e2d6e1cc70d93f137090c229a",
+      "translation_sha1": "3acc4d973100063587703dd5aa1bb40620935652",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/image-generation.md",
+      "status": "reviewed",
+      "findings": [
+        "noms de marques déposées → noms de styles susceptibles de porter atteinte aux droits d’autrui",
+        "concept art UI → concepts d’interface",
+        "assets de marque → ressources de marque",
+        "Matériaux externes → Supports externes",
+        "Matériaux de marque → Supports de marque",
+        "Brouillons d'assets → Esquisses",
+        "Direction rapide → Explorer rapidement une direction visuelle",
+        "La génération d'images sert à la direction et aux brouillons → La génération d’images sert à explorer des pistes et à préparer des esquisses",
+        "Tâche → tâche",
+        "Prompt → prompt",
+        "Vérifier → vérifier",
+        "恢复中文对应核验元数据，保留原始证据日期",
+        "恢复侧栏排序"
+      ],
+      "source_sha1": "ea275fa8bdb4c70221d513d632de9e86e4c7b04f",
+      "translation_sha1": "c06aadf8737267b0dc6a229b2c2f76865093224c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "5939a9d66e253f8a792e23a60a2490e33924e4b0",
+      "translation_sha1": "5e6215928f4bd87f5f9b84c39c789e9175e8a036",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/shell-and-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "1438fc73c4678c5be99b62f71e9ab4d42fd8b756",
+      "translation_sha1": "180d6eb47d919d0159d674fe9492526248fce33a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/tool-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "9fdb3667e5d250476fd6b61610f3e693af0222c8",
+      "translation_sha1": "a54e32a4f897ccbec4ea74ca49e14e708ceca1a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/voice.md",
+      "status": "reviewed",
+      "findings": [
+        "enregistrements d'acceptation écrits → comptes rendus de validation écrits",
+        "La voix convient à la direction, l'arrière-plan et le suivi rapide → La voix convient pour exprimer une orientation, préciser le contexte et assurer un suivi rapide",
+        "Vider des idées de la tête → Exprimer spontanément ses idées",
+        "drapeaux CLI → options de ligne de commande",
+        "parler la direction → énoncer une orientation",
+        "critères de terminé → critères de réussite",
+        "PII client → données personnelles identifiantes de clients",
+        "incidents de production non assainis → incidents de production sans retirer les informations sensibles",
+        "Tâche → tâche",
+        "Prompt → prompt",
+        "Vérifier → vérifier",
+        "恢复中文对应核验元数据，保留原始证据日期",
+        "恢复侧栏排序"
+      ],
+      "source_sha1": "192bba2530ac12f4f50ae4744bf55a955277f46c",
+      "translation_sha1": "59a43a5cd57622c890450752a935e107b4b66b56",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/web-search.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "7adcb92c870d9328b94f96dc93b221b8de575ed2",
+      "translation_sha1": "7267386720ce31e58ee0b66fb44ecae373e0558f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/updates/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3c99d357d9bcc10689701e6377c45c0b4c81f474",
+      "translation_sha1": "0f0a880167b60838ee1a58259218b3e7fece106f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/cloud-environments.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "1745f70968380d47fb7eed0da80b51ecade18c5b",
+      "translation_sha1": "f68237568451b6134f6f73b0234c624b9d54f808",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/code-review.md",
+      "status": "reviewed",
+      "findings": [
+        "réviseur complémentaire à signal fort → outil de revue complémentaire qui cible les problèmes importants",
+        "une perte de données → une corruption de données",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "ea6796af69e8aaa0dce7b12f924ac95e768a5090",
+      "translation_sha1": "7cdbaf14ce371ac5f390985b0216d47cc514259e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/connect-github.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "b126a7edeb42bd1c2de2bce168ab9abb258c7b88",
+      "translation_sha1": "eba5ecdac438a23c34afeb8c6c772dab57b58bc9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/create-pull-requests.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "39371d42d61452c60a6b8b37050af93a0030efcf",
+      "translation_sha1": "f39d437995f54870c24e6ad2630628cde03fffd7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/delegate-and-follow-up.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "38b322f5f93e6fbaf3135f4b7cf1d9a3a8adf026",
+      "translation_sha1": "9eebb5b3c551e758c71ff923e308c01d8a5431e8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/index.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "86fa0ac0049e820eede82e587706267d9ae76021",
+      "translation_sha1": "dc215242674f2f8e44a9c82b6e62b46803aeb30c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/internet-access.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "5bbb90556614ba1d7ad93f3dfb820e13e91ca32b",
+      "translation_sha1": "1ca38e096761c2248607d722625aa4c4a427cfbb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/secrets-and-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "paquet prive → paquet privé",
+        "demander a l'Agent → demander à l’Agent",
+        "commande reelle → commande réelle",
+        "Reviser la configuration → Réviser la configuration",
+        "sont stockes → sont stockés",
+        "Reutiliser → Réutiliser",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "78937be04005c1c90a2d1356dccd2f92ba1ad4e7",
+      "translation_sha1": "d95ddab742c3380589a53ddec6e1703f98db33af",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Environment: → Environnement :",
+        "Starting point: → Point de départ :",
+        "Stage: → Phase :",
+        "Command: → Commande :",
+        "First error: → Première erreur :",
+        "Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured → Différence locale : ~/.npmrc est utilisé en local ; NPM_TOKEN n’est pas configuré dans Cloud",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "019fac1ab6e72a31d044d13336844878dd5f54ac",
+      "translation_sha1": "5d04737580b576273089c41a8c066fcfe0ffc194",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "¥4,644.75 → 4 644,75 CNY",
+        "une présentation modifiable de huit diapositives → une présentation de huit diapositives",
+        "Consultez directement le problème → Un problème ? Consultez la référence adaptée",
+        "Liste d'acceptation → Liste de vérification des critères d’acceptation"
+      ],
+      "source_sha1": "75dd87a279213ca7fd77e17918bbeebdca531b24",
+      "translation_sha1": "0c73859d24bc7e7c0c145a4b991b96b0c9b6724e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/create.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Il dit au client qui est le paquet, où se trouvent les assets et comment les interpréter. → Il indique au client l’identité du paquet, l’emplacement des ressources et la manière de les interpréter. Des chemins, noms de fichiers ou structures de dossiers incohérents empêchent généralement le chargement.",
+        "de fichiers temporaires ou d'assets qui ne doivent pas être publiés → de fichiers temporaires, d’images source ou de ressources qui ne doivent pas être publiées"
+      ],
+      "source_sha1": "57e9aca9a8699f429ac8b2cb6ff36d79854d4aa8",
+      "translation_sha1": "76345397a13f369201a3c7d4181b12ebd3a475e8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "pendant qu'une tâche travaille, attend, se termine, échoue ou demande votre intervention → pendant qu’une tâche est en cours, en attente, terminée, en échec ou nécessite votre intervention",
+        "atlas d'image qui regroupe les frames d'animation. → atlas d’images regroupant les images successives de l’animation, que le client lit selon une grille fixe."
+      ],
+      "source_sha1": "8b036367092bc16ba78a217c6fc238a554444787",
+      "translation_sha1": "9df87d5f68f529f6900d37116cf01b29eb4565fc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/install.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "730c599ff9c9d82b451a976f3c96eec9d9c6fd4d",
+      "translation_sha1": "0db63e5c8f274cb826b71883095c5b94375a40d5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/anti-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "fuite de credentials → fuite d’identifiants d’authentification",
+        "surface d'accident maximale → risque de conséquences accidentelles maximal",
+        "Rends le hero de la page d'accueil plus accessible aux débutants → Rends le texte de la première section de la page d’accueil plus compréhensible pour les débutants",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "8e89a5a0e2154a7403d009e78ea243b71fe91bc5",
+      "translation_sha1": "2848e505fa4a936e8294f140db2173ecff4f779e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/ask-for-a-plan.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "706f11b6cf358cf6ec21a6fb458ed20783fc8d7e",
+      "translation_sha1": "9f5ab8dbbcbafbbcc11f19f254830fb4f0a2a42c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/basics.md",
+      "status": "reviewed",
+      "findings": [
+        "à quoi ressemble le « passé » → quels critères permettent de valider le résultat",
+        "à quoi ressemble le terminé → quels critères définissent un résultat terminé",
+        "(reprise dans la bibliothèque de cas) → (repris dans la bibliothèque de cas)",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "eb86b2a71d5c7c6ef2cb4d5c891c7234f7f10eec",
+      "translation_sha1": "9b30b6aa697e9e713c168a96752518bd6cbddf24",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/comparison-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "e6a23bbdbdd997a11ea55dbc290776fe0fa6abed",
+      "translation_sha1": "0f0a73f352ea8e5aa3cadd23d55eee89b33542dc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/constraints-and-boundaries.md",
+      "status": "reviewed",
+      "findings": [
+        "élargir le scope → élargir le périmètre",
+        "redesign plus large → refonte plus large",
+        "Définir le terminé → Définir les critères de réussite",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "0ca4700f055f4efa23dc67e79a027c55df7ce363",
+      "translation_sha1": "df56d15c32eadc48dfd65a85158343a957cfad3e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/define-done.md",
+      "status": "reviewed",
+      "findings": [
+        "à quel point c'est fini → quels critères permettent de dire que le travail est terminé",
+        "peut-il dire passé / échoué → peut-il dire si le résultat est validé ou refusé",
+        "texte hero docs uniquement, pas layout ni composants → modifier uniquement le texte de la page d’accueil de la documentation, sans changer la mise en page ni les composants",
+        "Définir le terminé → Définir les critères de réussite",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "e97e8542b82bb8fb9c789d35796bf8ebfe8bee5a",
+      "translation_sha1": "3ce9716e2b799581690d6880d8d6449d29388edb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/goals-and-context.md",
+      "status": "reviewed",
+      "findings": [
+        "stack, audience, deadline, pièges connus → technologies utilisées, public, raison de l’échéance et pièges connus",
+        "rendre le hero de la page docs → rendre le texte de la première section de la page d’accueil de la documentation",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "0a5141fb751ba152107b3b74d166e1c57e64b9c9",
+      "translation_sha1": "b06c21418f78d79c18158e8ce771bec6b51c82ca",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Définir le terminé → Définir les critères de réussite",
+        "Prompt → prompt"
+      ],
+      "source_sha1": "2280f53609b3990c823b4cfec03d55d3e57be4ca",
+      "translation_sha1": "7b15f2131bb309dc8d3315e5f4d39a0438f77e54",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/long-running-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "checks → contrôles",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "450ed9d87331984da0e795e4dc42508b9d6b37c3",
+      "translation_sha1": "1987f61a33a33e2d0ecfaab2eb90aef68792aadc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompt-debugging.md",
+      "status": "reviewed",
+      "findings": [
+        "Beaucoup de « trop de changements » viennent d'un arrêt non dit. → Les modifications excessives viennent souvent d’une limite que la demande n’a pas précisée.",
+        "Recherche web au lieu du code local ; ou recherche avec sources vs réponse de mémoire. → Codex peut chercher sur le Web alors que vous lui demandez d’examiner le code local, ou répondre de mémoire alors que vous attendez une recherche sourcée.",
+        "un repro → un cas reproductible",
+        "repro sur un seul fichier → reproduction sur un seul fichier",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "efc301507107f6b3b27bef4cdd4cbea5399fa6c3",
+      "translation_sha1": "580e1e2b3da3fb06ebd699b05c81e97ef9049137",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompting-with-images.md",
+      "status": "reviewed",
+      "findings": [
+        "ne viennent pas d'une image invisible, mais d'une image **sans consigne sur quoi en tirer** → ne viennent pas du fait que le modèle ne voit pas l’image, mais de l’absence de consigne sur **ce qu’il doit y examiner**",
+        "layout → mise en page",
+        "points responsive → points d’adaptation aux différentes tailles d’écran",
+        "position de scroll → position de défilement",
+        "design system → système de design",
+        "desktop → sur ordinateur",
+        "breakpoints → points de rupture",
+        "Puis hypothèse sur la cause la plus probable. → Formule ensuite une hypothèse sur la cause la plus probable.",
+        "Enfin direction de modification suggérée. → Propose enfin une piste de modification.",
+        "Prompt → prompt",
+        "恢复中文对应核验元数据，保留原始证据日期"
+      ],
+      "source_sha1": "953a69bb6a686f6c2f9713dfd76b24a1d86c2a7b",
+      "translation_sha1": "9564b4590e5be1826ff6cb4a1793ba276d48970b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/task-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "98c05110e79912d2b39c044e1800cbf484bf98c6",
+      "translation_sha1": "53ba98e410032560a93d8d94c317f66b83fa7074",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/automate.md",
+      "status": "reviewed",
+      "findings": [
+        "Prompt → prompt"
+      ],
+      "source_sha1": "2aff2e7eab78a8033b03e3c046c5a54de81385ea",
+      "translation_sha1": "cf5c97db0d5d73abfb9c0242a4a7a29cc0c6f2a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/change.md",
+      "status": "reviewed",
+      "findings": [
+        "Définir le terminé → Définir les critères de réussite",
+        "Prompt → prompt"
+      ],
+      "source_sha1": "6faf299321f2d8390b0c30ab77d748f3b4716163",
+      "translation_sha1": "7908e21819ace15ecb112d2734ee92203286ec03",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/create.md",
+      "status": "reviewed",
+      "findings": [
+        "from scratch → à partir de zéro",
+        "Définir le terminé → Définir les critères de réussite"
+      ],
+      "source_sha1": "c47ebbf5ce0f126207dc2df3546147c3d7c01a7f",
+      "translation_sha1": "36352970dba4881d93375dd70cbb2db97c8eadb4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/diagnose.md",
+      "status": "reviewed",
+      "findings": [
+        "3. ébauche de plan de correctif (après ma confirmation seulement) → 3. si l’hypothèse est confirmée, ébauche de plan de correction (à exécuter après mon accord)"
+      ],
+      "source_sha1": "24913711ff76b4fb5769435ab964ff5cedbefe03",
+      "translation_sha1": "e05749c52ebc0ed16a5b65ae4eb292f5bb30acf3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "from scratch → à partir de zéro",
+        "Subagent → Sous-agent",
+        "placeholders → éléments à remplacer",
+        "le modèle vide la tâche → le modèle laisse la tâche sans contenu concret",
+        "Prompt → prompt"
+      ],
+      "source_sha1": "fae2ed3a39853461104c3041ec66b944980d2f37",
+      "translation_sha1": "398b5ccba98aa490630cd61d25925ee9c780e3f5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/research.md",
+      "status": "reviewed",
+      "findings": [
+        "« À confirmer » vaut mieux qu'un faux positif. → Mieux vaut indiquer « à confirmer » que feindre la certitude."
+      ],
+      "source_sha1": "729d4ccbe99aa7ec254fbe1077637d6b3b06f5ed",
+      "translation_sha1": "6afc5b2ac8542a2eb997a86c47524e58b0e1e3fd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/review.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "e89989d7d069f0f96d12acd17b3ef488d2a8dad0",
+      "translation_sha1": "c336f1d6b8fbdea4a69e8c0c00934bd49b27c290",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/understand.md",
+      "status": "reviewed",
+      "findings": [
+        "La ligne directrice avant l'excavation complète. → Comprendre d’abord le fonctionnement général est plus utile que d’explorer tous les détails d’un coup."
+      ],
+      "source_sha1": "228971d00d2d1654cb48daa4f9b3133115f1a63c",
+      "translation_sha1": "92c00716cf1d0a9fc5f50578d867ee72547c2484",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "759c38e68aa07c361740b1034d14dd1deb193cdc",
+      "translation_sha1": "b0eab7c68597685f8b7b9bc9dedb6187e8053fff",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/scheduled-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "après trois fois la même erreur → après trois occurrences consécutives de la même erreur"
+      ],
+      "source_sha1": "fa792dc3116b1fd95eee0e232a4a6b5b8534214c",
+      "translation_sha1": "7fa54357918c982bbf5ae40cc6908b0cbe2716b6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "183812c1f14a29d1c672edcbd1d1f6a0bda51d07",
+      "translation_sha1": "bfe548eb4300520ffe1fdea986edd77bac772d03",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/choosing-an-extension-method.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "28ae6f55403a4955b4683b8d0464eae983245242",
+      "translation_sha1": "1a7667a214415adce7ed3dee0d30ae14d026a21e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/create-your-first-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Un Skill pr-review soumissable from scratch, avec tests et partage équipe. → Créer de zéro un Skill pr-review à intégrer au dépôt, avec des étapes de test et de partage en équipe.",
+        "Distingue contenu du Skill vs `description` de déclenchement. → Cette séquence aide à distinguer un problème dans le contenu du Skill d’une condition de déclenchement imprécise dans `description`.",
+        "Jamais choisi automatiquement → renforcer mots déclencheurs. Trop souvent → ajouter « quand ne pas utiliser ». → Si le modèle ne choisit jamais le Skill automatiquement, précisez ou complétez les termes déclencheurs de `description`. S’il le choisit trop souvent à tort, ajoutez les cas où il ne faut pas l’utiliser.",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "14414f58af19e4ce863dfd6bda0125b9eafc91da",
+      "translation_sha1": "0bb7a3c0a325be9bc69422d1e31a13e7557f6e4d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/automation-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Périmètre et réception → Périmètre et validation"
+      ],
+      "source_sha1": "6c758b9400d375a74dd272bf0bc29314b33d8e6f",
+      "translation_sha1": "29edab535ecc1f50d25baaf756899ed2b24e7841",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完整中法逐页比对，正文内容与约束一致；更新翻译复核记录"
+      ],
+      "source_sha1": "490db95aaca6ec9bd3512750c46e7ae1f05b8cc1",
+      "translation_sha1": "c405256c450197da9b979974890209248ac996fd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/research-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "« 拾页 » → « Shiye (拾页) »",
+        "de 拾页 1.2 → de Shiye (拾页) 1.2"
+      ],
+      "source_sha1": "cf2b2325eaca8a3e73685de604b3675d5e91509f",
+      "translation_sha1": "214bcacc3ba173a26e8cb69e2249ff61f14c742a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/review-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "modifications locales non validées → modifications locales non commitées",
+        "Contenu local non validé → Contenu local non commité",
+        "actuellement non validées → actuellement non commitées",
+        "comparez-les avant de le remplacer. → comparez-les et ne l’écrasez pas.",
+        "elle ne modifie, ne valide et ne pousse rien automatiquement. → elle ne modifie aucun fichier, ne crée aucun commit et ne pousse rien automatiquement."
+      ],
+      "source_sha1": "e29d1b3e20d114423d247d669175915f3caa67cb",
+      "translation_sha1": "02a6123fa56823bcb3203a0b0da4b887d104eadf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/writing-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "une Skill → un Skill",
+        "Cette Skill → Ce Skill",
+        "Elle convient → Il convient",
+        "la Skill → le Skill",
+        "« 拾页 » → « Shiye (拾页) »",
+        "Contre-exemple : 拾页 → Contre-exemple : Shiye",
+        "comparez avant d’écraser. → comparez-les sans écraser le Skill existant.",
+        "qu’elle est disponible → qu’il est disponible",
+        "appelez-la explicitement → appelez-le explicitement"
+      ],
+      "source_sha1": "cbaec37837a757ffd65f1fba598430b60da8f045",
+      "translation_sha1": "c1195f8c46857fc974f0053b078f279f226ff62a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hook-event-types.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "07f4965e40fd9fac6e5897b975934e7ea501df9d",
+      "translation_sha1": "5f70aa9fee85d0a94bed7915ed611420423a3a00",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-examples.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "06e9fa2df03010c1cecfa2158876786675725913",
+      "translation_sha1": "642c53a2594da2e59fd154255361f9c1ce0115ae",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ac7889bdf138a3f340fa8e43b8cc2a2de24c473f",
+      "translation_sha1": "7d83ec956f38796bb83561ac134734d080dbd673",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a0312e9122c0b5a4b83e48f04cf85a03bc504c4d",
+      "translation_sha1": "d4e74306510acdbc9de0d11e01eb965329ce9910",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/index.md",
+      "status": "reviewed",
+      "findings": [
+        "elles donnent à un flux → ils donnent à un flux"
+      ],
+      "source_sha1": "6f8df169518ceae6ecfcacc4bd4113d341f25a39",
+      "translation_sha1": "e354afbcbfd7726a4cd572a918a8a96229058d99",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/connect-an-mcp-server.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "0675d339e67856591904a5744febe3c4e123fa73",
+      "translation_sha1": "8c53da9773be3e73683e339381e42f50ba1fad7f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/debugging-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "d35b635a0be59a796f9cda9236d4e8400ed7242c",
+      "translation_sha1": "9f9a5dc9e373ce142b788eb18518d3bc3b871fdc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "8d9ec38186a3b8d237ab68256c35070658912cbb",
+      "translation_sha1": "b9ce97ec458af14d0181d704fe2c812e234cfeba",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/mcp-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "98a06262bb08c65536204bbbca3caeeaad822327",
+      "translation_sha1": "96869d8ecb3041404de54089a4e327d49350889a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "vous pouvez `$name`, ou le modèle matche la description → vous pouvez appeler `$name`, ou le modèle choisit selon la description",
+        "Ne pas utiliser pour écrire une nouvelle fonctionnalité. → ",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "3147d2cbff3a63bc61f6dc437c261160cbd6e180",
+      "translation_sha1": "e96302660022318aea43cfad231b75d56f115a8c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Full Chinese/French pair reviewed; source meaning, examples and boundaries align."
+      ],
+      "source_sha1": "8917a5982e8437ca01bc5c8fe2d8403722113c74",
+      "translation_sha1": "3589cfa5c5a17ff394d0b362cb8b459a0a7a77a9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/plugins-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Portées OAuth, opérations d’écriture et étendue des données externes → Portées OAuth, opérations de lecture et d’écriture, et étendue des données externes"
+      ],
+      "source_sha1": "4efe5a8fc4379c743c013109ca3731fbd9425007",
+      "translation_sha1": "d30b8146172c76fa0188fe0dfa2713b3be801ef3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/references.md",
+      "status": "reviewed",
+      "findings": [
+        "### 3. SKILL.md peut rester minimal\n\nLe flux d'exécution doit rester dans `SKILL.md`. → ### 3. Avec references/, SKILL.md peut-il devenir très sommaire ?\n\nNon. Le processus principal doit rester dans `SKILL.md`, sinon une personne qui le découvre ne saura pas comment l’exécuter.",
+        "Tout dans `references/` = chaos déplacé. → Tout placer dans `references/` ne fait que déplacer la confusion d’un fichier vers plusieurs autres."
+      ],
+      "source_sha1": "955bfa783f4963afa4dfc08d512f4997da10d00a",
+      "translation_sha1": "ccfac67909429b5c2f453320ec16fb38a7a3c113",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/scripts-and-tests.md",
+      "status": "reviewed",
+      "findings": [
+        "Au début, tout dans `SKILL.md` — OK pour un flux simple. Dès qu'une étape doit être **stable, répétable et vérifiable**, un script bat la prose. → Au début, on place souvent tout dans `SKILL.md`, ce qui convient à un processus simple. Dès qu’une étape doit s’exécuter de façon **stable, répétable et vérifiable**, un script est plus fiable qu’une simple description.",
+        "Le script = une action ; le Skill = quand, comment, sortie attendue. → Tester le script ne suffit pas : il vérifie une action, tandis que le Skill doit aussi être testé sur le moment et la manière de l’appeler, ainsi que sur la conformité du résultat.",
+        "Sépare « script cassé » et « intégration Skill incorrecte ». → Cette séquence permet de distinguer un défaut du script d’une mauvaise intégration au Skill."
+      ],
+      "source_sha1": "900e6e472fb4226070730a80e620f0b06b3456b4",
+      "translation_sha1": "3260a8cea42c07871774772c5b8b57798b729074",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/security.md",
+      "status": "reviewed",
+      "findings": [
+        "Adaptation à votre dépôt, permissions et règles d'équipe. → Le fait qu’un Skill fonctionne ailleurs ne garantit pas qu’il convienne à votre dépôt, à vos limites d’autorisation ou aux règles de votre équipe.",
+        "Deux réponses vides sur trois → pas dans le projet formel. → Si vous ne pouvez pas répondre à deux de ces trois questions, n’intégrez pas directement le Skill à un projet réel.",
+        "Restored source verification metadata and preserved original evidence date."
+      ],
+      "source_sha1": "a3c81ed4e32687a385210da5e0da52656c4395dc",
+      "translation_sha1": "800feff34a60e78444a3ecbf602ada2353fc43ea",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/skill-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "D'abord `SKILL.md`, puis références, modèles et scripts au besoin.\n\nExercice : [Créer votre premier Skill](/fr/skills/create-your-first-skill/).\n\n → ",
+        "Un bon Skill n'est pas juste un prompt plus long : il découpe un processus réutilisable en pièces lisibles, testables et maintenables. → Un bon Skill n’est pas seulement un prompt plus long : il organise un processus réutilisable en parties lisibles, testables et faciles à maintenir.\n\nCommencez par un `SKILL.md` fonctionnel, puis séparez progressivement les références, modèles et scripts lorsque la complexité le justifie.\n\nExercice complet : [Créer votre premier Skill](/fr/skills/create-your-first-skill/)."
+      ],
+      "source_sha1": "50ca48c3f95620e91f9d2c05e0655c83be40c7c4",
+      "translation_sha1": "2dc6e78c6ed5114e6d500bb811f152f5ff236e8e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/templates.md",
+      "status": "reviewed",
+      "findings": [
+        "Si `references/` = quoi consulter en entrée, `templates/` = à quoi ressemble la sortie. Résultats à structure fixe et revue facile → ici. → `references/` définit les informations à consulter ; `templates/` définit la forme du résultat. Placez-y les formats qui doivent rester stables et faciles à vérifier.",
+        "Aussi stabilité, comparaison, revue. → Un modèle ne sert pas seulement à améliorer l’apparence : il stabilise les résultats et facilite leur comparaison et leur vérification."
+      ],
+      "source_sha1": "82a9e01cda3f91561e83f248408b2516409b1c7e",
+      "translation_sha1": "d753c7087b43be64d95e083cf5934240a36ed218",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/use-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "La distinction évite des heures de dépannage. → Cette distinction facilite le diagnostic des problèmes de déclenchement.",
+        "**Explicite** : `$skill-name` (nom = `name` du frontmatter) → **Explicite** : appeler `$skill-name` dans un environnement compatible ; le nom doit correspondre à `name` dans le frontmatter",
+        "Pas toujours. `$name` est plus net pour forcer ; le naturel peut choisir mal ou ignorer le Skill. → Pas toujours. `$name` exprime clairement le choix du Skill et convient à sa vérification ou à son utilisation explicite. Le langage naturel est plus pratique, mais le modèle peut choisir le mauvais Skill ou ne pas en utiliser.",
+        "Sépare « problème de contenu » et « conditions d'auto-déclenchement ». → Cela permet de distinguer un défaut du Skill d’une condition de déclenchement automatique mal définie."
+      ],
+      "source_sha1": "ef92b69f840e62c82a4f0992cf6757998ffdf6e1",
+      "translation_sha1": "3f4da96096e6864cebb13d416e218c917b205055",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/when-to-use-skills.md",
+      "status": "reviewed",
+      "findings": [
+        "vous le refererez → vous le referez",
+        "quand solidifier un flux → quand formaliser un processus"
+      ],
+      "source_sha1": "5e688f4a702320c350d4e642016feb8bb1dad6c2",
+      "translation_sha1": "26a5fd711fff56597e58cef820a4eb1c3bc806fd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "theme/index.md",
+      "status": "reviewed",
+      "findings": [
+        "la fin de l'installeur → la fin du programme de désinstallation"
+      ],
+      "source_sha1": "4ecfa1c03d8546339524f23af422801b6861bc3e",
+      "translation_sha1": "dd0e0b14df44c02ea051417f4e68f449a250cbb9",
+      "reviewed_at": "2026-10-26"
+    }
+  ],
+  "shared_review": {
+    "scope": [
+      "siteNav.ts Chinese/French labels",
+      "chatgptPricing.ts Chinese/French block",
+      "chatgptPlanCopy.json all keys/6 rows",
+      "chatgptSnapshotCopy.json all keys",
+      "diagram-labels.fr.json all 289 keys",
+      "codex-capability-ladder-fr.svg all labels"
+    ],
+    "findings": [
+      "Footer tagline now faithfully conveys task instructions, execution process and validation results.",
+      "Price source dates, units, billing distinctions and uncertainty match Chinese.",
+      "Fixed diagram verifiable vs reproducible confusion, integration cost reduction vs elimination, parseable parameters omission, priority semantics and Hook concurrency same-event limit.",
+      "Manual capability ladder fixed hardening vs stabilizing translation and natural French terms."
+    ],
+    "diagram_changes": {
+      "便于记录可重复步骤": "Facilite la documentation des étapes reproductibles",
+      "任务提示和项目规则进入 Codex 任务；Skills 提供流程，MCP 提供外部工具，子 Agent 并行探索，Hooks 在生命周期节点守护；Plugin 负责能力分发，Scheduled task 负责定时触发，最终输出由人审查。": "Le prompt et les règles alimentent une tâche Codex ; les Skills apportent les processus, MCP les outils externes, les sous-agents l’exploration parallèle et les Hooks les garde-fous. Un Plugin distribue les capacités, une Scheduled task déclenche les exécutions, puis une personne révise le résultat.",
+      "多个来源的匹配 Hook 都会运行；同一事件的 command Hook 可并发启动": "Tous les Hooks correspondants des différentes sources s’exécutent ; les command Hooks d’un même événement peuvent démarrer en parallèle",
+      "结果可审查后再调度": "Planifier quand le résultat est vérifiable",
+      "结论必须可以复核": "Les conclusions doivent être vérifiables",
+      "子任务完成不是总任务完成；最终结论只由可复核证据支撑。": "Une sous-tâche terminée ne clôt pas la tâche ; seules des preuves vérifiables étayent la conclusion.",
+      "把工具、资源、提示和上下文暴露成协议层接口，减少一次性集成成本。": "Exposer outils, ressources, prompts et contexte via un protocole pour réduire le coût des intégrations ad hoc.",
+      "让模型不只生成文本，而是以可解析参数调用函数、API 和业务动作。": "Le modèle ne produit plus seulement du texte : il appelle fonctions, API et actions métier avec des paramètres analysables.",
+      "从“写好提示词”转向“设计模型能看到什么、按什么优先级看到”。": "Passer de « bien écrire le prompt » à « choisir ce que le modèle voit, et selon quelles priorités »."
+    },
+    "manual_diagram_changes": {
+      "Du Prompt au Pack de Capacités d’Équipe": "Du prompt aux capacités partagées de l’équipe",
+      "Subagent": "Sous-agent",
+      "Durcir le workflow": "Stabiliser le processus",
+      "Gouvernance équipe": "Gouvernance d’équipe",
+      "Distribution équipe et automatisation": "Distribution en équipe et automatisation",
+      "Pack, installation, mise à jour, retrait": "Créer, installer, mettre à jour, retirer",
+      "Planifier, surveiller, sans présence": "Planification, suivi, sans surveillance"
+    }
+  },
+  "source_notes": {
+    "group2-notes": {
+      "source_issues": [
+        "Chinese codex-exec still links #安全凭证 absent in target heading; French now uses real #permissions-et-sécurité.",
+        "Chinese write-a-guide still instructs manual astro.config sidebar registration, while contributing/index says automatic. Preserved baseline inconsistency for follow-up.",
+        "Chinese non-interactive-mode still mentions historical 08-developer-platform path as plain text; preserved as source roadmap reference."
+      ],
+      "shared_assets": [
+        "Download exercise packs and recorded outputs remain frozen originals; their language notice is handled by ContentVerification.",
+        "Pets illustrative format and runtime facts are retained as source claims, without claiming new installation tests."
+      ]
+    },
+    "parent-b-notes": {
+      "source_notes": [
+        "Chinese guide/reference/commands/index.md describes exit code 0 as task completion according to agreed requirements, whereas the reviewed dedicated CLI exit-codes page distinguishes process success from business acceptance. French reference follows the requested Chinese baseline; no source facts changed.",
+        "Chinese FAQ still references roadmap M6 11-team-enterprise as plain text. French keeps this source scope."
+      ],
+      "assets": [
+        "Shared frozen failure-recovery ZIP, logs and README remain unchanged; French descriptions preserve their original 2026-09-18 evidence date.",
+        "Permission matrix keeps the existing localized sandbox-approval-flow-fr.svg asset."
+      ],
+      "checks": {
+        "reviewed_pairs": 21,
+        "yaml": "passed",
+        "sha1_source_revision": "passed",
+        "metadata_structure": "passed",
+        "evidence_dates": "preserved",
+        "cjk": "none",
+        "scoped_git_diff_check": "passed",
+        "home_ContentVerification": "preserved"
+      }
+    },
+    "group3-notes": {
+      "source_issues": [
+        {
+          "path": "prompts/index.md",
+          "issue": "Chinese baseline still calls comparison-lab experiment design with no results; comparison-lab records12 runs. French follows baseline pending source correction."
+        },
+        {
+          "path": "guide/start-here/what-is-codex.md",
+          "issue": "Chinese capability-map label points to start-here root; French mirrors source destination."
+        }
+      ],
+      "assets": [
+        "Shared teaching downloads and source screenshots remain unchanged; literal Chinese exercise status comment preserved with added French explanation.",
+        "Third-party theme screenshot retained as source evidence, not localized or claimed as tested."
+      ],
+      "checks": [
+        "All77 full Chinese/French pairs read",
+        "YAML/metadata keys/quoted source hashes/reviewed date/evidence dates passed",
+        "Assigned77 git diff --check passed",
+        "10 generated French diagrams --check passed",
+        "Capability ladder rendered to PNG; capability ladder and subagent diagram visually inspected"
+      ]
+    },
+    "group1-source-notes": {
+      "reviewed_pages": 103,
+      "source_notes": [
+        {
+          "path": "cases/workflows/review-before-merge.md",
+          "note": "Chinese sentence 自动评论本身不能代替自动合并 is ambiguous; French retains the consistent requirement that automated comments do not replace the human merge decision."
+        },
+        {
+          "note": "Chinese mechanism-selection page says five-step decision method but enumerates three; retained source structure."
+        },
+        {
+          "note": "Shared downloadable usage-log and workflow-evaluation assets retained unchanged as frozen source resources."
+        }
+      ],
+      "checks": {
+        "yaml": "103 parsed successfully",
+        "source_revision": "103 exact quoted SHA1 prefixes",
+        "translated_at": "103 original source lines preserved",
+        "links": "All link targets equal initial French snapshot after repairing accidental handbook-version-policy replacement",
+        "inline_code": "All original inline code values retained",
+        "verification_dates": "All source dates retained; profiles checkedAt includes a translated local CLI evidence annotation"
+      }
+    }
+  },
+  "additional_changes": [
+    "French verification labels and source evidence visibility; translation review date distinct from source verification.",
+    "French feedback and updates links; Tools menu label.",
+    "Three French contact/privacy/terms pages, retaining original update date; localized footer routes.",
+    "Explicit homepage verification component displays review date and original-download language note.",
+    "French structured data language, homepage classification and three FAQ entries.",
+    "Reviewed sidebar, case filtering, PetScienceFigure, language and theme selectors, standalone routes and scroll-to-top labels."
+  ],
+  "independent_ui_review": [
+    {
+      "path": "src/pages/fr/contact.astro",
+      "status": "reviewed",
+      "findings": [
+        "Full comparison with Chinese source passed; no omitted sections, original update date and translation review date kept distinct; locale/canonical/internal contact route correct."
+      ]
+    },
+    {
+      "path": "src/pages/fr/privacy-policy.astro",
+      "status": "reviewed",
+      "findings": [
+        "Full comparison with Chinese source passed; no omitted sections, original update date and translation review date kept distinct; locale/canonical/internal contact route correct."
+      ]
+    },
+    {
+      "path": "src/pages/fr/terms.astro",
+      "status": "reviewed",
+      "findings": [
+        "Full comparison with Chinese source passed; no omitted sections, original update date and translation review date kept distinct; locale/canonical/internal contact route correct."
+      ]
+    },
+    {
+      "path": "src/components/ContentVerification.astro",
+      "status": "reviewed",
+      "findings": [
+        "French scope, wording and localized links checked against Chinese branch; no material discrepancies."
+      ]
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "status": "reviewed",
+      "findings": [
+        "French scope, wording and localized links checked against Chinese branch; no material discrepancies."
+      ]
+    },
+    {
+      "path": "src/components/Header.astro",
+      "status": "reviewed",
+      "findings": [
+        "French scope, wording and localized links checked against Chinese branch; no material discrepancies."
+      ]
+    },
+    {
+      "path": "src/components/GeoJsonLd.astro",
+      "status": "reviewed",
+      "findings": [
+        "French labels and explanatory text align with Chinese source. GeoJsonLd French description and all three homepage FAQ entries checked."
+      ]
+    },
+    {
+      "path": "src/components/CaseDirectory.astro",
+      "status": "reviewed",
+      "findings": [
+        "Clarified browser search as in-page Find, matching Chinese baseline. All French category/status/filter labels checked."
+      ]
+    },
+    {
+      "path": "src/components/PetScienceFigure.astro",
+      "status": "reviewed",
+      "findings": [
+        "Translated 单帧 as image unique rather than generic image; checked remaining French diagram labels against Chinese."
+      ]
+    }
+  ],
+  "validation": {
+    "full_site_parity": {
+      "locales": [
+        "en",
+        "es",
+        "ja",
+        "ko",
+        "fr"
+      ],
+      "checks": 1415,
+      "issues": 0
+    },
+    "metadata_pages": 283,
+    "tests_passed": 6,
+    "build_pages": 2859,
+    "rendered_downloads": 1600,
+    "french_html_routes": 293,
+    "french_internal_links_and_anchors": 49902,
+    "rendered_review_dates": 283,
+    "entry_regression": {
+      "locales": 10,
+      "pages": 70,
+      "links": 12521
+    },
+    "source_links_and_images": 13022,
+    "french_structured_data": "passed",
+    "intentional_chinese_examples": [
+      {
+        "path": "dist/fr/guide/learning-paths/beginner/02-work-with-files/index.html",
+        "text": [
+          "<!-- 状态：练习草稿，未发布 -->"
+        ]
+      },
+      {
+        "path": "dist/fr/guide/learning-paths/beginner/03-give-clear-tasks/index.html",
+        "text": [
+          "Conserve sans modification le commentaire d’état exact <!-- 状态：练习草稿，未发布 -->."
+        ]
+      },
+      {
+        "path": "dist/fr/prompts/ask-for-a-plan/index.html",
+        "text": [
+          "Dans le corps de README.md, remplace les deux occurrences de « 帐户 » par « 账户 »."
+        ]
+      },
+      {
+        "path": "dist/fr/skills/examples/writing-skill/index.html",
+        "text": [
+          "Le dossier réutilise l’outil fictif « Shiye (拾页) » de l’"
+        ]
+      },
+      {
+        "path": "dist/fr/skills/examples/research-skill/index.html",
+        "text": [
+          "Le dossier reprend l’outil fictif « Shiye (拾页) » de l’",
+          "du diagnostic et les champs téléversés de Shiye (拾页) 1.2. Produis"
+        ]
+      }
+    ],
+    "git_diff_check": "passed"
+  }
+}

@@ -9,6 +9,10 @@ import { unified } from 'unified';
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
 const docsRoot = path.join(root, 'src/content/docs');
+const standaloneRoutes = JSON.parse(fs.readFileSync(path.join(root, 'src/data/standaloneRoutes.json'), 'utf8'));
+const localizedStandalonePaths = new Set(Object.values(standaloneRoutes).flatMap(({ slug, supportedLocales }) =>
+	supportedLocales.filter((locale) => locale !== 'root').map((locale) => `${locale}/${slug}`),
+));
 const extensions = new Set(['.md', '.mdx']);
 const parser = unified().use(remarkParse);
 
@@ -55,6 +59,12 @@ function resolveSitePath(url, isImage) {
 
 	const publicPath = path.join(root, 'public', relative);
 	if (isImage || fs.existsSync(publicPath)) return fs.existsSync(publicPath);
+
+	// Localized standalone pages are emitted by Astro's [locale] route.
+	if (localizedStandalonePaths.has(relative)) {
+		const slug = relative.split('/')[1];
+		return fs.existsSync(path.join(root, 'src/pages/[locale]', `${slug}.astro`));
+	}
 
 	return existsAny([
 		path.join(docsRoot, `${relative}.md`),

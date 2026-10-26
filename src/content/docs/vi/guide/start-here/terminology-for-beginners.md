@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ cung cấp hướng dẫn thuật ngữ cho người mới; liên kết nội bộ và giải thích thuật ngữ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Thuật ngữ cho người mới
 description: Định nghĩa ngắn về tác vụ, ngữ cảnh, Sandbox, Skill và các từ thường dùng khác.
 locale: vi
 source_locale: zh-CN
-source_revision: a18bacf
+source_revision: "a18bacf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 6
 ---
@@ -24,7 +29,7 @@ Hai trường hợp phổ biến:
 
 ## Vài từ cần nhận biết trước
 
-Nếu mục tiêu hiện tại chỉ là chạy thông tác vụ đầu tiên, có thể hiểu trước 6 từ này:
+Nếu mục tiêu hiện tại chỉ là hoàn thành tác vụ đầu tiên, có thể hiểu trước 6 từ này:
 
 | Thuật ngữ | Vì sao hiểu trước |
 |---|---|
@@ -48,7 +53,7 @@ Nếu mục tiêu hiện tại chỉ là chạy thông tác vụ đầu tiên, c
 | **Tác vụ** | Một đơn vị công việc có mục tiêu (có thể trải nhiều lần gọi công cụ) |
 | **Skill** | Gói hướng dẫn và tài nguyên chuyên biệt có thể tái sử dụng (nâng cao) |
 | **MCP** | Giao thức kết nối công cụ và nguồn dữ liệu bên ngoài (nâng cao) |
-| **Tác vụ Cloud** | Tác vụ chạy trong môi trường đám mây, không phải Sandbox máy local |
+| **Tác vụ Cloud** | Tác vụ chạy trong môi trường đám mây, không phải sandbox trên máy cục bộ |
 
 ## Nói theo cách đời thường hơn
 
@@ -87,15 +92,8 @@ Các mục dưới đây phần lớn thuộc nội dung nâng cao; lần đầu
 - Plugin
 - Chi tiết môi trường Cloud
 
-Hoàn thành [tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/) trước, rồi quay lại các từ này — thường sẽ hiểu xuôi hơn.
+Hoàn thành [tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/) trước, rồi quay lại các từ này — thường sẽ dễ hiểu hơn.
 
 Gặp từ lạ thì quay lại tra, rồi đọc tiếp là được.
 
 Lần đầu đọc cẩm nang, coi các từ này như gợi ý là đủ. Biết chúng chỉ cái gì đại khái thực tế hơn là cố thuộc hết ngay từ đầu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ cung cấp hướng dẫn thuật ngữ cho người mới; liên kết nội bộ và giải thích thuật ngữ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

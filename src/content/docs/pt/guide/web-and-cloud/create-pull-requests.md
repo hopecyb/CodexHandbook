@@ -8,13 +8,14 @@ legacyVerification:
 locale: pt
 source_locale: zh-CN
 source_revision: "39371d4"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
 
-Depois de uma tarefa Cloud terminar, examine primeiro o resumo e o diff. Crie um Pull Request apenas quando o resultado cumprir o âmbito e os critérios de verificação; caso contrário, continue a corrigi-lo na mesma conversa.
+Depois de uma tarefa Cloud terminar, examine primeiro o resumo e o diff. Crie um Pull Request apenas quando o resultado cumprir o escopo e os critérios de verificação; caso contrário, continue a corrigi-lo na mesma conversa.
 
 ## Da tarefa ao PR
 
@@ -46,10 +47,10 @@ os comandos e resultados dos testes, os riscos e a forma de reverter.
 ## Verificações antes de criar
 
 - [ ] O commit de partida está correto e não faltam entradas locais ainda não enviadas.
-- [ ] O diff contém apenas alterações do âmbito da tarefa.
+- [ ] O diff contém apenas alterações do escopo da tarefa.
 - [ ] O nome da nova branch é reconhecível e não substitui trabalho de outra pessoa.
 - [ ] Os testes foram realmente executados e as falhas não ficaram ocultas no resumo.
-- [ ] Não há credenciais, registos temporários, caches ou formatação sem relação.
+- [ ] Não há credenciais, registros temporários, caches ou formatação sem relação.
 - [ ] Uma alteração grande foi dividida em PRs que possam ser revistos de forma independente.
 
 ## A descrição do PR deve responder, pelo menos
@@ -60,13 +61,13 @@ os comandos e resultados dos testes, os riscos e a forma de reverter.
 4. Quais são os riscos, limitações e método de reversão?
 5. O que ficou explicitamente por fazer?
 
-Para alterações de UI, acrescente capturas de ecrã reais; para alterações de comportamento, passos de reprodução; para migrações, explicações de compatibilidade e reversão.
+Para alterações de UI, acrescente capturas de tela reais; para alterações de comportamento, passos de reprodução; para migrações, explicações de compatibilidade e reversão.
 
 ## Depois de criar
 
 Aguarde os required checks, peça uma revisão complementar com `@codex review` e faça com que uma pessoa conhecedora do contexto examine o diff principal. Se forem necessárias correções, aplique os comentários concretos na mesma branch do PR; não abra uma branch sem relação e produza dois resultados paralelos.
 
-Criar e fundir um PR são dois limites de permissão distintos. O facto de o Cloud conseguir criar um PR não justifica contornar a política de merge da equipa.
+Criar e fundir um PR são dois limites de permissão distintos. O fato de o Cloud conseguir criar um PR não justifica contornar a política de merge da equipe.
 
 ## Fontes oficiais
 

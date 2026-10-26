@@ -31,14 +31,15 @@ next:
   label: Guardar instruções reutilizáveis
 locale: pt
 source_locale: zh-CN
-source_revision: '7189374'
-translation_status: draft
+source_revision: "7189374"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: '2026-09-20'
 ---
 
 Condense um artigo em oito slides e entregue PPTX com texto editável, prévias e notas de apresentação. Preserve limites e conflitos das fontes, sem inventar números ou gráficos para preencher páginas.
 
-Dificuldade inicial. Duração de 60–90 minutos é estimativa editorial, não medida com leitores. Requer leitura de arquivos locais e ferramenta de criação de PPTX ou software de apresentação. O pacote já traz artigo de entrada: pratique de forma independente ou após o [caso do artigo](/pt/cases/write-an-article/).
+Nível: iniciante. Duração de 60–90 minutos é estimativa editorial, não medida com leitores. Requer leitura de arquivos locais e ferramenta de criação de PPTX ou software de apresentação. O pacote já traz artigo de entrada: pratique de forma independente ou após o [caso do artigo](/pt/cases/write-an-article/).
 
 [Baixar pacote completo v1.0.0 (ZIP)](/downloads/article-to-slides/article-to-slides-1.0.0.zip) · [Ver PPTX editável](/downloads/article-to-slides/solution/source-backed-writing.pptx) · [Ver PDF](/downloads/article-to-slides/solution/source-backed-writing.pdf)
 
@@ -78,7 +79,7 @@ O roteiro está pronto quando há oito papéis, uma ideia por slide e cada fato 
 Faça primeiro a capa e o sexto slide de limitações: a primeira verifica o título grande; o segundo, o texto mais denso. A referência usa azul escuro, branco quente e texto nativo, sem exigir decoração.
 
 ```text
-Com o roteiro de oito slides aprovado, crie primeiro amostras dos slides 1 e 6.
+Com o roteiro de oito slides definido, crie primeiro amostras dos slides 1 e 6.
 Use formato 16:9 e caixas de texto nativas; escolha fonte chinesa disponível no ambiente.
 No slide 6, mantenha P3 “desligado por padrão” e C2 “ligado por padrão em novas instalações” e marque o resultado como não confirmado.
 Renderize e confira chinês, quebras, margens e legibilidade das fontes. Depois de aprovar o layout, termine os outros seis slides.
@@ -91,7 +92,7 @@ A referência usa Arial Unicode MS. Se não houver essa fonte, escolha outra fon
 
 Abra seu PPTX no software de apresentação, salve cópia de teste, selecione e mude texto importante, salve e reabra. Exporte prévias de cada slide e confira chinês, quebras, sobreposição, número de páginas e notas. Oito imagens de página inteira não substituem arquivo editável.
 
-A referência foi importada e exportada com LibreOffice headless. Em uma cópia temporária, o título em texto nativo mudou de “uma” para “duas”; o texto alterado foi lido após a exportação. Isso não equivale a teste de edição por cliques em GUI nem prova comportamento idêntico em todo software.
+A referência foi importada e exportada com LibreOffice headless. Em uma cópia temporária, o título em texto nativo mudou de “一份” (uma) para “两份” (duas); o texto alterado foi lido após a exportação. Isso não equivale a teste de edição por cliques em GUI nem prova comportamento idêntico em todo software.
 
 ![Sexto slide: duas fontes contradizem a configuração padrão e a conclusão fica não confirmada](/downloads/article-to-slides/previews/slide-06.png)
 

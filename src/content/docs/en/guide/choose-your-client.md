@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Compared with the current official documentation for the ChatGPT desktop App, Codex CLI, IDE, and Cloud. The guidance chooses by work location and interaction model and distinguishes the VS Code-compatible extension from the Xcode and JetBrains integrations."
+  checkedAt: "2026-08-26"
 title: Choose a Codex client
 description: Choose among the desktop App, CLI, IDE integration, and Cloud based on where and how the work happens.
 locale: en
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: 'e4c7057'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 2
 ---
@@ -93,13 +98,3 @@ Do more than confirm that the client opens. Complete this loop in a practice rep
 5. Confirm that you know how to deny or narrow a permission request.
 
 See [Feature comparison](/en/guide/reference/feature-comparison/) for the full matrix and [Permissions and sandboxing](/en/guide/permissions-and-sandbox/) for execution boundaries.
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the current official documentation for the ChatGPT desktop App, Codex CLI, IDE, and Cloud. The guidance chooses by work location and interaction model and distinguishes the VS Code-compatible extension from the Xcode and JetBrains integrations.
-
-**Last verified:** 2026-08-26

@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: es
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: "c362c48"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 ## Evento verificable y alcance
@@ -35,6 +36,6 @@ Prioriza entradas que se puedan validar, ámbitos de permiso explícitos y respu
 
 ## Ejercicio práctico
 
-[Simulación de sugerencias para clasificar Issues](/es/cases/use-cases/team-automation/issue-triage-suggestions/): comprueba que las sugerencias estructuradas para Issues sintéticas correspondan a sus entradas y conserva una cola de revisión humana. El ejercicio verifica los límites de los datos sin llamar a la API histórica ni usar su etiqueta de lanzamiento.
+[Simulación de sugerencias para clasificar Issues](/es/cases/use-cases/team-automation/issue-triage-suggestions/): comprueba que las sugerencias estructuradas para Issues sintéticas correspondan a sus entradas y conserva una cola de revisión humana. El ejercicio verifica los límites de los datos sin llamar a la API histórica ni publicar etiquetas.
 
 [Volver a la hoja de ruta y los criterios de fecha](/es/ai-roadmap/)

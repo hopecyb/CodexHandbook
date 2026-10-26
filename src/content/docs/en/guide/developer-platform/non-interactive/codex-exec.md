@@ -1,10 +1,15 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Compared with current Non-interactive mode and Developer commands documentation for Stable `codex exec`, `--cd` / `-C`, the default read-only sandbox, `workspace-write`, JSONL, and schema output."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-25"
 title: codex exec
 description: Non-interactive execution entry—dispatch a complete task once in scripts and CI.
 locale: en
 source_locale: zh-CN
-source_revision: 6d7c481
+source_revision: '6d7c481'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -163,12 +168,3 @@ That is why many teams wire it behind `make review`, GitHub Actions, cron, or in
 
 ## Reference sources
 - OpenAI Codex CLI documentation
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Verification basis:** Compared with current Non-interactive mode and Developer commands documentation for Stable `codex exec`, `--cd` / `-C`, the default read-only sandbox, `workspace-write`, JSONL, and schema output.
-
-**Last verified:** 2026-08-26

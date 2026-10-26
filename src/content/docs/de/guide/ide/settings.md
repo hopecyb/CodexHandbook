@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: Einstellungen der IDE-Erweiterung
 description: Unterscheide die gemeinsam genutzte Agent-Konfiguration von Verhaltenseinstellungen VS-Code-basierter Editoren.
 sidebar:
   order: 80
 locale: de
 source_locale: zh-CN
-source_revision: 6f28910
+source_revision: "6f28910"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 In der IDE gibt es zwei Einstellungsebenen:
@@ -57,11 +61,3 @@ Wenn eine Einstellung scheinbar nicht greift, prüfe zuerst, welche Ebene du ge�
 
 - [Referenz der Codex-IDE-Einstellungen](https://learn.chatgpt.com/docs/ide/settings)
 - [Konfigurationsgrundlagen](https://learn.chatgpt.com/docs/config)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE
-
-**Zuletzt geprüft:** 2026-08-26

@@ -3,9 +3,14 @@ title: Vue d'ensemble de MCP
 description: Comprendre le client, le serveur, les outils, l'authentification et les limites de sécurité de MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 98a0626
-translation_status: draft
+source_revision: '98a0626'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT App de bureau / Codex CLI / IDE ; ChatGPT Web utilise les outils MCP distants via un Plugin
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP transforme le souhait d'un modèle d'utiliser une capacité externe en appel d'outil structuré. Il convient pour accéder à des documents tiers, à un navigateur, à Figma, à un système de tickets ou à des services internes.

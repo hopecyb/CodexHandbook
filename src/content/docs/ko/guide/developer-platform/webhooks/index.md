@@ -8,10 +8,10 @@ title: Webhooks
 description: 이벤트 트리거 통합 설명 페이지입니다. Webhook은 알림을 받으며, 워크플로 설계를 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 68cb29b
+source_revision: '68cb29b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 `Webhook`라는 말은 조금 추상적으로 보일 수 있습니다.  
@@ -21,7 +21,7 @@ Codex 통합 시나리오에서는 “외부 이벤트가 왔을 때 이후 흐�
 
 ## 이 그룹 입구
 
-- [Webhooks 개요](/ko/guide/developer-platform/webhooks/overview/)
+- [Webhook과 작업 이벤트의 경계](/ko/guide/developer-platform/webhooks/overview/): 로컬 실행 결과, App Server 이벤트, 자체 HTTP 콜백을 구분합니다. 이 문서 묶음은 검증되지 않은 통일된 Cloud Webhook 계약을 제공하지 않습니다.
 
 ## 이 그룹 내용
 

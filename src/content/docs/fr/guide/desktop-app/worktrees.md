@@ -3,14 +3,17 @@ title: Worktrees
 description: Isolez les conversations parallèles avec des worktrees Git, puis revenez sans risque au checkout local.
 locale: fr
 source_locale: zh-CN
-source_revision: 3569716
+source_revision: "3569716"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 ---
-
 Un worktree Git fournit à un même dépôt plusieurs répertoires de checkout indépendants. Chaque répertoire possède ses propres fichiers et l'état de sa branche, tout en partageant les métadonnées Git du dépôt. Les worktrees permettent à plusieurs conversations de programmation de s'exécuter en parallèle sans écraser leurs fichiers respectifs.
 
 ## Prérequis
@@ -60,11 +63,3 @@ Exécutez ensuite les tests propres à la tâche. N'utilisez Handoff, commit ou 
 
 - [Worktrees Git](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Travaux longs et conversations parallèles](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** App
-
-**Dernière vérification :** 2026-08-26

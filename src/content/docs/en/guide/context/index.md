@@ -8,8 +8,9 @@ title: "Context"
 description: "Manage project, file, and conversation context."
 locale: en
 source_locale: zh-CN
-source_revision: d2baf42
-translation_status: draft
+source_revision: 'd2baf42'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 16

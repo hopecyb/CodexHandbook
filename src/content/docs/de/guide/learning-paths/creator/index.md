@@ -25,9 +25,10 @@ next:
   label: Drei Quellen ordnen
 locale: de
 source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
+source_revision: "d1b46b1"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Verfasse aus einem Quellensatz einen Artikel, wandle ihn in eine bearbeitbare Präsentation um und speichere anschließend wiederverwendbare Aufgabenanweisungen. Jeder Schritt hinterlässt Dateien, anhand derer du deinen Abschluss prüfen kannst.
@@ -98,7 +99,7 @@ Beginne mit geprüftem Artikel und Folien. Erstelle `workflow.md` anhand der fol
 ## Abnahme
 - Wichtige Fakten sind auf Quellen zurückführbar; offene Fragen bleiben sichtbar.
 - Autorenempfehlungen von Produktfakten trennen; synthetisches Material nicht als echte Aussage ausgeben.
-- PPTX lässt sich öffnen und bearbeiten; Software- und Schriftumgebung je Folie festhalten.
+- PPTX lässt sich öffnen und bearbeiten; jede Folie prüfen und die Software- und Schriftumgebung festhalten.
 - Ausgeführte und nicht ausgeführte Prüfungen nennen; Lieferung bleibt lokal.
 
 ## Erfahrungen
@@ -107,7 +108,7 @@ Beginne mit geprüftem Artikel und Folien. Erstelle `workflow.md` anhand der fol
 - Fakten und Umgebung, die neu bestätigt werden müssen:
 ```
 
-Probiere nun eine kleine Übertragung: Ändere die Zielgruppe von „Einzelautoren beim ersten Versuch“ zu „Kollegen, die Unterlagen zur Prüfung vorbereiten“. Verwende dieselben Quellen und erstelle nur die Gliederung neu. Dokumentiere in `reuse-check.md`, wie sich Titel, Schwerpunkt und Reihenfolge geändert haben und welche Faktengrenzen gleich blieben. Die Übung testet die Anpassbarkeit der Vorlage; sie behauptet keine neue Faktenrecherche.
+Probiere nun eine kleine Übertragung: Ändere die Zielgruppe von „Einzelautoren beim ersten Versuch“ zu „Kollegen, die die Unterlagen prüfen sollen“. Verwende dieselben Quellen und erstelle nur die Gliederung neu. Dokumentiere in `reuse-check.md`, wie sich Titel, Schwerpunkt und Reihenfolge geändert haben und welche Faktengrenzen gleich blieben. Die Übung testet die Anpassbarkeit der Vorlage; sie behauptet keine neue Faktenrecherche.
 
 Fertig bist du, wenn andere in `workflow.md` Eingaben und Ausgaben finden und erkennen, wann die Arbeit abgeschlossen ist. Das Übertragungsprotokoll muss konkrete Unterschiede enthalten und darf nicht weiter für die alte Zielgruppe schreiben. Wenn die Abfolge stabil ist, lies [Einen Workflow in einen Skill überführen](/de/cases/workflows/turn-a-workflow-into-a-skill/). Das [Beispiel eines Schreib-Skills](/de/skills/examples/writing-skill/) enthält ein vollständiges Paket mit Stilbeispielen, Faktentabelle und Umgang mit Widersprüchen; Strukturprüfungen ersetzen keine menschliche Faktenprüfung.
 

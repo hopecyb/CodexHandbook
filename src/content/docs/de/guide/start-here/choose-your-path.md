@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die Methode, Lesepfade nach Rolle, Aufgabe und Produkteinstieg zu wählen; interne Links und Pfad-Gruppierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Deinen Pfad wählen
 description: "Wähle den Leseweg nach Rolle, Aufgabe und Produkteinstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 51ccd00
+source_revision: "51ccd00"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 4
 ---
@@ -64,10 +69,3 @@ Bei Unsicherheit kannst du so entscheiden:
 3. Du weißt schon, in welchem Einstieg du arbeitest → zum entsprechenden Produktkapitel
 
 Starte am Einstieg, der deiner aktuellen Frage am nächsten ist — Anpassen geht später immer noch.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die Methode, Lesepfade nach Rolle, Aufgabe und Produkteinstieg zu wählen; interne Links und Pfad-Gruppierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

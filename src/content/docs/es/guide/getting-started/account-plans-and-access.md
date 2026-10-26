@@ -8,9 +8,10 @@ title: Cuentas, planes y acceso
 description: Distingue los planes de ChatGPT, el uso con API key y los permisos del workspace de la organización.
 locale: es
 source_locale: zh-CN
-source_revision: ecfa8f9
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: '7b123e5'
+translation_status: reviewed
+translated_at: 2026-10-25
+reviewed_at: '2026-10-25'
 sidebar:
   order: 10
 ---
@@ -24,7 +25,7 @@ Actualmente puedes usar Codex mediante un **plan de ChatGPT** o con una **API ke
 | Iniciar sesión con ChatGPT | Trabajo interactivo personal, escritorio, Cloud y workspaces de organizaciones | Sujeto a los límites del plan de ChatGPT, los roles del workspace y las políticas del administrador |
 | Usar una API key | Codex local, scripts y CI | Facturado según el uso de la API; algunas funciones que dependen del workspace de ChatGPT o de Cloud no están disponibles |
 
-La página oficial actual de Pricing incluye ChatGPT Work y Codex en planes como Free, Go, Plus, Pro, Business, Edu y Enterprise, pero los precios, límites, modelos y funciones incluidas pueden cambiar. Este manual no reproduce la tabla de precios. Consulta directamente la [página oficial de Pricing actualizada](https://learn.chatgpt.com/docs/pricing).
+La página oficial actual de Pricing incluye ChatGPT Work y Codex en planes como Free, Go, Plus, Pro, Business, Edu y Enterprise, pero los precios, límites, modelos y funciones incluidas pueden cambiar. Esta página no mantiene una tabla de precios. Consulta [los planes y las fuentes de precios del manual](/es/chatgpt-pricing/) y contrasta la [página oficial de precios actualizada](https://learn.chatgpt.com/docs/pricing).
 
 ## Por qué puedes tener cuenta y seguir sin acceso
 
@@ -56,3 +57,5 @@ Iniciar sesión es solo la primera etapa. El acceso final también depende de:
 Si la CLI acepta una API key pero el botón de Cloud no está disponible, puede que la instalación funcione bien. Cloud exige iniciar sesión con ChatGPT y está sujeto al plan de ChatGPT y a los permisos del workspace; la API key se usa principalmente en flujos locales y programáticos.
 
 A continuación, consulta [Inicio de sesión y autenticación](/es/guide/getting-started/sign-in-and-authentication/).
+
+Consulta los modelos actuales, las diferencias entre interfaces y las recomendaciones por tarea: [Elección de modelos: un punto de partida según la tarea](/es/guide/reference/model-selection/).

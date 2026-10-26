@@ -3,12 +3,17 @@ title: Connexion et authentification
 description: Choisir la bonne méthode de connexion pour les clients locaux et Cloud, puis vérifier l'identité active en toute sécurité.
 locale: fr
 source_locale: zh-CN
-source_revision: ea83fa6
+source_revision: 'ea83fa6'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: comparaison avec la documentation actuelle sur l'authentification concernant la connexion locale avec ChatGPT et une clé API, l'obligation d'utiliser ChatGPT pour Cloud, les commandes de la CLI, le partage du cache d'identifiants et les limites de stockage.
+  checkedAt: '2026-08-26'
 ---
 
 Avec les modèles OpenAI, Codex propose deux méthodes de connexion personnelles :
@@ -22,11 +27,11 @@ Le travail local dans l'App de bureau ChatGPT, Codex CLI et les intégrations ID
 
 Les clients locaux ouvrent un navigateur pour l'autorisation, puis transmettent les identifiants au client :
 
-- App de bureau : choisissez de poursuivre la connexion depuis la page de déconnexion.
+- App de bureau : choisissez de poursuivre la connexion depuis l’écran affiché lorsque vous êtes déconnecté.
 - CLI : exécutez `codex login`.
-- IDE : sélectionnez la connexion avec ChatGPT depuis la page de déconnexion.
+- IDE : sélectionnez la connexion avec ChatGPT depuis l’écran affiché lorsque vous êtes déconnecté.
 
-Vérifiez ensuite le compte et l'espace de travail actifs, en particulier lorsqu'un espace personnel et un espace d'entreprise utilisent la même adresse e-mail.
+Vérifiez ensuite le compte et l'espace de travail actifs, en particulier si vous disposez à la fois d’un espace personnel et d’un espace d’entreprise.
 
 ## Se connecter avec une clé API
 
@@ -49,10 +54,10 @@ La CLI et l'IDE partagent les informations de connexion mises en cache. Une déc
 
 ## Sécurité des identifiants
 
-- Ne validez jamais `~/.codex/auth.json` dans un dépôt et ne le collez pas dans un ticket, une conversation ou un journal.
+- N’ajoutez jamais `~/.codex/auth.json` à un commit et ne le collez pas dans un ticket, une conversation ou un journal.
 - Privilégiez le stockage des identifiants fourni par le système d'exploitation. Considérez les jetons enregistrés dans des fichiers comme des mots de passe.
 - Pour la CI, utilisez des identifiants dédiés et révocables plutôt qu'une clé personnelle à longue durée de vie.
-- Codex Cloud accède directement aux dépôts de code : activez l'authentification multifacteur pour le compte. Le SSO de l'organisation doit l'imposer.
+- Codex Cloud accède directement aux dépôts de code : activez l'authentification multifacteur pour le compte. L’administrateur doit imposer la MFA pour le SSO de l’organisation.
 - N'utilisez pas une clé personnelle pour contourner les restrictions de l'organisation ; commencez par examiner l'espace de travail et la politique gérée.
 
 ## Connecté, mais toujours incapable d'utiliser une fonctionnalité
@@ -68,13 +73,3 @@ Procédez dans cet ordre :
 La CLI dispose de journaux de connexion dédiés à l'assistance et au dépannage. Vérifiez qu'ils ne contiennent aucune donnée sensible avant de les partager.
 
 Consultez [Comptes, forfaits et accès](/fr/guide/getting-started/account-plans-and-access/) pour connaître les limites des forfaits et la [page officielle sur l'authentification](https://learn.chatgpt.com/docs/auth) pour les informations à jour.
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** App / CLI / IDE / Cloud
-
-**Base de vérification :** comparaison avec la documentation actuelle sur l'authentification concernant la connexion locale avec ChatGPT et une clé API, l'obligation d'utiliser ChatGPT pour Cloud, les commandes de la CLI, le partage du cache d'identifiants et les limites de stockage.
-
-**Dernière vérification :** 2026-08-26

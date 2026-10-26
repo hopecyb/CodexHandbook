@@ -7,12 +7,13 @@ next:
 description: Codex の理解、クライアントの選択、最初のタスクの完了、権限・コンテキスト・検証の理解。
 locale: ja
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: "aa277f2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
-ここでは、Codex とは何か、何に向いているか、そして初回利用から安定したワークフローへの移行方法を説明します。
+ここでは、Codex と AI Agent とは何か、何に向いているか、そして初回利用から、安全で安定し、完了を検証できるワークフローへ段階的に移行する方法を説明します。
 
 このハンドブックを初めて開いた方は、最初から最後まで読む本として捉える必要はありません。「初回利用から慣れるまで」のロードマップとして使う方が自然です。
 

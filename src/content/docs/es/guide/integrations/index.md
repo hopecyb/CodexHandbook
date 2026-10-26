@@ -5,12 +5,16 @@ sidebar:
   order: 55
 locale: es
 source_locale: zh-CN
-source_revision: 140102c
+source_revision: "140102c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: Integrations
+  basis: Las explicaciones actuales del OpenAI Help Center sobre plugins y apps siguen enfatizando que las capacidades de integración de Codex/ChatGPT se conectan vía plugins, apps y plantillas de app, y que el administrador puede controlar por separado acceso por rol, acciones de lectura/escritura, requisitos de confirmación y límites de datos. Esta página se centra en principios de diseño de integración, estratificación de permisos y orden de aterrizaje, sin depender de la interfaz momentánea de un sistema externo concreto.
+  checkedAt: '2026-07-26'
 ---
-
 El valor de las integraciones de Codex no es solo conectar una herramienta más: es meter al Agent en las cadenas de colaboración que ya usas — hosting de código, flujo de tickets, notificaciones, plataformas internas, bases de conocimiento.
 
 Antes de empezar, merece la pena aclarar:
@@ -25,7 +29,7 @@ Puedes entender «integración» así: **hacer que Codex no solo te ayude en una
 
 Por ejemplo:
 
-- Ir a GitHub a leer PRs y comentarios de commit
+- Ir a GitHub a leer PRs y publicar comentarios
 - Ir al sistema de tickets a leer el contexto y generar sugerencias de tratamiento
 - Tras completar una tarea, enviar el resultado a la herramienta de chat
 
@@ -76,7 +80,7 @@ Muchos equipos quieren «cambiar solo» de entrada, pero el primer paso suele ba
 |---|---|
 | En la sesión pides a Codex que consulte un issue | MCP / tarea interactiva |
 | Tras abrir un PR, borrador de revisión automático | Cloud / CI / Automation |
-| Resumen fijo diario del estado | Tarea programada / automatización en segundo plano |
+| Resumen fijo diario del estado | tarea programada / automatización en segundo plano |
 
 El mismo sistema puede tener varias formas de conexión; no hace falta forzar una sola.
 
@@ -123,7 +127,7 @@ Por ejemplo Slack, correo, IM empresarial.
 Adecuado para:
 
 - Notificar fin de tarea, fallo, espera de aprobación
-- Empujar de forma periódica diarios, semanales, resúmenes de cambio
+- Enviar periódicamente informes diarios, semanales y resúmenes de cambios
 
 Atención: la herramienta de notificación no debería ser la única fuente de auditoría; las tareas importantes deben conservar logs y registro en tickets.
 
@@ -148,7 +152,7 @@ Si solo quieres juzgar rápido «si esta integración merece hacerse primero», 
 
 Si las tres se cumplen, suele encajar en el primer lote de candidatos.
 
-## Orden de aterrizaje recomendado
+## Orden de implementación recomendado
 
 Si es tu primera integración, avanza de menor a mayor riesgo:
 
@@ -196,9 +200,3 @@ En la primera integración, dejar que Codex te ayude a «ver» y «sugerir» sue
 
 ## Referencias
 - Documentación oficial de OpenAI Codex sobre integraciones y desarrolladores
----
-
-**Estado:** verificado  
-**Productos aplicables:** Integrations  
-**Base de verificación:** Las explicaciones actuales del OpenAI Help Center sobre plugins y apps siguen enfatizando que las capacidades de integración de Codex/ChatGPT se conectan vía plugins, apps y plantillas de app, y que el administrador puede controlar por separado acceso por rol, acciones de lectura/escritura, requisitos de confirmación y límites de datos. Esta página se centra en principios de diseño de integración, estratificación de permisos y orden de aterrizaje, sin depender de la interfaz momentánea de un sistema externo concreto.  
-**Última verificación:** 2026-07-26

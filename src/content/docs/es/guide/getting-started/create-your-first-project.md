@@ -3,12 +3,17 @@ title: Crea tu primer proyecto de práctica
 description: Prepara un directorio de práctica seguro y descartable.
 locale: es
 source_locale: zh-CN
-source_revision: 43dcbdb
+source_revision: '43dcbdb'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Se cruzó con las secciones ya verificadas de lista de seguridad para principiantes, revisión de resultados y deshacer/recuperar; el contenido se limita al método estable de «cerrar el flujo primero con un directorio de práctica descartable».
+  checkedAt: '2026-07-26'
 ---
 
 Al crear el primer proyecto de práctica, es tentador usar de inmediato el proyecto formal que tienes a mano. Parece más cómodo; el riesgo también es mayor.
@@ -22,7 +27,7 @@ Al crear el primer proyecto de práctica, es tentador usar de inmediato el proye
 
 ## Por qué crear primero un proyecto de práctica
 
-El objetivo de la primera Tarea es aprender el flujo, no entregar negocio. Al aislarlo, el coste de un cambio erróneo baja mucho.
+El objetivo de la primera Tarea es aprender el flujo, no entregar trabajo de producción. Al aislarlo, el coste de un cambio erróneo baja mucho.
 
 En la primera práctica importa más familiarizarte con estas acciones:
 
@@ -61,10 +66,3 @@ Si vas a crear uno ahora, cumple al menos estos 4 puntos:
 4. Los cambios se entienden de un vistazo
 
 El primer proyecto de práctica no tiene que parecer un entorno de producción. Que sea seguro, simple y fácil de recuperar si te equivocas basta.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con las secciones ya verificadas de lista de seguridad para principiantes, revisión de resultados y deshacer/recuperar; el contenido se limita al método estable de «cerrar el flujo primero con un directorio de práctica descartable».  
-**Última verificación:** 2026-07-26

@@ -3,10 +3,16 @@ title: Regeln
 description: "Einstiegsseite zu allow/deny, Befehlsregeln und Teamrichtlinien — was blockieren, was nur erinnern."
 locale: de
 source_locale: zh-CN
-source_revision: 9ac6185
+source_revision: "9ac6185"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / Cloud"
+  basis: Kreuzgeprüft gegen Struktur und Einstiegslinks der aktuellen rules-Unterkapitel; diese Seite navigiert nur nach allow/deny, Befehlsregeln und Teamregeln und behauptet keine konkreten Regelimplementierungen
+    oder Default-Blockierverhalten.
+  checkedAt: '2026-07-26'
 ---
 
 Die Gruppe „Regeln“ wird von Einsteigern leicht als „noch ein paar Erinnerungen für Codex“ missverstanden.
@@ -26,10 +32,3 @@ Genauer: Regeln klären, welche Aktionen standardmäßig erlaubt sind, welche bl
 - Wie das Team bei gleichen Risiken dieselbe Grenze hat
 
 Regeln sollen Grenzen festmachen und das System danach ausführen lassen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen Struktur und Einstiegslinks der aktuellen rules-Unterkapitel; diese Seite navigiert nur nach allow/deny, Befehlsregeln und Teamregeln und behauptet keine konkreten Regelimplementierungen oder Default-Blockierverhalten.  
-**Zuletzt geprüft:** 2026-07-26

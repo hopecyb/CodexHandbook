@@ -3,10 +3,15 @@ title: 실패 복구
 description: 작업이 빗나가거나, 테스트가 빨간색이 되거나, 컨텍스트가 소진될 때—안전하게 되돌리고 이어 가는 방법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: '847e22a'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 핸드북에서 이미 검증된 인수인계와 복구, 진단, 명령 규칙, 오류 참고 장과 교차 확인했습니다. 이 페이지는 실패 손실 차단과 계속 추진의 일반 방법을 설명하며, 특정 엔드의 복구 버튼이나 명령을 고정 규칙으로 쓰지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **실패 복구**는 작업이 빗나가거나 중단된 뒤, 현장을 수습하고 다시 앞으로 나아가는 방법을 다룹니다. 이 장은 반복 가능한 **감지 → 손실 차단 → 복구 → 회고** 단계를 제시하며, [취소와 복구](/ko/guide/getting-started/undo-and-recover/) 및 [긴 작업 관리](/ko/cases/workflows/long-running-task-management/)와 함께 쓸 수 있습니다.
@@ -32,7 +37,7 @@ reviewed_at: 2026-08-26
 ## 최소 실행 복구 흐름
 
 ```text
-1. 계속 수정을 멈춤(「먼저 코드를 쓰지 마세요」라고 명시)
+1. 추가 수정 중단(「먼저 코드를 쓰지 마세요」라고 명시)
 2. 현황 저장: git status / stash / thread ID 기록
 3. 5개 이내로 요약: 목표, 한 일, 실패 현상, 가설
 4. 선택: 되돌리기 / 범위 축소 / 새 스레드로 계속
@@ -42,7 +47,7 @@ reviewed_at: 2026-08-26
 프롬프트 예시:
 
 ```text
-현재 변경으로 테스트 12개가 실패했습니다. 먼저 계속 고치지 마세요.
+현재 변경으로 테스트 12개가 실패했습니다. 일단 추가 수정을 멈추세요.
 최근 commit 3개가 영향을 준 파일을 나열하고, 최소 되돌리기 지점을 제안하며,
 더 작은 수정 계획을 주세요.
 ```
@@ -54,7 +59,7 @@ reviewed_at: 2026-08-26
     → 손실 차단(쓰기 중단, 브랜치 격리)
     → 진단(「먼저 진단한 뒤 수정」참고)
     → 작은 걸음으로 재시도
-    → 회고 정착
+    → 회고와 교훈 기록
 ```
 
 여러 Agent 시나리오는 [여러 Agent 협업](/ko/cases/workflows/multi-agent-coordination/)을 참고하세요. 실패 시 어느 하위 작업이 롤백을 담당할지 명확히 해야 합니다.
@@ -71,7 +76,7 @@ reviewed_at: 2026-08-26
 - 복구 작업 자체도 [명령 규칙](/ko/guide/customization/rules/command-rules/)의 제약을 받습니다
 - 프로덕션 사고는 먼저 롤백한 뒤 근본 원인을 분석하고, Agent가 프로덕션에 직접 연결해 데이터를 고치게 하지 마세요
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 이번에 선택한 복구 전략과 이유를 설명할 수 있음
 - [ ] 저장소가 빌드/테스트 가능한 상태로 돌아옴
@@ -83,10 +88,3 @@ reviewed_at: 2026-08-26
 - [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/)
 - [인수인계와 복구](/ko/guide/agent-work/handoff-and-resume/)
 - [오류 참고](/ko/guide/reference/error-reference/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 핸드북에서 이미 검증된 인수인계와 복구, 진단, 명령 규칙, 오류 참고 장과 교차 확인했습니다. 이 페이지는 실패 손실 차단과 계속 추진의 일반 방법을 설명하며, 특정 엔드의 복구 버튼이나 명령을 고정 규칙으로 쓰지 않습니다.  
-**최근 검증:** 2026-07-26

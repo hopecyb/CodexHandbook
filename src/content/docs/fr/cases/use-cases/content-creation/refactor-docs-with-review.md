@@ -3,10 +3,18 @@ title: Refactorisation de site de docs avec revue
 description: "Cas : mise à jour en lot des liens et chapitres dans un projet Astro/Starlight — petits diffs, validation de build."
 locale: fr
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: 'db44ca3'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: Recoupement avec les chapitres vérifiés sur les livrables de contenu, EPXV, validation de build et modèle de cas ; ce contenu se limite au cas stable « modifications par petits pas sur un site multi-fichiers, validation de build et reprise après échec ».
+  checkedAt: '2026-07-26'
+caseCategory: development
+directoryOrder: 75
+contentType: case
 ---
 
 Ce cas illustre une tâche d'**ingénierie de contenu** : Markdown multi-fichiers, configuration de barre latérale, validation de build. La pile technique est proche de ce manuel, mais le scénario est transférable à tout site statique.
@@ -74,9 +82,3 @@ Acceptation : npm run build réussit ; aucun lien mort.
 
 ## Sources de référence
 - Flux réel d'itération documentaire M2 de ce dépôt
----
-
-**Statut :** verified  
-**Produits concernés :** CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur les livrables de contenu, EPXV, validation de build et modèle de cas ; ce contenu se limite au cas stable « modifications par petits pas sur un site multi-fichiers, validation de build et reprise après échec ».

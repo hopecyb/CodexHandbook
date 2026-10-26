@@ -8,12 +8,12 @@ legacyVerification:
 locale: es
 source_locale: zh-CN
 source_revision: "3569716"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: 2026-10-25
 ---
-
 Un árbol de trabajo (worktree) permite que un mismo repositorio Git tenga varios directorios de checkout independientes. Cada directorio tiene sus propios archivos y estado de rama, aunque comparte los metadatos Git del repositorio. Así, varias conversaciones de programación pueden avanzar en paralelo sin sobrescribir sus respectivos archivos.
 
 ## Requisitos previos
@@ -36,7 +36,7 @@ De forma predeterminada, el árbol de trabajo se crea en estado detached HEAD. C
 
 ## Ejemplo de dos tareas paralelas
 
-| Conversación | Tarea del árbol de trabajo | Archivos asignados | Criterio de aceptación |
+| Conversación | tarea del árbol de trabajo | Archivos asignados | Criterio de aceptación |
 |---|---|---|---|
 | A | Corregir un error de inicio de sesión | `src/auth/**` | Pasan las pruebas de autenticación |
 | B | Ampliar la documentación de autenticación | `docs/auth/**` | Pasa la comprobación de enlaces |

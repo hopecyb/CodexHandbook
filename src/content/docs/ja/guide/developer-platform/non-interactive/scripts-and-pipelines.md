@@ -3,12 +3,17 @@ title: スクリプトとパイプライン
 description: shell、Makefile、GitHub Actions で codex exec を編成——再現可能、監査可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: "07aeb4f"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / GitHub Actions
+  basis: 現行の公式 Non-interactive mode と Codex GitHub Action の推奨事項を照合し、`--cd` を修正済みです。API キーを使う job とリポジトリへの書き込み権限を持つ job の分離を、既定の安全境界としています。
+  checkedAt: '2026-08-26'
 ---
 
 ここでは Codex を一回の臨時操作から、**チームが繰り返し走らせ、問題時に追跡し、担当が変わっても引き継げる**自動化ステップにする方法を説明します。
@@ -38,7 +43,7 @@ reviewed_at: 2026-08-26
 保守が難しくなる：
 
 - 担当が変わると設計意図が分からない
-- 一箇所変更で code review が通らない
+- ロジックを一か所変えても、通常のコードレビューフローに載せられない
 - 失敗原因が prompt 変更、環境変更、スクリプト変更のどれか不明
 
 prompt、スクリプト、ルールを Git に入れることは、自動化フローへのバージョン管理です。
@@ -53,7 +58,7 @@ prompt が頻繁に変わり、成功基準が未確定、権限境界が未整�
 
 良いスクリプトは、人が覚えていた手順を誰もが読め、review できるファイルにします。
 
-## 最小 Shell 片段
+## 最小限の Shell スクリプト
 
 ```bash
 #!/usr/bin/env bash
@@ -61,14 +66,14 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 `prompts/ci/security-review.md` は Git に入れ、変更は review 経由。
 
 ## 最初に身につける習慣
 
-最初は「大而全」を狙わず、次の三つを固定：
+最初から規模と機能を広げすぎず、次の三つを固定：
 
 1. Prompt ファイルの置き場所
 2. 入口スクリプト名
@@ -76,7 +81,7 @@ codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 
 これでログ、schema、通知を足すときもスムーズです。
 
-## GitHub Actions 示意
+## GitHub Actions：公式 Action を使う
 
 ```yaml
 jobs:
@@ -84,24 +89,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # バージョン固定。公式インストール文書を基準に
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-例のインストール方式と権限 scope は組織セキュリティ要求に合わせて調整。**workflow で秘密鍵を echo しない。**
+GitHub Actions では公式の `openai/codex-action` を優先してください。リポジトリのコードを実行する job 全体の環境変数に API キーを設定しないでください。後続処理で PR への書き込みが必要なら、書き込み権限とキーを別々の job に分離し、パッチの artifact で引き継ぎます。
 :::
 
 ## 推奨ワークフロー
@@ -134,7 +134,7 @@ jobs:
 ## セキュリティ境界
 
 - CI token は最小権限。`git push` は独立承認 job 以外禁止
-- Fork PR の workflow で秘密鍵を安易に使う（`pull_request_target` はセキュリティレビュー必須）
+- Fork PR の workflow ではキーの使用に注意する（`pull_request_target` はセキュリティレビュー必須）
 
 ## 受け入れチェックリスト
 
@@ -145,9 +145,3 @@ jobs:
 
 ## 参考
 - OpenAI Codex + GitHub 統合ドキュメント
----
-
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 「prompt、スクリプト、パイプラインを Git review に入れる」原則は依然妥当だが、本文例は `codex exec`、CLI インストール方式、GitHub Actions 接続など高変動実装細部に依存。現行公式パイプライン文書を補足後に `verified` へ戻す。  
-**最終検証：** 2026-07-26

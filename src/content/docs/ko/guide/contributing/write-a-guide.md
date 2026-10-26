@@ -7,11 +7,12 @@ title: 가이드 페이지 작성
 description: 새 핸드북 본문의 구조, frontmatter, 교차 링크 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: 'dd22df1'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 이 페이지는 `src/content/docs/`에 **가이드형** 페이지(순수 사례·순수 참고표가 아님)를 추가하거나 다시 쓰는 방법을 설명합니다.
@@ -30,7 +31,7 @@ sidebar:
 
 여기의 “가이드 페이지”는 자료를 쌓아 두면 끝이 아닙니다. 독자가 “이 주제가 있다”에서 “언제 쓰고, 먼저 무엇을 보고, 어떤 함정을 피할지 대략 안다”로 가게 해야 합니다.
 
-그래서 지식점 목록이나 명령 목록만이 아니라, 다음에 어떻게 이어갈지도 알려야 합니다.
+그래서 지식 항목 목록이나 명령 목록만이 아니라, 다음에 어떻게 이어갈지도 알려야 합니다.
 
 ## Frontmatter
 
@@ -55,11 +56,11 @@ verification:
 
 ## 권장 구조
 
-[외부 자료 통합 템플릿](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-추천页面模板)의 소절을 골라 쓰세요. 흔한 조합:
+[외부 자료 통합 템플릿](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)의 소절을 골라 쓰세요. 흔한 조합:
 
 - 페이지가 푸는 문제
 - 누구에게 맞는지
-- 최소 가용 실천
+- 최소한의 실행 방법
 - 권장 워크플로
 - 흔한 실수
 - 보안 경계
@@ -86,7 +87,7 @@ verification:
 
 당신은 맥락을 알지만, 처음 온 독자는 모릅니다.
 
-다리 정보를 의도적으로 보강하세요.
+이해를 돕는 연결 정보를 의도적으로 보강하세요.
 
 - 누구에게 맞는지
 - 읽은 뒤 무엇을 해결할 수 있는지
@@ -104,7 +105,7 @@ verification:
 
 ## 어조
 
-- 한국어, 실무자 대상(합니다체)
+- 원문은 중국어 간체로 작성하며 실무자를 대상으로 합니다
 - 불확실성을 인정(「공식 문서 기준」)
 - 「만능 프롬프트」 서사를 쓰지 않음
 
@@ -114,7 +115,7 @@ verification:
 
 1. 페이지가 진짜 푸는 문제를 먼저
 2. 독자가 가장 오해하거나 건너뛰기 쉬운 점
-3. 최소 가용 실천·워크플로·판단법
+3. 최소한의 실행 방법·워크플로·판단법
 4. 마지막에 교차 링크와 참고 출처
 
 ## 검증

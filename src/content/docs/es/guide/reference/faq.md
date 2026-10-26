@@ -3,12 +3,17 @@ title: Preguntas frecuentes
 description: Preguntas frecuentes al empezar y al usar.
 locale: es
 source_locale: zh-CN
-source_revision: c9d7ed8
+source_revision: 'c9d7ed8'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado ítem a ítem con las entradas verificadas de elección de cliente, flujo de trabajo, métodos de extensión, flujo Cloud/GitHub y comandos slash; esta página solo navega preguntas frecuentes y no declara por sí sola valores por defecto de producto variables.
+  checkedAt: '2026-07-26'
 ---
 
 Con preguntas sueltas, empieza por el FAQ. Aquí no se despliega el sistema completo; te ayuda a encontrar rápido dónde mirar a continuación.
@@ -19,7 +24,7 @@ Ante situaciones como:
 
 - Hay muchas páginas y no sabes cuál leer después
 - Te atasca un problema, pero no merece abrir un capítulo entero
-- Solo quieres una orientación de dirección
+- Solo quieres una orientación inicial
 
 **P: ¿Qué cliente usar al empezar?**  
 R: La App de escritorio. Véase [Elegir cliente](/es/guide/choose-your-client/).
@@ -39,7 +44,7 @@ R: Véase [Mapa de capacidades de extensión](/es/skills/capability-map/) y [Có
 **P: ¿Hay un flujo de trabajo estándar recomendado?**  
 R: Por defecto [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/).
 
-**P: ¿Cómo conecta Cloud GitHub y abre PRs?**  
+**P: ¿Cómo conecto Cloud con GitHub y creo una PR?**
 R: Véase [Conectar GitHub](/es/guide/web-and-cloud/connect-github/) y [Crear Pull Request](/es/guide/web-and-cloud/create-pull-requests/).
 
 **P: ¿Se puede meter el CLI en CI?**  
@@ -53,7 +58,7 @@ R: La ruta de entrada ya está escrita; casos en profundidad en [Casos de uso](/
 
 ## Malentendidos frecuentes
 
-### 1. ¿El FAQ se puede mirar o no?
+### 1. ¿Es opcional consultar las preguntas frecuentes?
 
 Para principiantes suele ser un punto de partida bastante rápido.
 
@@ -61,7 +66,7 @@ Para principiantes suele ser un punto de partida bastante rápido.
 
 El FAQ hace sobre todo dos cosas:
 
-- Dar primero una orientación de dirección
+- Dar primero una orientación inicial
 - Enviarte a la página más completa
 
 ### 3. Si mi pregunta no está aquí, ¿el manual no la trata?
@@ -81,10 +86,3 @@ Si estás atascado y no sabes a qué página ir:
 3. Sigue el enlace a la temática correspondiente
 
 Suele costar menos que ir y venir por la barra lateral.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado ítem a ítem con las entradas verificadas de elección de cliente, flujo de trabajo, métodos de extensión, flujo Cloud/GitHub y comandos slash; esta página solo navega preguntas frecuentes y no declara por sí sola valores por defecto de producto variables.  
-**Última verificación:** 2026-07-26

@@ -8,10 +8,10 @@ title: scripts/ and tests
 description: Add deterministic scripts to a Skill and verify their behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: '900e6e4'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Early on, it is tempting to put everything in `SKILL.md`. That works for simple flows, but once a step must run **stably, repeatedly, and verifiably**, scripts beat prose.
@@ -39,7 +39,7 @@ If a step matches any of these, scripts are a strong choice:
 - Natural-language description would be verbose
 - You want reuse in CI or other tools later
 
-Actions like "run checks," "generate diff," "validate format," and "export report on a fixed schedule" fit scripts well.
+Actions like "run checks," "generate diff," "validate format," and "export a report using a fixed procedure" fit scripts well.
 
 ## Testing suggestions
 

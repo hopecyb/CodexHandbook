@@ -9,9 +9,10 @@ sidebar:
   order: 90
 locale: fr
 source_locale: zh-CN
-source_revision: 4f812d9
-translation_status: draft
+source_revision: '4f812d9'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Les raccourcis changent selon la plateforme, le client et les réglages personnels. Cette page ne présente que les combinaisons clairement indiquées dans la documentation officielle actuelle. Pour une liste complète, consultez **Keyboard Shortcuts** dans l’application.

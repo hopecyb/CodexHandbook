@@ -1,6 +1,6 @@
 <svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc">
   <title id="title">Arquitetura reutilizável do sistema de trabalho Codex</title>
-  <desc id="desc">Prompts de tarefa e regras do projeto entram em uma tarefa Codex; Skills fornece processos, MCP ferramentas externas, subagentes exploração paralela e Hooks proteções do ciclo de vida. Plugins distribui capacidades, Scheduled tasks dispara por tempo e pessoas revisam o resultado final.</desc>
+  <desc id="desc">Prompts de tarefa e regras do projeto orientam uma tarefa do Codex. Skills fornecem processos; MCP, ferramentas externas; subagentes, exploração paralela; e Hooks, proteção nos pontos do ciclo de vida. Plugins distribuem capacidades, Scheduled tasks disparam execuções agendadas e pessoas revisam o resultado final.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -44,9 +44,9 @@
   <text x="132" y="441" text-anchor="middle" class="tiny">Carregado quando necessário</text>
 
   <rect x="42" y="475" width="180" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="132" y="503" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="132" y="503" text-anchor="middle" class="label">Tarefa agendada</text>
   <text x="132" y="527" text-anchor="middle" class="note">Scheduled task</text>
-  <text x="132" y="550" text-anchor="middle" class="tiny">Disparar uma nova execução por tempo</text>
+  <text x="132" y="550" text-anchor="middle" class="tiny">Iniciar nova execução no horário definido</text>
 
   <rect x="350" y="112" width="470" height="486" rx="12" fill="#07101f" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8 5"/>
   <text x="370" y="140" class="note" fill="#fbbf24">Uma execução de tarefa Codex</text>
@@ -56,18 +56,18 @@
 
   <rect x="390" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="475" y="332" text-anchor="middle" class="label">Subagente</text>
-  <text x="475" y="356" text-anchor="middle" class="note">Exploração e verificações independentes</text>
+  <text x="475" y="356" text-anchor="middle" class="note">Explorar e verificar em separado</text>
   <text x="475" y="376" text-anchor="middle" class="tiny">Retornar resultados ao thread principal</text>
   <rect x="610" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="695" y="332" text-anchor="middle" class="label">MCP / ferramentas</text>
   <text x="695" y="356" text-anchor="middle" class="note">Arquivos · Web · sistemas externos</text>
-  <text x="695" y="376" text-anchor="middle" class="tiny">Permissões controladas por host e serviço</text>
+  <text x="695" y="376" text-anchor="middle" class="tiny">Permissões: host e serviço</text>
   <path d="M585 259V278H475V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M585 259V278H695V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <rect x="390" y="435" width="390" height="114" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text x="585" y="468" text-anchor="middle" class="label">Hooks: proteções do ciclo de vida</text>
-  <text x="585" y="495" text-anchor="middle" class="note">Verificações prévias · política de chamada de ferramentas · auditoria posterior</text>
+  <text x="585" y="495" text-anchor="middle" class="note">Pré-verificação · regras de chamadas · auditoria posterior</text>
   <text x="585" y="520" text-anchor="middle" class="tiny">Pode registrar, adicionar contexto ou bloquear; não define objetivos da tarefa</text>
 
   <rect x="974" y="232" width="184" height="78" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>

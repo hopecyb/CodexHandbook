@@ -3,15 +3,16 @@ title: Delegar y hacer seguimiento
 description: Inicia una tarea Cloud independiente y usa la misma conversación para corregir su rumbo y verificar el resultado.
 legacyVerification:
   status: "verified"
-  products: "Cloud、App、IDE、CLI"
+  products: "Cloud / App / IDE / CLI"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: 38b322f
-translation_status: draft
+source_revision: '38b322f'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+reviewed_at: 2026-10-25
 ---
 
 Delegar no es «desentenderse del problema». Significa entregar el objetivo, las restricciones, el entorno y los criterios de finalización a una conversación Cloud independiente. La tarea puede ejecutarse en segundo plano mientras examinas los registros, añades contexto, pides modificaciones y, al final, revisas el diff.

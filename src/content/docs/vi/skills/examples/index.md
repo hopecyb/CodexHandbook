@@ -8,9 +8,10 @@ title: "Ví dụ về Skills"
 description: "Điểm vào cho bốn ví dụ Skill: viết, rà soát, nghiên cứu và tự động hóa."
 locale: vi
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: "490db95"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Hãy xem tình trạng tài liệu trước khi chọn ví dụ. Gói hoàn chỉnh có đầu vào, tài liệu tham khảo và tập lệnh kiểm tra. Bản khung vẫn cần bổ sung tài nguyên và kiểm tra thực tế; không thể xem nó là quy trình đã xác minh.

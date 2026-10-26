@@ -8,10 +8,10 @@ title: Modèle de modification
 description: Itérer sur l'existant avec des limites claires.
 locale: fr
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: "6faf299"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -62,9 +62,9 @@ Dites ce qui compte comme « comportement actuel ».
 - dévier du sujet
 - toucher des couches non autorisées
 
-Un Prompt de modification dit **quoi** changer et **jusqu'où** seulement.
+Un prompt de modification dit **quoi** changer et **jusqu'où** seulement.
 
 ## Voir aussi
 
-- [Définir le terminé](/fr/prompts/define-done/)
+- [Définir les critères de réussite](/fr/prompts/define-done/)
 - [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)

@@ -1,23 +1,28 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos y carpetas, verificar artefactos, restricciones y límites, etc.; esta página solo confirma el principio estable de tratamiento tabular «columnas, tipos, nulos, fechas y forma de aceptación deben declararse de forma explícita» y no trata una librería o plataforma como única implementación.
+  checkedAt: '2026-07-26'
 title: Tablas y hojas de cálculo
 description: Lectura, limpieza, análisis y exportación de CSV, Excel y datos tabulares — evita romper estructura y codificación.
 locale: es
 source_locale: zh-CN
-source_revision: b08adec
+source_revision: "b08adec"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
 ---
 
-Las tareas con tablas son el típico caso en que se puede fallar en silencio: separador, codificación, cabecera, fórmula o formato de fecha — si cualquiera falla, todo lo de abajo se cae.
+Las tareas con tablas son el típico caso en que se puede fallar en silencio: separador, codificación, cabecera, fórmula o formato de fecha — si cualquiera falla, puede fallar todo el procesamiento posterior.
 
 ## Contenido de esta página
 
 - Cómo hacer que Codex lea y escriba CSV / Excel con seguridad
 - Estructura del prompt en tareas de análisis de datos
-- Cómo aceptar números y recuentos de filas
+- Cómo verificar las cifras y los recuentos de filas
 
 ## Elección de formato
 
@@ -65,7 +70,7 @@ Si eso no se dice claro, Codex también puede «parecer terminado», pero el res
 ## Escritura y limpieza
 
 - Deja claros **nombres de columna, orden y tipos** (fechas en ISO 8601)
-- Tablas grandes: procesa por lotes; evita cargar todo de golpe y explotar la memoria
+- Tablas grandes: procesa por lotes; evita cargar todo de golpe y agotar la memoria
 - Deduplicación y claves de merge van en la descripción de la tarea; no dejes que el Agent adivine la «clave primaria»
 
 ## Malentendidos habituales
@@ -103,9 +108,9 @@ Intenta formular el requisito en estas 5 cosas:
 
 Eso es mucho más estable que solo decir «ordéname este Excel».
 
-Si usas Python: lectura/escritura con `pandas`; si Node: `csv-parse` / `xlsx`, etc. — conviene el estándar del proyecto en `AGENTS.md`.
+Si usas Python: lectura/escritura con `pandas`; si Node: `csv-parse` / `xlsx`, etc. — acuerda en `AGENTS.md` qué bibliotecas usará el proyecto.
 
-## Con la verificación
+## Verificación
 
 - Si filas y totales se cruzan con los datos fuente
 - Abrir Excel y ver si las fechas se interpretaron como números
@@ -127,9 +132,3 @@ En tareas tabulares, lo más importante es dejar claros columnas, tipos, reglas 
 
 ## Referencias
 - [Definir restricciones](/es/prompts/constraints-and-boundaries/)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre contexto de archivos y carpetas, verificar artefactos, restricciones y límites, etc.; esta página solo confirma el principio estable de tratamiento tabular «columnas, tipos, nulos, fechas y forma de aceptación deben declararse de forma explícita» y no trata una librería o plataforma como única implementación.  
-**Última verificación:** 2026-07-26

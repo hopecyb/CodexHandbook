@@ -21,14 +21,17 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: 9ea3ecc
-translation_status: draft
+source_revision: '9ea3ecc'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 ---
 
 A workflow can select the right Skill yet state a fact incorrectly. It can also produce a correct result while taking an unauthorized action. Combining these outcomes into one “success rate” can hide the problem that actually needs fixing.
 
 [Download the evaluation kit](/downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip) · [20 samples](/downloads/workflow-evaluation/samples.json) · [Blank record](/downloads/workflow-evaluation/records-template.json)
+
+The downloadable kit is shared with the Chinese edition. Its sample prompts and explanatory materials are in Chinese; the field names and commands are preserved as provided.
 
 ## Record five kinds of observations separately
 

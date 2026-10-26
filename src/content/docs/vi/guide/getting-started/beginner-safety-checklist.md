@@ -1,14 +1,19 @@
 ---
-title: Checklist an toàn cho người mới
-description: Các mục kiểm tra an toàn nên xem trước lần dùng đầu tiên.
-locale: vi
-source_locale: zh-CN
-source_revision: 75bfe4d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Checklist an toàn cho người mới"
+description: "Các mục kiểm tra an toàn nên xem trước lần dùng đầu tiên."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "75bfe4d"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 120
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu chéo với các chương phê duyệt, Sandbox và mạng, kiểm tra kết quả cùng hoàn tác/khôi phục đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ mô tả tiền đề an toàn và thực hành rủi ro thấp cần xác nhận trước lần dùng đầu tiên, không phụ thuộc chi tiết giao diện sản phẩm cụ thể."
+  checkedAt: "2026-07-26"
 ---
 
 Trước lần dùng đầu tiên, có thể tự hỏi một câu: «Nếu nó làm sai, tôi có phải trả giá quá lớn không?»
@@ -46,10 +51,3 @@ Vấn đề phổ biến hơn lần đầu là:
 Có thể vừa dùng vừa học — nhưng vài mục trong checklist này, duyệt qua trước khi bắt đầu sẽ ổn hơn.
 
 Lần đầu dùng Codex, hạ chi phí lỗi trước — phía sau sẽ nhẹ hơn nhiều.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương phê duyệt, Sandbox và mạng, kiểm tra kết quả cùng hoàn tác/khôi phục đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ mô tả tiền đề an toàn và thực hành rủi ro thấp cần xác nhận trước lần dùng đầu tiên, không phụ thuộc chi tiết giao diện sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

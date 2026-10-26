@@ -8,15 +8,15 @@ title: Thư mục references/
 description: Tổ chức tài liệu tham chiếu dài trong Skill để tiết lộ dần.
 locale: vi
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: "955bfa7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 `references/` phù hợp để chứa tài liệu dài không cần mở ngay mỗi lần, tránh quy trình chính vừa dài vừa loạn.
 
-Nó không chỉ là"nhét thêm vài tài liệu", mà còn để tách những tài liệu **không phải lần nào cũng phải đọc ngay, nhưng ở một bước nào đó thật sự hữu ích**, chỉ đọc khi cần.
+Nó không chỉ là “nhét thêm vài tài liệu”, mà còn để tách những tài liệu **không phải lần nào cũng phải đọc ngay, nhưng ở một bước nào đó thật sự hữu ích**, chỉ đọc khi cần.
 
 
 Khi thân `SKILL.md` quá dài, hãy chuyển quy chuẩn chi tiết, mô tả API, checklist sang `references/`, rồi trích dẫn khi cần trong các bước.
@@ -39,15 +39,15 @@ Khi review phong cách code, đọc references/style-guide.md và kiểm tra the
 
 ## Nó đang làm gì
 
-- `SKILL.md` chịu quy trình chính
-- `references/` chịu"tài liệu mở khi cần"
+- `SKILL.md` phụ trách quy trình chính
+- `references/` chứa “tài liệu chỉ mở khi cần”
 
 Cũng có thể hiểu thẳng:
 
 - `SKILL.md` là hướng dẫn công việc
 - `references/` là tủ tài liệu
 
-Như vậy đọc Skill không bị đoạn nền dài đè trước; khi cần chi tiết vẫn tìm được căn cứ.
+Nhờ vậy, khi đọc Skill bạn không bị quá tải bởi phần thông tin nền dài; khi cần chi tiết vẫn tìm được căn cứ.
 
 ## Khi nào đáng tách `references/`
 Nếu trong `SKILL.md` bắt đầu xuất hiện các trường hợp sau, có thể cân nhắc tách:
@@ -56,13 +56,13 @@ Nếu trong `SKILL.md` bắt đầu xuất hiện các trường hợp sau, có 
 - Nhiều tài liệu tham chiếu chủ đề khác nhau trộn chung
 - Quy trình chính bị tài liệu nền cắt ngang, lần đầu khó nắm mạch chính
 
-Lần đầu làm Skill không nhất thiết phải có `references/`.  
-Thứ tự thường gặp là **chạy thông trước, rồi khi nội dung thật sự dài mới tách ra**.
+Lần đầu làm Skill không nhất thiết phải có `references/`.
+Thứ tự thường gặp là **chạy thành công trước, rồi khi nội dung thật sự dài mới tách ra**.
 ## Hiểu lầm thường gặp
 
 ### 1. `references/` không chỉ là copy nội dung ra ngoài một chút
 
-Vai trò quan trọng hơn là giữ quy trình chính ngắn, rõ, chạy thông được trước.
+Vai trò quan trọng hơn là giữ quy trình chính ngắn, rõ, chạy thành công được trước.
 
 ### 2. Tài liệu tham chiếu không nhất thiết càng nhiều càng tốt
 

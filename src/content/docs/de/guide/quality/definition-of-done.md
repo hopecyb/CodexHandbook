@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Rolle und Schreibweise der Definition of Done; Konzepte, Beispiele und Listen wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Definition of Done
 description: Gemeinsame Fertigstellungs-Checkliste für Teams und Einzelpersonen.
 locale: de
 source_locale: zh-CN
-source_revision: f55e9f7
+source_revision: "f55e9f7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
@@ -81,10 +86,3 @@ Fertigstellungsstandards:
 ```
 
 „Definition of Done“ macht vor allem klar, bis wohin „fertig“ reicht — damit Ihre und Codex’ Einschätzung nicht auseinanderlaufen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Rolle und Schreibweise der Definition of Done; Konzepte, Beispiele und Listen wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26

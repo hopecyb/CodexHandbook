@@ -5,13 +5,13 @@ legacyVerification:
   basis: "O OpenAI Help *Skills in ChatGPT* confirma que Skill é um workflow reutilizável e compartilhável; o runtime atual do Codex também faz matching por nome e descrição. Esta página trata sobretudo de princípios de seleção, sem depender de UI volátil."
   checkedAt: "2026-07-26"
 title: Quando usar Skills
-description: Decidir se uma Tarefa deve virar Skill e como dividir o trabalho com comandos de barra e MCP.
+description: Decidir se uma tarefa deve virar Skill e como dividir o trabalho com comandos de barra e MCP.
 locale: pt
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: "5e688f4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Quem começa com Skill costuma perguntar: isso realmente vale a pena virar um Skill dedicado?
@@ -22,13 +22,13 @@ Se tudo virar Skill, o sistema fica pesado; se o que deveria consolidar-se não 
 ## Adequado para encapsular em Skill
 
 - O mesmo fluxo já foi repetido manualmente pela terceira vez
-- Precisa de checklist detalhado, sem ocupar o Contexto inteiro toda vez
+- Precisa de checklist detalhado, sem ocupar o contexto inteiro toda vez
 - Quer que o modelo decida sozinho quando ativar, pelo `description`
 - A equipe precisa de workflows compartilhados e versionados
 
 ## Condições que justificam um Skill
 
-Se uma Tarefa cumprir as duas condições abaixo, vale considerar Skill:
+Se uma tarefa cumprir as duas condições abaixo, vale considerar Skill:
 
 - Você vai fazer de novo no futuro
 - Quer que a próxima execução seja o mais consistente possível
@@ -44,16 +44,16 @@ Não são tarefas complexas, mas se prestam bem à reutilização.
 
 ## Menos adequado
 
-- Tarefas únicas, que nunca se repetiram
+- tarefas únicas, que nunca se repetiram
 - Comandos fixos muito curtos que você lembra (considere comando de barra)
 - Precisa de estado externo em tempo real que muda rápido demais (considere MCP)
 
 ## Equívocos comuns
 
-### 1. Se a Tarefa é importante, deve virar Skill
+### 1. Se a tarefa é importante, deve virar Skill
 
-Importante ≠ adequado para reutilizar.  
-Se for uma Tarefa especial e única, virar Skill pode só aumentar manutenção.
+Importante ≠ adequado para reutilizar.
+Se for uma tarefa especial e única, virar Skill pode só aumentar manutenção.
 
 ### 2. Quanto mais Skills, melhor
 

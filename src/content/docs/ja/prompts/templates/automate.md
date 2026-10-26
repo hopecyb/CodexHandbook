@@ -8,10 +8,10 @@ title: 自動化テンプレート
 description: 反復タスクと再利用可能なフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: "2aff2e7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -31,7 +31,7 @@ reviewed_at: 2026-08-26
 入力：【データソース、設定ファイル】
 制約：
 - 失敗時は明確な終了コードとログの場所
-- 鍵をハードコードしない。環境変数を使う
+- シークレットをハードコードしない。環境変数を使う
 - dry-run モードを提供
 受け入れ：
 - 【サンプル入力】で期待どおりの出力

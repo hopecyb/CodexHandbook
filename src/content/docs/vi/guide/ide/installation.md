@@ -1,13 +1,18 @@
 ---
-title: Cài đặt và bật tích hợp IDE
-description: Cách mở Codex đúng cách trong các trình soạn thảo thuộc họ VS Code, Xcode và IDE JetBrains.
-locale: vi
-source_locale: zh-CN
-source_revision: 85e1691
-translation_status: draft
-translated_at: 2026-09-20
+title: "Cài đặt và bật tích hợp IDE"
+description: "Cách mở Codex đúng cách trong các trình soạn thảo thuộc họ VS Code, Xcode và IDE JetBrains."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "85e1691"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 20
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Có hai loại điểm truy cập Codex trong IDE và không thể dùng lẫn cách cài đặt của chúng:

@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud (version dependent)"
+  basis: "Reviewed against official OpenAI image generation and editing materials for use cases, prompt guidance, and conservative \"draft first, formal assets need review\" conclusion."
+  checkedAt: "2026-07-26"
 title: Image generation
 description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: ea275fa
+source_revision: 'ea275fa'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+sidebar:
+  order: 60
 ---
 
 Codex can invoke **image generation** in some scenarios: illustration drafts, icon sketches, UI concept art, diagrams. Treat output as **artifacts to verify**—not production brand assets ready to ship.
@@ -45,7 +52,7 @@ Not a substitute for:
 
 ## Recommended workflow
 
-1. State purpose, aspect ratio, style keywords (avoid piled trademark style names)
+1. State purpose, aspect ratio, style keywords (avoid stacking style references that infringe others’ rights)
 2. Request output format (PNG/SVG if supported) and save path
 3. After generation, [verify artifacts](/en/guide/quality/verify-artifacts/): open file, check resolution and readability
 4. Design or legal review before external publication
@@ -104,10 +111,3 @@ Closer to exploration, content illustration, and concept sketching—not strict 
 - Omitting "no text" constraint → garbled captions
 
 Image generation is for direction and drafts; ship externally only after formal artifact review.
-
----
-
-**Status:** verified  
-**Applicable products:** App / Cloud (version dependent)  
-**Verification basis:** Reviewed against official OpenAI image generation and editing materials for use cases, prompt guidance, and conservative "draft first, formal assets need review" conclusion.  
-**Last verified:** 2026-07-26

@@ -1,12 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against OpenAI Developers' current public web search and source-backed research capabilities, plus this handbook's verified web search, validate sources, handle uncertainty, and version policy chapters; this page confirms only the stable research method that key conclusions trace to sources and conflicts/uncertainty are explicit."
+  checkedAt: "2026-07-26"
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs: [markdown]
 title: Research with sources
 description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
 locale: en
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: 'a6fd201'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 **Research with sources** means every key conclusion can be traced to a specific source—official docs, papers, or repo files—not just an unsupported claim. It fits tech selection, competitive comparison, literature review, and policy interpretation.
@@ -63,10 +72,3 @@ For long research, split across rounds—see [Long-running task management](/en/
 
 - [Handle uncertainty](/en/guide/quality/handle-uncertainty/)
 - [Case: Refactor docs with review](/en/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public web search and source-backed research capabilities, plus this handbook's verified web search, validate sources, handle uncertainty, and version policy chapters; this page confirms only the stable research method that key conclusions trace to sources and conflicts/uncertainty are explicit.

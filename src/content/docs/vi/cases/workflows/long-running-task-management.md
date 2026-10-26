@@ -1,15 +1,16 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo use cases công khai hiện tại về mục tiêu dài hạn và cộng tác tác vụ dài trên OpenAI Developers, cùng các chương bàn giao phục hồi, lập kế hoạch, nén và ủy thác đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp ổn định về điểm kiểm tra, bàn giao và điều kiện thoát của tác vụ dài.", "checkedAt": "2026-07-26"}
 title: Quản lý tác vụ dài
 description: Tác vụ lớn xuyên nhiều giờ hoặc nhiều phiên — điểm kiểm tra, nén, ủy thác và điều kiện thoát.
 locale: vi
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: "c2a9887"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **người phải rời**, **hướng bị trôi**, **không biết khi nào dừng**. Trang này đặt [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/) vào kịch bản vài giờ thậm chí nhiều phiên.
+Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **người dùng phải rời đi**, **hướng bị trôi**, **không biết khi nào dừng**. Trang này đặt [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/) vào kịch bản vài giờ thậm chí nhiều phiên.
 
 ## Trọng tâm trang này
 
@@ -32,7 +33,7 @@ Khi thỏa bất kỳ điều kiện nào, nên viết kế hoạch trước, đ
 
 ### 1. Đóng băng kế hoạch
 
-Xuất kế hoạch viết: phạm vi, phi mục tiêu, milestone, lệnh nghiệm thu. Người xác nhận rồi mới thực thi quy mô lớn.
+Xuất kế hoạch viết: phạm vi, những việc ngoài phạm vi, milestone, lệnh nghiệm thu. Người xác nhận rồi mới thực thi quy mô lớn.
 
 [Lập kế hoạch](/vi/guide/agent-work/planning/) · [Subagent](/vi/guide/agent-work/subagents/)
 
@@ -55,13 +56,13 @@ Mỗi khi xong milestone:
 |---|---|
 | Trần thời gian | 4h không tiến triển thì cảnh báo |
 | Trần vòng lặp | Cùng một test thất bại 3 lần thì dừng |
-| Cổng người | Trước khi sửa cấu hình production phải @ người |
+| Điểm cần con người phê duyệt | Trước khi sửa cấu hình production phải @ người |
 | Điều kiện thành công | Test xanh + PR mở |
 
 ## Lỗi thường gặp
 
 - Không có tệp PROGRESS, đổi phiên rồi làm lại
-- Tác vụ dài không đặt phi mục tiêu, Agent tiện tay «dọn cả kho»
+- Tác vụ dài không đặt những việc ngoài phạm vi, Agent tiện tay «dọn cả kho»
 - Tác vụ Cloud treo cả đêm không người phê duyệt
 
 ## Checklist nghiệm thu
@@ -69,10 +70,3 @@ Mỗi khi xong milestone:
 - [ ] Trước khi bắt đầu tác vụ dài đã có tài liệu kế hoạch
 - [ ] Ít nhất hai điểm kiểm tra có diff review được
 - [ ] Biết cách tạm dừng, phục hồi hoặc bàn giao
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases công khai hiện tại về mục tiêu dài hạn và cộng tác tác vụ dài trên OpenAI Developers, cùng các chương bàn giao phục hồi, lập kế hoạch, nén và ủy thác đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp ổn định về điểm kiểm tra, bàn giao và điều kiện thoát của tác vụ dài.  
-**Kiểm chứng gần nhất:** 2026-07-26

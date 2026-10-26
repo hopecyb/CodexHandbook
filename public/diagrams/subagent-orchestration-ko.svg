@@ -18,7 +18,7 @@
   </defs>
   <rect width="1200" height="800" rx="8" fill="#020617"/>
   <rect width="1200" height="800" rx="8" fill="url(#grid)"/>
-  <text x="44" y="48" class="h1">주 Agent가 편성하고 하위 Agent가 집중하며 증거는 주 스레드에서 인수</text>
+  <text x="44" y="48" class="h1">주 Agent가 조율하고 하위 Agent가 집중하며 주 스레드에서 증거를 검증</text>
   <text x="44" y="75" class="sub">경계가 명확한 읽기 전용 작업을 우선 병렬화합니다. 컨텍스트 격리는 파일 격리를 뜻하지 않으므로 쓰기 작업에는 별도 소유권을 지정해야 합니다.</text>
 
   <rect x="356" y="108" width="488" height="132" rx="10" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>

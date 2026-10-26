@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite gibt nur einen Überblick über Fähigkeitsmodule und die Zugehörigkeit zu autoritativen Kapiteln; interne Links, Strukturdiagramm und Modul-Zuordnung wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Fähigkeitskarte
 description: "Überblick über Prompt-, Werkzeug-, Erweiterungs-, Multi-Agent- und Governance-Module."
 locale: de
 source_locale: zh-CN
-source_revision: 1a4cd98
+source_revision: "1a4cd98"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 7
 ---
 
-Das Handbook hat viele Module — beim ersten Blick wirkt alles schnell zerstreut. Diese Seite legt die wichtigsten Fähigkeiten auf eine Karte, damit die Struktur greifbar wird.
+Das Handbuch hat viele Module — beim ersten Blick wirkt alles schnell zerstreut. Diese Seite legt die wichtigsten Fähigkeiten auf eine Karte, damit die Struktur greifbar wird.
 
 Zwei typische Stolperstellen:
 
@@ -46,7 +51,7 @@ Am Anfang zählen vor allem die ersten beiden Schichten. Aufgabe klar formuliere
 
 ### Fortgeschrittenere Fähigkeit heißt nicht „zuerst lernen“
 
-Skills, MCP, Hooks und Automatisierung sind stark — sie skalieren Effizienz und Wiederverwendung. Sie lösen selten das, woran Anfänger zuerst scheitern.
+Skills, MCP, Hooks und Automatisierung sind stark — sie steigern die Effizienz und ermöglichen Wiederverwendung in größerem Maßstab. Sie lösen selten das, woran Anfänger zuerst scheitern.
 
 Wenn Prompt, Kontext und Werkzeugwahl noch unklar sind, werden Erweiterungen leicht schief eingesetzt.
 
@@ -79,10 +84,3 @@ Du musst nicht die gesamte Site-Navigation Seite für Seite lesen. Du kannst so 
 | Lesereihenfolge | [Lernpfade](/de/guide/learning-paths/) |
 
 Gesamtkarte zur Erweiterungsauswahl: [Erweiterungs-Fähigkeitskarte](/de/skills/capability-map/). Produktvergleich: [Funktionsvergleich](/de/guide/reference/feature-comparison/). Unterschiede zwischen Einstiegen stehen auf der Vergleichsseite.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite gibt nur einen Überblick über Fähigkeitsmodule und die Zugehörigkeit zu autoritativen Kapiteln; interne Links, Strukturdiagramm und Modul-Zuordnung wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

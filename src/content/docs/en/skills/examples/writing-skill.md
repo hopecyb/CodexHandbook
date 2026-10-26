@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: cbaec37
+source_revision: 'cbaec37'
+reviewed_at: 2026-10-25
 ---
 
 This Skill turns provided sources into an article whose claims can be traced back to them, while preserving style requirements, evidence, and unresolved points. It suits source-backed writing and factual review; a single typo fix does not need the full workflow.
@@ -44,7 +45,7 @@ The materials reuse the fictional tool “拾页” from the [source-backed arti
 
 ## Install and call it for the first time
 
-Put the complete directory at `.agents/skills/source-backed-writer/` in your practice project, with `SKILL.md` at the first level. If a Skill with that name exists, compare before overwriting it. See [using a Skill](/en/skills/use-a-skill/) for discovery; after confirming it is selectable in your client, invoke it explicitly:
+Put the complete directory at `.agents/skills/source-backed-writer/` in your practice project, with `SKILL.md` at the first level. If a Skill with that name exists, compare it first; do not overwrite it. See [using a Skill](/en/skills/use-a-skill/) for discovery; after confirming it is selectable in your client, invoke it explicitly:
 
 ```text
 $source-backed-writer Read the three sources under sources/ in this teaching
@@ -72,7 +73,7 @@ The [style sample](/downloads/skills/source-backed-writer/references/style.md) p
 
 > Counterexample: 拾页 is an all-purpose marvel that handles any format effortlessly and doubles your productivity.
 
-Revise it to: “The brief lists only Markdown and plain text. First try a small copy of your notes, then return to the source text cited by the summary.” The first sentence comes from the source; the second is author advice. Distinguish them in the claim map. Follow the user's actual tone or structure requirements when they differ.
+Revise it to: “The brief lists only Markdown and plain text. First copy a small number of notes to try, then return to the source text cited by the summary.” The first sentence comes from the source; the second is author advice. Distinguish them in the claim map. Follow the user's actual tone or structure requirements when they differ.
 
 [View the reference final draft](/downloads/skills/source-backed-writer/solution/article.md) · [Claim map](/downloads/skills/source-backed-writer/solution/claim-map.csv) · [Revision diff](/downloads/skills/source-backed-writer/solution/revision.diff)
 

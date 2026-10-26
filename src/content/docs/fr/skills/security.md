@@ -3,10 +3,15 @@ title: Sécurité et versions des Skills
 description: Source d'installation, limites de permission, mise à niveau et rollback pour gouverner les Skills d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: 'a3c81ed'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 'OpenAI Help « Skills in ChatGPT » : instructions, fichiers, code — l''utilisateur doit revoir source et risque ; gouvernance de cette page alignée.'
+  checkedAt: '2026-07-26'
 ---
 
 Un Skill n'est pas qu'un modèle de Prompt de plus.
@@ -51,7 +56,7 @@ Bases : [Vue d'ensemble](/fr/skills/overview/) · [Premier Skill](/fr/skills/cre
 2. que fera Codex en plus ?
 3. comprenez-vous `SKILL.md` et les scripts ?
 
-Deux réponses vides sur trois → pas dans le projet formel.
+Si vous ne pouvez pas répondre à deux de ces trois questions, n’intégrez pas directement le Skill à un projet réel.
 
 ## Principes d'installation
 
@@ -68,7 +73,7 @@ Il influence workflow, outils, exécution de scripts.
 
 ### 2. Skill populaire = OK en prod
 
-Adaptation à votre dépôt, permissions et règles d'équipe.
+Le fait qu’un Skill fonctionne ailleurs ne garantit pas qu’il convienne à votre dépôt, à vos limites d’autorisation ou aux règles de votre équipe.
 
 ### 3. Mise à jour Skill = mise à jour doc
 
@@ -114,9 +119,3 @@ Skill partagé long terme :
 
 ## Sources
 - OpenAI Codex Skills — sécurité
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** OpenAI Help « Skills in ChatGPT » : instructions, fichiers, code — l'utilisateur doit revoir source et risque ; gouvernance de cette page alignée.

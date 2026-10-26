@@ -3,10 +3,16 @@ title: Testgetriebene Arbeit
 description: Zuerst fehlschlagende Tests definieren oder ergänzen, dann die Implementierung treiben — damit Codex-Änderungen objektiv abnehmbar sind.
 locale: de
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI / IDE"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Tests ausführen, Definition of Done, Bug-Fix mit Überprüfung und Befehlsregeln. Der Inhalt fokussiert die stabile Testmethode „zuerst fehlschlagen
+    lassen, dann mit minimaler Implementierung grün machen“.
+  checkedAt: '2026-07-26'
 ---
 
 **Testgetriebene Arbeit** (TDD oder „Tests zuerst“) lässt Tests zuerst fehlschlagen und bringt sie dann mit minimaler Implementierung zum Bestehen. Geeignet für Codebasen mit vorhandener Testinfrastruktur und eng verwandt mit Szenarien wie [Bug-Fix mit Überprüfung](/de/cases/use-cases/software-development/fix-a-bug-with-verification/).
@@ -15,7 +21,7 @@ reviewed_at: 2026-08-26
 
 - Wann «zuerst Tests schreiben/ausführen» verlangt werden soll
 - Wie man Codex daran hindert, Testschritte zu überspringen
-- Rückzugstrategie bei Testfehlschlägen
+- Rücknahmestrategie bei Testfehlschlägen
 
 ## Für wen geeignet
 
@@ -55,7 +61,7 @@ Kombinieren mit [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnos
 - Fertig melden, ohne Tests gelaufen zu haben
 - Tests anpassen, damit eine falsche Implementierung besteht
 - Nur einen Test laufen lassen und «alles grün» behaupten
-- Bei langsamen E2E-Suites immer Volläufe — `-t` oder Dateifilter nutzen
+- Bei langsamen E2E-Suites immer vollständige Testläufe — `-t` oder Dateifilter nutzen
 
 ## Sicherheitsgrenzen
 
@@ -66,17 +72,10 @@ Kombinieren mit [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnos
 
 - [ ] Evidenz für Fehlschlag→Bestehen (Logs oder CI)
 - [ ] Vollsuite oder vereinbarter Umfang bestanden
-- [ ] Diff enthält keine unrelated Testlöschungen
+- [ ] Diff enthält keine sachfremden Testlöschungen
 - [ ] Konsistent mit [Done definieren](/de/prompts/define-done/)
 
 ## Verwandte Kapitel
 
 - [Tests ausführen](/de/guide/quality/run-tests/)
 - [Fall: Bug-Fix mit Überprüfung](/de/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** CLI / IDE  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Tests ausführen, Definition of Done, Bug-Fix mit Überprüfung und Befehlsregeln. Der Inhalt fokussiert die stabile Testmethode „zuerst fehlschlagen lassen, dann mit minimaler Implementierung grün machen“.  
-**Zuletzt geprüft:** 2026-07-26

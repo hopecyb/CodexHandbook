@@ -5,10 +5,15 @@ sidebar:
   order: 2
 locale: ja
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の ChatGPT デスクトップ App、Codex CLI、IDE、Cloud の公式説明と照合済みです。本ページは作業場所と操作方法を基準に選択肢を示し、VS Code 互換拡張と Xcode / JetBrains の各統合を区別しています。
+  checkedAt: '2026-08-26'
 ---
 
 初めて Codex の入口を選ぶとき、何十項目もの機能を比較する必要はありません。まず、**今回の作業は主にどこで行うか**を考えてください。
@@ -93,13 +98,3 @@ CLI を優先し、インストール、テスト、フォーマットのコマ�
 5. 権限要求を拒否または縮小する方法を理解しているか確認する。
 
 完全な比較は [機能比較](/ja/guide/reference/feature-comparison/) を、安全境界は [権限とサンドボックス](/ja/guide/permissions-and-sandbox/) を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** App / CLI / IDE / Cloud
-
-**検証根拠：** 現在の ChatGPT デスクトップ App、Codex CLI、IDE、Cloud の公式説明と照合済みです。本ページは作業場所と操作方法を基準に選択肢を示し、VS Code 互換拡張と Xcode / JetBrains の各統合を区別しています。
-
-**最終検証：** 2026-08-26

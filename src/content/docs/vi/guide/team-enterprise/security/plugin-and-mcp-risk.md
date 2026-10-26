@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / Cloud"
+  basis: "Tài liệu plugin Help Center OpenAI vẫn nhấn mạnh năng lực app/plugin bị ràng buộc bởi truy cập theo vai trò, kiểm soát hành động, xác nhận, ranh giới domain/nguồn và quyền nguồn bên dưới; map ở đây thành góc nhìn rủi ro thống nhất Plugin/MCP với chỉ đọc trước, ghim phiên bản, người sở hữu và danh sách phê duyệt."
+  checkedAt: "2026-07-26"
 title: Rủi ro Plugin và MCP
 description: "Mở rộng truy cập được gì, đội phê duyệt và giám sát thế nào — góc nhìn rủi ro thống nhất cho Skills, Plugin và MCP."
 locale: vi
 source_locale: zh-CN
-source_revision: bf027ad
+source_revision: "bf027ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -34,9 +39,9 @@ Dù gọi là Plugin hay MCP, hãy hỏi:
 |---|---|---|
 | Đọc dữ liệu | MCP đọc DB khách hàng | Tài khoản chỉ đọc, quyền theo hàng |
 | Ghi dữ liệu | Tự đóng ticket, đổi cấu hình | Phê duyệt của người, xác nhận kép |
-| Mạng | Outbound tùy ý | Danh sách cho phép egress |
-| Chứng chỉ | Token OAuth trên đĩa | Quản lý secrets, token ngắn hạn |
-| Chuỗi cung ứng | Can thiệp cập nhật máy chủ bên thứ ba | Ghim phiên bản, khóa hash |
+| Mạng | Outbound tùy ý | Danh sách đích kết nối ra ngoài được phép |
+| Thông tin xác thực | Token OAuth trên đĩa | Quản lý secrets, token ngắn hạn |
+| Chuỗi cung ứng | Bản cập nhật máy chủ bên thứ ba bị chèn mã độc | Ghim phiên bản, khóa hash |
 
 ## Quy trình phê duyệt đội (khuyến nghị)
 
@@ -76,7 +81,7 @@ Chỉ đọc thường nghĩa là:
 
 - Thí điểm dễ hơn
 - Chứng minh giá trị dễ hơn
-- Bán kính nổ nhỏ hơn khi lỗi
+- Thiệt hại thấp hơn khi xảy ra lỗi
 
 ### 3. Cài xong rồi quên?
 
@@ -84,7 +89,7 @@ Dù tính năng tiện vẫn cần:
 
 - Nó truy cập dữ liệu nào
 - Có ghi ngược không
-- Chứng chỉ quản lý thế nào
+- Thông tin xác thực quản lý thế nào
 
 Với mở rộng ngoài: quyền và ranh giới trước sức mạnh tính năng.
 
@@ -96,9 +101,3 @@ Với mở rộng ngoài: quyền và ranh giới trước sức mạnh tính n�
 
 ## Nguồn tham chiếu
 - [Gỡ lỗi MCP](/vi/skills/mcp/debugging-mcp/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App / Cloud  
-**Cơ sở kiểm chứng:** Tài liệu plugin Help Center OpenAI vẫn nhấn mạnh năng lực app/plugin bị ràng buộc bởi truy cập theo vai trò, kiểm soát hành động, xác nhận, ranh giới domain/nguồn và quyền nguồn bên dưới; map ở đây thành góc nhìn rủi ro thống nhất Plugin/MCP với chỉ đọc trước, ghim phiên bản, người sở hữu và danh sách phê duyệt.  
-**Kiểm chứng gần nhất:** 2026-07-26

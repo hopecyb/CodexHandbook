@@ -1,12 +1,19 @@
 ---
+sidebar:
+  order: 60
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "OpenAI Help Center CLI getting-started material still distinguishes approval modes for read/write, command execution, and sandbox/network boundaries; this page stays conceptual about interactive vs unattended risk without fixing button labels or mode names as facts."
+  checkedAt: "2026-07-26"
 title: Approvals and sandbox
 description: CLI approval policy for shell, disk, and network—and how sandbox limits Agent behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 35afd39
+source_revision: '35afd39'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 In CLI, Agents can **read files, write files, run shell, and possibly use the network**—approvals and sandbox are the safety valve between you and automation. Misconfiguration means constant prompts in interactive use—or runaway risk in unattended CI.
@@ -108,9 +115,3 @@ Starting conservative on CLI approvals and sandbox is usually steadier. Widen on
 
 ## References
 - OpenAI Codex CLI security and sandbox docs
----
-
-**Status:** verified  
-**Applicable products:** CLI  
-**Verification basis:** OpenAI Help Center CLI getting-started material still distinguishes approval modes for read/write, command execution, and sandbox/network boundaries; this page stays conceptual about interactive vs unattended risk without fixing button labels or mode names as facts.  
-**Last verified:** 2026-07-26

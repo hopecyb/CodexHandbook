@@ -3,12 +3,16 @@ title: Gestion des tâches longues
 description: Grandes tâches sur plusieurs heures ou sessions — points de contrôle, compression, délégation et conditions de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: "c2a9887"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur les objectifs à long terme et la collaboration sur tâches longues, ainsi que les chapitres vérifiés sur le transfert/reprise, la planification, la compression et la délégation ; cette page ne couvre que les méthodes stables pour les points de contrôle, le transfert et les conditions de sortie des tâches longues.
+  checkedAt: '2026-07-26'
 ---
-
 Les tâches longues posent souvent les mêmes problèmes : **contexte saturé**, **personne absente**, **direction qui dérive**, **moment d'arrêt flou**. Cette page applique [exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/) aux scénarios de plusieurs heures ou de plusieurs sessions.
 
 ## Ce que couvre cette page
@@ -55,7 +59,7 @@ Après chaque jalon :
 |---|---|
 | Limite de temps | Alerte si aucun progrès en 4 h |
 | Limite d'itérations | Arrêt après 3 échecs sur le même test |
-| Porte humaine | Doit @ quelqu'un avant de modifier la config production |
+| Validation humaine | Mentionner une personne avec @ avant de modifier la configuration de production |
 | Critères de succès | Tests au vert + PR ouverte |
 
 ## Erreurs courantes
@@ -69,10 +73,3 @@ Après chaque jalon :
 - [ ] Document de plan existant avant le début de la tâche longue
 - [ ] Au moins deux points de contrôle avec des diffs vérifiables
 - [ ] Savoir comment mettre en pause, reprendre ou transférer
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur les objectifs à long terme et la collaboration sur tâches longues, ainsi que les chapitres vérifiés sur le transfert/reprise, la planification, la compression et la délégation ; cette page ne couvre que les méthodes stables pour les points de contrôle, le transfert et les conditions de sortie des tâches longues.

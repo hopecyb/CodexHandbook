@@ -1,20 +1,21 @@
 ---
-title: "Modes d’approbation humaine"
-description: "Distinguez l’autorisation de la tâche de l’approbation d’un outil ; préparez le résultat à examiner avant de suspendre une action précise nécessitant une autorisation."
+title: Modes d’approbation humaine
+description: Distinguez l’autorisation de la tâche de l’approbation d’un outil ; préparez le résultat à examiner avant de suspendre une action précise nécessitant une autorisation.
 contentType: guide
 editorialStatus: review
 verification:
   kind: source-checked
-  checkedAt: "2026-09-18"
-  summary: "Les rôles distincts du bac à sable et des approbations ont été vérifiés. Les modes de collaboration ci-dessous sont des recommandations du manuel, pas des règles uniformes de dialogue pour tous les clients."
+  checkedAt: '2026-09-18'
+  summary: Les rôles distincts du bac à sable et des approbations ont été vérifiés. Les modes de collaboration ci-dessous sont des recommandations du manuel, pas des règles uniformes de dialogue pour tous les clients.
   evidence:
-    - label: "Guide officiel sur le bac à sable et les approbations"
+    - label: Guide officiel sur le bac à sable et les approbations
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: fr
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: "f60dbb5"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 L’approbation doit correspondre à une action précise et à ses effets. L’autorisation de la tâche décrit ce que l’utilisateur veut obtenir ; l’approbation de l’outil détermine si une action peut être exécutée dans l’environnement actuel. Écrire un fichier, lancer une commande ou accéder au réseau n’exige pas systématiquement une nouvelle question. Le comportement dépend du périmètre autorisé, des politiques d’outils et du bac à sable. Voir le [guide officiel](https://learn.chatgpt.com/docs/agent-approvals-security).
 

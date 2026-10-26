@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Gegen die im Handbuch bereits geprüften Kapitel Prompt-Grundlagen, Ergebnis prüfen, Rückgängig/Wiederherstellen und Übungsprojekt abgeglichen; der Inhalt beschränkt sich auf die stabile Übungsmethode „erste Aufgabe klein, prüfbar, rücknehmbar“."
+  checkedAt: "2026-07-26"
 title: Erste Aufgabe ausführen
 description: "Mit klaren Prompts eine kleine Änderung abschließen."
 locale: de
 source_locale: zh-CN
-source_revision: f203611
+source_revision: "f203611"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 80
 ---
@@ -55,7 +60,7 @@ Kein festes Template — nur die Teile, die sonst leicht unklar bleiben, klar ge
 
 Beim ersten Mal zählt der komplette Kreislauf — nicht, alles auf einmal groß zu machen.
 
-### 2. Prompt geschrieben — danach dem Modell freigeben
+### 2. Prompt geschrieben — danach dem Modell freie Hand lassen
 
 In der ersten Aufgabe besonders auf drei Dinge achten:
 
@@ -73,7 +78,7 @@ Zur ersten Aufgabe gehört auch:
 
 ## Während der Ausführung
 
-1. Kurzen Plan verlangen (oder selbst einfordern)
+1. Codex einen kurzen Plan vorstellen lassen oder ausdrücklich darum bitten
 2. Beim Freigeben von Dateischreiben den Pfad prüfen
 3. Danach zu [Ergebnis prüfen](/de/guide/getting-started/review-the-result/)
 
@@ -114,10 +119,3 @@ Oder:
 ```
 
 Prompt-Prinzipien: [Prompt-Grundlagen](/de/prompts/basics/).
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Prompt-Grundlagen, Ergebnis prüfen, Rückgängig/Wiederherstellen und Übungsprojekt abgeglichen; der Inhalt beschränkt sich auf die stabile Übungsmethode „erste Aufgabe klein, prüfbar, rücknehmbar“.  
-**Zuletzt überprüft:** 2026-07-26

@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: 'fc91872'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Save the error first. Identify which layer failed, then change just one variable and rerun. This page demonstrates that process with five fixed inputs. The author deliberately created the failures; the logs come from actual command-line runs, not customer incidents.

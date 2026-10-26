@@ -1,6 +1,6 @@
 <svg lang="vi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
   <title id="title">Quy trình sửa Bug có xác minh</title>
-  <desc id="desc">Trước hết chạy kiểm thử để tái hiện ổn định trạng thái đỏ và lưu bằng chứng thất bại; sau đó định vị nguyên nhân gốc, sửa tối thiểu, chạy kiểm thử liên quan đến trạng thái xanh, rồi chạy hồi quy đầy đủ và rà soát diff. Thất bại ở bước nào thì quay lại bước tương ứng.</desc>
+  <desc id="desc">Trước hết chạy kiểm thử để tái hiện ổn định trạng thái đỏ và lưu bằng chứng thất bại; sau đó định vị nguyên nhân gốc, sửa tối thiểu, chạy các kiểm thử liên quan cho đến khi đạt, rồi chạy hồi quy đầy đủ và rà soát diff. Thất bại ở bước nào thì quay lại bước tương ứng.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24.6px; font-weight: 700; }
@@ -34,14 +34,14 @@
   <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · thất bại như dự kiến</text>
 
   <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="300" y="235" text-anchor="middle" class="label">2. Định vị nguyên nhân gốc</text>
-  <text x="300" y="261" text-anchor="middle" class="note">Đọc phần triển khai và kiểm thử</text>
+  <text x="300" y="235" text-anchor="middle" class="label">2. Tìm căn nguyên</text>
+  <text x="300" y="261" text-anchor="middle" class="note">Đọc mã và kiểm thử</text>
   <text x="300" y="283" text-anchor="middle" class="note">Loại trừ giả thuyết lân cận</text>
   <text x="300" y="304" text-anchor="middle" class="tiny">Giải thích trước, chưa sửa mã</text>
 
   <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="488" y="235" text-anchor="middle" class="label">3. Sửa tối thiểu</text>
-  <text x="488" y="261" text-anchor="middle" class="note">Chỉ sửa đường dẫn nguyên nhân gốc</text>
+  <text x="488" y="261" text-anchor="middle" class="note">Chỉ sửa phần gây lỗi gốc</text>
   <text x="488" y="283" text-anchor="middle" class="note">Giữ hành vi công khai</text>
   <text x="488" y="304" text-anchor="middle" class="tiny">Không tiện tay tái cấu trúc</text>
 
@@ -62,6 +62,6 @@
   <text x="1021" y="275" text-anchor="middle" class="note">Đủ bằng chứng</text>
 
   <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
-  <text x="550" y="504" text-anchor="middle" class="note">Chuỗi bằng chứng: lệnh và assertion thất bại → giải thích nguyên nhân gốc → diff tối thiểu → kiểm thử liên quan vượt qua → hồi quy đầy đủ vượt qua → con người rà soát phạm vi</text>
+  <text x="550" y="504" text-anchor="middle" class="note">Bằng chứng: lệnh/assertion lỗi → giải thích lỗi gốc → diff tối thiểu → đạt kiểm thử liên quan → đạt toàn bộ hồi quy → người rà soát phạm vi</text>
   <text x="550" y="526" text-anchor="middle" class="tiny">Nếu kiểm thử liên quan thất bại, quay lại sửa tối thiểu; nếu hồi quy đầy đủ hoặc rà soát diff thất bại, quay lại phân tích nguyên nhân gốc.</text>
 </svg>

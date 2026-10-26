@@ -31,9 +31,10 @@ next:
   label: Conserver les consignes réutilisables
 locale: fr
 source_locale: zh-CN
-source_revision: '7189374'
-translation_status: draft
+source_revision: "7189374"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Résumez un article en huit diapositives et livrez un PPTX dont les textes restent modifiables, des aperçus et des notes orales. Conservez limites et contradictions des sources, sans inventer chiffres ou graphiques pour remplir les pages.

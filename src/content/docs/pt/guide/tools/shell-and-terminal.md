@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só explica que a execução no terminal tem mais capacidade de ação e risco do que a edição de arquivos, e enfatiza compreender o comando antes da aprovação, confirmar escopo de escrita, rede e forma de recuperação; os princípios foram cruzados com capítulos de permissões, Verificação e ferramentas do site."
+  checkedAt: "2026-07-26"
 title: Shell e terminal
 description: Capacidades e riscos da execução de comandos.
 locale: pt
 source_locale: zh-CN
-source_revision: 1438fc7
+source_revision: "1438fc7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -15,7 +20,7 @@ O terminal é uma das formas mais diretas de o Codex executar ações — por is
 
 ## Porque é poderoso e perigoso
 
-As Ferramentas de ficheiros tratam sobretudo texto; o terminal opera diretamente o sistema e o ambiente de execução.
+As ferramentas de arquivos tratam sobretudo texto; o terminal opera diretamente o sistema e o ambiente de execução.
 
 Uma vez no terminal, as ações comuns deixam de ser só leitura e podem passar a:
 
@@ -30,7 +35,7 @@ Antes de usar, esclareça o que vai alterar.
 
 O terminal é poderoso e perigoso. Princípios:
 
-- Antes da Aprovação, compreenda o comando
+- Antes da aprovação, compreenda o comando
 - Proíba `rm -rf`, push forçado, alterar configuração ssh, etc., salvo se compreender de todo e for necessário
 - Meta os comandos de Verificação nos critérios de aceitação
 
@@ -43,7 +48,7 @@ Não «dá só sugestões» — executa ações de verdade.
 Por exemplo, pode:
 
 - Instalar dependências
-- Apagar ficheiros
+- Apagar arquivos
 - Correr testes
 - Reescrever configuração
 - Fazer push de código
@@ -56,7 +61,7 @@ Estas coisas encaixam no terminal:
 
 - Correr testes
 - Correr build
-- Ver o estado dos ficheiros
+- Ver o estado dos arquivos
 - Executar scripts já existentes no projeto
 
 Se só quiser:
@@ -74,15 +79,15 @@ O terminal pode não ser a primeira escolha.
 No início não precisa de saber escrever muitos comandos, mas pelo menos deve conseguir perceber:
 
 - O que este comando pretende fazer aproximadamente
-- Se altera ficheiros ou o sistema
-- Se está mesmo relacionado com a Tarefa atual
+- Se altera arquivos ou o sistema
+- Se está mesmo relacionado com a tarefa atual
 
 ### 2. Comando de teste = sempre seguro?
 
-Também não.  
+Também não.
 A maioria dos comandos de teste tem risco baixo, mas ainda veja:
 
-- Se escreve muitos ficheiros
+- Se escreve muitos arquivos
 - Se liga à rede
 - Se chama scripts que não conhece
 
@@ -103,10 +108,3 @@ Antes de correr um comando, explique o propósito, se escreve ficheiros, se liga
 ```
 
 Antes de correr, confirme o que este comando vai alterar.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica que a execução no terminal tem mais capacidade de ação e risco do que a edição de ficheiros, e enfatiza compreender o comando antes da Aprovação, confirmar âmbito de escrita, rede e forma de recuperação; os princípios foram cruzados com capítulos de Permissões, Verificação e Ferramentas do site.  
-**Última verificação:** 2026-07-26

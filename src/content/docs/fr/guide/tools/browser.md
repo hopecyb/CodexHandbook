@@ -1,15 +1,22 @@
 ---
 title: Outil navigateur
-description: Laisser Codex ouvrir des pages, inspecter l'état de l'interface et Vérifier le comportement frontend — capacités et limites.
+description: Laisser Codex ouvrir des pages, inspecter l'état de l'interface et vérifier le comportement frontend — capacités et limites.
 locale: fr
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / Codex (selon version et permission)
+  basis: Le centre d'aide OpenAI documente actuellement le navigateur intégré dans l'App de bureau — ouvrir des pages dans Work ou Codex, changer d'onglets, télécharger des fichiers, mode annotation, approbation par site. Cette page se concentre sur les cas d'usage, la distinction recherche/Computer Use et les limites de sécurité.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 40
 ---
 
-L'**outil navigateur** permet à l'Agent d'accéder à de vraies pages dans un environnement contrôlé : lire le DOM, capturer des captures d'écran, parfois effectuer des interactions simples. Bon pour l'acceptation frontend, vérification de liens doc et comparaison de design — pas un substitut aux audits de sécurité ou à l'admin production occasionnelle.
+L'**outil navigateur** permet à l'Agent d'accéder à de vraies pages dans un environnement contrôlé : lire le DOM, faire des captures d'écran, parfois effectuer des interactions simples. Il convient à la validation du front-end, à la vérification de liens documentaires et à la comparaison avec une maquette. Il ne remplace pas un audit de sécurité et ne doit pas servir à manipuler sans précaution une interface d’administration en production.
 
 Il diffère de la recherche : la recherche trouve de l'information ; l'outil navigateur ouvre réellement la page.
 
@@ -34,7 +41,7 @@ La revue de code ou le texte seul ne suffisent souvent pas — il faut la page o
 | Bon cas | Mauvais cas |
 |---|---|
 | Ouvrir des pages serveur de dev local pour la mise en page | Crawler en masse des sites restreints par les CGU |
-| Vérifier que les liens doc publics ne sont pas en 404 | Auto-connexion sur systèmes non autorisés |
+| vérifier que les liens doc publics ne sont pas en 404 | Auto-connexion sur systèmes non autorisés |
 | Comparer page statique à l'implémentation | Remplacer les frameworks de test E2E complets |
 | Lire le texte visible de la page pour déboguer | Sites avec CAPTCHA lourd |
 
@@ -75,19 +82,19 @@ Si votre question est :
 - « Qu'est-ce qui est visible sur la page ? »
 - « Quel retour après cette interaction ? »
 
-L'outil navigateur bat généralement l'analyse texte pure.
+L’outil navigateur convient généralement mieux qu’une analyse de texte seule.
 
 ## Flux de travail recommandé
 
 1. **Frontend local** : lancer `npm run dev`, puis fournir `http://localhost:PORT/chemin`
-2. **Tâche spécifique** : « Vérifier le débordement du formulaire de connexion à 375px » — pas « regarder le site »
-3. **Limites d'état** : pas de réseau externe, pas de soumission de formulaires en production
-4. **Acceptation** : comparer avec [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/) et captures d'écran
+2. **tâche spécifique** : « vérifier le débordement du formulaire de connexion à 375px » — pas « regarder le site »
+3. **Limites explicites** : pas de réseau externe, pas de soumission de formulaires en production
+4. **Acceptation** : comparer avec [vérifier les artefacts](/fr/guide/quality/verify-artifacts/) et captures d'écran
 
-## Exemple de Prompt
+## Exemple de prompt
 
 ```text
-Visiter uniquement http://localhost:4321/guide/foundations/local-vs-cloud/ et vérifier la mise en page above-the-fold et l'apparence de l'image hero.
+Visiter uniquement http://localhost:4321/guide/foundations/local-vs-cloud/ et vérifier la mise en page visible sans défilement et l’image d’en-tête.
 Ne pas accéder à l'internet public ni soumettre de formulaires.
 Si vous trouvez des problèmes, fournir preuves par capture et suggestions de correction.
 ```
@@ -95,11 +102,11 @@ Si vous trouvez des problèmes, fournir preuves par capture et suggestions de co
 ## Limites de sécurité
 
 - Hypothèse par défaut : le navigateur peut atteindre **tout ce que votre machine/environnement peut** — y compris l'admin interne
-- Déclarer dans la Tâche : `localhost only` ou une liste blanche de domaines
-- Ne pas exécuter des Tâches de dépôts non fiables dans un profil navigateur connecté à des comptes personnels
+- Déclarer dans la tâche : `localhost uniquement` ou une liste blanche de domaines
+- Ne pas exécuter des tâches de dépôts non fiables dans un profil navigateur connecté à des comptes personnels
 - La politique navigateur Cloud suit [Environnements Cloud](/fr/guide/web-and-cloud/cloud-environments/) et règles réseau
 
-Approbations : [permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/)
+approbations : [permissions et approbations](/fr/guide/foundations/permissions-and-approvals/)
 
 ## Erreurs courantes
 
@@ -109,13 +116,6 @@ Approbations : [permissions et Approbations](/fr/guide/foundations/permissions-a
 
 ## Liste de contrôle d'acceptation
 
-- [ ] Périmètre d'accès fixé dans le Prompt
+- [ ] Périmètre d'accès fixé dans le prompt
 - [ ] Problèmes visuels clés ont captures ou texte clair
-- [ ] Cohérent avec résultats unit/E2E — ou écarts connus documentés
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / Codex (selon version et permission)  
-**Base de vérification :** Le centre d'aide OpenAI documente actuellement le navigateur intégré dans l'App de bureau — ouvrir des pages dans Work ou Codex, changer d'onglets, télécharger des fichiers, mode annotation, Approbation par site. Cette page se concentre sur les cas d'usage, la distinction recherche/Computer Use et les limites de sécurité.  
-**Dernière vérification :** 2026-07-26
+- [ ] Cohérent avec résultats des tests unitaires/E2E — ou écarts connus documentés

@@ -1,10 +1,14 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  basis: "Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-25"
 title: Add a Prompt Example
 description: Submit reproducible prompts to examples/prompts with metadata and acceptance criteria.
 locale: en
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: '15dabd2'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -121,9 +125,3 @@ Teach the method—not your production environment.
 - [ ] At least one case or workflow page links to the example (optional but recommended)
 
 A good prompt example lets someone reproduce and get a similar outcome.
-
----
-
-**Status:** verified
-**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.
-**Last verified:** 2026-07-26

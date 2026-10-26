@@ -8,11 +8,12 @@ title: Choose your path
 description: Choose a reading route by role, task, or product.
 locale: en
 source_locale: zh-CN
-source_revision: 51ccd00
-translation_status: draft
+source_revision: '51ccd00'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 4
+reviewed_at: 2026-10-25
 ---
 
 You can enter by **role**, **task**, or **product**. All three routes eventually lead to the same core pages; only their starting points differ.

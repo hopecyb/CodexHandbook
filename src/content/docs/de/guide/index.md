@@ -7,14 +7,15 @@ next:
 description: "Codex kennenlernen, Client wählen, erste Aufgabe abschließen und Berechtigungen, Kontext sowie Überprüfung verstehen."
 locale: de
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: "aa277f2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
-Hier verstehst du, was Codex ist, wofür es sich eignet und wie du von der ersten Nutzung zu einem stabilen Workflow kommst.
+Hier erfährst du, was Codex und KI-Agents sind, wofür sie sich eignen und wie du von der ersten Nutzung zu sicheren, zuverlässigen Arbeitsabläufen mit überprüfbaren Ergebnissen gelangst.
 
-Beim ersten Öffnen dieses Handbooks musst du es nicht wie ein Buch von vorne bis hinten lesen. Natürlicher ist, es als Roadmap zu sehen: vom ersten Einstieg bis zum allmählichen Sich-Einspielen.
+Beim ersten Öffnen dieses Handbuchs musst du es nicht wie ein Buch von vorne bis hinten lesen. Natürlicher ist, es als Roadmap zu sehen: vom ersten Einstieg bis zum allmählichen Sich-Einspielen.
 
 Du musst nicht zuerst alle Begriffe, Produkte und Workflows kennen. Finde deine aktuelle Stufe und gehe der Reihe nach weiter.
 
@@ -44,7 +45,7 @@ Du musst nicht zuerst alle Begriffe, Produkte und Workflows kennen. Finde deine 
 
 ## Häufige Missverständnisse
 
-### 1. Ich sollte das ganze Handbook lesen, bevor ich starte
+### 1. Ich sollte das ganze Handbuch lesen, bevor ich starte
 
 Für die meisten passt dieses Tempo besser:
 

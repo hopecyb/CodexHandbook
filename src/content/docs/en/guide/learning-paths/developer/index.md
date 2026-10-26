@@ -9,7 +9,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: "2026-09-18"
-  summary: "The reference exercise was rerun: one of three tests failed at the start, all three passed after the reference fix, and both test files were identical. The path templates were self-reviewed by the author; no independent reader has completed the path yet."
+  summary: "The reference exercise was rerun: one of three tests failed at the start, all three passed after the reference fix, and both test files were identical. The path templates were self-reviewed by the author; the path has not yet undergone independent reader completion testing."
   environment: "Node.js v22.16.0 / Darwin arm64; built-in node:test, no third-party dependencies."
   evidence:
     - label: "Actual run summary"
@@ -26,9 +26,10 @@ next:
   label: "Start a bug fix with verification"
 locale: en
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: '22d8bd3'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 Use one small shopping-cart exercise to do four things: explain code, fix a bug, review the diff, and hand off evidence. You do not need to learn every client, configuration option, or multi-agent feature first.
 

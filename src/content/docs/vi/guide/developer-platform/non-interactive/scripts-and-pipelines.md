@@ -1,14 +1,19 @@
 ---
-title: Script và pipeline
+title: "Script và pipeline"
 description: "Điều phối `codex exec` trong shell, Makefile và GitHub Actions — lặp lại được, kiểm toán được."
-locale: vi
-source_locale: zh-CN
-source_revision: 07aeb4f
-translation_status: reviewed
-translated_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "07aeb4f"
+translation_status: "reviewed"
+translated_at: "2026-08-26"
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "CLI / GitHub Actions"
+  basis: "Đã đối chiếu hướng dẫn Non-interactive mode và Codex GitHub Action chính thức hiện tại, sửa `--cd` và dùng việc tách job chứa API key khỏi quyền ghi kho làm ranh giới an toàn mặc định."
+  checkedAt: "2026-08-26"
 ---
 
 Ở đây nói về cách biến Codex từ thao tác tạm thời thành bước tự động hóa mà **đội có thể chạy lại, khi lỗi thì lần ra được, người khác cũng tiếp quản được**.
@@ -63,7 +68,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 Đưa `prompts/ci/security-review.md` vào Git; thay đổi đi review.
@@ -78,7 +83,7 @@ Lần đầu tự động hóa, đừng theo đuổi «toàn diện»; hãy cố
 
 Sau đó thêm log, schema, thông báo sẽ thuận hơn nhiều.
 
-## Minh họa GitHub Actions
+## GitHub Actions: dùng Action chính thức
 
 ```yaml
 jobs:
@@ -86,24 +91,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # Ghim số phiên bản; lấy theo tài liệu cài đặt chính thức
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-Cách cài và phạm vi quyền trong ví dụ phải chỉnh theo yêu cầu bảo mật tổ chức; **không** `echo` khóa bí mật trong workflow.
+Trong GitHub Actions, ưu tiên `openai/codex-action` chính thức. Đừng đặt API key làm biến môi trường cho toàn bộ job có chạy mã của kho. Nếu bước sau cần ghi vào PR, hãy tách quyền ghi và khóa bí mật sang các job khác nhau, rồi chuyển giao qua artifact chứa bản vá.
 :::
 
 ## Quy trình khuyến nghị
@@ -147,9 +147,3 @@ Ví dụ: review PR, tóm tắt thay đổi, quét bảo mật, kiểm tra tài 
 
 ## Nguồn tham chiếu
 - Tài liệu tích hợp OpenAI Codex + GitHub
----
-
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú đối chiếu:** Nguyên tắc «đưa Prompt, script và pipeline vào Git để review» vẫn đứng vững, nhưng ví dụ phụ thuộc `codex exec`, cách cài CLI và cách nối GitHub Actions cụ thể — đều là chi tiết triển khai biến động cao; bổ sung tài liệu pipeline chính thức hiện hành rồi mới khôi phục `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26

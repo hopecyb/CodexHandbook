@@ -1,25 +1,30 @@
 ---
 title: Images et captures d'écran
-description: Fournir des captures et entrées design à Codex ; gérer les fichiers image dans les Tâches.
+description: Fournir des captures et des maquettes à Codex et gérer les fichiers image dans les tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: adc2b88
+source_revision: 'adc2b88'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Recoupement avec les matériaux officiels OpenAI entrée image et upload fichier pour upload capture, annotation, taille fichier et confidentialité ; aucune étape UI version-spécifique retenue dans le corps.
+  checkedAt: '2026-07-26'
 ---
 
 Les images permettent à l'Agent de **voir** les problèmes UI, l'intention design ou les croquis de tableau blanc. Cette page couvre l'entrée (images que vous fournissez) et les fichiers image dans le repo ; pour générer de nouvelles images voir [Génération d'images](/fr/guide/tools/image-generation/).
 
-Lors des Tâches avec captures, indiquez quoi regarder et pourquoi c'est important.
+Lors des tâches avec captures, indiquez quoi regarder et pourquoi c'est important.
 
 ## Ce que cette page couvre
 
 - Comment attacher des captures efficacement
 - Utiliser les exports design / Figma
-- Taille d'image dans le repo et le Contexte
+- Taille d'image dans le repo et le contexte
 
 ## Scénarios d'image d'entrée
 
@@ -30,7 +35,7 @@ Lors des Tâches avec captures, indiquez quoi regarder et pourquoi c'est importa
 | Tableau blanc architecture | Photo claire ou export + légende |
 | Dialogue d'erreur | Texte d'erreur complet visible — pas un coin coupé |
 
-Exploration profonde : [Prompt avec images](/fr/prompts/prompting-with-images/)
+Pour approfondir : [prompt avec images](/fr/prompts/prompting-with-images/)
 
 ## Ce que les images ajoutent réellement
 
@@ -67,7 +72,7 @@ Les captures sont des preuves — vous avez encore besoin de :
 
 ### 2. Plus grand n'est pas toujours mieux
 
-Les originaux énormes ajoutent du bruit et alourdissent le repo/Contexte.
+Les originaux énormes ajoutent du bruit et alourdissent le repo/contexte.
 
 ### 3. Image design seule ne suffit pas
 
@@ -77,7 +82,7 @@ Pour « implémenter depuis le design », spécifier aussi :
 - Contraintes de composants
 - Ce qui est fixe vs flexible
 
-## Images dans le repo
+## Images dans le dépôt
 
 | Pratique | Pourquoi |
 |---|---|
@@ -86,27 +91,27 @@ Pour « implémenter depuis le design », spécifier aussi :
 | Noms de fichiers significatifs | `login-form-mobile.png` pas `image1.png` |
 | Texte alt (dans docs) | Accessibilité |
 
-## Modèle de Prompt copier-coller
+## Modèle de prompt copier-coller
 
 ```text
 La première image est la page actuelle, la seconde le résultat souhaité.
-Focus sur la zone titre hero et l'espacement des boutons.
+Concentre-toi sur le titre du premier écran et l’espacement des boutons.
 Ne pas inférer la logique métier depuis les captures — mise en page et visuels uniquement.
 ```
 
 ## Confidentialité et sécurité
 
 - Les captures peuvent contenir données client, URLs internes, tokens — nettoyer d'abord
-- Ne pas envoyer des écrans de config avec secrets à des Tâches non fiables
-- [Contexte sensible](/fr/guide/context/sensitive-context/)
+- Ne pas envoyer des écrans de config avec secrets à des tâches non fiables
+- [contexte sensible](/fr/guide/context/sensitive-context/)
 
 ## Sources de référence
 - OpenAI Help Center : FAQ ChatGPT Image Inputs
 - OpenAI Academy : Working with files in ChatGPT
 - OpenAI API Developer Quickstart : Analyze images and files
-## Vérification
+## vérification
 
-Pour les Tâches « implémenter depuis image » :
+Pour les tâches « implémenter depuis image » :
 
 1. Comparer côte à côte l'implémentation et la référence (ou [Outil navigateur](/fr/guide/tools/browser/))
 2. Vérifier responsive et mode sombre si requis
@@ -118,11 +123,4 @@ Pour les Tâches « implémenter depuis image » :
 - Committer des originaux 4K
 - Supposer que le modèle lit les liens Figma sans export
 
-Les bonnes captures sont image claire, focus clair, attente claire — pas seulement « il y a une image ».
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / Cloud  
-**Base de vérification :** Vérifié croisé avec les matériaux officiels OpenAI entrée image et upload fichier pour upload capture, annotation, taille fichier et confidentialité ; aucune étape UI version-spécifique retenue dans le corps.  
-**Dernière vérification :** 2026-07-26
+Une bonne capture doit être lisible, montrer la zone à examiner et préciser le résultat attendu. La présence d’une image ne suffit pas.

@@ -8,10 +8,10 @@ title: 연구 템플릿
 description: 인용이 있는 조사와 비교입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: "729d4cc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -21,12 +21,12 @@ reviewed_at: 2026-08-26
 
 ```text
 연구 질문: 【한 문장】
-평가 차원: 【3–5개 나열】
+평가 항목: 【3–5개 나열】
 제약:
 - 각 결론에 출처 URL 또는 @저장소 내 경로를 붙일 것
 - 검증할 수 없는 항목은 「확인 대기」로 표시
 - 코드를 수정하지 말 것
-출력: 대비표 + 권장 + 열린 질문
+출력: 비교표 + 권장안 + 미해결 질문
 ```
 
 ## 언제 이 템플릿이 맞는가

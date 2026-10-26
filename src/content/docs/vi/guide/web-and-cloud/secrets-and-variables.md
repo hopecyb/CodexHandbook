@@ -1,13 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Secrets và biến môi trường
 description: Chọn đúng Secret chỉ dùng trong Cloud setup và biến môi trường thông thường tồn tại suốt cuộc trò chuyện.
 locale: vi
 source_locale: zh-CN
-source_revision: 78937be
-translation_status: draft
+source_revision: "78937be"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: 2026-10-26
 ---
 
 Biến môi trường và Secret trong Cloud có vòng đời khác nhau. Sự khác biệt đó quyết định chúng có thể hỗ trợ điều gì một cách an toàn, chứ không chỉ là giao diện có che giá trị hay không.

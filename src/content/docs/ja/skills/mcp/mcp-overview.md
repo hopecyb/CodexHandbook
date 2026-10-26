@@ -3,9 +3,14 @@ title: MCP 概要
 description: MCP クライアント、サーバー、ツール、認証、安全上の境界を理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 98a0626
-translation_status: draft
+source_revision: "98a0626"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT デスクトップ App / Codex CLI / IDE。ChatGPT Web は Plugin を介してリモート MCP ツールを使用
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP は、モデルが外部の機能を使おうとする要求を、構造化されたツール呼び出しに変えます。外部のドキュメント、ブラウザー、Figma、課題管理システム、社内サービスを接続する場合に適しています。

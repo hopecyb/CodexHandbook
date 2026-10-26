@@ -10,9 +10,10 @@ verification:
   summary: "Las tres categorías de tareas y las dos comparaciones son consejos editoriales de colaboración. Se comprobaron los límites de autorización y ejecución; no son modos fijos del cliente ni un experimento sobre la tasa de éxito del modelo."
 locale: es
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: '706f11b'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Pedir un plan depende de qué decisiones siguen pendientes. Un cambio con alcance claro y fácil de deshacer puede ejecutarse directamente. Si la ruta no está clara, conviene planificar primero. Detente antes de una acción concreta que requiera autorización adicional. Pedir un plan no significa esperar una respuesta del usuario después de cada paso.
@@ -88,7 +89,7 @@ Si aún comparas opciones, necesitas una decisión presupuestaria o quieres revi
 
 ```text
 En esta ronda, solo planifica. Lee la implementación existente y presenta
-dos opciones, su impacto y cómo aceptarlas. Señala las disyuntivas que de
+dos opciones, su impacto y sus criterios de aceptación. Señala las disyuntivas que de
 verdad requieren mi decisión. No cambies la implementación. Ejecuta solo
 cuando se haya elegido el enfoque.
 ```

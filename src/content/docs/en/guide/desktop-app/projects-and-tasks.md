@@ -8,8 +8,9 @@ title: Projects and tasks
 description: Manage projects and tasks in the app.
 locale: en
 source_locale: zh-CN
-source_revision: 6a1f17f
-translation_status: draft
+source_revision: '6a1f17f'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 20

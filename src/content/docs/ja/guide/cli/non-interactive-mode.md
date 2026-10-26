@@ -3,12 +3,17 @@ title: 非対話モード
 description: codex exec とスクリプトパイプライン連携——CI、定期実行、自動化パイプライン向け。
 locale: ja
 source_locale: zh-CN
-source_revision: 1f37961
+source_revision: "1f37961"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現在の公式 Non-interactive mode と照合し、`codex exec`、`--cd`、デフォルトの読み取り専用サンドボックス、進捗を `stderr`、最終回答を `stdout` に出力するパイプ動作を確認済みです。
+  checkedAt: '2026-08-26'
 ---
 
 非対話モードでは、Codex が **TTY 会話なし** でタスクを完了できます。Agent をスクリプトや CI に接続する入口です。
@@ -26,7 +31,7 @@ reviewed_at: 2026-08-26
 
 | 向く | 向かない |
 |---|---|
-| CI で固定レビュープロンプトを実行 | 多回の要件確認が必要 |
+| CI で固定レビュープロンプトを実行 | 何度も要件を確認する必要がある |
 | 夜間のドキュメントリンクチェック | 探索的リファクタリング |
 | 事前定義テンプレートからのコード生成 | 曖昧なプロダクト判断 |
 
@@ -41,10 +46,10 @@ reviewed_at: 2026-08-26
 
 現在の非対話実行の入口は `codex exec` です。CLI を更新した後も、スクリプトで使う引数を `codex exec --help` で再確認してください。
 
-## 最小限の例（示意）
+## 最小限の例（参考）
 
 ```bash
-# リポジトリルートで読み取り専用レビュー（示意。引数は公式を正とする）
+# リポジトリルートで読み取り専用レビューを一度実行する
 codex exec --cd . "main との diff からセキュリティリスクを列挙し、ファイルは変更しない"
 ```
 
@@ -68,7 +73,7 @@ codex exec --cd . "直近 10 件のコミットからリリースノートを作
 |---|---|
 | 最小権限 | 読み取り専用トークン、制限付きサンドボックス |
 | push 禁止 | CI は PR 作成または artifact アップロードのみ |
-| 固定プロンプト | PR 説明から未消毒テキストを直接連結しない（注入リスク） |
+| 固定プロンプト | PR の説明から未処理のテキストを直接連結しない（注入リスク） |
 | 監査 | ログと diff artifact を保持 |
 
 [人間承認パターン](/ja/cases/workflows/human-approval-patterns/) とロードマップ `08-developer-platform/non-interactive/` を参照。
@@ -131,12 +136,3 @@ codex exec --cd . "直近 10 件のコミットからリリースノートを作
 
 ## 参考ソース
 - OpenAI Codex CLI ドキュメント
----
-
-**状態：** verified
-
-**対象製品：** CLI
-
-**検証根拠：** 現在の公式 Non-interactive mode と照合し、`codex exec`、`--cd`、デフォルトの読み取り専用サンドボックス、進捗を `stderr`、最終回答を `stdout` に出力するパイプ動作を確認済みです。
-
-**最終検証：** 2026-08-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Der aktuelle OpenAI-Help-Center-Artikel «Using Codex with your ChatGPT plan» bestätigt weiterhin die Codex-IDE-Erweiterung und stellt sie neben CLI und Desktop-App als lokalen Client; diese Seite ist nur Kapitelnavigation und betont die stabile Arbeitsweise „aktuelle Datei, Auswahl und Diff-Überprüfung“."
+  checkedAt: "2026-07-26"
 title: IDE-Erweiterung
 description: Codex im Editor nutzen — Installation, Kontext, lokale und Cloud-Aufgaben, Überprüfung und Einstellungen.
 locale: de
 source_locale: zh-CN
-source_revision: c2fa50b
+source_revision: "c2fa50b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 12
 ---
@@ -42,10 +47,3 @@ Beim ersten Einsatz vor allem drei Dinge:
 3. Nach Änderungen musst du das Diff selbst prüfen
 
 Die IDE-Erweiterung passt zu „kleinem Umfang, ändern und gleichzeitig sehen“ — Rahmenkontrolle und Überprüfung bleiben trotzdem Pflicht.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** IDE  
-**Prüfgrundlage:** Der aktuelle OpenAI-Help-Center-Artikel «Using Codex with your ChatGPT plan» bestätigt weiterhin die Codex-IDE-Erweiterung und stellt sie neben CLI und Desktop-App als lokalen Client; diese Seite ist nur Kapitelnavigation und betont die stabile Arbeitsweise „aktuelle Datei, Auswahl und Diff-Überprüfung“.  
-**Zuletzt geprüft:** 2026-07-26

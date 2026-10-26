@@ -23,8 +23,9 @@ next:
 locale: fr
 source_locale: zh-CN
 source_revision: "e426ec4"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 ## Commencer par un exemple dont les erreurs sont connues

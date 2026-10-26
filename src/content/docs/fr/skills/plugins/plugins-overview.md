@@ -7,9 +7,10 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: fr
 source_locale: zh-CN
-source_revision: 4efe5a8
-translation_status: draft
+source_revision: '4efe5a8'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ChatGPT et Codex utilisent le même catalogue public de Plugins. Un Plugin regroupe des capacités liées dans un flux de travail repérable et installable ; il n’invente pas un nouveau protocole d’appel d’outils.
@@ -21,7 +22,7 @@ ChatGPT et Codex utilisent le même catalogue public de Plugins. Un Plugin regro
 | Composant | Rôle | Ce que la personne qui installe doit vérifier |
 |---|---|---|
 | Skills | Étapes réutilisables, références et scripts | Adéquation des instructions avec la tâche et fiabilité des scripts |
-| Connectors | Connexion à GitHub, Slack, Google Drive et d’autres outils | Portées OAuth, opérations d’écriture et étendue des données externes |
+| Connectors | Connexion à GitHub, Slack, Google Drive et d’autres outils | Portées OAuth, opérations de lecture et d’écriture, et étendue des données externes |
 | MCP servers | Définition d’outils, authentification et données structurées en retour | Provenance du serveur, liste des outils, journaux et permissions |
 | Browser extensions | Fonctions du navigateur pour un flux de travail précis | Étendue et nécessité de l’accès au navigateur |
 | Hooks | Exécution de commandes ou d’outils MCP à des étapes du cycle de vie | Examiner et approuver la définition exacte avant activation |

@@ -3,14 +3,18 @@ title: Installer l'App de bureau
 description: Installer l'App de bureau ChatGPT et y ouvrir un espace de travail Codex.
 locale: fr
 source_locale: zh-CN
-source_revision: 974842f
+source_revision: "974842f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App
+  basis: le guide de démarrage rapide officiel actuel de l'App propose des téléchargements pour macOS, Windows et Linux, puis invite les utilisateurs connectés à choisir une conversation, un projet ou un dossier. Cette page évite volontairement les positions de boutons et les noms de paquets susceptibles d'évoluer.
+  checkedAt: '2026-08-26'
 ---
-
 Dans ce manuel, « App de bureau » désigne **l'espace de travail Codex dans l'App de bureau ChatGPT actuelle**. Des versions officielles sont disponibles pour macOS, Windows et Linux.
 
 ## Installation
@@ -55,13 +59,3 @@ Déterminez si la tâche en cours en a réellement besoin. L'ouverture d'un rép
 L'App évolue rapidement. La réussite consiste à pouvoir se connecter, choisir un emplacement de travail, démarrer une tâche et examiner son résultat, et non à retrouver un bouton à des coordonnées fixes.
 
 Consultez [Installation et première utilisation](/fr/guide/desktop-app/installation-and-interface/) pour découvrir l'interface et [Dépannage de l'App de bureau](/fr/guide/desktop-app/troubleshooting/) en cas d'échec.
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** App
-
-**Base de vérification :** le guide de démarrage rapide officiel actuel de l'App propose des téléchargements pour macOS, Windows et Linux, puis invite les utilisateurs connectés à choisir une conversation, un projet ou un dossier. Cette page évite volontairement les positions de boutons et les noms de paquets susceptibles d'évoluer.
-
-**Dernière vérification :** 2026-08-26

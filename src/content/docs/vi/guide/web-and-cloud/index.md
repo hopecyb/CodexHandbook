@@ -1,13 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Tổng quan Web và Cloud
 description: Luồng tác vụ từ kết nối kho mã, môi trường tái tạo được đến rà soát và Pull Request.
 sidebar:
   order: 13
 locale: vi
 source_locale: zh-CN
-source_revision: 86fa0ac
-translation_status: draft
+source_revision: "86fa0ac"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Codex Cloud chạy tác vụ lập trình trong môi trường đám mây tách biệt. Nó phù hợp với tác vụ dài chạy nền, nhiều phương án song song và công việc bắt đầu từ GitHub, GitLab (Beta), Linear hoặc Slack. Nó không điều khiển máy của bạn từ xa và cũng không tự thấy những tệp cục bộ chưa đẩy lên kho mã.

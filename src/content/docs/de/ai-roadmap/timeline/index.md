@@ -3,9 +3,10 @@ title: Index der Ereignisse und Themen
 description: Themen der KI-Anwendungsentwicklung anhand datierter Quellenereignisse lesen, ohne Veröffentlichungen mit Konzeptursprüngen gleichzusetzen.
 locale: de
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: "847b43b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Diese Übersicht trennt überprüfbare öffentliche Ereignisse von Lernempfehlungen. **Ein Datum bezieht sich nur auf die in seiner Zeile genannte Studie, Ankündigung oder den Artikel; es kennzeichnet nicht automatisch die Entstehung eines Konzepts, seine Verbreitung in der Branche oder die Reife einer Fähigkeit.** Verschiedene Techniken lassen sich zugleich nutzen. Die zeitliche Reihenfolge ist keine vorgeschriebene Folge von Lern- oder Entwicklungsschritten.

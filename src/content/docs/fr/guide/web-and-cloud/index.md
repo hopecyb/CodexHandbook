@@ -3,12 +3,16 @@ title: Vue d'ensemble de Web et Cloud
 description: Parcourez le flux de tâches distantes, de la connexion du dépôt et d'un environnement reproductible jusqu'à la révision et à la pull request.
 locale: fr
 source_locale: zh-CN
-source_revision: 86fa0ac
+source_revision: "86fa0ac"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 13
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Codex Cloud exécute les tâches de programmation dans des environnements Cloud isolés. Il convient aux tâches longues en arrière-plan, aux tentatives parallèles et aux travaux lancés depuis GitHub, GitLab (Beta), Linear ou Slack. Il ne contrôle pas votre ordinateur à distance et ne voit pas automatiquement les fichiers locaux qui n'ont pas été poussés.
@@ -62,11 +66,3 @@ Utilisez un dépôt de test sans identifiant de production. Demandez uniquement 
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** Cloud
-
-**Dernière vérification :** 2026-08-26

@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
 ---
 
 Biến tài liệu sự kiện thành website một trang có thể mở trong trình duyệt. Sản phẩm gồm trang tĩnh trên máy và biên bản nghiệm thu. Sự kiện và địa điểm đều hư cấu; cách đăng ký chưa được quyết định.

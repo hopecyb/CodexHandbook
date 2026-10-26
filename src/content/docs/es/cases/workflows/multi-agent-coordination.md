@@ -3,19 +3,23 @@ title: Coordinación multi-Agent
 description: Exploración en paralelo, división de ejecución y fusión de resultados — cuándo dividir y cómo aceptar.
 locale: es
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Contrastado con la documentación pública actual de OpenAI Developers sobre multi-agent / subagents, y con los capítulos ya verificados de Subagents, traspaso y trabajo en paralelo. El contenido se limita al método estable «cuándo dividir, cómo aislar fronteras y cómo consolidar la aceptación a mano»; no convierte betas o entradas de UI actuales en un contrato fijo.
+  checkedAt: '2026-07-26'
 ---
-
-Multi-Agent encaja con subproblemas paralelizables y poco acoplados; no encaja con editar el mismo archivo a la vez sin coordinación humana.
+Multi-Agent encaja con subproblemas paralelizables y poco acoplados; no encaja con editar el mismo archivo a la vez sin coordinación.
 
 ## Cuándo dividir
 
 | Adecuado | No adecuado |
 |---|---|
-| Estilos front + contrato de API back en paralelo | Dos personas tocando la misma función |
+| Investigar en paralelo los estilos del frontend y el contrato de API del backend | Dos personas tocando la misma función |
 | Uno ejecuta tests y otro escribe docs | Estado mutable compartido sin bloqueo |
 | Explorar varias implementaciones | Dependencias fuertes de orden sin aclarar |
 
@@ -60,10 +64,3 @@ Distintos Agents modifican distintas ramas en distintos [git worktree](/es/guide
 
 - Tres Agents en paralelo tocando `package.json`
 - Sin paso de consolidación: no se sabe a qué conclusión hacer caso
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con la documentación pública actual de OpenAI Developers sobre multi-agent / subagents, y con los capítulos ya verificados de Subagents, traspaso y trabajo en paralelo. El contenido se limita al método estable «cuándo dividir, cómo aislar fronteras y cómo consolidar la aceptación a mano»; no convierte betas o entradas de UI actuales en un contrato fijo.

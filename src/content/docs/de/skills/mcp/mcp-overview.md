@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT-Desktop-App / Codex CLI / IDE; ChatGPT Web verwendet Remote-MCP-Werkzeuge über Plugins"
+  checkedAt: "2026-08-25"
 title: MCP im Überblick
 description: Verstehe MCP-Client, Server, Werkzeuge, Authentifizierung und Sicherheitsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 98a0626
+source_revision: "98a0626"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 MCP wandelt den Wunsch eines Modells nach einer externen Funktion in einen strukturierten Werkzeugaufruf um. Es eignet sich zur Einbindung von Drittanbieterdokumentation, Browsern, Figma, Ticketsystemen und internen Diensten.
@@ -40,7 +44,7 @@ Wichtigstes Risiko: Der Prozess erbt die lokale Ausführungsumgebung. Prüfe Bef
 
 ### Streamable HTTP
 
-Codex verbindet eine Remote-Adresse. Die aktuelle offizielle Dokumentation bestätigt Unterstützung für Bearer token, OAuth und die ChatGPT-Sitzungsauthentifizierung vertrauenswürdiger Erstanbieterserver.
+Codex verbindet sich mit einer Remote-Adresse. Die aktuelle offizielle Dokumentation bestätigt Unterstützung für Bearer token, OAuth und die ChatGPT-Sitzungsauthentifizierung vertrauenswürdiger Erstanbieterserver.
 
 Wichtigstes Risiko: Der Remote-Dienst erhält Werkzeugparameter. Prüfe TLS, Identität, Protokollierung, Datenaufbewahrung und Werkzeugberechtigungen.
 
@@ -92,11 +96,3 @@ Schreibe Tokens nicht in Prompt, Git oder statische HTTP-Header. Verwende vorzug
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT-Desktop-App / Codex CLI / IDE; ChatGPT Web verwendet Remote-MCP-Werkzeuge über Plugins
-
-**Zuletzt geprüft:** 2026-08-25

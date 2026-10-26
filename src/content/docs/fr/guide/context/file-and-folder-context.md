@@ -8,11 +8,12 @@ title: Contexte des fichiers et dossiers
 description: Indiquer les fichiers pertinents et éviter les informations sans rapport.
 locale: fr
 source_locale: zh-CN
-source_revision: "e9148a3"
-translation_status: draft
+source_revision: 'e9148a3'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
 
 Ne dites pas seulement « modifie ceci ». Indiquez aussi à Codex quels fichiers consulter et lesquels laisser de côté.

@@ -3,12 +3,17 @@ title: 初心者向け用語
 description: タスク、コンテキスト、サンドボックス、Skill などのよく使う用語を短く定義。
 locale: ja
 source_locale: zh-CN
-source_revision: a18bacf
+source_revision: "a18bacf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 6
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは初心者向け用語の導入のみを提供。サイト内リンクと用語説明を再確認済み。本文は変わりやすい製品事実に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 より完全な用語集は [用語集](/ja/guide/reference/glossary/) を参照してください。ここでは最も一般的で、読み進めに影響しやすい用語を先に挙げます。
@@ -69,7 +74,7 @@ Codex ハンドブックを初めて読むとき、つまずきやすいのは�
 
 ## グループで見る
 
-一度に覚えすぎない場合は、次のように分けられます。
+一度に多くを覚えたくない場合は、次のように分けられます。
 
 - あなたが言うこと：プロンプト
 - それが見ること：コンテキスト
@@ -89,13 +94,6 @@ Codex ハンドブックを初めて読むとき、つまずきやすいのは�
 
 まず [最初のタスク](/ja/guide/getting-started/run-your-first-task/) を完了し、後からこれらの用語を見ると、理解がスムーズになります。
 
-生詞に出会ったら、ここで確認して読み進めれば十分です。
+知らない用語に出会ったら、ここで確認して読み進めれば十分です。
 
 初回は、これらの用語をヒントとして捉えてください。最初から全部覚えるより、おおよその意味を知る方が実用的です。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは初心者向け用語の導入のみを提供。サイト内リンクと用語説明を再確認済み。本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

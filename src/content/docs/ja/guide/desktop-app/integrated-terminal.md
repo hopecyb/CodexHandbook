@@ -3,12 +3,16 @@ title: 統合ターミナル
 description: 現在のプロジェクトまたは worktree でコマンドを実行し、実際の出力でタスク結果を検証します。
 locale: ja
 source_locale: zh-CN
-source_revision: 727e93e
+source_revision: "727e93e"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: "2026-08-26"
 ---
 
 ChatGPT デスクトップ App の各チャットには、現在のプロジェクトまたは worktree をスコープとするターミナルがあります。単にログを見る場所ではなく、Codex の結論を確認するための証拠ウィンドウでもあります。
@@ -36,7 +40,7 @@ pnpm run lint
 
 ## 長時間プロセスの扱い
 
-開発サーバーは継続して実行されますが、それはコマンドが停止したことを意味しません。起動後に次を確認してください。
+開発サーバーは継続して実行されますが、それはコマンドがハングしたことを意味しません。起動後に次を確認してください。
 
 - 出力にローカルアドレスが表示されているか
 - ブラウザでページを開けるか
@@ -61,11 +65,3 @@ pnpm run lint
 
 - [統合ターミナル](https://learn.chatgpt.com/docs/integrated-terminal)
 - [ローカル環境](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**最終検証：** 2026-08-26

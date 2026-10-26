@@ -5,10 +5,15 @@ sidebar:
   order: 80
 locale: de
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: "1d4b3f2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  basis: Mit der aktuellen Verzeichnisstruktur, Sidebar-Verwaltung, den Seitenstatus und dem Beitragsablauf dieses Repositorys abgeglichen. Die Seite beschreibt Pflegevorgaben des Handbuchs und hängt nicht
+    von veränderlichem UI-Verhalten eines Codex-Clients ab.
+  checkedAt: '2026-07-26'
 ---
 
 Das **Codex-Handbuch** ist eine von der Community gepflegte Dokumentationssite. Beiträge können Fehler korrigieren, Seiten ergänzen, reproduzierbare Fallbeispiele hinzufügen oder Prompt-Beispiele unter [examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples) bereitstellen.
@@ -106,9 +111,3 @@ Dein erster Beitrag muss nicht umfangreich sein. Es ist bereits wertvoll, eine S
 
 - Repository: <https://github.com/hopecyb/CodexHandbook>
 - [Kapitelübersicht](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (Planungsdokument im Repository)
-
----
-
-**Status:** verified  
-**Prüfgrundlage:** Mit der aktuellen Verzeichnisstruktur, Sidebar-Verwaltung, den Seitenstatus und dem Beitragsablauf dieses Repositorys abgeglichen. Die Seite beschreibt Pflegevorgaben des Handbuchs und hängt nicht von veränderlichem UI-Verhalten eines Codex-Clients ab.  
-**Zuletzt geprüft:** 2026-07-26

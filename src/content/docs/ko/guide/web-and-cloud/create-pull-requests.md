@@ -3,15 +3,16 @@ title: Pull Request 만들기
 description: Cloud 작업 결과를 검토와 검증이 가능하고 자동 병합되지 않는 PR로 전달합니다.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
 source_revision: "39371d4"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: "2026-10-26"
 ---
 
 Cloud 작업이 끝나면 먼저 요약과 diff를 확인하세요. 결과가 범위와 검증 기준을 충족하면 Pull Request를 만듭니다. 그렇지 않으면 같은 채팅에서 계속 수정합니다.
@@ -58,7 +59,7 @@ PR 설명에 근본 원인, 변경 요약, 테스트 명령과 결과, 위험,
 2. 실제로 무엇을 바꿨는가?
 3. 어떤 명령으로 검증했고 결과는 무엇인가?
 4. 위험, 제약 사항, 되돌리는 방법은 무엇인가?
-5. 명확히 하지 않은 일은 무엇인가?
+5. 수행하지 않았다고 명시할 일은 무엇인가?
 
 UI를 바꿨다면 실제 스크린샷을, 동작을 바꿨다면 재현 단계를, 마이그레이션이라면 호환성과 되돌리기 설명을 추가하세요.
 

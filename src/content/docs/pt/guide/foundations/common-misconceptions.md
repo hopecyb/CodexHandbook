@@ -3,12 +3,17 @@ title: Mal-entendidos comuns
 description: Esclarece equívocos de tratar o Codex como uma caixa-preta onipotente.
 locale: pt
 source_locale: zh-CN
-source_revision: 700e57b
+source_revision: "700e57b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 120
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só esclarece mal-entendidos comuns de uso; links internos, tabela comparativa e limites conceituais foram revisados, e o texto não depende de fatos de produto voláteis.
+  checkedAt: '2026-07-26'
 ---
 
 Muita gente começa mal com o Codex não por não saber operar — e sim por imaginar o produto de forma torta desde o início.
@@ -16,19 +21,19 @@ Muita gente começa mal com o Codex não por não saber operar — e sim por ima
 Por exemplo:
 
 - Achar que é como um mecanismo de busca: uma pergunta e a resposta certa já vem
-- Achar que é como um colega terceirizado: uma instrução e ele inventa todos os detalhes sozinho
+- Achar que é como um colega terceirizado: uma instrução e ele entende todos os detalhes sozinho
 - Achar que, se o modelo for forte o bastante, dá para pular checagem, testes e julgamento humano
 
-Esses mal-entendidos não necessariamente fazem você quebrar no primeiro passo — mas depois de algumas rodadas fica fácil duvidar se ele é «instável». O problema muitas vezes não está no modelo em si, e sim nas expectativas tortas desde o começo.
+Esses mal-entendidos não necessariamente causam uma falha logo no primeiro passo — mas depois de algumas rodadas fica fácil duvidar se ele é «instável». O problema muitas vezes não está no modelo em si, e sim nas expectativas tortas desde o começo.
 
 ## Coloque o entendimento no lugar certo primeiro
 
-O Codex se parece mais com um assistente de execução que age com as mãos, mas ainda precisa que você guie o caminho.
+O Codex se parece mais com um assistente de execução que executa ações, mas ainda precisa que você guie o caminho.
 
 Ele não é:
 
 - Uma caixa-preta que garante correção automática
-- Um leitor de mentes que não precisa de Contexto
+- Um leitor de mentes que não precisa de contexto
 - Um transferidor de responsabilidade que assume as consequências no seu lugar
 
 Quanto mais claro você for, mais estável ele fica; quanto mais esperar que ele adivinhe todos os detalhes sozinho, mais fácil é a decepção.
@@ -36,17 +41,17 @@ Quanto mais claro você for, mais estável ele fica; quanto mais esperar que ele
 | Mal-entendido | Entendimento mais próximo da realidade |
 |---|---|
 | «Ele garante correção automaticamente» | Ele gera resultados candidatos; você faz o aceite |
-| «Quanto mais místico o Prompt, melhor» | Objetivo claro, restrições e aceite importam mais que «feitiços» |
-| «Dar todas as Permissões é mais rápido» | Ampliar Permissão também amplia a superfície de acidente |
-| «Uma sessão enorme resolve tudo» | Contexto antigo contamina Tarefas novas |
+| «Quanto mais místico o prompt, melhor» | Objetivo claro, restrições e aceite importam mais que «feitiços» |
+| «Dar todas as permissões é mais rápido» | Ampliar permissão também amplia a superfície de acidente |
+| «Uma sessão enorme resolve tudo» | contexto antigo contamina tarefas novas |
 | «Cloud é necessariamente mais seguro que local» | Segurança depende de política, chaves e revisão — não do lugar |
 | «Se está no handbook, vale como oficial» | A documentação da OpenAI prevalece; o handbook ajuda a aprender |
 
-## Os três buracos mais fáceis de cair
+## As três armadilhas mais comuns
 
 ### Confundir «saber responder» com «saber concluir»
 
-Falar com clareza não equivale a ter alterado o arquivo certo, rodado a Verificação ou tratado as dependências.
+Falar com clareza não equivale a ter alterado o arquivo certo, rodado a verificação ou tratado as dependências.
 
 Por isso só olhar o texto da resposta não basta — veja também:
 
@@ -58,7 +63,7 @@ Por isso só olhar o texto da resposta não basta — veja também:
 
 Uma escrita comum de iniciante: numa só mensagem pedir pesquisa, design, implementação, testes e publicação.
 
-Não é que seja absolutamente impossível — mas mistura o Contexto com facilidade. Separar em «entender → alterar → verificar» fica mais estável.
+Não é que seja absolutamente impossível — mas mistura o contexto com facilidade. Separar em «entender → alterar → verificar» fica mais estável.
 
 ### Confundir «economizar tempo» com «economizar julgamento»
 
@@ -77,10 +82,3 @@ Faltar qualquer uma das três sobe claramente a probabilidade de problema.
 O Codex é forte, mas funciona melhor dentro de objetivos e limites claros — e não poupa você de entender e julgar.
 
 Próximo passo: [Começar a usar](/pt/guide/getting-started/).
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só esclarece mal-entendidos comuns de uso; links internos, tabela comparativa e limites conceituais foram revisados, e o texto não depende de fatos de produto voláteis.  
-**Última verificação:** 2026-07-26

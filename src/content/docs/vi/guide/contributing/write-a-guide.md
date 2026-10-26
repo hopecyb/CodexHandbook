@@ -7,8 +7,9 @@ title: Viết trang hướng dẫn
 description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: "dd22df1"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -104,7 +105,7 @@ Sổ tay cộng đồng giúp độc giả hiểu, nối và áp dụng, nhưng 
 
 ## Giọng văn
 
-- Tiếng Việt, hướng tới người thực hành
+- Bản nguồn viết bằng tiếng Trung giản thể, hướng tới người thực hành; bản dịch dùng tiếng Việt tự nhiên.
 - Thừa nhận sự không chắc chắn («lấy tài liệu chính thức làm chuẩn»)
 - Không dùng câu chuyện «Prompt vạn năng»
 

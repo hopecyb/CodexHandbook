@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu với tài liệu chính thức hiện hành về App máy tính ChatGPT, Codex CLI, IDE và Cloud. Trang này chọn theo nơi làm việc và cách tương tác, đồng thời phân biệt phần mở rộng tương thích VS Code với các tích hợp riêng của Xcode và JetBrains.", "checkedAt": "2026-08-26"}
 title: Chọn client Codex
 description: Chọn App máy tính, CLI, tích hợp IDE hoặc Cloud theo nơi làm việc và cách tương tác.
 sidebar:
   order: 2
 locale: vi
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Khi chọn điểm vào Codex lần đầu, bạn không cần so sánh hàng chục tính năng. Hãy trả lời một câu hỏi trước: **công việc lần này chủ yếu diễn ra ở đâu?**
@@ -93,13 +94,3 @@ Nguyên tắc không phải “cái nào mạnh nhất”, mà là **cái nào g
 5. Xác nhận bạn biết cách từ chối hoặc thu hẹp yêu cầu quyền.
 
 Xem bảng đầy đủ tại [so sánh tính năng](/vi/guide/reference/feature-comparison/) và ranh giới an toàn tại [quyền và sandbox](/vi/guide/permissions-and-sandbox/).
-
----
-
-**Trạng thái:** verified
-
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
-
-**Căn cứ xác minh:** Đã đối chiếu với tài liệu chính thức hiện hành về App máy tính ChatGPT, Codex CLI, IDE và Cloud. Trang này chọn theo nơi làm việc và cách tương tác, đồng thời phân biệt phần mở rộng tương thích VS Code với các tích hợp riêng của Xcode và JetBrains.
-
-**Xác minh gần nhất:** 2026-08-26

@@ -8,10 +8,10 @@ title: Diretório references/
 description: Organize documentação longa de referência no Skill com divulgação progressiva.
 locale: pt
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: "955bfa7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 `references/` serve para material longo que não precisa expandir de imediato toda vez — evita um fluxo principal longo e confuso.
@@ -47,16 +47,16 @@ Ou, de forma direta:
 - `SKILL.md` é a instrução de trabalho
 - `references/` é o armário de material
 
-Assim a leitura do Skill não começa soterrada por background; e quando precisar de detalhe, há base.
+Assim a leitura do Skill não começa soterrada por informações de contexto; e quando precisar de detalhe, há base.
 
 ## Quando vale extrair `references/`
 Se `SKILL.md` começar a mostrar estes sinais, considere separar:
 
 - Um bloco grande de normas ocupa espaço toda vez
 - Vários temas de referência misturados
-- O fluxo principal é interrompido por background e a primeira leitura perde a linha
+- O fluxo principal é interrompido por informações de contexto e a primeira leitura perde a linha
 
-No primeiro Skill, `references/` não é obrigatório.  
+No primeiro Skill, `references/` não é obrigatório.
 A ordem comum é **fazer funcionar primeiro e extrair quando o conteúdo realmente alongar**.
 ## Equívocos comuns
 

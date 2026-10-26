@@ -1,14 +1,19 @@
 ---
-title: Ngữ cảnh trình soạn thảo
-description: Tiện ích IDE đưa tệp mở, không gian làm việc và quy tắc dự án cho Codex thế nào.
-locale: vi
-source_locale: zh-CN
-source_revision: 6d1b248
-translation_status: reviewed
-translated_at: 2026-08-26
+title: "Ngữ cảnh trình soạn thảo"
+description: "Tiện ích IDE đưa tệp mở, không gian làm việc và quy tắc dự án cho Codex thế nào."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "6d1b248"
+translation_status: "reviewed"
+translated_at: "2026-08-26"
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI Help Center hiện vẫn xếp IDE extension là một trong các lối vào chính phối hợp công cụ local; trang này không giả định nút trình soạn thảo cụ thể, mà tóm tắt phương pháp ổn định: không gian làm việc, tệp mở, vùng chọn, tệp `@` và quy tắc dự án cùng tạo thành ngữ cảnh IDE."
+  checkedAt: "2026-07-26"
 ---
 
 Trong IDE, Codex không chỉ đọc Prompt của bạn mà còn tự nhận **trạng thái trình soạn thảo**. Đây là lợi thế cốt lõi của IDE so với CLI. Hiểu ngữ cảnh đến từ đâu giúp tránh cảm giác thất vọng «đã mở tệp mà nó không thấy».
@@ -32,7 +37,7 @@ Codex trong IDE không chỉ nhìn bạn nói gì, mà còn tham chiếu nội d
 
 | | Tiện ích IDE | CLI |
 |---|---|---|
-| Nhận biết tệp | Mạnh (mở là ngữ cảnh) | Cần `--cd` và công cụ đọc đĩa |
+| Nhận biết tệp | Mạnh (mở là ngữ cảnh) | Cần `--cd` / `-C` và công cụ đọc tệp |
 | Vùng chọn | Hỗ trợ gốc | Cần dán hoặc chỉ đường dẫn |
 | Phù hợp | Sửa cấp dòng, giải thích mã | Script, CI, môi trường không GUI |
 
@@ -50,7 +55,7 @@ Mở quá nhiều tệp không liên quan khiến ngữ cảnh ồn, trọng tâ
 
 ### 3. IDE tự có ngữ cảnh — vậy tôi không cần viết rõ nữa?
 
-Ngữ cảnh tự động hữu ích, nhưng không thay thế mô tả tác vụ.  
+Ngữ cảnh tự động hữu ích, nhưng không thay thế mô tả tác vụ.
 Mục tiêu, hạn chế và tiêu chí hoàn thành vẫn cần bạn nói rõ.
 
 Ngữ cảnh IDE giúp bạn, nhưng không đoán thay bạn; phạm vi tệp càng chuẩn, kết quả thường càng ổn.
@@ -59,7 +64,7 @@ Ngữ cảnh IDE giúp bạn, nhưng không đoán thay bạn; phạm vi tệp c
 
 Đừng để `.env` chứa khóa mở lâu ở tiền cảnh trình soạn thảo; xem [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/).
 
-Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán; IDE không tự phán đoán tuân thủ giúp bạn.
+Nhật ký, dữ liệu khách hàng hãy loại bỏ hoặc che thông tin nhạy cảm trước khi dán; IDE không tự phán đoán tuân thủ giúp bạn.
 
 ## Lỗi thường gặp
 
@@ -75,9 +80,3 @@ Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán;
 
 ## Nguồn tham khảo
 - [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** IDE  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện vẫn xếp IDE extension là một trong các lối vào chính phối hợp công cụ local; trang này không giả định nút trình soạn thảo cụ thể, mà tóm tắt phương pháp ổn định: không gian làm việc, tệp mở, vùng chọn, tệp `@` và quy tắc dự án cùng tạo thành ngữ cảnh IDE.  
-**Kiểm chứng gần nhất:** 2026-07-26

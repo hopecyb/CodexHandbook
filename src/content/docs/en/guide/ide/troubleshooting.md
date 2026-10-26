@@ -10,9 +10,10 @@ sidebar:
   order: 90
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: ebb21de
+source_revision: 'ebb21de'
 ---
 
 IDE troubleshooting differs from CLI troubleshooting. Many problems look like “the extension is broken” but actually come from the **workspace, login state, or editor context**.

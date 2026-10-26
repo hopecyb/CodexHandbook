@@ -7,9 +7,10 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: fr
 source_locale: zh-CN
-source_revision: fa792dc
-translation_status: draft
+source_revision: "fa792dc"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Le plus difficile dans une tâche planifiée n’est pas de choisir son heure d’exécution. Chaque exécution sans surveillance doit disposer d’entrées stables, de permissions limitées, d’un résultat facile à examiner et de conditions d’arrêt.
@@ -124,7 +125,7 @@ Une tâche durable doit définir trois chemins :
 2. **Aucun changement** : décrire brièvement le périmètre contrôlé, sans inventer de problème.
 3. **Impossible à terminer** : indiquer la ressource ou permission manquante, puis s’arrêter et attendre une personne.
 
-Pour une tâche de suivi dans une conversation, ajoutez aussi une condition de fin, par exemple : « arrêter lorsque la PR est fusionnée ou fermée, après trois fois la même erreur, ou lorsqu’une approbation humaine est nécessaire ».
+Pour une tâche de suivi dans une conversation, ajoutez aussi une condition de fin, par exemple : « arrêter lorsque la PR est fusionnée ou fermée, après trois occurrences consécutives de la même erreur, ou lorsqu’une approbation humaine est nécessaire ».
 
 ## Une tâche Scheduled n’est pas une CI déclenchée par événement
 

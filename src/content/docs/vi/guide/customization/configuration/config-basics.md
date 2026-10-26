@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / App", "basis": "Tài liệu cấu hình hiện tại của OpenAI Help Center vẫn dùng trực tiếp `~/.codex/config.toml` và `~/.codex/.env`, và nói App máy tính/IDE có thể cần khởi động lại mới đọc các cài đặt này; nội dung trang đồng thời tránh khóa tên dễ thay đổi, chỉ giữ khung ổn định “cấu hình cấp người dùng, chiến lược quản trị, ý định cấu hình thường gặp như mô hình/phê duyệt/Sandbox”.", "checkedAt": "2026-07-26"}
 title: Cơ bản cấu hình
 description: Vị trí tệp cấu hình Codex, mục thường dùng và nhập môn cài đặt phê duyệt/Sandbox/mô hình.
 locale: vi
 source_locale: zh-CN
-source_revision: ee00ab5
+source_revision: "ee00ab5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -39,7 +40,7 @@ Nó không quản yêu cầu tạm của một tác vụ, mà là hầu hết tr
 | Cấp dự án | Đoạn cấu hình trong kho hoặc tệp dự án liên quan `codex` | Chiến lược Sandbox/công cụ nhóm chia sẻ |
 | Quản trị | Tổ chức phát hành | Mục bắt buộc cá nhân không phủ được |
 
-**Sự kiện dễ thay đổi** (đường dẫn, tên trường, khóa TOML) lấy [tài liệu OpenAI Codex](https://developers.openai.com/codex) làm chuẩn; trang này mô tả khái niệm và cách quyết định.
+**Thông tin thực tế dễ thay đổi** (đường dẫn, tên trường, khóa TOML) lấy [tài liệu OpenAI Codex](https://developers.openai.com/codex) làm chuẩn; trang này mô tả khái niệm và cách quyết định.
 
 ## Hiểu lầm thường gặp
 
@@ -126,15 +127,9 @@ Hầu hết trường hợp:
 
 ## Ranh giới an toàn
 
-Tệp cấu hình có thể chứa **danh sách trắng đường dẫn, chiến lược mạng, danh sách máy chủ MCP** — trước khi đổi hãy tưởng tượng «Prompt độc hại có lợi dụng cấu hình này không». Môi trường doanh nghiệp nên do quản trị viên phát hành; cá nhân đừng vòng chiến lược quản trị.
+Tệp cấu hình có thể chứa **danh sách trắng đường dẫn, chiến lược mạng, danh sách máy chủ MCP** — trước khi đổi hãy tưởng tượng «Prompt độc hại có lợi dụng cấu hình này không». Môi trường doanh nghiệp nên do quản trị viên phát hành; cá nhân không được vượt qua chính sách do tổ chức quản lý.
 
 Cấu hình phù hợp hơn đặt những mục mặc định bạn gần như mỗi lần đều chọn lại; không cần nhét mọi quy tắc vào tệp cấu hình.
 
 ## Nguồn tham khảo
 - Tài liệu cấu hình OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App  
-**Căn cứ kiểm chứng:** Tài liệu cấu hình hiện tại của OpenAI Help Center vẫn dùng trực tiếp `~/.codex/config.toml` và `~/.codex/.env`, và nói App máy tính/IDE có thể cần khởi động lại mới đọc các cài đặt này; nội dung trang đồng thời tránh khóa tên dễ thay đổi, chỉ giữ khung ổn định “cấu hình cấp người dùng, chiến lược quản trị, ý định cấu hình thường gặp như mô hình/phê duyệt/Sandbox”.  
-**Kiểm chứng gần nhất:** 2026-07-26

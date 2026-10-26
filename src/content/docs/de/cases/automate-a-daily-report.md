@@ -9,13 +9,13 @@ legacyVerification:
   basis: "Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin wiederholbare Automatisierungsszenarien wie „Automate bug triage“ und „Turn feedback into actions“. Diese Seite definiert den Tagesbericht als „Markdown in festem Format + klarer Exit-Code + wiederverwendbares Skript oder Skill“ — ein stabiles Automatisierungs-Workflow-Muster, das nicht von einer einzelnen Integration abhängt."
   checkedAt: "2026-07-26"
 title: Einen Tagesbericht automatisieren
-description: Wiederkehrende Zusammenfassungsarbeit als wiederverwendbares Skript oder Skill verfestigen.
+description: Wiederkehrende Zusammenfassungsarbeit in einem wiederverwendbaren Skript oder Skill festhalten.
 locale: de
 source_locale: zh-CN
-source_revision: 2149e0a
+source_revision: "2149e0a"
 translation_status: reviewed
 translated_at: 2026-10-24
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 ## Metadaten

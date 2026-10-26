@@ -7,22 +7,23 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: c6ad6aa
-translation_status: draft
+source_revision: "c6ad6aa"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
 
-Não tente prever as permissões com uma tabela fixa de «a App, a CLI, o IDE ou o Cloud vão mostrar um pedido de aprovação?». O comportamento real depende do local de execução, da configuração efetiva, dos requisitos da organização, do sistema operativo e da ação pedida.
+Não tente prever as permissões com uma tabela fixa de «a App, a CLI, o IDE ou o Cloud vão mostrar um pedido de aprovação?». O comportamento real depende do local de execução, da configuração efetiva, dos requisitos da organização, do sistema operacional e da ação pedida.
 
 ![Fluxo de decisão entre bloqueio pela sandbox, aprovação humana e resultado da execução](/diagrams/sandbox-approval-flow-pt.svg)
 
 ## Distinguir primeiro três mecanismos
 
-| Mecanismo | Âmbito | Controlo principal |
+| Mecanismo | Âmbito | Controle principal |
 |---|---|---|
-| Permission Profiles locais (Beta) | Comandos locais em macOS, Linux, WSL e Windows nativo | `read`/`write`/`deny` no sistema de ficheiros e destinos de rede |
+| Permission Profiles locais (Beta) | Comandos locais em macOS, Linux, WSL e Windows nativo | `read`/`write`/`deny` no sistema de arquivos e destinos de rede |
 | Definições anteriores de sandbox | Codex local | `read-only`, `workspace-write`, `danger-full-access` e política de aprovação |
 | Política de ambiente Cloud | Codex Cloud | Contentor isolado, acesso à rede na preparação, allowlist de rede do Agent e métodos HTTP |
 
@@ -36,7 +37,7 @@ Os Permission Profiles não se combinam com o antigo `sandbox_mode`. Se a config
 | `:workspace` | Permite escrever nas workspace roots atuais e nos diretórios temporários do sistema | Desenvolvimento corrente |
 | `:danger-full-access` | Remove as restrições da sandbox local | Apenas quando já existe isolamento externo e esta capacidade é explicitamente necessária |
 
-Um profile personalizado pode definir `read`, `write` ou `deny` para caminhos e usar regras mais específicas para excluir ficheiros sensíveis, como `.env`, de um âmbito mais amplo. Quando as regras para o mesmo caminho entram em conflito, `deny` prevalece sobre `write`, e `write` sobre `read`.
+Um profile personalizado pode definir `read`, `write` ou `deny` para caminhos e usar regras mais específicas para excluir arquivos sensíveis, como `.env`, de um âmbito mais amplo. Quando as regras para o mesmo caminho entram em conflito, `deny` prevalece sobre `write`, e `write` sobre `read`.
 
 ## Exemplo de permissões mínimas
 
@@ -68,16 +69,16 @@ enabled = true
 
 | Ação | Risco principal | Limite mínimo |
 |---|---|---|
-| Ler código-fonte | Ficheiros sensíveis entram no contexto | `read` no workspace, `deny` explícito para credenciais |
-| Alterar ficheiros | Substituição ou eliminação fora do âmbito | Escrever apenas no workspace de destino e ver primeiro o diff |
+| Ler código-fonte | Arquivos sensíveis entram no contexto | `read` no workspace, `deny` explícito para credenciais |
+| Alterar arquivos | Substituição ou eliminação fora do âmbito | Escrever apenas no workspace de destino e ver primeiro o diff |
 | Executar testes | Efeitos secundários dos scripts | Rever scripts e usar um ambiente controlado |
 | Instalar dependências | Cadeia de fornecimento e acesso à rede | Fixar versões e limitar domínios |
 | Git push / PR | Mudança de estado externo | Branch separada, proteção de branch e revisão humana |
-| Ferramentas MCP/Plugin | Dados de terceiros e operações de escrita | Scope mínimo, aprovação por ação e registos |
+| ferramentas MCP/Plugin | Dados de terceiros e operações de escrita | Scope mínimo, aprovação por ação e registros |
 
 `AGENTS.md` pode dizer «não fazer push», mas isso não constitui uma barreira técnica de aplicação obrigatória. Combine estas regras com sandbox/permissions, permissões do GitHub e revisão humana.
 
-## Método de verificação da equipa
+## Método de verificação da equipe
 
 1. Registe o cliente e a versão do Codex.
 2. Liste todas as camadas de configuração carregadas.

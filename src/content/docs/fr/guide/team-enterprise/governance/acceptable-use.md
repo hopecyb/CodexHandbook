@@ -1,23 +1,27 @@
 ---
-title: "Politique d'usage acceptable"
+title: Politique d'usage acceptable
 description: Accord au niveau équipe sur ce que Codex peut et ne peut pas faire — aligné avec les contrôles techniques et la formation.
 locale: fr
 source_locale: zh-CN
-source_revision: 0409154
+source_revision: "0409154"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Organisation / équipe
+  basis: La doc entreprise OpenAI accentue encore l'accès par rôle, les permissions d'actions et les frontières des systèmes source pour plugins et apps ; cette page définit l'AUP comme frontière de comportement organisationnelle avec « plan pédagogique, localisation juridique requise » — pas un modèle de politique officiel.
+  checkedAt: '2026-07-26'
 ---
-
-Une **Politique d'usage acceptable (AUP)** transforme « peut-on utiliser Codex pour ceci ? » en consensus org au lieu de jugement individuel. Elle complète le [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) : le modèle de menace couvre le risque ; l'AUP couvre les **frontières de comportement**.
+Une **Politique d'usage acceptable (AUP)** transforme « peut-on utiliser Codex pour ceci ? » en accord au sein de l’organisation plutôt qu’un jugement individuel. Elle complète le [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) : le modèle de menace couvre le risque ; l'AUP couvre les **frontières de comportement**.
 
 ## Ce que cette page couvre
 
 - Sujets qu'une AUP devrait couvrir
 - Lier HR/conformité et contrôles techniques
-- Outline de clauses starter (nécessite localisation juridique)
+- Exemples de clauses pour un premier brouillon, à adapter avec le service juridique
 
 ## Ce qu'une AUP gouverne
 
@@ -26,7 +30,7 @@ Même si techniquement possible, est-ce permis dans notre équipe ?
 Elle ne remplace pas la politique technique — elle énonce des frontières que les gens peuvent lire et suivre.
 
 :::caution
-Ce qui suit est un **outline éducatif**, pas un conseil juridique. Revue juridique et conformité requise avant publication.
+Ce qui suit est un **plan pédagogique**, pas un conseil juridique. Revue juridique et conformité requise avant publication.
 :::
 
 ## Idées reçues courantes
@@ -86,8 +90,8 @@ L'AUP doit s'aligner avec formation, permissions, config et audit — pas seulem
 Demandez :
 
 1. Répond-elle aux vraies frontières d'équipe ?
-2. Peut-elle mapper vers formation, config ou flux d'approbation ?
-3. En violation, l'équipe peut détecter et répondre ?
+2. Peut-elle se traduire en formation, en configuration ou en procédure d’approbation ?
+3. En cas de violation, l’équipe sait-elle la détecter et intervenir ?
 
 Plus de « oui » → plus probablement efficace.
 
@@ -97,11 +101,4 @@ Plus de « oui » → plus probablement efficace.
 - [ ] Pas de conflit avec [Règles d'équipe](/fr/guide/customization/rules/team-rules/)
 - [ ] Revue annuelle ou sur releases majeures de fonctionnalités
 
-La valeur d'une AUP est des frontières d'équipe claires pour l'usage Codex — et l'alignement avec les contrôles réels.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** Organisation / équipe  
-**Base de vérification :** La doc entreprise OpenAI accentue encore l'accès par rôle, les permissions d'actions et les frontières des systèmes source pour plugins et apps ; cette page définit l'AUP comme frontière de comportement organisationnelle avec « outline éducatif, localisation juridique requise » — pas un modèle de politique officiel.  
-**Dernière vérification :** 2026-07-26
+Une AUP est utile lorsqu’elle précise les limites d’utilisation de Codex dans l’équipe et correspond aux contrôles réellement en place.

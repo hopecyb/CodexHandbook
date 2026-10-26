@@ -1,16 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Cross-checked against this handbook’s currently verified project instructions, Profiles, settings division of labor, and security boundary chapters; this page only states the stable layering principle that personal habits should not pollute team repo rules and does not treat any one client’s current settings UI as a fixed contract."
+  checkedAt: "2026-07-26"
 title: Personal Preferences
 description: User-level configuration, default models, and UI habits—without polluting team conventions in the repo.
 locale: en
 source_locale: zh-CN
-source_revision: c381051
-translation_status: draft
+source_revision: 'c381051'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 sidebar:
   order: 40
 ---
 
-**Personal preferences** are settings on your machine that apply across projects: default model, theme, approval habits, personal Skill paths, and so on. Unlike `AGENTS.md` in the repo, personal preferences should **not** assume teammates are the same.
+**Personal preferences** are settings on your machine that apply across projects: default model, theme, approval habits, personal Skill paths, and so on. Unlike `AGENTS.md` in the repo, you should **not** assume teammates share your personal preferences.
 
 ## Contents
 
@@ -103,10 +109,3 @@ If the product offers “memory” or persistent preferences, see [Memories and 
 - [ ] You can give one example each for personal vs project vs organization layers
 - [ ] You have configured at least one strict Profile for a customer project
 - [ ] No personal secrets in the repo
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked against this handbook’s currently verified project instructions, Profiles, settings division of labor, and security boundary chapters; this page only states the stable layering principle that personal habits should not pollute team repo rules and does not treat any one client’s current settings UI as a fixed contract.  
-**Last verified:** 2026-07-26

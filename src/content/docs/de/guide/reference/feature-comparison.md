@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit den aktuellen offiziellen Seiten zu App, CLI, IDE, Cloud, Authentication und Pricing abgeglichen. Die Matrix enthält nur eindeutig bestätigte Angaben zu Arbeitsort, Kontext, Review und Anmeldegrenzen und bewertet veränderliche Funktionen nicht mehr spekulativ als stark, mittel oder schwach."
+  checkedAt: "2026-08-26"
 title: Funktionsvergleich
 description: Vergleiche Desktop-App, CLI, IDE und Cloud nach Arbeitsoberfläche, Ausführungsort und Review-Methode.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: b3d30b0
+source_revision: "b3d30b0"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Diese Matrix vergleicht nur **stabile, grundlegende Arbeitsweisen** und verspricht keine dauerhaft unveränderten Detailfunktionen. Triff die erste Entscheidung mit der [Client-Auswahlgrafik](/de/guide/choose-your-client/) und prüfe hier anschließend die Unterschiede.
@@ -63,13 +68,3 @@ Plugins, Scheduled tasks, Benachrichtigungen, Modelle und Organisationsrichtlini
 - Unterstützt eine API-Key-Anmeldung eine bestimmte ChatGPT- oder Cloud-Funktion?
 
 Die Auswahlregel bleibt einfach: **Lokaler Code in der IDE, vollständiger Terminalzyklus in der CLI, Koordination lokaler Aufgaben in der Desktop-App und isolierte Remote-Ausführung in Cloud.**
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zu App, CLI, IDE, Cloud, Authentication und Pricing abgeglichen. Die Matrix enthält nur eindeutig bestätigte Angaben zu Arbeitsort, Kontext, Review und Anmeldegrenzen und bewertet veränderliche Funktionen nicht mehr spekulativ als stark, mittel oder schwach.
-
-**Zuletzt geprüft:** 2026-08-26

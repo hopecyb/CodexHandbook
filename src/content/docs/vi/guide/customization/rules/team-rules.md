@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / App / Cloud (tùy chức năng tổ chức)", "basis": "Tài liệu plugin, ứng dụng và quyền cấp tổ chức hiện tại của OpenAI vẫn nhấn mạnh phân tầng kiểm soát truy cập vai trò, phê duyệt hành động, cấu hình quản trị và kiểm soát cấp nhóm; trang này trừu tượng hóa chiến lược quy tắc thành mô hình quản trị tầng tổ chức, dự án, cá nhân, và yêu cầu thay đổi quy tắc đi rà soát và thông báo — thuộc tóm tắt thực hành quản trị ổn định.", "checkedAt": "2026-07-26"}
 title: Chiến lược quy tắc nhóm
 description: Phân tầng quản trị quy tắc lệnh và đường dẫn giữa tổ chức, kho và cá nhân — rà được, rollback được.
 locale: vi
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: "bae8bd2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -115,8 +116,8 @@ Thường tương ứng:
 ## Ranh giới an toàn
 
 - Quy tắc không thay [mô hình đe dọa](/vi/guide/team-enterprise/security/threat-model/) và quy trình ứng phó sự cố
-- Khi liên quan dữ liệu bị giám sát, quy tắc cần review cùng phân cấp dữ liệu và chiến lược lưu giữ
-- Vòng khẩn cấp phải có **bản ghi kiểm toán** và rà sau sự việc
+- Khi liên quan dữ liệu thuộc diện quản lý theo quy định, quy tắc cần review cùng phân cấp dữ liệu và chiến lược lưu giữ
+- Ngoại lệ khẩn cấp đối với quy tắc phải có **bản ghi kiểm toán** và rà sau sự việc
 
 ## Danh sách nghiệm thu
 
@@ -126,10 +127,3 @@ Thường tương ứng:
 - [ ] Có kênh xử lý phản hồi «chặn nhầm» (mẫu issue hoặc form nội bộ)
 
 Chiến lược quy tắc nhóm quan trọng nhất là phân rõ trước “ai định ranh giới tầng nào”, rồi mới quyết quy tắc viết thế nào.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App / Cloud (tùy chức năng tổ chức)  
-**Căn cứ kiểm chứng:** Tài liệu plugin, ứng dụng và quyền cấp tổ chức hiện tại của OpenAI vẫn nhấn mạnh phân tầng kiểm soát truy cập vai trò, phê duyệt hành động, cấu hình quản trị và kiểm soát cấp nhóm; trang này trừu tượng hóa chiến lược quy tắc thành mô hình quản trị tầng tổ chức, dự án, cá nhân, và yêu cầu thay đổi quy tắc đi rà soát và thông báo — thuộc tóm tắt thực hành quản trị ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26

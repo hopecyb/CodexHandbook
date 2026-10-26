@@ -7,9 +7,10 @@ title: Prompts
 description: Learn how to state tasks, context, inputs, constraints, and acceptance criteria clearly.
 locale: en
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: '2280f53'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 The prompts section explains how to state a task so Codex knows its goal, context, boundaries, and completion criteria. A useful prompt also lets uncertainty surface during execution, makes room for necessary confirmation, and asks for a result you can inspect.

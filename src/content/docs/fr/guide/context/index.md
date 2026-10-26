@@ -8,11 +8,12 @@ title: "Contexte"
 description: "Gérer le contexte du projet, des fichiers et de la conversation."
 locale: fr
 source_locale: zh-CN
-source_revision: d2baf42
-translation_status: draft
+source_revision: 'd2baf42'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 16
+reviewed_at: '2026-10-26'
 ---
 
 Le contexte est l'information que le modèle peut **utiliser efficacement maintenant**. S'il est mal géré, même un bon prompt se perd dans le bruit.

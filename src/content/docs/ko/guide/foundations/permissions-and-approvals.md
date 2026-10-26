@@ -3,15 +3,20 @@ title: 권한과 승인
 description: Codex가 언제 작업 승인을 필요로 하는지 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 1beec63
+source_revision: '1beec63'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center의 현재 Codex CLI 입문 문서는 여전히 approval modes를 구분하고, 파일 읽기·쓰기·명령 실행 등을 위험별로 나눕니다. 이 페이지는 승인이 왜 있는지·언제 신중히 승인할지·영향 범위를 어떻게 판단할지만 설명하며, 고정 제품 기본값을 선언하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
-Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승인**은 사람·Agent 협업의 게이트입니다.
+Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승인**은 사람·Agent 협업에서 확인을 받는 절차입니다.
 
 어떤 파일이든 읽고, 마음대로 네트워크에 연결하고, 마음대로 명령을 실행할 수 있다면, 작업을 잘못 이해했을 때 대가가 큽니다.
 
@@ -70,16 +75,9 @@ Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승�
 | 층 | 무엇을 쓰는지 | 어디를 읽는지 |
 |---|---|---|
 | 개념(이 페이지) | 왜 승인이 필요한지 | — |
-| 제품 차이 | 각 입구에서 확인이 어떻게 뜨는지 | [제품 매뉴얼](/ko/guide/) |
+| 제품 차이 | 각 제품에서 확인이 어떻게 뜨는지 | [제품 매뉴얼](/ko/guide/) |
 | 프롬프트 전략 | 작업에서 권한 경계를 어떻게 선언하는지 | [제약 정의](/ko/prompts/constraints-and-boundaries/) |
 
 공식 정책과 기본값은 바뀔 수 있으니 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 확인하세요.
 
-승인의 역할은 「할 수 있는지」를 항상 당신이 결정하게 하는 것입니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Help Center의 현재 Codex CLI 입문 문서는 여전히 approval modes를 구분하고, 파일 읽기·쓰기·명령 실행 등을 위험별로 나눕니다. 이 페이지는 승인이 왜 있는지·언제 신중히 승인할지·영향 범위를 어떻게 판단할지만 설명하며, 고정 제품 기본값을 선언하지 않습니다.  
-**최근 검증:** 2026-07-26
+승인의 역할은 「해도 되는지」를 항상 당신이 결정하게 하는 것입니다.

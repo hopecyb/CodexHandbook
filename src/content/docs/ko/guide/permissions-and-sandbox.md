@@ -5,10 +5,15 @@ sidebar:
   order: 14
 locale: ko
 source_locale: zh-CN
-source_revision: 6b5fcb8
+source_revision: "6b5fcb8"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 현재 Codex의 샌드박스, 승인, 보안 공식 설명과 대조했습니다. 운영 체제 수준 실행 경계, 승인 정책, 작업 제약, 사람의 검토를 구분하고 로컬과 Cloud의 네트워크 모델을 별도로 설명합니다.
+  checkedAt: '2026-08-26'
 ---
 
 Codex를 안전하게 사용하려면 두 제어 계층을 함께 봐야 합니다. **샌드박스는 기술적으로 접근할 수 있는 범위를 정하고, 승인 정책은 현재 경계를 넘기 전에 사용자에게 질문할지를 정합니다.**
@@ -24,7 +29,7 @@ Codex를 안전하게 사용하려면 두 제어 계층을 함께 봐야 합니�
 | 작업 제약 | 이번 작업에서 무엇을 하고 하지 말아야 하는가? | 수정 허용 디렉터리, 금지 동작, 검증 명령 |
 | 사람의 검토 | 실행된 결과를 받아들일 수 있는가? | diff, 로그, 테스트, 외부 부작용 |
 
-작업 제약은 샌드박스를 대신할 수 없고, 샌드박스도 최종 검토를 대신할 수 없습니다. 각각 의도, 실행 경계, 결과 인수를 담당합니다.
+작업 제약은 샌드박스를 대신할 수 없고, 샌드박스도 최종 검토를 대신할 수 없습니다. 각각 의도, 실행 경계, 결과의 완료 기준 확인를 담당합니다.
 
 ## 하나의 동작이 안전 경계를 통과하는 과정
 
@@ -105,13 +110,3 @@ src/auth와 tests/auth만 수정하세요.
 - **Hooks가 샌드박스를 대체한다**: Hook은 추가 보호 및 감사 계층이지 운영 체제의 강제 격리를 대신하지 않습니다.
 
 제품 설정은 [CLI 승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)와 [데스크톱 App 설정](/ko/guide/desktop-app/settings/), 작업 작성법은 [제약과 경계](/ko/prompts/constraints-and-boundaries/)를 참고하세요.
-
----
-
-**상태:** verified
-
-**적용 제품:** App / CLI / IDE / Cloud
-
-**검증 근거:** 현재 Codex의 샌드박스, 승인, 보안 공식 설명과 대조했습니다. 운영 체제 수준 실행 경계, 승인 정책, 작업 제약, 사람의 검토를 구분하고 로컬과 Cloud의 네트워크 모델을 별도로 설명합니다.
-
-**최근 검증:** 2026-08-26

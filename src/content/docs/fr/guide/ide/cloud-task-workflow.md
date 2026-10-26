@@ -3,14 +3,17 @@ title: Tâches Cloud depuis l'IDE
 description: Déléguer depuis l'IDE une tâche longue à Codex Cloud, puis revenir à un résultat prêt à être révisé.
 locale: fr
 source_locale: zh-CN
-source_revision: d5369b5
+source_revision: "d5369b5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: IDE, Cloud
+  checkedAt: '2026-08-26'
 ---
-
 L'IDE permet de conserver les itérations rapides en local ou de se connecter à Codex web pour déléguer les travaux plus longs à Cloud. L'éditeur reste le point d'entrée, mais l'environnement d'exécution, l'état du dépôt et les limites réseau passent dans le cloud.
 
 ## Quand déléguer
@@ -18,11 +21,11 @@ L'IDE permet de conserver les itérations rapides en local ou de se connecter à
 | Rester en local | Déléguer à Cloud |
 |---|---|
 | Vous avez besoin d'échanges rapides sur la sélection actuelle | La tâche comporte de nombreuses étapes ou s'exécute longtemps |
-| Elle dépend d'un état local non validé | Les entrées existent déjà dans un dépôt distant ou peuvent être importées |
+| Elle dépend d'un état local non commité | Les entrées existent déjà dans un dépôt distant ou peuvent être importées |
 | Elle exige un outil disponible uniquement en local | L'environnement cloud peut recréer les dépendances et les vérifications |
 | Vous devez contrôler un processus local en cours d'exécution | Vous souhaitez poursuivre un autre travail en local |
 
-Cloud ne dispose pas automatiquement de vos fichiers locaux non validés, de vos identifiants ni de vos processus en cours. Indiquez explicitement le dépôt, la branche et le commit de départ de la tâche.
+Cloud ne dispose pas automatiquement de vos fichiers locaux non commités, de vos identifiants ni de vos processus en cours. Indiquez explicitement le dépôt, la branche et le commit de départ de la tâche.
 
 ## Liste de contrôle avant délégation
 
@@ -30,7 +33,7 @@ Cloud ne dispose pas automatiquement de vos fichiers locaux non validés, de vos
 - [ ] GitHub est connecté, ou l'intégration GitLab Beta actuellement prise en charge est utilisée.
 - [ ] L'environnement cloud peut exécuter les scripts de configuration et de vérification.
 - [ ] Les variables et Secrets requis sont configurés dans l'environnement, et non collés dans le prompt.
-- [ ] Les modifications locales non validées sont prises en compte ou explicitement exclues.
+- [ ] Les modifications locales non commitées sont prises en compte ou explicitement exclues.
 - [ ] L'objectif, les chemins autorisés, les exclusions et les commandes d'acceptation sont explicites.
 
 ## Exemple de bout en bout
@@ -67,11 +70,3 @@ Poursuivez avec [Environnements Cloud](/fr/guide/web-and-cloud/cloud-environment
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** IDE, Cloud
-
-**Dernière vérification :** 2026-08-26

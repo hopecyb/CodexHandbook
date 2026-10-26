@@ -2,25 +2,25 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Diese Seite liefert eine Vorlage für Erstellen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  basis: "Diese Seite liefert eine Vorlage für Erstellungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
   checkedAt: "2026-07-26"
-title: Erstellen-Vorlage
-description: Feature, Text oder Artefakt von null umsetzen.
+title: Erstellungsvorlage
+description: Feature, Text oder Artefakt von Grund auf umsetzen.
 locale: de
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
-Bei Aufgaben von null treten oft zwei Probleme auf:
+Bei Aufgaben von Grund auf treten oft zwei Probleme auf:
 
 - großes Ziel ohne Grenzen
 - noch zu wenig Info, aber Codex soll schon generieren
 
-Die Erstellen-Vorlage klärt Artefakt, Zweck und Constraints, bevor es losgeht.
+Die Erstellungsvorlage klärt Artefakt, Zweck und Constraints, bevor es losgeht.
 
 ## Vorlage
 
@@ -41,7 +41,7 @@ Bei fehlenden Infos: Annahmen listen und fragen — nicht raten.
 
 ## Wann diese Vorlage passt
 
-- Seite, Komponente, Skript oder Doc von null
+- Seite, Komponente, Skript oder Doc von Grund auf
 - du weißt, was entstehen soll, hast aber noch nicht begonnen
 - Scope der Erstellung soll klar sein, bevor generiert wird
 
@@ -57,7 +57,7 @@ Von null brauchst du besonders:
 
 ### 2. Hintergrund ist nur Dekoration
 
-Bei Erstellen beeinflusst Hintergrund oft die Richtung des Artefakts direkt.
+Beim Erstellen beeinflusst der Hintergrund oft die Richtung des Artefakts direkt.
 
 ### 3. Abnahme „sieht gut aus“ reicht nicht
 

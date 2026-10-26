@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Team- und Unternehmensszenarien"
+  basis: "Aktuelle OpenAI-Dokumentation zu Plugins, Apps und Integrationen betont Risiken aus Externverbindungen, Aktionsrechten, Quellsystemzugriff und Freigabegrenzen; diese Seite navigiert nur und ordnet Bedrohungsmodell → Plugin/MCP → Prompt Injection."
+  checkedAt: "2026-07-26"
 title: Sicherheit
 description: 'Erläuterungsseite zu teamweiten Risiken, Angriffsflächen und Schutzideen — zuerst verstehen, wo Risiken liegen, dann Kontrollen.'
 locale: de
 source_locale: zh-CN
-source_revision: 91ed6a3
+source_revision: "91ed6a3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Springt man in dieser Gruppe direkt in Detailseiten, bleiben oft nur lose Begriffe — ohne zu wissen, wogegen sie schützen.
 
-Besser in der Reihenfolge „woher kommt das Risiko → welche Schicht blockieren/prüfen“.
+Kläre zuerst, woher ein Risiko stammt. Entscheide dann, auf welcher Ebene es technisch begrenzt und auf welcher Ebene es geprüft werden muss.
 
 ## Empfohlene Reihenfolge
 
@@ -26,10 +31,3 @@ Besser in der Reihenfolge „woher kommt das Risiko → welche Schicht blockiere
 - Sie wollen wissen, welche Risiken „seid vorsichtig“ allein nicht lösen
 
 Fokus der Sicherheitsseiten: Risiken finden, die Systemgrenzen brauchen — nicht nur Appelle.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** Team- / Enterprise-Szenarien  
-**Prüfgrundlage:** Aktuelle OpenAI-Dokumentation zu Plugins, Apps und Integrationen betont Risiken aus Externverbindungen, Aktionsrechten, Quellsystemzugriff und Freigabegrenzen; diese Seite navigiert nur und ordnet Bedrohungsmodell → Plugin/MCP → Prompt Injection.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,12 +1,16 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  basis: "Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-25"
 title: Contributing
 description: How to contribute guides, cases, prompt examples, and translations—process and quality standards.
 sidebar:
   order: 80
 locale: en
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: '1d4b3f2'
 translation_status: reviewed
 translated_at: 2026-08-26
 ---
@@ -100,9 +104,3 @@ A first contribution does not need to be huge—clarify one real beginner pain p
 
 - Repository: <https://github.com/hopecyb/CodexHandbook>
 - [Chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (repository planning document)
-
----
-
-**Status:** verified
-**Verification basis:** Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior.
-**Last verified:** 2026-07-26

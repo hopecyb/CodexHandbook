@@ -1,17 +1,24 @@
 ---
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 title: CLI Command Reference
 description: Common Codex CLI subcommands and flags—learning index, not a substitute for official docs.
 locale: en
 source_locale: zh-CN
-source_revision: 6091bcc
+source_revision: '6091bcc'
 translation_status: reviewed
 translated_at: 2026-08-26
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Compared with the maturity table in the official Developer commands documentation. Only Stable entry points are listed; --cd / -C, sandbox, and approval flags were checked. Experimental and deprecated commands are excluded from this basic reference.
+  checkedAt: '2026-08-26'
+sidebar:
+  order: 50
 ---
 
 Command reference helps you pick an entry point—not memorize every flag:
 
-> **Should I use interactive entry or a one-shot command?**
+> **Should I start an interactive session or run a one-shot command?**
 
 This page indexes the current Stable **Codex CLI** entry points for search and comparison. Continue to run `codex --help` and each subcommand's `--help`; use [Developer commands](https://learn.chatgpt.com/docs/developer-commands) for complete maturity and parameter details.
 
@@ -125,7 +132,7 @@ Non-interactive mode usually uses **exit codes** for CI:
 - `0`: completed per agreement
 - Non-`0`: failure or needs human—check stderr/logs
 
-CLI command pages help you pick entry and intent—not memorize parameters.
+Use this reference to choose an entry point and understand its purpose; you do not need to memorize the parameters.
 
 Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/).
 
@@ -145,10 +152,3 @@ Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/en/cases/wor
 | Approval blocks CI | Tighten prompt + read-only sandbox |
 
 [CLI troubleshooting](/en/guide/cli/troubleshooting/)
-
----
-
-**Status:** outdated
-**Products:** CLI
-**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.
-**Last verified:** 2026-07-26

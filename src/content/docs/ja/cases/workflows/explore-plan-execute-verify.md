@@ -1,16 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "本ハンドブックの検証済みの計画、診断、完了の定義、テスト、AGENTS.md の各ページと照合済み。このページは変動しやすい製品オプションではなく、4段階の協働手順と確認点を扱います。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの検証済みの計画、診断、完了の定義、テスト、AGENTS.md の各ページと照合済み。このページは変動しやすい製品オプションではなく、4段階の協働手順と確認点を扱います。
   checkedAt: "2026-07-26"
-title: "探索—計画—実行—検証"
-description: "タスクの範囲と不確実性に応じて探索、計画、実行、検証を調整し、待つ必要のある判断を明確にします。"
+title: 探索—計画—実行—検証
+description: タスクの範囲と不確実性に応じて探索、計画、実行、検証を調整し、待つ必要のある判断を明確にします。
 locale: ja
 source_locale: zh-CN
 source_revision: "4a95760"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: reviewed
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 これは「まだ進め方がわからない」状態から「検収できる」状態まで進めるために、本ハンドブックが推奨するタスクの組み立て方です。4段階は4回の承認を意味しません。範囲が明確な小さなタスクは続けて完了できます。方針が未定、または必要な権限がないときに、その判断を待ちます。まず[タスクの段階分け](/ja/prompts/ask-for-a-plan/)を確認してください。

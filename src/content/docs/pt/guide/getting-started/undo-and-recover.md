@@ -3,8 +3,8 @@ title: Desfazer e recuperar
 description: Volte com segurança quando o resultado não satisfizer.
 locale: pt
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: "8aa3171"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
@@ -13,6 +13,7 @@ legacyVerification:
   products: App / CLI / IDE
   basis: Revisado com os capítulos introdutórios já verificados sobre aprovações, análise de resultados, recuperação de falhas e Git/área de trabalho. Esta página confirma apenas o método estável «pausar, conferir o escopo, priorizar desfazer e voltar a um estado seguro», sem tratar a função de desfazer de um cliente como contrato fixo.
   checkedAt: '2026-07-26'
+reviewed_at: '2026-10-26'
 ---
 
 Na primeira vez com o Codex, muita gente teme: se ele alterar errado, ainda consigo voltar?
@@ -60,7 +61,7 @@ Faça assim primeiro:
 - Deixe-o alterar só um arquivo pequeno por vez
 - Se o resultado não satisfizer, desfaça direto
 
-Quando for lidar com projetos oficiais, aí aprenda o rollback com Git de forma sistemática.
+Quando for lidar com projetos de produção, aí aprenda o rollback com Git de forma sistemática.
 
 ## Prevenir importa mais do que remediar
 

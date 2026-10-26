@@ -3,9 +3,14 @@ title: Scheduled tasks
 description: ChatGPT에서 검증된 작업을 일정에 따라 반복 실행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 759c38e
-translation_status: draft
+source_revision: "759c38e"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / 데스크톱 App; CLI와 IDE는 준비와 테스트에만 사용하며 관리 화면은 제공하지 않음
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 Scheduled task(예약 작업)를 사용하면 ChatGPT가 계획된 일정에 따라 백그라운드에서 작업을 반복할 수 있습니다. 정기 보고서, 지속적인 추적, 반복 유지 관리에 적합합니다. 임의의 webhook, 저장소 이벤트, CI 자동화와 같은 개념은 아닙니다.

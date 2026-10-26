@@ -8,11 +8,12 @@ title: Instalar la CLI
 description: Instala Codex CLI y comprueba la versión, el estado de inicio de sesión y una primera tarea en un repositorio.
 locale: es
 source_locale: zh-CN
-source_revision: 564bd75
-translation_status: draft
+source_revision: '564bd75'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 40
+reviewed_at: '2026-10-25'
 ---
 
 Codex CLI permite explorar, modificar, probar y revisar sin salir del terminal. La página oficial de instalación ofrece opciones para macOS/Linux, Windows, npm y Homebrew. Elige la que corresponda a tu sistema y a tu forma de gestionar el software.

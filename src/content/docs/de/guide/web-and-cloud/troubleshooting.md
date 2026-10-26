@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud-Fehlersuche
 description: Grenze Cloud-Fehler auf den fünf Ebenen Repository, Setup, Netzwerk, Agent und Auslieferung ein.
 sidebar:
   order: 80
 locale: de
 source_locale: zh-CN
-source_revision: 019fac1
+source_revision: "019fac1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein neuer Cloud-Versuch verbraucht erneut Zeit, ergänzt aber fehlende Berechtigungen, Abhängigkeiten oder Netzwerkkonfiguration nicht automatisch. Bestimme zuerst, in welcher Phase der Fehler auftritt.
@@ -76,11 +80,3 @@ Wenn das Problem von einem lokalen Dienst abhängt oder zwei aufeinanderfolgende
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud
-
-**Zuletzt geprüft:** 2026-08-26

@@ -5,12 +5,16 @@ sidebar:
   order: 40
 locale: es
 source_locale: zh-CN
-source_revision: 28adc49
+source_revision: "28adc49"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Los materiales actuales del Help Center de OpenAI y de configuración de Codex siguen describiendo con claridad la estratificación entre configuración de usuario `~/.codex`, capacidades gestionadas por la organización e instrucciones de colaboración a nivel de proyecto; esta página reescribe la «prioridad» como una descripción de capas habituales más conservadora, para evitar convertir detalles de implementación concretos en reglas absolutas.
+  checkedAt: '2026-07-26'
 ---
-
 Codex no depende solo de «cómo preguntas esta vez»; también usa una **configuración persistente** para recordar tus convenciones y las del equipo. Este capítulo separa principalmente lo que debe quedarse en la conversación de lo que debe anclarse en el proyecto.
 
 Si has empezado a repetir las mismas cosas —como «no toques este directorio», «ejecuta primero los tests» o «usa este modelo por defecto»—, este capítulo trata ese tipo de problema.
@@ -19,7 +23,7 @@ Si has empezado a repetir las mismas cosas —como «no toques este directorio»
 
 - Quién anula a quién entre preferencias personales, instrucciones del proyecto, reglas de equipo y prompts temporales
 - Qué pertenece a `AGENTS.md` y qué no
-- En qué capa se gestionan los archivos de configuración y la política de aprobación/Sandbox
+- En qué capa se gestionan los archivos de configuración y la política de aprobación/sandbox
 
 ## Para quién
 
@@ -63,7 +67,7 @@ Para tareas cortas quizá baste a duras penas, pero en cuanto la colaboración e
 
 ### 2. ¿Se puede meterlo todo en `AGENTS.md`?
 
-Tampoco.  
+Tampoco.
 Algunas cosas encajan mejor en:
 
 - Preferencias personales
@@ -106,8 +110,8 @@ Las reglas no necesitan ser muchas; lo importante es ponerlas en el sitio correc
 ## Errores habituales
 
 - Meter un largo documento de arquitectura en `AGENTS.md` y ahogar las restricciones clave
-- Repetir normas de equipo en el chat sin committearlas al repositorio, con experiencias inconsistentes para los colaboradores
-- Relajar el Sandbox en tu máquina personal asumiendo que los compañeros en un repositorio compartido tienen los mismos permisos
+- Repetir normas de equipo en el chat sin guardarlas en el repositorio, con experiencias inconsistentes para los colaboradores
+- Relajar el sandbox en tu máquina personal asumiendo que los compañeros en un repositorio compartido tienen los mismos permisos
 
 ## Lista de verificación
 
@@ -117,9 +121,3 @@ Las reglas no necesitan ser muchas; lo importante es ponerlas en el sitio correc
 
 ## Referencias
 - Documentación OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Los materiales actuales del Help Center de OpenAI y de configuración de Codex siguen describiendo con claridad la estratificación entre configuración de usuario `~/.codex`, capacidades gestionadas por la organización e instrucciones de colaboración a nivel de proyecto; esta página reescribe la «prioridad» como una descripción de capas habituales más conservadora, para evitar convertir detalles de implementación concretos en reglas absolutas.  
-**Última verificación:** 2026-07-26

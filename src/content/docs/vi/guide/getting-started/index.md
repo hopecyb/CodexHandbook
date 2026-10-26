@@ -1,14 +1,19 @@
 ---
-title: Bắt đầu nhanh
-description: Từ tài khoản và cài đặt đến tác vụ đầu tiên có thể kiểm tra.
-locale: vi
-source_locale: zh-CN
-source_revision: 62fb65d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Bắt đầu nhanh"
+description: "Từ tài khoản và cài đặt đến tác vụ đầu tiên có thể kiểm tra."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "62fb65d"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 4
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Trang chủ OpenAI Developers hiện vẫn định vị Codex dùng để hiểu codebase, xây tính năng, kiểm thử và rà soát thay đổi; trang này đồng thời chỉ cung cấp thứ tự nhập môn và điều hướng nội bộ, không phụ thuộc lệnh hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Mục tiêu là hoàn thành tác vụ đầu tiên trong **dự án luyện tập an toàn**, và học kiểm tra, chấp nhận, sửa hoặc hoàn tác.
@@ -50,7 +55,7 @@ Lần đầu làm tác vụ nhỏ trong dự án luyện tập an toàn sẽ ổ
 
 ### 2. Chỉ cần cài thành công là đã bắt tay xong?
 
-Chưa đủ.  
+Chưa đủ.
 Ít nhất làm được các việc sau mới tính thật sự bắt tay:
 
 - Mở được một tác vụ rõ ràng
@@ -59,7 +64,7 @@ Chưa đủ.
 
 ### 3. Tác vụ đầu tiên càng lớn càng có giá trị học?
 
-Phần lớn lúc lại dễ làm mất kiên nhẫn hơn.  
+Phần lớn lúc lại dễ làm mất kiên nhẫn hơn.
 Tác vụ đầu tiên càng nhỏ, càng dễ kiểm tra — càng dễ xây phán đoán cơ bản.
 
 ## Thứ tự gợi ý
@@ -74,10 +79,3 @@ Có thể đi theo vòng khép kín tối thiểu này:
 6. Học hoàn tác hoặc chỉnh sửa
 
 Vòng này chạy thông rồi, học nội dung phức tạp hơn sẽ nhẹ hơn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn định vị Codex dùng để hiểu codebase, xây tính năng, kiểm thử và rà soát thay đổi; trang này đồng thời chỉ cung cấp thứ tự nhập môn và điều hướng nội bộ, không phụ thuộc lệnh hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

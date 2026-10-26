@@ -2,6 +2,9 @@
 import { currentYear, languages, translations } from '../../data/chatgptPricing';
 import '../../styles/chatgpt-pricing.css';
 import quotes from '../../data/chatgptPriceQuotes.json';
+import planQuotes from '../../data/chatgptPlanQuotes.json';
+import planCopy from '../../data/chatgptPlanCopy.json';
+import snapshotCopy from '../../data/chatgptSnapshotCopy.json';
 import PricingFooter from './PricingFooter.astro';
 import {
 	standaloneHref,
@@ -42,32 +45,9 @@ const topbarLinks: {href: string; key?: string; label?: string; current?: boolea
 	{ href: localizedPath('/pets/'), key: 'pets' },
 	{ href: localizedPath('/theme/'), key: 'theme' },
 ];
-const traditional = initialLanguage === 'zh-TW';
-const copy = traditional ? {
- title: 'ChatGPT 價格來源與快照', subtitle: '按來源查看已核對的公開標價，購買前核對實際結帳資訊。',
- scope: '目前已核對美國 App Store 公開內購清單。其他地區、渠道與訂閱週期暫無核驗資料；未換算匯率，也未用套餐比例推算價格。',
- item:'內購項目原名', price:'來源標價', region:'地區與渠道', date:'核對日期', source:'查看來源',
- unknown:'清單未標明週期和稅費口徑；以結帳頁為準。', ambiguity:'Plus 有兩個同名標價，來源未解釋差異，不能將其中一個自行認定為年付。',
- heading:'已核對的公開清單', missing:'暫無核驗資料', other:'其他地區或渠道', us:'美國 App Store', all:'全部已核對項目', filter:'查看範圍',
- notes:'如何使用這份資料', historical:'這是標註日期的來源快照，不是即時報價。金額保留原幣種，清單不證明你的帳號可購買全部項目。',
- noData:'此範圍尚無帶來源的價格記錄。請在實際購買渠道核對，不沿用美國價格或舊的換算值。',
-} : chinese ? {
- title: 'ChatGPT 价格来源与快照', subtitle: '按来源查看已核对的公开标价，购买前核对实际结账信息。',
- scope: '目前已核对美国 App Store 公开内购清单。其他地区、渠道与订阅周期暂无核验数据；未换算汇率，也未用套餐比例推算价格。',
- item:'内购项目原名', price:'来源标价', region:'地区与渠道', date:'核对日期', source:'查看来源',
- unknown:'清单未标明周期和税费口径；以结账页为准。', ambiguity:'Plus 有两个同名标价，来源未解释差异，不能将其中一个自行认定为年付。',
- heading:'已核对的公开清单', missing:'暂无核验数据', other:'其他地区或渠道', us:'美国 App Store', all:'全部已核对项目', filter:'查看范围',
- notes:'如何使用这份数据', historical:'这是标注日期的来源快照，不是实时报价。金额保留原币种，清单不证明你的账号可购买全部项目。',
- noData:'此范围尚无带来源的价格记录。请在实际购买渠道核对，不沿用美国价格或旧的换算值。',
-} : {
- title:'ChatGPT price sources and snapshots', subtitle:'Source-checked public listings. Confirm the final price at checkout.',
- scope:'Coverage: the US App Store in-app purchase list. Other regions, channels and subscription periods are not verified. No currency conversions or proportional estimates are used.',
- item:'Listed item name', price:'Listed price', region:'Region and channel', date:'Checked on', source:'View source',
- unknown:'The list does not specify billing periods or tax treatment. Check at checkout.', ambiguity:'Plus appears at two prices under the same name. The source does not explain the difference; neither is assumed to be annual.',
- heading:'Source-checked public list', missing:'No verified data', other:'Other regions or channels', us:'US App Store', all:'All verified items', filter:'Coverage',
- notes:'Using this reference', historical:'This is a dated source snapshot, not a live quote. Original currencies are preserved. The list does not guarantee account eligibility for every item.',
- noData:'No sourced price records are available for this selection. Check your purchase channel; US prices and old conversions do not apply.',
-};
+const plan = planCopy[initialLanguage];
+const copy = snapshotCopy[initialLanguage];
+const guideHref = localizedPath('/guide/reference/model-selection/');
 
 ---
 
@@ -76,8 +56,8 @@ const copy = traditional ? {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>{copy.title} | Codex 指南手册</title>
-		<meta name="description" content={copy.subtitle} />
+		<title>{plan.title} | Codex Handbook</title>
+		<meta name="description" content={plan.subtitle} />
 		<link rel="canonical" href={canonicalUrl} />
 		{
 			languages.map((language) => (
@@ -92,17 +72,17 @@ const copy = traditional ? {
 	</head>
 	<body>
 		<main class="pricing-shell">
-			<nav class="topbar" aria-label="Page">
+			<nav class="topbar" aria-label={copy.pageNav}>
 				<div class="topbar-primary">
 					<a href={localizedPath('/')} class="brand">
 						<img src="/brand/logo.png" alt="" width="32" height="32" />
 						<span data-i18n="back">{t('back')}</span>
 					</a>
 					<details class="topbar-menu">
-						<summary aria-label="Menu">
+						<summary aria-label={copy.menu}>
 							<span class="topbar-menu__icon" aria-hidden="true"></span>
 						</summary>
-						<div class="topbar-nav topbar-nav--panel" aria-label="Main navigation">
+						<div class="topbar-nav topbar-nav--panel" aria-label={copy.mainNav}>
 							{
 								topbarLinks.map((link) => (
 									<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
@@ -113,7 +93,7 @@ const copy = traditional ? {
 						</div>
 					</details>
 				</div>
-				<div class="topbar-nav topbar-nav--desktop" aria-label="Main navigation">
+				<div class="topbar-nav topbar-nav--desktop" aria-label={copy.mainNav}>
 					{
 						topbarLinks.map((link) => (
 							<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
@@ -124,17 +104,52 @@ const copy = traditional ? {
 				</div>
 			</nav>
 
+            <div lang={initialLanguage}>
             <section class="hero">
                 <div>
-                    <p class="eyebrow">Source-checked · 2026-09-18</p>
-                    <h1>{copy.title}</h1>
-                    <p>{copy.subtitle}</p>
+                    <p class="eyebrow">{copy.sourceChecked} · 2026-10-24</p>
+                    <h1>{plan.title}</h1>
+                    <p>{plan.subtitle}</p>
                 </div>
             </section>
             <nav class="snapshot-languages" aria-label={t('language')}>
                 {languages.map(language => <a href={languageRoutes[language.code]} aria-current={language.code === initialLanguage ? 'page' : undefined}>{language.label}</a>)}
             </nav>
-            {!chinese && initialLanguage !== 'en' && <p lang="en">This updated price reference is currently available in English and Chinese. Navigation remains localized.</p>}
+            <nav class="snapshot-languages section-links" aria-label={plan.navigation}>
+                <a href="#plan-selection">{plan.plans}</a>
+                <a href="#official-prices">{plan.official}</a>
+                <a href="#channel-history">{plan.history}</a>
+                <a href="#notes-heading">{plan.notes}</a>
+            </nav>
+            <p class="model-guide-link"><a href={guideHref}>{plan.guide}</a></p>
+            <section class="plan-section" id="plan-selection" aria-labelledby="plan-heading">
+                <h2 id="plan-heading">{plan.plans}</h2>
+                <p>{plan.editorial}</p>
+                <div class="snapshot-table plan-table" tabindex="0" role="region" aria-label={plan.plans}>
+                    <table>
+                        <caption>{plan.plans}</caption>
+                        <thead><tr><th scope="col">{plan.plan}</th><th scope="col">{plan.fit}</th><th scope="col">{plan.upgrade}</th></tr></thead>
+                        <tbody>{plan.rows.map(row => <tr><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>)}</tbody>
+                    </table>
+                </div>
+                <p>{plan.limit}</p>
+                <p><a href="https://chatgpt.com/pricing/">{plan.more} ↗</a></p>
+            </section>
+            <section class="plan-section" id="official-prices" aria-labelledby="official-heading">
+                <h2 id="official-heading">{plan.official}</h2>
+                <p>{plan.officialNote}</p>
+                <div class="snapshot-table" tabindex="0" role="region" aria-label={plan.official}>
+                    <table>
+                        <caption>USD · {plan.month} · 2026-10-24</caption>
+                        <thead><tr><th scope="col">{plan.plan}</th><th scope="col">{plan.monthly}</th><th scope="col">{plan.coverage}</th><th scope="col">{plan.date}</th><th scope="col">{plan.source}</th></tr></thead>
+                        <tbody>{planQuotes.map(quote => <tr><th scope="row">{quote.plan}</th><td>{quote.currency} {quote.amount} / {plan.month}</td><td>{plan.unknown}</td><td><time datetime={quote.checkedAt}>{quote.checkedAt}</time></td><td><a href={quote.source}>{plan.source} ↗</a></td></tr>)}</tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="plan-section" id="channel-history" aria-labelledby="history-heading">
+                <h2 id="history-heading">{plan.history}</h2>
+                <p>{plan.historyNote}</p>
+            </section>
             <p class="snapshot-notice">{copy.scope}</p>
             <div class="snapshot-filter" hidden>
                 <label for="quote-scope">{copy.filter}</label>
@@ -157,6 +172,7 @@ const copy = traditional ? {
                 <p><a href="https://apps.apple.com/us/app/chatgpt/id6448311069" target="_blank" rel="noopener noreferrer">{copy.source} · Apple App Store</a></p>
             </section>
 
+            </div>
 		</main>
 
 		<PricingFooter year={currentYear} locale={currentLocale} lang={initialLanguage} />
@@ -166,6 +182,13 @@ const copy = traditional ? {
 </html>
 
 <style>
+.plan-section { margin-block: 2.5rem 1rem; line-height: 1.8; scroll-margin-top: 1rem; }
+.plan-table td { white-space: normal; min-width: 12rem; }
+.plan-table th { white-space: nowrap; }
+.model-guide-link { padding: 1.2rem; border: 1px solid var(--brand); border-radius: 12px; background: var(--brand-soft); line-height: 1.7; }
+.model-guide-link a { color: var(--brand-deep); font-weight: 700; }
+.section-links { padding-block: 1rem; border-block: 1px solid var(--line); }
+a:focus-visible, .snapshot-table:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
 .snapshot-languages { display:flex; flex-wrap:wrap; gap:.6rem 1rem; margin-block:1rem; }
 .snapshot-languages a[aria-current="page"] { font-weight:700; text-decoration-thickness:3px; }
 .snapshot-notice { padding:1rem; border-left:3px solid var(--brand); background:white; line-height:1.8; }

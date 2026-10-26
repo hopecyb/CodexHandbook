@@ -3,10 +3,15 @@ title: MCP
 description: サードパーティのツールとコンテキストを、制御された方法で ChatGPT と Codex に接続します。
 locale: ja
 source_locale: zh-CN
-source_revision: 8d9ec38
+source_revision: "8d9ec38"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: ChatGPT デスクトップ App / Codex CLI / IDE。ChatGPT Web は Plugin を介してリモート MCP ツールを使用します
+  basis: クライアントのサポート、共有設定、転送方式、CLI コマンド
+  checkedAt: '2026-08-25'
 ---
 
 MCP（Model Context Protocol）が解決するのは「Agent がリポジトリ外のツールやデータをどう呼び出すか」であり、「ワークフローをどう記述するか」ではありません。
@@ -41,13 +46,3 @@ MCP（Model Context Protocol）が解決するのは「Agent がリポジトリ�
 
 - [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [Model Context Protocol 仕様](https://modelcontextprotocol.io/)
-
----
-
-**状態：** verified
-
-**対象製品：** ChatGPT デスクトップ App / Codex CLI / IDE。ChatGPT Web は Plugin を介してリモート MCP ツールを使用します
-
-**検証範囲：** クライアントのサポート、共有設定、転送方式、CLI コマンド
-
-**最終検証：** 2026-08-25

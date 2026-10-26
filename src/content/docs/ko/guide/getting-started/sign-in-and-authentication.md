@@ -10,9 +10,10 @@ sidebar:
   order: 60
 locale: ko
 source_locale: zh-CN
-source_revision: ea83fa6
-translation_status: draft
+source_revision: 'ea83fa6'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Codex에서 OpenAI 모델을 사용할 때 개인에게는 두 가지 로그인 방식이 있습니다.

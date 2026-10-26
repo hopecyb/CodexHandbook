@@ -17,9 +17,10 @@ sidebar:
   order: 10
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 8a84ab8
+source_revision: '8a84ab8'
 ---
 
 You can notify an internal system after a task ends through a program return value, process exit status, event stream, or HTTP callback. Identify the sender and protocol first, then decide whether you need a webhook.

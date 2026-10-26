@@ -3,11 +3,16 @@ title: IDE에서 Cloud 작업 사용하기
 description: IDE에서 긴 작업을 Codex Cloud에 위임하고 검토 가능한 결과로 돌아오는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: d5369b5
-translation_status: draft
+source_revision: 'd5369b5'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: IDE / Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 IDE에서는 빠른 반복 작업을 로컬에서 진행할 수도 있고, Codex web에 연결해 시간이 더 걸리는 작업을 Cloud에 위임할 수도 있습니다. 시작점은 편집기 안에 그대로 있지만 실행 환경, 저장소 상태, 네트워크 경계는 클라우드로 바뀝니다.

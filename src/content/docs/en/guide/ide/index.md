@@ -8,8 +8,9 @@ title: IDE extension
 description: 'Use Codex in your editor: installation, context, local and cloud tasks, review, and settings.'
 locale: en
 source_locale: zh-CN
-source_revision: c2fa50b
-translation_status: draft
+source_revision: 'c2fa50b'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 12

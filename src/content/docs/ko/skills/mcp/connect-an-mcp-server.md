@@ -3,9 +3,14 @@ title: MCP 서버 연결
 description: CLI 또는 config.toml로 첫 MCP 서버를 설정하고 인증한 뒤 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0675d33
-translation_status: draft
+source_revision: '0675d33'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT 데스크톱 App / Codex CLI / IDE
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 이 장에서는 현재 공식 인터페이스로 최소한의 전체 과정을 완료합니다. **서버 추가 → 설정 확인 → 세션에서 도구 확인 → 읽기 전용 호출 한 번 실행** 순서입니다.

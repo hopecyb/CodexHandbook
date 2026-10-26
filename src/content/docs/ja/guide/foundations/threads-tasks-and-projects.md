@@ -3,12 +3,17 @@ title: スレッド、タスクとプロジェクト
 description: セッション、タスク、プロジェクト作業領域の関係を整理する。
 locale: ja
 source_locale: zh-CN
-source_revision: c360452
+source_revision: 'c360452'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページはプロジェクト、スレッド、タスクの三層関係のみを説明。サイト内リンクと概念表現を再確認済み。本文に変わりやすい製品事実への依存はない。
+  checkedAt: '2026-07-26'
 ---
 
 製品によって用語は少し異なる場合がありますが、本ハンドブックでは次のように統一します。
@@ -62,10 +67,3 @@ sidebar:
 スレッドは容器に近く、タスクはその中の具体的な一回の作業です。
 
 プロジェクトはどこで作業するか、スレッドはどの履歴を覚えているか、タスクは今回何を完了するかを決めます。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページはプロジェクト、スレッド、タスクの三層関係のみを説明。サイト内リンクと概念表現を再確認済み。本文に変わりやすい製品事実への依存はない。  
-**最終検証：** 2026-07-26

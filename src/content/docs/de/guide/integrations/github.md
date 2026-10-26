@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud / App / CLI"
+  basis: "OpenAI Developers Codex-Use-Cases enthalten weiterhin „Review GitHub pull requests“; Help Center zu Plugins/Integrationen betont Repo-Zugriff über App-Berechtigungen, Rollen und Aktionsgrenzen. Seite fasst Kollaborationsposition von Repo, Branch, PR, Review, CI sowie Sichtbarkeitsunterschied lokal vs. Cloud zusammen."
+  checkedAt: "2026-07-26"
 title: GitHub-Integration
 description: "Repo-Anbindung, PR, Review und CI — Codex in GitHub-Workflows."
 locale: de
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: "ece7161"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -46,16 +51,16 @@ Auch ohne Senior-Dev-Hintergrund zuerst:
 
 | | Lokaler Clone | Cloud |
 |---|---|---|
-| Codequelle | Arbeitsbereich auf Ihrer Maschine | Remote-Clone |
+| Codequelle | Arbeitsbereich auf deinem Rechner | Remote-Clone |
 | Ungepushte Commits | Sichtbar | Unsichtbar — zuerst push |
-| Umgebung | Ihre Node-/Systemversion | Konfiguriertes Image |
+| Umgebung | Deine Node-/Systemversion | Konfiguriertes Image |
 | Geeignet | Alltag | Asynchrone Langaufgaben, Standard-Builds |
 
 ## Review-Workflow
 
 1. Codex oder Mensch öffnet PR
 2. Mensch liest Diff (oder `$pr-review`-Skill)
-3. CI läuft Tests
+3. CI führt Tests aus
 4. Kommentare treiben Revision — neue Codex-Aufgabe „nur Review-Kommentare“
 5. Mensch mergt
 
@@ -73,7 +78,7 @@ Häufiger:
 
 Grob:
 
-- **PR**: Ihre Änderung formell zur Ansicht vorschlagen
+- **PR**: Deine Änderung formell zur Ansicht vorschlagen
 - **Review**: Andere prüfen die Änderung
 
 Reicht für den Großteil dieser Seite.
@@ -94,15 +99,9 @@ GitHub-Integration schließt Codex an bestehende Code-Kollaboration an.
 
 ## Häufige Fehler
 
-- Cloud-Aufgabe nimmt ungepushte lokale Änderungen an
+- Cloud-Aufgabe setzt fälschlich voraus, dass nicht committete lokale Änderungen verfügbar sind
 - Codex führt unbereinigte Anweisungen in PR-Beschreibungen aus (Prompt-Injection)
 - Derselbe PR mischt Formatierung und Feature-Änderung
 
 ## Quellen
 - OpenAI-Codex-GitHub-Integrationsdokumentation
----
-
-**Status:** verified  
-**Gilt für:** Cloud / App / CLI  
-**Prüfgrundlage:** OpenAI Developers Codex-Use-Cases enthalten weiterhin „Review GitHub pull requests“; Help Center zu Plugins/Integrationen betont Repo-Zugriff über App-Berechtigungen, Rollen und Aktionsgrenzen. Seite fasst Kollaborationsposition von Repo, Branch, PR, Review, CI sowie Sichtbarkeitsunterschied lokal vs. Cloud zusammen.  
-**Zuletzt geprüft:** 2026-07-26

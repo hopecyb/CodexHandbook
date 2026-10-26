@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 5939a9d
+source_revision: '5939a9d'
+reviewed_at: 2026-10-25
 ---
 
 An agent uses **tools** to read files, run commands, search the web, and open a browser. Choosing the right tool and stating its boundaries helps avoid unplanned network access and excessive changes.

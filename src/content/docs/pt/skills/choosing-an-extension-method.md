@@ -8,9 +8,10 @@ title: "Como escolher um método de extensão"
 description: "Escolha entre prompt, AGENTS.md, Skill, MCP, Hook, Plugin e Scheduled task de acordo com o que precisa permanecer ou acontecer automaticamente."
 locale: pt
 source_locale: zh-CN
-source_revision: 28ae6f5
-translation_status: draft
+source_revision: "28ae6f5"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Quando há muitos mecanismos de extensão, o erro mais comum é escolher primeiro o nome de uma tecnologia e depois procurar um problema que caiba nela. Uma ordem mais segura começa com a pergunta: **o que exatamente quero preservar, ou o que quero que aconteça automaticamente?**
@@ -42,7 +43,7 @@ Comece com um prompt. Deixe claros o objetivo, as entradas, o escopo, os critér
 
 Registre-a no `AGENTS.md`. Por exemplo: comandos de teste, estilo de código, diretórios que não podem ser modificados e regras para instalar dependências. Não transforme um pedido pontual em regra permanente do projeto.
 
-### 3. Tarefas semelhantes seguem etapas e produzem saídas estáveis?
+### 3. tarefas semelhantes seguem etapas e produzem saídas estáveis?
 
 Transforme o processo em um Skill. Ele é adequado para guardar instruções reutilizáveis, além de modelos, referências, recursos ou scripts auxiliares quando necessário. Se o processo ainda não tem critérios de sucesso estáveis, continue experimentando com prompts.
 

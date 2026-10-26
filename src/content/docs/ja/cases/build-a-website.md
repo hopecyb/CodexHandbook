@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
+reviewed_at: "2026-10-26"
 ---
 
 イベント資料を、ブラウザーで開ける1ページのWebサイトにします。成果物はローカルの静的ページと受け入れ確認記録です。イベントと会場は架空で、申し込み方法は未定です。

@@ -3,14 +3,17 @@ title: Installation et première utilisation
 description: Découvrez les points d'entrée projet, conversation, Codex et révision dans l'App de bureau ChatGPT.
 locale: fr
 source_locale: zh-CN
-source_revision: 080436d
+source_revision: "080436d"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 ---
-
 Ce chapitre s'adresse aux personnes qui ouvrent l'App de bureau ChatGPT pour la première fois. L'objectif n'est pas de mémoriser chaque bouton, mais d'accomplir une **petite tâche révisable et vérifiable**.
 
 Pour l'installation et la connexion, consultez [Installer l'App de bureau](/fr/guide/getting-started/install-desktop-app/). L'App officielle est actuellement disponible pour macOS, Windows et Linux. Une fois connecté, vous pouvez démarrer une conversation, créer un projet ou ouvrir un dossier local.
@@ -32,7 +35,7 @@ Préparez un dépôt Git existant. Vérifiez d'abord qu'il ne contient pas de mo
 Saisissez :
 
 ```text
-Lis d'abord README.md et modifie uniquement sa section « Run locally » :
+Lis d'abord README.md et modifie uniquement sa section « Exécution locale » :
 1. Corrige la commande de démarrage qui ne fonctionne plus.
 2. Ne modifie aucune autre section.
 3. Affiche le diff et exécute toute commande de vérification documentée.
@@ -67,11 +70,3 @@ Poursuivez avec [Diffs, commentaires et révision](/fr/guide/desktop-app/diffs-c
 
 - [App de bureau ChatGPT](https://learn.chatgpt.com/docs/app)
 - [Révision de code](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** App
-
-**Dernière vérification :** 2026-08-26

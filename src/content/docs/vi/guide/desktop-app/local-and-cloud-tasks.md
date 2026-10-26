@@ -1,14 +1,19 @@
 ---
-title: Tác vụ local và Cloud
-description: Chuyển giữa thực thi local và Cloud trong App.
-locale: vi
-source_locale: zh-CN
-source_revision: 741f686
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tác vụ local và Cloud"
+description: "Chuyển giữa thực thi local và Cloud trong App."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "741f686"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 70
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "OpenAI Help Center hiện tại — *ChatGPT Work and Codex* và *Using Codex with your ChatGPT plan* — đều phân biệt rõ local workflows và cloud tasks; trang này chỉ tóm tắt trong ngữ cảnh Desktop App nguyên tắc chọn «local phù hợp lặp nhanh, Cloud phù hợp kho từ xa và tác vụ dài»."
+  checkedAt: "2026-07-26"
 ---
 
 Ở đây nói về việc trong ứng dụng Desktop, tác vụ chạy trên máy bạn hay môi trường từ xa.
@@ -46,10 +51,3 @@ Các tình huống thường gặp:
 - Không muốn chiếm tài nguyên máy local
 
 Trong Desktop App, nếu local làm được thì thường dùng local; khi tác vụ dài hơn, nghiêng về từ xa, hoặc cần môi trường thống nhất thì mới cân nhắc Cloud.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện tại — *ChatGPT Work and Codex* và *Using Codex with your ChatGPT plan* — đều phân biệt rõ local workflows và cloud tasks; trang này chỉ tóm tắt trong ngữ cảnh Desktop App nguyên tắc chọn «local phù hợp lặp nhanh, Cloud phù hợp kho từ xa và tác vụ dài».  
-**Kiểm chứng gần nhất:** 2026-07-26

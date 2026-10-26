@@ -3,12 +3,16 @@ title: 設定
 description: デスクトップ App の日常動作、ショートカット、通知、外観を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 7a6d2fe
+source_revision: "7a6d2fe"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 90
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: "2026-08-26"
 ---
 
 設定ページは App の動作を個人向けに調整するためのもので、Codex の権限設定全体を扱う場所ではありません。まずはデフォルト値を維持し、影響範囲を理解してから変更してください。
@@ -55,11 +59,3 @@ macOS では `Cmd + ,`、Windows では `Ctrl + ,` を押すか、App のメニ�
 - [ChatGPT デスクトップ App の設定](https://learn.chatgpt.com/docs/app/settings)
 - [Codex の基本設定](https://learn.chatgpt.com/docs/config)
 - [権限](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**最終検証：** 2026-08-26

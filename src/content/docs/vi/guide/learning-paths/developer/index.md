@@ -1,34 +1,39 @@
 ---
 title: "Lộ trình nhà phát triển: đọc mã, sửa lỗi, rà soát và bàn giao"
 description: "Bài tập lỗi giỏ hàng hiện có kết nối đọc mã, kiểm thử đỏ/xanh, rà soát diff và bàn giao, kèm ba mẫu có thể điền."
-contentType: path
-audiences: [developer]
-level: beginner
-outputs: [javascript, markdown, test-log]
-editorialStatus: review
+contentType: "path"
+audiences:
+  - "developer"
+level: "beginner"
+outputs:
+  - "javascript"
+  - "markdown"
+  - "test-log"
+editorialStatus: "review"
 verification:
-  kind: run-tested
+  kind: "run-tested"
   checkedAt: "2026-09-18"
   summary: "Đã chạy lại bài tập tham khảo: ban đầu một trong ba bài kiểm thử thất bại, sau khi sửa theo bản tham khảo cả ba đều đạt và hai tệp kiểm thử giống nhau. Tác giả đã tự rà soát các mẫu; chưa có người học độc lập hoàn thành lộ trình."
   environment: "Node.js v22.16.0 / Darwin arm64; node:test tích hợp, không cần thư viện phụ thuộc bên thứ ba."
   evidence:
     - label: "Tóm tắt lần chạy thực tế"
-      href: /downloads/developer-path/run-record.json
+      href: "/downloads/developer-path/run-record.json"
     - label: "Tài liệu rà soát tham khảo và giới hạn phạm vi của tác giả"
-      href: /downloads/developer-path/review-reference.md
+      href: "/downloads/developer-path/review-reference.md"
 sidebar:
   order: 20
 prev:
-  link: /vi/guide/learning-paths/
+  link: "/vi/guide/learning-paths/"
   label: "Chọn lộ trình học"
 next:
-  link: /vi/cases/use-cases/software-development/fix-a-bug-with-verification/
+  link: "/vi/cases/use-cases/software-development/fix-a-bug-with-verification/"
   label: "Bắt đầu sửa bug có kiểm chứng"
-locale: vi
-source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "22d8bd3"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 Dùng một bài tập giỏ hàng nhỏ để làm bốn việc: giải thích mã, sửa lỗi, rà soát thay đổi và bàn giao bằng chứng. Bạn không cần học trước mọi ứng dụng khách, cấu hình hoặc tính năng nhiều Agent.
 

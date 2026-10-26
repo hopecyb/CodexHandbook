@@ -1,13 +1,19 @@
 ---
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: "Checked against the handbook’s current six content states, verification labeling rules, and official-source-first principle. This page describes the site’s version policy and reading method, not specific product-version parameters."
+  checkedAt: "2026-07-26"
 title: Handbook version policy
 description: How content status, verification dates, and ongoing updates work.
 locale: en
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: 'a608dc3'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
+reviewed_at: 2026-10-25
 ---
 
 ## Ongoing updates

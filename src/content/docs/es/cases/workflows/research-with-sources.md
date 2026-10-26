@@ -3,12 +3,21 @@ title: Investigación con fuentes
 description: Usa Codex para buscar, comparar y verificar hechos — con fuentes y conclusiones trazables.
 locale: es
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: "a6fd201"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las capacidades públicas actuales de Web search e investigación con fuentes de OpenAI Developers, y con los capítulos ya verificados de búsqueda web, validar fuentes, incertidumbre y política de versiones. Esta página solo confirma el método estable «conclusiones clave trazables a fuentes; conflictos e incertidumbre marcados de forma explícita».
+  checkedAt: '2026-07-26'
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs:
+  - markdown
 ---
-
 **Investigación con fuentes** exige que cada conclusión clave vuelva a una fuente concreta —documentación oficial, papers o archivos del repo—, no a un juicio sin base. Sirve para selección técnica, comparación de competidores, revisiones bibliográficas e interpretación de políticas.
 
 ## Enfoque de esta página
@@ -22,7 +31,7 @@ reviewed_at: 2026-08-26
 ```text
 Investiga la idoneidad de «Rust frente a Go en el contexto de este repositorio»:
 1. Lista primero las dimensiones de evaluación (rendimiento, ecosistema, familiaridad del equipo)
-2. Cada conclusión lleva URL de fuente o ruta de archivo @en el repo
+2. Cada conclusión lleva URL de fuente o @ruta/de/archivo/del/repositorio
 3. Lo no verificable se marca como «pendiente de confirmar»
 4. Al final, recomendación y preguntas abiertas
 No cambies el código.
@@ -63,10 +72,3 @@ Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas l
 
 - [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
 - [Caso: refactorizar documentación con revisión](/es/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con las capacidades públicas actuales de Web search e investigación con fuentes de OpenAI Developers, y con los capítulos ya verificados de búsqueda web, validar fuentes, incertidumbre y política de versiones. Esta página solo confirma el método estable «conclusiones clave trazables a fuentes; conflictos e incertidumbre marcados de forma explícita».

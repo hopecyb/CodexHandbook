@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains acceptance and definition-of-done writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Define done
 description: Write checkable completion conditions.
 locale: en
 source_locale: zh-CN
-source_revision: e97e854
+source_revision: 'e97e854'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many people state what they want but not what "done enough" looks like. Then whether the work is finished becomes a matter of feel.
@@ -77,10 +82,3 @@ If not, it's probably still too vague.
 Bottom line: don't let "is it done?" depend on guessing.
 
 Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/en/guide/quality/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains acceptance and definition-of-done writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

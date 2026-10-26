@@ -1,20 +1,21 @@
 ---
-title: "Harness Engineering（ハーネスエンジニアリング）"
-description: "ここではモデルを取り巻く実行環境、つまり参照できるプロジェクト知識、ツール、テスト、フィードバック、状態、エラーからの回復に注目します。モデルの能力だけでなく、環境もタスクを完了できるかどうかに影響します。"
-contentType: "guide"
-editorialStatus: "review"
+title: Harness Engineering（ハーネスエンジニアリング）
+description: ここではモデルを取り巻く実行環境、つまり参照できるプロジェクト知識、ツール、テスト、フィードバック、状態、エラーからの回復に注目します。モデルの能力だけでなく、環境もタスクを完了できるかどうかに影響します。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。
   evidence:
-    - label: "Harness engineeringの技術記事"
-      href: "https://openai.com/index/harness-engineering/"
+  - label: Harness engineeringの技術記事
+    href: https://openai.com/index/harness-engineering/
 locale: ja
 source_locale: zh-CN
-source_revision: 268e611
-translation_status: draft
+source_revision: "268e611"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## 確認可能な出来事と範囲
 

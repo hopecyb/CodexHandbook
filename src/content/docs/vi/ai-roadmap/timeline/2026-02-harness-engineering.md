@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/harness-engineering/"
 locale: vi
 source_locale: zh-CN
-source_revision: 268e611
-translation_status: draft
+source_revision: "268e611"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 ## Sự kiện và phạm vi có thể kiểm chứng

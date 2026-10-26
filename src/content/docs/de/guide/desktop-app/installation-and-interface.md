@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Installation und erster Einsatz
 description: Lerne Projekte, Chats, Codex und Review-Einstiege in der ChatGPT-Desktop-App kennen.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 080436d
+source_revision: "080436d"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Dieses Kapitel richtet sich an Personen, die die ChatGPT-Desktop-App zum ersten Mal öffnen. Ziel ist nicht, alle Schaltflächen auswendig zu lernen, sondern eine **kleine, prüfbare und verifizierbare Aufgabe** abzuschließen.
@@ -67,11 +71,3 @@ Lerne als Nächstes [Diffs, Kommentare und Reviews](/de/guide/desktop-app/diffs-
 
 - [ChatGPT desktop app](https://learn.chatgpt.com/docs/app)
 - [Code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Zuletzt geprüft:** 2026-08-26

@@ -3,11 +3,16 @@ title: IDE 통합 설치 및 활성화
 description: VS Code 계열 편집기, Xcode, JetBrains IDE에서 Codex를 올바르게 여는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: 85e1691
-translation_status: draft
+source_revision: '85e1691'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 IDE 진입점은 두 종류로 나뉘며 설치 방법을 서로 혼용할 수 없습니다.

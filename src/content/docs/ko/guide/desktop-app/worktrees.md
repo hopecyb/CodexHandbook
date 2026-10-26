@@ -7,11 +7,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: "3569716"
-translation_status: draft
+source_revision: '3569716'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
 
 작업 트리(worktree)를 사용하면 하나의 Git 저장소에 여러 독립적인 체크아웃 디렉터리를 둘 수 있습니다. 각 디렉터리는 자체 파일과 브랜치 상태를 갖지만 저장소의 Git 메타데이터는 공유합니다. 따라서 여러 코딩 채팅을 동시에 진행하면서 서로의 파일을 덮어쓰지 않도록 할 수 있습니다.

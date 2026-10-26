@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "OpenAI Help《Skills in ChatGPT》が Skill を再利用可能・共有可能な workflow と確認。現在の Codex ランタイムもスキル名と説明でマッチング。本ページは選定原則が中心で、変わりやすい UI に依存しない。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help《Skills in ChatGPT》が Skill を再利用可能・共有可能な workflow と確認。現在の Codex ランタイムもスキル名と説明でマッチング。本ページは選定原則が中心で、変わりやすい UI に依存しない。
+  checkedAt: '2026-07-26'
 title: いつ Skill を使うか
 description: タスクが Skill としてパッケージ化に適しているかの判断、およびスラッシュコマンド・MCP との役割分担。
 locale: ja
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: "5e688f4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Skill を初めて使うとき、よくある疑問は「これをわざわざ Skill にする価値があるか」です。

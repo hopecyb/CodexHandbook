@@ -3,12 +3,16 @@ title: Méthodes de flux de travail
 description: Méthodes de collaboration reproductibles — non liées à une seule interface produit, avec points de contrôle et critères d'acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: d058896
+source_revision: "d058896"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés actuels sur les prompts, la qualité, le travail Agent et les Skills ; cette page assure uniquement la navigation méthodologique et l'explication des points de contrôle par phase, sans traiter les flux clients spécifiques comme un contrat à long terme.
+  checkedAt: '2026-07-26'
 ---
-
 Les [prompts](/fr/prompts/) enseignent **comment formuler** ; les flux de travail enseignent **comment organiser une tâche entière**. Les méthodes de ce chapitre s'appliquent à App, CLI, IDE et Cloud.
 
 ## Pourquoi des flux de travail
@@ -52,10 +56,3 @@ Sans points de contrôle, les risques sont nombreux : modifier le mauvais réper
 2. **Petits pas par défaut** : des incréments vérifiables valent mieux qu'un énorme changement unique
 3. **Échecs récupérables** : savoir annuler et forker un fil pour continuer
 4. **Capitaliser quand c'est possible** : à la troisième répétition d'un flux, en faire un Skill ou un modèle
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés actuels sur les prompts, la qualité, le travail Agent et les Skills ; cette page assure uniquement la navigation méthodologique et l'explication des points de contrôle par phase, sans traiter les flux clients spécifiques comme un contrat à long terme.

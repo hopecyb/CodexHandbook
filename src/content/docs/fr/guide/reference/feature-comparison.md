@@ -10,9 +10,10 @@ sidebar:
   order: 30
 locale: fr
 source_locale: zh-CN
-source_revision: b3d30b0
-translation_status: draft
+source_revision: 'b3d30b0'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Ce tableau compare uniquement les **principaux modes de travail relativement stables**. Il ne transforme pas de petites fonctions qui changent vite en promesses durables. Servez-vous d’abord du [schéma de choix du client](/fr/guide/choose-your-client/) pour décider, puis vérifiez ici les différences.
@@ -68,4 +69,4 @@ Plugins, Scheduled tasks, notifications, modèles et politiques d’organisation
 - quels sont les noms actuels des commandes, raccourcis ou éléments d’interface ;
 - si une connexion par clé API donne accès à une capacité ChatGPT ou Cloud donnée.
 
-Le principe de choix reste simple : **l’IDE pour le code local, le CLI pour les cycles dans le terminal, l’App de bureau pour coordonner les tâches locales et le Cloud pour une exécution distante isolée.**
+Le principe de choix reste simple : **l’IDE pour les modifications ciblées du code, le CLI pour les cycles dans le terminal, l’App de bureau pour coordonner les tâches locales et le Cloud pour une exécution distante isolée.**

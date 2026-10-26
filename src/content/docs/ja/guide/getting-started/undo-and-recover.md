@@ -3,8 +3,8 @@ title: 取り消しと復元
 description: 結果に不満があるときに安全に戻す。
 locale: ja
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: '8aa3171'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
@@ -13,6 +13,7 @@ legacyVerification:
   products: App / CLI / IDE
   basis: 本ハンドブックの検証済みの承認、結果確認、失敗からの復旧、Git と作業領域に関する入門章と照合しました。このページは「一時停止、範囲確認、取り消し優先、安全な状態への復元」という安定した方法のみを扱い、特定クライアントの取り消し操作を固定仕様とはしません。
   checkedAt: '2026-07-26'
+reviewed_at: '2026-10-26'
 ---
 
 Codex を初めて使うとき、多くの人が最も心配するのは「間違えたら戻れるか？」です。

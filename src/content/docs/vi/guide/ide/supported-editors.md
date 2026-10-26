@@ -1,13 +1,19 @@
 ---
-title: Các trình soạn thảo được hỗ trợ
-description: Phân biệt tiện ích tương thích với VS Code, tích hợp Xcode và tích hợp JetBrains.
-locale: vi
-source_locale: zh-CN
-source_revision: 7b82896
-translation_status: draft
-translated_at: 2026-09-20
+title: "Các trình soạn thảo được hỗ trợ"
+description: "Phân biệt tiện ích tương thích với VS Code, tích hợp Xcode và tích hợp JetBrains."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "7b82896"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Đã đối chiếu trang IDE chính thức hiện tại để xác nhận điểm truy cập cụ thể của VS Code, Cursor, Windsurf, VS Code Insiders, Xcode và JetBrains IDEs; không giả định mọi tích hợp đều có tính năng giống nhau."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Codex hiện có mặt trong các trình soạn thảo phổ biến theo nhiều cách: họ VS Code dùng tiện ích Codex, còn Xcode và các IDE JetBrains có điểm truy cập tích hợp riêng.

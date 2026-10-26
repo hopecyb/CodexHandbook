@@ -3,15 +3,20 @@ title: Monorepo での AGENTS.md
 description: 単一リポジトリ複数パッケージ構造でのプロジェクト指示、スコープ、テストコマンドの例パターン。
 locale: ja
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブック現行 `AGENTS.md`、ファイルディレクトリコンテキスト、Cloud 環境章を相互確認。monorepo 層分け説明の例パターンとコマンド整理方法に限定。具体製品入口やマネージド実装を固定契約として扱わない。
+  checkedAt: "2026-07-26"
 ---
 
-Monorepo では複数 app、共有パッケージ、異なる技術スタックが共存します。巨大な `AGENTS.md` 一本だと Agent が**誤ったパッケージを変更**したり、誤ったテストを走らせることがあります。本ページは再利用可能な**層分け説明**パターン（例。リポジトリに合わせて裁剪してください）。
+Monorepo では複数 app、共有パッケージ、異なる技術スタックが共存します。巨大な `AGENTS.md` 一本だと Agent が**誤ったパッケージを変更**したり、誤ったテストを走らせることがあります。本ページは再利用可能な**層分け説明**パターン（例。リポジトリに合わせて調整してください）。
 
 ## このページで扱うこと
 
@@ -26,14 +31,14 @@ Monorepo では複数 app、共有パッケージ、異なる技術スタック�
 - 全部見えるが、今どの層に従うべきか分からない
 - 一パッケージだけ直したいのに、別の場所まで触る
 
-ルールをディレクトリ境界と一緒に明確にするが要点。機械的に `AGENTS.md` を増やすだけではありません。
+ルールをディレクトリ境界と一緒に明確にすることが要点。機械的に `AGENTS.md` を増やすだけではありません。
 
 ## 推奨構造（例）
 
 ```text
 repo-root/
   AGENTS.md              # グローバル：ブランチ方針、commit 規範、禁止事項
-  apps/web/AGENTS.md     # フロント：フレームワーク、テストコマンド、ルート約束
+  apps/web/AGENTS.md     # フロント：フレームワーク、テストコマンド、ルーティング規約
   apps/api/AGENTS.md     # バックエンド：API スタイル、マイグレーション規律
   packages/shared/       # ルート文書リンクのみ、または短い子説明
 ```
@@ -62,7 +67,7 @@ repo-root/
 
 `apps/web` と `apps/api` で開発・テスト・制約が違えば、各ディレクトリに書くほど Codex の迷いが減ります。
 
-## サブパッケージ AGENTS.md テンプレ片段
+## サブパッケージ AGENTS.md テンプレートの抜粋
 
 ```markdown
 ## スコープ
@@ -78,7 +83,7 @@ repo-root/
 共有型は `@acme/shared` から import。コピペしない。
 ```
 
-## タスク prompt の配合
+## タスク prompt との組み合わせ
 
 クロスパッケージリファクタでは**パスを明示**：
 
@@ -121,11 +126,4 @@ Monorepo は Cloud で**ルート未インストール**や filter 誤りで失�
 - [ ] 任意パッケージでテストコマンドを単独実行できる
 - [ ] クロスパッケージタスクの prompt に許可パスを明記
 
-Monorepo の `AGENTS.md` は一味に集中させる必要はない。「グローバル合意」と「ディレクトリ局所ルール」を適切な場所に置くのが適切です。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ハンドブック現行 `AGENTS.md`、ファイルディレクトリコンテキスト、Cloud 環境章を相互確認。monorepo 層分け説明の例パターンとコマンド整理方法に限定。具体製品入口やマネージド実装を固定契約として扱わない。  
-**最終検証：** 2026-07-26
+Monorepo の `AGENTS.md` はひたすら一か所に集約する必要はない。「グローバル合意」と「ディレクトリ局所ルール」を適切な場所に置くのが適切です。

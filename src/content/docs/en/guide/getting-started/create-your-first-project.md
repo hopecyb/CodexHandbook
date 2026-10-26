@@ -8,11 +8,12 @@ title: Create your first practice project
 description: Set up a safe, disposable practice directory.
 locale: en
 source_locale: zh-CN
-source_revision: 43dcbdb
-translation_status: draft
+source_revision: '43dcbdb'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 70
+reviewed_at: 2026-10-25
 ---
 
 When setting up a first practice project, it is tempting to use a real project you already have. That may seem convenient, but it also raises the risk.

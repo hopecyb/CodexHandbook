@@ -7,9 +7,10 @@ title: Tổng quan về Plugins
 description: Tìm hiểu thành phần, nền tảng hỗ trợ, cách cài đặt và xác minh, cùng ranh giới tin cậy của Plugin.
 locale: vi
 source_locale: zh-CN
-source_revision: 4efe5a8
-translation_status: draft
+source_revision: "4efe5a8"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 ChatGPT và Codex dùng chung danh mục Plugin công khai. Plugin kết hợp một nhóm khả năng liên quan thành quy trình có thể tìm kiếm và cài đặt; nó không tạo ra giao thức gọi công cụ mới.

@@ -1,14 +1,19 @@
 ---
-title: Dự án và tác vụ
-description: Quản lý dự án và tác vụ trong App.
-locale: vi
-source_locale: zh-CN
-source_revision: 6a1f17f
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Dự án và tác vụ"
+description: "Quản lý dự án và tác vụ trong App."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "6a1f17f"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Tài liệu Help Center hiện tại về ứng dụng desktop vẫn phân biệt rõ dự án / ngữ cảnh dự án với phiên chat/work/codex cụ thể, và nêu có thể mở thư mục hoặc dự án local trong ứng dụng desktop để bắt đầu; trang này chỉ giải thích phân tầng khái niệm «dự án là không gian làm việc, tác vụ là ủy thác lần này»."
+  checkedAt: "2026-07-26"
 ---
 
 Hai từ «dự án» và «tác vụ» nghe đơn giản, nhưng lần đầu dùng dễ lẫn. Dự án là bộ tệp hoặc kho bạn đang xử lý; tác vụ là việc cụ thể bạn nhờ Codex làm lần này.
@@ -28,8 +33,8 @@ Bộ khái niệm này quan trọng vì trong ứng dụng Desktop luôn có hai
 - Thêm thư mục luyện tập hoặc thư mục gốc kho
 - Một lúc tập trung một dự án để giảm trộn ngữ cảnh
 
-«Dự án» có thể xem như **sân làm việc** của lần cộng tác này.  
-Sân sai thì nhiều vấn đề sau đó sẽ lệch theo.
+«Dự án» có thể xem như **không gian làm việc** của lần cộng tác này.
+Chọn sai không gian làm việc thì nhiều vấn đề sau đó sẽ lệch theo.
 
 ## Tác vụ
 
@@ -37,8 +42,8 @@ Sân sai thì nhiều vấn đề sau đó sẽ lệch theo.
 - Quan sát kế hoạch và lời gọi công cụ
 - Phê duyệt hoặc từ chối khi cần
 
-«Tác vụ» chính là **ủy thác cụ thể** bạn đưa ra lần này.  
-Ủy thác càng rõ, Codex càng ít phải vừa làm vừa đoán.
+«Tác vụ» chính là **công việc cụ thể** bạn đưa ra lần này.
+Yêu cầu càng rõ, Codex càng ít phải vừa làm vừa đoán.
 
 Đối chiếu khái niệm: [Thread, tác vụ và dự án](/vi/guide/foundations/threads-tasks-and-projects/)
 
@@ -52,7 +57,7 @@ Chọn sai dự án thì các câu hỏi kiểu «sao nó không thấy tệp» 
 
 ### 2. Một dự án có thể có nhiều tác vụ không?
 
-Có.  
+Có.
 Cách ổn định hơn:
 
 - Trong cùng một dự án
@@ -85,10 +90,3 @@ Lần đầu làm việc trong ứng dụng Desktop, có thể theo thứ tự:
 2. Xác nhận mục tiêu tác vụ chỉ nói một việc chính
 3. Bổ sung phạm vi hạn chế và tiêu chí hoàn thành
 4. Sau khi bắt đầu, tập trung xem kế hoạch, lời gọi công cụ và kết quả thay đổi
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App  
-**Căn cứ kiểm chứng:** Tài liệu Help Center hiện tại về ứng dụng desktop vẫn phân biệt rõ dự án / ngữ cảnh dự án với phiên chat/work/codex cụ thể, và nêu có thể mở thư mục hoặc dự án local trong ứng dụng desktop để bắt đầu; trang này chỉ giải thích phân tầng khái niệm «dự án là sân làm việc, tác vụ là ủy thác lần này».  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Desktop Voice (plan and workspace settings dependent)"
+  basis: "OpenAI Help Center articles on ChatGPT Voice and ChatGPT Work and Codex state Voice can work with Work/Codex in the desktop App to start tasks, follow progress, and coordinate work; availability depends on plan, workspace settings, and version. This page focuses on use cases, privacy, and \"speak then confirm in writing.\""
+  checkedAt: "2026-07-26"
 title: Voice input and output
 description: When to use voice with Codex, limitations, and privacy considerations.
 locale: en
 source_locale: zh-CN
-source_revision: 192bba2
+source_revision: '192bba2'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+sidebar:
+  order: 70
 ---
 
 Some Codex clients support **voice**: speak a task or hear a reply summary. Good when your hands are busy or you want to dictate ideas quickly—**not** for reading secrets aloud or replacing written acceptance records.
@@ -102,10 +109,3 @@ Then ask for a written version to confirm.
 - Describing unsanitized production incidents aloud
 
 Voice helps you start and follow up—not replace precise instructions, sensitive handling, or final acceptance.
-
----
-
-**Status:** verified  
-**Applicable products:** App / Desktop Voice (plan and workspace settings dependent)  
-**Verification basis:** OpenAI Help Center articles on ChatGPT Voice and ChatGPT Work and Codex state Voice can work with Work/Codex in the desktop App to start tasks, follow progress, and coordinate work; availability depends on plan, workspace settings, and version. This page focuses on use cases, privacy, and "speak then confirm in writing."  
-**Last verified:** 2026-07-26

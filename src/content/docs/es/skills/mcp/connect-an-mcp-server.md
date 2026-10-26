@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: verified
+  products: App de escritorio de ChatGPT / Codex CLI / IDE
+  checkedAt: '2026-08-25'
 title: Conectar un servidor MCP
 description: Configura, autentica y verifica el primer servidor MCP mediante la CLI o config.toml.
 locale: es
-source_locale: zh-cn
-source_revision: 0675d33
+source_locale: zh-CN
+source_revision: "0675d33"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Este capítulo completa el ciclo oficial actual: **añadir el servidor -> inspeccionar la configuración -> confirmar las herramientas en una sesión -> realizar una llamada de solo lectura**.
@@ -70,14 +74,14 @@ Las listas MCP de la App de escritorio y del IDE también identifican los servid
 |---|---|
 | App de escritorio de ChatGPT | Settings -> MCP servers; reiniciar después de guardar; usar `/mcp` |
 | Codex CLI | `codex mcp add/list/login`; usar `/mcp` en la TUI |
-| Integración IDE | Gear -> MCP servers; reiniciar la extensión después de guardar |
+| Integración IDE | Menú del engranaje -> MCP servers; reiniciar la extensión después de guardar |
 
 Estas superficies comparten la configuración cuando usan el mismo host de Codex. ChatGPT Web no lee la configuración local.
 
 ## Prompt de verificación
 
 ```text
-Usa únicamente el servidor MCP conectado actualmente:
+Usa únicamente los servidores MCP conectados actualmente:
 1. Enumera los nombres de herramientas relacionadas con la búsqueda en documentación de desarrollo.
 2. Usa una herramienta de solo lectura para encontrar el uso básico del ejecutor de pruebas de Node.js.
 3. Indica el nombre de la herramienta que se llamó realmente.
@@ -100,11 +104,3 @@ Registra el error exacto y diagnostica la configuración, el proceso o la red, l
 ## Fuente oficial
 
 - [OpenAI: conectar Codex a un servidor MCP](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** App de escritorio de ChatGPT / Codex CLI / IDE
-
-**Última verificación:** 2026-08-25

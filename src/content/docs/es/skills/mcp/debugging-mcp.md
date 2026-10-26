@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: verified
+  products: App de escritorio de ChatGPT / Codex CLI / IDE
+  checkedAt: '2026-08-25'
 title: Depurar conexiones MCP
 description: Diagnostica fallos de MCP en las capas de configuración, transporte, autenticación y herramientas.
 locale: es
-source_locale: zh-cn
-source_revision: d35b635
+source_locale: zh-CN
+source_revision: "d35b635"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 «La herramienta MCP no funciona» oculta varias capas posibles de fallo. Identifica primero la capa y cambia después una sola variable.
@@ -74,7 +78,7 @@ No pongas temporalmente el token en `http_headers` estáticos; podría filtrarse
 Inspecciona únicamente el servidor MCP <server-name>:
 1. Informa de los nombres de las herramientas visibles.
 2. Llama a <readonly-tool> con <minimal-arguments>.
-3. Conserva el tipo de error y el mensaje del servidor, pero redacta las credenciales.
+3. Conserva el tipo de error y el mensaje del servidor, pero oculta las credenciales.
 4. No llames a otro servidor ni escribas.
 ```
 
@@ -89,11 +93,3 @@ Inspecciona únicamente el servidor MCP <server-name>:
 ## Fuente oficial
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** App de escritorio de ChatGPT / Codex CLI / IDE
-
-**Última verificación:** 2026-08-25

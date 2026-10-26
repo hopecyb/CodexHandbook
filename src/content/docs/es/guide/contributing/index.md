@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: verified
+  basis: Contrastado ítem a ítem con la estructura actual del repositorio, el mantenimiento del sidebar, el sistema de estados de página y el flujo de contribución; el contenido pertenece a las reglas de mantenimiento del manual y no depende de comportamientos de UI variables de un cliente Codex concreto.
+  checkedAt: '2026-07-26'
 title: Contribuir
 description: Cómo contribuir al manual con texto, casos, ejemplos de prompt y traducciones — proceso y estándares de calidad.
 sidebar:
   order: 80
 locale: es
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: "1d4b3f2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md).
+El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples).
 
 ## Contenido de esta página
 
@@ -66,8 +70,8 @@ La condición es solo: formular el problema con concreción e intentar convertir
 1. **El chino simplificado `root` es el texto fuente** (salvo indicación contraria)
 2. **No copiar** tutoriales externos literales; ver [plan de integración de fuentes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. Los **hechos variables** deben llevar fecha de `Última verificación`
-4. **Cada slug del sidebar** debe tener su markdown; si no, `npm run build` falla
-5. Las páginas nuevas deben actualizar también el sidebar de `astro.config.mjs`
+4. Las páginas nuevas deben tener frontmatter válido, una ruta de archivo y enlaces cruzados
+5. La barra lateral actual de cuatro módulos lee los directorios automáticamente; tras añadir un archivo, ejecuta la compilación para confirmar el orden y los enlaces de acceso
 
 ## Cómo empezar la primera contribución
 
@@ -91,7 +95,7 @@ pnpm dev
 Antes de fusionar, ejecuta:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Código de conducta
@@ -106,9 +110,3 @@ La primera contribución no tiene que aspirar a escribir mucho. Aclarar un punto
 
 - Repositorio: <https://github.com/hopecyb/CodexHandbook>
 - [Esquema de capítulos](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (para planificación)
-
----
-
-**Estado:** verificado  
-**Base de verificación:** Contrastado ítem a ítem con la estructura actual del repositorio, el mantenimiento del sidebar, el sistema de estados de página y el flujo de contribución; el contenido pertenece a las reglas de mantenimiento del manual y no depende de comportamientos de UI variables de un cliente Codex concreto.  
-**Última verificación:** 2026-07-26

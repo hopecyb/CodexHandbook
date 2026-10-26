@@ -3,10 +3,15 @@ title: 成果物優先
 description: まず最終成果物の形とパスを約束し、ステップを逆算する——ドキュメント、設定、レポートなどの成果物に適する。
 locale: ja
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: "e57c215"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの現在検証済みのファイルと成果物、完了の定義、成果物検証各章を相互参照して再確認済み。ページ内容は「先に成果物を約束し、ステップを逆算する」安定したライティング・納品方法に焦点を当てています。
+  checkedAt: "2026-07-26"
 ---
 
 **成果物優先**は、まず成果物の形と配置を明確にし、Codex にステップを逆算させる方法です。Markdown ドキュメント、OpenAPI、マイグレーションスクリプト、スライドアウトラインなど出力が明確なタスクに適し、[仕様駆動](/ja/cases/workflows/specification-driven-work/) と組み合わせても使えます。
@@ -45,7 +50,7 @@ reviewed_at: 2026-08-26
 - 成果物パスがリポジトリ規約と不一致（誤ったディレクトリに配置）
 - 単一ファイルのみ生成し、ナビゲーションと index 更新を無視
 - サンプルと照合せず、スタイルが不統一
-- バイナリ成果物（pptx/docx）の人間による開封・受け入れ方法を説明しない
+- バイナリ成果物（pptx/docx）の人間による開いて検収する方法を説明しない
 
 ## 安全境界
 
@@ -58,10 +63,3 @@ reviewed_at: 2026-08-26
 - [ ] 形式と参照サンプルが一致する
 - [ ] リンク/目次/Frontmatter が有効
 - [ ] [完了の定義](/ja/prompts/define-done/) に合致する
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの現在検証済みのファイルと成果物、完了の定義、成果物検証各章を相互参照して再確認済み。ページ内容は「先に成果物を約束し、ステップを逆算する」安定したライティング・納品方法に焦点を当てています。

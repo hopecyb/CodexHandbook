@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Estrutura, cenários e cuidados foram revistos com base em material oficial da OpenAI sobre entrada de imagens e upload de arquivos; o corpo já não depende de fontes de cenário não oficiais e não retém detalhes de interface que exigem verificação versão a versão."
+  checkedAt: "2026-07-26"
 title: Prompts com imagens
 description: Como perguntar quando envia capturas, designs ou quadros brancos ao Codex, para obter resultados executáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Muitas falhas de «trabalhar a partir da imagem» não vêm de o modelo não ver — vêm de enviar só a imagem **sem dizer o que deve observar nela**.
@@ -106,7 +111,7 @@ Compare diferenças de layout, hierarquia tipográfica, espaçamento e sugestõe
 
 A imagem costuma carecer de contexto de execução; estes dados ajudam:
 
-- dispositivo ou browser
+- dispositivo ou navegador
 - se o estado inclui hover / focus / erro
 - posição de scroll da página
 - se é «efeito atual» ou «efeito-alvo»
@@ -154,7 +159,7 @@ O recorte mostra o ponto problemático, mas pode omitir o estado da página, efe
 
 ### Tratar o design como especificação completa
 
-O design expressa aparência; raramente cobre origem de dados, casos limite e lógica de interação. Regras de negócio ainda precisam de texto.
+O design expressa aparência; pode não cobrir origem de dados, casos limite e lógica de interação. Regras de negócio ainda precisam de texto.
 
 ### Achar que a imagem substitui a aceitação
 
@@ -185,9 +190,3 @@ Costuma ser mais claro do que «ajuda-me a corrigir», e facilita o passo seguin
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Estrutura, cenários e cuidados foram revistos com base em material oficial da OpenAI sobre entrada de imagens e upload de arquivos; o corpo já não depende de fontes de cenário não oficiais e não retém detalhes de interface que exigem verificação versão a versão.

@@ -2,7 +2,8 @@
 title: 'Visão geral do SDK: tarefas locais e integração de clientes'
 description: Diferencie o SDK do Codex, a CLI não interativa, o App Server e um serviço remoto de tarefas criado por você.
 contentType: reference
-audiences: [developer]
+audiences:
+- developer
 level: intermediate
 editorialStatus: review
 verification:
@@ -10,17 +11,18 @@ verification:
   checkedAt: '2026-09-18'
   summary: Local de execução, interfaces de threads e limites de integração foram conferidos na documentação oficial do SDK e do App Server. O exemplo mínimo passou apenas por verificação de sintaxe; não houve chamada autenticada ao modelo.
   evidence:
-    - label: Documentação oficial do Codex SDK
-      href: https://learn.chatgpt.com/docs/codex-sdk
-    - label: Documentação oficial do Codex App Server
-      href: https://learn.chatgpt.com/docs/app-server
+  - label: Documentação oficial do Codex SDK
+    href: https://learn.chatgpt.com/docs/codex-sdk
+  - label: Documentação oficial do Codex App Server
+    href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
 locale: pt
 source_locale: zh-CN
-source_revision: e888ae6
-translation_status: draft
+source_revision: "e888ae6"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 O Codex SDK permite que um programa controle um Codex Agent local. “Local” é a máquina que executa SDK e Agent: seu computador ou um runner de CI administrado por você. Isso não é automaticamente um serviço HTTP hospedado para criar tarefas Cloud, consultar seu estado e baixar artefatos. Veja a [documentação oficial do SDK](https://learn.chatgpt.com/docs/codex-sdk).
@@ -77,7 +79,7 @@ Ao retomar, confira primeiro se os arquivos atuais correspondem ao histórico de
 2. **Resultado:** confira resposta, diff e testes. Receber `finalResponse` não significa aprovação do resultado de negócio.
 3. **Tipo de falha:** diferencie dependência/processo local, autenticação, serviço do modelo e validação da tarefa; não reduza todos os erros a 400/429.
 4. **Efeito de repetir:** procure arquivos ou efeitos externos já produzidos antes de decidir pelo retry; não reenvie cegamente a mesma solicitação.
-5. **Permissões:** ambiente e ferramentas disponíveis são responsabilidade sua. O nome do SDK não concede automaticamente Cloud, gestão da organização ou isolamento multi-tenant.
+5. **permissões:** ambiente e ferramentas disponíveis são responsabilidade sua. O nome do SDK não concede automaticamente Cloud, gestão da organização ou isolamento multi-tenant.
 
 São recomendações de integração deste site, não uma lista de campos retornados pelo SDK. Consulte os tipos da versão instalada e a documentação oficial para os campos reais.
 

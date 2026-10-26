@@ -9,12 +9,15 @@ verification:
   summary: Compiled from the current repository content and run records. This is a handbook change log, not an OpenAI product release log or a claim that the site has been deployed.
 locale: en
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: '3c99d35'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 ---
 
 This page records what changed in the handbook, which tasks are affected, and what has been verified. Dates refer to content preparation. For actual publication status, check the version of the site you are visiting. For changes to product capabilities, follow the official sources linked from the relevant tutorials.
+
+The linked downloads and historical run records are shared source materials and may contain Chinese text; this English page does not imply that those files have been translated.
 
 ## 2026-09-18: Exercises readers can follow and their verification boundaries
 
@@ -34,7 +37,7 @@ The [case directory](/en/cases/) supports filtering by task type and keyword, wi
 
 ## 2026-09-18: Twelve recorded prompt comparison runs
 
-The [three prompt comparisons](/en/prompts/comparison-lab/) now include two actual A/B runs each for a weekly sales report, a source-backed article, and a bug fix, with artifacts, elapsed time, and criterion-by-criterion scores. The [results package](/downloads/prompt-comparison-results/prompt-comparison-results-1.0.0.zip) retains tool errors, missing log fields, and redacted path hashes. The primary Agent reviewed the runs without blinding, model labels are unknown, and the results do not establish a general success rate or time savings.
+The [three prompt comparisons](/en/prompts/comparison-lab/) now include two actual runs for each variant, A and B, in each of three tasks—a weekly sales report, a source-backed article, and a bug fix—for 12 runs total, with artifacts, elapsed time, and criterion-by-criterion scores. The [results package](/downloads/prompt-comparison-results/prompt-comparison-results-1.0.0.zip) retains tool errors, missing log fields, and redacted path hashes. The primary Agent reviewed the runs without blinding, model labels are unknown, and the results do not establish a general success rate or time savings.
 
 ## 2026-09-18: Complete website exercise
 

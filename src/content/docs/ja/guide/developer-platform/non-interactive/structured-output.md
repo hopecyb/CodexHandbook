@@ -3,12 +3,17 @@ title: 構造化出力
 description: exec の結果を機械が解析可能に——下流ステップ、ダッシュボード、ゲート向け。
 locale: ja
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: "e80b5d7"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API
+  basis: OpenAI API 現行モデル比較ドキュメントは依然 `Structured outputs` 能力を列挙。本ページは「非対話タスクの安定出力インターフェース設計」一般実践に限定。例の JSON schema、検証、フォールバックは実装パターンの説明。
+  checkedAt: '2026-07-26'
 ---
 
 自動化を初めて組むと、Codex に「それらしい文章」を出させる前提にしがちです。人が読むには足りますが、スクリプトには不向きです。
@@ -27,9 +32,9 @@ reviewed_at: 2026-08-26
 
 ### 構造化出力は次のステップが受け取るため
 
-JSON、schema は工程上のこだわりではなく、次がスクリプトで成否判定、ボットがコメント、ダッシュボード表示するなら安定フォーマットが必要だからです。
+JSON、schema は実装上の細部へのこだわりではなく、次がスクリプトで成否判定、ボットがコメント、ダッシュボード表示するなら安定フォーマットが必要だからです。
 
-### 形式が安定＝結論が正確
+### 形式が安定しても、結論が正確とは限らない
 
 構造化出力は「要求した形に見える」ことを保証するだけで、タスク理解の正しさは自動保証しません。出力インターフェースの問題を解き、タスク定義と結果検証の代替ではありません。
 
@@ -53,7 +58,7 @@ Prompt 末尾にフォーマット要求を固定：
 - 問題なしなら findings は空配列
 ```
 
-Shell 解析（示意）：
+Shell での解析（参考例）：
 
 ```bash
 result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
@@ -118,9 +123,3 @@ schema 定義（バージョン v1）
 
 ## 参考
 - OpenAI structured outputs 一般実践（概念整合）
----
-
-**状態：** verified  
-**対象製品：** CLI / API  
-**検証根拠：** OpenAI API 現行モデル比較ドキュメントは依然 `Structured outputs` 能力を列挙。本ページは「非対話タスクの安定出力インターフェース設計」一般実践に限定。例の JSON schema、検証、フォールバックは工程パターン説明。  
-**最終検証：** 2026-07-26

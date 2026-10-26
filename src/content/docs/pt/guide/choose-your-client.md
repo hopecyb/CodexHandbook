@@ -1,97 +1,96 @@
 ---
 title: Escolher o cliente Codex
-description: Escolher App desktop, CLI, integracao IDE ou Cloud conforme o local do trabalho.
+description: Escolha entre App para desktop, CLI, integração com IDE e Cloud conforme o local de trabalho e a forma de interação.
 sidebar:
   order: 2
 locale: pt
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Conferido com as explicações oficiais atuais do App para desktop do ChatGPT, Codex CLI, IDE e Cloud. As recomendações seguem o local de trabalho e a forma de interação, distinguindo a extensão compatível com VS Code das integrações próprias de Xcode e JetBrains.", "checkedAt": "2026-08-26"}
 ---
 
-Na primeira escolha nao precisa de comparar dezenas de funcionalidades. Comece por uma pergunta: **onde acontece principalmente este trabalho?**
+Ao escolher sua primeira forma de usar o Codex, não é preciso comparar dezenas de recursos. Comece por uma pergunta: **onde este trabalho acontece principalmente?**
 
-![Escolha do cliente Codex conforme o local do trabalho](/diagrams/codex-client-selection-pt.svg)
+![Escolha do cliente Codex: parta do local de trabalho para escolher App para desktop, CLI, integração com IDE ou Cloud](/diagrams/codex-client-selection-pt.svg)
 
 ## Escolha em 30 segundos
 
-| Local principal | Entrada | Interacao adequada |
+| Onde o trabalho acontece | Entrada preferida | Interação mais adequada |
 |---|---|---|
-| Projetos locais e tarefas paralelas | **App desktop** | Ver tarefas, rever diffs, aprovacoes e trabalhos longos |
-| Terminal, scripts ou linha de comandos | **CLI** | Entregar tarefas, executar comandos e automatizar scripts |
-| VS Code, editores compativeis, Xcode ou JetBrains | **Integracao IDE** | Perguntar com contexto, alterar e rever no editor |
-| Repositorio remoto e ambiente isolado | **Cloud** | Executar remotamente, trabalhar em paralelo e rever depois |
+| Entre vários projetos e tarefas paralelas no computador | **App para desktop** | Acompanhar tarefas, revisar diffs, tratar aprovações e gerenciar trabalhos longos |
+| No terminal, em scripts ou em um fluxo de linha de comando existente | **CLI** | Passar tarefas diretamente, executar comandos e combinar scripts e automação |
+| No VS Code, em editores compatíveis, Xcode ou JetBrains | **Integração com IDE** | Perguntar com o contexto do editor, alterar e revisar no mesmo lugar |
+| Em repositórios remotos conectados e ambientes isolados | **Cloud** | Delegar a execução à nuvem, trabalhar em paralelo e revisar depois |
 
-Sem preferencia clara, o **App desktop** costuma ser o inicio mais intuitivo. Se ja trabalha diariamente no terminal ou VS Code, mantenha-se nesse espaco.
+Sem uma preferência clara, o **App para desktop** costuma ser o início mais intuitivo. Se você já trabalha diariamente no terminal ou no VS Code, permanecer nesse ambiente reduz a troca de ferramentas.
 
 ## O que cada entrada resolve
 
-### App desktop: consola do trabalho local
+### App para desktop: central de trabalho local
 
-E adequado para ver o estado das tarefas, alteracoes e aprovacoes:
+O App para desktop é adequado quando você precisa enxergar o estado das tarefas, as alterações nos arquivos e o processo de aprovação. É especialmente útil para:
 
-- acompanhar varias tarefas ou projetos
-- isolar alteracoes paralelas com worktrees
-- rever um diff, perguntar e corrigir
-- organizar trabalhos longos em projetos locais
+- Acompanhar várias tarefas ou projetos ao mesmo tempo
+- Isolar alterações paralelas com worktrees
+- Revisar um diff e continuar com perguntas ou correções
+- Organizar trabalhos contínuos em projetos locais
 
-Exemplo: uma tarefa corrige uma regressao de sessao e outra analisa um gargalo; depois reveja ambas separadamente.
+Exemplo: uma tarefa corrige uma regressão no login; outra analisa um gargalo de desempenho somente em leitura. Ao final, você revisa cada resultado separadamente.
 
 ### CLI: Codex no fluxo do terminal
 
-A CLI fica perto dos testes, do Git e dos scripts e facilita documentar passos repetiveis.
+A CLI é adequada para quem já gerencia projetos pela linha de comando. Ela fica próxima dos comandos de teste, do Git e dos scripts, e facilita registrar as mesmas operações na documentação da equipe.
 
 ```bash
 codex
 ```
 
-Exemplo: a partir da raiz do repositorio, execute primeiro o teste que falha, localize a causa, aplique a alteracao minima e repita o teste.
+Exemplo: inicie o Codex na raiz do repositório e peça que execute o teste que falha, encontre a causa raiz, faça a menor alteração e valide novamente com o mesmo comando.
 
-### Integracao IDE: em torno do codigo atual
+### Integração com IDE: trabalhar no código atual
 
-E adequada quando a questao depende do ficheiro, selecao ou diff atual. VS Code, Cursor, Windsurf e editores compativeis usam a extensao Codex; Xcode e JetBrains tem integracoes proprias.
+A integração com IDE é adequada quando a pergunta está diretamente ligada ao arquivo, à seleção ou ao diff que você está vendo. Há duas formas de integração: VS Code, Cursor, Windsurf e outros editores compatíveis usam a extensão Codex; Xcode e os IDEs JetBrains oferecem suas próprias integrações com o Codex.
 
-Exemplo: selecione uma funcao dificil, explique entradas, saidas e excecoes e adicione testes de limites.
+Exemplo: selecione uma função difícil de entender, peça ao Codex que explique entradas, saídas e caminhos de erro e depois solicite testes para os casos-limite.
 
-### Cloud: delegar num ambiente remoto isolado
+### Cloud: delegar em um ambiente remoto isolado
 
-Cloud e adequado para repositorios ligados e tarefas independentes do computador local. E util para exploracao paralela, trabalhos longos e revisao centralizada.
+Cloud é adequado quando você já conectou um repositório remoto e quer que a tarefa rode independentemente do computador local. As tarefas são executadas em ambientes isolados, úteis para exploração paralela, trabalhos longos e revisão conjunta dos resultados.
 
-## Nao sao opcoes exclusivas
+Exemplo: delegue três problemas independentes do repositório a tarefas na nuvem. Espere pelas alterações e evidências de verificação e revise cada resultado.
 
-1. Esclareca uma questao local no IDE.
-2. Entregue a exploracao longa ao App desktop ou Cloud.
-3. Execute os comandos da equipa na CLI.
-4. Confirme o diff final no App ou na interface de revisao.
+## As quatro entradas podem trabalhar juntas
 
-Nao escolha a entrada «mais forte», mas **a mais proxima do contexto e cujo resultado seja facil de rever**.
+Um mesmo fluxo pode passar por várias entradas:
 
-## Dois cenarios comuns
+1. Esclareça a questão no IDE com o contexto do arquivo atual.
+2. Delegue a exploração mais longa ao App para desktop ou ao Cloud.
+3. Execute na CLI os comandos de verificação definidos pela equipe.
+4. Volte ao App para desktop ou à interface de revisão para confirmar o diff final.
 
-### Primeiro bug num projeto real
+O critério é **qual entrada está mais próxima do contexto atual e facilita verificar o resultado**.
 
-Comece pelo App desktop para ver conversa, alteracoes e permissoes; depois experimente CLI ou IDE.
+## Dois cenários comuns
 
-### A equipa ja tem comandos e CI
+### Primeiro bug em um projeto real
 
-Comece pela CLI e registe instalacao, testes e formatacao em `AGENTS.md` para reutilizar as mesmas regras.
+Prefira o App para desktop. Você pode ver a conversa, as alterações e os pedidos de permissão juntos. Depois de concluir um ciclo completo, experimente a CLI ou o IDE.
+
+### A equipe já tem comandos e convenções de CI
+
+Prefira a CLI e registre em `AGENTS.md` os comandos de instalação, testes e formatação. Assim, o Codex pode seguir as mesmas regras do projeto em cada tarefa.
 
 ## Verifique logo depois de escolher
 
-1. Peca que leia e explique um ficheiro.
-2. Solicite uma alteracao pequena e reversivel.
-3. Reveja o diff, nao apenas a resposta.
-4. Execute um comando de verificacao.
-5. Recuse ou restrinja um pedido de permissao.
+Não confira apenas se o cliente abre. Em um repositório de prática:
 
-Consulte [comparacao de funcionalidades](/pt/guide/reference/feature-comparison/) e [permissoes e sandbox](/pt/guide/permissions-and-sandbox/).
+1. Peça ao Codex que leia e explique um arquivo.
+2. Solicite uma alteração pequena e reversível.
+3. Revise o diff, não apenas a resposta final.
+4. Execute um comando de verificação.
+5. Confirme que sabe recusar ou restringir um pedido de permissão.
 
----
-
-**Estado:** verified
-
-**Produtos aplicaveis:** App / CLI / IDE / Cloud
-
-**Ultima verificacao:** 2026-08-26
+Veja a [comparação de recursos](/pt/guide/reference/feature-comparison/) e os limites em [permissões e sandbox](/pt/guide/permissions-and-sandbox/).

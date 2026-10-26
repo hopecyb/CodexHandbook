@@ -8,10 +8,10 @@ title: 調査テンプレート
 description: 出典付きの調査と比較。
 locale: ja
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: "729d4cc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -31,7 +31,7 @@ reviewed_at: 2026-08-26
 
 ## いつこのテンプレートが向くか
 
-- 製品／方案の比較
+- 製品／提案の比較
 - 最新の能力・ルール・差分の確認
 - 結論をあとから検証したい
 

@@ -3,9 +3,10 @@ title: 사건과 주제 색인
 description: 발행일을 개념의 기원으로 간주하지 않고 출처가 분명한 사건을 통해 AI 응용 엔지니어링 주제를 읽습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: '847b43b'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 이 지도는 확인 가능한 공개 사건과 학습 제안을 구분합니다. **날짜는 해당 행에 적힌 논문·발표·기사만 가리킵니다. 개념의 탄생, 업계 확산, 능력의 성숙을 자동으로 뜻하지 않습니다.** 여러 기술을 함께 쓸 수 있으며, 시간순이 반드시 따라야 할 학습 또는 업그레이드 순서는 아닙니다.

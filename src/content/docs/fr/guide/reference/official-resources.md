@@ -10,9 +10,10 @@ sidebar:
   order: 120
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 5a584b0
+source_revision: '5a584b0'
+reviewed_at: '2026-10-26'
 ---
 
 Ce manuel est un guide communautaire open source. Pour le comportement du produit, les programmes d'installation et les offres, fiez-vous aux sources officielles :

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Desktop Voice (tùy gói và cài đặt workspace)"
+  basis: "OpenAI Help Center hiện tại《ChatGPT Voice》và《ChatGPT Work and Codex》đều nói rõ: Voice có thể phối hợp Work / Codex trong App máy tính để khởi động tác vụ, theo dõi tiến độ và phối hợp công việc; năng lực và khả dụng chịu ảnh hưởng gói, cài đặt workspace và phiên bản. Nội dung trang tập trung vào tình huống phù hợp của giọng nói, lưu ý riêng tư và phương pháp “nói miệng rồi quay về chữ xác nhận”."
+  checkedAt: "2026-07-26"
 title: Nhập và xuất giọng nói
 description: Tình huống, giới hạn và lưu ý riêng tư khi tương tác với Codex bằng giọng nói.
 locale: vi
 source_locale: zh-CN
-source_revision: 192bba2
+source_revision: "192bba2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -27,9 +32,9 @@ Giọng nói phù hợp hơn để nêu hướng, bổ sung nền hoặc theo d�
 |---|---|
 | Nói mục tiêu tầng cao, brainstorm | Lệnh mã chính xác tới tên biến |
 | Theo dõi ngắn trên mobile | Đọc API key, mật khẩu |
-| Nhu cầu accessibility | Tài liệu quy chuẩn cần tìm kiếm được, diff được |
+| Nhu cầu hỗ trợ tiếp cận | Tài liệu quy chuẩn cần tìm kiếm được, diff được |
 
-Sau khi nói miệng, nên để Codex **nhắc lại hiểu biết** hoặc tạo kế hoạch chữ, rồi bạn xác nhận. Xem [Yêu cầu kế hoạch](/vi/prompts/ask-for-a-plan/).
+Sau khi nói miệng, nên để Codex **nhắc lại cách nó hiểu yêu cầu** hoặc tạo kế hoạch chữ, rồi bạn xác nhận. Xem [Yêu cầu kế hoạch](/vi/prompts/ask-for-a-plan/).
 
 ## Giọng nói phù hợp làm gì
 
@@ -58,7 +63,7 @@ Cách thường gặp là nói hướng trước, rồi bổ sung thành chữ �
 
 ### 1. Giọng nói có thay hoàn toàn gõ chữ?
 
-Không.  
+Không.
 Những nội dung sau tốt nhất vẫn gõ:
 
 - Đường dẫn tệp
@@ -73,7 +78,7 @@ Nói dài mà không có cấu trúc, ngược lại dễ làm phân tán trọn
 
 ### 3. Phản hồi giọng nói có thay được rà soát kết quả?
 
-Không.  
+Không.
 Tóm tắt giọng nói giúp bạn nắm đại ý nhanh, nhưng khi xác nhận thay đổi, tệp, diff, kết quả kiểm thử, vẫn phải quay về chữ và bản thân artifact.
 
 ## Một thứ tự nói thường dùng
@@ -88,7 +93,7 @@ Nói xong, để nó gom thành bản chữ để bạn xác nhận.
 
 ## Riêng tư
 
-- Giọng nói có thể qua chuyển viết đám mây; đừng đọc PII khách hàng, chứng chỉ
+- Giọng nói có thể qua chuyển giọng nói thành văn bản trên đám mây; đừng đọc PII khách hàng, thông tin xác thực
 - Nơi công cộng chú ý người quanh nghe
 - Chính sách nhóm có thể cấm chức năng dạng ghi âm xử lý tên mã mật
 
@@ -105,10 +110,3 @@ Nói xong, để nó gom thành bản chữ để bạn xác nhận.
 - Trong giọng nói mô tả chi tiết sự cố production chưa khử nhạy cảm
 
 Giọng nói phù hợp khởi động và theo dõi; không phù hợp thay lệnh chính xác, xử lý thông tin nhạy cảm và nghiệm thu cuối.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Desktop Voice (tùy gói và cài đặt workspace)  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện tại《ChatGPT Voice》và《ChatGPT Work and Codex》đều nói rõ: Voice có thể phối hợp Work / Codex trong App máy tính để khởi động tác vụ, theo dõi tiến độ và phối hợp công việc; năng lực và khả dụng chịu ảnh hưởng gói, cài đặt workspace và phiên bản. Nội dung trang tập trung vào tình huống phù hợp của giọng nói, lưu ý riêng tư và phương pháp “nói miệng rồi quay về chữ xác nhận”.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -26,9 +26,10 @@ next:
   label: "検証付きのバグ修正を始める"
 locale: ja
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: "22d8bd3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 小さな買い物かごの練習を使い、コードの説明、バグ修正、差分レビュー、証拠の引き継ぎという4つの作業を行います。すべてのクライアント、設定、マルチエージェント機能を先に学ぶ必要はありません。
 

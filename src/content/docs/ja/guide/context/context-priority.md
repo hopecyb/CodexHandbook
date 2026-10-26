@@ -1,27 +1,30 @@
 ---
-title: "コンテキストの優先順位：指示、プロジェクトの取り決め、権限"
-description: "メッセージの指示、AGENTS.md の検出、過去のタスク、サンドボックスの境界を区別し、衝突の具体的な出所を特定します。"
+title: コンテキストの優先順位：指示、プロジェクトの取り決め、権限
+description: メッセージの指示、AGENTS.md の検出、過去のタスク、サンドボックスの境界を区別し、衝突の具体的な出所を特定します。
 contentType: reference
-audiences: [beginner, developer]
+audiences:
+- beginner
+- developer
 editorialStatus: review
 verification:
   kind: source-checked
-  checkedAt: "2026-09-18"
-  summary: "公式のメッセージロール、AGENTS.md の検出順序、サンドボックスと承認の境界を別々に確認しました。以下の対照例は教育用であり、複数クライアントでの実行実験ではありません。"
+  checkedAt: '2026-09-18'
+  summary: 公式のメッセージロール、AGENTS.md の検出順序、サンドボックスと承認の境界を別々に確認しました。以下の対照例は教育用であり、複数クライアントでの実行実験ではありません。
   evidence:
-    - label: "API のメッセージロールと指示の重み"
-      href: https://developers.openai.com/api/docs/guides/prompt-engineering
-    - label: "AGENTS.md の検出と結合の順序"
-      href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
-    - label: "サンドボックスと承認の異なる役割"
-      href: https://learn.chatgpt.com/docs/agent-approvals-security
+  - label: API のメッセージロールと指示の重み
+    href: https://developers.openai.com/api/docs/guides/prompt-engineering
+  - label: AGENTS.md の検出と結合の順序
+    href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
+  - label: サンドボックスと承認の異なる役割
+    href: https://learn.chatgpt.com/docs/agent-approvals-security
 sidebar:
   order: 40
 locale: ja
 source_locale: zh-CN
 source_revision: "13537ef"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 「どの指示に従うか」を考える際は、まず3点を分けます。メッセージがどのロールで届いたか、プロジェクトのファイルがどう読み込まれたか、実行環境が何を許すかです。「最後の一文が常に優先」は一般則ではありません。「禁止」と書かれた文章が必ず不変のシステム権限になるわけでもありません。

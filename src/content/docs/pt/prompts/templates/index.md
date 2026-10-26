@@ -2,15 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Esta página só explica como usar templates; links e classificação foram revistos; o corpo não depende de factos voláteis do produto."
+  basis: "Esta página só explica como usar templates; links e classificação foram revistos; o corpo não depende de fatos voláteis do produto."
   checkedAt: "2026-07-26"
 title: Templates de Prompts
 description: Esqueletos reutilizáveis por tipo de tarefa — entender, criar, alterar, diagnosticar, rever, pesquisar, automatizar.
 locale: pt
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: "fae2ed3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 
@@ -42,13 +43,13 @@ O template é andaime, não resposta-padrão.
 | [Diagnosticar](/pt/prompts/templates/diagnose/) | Localizar a causa-raiz; ainda sem alterar código |
 | [Rever](/pt/prompts/templates/review/) | Rever diff, PR ou alterações de documentação |
 | [Pesquisar](/pt/prompts/templates/research/) | Investigação e comparação com citações |
-| [Automatizar](/pt/prompts/templates/automate/) | Tarefas repetidas, scripts e fluxos sem supervisão |
+| [Automatizar](/pt/prompts/templates/automate/) | tarefas repetidas, scripts e fluxos sem supervisão |
 
 ## De template a workflow
 
 Alguns Prompts bastam uma vez; outros repetem-se e devem ser estabilizados.
 
-| Tarefa repetida | Começa como | Quando estabilizar, evolui para |
+| tarefa repetida | Começa como | Quando estabilizar, evolui para |
 |---|---|---|
 | Preparar PR | Template de revisão/alteração | Skill com checklist fixo |
 | Gerar docs de API | Template de criação/alteração | Skill + script de documentação |

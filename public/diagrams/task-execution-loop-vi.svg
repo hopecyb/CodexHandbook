@@ -33,7 +33,7 @@
   <text x="115" y="207" text-anchor="end" class="note">Bối cảnh</text><text x="125" y="207" class="tiny">Lý do thực hiện</text>
   <text x="115" y="237" text-anchor="end" class="note">Đầu vào</text><text x="125" y="237" class="tiny">Tài liệu bắt buộc phải xem</text>
   <text x="115" y="267" text-anchor="end" class="note">Ràng buộc</text><text x="125" y="267" class="tiny">Phạm vi và điều cấm</text>
-  <text x="115" y="297" text-anchor="end" class="note">Tiêu chí chấp nhận</text><text x="125" y="297" class="tiny">Bằng chứng quan sát được</text>
+  <text x="115" y="297" text-anchor="end" class="note">Nghiệm thu</text><text x="125" y="297" class="tiny">Bằng chứng quan sát được</text>
   <text x="115" y="327" text-anchor="end" class="note">Quyền</text><text x="125" y="327" class="tiny">Mạng · ghi · phê duyệt</text>
   <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
   <text x="145" y="364" text-anchor="middle" class="tiny">Thiếu thông tin thì hỏi trước, không đoán</text>

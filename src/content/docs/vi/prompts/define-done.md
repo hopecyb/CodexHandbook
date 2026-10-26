@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả cách viết nghiệm thu và tiêu chí hoàn thành; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Định nghĩa tiêu chí hoàn thành
 description: Viết điều kiện hoàn thành có thể kiểm tra.
 locale: vi
 source_locale: zh-CN
-source_revision: e97e854
+source_revision: "e97e854"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Nhiều người nêu tác vụ chỉ nói «tôi muốn gì», nhưng không nói rõ «làm đến mức nào thì xong». Kết quả là đã hoàn thành hay chưa chỉ còn cảm giác.
@@ -25,14 +30,14 @@ Nhiều khi mục tiêu và tiêu chí hoàn thành bị trộn.
 - **Mục tiêu**: bạn muốn kết quả gì
 - **Tiêu chí hoàn thành**: bạn xác nhận thế nào rằng kết quả đó thật sự đạt
 
-Ví dụ «sửa bug này» là mục tiêu;  
+Ví dụ «sửa bug này» là mục tiêu;
 «có thể tái hiện ổn định bản sửa, kiểm thử liên quan pass, không thêm lỗi console mới» mới gần tiêu chí hoàn thành.
 
 ## Hiểu lầm thường gặp
 
 ### 1. Kết quả trông gần đúng là xong
 
-Ở tác vụ nhỏ đây là hố dễ nhất. «Trông gần đúng» thường bỏ sót kiểm thử, biên và tác dụng phụ.
+Ở tác vụ nhỏ đây là vấn đề rất dễ bị bỏ qua. «Trông gần đúng» thường bỏ sót kiểm thử, biên và tác dụng phụ.
 
 ### 2. Tiêu chí hoàn thành là viết thêm vài câu khen kết quả
 
@@ -42,11 +47,11 @@ Tiêu chí hoàn thành phải kiểm tra được, không phải viết như ph
 
 Không nhất thiết.
 
-Build pass thường chỉ là một checkpoint, không có nghĩa:
+Build pass thường chỉ là một điểm kiểm tra, không có nghĩa:
 
 - Chức năng thật sự đúng
 - Phạm vi không vượt
-- Copy phù hợp độc giả
+- Nội dung chữ phù hợp độc giả
 - Nguồn đã được kiểm chứng
 
 ## Một cách viết thường dùng
@@ -61,9 +66,9 @@ Ví dụ:
 
 ```text
 Tiêu chí nghiệm thu:
-- Chỉ sửa copy trang chủ docs; không đổi layout và component
+- Chỉ sửa nội dung chữ trang chủ docs; không đổi layout và component
 - `pnpm build` pass
-- Copy màn hình đầu dễ hiểu hơn với người mới; không mặc định độc giả đã biết thuật ngữ
+- Nội dung chữ màn hình đầu dễ hiểu hơn với người mới; không mặc định độc giả đã biết thuật ngữ
 ```
 
 ## Cách tự kiểm
@@ -77,10 +82,3 @@ Nếu không, thường vẫn còn quá mơ hồ.
 Tóm lại: đừng để «đã xong chưa» chỉ còn đoán.
 
 Đưa lệnh kiểm chứng vào tiêu chuẩn thì Agent mới dễ chủ động chạy: [Chạy kiểm thử](/vi/guide/quality/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách viết nghiệm thu và tiêu chí hoàn thành; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

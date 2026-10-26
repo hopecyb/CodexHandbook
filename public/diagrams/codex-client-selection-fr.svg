@@ -46,7 +46,7 @@
   <text x="354" y="389" class="note">Flux en ligne de commande et scripts</text>
   <path d="M354 410H554" fill="none" stroke="#14532d"/>
   <text x="354" y="441" class="note">Au plus près de Git et des commandes de test</text>
-  <text x="354" y="469" class="note">Facilite les étapes reproductibles</text>
+  <text x="354" y="469" class="note">Facilite la documentation des étapes reproductibles</text>
   <text x="354" y="497" class="tiny">Idéal pour : terminal et automatisation</text>
 
   <rect x="626" y="278" width="240" height="248" rx="10" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>

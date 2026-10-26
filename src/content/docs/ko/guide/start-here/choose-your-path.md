@@ -5,10 +5,15 @@ sidebar:
   order: 4
 locale: ko
 source_locale: zh-CN
-source_revision: 51ccd00
+source_revision: "51ccd00"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 역할·작업·제품 입구로 읽기 경로를 고르는 방법만 설명합니다. 사이트 내 링크와 경로 그룹을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **역할**, **작업**, **제품** 중 어떤 것으로든 들어갈 수 있습니다. 세 경로는 결국 같은 핵심 페이지로 모이며, 시작점만 다릅니다.
@@ -64,10 +69,3 @@ reviewed_at: 2026-08-26
 3. 주로 쓰는 입구가 정해졌다면: 해당 제품 장으로
 
 지금 문제와 가장 가까운 입구부터 시작하면 되고, 나중에 조정해도 늦지 않습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 역할·작업·제품 입구로 읽기 경로를 고르는 방법만 설명합니다. 사이트 내 링크와 경로 그룹을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

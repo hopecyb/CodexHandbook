@@ -1,16 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "現在の Codex ランタイムはスキルを `SKILL.md` 中心とし、スクリプトと参考資料を任意拡張。本ページはディレクトリ役割の説明で、変わりやすい製品入口に依存しない。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の Codex ランタイムはスキルを `SKILL.md` 中心とし、スクリプトと参考資料を任意拡張。本ページはディレクトリ役割の説明で、変わりやすい製品入口に依存しない。
+  checkedAt: '2026-07-26'
 title: Skill の構造
 description: SKILL.md、references/、templates/、scripts/ の役割と例。
 locale: ja
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: "50ca48c"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Skill ディレクトリを初めて見ると、フォルダは見覚えがあっても、なぜこう配置するか分かりにくいことがあります。
@@ -25,7 +26,7 @@ Skill ディレクトリを初めて見ると、フォルダは見覚えがあ�
 ```text
 my-skill/
 ├── SKILL.md          # 必須
-├── scripts/          # 任意：決定的なステップ
+├── scripts/          # 任意：同じ手順で再現できるステップ
 ├── references/       # 任意：長い参考ドキュメント
 └── templates/        # 任意：出力テンプレート
 ```
@@ -35,7 +36,7 @@ my-skill/
 - `SKILL.md`：主マニュアル——何か、いつ使うか、どの手順か
 - `references/`：長い参考棚。背景を主ファイルに全部詰めない
 - `templates/`：出力の骨組み。毎回即興しない
-- `scripts/`：決定的なステップはスクリプトに任せ、自然言語だけにしない
+- `scripts/`：同じ手順で再現できるステップはスクリプトに任せ、自然言語だけにしない
 
 最初は `SKILL.md` だけで十分なことも多いです。  
 複雑になったら `references/`、`templates/`、`scripts/` に分割します。
@@ -79,7 +80,7 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 
 ### 3. できれば scripts/ は避ける
 
-安定・決定的・反復可能なステップは、繰り返しの自然言語よりスクリプトの方が信頼しやすいことが多いです。
+安定して同じ手順を繰り返せるなステップは、繰り返しの自然言語よりスクリプトの方が信頼しやすいことが多いです。
 
 ## ディレクトリの役割
 
@@ -88,7 +89,7 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 | `SKILL.md` | 主フロー、トリガー、禁止事項 |
 | `references/` | 長文、規約、API メモ |
 | `templates/` | 出力形式、レポート骨組み |
-| `scripts/` | 決定的なコマンドとチェック |
+| `scripts/` | 確定的なコマンドとチェック |
 
 ## いつディレクトリを分けるか
 
@@ -101,10 +102,6 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 
 1〜2 個「はい」なら分割を検討。
 
-まず `SKILL.md` で回し、複雑になったら references・templates・scripts を分けます。
-
-実習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)。
-
 ## テンプレートから Skill へ
 
 多くのチームは、最初から Skill を設計するわけではありません。何度もコピーするプロンプトから始まります。次の順で育てられます。
@@ -114,7 +111,7 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 | 一回限りのプロンプト | 現在の会話 | 一度だけ使う |
 | テンプレート | プロンプト集やチーム文書 | 同種タスクは繰り返すが手順はまだ変わる |
 | 単一ファイル Skill | `SKILL.md` 1 つ | 手順が安定し、起動条件が明確 |
-| 完整な Skill ディレクトリ | `SKILL.md` + `templates/` + `references/` + `scripts/` | 出力形式、長い参照、決定的チェックが安定 |
+| 完全な Skill ディレクトリ | `SKILL.md` + `templates/` + `references/` + `scripts/` | 出力形式、長い参照、確定的なチェックが安定 |
 
 すべてのテンプレートを Skill にする必要はありません。繰り返し使われ、成功基準が明確で、チームが同じ手順に合意しているものだけで十分です。
 
@@ -128,3 +125,7 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 | スクリプト | 複雑度分析、リンクチェック、カバレッジ集計、整形確認 |
 
 良い Skill は、単に長いプロンプトではありません。再利用できる作業を読みやすく、テストしやすく、保守しやすい部品に分けたものです。
+
+まず `SKILL.md` で一通り実行できる状態にし、複雑になったら資料、テンプレート、スクリプトを順に分けます。
+
+実習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)。

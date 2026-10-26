@@ -1,29 +1,34 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só descreve como escrever objetivos e contexto; links e exemplos foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Objetivos e contexto
 description: Faça o Codex saber o que concluir e por que importa.
 locale: pt
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: "0a5141f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Muitos Prompts parecem ter muita informação, mas falham nestes dois pontos:
 
-- que resultado você quer de facto
+- que resultado você quer de fato
 - por que a tarefa deve ser feita assim
 
 O objetivo diz «o que entregar»; o contexto diz «por que assim».
 
-**Objetivo** descreve o artefato final, não um desejo vago.  
+**Objetivo** descreve o artefato final, não um desejo vago.
 «Tornar o site melhor» → «Alterar o texto do botão principal da home para … e manter as classes de estilo atuais».
 
-**Contexto** acrescenta o estado que o leitor não sabe, mas o Agent precisa: stack, audiência, motivo do prazo, armadilhas conhecidas.
+**contexto** acrescenta o estado que o leitor não sabe, mas o Agent precisa: stack, audiência, motivo do prazo, armadilhas conhecidas.
 
 ## Por que não misturar «objetivo» e «contexto»
 
-Só com contexto, sem objetivo, o Codex pode ler um relato de situação e não saber o que produzir.  
+Só com contexto, sem objetivo, o Codex pode ler um relato de situação e não saber o que produzir.
 Só com objetivo, sem contexto, tende a resolver de forma «tecnicamente possível, mas inadequada ao seu cenário».
 
 ## Mal-entendidos comuns
@@ -51,7 +56,7 @@ Também pode ser contexto importante:
 - quem é o leitor
 - por que há prazo
 - armadilhas conhecidas
-- restrições da equipa
+- restrições da equipe
 
 ## Uma formulação suficiente
 
@@ -82,11 +87,4 @@ No contexto, veja mais uma:
 
 O objetivo define o entregável; o contexto explica por que assim.
 
-Relacionado: o contexto de projeto pode ir para [Contexto do projeto](/pt/guide/context/project-context/), para não repetir blocos longos em cada Prompt.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve como escrever objetivos e contexto; links e exemplos foram revistos; o corpo não depende de factos voláteis do produto.
+Relacionado: o contexto de projeto pode ir para [contexto do projeto](/pt/guide/context/project-context/), para não repetir blocos longos em cada Prompt.

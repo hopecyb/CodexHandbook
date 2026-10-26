@@ -1,14 +1,19 @@
 ---
-title: Khái niệm nền tảng
-description: Xây dựng ngôn ngữ chung về model, Agent, công cụ, quyền và kiểm chứng.
-locale: vi
-source_locale: zh-CN
-source_revision: b4d4b2b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Khái niệm nền tảng"
+description: "Xây dựng ngôn ngữ chung về model, Agent, công cụ, quyền và kiểm chứng."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "b4d4b2b"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 3
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả cấu trúc và thứ tự đọc của chương khái niệm nền tảng; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Phần này gom các khái niệm nền tảng mà cả cẩm nang sẽ dùng đi dùng lại. Khác biệt giao diện sản phẩm viết ở [Cẩm nang sản phẩm](/vi/guide/); kỹ thuật Prompt viết ở [Năng lực cốt lõi](/vi/guide/).
@@ -67,10 +72,3 @@ Nếu không muốn đọc hết cả chương một mạch, có thể đọc tr
 5. [Kiểm chứng và rà soát thủ công](/vi/guide/foundations/verification-and-human-review/)
 
 Hiểu rõ vài trang này đã đủ đỡ việc dùng hàng ngày.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả cấu trúc và thứ tự đọc của chương khái niệm nền tảng; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

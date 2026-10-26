@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Đã đối chiếu chéo use cases “Save workflows as skills” công khai hiện tại trên OpenAI Developers, cùng các chương Skills, tự động hóa, quy tắc lệnh và rủi ro mở rộng đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào đóng gói quy trình lặp thành Skill, cách tổ chức hướng dẫn và nghiệm thu”.", "checkedAt": "2026-07-26"}
 title: Đóng gói quy trình thành Skill
 description: Quy trình lặp lần thứ ba đáng viết thành Skill — tích hợp kích hoạt, hướng dẫn và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Khi cùng loại tác vụ (kiểm tra phát hành, đồng bộ tài liệu, quét bảo mật) **lần thứ ba** vẫn hoàn thành bằng copy-paste prompt, nên cân nhắc [Skill](/vi/skills/overview/). Chương này nối [phương pháp quy trình](/vi/cases/workflows/) với hệ mở rộng.
@@ -69,9 +70,3 @@ So với [biến quy trình thành tự động hóa](/vi/skills/automations/sch
 
 ## Nguồn tham chiếu
 - [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) và [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md) trong kho
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases “Save workflows as skills” công khai hiện tại trên OpenAI Developers, cùng các chương Skills, tự động hóa, quy tắc lệnh và rủi ro mở rộng đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào đóng gói quy trình lặp thành Skill, cách tổ chức hướng dẫn và nghiệm thu”.  
-**Kiểm chứng gần nhất:** 2026-07-26

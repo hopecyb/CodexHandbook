@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI beschreibt die IDE-Erweiterung weiterhin als Client für lokale Code-Repositories; dieser Workflow fokussiert die stabile lokale Schleife „Workspace öffnen, Dateirahmen setzen, Aufgabe beschreiben, Diff prüfen, Tests laufen, manuell committen“ — ohne Abhängigkeit von einer konkreten Erweiterungs-UI."
+  checkedAt: "2026-07-26"
 title: Lokaler Aufgaben-Workflow
 description: In der IDE lokale Codex-Aufgaben starten, begleiten und abschließen — basierend auf geöffneten Dateien und Auswahl.
 locale: de
 source_locale: zh-CN
-source_revision: 0264d4d
+source_revision: "0264d4d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
@@ -69,10 +74,3 @@ Gut geeignet:
 - leicht zu testen oder zu previewen
 
 Lokale IDE-Aufgaben eignen sich für kleine, schnelle Schritte — „bequem“ heißt nicht „Überprüfung und Verifikation überspringen“.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** IDE  
-**Prüfgrundlage:** OpenAI beschreibt die IDE-Erweiterung weiterhin als Client für lokale Code-Repositories; dieser Workflow fokussiert die stabile lokale Schleife „Workspace öffnen, Dateirahmen setzen, Aufgabe beschreiben, Diff prüfen, Tests laufen, manuell committen“ — ohne Abhängigkeit von einer konkreten Erweiterungs-UI.  
-**Zuletzt geprüft:** 2026-07-26

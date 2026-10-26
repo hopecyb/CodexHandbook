@@ -3,17 +3,22 @@ title: Permissões e Aprovação
 description: Explica quando o Codex precisa da sua Aprovação para operar.
 locale: pt
 source_locale: zh-CN
-source_revision: 1beec63
+source_revision: "1beec63"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: A documentação atual de introdução ao Codex CLI no OpenAI Help Center ainda distingue approval modes e estratifica por risco ações como ler arquivos, escrever arquivos e executar comandos; esta página só explica por que a Aprovação existe, quando aprovar com cautela e como julgar o alcance do impacto — sem declarar valores padrão fixos do produto.
+  checkedAt: '2026-07-26'
 ---
 
-O Codex não deve executar operações de alto risco sem consentimento. A **Aprovação** é a trava na colaboração humano–máquina.
+O Codex não deve executar operações de alto risco sem consentimento. A **aprovação** é a trava na colaboração humano–máquina.
 
-Se o Codex pudesse ler qualquer arquivo, acessar a rede à vontade e rodar comandos à vontade, o custo de entender mal a Tarefa seria alto.
+Se o Codex pudesse ler qualquer arquivo, acessar a rede à vontade e rodar comandos à vontade, o custo de entender mal a tarefa seria alto.
 
 ![Ilustração: quatro portas com permissões diferentes — ler, escrever, executar comandos, acessar a rede — e uma pessoa escolhendo qual chave entregar](/illustrations/permissions-approvals.webp)
 
@@ -26,7 +31,7 @@ Se o Codex pudesse ler qualquer arquivo, acessar a rede à vontade e rodar coman
 
 ## O que ela controla
 
-Dá para ver a Aprovação como «caixa de confirmação antes de um passo perigoso».
+Dá para ver a aprovação como «caixa de confirmação antes de um passo perigoso».
 
 Nestes casos, por exemplo, ele deve parar e perguntar:
 
@@ -54,7 +59,7 @@ Olhe pelo menos estas três coisas:
 2. Onde vai impactar
 3. Se é o que você queria que ele fizesse
 
-### 3. Se eu recusar, a Tarefa inteira se perde?
+### 3. Se eu recusar, a tarefa inteira se perde?
 
 Em geral, não. Você pode recusar e pedir que ele continue de um jeito mais seguro.
 
@@ -63,23 +68,16 @@ Em geral, não. Você pode recusar e pedir que ele continue de um jeito mais seg
 - Se não entender, não aprove ainda
 - Cuidado extra fora do alcance do projeto atual
 - Olhe com mais atenção ao sair à rede, rodar comandos ou alterar arquivos em lote
-- Em dúvida, peça que explique «por que precisa desta Permissão»
+- Em dúvida, peça que explique «por que precisa desta permissão»
 
 ## Explicação por camadas
 
 | Camada | O que cobre | Onde ler |
 |---|---|---|
-| Conceito (esta página) | Por que a Aprovação é necessária | — |
+| Conceito (esta página) | Por que a aprovação é necessária | — |
 | Diferenças de produto | Como cada entrada mostra a confirmação | [Guias de produto](/pt/guide/) |
-| Estratégia de Prompt | Como declarar limites de Permissão na Tarefa | [Definir restrições](/pt/prompts/constraints-and-boundaries/) |
+| Estratégia de prompt | Como declarar limites de permissão na tarefa | [Definir restrições](/pt/prompts/constraints-and-boundaries/) |
 
 Políticas oficiais e valores padrão podem mudar; confira [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-O papel da Aprovação é manter a decisão de «pode ou não pode» sempre com você.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** A documentação atual de introdução ao Codex CLI no OpenAI Help Center ainda distingue approval modes e estratifica por risco ações como ler arquivos, escrever arquivos e executar comandos; esta página só explica por que a Aprovação existe, quando aprovar com cautela e como julgar o alcance do impacto — sem declarar valores padrão fixos do produto.  
-**Última verificação:** 2026-07-26
+O papel da aprovação é manter a decisão de «pode ou não pode» sempre com você.

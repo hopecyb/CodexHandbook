@@ -3,13 +3,19 @@ title: Artefakt zuerst
 description: Zuerst Form und Pfad des finalen Artefakts vereinbaren, dann Schritte ableiten — geeignet für Docs, Configs, Reports und ähnliche Liefergegenstände.
 locale: de
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: "e57c215"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Dateien und Artefakten, Definition of Done und Artefakt-Überprüfung. Der Inhalt fokussiert die stabile Schreib- und Liefermethode „zuerst Liefergegenstände
+    vereinbaren, dann Schritte ableiten“.
+  checkedAt: '2026-07-26'
 ---
 
-**Artefakt zuerst** bedeutet: Form und Speicherort des Liefergegenstands klar machen, bevor Codex die Schritte ableitet. Geeignet für Markdown-Docs, OpenAPI, Migrationsskripte, Folienumrisse und ähnliche klar umrissene Ausgaben; kombinierbar mit [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/).
+**Artefakt zuerst** bedeutet: Form und Speicherort des Liefergegenstands klar machen, bevor Codex die Schritte ableitet. Geeignet für Markdown-Docs, OpenAPI, Migrationsskripte, Foliengliederungen und ähnliche klar umrissene Ausgaben; kombinierbar mit [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/).
 
 ## Schwerpunkte dieser Seite
 
@@ -24,7 +30,7 @@ Ziel-Artefakte:
 - docs/api/auth.md (mit 3 Abschnitten: Überblick, Endpunkte, Fehlercodes)
 - Stil konsistent mit @docs/api/users.md
 
-Zuerst Verzeichnisumriss und Stichpunkte pro Abschnitt; noch keinen Volltext;
+Zuerst Inhaltsgliederung und Stichpunkte pro Abschnitt; noch keinen Volltext;
 nach meiner Bestätigung generieren und interne Links selbst prüfen.
 ```
 
@@ -32,7 +38,7 @@ nach meiner Bestätigung generieren und interne Links selbst prüfen.
 
 ```text
 Artefaktliste definieren (Pfad + Format + Beispielreferenz)
-    → Umriss oder Skelettdateien
+    → Gliederung oder Dateigerüste
     → Manuelle Bestätigung
     → Inhalt füllen + Querverlinkung
     → Überprüfen (Lint, Linkcheck, Vorschau)
@@ -58,10 +64,3 @@ Bei visuellen Artefakten Screenshots oder Vorschaubeschreibungen verlangen; sieh
 - [ ] Format stimmt mit dem Referenzbeispiel überein
 - [ ] Links / Verzeichnisse / Frontmatter sind gültig
 - [ ] Entspricht [Done definieren](/de/prompts/define-done/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Dateien und Artefakten, Definition of Done und Artefakt-Überprüfung. Der Inhalt fokussiert die stabile Schreib- und Liefermethode „zuerst Liefergegenstände vereinbaren, dann Schritte ableiten“.  
-**Zuletzt geprüft:** 2026-07-26

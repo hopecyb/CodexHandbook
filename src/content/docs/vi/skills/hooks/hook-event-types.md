@@ -1,16 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Môi trường sử dụng Codex host cục bộ"
+  checkedAt: "2026-08-25"
 title: Các loại sự kiện Hook
 description: Chọn sự kiện theo vòng đời phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con.
 locale: vi
 source_locale: zh-CN
-source_revision: 07f4965
-translation_status: draft
+source_revision: "07f4965"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Khi chọn Hook, câu hỏi đầu tiên không phải “viết script thế nào” mà là “xử lý trước hay sau khi tác dụng phụ xảy ra”. Đặt sai điểm sự kiện thì dù script hoàn thiện đến đâu, nó cũng có thể chỉ báo cáo được sau sự việc.
 
-![Vòng đời Codex Hook và các sự kiện quan trọng](/diagrams/hook-lifecycle-events-zh-cn.svg)
+![Vòng đời Codex Hook và các sự kiện quan trọng](/diagrams/hook-lifecycle-events-vi.svg)
 
 ## Danh sách sự kiện hiện tại
 

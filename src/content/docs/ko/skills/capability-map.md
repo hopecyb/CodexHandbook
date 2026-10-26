@@ -3,9 +3,15 @@ title: 확장 기능 지도
 description: 작업, 규칙, 절차, 도구, 보호, 배포, 실행 시점, 병렬 분업의 여덟 역할로 Codex 확장 체계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 183812c
-translation_status: draft
+source_revision: '183812c'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / 데스크톱 App / Codex CLI / IDE(각 방식의 지원 범위는 본문 참조)
+  basis: 2026-08-25에 접근 가능한 OpenAI 공식 Skills, Plugins, MCP, Hooks, Scheduled tasks, Subagents 문서를 기준으로 역할 모델과 진입점 경계를 다시 구성했습니다.
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 확장 기능은 같은 작업 흐름에 함께 등장하기 때문에 혼동하기 쉽습니다. 하지만 각각 해결하는 문제는 다릅니다.
@@ -26,7 +32,7 @@ translated_at: 2026-09-20
 
 | 역할 | 방식 | 가장 적합한 문제 | 담당하지 않는 일 |
 |---|---|---|---|
-| 현재 작업 | 요청 | 이번에 할 일, 범위, 검수 기준 | 장기 프로젝트 규칙 |
+| 현재 작업 | 프롬프트 | 이번에 할 일, 범위, 검수 기준 | 장기 프로젝트 규칙 |
 | 지속 규칙 | `AGENTS.md` | 저장소 명령, 관례, 디렉터리 경계 | 특정 작업 유형의 전체 절차 |
 | 재사용 절차 | Skill | 안정적인 단계, 참고 자료, 템플릿, 보조 스크립트 | 외부 시스템 권한을 저절로 얻기 |
 | 외부 도구 | MCP / Connector | 저장소 밖의 데이터와 작업을 Codex가 사용하도록 하기 | 업무 목표의 타당성을 결정하기 |
@@ -56,7 +62,7 @@ translated_at: 2026-09-20
 | PR 검토 절차 표준화 | Skill |
 | Jira/Linear 티켓 읽기 | MCP |
 | 팀 전체에 통합 기능 설치 | Plugin |
-| 매번 제출하기 전 비밀 키 검사 | Hooks |
+| 매번 커밋하기 전 비밀 키 검사 | Hooks |
 | 매주 월요일 주간 보고서 초안 자동 생성 | Automations와 사람의 게시 검토 |
 
 ## 한 번의 성공을 팀 자산으로 만들기
@@ -65,7 +71,7 @@ translated_at: 2026-09-20
 
 | 단계 | 형태 | 적합한 상황 |
 |---|---|---|
-| 일회성 요청 | 현재 대화의 작업 설명 | 한 번만 하거나 문제를 탐색 중일 때 |
+| 일회성 프롬프트 | 현재 대화의 작업 설명 | 한 번만 하거나 문제를 탐색 중일 때 |
 | 템플릿 | 목표, 맥락, 제약, 검수 기준의 고정 골격 | 비슷한 작업이 반복되지만 단계는 조정 중일 때 |
 | Skill | `SKILL.md`와 템플릿, 참고 자료 또는 스크립트 | 절차가 안정적이고 성공 기준이 분명할 때 |
 | Plugin | Skills, 연결 기능, MCP, Hooks, 템플릿 묶음 | 설치, 업데이트, 관리를 통일해야 할 때 |

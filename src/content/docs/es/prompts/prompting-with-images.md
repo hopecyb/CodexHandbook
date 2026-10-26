@@ -1,28 +1,33 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Se ha revisado la estructura, los escenarios y las precauciones de esta página según materiales oficiales de OpenAI sobre entrada de imágenes y subida de archivos; el cuerpo ya no depende de fuentes de escenarios no oficiales y no conserva detalles de interfaz que exijan contraste versión a versión."
+  checkedAt: "2026-07-26"
 title: Prompts con imágenes
 description: Cómo preguntar al dar a Codex capturas, diseños o fotos de pizarra para obtener resultados ejecutables.
 locale: es
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: '953a69b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Muchos fallos de «trabajar a partir de una imagen» no vienen de que el modelo no la vea, sino de dar solo la imagen **sin decir qué debe mirar en ella**.
 
-Un Prompt con imagen debe ayudar a Codex a fijar tres cosas:
+Un prompt con imagen debe ayudar a Codex a fijar tres cosas:
 
 1. qué es esta imagen
 2. dónde quieres que se centre
 3. a qué tarea debe servir la salida final
 
-## Escenarios adecuados para Prompts con imágenes
+## Escenarios adecuados para prompts con imágenes
 
 | Escenario | Papel de la imagen |
 |---|---|
 | Depurar un bug de UI | ver ubicación y estado anómalos |
-| Fidelidad al diseño | referencia de layout, jerarquía, espaciado y ambiente |
+| Fidelidad al diseño | referencia de distribución, jerarquía, espaciado y ambiente |
 | Explicar una captura en documentación | redactar instrucciones o tutoriales a partir de la UI |
 | Ordenar pizarra / diagrama de flujo | convertir un dibujo a mano en descripción estructurada |
 | Comparar actual vs. esperado | identificar diferencias en lugar de adivinar el requisito |
@@ -31,7 +36,7 @@ Si el foco está en «apariencia, posición, estado visual», la imagen suele se
 
 ## Estructura en cuatro bloques
 
-Como en un Prompt de texto, mantén estructura:
+Como en un prompt de texto, mantén estructura:
 
 ### 1. Identidad de la imagen
 
@@ -50,7 +55,7 @@ Indica dónde mirar; no te quedes en «busca el problema tú».
 Por ejemplo:
 
 ```text
-Céntrate en el espaciado entre el botón inferior y el campo de entrada, y en el cambio de layout cuando aparece el teclado.
+Céntrate en el espaciado entre el botón inferior y el campo de entrada, y en el cambio de distribución cuando aparece el teclado.
 ```
 
 ### 3. Objetivo de la tarea
@@ -91,7 +96,7 @@ No modifiques el código todavía.
 
 ```text
 Subo el diseño objetivo.
-Resume a partir de esta imagen la estructura de la página, los componentes clave, los puntos responsive y el estilo visual.
+Resume a partir de esta imagen la estructura de la página, los componentes clave, los requisitos de diseño adaptable y el estilo visual.
 Si pasas a implementar, prioriza estructura y jerarquía; no añadas funciones por tu cuenta.
 ```
 
@@ -99,7 +104,7 @@ Si pasas a implementar, prioriza estructura y jerarquía; no añadas funciones p
 
 ```text
 Subiré dos imágenes: la primera es el efecto actual; la segunda, el esperado.
-Compara diferencias en layout, jerarquía tipográfica, espaciado e indicios de interacción, y prioriza las correcciones.
+Compara diferencias en distribución, jerarquía tipográfica, espaciado e indicios de interacción, y prioriza las correcciones.
 ```
 
 ## Qué texto conviene complementar para que mire con más precisión
@@ -110,7 +115,7 @@ La imagen suele carecer de contexto de ejecución; estas piezas ayudan:
 - si el estado incluye hover / focus / error
 - posición de scroll de la página
 - si es «efecto actual» o «efecto objetivo»
-- si hay que respetar un design system existente
+- si hay que respetar un sistema de diseño existente
 
 Una frase como «en Chrome de escritorio va bien; solo falla en iOS Safari» suele valer más que otra captura.
 
@@ -150,7 +155,7 @@ Codex intenta inferir todos los requisitos de la imagen y a menudo trata como ob
 
 ### Solo un recorte, sin contexto
 
-El recorte muestra el punto del problema, pero no siempre la página, el estado, el responsive o si es un overlay.
+El recorte muestra el punto del problema, pero no siempre la página, el estado, el comportamiento adaptable o si se trata de una capa superpuesta.
 
 ### Tratar el diseño como especificación completa
 
@@ -185,9 +190,3 @@ Suele ser más claro que un «ayúdame a arreglarlo» y más fácil de continuar
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**Estado:** verified  
-**Productos aplicables:** App / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Se ha revisado la estructura, los escenarios y las precauciones de esta página según materiales oficiales de OpenAI sobre entrada de imágenes y subida de archivos; el cuerpo ya no depende de fuentes de escenarios no oficiales y no conserva detalles de interfaz que exijan contraste versión a versión.

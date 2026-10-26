@@ -3,12 +3,13 @@ title: Progresso e reorientação
 description: Quando a direção desvia a meio da execução, como puxar o Codex de volta com instruções curtas.
 locale: pt
 source_locale: zh-CN
-source_revision: c9ea3be
+source_revision: "c9ea3be"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzada com a descrição atual da OpenAI Developers sobre tarefas longas, verificação e avanço por passos, e com capítulos já verificados deste manual sobre planejamento, qualidade e contexto; esta página mantém só o princípio estável de colaboração «correção local > anular o bloco inteiro».", "checkedAt": "2026-07-26"}
 ---
 
 A meio da execução, as reações comuns costumam ser só duas:
@@ -60,7 +61,7 @@ Se metade já está certa, anular tudo costuma significar:
 
 - Tem de voltar a explicar o contexto
 - A parte já alinhada também se perde
-- A nova ronda pode desviar outra vez
+- A nova rodada pode desviar outra vez
 
 ### 2. Bastará dizer «está errado» para ele saber onde?
 
@@ -82,25 +83,25 @@ Mais eficaz é indicar claramente:
 | Correção a passo pequeno | Anular e recomeçar |
 |---|---|
 | Mantém o trabalho já alinhado | Também deita fora o que estava certo |
-| Poupa mais Contexto | Precisa de voltar a explicar o fundo |
-| Mais fácil controlar o âmbito | Fácil voltar a derivar |
+| Poupa mais contexto | Precisa explicar novamente o contexto |
+| Mais fácil controlar o escopo | Fácil voltar a derivar |
 | Mais parecido com colaboração real | Mais parecido com voltar a encomendar |
 
-## Quando reorientar primeiro e quando voltar ao planeamento
+## Quando reorientar primeiro e quando voltar ao planejamento
 
 Pode julgar assim:
 
-- **Só ordem errada, âmbito grande demais, formato de saída errado**: reoriente primeiro
-- **Objetivo mudou, premissa mudou, superfície de impacto mudou**: volte ao planeamento
+- **Só ordem errada, escopo grande demais, formato de saída errado**: reoriente primeiro
+- **Objetivo mudou, premissa mudou, superfície de impacto mudou**: volte ao planejamento
 
 ## Três formas comuns de reorientação
 
-### 1. Reduzir o âmbito
+### 1. Reduzir o escopo
 
 Quando começa a fazer demais:
 
 ```text
-Trate primeiro só a página de login; não alargue aos fluxos de registo e recuperação de palavra-passe.
+Trate primeiro só a página de login; não alargue aos fluxos de cadastro e recuperação de senha.
 ```
 
 ### 2. Ajustar a ordem
@@ -108,7 +109,7 @@ Trate primeiro só a página de login; não alargue aos fluxos de registo e recu
 Quando o que faz está certo, mas a sequência não:
 
 ```text
-Complete primeiro Verificação e testes; só depois continue a alterar a implementação.
+Complete primeiro verificação e testes; só depois continue a alterar a implementação.
 ```
 
 ### 3. Mudar a forma de saída
@@ -116,7 +117,7 @@ Complete primeiro Verificação e testes; só depois continue a alterar a implem
 Quando quer análise antes de aplicar:
 
 ```text
-Ainda não altere ficheiros. Dê-me primeiro uma tabela comparativa: diferença entre a abordagem atual e a que sugere.
+Ainda não altere arquivos. Dê-me primeiro uma tabela comparativa: diferença entre a abordagem atual e a que sugere.
 ```
 
 ## O que uma boa reorientação deve incluir
@@ -130,39 +131,32 @@ Ainda não altere ficheiros. Dê-me primeiro uma tabela comparativa: diferença 
 Esta frase fica mais clara:
 
 ```text
-Mantenha o seu juízo sobre a causa do problema, mas ainda não entre no refactor. O próximo passo: só um plano mínimo de correção e os passos de Verificação.
+Mantenha o seu juízo sobre a causa do problema, mas ainda não entre no refactor. O próximo passo: só um plano mínimo de correção e os passos de verificação.
 ```
 
 ## Quando voltar a «replanear»
 
-A reorientação serve a desvios locais; nestes casos vale mais voltar a [Planeamento](/pt/guide/agent-work/planning/):
+A reorientação serve a desvios locais; nestes casos vale mais voltar a [Planejamento](/pt/guide/agent-work/planning/):
 
-- O objetivo da Tarefa mudou
+- O objetivo da tarefa mudou
 - Informação nova derrubou a premissa anterior
 - A superfície de impacto alargou-se claramente
 - Já corrigiu duas ou três vezes seguidas e ainda deriva
 
-Se o problema já não é desvio local, volte diretamente à fase de planeamento.
+Se o problema já não é desvio local, volte diretamente à fase de planejamento.
 
 ## Erros habituais
 
 - Só dizer «errado», sem dizer onde
 - Pedir que «decida sozinho como corrigir», sem dar prioridade
 - Querer só pausar um passo e usar linguagem que dispara um redo completo
-- Já ser uma Tarefa nova e tentar continuar só com uma frase suplementar
+- Já ser uma tarefa nova e tentar continuar só com uma frase suplementar
 
-Quando detetar desvio na execução, use instruções curtas: «o que manter, o que parar, o que só fazer a seguir».
+Quando detectar desvio na execução, use instruções curtas: «o que manter, o que parar, o que só fazer a seguir».
 
 ## Combinações recomendadas
 
-- Clarificar primeiro o caminho de execução: [Planeamento](/pt/guide/agent-work/planning/)
-- Escrever o fluxo como cadeia principal completa: [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
-- Dividir a Tarefa: [Subagents](/pt/guide/agent-work/subagents/)
+- Clarificar primeiro o caminho de execução: [Planejamento](/pt/guide/agent-work/planning/)
+- Escrever o fluxo como cadeia principal completa: [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Dividir a tarefa: [Subagents](/pt/guide/agent-work/subagents/)
 - Continuar após interrupção: [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com a descrição atual da OpenAI Developers sobre Tarefas longas, Verificação e avanço por passos, e com capítulos já verificados deste manual sobre planeamento, qualidade e Contexto; esta página mantém só o princípio estável de colaboração «correção local > anular o bloco inteiro».  
-**Última verificação:** 2026-07-26

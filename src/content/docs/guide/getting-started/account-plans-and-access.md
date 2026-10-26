@@ -19,7 +19,7 @@ Codex 当前可通过 **ChatGPT 计划**或 **API key 按量计费**使用，但
 | 使用 ChatGPT 登录 | 个人交互、桌面、Cloud、组织工作区 | 按 ChatGPT 计划额度、工作区角色和管理员策略运行 |
 | 使用 API key | 本地 Codex、脚本与 CI | 按 API 用量计费；部分依赖 ChatGPT 工作区或 Cloud 的能力不可用 |
 
-当前官方 Pricing 页面把 ChatGPT Work 和 Codex 纳入 Free、Go、Plus、Pro、Business、Edu、Enterprise 等计划，但价格、额度、模型和功能包含项会变化。本手册不复制价格表，请直接查看 [官方实时 Pricing 页面](https://learn.chatgpt.com/docs/pricing)。
+当前官方 Pricing 页面把 ChatGPT Work 和 Codex 纳入 Free、Go、Plus、Pro、Business、Edu、Enterprise 等计划，但价格、额度、模型和功能包含项会变化。本页不维护价格表；可查看[本站套餐选择与价格来源](/chatgpt-pricing/)，并核对 [官方实时 Pricing 页面](https://learn.chatgpt.com/docs/pricing)。
 
 ## 有账号为什么仍可能不能用
 
@@ -51,3 +51,5 @@ Codex 当前可通过 **ChatGPT 计划**或 **API key 按量计费**使用，但
 如果 CLI 能用 API key 登录，但 Cloud 按钮不可用，这不一定是安装故障。Cloud 要求 ChatGPT 登录，并受 ChatGPT 计划和工作区权限控制；API key 主要覆盖本地与程序化流程。
 
 下一步见 [登录与身份验证](/guide/getting-started/sign-in-and-authentication/)。
+
+查看当前型号、入口差异和任务建议：[模型选择：按任务找到起点](/guide/reference/model-selection/)。

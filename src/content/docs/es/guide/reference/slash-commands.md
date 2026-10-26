@@ -3,11 +3,17 @@ title: Comandos de barra y accesos rápidos
 description: Guía rápida para aprender los comandos / y las llamadas a Skills con $, sin pretender ser un manual completo de parámetros.
 locale: es
 source_locale: zh-CN
-source_revision: a34c90f
-translation_status: draft
+source_revision: 'a34c90f'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Contrastado con las páginas oficiales actuales de Slash commands para la aplicación de escritorio y Developer commands. Los conjuntos de comandos difieren entre interfaces; los comandos enumerados proceden de las tablas oficiales y su disponibilidad final depende de las sugerencias del campo de mensaje.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
 
 La primera vez que aparecen los comandos de barra, es fácil pensar que hay que memorizar una jerga complicada. Resulta más sencillo verlos como accesos rápidos que puedes invocar expresamente.

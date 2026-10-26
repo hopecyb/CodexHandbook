@@ -3,12 +3,17 @@ title: 終了コードと再試行
 description: パイプラインで codex exec の成否を正しく解釈——いつ再試行し、いつ即失敗するか。
 locale: ja
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: "35074cd"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 根拠のない特定の終了コードの意味を削除済みです。本ページは、現行の公式情報で確認されたプロセスの成否と `stderr` の進捗・エラー出力のみを前提とし、業務上のレビュー結果は構造化された出力で扱います。
+  checkedAt: '2026-08-26'
 ---
 
 CI は**プロセス終了コード**でステップの成否を判断します。本章は [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/) の一般的な意味、再試行方針、冪等設計を説明します。
@@ -55,40 +60,37 @@ CI は**プロセス終了コード**でステップの成否を判断します�
 
 | 状況 | 推奨処理 |
 |---|---|
-| `0` | タスク完了かつ prompt の成功基準を満たす |
+| `0` | `codex exec` プロセスが正常終了した。業務上の合否は構造化された結果を確認する |
 | 非 `0` かつログに policy/sandbox 拒否 | **盲目的に再試行しない**。設定または prompt を修正 |
-| 非 `0` かつ API 429/5xx | 限回数の指数バックオフ再試行 |
+| 非 `0` かつ実行環境が一時的なネットワーク・サービス障害と確認した | 回数を制限してバックオフ付きで再試行 |
 | P0 問題を発見したが実行は成功 | [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) の `pass: false` + スクリプトで `exit 1` |
 
 「セキュリティ問題を発見」はクラッシュ例外に頼らず、JSON で**明示的に** `pass: false` とし、ラッパースクリプトが終了コードを決める。
 
-## 再試行テンプレート（bash）
+## 終了コードを取得するテンプレート（bash）
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-「再試行不可」コードは公式ドキュメントと整合後、`case` 分岐に書き込む。
+公式に定義されていない数値に独自の意味を付けないでください。たとえば `2` が常にポリシー違反を意味すると仮定してはいけません。再試行が必要なら、外側の実行環境で確実に判別できるエラーの種類に基づいて判断し、回数、総実行時間、副作用を制限します。
 
 ## 冪等と副作用
 
 | リスク | 緩和 |
 |---|---|
 | PR コメント重複 | check run id または「既存 bot コメントがあれば更新」 |
-| ファイル重複書き込み | exec はデフォルト読み取り専用レビュー。書き込みは別 job + 人工ゲート |
+| ファイル重複書き込み | exec はデフォルト読み取り専用レビュー。書き込みは別 job + 人による承認 |
 | 通知重複 | 通知 webhook に dedupe key |
 
 ## 迷ったときの判断
@@ -97,7 +99,7 @@ exit 1
 2. 再実行で重複コメント、重複書き込み、重複通知が起きるか
 3. 失敗原因は人が設定、prompt、権限を直すべき類か
 
-1 に近ければ限回数再試行。2・3 に近ければ根因対応で止める。
+1 に近ければ回数を制限して再試行。2・3 に近ければ停止して根本原因に対処する。
 
 ## よくあるミス
 
@@ -121,9 +123,3 @@ exit 1
 
 ## 参考
 - OpenAI API 再試行ガイド（概念）
----
-
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 終了コードと再試行について合理的な工程助言を提供するが、例に特定終了コード意味（例：`code=2`）と `codex exec` 挙動仮定が含まれる。現行 CLI 公式根拠が十分でない。新版 CLI 文書確認後に `verified` へ戻す。  
-**最終検証：** 2026-07-26

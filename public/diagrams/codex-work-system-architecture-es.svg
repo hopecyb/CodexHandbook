@@ -1,6 +1,6 @@
 <svg lang="es" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="title desc">
   <title id="title">Arquitectura reutilizable del sistema de trabajo Codex</title>
-  <desc id="desc">Los prompts de tarea y las reglas del proyecto entran en una tarea de Codex; Skills aporta procesos, MCP herramientas externas, los subagentes exploración paralela y Hooks guardas del ciclo de vida. Plugins distribuye capacidades, Scheduled tasks dispara por tiempo y las personas revisan el resultado final.</desc>
+  <desc id="desc">Los prompts y las reglas del proyecto entran en una tarea de Codex. Las Skills aportan procesos; MCP, herramientas externas; los subagentes exploran en paralelo y los Hooks añaden controles en el ciclo de vida. Los Plugins distribuyen capacidades, las Scheduled tasks inician ejecuciones según el horario y las personas revisan el resultado final.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -46,7 +46,7 @@
   <rect x="42" y="475" width="180" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="132" y="503" text-anchor="middle" class="label">Scheduled task</text>
   <text x="132" y="527" text-anchor="middle" class="note">Scheduled task</text>
-  <text x="132" y="550" text-anchor="middle" class="tiny">Disparar una nueva ejecución por tiempo</text>
+  <text x="132" y="550" text-anchor="middle" class="tiny">Iniciar una nueva ejecución según el horario</text>
 
   <rect x="350" y="112" width="470" height="486" rx="12" fill="#07101f" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8 5"/>
   <text x="370" y="140" class="note" fill="#fbbf24">Una ejecución de tarea Codex</text>

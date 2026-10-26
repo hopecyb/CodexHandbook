@@ -1,16 +1,20 @@
 ---
-title: "Choisir le bon mécanisme"
+title: Choisir le bon mécanisme
 description: Cadre de décision pour où placer les prompts temporaires, AGENTS.md, la mémoire, les Skills et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: "5fad7cb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés du handbook sur `AGENTS.md`, contexte, Skills, MCP et qualité ; cette page ne conserve que le cadre de décision stable que les exigences temporaires, les règles projet, les préférences personnelles, le packaging de flux de travail et les capacités externes doivent être stockés dans des couches séparées.
+  checkedAt: '2026-07-26'
 ---
-
 Beaucoup de problèmes d'équipe viennent de **mettre la même information au mauvais endroit** : des règles qui devraient être dans le dépôt partent dans le chat, des flux réutilisables qui devraient être des Skills sont entassés dans `AGENTS.md`, et l'accès en lecture seule aux données est confié à un MCP à haut privilège.
 
 Cette page se concentre sur une question pratique :
@@ -47,7 +51,7 @@ Mauvais choix :
 - Répertoires interdits du dépôt
 - Chaque revue PR doit suivre le même modèle
 
-Ces règles à long terme doivent descendre plus bas.
+Placez ces règles durables dans les mécanismes décrits ci-dessous.
 
 ### 2. Est-ce une règle de collaboration projet ou une habitude personnelle ?
 
@@ -65,7 +69,7 @@ Si c'est uniquement **votre préférence** — par exemple « expliquer en chino
 Règle empirique :
 
 - Si cela doit passer par une revue PR, préférez le dépôt
-- Si que d'autres ne le voient pas est acceptable, envisagez la couche personnelle
+- Si les autres n’ont pas besoin d’y avoir accès, envisagez la couche personnelle
 
 ### 3. Est-ce une « règle » ou une « procédure » ?
 
@@ -120,7 +124,7 @@ Division des responsabilités :
 - `AGENTS.md` contient les normes d'équipe partagées
 - La mémoire garde les préférences personnelles comme la langue, le style d'explication et la structure de sortie par défaut
 
-Ne faites pas l'inverse. Les règles d'équipe ne devraient pas vivre uniquement dans la mémoire d'une personne.
+Ne faites pas l'inverse. Les règles d’équipe ne devraient pas exister uniquement dans la mémoire d'une personne.
 
 ## Matrice de décision plus pratique
 
@@ -205,9 +209,3 @@ Cela facilite la stabilisation du **consensus de collaboration** d'abord, puis l
 
 ## Références
 - Documentation officielle OpenAI Codex (selon la version actuelle)
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Recoupement avec les chapitres vérifiés du handbook sur `AGENTS.md`, contexte, Skills, MCP et qualité ; cette page ne conserve que le cadre de décision stable que les exigences temporaires, les règles projet, les préférences personnelles, le packaging de flux de travail et les capacités externes doivent être stockés dans des couches séparées.  
-**Dernière vérification :** 2026-07-26

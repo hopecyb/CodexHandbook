@@ -3,10 +3,16 @@ title: Team-Automatisierung
 description: Einstieg zu Fällen für wiederkehrende Teamaufgaben — Fokus auf Trigger, Benachrichtigung, Freigabe und Stoppbedingungen.
 locale: de
 source_locale: zh-CN
-source_revision: e596dcc
+source_revision: "e596dcc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "Cloud / CLI / App"
+  basis: Kreuzgeprüft gegen den aktuellen team-automation-Falleinstieg dieses Repos sowie Kapitel zu Automatisierung und Freigabegrenzen. Diese Seite dient nur der Navigation der Team-Automatisierungs-Fallgruppe
+    und verspricht keine konkreten Automatisierungsgrenzen.
+  checkedAt: '2026-07-26'
 ---
 
 Bei Team-Automatisierung ist Übereifer häufig. Besser: klare, wiederholbare Aktionen automatisieren und den Rest menschlicher Beurteilung überlassen.
@@ -21,10 +27,3 @@ Bei Team-Automatisierung ist Übereifer häufig. Besser: klare, wiederholbare Ak
 - Was vollautomatisch laufen darf und was nur Vorschläge liefern soll
 - Wie bei Fehlern oder Anomalien alarmieren und stoppen
 - Warum «automatisch Draft-PR öffnen» meist stabiler ist als «automatisch den Hauptbranch ändern»
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** Cloud / CLI / App  
-**Prüfgrundlage:** Kreuzgeprüft gegen den aktuellen team-automation-Falleinstieg dieses Repos sowie Kapitel zu Automatisierung und Freigabegrenzen. Diese Seite dient nur der Navigation der Team-Automatisierungs-Fallgruppe und verspricht keine konkreten Automatisierungsgrenzen.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: Create pull requests
 description: Deliver a Cloud result as a reviewable, verifiable PR that is not merged automatically.
 locale: en
 source_locale: zh-CN
-source_revision: 39371d4
+source_revision: '39371d4'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
 ---
@@ -69,11 +73,3 @@ Opening and merging a PR are separate permission boundaries. Cloud being able to
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26

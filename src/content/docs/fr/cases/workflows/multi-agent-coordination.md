@@ -3,12 +3,16 @@ title: Coordination multi-Agent
 description: Exploration parallèle, exécution répartie et fusion des résultats — quand découper et comment vérifier.
 locale: fr
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Recoupement avec la documentation publique actuelle d'OpenAI Developers sur le multi-agent / sous-agents, ainsi que les chapitres vérifiés sur les sous-agents, le transfert/reprise et le travail parallèle ; le contenu se limite aux méthodes stables « quand découper, comment isoler les limites, comment synthétiser et vérifier humainement », sans figer les entrées beta ou UI actuelles.
+  checkedAt: '2026-07-26'
 ---
-
 Le multi-Agent convient aux sous-problèmes parallèles et faiblement couplés. Il ne convient pas à deux agents modifiant le même fichier sans coordinateur.
 
 ## Quand découper
@@ -60,10 +64,3 @@ Des Agents différents modifient des branches différentes dans des [git worktre
 
 - Trois Agents en parallèle modifiant `package.json`
 - Pas d'étape de synthèse — on ne sait pas quelle conclusion suivre
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec la documentation publique actuelle d'OpenAI Developers sur le multi-agent / sous-agents, ainsi que les chapitres vérifiés sur les sous-agents, le transfert/reprise et le travail parallèle ; le contenu se limite aux méthodes stables « quand découper, comment isoler les limites, comment synthétiser et vérifier humainement », sans figer les entrées beta ou UI actuelles.

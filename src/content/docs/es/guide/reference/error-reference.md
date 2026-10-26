@@ -3,12 +3,17 @@ title: Referencia de errores y mensajes
 description: Índice de aprendizaje de mensajes de error habituales, códigos de salida y causas de fallo — apunta a páginas de diagnóstico; no sustituye el soporte oficial.
 locale: es
 source_locale: zh-CN
-source_revision: 955c0a6
+source_revision: '955c0a6'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página se posiciona como «índice de clasificación de errores», no como diccionario completo; el método de clasificación son cinco clases —autenticación, Permiso, entorno, red, lógica de la Tarea— contrastadas con los capítulos actuales de CLI, Cloud, Permisos y configuración, sin depender de una tabla fija de códigos de error.
+  checkedAt: '2026-07-26'
 ---
 
 Ante un error, mucha gente se queda mirando esa línea en inglés e intenta adivinar. Clasificar el problema primero suele ser más efectivo.
@@ -64,7 +69,7 @@ A veces la última línea solo es el «resumen final del fallo»; la informació
 
 - Qué paso lo disparó
 - Qué archivo, comando o Herramienta falló
-- Si hay una pista de causa más original
+- Si hay información más directa sobre la causa inicial
 
 ## CLI y comandos
 
@@ -91,7 +96,7 @@ Si llegas a clasificarlo así, la dirección de diagnóstico se desvía menos.
 
 ## Cómo usarlo
 
-Úsalo como tabla de desvío de errores, no como diccionario completo:
+Úsalo como tabla para clasificar errores, no como diccionario completo:
 
 - Ves la palabra clave
 - Encuentras la clase correspondiente
@@ -111,7 +116,7 @@ Si aún no sabes a dónde mirar, usa esta página para clasificar el problema en
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| User rejected tool call | Tú o la política rechazasteis la operación | Confirma si debía Aprobarse; o cambia la Tarea |
+| User rejected tool call | Tú o la política rechazasteis la operación | Decide si corresponde aprobar la operación o modificar la tarea |
 | Sandbox violation | Ruta de escritura o comando fuera de alcance | [Sandbox y red](/es/guide/foundations/sandbox-and-network/) |
 | Network access denied | Salida a red prohibida | Cloud: [Acceso a internet](/es/guide/web-and-cloud/internet-access/) |
 
@@ -149,7 +154,7 @@ Si aún no sabes a dónde mirar, usa esta página para clasificar el problema en
 
 - Tipo y versión del cliente (App / CLI / IDE / Cloud)
 - Sistema operativo
-- Texto completo del error desensibilizado
+- Texto completo del error sin datos sensibles
 - Si es no interactivo, si es CI
 
 ## Orden de depuración
@@ -164,9 +169,3 @@ Así evitas mezclar varios cambios, y a otros les resulta más fácil ayudarte a
 
 ## Fuentes de referencia
 - Documentación de soporte de OpenAI Codex
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página se posiciona como «índice de desvío de errores», no como diccionario completo; el método de clasificación son cinco clases —autenticación, Permiso, entorno, red, lógica de la Tarea— contrastadas con los capítulos actuales de CLI, Cloud, Permisos y configuración, sin depender de una tabla fija de códigos de error.  
-**Última verificación:** 2026-07-26

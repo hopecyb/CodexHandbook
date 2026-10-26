@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI’s current Help Center and Codex configuration materials still clearly describe layering among user-level `~/.codex` configuration, organization-managed capabilities, and project-level collaboration instructions; this page rewrites “precedence” as a more conservative common layering description to avoid writing specific implementation details as absolute rules."
+  checkedAt: "2026-07-26"
 title: Customization and Project Configuration
 description: Personal preferences, AGENTS.md, configuration, and rule precedence—so Codex keeps working your way over time.
 sidebar:
   order: 40
 locale: en
 source_locale: zh-CN
-source_revision: 28adc49
+source_revision: '28adc49'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Codex does not rely only on “how you ask this time”; it also relies on **persistent configuration** to remember your conventions and your team’s. This chapter mainly separates what should stay in the conversation from what should sink into the project.
+Codex does not rely only on “how you ask this time”; it also relies on **persistent configuration** to remember your conventions and your team’s. This chapter mainly separates what should stay in the conversation from what should be recorded in the project.
 
 If you have started repeating the same things—such as “don’t touch this directory,” “run tests first,” or “use this model by default”—this chapter addresses that kind of problem.
 
@@ -59,7 +64,7 @@ Understanding the layers helps avoid the confusion of “I wrote rules but they 
 
 ### 1. If I can write prompts, I do not need long-term configuration?
 
-For short tasks that may barely suffice, but once you start ongoing collaboration, you increasingly want to sink repeated requirements downward.
+For short tasks that may barely suffice, but once you start ongoing collaboration, you increasingly want to store repeated requirements persistently.
 
 ### 2. Can I just put every rule into `AGENTS.md`?
 
@@ -117,9 +122,3 @@ Rules do not need to be numerous; putting them in the right place matters more.
 
 ## References
 - OpenAI Codex documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI’s current Help Center and Codex configuration materials still clearly describe layering among user-level `~/.codex` configuration, organization-managed capabilities, and project-level collaboration instructions; this page rewrites “precedence” as a more conservative common layering description to avoid writing specific implementation details as absolute rules.  
-**Last verified:** 2026-07-26

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / App de escritorio / Mobile; Codex para escritorio y CLI; la integración IDE no admite Plugins
+  checkedAt: '2026-08-26'
 title: Introducción a los Plugins
 description: Comprende los componentes de un Plugin, las superficies compatibles, la verificación de la instalación y los límites de confianza.
 locale: es
-source_locale: zh-cn
-source_revision: 4efe5a8
+source_locale: zh-CN
+source_revision: "4efe5a8"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 ChatGPT y Codex usan el mismo catálogo público de Plugins. Un Plugin compone capacidades relacionadas en un flujo de trabajo que se puede descubrir e instalar; no inventa un nuevo protocolo para llamar a herramientas.
@@ -18,11 +22,11 @@ ChatGPT y Codex usan el mismo catálogo público de Plugins. Un Plugin compone c
 | Componente | Función | Qué debe revisar quien lo instala |
 |---|---|---|
 | Skills | Pasos, referencias y scripts reutilizables | Si las instrucciones encajan y los scripts son fiables |
-| Connectors | Conexiones con GitHub, Slack, Google Drive y otros servicios | Scopes OAuth, acciones de escritura y alcance de datos externos |
+| Connectors | Conexiones con GitHub, Slack, Google Drive y otros servicios | Scopes OAuth, acciones de lectura y escritura y alcance de los datos externos |
 | Servidores MCP | Herramientas, autenticación y datos estructurados | Origen del servidor, herramientas, registros y permisos |
 | Extensiones de navegador | Capacidad del navegador para un flujo concreto | Alcance del acceso al navegador y necesidad real |
 | Hooks | Comandos o herramientas MCP en eventos del ciclo de vida | Revisar y confiar en la definición exacta antes de activarla |
-| Plantillas de Scheduled tasks | Puntos de partida reutilizables para superficies con programación | Frecuencia, acceso, salida y revisión humana |
+| Plantillas de Scheduled tasks | Puntos de partida reutilizables para superficies con programación | Frecuencia, permisos, condiciones de parada y revisión humana |
 
 ## Diferencia frente a Skill y MCP
 
@@ -58,7 +62,7 @@ La integración IDE no admite Plugins. No escribas una guía para encontrar en e
 Inspecciona únicamente el <plugin-name> recién instalado; no escribas:
 1. Enumera los Skills y las herramientas relacionados con él en esta tarea.
 2. Marca cada herramienta como de solo lectura o con posibles efectos externos.
-3. Usa datos de prueba o realiza una única consulta de solo lectura.
+3. Realiza una llamada mínima con datos de prueba o una consulta de solo lectura.
 4. Indica qué componente se usó y qué autorizaciones requieren aún revisión humana.
 ```
 
@@ -104,11 +108,3 @@ Estabiliza primero un único flujo de Skill o MCP y agrúpalo después. Suele se
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** ChatGPT Web / App de escritorio / Mobile; Codex para escritorio y CLI; la integración IDE no admite Plugins
-
-**Última verificación:** 2026-08-26

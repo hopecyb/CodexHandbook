@@ -10,9 +10,10 @@ sidebar:
   order: 120
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 75bfe4d
+source_revision: '75bfe4d'
+reviewed_at: 2026-10-25
 ---
 
 Before using Codex for the first time, ask: “If it makes a mistake, will the cost be too high?” This checklist helps lower the stakes of that first task.
@@ -21,7 +22,7 @@ Check these before starting:
 
 - [ ] I am using a disposable practice directory, not a production repository.
 - [ ] The directory contains no real keys, passwords, or private customer data.
-- [ ] I understand that high-risk actions may require my approval.
+- [ ] I understand that high-risk actions require my approval.
 - [ ] I will not approve a command or network request I cannot understand.
 - [ ] I plan to inspect the diff before accepting the result.
 - [ ] I know how to [undo changes](/en/guide/getting-started/undo-and-recover/).

@@ -3,12 +3,17 @@ title: IA y modelos de lenguaje
 description: Entiende cómo un modelo de lenguaje genera respuestas a partir del Contexto.
 locale: es
 source_locale: zh-CN
-source_revision: ccdac83
+source_revision: 'ccdac83'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica el principio básico de que un modelo de lenguaje genera salida a partir del Contexto; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
 Un modelo de lenguaje **predice la salida más razonable a continuación** a partir del texto, los archivos y los resultados de Herramientas que le das. Es bueno completando, organizando, redactando y siguiendo el Contexto, pero no conoce de forma natural lo que no le diste, ni garantiza estar siempre del todo en lo correcto.
@@ -19,7 +24,7 @@ Eso también explica por qué:
 
 - si no le das Contexto clave, tiende a adivinar
 - si le das información contradictoria, tiende a desviarse
-- puede ayudarte a redactar, organizar y analizar, pero no puedes externalizarle del todo la corrección
+- puede ayudarte a redactar, organizar y analizar, pero no puedes delegarle toda la responsabilidad de comprobar que el resultado sea correcto
 
 ## Qué está haciendo
 
@@ -33,13 +38,13 @@ Ve:
 
 Y, con eso, produce el siguiente paso que considera más adecuado.
 
-Sigue empujando a partir del Contexto actual; no «sabe» la respuesta por su cuenta.
+Continúa generando a partir del contexto actual; no «sabe» la respuesta por su cuenta.
 
 ## Qué implica para quien lo usa
 
 - **La calidad de la entrada marca el techo**: si el objetivo es vago, la salida se desvía con facilidad
 - **El Contexto es limitado**: un historial demasiado largo se compacta o se trunca; ver [Token, Contexto y Compactación](/es/guide/foundations/tokens-context-and-compaction/)
-- **Hay que verificar**: sobre todo cifras, derecho, seguridad y contenido que se publica hacia fuera
+- **Hay que verificar**: sobre todo cifras, derecho, seguridad y contenido destinado a publicación externa
 
 ## Malentendidos frecuentes
 
@@ -66,13 +71,6 @@ Más bien necesitas juzgar:
 
 ## Diferencia frente a un «motor de búsqueda»
 
-Un motor de búsqueda devuelve sobre todo páginas existentes; Codex se parece más a **llamar Herramientas y generar cambios ejecutables** bajo tu objetivo. En ambos casos tú juzgas la fiabilidad.
+Un motor de búsqueda devuelve sobre todo páginas existentes; Codex se parece más a **llamar Herramientas y generar cambios ejecutables** para cumplir tu objetivo. En ambos casos tú juzgas la fiabilidad.
 
 Lo más útil del modelo de lenguaje es que, con Contexto suficiente, puede seguir trabajando rápido en la dirección de tu objetivo.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica el principio básico de que un modelo de lenguaje genera salida a partir del Contexto; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

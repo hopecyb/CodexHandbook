@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Secrets und Umgebungsvariablen
 description: Wähle korrekt zwischen Cloud-Secrets für das Setup und normalen Umgebungsvariablen für den gesamten Chat.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 78937be
+source_revision: "78937be"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Umgebungsvariablen und Secrets in Cloud besitzen unterschiedliche Lebenszyklen. Dieser Unterschied bestimmt, wofür sie sicher eingesetzt werden können, nicht nur, ob die Oberfläche einen Wert maskiert.
@@ -64,11 +68,3 @@ Widerrufe oder rotiere die Zugangsdaten sofort und entferne offengelegte Inhalte
 ## Offizielle Grundlage
 
 - [Cloud environments: variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud
-
-**Zuletzt geprüft:** 2026-08-26

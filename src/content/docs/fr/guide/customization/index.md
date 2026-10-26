@@ -1,23 +1,27 @@
 ---
-title: "Personnalisation et configuration projet"
+title: Personnalisation et configuration projet
 description: Préférences personnelles, AGENTS.md, configuration et priorité des règles — pour que Codex continue à travailler à votre façon au fil du temps.
 sidebar:
   order: 40
 locale: fr
 source_locale: zh-CN
-source_revision: 28adc49
+source_revision: "28adc49"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Les matériaux actuels du Help Center OpenAI et de configuration Codex décrivent encore clairement la couche entre configuration utilisateur `~/.codex`, capacités gérées par l'organisation et instructions de collaboration au niveau projet ; cette page réécrit la « priorité » comme une description de couche commune plus conservatrice pour éviter d'écrire des détails d'implémentation spécifiques comme règles absolues.
+  checkedAt: '2026-07-26'
 ---
-
 Codex ne repose pas seulement sur « comment vous demandez cette fois » ; il repose aussi sur une **configuration persistante** pour retenir vos conventions et celles de votre équipe. Ce chapitre sépare principalement ce qui devrait rester dans la conversation de ce qui devrait s'ancrer dans le projet.
 
 Si vous commencez à répéter les mêmes choses — comme « ne pas toucher ce répertoire », « exécuter les tests d'abord » ou « utiliser ce modèle par défaut » — ce chapitre traite ce type de problème.
 
 ## Contenu
 
-- Qui annule qui entre préférences personnelles, instructions projet, règles d'équipe et prompts temporaires
+- Quelles règles priment entre préférences personnelles, instructions projet, règles d'équipe et prompts temporaires
 - Ce qui appartient à `AGENTS.md` et ce qui n'y appartient pas
 - Quelle couche gère les fichiers de configuration et la politique d'approbation/bac à sable
 
@@ -59,11 +63,11 @@ Comprendre les couches aide à éviter la confusion de « j'ai écrit des règle
 
 ### 1. Si je peux écrire des prompts, je n'ai pas besoin de configuration à long terme ?
 
-Pour les courtes tâches cela peut à peine suffire, mais une fois la collaboration continue, vous voulez progressivement ancrer les exigences répétées vers le bas.
+Pour les courtes tâches cela peut à peine suffire, mais une fois la collaboration continue, vous voulez progressivement conserver durablement les exigences répétées.
 
 ### 2. Peut-on tout mettre dans `AGENTS.md` ?
 
-Pas vraiment.  
+Pas vraiment.
 Certaines choses conviennent mieux dans :
 
 - Préférences personnelles
@@ -107,7 +111,7 @@ Les règles n'ont pas besoin d'être nombreuses ; les mettre au bon endroit comp
 
 - Entasser un long document d'architecture dans `AGENTS.md`, noyant les contraintes clés
 - Répéter les normes d'équipe dans le chat sans les committer dans le dépôt, donc des expériences incohérentes pour les collaborateurs
-- Relaxer le bac à sable sur votre machine personnelle en supposant que les coéquipiers dans un dépôt partagé ont les mêmes permissions
+- Assouplir les restrictions du bac à sable sur votre machine personnelle en supposant que les coéquipiers dans un dépôt partagé ont les mêmes permissions
 
 ## Liste de contrôle d'acceptation
 
@@ -117,9 +121,3 @@ Les règles n'ont pas besoin d'être nombreuses ; les mettre au bon endroit comp
 
 ## Références
 - Documentation OpenAI Codex : [https://developers.openai.com/codex](https://developers.openai.com/codex)
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Les matériaux actuels du Help Center OpenAI et de configuration Codex décrivent encore clairement la couche entre configuration utilisateur `~/.codex`, capacités gérées par l'organisation et instructions de collaboration au niveau projet ; cette page réécrit la « priorité » comme une description de couche commune plus conservatrice pour éviter d'écrire des détails d'implémentation spécifiques comme règles absolues.  
-**Dernière vérification :** 2026-07-26

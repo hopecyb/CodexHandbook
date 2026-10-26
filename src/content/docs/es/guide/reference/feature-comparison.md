@@ -3,11 +3,17 @@ title: Comparación de funciones
 description: Compara la aplicación de escritorio, la CLI, el IDE y Cloud por superficie de trabajo, lugar de ejecución y forma de revisión.
 locale: es
 source_locale: zh-CN
-source_revision: b3d30b0
-translation_status: draft
+source_revision: 'b3d30b0'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las páginas oficiales actuales de App, CLI, IDE, Cloud, Authentication y Pricing. La matriz conserva capacidades explícitas de ubicación del trabajo, contexto, revisión y autenticación; no clasifica funciones variables como fuertes, medias o débiles por suposición.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
 
 Esta tabla compara solo las **principales formas de trabajo que se mantienen estables**; las funciones pequeñas que cambian rápido no deben interpretarse como compromisos permanentes. Usa primero el [diagrama para elegir cliente](/es/guide/choose-your-client/) y después comprueba aquí las diferencias.

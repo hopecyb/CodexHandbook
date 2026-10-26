@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương brainstorm, EPXV, làm việc theo test và `AGENTS.md` đã kiểm chứng của sổ tay; nội dung trang giới hạn ở cách làm ổn định “viết đặc tả nghiệm thu được trước, rồi thực thi theo đặc tả”.", "checkedAt": "2026-07-26"}
 title: Làm việc theo đặc tả
 description: Viết rõ đặc tả nghiệm thu được trước, rồi để Codex triển khai theo kế hoạch — phù hợp tác vụ giao có nhu cầu rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Làm việc theo đặc tả** là trước khi sửa nhiều tệp, chuẩn bị một đặc tả ngắn ghi rõ mục tiêu, phạm vi, giao diện và tiêu chí nghiệm thu. Có thể nối sau [brainstorm](/vi/cases/workflows/brainstorm-before-building/), hoặc trực tiếp vào [EPXV](/vi/cases/workflows/explore-plan-execute-verify/) với nhu cầu đã làm rõ.
@@ -78,10 +79,3 @@ Mục nghiệm thu trong đặc tả nên **kiểm thử được** càng nhiề
 - [ ] Ít nhất 3 tiêu chí nghiệm thu kiểm được
 - [ ] Trước thực thi có xác nhận của người hoặc bằng văn bản
 - [ ] Thay đổi đã đồng bộ về tệp đặc tả
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương brainstorm, EPXV, làm việc theo test và `AGENTS.md` đã kiểm chứng của sổ tay; nội dung trang giới hạn ở cách làm ổn định “viết đặc tả nghiệm thu được trước, rồi thực thi theo đặc tả”.  
-**Kiểm chứng gần nhất:** 2026-07-26

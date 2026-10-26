@@ -24,9 +24,10 @@ assets:
   version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: "e29d1b3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Trước khi rà soát, hãy xác định rõ cần so sánh những gì. Skill này tránh nhầm “thay đổi hiện chưa commit” với “các commit so với main”, hoặc bỏ sót lỗi trong index vì cây làm việc trông bình thường.
@@ -46,7 +47,7 @@ Skill không tự đoán `main` làm mặc định. Nếu không có mốc cơ s
 
 ## Cài đặt và gọi lần đầu
 
-Cần Python 3.10+, Git và một kho luyện tập cục bộ đã có ít nhất một commit. Đặt `scoped-review/` đã giải nén vào `.agents/skills/` của dự án đích và xác nhận tệp vào là `.agents/skills/scoped-review/SKILL.md`. Nếu đã có Skill cùng tên, hãy so sánh trước khi ghi đè.
+Cần Python 3.10+, Git và một kho luyện tập cục bộ đã có ít nhất một commit. Đặt `scoped-review/` đã giải nén vào `.agents/skills/` của dự án đích và xác nhận tệp vào là `.agents/skills/scoped-review/SKILL.md`. Nếu đã có Skill cùng tên, hãy so sánh trước và không ghi đè.
 
 Việc phát hiện Skill cục bộ và tệp vào tuân theo [hướng dẫn chính thức](https://learn.chatgpt.com/docs/build-skills). Sau khi cài, xác nhận có thể chọn rồi gọi rõ ràng:
 
@@ -68,7 +69,7 @@ $scoped-review Rà soát các thay đổi mã hiện chưa commit trong kho luy�
 
 Lúc này chỉ xem `git diff HEAD` có thể không thấy thay đổi, nhưng commit index vẫn đưa lỗi vào. Với `amount=40, percent=10`, phiên bản staged cho -360 thay vì 36.
 
-Rà soát đúng phải nêu riêng phiên bản staged bị sai và bản vá unstaged sửa lỗi đó. [Tài liệu tham chiếu đầy đủ của tác giả](/downloads/skills/scoped-review/fixtures/expected-review.md) còn giải thích vì sao không nên trộn chế độ branch vào vấn đề cục bộ này; đây không phải đầu ra mô hình thật.
+Rà soát đúng phải nêu riêng phiên bản staged bị sai và bản vá unstaged sửa lỗi đó. [Tài liệu tham chiếu đầy đủ của tác giả](/downloads/skills/scoped-review/fixtures/expected-review.md) còn giải thích vì sao không nên đưa vấn đề cục bộ này vào phạm vi rà soát theo nhánh; đây không phải đầu ra mô hình thật.
 
 ## Chạy các phép kiểm tra đi kèm
 

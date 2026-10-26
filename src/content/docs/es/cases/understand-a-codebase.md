@@ -9,13 +9,13 @@ legacyVerification:
   basis: "Los use cases actuales de Codex en OpenAI Developers siguen incluyendo «Understand large codebases», centrados en trazar la ruta principal, identificar módulos clave y localizar archivos relevantes con rapidez. Este ejemplo es un escenario de exploración en solo lectura, alineado con ese posicionamiento."
   checkedAt: "2026-07-26"
 title: Entender un código base
-description: Explora en solo lectura un repositorio desconocido y construye un mapa mental accionable.
+description: Explora en solo lectura un repositorio desconocido y construye un mapa del código que te ayude a decidir los siguientes pasos.
 locale: es
 source_locale: zh-CN
-source_revision: c89ee30
+source_revision: 'c89ee30'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

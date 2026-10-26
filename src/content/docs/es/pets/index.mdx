@@ -3,9 +3,10 @@ title: Mascotas de Codex
 description: "Entiende qué son los Codex Pets, cómo funcionan y qué revisar al instalar o crear uno."
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 8b03636
+reviewed_at: 2026-10-25
+source_revision: "8b03636"
 contentType: guide
 editorialStatus: review
 verification:
@@ -19,7 +20,7 @@ import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 Este sitio todavía no ha probado la compatibilidad de un cliente y un paquete Pet concretos. Anota primero sus versiones y procedencia, y usa el [registro de compatibilidad y recuperación](/es/guide/reference/resource-compatibility/) para comprobar los resultados reales. El esquema solo explica la estructura; no es un contrato de formato para todas las versiones.
 
 
-Los Codex Pets son elementos animados de compañía que aparecen dentro del cliente Codex. No son capacidades del modelo ni herramientas de automatización, sino recursos visuales locales. El cliente puede usarlos para expresar estados como trabajo en curso, espera, finalización, error o bloqueo por una intervención tuya.
+Los Codex Pets son elementos animados de compañía que aparecen dentro del cliente Codex. No son capacidades del modelo ni herramientas de automatización, sino recursos visuales locales. El cliente puede usarlos para expresar estados como trabajo en curso, espera, finalización, error o necesidad de tu intervención.
 
 <PetScienceFigure variant="anatomy" locale="es" />
 
@@ -30,8 +31,8 @@ Esta sección es educativa. Explica el concepto básico, la estructura común de
 Un Pet suele entenderse como un pequeño paquete local:
 
 - `pet.json`: metadatos como identidad, nombre visible, descripción y ruta de animación.
-- `spritesheet.webp`: atlas de imagen que almacena frames de animación.
-- Carpeta del pet: directorio que mantiene juntos los metadatos y los assets.
+- `spritesheet.webp`: atlas que reúne fotogramas en una imagen; el cliente los lee mediante una cuadrícula fija.
+- Carpeta del pet: directorio que mantiene juntos los metadatos y los recursos.
 
 Desde este punto de vista, un Codex Pet se parece más a un recurso de tema o a un pequeño widget visual que a un programa conectado a la red.
 
@@ -41,7 +42,7 @@ Entender la estructura de Pets ayuda a responder tres preguntas prácticas:
 
 - Al instalar: dónde deben ir los archivos y qué scripts conviene revisar.
 - Al depurar: por qué no aparece una mascota o por qué no se reproduce una animación.
-- Al crear: qué responsabilidad tienen los frames, el fondo transparente, los metadatos y las notas de licencia.
+- Al crear: qué responsabilidad tienen los fotogramas, el fondo transparente, los metadatos y las notas de licencia.
 
 ## Ruta de lectura
 

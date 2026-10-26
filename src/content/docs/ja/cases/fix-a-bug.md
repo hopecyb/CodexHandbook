@@ -3,10 +3,15 @@ title: Bug 修正：どこから始めるか
 description: 現在の問題に合う Bug 修正経路を選び、実行可能な資料を使う完全な事例へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: 405a687
+source_revision: "405a687"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: このページは入口として経路選択と安定したエンジニアリング閉ループだけを扱います。サンプルの予期された失敗と成功コマンドは、現在のリポジトリで実行して確認済みです。
+  checkedAt: '2026-08-25'
 ---
 
 これは短い入口ページです。完全な手順、実行可能なコード、RED / GREEN のテスト証拠、段階ごとのプロンプトは [検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/) にまとめています。2 つのページで内容が重複し、後から不整合が生じるのを防ぐためです。
@@ -32,7 +37,7 @@ reviewed_at: 2026-08-26
 5. より広い範囲の回帰チェックを実行する。
 6. 人が diff を読み、無関係な変更がないことを確認する。
 
-第 4 歩だけで第 1 歩がなければ、テストが元の問題を対象にしている証明にはなりません。「全テストが GREEN」だけで diff レビューがなければ、変更範囲が正しい証明にもなりません。
+手順 4 だけで手順 1 がなければ、テストが元の問題を対象にしている証明にはなりません。「全テストが GREEN」だけで diff レビューがなければ、変更範囲が正しい証明にもなりません。
 
 ## すぐに練習できる
 
@@ -47,10 +52,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 完全な資料は [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix) にあります。
-
----
-
-**状態：** verified  
-**対象製品：** CLI / IDE  
-**検証根拠：** このページは入口として経路選択と安定したエンジニアリング閉ループだけを扱います。サンプルの予期された失敗と成功コマンドは、現在のリポジトリで実行して確認済みです。
-**最終検証：** 2026-08-25

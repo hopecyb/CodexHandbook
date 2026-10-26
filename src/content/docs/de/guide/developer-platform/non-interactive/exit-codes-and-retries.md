@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Nicht belegte Bedeutungen einzelner Exitcodes wurden entfernt. Die Seite setzt nur auf den offiziell bestätigten Prozesserfolg oder -fehlschlag sowie Fortschritts- und Fehlerausgaben über `stderr`; fachliche Review-Ergebnisse werden als strukturierte Daten behandelt."
+  checkedAt: "2026-08-26"
 title: Exitcodes und Wiederholungsversuche
 description: Interpretiere Erfolg und Fehlschlag von codex exec in Pipelines korrekt und entscheide, wann ein erneuter Versuch sinnvoll ist.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: "35074cd"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 CI bestimmt den Erfolg eines Schritts anhand des **Prozess-Exitcodes**. Dieses Kapitel erläutert typische Bedeutungen von [codex exec](/de/guide/developer-platform/non-interactive/codex-exec/), Wiederholungsstrategien und idempotentes Design.
@@ -122,12 +127,3 @@ Unterscheide zuerst einen vorübergehenden Fehler von einer Ursache, die sich du
 
 ## Quellen
 - OpenAI-Leitfaden zu API-Wiederholungsversuchen (Konzept)
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Nicht belegte Bedeutungen einzelner Exitcodes wurden entfernt. Die Seite setzt nur auf den offiziell bestätigten Prozesserfolg oder -fehlschlag sowie Fortschritts- und Fehlerausgaben über `stderr`; fachliche Review-Ergebnisse werden als strukturierte Daten behandelt.
-
-**Zuletzt geprüft:** 2026-08-26

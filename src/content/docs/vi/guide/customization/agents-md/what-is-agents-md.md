@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về ngữ cảnh dự án, ranh giới tác vụ và ràng buộc phê duyệt/Sandbox; nội dung trang giới hạn ở mục đích, ranh giới và cách viết thường gặp của `AGENTS.md`, không gồm chi tiết ưu tiên bắt buộc chưa chứng minh.", "checkedAt": "2026-07-26"}
 title: AGENTS.md là gì
-description: Tệp chỉ thị bền cấp dự án — «hợp đồng cộng tác» cho Codex, không phải bách khoa kiến trúc.
+description: Tệp chỉ dẫn lâu dài ở cấp dự án — «hợp đồng cộng tác» cho Codex, không phải bách khoa kiến trúc.
 locale: vi
 source_locale: zh-CN
-source_revision: 47c5866
+source_revision: "47c5866"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -63,7 +64,7 @@ Sau khi lưu, trong tác vụ mới chỉ cần viết **khác biệt lần này
 
 ### 1. Mỗi lần tôi còn phải nói lại các quy tắc này thủ công?
 
-Thường không cần.  
+Thường không cần.
 Đó chính là một ý nghĩa của `AGENTS.md`:
 đặt **quy tắc dự án ổn định không đổi** vào đó, tránh mỗi lần mở tác vụ mới phải kể lại.
 
@@ -79,7 +80,7 @@ Nói chính xác hơn, nó giúp khớp, nhưng không phải bộ ép buộc v�
 
 ### 3. Nếu tôi không phải lập trình viên, còn cần quan tâm tệp này không?
 
-Cần hiểu khái niệm cơ bản.  
+Cần hiểu khái niệm cơ bản.
 Dù bạn không tự viết mã, miễn bạn để Codex liên tục xử lý một dự án, `AGENTS.md` vẫn giúp giảm giải thích lặp và lệch hướng.
 
 ## Đặt ở đâu
@@ -130,9 +131,3 @@ Ví dụ:
 
 ## Nguồn tham khảo
 - Mô tả ngữ cảnh dự án OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về ngữ cảnh dự án, ranh giới tác vụ và ràng buộc phê duyệt/Sandbox; nội dung trang giới hạn ở mục đích, ranh giới và cách viết thường gặp của `AGENTS.md`, không gồm chi tiết ưu tiên bắt buộc chưa chứng minh.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -2,20 +2,20 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "본 페이지는 자동화류 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
+  basis: "본 페이지는 자동화 작업 템플릿을 제공합니다. 사이트 내 링크와 템플릿 구조를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다."
   checkedAt: "2026-07-26"
 title: 자동화 템플릿
 description: 반복 작업과 재사용 가능한 프로세스입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: "2aff2e7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
-자동화류 작업의 흔한 오해는 “자동으로 돌릴 수 있는지”만 생각하고, 다음을 먼저 생각하지 않는 것입니다.
+자동화 작업의 흔한 오해는 “자동으로 돌릴 수 있는지”만 생각하고, 다음을 먼저 생각하지 않는 것입니다.
 
 - 실패하면 어떻게 할지
 - 누가 결과를 볼지
@@ -33,7 +33,7 @@ reviewed_at: 2026-08-26
 - 실패 시 종료 코드와 로그 위치를 분명히 할 것
 - 비밀키를 하드코딩하지 말 것. 환경 변수 사용
 - dry-run 모드를 제공할 것
-수락:
+완료 기준:
 - 【예시 입력】에서 기대 결과를 출력
 - 실행·장애 대응 방법을 문서에 설명할 것
 ```

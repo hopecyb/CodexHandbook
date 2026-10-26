@@ -1,17 +1,22 @@
 ---
-title: 명령과 단축
+title: 명령과 단축 기능
 description: CLI 하위 명령, 세션 내 조작, 키보드 습관—제품 지향 설명. 전체 매개변수는 참고 구역을 보세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 2896e32
+source_revision: '2896e32'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 현재 공식 Developer commands와 Non-interactive mode 페이지를 대조해 `codex`, `codex exec`, `--cd` / `-C`, 세션 내 슬래시 명령을 확인했습니다. 단축키는 현재 자동 완성과 `--help`를 기준으로 확인하도록 안내합니다.
+  checkedAt: '2026-08-26'
 ---
 
-터미널 효율은 세 덩어리에서 옵니다. **시작 방식**, **세션 내 단축 조작**, **스크립트/에디터와의 맞춤**. 이 페이지는 사용법과 습관을 다룹니다. 매개변수 표는 [CLI 명령 참고](/ko/guide/reference/commands/)와 [키보드 단축](/ko/guide/reference/keyboard-shortcuts/)을 보세요.
+터미널 작업의 효율은 세 가지에서 나옵니다. **시작 방식**, **세션 내 단축 조작**, **스크립트/에디터와의 연동**. 이 페이지는 사용법과 습관을 다룹니다. 매개변수 표는 [CLI 명령 참고](/ko/guide/reference/commands/)와 [키보드 단축](/ko/guide/reference/keyboard-shortcuts/)을 보세요.
 
 ## 이 페이지의 내용
 
@@ -21,7 +26,7 @@ reviewed_at: 2026-08-26
 
 ## 먼저 구분할 것
 
-많은 초보자가 CLI를 처음 보면 “명령과 단축”을 문법·매개변수 암기로 생각합니다.
+많은 초보자가 CLI를 처음 보면 “명령과 단축 기능”을 문법·매개변수 암기로 생각합니다.
 
 더 실질적인 것은 세 가지를 먼저 구분하는 일입니다.
 
@@ -36,11 +41,11 @@ reviewed_at: 2026-08-26
 | 하려는 일 | 입구 | 상세 |
 |---|---|---|
 | 대화하며 코드 수정 | `codex` 대화형 TUI | [대화형 모드](/ko/guide/cli/interactive-mode/) |
-| CI / 파이프 단일 작업 | `codex exec`(또는 동등) | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
+| CI / 파이프 단일 작업 | `codex exec` | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
 | 기본 동작 변경 | 구성 파일 | [CLI 구성](/ko/guide/cli/configuration/) |
 
 :::note
-하위 명령 이름은 버전에 따라 달라지므로 `codex --help`를 기준으로 하세요.
+`codex`와 `codex exec`는 현재 모두 Stable 진입점입니다. 구체적인 매개변수는 `codex --help`와 `codex exec --help`를 기준으로 하세요.
 :::
 
 ## 흔한 오해
@@ -84,7 +89,7 @@ reviewed_at: 2026-08-26
 
 ### 승인 관련
 
-Agent가 shell 실행이나 파일 쓰기를 요청하면 대화형 UI가 승인/거부/항상 허용(제공 시)을 묻습니다. 무인 운전 전에 반드시 [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)를 읽으세요.
+Agent가 shell 실행이나 파일 쓰기를 요청하면 대화형 UI가 승인/거부/항상 허용(제공 시)을 묻습니다. 무인 실행 전에 반드시 [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)를 읽으세요.
 
 ## Shell 층 단축(권장)
 
@@ -114,7 +119,7 @@ CLI를 처음 쓸 때는 이 순서로:
 
 | | CLI | IDE 확장 |
 |---|---|---|
-| 컨텍스트 | `--cd`, @ 파일(버전에 따라) | 열린 파일, 선택한 코드 |
+| 컨텍스트 | `--cd` / `-C`로 디렉터리 지정, 도구로 파일 읽기 | 열린 파일, 선택한 코드 |
 | 적합 | 스크립트, SSH 원격, 순수 터미널 | 고치면서 diff 보기 |
 | 단축 | 터미널 키 + `/` | 에디터 명령 팔레트 |
 
@@ -126,7 +131,7 @@ IDE: [로컬 작업 워크플로](/ko/guide/ide/local-task-workflow/)
 - 앱 내 `/review`를 터미널 하위 명령처럼 외부 shell에서 실행
 - 대화형 세션에 검토하지 않은 제3자 「만능 prompt」를 붙여넣기
 
-모든 명령과 단축키를 외울 필요는 없습니다. “지금 대화하며 할지, 한 번에 끝낼지”만 먼저 나누면 명령 선택이 훨씬 단순해집니다.
+모든 명령과 단축 기능키를 외울 필요는 없습니다. “지금 대화하며 할지, 한 번에 끝낼지”만 먼저 나누면 명령 선택이 훨씬 단순해집니다.
 
 ## 검수 체크리스트
 
@@ -136,9 +141,3 @@ IDE: [로컬 작업 워크플로](/ko/guide/ide/local-task-workflow/)
 
 ## 참고 출처
 - OpenAI Codex CLI 문서
----
-
-**상태:** outdated  
-**적용 제품:** CLI  
-**재검토 설명:** 이 페이지는 `codex`·`codex exec`·`/` 명령 범주·세션 내 단축 등 버전에 따라 바뀌기 쉬운 CLI 상호작용 세부을 다룹니다. 이런 서술을 뒷받침할 공식 현행 명령/단축 문서가 충분하지 않아, 다시 쓴 뒤 재검증이 필요합니다.  
-**최근 검증:** 2026-07-26

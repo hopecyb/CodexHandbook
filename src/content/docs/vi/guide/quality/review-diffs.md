@@ -1,18 +1,24 @@
 ---
-title: Rà soát diff
-description: Cách đọc thay đổi và đặt câu hỏi.
-locale: vi
-source_locale: zh-CN
-source_revision: f7f953f
-translation_status: draft
-translated_at: 2026-09-20
+title: "Rà soát diff"
+description: "Cách đọc thay đổi và đặt câu hỏi."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "f7f953f"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả phạm vi và rủi ro cần chú ý khi rà soát diff; liên kết nội bộ và thứ tự kiểm tra đã được rà lại, và phần thân không phụ thuộc thông tin sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-26"
 ---
 
 “Diff” nói về những chỗ Codex lần này thực sự đã sửa.
 
-Nhiều người lần đầu nghiệm thu chỉ đọc tóm tắt nó viết, không xem thay đổi thật.  
+Nhiều người lần đầu nghiệm thu chỉ đọc tóm tắt nó viết, không xem thay đổi thật.
 Phát hiện vấn đề chủ yếu vẫn dựa vào diff; lời giải thích “tôi đã hoàn thành” chỉ nên xem như tham khảo.
 
 ## Diff đang trả lời gì
@@ -52,7 +58,7 @@ Ngoài việc xem **tệp nào đã thay đổi**, hãy kiểm tra xem chính th
 
 ### 1. Không đọc được diff mã cũng vẫn làm được rà soát cơ bản
 
-Giai đoạn đầu không cần đọc từng dòng logic như kỹ sư kỳ cựu.  
+Giai đoạn đầu không cần đọc từng dòng logic như kỹ sư kỳ cựu.
 Chỉ cần xem ba việc này đã rất có giá trị:
 
 - Đã sửa những tệp nào
@@ -61,7 +67,7 @@ Chỉ cần xem ba việc này đã rất có giá trị:
 
 ### 2. Chỉ sửa một tệp không có nghĩa là chắc an toàn
 
-Ít tệp không đồng nghĩa với sửa đúng.  
+Ít tệp không đồng nghĩa với sửa đúng.
 Nhưng phạm vi nhỏ thì dễ kiểm tra hơn, cũng dễ hoàn tác hơn.
 
 ### 3. “Chỉ là chỉnh nhỏ” vẫn cần xem
@@ -78,10 +84,3 @@ Lần đầu xem diff, có thể theo thứ tự này:
 4. Xem phong cách và tên gọi có hài hòa không
 
 Trước hết làm rõ nó thực sự đã đổi gì, rồi mới quyết định có nhận kết quả lần này hay không.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ mô tả phạm vi và rủi ro cần chú ý khi rà soát diff; liên kết nội bộ và thứ tự kiểm tra đã được rà lại, và phần thân không phụ thuộc sự kiện sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

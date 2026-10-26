@@ -9,11 +9,11 @@ verification:
   summary: Redactado a partir del contenido actual del repositorio y los registros de ejecución. Es un registro de cambios del manual, no un anuncio de productos de OpenAI ni una confirmación de despliegue público.
 locale: es
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: "3c99d35"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
-
 Esta página explica qué cambió en el manual, qué operaciones se ven afectadas y hasta dónde llega la verificación. Las fechas corresponden a la preparación del contenido; comprueba la versión del sitio que visitas para conocer el estado real de publicación. Para cambios de capacidades del producto, consulta las fuentes oficiales citadas en cada tutorial.
 
 ## 2026-09-18: materiales prácticos y límites de verificación

@@ -7,14 +7,15 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: 38b322f
-translation_status: draft
+source_revision: "38b322f"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
 
-Delegar não é «atirar o problema para longe». É entregar objetivo, restrições, ambiente e critérios de conclusão a uma conversa Cloud independente. A tarefa pode decorrer em segundo plano enquanto consulta registos, acrescenta contexto, pede alterações e, no fim, revê o diff.
+Delegar não é «atirar o problema para longe». É entregar objetivo, restrições, ambiente e critérios de conclusão a uma conversa Cloud independente. A tarefa pode decorrer em segundo plano enquanto consulta registros, acrescenta contexto, pede alterações e, no fim, revê o diff.
 
 ## Quando faz sentido delegar
 
@@ -46,16 +47,16 @@ Restrição adicional: não alteres o cliente HTTP global. Limita a correção
 ao auth adapter. Antes de continuar, explica como isto muda o plano atual.
 ```
 
-A mesma conversa conserva o contexto e serve para corrigir o mesmo objetivo. Para um objetivo completamente independente, abra outra conversa. Tarefas paralelas não devem escrever na mesma branch nem no mesmo conjunto de ficheiros.
+A mesma conversa conserva o contexto e serve para corrigir o mesmo objetivo. Para um objetivo completamente independente, abra outra conversa. tarefas paralelas não devem escrever na mesma branch nem no mesmo conjunto de arquivos.
 
 ## Quando o resultado chegar
 
 1. Leia o resumo e o diff completo.
-2. Compare os caminhos alterados com o âmbito permitido.
+2. Compare os caminhos alterados com o escopo permitido.
 3. Examine a saída real de cada comando de verificação.
 4. Peça explicação para verificações falhadas ou não executadas.
 5. Se precisar de alterações, faça um pedido de seguimento específico na mesma conversa.
-6. Quando os critérios estiverem cumpridos, crie um PR e deixe o CI e a revisão humana assumirem o controlo.
+6. Quando os critérios estiverem cumpridos, crie um PR e deixe o CI e a revisão humana assumirem o controle.
 
 É possível iniciar trabalho Cloud pelo Web, IDE, GitHub, GitLab (Beta), Linear ou Slack. A página oficial do Cloud também descreve como iniciar e rever trabalho a partir do Codex CLI. Os limites de repositório, ambiente, rede e revisão mantêm-se, independentemente do ponto de entrada.
 

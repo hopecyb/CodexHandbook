@@ -8,10 +8,10 @@ title: ここから始める
 description: Codex とは何か、誰向けかを理解し、学習パスを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 953fb89
+source_revision: "953fb89"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 1
 ---
@@ -26,7 +26,7 @@ sidebar:
 - Codex が何をできて、何ができないかを明確にする
 - 役割とタスクに応じて読むルートを選ぶ
 - 安全な練習プロジェクトで、最初の検証可能なタスクを完了する
-- 「目標、制約、検証」でプロンプトを書き、レビューの習慣を身につける
+- 「目標、制約、受け入れ基準」でプロンプトを書き、レビューの習慣を身につける
 
 ## 推奨読書順序
 

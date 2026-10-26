@@ -3,13 +3,14 @@ title: AI アプリケーションロードマップ
 description: 論文、製品発表、技術記事、筆者の学習提案を区別し、各テーマから実践へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
-translated_at: 2026-10-24
+source_revision: "f66e3ba"
+translation_status: reviewed
+translated_at: "2026-10-24"
 prev: false
 next:
   link: /ja/ai-roadmap/timeline/
   label: 出来事とテーマの索引
+reviewed_at: "2026-10-26"
 ---
 
 このマップでは、確認可能な公開上の出来事と学習上の提案を分けています。**日付が示すのは表に載せた論文、発表、記事だけです。概念の誕生、業界への普及、機能の成熟を自動的に意味するものではありません。** 異なる技術は併用でき、時系列が必須の学習順序になるわけでもありません。
@@ -36,8 +37,8 @@ next:
 
 次のプロジェクトは、確認できていない初公開日によって順序を付けず、個別に読んでください。
 
-- [OpenSpec](/ja/ai-roadmap/timeline/2026-01-openspec/): プロジェクトの公式リリースページには v1.0.0（The OPSX Release）のリリースノートがあります。今回の確認では、このバージョンからプロジェクトの初公開日を推定せず、証拠で確認できない npm の初公開日も採用しません。
-- [OpenClaw](/ja/ai-roadmap/timeline/2026-01-openclaw/): このページでは、OpenClaw の公式リポジトリをプロジェクトの同定と説明の情報源とします。初公開を確認するのに十分な証拠が得られなかったため、初公開日は表示しません。
+- [OpenSpec（仕様駆動開発）](/ja/ai-roadmap/timeline/2026-01-openspec/): プロジェクトの公式リリースページには v1.0.0（The OPSX Release）のリリースノートがあります。今回の確認では、このバージョンからプロジェクトの初公開日を推定せず、証拠で確認できない npm の初公開日も採用しません。
+- [OpenClaw（個人向け AI アシスタントプロジェクト）](/ja/ai-roadmap/timeline/2026-01-openclaw/): このページでは、OpenClaw の公式リポジトリをプロジェクトの同定と説明の情報源とします。初公開を確認するのに十分な証拠が得られなかったため、初公開日は表示しません。
 
 ## 現在のタスクに合わせて演習を選ぶ
 

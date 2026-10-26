@@ -4,13 +4,14 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Cette page décrit uniquement l'usage des modèles ; liens et typologie revus ; pas de faits volatils produit."
   checkedAt: "2026-07-26"
-title: Modèles de Prompts
+title: Modèles de prompts
 description: Squelettes réutilisables par type de tâche — comprendre, créer, modifier, diagnostiquer, revoir, rechercher, automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: "fae2ed3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 
@@ -35,7 +36,7 @@ C'est un échafaudage, pas une réponse type.
 | Modèle | Quand l'utiliser |
 |---|---|
 | [Comprendre](/fr/prompts/templates/understand/) | lire dépôt, doc ou matériel avant d'agir |
-| [Créer](/fr/prompts/templates/create/) | fonction, texte ou artefact from scratch |
+| [Créer](/fr/prompts/templates/create/) | fonction, texte ou artefact à partir de zéro |
 | [Modifier](/fr/prompts/templates/change/) | itérer sur l'existant avec limites |
 | [Diagnostiquer](/fr/prompts/templates/diagnose/) | cause racine avant code |
 | [Revoir](/fr/prompts/templates/review/) | diff, PR ou changement de doc |
@@ -51,7 +52,7 @@ Certains prompts ne servent qu'une fois. D'autres reviennent assez souvent pour 
 | Préparation de PR | Modèle de revue/modification | Skill avec checklist fixe |
 | Génération de docs API | Modèle création/modification | Skill + script documentaire |
 | Extension de couverture de tests | Modèle de modification | Skill + commandes de test convenues |
-| Analyse de performance | Modèle diagnostic | Subagent ou Skill dédié |
+| Analyse de performance | Modèle diagnostic | Sous-agent ou Skill dédié |
 | Vérifier le format à chaque écriture | Pas seulement un modèle | Hook |
 | Lire des tickets externes avant de coder | Modèle de recherche | MCP + Skill |
 
@@ -82,7 +83,7 @@ Une consigne plus longue n'est pas forcément meilleure. Ce qui mérite d'être 
 
 ### 1. Copier tel quel
 
-Sans adapter les placeholders et sans couper le superflu, le modèle vide la tâche.
+Sans adapter les éléments à remplacer et sans couper le superflu, le modèle laisse la tâche sans contenu concret.
 
 ### 2. Modèle = professionnalisme automatique
 
@@ -98,4 +99,4 @@ Il ne décide pas :
 
 Choisissez le type, puis personnalisez — ne substituez pas la tâche par le modèle.
 
-Principes : [Bases des Prompts](/fr/prompts/basics/) et [Anatomie d'une tâche](/fr/prompts/task-anatomy/).
+Principes : [Bases des prompts](/fr/prompts/basics/) et [Anatomie d'une tâche](/fr/prompts/task-anatomy/).

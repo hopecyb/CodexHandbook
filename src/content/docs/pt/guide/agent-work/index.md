@@ -5,28 +5,29 @@ sidebar:
   order: 31
 locale: pt
 source_locale: zh-CN
-source_revision: 3eb251e
+source_revision: "3eb251e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzada parágrafo a parágrafo com capítulos já verificados deste manual sobre planejamento, contexto, Verificação e colaboração multi-Tarefa; esta página mantém só princípios estáveis de fluxo de colaboração, sem tratar a UI ou entradas atuais de um cliente como contrato permanente.", "checkedAt": "2026-07-26"}
 ---
 
-O trabalho do Agent foca-se em: como **levar uma Tarefa a um estado de conclusão verificável**. Quando planear primeiro, quando dividir subtarefas, quando corrigir a meio, quando fazer Transferência e retomar — é o que este capítulo trata.
+O trabalho do Agent foca-se em: como **levar uma tarefa a um estado de conclusão verificável**. Quando planejar primeiro, quando dividir subtarefas, quando corrigir a meio, quando fazer transferência e retomar — é o que este capítulo trata.
 
 Este capítulo fala de forma de colaboração, não de uma funcionalidade isolada.
 
-Em muitas Tarefas, o difícil não é enunciar o pedido, e sim levá-lo até «realmente concluído e verificável».
+Em muitas tarefas, o difícil não é enunciar o pedido, e sim levá-lo até «realmente concluído e verificável».
 
 ## O que este capítulo cobre
 
-- Em Tarefas complexas, como convergir primeiro num plano
-- Ao detetar desvio na execução, como corrigir a passo pequeno
+- Em tarefas complexas, como convergir primeiro num plano
+- Ao detectar desvio na execução, como corrigir a passo pequeno
 - Que subproblemas vale a pena dar a Subagents
-- Em Tarefas longas interrompidas, como fazer Transferência e retomar
+- Em tarefas longas interrompidas, como fazer transferência e retomar
 
 ## Ordem de leitura recomendada
 
-1. [Planeamento](/pt/guide/agent-work/planning/)
+1. [Planejamento](/pt/guide/agent-work/planning/)
 2. [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/)
 3. [Subagents](/pt/guide/agent-work/subagents/)
 4. [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
@@ -36,15 +37,15 @@ Em muitas Tarefas, o difícil não é enunciar o pedido, e sim levá-lo até «r
 O trabalho do Agent pode ver-se como quatro ações contínuas:
 
 ```text
-Compreender primeiro → depois planear → corrigir durante a execução → por fim Transferência/fecho
+Compreender primeiro → depois planejar → corrigir durante a execução → por fim transferência/fecho
 ```
 
 Se faltar qualquer passo intermédio, consequências comuns:
 
 - Sem compreensão: direção errada
-- Sem plano: a meio descobrir que o âmbito explodiu
+- Sem plano: a meio descobrir que o escopo explodiu
 - Sem correção: cada vez mais desviado
-- Sem Transferência: Tarefa longa interrompida e ninguém sabe onde ficou
+- Sem transferência: tarefa longa interrompida e ninguém sabe onde ficou
 
 ## Mal-entendidos habituais
 
@@ -52,7 +53,7 @@ Se faltar qualquer passo intermédio, consequências comuns:
 
 Não chega.
 
-O Prompt é só o ponto de partida; o que decide a qualidade da Tarefa também inclui:
+O Prompt é só o ponto de partida; o que decide a qualidade da tarefa também inclui:
 
 - Há plano?
 - Há correção a meio?
@@ -61,46 +62,40 @@ O Prompt é só o ponto de partida; o que decide a qualidade da Tarefa também i
 
 ### 2. Mudar de direção a meio = o trabalho anterior foi em vão
 
-Muitas vezes, executar e fechar o âmbito ao mesmo tempo é o normal — não precisa de fingir que acertou tudo à primeira.
+Muitas vezes, executar e fechar o escopo ao mesmo tempo é o normal — não precisa de fingir que acertou tudo à primeira.
 
 ### 3. Dividir Subagents = sempre mais eficiente
 
 Nem sempre.
 
-Se os limites não estiverem claros, quanto mais subtarefas, mais confusa a Thread principal.
+Se os limites não estiverem claros, quanto mais subtarefas, mais confusa a thread principal.
 
 ## Relação com outros capítulos
 
-- Fluxo principal completo: [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
-- Clarificar a Tarefa: [Prompts](/pt/prompts/)
-- Gerir Contexto: [Contexto](/pt/guide/context/)
+- Fluxo principal completo: [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Clarificar a tarefa: [Prompts](/pt/prompts/)
+- Gerir contexto: [Contexto](/pt/guide/context/)
 - Paralelismo multi-pessoa/multi-Tarefa: [Agents em paralelo](/pt/guide/desktop-app/parallel-agents/) e [Coordenação multi-Agent](/pt/cases/workflows/multi-agent-coordination/)
 
 ## Corra primeiro este fluxo mínimo
 
-Se só quiser a forma mais básica de fazer a Tarefa avançar:
+Se só quiser a forma mais básica de fazer a tarefa avançar:
 
-1. Clarifique a Tarefa
+1. Clarifique a tarefa
 2. Se for complexa, peça primeiro um plano
 3. Durante a execução, corrija a passo pequeno segundo o resultado
 4. Antes de terminar, exija um resultado verificável
 
-Com estes 4 passos fluidos, aprender Subagents e Transferência fica mais natural.
+Com estes 4 passos fluidos, aprender Subagents e transferência fica mais natural.
 
-O trabalho do Agent valoriza sobretudo se a Tarefa continua a avançar na direção certa em planeamento, execução, correção e fecho.
+O trabalho do Agent valoriza sobretudo se a tarefa continua a avançar na direção certa em planejamento, execução, correção e fecho.
 
 ## Armadilhas comuns
 
 - Tratar o Agent como caixa de pesquisa: só um objetivo vago
 - Achar que «mudar de ideia a meio» = recomeçar do zero
-- Tarefa longa sem qualquer Artefato de Transferência
-- Dividir subtarefas sem limites — a Thread principal fica mais confusa
+- tarefa longa sem qualquer artefato de transferência
+- Dividir subtarefas sem limites — a thread principal fica mais confusa
 
 ## Referências
-- Explicações oficiais OpenAI Codex sobre colaboração e execução de Tarefas
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada parágrafo a parágrafo com capítulos já verificados deste manual sobre planeamento, Contexto, Verificação e colaboração multi-Tarefa; esta página mantém só princípios estáveis de fluxo de colaboração, sem tratar a UI ou entradas atuais de um cliente como contrato permanente.  
-**Última verificação:** 2026-07-26
+- Explicações oficiais OpenAI Codex sobre colaboração e execução de tarefas

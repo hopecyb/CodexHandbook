@@ -1,19 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "CLI"
-  checkedAt: "2026-08-26 (codex-cli 0.148.0 testé localement)"
+  status: verified
+  products: CLI
+  checkedAt: 2026-08-26 (codex-cli 0.148.0 testé localement)
 title: Profils de configuration
 description: Superposer un ensemble de réglages nommés à la configuration de base du Codex CLI.
 sidebar:
   order: 20
 locale: fr
 source_locale: zh-CN
-source_revision: 6ab30c5
-translation_status: draft
+source_revision: "6ab30c5"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
-
 Dans le Codex CLI actuel, `--profile <name>` superpose le fichier `$CODEX_HOME/<name>.config.toml` à la configuration utilisateur de base. Ce mécanisme sert surtout au CLI ; il ne faut pas le présenter comme un « mode en un clic » universel de l’application de bureau.
 
 ## Exemple minimal

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this repo’s current customization examples grouping and index structure; this page only serves as “example navigation and how to use examples,” without volatile product parameters or version behavior."
+  checkedAt: "2026-07-26"
 title: Examples
 description: Learn how configuration and AGENTS.md should be written from real examples, not abstract principles alone.
 locale: en
 source_locale: zh-CN
-source_revision: c33809f
+source_revision: 'c33809f'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many principles make sense in isolation but are hard to apply in your own repo.
@@ -23,11 +28,4 @@ This group shows “how others wrote it” so you can turn abstract rules into c
 - You know you need rules but are unsure about directory layers and scope
 - You want a real sample first, then adapt it for your project
 
-Example pages are for reference thinking—not for blind copy-paste.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current customization examples grouping and index structure; this page only serves as “example navigation and how to use examples,” without volatile product parameters or version behavior.  
-**Last verified:** 2026-07-26
+Example pages are for learning the approach—not for blind copy-paste.

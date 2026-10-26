@@ -5,10 +5,16 @@ sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 1f37961
+source_revision: "1f37961"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Mit der aktuellen offiziellen Dokumentation zum nicht interaktiven Modus abgeglichen. Verifiziert wurden `codex exec`, `--cd`, die standardmäßig schreibgeschützte Sandbox sowie das Pipeline-Verhalten,
+    bei dem Fortschritt nach `stderr` und die abschließende Antwort nach `stdout` geschrieben werden.
+  checkedAt: '2026-08-26'
 ---
 
 Im nicht interaktiven Modus kann Codex Aufgaben **ohne TTY-Dialog** abschließen. So integrieren Entwickler den Agent in Skripte und CI.
@@ -132,12 +138,3 @@ Der nicht interaktive Modus eignet sich für Automatisierungen, nicht für die e
 
 ## Quellen
 - OpenAI-Dokumentation zur Codex CLI
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit der aktuellen offiziellen Dokumentation zum nicht interaktiven Modus abgeglichen. Verifiziert wurden `codex exec`, `--cd`, die standardmäßig schreibgeschützte Sandbox sowie das Pipeline-Verhalten, bei dem Fortschritt nach `stderr` und die abschließende Antwort nach `stdout` geschrieben werden.
-
-**Zuletzt geprüft:** 2026-08-26

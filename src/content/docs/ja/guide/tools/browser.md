@@ -3,12 +3,17 @@ title: ブラウザツール
 description: Codex に Web ページを開かせ、UI 状態を確認し、フロントエンドの動作を検証する——能力と境界。
 locale: ja
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / Codex（バージョンと権限による）
+  basis: OpenAI Help Center には、デスクトップ App 内蔵ブラウザの現在の説明が公開されており、Work または Codex で Web ページを開き、タブを切り替え、ファイルをダウンロードし、注釈モードを使い、サイトごとにアクセスを承認できることが確認できます。本ページはブラウザツールの適用シナリオ、検索 / Computer Use との違い、安全境界に焦点を当てています。
+  checkedAt: '2026-07-26'
 ---
 
 **ブラウザツール**は、Agent が制御された環境で実際の Web ページにアクセスできるようにします。DOM の読み取り、スクリーンショット、場合によっては簡単な操作も可能です。フロントエンドの検証、ドキュメントリンクの確認、デザイン稿との照合に向いています。セキュリティ監査の代替には向かず、本番管理画面を無造作に操作する用途にも向きません。
@@ -114,10 +119,3 @@ http://localhost:4321/guide/foundations/local-vs-cloud/ のみにアクセスし
 - [ ] アクセス範囲をプロンプトに固定した
 - [ ] 重要な視覚的問題にスクリーンショットまたは文字説明がある
 - [ ] ユニット / E2E テストの結論と一致しているか、既知の差異を記録した
-
----
-
-**状態：** verified  
-**対象製品：** App / Codex（バージョンと権限による）  
-**検証根拠：** OpenAI Help Center には、デスクトップ App 内蔵ブラウザの現在の説明が公開されており、Work または Codex で Web ページを開き、タブを切り替え、ファイルをダウンロードし、注釈モードを使い、サイトごとにアクセスを承認できることが確認できます。本ページはブラウザツールの適用シナリオ、検索 / Computer Use との違い、安全境界に焦点を当てています。  
-**最終検証：** 2026-07-26

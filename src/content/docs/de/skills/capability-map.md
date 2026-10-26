@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App / Codex CLI / IDE; der genaue Unterstützungsumfang steht im Text"
+  basis: "Aufgabenmodell und Einstiegsgrenzen wurden anhand der am 2026-08-25 verfügbaren offiziellen OpenAI-Dokumentation zu Skills, Plugins, MCP, Hooks, Scheduled tasks und Subagents neu strukturiert."
+  checkedAt: "2026-08-25"
 title: Karte der Erweiterungsfunktionen
-description: Verstehe das Codex-Erweiterungssystem anhand der acht Aufgaben Aufgabe, Regeln, Workflow, Werkzeuge, Schutz, Verteilung, Auslösung und Parallelisierung.
+description: Verstehe das Codex-Erweiterungssystem anhand der acht Bereiche Aufgaben, Regeln, Workflow, Werkzeuge, Schutz, Verteilung, Auslösung und Parallelisierung.
 locale: de
 source_locale: zh-CN
-source_revision: 183812c
+source_revision: "183812c"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Erweiterungsmechanismen werden leicht verwechselt, weil sie oft im selben Workflow vorkommen, aber unterschiedliche Probleme lösen.
@@ -95,10 +100,3 @@ Produkteinstiege können sich weiterhin ändern. Prüfe vor einer konkreten Konf
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [Codex Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Status:** verified
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App / Codex CLI / IDE; der genaue Unterstützungsumfang steht im Text
-**Prüfgrundlage:** Aufgabenmodell und Einstiegsgrenzen wurden anhand der am 2026-08-25 verfügbaren offiziellen OpenAI-Dokumentation zu Skills, Plugins, MCP, Hooks, Scheduled tasks und Subagents neu strukturiert.
-**Zuletzt geprüft:** 2026-08-25

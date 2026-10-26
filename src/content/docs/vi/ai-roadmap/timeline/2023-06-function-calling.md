@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: vi
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: "c362c48"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -35,6 +36,6 @@ Sau đây là nhận định giảng dạy của trang này, không phải phép
 
 ## Bài thực hành
 
-[Chạy thử gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/): kiểm tra các gợi ý có cấu trúc cho Issue tổng hợp có gắn với đầu vào hay không; duy trì hàng đợi để con người rà soát. Bài này xác minh ranh giới dữ liệu mà không gọi API hay dùng nhãn phát hành cũ.
+[Chạy thử gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/): kiểm tra các gợi ý có cấu trúc cho Issue tổng hợp có gắn với đầu vào hay không; duy trì hàng đợi để con người rà soát. Bài này xác minh ranh giới dữ liệu mà không gọi API cũ hay công bố nhãn.
 
 [Quay lại lộ trình và quy ước về ngày tháng](/vi/ai-roadmap/)

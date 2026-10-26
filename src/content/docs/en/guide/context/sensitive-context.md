@@ -8,8 +8,9 @@ title: Sensitive context
 description: Secrets, privacy, and material that must not be shared.
 locale: en
 source_locale: zh-CN
-source_revision: "a83db07"
-translation_status: draft
+source_revision: 'a83db07'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 70

@@ -8,11 +8,12 @@ title: Contexte de conversation
 description: Comment les informations s'accumulent et deviennent obsolètes dans un même fil.
 locale: fr
 source_locale: zh-CN
-source_revision: "3968049"
-translation_status: draft
+source_revision: '3968049'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 Le « contexte de conversation » signifie que vos échanges précédents avec Codex, dans une même tâche, continuent d'influencer la suite. Cela peut aider, mais aussi créer des risques.

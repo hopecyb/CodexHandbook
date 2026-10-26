@@ -8,8 +8,9 @@ title: Skill-Aufbau
 description: Rollen von SKILL.md, references/, templates/ und scripts/ mit Beispielen.
 locale: de
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: "50ca48c"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -33,7 +34,7 @@ my-skill/
 ## Was jede Ebene tut
 
 - `SKILL.md`: Hauptanleitung — was es ist, wann nutzen, welche Schritte
-- `references/`: langer Materialschrank — nicht alles Hintergrundwissen in die Hauptdatei
+- `references/`: Sammlung längerer Referenzmaterialien — nicht alles Hintergrundwissen in die Hauptdatei
 - `templates/`: fertige Ausgabe-Skelette — kein Improvisieren jedes Mal
 - `scripts/`: deterministische Schritte als Skript, nicht nur natürliche Sprache
 
@@ -47,7 +48,7 @@ Ein gut wartbarer Skill hat gewöhnlich drei Ebenen:
 | Ebene | Inhalt | Wann verwendet |
 |---|---|---|
 | Metadaten | Name, Beschreibung, Auslösesituationen | Hilft Codex zu entscheiden, ob der Skill passt |
-| Hauptanleitung | Pflichtschritte, Verbote, Fertig-Kriterien | Wird beim Auslösen zuerst gelesen |
+| Hauptanleitung | Pflichtschritte, Verbote, Fertigstellungskriterien | Wird beim Auslösen zuerst gelesen |
 | Anhänge | Vorlagen, Referenzen, Skripte, Beispiele | Nur öffnen oder ausführen, wenn die Aufgabe sie braucht |
 
 So bleibt die Beschreibung zum Auslösen im Alltag kurz; Details werden erst bei der Ausführung geladen. Je mehr Skills es gibt, desto wichtiger ist diese Trennung.
@@ -95,13 +96,10 @@ Wenn ein Schritt stabil, deterministisch und wiederholbar sein soll, ist ein Skr
 1. Ist der Hauptablauf schon zu lang zum ersten Lesen?
 2. Gibt es große Materialblöcke, die nicht jedes Mal nötig sind?
 3. Wiederholt sich ein festes Ausgabeformat?
-4. Ist ein Schritt stabil genug für Skriptisierung?
+4. Ist ein Schritt stabil genug für Automatisierung per Skript?
 
 Bei ein bis zwei „Ja“ kannst du aufteilen.
 
-Zuerst mit `SKILL.md` durchziehen; bei Komplexität Material, Vorlagen und Skripte schrittweise auslagern.
-
-Übung: [Ersten Skill erstellen](/de/skills/create-your-first-skill/).
 ## Von Vorlage zu Skill
 
 Viele Teams beginnen nicht mit dem Entwurf eines Skills, sondern mit einem Prompt, den sie immer wieder kopieren. Er kann schrittweise reifen:
@@ -125,3 +123,7 @@ Nicht jede Vorlage muss Skill werden. Sinnvoll ist es bei wiederholter Nutzung, 
 | Skripte | Komplexitätsanalyse, Linkprüfung, Coverage, Formatprüfung |
 
 Ein guter Skill ist nicht nur ein längerer Prompt, sondern zerlegt wiederholbare Arbeit in lesbare, testbare und wartbare Teile.
+
+Beginne mit `SKILL.md` und lagere bei wachsender Komplexität Materialien, Vorlagen und Skripte schrittweise aus.
+
+Übung: [Ersten Skill erstellen](/de/skills/create-your-first-skill/).

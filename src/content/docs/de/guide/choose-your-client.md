@@ -5,10 +5,16 @@ sidebar:
   order: 2
 locale: de
 source_locale: zh-CN
-source_revision: e4c7057
+source_revision: "e4c7057"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Mit den aktuellen offiziellen Informationen zur ChatGPT-Desktop-App, Codex CLI, IDE und Cloud abgeglichen. Die Empfehlungen richten sich nach Arbeitsort und Interaktionsweise und unterscheiden
+    die VS-Code-kompatible Erweiterung ausdrücklich von den jeweiligen Integrationen für Xcode und JetBrains.
+  checkedAt: '2026-08-26'
 ---
 
 Beim ersten Einstieg in Codex musst du nicht Dutzende Funktionen vergleichen. Beantworte zunächst eine Frage: **Wo findet diese Arbeit hauptsächlich statt?**
@@ -51,7 +57,7 @@ Beispiel: Starte Codex im Stammverzeichnis des Repositorys. Lass zuerst den fehl
 
 ### IDE-Integration: Am aktuellen Code arbeiten
 
-IDE-Integrationen eignen sich, wenn eine Frage eng mit der gerade geöffneten Datei, Auswahl oder Diff zusammenhängt. Derzeit gibt es zwei Arten der Unterstützung: VS Code, Cursor, Windsurf und andere kompatible Editoren verwenden die Codex-Erweiterung; Xcode und JetBrains-IDEs besitzen jeweils eigene Codex-Integrationen.
+IDE-Integrationen eignen sich, wenn eine Frage eng mit der gerade geöffneten Datei, der Auswahl oder dem Diff zusammenhängt. Derzeit gibt es zwei Arten der Unterstützung: VS Code, Cursor, Windsurf und andere kompatible Editoren verwenden die Codex-Erweiterung; Xcode und JetBrains-IDEs besitzen jeweils eigene Codex-Integrationen.
 
 Beispiel: Markiere eine schwer verständliche Funktion, lass Ein- und Ausgaben sowie Fehlerpfade erklären und fordere anschließend Tests für Grenzfälle an.
 
@@ -93,13 +99,3 @@ Prüfe nicht nur, ob sich der Client öffnen lässt. Schließe in einem Übungs-
 5. Vergewissere dich, dass du Berechtigungsanfragen ablehnen oder enger fassen kannst.
 
 Eine vollständige Gegenüberstellung findest du unter [Funktionsvergleich](/de/guide/reference/feature-comparison/), die Sicherheitsgrenzen unter [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Informationen zur ChatGPT-Desktop-App, Codex CLI, IDE und Cloud abgeglichen. Die Empfehlungen richten sich nach Arbeitsort und Interaktionsweise und unterscheiden die VS-Code-kompatible Erweiterung ausdrücklich von den jeweiligen Integrationen für Xcode und JetBrains.
-
-**Zuletzt geprüft:** 2026-08-26

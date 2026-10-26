@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: verified
+  basis: Contrastado ítem a ítem con el directorio actual `examples/`, el frontmatter de ejemplos, la forma de indexar y el flujo de contribución; los requisitos de la página están alineados con la estructura de enlaces de casos/flujos existente y no dependen de comportamientos variables de un cliente Codex concreto.
+  checkedAt: '2026-07-26'
 title: Añadir un ejemplo de prompt
 description: Enviar prompts reproducibles a examples/prompts, con metadatos y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: "15dabd2"
 translation_status: reviewed
 translated_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
 Los ejemplos de prompt viven en el directorio raíz del repositorio [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) y se enlazan desde el cuerpo del manual. La especificación de diseño está en [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
@@ -110,7 +114,7 @@ El ejemplo debe enseñar el método, no exponer tu entorno de producción.
 
 ## Umbral de calidad
 
-- Objetivo y definición de hecho claros
+- Objetivo y definición de finalización claros
 - Incluye explicación de límites de permiso y seguridad
 - Sin secretos reales ni PII
 - El estado `verified` requiere [verificación independiente](/es/guide/contributing/verify-technical-content/)
@@ -131,9 +135,3 @@ Este orden suele ser más estable:
 - [ ] Al menos una página de caso o de flujo enlaza a este ejemplo (opcional pero recomendado)
 
 Un buen ejemplo de prompt debería permitir que otros lo reproduzcan directamente y obtengan un resultado cercano.
-
----
-
-**Estado:** verificado  
-**Base de verificación:** Contrastado ítem a ítem con el directorio actual `examples/`, el frontmatter de ejemplos, la forma de indexar y el flujo de contribución; los requisitos de la página están alineados con la estructura de enlaces de casos/flujos existente y no dependen de comportamientos variables de un cliente Codex concreto.  
-**Última verificación:** 2026-07-26

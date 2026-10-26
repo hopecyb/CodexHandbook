@@ -3,23 +3,28 @@ title: Fichiers texte et code
 description: Faire lire et écrire correctement à Codex les sources, configs et fichiers de documentation texte.
 locale: fr
 source_locale: zh-CN
-source_revision: 1537793
+source_revision: '1537793'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec les pages vérifiées contexte fichier/dossier, anatomie de tâche, review-diffs et run-tests ; principe stable : cadrer les chemins, correspondre au style, indiquer la vérification.'
+  checkedAt: '2026-07-26'
 ---
 
-La plupart du travail de développement est des **fichiers texte et code** : source, tests, config, Markdown. Cette page couvre le cadrage des changements, la cohérence de style et la fusion sécurisée.
+La plupart des tâches de développement portent sur des **fichiers texte et code** : source, tests, config, Markdown. Cette page couvre le cadrage des changements, la cohérence de style et la fusion sécurisée.
 
-La clé est changer les bons endroits de la bonne manière — sans éditions collatérales supplémentaires.
+La clé est de modifier les bons endroits de la bonne manière — sans éditions collatérales supplémentaires.
 
 ## Ce que cette page couvre
 
 - Chemins et encodage corrects
 - Organiser les éditions multi-fichiers
-- Coordonner avec formateurs et linters
+- Coordonner avec outils de formatage et linters
 
 ## Types de fichiers et notes
 
@@ -30,9 +35,9 @@ La clé est changer les bons endroits de la bonne manière — sans éditions co
 | Docs `.md` | Liens relatifs, conventions multilingues |
 | Code généré | Clarifier commit vs gitignore |
 
-Contexte : [Contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
+contexte : [contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
 
-## Pourquoi ces fichiers se trompent
+## Pourquoi ces fichiers posent problème
 
 Souvent :
 
@@ -41,7 +46,7 @@ Souvent :
 - Style diverge des normes du projet
 - Syntaxe config cassée silencieusement
 
-## Structure de Prompt recommandée
+## Structure de prompt recommandée
 
 ```text
 Objectif : <une ligne>
@@ -51,7 +56,7 @@ Style : correspondre à <fichier exemple>
 Terminé quand : lister fichiers changés + exécuter <commande de test>
 ```
 
-Voir [Anatomie de Tâche](/fr/prompts/task-anatomy/)
+Voir [Anatomie de tâche](/fr/prompts/task-anatomy/)
 
 ## Idées reçues courantes
 
@@ -70,7 +75,7 @@ Ajouter :
 
 ### 3. Changement plus grand ≠ plus rapide
 
-Petites éditions petites, explicables, révisables battent les refactors « en passant ».
+Des modifications limitées, explicables et faciles à examiner sont généralement plus fiables qu’une vaste refonte faite « au passage ».
 
 ## Encodage et fins de ligne
 
@@ -83,8 +88,8 @@ Petites éditions petites, explicables, révisables battent les refactors « en 
 Exiger :
 
 1. Lister les fichiers affectés d'abord
-2. Changement minimal pour cette Tâche seulement
-3. Étapes de Vérification après édition
+2. Changement minimal pour cette tâche seulement
+3. Étapes de vérification après édition
 
 ## Focus de revue
 
@@ -98,11 +103,4 @@ Exiger :
 - Édition texte sur fichiers binaires ou minifiés
 - Liens doc en chemins absolus → 404 sur le site
 
-Les éditions texte et code échouent quand le périmètre s'étend et la revue est difficile. Indiquer périmètre, style et Vérification dès le départ.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec les pages vérifiées Contexte fichier/dossier, anatomie de Tâche, review-diffs et run-tests ; principe stable : cadrer les chemins, correspondre au style, indiquer la Vérification.  
-**Dernière vérification :** 2026-07-26
+Les éditions texte et code échouent quand le périmètre s'étend et la revue est difficile. Indiquer périmètre, style et vérification dès le départ.

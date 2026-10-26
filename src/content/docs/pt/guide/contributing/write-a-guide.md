@@ -7,8 +7,9 @@ title: Escrever uma página de guia
 description: Estrutura, frontmatter e acordos de ligações cruzadas para o corpo novo do manual.
 locale: pt
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: "dd22df1"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -22,7 +23,7 @@ Pontos onde se costuma ficar preso:
 
 - Não saber como deve ser uma página de guia
 - Não ter a certeza se está a escrever «tutorial», «norma» ou «resumo de índice»
-- Não saber escrever de forma realmente útil para principiantes
+- Não saber escrever de forma realmente útil para iniciantes
 
 Aqui estes problemas são desdobrados, para escrever páginas fáceis de manter e compreensíveis.
 
@@ -55,7 +56,7 @@ Para assinalar a verificação de fontes ou a execução de um exemplo, siga [Ve
 
 ## Estrutura recomendada
 
-Escolha subsecções segundo o [modelo de integração de fontes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板); combinações comuns:
+Escolha subseções segundo o [modelo de integração de fontes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板); combinações comuns:
 
 - Que problema a página resolve
 - Para quem
@@ -84,7 +85,7 @@ Costuma ajudar mais os novos do que encher todos os detalhes de uma vez.
 
 ### Não escreva só para quem já sabe — pense em como os outros leem
 
-Você conhece o Contexto; quem chega pela primeira vez não.
+Você conhece o contexto; quem chega pela primeira vez não.
 
 Acrescente de propósito esta informação de ponte:
 
@@ -94,7 +95,7 @@ Acrescente de propósito esta informação de ponte:
 
 ### A página de guia não substitui a documentação oficial
 
-O manual comunitário ajuda a compreender, ligar e aplicar; factos que mudam ainda voltam à documentação oficial para Verificação.
+O manual comunitário ajuda a compreender, ligar e aplicar; fatos que mudam ainda voltam à documentação oficial para verificação.
 
 ## Ligações cruzadas
 
@@ -104,7 +105,7 @@ O manual comunitário ajuda a compreender, ligar e aplicar; factos que mudam ain
 
 ## Tom
 
-- Português, orientado a praticantes
+- Chinês simplificado no texto-fonte, voltado a quem coloca o conteúdo em prática
 - Admita incerteza («conforme a documentação oficial»)
 - Evite a narrativa de «Prompt universal»
 
@@ -112,14 +113,14 @@ O manual comunitário ajuda a compreender, ligar e aplicar; factos que mudam ain
 
 Pode escrever nesta ordem:
 
-1. Primeiro o problema que a página resolve de facto
+1. Primeiro o problema que a página resolve de fato
 2. Depois o que o leitor mais facilmente mal-entende ou salta
 3. Depois a prática mínima, fluxo ou método de juízo
 4. Por fim ligações cruzadas e referências
 
 ## Verificação
 
-Antes do PR, leia [Verificar conteúdo técnico](/pt/guide/contributing/verify-technical-content/). Comandos, preços, Permissões e outra informação volátil devem ser reconfirmados.
+Antes do PR, leia [Verificar conteúdo técnico](/pt/guide/contributing/verify-technical-content/). Comandos, preços, permissões e outra informação volátil devem ser reconfirmados.
 
 Uma boa página de guia não se mede por «material completo», e sim por o leitor da primeira vez saber porque a página existe, o que ver primeiro e para onde ir a seguir.
 

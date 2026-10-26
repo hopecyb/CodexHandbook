@@ -12,8 +12,9 @@ verification:
     href: https://github.com/Fission-AI/OpenSpec/releases/tag/v1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: 1a34023
-translation_status: draft
+source_revision: "1a34023"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: '2026-09-20'
 ---
 

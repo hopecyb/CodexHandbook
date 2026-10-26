@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / Cloud"
+  basis: "OpenAI Help Center plugin docs still emphasize app/plugin capability constrained by role access, action control, confirmation, domain/source boundaries, and underlying source permissions; mapped here to unified Plugin/MCP risk view with read-only first, version pinning, owners, and approval lists."
+  checkedAt: "2026-07-26"
 title: Plugin and MCP Risk
 description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: bf027ad
+source_revision: 'bf027ad'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -54,7 +59,7 @@ Experimental personal MCP **should not** share production repo tokens.
 1. **Deny by default** unlisted remote MCP installs
 2. **Local MCP** may still read the whole disk—dedicated OS user or container
 3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/en/skills/hooks/hooks-examples/)
-4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—permissions union; apply strictest policy
+4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—assess the combined permissions of both and apply the strictest policy
 
 ## Common mistakes
 
@@ -96,9 +101,3 @@ For external extensions: permissions and boundaries before feature strength.
 
 ## Reference sources
 - [Debugging MCP](/en/skills/mcp/debugging-mcp/)
----
-
-**Status:** verified  
-**Products:** CLI / App / Cloud  
-**Verification basis:** OpenAI Help Center plugin docs still emphasize app/plugin capability constrained by role access, action control, confirmation, domain/source boundaries, and underlying source permissions; mapped here to unified Plugin/MCP risk view with read-only first, version pinning, owners, and approval lists.  
-**Last verified:** 2026-07-26

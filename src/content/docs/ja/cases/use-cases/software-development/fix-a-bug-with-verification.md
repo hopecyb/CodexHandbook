@@ -2,19 +2,23 @@
 caseCategory: development
 directoryOrder: 50
 contentType: case
-outputs: [code, tests, markdown]
+outputs:
+- code
+- tests
+- markdown
 legacyVerification:
-  status: "verified"
-  products: "CLI / IDE"
-  basis: "開始サンプルは 3 件中 1 件が予期どおり失敗し、参考解答は 3 件すべて通過することを確認済みです。本ページは RED、根本原因、最小修正、GREEN、回帰、人によるレビューの証拠チェーンで構成しています。"
-  checkedAt: "2026-08-25"
-title: "事例：検証付き Bug 修正"
+  status: verified
+  products: CLI / IDE
+  basis: 開始サンプルは 3 件中 1 件が予期どおり失敗し、参考解答は 3 件すべて通過することを確認済みです。本ページは RED、根本原因、最小修正、GREEN、回帰、人によるレビューの証拠チェーンで構成しています。
+  checkedAt: '2026-08-25'
+title: 事例：検証付き Bug 修正
 description: 実行可能な割引計算の Bug で、RED の再現、根本原因、最小修正、GREEN、回帰、diff レビューを行います。
 locale: ja
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: "42d842e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 これはファイル名を置き換えるだけのプロンプトテンプレートではありません。リポジトリにある実際の開始コードを使い、まずテスト失敗を確認し、同じテストが参考修正によって通過する過程を追います。

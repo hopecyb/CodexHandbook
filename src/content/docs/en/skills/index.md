@@ -7,15 +7,16 @@ title: Skills
 description: Learn to use, write, test, and maintain Codex Skills.
 locale: en
 source_locale: zh-CN
-source_revision: 6f8df16
-translation_status: draft
+source_revision: '6f8df16'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 
 
 Skills package stable methods, reference material, templates, and scripts into reusable capabilities.
 
-Its value goes beyond giving Codex another capability: it gives a workflow clear inputs, outputs, permission boundaries, and ways to test it.
+Their value goes beyond giving Codex another capability: it gives a workflow clear inputs, outputs, permission boundaries, and ways to test it.
 
 ![From one prompt to a team capability pack: prompts and templates become Skills, subagents, MCP, and Hooks, then ship to the team through Plugins and Automations](/diagrams/codex-capability-ladder-en.svg)
 

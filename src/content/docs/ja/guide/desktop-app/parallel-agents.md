@@ -3,12 +3,16 @@ title: 並行チャットと Agent
 description: 独立したチャットと worktree を使い、個別に検収できるタスクを並行して進めます。
 locale: ja
 source_locale: zh-CN
-source_revision: 2336db1
+source_revision: "2336db1"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App、CLI、IDE
+  checkedAt: "2026-08-26"
 ---
 
 並行処理の基本単位は、独立したコンテキスト、メッセージ、結果、目標を持つチャットです。「手順が多い」ことではなく、**タスクが互いに独立し、ファイル境界が明確で、個別に検収できる**場合に並行処理が適しています。
@@ -71,11 +75,3 @@ reviewed_at: 2026-08-26
 - [長時間タスク](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [子 Agent](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**状態：** verified
-
-**対象製品：** App、CLI、IDE
-
-**最終検証：** 2026-08-26

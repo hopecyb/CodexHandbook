@@ -10,9 +10,10 @@ sidebar:
   order: 40
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 0a9b2ad
+source_revision: '0a9b2ad'
 ---
 
 CLI configuration shapes the **default model, working directory, strictness of approvals, MCP servers**, and more. It shares the concepts in [Configuration Basics](/en/guide/customization/configuration/config-basics/) but focuses on settings terminal users commonly change.

@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page clarifie uniquement les erreurs d'interprétation fréquentes ; ses liens internes, son tableau comparatif et ses limites conceptuelles ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page clarifie uniquement les erreurs d'interprétation fréquentes ; ses liens internes, son tableau comparatif et ses limites conceptuelles ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer.
+  checkedAt: '2026-07-26'
 title: Idées reçues courantes
 description: Corriger les attentes qui font de Codex une boîte noire universelle.
 locale: fr
 source_locale: zh-CN
 source_revision: "700e57b"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 120
+reviewed_at: '2026-10-26'
 ---
-
 Si beaucoup de personnes peinent à utiliser Codex au début, ce n'est pas toujours faute de savoir s'en servir : elles s'en font d'abord une fausse idée.
 
 Par exemple, elles peuvent :

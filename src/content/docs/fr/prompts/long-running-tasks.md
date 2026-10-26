@@ -1,12 +1,17 @@
 ---
-title: Prompts pour tâches longues
+title: prompts pour tâches longues
 description: Découper en phases, points de contrôle et informations de passation.
 locale: fr
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: "450ed9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page traite uniquement découpage et passation des longues tâches ; liens et exemples de phases revus ; pas de faits volatils produit.
+  checkedAt: '2026-07-26'
 ---
 
 Les échecs sur les longues tâches ressemblent souvent à :
@@ -15,7 +20,7 @@ Les échecs sur les longues tâches ressemblent souvent à :
 - aucun point de contrôle
 - contraintes qui se contredisent dans un fil long
 
-L'enjeu n'est pas un Prompt plus long, mais une **suite de petites phases avec contrôles**.
+L'enjeu n'est pas un prompt plus long, mais une **suite de petites phases avec contrôles**.
 
 Découpage par phase, acceptation à chaque fois :
 
@@ -63,24 +68,17 @@ Résumé, passation ou nouveau fil sont souvent plus lisibles.
 1. **Recherche** : comprendre, ne pas toucher
 2. **Plan** : étapes, risques, validation
 3. **Exécution** : changement minimal
-4. **Validation** : checks, conclusion, passation
+4. **Validation** : contrôles, conclusion, passation
 
 ## Formulation pratique
 
 ```text
 Phase 1 : recherche et options, pas de code — attends ma confirmation
 Phase 2 : changement minimal, puis rapport d'impact
-Phase 3 : validation et exécution des checks pertinents
+Phase 3 : validation et exécution des contrôles pertinents
 Phase 4 : résumé des changements, risques et suites possibles
 ```
 
 Mieux vaut pouvoir s'arrêter entre chaque bloc que tout finir d'un trait.
 
 Voir : [Progression et pilotage](/fr/guide/agent-work/progress-and-steering/) · [Passation et reprise](/fr/guide/agent-work/handoff-and-resume/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page traite uniquement découpage et passation des longues tâches ; liens et exemples de phases revus ; pas de faits volatils produit.

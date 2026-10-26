@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this repo’s current `AGENTS.md` series, context, and workflow chapters; this page only states stable writing principles and maintenance rhythm for project instructions and does not treat any one client’s implementation details as a long-term promise."
+  checkedAt: "2026-07-26"
 title: Writing Effective Project Instructions
-description: AGENTS.md writing checklist—short, hard, executable, verifiable.
+description: AGENTS.md writing checklist—concise, firm, actionable, verifiable.
 locale: en
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: '63dd711'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -18,7 +23,7 @@ When writing project instructions for the first time, a common problem is many i
 ## Contents
 
 - What project instructions should look like
-- What “short, hard, executable” means
+- What “concise, firm, actionable” means
 - Patterns that most confuse Codex and humans
 
 ## Recommended Structure
@@ -142,6 +147,20 @@ If you have a scattered project instruction doc, tighten it this way:
 3. Shorten long background; replace with links
 4. Provide a minimal definition of done
 
+## From one task to a project rule
+
+Not every good prompt belongs directly in `AGENTS.md`. First decide which layer should own it.
+
+| Repeated content | Better place |
+|---|---|
+| “Do not edit generated directories” | `AGENTS.md` prohibition |
+| “Review every PR in this fixed format” | Skill or prompt template |
+| “Format files after writing” | Hook |
+| “Read Linear/Jira first when looking up a work item” | MCP + matching Skill |
+| “I prefer Chinese explanations” | Memory or personal preference |
+
+`AGENTS.md` is best for long-lived, shared, verifiable rules. Process content can move to Skills; automatic checks to Hooks; external access to MCP.
+
 Good project instructions are not about volume—they make key constraints, key commands, and completion criteria clear enough to execute directly.
 
 ## Maintenance Rhythm
@@ -155,24 +174,3 @@ Good project instructions are not about volume—they make key constraints, key 
 - [Project Instructions](/en/guide/customization/project-instructions/)
 - [Explore—Plan—Execute—Verify](/en/cases/workflows/explore-plan-execute-verify/)
 - [Define Done](/en/prompts/define-done/)
-
-## From one task to a project rule
-
-Not every good prompt belongs directly in `AGENTS.md`. First decide which layer should own it.
-
-| Repeated content | Better place |
-|---|---|
-| “Do not edit generated directories” | `AGENTS.md` prohibition |
-| “Review every PR in this fixed format” | Skill or prompt template |
-| “Format files after writing” | Hook |
-| “Read Linear/Jira before coding” | MCP + matching Skill |
-| “I prefer Chinese explanations” | Memory or personal preference |
-
-`AGENTS.md` is best for long-lived, shared, verifiable rules. Process content can move to Skills; automatic checks to Hooks; external access to MCP.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current `AGENTS.md` series, context, and workflow chapters; this page only states stable writing principles and maintenance rhythm for project instructions and does not treat any one client’s implementation details as a long-term promise.  
-**Last verified:** 2026-07-26

@@ -1,17 +1,18 @@
 ---
 title: AGENTS.md num monorepo
-description: Padrão de exemplo para colocar instruções de projeto, âmbito e comandos de teste numa estrutura multi-pacote num só repositório.
+description: Padrão de exemplo para colocar instruções de projeto, escopo e comandos de teste numa estrutura multi-pacote num só repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzada com capítulos atuais deste manual sobre `AGENTS.md`, contexto de ficheiros/diretórios e ambientes Cloud; o conteúdo limita-se ao padrão de exemplo de instruções em camadas em monorepo e à organização de comandos, sem tratar entradas concretas de produto ou implementações geridas como contrato fixo.", "checkedAt": "2026-07-26"}
 ---
 
-Num monorepo convivem várias apps, pacotes partilhados e stacks diferentes — um `AGENTS.md` gigante facilita o Agent **alterar o pacote errado** ou correr os testes errados. Esta página dá um padrão reutilizável de **instruções em camadas** (exemplo; adapte ao repositório).
+Num monorepo convivem várias apps, pacotes compartilhados e stacks diferentes — um `AGENTS.md` gigante facilita o Agent **alterar o pacote errado** ou correr os testes errados. Esta página dá um padrão reutilizável de **instruções em camadas** (exemplo; adapte ao repositório).
 
 ## O que esta página cobre
 
@@ -23,13 +24,13 @@ Num monorepo convivem várias apps, pacotes partilhados e stacks diferentes — 
 
 Se um repositório comum é uma casa, um monorepo é um prédio.
 
-Há salas diferentes, moradores diferentes, regras diferentes.  
+Há salas diferentes, moradores diferentes, regras diferentes.
 Se só afixar um cartaz enorme à entrada, o Codex facilmente cai em dois problemas:
 
 - Vê tudo, mas não sabe que camada cumprir agora
 - Só queria alterar um pacote e acaba por mexer noutro
 
-O ponto é clarificar as regras junto com os limites de diretório — não multiplicar mecanicamente ficheiros `AGENTS.md`.
+O ponto é clarificar as regras junto com os limites de diretório — não multiplicar mecanicamente arquivos `AGENTS.md`.
 
 ## Estrutura recomendada (exemplo)
 
@@ -55,21 +56,21 @@ Na primeira vez com instruções monorepo, muita gente mete todas as restriçõe
 
 Resultado:
 
-- Ficheiro muito longo
-- Regras realmente relevantes para a Tarefa atual pouco salientes
+- Arquivo muito longo
+- Regras realmente relevantes para a tarefa atual pouco salientes
 - Convenções especiais dos subpacotes facilmente afogadas
 
 Mais estável: a raiz escreve o consenso global; o subpacote escreve regras locais especiais.
 
-### O papel das notas de subpacote é reduzir o âmbito de alterações erradas, não repetir as regras da raiz
+### O papel das notas de subpacote é reduzir o escopo de alterações erradas, não repetir as regras da raiz
 
 Se `apps/web` e `apps/api` têm comandos de desenvolvimento, testes e restrições diferentes, escrever essas diferenças nos respetivos diretórios ajuda o Codex a errar menos.
 
 ## Fragmento de modelo de AGENTS.md de subpacote
 
 ```markdown
-## Âmbito
-Só modificar `apps/web/**`, salvo se a Tarefa exigir explicitamente alterações entre pacotes.
+## Escopo
+Só modificar `apps/web/**`, salvo se a tarefa exigir explicitamente alterações entre pacotes.
 
 ## Desenvolvimento
 - Instalação: na raiz do repositório `pnpm install`
@@ -78,10 +79,10 @@ Só modificar `apps/web/**`, salvo se a Tarefa exigir explicitamente alteraçõe
 - Verificação de tipos: `pnpm --filter web typecheck`
 
 ## Dependências
-Tipos partilhados importados de `@acme/shared`; não copiar e colar.
+Tipos compartilhados importados de `@acme/shared`; não copiar e colar.
 ```
 
-## Coordenação com o Prompt da Tarefa
+## Coordenação com o prompt da tarefa
 
 Em refactors entre pacotes, **liste caminhos explicitamente**:
 
@@ -92,15 +93,15 @@ Proibido: alterar diretamente o servidor em apps/api
 Aceitação: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-Ver [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
+Ver [Contexto de arquivos e diretórios](/pt/guide/context/file-and-folder-context/)
 
 ## Cloud e CI
 
 Em Cloud, monorepos falham muitas vezes por **não instalar na raiz** ou por filter errado. No `AGENTS.md` da raiz declare:
 
 - Diretório de trabalho predefinido = raiz do repositório
-- Comandos filter para Tarefas de um só pacote
-- Estratégia de cache (se usar turborepo/nx, indique o grafo de Tarefas)
+- Comandos filter para tarefas de um só pacote
+- Estratégia de cache (se usar turborepo/nx, indique o grafo de tarefas)
 
 [Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/)
 
@@ -116,7 +117,7 @@ Se não souber onde colocar uma nota, pergunte:
 
 1. É consenso que todos os pacotes devem cumprir?
 2. Só vale para um certo diretório?
-3. Se estiver no sítio errado, o Agent pode alterar o âmbito errado?
+3. Se estiver no sítio errado, o Agent pode alterar o escopo errado?
 
 Mais perto de 1 → raiz; mais perto de 2 ou 3 → subpacote.
 
@@ -124,13 +125,6 @@ Mais perto de 1 → raiz; mais perto de 2 ou 3 → subpacote.
 
 - [ ] Raiz e subpacotes têm pelo menos cada um uma nota de scope legível
 - [ ] Qualquer pacote pode correr sozinho o comando de teste
-- [ ] Tarefas entre pacotes listam caminhos permitidos no Prompt
+- [ ] Tarefas entre pacotes listam caminhos permitidos no prompt
 
 Num monorepo, AGENTS.md não precisa de estar tudo concentrado; o melhor é «consenso global» e «regras locais de diretório» cada um no sítio certo.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos atuais deste manual sobre `AGENTS.md`, Contexto de ficheiros/diretórios e ambientes Cloud; o conteúdo limita-se ao padrão de exemplo de instruções em camadas em monorepo e à organização de comandos, sem tratar entradas concretas de produto ou implementações geridas como contrato fixo.  
-**Última verificação:** 2026-07-26

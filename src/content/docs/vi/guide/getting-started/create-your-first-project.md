@@ -1,14 +1,19 @@
 ---
-title: Tạo dự án luyện tập đầu tiên
-description: Chuẩn bị một thư mục luyện tập an toàn có thể bỏ.
-locale: vi
-source_locale: zh-CN
-source_revision: 43dcbdb
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tạo dự án luyện tập đầu tiên"
+description: "Chuẩn bị một thư mục luyện tập an toàn có thể bỏ."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "43dcbdb"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 70
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu chéo với các chương checklist an toàn người mới, kiểm tra kết quả và hoàn tác/khôi phục đã được kiểm chứng trong cẩm nang hiện tại; nội dung trang giới hạn ở phương pháp nhập môn ổn định «dùng thư mục luyện tập có thể bỏ để chạy thông quy trình trước»."
+  checkedAt: "2026-07-26"
 ---
 
 Khi tạo dự án luyện tập lần đầu, rất dễ muốn lấy thẳng dự án chính thức đang có để thử. Trông có vẻ đỡ việc — rủi ro cũng cao hơn.
@@ -58,13 +63,6 @@ Nếu giờ phải tạo một dự án luyện tập, ít nhất thỏa 4 đi�
 1. Có thể bỏ
 2. Không có dữ liệu nhạy cảm
 3. Ít tệp, cấu trúc đơn giản
-4. Thay đổi một nhìn là hiểu
+4. Thay đổi nhìn qua là hiểu
 
 Dự án luyện tập lần đầu không cần giống môi trường production. An toàn, đơn giản, làm sai cũng dễ thu lại là đủ.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương checklist an toàn người mới, kiểm tra kết quả và hoàn tác/khôi phục đã được kiểm chứng trong cẩm nang hiện tại; nội dung trang giới hạn ở phương pháp nhập môn ổn định «dùng thư mục luyện tập có thể bỏ để chạy thông quy trình trước».  
-**Kiểm chứng gần nhất:** 2026-07-26

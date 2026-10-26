@@ -15,7 +15,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: '2026-09-18'
-  summary: Pasaron siete pruebas del script. En una copia temporal, al corregir un problema cada vez, los fallos bajaron de dos a uno y luego a cero. No se comprobaron enlaces externos en línea ni se ejecutó un CI o programador real.
+  summary: Pasaron siete pruebas del script. En una copia temporal, al corregir un problema cada vez, los fallos bajaron de dos a uno y luego a cero. No se comprobaron enlaces externos en línea ni se ejecutó un sistema de CI o un programador de tareas real.
   environment: Python 3.12.11 / Darwin arm64; biblioteca estándar y HTML estático sintético original, sin token.
   evidence:
   - label: Registro real de ejecución y recuperación
@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: 0d21aa9
-translation_status: draft
+source_revision: "0d21aa9"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Antes de programar una comprobación periódica, confirma que el script detecta problemas y explica qué revisó. El ejercicio empieza con dos enlaces rotos deliberadamente. Cambia un destino cada vez y observa el resultado.
@@ -78,11 +79,11 @@ En un proyecto real, compílalo primero según sus instrucciones y pasa el direc
 
 ## Después intégralo en un proceso periódico
 
-Da a tu programador existente la secuencia «compilar proyecto → comprobar enlaces → guardar código de salida y JSON», con directorio de trabajo y entorno de dependencias fijos. Si falla la compilación, detente en vez de leer salidas antiguas. Evita escrituras simultáneas en el mismo registro.
+Asigna a tu programador de tareas existente la secuencia «compilar proyecto → comprobar enlaces → guardar código de salida y JSON», con directorio de trabajo y entorno de dependencias fijos. Si falla la compilación, detente en vez de leer salidas antiguas. Evita escrituras simultáneas en el mismo registro.
 
 Ejecuta manualmente una vez, actívalo manualmente en el entorno de programación de destino y solo después configura la periodicidad. Compara el resultado con el anterior: guarda silencio si no hay cambios y prepara un resumen si aparecen fallos nuevos, errores de comprobación o recuperación. El envío de notificaciones sigue sujeto a la autorización concedida.
 
-El paquete no creó tareas programadas, no envió avisos, no modificó un sitio real ni ejecutó CI. Estas instrucciones de programación son una guía de integración, no prueba de ejecución del programador. Consulta la [guía de tareas programadas](/es/skills/automations/scheduled-tasks/).
+El paquete no creó tareas programadas, no envió avisos, no modificó un sitio real ni ejecutó CI. Estas instrucciones de programación son una guía de integración, no prueba de ejecución del programador de tareas. Consulta la [guía de tareas programadas](/es/skills/automations/scheduled-tasks/).
 
 ## Cómo tratar los enlaces externos
 

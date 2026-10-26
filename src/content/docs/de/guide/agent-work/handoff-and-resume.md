@@ -1,14 +1,20 @@
 ---
 title: Übergabe und Fortsetzen
-description: Unvollendete Arbeit über Sessions hinweg fortsetzen.
+description: Unvollendete Arbeit über mehrere Sitzungen hinweg fortsetzen.
 locale: de
 source_locale: zh-CN
-source_revision: 1ee17e9
+source_revision: "1ee17e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Langzeitaufgaben, dauerhaften Zielen und Codex-Kollaboration; nur stabile Methode „Übergabe hilft der nächsten Weiterarbeit“ — keine festen
+    Regeln zu Client-Übergabe-Buttons oder -Flows.
+  checkedAt: '2026-07-26'
 ---
 
 Ein häufiges Problem:
@@ -19,20 +25,20 @@ Ohne Übergabe passiert beim Wiederöffnen leicht:
 
 - Sie selbst vergessen, wo Sie standen
 - Codex weiß nicht, welche Constraints noch gelten
-- Neuer Dialog zerstreut alten Kontext und kreist wieder von vorn
+- Ein neuer Dialog verliert den bisherigen Kontext und beginnt wieder von vorn
 
 ![Illustration: Ein Agent übergibt Übergabenotizen und eine Fortschrittskarte an einen anderen, dahinter ein Kalender und ein Aufgabenboard mit Lesezeichen](/illustrations/handoff-and-resume.webp)
 
 ## Was Übergabe hinterlässt
 
-Übergabe und Fortsetzen = eine Notizkarte für „wer beim nächsten Mal weiterarbeitet“.
+Eine Übergabe hinterlässt eine kurze Anleitung für die nächste Person, die die Arbeit fortsetzt.
 
-Dieser „Wer“ kann sein:
+Das kann sein:
 
 - Sie selbst in ein paar Stunden
 - Eine neu eröffnete Aufgabe
 - Eine andere Person
-- Weiterarbeitendes Codex
+- Codex bei der Fortsetzung der Arbeit
 
 Also keine lange Geschichte — **Informationen, die zum Weitermachen wirklich nötig sind**.
 
@@ -50,7 +56,7 @@ Noch besser:
 
 - Warum hier gestoppt
 
-Dann sieht die nächste Runde nicht nur „halb fertig“, sondern ob Zeit, Freigabe oder echter Blocker.
+So wird beim Fortsetzen deutlich, ob Zeit fehlte, eine Freigabe aussteht oder ein echtes Hindernis vorliegt.
 
 ## Häufige Missverständnisse
 
@@ -77,7 +83,7 @@ Fast nutzlos.
 
 - einmal `pnpm build` laufen lassen
 - `guide/verification.md` weiter schreiben
-- Hero-Look von `/guide/foundations/local-vs-cloud/` prüfen
+- Darstellung des Titelbilds von `/guide/foundations/local-vs-cloud/` prüfen
 
 ## Stabiler fortsetzen
 
@@ -89,11 +95,4 @@ Nach Einfügen der Zusammenfassung in neuen Thread nicht sofort groß ändern:
 
 So vermeiden Sie Abhängigkeit von komprimiertem, lückenhaftem oder verzerrtem altem Kontext.
 
-Gute Übergabe erzählt keine Historie — sie sagt der nächsten Öffnung sofort: wo, was als Nächstes, wie prüfen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Langzeitaufgaben, dauerhaften Zielen und Codex-Kollaboration; nur stabile Methode „Übergabe hilft der nächsten Weiterarbeit“ — keine festen Regeln zu Client-Übergabe-Buttons oder -Flows.  
-**Zuletzt geprüft:** 2026-07-26
+Eine gute Übergabe wiederholt nicht die gesamte Vorgeschichte. Sie zeigt sofort den aktuellen Stand, den nächsten Schritt und die nötige Prüfung.

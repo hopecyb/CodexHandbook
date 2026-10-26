@@ -8,11 +8,12 @@ title: Permissions and approvals
 description: Understand when Codex needs your approval to act.
 locale: en
 source_locale: zh-CN
-source_revision: 1beec63
-translation_status: draft
+source_revision: '1beec63'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 70
+reviewed_at: 2026-10-25
 ---
 
 Codex should not perform high-risk operations without consent. **Approval** is the gate in collaboration between you and Codex.

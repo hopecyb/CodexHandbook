@@ -10,8 +10,9 @@ verification:
   summary: "Die drei Aufgabenkategorien und zwei Vergleiche sind redaktionelle Empfehlungen zur Zusammenarbeit. Autorisierungs- und Ausführungsgrenzen wurden geprüft; es handelt sich weder um feste Client-Modi noch um ein Experiment zur Erfolgsquote des Modells."
 locale: de
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

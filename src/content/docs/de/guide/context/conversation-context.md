@@ -3,12 +3,17 @@ title: Gesprächskontext
 description: Wie Informationen im selben Thread akkumulieren und veralten.
 locale: de
 source_locale: zh-CN
-source_revision: 3968049
+source_revision: "3968049"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur Ansammlung und Eingrenzung des Gesprächskontexts; Konzepte, Beispiele und interne Links wurden geprüft, ohne volatile Produktfakten.
+  checkedAt: '2026-07-26'
 ---
 
 „Gesprächskontext“ meint: Was du und Codex früher in derselben Aufgabe gesagt haben, wirkt weiter auf das Folgende. Das hilft — und birgt Risiko.
@@ -31,10 +36,10 @@ Häufiges Problem: **Alte Infos verfallen nicht automatisch.**
 Typisch:
 
 - frühere Einschränkung vergessen zu ändern
-- Aufgabenrichtung gewechselt, aber am alten Kontext weitergequatscht
+- Aufgabenrichtung gewechselt, aber mit dem alten Kontext weitergearbeitet
 - vorläufiges Fazit später ungültig, beeinflusst aber weiter
 
-Kern: Gespräch nicht endlos verlängern — je länger, desto aktiver schließen.
+Entscheidend ist, ein langes Gespräch immer wieder auf das aktuelle Ziel und die noch gültigen Informationen zu konzentrieren.
 
 ## Wann Schlüsselbeschränkungen neu nennen
 
@@ -58,7 +63,7 @@ Besonders wiederholenswert:
 
 Nicht unbedingt.
 
-Bei gleichem Thema ist ein langer Thread bequem.  
+Bei gleichem Thema ist ein langer Thread bequem.
 Bei neuer Richtung zieht der alte Thread die neue Aufgabe eher schief.
 
 ### 2. Ich hab’s doch gesagt — warum trotzdem falsch?
@@ -75,7 +80,7 @@ Kriterien:
 - ursprüngliches Problem ist erledigt
 - das Gespräch wirkt für dich selbst chaotisch
 
-Dann meist sauberer neu starten als hart weiterzuquatschen.
+Dann meist sauberer neu starten als die unübersichtliche Unterhaltung fortzusetzen.
 
 ## Bei Themenwechsel
 
@@ -91,11 +96,4 @@ Bleibst du im alten Thread, kann eine kurze Neuausrichtung helfen:
 Ab jetzt nur die Startseiten-Überarbeitung. Frühere Backend-API-Inhalte nicht weiterführen. Diesmal weiterhin nur Text und Stil, keine Datenstruktur ändern.
 ```
 
-Derselbe Thread trägt Erinnerung — und alten Ballast. Bei Themenwechsel aktiv schließen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Akkumulation und Schließen von Thread-Kontext; Konzepte, Beispiele und interne Links wurden geprüft, ohne volatile Produktfakten.  
-**Zuletzt geprüft:** 2026-07-26
+Derselbe Thread trägt Erinnerung — und alten Ballast. Bei einem Themenwechsel sollte der Kontext gezielt neu eingegrenzt werden.

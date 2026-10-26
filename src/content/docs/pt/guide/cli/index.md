@@ -5,13 +5,14 @@ sidebar:
   order: 11
 locale: pt
 source_locale: zh-CN
-source_revision: a80ef7e
+source_revision: "a80ef7e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "O material de introdução à CLI no OpenAI Help Center continua a descrever a Codex CLI como entrada de terminal e a distinguir uso interativo de fluxos de linha de comando mais automatizados; esta página só navega o capítulo CLI e resume os dois tipos de uso, sem amarrar parâmetros ou comandos de instalação concretos.", "checkedAt": "2026-07-26"}
 ---
 
-A CLI adequa-se a utilizadores de terminal e à integração com scripts e CI.
+A CLI adequa-se a usuários de terminal e à integração com scripts e CI.
 
 Na primeira vez que vê «CLI», pode entendê-la como a entrada para colaborar com o Codex diretamente no terminal, sem interface gráfica.
 
@@ -21,7 +22,7 @@ Inclina-se para estes cenários:
 - Quem quer ligar a scripts
 - Quem precisa de CI / automação
 
-Para iniciantes que não conhecem o terminal, a CLI não é a primeira paragem obrigatória; mas se já sabe o básico de `cd`, `ls` e correr comandos no diretório do projeto, é muito eficiente.
+Para iniciantes que não conhecem o terminal, a CLI não é a primeira parada obrigatória; mas se já sabe o básico de `cd`, `ls` e correr comandos no diretório do projeto, é muito eficiente.
 
 - [Instalação e atualizações](/pt/guide/cli/installation-and-updates/)
 - [Modo interativo](/pt/guide/cli/interactive-mode/)
@@ -43,10 +44,3 @@ Na primeira fase, distinga estes dois modos:
 2. **Modo não interativo**: tratar o Codex como comando ligado a scripts ou CI
 
 Se for só a experimentar pela primeira vez, o modo interativo costuma ser mais fluido. Quando precisar de automação, passe ao modo não interativo.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI  
-**Base de verificação:** O material de introdução à CLI no OpenAI Help Center continua a descrever a Codex CLI como entrada de terminal e a distinguir uso interativo de fluxos de linha de comando mais automatizados; esta página só navega o capítulo CLI e resume os dois tipos de uso, sem amarrar parâmetros ou comandos de instalação concretos.  
-**Última verificação:** 2026-07-26

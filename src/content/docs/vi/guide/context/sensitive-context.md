@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu nguyên tắc tối thiểu hóa và khử nhận dạng thông tin nhạy cảm; khái niệm, ví dụ rủi ro và gợi ý xử lý đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.", "checkedAt": "2026-07-26"}
 title: Ngữ cảnh nhạy cảm
 description: Khóa bí mật, quyền riêng tư và tài liệu không được chia sẻ.
 locale: vi
 source_locale: zh-CN
-source_revision: a83db07
+source_revision: "a83db07"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -38,7 +39,7 @@ Dùng placeholder: `YOUR_API_KEY`. Nếu đã lộ, luân chuyển khóa theo qu
 Nếu chưa chắc một đoạn có nhạy cảm không, hỏi mình hai câu trước:
 
 1. Nội dung này nếu người không liên quan thấy — có rủi ro không?
-2. Nội dung này nếu để lâu trong nhật ký tác vụ — tôi có yên tâm không?
+2. Nội dung này nếu để lâu trong nhật ký tác vụ — tôi có thấy bất an không?
 
 Chỉ cần một câu trả lời là «có» thì xử lý như thông tin nhạy cảm trước.
 
@@ -111,10 +112,3 @@ Xử lý theo mức rủi ro:
 3. Báo cáo và khắc phục theo quy trình tổ chức
 
 Khi giải quyết vấn đề, mặc định chỉ đưa «thông tin tối thiểu cần để lần»; khử nhận dạng được thì khử, placeholder được thì dùng placeholder.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu nguyên tắc tối thiểu hóa và khử nhận dạng thông tin nhạy cảm; khái niệm, ví dụ rủi ro và gợi ý xử lý đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

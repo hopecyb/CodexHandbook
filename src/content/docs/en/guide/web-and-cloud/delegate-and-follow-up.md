@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, App, IDE, CLI"
+  checkedAt: "2026-08-26"
 title: Delegate and follow up
-description: Start an independently runnable Cloud task and use the same chat to correct direction and acceptance results.
+description: Start an independently runnable Cloud task and use the same chat to correct direction and verify the result.
 locale: en
 source_locale: zh-CN
-source_revision: 38b322f
+source_revision: '38b322f'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
 ---
@@ -68,11 +72,3 @@ the failure and record it explicitly.
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, App, IDE, CLI
-
-**Last verified:** 2026-08-26

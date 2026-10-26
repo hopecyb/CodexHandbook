@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Internet access
 description: Separate setup connectivity from Agent connectivity and constrain risk by domain and HTTP method.
 locale: en
 source_locale: zh-CN
-source_revision: 5bbb905
+source_revision: '5bbb905'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 70
 ---
@@ -65,11 +69,3 @@ Cloud Secrets are removed before the Agent phase, reducing the risk of directly 
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

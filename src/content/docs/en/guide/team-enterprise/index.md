@@ -1,12 +1,17 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "Organization / team features (plan-dependent)"
+  basis: "OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths."
+  checkedAt: "2026-07-26"
+reviewed_at: 2026-10-25
 title: Team & Enterprise
 description: Adoption, standards, governance, and security for scaling Codex without losing control.
 sidebar:
   order: 70
 locale: en
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: 'b44c5d1'
 translation_status: reviewed
 translated_at: 2026-08-26
 ---
@@ -95,10 +100,3 @@ Start with:
 - [Acceptable use policy](/en/guide/team-enterprise/governance/acceptable-use/)
 
 If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
-
----
-
-**Status:** verified
-**Products:** Organization / team features (plan-dependent)
-**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.
-**Last verified:** 2026-07-26

@@ -11,8 +11,9 @@ sidebar:
   order: 10
 locale: pt
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: "a129229"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 Um plano é um caminho de execução que pode ser verificado e ajustado. Ele ajuda a encontrar cedo lacunas de escopo, dependências e aceitação, mas uma tarefa maior não exige pausas repetidas para pedir confirmação.

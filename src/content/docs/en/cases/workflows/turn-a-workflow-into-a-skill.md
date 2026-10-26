@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Cross-checked against OpenAI Developers' current public \"Save workflows as skills\" use cases, plus this handbook's verified Skills, automation, command rules, and extension risk chapters; content is limited to stable guidance on when to capture repeated flows as Skills and how to organize instructions and acceptance."
+  checkedAt: "2026-07-26"
 title: Turn a workflow into a Skill
 description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
 locale: en
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: '3dd18c5'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/en/skills/overview/). This chapter bridges [workflow methods](/en/cases/workflows/) and the extension system.
@@ -69,9 +74,3 @@ Compare with [Turn a flow into automation](/en/skills/automations/scheduled-task
 
 ## References
 - In-repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) and [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public "Save workflows as skills" use cases, plus this handbook's verified Skills, automation, command rules, and extension risk chapters; content is limited to stable guidance on when to capture repeated flows as Skills and how to organize instructions and acceptance.

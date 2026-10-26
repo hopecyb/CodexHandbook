@@ -3,12 +3,16 @@ title: 設定 Profile
 description: 独立した設定ファイルを使い、Codex CLI の基本設定に名前付きの設定一式を重ねます。
 locale: ja
 source_locale: zh-CN
-source_revision: 6ab30c5
+source_revision: "6ab30c5"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: CLI
+  checkedAt: 2026-08-26（ローカル環境：`codex-cli 0.148.0`）
 ---
 
 現在の Codex CLI では、`--profile <name>` を指定すると、`$CODEX_HOME/<name>.config.toml` が基本のユーザー設定に重ねられます。これは主に CLI 向けの機能であり、デスクトップ App 全体で使える汎用的な「ワンクリックモード」と説明すべきではありません。
@@ -78,11 +82,3 @@ Profile は、設定の開始点をひとまとめに保存するだけです。
 
 - [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
 - [Codex CLI ソースコードの設定レイヤー](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
-
----
-
-**ステータス：** verified
-
-**対象製品：** CLI
-
-**最終確認：** 2026-08-26（ローカル環境：`codex-cli 0.148.0`）

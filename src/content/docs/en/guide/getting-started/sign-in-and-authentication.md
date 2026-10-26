@@ -3,12 +3,17 @@ title: Sign-in and authentication
 description: Choose the correct sign-in method for local clients and Cloud, then inspect the active identity safely.
 locale: en
 source_locale: zh-CN
-source_revision: ea83fa6
+source_revision: 'ea83fa6'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Compared with the current Authentication documentation for ChatGPT and API-key local sign-in, the Cloud ChatGPT requirement, CLI commands, shared credential caching, and storage boundaries.
+  checkedAt: '2026-08-26'
 ---
 
 Codex supports two personal sign-in methods when using OpenAI models:
@@ -26,7 +31,7 @@ Local clients open a browser for authorization, then return credentials to the c
 - CLI: run `codex login`.
 - IDE: select ChatGPT sign-in from the signed-out page.
 
-Afterward, inspect the active account and workspace, especially when a personal space and company workspace share one email address.
+Afterward, inspect the active account and workspace, especially when you use both a personal space and a company workspace.
 
 ## Sign in with an API key
 
@@ -68,13 +73,3 @@ Check in this order:
 The CLI has dedicated sign-in logs for support and troubleshooting. Inspect those logs for sensitive data before sharing them.
 
 See [Accounts, plans, and access](/en/guide/getting-started/account-plans-and-access/) for plan boundaries and the [official Authentication page](https://learn.chatgpt.com/docs/auth) for current details.
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with the current Authentication documentation for ChatGPT and API-key local sign-in, the Cloud ChatGPT requirement, CLI commands, shared credential caching, and storage boundaries.
-
-**Last verified:** 2026-08-26

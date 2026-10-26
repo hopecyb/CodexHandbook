@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Umgebungen mit lokalem Codex-Host; Vertrauensverwaltung über `/hooks` in der Codex CLI"
+  checkedAt: "2026-08-25"
 title: Beispiele für Hook-Konfigurationen
 description: Implementiere mit einer echten hooks.json und einem Python-Skript aus der Standardbibliothek einen testbaren PreToolUse-Schutz.
 locale: de
 source_locale: zh-CN
-source_revision: 06e9fa2
+source_revision: "06e9fa2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Dieses Kapitel enthält keine veralteten Beispielereignisse und Konfigurationsfelder mehr. Das Beispiel entspricht der aktuellen offiziellen Struktur von `hooks.json` und enthält ausführbare Tests.
@@ -102,11 +106,3 @@ Produktionsteams beginnen normalerweise mit nicht blockierendem Audit oder zusä
 ## Offizielle Quelle
 
 - [OpenAI: Hooks configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host; Vertrauensverwaltung über `/hooks` in der Codex CLI
-
-**Zuletzt geprüft:** 2026-08-25

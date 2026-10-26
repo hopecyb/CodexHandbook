@@ -1,20 +1,25 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Nachfrage- und Korrekturprinzipien bei Informationslücken; Konzepte, Prompt-Formulierungen und Reihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Unsicherheit handhaben
 description: Bei fehlenden Informationen nachfragen statt erfinden.
 locale: de
 source_locale: zh-CN
-source_revision: 839ce22
+source_revision: "839ce22"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
 
 Reicht die Information nicht: zuerst klären, dann weiter.
 
-Einer der unangenehmsten Fälle mit Codex: fehlende Informationen werden zu scheinbar vernünftigen Antworten aufgefüllt.  
-Stimmt die Voraussetzung nicht, laufen die folgenden Schritte mit.
+Einer der unangenehmsten Fälle mit Codex: fehlende Informationen werden zu scheinbar vernünftigen Antworten aufgefüllt.
+Ist die Ausgangsannahme falsch, gehen auch die folgenden Schritte in die falsche Richtung.
 
 ## Was „unsicher“ heißt
 
@@ -36,7 +41,7 @@ Bei erfundenen Inhalten: stoppen, Fakten korrigieren, bei Bedarf neuen Thread ö
 
 ## Entscheidungsweise
 
-Erfüllt eine Schlussfolgerung eines der folgenden, nicht weiter raten:
+Wenn einer der folgenden Punkte zutrifft, sollte die Arbeit nicht auf einer Vermutung aufbauen:
 
 - In den aktuellen Dateien kein Beleg
 - Sie haben diese Geschäftsregel nicht klar geliefert
@@ -89,10 +94,3 @@ Gibt es mehrere mögliche Interpretationen, listen Sie zuerst die Unsicherheiten
 ```
 
 Schlimmer als fehlende Information: Vermutung als Fakt weitertragen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Nachfrage- und Korrekturprinzipien bei Informationslücken; Konzepte, Prompt-Formulierungen und Reihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26

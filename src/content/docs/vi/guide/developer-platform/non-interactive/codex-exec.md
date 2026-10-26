@@ -4,15 +4,16 @@ legacyVerification:
   products: "CLI"
   basis: "Đã đối chiếu tài liệu Non-interactive mode và Developer commands chính thức hiện tại để xác minh trạng thái Stable của `codex exec`, `--cd` / `-C`, sandbox chỉ đọc mặc định, `workspace-write`, JSONL và đầu ra theo schema."
   checkedAt: "2026-08-26"
-title: codex exec
-description: Lối vào thực thi không tương tác, dùng để giao trọn một tác vụ trong script và CI.
-locale: vi
-source_locale: zh-CN
+title: "codex exec"
+description: "Lối vào thực thi không tương tác, dùng để giao trọn một tác vụ trong script và CI."
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "6d7c481"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 10
+reviewed_at: "2026-10-26"
 ---
 
 Nếu `codex` tương tác là vừa trò chuyện vừa làm việc, thì **`codex exec`** giống như giao một tác vụ trong một lần chạy và nhận kết quả khi tác vụ kết thúc.
@@ -150,7 +151,7 @@ Xem tiếp [Script và pipeline](/vi/guide/developer-platform/non-interactive/sc
 ## Ranh giới an toàn
 
 - Không có người giám sát nghĩa là [phê duyệt của con người](/vi/cases/workflows/human-approval-patterns/) yếu đi; mặc định chỉ đọc
-- Xem [thông tin xác thực an toàn](/vi/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (liên kết chéo trong cùng chương)
+- Xem [thông tin xác thực an toàn](/vi/guide/developer-platform/ci-cd/code-review-automation/#quyền-và-bảo-mật) (liên kết chéo trong cùng chương)
 
 ## Danh sách nghiệm thu
 

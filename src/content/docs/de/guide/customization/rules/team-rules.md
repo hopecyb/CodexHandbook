@@ -3,12 +3,18 @@ title: Teamregel-Strategie
 description: "Befehls- und Pfadregeln zwischen Organisation, Repo und Person schichten — reviewbar, rückrollbar."
 locale: de
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: "bae8bd2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: "CLI / App / Cloud (organisationsabhängig)"
+  basis: Aktuelle OpenAI-Materialien zu organisationsweiten Plugins, Apps und Berechtigungen betonen weiterhin Rollen, Aktionsfreigabe, Managed Config und teamweite Steuerung; diese Seite abstrahiert Regelstrategie
+    als Governance-Modell auf Organisations-, Projekt- und persönlicher Ebene und verlangt Review und Ankündigung bei Änderungen — stabile Governance-Praxis.
+  checkedAt: '2026-07-26'
 ---
 
 Wenn Teams Codex nutzen, beantwortet die **Regelstrategie**: Welche Constraints gelten firmenweit, welche pflegt das Repo, und dürfen Personen noch lockern? Governance-Sicht auf [Befehlsregeln](/de/guide/customization/rules/command-rules/) und [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/).
@@ -32,7 +38,7 @@ Ohne klare Schichtung entstehen zwei Probleme:
 
 | Rolle | Fokus |
 |---|---|
-| Engineering-Lead | Untergrenzen-Deny, Audit-Anforderungen |
+| Engineering-Lead | Verbindliche Verbote, Audit-Anforderungen |
 | Repo-Maintainer | Projekt-Allowlist, Testbefehle |
 | Einzelentwickler | Lokale Ergänzungen im erlaubten Rahmen |
 
@@ -42,15 +48,15 @@ Ohne klare Schichtung entstehen zwei Probleme:
 
 Manche Grenzen gehören organisationsweit — z. B. Hochrisiko-Deny.
 
-Alles Repos in dieselbe Form zu zwängen erzeugt aber oft zu weite oder zu enge Regeln, denen niemand wirklich vertraut.
+Alle Repos in dieselbe Form zu zwängen erzeugt aber oft zu weite oder zu enge Regeln, denen niemand wirklich vertraut.
 
-Wichtig: Grenzen von Organisations-, Projekt- und Personalschicht klar trennen — nicht alle Regeln gleich machen.
+Wichtig: Grenzen von Organisations-, Projekt- und persönlicher Ebene klar trennen — nicht alle Regeln gleich machen.
 
-### Persönliche Ergänzungen dürfen Team-Untergrenzen nicht schwächen
+### Persönliche Ergänzungen dürfen verbindliche Teamgrenzen nicht schwächen
 
-Lokale Bequemlichkeit ist okay — solange Team- oder Organisations-Untergrenzen nicht umgangen werden.
+Lokale Bequemlichkeit ist okay — solange Team- oder verbindliche Organisationsgrenzen nicht umgangen werden.
 
-Sonst wirkt es „lokal effizienter“, legt aber Kollaborationsminen.
+Sonst wirkt es „lokal effizienter“, schafft aber Risiken für die Zusammenarbeit.
 
 ## Empfohlenes Schichtmodell
 
@@ -110,7 +116,7 @@ Typisch:
 
 - Organisationsschicht
 - Projektschicht
-- Personalschicht
+- Persönliche Ebene
 
 ## Sicherheitsgrenzen
 
@@ -126,10 +132,3 @@ Typisch:
 - [ ] Kanal für „Falschblock“-Feedback (Issue-Template oder internes Formular)
 
 Teamregel-Strategie beginnt damit zu klären, **wer welche Schicht setzt** — dann erst, wie Regeln geschrieben werden.
-
----
-
-**Status:** verified  
-**Gilt für:** CLI / App / Cloud (organisationsabhängig)  
-**Prüfgrundlage:** Aktuelle OpenAI-Materialien zu organisationsweiten Plugins, Apps und Berechtigungen betonen weiterhin Rollen, Aktionsfreigabe, Managed Config und teamweite Steuerung; diese Seite abstrahiert Regelstrategie als Governance-Modell Organisations-/Projekt-/Personalschicht und verlangt Review und Ankündigung bei Änderungen — stabile Governance-Praxis.  
-**Zuletzt geprüft:** 2026-07-26

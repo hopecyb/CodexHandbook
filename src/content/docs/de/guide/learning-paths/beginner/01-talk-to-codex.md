@@ -22,9 +22,10 @@ next:
   label: "Mit Dateien arbeiten"
 locale: de
 source_locale: zh-CN
-source_revision: 827a5d2
-translation_status: draft
+source_revision: "827a5d2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 ## Materialien vorbereiten
 
@@ -36,7 +37,7 @@ Bewahre den ursprünglichen Ordner `starter` auf. Verwende `references` mit den 
 
 ```text
 Lies im aktuellen Verzeichnis nur facts.md, notice.md und private-note.md.
-Erkläre in drei Sätzen den Zweck jeder Datei und nenne anschließend, was bei den Veranstaltungsangaben noch offen ist.
+Erkläre in insgesamt drei Sätzen den Zweck der drei Dateien und nenne anschließend, was bei den Veranstaltungsangaben noch offen ist.
 Füge keine Dateien hinzu, ändere oder lösche keine Dateien. Greife nicht auf das Netzwerk zu und veröffentliche oder versende keine Inhalte.
 ```
 

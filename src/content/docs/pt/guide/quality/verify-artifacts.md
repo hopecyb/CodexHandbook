@@ -3,15 +3,20 @@ title: Verificar Artefatos
 description: Verificar documentação gerada, páginas e outros Artefatos.
 locale: pt
 source_locale: zh-CN
-source_revision: 7a6a12e
+source_revision: "7a6a12e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica métodos de Verificação orientados ao entregável final; ligações internas, classificação de Artefatos e ordem de verificação foram revistas, e o corpo não depende de factos voláteis de produto.
+  checkedAt: '2026-07-26'
 ---
 
-Aqui, «Artefato» é o que a Tarefa entrega no fim, por exemplo:
+Aqui, «Artefato» é o que a tarefa entrega no fim, por exemplo:
 
 - Um documento
 - Uma página
@@ -23,7 +28,7 @@ Não assuma que o Artefato está correto só porque o código parece certo.
 
 ## Porque verificar Artefatos à parte
 
-Muitas Tarefas entregam mais do que o diff de código — incluem o que o utilizador vê e usa de facto.
+Muitas tarefas entregam mais do que o diff de código — incluem o que o utilizador vê e usa de facto.
 
 Ao verificar Artefatos, costuma olhar:
 
@@ -70,9 +75,9 @@ Sobretudo:
 - Terminologia consistente
 - Texto natural e legível
 
-### 3. Só um ecrã não chega
+### 3. Uma captura de tela não basta
 
-O ecrã serve para uma visão rápida; muitos problemas só aparecem ao abrir o ficheiro ou a página reais.
+A captura de tela serve para uma visão rápida; muitos problemas só aparecem ao abrir o ficheiro ou a página reais.
 
 ## Aplicação direta
 
@@ -91,10 +96,3 @@ Pode seguir esta ordem:
 3. Veja problemas pequenos na camada de experiência
 
 Conseguir correr só diz que a base não partiu; poder entregar ainda depende do efeito de uso final.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica métodos de Verificação orientados ao entregável final; ligações internas, classificação de Artefatos e ordem de verificação foram revistas, e o corpo não depende de factos voláteis de produto.  
-**Última verificação:** 2026-07-26

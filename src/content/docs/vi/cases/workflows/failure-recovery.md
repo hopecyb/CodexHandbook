@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương bàn giao và phục hồi, chẩn đoán, quy tắc lệnh và tham chiếu lỗi đã kiểm chứng của sổ tay; trang này mô tả phương pháp chung để chặn thiệt hại khi thất bại rồi tiếp tục, không lấy nút hoặc lệnh phục hồi của một phía làm quy tắc cố định.", "checkedAt": "2026-07-26"}
 title: Phục hồi thất bại
 description: Khi tác vụ lệch hướng, test đỏ hoặc ngữ cảnh hết — cách hoàn tác an toàn rồi tiếp tục.
 locale: vi
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Phục hồi thất bại** nói về việc sau khi tác vụ lệch hoặc bị ngắt, làm sao giữ hiện trường rồi tiếp tục tiến. Chương này đưa bộ bước **phát hiện → chặn thiệt hại → phục hồi → rút kinh nghiệm** có thể lặp lại; dùng kèm [hoàn tác và phục hồi](/vi/guide/getting-started/undo-and-recover/) cũng như [quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/).
@@ -63,7 +64,7 @@ Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/vi/cases/workflows/
 
 - Trên hướng sai còn «thêm một chút» chồng patch
 - Không lưu log thất bại, Thread mới lặp cùng lỗi
-- Ép `git push` để cứu tình
+- Cố cứu vãn tình hình bằng cách ép `git push`
 - Không phân biệt môi trường (cục bộ vs Cloud) khiến bước phục hồi vô hiệu
 
 ## Ranh giới an toàn
@@ -83,10 +84,3 @@ Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/vi/cases/workflows/
 - [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/)
 - [Bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/)
 - [Tham chiếu lỗi](/vi/guide/reference/error-reference/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương bàn giao và phục hồi, chẩn đoán, quy tắc lệnh và tham chiếu lỗi đã kiểm chứng của sổ tay; trang này mô tả phương pháp chung để chặn thiệt hại khi thất bại rồi tiếp tục, không lấy nút hoặc lệnh phục hồi của một phía làm quy tắc cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

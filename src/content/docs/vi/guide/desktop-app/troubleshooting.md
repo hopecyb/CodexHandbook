@@ -1,14 +1,19 @@
 ---
-title: Xử lý sự cố ứng dụng Desktop
-description: Xử lý thường gặp khi cài đặt, đăng nhập và tác vụ thất bại.
-locale: vi
-source_locale: zh-CN
-source_revision: c298f9f
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Xử lý sự cố ứng dụng Desktop"
+description: "Xử lý thường gặp khi cài đặt, đăng nhập và tác vụ thất bại."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "c298f9f"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 100
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Tài liệu trợ giúp ứng dụng desktop hiện tại của OpenAI vẫn phủ các hành vi cơ bản về cài đặt, đăng nhập, truy cập dự án và ủy quyền tệp local; trang này dùng khung phân luồng theo triệu chứng tới cài đặt, đăng nhập, quyền, tác vụ chờ phê duyệt và phạm vi ngữ cảnh — là lối vào xử lý sự cố ổn định."
+  checkedAt: "2026-07-26"
 ---
 
 Khi xử lý sự cố, lần theo thứ tự nguyên nhân dễ xảy ra và dễ xử lý nhất.
@@ -18,7 +23,7 @@ Khi xử lý sự cố, lần theo thứ tự nguyên nhân dễ xảy ra và d�
 | Không cài / không mở được | Đối chiếu yêu cầu hệ thống và gói cài chính thức; khởi động lại rồi thử |
 | Không đăng nhập được | Kiểm tra mạng, quyền tài khoản, SSO; xóa phiên rồi đăng nhập lại |
 | Không thấy tệp dự án | Xác nhận đã thêm đúng thư mục và quyền tệp hệ thống |
-| Tác vụ mãi chờ phê duyệt | Quay lại view tác vụ xử lý yêu cầu chờ phê duyệt |
+| Tác vụ mãi chờ phê duyệt | Quay lại màn hình tác vụ xử lý yêu cầu chờ phê duyệt |
 | Thay đổi không như kỳ vọng | Thắt chặt ràng buộc, mở thread mới, kiểm tra ngữ cảnh |
 
 Vẫn thất bại: [https://developers.openai.com/codex](https://developers.openai.com/codex) và [Mục lục xử lý sự cố](/vi/guide/reference/troubleshooting/).
@@ -30,7 +35,7 @@ Vẫn thất bại: [https://developers.openai.com/codex](https://developers.ope
 Nhiều vấn đề chỉ là:
 
 - Chưa chọn đúng đường dẫn
-- Chưa phê quyền
+- Chưa phê duyệt quyền
 - Tác vụ đang chờ bạn xác nhận
 - Ngữ cảnh hội thoại đã rối
 
@@ -47,10 +52,3 @@ Thu hẹp phạm vi vấn đề trước:
 - Khi cần thì mở thread mới
 
 Xử lý sự cố hãy xếp nguyên nhân phổ biến và dễ sửa trước — không cần nghĩ phức tạp ngay từ đầu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App  
-**Căn cứ kiểm chứng:** Tài liệu trợ giúp ứng dụng desktop hiện tại của OpenAI vẫn phủ các hành vi cơ bản về cài đặt, đăng nhập, truy cập dự án và ủy quyền tệp local; trang này dùng khung phân luồng theo triệu chứng tới cài đặt, đăng nhập, quyền, tác vụ chờ phê duyệt và phạm vi ngữ cảnh — là lối vào xử lý sự cố ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26

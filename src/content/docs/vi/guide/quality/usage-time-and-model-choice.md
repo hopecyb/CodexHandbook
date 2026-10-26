@@ -1,32 +1,38 @@
 ---
-title: Mức sử dụng, thời gian và lựa chọn model
-description: Ghi riêng hạn mức thuê bao, chi phí API, thời gian chờ và công sức làm lại. So sánh model trên cùng tác vụ, không lấy mức tiêu thụ làm thước đo chất lượng.
-contentType: guide
-audiences: [beginner, creator, developer, team]
-level: intermediate
-outputs: [csv]
-editorialStatus: review
+title: "Mức sử dụng, thời gian và lựa chọn model"
+description: "Ghi riêng hạn mức thuê bao, chi phí API, thời gian chờ và công sức làm lại. So sánh model trên cùng tác vụ, không lấy mức tiêu thụ làm thước đo chất lượng."
+contentType: "guide"
+audiences:
+  - "beginner"
+  - "creator"
+  - "developer"
+  - "team"
+level: "intermediate"
+outputs:
+  - "csv"
+editorialStatus: "review"
 verification:
-  kind: source-checked
+  kind: "source-checked"
   checkedAt: "2026-09-18"
-  summary: Đã đối chiếu hướng dẫn chính thức về mức sử dụng, giá API và cách tính phí token suy luận. Mẫu ghi chép và phép tính chỉ phục vụ giảng dạy; chưa có số đo thực tế về tốc độ, chi phí hoặc tỷ lệ tiết kiệm thời gian của model.
+  summary: "Đã đối chiếu hướng dẫn chính thức về mức sử dụng, giá API và cách tính phí token suy luận. Mẫu ghi chép và phép tính chỉ phục vụ giảng dạy; chưa có số đo thực tế về tốc độ, chi phí hoặc tỷ lệ tiết kiệm thời gian của model."
   evidence:
-    - label: Mức sử dụng và giá Codex chính thức
-      href: https://learn.chatgpt.com/docs/pricing
-    - label: Giá API chính thức
-      href: https://developers.openai.com/api/docs/pricing
-    - label: Hướng dẫn về model suy luận
-      href: https://developers.openai.com/api/docs/guides/reasoning
+    - label: "Mức sử dụng và giá Codex chính thức"
+      href: "https://learn.chatgpt.com/docs/pricing"
+    - label: "Giá API chính thức"
+      href: "https://developers.openai.com/api/docs/pricing"
+    - label: "Hướng dẫn về model suy luận"
+      href: "https://developers.openai.com/api/docs/guides/reasoning"
 assets:
-  - path: /downloads/usage-log/usage-log-1.0.0.zip
-    purpose: Mẫu ghi chi phí và thời gian chạy, ảnh chụp hạn mức cùng ghi chú nguồn
-    license: CC0-1.0
-    version: 1.0.0
-locale: vi
-source_locale: zh-CN
-source_revision: ad02d42
-translation_status: draft
-translated_at: 2026-09-20
+  - path: "/downloads/usage-log/usage-log-1.0.0.zip"
+    purpose: "Mẫu ghi chi phí và thời gian chạy, ảnh chụp hạn mức cùng ghi chú nguồn"
+    license: "CC0-1.0"
+    version: "1.0.0"
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "8b68d92"
+translation_status: "reviewed"
+reviewed_at: "2026-10-26"
+translated_at: "2026-10-25"
 ---
 
 Trước hết hãy xác định bạn đang ghi điều gì: hạn mức còn lại của tài khoản, chi phí một lần gọi API, thời gian chờ, hay thời gian con người dùng để rà soát và làm lại. Các đại lượng này có đơn vị khác nhau, không thể thay thế cho nhau.
@@ -75,3 +81,5 @@ Các bảng tải về hiện chưa có dòng đo thực tế nào. Không có m
 Lưu kết quả hiện tại, các vấn đề còn mở và cách tiếp tục. Kiểm tra xem tác vụ có đang lặp lại vô ích hoặc đọc tài liệu không liên quan hay không. Thu hẹp phần việc không thiết yếu theo mục tiêu nhưng giữ tiêu chí nghiệm thu về chất lượng và an toàn. Đừng bỏ qua bước kiểm tra quan trọng chỉ để hoàn tất trước khi hết hạn mức.
 
 Nếu cần tiếp tục, hãy kiểm tra hạn mức hiện tại và phương thức tính phí trước khi chọn. Bài này không tự chuyển sang tính phí API, mua tín dụng hoặc chỉnh cài đặt tài khoản. Nhóm có thể dùng [lộ trình thử nghiệm hai tuần](/vi/guide/learning-paths/team/) để ghi lý do chọn và điều kiện quay lại.
+
+Xem model hiện tại, khác biệt giữa sản phẩm và khuyến nghị tác vụ: [Chọn model: tìm điểm bắt đầu theo tác vụ](/vi/guide/reference/model-selection/).

@@ -3,9 +3,15 @@ title: "Bug 수정: 어디서 시작할까"
 description: 현재 문제에 맞는 Bug 수정 경로를 선택하고 실행 가능한 자료가 포함된 전체 사례로 이동합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 405a687
-translation_status: draft
+source_revision: "405a687"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: 이 페이지는 시작 경로 선택과 안정적인 개발·검증 절차만 안내합니다. 예제의 예상 실패 및 통과 명령은 현재 저장소에서 실제 실행하여 검증했습니다.
+  checkedAt: '2026-08-25'
+reviewed_at: "2026-10-26"
 ---
 
 이 페이지는 간단한 시작점입니다. 전체 절차, 실행 가능한 코드, 실패와 성공 테스트의 증거, 단계별 요청 예시는 [검증하며 Bug 수정하기](/ko/cases/use-cases/software-development/fix-a-bug-with-verification/)에서 관리합니다. 두 페이지가 같은 내용을 반복하다 서로 어긋나지 않도록 하기 위해서입니다.

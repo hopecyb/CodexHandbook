@@ -23,8 +23,9 @@ next:
 locale: de
 source_locale: zh-CN
 source_revision: "ec5c2d3"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 ## Voraussetzungen

@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / App", "basis": "Tài liệu Codex CLI hiện tại của OpenAI vẫn coi thực thi lệnh, chế độ phê duyệt và cách ly Sandbox là ranh giới an toàn cốt lõi; trang này định vị quy tắc lệnh là mẫu kỹ thuật “tách quản lệnh rủi ro cao/thấp”, và đánh dấu đoạn JSON là minh họa, không viết cú pháp cụ thể thành sự kiện chính thức.", "checkedAt": "2026-07-26"}
 title: Quy tắc lệnh
 description: Dùng allow/deny cấp lệnh để ràng buộc shell và gọi công cụ — thực thi được hơn ước định miệng.
 locale: vi
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -89,7 +90,7 @@ Minh họa (định dạng lấy cấu hình chính thức làm chuẩn):
 | Bước | Cách làm |
 |---|---|
 | Kiểm kê | Từ `package.json` scripts, Makefile, CI workflow trích lệnh thật |
-| Phân tầng | Deny đáy tổ chức → bổ sung allow dự án → ngoại lệ máy cá nhân (nếu có) |
+| Phân tầng | Danh sách cấm bắt buộc của tổ chức → bổ sung allow dự án → ngoại lệ máy cá nhân (nếu có) |
 | Thử chạy | Dùng tác vụ rủi ro thấp xác nhận «nên cho thì cho, nên chặn thì chặn» |
 | Khớp | Quy tắc cục bộ và [GitHub Action](/vi/guide/developer-platform/ci-cd/code-review-automation/) cố cùng nguồn |
 
@@ -120,10 +121,3 @@ Quy tắc lệnh không phải đang “nhớ lệnh”, mà đang phân rõ l�
 - [Chiến lược quy tắc nhóm](/vi/guide/customization/rules/team-rules/)
 - [Phê duyệt và Sandbox CLI](/vi/guide/cli/approvals-and-sandbox/)
 - [Ma trận quyền](/vi/guide/reference/permission-matrix/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App  
-**Căn cứ kiểm chứng:** Tài liệu Codex CLI hiện tại của OpenAI vẫn coi thực thi lệnh, chế độ phê duyệt và cách ly Sandbox là ranh giới an toàn cốt lõi; trang này định vị quy tắc lệnh là mẫu kỹ thuật “tách quản lệnh rủi ro cao/thấp”, và đánh dấu đoạn JSON là minh họa, không viết cú pháp cụ thể thành sự kiện chính thức.  
-**Kiểm chứng gần nhất:** 2026-07-26

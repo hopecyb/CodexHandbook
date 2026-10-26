@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / App de escritorio / Codex CLI / IDE (consulta en el texto las superficies compatibles con cada mecanismo)
+  basis: Modelo de responsabilidades y límites de acceso reconstruidos a partir de la documentación oficial de OpenAI sobre Skills, Plugins, MCP, Hooks, Scheduled tasks y Subagents disponible el 2026-08-25.
+  checkedAt: '2026-08-25'
 title: Mapa de capacidades de extensión
 description: 'Comprende el sistema de extensiones de Codex mediante ocho responsabilidades: tarea, reglas, proceso, herramientas, protección, distribución, activación y paralelismo.'
 locale: es
-source_locale: zh-cn
-source_revision: 183812c
+source_locale: zh-CN
+source_revision: "183812c"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Los mecanismos de extensión se confunden con facilidad porque suelen aparecer en un mismo flujo de trabajo, aunque resuelven problemas distintos.
@@ -95,10 +100,3 @@ Los puntos de entrada del producto seguirán cambiando. Antes de configurar un m
 - [Plugins de Codex](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [Subagents de Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Estado:** verified
-**Productos aplicables:** ChatGPT Web / App de escritorio / Codex CLI / IDE (consulta en el texto las superficies compatibles con cada mecanismo)
-**Base de verificación:** Modelo de responsabilidades y límites de acceso reconstruidos a partir de la documentación oficial de OpenAI sobre Skills, Plugins, MCP, Hooks, Scheduled tasks y Subagents disponible el 2026-08-25.
-**Última verificación:** 2026-08-25

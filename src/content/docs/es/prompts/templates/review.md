@@ -8,14 +8,14 @@ title: Plantilla de revisión
 description: Revisión estructurada de diffs y riesgo del cambio.
 locale: es
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: 'e89989d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
-Lo más fácil de desviarse en revisión es que de entrada se convierta en «ya te lo cambié de paso».
+Una revisión suele desviarse cuando desde el principio se convierte en «ya te lo cambié de paso».
 
 Primero encontrar problemas y luego decidir si cambiar es más estable.
 
@@ -51,7 +51,7 @@ La revisión también debe mirar:
 - si tests y documentación van al día
 - si hay problemas de seguridad o de límites
 
-El foco de esta plantilla es sacar riesgos por dimensiones fijas, no evaluar en genérico «si está bien».
+El foco de esta plantilla es identificar riesgos según criterios definidos, no evaluar en genérico «si está bien».
 
 ## Relacionado
 

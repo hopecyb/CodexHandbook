@@ -30,7 +30,7 @@
 
   <rect x="42" y="145" width="180" height="92" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="132" y="178" text-anchor="middle" class="label">Prompt tác vụ</text>
-  <text x="132" y="202" text-anchor="middle" class="note">Mục tiêu · đầu vào · tiêu chí chấp nhận</text>
+  <text x="132" y="202" text-anchor="middle" class="note">Mục tiêu · đầu vào · nghiệm thu</text>
   <text x="132" y="221" text-anchor="middle" class="tiny">Yêu cầu cụ thể của tác vụ hiện tại</text>
 
   <rect x="42" y="255" width="180" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
@@ -61,7 +61,7 @@
   <rect x="610" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="695" y="332" text-anchor="middle" class="label">MCP / công cụ</text>
   <text x="695" y="356" text-anchor="middle" class="note">Tệp · Web · hệ thống ngoài</text>
-  <text x="695" y="376" text-anchor="middle" class="tiny">Quyền do máy chủ và dịch vụ kiểm soát</text>
+  <text x="695" y="376" text-anchor="middle" class="tiny">Quyền: ứng dụng chủ và dịch vụ</text>
   <path d="M585 259V278H475V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M585 259V278H695V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 

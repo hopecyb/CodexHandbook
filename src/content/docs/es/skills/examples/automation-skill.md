@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: '6c758b9'
+reviewed_at: 2026-10-25
 ---
 
 Repetir una comprobación no implica notificar cada vez. Este Skill reutiliza el [ejercicio de comprobación de enlaces](/es/cases/use-cases/team-automation/scheduled-link-check/) y registra cambios, recuperaciones y errores de ejecución. Cuando el resultado no cambia, permanece en silencio.
@@ -77,7 +78,7 @@ Un enlace roto es un resultado válido, no un error de ejecución. Tras la pausa
 python3 scripts/run_once.py --site work-site --state run-state.json --resume
 ```
 
-No borres automáticamente el bloqueo ni el estado para esquivar un fallo. Un proceso bloqueado puede dejar un archivo de bloqueo; confirma primero que no queda ningún proceso activo. La [guía de estado y recuperación](/downloads/skills/quiet-link-monitor/references/operations.md) enumera códigos de salida, retención y límites de concurrencia.
+No borres automáticamente el bloqueo ni el estado para esquivar un fallo. Un proceso que se cierra inesperadamente puede dejar un archivo de bloqueo; confirma primero que no queda ningún proceso activo. La [guía de estado y recuperación](/downloads/skills/quiet-link-monitor/references/operations.md) enumera códigos de salida, retención y límites de concurrencia.
 
 ## Un candidato a notificación no es un mensaje enviado
 

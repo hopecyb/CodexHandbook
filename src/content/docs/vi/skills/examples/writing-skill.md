@@ -21,11 +21,13 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: "cbaec37"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
-Skill này biến các nguồn được cung cấp thành bài viết có thể lần lại căn cứ, đồng thời giữ yêu cầu phong cách, bằng chứng và điểm chưa giải quyết. Nó phù hợp với viết theo nguồn và rà soát sự thật; sửa một lỗi chính tả không cần cả quy trình.
+
+Skill này biến các nguồn được cung cấp thành bài viết có thể lần lại căn cứ, đồng thời giữ yêu cầu phong cách, bằng chứng và điểm chưa giải quyết. Nó phù hợp với viết theo nguồn và kiểm chứng dữ kiện; sửa một lỗi chính tả không cần cả quy trình.
 
 [Tải trọn bộ source-backed-writer v1.0.0](/downloads/skills/source-backed-writer/source-backed-writer-1.0.0.zip) · [Xem SKILL.md](/downloads/skills/source-backed-writer/SKILL.md) · [Hướng dẫn cài đặt](/downloads/skills/source-backed-writer/README.md)
 
@@ -35,7 +37,7 @@ Skill này biến các nguồn được cung cấp thành bài viết có thể 
 |---|---|
 | Ba nguồn tổng hợp và chỉ mục hash | Luyện với đầu vào cố định mà không coi sản phẩm hư cấu là lựa chọn mua thật |
 | Mẫu phong cách và phản ví dụ được thiết kế | Xem cách thay hứa hẹn kết quả không căn cứ bằng hành động cụ thể |
-| Dàn ý, bản nháp, bản cuối và diff sửa đổi | Tách thay đổi về sự thật, cấu trúc và câu chữ |
+| Dàn ý, bản nháp, bản cuối và diff sửa đổi | Tách thay đổi về dữ kiện, cấu trúc và câu chữ |
 | Bảy khẳng định được đối chiếu và danh sách chưa giải quyết | Tách căn cứ trong nguồn, suy luận của tác giả và thông tin chưa xác nhận |
 | Ca kích hoạt đúng/sai, script và bản ghi kiểm chứng | Nêu phạm vi áp dụng và giới hạn kiểm tra |
 
@@ -43,7 +45,7 @@ Tài liệu dùng lại công cụ hư cấu “拾页” trong [bài tập vi�
 
 ## Cài đặt và gọi lần đầu
 
-Đặt toàn bộ thư mục trong `.agents/skills/source-backed-writer/` của dự án thực hành, bảo đảm `SKILL.md` nằm ngay cấp đầu tiên. Nếu có Skill trùng tên, hãy so sánh trước khi ghi đè. Xem [Dùng Skill](/vi/skills/use-a-skill/) về cách phát hiện; sau khi xác nhận có thể chọn trong client, hãy gọi rõ:
+Đặt toàn bộ thư mục trong `.agents/skills/source-backed-writer/` của dự án thực hành, bảo đảm `SKILL.md` nằm ngay cấp đầu tiên. Nếu có Skill trùng tên, hãy so sánh trước và không ghi đè. Xem [Dùng Skill](/vi/skills/use-a-skill/) về cách phát hiện; sau khi xác nhận có thể chọn trong client, hãy gọi rõ:
 
 ```text
 $source-backed-writer Đọc ba nguồn trong sources/ của gói tài liệu này.
@@ -90,7 +92,7 @@ Sau khi viết, kiểm tra từng mục:
 - Sửa phong cách không xóa điều kiện cần thiết hoặc đổi cấu trúc người dùng yêu cầu.
 - Sau khi định dạng trích dẫn đạt, đối chiếu từng câu với nguồn, không chỉ kiểm tra ID có tồn tại.
 
-Script tìm được thay đổi hash nguồn và lỗi cấu trúc trích dẫn, nhưng không biết nguồn có thực sự hỗ trợ ý nghĩa của khẳng định không. Gói cố ý kiểm tra một lời hứa năng lực sai: nếu gắn ID hợp lệ, nó vẫn qua kiểm tra cấu trúc. Con người vẫn phải rà soát sự thật.
+Script tìm được thay đổi hash nguồn và lỗi cấu trúc trích dẫn, nhưng không biết nguồn có thực sự hỗ trợ ý nghĩa của khẳng định không. Gói cố ý kiểm tra một lời hứa năng lực sai: nếu gắn ID hợp lệ, nó vẫn qua kiểm tra cấu trúc. Con người vẫn phải kiểm chứng dữ kiện.
 
 ## Khi nào không nên kích hoạt
 

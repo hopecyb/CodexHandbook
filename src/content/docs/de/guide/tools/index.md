@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Navigationsseite; Einstiege zu Terminal, Suche, Browser, Computer Use, Bild und Sprache mit dem Verzeichnis abgeglichen; Text sagt nur „Werkzeuge beeinflussen Ausführungsradius und Risiko“, keine feste Support-Matrix."
+  checkedAt: "2026-07-26"
 title: Werkzeuge
 description: "Werkzeugwahl und Themen für den Codex-Agent — Terminal, Suche, Browser, Computer Use usw."
 sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 5939a9d
+source_revision: "5939a9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Der Agent liest Dateien, führt Befehle aus, sucht im Netz, öffnet den Browser usw. über **Werkzeuge**. Richtige Wahl und klare Grenzen reduzieren unerwünschtes Outbound und übermäßige Änderungen.
+Der Agent liest Dateien, führt Befehle aus, sucht im Netz, öffnet den Browser usw. über **Werkzeuge**. Richtige Wahl und klare Grenzen reduzieren nicht autorisierte Netzwerkzugriffe und übermäßige Änderungen.
 
 „Werkzeug“ meint Fähigkeiten, die Codex beim Ausführen wirklich aufruft. Nicht jede Aufgabe endet im Dialog.  
 Manche brauchen Dateien, manche Befehle, manche Webseiten, manche echte Seitenansicht.
@@ -29,7 +34,7 @@ Sobald erlaubt, kann es:
 - öffentliche Webseiten suchen
 - lokale Seiten zur Prüfung öffnen
 
-Werkzeuge sind keine Zusatzkenntnis — Grundlage für Sicherheit und Effizienz.
+Das Verständnis der Werkzeuge ist eine Grundlage für Sicherheit und Effizienz.
 
 ## Kapitel-Navigation
 
@@ -52,10 +57,3 @@ Datei-I/O und Artefaktabnahme: [Dateien und Artefakte](/de/guide/files-and-artif
 3. Suche, Browser oder andere Seiten je aktueller Aufgabe
 
 Werkzeuge bestimmen, wie Codex handeln kann — Sie sagen, welche erlaubt sind und welche nicht.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Navigationsseite; Einstiege zu Terminal, Suche, Browser, Computer Use, Bild und Sprache mit dem Verzeichnis abgeglichen; Text sagt nur „Werkzeuge beeinflussen Ausführungsradius und Risiko“, keine feste Support-Matrix.  
-**Zuletzt geprüft:** 2026-07-26

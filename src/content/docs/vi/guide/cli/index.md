@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn mô tả Codex CLI là lối vào terminal, và phân biệt dùng tương tác với quy trình dòng lệnh tự động hóa hơn; trang này chỉ là điều hướng chương CLI, tóm tắt hai cách dùng tương tác và không tương tác, không gắn tham số hay lệnh cài cụ thể.", "checkedAt": "2026-07-26"}
 title: CLI
 description: Hướng dẫn tối thiểu dùng được cho lối vào dòng lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: a80ef7e
+source_revision: "a80ef7e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 11
 ---
@@ -43,10 +44,3 @@ Giai đoạn đầu hãy phân rõ hai chế độ:
 2. **Chế độ không tương tác**: coi Codex như lệnh nối vào script hoặc CI
 
 Nếu chỉ thử lần đầu, thường dùng chế độ tương tác thuận tay hơn. Khi cần tự động hóa rồi hãy xem chế độ không tương tác.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn mô tả Codex CLI là lối vào terminal, và phân biệt dùng tương tác với quy trình dòng lệnh tự động hóa hơn; trang này chỉ là điều hướng chương CLI, tóm tắt hai cách dùng tương tác và không tương tác, không gắn tham số hay lệnh cài cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -6,16 +6,16 @@ outputs: [markdown]
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Os use cases atuais do Codex em OpenAI Developers ainda incluem “Understand large codebases”, com foco em seguir o caminho principal, identificar módulos críticos e localizar ficheiros relevantes; o exemplo desta página é exploração só de leitura, alinhado com o posicionamento oficial atual."
+  basis: "Os use cases atuais do Codex em OpenAI Developers ainda incluem “Understand large codebases”, com foco em seguir o caminho principal, identificar módulos críticos e localizar arquivos relevantes; o exemplo desta página é exploração só de leitura, alinhado com o posicionamento oficial atual."
   checkedAt: "2026-07-26"
 title: Compreender um código-base
 description: Explore um repositório desconhecido em modo só de leitura e construa um mapa cognitivo acionável.
 locale: pt
 source_locale: zh-CN
-source_revision: c89ee30
+source_revision: "c89ee30"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -23,7 +23,7 @@ reviewed_at: 2026-08-26
 
 | Campo | Conteúdo |
 |---|---|
-| Público | Programadores |
+| Público | Desenvolvedores |
 | Cliente | CLI / IDE |
 | Tempo estimado | 30–60 minutos |
 
@@ -40,16 +40,16 @@ Não altere código. Leia @src/ e @README e, em no máximo 8 pontos, explique:
 1. Objetivo do projeto e stack tecnológica
 2. Responsabilidade dos diretórios principais
 3. Pontos de entrada para arranque/testes
-4. Os 3 ficheiros mais relevantes para [o meu objetivo]
+4. Os 3 arquivos mais relevantes para [o meu objetivo]
 5. 3 perguntas para eu confirmar
 ```
 
 ## 3. Verificação
 
-- Confrontar com `package.json` / ficheiros de entrada reais
-- Registar as conclusões num issue ou num resumo em `AGENTS.md`
+- Confrontar com `package.json` / arquivos de entrada reais
+- Registrar as conclusões num issue ou num resumo em `AGENTS.md`
 
 ## 4. Relacionado
 
 - [Modelo de compreensão](/pt/prompts/templates/understand/)
-- [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- [Explorar—Planejar—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)

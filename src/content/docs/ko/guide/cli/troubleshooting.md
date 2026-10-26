@@ -3,12 +3,17 @@ title: CLI 문제 해결
 description: 인증·권한·명령 실패 점검.
 locale: ko
 source_locale: zh-CN
-source_revision: 57b062f
+source_revision: '57b062f'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: OpenAI Help Center 현행 CLI 입문·구성 자료는 설치·인증·권한/샌드박스·작업 디렉터리 등 흔한 문제 출처를 다룹니다. 이 페이지는 증상별로 설치·로그인·권한·디렉터리 네 갈래로 나누는 점검법으로, 안정적인 장애 분류 틀입니다.
+  checkedAt: '2026-07-26'
 ---
 
 CLI에 문제가 생기면 오류가 모두 터미널 오류처럼 보이지만, 이면 원인이 같지는 않습니다.
@@ -55,10 +60,3 @@ CLI의 많은 문제는 명령이 안 도는 게 아니라, 잘못된 저장소�
 CLI 문제 해결은 설치·로그인·권한·디렉터리 중 어디인지 먼저 나누면 점검이 수월해집니다.
 
 공식 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
-
----
-
-**상태:** verified  
-**적용 제품:** CLI  
-**검증 근거:** OpenAI Help Center 현행 CLI 입문·구성 자료는 설치·인증·권한/샌드박스·작업 디렉터리 등 흔한 문제 출처를 다룹니다. 이 페이지는 증상별로 설치·로그인·권한·디렉터리 네 갈래로 나누는 점검법으로, 안정적인 장애 분류 틀입니다.  
-**최근 검증:** 2026-07-26

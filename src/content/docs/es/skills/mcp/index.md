@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App de escritorio de ChatGPT / Codex CLI / IDE; ChatGPT Web usa herramientas MCP remotas mediante Plugins
+  basis: Compatibilidad de clientes, configuración compartida, tipos de transporte y comandos de la CLI
+  checkedAt: '2026-08-25'
 title: MCP
 description: Conecta herramientas y contexto de terceros a ChatGPT y Codex con acceso controlado.
 locale: es
-source_locale: zh-cn
-source_revision: 8d9ec38
+source_locale: zh-CN
+source_revision: "8d9ec38"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 MCP (Model Context Protocol) responde a «¿cómo puede un Agent llamar a herramientas y datos externos al repositorio?». No define un flujo de trabajo.
@@ -41,13 +46,3 @@ Si la tarea solo lee y escribe en el repositorio actual, empieza con las funcion
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [Especificación de Model Context Protocol](https://modelcontextprotocol.io/)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** App de escritorio de ChatGPT / Codex CLI / IDE; ChatGPT Web usa herramientas MCP remotas mediante Plugins
-
-**Alcance de la verificación:** Compatibilidad de clientes, configuración compartida, tipos de transporte y comandos de la CLI
-
-**Última verificación:** 2026-08-25

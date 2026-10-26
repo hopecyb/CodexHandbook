@@ -10,9 +10,10 @@ sidebar:
   order: 40
 locale: ko
 source_locale: zh-CN
-source_revision: 564bd75
-translation_status: draft
+source_revision: '564bd75'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Codex CLI를 사용하면 탐색, 수정, 테스트, 검토를 터미널에서 이어서 진행할 수 있습니다. 공식 설치 페이지에서는 macOS/Linux, Windows, npm, Homebrew 설치 방법을 제공합니다. 운영체제와 패키지 관리 방식에 맞는 방법 하나를 선택하세요.

@@ -3,20 +3,24 @@ title: Reglas de permitir y denegar
 description: Restringe con reglas de comandos y rutas lo que el Agent puede ejecutar — hábitos personales y línea roja del equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 521ecc9
+source_revision: "521ecc9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: La documentación actual de permisos de Codex/plugins de OpenAI sigue enfatizando la estratificación de acciones de lectura/escritura, aprobación, límites de origen y control de acceso por rol; esta página no declara la sintaxis concreta de archivos de reglas, sino que explica allow/deny como un patrón de límite de ejecución, separado de sandbox, aprobación y flujos de revisión del equipo.
+  checkedAt: '2026-07-26'
 ---
-
 Las **Rules (reglas)** declaran en la configuración o en archivos del proyecto qué comandos shell, rutas y llamadas a herramientas están **permitidos o prohibidos**, para reducir clics de aprobación manual y a la vez impedir que se automaticen operaciones peligrosas.
 
 ## Contenido
 
 - Cómo funcionan las reglas Allow / Deny
-- Relación con Sandbox, ventanas de aprobación y `AGENTS.md`
+- Relación con sandbox, ventanas de aprobación y `AGENTS.md`
 - Ejemplos de reglas de equipo
 
 ## Qué hacen realmente las reglas
@@ -25,7 +29,7 @@ Si «reglas» te suena abstracto, puedes verlas primero como: acordar de anteman
 
 Su valor es sobre todo de dos tipos:
 
-- Reducir operaciones de bajo riesgo que ocurren cada día pero siempre piden confirmación
+- Reducir las confirmaciones repetidas de operaciones cotidianas de bajo riesgo
 - Bloquear de antemano operaciones de alto riesgo que no deberían ocurrir de forma automática
 
 ## Tipos de reglas (concepto)
@@ -37,7 +41,7 @@ Su valor es sobre todo de dos tipos:
 | Rutas | Prohibir escritura en `../`, prohibir lectura de `~/.ssh` |
 | Red | Prohibir salida a internet o permitir solo dominios del registry |
 
-Contrasta con la [matriz de permisos](/es/guide/reference/permission-matrix/): las reglas son enforcement **configurable**; la matriz describe **defaults típicos**.
+Contrasta con la [matriz de permisos](/es/guide/reference/permission-matrix/): las reglas son mecanismos de control **configurables**; la matriz describe **valores predeterminados habituales**.
 
 ## Capas recomendadas
 
@@ -59,9 +63,9 @@ La primera vez que oyen allowlist, mucha gente cree que el objetivo es menos ven
 
 Menos ventanas es solo una parte; lo más importante es dejar pasar lo de bajo riesgo y bloquear lo de alto riesgo.
 
-### Reglas ≠ Sandbox
+### Reglas ≠ sandbox
 
-El Sandbox limita «hasta dónde puede llegar como máximo»; las reglas acuerdan «qué acciones no deberían hacerse en principio».
+El sandbox limita «hasta dónde puede llegar como máximo»; las reglas acuerdan «qué acciones no deberían hacerse en principio».
 
 Conviene usar ambos juntos, no elegir uno para sustituir al otro.
 
@@ -104,14 +108,7 @@ Primero haz funcionar el límite mínimo; luego refina.
 ## Límites de seguridad
 
 - Las reglas **no** sustituyen code review ni protección de ramas
-- Un prompt malicioso puede inducir al Agent a intentar saltarse las reglas — mantén el Sandbox estricto por defecto
+- Un prompt malicioso puede inducir al Agent a intentar saltarse las reglas — mantén el sandbox estricto por defecto
 - Cambia las reglas por PR, como si cambiaras CI
 
 Una buena regla allow/deny deja claro de antemano qué acciones son razonables y cuáles no deberían ocurrir.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** CLI / App  
-**Base de verificación:** La documentación actual de permisos de Codex/plugins de OpenAI sigue enfatizando la estratificación de acciones de lectura/escritura, aprobación, límites de origen y control de acceso por rol; esta página no declara la sintaxis concreta de archivos de reglas, sino que explica allow/deny como un patrón de límite de ejecución, separado de Sandbox, aprobación y flujos de revisión del equipo.  
-**Última verificación:** 2026-07-26

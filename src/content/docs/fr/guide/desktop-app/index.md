@@ -8,13 +8,13 @@ title: Application de bureau
 description: Installation, interface et utilisation quotidienne de l'application de bureau.
 locale: fr
 source_locale: zh-CN
-source_revision: d1a9007
-translation_status: draft
+source_revision: "d1a9007"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
-
 L'application de bureau est le point de départ par défaut pour les débutants : elle donne une vue sur les projets, les tâches, les diffs et les approbations.
 
 Si la ligne de commande ou les extensions d'éditeur vous sont peu familières, c'est aussi une entrée plus facile à prendre en main.

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Die OpenAI-Developers-Startseite positioniert Codex weiterhin für Codebase-Verstehen, Feature-Bau, Tests und Änderungsreview; diese Seite liefert nur Einstiegsreihenfolge und interne Navigation und hängt nicht von schnell veränderlichen Befehlen oder UI-Details ab."
+  checkedAt: "2026-07-26"
 title: Schnellstart
 description: "Von Konto und Installation bis zur ersten prüfbaren Aufgabe."
 locale: de
 source_locale: zh-CN
-source_revision: 62fb65d
+source_revision: "62fb65d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 4
 ---
@@ -50,7 +55,7 @@ Die erste kleine Aufgabe im sicheren Übungsprojekt ist stabiler. Ablauf erst ru
 
 ### 2. Installation erfolgreich = schon eingestiegen?
 
-Reicht nicht.  
+Reicht nicht.
 Mindestens das brauchst du für echten Einstieg:
 
 - Eine klare Aufgabe starten können
@@ -59,7 +64,7 @@ Mindestens das brauchst du für echten Einstieg:
 
 ### 3. Je größer die erste Aufgabe, desto lehrreicher?
 
-Meist eher Geduldverlust.  
+Meist eher Geduldverlust.
 Je kleiner und leichter prüfbar die erste Aufgabe, desto leichter entsteht ein erstes Urteil.
 
 ## Empfohlene Reihenfolge
@@ -74,10 +79,3 @@ Minimaler Kreislauf:
 6. Rückgängig oder korrigieren lernen
 
 Wenn dieser Kreislauf sitzt, fällt komplexerer Stoff leichter.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Die OpenAI-Developers-Startseite positioniert Codex weiterhin für Codebase-Verstehen, Feature-Bau, Tests und Änderungsreview; diese Seite liefert nur Einstiegsreihenfolge und interne Navigation und hängt nicht von schnell veränderlichen Befehlen oder UI-Details ab.  
-**Zuletzt überprüft:** 2026-07-26

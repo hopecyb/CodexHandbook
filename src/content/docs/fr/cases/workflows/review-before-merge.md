@@ -3,12 +3,16 @@ title: Revue avant fusion
 description: Revue structurée du diff et des risques avec Codex avant la fusion — rôles humain–machine clairs.
 locale: fr
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: "78d5c03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE / Cloud
+  basis: Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur la revue de code et les pull requests, ainsi que les chapitres vérifiés sur la qualité, la revue des diffs et Cloud ; cette page confirme uniquement les principes stables de revue structurée avant fusion, revue en lecture seule et signature humaine finale.
+  checkedAt: '2026-07-26'
 ---
-
 La **revue avant fusion** intègre [qualité et vérification](/fr/guide/quality/) au flux Git : avant la fusion d'une PR, utiliser Codex pour vérifier le diff, les tests, la sécurité et l'alignement avec la spécification. Les commentaires automatiques seuls ne remplacent pas la décision humaine de fusion.
 
 ## Ce que couvre cette page
@@ -29,7 +33,7 @@ Comparer le diff de la branche actuelle à main (ne pas modifier le code pour l'
 Produire une checklist avec étiquettes P0/P1.
 ```
 
-**CI (garde d'équipe)**
+**CI (contrôle obligatoire de l’équipe)**
 
 - Version de prompt fixe + token en lecture seule
 - Résultats dans un commentaire de PR ou un check run
@@ -50,7 +54,7 @@ Produire une checklist avec étiquettes P0/P1.
 ## Erreurs courantes
 
 - Le modèle se contente de « LGTM » sans détails
-- Description complète de PR non désinfectée collée dans le prompt CI (risque d'injection)
+- Description complète de PR sans traitement préalable collée dans le prompt CI (risque d'injection)
 - Revue validée mais tests CI jamais lancés
 - Bot de fusion automatique activé sans protection de branche
 
@@ -70,10 +74,3 @@ Produire une checklist avec étiquettes P0/P1.
 
 - [Revue de code Cloud](/fr/guide/web-and-cloud/code-review/)
 - [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les cas d'usage publics actuels d'OpenAI Developers sur la revue de code et les pull requests, ainsi que les chapitres vérifiés sur la qualité, la revue des diffs et Cloud ; cette page confirme uniquement les principes stables de revue structurée avant fusion, revue en lecture seule et signature humaine finale.

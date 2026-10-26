@@ -1,18 +1,19 @@
 ---
-title: Hoàn tác và khôi phục
-description: Lùi lại an toàn khi kết quả không hài lòng.
-locale: vi
-source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
-translated_at: '2026-09-20'
+title: "Hoàn tác và khôi phục"
+description: "Lùi lại an toàn khi kết quả không hài lòng."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "8aa3171"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 100
 legacyVerification:
-  status: verified
-  products: App / CLI / IDE
-  basis: Đã đối chiếu với các chương nhập môn được xác minh về phê duyệt, kiểm tra kết quả, khôi phục lỗi và Git/không gian làm việc. Trang chỉ mô tả phương pháp ổn định «tạm dừng, xem phạm vi, ưu tiên hoàn tác, trở về trạng thái an toàn» mà không coi nút hoàn tác của client cụ thể là giao diện cố định.
-  checkedAt: '2026-07-26'
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu với các chương nhập môn được xác minh về phê duyệt, kiểm tra kết quả, khôi phục lỗi và Git/không gian làm việc. Trang chỉ mô tả phương pháp ổn định «tạm dừng, xem phạm vi, ưu tiên hoàn tác, trở về trạng thái an toàn» mà không coi nút hoàn tác của client cụ thể là giao diện cố định."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-26"
 ---
 
 Lần đầu dùng Codex, nhiều người lo nhất: nó sửa sai rồi, tôi còn quay lại được không?

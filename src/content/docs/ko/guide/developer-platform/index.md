@@ -10,9 +10,10 @@ sidebar:
   order: 50
 locale: ko
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: 'f58851e'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 **개발자 플랫폼**은 Codex를 파이프라인에 **제품화**하려는 사람을 위한 장입니다. 커스텀 앱, 일괄 리뷰, 릴리스 게이트, 내부 개발자 포털이 여기에 해당합니다. 일상적으로 “프롬프트를 써서 버그를 고친다”는 흐름은 여전히 [시작하기](/ko/guide/getting-started/)부터 보시면 됩니다.

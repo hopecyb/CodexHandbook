@@ -5,15 +5,15 @@ contentType: reference
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: Rédigé d'après le contenu actuel du dépôt et les journaux d'exécution. Il s'agit des changements du manuel, pas des nouveautés produit d'OpenAI ni d'une confirmation de déploiement public.
 locale: fr
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: "3c99d35"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
-
 Cette page indique ce qui a changé dans le manuel, les opérations concernées et ce qui a été vérifié. Les dates correspondent à la préparation du contenu ; pour l'état réel de publication, référez-vous à la version du site que vous consultez. Pour les changements de fonctionnalités, consultez les sources officielles citées dans les tutoriels concernés.
 
 ## 2026-09-18 : exercices réalisables et limites de vérification

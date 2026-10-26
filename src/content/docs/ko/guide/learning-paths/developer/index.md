@@ -26,9 +26,10 @@ next:
   label: "검증을 포함한 버그 수정 시작"
 locale: ko
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: "22d8bd3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 작은 장바구니 실습 하나로 코드 설명, 오류 수정, 차이 검토, 증거 인계라는 네 가지 작업을 합니다. 모든 클라이언트, 설정, 다중 에이전트 기능을 먼저 익힐 필요는 없습니다.
 

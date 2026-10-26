@@ -8,11 +8,12 @@ title: Agent basics
 description: How an agent uses tools and iterates toward a goal.
 locale: en
 source_locale: zh-CN
-source_revision: 14ab120
-translation_status: draft
+source_revision: '14ab120'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: 2026-10-25
 ---
 
 An **agent** keeps working toward a goal: understand the goal → choose a tool → observe the result → adjust the next step, until the work is done or it needs your input.

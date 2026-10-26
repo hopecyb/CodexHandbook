@@ -3,11 +3,16 @@ title: Notificações e vista de atividade
 description: Configura avisos para a conclusão de tarefas, pedidos de permissão e perguntas à espera de resposta.
 locale: pt
 source_locale: zh-CN
-source_revision: 4a1c672
-translation_status: draft
+source_revision: "4a1c672"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 As notificações indicam **quando** precisas de voltar a uma tarefa; não substituem a revisão dos resultados. A aplicação de desktop permite configurar avisos de conclusão de uma interação e controlar separadamente os pedidos de permissão e as perguntas.

@@ -3,21 +3,26 @@ title: Tableaux et tableurs
 description: Lire, nettoyer, analyser et exporter CSV, Excel et données tabulaires — sans casser la structure ou l'encodage.
 locale: fr
 source_locale: zh-CN
-source_revision: b08adec
+source_revision: 'b08adec'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec les pages vérifiées contexte fichier/dossier, verify-artifacts, contraintes ; principe stable : indiquer explicitement colonnes, types, blancs, dates, vérification — pas une seule bibliothèque comme seule implémentation.'
+  checkedAt: '2026-07-26'
 ---
 
-Les Tâches de tableur sont une catégorie classique d'échec silencieux : séparateur, encodage, en-têtes, formules ou format de date — une erreur casse tout en aval.
+Les tâches de tableur sont une catégorie classique d'échec silencieux : séparateur, encodage, en-têtes, formules ou format de date — une erreur casse tout en aval.
 
 ## Ce que cette page couvre
 
 - Lecture/écriture sécurisée de CSV / Excel avec Codex
-- Structure de Prompt pour Tâches d'analyse de données
-- Vérification des comptages et nombres
+- Structure de prompt pour tâches d'analyse de données
+- vérification des chiffres et du nombre de lignes
 
 ## Choix de format
 
@@ -38,17 +43,17 @@ Trois questions :
 
 ## Lire et analyser
 
-Forme de Prompt recommandée :
+Forme de prompt recommandée :
 
 ```text
 Fichier : data/sales_2025.csv
 Encodage : UTF-8
-Tâche : Résumer les revenus par région, sortie summary.csv
+tâche : agréger revenue par region et produire summary.csv
 Contraintes : Ne pas modifier la source ; traiter les blancs comme 0 ; deux décimales
-Vérification : Afficher les 5 premières lignes + nombre total de lignes
+vérification : Afficher les 5 premières lignes + nombre total de lignes
 ```
 
-Contexte : [Contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
+contexte : [contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
 
 ## Pourquoi les tableurs échouent silencieusement
 
@@ -66,7 +71,7 @@ Sans clarté, Codex peut « terminer » avec des résultats non fiables.
 
 - Spécifier **noms de colonnes, ordre, types** (dates en ISO 8601)
 - Traiter les grands tableaux par lots pour éviter les explosions mémoire
-- Déduplication et clés de fusion dans la Tâche — ne pas laisser l'Agent deviner la « clé primaire »
+- Déduplication et clés de fusion dans la tâche — ne pas laisser l'Agent deviner la « clé primaire »
 
 ## Idées reçues courantes
 
@@ -87,7 +92,7 @@ Les erreurs peuvent apparaître seulement quand un autre système consomme :
 
 Généralement éviter — règles explicites plus stables.
 
-## Cinq choses à indiquer pour les Tâches tableur
+## Cinq choses à indiquer pour les tâches tableur
 
 1. Fichier d'entrée
 2. Nom du fichier de sortie
@@ -99,7 +104,7 @@ Beaucoup plus stable que « nettoyer cet Excel ».
 
 Python : `pandas` ; Node : `csv-parse` / `xlsx` — documenter la norme du projet dans `AGENTS.md`.
 
-## Vérification
+## vérification
 
 - Comptages de lignes et totaux vérifiés croisés avec la source
 - Ouvrir Excel et confirmer que les dates ne sont pas stockées comme nombres incorrectement
@@ -121,9 +126,3 @@ Pour les tableurs, la clarté sur colonnes, types, règles et acceptation compte
 
 ## Sources de référence
 - [Définir les contraintes](/fr/prompts/constraints-and-boundaries/)
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec les pages vérifiées Contexte fichier/dossier, verify-artifacts, contraintes ; principe stable : indiquer explicitement colonnes, types, blancs, dates, Vérification — pas une seule bibliothèque comme seule implémentation.  
-**Dernière vérification :** 2026-07-26

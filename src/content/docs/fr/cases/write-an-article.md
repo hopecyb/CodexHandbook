@@ -36,9 +36,10 @@ next:
   label: Transformer l’article en présentation
 locale: fr
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: "e2bb5ea"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 L’objectif est un court article en chinois dont chaque fait important remonte à un document. Vous traiterez des descriptions contradictoires, distinguerez éléments étayés, déductions de l’auteur et questions ouvertes, puis réviserez un premier brouillon volontairement erroné.

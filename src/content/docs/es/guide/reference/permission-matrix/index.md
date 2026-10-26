@@ -3,16 +3,21 @@ title: Matriz de permisos
 description: Distingue entre los Permission Profiles locales, el sandbox anterior y las políticas de red de Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: c6ad6aa
-translation_status: draft
+source_revision: 'c6ad6aa'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE, Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
 
 No intentes deducir los permisos a partir de una tabla fija que solo indique si la aplicación, la CLI, el IDE o Cloud mostrarán un aviso. El comportamiento real depende del lugar de ejecución, la configuración efectiva, los requisitos de la organización, el sistema operativo y la acción concreta.
 
-![Flujo de decisiones entre el bloqueo del sandbox, la aprobación humana y el resultado de la ejecución](/diagrams/sandbox-approval-flow-zh-cn.svg)
+![Flujo de decisiones entre el bloqueo del sandbox, la aprobación humana y el resultado de la ejecución](/diagrams/sandbox-approval-flow-es.svg)
 
 ## Distingue primero los tres mecanismos
 

@@ -3,8 +3,8 @@ title: Referencia de comandos CLI
 description: Consulta rápida de subcomandos y parámetros habituales del CLI de Codex — índice de aprendizaje, no sustituye el manual oficial.
 locale: es
 source_locale: zh-CN
-source_revision: 6091bcc
-translation_status: draft
+source_revision: '6091bcc'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 50
@@ -13,12 +13,12 @@ legacyVerification:
   products: CLI
   basis: 'Contrastado con la tabla oficial actual de Developer commands: solo se incluyen entradas Stable y se comprobaron --cd / -C, sandbox y aprobación. Los comandos experimentales u obsoletos quedan fuera.'
   checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
-
 
 La página de referencia de comandos sirve sobre todo para elegir la entrada, no para memorizar parámetros de golpe:
 
-> **¿Ahora debo usar la entrada interactiva o la de comando único?**
+> **¿Debo iniciar una sesión interactiva o ejecutar una tarea no interactiva?**
 
 Esta página reúne las entradas **Stable** actuales de Codex CLI para buscarlas y compararlas. Antes de ejecutar, consulta `codex --help` y el `--help` de cada subcomando; los parámetros completos y su madurez se rigen por [Developer commands](https://learn.chatgpt.com/docs/developer-commands).
 
@@ -61,7 +61,7 @@ Lo práctico es saber primero «qué tipo de entrada encaja con la Tarea actual�
 
 ### 2. `codex exec` no es solo la versión avanzada de `codex`
 
-Se orienta más a desatendido, scripts y CI, no a una entrada interactiva «más potente».
+Está pensado para ejecución desatendida, scripts y CI, no a una entrada interactiva «más potente».
 
 ### 3. Ver un parámetro no implica que debas tocarlo ya
 
@@ -107,7 +107,7 @@ Si quieres empezar ya:
 2. Si quieres charlar y actuar a la vez, entra en `codex`
 3. Si es para CI o scripts, entonces estudia `codex exec`
 
-Más ligero que hundirse de golpe en el detalle de parámetros.
+Así puedes empezar sin tener que estudiar todos los parámetros de una vez.
 
 ## Exec no interactivo (concepto)
 
@@ -138,7 +138,7 @@ Seguridad: [Patrones de Aprobación humana](/es/cases/workflows/human-approval-p
 El modo no interactivo suele usar el **código de salida** para éxito/fallo, pensado para CI:
 
 - `0`: la Tarea terminó según lo acordado
-- Distinto de `0`: fallo o hace falta intervención humana — mira el log artifact
+- Distinto de `0`: fallo o hace falta intervención humana — consulta los archivos de registro
 
 La página de comandos CLI sirve sobre todo para distinguir entradas y consultar intenciones; no hace falta memorizar parámetros para empezar.
 

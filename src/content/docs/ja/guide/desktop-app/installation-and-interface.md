@@ -3,12 +3,16 @@ title: インストールと初回利用
 description: ChatGPT デスクトップ App のプロジェクト、チャット、Codex、レビューの入口を理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 080436d
+source_revision: "080436d"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: "2026-08-26"
 ---
 
 この章は、ChatGPT デスクトップ App を初めて開く読者向けです。すべてのボタンを覚えることではなく、**レビュー可能で検証可能な小さなタスク**を完了することが目標です。
@@ -67,11 +71,3 @@ App の画面は今後も更新されますが、この三つの対象は特定�
 
 - [ChatGPT デスクトップ App](https://learn.chatgpt.com/docs/app)
 - [コードレビュー](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**最終検証：** 2026-08-26

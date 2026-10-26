@@ -2,17 +2,18 @@
 title: Permissões e sandbox
 description: Compreenda sandbox, aprovações, acesso à rede e limites entre execução local e Cloud numa única sequência de decisão.
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Comparado com as orientações atuais do Codex sobre sandbox, aprovações e segurança. Esta página distingue os limites de execução impostos pelo sistema operativo, a política de aprovação, as restrições da tarefa e a revisão humana, e explica separadamente os modelos de rede local e Cloud."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Comparado com as orientações atuais do Codex sobre sandbox, aprovações e segurança. Esta página distingue os limites de execução impostos pelo sistema operativo, a política de aprovação, as restrições da tarefa e a revisão humana, e explica separadamente os modelos de rede local e Cloud.
+  checkedAt: '2026-08-26'
 locale: pt
 source_locale: zh-CN
-source_revision: 6b5fcb8
-translation_status: draft
+source_revision: "6b5fcb8"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 14
+reviewed_at: '2026-10-26'
 ---
 
 Para usar o Codex em segurança, considere duas camadas de controlo ao mesmo tempo: **a sandbox determina até onde uma ação pode chegar tecnicamente; a política de aprovação determina se é preciso pedir-lhe autorização antes de ultrapassar o limite atual.**
@@ -26,7 +27,7 @@ Para usar o Codex em segurança, considere duas camadas de controlo ao mesmo tem
 | Sandbox | Até onde esta ação pode chegar? | Ficheiros do projeto, caminhos exteriores, capacidades do sistema, rede |
 | Política de aprovação | É preciso perguntar a uma pessoa antes de ultrapassar o limite atual? | Instalar dependências, aceder à rede, escrever fora do projeto, iniciar aplicações |
 | Restrições da tarefa | O que deve ou não acontecer nesta tarefa? | Diretórios permitidos, ações proibidas, comandos de aceitação |
-| Revisão humana | O resultado executado é aceitável? | Diff, registos, testes, efeitos externos |
+| Revisão humana | O resultado executado é aceitável? | diff, registos, testes, efeitos externos |
 
 As restrições da tarefa não substituem a sandbox, e a sandbox não substitui a revisão final. Cuidam, respetivamente, da intenção, do limite de execução e da aceitação do resultado.
 
@@ -46,8 +47,8 @@ A sandbox também limita os subprocessos e comandos iniciados pelo Codex. Uma a�
 
 | Ambiente | Principal forma de isolamento | Rede | O que deve verificar |
 |---|---|---|---|
-| Tarefa local na App / CLI / IDE | Sandbox ao nível do sistema operativo e política de aprovação atual | Uma tarefa local não deve depender por defeito da Internet; aprove ou configure explicitamente quando necessário | Âmbito do workspace, comando, caminhos exteriores e destino da ligação |
-| Tarefa Cloud | Contentor isolado gerido pela OpenAI | A fase de preparação pode ter rede conforme a configuração; na fase Agent a rede fica desligada por defeito, salvo ativação explícita | Repositório, configuração do ambiente, domínios permitidos, diff devolvido e provas de verificação |
+| tarefa local na App / CLI / IDE | Sandbox ao nível do sistema operativo e política de aprovação atual | Uma tarefa local não deve depender por defeito da Internet; aprove ou configure explicitamente quando necessário | Âmbito do workspace, comandos, caminhos exteriores e finalidade do acesso à rede |
+| tarefa Cloud | Contentor isolado gerido pela OpenAI | A fase de preparação pode ter rede conforme a configuração; na fase Agent a rede fica desligada por defeito, salvo ativação explícita | Repositório, configuração do ambiente, domínios permitidos, diff devolvido e provas de verificação |
 
 Os secrets do ambiente Cloud são usados na fase de preparação e removidos antes do início da fase Agent. Continue a aplicar privilégios mínimos e não coloque credenciais de produção sem relação com a tarefa no ambiente.
 

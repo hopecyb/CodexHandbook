@@ -5,10 +5,16 @@ sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: a3f2be5
+source_revision: "a3f2be5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE"
+  basis: Mit der aktuellen offiziellen Codex-Dokumentation zu Subagents abgeglichen. Die Seite beschreibt Kontextisolierung, vererbte Berechtigungen, Zugriffsoberflächen, Tokenkosten und Konflikte bei parallelen
+    Schreibzugriffen; Zusammenführung und endgültige Verifikation bleiben Aufgabe des Haupt-Agents.
+  checkedAt: '2026-08-26'
 ---
 
 Ein **Subagent** ist eine unabhängige Arbeitseinheit, die der Haupt-Agent für ein eindeutig umrissenes Teilproblem startet. Sie besitzt einen eigenen Kontext und gibt anschließend Ergebnisse und Nachweise an den Hauptthread zurück. Die Verantwortung für übergreifende Entscheidungen und die endgültige Abnahme verbleibt beim Haupt-Agent.
@@ -71,13 +77,13 @@ Die Rückmeldung „fertig“ eines Subagents ist nur ein Signal für seine Teil
 Das folgende Beispiel beauftragt eine schreibgeschützte Untersuchung:
 
 ```text
-Starte einen Subagent und analysiere ausschließlich lesend die Session-Aktualisierung in packages/auth.
+Starte einen Subagent, der ausschließlich lesend die Session-Aktualisierung in packages/auth analysiert.
 
 Umfang: packages/auth und zugehörige Tests; keine Dateien ändern.
 Frage: Kann nach einer fehlgeschlagenen Aktualisierung weiterhin das alte Token verwendet werden?
 Ergebnis: Schlussfolgerung, wichtige Dateien und Zeilen, reproduzierbarer Pfad, vorgeschlagener Test.
 Verifikation: Jede Schlussfolgerung muss sich anhand des Quellcodes oder vorhandener Tests überprüfen lassen.
-Rückgabe: Höchstens 500 Wörter; der Hauptthread entscheidet über mögliche Änderungen.
+Rückgabe: Höchstens 500 Zeichen; der Hauptthread entscheidet über mögliche Änderungen.
 ```
 
 Der Vertrag klärt sechs Punkte: Aufgabe, Untersuchungsbereich, Frage, Verbote, Verifikation und Entscheidungsverantwortung.
@@ -122,13 +128,3 @@ Auch wenn die Tests jeder Teilaufgabe einzeln bestehen, kann ihre Kombination na
 - Ein **Worktree** isoliert parallele Dateiänderungen. Er löst Konflikte im Arbeitsbereich, nicht im Kontext.
 
 Lies als Nächstes [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/) und [Übergabe und Fortsetzung](/de/guide/agent-work/handoff-and-resume/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE
-
-**Prüfgrundlage:** Mit der aktuellen offiziellen Codex-Dokumentation zu Subagents abgeglichen. Die Seite beschreibt Kontextisolierung, vererbte Berechtigungen, Zugriffsoberflächen, Tokenkosten und Konflikte bei parallelen Schreibzugriffen; Zusammenführung und endgültige Verifikation bleiben Aufgabe des Haupt-Agents.
-
-**Zuletzt geprüft:** 2026-08-26

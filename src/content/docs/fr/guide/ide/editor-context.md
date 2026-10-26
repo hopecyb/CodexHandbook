@@ -3,14 +3,18 @@ title: Contexte de l'éditeur
 description: Comment l'intégration IDE transmet à Codex les fichiers ouverts, le contexte de l'espace de travail et les règles du projet.
 locale: fr
 source_locale: zh-CN
-source_revision: 6d1b248
+source_revision: "6d1b248"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: Le centre d’aide OpenAI présente toujours l’extension IDE comme l’un des principaux points d’entrée associés aux outils locaux. Cette page ne suppose aucun bouton propre à un éditeur ; elle décrit une méthode stable combinant espace de travail, fichiers ouverts, sélection, références @ et règles du projet pour constituer le contexte de l’IDE.
+  checkedAt: '2026-07-26'
 ---
-
 Dans un IDE, Codex reçoit plus que le prompt : il reçoit également **l'état de l'éditeur**. C'est son principal avantage par rapport à un simple terminal. Comprendre l'origine du contexte évite la frustration de constater que « le fichier est ouvert, mais Codex ne l'a pas vu ».
 
 ## Contenu de cette page
@@ -54,7 +58,7 @@ Le contexte de l'IDE aide Codex, mais ne lui permet pas de deviner. Des limites 
 
 Ne laissez pas au premier plan un fichier `.env` contenant des secrets. Consultez [Contexte sensible](/fr/guide/context/sensitive-context/).
 
-Masquez les journaux et les données client avant de les joindre ; l'IDE ne peut pas décider à votre place de leur conformité.
+Supprimez les informations sensibles des journaux et des données client avant de les joindre ; l'IDE ne peut pas décider à votre place de leur conformité.
 
 ## Erreurs courantes
 
@@ -71,11 +75,3 @@ Masquez les journaux et les données client avant de les joindre ; l'IDE ne peut
 ## Référence
 
 - [Contexte des fichiers et dossiers](/fr/guide/context/file-and-folder-context/)
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** IDE
-
-**Dernière vérification :** 2026-08-26

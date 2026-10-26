@@ -1,14 +1,19 @@
 ---
-title: Mục tiêu, ngữ cảnh và hành động
-description: Tách một lần tương tác thành công thành mục tiêu, bối cảnh, hành động và nghiệm thu.
-locale: vi
-source_locale: zh-CN
-source_revision: 280cea9
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Mục tiêu, ngữ cảnh và hành động"
+description: "Tách một lần tương tác thành công thành mục tiêu, bối cảnh, hành động và nghiệm thu."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "280cea9"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 30
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích khung tách tác vụ gồm mục tiêu, ngữ cảnh, hành động và nghiệm thu; liên kết nội bộ và cấu trúc ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Có tác vụ chạy xuôi rất nhanh, có tác vụ càng chat càng lệch — khác biệt không phải model đột nhiên thông minh hay kém đi, mà ở chỗ bạn đã tách rõ tác vụ hay chưa.
@@ -83,16 +88,9 @@ Rõ hơn nhiều so với chỉ viết một câu «giúp tôi xử lý vấn đ
 
 ## Ví dụ nhỏ
 
-> Mục tiêu: sắp xếp rõ cấp tiêu đề trong `notes.md`.  
-> Ngữ cảnh: chỉ sửa một tệp này; giữ nguyên thứ tự đoạn gốc.  
-> Hành động: được chỉnh sửa tệp đó; đừng cài dependency.  
+> Mục tiêu: sắp xếp rõ cấp tiêu đề trong `notes.md`.
+> Ngữ cảnh: chỉ sửa một tệp này; giữ nguyên thứ tự đoạn gốc.
+> Hành động: được chỉnh sửa tệp đó; đừng cài dependency.
 > Nghiệm thu: mở tệp ra thì tiêu đề liên tục từ H1 đến H3, không nhảy cấp.
 
 Một tác vụ ổn định hơn ít nhất phải nói rõ mục tiêu, ngữ cảnh, ranh giới hành động và cách nghiệm thu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích khung tách tác vụ gồm mục tiêu, ngữ cảnh, hành động và nghiệm thu; liên kết nội bộ và cấu trúc ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

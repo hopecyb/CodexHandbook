@@ -3,14 +3,18 @@ title: AGENTS.md en un monorepo
 description: Patrón de ejemplo para colocar instrucciones de proyecto, alcances y comandos de test en un único repositorio con varios paquetes.
 locale: es
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos actuales de este manual sobre `AGENTS.md`, contexto de archivos/directorios y entornos Cloud; el contenido se limita al patrón de ejemplo de explicación por capas en monorepo y a la organización de comandos, sin tratar entradas concretas de producto o implementaciones gestionadas como contrato fijo.
+  checkedAt: '2026-07-26'
 ---
-
 En un monorepo conviven varias apps, paquetes compartidos y stacks distintos: un `AGENTS.md` gigante hace que el Agent **cambie el paquete equivocado** o ejecute el test equivocado. Esta página ofrece un patrón reutilizable de **explicación por capas** (ejemplo; adáptalo a tu repositorio).
 
 ## Qué cubre esta página
@@ -23,7 +27,7 @@ En un monorepo conviven varias apps, paquetes compartidos y stacks distintos: un
 
 Si un repositorio normal es una casa, un monorepo se parece más a un edificio.
 
-Hay habitaciones distintas, vecinos distintos, reglas distintas.  
+Hay habitaciones distintas, vecinos distintos, reglas distintas.
 Si solo pegas en la puerta principal una nota general larguísima, Codex suele caer en dos problemas:
 
 - Ve todo, pero no sabe qué capa cumplir ahora
@@ -43,7 +47,7 @@ repo-root/
 
 El `AGENTS.md` raíz debería incluir:
 
-- Qué directorios **prohíbe** modificar el Agent (p. ej. `infra/prod/`)
+- Qué directorios **está prohibido** que modifique el Agent (p. ej. `infra/prod/`)
 - **Responsables o enlaces de documentación** de cada subpaquete
 - Comando global de instalación: `pnpm install` se ejecuta en la raíz
 
@@ -122,15 +126,8 @@ Si se parece más a la 1 → raíz; si a la 2 o 3 → mejor en el subpaquete.
 
 ## Lista de verificación
 
-- [ ] Raíz y subpaquetes tienen al menos una nota de scope legible cada uno
+- [ ] Raíz y subpaquetes tienen al menos una descripción legible del alcance cada uno
 - [ ] Cualquier paquete puede ejecutar solo su comando de test
 - [ ] Las tareas entre paquetes dejan claras en el prompt las rutas permitidas
 
 En un monorepo, AGENTS.md no necesita concentrarse a toda costa; lo más adecuado es que el «consenso global» y las «reglas locales de directorio» vivan cada uno en su sitio.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos actuales de este manual sobre `AGENTS.md`, contexto de archivos/directorios y entornos Cloud; el contenido se limita al patrón de ejemplo de explicación por capas en monorepo y a la organización de comandos, sin tratar entradas concretas de producto o implementaciones gestionadas como contrato fijo.  
-**Última verificación:** 2026-07-26

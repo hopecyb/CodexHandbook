@@ -3,12 +3,17 @@ title: 테스트 실행
 description: 검증 단계를 작업의 일부로 만듭니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 8b1e5c7
+source_revision: '8b1e5c7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 왜 검증 단계가 작업 검증에 들어가야 하는지만 설명합니다. 예시 문장과 점검 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 고친 뒤에는, 명백히 깨지지 않았음을 확인할 방법이 있어야 합니다.
@@ -74,10 +79,3 @@ sidebar:
 ```
 
 검증은 가벼워도 되지만 빠져서는 안 됩니다. 그렇지 않으면 “끝남”이 성립하기 어렵습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 왜 검증 단계가 작업 검증에 들어가야 하는지만 설명합니다. 예시 문장과 점검 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

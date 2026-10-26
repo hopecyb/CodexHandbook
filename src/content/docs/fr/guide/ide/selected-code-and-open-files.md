@@ -1,22 +1,28 @@
 ---
 title: Sélection et fichiers ouverts
-description: Utiliser le code sélectionné et les fichiers ouverts pour cadrer précisément le périmètre de Tâche IDE.
+description: Utiliser le code sélectionné et les fichiers ouverts pour cadrer précisément le périmètre d’une tâche dans l’IDE.
 locale: fr
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: "b6b264f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 'Cette page décrit un contrôle de périmètre IDE stable : sélection, fichiers ouverts et chemins @ explicites — organisation générale du contexte dans l''éditeur, sans lien avec un nom de bouton d''extension spécifique.'
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 40
 ---
-
-L'extension IDE excelle sur les modifications **petites et haute précision** : sélectionner du code, énoncer l'intention, Codex modifie le Contexte proche. Cette page montre comment sélection et fichiers ouverts resserrent le périmètre et évitent d'éditer au mauvais endroit.
+L'extension IDE excelle sur les modifications **limitées et précises** : sélectionner du code, énoncer l'intention, Codex modifie le contexte proche. Cette page montre comment sélection et fichiers ouverts resserrent le périmètre et évitent d'éditer au mauvais endroit.
 
 La sélection dit à Codex : concentre-toi ici — n'élargis pas le périmètre de ton côté.
 
 ## Ce qui est couvert
 
 - Sélection vs fichier entier vs chemin @ — quand utiliser quoi
-- Organiser le Contexte pour des refactorisations multi-fichiers
+- Organiser le contexte pour des refactorisations multi-fichiers
 - Réduire « il a changé plein de fichiers non liés »
 
 ## Trois façons de borner le périmètre
@@ -25,7 +31,7 @@ La sélection dit à Codex : concentre-toi ici — n'élargis pas le périmètre
 |---|---|---|
 | **Sélection** | Fonction unique, composant, près de la stack trace | Sélectionner `parseUser()`, ajouter gestion null |
 | **Fichiers ouverts** | Plusieurs endroits liés dans le fichier | Ouvrir `auth.ts` + `auth.test.ts` |
-| **Chemin @** | Cross-répertoire, pas ouvert | `@src/api/client.ts` aligner types avec backend |
+| **Chemin @** | Fichiers dans d’autres répertoires ou non ouverts | `@src/api/client.ts` aligner types avec backend |
 
 Concept plus profond : [Contexte de fichiers et dossiers](/fr/guide/context/file-and-folder-context/)
 
@@ -50,11 +56,11 @@ Grandes refactorisations : préférez [worktrees App de bureau](/fr/guide/deskto
 
 ### 1. Dois-je toujours sélectionner ?
 
-Non — mais si vous savez que la focalisation est une petite région, la sélection bat un vague « corrige cette fonction ».
+Non — mais si vous savez que le problème concerne une petite zone, la sélectionner est plus précis qu’un vague « corrige cette fonction ».
 
 ### 2. Plus de lignes sélectionnées ≠ plus sûr
 
-Trop large assouplit à nouveau le périmètre ; trop petit peut manquer le Contexte nécessaire. Visez « juste assez ».
+Trop large assouplit à nouveau le périmètre ; trop petit peut manquer le contexte nécessaire. Visez « juste assez ».
 
 ### 3. Fichiers ouverts vs chemins @ ?
 
@@ -83,9 +89,3 @@ Page produit : [Revoir les changements IDE](/fr/guide/ide/reviewing-changes/)
 
 ## Références
 - [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
----
-
-**Statut :** vérifié  
-**Produits concernés :** IDE  
-**Base de vérification :** Cette page décrit un contrôle de périmètre IDE stable : sélection, fichiers ouverts et chemins @ explicites — organisation générale du Contexte dans l'éditeur, sans lien avec un nom de bouton d'extension spécifique.  
-**Dernière vérification :** 2026-07-26

@@ -1,30 +1,32 @@
 ---
-title: "Dar tarefas claras"
-description: "Prepare um aviso a partir de fatos fixos e mantenha em aberto as informações ainda desconhecidas."
-contentType: "path"
-audiences: ["beginner"]
-level: "beginner"
-editorialStatus: "review"
+title: Dar tarefas claras
+description: Prepare um aviso a partir de fatos fixos e mantenha em aberto as informações ainda desconhecidas.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 30
 verification:
-  kind: "editorial"
-  checkedAt: "2026-09-18"
-  summary: "Os materiais fixos e a referência do autor estão completos; as operações com arquivos foram executadas em uma pasta temporária, mas ainda não houve teste independente com um modelo ou leitores."
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: Os materiais fixos e a referência do autor estão completos; as operações com arquivos foram executadas em uma pasta temporária, mas ainda não houve teste independente com um modelo ou leitores.
   evidence:
-    - label: "Registro de operações com arquivos do autor"
-      href: "/downloads/first-project/validation/record.json"
+  - label: Registro de operações com arquivos do autor
+    href: /downloads/first-project/validation/record.json
 prev:
-  link: "/pt/guide/learning-paths/beginner/02-work-with-files/"
-  label: "Trabalhar com arquivos"
+  link: /pt/guide/learning-paths/beginner/02-work-with-files/
+  label: Trabalhar com arquivos
 next:
-  link: "/pt/guide/learning-paths/beginner/04-review-results/"
-  label: "Revisar resultados"
+  link: /pt/guide/learning-paths/beginner/04-review-results/
+  label: Revisar resultados
 locale: pt
 source_locale: zh-CN
-source_revision: 664fdf7
-translation_status: draft
+source_revision: "664fdf7"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## Pré-requisitos
 

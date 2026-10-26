@@ -2,22 +2,22 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Diese Seite liefert eine Vorlage für Verstehen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  basis: "Diese Seite liefert eine Vorlage für Aufgaben zum Verständnisaufbau; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
   checkedAt: "2026-07-26"
-title: Verstehen-Vorlage
+title: Vorlage zum Verstehen
 description: Zuerst Orientierung aufbauen, dann ändern.
 locale: de
 source_locale: zh-CN
-source_revision: 228971d
+source_revision: "228971d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
 Viele Aufgaben stocken, weil noch kein gemeinsames Mindestverständnis da ist.
 
-Die Verstehen-Vorlage passt zu „erst begreifen, dann den nächsten Schritt entscheiden“.
+Die Vorlage zum Verstehen passt zu „erst begreifen, dann den nächsten Schritt entscheiden“.
 
 ## Vorlage
 
@@ -35,7 +35,7 @@ Abnahme: Anhand der Ausgabe kann ich den Scope der nächsten Aufgabe festlegen.
 
 ## Wann diese Vorlage passt
 
-- neues Codebase übernehmen
+- eine neue Codebasis übernehmen
 - unbekanntes Modul anschauen
 - vor dem Ändern Abhängigkeiten klären
 
@@ -53,7 +53,7 @@ Es soll auch nennen:
 
 Zuerst die Hauptlinie klären — wichtiger als alles auf einmal auszugraben.
 
-Wert der Verstehen-Vorlage: den Scope der nächsten Aufgabe zuerst eingrenzen.
+Wert der Vorlage zum Verstehen: den Scope der nächsten Aufgabe zuerst eingrenzen.
 
 ## Verwandt
 

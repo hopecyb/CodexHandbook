@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: Änderungen in der IDE prüfen
 description: Prüfe Diffs direkt neben dem Quellcode und lasse den Worktree von einem schreibgeschützten Reviewer untersuchen.
 sidebar:
   order: 70
 locale: de
 source_locale: zh-CN
-source_revision: a6badd5
+source_revision: "a6badd5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 In der IDE kannst du eine Zusammenfassung und einen fokussierten Diff direkt neben dem Quellcode lesen. Dass Änderungen im Editor erscheinen, bedeutet jedoch nicht, dass sie abgenommen sind. Prüfe zuerst den Diff, führe dann die Tests aus und entscheide schließlich, welche Inhalte erhalten bleiben.
@@ -53,11 +57,3 @@ Für zeilenbezogene Kommentare, Vormerkung oder das Verwerfen einzelner Hunks ka
 
 - [Code review](https://learn.chatgpt.com/docs/code-review)
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE
-
-**Zuletzt geprüft:** 2026-08-26

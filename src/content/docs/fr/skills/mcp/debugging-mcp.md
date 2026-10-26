@@ -3,9 +3,14 @@ title: Déboguer une connexion MCP
 description: "Localiser une panne MCP parmi quatre niveaux : configuration, transport, authentification et outils."
 locale: fr
 source_locale: zh-CN
-source_revision: d35b635
-translation_status: draft
+source_revision: 'd35b635'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT App de bureau / Codex CLI / IDE
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 On résume souvent une panne MCP par « l'outil ne fonctionne pas ». Il est plus efficace de déterminer d'abord à quel niveau l'échec se produit, puis de ne modifier qu'une seule variable à la fois.

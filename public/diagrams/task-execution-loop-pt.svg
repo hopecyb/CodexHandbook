@@ -1,6 +1,6 @@
 <svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
   <title id="title">Ciclo da especificação da tarefa ao resultado verificável</title>
-  <desc id="desc">Objetivo, contexto, entradas, restrições, aceitação e permissões formam a tarefa. Codex explora, planeja, executa e verifica; falha retorna com evidências e sucesso entrega.</desc>
+  <desc id="desc">Objetivo, contexto, entradas, restrições, critérios de aceitação e permissões formam a descrição da tarefa. O Codex explora, planeja, executa e verifica. Se a verificação falhar, volta à descrição ou ao plano com evidências; se passar, entrega o resultado.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -59,7 +59,7 @@
   <text x="878" y="311" text-anchor="middle" class="note">Capturas · fontes</text>
 
   <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
-  <text x="630" y="408" text-anchor="middle" class="label">Passou: entregar um resultado verificável</text>
+  <text x="630" y="408" text-anchor="middle" class="label">Passou: entregar resultado verificável</text>
   <text x="630" y="429" text-anchor="middle" class="tiny">Artefato + evidência + riscos residuais</text>
   <text x="905" y="393" class="tiny" fill="#34d399">Passou</text>
   <text x="460" y="472" class="tiny" fill="#fb7185">Falha: retornar à tarefa ou ao plano com evidência da falha</text>

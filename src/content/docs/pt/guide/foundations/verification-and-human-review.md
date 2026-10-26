@@ -3,19 +3,24 @@ title: Verificação e revisão humana
 description: Por que o resultado precisa ser verificável e como revisar.
 locale: pt
 source_locale: zh-CN
-source_revision: bfe4036
+source_revision: "bfe4036"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página só explica por que o resultado precisa de Verificação e revisão humana; links internos, ordem dos passos e formulações conceituais foram revisados, e o texto não depende de fatos de produto voláteis.
+  checkedAt: '2026-07-26'
 ---
 
 O Codex pode acelerar o seu trabalho, mas não assume a responsabilidade final de confirmação.
 
 O Codex aumenta a velocidade, mas **não dispensa o aceite**. No mínimo, revise isto:
 
-1. Leia o [Diff](/pt/guide/quality/review-diffs/): quais arquivos mudaram e se ultrapassou o alcance
+1. Leia o [diff](/pt/guide/quality/review-diffs/): quais arquivos mudaram e se ultrapassou o alcance
 2. Verifique conforme o critério de conclusão que você definiu
 3. Se der para rodar testes, rode: [Rodar testes](/pt/guide/quality/run-tests/)
 4. Fatos externos precisam de fonte: [Validar fontes](/pt/guide/quality/validate-sources/)
@@ -43,7 +48,7 @@ O Codex aumenta a velocidade, mas **não dispensa o aceite**. No mínimo, revise
 
 A IA acelera; você define o padrão e faz o controle final.
 
-### 3. Revisão só é necessária em Tarefas de código?
+### 3. Revisão só é necessária em tarefas de código?
 
 Estes também precisam de revisão:
 
@@ -63,10 +68,3 @@ Se o tempo for curto, siga esta ordem:
 4. No passo mais crítico que restar, passar de novo com olhar humano
 
 O papel da revisão humana é deixar a decisão final com quem realmente responde pelo resultado.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica por que o resultado precisa de Verificação e revisão humana; links internos, ordem dos passos e formulações conceituais foram revisados, e o texto não depende de fatos de produto voláteis.  
-**Última verificação:** 2026-07-26

@@ -3,19 +3,28 @@ title: Recherche avec sources
 description: Utiliser Codex pour la recherche, la comparaison et la vérification des faits — sources et conclusions traçables.
 locale: fr
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: "a6fd201"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les capacités publiques actuelles d'OpenAI Developers sur la recherche web et la recherche avec sources, ainsi que les chapitres vérifiés sur la recherche web, la validation des sources, la gestion de l'incertitude et la politique de version ; cette page confirme uniquement la méthode stable selon laquelle les conclusions clés doivent être traçables et les conflits/incertitudes explicitement indiqués.
+  checkedAt: '2026-07-26'
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs:
+  - markdown
 ---
-
 La **recherche avec sources** exige que chaque conclusion clé puisse être rattachée à une source précise — documentation officielle, article ou fichier du dépôt — et non à une affirmation sans fondement. Cela convient au choix technique, à la comparaison concurrentielle, à la revue de littérature et à l'interprétation de politiques.
 
 ## Ce que couvre cette page
 
 - Quand utiliser la [recherche web](/fr/guide/tools/web-search/) vs le dépôt en lecture seule
 - Comment exiger un format de citation et des marqueurs d'incertitude
-- Comment associer [Valider les sources](/fr/guide/quality/validate-sources/)
+- Comment intégrer l’étape [Valider les sources](/fr/guide/quality/validate-sources/)
 
 ## Approche minimale viable
 
@@ -63,10 +72,3 @@ Pour une recherche longue, découper en plusieurs tours — voir [Gestion des t�
 
 - [Gérer l'incertitude](/fr/guide/quality/handle-uncertainty/)
 - [Cas : Refactoriser la doc avec revue](/fr/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les capacités publiques actuelles d'OpenAI Developers sur la recherche web et la recherche avec sources, ainsi que les chapitres vérifiés sur la recherche web, la validation des sources, la gestion de l'incertitude et la politique de version ; cette page confirme uniquement la méthode stable selon laquelle les conclusions clés doivent être traçables et les conflits/incertitudes explicitement indiqués.

@@ -1,15 +1,20 @@
 ---
-title: Fundamentos de Prompts
-description: Los elementos esenciales de un buen Prompt.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo trata métodos generales de prompt; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles (versión del producto, precios, interfaz, etc.)."
+  checkedAt: "2026-07-26"
+title: Fundamentos de prompts
+description: Los elementos esenciales de un buen prompt.
 locale: es
 source_locale: zh-CN
-source_revision: eb86b2a
+source_revision: 'eb86b2a'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Al empezar con Prompts, es fácil centrarse en si la redacción suena «avanzada».  
+Al empezar con prompts, es fácil centrarse en si la redacción suena «avanzada».
 Para Codex, lo clave es si has dejado claro esto:
 
 - qué quieres exactamente que haga
@@ -17,7 +22,7 @@ Para Codex, lo clave es si has dejado claro esto:
 - qué cuenta como terminado
 - ante la incertidumbre: preguntar primero, investigar primero o parar primero
 
-Un buen Prompt aclara los límites de la tarea; no hace falta escribirlo como un conjuro.
+Un buen prompt aclara los límites de la tarea; no hace falta escribirlo como un conjuro.
 
 ## Contenido
 
@@ -28,7 +33,7 @@ Sirve sobre todo para evitar estos problemas habituales:
 - sin criterios de aceptación, al final solo juzgas a ojo
 - sin instrucción cuando falta información, así que empieza a adivinar
 
-## Cómo ver un Prompt
+## Cómo ver un prompt
 
 Puedes verlo como un ticket de tarea.  
 Un ticket aceptable responde al menos a:
@@ -37,7 +42,7 @@ Un ticket aceptable responde al menos a:
 - por qué
 - con qué materiales
 - qué no tocar
-- cómo se ve el «aprobado»
+- qué condiciones debe cumplir el resultado
 
 Si eso no está claro, ni las frases más elegantes lo arreglan.
 
@@ -49,7 +54,7 @@ Si eso no está claro, ni las frases más elegantes lo arreglan.
 
 ## Ideas erróneas habituales
 
-### 1. Cuanto más largo el Prompt, mejor
+### 1. Cuanto más largo el prompt, mejor
 
 Lo importante es la relevancia.  
 Un bloque largo de contexto irrelevante diluye los límites de verdad.
@@ -63,9 +68,9 @@ Solo con el objetivo es fácil olvidar:
 - cómo validar
 - qué hacer ante la incertidumbre
 
-### 3. El Prompt sirve sobre todo para «enseñar al modelo a pensar»
+### 3. El prompt sirve sobre todo para «enseñar al modelo a pensar»
 
-Para quien empieza, una lectura más útil: el Prompt reduce malentendidos.
+Para quien empieza, una lectura más útil: el prompt reduce malentendidos.
 
 ## Una estructura mínima suficiente
 
@@ -74,7 +79,7 @@ Si no quieres aprenderlo todo de golpe, empieza con estas 4 líneas:
 ```text
 Objetivo: qué quiero que hagas
 Alcance: qué puedes modificar únicamente
-Aceptación: cómo se ve el terminado
+Aceptación: qué condiciones debe cumplir para darlo por terminado
 Ante la incertidumbre: pregunta primero, no adivines
 ```
 
@@ -97,13 +102,6 @@ Ya es mucho más claro que un «ayúdame a optimizar esto».
 
 Para la mayoría de principiantes, empezar por la **versión recomendada** suele ser más prudente.
 
-El núcleo de un buen Prompt: menos suposiciones, menos desviaciones, menos extralimitación.
+El núcleo de un buen prompt: menos suposiciones, menos desviaciones, menos extralimitación.
 
 Ejemplos: [Primera tarea](/es/cases/first-task/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo trata métodos generales de Prompt; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles (versión del producto, precios, interfaz, etc.).

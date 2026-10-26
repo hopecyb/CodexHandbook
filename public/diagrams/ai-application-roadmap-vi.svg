@@ -23,7 +23,7 @@
   <rect x="42" y="34" width="816" height="132" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
   <text x="72" y="86" class="title">Lộ trình kỹ thuật ứng dụng AI</text>
   <text x="72" y="122" class="subtitle">Mới nhất trước. Ngày là của nguồn trong bảng, không phải lúc khái niệm ra đời.</text>
-  <text x="72" y="148" class="subtitle">Đọc từ trên xuống: khung và tái sử dụng → phối hợp → giao thức → đầu vào → tri thức.</text>
+  <text x="72" y="148" class="subtitle">Đọc dọc: môi trường thực thi và tái sử dụng → phối hợp thực thi → giao thức công cụ → kiểm soát đầu vào → neo vào tri thức.</text>
 
   <line x1="224" y1="218" x2="224" y2="1398" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-main)"/>
 
@@ -63,7 +63,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Skills (kỹ năng)</text>
     <text x="28" y="55" class="node-date">2025-10-16 · Đơn vị quy trình tái sử dụng</text>
-    <text x="28" y="78" class="node-body">Đóng gói prompt, bước, ví dụ, script và tài nguyên để AI tái sử dụng kinh nghiệm.</text>
+    <text x="28" y="78" class="node-body">Đóng gói prompt, bước làm, ví dụ, script và tài nguyên để AI tái dùng ổn định trong tác vụ lặp lại.</text>
   </g>
   <g transform="translate(240 470)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -91,14 +91,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP (giao thức ngữ cảnh mô hình)</text>
     <text x="28" y="55" class="node-date">2024-11-25 · Giao thức công cụ</text>
-    <text x="28" y="78" class="node-body">Đưa công cụ, tài nguyên, prompt và ngữ cảnh thành giao thức, bớt tích hợp đơn lẻ.</text>
+    <text x="28" y="78" class="node-body">Cung cấp công cụ, tài nguyên, prompt và ngữ cảnh qua giao thức, giảm chi phí tích hợp riêng lẻ.</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Function Calling (gọi hàm)</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Hành động có cấu trúc</text>
-    <text x="28" y="78" class="node-body">Mô hình không chỉ sinh văn bản mà gọi hàm, API và nghiệp vụ với tham số có cấu trúc.</text>
+    <text x="28" y="78" class="node-body">Mô hình không chỉ tạo văn bản: gọi hàm, API và thao tác nghiệp vụ bằng tham số phân tích cú pháp được.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -112,6 +112,6 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#f97316"/>
     <text x="28" y="32" class="node-title">RAG (sinh tăng cường bằng truy xuất)</text>
     <text x="28" y="55" class="node-date">2020-05-22 · Neo vào tri thức</text>
-    <text x="28" y="78" class="node-body">Đưa nguồn bên ngoài vào ngữ cảnh để giảm ảo giác và truy vết câu trả lời.</text>
+    <text x="28" y="78" class="node-body">Truy xuất tài liệu ngoài vào ngữ cảnh, giảm ảo giác, gắn câu trả lời với nguồn truy vết được.</text>
   </g>
 </svg>

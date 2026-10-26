@@ -3,10 +3,15 @@ title: ルール
 description: allow/deny、コマンドルール、チーム方針の説明ページ——何を止め、何を注意させるかを先に分ける。
 locale: ja
 source_locale: zh-CN
-source_revision: 9ac6185
+source_revision: "9ac6185"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / Cloud
+  basis: 本リポジトリ現行 rules サブ章の構造と入口リンクを相互確認。allow/deny、コマンドルール、チームルールの分類ごとのナビゲーションのみ。具体ルール実装やデフォルト遮断挙動は単独では宣言しない。
+  checkedAt: "2026-07-26"
 ---
 
 ルールグループは「Codex にもう少し注意を書く」と誤解されがちです。
@@ -26,10 +31,3 @@ reviewed_at: 2026-08-26
 - チームで同類リスクに同じ境界をどう揃えるか
 
 ルールは境界を明確にし、システムに境界を守らせるためのものです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / Cloud  
-**検証根拠：** 本リポジトリ現行 rules サブ章の構造と入口リンクを相互確認。allow/deny、コマンドルール、チームルールの分组ナビのみ。具体ルール実装やデフォルト遮断挙動は単独では宣言しない。  
-**最終検証：** 2026-07-26

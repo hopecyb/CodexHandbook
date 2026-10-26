@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "現在の Codex ランタイムはスキルとスクリプト・決定論的コマンドの併用を許可。本ページの「安定動作はスクリプト化、フローは Skill で制約」は現行能力と一致。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の Codex ランタイムはスキルとスクリプト・決定論的コマンドの併用を許可。本ページの「安定動作はスクリプト化、フローは Skill で制約」は現行能力と一致。
+  checkedAt: '2026-07-26'
 title: scripts/ とテスト
-description: Skill に決定的なスクリプトを追加し、挙動を検証する。
+description: Skill に同じ手順を確実に実行するスクリプトを追加し、挙動を検証する。
 locale: ja
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: "900e6e4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 最初はすべてを `SKILL.md` に書きたくなります。単純なフローではそれで足りますが、**安定・反復・検証可能**に実行すべきステップがあるなら、文章よりスクリプトが信頼できます。
@@ -19,7 +19,7 @@ reviewed_at: 2026-08-26
 固定動作はスクリプトに、判断と協業フローは Skill に残します。
 
 
-ステップを決定的に実行する必要があるとき（テスト実行、diff 生成、形式検証）、`scripts/` にスクリプトを置き、`SKILL.md` でいつ呼ぶかを書きます。
+ステップを毎回同じ手順で実行する必要があるとき（テスト実行、diff 生成、形式検証）、`scripts/` にスクリプトを置き、`SKILL.md` でいつ呼ぶかを書きます。
 
 ## 例
 

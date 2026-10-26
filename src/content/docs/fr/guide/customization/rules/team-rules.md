@@ -1,17 +1,21 @@
 ---
-title: "Politique de règles d'équipe"
-description: Gouvernance en couches des règles de commandes et de chemins entre organisation, dépôt et individu — revueable et réversible.
+title: Politique de règles d'équipe
+description: Gouvernance en couches des règles de commandes et de chemins entre organisation, dépôt et individu — soumise à revue et réversible.
 locale: fr
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: "bae8bd2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: CLI / App / Cloud (selon les fonctionnalités organisation)
+  basis: Les matériaux actuels au niveau organisation sur les plugins, apps et permissions d'OpenAI accentuent encore l'accès par rôle, l'approbation d'actions, la configuration gérée et la couche de contrôle au niveau équipe ; cette page abstrait la politique de règles en gouvernance organisation, projet et personnelle et exige que les changements de règles passent par revue et annonce — un résumé de pratique de gouvernance stable.
+  checkedAt: '2026-07-26'
 ---
-
-Quand les équipes utilisent Codex, la **politique de règles** répond : quelles contraintes sont à l'échelle de l'entreprise, quelles le dépôt maintient et si les individus peuvent relaxer quoi que ce soit. Ce chapitre est la vue gouvernance des [Règles de commandes](/fr/guide/customization/rules/command-rules/) et des [Modèles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/).
+Quand les équipes utilisent Codex, la **politique de règles** répond : quelles contraintes sont à l'échelle de l'entreprise, quelles le dépôt maintient et si les individus peuvent assouplir certaines restrictions. Ce chapitre est la vue gouvernance des [Règles de commandes](/fr/guide/customization/rules/command-rules/) et des [Modèles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contenu
 
@@ -70,7 +74,7 @@ Comparer avec [Portée AGENTS.md](/fr/guide/customization/agents-md/scope-and-pr
 2. **Puis la liste « autorisé quotidiennement »** (allow) : tests, lint, git en lecture seule
 3. **Déployer L1 via la gestion** (si l'organisation active la configuration Managed)
 4. **Chaque service/sous-paquet monorepo** peut ajouter L3 mais ne doit pas entrer en conflit avec L1
-5. **Revue trimestrielle** : « faux blocage » et « faux autorisation » des logs d'approbation remontent dans les PR de règles
+5. **Revue trimestrielle** : « faux blocage » et « autorisation erronée » des logs d'approbation remontent dans les PR de règles
 
 ## Flux de travail recommandé : changements de règles
 
@@ -94,11 +98,11 @@ Les grands changements (ex. autoriser le réseau outbound) devraient mettre à j
 ## Erreurs courantes
 
 - « Ne pas push » verbal uniquement ; fichiers de règles non mis à jour
-- Machine personnelle relaxe le bac à sable ; capture d'écran traitée comme « standard d'équipe »
+- Restrictions du bac à sable assouplies sur une machine personnelle ; capture d'écran traitée comme « standard d'équipe »
 - Sous-projets monorepo différents mais partagent une liste d'autorisation globale trop large
 - Changement de règles sans annonce ; coéquipiers frappés soudainement par beaucoup d'échecs d'approbation
 
-## Quelle couche une règle appartient
+## À quelle couche appartient une règle ?
 
 Demandez :
 
@@ -126,10 +130,3 @@ Généralement :
 - [ ] Canal pour le feedback « faux blocage » (modèle d'issue ou formulaire interne)
 
 La partie la plus importante de la politique de règles d'équipe est de savoir qui définit les frontières à quelle couche — puis comment écrire les règles.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / App / Cloud (selon les fonctionnalités organisation)  
-**Base de vérification :** Les matériaux actuels au niveau organisation sur les plugins, apps et permissions d'OpenAI accentuent encore l'accès par rôle, l'approbation d'actions, la configuration gérée et la couche de contrôle au niveau équipe ; cette page abstrait la politique de règles en gouvernance organisation, projet et personnelle et exige que les changements de règles passent par revue et annonce — un résumé de pratique de gouvernance stable.  
-**Dernière vérification :** 2026-07-26

@@ -1,13 +1,19 @@
 ---
-title: Model và suy luận
-description: Các yếu tố cần cân nhắc khi chọn model và cường độ suy luận.
-locale: vi
-source_locale: zh-CN
-source_revision: 0cbc9dc
-translation_status: draft
-translated_at: 2026-09-20
+title: "Model và suy luận"
+description: "Các yếu tố cần cân nhắc khi chọn model và cường độ suy luận."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "0685b79"
+translation_status: "reviewed"
+reviewed_at: "2026-10-26"
+translated_at: "2026-10-25"
 sidebar:
   order: 90
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Tài liệu mô hình hiện tại của OpenAI và các điểm truy cập Codex/dành cho nhà phát triển tiếp tục cho phép lựa chọn mô hình theo năng lực, tốc độ và chi phí. Trang này không gắn với model hay mức suy luận cố định, chỉ giữ nguyên tắc lựa chọn theo độ phức tạp tác vụ, độ trễ, chi phí và khả năng kiểm chứng."
+  checkedAt: "2026-07-26"
 ---
 
 Model có thể chọn và mức «suy luận / suy nghĩ» sẽ đổi theo cập nhật sản phẩm. Khi chọn hãy cân nhắc:
@@ -25,15 +31,15 @@ Gần với thực tế hơn: model và mức suy luận tương ứng với vi�
 - **Model**: tổ hợp năng lực bạn đang dùng thuộc loại nào
 - **Cường độ suy luận / suy nghĩ**: lần này có cần dành thêm thời gian để cân nhắc sâu hơn không
 
-Không cần thuộc tham số chi tiết ngay từ đầu.  
+Không cần thuộc tham số chi tiết ngay từ đầu.
 Nắm một điểm trước: tác vụ đơn giản và tác vụ phức tạp không nhất thiết hợp cùng một mức.
 
 ## Hiểu nhầm thường gặp
 
 ### 1. Chọn mạnh hơn luôn tốt hơn?
 
-Không nhất thiết.  
-Nếu tác vụ chỉ là sửa một câu copy, bổ sung một đoạn nhỏ — cường độ suy luận quá cao có thể chỉ chậm hơn, đắt hơn, chưa chắc hữu ích hơn.
+Không nhất thiết.
+Nếu tác vụ chỉ là sửa một câu văn, bổ sung một đoạn nhỏ — cường độ suy luận quá cao có thể chỉ chậm hơn, đắt hơn, chưa chắc hữu ích hơn.
 
 ### 2. Suy luận mạnh hơn thì có thể kiểm chứng ít hơn?
 
@@ -55,6 +61,8 @@ Nếu tạm thời không biết chọn, có thể theo quy tắc này:
 
 Quan trọng hơn là phán đoán: lần tác vụ này có đáng trả thêm thời gian và chi phí để «nghĩ thêm một chút» hay không.
 
-Cẩm nang này không gắn với tên marketing của một model cụ thể. Lấy danh sách hiện tại trên client của bạn và [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn.
+Trang này trình bày các nguyên tắc lựa chọn ổn định; model cụ thể được duy trì riêng trong hướng dẫn chọn model. Lấy danh sách hiện tại trong ứng dụng khách và [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn.
 
-Cách ghi lại lựa chọn cụ thể được trình bày trong [Mức sử dụng, thời gian và chọn model](/guide/quality/usage-time-and-model-choice/). Trang này hiện chỉ có tiếng Trung và tách riêng hạn mức thuê bao, chi phí API, thời gian chờ và công sức làm lại của con người.
+Xem cách ghi cụ thể trong [Mức sử dụng, thời gian và lựa chọn model](/vi/guide/quality/usage-time-and-model-choice/), tách riêng hạn mức thuê bao, chi phí API, thời gian chờ và công sức làm lại của con người.
+
+Xem model hiện tại, khác biệt giữa sản phẩm và khuyến nghị tác vụ: [Chọn model: tìm điểm bắt đầu theo tác vụ](/vi/guide/reference/model-selection/).

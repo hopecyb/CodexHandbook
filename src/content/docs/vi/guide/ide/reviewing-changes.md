@@ -1,13 +1,18 @@
 ---
-title: Rà soát thay đổi trong IDE
-description: Kiểm tra diff bên cạnh mã nguồn và dùng reviewer chỉ đọc để rà soát cây làm việc.
-locale: vi
-source_locale: zh-CN
-source_revision: a6badd5
-translation_status: draft
-translated_at: 2026-09-20
+title: "Rà soát thay đổi trong IDE"
+description: "Kiểm tra diff bên cạnh mã nguồn và dùng reviewer chỉ đọc để rà soát cây làm việc."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "a6badd5"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 70
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 IDE giúp bạn đọc nhanh bản tóm tắt và xem diff ngay cạnh mã nguồn, nhưng “thay đổi đã xuất hiện trong trình soạn thảo” không có nghĩa là đã được nghiệm thu. Hãy kiểm tra diff trước, chạy kiểm thử sau, rồi mới quyết định giữ lại những gì.

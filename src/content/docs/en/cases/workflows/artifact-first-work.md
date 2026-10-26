@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against currently verified files and artifacts, definition of done, and verify artifacts chapters in this handbook; page content focuses on the stable method of agreeing on deliverables first, then deriving steps."
+  checkedAt: "2026-07-26"
 title: Artifact-first work
 description: Agree on final artifact shape and path first, then derive steps—good for docs, config, reports, and other deliverables.
 locale: en
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: 'e57c215'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 **Artifact-first** means clarifying deliverable shape and location before Codex derives steps. It fits tasks with clear outputs—Markdown docs, OpenAPI, migration scripts, slide outlines—and can pair with [specification-driven work](/en/cases/workflows/specification-driven-work/).
@@ -45,7 +50,7 @@ For visual artifacts, request screenshots or preview notes—see [Verify artifac
 - Artifact paths don't match repo conventions (wrong directory)
 - Single file only, ignoring navigation and index updates
 - No sample reference—style feels disjointed
-- Binary artifacts (pptx/docx) without how to open and accept manually
+- Binary artifacts (pptx/docx) without instructions for opening and reviewing them manually
 
 ## Safety boundaries
 
@@ -58,10 +63,3 @@ For visual artifacts, request screenshots or preview notes—see [Verify artifac
 - [ ] Format matches reference sample
 - [ ] Links / TOC / frontmatter valid
 - [ ] Meets [Definition of done](/en/prompts/define-done/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified files and artifacts, definition of done, and verify artifacts chapters in this handbook; page content focuses on the stable method of agreeing on deliverables first, then deriving steps.

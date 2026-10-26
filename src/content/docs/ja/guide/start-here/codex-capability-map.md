@@ -3,12 +3,17 @@ title: 能力マップ
 description: プロンプト、ツール、拡張、マルチ Agent、ガバナンスなどの能力モジュールを俯瞰。
 locale: ja
 source_locale: zh-CN
-source_revision: 1a4cd98
+source_revision: "1a4cd98"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 7
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは能力モジュールと内容の基準となる章の所属のみを俯瞰。サイト内リンク、構造図、モジュールマッピングを再確認済み。本文は変わりやすい製品事実に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 ハンドブックのモジュールは多く、初見では散らかって見えがちです。このページでは主要な能力を 1 枚の図にまとめ、構造を素早く把握できるようにします。
@@ -65,9 +70,9 @@ Skills、MCP、Hooks、自動化は確かに強力ですが、解決するのは
 3. その後 [入門ガイド](/ja/guide/getting-started/) へ
 4. 詰まったら [基礎概念](/ja/guide/foundations/) と [学習パス](/ja/guide/learning-paths/) に戻る
 
-## モジュールと権威ある章
+## モジュールと内容の基準となる章
 
-| 能力 | 権威ある位置 |
+| 能力 | 参照先 |
 |---|---|
 | モデル、Agent、権限、サンドボックス | [基礎概念](/ja/guide/foundations/) |
 | 各入口の操作と実行方法 | [製品マニュアル](/ja/guide/) |
@@ -75,14 +80,7 @@ Skills、MCP、Hooks、自動化は確かに強力ですが、解決するのは
 | AGENTS.md と設定 | [カスタマイズ](/ja/guide/customization/) |
 | Skills、MCP、Plugin、自動化 | [拡張と自動化](/ja/skills/) |
 | 再利用可能な協業方法 | [ワークフロー方法](/ja/cases/workflows/) |
-| エンドツーエンドケース | [シーンケース](/ja/cases/use-cases/) |
+| エンドツーエンドケース | [用途別ケース](/ja/cases/use-cases/) |
 | 読む順序 | [学習パス](/ja/guide/learning-paths/) |
 
 拡張の選定マップは [拡張能力マップ](/ja/skills/capability-map/)、製品対照は [機能対照](/ja/guide/reference/feature-comparison/)。各入口の能力差は機能対照ページに記載。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは能力モジュールと権威ある章の所属のみを俯瞰。サイト内リンク、構造図、モジュールマッピングを再確認済み。本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

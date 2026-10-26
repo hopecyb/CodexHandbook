@@ -1,14 +1,15 @@
 ---
 legacyVerification:
   status: "verified"
-  basis: "Conferido com o sistema de estados atual do manual, várias rondas de revisão concluídas e o princípio de prioridade das fontes oficiais. Esta página descreve os critérios internos para elevar uma página a `verified` e os princípios de rebaixamento."
+  basis: "Conferido com o sistema de estados atual do manual, várias rodadas de revisão concluídas e o princípio de prioridade das fontes oficiais. Esta página descreve os critérios internos para elevar uma página a `verified` e os princípios de rebaixamento."
   checkedAt: "2026-07-26"
 title: Verificar conteúdo técnico
-description: Distingue estado editorial, consulta de fontes e execução de exemplos; regista âmbito, ambiente e provas.
+description: Distingue estado editorial, consulta de fontes e execução de exemplos; registra escopo, ambiente e provas.
 locale: pt
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: "cfb077d"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -32,7 +33,7 @@ Num manual técnico, isso é bem diferente:
 
 O que resolvemos aqui é como passar de «parece certo» para «há evidência de que ainda está certo».
 
-## O que a Verificação examina
+## O que a verificação examina
 
 «Verificar conteúdo técnico» significa: não basta checar se o texto flui — é confirmar que o leitor, seguindo o texto, ainda consegue fazer o que está escrito hoje.
 
@@ -60,15 +61,15 @@ Verificação não é perfeccionismo editorial — é evitar que o leitor tropec
 
 ### O estado editorial e o método de verificação são campos diferentes
 
-`editorialStatus` regista o progresso da escrita e revisão. `verification.kind` indica o tipo de verificação realmente efetuado; `verified` não permite concluir que um exemplo foi executado.
+`editorialStatus` registra o progresso da escrita e revisão. `verification.kind` indica o tipo de verificação realmente efetuado; `verified` não permite concluir que um exemplo foi executado.
 
 | Método de verificação | Conclusão permitida | Provas obrigatórias |
 |---|---|---|
 | `editorial` | Foram revistas a estrutura, a redação ou as referências internas | Resumo da verificação e data |
-| `source-checked` | Os factos no âmbito indicado coincidem com as fontes | Ligações para fontes específicas, resumo e data |
-| `run-tested` | O exemplo foi executado no ambiente registado | Ambiente, registos da execução e revisão, resumo e data |
+| `source-checked` | Os fatos no escopo indicado coincidem com as fontes | Ligações para fontes específicas, resumo e data |
+| `run-tested` | O exemplo foi executado no ambiente registrado | Ambiente, registros da execução e revisão, resumo e data |
 
-`run-tested` não garante o funcionamento em todas as plataformas. O resumo deve indicar o que foi e não foi verificado; uma autoverificação por cálculo independente não é uma revisão por uma segunda pessoa. Registos antigos sem provas continuam em `legacyVerification` e não implicam automaticamente nenhum novo estado de verificação.
+`run-tested` não garante o funcionamento em todas as plataformas. O resumo deve indicar o que foi e não foi verificado; uma autoverificação por cálculo independente não é uma revisão por uma segunda pessoa. Registros antigos sem provas continuam em `legacyVerification` e não implicam automaticamente nenhum novo estado de verificação.
 
 ```yaml
 editorialStatus: review
@@ -78,9 +79,9 @@ verification:
   summary: Estrutura e ligações internas verificadas; o exemplo ainda não foi executado.
 ```
 
-A consulta de fontes e as execuções usam uma lista `evidence`, cujos elementos contêm `label` e `href`. As execuções exigem ainda `environment`, indicando o sistema, a versão do cliente relevante e as versões das dependências. A compilação rejeita registos de execução sem ambiente ou ligações para provas. A mera existência de uma ligação não torna a prova suficiente: os responsáveis devem ler o registo.
+A consulta de fontes e as execuções usam uma lista `evidence`, cujos elementos contêm `label` e `href`. As execuções exigem ainda `environment`, indicando o sistema, a versão do cliente relevante e as versões das dependências. A compilação rejeita registros de execução sem ambiente ou ligações para provas. A mera existência de uma ligação não torna a prova suficiente: os responsáveis devem ler o registro.
 
-### Artigos da comunidade ajudam a entender, mas não substituem a Verificação factual
+### Artigos da comunidade ajudam a entender, mas não substituem a verificação factual
 
 Artigos comunitários ou outros materiais comunitários ajudam a descobrir temas a complementar.
 
@@ -104,16 +105,16 @@ volte à documentação oficial ou ao resultado real da execução atual.
 
 Verifique pela «cadeia operacional completa», não só pelo literal.
 
-## Checklist de Verificação
+## Checklist de verificação
 
 1. **Marcar o escopo**: produto (App/CLI/IDE/Cloud), SO, versão do CLI
 2. **Reproduzir passo a passo**: seguir do zero ou de um worktree limpo
-3. **Base oficial**: indicar fontes oficiais específicas para factos do produto; em exercícios de método estáveis, usar entradas reais e registos de verificação sem alegar um aval oficial inexistente
+3. **Base oficial**: indicar fontes oficiais específicas para fatos do produto; em exercícios de método estáveis, usar entradas reais e registros de verificação sem alegar um aval oficial inexistente
 4. **Fontes da comunidade**: se usar materiais comunitários, só como referência de tema; fatos pela oficial
 5. **Atualizar a data**: `verification.checkedAt` deve indicar apenas a data efetiva da verificação; não atualizar datas antigas em massa como se tivesse ocorrido uma nova revisão
 6. **Revisão independente**: `verified` deve, de preferência, ser confirmado por segunda pessoa (não o autor)
 
-## Ordem de Verificação
+## Ordem de verificação
 
 Esta ordem reduz falhas:
 

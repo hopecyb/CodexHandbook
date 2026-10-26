@@ -1,5 +1,5 @@
 <svg lang="ko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650" role="img" aria-labelledby="title desc">
-  <title id="title">Scheduled task 안전 실행 폐루프</title>
+  <title id="title">Scheduled task 안전 실행과 검증 과정</title>
   <desc id="desc">지속 가능한 작업을 정의하고 수동 검증한 다음 독립 작업 또는 채팅 내 작업, Web 컨텍스트 또는 데스크톱 로컬 프로젝트와 worktree를 선택합니다. 작업은 기본 샌드박스에서 무인 실행되고 결과는 Scheduled에 들어가 사람이 검토합니다. 문제가 있으면 프롬프트, 도구 또는 빈도를 조정하고, 변화가 없으면 종료하며, 고위험 쓰기 작업은 사람을 기다립니다.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; letter-spacing: 0; }
@@ -26,7 +26,7 @@
 
   <rect x="40" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="130" y="190" text-anchor="middle" class="label">1. 지속 가능한 작업 정의</text>
-  <text x="130" y="219" text-anchor="middle" class="note">입력 · 범위 · 인수 조건</text>
+  <text x="130" y="219" text-anchor="middle" class="note">입력 · 범위 · 완료 기준</text>
   <text x="130" y="243" text-anchor="middle" class="note">변화 없음 · 실패 · 중지</text>
   <text x="130" y="265" text-anchor="middle" class="tiny">매번 수행할 내용을 먼저 명확히 작성</text>
 

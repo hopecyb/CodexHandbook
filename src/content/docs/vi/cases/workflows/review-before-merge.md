@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo use cases code review / pull request công khai hiện tại trên OpenAI Developers, cùng các chương chất lượng, review diff và Cloud đã kiểm chứng của sổ tay; trang này chỉ xác nhận nguyên tắc ổn định “review có cấu trúc trước merge, review chỉ đọc và người ký cuối”.", "checkedAt": "2026-07-26"}
 title: Review trước khi merge
 description: Trước khi merge, dùng Codex làm review diff và rủi ro có cấu trúc — phân công người-máy rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: "78d5c03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Review trước khi merge** là đặt [chất lượng và kiểm chứng](/vi/guide/quality/) vào quy trình Git: trước khi merge PR, dùng Codex kiểm tra diff, test, bảo mật và đặc tả có khớp không. Comment tự động không thay cho merge tự động.
@@ -14,7 +15,7 @@ reviewed_at: 2026-08-26
 ## Trọng tâm trang này
 
 - Phân công review cục bộ vs Cloud/CI
-- Prompt review nên phủ những chiều nào
+- Prompt review nên phủ những tiêu chí nào
 - Khi nào bắt buộc người ký cuối
 
 ## Cách làm tối thiểu dùng được
@@ -35,9 +36,9 @@ Xuất checklist, gắn P0/P1.
 - Kết quả ghi vào PR comment hoặc check run
 - Xem [tự động hóa code review](/vi/guide/developer-platform/ci-cd/code-review-automation/)
 
-## Chiều review đề xuất
+## Tiêu chí review đề xuất
 
-| Chiều | Điểm chú ý |
+| Tiêu chí | Điểm chú ý |
 |---|---|
 | Tính đúng | Logic, biên, xử lý lỗi |
 | Test | Hành vi mới có bao phủ không |
@@ -50,7 +51,7 @@ Có thể dùng kèm [review diff](/vi/guide/quality/review-diffs/); mục rủi
 ## Lỗi thường gặp
 
 - Chỉ để model nói «LGTM» không căn cứ cụ thể
-- Dán nguyên mô tả PR chưa khử vào CI prompt (rủi ro injection)
+- Dán nguyên mô tả PR chưa xử lý nội dung không đáng tin cậy vào CI prompt (rủi ro injection)
 - Review đạt nhưng CI chưa chạy test
 - Bot merge tự động bật mà không bảo vệ nhánh
 
@@ -70,10 +71,3 @@ Có thể dùng kèm [review diff](/vi/guide/quality/review-diffs/); mục rủi
 
 - [Code review Cloud](/vi/guide/web-and-cloud/code-review/)
 - [Tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases code review / pull request công khai hiện tại trên OpenAI Developers, cùng các chương chất lượng, review diff và Cloud đã kiểm chứng của sổ tay; trang này chỉ xác nhận nguyên tắc ổn định “review có cấu trúc trước merge, review chỉ đọc và người ký cuối”.  
-**Kiểm chứng gần nhất:** 2026-07-26

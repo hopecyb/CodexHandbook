@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Cross-checked against OpenAI official image input and file upload materials for screenshot upload, annotation, file size, and privacy; no version-specific UI steps retained in body."
+  checkedAt: "2026-07-26"
 title: Images and Screenshots
 description: Provide screenshots and design inputs to Codex; manage image files in tasks.
 locale: en
 source_locale: zh-CN
-source_revision: adc2b88
+source_revision: 'adc2b88'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 20
 ---
@@ -119,10 +124,3 @@ For “implement from image” tasks:
 - Assume model reads Figma links without export
 
 Good screenshots are clear image, clear focus, clear expectation—not just “there is a picture.”
-
----
-
-**Status:** verified  
-**Products:** App / Cloud  
-**Verification basis:** Cross-checked against OpenAI official image input and file upload materials for screenshot upload, annotation, file size, and privacy; no version-specific UI steps retained in body.  
-**Last verified:** 2026-07-26

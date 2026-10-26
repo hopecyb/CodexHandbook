@@ -1,18 +1,23 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "OpenAI bestätigt die IDE-Erweiterung weiterhin als formalen Einstieg; diese Seite teilt IDE-Probleme in „keine Reaktion / Login / Workspace und Kontext“ — stabiles Fehlerbehebungsgerüst, kein Handbuch für spezifische Fehlercodes."
+  checkedAt: "2026-07-26"
 title: IDE-Fehlerbehebung
 description: Probleme beim Laden der Erweiterung, Kontext und Synchronisation.
 locale: de
 source_locale: zh-CN
-source_revision: ebb21de
+source_revision: "ebb21de"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 90
 ---
 
-IDE-Fehlerbehebung unterscheidet sich von der CLI:  
-Viele Symptome wirken wie „Plugin kaputt“, sind aber oft **Workspace, Login-Status oder Editor-Kontext** schief.
+IDE-Fehlerbehebung unterscheidet sich von der CLI:
+Viele Symptome wirken wie eine defekte Erweiterung. Häufig liegt die Ursache jedoch bei **Workspace, Anmeldestatus oder Editor-Kontext**.
 
 Bei IDE-Problemen zuerst trennen: „Erweiterung startet nicht“ vs. „Erweiterung läuft, aber der Kontext stimmt nicht“.
 
@@ -51,7 +56,7 @@ Zuerst prüfen:
 
 Viele Probleme sind hier schon lokalisiert.
 
-## Prüfpflichtreihenfolge
+## Reihenfolge der Fehlersuche
 
 1. Reagiert die Erweiterung?
 2. Login-Status bestätigen
@@ -60,11 +65,4 @@ Viele Probleme sind hier schon lokalisiert.
 
 Häufigste Ursachen der IDE-Fehlerbehebung: Workspace, Login oder Kontextquelle — nicht zwingend kaputte Erweiterung.
 
-Official: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** IDE  
-**Prüfgrundlage:** OpenAI bestätigt die IDE-Erweiterung weiterhin als formalen Einstieg; diese Seite teilt IDE-Probleme in „keine Reaktion / Login / Workspace und Kontext“ — stabiles Fehlerbehebungsgerüst, kein Handbuch für spezifische Fehlercodes.  
-**Zuletzt geprüft:** 2026-07-26
+Offizielle Hinweise: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).

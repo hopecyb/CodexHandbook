@@ -12,8 +12,9 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: pt
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: "f60dbb5"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 A aprovação deve corresponder a uma ação específica e a seus efeitos. A autorização da tarefa diz o que o usuário quer concluir; a aprovação da ferramenta determina se uma ação pode ocorrer no ambiente atual. Escrever arquivo, executar comando ou acessar a rede não exige perguntar a cada vez por natureza. O comportamento depende do escopo autorizado, da política de ferramentas e do sandbox. Veja a [orientação oficial](https://learn.chatgpt.com/docs/agent-approvals-security).

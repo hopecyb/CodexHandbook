@@ -13,7 +13,7 @@ editorialStatus: review
 verification:
   kind: source-checked
   checkedAt: '2026-09-18'
-  summary: 自作の合成資料3点と重要な事実7件を項目ごとに照合し、構造チェックに合格した。筆者による自己確認であり、実際のモデルとの比較実験や二人目の人間によるレビューは行っていない。
+  summary: 自作の合成資料3点と重要な事実7件を項目ごとに照合し、構造チェックに合格した。筆者による自己確認であり、実際のモデルを使った比較実験や二人目の人間によるレビューは行っていない。
   evidence:
     - label: 製品説明（合成資料）
       href: /downloads/source-backed-article/sources/01-product.md
@@ -36,9 +36,10 @@ next:
   label: 記事をスライドにする
 locale: ja
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: "e2bb5ea"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 目標は、重要な事実をすべて資料にたどれる中国語の短い記事。矛盾する記述を扱い、資料が支える内容、筆者の推論、未確認事項を区別して、意図的に誤りを入れた初稿を修正する。
@@ -100,7 +101,7 @@ claim_id,article_section,claim,source_id,locator,evidence_type,confidence_note
 |---|---|---|
 | 「PDF とさまざまな画像に対応」 | Markdown とプレーンテキストに限定 | P1 が入力範囲を明示 |
 | 「完全オフライン、診断は既定でオフ」 | 矛盾を併記し未確認の問いにする | P3/C2 が逆の記述で、送信項目も不明 |
-| 「小林が精度と時間短縮を証明」 | 合成の身分を保ち、効果の数値を示さない | I3 に計測や固定評価サンプルがない |
+| 「小林が精度と時間短縮を証明」 | 合成インタビューであることを明示し、効果の数値を示さない | I3 に計測や固定評価サンプルがない |
 | 「万能で簡単に効率向上」 | 具体的な入力、操作、確認に変える | 新しい事実を加えず誇張を減らす |
 
 [修正差分](/downloads/source-backed-article/solution/revision.diff)と[修正メモ](/downloads/source-backed-article/solution/revision-notes.md)を参照。間違った能力を残したまま文体だけ整えても完了ではない。

@@ -8,10 +8,10 @@ title: Modèle de compréhension
 description: Construire une vision commune avant de modifier.
 locale: fr
 source_locale: zh-CN
-source_revision: 228971d
+source_revision: "228971d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -51,7 +51,7 @@ Il faut aussi :
 
 ### 2. Pas besoin de tout le détail d'un coup
 
-La ligne directrice avant l'excavation complète.
+Comprendre d’abord le fonctionnement général est plus utile que d’explorer tous les détails d’un coup.
 
 Le modèle sert à **resserrer** la prochaine tâche.
 

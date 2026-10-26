@@ -3,15 +3,16 @@ title: Créer un Codex Pet
 description: "Comprendre la création d'un Codex Pet à travers les assets, la spritesheet, les métadonnées et les licences."
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 57e9aca
+source_revision: '57e9aca'
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
   checkedAt: "2026-09-18"
   summary: "Les limites de format et de récupération ont été précisées, mais aucune installation, animation ou désinstallation n’a été testée ici avec un client et un paquet Pet précis. Vérifiez dossiers et menus dans la version cible."
+reviewed_at: '2026-10-26'
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
@@ -72,7 +73,7 @@ Recommandations :
 - Décrire clairement le pet dans `description`.
 - Conservez l’auteur, la version, la source et la licence dans le README ou le fichier LICENSE du paquet ; ne supposez pas que le client accepte des champs supplémentaires arbitraires.
 
-`pet.json` ne stocke pas l'animation. Il dit au client qui est le paquet, où se trouvent les assets et comment les interpréter.
+`pet.json` ne stocke pas l'animation. Il indique au client l’identité du paquet, l’emplacement des ressources et la manière de les interpréter. Des chemins, noms de fichiers ou structures de dossiers incohérents empêchent généralement le chargement.
 
 ## Vérification locale
 
@@ -83,7 +84,7 @@ Avant publication ou partage, vérifiez au minimum :
 - La taille et la grille de la spritesheet respectent le contrat actuel.
 - Les animations ne sautent pas, ne dérivent pas et ne sont pas coupées.
 - Le fond transparent est propre.
-- Le paquet ne contient pas de fichiers temporaires ou d'assets qui ne doivent pas être publiés.
+- Le paquet ne contient pas de fichiers temporaires, d’images source ou de ressources qui ne doivent pas être publiées.
 
 ## Licence et sources
 

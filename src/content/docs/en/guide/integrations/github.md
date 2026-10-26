@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud / App / CLI"
+  basis: "OpenAI Developers Codex use cases still include \"Review GitHub pull requests\"; Help Center plugin/integration guidance emphasizes external repo access depends on underlying app permissions, role access, and action boundaries. This page summarizes collaboration placement and local vs Cloud code visibility differences—not a fixed capability matrix."
+  checkedAt: "2026-07-26"
+sidebar:
+  order: 10
 title: GitHub integration
 description: Repo connection, PRs, review, and CI—where Codex sits in GitHub workflows.
 locale: en
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: 'ece7161'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 GitHub is Codex's most common collaboration surface: Cloud tasks, PR review, Actions, and local push all share branches and permissions.
@@ -36,7 +43,7 @@ Even if you are not a senior developer, start with what it handles:
 
 - Protect main by default; Codex pushes feature branches only
 - PR must link issue; description includes test notes
-- Codex must not merge PRs unless release bot is explicitly authorized
+- Codex must not merge PRs unless explicitly authorized by the release bot
 - Secrets in GitHub Secrets / environment secrets—not in prompts
 ```
 
@@ -92,15 +99,9 @@ GitHub integration is about fitting Codex into existing code collaboration.
 
 ## Common mistakes
 
-- Cloud task assumes unpushed local changes exist
+- Cloud task assumes uncommitted local changes exist
 - Letting Codex execute unsanitized instructions in PR descriptions (prompt injection)
 - Mixing formatting and feature changes in one PR
 
 ## References
 - OpenAI Codex GitHub integration documentation
----
-
-**Status:** verified  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** OpenAI Developers Codex use cases still include "Review GitHub pull requests"; Help Center plugin/integration guidance emphasizes external repo access depends on underlying app permissions, role access, and action boundaries. This page summarizes collaboration placement and local vs Cloud code visibility differences—not a fixed capability matrix.  
-**Last verified:** 2026-07-26

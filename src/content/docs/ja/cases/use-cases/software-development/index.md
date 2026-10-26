@@ -3,10 +3,15 @@ title: ソフトウェア開発
 description: コード変更、バグ修正、検証事例の入口——範囲制御、テスト、ロールバック。
 locale: ja
 source_locale: zh-CN
-source_revision: a3d7f4c
+source_revision: "a3d7f4c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本リポジトリの現行ソフトウェア開発事例入口と開発ワークフロー、テスト実行、ロールバック章を照合。開発事例グループの入口と焦点のみ。
+  checkedAt: '2026-07-26'
 ---
 
 ソフトウェア開発の事例は次の問いに焦点を当てます。
@@ -22,10 +27,3 @@ reviewed_at: 2026-08-26
 - タスク範囲をどう明確に伝えるか
 - なぜ最初から検証とロールバック経路が重要か
 - 実開発での「ついでに」余計な変更を避ける
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本リポジトリの現行ソフトウェア開発事例入口と開発ワークフロー、テスト実行、ロールバック章を照合。開発事例グループの入口と焦点のみ。

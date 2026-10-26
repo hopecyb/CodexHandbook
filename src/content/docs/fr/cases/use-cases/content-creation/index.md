@@ -3,10 +3,15 @@ title: Création de contenu
 description: Point d'entrée des cas de documentation, d'articles et d'actifs de contenu — revue, réécriture et validation des livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5ad38bb
+source_revision: '5ad38bb'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec l'entrée content-creation actuelle du dépôt et les chapitres sur les livrables de contenu et la revue ; cette page décrit uniquement les questions et l'entrée du groupe de cas création de contenu.
+  checkedAt: '2026-07-26'
 ---
 
 Les cas de création de contenu portent surtout sur ce scénario :
@@ -21,11 +26,4 @@ Les cas de création de contenu portent surtout sur ce scénario :
 
 - Comment modifier du contenu multi-fichiers par lots
 - Comment éviter que la réécriture ne se limite à « développer »
-- Comment build, revue et re-vérification forment une boucle fermée
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec l'entrée content-creation actuelle du dépôt et les chapitres sur les livrables de contenu et la revue ; cette page décrit uniquement les questions et l'entrée du groupe de cas création de contenu.
+- Comment articuler compilation, revue et vérification finale

@@ -3,12 +3,17 @@ title: IDE トラブルシューティング
 description: 拡張の読み込み、コンテキスト、同期の問題。
 locale: ja
 source_locale: zh-CN
-source_revision: ebb21de
+source_revision: "ebb21de"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: OpenAI の現行ヘルプセンターでは IDE extension を正式な入口の一つとして確認している。本ページは「拡張無応答 / ログイン状態 / ワークスペースとコンテキスト」の 3 種類で IDE 問題を分岐する安定したフレームワークであり、特定のエラーコード集ではない。
+  checkedAt: "2026-07-26"
 ---
 
 IDE のトラブルシューティングは CLI とは異なります。  
@@ -22,7 +27,7 @@ IDE で問題が出たら、まず「拡張が起動していない」のか、�
 | ログイン状態が失われた | 再認証 |
 | コンテキストがおかしい | 開いているワークスペースのルートを確認 |
 
-## まず 3 類に分ける
+## まず 3 種類に分ける
 
 - **まったく反応しない**：多くは拡張の読み込み問題
 - **開けるが使えない**：多くはログインまたは認証の問題
@@ -61,10 +66,3 @@ IDE で問題が出たら、まず「拡張が起動していない」のか、�
 IDE トラブルシューティングで最も多い根本原因は、ワークスペース、ログイン、コンテキストの出所のずれであり、必ずしもプラグインの破損ではありません。
 
 公式ドキュメントは [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
-
----
-
-**状態：** verified  
-**対象製品：** IDE  
-**検証根拠：** OpenAI の現行ヘルプセンターでは IDE extension を正式な入口の一つとして確認している。本ページは「拡張無応答 / ログイン状態 / ワークスペースとコンテキスト」の 3 類で IDE 問題を分岐する安定したフレームワークであり、特定のエラーコード集ではない。  
-**最終検証：** 2026-07-26

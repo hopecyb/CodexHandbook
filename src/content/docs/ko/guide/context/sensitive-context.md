@@ -3,12 +3,17 @@ title: 민감 컨텍스트
 description: 키, 개인정보, 공유하면 안 되는 자료.
 locale: ko
 source_locale: zh-CN
-source_revision: a83db07
+source_revision: 'a83db07'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 민감 정보 최소화와 마스킹 원칙만 설명합니다. 개념·위험 예시·처리 제안을 재검토했으며, 본문은 변동하기 쉬운 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 함부로 보이거나, 복사되거나, 외부로 나가거나, 작업 기록에 오래 남기 싫은 내용은 먼저 민감 정보로 다루세요.
@@ -111,10 +116,3 @@ Codex에 주지 마세요(연습·프로덕션):
 3. 조직 절차에 따라 보고하고 보완
 
 문제를 풀 때는 기본으로 “점검에 필요한 최소 정보”만 주세요. 마스킹할 수 있으면 마스킹하고, 자리 표시자를 쓸 수 있으면 쓰세요.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 민감 정보 최소화와 마스킹 원칙만 설명합니다. 개념·위험 예시·처리 제안을 재검토했으며, 본문은 변동하기 쉬운 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

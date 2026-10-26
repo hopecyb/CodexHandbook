@@ -8,13 +8,13 @@ title: Premiers pas
 description: Du compte et de l'installation à une première tâche vérifiable.
 locale: fr
 source_locale: zh-CN
-source_revision: 62fb65d
-translation_status: draft
+source_revision: "62fb65d"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 4
+reviewed_at: '2026-10-26'
 ---
-
 L'objectif est d'accomplir une première tâche dans un **projet d'entraînement sûr**, puis d'apprendre à examiner, accepter, corriger ou annuler le résultat.
 
 Le parcours par défaut utilise l'**application de bureau**. Si vous préférez le terminal ou un éditeur, les pages d'installation restent adaptées ; l'exemple de première tâche précise les différences éventuelles.

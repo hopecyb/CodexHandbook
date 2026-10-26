@@ -3,14 +3,17 @@ title: Paramètres
 description: Configurez le comportement quotidien de l'App de bureau, ses raccourcis, ses notifications et son apparence.
 locale: fr
 source_locale: zh-CN
-source_revision: 7a6d2fe
+source_revision: "7a6d2fe"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 ---
-
 Les paramètres personnalisent le comportement de l'App. Ils ne constituent pas toute la configuration des autorisations Codex. Conservez d'abord les valeurs par défaut et ne modifiez un réglage qu'après en avoir compris la portée.
 
 Appuyez sur `Cmd + ,` sous macOS ou `Ctrl + ,` sous Windows, ou ouvrez Settings depuis le menu de l'application.
@@ -55,11 +58,3 @@ Ne modifiez qu'une catégorie de paramètres à la fois et vérifiez-la avec une
 - [Paramètres de l'App de bureau ChatGPT](https://learn.chatgpt.com/docs/app/settings)
 - [Principes de configuration Codex](https://learn.chatgpt.com/docs/config)
 - [Autorisations](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** App
-
-**Dernière vérification :** 2026-08-26

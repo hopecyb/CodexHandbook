@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Đã đối chiếu chéo các chương chạy test, định nghĩa hoàn thành, sửa Bug kèm kiểm chứng và quy tắc lệnh đã kiểm chứng của sổ tay; nội dung trang tập trung phương pháp test ổn định “để test thất bại trước, rồi dẫn dắt pass bằng triển khai tối thiểu”.", "checkedAt": "2026-07-26"}
 title: Làm việc theo test
 description: Định nghĩa hoặc bổ sung test thất bại trước, rồi dẫn dắt triển khai — để thay đổi của Codex nghiệm thu khách quan được.
 locale: vi
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Làm việc theo test** (TDD hoặc “test trước”) là để test thất bại trước, rồi bằng triển khai tối thiểu đưa nó sang pass. Phù hợp kho đã có nền tảng test, và liên quan trực tiếp các kịch bản như [sửa Bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/).
@@ -22,7 +23,7 @@ reviewed_at: 2026-08-26
 - Kho đã có unit/integration test
 - Bug hồi quy, đổi hành vi API, refactor
 
-Kịch bản không phù hợp gồm: nguyên mẫu chưa có nền tảng test, sửa một lần trên site copy thuần. Những tác vụ đó nên dùng [EPXV](/vi/cases/workflows/explore-plan-execute-verify/) để người kiểm chứng.
+Kịch bản không phù hợp gồm: nguyên mẫu chưa có nền tảng test, sửa một lần trên trang web chỉ có nội dung văn bản. Những tác vụ đó nên dùng [EPXV](/vi/cases/workflows/explore-plan-execute-verify/) để người kiểm chứng.
 
 ## Cách làm tối thiểu dùng được
 
@@ -73,10 +74,3 @@ Kết hợp [chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-befo
 
 - [Chạy test](/vi/guide/quality/run-tests/)
 - [Case: sửa Bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / IDE  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương chạy test, định nghĩa hoàn thành, sửa Bug kèm kiểm chứng và quy tắc lệnh đã kiểm chứng của sổ tay; nội dung trang tập trung phương pháp test ổn định “để test thất bại trước, rồi dẫn dắt pass bằng triển khai tối thiểu”.  
-**Kiểm chứng gần nhất:** 2026-07-26

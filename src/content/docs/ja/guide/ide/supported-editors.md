@@ -3,12 +3,17 @@ title: 対応エディタ
 description: VS Code 互換拡張、Xcode 統合、JetBrains 統合を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: 7b82896
+source_revision: "7b82896"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 現在の公式 IDE ページを照合し、VS Code、Cursor、Windsurf、VS Code Insiders、Xcode、JetBrains IDEs の具体的な入口を確認しました。各統合の機能が完全に同じだとは仮定していません。
+  checkedAt: "2026-08-26"
 ---
 
 Codex は現在、異なる方法で主要なエディタに統合されます。VS Code 系では Codex 拡張を使い、Xcode と JetBrains IDE ではそれぞれの統合入口を使います。
@@ -53,13 +58,3 @@ Codex は現在、異なる方法で主要なエディタに統合されます�
 まず [Codex CLI](/ja/guide/cli/) または[デスクトップ App](/ja/guide/desktop-app/)を使ってください。VS Code の拡張パッケージを互換性のないエディタへ無理にインストールしたり、サードパーティ統合を OpenAI の公式機能だとみなしたりしないでください。
 
 インストール手順は [IDE 統合をインストールする](/ja/guide/getting-started/install-ide-extension/)、コンテキストの使い方は[エディタのコンテキスト](/ja/guide/ide/editor-context/)を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** IDE
-
-**検証根拠：** 現在の公式 IDE ページを照合し、VS Code、Cursor、Windsurf、VS Code Insiders、Xcode、JetBrains IDEs の具体的な入口を確認しました。各統合の機能が完全に同じだとは仮定していません。
-
-**最終検証：** 2026-08-26

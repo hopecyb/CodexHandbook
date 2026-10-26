@@ -10,9 +10,10 @@ sidebar:
   order: 30
 locale: ko
 source_locale: zh-CN
-source_revision: 974842f
-translation_status: draft
+source_revision: '974842f'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 이 핸드북에서 말하는 ‘데스크톱 App’은 현재 **ChatGPT 데스크톱 App 안의 Codex 작업 공간**을 뜻합니다. 공식적으로 macOS, Windows, Linux 버전이 제공됩니다.
@@ -29,7 +30,7 @@ translated_at: 2026-09-20
 
 ## 설치 후 최소 점검
 
-비밀 키가 없는 연습용 디렉터리를 준비하고 다음을 확인합니다.
+민감 정보가 없는 연습용 디렉터리를 준비하고 다음을 확인합니다.
 
 - App이 정상적으로 열리고 현재 계정 또는 작업 공간이 표시됩니다.
 - 해당 디렉터리를 열거나 프로젝트에 파일을 추가할 수 있습니다.

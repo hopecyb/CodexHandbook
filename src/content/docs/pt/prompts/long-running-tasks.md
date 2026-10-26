@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só descreve divisão de tarefas longas e transferência; links e exemplos de fases foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Prompts para tarefas longas
 description: Divida em fases, checkpoints e informação de transferência.
 locale: pt
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: "450ed9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Falhas habituais em tarefas longas:
@@ -42,9 +47,9 @@ Se tudo for «faça tudo de uma vez», o risco sobe de forma clara.
 
 ## Mal-entendidos comuns
 
-### 1. Tarefa longa ≠ tarefa curta com mais detalhe
+### 1. tarefa longa ≠ tarefa curta com mais detalhe
 
-Tarefas longas pedem **gestão por fases**, não só mais contexto.
+tarefas longas pedem **gestão por fases**, não só mais contexto.
 
 ### 2. Listar fases ainda não basta
 
@@ -79,10 +84,3 @@ Fase 4: resuma mudanças, riscos e recomendações seguintes
 O melhor é poder parar e inspecionar em cada fase — não fazer tudo de um fôlego.
 
 Combinar com: [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/) · [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve divisão de tarefas longas e transferência; links e exemplos de fases foram revistos; o corpo não depende de factos voláteis do produto.

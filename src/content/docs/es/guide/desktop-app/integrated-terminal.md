@@ -7,13 +7,13 @@ title: Terminal integrado
 description: Ejecuta comandos en el proyecto o worktree actual y comprueba los resultados de la tarea con la salida real.
 locale: es
 source_locale: zh-CN
-source_revision: 727e93e
-translation_status: draft
+source_revision: "727e93e"
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 60
+reviewed_at: 2026-10-25
 ---
-
 Cada conversación de la aplicación de escritorio ChatGPT tiene un terminal cuyo ámbito es el proyecto o worktree actual. No sirve solo para «ver registros»: también es la ventana de evidencias con la que compruebas las conclusiones de Codex.
 
 Puedes abrirlo desde el icono del terminal, en la esquina superior derecha de la aplicación, o pulsando `Ctrl` y la tecla de acento grave a la vez. ChatGPT puede leer la salida del terminal actual, así que también puedes pedirle que analice una compilación fallida o un servidor de desarrollo en ejecución.

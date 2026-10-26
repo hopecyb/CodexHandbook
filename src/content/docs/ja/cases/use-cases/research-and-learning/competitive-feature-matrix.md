@@ -1,12 +1,20 @@
 ---
-title: "事例: 競合機能マトリクス"
+title: '事例: 競合機能マトリクス'
 description: 出典付き調査と表出力——非エンジニアも再利用できるワークフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: "b74008b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+caseCategory: creation
+directoryOrder: 85
+contentType: case
+legacyVerification:
+  status: verified
+  products: App / CLI
+  basis: 本ハンドブックの検証済み出典付き調査、ウェブ検索、出典検証、バージョンポリシー章と照合。出典付き競合マトリクスの安定した調査事例構造のみ。特定価格や製品バージョンは固定しない。
+  checkedAt: '2026-07-26'
 ---
 
 ## メタデータ
@@ -20,7 +28,7 @@ reviewed_at: 2026-08-26
 
 ## 1. 目標とコンテキスト
 
-**目標：** 3〜5 競合の比較表（機能、価格シグナル、適合性）を作り、各結論に出典を付ける。
+**目標：** 3〜5 競合の比較表（機能、価格に関する情報、用途）を作り、各結論に出典を付ける。
 
 **成功基準：**
 
@@ -39,7 +47,7 @@ reviewed_at: 2026-08-26
 
 ```text
 ベンダー A/B/C の「チーム協業」機能を比較：
-各次元 1〜2 文 + 出典 URL；
+各比較項目について 1〜2 文 + 出典 URL；
 ブログより公式ドキュメントを優先；
 価格は検証不能なら「要確認」；
 Markdown 表を出力。他のリポジトリファイルは変更しない。
@@ -52,19 +60,12 @@ Markdown 表を出力。他のリポジトリファイルは変更しない。
 - 矛盾する出典：両方提示。一つの物語に無理にまとめない
 - コンテキスト過長：「まず A vs B、その後 C を追加」に分割
 
-## 5. 定着（キャプチャ）
+## 5. 知見の蓄積
 
 - 比較表テンプレートをチームテンプレートディレクトリまたはナレッジベースに保存
-- 任意 Skill：`source-backed-research`
+- Skill としてまとめる場合：`source-backed-research`
 
 ## 6. 関連章
 
 - [成果物ファーストの作業](/ja/cases/workflows/artifact-first-work/)
 - [出典を検証する](/ja/guide/quality/validate-sources/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの検証済み出典付き調査、ウェブ検索、出典検証、バージョンポリシー章と照合。出典付き競合マトリクスの安定した調査事例構造のみ。特定価格や製品バージョンは固定しない。

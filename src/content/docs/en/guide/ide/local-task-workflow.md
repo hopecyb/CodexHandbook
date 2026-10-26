@@ -11,9 +11,10 @@ sidebar:
   order: 50
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: 0264d4d
+source_revision: '0264d4d'
 ---
 
 A local IDE task follows an **open → select → describe → review → test** loop. It suits frequent, small changes. This page gives a common practical path; for context details, see [selected code and open files](/en/guide/ide/selected-code-and-open-files/).

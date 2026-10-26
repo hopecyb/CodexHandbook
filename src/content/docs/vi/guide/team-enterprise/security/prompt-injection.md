@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Mọi nền tảng"
+  basis: "Tài liệu plugin và truy cập ngoài OpenAI vẫn nhấn mạnh kiểm soát nội dung ngoài, truy cập web, dữ liệu ứng dụng ngoài và hành động rủi ro cao qua quyền và xác nhận; Prompt injection định nghĩa ở đây là văn bản không đáng tin làm đổi hành vi Agent, kèm nhận diện, chỉ đọc và giảm thiểu bằng phê duyệt của người."
+  checkedAt: "2026-07-26"
 title: Prompt injection
 description: "Khi văn bản không đáng tin vào Ngữ cảnh — nhận diện, giảm thiểu và điểm chính sách đội."
 locale: vi
 source_locale: zh-CN
-source_revision: 3e44fdf
+source_revision: "3e44fdf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -42,16 +47,16 @@ Chú ý:
 - Đột ngột «bỏ qua quy tắc trước»
 - Tác vụ review mã lệch sang dump secrets, system prompt hoặc biến môi trường
 - Yêu cầu lạc đề lên mạng, tải xuống hoặc chạy thêm lệnh
-- Văn xuôi buôn lậu chỉ dẫn vận hành
+- Văn bản trông như lời giải thích nhưng lén đưa ra chỉ dẫn thao tác cho Agent
 
-Nếu giống «mô tả vấn đề» hơn là «điều khiển trợ lý», hãy thận trọng.
+Nếu nội dung giống «điều khiển trợ lý» hơn là «mô tả vấn đề», hãy cảnh giác.
 
 ## Khi nội dung trông đáng ngờ
 
 1. Tạm dừng — đừng mù quáng làm theo hành động được yêu cầu
 2. Coi là **đầu vào không đáng tin**, không phải Tác vụ chính mới
 3. Quay về mục tiêu gốc; kiểm tra mức liên quan
-4. Nếu secrets, quyền vượt mức, mạng, xuất dữ liệu hoặc lệnh thêm — mặc định xác nhận người
+4. Nếu secrets, quyền vượt mức, mạng, xuất dữ liệu hoặc lệnh thêm — mặc định chuyển sang bước xác nhận của con người
 
 Tạm dừng trước. Nhiều sự cố là người và Agent cứ tiếp tục trên văn bản đáng ngờ.
 
@@ -98,7 +103,7 @@ Tách:
 - **Mục tiêu Tác vụ**: điều bạn tường minh muốn Codex làm
 - **Đầu vào ngoài**: issue, web, tài liệu, thân PR thấy khi chạy
 
-Cái trước là sợi chỉ; cái sau mặc định đáng ngờ.
+Mục tiêu tác vụ là định hướng chính; đầu vào bên ngoài cần được xem xét thận trọng.
 
 ## Nguyên tắc CI tối thiểu
 
@@ -126,9 +131,3 @@ Cái trước là sợi chỉ; cái sau mặc định đáng ngờ.
 ## Nguồn tham chiếu
 - OWASP LLM Top 10 (Prompt Injection)
 - Định hướng bảo mật chính thức OpenAI
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** Mọi nền tảng  
-**Cơ sở kiểm chứng:** Tài liệu plugin và truy cập ngoài OpenAI vẫn nhấn mạnh kiểm soát nội dung ngoài, truy cập web, dữ liệu ứng dụng ngoài và hành động rủi ro cao qua quyền và xác nhận; Prompt injection định nghĩa ở đây là văn bản không đáng tin làm đổi hành vi Agent, kèm nhận diện, chỉ đọc và giảm thiểu bằng phê duyệt của người.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -23,9 +23,10 @@ next:
   label: Continue with a weekly sales report
 locale: en
 source_locale: zh-CN
-source_revision: cc1139b
-translation_status: draft
+source_revision: 'cc1139b'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 ## Prerequisites

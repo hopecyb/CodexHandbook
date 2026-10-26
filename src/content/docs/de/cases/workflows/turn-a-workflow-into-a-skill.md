@@ -3,13 +3,19 @@ title: Einen Workflow als Skill verfestigen
 description: "Beim dritten Mal lohnt sich ein Skill — Trigger, Anleitung und Abnahme in einem Paket."
 locale: de
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE"
+  basis: Kreuzgeprüft gegen aktuelle öffentliche Use Cases „Save workflows as skills“ bei OpenAI Developers sowie die bereits geprüften Kapitel zu Skills, Automatisierung, Befehlsregeln und Erweiterungsrisiken.
+    Der Inhalt beschränkt sich auf stabile Methoden „wann wiederkehrende Abläufe als Skill verstetigen und wie Anleitung plus Abnahme organisieren“.
+  checkedAt: '2026-07-26'
 ---
 
-Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dritten Mal** per Copy-Paste-Prompt erledigt wird, ist ein [Skill](/de/skills/overview/) fällig. Dieses Kapitel verbindet [Workflow-Methoden](/de/cases/workflows/) mit dem Erweiterungssystem.
+Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dritten Mal** per Copy-Paste-Prompt erledigt wird, solltest du einen [Skill](/de/skills/overview/) in Betracht ziehen. Dieses Kapitel verbindet [Workflow-Methoden](/de/cases/workflows/) mit dem Erweiterungssystem.
 
 ## Welches Problem löst diese Seite
 
@@ -22,7 +28,7 @@ Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dri
 - Feste Schritte + feste Abnahme-Checkliste
 - Referenz auf Vorlagen oder Skripte im Repository nötig
 - Mehrere Personen brauchen konsistentes Verhalten
-- Das Modell soll den Ablauf bei verwandten Aufgaben **automatisch erinnern**
+- Das Modell soll bei verwandten Aufgaben **automatisch auf diesen Ablauf zurückgreifen**
 
 Nicht verstetigen: einmalige Erkundung, kleine Fixes stark abhängig vom Tageskontext.
 
@@ -53,7 +59,7 @@ Vergleich mit [Abläufe automatisieren](/de/skills/automations/scheduled-tasks/)
 - Skill länger als `AGENTS.md` zu lesen
 - Keine Abnahme-Checkliste → Qualitätsdrift
 - Skripte brauchen lokale Secrets ohne SECURITY-Hinweis
-- Widerspruch zu Hook-Regeln
+- Doppelte oder widersprüchliche Regeln im Verhältnis zu Hooks
 
 ## Sicherheitsgrenzen
 
@@ -69,9 +75,3 @@ Vergleich mit [Abläufe automatisieren](/de/skills/automations/scheduled-tasks/)
 
 ## Referenzquellen
 - Im Repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) und [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases „Save workflows as skills“ bei OpenAI Developers sowie die bereits geprüften Kapitel zu Skills, Automatisierung, Befehlsregeln und Erweiterungsrisiken. Der Inhalt beschränkt sich auf stabile Methoden „wann wiederkehrende Abläufe als Skill verstetigen und wie Anleitung plus Abnahme organisieren“.  
-**Zuletzt geprüft:** 2026-07-26

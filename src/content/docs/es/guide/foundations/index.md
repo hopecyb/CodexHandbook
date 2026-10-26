@@ -3,15 +3,20 @@ title: Fundamentos
 description: Construye un lenguaje común sobre modelos, Agent, herramientas, permisos y verificación.
 locale: es
 source_locale: zh-CN
-source_revision: b4d4b2b
+source_revision: 'b4d4b2b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 3
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica la estructura y el orden de lectura del capítulo de fundamentos; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos volátiles como versión de producto, precio o interfaz.
+  checkedAt: '2026-07-26'
 ---
 
-Esta sección reúne los conceptos básicos que el handbook usa una y otra vez. Las diferencias de interfaz de producto están en [Guías de producto](/es/guide/); las técnicas de Prompt, en [Capacidades principales](/es/guide/).
+Esta sección reúne los conceptos básicos que el manual usa una y otra vez. Las diferencias de interfaz de producto están en [Guías de producto](/es/guide/); las técnicas de Prompt, en [Capacidades principales](/es/guide/).
 
 Este bloque explica sobre todo cómo trabaja Codex y cómo colaborar con él.
 
@@ -66,11 +71,4 @@ Si no quieres leer el capítulo entero de golpe, empieza por estas páginas:
 4. [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
 5. [Verificación y revisión humana](/es/guide/foundations/verification-and-human-review/)
 
-Con estas claras, ya tienes base para el uso diario.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la estructura y el orden de lectura del capítulo de fundamentos; se revisaron enlaces internos y formulaciones conceptuales, y el cuerpo no depende de hechos volátiles como versión de producto, precio o interfaz.  
-**Última verificación:** 2026-07-26
+Si entiendes estas páginas, ya tienes una base para el uso diario.

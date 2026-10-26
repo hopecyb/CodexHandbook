@@ -3,10 +3,16 @@ title: Spezifikationsgetriebene Arbeit
 description: Zuerst eine abnahmefähige Spezifikation schreiben, dann Codex nach Plan umsetzen lassen — geeignet für klar umrissene Lieferaufgaben.
 locale: de
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Brainstorming, EPXV, testgetriebener Arbeit und `AGENTS.md`. Der Inhalt beschränkt sich auf die stabile Arbeitsweise „zuerst abnahmefähige Spezifikation,
+    dann nach Spezifikation ausführen“.
+  checkedAt: '2026-07-26'
 ---
 
 **Spezifikationsgetrieben** heißt: Vor vielen Dateiänderungen eine kurze Spezifikation anlegen — Ziel, Umfang, Schnittstellen und Akzeptanzkriterien. Kann nach [Brainstorming](/de/cases/workflows/brainstorm-before-building/) folgen oder bei bereits geklärten Anforderungen direkt in [EPXV](/de/cases/workflows/explore-plan-execute-verify/) einsteigen.
@@ -78,10 +84,3 @@ Akzeptanzpunkte in der Spezifikation möglichst **testbar** halten; was sich als
 - [ ] Mindestens 3 prüfbare Akzeptanzkriterien
 - [ ] Vor der Ausführung menschliche oder schriftliche Bestätigung
 - [ ] Änderungen zurück in die Spezifikationsdatei synchronisiert
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Brainstorming, EPXV, testgetriebener Arbeit und `AGENTS.md`. Der Inhalt beschränkt sich auf die stabile Arbeitsweise „zuerst abnahmefähige Spezifikation, dann nach Spezifikation ausführen“.  
-**Zuletzt geprüft:** 2026-07-26

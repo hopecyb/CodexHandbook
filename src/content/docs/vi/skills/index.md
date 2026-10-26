@@ -7,17 +7,17 @@ title: Skills
 description: Học cách dùng, viết, kiểm thử và duy trì Codex Skills.
 locale: vi
 source_locale: zh-CN
-source_revision: 6f8df16
-translation_status: draft
+source_revision: "6f8df16"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
-
 
 Skills dùng để đóng gói phương pháp ổn định, tài liệu tham chiếu, template và script thành năng lực có thể tái sử dụng.
 
 Giá trị của Skills không chỉ là giúp Codex làm thêm một việc: chúng còn xác định rõ đầu vào, đầu ra, giới hạn quyền và cách kiểm thử của một quy trình.
 
-![Từ một prompt đến gói năng lực nhóm: prompt và mẫu trở thành Skill, subagent, MCP và Hook, rồi đến với nhóm qua Plugin và Automation](/diagrams/codex-capability-ladder-vi.svg)
+![Từ một prompt đến gói năng lực nhóm: prompt và mẫu trở thành Skill, subagent, MCP và Hook, rồi được phân phối cho nhóm qua Plugin và chạy tự động qua Automation](/diagrams/codex-capability-ladder-vi.svg)
 
 ## Thứ tự khuyến nghị
 

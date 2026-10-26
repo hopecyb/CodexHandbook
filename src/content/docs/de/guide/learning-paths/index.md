@@ -1,4 +1,9 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Mit der aktuellen Verzeichnisstruktur der Lernpfade, den rollenspezifischen Einstiegsseiten und dem schrittweisen Einsteigerpfad dieses Repositorys abgeglichen. Diese Seite dient nur der Navigation nach Rolle und enthält keine veränderlichen Details zum Produktverhalten."
+  checkedAt: "2026-07-26"
 prev: false
 next:
   link: /de/guide/learning-paths/beginner/01-talk-to-codex/
@@ -9,9 +14,10 @@ sidebar:
   order: 5
 locale: de
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: "2f7ff71"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Lernpfade **ordnen nur die Reihenfolge** — sie kopieren keine Langtexte aus Produkthandbuch oder Fachkapiteln.
@@ -76,7 +82,7 @@ Der Haupttext erklärt; der Lernpfad sagt, welche Seiten Sie jetzt lesen sollten
 
 ### 2. Ich muss mich fest einer Identität zuordnen
 
-Eine Frage reicht:  
+Eine Frage reicht:
 **Was ist das Hauptproblem, das Sie jetzt lösen wollen?**
 
 ### 3. Ein Pfad muss von vorn bis hinten durchlaufen werden

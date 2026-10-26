@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: Connect GitHub
 description: Configure GitHub access for Codex Cloud with the smallest repository scope.
 locale: en
 source_locale: zh-CN
-source_revision: b126a7e
+source_revision: 'b126a7e'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -62,11 +66,3 @@ Do not grant access to every private repository to resolve one 403. Identify the
 
 - [Codex Cloud quickstart](https://learn.chatgpt.com/docs/cloud)
 - [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26

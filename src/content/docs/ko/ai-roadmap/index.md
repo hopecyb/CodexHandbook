@@ -3,13 +3,14 @@ title: AI 애플리케이션 로드맵
 description: 논문, 제품 발표, 엔지니어링 글과 작성자의 학습 제안을 구분하고 각 주제에서 실습으로 이어집니다.
 locale: ko
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
+source_revision: 'f66e3ba'
+translation_status: reviewed
 translated_at: 2026-10-24
 prev: false
 next:
   link: /ko/ai-roadmap/timeline/
   label: 사건과 주제 색인
+reviewed_at: '2026-10-26'
 ---
 
 이 지도는 확인할 수 있는 공개 사건과 학습 제안을 구분합니다. **날짜는 표에 적힌 논문, 발표 또는 글에만 해당합니다. 개념의 탄생, 업계 확산, 기능의 성숙을 자동으로 뜻하지 않습니다.** 여러 기술을 함께 사용할 수 있으며, 시간 순서가 반드시 따라야 할 학습 순서도 아닙니다.
@@ -36,8 +37,8 @@ next:
 
 다음 프로젝트는 확인되지 않은 최초 공개일로 순서를 정하지 않고 각각 읽습니다.
 
-- [OpenSpec](/ko/ai-roadmap/timeline/2026-01-openspec/): 프로젝트 공식 릴리스 페이지에는 v1.0.0(The OPSX Release)의 버전 설명이 있습니다. 이번 검토는 해당 버전으로 프로젝트의 최초 공개일을 추정하지 않으며, 확인한 증거로 뒷받침되지 않는 npm 최초 공개일도 유지하지 않습니다.
-- [OpenClaw](/ko/ai-roadmap/timeline/2026-01-openclaw/): 이 페이지는 OpenClaw 공식 저장소를 프로젝트의 정체성과 설명을 확인하는 출처로 사용합니다. 최초 공개를 확인할 충분한 증거를 확보하지 못했으므로 그 날짜를 표시하지 않습니다.
+- [OpenSpec(명세 주도 개발)](/ko/ai-roadmap/timeline/2026-01-openspec/): 프로젝트 공식 릴리스 페이지에는 v1.0.0(The OPSX Release)의 버전 설명이 있습니다. 이번 검토는 해당 버전으로 프로젝트의 최초 공개일을 추정하지 않으며, 확인한 증거로 뒷받침되지 않는 npm 최초 공개일도 유지하지 않습니다.
+- [OpenClaw(개인 AI 비서 프로젝트)](/ko/ai-roadmap/timeline/2026-01-openclaw/): 이 페이지는 OpenClaw 공식 저장소를 프로젝트의 정체성과 설명을 확인하는 출처로 사용합니다. 최초 공개를 확인할 충분한 증거를 확보하지 못했으므로 그 날짜를 표시하지 않습니다.
 
 ## 현재 작업에 맞는 실습 선택
 

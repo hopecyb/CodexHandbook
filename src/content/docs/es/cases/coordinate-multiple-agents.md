@@ -11,10 +11,10 @@ title: Coordinar varios Agents
 description: Caso de colaboración con exploración en paralelo, división del trabajo y fusión de resultados.
 locale: es
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: '7b143fc'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -30,7 +30,7 @@ reviewed_at: 2026-08-26
 
 **Objetivo:** Dividir subproblemas paralelizables entre varios Agents y fusionar las conclusiones a mano.
 
-**Criterios de éxito:** Cada Subagent tiene su propia definición de terminado y no se pisan los mismos archivos.
+**Criterios de éxito:** Cada Subagent tiene sus propios criterios de finalización y no se pisan los mismos archivos.
 
 ## 2. Patrones recomendados
 

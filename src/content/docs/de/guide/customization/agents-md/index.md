@@ -3,10 +3,16 @@ title: AGENTS.md
 description: "Einstiegsseite zu projektweiten Langzeit-Anweisungen: für wen, welches Problem — erst dann Inhalt schreiben."
 locale: de
 source_locale: zh-CN
-source_revision: cb6371f
+source_revision: "cb6371f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen verifizierte Kapitel zu Projektkontext, Workflow und Überprüfung; diese Seite beschreibt nur die stabile Rolle von `AGENTS.md` als projektweite Langzeit-Kollaborationsregel und
+    schreibt keine Client-Einstiege oder Managed-Implementierungen als langfristigen Vertrag fest.
+  checkedAt: '2026-07-26'
 ---
 
 Viele sehen `AGENTS.md` zuerst als „noch einen längeren Prompt“.
@@ -27,11 +33,4 @@ Sie trägt Vereinbarungen, die Sie nicht jedes Mal neu sagen wollen und die Team
 - Kurz, präzise, ausführbar — keine Langdokumentation
 - Es gibt Prioritätsbeziehungen zu persönlichen Vorlieben und Team-Managed-Policies
 
-Der Wert von `AGENTS.md` liegt darin, stabile Projektvereinbarungen ins Repo zu versenken.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Projektkontext, Workflow und Überprüfung; diese Seite beschreibt nur die stabile Rolle von `AGENTS.md` als projektweite Langzeit-Kollaborationsregel und schreibt keine Client-Einstiege oder Managed-Implementierungen als langfristigen Vertrag fest.  
-**Zuletzt geprüft:** 2026-07-26
+Der Wert von `AGENTS.md` liegt darin, stabile Projektvereinbarungen im Repository festzuhalten.

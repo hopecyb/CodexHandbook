@@ -3,12 +3,16 @@ title: キーボードショートカット
 description: 現在の公式文書で確認できる App と IDE のショートカット操作だけを掲載します。
 locale: ja
 source_locale: zh-CN
-source_revision: 4f812d9
+source_revision: '4f812d9'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 90
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
 ---
 
 ショートカットはプラットフォーム、クライアント、カスタム設定によって変わります。このページには、現在の公式文書で明示されている組み合わせだけを掲載します。完全な一覧は App 内の **Keyboard Shortcuts** を基準にしてください。
@@ -55,11 +59,3 @@ CLI TUI の操作は、現在のバージョンの `/help` と画面上の案内
 - [通知と Activity](https://learn.chatgpt.com/docs/notifications)
 - [統合ターミナル](https://learn.chatgpt.com/docs/integrated-terminal)
 - [IDE の設定](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**状態：** verified
-
-**対象製品：** App、CLI、IDE
-
-**最終検証：** 2026-08-26

@@ -4,13 +4,14 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Esta página solo describe el uso de plantillas; se han revisado enlaces y tipología, y el cuerpo no depende de hechos volátiles del producto."
   checkedAt: "2026-07-26"
-title: Plantillas de Prompts
+title: Plantillas de prompts
 description: Esqueletos reutilizables por tipo de tarea — comprender, crear, modificar, diagnosticar, revisar, investigar, automatizar.
 locale: es
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: 'fae2ed3'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 
@@ -44,9 +45,9 @@ La plantilla es un andamiaje, no una respuesta tipo.
 | [Investigar](/es/prompts/templates/research/) | Investigación y comparación con citas |
 | [Automatizar](/es/prompts/templates/automate/) | Tareas repetidas, scripts y flujos desatendidos |
 
-## De plantilla a workflow
+## De plantilla a flujo de trabajo
 
-Algunos Prompts se usan una sola vez; otros se repiten tanto que conviene estabilizarlos.
+Algunos prompts se usan una sola vez; otros se repiten tanto que conviene estabilizarlos.
 
 | Tarea repetida | Empieza como | Cuando sea estable, pasa a |
 |---|---|---|
@@ -84,9 +85,9 @@ Un prompt más largo no es necesariamente mejor. Merece la pena reutilizar tarea
 
 ### 1. La plantilla se copia tal cual
 
-Sin adaptar placeholders ni recortar lo irrelevante, la plantilla vacía la tarea.
+Sin sustituir los marcadores de posición ni recortar lo irrelevante, la plantilla deja la tarea sin concretar.
 
-### 2. Con plantilla, el Prompt ya es «profesional»
+### 2. Con plantilla, el prompt ya es «profesional»
 
 Solo conserva la estructura; no decide:
 
@@ -100,4 +101,4 @@ Para quien empieza, «suficiente sin ser voluminosa» basta.
 
 Elige primero el tipo correcto y adáptalo a tu tarea; no sustituyas la tarea por la plantilla.
 
-Principios de escritura: [Fundamentos de Prompts](/es/prompts/basics/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).
+Principios de escritura: [Fundamentos de prompts](/es/prompts/basics/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).

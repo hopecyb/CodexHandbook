@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Mit dem aktuellen Schnellstart und der Authentifizierungsdokumentation der Codex CLI abgeglichen. Verifiziert wurden das offizielle Installationsprogramm für macOS/Linux, der Start mit `codex`, die ChatGPT-Anmeldung und die Befehle zum Anmeldestatus. Für andere Installationsarten verweist die Seite auf die aktuellen offiziellen Registerkarten."
+  checkedAt: "2026-08-26"
 title: CLI installieren
 description: Installiere die Codex CLI und prüfe Version, Anmeldestatus und die erste Aufgabe in einem Repository.
 sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 564bd75
+source_revision: "564bd75"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Mit der Codex CLI kannst du Untersuchung, Änderungen, Tests und Review im Terminal durchführen. Die offizielle Installationsseite bietet Varianten für macOS/Linux, Windows, npm und Homebrew. Wähle die Methode, die zu Betriebssystem und Softwareverwaltung passt.
@@ -58,13 +63,3 @@ Die erste Aufgabe kann schreibgeschützt bleiben:
 Füge einen API-Key nicht in Shellverlauf, Ticket oder Chat ein. Wenn du dich mit einem API-Key anmelden musst, verwende wie unter [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) beschrieben die Standardeingabe.
 
 Lies als Nächstes [Interaktiver CLI-Modus](/de/guide/cli/interactive-mode/). Weitere Probleme behandelt die [CLI-Fehlersuche](/de/guide/cli/troubleshooting/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit dem aktuellen Schnellstart und der Authentifizierungsdokumentation der Codex CLI abgeglichen. Verifiziert wurden das offizielle Installationsprogramm für macOS/Linux, der Start mit `codex`, die ChatGPT-Anmeldung und die Befehle zum Anmeldestatus. Für andere Installationsarten verweist die Seite auf die aktuellen offiziellen Registerkarten.
-
-**Zuletzt geprüft:** 2026-08-26

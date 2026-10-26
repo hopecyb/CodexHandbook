@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn phân biệt biên đọc/ghi, thực thi lệnh và Sandbox/mạng theo approval modes; trang này tập trung khái niệm phê duyệt và Sandbox, khác biệt rủi ro giữa tương tác và không người canh — không viết văn bản nút hay tên chế độ cụ thể thành sự thật cố định.", "checkedAt": "2026-07-26"}
 title: Phê duyệt và Sandbox
 description: Chiến lược phê duyệt yêu cầu shell, ghi đĩa và mạng trong CLI, và Sandbox hạn chế hành vi Agent thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 35afd39
+source_revision: "35afd39"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
@@ -40,7 +41,7 @@ Nền khái niệm: [Quyền và phê duyệt](/vi/guide/foundations/permissions
 | Ghi đường dẫn ngoài dự án | Cao | Nên từ chối hoặc xác nhận chặt |
 | Chạy shell | Cao | Xác nhận nội dung lệnh |
 | Lên mạng / curl | Cao | Xác nhận đích và dữ liệu |
-| Lời gọi công cụ MCP | Tùy máy chủ | Theo độ hạt của công cụ |
+| Lời gọi công cụ MCP | Tùy máy chủ | Theo từng công cụ |
 
 Khi tương tác bạn có tùy chọn kiểu **cho phép một lần / cho phép phiên / từ chối** (tên đổi theo phiên bản). **Đừng bấm «luôn cho phép» với lệnh chưa hiểu.**
 
@@ -110,9 +111,3 @@ Giai đoạn đầu chỉnh phê duyệt và Sandbox CLI nghiêng bảo thủ th
 
 ## Nguồn tham khảo
 - Tài liệu an toàn và Sandbox OpenAI Codex CLI
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn phân biệt biên đọc/ghi, thực thi lệnh và Sandbox/mạng theo approval modes; trang này tập trung khái niệm phê duyệt và Sandbox, khác biệt rủi ro giữa tương tác và không người canh — không viết văn bản nút hay tên chế độ cụ thể thành sự thật cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

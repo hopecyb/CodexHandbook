@@ -11,11 +11,11 @@ sidebar:
   order: 10
 locale: es
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: "a129229"
+translation_status: reviewed
 translated_at: 2026-09-20
----
-Un plan es una ruta de ejecución que puedes examinar y ajustar. Ayuda a detectar pronto lagunas de alcance, dependencias y aceptación, pero una tarea más grande no implica esperar confirmación repetidamente.
+reviewed_at: 2026-10-25
+---Un plan es una ruta de ejecución que puedes examinar y ajustar. Ayuda a detectar pronto lagunas de alcance, dependencias y aceptación, pero una tarea más grande no implica esperar confirmación repetidamente.
 
 Empieza por la [clasificación de tareas](/es/prompts/ask-for-a-plan/): completar directamente, planificar y ejecutar dentro de la autorización existente, o limitarte a proponer una solución esta vez. Una petición explícita de «primero un plan, sin modificar archivos» debe seguir siendo de solo lectura. Si se pide implementar, no basta con entregar un plan.
 
@@ -38,7 +38,7 @@ Para añadir una agrupación de datos a un informe existente, el plan puede ser 
 **La solución aún no está decidida:**
 
 ```text
-En esta ocasión, analiza solo en modo de lectura dos opciones de exportación según dependencias, compatibilidad y mantenimiento.
+En esta ocasión, analiza solo en modo de lectura dos opciones de exportación según dependencias, compatibilidad y coste de mantenimiento.
 Recomienda una e indica qué decisiones debo tomar. No modifiques la implementación.
 ```
 

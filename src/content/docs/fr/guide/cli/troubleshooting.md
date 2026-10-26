@@ -10,9 +10,10 @@ sidebar:
   order: 70
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 57b062f
+source_revision: '57b062f'
+reviewed_at: '2026-10-26'
 ---
 
 Les erreurs de la CLI ressemblent toutes parfois à des erreurs de terminal, mais leurs causes peuvent être différentes. Commencez par déterminer si la commande est mal installée, si la connexion a échoué, si les permissions manquent ou si le répertoire est mauvais.

@@ -3,14 +3,17 @@ title: Paramètres de l'intégration IDE
 description: Distinguer la configuration partagée de l'Agent des paramètres de comportement des éditeurs de la famille VS Code.
 locale: fr
 source_locale: zh-CN
-source_revision: 6f28910
+source_revision: "6f28910"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
 ---
-
 Les paramètres de l'IDE comportent deux couches :
 
 | Couche | Emplacement | Contrôle |
@@ -51,17 +54,9 @@ Si un paramètre semble sans effet, identifiez la couche que vous avez modifiée
 
 ## Vérifier les modifications
 
-Ne modifiez qu'une catégorie de paramètres à la fois. Par exemple, après avoir défini `chatgpt.reviewDelivery` sur `detached`, exécutez `/review` dans un dépôt Git et vérifiez qu'une conversation de révision distincte s'ouvre. Notez l'ancienne valeur, rétablissez-la si le comportement est inattendu, puis rechargez l'éditeur.
+Ne modifiez qu’un paramètre à la fois. Par exemple, après avoir défini `chatgpt.reviewDelivery` sur `detached`, exécutez `/review` dans un dépôt Git et vérifiez qu'une conversation de révision distincte s'ouvre. Notez l'ancienne valeur, rétablissez-la si le comportement est inattendu, puis rechargez l'éditeur.
 
 ## Sources officielles
 
 - [Paramètres de Codex IDE](https://learn.chatgpt.com/docs/ide/settings)
 - [Principes de configuration](https://learn.chatgpt.com/docs/config)
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** IDE
-
-**Dernière vérification :** 2026-08-26

@@ -1,21 +1,26 @@
 ---
 title: 산출물 우선
-description: 먼저 최종 산출물 형태와 경로를 정한 뒤 단계를 역산합니다—문서, 설정, 보고서 등 인도물에 적합합니다.
+description: 먼저 최종 산출물 형태와 경로를 정한 뒤 단계를 역산합니다—문서, 설정, 보고서 등 납품할 산출물에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: 'e57c215'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 핸드북에서 이미 검증된 파일과 산출물, 완료 정의, 산출물 검증 장과 교차 확인했습니다. 페이지 내용은 “먼저 납품할 산출물을 정하고, 이어서 단계를 역산”하는 안정적인 글쓰기·납품 방법에 초점을 둡니다.
+  checkedAt: '2026-07-26'
 ---
 
-**산출물 우선**은 인도물의 형태와 위치를 먼저 밝힌 뒤, Codex가 단계를 역산하게 하는 방식입니다. Markdown 문서, OpenAPI, 마이그레이션 스크립트, 슬라이드 개요처럼 출력이 명확한 작업에 적합하며, [스펙 주도](/ko/cases/workflows/specification-driven-work/)와 함께 쓸 수도 있습니다.
+**산출물 우선**은 납품할 산출물의 형태와 위치를 먼저 밝힌 뒤, Codex가 단계를 역산하게 하는 방식입니다. Markdown 문서, OpenAPI, 마이그레이션 스크립트, 슬라이드 개요처럼 출력이 명확한 작업에 적합하며, [스펙 주도](/ko/cases/workflows/specification-driven-work/)와 함께 쓸 수도 있습니다.
 
 ## 이 페이지의 초점
 
 - 과정 세부보다 산출물 구조를 어떻게 설명할지
 - 여러 파일 산출물의 일관성 검사
-- [파일과 산출물](/ko/guide/files-and-artifacts/) 기능과의 정렬
+- [파일과 산출물](/ko/guide/files-and-artifacts/) 기능과의 연계
 
 ## 최소 실행 방법
 
@@ -45,23 +50,16 @@ reviewed_at: 2026-08-26
 - 산출물 경로가 저장소 약속과 맞지 않음(잘못된 디렉터리)
 - 단일 파일만 생성하고 내비게이션·index 업데이트를 무시
 - 샘플을 대조하지 않아 스타일이 어긋남
-- 바이너리 산출물(pptx/docx)을 사람이 어떻게 열어 인수할지 설명하지 않음
+- 바이너리 산출물(pptx/docx)을 사람이 어떻게 열어 검수할지 설명하지 않음
 
 ## 보안 경계
 
 - 생성물에 제3자 저작권 내용이 있으면 사람이 컴플라이언스 검사해야 합니다
 - 프로덕션 설정 경로를 덮어쓰지 말고, 먼저 브랜치 또는 `draft/` 아래에 산출하세요
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 선언한 모든 파일이 존재하고 열 수 있음
 - [ ] 형식과 참조 샘플이 일치
 - [ ] 링크/목차/Frontmatter가 유효
 - [ ] [완료 정의](/ko/prompts/define-done/)를 충족
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 핸드북에서 이미 검증된 파일과 산출물, 완료 정의, 산출물 검증 장과 교차 확인했습니다. 페이지 내용은 “먼저 인도물을 정하고, 이어서 단계를 역산”하는 안정적인 글쓰기·인도 방법에 초점을 둡니다.  
-**최근 검증:** 2026-07-26

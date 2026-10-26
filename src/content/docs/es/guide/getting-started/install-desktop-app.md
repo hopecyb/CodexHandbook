@@ -3,11 +3,17 @@ title: Instalar la aplicación de escritorio
 description: Instala la aplicación de escritorio de ChatGPT y abre en ella un espacio de trabajo de Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 974842f
-translation_status: draft
+source_revision: '974842f'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App
+  basis: La guía oficial actual de inicio rápido ofrece descargas para macOS, Windows y Linux e indica que, tras iniciar sesión, se elija un chat, proyecto o carpeta. Esta página no fija posiciones de botones ni nombres de instaladores que pueden cambiar.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-25'
 ---
 
 En este manual, «aplicación de escritorio» se refiere al **espacio de trabajo de Codex dentro de la aplicación de escritorio de ChatGPT**. OpenAI ofrece versiones para macOS, Windows y Linux.

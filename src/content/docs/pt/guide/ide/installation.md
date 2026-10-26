@@ -1,17 +1,18 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "IDE"
-  checkedAt: "2026-08-26"
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
 title: Instalar e ativar a integração no IDE
 description: Abrir o Codex corretamente em editores da família VS Code, no Xcode e nos IDE da JetBrains.
 locale: pt
 source_locale: zh-CN
-source_revision: 85e1691
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: "85e1691"
+translation_status: reviewed
+translated_at: '2026-09-20'
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
 
 Há dois tipos de acesso ao Codex a partir de um IDE; os métodos de instalação não são intercambiáveis.
@@ -46,7 +47,7 @@ Se a resposta corresponder ao ficheiro e aos símbolos abertos, o contexto do ed
 - **A barra lateral não aparece**: execute `Codex: Open Codex Sidebar` na Command Palette.
 - **O contexto está errado**: confirme que a janela do projeto, o ficheiro aberto e a seleção pertencem ao repositório esperado.
 - **O início de sessão repete-se**: a CLI e o IDE partilham a autenticação em cache; verifique a conta ativa e volte a iniciar sessão.
-- **A cadeia de ferramentas Windows está no WSL**: ative `chatgpt.runCodexInWindowsSubsystemForLinux` se necessário. Alterar esta definição reinicia o VS Code.
+- **A cadeia de ferramentas Windows está no WSL**: ative `chatgpt.runCodexInWindowsSubsystemForLinux` se necessário. Alterar esta definição recarrega o VS Code.
 - **Um editor de terceiros comporta-se de outra forma**: confirme primeiro se a sua versão é compatível com a extensão VS Code. Não copie para esse editor as instruções de acesso do Xcode ou da JetBrains.
 
 Para um percurso mais detalhado de introdução, consulte [Instalar a integração no IDE](/pt/guide/getting-started/install-ide-extension/).

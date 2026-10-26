@@ -1,3 +1,4 @@
+import standaloneRoutes from '../data/standaloneRoutes.json';
 import type { LocalizedLabel, SiteLang } from './siteNav';
 
 export type StandalonePageId = 'chatgpt-pricing';
@@ -40,20 +41,20 @@ export const standaloneLangToLocale: Record<SiteLang, StandaloneLocaleCode> = {
 export const standalonePages: Record<StandalonePageId, StandalonePage> = {
 	'chatgpt-pricing': {
 		id: 'chatgpt-pricing',
-		slug: 'chatgpt-pricing',
+		slug: standaloneRoutes['chatgpt-pricing'].slug,
 		defaultLang: 'zh-CN',
-		supportedLocales: ['root', 'en', 'zh-tw', 'fr', 'ja', 'ko', 'es', 'de', 'pt', 'vi'],
+		supportedLocales: standaloneRoutes['chatgpt-pricing'].supportedLocales as StandaloneLocaleCode[],
 		label: {
-			'zh-CN': 'ChatGPT 价格参考',
-			en: 'ChatGPT Global Prices',
-			'zh-TW': 'ChatGPT 價格參考',
-			fr: 'Prix mondiaux ChatGPT',
-			ja: 'ChatGPT 世界価格',
-			ko: 'ChatGPT 글로벌 가격',
-			es: 'Precios globales ChatGPT',
-			de: 'ChatGPT Weltpreise',
-			pt: 'Preços globais ChatGPT',
-			vi: 'Giá ChatGPT toàn cầu',
+			'zh-CN': 'ChatGPT 套餐与价格',
+			'en': 'ChatGPT Plans & Prices',
+			'zh-TW': 'ChatGPT 套餐與價格',
+			'fr': 'Offres et prix ChatGPT',
+			'ja': 'ChatGPT プランと料金',
+			'ko': 'ChatGPT 요금제 및 가격',
+			'es': 'Planes y precios de ChatGPT',
+			'de': 'ChatGPT-Pläne und Preise',
+			'pt': 'Planos e preços do ChatGPT',
+			'vi': 'Gói và giá ChatGPT',
 		},
 	},
 };

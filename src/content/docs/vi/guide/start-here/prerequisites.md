@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu với tài liệu khởi đầu và tải tệp chính thức của OpenAI về các gợi ý quyền truy cập, chuẩn bị client và môi trường luyện tập trên trang này; nội dung giữ các nguyên tắc khởi đầu có hiệu lực lâu dài, không phụ thuộc bước cài đặt chi tiết."
+  checkedAt: "2026-07-26"
 title: Cần gì trước khi bắt đầu
 description: Tài khoản, thiết bị, dự án luyện tập và giới hạn an toàn tối thiểu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5fbedb8
+source_revision: "5fbedb8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 5
 ---
@@ -27,14 +32,14 @@ Trong bốn mục trên, mục 3 và 4 dễ bị bỏ qua nhất.
 
 ## Bạn không cần có sẵn gì trước
 
-Các mục dưới đây **không phải ngưỡng cứng trước khi bắt đầu**:
+Các mục dưới đây **không phải điều kiện bắt buộc trước khi bắt đầu**:
 
 - Không cần thành thạo Git trước
 - Không cần biết viết nhiều mã trước
 - Không cần hiểu hết mọi chi tiết về model, ngữ cảnh, Sandbox, phê duyệt ngay từ đầu
 - Không cần cài đủ mọi client trong một lần
 
-Chạy thông tác vụ đầu tiên, rồi dần bổ sung các khái niệm này — áp lực sẽ nhỏ hơn nhiều.
+Hoàn thành tác vụ đầu tiên, rồi dần bổ sung các khái niệm này — áp lực sẽ nhỏ hơn nhiều.
 
 ## Hiểu nhầm thường gặp
 
@@ -78,11 +83,4 @@ Có thể làm theo thứ tự này:
 4. Chạy một tác vụ rất nhỏ
 5. Kiểm tra kết quả, rồi quyết định bước tiếp theo
 
-Trước khi bắt đầu, chạy thông tác vụ đầu tiên trong môi trường an toàn, phạm vi nhỏ, có thể hoàn tác — tiết kiệm sức hơn là nhồi một đống khái niệm trước.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Đã đối chiếu với tài liệu khởi đầu và tải tệp chính thức của OpenAI về các gợi ý quyền truy cập, chuẩn bị client và môi trường luyện tập trên trang này; nội dung giữ các nguyên tắc khởi đầu có hiệu lực lâu dài, không phụ thuộc bước cài đặt chi tiết.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Trước khi bắt đầu, hoàn thành tác vụ đầu tiên trong môi trường an toàn, phạm vi nhỏ, có thể hoàn tác — tiết kiệm sức hơn là nhồi một đống khái niệm trước.

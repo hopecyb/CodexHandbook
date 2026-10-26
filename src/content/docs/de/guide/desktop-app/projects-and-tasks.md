@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Die aktuellen Desktop-Hilfeartikel im OpenAI Help Center unterscheiden weiterhin Projekt / Projektkontext von der konkreten chat/work/codex-Sitzung und erklären, dass lokale Ordner oder Projekte in der Desktop-App geöffnet werden können; diese Seite erklärt nur die Schicht „Projekt = Arbeitsort, Aufgabe = Auftrag dieses Durchgangs“."
+  checkedAt: "2026-07-26"
 title: Projekte und Aufgaben
 description: Projekte und Aufgaben in der App verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: 6a1f17f
+source_revision: "6a1f17f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
 
-„Projekt“ und „Aufgabe“ wirken einfach, vermischen sich aber leicht beim ersten Mal. Das Projekt ist die Datei oder das Repository, an dem du arbeitest; die Aufgabe ist das konkrete, was du Codex diesmal erledigen lässt.
+„Projekt“ und „Aufgabe“ wirken einfach, vermischen sich aber leicht beim ersten Mal. Das Projekt ist die Datei oder das Repository, an dem du arbeitest; die Aufgabe ist das Konkrete, was du Codex diesmal erledigen lässt.
 
 Zum Beispiel:
 
@@ -28,8 +33,8 @@ Diese Begriffe sind wichtig, weil in der Desktop-App immer zwei Ebenen gleichzei
 - Übungsverzeichnis oder Repository-Wurzel hinzufügen
 - Pro Durchgang auf ein Projekt fokussieren, um vermischten Kontext zu vermeiden
 
-Das „Projekt“ ist der **Arbeitsort** dieser Zusammenarbeit.  
-Stimmt der Ort nicht, laufen viele Folgeprobleme schief.
+Das „Projekt“ ist der **Arbeitsort** dieser Zusammenarbeit.
+Stimmt der Arbeitsort nicht, wirkt sich das auf viele weitere Schritte aus.
 
 ## Aufgabe
 
@@ -37,7 +42,7 @@ Stimmt der Ort nicht, laufen viele Folgeprobleme schief.
 - Plan und Werkzeugaufrufe beobachten
 - Bei Bedarf freigeben oder ablehnen
 
-Die „Aufgabe“ ist der **konkrete Auftrag** dieses Durchgangs.  
+Die „Aufgabe“ ist der **konkrete Auftrag** dieses Durchgangs.
 Je klarer der Auftrag, desto weniger muss Codex während der Arbeit raten.
 
 Begriffsvergleich: [Threads, Aufgaben und Projekte](/de/guide/foundations/threads-tasks-and-projects/)
@@ -52,7 +57,7 @@ Ist das Projekt falsch, häufen sich Fragen wie „warum sieht es die Dateien ni
 
 ### 2. Können in einem Projekt viele Aufgaben liegen?
 
-Ja.  
+Ja.
 Stabiler ist:
 
 - im selben Projekt
@@ -69,7 +74,7 @@ Möglichst diese drei Infos mitgeben:
 - Einschränkungen / Umfang
 - Fertigstellungskriterium
 
-### 4. Gehört ein großer Bedarf in eine einzige Aufgabe?
+### 4. Gehört ein umfangreiches Vorhaben in eine einzige Aufgabe?
 
 Ist die Spanne groß, ist oft sicherer:
 
@@ -85,10 +90,3 @@ Beim ersten Arbeiten in der Desktop-App kannst du so vorgehen:
 2. Bestätigen, dass das Aufgabenziel nur eine Hauptsache benennt
 3. Umfang und Fertigstellungskriterium ergänzen
 4. Nach dem Start vor allem Plan, Werkzeugaufrufe und Änderungsergebnis beobachten
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App  
-**Prüfgrundlage:** Die aktuellen Desktop-Hilfeartikel im OpenAI Help Center unterscheiden weiterhin Projekt / Projektkontext von der konkreten chat/work/codex-Sitzung und erklären, dass lokale Ordner oder Projekte in der Desktop-App geöffnet werden können; diese Seite erklärt nur die Schicht „Projekt = Arbeitsort, Aufgabe = Auftrag dieses Durchgangs“.  
-**Zuletzt geprüft:** 2026-07-26

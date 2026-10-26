@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud (tùy phiên bản)"
+  basis: "Đã rà lại tình huống phù hợp, cách viết Prompt và ranh giới nghiệm thu theo tài liệu tạo và chỉnh ảnh chính thức của OpenAI; phần thân giữ kết luận thận trọng “ưu tiên bản nháp, artifact chính thức cần rà lại”."
+  checkedAt: "2026-07-26"
 title: Tạo ảnh
 description: Tạo hoặc chỉnh ảnh trong tác vụ Codex — Prompt, định dạng và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: ea275fa
+source_revision: "ea275fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
@@ -25,7 +30,7 @@ Nó phù hợp đưa bản nháp hình trước; không phù hợp coi thẳng l
 
 | Phù hợp | Không phù hợp |
 |---|---|
-| Bản nháp ảnh blog, sơ đồ tài liệu nội bộ | Vật liệu đối ngoại bị ràng buộc brand book nghiêm ngặt |
+| Bản nháp ảnh blog, sơ đồ tài liệu nội bộ | Tài liệu hình ảnh dùng cho bên ngoài bị ràng buộc brand book nghiêm ngặt |
 | Khám phá nhanh không khí bố cục UI | Giao thiết kế cần khớp pixel |
 | Icon ví dụ trong tutorial | Cảnh có chân dung người thật chưa được ủy quyền |
 
@@ -41,7 +46,7 @@ Tạo ảnh phù hợp hơn với:
 
 Các mục đích sau không phù hợp giao thẳng kết quả tạo:
 
-- Giả vờ đây là vật liệu thương hiệu chính thức
+- Giả vờ đây là tài liệu hình ảnh thương hiệu chính thức
 - Giả vờ đây là bản thiết kế chính xác
 - Giả vờ đây là hình cuối có thể phát hành đối ngoại ngay
 
@@ -65,7 +70,7 @@ Bạn còn phải xem:
 
 ### 2. Chỉ cần một câu “giúp tôi tạo một tấm ảnh” là đủ?
 
-Thường chưa đủ.  
+Thường chưa đủ.
 Ít nhất phải nói rõ:
 
 - Mục đích
@@ -90,7 +95,7 @@ Có thể yêu cầu theo cấu trúc:
 
 1. Ảnh này dùng để làm gì
 2. Cần ngang, dọc hay vuông
-3. Muốn khí chất và màu sắc thế nào
+3. Muốn phong cách và bảng màu thế nào
 4. Có xuất hiện chữ không
 5. Sau khi xuất bạn định kiểm thế nào
 
@@ -115,10 +120,3 @@ Có thể yêu cầu theo cấu trúc:
 - Không ràng buộc «không chữ» trong Prompt dẫn tới phụ đề loạn
 
 Tạo ảnh phù hợp đưa hướng và bản nháp trước; khi giao đối ngoại vẫn phải nghiệm thu theo chuẩn artifact chính thức.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Cloud (tùy phiên bản)  
-**Căn cứ kiểm chứng:** Đã rà lại tình huống phù hợp, cách viết Prompt và ranh giới nghiệm thu theo tài liệu tạo và chỉnh ảnh chính thức của OpenAI; phần thân giữ kết luận thận trọng “ưu tiên bản nháp, artifact chính thức cần rà lại”.  
-**Kiểm chứng gần nhất:** 2026-07-26

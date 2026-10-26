@@ -10,9 +10,10 @@ sidebar:
   order: 60
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 0c9c971
+translation_status: reviewed
+reviewed_at: 2026-10-25
+translated_at: 2026-10-24
+source_revision: 'd45e640'
 ---
 
 Short, precise, and searchable: this section is mainly a quick-reference index. Deeper explanations belong in the topic chapters. Use these pages as a toolbox; you need not read them front to back.
@@ -28,6 +29,8 @@ There are three main kinds of material:
 Come here with a question instead of reading everything at once.
 
 ## Learning-oriented index
+
+- [Model selection: find a starting point](/en/guide/reference/model-selection/)
 
 - [Glossary](/en/guide/reference/glossary/)
 - [FAQs](/en/guide/reference/faq/)

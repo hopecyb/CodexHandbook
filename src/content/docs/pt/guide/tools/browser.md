@@ -1,25 +1,30 @@
 ---
-title: Ferramenta de browser
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (conforme versão e permissões)"
+  basis: "O OpenAI Help Center atual já publica a descrição do navegador integrado na App de ambiente de trabalho: abrir páginas em Work ou Codex, mudar de separadores, baixar arquivos, usar modo de anotações e aprovar o acesso site a site. Esta página foca cenários adequados da ferramenta de navegador, diferença face a pesquisa/Computer Use e limites de segurança."
+  checkedAt: "2026-07-26"
+title: ferramenta de navegador
 description: Fazer o Codex abrir páginas web, verificar o estado da UI e validar comportamento frontend — capacidades e limites.
 locale: pt
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
 
-A **Ferramenta de browser** permite ao Agent aceder a páginas web reais num ambiente controlado: ler o DOM, fazer ecrãs e, por vezes, interações simples. Serve para aceitação frontend, verificação de ligações de documentação e comparação com mockups — não substitui auditoria de segurança, nem deve operar backends de produção à vontade.
+A **ferramenta de navegador** permite ao Agent aceder a páginas web reais num ambiente controlado: ler o DOM, capturar imagens da tela e, por vezes, interações simples. Serve para aceitação frontend, verificação de ligações de documentação e comparação com mockups — não substitui auditoria de segurança, nem deve operar backends de produção à vontade.
 
-É uma Ferramenta diferente da pesquisa: a pesquisa encontra informação na web; o browser abre a página de verdade.
+É uma ferramenta diferente da pesquisa: a pesquisa encontra informação na web; o navegador abre a página de verdade.
 
 ## Que problemas resolve
 
 Costuma usar-se para:
 
-- Como é que esta página está agora de facto
+- Como é que esta página está agora de fato
 - O que acontece ao clicar neste botão
 - O layout parte-se em larguras reais
 
@@ -27,7 +32,7 @@ Só ler código ou descrições textuais costuma não chegar — é preciso abri
 
 ## Conteúdo desta página
 
-- O que a Ferramenta de browser pode e não pode fazer
+- O que a ferramenta de navegador pode e não pode fazer
 - Diferença face a pesquisa Web e Computer Use
 - Como autorizar e restringir com segurança
 
@@ -40,21 +45,21 @@ Só ler código ou descrições textuais costuma não chegar — é preciso abri
 | Comparar página estática e implementação | Substituir um framework E2E completo |
 | Ler texto visível da página para ajudar no debug | Sites com verificação humana complexa |
 
-Contexto de seleção: [Seleção de Ferramentas](/pt/guide/tools/tool-selection/)
+contexto de seleção: [Seleção de ferramentas](/pt/guide/tools/tool-selection/)
 
-## Comparação com outras Ferramentas
+## Comparação com outras ferramentas
 
-| Ferramenta | Entrada | Saída |
+| ferramenta | Entrada | Saída |
 |---|---|---|
 | Pesquisa Web | Termo de pesquisa | Resumos e ligações |
-| Browser | URL / endereço local | Estrutura da página, ecrãs, resultado da interação |
-| Computer Use | GUI do ecrã inteiro | Operação em qualquer aplicação (mais pesado, mais sensível) |
+| Navegador | URL / endereço local | Estrutura da página, capturas de tela, resultado da interação |
+| Computer Use | GUI da tela inteira | Operação em qualquer aplicação (mais pesado, mais sensível) |
 
 ## Mal-entendidos habituais
 
-### 1. A Ferramenta de browser não substitui testes automatizados
+### 1. A ferramenta de navegador não substitui testes automatizados
 
-Pode ajudar a verificar a página, fazer ecrãs e clicar em algumas interações — não substitui um sistema de testes completo.
+Pode ajudar a verificar a página, capturar imagens da tela e clicar em algumas interações — não substitui um sistema de testes completo.
 
 ### 2. A página abrir ≠ a página estar bem
 
@@ -74,17 +79,17 @@ Cenários mais comuns:
 Se a pergunta for:
 
 - «Como fica a renderização real»
-- «O que se vê de facto na página»
+- «O que se vê de fato na página»
 - «Que feedback a página dá depois deste clique»
 
-O browser costuma encaixar melhor do que análise só de texto.
+O navegador costuma encaixar melhor do que análise só de texto.
 
 ## Fluxo de trabalho recomendado
 
 1. **Frontend local**: primeiro `npm run dev`, depois dê `http://localhost:PORT/path`
-2. **Tarefa clara**: «verificar se o formulário de login overflow a 375px de largura», não «olhe a página»
+2. **tarefa clara**: «verificar se o formulário de login ultrapassa os limites a 375px de largura», não «olhe a página»
 3. **Limites claros**: proibir acesso à internet externa; proibir submeter formulários para produção
-4. **Aceitação**: comparar com [Verificar Artefatos](/pt/guide/quality/verify-artifacts/) e ecrãs
+4. **Aceitação**: comparar com [Verificar artefatos](/pt/guide/quality/verify-artifacts/) e capturas de tela
 
 ## Redação aplicável diretamente
 
@@ -98,28 +103,21 @@ Se encontrar problemas, dê evidência em ecrã e sugestões de correção.
 
 ## Limites de segurança
 
-- Por defeito, assuma que o browser pode aceder a **tudo o que a sua máquina ou ambiente alcança** — incluindo admin de intranet
-- Na Tarefa declare: `só aceder a localhost` ou lista branca de domínios
-- Não corra Tarefas de repositórios não fiáveis numa configuração de browser já com sessão pessoal iniciada
-- A política de browser em Cloud é definida por [Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/) e pela política de rede
+- Por defeito, assuma que o navegador pode aceder a **tudo o que a sua máquina ou ambiente alcança** — incluindo admin de intranet
+- Na tarefa declare: `só aceder a localhost` ou lista branca de domínios
+- Não corra tarefas de repositórios não confiáveis numa configuração de navegador já com sessão pessoal iniciada
+- A política de navegador em Cloud é definida por [Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/) e pela política de rede
 
-Conceito de Aprovação: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
+Conceito de aprovação: [permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
 
 ## Erros habituais
 
 - Dar URL de produção sem restringir a só leitura
-- Tratar ecrã do browser como «teste passou» sem correr testes automatizados
+- Tratar uma captura de tela do navegador como «teste passou» sem correr testes automatizados
 - Misturar com pesquisa Web: a pesquisa não substitui a verificação de renderização real
 
 ## Lista de verificação
 
-- [ ] O âmbito de acesso está fixo no Prompt
-- [ ] Problemas visuais críticos têm ecrã ou descrição textual
+- [ ] O escopo de acesso está fixo no Prompt
+- [ ] Problemas visuais críticos têm uma captura de tela ou descrição textual
 - [ ] Conclusões alinhadas com testes unitários/E2E, ou diferenças conhecidas registadas
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / Codex (conforme versão e Permissões)  
-**Base de verificação:** O OpenAI Help Center atual já publica a descrição do browser integrado na App de ambiente de trabalho: abrir páginas em Work ou Codex, mudar de separadores, descarregar ficheiros, usar modo de anotações e aprovar o acesso site a site. Esta página foca cenários adequados da Ferramenta de browser, diferença face a pesquisa/Computer Use e limites de segurança.  
-**Última verificação:** 2026-07-26

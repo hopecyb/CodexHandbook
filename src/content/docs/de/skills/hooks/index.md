@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Umgebungen mit lokalem Codex-Host; für Vertrauensprüfung und `/hooks`-Verwaltung gilt die offizielle Beschreibung der Codex CLI"
+  checkedAt: "2026-08-25"
 title: Hooks
 description: Führe Skripte oder MCP-Werkzeuge im Codex-Lebenszyklus für Prüfungen, Protokollierung und Richtliniensteuerung aus.
 locale: de
 source_locale: zh-CN
-source_revision: a0312e9
+source_revision: "a0312e9"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein Hook ist ein automatischer Handler im Codex-Lebenszyklus. Er kann beim Sitzungsstart, Absenden eines Prompts, vor oder nach Werkzeugaufrufen, bei Kontextkomprimierung, beim Ende eines Subagents oder am Ende des Hauptthreads ein Skript oder MCP-Werkzeug ausführen.
@@ -39,11 +43,3 @@ Ein Hook ersetzt weder Sandbox, Genehmigung, Befehlsregeln noch serverseitige Be
 ## Offizielle Quelle
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host; für Vertrauensprüfung und `/hooks`-Verwaltung gilt die offizielle Beschreibung der Codex CLI
-
-**Zuletzt geprüft:** 2026-08-25

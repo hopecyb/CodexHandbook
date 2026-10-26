@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Desktop Voice (seg\u00fan plan y ajustes del espacio de trabajo)"
+  basis: "El OpenAI Help Center actual (*ChatGPT Voice* y *ChatGPT Work and Codex*) deja claro que Voice puede usarse en la App de escritorio con Work / Codex para arrancar tareas, seguir el progreso y coordinar trabajo; capacidad y disponibilidad dependen del plan, ajustes del espacio de trabajo y versión. Esta página se centra en escenarios adecuados de la voz, privacidad y el método «tras dictar, volver a confirmar por escrito»."
+  checkedAt: "2026-07-26"
 title: Entrada y salida de voz
 description: Escenarios, límites y privacidad al interactuar con Codex por voz.
 locale: es
 source_locale: zh-CN
-source_revision: 192bba2
+source_revision: '192bba2'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 70
 ---
@@ -27,7 +32,7 @@ La voz encaja mejor para expresar dirección, complementar contexto o hacer segu
 |---|---|
 | Dictar objetivos de alto nivel, brainstorming | Instrucciones de código precisas hasta nombres de variable |
 | Seguimiento breve en móvil | Leer en voz alta API keys o contraseñas |
-| Necesidades de accessibility | Documentos normativos que deben ser buscables y con diff |
+| Necesidades de accesibilidad | Documentos normativos que deben ser buscables y con diff |
 
 Tras dictar, conviene pedir a Codex que **repita lo entendido** o genere un plan escrito, y tú confirmas. Ver [Pedir un plan](/es/prompts/ask-for-a-plan/).
 
@@ -49,7 +54,7 @@ La práctica habitual es dictar primero la dirección y luego completar la confi
 
 ## Recomendaciones de uso
 
-1. Entorno silencioso, frases cortas; di por partes «objetivo / restricciones / criterios de hecho»
+1. Entorno silencioso, frases cortas; di por partes «objetivo / restricciones / criterios de finalización»
 2. Con rutas de archivo o nombres de rama, **pasa a teclear** o pide al Agent que repita la ortografía
 3. En proyectos sensibles, desactiva el procesamiento de voz en la nube (si el producto ofrece opción local/desactivar)
 4. Decisiones importantes: deja registro escrito en issue o PR
@@ -67,7 +72,7 @@ Esto conviene teclearlo:
 - Parámetros
 - Criterios de aceptación
 
-### 2. Cuanto más largo y detallado digas, no necesariamente menos errores
+### 2. Hablar más y con más detalle no garantiza menos errores
 
 Un dictado largo sin estructura dispersa el foco con más facilidad.
 
@@ -102,13 +107,6 @@ Al acabar, pide que lo organice en versión escrita para que confirmes.
 
 - Dictado largo sin estructura; el Agent omite restricciones
 - Aceptar por voz un lote grande de cambios de código sin mirar el diff
-- Describir por voz detalles no desensibilizados de un incidente de producción
+- Describir por voz detalles sin eliminar los datos sensibles de un incidente de producción
 
 La voz sirve para arrancar y hacer seguimiento; no sustituye instrucciones precisas, el tratamiento de información sensible ni la aceptación final.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / Desktop Voice (según plan y ajustes del espacio de trabajo)  
-**Base de verificación:** El OpenAI Help Center actual (*ChatGPT Voice* y *ChatGPT Work and Codex*) deja claro que Voice puede usarse en la App de escritorio con Work / Codex para arrancar tareas, seguir el progreso y coordinar trabajo; capacidad y disponibilidad dependen del plan, ajustes del espacio de trabajo y versión. Esta página se centra en escenarios adecuados de la voz, privacidad y el método «tras dictar, volver a confirmar por escrito».  
-**Última verificación:** 2026-07-26

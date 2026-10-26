@@ -3,12 +3,17 @@ title: Installation et mises à jour CLI
 description: Installer, mettre à jour et confirmer votre version.
 locale: fr
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: 'be3f2c4'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Comparaison avec le guide CLI actuel pour les points d'entrée macOS/Linux, Windows, npm et Homebrew, les mises à jour et la connexion Codex. Les commandes exactes sont maintenues sur la page d'installation pour débutants.
+  checkedAt: '2026-08-26'
 ---
 
 La première installation de la CLI soulève souvent trois questions :
@@ -54,19 +59,3 @@ Après l'installation :
 Le critère pratique est que ce terminal trouve la commande et que l'authentification réussisse.
 
 Voir aussi [Installer la CLI](/fr/guide/getting-started/install-cli/). Les instructions actuelles d'installation et de mise à jour figurent dans [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). L'installateur autonome officiel pour macOS/Linux utilise la même commande pour l'installation et les mises à jour ; utilisez l'onglet correspondant pour Windows, npm ou Homebrew.
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** CLI
-
-**Base de vérification :** Comparaison avec le guide CLI actuel pour les points d'entrée macOS/Linux, Windows, npm et Homebrew, les mises à jour et la connexion Codex. Les commandes exactes sont maintenues sur la page d'installation pour débutants.
-
-**Dernière vérification :** 2026-08-26
-
----
-
-**Statut :** revue  
-**Produits concernés :** CLI  
-**Dernière vérification :** 2026-07-25

@@ -3,15 +3,20 @@ title: Revisar o resultado
 description: Leia as mudanças, verifique o Artefato e decida aceitar ou modificar.
 locale: pt
 source_locale: zh-CN
-source_revision: a215910
+source_revision: "a215910"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Cruzado com os capítulos já verificados deste handbook sobre revisar Diff, definição de pronto e desfazer/recuperar; esta página foca no método estável de «ver alcance, ver resultado, ver efeitos colaterais e então decidir se recebe».
+  checkedAt: '2026-07-26'
 ---
 
-Depois de concluir a Tarefa, muitos iniciantes pulam este passo.
+Depois de concluir a tarefa, muitos iniciantes pulam este passo.
 
 Para usar o Codex com mais estabilidade, importa saber **revisar o resultado**.
 
@@ -19,12 +24,12 @@ Não olhe só o «concluído» — veja o que ele alterou de fato e se o resulta
 
 ## Lista de verificação
 
-1. **Olhar o Diff**: alterou só os arquivos permitidos?
+1. **Olhar o diff**: alterou só os arquivos permitidos?
 2. **Abrir o Artefato**: o conteúdo atende ao critério de aceite?
 3. **Pedir correção**: se falta pouco, continue com feedback preciso
 4. **Decidir**: aceitar / alterar à mão / [desfazer](/pt/guide/getting-started/undo-and-recover/)
 
-Mais métodos: [Revisar Diff](/pt/guide/quality/review-diffs/).
+Mais métodos: [Revisar diff](/pt/guide/quality/review-diffs/).
 
 ## Pontos fáceis de passar por alto
 
@@ -38,7 +43,7 @@ O Codex pode escrever um resumo fluente — mas o que importa de verdade é:
 
 ### 2. Ver «mais ou menos» e aceitar de cara
 
-«Mais ou menos» costuma deixar buracos pequenos depois.  
+«Mais ou menos» costuma deixar buracos pequenos depois.
 Se falta pouco, um feedback preciso é melhor do que aceitar em silêncio.
 
 ### 3. Perceber que está errado e não saber como dizer
@@ -58,10 +63,3 @@ Na primeira prática, verifique nesta ordem:
 3. **Efeitos colaterais**: introduziu mudanças extras ou erros novos?
 
 No aceite, o ponto central é confirmar se desta vez dá para receber o resultado com tranquilidade.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste handbook sobre revisar Diff, definição de pronto e desfazer/recuperar; esta página foca no método estável de «ver alcance, ver resultado, ver efeitos colaterais e então decidir se recebe».  
-**Última verificação:** 2026-07-26

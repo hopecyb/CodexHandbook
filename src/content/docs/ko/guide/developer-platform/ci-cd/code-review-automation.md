@@ -1,14 +1,19 @@
 ---
 title: 코드 리뷰 자동화
-description: CI 또는 PR 흐름에 Codex 리뷰를 연결합니다——프롬프트, 권한, 사람 게이트입니다.
+description: CI 또는 PR 흐름에 Codex 리뷰를 연결합니다——프롬프트, 권한, 사람의 승인 절차입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: 'aa8b33e'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: OpenAI Developers 홈은 여전히 Codex를 테스트·리뷰·변경 준비에 쓸 수 있다고 설명하며, 공식 use case에도 “Review GitHub pull requests”가 포함됩니다. 이 페이지는 CI에 안전하게 연결하는 원칙과 게이트 패턴만 요약하며, 고정 명령이나 유일한 구현을 주장하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 Codex를 **Pull Request 파이프라인**에 넣으면, 사람 리뷰 전에 뚜렷한 문제를 잡을 수 있습니다. 다만 **책임 있는 리뷰와 테스트를 대체하지는 않습니다**. 이 페이지는 실행 가능한 자동화 패턴을 다룹니다.
@@ -74,7 +79,7 @@ diff가 너무 크면 <경로 목록>만 리뷰하세요.
 |---|---|
 | 읽기 전용 | CI token에 push 없음(또는 bot comment만) |
 | 모델 고정 | 과거 리뷰 품질을 비교하기 쉽습니다 |
-| 주입 방지 | 소독하지 않은 PR 설명을 system prompt에 붙이지 마세요 |
+| 주입 방지 | 검증되지 않은 PR 설명을 system prompt에 붙이지 마세요 |
 | 비밀 | GitHub Secrets에 token 저장 |
 
 [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/) · [환경 변수](/ko/guide/reference/environment-variables/)
@@ -105,9 +110,3 @@ diff가 너무 크면 <경로 목록>만 리뷰하세요.
 
 ## 참고 출처
 - OpenAI Codex CI 예시
----
-
-**상태：** verified  
-**적용 제품：** CLI / API / Cloud  
-**검증 근거：** OpenAI Developers 홈은 여전히 Codex를 테스트·리뷰·변경 준비에 쓸 수 있다고 설명하며, 공식 use case에도 “Review GitHub pull requests”가 포함됩니다. 이 페이지는 CI에 안전하게 연결하는 원칙과 게이트 패턴만 요약하며, 고정 명령이나 유일한 구현을 주장하지 않습니다.  
-**최근 검증：** 2026-07-26

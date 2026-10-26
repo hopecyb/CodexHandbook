@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Đã đối chiếu các trang chính thức hiện tại Developer commands và Non-interactive mode, xác nhận codex, codex exec, --cd / -C và lệnh slash trong phiên. Với phím tắt, người đọc vẫn cần dựa vào gợi ý hoàn thành lệnh và --help hiện tại.", "checkedAt": "2026-08-26"}
 title: Lệnh và lối tắt
 description: Lệnh con CLI, thao tác trong phiên và thói quen bàn phím — hướng dẫn theo sản phẩm; tham số đầy đủ xem khu tham chiếu.
 locale: vi
 source_locale: zh-CN
-source_revision: 2896e32
+source_revision: "2896e32"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Hiệu quả trong terminal đến từ ba khối: **cách khởi**, **thao tác tắt trong phiên**, **phối hợp với script/trình soạn thảo**. Trang này nói cách dùng và thói quen; bảng tham số xem [Tham chiếu lệnh CLI](/vi/guide/reference/commands/) và [Phím tắt](/vi/guide/reference/keyboard-shortcuts/).
@@ -36,11 +37,11 @@ Phân rõ rồi thì chọn lệnh nào sẽ rõ hơn nhiều.
 | Việc bạn muốn | Lối vào | Chi tiết |
 |---|---|---|
 | Vừa chat vừa sửa mã | `codex` TUI tương tác | [Chế độ tương tác](/vi/guide/cli/interactive-mode/) |
-| Tác vụ một lần CI / pipeline | `codex exec` (hoặc tương đương) | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
+| Tác vụ một lần CI / pipeline | `codex exec` | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
 | Đổi hành vi mặc định | Tệp cấu hình | [Cấu hình CLI](/vi/guide/cli/configuration/) |
 
 :::note
-Tên lệnh con đổi theo phiên bản — lấy theo `codex --help`.
+`codex` và `codex exec` hiện đều là các lối vào Stable; tham số cụ thể vẫn cần đối chiếu `codex --help` và `codex exec --help`.
 :::
 
 ## Hiểu nhầm thường gặp
@@ -71,7 +72,7 @@ Biết vài việc này là đủ dùng.
 
 ## «Tắt» trong phiên tương tác
 
-Khóa và lệnh `/` cụ thể khác nhau theo phiên bản, nhưng hạng mục ổn định:
+Phím và lệnh `/` cụ thể khác nhau theo phiên bản, nhưng hạng mục ổn định:
 
 ### Nhập và lịch sử
 
@@ -114,7 +115,7 @@ Như vậy ít bị «công cụ chưa quen đã bọc thêm một lớp» ngay 
 
 | | CLI | Tiện ích IDE |
 |---|---|---|
-| Ngữ cảnh | `--cd`, tệp @ (tùy phiên bản) | Tệp mở, mã chọn |
+| Ngữ cảnh | `--cd` / `-C` chỉ định thư mục; công cụ đọc tệp trên đĩa | Tệp mở, mã chọn |
 | Phù hợp | Script, SSH từ xa, thuần terminal | Vừa sửa vừa xem diff |
 | Lối tắt | Phím terminal + `/` | Bảng lệnh trình soạn thảo |
 
@@ -136,9 +137,3 @@ IDE: [Quy trình tác vụ local](/vi/guide/ide/local-task-workflow/)
 
 ## Nguồn tham khảo
 - Tài liệu OpenAI Codex CLI
----
-
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú tái kiểm:** Trang này liên quan `codex`, `codex exec`, hạng mục lệnh `/` và thao tác tắt trong phiên — chi tiết tương tác CLI dễ đổi theo phiên bản; hiện thiếu tài liệu lệnh/lối tắt chính thức hiện hành đủ mạnh để chống đỡ các mô tả này — cần viết lại rồi mới kiểm chứng.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,20 @@
 ---
-title: "Caso: matriz de funciones de competencia"
+contentType: case
+directoryOrder: 85
+caseCategory: creation
+legacyVerification:
+  status: verified
+  products: App / CLI
+  basis: Contrastado con los capítulos ya verificados de investigación con fuentes, búsqueda web, validar fuentes y política de versiones. El contenido se limita a la estructura estable del caso de investigación «producir una matriz de productos competidores con fuentes»; no fija precios ni versiones concretas de producto.
+  checkedAt: '2026-07-26'
+title: "Caso: matriz de funciones de productos competidores"
 description: Investigación con citas y salida tabular — un flujo reutilizable también para lectores no técnicos.
 locale: es
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: "b74008b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 ## Metadatos
@@ -61,10 +69,3 @@ salida en tabla markdown; no modifiques otros archivos del repo.
 
 - [Trabajo orientado a artefactos](/es/cases/workflows/artifact-first-work/)
 - [Validar fuentes](/es/guide/quality/validate-sources/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de investigación con fuentes, búsqueda web, validar fuentes y política de versiones. El contenido se limita a la estructura estable del caso de investigación «producir una matriz de competencia con fuentes»; no fija precios ni versiones concretas de producto.

@@ -10,9 +10,10 @@ verification:
   summary: "3 種類のタスクと 2 組の比較は、本サイトによる協業上の提案です。承認と実行の境界を確認しましたが、クライアントの固定モードでも、モデルの成功率を測る実験でもありません。"
 locale: ja
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 先に計画を求めるべきかどうかは、まだ何を決める必要があるかによります。範囲が明確で元に戻しやすい変更は直接実行できます。進め方が不明確なら先に計画し、追加の承認が必要な具体的な操作の直前で止まります。計画を求めることは、各手順でユーザーの返答を待つという意味ではありません。

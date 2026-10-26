@@ -12,10 +12,10 @@ title: Automatiser un rapport quotidien
 description: Transformer un travail de synthèse répétitif en script ou Skill réutilisable.
 locale: fr
 source_locale: zh-CN
-source_revision: 2149e0a
+source_revision: "2149e0a"
 translation_status: reviewed
 translated_at: 2026-10-24
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 ## Métadonnées

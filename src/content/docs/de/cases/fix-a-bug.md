@@ -3,10 +3,16 @@ title: 'Einen Bug beheben: Wo anfangen?'
 description: Wähle den passenden Weg zur Behebung des aktuellen Bugs und öffne ein vollständiges Beispiel mit ausführbaren Materialien.
 locale: de
 source_locale: zh-CN
-source_revision: 405a687
+source_revision: "405a687"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI / IDE"
+  basis: Diese Einstiegsseite beschreibt nur die Wahl des passenden Pfads und einen stabilen Engineering-Zyklus. Die Befehle für den erwarteten Fehlschlag und den erfolgreichen Referenzlauf wurden im aktuellen
+    Repository tatsächlich ausgeführt.
+  checkedAt: '2026-08-25'
 ---
 
 Diese Seite dient als kurzer Einstieg. Die vollständige Anleitung mit ausführbarem Code, Nachweisen für rote und grüne Tests sowie Prompts für jede Phase wird zentral unter [Bugfix mit Verifikation](/de/cases/use-cases/software-development/fix-a-bug-with-verification/) gepflegt. So entstehen keine widersprüchlichen Duplikate.
@@ -19,7 +25,7 @@ Diese Seite dient als kurzer Einstieg. Die vollständige Anleitung mit ausführb
 | Es gibt bereits einen zuverlässig fehlschlagenden Test | [Bugfix mit Verifikation](/de/cases/use-cases/software-development/fix-a-bug-with-verification/) |
 | Du kennst das betroffene Modul nicht | [Eine Codebasis verstehen](/de/cases/understand-a-codebase/) |
 | Der Fix ist fertig und soll zusammengeführt werden | [Einen PR prüfen](/de/cases/review-a-pr/) |
-| Der Test selbst ist instabil | Lies zuerst [Tests ausführen](/de/guide/quality/run-tests/) und behandle einen flüchtigen Test nicht als Nachweis für den Fix |
+| Der Test selbst ist instabil | Lies zuerst [Tests ausführen](/de/guide/quality/run-tests/) und behandle einen instabilen Test (flaky test) nicht als Nachweis für den Fix |
 
 ## Der kleinste vollständige Zyklus
 
@@ -47,10 +53,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 Alle Materialien befinden sich unter [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Status:** verified  
-**Unterstützte Produkte:** CLI / IDE  
-**Prüfgrundlage:** Diese Einstiegsseite beschreibt nur die Wahl des passenden Pfads und einen stabilen Engineering-Zyklus. Die Befehle für den erwarteten Fehlschlag und den erfolgreichen Referenzlauf wurden im aktuellen Repository tatsächlich ausgeführt.
-**Zuletzt geprüft:** 2026-08-25

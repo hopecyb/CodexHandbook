@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Benachrichtigungen und Aktivitätsansicht
 description: Konfiguriere Hinweise auf abgeschlossene Aufgaben, Berechtigungsanfragen und ausstehende Antworten.
 sidebar:
   order: 80
 locale: de
 source_locale: zh-CN
-source_revision: 4a1c672
+source_revision: "4a1c672"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Benachrichtigungen zeigen, wann du zu einer Aufgabe zurückkehren musst. Sie ersetzen nicht die Prüfung des Ergebnisses. In der Desktop-App kannst du Hinweise auf abgeschlossene Runden konfigurieren und Benachrichtigungen für Berechtigungsanfragen und Fragen getrennt steuern.
@@ -47,11 +51,3 @@ CLI und IDE verwenden andere Benachrichtigungsmechanismen: Die IDE besitzt keine
 
 - [Notifications](https://learn.chatgpt.com/docs/notifications)
 - [Desktop app settings](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Zuletzt geprüft:** 2026-08-26

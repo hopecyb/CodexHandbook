@@ -1,12 +1,17 @@
 ---
 title: 여러 Agent 협업
-description: 병렬 탐색, 분업 실행, 결과 병합—언제 쪼개고, 어떻게 인수할지입니다.
+description: 병렬 탐색, 분업 실행, 결과 병합—언제 쪼개고, 어떻게 검수할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: '00989e9'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: OpenAI Developers의 현재 multi-agent / subagents 공개 설명과, 이 핸드북에서 이미 검증된 Subagent, 인수인계 복구, 병렬 작업 관련 장을 교차 확인했습니다. 페이지 내용은 “언제 나누고, 어떻게 경계를 격리하고, 어떻게 사람이 요약·검수할지”라는 안정적인 방법으로 한정되며, 현재 beta나 UI 진입점을 고정 계약으로 쓰지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 여러 Agent는 병렬 가능하고 결합도가 낮은 하위 문제에 적합하며, 조율 없이 같은 파일을 동시에 고치는 데는 적합하지 않습니다.
@@ -47,10 +52,10 @@ Agent 2: 방안 B의 장단점과 작업량
 
 - 각 Agent의 디렉터리 경계를 명확히 합니다
 - 병렬 `git push`를 금지합니다
-- 병합 전에 CI를 통일해 실행합니다
+- 병합 전에 공통 CI 검사를 실행합니다
 - 충돌은 사람이 해결하고, Agent가 추측하지 않게 합니다
 
-## 인수
+## 검수
 
 - [ ] 각 하위 Agent에 독립 「완료 정의」가 있음
 - [ ] 병합 후 전체 테스트 통과
@@ -60,10 +65,3 @@ Agent 2: 방안 B의 장단점과 작업량
 
 - 병렬 Agent 세 개가 `package.json`을 수정
 - 요약 단계가 없어 누구 결론을 따를지 모름
-
----
-
-**상태:** verified  
-**적용 제품:** App / Cloud  
-**검증 근거:** OpenAI Developers의 현재 multi-agent / subagents 공개 설명과, 이 핸드북에서 이미 검증된 Subagent, 인수인계 복구, 병렬 작업 관련 장을 교차 확인했습니다. 페이지 내용은 “언제 나누고, 어떻게 경계를 격리하고, 어떻게 사람이 요약·인수할지”라는 안정적인 방법으로 한정되며, 현재 beta나 UI 진입점을 고정 계약으로 쓰지 않습니다.  
-**최근 검증:** 2026-07-26

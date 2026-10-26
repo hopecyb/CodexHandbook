@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Conferido com a página oficial atual de Authentication para os dois métodos de autenticação local, com ChatGPT e API key, o requisito de autenticação com ChatGPT no Cloud, os comandos da CLI, a partilha da cache de credenciais e os limites de armazenamento."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Conferido com a página oficial atual de Authentication para os dois métodos de autenticação local, com ChatGPT e API key, o requisito de autenticação com ChatGPT no Cloud, os comandos da CLI, a partilha da cache de credenciais e os limites de armazenamento.
+  checkedAt: '2026-08-26'
 title: Início de sessão e autenticação
 description: Escolher o método de autenticação adequado nos clientes locais e no Cloud e verificar com segurança a identidade ativa.
 locale: pt
 source_locale: zh-CN
-source_revision: ea83fa6
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: "ea83fa6"
+translation_status: reviewed
+translated_at: '2026-09-20'
 sidebar:
   order: 60
+reviewed_at: '2026-10-26'
 ---
 
 Ao usar modelos da OpenAI, o Codex oferece duas formas de autenticação pessoal:

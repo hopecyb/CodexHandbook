@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Đã đối chiếu hướng dẫn CLI nhanh chính thức hiện tại, xác nhận cách cài qua macOS/Linux, Windows, npm và Homebrew, cách cập nhật và quy trình đăng nhập codex. Các lệnh cụ thể được duy trì tập trung ở trang cài đặt dành cho người mới.", "checkedAt": "2026-08-26"}
 title: Cài đặt và cập nhật CLI
 description: Cài đặt, nâng cấp và xác nhận phiên bản.
 locale: vi
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: "be3f2c4"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Lần đầu cài CLI, nhiều người kẹt ở:
@@ -29,12 +30,12 @@ CLI cài xong không phải chạy lệnh một lần là đủ — mà terminal
 
 ### 1. Script cài chạy xong là hoàn tất
 
-Script cài chạy xong chỉ nghĩa «bước cài đã thực thi».  
+Script cài chạy xong chỉ nghĩa «bước cài đã thực thi».
 Tiếp theo cần xem: terminal bạn đang mở có nhận ra lệnh này không.
 
 ### 2. Đổi cửa sổ terminal là tự ổn
 
-Có khi được, có khi không.  
+Có khi được, có khi không.
 Nếu `PATH` chưa cập nhật, đổi cửa sổ vẫn có thể không tìm thấy.
 
 ### 3. Cập nhật là cài lại một lần
@@ -56,11 +57,4 @@ Vừa cài xong, có thể kiểm:
 Tiêu chuẩn thực tế hơn: terminal hiện tại tìm được nó, và bạn đã hoàn tất xác thực.
 
 Cũng có thể đối chiếu: [Cài đặt CLI](/vi/guide/getting-started/install-cli/)
-Hướng dẫn cài và nâng cấp chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
-
----
-
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú tái kiểm:** Trang này dù nói tư duy kiểm sau cài, nhưng phần thân vẫn mặc định có một bộ quy trình cài, cập nhật và xác thực hiện tại; vì cách cài CLI chính thức, bước xác thực và lệnh xác nhận phiên bản đều là chi tiết biến động cao — trước khi bổ sung tài liệu cài chính thức mới nhất không nên gắn `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Hướng dẫn cài và nâng cấp chính thức: [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). Trình cài đặt độc lập chính thức cho macOS/Linux dùng cùng một lệnh để cài đặt và cập nhật. Với Windows, npm và Homebrew, hãy xem tab tương ứng trên trang chính thức.

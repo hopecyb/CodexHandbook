@@ -12,10 +12,10 @@ title: コードベースを理解する
 description: 読み取り専用で未知のリポジトリを探索し、行動可能な認知マップを構築する。
 locale: ja
 source_locale: zh-CN
-source_revision: c89ee30
+source_revision: "c89ee30"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 

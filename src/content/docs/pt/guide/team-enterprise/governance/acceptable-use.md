@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Organização / equipe"
+  basis: "A documentação empresarial atual da OpenAI continua a enfatizar que plugins, apps, ações externas e acesso a sistemas de origem devem gerir-se por papel e limites de permissão; esta página define a AUP como limite de comportamento organizacional e mantém a premissa de «esquema educativo, requer localização legal», sem a apresentar como template oficial de política."
+  checkedAt: "2026-07-26"
 title: Política de uso aceitável
-description: Acordos ao nível da equipa sobre o que o Codex pode e não pode fazer, alinhados com tecnologia e formação.
+description: Acordos ao nível da equipe sobre o que o Codex pode e não pode fazer, alinhados com tecnologia e formação.
 locale: pt
 source_locale: zh-CN
-source_revision: 0409154
+source_revision: "0409154"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -16,24 +21,24 @@ A **política de uso aceitável (AUP)** converte «posso usar o Codex para isto?
 ## Conteúdo
 
 - Temas que a AUP deve cobrir
-- Encaixe com RH/conformidade e controlos técnicos
+- Encaixe com RH/conformidade e controles técnicos
 - Rascunho de cláusulas de exemplo (requer localização legal)
 
 ## O que a AUP gere
 
-A AUP responde sobretudo a: mesmo que seja tecnicamente possível, está permitido fazê-lo na nossa equipa?
+A AUP responde sobretudo a: mesmo que seja tecnicamente possível, está permitido fazê-lo na nossa equipe?
 
 Não substitui a política técnica; escreve os limites organizacionais como regras que todos possam compreender e aplicar.
 
 :::caution
-O seguinte é um **esquema educativo**, não um parecer jurídico. Antes de o publicar formalmente deve revê-lo jurídico e conformidade.
+O seguinte é um **esquema educativo**, não um parecer jurídico. Antes da publicação formal, as equipes jurídica e de conformidade devem revisá-lo.
 :::
 
 ## Mal-entendidos frequentes
 
 ### A AUP também importa a quem a usa no dia a dia
 
-Muita gente vê estas políticas como um requisito formal, alheias ao utilizador de primeira linha.
+Muita gente vê estas políticas como um requisito formal, alheias ao usuário de primeira linha.
 
 Mas no trabalho diário costumam aparecer perguntas como:
 
@@ -43,22 +48,22 @@ Mas no trabalho diário costumam aparecer perguntas como:
 
 Assim, não é só um documento jurídico: também é o limite real de uso.
 
-### Ter política escrita não significa que a equipa a cumpra
+### Ter política escrita não significa que a equipe a cumpra
 
-Se a política diz «as alterações de produção requerem Aprovação», mas a Ferramenta permite saltá-la por omissão, a política perde efeito depressa.
+Se a política diz «as alterações de produção requerem aprovação», mas a ferramenta permite saltá-la por padrão, a política perde efeito depressa.
 
-Por isso o importante da AUP é alinhá-la com formação, Permissões, configuração e auditoria, não só escrevê-la completa.
+Por isso o importante da AUP é alinhá-la com formação, permissões, configuração e auditoria, não só escrevê-la completa.
 
 ## Temas recomendados
 
 | Tema | Pontos-chave |
 |---|---|
 | Usos permitidos | Desenvolvimento, documentação, investigação, automatização interna |
-| Usos proibidos | Acesso não autorizado, conteúdo de assédio, contornar controlos de segurança |
+| Usos proibidos | Acesso não autorizado, conteúdo de assédio, contornar controles de segurança |
 | Classificação de dados | Que repos/dados se podem usar; regras de PII de clientes |
 | Responsabilidade da saída | Merge após revisão humana; não usar a saída como conselho jurídico/médico externo |
 | Extensões | Só Plugin/MCP da lista aprovada |
-| Contas | Proibido partilhar lugares pessoais; recuperar ao sair |
+| Contas | Proibido compartilhar licenças individuais; revogar o acesso no desligamento |
 | Incidentes | Canal para reportar comportamento suspeito |
 
 ## Estrutura básica
@@ -69,43 +74,36 @@ Por isso o importante da AUP é alinhá-la com formação, Permissões, configur
 4. **Dados e confidencialidade**
 5. **Requisitos de supervisão humana** (merge, alterações de produção)
 6. **Consequências do incumprimento** (remissão ao manual de colaboradores existente)
-7. **Contactos e data de atualização**
+7. **Contatos e data de atualização**
 
-## Alinhamento com controlos técnicos
+## Alinhamento com controles técnicos
 
 | Cláusula AUP | Aplicação técnica |
 |---|---|
-| Não exfiltrar código-fonte | Política de rede, Aprovação de MCP |
-| Alterações de produção requerem Aprovação | Proteção de branches, deny de `git push` |
+| Não exfiltrar código-fonte | Política de rede, aprovação de MCP |
+| Alterações de produção requerem aprovação | Proteção de branches, deny de `git push` |
 | Só modelos aprovados | Configuração gerida pela organização |
 
 ## Erros frequentes
 
 - AUP escrita sem formação
-- Desalinhada com a realidade técnica (a política proíbe o que a Ferramenta permite)
+- Desalinhada com a realidade técnica (a política proíbe o que a ferramenta permite)
 - Sem atualizar durante anos, desfasada relativamente a funções novas (Computer Use, etc.)
 
 ## Como julgar se uma AUP é efetiva
 
 Pergunta primeiro:
 
-1. Responde a limites de uso reais da equipa?
-2. Pode aterrar em formação, configuração ou fluxos de Aprovação?
-3. Perante uma infração, a equipa sabe como a detetar e tratar?
+1. Responde a limites de uso reais da equipe?
+2. Pode ser aplicada em formação, configuração ou fluxos de aprovação?
+3. Perante uma infração, a equipe sabe como a detectar e tratar?
 
 Se as três se aproximam de «sim», a política tem mais probabilidade de ser realmente efetiva.
 
 ## Lista de aceitação
 
 - [ ] O onboarding inclui confirmação da AUP
-- [ ] Sem contradição com as [regras de equipa](/pt/guide/customization/rules/team-rules/)
+- [ ] Sem contradição com as [regras de equipe](/pt/guide/customization/rules/team-rules/)
 - [ ] Revisão anual ou ao publicar funções importantes
 
-O valor da AUP é escrever com clareza os limites de uso do Codex na equipa e alinhá-los com os controlos reais.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** Organização / equipa  
-**Base de verificação:** A documentação empresarial atual da OpenAI continua a enfatizar que plugins, apps, ações externas e acesso a sistemas de origem devem gerir-se por papel e limites de Permissão; esta página define a AUP como limite de comportamento organizacional e mantém a premissa de «esquema educativo, requer localização legal», sem a apresentar como template oficial de política.  
-**Última verificação:** 2026-07-26
+O valor da AUP é escrever com clareza os limites de uso do Codex na equipe e alinhá-los com os controles reais.

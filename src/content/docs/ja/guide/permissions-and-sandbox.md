@@ -5,10 +5,15 @@ sidebar:
   order: 14
 locale: ja
 source_locale: zh-CN
-source_revision: 6b5fcb8
+source_revision: "6b5fcb8"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Codex の現在のサンドボックス、承認、セキュリティに関する公式説明と照合済みです。OS レベルの実行境界、承認ポリシー、タスク制約、人によるレビューを区別し、ローカルと Cloud のネットワークモデルを個別に説明しています。
+  checkedAt: '2026-08-26'
 ---
 
 Codex を安全に使うには、2 つの制御を同時に確認します。**サンドボックスは技術的に到達できる範囲を決め、承認ポリシーは現在の境界を越える前にユーザーへ確認するかを決めます。**
@@ -55,7 +60,7 @@ Cloud 環境の Secrets はセットアップ段階だけで使用され、Agent
 
 ### 2. 範囲と照合する
 
-対象は現在のプロジェクト、外部ディレクトリ、ネットワーク、システムアプリのどれですか。パス、ドメイン、コマンドが具体的ほど判断しやすくなります。
+対象は現在のプロジェクト、外部ディレクトリ、ネットワーク、システムアプリのどれですか。パス、ドメイン、コマンドが具体的であるほど判断しやすくなります。
 
 ### 3. 副作用と照合する
 
@@ -105,13 +110,3 @@ src/auth と tests/auth だけを変更してください。
 - **Hooks はサンドボックスの代わりになる**：Hook は追加のガードと監査レイヤーであり、OS による強制隔離の代替ではありません。
 
 製品設定は [CLI の承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/) と [デスクトップ App の設定](/ja/guide/desktop-app/settings/) を、タスクの書き方は [制約と境界](/ja/prompts/constraints-and-boundaries/) を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** App / CLI / IDE / Cloud
-
-**検証根拠：** Codex の現在のサンドボックス、承認、セキュリティに関する公式説明と照合済みです。OS レベルの実行境界、承認ポリシー、タスク制約、人によるレビューを区別し、ローカルと Cloud のネットワークモデルを個別に説明しています。
-
-**最終検証：** 2026-08-26

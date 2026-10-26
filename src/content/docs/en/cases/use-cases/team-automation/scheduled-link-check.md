@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 0d21aa9
+source_revision: '0d21aa9'
 ---
 
 Before scheduling a check, confirm that the script can actually find problems and explain what it checked. This exercise begins with two deliberately broken links. Change one target at a time and observe how the result changes.

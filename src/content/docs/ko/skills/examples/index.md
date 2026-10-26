@@ -8,9 +8,10 @@ title: "Skill 예시"
 description: "글쓰기, 검토, 조사, 자동화 Skill 예시 네 가지의 시작 페이지."
 locale: ko
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: "490db95"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 예시를 고르기 전에 자료 상태를 확인하세요. 완성된 패키지에는 입력, 참고 자료, 검증 스크립트가 들어 있습니다. 뼈대만 있는 경우에는 자료와 실제 확인을 추가해야 하며, 그대로 검증된 워크플로로 사용할 수 없습니다.

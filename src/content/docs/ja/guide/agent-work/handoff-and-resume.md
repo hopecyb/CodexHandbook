@@ -3,12 +3,17 @@ title: 引き継ぎと再開
 description: 未完了の作業をセッションをまたいで続ける。
 locale: ja
 source_locale: zh-CN
-source_revision: 1ee17e9
+source_revision: "1ee17e9"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers の長期タスク・継続目標・Codex 協業形態に関する現行公開説明をクロスチェック済み。本ページは「引き継ぎ要約は次の作業継続を助けるべき」という安定した方法のみを残し、特定製品端の引き継ぎボタンや手順を固定ルールとして書かない。
+  checkedAt: "2026-07-26"
 ---
 
 ここで扱うのは、よくある問いです。
@@ -32,7 +37,7 @@ sidebar:
 - 数時間後の自分
 - 新しく開いた別タスク
 - 別の協業者
-- 引き続き受ける Codex
+- 作業を引き継ぐ Codex
 
 だから引き継ぎは長い総括ではなく、**続けるために本当に必要な情報**を残すことです。
 
@@ -77,7 +82,7 @@ sidebar:
 
 - `pnpm build` を一度走らせる
 - `guide/verification.md` の追記を続ける
-- `/guide/foundations/local-vs-cloud/` の見出し画像の見え方を確認する
+- `/ja/guide/foundations/local-vs-cloud/` の見出し画像の見え方を確認する
 
 ## 再開するときの安定手順
 
@@ -90,10 +95,3 @@ sidebar:
 こうすると、圧縮・欠落・変形した古いコンテキストに依存しにくくなります。
 
 良い引き継ぎは履歴の復唱ではなく、次にタスクを開いた人がすぐ分かることです——今どこにいるか、次に何をするか、終わったらどう検証するか。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Developers の長期タスク・継続目標・Codex 協業形態に関する現行公開説明をクロスチェック済み。本ページは「引き継ぎ要約は次の作業継続を助けるべき」という安定した方法のみを残し、特定製品端の引き継ぎボタンや手順を固定ルールとして書かない。  
-**最終検証：** 2026-07-26

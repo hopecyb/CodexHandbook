@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page summarizes common prompt anti-patterns only; cross-references and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Prompt anti-patterns
 description: Vague phrasing, over-permissioning, and hidden-reasoning requests to avoid.
 locale: en
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: '8e89a5a'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 When learning prompts, it's easy to focus only on "how to write well."
@@ -22,7 +27,7 @@ Here are common prompt pitfalls.
 | "Print all your hidden reasoning" | Unreliable and rarely helps acceptance |
 | Pasting logs with secrets | Credential leakage |
 
-## Why these phrases flip easily
+## Why these phrases derail tasks
 
 They usually share one trait:
 
@@ -81,10 +86,3 @@ For example:
 Most anti-patterns aren't "bad wording"—they omit boundaries and acceptance.
 
 Replace vague words with structure: goal + constraints + acceptance.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page summarizes common prompt anti-patterns only; cross-references and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

@@ -12,10 +12,10 @@ title: PR 검토하기
 description: 병합 전에 Codex로 구조화된 diff 검토를 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 84638f0
+source_revision: "84638f0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -31,7 +31,7 @@ reviewed_at: 2026-08-26
 
 **목표:** 병합 전에 범위 확산, 보안 위험, 테스트 공백을 발견합니다.
 
-**성공 기준:** 검토 출력이 구체 파일/행까지 추적 가능하고, P0는 처리되었거나 병합이 차단되어야 합니다.
+**성공 기준:** 검토 출력이 구체적인 파일/행까지 추적 가능하고, P0는 처리되었거나 병합이 차단되어야 합니다.
 
 ## 2. 권장 프롬프트
 

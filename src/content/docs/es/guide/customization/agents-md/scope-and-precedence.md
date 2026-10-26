@@ -8,21 +8,21 @@ verification:
   checkedAt: "2026-09-18"
   summary: "Se han contrastado punto por punto las reglas oficiales de descubrimiento y combinación; los ejemplos de directorios y las indicaciones para comprobar la carga son didácticos y no implican pruebas en todos los clientes."
   evidence:
-    - label: "AGENTS.md"
+    - label: "Reglas oficiales de descubrimiento, prioridad y verificación de AGENTS.md"
       href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
 legacyVerification:
   status: "verified"
-  products: "App、CLI、IDE、Cloud"
+  products: "App / CLI / IDE / Cloud"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
+source_revision: "b5f31cc"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: 2026-10-25
 ---
-
 Codex construye una cadena de instrucciones al comienzo de cada ejecución. Lo primero es comprender el orden en que descubre los propios archivos `AGENTS.md`, en lugar de suponer una clasificación que mezcle políticas de la organización, configuración y prompts.
 
 ## Orden oficial de descubrimiento

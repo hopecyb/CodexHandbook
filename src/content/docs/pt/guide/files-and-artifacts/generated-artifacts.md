@@ -3,17 +3,22 @@ title: Aceitação de Artefatos gerados
 description: Aceitação sistemática de ficheiros, relatórios e saídas de build novos ou exportados pelo Codex.
 locale: pt
 source_locale: zh-CN
-source_revision: 7401176
+source_revision: "7401176"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzada com capítulos já verificados deste manual sobre Verificar Artefatos, definição de concluído, lidar com incerteza e Artefatos de ficheiros; esta página foca o método estável «gerar ≠ entregável; abrir e verificar; clarificar se deve fazer commit».
+  checkedAt: '2026-07-26'
 ---
 
-Ao concluir uma Tarefa, o Agent pode criar relatórios, scripts, sites estáticos, dados de teste e outros **Artefatos**. Nem sempre passam pelo caminho familiar de revisão de código — precisa de um hábito de aceitação à parte.
+Ao concluir uma tarefa, o Agent pode criar relatórios, scripts, sites estáticos, dados de teste e outros **Artefatos**. Nem sempre passam pelo caminho familiar de revisão de código — precisa de um hábito de aceitação à parte.
 
-O ficheiro ser novo no Codex não significa que já possa usá-lo diretamente.
+O ficheiro ter sido gerado pelo Codex não significa que já possa usá-lo diretamente.
 
 ## Conteúdo desta página
 
@@ -90,7 +95,7 @@ Ao receber um lote de Artefatos:
 
 ## Artefatos não fiáveis
 
-Em Tarefas com repositório não fiável ou dados externos:
+Em tarefas com repositório não fiável ou dados externos:
 
 - Leia o script antes de executar
 - Desconfie de `curl | bash` e payloads ofuscados
@@ -113,9 +118,3 @@ Artefatos não se julgam só por «já gerados». Pelo menos abra, verifique e s
 
 ## Referências
 - [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/)
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Verificar Artefatos, definição de concluído, lidar com incerteza e Artefatos de ficheiros; esta página foca o método estável «gerar ≠ entregável; abrir e verificar; clarificar se deve fazer commit».  
-**Última verificação:** 2026-07-26

@@ -8,14 +8,14 @@ title: Diagnose template
 description: Find root cause before discussing fixes.
 locale: en
 source_locale: zh-CN
-source_revision: 2491371
+source_revision: '2491371'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
-A common diagnose mistake: you say "investigate first" but still expect an immediate fix.
+A common diagnostic mistake: you say "investigate first" but still expect an immediate fix.
 
 This template separates finding cause from editing code.
 

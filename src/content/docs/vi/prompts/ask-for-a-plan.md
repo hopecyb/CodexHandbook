@@ -10,9 +10,10 @@ verification:
   summary: "Ba loại tác vụ và hai cặp đối chiếu là khuyến nghị biên tập về cách cộng tác. Đã kiểm tra ranh giới cấp quyền và thực thi; đây không phải chế độ cố định của ứng dụng khách hay thí nghiệm đo tỷ lệ thành công của mô hình."
 locale: vi
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Có cần lập kế hoạch trước hay không phụ thuộc vào những quyết định còn bỏ ngỏ. Thay đổi có phạm vi rõ ràng và dễ hoàn tác có thể thực hiện ngay. Nếu chưa rõ hướng đi, hãy lập kế hoạch trước. Dừng lại trước một hành động cụ thể cần thêm quyền cho phép. Yêu cầu lập kế hoạch không có nghĩa là phải chờ người dùng trả lời sau từng bước.

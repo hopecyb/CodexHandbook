@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Compared with current Non-interactive mode documentation for `codex exec`, `--cd`, the default read-only sandbox, `stderr` progress, and `stdout` final response."
+  checkedAt: "2026-08-26"
 title: Non-interactive mode
 description: Integrate codex exec with scripts and pipelines for CI, scheduled tasks, and automation.
 locale: en
 source_locale: zh-CN
-source_revision: 1f37961
+source_revision: '1f37961'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 30
 ---
@@ -127,13 +132,3 @@ Use non-interactive mode for automation after interactive workflows are familiar
 ## Reference
 
 - OpenAI Codex CLI documentation
-
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Verification basis:** Compared with current Non-interactive mode documentation for `codex exec`, `--cd`, the default read-only sandbox, `stderr` progress, and `stdout` final response.
-
-**Last verified:** 2026-08-26

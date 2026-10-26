@@ -7,11 +7,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: "7a6d2fe"
-translation_status: draft
+source_revision: '7a6d2fe'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 90
+reviewed_at: '2026-10-26'
 ---
 
 설정 페이지에서는 앱의 동작을 개인화할 수 있지만, Codex의 모든 권한을 설정하는 곳은 아닙니다. 우선 기본값을 유지하고, 변경의 영향 범위를 이해한 뒤 수정하세요.

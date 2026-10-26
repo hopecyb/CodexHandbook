@@ -3,11 +3,16 @@ title: Terminal integrado
 description: Executa comandos no projeto ou worktree atual e verifica os resultados das tarefas com saídas reais.
 locale: pt
 source_locale: zh-CN
-source_revision: 727e93e
-translation_status: draft
+source_revision: "727e93e"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 Cada conversa na aplicação de desktop do ChatGPT tem um terminal associado ao projeto ou worktree atual. Não serve apenas para ver registos: é também a janela de evidências onde verificas as conclusões do Codex.

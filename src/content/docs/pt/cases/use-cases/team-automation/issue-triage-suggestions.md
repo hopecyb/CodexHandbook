@@ -27,8 +27,9 @@ assets:
   version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: "6d859d7"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: '2026-09-20'
 ---
 
@@ -38,7 +39,7 @@ Este exercício divide a triagem de issues em “gerar proposta → validar → 
 
 ## Entradas e critérios de conclusão
 
-As cinco entradas sintéticas originais tratam de erro de cálculo, link quebrado na documentação, possível dado entre contas, informação insuficiente e instrução maliciosa no corpo da issue. Não há dados reais de clientes. Cada proposta inclui tipo, prioridade, labels, indicador de revisão de segurança, justificativa e informações ausentes.
+As cinco entradas sintéticas originais tratam de erro de cálculo, link quebrado na documentação, indício de acesso a dados de outra conta, informação insuficiente e instrução maliciosa no corpo da issue. Não há dados reais de clientes. Cada proposta inclui tipo, prioridade, labels, indicador de revisão de segurança, justificativa e informações ausentes.
 
 Para concluir, cada entrada precisa de uma proposta que passe nas verificações de valores permitidos e hash da entrada. Depois, uma pessoa mantenedora deve aceitar, modificar ou rejeitar cada proposta e registrar o motivo. Uma estrutura válida não substitui essa decisão.
 

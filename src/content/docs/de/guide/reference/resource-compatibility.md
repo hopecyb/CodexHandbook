@@ -9,8 +9,9 @@ verification:
   summary: Vorlage für ein noch auszufüllendes Testverfahren. Für Pets und Themes liegen auf dieser Website derzeit keine abgeschlossenen Tests der Installation und Deinstallation im Client vor.
 locale: de
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: "96ff34f"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

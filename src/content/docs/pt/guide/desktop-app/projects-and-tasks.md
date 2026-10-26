@@ -3,20 +3,25 @@ title: Projetos e Tarefas
 description: Gerir projetos e Tarefas na App.
 locale: pt
 source_locale: zh-CN
-source_revision: 6a1f17f
+source_revision: "6a1f17f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App
+  basis: A documentação atual da aplicação de desktop no OpenAI Help Center continua a distinguir o projeto / Contexto de projeto da sessão concreta de chat/work/codex, e explica que pode abrir uma pasta ou projeto local na aplicação; esta página só esclarece a separação «projeto = local de trabalho, Tarefa = encargo desta ocasião».
+  checkedAt: '2026-07-26'
 ---
 
-«Projeto» e «Tarefa» parecem simples, mas na primeira vez é fácil misturá-los. O projeto é o conjunto de ficheiros ou o repositório com que trabalha; a Tarefa é o que pede concretamente ao Codex nesta ocasião.
+«Projeto» e «tarefa» parecem simples, mas na primeira vez é fácil misturá-los. O projeto é o conjunto de ficheiros ou o repositório com que trabalha; a tarefa é o que pede concretamente ao Codex nesta ocasião.
 
 Por exemplo:
 
 - O repositório do seu site de documentação → projeto
-- «Tornar a terminologia da página inicial mais fácil de entender» → Tarefa
+- «Tornar a terminologia da página inicial mais fácil de entender» → tarefa
 
 Esta distinção importa porque na App de desktop existem sempre duas camadas ao mesmo tempo:
 
@@ -26,21 +31,21 @@ Esta distinção importa porque na App de desktop existem sempre duas camadas ao
 ## Projeto
 
 - Adicione um diretório de prática ou a raiz do repositório
-- Foque-se num projeto de cada vez, para reduzir misturas de Contexto
+- Foque-se num projeto de cada vez, para reduzir misturas de contexto
 
-O «projeto» pode ser visto como o **local de trabalho** desta colaboração.  
-Se o local estiver errado, muitos problemas a seguir também desviam.
+O «projeto» pode ser visto como o **local de trabalho** desta colaboração.
+Se o local estiver errado, muitos problemas posteriores também partem de uma base errada.
 
-## Tarefa
+## tarefa
 
-- Inicie a Tarefa com um Prompt completo
-- Observe o plano e as chamadas a Ferramentas
+- Inicie a tarefa com um prompt completo
+- Observe o plano e as chamadas a ferramentas
 - Aprove ou rejeite quando for preciso
 
-A «Tarefa» é o **encargo concreto** desta ocasião.  
+A «tarefa» é o **encargo concreto** desta ocasião.
 Quanto mais claro for o encargo, menos o Codex terá de adivinhar enquanto trabalha.
 
-Contraste de conceitos: [Threads, Tarefas e projetos](/pt/guide/foundations/threads-tasks-and-projects/)
+Contraste de conceitos: [Threads, tarefas e projetos](/pt/guide/foundations/threads-tasks-and-projects/)
 
 ## Mal-entendidos frequentes
 
@@ -50,45 +55,38 @@ Porque o Codex precisa de saber sobre que ficheiros ou repositório está a trab
 
 Se o projeto estiver errado, surgem mais perguntas do tipo «por que não vê os ficheiros» ou «por que alterou outra coisa».
 
-### 2. Um projeto pode ter muitas Tarefas?
+### 2. Um projeto pode ter muitas tarefas?
 
-Sim.  
+Sim.
 A forma mais estável é:
 
 - No mesmo projeto
-- Uma Tarefa clara de cada vez
+- Uma tarefa clara de cada vez
 - Terminar antes de abrir a seguinte
 
-Assim é mais difícil misturar Contexto.
+Assim é mais difícil misturar contexto.
 
-### 3. Como formular a Tarefa no início?
+### 3. Como formular a tarefa no início?
 
 Inclua, na medida do possível, estes três tipos de informação:
 
 - Objetivo
 - Limite de alcance
-- Como contar como concluído
+- Critérios de conclusão
 
-### 4. Um pedido grande deve ir todo numa só Tarefa?
+### 4. Um pedido grande deve ir todo numa só tarefa?
 
 Se o alcance for muito amplo, é mais estável:
 
 - Manter o mesmo projeto
-- Dividir em várias Tarefas
-- Cada Tarefa com um objetivo claro
+- Dividir em várias tarefas
+- Cada tarefa com um objetivo claro
 
 ## Ordem habitual
 
 Na primeira vez na App de desktop, pode seguir esta ordem:
 
 1. Confirmar que o projeto está certo
-2. Confirmar que o objetivo da Tarefa trata só de uma coisa principal
+2. Confirmar que o objetivo da tarefa trata só de uma coisa principal
 3. Acrescentar limites de alcance e critérios de conclusão
-4. Depois de começar, acompanhar sobretudo o plano, as chamadas a Ferramentas e o resultado das mudanças
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App  
-**Base de verificação:** A documentação atual da aplicação de desktop no OpenAI Help Center continua a distinguir o projeto / Contexto de projeto da sessão concreta de chat/work/codex, e explica que pode abrir uma pasta ou projeto local na aplicação; esta página só esclarece a separação «projeto = local de trabalho, Tarefa = encargo desta ocasião».  
-**Última verificação:** 2026-07-26
+4. Depois de começar, acompanhar sobretudo o plano, as chamadas a ferramentas e o resultado das mudanças

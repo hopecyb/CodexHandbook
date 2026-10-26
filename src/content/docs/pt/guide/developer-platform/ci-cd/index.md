@@ -3,10 +3,15 @@ title: CI/CD
 description: Ligar o Codex a fluxos de integração contínua e release — começa por automatização de baixo risco.
 locale: pt
 source_locale: zh-CN
-source_revision: 4aeb424
+source_revision: "4aeb424"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: Cruzado com a estrutura atual do subcapítulo CI/CD e a entrada de automatização de revisão de código; o conteúdo limita-se ao princípio estável de «primeiro auxílio de baixo risco em CI/CD, depois decidir autonomia».
+  checkedAt: '2026-07-26'
 ---
 
 Ao ligar o Codex a CI/CD, o problema mais comum costuma ser este:
@@ -23,13 +28,6 @@ A prática mais habitual é deixar primeiro que só leia, só sugira e só produ
 
 - Fazer revisão estruturada na fase de PR
 - Deixar a automatização primeiro «encontrar problemas» e «dar sugestões»
-- Manter ações de alto risco sob Aprovação humana
+- Manter ações de alto risco sob aprovação humana
 
 Em CI/CD, liga o Codex primeiro como auxílio de baixo risco; só depois decides que ações merecem mais autonomia.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / API / Cloud  
-**Base de verificação:** Cruzado com a estrutura atual do subcapítulo CI/CD e a entrada de automatização de revisão de código; o conteúdo limita-se ao princípio estável de «primeiro auxílio de baixo risco em CI/CD, depois decidir autonomia».  
-**Última verificação:** 2026-07-26

@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: Code-Reviews in Cloud und GitHub
-description: Prüfe Cloud-Diffs und verwende Codex in GitHub als ergänzenden Reviewer mit hohem Signal.
+description: Prüfe Cloud-Diffs und verwende Codex in GitHub als ergänzenden Reviewer mit Fokus auf relevante Probleme.
 sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: ea6796a
+source_revision: "ea6796a"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Eine abgeschlossene Cloud-Aufgabe liefert eine Zusammenfassung und einen Diff. Du kannst nachfragen, Änderungen verlangen oder einen PR erstellen. Der Aufgabenabschluss ist keine Genehmigung zur Zusammenführung. Projekt-CI, Branchschutz und menschliche Entscheidung bleiben erforderlich.
@@ -34,12 +38,12 @@ Codex veröffentlicht Findings als reguläres GitHub-Review. Nach aktueller offi
 2. **Verhalten:** Erfüllen Normalfall, Fehlerpfade und Grenzfälle die Anforderungen?
 3. **Sicherheit:** Authentifizierung, Berechtigungen, Eingabeverarbeitung, Zugangsdaten und ausgehendes Netzwerk.
 4. **Nachweise:** Welche Tests wurden tatsächlich ausgeführt und welche Fehlschläge offengelegt?
-5. **Rückgängigmachung:** Lässt sich die Änderung lokal zurücknehmen und enthält sie sachfremdes Refactoring?
+5. **Rückgängigmachung:** Lässt sich die Änderung gezielt in kleinem Umfang zurücknehmen und enthält sie sachfremdes Refactoring?
 
 Beispiel-Prompt:
 
 ```text
-Prüfe diesen PR und melde nur Findings, die falsches Verhalten, Datenverlust, Sicherheitsprobleme oder Kompatibilitätsregressionen verursachen.
+Prüfe diesen PR und melde nur Findings, die falsches Verhalten, Datenbeschädigung, Sicherheitsprobleme oder Kompatibilitätsregressionen verursachen.
 Jedes Finding muss Schweregrad, konkrete Position, Auslösebedingung und Auswirkung enthalten.
 Führe Stilpräferenzen nicht als Defekte auf.
 ```
@@ -75,11 +79,3 @@ Benutzer mit den erforderlichen GitHub-Push- oder Administratorberechtigungen k�
 
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 - [Code review across clients](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud, GitHub
-
-**Zuletzt geprüft:** 2026-08-26

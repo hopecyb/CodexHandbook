@@ -3,12 +3,17 @@ title: 表とスプレッドシート
 description: CSV、Excel、表形式データの読み取り、クレンジング、分析、エクスポート。構造とエンコーディングを壊さないために。
 locale: ja
 source_locale: zh-CN
-source_revision: b08adec
+source_revision: "b08adec"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックで検証済みのファイルとディレクトリのコンテキスト、成果物検証、制約境界などの章と突き合わせて再確認済み。本ページは「列・型・空値・日付・検証方法を明示する」という安定した表処理原則のみを確認し、特定ライブラリやプラットフォームを唯一の実装としては扱わない。
+  checkedAt: '2026-07-26'
 ---
 
 表形式タスクは静かに壊れやすい典型です。区切り文字、エンコーディング、ヘッダー、数式、日付形式のどれか一つでも外れると、下流がすべて崩れます。
@@ -127,9 +132,3 @@ Python なら `pandas` で読み書き。Node なら `csv-parse` / `xlsx` など
 
 ## 参考資料
 - [制約の定義](/ja/prompts/constraints-and-boundaries/)
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ハンドブックで検証済みのファイルとディレクトリのコンテキスト、成果物検証、制約境界などの章と突き合わせて再確認済み。本ページは「列・型・空値・日付・検証方法を明示する」という安定した表処理原則のみを確認し、特定ライブラリやプラットフォームを唯一の実装としては扱わない。  
-**最終検証：** 2026-07-26

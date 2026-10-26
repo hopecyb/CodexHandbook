@@ -3,10 +3,15 @@ title: 拡張方式の選び方
 description: 永続化したい対象に応じて、プロンプト、AGENTS.md、Skill、MCP、Hook、Plugin、Scheduled task を選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 28ae6f5
+source_revision: "28ae6f5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / デスクトップ App / Codex CLI / IDE（対応範囲は方式によって異なる）
+  basis: 2026-08-25 の OpenAI 公式 Skills、Plugins、MCP、Hooks、Scheduled tasks のドキュメントに照らし、責務、製品入口、安全境界を確認した。
+  checkedAt: '2026-08-25'
 ---
 
 拡張の仕組みが増えるほど、最初に技術名を選んでから問題を当てはめる間違いが起きやすくなります。より確実な順序は、**何を残したいのか、または何を自動で起こしたいのか**を先に問うことです。
@@ -54,7 +59,7 @@ Hook を使います。たとえばツール呼び出し前の危険コマンド
 
 Plugin を検討します。Plugin は組み合わせと配布の層であり、Skills、Connector、MCP、Hooks、Scheduled task のテンプレートを含められます。Plugin のインストールは、内部の接続、スクリプト、Hook を自動的に信頼することを意味しません。
 
-### 7. タスクを手動で安定実行でき、時間単位で繰り返す必要があるか？
+### 7. タスクを手動で安定実行でき、決めた時刻や周期で繰り返す必要があるか？
 
 その段階で Scheduled task を作ります。通常のタスクでプロンプト、Skill、権限、出力形式を検証してからスケジュールし、最初の数回の実行を確認し、公開やマージには人のゲートを残します。
 
@@ -90,7 +95,7 @@ Plugin を検討します。Plugin は組み合わせと配布の層であり、
 - **受け入れ条件のないスケジュール**：終了条件、実行証拠、人的レビューなしにコードを定期変更する
 - **車輪の再発明**：公式 Connector があるのに MCP を自作する
 - **ルールの配置ミス**：一度限りの要件を `AGENTS.md` に入れ、以後のすべてのタスクに古い制約を持ち込む
-- **Hook の過負荷**：時間のかかる業務フローを毎回のツール呼び出しに入れ、日常のタスクを遅くする
+- **Hook の過負荷**：時間のかかる業務フローを毎回のツール呼び出しに入れ、日常のタスクを遅くしたり、誤ってブロックしたりする
 
 ## よくある質問
 
@@ -141,10 +146,3 @@ Plugin を検討します。Plugin は組み合わせと配布の層であり、
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**状態：** verified
-**対象製品：** ChatGPT Web / デスクトップ App / Codex CLI / IDE（対応範囲は方式によって異なる）
-**検証根拠：** 2026-08-25 の OpenAI 公式 Skills、Plugins、MCP、Hooks、Scheduled tasks のドキュメントに照らし、責務、製品入口、安全境界を確認した。
-**最終確認：** 2026-08-25

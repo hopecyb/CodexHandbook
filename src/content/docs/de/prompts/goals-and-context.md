@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Ziel- und Hintergrund-Formulierung; interne Links und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Ziele und Kontext liefern
 description: Codex wissen lassen, was fertig werden soll und warum es zählt.
 locale: de
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: "0a5141f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Viele Prompts wirken informativ, lassen aber genau diese zwei Punkte unklar:
@@ -19,7 +24,7 @@ Das Ziel sagt „was soll entstehen“, der Hintergrund „warum so“.
 **Ziel** beschreibt das End-Artefakt, keine vagen Wünsche.  
 „Website besser machen“ → „Homepage-Hauptbutton-Text ändern zu … und bestehende CSS-Klassen behalten“.
 
-**Hintergrund** ergänzt Stand, den Leser nicht kennen, den der Agent aber braucht: Tech-Stack, Zielgruppe, Deadline-Grund, bekannte Fallen.
+**Hintergrund** ergänzt Informationen zum Istzustand, die Leser nicht kennen, die der Agent aber benötigt: Tech-Stack, Zielgruppe, Deadline-Grund, bekannte Fallen.
 
 ## Warum Ziel und Hintergrund nicht vermischen
 
@@ -65,7 +70,7 @@ Hintergrund: Warum, für wen, wo es gerade hakt
 Zum Beispiel:
 
 ```text
-Ziel: Docs-Homepage-First-Screen für Einsteiger verständlicher, Struktur behalten
+Ziel: Den Text im ersten sichtbaren Bereich der Dokumentationsstartseite für Einsteiger verständlicher machen und die Struktur beibehalten
 Hintergrund: Aktueller Text setzt viele Fachbegriffe voraus; Einstiegsschwelle beim Erstbesuch ist hoch
 ```
 
@@ -74,7 +79,7 @@ Hintergrund: Aktueller Text setzt viele Fachbegriffe voraus; Einstiegsschwelle b
 Beim Ziel zwei Fragen:
 
 - Ist das Ergebnis erkennbar?
-- Ist der Scope spürbar?
+- Ist der Umfang erkennbar?
 
 Beim Hintergrund eine Frage:
 
@@ -83,10 +88,3 @@ Beim Hintergrund eine Frage:
 Das Ziel bestimmt die Lieferung; der Hintergrund ergänzt das Warum.
 
 Verwandt: Projektweiten Kontext in [Projektkontext](/de/guide/context/project-context/) ablegen, statt lange Wiederholungen in jedem Prompt.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Ziel- und Hintergrund-Formulierung; interne Links und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

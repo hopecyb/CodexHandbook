@@ -3,12 +3,16 @@ title: Travail piloté par la spécification
 description: Rédiger d'abord une spécification vérifiable, puis faire implémenter Codex selon le plan — adapté aux livraisons à besoin clair.
 locale: fr
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés sur le brainstorm, l'EPXV, le travail piloté par les tests et `AGENTS.md` ; le contenu se limite au mode stable « rédiger une spec vérifiable d'abord, puis exécuter selon la spec ».
+  checkedAt: '2026-07-26'
 ---
-
 Le **travail piloté par la spécification** consiste à préparer une courte spécification avant de modifier de nombreux fichiers — objectifs, périmètre, interfaces et critères d'acceptation. Cela peut suivre [Brainstormer avant de construire](/fr/cases/workflows/brainstorm-before-building/), ou entrer directement dans l'[EPXV](/fr/cases/workflows/explore-plan-execute-verify/) avec des besoins déjà clarifiés.
 
 ## Ce que couvre cette page
@@ -78,10 +82,3 @@ Les critères d'acceptation de la spec doivent être **testables** autant que po
 - [ ] Au moins 3 critères d'acceptation vérifiables
 - [ ] Confirmation humaine ou écrite avant l'exécution
 - [ ] Modifications resynchronisées dans le fichier de spec
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur le brainstorm, l'EPXV, le travail piloté par les tests et `AGENTS.md` ; le contenu se limite au mode stable « rédiger une spec vérifiable d'abord, puis exécuter selon la spec ».

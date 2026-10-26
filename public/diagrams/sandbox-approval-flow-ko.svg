@@ -19,11 +19,11 @@
   <rect width="1200" height="780" rx="8" fill="#020617"/>
   <rect width="1200" height="780" rx="8" fill="url(#grid)"/>
   <text x="44" y="48" class="h1">샌드박스는 “최대 범위”, 승인은 “경계 초과 전 질문 여부”를 제어</text>
-  <text x="44" y="75" class="sub">작업 제약은 의도를 설명하고, 시스템 경계는 실행을 제한하며, diff와 테스트 및 외부 상태가 최종 인수를 담당합니다.</text>
+  <text x="44" y="75" class="sub">작업 제약은 의도를 설명하고, 시스템 경계는 실행을 제한하며, diff·테스트·외부 상태로 최종 결과를 확인합니다.</text>
 
   <rect x="66" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="191" y="158" text-anchor="middle" class="label">작업 목표와 제약</text>
-  <text x="191" y="186" text-anchor="middle" class="note">허용 범위 · 금지 동작 · 인수 조건</text>
+  <text x="191" y="186" text-anchor="middle" class="note">허용 범위 · 금지 동작 · 완료 기준</text>
   <path d="M316 169H390" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="390" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="515" y="158" text-anchor="middle" class="label">Codex가 동작 제안</text>

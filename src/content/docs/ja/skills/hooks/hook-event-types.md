@@ -1,15 +1,16 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "ローカル Codex ホストを使用する環境"
+  status: verified
+  products: ローカル Codex ホストを使用する環境
   checkedAt: "2026-08-25"
 title: Hook のイベント種類
 description: セッション、ターン、ツール呼び出し、コンテキスト圧縮、サブエージェントのライフサイクルに応じてイベントを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 07f4965
-translation_status: draft
+source_revision: "07f4965"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Hook を選ぶときの最初の問いは「スクリプトをどう書くか」ではなく、「副作用が起きる前と後のどちらで処理するか」です。イベントを選び間違えると、どれだけ優れたスクリプトでも事後報告しかできません。

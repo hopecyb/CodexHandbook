@@ -4,15 +4,16 @@ legacyVerification:
   products: "IDE"
   basis: "Trang bắt đầu nhanh chính thức hiện tại cho IDE liệt kê rõ VS Code, Cursor, Windsurf, VS Code Insiders, cùng cách tích hợp riêng cho Xcode và JetBrains; trang này chia hướng dẫn cài đặt theo hai nhóm đó."
   checkedAt: "2026-08-26"
-title: Cài đặt tích hợp IDE
-description: Bật Codex trong trình soạn thảo tương thích với VS Code, Xcode hoặc JetBrains IDE.
-locale: vi
-source_locale: zh-CN
-source_revision: e8f88ec
-translation_status: draft
+title: "Cài đặt tích hợp IDE"
+description: "Bật Codex trong trình soạn thảo tương thích với VS Code, Xcode hoặc JetBrains IDE."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "e8f88ec"
+translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:
   order: 50
+reviewed_at: "2026-10-26"
 ---
 
 Hiện nay không phải mọi IDE đều cài đặt theo cùng một cách:

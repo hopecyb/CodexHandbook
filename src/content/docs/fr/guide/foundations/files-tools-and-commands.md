@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page distingue uniquement fichiers, commandes et outils et explique comment évaluer leurs risques ; ses liens internes et exemples ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page distingue uniquement fichiers, commandes et outils et explique comment évaluer leurs risques ; ses liens internes et exemples ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer.
+  checkedAt: '2026-07-26'
 title: Fichiers, outils et commandes
 description: Comment Codex lit et écrit des fichiers, exécute des commandes et utilise des outils.
 locale: fr
 source_locale: zh-CN
 source_revision: "9d65338"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
-
 La principale différence avec un robot conversationnel ordinaire est que Codex peut agir à l'aide d'**outils**.
 
 Les fichiers sont le contenu qu'il modifie, les commandes sont les actions qu'il exécute et les outils lui donnent les moyens d'agir.

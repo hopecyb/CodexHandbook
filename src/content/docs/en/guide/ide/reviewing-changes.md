@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: Review changes in the IDE
 description: Inspect diffs beside source code and use the read-only reviewer to check the worktree.
 locale: en
 source_locale: zh-CN
-source_revision: a6badd5
+source_revision: 'a6badd5'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 70
 ---
@@ -34,7 +38,7 @@ Results appear in the current chat by default. Set `chatgpt.reviewDelivery` to `
 
 ```text
 Review the current uncommitted changes. Prioritize defects that could cause
-wrong behavior, data loss, or security issues. Ignore pure style preferences.
+wrong behavior, data corruption, or security issues. Ignore pure style preferences.
 Every finding must include a file location, trigger condition, and verifiable
 impact. If there are no findings, state the remaining test gaps.
 ```
@@ -45,7 +49,7 @@ impact. If there are no findings, state the remaining test gaps.
 - [ ] No accidental deletion, whole-file formatting, or sensitive files.
 - [ ] Failure paths and edge cases are covered.
 - [ ] Required tests, lint, and type checks pass.
-- [ ] High-priority reviewer findings are fixed or explicitly accepted.
+- [ ] High-priority reviewer findings are fixed or their risks explicitly accepted.
 - [ ] `git diff --check` and `git status --short` are clean as expected.
 
 For line comments, staging, or hunk-level reverts, use [Diffs, comments, and review](/en/guide/desktop-app/diffs-comments-and-review/). For the general method, see [Review diffs](/en/guide/quality/review-diffs/).
@@ -54,11 +58,3 @@ For line comments, staging, or hunk-level reverts, use [Diffs, comments, and rev
 
 - [Code review](https://learn.chatgpt.com/docs/code-review)
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

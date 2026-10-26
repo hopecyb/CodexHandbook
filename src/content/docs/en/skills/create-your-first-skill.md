@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Current Codex runtime still supports project skill directories, `SKILL.md` definitions, and explicit invocation for trial runs; this page is a stable first-Skill exercise."
+  checkedAt: "2026-07-26"
 title: Create your first Skill
 description: Build a committable pr-review Skill from scratch, with testing and team sharing.
 locale: en
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: '14414f5'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 If you can assign tasks but have not built a Skill yet, this page covers the basics of your first one.
@@ -148,9 +153,3 @@ Starting with a small, steady Skill makes it easier to reuse a clear workflow re
 
 ## References
 - OpenAI Codex Skills official examples and `skill-creator` (if provided in your environment)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Current Codex runtime still supports project skill directories, `SKILL.md` definitions, and explicit invocation for trial runs; this page is a stable first-Skill exercise.  
-**Last verified:** 2026-07-26

@@ -8,13 +8,13 @@ title: Projets et tâches
 description: Gérer les projets et les tâches dans l'application.
 locale: fr
 source_locale: zh-CN
-source_revision: 6a1f17f
-translation_status: draft
+source_revision: "6a1f17f"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 20
+reviewed_at: '2026-10-26'
 ---
-
 « Projet » et « tâche » semblent simples, mais on peut facilement les confondre au début. Le projet est l'ensemble de fichiers ou le dépôt sur lequel vous travaillez ; la tâche est ce que vous demandez précisément à Codex.
 
 Par exemple :

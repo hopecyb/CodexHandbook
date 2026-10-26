@@ -8,10 +8,10 @@ title: Plantilla de investigación
 description: Investigación y comparación con citas.
 locale: es
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: '729d4cc'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

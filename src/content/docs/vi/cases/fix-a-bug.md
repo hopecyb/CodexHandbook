@@ -1,12 +1,13 @@
 ---
-title: Sửa Bug
-description: Từ test thất bại đến sửa tối thiểu và hồi quy — vòng lặp phổ biến nhất của nhà phát triển.
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Trang vào này chỉ duy trì phần chọn đường dẫn và vòng kỹ thuật ổn định. Các lệnh dự kiến thất bại và pass đã được chạy trong kho hiện tại.", "checkedAt": "2026-08-25"}
+title: Sửa bug — bắt đầu từ đâu
+description: Chọn cách tiếp cận phù hợp với lỗi hiện tại và chuyển đến bài thực hành đầy đủ có tài liệu chạy được.
 locale: vi
 source_locale: zh-CN
-source_revision: 405a687
+source_revision: "405a687"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Đây là trang vào ngắn. Các bước đầy đủ, mã có thể chạy, bằng chứng test đỏ/xanh và prompt theo từng giai đoạn được duy trì tập trung trong [Sửa bug có kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/) để hai trang không lệch nhau theo thời gian.
@@ -47,10 +48,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 Tài liệu đầy đủ nằm trong [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Trạng thái:** verified
-**Áp dụng cho:** CLI / IDE
-**Căn cứ kiểm chứng:** Trang vào này chỉ duy trì phần chọn đường dẫn và vòng kỹ thuật ổn định. Các lệnh dự kiến thất bại và pass đã được chạy trong kho hiện tại.
-**Kiểm chứng gần nhất:** 2026-08-25

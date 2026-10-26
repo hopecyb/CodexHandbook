@@ -44,7 +44,7 @@
   <text x="132" y="441" text-anchor="middle" class="tiny">Bei Bedarf geladen</text>
 
   <rect x="42" y="475" width="180" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="132" y="503" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="132" y="503" text-anchor="middle" class="label">Zeitgesteuerte Aufgabe</text>
   <text x="132" y="527" text-anchor="middle" class="note">Scheduled task</text>
   <text x="132" y="550" text-anchor="middle" class="tiny">Neuen Lauf zeitgesteuert auslösen</text>
 
@@ -56,18 +56,18 @@
 
   <rect x="390" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="475" y="332" text-anchor="middle" class="label">Unter-Agent</text>
-  <text x="475" y="356" text-anchor="middle" class="note">Unabhängige Erkundung und Prüfung</text>
-  <text x="475" y="376" text-anchor="middle" class="tiny">Ergebnisse an den Hauptthread zurückgeben</text>
+  <text x="475" y="356" text-anchor="middle" class="note">Eigenständig erkunden und prüfen</text>
+  <text x="475" y="376" text-anchor="middle" class="tiny">Ergebnisse zurück an Hauptthread</text>
   <rect x="610" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="695" y="332" text-anchor="middle" class="label">MCP / Werkzeuge</text>
   <text x="695" y="356" text-anchor="middle" class="note">Dateien · Web · externe Systeme</text>
-  <text x="695" y="376" text-anchor="middle" class="tiny">Berechtigungen durch Host und Dienst gesteuert</text>
+  <text x="695" y="376" text-anchor="middle" class="tiny">Berechtigungen: Host und Dienst</text>
   <path d="M585 259V278H475V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M585 259V278H695V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <rect x="390" y="435" width="390" height="114" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text x="585" y="468" text-anchor="middle" class="label">Hooks: Leitplanken im Lebenszyklus</text>
-  <text x="585" y="495" text-anchor="middle" class="note">Vorabprüfung · Werkzeugrichtlinie · Nachaudit</text>
+  <text x="585" y="495" text-anchor="middle" class="note">Vorabprüfung · Aufrufrichtlinien · nachträgliches Audit</text>
   <text x="585" y="520" text-anchor="middle" class="tiny">Kann protokollieren, Kontext ergänzen oder blockieren; definiert keine Aufgabenziele</text>
 
   <rect x="974" y="232" width="184" height="78" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>

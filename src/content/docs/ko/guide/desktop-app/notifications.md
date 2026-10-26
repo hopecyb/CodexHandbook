@@ -3,11 +3,16 @@ title: 알림과 활동 보기
 description: 작업 완료, 권한 요청, 답변 대기 알림을 설정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4a1c672
-translation_status: draft
+source_revision: '4a1c672'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 알림은 작업을 검토하러 돌아와야 할 시점을 알려 줍니다. 결과 검토를 대신하지는 않습니다. 데스크톱 앱에서는 턴 완료 알림을 설정하고, 권한 요청과 질문 알림을 각각 제어할 수 있습니다.

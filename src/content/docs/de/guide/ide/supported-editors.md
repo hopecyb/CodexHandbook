@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Mit der aktuellen offiziellen IDE-Seite abgeglichen. Verifiziert wurden die konkreten Einstiege für VS Code, Cursor, Windsurf, VS Code Insiders, Xcode und JetBrains-IDEs, ohne identische Funktionen aller Integrationen anzunehmen."
+  checkedAt: "2026-08-26"
 title: Unterstützte Editoren
 description: Unterscheide die VS-Code-kompatible Erweiterung von den Integrationen in Xcode und JetBrains.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: 7b82896
+source_revision: "7b82896"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Codex ist derzeit auf unterschiedliche Weise in verbreiteten Editoren verfügbar: VS-Code-basierte Editoren verwenden die Codex-Erweiterung, Xcode und JetBrains-IDEs jeweils einen eigenen Integrationseinstieg.
@@ -53,13 +58,3 @@ Berichte abschließend Diff und Testbefehl und aktualisiere keine Abhängigkeite
 Verwende vorzugsweise die [Codex CLI](/de/guide/cli/) oder die [Desktop-App](/de/guide/desktop-app/). Installiere das Paket der VS-Code-Erweiterung nicht erzwungen in einem inkompatiblen Editor und behandle Drittanbieterintegrationen nicht automatisch als offizielle OpenAI-Funktion.
 
 Die Installationsschritte findest du unter [IDE-Integration installieren](/de/guide/getting-started/install-ide-extension/), die Kontextverwendung unter [Editor-Kontext](/de/guide/ide/editor-context/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE
-
-**Prüfgrundlage:** Mit der aktuellen offiziellen IDE-Seite abgeglichen. Verifiziert wurden die konkreten Einstiege für VS Code, Cursor, Windsurf, VS Code Insiders, Xcode und JetBrains-IDEs, ohne identische Funktionen aller Integrationen anzunehmen.
-
-**Zuletzt geprüft:** 2026-08-26

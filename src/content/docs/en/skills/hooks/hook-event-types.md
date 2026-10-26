@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Environments using a local Codex host"
+  checkedAt: "2026-08-25"
 title: Hook event types
 description: Choose events across session, turn, tool-call, compaction, and subagent lifecycles.
 locale: en
 source_locale: zh-CN
-source_revision: 07f4965
+source_revision: '07f4965'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
@@ -63,7 +67,7 @@ This runs only when Codex was already going to request approval for shell escala
 
 The tool has already run, and the event fires even when Bash exits non-zero. Returning block or exiting `2` can replace feedback for the model, but cannot undo a command, file write, or external action.
 
-## Stop is not an undo button
+## Stop does more than refuse to end
 
 `decision: "block"` for `Stop` automatically creates a continuation prompt from the reason, asking Codex to run another turn. It does not roll back completed side effects. Check `stop_hook_active` to prevent an infinite loop.
 
@@ -80,11 +84,3 @@ The tool has already run, and the event fires even when Bash exits non-zero. Ret
 ## Official source
 
 - [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host
-
-**Last verified:** 2026-08-25

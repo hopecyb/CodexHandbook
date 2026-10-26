@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de este manual sobre verificar artefactos, definición de finalización, gestionar la incertidumbre y archivos/artefactos; esta página se centra en el método estable de aceptación «generar ≠ entregable, hay que abrir y aceptar, y dejar claro si debe hacerse commit».
+  checkedAt: '2026-07-26'
 title: Aceptación de artefactos generados
 description: Aceptación sistemática de archivos, informes y salidas de build nuevos o exportados por Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 7401176
+source_revision: "7401176"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
 ---
@@ -45,13 +50,13 @@ No es lo mismo que «solo cambió unas líneas de código existente», porque es
 
 ```text
 1. Abrir el artefacto (no te quedes solo con el resumen textual del Agent)
-2. Contrastar con la «definición de hecho» de la tarea
+2. Contrastar con la «definición de finalización» de la tarea
 3. Ejecutar tests o comandos de vista previa relacionados
 4. Revisar rutas, permisos, tamaño
 5. Decidir: aceptar / modificar en parte / descartar y rehacer
 ```
 
-Método: [Verificar artefactos](/es/guide/quality/verify-artifacts/), [Definición de hecho](/es/guide/quality/definition-of-done/)
+Método: [Verificar artefactos](/es/guide/quality/verify-artifacts/), [Definición de finalización](/es/guide/quality/definition-of-done/)
 
 ## Malentendidos habituales
 
@@ -94,13 +99,13 @@ En tareas impulsadas por repositorios o datos externos no confiables:
 
 - Lee el script antes de ejecutarlo
 - Desconfía de `curl | bash` y payloads ofuscados
-- Previsualiza en Sandbox o contenedor
+- Previsualiza en sandbox o contenedor
 
 Un artefacto no basta con «ya se generó». Al menos hay que abrirlo, verificarlo y saber si debe hacerse commit.
 
 ## Errores frecuentes
 
-- Solo mirar el bullet summary del Agent sin abrir archivos
+- Solo mirar el resumen en viñetas del Agent sin abrir archivos
 - Hacer commit en main de salidas de depuración de un solo uso
 - Informes HTML con píxeles de seguimiento o scripts externos no revisados
 
@@ -113,9 +118,3 @@ Un artefacto no basta con «ya se generó». Al menos hay que abrirlo, verificar
 
 ## Referencias
 - [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre verificar artefactos, definición de hecho, gestionar la incertidumbre y archivos/artefactos; esta página se centra en el método estable de aceptación «generar ≠ entregable, hay que abrir y aceptar, y dejar claro si debe hacerse commit».  
-**Última verificación:** 2026-07-26

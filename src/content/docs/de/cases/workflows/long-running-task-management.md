@@ -3,10 +3,16 @@ title: Lange Aufgaben verwalten
 description: "Große Aufgaben über Stunden oder mehrere Sitzungen — Prüfpunkte, Komprimierung, Delegation und Exit-Kriterien."
 locale: de
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: "c2a9887"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu langfristigen Zielen und langer Aufgabenkollaboration bei OpenAI Developers sowie die bereits geprüften Kapitel zu Übergabe/Wiederaufnahme,
+    Planung, Komprimierung und Delegation. Diese Seite erklärt nur stabile Methoden zu Prüfpunkten, Übergabe und Exit-Kriterien langer Aufgaben.
+  checkedAt: '2026-07-26'
 ---
 
 Typische Probleme langer Aufgaben: **Kontext wird voll**, **Menschen müssen weg**, **Richtung driftet**, **unklar, wann stoppen**. Diese Seite setzt [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) in Szenarien von Stunden bis mehreren Sitzungen.
@@ -55,7 +61,7 @@ Nach jedem Meilenstein:
 |---|---|
 | Zeitlimit | Nach 4h ohne Fortschritt Alarm |
 | Iterationslimit | Derselbe Test scheitert 3× → stoppen |
-| Menschliches Gate | Vor Änderung der Produktionsconfig muss @Mensch |
+| Menschliches Gate | Vor Änderungen an der Produktionskonfiguration muss eine verantwortliche Person hinzugezogen werden |
 | Erfolg | Tests grün + PR geöffnet |
 
 ## Häufige Fehler
@@ -69,10 +75,3 @@ Nach jedem Meilenstein:
 - [ ] Vor Start langer Aufgaben Plan-Dokument vorhanden
 - [ ] Mindestens zwei Prüfpunkte mit prüfbarem Diff
 - [ ] Klar, wie pausieren, fortsetzen oder übergeben wird
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu langfristigen Zielen und langer Aufgabenkollaboration bei OpenAI Developers sowie die bereits geprüften Kapitel zu Übergabe/Wiederaufnahme, Planung, Komprimierung und Delegation. Diese Seite erklärt nur stabile Methoden zu Prüfpunkten, Übergabe und Exit-Kriterien langer Aufgaben.  
-**Zuletzt geprüft:** 2026-07-26

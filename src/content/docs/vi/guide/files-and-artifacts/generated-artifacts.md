@@ -1,14 +1,19 @@
 ---
-title: Nghiệm thu artifact tạo ra
-description: Nghiệm thu có hệ thống tệp, báo cáo và artifact build mà Codex tạo mới hoặc xuất.
-locale: vi
-source_locale: zh-CN
-source_revision: 7401176
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Nghiệm thu artifact tạo ra"
+description: "Nghiệm thu có hệ thống tệp, báo cáo và artifact build mà Codex tạo mới hoặc xuất."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "7401176"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 60
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu chéo với các chương kiểm chứng artifact, định nghĩa hoàn thành, xử lý sự không chắc chắn và artifact tệp đã kiểm chứng trong sổ tay; trang này tập trung phương pháp nghiệm thu ổn định “tạo không bằng giao được, phải mở nghiệm thu, nói rõ có nên commit”."
+  checkedAt: "2026-07-26"
 ---
 
 Khi Agent hoàn thành tác vụ có thể tạo mới báo cáo, script, site tĩnh, dữ liệu kiểm thử và các **artifact** khác. Chúng chưa chắc đi qua đường rà soát mã bạn quen, nên cần thói quen nghiệm thu riêng.
@@ -26,7 +31,7 @@ Tệp do Codex mới tạo không nghĩa đã có thể dùng thẳng.
 | Loại | Trọng tâm nghiệm thu |
 |---|---|
 | Script `.sh` `.py` | Chạy được, vô hại, idempotent |
-| Báo cáo `.md` `.html` | Sự kiện chính xác, liên kết hiệu lực |
+| Báo cáo `.md` `.html` | Thông tin chính xác, liên kết hoạt động |
 | Đầu ra build `dist/` | Có nên gitignore không |
 | Fixture kiểm thử | Không có PII thật |
 | Mẫu cấu hình | Không mật khẩu yếu mặc định |
@@ -39,7 +44,7 @@ Tệp do Codex mới tạo không nghĩa đã có thể dùng thẳng.
 - Báo cáo nó xuất giúp bạn
 - Trang, thư mục hoặc gói nó build giúp bạn
 
-Những thứ này khác “chỉ sửa vài dòng mã hiện có”, vì dễ hơn để bạn bỏ qua nội dung thật.
+Những thứ này khác “chỉ sửa vài dòng mã hiện có”, vì bạn dễ bỏ qua nội dung thực tế của chúng hơn.
 
 ## Quy trình nghiệm thu
 
@@ -113,9 +118,3 @@ Artifact không chỉ xem “đã tạo”. Ít nhất phải mở xem, kiểm c
 
 ## Nguồn tham khảo
 - [Xử lý sự không chắc chắn](/vi/guide/quality/handle-uncertainty/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương kiểm chứng artifact, định nghĩa hoàn thành, xử lý sự không chắc chắn và artifact tệp đã kiểm chứng trong sổ tay; trang này tập trung phương pháp nghiệm thu ổn định “tạo không bằng giao được, phải mở nghiệm thu, nói rõ có nên commit”.  
-**Kiểm chứng gần nhất:** 2026-07-26

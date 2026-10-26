@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Organisations- und Teamfunktionen (je nach Tarif)"
+  basis: "Das aktuelle OpenAI Help Center sowie die Plugin- und App-Dokumentation betonen weiterhin, dass die Einführung von Codex und ChatGPT im Team Rollen- und Funktionszugriff, Plugin-Aktivierung, Aktionsgenehmigungen, Datengrenzen und Auditverantwortung benötigt. Diese Seite dient nur als Navigation für das Team- und Unternehmenskapitel, konzentriert sich auf Governance-Modell und Lesereihenfolge und bindet sich nicht an einen bestimmten Administrationspfad."
+  checkedAt: "2026-07-26"
 title: Teams und Unternehmen
 description: Einführung, Standards, Verwaltung und Sicherheitsgovernance für einen kontrollierten Einsatz von Codex in größerem Maßstab.
 sidebar:
   order: 70
 locale: de
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: "b44c5d1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Das Kapitel **Teams und Unternehmen** richtet sich an Engineering-Verantwortliche, Plattform- und Sicherheitsteams. Es beschreibt den Weg von individueller Nutzung zu einem teamweit verwaltbaren, auditierbaren und auswertbaren Codex-Einsatz. Zusammen mit dem [Lernpfad für Teams](/de/guide/learning-paths/team/) gelesen konzentriert sich dieses Kapitel stärker auf Governance und Umsetzung.
@@ -95,10 +100,3 @@ Beginne mit:
 - [Richtlinie zur zulässigen Nutzung](/de/guide/team-enterprise/governance/acceptable-use/)
 
 Wenn du dich derzeit hauptsächlich persönlich einarbeitest, kannst du dieses Kapitel zunächst zurückstellen und bei einer Teameinführung, Berechtigungsverwaltung oder Risikokontrolle darauf zurückkommen.
-
----
-
-**Status:** verified  
-**Unterstützte Produkte:** Organisations- und Teamfunktionen, abhängig vom Tarif  
-**Prüfgrundlage:** Das aktuelle OpenAI Help Center sowie die Plugin- und App-Dokumentation betonen weiterhin, dass die Einführung von Codex und ChatGPT im Team Rollen- und Funktionszugriff, Plugin-Aktivierung, Aktionsgenehmigungen, Datengrenzen und Auditverantwortung benötigt. Diese Seite dient nur als Navigation für das Team- und Unternehmenskapitel, konzentriert sich auf Governance-Modell und Lesereihenfolge und bindet sich nicht an einen bestimmten Administrationspfad.  
-**Zuletzt geprüft:** 2026-07-26

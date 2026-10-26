@@ -3,12 +3,17 @@ title: Mode non interactif
 description: Intégrez codex exec aux scripts et aux pipelines de CI, aux tâches planifiées et à l'automatisation.
 locale: fr
 source_locale: zh-CN
-source_revision: 1f37961
+source_revision: '1f37961'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: comparaison avec la documentation actuelle du mode non interactif concernant `codex exec`, `--cd`, le bac à sable en lecture seule par défaut, la progression sur `stderr` et la réponse finale sur `stdout`.
+  checkedAt: '2026-08-26'
 ---
 
 Le mode non interactif permet à Codex d'accomplir une tâche **sans conversation dans un TTY**. C'est le point d'entrée destiné aux développeurs qui souhaitent intégrer un Agent à des scripts ou à la CI.
@@ -43,14 +48,14 @@ Le point d'entrée actuel est `codex exec`. Après toute mise à jour, relancez 
 ## Exemple minimal fonctionnel
 
 ```bash
-# Run one read-only review at the repository root
-codex exec --cd . "List security risks in the diff against main; do not modify files"
+# Exécuter une revue en lecture seule à la racine du dépôt
+codex exec --cd . "Liste les risques de sécurité du diff par rapport à main ; ne modifie aucun fichier"
 ```
 
 Par défaut, `codex exec` utilise un bac à sable en lecture seule. La progression est écrite sur `stderr`, tandis que la réponse finale de l'Agent est envoyée sur `stdout`. Vous pouvez donc rediriger uniquement le résultat final :
 
 ```bash
-codex exec --cd . "Write release notes for the last 10 commits" > release-notes.md
+codex exec --cd . "Rédige les notes de version des 10 derniers commits" > release-notes.md
 ```
 
 Conseils pratiques :
@@ -127,13 +132,3 @@ Utilisez le mode non interactif pour automatiser des flux interactifs que vous c
 ## Référence
 
 - Documentation OpenAI de Codex CLI
-
----
-
-**Statut :** verified
-
-**Produit concerné :** CLI
-
-**Base de vérification :** comparaison avec la documentation actuelle du mode non interactif concernant `codex exec`, `--cd`, le bac à sable en lecture seule par défaut, la progression sur `stderr` et la réponse finale sur `stdout`.
-
-**Dernière vérification :** 2026-08-26

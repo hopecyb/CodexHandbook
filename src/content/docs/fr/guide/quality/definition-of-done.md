@@ -8,13 +8,13 @@ title: Définition de terminé
 description: Une liste de critères de fin commune aux personnes et aux équipes.
 locale: fr
 source_locale: zh-CN
-source_revision: f55e9f7
-translation_status: draft
+source_revision: "f55e9f7"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 60
+reviewed_at: '2026-10-26'
 ---
-
 Une « définition de terminé » consiste simplement à préciser à l'avance ce qui doit être accompli pour considérer la tâche comme finie.
 
 Sans cela, une situation fréquente se présente :

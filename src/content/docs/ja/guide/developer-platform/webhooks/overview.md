@@ -2,24 +2,26 @@
 title: Webhook とタスクイベントの境界
 description: Codex のローカル実行結果、App Server イベント、自分で設計する HTTP コールバックを区別する。
 contentType: reference
-audiences: [developer]
+audiences:
+- developer
 editorialStatus: review
 verification:
   kind: source-checked
   checkedAt: '2026-09-18'
   summary: SDK と App Server の実行・イベントモデルを確認した。HTTP コールバックは自作構成への提案であり、統一された Codex Cloud Webhook 契約の存在を主張しない。
   evidence:
-    - label: SDK 公式文書
-      href: https://learn.chatgpt.com/docs/codex-sdk
-    - label: App Server のプロトコルとイベント
-      href: https://learn.chatgpt.com/docs/app-server
+  - label: SDK 公式文書
+    href: https://learn.chatgpt.com/docs/codex-sdk
+  - label: App Server のプロトコルとイベント
+    href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: 8a84ab8
-translation_status: draft
+source_revision: "8a84ab8"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 タスク終了後はプログラムの戻り値、プロセスの終了状態、イベントストリーム、HTTP コールバックで内部システムに知らせられる。まず送信者とプロトコルを決め、それから Webhook が必要か判断する。
@@ -62,6 +64,6 @@ App Server の `turn/completed` はプロトコル通知であり、最終状態
 
 ## 最小受け入れシナリオ
 
-テスト環境で成功、実行失敗、取り消し、重複イベント、誤った本人確認、受信側の一時停止を最低限確認する。重複配送が業務効果を1回しか起こさないこと、取り消しを成功と扱わないこと、未承認の生成結果を直接公開しないことを確認する。
+テスト環境で成功、実行失敗、取り消し、重複イベント、誤った本人確認、受信側の一時停止を最低限確認する。重複配送が業務効果を1回しか起こさないこと、取り消しを成功と扱わないこと、受け入れ検証を終えていない生成結果を直接公開しないことを確認する。
 
 練習には[Issue 振り分け事例](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)と[定期リンクチェック](/ja/cases/use-cases/team-automation/scheduled-link-check/)を利用できる。各資料の状態はそれぞれのページを参照。

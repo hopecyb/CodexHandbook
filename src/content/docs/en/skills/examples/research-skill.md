@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: cf2b232
+source_revision: 'cf2b232'
+reviewed_at: 2026-10-25
 ---
 
 A source that will not open, a source that says nothing about a fact, and two sources that disagree each need different treatment. This Skill preserves those distinctions so readers know which conclusions can be checked and which still need evidence.

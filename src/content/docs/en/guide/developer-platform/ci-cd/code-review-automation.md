@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "OpenAI Developers still describes Codex as usable for testing, review, and preparing changes; official use cases include “Review GitHub pull requests.” This page summarizes safe CI integration principles and gate patterns only—not fixed commands or a single implementation."
+  checkedAt: "2026-07-26"
 title: Code Review Automation
 description: Wire Codex into CI or PR workflows—prompts, permissions, and human gates.
 locale: en
 source_locale: zh-CN
-source_revision: aa8b33e
+source_revision: 'aa8b33e'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 10
 ---
@@ -105,9 +110,3 @@ The main value of code review automation is catching obvious issues before human
 
 ## Reference sources
 - OpenAI Codex CI examples
----
-
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** OpenAI Developers still describes Codex as usable for testing, review, and preparing changes; official use cases include “Review GitHub pull requests.” This page summarizes safe CI integration principles and gate patterns only—not fixed commands or a single implementation.  
-**Last verified:** 2026-07-26

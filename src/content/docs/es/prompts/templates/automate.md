@@ -8,10 +8,10 @@ title: Plantilla de automatización
 description: Tareas repetidas y flujos reutilizables.
 locale: es
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: '2aff2e7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -31,7 +31,7 @@ Disparador: 【manual / programado / CI】
 Entradas: 【fuentes de datos, archivos de configuración】
 Restricciones:
 - en fallo, código de salida claro y ubicación de logs
-- no hardcodear secretos; usar variables de entorno
+- no incrustar secretos en el código; usar variables de entorno
 - ofrecer modo dry-run
 Aceptación:
 - con 【entrada de ejemplo】 produce el resultado esperado
@@ -41,8 +41,8 @@ Aceptación:
 ## Cuándo usarla
 
 - Tareas repetidas con reglas claras
-- Flujos que conviene scriptar o programar
-- Quieres añadir primero dry-run, logs y códigos de salida como barandillas
+- Flujos que conviene convertir en scripts o tareas programadas
+- Quieres añadir primero dry-run, logs y códigos de salida como medidas de control
 
 ## Ideas erróneas habituales
 

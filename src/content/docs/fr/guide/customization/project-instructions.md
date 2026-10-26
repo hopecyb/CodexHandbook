@@ -1,16 +1,20 @@
 ---
-title: "Instructions projet"
+title: Instructions projet
 description: Contexte au niveau projet au-delà de AGENTS.md — comment README, docs et références de conversation divisent les responsabilités.
 locale: fr
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: "76b0fde"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec la description publique actuelle d'OpenAI Developers sur le contexte projet et la collaboration fichier, et les chapitres vérifiés du handbook sur contexte projet, fichiers et flux de travail ; le contenu de la page ne conserve que la division stable des responsabilités entre README, `AGENTS.md`, `docs/` et conversation de tâche.
+  checkedAt: '2026-07-26'
 ---
-
 Les « instructions projet » sont le **contexte statique** que Codex utilise pour comprendre un dépôt, pas limité à un seul format de fichier.
 
 ## Contenu
@@ -23,7 +27,7 @@ Les « instructions projet » sont le **contexte statique** que Codex utilise po
 
 | Source | Rôle |
 |---|---|
-| `AGENTS.md` | Règles de collaboration et commandes (autoritaire : série AGENTS de ce chapitre) |
+| `AGENTS.md` | Règles de collaboration et commandes (référence : série AGENTS de ce chapitre) |
 | `README.md` | Ce qu'est le projet et comment le démarrer |
 | `docs/` | Architecture, ADR, runbooks |
 | Dépendances et scripts | Vérité exécutable dans `package.json`, `Makefile`, et similaires |
@@ -76,7 +80,7 @@ La prochaine fois vous réexpliquez, et les autres ne voient jamais ce que vous 
 
 Non.
 
-`AGENTS.md` convient mieux aux règles et contraintes de collaboration qu'à remplacer l'introduction projet, le contexte d'architecture et les instructions de run complètes.
+`AGENTS.md` convient mieux aux règles et contraintes de collaboration qu'à remplacer l'introduction projet, le contexte d'architecture et les instructions complètes d’exécution.
 
 ### 3. Plus de documentation est toujours mieux
 
@@ -99,10 +103,3 @@ Le point des instructions projet est d'aider Codex et les humains à trouver la 
 
 - [ ] Quelqu'un qui clone fraîchement le dépôt (ou Codex) peut exécuter les tests depuis README + AGENTS.md
 - [ ] Les prompts de tâche reposent principalement sur des références @, évitant le long contexte répété
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Recoupement avec la description publique actuelle d'OpenAI Developers sur le contexte projet et la collaboration fichier, et les chapitres vérifiés du handbook sur contexte projet, fichiers et flux de travail ; le contenu de la page ne conserve que la division stable des responsabilités entre README, `AGENTS.md`, `docs/` et conversation de tâche.  
-**Dernière vérification :** 2026-07-26

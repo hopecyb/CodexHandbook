@@ -5,10 +5,14 @@ sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: 32ee40c
+source_revision: "32ee40c"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App, CLI, IDE"
+  checkedAt: '2026-08-26'
 ---
 
 Die Chat-Zusammenfassung ist Codex' Erklärung der erledigten Arbeit. Der Git-Diff zeigt dagegen, was sich in den Dateien tatsächlich geändert hat. Im Review-Bereich der Desktop-App kannst du Diffs anzeigen, zeilenbezogene Kommentare hinzufügen und entscheiden, welche Inhalte vorgemerkt, verworfen, committet oder gepusht werden.
@@ -61,11 +65,3 @@ Eine sinnvolle feste Abnahmereihenfolge lautet: Umfang → Verhalten → Tests �
 ## Offizielle Grundlage
 
 - [Code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App, CLI, IDE
-
-**Zuletzt geprüft:** 2026-08-26

@@ -12,8 +12,9 @@ verification:
       href: "https://github.com/openclaw/openclaw"
 locale: en
 source_locale: zh-CN
-source_revision: "8868140"
-translation_status: draft
+source_revision: '8868140'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 

@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (seg\u00fan versi\u00f3n, regi\u00f3n y permisos)"
+  basis: "El material actual del OpenAI Help Center sobre planes Codex y capacidades de escritorio sigue tratando Computer Use como una función relacionada con Codex; las notas de Business también confirman soporte de Computer Use en Windows desde 2026-05-29. Este texto solo resume modelo de riesgo, escenarios adecuados y límites de aprobación, y no declara disponibilidad por defecto en todas las plataformas o cuentas."
+  checkedAt: "2026-07-26"
 title: Computer Use
 description: Capacidad avanzada de operar la GUI mediante pantalla y dispositivos de entrada — escenarios, riesgos y aprobación.
 locale: es
 source_locale: zh-CN
-source_revision: d4a2e11
+source_revision: 'd4a2e11'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
 ---
 
-**Computer Use** (uso del ordenador) permite al Agent ver la pantalla, mover el puntero y teclear como una persona, no solo en el navegador o el terminal. Es la capacidad más fuerte y también la que **exige más riesgo y aprobación**.
+**Computer Use** (uso del ordenador) permite al Agent ver la pantalla, mover el puntero y teclear como una persona, no solo en el navegador o el terminal. Es la capacidad más fuerte y también la que **implica más riesgo y mayores requisitos de aprobación**.
 
 Computer Use actúa en la capa de pantalla, ratón y teclado; no es la misma clase de capacidad que el navegador o el terminal, así que conviene activarla con más cautela.
 
@@ -41,8 +46,8 @@ Por eso, el alcance de interfaces e información a las que llega suele ser tambi
 
 Adecuado para:
 
-- Flujos de clics repetidos en software de demostración sin API (con tu supervisión)
-- Copiar datos entre aplicaciones (bajo cumplimiento)
+- Flujos de clics repetidos en programas de presentaciones sin API (con tu supervisión)
+- Copiar datos entre aplicaciones (respetando las normas aplicables)
 - Verificar el comportamiento de la propia App de escritorio
 
 No adecuado para:
@@ -105,7 +110,7 @@ Ahí sí merece considerarlo en serio.
 
 1. **Entorno dedicado**: máquina virtual o cuenta de usuario secundaria; sin ventanas privadas en pantalla
 2. **Tarea mínima**: «verifica la fórmula en Calculator», no «gestiona todo mi correo»
-3. **Humano en el bucle**: mantenerlo visible; listo para interrumpir
+3. **Supervisión humana**: mantenerlo visible; listo para interrumpir
 4. **Grabación / logs**: para retrospectiva del equipo (la grabación también puede contener datos sensibles)
 5. **Comprobar al terminar**: sistema de archivos, portapapeles, apps abiertas
 
@@ -142,10 +147,3 @@ Si aparece un diálogo de confirmación del sistema, párate, explícalo y luego
 - [ ] El prompt indica apps permitidas y prohibiciones
 - [ ] Tras la tarea, comprobar que no hay archivos/conexiones de red imprevistos
 - [ ] La política de la organización permite esa capacidad
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / Codex (según versión, región y permisos)  
-**Base de verificación:** El material actual del OpenAI Help Center sobre planes Codex y capacidades de escritorio sigue tratando Computer Use como una función relacionada con Codex; las notas de Business también confirman soporte de Computer Use en Windows desde 2026-05-29. Este texto solo resume modelo de riesgo, escenarios adecuados y límites de aprobación, y no declara disponibilidad por defecto en todas las plataformas o cuentas.  
-**Última verificación:** 2026-07-26

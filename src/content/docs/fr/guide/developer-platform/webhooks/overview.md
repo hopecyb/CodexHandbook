@@ -17,9 +17,10 @@ sidebar:
   order: 10
 locale: fr
 source_locale: zh-CN
-source_revision: 8a84ab8
-translation_status: draft
+source_revision: '8a84ab8'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Après la fin d’une tâche, vous pouvez notifier un système interne par une valeur de retour, un code de sortie, un flux d’événements ou un rappel HTTP. Déterminez d’abord l’émetteur et le protocole, puis décidez si un Webhook est nécessaire.
@@ -32,7 +33,7 @@ Après la fin d’une tâche, vous pouvez notifier un système interne par une v
 | Événements App Server | Notifications JSON-RPC dans une connexion établie | Il faut se connecter, initialiser et traiter les messages selon le protocole |
 | Rappel depuis votre runner | Requête HTTP envoyée par votre service | Vous définissez noms d’événements, signatures, tentatives et stockage |
 
-`turn/completed` d’App Server est une notification du protocole ; l’état final peut être terminé, interrompu ou en échec. Vérifiez l’état et le résultat métier avant de déclencher un déploiement sur le seul nom de l’événement. Voir les [événements officiels](https://learn.chatgpt.com/docs/app-server).
+`turn/completed` d’App Server est une notification du protocole ; l’état final peut être terminé, interrompu ou en échec. Vérifiez l’état et le résultat métier ; ne déclenchez pas un déploiement sur le seul nom de l’événement. Voir les [événements officiels](https://learn.chatgpt.com/docs/app-server).
 
 Cette page n’a vérifié aucun point d’enregistrement Webhook unifié pour Codex Cloud, en-tête de signature ni contrat d’événement `task.completed`. Elle ne présente donc aucune URL, aucun en-tête ni tableau d’événements comme interface officielle. Si un produit précis offre des Webhooks, suivez sa documentation versionnée.
 

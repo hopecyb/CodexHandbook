@@ -1,8 +1,9 @@
 ---
-title: 'SDK 概要：ローカルタスクとクライアント統合'
+title: SDK 概要：ローカルタスクとクライアント統合
 description: Codex SDK、非対話 CLI、App Server、自分で構築するリモートタスクサービスを区別する。
 contentType: reference
-audiences: [developer]
+audiences:
+- developer
 level: intermediate
 editorialStatus: review
 verification:
@@ -10,17 +11,18 @@ verification:
   checkedAt: '2026-09-18'
   summary: 実行場所、スレッドのインターフェース、統合の境界を公式 SDK と App Server の文書で確認した。最小例は構文チェックのみで、認証したモデル呼び出しは行っていない。
   evidence:
-    - label: Codex SDK 公式文書
-      href: https://learn.chatgpt.com/docs/codex-sdk
-    - label: Codex App Server 公式文書
-      href: https://learn.chatgpt.com/docs/app-server
+  - label: Codex SDK 公式文書
+    href: https://learn.chatgpt.com/docs/codex-sdk
+  - label: Codex App Server 公式文書
+    href: https://learn.chatgpt.com/docs/app-server
 sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: e888ae6
-translation_status: draft
+source_revision: "e888ae6"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Codex SDK はプログラムからローカルの Codex Agent を制御する。「ローカル」は SDK と Agent を実行するマシンであり、自分の PC の場合も管理下の CI runner の場合もある。Cloud タスクを作成・照会し、成果物をダウンロードするホスト型 HTTP サービスと同一視してはいけない。[公式 SDK 文書](https://learn.chatgpt.com/docs/codex-sdk)を参照。

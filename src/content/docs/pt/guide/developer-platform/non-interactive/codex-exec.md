@@ -2,17 +2,18 @@
 title: codex exec
 description: Entrada de execução não interativa para entregar uma tarefa completa de uma só vez em scripts e CI.
 legacyVerification:
-  status: "verified"
-  products: "CLI"
-  basis: "Comparado com as páginas oficiais atuais de Non-interactive mode e Developer commands para confirmar que `codex exec` é Stable, `--cd` / `-C`, a sandbox predefinida de leitura, `workspace-write`, a saída JSONL e a saída por schema."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: CLI
+  basis: Comparado com as páginas oficiais atuais de Non-interactive mode e Developer commands para confirmar que `codex exec` é Stable, `--cd` / `-C`, a sandbox predefinida de leitura, `workspace-write`, a saída JSONL e a saída por schema.
+  checkedAt: '2026-08-26'
 locale: pt
 source_locale: zh-CN
-source_revision: 6d7c481
-translation_status: draft
+source_revision: "6d7c481"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 Se o `codex` interativo permite conversar enquanto trabalha, **`codex exec`** aproxima-se de entregar uma tarefa de uma só vez e receber o resultado quando ela termina.
@@ -128,7 +129,7 @@ Este fluxo continua em [Scripts e pipelines](/pt/guide/developer-platform/non-in
 | | `codex` interativo | `codex exec` |
 |---|---|---|
 | Esclarecimentos | Podem ocorrer em várias rondas | Tudo deve ficar claro de início |
-| Aprovação | Há uma pessoa presente | A política deve ser mais restrita de antemão |
+| aprovação | Há uma pessoa presente | A política deve ser mais restrita de antemão |
 | Mais adequado para | Aprender, explorar | CI, cron |
 
 ## Como escolher em caso de dúvida
@@ -149,7 +150,7 @@ Este fluxo continua em [Scripts e pipelines](/pt/guide/developer-platform/non-in
 ## Limites de segurança
 
 - Sem supervisão significa [aprovação humana](/pt/cases/workflows/human-approval-patterns/) mais fraca; use leitura como padrão.
-- Consulte [Credenciais de segurança](/pt/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (referência na secção correspondente).
+- Consulte [Credenciais de segurança](/pt/guide/developer-platform/ci-cd/code-review-automation/#permissões-e-segurança) (referência na secção correspondente).
 
 ## Lista de aceitação
 

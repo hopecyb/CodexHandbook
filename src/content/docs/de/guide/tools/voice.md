@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Desktop Voice (Plan- und Workspace-Einstellungen)"
+  basis: "Die Help-Center-Artikel „ChatGPT Voice“ und „ChatGPT Work and Codex“: Voice mit Work/Codex zum Starten, Follow-up, Koordinieren; Verfügbarkeit plan-/workspace-/versionsabhängig. Fokus: Szenarien, Datenschutz, „nach Spracheingabe zurück zum Text“."
+  checkedAt: "2026-07-26"
 title: Spracheingabe und -ausgabe
-description: "Szenarien, Grenzen und Privacy bei Sprachinteraktion mit Codex."
+description: "Szenarien, Grenzen und Datenschutz bei Sprachinteraktion mit Codex."
 locale: de
 source_locale: zh-CN
-source_revision: 192bba2
+source_revision: "192bba2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -17,9 +22,9 @@ Sprache: Richtung, Hintergrund, schnelles Follow-up; präzise, suchbare, nachpr�
 
 ## Inhalt dieser Seite
 
-- Welche Aufgabenformen Sprache passen
+- Für welche Aufgaben sich Sprache eignet
 - Zusammenspiel mit Text-Prompt
-- Privacy und Genauigkeit
+- Datenschutz und Genauigkeit
 
 ## Geeignete Szenarien
 
@@ -37,7 +42,7 @@ Vorteile:
 
 - Schnell
 - Hände frei
-- Gedanken zuerst auskippen
+- Gedanken zunächst frei formulieren
 
 Typische Probleme:
 
@@ -68,7 +73,7 @@ Nein. Tippen besser für:
 
 ### 2. Mehr und detaillierter = weniger Fehler?
 
-Lange unstrukturierte Diktion zerstreut den Fokus.
+Lange unstrukturierte Spracheingabe zerstreut den Fokus.
 
 ### 3. Sprachantwort ersetzt Ergebnis-Review?
 
@@ -82,11 +87,11 @@ Nein. Zusammenfassung für Überblick — Änderungen, Dateien, Diff, Tests weit
 
 Dann als Textversion zum Bestätigen.
 
-## Privacy
+## Datenschutz
 
-- Sprache oft Cloud-Transkription; kein Kunden-PII, keine Credentials vorlesen
+- Sprache kann in der Cloud transkribiert werden; kein Kunden-PII, keine Credentials vorlesen
 - Öffentliche Orte: Mithörer
-- Team-Policy kann Recording bei Geheimcode-Namen verbieten
+- Team-Policy kann Recording bei vertraulichen Codenamen verbieten
 
 ## Bezug zu Multimodal
 
@@ -96,15 +101,8 @@ Dann als Textversion zum Bestätigen.
 
 ## Häufige Fehler
 
-- Lange Diktion ohne Struktur — Constraints fehlen
+- Lange Spracheingabe ohne Struktur — Constraints fehlen
 - Massen-Codeänderungen per Sprache annehmen ohne Diff
 - Unmaskierte Produktionsvorfälle in Sprache beschreiben
 
 Sprache für Start und Follow-up — nicht für präzise Befehle, Secrets und finale Abnahme.
-
----
-
-**Status:** verified  
-**Gilt für:** App / Desktop Voice (Plan- und Workspace-Einstellungen)  
-**Prüfgrundlage:** OpenAI Help Center《ChatGPT Voice》und《ChatGPT Work and Codex》: Voice mit Work/Codex zum Starten, Follow-up, Koordinieren; Verfügbarkeit plan-/workspace-/versionsabhängig. Fokus: Szenarien, Privacy, „nach Diktion zurück zum Text“.  
-**Zuletzt geprüft:** 2026-07-26

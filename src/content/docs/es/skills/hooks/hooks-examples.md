@@ -2,13 +2,16 @@
 title: Ejemplo de configuración de Hooks
 description: Crea un guardián PreToolUse comprobable con un archivo hooks.json real y un script de la biblioteca estándar de Python.
 locale: es
-source_locale: zh-cn
-source_revision: 06e9fa2
+source_locale: zh-CN
+source_revision: "06e9fa2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: Entornos que usan un host de Codex local; usa `/hooks` de Codex CLI para gestionar la confianza
+  checkedAt: '2026-08-25'
 ---
-
 Este capítulo elimina nombres de eventos y campos ilustrativos antiguos. El ejemplo sigue la estructura oficial actual de `hooks.json` e incluye pruebas ejecutables.
 
 Los archivos completos están en [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
@@ -20,7 +23,7 @@ Antes de ejecutar una llamada a `Bash` o `apply_patch`, rechaza cualquier entrad
 El ejemplo solo muestra la estructura de entrada, salida y pruebas de un Hook:
 
 - No sustituye un detector profesional de secretos.
-- La expresión regular produce falsos positivos y falsos negativos.
+- La expresión regular puede producir falsos positivos y falsos negativos.
 - No examina herramientas alojadas.
 - No debe registrar la entrada completa de la herramienta.
 
@@ -84,7 +87,7 @@ Una entrada normal no produce nada en stdout.
 
 ## 4. Activarlo en un proyecto
 
-1. Coloca la configuración y el script en el repositorio de destino usando una ruta estable relativa al repositorio.
+1. Coloca la configuración y el script en el repositorio de destino usando una ruta estable dentro del repositorio.
 2. Ejecuta las pruebas unitarias y un comando normal real en un repositorio aislado.
 3. Inicia Codex y abre `/hooks` para inspeccionar el origen y la definición exacta.
 4. Después de confiar en el Hook, verifica tanto el paso de una entrada normal como el rechazo de la cadena de prueba.
@@ -102,11 +105,3 @@ Los equipos de producción suelen empezar con auditoría o contexto sin bloqueo 
 ## Fuente oficial
 
 - [OpenAI: configuración de Hooks y salida de PreToolUse](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** Entornos que usan un host de Codex local; usa `/hooks` de Codex CLI para gestionar la confianza
-
-**Última verificación:** 2026-08-25

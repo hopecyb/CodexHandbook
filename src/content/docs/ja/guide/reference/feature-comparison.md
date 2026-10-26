@@ -3,12 +3,17 @@ title: 機能比較
 description: 作業面、実行場所、レビュー方法の観点から、デスクトップ App、CLI、IDE、Cloud を比較します。
 locale: ja
 source_locale: zh-CN
-source_revision: b3d30b0
+source_revision: 'b3d30b0'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の公式 App、CLI、IDE、Cloud、Authentication、Pricing ページと照合済みです。この表は、作業場所、コンテキスト、レビュー方法、ログイン境界など、明確に確認できる能力だけを掲載し、「強 / 中 / 弱」で変化の速い機能を推測していません。
+  checkedAt: '2026-08-26'
 ---
 
 この表では、**安定している主要な作業方法**だけを比較します。変化の速い細かな機能を、恒久的な約束として扱うものではありません。まず [クライアント選択ガイド](/ja/guide/choose-your-client/) で入口を決め、その後でここに戻って違いを確認してください。
@@ -63,13 +68,3 @@ Plugin、Scheduled tasks、通知、モデル、組織ポリシーは変化が�
 - API key ログインで、特定の ChatGPT または Cloud 機能を利用できるか
 
 選択の原則は単純です。**局所的なコード作業は IDE、ターミナルで完結する作業は CLI、ローカルタスクの調整はデスクトップ App、隔離されたリモート実行は Cloud** を使います。
-
----
-
-**ステータス：** verified
-
-**対象製品：** App / CLI / IDE / Cloud
-
-**検証根拠：** 現在の公式 App、CLI、IDE、Cloud、Authentication、Pricing ページと照合済みです。この表は、作業場所、コンテキスト、レビュー方法、ログイン境界など、明確に確認できる能力だけを掲載し、「強 / 中 / 弱」で変化の速い機能を推測していません。
-
-**最終確認：** 2026-08-26

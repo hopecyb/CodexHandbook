@@ -1,14 +1,19 @@
 ---
-title: Tham chiếu cấu hình
+title: "Tham chiếu cấu hình"
 description: "Chỉ mục khái niệm các khóa cấu hình Codex cấp người dùng và dự án — đường dẫn và trường lấy theo tài liệu chính thức."
-locale: vi
-source_locale: zh-CN
-source_revision: 8f692ed
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "8f692ed"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 60
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE"
+  basis: "Help Center OpenAI vẫn ghi các tệp cấu hình cấp người dùng như `~/.codex/config.toml` và `~/.codex/.env`; trang tường minh là chỉ mục khái niệm — không cố định tên khóa cụ thể, độ ưu tiên đường dẫn hoặc trường legacy — nên `verified` phù hợp."
+  checkedAt: "2026-07-26"
 ---
 
 Trang tham chiếu cấu hình có thể choáng với khóa, tầng và ghi đè. Bắt đầu bằng một câu hỏi:
@@ -197,7 +202,7 @@ Secrets Cloud: [Secrets và biến môi trường](/vi/guide/web-and-cloud/secre
 3. Sau nâng cấp CLI, đọc ghi chú migration chính thức
 4. Không bao giờ commit secrets vào tệp cấu hình
 
-Cấu hình dành cho mặc định dài hạn — không secrets, văn xuôi Tác vụ hay thử quy tắc đội.
+Cấu hình dành cho mặc định dài hạn — không chứa thông tin bí mật và không thay thế mô tả tác vụ hay quy tắc của nhóm.
 
 ## Lỗi thường gặp
 
@@ -207,9 +212,3 @@ Cấu hình dành cho mặc định dài hạn — không secrets, văn xuôi T�
 
 ## Nguồn tham chiếu
 - Tham chiếu cấu hình OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App / IDE  
-**Cơ sở kiểm chứng:** Help Center OpenAI vẫn ghi các carrier cấp người dùng như `~/.codex/config.toml` và `~/.codex/.env`; trang tường minh là chỉ mục khái niệm — không cố định tên khóa cụ thể, độ ưu tiên đường dẫn hoặc trường legacy — nên `verified` phù hợp.  
-**Kiểm chứng gần nhất:** 2026-07-26

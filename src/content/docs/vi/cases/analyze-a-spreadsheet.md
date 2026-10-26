@@ -31,9 +31,10 @@ next:
   label: Học cách xác minh kết quả
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: "68729f6"
 ---
 
 Trong bài này, bạn tạo báo cáo bán hàng tuần, tổng hợp theo vùng, xếp hạng sản phẩm và sổ làm sạch từng dòng. Đầu vào là dữ liệu giả lập do trang này tạo; không cần dữ liệu khách hàng thật.

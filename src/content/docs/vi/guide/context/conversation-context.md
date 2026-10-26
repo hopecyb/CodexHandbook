@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu cách tích lũy và thu hẹp ngữ cảnh cùng thread; khái niệm, ví dụ và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.", "checkedAt": "2026-07-26"}
 title: Ngữ cảnh hội thoại
 description: Thông tin trong cùng một thread tích lũy và hết hiệu lực thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 3968049
+source_revision: "3968049"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -58,7 +59,7 @@ Có những câu dù đã nói trước, vẫn nên nhắc lại ở nút then c
 
 Không nhất thiết.
 
-Nếu chủ đề luôn nhất quán, thread dài rất tiện.  
+Nếu chủ đề luôn nhất quán, thread dài rất tiện.
 Nhưng nếu tác vụ đã đổi hướng, tiếp tục thread cũ dễ kéo lệch tác vụ mới hơn.
 
 ### 2. Tôi đã nói rồi — vì sao vẫn làm sai?
@@ -88,14 +89,7 @@ Khi đổi chủ đề:
 Nếu vẫn ở thread cũ tiếp tục, cũng có thể gửi trước một đoạn «căn chỉnh lại» rất ngắn, ví dụ:
 
 ```text
-Từ đây chỉ thảo luận đổi trang chủ. Nội dung trước về API backend tạm không tiếp tục. Vòng này vẫn chỉ sửa copy và kiểu, không đổi cấu trúc dữ liệu.
+Từ đây chỉ thảo luận đổi trang chủ. Nội dung trước về API backend tạm không tiếp tục. Vòng này vẫn chỉ sửa nội dung và kiểu trình bày, không đổi cấu trúc dữ liệu.
 ```
 
 Cùng một thread giúp bạn nối trí nhớ, nhưng cũng mang theo gánh cũ. Chủ đề vừa đổi thì nên chủ động thu hẹp.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu cách tích lũy và thu hẹp ngữ cảnh cùng thread; khái niệm, ví dụ và liên kết trong site đã kiểm lại, và phần thân không phụ thuộc sự thật sản phẩm dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

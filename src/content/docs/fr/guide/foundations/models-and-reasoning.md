@@ -3,13 +3,18 @@ title: Modèles et raisonnement
 description: Les critères à prendre en compte pour choisir un modèle et un niveau de raisonnement.
 locale: fr
 source_locale: zh-CN
-source_revision: 0cbc9dc
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "0685b79"
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: La documentation actuelle d’OpenAI sur les modèles et les interfaces Codex et développeurs traite du choix du modèle, des différences de capacités et des compromis entre vitesse et coût. Cette page ne fixe aucun modèle ni niveau précis ; elle conserve les principes stables de choix selon la complexité de la tâche, la latence, le coût et la possibilité de vérifier le résultat.
+  checkedAt: '2026-07-26'
 ---
-
 Les modèles disponibles et les niveaux de « raisonnement / réflexion » évoluent avec les produits. Pour choisir, mettez en balance :
 
 - **La difficulté de la tâche :** simple reformulation ou décision d'architecture sur plusieurs fichiers.
@@ -53,6 +58,8 @@ Comme point de départ :
 
 L'essentiel est de décider si « réfléchir un peu plus » vaut le temps et le coût supplémentaires pour cette tâche.
 
-Ce manuel ne dépend d'aucun nom commercial de modèle. Référez-vous à la liste actuelle de votre client et à la [documentation Codex pour les développeurs](https://developers.openai.com/codex).
+Cette page présente des principes de choix durables ; les modèles précis sont suivis dans le guide de sélection. Référez-vous à la liste actuelle de votre client et à la [documentation Codex pour les développeurs](https://developers.openai.com/codex).
 
-Pour consigner concrètement votre choix, consultez [Utilisation, temps et choix du modèle](/guide/quality/usage-time-and-model-choice/). Cette page, actuellement en chinois, distingue quota d'abonnement, coût API, attente et travail humain de reprise.
+Pour consigner concrètement votre choix, consultez [Utilisation, durée et choix du modèle](/fr/guide/quality/usage-time-and-model-choice/), qui distingue quota d’abonnement, frais API, attente et reprises humaines.
+
+Consultez les modèles actuels, les différences entre produits et les recommandations par tâche : [Choisir un modèle selon la tâche](/fr/guide/reference/model-selection/).

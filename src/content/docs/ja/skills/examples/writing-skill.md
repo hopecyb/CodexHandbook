@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: "cbaec37"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 このSkillは、与えられた資料から根拠をたどれる記事を作り、文体の要件、事実の根拠、未解決事項を残します。出典に基づく執筆と事実確認に向きますが、誤字を1つ直すだけなら全工程は不要です。
 
@@ -43,7 +44,7 @@ translated_at: 2026-09-20
 
 ## インストールと初回の呼び出し
 
-練習プロジェクトの`.agents/skills/source-backed-writer/`にディレクトリ全体を置き、`SKILL.md`が直下にあることを確認します。同名のSkillがあれば上書き前に比較します。検出方法は[Skillを使う](/ja/skills/use-a-skill/)を参照し、クライアントで選択できることを確認してから明示的に呼び出します。
+練習プロジェクトの`.agents/skills/source-backed-writer/`にディレクトリ全体を置き、`SKILL.md`が直下にあることを確認します。同名のSkillがある場合は先に比較し、上書きしないでください。検出方法は[Skillを使う](/ja/skills/use-a-skill/)を参照し、クライアントで選択できることを確認してから明示的に呼び出します。
 
 ```text
 $source-backed-writer この教材パックの sources/ にある3件の資料を読み、

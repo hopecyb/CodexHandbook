@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Environments using a local Codex host; CLI provides `/hooks` trust management"
+  checkedAt: "2026-08-25"
 title: Hooks overview
 description: Understand Hook discovery, trust review, handlers, runtime behavior, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: ac7889b
+source_revision: 'ac7889b'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
@@ -83,11 +87,3 @@ Hook tool coverage is not a complete security boundary. Some dedicated tool path
 ## Official source
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
-
-**Last verified:** 2026-08-25

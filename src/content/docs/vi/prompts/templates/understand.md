@@ -4,20 +4,19 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Trang này cung cấp mẫu tác vụ kiểu hiểu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
   checkedAt: "2026-07-26"
-title: Mẫu hiểu
+title: Mẫu tìm hiểu
 description: Lập nhận thức chung trước khi thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: 228971d
+source_revision: "228971d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Nhiều tác vụ kẹt vì chưa lập được hiểu biết chung tối thiểu.
 
-Mẫu hiểu phù hợp tác vụ «hiểu trước, rồi mới quyết bước tiếp».
+Mẫu tìm hiểu phù hợp tác vụ «hiểu trước, rồi mới quyết bước tiếp».
 
 ## Mẫu
 
@@ -25,7 +24,7 @@ Mẫu hiểu phù hợp tác vụ «hiểu trước, rồi mới quyết bước
 Mục tiêu: Hiểu 【chủ đề/mô-đun/vùng codebase】, chuẩn bị cho 【triển khai/sửa/review】 sau này.
 Bối cảnh: 【loại dự án, tech stack, issue liên quan】
 Đầu vào: 【@đường dẫn tệp, liên kết tài liệu, ảnh chụp】
-Ràng buộc: Chỉ phân tích chỉ-đọc; không sửa bất kỳ tệp nào; không chạy lệnh phá hủy.
+Ràng buộc: Chỉ phân tích ở chế độ chỉ đọc; không sửa bất kỳ tệp nào; không chạy lệnh phá hủy.
 Đầu ra:
 1. Dùng 5–8 mục giải thích khái niệm cốt lõi hoặc trách nhiệm mô-đun
 2. Đánh dấu 3 tệp/thư mục liên quan nhất tới 【mục tiêu】 và lý do

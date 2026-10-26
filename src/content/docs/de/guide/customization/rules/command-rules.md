@@ -3,12 +3,18 @@ title: Befehlsregeln
 description: "Befehlsweises Allow/Deny für Shell und Werkzeugaufrufe — ausführbarer als mündliche Absprachen."
 locale: de
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: "CLI / App"
+  basis: Aktuelle OpenAI-Codex-CLI-Dokumentation behandelt Befehlsausführung, Freigabemodi und Sandbox-Isolation weiterhin als Kern-Sicherheitsgrenze; diese Seite positioniert Befehlsregeln als Engineering-Muster
+    „Hoch-/Niedrigrisiko-Befehle getrennt verwalten“ und markiert JSON-Fragmente ausdrücklich als Schema, nicht als offizielle Syntax-Fakten.
+  checkedAt: '2026-07-26'
 ---
 
 **Befehlsregeln** fokussieren „welche Befehle der Agent mit welchen Argumenten ausführen darf“. Sie sind die häufigste Form von [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/) und stehen typischerweise in team-reviewbaren Config- oder Regeldateien.
@@ -31,7 +37,7 @@ Ziel: Grenzen, die das Team ohnehin kennt, maschinenausführbar machen.
 
 ## Ein Kernkonzept
 
-Regeln matchen **ausführbare Absicht**, nicht natürliche Sprache. `npm test` und `npm run test` sind strategisch zwei Befehle; `bash -c "rm -rf /"` wird nicht freigegeben, nur weil `bash` erlaubt ist.
+Regeln matchen **ausführbare Absicht**, nicht natürliche Sprache. `npm test` und `npm run test` sind für eine Richtlinie zwei unterschiedliche Befehle; `bash -c "rm -rf /"` wird nicht freigegeben, nur weil `bash` erlaubt ist.
 
 ```text
 Benutzeraufgabe → Modell schlägt Befehl vor → Regel-Engine → (OK) Sandbox-Ausführung / (Ablehnen) Freigabe nötig oder Block
@@ -59,12 +65,12 @@ Regeltechnisch öffnet das oft viele gefährliche Zusammensetzungen hinterher.
 
 ## Minimal nutzbares Vorgehen
 
-1. **Gefährliche Befehle außer Schreiboperationen standardmäßig ablehnen**: `rm -rf`, `curl | bash`, `git push --force`
+1. **Gefährliche Befehle standardmäßig ablehnen**: `rm -rf`, `curl | bash`, `git push --force`
 2. **Häufige Nur-Lese-/Build-Befehle im Projekt erlauben**: `git status`, `npm test`, `pnpm lint`
 3. **Regeln nach Git**, konsistent mit „Testbefehlen“ in `AGENTS.md`
 4. **Regeländerungen in PRs reviewen**, wie ein Dockerfile
 
-Schema (Format laut offizieller Config):
+Schematisches Beispiel (das tatsächlich gültige Format steht in der offiziellen Konfiguration):
 
 ```json
 {
@@ -91,7 +97,7 @@ Schema (Format laut offizieller Config):
 | Inventur | Echte Befehle aus `package.json`-Scripts, Makefile, CI-Workflows |
 | Schichten | Organisations-Deny → Projekt-Allow → persönliche lokale Ausnahme (falls) |
 | Probelauf | Niedrigrisiko-Aufgabe: „was durchsollte geht, was blockieren sollte blockiert“ |
-| Abgleich | Lokale Regeln möglichst gleichursprünglich mit [GitHub Action](/de/guide/developer-platform/ci-cd/code-review-automation/) |
+| Abgleich | Lokale Regeln möglichst aus derselben Quelle wie die Regeln für [GitHub Action](/de/guide/developer-platform/ci-cd/code-review-automation/) |
 
 ## Häufige Fehler
 
@@ -105,7 +111,7 @@ Befehlsregeln „merken“ keine Befehle — sie trennen Alltag von Aktionen, di
 ## Sicherheitsgrenzen
 
 - Befehlsregeln **ersetzen** Branch-Schutz und Code-Review **nicht**
-- Bösartige Prompts können den Agent zu **Übergriffsversuchen** verleiten — Sandbox-Default streng
+- Bösartige Prompts können den Agent zu **Befehlen außerhalb seiner Berechtigungen** verleiten — Sandbox-Default streng
 - Umgebungsvariablen mit Secrets/Token nicht durch „`echo` erlaubt“ leaken lassen
 
 ## Abnahmeliste
@@ -120,10 +126,3 @@ Befehlsregeln „merken“ keine Befehle — sie trennen Alltag von Aktionen, di
 - [Teamregel-Strategie](/de/guide/customization/rules/team-rules/)
 - [CLI-Freigabe und Sandbox](/de/guide/cli/approvals-and-sandbox/)
 - [Berechtigungsmatrix](/de/guide/reference/permission-matrix/)
-
----
-
-**Status:** verified  
-**Gilt für:** CLI / App  
-**Prüfgrundlage:** Aktuelle OpenAI-Codex-CLI-Dokumentation behandelt Befehlsausführung, Freigabemodi und Sandbox-Isolation weiterhin als Kern-Sicherheitsgrenze; diese Seite positioniert Befehlsregeln als Engineering-Muster „Hoch-/Niedrigrisiko-Befehle getrennt verwalten“ und markiert JSON-Fragmente ausdrücklich als Schema, nicht als offizielle Syntax-Fakten.  
-**Zuletzt geprüft:** 2026-07-26

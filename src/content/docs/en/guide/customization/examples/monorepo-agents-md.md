@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this handbook’s current `AGENTS.md`, file/folder context, and Cloud environment chapters; page content is limited to monorepo layered instruction example patterns and command organization, without treating specific product entry points or managed implementation as fixed contracts."
+  checkedAt: "2026-07-26"
 title: AGENTS.md in a Monorepo
 description: Example patterns for placing project instructions, scope, and test commands in a single-repo multi-package structure.
 locale: en
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: 'a9fb1d7'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -127,10 +132,3 @@ Closer to (1) → root; closer to (2) and (3) → subpackage.
 - [ ] Cross-package tasks state allowed paths in the prompt
 
 AGENTS.md in a monorepo does not need to be centralized; “global consensus” and “directory-local rules” each belong in the right place.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s current `AGENTS.md`, file/folder context, and Cloud environment chapters; page content is limited to monorepo layered instruction example patterns and command organization, without treating specific product entry points or managed implementation as fixed contracts.  
-**Last verified:** 2026-07-26

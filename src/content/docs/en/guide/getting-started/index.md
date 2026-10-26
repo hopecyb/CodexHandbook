@@ -8,11 +8,12 @@ title: Getting started
 description: From account and installation to your first verifiable task.
 locale: en
 source_locale: zh-CN
-source_revision: 62fb65d
-translation_status: draft
+source_revision: '62fb65d'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 4
+reviewed_at: 2026-10-25
 ---
 
 The goal is to complete your first task in a **safe practice project** and learn to inspect, accept, revise, or undo the result.

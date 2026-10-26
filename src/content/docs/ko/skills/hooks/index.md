@@ -3,9 +3,14 @@ title: Hooks
 description: Codex 수명 주기의 특정 시점에 스크립트나 MCP 도구를 실행하여 검사, 기록, 정책 제어를 수행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a0312e9
-translation_status: draft
+source_revision: 'a0312e9'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: 로컬 Codex host를 사용하는 환경; 신뢰 검토와 `/hooks` 관리는 Codex CLI 공식 설명을 기준으로 함
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 Hook은 Codex 수명 주기에서 자동으로 실행되는 처리기입니다. 세션 시작, 요청 제출, 도구 호출 전후, 컨텍스트 압축, 하위 Agent 중지, 메인 스레드 종료 등의 시점에 스크립트나 MCP 도구를 실행할 수 있습니다.
@@ -33,7 +38,7 @@ Hook은 Codex 수명 주기에서 자동으로 실행되는 처리기입니다. 
 | 요청 제출 시 검사하거나 컨텍스트 추가 | `UserPromptSubmit` |
 | 메인 스레드나 하위 Agent가 한 번 더 계속하도록 요청 | `Stop` / `SubagentStop` |
 
-Hook은 샌드박스, 승인, 명령 규칙, 서버 측 권한을 대체하지 못합니다. 추가 보호 계층이며 일부 관리형 도구 경로는 로컬 도구 Hook을 거치지 않습니다.
+Hook은 샌드박스, 승인, 명령 규칙, 서버 측 권한을 대체하지 못합니다. 추가 보호 계층이며 일부 호스팅 도구 경로(Hosted tools)는 로컬 도구 Hook을 거치지 않습니다.
 
 ## 공식 출처
 

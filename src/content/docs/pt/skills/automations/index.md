@@ -1,11 +1,16 @@
 ---
-title: Tarefas agendadas
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / App para desktop; CLI e IDE apenas para preparação e testes, sem interface de gerenciamento"
+  checkedAt: "2026-08-26"
+title: tarefas agendadas
 description: Repita no ChatGPT, em horários definidos, tarefas que já foram verificadas.
 locale: pt
 source_locale: zh-CN
-source_revision: 759c38e
-translation_status: draft
+source_revision: "759c38e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Uma Scheduled task (tarefa agendada) permite que o ChatGPT repita um trabalho em segundo plano de acordo com uma programação. Ela serve para relatórios periódicos, acompanhamento contínuo e manutenção recorrente. Não equivale a um webhook genérico, a um evento do repositório ou a um sistema de CI.

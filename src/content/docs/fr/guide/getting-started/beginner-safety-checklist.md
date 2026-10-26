@@ -10,11 +10,11 @@ sidebar:
   order: 120
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 75bfe4d
+source_revision: "75bfe4d"
+reviewed_at: '2026-10-26'
 ---
-
 Avant d'utiliser Codex pour la première fois, demandez-vous : « Si une erreur survient, son coût sera-t-il trop élevé ? » Cette liste réduit les enjeux de votre premier exercice.
 
 À vérifier avant de commencer :

@@ -7,8 +7,9 @@ title: Skills
 description: Skills in Codex nutzen, schreiben, testen und pflegen.
 locale: de
 source_locale: zh-CN
-source_revision: 6f8df16
-translation_status: draft
+source_revision: "6f8df16"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
@@ -17,7 +18,7 @@ Skills kapseln stabile Methoden, Referenzmaterial, Vorlagen und Skripte als wied
 
 Ihr Nutzen besteht nicht nur darin, Codex etwas Neues beizubringen: Sie geben einem Arbeitsablauf klare Eingaben, Ausgaben, Berechtigungsgrenzen und Testmöglichkeiten.
 
-![Vom Prompt zum Team-Fähigkeitenpaket: Prompts und Vorlagen werden zu Skills, Subagenten, MCP und Hooks und gelangen per Plugin und Automation ins Team](/diagrams/codex-capability-ladder-de.svg)
+![Vom Prompt zum Team-Fähigkeitenpaket: Prompts und Vorlagen werden zu Skills, Subagenten, MCP und Hooks und werden über Plugin und Automation im Team verteilt und automatisch ausgeführt](/diagrams/codex-capability-ladder-de.svg)
 
 ## Empfohlene Reihenfolge
 

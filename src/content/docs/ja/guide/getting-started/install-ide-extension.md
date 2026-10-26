@@ -3,12 +3,17 @@ title: IDE 統合をインストールする
 description: VS Code 互換エディタ、Xcode、JetBrains IDE で Codex を有効にします。
 locale: ja
 source_locale: zh-CN
-source_revision: e8f88ec
+source_revision: 'e8f88ec'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 現在の公式 IDE クイックスタートには、VS Code、Cursor、Windsurf、VS Code Insiders と、Xcode、JetBrains の個別の統合方法が明記されています。このページでは、その二種類の経路に分けてインストール方法を説明します。
+  checkedAt: '2026-08-26'
 ---
 
 現在サポートされる IDE には、複数のインストール方法があります。
@@ -51,13 +56,3 @@ reviewed_at: 2026-08-26
 - 競合する AI 拡張またはショートカットが同時に有効になっていないか
 
 次に [IDE のローカルタスクワークフロー](/ja/guide/ide/local-task-workflow/) を学んでください。完全なサポート範囲は[対応エディタ](/ja/guide/ide/supported-editors/)を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** IDE
-
-**検証根拠：** 現在の公式 IDE クイックスタートには、VS Code、Cursor、Windsurf、VS Code Insiders と、Xcode、JetBrains の個別の統合方法が明記されています。このページでは、その二種類の経路に分けてインストール方法を説明します。
-
-**最終検証：** 2026-08-26

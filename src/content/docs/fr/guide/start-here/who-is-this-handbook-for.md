@@ -9,10 +9,11 @@ description: Comment les débutants, créateurs, développeurs et équipes peuve
 locale: fr
 source_locale: zh-CN
 source_revision: "95272c3"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 3
+reviewed_at: 2026-10-26
 ---
 
 Ce manuel s'adresse avant tout aux personnes qui commencent à utiliser Codex de manière suivie.

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page covers only general prompting methods; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Prompt basics
 description: The basic building blocks of a good prompt.
 locale: en
 source_locale: zh-CN
-source_revision: eb86b2a
+source_revision: 'eb86b2a'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 When you're new to prompting, it's easy to focus on whether your wording sounds "advanced."  
@@ -100,10 +105,3 @@ For most beginners, practicing the **recommended** version first is usually the 
 The core of a good prompt is reducing guessing, drift, and overreach.
 
 See examples in [Run your first task](/en/cases/first-task/) and [Task anatomy](/en/prompts/task-anatomy/).
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page covers only general prompting methods; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

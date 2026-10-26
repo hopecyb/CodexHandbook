@@ -3,9 +3,17 @@ title: Référence des commandes CLI
 description: Index des principales commandes et options de Codex CLI, en complément de la documentation officielle.
 locale: fr
 source_locale: zh-CN
-source_revision: 6091bcc
-translation_status: draft
+source_revision: '6091bcc'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 'Comparaison avec le tableau de maturité officiel actuel Developer commands : seuls les points d’entrée Stable sont inclus ; les options `--cd` / `-C`, de bac à sable et d’approbation ont été vérifiées. Les commandes expérimentales ou obsolètes sont exclues de cet aide-mémoire de base.'
+  checkedAt: '2026-08-26'
+sidebar:
+  order: 50
+reviewed_at: '2026-10-26'
 ---
 
 Cette référence sert surtout à choisir un point d'entrée, sans apprendre tous les paramètres par cœur :

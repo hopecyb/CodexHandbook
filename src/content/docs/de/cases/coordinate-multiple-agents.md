@@ -11,10 +11,10 @@ title: Mehrere Agents koordinieren
 description: Fallbeispiel zu paralleler Erkundung, Arbeitsteilung und Zusammenführung der Ergebnisse.
 locale: de
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: "7b143fc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -30,7 +30,7 @@ reviewed_at: 2026-08-26
 
 **Ziel:** Parallelisierbare Teilprobleme an mehrere Agents verteilen und die Schlussfolgerungen manuell zusammenführen.
 
-**Erfolgskriterien:** Jeder Subagent hat eine unabhängige Definition of Done und überschreibt nicht dieselbe Datei.
+**Erfolgskriterien:** Jeder Subagent hat eigene Abschlusskriterien; die Agents überschreiben nicht gegenseitig ihre Änderungen an derselben Datei.
 
 ## 2. Empfohlene Muster
 

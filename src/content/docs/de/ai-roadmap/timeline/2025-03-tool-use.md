@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: de
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: "efd508a"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 ## Überprüfbares Ereignis und Geltungsbereich
@@ -35,6 +36,6 @@ Das Folgende ist eine didaktische Einschätzung dieser Website, keine Messung de
 
 ## Praktische Übung
 
-[Fünf Übungen zur Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/): Stellen Sie mehrere Fehler nach, lesen Sie die Vorher-Protokolle, ändern Sie nur eine Variable und prüfen Sie dann das Nachher-Ergebnis. Die Übung verwendet lokale Skripte und erfordert keinen Aufruf der in der Ankündigung genannten APIs.
+[Fünf Übungen zur Fehlerbehebung](/de/guide/reference/troubleshooting/failure-recovery-lab/): Reproduzieren Sie einen der Fehlerfälle, lesen Sie die Vorher-Protokolle, ändern Sie nur eine Variable und prüfen Sie dann das Nachher-Ergebnis. Die Übung verwendet lokale Skripte und erfordert keinen Aufruf der in der Ankündigung genannten APIs.
 
 [Zurück zur Roadmap und den Datumsregeln](/de/ai-roadmap/)

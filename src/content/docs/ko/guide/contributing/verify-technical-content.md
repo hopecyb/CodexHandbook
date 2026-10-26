@@ -7,8 +7,8 @@ title: 기술 내용 검증
 description: 편집 상태, 출처 확인, 예제 실행을 구분하고 범위·환경·검증 근거를 기록합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: 'cfb077d'
+translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -17,6 +17,7 @@ verification:
   summary: 사이트의 새 메타데이터 필드에 맞춰 기여 규정을 수정했습니다. 여기에 언급된 모든 제품 동작을 다시 실행했다는 뜻은 아닙니다.
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 핸드북의 명령·권한·가격·제품 기능은 버전에 따라 바뀝니다. **검증**은 독자가 문서대로 했을 때 결과가 예측 가능하게 합니다.
@@ -102,7 +103,7 @@ verification:
 - 기본 전제가 쓰이지 않음
 - 제목이 약속한 범위가 본문이 실제로 검증한 범위보다 큼
 
-그래서 글면만 훑지 말고 “전체 조작 체인”으로 검증하세요.
+그래서 문구만 훑지 말고 “전체 작업 흐름”을 따라 검증하세요.
 
 ## 검증 체크리스트
 
@@ -111,7 +112,7 @@ verification:
 3. **공식 근거**: 제품 관련 사실에는 구체적인 공식 출처를 덧붙입니다. 안정적인 방법 연습에서는 실제 입력과 확인 기록을 사용하고 공식 보증을 꾸며내지 않습니다
 4. **커뮤니티 출처**: 커뮤니티 자료를 빌려도 주제 참고만, 사실은 공식 기준
 5. **날짜 갱신**: `verification.checkedAt`에는 실제 확인한 날짜만 적습니다. 옛 날짜를 일괄 갱신해 재검토한 것처럼 보이게 하지 않습니다
-6. **독립 재검토**: `verified`는 비작성자 2인 확인 권장
+6. **독립 재검토**: `verified`는 작성자 외의 다른 사람이 확인하는 것을 권장
 
 ## 검증 순서
 

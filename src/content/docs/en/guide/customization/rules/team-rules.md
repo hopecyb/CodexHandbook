@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / Cloud (depending on organization features)"
+  basis: "OpenAI’s current organization-level plugin, app, and permission materials still emphasize role access, action approval, managed configuration, and team-level control layering; this page abstracts rules policy into organization, project, and personal governance and requires rule changes to go through review and announcement—a stable governance practice summary."
+  checkedAt: "2026-07-26"
 title: Team Rules Policy
 description: Layer governance of command and path rules across organization, repo, and individual—reviewable and rollback-friendly.
 locale: en
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: 'bae8bd2'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -50,7 +55,7 @@ The point is separating organization, project, and personal layers—not making 
 
 You may add convenience on your machine, but not bypass organization or team bottom lines.
 
-Otherwise it looks like “faster locally” while planting mines for collaboration.
+Otherwise it looks like “faster locally” while creating risks for collaboration.
 
 ## Recommended Layering Model
 
@@ -89,7 +94,7 @@ Large changes (e.g. allowing outbound network) should update [Hooks audit](/en/s
 | Hooks | Complex validation, logging, compliance format |
 | CI | Merge gate; scripts aligned with local rules |
 
-Avoid three separate logics: prefer a **single source of truth** (e.g. `tools/codex-rules.json`) referenced by both CLI and CI.
+Avoid maintaining three separate sets of logic: prefer a **single source of truth** (e.g. `tools/codex-rules.json`) referenced by both CLI and CI.
 
 ## Common Mistakes
 
@@ -126,10 +131,3 @@ Usually:
 - [ ] Channel for “false block” feedback (issue template or internal form)
 
 The most important part of team rules policy is knowing who sets boundaries at which layer—then how to write the rules.
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / App / Cloud (depending on organization features)  
-**Verification basis:** OpenAI’s current organization-level plugin, app, and permission materials still emphasize role access, action approval, managed configuration, and team-level control layering; this page abstracts rules policy into organization, project, and personal governance and requires rule changes to go through review and announcement—a stable governance practice summary.  
-**Last verified:** 2026-07-26

@@ -1,13 +1,15 @@
 ---
 title: Modo interativo
-description: Conversar com o Codex no terminal e executar Tarefas.
+description: Conversar com o Codex no terminal e executar tarefas.
 locale: pt
 source_locale: zh-CN
-source_revision: 822e8f7
-translation_status: draft
+source_revision: "822e8f7"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 20
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "A documentação de introdução à CLI no OpenAI Help Center continua a tomar como fluxo base arrancar o Codex no terminal, dialogar enquanto executa tarefas e aprovar operações conforme necessário; esta página só descreve a forma básica do modo interativo e sugestões de primeiro contacto, sem depender de uma lista concreta de atalhos.", "checkedAt": "2026-07-26"}
 ---
 
 «Modo interativo» significa conversar com o Codex no terminal, num vai-e-vem: ele explica, executa e, quando preciso, espera a sua confirmação.
@@ -17,11 +19,11 @@ sidebar:
 Depois de iniciar a sessão interativa:
 
 1. Arranque no diretório do projeto (ou indique o diretório de trabalho conforme a documentação)
-2. Introduza Prompts com a mesma qualidade que na App
-3. Quando pedido, aprove / rejeite chamadas a Ferramentas
+2. Introduza prompts com a mesma qualidade que na App
+3. Quando pedido, aprove / rejeite chamadas a ferramentas
 4. Use atalhos do tipo `/` (se existirem) para gerir a sessão — conforme a ajuda atual da CLI
 
-Os métodos de Prompt continuam a aplicar-se: [Prompts](/pt/prompts/)
+Os métodos de prompt continuam a aplicar-se: [Prompts](/pt/prompts/)
 
 ## Tarefas adequadas ao modo interativo
 
@@ -38,39 +40,32 @@ Quando a tarefa estiver estável a ponto de dispensar idas e vindas, considere o
 
 ## Mal-entendidos frequentes
 
-### 1. No terminal, o Prompt pode ser mais desleixado?
+### 1. No terminal, o prompt pode ser mais desleixado?
 
 Não.
 
-A entrada mudou para o terminal, mas a qualidade da descrição da Tarefa continua tão importante.  
+A entrada mudou para o terminal, mas a qualidade da descrição da tarefa continua tão importante.
 Objetivo, limites de alcance e critérios de conclusão: quanto mais claros, mais estável.
 
 ### 2. Por que insistir em «arrancar no diretório do projeto»?
 
-Porque a CLI precisa de saber em que projeto está a trabalhar.  
+Porque a CLI precisa de saber em que projeto está a trabalhar.
 Com o diretório errado, é fácil:
 
-- Não ver os ficheiros que deveria
+- Não ver os arquivos que deveria
 - Alterar o diretório errado
 - Não ler as regras do projeto
 
-### 3. Se no terminal me pede Aprovação, está a falhar?
+### 3. Se no terminal me pede aprovação, está a falhar?
 
-Muitas vezes significa que está a trabalhar dentro dos limites de Permissão — não uma execução anómala.
+Muitas vezes significa que está a trabalhar dentro dos limites de permissão — não uma execução anómala.
 
 ## Cenário simples na primeira utilização
 
-Na primeira vez, faça uma Tarefa pequena assim:
+Na primeira vez, faça uma tarefa pequena assim:
 
 - Arranque na raiz do projeto
-- Altere só um ficheiro
+- Altere só um arquivo
 - No fim, peça-lhe para explicar o que mudou
 
-O modo interativo da CLI é um fluxo de Tarefa conversacional no terminal. O diretório tem de estar certo e o Prompt também claro.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI  
-**Base de verificação:** A documentação de introdução à CLI no OpenAI Help Center continua a tomar como fluxo base arrancar o Codex no terminal, dialogar enquanto executa Tarefas e aprovar operações conforme necessário; esta página só descreve a forma básica do modo interativo e sugestões de primeiro contacto, sem depender de uma lista concreta de atalhos.  
-**Última verificação:** 2026-07-26
+O modo interativo da CLI é um fluxo de tarefa conversacional no terminal. O diretório tem de estar certo e o prompt também claro.

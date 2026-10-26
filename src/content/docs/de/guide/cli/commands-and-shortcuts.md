@@ -5,10 +5,16 @@ sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: 2896e32
+source_revision: "2896e32"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Mit den aktuellen offiziellen Seiten zu Developer commands und zum nicht interaktiven Modus abgeglichen. Verifiziert wurden `codex`, `codex exec`, `--cd` / `-C` sowie Slash-Befehle innerhalb einer
+    Sitzung. Für Tastenkombinationen verweist die Seite weiterhin auf die aktuelle Autovervollständigung und `--help`.
+  checkedAt: '2026-08-26'
 ---
 
 Effizientes Arbeiten im Terminal beruht auf drei Bereichen: **Startmodus**, **schnelle Aktionen innerhalb einer Sitzung** und **Zusammenspiel mit Skripten und Editoren**. Diese Seite erläutert Verwendung und Arbeitsgewohnheiten. Parametertabellen findest du in der [Referenz der CLI-Befehle](/de/guide/reference/commands/) und unter [Tastenkombinationen](/de/guide/reference/keyboard-shortcuts/).
@@ -136,12 +142,3 @@ Du musst nicht sofort jeden Befehl und jede Tastenkombination auswendig lernen. 
 
 ## Quellen
 - OpenAI-Dokumentation zur Codex CLI
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zu Developer commands und zum nicht interaktiven Modus abgeglichen. Verifiziert wurden `codex`, `codex exec`, `--cd` / `-C` sowie Slash-Befehle innerhalb einer Sitzung. Für Tastenkombinationen verweist die Seite weiterhin auf die aktuelle Autovervollständigung und `--help`.
-
-**Zuletzt geprüft:** 2026-08-26

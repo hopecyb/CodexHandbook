@@ -45,7 +45,7 @@
   <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
   <text x="600" y="439" text-anchor="middle" class="note">Deliver: failing command and logs</text>
   <text x="600" y="469" text-anchor="middle" class="tiny">Independent context · inherited permissions</text>
-  <text x="600" y="491" text-anchor="middle" class="tiny">Conclusions must be reproducible</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Conclusions must be verifiable</text>
 
   <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1008" y="357" text-anchor="middle" class="label">Subagent C</text>
@@ -70,5 +70,5 @@
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">Main Agent consolidates, resolves conflicts, and verifies</text>
   <text x="600" y="721" text-anchor="middle" class="note">Compare evidence → decide edits → merge → rerun tests and build</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Subtask completion is not task completion; only reproducible evidence supports the final conclusion.</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Subtask completion is not task completion; only verifiable evidence supports the final conclusion.</text>
 </svg>

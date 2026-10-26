@@ -16,9 +16,10 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 source_revision: "4ecfa1c"
+reviewed_at: 2026-10-26
 ---
 
 Codex Dream Skin là dự án giao diện bên thứ ba cho ứng dụng máy tính. Tài liệu dự án nói rằng nó thay đổi diện mạo qua kết nối CDP cục bộ mà không sửa gói cài đặt chính thức. Đây là cách dự án mô tả; sổ tay chưa xác minh hành vi tệp, mạng hoặc độ tương thích giao diện trên mọi phiên bản.
@@ -55,7 +56,7 @@ Trên macOS, xem [hướng dẫn cài của dự án](https://github.com/Fei-Awa
 
 Dự án có chức năng quản lý ảnh nền và giao diện; tên menu tùy phiên bản. Hãy dùng ảnh bạn có quyền sử dụng và kiểm tra chế độ sáng/tối, co giãn cửa sổ và màn hình tác vụ thực tế.
 
-- Ô nhập, nút và thông tin phê duyệt còn đọc được, nhấp được và lấy nét được không?
+- Ô nhập, nút và thông tin phê duyệt còn đọc được, nhấp được và nhận tiêu điểm bàn phím được không?
 - Ảnh nền có che kết quả tìm kiếm, đầu ra dài, diff mã hoặc thông báo lỗi không?
 - Sau khi chuyển trang và khởi động lại, giao diện hiện ra có đúng lựa chọn không?
 - Sau khi tắt giao diện, màn hình gốc có trở lại và vấn đề có còn tái hiện không?
@@ -71,7 +72,7 @@ Các bước sau là cách sổ tay đề xuất nghiệm thu khôi phục, khô
 1. Lưu công việc trong client, ghi giao diện đang dùng và các tệp cần giữ.
 2. Dùng quy trình khôi phục của công cụ; giữ thông báo hoàn tất, thất bại hoặc trạng thái chưa rõ.
 3. Mở lại Codex qua lối vào thông thường, kiểm tra nền, chữ, ô nhập và điều hướng tác vụ.
-4. Xác nhận công cụ không tự khởi động hoặc bơm lại giao diện. Khi cần kiểm tra kỹ thuật, xem tiến trình và kết nối gỡ lỗi, không tùy tiện kết thúc tiến trình cùng tên.
+4. Xác nhận công cụ không tự khởi động hoặc chèn lại mã thay đổi giao diện. Khi cần kiểm tra kỹ thuật, xem tiến trình và kết nối gỡ lỗi, không tùy tiện kết thúc tiến trình cùng tên.
 5. Chỉ xóa ứng dụng sau khi nghiệm thu đạt. Giữ ảnh tùy chỉnh cho đến khi quyết định riêng là không cần nữa.
 
 Có bản sao lưu, chương trình gỡ kết thúc hoặc cửa sổ giao diện đóng đều chưa đủ chứng minh khôi phục thành công. Nếu kết quả chưa rõ, lưu nhật ký và xem Issue của dự án, không ghi 'đã khôi phục'. Đừng xóa toàn bộ thư mục cấu hình Codex để gỡ giao diện.

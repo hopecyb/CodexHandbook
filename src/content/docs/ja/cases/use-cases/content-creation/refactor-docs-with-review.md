@@ -3,13 +3,21 @@ title: レビュー付きドキュメント改修
 description: 事例——Astro/Starlight ドキュメントプロジェクトでのリンクとセクション一括更新。小さな diff とビルド検証。
 locale: ja
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: "db44ca3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+caseCategory: development
+directoryOrder: 75
+contentType: case
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: 本ハンドブックの検証済みコンテンツ成果物、EPXV、ビルド検証、事例テンプレート章と照合。複数ファイルの小さなドキュメントサイト変更、ビルド検証、失敗回復という安定したコンテンツエンジニアリング事例のみ。
+  checkedAt: '2026-07-26'
 ---
 
-本事例は **コンテンツエンジニアリング** タスク：複数 Markdown、サイドバー設定、ビルド検証。スタックは本ハンドブックに合わせていますが、パターンは任意の静的サイトに適用できます。
+本事例では、複数の Markdown ファイル、サイドバー設定、ビルド検証を扱う **コンテンツエンジニアリング** のタスクを紹介します。技術構成は本ハンドブックと似ていますが、この手順は任意の静的サイトに応用できます。
 
 ## メタデータ
 
@@ -74,9 +82,3 @@ reviewed_at: 2026-08-26
 
 ## 参考
 - 本リポジトリの実際の M2 ドキュメント反復フロー
----
-
-**状態：** verified  
-**対象製品：** CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの検証済みコンテンツ成果物、EPXV、ビルド検証、事例テンプレート章と照合。複数ファイルの小さなドキュメントサイト変更、ビルド検証、失敗回復という安定したコンテンツエンジニアリング事例のみ。

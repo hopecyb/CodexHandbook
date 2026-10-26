@@ -12,9 +12,10 @@ title: 'Fallbeispiel: Bugfix mit Verifikation'
 description: Behebe einen ausführbaren Fehler in einer Rabattberechnung anhand einer roten Reproduktion, Ursachenanalyse, minimalen Korrektur, grünen Regressionstests und einer Diff-Prüfung.
 locale: de
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: "42d842e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Dies ist keine Prompt-Vorlage, die allein durch das Austauschen von Dateinamen vollständig wird. Du arbeitest mit echtem Ausgangscode aus dem Repository, beobachtest zunächst einen fehlschlagenden Test und prüfst anschließend, wie die Referenzkorrektur dieselbe Testsuite zum Bestehen bringt.

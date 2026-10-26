@@ -3,15 +3,20 @@ title: PDF e documentos
 description: Âmbito, Ferramentas e pontos de aceitação ao pedir ao Codex para ler, resumir ou gerar documentos PDF.
 locale: pt
 source_locale: zh-CN
-source_revision: 1f4f82b
+source_revision: "1f4f82b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros, Verificar Artefatos, Contexto sensível e tratamento de imagens/ficheiros; esta página confirma só o princípio estável de «limitar o âmbito do PDF, desconfiar de erros de OCR/layout, abrir de facto após gerar».
+  checkedAt: '2026-07-26'
 ---
 
-Os PDF servem para especificações, papers, digitalizações e relatórios exportados. Ao contrário do texto puro, o PDF tem **estrutura complexa, volume grande e diff difícil** — precisa de uma forma de Tarefa própria.
+Os PDF servem para especificações, papers, digitalizações e relatórios exportados. Ao contrário do texto puro, o PDF tem **estrutura complexa, volume grande e diff difícil** — precisa de uma forma de tarefa própria.
 
 Ao entregar um PDF ao Codex, o problema mais comum é compreensão incompleta da estrutura, ou um âmbito demasiado amplo.
 
@@ -39,14 +44,14 @@ Quanto mais claro «que secção ver e que resultado quer», mais estável o efe
 
 1. **Indique o caminho do ficheiro**: `docs/spec.pdf` ou referência @ (conforme o cliente)
 2. **Diga o que quer**: resumo, comparar um capítulo, extrair dados de tabelas
-3. **Páginas ou capítulos**: em documentos longos, limite o âmbito e poupe Contexto
-4. **Conteúdo sensível**: contratos, digitalizações de documentos de identidade → fluxo de [Contexto sensível](/pt/guide/context/sensitive-context/)
+3. **Páginas ou capítulos**: em documentos longos, limite o âmbito e poupe contexto
+4. **Conteúdo sensível**: contratos, digitalizações de documentos de identidade → fluxo de [contexto sensível](/pt/guide/context/sensitive-context/)
 
 ### Limitações
 
 - PDF digitalizado pode precisar de OCR; resultados errados exigem amostragem humana
 - Layout complexo, várias colunas e notas de rodapé perdem estrutura com facilidade
-- PDF enorme: não meta o documento inteiro numa só Tarefa — processe por secções ou converta primeiro num esboço Markdown
+- PDF enorme: não meta o documento inteiro numa só tarefa — processe por secções ou converta primeiro num esboço Markdown
 
 ## Mal-entendidos habituais
 
@@ -55,7 +60,7 @@ Quanto mais claro «que secção ver e que resultado quer», mais estável o efe
 Se o PDF for longo, com estrutura complexa e páginas digitalizadas, o mais estável continua a ser:
 
 - Indicar o âmbito
-- Indicar a Tarefa
+- Indicar a tarefa
 - Processar por secções
 
 ### 2. PDF digitalizado e PDF de texto diferem muito
@@ -69,7 +74,7 @@ Ainda tem de confirmar:
 - Se abre
 - Se o texto tem caracteres estranhos
 - Se páginas, índice e tabelas estão certos
-- Se as fontes (p. ex. CJK) estão mesmo embutidas
+- Se as fontes chinesas estão mesmo embutidas
 
 ## Gerar ou atualizar PDF
 
@@ -79,10 +84,10 @@ Ainda tem de confirmar:
 | Imprimir a partir de HTML | Layout simples |
 | Geração por biblioteca (p. ex. reportlab) | Recibos, etiquetas programáticas |
 
-No Prompt declare:
+No prompt declare:
 
 - Caminho de saída e nome do ficheiro
-- Tamanho de página, idioma, requisitos de fonte (em PDF com CJK, atenção ao embedding de fontes)
+- Tamanho de página, idioma, requisitos de fonte (em PDF em chinês, atenção ao embedding de fontes)
 - Se faz commit no Git (binários grandes costumam ir para artifact ou release)
 
 ## Redação aplicável diretamente
@@ -114,10 +119,3 @@ Se OCR ou reconhecimento de layout forem incertos, marque-os explicitamente.
 - [ ] Volume do repositório e política LFS cumprem a norma da equipa
 
 Com PDF, quanto mais claro o âmbito, mais estável. Depois de gerar, não veja só se o ficheiro existe — confirme que abre e que o conteúdo está certo.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros, Verificar Artefatos, Contexto sensível e tratamento de imagens/ficheiros; esta página confirma só o princípio estável de «limitar o âmbito do PDF, desconfiar de erros de OCR/layout, abrir de facto após gerar».  
-**Última verificação:** 2026-07-26

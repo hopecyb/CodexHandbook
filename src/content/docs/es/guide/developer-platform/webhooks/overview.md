@@ -17,9 +17,10 @@ sidebar:
   order: 10
 locale: es
 source_locale: zh-CN
-source_revision: 8a84ab8
-translation_status: draft
+source_revision: "8a84ab8"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Al terminar una tarea puedes notificar a un sistema interno mediante un valor de retorno, el código de salida de un proceso, un flujo de eventos o un callback HTTP. Define primero el emisor y el protocolo; después decide si necesitas un Webhook.
@@ -32,7 +33,7 @@ Al terminar una tarea puedes notificar a un sistema interno mediante un valor de
 | Eventos de App Server | Notificaciones JSON-RPC en una conexión establecida | Hay que conectar, inicializar y procesar mensajes según el protocolo |
 | Callback de tu runner | Solicitud HTTP enviada por tu servicio | Tú defines nombres de evento, firmas, reintentos y almacenamiento |
 
-`turn/completed` de App Server es una notificación del protocolo; el estado final puede ser completado, interrumpido o fallido. Comprueba el estado y el resultado de negocio antes de iniciar un despliegue por el nombre del evento. Consulta los [eventos oficiales](https://learn.chatgpt.com/docs/app-server).
+`turn/completed` de App Server es una notificación del protocolo; el estado final puede ser completado, interrumpido o fallido. Tras recibirlo, comprueba el estado y el resultado de negocio; no inicies un despliegue basándote solo en el nombre del evento. Consulta los [eventos oficiales](https://learn.chatgpt.com/docs/app-server).
 
 Esta página no ha verificado un endpoint unificado para registrar Webhooks de Codex Cloud, una cabecera de firma ni un contrato de evento `task.completed`. Por eso no presenta URL, cabeceras ni tablas de eventos como interfaz oficial. Si un producto concreto ofrece Webhooks, intégralo según la documentación versionada de ese producto.
 
@@ -54,7 +55,7 @@ Es una recomendación de arquitectura del sitio, no una función de despliegue i
 - **Identidad e integridad:** establece cómo verifica el receptor al emisor; usa una autenticación revisada y no inventes una «cabecera oficial de firma».
 - **ID estables y deduplicación:** registra ID de tarea, ID de evento y número de intentos; un evento repetido no debe repetir el efecto externo.
 - **Estado y versión:** distingue ejecución completada, fallo, interrupción y aceptación de negocio; versiona el payload.
-- **Recepción persistente:** confirma solo después de guardar o encolar el evento de forma fiable. Un error debe permitir reintentos; no devuelvas éxito antes de perder el evento.
+- **Recepción persistente:** confirma solo después de guardar o encolar el evento de forma fiable. Un error debe permitir reintentos; no confirmes el éxito si después podrías perder el evento.
 - **Alcance de los datos:** envía únicamente el resumen y referencias seguras que el consumidor necesita; no registres credenciales.
 - **Condiciones de parada:** limita los reintentos, prevé intervención humana y una forma de cancelar acciones posteriores.
 

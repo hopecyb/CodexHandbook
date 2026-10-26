@@ -8,20 +8,20 @@ title: Utiliser un Skill
 description: Déclenchement explicite et implicite, et bien rédiger description.
 locale: fr
 source_locale: zh-CN
-source_revision: ef92b69
+source_revision: 'ef92b69'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Idée reçue : « installé = actif tout seul ». Utiliser un Skill, c'est faire suivre à Codex un **workflow prédéfini**.
 
-Déclenchement **explicite** (vous nommez) ou **implicite** (le modèle choisit). La distinction évite des heures de dépannage.
+Déclenchement **explicite** (vous nommez) ou **implicite** (le modèle choisit). Cette distinction facilite le diagnostic des problèmes de déclenchement.
 
 
 ## Modes de déclenchement
 
-1. **Explicite** : `$skill-name` (nom = `name` du frontmatter)
+1. **Explicite** : appeler `$skill-name` dans un environnement compatible ; le nom doit correspondre à `name` dans le frontmatter
 2. **Implicite** : le modèle juge si la tâche correspond à `description`
 
 ## Les distinguer
@@ -51,7 +51,7 @@ Dépend de `description` et de la ressemblance de la tâche.
 
 ### 2. Langage naturel = `$name`
 
-Pas toujours. `$name` est plus net pour forcer ; le naturel peut choisir mal ou ignorer le Skill.
+Pas toujours. `$name` exprime clairement le choix du Skill et convient à sa vérification ou à son utilisation explicite. Le langage naturel est plus pratique, mais le modèle peut choisir le mauvais Skill ou ne pas en utiliser.
 
 ### 3. Pas de déclenchement = Skill cassé
 
@@ -66,7 +66,7 @@ Vérifiez aussi si le Skill « ressemble à un outil qu'on sélectionnerait ».
 3. ajuster `description`
 4. tester le déclenchement en langage naturel
 
-Sépare « problème de contenu » et « conditions d'auto-déclenchement ».
+Cela permet de distinguer un défaut du Skill d’une condition de déclenchement automatique mal définie.
 
 ## Bien écrire description
 

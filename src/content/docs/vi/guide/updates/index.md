@@ -9,9 +9,10 @@ verification:
   summary: Tổng hợp từ nội dung kho mã và nhật ký chạy hiện tại. Đây là lịch sử thay đổi của cẩm nang, không phải thông báo sản phẩm OpenAI hay bằng chứng rằng website đã triển khai công khai.
 locale: vi
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: "3c99d35"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Trang này ghi cẩm nang đã thay đổi gì, tác vụ nào bị ảnh hưởng và đã xác minh đến đâu. Ngày tháng là ngày chuẩn bị nội dung; tình trạng xuất bản thực tế phụ thuộc vào phiên bản website bạn đang xem. Với thay đổi khả năng sản phẩm, hãy xem nguồn chính thức được dẫn trong bài hướng dẫn tương ứng.
@@ -21,7 +22,7 @@ Trang này ghi cẩm nang đã thay đổi gì, tác vụ nào bị ảnh hưở
 | Thay đổi | Ý nghĩa với người đọc | Hồ sơ xác minh |
 |---|---|---|
 | [Báo cáo doanh số hằng tuần](/vi/cases/analyze-a-spreadsheet/) có đủ đầu vào và sản phẩm | Tải 46 dòng dữ liệu tổng hợp để thực hành hoàn tiền, loại trùng và so sánh giữa các kỳ | [Kiểm tra phép tính độc lập](/downloads/sales-weekly-report/record.md) |
-| [Bài viết có nguồn](/vi/cases/write-an-article/) có bảng gắn sự thật và tài liệu mâu thuẫn | Luyện giữ lại điểm chưa biết, không coi phỏng vấn tổng hợp là lời chứng thật | [Kiểm tra nguồn và cấu trúc](/downloads/source-backed-article/validation/record.md) |
+| [Bài viết có nguồn](/vi/cases/write-an-article/) có bảng ánh xạ dữ kiện và tài liệu mâu thuẫn | Luyện giữ lại điểm chưa biết, không coi phỏng vấn tổng hợp là lời chứng thật | [Kiểm tra nguồn và cấu trúc](/downloads/source-backed-article/validation/record.md) |
 | [Bộ slide](/vi/cases/create-a-slide-deck/) có PPTX, PDF và bản xem trước tám trang | Kiểm tra văn bản chỉnh sửa được và hình thức trang; không bảo đảm tương thích mọi phần mềm | [Hồ sơ phần mềm và kết xuất](/downloads/article-to-slides/validation/record.md) |
 | [Lộ trình nhà sáng tạo](/vi/guide/learning-paths/creator/) và [lộ trình lập trình viên](/vi/guide/learning-paths/developer/) đi theo sản phẩm tạo ra | Mỗi bước có tài liệu, tiêu chí nghiệm thu và bước kế tiếp; lập trình viên có thể ghi kiểm thử đỏ rồi xanh | [Hồ sơ chạy lại cho lập trình viên](/downloads/developer-path/run-record.json) |
 | [Bốn loại Skill](/vi/skills/examples/) có gói tải xuống hoàn chỉnh | Rà soát, viết, nghiên cứu và tự động hóa đều có tài liệu tham chiếu và phép kiểm tra; mẫu kích hoạt không phải phép đo định tuyến | “Môi trường và bằng chứng xác minh” trên các trang chi tiết |
@@ -54,7 +55,7 @@ Trang chủ được tổ chức theo làm tác vụ, lộ trình vai trò, tra 
 
 ## 2026-09-18: sửa các giải thích dễ gây hiểu nhầm
 
-- Điểm vào giá đổi thành “Tham khảo giá”. Ảnh chụp có nguồn theo đồng tiền gốc được tách khỏi dữ liệu chưa biết; ước tính không còn dùng để xếp giá cao thấp toàn cầu. Trước khi mua, hãy kiểm tra giá thực tế hiển thị ở kênh bán.
+- Điểm vào giá đổi thành “Tham khảo giá”. Bản ghi giá tại một thời điểm có nguồn, theo đồng tiền gốc được tách khỏi dữ liệu chưa biết; ước tính không còn dùng để xếp giá cao thấp toàn cầu. Trước khi mua, hãy kiểm tra giá thực tế hiển thị ở kênh bán.
 - Đầu trang phân biệt trạng thái biên tập, đối chiếu nguồn, ví dụ đã chạy và ghi chú lịch sử. “Đã chạy” chỉ bao gồm script và môi trường được liệt kê, không phải tỷ lệ tin cậy của đầu ra model.
 - [Thứ tự ưu tiên chỉ dẫn](/vi/guide/context/context-priority/) phân biệt vai trò thông điệp, quy tắc tìm hướng dẫn dự án và quyền thực thi, tránh khẳng định chung rằng chỉ dẫn mới hơn hoặc nghiêm hơn luôn ưu tiên.
 - [SDK](/vi/guide/developer-platform/sdk-overview/) và [Webhook](/vi/guide/developer-platform/webhooks/overview/) phân biệt chạy cục bộ, dịch vụ tự vận hành và thiết kế callback; giao diện được đề xuất không được mô tả như hợp đồng chính thức.
@@ -72,6 +73,6 @@ Nếu không có tài khoản GitHub, hãy lưu đường dẫn trang và mô t�
 
 ## Cách người duy trì xử lý
 
-Sau khi tái hiện hoặc đối chiếu nguồn, hãy ghi lý do tiếp nhận, sửa hoặc chưa thể xác nhận. Khi thay đổi sự thật về sản phẩm, cập nhật bằng chứng tương ứng, không làm mới hàng loạt ngày xác minh của trang khác. Khi thay bài thực hành, đồng bộ tài liệu nguồn, gói tải và nội dung bài. Nếu kết luận cũ không còn đúng, giải thích tác động của cách làm cũ và các bước chuyển đổi, thay vì chỉ viết “đã tối ưu nội dung”.
+Sau khi tái hiện hoặc đối chiếu nguồn, hãy ghi lý do tiếp nhận, sửa hoặc chưa thể xác nhận. Khi thay đổi thông tin thực tế về sản phẩm, cập nhật bằng chứng tương ứng, không làm mới hàng loạt ngày xác minh của trang khác. Khi thay bài thực hành, đồng bộ tài liệu nguồn, gói tải và nội dung bài. Nếu kết luận cũ không còn đúng, giải thích tác động của cách làm cũ và các bước chuyển đổi, thay vì chỉ viết “đã tối ưu nội dung”.
 
 Khi cập nhật trang này, hãy liên kết đến trang và hồ sơ xác minh cụ thể, giữ rõ phần chưa kiểm thử. Đây là lịch sử thay đổi của cẩm nang cộng đồng, không phải nhật ký phát hành chính thức của OpenAI.

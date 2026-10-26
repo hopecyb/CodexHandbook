@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: El runtime actual de Codex sigue admitiendo directorios de Skills en el proyecto, definición mediante `SKILL.md` y prueba con invocación explícita; esta página es un ejercicio estable de primer Skill.
+  checkedAt: '2026-07-26'
 title: Crear tu primer Skill
-description: Crea desde cero un Skill pr-review enviable, con pruebas y pasos para compartirlo en el equipo.
+description: Crea desde cero un Skill pr-review que puedas incorporar al repositorio, con pruebas y pasos para compartirlo en el equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: "14414f5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Si ya sabes asignar tareas pero aún no has hecho un Skill de verdad, esta página cubre el método básico del primero.
@@ -82,7 +87,7 @@ description: Revisa el git diff; lista problemas bloqueantes, huecos de pruebas 
 Abre el repositorio en Codex e intenta:
 
 ```text
-$pr-review Por favor revisa mis cambios sin confirmar
+$pr-review Por favor revisa mis cambios aún no guardados en un commit
 ```
 
 O en lenguaje natural: «Revisa el diff según el hábito del equipo, prioriza las pruebas.»
@@ -137,7 +142,7 @@ Un Skill útil al menos debe:
 - [ ] `$pr-review` funciona y no ejecuta operaciones git peligrosas
 - [ ] La salida incluye conclusiones graduadas, no generalidades
 - [ ] `description` deja claro el escenario de activación en una frase
-- [ ] Has contrastado las necesidades de scripts con [Permisos y Sandbox](/es/guide/permissions-and-sandbox/) (este ejemplo no tiene scripts)
+- [ ] Has contrastado las necesidades de scripts con [Permisos y sandbox](/es/guide/permissions-and-sandbox/) (este ejemplo no tiene scripts)
 
 Empezar con un Skill «pequeño y estable» facilita reutilizar de forma estable un método de trabajo claro.
 
@@ -148,9 +153,3 @@ Empezar con un Skill «pequeño y estable» facilita reutilizar de forma estable
 
 ## Fuentes de referencia
 - Ejemplos oficiales de OpenAI Codex Skills y `skill-creator` (si el entorno lo ofrece)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** El runtime actual de Codex sigue admitiendo directorios de Skills en el proyecto, definición mediante `SKILL.md` y prueba con invocación explícita; esta página es un ejercicio estable de primer Skill.  
-**Última verificación:** 2026-07-26

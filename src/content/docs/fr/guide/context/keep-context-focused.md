@@ -8,11 +8,12 @@ title: Garder le contexte ciblé
 description: Délimiter la portée, ouvrir de nouveaux fils et transmettre le travail.
 locale: fr
 source_locale: zh-CN
-source_revision: "5a55fa8"
-translation_status: draft
+source_revision: '5a55fa8'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+reviewed_at: '2026-10-26'
 ---
 
 De nombreuses tâches deviennent confuses au fil des échanges parce que le contexte se disperse.
@@ -48,7 +49,7 @@ Vous avez l'impression d'apporter des précisions, tandis que Codex reçoit un o
 - Un objectif par tâche
 - Résumer régulièrement « terminé / à faire / contraintes toujours valables »
 - Utiliser des points de contrôle pour les tâches longues
-- Utiliser la [transmission et la reprise](/guide/agent-work/handoff-and-resume/) entre les sessions
+- Utiliser la [transmission et la reprise](/fr/guide/agent-work/handoff-and-resume/) entre les sessions
 
 ## Signes qu'il faut recentrer
 

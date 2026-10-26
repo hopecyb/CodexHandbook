@@ -3,17 +3,22 @@ title: codex exec
 description: 非対話実行入口——スクリプトと CI で単発タスクを一括投入。
 locale: ja
 source_locale: zh-CN
-source_revision: 6d7c481
+source_revision: "6d7c481"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現在の公式 Non-interactive mode と Developer commands を照合し、`codex exec` が Stable であること、`--cd` / `-C`、デフォルトの読み取り専用サンドボックス、`workspace-write`、JSONL と schema の出力方法を確認済みです。
+  checkedAt: '2026-08-26'
 ---
 
-対話型 `codex` が話しながら作業するなら、**`codex exec`** はタスクを一度渡して走らせ、終了時に結果または失敗状態を返すに近いです。
+対話型 `codex` が話しながら作業するなら、**`codex exec`** はタスクを一度渡して走らせ、終了時に結果または失敗状態を返す使い方に近いです。
 
-[非対話モード](/ja/guide/cli/non-interactive-mode/) の核心：往復チャットなし、途中澄清なし。プロセス終了で結果または失敗。本章は [開発者プラットフォーム](/ja/guide/developer-platform/) 統合者向け。Codex を初めてスクリプトや CI に接続する読者にも適します。
+[非対話モード](/ja/guide/cli/non-interactive-mode/) の核心：往復チャットなし、途中での確認なし。プロセス終了で結果または失敗。本章は [開発者プラットフォーム](/ja/guide/developer-platform/) 統合者向け。Codex を初めてスクリプトや CI に接続する読者にも適します。
 
 ## 本ページの内容
 
@@ -33,7 +38,7 @@ reviewed_at: 2026-08-26
 向くシーン：
 
 - タスク境界が固定
-- 途中で往復澄清が不要
+- 途中で繰り返し確認する必要がない
 - 今後も安定して反復実行したい
 
 ## なぜ存在するか
@@ -57,7 +62,7 @@ CI で Codex とチャットしたり、十回止まって聞かれることは�
 
 ```bash
 cd /path/to/repo
-codex exec --cd . "読み取り専用：現在ブランチと main の diff を比較し、最高リスク3件を列挙。ファイルは変更しない"
+codex exec --cd . "読み取り専用：現在ブランチと main の diff を比較し、セキュリティ上のリスクが最も高い 3 件を列挙。ファイルは変更しない"
 ```
 
 デフォルトでは読み取り専用サンドボックスで実行されます。ワークスペースへの書き込みを許可する場合は、明示的に次のように指定します。
@@ -71,7 +76,7 @@ codex exec --cd . --sandbox workspace-write "失敗しているテストを修�
 原則：
 
 - Shell スクリプトでは先にクリーン worktree へ `cd`
-- Prompt はバージョン庫 `prompts/` または heredoc。shell エスケープエラーを避ける
+- Prompt はリポジトリ内の `prompts/` または heredoc。shell エスケープエラーを避ける
 - CI では**終了コード**で成否判定
 
 ## 見落とされがちな現実
@@ -95,7 +100,7 @@ codex exec --cd . --sandbox workspace-write "失敗しているテストを修�
 
 ### 短い＝明確ではない
 
-対話では曖昧でも後から補足できます。`exec` で境界、制限、成功基準を省いた短い prompt は、洗練ではなく失控の原因になりがちです。
+対話では曖昧でも後から補足できます。`exec` で境界、制限、成功基準を省いた短い prompt は、洗練ではなく制御が効かなくなる原因になりがちです。
 
 ## 推奨ワークフロー
 
@@ -120,7 +125,7 @@ codex exec --cd . --sandbox workspace-write "失敗しているテストを修�
 
 | | `codex` 対話 | `codex exec` |
 |---|---|---|
-| 澄清 | 複数ラウンド可 | 一度で言い切る必要 |
+| 要件の確認 | 複数ラウンド可 | 一度で言い切る必要 |
 | 承認 | 人が同席 | 事前に方針を厳格化 |
 | 向く用途 | 学習、探索 | CI、cron |
 
@@ -134,15 +139,15 @@ codex exec --cd . --sandbox workspace-write "失敗しているテストを修�
 ## よくあるミス
 
 - 長いチャット履歴を単発 exec に詰める
-- CI で書き込み権限 token と未消毒 PR 本文を含む prompt
+- CI で書き込み権限 token と未処理の PR 本文を含む prompt
 - CLI バージョン未固定でパイプラインが突然失敗
 - 非ゼロ終了コードを無視して green 表示
 - 人間判断が必要な複雑タスクを無人に押し込む
 
 ## セキュリティ境界
 
-- 無人運用＝[人工承認](/ja/cases/workflows/human-approval-patterns/) が弱まる。デフォルト読み取り専用
-- [セキュリティ資格情報](/ja/guide/developer-platform/ci-cd/code-review-automation/#安全凭证)（同章相互参照）
+- 無人運用＝[人による承認](/ja/cases/workflows/human-approval-patterns/) が弱まる。デフォルト読み取り専用
+- [セキュリティ資格情報](/ja/guide/developer-platform/ci-cd/code-review-automation/#権限とセキュリティ)（同章相互参照）
 
 ## 受け入れチェックリスト
 
@@ -159,12 +164,3 @@ codex exec --cd . --sandbox workspace-write "失敗しているテストを修�
 
 ## 参考
 - OpenAI Codex CLI ドキュメント
----
-
-**状態：** verified
-
-**対象製品：** CLI
-
-**検証根拠：** 現在の公式 Non-interactive mode と Developer commands を照合し、`codex exec` が Stable であること、`--cd` / `-C`、デフォルトの読み取り専用サンドボックス、`workspace-write`、JSONL と schema の出力方法を確認済みです。
-
-**最終検証：** 2026-08-26

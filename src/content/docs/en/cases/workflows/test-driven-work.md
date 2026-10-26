@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "Cross-checked against this handbook's verified run tests, define done, fix-a-bug-with-verification, and command rules chapters; this page focuses on the stable test pattern of fail first, minimal implementation to pass."
+  checkedAt: "2026-07-26"
 title: Test-driven work
 description: Define or add failing tests first, then drive implementation—objective acceptance for Codex changes.
 locale: en
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: '4eb568d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-**Test-driven work** (TDD or "tests first") means making tests fail first, then minimal implementation to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Test-driven work** (TDD or "tests first") means making tests fail first, then writing the minimum implementation needed to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## What's covered
 
@@ -22,7 +27,7 @@ reviewed_at: 2026-08-26
 - Repos with unit/integration tests
 - Regression bugs, API behavior changes, refactors
 
-Poor fits: prototypes without tests, one-off copy on marketing sites. Use [EPXV](/en/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
+Poor fits: prototypes without tests, one-off edits on text-only sites. Use [EPXV](/en/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
 
 ## Minimum viable approach
 
@@ -73,10 +78,3 @@ Combine with [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing
 
 - [Run tests](/en/guide/quality/run-tests/)
 - [Case: Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified run tests, define done, fix-a-bug-with-verification, and command rules chapters; this page focuses on the stable test pattern of fail first, minimal implementation to pass.

@@ -1,22 +1,29 @@
 ---
 title: Computer Use
-description: Contrôle GUI avancé via écran et périphériques d'entrée — cas d'usage, risques et Approbations.
+description: Contrôle GUI avancé via écran et périphériques d'entrée — cas d'usage, risques et approbations.
 locale: fr
 source_locale: zh-CN
-source_revision: d4a2e11
+source_revision: "d4a2e11"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / Codex (selon version, région et permission)
+  basis: Les matériaux du centre d'aide OpenAI sur les plans Codex et capacités bureau listent encore Computer Use ; les notes de version Business confirment Codex Computer Use sur Windows à partir du 2026-05-29. Cette page résume modèle de risque, cas d'usage et limites d'approbation — sans prétendre à une disponibilité par défaut universelle.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 50
 ---
 
-**Computer Use** permet à l'Agent de voir l'écran, déplacer le pointeur et taper — au-delà du navigateur ou du terminal seul. Capacité la plus puissante ; **risque et exigences d'Approbation les plus élevés**.
+**Computer Use** permet à l'Agent de voir l'écran, déplacer le pointeur et taper — au-delà du navigateur ou du terminal seul. Capacité la plus puissante ; **risque et exigences d'approbation les plus élevés**.
 
 Computer Use opère au niveau écran, souris et clavier — différent des outils navigateur et terminal — activez-le avec prudence.
 
 ## Ce qui est couvert
 
 - Comment Computer Use diffère du navigateur et du terminal
-- Tâches pour lesquelles ça vaut la peine de l'activer
+- tâches pour lesquelles ça vaut la peine de l'activer
 - Garde-fous pour individus et équipes
 
 ## Limites de capacité
@@ -39,9 +46,9 @@ La surface d'interface et d'information qu'il peut toucher est donc généraleme
 
 Bon pour :
 
-- Flux de clics répétitifs dans un logiciel de démo sans API (sous supervision)
+- Flux de clics répétitifs dans un logiciel de présentation sans API (sous supervision)
 - Copier des données entre apps (si conforme)
-- Vérifier le comportement de l'App de bureau elle-même
+- vérifier le comportement de l'App de bureau elle-même
 
 Mauvais cas :
 
@@ -55,7 +62,7 @@ Mauvais cas :
 
 Ça vaut surtout quand :
 
-- La Tâche implique vraiment une GUI bureau
+- La tâche implique vraiment une GUI bureau
 - Aucun outil plus léger et sûr ne peut faire le travail
 
 ### 2. Regarder signifie faible risque ?
@@ -64,11 +71,11 @@ La présence humaine aide, mais vous pouvez encore :
 
 - Mal cliquer sur des dialogues de confirmation
 - Ouvrir des fenêtres qui devraient rester fermées
-- Tirer des infos sensibles à l'écran dans le flux de travail
+- Introduire dans le travail des informations sensibles visibles à l’écran
 
 ### 3. Remplace toute l'automatisation GUI ?
 
-Mieux pour aide ad hoc, vérification de flux et étapes GUI sans API — pas pour automatisation de production stable longue durée sans surveillance.
+Il convient davantage à une aide ponctuelle, à la vérification d’un processus et aux étapes graphiques sans API qu’à une automatisation de production stable, durable et sans surveillance.
 
 ## Modèle de risque
 
@@ -78,7 +85,7 @@ Computer Use est proche de **confier clavier et souris à l'Agent** :
 - Peut mal cliquer sur des dialogues de confirmation
 - L'écran peut montrer des notifications sensibles
 
-Lecture obligatoire : [permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
+Lecture obligatoire : [permissions et approbations](/fr/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ## Quand l'envisager
 
@@ -98,10 +105,10 @@ Envisagez quand vous devez :
 ## Usage recommandé
 
 1. **Environnement dédié** : VM ou utilisateur secondaire ; pas de fenêtres privées à l'écran
-2. **Minimiser la Tâche** : « Vérifier la formule dans Calculatrice » pas « gérer tout mon mail »
-3. **Humain dans la boucle** : rester visible ; prêt à interrompre
+2. **Minimiser la tâche** : « vérifier la formule dans Calculatrice » pas « gérer tout mon mail »
+3. **Supervision humaine** : garder l’exécution visible et se tenir prêt à l’interrompre
 4. **Enregistrements/logs** : rétrospectives d'équipe (les enregistrements peuvent contenir des données sensibles)
-5. **Contrôle post-Tâche** : système de fichiers, presse-papiers, applications ouvertes
+5. **Contrôle post-tâche** : système de fichiers, presse-papiers, applications ouvertes
 
 L'entreprise peut désactiver par défaut — suivez la politique gérée.
 
@@ -115,7 +122,7 @@ Seulement code et tests ?                → terminal + outils fichier
 
 Voir [sélection d'outils](/fr/guide/tools/tool-selection/)
 
-## Exemple de Prompt
+## Exemple de prompt
 
 ```text
 N'opérer que Calculatrice et l'app de test locale. Ne pas ouvrir mail, chat, gestionnaire de fichiers ou toute interface admin de production.
@@ -131,13 +138,6 @@ Si une confirmation système apparaît, arrêter et expliquer avant de continuer
 ## Liste de contrôle d'acceptation
 
 - [ ] Activé seulement dans un environnement isolé
-- [ ] Le Prompt liste apps autorisées et interdictions
-- [ ] Contrôle post-Tâche : pas de fichiers/réseau inattendus
+- [ ] Le prompt liste apps autorisées et interdictions
+- [ ] Contrôle post-tâche : pas de fichiers/réseau inattendus
 - [ ] La politique d'org autorise la capacité
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / Codex (selon version, région et permission)  
-**Base de vérification :** Les matériaux du centre d'aide OpenAI sur les plans Codex et capacités bureau listent encore Computer Use ; les notes de version Business confirment Codex Computer Use sur Windows à partir du 2026-05-29. Cette page résume modèle de risque, cas d'usage et limites d'Approbation — sans prétendre à une disponibilité par défaut universelle.  
-**Dernière vérification :** 2026-07-26

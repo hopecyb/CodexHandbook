@@ -1,25 +1,30 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud (conforme a versão)"
+  basis: "Revista com materiais oficiais OpenAI de geração e edição de imagens quanto a cenários, redação de Prompts e limites de aceitação; o corpo mantém a conclusão conservadora «rascunho primeiro; Artefato formal precisa de revisão»."
+  checkedAt: "2026-07-26"
 title: Geração de imagens
-description: Gerar ou editar imagens em Tarefas Codex — Prompt, formato e aceitação.
+description: Gerar ou editar imagens em tarefas Codex — Prompt, formato e aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: ea275fa
+source_revision: "ea275fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
 
-Em alguns cenários, o Codex pode chamar capacidades de **geração de imagens**: ilustrações, rascunhos de ícones, conceitos de UI, diagramas. O resultado deve tratar-se como **Artefato por aceitar**, não como ativo de marca pronto a publicar.
+Em alguns cenários, o Codex pode chamar capacidades de **geração de imagens**: ilustrações, rascunhos de ícones, conceitos de UI, diagramas. O resultado deve tratar-se como **artefato a verificar antes da aceitação**, não como ativo de marca pronto a publicar.
 
 Serve para dar primeiro um rascunho visual — não para tratar como produto final direto.
 
 ## Conteúdo desta página
 
-- Quando gerar imagens no Codex vs usar Ferramentas profissionais
+- Quando gerar imagens no Codex vs usar ferramentas profissionais
 - Como escrever o Prompt de imagem e as restrições
-- Direitos de autor, marca e gestão de ficheiros
+- Direitos de autor, marca e gestão de arquivos
 
 ## Cenários adequados
 
@@ -49,7 +54,7 @@ Estes usos não devem ir direto para o resultado gerado:
 
 1. Declare uso, proporção de tamanho, palavras-chave de estilo (evite empilhar nomes de estilos que violem direitos)
 2. Exija formato de saída (PNG/SVG se suportado) e caminho de gravação
-3. Após gerar, [Verificar Artefatos](/pt/guide/quality/verify-artifacts/): abrir o ficheiro, verificar resolução e legibilidade
+3. Após gerar, [Verificar artefatos](/pt/guide/quality/verify-artifacts/): abrir o arquivo, verificar resolução e legibilidade
 4. Antes de publicação externa, revisão de design ou jurídica
 
 ## Mal-entendidos habituais
@@ -65,22 +70,22 @@ Ainda veja:
 
 ### 2. Basta «gere-me uma imagem»?
 
-Muitas vezes não.  
+Muitas vezes não.
 Clarifique pelo menos:
 
 - Uso
 - Formato ou proporção
 - Direção de estilo
 - Se deve haver texto
-- Formato do ficheiro
+- Formato do arquivo
 
 ### 3. A geração de imagens substitui o designer?
 
 Aproxima-se mais de:
 
-- Ferramenta de exploração inicial
-- Ferramenta de imagem de apoio a conteúdo
-- Ferramenta de esboço conceptual
+- ferramenta de exploração inicial
+- ferramenta de imagem de apoio a conteúdo
+- ferramenta de esboço conceptual
 
 Não é substituto de entrega rigorosa de design.
 
@@ -94,7 +99,7 @@ Pode pedir nesta estrutura:
 4. Se deve aparecer texto
 5. Como vai verificar após a saída
 
-## Ficheiros e repositório
+## Arquivos e repositório
 
 - Imagens grandes em `assets/` ou CDN; avalie o volume do Git
 - No PR, indique o Prompt de geração e a versão do modelo (auditoria interna)
@@ -114,11 +119,4 @@ Pode pedir nesta estrutura:
 - Usar imagem gerada como se fosse foto real ou logo oficial
 - Não restringir «sem texto» no Prompt → legendas ilegíveis
 
-A geração de imagens serve melhor para direção e rascunhos; na entrega externa, continue a aceitar com o padrão de Artefato formal.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / Cloud (conforme a versão)  
-**Base de verificação:** Revista com materiais oficiais OpenAI de geração e edição de imagens quanto a cenários, redação de Prompts e limites de aceitação; o corpo mantém a conclusão conservadora «rascunho primeiro; Artefato formal precisa de revisão».  
-**Última verificação:** 2026-07-26
+A geração de imagens serve melhor para direção e rascunhos; na entrega externa, verifique o resultado segundo os critérios de um artefato final.

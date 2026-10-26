@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  checkedAt: "2026-08-26"
 title: Berechtigungsmatrix
 description: Unterscheide lokale Permission Profiles, alte Sandbox-Einstellungen und Cloud-Netzwerkrichtlinien.
 sidebar:
   order: 70
 locale: de
 source_locale: zh-CN
-source_revision: c6ad6aa
+source_revision: "c6ad6aa"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Versuche Berechtigungen nicht mit einer starren Tabelle vorherzusagen, die nur fragt, ob App, CLI, IDE oder Cloud einen Dialog anzeigen. Das tatsächliche Verhalten hängt gemeinsam von Ausführungsort, wirksamer Konfiguration, Organisationsanforderungen, Betriebssystem und konkreter Aktion ab.
@@ -90,11 +94,3 @@ Permission Profiles befinden sich weiterhin in der Beta-Phase. Führe diese Veri
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App, CLI, IDE, Cloud
-
-**Zuletzt geprüft:** 2026-08-26

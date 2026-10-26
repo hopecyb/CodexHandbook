@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích thực thi terminal có năng lực hành động và rủi ro cao hơn so với sửa tệp, nhấn mạnh hiểu lệnh trước phê duyệt, xác nhận phạm vi ghi, mạng và cách khôi phục; nguyên tắc liên quan đã đối chiếu chéo với các chương quyền, kiểm chứng và công cụ nội bộ."
+  checkedAt: "2026-07-26"
 title: Shell và terminal
 description: Năng lực và rủi ro khi thực thi lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: 1438fc7
+source_revision: "1438fc7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -79,7 +84,7 @@ Ban đầu không cần viết được nhiều lệnh, nhưng ít nhất phải
 
 ### 2. Chỉ cần là lệnh kiểm thử là chắc an toàn?
 
-Không thể nghĩ vậy.  
+Không thể nghĩ vậy.
 Hầu hết lệnh kiểm thử rủi ro thấp, nhưng vẫn phải xem:
 
 - Có ghi nhiều tệp không
@@ -103,10 +108,3 @@ Trước khi chạy lệnh hãy nói rõ mục đích, có ghi tệp không, có
 ```
 
 Trước khi chạy, xác nhận lệnh này sẽ thay đổi chỗ nào.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ giải thích thực thi terminal có năng lực hành động và rủi ro cao hơn so với sửa tệp, nhấn mạnh hiểu lệnh trước phê duyệt, xác nhận phạm vi ghi, mạng và cách khôi phục; nguyên tắc liên quan đã đối chiếu chéo với các chương quyền, kiểm chứng và công cụ nội bộ.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -3,12 +3,17 @@ title: 스크립트와 파이프라인
 description: shell, Makefile, GitHub Actions에서 codex exec를 오케스트레이션합니다——반복 가능하고 감사 가능합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: '07aeb4f'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / GitHub Actions
+  basis: 현재 공식 Non-interactive mode와 Codex GitHub Action 권장 사항을 대조해 `--cd`를 수정하고, API key가 있는 job과 저장소 쓰기 권한을 분리하는 것을 기본 보안 경계로 삼았습니다.
+  checkedAt: '2026-08-26'
 ---
 
 여기서는 Codex를 일회성 임시 조작에서, **팀이 반복 실행하고, 문제 나면 추적하고, 다른 사람도 인수할 수 있는** 자동화 단계로 바꾸는 법을 다룹니다.
@@ -63,14 +68,14 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 `prompts/ci/security-review.md`를 Git에 넣고, 변경은 review를 탑니다.
 
 ## 먼저 들이면 좋은 습관
 
-처음 자동화할 때는 “크고 완전한” 것을 쫓하지 말고, 다음 세 가지를 먼저 고정하세요.
+처음 자동화할 때는 “크고 완전한” 것을 추구하지 말고, 다음 세 가지를 먼저 고정하세요.
 
 1. 프롬프트 파일을 어디에 둘지
 2. 입구 스크립트 이름
@@ -78,7 +83,7 @@ codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 
 이후 로그, schema, 알림을 추가하기가 훨씬 수월합니다.
 
-## GitHub Actions 예시
+## GitHub Actions: 공식 Action 사용
 
 ```yaml
 jobs:
@@ -86,24 +91,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # 버전을 고정하세요. 공식 설치 문서 기준
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-예시의 설치 방식과 권한 scope는 조직 보안 요구에 맞게 조정하세요. workflow에서 키를 echo하지 **마세요**.
+GitHub Actions에서는 공식 `openai/codex-action`을 우선 사용하세요. 저장소 코드를 실행하는 전체 job의 환경 변수로 API key를 설정하지 마세요. 나중에 PR에 쓰기가 필요하면 쓰기 권한과 key를 서로 다른 job에 두고 패치 artifact로 결과를 전달하세요.
 :::
 
 ## 권장 워크플로
@@ -147,9 +147,3 @@ jobs:
 
 ## 참고 출처
 - OpenAI Codex + GitHub 통합 문서
----
-
-**상태：** outdated  
-**적용 제품：** CLI  
-**재검토 설명：** “프롬프트·스크립트·파이프라인을 Git 리뷰에 넣는다”는 원칙은 여전히 유효하지만, 예시가 `codex exec`, CLI 설치 방식, GitHub Actions 구체 연결에 의존하며 이는 변동이 큰 구현 세부입니다. 현행 공식 파이프라인 문서를 보강한 뒤 `verified`로 되돌리세요.  
-**최근 검증：** 2026-07-26

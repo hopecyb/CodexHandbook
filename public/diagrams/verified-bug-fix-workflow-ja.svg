@@ -36,13 +36,13 @@
   <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="300" y="235" text-anchor="middle" class="label">2. 根本原因を特定</text>
   <text x="300" y="261" text-anchor="middle" class="note">実装とテストを読む</text>
-  <text x="300" y="283" text-anchor="middle" class="note">隣接する仮説を除外</text>
+  <text x="300" y="283" text-anchor="middle" class="note">関連する別の仮説を除外</text>
   <text x="300" y="304" text-anchor="middle" class="tiny">コードを変えず、先に説明</text>
 
   <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="488" y="235" text-anchor="middle" class="label">3. 最小修正</text>
   <text x="488" y="261" text-anchor="middle" class="note">根本原因の経路だけ変更</text>
-  <text x="488" y="283" text-anchor="middle" class="note">公開動作を維持</text>
+  <text x="488" y="283" text-anchor="middle" class="note">外部から見える動作を維持</text>
   <text x="488" y="304" text-anchor="middle" class="tiny">ついでのリファクタリングはしない</text>
 
   <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>

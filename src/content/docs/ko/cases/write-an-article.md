@@ -36,12 +36,13 @@ next:
   label: 글을 발표 자료로 만들기
 locale: ko
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: "e2bb5ea"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
-이 실습의 목표는 모든 주요 사실을 자료로 되짚을 수 있는 짧은 중국어 글이다. 서로 모순되는 설명을 다루고 자료의 뒷받침, 작성자의 추론, 미확인 문제를 구분한 뒤 오류가 뚜렷한 설계 초안을 고친다.
+이 실습의 목표는 모든 주요 사실을 자료로 되짚을 수 있는 짧은 중국어 글이다. 서로 모순되는 설명을 다루고 자료의 뒷받침, 작성자의 추론, 미확인 문제를 구분한 뒤 오류가 뚜렷한 의도적으로 오류를 넣은 초안을 고친다.
 
 난이도는 입문이다. 예상 45~60분은 편집상 추정이며 독자 시간 측정은 아직 하지 않았다. Codex에 로컬 파일을 제공하고 Markdown을 읽을 수 있어야 한다. 선택적인 구조 검증에는 Python 3.10+가 필요하다.
 
@@ -59,7 +60,7 @@ translated_at: '2026-09-20'
 | `article.md` | 사실 ID가 달린 중국어 글 |
 | `claim-map.csv` | 주요 사실·조언 일곱 개, 출처 ID와 절, 증거 유형 |
 | `unresolved.md` | 자료로 답할 수 없는 문제 보존 |
-| `revision.diff` | 설계 초안과 최종 글 사이의 실제 텍스트 차이 |
+| `revision.diff` | 의도적으로 오류를 넣은 초안과 최종 글 사이의 실제 텍스트 차이 |
 
 [참고 글 보기](/downloads/source-backed-article/solution/article.md) · [사실 대응표 보기](/downloads/source-backed-article/solution/claim-map.csv)
 
@@ -100,7 +101,7 @@ claim_id,article_section,claim,source_id,locator,evidence_type,confidence_note
 |---|---|---|
 | “PDF와 여러 이미지를 지원” | Markdown과 일반 텍스트로 제한 | P1이 입력 범위를 명시 |
 | “완전 오프라인, 진단 기본 꺼짐” | 충돌을 병기하고 미확인으로 남김 | P3/C2가 반대이며 업로드 항목도 불명 |
-| “小林이 정확도와 시간 절약을 증명” | 합성 신분을 유지하고 효과 수치를 쓰지 않음 | I3에는 시간 측정이나 고정 평가 표본이 없음 |
+| “小林이 정확도와 시간 절약을 증명” | 가상 인물이라는 표시을 유지하고 효과 수치를 쓰지 않음 | I3에는 시간 측정이나 고정 평가 표본이 없음 |
 | “만능 도구로 쉽게 생산성 향상” | 구체적인 입력, 행동, 검사를 작성 | 새 사실 없이 과장 제거 |
 
 [수정 diff](/downloads/source-backed-article/solution/revision.diff)와 [수정 설명](/downloads/source-backed-article/solution/revision-notes.md)을 본다. 잘못된 기능을 남겨둔 채 말투만 다듬으면 완료가 아니다.
@@ -128,6 +129,6 @@ python3 validation/check.py --output my-output
 
 ## 완료 조건
 
-주요 사실의 위치를 찾을 수 있고 작성자 조언을 따로 표시하며 충돌과 누락이 보이고 합성 신분을 유지한다. 결과물은 로컬에 두고 자동 게시하지 않는다.
+주요 사실의 위치를 찾을 수 있고 작성자 조언을 따로 표시하며 충돌과 누락이 보이고 가상 인물이라는 표시을 유지한다. 결과물은 로컬에 두고 자동 게시하지 않는다.
 
 최종 글로 [편집 가능한 8장 발표 자료 만들기](/ko/cases/create-a-slide-deck/)를 이어 한다. 발표 패키지에는 독립 입력, PPTX, PDF, 미리보기 8장, 검증 기록이 있다. 연속 학습이라면 자신이 완성하고 확인한 글을 우선 사용한다.

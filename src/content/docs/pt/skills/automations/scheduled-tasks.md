@@ -7,9 +7,10 @@ title: Guia completo de tarefas agendadas
 description: Escolher tarefas independentes ou dentro de uma conversa e configurar projeto local, worktree, permissões, prompt e revisão.
 locale: pt
 source_locale: zh-CN
-source_revision: fa792dc
-translation_status: draft
+source_revision: "fa792dc"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 A parte realmente difícil de uma tarefa agendada não é escolher a hora. É garantir que cada execução sem supervisão tem dados de entrada estáveis, permissões restritas, resultados fáceis de rever e condições de paragem.
@@ -20,14 +21,14 @@ A parte realmente difícil de uma tarefa agendada não é escolher a hora. É ga
 
 - Pessoas que querem produzir relatórios diários ou semanais, verificar documentos ou acompanhar PR.
 - Programadores que precisam de executar manutenção periódica num projeto local ou num worktree isolado.
-- Responsáveis que avaliam permissões, tratamento de falhas e Skills partilhados pela equipa.
+- Responsáveis que avaliam permissões, tratamento de falhas e Skills partilhados pela equipe.
 
 ## Limites de suporte
 
 | Ambiente | O que permite fazer | Limite principal |
 |---|---|---|
-| ChatGPT Web | Criar e gerir tarefas, consultar execuções; usar ficheiros carregados, ferramentas ligadas, Skills e Plugins | Não acede diretamente a pastas do computador local |
-| Aplicação de ambiente de trabalho ChatGPT | Criar e gerir tarefas; escolher um projeto local ou Git worktree | Tarefas com ficheiros locais exigem computador ligado, aplicação em execução e projeto existente |
+| ChatGPT Web | Criar e gerir tarefas, consultar execuções; usar arquivos carregados, ferramentas ligadas, Skills e Plugins | Não acede diretamente a pastas do computador local |
+| Aplicação de ambiente de trabalho ChatGPT | Criar e gerir tarefas; escolher um projeto local ou Git worktree | tarefas com arquivos locais exigem computador ligado, aplicação em execução e projeto existente |
 | Codex CLI | Preparar e testar manualmente prompts, Skills e scripts | Não tem interface de gestão Scheduled |
 | Extensão IDE | Verificar comandos e alterações no workspace | Não tem interface de gestão Scheduled |
 
@@ -47,16 +48,16 @@ Critério de escolha: se cada execução deve «começar de novo», escolha uma 
 
 ### Executar na Web
 
-Coloque as instruções duradouras no prompt da tarefa ou num Skill e disponibilize o material necessário em ficheiros carregados, num Project ou em serviços ligados. Não escreva «ler latest.csv no meu ambiente de trabalho»: a Web não acede diretamente a caminhos locais.
+Coloque as instruções duradouras no prompt da tarefa ou num Skill e disponibilize o material necessário em arquivos carregados, num Project ou em serviços ligados. Não escreva «ler latest.csv no meu ambiente de trabalho»: a Web não acede diretamente a caminhos locais.
 
 ### Usar um projeto local na aplicação de ambiente de trabalho
 
 Num repositório Git, pode escolher:
 
-- **Projeto local**: trabalha diretamente no checkout principal e pode tocar em ficheiros que está a editar.
-- **Worktree dedicado**: isola as alterações em segundo plano do trabalho ainda por concluir; é adequado para tarefas que modificam ficheiros.
+- **Projeto local**: trabalha diretamente no checkout principal e pode tocar em arquivos que está a editar.
+- **Worktree dedicado**: isola as alterações em segundo plano do trabalho ainda por concluir; é adequado para tarefas que modificam arquivos.
 
-Projetos que não usam Git são executados diretamente na pasta do projeto. Tarefas frequentes em worktrees podem acumular árvores de trabalho. Arquive execuções que já não são necessárias para evitar manter muitos worktrees sem intenção.
+Projetos que não usam Git são executados diretamente na pasta do projeto. tarefas frequentes em worktrees podem acumular árvores de trabalho. Arquive execuções que já não são necessárias para evitar manter muitos worktrees sem intenção.
 
 ## 3. Verificar primeiro manualmente
 
@@ -90,18 +91,18 @@ Em cada execução:
 Condição de conclusão: termine esta execução após produzir um relatório passível de revisão; não repita a tentativa.
 ```
 
-O prompt explicita horário, projeto, âmbito de leitura, comando, caminhos de sucesso e falha, ações proibidas e condição de saída. O agendamento apenas volta a iniciar a tarefa; não substitui a sua descrição.
+O prompt explicita horário, projeto, escopo de leitura, comando, caminhos de sucesso e falha, ações proibidas e condição de saída. O agendamento apenas volta a iniciar a tarefa; não substitui a sua descrição.
 
-## 5. Permissões e revisão humana
+## 5. permissões e revisão humana
 
 As tarefas agendadas correm sem supervisão e usam as definições predefinidas do sandbox.
 
 | Modo de sandbox | Resultado habitual |
 |---|---|
-| read-only | Falham as chamadas para modificar ficheiros, aceder à rede ou controlar aplicações locais |
-| workspace-write | Pode escrever no workspace; por predefinição falham a escrita fora dele, o acesso à rede e o controlo de aplicações |
+| read-only | Falham as chamadas para modificar arquivos, aceder à rede ou controlar aplicações locais |
+| workspace-write | Pode escrever no workspace; por padrão falham a escrita fora dele, o acesso à rede e o controle de aplicações |
 
-Comece com as permissões mais restritas que permitem concluir a tarefa. Se precisar de rede ou de acesso mais amplo a ficheiros, defina uma allowlist explícita. Não atribua permissões elevadas a toda a tarefa apenas para eliminar uma falha.
+Comece com as permissões mais restritas que permitem concluir a tarefa. Se precisar de rede ou de acesso mais amplo a arquivos, defina uma allowlist explícita. Não atribua permissões elevadas a toda a tarefa apenas para eliminar uma falha.
 
 Convém manter revisão humana para:
 
@@ -109,14 +110,14 @@ Convém manter revisão humana para:
 - alterar o estado de produção;
 - juntar PR ou fazer push para o branch principal;
 - eliminar ou migrar em massa, ou alterar permissões;
-- diff fora do âmbito esperado ou testes falhados.
+- diff fora do escopo esperado ou testes falhados.
 
 ## 6. Definir «sem alterações», falha e paragem
 
 Uma tarefa duradoura deve definir três percursos:
 
 1. **Há resultados**: apresenta provas, gravidade e próximo passo.
-2. **Sem alterações**: comunica resumidamente o âmbito da verificação sem inventar problemas.
+2. **Sem alterações**: comunica resumidamente o escopo da verificação sem inventar problemas.
 3. **Não é possível concluir**: explica quais os materiais ou permissões em falta, pára e espera por uma pessoa.
 
 Para verificações periódicas dentro de uma conversa, defina também uma condição de fim, por exemplo: «parar quando o PR for integrado ou fechado, houver três erros iguais consecutivos ou for necessária aprovação humana».
@@ -130,7 +131,7 @@ Se a tarefa tiver de correr imediatamente após um `push`, a criação de um PR 
 - [ ] O prompt foi executado até ao fim numa conversa normal.
 - [ ] Foi escolhida uma tarefa independente ou dentro de uma conversa.
 - [ ] Os materiais Web ou o projeto local estarão disponíveis na altura da execução.
-- [ ] O sandbox predefinido é suficiente; qualquer permissão adicional tem justificação explícita.
+- [ ] O sandbox padrão é suficiente; qualquer permissão adicional tem justificação explícita.
 - [ ] Foram definidos os percursos para resultados, ausência de alterações, falha e paragem.
 - [ ] Uma pessoa verificou por amostragem as três primeiras execuções.
 - [ ] Worktrees frequentes têm uma estratégia de arquivo e limpeza.

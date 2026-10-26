@@ -8,10 +8,10 @@ title: Plantilla de modificación
 description: Iterar con límites sobre lo existente.
 locale: es
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: '6faf299'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -39,7 +39,7 @@ Aceptación:
 
 - Cambiar una página o un componente existente
 - Corregir un bug concreto
-- Ajustar copy, interacción o configuración
+- Ajustar texto, interacción o configuración
 - Quieres enfatizar «solo esta zona; sin refactor de paso»
 
 ## Ideas erróneas habituales
@@ -64,9 +64,9 @@ Principalmente:
 - desviarse
 - tocar capas que no autorizaste
 
-Un Prompt de modificación, además de «qué cambiar», debe aclarar «hasta dónde solo puede cambiar».
+Un prompt de modificación, además de «qué cambiar», debe aclarar «qué partes puede modificar».
 
 ## Relacionado
 
-- [Definir el terminado](/es/prompts/define-done/)
+- [Definir criterios de finalización](/es/prompts/define-done/)
 - [Restricciones y límites](/es/prompts/constraints-and-boundaries/)

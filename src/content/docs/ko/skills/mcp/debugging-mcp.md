@@ -3,9 +3,14 @@ title: MCP 연결 디버깅
 description: 설정, 전송, 인증, 도구의 네 단계로 MCP 오류를 찾습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: d35b635
-translation_status: draft
+source_revision: 'd35b635'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT 데스크톱 App / Codex CLI / IDE
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP 오류를 모두 “도구가 작동하지 않는다”로 뭉뚱그리기 쉽습니다. 먼저 어느 단계에서 실패하는지 판단한 뒤 한 번에 변수 하나만 바꾸는 편이 빠릅니다.

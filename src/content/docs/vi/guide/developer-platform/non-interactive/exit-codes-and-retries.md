@@ -1,14 +1,19 @@
 ---
-title: Mã thoát và thử lại
+title: "Mã thoát và thử lại"
 description: "Đọc đúng thành bại của `codex exec` trong pipeline — khi nào thử lại, khi nào fail ngay."
-locale: vi
-source_locale: zh-CN
-source_revision: 35074cd
-translation_status: reviewed
-translated_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "35074cd"
+translation_status: "reviewed"
+translated_at: "2026-08-26"
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Đã bỏ các ý nghĩa mã thoát cụ thể thiếu căn cứ. Trang chỉ dựa vào trạng thái thành công/thất bại của tiến trình và đầu ra tiến độ, lỗi trên `stderr` được tài liệu chính thức hiện tại xác nhận; kết luận nghiệp vụ của lần rà soát được xử lý qua đầu ra có cấu trúc."
+  checkedAt: "2026-08-26"
 ---
 
 CI dựa vào **mã thoát tiến trình** để phán bước thành hay bại. Chương này giải thích ngữ nghĩa thường gặp của [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/), chiến lược thử lại và thiết kế idempotent.
@@ -57,40 +62,37 @@ Nếu nguyên nhân fail vốn không biến mất nhờ thử lại — quyền
 
 | Tình huống | Xử lý đề xuất |
 |---|---|
-| `0` | Tác vụ hoàn thành và thỏa tiêu chí thành công trong Prompt |
+| `0` | Tiến trình `codex exec` hoàn tất thành công; kết quả nghiệp vụ vẫn phải được đánh giá từ đầu ra có cấu trúc |
 | Khác `0` và log có từ chối policy/sandbox | **Không** thử lại mù quáng; sửa cấu hình hoặc Prompt |
-| Khác `0` và API 429/5xx | Thử lại có giới hạn, exponential backoff |
+| Khác `0` và runner đã xác nhận lỗi mạng hoặc dịch vụ tạm thời | Thử lại có giới hạn với thời gian chờ tăng dần |
 | Phát hiện vấn đề P0 nhưng thực thi thành công | Dùng `pass: false` của [đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/) + script `exit 1` |
 
 «Phát hiện vấn đề bảo mật» không nên dựa vào exception kiểu sập, mà phải **tường minh** `pass: false` trong JSON và để script bọc quyết định mã thoát.
 
-## Mẫu thử lại (bash)
+## Mẫu thu nhận mã thoát (bash)
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-Căn mã «không thử lại» với tài liệu chính thức rồi ghi vào nhánh `case`.
+Đừng tự gán ý nghĩa cho mã chưa được tài liệu chính thức định nghĩa, chẳng hạn cho rằng `2` luôn là lỗi chính sách. Nếu cần thử lại, runner bên ngoài phải dựa vào loại lỗi mà nó nhận diện ổn định, đồng thời giới hạn số lần, tổng thời gian và tác dụng phụ.
 
 ## Idempotent và tác dụng phụ
 
 | Rủi ro | Giảm thiểu |
 |---|---|
 | Bình luận PR trùng | Dùng check run id hoặc «đã có bình luận bot thì cập nhật» |
-| Ghi tệp trùng | Exec mặc định review chỉ đọc; ghi ở job riêng + cổng người |
+| Ghi tệp trùng | Exec mặc định review chỉ đọc; ghi ở job riêng + bước phê duyệt của con người |
 | Gửi thông báo trùng | Webhook thông báo mang dedupe key |
 
 ## Khi chưa chắc thì phán thế nào
@@ -125,9 +127,3 @@ Hãy phân «đây là sự cố tạm thời, hay vốn không tốt hơn nhờ
 
 ## Nguồn tham chiếu
 - Hướng dẫn thử lại OpenAI API (khái niệm)
----
-
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú đối chiếu:** Trang đưa khuyến nghị kỹ thuật hợp lý về mã thoát và thử lại, nhưng ví dụ chứa ngữ nghĩa mã thoát cụ thể (như `code=2`) và giả định hành vi `codex exec`; các chi tiết này hiện thiếu căn cứ chính thức hiện hành đủ mạnh, cần xác minh với tài liệu CLI mới rồi mới đổi lại `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26

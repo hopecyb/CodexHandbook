@@ -3,12 +3,17 @@ title: Archivos, Herramientas y comandos
 description: Explica cómo Codex lee y escribe archivos, ejecuta comandos y usa Herramientas.
 locale: es
 source_locale: zh-CN
-source_revision: 9d65338
+source_revision: '9d65338'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica la diferencia conceptual entre archivos, comandos y Herramientas, y el método para juzgar riesgos; se revisaron enlaces internos y formulaciones de ejemplo, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
 Su mayor diferencia frente a un chatbot normal es que actúa mediante **Herramientas**.
@@ -27,7 +32,7 @@ Codex actúa sobre el mundo real mediante **Herramientas**:
 |---|---|
 | Archivo | Contenido real del proyecto: código, documentación, configuración |
 | Comando | Un paso ejecutado en la terminal: construir, probar, buscar |
-| Herramienta | La entrada de capacidad con la que Codex lee, edita, ejecuta y busca |
+| Herramienta | El medio que usa Codex para leer y editar archivos, ejecutar comandos y buscar en la web |
 
 También puedes verlo así:
 
@@ -54,7 +59,7 @@ No necesariamente.
 
 Que pueda depende también de:
 
-- qué Herramientas da la entrada de producto actual
+- qué herramientas ofrece la interfaz del producto que estás usando
 - si el Sandbox lo permite
 - si ese paso necesita tu Aprobación
 - si la política del equipo añade límites extra
@@ -98,10 +103,3 @@ Siguiente lectura recomendada:
 1. [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
 2. [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
 3. [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la diferencia conceptual entre archivos, comandos y Herramientas, y el método para juzgar riesgos; se revisaron enlaces internos y formulaciones de ejemplo, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

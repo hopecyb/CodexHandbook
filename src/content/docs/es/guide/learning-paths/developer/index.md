@@ -9,7 +9,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: "2026-09-18"
-  summary: "Se volvió a ejecutar el ejercicio de referencia: al inicio falló una de tres pruebas, tras la corrección pasaron las tres y los dos archivos de pruebas eran idénticos. El autor revisó las plantillas, pero ningún lector independiente ha completado aún la ruta."
+  summary: "Se volvió a ejecutar el ejercicio de referencia: al inicio falló una de tres pruebas, tras la corrección pasaron las tres y los dos archivos de pruebas eran idénticos. El autor revisó las plantillas, pero aún no se ha probado la ruta con lectores independientes."
   environment: "Node.js v22.16.0 / Darwin arm64; node:test integrado, sin dependencias de terceros."
   evidence:
     - label: "Resumen de ejecución real"
@@ -26,15 +26,16 @@ next:
   label: "Iniciar una corrección de bug verificada"
 locale: es
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: '22d8bd3'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 Con un pequeño ejercicio de carrito completarás cuatro tareas: explicar el código, corregir un error, revisar las diferencias y entregar las pruebas. No necesitas aprender antes todos los clientes, ajustes ni funciones multiagente.
 
 Requisitos: poder leer JavaScript sencillo y ejecutar pruebas Node.js en un terminal local. El entorno de referencia usa Node.js 22.16.0 y no requiere dependencias de terceros. Puedes usar la CLI, un IDE u otro cliente que acceda a archivos locales y al terminal; Node.js determina el comportamiento de las pruebas.
 
-## Preparar el código y el directorio de pruebas
+## Preparar el código y el directorio de registros
 
 Usa `examples/complete-workflows/developer/verified-bug-fix/` del [repositorio fuente del manual](https://github.com/hopecyb/CodexHandbook). Lee primero `brief.md` y `README.md`, sin mirar `solution/`. Los pasos completos están en [Corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
@@ -100,7 +101,7 @@ Comprueba que las pruebas no se hayan relajado, que la API siga igual y que no h
 
 ## 4. Escribir la entrega y recuperar desde los archivos
 
-[Descarga la plantilla de entrega](/downloads/developer-path/handoff-template.md). En `evidence/handoff.md`, indica el directorio actual, archivos modificados, restricciones vigentes, rutas de pruebas, siguiente comando y resultado esperado. En un proyecto Git real, añade rama, commit y estado del árbol de trabajo.
+[Descarga la plantilla de entrega](/downloads/developer-path/handoff-template.md). En `evidence/handoff.md`, indica el directorio actual, archivos modificados, restricciones vigentes, rutas de las evidencias, siguiente comando y resultado esperado. En un proyecto Git real, añade rama, commit y estado del árbol de trabajo.
 
 Una tarea de solo lectura tras la entrega puede ser:
 
@@ -113,7 +114,7 @@ No modifiques código ni hagas commit o push.
 
 Puedes hacerlo en una tarea nueva o pedir a otra persona que lo verifique. Reabrirlo tú mismo solo es un ensayo de recuperación, no una revisión humana independiente. Consulta el [registro de entrega del autor](/downloads/developer-path/handoff-reference.md).
 
-La entrega se completa cuando el archivo por sí solo permite encontrar código, pruebas y límites, y ejecutar el resultado actual. Si aún no se ha ejecutado esta comprobación, deja «pendiente de verificación tras la entrega» en el registro.
+La entrega se completa cuando el archivo por sí solo permite encontrar código, pruebas y límites, y se ha ejecutado realmente la comprobación del estado actual. Si aún no se ha ejecutado esta comprobación, deja «pendiente de verificación tras la entrega» en el registro.
 
 ## A qué paso volver si surge un problema
 

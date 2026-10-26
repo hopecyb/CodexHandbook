@@ -7,9 +7,10 @@ legacyVerification:
   checkedAt: "2026-08-25"
 locale: ko
 source_locale: zh-CN
-source_revision: ac7889b
-translation_status: draft
+source_revision: 'ac7889b'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Hooks를 사용하면 Codex의 Agent 실행 루프 안에서 명령 스크립트나 연결된 MCP 서버의 도구를 실행할 수 있습니다. 대표적인 용도로는 프롬프트의 비밀 정보 검사, 도구 호출 정책, 감사 기록, 세션 요약, 종료 전 검증이 있습니다.

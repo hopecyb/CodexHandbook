@@ -1,14 +1,19 @@
 ---
 title: Integração com GitHub
-description: 'Conexão de repositório, PR, Review e CI — o lugar do Codex no fluxo de trabalho do GitHub.'
+description: Conexão de repositório, PR, Review e CI — o lugar do Codex no fluxo de trabalho do GitHub.
 locale: pt
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: "ece7161"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Cloud / App / CLI
+  basis: os use cases atuais de Codex em OpenAI Developers ainda incluem «Review GitHub pull requests»; o Help Center continua a enfatizar que o acesso a repositórios externos depende de permissões do app, acesso por papel e limites de ação. Esta página só resume o lugar de repositório, branch, PR, Review e CI, e as diferenças de visibilidade de código entre local e Cloud.
+  checkedAt: '2026-07-26'
 ---
 
 O GitHub é a superfície de colaboração de código mais comum do Codex: tarefas Cloud, revisão de PR, Actions e push local giram em torno do mesmo conjunto de branches e permissões.
@@ -26,9 +31,9 @@ Mesmo sem ser desenvolvedor experiente, você pode começar vendo que tipos de c
 | Capacidade | Entrada típica | Onde no manual |
 |---|---|---|
 | Conectar repositório remoto | Configuração Cloud | [Conectar GitHub](/pt/guide/web-and-cloud/connect-github/) |
-| Alterar código na nuvem e abrir PR | Tarefa Cloud | [Criar Pull Request](/pt/guide/web-and-cloud/create-pull-requests/) |
+| Alterar código na nuvem e abrir PR | tarefa Cloud | [Criar Pull Request](/pt/guide/web-and-cloud/create-pull-requests/) |
 | Revisar diff localmente | App desktop / IDE | [diff e comentários](/pt/guide/desktop-app/diffs-comments-and-review/) |
-| Rodar Codex no CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
+| Rodar Codex no CI | GitHub Actions | [CI/CD](/pt/guide/developer-platform/ci-cd/) |
 | Comentários automáticos de review no PR | Actions + exec | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
 
 ## Normas recomendadas para equipes
@@ -49,7 +54,7 @@ Mesmo sem ser desenvolvedor experiente, você pode começar vendo que tipos de c
 | Origem do código | Workspace na sua máquina | Clone remoto |
 | Commits não enviados | Visíveis | Invisíveis — precisa fazer push antes |
 | Ambiente | Sua versão de Node/sistema | Imagem de ambiente configurada |
-| Adequado para | Desenvolvimento do dia a dia | Tarefas longas assíncronas, builds padronizados |
+| Adequado para | Desenvolvimento do dia a dia | tarefas longas assíncronas, builds padronizados |
 
 ## Fluxo de Review
 
@@ -71,7 +76,7 @@ Usos mais comuns:
 
 ### 2. Ainda não entendo bem PR e Review — e agora?
 
-Entenda de forma grosseira:
+Para começar, pense assim:
 
 - **PR**: você apresenta formalmente as mudanças para outros verem
 - **Review**: alguém revisa essas mudanças
@@ -94,15 +99,9 @@ O ponto da integração com GitHub é conectar o Codex ao fluxo de colaboração
 
 ## Erros comuns
 
-- Tarefa Cloud assumir que mudanças locais não commitadas existem
-- Deixar o Codex executar instruções não sanitizadas na descrição do PR (injeção de Prompt)
+- tarefa Cloud assumir que mudanças locais não commitadas existem
+- Deixar o Codex executar instruções não sanitizadas na descrição do PR (injeção de prompt)
 - Misturar formatação e mudança funcional no mesmo PR
 
 ## Fontes
 - Documentação de integração GitHub do OpenAI Codex
----
-
-**Status:** verified  
-**Produtos aplicáveis:** Cloud / App / CLI  
-**Base da verificação:** os use cases atuais de Codex em OpenAI Developers ainda incluem «Review GitHub pull requests»; o Help Center continua a enfatizar que o acesso a repositórios externos depende de permissões do app, acesso por papel e limites de ação. Esta página só resume o lugar de repositório, branch, PR, Review e CI, e as diferenças de visibilidade de código entre local e Cloud.  
-**Última verificação:** 2026-07-26

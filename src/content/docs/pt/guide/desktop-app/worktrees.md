@@ -2,16 +2,17 @@
 title: Árvores de trabalho
 description: Use Git worktree para isolar conversas paralelas e regressar em segurança ao diretório de trabalho local.
 legacyVerification:
-  status: "verified"
-  products: "App"
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 locale: pt
 source_locale: zh-CN
 source_revision: "3569716"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
 
 Uma árvore de trabalho (worktree) permite ter vários diretórios de checkout independentes para o mesmo repositório Git. Cada diretório tem os seus ficheiros e o estado da sua branch, mas partilha os metadados Git do repositório. É útil para deixar várias conversas de programação avançarem em paralelo sem se sobreporem nos ficheiros.
@@ -36,10 +37,10 @@ Por predefinição, o worktree criado fica em detached HEAD. Isso não impede o 
 
 ## Exemplo de duas tarefas paralelas
 
-| Conversa | Tarefa no worktree | Ficheiros atribuídos | Critério de aceitação |
+| Conversa | tarefa no worktree | Ficheiros atribuídos | Critério de aceitação |
 |---|---|---|---|
 | A | Corrigir um erro de início de sessão | `src/auth/**` | Testes de autenticação aprovados |
-| B | Completar a documentação de autenticação | `docs/auth/**` | Verificação de ligações aprovada |
+| B | Completar a documentação de autenticação | `docs/auth/**` | verificação de ligações aprovada |
 
 Não deixe A e B alterar ao mesmo tempo um ficheiro de bloqueio partilhado ou o mesmo ficheiro de configuração. Se for inevitável, combine previamente que uma conversa fará a alteração e a outra fornecerá apenas a análise.
 

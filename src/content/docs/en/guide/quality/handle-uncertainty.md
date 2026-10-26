@@ -8,8 +8,9 @@ title: Handle uncertainty
 description: Ask questions instead of making things up when information is missing.
 locale: en
 source_locale: zh-CN
-source_revision: 839ce22
-translation_status: draft
+source_revision: '839ce22'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 50

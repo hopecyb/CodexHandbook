@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Recoupé avec les indications publiques actuelles d’OpenAI Developers sur les tâches longues, la continuité de l’objectif et les formes de collaboration avec Codex. La page ne conserve que la méthode stable selon laquelle une note de passation doit aider la prochaine reprise ; elle ne présente aucun bouton ou processus propre à un produit comme une règle fixe."
-  checkedAt: "2026-07-26"
-title: "Passation et reprise"
-description: "Poursuivre un travail inachevé d’une session à l’autre."
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupé avec les indications publiques actuelles d’OpenAI Developers sur les tâches longues, la continuité de l’objectif et les formes de collaboration avec Codex. La page ne conserve que la méthode stable selon laquelle une note de passation doit aider la prochaine reprise ; elle ne présente aucun bouton ou processus propre à un produit comme une règle fixe.
+  checkedAt: '2026-07-26'
+title: Passation et reprise
+description: Poursuivre un travail inachevé d’une session à l’autre.
 sidebar:
   order: 40
 locale: fr
 source_locale: zh-CN
-source_revision: 1ee17e9
-translation_status: draft
+source_revision: "1ee17e9"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 Cette page traite d’une question courante :
 

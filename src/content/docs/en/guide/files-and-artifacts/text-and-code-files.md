@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against verified file/folder context, task anatomy, review-diffs, and run-tests pages; stable principle: scope paths, match style, state verification."
+  checkedAt: "2026-07-26"
 title: Text and Code Files
 description: Have Codex read and write source, config, and documentation text files correctly.
 locale: en
 source_locale: zh-CN
-source_revision: 1537793
+source_revision: '1537793'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 10
 ---
@@ -99,10 +104,3 @@ Require:
 - Doc links as absolute paths → 404 on site
 
 Text and code edits fail when scope sprawls and review is hard. State scope, style, and verification up front.
-
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, task anatomy, review-diffs, and run-tests pages; stable principle: scope paths, match style, state verification.  
-**Last verified:** 2026-07-26

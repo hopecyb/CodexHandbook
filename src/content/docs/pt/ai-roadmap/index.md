@@ -3,8 +3,9 @@ title: Roteiro de aplicações de IA
 description: Distingue artigos científicos, lançamentos de produtos, artigos de engenharia e sugestões de aprendizagem do autor, ligando cada tema à prática.
 locale: pt
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
+source_revision: "f66e3ba"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-10-24
 prev: false
 next:
@@ -41,10 +42,10 @@ Leia os projetos seguintes separadamente, sem os ordenar por datas de lançament
 
 ## Escolher um exercício para a tarefa atual
 
-- Primeira utilização: comece pelo [percurso de principiante](/pt/guide/learning-paths/); não precisa de estudar toda a cronologia antes.
+- Primeira utilização: comece pelo [percurso de iniciante](/pt/guide/learning-paths/); não precisa de estudar toda a cronologia antes.
 - Melhorar instruções: use os [materiais de comparação de prompts](/pt/prompts/comparison-lab/) para guardar saídas e pontuações. Este site ainda não tem uma conclusão medida sobre a eficácia dos modelos.
 - Precisa de fontes: pratique a correspondência entre conclusões e evidências com o [artigo com fontes](/pt/cases/write-an-article/).
-- Precisa de reutilização estável: escolha um [exemplo de Skill](/pt/skills/examples/) e confira entradas, limites e registo de verificação.
-- Falhas de execução repetidas: use o [laboratório de recuperação](/pt/guide/reference/troubleshooting/failure-recovery-lab/) para ler registos e alterar uma variável de cada vez.
+- Precisa de reutilização estável: escolha um [exemplo de Skill](/pt/skills/examples/) e confira entradas, limites e registro de verificação.
+- Falhas de execução repetidas: use o [laboratório de recuperação](/pt/guide/reference/troubleshooting/failure-recovery-lab/) para ler registros e alterar uma variável de cada vez.
 
-O valor de aprendizagem de cada tema depende da tarefa. Esta secção já não usa rótulos como «rising» ou «emerging» para dividir todo o setor em fases sem uma base comum de medição.
+O valor de aprendizagem de cada tema depende da tarefa. Esta seção já não usa rótulos como «rising» ou «emerging» para dividir todo o setor em fases sem uma base comum de medição.

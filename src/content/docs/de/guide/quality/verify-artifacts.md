@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Prüfmethoden für finale Liefergegenstände; interne Links, Artefakttypen und Prüfreihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab."
+  checkedAt: "2026-07-26"
 title: Artefakte überprüfen
 description: Generierte Dokumente, Seiten und andere Ergebnisse prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 7a6a12e
+source_revision: "7a6a12e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -85,14 +90,7 @@ Nach Abschluss bitte aus Sicht des finalen Artefakts selbst prüfen und sagen, w
 ## Prüfreihenfolge
 
 1. Echtes Artefakt öffnen
-2. Gegen Ihre Abnahmekriterien Zeile für Zeile
-3. Kleine Experience-Probleme suchen
+2. Jedes Abnahmekriterium mit dem Ergebnis abgleichen
+3. Kleinere Probleme bei der Nutzung suchen
 
 Lauffähigkeit heißt nur, die Basis hält; Lieferbarkeit hängt am finalen Nutzungseffekt.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Überprüfungs methoden für finale Liefergegenstände; interne Links, Artefakttypen und Prüfreihenfolge wurden geprüft, der Text hängt nicht von volatilen Produktfakten ab.  
-**Zuletzt geprüft:** 2026-07-26

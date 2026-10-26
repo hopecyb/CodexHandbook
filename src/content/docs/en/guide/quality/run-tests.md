@@ -8,8 +8,9 @@ title: Run tests
 description: Make verification steps part of the task.
 locale: en
 source_locale: zh-CN
-source_revision: 8b1e5c7
-translation_status: draft
+source_revision: '8b1e5c7'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 20

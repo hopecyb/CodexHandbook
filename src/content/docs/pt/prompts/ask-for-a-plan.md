@@ -1,6 +1,6 @@
 ---
 title: "Quando executar diretamente e quando pedir primeiro um plano"
-description: "Escolha entre execução direta, planeamento e aprovação de uma ação concreta segundo o âmbito, a incerteza e o impacto externo, com duas comparações de prompts."
+description: "Escolha entre execução direta, planejamento e aprovação de uma ação concreta segundo o escopo, a incerteza e o impacto externo, com duas comparações de prompts."
 contentType: prompt
 audiences: [beginner, developer, creator]
 editorialStatus: review
@@ -10,26 +10,27 @@ verification:
   summary: "As três categorias de tarefas e as duas comparações são recomendações editoriais de colaboração. Os limites de autorização e execução foram verificados; não são modos fixos do cliente nem uma experiência sobre a taxa de sucesso do modelo."
 locale: pt
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
-Pedir um plano depende das decisões que ainda faltam tomar. Uma alteração com âmbito claro e fácil de reverter pode ser executada diretamente. Se o caminho não estiver claro, planeie primeiro. Pare antes de uma ação concreta que exija autorização adicional. Pedir um plano não significa esperar uma resposta do utilizador depois de cada passo.
+Pedir um plano depende das decisões que ainda faltam tomar. Uma alteração com escopo claro e fácil de reverter pode ser executada diretamente. Se o caminho não estiver claro, planeie primeiro. Pare antes de uma ação concreta que exija autorização adicional. Pedir um plano não significa esperar uma resposta do usuário depois de cada passo.
 
 ## Primeiro, identifique a categoria
 
 | Categoria | Como reconhecer | O que indicar | Quando parar |
 |---|---|---|---|
-| Executar diretamente | Entradas, âmbito e critérios de aceitação claros; alteração reversível | Indicar onde alterar, o que conta como conclusão e o que fica excluído | Se o trabalho sair do âmbito ou faltar informação essencial |
-| Planear primeiro | Escolhas de arquitetura, âmbito incerto ou vários passos interdependentes | Analisar o estado atual e descrever percurso, impacto e verificação | Se uma escolha couber ao utilizador ou este pedir expressamente para rever primeiro o plano |
+| Executar diretamente | Entradas, escopo e critérios de aceitação claros; alteração reversível | Indicar onde alterar, o que conta como conclusão e o que fica excluído | Se o trabalho sair do escopo ou faltar informação essencial |
+| Planear primeiro | Escolhas de arquitetura, escopo incerto ou vários passos interdependentes | Analisar o estado atual e descrever percurso, impacto e verificação | Se uma escolha couber ao usuário ou este pedir expressamente para rever primeiro o plano |
 | Ação sujeita a aprovação | Uma ação concreta teria um efeito externo não autorizado ou atingiria um limite de permissão de execução | Preparar um resultado para revisão e indicar ação, alvo e impacto | Antes dessa ação, mantendo a preparação já concluída |
 
-«Envolve três ficheiros» não é um limiar universal de aprovação: um único ficheiro de configuração da produção pode ter grande impacto. Consulte [Permissões e sandbox](/pt/guide/permissions-and-sandbox/) para os diálogos do produto e as permissões reais de execução. Esta tabela não configura as permissões de todos os clientes.
+«Envolve três arquivos» não é um limiar universal de aprovação: um único arquivo de configuração da produção pode ter grande impacto. Consulte [permissões e sandbox](/pt/guide/permissions-and-sandbox/) para os diálogos do produto e as permissões reais de execução. Esta tabela não configura as permissões de todos os clientes.
 
 ## Comparação 1: corrigir texto local
 
-Tarefa: corrigir duas gralhas no README sem alterar a estrutura.
+tarefa: corrigir duas gralhas no README sem alterar a estrutura.
 
 **Contraexemplo com pausas excessivas:**
 
@@ -41,7 +42,7 @@ Para após cada alteração para me perguntar e depois pergunta se deves verific
 
 Estas esperas não resolvem nenhuma decisão necessária; fragmentam uma tarefa já autorizada e bem delimitada.
 
-**Formulação com âmbito claro:**
+**Formulação com escopo claro:**
 
 ```text
 No corpo de README.md, substitui as duas ocorrências de «帐户» por «账户».
@@ -55,7 +56,7 @@ A aceitação exige duas alterações exatas e nenhum conteúdo alheio modificad
 
 ## Comparação 2: alterar e publicar um site
 
-Tarefa: atualizar três tutoriais e publicá-los no site de produção. É preciso distinguir a preparação do conteúdo do impacto da publicação.
+tarefa: atualizar três tutoriais e publicá-los no site de produção. É preciso distinguir a preparação do conteúdo do impacto da publicação.
 
 **Contraexemplo com autorização pouco clara:**
 
@@ -78,7 +79,7 @@ a versão a publicar, o ambiente de destino e o método de reversão, e espera
 pela minha confirmação da ação de publicação.
 ```
 
-Neste caso, conclua o trabalho local antes de pedir a autorização final para publicar. Se o utilizador já autorizou expressamente o destino e a ação de publicação concretos, aplique a política atual para decidir se pode avançar; não volte a pedir a mesma autorização apenas porque esta apresentação inclui confirmação.
+Neste caso, conclua o trabalho local antes de pedir a autorização final para publicar. Se o usuário já autorizou expressamente o destino e a ação de publicação concretos, aplique a política atual para decidir se pode avançar; não volte a pedir a mesma autorização apenas porque este modelo inclui um pedido de confirmação.
 
 As duas comparações são exemplos didáticos, não saídas reais do modelo nem medições de eficiência.
 
@@ -97,9 +98,9 @@ Este limite explícito da fase deve ser respeitado. A autonomia habitual do agen
 
 ## O que incluir num plano
 
-Um plano suficiente indica objetivo, âmbito afetado, passos, verificação e escolhas ainda por resolver. Uma resposta conhecida não precisa de virar uma pergunta à espera de confirmação. Uma tarefa curta e de baixo risco também não precisa de uma secção de reversão só para preencher um modelo.
+Um plano suficiente indica objetivo, escopo afetado, passos, verificação e escolhas ainda por resolver. Uma resposta conhecida não precisa de virar uma pergunta à espera de confirmação. Uma tarefa curta e de baixo risco também não precisa de uma secção de reversão só para preencher um modelo.
 
-Se surgirem novidades durante a execução, distinga detalhes normais de implementação de uma alteração do objetivo. Resolva e explique os pequenos problemas dentro do âmbito original. Perante uma nova dependência, uma alteração mais ampla, uma mudança de interface ou uma nova ação externa, avalie primeiro se a autorização continua a cobri-la.
+Se surgirem novidades durante a execução, distinga detalhes normais de implementação de uma alteração do objetivo. Resolva e explique os pequenos problemas dentro do escopo original. Perante uma nova dependência, uma alteração mais ampla, uma mudança de interface ou uma nova ação externa, avalie primeiro se a autorização continua a cobri-la.
 
 ## Regras predefinidas para as instruções do projeto
 

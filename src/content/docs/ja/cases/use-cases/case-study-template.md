@@ -3,10 +3,15 @@ title: 事例テンプレート
 description: Codex 事例の執筆と振り返りの統一構造——チームでの記録と比較を容易に。
 locale: ja
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: "74ef905"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの検証済み EPXV ワークフロー、失敗回復、プロジェクト指示、事例ライブラリ構造と照合。本ページは事例執筆・振り返りの統一テンプレートのみで、特定製品挙動には依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 新しい事例ページや社内振り返りドキュメントを作るときは、このテンプレートをコピーしてください。
@@ -66,17 +71,11 @@ reviewed_at: 2026-08-26
 - 取り消しまたは修正方法
 - やり直すならプロンプト／設定で何を変えるか
 
-## 5. 定着（キャプチャ）
+## 5. 知見の蓄積
 
 - `AGENTS.md` / Skill / Automation に書くか
 - チームへの推奨 3 点
 
 ## 6. 参考
 - 公式ドキュメントリンク
-- 外部チュートリアルの適応か（タスク種別のみ）
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの検証済み EPXV ワークフロー、失敗回復、プロジェクト指示、事例ライブラリ構造と照合。本ページは事例執筆・振り返りの統一テンプレートのみで、特定製品挙動には依存しない。
+- 外部チュートリアルを参考にした事例か（参考にするのはタスクの種類のみ）

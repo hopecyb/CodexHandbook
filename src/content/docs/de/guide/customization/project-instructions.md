@@ -3,12 +3,18 @@ title: Projektanweisungen
 description: "Projektkontext jenseits von AGENTS.md: Rollenverteilung von README, docs und Dialogverweisen."
 locale: de
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: "76b0fde"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Projektkontext und Dateikollaboration sowie verifizierte Kapitel zu Projektkontext, Dateien und Workflows; Inhalt beschränkt auf die stabile
+    Aufteilung von README, `AGENTS.md`, `docs/` und Aufgabendialog.
+  checkedAt: '2026-07-26'
 ---
 
 „Projektanweisungen“ sind der **statische Kontext**, mit dem Codex das Repo versteht — nicht auf ein Dateiformat beschränkt.
@@ -33,7 +39,7 @@ Codex liest diese Materialien mit Werkzeugen; entscheidend ist **eine einzige Wa
 ## Grundvorgehen
 
 1. Im Root-`README.md` vier Abschnitte: Zweck, Installation, Entwicklung, Tests
-2. **Wiederholt an Codex gerichtete Hinweise** in `AGENTS.md` versenken
+2. **Wiederholt an Codex gerichtete Hinweise** in `AGENTS.md` festhalten
 3. In Aufgaben mit `@` auf konkrete Dateien zeigen, statt Volltext einzufügen:
 
 ```text
@@ -49,7 +55,7 @@ Häufig:
 - docs sagen B
 - die wirklich lauffähigen Befehle stecken in `package.json`
 
-Dann verwirren sich Menschen und Codex. Ziel: die „Repo-Wahrheit“ möglichst zentral und konsistent halten.
+Das verwirrt Menschen ebenso wie Codex. Ziel: die „Repo-Wahrheit“ möglichst zentral und konsistent halten.
 
 ## Abgrenzung zum Gesprächskontext
 
@@ -99,10 +105,3 @@ Projektanweisungen sollen Codex und Menschen dieselbe „Repo-Wahrheit“ finden
 
 - [ ] Nach Clone können Mensch (oder Codex) Tests mit README + AGENTS.md zum Laufen bringen
 - [ ] Aufgabenprompts arbeiten vor allem mit @-Verweisen, ohne lange Hintergründe zu wiederholen
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Projektkontext und Dateikollaboration sowie verifizierte Kapitel zu Projektkontext, Dateien und Workflows; Inhalt beschränkt auf die stabile Aufteilung von README, `AGENTS.md`, `docs/` und Aufgabendialog.  
-**Zuletzt geprüft:** 2026-07-26

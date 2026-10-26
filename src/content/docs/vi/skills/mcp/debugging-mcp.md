@@ -7,9 +7,10 @@ title: Gỡ lỗi kết nối MCP
 description: Xác định lỗi MCP theo bốn lớp cấu hình, truyền tải, xác thực và công cụ.
 locale: vi
 source_locale: zh-CN
-source_revision: d35b635
-translation_status: draft
+source_revision: "d35b635"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 Lỗi MCP thường bị gộp thành một câu: “không dùng được công cụ”. Cách nhanh hơn là xác định lỗi nằm ở lớp nào trước, sau đó mỗi lần chỉ thay đổi một yếu tố.

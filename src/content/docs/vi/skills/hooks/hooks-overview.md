@@ -1,16 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Môi trường sử dụng Codex host cục bộ; CLI cung cấp `/hooks` để quản lý độ tin cậy"
+  checkedAt: "2026-08-25"
 title: Tổng quan về Hooks
 description: Tìm hiểu cách phát hiện cấu hình, rà soát tin cậy, bộ xử lý và ranh giới bảo mật của Hook.
 locale: vi
 source_locale: zh-CN
-source_revision: ac7889b
-translation_status: draft
+source_revision: "ac7889b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Hooks cho phép chạy script lệnh hoặc công cụ của máy chủ MCP đã kết nối tại các điểm trong vòng lặp Agent của Codex. Các ứng dụng thường gặp gồm quét khóa trong prompt, áp dụng chính sách gọi công cụ, ghi nhật ký kiểm toán, tóm tắt phiên và kiểm tra trước khi dừng.
 
-![Vòng đời Codex Hook: các sự kiện phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con](/diagrams/hook-lifecycle-events-zh-cn.svg)
+![Vòng đời Codex Hook: các sự kiện phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con](/diagrams/hook-lifecycle-events-vi.svg)
 
 Điểm khác biệt quan trọng nhất trong hình là: `PreToolUse` có thể từ chối hoặc sửa đầu vào trước khi công cụ cục bộ được hỗ trợ thực thi; `PostToolUse` xảy ra sau khi công cụ hoàn thành nên không thể hoàn tác tác dụng phụ đã xảy ra.
 
@@ -46,7 +51,7 @@ Theo tài liệu chính thức hiện tại, bộ xử lý `prompt` và `agent` 
 
 ## Hành vi khi chạy
 
-- Nhiều command Hook khớp sẽ khởi chạy đồng thời; một Hook không thể ngăn Hook khớp khác đã bắt đầu.
+- Nhiều command Hook khớp sẽ khởi chạy đồng thời; một Hook không thể ngăn một Hook khác cũng khớp sự kiện khởi chạy.
 - `timeout` mặc định của phần lớn Hook là 600 giây; `SessionEnd` mặc định 1 giây và tối đa 3 giây. Script bảo vệ dùng trong sản xuất vẫn nên chủ động đặt thời gian chờ ngắn hơn.
 - Thư mục làm việc của command Hook là `cwd` của phiên. Script trong kho lưu trữ nên tìm thư mục gốc Git để tránh lỗi đường dẫn tương đối khi khởi chạy từ thư mục con.
 - Hook bất đồng bộ phù hợp để ghi log và phân tích, nhưng không thể chặn, phê duyệt, sửa đầu vào hoặc điều khiển thao tác đã kích hoạt nó.

@@ -3,9 +3,14 @@ title: Plugins
 description: 재사용 가능한 Skills, 커넥터, MCP, Hooks, 예약 작업 템플릿의 조합을 탐색하고 설치하며 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 8917a59
-translation_status: draft
+source_revision: '8917a59'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / 데스크톱 App / Mobile; Codex 데스크톱 및 CLI; IDE 확장은 Plugin 미지원
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 Plugin은 기능을 묶어 배포하는 단위입니다. Skills, 커넥터, MCP 서버, 브라우저 확장, Hooks, Scheduled task 템플릿을 포함할 수 있습니다. 실제 작업을 수행하는 것은 그 안에 들어 있는 각 구성 요소입니다.

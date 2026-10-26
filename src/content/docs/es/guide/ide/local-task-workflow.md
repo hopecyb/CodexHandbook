@@ -1,24 +1,28 @@
 ---
-title: Flujo de Tareas locales
-description: Iniciar, seguir y completar Tareas locales de Codex en el IDE a partir de archivos abiertos y la selección.
+title: Flujo de tareas locales
+description: Iniciar, seguir y completar tareas locales de Codex en el IDE a partir de archivos abiertos y la selección.
 locale: es
 source_locale: zh-CN
-source_revision: 0264d4d
+source_revision: "0264d4d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: El centro de ayuda de OpenAI sigue describiendo la IDE extension como cliente que trabaja con el repositorio de código local; este flujo se centra en el ciclo estable «abrir workspace, acotar archivos, describir tarea, revisar diff, ejecutar tests, commit humano», sin depender de una UI concreta de extensión.
+  checkedAt: '2026-07-26'
 ---
-
-La Tarea local en el IDE es el ciclo «**abrir → seleccionar → describir → revisar → probar**», pensado para cambios pequeños y frecuentes. Aquí va el camino práctico más habitual; el detalle de Contexto está en [Selección y archivos abiertos](/es/guide/ide/selected-code-and-open-files/).
+La tarea local en el IDE es el ciclo «**abrir → seleccionar → describir → revisar → probar**», pensado para cambios pequeños y frecuentes. Aquí va el camino práctico más habitual; el detalle de contexto está en [Selección y archivos abiertos](/es/guide/ide/selected-code-and-open-files/).
 
 ## Flujo recomendado
 
 1. **Abre la raíz del workspace** (todo el repositorio, no un solo archivo)
 2. Abre los archivos relevantes; si hace falta, [selecciona un fragmento de código](/es/guide/ide/selected-code-and-open-files/)
-3. En el panel de Codex deja claro: objetivo, restricciones y [definición de hecho](/es/prompts/define-done/)
-4. Si la Tarea es compleja, primero [pide un plan](/es/prompts/ask-for-a-plan/) y luego ejecuta
+3. En el panel de Codex deja claro: objetivo, restricciones y [definición de terminado](/es/prompts/define-done/)
+4. Si la tarea es compleja, primero [pide un plan](/es/prompts/ask-for-a-plan/) y luego ejecuta
 5. En la vista de diff / inline, [revisa los cambios](/es/guide/ide/reviewing-changes/)
 6. En la terminal del IDE ejecuta los tests del proyecto
 7. Tú haces `git commit` (salvo que el equipo autorice explícitamente commits del Agent)
@@ -52,7 +56,7 @@ Contexto: [Contexto del editor](/es/guide/ide/editor-context/) · [Contexto de a
 
 ### 1. ¿Por qué se insiste tanto en «abrir la raíz del workspace»?
 
-Porque gran parte del Contexto de la extensión IDE depende de que abras el proyecto completo, no un archivo suelto.
+Porque gran parte del contexto de la extensión IDE depende de que abras el proyecto completo, no un archivo suelto.
 
 ### 2. Si en el IDE es muy cómodo cambiar, ¿puedo revisar menos?
 
@@ -60,7 +64,7 @@ No.
 
 Cuanto más cómodo, más fácil es aceptar por inercia; por eso conviene mantener el hábito de comprobar.
 
-### 3. ¿Qué Tarea conviene la primera vez?
+### 3. ¿Qué tarea conviene la primera vez?
 
 Algo así:
 
@@ -68,11 +72,4 @@ Algo así:
 - El resultado se entiende de un vistazo
 - Tras el cambio es fácil probar o previsualizar
 
-Las Tareas locales del IDE van bien para avanzar a pasos cortos, pero «cómodo» no significa saltarse revisión y Verificación.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** IDE  
-**Base de verificación:** El centro de ayuda de OpenAI sigue describiendo la IDE extension como cliente que trabaja con el repositorio de código local; este flujo se centra en el ciclo estable «abrir workspace, acotar archivos, describir Tarea, revisar diff, ejecutar tests, commit humano», sin depender de una UI concreta de extensión.  
-**Última verificación:** 2026-07-26
+Las tareas locales del IDE van bien para avanzar a pasos cortos, pero «cómodo» no significa saltarse revisión y verificación.

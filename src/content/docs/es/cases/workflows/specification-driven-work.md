@@ -1,20 +1,24 @@
 ---
 title: Trabajo impulsado por especificación
-description: Escribe primero una especificación aceptable y deja que Codex implemente según el plan — ideal para entregas con requisitos claros.
+description: Escribe primero una especificación con criterios de aceptación verificables y deja que Codex implemente según el plan — ideal para entregas con requisitos claros.
 locale: es
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: "70fd8a4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de lluvia de ideas, EPXV, tests y `AGENTS.md`. El contenido se limita al método estable «escribir primero una especificación verificable, luego ejecutar según ella».
+  checkedAt: '2026-07-26'
 ---
-
 **Trabajo impulsado por especificación** consiste en preparar una especificación breve —objetivo, alcance, interfaces y criterios de aceptación— antes de tocar muchos archivos. Puede ir después de [lluvia de ideas](/es/cases/workflows/brainstorm-before-building/) o entrar directamente en [EPXV](/es/cases/workflows/explore-plan-execute-verify/) cuando el requisito ya está claro.
 
 ## Enfoque de esta página
 
 - Qué nivel de detalle basta en la especificación
-- Cómo hacer que Codex ejecute según la especificación sin ampliar el scope por su cuenta
+- Cómo hacer que Codex ejecute según la especificación sin ampliar el alcance por su cuenta
 - Relación entre especificación, descripción de PR e issue
 
 ## Plantilla mínima de especificación
@@ -78,10 +82,3 @@ Los criterios de aceptación de la especificación deberían ser, en la medida d
 - [ ] Al menos 3 criterios de aceptación comprobables
 - [ ] Confirmación humana o escrita antes de ejecutar
 - [ ] Los cambios se sincronizan de vuelta al archivo de especificación
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de lluvia de ideas, EPXV, tests y `AGENTS.md`. El contenido se limita al método estable «escribir primero una especificación aceptable, luego ejecutar según ella».

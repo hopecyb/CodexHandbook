@@ -8,9 +8,10 @@ title: "탐색—계획—실행—검증"
 description: "작업의 범위와 불확실성에 맞춰 탐색, 계획, 실행, 검증을 조정하고 기다려야 하는 결정을 명확히 합니다."
 locale: ko
 source_locale: zh-CN
-source_revision: "4a95760"
-translation_status: draft
+source_revision: '4a95760'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 이 핸드북이 권장하는 작업 구성 방식으로, '아직 어떻게 할지 모름'에서 '검수 가능'까지 이어집니다. 네 단계가 네 번의 승인을 뜻하지는 않습니다. 범위가 명확한 작은 작업은 연속해서 완료할 수 있습니다. 방법이 정해지지 않았거나 필요한 권한이 없을 때 해당 결정을 기다립니다. 먼저 [작업 수준 나누기](/ko/prompts/ask-for-a-plan/)를 보세요.
@@ -19,7 +20,7 @@ translated_at: 2026-09-20
 
 ```text
 ① 탐색 Explore   → 현황, 범위, 위험 파악
-② 계획 Plan      → 단계, 파일, 인수 기준, 필요한 선택 정리
+② 계획 Plan      → 단계, 파일, 완료 기준, 필요한 선택 정리
 ③ 실행 Execute   → 승인된 범위에서 코드/문서/설정 수정
 ④ 검증 Verify    → 테스트, diff 검토, 완료 정의와 대조
 ```
@@ -83,7 +84,7 @@ translated_at: 2026-09-20
 | 모듈 간 기능 | 의존성 명확화 | 문서 계획, 필요한 선택은 확인 대기 | 승인 범위에서 단계별로 완료 | 영향에 맞는 테스트 + 수동 점검 |
 | 운영 사고 | 진단 우선 | 롤백 방안 우선 | 아주 작은 단계 | 모니터링 + 사후 분석 |
 
-## EPXV 사례 템플릿과
+## EPXV와 사례 템플릿
 
 팀은 네 단계를 [사례 템플릿](/ko/cases/use-cases/case-study-template/)과 PR 설명에 넣어 공통 언어를 만들 수 있습니다.
 

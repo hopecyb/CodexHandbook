@@ -8,11 +8,12 @@ title: Examiner le résultat
 description: Lire les modifications, vérifier le livrable et décider de l'accepter ou de le corriger.
 locale: fr
 source_locale: zh-CN
-source_revision: a215910
-translation_status: draft
+source_revision: 'a215910'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 90
+reviewed_at: '2026-10-26'
 ---
 
 Après une tâche, beaucoup de débutants sautent cette étape.
@@ -57,7 +58,7 @@ Le résultat est proche, mais il reste deux problèmes : 1) … 2) … Corrige u
 Pour votre premier exercice, procédez ainsi :
 
 1. **Périmètre** : quels fichiers ont changé ?
-2. **Résultat** : la page, le document ou la sortie du code correspond-il aux attentes ?
+2. **Résultat** : le résultat de la page, du document ou du code correspond-il aux attentes ?
 3. **Effets secondaires** : y a-t-il des modifications inutiles ou de nouvelles erreurs ?
 
 Valider, c'est décider si vous pouvez conserver ce résultat en confiance.

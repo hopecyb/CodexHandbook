@@ -8,13 +8,13 @@ title: Conversations, tâches et projets
 description: Comprendre le lien entre conversations, tâches et espaces de travail.
 locale: fr
 source_locale: zh-CN
-source_revision: c360452
-translation_status: draft
+source_revision: "c360452"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 60
+reviewed_at: '2026-10-26'
 ---
-
 Les termes varient légèrement selon les produits. Ce manuel les emploie ainsi :
 
 - **Projet / espace de travail** : le dossier ou la racine du dépôt associé à Codex

@@ -1,12 +1,17 @@
 ---
 title: Créer votre premier Skill
-description: Un Skill pr-review soumissable from scratch, avec tests et partage équipe.
+description: Créer de zéro un Skill pr-review à intégrer au dépôt, avec des étapes de test et de partage en équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: '14414f5'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Le runtime supporte répertoire skills projet, `SKILL.md`, appel explicite ; exercice d'entrée stable pour le premier Skill.
+  checkedAt: '2026-07-26'
 ---
 
 Vous savez déjà donner des tâches, mais pas encore créer un Skill ? Cette page couvre les bases du **premier** Skill.
@@ -89,11 +94,11 @@ Ou : « Revois le diff selon l'équipe, focus tests. »
 2. flux et sortie OK
 3. langage naturel
 
-Distingue contenu du Skill vs `description` de déclenchement.
+Cette séquence aide à distinguer un problème dans le contenu du Skill d’une condition de déclenchement imprécise dans `description`.
 
 ### 5. Itérer description
 
-Jamais choisi automatiquement → renforcer mots déclencheurs. Trop souvent → ajouter « quand ne pas utiliser ».
+Si le modèle ne choisit jamais le Skill automatiquement, précisez ou complétez les termes déclencheurs de `description`. S’il le choisit trop souvent à tort, ajoutez les cas où il ne faut pas l’utiliser.
 
 ### 6. Partage équipe
 
@@ -138,9 +143,3 @@ Commencer petit et stable facilite la réutilisation d'une routine claire.
 
 ## Sources
 - Exemples officiels Codex Skills et `skill-creator` (si fourni)
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Le runtime supporte répertoire skills projet, `SKILL.md`, appel explicite ; exercice d'entrée stable pour le premier Skill.

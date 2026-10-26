@@ -1,14 +1,19 @@
 ---
 title: "Sortie structurée"
-description: Faire produire exec des résultats parseables par machine pour étapes aval, dashboards et portes.
+description: Faire produire à exec des résultats analysables par programme pour les étapes suivantes, les tableaux de bord et les contrôles de validation.
 locale: fr
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: 'e80b5d7'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: CLI / API
+  basis: La doc API modèle/comparaison OpenAI liste encore `Structured outputs` ; cette page se limite à la pratique générale pour des interfaces de sortie non interactives stables ; schéma JSON, validation et modèles de fallback sont des orientations d'ingénierie.
+  checkedAt: '2026-07-26'
 ---
 
 Beaucoup de premières automatisations supposent que Codex retournera « du texte raisonnable ». OK pour les humains ; maladroit pour les scripts.
@@ -86,11 +91,11 @@ Définir schéma (version v1)
     → exit 1 sur échec
 ```
 
-Pour grande sortie, exiger un champ chemin de fichier ; l'Agent écrit dans `artifacts/`, CI upload l'artefact.
+Pour une sortie volumineuse, demandez un champ contenant le chemin du fichier ; l’Agent écrit dans `artifacts/`, puis la CI téléverse l’artefact.
 
 ## Comment décider
 
-Si le consommateur suivant est un programme, préférer la structure.  
+Si le consommateur suivant est un programme, préférer la structure.
 Si le résultat est principalement pour lecture et discussion humaine, le texte libre convient souvent.
 
 Chaque fois que les résultats alimentent un autre programme, demandez à Codex de retourner les champs convenus systématiquement.
@@ -121,9 +126,3 @@ Voir [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/).
 
 ## Sources de référence
 - Pratique générale sorties structurées OpenAI (alignement conceptuel)
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / API  
-**Base de vérification :** La doc API modèle/comparaison OpenAI liste encore `Structured outputs` ; cette page se limite à la pratique générale pour des interfaces de sortie non interactives stables ; schéma JSON, validation et modèles de fallback sont des orientations d'ingénierie.  
-**Dernière vérification :** 2026-07-26

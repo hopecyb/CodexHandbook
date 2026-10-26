@@ -5,10 +5,14 @@ sidebar:
   order: 80
 locale: ja
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: "1d4b3f2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  basis: 本リポジトリの現行ディレクトリ構造、サイドバー維持方法、ページ状態体系、コントリビューションフローを項目ごとに再確認済みです。本ページはハンドブック運用ルールであり、特定の Codex 製品の変わりやすい UI 動作には依存しません。
+  checkedAt: '2026-07-26'
 ---
 
 **Codex ガイドハンドブック**はコミュニティが維持するドキュメントサイトです。誤りの修正、ページの追加、再現可能な事例、[examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples) にあるプロンプト例の追加を歓迎します。
@@ -104,9 +108,3 @@ pnpm build
 
 - リポジトリ：<https://github.com/hopecyb/CodexHandbook>
 - [章のアウトライン](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（リポジトリの計画文書）
-
----
-
-**状態：** verified  
-**検証根拠：** 本リポジトリの現行ディレクトリ構造、サイドバー維持方法、ページ状態体系、コントリビューションフローを項目ごとに再確認済みです。本ページはハンドブック運用ルールであり、特定の Codex 製品の変わりやすい UI 動作には依存しません。
-**最終検証：** 2026-07-26

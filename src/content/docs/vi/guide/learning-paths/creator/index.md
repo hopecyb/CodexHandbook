@@ -1,33 +1,40 @@
 ---
-title: 'Lộ trình người sáng tạo: nguồn tư liệu, bài viết, trình chiếu và tái sử dụng'
-description: Dùng cùng bộ tư liệu để tạo bảng sự thật, bài viết, bản trình chiếu tám trang có thể chỉnh sửa và hướng dẫn tác vụ tái sử dụng, mỗi bước có tài liệu và điều kiện nghiệm thu.
-contentType: path
-audiences: [creator, beginner]
-level: beginner
-outputs: [markdown, csv, pptx, png]
-editorialStatus: review
+title: "Lộ trình người sáng tạo: nguồn tư liệu, bài viết, trình chiếu và tái sử dụng"
+description: "Dùng cùng bộ tư liệu để tạo bảng sự thật, bài viết, bản trình chiếu tám trang có thể chỉnh sửa và hướng dẫn tác vụ tái sử dụng, mỗi bước có tài liệu và điều kiện nghiệm thu."
+contentType: "path"
+audiences:
+  - "creator"
+  - "beginner"
+level: "beginner"
+outputs:
+  - "markdown"
+  - "csv"
+  - "pptx"
+  - "png"
+editorialStatus: "review"
 verification:
-  kind: editorial
-  checkedAt: '2026-09-18'
-  summary: Đã sắp xếp bốn mốc theo tài liệu bài viết và bản trình chiếu thực tế, đồng thời kiểm tra sự nối tiếp giữa đầu vào và đầu ra. Xác minh tham khảo riêng từng phần nằm trong các tình huống; toàn lộ trình chưa được đo thời gian hoặc kiểm thử người đọc tự hoàn thành.
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Đã sắp xếp bốn mốc theo tài liệu bài viết và bản trình chiếu thực tế, đồng thời kiểm tra sự nối tiếp giữa đầu vào và đầu ra. Xác minh tham khảo riêng từng phần nằm trong các tình huống; toàn lộ trình chưa được đo thời gian hoặc kiểm thử người đọc tự hoàn thành."
   evidence:
-    - label: Tài liệu bài viết và biên bản kiểm tra của tác giả
-      href: /downloads/source-backed-article/validation/record.md
-    - label: Biên bản môi trường và kết xuất bản trình chiếu
-      href: /downloads/article-to-slides/validation/record.md
+    - label: "Tài liệu bài viết và biên bản kiểm tra của tác giả"
+      href: "/downloads/source-backed-article/validation/record.md"
+    - label: "Biên bản môi trường và kết xuất bản trình chiếu"
+      href: "/downloads/article-to-slides/validation/record.md"
 sidebar:
   order: 10
 prev:
-  link: /vi/guide/learning-paths/
-  label: Chọn lộ trình học
+  link: "/vi/guide/learning-paths/"
+  label: "Chọn lộ trình học"
 next:
-  link: /vi/cases/write-an-article/#1-sắp-xếp-sự-thật-và-mâu-thuẫn-trước
-  label: Bắt đầu sắp xếp ba nguồn tư liệu
-locale: vi
-source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
-translated_at: '2026-09-20'
+  link: "/vi/cases/write-an-article/#1-sắp-xếp-dữ-kiện-và-mâu-thuẫn-trước"
+  label: "Bắt đầu sắp xếp ba nguồn tư liệu"
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "d1b46b1"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Dùng một bộ tư liệu để viết bài, chuyển thành bản trình chiếu có thể chỉnh sửa, rồi lưu hướng dẫn tác vụ dùng lại lần sau. Mỗi bước đều tạo tệp để bạn tự đánh giá đã hoàn thành hay chưa.
@@ -38,22 +45,22 @@ Bạn cần mở được thư mục cục bộ trong Codex. Việc tạo trình
 
 | Bước | Đầu vào trước đó | Sản phẩm của bước này | Sau đó đi đâu |
 |---|---|---|---|
-| 1. Sắp xếp bằng chứng | Ba nguồn tổng hợp và chỉ mục nguồn | Bảng sự thật, danh sách mâu thuẫn và thiếu sót | Viết bài |
+| 1. Sắp xếp bằng chứng | Ba nguồn giả lập và chỉ mục nguồn | Bảng sự thật, danh sách mâu thuẫn và thiếu sót | Viết bài |
 | 2. Viết và sửa | Bảng sự thật, độc giả, dàn ý | Bài viết, bảng đối chiếu nhận định, ghi chú sửa | Làm bản trình chiếu |
 | 3. Làm bản trình chiếu | Bài viết, bảng đối chiếu nhận định, mục tiêu báo cáo | PPTX tám trang, tám bản xem trước, ghi chú và biên bản kiểm tra | Lưu hướng dẫn dùng lại |
 | 4. Lưu hướng dẫn dùng lại | Sản phẩm và trải nghiệm của ba bước trước | Mẫu tác vụ, danh sách nghiệm thu, một biên bản chuyển đổi | Thử lại với nguồn mới |
 
 [Tải bộ bài tập viết bài](/downloads/source-backed-article/source-backed-article-1.0.0.zip) · [Tải bộ bài tập trình chiếu](/downloads/article-to-slides/article-to-slides-1.0.0.zip)
 
-Hai bộ đều dùng riêng được. Khi học liên tục, bước 3 nên ưu tiên bài viết bạn đã hoàn thành. Thư mục `input/` trong bộ trình chiếu là đầu vào tham khảo cho người chưa xong bài hoặc cần đối chiếu. Mọi sản phẩm, nhân vật và cuộc phỏng vấn đều là tài liệu giảng dạy tổng hợp.
+Hai bộ đều dùng riêng được. Khi học liên tục, bước 3 nên ưu tiên bài viết bạn đã hoàn thành. Thư mục `input/` trong bộ trình chiếu là đầu vào tham khảo cho người chưa xong bài hoặc cần đối chiếu. Mọi sản phẩm, nhân vật và cuộc phỏng vấn đều là tài liệu giảng dạy hư cấu.
 
 ## 1. Sắp xếp bằng chứng và giữ lại mâu thuẫn
 
-Giải nén bộ bài viết, đọc `brief.md`, `sources/index.csv` và ba nguồn được liệt kê. Làm theo [phần đầu của tình huống viết bài](/vi/cases/write-an-article/#1-sắp-xếp-sự-thật-và-mâu-thuẫn-trước) để sắp xếp, đừng vội viết thành bài.
+Giải nén bộ bài viết, đọc `brief.md`, `sources/index.csv` và ba nguồn được liệt kê. Làm theo [phần đầu của tình huống viết bài](/vi/cases/write-an-article/#1-sắp-xếp-dữ-kiện-và-mâu-thuẫn-trước) để sắp xếp, đừng vội viết thành bài.
 
 Đặt đầu ra vào `my-output/` của bộ bài viết và giữ nguồn gốc. Bảng sự thật ghi ID nguồn, mục, nhận định được hỗ trợ và loại bằng chứng. Viết thêm `unresolved.md` liệt kê vấn đề tư liệu chưa giải quyết.
 
-Hoàn thành khi bạn tìm được mâu thuẫn giữa P3 và C2 về cài đặt chẩn đoán mặc định mà không tự chọn một bên làm đáp án cuối. Phỏng vấn tổng hợp vẫn phải được ghi là tổng hợp; không tạo ra số liệu độ chính xác hay thời gian tiết kiệm mà nguồn không cung cấp.
+Hoàn thành khi bạn tìm được mâu thuẫn giữa P3 và C2 về cài đặt chẩn đoán mặc định mà không tự chọn một bên làm đáp án cuối. Phỏng vấn giả lập vẫn phải được ghi là giả lập; không tạo ra số liệu độ chính xác hay thời gian tiết kiệm mà nguồn không cung cấp.
 
 Nếu nguồn không mở được hoặc mã không khớp, hãy khôi phục tệp và chỉ mục trước; đừng đoán nội dung qua tên tệp. Sau khi đạt yêu cầu mới sang bước tiếp.
 
@@ -73,7 +80,7 @@ Dùng bài viết đã xong và bảng sự thật. Theo [tình huống làm tr�
 
 Sao chép bài và bảng sự thật vào thư mục đầu vào của tác vụ trình chiếu, nói rõ chúng là phiên bản của bạn. Đừng vừa dẫn bài của mình vừa mặc nhiên dùng mọi kết luận trong bản tham khảo.
 
-Bàn giao PPTX tám trang, tám bản xem trước, ghi chú từng trang và biên bản xác minh. Điều kiện hoàn thành: mở được bằng phần mềm trình chiếu bạn đã ghi, chữ quan trọng có thể chỉnh sửa, từng trang đã kiểm tra tiếng Trung và giới hạn. Mâu thuẫn nguồn phải vẫn rõ sau khi rút gọn.
+Bàn giao PPTX tám trang, tám bản xem trước, ghi chú từng trang và biên bản xác minh. Điều kiện hoàn thành: mở được bằng phần mềm trình chiếu bạn đã ghi, chữ quan trọng có thể chỉnh sửa, từng trang đã được kiểm tra cách hiển thị chữ tiếng Trung và nội dung có bị tràn khung hay không. Mâu thuẫn nguồn phải vẫn rõ sau khi rút gọn.
 
 Nếu thiếu công cụ PPTX, hãy lưu dàn ý và ghi khả năng còn thiếu. Bước này vẫn chưa hoàn thành cho tới khi bạn tiếp tục trong môi trường có công cụ, rồi mới sang phần tái sử dụng.
 
@@ -93,11 +100,11 @@ Bắt đầu từ bài viết và trình chiếu đã hoàn thành, kiểm tra. 
 1. Liệt kê sự thật, suy luận, mâu thuẫn và thiếu sót trước khi viết.
 2. Xác định độc giả và bố cục, viết liền mạch, rồi sửa theo nguồn.
 3. Rút bài thành tám trang; kiểm tra trang tiêu đề và giới hạn trước.
-4. Kiểm tra chữ gốc, phông tiếng Trung, toàn bộ bản xem trước và ghi chú.
+4. Kiểm tra văn bản gốc có thể chỉnh sửa, phông tiếng Trung, toàn bộ bản xem trước và ghi chú.
 
 ## Nghiệm thu
 - Có thể truy sự thật chính về bản gốc; vấn đề chưa giải quyết còn hiển thị.
-- Tách lời khuyên tác giả khỏi sự thật sản phẩm; không giả tư liệu tổng hợp là lời chứng thật.
+- Tách lời khuyên tác giả khỏi sự thật sản phẩm; không giả tư liệu giả lập là lời chứng thật.
 - PPTX mở và sửa được; kiểm tra từng trang, ghi phần mềm và môi trường phông chữ.
 - Nêu rõ kiểm tra đã làm và chưa làm; chỉ bàn giao cục bộ.
 

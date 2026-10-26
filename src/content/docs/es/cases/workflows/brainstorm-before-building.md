@@ -3,12 +3,16 @@ title: Lluvia de ideas antes de construir
 description: Antes de escribir código o textos largos, explora de forma estructurada y converge en un plan — menos retrabajo.
 locale: es
 source_locale: zh-CN
-source_revision: 9c5e679
+source_revision: "9c5e679"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de EPXV, planificación, especificación y prompts. Esta página solo describe el método estable «divergir → converger → planificar», sin depender de detalles de entrada del producto.
+  checkedAt: '2026-07-26'
 ---
-
 **Lluvia de ideas antes de construir** encaja cuando el objetivo es difuso y hay más de una solución: funciones nuevas, rediseños, temas de contenido, selección técnica. Se enlaza con la fase ① explorar de [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/), pero insiste en **divergir y converger**, no en leer código y editar archivos de inmediato.
 
 ## Qué resuelve esta página
@@ -82,10 +86,3 @@ Fija un **timebox**: por ejemplo, terminar la divergencia en 15 minutos para evi
 - [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
 - [Trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/)
 - [Pedir un plan](/es/prompts/ask-for-a-plan/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de EPXV, planificación, especificación y prompts. Esta página solo describe el método estable «divergir → converger → planificar», sin depender de detalles de entrada del producto.

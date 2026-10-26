@@ -1,10 +1,12 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "checkedAt": "2026-08-26 (trên máy cục bộ: `codex-cli 0.148.0`)"}
 title: Profile cấu hình
 description: Dùng tệp cấu hình riêng để áp dụng một nhóm cài đặt có tên cho Codex CLI.
 locale: vi
 source_locale: zh-CN
-source_revision: 6ab30c5
-translation_status: draft
+source_revision: "6ab30c5"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 20

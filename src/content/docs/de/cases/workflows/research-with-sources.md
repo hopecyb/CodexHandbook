@@ -3,10 +3,21 @@ title: Recherche mit Quellen
 description: Mit Codex suchen, vergleichen und Fakten prüfen — nachvollziehbare Quellen und Schlussfolgerungen liefern.
 locale: de
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: "a6fd201"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs:
+- markdown
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle öffentliche Fähigkeiten zu Websuche und Recherche mit Quellen bei OpenAI Developers sowie die bereits geprüften Kapitel zu Websuche, Quellenvalidierung, Umgang mit Unsicherheit
+    und Versionspolicy. Diese Seite bestätigt nur die stabile Recherchemethode „zentrale Schlussfolgerungen müssen auf Quellen zurückführbar sein; Konflikte und Unsicherheit explizit kennzeichnen“.
+  checkedAt: '2026-07-26'
 ---
 
 **Recherche mit Quellen** verlangt, dass jede zentrale Schlussfolgerung auf eine konkrete Quelle zurückgeht — etwa offizielle Docs, Papers oder Repository-Dateien — statt einer unbegründeten Aussage. Geeignet für Technikauswahl, Wettbewerbsvergleiche, Literaturreviews und Policy-Interpretation.
@@ -63,10 +74,3 @@ Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalte
 
 - [Mit Unsicherheit umgehen](/de/guide/quality/handle-uncertainty/)
 - [Fall: Docs refactoren und prüfen](/de/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Fähigkeiten zu Websuche und Recherche mit Quellen bei OpenAI Developers sowie die bereits geprüften Kapitel zu Websuche, Quellenvalidierung, Umgang mit Unsicherheit und Versionspolicy. Diese Seite bestätigt nur die stabile Recherchemethode „zentrale Schlussfolgerungen müssen auf Quellen zurückführbar sein; Konflikte und Unsicherheit explizit kennzeichnen“.  
-**Zuletzt geprüft:** 2026-07-26

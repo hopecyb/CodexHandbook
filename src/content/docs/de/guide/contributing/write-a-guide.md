@@ -9,9 +9,10 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: dd22df1
-translation_status: draft
+source_revision: "dd22df1"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Diese Seite erklärt, wie du unter `src/content/docs/` eine **Anleitungsseite** hinzufügst oder überarbeitest, also weder ein reines Fallbeispiel noch eine reine Referenztabelle.
@@ -104,7 +105,7 @@ Ein Community-Handbuch kann Informationen verständlich machen, verbinden und au
 
 ## Tonalität
 
-- Deutsch für Praktiker
+- Vereinfachtes Chinesisch für die Quellfassung, ausgerichtet auf Praktiker; Übersetzungen folgen der jeweiligen Zielsprache
 - Unsicherheit offen benennen, etwa mit „Maßgeblich ist die offizielle Dokumentation“
 - Keine Erzählung vom „Universal-Prompt“ verwenden
 

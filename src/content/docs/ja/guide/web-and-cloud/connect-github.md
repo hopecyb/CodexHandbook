@@ -3,12 +3,16 @@ title: GitHub を接続する
 description: 最小限のリポジトリ範囲で Codex Cloud の GitHub アクセスを設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: b126a7e
+source_revision: "b126a7e"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud、GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Codex Cloud では、最初に GitHub または GitLab（Beta）を接続し、次にリポジトリ用の環境を作成します。GitHub で認可した範囲により、Codex が参照できるリポジトリが決まります。ローカルの clone とまだ push していない変更は、その範囲に含まれません。
@@ -62,11 +66,3 @@ Codex は通常の GitHub review を投稿します。自動レビューは Code
 
 - [Codex Cloud クイックスタート](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud、GitHub
-
-**最終検証：** 2026-08-26

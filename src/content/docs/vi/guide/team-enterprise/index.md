@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Bản tổ chức / tính năng đội (tùy gói)"
+  basis: "Trung tâm trợ giúp và tài liệu plugin/ứng dụng OpenAI hiện vẫn nhấn mạnh triển khai Codex/ChatGPT đội cần truy cập theo vai trò, bật plugin, phê duyệt hành động, ranh giới dữ liệu và trách nhiệm kiểm toán ở tầng quản trị. Trang này chỉ là điều hướng chương đội và doanh nghiệp, tập trung mô hình quản trị và thứ tự đọc, không gắn đường dẫn UI quản trị cụ thể."
+  checkedAt: "2026-07-26"
 title: Đội và doanh nghiệp
 description: "Áp dụng, chuẩn mực, quản trị và bảo mật — để Codex triển khai quy mô lớn mà không mất kiểm soát."
 sidebar:
   order: 70
 locale: vi
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: "b44c5d1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Chương **Đội và doanh nghiệp** hướng tới engineering lead, đội nền tảng và bảo mật — trọng tâm là đưa Codex từ dùng cá nhân sang đội quản được, kiểm toán được, rút kinh nghiệm được. Đọc kèm [Lộ trình học · Đội](/vi/guide/learning-paths/team/); chương này nghiêng về quản trị và triển khai.
@@ -26,7 +31,7 @@ Nếu hiện bạn còn dùng cá nhân hoặc đang làm quen cách dùng cơ b
 
 ## Nội dung chương
 
-- Đường từ thí điểm đội nhỏ đến lan tỏa tổ chức
+- Đường từ thí điểm đội nhỏ đến triển khai trong toàn tổ chức
 - Rủi ro bảo mật, tuân thủ và mở rộng (Plugin/MCP)
 - Tham chiếu chéo tới các chương khác trong sổ tay
 
@@ -57,7 +62,7 @@ Quan sát (kiểm toán, chỉ số, rút kinh nghiệm)
 | Bảo mật | [Mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) · [Rủi ro Plugin/MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/vi/guide/team-enterprise/security/prompt-injection/) |
 | Quản trị | [Chính sách sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/) |
 
-Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. — xem [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (tài liệu quy hoạch kho).
+Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. — xem [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (tài liệu kế hoạch của kho mã).
 
 ## Quan hệ với cấu hình cá nhân hóa
 
@@ -66,7 +71,7 @@ Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. �
 
 ## Lỗi thường gặp
 
-- Chỉ mua ghế ngồi mà không đào tạo và chuẩn mực
+- Chỉ mua suất truy cập mà không đào tạo hoặc xây dựng tiêu chuẩn
 - Sandbox cá nhân nới lỏng trở thành mặc định tổ chức
 - Phê duyệt mọi Plugin cộng đồng không có danh sách
 
@@ -80,7 +85,7 @@ Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. �
 
 ### 1. Tôi đang dùng một mình — có cần xem chương này không?
 
-Không nhất thiết phải đọc sâu ngay.  
+Không nhất thiết phải đọc sâu ngay.
 Nhưng nên biết: một khi Codex từ công cụ cá nhân thành hệ thống đội, vấn đề không còn chỉ là viết Prompt thế nào.
 
 ### 2. Vì sao ở đây cứ nói kiểm toán, quản trị, chính sách?
@@ -94,11 +99,4 @@ Có thể xem trước:
 - [Rủi ro Plugin và MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/)
 - [Chính sách sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/)
 
-Nếu hiện bạn chủ yếu quan tâm bắt đầu cá nhân, chương này có thể để sau; khi bắt đầu lan tỏa đội, quản lý quyền hoặc kiểm soát rủi ro hãy quay lại.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** Bản tổ chức / tính năng đội (tùy gói)  
-**Cơ sở kiểm chứng:** Trung tâm trợ giúp và tài liệu plugin/ứng dụng OpenAI hiện vẫn nhấn mạnh triển khai Codex/ChatGPT đội cần truy cập theo vai trò, bật plugin, phê duyệt hành động, ranh giới dữ liệu và trách nhiệm kiểm toán ở tầng quản trị. Trang này chỉ là điều hướng chương đội và doanh nghiệp, tập trung mô hình quản trị và thứ tự đọc, không gắn đường dẫn UI quản trị cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Nếu hiện bạn chủ yếu quan tâm bắt đầu cá nhân, chương này có thể để sau; khi bắt đầu triển khai cho nhóm, quản lý quyền hoặc kiểm soát rủi ro hãy quay lại.

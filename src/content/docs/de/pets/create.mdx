@@ -3,9 +3,10 @@ title: Ein Codex Pet erstellen
 description: "Verstehe die Erstellung eines Codex Pet über Assets, Spritesheet, Metadaten und Lizenzierung."
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 57e9aca
+source_revision: "57e9aca"
 contentType: guide
 editorialStatus: review
 verification:
@@ -31,9 +32,9 @@ Die übliche Minimalstruktur ist:
   spritesheet.webp
 ```
 
-## Was eine Spritesheet ist
+## Was ein Spritesheet ist
 
-Eine Spritesheet kombiniert viele Animationsframes in einem großen Bild. Der Client muss nicht dutzende kleine Dateien laden, sondern schneidet Frames anhand von Zeile und Spalte aus dem Bild und spielt sie nacheinander ab.
+Ein Spritesheet kombiniert viele Animationsframes in einem großen Bild. Der Client muss nicht dutzende kleine Dateien laden, sondern schneidet Frames anhand von Zeile und Spalte aus dem Bild und spielt sie nacheinander ab.
 
 Prüfe Atlas-Spezifikation und Versionsfelder zusammen. Eine ältere Abbildung auf dieser Site verwendet 8 Spalten × 9 Zeilen mit 192 × 208 px pro Frame (insgesamt 1536 × 1872 px). Das ist keine allgemeingültige Spezifikation für alle Clients. Besorge vor dem Erstellen der Dateien die Formatbeschreibung für die Zielversion des Clients oder Erstellungswerkzeugs und bestätige Raster, Aktionszuordnung und Versionsfelder.
 
@@ -72,7 +73,7 @@ Empfehlungen:
 - `description` konkret und verständlich schreiben.
 - Bewahre Autor, Version, Herkunft und Lizenz in der README- oder LICENSE-Datei des Pakets auf; gehe nicht davon aus, dass der Client beliebige zusätzliche Felder akzeptiert.
 
-`pet.json` speichert nicht die Animation selbst. Es sagt dem Client, wer das Paket ist, wo die Assets liegen und wie sie interpretiert werden sollen.
+`pet.json` speichert nicht die Animation selbst. Es gibt dem Client die Identität des Pakets, die Speicherorte der Assets und Hinweise zu ihrer Interpretation an. Stimmen Ressourcenpfade, Dateinamen oder Verzeichnisstruktur nicht überein, kann der Client das Paket normalerweise nicht laden.
 
 ## Lokale Prüfung
 
@@ -80,7 +81,7 @@ Vor Veröffentlichung oder Weitergabe mindestens prüfen:
 
 - `pet.json` ist gültiges JSON.
 - `spritesheetPath` zeigt auf eine vorhandene Datei.
-- Größe und Frame-Raster der Spritesheet passen zum aktuellen Vertrag.
+- Größe und Frame-Raster des Spritesheets passen zum aktuellen Vertrag.
 - Animationen springen, driften oder schneiden nicht sichtbar ab.
 - Transparenter Hintergrund ist sauber.
 - Das Paket enthält keine temporären Dateien, Quelldateien oder Assets, die nicht öffentlich sein sollten.

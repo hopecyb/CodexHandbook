@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página es el principio de selección de herramientas impulsado por la tarea: leer/cambiar contenido del proyecto prioriza archivo; verificar comandos prioriza terminal; consultar hechos públicos prioriza búsqueda; ver la página real prioriza navegador; el marco se contrastó con los capítulos de herramientas del manual actual y las categorías reales de herramientas."
+  checkedAt: "2026-07-26"
 title: Selección de herramientas
 description: Cuándo usar terminal, búsqueda, navegador u otras herramientas.
 locale: es
 source_locale: zh-CN
-source_revision: 9fdb366
+source_revision: '9fdb366'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -23,7 +28,7 @@ Al elegir, miras sobre todo:
 - Cuál obtiene el resultado con el menor coste
 - Cuál tiene menos riesgo y se comprueba mejor
 
-Con el mismo objetivo, una herramienta equivocada no siempre falla del todo, pero a menudo es más lenta, más tortuosa y más propensa a imprevistos.
+Con el mismo objetivo, una herramienta equivocada no siempre falla del todo, pero a menudo es más lenta, más complicada y más propensa a imprevistos.
 
 | Necesitas | Prioriza |
 |---|---|
@@ -83,7 +88,7 @@ Muchas tareas reales combinan, por ejemplo:
 
 La clave es usar en cada paso la herramienta más adecuada; no hace falta obsesionarse con «solo una».
 
-## Formulación usable directamente
+## Instrucciones listas para usar
 
 Puedes añadir en la tarea:
 
@@ -91,11 +96,4 @@ Puedes añadir en la tarea:
 Prioriza archivos y terminal; no busques en la red. Si necesitas el navegador para comprobar la página, explica primero el motivo.
 ```
 
-Elige primero la herramienta mínima y más cercana a la tarea; no empieces por la de mayor superficie de impacto.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página es el principio de selección de herramientas impulsado por la tarea: leer/cambiar contenido del proyecto prioriza archivo; verificar comandos prioriza terminal; consultar hechos públicos prioriza búsqueda; ver la página real prioriza navegador; el marco se contrastó con los capítulos de herramientas del manual actual y las categorías reales de herramientas.  
-**Última verificación:** 2026-07-26
+Elige primero la herramienta mínima y más cercana a la tarea; no empieces por la de mayor alcance.

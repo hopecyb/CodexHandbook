@@ -4,15 +4,16 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Đã đối chiếu với trang Authentication chính thức hiện tại; xác minh hai cách đăng nhập cục bộ bằng ChatGPT và API key, yêu cầu đăng nhập ChatGPT cho Cloud, các lệnh CLI, việc chia sẻ bộ nhớ đệm và ranh giới lưu trữ thông tin xác thực."
   checkedAt: "2026-08-26"
-title: Đăng nhập và xác thực
-description: Chọn đúng phương thức đăng nhập cho ứng dụng cục bộ và Cloud, rồi kiểm tra danh tính đang hoạt động một cách an toàn.
-locale: vi
-source_locale: zh-CN
-source_revision: ea83fa6
-translation_status: draft
+title: "Đăng nhập và xác thực"
+description: "Chọn đúng phương thức đăng nhập cho ứng dụng cục bộ và Cloud, rồi kiểm tra danh tính đang hoạt động một cách an toàn."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "ea83fa6"
+translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:
   order: 60
+reviewed_at: "2026-10-26"
 ---
 
 Khi dùng mô hình OpenAI, Codex có hai cách đăng nhập cá nhân:
@@ -20,7 +21,7 @@ Khi dùng mô hình OpenAI, Codex có hai cách đăng nhập cá nhân:
 - **Đăng nhập bằng ChatGPT:** sử dụng hạn mức của gói đăng ký, đồng thời áp dụng quyền truy cập và chính sách dữ liệu của workspace ChatGPT.
 - **Đăng nhập bằng API key:** tính phí theo mức sử dụng API, đồng thời áp dụng chính sách dữ liệu và quản trị của API organization.
 
-Ứng dụng Codex trên máy tính, Codex CLI và tích hợp IDE đều hỗ trợ hai cách này cho công việc cục bộ; **Codex Cloud yêu cầu đăng nhập bằng ChatGPT**.
+Ứng dụng ChatGPT trên máy tính, Codex CLI và tích hợp IDE đều hỗ trợ hai cách này cho công việc cục bộ; **Codex Cloud yêu cầu đăng nhập bằng ChatGPT**.
 
 ## Đăng nhập bằng ChatGPT
 

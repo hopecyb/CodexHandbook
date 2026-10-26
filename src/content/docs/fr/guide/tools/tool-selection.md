@@ -10,9 +10,10 @@ sidebar:
   order: 10
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 9fdb366
+source_revision: "9fdb366"
+reviewed_at: 2026-10-26
 ---
 
 « Choisir un outil » consiste à trouver la méthode efficace et sûre pour accomplir la tâche. Il est généralement plus clair de partir du type de travail.

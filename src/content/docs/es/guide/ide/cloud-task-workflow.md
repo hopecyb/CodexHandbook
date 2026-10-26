@@ -3,13 +3,17 @@ title: Tareas de Cloud desde el IDE
 description: Delega tareas largas desde el IDE a Codex Cloud y vuelve a resultados que se puedan revisar.
 locale: es
 source_locale: zh-CN
-source_revision: d5369b5
-translation_status: draft
+source_revision: "d5369b5"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: IDE / Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 Desde el IDE puedes mantener las iteraciones rápidas en local o conectarte a Codex web y delegar las tareas más largas a Cloud. El punto de partida sigue estando en el editor, pero el entorno de ejecución, el estado del repositorio y los límites de acceso a la red pasan a ser los de Cloud.
 
 ## Cuándo delegar

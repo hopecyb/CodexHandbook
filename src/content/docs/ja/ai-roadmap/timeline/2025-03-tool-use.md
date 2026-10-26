@@ -1,20 +1,21 @@
 ---
-title: "Tool Use（ツール利用）"
-description: "ツール利用には、ツールの選択、引数の構成、実行、結果の読み取り、次の手順の判断が含まれます。呼び出しが一度成功してもタスク全体が完了したとは限りません。実行エラーと業務上の確認で見つかった問題も区別する必要があります。"
-contentType: "guide"
-editorialStatus: "review"
+title: Tool Use（ツール利用）
+description: ツール利用には、ツールの選択、引数の構成、実行、結果の読み取り、次の手順の判断が含まれます。呼び出しが一度成功してもタスク全体が完了したとは限りません。実行エラーと業務上の確認で見つかった問題も区別する必要があります。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。
   evidence:
-    - label: "エージェント向け新ツールの発表"
-      href: "https://openai.com/index/new-tools-for-building-agents/"
+  - label: エージェント向け新ツールの発表
+    href: https://openai.com/index/new-tools-for-building-agents/
 locale: ja
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: "efd508a"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## 確認可能な出来事と範囲

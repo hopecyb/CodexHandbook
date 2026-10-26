@@ -8,11 +8,12 @@ title: Capability map
 description: An overview of prompts, tools, extensions, multiple agents, and governance.
 locale: en
 source_locale: zh-CN
-source_revision: "1a4cd98"
-translation_status: draft
+source_revision: '1a4cd98'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 7
+reviewed_at: 2026-10-25
 ---
 
 The handbook has many modules. When you first arrive, it is easy to lose sight of how they fit together. This page puts the main capabilities in one map.

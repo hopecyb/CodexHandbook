@@ -1,13 +1,18 @@
 ---
-title: Cuộc trò chuyện và Agent chạy song song
-description: Dùng cuộc trò chuyện và worktree riêng để thực hiện đồng thời những tác vụ độc lập có thể nghiệm thu riêng.
-locale: vi
-source_locale: zh-CN
-source_revision: 2336db1
-translation_status: draft
-translated_at: 2026-09-20
+title: "Cuộc trò chuyện và Agent chạy song song"
+description: "Dùng cuộc trò chuyện và worktree riêng để thực hiện đồng thời những tác vụ độc lập có thể nghiệm thu riêng."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "2336db1"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 30
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Đơn vị cơ bản của công việc song song là một cuộc trò chuyện có ngữ cảnh, tin nhắn, kết quả và mục tiêu riêng. Một việc không phù hợp để chạy song song chỉ vì nó có nhiều bước. **Các tác vụ phải độc lập, có ranh giới tệp rõ ràng và có thể nghiệm thu riêng**.

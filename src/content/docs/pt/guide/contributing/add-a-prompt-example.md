@@ -1,32 +1,33 @@
 ---
-title: Adicionar um exemplo de Prompt
-description: Submeter Prompts reproduzíveis em examples/prompts, com metadados e critérios de aceitação.
+title: Adicionar um exemplo de prompt
+description: Submeter prompts reproduzíveis em examples/prompts, com metadados e critérios de aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: "15dabd2"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "basis": "Revista item a item com o diretório atual `examples/`, o frontmatter dos exemplos, a forma de indexação e o fluxo de contribuição; os requisitos da página alinham-se com a estrutura atual de ligações de casos/fluxos e não dependem de comportamentos voláteis de um cliente Codex.", "checkedAt": "2026-07-26"}
 ---
 
-Os exemplos de Prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
+Os exemplos de prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Conteúdo desta página
 
 Pontos onde se costuma ficar preso:
 
-- Não saber «que tipo de Prompt vale a pena incluir»
+- Não saber «que tipo de prompt vale a pena incluir»
 - Não saber em que formato escrever para outros reutilizarem diretamente
 
 Esta página resolve como submeter um exemplo que **outros possam mesmo experimentar, aprender e reproduzir**.
 
 ## Critérios de inclusão
 
-Aqui entram «exemplos reproduzíveis com Contexto, limites e critérios de aceitação» — não fragmentos de inspiração.
+Aqui entram «exemplos reproduzíveis com contexto, limites e critérios de aceitação» — não fragmentos de inspiração.
 
-Um exemplo de Prompt aceitável responde pelo menos a três coisas:
+Um exemplo de prompt aceitável responde pelo menos a três coisas:
 
 - Quando usar
 - Como dizer em concreto
@@ -34,7 +35,7 @@ Um exemplo de Prompt aceitável responde pelo menos a três coisas:
 
 Se for só uma frase que parece inteligente, sem premissas nem aceitação, parece mais uma nota do que um exemplo.
 
-## Nomeação de ficheiros
+## Nomeação de arquivos
 
 ```text
 examples/prompts/<category>/<slug>.md
@@ -58,10 +59,10 @@ last_verified: YYYY-MM-DD
 ---
 ```
 
-## Secções obrigatórias no corpo
+## Seções obrigatórias no corpo
 
 1. **Cenário de uso**
-2. **Preparação** (Permissões, branch, ficheiros de Contexto)
+2. **Preparação** (Permissões, branch, arquivos de contexto)
 3. **Prompt recomendado** (completo e copiável)
 4. **Critérios de aceitação** (checklist, verificável objetivamente)
 5. **Formas comuns de falhar**
@@ -73,11 +74,11 @@ Opcional: versão mínima, desmontagem pedagógica, variáveis substituíveis.
 
 ### Não disperse o essencial
 
-Alguns contribuidores escrevem muito fundo, teoria e extensões, e o Prompt realmente copiável fica escondido no meio.
+Alguns contribuidores escrevem muito fundo, teoria e extensões, e o prompt realmente copiável fica escondido no meio.
 
 Mais estável:
 
-- Escreva primeiro o Prompt recomendado completo
+- Escreva primeiro o prompt recomendado completo
 - Depois premissas, variáveis e formas de falhar
 - Por fim conteúdo explicativo
 
@@ -88,12 +89,12 @@ Você sabe que premissas tinha em mente; o leitor não.
 Escreva essas premissas, por exemplo:
 
 - A que entrada de produto se aplica
-- Que ficheiros, ecrãs ou Contexto precisa
-- Se por defeito permite alterar ficheiros, correr comandos, ligar à rede
+- Que arquivos, capturas de tela ou contexto precisa
+- Se por defeito permite alterar arquivos, correr comandos, ligar à rede
 
 ### Não meta informação sensível real no exemplo
 
-Se o exemplo tiver Tokens reais, contas, ligações internas ou dados de clientes, não serve para repositório público.
+Se o exemplo tiver tokens reais, contas, ligações internas ou dados de clientes, não serve para repositório público.
 
 O exemplo ensina o método — não expõe o seu ambiente de produção.
 
@@ -103,15 +104,15 @@ O exemplo ensina o método — não expõe o seu ambiente de produção.
 ## Critérios de aceitação
 
 - [ ] O teste que falhava passa
-- [ ] A suite de testes do âmbito acordado passa
-- [ ] O diff só envolve ficheiros relacionados com a Tarefa
+- [ ] A suite de testes do escopo acordado passa
+- [ ] O diff só envolve arquivos relacionados com a tarefa
 - [ ] Não se executou git push
 ```
 
 ## Limiar de qualidade
 
 - Objetivo e definição de concluído claros
-- Explicação de Permissões e limites de segurança
+- Explicação de permissões e limites de segurança
 - Sem segredos reais nem PII
 - Estado `verified` exige [Verificação independente](/pt/guide/contributing/verify-technical-content/)
 
@@ -119,21 +120,15 @@ O exemplo ensina o método — não expõe o seu ambiente de produção.
 
 Ordem mais estável:
 
-1. Determine que tipo de Tarefa real este exemplo resolve
-2. Escreva uma versão de Prompt que outros possam copiar diretamente
+1. Determine que tipo de tarefa real este exemplo resolve
+2. Escreva uma versão de prompt que outros possam copiar diretamente
 3. Dê as precondições e limites mínimos necessários
 4. Clarifique «o que conta como sucesso»
 5. Por fim verifique fugas de informação sensível e o diretório certo
 
 ## Verificação do PR
 
-- [ ] O caminho do ficheiro novo está no índice de `examples/README.md` (se o índice for mantido)
+- [ ] O caminho do arquivo novo está no índice de `examples/README.md` (se o índice for mantido)
 - [ ] Pelo menos uma página de caso ou fluxo liga a este exemplo (opcional mas recomendado)
 
-Um bom exemplo de Prompt permite a outros reproduzir diretamente e obter um resultado próximo.
-
----
-
-**Estado:** verificado  
-**Base de verificação:** Revista item a item com o diretório atual `examples/`, o frontmatter dos exemplos, a forma de indexação e o fluxo de contribuição; os requisitos da página alinham-se com a estrutura atual de ligações de casos/fluxos e não dependem de comportamentos voláteis de um cliente Codex.  
-**Última verificação:** 2026-07-26
+Um bom exemplo de prompt permite a outros reproduzir diretamente e obter um resultado próximo.

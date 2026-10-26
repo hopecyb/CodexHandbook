@@ -5,10 +5,15 @@ sidebar:
   order: 31
 locale: de
 source_locale: zh-CN
-source_revision: 3eb251e
+source_revision: "3eb251e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen verifizierte Kapitel zu Planung, Kontext, Überprüfung und Multi-Task-Kollaboration; nur stabile Kollaborationsprinzipien — keine Client-UI oder Einstiege als langfristigen Vertrag.
+  checkedAt: '2026-07-26'
 ---
 
 Agent-Arbeit fragt: Wie bringt man eine Aufgabe in einen **überprüfbaren Fertigzustand**? Wann zuerst planen, wann Subaufgaben splitten, wann mittendrin korrigieren, wann übergeben und fortsetzen — das behandelt dieses Kapitel.
@@ -67,7 +72,7 @@ Oft ist „während der Ausführung einengen“ normal — nicht so tun, als sei
 
 Nicht immer.
 
-Ohne klare Grenzen verwirrten mehr Subaufgaben den Hauptthread.
+Ohne klare Grenzen machen zusätzliche Teilaufgaben den Hauptthread unübersichtlicher.
 
 ## Bezug zu anderen Kapiteln
 
@@ -82,12 +87,12 @@ Nur das Nötigste:
 
 1. Aufgabe klar sagen
 2. Bei Komplexität zuerst Plan verlangen
-3. Unterwegs anhand Ergebnissen klein korrigieren
+3. Unterwegs anhand der Ergebnisse gezielt korrigieren
 4. Vor dem Ende überprüfbares Ergebnis verlangen
 
 Wenn diese 4 Schritte sitzen, fallen Subagents und Übergabe natürlicher.
 
-Agent-Arbeit misst, ob die Aufgabe in Planung, Ausführung, Korrektur und Abschluss kontinuierlich in die richtige Richtung geht.
+Bei Agent-Arbeit kommt es darauf an, ob die Aufgabe in Planung, Ausführung, Korrektur und Abschluss kontinuierlich in die richtige Richtung geht.
 
 ## Häufige Fallen
 
@@ -98,9 +103,3 @@ Agent-Arbeit misst, ob die Aufgabe in Planung, Ausführung, Korrektur und Abschl
 
 ## Quellen
 - Offizielle OpenAI-Codex-Hinweise zu Aufgabenkollaboration und Ausführung
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Planung, Kontext, Überprüfung und Multi-Task-Kollaboration; nur stabile Kollaborationsprinzipien — keine Client-UI oder Einstiege als langfristigen Vertrag.  
-**Zuletzt geprüft:** 2026-07-26

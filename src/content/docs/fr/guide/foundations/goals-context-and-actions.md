@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Cette page explique uniquement le cadre objectif, contexte, actions et critères d'acceptation pour découper une tâche ; ses liens internes et la structure de son exemple ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer."
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page explique uniquement le cadre objectif, contexte, actions et critères d'acceptation pour découper une tâche ; ses liens internes et la structure de son exemple ont été vérifiés, et elle ne dépend pas de faits produit susceptibles de changer.
+  checkedAt: '2026-07-26'
 title: Objectifs, contexte et actions
 description: Décomposer une interaction réussie en objectif, contexte, actions et critères d'acceptation.
 locale: fr
 source_locale: zh-CN
 source_revision: "280cea9"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
-
 Certaines tâches avancent sans difficulté, tandis que d'autres dévient au fil de la conversation. La différence tient souvent à la clarté du découpage de la tâche, et non à une variation soudaine de l'intelligence du modèle.
 
 En bref : l'objectif dit « quel résultat final obtenir », le contexte dit « sur quoi s'appuyer », les actions disent « ce qu'il peut faire » et les critères d'acceptation disent « quand considérer le travail terminé ».
@@ -50,7 +50,7 @@ L'absence d'un élément peut poser problème :
 
 Non.
 
-« Aide-moi à modifier la page d'accueil » indique une direction, mais pas assez pour agir régulièrement. Codex doit aussi savoir :
+« Aide-moi à modifier la page d'accueil » indique une direction, mais ne donne pas assez de précisions pour agir de façon fiable. Codex doit aussi savoir :
 
 - Quel fichier modifier
 - Quoi conserver

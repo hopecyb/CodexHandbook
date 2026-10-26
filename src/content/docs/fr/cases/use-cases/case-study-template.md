@@ -1,12 +1,17 @@
 ---
 title: Modèle de cas
-description: Structure unifiée pour rédiger et rétrospecter des cas Codex — faciliter la capitalisation et la comparaison en équipe.
+description: Structure unifiée pour rédiger et analyser des cas Codex — faciliter la capitalisation et la comparaison en équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: '74ef905'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les flux EPXV vérifiés du manuel, la reprise après échec, les instructions de projet et la structure de la bibliothèque de cas ; cette page fournit uniquement un modèle de structure pour rédiger et analyser des cas, sans déclarer de comportement produit spécifique.
+  checkedAt: '2026-07-26'
 ---
 
 Copiez ce modèle pour créer une nouvelle page de cas ou un document de rétrospective interne.
@@ -74,9 +79,3 @@ Avant de copier, supprimez les sections inutiles selon le public réel et le liv
 ## 6. Sources de référence
 - Liens vers la documentation officielle
 - Si le cas s'inspire d'un tutoriel externe (type de tâche uniquement)
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les flux EPXV vérifiés du manuel, la reprise après échec, les instructions de projet et la structure de la bibliothèque de cas ; cette page fournit uniquement un modèle de structure pour rédiger et rétrospecter des cas, sans déclarer de comportement produit spécifique.

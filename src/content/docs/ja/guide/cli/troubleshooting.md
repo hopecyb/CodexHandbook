@@ -3,12 +3,17 @@ title: CLI トラブルシューティング
 description: 認証、権限、コマンド失敗の切り分け。
 locale: ja
 source_locale: zh-CN
-source_revision: 57b062f
+source_revision: "57b062f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: OpenAI Help Center の現行 CLI 入門・設定資料は、インストール、認証、権限 / サンドボックス、作業ディレクトリなどの一般的な原因をカバーしている。本ページは症状をインストール、ログイン、権限、ディレクトリの 4 類型に分ける安定した切り分け枠組みである。
+  checkedAt: '2026-07-26'
 ---
 
 CLI で問題が起きると、表示はどれもターミナルエラーに見えますが、原因の種類は同じとは限りません。
@@ -55,10 +60,3 @@ CLI の多くの問題は「コマンドが走らない」のではなく、「�
 CLI トラブルシューティングでは、インストール、ログイン、権限、ディレクトリのどれかを先に分けると、だいたいスムーズに進みます。
 
 公式説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
-
----
-
-**状態：** verified  
-**対象製品：** CLI  
-**検証根拠：** OpenAI Help Center の現行 CLI 入門・設定資料は、インストール、認証、権限 / サンドボックス、作業ディレクトリなどの一般的な原因をカバーしている。本ページは症状をインストール、ログイン、権限、ディレクトリの 4 類型に分ける安定した切り分け枠組みである。  
-**最終検証：** 2026-07-26

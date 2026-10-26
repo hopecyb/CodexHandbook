@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains prompt debugging only; in-site links and recovery sequence were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Prompt debugging
 description: How to locate prompt problems when results drift.
 locale: en
 source_locale: zh-CN
-source_revision: efc3015
+source_revision: 'efc3015'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 When results are wrong, common causes include:
@@ -95,10 +100,3 @@ To pull work back on track:
 Core idea: find which critical information wasn't conveyed—not keep complicating the wording.
 
 If it still fails, shrink to a single-file repro or open a new thread and restate constraints.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains prompt debugging only; in-site links and recovery sequence were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

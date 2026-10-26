@@ -3,12 +3,17 @@ title: CLI 設定
 description: モデル、サンドボックス、承認、MCP——ターミナルで Codex の挙動を統一する。
 locale: ja
 source_locale: zh-CN
-source_revision: 0a9b2ad
+source_revision: "0a9b2ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: OpenAI Help Center の現行設定資料は、検証可能な例として `~/.codex/config.toml` と `~/.codex/.env` を使っている。本ページは具体フィールド名に依存せず、CLI の一般的な設定意図、レイヤー分担、リスク境界を要約しているため、概念ページとして `verified` にできる。
+  checkedAt: '2026-07-26'
 ---
 
 CLI 設定は **デフォルトモデル、作業ディレクトリ、承認の厳しさ、MCP サーバー** などを決めます。[設定の基礎](/ja/guide/customization/configuration/config-basics/) と概念は同じで、本ページはターミナルユーザーがよく触る項目に焦点を当てます。
@@ -37,8 +42,8 @@ CLI 設定は「ターミナルでの Codex のデフォルトの働き方」と
 
 | レイヤー | 用途 |
 |---|---|
-| ユーザー級 | 個人デフォルト。プロジェクト横断 |
-| プロジェクト級 | チーム共有ポリシー（コミット前にレビュー） |
+| ユーザーレベル | 個人デフォルト。プロジェクト横断 |
+| プロジェクトレベル | チーム共有ポリシー（コミット前にレビュー） |
 | 環境変数 | CI で鍵とスイッチを注入 |
 
 **パスとファイル名** は CLI バージョンで変わるため、[公式ドキュメント](https://developers.openai.com/codex) を正としてください。よくあるのはユーザーディレクトリの `config.toml` または同等ファイルです。
@@ -51,8 +56,8 @@ CLI 設定は「ターミナルでの Codex のデフォルトの働き方」と
 
 より明確な分け方は次のとおりです。
 
-- 個人の長期嗜好 → ユーザー級
-- このリポジトリで全員が揃えるべきこと → プロジェクト級
+- 個人の長期嗜好 → ユーザーレベル
+- このリポジトリで全員が揃えるべきこと → プロジェクトレベル
 - CI、スクリプト、単発実行だけの一時注入 → 環境変数
 
 ### 設定 = 権限がすぐ広がるわけではない
@@ -83,7 +88,7 @@ CLI は shell 実行、書き込み、ネットワーク接続の前に確認す
 
 ### MCP サーバー一覧
 
-[Connect MCP サーバー](/ja/skills/mcp/connect-an-mcp-server/) と設定を共有。変更後はセッションを再起動してください。
+[MCP サーバーに接続する](/ja/skills/mcp/connect-an-mcp-server/) と設定を共有。変更後はセッションを再起動してください。
 
 ## 十分な設定順序
 
@@ -101,7 +106,7 @@ CLI は shell 実行、書き込み、ネットワーク接続の前に確認す
 「App では動くが CI では失敗」を避けるには：
 
 1. README に推奨 CLI 最低バージョンを明記
-2. プロジェクト級設定には **チーム合意項目だけ** を置く
+2. プロジェクトレベル設定には **チーム合意項目だけ** を置く
 3. 秘密情報はリポジトリに入れない
 
 ## トラブルシューティング
@@ -118,9 +123,3 @@ CLI 設定は「デフォルトの働き方」と考え、**ほぼ毎回同じ�
 
 ## 参考ソース
 - OpenAI Codex CLI configuration
----
-
-**状態：** verified  
-**対象製品：** CLI  
-**検証根拠：** OpenAI Help Center の現行設定資料は、検証可能な例として `~/.codex/config.toml` と `~/.codex/.env` を使っている。本ページは具体フィールド名に依存せず、CLI の一般的な設定意図、レイヤー分担、リスク境界を要約しているため、概念ページとして `verified` にできる。  
-**最終検証：** 2026-07-26

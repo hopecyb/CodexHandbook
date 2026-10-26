@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: c9d7ed8
+source_revision: 'c9d7ed8'
+reviewed_at: '2026-10-26'
 ---
 
 Pour une question ponctuelle, commencez par la FAQ. Elle ne remplace pas les chapitres complets : elle vous aide à trouver la prochaine page utile.

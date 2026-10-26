@@ -1,12 +1,18 @@
 ---
 title: Fallvorlage
-description: Einheitliche Struktur zum Schreiben und Retrospektieren von Codex-Fällen — erleichtert Team-Verstetigung und Vergleich.
+description: Einheitliche Struktur zum Dokumentieren und Auswerten von Codex-Fällen — erleichtert die Wiederverwendung im Team und den Vergleich.
 locale: de
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: "74ef905"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften EPXV-Workflows, Fehlerwiederherstellung, Projektanweisungen und Fallbibliotheksstruktur. Diese Seite liefert nur die einheitliche Vorlage zum Schreiben
+    und Retrospektieren von Fällen und behauptet kein konkretes Produktverhalten.
+  checkedAt: '2026-07-26'
 ---
 
 Diese Vorlage kopieren, um eine neue Fallseite oder ein internes Retro-Dokument anzulegen.
@@ -64,7 +70,7 @@ Vor dem Kopieren Abschnitte streichen, die für Leser und Liefergegenstand irrel
 
 - Welche Probleme auftraten
 - Wie rückgängig gemacht oder korrigiert
-- Was am Prompt/Config beim nächsten Mal anders wäre
+- Was beim nächsten Mal am Prompt oder an der Konfiguration geändert würde
 
 ## 5. Verstetigen
 
@@ -74,9 +80,3 @@ Vor dem Kopieren Abschnitte streichen, die für Leser und Liefergegenstand irrel
 ## 6. Referenzquellen
 - Links zu offiziellen Docs
 - Ob dieser Fall externe Tutorials nur als Aufgabentyp adaptiert
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften EPXV-Workflows, Fehlerwiederherstellung, Projektanweisungen und Fallbibliotheksstruktur. Diese Seite liefert nur die einheitliche Vorlage zum Schreiben und Retrospektieren von Fällen und behauptet kein konkretes Produktverhalten.  
-**Zuletzt geprüft:** 2026-07-26

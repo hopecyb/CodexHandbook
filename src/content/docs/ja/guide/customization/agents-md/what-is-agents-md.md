@@ -3,12 +3,17 @@ title: AGENTS.md とは
 description: プロジェクトレベル永続指示ファイル——Codex への「協業契約」。アーキテクチャ百科ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: 47c5866
+source_revision: "47c5866"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers の現行プロジェクトコンテキスト、タスク境界、承認／サンドボックス制約の公開説明を相互確認。`AGENTS.md` の用途、境界、一般的な書き方に限定。未検証の強制優先順位の細部は含めない。
+  checkedAt: "2026-07-26"
 ---
 
 `AGENTS.md` はリポジトリ（またはサブディレクトリ）に置く **Markdown プロジェクト指示**です。Codex がそのプロジェクトに入ると読み、コーディングスタイル、テスト要求、コミット規範、禁止事項を揃えます。
@@ -27,8 +32,8 @@ sidebar:
 |---|---|
 | テスト、lint、ビルドの実行方法 | 完全 API 文書（正式文書へリンク） |
 | ディレクトリ約束、命名スタイル | 数千行の過去設計決定 |
-| 禁止事項（`main` を変えない、秘密鍵をコミットしない） | 毎回違う一時要求 |
-| コミットメッセージ、PR チェックリスト | コードと無関係な個人好み |
+| 禁止事項（`main` を変えない、シークレットをコミットしない） | 毎回違う一時要求 |
+| コミットメッセージ、PR チェックリスト | コードと無関係な個人の好み |
 
 ## 最小実用例
 
@@ -48,7 +53,7 @@ sidebar:
 
 ## 禁止
 - 依存変更以外で `pnpm-lock.yaml` を変更しない
-- `.env` や API 秘密鍵をコミットしない
+- `.env` や API キーをコミットしない
 - 確認なしに `git push` を実行しない
 
 ## 完了の定義
@@ -85,7 +90,7 @@ sidebar:
 |---|---|
 | リポジトリルート `AGENTS.md` | プロジェクト全体のデフォルト |
 | サブディレクトリ `AGENTS.md` | そのディレクトリと子パス（monorepo で一般的） |
-| ユーザーレベル説明 | 個人設定やグローバル好み。プロジェクト指示と混ぜない |
+| ユーザーレベル説明 | 個人設定やグローバルな設定。プロジェクト指示と混ぜない |
 
 スコープと衝突処理は [スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/) を参照。
 
@@ -127,9 +132,3 @@ sidebar:
 
 ## 参考
 - OpenAI Codex プロジェクトコンテキスト説明
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Developers の現行プロジェクトコンテキスト、タスク境界、承認／サンドボックス制約の公開説明を相互確認。`AGENTS.md` の用途、境界、一般的な書き方に限定。未検証の強制優先順位の細部は含めない。  
-**最終検証：** 2026-07-26

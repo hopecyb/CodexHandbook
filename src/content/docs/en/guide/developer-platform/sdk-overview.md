@@ -18,9 +18,10 @@ sidebar:
   order: 10
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: e888ae6
+source_revision: 'e888ae6'
 ---
 
 The Codex SDK lets a program control a local Codex Agent. “Local” means the machine running the SDK and agent, which could be your computer or a CI runner you manage. Do not assume this is a hosted HTTP service for creating cloud tasks, polling them, and downloading artifacts. See the [official SDK documentation](https://learn.chatgpt.com/docs/codex-sdk).

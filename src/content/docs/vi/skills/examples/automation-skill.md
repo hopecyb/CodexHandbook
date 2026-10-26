@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: "6c758b9"
+reviewed_at: 2026-10-26
 ---
 
 Chạy kiểm tra lặp lại không có nghĩa lần nào cũng phải thông báo. Skill này dùng lại [bài tập kiểm tra liên kết](/vi/cases/use-cases/team-automation/scheduled-link-check/) và ghi nhận thay đổi, phục hồi, lỗi thực thi. Khi kết quả không đổi, nó giữ im lặng.
@@ -63,9 +64,9 @@ Tệp trạng thái phải nằm ngoài thư mục được kiểm tra. Nó lưu
 
 | Tình huống | Hành vi |
 |---|---|
-| Lần đầu khỏe mạnh | Tạo mốc cơ sở, không có sự kiện mới |
+| Lần kiểm tra đầu tiên không phát hiện lỗi | Tạo mốc cơ sở, không có sự kiện mới |
 | Lần đầu lỗi hoặc vấn đề được phát hiện thay đổi | Lưu sự kiện thay đổi |
-| Kết quả tương tự lặp lại | Không tạo sự kiện mới |
+| Kết quả giống hệt lặp lại | Không tạo sự kiện mới |
 | Lỗi đã sửa | Lưu sự kiện phục hồi |
 | Ba lỗi thực thi kiểm tra liên tiếp | Lưu sự kiện dừng và tạm ngưng |
 | Trạng thái hỏng, xung đột khóa hoặc site không khớp | Dừng ngay, không ghi đè trạng thái gốc |
@@ -88,7 +89,7 @@ Nếu kết nối bộ gửi đã được cho phép, hãy đọc sự kiện b�
 
 Xác nhận build thành công rồi mới kiểm tra đầu ra mới nhất. Nếu build thất bại thì dừng, không kiểm tra thư mục cũ. Mỗi lần chạy theo lịch cần dùng cùng site và tệp trạng thái, tránh ghi đồng thời. Kích hoạt thủ công trong môi trường đích để kiểm tra nhật ký và hành vi dừng trước khi đặt lịch lặp. Kênh, người nhận và phạm vi thông báo thực tế phải dựa trên sự cho phép đã có.
 
-Lập lịch thực tế và chuyển phát tin nhắn chưa được thử ở đây. Liên kết ngoài vẫn là `unchecked`; trạng thái cục bộ khỏe mạnh không có nghĩa “mọi liên kết trên site đều hoạt động”.
+Lập lịch thực tế và chuyển phát tin nhắn chưa được thử ở đây. Liên kết ngoài vẫn là `unchecked`; trạng thái kiểm tra cục bộ không có lỗi không có nghĩa “mọi liên kết trên site đều hoạt động”.
 
 ## Phạm vi và nghiệm thu
 

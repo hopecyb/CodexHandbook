@@ -8,11 +8,12 @@ title: AI and language models
 description: Understand how language models generate responses from context.
 locale: en
 source_locale: zh-CN
-source_revision: "ccdac83"
-translation_status: draft
+source_revision: 'ccdac83'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: 2026-10-25
 ---
 
 A language model uses the text, files, and tool results you provide to **predict the most plausible next output**. It is good at completing, organizing, drafting, and continuing work from context. It does not inherently know information you have not provided, and it cannot guarantee that every result is correct.

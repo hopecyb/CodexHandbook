@@ -3,15 +3,20 @@ title: Fundamentos de Agent
 description: Explica cómo un Agent llama Herramientas e itera alrededor de un objetivo.
 locale: es
 source_locale: zh-CN
-source_revision: 14ab120
+source_revision: '14ab120'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica la diferencia de colaboración entre un Agent y un chat normal; se revisaron enlaces internos, conceptos y analogías, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
-Un **Agent** avanza de forma continua hacia un objetivo: entenderlo → elegir Herramientas → observar el resultado → ajustar el siguiente paso, hasta terminar o hasta que tú intervengas.
+Un **Agent** avanza de forma continua hacia un objetivo: entenderlo → elegir Herramientas → observar el resultado → ajustar el siguiente paso, hasta terminar o necesitar tu intervención.
 
 La IA normal se parece más a alguien que responde preguntas; un Agent, a alguien que, al recibir una Tarea, la lleva paso a paso.
 
@@ -24,7 +29,7 @@ La IA normal se parece más a alguien que responde preguntas; un Agent, a alguie
 | Salida | Sobre todo consejos en texto | Puede leer/escribir archivos, ejecutar comandos, cambiar el repositorio |
 | Proceso | Una respuesta | Varias llamadas a Herramientas |
 | Riesgo | Consejos engañosos | También puede estropear archivos o ejecutar comandos peligrosos |
-| Tu rol | Leer | Definir límites, aprobar, aceptar |
+| Tu rol | Leer | Definir límites, aprobar acciones y comprobar resultados |
 
 ## Una analogía intuitiva
 
@@ -37,7 +42,7 @@ En modo Agent, conviene prestar más atención a:
 
 - a qué puede acceder
 - si debe darte un plan primero
-- cómo vas a aceptar el resultado cuando termine
+- cómo vas a comprobar el resultado cuando termine
 
 ## Por qué importa esta diferencia
 
@@ -59,10 +64,3 @@ Al empezar, conviene leer a la vez:
 - Aprobación humana: ver [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
 
 Lo propio de un Agent es que puede dar varios pasos seguidos alrededor de un objetivo, no solo devolverte un párrafo.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica la diferencia de colaboración entre un Agent y un chat normal; se revisaron enlaces internos, conceptos y analogías, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

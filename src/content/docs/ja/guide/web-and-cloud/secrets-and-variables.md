@@ -5,10 +5,14 @@ sidebar:
   order: 30
 locale: ja
 source_locale: zh-CN
-source_revision: 78937be
+source_revision: "78937be"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Cloud の環境変数と Secrets ではライフサイクルが異なります。安全に利用できる用途はこの違いで決まり、UI 上で値が隠されるかどうかだけが差ではありません。
@@ -40,7 +44,7 @@ Agent は token を必要とせず、インストール済みの依存関係を�
 実際の注文を検証させる。
 ```
 
-ネットワークアクセスが有効な場合、これは Agent フェーズ全体で機密値を露出し、外部送信や誤操作のリスクを生みます。fixture、mock、範囲を限定した一時的なテスト認証情報を使うか、認証が必要な準備をセットアップ内で完了してください。
+この設定では機密値が Agent フェーズ全体で利用可能になり、ネットワークアクセスを有効にすると外部送信や誤操作のリスクが生じます。fixture、mock、範囲を限定した一時的なテスト認証情報を使うか、認証が必要な準備をセットアップ内で完了してください。
 
 ## 設定レビュー
 
@@ -64,11 +68,3 @@ GitHub Actions Secrets と Codex Cloud Secrets は別々のストアであり、
 ## 公式情報
 
 - [Cloud 環境：変数と Secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud
-
-**最終検証：** 2026-08-26

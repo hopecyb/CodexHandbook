@@ -8,10 +8,10 @@ title: Modèle de revue
 description: Revoir un diff et les risques de changement de façon structurée.
 locale: fr
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: "e89989d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 

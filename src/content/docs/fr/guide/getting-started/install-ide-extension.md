@@ -3,14 +3,18 @@ title: Installer une intégration IDE
 description: Activer Codex dans un éditeur compatible avec VS Code, Xcode ou un IDE JetBrains.
 locale: fr
 source_locale: zh-CN
-source_revision: e8f88ec
+source_revision: "e8f88ec"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: le guide de démarrage rapide officiel actuel pour les IDE répertorie VS Code, Cursor, Windsurf, VS Code Insiders, Xcode et JetBrains, avec des méthodes d'intégration distinctes pour ces deux derniers groupes.
+  checkedAt: '2026-08-26'
 ---
-
 La prise en charge actuelle des IDE offre plusieurs méthodes d'installation :
 
 | IDE | Installation ou activation |
@@ -41,7 +45,7 @@ Ouvrez un fichier source, sélectionnez un court passage et demandez :
 
 ```text
 Explique uniquement les entrées, les sorties et les chemins d'échec de la sélection actuelle.
-Ne modifie aucun fichier. Cite les noms de symboles pertinents.
+Ne modifie aucun fichier. Cite les noms des fonctions pertinentes.
 ```
 
 Si la réponse ne correspond pas à la sélection, vérifiez :
@@ -52,13 +56,3 @@ Si la réponse ne correspond pas à la sélection, vérifiez :
 - si une autre extension d'IA entre en conflit avec l'intégration ou les raccourcis.
 
 Poursuivez avec le [Workflow de tâche locale dans l'IDE](/fr/guide/ide/local-task-workflow/). Consultez [Éditeurs pris en charge](/fr/guide/ide/supported-editors/) pour la matrice de compatibilité complète.
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** IDE
-
-**Base de vérification :** le guide de démarrage rapide officiel actuel pour les IDE répertorie VS Code, Cursor, Windsurf, VS Code Insiders, Xcode et JetBrains, avec des méthodes d'intégration distinctes pour ces deux derniers groupes.
-
-**Dernière vérification :** 2026-08-26

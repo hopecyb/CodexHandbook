@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Erklärt Priorität und Nutzung offizieller Ressourcen; Haupt-Einstieg der OpenAI-Docs geprüft; keine leicht veraltenden Feinschritte im Fließtext."
+  checkedAt: "2026-07-26"
 title: Offizielle Ressourcen
 description: Links zu offiziellen OpenAI-/Codex-Dokumenten und Einstiegen.
 locale: de
 source_locale: zh-CN
-source_revision: 5a584b0
+source_revision: "5a584b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 120
 ---
@@ -18,12 +23,12 @@ Dieses Handbuch ist ein Community-Open-Source-Leitfaden. Produktverhalten, Insta
 
 Arbeitsteilung:
 
-- Dieses Handbuch erklärt Konzepte und Nutzungsdenken
+- Dieses Handbuch erklärt Konzepte und Vorgehensweisen
 - Offizielle Docs bestätigen aktuelle Version und Schreibweise
 
 Ändern sich offizielle URLs: OpenAI-Navigation maßgeblich; PRs zur Aktualisierung dieser Seite willkommen.
 
-## Wann zuerst offiziell
+## Wann zuerst die offizielle Dokumentation lesen
 
 Direkt zur offiziellen Doku bei:
 
@@ -34,11 +39,11 @@ Direkt zur offiziellen Doku bei:
 
 ## Häufige Missverständnisse
 
-### 1. Offiziell autoritativ ≠ Community-Handbuch überflüssig
+### 1. Die offizielle Dokumentation macht das Community-Handbuch nicht überflüssig
 
 Viele hängen trotz offizieller Texte fest, weil unklar bleibt, wo man starten soll.
 
-### 2. Im Handbuch gestanden ≠ heute noch so
+### 2. Eine frühere Aussage im Handbuch muss heute nicht mehr gelten
 
 Schneller Wandel bei:
 
@@ -61,7 +66,7 @@ Zuerst Handbuch bei:
 
 Zuverlässiger offiziell bei:
 
-- Was ist heute neueste Unterstützung
+- Was wird derzeit unterstützt
 - Wie heißt der Parameter heute
 - Gibt es das Feature in der aktuellen Version
 - Haben sich Produktregeln kürzlich geändert
@@ -69,14 +74,7 @@ Zuverlässiger offiziell bei:
 ## Wenn unsicher, welche Seite zuerst
 
 1. Handbuch für Konzept und Richtung
-2. Vor Config, Install, Ausführung offizielle aktuelle Schreibweise
+2. Vor Konfiguration, Installation oder Ausführung die aktuelle Schreibweise in der offiziellen Dokumentation prüfen
 3. Bei Konflikt: offiziell maßgeblich
 
 Klarere Richtung, weniger veraltete Infos.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Erklärt Priorität und Nutzung offizieller Ressourcen; Haupt-Einstieg der OpenAI-Docs geprüft; keine leicht veraltenden Feinschritte im Fließtext.  
-**Zuletzt geprüft:** 2026-07-26

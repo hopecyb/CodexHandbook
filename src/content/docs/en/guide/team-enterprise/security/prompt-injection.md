@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "All platforms"
+  basis: "OpenAI plugin and external access docs continue to emphasize controlling external content, website access, external app data, and high-risk actions via permissions and confirmation; prompt injection defined here as untrusted text changing Agent behavior, with recognition, read-only, and human-approval mitigations."
+  checkedAt: "2026-07-26"
 title: Prompt Injection
 description: When untrusted text enters context—recognition, mitigation, and team policy essentials.
 locale: en
 source_locale: zh-CN
-source_revision: 3e44fdf
+source_revision: '3e44fdf'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -44,7 +49,7 @@ Watch for:
 - Irrelevant requests to go online, download, or run extra commands
 - Prose that smuggles operational instructions
 
-If it feels like “describing a problem” vs “controlling the assistant,” be cautious.
+If it feels less like describing a problem and more like controlling the assistant, be cautious.
 
 ## When content looks suspicious
 
@@ -53,7 +58,7 @@ If it feels like “describing a problem” vs “controlling the assistant,” 
 3. Return to original goal; check relevance
 4. If secrets, overreach, network, export, or extra commands—default to human confirmation
 
-Pause first. Many incidents are people and Agent continuing down suspicious text.
+Pause first. Many risks arise when both people and the Agent keep following suspicious text.
 
 ## Simple distinction
 
@@ -98,7 +103,7 @@ Separate:
 - **Task goal**: what you explicitly want Codex to do
 - **External input**: issues, web, docs, PR body seen during execution
 
-First is the thread; second is suspect by default.
+The task goal remains the main objective; external input should be treated with caution by default.
 
 ## Minimal CI principles
 
@@ -126,9 +131,3 @@ Do not auto-inherit “operational instructions” from untrusted sources. Many 
 ## Reference sources
 - OWASP LLM Top 10 (Prompt Injection)
 - OpenAI official security guidance
----
-
-**Status:** verified  
-**Products:** All platforms  
-**Verification basis:** OpenAI plugin and external access docs continue to emphasize controlling external content, website access, external app data, and high-risk actions via permissions and confirmation; prompt injection defined here as untrusted text changing Agent behavior, with recognition, read-only, and human-approval mitigations.  
-**Last verified:** 2026-07-26

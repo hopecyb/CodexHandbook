@@ -3,12 +3,17 @@ title: 브라우저 도구
 description: Codex가 웹페이지를 열고 UI 상태를 점검하며 프론트엔드 동작을 검증 — 능력과 경계.
 locale: ko
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / Codex(버전·권한에 따라)
+  basis: OpenAI Help Center는 현재 데스크톱 App 내장 브라우저를 설명하며, Work 또는 Codex에서 웹페이지를 열고 탭을 전환하며 파일을 내려받고 주석 모드를 쓰며 사이트별 접근 승인을 한다고 확인합니다. 이 페이지는 브라우저 도구의 적용 장면, 검색/Computer Use와의 차이, 보안 경계에 초점을 둡니다.
+  checkedAt: '2026-07-26'
 ---
 
 **브라우저 도구**는 Agent가 통제된 환경에서 실제 웹페이지에 접근하게 합니다. DOM 읽기, 스크린샷, 때로는 단순 상호작용. 프론트엔드 검증, 문서 링크 점검, 디자인 대조에 맞고, 보안 감사를 대체하거나 프로덕션 백오피스를 함부로 조작하기엔 맞지 않습니다.
@@ -86,7 +91,7 @@ sidebar:
 3. **경계를 씀**: 외부망 금지, 프로덕션에 폼 제출 금지
 4. **검증**: [산출물 검증](/ko/guide/quality/verify-artifacts/)과 스크린샷 대조
 
-## 바로 쓸 수 있는 쓰기
+## 바로 사용할 수 있는 요청 예시
 
 이렇게 요청하세요.
 
@@ -116,10 +121,3 @@ http://localhost:4321/guide/foundations/local-vs-cloud/ 만 방문하고, 첫 �
 - [ ] 접근 범위가 prompt에 고정됨
 - [ ] 핵심 시각 문제에 스크린샷 또는 글 설명이 있음
 - [ ] 단위/E2E 테스트 결론과 일치하거나, 알려진 차이를 기록함
-
----
-
-**상태:** verified  
-**적용 제품:** App / Codex(버전·권한에 따라)  
-**검증 근거:** OpenAI Help Center는 현재 데스크톱 App 내장 브라우저를 설명하며, Work 또는 Codex에서 웹페이지를 열고 탭을 전환하며 파일을 내려받고 주석 모드를 쓰며 사이트별 접근 승인을 한다고 확인합니다. 이 페이지는 브라우저 도구의 적용 장면, 검색/Computer Use와의 차이, 보안 경계에 초점을 둡니다.  
-**최근 검증:** 2026-07-26

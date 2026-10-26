@@ -3,15 +3,20 @@ title: Token, Contexto y Compactación
 description: Entiende la ventana de Contexto, su ocupación y la Compactación.
 locale: es
 source_locale: zh-CN
-source_revision: cd44efe
+source_revision: 'cd44efe'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica los conceptos básicos de Token, ventana de Contexto y Compactación; se revisaron enlaces internos y formulaciones de ejemplo, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
-La primera vez esta página puede parecer abstracta; no hace falta dominar el principio de bajo nivel. El modelo no tiene memoria infinita. Cuando el contenido crece, se dispersa o se alarga, puede perder el foco, y las restricciones importantes dichas al principio también se van diluyendo.
+La primera vez esta página puede parecer abstracta; no hace falta conocer los detalles de su funcionamiento interno. El modelo no tiene memoria infinita. Cuando el contenido crece, se dispersa o se alarga, puede perder el foco, y las restricciones importantes dichas al principio también se van diluyendo.
 
 Detrás suelen aparecer tres palabras: Token, Contexto y Compactación.
 
@@ -66,10 +71,3 @@ Si te preocupa que se olviden requisitos clave, puedes:
 - Principio y consejos operativos: [Compactación de Contexto](/es/guide/context/compaction/) y [Mantén el Contexto enfocado](/es/guide/context/keep-context-focused/)
 
 Aquí van los conceptos. Cómo controlarlos en la práctica, en el `05`.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica los conceptos básicos de Token, ventana de Contexto y Compactación; se revisaron enlaces internos y formulaciones de ejemplo, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 1438fc7
+source_revision: "1438fc7"
+reviewed_at: 2026-10-26
 ---
 
 Le terminal est l'un des moyens les plus directs de faire agir Codex. Il est efficace, mais demande une attention particulière aux risques.

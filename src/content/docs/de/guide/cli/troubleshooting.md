@@ -3,12 +3,18 @@ title: CLI-Fehlerbehebung
 description: Authentifizierung, Berechtigungen und fehlgeschlagene Befehle untersuchen.
 locale: de
 source_locale: zh-CN
-source_revision: 57b062f
+source_revision: "57b062f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Aktuelle OpenAI-Help-Center-CLI-Einstiegs- und Config-Materialien decken weiterhin Installation, Auth, Berechtigung/Sandbox und Arbeitsverzeichnis als häufige Ursachen ab; diese Seite teilt Symptome
+    in Installation, Login, Berechtigung, Verzeichnis — stabiles Fehler-Routing.
+  checkedAt: '2026-07-26'
 ---
 
 Bei CLI-Problemen wirken Fehler oft wie Terminalfehler — die Ursache muss aber nicht dieselbe Klasse sein.
@@ -33,7 +39,7 @@ Bei CLI-Fehlerbehebung zuerst einordnen: „nicht installiert / nicht angemeldet
 
 ### 1. Jeder CLI-Fehler → dasselbe Log vertiefen
 
-Zuerst in die große Klasse einordnen ist meist schneller als sofort Details zu graben.
+Die Ursache zuerst grob einzuordnen, ist meist schneller, als sofort einzelne Fehlermeldungen im Detail zu untersuchen.
 
 ### 2. Permission denied = Programm kaputt
 
@@ -45,7 +51,7 @@ Auch falsch.
 
 Viele CLI-Probleme: nicht „Befehl läuft nicht“, sondern „im falschen Repo / Arbeitsverzeichnis“.
 
-## Prüfpflichtreihenfolge
+## Reihenfolge der Fehlersuche
 
 1. Existiert der Befehl?
 2. Login-Status?
@@ -54,11 +60,4 @@ Viele CLI-Probleme: nicht „Befehl läuft nicht“, sondern „im falschen Repo
 
 CLI-Fehlerbehebung: zuerst Installation, Login, Berechtigung oder Verzeichnis — dann wird die Suche klarer.
 
-Official: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI  
-**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-CLI-Einstiegs- und Config-Materialien decken weiterhin Installation, Auth, Berechtigung/Sandbox und Arbeitsverzeichnis als häufige Ursachen ab; diese Seite teilt Symptome in Installation, Login, Berechtigung, Verzeichnis — stabiles Fehler-Routing.  
-**Zuletzt geprüft:** 2026-07-26
+Offizielle Hinweise: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).

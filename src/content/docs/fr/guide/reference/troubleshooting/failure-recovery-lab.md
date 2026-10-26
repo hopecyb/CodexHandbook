@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: 'fc91872'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Conservez d'abord l'erreur, repérez ensuite la couche en cause, puis ne changez qu'une variable avant de relancer. Cette page illustre la méthode avec cinq entrées fixes. L'auteur a provoqué les pannes volontairement ; les journaux proviennent de véritables commandes, pas d'incidents rencontrés par des clients.

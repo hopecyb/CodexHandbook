@@ -8,8 +8,9 @@ title: Skill anatomy
 description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
 locale: en
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: '50ca48c'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 
@@ -75,7 +76,7 @@ Many good Skills start with only `SKILL.md` and grow other dirs as reuse increas
 
 ### 2. references/ is just for "more content"
 
-The point is moving long material you should not always load into the main flow.
+The point is to move long explanations out of the main workflow and read them only when needed.
 
 ### 3. Avoid scripts if you can
 
@@ -101,9 +102,6 @@ Ask in this order:
 
 If one or two answers are yes, start splitting.
 
-Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
-
-Full exercise: [Create your first Skill](/en/skills/create-your-first-skill/).
 ## From template to Skill
 
 Many teams do not start by designing a Skill. They start with a prompt they keep copying. Let it evolve in stages:
@@ -127,3 +125,7 @@ Do not turn every template into a Skill. Preserve the ones with repeated use, cl
 | Scripts | Complexity analysis, link checks, coverage counts, formatting checks |
 
 A good Skill is not just a longer prompt. It splits reusable work into readable, testable, maintainable parts.
+
+Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
+
+Full exercise: [Create your first Skill](/en/skills/create-your-first-skill/).

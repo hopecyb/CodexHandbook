@@ -8,13 +8,13 @@ title: Créer votre premier projet d'entraînement
 description: Préparer un dossier d'entraînement sûr et jetable.
 locale: fr
 source_locale: zh-CN
-source_revision: 43dcbdb
-translation_status: draft
+source_revision: "43dcbdb"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 70
+reviewed_at: '2026-10-26'
 ---
-
 Pour un premier projet d'entraînement, on peut être tenté d'utiliser un véritable projet déjà disponible. Cela semble plus simple, mais augmente aussi les risques.
 
 ## Méthode recommandée

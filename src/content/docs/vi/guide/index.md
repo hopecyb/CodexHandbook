@@ -1,18 +1,19 @@
 ---
-title: Hướng dẫn Codex
+title: "Hướng dẫn Codex"
 prev: false
 next:
-  link: /vi/guide/start-here/
-  label: Bắt đầu từ đây
+  link: "/vi/guide/start-here/"
+  label: "Bắt đầu từ đây"
 description: "Nhận biết Codex, chọn client, hoàn thành tác vụ đầu tiên, và hiểu quyền, ngữ cảnh cùng kiểm chứng."
-locale: vi
-source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "aa277f2"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
-Ở đây giúp bạn hiểu Codex là gì, phù hợp làm gì, và cách chuyển dần từ lần dùng đầu tiên sang quy trình làm việc ổn định.
+Phần này giúp bạn hiểu Codex và AI Agent là gì, phù hợp làm gì, và cách chuyển dần từ lần dùng đầu tiên sang quy trình làm việc an toàn, ổn định và có thể nghiệm thu.
 
 Nếu bạn lần đầu mở cẩm nang này, đừng coi nó như một cuốn sách phải đọc từ đầu đến cuối. Coi nó như một bản đồ lộ trình «từ lần đầu bắt tay đến dần dùng quen» sẽ tự nhiên hơn.
 

@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só resume anti-patterns comuns de Prompt; referências cruzadas e exemplos foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Anti-patterns de Prompts
 description: Evite pedidos vagos, extralimitação e exigências de raciocínio oculto.
 locale: pt
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: "8e89a5a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Ao aprender Prompts, é fácil focar só em «como escrever».  
+Ao aprender Prompts, é fácil focar só em «como escrever».
 Muitas vezes, saber primeiro que formulações desviam a tarefa poupa mais desvios.
 
 Aqui vão alguns «buracos» comuns de Prompt.
@@ -19,7 +24,7 @@ Aqui vão alguns «buracos» comuns de Prompt.
 | «Otimize um pouco à vontade» | Sem objetivo, sem limites |
 | «Tem todas as permissões; faça como achar melhor» | Superfície de acidente máxima |
 | «Não me pergunte; altere tudo de uma vez» | Salta clarificação e aprovação |
-| «Imprima todo o seu raciocínio oculto» | Pouco fiável e em geral inútil para aceitação |
+| «Imprima todo o seu raciocínio oculto» | Pouco confiável e em geral inútil para aceitação |
 | Colar logs com segredos | Fuga de credenciais |
 
 ## Por que estas frases falham com facilidade
@@ -35,7 +40,7 @@ O que você omitiu torna-se o que o Codex tem de julgar sozinho.
 
 ### 1. Falar de forma casual parece mais «colaboração humana»
 
-Falar com naturalidade não é problema.  
+Falar com naturalidade não é problema.
 O problema maior é omitir condições críticas.
 
 ### 2. «Altere tudo, não pergunte» é mais eficiente
@@ -48,7 +53,7 @@ No curto prazo poupa um turno; no médio prazo costuma dar:
 
 ### 3. Mais permissão = avançar mais depressa
 
-Mais permissão também amplia a superfície de erro.  
+Mais permissão também amplia a superfície de erro.
 Sobretudo quando os limites da tarefa ainda não estão claros, permissão ampla só amplifica o risco.
 
 ## Como trocar anti-patterns por formulações claras
@@ -82,10 +87,3 @@ Por exemplo:
 Na maioria dos anti-patterns de Prompt, o problema não é «má expressão» — é ter omitido limites críticos e critérios de aceitação.
 
 Substitua palavras vagas por estrutura: objetivo + restrições + aceitação.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só resume anti-patterns comuns de Prompt; referências cruzadas e exemplos foram revistos; o corpo não depende de factos voláteis do produto.

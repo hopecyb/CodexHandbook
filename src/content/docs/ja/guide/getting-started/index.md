@@ -3,12 +3,17 @@ title: クイックスタート
 description: アカウントとインストールから、最初の検証可能なタスクまで。
 locale: ja
 source_locale: zh-CN
-source_revision: 62fb65d
+source_revision: '62fb65d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 4
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: OpenAI Developers ホームページは現在も Codex をコードベースの理解、機能構築、テスト、変更レビューに使える製品として位置づけている。本ページは入門順序とサイト内ナビゲーションのみを提供し、変わりやすいコマンドや UI 詳細に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 目標は、**安全な練習プロジェクト** で最初のタスクを完了し、確認、承認、修正、取り消しを学ぶことです。
@@ -74,10 +79,3 @@ sidebar:
 6. 取り消しまたは修正を学ぶ
 
 このループを通したあと、より複雑な内容を学ぶのが楽になります。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**検証根拠：** OpenAI Developers ホームページは現在も Codex をコードベースの理解、機能構築、テスト、変更レビューに使える製品として位置づけている。本ページは入門順序とサイト内ナビゲーションのみを提供し、変わりやすいコマンドや UI 詳細に依存しない。  
-**最終検証：** 2026-07-26

@@ -1,14 +1,19 @@
 ---
-title: Tài liệu tham chiếu
+title: "Tài liệu tham chiếu"
 description: "Thuật ngữ, lệnh, cấu hình, ma trận quyền, FAQ và lối vào xử lý sự cố."
 sidebar:
   order: 60
-locale: vi
-source_locale: zh-CN
-source_revision: 0c9c971
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "d45e640"
+translation_status: "reviewed"
+translated_at: "2026-10-25"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang chỉ nêu công dụng và lối vào khu tài liệu tham chiếu; liên kết trong site và nhóm chương đã rà lại, và thân bài không tuyên bố giá trị mặc định dễ đổi theo phiên bản."
+  checkedAt: "2026-07-26"
 ---
 
 Ngắn, chính xác, có thể tìm. Khu này chủ yếu là tra cứu và chỉ mục; giải thích sâu nằm ở các chương chuyên đề.
@@ -27,6 +32,7 @@ Trang «Tài liệu tham chiếu» nội dung nhiều; dùng như hộp công c�
 
 ## Chỉ mục hướng học
 
+- [Chọn model: tìm điểm bắt đầu theo tác vụ](/vi/guide/reference/model-selection/)
 - [Thuật ngữ](/vi/guide/reference/glossary/)
 - [Câu hỏi thường gặp](/vi/guide/reference/faq/)
 - [Đối chiếu tính năng](/vi/guide/reference/feature-comparison/)
@@ -51,10 +57,3 @@ Lệnh, khóa cấu hình và quyền mặc định đổi theo cập nhật s�
 :::
 
 Khu tài liệu tham chiếu không phải tutorial chính. Khi gặp thuật ngữ, cấu hình, lệnh hoặc xử lý sự cố, quay lại tra là được.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang chỉ nêu công dụng và lối vào khu tài liệu tham chiếu; liên kết trong site và nhóm chương đã rà lại, và thân bài không tuyên bố giá trị mặc định dễ đổi theo phiên bản.  
-**Kiểm chứng gần nhất:** 2026-07-26

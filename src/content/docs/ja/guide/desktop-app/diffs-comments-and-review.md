@@ -3,12 +3,16 @@ title: 差分、コメント、レビュー
 description: commit または push の前にレビューパネルで実際の変更を確認し、行単位のフィードバックを伝えます。
 locale: ja
 source_locale: zh-CN
-source_revision: 32ee40c
+source_revision: "32ee40c"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App、CLI、IDE
+  checkedAt: "2026-08-26"
 ---
 
 チャットの要約は Codex による作業の説明であり、Git の差分がファイルに実際に起きた変更です。デスクトップ App のレビューパネルでは、差分の表示、行単位のコメント追加、stage、取り消し、commit、push する内容の決定ができます。
@@ -38,7 +42,7 @@ reviewed_at: 2026-08-26
 - 文書と実装が一致しているか
 
 最初に問題を列挙し、重大度順に並べてください。各項目にファイル、位置、証拠、最小限の修正案を含めてください。
-問題がない場合は明示し、まだカバーされていないテストリスクを列挙してください。
+問題が見つからなかった場合はその旨を明示し、まだカバーされていないテストリスクを列挙してください。
 ```
 
 ## 行単位のコメントで曖昧さを減らす
@@ -60,11 +64,3 @@ reviewed_at: 2026-08-26
 ## 公式情報
 
 - [コードレビュー](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**状態：** verified
-
-**対象製品：** App、CLI、IDE
-
-**最終検証：** 2026-08-26

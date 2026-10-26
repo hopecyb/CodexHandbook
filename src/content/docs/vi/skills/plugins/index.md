@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / ứng dụng máy tính / Mobile; Codex trên máy tính và CLI; tiện ích IDE không hỗ trợ Plugin"
+  checkedAt: "2026-08-26"
 title: Plugins
 description: Khám phá, cài đặt và quản lý bộ Skills, connector, MCP, Hooks cùng mẫu tác vụ có thể tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 8917a59
-translation_status: draft
+source_revision: "8917a59"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Plugin là đơn vị kết hợp và phân phối năng lực. Nó có thể chứa Skills, connector, máy chủ MCP, tiện ích trình duyệt, Hooks và mẫu Scheduled task. Công việc thực tế vẫn do những thành phần bên trong thực hiện.

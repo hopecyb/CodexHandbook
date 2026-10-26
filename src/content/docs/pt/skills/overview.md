@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "As regras atuais de carregamento de Skill no runtime do Codex (`SKILL.md`, leitura sob demanda do arquivo completo) alinham-se à definição de Skill como workflow reutilizável no OpenAI Help *Skills in ChatGPT*; esta página foca em conceitos e organização de diretórios, sem depender de UI volátil."
+  checkedAt: "2026-07-26"
 title: Visão geral de Skills
 description: Ensine workflows reutilizáveis ao Codex com SKILL.md — escreva uma vez, chame sob demanda.
 locale: pt
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: "3147d2c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Skill** é um diretório que contém `SKILL.md` (opcionalmente scripts e material de referência). Empacota um fluxo fixo em uma capacidade que o Codex pode **chamar automaticamente ou de forma explícita**.
@@ -22,14 +27,14 @@ Serve para métodos de trabalho que já se repetem e continuarão sendo reutiliz
 | | Comando de barra | Skill |
 |---|---|---|
 | Disparo | Você digita `/xxx` | Você chama com `$name`, ou o modelo combina pela descrição |
-| Contexto | Em geral expande de imediato | **Divulgação progressiva**: no dia a dia só ocupa nome + descrição; o texto completo só é lido quando selecionado |
+| contexto | Em geral expande de imediato | **Divulgação progressiva**: no dia a dia só ocupa nome + descrição; o texto completo só é lido quando selecionado |
 | Adequado para | Entradas fixas, frequentes, que você lembra | Fluxos longos, com documentação, em que o modelo deve decidir quando usar |
 
 ### Divulgação progressiva
 
-Na inicialização, o Codex só vê **name, description e caminho** de cada Skill; o `SKILL.md` completo só é carregado quando decide usar. Assim o corpo pode ter checklists detalhados sem encher o Contexto.
+Na inicialização, o Codex só vê **name, description e caminho** de cada Skill; o `SKILL.md` completo só é carregado quando decide usar. Assim o corpo pode ter checklists detalhados sem encher o contexto.
 
-Atenção: a lista de Skills tem um **orçamento inicial de caracteres** (uma fração pequena do Contexto). Coloque os cenários de disparo essenciais no **início** de `description`, para não falhar o matching após truncamento.
+Atenção: a lista de Skills tem um **orçamento inicial de caracteres** (uma fração pequena do contexto). Coloque os cenários de disparo essenciais no **início** de `description`, para não falhar o matching após truncamento.
 
 ## Estrutura do diretório Skill
 
@@ -68,7 +73,7 @@ description: Revisa o diff do branch atual em relação a main, marca riscos e l
 ## Formas de disparo
 
 1. **Explícito**: em ambientes com suporte, chame com `$skill-name` (nome igual ao `name` do frontmatter)
-2. **Implícito**: o modelo avalia semanticamente pelo `description` se a Tarefa atual se aplica
+2. **Implícito**: o modelo avalia semanticamente pelo `description` se a tarefa atual se aplica
 
 Pontos para um bom `description`:
 
@@ -90,12 +95,12 @@ Prática: [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/)
 
 ### 1. Qual a diferença entre Skill e Prompt?
 
-- **Prompt**: o que você diz nesta Tarefa, de forma temporária
-- **Skill**: um fluxo reutilizável em Tarefas semelhantes futuras
+- **Prompt**: o que você diz nesta tarefa, de forma temporária
+- **Skill**: um fluxo reutilizável em tarefas semelhantes futuras
 
 ### 2. Preciso aprender a escrever Skills desde o início?
 
-Não. Primeiro deixe as Tarefas comuns bem claras; quando um fluxo se repetir muitas vezes, aí vale consolidar em Skill.
+Não. Primeiro deixe as tarefas comuns bem claras; quando um fluxo se repetir muitas vezes, aí vale consolidar em Skill.
 
 ### 3. É a mesma coisa que um comando de barra?
 
@@ -105,7 +110,7 @@ Skill não é obrigatório no começo; serve melhor para organizar fluxos que j�
 
 ## Limites de segurança
 
-- Scripts e chamadas MCP dentro do Skill herdam a política atual de Aprovação
+- Scripts e chamadas MCP dentro do Skill herdam a política atual de aprovação
 - Não hardcodeie segredos no Skill; use variáveis de ambiente ou autenticação MCP
 - A equipe deve revisar Skills de terceiros como revisaria dependências
 
@@ -117,9 +122,3 @@ Skill não é obrigatório no começo; serve melhor para organizar fluxos que j�
 
 ## Fontes
 - Documentação OpenAI Codex Skills
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base da Verificação:** As regras atuais de carregamento de Skill no runtime do Codex (`SKILL.md`, leitura sob demanda do arquivo completo) alinham-se à definição de Skill como workflow reutilizável no OpenAI Help *Skills in ChatGPT*; esta página foca em conceitos e organização de diretórios, sem depender de UI volátil.  
-**Última Verificação:** 2026-07-26

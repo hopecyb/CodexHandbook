@@ -55,6 +55,8 @@ sidebar:
 
 更重要的是判断：这次任务值不值得为“多想一点”付出更多时间和成本。
 
-本手册不绑定某一模型营销名。以你客户端当前列表与 [https://developers.openai.com/codex](https://developers.openai.com/codex) 为准。
+本页讲稳定的选择原则，具体型号单独维护在选型指南。以你客户端当前列表与 [https://developers.openai.com/codex](https://developers.openai.com/codex) 为准。
 
 具体记录方法见[用量、耗时与模型选择](/guide/quality/usage-time-and-model-choice/)，区分订阅额度、API费用、等待与人工返工。
+
+查看当前型号、入口差异和任务建议：[模型选择：按任务找到起点](/guide/reference/model-selection/)。

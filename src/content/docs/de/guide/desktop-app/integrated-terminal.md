@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Integriertes Terminal
 description: Führe Befehle im aktuellen Projekt oder Worktree aus und verifiziere Aufgabenergebnisse anhand echter Ausgaben.
 sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: 727e93e
+source_revision: "727e93e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Jeder Chat in der ChatGPT-Desktop-App besitzt ein Terminal, dessen Geltungsbereich das aktuelle Projekt oder der aktuelle Worktree ist. Es dient nicht nur zum Anzeigen von Protokollen, sondern auch als Nachweisfenster, in dem du Aussagen von Codex überprüfen kannst.
@@ -61,11 +65,3 @@ Die offizielle Dokumentation nennt unter anderem `git status`, `git pull --rebas
 
 - [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
 - [Local environments](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Zuletzt geprüft:** 2026-08-26

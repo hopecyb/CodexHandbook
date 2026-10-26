@@ -16,9 +16,10 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 source_revision: "4ecfa1c"
+reviewed_at: "2026-10-26"
 ---
 
 Codex Dream Skin は第三者によるデスクトップテーマのプロジェクトです。プロジェクトの説明では、公式パッケージを変更せず、ローカル CDP 接続で外観を注入します。これはプロジェクト側の説明であり、本サイトは全バージョンのファイル動作、ネットワーク動作、画面の互換性を検証していません。

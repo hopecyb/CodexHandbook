@@ -2,31 +2,37 @@
 title: Uso, tempo e escolha do modelo
 description: Registre separadamente limite da assinatura, custo da API, espera e retrabalho. Compare modelos com as mesmas tarefas sem confundir consumo com qualidade.
 contentType: guide
-audiences: [beginner, creator, developer, team]
+audiences:
+- beginner
+- creator
+- developer
+- team
 level: intermediate
-outputs: [csv]
+outputs:
+- csv
 editorialStatus: review
 verification:
   kind: source-checked
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: Foram conferidas as explicações oficiais sobre uso, preços da API e cobrança do raciocínio. Os modelos de registro e a estimativa são didáticos; não há medições de velocidade, custo ou economia de tempo de modelos.
   evidence:
-    - label: Uso e preços oficiais do Codex
-      href: https://learn.chatgpt.com/docs/pricing
-    - label: Preços oficiais da API
-      href: https://developers.openai.com/api/docs/pricing
-    - label: Guia de modelos de raciocínio
-      href: https://developers.openai.com/api/docs/guides/reasoning
+  - label: Uso e preços oficiais do Codex
+    href: https://learn.chatgpt.com/docs/pricing
+  - label: Preços oficiais da API
+    href: https://developers.openai.com/api/docs/pricing
+  - label: Guia de modelos de raciocínio
+    href: https://developers.openai.com/api/docs/guides/reasoning
 assets:
-  - path: /downloads/usage-log/usage-log-1.0.0.zip
-    purpose: Modelos para custos e duração das execuções, capturas de limite e notas sobre fontes
-    license: CC0-1.0
-    version: 1.0.0
+- path: /downloads/usage-log/usage-log-1.0.0.zip
+  purpose: Modelos para custos e duração das execuções, capturas de limite e notas sobre fontes
+  license: CC0-1.0
+  version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: ad02d42
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "8b68d92"
+translation_status: reviewed
+translated_at: 2026-10-25
+reviewed_at: '2026-10-26'
 ---
 
 Primeiro esclareça o que está medindo: o limite restante na conta, o custo de uma chamada à API, o tempo de espera ou o trabalho humano de revisão e correção. Essas grandezas têm unidades diferentes e não podem substituir umas às outras.
@@ -75,3 +81,5 @@ As tabelas para download ainda não contêm execuções medidas. Sem uma referê
 Salve os resultados atuais, as pendências e o ponto de retomada. Verifique se a tarefa está presa em tentativas repetidas ou lendo material irrelevante. Reduza o escopo não essencial de acordo com o objetivo, preservando os critérios de qualidade e segurança. Não pule verificações importantes apenas para terminar antes de esgotar o limite.
 
 Se precisar continuar, confira seu limite atual e a modalidade de cobrança antes de decidir. Este artigo não muda automaticamente para cobrança de API, não compra créditos nem altera as configurações da conta. Equipes podem usar o [piloto de duas semanas](/pt/guide/learning-paths/team/) para documentar os motivos da escolha e as condições de retorno.
+
+Consulte os modelos atuais, as diferenças entre interfaces e as recomendações por tarefa: [Escolher modelos: um ponto de partida por tarefa](/pt/guide/reference/model-selection/).

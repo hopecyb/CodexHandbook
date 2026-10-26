@@ -10,12 +10,13 @@ sidebar:
   order: 60
 locale: fr
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 0c9c971
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
+source_revision: 'd45e640'
 ---
 
-Courte, précise et interrogeable : cette section sert surtout d'index et d'aide-mémoire. Les explications approfondies se trouvent dans les chapitres thématiques. Utilisez ces pages comme une boîte à outils, sans devoir les lire de bout en bout.
+Des pages courtes, précises et faciles à rechercher : cette section sert surtout d'index et d'aide-mémoire. Les explications approfondies se trouvent dans les chapitres thématiques. Utilisez ces pages comme une boîte à outils, sans devoir les lire de bout en bout.
 
 ## Comment l'utiliser
 
@@ -29,6 +30,7 @@ Consultez-la avec une question précise plutôt que de tout lire d'une traite.
 
 ## Index pour apprendre
 
+- [Choisir un modèle selon la tâche](/fr/guide/reference/model-selection/)
 - [Glossaire](/fr/guide/reference/glossary/)
 - [FAQ](/fr/guide/reference/faq/)
 - [Comparaison des fonctions](/fr/guide/reference/feature-comparison/)

@@ -7,12 +7,13 @@ next:
 description: Codex를 이해하고, 클라이언트를 고르고, 첫 작업을 마친 뒤 권한·컨텍스트·검증을 익힙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: "aa277f2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
-여기에서는 Codex가 무엇인지, 어디에 잘 맞는지, 그리고 첫 사용에서 안정적인 워크플로로 어떻게 넘어가는지를 안내합니다.
+여기에서는 Codex와 AI Agent가 무엇인지, 어떤 작업에 적합한지, 첫 사용에서 안전하고 안정적이며 완료 여부를 확인할 수 있는 워크플로로 어떻게 발전시키는지 안내합니다.
 
 이 핸드북을 처음 열었다면, 처음부터 끝까지 읽어야 하는 책처럼 대하지 않아도 됩니다. 「첫 사용부터 점점 익숙해지기」까지의 로드맵으로 보는 편이 자연스럽습니다.
 

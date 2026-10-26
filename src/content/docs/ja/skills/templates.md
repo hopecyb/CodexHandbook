@@ -1,20 +1,20 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "現在の Codex ランタイムはスキル内の同梱ファイル利用をガイド可能。本ページは出力テンプレートの安定した書き方で、現行クライアント UI やインストール手順に依存しない。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の Codex ランタイムはスキル内の同梱ファイル利用をガイド可能。本ページは出力テンプレートの安定した書き方で、現行クライアント UI やインストール手順に依存しない。
+  checkedAt: '2026-07-26'
 title: templates/ ディレクトリ
 description: Skill 内で出力テンプレートとレポート骨組みを提供する。
 locale: ja
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: "82a9e01"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
-`templates/` は体裁を省くためだけではありません。実務的には、毎回即興せず Skill 出力を安定させる役割があります。
+`templates/` は体裁を整える手間を省くためだけではありません。実務的には、毎回即興せず Skill 出力を安定させる役割があります。
 
 `references/` が**入力時に何を参照するか**寄りなら、`templates/` は**出力がどう見えるか**寄りです。固定構造と再確認しやすさに向きます。
 

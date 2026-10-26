@@ -1,17 +1,18 @@
 ---
 legacyVerification:
   status: "verified"
-  products: "Cloud、App、IDE、CLI"
+  products: "Cloud / App / IDE / CLI"
   checkedAt: "2026-08-26"
 title: Giao việc và theo dõi
 description: Khởi chạy một tác vụ Cloud độc lập, rồi điều chỉnh hướng thực hiện và nghiệm thu trong cùng cuộc trò chuyện.
 locale: vi
 source_locale: zh-CN
 source_revision: "38b322f"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+reviewed_at: 2026-10-26
 ---
 
 Giao việc không có nghĩa là bỏ mặc vấn đề. Bạn cần đưa mục tiêu, ràng buộc, môi trường và tiêu chí hoàn thành vào một cuộc trò chuyện Cloud độc lập. Tác vụ có thể chạy ở chế độ nền; bạn có thể xem nhật ký, bổ sung bối cảnh, yêu cầu chỉnh sửa và cuối cùng đánh giá diff.
@@ -38,7 +39,7 @@ Hoàn thành: trình bày nguyên nhân gốc, diff, các lệnh và kết quả
 không tự động hợp nhất.
 ```
 
-Sau khi khởi chạy, hãy xác nhận môi trường và nhánh đã chọn là đúng. Trong lúc chạy, chỉ theo dõi khi phát hiện thiếu tiền đề hoặc hướng thực hiện bị lệch:
+Sau khi khởi chạy, hãy xác nhận môi trường và nhánh đã chọn là đúng. Trong lúc chạy, chỉ bổ sung yêu cầu khi phát hiện thiếu điều kiện cần thiết hoặc hướng thực hiện bị lệch:
 
 ```text
 Ràng buộc bổ sung: không sửa HTTP client dùng chung; chỉ sửa trong auth adapter.

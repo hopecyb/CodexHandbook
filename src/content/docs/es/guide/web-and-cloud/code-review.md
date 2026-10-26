@@ -3,15 +3,16 @@ title: Revisión de código en Cloud y GitHub
 description: Revisa el diff de Cloud y utiliza Codex en GitHub como revisión complementaria centrada en los hallazgos importantes.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: es
 source_locale: zh-CN
-source_revision: ea6796a
-translation_status: draft
+source_revision: 'ea6796a'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+reviewed_at: 2026-10-25
 ---
 
 Cuando termina una tarea Cloud, recibes un resumen y un diff. Puedes hacer preguntas de seguimiento, pedir cambios o crear un PR. Que la tarea haya terminado no significa que se haya aprobado la fusión: todavía deben intervenir el CI, la protección de ramas y el criterio humano del proyecto.
@@ -36,7 +37,7 @@ Codex publica sus hallazgos como una revisión normal de GitHub. Según la expli
 1. **Alcance**: ¿coinciden los archivos, directorios, dependencias y elementos generados con la tarea?
 2. **Comportamiento**: ¿cumplen los requisitos las rutas normales, de error y de casos límite?
 3. **Seguridad**: examina autenticación, autorizaciones, tratamiento de entradas, credenciales y acceso saliente a la red.
-4. **Pruebas**: ¿qué pruebas se ejecutaron realmente y se han comunicado los fallos?
+4. **Evidencias**: ¿qué pruebas se ejecutaron realmente y se han comunicado los fallos?
 5. **Posibilidad de reversión**: ¿puede deshacerse el cambio de forma acotada o mezcla refactorizaciones ajenas?
 
 Ejemplo de prompt:
@@ -54,7 +55,7 @@ de estilo como defectos.
 Añade lo siguiente al `AGENTS.md` del directorio correspondiente:
 
 ```md
-## Reglas de revisión de código
+## Code Review Rules
 
 ### Límites de autenticación
 

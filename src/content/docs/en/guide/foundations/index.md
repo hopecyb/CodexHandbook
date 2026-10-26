@@ -8,11 +8,12 @@ title: Foundations
 description: A shared language for models, agents, tools, permissions, and verification.
 locale: en
 source_locale: zh-CN
-source_revision: "b4d4b2b"
-translation_status: draft
+source_revision: 'b4d4b2b'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 3
+reviewed_at: 2026-10-25
 ---
 
 This section gathers the concepts used throughout the handbook. Differences between product interfaces are covered in the [product guides](/en/guide/); prompting techniques are covered in [core skills](/en/guide/).

@@ -2,13 +2,16 @@
 title: Introducción a los Hooks
 description: Comprende cómo se descubren y revisan los Hooks, sus controladores, su ejecución y sus límites de seguridad.
 locale: es
-source_locale: zh-cn
-source_revision: ac7889b
+source_locale: zh-CN
+source_revision: "ac7889b"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: Entornos que usan un host de Codex local; la CLI proporciona `/hooks` para gestionar la confianza
+  checkedAt: '2026-08-25'
 ---
-
 Los Hooks ejecutan scripts de comandos o herramientas de servidores MCP conectados dentro del ciclo del Agent de Codex. Entre sus usos habituales están detectar secretos en prompts, aplicar políticas a llamadas de herramientas, registrar auditorías, resumir sesiones y verificar antes de detenerse.
 
 ![Ciclo de vida de los Hooks de Codex en sesiones, turnos, llamadas a herramientas, compactación y subagents](/diagrams/hook-lifecycle-events-es.svg)
@@ -47,7 +50,7 @@ La documentación actual indica que los controladores `prompt` y `agent` pueden 
 
 ## Comportamiento durante la ejecución
 
-- Varios Hooks de comando coincidentes se inician en paralelo; uno no puede detener a otro que ya haya coincidido.
+- Varios Hooks de comando coincidentes se inician en paralelo; uno no puede impedir que se inicie otro que también coincida.
 - La mayoría de los Hooks tienen un `timeout` predeterminado de 600 segundos. `SessionEnd` usa un segundo de forma predeterminada y permite como máximo tres. Los guardianes de producción deben definir timeouts explícitos más cortos.
 - Un Hook de comando se ejecuta con el `cwd` de la sesión. Resuelve los scripts del repositorio desde la raíz de Git para que iniciar desde un subdirectorio no rompa las rutas relativas.
 - Los Hooks asíncronos son adecuados para registro y análisis, pero no pueden bloquear, aprobar, reescribir ni controlar la acción que los activó.
@@ -66,7 +69,7 @@ La cobertura de herramientas de los Hooks no constituye un límite de seguridad 
 
 ## Orden de adopción
 
-1. Empieza con registros redactados en `PostToolUse` o `SessionEnd`.
+1. Empieza con registros sin datos sensibles en `PostToolUse` o `SessionEnd` y observa el comportamiento real.
 2. Usa `systemMessage` o contexto adicional para advertencias de alta confianza.
 3. Bloquea en `PreToolUse` solo cuando la regla sea segura, el script tenga fixtures y los falsos positivos sean aceptables.
 4. Alinea los Hooks con CI, las comprobaciones pre-commit y los permisos del servicio para evitar políticas contradictorias.
@@ -83,11 +86,3 @@ La cobertura de herramientas de los Hooks no constituye un límite de seguridad 
 ## Fuente oficial
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** Entornos que usan un host de Codex local; la CLI proporciona `/hooks` para gestionar la confianza
-
-**Última verificación:** 2026-08-25

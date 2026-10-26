@@ -63,7 +63,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Skills（スキル）</text>
     <text x="28" y="55" class="node-date">2025-10-16 · 再利用できるワークフロー単位</text>
-    <text x="28" y="78" class="node-body">プロンプト、手順、例、スクリプト、リソースをまとめ、AI が経験を安定して再利用する。</text>
+    <text x="28" y="78" class="node-body">プロンプト、手順、例、スクリプト、リソースをまとめ、反復タスクで AI が経験を安定して再利用する。</text>
   </g>
   <g transform="translate(240 470)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -91,7 +91,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP（モデルコンテキストプロトコル）</text>
     <text x="28" y="55" class="node-date">2024-11-25 · ツールプロトコル</text>
-    <text x="28" y="78" class="node-body">ツール、リソース、プロンプト、文脈をプロトコルで公開し、個別統合を減らす。</text>
+    <text x="28" y="78" class="node-body">ツール、リソース、プロンプト、文脈をプロトコルの窓口で公開し、個別統合のコストを減らす。</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
@@ -105,7 +105,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
     <text x="28" y="32" class="node-title">Prompt Engineering（プロンプト工学）</text>
     <text x="28" y="55" class="node-date">2022-11-30 · 入力の制御</text>
-    <text x="28" y="78" class="node-body">タスク説明、例、形式の制約で、モデルを使える出力へ導く。</text>
+    <text x="28" y="78" class="node-body">タスク説明、例、形式の制約で、モデルから実用的な出力を引き出す。</text>
   </g>
   <g transform="translate(240 1298)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>

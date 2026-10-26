@@ -3,10 +3,18 @@ title: "Cas : matrice comparative de fonctionnalités"
 description: Recherche sourcée et livrable tabulaire — flux de travail réutilisable même pour les lecteurs non techniques.
 locale: fr
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: 'b74008b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI
+  basis: Recoupement avec les chapitres vérifiés sur la recherche sourcée, la recherche web, la validation des sources et la politique de version ; le contenu se limite à la structure stable « produire un tableau comparatif concurrentiel sourcé », sans figer des prix ou versions produit spécifiques.
+  checkedAt: '2026-07-26'
+caseCategory: creation
+directoryOrder: 85
+contentType: case
 ---
 
 ## Métadonnées
@@ -61,10 +69,3 @@ sortie en tableau markdown, ne pas modifier d'autres fichiers du dépôt.
 
 - [Centré sur les livrables](/fr/cases/workflows/artifact-first-work/)
 - [Valider les sources](/fr/guide/quality/validate-sources/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur la recherche sourcée, la recherche web, la validation des sources et la politique de version ; le contenu se limite à la structure stable « produire un tableau comparatif concurrentiel sourcé », sans figer des prix ou versions produit spécifiques.

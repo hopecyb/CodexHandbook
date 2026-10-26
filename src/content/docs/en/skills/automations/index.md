@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI"
+  checkedAt: "2026-08-26"
 title: Scheduled tasks
 description: Repeat a previously verified task on a schedule in ChatGPT.
 locale: en
 source_locale: zh-CN
-source_revision: 759c38e
+source_revision: '759c38e'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
@@ -34,11 +38,3 @@ A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fi
 ## Official source
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
-
-**Last verified:** 2026-08-26

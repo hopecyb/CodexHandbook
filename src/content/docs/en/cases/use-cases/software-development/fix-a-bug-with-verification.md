@@ -9,11 +9,12 @@ legacyVerification:
   basis: "The starter was verified with one expected failure out of three; the reference solution passes all three. The evidence chain is organized as red, root cause, minimal repair, green, regression, and human review."
   checkedAt: "2026-08-25"
 title: "Case: verified bug fixing"
-description: Use a runnable discount-calculation bug to reproduce red, locate the root cause, make the smallest repair, verify green, regress, and review the diff.
+description: Use a runnable discount-calculation bug to reproduce red, locate the root cause, make the smallest fix, verify passing tests, run regression checks, and review the diff.
 locale: en
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: '42d842e'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 
@@ -72,6 +73,8 @@ examples/complete-workflows/developer/verified-bug-fix/
 `starter/` intentionally contains the bug; `solution/` is an independently runnable reference. Do not practice on the solution.
 
 ## 3. Reproduce red
+
+Run from the repository root:
 
 ```bash
 node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js

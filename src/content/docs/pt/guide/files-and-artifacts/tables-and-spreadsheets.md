@@ -3,12 +3,17 @@ title: Tabelas e folhas de cálculo
 description: Ler, limpar, analisar e exportar CSV, Excel e dados tabulares — sem partir estrutura nem encoding.
 locale: pt
 source_locale: zh-CN
-source_revision: b08adec
+source_revision: "b08adec"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros, Verificar Artefatos e limites de restrições; esta página confirma só o princípio estável de que «colunas, tipos, vazios, datas e aceitação devem ser explícitos», sem tratar uma biblioteca ou plataforma como única implementação.
+  checkedAt: '2026-07-26'
 ---
 
 Tarefas de tabelas são o típico erro silencioso: separador, encoding, cabeçalho, fórmula ou formato de data — qualquer falha e o downstream desaba.
@@ -16,7 +21,7 @@ Tarefas de tabelas são o típico erro silencioso: separador, encoding, cabeçal
 ## Conteúdo desta página
 
 - Como fazer o Codex ler e escrever CSV / Excel com segurança
-- Estrutura de Prompt para Tarefas de análise de dados
+- Estrutura de prompt para tarefas de análise de dados
 - Como aceitar números e contagens de linhas
 
 ## Escolha de formato
@@ -38,7 +43,7 @@ Veja primeiro estes três pontos:
 
 ## Leitura e análise
 
-Estrutura de Prompt recomendada:
+Estrutura de prompt recomendada:
 
 ```text
 Ficheiro: data/sales_2025.csv
@@ -48,9 +53,9 @@ Restrições: não alterar o ficheiro original; valores vazios = 0; duas casas d
 Aceitação: imprimir as primeiras 5 linhas + total de linhas
 ```
 
-Contexto: [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
+Contexto: [contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
 
-## Porque Tarefas de tabelas falham em silêncio com facilidade
+## Porque tarefas de tabelas falham em silêncio com facilidade
 
 Os pontos realmente problemáticos costumam ser:
 
@@ -66,7 +71,7 @@ Sem isto claro, o Codex pode «parecer concluído» com resultado pouco fiável.
 
 - Declare **nomes de colunas, ordem, tipos** (datas em ISO 8601)
 - Tabelas grandes: processe por lotes; evite carregar tudo e esgotar memória
-- Deduplicação e chaves de merge vão na descrição da Tarefa — não deixe o Agent adivinhar a «chave primária»
+- Deduplicação e chaves de merge vão na descrição da tarefa — não deixe o Agent adivinhar a «chave primária»
 
 ## Mal-entendidos habituais
 
@@ -74,7 +79,7 @@ Sem isto claro, o Codex pode «parecer concluído» com resultado pouco fiável.
 
 Não.
 
-Em Tarefas de tabelas, «abre» e «os dados não foram estragados» são coisas diferentes.
+Em tarefas de tabelas, «abre» e «os dados não foram estragados» são coisas diferentes.
 
 ### 2. No Excel parece bem ≠ está bem
 
@@ -83,7 +88,7 @@ Alguns erros só aparecem quando sistemas a jusante consomem, por exemplo:
 - Encoding errado
 - Ordem das colunas mudou
 - Tipo numérico mudou
-- Fórmulas gravadas como valores mortos
+- Fórmulas gravadas como valores fixos
 
 ### 3. Deixar o Agent decidir sozinho vazios, datas e chave primária
 
@@ -105,17 +110,17 @@ Muito mais estável do que só «organize este Excel».
 
 Se usar Python: `pandas`; se Node: `csv-parse` / `xlsx`, etc. — acorde a biblioteca padrão do projeto em `AGENTS.md`.
 
-## Relação com a Verificação
+## Relação com a verificação
 
 - Cruzar contagens e totais com os dados de origem
 - Abrir o Excel e ver se datas foram tratadas como números
 - [Verificar Artefatos](/pt/guide/quality/verify-artifacts/): comparar por amostragem
 
-Em Tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e aceitação.
+Em tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e aceitação.
 
 ## Erros habituais
 
-- Excel abre CSV com texto CJK corrompido (falta BOM ou encoding errado)
+- Excel abre CSV com texto em chinês corrompido (falta BOM ou encoding errado)
 - Erro de soma em floating point sem declaração de arredondamento
 - Alterar fórmulas no Excel sem guardar como script reproduzível
 
@@ -127,9 +132,3 @@ Em Tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e 
 
 ## Referências
 - [Definir restrições](/pt/prompts/constraints-and-boundaries/)
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros, Verificar Artefatos e limites de restrições; esta página confirma só o princípio estável de que «colunas, tipos, vazios, datas e aceitação devem ser explícitos», sem tratar uma biblioteca ou plataforma como única implementação.  
-**Última verificação:** 2026-07-26

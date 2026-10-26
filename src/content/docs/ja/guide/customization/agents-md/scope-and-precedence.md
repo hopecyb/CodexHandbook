@@ -1,26 +1,27 @@
 ---
-title: "AGENTS.md のスコープと優先順位"
-description: "グローバル、プロジェクトルート、現在のディレクトリにあるルールが、どのように検出・統合されるかを正確に理解します。"
+title: AGENTS.md のスコープと優先順位
+description: グローバル、プロジェクトルート、現在のディレクトリにあるルールが、どのように検出・統合されるかを正確に理解します。
 contentType: reference
 editorialStatus: review
 verification:
   kind: source-checked
   checkedAt: "2026-09-18"
-  summary: "公式の検出・統合ルールを項目ごとに照合しました。ディレクトリ例と読み込み確認の案内は学習用であり、複数のクライアントで実行検証したという主張ではありません。"
+  summary: 公式の検出・統合ルールを項目ごとに照合しました。ディレクトリ例と読み込み確認の案内は学習用であり、複数のクライアントで実行検証したという主張ではありません。
   evidence:
-    - label: "AGENTS.md"
+    - label: AGENTS.md の検出・上書き・検証に関する公式ルール
       href: https://learn.chatgpt.com/docs/agent-configuration/agents-md
 legacyVerification:
-  status: "verified"
-  products: "App、CLI、IDE、Cloud"
+  status: verified
+  products: App、CLI、IDE、Cloud
   checkedAt: "2026-08-26"
 locale: ja
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "b5f31cc"
+translation_status: reviewed
+translated_at: "2026-09-20"
 sidebar:
   order: 20
+reviewed_at: "2026-10-26"
 ---
 
 Codex は実行を開始するたびに、指示のチェーンを組み立てます。重要なのは、「組織ポリシー、設定、プロンプト」を含む推測上の順位表ではなく、まず `AGENTS.md` 自体の検出順序を正確に理解することです。

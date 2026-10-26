@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this handbook’s verified project context, workflow, and verification chapters; this page only states the stable role of `AGENTS.md` as project-level long-term collaboration rules and does not treat specific client entry points or managed implementations as long-term contracts."
+  checkedAt: "2026-07-26"
 title: AGENTS.md
 description: Overview of project-level long-term instructions—who they are for and what problem they solve before you write content.
 locale: en
 source_locale: zh-CN
-source_revision: cb6371f
+source_revision: 'cb6371f'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many people’s first impression of `AGENTS.md` is “another longer prompt.”
@@ -27,11 +32,4 @@ It is better for conventions you do not want to repeat every time and that team 
 - It should be short, precise, and executable—not a long document
 - It has precedence relationships with personal preferences and team-managed policy
 
-The value of `AGENTS.md` is sinking long-term stable project conventions into the repo.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s verified project context, workflow, and verification chapters; this page only states the stable role of `AGENTS.md` as project-level long-term collaboration rules and does not treat specific client entry points or managed implementations as long-term contracts.  
-**Last verified:** 2026-07-26
+The value of `AGENTS.md` is recording stable, long-term project conventions in the repository.

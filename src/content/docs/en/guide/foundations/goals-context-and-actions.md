@@ -8,11 +8,12 @@ title: Goals, context, and actions
 description: Break a successful interaction into goals, background, actions, and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: "280cea9"
-translation_status: draft
+source_revision: '280cea9'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: 2026-10-25
 ---
 
 Some tasks run smoothly while others drift as the conversation continues. The difference is often whether you have broken down the task clearly, not a sudden change in the model's intelligence.

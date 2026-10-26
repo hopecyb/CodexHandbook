@@ -3,13 +3,18 @@ title: Contexto del editor
 description: Cómo la extensión para IDE transmite a Codex los archivos abiertos, el espacio de trabajo y las reglas del proyecto.
 locale: es
 source_locale: zh-CN
-source_revision: 6d1b248
-translation_status: draft
+source_revision: "6d1b248"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 'El Help Center de OpenAI sigue presentando la extensión para IDE como una de las principales formas de trabajar con herramientas locales. Esta página no presupone botones concretos de un editor: describe el método estable de combinar el espacio de trabajo, los archivos abiertos, las selecciones, las referencias @ y las reglas del proyecto.'
+  checkedAt: '2026-07-26'
+reviewed_at: 2026-10-25
 ---
-
 En el IDE, Codex no solo lee tu prompt: también recibe automáticamente el **estado del editor**. Esta es una de las principales ventajas del IDE frente a la CLI. Entender de dónde procede el contexto evita la frustración de pensar «el archivo estaba abierto, ¿por qué no lo vio?».
 
 Codex en el IDE no se limita a lo que le dices; también tiene en cuenta el contenido que estás viendo en el editor.

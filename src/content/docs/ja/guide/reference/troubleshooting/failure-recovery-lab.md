@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: 'fc91872'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 最初にエラーを保存し、どの層で失敗したかを判断してから、変数を一つだけ変えて再実行します。このページでは五組の固定入力でその流れを示します。障害は作者が意図的に作り、ログは実際のコマンドライン実行から得ています。実際の顧客事故を装ったものではありません。

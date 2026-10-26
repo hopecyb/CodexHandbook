@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI / App", "basis": "Tài liệu quyền Codex/plugin hiện tại của OpenAI liên tục nhấn mạnh tư duy phân tầng hành động đọc/ghi, phê duyệt, ranh giới nguồn và kiểm soát truy cập vai trò; trang này không tuyên bố cú pháp tệp quy tắc cụ thể, mà giải thích allow/deny như một mẫu ranh giới thực thi, và phân biệt với Sandbox, phê duyệt và quy trình rà nhóm.", "checkedAt": "2026-07-26"}
 title: Quy tắc cho phép và từ chối
 description: Dùng quy tắc lệnh và đường dẫn để ràng buộc thao tác Agent thực thi được — thói cá nhân và đường cơ sở nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 521ecc9
+source_revision: "521ecc9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -108,10 +109,3 @@ Chạy thông ranh giới tối thiểu trước, rồi dần tinh chỉnh.
 - Thay đổi quy tắc đi PR, đối xử như sửa CI
 
 Quy tắc allow/deny tốt là nói rõ trước hành động nào hợp lý, hành động nào không nên xảy ra.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App  
-**Căn cứ kiểm chứng:** Tài liệu quyền Codex/plugin hiện tại của OpenAI liên tục nhấn mạnh tư duy phân tầng hành động đọc/ghi, phê duyệt, ranh giới nguồn và kiểm soát truy cập vai trò; trang này không tuyên bố cú pháp tệp quy tắc cụ thể, mà giải thích allow/deny như một mẫu ranh giới thực thi, và phân biệt với Sandbox, phê duyệt và quy trình rà nhóm.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,17 +1,18 @@
 ---
 title: Codex Pet を作成する
-description: "素材、spritesheet、メタデータ、ライセンスの観点から Codex Pet 作成を理解します。"
+description: 素材、spritesheet、メタデータ、ライセンスの観点から Codex Pet 作成を理解します。
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 57e9aca
+source_revision: "57e9aca"
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
-  summary: "形式と復旧の境界を追記しましたが、このサイトでは特定のクライアントとPetパッケージを使ったインストール、アニメーション再生、削除をまだ実測していません。ディレクトリとメニューは対象バージョンで確認してください。"
+  checkedAt: '2026-09-18'
+  summary: 形式と復旧の境界を追記しましたが、このサイトでは特定のクライアントとPetパッケージを使ったインストール、アニメーション再生、削除をまだ実測していません。ディレクトリとメニューは対象バージョンで確認してください。
+reviewed_at: '2026-10-26'
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
@@ -72,7 +73,7 @@ Spritesheet は、複数のアニメーションフレームを一枚の大き�
 - `description` は中身が分かる説明にする。
 - 作者、バージョン、出所、ライセンスを同梱のREADMEまたはLICENSEに残します。クライアントが任意の追加項目を受け入れるとは仮定しないでください。
 
-`pet.json` はアニメーション自体を保存するものではありません。クライアントに「このパッケージは誰か、素材はどこにあるか、どう解釈すべきか」を伝えるものです。
+`pet.json` はアニメーション自体を保存するものではありません。クライアントに「どのパッケージか、素材はどこにあるか、どう解釈すべきか」を伝えるものです。素材のパス、ファイル名、ディレクトリ構成が一致しないと、通常は読み込めません。
 
 ## ローカル確認
 
@@ -80,7 +81,7 @@ Spritesheet は、複数のアニメーションフレームを一枚の大き�
 
 - `pet.json` が有効な JSON である。
 - `spritesheetPath` が存在するファイルを指している。
-- spritesheet のサイズとフレームグリッドが現在の契約に合っている。
+- spritesheet のサイズとフレームグリッドが対象バージョンの仕様に合っている。
 - 各行のアニメーションが大きく跳ねたり、ずれたり、切れたりしない。
 - 透明背景がきれいである。
 - パッケージに一時ファイル、元画像、公開すべきでない素材が入っていない。

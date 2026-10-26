@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Môi trường sử dụng Codex host cục bộ; quản lý độ tin cậy bằng `/hooks` trong Codex CLI"
+  checkedAt: "2026-08-25"
 title: Ví dụ cấu hình Hook
 description: Dùng hooks.json thực tế và script Python chỉ dùng thư viện chuẩn để tạo rào chắn PreToolUse có thể kiểm thử.
 locale: vi
 source_locale: zh-CN
-source_revision: 06e9fa2
-translation_status: draft
+source_revision: "06e9fa2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Chương này đã loại bỏ tên sự kiện và trường cấu hình minh họa của phiên bản cũ. Các ví dụ tuân theo cấu trúc `hooks.json` chính thức hiện tại và có bài kiểm thử chạy được.

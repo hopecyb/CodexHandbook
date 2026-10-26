@@ -1,21 +1,26 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Team / Unternehmen"
+  basis: "Aktuelle OpenAI-Hinweise zu Plugins, Apps und Integrationen trennen weiterhin Externzugriff, Aktionsrechte, Freigabeanforderungen und Quellsystemgrenzen; diese Seite verdichtet Teamrisikoflächen zu Assets, Vertrauensgrenzen, typischen Bedrohungen und Schichtenkontrollen — ohne Abhängigkeit von einem konkreten Produktschalter."
+  checkedAt: "2026-07-26"
 title: Bedrohungsmodell
-description: 'Wesentliche Risikoflächen von Codex in Teameumgebungen — Daten, Werkzeuge, Erweiterungen und Lieferkette.'
+description: 'Wesentliche Risikoflächen von Codex in Teamumgebungen — Daten, Werkzeuge, Erweiterungen und Lieferkette.'
 locale: de
 source_locale: zh-CN
-source_revision: 4ec320d
+source_revision: "4ec320d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
 
-„Bedrohungsmodell“ heißt: Risiken vorher denken:
+„Bedrohungsmodell“ heißt: Risiken im Voraus durchdenken:
 
 > **Wenn Codex wirklich an unseren Code, unsere Befehle und externe Werkzeuge angebunden ist — was kann am ehesten schiefgehen?**
 
-Ein **Bedrohungsmodell** zerlegt das. Codex ist nicht „noch ein Chatfenster“ — es kann **Code lesen, Befehle ausführen, externe Werkzeuge aufrufen**. Dieses Kapitel legt die Hauptflächen aus; konkrete Kontrollen folgen in [Berechtigungsmatrix](/de/guide/reference/permission-matrix/) und [Sandbox](/de/guide/foundations/sandbox-and-network/).
+Ein **Bedrohungsmodell** zerlegt das. Codex ist nicht „noch ein Chatfenster“ — es kann **Code lesen, Befehle ausführen, externe Werkzeuge aufrufen**. Dieses Kapitel stellt die wichtigsten Risikobereiche vor; konkrete Kontrollen folgen in [Berechtigungsmatrix](/de/guide/reference/permission-matrix/) und [Sandbox](/de/guide/foundations/sandbox-and-network/).
 
 ## Inhalt
 
@@ -43,7 +48,7 @@ Wert des Bedrohungsmodells: Grenzen klären, bevor etwas passiert.
 | Nutzerdaten | PII, Kunden-Ticketinhalte |
 | Infrastruktur | CI, Produktions-Deploy-Pipelines |
 
-**Vertrauensgrenze:** Modell und Erweiterungen stehen default auf der **nicht voll vertrauenswürdigen** Seite; Menschen-Review und Policy enforcen an der Grenze.
+**Vertrauensgrenze:** Modell und Erweiterungen stehen standardmäßig auf der **nicht voll vertrauenswürdigen** Seite; menschliche Prüfung und Richtlinien setzen diese Grenze durch.
 
 ## Zwei Kernfragen
 
@@ -129,8 +134,8 @@ L5 Menschen-Review und Branch Protection
 Zuerst diese drei:
 
 - Risikoaktionen brauchen Freigabe
-- Hochsensible Daten default nicht geben
-- Automatisierung default Read-only
+- Hochsensible Daten standardmäßig nicht bereitstellen
+- Automatisierungsabläufe standardmäßig nur lesend ausführen
 
 Damit sinken viele Teamrisiken schon. Feine Governance kann nachziehen.
 
@@ -147,9 +152,3 @@ Damit sinken viele Teamrisiken schon. Feine Governance kann nachziehen.
 
 ## Quellen
 - OpenAI Enterprise Security Whitepaper (offiziell)
----
-
-**Status:** verified  
-**Anwendbare Produkte:** Team / Enterprise  
-**Prüfgrundlage:** Aktuelle OpenAI-Hinweise zu Plugins, Apps und Integrationen trennen weiterhin Externzugriff, Aktionsrechte, Freigabeanforderungen und Quellsystemgrenzen; diese Seite verdichtet Teamrisikoflächen zu Assets, Vertrauensgrenzen, typischen Bedrohungen und Schichtenkontrollen — ohne Abhängigkeit von einem konkreten Produktschalter.  
-**Zuletzt geprüft:** 2026-07-26

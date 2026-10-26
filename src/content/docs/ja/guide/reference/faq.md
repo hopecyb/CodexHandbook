@@ -3,12 +3,17 @@ title: よくある質問
 description: 入門と利用時の高頻度質問。
 locale: ja
 source_locale: zh-CN
-source_revision: c9d7ed8
+source_revision: 'c9d7ed8'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブック現行のクライアント選択、ワークフロー、拡張方式、Cloud GitHub フロー、スラッシュコマンド関連入口を項目ごとに照合。高頻度質問ナビのみ。変わりやすい製品デフォルト値は単独宣言しない。
+  checkedAt: '2026-07-26'
 ---
 
 断片的な疑問があるときは FAQ から。完全体系ではなく、次にどこを見るかを素早く示します。
@@ -23,7 +28,7 @@ sidebar:
 A：デスクトップ App。[クライアント選択](/ja/guide/choose-your-client/) を参照。
 
 **Q：チェックを飛ばしてすべての変更を受け入れていい？**  
-A：推奨しません。[検証と人工复核](/ja/guide/foundations/verification-and-human-review/) を参照。
+A：推奨しません。[検証と人によるレビュー](/ja/guide/foundations/verification-and-human-review/) を参照。
 
 **Q：prompt に標準テンプレはある？**  
 A：フレームワークはあるが魔法はない。[良いタスクの構造](/ja/prompts/task-anatomy/) を参照。
@@ -47,7 +52,7 @@ A：可能。[非対話モード](/ja/guide/cli/non-interactive-mode/) から始
 A：クライアントの `/` 補完を基準。学習向け説明は [スラッシュコマンド早見](/ja/guide/reference/slash-commands/)。
 
 **Q：クリエイター/開発者/チームの完全パスは？**  
-A：入門パスは記載済み。深度事例は [ユースケース](/ja/cases/use-cases/)。チームガバナンスはロードマップ M6 `11-team-enterprise`。
+A：入門パスは記載済み。詳しい事例は [ユースケース](/ja/cases/use-cases/)。チームガバナンスはロードマップ M6 `11-team-enterprise`。
 
 ## よくある誤解
 
@@ -72,10 +77,3 @@ FAQ は方向判断と、より完全なページへの誘導が主目的です�
 3. リンクから該当トピックへ
 
 サイドバーを往復するより省力なことが多いです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ハンドブック現行のクライアント選択、ワークフロー、拡張方式、Cloud GitHub フロー、スラッシュコマンド関連入口を逐项相互確認。高頻度質問ナビのみ。易変な製品デフォルト値は単独宣言しない。  
-**最終検証：** 2026-07-26

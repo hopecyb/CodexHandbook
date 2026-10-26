@@ -3,10 +3,15 @@ title: 제약 정의하기
 description: 수정 가능 범위, 스타일, 금지 사항을 제한합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: "0ca4700"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 본 페이지는 제약과 경계 작성법만 설명합니다. 사이트 내 링크를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 많은 작업 실패는 목표를 전혀 말하지 않아서가 아니라, **경계가 불분명해서**입니다.
@@ -99,11 +104,4 @@ reviewed_at: 2026-08-26
 
 목표는 Codex에게 무엇을 할지 말하고, 제약은 어디까지 할지 말합니다.
 
-권한 경계는 제약과 함께 써서 “손쉬운” 월권을 줄이세요. 관련 페이지: [완료 기준 정의](/ko/prompts/define-done/), [권한과 샌드박스](/ko/guide/permissions-and-sandbox/).
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 페이지는 제약과 경계 작성법만 설명합니다. 사이트 내 링크를 재확인했으며, 본문은 제품 버전·가격·UI 등 쉽게 바뀌는 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26
+권한 경계는 제약과 함께 써서 의도치 않은 권한 초과을 줄이세요. 관련 페이지: [완료 기준 정의](/ko/prompts/define-done/), [권한과 샌드박스](/ko/guide/permissions-and-sandbox/).

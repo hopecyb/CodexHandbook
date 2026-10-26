@@ -3,12 +3,16 @@ title: Gestión de tareas largas
 description: Tareas grandes de varias horas o sesiones — puntos de control, compactación, delegación y condiciones de salida.
 locale: es
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: "c2a9887"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los use cases públicos actuales de OpenAI Developers sobre objetivos a largo plazo y colaboración en tareas largas, y con los capítulos ya verificados de traspaso, planificación, compactación y delegación. Esta página solo describe métodos estables de puntos de control, traspaso y condiciones de salida.
+  checkedAt: '2026-07-26'
 ---
-
 Los problemas habituales de las tareas largas: **el contexto se llena**, **la persona se va**, **la dirección deriva**, **no se sabe cuándo parar**. Esta página sitúa [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/) en escenarios de horas o varias sesiones.
 
 ## Enfoque de esta página
@@ -69,10 +73,3 @@ Tras cada hito:
 - [ ] Antes de empezar hay un documento de plan
 - [ ] Al menos dos puntos de control con diff revisable
 - [ ] Se sabe cómo pausar, reanudar o traspasar
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los use cases públicos actuales de OpenAI Developers sobre objetivos a largo plazo y colaboración en tareas largas, y con los capítulos ya verificados de traspaso, planificación, compactación y delegación. Esta página solo describe métodos estables de puntos de control, traspaso y condiciones de salida.

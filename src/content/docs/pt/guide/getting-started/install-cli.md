@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "CLI"
-  basis: "Conferido com o guia de início rápido e a documentação de autenticação atuais do Codex CLI: instalador oficial para macOS/Linux, arranque com `codex`, início de sessão com ChatGPT e comando de estado da sessão. Para outros métodos de instalação, remete-se para os separadores oficiais atualizados."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: CLI
+  basis: 'Conferido com o guia de início rápido e a documentação de autenticação atuais do Codex CLI: instalador oficial para macOS/Linux, arranque com `codex`, início de sessão com ChatGPT e comando de estado da sessão. Para outros métodos de instalação, remete-se para os separadores oficiais atualizados.'
+  checkedAt: '2026-08-26'
 title: Instalar a CLI
 description: Instalar o Codex CLI e verificar a versão, o estado de autenticação e a primeira tarefa num repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: 564bd75
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: "564bd75"
+translation_status: reviewed
+translated_at: '2026-09-20'
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
 
 O Codex CLI permite explorar, alterar, testar e rever sem sair do terminal. A página oficial de instalação apresenta opções para macOS/Linux, Windows, npm e Homebrew. Escolha a que corresponde ao seu sistema e à forma como gere software.

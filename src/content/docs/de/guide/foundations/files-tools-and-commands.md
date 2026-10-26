@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die begrifflichen Unterschiede zwischen Dateien, Befehlen und Werkzeugen sowie die Risikoeinschätzung; interne Links und Beispielformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: "Dateien, Werkzeuge und Befehle"
 description: "Erklärt, wie Codex Dateien liest und schreibt, Befehle ausführt und Werkzeuge nutzt."
 locale: de
 source_locale: zh-CN
-source_revision: 9d65338
+source_revision: "9d65338"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -18,8 +23,8 @@ Dateien sind der Ort, an dem es etwas ändert; Befehle sind die Art, wie es Akti
 Codex wirkt über **Werkzeuge** auf die reale Welt:
 
 - Projektdateien lesen/schreiben
-- Befehle im Terminal ausführen (soweit Berechtigungen und Sandbox-Politik es erlauben)
-- Web suchen, Browser öffnen u. a. (je nach Produktfähigkeit und Politik)
+- Befehle im Terminal ausführen (soweit Berechtigungen und Sandbox-Richtlinie es erlauben)
+- Web suchen, Browser öffnen u. a. (je nach Produktfunktionen und Richtlinien)
 
 ## Diese drei Wörter zuerst trennen
 
@@ -57,7 +62,7 @@ Ob es darf, hängt auch ab von:
 - Welche Werkzeuge der aktuelle Produkteinstieg bereitstellt
 - Ob die Sandbox es erlaubt
 - Ob dieser Schritt deine Freigabe braucht
-- Ob Team-Politiken zusätzliche Limits setzen
+- Ob Teamrichtlinien zusätzliche Limits setzen
 
 ### 2. Sollte es möglichst wenig Befehle ausführen und Dateien direkt ändern — ist das schneller?
 
@@ -98,10 +103,3 @@ Als Nächstes empfohlen:
 1. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
 2. [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
 3. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die begrifflichen Unterschiede zwischen Dateien, Befehlen und Werkzeugen sowie die Risikoeinschätzung; interne Links und Beispielformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "This page describes stable IDE scope control: selection, open files, and explicit @ paths—general context organization in the editor, not tied to a specific extension button name."
+  checkedAt: "2026-07-26"
+sidebar:
+  order: 40
 title: Selection and open files
 description: Using selected code and open files to narrow IDE task scope precisely.
 locale: en
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: 'b6b264f'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 The IDE extension excels at **small, high-precision** edits: select code, state intent, Codex changes nearby context. This page shows how selection and open files tighten scope and avoid editing the wrong place.
@@ -83,9 +90,3 @@ Product page: [IDE reviewing changes](/en/guide/ide/reviewing-changes/)
 
 ## References
 - [Constraints and boundaries](/en/prompts/constraints-and-boundaries/)
----
-
-**Status:** verified  
-**Applicable products:** IDE  
-**Verification basis:** This page describes stable IDE scope control: selection, open files, and explicit @ paths—general context organization in the editor, not tied to a specific extension button name.  
-**Last verified:** 2026-07-26

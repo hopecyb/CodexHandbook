@@ -1,17 +1,18 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App, CLI e IDE"
-  checkedAt: "2026-08-26"
-title: "Atalhos de teclado"
-description: "Lista apenas os atalhos do App e da IDE que podem ser conferidos na documentação oficial atual."
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
+title: Atalhos de teclado
+description: Lista apenas os atalhos do App e da IDE que podem ser conferidos na documentação oficial atual.
 sidebar:
   order: 90
 locale: pt
 source_locale: zh-CN
-source_revision: 4f812d9
-translation_status: draft
+source_revision: "4f812d9"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Os atalhos variam conforme a plataforma, o cliente e as configurações personalizadas. Esta página reúne apenas as combinações descritas explicitamente na documentação oficial atual; para a lista completa, consulte **Keyboard Shortcuts** no aplicativo.

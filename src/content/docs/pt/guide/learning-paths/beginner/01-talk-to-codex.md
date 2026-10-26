@@ -1,30 +1,32 @@
 ---
-title: "Conversar com o Codex"
-description: "Prepare os mesmos materiais de exercício e comece por compreender os arquivos e as informações desconhecidas sem alterá-los."
-contentType: "path"
-audiences: ["beginner"]
-level: "beginner"
-editorialStatus: "review"
+title: Conversar com o Codex
+description: Prepare os mesmos materiais de exercício e comece por compreender os arquivos e as informações desconhecidas sem alterá-los.
+contentType: path
+audiences:
+- beginner
+level: beginner
+editorialStatus: review
 sidebar:
   order: 10
 verification:
-  kind: "editorial"
-  checkedAt: "2026-09-18"
-  summary: "Os materiais fixos e a referência do autor estão completos; as operações com arquivos foram executadas em uma pasta temporária, mas ainda não houve teste independente com um modelo ou leitores."
+  kind: editorial
+  checkedAt: '2026-09-18'
+  summary: Os materiais fixos e a referência do autor estão completos; as operações com arquivos foram executadas em uma pasta temporária, mas ainda não houve teste independente com um modelo ou leitores.
   evidence:
-    - label: "Registro de operações com arquivos do autor"
-      href: "/downloads/first-project/validation/record.json"
+  - label: Registro de operações com arquivos do autor
+    href: /downloads/first-project/validation/record.json
 prev:
-  link: "/pt/guide/learning-paths/beginner/"
-  label: "Trilha para iniciantes e materiais"
+  link: /pt/guide/learning-paths/beginner/
+  label: Trilha para iniciantes e materiais
 next:
-  link: "/pt/guide/learning-paths/beginner/02-work-with-files/"
-  label: "Trabalhar com arquivos"
+  link: /pt/guide/learning-paths/beginner/02-work-with-files/
+  label: Trabalhar com arquivos
 locale: pt
 source_locale: zh-CN
-source_revision: 827a5d2
-translation_status: draft
+source_revision: "827a5d2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## Preparar os materiais
 

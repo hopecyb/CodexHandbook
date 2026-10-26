@@ -3,15 +3,20 @@ title: Sensibler Kontext
 description: Geheimnisse, Privatsphäre und nicht teilbare Materialien.
 locale: de
 source_locale: zh-CN
-source_revision: a83db07
+source_revision: "a83db07"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur Minimierung und Anonymisierung sensibler Informationen; Konzepte, Risiko-Beispiele und Handlungsempfehlungen geprüft, ohne volatile Produktfakten.
+  checkedAt: '2026-07-26'
 ---
 
-Alles, was du nicht willkürlich gesehen, kopiert, weitergegeben oder dauerhaft in Aufgabenprotokollen haben willst, zuerst als sensible Information behandeln.
+Behandle Inhalte zunächst als sensibel, wenn sie nicht beliebig eingesehen, kopiert, weitergegeben oder dauerhaft in Aufgabenprotokollen gespeichert werden sollen.
 
 ## Warum zuerst urteilen
 
@@ -23,7 +28,7 @@ Zum Beispiel:
 - zum Verstehen Roh-Kundendaten einfügen
 - aus Bequemlichkeit Fehlertexte mit echten Tokens 1:1 einfügen
 
-Kurzfristig bequem, danach schwer zu heilen.
+Das ist kurzfristig bequem, lässt sich später aber oft schwer rückgängig machen.
 
 Nicht an Codex geben (Übung oder Produktion):
 
@@ -70,7 +75,7 @@ Vorgehen:
 - Struktur behalten
 - echte Werte ersetzen
 - Identifikatoren entfernen
-- felder ohne Bezug zum aktuellen Problem streichen
+- Felder ohne Bezug zum aktuellen Problem streichen
 
 Behalten z. B.:
 
@@ -109,10 +114,3 @@ Nach Risiko:
 3. Nach Organisationsprozess melden und nachbessern
 
 Beim Problemlösen Default: nur **minimale nötige Debug-Info**; anonymisieren wo möglich, Platzhalter wo möglich.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Minimierung und Anonymisierung sensibler Informationen; Konzepte, Risiko-Beispiele und Handlungsempfehlungen geprüft, ohne volatile Produktfakten.  
-**Zuletzt geprüft:** 2026-07-26

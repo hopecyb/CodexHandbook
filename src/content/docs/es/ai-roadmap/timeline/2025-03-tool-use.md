@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: es
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: "efd508a"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 ## Evento verificable y alcance
@@ -35,6 +36,6 @@ Asigna las comprobaciones repetibles a herramientas bien definidas y conserva lo
 
 ## Ejercicio práctico
 
-[Cinco prácticas de recuperación ante fallos](/es/guide/reference/troubleshooting/failure-recovery-lab/): reproduce varios fallos, lee los registros de «antes», cambia una sola variable y comprueba el resultado de «después». La práctica usa scripts locales y no exige llamar a las API del anuncio.
+[Cinco prácticas de recuperación ante fallos](/es/guide/reference/troubleshooting/failure-recovery-lab/): reproduce un conjunto de fallos, lee los registros de «antes», cambia una sola variable y comprueba el resultado de «después». La práctica usa scripts locales y no exige llamar a las API del anuncio.
 
 [Volver a la hoja de ruta y los criterios de fecha](/es/ai-roadmap/)

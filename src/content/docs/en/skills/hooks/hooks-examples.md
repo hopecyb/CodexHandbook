@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Environments using a local Codex host; use Codex CLI `/hooks` for trust management"
+  checkedAt: "2026-08-25"
 title: Hook configuration example
 description: Build a testable PreToolUse guard with a real hooks.json file and a Python standard-library script.
 locale: en
 source_locale: zh-CN
-source_revision: 06e9fa2
+source_revision: '06e9fa2'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
@@ -84,7 +88,7 @@ Normal input produces no stdout.
 
 ## 4. Enable it in a project
 
-1. Put configuration and script in the target repository using a stable repository-relative path.
+1. Put configuration and script in the target repository using a stable path within that repository.
 2. Run unit tests and one real normal command in an isolated repository.
 3. Start Codex and open `/hooks` to inspect the source and exact definition.
 4. After trusting it, verify both a normal pass and test-string denial.
@@ -102,11 +106,3 @@ Production teams usually start with non-blocking audit or context, then move to 
 ## Official source
 
 - [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
-
-**Last verified:** 2026-08-25

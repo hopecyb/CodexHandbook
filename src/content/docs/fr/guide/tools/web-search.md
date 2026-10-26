@@ -10,9 +10,10 @@ sidebar:
   order: 30
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 7adcb92
+source_revision: "7adcb92"
+reviewed_at: 2026-10-26
 ---
 
 La recherche Web permet de compléter des faits. Elle ne doit pas tirer la conclusion finale à votre place.

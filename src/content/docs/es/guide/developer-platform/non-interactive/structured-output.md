@@ -1,26 +1,31 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI / API
+  basis: La documentación actual de modelos/comparación de la API de OpenAI sigue listando la capacidad `Structured outputs`; el contenido se limita a la práctica general de «diseñar una interfaz de salida estable para tareas no interactivas»; el schema JSON, la validación y la degradación del ejemplo son patrones de ingeniería.
+  checkedAt: '2026-07-26'
 title: Salida estructurada
-description: Hacer que exec produzca resultados parseables por máquina — para pasos posteriores, paneles y puertas de calidad.
+description: Hacer que exec produzca resultados parseables por máquina — para pasos posteriores, paneles y controles de calidad.
 locale: es
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: "e80b5d7"
 translation_status: reviewed
 translated_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
 ---
 
 La primera vez que se automatiza, mucha gente deja que Codex escriba un párrafo «que suena razonable». Sirve para leerlo una persona; no tanto para un script.
 
 La salida estructurada resuelve algo directo: que Codex devuelva el resultado en el formato que tú defines.
 
-Si una Tarea no interactiva solo produce texto libre, al siguiente paso le cuesta decidir automáticamente «¿pasó o falló?», «¿cuántos hallazgos?», «¿qué gravedad?». La salida estructurada hace el resultado más apto para que una máquina lo siga procesando.
+Si una tarea no interactiva solo produce texto libre, al siguiente paso le cuesta decidir automáticamente «¿pasó o falló?», «¿cuántos hallazgos?», «¿qué gravedad?». La salida estructurada hace el resultado más apto para que una máquina lo siga procesando.
 
 ## Contenido de esta página
 
 - Cuándo pedir JSON / tabla Markdown / campos fijos
-- Cómo definir el schema en el Prompt
+- Cómo definir el schema en el prompt
 - Estrategia de degradación si falla el parseo
 
 ## Malentendidos frecuentes
@@ -33,23 +38,23 @@ La razón práctica: si el siguiente paso es un script que juzga éxito/fallo, u
 
 ### Formato estable ≠ conclusión fiable
 
-La salida estructurada solo garantiza que «se parece a lo que pediste»; no garantiza que la Tarea se entendiera bien.
+La salida estructurada solo garantiza que «se parece a lo que pediste»; no garantiza que la tarea se entendiera bien.
 
-Resuelve la interfaz de salida; no sustituye la definición de la Tarea ni la Verificación del resultado.
+Resuelve la interfaz de salida; no sustituye la definición de la tarea ni la verificación del resultado.
 
 ## Una distinción directa
 
 - Texto libre: para personas
 - Salida estructurada: para programas
 
-Si el siguiente paso es `jq`, un script, un panel, una puerta de calidad o un bot de comentarios, no deberías depender solo de lenguaje natural libre.
+Si el siguiente paso es `jq`, un script, un panel, un control de calidad o un bot de comentarios, no deberías depender solo de lenguaje natural libre.
 
 ## Práctica mínima usable
 
-Al final del Prompt, fija el formato:
+Al final del prompt, fija el formato:
 
 ```text
-…(cuerpo de la Tarea)…
+…(cuerpo de la tarea)…
 
 Requisitos de salida:
 - Solo un objeto JSON, sin cercas de código markdown
@@ -76,13 +81,13 @@ Si el script depende de un campo, trata el schema como interfaz, no lo cambies a
 
 ### 3. Querer que la salida estructurada resuelva toda la vaguedad
 
-Resuelve «formato estable». Si la Tarea en sí está mal definida, el JSON solo emitirá de forma estable un resultado confuso.
+Resuelve «formato estable». Si la tarea en sí está mal definida, el JSON solo emitirá de forma estable un resultado confuso.
 
 ## Flujo de trabajo recomendado
 
 ```text
 Definir schema (versión v1)
-    → El Prompt referencia el archivo de schema @schemas/review-output.json
+    → El prompt referencia el archivo de schema @schemas/review-output.json
     → Ejecutar exec
     → Validar con jq / validador propio
     → Si no pasa, exit 1
@@ -99,7 +104,7 @@ Mientras el resultado deba seguir procesándolo un programa, haz que Codex lo de
 
 ## Comparación con el SDK
 
-| | CLI + Prompt JSON | SDK |
+| | CLI + prompt JSON | SDK |
 |---|---|---|
 | Coste de integración | Bajo | Medio |
 | Seguridad de tipos | Por convención + validación | Tipos del SDK |
@@ -109,7 +114,7 @@ Véase [Resumen del SDK](/es/guide/developer-platform/sdk-overview/).
 
 ## Errores frecuentes
 
-- El modelo mezcla texto explicativo y el JSON falla — enfatiza «solo JSON» en el Prompt
+- El modelo mezcla texto explicativo y el JSON falla — enfatiza «solo JSON» en el prompt
 - Cambio de schema sin subir versión; CI antigua parsea mal
 - Meter secretos en campos JSON que vuelven a los logs
 - Sin comportamiento de salida claro ante fallo de parseo
@@ -123,9 +128,3 @@ Véase [Resumen del SDK](/es/guide/developer-platform/sdk-overview/).
 
 ## Fuentes de referencia
 - Prácticas generales de structured outputs de OpenAI (alineación conceptual)
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI / API  
-**Base de verificación:** La documentación actual de modelos/comparación de la API de OpenAI sigue listando la capacidad `Structured outputs`; el contenido se limita a la práctica general de «diseñar una interfaz de salida estable para Tareas no interactivas»; el schema JSON, la validación y la degradación del ejemplo son patrones de ingeniería.  
-**Última verificación:** 2026-07-26

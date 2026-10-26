@@ -1,12 +1,17 @@
 ---
 title: セキュリティ
-description: チーム級リスク、攻撃面、防御思路の説明ページ——リスクを先に理解し、制御を決める。
+description: チーム級リスク、攻撃面、防御の考え方の説明ページ——リスクを先に理解し、制御を決める。
 locale: ja
 source_locale: zh-CN
-source_revision: 91ed6a3
+source_revision: "91ed6a3"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: チーム / エンタープライズシーン
+  basis: OpenAI 現行 Plugin、アプリ、統合文書は外部接続、動作権限、ソースアクセス、承認境界のセキュリティリスクを継続強調。脅威モデル、Plugin/MCP リスク、Prompt 注入の順で読むセキュリティ小節ナビのみ。
+  checkedAt: "2026-07-26"
 ---
 
 セキュリティグループを細部ページから入ると、断片用語だけ覚えて、何を防いでいるか分からなくなりがちです。
@@ -26,10 +31,3 @@ reviewed_at: 2026-08-26
 - 「注意喚起」だけでは解けないリスクを知りたい
 
 セキュリティページの要点は、システム境界で制御すべきリスクを見つけることです。
-
----
-
-**状態：** verified  
-**対象製品：** チーム / エンタープライズシーン  
-**検証根拠：** OpenAI 現行 Plugin、アプリ、統合文書は外部接続、動作権限、ソースアクセス、承認境界のセキュリティリスクを継続強調。脅威モデル、Plugin/MCP リスク、Prompt 注入の順で読むセキュリティ小節ナビのみ。  
-**最終検証：** 2026-07-26

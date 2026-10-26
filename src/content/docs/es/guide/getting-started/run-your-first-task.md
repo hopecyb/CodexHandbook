@@ -3,12 +3,17 @@ title: Ejecuta tu primera Tarea
 description: Completa un cambio pequeño con un Prompt claro.
 locale: es
 source_locale: zh-CN
-source_revision: f203611
+source_revision: 'f203611'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Se cruzó con las secciones ya verificadas de bases del Prompt, revisión de resultados, deshacer/recuperar y proyecto de práctica; el contenido se limita al método estable de «primera vez solo con una Tarea pequeña, comprobable y reversible».
+  checkedAt: '2026-07-26'
 ---
 
 Los ejemplos siguientes asumen la **App de escritorio**; CLI/IDE pueden usar el mismo Prompt.
@@ -73,7 +78,7 @@ La primera Tarea incluye también:
 
 ## Atención al ejecutar
 
-1. Pídele un plan breve (o exige el plan tú)
+1. Haz que presente un plan breve; si no lo ofrece, pídeselo
 2. Al aprobar escritura de archivos, confirma que la ruta es correcta
 3. Al terminar, ve a [Revisa el resultado](/es/guide/getting-started/review-the-result/)
 
@@ -97,7 +102,7 @@ Mira sobre todo estas tres cosas:
 2. ¿Al final del archivo aparece de verdad esa sección?
 3. ¿Hay exactamente tres elementos de lista?
 
-Si las tres están bien, esta Tarea pequeña ya encaja.
+Si las tres se cumplen, habrás completado correctamente esta pequeña tarea.
 
 ## Si se equivoca
 
@@ -114,10 +119,3 @@ No sigas cambiando. Dime qué lugares acabas de modificar.
 ```
 
 Fundamentos del Prompt: [bases del Prompt](/es/prompts/basics/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con las secciones ya verificadas de bases del Prompt, revisión de resultados, deshacer/recuperar y proyecto de práctica; el contenido se limita al método estable de «primera vez solo con una Tarea pequeña, comprobable y reversible».  
-**Última verificación:** 2026-07-26

@@ -3,12 +3,17 @@ title: コマンドとショートカット
 description: CLI サブコマンド、セッション内操作、キーボード習慣——製品向け説明。完全な引数はリファレンスへ。
 locale: ja
 source_locale: zh-CN
-source_revision: 2896e32
+source_revision: "2896e32"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 50
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 現行の公式 Developer commands と Non-interactive mode のページで、`codex`、`codex exec`、`--cd` / `-C`、セッション内のスラッシュコマンドを照合済みです。ショートカットは現在の補完候補と `--help` を確認するよう案内しています。
+  checkedAt: '2026-08-26'
 ---
 
 ターミナルでの効率は 3 つに分かれます：**起動方法**、**セッション内ショートカット**、**スクリプト / エディタとの連携**。本ページは使い方と習慣を扱います。引数表は [CLI コマンドリファレンス](/ja/guide/reference/commands/) と [キーボードショートカット](/ja/guide/reference/keyboard-shortcuts/)。
@@ -36,11 +41,11 @@ CLI を初めて見ると、「コマンドとショートカット」は構文�
 | やりたいこと | 入口 | 詳細 |
 |---|---|---|
 | 会話しながらコードを直す | `codex` 対話 TUI | [対話モード](/ja/guide/cli/interactive-mode/) |
-| CI / パイプの単発タスク | `codex exec`（または同等） | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
+| CI / パイプの単発タスク | `codex exec` | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
 | デフォルト挙動を変える | 設定ファイル | [CLI 設定](/ja/guide/cli/configuration/) |
 
 :::note
-サブコマンド名はバージョンで変わります。`codex --help` を正としてください。
+`codex` と `codex exec` は現在、どちらも Stable の入口です。具体的な引数は `codex --help` と `codex exec --help` を確認してください。
 :::
 
 ## よくある誤解
@@ -114,7 +119,7 @@ CLI を初めて使うなら、次の順がおすすめです。
 
 | | CLI | IDE 拡張 |
 |---|---|---|
-| コンテキスト | `--cd`、`@` ファイル（バージョンによる） | 開いているファイル、選択コード |
+| コンテキスト | `--cd` / `-C` で指定したディレクトリ、ツールによるファイル読み取り | 開いているファイル、選択コード |
 | 向くこと | スクリプト、SSH リモート、純ターミナル | 変更しながら diff を見る |
 | ショートカット | ターミナルキー + `/` | エディタのコマンドパレット |
 
@@ -126,7 +131,7 @@ IDE：[ローカルタスクワークフロー](/ja/guide/ide/local-task-workflo
 - アプリ内 `/review` をターミナル外の shell サブコマンドだと思い込む
 - 対話セッションに未確認の第三者「万能プロンプト」を貼り付ける
 
-すべてのコマンドとショートカットを急いで覚える必要はありません。まず「会話しながらか、一度に走らせるか」をはっきりさせれば、選びは単純になります。
+すべてのコマンドとショートカットを急いで覚える必要はありません。まず「会話しながらか、一度に走らせるか」をはっきりさせれば、選択は簡単になります。
 
 ## 検収チェックリスト
 
@@ -136,9 +141,3 @@ IDE：[ローカルタスクワークフロー](/ja/guide/ide/local-task-workflo
 
 ## 参考ソース
 - OpenAI Codex CLI ドキュメント
----
-
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 本ページは `codex`、`codex exec`、`/` コマンドの分類、セッション内ショートカットなど、バージョンで変わりやすい CLI 操作を扱う。現行の公式コマンド / ショートカット資料が十分でないため、再検証後に書き直す必要がある。  
-**最終検証：** 2026-07-26

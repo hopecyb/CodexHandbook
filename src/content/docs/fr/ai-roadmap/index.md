@@ -3,15 +3,15 @@ title: Feuille de route des applications IA
 description: Distinguer articles scientifiques, lancements de produits, articles d’ingénierie et conseils d’apprentissage de l’auteur, puis passer de chaque sujet à la pratique.
 locale: fr
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
+source_revision: "f66e3ba"
+translation_status: reviewed
 translated_at: 2026-10-24
 prev: false
 next:
   link: /fr/ai-roadmap/timeline/
   label: Index des événements et des sujets
+reviewed_at: '2026-10-26'
 ---
-
 Cette carte sépare les événements publics vérifiables des conseils d’apprentissage. **Les dates désignent uniquement les articles, annonces ou publications du tableau. Elles n’indiquent pas automatiquement la naissance d’une notion, sa diffusion dans le secteur ou la maturité d’une capacité.** Plusieurs techniques peuvent coexister ; l’ordre chronologique n’est pas un parcours d’apprentissage obligatoire.
 
 Chaque page thématique présente des sources primaires, des limites d’application et un exercice sur ce site. Vérifier des sources ne revient pas à exécuter un logiciel. Les URL d’origine sont conservées ; leur année ou leur mois peut différer de la date corrigée de l’événement. Référez-vous au texte de la page.
@@ -36,8 +36,8 @@ Chaque page thématique présente des sources primaires, des limites d’applica
 
 Lisez les projets suivants séparément, sans leur imposer un ordre fondé sur une date de première publication non confirmée.
 
-- [OpenSpec](/fr/ai-roadmap/timeline/2026-01-openspec/): La page de publication officielle du projet documente la version v1.0.0 (The OPSX Release). Cette vérification n’en déduit pas la date de première publication du projet et ne conserve pas de date initiale npm non confirmée par les éléments examinés.
-- [OpenClaw](/fr/ai-roadmap/timeline/2026-01-openclaw/): Cette page utilise le dépôt officiel OpenClaw comme source pour l’identité et la description du projet. La vérification n’a pas trouvé assez d’éléments pour confirmer sa première publication ; aucune date initiale n’est donc affichée.
+- [OpenSpec (développement piloté par les spécifications)](/fr/ai-roadmap/timeline/2026-01-openspec/): La page de publication officielle du projet documente la version v1.0.0 (The OPSX Release). Cette vérification n’en déduit pas la date de première publication du projet et ne conserve pas de date initiale npm non confirmée par les éléments examinés.
+- [OpenClaw (projet d’assistant IA personnel)](/fr/ai-roadmap/timeline/2026-01-openclaw/): Cette page utilise le dépôt officiel OpenClaw comme source pour l’identité et la description du projet. La vérification n’a pas trouvé assez d’éléments pour confirmer sa première publication ; aucune date initiale n’est donc affichée.
 
 ## Choisir un exercice selon la tâche actuelle
 

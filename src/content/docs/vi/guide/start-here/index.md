@@ -8,14 +8,13 @@ title: Bắt đầu từ đây
 description: Hiểu Codex là gì, dành cho ai, và chọn lộ trình học của bạn.
 locale: vi
 source_locale: zh-CN
-source_revision: 953fb89
+source_revision: "953fb89"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 1
 ---
-
 
 Cẩm nang này chủ yếu viết cho **người mới bắt đầu với AI**: không giả định bạn đã biết dùng terminal, Git hay Agent, nhưng sẽ lần lượt làm rõ các năng lực bạn sẽ gặp sau này.
 
@@ -86,6 +85,6 @@ Nếu muốn làm ngay, xem [Lộ trình ba mươi phút đầu](/vi/guide/getti
 | Chuyên đề năng lực | Nguyên lý và phương pháp | [Năng lực cốt lõi](/vi/guide/) |
 | Tài liệu tham chiếu | Tra cứu nhanh | [Tài liệu tham chiếu](/vi/guide/reference/) |
 
-Mỗi kiến thức chỉ giữ một bản chính thức; lộ trình và case dùng tóm tắt kèm liên kết để tránh trùng lặp.
+Mỗi chủ đề chỉ giữ một bản nội dung tham chiếu chính; lộ trình và case dùng tóm tắt kèm liên kết để tránh trùng lặp.
 
 Chương này chủ yếu làm rõ thứ tự và ranh giới giai đoạn khởi đầu, đồng thời nêu sớm một số rủi ro rõ ràng.

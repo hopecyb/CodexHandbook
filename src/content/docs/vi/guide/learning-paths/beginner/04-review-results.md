@@ -2,7 +2,8 @@
 title: "Xem xét kết quả"
 description: "Luyện tìm lỗi trên một mẫu sai cố định, rồi rà soát thông báo của chính bạn."
 contentType: "path"
-audiences: ["beginner"]
+audiences:
+  - "beginner"
 level: "beginner"
 editorialStatus: "review"
 sidebar:
@@ -20,11 +21,12 @@ prev:
 next:
   link: "/vi/guide/learning-paths/beginner/05-complete-first-project/"
   label: "Hoàn thành dự án nhỏ đầu tiên"
-locale: vi
-source_locale: zh-CN
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "e426ec4"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 ## Trước tiên, xem một mẫu đã biết có lỗi

@@ -3,11 +3,16 @@ title: Definições
 description: Configura o comportamento diário da aplicação de desktop, os atalhos, as notificações e o aspeto visual.
 locale: pt
 source_locale: zh-CN
-source_revision: 7a6d2fe
-translation_status: draft
+source_revision: "7a6d2fe"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 A página de definições personaliza o comportamento da aplicação; não contém toda a configuração de permissões do Codex. Mantém primeiro os valores predefinidos e só os alteres depois de compreenderes o seu alcance.
@@ -43,14 +48,14 @@ Podes escolher o modo claro, escuro ou conforme o sistema e ajustar a cor de des
 - A disponibilidade de ficheiros, rede e comandos depende em conjunto da sandbox, das aprovações e das políticas da organização.
 - As políticas geridas pela organização podem limitar as funcionalidades que cada pessoa pode escolher.
 
-Por isso, uma opção visível nas definições não garante que a tarefa atual tenha essa permissão. Se uma operação for recusada, lê [Permissões e sandbox](/pt/guide/permissions-and-sandbox/) antes de ampliar o acesso.
+Por isso, uma opção visível nas definições não garante que a tarefa atual tenha essa permissão. Se uma operação for recusada, lê [permissões e sandbox](/pt/guide/permissions-and-sandbox/) antes de ampliar o acesso.
 
 ## Verificar uma alteração
 
-Altera apenas uma categoria de definições de cada vez e verifica o efeito numa conversa de baixo risco. Regista o valor anterior. Se o comportamento não corresponder ao esperado, repõe primeiro o valor predefinido e depois verifica a versão da aplicação, as permissões do sistema operativo e a política da organização.
+Altera apenas uma categoria de definições de cada vez e verifica o efeito numa conversa de baixo risco. Regista o valor anterior e confirma o efeito antes de continuar. Se o comportamento não corresponder ao esperado, repõe primeiro o valor predefinido e depois verifica a versão da aplicação, as permissões do sistema operativo e a política da organização.
 
 ## Fontes oficiais
 
 - [Definições da aplicação de desktop do ChatGPT](https://learn.chatgpt.com/docs/app/settings)
 - [Fundamentos da configuração do Codex](https://learn.chatgpt.com/docs/config)
-- [Permissões](https://learn.chatgpt.com/docs/permissions)
+- [permissões](https://learn.chatgpt.com/docs/permissions)

@@ -1,6 +1,6 @@
 ---
 title: "Prioridad del contexto: instrucciones, convenciones del proyecto y permisos"
-description: "Distingue las instrucciones de mensajes, la búsqueda de AGENTS.md, las tareas anteriores y los límites del entorno aislado para localizar el origen concreto de un conflicto."
+description: "Distingue las instrucciones de mensajes, la combinación de archivos AGENTS.md, las tareas anteriores y los límites del entorno aislado para localizar el origen concreto de un conflicto."
 contentType: reference
 audiences: [beginner, developer]
 editorialStatus: review
@@ -20,8 +20,9 @@ sidebar:
 locale: es
 source_locale: zh-CN
 source_revision: "13537ef"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Ante la pregunta «¿qué instrucción prevalece?», separa primero tres cosas: con qué rol llegó el mensaje, cómo se cargan los archivos del proyecto y qué permite el entorno de ejecución. «La última frase siempre gana» no es una regla universal. Tampoco un texto que contenga «prohibido» se convierte automáticamente en un permiso inmutable del sistema.

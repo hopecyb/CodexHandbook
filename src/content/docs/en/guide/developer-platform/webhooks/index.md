@@ -8,10 +8,10 @@ title: Webhooks
 description: Event-driven integration—webhooks receive notifications; they do not replace workflow design.
 locale: en
 source_locale: zh-CN
-source_revision: 68cb29b
+source_revision: '68cb29b'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 “Webhook” sounds abstract.  
@@ -21,7 +21,7 @@ In Codex integration, it answers “when an external event arrives, how do we tr
 
 ## Section entry
 
-- [Webhooks overview](/en/guide/developer-platform/webhooks/overview/)
+- [Webhooks and task event boundaries](/en/guide/developer-platform/webhooks/overview/): distinguish local execution results, App Server events, and custom HTTP callbacks. This section does not provide an unverified, unified Cloud webhook contract.
 
 ## What this section covers
 

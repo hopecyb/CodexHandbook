@@ -5,16 +5,16 @@ contentType: case
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Tài liệu kế hoạch Codex hiện tại trên OpenAI Help Center vẫn nêu App máy tính hỗ trợ nhiều Codex agents song song, hỗ trợ worktree tích hợp và ủy thác đám mây; trang này chỉ tóm tắt mô hình cộng tác “khám phá song song, cô lập ranh giới thư mục, tránh push song song, người gộp kết luận”, không phụ thuộc một luồng UI duy nhất."
+  basis: "Tài liệu về các gói Codex hiện tại trên OpenAI Help Center vẫn nêu App máy tính hỗ trợ nhiều Codex agents song song, hỗ trợ worktree tích hợp và ủy thác đám mây; trang này chỉ tóm tắt mô hình cộng tác “khám phá song song, cô lập ranh giới thư mục, tránh push song song, người gộp kết luận”, không phụ thuộc một luồng UI duy nhất."
   checkedAt: "2026-07-26"
 title: Phối hợp nhiều Agent
-description: Case cộng tác khám phá song song, phân công thực thi và gộp kết quả.
+description: Ví dụ cộng tác khám phá song song, phân công thực thi và gộp kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: "7b143fc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 

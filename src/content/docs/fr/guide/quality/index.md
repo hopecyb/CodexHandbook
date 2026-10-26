@@ -1,30 +1,29 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "La page d'accueil OpenAI Developers met encore l'accent sur construire, tester, revoir et livrer des changements avec Codex ; cette page divise la Vérification en revue des diffs, lancer les tests, valider les sources et définition du terminé — recoupée avec les chapitres qualité du site."
-  checkedAt: "2026-07-26"
-title: Qualité et Vérification
-description: Revoir les diffs, lancer les tests, valider les sources et définir le terminé.
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: La page d'accueil OpenAI Developers met encore l'accent sur construire, tester, revoir et livrer des changements avec Codex ; cette page divise la vérification en revue des diffs, lancer les tests, valider les sources et définition du terminé — recoupée avec les chapitres qualité du site.
+  checkedAt: '2026-07-26'
+title: Qualité et vérification
+description: Revoir les diffs, lancer les tests, valider les sources et définir les critères de fin.
 locale: fr
 source_locale: zh-CN
-source_revision: 90d62fb
-translation_status: draft
+source_revision: "90d62fb"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 21
+reviewed_at: '2026-10-26'
 ---
-
-
 Erreur courante des débutants : **traiter « Codex a dit que c'est fait » comme réellement fait.**
 
-La Vérification signifie juger les résultats par rapport à vos exigences — pas par rapport à l'affirmation du modèle.
+La vérification signifie juger les résultats par rapport à vos exigences — pas par rapport à l'affirmation du modèle.
 
-La sortie de Codex doit être vérifiable. La Vérification n'est pas optionnelle — elle ferme chaque boucle de Tâche.
+La sortie de Codex doit être vérifiable. La vérification n'est pas optionnelle — elle ferme chaque boucle de tâche.
 
 ![Illustration : une loupe examine les lignes ajoutées et supprimées d’un diff, à côté d’une liste avec un point signalé et des tests réussis](/illustrations/verification.webp)
 
-## Ce que la Vérification demande
+## Ce que la vérification demande
 
 Que vous modifiiez du code, rédigiez de la doc ou fassiez de la recherche, la même question reste :
 
@@ -38,7 +37,7 @@ Beaucoup de retouches arrivent parce que :
 - Une page charge mais le flux ne fonctionne pas
 - La doc existe mais un nouveau venu ne peut pas la suivre
 
-La Vérification **retient le risque avant la livraison**.
+La vérification permet de **traiter les risques avant la livraison**.
 
 ## Pièges courants
 
@@ -60,9 +59,9 @@ Vérifiez **ce** qui a été vérifié :
 - Artefacts réellement ouverts ?
 - Sources traçables ?
 
-### 3. La Vérification est seulement pour les programmeurs
+### 3. La vérification est seulement pour les programmeurs
 
-Rédaction, feuilles de calcul, config, docs et descriptions de PR ont toutes besoin de Vérification — les méthodes diffèrent.
+Rédaction, feuilles de calcul, config, docs et descriptions de PR ont toutes besoin de vérification — les méthodes diffèrent.
 
 ## Si vous manquez de processus, essayez cet ordre
 
@@ -89,15 +88,15 @@ Pensez-y comme :
 - [Utilisation, durée et choix du modèle](/fr/guide/quality/usage-time-and-model-choice/)
 - [Évaluation des workflows et 20 échantillons](/fr/guide/quality/workflow-evaluation/)
 
-## Accent de Vérification par type de Tâche
+## Points de vérification selon le type de tâche
 
 - **Changements de code** : diff, tests, chemin critique manuel
 - **Documentation** : bon public, liens fonctionnels, étapes suivables
 - **Recherche** : sources réelles et actuelles ; conclusions dans les preuves
 - **Config ou scripts** : hypothèses d'environnement, périmètre de permission, récupération en cas d'échec
 
-Incertain où commencer : par défaut vers [définition du terminé](/fr/guide/quality/definition-of-done/).
+Si vous ne savez pas par où commencer, consultez la [définition du terminé](/fr/guide/quality/definition-of-done/).
 
-La Vérification confirme que le résultat est utilisable, fiable et livrable.
+La vérification confirme que le résultat est utilisable, fiable et livrable.
 
-Comment écrire l'acceptation dans les Prompts : [définir le terminé](/fr/prompts/define-done/). Exemples de bout en bout : [cas](/fr/cases/).
+Comment écrire l'acceptation dans les prompts : [définir les critères de fin](/fr/prompts/define-done/). Exemples de bout en bout : [cas](/fr/cases/).

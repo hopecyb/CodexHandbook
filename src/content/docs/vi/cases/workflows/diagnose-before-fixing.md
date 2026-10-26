@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương lập kế hoạch, chất lượng và phục hồi thất bại đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp chẩn đoán ổn định “dựng chuỗi bằng chứng trước, rồi sửa tối thiểu”, không phụ thuộc triển khai phía sản phẩm cụ thể.", "checkedAt": "2026-07-26"}
 title: Chẩn đoán trước khi sửa
 description: Sự cố production và bug cứng đầu — dựng chuỗi bằng chứng trước, rồi mới động dao.
 locale: vi
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: "18193b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Để Codex sửa bug ngay từ đầu, tỷ lệ làm lại thường cao. Quy trình chẩn đoán nhấn mạnh hơn: **triệu chứng → giả thuyết → bằng chứng → sửa tối thiểu**.
@@ -69,10 +70,3 @@ Chẩn đoán có thể xem là bản sâu hơn của giai đoạn **khám phá*
 - Chưa tái hiện đã sửa code
 - Một patch sửa đồng thời ba vấn đề, không review được
 - Xóa log tạm mà không bổ sung test lâu dài
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương lập kế hoạch, chất lượng và phục hồi thất bại đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp chẩn đoán ổn định “dựng chuỗi bằng chứng trước, rồi sửa tối thiểu”, không phụ thuộc triển khai phía sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

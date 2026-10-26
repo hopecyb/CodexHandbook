@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: Install and enable the IDE integration
 description: Open Codex correctly in VS Code-family editors, Xcode, and JetBrains IDEs.
 locale: en
 source_locale: zh-CN
-source_revision: 85e1691
+source_revision: '85e1691'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -53,11 +57,3 @@ For the longer beginner path, see [Install an IDE integration](/en/guide/getting
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

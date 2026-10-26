@@ -3,11 +3,16 @@ title: GitHub 연결
 description: Codex Cloud에 필요한 최소 저장소 범위로 GitHub 접근 권한을 설정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b126a7e
-translation_status: draft
+source_revision: "b126a7e"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Cloud / GitHub
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 Codex Cloud에서 저장소용 환경을 만들려면 먼저 GitHub 또는 GitLab(Beta)을 연결해야 합니다. GitHub 연결 권한의 범위에 따라 Codex가 볼 수 있는 저장소가 결정됩니다. 내 컴퓨터의 clone과 아직 push하지 않은 변경 사항은 그 범위에 포함되지 않습니다.

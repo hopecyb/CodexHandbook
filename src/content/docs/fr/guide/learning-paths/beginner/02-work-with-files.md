@@ -23,8 +23,9 @@ next:
 locale: fr
 source_locale: zh-CN
 source_revision: "ec5c2d3"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 ## Prérequis
@@ -39,6 +40,8 @@ Ajoute le commentaire de statut suivant uniquement sur la première ligne de not
 Conserve le texte d'origine caractère par caractère. Ne modifie aucun autre fichier et n'en crée pas.
 Une fois terminé, indique l'emplacement de la modification. Ne publie rien et n'envoie aucune notification.
 ```
+
+Le commentaire chinois signifie « État : brouillon d’exercice, non publié ». Conservez sa forme exacte pour pouvoir comparer le fichier aux supports fournis.
 
 Comparez le fichier ligne par ligne avec l'original dans la vue des différences de votre client ou dans un éditeur. Cette étape demande une seule petite modification ; il n'est pas nécessaire d'ajouter une procédure « planifier d'abord, puis confirmer chaque étape ».
 

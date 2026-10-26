@@ -3,10 +3,15 @@ title: 병합 전 검토
 description: merge 전에 Codex로 구조화된 diff와 위험 검토를 합니다—사람·기계 분업이 명확합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: '78d5c03'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE / Cloud
+  basis: OpenAI Developers의 현재 공개 code review / pull request 관련 use cases와, 이 핸드북에서 이미 검증된 품질, diff 검토, Cloud 관련 장을 교차 확인했습니다. 이 페이지는 “병합 전 구조화 검토, 읽기 전용 검토, 사람 최종 서명”이라는 안정적인 원칙만 확인합니다.
+  checkedAt: '2026-07-26'
 ---
 
 **병합 전 검토**는 [품질과 검증](/ko/guide/quality/)을 Git 흐름에 두는 것입니다. PR 병합 전에 Codex로 diff, 테스트, 보안, 스펙 일치를 검사합니다. 자동 댓글 자체가 자동 병합을 대신하지는 않습니다.
@@ -14,7 +19,7 @@ reviewed_at: 2026-08-26
 ## 이 페이지의 초점
 
 - 로컬 검토 vs Cloud/CI 검토의 분업
-- 검토 프롬프트가 어떤 차원을 덮어야 하는지
+- 검토 프롬프트가 어떤 항목을 다뤄야 하는지
 - 언제 사람이 최종 서명해야 하는지
 
 ## 최소 실행 방법
@@ -35,9 +40,9 @@ checklist를 출력하고 P0/P1을 표시하세요.
 - 결과를 PR comment 또는 check run에 기록
 - [코드 검토 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/) 참고
 
-## 권장 검토 차원
+## 권장 검토 항목
 
-| 차원 | 관심 포인트 |
+| 항목 | 관심 포인트 |
 |---|---|
 | 정확성 | 로직, 경계, 오류 처리 |
 | 테스트 | 새 동작에 커버리지가 있는지 |
@@ -50,7 +55,7 @@ checklist를 출력하고 P0/P1을 표시하세요.
 ## 흔한 실수
 
 - 모델에게 「LGTM」만 말하게 하고 구체 근거가 없음
-- 전체 PR 설명을 살균하지 않고 CI prompt에 붙여 넣음(주입 위험)
+- 전체 PR 설명을 안전하게 처리하지 않고 CI prompt에 붙여 넣음(주입 위험)
 - 검토는 통과했지만 CI 테스트를 돌리지 않음
 - 자동 병합 Bot이 켜져 있고 브랜치 보호가 없음
 
@@ -59,21 +64,14 @@ checklist를 출력하고 P0/P1을 표시하세요.
 - 검토는 읽기 전용 권한으로; 수정은 **새 commit**에서 사람이 트리거해야 합니다
 - 검토 로그에 사용자 PII나 시크릿을 기록하지 마세요
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 검토 출력이 구체 파일/행까지 추적 가능
 - [ ] P0 문제가 병합을 차단했거나 이미 수정됨
-- [ ] 팀 review checklist와 정렬
+- [ ] 팀 review checklist와 일치
 - [ ] 논쟁 항목에 대해 사람 maintainer가 최종 결정
 
 ## 관련 장
 
 - [Cloud 코드 검토](/ko/guide/web-and-cloud/code-review/)
 - [Pull Request 만들기](/ko/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**상태:** verified  
-**적용 제품:** CLI / IDE / Cloud  
-**검증 근거:** OpenAI Developers의 현재 공개 code review / pull request 관련 use cases와, 이 핸드북에서 이미 검증된 품질, diff 검토, Cloud 관련 장을 교차 확인했습니다. 이 페이지는 “병합 전 구조화 검토, 읽기 전용 검토, 사람 최종 서명”이라는 안정적인 원칙만 확인합니다.  
-**최근 검증:** 2026-07-26

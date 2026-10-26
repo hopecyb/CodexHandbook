@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Se revisaron las recomendaciones de acceso, preparación del cliente y entorno de práctica con materiales oficiales de OpenAI sobre primeros pasos y subida de archivos; el cuerpo conserva principios de arranque de larga vigencia y no depende de pasos de instalación detallados."
+  checkedAt: "2026-07-26"
 title: Qué necesitas antes de empezar
 description: Cuenta, dispositivo, proyecto de práctica y línea base de seguridad.
 locale: es
 source_locale: zh-CN
-source_revision: 5fbedb8
+source_revision: '5fbedb8'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 5
 ---
@@ -15,7 +20,7 @@ Para la mayoría, el primer bloqueo con Codex no es el trasfondo técnico, sino 
 
 ## Imprescindible
 
-1. **Acceso usable a OpenAI / Codex** (cuenta y plan según la documentación oficial)
+1. **Acceso disponible a OpenAI / Codex** (cuenta y plan según la documentación oficial)
 2. **Un ordenador donde puedas instalar la App de escritorio, la CLI o la extensión IDE**
 3. **Un directorio de práctica descartable** (no hagas el primer intento en un repositorio de producción)
 4. **Disposición a revisar el resultado**: aceptar, modificar o revertir, no fusionar a ciegas
@@ -27,14 +32,14 @@ De estas cuatro, la 3 y la 4 son las que más se olvidan.
 
 ## Qué no necesitas saber de antemano
 
-Esto **no** es un requisito duro antes de empezar:
+Esto **no** es un requisito obligatorio antes de empezar:
 
 - No hace falta dominar Git primero
 - No hace falta saber escribir mucho código
-- No hace falta entender de entrada todos los detalles de modelos, contexto, Sandbox y Aprobación
+- No hace falta entender de entrada todos los detalles de modelos, contexto, sandbox y aprobación
 - No hace falta instalar todos los clientes de una vez
 
-Completa la primera Tarea y luego ve rellenando conceptos; la presión será menor.
+Completa la primera tarea y luego ve rellenando conceptos; la presión será menor.
 
 ## Malentendidos frecuentes
 
@@ -42,7 +47,7 @@ Completa la primera Tarea y luego ve rellenando conceptos; la presión será men
 
 Puedes aprender sobre la marcha. Mucha gente empieza así:
 
-1. Completa una Tarea muy pequeña
+1. Completa una tarea muy pequeña
 2. Vuelve a los conceptos relacionados
 3. Cuando haya un problema, consulta la documentación
 
@@ -51,12 +56,12 @@ Puedes aprender sobre la marcha. Mucha gente empieza así:
 Al principio puedes hacer esto:
 
 - Un directorio pequeño y descartable
-- Una Tarea cuyo resultado puedas entender
+- Una tarea cuyo resultado puedas entender
 - Un entorno donde un error no cause daño
 
 ### 3. No hace falta aprender CLI, IDE y App de una vez
 
-Para la mayoría de principiantes, empezar por la **App de escritorio** es más fácil: la interfaz es más clara y se ven mejor proyectos, Tareas y cambios.
+Para la mayoría de principiantes, empezar por la **App de escritorio** es más fácil: la interfaz es más clara y se ven mejor proyectos, tareas y cambios.
 
 ## Recomendaciones
 
@@ -75,14 +80,7 @@ Puedes seguir este orden:
 1. Confirma que tienes acceso
 2. Instala un cliente
 3. Prepara un directorio de práctica
-4. Ejecuta una Tarea muy pequeña
+4. Ejecuta una tarea muy pequeña
 5. Revisa el resultado y decide el siguiente paso
 
-Antes de empezar, completar la primera Tarea en un entorno seguro, acotado y reversible suele costar menos que acumular muchos conceptos.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Se revisaron las recomendaciones de acceso, preparación del cliente y entorno de práctica con materiales oficiales de OpenAI sobre primeros pasos y subida de archivos; el cuerpo conserva principios de arranque de larga vigencia y no depende de pasos de instalación finos.  
-**Última verificación:** 2026-07-26
+Antes de empezar, completar la primera tarea en un entorno seguro, acotado y reversible suele costar menos que acumular muchos conceptos.

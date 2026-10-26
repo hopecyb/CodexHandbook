@@ -3,10 +3,15 @@ title: CI/CD
 description: 지속적 통합과 릴리스 흐름에 Codex를 연결합니다. 먼저 저위험 자동화부터 하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 4aeb424
+source_revision: '4aeb424'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: 본 저장소의 현재 CI/CD 하위 장 구조와 코드 리뷰 자동화 입구를 교차 확인했습니다. 페이지 내용은 “CI/CD에서 먼저 저위험 보조를 하고, 권한 확대를 나중에 결정한다”는 안정된 연결 원칙으로 한정합니다.
+  checkedAt: '2026-07-26'
 ---
 
 CI/CD에 Codex를 붙일 때 가장 흔한 문제는 보통 여기입니다.
@@ -26,10 +31,3 @@ CI/CD에 Codex를 붙일 때 가장 흔한 문제는 보통 여기입니다.
 - 고위험 동작은 계속 사람 승인에 맡기기
 
 CI/CD에 Codex를 붙일 때는 보통 저위험 보조부터 하고, 어떤 동작에 권한을 줄지 나중에 정합니다.
-
----
-
-**상태：** verified  
-**적용 제품：** CLI / API / Cloud  
-**검증 근거：** 본 저장소의 현재 CI/CD 하위 장 구조와 코드 리뷰 자동화 입구를 교차 확인했습니다. 페이지 내용은 “CI/CD에서 먼저 저위험 보조를 하고, 권한 확대를 나중에 결정한다”는 안정된 연결 원칙으로 한정합니다.  
-**최근 검증：** 2026-07-26

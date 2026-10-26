@@ -3,14 +3,18 @@ title: "Política de reglas de equipo"
 description: Gobierna por capas reglas de comandos y rutas entre organización, repositorio e individuo — revisable y reversible.
 locale: es
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: "bae8bd2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: CLI / App / Cloud (según funciones de la organización)
+  basis: Los materiales actuales de OpenAI sobre plugins, apps y permisos a nivel de organización siguen enfatizando el acceso por rol, la aprobación de acciones, la configuración gestionada y el control a nivel de equipo; esta página abstrae la política de reglas como un modelo de gobernanza organización/proyecto/individuo y exige que los cambios de reglas pasen por revisión y anuncio — resumen de práctica de gobernanza estable.
+  checkedAt: '2026-07-26'
 ---
-
 Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/es/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contenido
@@ -62,7 +66,7 @@ L4 Configuración personal              → solo esta máquina; no puede debilit
 L5 Prompt de una sola tarea            → se puede endurecer temporalmente; relajar temporalmente está limitado por L1
 ```
 
-Contrasta con [alcance de AGENTS.md](/es/guide/customization/agents-md/scope-and-precedence/): **las reglas inclinan hacia enforcement de ejecución; AGENTS.md inclina hacia explicación de comportamiento**; deben ser coherentes, no escribir requisitos contradictorios por separado.
+Contrasta con [alcance de AGENTS.md](/es/guide/customization/agents-md/scope-and-precedence/): **las reglas controlan la ejecución; AGENTS.md describe el comportamiento esperado**; deben ser coherentes, no escribir requisitos contradictorios por separado.
 
 ## Enfoque básico
 
@@ -76,7 +80,7 @@ Contrasta con [alcance de AGENTS.md](/es/guide/customization/agents-md/scope-and
 
 ```text
 Propuesta (issue o RFC) → review de seguridad/plataforma → PR que cambia archivos de reglas
-    → prueba tipica en repo de staging → merge → anuncio + actualización de la página del manual
+    → prueba típica en repo de staging → merge → anuncio + actualización de la página del manual
 ```
 
 Cambios grandes (por ejemplo abrir salida a red) deben actualizar a la vez [auditoría con Hooks](/es/skills/hooks/hooks-overview/) y [uso aceptable](/es/guide/team-enterprise/governance/acceptable-use/).
@@ -94,7 +98,7 @@ Evita tres lógicas distintas cada una por su lado: prioriza una **única fuente
 ## Errores habituales
 
 - Solo acuerdo oral «no hagas push», sin actualizar el archivo de reglas
-- Relajar el Sandbox en tu máquina y tomar capturas como «estándar del equipo»
+- Relajar el sandbox en tu máquina y tomar capturas como «estándar del equipo»
 - Subproyectos de monorepo con necesidades distintas pero una allowlist global demasiado ancha
 - Cambios de reglas sin anuncio: los compañeros empiezan a fallar en masa en aprobaciones
 
@@ -126,10 +130,3 @@ Suele corresponder a:
 - [ ] Hay un canal para feedback de «bloqueos falsos» (plantilla de issue o formulario interno)
 
 Lo más importante de la política de reglas de equipo es aclarar primero «quién fija el límite de cada capa» y luego decidir cómo escribir las reglas.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** CLI / App / Cloud (según funciones de la organización)  
-**Base de verificación:** Los materiales actuales de OpenAI sobre plugins, apps y permisos a nivel de organización siguen enfatizando el acceso por rol, la aprobación de acciones, la configuración gestionada y el control a nivel de equipo; esta página abstrae la política de reglas como un modelo de gobernanza organización/proyecto/individuo y exige que los cambios de reglas pasen por revisión y anuncio — resumen de práctica de gobernanza estable.  
-**Última verificación:** 2026-07-26

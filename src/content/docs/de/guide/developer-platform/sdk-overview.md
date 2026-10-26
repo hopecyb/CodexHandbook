@@ -18,9 +18,10 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: e888ae6
-translation_status: draft
+source_revision: "e888ae6"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Das Codex SDK lässt ein Programm einen lokalen Codex Agent steuern. „Lokal“ bezeichnet den Rechner, auf dem SDK und Agent laufen: deinen Computer oder einen von dir verwalteten CI-Runner. Das SDK ist nicht automatisch ein gehosteter HTTP-Dienst, der Cloud-Aufgaben erstellt, abfragt und Artefakte herunterladen lässt. Siehe die [offizielle SDK-Dokumentation](https://learn.chatgpt.com/docs/codex-sdk).
@@ -85,4 +86,4 @@ Das sind Integrationsprüfungen dieser Website, keine Liste der SDK-Rückgabefel
 
 Ein eigener Runner kann das SDK ausführen und dein Dienst anschließend eine Fertigmeldung senden. Warteschlangenstatus, HTTP-Rückruf, Signaturformat und Retry-Regeln gehören dann zu deinem eigenen Protokoll. Der App-Server-Ereignisstream ist keine Webhook-Adresse.
 
-Lies weiter über [Webhooks und Aufgabeneignisse](/de/guide/developer-platform/webhooks/overview/) und [Skripte und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/). Diese Seite verspricht nicht, dass ein SDK-Aufruf automatisch Codex-Cloud-Aufgaben, Artefakt-URLs oder OAuth-Delegation erstellt.
+Lies weiter über [Webhooks und Aufgabenereignisse](/de/guide/developer-platform/webhooks/overview/) und [Skripte und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/). Diese Seite verspricht nicht, dass ein SDK-Aufruf automatisch Codex-Cloud-Aufgaben, Artefakt-URLs oder OAuth-Delegation erstellt.

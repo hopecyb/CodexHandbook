@@ -36,14 +36,15 @@ next:
   label: Transformar o artigo em apresentação
 locale: pt
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: "e2bb5ea"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: '2026-09-20'
 ---
 
 O objetivo é um artigo curto em chinês cujos fatos principais possam ser rastreados até as fontes. Você tratará descrições conflitantes, distinguirá suporte documental, inferência do autor e dúvidas pendentes, e revisará um rascunho intencionalmente errado.
 
-Dificuldade inicial. Duração estimada de 45–60 minutos, cálculo editorial não medido com leitores. Requisitos: fornecer arquivos locais ao Codex e ler Markdown. A validação estrutural opcional requer Python 3.10+.
+Nível: iniciante. Duração estimada de 45–60 minutos, cálculo editorial não medido com leitores. Requisitos: fornecer arquivos locais ao Codex e ler Markdown. A validação estrutural opcional requer Python 3.10+.
 
 [Baixar o pacote completo v1.0.0 (ZIP)](/downloads/source-backed-article/source-backed-article-1.0.0.zip)
 

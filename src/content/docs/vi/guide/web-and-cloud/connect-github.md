@@ -3,15 +3,16 @@ title: Kết nối GitHub
 description: Cấu hình quyền truy cập GitHub cho Codex Cloud với phạm vi kho mã tối thiểu.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: vi
 source_locale: zh-CN
-source_revision: b126a7e
-translation_status: draft
+source_revision: "b126a7e"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: 2026-10-26
 ---
 
 Codex Cloud cần kết nối với GitHub hoặc GitLab (Beta) trước khi tạo môi trường cho một kho mã. Phạm vi ủy quyền GitHub quyết định Codex có thể nhìn thấy những kho mã nào. Bản clone trên máy và các thay đổi chưa push nằm ngoài phạm vi đó.
@@ -22,7 +23,7 @@ Codex Cloud cần kết nối với GitHub hoặc GitLab (Beta) trước khi t�
 2. Kết nối GitHub khi được yêu cầu.
 3. Trên màn hình ủy quyền của GitHub, chọn tổ chức và **chỉ những kho mã cần thiết**.
 4. Quay lại Codex, chọn kho mã đó và tạo môi trường Cloud.
-5. Dùng tác vụ chỉ đọc hoặc thay đổi nhỏ để kiểm tra checkout, nhánh và diff.
+5. Dùng tác vụ chỉ đọc hoặc thay đổi nhỏ để kiểm tra clone, nhánh và diff.
 6. Nếu cần review PR, bật Code review cho kho mã trong Codex Settings.
 
 Chỉ ủy quyền những kho mã cần dùng cho tác vụ này. Với kho mã của nhóm, hãy kiểm tra thêm việc tổ chức có cho phép cài đặt tích hợp hay không, tài khoản của bạn có đủ quyền hay không và cơ chế bảo vệ nhánh vẫn được duy trì.

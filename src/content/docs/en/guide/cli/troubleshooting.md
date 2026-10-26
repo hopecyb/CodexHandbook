@@ -10,9 +10,10 @@ sidebar:
   order: 70
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 57b062f
+source_revision: '57b062f'
 ---
 
 CLI failures may all look like terminal errors, but they need not share a cause. First ask whether the command is not installed, you are not signed in, permission is missing, or you are in the wrong directory.
@@ -27,8 +28,8 @@ CLI failures may all look like terminal errors, but they need not share a cause.
 ## Sort problems into four groups
 
 - **The command cannot be found:** Usually installation or `PATH`.
-- **The command runs but cannot enter:** Usually authentication.
-- **You can enter but cannot act:** Usually permissions or sandboxing.
+- **The command runs but sign-in fails:** Usually authentication.
+- **You can sign in but cannot act:** Usually permissions or sandboxing.
 - **It acts, but on the wrong thing:** Usually directory or context.
 
 ## Common misconceptions

@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: 'cf2b232'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Una fuente que no se abre, una que no dice nada sobre un dato y dos que discrepan requieren tratamientos distintos. Este Skill conserva esas diferencias para que se sepa qué conclusiones se pueden comprobar y cuáles necesitan más evidencia.
@@ -32,7 +33,7 @@ Una fuente que no se abre, una que no dice nada sobre un dato y dos que discrepa
 
 ## Pregunta y materiales fijos
 
-El paquete retoma la herramienta ficticia «拾页» del [ejercicio de redacción](/es/cases/write-an-article/). Investiga sus formatos de entrada, la configuración predeterminada del diagnóstico y los campos de carga. Incluye tres fuentes sintéticas originales; falta deliberadamente una cuarta nota del responsable que figura en el catálogo. No busques páginas reales sobre este producto ficticio ni inventes respuestas.
+El paquete retoma la herramienta ficticia «拾页» (Shiye) del [ejercicio de redacción](/es/cases/write-an-article/). Investiga sus formatos de entrada, la configuración predeterminada del diagnóstico y los campos de carga. Incluye tres fuentes sintéticas originales; falta deliberadamente una cuarta nota del responsable que figura en el catálogo. No busques páginas reales sobre este producto ficticio ni inventes respuestas.
 
 | Estado de evidencia | Ejemplo del paquete | Cómo entregarlo |
 |---|---|---|

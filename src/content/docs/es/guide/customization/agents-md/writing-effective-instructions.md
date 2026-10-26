@@ -1,16 +1,20 @@
 ---
 title: Escribir instrucciones eficaces
-description: Checklist de escritura de AGENTS.md — corto, duro, ejecutable y verificable.
+description: Checklist de escritura de AGENTS.md — breve, preciso, ejecutable y verificable.
 locale: es
 source_locale: zh-CN
-source_revision: 63dd711
+source_revision: "63dd711"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las páginas actuales de la serie `AGENTS.md` de este repositorio y con los capítulos de contexto y flujos de trabajo; esta página solo explica principios estables de escritura y ritmo de mantenimiento de instrucciones de proyecto, sin convertir detalles de implementación de un cliente concreto en promesas a largo plazo.
+  checkedAt: '2026-07-26'
 ---
-
 Las instrucciones de proyecto eficaces se parecen más a una **lista de verificación**. El objetivo es que Codex cometa menos errores previsibles en el primer intento.
 
 La primera vez que se escriben, el problema habitual es que hay muchas ideas, pero las restricciones realmente clave no quedan claras.
@@ -18,7 +22,7 @@ La primera vez que se escriben, el problema habitual es que hay muchas ideas, pe
 ## Contenido
 
 - Cómo deberían verse las instrucciones del proyecto
-- Qué significa «corto, duro y ejecutable»
+- Qué significa «breve, preciso y ejecutable»
 - Qué estilos hacen más difícil que Codex y las personas entiendan
 
 ## Estructura recomendada
@@ -35,7 +39,7 @@ Lista numerada de reglas que no se pueden violar
 ## Código y directorios
 Nombres, ubicación, convenciones de dependencias
 
-## Definición de hecho
+## Definición de terminado
 Qué cuenta como «listo para commit»
 
 ## Prohibiciones
@@ -60,10 +64,10 @@ pnpm test --filter @app/web
 Asegura que los tests pasen
 ```
 
-### 3. Criterios de hecho verificables
+### 3. Criterios de finalización verificables
 
 ```md
-## Definición de hecho
+## Definición de terminado
 - `pnpm lint` y `pnpm test` sin fallos
 - Las APIs nuevas tienen tests unitarios correspondientes
 - Cambios visibles al usuario con pasos de prueba manual (navegador + móvil)
@@ -117,16 +121,16 @@ Demasiado disperso, largo o enciclopédico ahoga las reglas de alta prioridad.
 
 ### 2. ¿«Presta atención a las normas» ya cuenta como instrucción?
 
-Ese tipo de frase suele no ser ejecutable.  
+Ese tipo de frase suele no ser ejecutable.
 Es mejor dar directamente:
 
 - Comandos reales
 - Directorios concretos
-- Criterios de hecho específicos
+- Criterios de finalización específicos
 
 ### 3. ¿Se pueden mezclar trasfondo y reglas de ejecución?
 
-Tampoco conviene.  
+Tampoco conviene.
 Mejor:
 
 - Reglas delante
@@ -140,9 +144,23 @@ Si tienes unas instrucciones de proyecto muy dispersas, puedes condensarlas así
 1. Sube «debe/prohibido» al principio
 2. Convierte frases vacías en comandos o ítems de checklist
 3. Acorta el trasfondo largo y conviértelo en enlaces
-4. Da un conjunto mínimo de definición de hecho
+4. Da un conjunto mínimo de definición de terminado
 
-Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si las restricciones clave, los comandos clave y los criterios de hecho están lo bastante claros para ejecutarse directamente.
+## De una tarea a una regla de proyecto
+
+No todo buen prompt debe ir directamente a `AGENTS.md`. Primero decide qué capa debe poseerlo.
+
+| Contenido repetido | Mejor lugar |
+|---|---|
+| “No tocar directorios generados” | Prohibición en `AGENTS.md` |
+| “Revisar cada PR con este formato” | Skill o plantilla de prompt |
+| “Formatear archivos tras escribir” | Hook |
+| “Consultar primero Linear/Jira al buscar tickets” | MCP + Skill correspondiente |
+| “Prefiero explicaciones en chino” | Memoria o preferencia personal |
+
+`AGENTS.md` encaja mejor con reglas duraderas, compartidas y verificables. Los procesos pueden pasar a Skills; los chequeos automáticos, a Hooks; el acceso externo, a MCP.
+
+Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si las restricciones clave, los comandos clave y los criterios de finalización están lo bastante claros para ejecutarse directamente.
 
 ## Ritmo de mantenimiento
 
@@ -154,25 +172,4 @@ Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si l
 
 - [Instrucciones del proyecto](/es/guide/customization/project-instructions/)
 - [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
-- [Definir hecho](/es/prompts/define-done/)
-
-## De una tarea a una regla de proyecto
-
-No todo buen Prompt debe ir directamente a `AGENTS.md`. Primero decide qué capa debe poseerlo.
-
-| Contenido repetido | Mejor lugar |
-|---|---|
-| “No tocar directorios generados” | Prohibición en `AGENTS.md` |
-| “Revisar cada PR con este formato” | Skill o plantilla de Prompt |
-| “Formatear archivos tras escribir” | Hook |
-| “Leer Linear/Jira antes de programar” | MCP + Skill correspondiente |
-| “Prefiero explicaciones en chino” | Memoria o preferencia personal |
-
-`AGENTS.md` encaja mejor con reglas duraderas, compartidas y verificables. Los procesos pueden pasar a Skills; los chequeos automáticos, a Hooks; el acceso externo, a MCP.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con las páginas actuales de la serie `AGENTS.md` de este repositorio y con los capítulos de contexto y flujos de trabajo; esta página solo explica principios estables de escritura y ritmo de mantenimiento de instrucciones de proyecto, sin convertir detalles de implementación de un cliente concreto en promesas a largo plazo.  
-**Última verificación:** 2026-07-26
+- [Definir terminado](/es/prompts/define-done/)

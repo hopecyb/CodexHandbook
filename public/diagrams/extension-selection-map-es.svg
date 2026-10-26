@@ -54,17 +54,17 @@
   <text x="550" y="553" text-anchor="middle" class="note">Tratar subproblemas independientes en paralelo</text>
 
   <rect x="760" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
-  <text x="910" y="254" text-anchor="middle" class="lane">Distribuir o disparar por tiempo</text>
+  <text x="910" y="254" text-anchor="middle" class="lane">Distribuir o iniciar según el horario</text>
   <rect x="790" y="304" width="240" height="90" rx="8" fill="#3f1d0b" stroke="#fb923c"/>
   <text x="910" y="333" text-anchor="middle" class="label">Plugin</text>
   <text x="910" y="357" text-anchor="middle" class="note">Empaquetar Skills, conectores y MCP</text>
   <text x="910" y="378" text-anchor="middle" class="tiny">Puede incluir Hooks y plantillas de tarea</text>
   <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
   <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
-  <text x="910" y="497" text-anchor="middle" class="note">Repetir por tiempo</text>
+  <text x="910" y="497" text-anchor="middle" class="note">Repetir según el horario</text>
   <text x="910" y="518" text-anchor="middle" class="tiny">Verificar antes de programar</text>
 
   <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
   <text x="550" y="651" text-anchor="middle" class="note">Común: reglas AGENTS.md + proceso Skill + herramientas MCP + límites Hook</text>
-  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin distribuye; Scheduled task dispara por tiempo</text>
+  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin distribuye; Scheduled task inicia según el horario</text>
 </svg>

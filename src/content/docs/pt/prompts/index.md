@@ -7,9 +7,10 @@ title: Prompts
 description: Aprenda a formular com clareza a tarefa, o contexto, as entradas, as restrições e os critérios de aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 A seção de prompts mostra como descrever uma tarefa para que o Codex entenda objetivo, contexto, limites e critérios de conclusão. Um bom prompt também permite expor incertezas durante a execução, pedir confirmação quando necessário e devolver um resultado verificável.
@@ -32,7 +33,7 @@ A seção de prompts mostra como descrever uma tarefa para que o Codex entenda o
 
 ## Comparação com entradas fixas
 
-As [três comparações de prompts](/pt/prompts/comparison-lab/) oferecem materiais A/B e critérios comuns de pontuação para relatório semanal, artigo e correção de bug. São desenhos experimentais; ainda não permitem concluir nada sobre eficácia do modelo ou tempo gasto.
+As [três comparações de prompts](/pt/prompts/comparison-lab/) oferecem materiais A/B e critérios comuns de pontuação para relatório semanal, artigo e correção de bug. A página inclui 12 execuções registradas, pontuações por critério e limitações. A amostra não permite conclusões gerais sobre eficácia dos modelos ou economia de tempo.
 
 ## Recursos reutilizáveis
 

@@ -3,12 +3,16 @@ title: Trabajo impulsado por tests
 description: Define o completa primero tests que fallen y deja que impulsen la implementación — para que los cambios de Codex se puedan aceptar de forma objetiva.
 locale: es
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: Contrastado con los capítulos ya verificados de ejecutar tests, definir terminado, corregir bugs con verificación y reglas de comandos. El contenido se centra en el método estable «hacer fallar el test primero, luego pasar a verde con la implementación mínima».
+  checkedAt: '2026-07-26'
 ---
-
 **Trabajo impulsado por tests** (TDD o «tests primero») consiste en hacer fallar el test y luego pasar a verde con la implementación mínima. Encaja en repos con infraestructura de tests y se relaciona directamente con escenarios como [Corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Enfoque de esta página
@@ -22,7 +26,7 @@ reviewed_at: 2026-08-26
 - Repos con tests unitarios/de integración
 - Bugs de regresión, cambios de comportamiento de API, refactorizaciones
 
-No adecuado: prototipos sin infraestructura de tests, cambios únicos en sitios solo de copy. Ahí es mejor [EPXV](/es/cases/workflows/explore-plan-execute-verify/) con verificación humana.
+No adecuado: prototipos sin infraestructura de tests, cambios puntuales en sitios de contenido textual. Ahí es mejor [EPXV](/es/cases/workflows/explore-plan-execute-verify/) con verificación humana.
 
 ## Práctica mínima viable
 
@@ -73,10 +77,3 @@ Combínalo con [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-bef
 
 - [Ejecutar tests](/es/guide/quality/run-tests/)
 - [Caso: corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI / IDE  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los capítulos ya verificados de ejecutar tests, definir terminado, corregir bugs con verificación y reglas de comandos. El contenido se centra en el método estable «hacer fallar el test primero, luego pasar a verde con la implementación mínima».

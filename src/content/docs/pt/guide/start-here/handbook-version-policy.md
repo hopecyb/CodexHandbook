@@ -1,22 +1,28 @@
 ---
-title: Política de versão do handbook
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Revisado conforme os seis estados de conteúdo, as regras de anotação e a prioridade das fontes oficiais adotados neste manual. A página explica a política de versões e a forma de leitura do site; não depende de parâmetros de uma versão específica do produto."
+  checkedAt: "2026-07-26"
+title: Política de versão do manual
 description: Explica o status do conteúdo, a data de verificação e como as atualizações contínuas funcionam.
 locale: pt
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 8
 ---
 
 ## Atualização contínua
 
-Este handbook não fica congelado indefinidamente em uma única versão do Codex. O produto muda; por isso, cada página explica o que foi verificado por meio de status, data de verificação e evidências específicas. A data, por si só, não é uma nota de confiabilidade.
+Este manual não fica congelado indefinidamente em uma única versão do Codex. O produto muda; por isso, cada página explica o que foi verificado por meio de status, data de verificação e evidências específicas. A data, por si só, não é uma nota de confiabilidade.
 
 ## Conteúdo
 
-- Por que este handbook não pode pressupor que nada muda
+- Por que este manual não pode pressupor que nada muda
 - Como ler o status e a data de verificação no início da página
 - Em quem confiar quando houver conflito com o oficial
 
@@ -52,24 +58,24 @@ O comportamento do produto segue a documentação da OpenAI: [https://developers
 
 ## Mal-entendidos comuns
 
-### 1. Estar no handbook não significa que nunca muda
+### 1. Estar no manual não significa que nunca muda
 
 Estes conteúdos mudam com mais facilidade:
 
 - Forma de instalação
 - Fluxos de login e conta
-- Permissões, modelos e opções de configuração
+- permissões, modelos e opções de configuração
 - Comportamento de Cloud e das entradas de produto
 
 ### 2. `review` não significa que não se pode ler
 
 `review` indica que o conteúdo principal já existe, mas ainda não chegou ao nível máximo de confirmação — não que não sirva de referência.
 
-### 3. Em conflito entre handbook comunitário e documentação oficial, não acredite metade em cada um
+### 3. Em conflito entre manual comunitário e documentação oficial, não acredite metade em cada um
 
 Dá para separar assim:
 
-- Entendimento e explicação de caminhos: handbook
+- Entendimento e explicação de caminhos: manual
 - Comportamento e parâmetros mais recentes: oficial
 
 ## Como julgar se uma página é confiável

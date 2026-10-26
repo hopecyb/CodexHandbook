@@ -1,14 +1,18 @@
 ---
-title: "Évaluer les workflows : distinguer déclenchement, limites, format et qualité"
+title: 'Évaluer les workflows : distinguer déclenchement, limites, format et qualité'
 description: Évaluez quatre types de Skill à l'aide de 20 échantillons conçus et de champs distincts, sans présenter des contrôles de structure ou quelques réussites comme un taux de succès global.
 contentType: guide
-audiences: [developer, creator, team]
+audiences:
+  - developer
+  - creator
+  - team
 level: intermediate
-outputs: [json]
+outputs:
+  - json
 editorialStatus: review
 verification:
   kind: run-tested
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: Sept tests du vérificateur de registre ont réussi. Les 20 échantillons restent des scénarios conçus mais non exécutés ; aucune conclusion ne porte sur les performances du modèle, le routage automatique ou la durée.
   environment: Python 3.12.11 / Darwin arm64 ; bibliothèque standard et entrées temporaires du vérificateur ; aucun appel de modèle.
   evidence:
@@ -21,11 +25,11 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: 9ea3ecc
-translation_status: draft
+source_revision: "9ea3ecc"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
-
 Un workflow peut choisir le bon Skill tout en énonçant un fait faux. Il peut aussi produire un résultat correct après une action non autorisée. Fusionner ces situations en un seul « taux de succès » risque de masquer le problème à corriger.
 
 [Télécharger le kit d'évaluation](/downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip) · [20 échantillons](/downloads/workflow-evaluation/samples.json) · [Registre vierge](/downloads/workflow-evaluation/records-template.json)

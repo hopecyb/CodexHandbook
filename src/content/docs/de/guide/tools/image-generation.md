@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud (versionsabhängig)"
+  basis: "Gegen offizielle OpenAI-Bildgenerierungs- und -edit-Materialien geprüft (Szenarien, Prompt, Abnahme); konservativ „Entwurf zuerst, formale Artefakte brauchen Review“."
+  checkedAt: "2026-07-26"
 title: Bildgenerierung
 description: "Bilder in Codex-Aufgaben erzeugen oder bearbeiten — Prompt, Format und Abnahme."
 locale: de
 source_locale: zh-CN
-source_revision: ea275fa
+source_revision: "ea275fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
 
-Codex kann in manchen Szenarien **Bildgenerierung** aufrufen: Illustrationen, Icon-Entwürfe, UI-Konzeptbilder, Schemata. Ergebnis = **abzunehmendes Artefakt**, kein sofort live-fähiges Brand-Asset.
+Codex kann in manchen Szenarien **Bildgenerierung** aufrufen: Illustrationen, Icon-Entwürfe, UI-Konzeptbilder, Schemata. Das Ergebnis ist ein **noch zu prüfendes Artefakt**, kein sofort veröffentlichbares Markenmaterial.
 
 Geeignet für visuelle Entwürfe — nicht als finales Lieferobjekt.
 
@@ -50,7 +55,7 @@ Nicht direkt:
 1. Zweck, Seitenverhältnis, Stilkeywords (keine Markenstil-Namen stapeln)
 2. Format (PNG/SVG falls unterstützt) und Speicherpfad
 3. Danach [Artefakte überprüfen](/de/guide/quality/verify-artifacts/): öffnen, Auflösung, Lesbarkeit
-4. Vor externem Release Design oder Legal
+4. Vor einer externen Veröffentlichung durch Design- oder Rechtsabteilung prüfen lassen
 
 ## Häufige Missverständnisse
 
@@ -94,12 +99,12 @@ Kein Ersatz für strenge Designlieferung.
 ## Dateien und Repo
 
 - Große Bilder in `assets/` oder CDN, Git-Volumen prüfen
-- Im PR Prompt und Modellversion (interne Audit)
+- Im PR Prompt und Modellversion (für interne Audits)
 - Siehe [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/)
 
 ## Sicherheit und Compliance
 
-- Keine irreführenden Inhalte mit sensiblen Marken, gefälschten Ausweisen, fremden Porträts
+- Keine irreführenden Inhalte mit sensiblen Kennzeichen, gefälschten Ausweisen, fremden Porträts
 - Unternehmenspolicy kann Themen verbieten; [Acceptable Use](https://openai.com/policies/) und interne Regeln
 
 ## Quellen
@@ -109,13 +114,6 @@ Kein Ersatz für strenge Designlieferung.
 
 - Unkomprimierte 4K-Bilder ins Repo
 - Generiertes Bild als Foto oder offizielles Logo ausgeben
-- Kein „kein Text“ im Prompt → Müll-Untertitel
+- Kein „kein Text“ im Prompt → unleserliche Beschriftungen
 
 Bildgenerierung: Richtung und Entwurf zuerst; externe Lieferung nach formalen Artefaktstandards.
-
----
-
-**Status:** verified  
-**Gilt für:** App / Cloud (versionsabhängig)  
-**Prüfgrundlage:** Gegen offizielle OpenAI-Bildgenerierungs- und -edit-Materialien geprüft (Szenarien, Prompt, Abnahme); konservativ „Entwurf zuerst, formale Artefakte brauchen Review“.  
-**Zuletzt geprüft:** 2026-07-26

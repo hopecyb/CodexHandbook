@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Team / enterprise"
+  basis: "OpenAI plugin, app, and integration docs still distinguish external data access, action permissions, approval requirements, and source-system boundaries; this page organizes team risk as assets, trust boundaries, typical threats, and layered controls—without depending on a specific product toggle."
+  checkedAt: "2026-07-26"
 title: Threat Model
 description: Main risk surfaces for Codex in team environments—data, tools, extensions, and supply chain.
 locale: en
 source_locale: zh-CN
-source_revision: 4ec320d
+source_revision: '4ec320d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -29,8 +34,8 @@ If you build, run platform, write docs, or lead projects, you care when teams:
 
 - Give over-permissioned tokens to automation
 - Run high-risk actions on untrusted input
-- Do not know what data may leave the org
-- Add extensions for features without permissions and provenance
+- Do not know which data may be viewed or taken outside the organization
+- Add extensions based only on features, without checking permissions and provenance
 
 Threat modeling helps set boundaries before incidents.
 
@@ -82,7 +87,7 @@ That framing turns threat modeling into a pre-launch risk checklist.
 
 ## When to prioritize in threat model
 
-If a capability both:
+Prioritize a capability when it both:
 
 - Touches important assets
 - Performs real actions
@@ -147,9 +152,3 @@ That already suppresses much team risk; refine governance later.
 
 ## Reference sources
 - OpenAI enterprise security whitepaper (official)
----
-
-**Status:** verified  
-**Products:** Team / enterprise  
-**Verification basis:** OpenAI plugin, app, and integration docs still distinguish external data access, action permissions, approval requirements, and source-system boundaries; this page organizes team risk as assets, trust boundaries, typical threats, and layered controls—without depending on a specific product toggle.  
-**Last verified:** 2026-07-26

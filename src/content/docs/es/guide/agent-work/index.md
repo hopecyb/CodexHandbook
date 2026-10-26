@@ -1,16 +1,20 @@
 ---
 title: Trabajo con Agent
-description: Haz que Codex trabaje como un ejecutor colaborativo, no como una máquina de respuestas de un solo tiro.
+description: Haz que Codex trabaje como un ejecutor colaborativo, no como una máquina de respuestas de una sola respuesta.
 sidebar:
   order: 31
 locale: es
 source_locale: zh-CN
-source_revision: 3eb251e
+source_revision: "3eb251e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado párrafo a párrafo con los capítulos ya verificados de este manual sobre planificación, contexto, verificación y colaboración multitarea; esta página solo conserva principios estables del flujo de colaboración y no trata la interfaz o entradas actuales de un cliente concreto como contrato a largo plazo.
+  checkedAt: '2026-07-26'
 ---
-
 El trabajo con Agent se centra en cómo llevar una tarea hasta un **estado de finalización verificable**. Cuándo planificar primero, cuándo dividir subtareas, cuándo corregir a mitad de camino y cuándo hacer un traspaso y retomar: eso es lo que trata este capítulo.
 
 Este capítulo habla de formas de colaboración, no de una función aislada.
@@ -52,7 +56,7 @@ Si falta cualquiera de los pasos intermedios, las consecuencias habituales son:
 
 No basta.
 
-El Prompt es solo el punto de partida; lo que realmente determina la calidad de la tarea también incluye:
+El prompt es solo el punto de partida; lo que realmente determina la calidad de la tarea también incluye:
 
 - Si hay un plan
 - Si hay corrección a mitad de camino
@@ -98,9 +102,3 @@ El trabajo con Agent valora más si la tarea puede avanzar de forma continua en 
 
 ## Referencias
 - Documentación oficial de OpenAI Codex sobre colaboración y ejecución de tareas
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado párrafo a párrafo con los capítulos ya verificados de este manual sobre planificación, contexto, verificación y colaboración multitarea; esta página solo conserva principios estables del flujo de colaboración y no trata la interfaz o entradas actuales de un cliente concreto como contrato a largo plazo.  
-**Última verificación:** 2026-07-26

@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "Environnements utilisant un hôte Codex local"
-  checkedAt: "2026-08-25"
+  status: verified
+  products: Environnements utilisant un hôte Codex local
+  checkedAt: '2026-08-25'
 title: Types d’événements Hook
 description: Choisir un événement selon le cycle de vie de la session, du tour de tâche, de l’appel d’outil, de la compression du contexte ou du sous-agent.
 locale: fr
 source_locale: zh-CN
-source_revision: 07f4965
-translation_status: draft
+source_revision: "07f4965"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: '2026-10-26'
 ---
-
 Pour choisir un Hook, la première question n’est pas « comment écrire le script ? », mais « faut-il intervenir avant ou après l’effet de bord ? ». Un script associé au mauvais événement risque de ne signaler un problème qu’une fois les effets produits.
 
 ![Cycle de vie des Hooks Codex et événements principaux](/diagrams/hook-lifecycle-events-fr.svg)

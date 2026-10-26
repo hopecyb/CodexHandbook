@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "basis": "Đã rà từng mục theo cấu trúc thư mục hiện tại của kho, cách duy trì sidebar, hệ trạng thái trang và quy trình đóng góp; nội dung trang thuộc quy tắc duy trì sổ tay, không phụ thuộc hành vi UI dễ thay đổi của một client Codex nào.", "checkedAt": "2026-07-26"}
 title: Đóng góp
 description: Cách đóng góp nội dung, case, ví dụ Prompt và bản dịch cho sổ tay — quy trình và chuẩn chất lượng.
 sidebar:
   order: 80
 locale: vi
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: "1d4b3f2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Sổ tay hướng dẫn Codex** là trang tài liệu do cộng đồng duy trì. Hoan nghênh sửa lỗi, bổ sung trang, thêm case tái hiện được và ví dụ Prompt trong [examples/](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md).
@@ -66,8 +67,8 @@ Chỉ cần: nói cụ thể vấn đề, và cố bổ sung thành diễn đạ
 1. **Tiếng Trung giản thể `root` là nguồn** (trừ khi có ghi chú khác)
 2. **Không sao chép** nguyên văn tutorial bên ngoài; tham khảo [kế hoạch tích hợp nguồn ngoài](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. **Sự kiện dễ thay đổi** phải ghi ngày `Kiểm chứng gần nhất`
-4. **Mỗi sidebar slug** phải có markdown tương ứng, nếu không `npm run build` thất bại
-5. Trang mới phải cập nhật đồng bộ sidebar trong `astro.config.mjs`
+4. Trang mới phải có frontmatter hợp lệ, đường dẫn tệp và liên kết chéo.
+5. Thanh bên hiện gồm bốn mô-đun và tự đọc cấu trúc thư mục. Sau khi thêm tệp, chạy build để xác nhận thứ tự và lối vào.
 
 ## Lần đóng góp đầu, có thể bắt đầu vậy
 
@@ -91,7 +92,7 @@ pnpm dev
 Trước khi gộp chạy:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Quy tắc ứng xử
@@ -106,9 +107,3 @@ npm run build
 
 - Kho: <https://github.com/hopecyb/CodexHandbook>
 - [Dàn ý chương](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (dùng cho lập kế hoạch)
-
----
-
-**Trạng thái:** verified  
-**Căn cứ kiểm chứng:** Đã rà từng mục theo cấu trúc thư mục hiện tại của kho, cách duy trì sidebar, hệ trạng thái trang và quy trình đóng góp; nội dung trang thuộc quy tắc duy trì sổ tay, không phụ thuộc hành vi UI dễ thay đổi của một client Codex nào.  
-**Kiểm chứng gần nhất:** 2026-07-26

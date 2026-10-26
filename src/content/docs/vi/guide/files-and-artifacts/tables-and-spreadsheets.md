@@ -1,14 +1,19 @@
 ---
-title: Bảng và bảng tính
-description: Đọc, làm sạch, phân tích và xuất dữ liệu dạng CSV, Excel và bảng — tránh phá cấu trúc và mã hóa.
-locale: vi
-source_locale: zh-CN
-source_revision: b08adec
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Bảng và bảng tính"
+description: "Đọc, làm sạch, phân tích và xuất dữ liệu dạng CSV, Excel và bảng — tránh phá cấu trúc và mã hóa."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "b08adec"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ranh giới ràng buộc đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý bảng ổn định “cột, kiểu, giá trị trống, ngày, cách nghiệm thu đều nên nói tường minh”, không coi một thư viện hay nền tảng là hiện thực duy nhất."
+  checkedAt: "2026-07-26"
 ---
 
 Tác vụ bảng là điển hình dễ sai thầm lặng: dấu phân cách, mã hóa, tiêu đề cột, công thức và định dạng ngày — sai một cái là downstream sập hết.
@@ -23,7 +28,7 @@ Tác vụ bảng là điển hình dễ sai thầm lặng: dấu phân cách, m�
 
 | Định dạng | Ưu điểm | Chú ý |
 |---|---|---|
-| CSV | Văn bản diff được, phổ biến | Mã hóa (UTF-8 BOM), dấu phân cách, thoát dấu ngoặc |
+| CSV | Văn bản diff được, phổ biến | Mã hóa (UTF-8 BOM), dấu phân cách, escape dấu ngoặc kép |
 | TSV | Ít xung đột dấu phẩy | Giống CSV |
 | XLSX | Nhiều sheet, công thức | Nhị phân, khó diff; dùng thư viện đọc/ghi |
 | Google Sheets | Cộng tác | Thường qua MCP hoặc xuất CSV |
@@ -127,9 +132,3 @@ Trong tác vụ bảng, quan trọng hơn là nói rõ cột, kiểu, quy tắc 
 
 ## Nguồn tham khảo
 - [Định nghĩa ràng buộc](/vi/prompts/constraints-and-boundaries/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ranh giới ràng buộc đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý bảng ổn định “cột, kiểu, giá trị trống, ngày, cách nghiệm thu đều nên nói tường minh”, không coi một thư viện hay nền tảng là hiện thực duy nhất.  
-**Kiểm chứng gần nhất:** 2026-07-26

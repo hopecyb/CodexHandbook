@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: '6d859d7'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 이 연습은 Issue 분류를 '제안 생성 → 검증 → 사람의 검토'로 나눕니다. 검토할 기록 다섯 건을 얻게 됩니다. 댓글 게시, 라벨 추가, Issue 종료는 자동으로 하지 않습니다.

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App; CLI and IDE prepare and test"
+  checkedAt: "2026-08-26"
 title: Complete Scheduled tasks guide
 description: Choose standalone or in-chat scheduling and configure projects, worktrees, permissions, prompts, and human review.
 locale: en
 source_locale: zh-CN
-source_revision: fa792dc
+source_revision: 'fa792dc'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
@@ -138,11 +142,3 @@ Use GitHub Actions, CI, webhooks, or Codex SDK when execution must follow a push
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test
-
-**Last verified:** 2026-08-26

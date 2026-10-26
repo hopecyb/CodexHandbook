@@ -1,17 +1,21 @@
 ---
 title: Cloud 環境
-description: Codex Cloud の runtime、依存関係、setup、cache、リポジトリの開始点を設定します。
+description: Codex Cloud の ランタイム、依存関係、setup、cache、リポジトリの開始点を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 1745f70
+source_revision: "1745f70"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
-Cloud 環境は、Codex が特定のリポジトリで何をインストールし、どう実行するかを定義します。環境はノート PC の設定を継承しません。ローカルでは動くのに Cloud で失敗する場合は、まず runtime、依存関係、変数、ネットワークを比較してください。
+Cloud 環境は、Codex が特定のリポジトリで何をインストールし、どう実行するかを定義します。環境はノート PC の設定を継承しません。ローカルでは動くのに Cloud で失敗する場合は、まず ランタイム、依存関係、変数、ネットワークを比較してください。
 
 ## 各チャットの実行順序
 
@@ -21,7 +25,7 @@ Cloud 環境は、Codex が特定のリポジトリで何をインストール�
 4. Agent がコマンド、編集、検証のループを実行し、適用される `AGENTS.md` を読む。
 5. 回答と diff を返し、follow-up または PR の作成へ進める。
 
-デフォルトの `universal` イメージには、一般的な言語、package、ツールが事前インストールされています。環境設定で Python、Node.js などのバージョンを固定し、setup script で追加の依存関係をインストールできます。
+デフォルトの `universal` イメージには、一般的な言語、パッケージ、ツールが事前インストールされています。環境設定で Python、Node.js などのバージョンを固定し、setup script で追加の依存関係をインストールできます。
 
 ## 最小限の再現可能な設定
 
@@ -64,21 +68,13 @@ setup、maintenance、環境変数、Secrets を変更すると cache は自動�
 | 確認項目 | 目標 |
 |---|---|
 | 開始ブランチ / commit | タスク説明と一致 |
-| runtime バージョン | CI または本番の制約と一致 |
-| lockfile | frozen install を使用 |
+| ランタイム バージョン | CI または本番の制約と一致 |
+| lockfile | ロックファイルを変更しないインストールを使用 |
 | setup | 再実行可能、非対話、失敗時に停止 |
 | 検証コマンド | `AGENTS.md` に記述 |
-| ネットワーク | Agent には必要なドメインと method だけを許可 |
+| ネットワーク | Agent には必要なドメインと HTTP メソッド だけを許可 |
 
 ## 公式情報
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [codex-universal イメージ](https://github.com/openai/codex-universal)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud
-
-**最終検証：** 2026-08-26

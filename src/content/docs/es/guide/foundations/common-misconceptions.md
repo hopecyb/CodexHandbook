@@ -3,15 +3,20 @@ title: Malentendidos frecuentes
 description: Aclara varios mitos de tratar Codex como una caja negra todopoderosa.
 locale: es
 source_locale: zh-CN
-source_revision: 700e57b
+source_revision: '700e57b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 120
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo aclara malentendidos frecuentes de uso; se revisaron enlaces internos, la tabla de contraste y los límites conceptuales, y el cuerpo no depende de hechos de producto volátiles.
+  checkedAt: '2026-07-26'
 ---
 
-Cuando mucha gente no saca partido a Codex al principio, no es que no sepa operar: es que lo imaginó mal desde el inicio.
+Cuando mucha gente no saca partido a Codex al principio, no es que no sepa usarlo: es que lo imaginó mal desde el inicio.
 
 Por ejemplo:
 
@@ -31,18 +36,18 @@ No es:
 - un lector de mentes que no necesite Contexto
 - un traspaso de responsabilidad que asuma las consecuencias por ti
 
-Cuanto más claro le des, más estable; cuanto más esperes que adivine todos los detalles, más fácil es decepcionarse.
+Cuanto más claras sean tus instrucciones, más fiable será el resultado; cuanto más esperes que adivine todos los detalles, más fácil es decepcionarse.
 
 | Malentendido | Lectura más cercana a la realidad |
 |---|---|
-| «Garantiza la corrección solo» | Genera resultados candidatos; tú aceptas |
+| «Garantiza la corrección solo» | Genera resultados candidatos; tú compruebas si cumplen los criterios de aceptación |
 | «Cuanto más mágico el Prompt, mejor» | Objetivo claro, restricciones y aceptación importan más que un conjuro |
-| «Con todos los permisos va más rápido» | Ampliar permisos también amplía la superficie de accidente |
+| «Con todos los permisos va más rápido» | Ampliar permisos también amplía la alcance de los posibles daños |
 | «Una sesión larguísima lo resuelve todo» | El Contexto antiguo contamina Tareas nuevas |
 | «Cloud es necesariamente más seguro que local» | La seguridad depende de políticas, claves y revisión, no del lugar |
 | «Si está en el handbook, vale como oficial» | Prevalece la documentación de OpenAI; el handbook te ayuda a aprender |
 
-## Los tres pozos más fáciles de pisar
+## Los tres errores más habituales
 
 ### Confundir «saber responder» con «haber terminado»
 
@@ -56,7 +61,7 @@ Así que no basta mirar el texto de la respuesta; mira también:
 
 ### Confundir «puede hacer muchas cosas» con «debe hacer muchas de una vez»
 
-Un escrito típico de principiante es pedirle en un solo mensaje investigar, diseñar, implementar, probar y publicar.
+Una petición habitual entre principiantes es pedirle en un solo mensaje investigar, diseñar, implementar, probar y publicar.
 
 No es que sea imposible, pero es fácil revolver el Contexto. Desglosar en «entender → editar → verificar» suele ser más estable.
 
@@ -64,7 +69,7 @@ No es que sea imposible, pero es fácil revolver el Contexto. Desglosar en «ent
 
 Lo más valioso de Codex es ahorrarte trabajo repetitivo, organización de información y coste de ejecución, no saltarte el sentido común, la evaluación de riesgos y la aceptación final.
 
-## Cómo autocomprobarte
+## Cómo revisar tu forma de usarlo
 
 Si no estás seguro de si estás usando mal Codex, revisa estas tres cosas:
 
@@ -77,10 +82,3 @@ Si falta una de las tres, la probabilidad de problemas sube con claridad.
 Codex es potente, pero funciona mejor dentro de un objetivo y unos límites claros; no te ahorra entender ni juzgar.
 
 Siguiente paso: [Primeros pasos](/es/guide/getting-started/).
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo aclara malentendidos frecuentes de uso; se revisaron enlaces internos, la tabla de contraste y los límites conceptuales, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

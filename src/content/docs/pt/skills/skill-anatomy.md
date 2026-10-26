@@ -8,9 +8,10 @@ title: Anatomia de um Skill
 description: Papéis e exemplos de SKILL.md, references/, templates/ e scripts/.
 locale: pt
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: "50ca48c"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Na primeira vez que se olha um diretório Skill, a sensação comum é «reconheço as pastas, mas não sei por que estão assim».
@@ -33,11 +34,11 @@ my-skill/
 ## O que cada camada faz
 
 - `SKILL.md`: manual principal — diga ao Codex «o que é, quando usar, quais passos»
-- `references/`: armário de material longo — não force todo o background no arquivo principal
+- `references/`: armário de material longo — não force todo o informações de contexto no arquivo principal
 - `templates/`: esqueleto de saída pronto — evite improvisar a estrutura toda vez
 - `scripts/`: passos determinísticos vão para script — não dependa só de linguagem natural
 
-No início, um único `SKILL.md` basta.  
+No início, um único `SKILL.md` basta.
 Quando realmente ficar complexo, aí separe `references/`, `templates/`, `scripts/`.
 
 ## Carregar conforme a necessidade, não tudo de uma vez
@@ -101,9 +102,6 @@ Use esta ordem para decidir:
 
 Se um ou dois desses pontos forem «sim», comece a separar.
 
-Primeiro faça o `SKILL.md` funcionar; quando ficar complexo de verdade, extraia material, templates e scripts aos poucos.
-
-Exercício completo: [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/).
 ## De template a Skill
 
 Muitas equipas não começam por desenhar um Skill; começam por um Prompt que copiam repetidamente. Ele pode evoluir por etapas:
@@ -111,11 +109,11 @@ Muitas equipas não começam por desenhar um Skill; começam por um Prompt que c
 | Etapa | Forma | Quando evoluir |
 |---|---|---|
 | Prompt único | Conversa atual | Usa-se só uma vez |
-| Template | Biblioteca de Prompts ou docs da equipa | Tarefas parecidas repetem-se, mas os passos ainda mudam |
-| Skill de ficheiro único | Um `SKILL.md` | Processo estável e gatilho claro |
+| Template | Biblioteca de Prompts ou docs da equipe | tarefas parecidas repetem-se, mas os passos ainda mudam |
+| Skill de arquivo único | Um `SKILL.md` | Processo estável e gatilho claro |
 | Diretório Skill completo | `SKILL.md` + `templates/` + `references/` + `scripts/` | Formato de saída, referências longas e checks determinísticos estabilizaram |
 
-Não transformes cada template em Skill. Vale a pena quando há repetição, critérios de sucesso claros e acordo da equipa.
+Não transformes cada template em Skill. Vale a pena quando há repetição, critérios de sucesso claros e acordo da equipe.
 
 ## Componentes reutilizáveis comuns
 
@@ -127,3 +125,7 @@ Não transformes cada template em Skill. Vale a pena quando há repetição, cri
 | Scripts | Complexidade, links, cobertura, formatação |
 
 Um bom Skill não é só um Prompt mais longo: separa trabalho reutilizável em partes legíveis, testáveis e manuteníveis.
+
+Primeiro faça o `SKILL.md` funcionar; quando ficar complexo de verdade, extraia material, templates e scripts aos poucos.
+
+Exercício completo: [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/).

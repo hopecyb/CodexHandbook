@@ -3,12 +3,16 @@ title: Convertir un flujo de trabajo en Skill
 description: La tercera repetición de un proceso merece convertirse en Skill — disparador, instrucciones y aceptación en uno.
 locale: es
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Contrastado con los use cases públicos actuales de «Save workflows as skills» de OpenAI Developers, y con los capítulos ya verificados de Skills, automatización, reglas de comandos y riesgos de extensiones. El contenido se limita al método estable «cuándo capturar un proceso repetido como Skill y cómo organizar instrucciones y aceptación».
+  checkedAt: '2026-07-26'
 ---
-
 Cuando el mismo tipo de tarea (comprobación de release, sincronización de docs, escaneo de seguridad) se completa **por tercera vez** pegando el mismo prompt, toca considerar un [Skill](/es/skills/overview/). Este capítulo enlaza [Métodos de flujo de trabajo](/es/cases/workflows/) con el sistema de extensiones.
 
 ## Qué resuelve esta página
@@ -69,9 +73,3 @@ Comparación con [Convertir un proceso en automatización](/es/skills/automation
 
 ## Fuentes de referencia
 - [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) y [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md) del repo
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los use cases públicos actuales de «Save workflows as skills» de OpenAI Developers, y con los capítulos ya verificados de Skills, automatización, reglas de comandos y riesgos de extensiones. El contenido se limita al método estable «cuándo capturar un proceso repetido como Skill y cómo organizar instrucciones y aceptación».

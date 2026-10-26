@@ -3,18 +3,19 @@ title: Manual prático de Codex e agentes de IA
 head:
   - tag: title
     content: Manual prático de Codex e agentes de IA
-description: Um manual de agentes de IA centrado no Codex para ajudar pessoas, criadores, programadores e equipas a transformar uma colaboração bem-sucedida num método reutilizável, verificável e transmissível.
+description: Um manual de agentes de IA centrado no Codex para ajudar pessoas, criadores, desenvolvedores e equipes a transformar uma colaboração bem-sucedida num método reutilizável, verificável e transmissível.
 template: splash
 editUrl: false
 lastUpdated: false
 locale: pt
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-09-20
-source_revision: 7653d87
+translation_status: reviewed
+translated_at: 2026-10-25
+reviewed_at: 2026-10-26
+source_revision: "75dd87a"
 hero:
   title: Use o Codex <br /> para transformar uma colaboração num método reutilizável
-  tagline: Da definição da tarefa à execução, verificação, revisão e entrega, este manual ajuda a transformar ideias em resultados fiáveis.
+  tagline: Da definição da tarefa à execução, verificação, revisão e entrega, este manual ajuda a transformar ideias em resultados confiáveis.
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -45,6 +46,7 @@ hero:
 ---
 
 import AboutHandbook from '../../../components/AboutHandbook.astro';
+import ContentVerification from '../../../components/ContentVerification.astro';
 
 <section class="home-section" aria-labelledby="tasks-heading">
 	<div class="section-heading">
@@ -54,18 +56,18 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	<div class="path-grid">
 		<a class="path-card" href="/pt/cases/analyze-a-spreadsheet/"><img src="/illustrations/home-weekly-report.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Criar um relatório semanal de vendas</strong>
-			<span>Materiais completos · Script de referência executado e verificado. Com 46 linhas de dados sintéticos, pratique devoluções, remoção de duplicados e comparações entre períodos; entregue relatório e registo de reconciliação.</span>
+			<span>Materiais completos · Script de referência executado e verificado. Com 46 linhas de dados sintéticos, pratique reembolsos, remoção de duplicados e comparações entre períodos; entregue relatório e registro de reconciliação.</span>
 		</a>
 		<a class="path-card" href="/pt/cases/use-cases/software-development/fix-a-bug-with-verification/"><img src="/illustrations/home-bug-fix.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Corrigir um bug e passar nos testes</strong>
-			<span>Exercício completo · Inclui um registo histórico de verificação. Parta de um teste falhado e entregue a correção mínima, resultados de regressão e nota de revisão.</span>
+			<span>Exercício completo · Inclui um registro histórico de verificação. Parta de um teste falhado e entregue a correção mínima, resultados de regressão e nota de revisão.</span>
 		</a>
 		<a class="path-card" href="/pt/cases/write-an-article/"><img src="/illustrations/home-article.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Escrever um artigo</strong>
-			<span>Materiais completos · Fontes conferidas pelo autor. Com três fontes sintéticas, pratique citações factuais, versões contraditórias e revisão; entregue artigo e tabela de factos.</span>
+			<span>Materiais completos · Fontes conferidas pelo autor. Com três fontes sintéticas, pratique citações factuais, versões contraditórias e revisão; entregue artigo e tabela de fatos.</span>
 		</a>
 	</div>
-	<p>Relatório semanal de referência: valor líquido <strong>¥4,644.75</strong>, com devoluções e anomalias explicadas. <a href="/downloads/sales-weekly-report/summary.md">Ver relatório de referência</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Descarregar todos os materiais</a>. Os números vêm de dados didáticos sintéticos. Tempo estimado de 30 a 45 minutos; ainda não foi medido com leitores.</p>
+	<p>Relatório semanal de referência: valor líquido <strong>4.644,75 CNY</strong>, com reembolsos e anomalias explicadas. <a href="/downloads/sales-weekly-report/summary.md">Ver relatório de referência</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">Descarregar todos os materiais</a>. Os números vêm de dados didáticos sintéticos. Tempo estimado de 30 a 45 minutos; ainda não foi medido com leitores.</p>
 	<p><a href="/pt/cases/">Ver casos e materiais por tarefa</a> · <a href="/pt/guide/learning-paths/">Aprender por papel</a> · <a href="/pt/guide/reference/">Consultar o manual de referência</a></p>
 </section>
 
@@ -77,18 +79,18 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	<div class="path-grid">
 		<a class="path-card" href="/pt/guide/learning-paths/beginner/01-talk-to-codex/"><img src="/illustrations/home-path-beginner.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Principiante</strong>
-			<span>Com os mesmos materiais para descarregar, crie um aviso, reveja erros e recupere uma cópia. Não precisa de programar; cada passo tem critérios de aceitação.</span>
+			<span>Com os mesmos materiais para baixar, crie um aviso, reveja erros e recupere uma cópia. Não precisa de programar; cada passo tem critérios de aceitação.</span>
 		</a>
 		<a class="path-card" href="/pt/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
 			<strong>Criador</strong>
-			<span>Com um único conjunto de fontes, crie tabela de factos, artigo e apresentação editável de oito diapositivos; guarde depois uma instrução reutilizável. Inclui materiais e verificações passo a passo.</span>
+			<span>Com um único conjunto de fontes, crie tabela de fatos, artigo e apresentação de oito slides; guarde depois uma instrução reutilizável. Inclui materiais e verificações passo a passo.</span>
 		</a>
 		<a class="path-card" href="/pt/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
-			<strong>Programador</strong>
+			<strong>Desenvolvedor</strong>
 			<span>Entenda um bug no carrinho, guarde testes falhados e aprovados, reveja uma correção mínima e escreva a passagem de trabalho. Inclui três modelos preenchíveis.</span>
 		</a>
 		<a class="path-card" href="/pt/guide/learning-paths/team/"><img src="/illustrations/home-path-team.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
-			<strong>Equipa</strong>
+			<strong>Equipe</strong>
 			<span>Em dez dias úteis, faça um pequeno piloto, reveja amostras e ensaie a reversão antes de decidir expandir. Inclui seis modelos preenchíveis.</span>
 		</a>
 	</div>
@@ -97,9 +99,10 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 <section class="home-section" aria-labelledby="lookup-heading">
 	<div class="section-heading"><p>Consulte diretamente um problema</p><h2 id="lookup-heading">Encontre a próxima ação</h2></div>
 	<div class="path-grid">
-		<a class="path-card" href="/pt/guide/reference/troubleshooting/"><strong>Falha na instalação, entrada ou execução</strong><span>Siga o diagnóstico por sintoma ou um exercício de recuperação com registos.</span></a>
-		<a class="path-card" href="/pt/guide/reference/"><strong>Consultar comandos, permissões e termos</strong><span>Abra o índice de referência para verificar âmbito e fontes.</span></a>
-		<a class="path-card" href="/pt/guide/quality/"><strong>Decidir se o resultado está concluído</strong><span>Confira factos, ficheiros e testes; registe o que ainda não foi confirmado.</span></a>
+		<a class="path-card" href="/pt/guide/reference/model-selection/"><strong>Escolher modelos e consultar planos</strong><span>Escolha um ponto de partida para conversar, escrever, analisar planilhas ou programar e confirme o plano e o uso real.</span></a>
+		<a class="path-card" href="/pt/guide/reference/troubleshooting/"><strong>Falha na instalação, entrada ou execução</strong><span>Siga o diagnóstico por sintoma ou um exercício de recuperação com registros.</span></a>
+		<a class="path-card" href="/pt/guide/reference/"><strong>Consultar comandos, permissões e termos</strong><span>Abra o índice de referência para verificar escopo e fontes.</span></a>
+		<a class="path-card" href="/pt/guide/quality/"><strong>Decidir se o resultado está concluído</strong><span>Confira fatos, arquivos e testes; registe o que ainda não foi confirmado.</span></a>
 	</div>
 </section>
 
@@ -111,14 +114,18 @@ import AboutHandbook from '../../../components/AboutHandbook.astro';
 	<div class="path-grid">
 		<a class="path-card" href="/pt/prompts/templates/"><strong>Modelos de prompts de tarefa</strong><span>Reutilize por tipo de tarefa: compreensão, pesquisa, criação, edição, diagnóstico e automação.</span></a>
 		<a class="path-card" href="/pt/skills/examples/"><strong>Exemplos de Skills</strong><span>Comece por exemplos legíveis e examine entradas, saídas, limites e testes.</span></a>
-		<a class="path-card" href="/pt/cases/use-cases/case-study-template/"><strong>Modelo de análise de casos</strong><span>Registe objetivos, execução, controlo humano, verificação, tratamento de falhas e próxima melhoria.</span></a>
+		<a class="path-card" href="/pt/cases/use-cases/case-study-template/"><strong>Modelo de análise de casos</strong><span>Registe objetivos, execução, controle humano, verificação, tratamento de falhas e próxima melhoria.</span></a>
 		<a class="path-card" href="/pt/guide/quality/"><strong>Lista de aceitação</strong><span>Transforme «parece concluído» num resultado que pode rever, reverter e transmitir.</span></a>
 	</div>
 </section>
 
+<ContentVerification />
+
 <AboutHandbook title="Fontes, atualizações e contribuições">
 
-Este manual é mantido por colaboradores de código aberto e tem o chinês simplificado como língua de origem. Descrições de produtos, materiais didáticos dos autores e registos reais de execução são identificados separadamente. Um script aprovado não prova desempenho do modelo nem que leitores completem o exercício. Consulte o registo de cada página para saber o âmbito da verificação.
+Este manual é mantido por colaboradores de código aberto e tem o chinês simplificado como língua de origem. Descrições de produtos, materiais didáticos dos autores e registros reais de execução são identificados separadamente. Um script aprovado não prova desempenho do modelo nem que leitores completem o exercício. Consulte o registro de cada página para saber o escopo da verificação.
+
+Os materiais para download são os arquivos originais dos exercícios e podem conter texto em chinês; eles não foram traduzidos junto com estas páginas.
 
 [Atualizações](/pt/guide/updates/) · [Política de versões e verificação](/pt/guide/start-here/handbook-version-policy/) · [Contribuir](/pt/guide/contributing/)
 

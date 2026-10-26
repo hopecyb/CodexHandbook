@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this handbook’s verified `AGENTS.md`, context, Skills, MCP, and quality chapters; this page keeps only the stable decision framework that temporary requirements, project rules, personal preferences, workflow packaging, and external capabilities should be stored in separate layers."
+  checkedAt: "2026-07-26"
 title: Choosing the Right Mechanism
 description: A decision framework for where temporary prompts, AGENTS.md, memory, Skills, and MCP belong.
 locale: en
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: '5fad7cb'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -15,7 +20,7 @@ Many team problems come from **putting the same information in the wrong place**
 
 This page focuses on a practical question:
 
-> When you realize “this will keep happening,” which layer should you sink it into?
+> When you realize “this will keep happening,” which layer should store it?
 
 ## Quick Table
 
@@ -47,7 +52,7 @@ Poor fits:
 - Repo no-go directories
 - Every PR review must follow the same template
 
-Those long-term rules should sink further down.
+Those long-term rules belong in a more persistent layer.
 
 ### 2. Is this a project collaboration rule or a personal habit?
 
@@ -170,7 +175,7 @@ A steadier approach:
 
 ### Turning `AGENTS.md` into an encyclopedia
 
-The result is that hard constraints are not visible, and the commands and no-go areas that matter most get buried. `AGENTS.md` works better when it is short, hard, and executable.
+The result is that hard constraints are not visible, and the commands and no-go areas that matter most get buried. `AGENTS.md` works better when it is concise, firm, and actionable.
 
 ### Using a Skill as a “universal junk drawer”
 
@@ -205,9 +210,3 @@ This makes it easier to stabilize **collaboration consensus** first, then expand
 
 ## References
 - OpenAI Codex official documentation (per current version)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s verified `AGENTS.md`, context, Skills, MCP, and quality chapters; this page keeps only the stable decision framework that temporary requirements, project rules, personal preferences, workflow packaging, and external capabilities should be stored in separate layers.  
-**Last verified:** 2026-07-26

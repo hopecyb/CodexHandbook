@@ -3,15 +3,20 @@ title: Ficheiros de texto e código
 description: Fazer o Codex ler e escrever corretamente ficheiros de texto — código-fonte, configuração e documentação.
 locale: pt
 source_locale: zh-CN
-source_revision: 1537793
+source_revision: "1537793"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros/diretórios, anatomia de Tarefas, revisar diffs e correr testes; esta página confirma só o princípio estável de «limitar caminhos, manter estilo, clarificar Verificação» para ficheiros de texto/código.
+  checkedAt: '2026-07-26'
 ---
 
-A maioria das Tarefas de desenvolvimento cai em **ficheiros de texto e código**: código-fonte, testes, configuração, Markdown. Esta página explica como limitar o âmbito, manter o estilo e fazer merge com segurança.
+A maioria das tarefas de desenvolvimento cai em **ficheiros de texto e código**: código-fonte, testes, configuração, Markdown. Esta página explica como limitar o âmbito, manter o estilo e fazer merge com segurança.
 
 Ao pedir ao Codex para alterar texto ou código, o essencial é alterar no sítio certo, da forma certa — e não alterar a mais de passagem.
 
@@ -27,10 +32,10 @@ Ao pedir ao Codex para alterar texto ou código, o essencial é alterar no síti
 |---|---|
 | Código-fonte `.ts` `.py` etc. | Seguir `AGENTS.md` e padrões existentes |
 | Configuração `.json` `.yaml` `.toml` | Fácil de partir a estrutura; exigir sintaxe válida |
-| Documentação `.md` | Caminhos relativos de ligações; normas de mistura PT/EN |
+| Documentação `.md` | Caminhos relativos de ligações; normas para texto misto em chinês e inglês |
 | Código gerado | Indicar se deve ser submetido ou gitignore |
 
-Contexto: [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
+Contexto: [contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
 
 ## Porque estes ficheiros falham com mais facilidade
 
@@ -41,7 +46,7 @@ Os pontos realmente problemáticos costumam ser:
 - Estilo inconsistente com o projeto
 - Sintaxe de configuração partida em silêncio
 
-## Estrutura de Prompt recomendada
+## Estrutura de prompt recomendada
 
 ```text
 Objetivo: <uma frase>
@@ -51,7 +56,7 @@ Estilo: alinhado com <ficheiro de exemplo>
 Conclusão: listar ficheiros alterados + correr <comando de teste>
 ```
 
-Ver [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/)
+Ver [Anatomia de uma boa tarefa](/pt/prompts/task-anatomy/)
 
 ## Mal-entendidos habituais
 
@@ -87,8 +92,8 @@ Muitas vezes, alterações «de âmbito pequeno, explicáveis, fáceis de rever�
 Se tem medo de alterações a mais, exija estas três coisas:
 
 1. Declarar primeiro que ficheiros serão afetados
-2. Só o âmbito mínimo necessário à Tarefa atual
-3. Listar as ações de Verificação depois de alterar
+2. Só o âmbito mínimo necessário à tarefa atual
+3. Listar as ações de verificação depois de alterar
 
 ## Pontos de revisão
 
@@ -102,11 +107,4 @@ Se tem medo de alterações a mais, exija estas três coisas:
 - Edição de texto forçada em binários ou ficheiros minificados
 - Ligações de documentação em caminho absoluto → 404 no site
 
-O pior em texto e código é alterar muito e de forma dispersa, difícil de rever. Com âmbito, estilo e Verificação claros, poupa muitas idas e voltas.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros/diretórios, anatomia de Tarefas, revisar diffs e correr testes; esta página confirma só o princípio estável de «limitar caminhos, manter estilo, clarificar Verificação» para ficheiros de texto/código.  
-**Última verificação:** 2026-07-26
+O pior em texto e código é alterar muito e de forma dispersa, difícil de rever. Com âmbito, estilo e verificação claros, poupa muitas idas e voltas.

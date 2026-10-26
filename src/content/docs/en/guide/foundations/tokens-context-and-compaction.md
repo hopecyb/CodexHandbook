@@ -8,11 +8,12 @@ title: Tokens, context, and compaction
 description: Understand context windows, information volume, and compaction.
 locale: en
 source_locale: zh-CN
-source_revision: cd44efe
-translation_status: draft
+source_revision: 'cd44efe'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
+reviewed_at: 2026-10-25
 ---
 
 This may feel abstract at first, and you do not need to understand the underlying mechanism yet. A model's memory is not unlimited. As material grows longer and more scattered, it may lose track of what matters, and earlier constraints may fade.

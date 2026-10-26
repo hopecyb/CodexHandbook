@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Tài liệu cấu hình hiện tại trên OpenAI Help Center vẫn dùng `~/.codex/config.toml` và `~/.codex/.env` làm ví dụ có thể kiểm; trang này đồng thời tránh gắn tên trường cụ thể, chỉ tóm tắt ý đồ cấu hình CLI thường gặp, phân công tầng và biên rủi ro — nên gắn `verified` như trang khái niệm.", "checkedAt": "2026-07-26"}
 title: Cấu hình CLI
 description: Mô hình, Sandbox, phê duyệt và MCP — thống nhất hành vi Codex trong terminal.
 locale: vi
 source_locale: zh-CN
-source_revision: 0a9b2ad
+source_revision: "0a9b2ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ Không cấu hình gì, Codex vẫn làm việc được; chỉ là bạn sẽ l
 |---|---|
 | Cấp người dùng | Mặc định cá nhân, xuyên dự án |
 | Cấp dự án | Chiến lược nhóm dùng chung (cần rà trước khi commit) |
-| Biến môi trường | CI tiêm khóa và công tắc |
+| Biến môi trường | CI cung cấp khóa và tùy chọn |
 
 **Đường dẫn và tên tệp** đổi theo phiên bản CLI — lấy theo [tài liệu chính thức](https://developers.openai.com/codex). Thường là `config.toml` hoặc tệp tương đương dưới thư mục người dùng.
 
@@ -53,7 +54,7 @@ Cách phân rõ hơn:
 
 - Sở thích cá nhân lâu dài → cấp người dùng
 - Trong kho này mọi người nên thống nhất → cấp dự án
-- Chỉ tiêm tạm trong CI, script hoặc một lần chạy → biến môi trường
+- Chỉ cung cấp tạm trong CI, script hoặc một lần chạy → biến môi trường
 
 ### Cấu hình không bằng quyền mở ngay
 
@@ -118,9 +119,3 @@ Coi cấu hình CLI là «thói quen làm việc mặc định» là được �
 
 ## Nguồn tham khảo
 - OpenAI Codex CLI configuration
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Tài liệu cấu hình hiện tại trên OpenAI Help Center vẫn dùng `~/.codex/config.toml` và `~/.codex/.env` làm ví dụ có thể kiểm; trang này đồng thời tránh gắn tên trường cụ thể, chỉ tóm tắt ý đồ cấu hình CLI thường gặp, phân công tầng và biên rủi ro — nên gắn `verified` như trang khái niệm.  
-**Kiểm chứng gần nhất:** 2026-07-26

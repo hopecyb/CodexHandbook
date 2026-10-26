@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite ist nur eine Begriffseinführung für Anfänger; interne Links und Erklärungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Begriffe für Anfänger
 description: "Kurze Definitionen für Aufgabe, Kontext, Sandbox, Skill und weitere häufige Wörter."
 locale: de
 source_locale: zh-CN
-source_revision: a18bacf
+source_revision: "a18bacf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 6
 ---
 
 Vollständigere Einträge findest du im [Glossar](/de/guide/reference/glossary/). Hier stehen zuerst die häufigsten Wörter, die das Lesen am meisten beeinflussen.
 
-Beim ersten Lesen des Codex-Handbooks stocken viele an der Begriffsdichte. Jedes Wort allein kennt man — zusammen wirken sie schnell überfordernd.
+Beim ersten Lesen des Codex-Handbuchs stocken viele an der Begriffsdichte. Jedes Wort allein kennt man — zusammen wirken sie schnell überfordernd.
 
 Zwei typische Situationen:
 
@@ -39,7 +44,7 @@ Wenn dein Ziel gerade nur die erste Aufgabe ist, reichen zunächst diese 6:
 |---|---|
 | **Prompt** | Ziel, Hintergrund und Anforderungen, die du Codex gibst |
 | **Kontext (Context)** | Projekt-, Datei- und Gesprächsinformationen, die das Modell gerade sehen kann |
-| **Agent** | Ausführungsweise, die Werkzeuge um ein Ziel herum aufruft und iterativ vorgeht |
+| **Agent** | Ausführungsweise, die Werkzeuge zur Erreichung eines Ziels aufruft und iterativ vorgeht |
 | **Werkzeug (Tool)** | Aufrufbare Fähigkeiten wie Dateien lesen, Befehle ausführen, suchen |
 | **Sandbox** | Ausführungsumgebung, die Dateisystem- und Netzwerkeinfluss begrenzt |
 | **Freigabe (Approval)** | Manche Operationen brauchen deine ausdrückliche Zustimmung |
@@ -92,10 +97,3 @@ Zuerst die [erste Aufgabe](/de/guide/getting-started/run-your-first-task/) absch
 Bei unbekannten Wörtern kurz nachschlagen und weiterlesen.
 
 Beim ersten Lesen reichen diese Wörter als Hinweise. Ungefähr wissen, worauf sie zeigen, ist praktischer als alles sofort auswendig zu lernen.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite ist nur eine Begriffseinführung für Anfänger; interne Links und Erklärungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

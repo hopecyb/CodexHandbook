@@ -1,14 +1,19 @@
 ---
-title: Chạy kiểm thử
-description: Đưa bước kiểm chứng trở thành một phần của tác vụ.
-locale: vi
-source_locale: zh-CN
-source_revision: 8b1e5c7
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Chạy kiểm thử"
+description: "Đưa bước kiểm chứng trở thành một phần của tác vụ."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "8b1e5c7"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích vì sao bước kiểm chứng phải vào nghiệm thu tác vụ; câu mẫu và thứ tự kiểm tra đã được rà lại, và phần thân không phụ thuộc thông tin sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Sau khi sửa xong, cần có cách nào đó để xác nhận nó không bị hỏng rõ ràng.
@@ -53,7 +58,7 @@ Nếu chưa biết bắt đầu từ đâu, có thể theo thứ tự này:
 2. Không có kiểm thử thì chạy build hoặc khởi động
 3. Vẫn chưa đủ thì bổ sung bước kiểm tra thủ công tối thiểu
 
-Trọng tâm là tránh giao hàng mà hoàn toàn không kiểm chứng, chứ không phải phủ sóng hết mọi thứ trong một lần.
+Trọng tâm là tránh bàn giao mà hoàn toàn không kiểm chứng, chứ không phải phủ sóng hết mọi thứ trong một lần.
 
 ## Một câu có thể đưa thẳng vào Prompt
 
@@ -74,10 +79,3 @@ Hãy cho tôi biết bạn thực sự đã chạy những kiểm chứng nào; 
 ```
 
 Kiểm chứng có thể rất nhẹ, nhưng không được thiếu; nếu không, “làm xong” khó đứng vững.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ giải thích vì sao bước kiểm chứng phải vào nghiệm thu tác vụ; câu mẫu và thứ tự kiểm tra đã được rà lại, và phần thân không phụ thuộc sự kiện sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

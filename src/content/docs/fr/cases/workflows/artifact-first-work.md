@@ -3,12 +3,16 @@ title: Travail orienté livrables
 description: Convenir d'abord de la forme et du chemin du livrable final, puis déduire les étapes — adapté aux docs, configurations, rapports et autres livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: e57c215
+source_revision: "e57c215"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés sur les fichiers et livrables, la définition de terminé et la vérification des livrables ; le contenu se concentre sur la méthode stable « convenir des livrables d'abord, puis déduire les étapes ».
+  checkedAt: '2026-07-26'
 ---
-
 **Orienté livrables** signifie clarifier la forme et l'emplacement du livrable avant que Codex ne déduise les étapes. Cela convient aux tâches à sortie claire — documentation Markdown, OpenAPI, scripts de migration, plans de diapositives — et peut s'associer au [travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/).
 
 ## Ce que couvre cette page
@@ -49,7 +53,7 @@ Pour les livrables visuels, demander des captures d'écran ou des notes d'aperç
 
 ## Limites de sécurité
 
-- Le contenu généré avec des droits tiers nécessite une revue de conformité humaine
+- Les livrables contenant des œuvres de tiers protégées par le droit d’auteur nécessite une revue de conformité humaine
 - Ne pas écraser les chemins de configuration de production — produire d'abord sur une branche ou sous `draft/`
 
 ## Liste de contrôle d'acceptation
@@ -58,10 +62,3 @@ Pour les livrables visuels, demander des captures d'écran ou des notes d'aperç
 - [ ] Le format correspond à l'exemple de référence
 - [ ] Liens / table des matières / frontmatter valides
 - [ ] Conforme à la [Définition de terminé](/fr/prompts/define-done/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur les fichiers et livrables, la définition de terminé et la vérification des livrables ; le contenu se concentre sur la méthode stable « convenir des livrables d'abord, puis déduire les étapes ».

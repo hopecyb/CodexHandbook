@@ -24,9 +24,10 @@ assets:
   version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: "e29d1b3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Antes da revisão, defina o que será comparado. Este Skill evita confundir “mudanças locais ainda não commitadas” com “commits relativos à main”, ou deixar passar um erro no índice porque a árvore de trabalho parece correta.
@@ -46,7 +47,7 @@ Ele não presume `main` como padrão. Se a base não existir, dá erro em vez de
 
 ## Instalação e primeira chamada
 
-Você precisa de Python 3.10+, Git e um repositório local de prática com ao menos um commit. Coloque o `scoped-review/` extraído em `.agents/skills/` do projeto de destino, confirmando a entrada `.agents/skills/scoped-review/SKILL.md`. Se houver um Skill com o mesmo nome, compare antes de sobrescrever.
+Você precisa de Python 3.10+, Git e um repositório local de prática com ao menos um commit. Coloque o `scoped-review/` extraído em `.agents/skills/` do projeto de destino, confirmando a entrada `.agents/skills/scoped-review/SKILL.md`. Se houver um Skill com o mesmo nome, compare as versões primeiro e não sobrescreva o Skill existente.
 
 Use o [guia oficial](https://learn.chatgpt.com/docs/build-skills) para descobrir Skills locais e suas entradas. Confirme que ele está disponível após instalar e chame explicitamente:
 
@@ -97,7 +98,7 @@ Revisão de texto e implementação de novas funções não pertencem a este Ski
 - O relatório informa o snapshot, a base e os arquivos de fato revisados.
 - Achados têm local, condição de disparo, efeito e evidências; preferências de estilo não viram bloqueios.
 - O conteúdo de arquivos relevantes não rastreados foi examinado ou claramente indicado como não revisado. Binários, arquivos ignorados e submódulos não são apresentados como cobertos.
-- Informe quais verificações foram ou não executadas. Nenhum achado não garante ausência de defeitos.
+- Informe quais verificações foram ou não executadas. A ausência de achados não garante que não haja defeitos.
 - A revisão termina no relatório; ela não altera, commita ou envia mudanças automaticamente.
 
 Use os modelos de revisão e passagem de contexto da [trilha de desenvolvedor](/pt/guide/learning-paths/developer/) para guardar o resultado. O esqueleto curto `pr-review` ainda ajuda a entender a estrutura; o pacote tem outro nome para evitar substituir uma versão pessoal.

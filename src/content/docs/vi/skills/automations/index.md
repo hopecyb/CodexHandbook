@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / ứng dụng máy tính; CLI và IDE chỉ dùng để chuẩn bị, kiểm thử và không có giao diện quản lý"
+  checkedAt: "2026-08-26"
 title: Tác vụ theo lịch
 description: Cho ChatGPT lặp lại theo lịch những tác vụ đã được kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: 759c38e
-translation_status: draft
+source_revision: "759c38e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Scheduled task (tác vụ theo lịch) cho phép ChatGPT lặp lại công việc ở chế độ nền theo một lịch định trước. Nó phù hợp với báo cáo định kỳ, theo dõi liên tục và công việc bảo trì lặp lại. Nó không phải webhook dùng chung, sự kiện của kho mã hay hệ thống CI.

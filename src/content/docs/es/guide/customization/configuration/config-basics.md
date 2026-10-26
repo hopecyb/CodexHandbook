@@ -1,22 +1,26 @@
 ---
 title: Fundamentos de configuración
-description: Ubicación de los archivos de configuración de Codex, opciones habituales e introducción a aprobación, Sandbox y modelo.
+description: Ubicación de los archivos de configuración de Codex, opciones habituales e introducción a aprobación, sandbox y modelo.
 locale: es
 source_locale: zh-CN
-source_revision: ee00ab5
+source_revision: "ee00ab5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: Los materiales actuales de configuración del Help Center de OpenAI siguen usando directamente `~/.codex/config.toml` y `~/.codex/.env`, y indican que la App de escritorio/IDE puede necesitar reinicio para leer esos ajustes; esta página evita además atarse a nombres de claves variables y conserva solo el marco estable de «configuración de usuario, política gestionada e intenciones habituales de modelo/aprobación/sandbox».
+  checkedAt: '2026-07-26'
 ---
-
-Los archivos de configuración te permiten **unificar el comportamiento de Codex** en tu máquina o en el proyecto, sin repetir en cada sesión el modelo, el nivel de aprobación o la política de Sandbox.
+Los archivos de configuración te permiten **unificar el comportamiento de Codex** en tu máquina o en el proyecto, sin repetir en cada sesión el modelo, el nivel de aprobación o la política de sandbox.
 
 ## Contenido de esta página
 
 - Dónde vive la configuración y cómo se superponen niveles de proyecto y de usuario
-- Qué se cambia más a menudo: modelo, aprobación, Sandbox, directorio de trabajo por defecto
+- Qué se cambia más a menudo: modelo, aprobación, sandbox, directorio de trabajo por defecto
 - Límite con `AGENTS.md`: la configuración gestiona «interruptores de capacidad»; AGENTS gestiona «cómo se escribe código en este proyecto»
 
 ## Qué gestiona realmente la configuración
@@ -36,7 +40,7 @@ No gestiona el requisito temporal de una tarea concreta, sino cómo suele empeza
 | Capa | Ubicación típica | Contenido |
 |---|---|---|
 | Usuario | Configuración bajo `~/.codex/` (nombres exactos según documentación oficial) | Modelo por defecto, hábitos personales de aprobación |
-| Proyecto | Fragmentos de configuración en el repositorio o archivos de proyecto relacionados con `codex` | Política de Sandbox/herramientas compartida por el equipo |
+| Proyecto | Fragmentos de configuración en el repositorio o archivos de proyecto relacionados con `codex` | Política de sandbox/herramientas compartida por el equipo |
 | Gestionada | Emitida por la organización | Elementos obligatorios que el individuo no puede anular |
 
 Los **hechos variables** (rutas, nombres de campos, claves TOML) deben seguir la [documentación de OpenAI Codex](https://developers.openai.com/codex); esta página describe conceptos y forma de decidir.
@@ -50,7 +54,7 @@ Al tocar por primera vez un archivo de configuración, mucha gente quiere config
 Para principiantes suele bastar fijar unas pocas opciones frecuentes, por ejemplo:
 
 - Modelo por defecto
-- Política de aprobación/Sandbox por defecto
+- Política de aprobación/sandbox por defecto
 - Directorio de trabajo por defecto
 
 Estabilizar esas primero suele ser mejor que estudiar todos los campos de golpe.
@@ -77,11 +81,11 @@ Eso no debería sostenerse solo con configuración personal.
 
 Trasfondo conceptual: [Modelos y razonamiento](/es/guide/foundations/models-and-reasoning/)
 
-### Aprobación y Sandbox
+### Aprobación y sandbox
 
 | Intención | Dirección de configuración |
 |---|---|
-| Principiante / repositorio no confiable | Aprobación más estricta; limita red y alcance de escritura |
+| Principiante / repositorio no confiable | aprobación más estricta; limita red y alcance de escritura |
 | Proyecto personal de confianza | Puedes reducir interrupciones con seguridad |
 | Repositorio empresarial | Sigue la política gestionada; no la relajes por tu cuenta |
 
@@ -94,7 +98,7 @@ La misma cuenta en CLI y en la App de escritorio debería buscar la **misma lín
 ## Enfoque mínimo viable
 
 1. Lee el capítulo oficial «Configuration» y confirma las rutas de archivo de la versión actual
-2. Cambia solo una cosa: por ejemplo el modo de Sandbox por defecto; observa una semana y luego ajusta
+2. Cambia solo una cosa: por ejemplo el modo de sandbox por defecto; observa una semana y luego ajusta
 3. Escribe en la documentación del repositorio lo que el equipo comparte; deja las preferencias personales en la máquina
 4. En `AGENTS.md`, escribe «cómo se recomienda usar Codex con este proyecto», no copies la configuración entera
 
@@ -104,7 +108,7 @@ Si no estás seguro de si algo va a configuración, `AGENTS.md` o al prompt de l
 
 1. ¿Es un hábito por defecto que usaré en la mayoría de las tareas?
 2. ¿Es una preferencia que solo me importa a mí?
-3. ¿Es una regla que todo el proyecto debe cumplir juntos?
+3. ¿Es una regla que todos los colaboradores del proyecto deben cumplir?
 
 En la mayoría de los casos:
 
@@ -132,9 +136,3 @@ La configuración encaja mejor con opciones por defecto que casi siempre eliges;
 
 ## Referencias
 - Documentación de configuración de OpenAI Codex
----
-
-**Estado:** verificado  
-**Productos aplicables:** CLI / App  
-**Base de verificación:** Los materiales actuales de configuración del Help Center de OpenAI siguen usando directamente `~/.codex/config.toml` y `~/.codex/.env`, y indican que la App de escritorio/IDE puede necesitar reinicio para leer esos ajustes; esta página evita además atarse a nombres de claves variables y conserva solo el marco estable de «configuración de usuario, política gestionada e intenciones habituales de modelo/aprobación/Sandbox».  
-**Última verificación:** 2026-07-26

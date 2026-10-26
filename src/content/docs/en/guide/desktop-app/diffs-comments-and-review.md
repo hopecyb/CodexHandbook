@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE"
+  checkedAt: "2026-08-26"
 title: Diffs, comments, and review
 description: Verify the actual changes and leave line-level feedback in the review pane before committing or pushing.
 locale: en
 source_locale: zh-CN
-source_revision: 32ee40c
+source_revision: '32ee40c'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
 ---
@@ -62,11 +66,3 @@ Use a consistent acceptance order: scope → behavior → tests → security →
 ## Official sources
 
 - [Code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE
-
-**Last verified:** 2026-08-26

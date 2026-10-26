@@ -3,12 +3,17 @@ title: プロジェクト説明
 description: AGENTS.md 以外のプロジェクトレベルコンテキスト——README、docs、会話参照の分担。
 locale: ja
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: "76b0fde"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers の現行プロジェクトコンテキストとファイル協業の公開説明、および本ハンドブックで検証済みのプロジェクトコンテキスト・ファイル・ワークフロー章を相互確認。README、`AGENTS.md`、`docs/` とタスク会話の安定した分担原則のみを残す。
+  checkedAt: "2026-07-26"
 ---
 
 「プロジェクト説明」は Codex がリポジトリを理解するための**静的コンテキスト**で、単一ファイル形式に限りません。
@@ -33,7 +38,7 @@ Codex はツールでこれらを読みます。重要なのは**真実を一つ
 ## 基本手順
 
 1. ルート `README.md` に用途、インストール、開発、テストの四段を用意
-2. **Codex に繰り返し伝える説明**は `AGENTS.md` に沈める
+2. **Codex に繰り返し伝える説明**は `AGENTS.md` に残す
 3. タスクでは全文貼り付けではなく `@` で具体ファイルを指す：
 
 ```text
@@ -45,8 +50,8 @@ Codex はツールでこれらを読みます。重要なのは**真実を一つ
 
 よくある状況：
 
-- README は一套
-- docs は另一套
+- README に書かれた内容と
+- docs に書かれた内容が異なる
 - 実際に動くコマンドは `package.json` に隠れている
 
 人が混乱するだけでなく、Codex も混乱します。リポジトリ内の「プロジェクトの真実」を集中・一貫させることが要点です。
@@ -95,10 +100,3 @@ Codex はツールでこれらを読みます。重要なのは**真実を一つ
 
 - [ ] 新規 clone（または Codex）が README + AGENTS.md でテストまで通せる
 - [ ] タスク prompt は @ 参照中心で、長い背景の繰り返しを避ける
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Developers の現行プロジェクトコンテキストとファイル協業の公開説明、および本ハンドブックで検証済みのプロジェクトコンテキスト・ファイル・ワークフロー章を相互確認。README、`AGENTS.md`、`docs/` とタスク会話の安定した分担原則のみを残す。  
-**最終検証：** 2026-07-26

@@ -1,13 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu với Slash commands và Developer commands trong tài liệu chính thức của ứng dụng máy tính; làm rõ rằng các giao diện có bộ lệnh khác nhau. Các lệnh được liệt kê đều có trong bảng chính thức tại thời điểm kiểm tra; tính khả dụng cuối cùng vẫn theo danh sách gợi ý trong ô soạn thảo."
+  checkedAt: "2026-08-26"
 title: Lệnh gạch chéo và lối vào nhanh
 description: Tra cứu nhanh để học cách dùng lệnh / và gọi Skill bằng $, không phải tài liệu đầy đủ về tham số.
 locale: vi
 source_locale: zh-CN
-source_revision: a34c90f
-translation_status: draft
+source_revision: "a34c90f"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: 2026-10-26
 ---
 
 Khi mới thấy các lệnh gạch chéo, nhiều người tưởng đây là một loạt thuật ngữ phải học thuộc. Sẽ dễ hiểu hơn nếu xem chúng là những lối vào nhanh mà bạn có thể chủ động gọi tên.

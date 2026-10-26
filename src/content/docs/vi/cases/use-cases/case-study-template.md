@@ -1,15 +1,16 @@
 ---
-title: Mẫu case
-description: Cấu trúc thống nhất để viết và rút kinh nghiệm case Codex — thuận tiện nhóm đóng gói và so sánh.
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo quy trình EPXV đã kiểm chứng, phục hồi thất bại, hướng dẫn dự án và cấu trúc thư viện tình huống thực hành của sổ tay; trang này chỉ cung cấp mẫu cấu trúc thống nhất để viết và rút kinh nghiệm tình huống thực hành, không tuyên bố hành vi sản phẩm cụ thể.", "checkedAt": "2026-07-26"}
+title: Mẫu tình huống thực hành
+description: Cấu trúc thống nhất để viết và rút kinh nghiệm tình huống thực hành Codex — thuận tiện nhóm đóng gói và so sánh.
 locale: vi
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: "74ef905"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Sao chép mẫu này để tạo trang case mới hoặc tài liệu rút kinh nghiệm nội bộ.
+Sao chép mẫu này để tạo trang tình huống thực hành mới hoặc tài liệu rút kinh nghiệm nội bộ.
 
 Trước khi sao chép, hãy xóa các đoạn không cần theo đối tượng và thành phẩm thực tế.
 
@@ -19,7 +20,7 @@ Trước khi sao chép, hãy xóa các đoạn không cần theo đối tượng
 
 | Trường | Điền |
 |---|---|
-| Tiêu đề case | |
+| Tiêu đề tình huống thực hành | |
 | Đối tượng | Người mới / nhà phát triển / người sáng tạo / nhóm |
 | Client dùng | App / CLI / IDE / Cloud |
 | Thời gian ước tính | |
@@ -74,9 +75,3 @@ Trước khi sao chép, hãy xóa các đoạn không cần theo đối tượng
 ## 6. Nguồn tham chiếu
 - Liên kết tài liệu chính thức
 - Case này có dựa trên hướng dẫn ngoài không (chỉ tham khảo loại tác vụ)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo quy trình EPXV đã kiểm chứng, phục hồi thất bại, hướng dẫn dự án và cấu trúc thư viện case của sổ tay; trang này chỉ cung cấp mẫu cấu trúc thống nhất để viết và rút kinh nghiệm case, không tuyên bố hành vi sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

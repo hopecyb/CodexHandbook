@@ -8,11 +8,12 @@ title: Start here
 description: Learn what Codex is, who it is for, and which learning path to choose.
 locale: en
 source_locale: zh-CN
-source_revision: 953fb89
-translation_status: draft
+source_revision: '953fb89'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 1
+reviewed_at: 2026-10-25
 ---
 
 This handbook is primarily for **AI beginners**. It does not assume you know the terminal, Git, or agents, but it introduces the capabilities you will encounter step by step.

@@ -23,9 +23,10 @@ next:
   label: 주간 매출 보고서로 계속하기
 locale: ko
 source_locale: zh-CN
-source_revision: cc1139b
-translation_status: draft
+source_revision: "cc1139b"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 ## 사전 조건

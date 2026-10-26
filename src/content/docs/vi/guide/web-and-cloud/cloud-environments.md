@@ -8,10 +8,11 @@ legacyVerification:
 locale: vi
 source_locale: zh-CN
 source_revision: "1745f70"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+reviewed_at: 2026-10-26
 ---
 
 Môi trường Cloud xác định những gì Codex sẽ cài đặt và chạy cho một kho mã. Môi trường này không kế thừa cấu hình trên máy tính của bạn. Khi công việc chạy được ở máy nhưng thất bại trên Cloud, trước tiên hãy so sánh phiên bản runtime, phụ thuộc, biến và quyền truy cập mạng.

@@ -1,14 +1,19 @@
 ---
-title: Hình ảnh và ảnh chụp màn hình
-description: Cung cấp ảnh chụp, bản thiết kế cho Codex và quản lý tệp ảnh trong tác vụ.
-locale: vi
-source_locale: zh-CN
-source_revision: adc2b88
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Hình ảnh và ảnh chụp màn hình"
+description: "Cung cấp ảnh chụp, bản thiết kế cho Codex và quản lý tệp ảnh trong tác vụ."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "adc2b88"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Đã rà lại mô tả về tải ảnh chụp, chú thích trọng tâm, dung lượng tệp và lưu ý riêng tư theo tài liệu đầu vào ảnh và tải tệp chính thức của OpenAI; phần thân không giữ bước giao diện cụ thể cần đối chiếu từng phiên bản."
+  checkedAt: "2026-07-26"
 ---
 
 Hình ảnh giúp Agent **nhìn thấy** vấn đề giao diện, ý đồ thiết kế hoặc bản phác bảng trắng. Trang này gồm đầu vào (ảnh bạn cung cấp) và quản lý tệp ảnh trong kho; tạo ảnh mới xem [Tạo ảnh](/vi/guide/tools/image-generation/).
@@ -124,10 +129,3 @@ Với tác vụ kiểu «làm theo hình»:
 - Giả định mô hình đọc được liên kết Figma mà không xuất
 
 Ảnh chụp tốt không chỉ là “có ảnh”. Ảnh rõ, trọng tâm rõ, kỳ vọng cũng rõ thì tác vụ mới dễ làm đúng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Cloud  
-**Căn cứ kiểm chứng:** Đã rà lại mô tả về tải ảnh chụp, chú thích trọng tâm, dung lượng tệp và lưu ý riêng tư theo tài liệu đầu vào ảnh và tải tệp chính thức của OpenAI; phần thân không giữ bước giao diện cụ thể cần đối chiếu từng phiên bản.  
-**Kiểm chứng gần nhất:** 2026-07-26

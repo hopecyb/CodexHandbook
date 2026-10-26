@@ -3,11 +3,16 @@ title: 키보드 단축키
 description: 현재 공식 문서에서 확인할 수 있는 데스크톱 앱과 IDE의 단축 동작만 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4f812d9
-translation_status: draft
+source_revision: '4f812d9'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 단축키는 플랫폼, 클라이언트, 사용자 설정에 따라 달라집니다. 이 페이지에는 현재 공식 문서에 명시된 조합만 실었습니다. 전체 목록은 앱의 **Keyboard Shortcuts**에서 확인하세요.

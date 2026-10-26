@@ -3,15 +3,20 @@ title: Kontextkomprimierung
 description: Was nach der Komprimierung langer Gespräche bleibt — und was verloren geht.
 locale: de
 source_locale: zh-CN
-source_revision: c6c9d03
+source_revision: "c6c9d03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur Risiken und Nachbesserung nach Komprimierung langer Gespräche; Konzepte, Beispiele und interne Links geprüft, ohne volatile Produktfakten.
+  checkedAt: '2026-07-26'
 ---
 
-„Kontextkomprimierung“: Wird das Gespräch zu lang, kürzt das System Früheres zu einer kürzeren Fassung und behält sie. Zweck: Aufgabe fortsetzbar; Preis: **Details können verloren gehen.**
+Bei der „Kontextkomprimierung“ fasst das System frühere Gesprächsinhalte zusammen, damit eine lange Aufgabe fortgesetzt werden kann. Dabei können **Details verloren gehen.**
 
 ## Warum das Ergebnisse beeinflusst
 
@@ -19,7 +24,7 @@ Viele Einsteiger nehmen an:
 
 „Was früher gesagt wurde, bleibt vollständig im Gedächtnis.“
 
-Nicht immer.  
+Nicht immer.
 Nach Komprimierung langer Aufgaben gehen leichter verloren:
 
 - feine kleine Einschränkungen
@@ -50,9 +55,9 @@ Genauer: Gerüst bleibt, alle Feinheiten sind nicht garantiert 1:1 erhalten.
 
 Nein.
 
-Das Wichtigste, Leichtverlorene, Unfehlbare neu nennen reicht meist.
+Meist reicht es, die wichtigsten und leicht übersehenen Informationen zu wiederholen, bei denen keine Fehler passieren dürfen.
 
-### 3. Was darf man nicht „sollte es noch wissen“-wetten?
+### 3. Bei welchen Informationen sollte man sich nicht auf die Erinnerung verlassen?
 
 Typisch:
 
@@ -72,15 +77,8 @@ Aktuell gültige Einschränkungen:
 3. Fertig: Startseiten-Text aktualisiert und Build bestanden
 ```
 
-Stabiler als die ganze lange Konversation weiter zu verlassen.
+Das ist verlässlicher, als sich weiterhin auf den gesamten langen Gesprächsverlauf zu verlassen.
 
 Konzept: [Token, Kontext und Komprimierung](/de/guide/foundations/tokens-context-and-compaction/)
 
 In langen Aufgaben: kritische Grenzen nicht nur einmal sagen; nach Komprimierung wichtige Regeln aktiv wiederholen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Risiken und Nachbesserung nach Komprimierung langer Gespräche; Konzepte, Beispiele und interne Links geprüft, ohne volatile Produktfakten.  
-**Zuletzt geprüft:** 2026-07-26

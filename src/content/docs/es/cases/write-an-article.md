@@ -36,9 +36,10 @@ next:
   label: Convertir el artículo en una presentación
 locale: es
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: 'e2bb5ea'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 El objetivo es un artículo breve en chino cuyos hechos clave puedan rastrearse hasta las fuentes. Tratarás descripciones contradictorias, distinguirás hechos respaldados, inferencias del autor y asuntos pendientes, y revisarás un borrador inicial diseñado con errores evidentes.

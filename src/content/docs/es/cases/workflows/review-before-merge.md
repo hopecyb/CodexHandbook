@@ -3,12 +3,16 @@ title: Revisión antes de fusionar
 description: Antes del merge, usa Codex para una revisión estructurada del diff y de riesgos — con división clara humano/máquina.
 locale: es
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: "78d5c03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: CLI / IDE / Cloud
+  basis: Contrastado con los use cases públicos actuales de code review / pull request de OpenAI Developers, y con los capítulos ya verificados de calidad, revisión de diffs y Cloud. Esta página solo confirma el principio estable «revisión estructurada antes de fusionar, revisión en solo lectura y firma final humana».
+  checkedAt: '2026-07-26'
 ---
-
 **Revisión antes de fusionar** lleva [Calidad y verificación](/es/guide/quality/) al flujo de Git: antes de fusionar el PR, Codex comprueba que diff, tests, seguridad y especificación coincidan. Un comentario automático no sustituye la fusión automática.
 
 ## Enfoque de esta página
@@ -39,7 +43,7 @@ Devuelve un checklist con P0/P1.
 
 | Dimensión | Qué mirar |
 |---|---|
-| Corrección | Lógica, bordes, manejo de errores |
+| Corrección | Lógica, casos límite, manejo de errores |
 | Tests | Si el comportamiento nuevo tiene cobertura |
 | Seguridad | Secretos, inyección, pistas de vulnerabilidades en dependencias |
 | Mantenibilidad | Nombres, duplicación, API pública |
@@ -70,10 +74,3 @@ Puede combinarse con [Revisar diffs](/es/guide/quality/review-diffs/); los ítem
 
 - [Code review en Cloud](/es/guide/web-and-cloud/code-review/)
 - [Crear Pull Request](/es/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Contrastado con los use cases públicos actuales de code review / pull request de OpenAI Developers, y con los capítulos ya verificados de calidad, revisión de diffs y Cloud. Esta página solo confirma el principio estable «revisión estructurada antes de fusionar, revisión en solo lectura y firma final humana».

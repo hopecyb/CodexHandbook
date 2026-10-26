@@ -58,7 +58,9 @@ const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
 						</p>
 						<ul>
 							{group.links.map((link) => {
-								const href = link.external || link.global
+								const href = ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(lang) && link.global && ['/contact/', '/privacy-policy/', '/terms/'].includes(link.href)
+									? `/${lang}${link.href}`
+									: link.external || link.global
 									? link.href
 									: link.standalonePage
 										? standaloneHref(link.standalonePage, locale)

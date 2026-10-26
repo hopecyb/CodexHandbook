@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "Environnements utilisant un hôte Codex local ; la CLI fournit `/hooks` pour gérer la confiance"
-  checkedAt: "2026-08-25"
+  status: verified
+  products: Environnements utilisant un hôte Codex local ; la CLI fournit `/hooks` pour gérer la confiance
+  checkedAt: '2026-08-25'
 title: Vue d’ensemble des Hooks
 description: Comprendre la découverte des configurations Hook, la revue de confiance, les gestionnaires et les limites de sécurité.
 locale: fr
 source_locale: zh-CN
-source_revision: ac7889b
-translation_status: draft
+source_revision: "ac7889b"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: '2026-10-26'
 ---
-
 Les Hooks permettent d’exécuter des scripts de commande ou des outils de serveurs MCP déjà connectés pendant la boucle de l’Agent Codex. Ils servent notamment à détecter des secrets dans les prompts, appliquer des règles aux appels d’outils, tenir des journaux d’audit, résumer les sessions ou vérifier le travail avant l’arrêt.
 
 ![Cycle de vie des Hooks Codex : sessions, tours de tâche, appels d’outils, compression du contexte et événements des sous-agents](/diagrams/hook-lifecycle-events-fr.svg)

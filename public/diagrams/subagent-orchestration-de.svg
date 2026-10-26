@@ -33,7 +33,7 @@
 
   <rect x="44" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#34d399" stroke-width="1.5"/>
   <text x="192" y="357" text-anchor="middle" class="label">Unter-Agent A</text>
-  <text x="192" y="388" text-anchor="middle" class="note">Schreibgeschützter Codepfad</text>
+  <text x="192" y="388" text-anchor="middle" class="note">Codepfade nur lesend untersuchen</text>
   <path d="M72 408H312" fill="none" stroke="#14532d"/>
   <text x="192" y="439" text-anchor="middle" class="note">Liefern: Aufrufkette und Dateipfade</text>
   <text x="192" y="469" text-anchor="middle" class="tiny">Unabhängiger Kontext · geerbte Berechtigungen</text>
@@ -45,7 +45,7 @@
   <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
   <text x="600" y="439" text-anchor="middle" class="note">Liefern: fehlschlagender Befehl und Protokolle</text>
   <text x="600" y="469" text-anchor="middle" class="tiny">Unabhängiger Kontext · geerbte Berechtigungen</text>
-  <text x="600" y="491" text-anchor="middle" class="tiny">Ergebnisse müssen reproduzierbar sein</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Ergebnisse müssen überprüfbar sein</text>
 
   <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1008" y="357" text-anchor="middle" class="label">Unter-Agent C</text>
@@ -69,6 +69,6 @@
 
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">Haupt-Agent konsolidiert, löst Konflikte und verifiziert</text>
-  <text x="600" y="721" text-anchor="middle" class="note">Nachweise vergleichen → Änderungen festlegen → zusammenführen → Tests und Build erneut ausführen</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Ein abgeschlossener Teilauftrag beendet nicht die Gesamtaufgabe; nur reproduzierbare Nachweise tragen das Endergebnis.</text>
+  <text x="600" y="721" text-anchor="middle" class="note">Belege vergleichen → Änderungen wählen → zusammenführen → Tests und Build erneut ausführen</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Teilauftrag fertig ≠ Gesamtaufgabe fertig. Fazit nur mit überprüfbaren Nachweisen.</text>
 </svg>

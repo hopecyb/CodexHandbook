@@ -3,12 +3,17 @@ title: 로컬 작업 워크플로
 description: IDE에서 열린 파일과 선택 영역을 바탕으로 로컬 Codex 작업을 시작하고, 따라가며, 마칩니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 0264d4d
+source_revision: '0264d4d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: OpenAI 현행 도움말은 IDE extension을 로컬 코드 저장소와 함께 쓰는 클라이언트로 설명합니다. 이 페이지 워크플로는 “워크스페이스 열기·파일 범위 제한·작업 설명·diff 검토·테스트 실행·사람이 커밋”이라는 안정적 로컬 협업 순환에 초점을 두며, 특정 확장 UI에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 IDE 로컬 작업은 「**열기 → 선택 → 설명 → 검토 → 테스트**」의 순환이며, 빈번한 작은 수정에 맞습니다. 가장 흔한 실무 경로를 제시합니다. 컨텍스트 세부 사항은 [선택 영역과 열린 파일](/ko/guide/ide/selected-code-and-open-files/)을 보세요.
@@ -32,7 +37,7 @@ src/auth/login.ts와 대응 테스트만 수정.
 완료: npm test -- auth를 실행하고 변경 요약을 나열한다.
 ```
 
-## 언제 다른 입구로 바꾸나요
+## 언제 다른 인터페이스로 바꾸나요
 
 | 상황 | 제안 |
 |---|---|
@@ -69,10 +74,3 @@ IDE 확장의 많은 컨텍스트가, 완전한 프로젝트를 열었는지에 
 - 수정 후 테스트나 미리보기가 쉬움
 
 IDE 로컬 작업은 작은 걸음으로 빠르게 가기 좋지만, “편하다”가 검토와 검증을 건너뛰어도 된다는 뜻은 아닙니다.
-
----
-
-**상태:** verified  
-**적용 제품:** IDE  
-**검증 근거:** OpenAI 현행 도움말은 IDE extension을 로컬 코드 저장소와 함께 쓰는 클라이언트로 설명합니다. 이 페이지 워크플로는 “워크스페이스 열기·파일 범위 제한·작업 설명·diff 검토·테스트 실행·사람이 커밋”이라는 안정적 로컬 협업 순환에 초점을 두며, 특정 확장 UI에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

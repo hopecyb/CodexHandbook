@@ -12,7 +12,7 @@ verification:
   kind: run-tested
   checkedAt: '2026-09-18'
   environment: Python 3.12.11 / Darwin arm64; integrierter Codex-Browser (genaue Engine-Version unbekannt), Ansichten mit 1280×720 und 375×812.
-  summary: Die Referenzseite wurde im Browser auf Desktop und schmalem Bildschirm sowie mit Button und Tastatur geprüft. Ein defekter Link wurde reproduziert und behoben. Daraus folgen weder Browserübergreifende Kompatibilität noch Aussagen zur Modellleistung oder zum Erfolg von Lesenden.
+  summary: Die Referenzseite wurde im Browser auf Desktop und schmalem Bildschirm sowie mit Button und Tastatur geprüft. Ein defekter Link wurde reproduziert und behoben. Daraus folgen weder browserübergreifende Kompatibilität noch Aussagen zur Modellleistung oder zum Erfolg von Lesenden.
   evidence:
     - label: Browserprüfung und tatsächliche visuelle Korrektur
       href: /downloads/reading-event/validation/browser-review.md
@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
+reviewed_at: 2026-10-26
 ---
 
 Erstelle aus Veranstaltungsunterlagen eine einseitige Website, die sich im Browser öffnen lässt. Abzugeben sind eine lokale statische Seite und ein Abnahmeprotokoll. Veranstaltung und Ort sind erfunden; die Anmeldung ist noch ungeklärt.
@@ -64,7 +65,7 @@ Die [Layoutskizze](/downloads/reading-event/wireframe.md) erklärt die Lesereihe
 | Fakten | 17.10.2026, 14:00–15:30 Uhr, erfundener Leseraum, 18 Personen, kostenlos und freiwillig ein Buch mitbringen stimmen mit den Unterlagen überein |
 | Offenes | Anmeldung bleibt ungeklärt; kein erfundener QR-Code, keine Telefonnummer und kein Link |
 | Mobil | Bei 375 px lesbar, ohne horizontales Überlaufen |
-| Bedienung | Tab erreicht den Hauptbutton mit sichtbarem Fokus; Eingabe oder Klick führt zu den Teilnahmehinweisen |
+| Bedienung | Tab erreicht den Hauptbutton mit sichtbarem Fokus; Enter oder Klick führt zu den Teilnahmehinweisen |
 | Umfang | Nur `work/index.html` geändert; keine neue Abhängigkeit, kein Formular zur Datenerhebung und keine externe Veröffentlichung |
 
 Kopiere die [Abnahmevorlage](/downloads/reading-event/review-template.md) außerhalb des Arbeitsordners und trage deine eigenen Ergebnisse ein. Die Referenzseite stammt vom Autor; dessen Protokoll ersetzt nicht die Abnahme des hier erzeugten Modellergebnisses.

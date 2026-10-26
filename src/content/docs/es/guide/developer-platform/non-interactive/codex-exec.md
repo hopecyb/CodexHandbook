@@ -8,9 +8,10 @@ title: codex exec
 description: Punto de entrada no interactivo para entregar una tarea completa de una sola vez en scripts y CI.
 locale: es
 source_locale: zh-CN
-source_revision: 6d7c481
-translation_status: draft
+source_revision: "6d7c481"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -151,7 +152,7 @@ Por eso muchos equipos lo conectan a `make review`, GitHub Actions, cron o un bo
 ## Límites de seguridad
 
 - Sin supervisión, la [aprobación humana](/es/cases/workflows/human-approval-patterns/) se debilita; usa solo lectura de forma predeterminada.
-- Consulta [Credenciales de seguridad](/es/guide/developer-platform/ci-cd/code-review-automation/#permisos-y-seguridad/) en el capítulo relacionado.
+- Consulta [Credenciales de seguridad](/es/guide/developer-platform/ci-cd/code-review-automation/#permisos-y-seguridad) en el capítulo relacionado.
 
 ## Lista de validación
 

@@ -1,34 +1,39 @@
 ---
-title: "Percurso de desenvolvedor: ler código, corrigir, revisar e passar adiante"
-description: "Um bug de carrinho conecta leitura de código, testes vermelho/verde, revisão do diff e passagem de trabalho, com três modelos preenchíveis."
+title: 'Percurso de desenvolvedor: ler código, corrigir, revisar e passar adiante'
+description: Um bug de carrinho conecta leitura de código, testes vermelho/verde, revisão do diff e passagem de trabalho, com três modelos preenchíveis.
 contentType: path
-audiences: [developer]
+audiences:
+- developer
 level: beginner
-outputs: [javascript, markdown, test-log]
+outputs:
+- javascript
+- markdown
+- test-log
 editorialStatus: review
 verification:
   kind: run-tested
-  checkedAt: "2026-09-18"
-  summary: "O exercício de referência foi executado novamente: um dos três testes falhou no início, os três passaram após a correção de referência e os dois arquivos de teste eram idênticos. Os modelos foram revistos pelo autor; nenhum leitor independente concluiu o percurso."
-  environment: "Node.js v22.16.0 / Darwin arm64; node:test integrado, sem dependências de terceiros."
+  checkedAt: '2026-09-18'
+  summary: 'O exercício de referência foi executado novamente: um dos três testes falhou no início, os três passaram após a correção de referência e os dois arquivos de teste eram idênticos. Os modelos foram revistos pelo autor; nenhum leitor independente concluiu o percurso.'
+  environment: Node.js v22.16.0 / Darwin arm64; node:test integrado, sem dependências de terceiros.
   evidence:
-    - label: "Resumo da execução real"
-      href: /downloads/developer-path/run-record.json
-    - label: "Referência de revisão do autor e limites do escopo"
-      href: /downloads/developer-path/review-reference.md
+  - label: Resumo da execução real
+    href: /downloads/developer-path/run-record.json
+  - label: Referência de revisão do autor e limites do escopo
+    href: /downloads/developer-path/review-reference.md
 sidebar:
   order: 20
 prev:
   link: /pt/guide/learning-paths/
-  label: "Escolher um percurso de aprendizagem"
+  label: Escolher um percurso de aprendizagem
 next:
   link: /pt/cases/use-cases/software-development/fix-a-bug-with-verification/
-  label: "Começar uma correção de bug verificada"
+  label: Começar uma correção de bug verificada
 locale: pt
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: "22d8bd3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 Use um pequeno exercício de carrinho para fazer quatro coisas: explicar o código, corrigir um erro, revisar as diferenças e passar as evidências adiante. Não é preciso aprender todos os clientes, configurações ou recursos multiagente antes.
 
@@ -113,7 +118,7 @@ Não altere código, não faça commit nem push.
 
 Execute em uma nova tarefa ou peça a outra pessoa para conferir. Reabrir você mesmo é um ensaio de retomada, não revisão humana independente. Veja o [registro de passagem do autor](/downloads/developer-path/handoff-reference.md).
 
-A passagem termina quando o arquivo sozinho permite localizar código, testes e limites e executar o resultado atual. Se essa execução ainda não ocorreu, marque “aguardando verificação após a passagem” no registro.
+A passagem termina quando o arquivo sozinho permite localizar código, testes e limites e executar os testes e obter o resultado atual. Se essa execução ainda não ocorreu, marque “aguardando verificação após a passagem” no registro.
 
 ## A que etapa voltar quando houver problemas
 

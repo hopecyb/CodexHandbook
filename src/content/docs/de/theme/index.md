@@ -6,7 +6,7 @@ editorialStatus: review
 verification:
   kind: source-checked
   checkedAt: "2026-09-18"
-  summary: "Projekt-Repository, Releases und Installationsanleitung wurden gelesen. Das Theme wurde nicht installiert; Oberfläche und Deinstallations-Wiederherstellung wurden nicht getestet. Eine Kompatibilitätsgarantie wird nicht gegeben."
+  summary: "Projekt-Repository, Releases und Installationsanleitung wurden gelesen. Das Theme wurde nicht installiert; Oberfläche und Wiederherstellung bei der Deinstallation wurden nicht getestet. Eine Kompatibilitätsgarantie wird nicht gegeben."
   evidence:
     - label: "Projektbeschreibung von Dream Skin"
       href: https://github.com/Fei-Away/Codex-Dream-Skin
@@ -16,7 +16,8 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 source_revision: "4ecfa1c"
 ---
@@ -38,7 +39,7 @@ Die hier vorhandene Abbildung ist kein Nachweis aus der aktuellen Versionsprüfu
 | Windows-Kompatibilität | Von diesem Handbuch nicht getestet |
 | Wiederherstellung | Nicht getestet; Schritte und Prüfkriterien folgen |
 
-Laut Release-Notizen wurden einige Oberflächenkorrekturen mit dem vorgelagerten macOS Codex 26.901.41123 geprüft. Das unterscheidet sich von der hier erfassten 26.911.61220 und belegt daher keine Kompatibilität dieser Kombination. Der macOS-Installationslink ist auf v1.5.18 festgelegt; für andere Versionen gilt der jeweilige Tag.
+Laut Release-Notizen wurden einige Oberflächenkorrekturen mit dem offiziellen macOS-Client von Codex 26.901.41123 geprüft. Das unterscheidet sich von der hier erfassten 26.911.61220 und belegt daher keine Kompatibilität dieser Kombination. Der macOS-Installationslink ist auf v1.5.18 festgelegt; für andere Versionen gilt der jeweilige Tag.
 
 Die Client-Version liefert Umgebungsdaten, aber keinen Beleg für Theme-Kompatibilität. Halten Sie eigene Versuche im [Kompatibilitäts- und Wiederherstellungsprotokoll](/de/guide/reference/resource-compatibility/) fest.
 

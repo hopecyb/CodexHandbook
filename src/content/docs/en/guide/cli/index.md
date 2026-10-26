@@ -8,8 +8,9 @@ title: CLI
 description: A practical introduction to the command-line client.
 locale: en
 source_locale: zh-CN
-source_revision: a80ef7e
-translation_status: draft
+source_revision: 'a80ef7e'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: '2026-09-20'
 sidebar:
   order: 11

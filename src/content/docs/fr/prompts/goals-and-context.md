@@ -3,27 +3,32 @@ title: Objectifs et contexte
 description: Indiquer à Codex quoi livrer et pourquoi c'est important.
 locale: fr
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: "0a5141f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page traite uniquement objectif et contexte ; liens et exemples revus ; pas de faits volatils produit.
+  checkedAt: '2026-07-26'
 ---
 
-Beaucoup de Prompts semblent détaillés, mais deux choses restent floues :
+Beaucoup de prompts semblent détaillés, mais deux choses restent floues :
 
 - le résultat exact attendu
 - pourquoi procéder ainsi
 
 L'**objectif** décrit le livrable ; le **contexte** explique pourquoi.
 
-**Objectif** : livrable vérifiable, pas un vœu vague.  
+**Objectif** : livrable vérifiable, pas un vœu vague.
 « Améliorer le site » → « Changer le libellé du bouton principal de la page d'accueil en… en gardant les classes CSS existantes ».
 
-**Contexte** : ce que le lecteur sait mais pas l'Agent — stack, audience, deadline, pièges connus.
+**Contexte** : ce que le lecteur sait mais pas l'Agent — technologies utilisées, public, raison de l’échéance et pièges connus.
 
 ## Pourquoi ne pas mélanger objectif et contexte
 
-Contexte seul → Codex lit une situation sans savoir quoi produire.  
+Contexte seul → Codex lit une situation sans savoir quoi produire.
 Objectif seul → il peut choisir une approche « faisable » mais inadaptée à votre scénario.
 
 ## Idées reçues
@@ -59,7 +64,7 @@ Contexte : pourquoi, pour qui, où ça bloque aujourd'hui
 Exemple :
 
 ```text
-Objectif : rendre le hero de la page docs plus accessible aux débutants, structure inchangée
+Objectif : rendre le texte de la première section de la page d’accueil de la documentation plus accessible aux débutants, structure inchangée
 Contexte : le texte actuel suppose beaucoup de jargon ; la première visite est difficile
 ```
 
@@ -76,11 +81,4 @@ Pour le contexte :
 
 L'objectif fixe la livraison ; le contexte explique le pourquoi.
 
-Voir aussi : ancrer le contexte projet dans [Contexte projet](/fr/guide/context/project-context/) pour éviter de répéter un long paragraphe à chaque Prompt.
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page traite uniquement objectif et contexte ; liens et exemples revus ; pas de faits volatils produit.
+Voir aussi : ancrer le contexte projet dans [Contexte projet](/fr/guide/context/project-context/) pour éviter de répéter un long paragraphe à chaque prompt.

@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die dreischichtige Beziehung von Projekt, Thread und Aufgabe; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: "Thread, Aufgabe und Projekt"
 description: "Klärt die Beziehung zwischen Sitzung, Aufgabe und Projekt-Arbeitsbereich."
 locale: de
 source_locale: zh-CN
-source_revision: c360452
+source_revision: "c360452"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
 
-Produkte können Wörter leicht unterschiedlich nutzen. In diesem Handbook gilt einheitlich:
+Produkte können Wörter leicht unterschiedlich nutzen. In diesem Handbuch gilt einheitlich:
 
 - **Projekt / Arbeitsbereich**: Ordner oder Repo-Wurzel, an die Codex gebunden ist
 - **Thread / Sitzung**: Ein durchgängiges Gespräch — Kontext sammelt sich an
@@ -33,8 +38,8 @@ Das Projekt entscheidet, wo es arbeitet; der Thread, welchem Gespräch es folgt;
 - **Thread / Sitzung**: Das aktuelle durchgängige Chat-Gespräch
 - **Aufgabe**: Ein konkretes Ziel innerhalb dieses Gesprächs
 
-Im selben Projekt kann es viele Threads geben.  
-Im selben Thread können mehrere Aufgaben gelaufen sein.  
+Im selben Projekt kann es viele Threads geben.
+Im selben Thread können mehrere Aufgaben gelaufen sein.
 Probleme entstehen oft hier: Die Aufgabe hat gewechselt, der Thread trägt noch alten Kontext.
 
 ## Praxistipps
@@ -47,25 +52,18 @@ Probleme entstehen oft hier: Die Aufgabe hat gewechselt, der Thread trägt noch 
 
 ### 1. Im selben Repo immer denselben Thread?
 
-Nicht unbedingt.  
-Unverändertes Repo heißt nicht unveränderte Aufgabe.  
+Nicht unbedingt.
+Unverändertes Repo heißt nicht unveränderte Aufgabe.
 Wechselt das Thema, kann der alte Thread Rauschen mitbringen.
 
 ### 2. Neuer Thread = allen Kontext verlieren?
 
-Das ist nicht nur schlecht.  
+Das ist nicht nur schlecht.
 Oft brauchst du genau „irrelevanten Kontext loswerden“ und nur das Behalten, was zur aktuellen Aufgabe gehört.
 
 ### 3. Aufgabe und Thread sind dasselbe?
 
-Nein.  
+Nein.
 Der Thread ist ein Behälter; die Aufgabe ist konkrete Arbeit darin.
 
 Das Projekt entscheidet, wo es arbeitet; der Thread, welche Historie es mitträgt; die Aufgabe, was diesmal fertig werden soll.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die dreischichtige Beziehung von Projekt, Thread und Aufgabe; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

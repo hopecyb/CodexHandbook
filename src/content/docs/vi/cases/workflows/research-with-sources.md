@@ -1,12 +1,17 @@
 ---
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs: [markdown]
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo năng lực Web search và nghiên cứu có nguồn công khai hiện tại trên OpenAI Developers, cùng các chương tìm kiếm web, kiểm chứng nguồn, xử lý độ không chắc và chính sách phiên bản đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp nghiên cứu ổn định “kết luận then chốt phải truy về được nguồn; xung đột và độ không chắc phải đánh dấu tường minh”.", "checkedAt": "2026-07-26"}
 title: Nghiên cứu có nguồn trích dẫn
 description: Dùng Codex để truy xuất, so sánh và kiểm tra sự thật — tạo nguồn và kết luận có thể truy vết.
 locale: vi
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: "a6fd201"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 **Nghiên cứu có nguồn trích dẫn** yêu cầu mỗi kết luận then chốt quay về được nguồn cụ thể — tài liệu chính thức, bài báo hoặc tệp trong kho — chứ không chỉ một nhận định không căn cứ. Phù hợp chọn tech stack, so sánh đối thủ, tổng quan tài liệu, diễn giải chính sách.
@@ -21,7 +26,7 @@ reviewed_at: 2026-08-26
 
 ```text
 Nghiên cứu «độ phù hợp của Rust và Go trong ngữ cảnh kho này»:
-1. Trước hết liệt kê chiều đánh giá (hiệu năng, hệ sinh thái, độ quen của nhóm)
+1. Trước hết liệt kê tiêu chí đánh giá (hiệu năng, hệ sinh thái, độ quen của nhóm)
 2. Mỗi kết luận kèm URL nguồn hoặc đường dẫn tệp @trong kho
 3. Không kiểm chứng được thì ghi «cần xác nhận»
 4. Cuối cùng đưa khuyến nghị và câu hỏi mở
@@ -63,10 +68,3 @@ Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ
 
 - [Xử lý độ không chắc](/vi/guide/quality/handle-uncertainty/)
 - [Case: refactor tài liệu kèm review](/vi/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo năng lực Web search và nghiên cứu có nguồn công khai hiện tại trên OpenAI Developers, cùng các chương tìm kiếm web, kiểm chứng nguồn, xử lý độ không chắc và chính sách phiên bản đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp nghiên cứu ổn định “kết luận then chốt phải truy về được nguồn; xung đột và độ không chắc phải đánh dấu tường minh”.  
-**Kiểm chứng gần nhất:** 2026-07-26

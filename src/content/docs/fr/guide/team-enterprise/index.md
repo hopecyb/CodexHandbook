@@ -1,17 +1,21 @@
 ---
-title: "Équipe et entreprise"
-description: Adoption, standards, gouvernance et sécurité pour scaler Codex sans perdre le contrôle.
+title: Équipe et entreprise
+description: Adoption, standards, gouvernance et sécurité pour déployer Codex à grande échelle sans perdre le contrôle.
 sidebar:
   order: 70
 locale: fr
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: "b44c5d1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: Fonctionnalités organisation / équipe (selon plan)
+  basis: Le Help Center OpenAI et la doc plugin/app accentuent encore l'accès par rôle, l'activation de plugins, l'approbation d'actions, les frontières de données et la responsabilité d'audit pour le déploiement Codex/ChatGPT d'équipe. Cette page est une navigation de chapitre focalisée sur le modèle de gouvernance et l'ordre de lecture — pas des chemins UI admin spécifiques.
+  checkedAt: '2026-07-26'
 ---
-
-Le chapitre **Équipe et entreprise** est pour les leads engineering, plateforme et sécurité — faire passer Codex de la productivité individuelle à quelque chose que les équipes peuvent gérer, auditer et apprendre. Associer avec [Parcours d'apprentissage · Équipe](/fr/guide/learning-paths/team/) ; ce chapitre penche gouvernance et déploiement.
+Le chapitre **Équipe et entreprise** s’adresse aux responsables d’ingénierie et aux équipes plateforme et sécurité. Il explique comment passer d’un usage individuel à un usage d’équipe gérable, auditable et analysable après coup. À lire avec [Parcours d'apprentissage · Équipe](/fr/guide/learning-paths/team/) ; ce chapitre porte surtout sur la gouvernance et le déploiement.
 
 Si vous êtes encore solo ou apprenez les bases, vous pouvez lire ceci plus tard. Il se concentre sur les frontières, le processus et la responsabilité quand beaucoup de personnes utilisent Codex ensemble.
 
@@ -67,7 +71,7 @@ La roadmap ajoutera adoption, administration, deployment-patterns, etc. — voir
 ## Erreurs courantes
 
 - Acheter des sièges sans formation et standards
-- Bac à sable personnel relaxé devient défaut org
+- Présenter des restrictions locales assouplies du bac à sable comme le réglage par défaut de l’organisation
 - Approuver tous les Plugins communautaires sans liste
 
 ## Liste de contrôle d'acceptation
@@ -80,8 +84,8 @@ La roadmap ajoutera adoption, administration, deployment-patterns, etc. — voir
 
 ### 1. Utilisateur solo — besoin de ce chapitre maintenant ?
 
-Pas forcément une lecture profonde encore.  
-Mais sachez : une fois Codex un système d'équipe, les problèmes ne sont pas seulement « comment prompt ».
+Pas nécessairement en détail dès maintenant.
+Mais sachez : une fois que Codex devient un système utilisé par une équipe, les problèmes ne sont pas seulement « comment prompt ».
 
 ### 2. Pourquoi tant d'audit, gouvernance, politique ?
 
@@ -94,11 +98,4 @@ Commencer par :
 - [Risque Plugin et MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/)
 - [Politique d'usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/)
 
-Si vous préférez l'onboarding personnel d'abord, reporter ce chapitre jusqu'au déploiement équipe, permissions ou contrôle des risques.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** Fonctionnalités organisation / équipe (selon plan)  
-**Base de vérification :** Le Help Center OpenAI et la doc plugin/app accentuent encore l'accès par rôle, l'activation de plugins, l'approbation d'actions, les frontières de données et la responsabilité d'audit pour le déploiement Codex/ChatGPT d'équipe. Cette page est une navigation de chapitre focalisée sur le modèle de gouvernance et l'ordre de lecture — pas des chemins UI admin spécifiques.  
-**Dernière vérification :** 2026-07-26
+Si votre priorité est la prise en main individuelle, revenez à ce chapitre lorsque vous aborderez le déploiement en équipe, la gestion des permissions ou les risques.

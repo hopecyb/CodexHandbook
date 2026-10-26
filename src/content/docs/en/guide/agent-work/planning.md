@@ -9,11 +9,12 @@ verification:
   summary: This page offers working-method guidance. It was cross-checked against task classification and permissions, and makes no claim about default client behavior or measured efficiency gains.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 sidebar:
   order: 10
-source_revision: a129229
+source_revision: 'a129229'
 ---
 
 A plan is an execution path you can inspect and adjust. It helps reveal gaps in scope, dependencies, and acceptance criteria early. A larger task does not automatically call for repeated pauses to seek confirmation.

@@ -9,9 +9,10 @@ verification:
   summary: Se ofrece un procedimiento de prueba por completar. Este sitio aún no tiene registros de instalación y desinstalación de mascotas o temas completadas en el cliente.
 locale: es
 source_locale: zh-CN
-source_revision: 96ff34f
-translation_status: draft
+source_revision: '96ff34f'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-25'
 ---
 
 La compatibilidad siempre corresponde a una combinación concreta de versiones. Una estructura de paquete válida, imágenes con el tamaño correcto o una interfaz que se abre no demuestran por sí solas que funcionen los estados de animación ni la desinstalación y recuperación.
@@ -35,7 +36,7 @@ Nombre y versión del recurso o herramienta:
 URL de origen y tag/commit correspondiente:
 Nombre del archivo descargado y SHA-256:
 Autoría y licencia de los recursos:
-Estado anterior a la instalación y ubicación de la copia de seguridad (ocultar antes de publicar):
+Estado anterior a la instalación y ubicación de la copia de seguridad (eliminar datos sensibles antes de publicar):
 Pasos de instalación realizados:
 Pruebas de carga e interfaz:
 Comprobaciones de animación o interacción:

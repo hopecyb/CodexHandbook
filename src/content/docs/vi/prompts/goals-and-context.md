@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả cách viết mục tiêu và bối cảnh; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Mục tiêu và ngữ cảnh
 description: Để Codex biết cần hoàn thành gì và vì sao điều đó quan trọng.
 locale: vi
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: "0a5141f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Nhiều Prompt trông như có nhiều thông tin, nhưng lại chưa nói rõ hai điều sau:
@@ -16,14 +21,14 @@ Nhiều Prompt trông như có nhiều thông tin, nhưng lại chưa nói rõ h
 
 Mục tiêu nói «cần làm thành gì»; bối cảnh nói «vì sao phải làm như vậy».
 
-**Mục tiêu** viết sản phẩm đầu ra cuối cùng, không viết ước muốn mơ hồ.  
-«Làm website tốt hơn» → «Đổi copy nút chính trang chủ thành…… và giữ nguyên tên class hiện có».
+**Mục tiêu** viết sản phẩm đầu ra cuối cùng, không viết ước muốn mơ hồ.
+«Làm website tốt hơn» → «Đổi nội dung chữ nút chính trang chủ thành…… và giữ nguyên tên class hiện có».
 
-**Bối cảnh** bổ sung hiện trạng người đọc có thể không biết nhưng Agent cần: tech stack, đối tượng, lý do deadline, hố đã biết.
+**Bối cảnh** bổ sung hiện trạng người đọc có thể không biết nhưng Agent cần: tech stack, đối tượng, lý do deadline, vấn đề đã biết.
 
 ## Vì sao không được trộn «mục tiêu» và «bối cảnh»
 
-Chỉ có bối cảnh, không có mục tiêu—Codex có thể hiểu như một đoạn tường thuật tình huống, không biết cần xuất ra gì.  
+Chỉ có bối cảnh, không có mục tiêu—Codex có thể hiểu như một đoạn tường thuật tình huống, không biết cần xuất ra gì.
 Chỉ có mục tiêu, không có bối cảnh—nó dễ làm theo cách «về kỹ thuật được, nhưng chưa chắc hợp ngữ cảnh của bạn».
 
 ## Hiểu lầm thường gặp
@@ -50,7 +55,7 @@ Những điểm sau cũng có thể là bối cảnh quan trọng:
 
 - Độc giả là ai
 - Lý do deadline
-- Hố đã biết
+- Vấn đề đã biết
 - Ràng buộc của nhóm
 
 ## Một cách viết đủ dùng
@@ -65,8 +70,8 @@ Bối cảnh: Vì sao đổi, cho ai xem, hiện đang kẹt ở đâu
 Ví dụ:
 
 ```text
-Mục tiêu: Sửa copy màn hình đầu trang docs cho dễ hiểu với người mới, giữ cấu trúc hiện có
-Bối cảnh: Copy hiện tại mặc định độc giả đã biết nhiều thuật ngữ; lần truy cập đầu ngưỡng hiểu cao
+Mục tiêu: Sửa nội dung chữ màn hình đầu trang docs cho dễ hiểu với người mới, giữ cấu trúc hiện có
+Bối cảnh: Nội dung chữ hiện tại mặc định độc giả đã biết nhiều thuật ngữ; lần truy cập đầu ngưỡng hiểu cao
 ```
 
 ## Kiểm tra xem đã viết đủ rõ chưa
@@ -82,11 +87,4 @@ Khi kiểm bối cảnh, xem thêm một điểm:
 
 Mục tiêu quyết định giao gì; bối cảnh bổ sung vì sao phải làm như vậy.
 
-Liên quan: bối cảnh cấp dự án có thể gửi xuống [Ngữ cảnh dự án](/vi/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách viết mục tiêu và bối cảnh; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Liên quan: bối cảnh cấp dự án có thể lưu trong [Ngữ cảnh dự án](/vi/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.

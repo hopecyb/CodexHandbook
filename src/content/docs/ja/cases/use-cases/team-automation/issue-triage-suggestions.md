@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: "6d859d7"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 この演習では Issue の振り分けを「提案を生成 → 検証 → 人がレビュー」に分けます。レビュー待ちの記録が 5 件できます。コメント投稿、ラベル付け、Issue のクローズは自動実行しません。
@@ -65,7 +66,7 @@ python3 scripts/dry_run.py --proposals my-proposals.json
 
 スキーマは JSON Schema 2020-12 形式です。真偽値には `"type": "boolean"` を使い、優先度は文字列 `"P0-P3"` ではなく列挙値です。同梱の検証器はこのスキーマで使うキーワードの一部のみを実装しており、汎用スキーマエンジンではありません。
 
-各提案には対応する Issue の全文と紐付ける `input_sha256` が含まれます。入力が変わったら古い提案を使うのをやめ、ハッシュだけを再計算する前に変更を分析し直してください。ハッシュの規約と関数は README とスクリプトにあります。
+各提案には対応する Issue の全文と紐付ける `input_sha256` が含まれます。入力が変わったら古い提案の使用を停止してください。ハッシュだけを再計算して済ませず、まず変更内容を分析し直してください。ハッシュの規約と関数は README とスクリプトにあります。
 
 ## 人の判断と安全上の境界
 

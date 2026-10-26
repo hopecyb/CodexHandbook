@@ -12,10 +12,10 @@ title: 日報の自動化
 description: 繰り返しの集計作業を再利用可能なスクリプトまたは Skill に固定化する。
 locale: ja
 source_locale: zh-CN
-source_revision: 2149e0a
+source_revision: "2149e0a"
 translation_status: reviewed
 translated_at: 2026-10-24
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 ## メタ情報

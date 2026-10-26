@@ -3,10 +3,15 @@ title: ワークフローを Skill にする
 description: 同じフローが3回目なら Skill の価値——トリガー、指示、受け入れを一箇所に。
 locale: ja
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: OpenAI Developers の「ワークフローを Skill として保存」公開ユースケースと、本ハンドブックの検証済み Skills、自動化、コマンドルール、拡張リスク章を照合。繰り返しフローを Skill としてまとめるタイミングと、指示・受け入れの整理に関する安定ガイダンスのみ。
+  checkedAt: "2026-07-26"
 ---
 
 同種のタスク（リリースチェック、ドキュメント同期、セキュリティスキャン）をプロンプトのコピペで**3回目**やるなら、[Skill](/ja/skills/overview/) を検討。本章は [ワークフロー手法](/ja/cases/workflows/) と拡張システムを橋渡しします。
@@ -17,14 +22,14 @@ reviewed_at: 2026-08-26
 - Skill に含めるべきもの（指示、リソース、スクリプト）
 - チームでの共有とバージョン管理
 
-## キャプチャのシグナル
+## Skill 化を検討する目安
 
 - 固定手順 + 固定受け入れチェックリスト
 - リポジトリテンプレートやスクリプトが必要
 - 複数人が一貫した挙動を必要
 - 関連タスクでモデルにフローを**自動想起**させたい
 
-キャプチャ不要：一度きりの探索、その日の文脈に強く結びついた小修正。
+Skill 化が不要な場合：一度きりの探索、その日の文脈に強く結びついた小修正。
 
 ## 最小限のアプローチ
 
@@ -52,7 +57,7 @@ reviewed_at: 2026-08-26
 
 - `AGENTS.md` を読むより長い Skill
 - 受け入れチェックリストなし——実行品質が漂流
-- ローカル秘密が要るスクリプトに SECURITY 注記なし
+- ローカル環境のシークレットが要るスクリプトに SECURITY 注記なし
 - Hooks ルールと重複・矛盾
 
 ## 安全境界
@@ -69,9 +74,3 @@ reviewed_at: 2026-08-26
 
 ## 参考
 - リポジトリ内 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) と [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の「ワークフローを Skill として保存」公開ユースケースと、本ハンドブックの検証済み Skills、自動化、コマンドルール、拡張リスク章を照合。繰り返しフローを Skill にキャプチャするタイミングと、指示・受け入れの整理に関する安定ガイダンスのみ。

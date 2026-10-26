@@ -1,13 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Xử lý sự cố Cloud
 description: Xác định lỗi Cloud theo năm lớp là kho mã, setup, mạng, Agent và bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 019fac1
-translation_status: draft
+source_revision: "019fac1"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+reviewed_at: 2026-10-26
 ---
 
 Chạy lại một tác vụ Cloud sẽ tốn thêm thời gian nhưng không tự bổ sung quyền, phần phụ thuộc hoặc cấu hình mạng còn thiếu. Trước tiên hãy xác định lỗi xảy ra ở giai đoạn nào.

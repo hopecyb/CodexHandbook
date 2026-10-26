@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: IDE-Integration installieren und aktivieren
 description: Öffne Codex korrekt in VS-Code-basierten Editoren, Xcode und JetBrains-IDEs.
 sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 85e1691
+source_revision: "85e1691"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Es gibt zwei Arten von IDE-Einstiegen, deren Installationswege nicht vermischt werden dürfen:
@@ -52,11 +56,3 @@ Ausführlichere Schritte für Einsteiger findest du unter [IDE-Integration insta
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE
-
-**Zuletzt geprüft:** 2026-08-26

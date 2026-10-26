@@ -9,9 +9,15 @@ sidebar:
   order: 5
 locale: ko
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: "2f7ff71"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 현재 저장소의 learning paths 디렉터리 구조, 역할별 시작 페이지, 초보자 단계별 경로를 교차 검토했습니다. 이 페이지는 역할에 따라 읽기 순서를 안내하며, 자주 바뀌는 제품 동작의 세부 사항은 다루지 않습니다.
+  checkedAt: '2026-07-26'
+reviewed_at: "2026-10-26"
 ---
 
 학습 경로는 **읽는 순서만 정리**하며 제품 매뉴얼이나 기능 가이드의 긴 글을 복제하지 않습니다.
@@ -35,7 +41,7 @@ translated_at: 2026-09-20
 - **초보자(다섯 단계)**
   1. [Codex와 대화하기](/ko/guide/learning-paths/beginner/01-talk-to-codex/)
   2. [파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/)
-  3. [명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
+  3. [명확한 작업 요청하기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
   4. [결과 검토하기](/ko/guide/learning-paths/beginner/04-review-results/)
   5. [첫 작은 프로젝트 끝내기](/ko/guide/learning-paths/beginner/05-complete-first-project/)
 
@@ -76,7 +82,7 @@ translated_at: 2026-09-20
 
 ### 2. 고정된 정체성 하나를 먼저 정해야 한다
 
-한 가지만 판단하면 됩니다.  
+한 가지만 판단하면 됩니다.
 **지금 가장 풀고 싶은 주요 문제가 무엇인가.**
 
 ### 3. 한 경로를 처음부터 끝까지 배워야 하고 건너뛸 수 없다
@@ -88,8 +94,8 @@ translated_at: 2026-09-20
 어느 경로를 탈지 모르겠다면, 이렇게 고르세요.
 
 - 아직 첫 완전한 작업을 통과하지 못함：[초보자 경로](/ko/guide/learning-paths/beginner/)
-- 주로 콘텐츠, 이미지·텍스트, 데모를 만들고 싶음：[크리에이터 경로](/ko/guide/learning-paths/creator/)
-- 주로 코드 수정, 버그 수정, 프로젝트 연결：[개발자 경로](/ko/guide/learning-paths/developer/)
+- 주로 콘텐츠, 이미지·텍스트, 발표 자료를 만들고 싶음：[크리에이터 경로](/ko/guide/learning-paths/creator/)
+- 주로 코드 수정, 버그 수정, 프로젝트 인수：[개발자 경로](/ko/guide/learning-paths/developer/)
 - 주로 팀 도입과 위험 통제：[팀 경로](/ko/guide/learning-paths/team/)
 
 학습 경로는 “지금 가장 중요한 문제”로 다음에 무엇을 읽을지 정합니다.

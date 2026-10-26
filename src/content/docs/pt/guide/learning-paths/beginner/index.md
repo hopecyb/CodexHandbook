@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: "1b7fbb3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Pratique com materiais de um evento fictício, desde a leitura dos arquivos até a entrega de um aviso verificável. Você não precisa aprender Git ou programação nem instalar dependências antes.
@@ -43,11 +44,11 @@ Depois de descompactar, copie starter para uma nova pasta work e abra work com C
 | [2. Trabalhar com arquivos](/pt/guide/learning-paths/beginner/02-work-with-files/) | Acrescentar apenas uma nota de status ao aviso | Apenas um arquivo recebe uma linha |
 | [3. Dar tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/) | Organizar o aviso com base nos fatos | Fatos correspondem, dúvidas permanecem, escopo correto |
 | [4. Revisar resultados](/pt/guide/learning-paths/beginner/04-review-results/) | Encontrar erros no exemplo defeituoso e revisar o próprio resultado | Quatro erros localizados e revisão real registrada |
-| [5. Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/) | Praticar a restauração em uma cópia e escrever a passagem | Arquivos restaurados iguais; passagem verificável |
+| [5. Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/) | Praticar a restauração em uma cópia e escrever o registro de transição | Arquivos restaurados iguais; registro de transição verificável |
 
 ## O que há no pacote
 
-starter oferece os fatos, um rascunho do aviso e uma nota sintética que não pode ser alterada; references traz a referência do autor e um exemplo intencionalmente errado; templates contém modelos de revisão e passagem; validation guarda um script opcional de reprodução e o registro de operações reais com arquivos.
+starter oferece os fatos, um rascunho do aviso e uma nota sintética que não pode ser alterada; references traz a referência do autor e um exemplo intencionalmente errado; templates contém modelos de revisão e transição; validation guarda um script opcional de reprodução e o registro de operações reais com arquivos.
 
 Todos os eventos e locais são fictícios, e os materiais usam CC0-1.0. O exercício trabalha apenas com arquivos locais; não há inscrição, publicação ou envio de mensagens reais.
 

@@ -29,12 +29,13 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: 'e6a23bb'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
-Comparar sirve para descubrir qué requisitos influyen en la entrega, no para demostrar que un prompt más largo es mejor. Aquí se ofrecen tres conjuntos de entradas fijas y los registros de 12 ejecuciones reales realizadas el 18 de septiembre de 2026. Esta muestra muestra sobre todo diferencias en las pruebas aportadas con cada entrega; no permite establecer efectos generales.
+Comparar sirve para descubrir qué requisitos influyen en la entrega, no para demostrar que un prompt más largo es mejor. Aquí se ofrecen tres conjuntos de entradas fijas y los registros de 12 ejecuciones reales realizadas el 18 de septiembre de 2026. Esta muestra refleja sobre todo diferencias en las pruebas aportadas con cada entrega; no permite establecer efectos generales.
 
 [Descargar todos los materiales](/downloads/prompt-comparisons/prompt-comparisons-1.0.0.zip) · [Protocolo de ejecución](/downloads/prompt-comparisons/README.md) · [Registro vacío](/downloads/prompt-comparisons/blank-run.json)
 
@@ -72,7 +73,7 @@ Cada grupo siguió el orden A1 → B1 → B2 → A2, con tres tareas distintas e
 
 Las tablas completas presentan puntuaciones de 0 a 2 para los cinco criterios, sin clasificación general. La ausencia de una tabla de hechos en el artículo A afecta al criterio acordado de reproducibilidad; no significa que el artículo sea incorrecto. Bug A y B obtuvieron ambos una puntuación parcial en reproducibilidad, pero por motivos distintos. La cifra por sí sola no cuenta toda la historia.
 
-Los hashes de entradas y textos de las tareas fueron iguales entre ejecuciones. Una revisión posterior recalculó el CSV de ventas y comprobó las cuatro correcciones del bug con las pruebas originales sin modificar. Las [comprobaciones de revisión](/downloads/prompt-comparison-results/reviewer-checks.json) se guardan aparte de los registros de los comandos ejecutados por los Agents del experimento.
+Los hashes de las entradas y de los textos de cada tarea se mantuvieron sin cambios. Una revisión posterior recalculó el CSV de ventas y comprobó las cuatro correcciones del bug con las pruebas originales sin modificar. Las [comprobaciones de revisión](/downloads/prompt-comparison-results/reviewer-checks.json) se guardan aparte de los registros de los comandos ejecutados por los Agents del experimento.
 
 ## Conserva también fallos y limitaciones
 

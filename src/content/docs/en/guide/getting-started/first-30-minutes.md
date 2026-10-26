@@ -3,12 +3,17 @@ title: First 30 minutes
 description: A 30-minute path you can follow on day one.
 locale: en
 source_locale: zh-CN
-source_revision: 7d1061d
+source_revision: '7d1061d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-07-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Cross-checked against this handbook’s verified safety checklist, practice project, first task, result review, and beginner path. This page provides a stable first-half-hour learning sequence.
+  checkedAt: '2026-07-26'
 ---
 
 If you just installed Codex and are not sure how to start day one, follow this path.
@@ -98,9 +103,3 @@ If after 30 minutes you have done these four things, this round is complete:
 Go to the [Troubleshooting index](/en/guide/reference/troubleshooting/). If a concept is unclear, go back to [Prerequisites](/en/guide/start-here/prerequisites/) and [Local vs cloud](/en/guide/foundations/local-vs-cloud/).
 
 In the first half hour, completing one loop of “assign a task, see the result, judge it yourself” is already worth it.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26

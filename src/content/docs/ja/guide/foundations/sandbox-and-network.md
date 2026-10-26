@@ -3,12 +3,17 @@ title: サンドボックスとネットワーク
 description: 実行の隔離、ネットワークアクセス、リスク境界を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: 2cf2c46
+source_revision: '2cf2c46'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center の現行 Codex CLI ドキュメントは、Full Auto を依然として「sandboxed, network-disabled environment scoped to the current directory」と記述し、承認モードと区別している。本ページはサンドボックスとネットワークが二つの異なるリスク境界であること、初心者がアクセス範囲をどう絞るべきかのみを説明する。
+  checkedAt: '2026-07-26'
 ---
 
 「サンドボックス」と「ネットワーク」は別の話です。サンドボックスはどこに触れられるかを制限し、ネットワークはどこにつながれるかを制限します。
@@ -70,10 +75,3 @@ sidebar:
 製品側の設定入口はデスクトップ App の [設定](/ja/guide/desktop-app/settings/)。公式の詳細は [https://developers.openai.com/codex](https://developers.openai.com/codex) を参照してください。
 
 初めて使うときは、リスクをまだ読み切れていないうちに扉を全部開けるより、先に制限を多めにしたほうが安全です。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Help Center の現行 Codex CLI ドキュメントは、Full Auto を依然として「sandboxed, network-disabled environment scoped to the current directory」と記述し、承認モードと区別している。本ページはサンドボックスとネットワークが二つの異なるリスク境界であること、初心者がアクセス範囲をどう絞るべきかのみを説明する。  
-**最終検証：** 2026-07-26

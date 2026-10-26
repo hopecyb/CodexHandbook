@@ -1,14 +1,19 @@
 ---
 title: 개인 선호
-description: 사용자급 설정, 기본 모델과 UI 습관 — 저장소의 팀 약속을 오염시키지 않습니다.
+description: 사용자 수준의 설정, 기본 모델과 UI 습관 — 저장소의 팀 약속을 오염시키지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c381051
+source_revision: 'c381051'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 본 핸드북에서 이미 검증한 프로젝트 지침·Profiles·설정 분담·보안 경계 장과 교차 확인했습니다. 이 페이지는 “개인 습관이 팀 저장소 규칙을 오염하면 안 된다”는 안정적 계층 원칙만 설명하며, 특정 클라이언트의 현재 설정 UI를 고정 계약처럼 쓰지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 **개인 선호**는 로컬에서 프로젝트 전반에 적용되는 설정입니다. 기본 모델, 테마, 승인 습관, 개인 Skill 경로 등입니다. 저장소 안 `AGENTS.md`와 달리, 개인 선호는 동료가 **같다고 가정하면 안 됩니다**.
@@ -16,8 +21,8 @@ sidebar:
 ## 내용
 
 - 무엇을 개인 계층에, 무엇을 프로젝트 계층에 둘지
-- [Profile](/ko/guide/customization/configuration/profiles/)과 어떻게 맞춰 장면을 전환할지
-- 개인이 느슨한 설정이 팀 저장소로 새지 않게 하기
+- [Profile](/ko/guide/customization/configuration/profiles/)과 어떻게 맞춰 작업 상황을 전환할지
+- 개인의 느슨한 설정이 팀 저장소로 새지 않게 하기
 
 우선순위 개요: [개인화 설정](/ko/guide/customization/) · [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)
 
@@ -48,7 +53,7 @@ sidebar:
 ## 개인 계층에만 두면 안 되는 팀 내용
 
 - 코드 스타일, 테스트 명령, 디렉터리 구조 → **프로젝트 `AGENTS.md`**
-- 강제 샌드박스 정책 → **프로젝트 설정 또는 조직 호스팅**
+- 강제 샌드박스 정책 → **프로젝트 설정 또는 조직 관리**
 - 고객 저장소 컴플라이언스 → **문서 + CI**, 개인 기억에 의존하지 않음
 
 ## 권장 실천
@@ -75,7 +80,7 @@ sidebar:
 
 - 저장소를 오염하지 않음
 - 나만이 아는 기본값에 의존하지 않음
-- 엄격한 프로젝트로 전환할 때 오해를 만들지 않음
+- 엄격한 프로젝트로 전환할 때 의도하지 않은 피해를 일으키지 않음
 
 ## 개인 계층에 둘지 판단하기
 
@@ -104,10 +109,3 @@ sidebar:
 - [ ] 개인 vs 프로젝트 vs 조직 세 계층 사례를 각각 하나씩 말할 수 있음
 - [ ] 고객 프로젝트 하나 이상에 엄격 Profile을 둠
 - [ ] 저장소 안에 개인 키가 없음
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE  
-**검증 근거:** 본 핸드북에서 이미 검증한 프로젝트 지침·Profiles·설정 분담·보안 경계 장과 교차 확인했습니다. 이 페이지는 “개인 습관이 팀 저장소 규칙을 오염하면 안 된다”는 안정적 계층 원칙만 설명하며, 특정 클라이언트의 현재 설정 UI를 고정 계약처럼 쓰지 않습니다.  
-**최근 검증:** 2026-07-26

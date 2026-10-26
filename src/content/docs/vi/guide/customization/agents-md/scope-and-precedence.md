@@ -16,8 +16,9 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: vi
 source_locale: zh-CN
-source_revision: b5f31cc
-translation_status: draft
+source_revision: "b5f31cc"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 20

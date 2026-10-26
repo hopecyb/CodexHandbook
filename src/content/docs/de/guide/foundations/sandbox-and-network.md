@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Die aktuelle Codex-CLI-Dokumentation im OpenAI Help Center beschreibt Full Auto weiterhin als „sandboxed, network-disabled environment scoped to the current directory“ und unterscheidet das von Freigabemodi; diese Seite erklärt nur, dass Sandbox und Netzwerk zwei unterschiedliche Risikogrenzen sind und wie Anfänger den Zugriff enger halten sollten."
+  checkedAt: "2026-07-26"
 title: Sandbox und Netzwerk
 description: "Verstehe Ausführungsisolation, Netzwerkzugriff und Risikogrenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 2cf2c46
+source_revision: "2cf2c46"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 80
 ---
 
-„Sandbox“ und „Netzwerk“ sind zwei verschiedene Dinge: Die Sandbox begrenzt, wohin es greifen darf; das Netzwerk begrenzt, wohin es verbinden darf.
+„Sandbox“ und „Netzwerk“ sind zwei verschiedene Dinge: Die Sandbox begrenzt, wohin es greifen darf; das Netzwerk begrenzt, mit welchen Zielen es sich verbinden darf.
 
-Die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann, und verkleinert die Fläche für Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Informationen aus dem Prompt können abfließen, oder unzuverlässige Daten können hereinkommen.
+Die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann, und begrenzt die möglichen Auswirkungen von Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Informationen aus dem Prompt können abfließen, oder unzuverlässige Daten können hereinkommen.
 
 ![Illustration: Der Agent arbeitet in einer Glas-Sandbox und hält eine Anfrage hoch, draußen drückt ein Mensch auf Freigabe; das Netzwerkkabel ist getrennt](/illustrations/sandbox-and-approval.webp)
 
@@ -70,10 +75,3 @@ Beide Türen sind nicht nur technische Einstellungen — sie sind deine Risikost
 Produktseitige Einstiege: Desktop-App [Einstellungen](/de/guide/desktop-app/settings/); offizielle Details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Am Anfang lieber etwas enger begrenzen, als alle Türen zu öffnen, bevor du die Risiken verstehst.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Die aktuelle Codex-CLI-Dokumentation im OpenAI Help Center beschreibt Full Auto weiterhin als „sandboxed, network-disabled environment scoped to the current directory“ und unterscheidet das von Freigabemodi; diese Seite erklärt nur, dass Sandbox und Netzwerk zwei unterschiedliche Risikogrenzen sind und wie Anfänger den Zugriff enger halten sollten.  
-**Zuletzt überprüft:** 2026-07-26

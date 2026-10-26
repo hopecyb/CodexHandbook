@@ -3,11 +3,16 @@ title: 통합 터미널
 description: 현재 프로젝트 또는 작업 트리에서 명령을 실행하고 실제 출력으로 작업 결과를 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 727e93e
-translation_status: draft
+source_revision: '727e93e'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 ChatGPT 데스크톱 앱의 각 대화에는 현재 프로젝트 또는 작업 트리를 범위로 하는 터미널이 있습니다. 이 터미널은 로그를 보는 곳일 뿐 아니라 Codex의 결론을 확인할 근거를 얻는 곳이기도 합니다.

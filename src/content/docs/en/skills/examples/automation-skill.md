@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: '6c758b9'
+reviewed_at: 2026-10-25
 ---
 
 Running a check repeatedly does not mean notifying someone every time. This Skill reuses the [link-check exercise](/en/cases/use-cases/team-automation/scheduled-link-check/) and records changes, recovery, and execution errors. It stays quiet when the result is unchanged.

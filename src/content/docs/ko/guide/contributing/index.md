@@ -5,13 +5,17 @@ sidebar:
   order: 80
 locale: ko
 source_locale: zh-CN
-source_revision: 1d4b3f2
+source_revision: '1d4b3f2'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  basis: 본 저장소의 현재 디렉터리 구조, 사이드바 유지 방식, 페이지 상태 체계, 기여 흐름을 항목별로 확인했습니다. 이 페이지는 핸드북 유지 규칙이며, 특정 Codex 제품 단의 쉽게 바뀌는 UI 동작에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
-**Codex 가이드 핸드북**은 커뮤니티가 유지하는 문서 사이트입니다. 오류 수정, 페이지 보강, 재현 가능 사례, [`examples/`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)의 프롬프트 예시 추가를 환영합니다.
+**Codex 가이드 핸드북**은 커뮤니티가 유지하는 문서 사이트입니다. 오류 수정, 페이지 보강, 재현 가능 사례, [`examples/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples)의 프롬프트 예시 추가를 환영합니다.
 
 ## 이 페이지 내용
 
@@ -64,8 +68,8 @@ reviewed_at: 2026-08-26
 1. **중국어 간체 `root`가 원문**(별도 설명이 없으면)
 2. 외부 튜토리얼 원문을 **복사하지 않음**; [외부 자료 통합 계획](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md) 참고
 3. **쉽게 바뀌는 사실**에는 `최근 검증` 날짜를 표시
-4. **각 sidebar slug**에 대응하는 markdown이 있어야 하며, 없으면 `npm run build` 실패
-5. 새 페이지는 `astro.config.mjs` sidebar도 동기 갱신
+4. 새 페이지에는 유효한 frontmatter, 파일 경로, 교차 링크가 있어야 합니다
+5. 현재 네 모듈의 사이드바는 디렉터리를 자동으로 읽습니다. 파일을 추가한 뒤 빌드해 정렬과 진입점이 올바른지 확인하세요
 
 ## 첫 기여는 이렇게 시작
 
@@ -89,14 +93,14 @@ pnpm dev
 머지 전:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## 행동 강령
 
 - 타인의 노동을 존중; 사람에게가 아니라 일에 대해 논의
 - 실제 키·고객 데이터를 커밋하지 않음
-- 대범위 리팩터 전에는 issue 또는 RFC로 논의
+- 대규모 리팩터링 전에는 issue 또는 RFC로 논의
 
 첫 기여는 양을 추구할 필요가 없습니다. 초보자가 진짜 막히는 곳을 분명히 보강하고, 빌드 검증을 통과하면 이미 가치가 큽니다.
 
@@ -104,9 +108,3 @@ npm run build
 
 - 저장소: <https://github.com/hopecyb/CodexHandbook>
 - [장 개요](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)(기획용)
-
----
-
-**상태:** verified  
-**검증 근거:** 본 저장소의 현재 디렉터리 구조, 사이드바 유지 방식, 페이지 상태 체계, 기여 흐름을 항목별로 확인했습니다. 이 페이지는 핸드북 유지 규칙이며, 특정 Codex 제품 단의 쉽게 바뀌는 UI 동작에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

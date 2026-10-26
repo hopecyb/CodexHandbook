@@ -26,7 +26,7 @@
 
   <rect x="40" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="130" y="190" text-anchor="middle" class="label">1. Định nghĩa tác vụ bền vững</text>
-  <text x="130" y="219" text-anchor="middle" class="note">Đầu vào · phạm vi · tiêu chí chấp nhận</text>
+  <text x="130" y="219" text-anchor="middle" class="note">Đầu vào · phạm vi · nghiệm thu</text>
   <text x="130" y="243" text-anchor="middle" class="note">Không thay đổi · thất bại · dừng</text>
   <text x="130" y="265" text-anchor="middle" class="tiny">Ghi rõ việc cần làm trong mỗi lượt trước</text>
 
@@ -44,7 +44,7 @@
 
   <rect x="670" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#fb923c" stroke-width="1.5"/>
   <text x="760" y="190" text-anchor="middle" class="label">4. Chọn tài liệu</text>
-  <text x="760" y="219" text-anchor="middle" class="note">Web: tệp tải lên và trình kết nối</text>
+  <text x="760" y="219" text-anchor="middle" class="note">Web: tải lên và công cụ kết nối</text>
   <text x="760" y="243" text-anchor="middle" class="note">Máy tính: dự án / worktree</text>
   <text x="760" y="265" text-anchor="middle" class="tiny">Web không thể đọc thư mục cục bộ</text>
 

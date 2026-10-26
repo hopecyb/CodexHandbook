@@ -4,15 +4,16 @@ legacyVerification:
   products: "API / CLI / Cloud"
   basis: "Đã đối chiếu chéo với cấu trúc chương developer-platform hiện tại, các lối vào điều hướng và các trang CLI/CI/SDK liên quan trong kho này; trang chỉ làm rõ phân công ổn định rằng nền tảng nhà phát triển hướng tới tích hợp kỹ thuật, không tuyên bố tham số hay hành vi runtime cụ thể."
   checkedAt: "2026-07-26"
-title: Nền tảng dành cho nhà phát triển
+title: "Nền tảng dành cho nhà phát triển"
 description: "Tích hợp Codex vào hệ thống kỹ thuật bằng SDK, CLI chế độ không tương tác và CI/CD — dành cho nhà phát triển tích hợp."
 sidebar:
   order: 50
-locale: vi
-source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
-translated_at: 2026-09-20
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "f58851e"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 **Nền tảng dành cho nhà phát triển** dành cho người muốn **sản phẩm hóa** Codex vào pipeline: ứng dụng tùy chỉnh, review hàng loạt, cổng phát hành, cổng thông tin nội bộ. Việc hàng ngày kiểu «viết một Prompt để sửa bug» vẫn bắt đầu từ [Bắt đầu nhanh](/vi/guide/getting-started/).

@@ -1,0 +1,3960 @@
+{
+  "reviewed_at": "2026-10-26",
+  "source_locale": "zh-CN",
+  "target_locale": "ja",
+  "scope": "Full Chinese/Japanese text pairs for all 283 documents; shared UI, pricing, diagrams and three legal/contact pages. Shared original downloads preserved.",
+  "pages": [
+    {
+      "path": "ai-roadmap/index.md",
+      "status": "reviewed",
+      "findings": [
+        "[OpenSpec] → [OpenSpec（仕様駆動開発）]",
+        "[OpenClaw] → [OpenClaw（個人向け AI アシスタントプロジェクト）]"
+      ],
+      "source_sha1": "f66e3bad4ab12da72c8f00106c63551e5711f6e4",
+      "translation_sha1": "52a94ada5a1e479353adf575f7c3773ebe6d7d94",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2022-11-prompt-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "225d837",
+      "source_sha1": "225d837da424943eeaf40dc5b20211114a04ccad",
+      "translation_sha1": "aa044ff94a3a5cbc90f80801af6187bef628fa62",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-06-function-calling.md",
+      "status": "reviewed",
+      "findings": [
+        "この演習では過去の API やリリース名を呼び出さず、データの境界を検証します。 → この演習はデータの境界を検証するものであり、過去の API を呼び出したり、Issue にラベルを適用したりはしません。"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "c362c48",
+      "source_sha1": "c362c482fae69509d183337f97024accd3a8ae2f",
+      "translation_sha1": "c672d08b2c32467c400a266697fc0aff60cc7dc0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-11-rag.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "e79c0df",
+      "source_sha1": "e79c0dfb504bae1d074fd4102e0b39d4fd861867",
+      "translation_sha1": "6d2f57464fac6fb80009bbae0b938d48900ed6f8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2024-11-mcp.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "7d4d121",
+      "source_sha1": "7d4d121871875ea14f594a7dad376ac445ef8cd2",
+      "translation_sha1": "a89730bb6a4d0bd931814fd3353f5b50a31dc4a9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-03-tool-use.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "efd508a",
+      "source_sha1": "efd508a3f54febdd32a96082c22541ab9599fa8b",
+      "translation_sha1": "a1c85cc4996c62c1235980bf15cb77625772689d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-06-multi-agent.md",
+      "status": "reviewed",
+      "findings": [
+        "ベンダーが自社の評価で示した利益 → ベンダーが自社の評価で示した効果"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "f24f2f5",
+      "source_sha1": "f24f2f513051593fda55603236898385f3e0434b",
+      "translation_sha1": "688b4ada7d331eee936360a5246881838d2ff881",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-09-context-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "d668433",
+      "source_sha1": "d668433ca4fb39a861554e9c4dfb72f6037a91d1",
+      "translation_sha1": "d8007f8e6021fcc9899f2fd763435f8b6530fa47",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openclaw.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "8868140",
+      "source_sha1": "88681405417ba22667881c2a9d451b1404ba418a",
+      "translation_sha1": "b2b31a696461f525003841292b72b5cc44596b3e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openspec.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1a34023",
+      "source_sha1": "1a340238db5e5bc5a7fa398f41fd05c39174fbc8",
+      "translation_sha1": "05e7eed00b14589257cfb90e98526da2f2c42ccc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-02-harness-engineering.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "268e611",
+      "source_sha1": "268e6114ffcfffa8bdd744404cb788d2774e5bd9",
+      "translation_sha1": "f9fc038f7f12d7fc3ebfe20f914e2ab351896b08",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-04-skills.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "952fe58",
+      "source_sha1": "952fe584e0e5be2ddba981693dabe0722b148b77",
+      "translation_sha1": "e3b8a20a568cab95e52a3a137c5a16616753e953",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "847b43b",
+      "source_sha1": "847b43b89927981e9a1a8b553e7c93f26de2e3e2",
+      "translation_sha1": "99b3dd754eab47acd0c22991e034908cc23fca16",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/analyze-a-spreadsheet.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 整数の銭単位 → 人民元の最小単位「分」を整数として扱う計算",
+        "Corrected: 東部 → 華東",
+        "Corrected: 南西部 → 西南",
+        "Corrected: 当期純売上 | 4,644.75元 → 当期純売上 | 4,644.75人民元"
+      ],
+      "source_sha1": "68729f6738cd7785fd596ce5c592eb3d5f782436",
+      "translation_sha1": "df1ae656dace2db89d71f39befd0519c586db596",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/automate-a-daily-report.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2149e0a86259cdedf0ccc5fc423ca2cb5c3d50dc",
+      "translation_sha1": "7597d515a8ef49add4bf61a3c041b2f54fbb360a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/build-a-website.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "55fd86a34549bfe5a71b72d990a44a1407f3f264",
+      "translation_sha1": "60edb8a68b653470195c41b5ac1e6965464f260e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/coordinate-multiple-agents.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "7b143fc4230464943bcc90001a95859db4f35715",
+      "translation_sha1": "e4de543c84abbd07717ccfcc69ff274357581c0c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/create-a-slide-deck.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 架空の身分 → 架空であること",
+        "Corrected: 合成の身分 → 合成資料であること",
+        "Corrected: 中国語、改行、制限をページごとに確認した → 中国語、改行、テキスト枠からのはみ出しをページごとに確認した",
+        "Corrected: 保存、再開できる → 保存、再度開くことができる"
+      ],
+      "source_sha1": "7189374c7f17638c740091fc147a3c3bbddd5b6a",
+      "translation_sha1": "dc0baceec99768a6cbc918d622de3c6737046e50",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/first-task.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "38f925bdca2b8f9c01777e69fd8f7341a5ae6c77",
+      "translation_sha1": "848cf1f009d268aed857f63be6e8d23b8c07933b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/fix-a-bug.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 第 4 歩だけで第 1 歩がなければ → 手順 4 だけで手順 1 がなければ",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "405a6874270280bca5f9b3f789951785cbd05375",
+      "translation_sha1": "0ccad4183da5137f98a0e907f8837c74c8e167e0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/index.mdx",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3c7676658d83b3ee0c1b93d14467281ffd0d8ac0",
+      "translation_sha1": "fbf00a2d754467cf61a76a16953268154ae88507",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/review-a-pr.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: （秘密鍵、インジェクション、権限） → （シークレット、インジェクション、権限）"
+      ],
+      "source_sha1": "84638f0e9fa6dd5810cf6e89fda6484b9110a45b",
+      "translation_sha1": "926f73d82bfa630deebb9624e17a0653af496632",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/understand-a-codebase.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c89ee30f1c341f4c290edf3a6a13f9cdf751d2cf",
+      "translation_sha1": "4def93a019aa92a0a1a4ab150502809536f2a811",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/case-study-template.md",
+      "status": "reviewed",
+      "findings": [
+        "## 5. 定着（キャプチャ） → ## 5. 知見の蓄積",
+        "外部チュートリアルの適応か（タスク種別のみ） → 外部チュートリアルを参考にした事例か（参考にするのはタスクの種類のみ）",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "74ef905",
+      "source_sha1": "74ef905d77bd1143a6a77fab2f7f0563750ba678",
+      "translation_sha1": "bb06049444f1c816656810eaa5b0ce71645c2078",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "複数ファイルのコンテンツをどう一括変更するか → 複数ファイルのコンテンツをどう分割して変更するか",
+        "ビルド、レビュー、人のチェックの閉ループ → ビルド、レビュー、再確認をどう一連の検証につなげるか",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "5ad38bb",
+      "source_sha1": "5ad38bb90f340913fbe4493d74500dcd79e70ed8",
+      "translation_sha1": "5f4920eefbc427263496a5bf75c1e1f76619daaf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/refactor-docs-with-review.md",
+      "status": "reviewed",
+      "findings": [
+        "本事例は **コンテンツエンジニアリング** タスク：複数 Markdown、サイドバー設定、ビルド検証。スタックは本ハンドブックに合わせていますが、パターンは任意の静的サイトに適用できます。 → 本事例では、複数の Markdown ファイル、サイドバー設定、ビルド検証を扱う **コンテンツエンジニアリング** のタスクを紹介します。技術構成は本ハンドブックと似ていますが、この手順は任意の静的サイトに応用できます。",
+        "Restored caseCategory",
+        "Restored directoryOrder",
+        "Restored contentType",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "db44ca3",
+      "source_sha1": "db44ca392b13e1b1c17913187fb073f9479ba508",
+      "translation_sha1": "86af75e62dc0a41b86a75a2ec007b9f9905ac770",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1e284bb",
+      "source_sha1": "1e284bb1ce8b5619e3d9a4c3fa13f47cf1321bce",
+      "translation_sha1": "b78c7789bbfe9ec23ae463d2de1ae313be2c6f12",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/competitive-feature-matrix.md",
+      "status": "reviewed",
+      "findings": [
+        "価格シグナル、適合性 → 価格に関する情報、用途",
+        "各次元 1〜2 文 → 各比較項目について 1〜2 文",
+        "## 5. 定着（キャプチャ） → ## 5. 知見の蓄積",
+        "任意 Skill： → Skill としてまとめる場合：",
+        "Restored caseCategory",
+        "Restored directoryOrder",
+        "Restored contentType",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "b74008b",
+      "source_sha1": "b74008b617eb81ffa84e11831c33636850c97f20",
+      "translation_sha1": "869d80d3bc378881b29e8715c4c272e9974e69a9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/index.md",
+      "status": "reviewed",
+      "findings": [
+        "調査タスクが普通の Q&A と違うのは一点です。 → 調査タスクと通常の Q&A の最大の違いは、次の点です。",
+        "「思う」を「証拠で見つけた」に変える → 「そう思う」を「調べて得た証拠がある」に変える",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "a0be881",
+      "source_sha1": "a0be8814964db202ee5a54bb41c2f1e9a8f573d7",
+      "translation_sha1": "c6d6fdfd1ba239ba331df1b4299d66e8bc02176b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/fix-a-bug-with-verification.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "42d842e",
+      "source_sha1": "42d842e1e98fbeaf2638e101e0836d2bc164ca31",
+      "translation_sha1": "93b17c65080d39262d5b065457328ad3695a7793",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "a3d7f4c",
+      "source_sha1": "a3d7f4cf22db1578536ea1bbcb75ab85387975d0",
+      "translation_sha1": "48a4c35c1c664a5334f43c64ed2cfda01a30c01f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "チーム自動化は作りすぎやすい。より安全な枠組み：ルールが明確な反復作業だけ自動化し、それ以外は人の判断に残す。 → チームの自動化では、勢いで対象を広げすぎがちです。ルールが明確な反復作業を自動化し、それ以外は引き続き人が判断すると考えるのが適切です。",
+        "「ドラフト PR 自動作成」が「main 自動編集」より安全な理由 → 「ドラフト PR の自動作成」が「メインブランチの自動変更」より通常は堅実な理由",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "e596dcc",
+      "source_sha1": "e596dcc60eacb83c2db8dc2844f6c51acbf5ee05",
+      "translation_sha1": "8970bb6bda8529bcbaedbda0ce0dfc2a9815998b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/issue-triage-suggestions.md",
+      "status": "reviewed",
+      "findings": [
+        "入力が変わったら古い提案を使うのをやめ、ハッシュだけを再計算する前に変更を分析し直してください。 → 入力が変わったら古い提案の使用を停止してください。ハッシュだけを再計算して済ませず、まず変更内容を分析し直してください。"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "6d859d7",
+      "source_sha1": "6d859d72e617dd2f6f542899f9ecad722566c484",
+      "translation_sha1": "abb2e09fa9c223731bd512e810e85e9ce7bf9e03",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/scheduled-link-check.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "0d21aa9",
+      "source_sha1": "0d21aa90878b849fea0a8b95d7410635f305211e",
+      "translation_sha1": "8c7c2602e109d839edba707f5a902a0e84ac0d03",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/artifact-first-work.md",
+      "status": "reviewed",
+      "findings": [
+        "開封・受け入れ方法 → 開いて検収する方法",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "e57c21522070d6f320d626cc2670d8fcd44ba4b3",
+      "translation_sha1": "59f2d3155e8939971dfe9b3dfe514f49678a5419",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/brainstorm-before-building.md",
+      "status": "reviewed",
+      "findings": [
+        "コンテンツ選題 → コンテンツのテーマ選び",
+        "空談を避ける → 実りのない議論を避ける",
+        "議論の漂流を防ぐ → 議論の脱線を防ぐ",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "9c5e6798e3d8074f0bb414f0484828a29e7e55aa",
+      "translation_sha1": "fcef88439725faebd1dd7dd8fb59f6d5c00a93a8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/diagnose-before-fixing.md",
+      "status": "reviewed",
+      "findings": [
+        "まだビジネスコードを変更しないでください。 → まだ業務ロジックのコードを変更しないでください。",
+        "監視の読解 → 監視データの確認",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "18193b0e5bdfe64d7067a64c029be234bbdcea22",
+      "translation_sha1": "93fb1e9d0916f1a9e80969502dff45ec2a84b2df",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/explore-plan-execute-verify.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "4a95760d2019656e0c4aa8afe7f7c694a033f716",
+      "translation_sha1": "dfc860b94c1515b74a6ba8c73bb9c854ee52a0ba",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/failure-recovery.md",
+      "status": "reviewed",
+      "findings": [
+        "損失停止 → 被害の拡大防止",
+        "パッチを逆方向に積み重ねる → 誤った方向のまま「もう少し」とパッチを積み重ねる",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "847e22a659f21cd7961a88c247ed1e99dbde1c40",
+      "translation_sha1": "6ff45232a8b082dea160f70f9d70bef1df041f44",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/human-approval-patterns.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "f60dbb51d7d87200cd6a1e4932133b949a0d506a",
+      "translation_sha1": "cf15062571e2742bf170f76aeb558e9544a21498",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "d058896385a453f54574e130d265215d06928ca6",
+      "translation_sha1": "2bd6ecbaa2d973ec7f5e67a0db9531aaa418c0ad",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/long-running-task-management.md",
+      "status": "reviewed",
+      "findings": [
+        "ローカル容量不足 → ローカル環境では対応しきれない場合",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c2a98877e6b2d1c44e6590967b6bbecbf85e07a9",
+      "translation_sha1": "8394329b72ad55bf6697d18b95ea16213a7e171c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/multi-agent-coordination.md",
+      "status": "reviewed",
+      "findings": [
+        "マージ前に CI を1回 → マージ前に統合した状態で CI を実行する",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "00989e93d150de284fa2aa275da2ee2ad2cfc6f6",
+      "translation_sha1": "5e6c86dd0b3892e2af369a4964bb5c2f4a4ef6ac",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/research-with-sources.md",
+      "status": "reviewed",
+      "findings": [
+        "URL 不要——出力を再確認できない → URL を求めず、出力を再確認できない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date.",
+        "Restored caseCategory metadata",
+        "Restored directoryOrder metadata",
+        "Restored contentType metadata",
+        "Restored outputs metadata"
+      ],
+      "source_sha1": "a6fd20179671eccd1b50231f86151fe263be3749",
+      "translation_sha1": "e3944579150f7acb379af75cbc2e662b26f4881b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/review-before-merge.md",
+      "status": "reviewed",
+      "findings": [
+        "次元 → 観点",
+        "秘密鍵 → シークレット",
+        "未消毒の完全な PR 説明 → 無害化していない PR 説明の全文",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "78d5c03b9e9c4c9532f5a0696afe5798c5e1e74e",
+      "translation_sha1": "dffea2fc99018853c8d70c3ae8da7489428cdda6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/specification-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "70fd8a4c8d4415c133e3588e02a110ef94b2b0e6",
+      "translation_sha1": "769dd4136ce37bb36a77c8a9e3037dc8492e3107",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/test-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "純粋な文案サイト → 文章中心のサイト",
+        "約定範囲 → 合意した範囲",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "4eb568d4682e2ebb5c3ae91b0365562657773561",
+      "translation_sha1": "e6d167b63add02861989ffd922ee1d280a2fb9c3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/turn-a-workflow-into-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "キャプチャのシグナル → Skill 化を検討する目安",
+        "キャプチャ不要 → Skill 化が不要な場合",
+        "ローカル秘密 → ローカル環境のシークレット",
+        "Skill にキャプチャする → Skill としてまとめる",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "3dd18c585a8a4ccc138c57670ac5d0ebb955b020",
+      "translation_sha1": "c1d2a3bde2f3491b750594c04040c41bc22d4b4e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/write-an-article.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 実際のモデルとの比較実験 → 実際のモデルを使った比較実験",
+        "Corrected: 合成の身分を保ち → 合成インタビューであることを明示し"
+      ],
+      "source_sha1": "e2bb5eab19a97b0407e879cfa3c3fcc161f00071",
+      "translation_sha1": "0fd3272099d7397943687f876efeac109be895f6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/handoff-and-resume.md",
+      "status": "reviewed",
+      "findings": [
+        "`/guide/foundations/local-vs-cloud/` → `/ja/guide/foundations/local-vs-cloud/`",
+        "引き続き受ける Codex → 作業を引き継ぐ Codex",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "1ee17e97b466300dd1d8c1e3af552f0ba1a04e45",
+      "translation_sha1": "7bd73f018d01f71d049e7ffed8e7064c22c5d785",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/index.md",
+      "status": "reviewed",
+      "findings": [
+        "推奨読了順 → おすすめの読む順序",
+        "途中で口を変えた → 途中で指示を変えた",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "3eb251e5d0206eb2c843167cf49bcb408e28fe94",
+      "translation_sha1": "6f1e7d78bbabac3f6900eda85191b45b658789af",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/planning.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "a129229ec5f74be4acd054021efff7b5621bc27a",
+      "translation_sha1": "737a65b222eb5f5514318d79ae89aed9e0adee55",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/progress-and-steering.md",
+      "status": "reviewed",
+      "findings": [
+        "半分は合っているので、全部はやりたくない → 半分は合っているので、すべてをやり直したくない",
+        "全部倒すと → すべてをやり直すと",
+        "漂流 → 脱線",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c9ea3be403e0fb288e2e4b6a263ca55f60f8eade",
+      "translation_sha1": "a17ec2fe966748748625e8c73b13f5daad0d524e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/subagents.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "a3f2be543d9a53ba75d997ac27930682bc441153",
+      "translation_sha1": "a2ec165e9bbcc5647273ef1422dbcc59849a525d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/choose-your-client.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "e4c7057160e2e37640fc3d62956f5080821d08d4",
+      "translation_sha1": "7b00f55ad6e240b6686e4c6e9f1b05060ad74850",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/approvals-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "CLI では Agent が **ファイルの読み書き、shell 実行、場合によってはネットワーク接続** ができます。 → CLI の Agent は **ファイルの読み書き、shell の実行、場合によってはネットワーク接続** ができます。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "35afd39",
+      "source_sha1": "35afd393bdd6a82067ca156b13ce1e8a4a156535",
+      "translation_sha1": "21dfa097516fe21046d1bcfd3205d8c1d2faee24",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/commands-and-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "`codex exec`（または同等） → `codex exec`",
+        "サブコマンド名はバージョンで変わります。`codex --help` を正としてください。 → `codex` と `codex exec` は現在、どちらも Stable の入口です。具体的な引数は `codex --help` と `codex exec --help` を確認してください。",
+        "`--cd`、`@` ファイル（バージョンによる） → `--cd` / `-C` で指定したディレクトリ、ツールによるファイル読み取り",
+        "選びは単純になります。 → 選択は簡単になります。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "2896e32",
+      "source_sha1": "2896e32dd72717c020e05a11a108af7a1b1ee581",
+      "translation_sha1": "99b9d84fcc13c5e422d258f319d540c033d3bcc1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/configuration.md",
+      "status": "reviewed",
+      "findings": [
+        "ユーザー級 → ユーザーレベル",
+        "プロジェクト級 → プロジェクトレベル",
+        "[Connect MCP サーバー] → [MCP サーバーに接続する]",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "0a9b2ad",
+      "source_sha1": "0a9b2adb1d7f8cf39a3d0320fc881a0173ca0046",
+      "translation_sha1": "283ea7aea582996a636ddb8aa4b0718990faa6be",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "a80ef7e",
+      "source_sha1": "a80ef7ec24263dc43adf43eaaff0ed43843a4f8f",
+      "translation_sha1": "90f5ff34ed85732749b675dd26177565474fb558",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/installation-and-updates.md",
+      "status": "reviewed",
+      "findings": [
+        "公式のインストール・アップグレード説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。 → 公式のインストール・更新手順は [Codex CLI](https://learn.chatgpt.com/docs/codex/cli) を参照してください。macOS/Linux の公式スタンドアロンインストーラーは、インストールと更新に同じコマンドを使います。Windows、npm、Homebrew の手順は、公式ページの該当タブを確認してください。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "be3f2c4",
+      "source_sha1": "be3f2c43c8f8c2002f43c3179ae0c2a39cd71443",
+      "translation_sha1": "2059fc236046217d9b3d8d30cdd7fb2974b6ccfb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "ターミナルで Codex と往復しながら説明・実行し、必要なら承認を待つ使い方です。 → ターミナルで Codex と会話を交わし、Codex が説明や実行を進め、必要に応じてユーザーの確認を待つ使い方です。",
+        "プロンプト時にツール呼び出しを承認 / 拒否する → 確認が表示されたらツール呼び出しを承認 / 拒否する",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "822e8f7",
+      "source_sha1": "822e8f749813e7c889ac1a18245ba8f8cfb8a6c4",
+      "translation_sha1": "6aa1eb5176190bb02a2fcac550d0f5009be2ae8a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/non-interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "多回の要件確認が必要 → 何度も要件を確認する必要がある",
+        "最小限の例（示意） → 最小限の例（参考）",
+        "リポジトリルートで読み取り専用レビュー（示意。引数は公式を正とする） → リポジトリルートで読み取り専用レビューを一度実行する",
+        "PR 説明から未消毒テキストを直接連結しない → PR の説明から未処理のテキストを直接連結しない",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1f37961",
+      "source_sha1": "1f37961586b629eb8abb634cee3cfd9a1a29c473",
+      "translation_sha1": "efadef5cdfb0dc088802cf3e4ca0b3929ce7ab3f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "57b062f",
+      "source_sha1": "57b062fbf03d96ba5ac5f174c7901b3c9c56cdce",
+      "translation_sha1": "4cc2d24d20436f3f9136e61c3a09e2ba1b0e437b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/compaction.md",
+      "status": "reviewed",
+      "findings": [
+        "検収基準の端の条件 → 受け入れ基準の境界条件",
+        "再述 → 再確認",
+        "ルート構造は調整しない → ルーティング構造は変更しない",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "c6c9d03",
+      "source_sha1": "c6c9d039e2f24fddc8851506d14598792d3ea613",
+      "translation_sha1": "ac439c21f5a7e91dac2571b5b8a244542283133d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/context-priority.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "13537ef",
+      "source_sha1": "13537ef1e83ebdd00a460ddb86f47bd70ef94ab7",
+      "translation_sha1": "3fcf265e4d2c106d4a0cbbbe49441557a279d7c8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/conversation-context.md",
+      "status": "reviewed",
+      "findings": [
+        "**古い情報が自動的に失効しない** → **古い情報が自動的に失効するとは限らない**",
+        "積極的に締めること → 要点と有効な制約を整理すること",
+        "短い「再合わせの説明」 → 短い「認識を揃える説明」",
+        "内容は引き続きません → 内容は引き継ぎません",
+        "積極的に締めるべきです → 要点と有効な制約を整理しましょう",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "3968049",
+      "source_sha1": "3968049029137ca09b29a2ef6e06d5942c8432b3",
+      "translation_sha1": "01ec2470bfac235478d63b805d8ac326933d9e16",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/file-and-folder-context.md",
+      "status": "reviewed",
+      "findings": [
+        "どれを見ないべきか → どれを見てはいけないか",
+        "具体的にできるだけ具体的に。 → できるだけ具体的に指定してください。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "e9148a3",
+      "source_sha1": "e9148a3c39971ea51c054904c71a85a043b12e50",
+      "translation_sha1": "10a2ba26571a9c791082ff4d354bfb523754db68",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Codex が現在本当に見えていること、参照できること、それに基づいて判断すること → Codex が現在実際に見ている情報、参照できる情報、判断の根拠にできる情報",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "d2baf42",
+      "source_sha1": "d2baf42aacc1cc32d9fd1008fab42fa1fccf0787",
+      "translation_sha1": "414bd8ebe9f85a92691bff2cb7b4bef8d6166eef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/keep-context-focused.md",
+      "status": "reviewed",
+      "findings": [
+        "再び締めていない → 目標と範囲を整理し直していない",
+        "締めるべきサイン → 要点を整理すべきサイン",
+        "積極的に締めるべきです → 要点を整理しましょう",
+        "途中校正 → 途中での軌道修正",
+        "すぐ使える締めの書き方 → すぐ使える要点整理の書き方",
+        "途中で締めるとき → 途中で要点を整理するとき",
+        "一度締めましょう。 → 一度、現在の状態を整理しましょう。",
+        "締め方 → 要点の整理方法",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "5a55fa8",
+      "source_sha1": "5a55fa8ae18a8ebd12405b8544993e032ab1c035",
+      "translation_sha1": "e9d7e88b4e5aa8b9fca14f2d0405654334ff3797",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/project-context.md",
+      "status": "reviewed",
+      "findings": [
+        "前提として長期のデフォルトルールに置けば、そうにはなりません。 → 変更できない絶対的な命令ではなく、長期的な既定のルールとして扱えば、そうはなりません。",
+        "プロジェクトレベルに沈めます → プロジェクトレベルにまとめます",
+        "優先して沈めるのは → 優先して記録するのは",
+        "プロジェクトコンテキストに沈めて → プロジェクトコンテキストに記録して",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "fb3eb50",
+      "source_sha1": "fb3eb503d35009991b8036ed78dbe400cdf96981",
+      "translation_sha1": "4b196a840027765879cf235541bffa4f83ff0ab7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/sensitive-context.md",
+      "status": "reviewed",
+      "findings": [
+        "未脱敏の顧客データ → 匿名化やマスキングをしていない顧客データ",
+        "どの程度脱敏すれば十分か → どの程度マスキングすれば十分か",
+        "脱敏 → マスキング",
+        "実鍵 → 実際のキー",
+        "実メール → 実際のメールアドレス",
+        "実携帯番号 → 実際の携帯番号",
+        "実顧客名 → 実際の顧客名",
+        "実 API Key → 実際の API Key",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "a83db07",
+      "source_sha1": "a83db07df4ed214c9e188115a155cc44e12c7415",
+      "translation_sha1": "f8837787c934727dfb6c089f5be2ea7a5e560d2a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/add-a-prompt-example.md",
+      "status": "reviewed",
+      "findings": [
+        "どうう判断 → どう判断",
+        "極簡版 → 最小版",
+        "特定の Codex 製品端 → 特定の Codex クライアント",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "15dabd2",
+      "source_sha1": "15dabd2ef702824fd3c3df22feda65abfb67a6c9",
+      "translation_sha1": "2c2fd521c277c2f3d0dc97e16d02cc958daa8b75",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1d4b3f2",
+      "source_sha1": "1d4b3f2fbf07ac35cddf8cc8b6aadf1879d9c0ec",
+      "translation_sha1": "89f84ec24f12dcbff625bba93d7b0ab7a85d97dc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/verify-technical-content.md",
+      "status": "reviewed",
+      "findings": [
+        "検証は編集の潔癖ではなく、古いドキュメントの通りに踏んでハマるのを防ぐためのものです。 → 検証は編集上の細部にこだわるためではなく、読者が古いドキュメントに従ってつまずくのを防ぐために行います。"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "cfb077d",
+      "source_sha1": "cfb077d7936df780c63776a042cfdb5714f49d2a",
+      "translation_sha1": "4e720521a192e44126db29934c53448e26b3c0a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/write-a-guide.md",
+      "status": "reviewed",
+      "findings": [
+        "- 日本語、実践者向け → - 原文は簡体字中国語で、実践者向けに書く。日本語訳でも同じ読者を想定する"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "dd22df1",
+      "source_sha1": "dd22df1e261f62aff1e7834feb7ae9461a7de44e",
+      "translation_sha1": "7274e6932026a5e3ecc2213779a14306ce38db59",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/index.md",
+      "status": "reviewed",
+      "findings": [
+        "リポジトリに沈める → リポジトリに定着させる",
+        "個人好み → 個人の好み",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "cb6371feac1277ea7f0ef49c007c95ac20b2c333",
+      "translation_sha1": "7482889193cd69713334cd039952f471d4cf24b1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/scope-and-precedence.md",
+      "status": "reviewed",
+      "findings": [
+        "label: \"AGENTS.md\" → label: \"AGENTS.md の検出・上書き・検証に関する公式ルール\""
+      ],
+      "source_sha1": "b5f31ccef118796ca886345293235a49fa35880a",
+      "translation_sha1": "c2515f4ee507579c1a500ded79b8db990bd1d743",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/what-is-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "API 秘密鍵 → API キー",
+        "秘密鍵 → シークレット",
+        "個人好み → 個人の好み",
+        "グローバル好み → グローバルな設定",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "47c5866b932e13197a410f421680b3e900454e35",
+      "translation_sha1": "1a5c43e72d488c0ff113dc367f9907028b068f2f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/writing-effective-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "短く、硬く → 短く、明確に",
+        "playbook 片段例 → playbook の抜粋例",
+        "1 PR 1 件事。 → 1 つの PR では 1 つの目的だけを扱う。",
+        "秘密鍵 → シークレット",
+        "実装前に Linear/Jira を読む → 作業項目を調べるときは先に Linear/Jira を読む",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date.",
+        "Moved project-rule extraction section before maintenance, matching Chinese reading order."
+      ],
+      "source_sha1": "63dd7118aece2126ff211101eac865985bdf9f1d",
+      "translation_sha1": "b923dd157c8a1b8bfe7f6267bc404a3807aa9e8b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/choosing-the-right-mechanism.md",
+      "status": "reviewed",
+      "findings": [
+        "どの層に沈めるべきか → どの層に定着させるべきか",
+        "短く、硬く → 短く、明確に",
+        "個人好み → 個人の好み",
+        "プロセス封装 → ワークフローのパッケージ化",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "5fad7cb6e5260f8f5dcfc57c214aa21627af5ebe",
+      "translation_sha1": "a3f1be036f16f084317cfbe51b5368c5f72463b1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/config-basics.md",
+      "status": "reviewed",
+      "findings": [
+        "API 秘密鍵 → API キー",
+        "本機 → ローカル環境",
+        "設定片段 → 設定の一部",
+        "易変な事実 → 変わりやすい情報",
+        "易変キー名にバインドしない → 変わりやすいキー名に依存しない",
+        "個人好み → 個人の好み",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "ee00ab52d6ca47ee375c25949d29c9f11656945b",
+      "translation_sha1": "c500c331053ecc02f4aac837920ac6e557533a1d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/index.md",
+      "status": "reviewed",
+      "findings": [
+        "分组原則 → 分類の原則",
+        "易変な設定キー細部 → 変わりやすい設定キーの詳細",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "4d18d5ebc89659b55d11fe67b8588d7dae8716e6",
+      "translation_sha1": "1584742cd94d82af69a3d6aea92448863736c416",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/profiles.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "6ab30c571b29defc9f7482fd0d3f83ad92811be7",
+      "translation_sha1": "c4bd2dc52fca45dc5654b1a9a45abc101dd6f641",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "具体な書き方 → 具体的な書き方",
+        "分组 → 分類",
+        "易変な → 変わりやすい",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c33809fa4a4328def06f46f38856527156901a54",
+      "translation_sha1": "bc69dcefa2de72794bf4f413ff9183fd4b61ab90",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/monorepo-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "裁剪してください → 調整してください",
+        "明確にするが要点 → 明確にすることが要点",
+        "ルート約束 → ルーティング規約",
+        "テンプレ片段 → テンプレートの抜粋",
+        "prompt の配合 → prompt との組み合わせ",
+        "一味に集中させる → ひたすら一か所に集約する",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "a9fb1d70af6b95ea95b4992e8eb209dcff539db8",
+      "translation_sha1": "31b64adec932cfc6a278a0d2c15c41f230ffbd77",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/index.md",
+      "status": "reviewed",
+      "findings": [
+        "プロジェクトに沈める → プロジェクトに定着させる",
+        "繰り返し要求を下に沈めたくなります → 繰り返す要求を永続的な設定に残したくなります",
+        "本機 → ローカル環境",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "28adc494dc91633bd709afe2f3efaf3b71ac377d",
+      "translation_sha1": "b823b6347f974fb4fe8c2b3957b729210d1d5162",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/memories-and-persistent-context.md",
+      "status": "reviewed",
+      "findings": [
+        "秘密鍵 → シークレット",
+        "個人好み → 個人の好み",
+        "ディレクトリ単位のプロジェクト指示 | → ディレクトリ単位のプロジェクト指示またはルールファイル |",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "7a689ad7b9d601d4670512d1a12d4b9bd3513fe6",
+      "translation_sha1": "a2e84b7f9991287a58f9ced251ffae5d89946939",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/personal-preferences.md",
+      "status": "reviewed",
+      "findings": [
+        "チーム約束をリポジトリを汚さない → リポジトリのチーム規約に個人設定を混在させない",
+        "本機 → ローカル環境",
+        "秘密鍵 → シークレット",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c38105102c7e9f573327c562c9494b36d129796b",
+      "translation_sha1": "b42eebdf3177893ff69789a4829a2a9f4282a287",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/project-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "`AGENTS.md` に沈める → `AGENTS.md` に残す",
+        "README は一套 → README に書かれた内容と",
+        "docs は另一套 → docs に書かれた内容が異なる",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "76b0fdeaaed05dc731f03f666878495a656bebda",
+      "translation_sha1": "192598990bf534024bc43c124b2fdfa62ecefc62",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/allow-and-deny-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "底線 → 最低限守るべき基準",
+        "本機 → ローカル環境",
+        "止ぐ → 止める",
+        "示意。コピー即用ではない → 概念例。そのまま利用できる設定ではない",
+        "公網 POST → 公開ネットワークへの POST リクエスト",
+        "完全策略 → 完全なポリシー",
+        "二步 → 二つの手順",
+        "数条明示 → いくつか明示",
+        "細化 → 詳細化",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "521ecc965f30064fa7945ed427bec058175cd55c",
+      "translation_sha1": "5e1aa996e8d01db7709e6f6646978b88c5f9e89a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/command-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "戦略上別コマンド → ポリシー上は別のコマンド",
+        "underestimate → 過小評価",
+        "示意（形式 → 概念例（形式",
+        "本機 → ローカル環境",
+        "全体戦略 → コマンド全体に対するポリシー",
+        "秘密鍵 → シークレット",
+        "JSON 片段は示意 → JSON の抜粋は概念例",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "fdb8651c9e5733cd8805de6083966031f491a796",
+      "translation_sha1": "6f6b46fa6816b64a4f2f9dc92b3c9d71d2f7c75a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/index.md",
+      "status": "reviewed",
+      "findings": [
+        "分组ナビ → 分類ごとのナビゲーション",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "9ac618513bcb88699b4fb6c155569e34fa5dcf1b",
+      "translation_sha1": "e6c646f404dbccfd7a6076452c36aff658706d3c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/team-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "個人好み → 個人の好み",
+        "底線 → 最低限守るべき基準",
+        "本機 → ローカル環境",
+        "rules 片段 → rules の設定断片",
+        "公網 POST → 公開ネットワークへの POST",
+        "誤拦 → 誤った拒否",
+        "誤放 → 誤った許可",
+        "三套ロジック → 三つのロジック",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "bae8bd25ab403d08a187e25ff0f32446c454c291",
+      "translation_sha1": "ade9cefb46789c3110a9267a20491894db46073c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/diffs-comments-and-review.md",
+      "status": "reviewed",
+      "findings": [
+        "問題がない場合は明示し → 問題が見つからなかった場合はその旨を明示し",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "32ee40c9ef59b045f7755e0ad428ac032763f3e6",
+      "translation_sha1": "be1f49855be130814a82d1af087eddd59e056a00",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/index.md",
+      "status": "reviewed",
+      "findings": [
+        "本番作業 → 実務",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "d1a900709e5e6e7ae89c6f22e16110d1327dcbcd",
+      "translation_sha1": "2b4e2e06bb006b338554a0ff70420213da0f5d82",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/installation-and-interface.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "080436d19ee79ccb7ec100eb2e99b905600a165f",
+      "translation_sha1": "1c013ed13b8f8df9e48b46c37a31bb209695c36b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/integrated-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "コマンドが停止したこと → コマンドがハングしたこと",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "727e93e89f388ad2038b189e58a74191d863ae04",
+      "translation_sha1": "5cbbf325e802c9125333ddd88df7b9cf8f47ac5d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/local-and-cloud-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "741f686ed0413f8c07089e583503d7d9ce896bf4",
+      "translation_sha1": "ed3bd9fccb94823fb14c74ae0edf60e271aa5412",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/notifications.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "4a1c6723e0d62c79a3fe4ed63e1d290f93f7ce85",
+      "translation_sha1": "3ea6fb1f4912c0b2ef55690d4dc46e0d9537767f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/parallel-agents.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "2336db1d8dd20a9d20acde0eacee764ee1b8cdad",
+      "translation_sha1": "6c9f7916090bdfe0eb8d2abcc071aa88b8e93d39",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/projects-and-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "6a1f17fdf701971889a40e35e2e2e21140187555",
+      "translation_sha1": "731022844c918b3920b51042f209fee7b311fbf3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "7a6d2fe2af99d8240c3752a954aa199c2857ea60",
+      "translation_sha1": "5e77587c27d4ea5a84c4a3735291df26b38e9403",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c298f9f763f92ee64fff4872faf83c84ae57bf8d",
+      "translation_sha1": "a8d4d508209bec9e7a7a277ab4b0e6a991546e3c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/worktrees.md",
+      "status": "reviewed",
+      "findings": [
+        "## Handoff 前のチェック → ## 引き渡し前のチェック",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "35697161369237855deb8c0b2d06759839e1e013",
+      "translation_sha1": "90a11eee2cfceabcf25f17055b09a19ff36d506a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/code-review-automation.md",
+      "status": "reviewed",
+      "findings": [
+        "人工ゲート → 人による承認ゲート",
+        "人工承認 → 人による承認",
+        "真人 → 人",
+        "未消毒 PR 説明 → 未処理の PR 説明",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "aa8b33e",
+      "source_sha1": "aa8b33e28ba705b41a3c6c73aedb542c8864dc9f",
+      "translation_sha1": "836db4c0798e1a2401e917a66d993381ec645976",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/index.md",
+      "status": "reviewed",
+      "findings": [
+        "高リスク動作は引き続き人工承認 → 高リスク操作は引き続き人の承認を必要とする",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "4aeb424",
+      "source_sha1": "4aeb424dfd71913c5c4bb56b96eac5947d937417",
+      "translation_sha1": "36986979afa9896b74768a5518d183dbface203e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/index.md",
+      "status": "reviewed",
+      "findings": [
+        "工程化統合向け → システムへの組み込みを行う開発者向け",
+        "人工承認 → 人による承認"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "f58851e",
+      "source_sha1": "f58851ea7d7c6ab01a534861e9657b8f6802e0a4",
+      "translation_sha1": "c4ea9e6de87af735971d47c6b3367e3f97fc951f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/codex-exec.md",
+      "status": "reviewed",
+      "findings": [
+        "結果または失敗状態を返すに近いです。 → 結果または失敗状態を返す使い方に近いです。",
+        "途中澄清なし → 途中での確認なし",
+        "往復澄清が不要 → 繰り返し確認する必要がない",
+        "| 澄清 | → | 要件の確認 |",
+        "最高リスク3件 → セキュリティ上のリスクが最も高い 3 件",
+        "バージョン庫 → リポジトリ内の",
+        "失控の原因 → 制御が効かなくなる原因",
+        "未消毒 PR 本文 → 未処理の PR 本文",
+        "人工承認 → 人による承認",
+        "/#安全凭证 → /#権限とセキュリティ",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "6d7c481",
+      "source_sha1": "6d7c481f40816755cedb3b90ae8a3c8e2dc2fa35",
+      "translation_sha1": "a64c8b5a19bcde564c8a448d19f3e2bbf529e54e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/exit-codes-and-retries.md",
+      "status": "reviewed",
+      "findings": [
+        "タスク完了かつ prompt の成功基準を満たす → `codex exec` プロセスが正常終了した。業務上の合否は構造化された結果を確認する",
+        "非 `0` かつ API 429/5xx | 限回数の指数バックオフ再試行 → 非 `0` かつ実行環境が一時的なネットワーク・サービス障害と確認した | 回数を制限してバックオフ付きで再試行",
+        "## 再試行テンプレート（bash） → ## 終了コードを取得するテンプレート（bash）",
+        "```bash\nmax=3\ndelay=10\nfor i in $(seq 1 $max); do\n  if codex exec --cd . \"$(cat \"$PROMPT\")\"; then\n    exit 0\n  fi\n  code=$?\n  if [ \"$code\" -eq 2 ]; then\n    echo \"Policy error, not retrying\" >&2\n    exit \"$code\"\n  fi\n  sleep $((delay * i))\ndone\nexit 1\n``` → ```bash\n#!/usr/bin/env bash\nset -uo pipefail\n\nlog_file=\"${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log\"\ncodex exec --cd . \"$(cat \"$PROMPT\")\" 2>\"$log_file\"\ncode=$?\n\nif [ \"$code\" -ne 0 ]; then\n  cat \"$log_file\" >&2\n  exit \"$code\"\nfi\n```",
+        "「再試行不可」コードは公式ドキュメントと整合後、`case` 分岐に書き込む。 → 公式に定義されていない数値に独自の意味を付けないでください。たとえば `2` が常にポリシー違反を意味すると仮定してはいけません。再試行が必要なら、外側の実行環境で確実に判別できるエラーの種類に基づいて判断し、回数、総実行時間、副作用を制限します。",
+        "人工ゲート → 人による承認",
+        "限回数再試行 → 回数を制限して再試行",
+        "根因対応で止める → 停止して根本原因に対処する",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "35074cd",
+      "source_sha1": "35074cd48d15f5958de20a39af9921c867cc2e34",
+      "translation_sha1": "71b5f5d22d8ee08c8ffd36eddc7fd069259f5986",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完了させる向きです → 完了させる用途に向いています",
+        "分组説明 → 分類の説明",
+        "スクリプトとパイプラインが結果を安定して受け取る向き。ゆっくり往復チャット向きではありません。 → スクリプトやパイプラインで結果を安定して受け取るための方式です。時間をかけて対話を重ねる用途には向いていません。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "2d542c9",
+      "source_sha1": "2d542c9177aff0d2cb04b57eb00371dd4f833a6c",
+      "translation_sha1": "e375b655cf9a1b2f9c36e8d71c2f683d9c4fe7ff",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/scripts-and-pipelines.md",
+      "status": "reviewed",
+      "findings": [
+        "```yaml\njobs:\n  codex-review:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      pull-requests: write\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n      - name: Install Codex CLI\n        run: |\n          # バージョン固定。公式インストール文書を基準に\n          npm install -g @openai/codex@<pinned-version>\n      - name: Run review\n        env:\n          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}\n        run: |\n          codex exec --cd . \"$(cat prompts/ci/pr-review.md)\"\n``` → ```yaml\njobs:\n  codex-review:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n    steps:\n      - uses: actions/checkout@v5\n        with:\n          fetch-depth: 0\n      - name: Run review\n        uses: openai/codex-action@v1\n        with:\n          openai-api-key: ${{ secrets.OPENAI_API_KEY }}\n          prompt-file: prompts/ci/pr-review.md\n```",
+        "codex exec --cd \"$ROOT\" \"$(cat \"$PROMPT_FILE\")\" → codex exec --cd \"$ROOT\" --ephemeral \"$(cat \"$PROMPT_FILE\")\"",
+        "例のインストール方式と権限 scope は組織セキュリティ要求に合わせて調整。**workflow で秘密鍵を echo しない。** → GitHub Actions では公式の `openai/codex-action` を優先してください。リポジトリのコードを実行する job 全体の環境変数に API キーを設定しないでください。後続処理で PR への書き込みが必要なら、書き込み権限とキーを別々の job に分離し、パッチの artifact で引き継ぎます。",
+        "## GitHub Actions 示意 → ## GitHub Actions：公式 Action を使う",
+        "## 最小 Shell 片段 → ## 最小限の Shell スクリプト",
+        "最初は「大而全」を狙わず → 最初から規模と機能を広げすぎず",
+        "一箇所変更で code review が通らない → ロジックを一か所変えても、通常のコードレビューフローに載せられない",
+        "Fork PR の workflow で秘密鍵を安易に使う → Fork PR の workflow ではキーの使用に注意する",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "07aeb4f",
+      "source_sha1": "07aeb4f2ef5902e8b8389ad6b29b1ee5fd8924e2",
+      "translation_sha1": "f778ea0a2122b3bedac7e464a2636434be7566b3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/structured-output.md",
+      "status": "reviewed",
+      "findings": [
+        "### 形式が安定＝結論が正確 → ### 形式が安定しても、結論が正確とは限らない",
+        "工程上のこだわり → 実装上の細部へのこだわり",
+        "Shell 解析（示意） → Shell での解析（参考例）",
+        "工程パターン説明 → 実装パターンの説明",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "e80b5d7",
+      "source_sha1": "e80b5d78570e417fe1996cd261b5f7dd1064f9b4",
+      "translation_sha1": "ee27c13568e9ea33dd0c02c99e53bb6a2848fc86",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/sdk-overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "e888ae6",
+      "source_sha1": "e888ae6743222bd35ed2162b30e88b8c4728b2f8",
+      "translation_sha1": "82284cdd2df25b7f679244e50c03ce5f0aa33c93",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "- [Webhook 概要](/ja/guide/developer-platform/webhooks/overview/) → - [Webhook とタスクイベントの境界](/ja/guide/developer-platform/webhooks/overview/)：ローカルの実行結果、App Server のイベント、自作の HTTP コールバックを区別します。この節では、未検証の統一的な Cloud Webhook 契約は提示しません。",
+        "完全自動化方案 → 自動化の仕組み全体"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "68cb29b",
+      "source_sha1": "68cb29b9ea3b6d04baea22ee7311d1e3a28bea7b",
+      "translation_sha1": "b11c8339ab1111e85cd541bb525c319cbf6ae4b7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "未承認の生成結果 → 受け入れ検証を終えていない生成結果"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "8a84ab8",
+      "source_sha1": "8a84ab85278c41fd4c91b2e092418e1f9ffdcb79",
+      "translation_sha1": "338de22401fb5a797b0c5f5c381fc23c9937d704",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/generated-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        "megabytes 級 → メガバイト単位",
+        "Agent の bullet 要約 → Agent の箇条書きの要約",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "7401176",
+      "source_sha1": "7401176332de263f318ee791059b0f88e7f33834",
+      "translation_sha1": "e377e78b7feabcd159161f7dfadf43822d212ec2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/images-and-screenshots.md",
+      "status": "reviewed",
+      "findings": [
+        "### 1. スクリーンショットを送れば、自動で問題を理解してくれる → ### 1. スクリーンショットを送っても、自動で問題を理解できるとは限らない",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "adc2b88",
+      "source_sha1": "adc2b88ae3cbd1ca8b5f6b93743eae7aa306ded3",
+      "translation_sha1": "1b20f7bb8bc8d595177ab3820c7dec27ba5333a0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Codex が各種ファイルの読み書き、生成物の管理、検証の要点を説明する。 → Codex による各種ファイルの読み書き、生成物の管理、検証の要点。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "543d14e",
+      "source_sha1": "543d14ef74a0606ae2eada7e8301cc692bed0100",
+      "translation_sha1": "8e2087d811f031c7fa1211db48c827a9b76aef64",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/pdf-and-documents.md",
+      "status": "reviewed",
+      "findings": [
+        "推奨做法 → 推奨する方法",
+        "人手で spot check → 人による抜き取り確認",
+        "版式 → レイアウト",
+        "### 1. PDF を丸ごと渡せば、安定して要点を抽出できる → ### 1. PDF を丸ごと渡しても、安定して要点を抽出できるとは限らない",
+        "日本語フォントが実際に埋め込まれているか → 中国語など、文書で使う言語のフォントが実際に埋め込まれているか",
+        "日本語 PDF はフォント埋め込みに注意 → 中国語・日本語などの PDF はフォント埋め込みに注意",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1f4f82b",
+      "source_sha1": "1f4f82bf8abadf2fdb17e4dd291fbcb03c6cfb2b",
+      "translation_sha1": "dfecec78f4fdf63949274c2314c2bf89159771fe",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/presentations.md",
+      "status": "reviewed",
+      "findings": [
+        "ページ間に前進関係があるか → ページ間で話が順序立てて展開されているか",
+        "品質も止めやすくなります → 品質も確保しやすくなります",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "fb319fa",
+      "source_sha1": "fb319fa4325fdf0714e279786e4c631db7176984",
+      "translation_sha1": "b22b226e906629ef2cbc574a7f52be9e36360d1f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/tables-and-spreadsheets.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "b08adec",
+      "source_sha1": "b08adec53399435137ca964fb9c9e62e0c3c6e92",
+      "translation_sha1": "d088395557fa93f392549402be9b57ecf2c10fdc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/text-and-code-files.md",
+      "status": "reviewed",
+      "findings": [
+        "そうは見えません。 → そのように扱うべきではありません。",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "1537793",
+      "source_sha1": "153779381cf4528add19912ddefd3b8a361b7b5b",
+      "translation_sha1": "8570ee21dfa815fc48af2bd3f2c82d158c0da29f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/agent-basics.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "同僚に一版作ってもらい",
+          "after": "同僚にまず一案を作ってもらい"
+        },
+        {
+          "before": "一段の返答だけではありません。",
+          "after": "文章で返答するだけではありません。"
+        },
+        {
+          "before": "境界の設定、承認、受け入れ",
+          "after": "境界の設定、承認、結果の確認"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "14ab120de8d9c2ccda6ca1bc5b11bb3a3cd19ea6",
+      "translation_sha1": "044f826ec5c140acf34a7e06bb1a5130e473bc2c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/ai-and-language-models.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "「らしい」と、プロジェクト・環境・目標に合っているとは限りません。",
+          "after": "それらしく見えても、プロジェクト・環境・目標に合っているとは限りません。"
+        },
+        {
+          "before": "Codex は目標のもとで **ツールを呼び出し、実行可能な変更を生成する** 点が近いです。",
+          "after": "Codex は、目標に沿って **ツールを呼び出し、実行可能な変更を生成する** アシスタントに近い存在です。"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "ccdac83274caa0ab9896c3d935825a08375e3422",
+      "translation_sha1": "a2bc1ce2d4586df5553bd5f3c50f970f0895376e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/common-misconceptions.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "Codex は手を動かせるが、道案内はあなたが必要な実行型アシスタントに近いです。",
+          "after": "Codex は実際に作業を進められますが、あなたが方向を示す必要のある実行型アシスタントです。"
+        },
+        {
+          "before": "いちばん踏みやすい三つの落とし穴",
+          "after": "陥りやすい三つの落とし穴"
+        },
+        {
+          "before": "理解と判断を代わりにはしません。",
+          "after": "あなた自身の理解と判断が不要になるわけではありません。"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "700e57bbbe339545097cb200dfec6ad12a187e4d",
+      "translation_sha1": "fd730db2ae624051fbea2d4f4cb44b481fc319ca",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/files-tools-and-commands.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "一歩の動作",
+          "after": "一つの操作"
+        },
+        {
+          "before": "後から壊れに気づく",
+          "after": "後から不具合に気づく"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "9d65338a1d2c6b153bdf9b23787e5d70300ee4fe",
+      "translation_sha1": "3b4413e911f41d89c025d0ea556e654ef3fca818",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/goals-context-and-actions.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "280cea9aad517013ecd6a4e9f3ae5c9033ff60d2",
+      "translation_sha1": "6203075dad8e177143c4555233c00f46cdc7e5e6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "本章の地図",
+          "after": "本章の構成"
+        },
+        {
+          "before": "実際の利用シーンを持ちながら理解する",
+          "after": "実際の利用場面を思い浮かべながら理解する"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "b4d4b2b7ed5cf754697878e6927baa24587c233c",
+      "translation_sha1": "a208cb31c4ced09f203565b30224c591c4a01cfc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/local-vs-cloud.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "ローカル** から選ぶ",
+          "after": "ローカル** で始める"
+        },
+        {
+          "before": "タスクの一連の流れを閉じてみる",
+          "after": "タスクの一連の流れを最後まで実行してみる"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "9569b3cd3e0376e051d2b2a602fdb6441bb3eac3",
+      "translation_sha1": "25f72651987104ccdb306e4120986ecc35060201",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/models-and-reasoning.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "小さな変更 / 小さな理解 / 小さな要約",
+          "after": "小さな変更 / 限定した範囲の理解 / 短い要約"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "0685b79ddb3d42b5ce213d39c3377ebeb66e56ec",
+      "translation_sha1": "b90f538624b1c400258dbb00bc7e5fddf514b3d5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/permissions-and-approvals.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "1beec634597ecc6420228baa6d2034370486ccb6",
+      "translation_sha1": "de83c7045ac0a7ea86eb89f4c5c3b99ccf567dda",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/sandbox-and-network.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "2cf2c465baf5c06599fb69453c52964e53bb3fb0",
+      "translation_sha1": "873bc75ba818b27844a6cc1a2348fed095111279",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/threads-tasks-and-projects.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "c3604521816c51ff402be4b05b68658be34dd249",
+      "translation_sha1": "784451f6e03283cc305c5eba397df7f63f4e86b4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/tokens-context-and-compaction.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "底层の原理",
+          "after": "内部の仕組み"
+        },
+        {
+          "before": "重要な境界条件は、一度だけ言わない",
+          "after": "重要な境界条件は、一度伝えるだけで済ませない"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "cd44efe761b775c4820fb5b0bb91ff0b7f76036d",
+      "translation_sha1": "7cadda48809dea569d3ae64304f09472c0123aa2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/verification-and-human-review.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "最終確認の責任を代わりにはできません",
+          "after": "最終確認の責任を肩代わりすることはできません"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "bfe40369ed1ed780ca1d822d82420162501359cd",
+      "translation_sha1": "2539719ba38b1a6c7878321d80d147214711031e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/account-plans-and-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "7b123e53f8fd45e9dfea8b69cae3e8ebe3f537f4",
+      "translation_sha1": "f2ef76c00b70628440d41715f86bd93ae32daf89",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/beginner-safety-checklist.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "75bfe4dc2f24bc964c2cf0b3d5b72d179344deeb",
+      "translation_sha1": "5e3c0c44157599731a71a831516bc780b00e6299",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/create-your-first-project.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "43dcbdbf1f0c8bc25ef872693ea4ac24b31c41fe",
+      "translation_sha1": "e209affaf598381e0af52cad72dbc3d5fcfe3c5d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/first-30-minutes.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "このリンクを通すだけです",
+          "after": "次の一連の流れを経験すれば十分です"
+        },
+        {
+          "before": "このリンクを通したあと",
+          "after": "この一連の流れを経験したあと"
+        },
+        {
+          "before": "追問",
+          "after": "追加の質問"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "7d1061dedd2f2a18030d5ea47fb7a02ad326a954",
+      "translation_sha1": "2fe230b918f1a38d496ff81d8e05313aa31cac6d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "62fb65dbb62e033d2e6b77791de17bfff4f2e5c4",
+      "translation_sha1": "5af863b07c040b7643044f6d436ba1afc5ddbf8f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-cli.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "564bd757cf7cd36427a0bcb67628edc4f0a48683",
+      "translation_sha1": "7ae4fddc056dc7142407afa635ffc35abab362a0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-desktop-app.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "974842f06dba920506faa3e83cc8bb61b5ce33c1",
+      "translation_sha1": "06e321f0a0f51cf00d158781e4ff2c504668a499",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-ide-extension.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "e8f88eca639ca9121c3be98e21562256cae3bf41",
+      "translation_sha1": "58716b6159da7b5e72a715133e77887dbe3b520d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/review-the-result.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "承可していない",
+          "after": "許可していない"
+        },
+        {
+          "before": "精密なフィードバック",
+          "after": "具体的なフィードバック"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "a215910a8148f3ab8ea7577df58708fcc9b924fe",
+      "translation_sha1": "8385567c2eb3c25862033a8b568f68fb3af3809d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/run-your-first-task.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "精密に修正を続ける",
+          "after": "具体的な指示を出して修正を続ける"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "f203611f4f654c69b744f59522f18b0e652f4e65",
+      "translation_sha1": "6b2625ce775e95698471d263bc3ceaa1b278f9a4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/sign-in-and-authentication.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "ea83fa685e18889503453627f23d1472ee306cbc",
+      "translation_sha1": "bed068dd10310304617e8233e6726d03e25efca2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/undo-and-recover.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "8aa3171c775ff30bfef121ba2af84e3dc49d5f31",
+      "translation_sha1": "d85fbcfffe26ab873b05fcff88a758b36f2301db",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/cloud-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "d5369b54fa1bbc3745b8e884cfd47a1eb9aaf0e0",
+      "translation_sha1": "5ecd077457a9ccf8691277bedd80de1fcb2dd956",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/editor-context.md",
+      "status": "reviewed",
+      "findings": [
+        "コンテキストがうるさくなり → コンテキストにノイズが増え",
+        "鍵を含む → シークレットを含む",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "6d1b2484db79a7285d2d8a61fce317dbb4ad2fac",
+      "translation_sha1": "d4bbe31c82205123bf54a494db902c883c02a967",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "c2fa50b16ab891592f65320d58f780b488aab72c",
+      "translation_sha1": "e5deddc40111182a887f3fb9660352d712dba18c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/installation.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "85e1691cf888074bf8a7337d92f93626f8d80538",
+      "translation_sha1": "9ec0efbff5e90b9334027ac66dd0f762b9e4463e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/local-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        "プロンプト例（示意） → プロンプト例（説明用）",
+        "空メール送信時 → メールアドレス欄が空のまま送信したとき",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "0264d4d9c01773ef206b854e86b29ddaa1c415f4",
+      "translation_sha1": "e92ab727a59ac2ea0339e4a754ab5fec930f4653",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/reviewing-changes.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "a6badd55babfc2f72b7f8617995435c07a674972",
+      "translation_sha1": "8a0450c5107f7c20a367ca1792e4e17518f2348d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/selected-code-and-open-files.md",
+      "status": "reviewed",
+      "findings": [
+        "スタイルの漂移 → スタイルの不統一",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "b6b264f6221a4aafd40f578baae1e09094763380",
+      "translation_sha1": "86ff2ce6fb513ae336ac8f1c59da2dff972c15cf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "6f28910e6fa3f4373a61c4ca18395b836512a145",
+      "translation_sha1": "235ee8f1953f746c486b810103284b3eaefc44a1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/supported-editors.md",
+      "status": "reviewed",
+      "findings": [
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "7b82896e18ef0b7ca25f4839b60dd5db91d3c9a0",
+      "translation_sha1": "717f8814a0025060dc8757eff2e25f14459158ca",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "3 類 → 3 種類",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "ebb21de9c69cd0324be9967b00dfad5d14443c1b",
+      "translation_sha1": "8b7446227021a046245182fff9b8ae00554af27d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: ここでは、Codex とは何か、何に向いているか、そして初回利用から安定したワークフローへの移行方法を説明します。 → ここでは、Codex と AI Agent とは何か、何に向いているか、そして初回利用から、安全で安定し、完了を検証できるワークフローへ段階的に移行する方法を説明します。"
+      ],
+      "source_sha1": "aa277f2de13e98eb2a57d9ee8bfa0472f948da65",
+      "translation_sha1": "8e1d35e2af96481398d510c473bc3ee5c4979985",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/github.md",
+      "status": "reviewed",
+      "findings": [
+        "未消毒の指示 → 無害化していない指示",
+        "鍵は GitHub → シークレットは GitHub",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "ece7161bc622d24c95c7a0fccee13fe30f5ac600",
+      "translation_sha1": "503c71b9b6d4e417f0a926cee228e8b4850be9d3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "偶然気づくに頼らない → 偶然の発見に頼らない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "140102ce4bd9f260ecb2a23f767fd347a27ddbca",
+      "translation_sha1": "e775dcc90c1506210c8f77fe391d73f4852f9c5e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/01-talk-to-codex.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "827a5d22da1b0a743c5cb00fe8c70ebf40690f7d",
+      "translation_sha1": "1b5196f110f24d40812187255d837ac4a11ad771",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/02-work-with-files.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ec5c2d3e765014553e501fca4909df22393b136e",
+      "translation_sha1": "0a81c0fca51c392ee2eb7b0646cb9c81809a82d4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/03-give-clear-tasks.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "664fdf72408db4d2edc0f72178e6a947486c4881",
+      "translation_sha1": "46be7bf5d2fc44330a8b3546eae24f0d0a93a519",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/04-review-results.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "e426ec4391083920b17726bdaf003ab666ac4606",
+      "translation_sha1": "fbeda05159a81e7b2e005636deeae40df118792f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/05-complete-first-project.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "cc1139b811a175f02ad577e4f66c53b42fa857b1",
+      "translation_sha1": "7434bd667487021d08b35c8dec0c4686f14328bf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "1b7fbb340d7860591f93663eb89697c812ab968d",
+      "translation_sha1": "c50c370dcf5bf638108da5fcadadac8a5b62c03b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/creator/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 各ページの中国語と制約を確認した → 各ページの中国語表示とテキスト枠からのはみ出しを確認した"
+      ],
+      "source_sha1": "d1b46b13bb164a1929b59a4b530a88465504a06d",
+      "translation_sha1": "1ee7d071f5ba2053da2d777388966d0fbcdb0ed6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/developer/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "22d8bd3a0640952eee2c8961cb8d1f7f1b4461c6",
+      "translation_sha1": "f46f48e11fd27a2eda3f2ee740a44bb161ef1c59",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: コンテンツ作成、図文、デモ → 文章・画像入りコンテンツ・プレゼンテーションの作成",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "2f7ff714fd4c735cea5b69c88745809693c374ea",
+      "translation_sha1": "dbac5d6ec4244b8947e9b8e6efba524a5f237c16",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/team/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "3b467382b4f4ff1292c3df41cf9266f0b6c53ee1",
+      "translation_sha1": "f6648dcd3f89da5fc1ca805f534ce7d3773e5d5e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/permissions-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 具体的ほど → 具体的であるほど",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "6b5fcb85ea71e861fab7a9376f24c1f1ac63fc2a",
+      "translation_sha1": "156e9c0c8756b487167120a9f70499b77630ffe2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/definition-of-done.md",
+      "status": "reviewed",
+      "findings": [
+        "鍵がリポジトリに → シークレットがリポジトリに",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "f55e9f7fd33e5d7d12ca0ae9c65d164e092c2b23",
+      "translation_sha1": "0135f060669e1b08cc014fc257e1a1436ebdf6d2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/handle-uncertainty.md",
+      "status": "reviewed",
+      "findings": [
+        "### 1. 回答が完結している = 本当に知っている → ### 1. 回答が完全でも、本当に知っているとは限らない",
+        "### 3. 質問すると、必ず遅くなる → ### 3. 質問しても、必ずしも効率は下がらない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "839ce22cc23151823d406f4b1269ba98fb471a7d",
+      "translation_sha1": "8f99670ffe4e39d332aaf3e8d781b19f2c0eb3e9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/index.md",
+      "status": "reviewed",
+      "findings": [
+        "毎回のタスク閉じの一部 → 各タスクを完了させる過程の一部",
+        "横には一項目に印の付いたチェックリストと合格したテスト → 横にはチェックリストとテスト用の試験管があり、一項目が対応待ちとして示されている",
+        "端到端の事例 → エンドツーエンドの事例"
+      ],
+      "source_sha1": "90d62fb0bee5a2ab790e65bc41e794682af27d2f",
+      "translation_sha1": "92ae840bab7e0ba67b2d306ab41e48b783d6260f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/review-diffs.md",
+      "status": "reviewed",
+      "findings": [
+        "デバッグ内容、キー、 → デバッグ内容、シークレット、",
+        "キーやデバッグ残留 → シークレットやデバッグ残留",
+        "### 2. 1 ファイルだけの変更だから、必ず安全 → ### 2. 1 ファイルだけの変更でも、必ず安全とは限らない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "f7f953fd1cbb1be0341f29ca65e0a5f1214a9c36",
+      "translation_sha1": "62e5414d92530313261778022a1d108fe9a67eae",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/run-tests.md",
+      "status": "reviewed",
+      "findings": [
+        "### 3. 「小さな変更」だから検証を省略できる → ### 3. 「小さな変更」でも検証を省略できるとは限らない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "8b1e5c73df651321134ff649516555f92ad6ceac",
+      "translation_sha1": "59d88ef16dff23a30b6618ea41486288f9edc3a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/usage-time-and-model-choice.md",
+      "status": "reviewed",
+      "findings": [
+        "権限の境界、証拠 → タスクの境界、証拠",
+        "公開資料に鍵、 → 公開資料にシークレット、"
+      ],
+      "source_sha1": "8b68d9272061b5e610884b1b1d49763e7942d0bb",
+      "translation_sha1": "a609e850c147f13e876d4735a2d1b9b19f3f60cd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/validate-sources.md",
+      "status": "reviewed",
+      "findings": [
+        "### 1. 自信ある表現 = 信頼できる出典 → ### 1. 自信のある表現でも、出典が信頼できるとは限らない",
+        "出典のたどれる性 → 出典の追跡可能性",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "688453128f3263f3edb614a048d99db4467269e4",
+      "translation_sha1": "d7488d0f394efcc9954002b3b1eb2004ffeecda9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/verify-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        "### 1. ビルドが通ったから、ページに問題はない → ### 1. ビルドが通っても、ページに問題がないとは限らない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "7a6a12e8bcf87800bd77ecedbd6cb538a1df0994",
+      "translation_sha1": "38fa1f1d8957b16ce06cdb04bf35249c7df1e517",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/workflow-evaluation.md",
+      "status": "reviewed",
+      "findings": [
+        "実データを送信しません → データを実際に送信しません",
+        "監視が通知を重複送信したり復旧できなかったりする例 → 監視における重複通知と復旧の例"
+      ],
+      "source_sha1": "9ea3ecc3dab50c37a259150d95dfde4398bb66dc",
+      "translation_sha1": "1621439653e8fe48bb01a8a9bb33cfe78fdd7f17",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/commands/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "コマンドリファレンスは入口判断用。パラメータ暗記より先に：",
+          "after": "コマンドリファレンスは、どの実行方法を使うか判断するための索引です。引数を覚える前に、次を確認してください。"
+        },
+        {
+          "before": "人工承認",
+          "after": "人による承認"
+        },
+        {
+          "before": "人工介入必要——ログ artifact を確認",
+          "after": "人の対応が必要。保存されたログを確認"
+        },
+        {
+          "before": "コマンド不存在",
+          "after": "コマンドが見つからない"
+        },
+        {
+          "before": "最初からパラメータ表に沈まない。",
+          "after": "最初から引数の一覧を読み込む必要はありません。"
+        },
+        {
+          "before": "常见",
+          "after": "よくある"
+        },
+        {
+          "before": "ユーザー級",
+          "after": "ユーザーレベル"
+        },
+        {
+          "before": "プロジェクト級",
+          "after": "プロジェクトレベル"
+        }
+      ],
+      "source_sha1": "6091bcce1c86ada657472a59d0e521b44275fb41",
+      "translation_sha1": "e76625b7db5d424625fdc3d2c235e7437ddbafd5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/configuration-reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "どの挙動を設定で変え、設定で解決すべきでないか？",
+          "after": "どの動作を設定で変えたいのか。どの要求は設定以外の方法で扱うべきか？"
+        },
+        {
+          "before": "長期挙動好み",
+          "after": "継続して使いたい動作の設定"
+        },
+        {
+          "before": "何を管るか",
+          "after": "何を管理するか"
+        },
+        {
+          "before": "複雑タスク段階",
+          "after": "複雑なタスクに割く思考の深さ"
+        },
+        {
+          "before": "四類",
+          "after": "四つの分野"
+        },
+        {
+          "before": "一類",
+          "after": "一種類"
+        },
+        {
+          "before": "個人本機",
+          "after": "自分の端末"
+        },
+        {
+          "before": "設定载体",
+          "after": "設定ファイル"
+        },
+        {
+          "before": "ユーザー級",
+          "after": "ユーザーレベル"
+        },
+        {
+          "before": "プロジェクト級",
+          "after": "プロジェクトレベル"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "8f692edfee650db27f6949558f972e96ea3f027b",
+      "translation_sha1": "b01a20b17a606e7a0da07076daa8d76763b0c8f2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/environment-variables.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "底层すぎる",
+          "after": "内部の仕組みに関わりすぎる"
+        },
+        {
+          "before": "秘密鍵注入、スイッチ上書き、CI 適合",
+          "after": "認証キーの受け渡し、動作設定の上書き、CI への対応"
+        },
+        {
+          "before": "実秘密",
+          "after": "実際の機密情報"
+        },
+        {
+          "before": "本機で第三者 API デバッグ",
+          "after": "ローカル端末で外部 API をデバッグ"
+        },
+        {
+          "before": "私有サービス呼び出し",
+          "after": "非公開サービスを呼び出す"
+        },
+        {
+          "before": "判断の常用順序",
+          "after": "判断する順序"
+        },
+        {
+          "before": "常见",
+          "after": "よくある"
+        },
+        {
+          "before": "ユーザー級",
+          "after": "ユーザーレベル"
+        },
+        {
+          "before": "プロジェクト級",
+          "after": "プロジェクトレベル"
+        },
+        {
+          "before": "リポジトリ級",
+          "after": "リポジトリレベル"
+        },
+        {
+          "before": "token を脱敏",
+          "after": "token を伏せる"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "58fd37baf9b6cce4c7e14005a429d826a4ab2f0d",
+      "translation_sha1": "7d85005bd9218a86b820d098ad072b0ffd0c6c04",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/error-reference.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "より原始の原因ヒント",
+          "after": "根本原因に近い手がかり"
+        },
+        {
+          "before": "エラー分流表",
+          "after": "エラーの切り分け表"
+        },
+        {
+          "before": "大类へ分類",
+          "after": "大まかな種類に分類"
+        },
+        {
+          "before": "コマンドが越界",
+          "after": "コマンドが許可範囲を超過"
+        },
+        {
+          "before": "他人も定位しやすくなります",
+          "after": "他の人も原因を特定しやすくなります"
+        },
+        {
+          "before": "五類分流",
+          "after": "五種類への切り分け"
+        },
+        {
+          "before": "エラー分流索引",
+          "after": "エラーの切り分け索引"
+        },
+        {
+          "before": "常见",
+          "after": "よくある"
+        },
+        {
+          "before": "脱敏後",
+          "after": "機密情報を伏せた"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "955c0a6c0bc32870a1800cc06735d189e3e651be",
+      "translation_sha1": "d30c934df1786887802e872cf9bda928dab369cb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/faq.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "検証と人工复核",
+          "after": "検証と人によるレビュー"
+        },
+        {
+          "before": "深度事例",
+          "after": "詳しい事例"
+        },
+        {
+          "before": "逐项相互確認",
+          "after": "項目ごとに照合"
+        },
+        {
+          "before": "易変な",
+          "after": "変わりやすい"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "c9d7ed80ca6311017e1e56560032b30c0e80af12",
+      "translation_sha1": "886f12a1668cde5182b354b561cbe450711be6a2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/feature-comparison.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "b3d30b08174b9399a442efafef920bce8c116fcd",
+      "translation_sha1": "1fc5c95f9ec1f8a18041e3f94a562bad875484ca",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/glossary.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "反復推进する",
+          "after": "試行を重ねて作業を進める"
+        },
+        {
+          "before": "人工確認",
+          "after": "人による確認"
+        },
+        {
+          "before": "站内リンク",
+          "after": "サイト内リンク"
+        },
+        {
+          "before": "易変事実",
+          "after": "変わりやすい事実"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "ae4b7946102c0a2f06beda42289c9f5b99cab77e",
+      "translation_sha1": "89c16d85f58a4157ff62b0b00ecdd13b23f5a861",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "本区",
+          "after": "このセクション"
+        },
+        {
+          "before": "リファレンス区",
+          "after": "リファレンスのセクション"
+        },
+        {
+          "before": "バージョン敏感",
+          "after": "バージョンによる変化"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "d45e64069cbf22b67669bfdba08239a7d14e864a",
+      "translation_sha1": "9634866808e66c4776e5b674a508d8be2d83b59f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/keyboard-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "4f812d968c4bd5158953d1ed1ef1e345f7ed8329",
+      "translation_sha1": "a98c154cb3311a98e5f59fdbbd2a7f50765a33fb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/model-selection.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "20eb508b9457c23c6f0cdad9725dc6eba1a2ad1a",
+      "translation_sha1": "8dfd75bd04d0afccff1ed5edce108b5a8a4f08ac",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/official-resources.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "利用思路",
+          "after": "使い方の考え方"
+        },
+        {
+          "before": "古い情報の踏み台を減らせます",
+          "after": "古い情報によるつまずきを減らせます"
+        },
+        {
+          "before": "易変な",
+          "after": "変わりやすい"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "5a584b05a88b0e2b713141f413fbba156cb8887e",
+      "translation_sha1": "0d136b1d61973a80bf71869d071b874e1aec44e0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/permission-matrix/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "c6ad6aa3300a06447252c4c24e7cab4aaa145d57",
+      "translation_sha1": "1ac60aed9398797f5ed54ac3c8e708780834b306",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/resource-compatibility.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "96ff34fad102fa99f730b03a923d60a0b57610b6",
+      "translation_sha1": "ace51f9a56b4ae1414b5f433991149a1dfb3f758",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/slash-commands.md",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "完全パラメータ手册",
+          "after": "引数を網羅したマニュアル"
+        },
+        {
+          "before": "能動的に点名できる",
+          "after": "名前を指定して呼び出せる"
+        },
+        {
+          "before": "Skill を点名",
+          "after": "Skill を名前で指定する"
+        },
+        "Restored source-aligned legacy verification metadata, retaining original evidence date."
+      ],
+      "source_sha1": "a34c90f40987fe0a9e8786a4d1199db20b7b22c8",
+      "translation_sha1": "613903c5439fc71ed5dc6afbdb094173fc5709d9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/failure-recovery-lab.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "fc9187249ccdaa507deb2098fb670cba5774311c",
+      "translation_sha1": "873970568a4c9f78b25f8dde7a32fe2b7fa7af33",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "da350d03178d3d24eb07668a1623cf1e86560681",
+      "translation_sha1": "c44741d2469eed74d624c815284a8db06a5d73b9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/choose-your-path.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 3 択 1 ではありません → どれか一つに限定するものではありません",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "51ccd006cd3d17e1e52376c232ce81fbfc8f898f",
+      "translation_sha1": "c20fb114d2bfe26dbe097afab69773ed0b442c56",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/codex-capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 権威ある章 → 内容の基準となる章",
+        "Corrected: 権威ある位置 → 参照先",
+        "Corrected: [シーンケース] → [用途別ケース]",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "1a4cd9862a170b876b18913d4ce359f2c627b83f",
+      "translation_sha1": "b8cd09b0417f4db499acc44800f16b4c7be74e72",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/handbook-version-policy.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 最強の確認レベルには達していない → 十分な確認はまだ完了していない",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "a608dc3bdae273d10843a871230964c0ca5695f3",
+      "translation_sha1": "4a313338befba5e8ba904c237318f607fe30e674",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 「目標、制約、検証」 → 「目標、制約、受け入れ基準」"
+      ],
+      "source_sha1": "953fb894d443881b89d070b91cf6078feda6dab1",
+      "translation_sha1": "18b009ce3605095dff0a88c298bcab1645995042",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/prerequisites.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 安全の底線 → 最低限守る安全上のルール",
+        "Corrected: Git を精通 → Git に精通",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "5fbedb8fff2e1f117588363e33818786f80dee27",
+      "translation_sha1": "b244bbf0f1c589f13c34f444d890d0e863bda8b6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/terminology-for-beginners.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 生詞に出会ったら → 知らない用語に出会ったら",
+        "Corrected: 一度に覚えすぎない場合は → 一度に多くを覚えたくない場合は",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "a18bacf35607dca48ce12b0131c9960c34b72b47",
+      "translation_sha1": "e2b2365d7d9abbaccf795a549c42f2ae84fabcd5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/what-is-codex.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "0f376b6909520c4be7cf66bd5a4ab0c831f75d1d",
+      "translation_sha1": "18595d45b7f9f4b7a8c6b4e14e53e4ee38704f59",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/who-is-this-handbook-for.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 排他的な身分 → 互いに排他的な分類",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "95272c3957c1bc1766168437ab9d803d880160d1",
+      "translation_sha1": "97d30af1d46f7628ae0704a4d1d2ea00f178e422",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/acceptable-use.md",
+      "status": "reviewed",
+      "findings": [
+        "acceptable use 政策 → 許容利用ポリシー",
+        "政策 → ポリシー",
+        "提纲 → 概要",
+        "复核 → 再確認",
+        "技術 reality → 実際の技術的な制御",
+        "### ポリシーを書いた＝チームが従う → ### ポリシーを書いても、チームが実際に従うとは限らない",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "0409154f600cefd6290b913a10851596d660fcb6",
+      "translation_sha1": "6f071957b6e84c0ce370010e6cdca20ab5fca712",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/index.md",
+      "status": "reviewed",
+      "findings": [
+        "政策 → ポリシー",
+        "acceptable use ポリシー → 許容利用ポリシー",
+        "人工承認 → 人による承認",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "6c37ab466e99484d1e8d3758a21a6a7f0fb1e5c5",
+      "translation_sha1": "b024c016f6defea88d58d75514e9eca6ae62e2bb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/index.md",
+      "status": "reviewed",
+      "findings": [
+        "大規模に着地させ → 大規模に導入し",
+        "ガバナンスと着地寄り → ガバナンスと導入に重点を置いています",
+        "Codex/ChatGPT 着地 → Codex/ChatGPT の導入",
+        "acceptable use 政策 → 許容利用ポリシー",
+        "[acceptable use] → [許容利用]",
+        "政策 → ポリシー",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "b44c5d131e128bc26145c305b8f7dee2f31a88ad",
+      "translation_sha1": "ffa72085b052488e55c6deb07ae502e247da6325",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/index.md",
+      "status": "reviewed",
+      "findings": [
+        "防御思路 → 防御の考え方",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "91ed6a31b4cd55294242b23e5108b6ffb1c5f53b",
+      "translation_sha1": "c36416fff1e43e59c9a9cbf98cd6cc47c49f8e02",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/plugin-and-mcp-risk.md",
+      "status": "reviewed",
+      "findings": [
+        "人工承認 → 人による承認",
+        "脱敏 → 機密情報をマスキング済み",
+        "底层 → 基盤となる",
+        "政策 → ポリシー",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "bf027ad9af4036b0ed63b3a076f9f905359bd5c6",
+      "translation_sha1": "e195a1eff7d8a0b63ad1ab1e13e90ac99ce93b84",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/prompt-injection.md",
+      "status": "reviewed",
+      "findings": [
+        "政策 → ポリシー",
+        "誤導内容 → 判断を誤らせる内容",
+        "秘密鍵 → シークレット",
+        "人工確認 → 人による確認",
+        "即失控 → 即座に制御不能になること",
+        "直白 → 露骨",
+        "人工承認 → 人による承認",
+        "判断思路 → 判断の考え方",
+        "完全信頼できない → 完全には信頼できない",
+        "任意 URL 閲覧を無制限 → 任意の URL をドメイン制限なしで閲覧させる",
+        "[acceptable use] → [許容利用]",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "3e44fdf485efeec10a56b4e4e192eefd94d3ca3e",
+      "translation_sha1": "37130a740b381e608c1bd4e80c5ba69fc6737e61",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/threat-model.md",
+      "status": "reviewed",
+      "findings": [
+        "チームでよく壊れるのは → チームで問題になりやすいのは",
+        "どのデータが見え、どれが持ち出されるか不明 → どのデータを閲覧でき、どのデータを持ち出してはいけないか分からない",
+        "完全信頼できない側 → 完全には信頼できない側",
+        "この二問りに包まれます → この二つの問いを中心に設計されます",
+        "入力消毒 → 入力の無害化",
+        "初回着地 → 初回導入",
+        "何も着地しません → 何も導入できません",
+        "3類 → 3 種類",
+        "引っ張られるが怖い → 引っ張られるのが怖い",
+        "身份 → アイデンティティ",
+        "本番秘密鍵 → 本番のシークレット",
+        "細化ガバナンス → ガバナンスの詳細化",
+        "人工承認パターン → 人による承認パターン",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "4ec320da6823dff5b1fb509fe24d74b1ee7301db",
+      "translation_sha1": "119490b91c9d0b53749cafc340d014f0aae644c5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/browser.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "802f88949188a105ea1ef7fda6bfb0f2ab375e78",
+      "translation_sha1": "01bb7b85bc85f93708095806120468ff7966b35f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/computer-use.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: デモソフトで → プレゼンテーションソフトで",
+        "Corrected: **人間がループ内にいる** → **人による監督**",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "d4a2e113970ec69e2d6e1cc70d93f137090c229a",
+      "translation_sha1": "2e3814638dfef8af30fb15f4c8762d25d9a35d58",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/image-generation.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 生成画像を実写や公式ロゴのふりをする → 生成画像を実写や公式ロゴと偽る",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "ea275fa8bdb4c70221d513d632de9e86e4c7b04f",
+      "translation_sha1": "be36b484f837c90aa8ef21e7818053a71f853db9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "5939a9d66e253f8a792e23a60a2490e33924e4b0",
+      "translation_sha1": "d35693a14d1db88ce113e44d405b3d8b44f0d1d8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/shell-and-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "1438fc73c4678c5be99b62f71e9ab4d42fd8b756",
+      "translation_sha1": "b9fb523753efae85db848a40dffdfc42c30aa582",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/tool-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 依存関係を乱に入れたり → 依存関係をむやみに追加したり",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "9fdb3667e5d250476fd6b61610f3e693af0222c8",
+      "translation_sha1": "409e9b63bb8ac8c57dd1ecf4f37db2a80055a61c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/voice.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 秘密鍵を読み上げる → シークレットを読み上げる",
+        "Corrected: 文字版に整理して確認してもらいましょう → Codex に文字版へ整理させ、自分で確認しましょう",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "192bba2530ac12f4f50ae4744bf55a955277f46c",
+      "translation_sha1": "ef3110e251c1f4be3133fdfaa025fc40b2ee4b3f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/web-search.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "7adcb92c870d9328b94f96dc93b221b8de575ed2",
+      "translation_sha1": "08164736c003427d59ba9d5ffe3f99cc6b1e2197",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/updates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "完全な API リファレンス → 完全なインターフェース文書"
+      ],
+      "source_sha1": "3c99d357d9bcc10689701e6377c45c0b4c81f474",
+      "translation_sha1": "38916a81947d15a25d2ae7bd6a0e90c5dbb43b43",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/cloud-environments.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: runtime → ランタイム",
+        "Corrected: 一般的な言語、package、ツール → 一般的な言語、パッケージ、ツール",
+        "Corrected: frozen install を使用 → ロックファイルを変更しないインストールを使用",
+        "Corrected: 必要なドメインと method → 必要なドメインと HTTP メソッド",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "1745f70968380d47fb7eed0da80b51ecade18c5b",
+      "translation_sha1": "eaebbfc74d771f4c8ed62748bd6d7ebbf2d2ea18",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/code-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 高シグナルの追加 review → 重要な問題に絞った補足レビュー",
+        "Corrected: 失敗した再実行の履歴 → 失敗と再実行の履歴",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "ea6796af69e8aaa0dce7b12f924ac95e768a5090",
+      "translation_sha1": "90f702ecc8528a4000b3598f7cbb3f53b0f74230",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/connect-github.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "b126a7edeb42bd1c2de2bce168ab9abb258c7b88",
+      "translation_sha1": "baa6278862d6b7e89fb225f38f70c6b8504f8a82",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/create-pull-requests.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "39371d42d61452c60a6b8b37050af93a0030efcf",
+      "translation_sha1": "e14df032c87af335de61c7372a53e6cc2e2ebfbf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/delegate-and-follow-up.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 同じチャットで方向と検収結果を修正します → 同じチャットで方針を修正し、結果を検証します",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "38b322f5f93e6fbaf3135f4b7cf1d9a3a8adf026",
+      "translation_sha1": "7443c026da9f070bbf6531594afe756b1a96d3bd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: ドメインと method → ドメインと HTTP メソッド",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "86fa0ac0049e820eede82e587706267d9ae76021",
+      "translation_sha1": "f5b8fdd554b6a9d3274481f274fc98c682935b2e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/internet-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: HTTP method → HTTP メソッド",
+        "Corrected: prompt injection → プロンプトインジェクション",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "5bbb90556614ba1d7ad93f3dfb820e13e91ca32b",
+      "translation_sha1": "dd9dc8f23b47a667ffecd16ec5daf574d82d1de0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/secrets-and-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: ネットワークアクセスが有効な場合、これは Agent フェーズ全体で機密値を露出し、外部送信や誤操作のリスクを生みます。 → この設定では機密値が Agent フェーズ全体で利用可能になり、ネットワークアクセスを有効にすると外部送信や誤操作のリスクが生じます。",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "78937be04005c1c90a2d1356dccd2f92ba1ad4e7",
+      "translation_sha1": "a16d19eebde41a16416693ac293551e0084187ed",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "019fac1ab6e72a31d044d13336844878dd5f54ac",
+      "translation_sha1": "153cb797a36b321d062a60f515b8d8b203cd0486",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "index.mdx",
+      "status": "reviewed",
+      "findings": [
+        {
+          "before": "</a>. 数値",
+          "after": "</a>。数値"
+        }
+      ],
+      "source_sha1": "75dd87a279213ca7fd77e17918bbeebdca531b24",
+      "translation_sha1": "b885b3f6df5aa07137082c70d477a961225b50dc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/create.mdx",
+      "status": "reviewed",
+      "findings": [
+        "「このパッケージは誰か、素材はどこにあるか、どう解釈すべきか」を伝えるものです。 → 「どのパッケージか、素材はどこにあるか、どう解釈すべきか」を伝えるものです。素材のパス、ファイル名、ディレクトリ構成が一致しないと、通常は読み込めません。",
+        "現在の契約に合っている → 対象バージョンの仕様に合っている"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "57e9aca",
+      "source_sha1": "57e9aca9a8699f429ac8b2cb6ff36d79854d4aa8",
+      "translation_sha1": "4f28d964e8ff17d09ca76c19fb41a80e548ce642",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "複数のアニメーションフレームをまとめた画像アトラス。 → 複数のアニメーションフレームをまとめた画像アトラス。クライアントは固定のグリッドに沿って読み取ります。"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "8b03636",
+      "source_sha1": "8b036367092bc16ba78a217c6fc238a554444787",
+      "translation_sha1": "247c25bf16c9a9e8482d8d94fcf9d43b12d4887b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/install.mdx",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "730c599",
+      "source_sha1": "730c599ff9c9d82b451a976f3c96eec9d9c6fd4d",
+      "translation_sha1": "55da575abcd4e065763e66e928942c8c4b4109a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/anti-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 事故の面が最大 → 事故の影響範囲が最大",
+        "Corrected: 鍵を含むログ → シークレットを含むログ",
+        "Corrected: 誤操作の面も大きく → 誤操作の影響範囲も広く",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "8e89a5a0e2154a7403d009e78ea243b71fe91bc5",
+      "translation_sha1": "65fe9e1bd1e9afbd32350f3aa912308f2d2db334",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/ask-for-a-plan.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "706f11b6cf358cf6ec21a6fb458ed20783fc8d7e",
+      "translation_sha1": "b8f69bd11d38304446e99e7b7f6298225e8133f7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/basics.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 極簡版 → 最小版",
+        "Corrected: 教学版 → 解説版",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "eb86b2a71d5c7c6ef2cb4d5c891c7234f7f10eec",
+      "translation_sha1": "10f296d72efbc7804db971a37a3f53a9ad7356fd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/comparison-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 追加要件があってもログは完全にならない → 追加要件だけではログの完全性は保証されなかった"
+      ],
+      "source_sha1": "e6a23bbdbdd997a11ea55dbc290776fe0fa6abed",
+      "translation_sha1": "b38b70b406196bfc64ff62c9dc070a5f11f22071",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/constraints-and-boundaries.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: ついでの多変更 → ついでに余計な箇所まで変更すること",
+        "Corrected: 硬いルール → 厳格なルール",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "0ca4700f055f4efa23dc67e79a027c55df7ce363",
+      "translation_sha1": "5c3025c134796ebbd2fd407929c6662327a7600b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/define-done.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 次の3類 → 次の3種類",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "e97e8542b82bb8fb9c789d35796bf8ebfe8bee5a",
+      "translation_sha1": "2d21407f5166ea6a38a24bcf6262335418f2b7db",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/goals-and-context.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "0a5141fb751ba152107b3b74d166e1c57e64b9c9",
+      "translation_sha1": "6a9d4d652041fd2c48d3ed7bff4dcae90a789657",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "2280f53609b3990c823b4cfec03d55d3e57be4ca",
+      "translation_sha1": "98c14183ec8b2972e7f1bbbfaca142f4ba3953e3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/long-running-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "450ed9d87331984da0e795e4dc42508b9d6b37c3",
+      "translation_sha1": "d509b4e5ee92245554bafd071a348778d01aa4fa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompt-debugging.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: Agent は見えているか？ → Agent がその制約を読めているか？",
+        "Corrected: ネット不要なのにネットした → ネットワークアクセスが禁止されているのにアクセスした",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "efc301507107f6b3b27bef4cdd4cbea5399fa6c3",
+      "translation_sha1": "02b6a188ef2ffc77364a706d7bfca7e50f09fe1a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompting-with-images.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 画像の身份 → 画像の内容と出所",
+        "Corrected: 画像を何枚足すより → スクリーンショットをもう1枚追加するより",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "953a69bb6a686f6c2f9713dfd76b24a1d86c2a7b",
+      "translation_sha1": "6a537ce13276561e78719aa09bb173cce9886dfb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/task-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "98c05110e79912d2b39c044e1800cbf484bf98c6",
+      "translation_sha1": "f535394f9086a0f6249530813017f3b966a7edd6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/automate.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 鍵をハードコード → シークレットをハードコード"
+      ],
+      "source_sha1": "2aff2e7eab78a8033b03e3c046c5a54de81385ea",
+      "translation_sha1": "93450c24488f9556d7003f391bd073c1bb589954",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/change.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 既存の上で境界のある反復変更。 → 既存の機能やファイルを、範囲を限定して改善する。"
+      ],
+      "source_sha1": "6faf299321f2d8390b0c30ab77d748f3b4716163",
+      "translation_sha1": "59a47487060c2bd03dad6ca7e209c3309b02d2d1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/create.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "c47ebbf5ce0f126207dc2df3546147c3d7c01a7f",
+      "translation_sha1": "b4e81df6a5954df7562544cb84e6948a90200aaf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/diagnose.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 根因 → 根本原因"
+      ],
+      "source_sha1": "24913711ff76b4fb5769435ab964ff5cedbefe03",
+      "translation_sha1": "91ec337a2b67553dfc65ddc297f6982b61c4082e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: あなたの代わりに唯一の正解を出すことではありません → あなたに代わって考えることではありません",
+        "Corrected: 安定した形に沈めるべきです → 再利用できる形にまとめていくとよいでしょう",
+        "Corrected: ファイル作成後の形式確認 → ファイルを書き込むたびの形式確認",
+        "Corrected: テンプレートは多いほど良い → テンプレートは網羅的なほど良い"
+      ],
+      "source_sha1": "fae2ed3a39853461104c3041ec66b944980d2f37",
+      "translation_sha1": "960e5f678a49d3e8faa71bb1a4a3558d448694e2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/research.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 製品／方案 → 製品／提案"
+      ],
+      "source_sha1": "729d4ccbe99aa7ec254fbe1077637d6b3b06f5ed",
+      "translation_sha1": "af4b73b798cfb5785390fc892caabf9410542587",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/review.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: セキュリティ（鍵、 → セキュリティ（シークレット、"
+      ],
+      "source_sha1": "e89989d7d069f0f96d12acd17b3ef488d2a8dad0",
+      "translation_sha1": "78048538260b1ee5c4945e10bd83c9753f71f9da",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/understand.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 5〜8 条 → 5〜8 項目",
+        "Corrected: 理解フェーズは詳細すぎても意味がない → 理解フェーズは詳しいほどよいとは限らない"
+      ],
+      "source_sha1": "228971d00d2d1654cb48daa4f9b3133115f1a63c",
+      "translation_sha1": "92f1724c43f9db5f36bcb717973c4f594d418343",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "759c38e68aa07c361740b1034d14dd1deb193cdc",
+      "translation_sha1": "3dc25063746e3aabcfdef7b1937e3fd3e54e0333",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/scheduled-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: | 表面 | → | 利用環境 |",
+        "Corrected: 耐久性のある指示 → 継続して使える指示",
+        "Corrected: 耐久性のあるタスク → 継続して実行するタスク",
+        "Corrected: 本機 App → ローカル App",
+        "Migrated original verification footer to source-equivalent metadata, retaining evidence date"
+      ],
+      "source_sha1": "fa792dc3116b1fd95eee0e232a4a6b5b8534214c",
+      "translation_sha1": "d7c7c59e4fad55c0efcf35a1a9e21008475e154e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "183812c",
+      "source_sha1": "183812c1f14a29d1c672edcbd1d1f6a0bda51d07",
+      "translation_sha1": "8ee87f4fe615aad8ee9c13bd1645e5c12b40f55f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/choosing-an-extension-method.md",
+      "status": "reviewed",
+      "findings": [
+        "時間単位で繰り返す必要があるか → 決めた時刻や周期で繰り返す必要があるか",
+        "日常のタスクを遅くする → 日常のタスクを遅くしたり、誤ってブロックしたりする",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "28ae6f5",
+      "source_sha1": "28ae6f55403a4955b4683b8d0464eae983245242",
+      "translation_sha1": "61f8da9123fd654fff9f5472e5024ff4fc505ae6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/create-your-first-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "### 5. description を反復 → ### 5. description を改善する",
+        "### 2. Skill の要点は「賢く見せる」こと → ### 2. Skill の要点は「賢く見せる」ことではない",
+        "を確認（本例はスクリプトなし） → に照らしてスクリプトに必要な権限を確認（本例はスクリプトなし）",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "14414f5",
+      "source_sha1": "14414f58af19e4ce863dfd6bda0125b9eafc91da",
+      "translation_sha1": "30795b0cda40e053d9dbec9d22ae56a8ee494efa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/automation-skill.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "6c758b9400d375a74dd272bf0bc29314b33d8e6f",
+      "translation_sha1": "d1a3a3961a0644cef5edaab55579be0870ec4f8c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "490db95aaca6ec9bd3512750c46e7ae1f05b8cc1",
+      "translation_sha1": "83e39ff2aad4915b0342f9ebe4807f6292dca951",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/research-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 保守担当者に必要な項目や説明を列挙します → 保守担当者から提供してもらう必要がある項目や説明を列挙します"
+      ],
+      "source_sha1": "cf2b2325eaca8a3e73685de604b3675d5e91509f",
+      "translation_sha1": "8ef48a67828568e49e83b4c9fa49e348257bcf46",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/review-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 同名の Skill があれば上書き前に比較してください。 → 同名の Skill がある場合は先に比較し、上書きしないでください。"
+      ],
+      "source_sha1": "e29d1b3e20d114423d247d669175915f3caa67cb",
+      "translation_sha1": "f3ec1a72560aadaea44ecc903c6169d621aff423",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/writing-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Corrected: 同名のSkillがあれば上書き前に比較します。 → 同名のSkillがある場合は先に比較し、上書きしないでください。"
+      ],
+      "source_sha1": "cbaec37837a757ffd65f1fba598430b60da8f045",
+      "translation_sha1": "fd7cf714cd577a2e1866b9a86eb9f75b11e4ef3c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hook-event-types.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "07f4965e40fd9fac6e5897b975934e7ea501df9d",
+      "translation_sha1": "b6ef559bcb33a2cf580295e0c0eaf02cbeee09ef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-examples.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "06e9fa2df03010c1cecfa2158876786675725913",
+      "translation_sha1": "31dd4a5ef97c746c6292550b56c9ea118b5dc06a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "ac7889bdf138a3f340fa8e43b8cc2a2de24c473f",
+      "translation_sha1": "efc47dfb1b495fb80ab5a4530b6b1f4527018e01",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "一部の管理対象ツールの経路 → 一部のホスト型ツール（Hosted tools）の経路",
+        "Moved Japanese verification footer into source-equivalent metadata; preserved source evidence date."
+      ],
+      "source_sha1": "a0312e9122c0b5a4b83e48f04cf85a03bc504c4d",
+      "translation_sha1": "c155f4a28e5662e2e6b26868b537a52fb01d3100",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "6f8df16",
+      "source_sha1": "6f8df169518ceae6ecfcacc4bd4113d341f25a39",
+      "translation_sha1": "59f3932fb371f54dcbe9ea7a176567faf5dccc94",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/connect-an-mcp-server.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "0675d33",
+      "source_sha1": "0675d339e67856591904a5744febe3c4e123fa73",
+      "translation_sha1": "1d4b6f0547681f7f8c85711c32f0e9ec0793dfef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/debugging-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "d35b635",
+      "source_sha1": "d35b635a0be59a796f9cda9236d4e8400ed7242c",
+      "translation_sha1": "b7c15651519684ea11186a2e8dd60cdceb9344a6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "8d9ec38",
+      "source_sha1": "8d9ec38186a3b8d237ab68256c35070658912cbb",
+      "translation_sha1": "4118fe748b99060796cea87bb110cd561b3825a3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/mcp-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "98a0626",
+      "source_sha1": "98a06262bb08c65536204bbbca3caeeaad822327",
+      "translation_sha1": "777c96b145e6c474e716b1b3cc0ac6a50376a713",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "そのため本文に詳細なチェックリストを書いても、コンテキストを占有しません。 → そのため、読み込む前からコンテキストを埋め尽くすことを心配せず、本文には詳細なチェックリストを書けます。",
+        "決定論が必要になったら → 同じ入力から同じ結果を得る確定的な処理が必要になったら",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "3147d2c",
+      "source_sha1": "3147d2cbff3a63bc61f6dc437c261160cbd6e180",
+      "translation_sha1": "5081a5594134be0f3083dfe1ade9917738369118",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "8917a59",
+      "source_sha1": "8917a5982e8437ca01bc5c8fe2d8403722113c74",
+      "translation_sha1": "d86b4f905ff7560734bc6f005aed53d0ed27814a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/plugins-overview.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "4efe5a8",
+      "source_sha1": "4efe5a8fc4379c743c013109ca3731fbd9425007",
+      "translation_sha1": "625a377eb45774113e5163dd14b7b5028b72b66f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/references.md",
+      "status": "reviewed",
+      "findings": [
+        "`SKILL.md` が主線 → `SKILL.md` が作業手順の本筋",
+        "references/ があれば SKILL.md は極薄でよい → references/ があれば SKILL.md はごく簡潔でよい",
+        "初見が実行方法を分かるよう → 初めて読む人にも実行方法が分かるよう"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "955bfa7",
+      "source_sha1": "955bfa783f4963afa4dfc08d512f4997da10d00a",
+      "translation_sha1": "6a309a433d94839321ca9d2d501a69e6338eddd9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/scripts-and-tests.md",
+      "status": "reviewed",
+      "findings": [
+        "Skill に決定的なスクリプトを追加し → Skill に同じ手順を確実に実行するスクリプトを追加し",
+        "ステップを決定的に実行する必要があるとき → ステップを毎回同じ手順で実行する必要があるとき"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "900e6e4",
+      "source_sha1": "900e6e472fb4226070730a80e620f0b06b3456b4",
+      "translation_sha1": "8c5a072f2ea236c5cdbcf12c40b5ba4352321e97",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/security.md",
+      "status": "reviewed",
+      "findings": [
+        "長期に多人で使われるなら → 長期にわたり複数人で使われるなら",
+        "**閲読** → **内容の確認**",
+        "依存バンプ同様に → 依存関係の更新と同様に",
+        "Migrated verification footer to metadata, retaining source date/status",
+        "Restored source-equivalent legacyVerification metadata (Japanese prose, source evidence date retained)"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "a3c81ed",
+      "source_sha1": "a3c81ed4e32687a385210da5e0da52656c4395dc",
+      "translation_sha1": "881c4ae575cf17eff206274e0a0edbb4c80e65cd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/skill-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "完整な Skill ディレクトリ → 完全な Skill ディレクトリ",
+        "決定的なステップ → 同じ手順で再現できるステップ",
+        "決定的なコマンド → 確定的なコマンド",
+        "決定的チェック → 確定的なチェック",
+        "安定・決定的・反復可能 → 安定して同じ手順を繰り返せる",
+        "まず `SKILL.md` で回し、複雑になったら references・templates・scripts を分けます。\n\n実習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)。\n\n → "
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "50ca48c",
+      "source_sha1": "50ca48c3f95620e91f9d2c05e0655c83be40c7c4",
+      "translation_sha1": "5531eb5efd35982cdb2e5e860aee8d1ffce64a7c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/templates.md",
+      "status": "reviewed",
+      "findings": [
+        "体裁を省くためだけ → 体裁を整える手間を省くためだけ"
+      ],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "82a9e01",
+      "source_sha1": "82a9e01cda3f91561e83f248408b2516409b1c7e",
+      "translation_sha1": "44131bab989840e55532231585a61c0196c33cd2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/use-a-skill.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "ef92b69",
+      "source_sha1": "ef92b69f840e62c82a4f0992cf6757998ffdf6e1",
+      "translation_sha1": "70aa9c3f4338322d3b2f24f828f257d521840a1a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/when-to-use-skills.md",
+      "status": "reviewed",
+      "findings": [],
+      "reviewedAt": "2026-10-26",
+      "sourceRevision": "5e688f4",
+      "source_sha1": "5e688f4a702320c350d4e642016feb8bb1dad6c2",
+      "translation_sha1": "a13204d56dca63c252c77da7987a67db297a130f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "theme/index.md",
+      "status": "reviewed",
+      "findings": [],
+      "source_sha1": "4ecfa1c03d8546339524f23af422801b6861bc3e",
+      "translation_sha1": "1e35dd1e4e2a56d9949e15dd5a6456ace761dda0",
+      "reviewed_at": "2026-10-26"
+    }
+  ],
+  "second_review": [
+    {
+      "path": "guide/foundations/agent-basics.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/ai-and-language-models.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/common-misconceptions.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/files-tools-and-commands.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/goals-context-and-actions.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/index.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/local-vs-cloud.md",
+      "status": "fixed",
+      "findings": [
+        "明确两处否定；将正式工作从生产环境恢复为实务。"
+      ]
+    },
+    {
+      "path": "guide/foundations/models-and-reasoning.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/permissions-and-approvals.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/sandbox-and-network.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/threads-tasks-and-projects.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/foundations/tokens-context-and-compaction.md",
+      "status": "clean",
+      "findings": [],
+      "source_issues": [
+        "中文末尾残留无链接章节编号05，日语忠实保留，建议源站统一修订导航。"
+      ]
+    },
+    {
+      "path": "guide/foundations/verification-and-human-review.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/account-plans-and-access.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/beginner-safety-checklist.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/create-your-first-project.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/first-30-minutes.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/index.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/install-cli.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/install-desktop-app.md",
+      "status": "fixed",
+      "findings": [
+        "恢复新建聊天/创建项目与打开文件夹的动作区别。"
+      ]
+    },
+    {
+      "path": "guide/getting-started/install-ide-extension.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/review-the-result.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/run-your-first-task.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/sign-in-and-authentication.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/getting-started/undo-and-recover.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/commands/index.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/configuration-reference/index.md",
+      "status": "fixed",
+      "findings": [
+        "密钥不应缩限为非对称加密的私钥。",
+        "恢复密钥禁入Git的完整范围。"
+      ]
+    },
+    {
+      "path": "guide/reference/environment-variables.md",
+      "status": "fixed",
+      "findings": [
+        "补回.env并非另一个配置中心的解释，避免过度简化。",
+        "便利不等于安全不应译成绝对不安全。"
+      ]
+    },
+    {
+      "path": "guide/reference/error-reference.md",
+      "status": "fixed",
+      "findings": [
+        "恢复非零退出码不一定说明模型不会做的否定。",
+        "修复脱敏说明的日语助词错误。",
+        "恢复一般如此的限定语，避免将状态码解释绝对化。"
+      ]
+    },
+    {
+      "path": "guide/reference/faq.md",
+      "status": "clean",
+      "findings": [],
+      "source_issues": [
+        "中文团队治理仍指路线图M6和11-team-enterprise而非已存在章节；日语忠实保留，建议源站统一更新。"
+      ]
+    },
+    {
+      "path": "guide/reference/feature-comparison.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/glossary.md",
+      "status": "fixed",
+      "findings": [
+        "恢复看懂短定义不等于会用的否定。",
+        "恢复术语多不代表不适合继续学习的否定。"
+      ]
+    },
+    {
+      "path": "guide/reference/index.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/keyboard-shortcuts.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/model-selection.md",
+      "status": "fixed",
+      "findings": [
+        "恢复Astra推荐的严格要求前提与再考虑的先后关系。"
+      ]
+    },
+    {
+      "path": "guide/reference/official-resources.md",
+      "status": "fixed",
+      "findings": [
+        "恢复官方权威不代表社区手册无用的否定。",
+        "恢复手册写过不等于当前仍然如此的否定。"
+      ]
+    },
+    {
+      "path": "guide/reference/permission-matrix/index.md",
+      "status": "fixed",
+      "findings": [
+        "第三方数据风险不限于向第三方发送数据，恢复原文较完整范围。"
+      ]
+    },
+    {
+      "path": "guide/reference/resource-compatibility.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/slash-commands.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/troubleshooting/failure-recovery-lab.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "guide/reference/troubleshooting/index.md",
+      "status": "clean",
+      "findings": []
+    },
+    {
+      "path": "index.mdx",
+      "status": "fixed",
+      "findings": [
+        "移除中文未声明的可编辑额外承诺。",
+        "恢复明确交付引接记录，而非仅笼统执行交接。"
+      ]
+    }
+  ],
+  "shared_review": {
+    "reviewed_at": "2026-10-26",
+    "baseline": "Chinese current working tree; complete ja entries compared",
+    "files": [
+      {
+        "path": "src/utils/siteNav.ts",
+        "status": "reviewed",
+        "findings": [
+          "Restored AI application scope in navigation, version/disclosure and privacy-policy labels."
+        ]
+      },
+      {
+        "path": "src/data/chatgptPricing.ts",
+        "status": "reviewed",
+        "findings": [
+          "Aligned Japanese version/disclosure and privacy-policy labels with shared navigation. No separate translation-review date field."
+        ]
+      },
+      {
+        "path": "src/data/chatgptPlanCopy.json",
+        "status": "reviewed",
+        "entry_count": 23,
+        "findings": [
+          "Restored Plus priority recommendation; clarified needs assessment before channel price comparison. Original source dates 2026-10-24 and 2026-09-18 preserved. No separate translation-review date field."
+        ]
+      },
+      {
+        "path": "src/data/chatgptSnapshotCopy.json",
+        "status": "reviewed",
+        "entry_count": 23,
+        "findings": [
+          "Restored explicit in-app-purchase scope in original item-name column."
+        ]
+      },
+      {
+        "path": "scripts/i18n/diagram-labels.ja.json",
+        "status": "reviewed",
+        "entry_count": 289,
+        "findings": [
+          "Fixed connected tools narrowed to connectors, best-fit overstatement, exact-once-per-step addition, contractual/literal terminology, omitted repeated-task scope and integration-cost meaning, awkward output guidance. 12 labels improved; dates and source facts unchanged."
+        ]
+      }
+    ],
+    "checks": [
+      "Chinese/ja JSON keys match; plan names/order match.",
+      "All Japanese SVGs parsed as XML.",
+      "Generator --locale ja --check passes; 10 variants, 5 changed and 5 unchanged."
+    ],
+    "scope": "Only shared Japanese copy and ja SVGs modified in this follow-up. Components/docs/pages and other locale entries preserved."
+  },
+  "additional_changes": [
+    "Japanese ContentVerification labels and legacy/source evidence visibility; translation review date distinct from source verification.",
+    "Japanese feedback and updates links; Tools menu label.",
+    "Three Japanese contact/privacy/terms pages, retaining original update date; localized footer routes.",
+    "Explicit homepage verification component so splash page also displays review date and original-download language note."
+  ],
+  "validation": {
+    "full_site_parity": {
+      "pages": 283,
+      "issues": 0
+    },
+    "build_pages": 2853,
+    "rendered_download_references": 1540,
+    "source_links_and_images": 13020,
+    "japanese_routes": 293,
+    "japanese_internal_links_and_anchors": 49902,
+    "rendered_review_dates": 283,
+    "english_regression_links": 49903,
+    "spanish_regression_links": 49902,
+    "multi_locale_regression": {
+      "locales": 10,
+      "pages": 70,
+      "links": 12511
+    },
+    "tests_passed": 6,
+    "diagram_variants": 10,
+    "diff_check": "passed",
+    "external_links": "not individually network-tested"
+  }
+}

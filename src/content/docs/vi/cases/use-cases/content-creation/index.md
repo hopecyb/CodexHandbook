@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo lối vào case content-creation hiện tại của kho và các chương Artifact nội dung/review liên quan; trang này chỉ nêu vấn đề và lối vào của nhóm case sáng tạo nội dung.", "checkedAt": "2026-07-26"}
 title: Sáng tạo nội dung
 description: Lối vào case về tài liệu, bài viết và tài sản nội dung — trọng tâm review, viết lại và nghiệm thu Artifact.
 locale: vi
 source_locale: zh-CN
-source_revision: 5ad38bb
+source_revision: "5ad38bb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Case sáng tạo nội dung chủ yếu nhìn kịch bản kiểu:
@@ -20,12 +21,5 @@ Case sáng tạo nội dung chủ yếu nhìn kịch bản kiểu:
 ## Trọng tâm nhóm này
 
 - Nội dung nhiều tệp sửa theo lô thế nào
-- Viết lại copy thế nào để tránh chỉ «mở rộng dài hơn»
+- Viết lại nội dung thế nào để tránh chỉ «mở rộng dài hơn»
 - Build, review, đối chiếu tạo vòng lặp ra sao
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo lối vào case content-creation hiện tại của kho và các chương Artifact nội dung/review liên quan; trang này chỉ nêu vấn đề và lối vào của nhóm case sáng tạo nội dung.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI-API-Modelldoku listet `Web search` weiterhin als Werkzeugfähigkeit; Seite betont „Fakten ergänzen, Primärquellen, Schlussfolgerung am Original prüfen“ — unabhängig von konkreter UI."
+  checkedAt: "2026-07-26"
 title: Web-Suche
 description: Fakten per Suche ergänzen und Quellen markieren.
 locale: de
 source_locale: zh-CN
-source_revision: 7adcb92
+source_revision: "7adcb92"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -46,7 +51,7 @@ Typisch:
 
 Nicht direkt. Stattdessen:
 
-1. Welche Quellen in den Treffern
+1. Die Quellen der Suchtreffer prüfen
 2. Originalseite öffnen
 3. In eigenen Worten zusammenfassen
 
@@ -54,7 +59,7 @@ Nicht direkt. Stattdessen:
 
 Wenn:
 
-- Hochrisiko Recht/Medizin/Finanzen
+- Rechtliche, medizinische oder finanzielle Entscheidungen mit hohem Risiko
 - Echtes Seitenverhalten prüfen
 - Lokale Projektdateien statt öffentliche Quellen
 
@@ -65,7 +70,7 @@ Dann andere Werkzeuge oder menschliche Prüfung.
 1. Keywords nahe am Problem
 2. Offizielle oder Primärquellen bevorzugen
 3. Original für Details öffnen
-4. Dann entscheiden, ob in Ergebnis schreiben
+4. Dann entscheiden, ob die Schlussfolgerung in das Ergebnis aufgenommen werden soll
 
 ## Direkt nutzbarer Prompt
 
@@ -74,10 +79,3 @@ Zuerst suchen und offizielle Quellen bevorzugen; bei Schlussfolgerungen klickbar
 ```
 
 Suche liefert Spuren und Quellen — am Ende zurück zum Original.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** OpenAI-API-Modelldoku listet `Web search` weiterhin als Werkzeugfähigkeit; Seite betont „Fakten ergänzen, Primärquellen, Schlussfolgerung am Original prüfen“ — unabhängig von konkreter UI.  
-**Zuletzt geprüft:** 2026-07-26

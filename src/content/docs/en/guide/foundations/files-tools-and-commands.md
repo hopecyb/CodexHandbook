@@ -8,11 +8,12 @@ title: Files, tools, and commands
 description: How Codex reads and writes files, runs commands, and uses tools.
 locale: en
 source_locale: zh-CN
-source_revision: "9d65338"
-translation_status: draft
+source_revision: '9d65338'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+reviewed_at: 2026-10-25
 ---
 
 The biggest difference from an ordinary chatbot is that Codex can use **tools** to do things.

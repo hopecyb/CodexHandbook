@@ -2,14 +2,15 @@
 title: Plugins の概要
 description: Plugin の構成要素、対応する利用環境、インストール後の確認、信頼の境界を理解します。
 legacyVerification:
-  status: "verified"
-  products: "ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張機能は Plugin 非対応"
-  checkedAt: "2026-08-26"
+  status: verified
+  products: ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張機能は Plugin 非対応
+  checkedAt: '2026-08-26'
 locale: ja
 source_locale: zh-CN
-source_revision: 4efe5a8
-translation_status: draft
+source_revision: "4efe5a8"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ChatGPT と Codex は共通の公開 Plugin ディレクトリを使用します。Plugin は関連する機能をまとめて、見つけてインストールできるワークフローにするものです。新しいツール呼び出しプロトコルを作るものではありません。

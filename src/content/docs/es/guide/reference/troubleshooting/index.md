@@ -8,11 +8,12 @@ title: Índice de diagnóstico
 description: Localizar el tutorial o la página de producto según el síntoma.
 locale: es
 source_locale: zh-CN
-source_revision: da350d0
-translation_status: draft
+source_revision: 'da350d0'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 110
+reviewed_at: '2026-10-25'
 ---
 
 Si tienes un problema y no sabes si mirar App, CLI, IDE o Cloud, empieza por aquí.
@@ -41,6 +42,6 @@ Si no puedes clasificarlo, prueba estas preguntas:
 3. ¿Es «corre pero el resultado no cuadra»?
 4. ¿Es «no sé qué herramienta o entrada elegir»?
 
-Así suele caer antes en la página correcta.
+Así encontrarás antes la página adecuada.
 
 Soporte y documentación oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex)

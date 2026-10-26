@@ -8,8 +8,9 @@ title: "Context compaction"
 description: "What long-conversation compaction retains and what it may lose."
 locale: en
 source_locale: zh-CN
-source_revision: "c6c9d03"
-translation_status: draft
+source_revision: 'c6c9d03'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 50

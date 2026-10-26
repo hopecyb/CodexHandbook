@@ -7,9 +7,10 @@ title: Hook 설정 예시
 description: 실제 hooks.json과 Python 표준 라이브러리 스크립트로 테스트 가능한 PreToolUse 보호 장치를 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 06e9fa2
-translation_status: draft
+source_revision: '06e9fa2'
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: '2026-10-26'
 ---
 
 이 장에서는 이전 버전의 예시 이벤트 이름과 설정 필드를 제거했습니다. 예시는 현재 공식 `hooks.json` 구조를 따르며 실행 가능한 테스트가 포함되어 있습니다.
@@ -98,7 +99,7 @@ printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{
 운영 팀은 보통 차단하지 않는 감사나 추가 맥락 제공부터 시작한 뒤 `deny`로 강화합니다. 강화하기 전에 최소한 다음 질문에 답해야 합니다.
 
 - fixture가 알려진 오탐을 다룰 수 있는가?
-- 스크립트가 시간 초과되거나 충돌할 때 사용자가 이유를 이해할 수 있는가?
+- 스크립트가 시간이 초과되거나 비정상 종료될 때 사용자가 이유를 이해할 수 있는가?
 - CI 또는 서버 측 정책도 같은 규칙을 보완하는가?
 - 우회와 긴급 복구를 감사할 수 있는가?
 

@@ -8,10 +8,10 @@ title: references/ 디렉터리
 description: Skill에서 긴 참고 문서를 정리해 점진적 공개를 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: '955bfa7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 `references/`는 매번 바로 펼칠 필요 없는 긴 자료를 두기에 적합합니다. 주 절차가 길고 어수선해지는 것을 막습니다.
@@ -39,7 +39,7 @@ my-skill/
 
 ## 하는 일
 
-- `SKILL.md`는 주선 절차를 담당
+- `SKILL.md`는 주요 절차를 담당
 - `references/`는 「필요할 때 여는 자료」를 담당
 
 이렇게도 이해할 수 있습니다.

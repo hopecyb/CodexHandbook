@@ -12,10 +12,10 @@ title: Automatizar un informe diario
 description: Convierte el resumen repetitivo en un script o Skill reutilizable.
 locale: es
 source_locale: zh-CN
-source_revision: 2149e0a
+source_revision: '2149e0a'
 translation_status: reviewed
 translated_at: 2026-10-24
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 ## Metadatos
@@ -36,9 +36,9 @@ reviewed_at: 2026-08-26
 
 ```text
 Objetivo: Generar el Markdown del informe diario de ayer a hoy.
-Contenido: resumen de git log, estado de CI (si es legible), lista de PRs abiertos.
+Contenido: resumen de git log, estado de CI (si se puede consultar), lista de PRs abiertos.
 Salida: reports/daily-YYYY-MM-DD.md
-Restricciones: git en solo lectura; no hacer push; proporcionar scripts/generate-daily.sh para repeticiones.
+Restricciones: git en solo lectura; no hacer push; proporcionar scripts/generate-daily.sh para volver a ejecutarlo.
 ```
 
 ## 3. Captura para reutilizar

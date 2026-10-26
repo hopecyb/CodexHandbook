@@ -3,12 +3,17 @@ title: 파일과 폴더 컨텍스트
 description: 관련 파일을 지정하고 불필요한 노이즈를 피합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e9148a3
+source_revision: 'e9148a3'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 파일·디렉터리 범위를 한정하는 방법만 설명합니다. 예시 표현와 개념 서술을 재검토했으며, 본문은 제품 버전·가격·UI 등 변동하기 쉬운 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 “조금만 고쳐 줘”라고만 하지 말고, Codex가 어떤 파일을 보고 어떤 파일을 보지 말아야 하는지도 말하세요.
@@ -31,7 +36,7 @@ sidebar:
 사무실에 사람을 데리고 자료를 찾는다고 생각해 보세요.
 
 - “찾아 봐”라고만 하면 반 층을 다 뒤질 수 있음
-- “세 번째 장롱의 파란 폴더만 보라”고 하면 효율이 훨씬 높음
+- “세 번째 서류함의 파란 폴더만 보라”고 하면 효율이 훨씬 높음
 
 Codex도 같습니다. 범위가 분명할수록 추측으로 빈칸을 메울 필요가 줄어듭니다.
 
@@ -93,9 +98,9 @@ src/components/Button.tsx와 그 테스트 파일만 읽고, 저장소 전체를
 
 IDE에서는 현재 워크스페이스 루트가 맞는지 확인하세요.
 
-## 바로 쓸 수 있는 쓰기
+## 바로 쓸 수 있는 표현
 
-이런 쓰기를 쓸 수 있습니다.
+다음처럼 작성할 수 있습니다.
 
 ```text
 먼저 `src/pages/home/`와 `src/components/Hero.tsx`만 보라.
@@ -104,10 +109,3 @@ IDE에서는 현재 워크스페이스 루트가 맞는지 확인하세요.
 ```
 
 Codex에 파일 범위를 지정하는 것은, 추측·노이즈·오수정을 줄이는 일입니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 파일·디렉터리 범위를 한정하는 방법만 설명합니다. 예시 쓰기와 개념 서술을 재검토했으며, 본문은 제품 버전·가격·UI 등 변동하기 쉬운 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

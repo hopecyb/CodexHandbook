@@ -7,11 +7,12 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: c6ad6aa
-translation_status: draft
+source_revision: 'c6ad6aa'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+reviewed_at: '2026-10-26'
 ---
 
 “App/CLI/IDE/Cloud 중 어디에서 확인 창이 뜨는가”를 고정된 표 하나로 추측하지 마세요. 실제 동작은 실행 위치, 적용 중인 설정, 조직의 requirements, 운영체제, 수행하려는 작업이 함께 결정합니다.

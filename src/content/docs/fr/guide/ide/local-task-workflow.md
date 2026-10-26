@@ -2,8 +2,7 @@
 legacyVerification:
   status: verified
   products: IDE
-  basis: >-
-    L'aide actuelle d'OpenAI décrit toujours l'extension IDE comme un client utilisé avec un dépôt local. Ce flux suit une boucle de collaboration stable : ouvrir l'espace de travail, limiter les fichiers, décrire la tâche, examiner le diff, lancer les tests et créer le commit soi-même. Il ne dépend pas d'une interface précise de l'extension.
+  basis: 'L''aide actuelle d''OpenAI décrit toujours l''extension IDE comme un client utilisé avec un dépôt local. Ce flux suit une boucle de collaboration stable : ouvrir l''espace de travail, limiter les fichiers, décrire la tâche, examiner le diff, lancer les tests et créer le commit soi-même. Il ne dépend pas d''une interface précise de l''extension.'
   checkedAt: '2026-07-26'
 title: Flux d'une tâche locale
 description: Lancer, suivre et terminer une tâche Codex locale dans l'IDE à partir des fichiers ouverts et des sélections.
@@ -11,11 +10,11 @@ sidebar:
   order: 50
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 0264d4d
+source_revision: "0264d4d"
+reviewed_at: '2026-10-26'
 ---
-
 Une tâche locale dans l'IDE suit la boucle **ouvrir → sélectionner → décrire → examiner → tester**. Elle convient aux petites modifications fréquentes. Voici un parcours pratique courant ; pour les détails du contexte, voir [code sélectionné et fichiers ouverts](/fr/guide/ide/selected-code-and-open-files/).
 
 ## Flux recommandé

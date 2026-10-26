@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: ko
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: 'c362c48'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## 확인 가능한 사건과 범위
@@ -35,6 +36,6 @@ translated_at: 2026-09-20
 
 ## 실습
 
-[Issue 분류 제안 드라이런](/ko/cases/use-cases/team-automation/issue-triage-suggestions/): 합성 Issue에 대한 구조화된 제안이 입력과 연결되는지 확인하고, 사람이 검토할 대기열을 유지합니다. 이 실습은 과거 API나 출시 라벨을 호출하지 않고 데이터 경계를 검증합니다.
+[Issue 분류 제안 드라이런](/ko/cases/use-cases/team-automation/issue-triage-suggestions/): 합성 Issue에 대한 구조화된 제안이 입력과 연결되는지 확인하고, 사람이 검토할 대기열을 유지합니다. 이 실습은 데이터 경계를 검증하며, 과거 API를 호출하거나 Issue에 라벨을 적용하지 않습니다.
 
 [로드맵과 날짜 기준으로 돌아가기](/ko/ai-roadmap/)

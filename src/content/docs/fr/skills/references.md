@@ -8,10 +8,10 @@ title: Répertoire references/
 description: Organiser la longue doc de référence dans un Skill pour la divulgation progressive.
 locale: fr
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: '955bfa7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 `references/` accueille ce qui ne doit pas s'ouvrir à chaque exécution — pour ne pas encombrer le flux principal.
@@ -63,11 +63,11 @@ Garder le flux court et actionnable.
 
 ### 2. Pas « plus = mieux »
 
-Tout dans `references/` = chaos déplacé.
+Tout placer dans `references/` ne fait que déplacer la confusion d’un fichier vers plusieurs autres.
 
-### 3. SKILL.md peut rester minimal
+### 3. Avec references/, SKILL.md peut-il devenir très sommaire ?
 
-Le flux d'exécution doit rester dans `SKILL.md`.
+Non. Le processus principal doit rester dans `SKILL.md`, sinon une personne qui le découvre ne saura pas comment l’exécuter.
 
 ## Principes
 

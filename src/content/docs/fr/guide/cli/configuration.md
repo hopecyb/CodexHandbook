@@ -10,9 +10,10 @@ sidebar:
   order: 40
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 0a9b2ad
+source_revision: '0a9b2ad'
+reviewed_at: '2026-10-26'
 ---
 
 La configuration de la CLI détermine notamment le **modèle par défaut, le répertoire de travail, la rigueur des approbations et les serveurs MCP**. Les concepts sont ceux des [bases de la configuration](/fr/guide/customization/configuration/config-basics/) ; cette page se concentre sur les réglages courants des utilisateurs du terminal.

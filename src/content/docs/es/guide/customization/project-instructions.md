@@ -3,14 +3,18 @@ title: Instrucciones del proyecto
 description: Contexto a nivel de proyecto más allá de AGENTS.md — cómo se reparten README, docs y referencias en la conversación.
 locale: es
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: "76b0fde"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre contexto de proyecto y colaboración con archivos, y con los capítulos ya verificados de este manual sobre contexto de proyecto, archivos y flujos de trabajo; el contenido se limita al principio estable de reparto entre README, `AGENTS.md`, `docs/` y la conversación de la tarea.
+  checkedAt: '2026-07-26'
 ---
-
 Las «instrucciones del proyecto» son el **contexto estático** con el que Codex entiende el repositorio; no se limitan a un único formato de archivo.
 
 ## Contenido
@@ -89,7 +93,7 @@ Lo más importante es:
 ## Sugerencias de reparto
 
 - `README.md`: qué es el proyecto, cómo arrancar, cómo testear
-- `AGENTS.md`: reglas de colaboración, zonas prohibidas, definición de hecho
+- `AGENTS.md`: reglas de colaboración, zonas prohibidas, definición de terminado
 - `docs/`: trasfondo más largo, arquitectura, descripción de flujos
 - Scripts y archivos de configuración: verdad ejecutable
 
@@ -99,10 +103,3 @@ El foco de las instrucciones del proyecto es que Codex y las personas encuentren
 
 - [ ] Quien clone el repositorio (o Codex) puede ejecutar los tests siguiendo README + AGENTS.md
 - [ ] Los prompts de tarea se basan sobre todo en referencias `@`, evitando pegar trasfondos largos
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre contexto de proyecto y colaboración con archivos, y con los capítulos ya verificados de este manual sobre contexto de proyecto, archivos y flujos de trabajo; el contenido se limita al principio estable de reparto entre README, `AGENTS.md`, `docs/` y la conversación de la tarea.  
-**Última verificación:** 2026-07-26

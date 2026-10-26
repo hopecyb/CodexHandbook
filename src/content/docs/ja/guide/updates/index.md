@@ -9,9 +9,10 @@ verification:
   summary: 現在のリポジトリ内容と実行記録から整理しました。これはハンドブックの変更履歴であり、OpenAI 製品のリリース記録でも、公開サイトへのデプロイ完了を示すものでもありません。
 locale: ja
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "3c99d35"
+translation_status: reviewed
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 このページには、ハンドブックの変更点、影響する操作、検証した範囲を記録します。日付は内容を整理した日です。実際の公開状況は、閲覧中のサイトの版を基準にしてください。製品機能の変更は、対応するチュートリアルにある公式の出典を確認してください。
@@ -60,7 +61,7 @@ translated_at: 2026-09-20
 - [SDK](/ja/guide/developer-platform/sdk-overview/)と[Webhook](/ja/guide/developer-platform/webhooks/overview/)はローカル実行、自前のサービス、コールバック設計を区別し、設計上のインターフェースを公式の契約として書きません。
 - [タスクの区分](/ja/prompts/ask-for-a-plan/)は直接実行、先に計画、操作前の承認を区別し、すべての段階で無差別に停止しません。
 
-これらの仕組みに関する出典と検証範囲は各ページの冒頭を参照してください。この更新概要は完全な API リファレンスではありません。
+これらの仕組みに関する出典と検証範囲は各ページの冒頭を参照してください。この更新概要は完全なインターフェース文書ではありません。
 
 ## ページの問題を見つけた場合
 

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  checkedAt: "2026-08-26"
+  basis: "Compared with current subagent documentation; explains context isolation, inherited permissions, activity entry points, token cost, write conflicts, and main-Agent final responsibility."
 title: Subagents
 description: Delegate bounded work to independent contexts, then let the main Agent consolidate evidence, resolve conflicts, and accept the result.
 locale: en
 source_locale: zh-CN
-source_revision: a3f2be5
+source_revision: 'a3f2be5'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -37,7 +42,7 @@ Consider a subagent when at least two apply:
 
 1. The task can be described independently without frequent synchronization.
 2. It has an explicit deliverable such as a file list, test result, or one-page conclusion.
-3. It can run in parallel, or deep isolation greatly reduces main-thread noise.
+3. It can run in parallel, or investigating it separately significantly reduces noise in the main thread.
 
 ### Good parallel work
 
@@ -66,7 +71,7 @@ The main Agent retains:
 
 A subagent reporting “done” is a subtask signal, not proof that the whole task is complete.
 
-## Write an acceptable delegation contract
+## Write a delegation contract with acceptance criteria
 
 ```text
 Start one subagent to analyze session refresh in packages/auth, read-only.
@@ -75,7 +80,7 @@ Scope: packages/auth and corresponding tests; do not edit.
 Question: Can an old token be reused after refresh failure?
 Deliver: conclusion, key files and lines, reproduction path, recommended test.
 Verification: every claim must be checkable in source or existing tests.
-Return: under 500 words; the main thread decides whether to edit.
+Return: within 500 characters; the main thread decides whether to edit.
 ```
 
 It defines responsibility, scope, question, prohibition, verification, and decision owner.
@@ -118,13 +123,3 @@ Passing isolated tests does not prove the merged combination works.
 - **Worktree** isolates file edits; it solves workspace conflicts, not context.
 
 Continue with [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/) and [Handoff and resume](/en/guide/agent-work/handoff-and-resume/).
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE
-
-**Verification basis:** Compared with current subagent documentation; explains context isolation, inherited permissions, activity entry points, token cost, write conflicts, and main-Agent final responsibility.
-
-**Last verified:** 2026-08-26

@@ -1,15 +1,16 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "ローカル Codex ホストを使用する環境。信頼設定は Codex CLI の `/hooks` で管理"
+  status: verified
+  products: ローカル Codex ホストを使用する環境。信頼設定は Codex CLI の `/hooks` で管理
   checkedAt: "2026-08-25"
 title: Hook 設定例
 description: 実際の hooks.json と Python 標準ライブラリのスクリプトで、テスト可能な PreToolUse ガードを実装する。
 locale: ja
 source_locale: zh-CN
-source_revision: 06e9fa2
-translation_status: draft
+source_revision: "06e9fa2"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 この章では、旧版の説明用イベント名と設定項目を削除しました。例は現在の公式 `hooks.json` 構造に従い、実行可能なテストも付属します。

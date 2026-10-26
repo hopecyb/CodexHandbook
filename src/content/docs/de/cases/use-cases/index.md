@@ -1,12 +1,18 @@
 ---
 title: Szenarien und Fallbibliothek
-description: End-to-end reale Aufgaben — Vorbereitung, Ausführung, Überprüfung, Fehlerwiederherstellung und Retro.
+description: Reale Aufgaben von Anfang bis Ende — Vorbereitung, Ausführung, Überprüfung, Fehlerwiederherstellung und Retro.
 locale: de
 source_locale: zh-CN
-source_revision: 1e284bb
+source_revision: "1e284bb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die aktuelle Fallbibliotheksstruktur dieses Repos, die Bereichs-Einstiegsseiten, die Fallvorlage und den examples-Prompt-Einstieg. Diese Seite dient nur der Navigation „Fälle
+    nach realem Aufgabentyp organisieren“.
+  checkedAt: '2026-07-26'
 ---
 
 Die Fallbibliothek beantwortet: «**Wie fühlt sich ein kompletter Codex-Durchlauf bei diesem realen Ziel an?**» und ergänzt einzelne Produktbeschreibungen.
@@ -23,7 +29,7 @@ Die Fallbibliothek beantwortet: «**Wie fühlt sich ein kompletter Codex-Durchla
 
 1. Fall wählen, der deinem Ziel am nächsten kommt (oder nur dessen «Vorbereitungsliste»)
 2. Mit [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) abgleichen
-3. Danach mit der [Fallvorlage](/de/cases/use-cases/case-study-template/) retrospektieren und entscheiden, ob ein Skill entsteht
+3. Danach mit der [Fallvorlage](/de/cases/use-cases/case-study-template/) auswerten und entscheiden, ob ein Skill entsteht
 
 ## Vorhandene Starter-Fälle
 
@@ -41,10 +47,3 @@ Kopierbare Prompts: [`examples/prompts/`](https://github.com/hopecyb/CodexHandbo
 - Reproduzierbare Schritte (Repo, Branch, Befehle)
 - Client und Prüfdatum kennzeichnen
 - Keine unverifizierbaren «einmal erfolgreich»-Narrative
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die aktuelle Fallbibliotheksstruktur dieses Repos, die Bereichs-Einstiegsseiten, die Fallvorlage und den examples-Prompt-Einstieg. Diese Seite dient nur der Navigation „Fälle nach realem Aufgabentyp organisieren“.  
-**Zuletzt geprüft:** 2026-07-26

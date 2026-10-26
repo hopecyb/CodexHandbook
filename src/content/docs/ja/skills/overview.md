@@ -3,10 +3,15 @@ title: Skills 概要
 description: SKILL.md で再利用可能なワークフローを Codex に教え、一度書けば必要に応じて呼び出せるようにする。
 locale: ja
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: "3147d2c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 現在の Codex ランタイムの Skill 読み込みルール（`SKILL.md`、必要時に完全なスキルファイルを読む）と OpenAI Help《Skills in ChatGPT》の Skill を再利用可能な workflow としての定義と一致。本ページは概念とディレクトリ構成が中心で、変わりやすい UI に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 **Skill** は `SKILL.md` を含むディレクトリ（スクリプトや参考資料を追加可能）で、一連の固定フローを Codex が**自動または明示的に呼び出せる**能力としてパッケージ化したものです。
@@ -27,7 +32,7 @@ reviewed_at: 2026-08-26
 
 ### 段階的開示
 
-Codex 起動時には各 Skill の **name、description、パス** だけが見えます。使用を決めたときだけ完全な `SKILL.md` を読み込みます。そのため本文に詳細なチェックリストを書いても、コンテキストを占有しません。
+Codex 起動時には各 Skill の **name、description、パス** だけが見えます。使用を決めたときだけ完全な `SKILL.md` を読み込みます。そのため、読み込む前からコンテキストを埋め尽くすことを心配せず、本文には詳細なチェックリストを書けます。
 
 注意：Skill リストには**初期文字数予算**（コンテキストの一部程度）があります。`description` では核心となるトリガーシーンを**先頭に**書き、切り詰められてマッチ失敗しないようにしてください。
 
@@ -81,7 +86,7 @@ description: 現在のブランチと main の diff をレビューし、リス�
 1. あるフローを何度か手動で繰り返したことに気づく
 2. `SKILL.md` を起草し、まずはテキストのみのステップ
 3. 小さなタスクで `$name` と暗黙マッチを試す
-4. 決定論が必要になったら `scripts/` を追加
+4. 同じ入力から同じ結果を得る確定的な処理が必要になったら `scripts/` を追加
 5. `.agents/skills/` にコミットし、チームに PR
 
 実践演習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)
@@ -117,9 +122,3 @@ Skill は入門の必需品ではなく、すでに繰り返し現れるフロ�
 
 ## 参考ソース
 - OpenAI Codex Skills ドキュメント
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現在の Codex ランタイムの Skill 読み込みルール（`SKILL.md`、必要時に完全なスキルファイルを読む）と OpenAI Help《Skills in ChatGPT》の Skill を再利用可能な workflow としての定義と一致。本ページは概念とディレクトリ構成が中心で、変わりやすい UI に依存しない。

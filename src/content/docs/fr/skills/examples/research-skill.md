@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: "cf2b232"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Une source inaccessible, une source muette sur un point et deux sources contradictoires exigent des traitements différents. Ce Skill conserve ces distinctions pour que les lecteurs sachent quelles conclusions sont vérifiables et lesquelles demandent encore des preuves.
@@ -32,7 +33,7 @@ Une source inaccessible, une source muette sur un point et deux sources contradi
 
 ## Question et documents fixes
 
-Le dossier reprend l'outil fictif « 拾页 » de l'[exercice de rédaction d'article](/fr/cases/write-an-article/). Il faut étudier ses formats d'entrée, le réglage par défaut du diagnostic et les champs téléversés. Trois sources synthétiques originales sont fournies ; une quatrième note du mainteneur figurant au catalogue manque délibérément. Ne cherchez pas ce produit fictif sur le vrai Web et n'inventez pas de réponse.
+Le dossier reprend l'outil fictif « Shiye (拾页) » de l'[exercice de rédaction d'article](/fr/cases/write-an-article/). Il faut étudier ses formats d'entrée, le réglage par défaut du diagnostic et les champs téléversés. Trois sources synthétiques originales sont fournies ; une quatrième note du mainteneur figurant au catalogue manque délibérément. Ne cherchez pas ce produit fictif sur le vrai Web et n'inventez pas de réponse.
 
 | État des preuves | Exemple du dossier | Comment le présenter |
 |---|---|---|
@@ -50,7 +51,7 @@ Placez le dossier complet dans `.agents/skills/evidence-research/` du projet d'e
 ```text
 $evidence-research À partir des sources de sources/catalog.json dans ce dossier,
 détermine si l'on peut confirmer les formats d'entrée, le réglage par défaut
-du diagnostic et les champs téléversés de 拾页 1.2. Produis
+du diagnostic et les champs téléversés de Shiye (拾页) 1.2. Produis
 my-output/report.md et evidence.csv en signalant les contradictions
 et les sources inaccessibles. Conserve l'identité synthétique ;
 ne cherche pas ce produit fictif sur de vrais sites Web.

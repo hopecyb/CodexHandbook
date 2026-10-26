@@ -3,12 +3,17 @@ title: 子 Agent
 description: 境界が明確なサブタスクを独立したコンテキストに委任し、主 Agent が証拠の集約、競合の解決、検収を行います。
 locale: ja
 source_locale: zh-CN
-source_revision: a3f2be5
+source_revision: "a3f2be5"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Codex の現在の子 Agent に関する公式説明と照合済みです。本ページでは、子 Agent のコンテキスト分離、権限の継承、活動を確認する場所、token コスト、並行書き込みの競合を明確にし、最終的な集約と検証の責任を主 Agent に残しています。
+  checkedAt: "2026-08-26"
 ---
 
 **子 Agent（Subagent）** は、主 Agent が明確なサブ問題のために起動する独立した作業単位です。子 Agent はそれぞれ独自のコンテキストを持ち、完了すると結論と証拠をメインスレッドへ返します。全体に関わる判断と最終検収は、引き続き主 Agent が担います。
@@ -122,13 +127,3 @@ CLI では `/agent` を使ってスレッドの確認や切り替えができま
 - **worktree** は並行するファイル変更を分離します。解決するのはワークスペースの競合であり、コンテキストの問題ではありません。
 
 続けて、[マルチ Agent 協調](/ja/cases/workflows/multi-agent-coordination/) と [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/) を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** App / CLI / IDE
-
-**検証根拠：** Codex の現在の子 Agent に関する公式説明と照合済みです。本ページでは、子 Agent のコンテキスト分離、権限の継承、活動を確認する場所、token コスト、並行書き込みの競合を明確にし、最終的な集約と検証の責任を主 Agent に残しています。
-
-**最終検証：** 2026-08-26

@@ -8,10 +8,10 @@ title: Diretório templates/
 description: Forneça templates de saída e esqueletos de relatório no Skill.
 locale: pt
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: "82a9e01"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 `templates/` não é só «economizar um pouco de formatação». O papel prático é deixar a saída do Skill mais estável, sem improvisar a estrutura toda vez.
@@ -56,7 +56,7 @@ Se um tipo de resultado deve sempre parecer parecido, use template — por exemp
 - Tabela de comparação de pesquisa
 - Checklist de release
 
-No primeiro Skill, `templates/` não é obrigatório.  
+No primeiro Skill, `templates/` não é obrigatório.
 Mas assim que você começar a repetir «saia neste formato», vale extrair.
 
 ## Equívocos comuns

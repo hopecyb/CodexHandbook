@@ -1,20 +1,21 @@
 ---
-title: "Function Calling（関数呼び出し）"
-description: "モデルは呼び出したい関数名と構造化された引数を出力でき、アプリケーションが検証して実行するかを決めます。引数の生成、承認の取得、実際の実行は別々の段階です。"
-contentType: "guide"
-editorialStatus: "review"
+title: Function Calling（関数呼び出し）
+description: モデルは呼び出したい関数名と構造化された引数を出力でき、アプリケーションが検証して実行するかを決めます。引数の生成、承認の取得、実際の実行は別々の段階です。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。
   evidence:
-    - label: "Function Calling の公開告知"
-      href: "https://openai.com/index/function-calling-and-other-api-updates/"
+  - label: Function Calling の公開告知
+    href: https://openai.com/index/function-calling-and-other-api-updates/
 locale: ja
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: "c362c48"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## 確認可能な出来事と範囲
@@ -35,6 +36,6 @@ translated_at: 2026-09-20
 
 ## 実践演習
 
-[Issue 振り分け提案のドライラン](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)：合成 Issue に対する構造化された提案が入力に結び付いているか確認し、人による確認キューを残します。この演習では過去の API やリリース名を呼び出さず、データの境界を検証します。
+[Issue 振り分け提案のドライラン](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)：合成 Issue に対する構造化された提案が入力に結び付いているか確認し、人による確認キューを残します。この演習はデータの境界を検証するものであり、過去の API を呼び出したり、Issue にラベルを適用したりはしません。
 
 [ロードマップと日付の扱いに戻る](/ja/ai-roadmap/)

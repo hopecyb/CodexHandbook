@@ -1,22 +1,23 @@
 ---
 legacyVerification:
-  status: "verified"
-  basis: "本ハンドブックの現在の状態体系、完了した複数回の再確認、公式情報優先の原則に照らして確認済み。このページは、ページを `verified` に上げる内部基準と格下げの原則を説明します。"
-  checkedAt: "2026-07-26"
+  status: verified
+  basis: 本ハンドブックの現在の状態体系、完了した複数回の再確認、公式情報優先の原則に照らして確認済み。このページは、ページを `verified` に上げる内部基準と格下げの原則を説明します。
+  checkedAt: '2026-07-26'
 title: 技術コンテンツの検証
 description: 編集状態、出典確認、サンプル実行を区別し、対象範囲・環境・検証根拠を記録する。
 locale: ja
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: "cfb077d"
+translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: サイトの新しいメタデータ項目に合わせて投稿規約を更新済み。このページで触れる製品機能をすべて再実行したという意味ではありません。
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 ハンドブック内のコマンド、権限、価格、製品機能はバージョンとともに変わります。**検証**は、読者がドキュメントどおりに操作したとき結果が予測可能であることを保証します。
@@ -43,7 +44,7 @@ sidebar:
 - 権限のデフォルトが調整される
 - 製品能力と利用可能範囲が更新される
 
-検証は編集の潔癖ではなく、古いドキュメントの通りに踏んでハマるのを防ぐためのものです。
+検証は編集上の細部にこだわるためではなく、読者が古いドキュメントに従ってつまずくのを防ぐために行います。
 
 ## 状態の意味
 

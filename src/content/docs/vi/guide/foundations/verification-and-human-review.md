@@ -1,14 +1,19 @@
 ---
-title: Kiểm chứng và rà soát thủ công
-description: Vì sao kết quả phải kiểm tra được, và cách rà soát lại.
-locale: vi
-source_locale: zh-CN
-source_revision: bfe4036
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Kiểm chứng và rà soát thủ công"
+description: "Vì sao kết quả phải kiểm tra được, và cách rà soát lại."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "bfe4036"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 110
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích vì sao kết quả cần kiểm chứng và rà soát thủ công; liên kết nội bộ, thứ tự bước và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Codex có thể giúp bạn tăng tốc, nhưng không thể thay bạn chịu trách nhiệm xác nhận cuối cùng.
@@ -22,7 +27,7 @@ Codex tăng tốc độ, nhưng **không miễn nghiệm thu**. Ít nhất phả
 
 ## Rà soát thủ công thực sự đang xem gì
 
-«Rà soát thủ công» không phải bắt bạn làm lại hết mọi thứ. Đứng ở góc người chịu trách nhiệm giao hàng, xác nhận vài việc sau là đủ:
+«Rà soát thủ công» không phải bắt bạn làm lại hết mọi thứ. Đứng ở góc người chịu trách nhiệm bàn giao, xác nhận vài việc sau là đủ:
 
 - Nó có sửa đúng không
 - Nó có sửa thừa không
@@ -31,11 +36,11 @@ Codex tăng tốc độ, nhưng **không miễn nghiệm thu**. Ít nhất phả
 
 ## Hiểu nhầm thường gặp
 
-### 1. Chỉ cần kết quả trông có vẻ ổn là thu việc được?
+### 1. Chỉ cần kết quả trông có vẻ ổn là kết thúc công việc được?
 
 «Trông rất giống đúng» thường nghĩa là:
 
-- Copy đọc xuôi, nhưng sự thật chưa chắc đúng
+- Văn bản đọc trôi chảy, nhưng thông tin chưa chắc chính xác
 - Trang trông bình thường, nhưng quy trình then chốt chưa thử
 - Mã chạy được, nhưng điều kiện biên chưa kiểm
 
@@ -63,10 +68,3 @@ Nếu thời gian có hạn, có thể theo thứ tự này:
 4. Bước then chốt còn lại, qua thêm một lần bằng góc nhìn người
 
 Vai trò của rà soát thủ công là để lần gật đầu cuối cùng thuộc về người thật sự chịu trách nhiệm về kết quả.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích vì sao kết quả cần kiểm chứng và rà soát thủ công; liên kết nội bộ, thứ tự bước và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

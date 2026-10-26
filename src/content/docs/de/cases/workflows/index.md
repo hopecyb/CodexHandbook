@@ -3,10 +3,16 @@ title: Workflow-Methoden
 description: Wiederholbare Kollaborationsmethoden — nicht an eine einzelne Produkt-UI gebunden, mit Fokus auf Prüfpunkte und Abnahme.
 locale: de
 source_locale: zh-CN
-source_revision: d058896
+source_revision: "d058896"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Prompts, Qualität, Agent-Arbeit und Skills in diesem Handbuch. Diese Seite dient nur der Methodennavigation und der Erklärung von Phasen-Prüfpunkten
+    und schreibt keine konkreten Client-Abläufe als langfristigen Vertrag fest.
+  checkedAt: '2026-07-26'
 ---
 
 [Prompts](/de/prompts/) zeigen, wie man **formulieren** soll; Workflows zeigen, wie man **eine ganze Sache organisiert**. Die Methoden in diesem Kapitel gelten für App, CLI, IDE und Cloud.
@@ -52,10 +58,3 @@ Ohne Prüfpunkte entstehen leicht: falsche Verzeichnisse, keine Tests, Fehl-Merg
 2. **Standardmäßig kleine Schritte**: prüfbare Inkremente schlagen eine riesige Änderung
 3. **Fehler sind wiederherstellbar**: wissen, wie man rückgängig macht und Threads forkt, um weiterzumachen
 4. **Verstetigen, was sich wiederholt**: beim dritten Mal als Skill oder Vorlage schreiben
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Prompts, Qualität, Agent-Arbeit und Skills in diesem Handbuch. Diese Seite dient nur der Methodennavigation und der Erklärung von Phasen-Prüfpunkten und schreibt keine konkreten Client-Abläufe als langfristigen Vertrag fest.  
-**Zuletzt geprüft:** 2026-07-26

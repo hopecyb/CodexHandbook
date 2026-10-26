@@ -8,10 +8,10 @@ title: 진단 템플릿
 description: 먼저 근본 원인을 찾은 뒤 수정을 논의합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 2491371
+source_revision: "2491371"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -34,7 +34,7 @@ reviewed_at: 2026-08-26
 
 ## 언제 이 템플릿이 맞는가
 
-- 버그가 아직 위치하지 않았을 때
+- 버그의 원인을 아직 찾지 못했을 때
 - 테스트가 실패했지만 어느 층이 깨졌는지 모를 때
 - 문제가 복잡하다고 느껴 바로 추측 수정을 막고 싶을 때
 

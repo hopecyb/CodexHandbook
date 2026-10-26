@@ -3,10 +3,15 @@ title: ワークフロー手法
 description: 繰り返し可能な協働方法——単一製品 UI に縛られず、チェックポイントと受け入れを重視する。
 locale: ja
 source_locale: zh-CN
-source_revision: d058896
+source_revision: "d058896"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの現在検証済みのプロンプト、品質、Agent 作業、Skills 各章を相互参照して再確認済み。本ページは方法のナビゲーションと段階的チェックポイントの説明のみを担い、具体的なクライアントフローを長期契約として記述しません。
+  checkedAt: "2026-07-26"
 ---
 
 [プロンプト](/ja/prompts/) は**言い方**を教えます。ワークフローは**一連の作業の組み立て方**を教えます。本章の方法は App、CLI、IDE、Cloud に適用できます。
@@ -52,10 +57,3 @@ reviewed_at: 2026-08-26
 2. **デフォルトは小さなステップ**：一度の巨大な変更より、レビュー可能な増分
 3. **失敗から回復可能**：取り消し方法、スレッドをフォークして続行する方法を知っている
 4. **蓄積できるものは蓄積する**：3 回目の繰り返しフローは Skill またはテンプレートに書く
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの現在検証済みのプロンプト、品質、Agent 作業、Skills 各章を相互参照して再確認済み。本ページは方法のナビゲーションと段階的チェックポイントの説明のみを担い、具体的なクライアントフローを長期契約として記述しません。

@@ -1,17 +1,18 @@
 ---
-title: Política de regras de equipa
+title: Política de regras de equipe
 description: Governar regras de comandos e caminhos em camadas entre organização, repositório e indivíduo — revisável e reversível.
 locale: pt
 source_locale: zh-CN
-source_revision: bae8bd2
+source_revision: "bae8bd2"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification: {"status": "verified", "products": "CLI / App / Cloud (conforme funcionalidades da organização)", "basis": "Os materiais atuais OpenAI de plugins, aplicações e permissões a nível de organização continuam a enfatizar acesso por papel, aprovação de ações, configuração gerida e controle a nível de equipe; esta página abstrai a política de regras num modelo de governação organização/projeto/pessoal e exige que alterações passem por revisão e anúncio — prática de governação estável.", "checkedAt": "2026-07-26"}
 ---
 
-Quando a equipa usa o Codex, a **política de regras** responde: que restrições são unificadas em toda a empresa, quais o repositório mantém, e se o indivíduo ainda pode relaxar. Este capítulo é a perspetiva de governação de [regras de comandos](/pt/guide/customization/rules/command-rules/) e [padrões de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/).
+Quando a equipe usa o Codex, a **política de regras** responde: que restrições são unificadas em toda a empresa, quais o repositório mantém, e se o indivíduo ainda pode relaxar. Este capítulo é a perspectiva de governação de [regras de comandos](/pt/guide/customization/rules/command-rules/) e [padrões de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Conteúdo
 
@@ -19,14 +20,14 @@ Quando a equipa usa o Codex, a **política de regras** responde: que restriçõe
 - Como as alterações de regras passam por revisão e publicação
 - Coordenação com `AGENTS.md`, Hooks e CI
 
-## Função da política de regras de equipa
+## Função da política de regras de equipe
 
-A política de regras de equipa responde: que fronteiras a empresa define de forma unificada, quais o projeto define e quais são só hábitos pessoais.
+A política de regras de equipe responde: que fronteiras a empresa define de forma unificada, quais o projeto define e quais são só hábitos pessoais.
 
 Sem esta estratificação clara, aparecem facilmente dois problemas:
 
-- Regras que deveriam ser consistentes em toda a equipa vivem só no computador de alguém
-- Definições pessoais de comodidade momentânea são tomadas por engano como padrão da equipa
+- Regras que deveriam ser consistentes em toda a equipe vivem só no computador de alguém
+- Definições pessoais de comodidade momentânea são tomadas por engano como padrão da equipe
 
 ## Para quem
 
@@ -38,7 +39,7 @@ Sem esta estratificação clara, aparecem facilmente dois problemas:
 
 ## Mal-entendidos habituais
 
-### Regras de equipa não precisam de ser todas iguais à força
+### Regras de equipe não precisam de ser todas iguais à força
 
 Algumas fronteiras devem ser unificadas em toda a organização — p. ex. deny de alto risco.
 
@@ -46,9 +47,9 @@ Mas forçar todos os repositórios a serem idênticos traz outro problema: regra
 
 O ponto é clarificar as fronteiras das camadas organização, projeto e pessoal — não tornar todas as regras iguais.
 
-### Complementos pessoais não devem enfraquecer a linha de base da equipa
+### Complementos pessoais não devem enfraquecer a linha de base da equipe
 
-Pode acrescentar definições de comodidade na sua máquina, desde que não contorne a linha de base já definida pela equipa ou organização.
+Pode acrescentar definições de comodidade na sua máquina, desde que não contorne a linha de base já definida pela equipe ou organização.
 
 Caso contrário, na superfície «a máquina fica mais eficiente»; na prática, planta minas na colaboração.
 
@@ -56,13 +57,13 @@ Caso contrário, na superfície «a máquina fica mais eficiente»; na prática,
 
 ```text
 L1 Gestão da organização (Managed)  → não sobrescrevível por projeto/indivíduo
-L2 Repositório modelo da equipa     → fragmentos de rules herdados por novos repositórios
+L2 Repositório modelo da equipe     → fragmentos de rules herdados por novos repositórios
 L3 Rules do projeto + AGENTS.md     → revisão por Git PR
 L4 Configuração pessoal             → só nesta máquina; não pode enfraquecer L1
-L5 Prompt da Tarefa única           → apertar temporariamente pode; relaxar temporariamente limitado por L1
+L5 Prompt da tarefa única           → apertar temporariamente pode; relaxar temporariamente limitado por L1
 ```
 
-Compare com [Âmbito de AGENTS.md](/pt/guide/customization/agents-md/scope-and-precedence/): **as regras inclinaram-se para enforcement de execução; AGENTS.md para descrição de comportamento**; devem ser consistentes — não escreva dois conjuntos contraditórios.
+Compare com [Escopo de AGENTS.md](/pt/guide/customization/agents-md/scope-and-precedence/): **as regras impõem limites à execução; AGENTS.md descreve o comportamento esperado**; devem ser consistentes — não escreva dois conjuntos contraditórios.
 
 ## Prática básica
 
@@ -70,13 +71,13 @@ Compare com [Âmbito de AGENTS.md](/pt/guide/customization/agents-md/scope-and-p
 2. **Depois a lista «permitido no dia a dia»** (allow): testes, lint, git só de leitura
 3. **Emita L1 gerida** (se a organização já tiver Managed configuration)
 4. **Cada serviço/subpacote monorepo** pode acrescentar L3, sem conflitar com L1
-5. **Retrospectiva trimestral**: «bloqueios falsos» e «libertações falsas» nos logs de Aprovação voltam a PRs de regras
+5. **Retrospectiva trimestral**: «bloqueios indevidos» e «permissões indevidas» nos logs de aprovação voltam a PRs de regras
 
 ## Fluxo recomendado: alteração de regras
 
 ```text
-Proposta (issue ou RFC) → review de segurança/plataforma → PR altera ficheiros de regras
-    → Ensaio de Tarefas típicas em repositório staging → merge → anúncio + atualização da página do manual
+Proposta (issue ou RFC) → review de segurança/plataforma → PR altera arquivos de regras
+    → Ensaio de tarefas típicas em repositório staging → merge → anúncio + atualização da página do manual
 ```
 
 Grandes mudanças (p. ex. abrir saída de rede) devem atualizar em sincronia [auditoria de Hooks](/pt/skills/hooks/hooks-overview/) e [acceptable use](/pt/guide/team-enterprise/governance/acceptable-use/).
@@ -93,10 +94,10 @@ Evite três lógicas separadas: priorize uma **única fonte de verdade** (p. ex.
 
 ## Erros habituais
 
-- Só acordo oral «não faça push»; o ficheiro de regras não é atualizado
-- Depois de relaxar o Sandbox na máquina pessoal, tratar um ecrã como «padrão da equipa»
+- Só acordo oral «não faça push»; o arquivo de regras não é atualizado
+- Depois de relaxar o Sandbox na máquina pessoal, tratar uma captura de tela como «padrão da equipe»
 - Subprojetos monorepo com necessidades diferentes partilham uma allowlist global demasiado ampla
-- Alteração de regras sem anúncio; colegas sofrem de súbito muitas falhas de Aprovação
+- Alteração de regras sem anúncio; colegas sofrem de súbito muitas falhas de aprovação
 
 ## Em que camada colocar a regra
 
@@ -116,20 +117,13 @@ Normalmente corresponde a:
 
 - As regras não substituem o [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) nem o fluxo de resposta a incidentes
 - Com dados regulados, as regras devem ser revistas em conjunto com classificação de dados e políticas de retenção
-- Contornos de emergência exigem **registo de auditoria** e retrospectiva posterior
+- Contornos de emergência exigem **registro de auditoria** e retrospectiva posterior
 
 ## Lista de verificação
 
 - [ ] Consegue desenhar a divisão L1–L3 da sua organização
-- [ ] Os ficheiros de regras no repositório têm owner claro e requisitos de review
+- [ ] Os arquivos de regras no repositório têm owner claro e requisitos de review
 - [ ] Sem contradições mútuas com `AGENTS.md`, Hooks e CI
-- [ ] Há canal para feedback de «bloqueios falsos» (modelo de issue ou formulário interno)
+- [ ] Há canal para feedback de «bloqueios indevidos» (modelo de issue ou formulário interno)
 
-O mais importante na política de regras de equipa é clarificar primeiro «quem define a fronteira de cada camada» e só depois como escrever as regras.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** CLI / App / Cloud (conforme funcionalidades da organização)  
-**Base de verificação:** Os materiais atuais OpenAI de plugins, aplicações e Permissões a nível de organização continuam a enfatizar acesso por papel, Aprovação de ações, configuração gerida e controlo a nível de equipa; esta página abstrai a política de regras num modelo de governação organização/projeto/pessoal e exige que alterações passem por revisão e anúncio — prática de governação estável.  
-**Última verificação:** 2026-07-26
+O mais importante na política de regras de equipe é clarificar primeiro «quem define a fronteira de cada camada» e só depois como escrever as regras.

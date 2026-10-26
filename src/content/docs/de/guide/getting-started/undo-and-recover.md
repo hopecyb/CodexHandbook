@@ -3,8 +3,8 @@ title: Rückgängig machen und wiederherstellen
 description: Bei unbefriedigendem Ergebnis sicher zurückrollen.
 locale: de
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: "8aa3171"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
@@ -13,6 +13,7 @@ legacyVerification:
   products: App / CLI / IDE
   basis: Gegen die verifizierten Einstiegsabschnitte zu Freigaben, Ergebnisprüfung, Fehlerwiederherstellung und Git/Arbeitsbereich abgeglichen. Diese Seite beschreibt nur das stabile Vorgehen „anhalten, Umfang prüfen, Rückgängig bevorzugen, sicheren Zustand wiederherstellen“ und legt keinen festen Undo-Einstieg eines Clients fest.
   checkedAt: '2026-07-26'
+reviewed_at: 2026-10-26
 ---
 
 Beim ersten Codex-Einsatz fürchten viele: Es ändert falsch — komme ich zurück?
@@ -93,6 +94,6 @@ Aktuellen sicheren Zustand bestätigen
 → Behalten, zurückrollen oder einen anderen Weg versuchen
 ```
 
-Wenn der Client Checkpoints oder eine Wiedergabefunktion anbietet, können Sie diese eingebauten Möglichkeiten zuerst nutzen. In einem Git-Projekt eignen sich auch ein Branch, Stash oder kleiner Commit als Wiederherstellungspunkt. Entscheidend ist nicht ein bestimmter Befehl, sondern dass Sie Änderungen nicht ausweiten, solange deren Folgen unklar sind.
+Wenn der Client Checkpoints oder eine Wiedergabefunktion anbietet, kannst du diese eingebauten Möglichkeiten zuerst nutzen. In einem Git-Projekt eignen sich auch ein Branch, Stash oder kleiner Commit als Wiederherstellungspunkt. Entscheidend ist nicht ein bestimmter Befehl, sondern dass du Änderungen nicht ausweitest, solange deren Folgen unklar sind.
 
 Fehler selbst sind nicht schlimm. Ohne klaren Änderungsumfang weiterzuändern, macht die Wiederherstellung schwieriger.

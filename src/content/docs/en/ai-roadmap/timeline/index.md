@@ -3,8 +3,9 @@ title: Events and topics index
 description: Explore applied AI engineering topics through dated source events without treating publication dates as conceptual origins.
 locale: en
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: '847b43b'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 

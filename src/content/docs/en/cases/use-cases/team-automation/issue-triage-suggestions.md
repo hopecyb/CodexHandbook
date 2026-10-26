@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
-source_revision: 6d859d7
+source_revision: '6d859d7'
 ---
 
 This exercise splits issue triage into “generate a proposal → validate → review by a person.” You will produce five records for review. The exercise does not automatically post comments, add labels, or close issues.

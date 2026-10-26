@@ -3,13 +3,19 @@ title: Intégration GitHub
 description: Connexion repo, PR, revue et CI — où Codex se situe dans les workflows GitHub.
 locale: fr
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: "ece7161"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: Cloud / App / CLI
+  basis: OpenAI Developers Codex use cases incluent encore « Review GitHub pull requests » ; le centre d'aide plugin/intégration souligne que l'accès aux repos externes dépend des permissions de l'app sous-jacente, l'accès par rôle et les limites d'action. Cette page résume le placement de collaboration et les différences de visibilité code local vs Cloud — pas une matrice de capacités fixe.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 10
 ---
-
-GitHub est la surface de collaboration la plus courante de Codex : les Tâches Cloud, la revue PR, Actions et le push local partagent branches et permissions.
+GitHub est la surface de collaboration la plus courante de Codex : les tâches Cloud, la revue PR, Actions et le push local partagent branches et permissions.
 
 Cette page explique comment Codex se connecte aux repos, branches, PR et revue.
 
@@ -54,7 +60,7 @@ Même si vous n'êtes pas un développeur senior, commencez par ce qu'il gère :
 1. Codex ou humain ouvre PR
 2. Humain lit le diff (ou Skill `$pr-review`)
 3. CI exécute les tests
-4. Révisions guidées par commentaires — nouvelle Tâche Codex « traiter uniquement les commentaires de revue »
+4. Révisions guidées par commentaires — nouvelle tâche Codex « traiter uniquement les commentaires de revue »
 5. Humain fusionne
 
 ## Idées reçues courantes
@@ -63,7 +69,7 @@ Même si vous n'êtes pas un développeur senior, commencez par ce qu'il gère :
 
 Usages plus courants :
 
-- Lire le Contexte du repo
+- Lire le contexte du dépôt
 - Aider à organiser les diffs ou la revue
 - Assister l'ouverture de PR et la correction des commentaires
 
@@ -92,15 +98,9 @@ L'intégration GitHub consiste à intégrer Codex dans la collaboration de code 
 
 ## Erreurs courantes
 
-- Tâche Cloud suppose que des changements locaux non poussés existent
+- Tâche Cloud suppose que des modifications locales non commitées existent
 - Laisser Codex exécuter des instructions non nettoyées dans les descriptions PR (injection de Prompt)
 - Mélanger formatage et changements de fonctionnalité dans une PR
 
 ## Références
 - Documentation intégration GitHub OpenAI Codex
----
-
-**Statut :** vérifié  
-**Produits concernés :** Cloud / App / CLI  
-**Base de vérification :** OpenAI Developers Codex use cases incluent encore « Review GitHub pull requests » ; le centre d'aide plugin/intégration souligne que l'accès aux repos externes dépend des permissions de l'app sous-jacente, l'accès par rôle et les limites d'action. Cette page résume le placement de collaboration et les différences de visibilité code local vs Cloud — pas une matrice de capacités fixe.  
-**Dernière vérification :** 2026-07-26

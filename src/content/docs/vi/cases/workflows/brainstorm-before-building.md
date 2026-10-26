@@ -1,20 +1,21 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo các chương EPXV, lập kế hoạch, làm việc theo đặc tả và prompt đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp cộng tác ổn định “mở rộng ý tưởng trước, chọn lọc phương án sau, rồi vào kế hoạch”, không phụ thuộc chi tiết lối vào sản phẩm cụ thể.", "checkedAt": "2026-07-26"}
 title: Brainstorm trước rồi mới làm
-description: Trước khi viết code hoặc bài dài, dùng khám phá có cấu trúc để hội tụ phương án — giảm làm lại.
+description: Trước khi viết code hoặc bài dài, dùng khám phá có cấu trúc để chọn lọc phương án phương án — giảm làm lại.
 locale: vi
 source_locale: zh-CN
-source_revision: 9c5e679
+source_revision: "9c5e679"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-**Brainstorm trước rồi mới làm** phù hợp tác vụ mục tiêu mơ hồ, phương án không chỉ một: tính năng mới, redesign, chọn đề nội dung, chọn tech. Nối với giai đoạn ① khám phá của [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/), nhưng nhấn mạnh **phân tán và hội tụ**, chứ không đọc code sửa tệp ngay.
+**Brainstorm trước rồi mới làm** phù hợp tác vụ mục tiêu mơ hồ, phương án không chỉ một: tính năng mới, redesign, chọn đề nội dung, chọn tech. Nối với giai đoạn ① khám phá của [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/), nhưng nhấn mạnh **mở rộng ý tưởng và chọn lọc phương án**, chứ không đọc code sửa tệp ngay.
 
 ## Trang này giải quyết gì
 
 - Khi nào đáng brainstorm trước, khi nào EPXV thẳng
-- Cách hạn chế phạm vi phân tán, tránh tán chuyện
+- Cách hạn chế phạm vi mở rộng ý tưởng, tránh tán chuyện
 - Đầu ra: bảng lựa chọn, biên bản quyết định, kế hoạch bước tiếp
 
 ## Phù hợp ai
@@ -27,7 +28,7 @@ reviewed_at: 2026-08-26
 
 ## Cách làm tối thiểu dùng được
 
-**Giai đoạn A — Phân tán (giới hạn thời gian)**
+**Giai đoạn A — Mở rộng ý tưởng (giới hạn thời gian)**
 
 ```text
 Chưa sửa bất kỳ tệp nào. Với nhu cầu «xuất CSV», liệt kê 3 đường triển khai:
@@ -35,7 +36,7 @@ Mỗi đường ghi ưu nhược, module liên quan, khối lượng ước tín
 Chưa chọn phương án cuối.
 ```
 
-**Giai đoạn B — Hội tụ**
+**Giai đoạn B — Chọn lọc phương án**
 
 ```text
 Theo bảng trên, khuyến nghị 1 phương án mặc định và 1 dự phòng;
@@ -50,13 +51,13 @@ Sau xác nhận, nối [làm việc theo đặc tả](/vi/cases/workflows/specif
 
 ```text
 Làm rõ ràng buộc (thời gian, tech stack, phần không được sửa)
-    → Phân tán 3–5 lựa chọn (cấm viết code)
+    → Mở rộng ý tưởng 3–5 lựa chọn (cấm viết code)
     → Xếp theo «giá trị / rủi ro / chi phí»
     → Người chọn hướng hoặc yêu cầu bổ sung thông tin
     → Kế hoạch viết + thực thi
 ```
 
-Đặt **timebox**: ví dụ hoàn thành phân tán trong 15 phút, tránh thảo luận trôi.
+Đặt **timebox**: ví dụ hoàn thành mở rộng ý tưởng trong 15 phút, tránh thảo luận trôi.
 
 ## Lỗi thường gặp
 
@@ -82,10 +83,3 @@ Làm rõ ràng buộc (thời gian, tech stack, phần không được sửa)
 - [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
 - [Làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/)
 - [Yêu cầu kế hoạch](/vi/prompts/ask-for-a-plan/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương EPXV, lập kế hoạch, làm việc theo đặc tả và prompt đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp cộng tác ổn định “phân tán trước, hội tụ sau, rồi vào kế hoạch”, không phụ thuộc chi tiết lối vào sản phẩm cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

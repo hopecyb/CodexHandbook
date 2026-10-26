@@ -3,13 +3,19 @@ title: Prüfung vor dem Merge
 description: Vor dem Merge mit Codex strukturierte Diff- und Risikoprüfung — klare Arbeitsteilung Mensch/Maschine.
 locale: de
 source_locale: zh-CN
-source_revision: 78d5c03
+source_revision: "78d5c03"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu Code Review / Pull Requests bei OpenAI Developers sowie die bereits geprüften Kapitel zu Qualität, Diff-Prüfung und Cloud. Diese Seite bestätigt
+    nur die stabilen Prinzipien „strukturierte Prüfung vor dem Merge, nur-lesende Prüfung und menschliche Endfreigabe“.
+  checkedAt: '2026-07-26'
 ---
 
-**Prüfung vor dem Merge** bringt [Qualität und Überprüfung](/de/guide/quality/) in den Git-Ablauf: Vor dem PR-Merge prüft Codex Diff, Tests, Sicherheit und Spezifikationskonsistenz. Automatische Kommentare ersetzen kein automatisches Mergen.
+**Prüfung vor dem Merge** bringt [Qualität und Überprüfung](/de/guide/quality/) in den Git-Ablauf: Vor dem PR-Merge prüft Codex Diff, Tests, Sicherheit und Spezifikationskonsistenz. Automatische Kommentare allein sind keine Grundlage für eine automatische Zusammenführung; die endgültige Freigabe bleibt beim Menschen.
 
 ## Schwerpunkte dieser Seite
 
@@ -70,10 +76,3 @@ Kombinierbar mit [Diffs prüfen](/de/guide/quality/review-diffs/); Hochrisiko-Pu
 
 - [Cloud Code Review](/de/guide/web-and-cloud/code-review/)
 - [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu Code Review / Pull Requests bei OpenAI Developers sowie die bereits geprüften Kapitel zu Qualität, Diff-Prüfung und Cloud. Diese Seite bestätigt nur die stabilen Prinzipien „strukturierte Prüfung vor dem Merge, nur-lesende Prüfung und menschliche Endfreigabe“.  
-**Zuletzt geprüft:** 2026-07-26

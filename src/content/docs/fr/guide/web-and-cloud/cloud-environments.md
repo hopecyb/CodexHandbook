@@ -3,12 +3,16 @@ title: Environnements Cloud
 description: Configurez les runtimes, les dépendances, le setup, le cache et le point de départ du dépôt pour Codex Cloud.
 locale: fr
 source_locale: zh-CN
-source_revision: 1745f70
+source_revision: "1745f70"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Un environnement Cloud définit ce que Codex installe et exécute pour un dépôt. Il n'hérite pas de la configuration de votre ordinateur. Lorsqu'un travail réussit en local mais échoue dans Cloud, comparez d'abord les runtimes, les dépendances, les variables et l'accès réseau.
@@ -74,11 +78,3 @@ Ces limites sont faciles à confondre. Consultez [Secrets et variables d'environ
 
 - [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Image codex-universal](https://github.com/openai/codex-universal)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** Cloud
-
-**Dernière vérification :** 2026-08-26

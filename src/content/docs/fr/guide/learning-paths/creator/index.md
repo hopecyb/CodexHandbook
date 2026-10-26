@@ -25,14 +25,15 @@ next:
   label: Commencer à organiser trois sources
 locale: fr
 source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
+source_revision: "d1b46b1"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 À partir d’un ensemble de sources, rédigez un article, transformez-le en présentation modifiable, puis conservez des consignes réutilisables. Chaque étape laisse des fichiers qui permettent de vérifier votre progression.
 
-Vous devez pouvoir ouvrir un dossier local dans Codex. La création de la présentation nécessite aussi un outil capable de produire un PPTX et un logiciel pour l’ouvrir ; l’environnement précis figure dans le cas. Tous les clients n’ont pas besoin des mêmes outils. Si vous ne maîtrisez pas encore les fichiers, terminez d’abord [Travailler avec les fichiers](/fr/guide/learning-paths/beginner/02-work-with-files/).
+Vous devez pouvoir ouvrir un dossier local dans Codex. La création de la présentation nécessite aussi un outil capable de produire un PPTX et un logiciel pour l’ouvrir ; l’environnement précis figure dans le cas. Il n’est pas supposé que tous les clients disposent des mêmes outils. Si vous ne maîtrisez pas encore les fichiers, terminez d’abord [Travailler avec les fichiers](/fr/guide/learning-paths/beginner/02-work-with-files/).
 
 ## Parcours et documents
 

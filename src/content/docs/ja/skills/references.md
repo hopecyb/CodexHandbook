@@ -1,17 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "現在の Codex ランタイムはスキル本文と関連資料の必要に応じた読み込みを明示。本ページは `references/` の安定したドキュメント整理原則。"
-  checkedAt: "2026-07-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の Codex ランタイムはスキル本文と関連資料の必要に応じた読み込みを明示。本ページは `references/` の安定したドキュメント整理原則。
+  checkedAt: '2026-07-26'
 title: references/ ディレクトリ
 description: Skill 内で長い参考ドキュメントを整理し、段階的開示を実現する。
 locale: ja
 source_locale: zh-CN
-source_revision: 955bfa7
+source_revision: "955bfa7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 `references/` は毎回展開不要な長文を置き、主フローを短く保つのに向いています。
@@ -39,7 +39,7 @@ my-skill/
 
 ## 役割
 
-- `SKILL.md` が主線
+- `SKILL.md` が作業手順の本筋
 - `references/` が「必要時に開く資料」
 
 単純に言うと：
@@ -68,9 +68,9 @@ my-skill/
 
 何でも `references/` に入れると、混乱がファイル間に移るだけです。
 
-### 3. references/ があれば SKILL.md は極薄でよい
+### 3. references/ があれば SKILL.md はごく簡潔でよい
 
-初見が実行方法を分かるよう、主プロセスは `SKILL.md` に残します。
+初めて読む人にも実行方法が分かるよう、主プロセスは `SKILL.md` に残します。
 
 ## 原則
 

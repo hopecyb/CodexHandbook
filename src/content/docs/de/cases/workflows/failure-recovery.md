@@ -3,10 +3,16 @@ title: Fehlerwiederherstellung
 description: "Wenn die Aufgabe driftet, Tests rot werden oder der Kontext erschöpft ist — sicher zurücksetzen und weitermachen."
 locale: de
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Übergabe und Fortsetzen, Diagnose, Befehlsregeln und Fehlerreferenz. Diese Seite erklärt die allgemeine Methode zu Schadenbegrenzung und Weiterarbeit
+    und macht keine Client-Buttons oder -Befehle zur festen Regel.
+  checkedAt: '2026-07-26'
 ---
 
 **Fehlerwiederherstellung** beschreibt, wie man nach Drift oder Unterbrechung den Zustand sichert und weitergeht. Dieses Kapitel gibt einen wiederholbaren Ablauf **Erkennen → Schaden begrenzen → Wiederherstellen → Retro**, kombinierbar mit [Rückgängig machen und wiederherstellen](/de/guide/getting-started/undo-and-recover/) sowie [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/).
@@ -63,7 +69,7 @@ Bei Multi-Agent: siehe [Multi-Agent-Koordination](/de/cases/workflows/multi-agen
 
 - In die falsche Richtung «noch ein Patch drauf»
 - Fehlerlogs nicht speichern → neuer Thread wiederholt denselben Fehler
-- Mit `git push` die Lage «retten»
+- Mit einem erzwungenen `git push` die Lage «retten»
 - Umgebung (lokal vs. Cloud) nicht unterscheiden → Wiederherstellungsschritte wirkungslos
 
 ## Sicherheitsgrenzen
@@ -83,10 +89,3 @@ Bei Multi-Agent: siehe [Multi-Agent-Koordination](/de/cases/workflows/multi-agen
 - [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/)
 - [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 - [Fehlerreferenz](/de/guide/reference/error-reference/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Übergabe und Fortsetzen, Diagnose, Befehlsregeln und Fehlerreferenz. Diese Seite erklärt die allgemeine Methode zu Schadenbegrenzung und Weiterarbeit und macht keine Client-Buttons oder -Befehle zur festen Regel.  
-**Zuletzt geprüft:** 2026-07-26

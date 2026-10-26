@@ -3,12 +3,16 @@ title: Secrets et variables d'environnement
 description: Choisissez correctement entre les Secrets de setup Cloud et les variables ordinaires disponibles pendant toute la conversation.
 locale: fr
 source_locale: zh-CN
-source_revision: 78937be
+source_revision: "78937be"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Les variables d'environnement Cloud et les Secrets n'ont pas le même cycle de vie. Cette distinction détermine les usages qu'ils peuvent prendre en charge sans risque ; le masquage dans l'interface n'est pas leur seule différence.
@@ -20,7 +24,7 @@ Les variables d'environnement Cloud et les Secrets n'ont pas le même cycle de v
 
 Un Secret est stocké avec un chiffrement supplémentaire, déchiffré uniquement pendant l'exécution de la tâche, puis retiré avant le début de la phase Agent. Il ne s'agit pas d'un canal général permettant à un Agent d'appeler une API de production pendant son exécution.
 
-## Exemple correct : installer un paquet prive
+## Exemple correct : installer un paquet privé
 
 Créez un Secret `NPM_TOKEN` dans les paramètres de l'environnement. Le script de setup l'utilise pour créer une configuration d'authentification temporaire et installer les dépendances :
 
@@ -37,13 +41,13 @@ Pendant la phase Agent, le token n'est plus nécessaire : l'Agent utilise les d�
 
 ```text
 Configurer une API_KEY de production comme variable d'environnement ordinaire,
-puis demander a l'Agent d'appeler le service externe avec curl pour vérifier une
-commande reelle.
+puis demander à l’Agent d'appeler le service externe avec curl pour vérifier une
+commande réelle.
 ```
 
 Le secret resterait ainsi exposé pendant toute la phase Agent. Si l'accès réseau est ouvert, cela crée un risque d'exfiltration ou d'opération accidentelle. Utilisez plutôt des fixtures, des mocks, des identifiants de test temporaires et strictement limités, ou cantonnez au setup les préparations qui exigent une authentification.
 
-## Reviser la configuration
+## Réviser la configuration
 
 1. Répertoriez les valeurs réellement nécessaires pendant les phases setup et Agent.
 2. Utilisez un Secret pour les valeurs sensibles requises uniquement lors de l'installation.
@@ -56,7 +60,7 @@ Le setup s'exécute dans une session Bash distincte. Un simple `export` ne persi
 
 ## Relation avec la CI
 
-Les Secrets GitHub Actions et Codex Cloud sont stockes séparément et ne se synchronisent pas automatiquement. Reutiliser les mêmes **noms** de variables peut simplifier la documentation, mais ne copiez pas dans les deux systèmes un même token de production disposant de droits excessifs.
+Les Secrets GitHub Actions et Codex Cloud sont stockés séparément et ne se synchronisent pas automatiquement. Réutiliser les mêmes **noms** de variables peut simplifier la documentation, mais ne copiez pas dans les deux systèmes un même token de production disposant de droits excessifs.
 
 ## Après une exposition
 
@@ -65,11 +69,3 @@ Révoquez ou renouvelez immédiatement l'identifiant, puis retirez-le des journa
 ## Source officielle
 
 - [Environnements Cloud : variables et Secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** Cloud
-
-**Dernière vérification :** 2026-08-26

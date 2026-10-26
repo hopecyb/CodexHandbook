@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page explains long-task splitting and handoff only; in-site links and phase examples were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details."
+  checkedAt: "2026-07-26"
 title: Long-running tasks
 description: Phases, checkpoints, and handoff information.
 locale: en
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: '450ed9d'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Long tasks often fail like this:
@@ -71,7 +76,7 @@ For long work, try four phases:
 
 ```text
 Phase 1: Research and list options; no code changes; wait for my confirmation
-Phase 2: Minimal changes only; report impact after each batch
+Phase 2: Minimal changes only; report the affected scope when finished
 Phase 3: Add verification and run relevant checks
 Phase 4: Summarize changes, risks, and follow-up recommendations
 ```
@@ -79,10 +84,3 @@ Phase 4: Summarize changes, risks, and follow-up recommendations
 Better to stop and check each segment than finish everything in one breath.
 
 See also: [Progress and steering](/en/guide/agent-work/progress-and-steering/) · [Handoff and resume](/en/guide/agent-work/handoff-and-resume/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains long-task splitting and handoff only; in-site links and phase examples were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.

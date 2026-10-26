@@ -7,9 +7,10 @@ title: Tipos de eventos Hook
 description: Escolher eventos ao longo do ciclo de vida da sessão, do turno, das chamadas de ferramentas, da compactação e dos subagentes.
 locale: pt
 source_locale: zh-CN
-source_revision: 07f4965
-translation_status: draft
+source_revision: "07f4965"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 Ao escolher um Hook, a primeira pergunta não é «como escrever o script?», mas sim «deve atuar antes ou depois do efeito secundário?». Um script ligado ao evento errado pode limitar-se a comunicar o problema depois de ele acontecer.
@@ -22,15 +23,15 @@ Ao escolher um Hook, a primeira pergunta não é «como escrever o script?», ma
 |---|---|---|---|
 | `SessionStart` | Início ou retoma de uma sessão | `startup`, `resume`, `clear`, `compact` | Notas do ambiente, recuperação de contexto |
 | `SubagentStart` | Arranque de um subagente | Tipo de subagente | Acrescentar restrições ao subagente |
-| `UserPromptSubmit` | Envio de um prompt pelo utilizador | Não suportado; a configuração é ignorada | Pesquisa de segredos, contexto de desenvolvimento |
+| `UserPromptSubmit` | Envio de um prompt pelo usuário | Não suportado; a configuração é ignorada | Pesquisa de segredos, contexto de desenvolvimento |
 | `PreToolUse` | Antes da execução de uma ferramenta local suportada | Nome da ferramenta | Recusar ou alterar a chamada |
 | `PermissionRequest` | Codex está prestes a pedir aprovação | Nome da ferramenta | Permitir, recusar ou deixar seguir a aprovação normal |
 | `PostToolUse` | Depois de uma ferramenta local suportada devolver o resultado | Nome da ferramenta | Registar resultados, dar feedback para o raciocínio seguinte |
 | `PreCompact` | Antes da compactação do contexto | `manual` / `auto` | Guardar o estado antes da compactação |
 | `PostCompact` | Depois da compactação do contexto | `manual` / `auto` | Restaurar o contexto necessário |
 | `SubagentStop` | Um subagente está prestes a terminar | Tipo de subagente | Exigir mais uma verificação |
-| `Stop` | O turno principal está prestes a terminar | Não suportado; a configuração é ignorada | Pedir ao processo principal que continue a verificar |
-| `SessionEnd` | Fim do processo principal | Atualmente `other` | Log rápido de encerramento; não corre para subagentes |
+| `Stop` | O turno principal está prestes a terminar | Não suportado; a configuração é ignorada | Pedir ao thread principal que continue a verificar |
+| `SessionEnd` | Fim do thread principal | Atualmente `other` | Log rápido de encerramento; não corre para subagentes |
 
 ## Matchers de ferramentas
 
@@ -44,7 +45,7 @@ mcp__filesystem__read_file
 mcp__filesystem__.*
 ```
 
-A shell e a execução unificada de comandos correspondem a `Bash`. `apply_patch` também pode corresponder aos nomes alternativos `Edit` ou `Write`. Ferramentas MCP e outras funções locais correspondem ao respetivo nome real.
+A shell e a execução unificada de comandos correspondem a `Bash`. `apply_patch` também pode corresponder aos nomes alternativos `Edit` ou `Write`. ferramentas MCP e outras funções locais correspondem ao respetivo nome real.
 
 ## Três eventos fáceis de confundir
 
@@ -64,7 +65,7 @@ Só ocorre quando o Codex já estava prestes a pedir aprovação, por exemplo pa
 
 ### PostToolUse
 
-A ferramenta já foi executada; o evento ocorre mesmo que Bash termine com um código diferente de zero. Devolver `block` ou sair com código `2` apenas substitui o feedback para o modelo processar. Não desfaz comandos, escritas em ficheiros nem ações externas.
+A ferramenta já foi executada; o evento ocorre mesmo que Bash termine com um código diferente de zero. Devolver `block` ou sair com código `2` apenas substitui o feedback para o modelo processar. Não desfaz comandos, escritas em arquivos nem ações externas.
 
 ## Stop não é um botão para «recusar terminar»
 
@@ -74,7 +75,7 @@ Em `Stop`, `decision: "block"` cria automaticamente, a partir de `reason`, um pr
 
 | Necessidade | Escolha | Motivo |
 |---|---|---|
-| Impedir a escrita de um token suspeito num ficheiro | `PreToolUse` com `apply_patch|Edit|Write` | É preciso atuar antes da escrita |
+| Impedir a escrita de um token suspeito num arquivo | `PreToolUse` com `apply_patch|Edit|Write` | É preciso atuar antes da escrita |
 | Medir a taxa de falhas da shell | `PostToolUse` com `Bash` | É preciso conhecer o resultado |
 | Guardar decisões importantes antes de uma compactação automática | `PreCompact` | Ocorre antes da compactação |
 | Impedir que a tarefa termine sem executar os testes | `Stop` | Continuar o turno atual |

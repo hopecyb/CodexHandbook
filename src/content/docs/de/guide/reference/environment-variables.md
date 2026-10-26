@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE / Cloud"
+  basis: "OpenAI Help Center Config-Doku beschreibt weiterhin `~/.codex/.env`, CI-/Laufzeit-Injection und Plattform-Secrets; Fokus auf stabile Prinzipien „was in Env, was nicht, `.env` nur lokaler Container“ — keine feste Variablennamensliste."
+  checkedAt: "2026-07-26"
 title: Umgebungsvariablen
 description: 'Zweck, Schichten und Sicherheit Codex-bezogener Umgebungsvariablen — ergänzender Index zur Konfigurationsreferenz.'
 locale: de
 source_locale: zh-CN
-source_revision: 58fd37b
+source_revision: "58fd37b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 80
 ---
 
-Bei Umgebungsvariablen landen viele in Extremen: zu „low-level“ oder „alles reinpacken“. Direkt gesagt: Zur Laufzeit Werte an Programme übergeben — besonders für Sensitive und Schalter.
+Umgebungsvariablen wirken auf manche zu technisch; andere möchten darin jede Konfiguration unterbringen. Sie übergeben einem Programm zur Laufzeit Werte und eignen sich besonders für vertrauliche Angaben und vorübergehende Einstellungen.
 
-Umgebungsvariablen dienen oft dazu, **Keys zu injizieren, Schalter zu überschreiben, CI anzupassen**, ohne Sensitive in Config-Dateien oder Git. Konzeptindex; konkrete Namen: [offizielle Docs](https://developers.openai.com/codex) und `codex --help`.
+Umgebungsvariablen dienen oft dazu, **Keys zu injizieren, Schalter zu überschreiben, CI anzupassen**, ohne vertrauliche Werte in Konfigurationsdateien oder Git zu speichern. Konzeptindex; konkrete Namen: [offizielle Docs](https://developers.openai.com/codex) und `codex --help`.
 
 ## Inhalt dieser Seite
 
@@ -42,13 +47,13 @@ Config-Schlüssel: [Konfigurationsreferenz](/de/guide/reference/configuration-re
 | CI-Injection | Read-only-Review-Modus | Prod-Schreib-Token |
 | MCP-Subprozess | Drittanbieter-Service-Key | Klartext in `AGENTS.md` |
 
-## Kein Universal-Schublade
+## Keine universelle Ablage
 
 Teams rutschen oft in „passt schon in Env“.
 
 Klarer trennen:
 
-- **Sensitive, Laufzeitdifferenz**: Env-Var
+- **Vertrauliche Werte und Unterschiede zur Laufzeit**: Env-Var
 - **Langfristige Team-Vereinbarung**: Config oder Doku
 - **Workflow-Regeln**: `AGENTS.md` oder Skill
 
@@ -94,7 +99,7 @@ Risiken noch in:
 - Logs
 - Frühere Dateien/Screenshots
 
-### 4. Lokal `.env` → Prod auch einfach `.env` committen?
+### 4. Lokal funktioniert `.env` — reicht es, dieselbe Datei in die Produktionsumgebung zu übertragen?
 
 In CI/Cloud/Hosted oft:
 
@@ -158,7 +163,7 @@ Env-Vars für Veränderliches, Sensibles, Laufzeit-Nötiges — nicht für Langz
 ## Sicherheitscheckliste
 
 - [ ] `.env` in `.gitignore`
-- [ ] Logs vor Token-Ausgabe redaktieren
+- [ ] Tokens vor der Protokollausgabe entfernen oder unkenntlich machen
 - [ ] Geleakte Keys rotieren
 - [ ] Least-Privilege-Scope (Read-only-CI-Token usw.)
 
@@ -170,9 +175,3 @@ Env-Vars für Veränderliches, Sensibles, Laufzeit-Nötiges — nicht für Langz
 
 ## Quellen
 - OpenAI Codex configuration / environment-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI / App / IDE / Cloud  
-**Prüfgrundlage:** OpenAI Help Center Config-Doku beschreibt weiterhin `~/.codex/.env`, CI-/Laufzeit-Injection und Plattform-Secrets; Fokus auf stabile Prinzipien „was in Env, was nicht, `.env` nur lokaler Container“ — keine feste Variablennamensliste.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,59 +1,64 @@
 ---
-title: Seleção de Ferramentas
-description: Quando usar terminal, pesquisa, browser ou outras Ferramentas.
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Princípios de seleção de ferramentas orientados pela tarefa: ler/alterar projeto → arquivos; validar comandos → terminal; fatos públicos → pesquisa; página real → navegador; este quadro foi cruzado com o capítulo de ferramentas do manual e com as categorias reais de ferramentas."
+  checkedAt: "2026-07-26"
+title: Seleção de ferramentas
+description: Quando usar terminal, pesquisa, navegador ou outras ferramentas.
 locale: pt
 source_locale: zh-CN
-source_revision: 9fdb366
+source_revision: "9fdb366"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
 
-«Seleção de Ferramentas» é: que forma usar para fazer isto — eficaz e segura.
+«Seleção de ferramentas» é: que forma usar para fazer isto — eficaz e segura.
 
-Ao escolher, julgar pelo tipo de Tarefa costuma ser mais claro.
+Ao escolher, julgar pelo tipo de tarefa costuma ser mais claro.
 
-## O que se olha ao escolher Ferramenta
+## O que se olha ao escolher ferramenta
 
 Ao escolher, veja sobretudo:
 
-- Qual está mais perto da Tarefa atual
+- Qual está mais perto da tarefa atual
 - Qual obtém o resultado com o menor custo
 - Qual tem o menor risco e é mais fácil de verificar
 
-O mesmo objetivo com a Ferramenta errada pode não falhar de todo, mas costuma ser mais lento, mais indireto e com mais surpresas.
+O mesmo objetivo com a ferramenta errada pode não falhar de todo, mas costuma ser mais lento, mais indireto e com mais surpresas.
 
 | Necessidade | Prioridade |
 |---|---|
-| Alterar ficheiros no repositório | Ferramentas de ficheiros |
+| Alterar arquivos no repositório | ferramentas de arquivos |
 | Correr testes/build | Terminal |
-| Verificar factos públicos | Pesquisa Web |
-| Ver o estado real da página | Browser (avançado) |
+| Verificar fatos públicos | Pesquisa Web |
+| Ver o estado real da página | Navegador (avançado) |
 
-No Prompt, declare Ferramentas permitidas e proibidas — reduza saída de rede não autorizada ou instalação aleatória de dependências.
+No Prompt, declare ferramentas permitidas e proibidas — reduza saída de rede não autorizada ou instalação aleatória de dependências.
 
 ## Como escolher quando não tem a certeza
 
 Se não souber de imediato:
 
-1. Está a tratar o projeto local ou a verificar factos externos?
+1. Está a tratar o projeto local ou a verificar fatos externos?
 2. Precisa de «executar uma ação» ou só de «ver o resultado»?
-3. Qual Ferramenta completa este passo no menor âmbito?
+3. Qual ferramenta completa este passo no menor escopo?
 
 Por exemplo:
 
-- Ver alterações de código → ficheiros
+- Ver alterações de código → arquivos
 - Confirmar se o build passa → terminal
-- Confirmar como a página está agora → browser
+- Confirmar como a página está agora → navegador
 - Confirmar informação pública atualizada → pesquisa Web
 
 ## Mal-entendidos habituais
 
-### 1. Ferramenta mais forte ≠ melhor
+### 1. ferramenta mais forte ≠ melhor
 
-Ferramentas mais fortes costumam também significar:
+ferramentas mais fortes costumam também significar:
 
 - Maior superfície de impacto
 - Mais risco
@@ -61,41 +66,34 @@ Ferramentas mais fortes costumam também significar:
 
 ### 2. O terminal faz tudo — não tem de ser a primeira escolha
 
-Se só quer ver como a página está, o browser costuma ser mais direto.  
+Se só quer ver como a página está, o navegador costuma ser mais direto.
 Se só quer um número de versão público, a pesquisa Web encaixa melhor do que correr comandos por todo o lado.
 
 ### 3. E se não souber escolher?
 
 Regra prática:
 
-- **Ler/alterar conteúdo do projeto** → ficheiros
+- **Ler/alterar conteúdo do projeto** → arquivos
 - **Validar comando ou build** → terminal
-- **Verificar factos públicos** → pesquisa
-- **Ver a apresentação real da página** → browser
+- **Verificar fatos públicos** → pesquisa
+- **Ver a apresentação real da página** → navegador
 
-### 4. Uma Tarefa costuma usar mais do que uma Ferramenta
+### 4. Uma tarefa costuma usar mais do que uma ferramenta
 
-Muitas Tarefas reais combinam, por exemplo:
+Muitas tarefas reais combinam, por exemplo:
 
-- Ler ficheiros e depois correr o build
-- Pesquisar factos públicos e voltar a reescrever a documentação
-- Ver a página no browser e depois corrigir no código
+- Ler arquivos e depois correr o build
+- Pesquisar fatos públicos e voltar a reescrever a documentação
+- Ver a página no navegador e depois corrigir no código
 
-O essencial é, em cada passo, usar a Ferramenta mais adequada — não teimar em «só pode escolher uma».
+O essencial é, em cada passo, usar a ferramenta mais adequada — não teimar em «só pode escolher uma».
 
 ## Redação aplicável diretamente
 
-Pode acrescentar na Tarefa:
+Pode acrescentar na tarefa:
 
 ```text
 Priorize ficheiros e terminal; não pesquise na rede; se precisar do browser para verificar a página, explique primeiro o motivo.
 ```
 
-Escolha primeiro a Ferramenta mínima e mais alinhada com a Tarefa — não comece pela de maior superfície de impacto.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Princípios de seleção de Ferramentas orientados pela Tarefa: ler/alterar projeto → ficheiros; validar comandos → terminal; factos públicos → pesquisa; página real → browser; este quadro foi cruzado com o capítulo de Ferramentas do manual e com as categorias reais de Ferramentas.  
-**Última verificação:** 2026-07-26
+Escolha primeiro a ferramenta mínima e mais alinhada com a tarefa — não comece pela de maior superfície de impacto.

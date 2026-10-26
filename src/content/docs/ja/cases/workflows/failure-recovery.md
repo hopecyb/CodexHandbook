@@ -3,13 +3,18 @@ title: 失敗からの回復
 description: タスクが逸脱、テストが赤、コンテキスト枯渇——安全にロールバックして続ける方法。
 locale: ja
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの検証済み引き継ぎ・再開、診断、コマンドルール、エラー参照章と照合。一般的な失敗時の被害の拡大防止と継続方法のみで、特定クライアントの回復ボタンやコマンドを固定ルールとして扱わない。
+  checkedAt: "2026-07-26"
 ---
 
-**失敗からの回復**は、タスクが軌道を外れたり途中で止まったあと、状況を安定させる方法を扱います。本章は **検知 → 損失停止 → 回復 → 事後分析** の反復手順を示し、[取り消しと回復](/ja/guide/getting-started/undo-and-recover/) および [長時間タスク管理](/ja/cases/workflows/long-running-task-management/) と組み合わせます。
+**失敗からの回復**は、タスクが軌道を外れたり途中で止まったあと、状況を安定させる方法を扱います。本章は **検知 → 被害の拡大防止 → 回復 → 事後分析** の反復手順を示し、[取り消しと回復](/ja/guide/getting-started/undo-and-recover/) および [長時間タスク管理](/ja/cases/workflows/long-running-task-management/) と組み合わせます。
 
 ![イラスト：半分崩れた積み木の塔を人とアシスタントがチェックリストに沿って落ち着いて組み直し、戻し矢印が積み木を安定した土台に戻す](/illustrations/failure-recovery.webp)
 
@@ -51,7 +56,7 @@ reviewed_at: 2026-08-26
 
 ```text
 検知（テスト / 人 / CI）
-    → 損失停止（書き込み停止、ブランチ分離）
+    → 被害の拡大防止（書き込み停止、ブランチ分離）
     → 診断（「修正前に診断」を参照）
     → 小さなステップで再試行
     → 教訓を記録
@@ -61,7 +66,7 @@ reviewed_at: 2026-08-26
 
 ## よくあるミス
 
-- パッチを逆方向に積み重ねる
+- 誤った方向のまま「もう少し」とパッチを積み重ねる
 - 失敗ログを保存せず、新スレッドで同じエラー
 - 救済のため `git push` を強行
 - 環境（ローカル vs Cloud）を区別しない——回復手順が無効に
@@ -83,10 +88,3 @@ reviewed_at: 2026-08-26
 - [修正前に診断する](/ja/cases/workflows/diagnose-before-fixing/)
 - [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/)
 - [エラー参照](/ja/guide/reference/error-reference/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの検証済み引き継ぎ・再開、診断、コマンドルール、エラー参照章と照合。一般的な失敗時の損失停止と継続方法のみで、特定クライアントの回復ボタンやコマンドを固定ルールとして扱わない。

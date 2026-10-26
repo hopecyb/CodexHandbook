@@ -1,14 +1,19 @@
 ---
-title: AI và mô hình ngôn ngữ
-description: Hiểu mô hình ngôn ngữ tạo phản hồi dựa trên ngữ cảnh như thế nào.
-locale: vi
-source_locale: zh-CN
-source_revision: ccdac83
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "AI và mô hình ngôn ngữ"
+description: "Hiểu mô hình ngôn ngữ tạo phản hồi dựa trên ngữ cảnh như thế nào."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "ccdac83"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích nguyên lý cơ bản mô hình ngôn ngữ tạo đầu ra dựa trên ngữ cảnh; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Mô hình ngôn ngữ dựa trên chữ, tệp và kết quả công cụ bạn cung cấp để **dự đoán đầu ra hợp lý nhất tiếp theo**. Nó rất giỏi hoàn thiện, sắp xếp, soạn thảo và làm tiếp theo ngữ cảnh — nhưng không tự nhiên biết thông tin bạn chưa đưa, cũng không đảm bảo lần nào cũng hoàn toàn đúng.
@@ -47,7 +52,7 @@ Nó đang đẩy tiếp theo ngữ cảnh hiện tại — không tự biết đ
 
 Thường thì không.
 
-Nó có thể đoán, nhưng đừng trông chờ mặc định đoán đúng.  
+Nó có thể đoán, nhưng đừng trông chờ mặc định đoán đúng.
 Vì vậy thông tin bạn biết trong đầu nhưng chưa giao rõ cho nó — thường chính là chỗ dễ sai nhất.
 
 ### 2. Nó viết được mã hoặc tài liệu nghĩa là nó thật sự hiểu rồi
@@ -69,10 +74,3 @@ Bạn càng cần phán đoán:
 Công cụ tìm kiếm chủ yếu trả về trang web có sẵn; Codex giống hơn việc **gọi công cụ và tạo thay đổi có thể thực thi** dưới mục tiêu của bạn. Cả hai đều cần bạn phán đoán độ tin cậy.
 
 Chỗ mô hình ngôn ngữ hữu ích hơn là: khi đã có đủ ngữ cảnh, nó có thể nhanh chóng làm tiếp theo mục tiêu của bạn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích nguyên lý cơ bản mô hình ngôn ngữ tạo đầu ra dựa trên ngữ cảnh; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

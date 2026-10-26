@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/chatgpt/"
 locale: en
 source_locale: zh-CN
-source_revision: 225d837
-translation_status: draft
+source_revision: '225d837'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 ## Verifiable event and scope

@@ -8,10 +8,10 @@ title: scripts/ y pruebas
 description: Añade scripts deterministas a un Skill y verifica su comportamiento.
 locale: es
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: "900e6e4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Al empezar un Skill, lo habitual es meterlo todo en `SKILL.md`. En flujos simples vale; pero cuando un paso debe ejecutarse de forma **estable, repetible y verificable**, un script es más fiable que solo prosa.
@@ -36,7 +36,7 @@ Si un paso cumple cualquiera de estas, prioriza un script:
 
 - Debe ejecutarse exactamente igual cada vez
 - El código de salida en sí tiene sentido
-- Describirlo en lenguaje natural sería muy verboso
+- Describirlo en lenguaje natural sería demasiado extenso
 - Quieres reutilizarlo después en CI u otras herramientas
 
 Acciones como «correr comprobaciones», «generar diff», «validar formato» o «exportar un informe fijo» encajan en scripts.
@@ -58,7 +58,7 @@ Si el script fija un paso que antes era inestable, el conjunto suele volverse m�
 También hay que mirar:
 
 - Si el Skill lo dispara correctamente
-- Si la política de Aprobación lo bloquea
+- Si la política de aprobación lo bloquea
 - Si sigue funcionando en el entorno del equipo o en CI
 
 ### 3. «Probar el Skill» es solo probar el script
@@ -81,4 +81,4 @@ Así separas «el script está roto» de «la integración del Skill es incorrec
 
 Las acciones que pueden repetirse de forma estable no deben depender solo de prosa. Primero haz correr el script; luego confirma que la llamada del Skill está bien.
 
-Los scripts heredan la política de Aprobación actual; ver [Reglas de comandos](/es/guide/customization/rules/command-rules/) y [Seguridad de Skills](/es/skills/security/).
+Los scripts heredan la política de aprobación actual; ver [Reglas de comandos](/es/guide/customization/rules/command-rules/) y [Seguridad de Skills](/es/skills/security/).

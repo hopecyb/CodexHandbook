@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: "fc91872"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Guarde primeiro o erro, identifique a camada que falhou e só então mude uma variável e execute de novo. Esta página demonstra o processo com cinco entradas fixas. O autor criou as falhas intencionalmente; os logs vêm de execuções reais na linha de comando, não de incidentes de clientes.

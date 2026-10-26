@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud environments
 description: Configure runtimes, dependencies, setup, caching, and repository starting points for Codex Cloud.
 locale: en
 source_locale: zh-CN
-source_revision: 1745f70
+source_revision: '1745f70'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -74,11 +78,3 @@ These boundaries are easy to confuse. See [Secrets and environment variables](/e
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [codex-universal image](https://github.com/openai/codex-universal)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

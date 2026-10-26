@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Comparado con la documentación actual de Non-interactive mode para `codex exec`, `--cd`, el sandbox predeterminado de solo lectura, el progreso en `stderr` y la respuesta final en `stdout`.
+  checkedAt: '2026-08-26'
 title: Modo no interactivo
 description: Integra codex exec con scripts y pipelines para CI, tareas programadas y automatización.
 locale: es
-source_locale: zh-cn
-source_revision: 1f37961
+source_locale: zh-CN
+source_revision: "1f37961"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 30
 ---
@@ -55,7 +60,7 @@ codex exec --cd . "Escribe notas de publicación para los últimos 10 commits" >
 
 Recomendaciones prácticas:
 
-- En un script de shell, usa primero `cd` para entrar en un worktree limpio.
+- En un script de shell, usa primero `cd` para entrar en una copia de trabajo limpia.
 - Conserva la tarea en un heredoc o en un archivo versionado dentro de `prompts/`.
 - Captura el código de salida y haz fallar CI si falla el proceso.
 
@@ -92,7 +97,7 @@ No pegues un historial de chat entero en un script. Redúcelo a una especificaci
 | Objetivo | El único resultado esperado |
 | Entrada | Archivos, diff, registros o stdin que se deben leer |
 | Prohibiciones | Sin ediciones, internet, push ni interrupción de CI |
-| Salida | Resumen de texto, JSON, archivo de informe o resultado de salida |
+| Salida | Resumen de texto, JSON, archivo de informe o código de salida |
 | Aceptación | Comandos que deben pasar y cadenas que no deben aparecer |
 
 Un prompt no interactivo debe parecerse a una orden de trabajo: límites claros, entradas completas y condiciones de fallo explícitas. Mantén en modo interactivo las tareas que todavía requieren criterio de producto, decisiones de diseño o confirmación de permisos.
@@ -126,12 +131,3 @@ Usa el modo no interactivo para automatizar después de familiarizarte con los f
 
 ## Fuente de referencia
 - Documentación de OpenAI Codex CLI
----
-
-**Estado:** verified
-
-**Productos aplicables:** CLI
-
-**Base de verificación:** Comparado con la documentación actual de Non-interactive mode para `codex exec`, `--cd`, el sandbox predeterminado de solo lectura, el progreso en `stderr` y la respuesta final en `stdout`.
-
-**Última verificación:** 2026-08-26

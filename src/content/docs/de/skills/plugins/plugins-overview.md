@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App / Mobile; Codex Desktop und CLI; IDE-Erweiterung unterstützt keine Plugins"
+  checkedAt: "2026-08-26"
 title: Plugins im Überblick
 description: Verstehe Bestandteile, unterstützte Oberflächen, Installationsprüfung und Vertrauensgrenzen eines Plugins.
 locale: de
 source_locale: zh-CN
-source_revision: 4efe5a8
+source_revision: "4efe5a8"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 ChatGPT und Codex verwenden dieselbe öffentliche Plugin-Sammlung. Ein Plugin bündelt zusammengehörige Funktionen in einem auffindbaren und installierbaren Workflow, statt ein neues Werkzeugaufrufprotokoll zu erfinden.
@@ -104,11 +108,3 @@ Verifiziere zuerst einen einzelnen Skill- oder MCP-Workflow. Erst danach lohnt s
 
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App / Mobile; Codex Desktop und CLI; IDE-Erweiterung unterstützt keine Plugins
-
-**Zuletzt geprüft:** 2026-08-26

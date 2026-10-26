@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só oferece a visão geral dos módulos de capacidade e a atribuição aos capítulos autoritativos; links internos, diagrama estrutural e mapeamento de módulos foram revisados, e o texto não depende de fatos de produto voláteis."
+  checkedAt: "2026-07-26"
 title: Mapa de capacidades
-description: Visão geral de Prompt, Ferramentas, extensões, multi-Agent, governança e outros módulos.
+description: Visão geral de Prompt, ferramentas, extensões, multi-Agent, governança e outros módulos.
 locale: pt
 source_locale: zh-CN
-source_revision: 1a4cd98
+source_revision: "1a4cd98"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 7
 ---
 
-Há muitos módulos neste handbook; na primeira leitura é fácil se dispersar. Esta página coloca as capacidades principais num só mapa, para alinhar a estrutura rápido.
+Há muitos módulos neste manual; na primeira leitura é fácil se dispersar. Esta página coloca as capacidades principais num só mapa, para alinhar a estrutura rápido.
 
 Dois pontos de travamento comuns:
 
@@ -37,10 +42,10 @@ Objetivo e Prompt
 Você pode ver o Codex em três camadas:
 
 - Primeira: como você formula o pedido para ele saber o que fazer
-- Segunda: com que Contexto e Ferramentas ele realiza o trabalho
+- Segunda: com que contexto e ferramentas ele realiza o trabalho
 - Terceira: como você consolida esse modo de colaboração para reutilizar depois
 
-No começo, as duas primeiras camadas importam mais. Deixe a Tarefa clara, faça o resultado fluir — e só então olhe as extensões avançadas.
+No começo, as duas primeiras camadas importam mais. Deixe a tarefa clara, faça o resultado fluir — e só então olhe as extensões avançadas.
 
 ## Mal-entendidos comuns
 
@@ -48,14 +53,14 @@ No começo, as duas primeiras camadas importam mais. Deixe a Tarefa clara, faça
 
 Skills, MCP, Hooks e automação são poderosos, mas resolvem sobretudo ampliação de eficiência e reuso em escala — não o que mais trava quem está começando.
 
-Se Prompt, Contexto e escolha de Ferramentas ainda não estão sólidos, as extensões também tendem a ser mal usadas.
+Se Prompt, contexto e escolha de ferramentas ainda não estão sólidos, as extensões também tendem a ser mal usadas.
 
 ### Este mapa também pode servir de ordem de leitura
 
 Não precisa ler página a página pelo sumário do site. Pode seguir esta ordem:
 
 1. Entender como o Codex funciona
-2. Aprender a dar a Tarefa, fornecer Contexto e verificar o resultado
+2. Aprender a dar a tarefa, fornecer contexto e verificar o resultado
 3. Depois que o uso estiver fluido, considerar configuração, extensão e automação
 
 ## Ordem de início
@@ -69,9 +74,9 @@ Não precisa ler página a página pelo sumário do site. Pode seguir esta ordem
 
 | Capacidade | Local autoritativo |
 |---|---|
-| Modelo, Agent, Permissão, Sandbox | [Fundamentos](/pt/guide/foundations/) |
+| Modelo, Agent, permissão, Sandbox | [Fundamentos](/pt/guide/foundations/) |
 | Como clicar e rodar em cada entrada | [Guias de produto](/pt/guide/) |
-| Prompt, Contexto, Ferramentas, qualidade | [Capacidades principais](/pt/guide/) |
+| Prompt, contexto, ferramentas, qualidade | [Capacidades principais](/pt/guide/) |
 | AGENTS.md e configuração | [Personalização](/pt/guide/customization/) |
 | Skills, MCP, Plugin, automação | [Extensão e automação](/pt/skills/) |
 | Métodos de colaboração repetíveis | [Métodos de fluxo de trabalho](/pt/cases/workflows/) |
@@ -79,10 +84,3 @@ Não precisa ler página a página pelo sumário do site. Pode seguir esta ordem
 | Ordem de leitura | [Caminhos de aprendizagem](/pt/guide/learning-paths/) |
 
 Mapa geral de escolha de extensões: [Mapa de capacidades de extensão](/pt/skills/capability-map/). Comparação de produtos: [Comparação de recursos](/pt/guide/reference/feature-comparison/). Diferenças de capacidade entre entradas ficam na página de comparação.
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só oferece a visão geral dos módulos de capacidade e a atribuição aos capítulos autoritativos; links internos, diagrama estrutural e mapeamento de módulos foram revisados, e o texto não depende de fatos de produto voláteis.  
-**Última verificação:** 2026-07-26

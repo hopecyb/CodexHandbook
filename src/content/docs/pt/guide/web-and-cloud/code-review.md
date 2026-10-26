@@ -7,20 +7,21 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: pt
 source_locale: zh-CN
-source_revision: ea6796a
-translation_status: draft
+source_revision: "ea6796a"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
 
-Quando uma tarefa Cloud termina, apresenta um resumo e um diff. Pode fazer perguntas de seguimento, pedir alterações ou criar um PR. A conclusão da tarefa não equivale a uma aprovação da fusão: ainda são necessários o CI, as proteções de branch e o julgamento humano do projeto.
+Quando uma tarefa Cloud termina, apresenta um resumo e um diff. Pode fazer perguntas de seguimento, pedir alterações ou criar um PR. A conclusão da tarefa não equivale a uma aprovação do merge: ainda são necessários o CI, as proteções de branch e o julgamento humano do projeto.
 
 ## Dois tipos de revisão
 
 | Tipo | O que examina | Resultado |
 |---|---|---|
-| Revisão do resultado Cloud | Resumo, registos e diff desta tarefa | Decidir se é preciso continuar ou criar um PR |
+| Revisão do resultado Cloud | Resumo, registros e diff desta tarefa | Decidir se é preciso continuar ou criar um PR |
 | GitHub Codex review | Diff do PR num repositório ligado e regras de `AGENTS.md` | Publicar uma code review no GitHub |
 
 Num PR do GitHub, deixe o comentário:
@@ -33,11 +34,11 @@ O Codex publica as conclusões como uma revisão normal do GitHub. A documentaç
 
 ## Ordem de revisão
 
-1. **Âmbito**: os ficheiros, diretórios, dependências e artefactos gerados correspondem à tarefa?
-2. **Comportamento**: os caminhos normais, de falha e de fronteira cumprem os requisitos?
+1. **Escopo**: os arquivos, diretórios, dependências e artefatos gerados correspondem à tarefa?
+2. **Comportamento**: os fluxos normais, de falha e casos-limite cumprem os requisitos?
 3. **Segurança**: verificar autenticação, autorizações, tratamento de entradas, credenciais e acesso de rede de saída.
-4. **Provas**: que testes foram realmente executados e as falhas foram comunicadas?
-5. **Reversibilidade**: é possível reverter a alteração num âmbito pequeno, ou inclui refatorações sem relação?
+4. **Evidências**: que testes foram realmente executados e as falhas foram comunicadas?
+5. **Reversibilidade**: é possível reverter a alteração num escopo pequeno, ou inclui refatorações sem relação?
 
 Exemplo de prompt:
 
@@ -74,7 +75,7 @@ Quem possuir as permissões necessárias de push ou administração no GitHub po
 - [ ] Uma pessoa leu o diff da lógica principal.
 - [ ] As conclusões P0/P1 foram corrigidas ou o risco foi aceite por escrito.
 - [ ] O CI passou e as repetições após falhas são explicáveis.
-- [ ] Não há Secrets, artefactos gerados inesperados ou alterações de lockfile sem relação.
+- [ ] Não há Secrets, artefatos gerados inesperados ou alterações de lockfile sem relação.
 - [ ] A descrição da tarefa, a descrição do PR e as alterações reais são coerentes.
 
 ## Fontes oficiais

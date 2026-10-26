@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (tùy phiên bản và quyền)"
+  basis: "OpenAI Help Center hiện đã có hướng dẫn trình duyệt tích hợp trong App máy tính, xác nhận có thể mở trang trong Work hoặc Codex, chuyển tab, tải tệp, dùng chế độ chú thích, và phê duyệt truy cập theo từng site. Nội dung trang tập trung vào tình huống phù hợp của công cụ trình duyệt, khác biệt với tìm kiếm/Computer Use và ranh giới an toàn."
+  checkedAt: "2026-07-26"
 title: Công cụ trình duyệt
 description: Để Codex mở trang web, kiểm trạng thái UI và kiểm chứng hành vi frontend — năng lực và ranh giới.
 locale: vi
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: "802f889"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
 ---
 
-**Công cụ trình duyệt** cho phép Agent truy cập trang web thật trong môi trường được kiểm soát: đọc DOM, chụp màn hình, đôi khi cũng tương tác đơn giản. Nó phù hợp nghiệm thu frontend, kiểm liên kết tài liệu, đối chiếu bản thiết kế; không phù hợp thay kiểm toán bảo mật, cũng không nên dùng để tùy tiện thao tác backend production.
+**Công cụ trình duyệt** cho phép Agent truy cập trang web thật trong môi trường được kiểm soát: đọc DOM, chụp màn hình, đôi khi cũng tương tác đơn giản. Nó phù hợp nghiệm thu frontend, kiểm liên kết tài liệu, đối chiếu bản thiết kế; không phù hợp thay kiểm toán bảo mật, cũng không nên dùng để tùy tiện thao tác trang quản trị của hệ thống đang vận hành.
 
 Nó và tìm kiếm là hai loại công cụ khác nhau: tìm kiếm dùng để tìm thông tin trang web; công cụ trình duyệt dùng để thật sự mở trang.
 
@@ -37,7 +42,7 @@ Loại câu hỏi này chỉ đọc mã hoặc xem mô tả chữ thường chư
 |---|---|
 | Mở trang dev server cục bộ xem bố cục | Crawl hàng loạt site bị ToS hạn chế |
 | Kiểm liên kết tài liệu công khai 404 | Tự đăng nhập hệ thống chưa được ủy quyền |
-| Đối chiếu trang tĩnh với hiện thực | Thay khung kiểm thử E2E đầy đủ |
+| Đối chiếu trang tĩnh với phần triển khai | Thay khung kiểm thử E2E đầy đủ |
 | Đọc văn bản hiển thị trên trang hỗ trợ gỡ lỗi | Xử lý site cần xác minh người–máy phức tạp |
 
 Nền chọn công cụ: [Chọn công cụ](/vi/guide/tools/tool-selection/)
@@ -91,7 +96,7 @@ thì công cụ trình duyệt thường phù hợp hơn phân tích thuần vă
 Có thể yêu cầu vậy:
 
 ```text
-Chỉ truy cập http://localhost:4321/guide/foundations/local-vs-cloud/ , kiểm bố cục màn đầu và cảm giác hình tiêu đề.
+Chỉ truy cập http://localhost:4321/vi/guide/foundations/local-vs-cloud/ , kiểm bố cục màn đầu và cảm giác hình tiêu đề.
 Đừng truy cập mạng ngoài, đừng gửi bất kỳ form nào.
 Nếu phát hiện vấn đề, hãy đưa căn cứ ảnh chụp và đề xuất sửa.
 ```
@@ -116,10 +121,3 @@ Khái niệm phê duyệt: [Quyền và phê duyệt](/vi/guide/foundations/perm
 - [ ] Phạm vi truy cập đã khóa cứng trong prompt
 - [ ] Vấn đề hình ảnh then chốt có ảnh chụp hoặc mô tả chữ
 - [ ] Khớp kết luận kiểm thử đơn vị/E2E hoặc khác biệt đã biết đã ghi lại
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Codex (tùy phiên bản và quyền)  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện đã có hướng dẫn trình duyệt tích hợp trong App máy tính, xác nhận có thể mở trang trong Work hoặc Codex, chuyển tab, tải tệp, dùng chế độ chú thích, và phê duyệt truy cập theo từng site. Nội dung trang tập trung vào tình huống phù hợp của công cụ trình duyệt, khác biệt với tìm kiếm/Computer Use và ranh giới an toàn.  
-**Kiểm chứng gần nhất:** 2026-07-26

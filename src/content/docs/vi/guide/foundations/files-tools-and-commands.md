@@ -1,14 +1,19 @@
 ---
-title: Tệp, công cụ và lệnh
-description: Giải thích Codex đọc/ghi tệp, chạy lệnh và dùng công cụ như thế nào.
-locale: vi
-source_locale: zh-CN
-source_revision: 9d65338
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tệp, công cụ và lệnh"
+description: "Giải thích Codex đọc/ghi tệp, chạy lệnh và dùng công cụ như thế nào."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "9d65338"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích khác biệt khái niệm giữa tệp, lệnh và công cụ cùng cách phán đoán rủi ro; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Khác biệt lớn nhất so với chatbot thông thường là nó sẽ làm việc qua **công cụ**.
@@ -91,17 +96,10 @@ Chỉ cần một trong ba câu trả lời không được thì hãy để nó 
 
 Lối vào sản phẩm khác nhau thì bảng công cụ và cách xác nhận cũng khác — chi tiết xem từng cẩm nang sản phẩm.
 
-Codex không chỉ «nói» — nó thật sự làm qua tệp, lệnh và công cụ, nên phải giữ mắt vào phạm vi và rủi ro.
+Codex không chỉ «nói» — nó thật sự làm qua tệp, lệnh và công cụ, nên phải theo dõi sát phạm vi và rủi ro.
 
 Bước tiếp theo nên đọc:
 
 1. [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
 2. [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 3. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích khác biệt khái niệm giữa tệp, lệnh và công cụ cùng cách phán đoán rủi ro; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

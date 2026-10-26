@@ -1,14 +1,19 @@
 ---
-title: Tệp văn bản và mã
-description: Để Codex đọc/ghi đúng nguồn, cấu hình và tệp văn bản dạng tài liệu.
-locale: vi
-source_locale: zh-CN
-source_revision: 1537793
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tệp văn bản và mã"
+description: "Để Codex đọc/ghi đúng nguồn, cấu hình và tệp văn bản dạng tài liệu."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "1537793"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, cấu trúc tác vụ tốt, rà soát diff và chạy kiểm thử đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý tệp văn bản/mã ổn định “giới hạn đường dẫn, giữ phong cách, nói rõ cách kiểm chứng trước”."
+  checkedAt: "2026-07-26"
 ---
 
 Phần lớn tác vụ phát triển rơi vào **tệp văn bản và mã**: nguồn, kiểm thử, cấu hình, Markdown. Trang này nói cách giới hạn phạm vi, giữ phong cách nhất quán và gộp an toàn.
@@ -103,10 +108,3 @@ Nếu lo nó sửa nhiều, yêu cầu thẳng ba việc:
 - Liên kết tài liệu viết đường dẫn tuyệt đối gây 404 nội bộ
 
 Tệp văn bản và mã sợ nhất là sửa vừa nhiều vừa phân tán, lại khó rà. Nói rõ phạm vi, phong cách và cách kiểm chứng thì sau này đỡ vòng lại nhiều.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, cấu trúc tác vụ tốt, rà soát diff và chạy kiểm thử đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý tệp văn bản/mã ổn định “giới hạn đường dẫn, giữ phong cách, nói rõ cách kiểm chứng trước”.  
-**Kiểm chứng gần nhất:** 2026-07-26

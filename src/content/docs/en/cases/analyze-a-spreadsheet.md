@@ -31,9 +31,10 @@ next:
   label: Learn to verify results
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: '68729f6'
+reviewed_at: 2026-10-25
 ---
 
 In this exercise, deliver a weekly sales report, a regional summary, a product ranking, and a row-by-row cleaning ledger. The input is synthetic data made for this handbook; no real customer records are needed.
@@ -46,9 +47,9 @@ Level: beginner. The 30–45 minute estimate is editorial and has not been timed
 
 | Metric | Reference value | What to check |
 |---|---:|---|
-| Current-period net sales | ¥4,644.75 | Refunds must count |
-| East region current net | ¥1,281.25 | 1,401.75 − 120.50 |
-| Amount with missing date | ¥199.99 | Isolate it; do not guess its week |
+| Current-period net sales | CNY 4,644.75 | Refunds must count |
+| East region current net | CNY 1,281.25 | 1,401.75 − 120.50 |
+| Amount with missing date | CNY 199.99 | Isolate it; do not guess its week |
 
 The current period is 2026-09-07 to 09-13, and the previous period is 2026-08-31 to 09-06. The period-on-period growth for these two complete calendar weeks is 87.04%. This is a synthetic sample result, not an explanation of real business causes.
 
@@ -83,7 +84,7 @@ Continue with the pack's `prompts/02-report.md` and write outputs to `my-output/
 |---|---|
 | `summary.md` | Total, period comparison, regions, current-period top three, data quality, and calculation basis |
 | `region-summary.csv` | Each region's net sales for both weeks, difference, and growth; totals reconcile with the sum of regions |
-| `top-products.csv` | Products sorted by current-period net sales, including refunds |
+| `top-products.csv` | Products sorted by current-period net sales in descending order, including refunds |
 | `row-ledger.csv` | Each original row's number, inclusion decision, period, and amount |
 
 Keep the inputs, `solution`, and `validation` unchanged. Follow the data dictionary's field names and table order so an independent checker can compare entries. The Southwest region's previous period is zero, so its growth is N/A, not 0% or infinite.
@@ -100,15 +101,15 @@ When all four deliverables exist and follow the defined calculations, it prints 
 
 If you cannot run Python, at least check manually:
 
-1. Seven positive East-region entries total ¥1,401.75. Add the refund of -¥120.50 on row 44 to get ¥1,281.25.
+1. Seven positive East-region entries total CNY 1,401.75. Add the refund of -CNY 120.50 on row 44 to get CNY 1,281.25.
 2. Sum the three current-period regions: 1,281.25 + 2,101.75 + 1,261.75 = 4,644.75.
-3. O046 on row 47 lacks a date, so ¥199.99 does not enter either weekly total. O001 on row 46 is the duplicate.
+3. O046 on row 47 lacks a date, so CNY 199.99 does not enter either weekly total. O001 on row 46 is the duplicate.
 
 Automated checks cannot review every natural-language conclusion. Read the report and remove claims about growth causes or business judgments without sources.
 
 ## 4. Practice correction: a missing refund
 
-**Designed counterexample:** If all negative entries were filtered out, the current-period total would be ¥4,765.25, overstated by ¥120.50. During reference verification, the author changed a temporary result and confirmed that the checker rejects this wrong value. This is not a fabricated model conversation.
+**Designed counterexample:** If all negative entries were filtered out, the current-period total would be CNY 4,765.25, overstated by CNY 120.50. During reference verification, the author changed a temporary result and confirmed that the checker rejects this wrong value. This is not a fabricated model conversation.
 
 ```text
 Review valid records with net_sales below zero and explain whether they belong

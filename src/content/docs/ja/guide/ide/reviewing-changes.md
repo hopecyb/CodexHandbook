@@ -3,12 +3,16 @@ title: IDE で変更をレビューする
 description: ソースコードの横で差分を確認し、読み取り専用の reviewer で worktree を検査します。
 locale: ja
 source_locale: zh-CN
-source_revision: a6badd5
+source_revision: "a6badd5"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 70
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: "2026-08-26"
 ---
 
 IDE はソースコードの横で要約や絞り込まれた diff を素早く読むのに適しています。ただし、「変更がエディタに表示された」ことは検収に合格したことを意味しません。まず差分を確認し、次にテストを実行して、最後に残す内容を判断してください。
@@ -53,11 +57,3 @@ IDE はソースコードの横で要約や絞り込まれた diff を素早く�
 
 - [コードレビュー](https://learn.chatgpt.com/docs/code-review)
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
-
----
-
-**状態：** verified
-
-**対象製品：** IDE
-
-**最終検証：** 2026-08-26

@@ -3,10 +3,15 @@ title: 첫 Skill 만들기
 description: 커밋 가능한 pr-review Skill을 처음부터 만들고, 테스트와 팀 공유 단계까지 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: '14414f5'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 현재 Codex 런타임은 프로젝트 내 스킬 디렉터리, `SKILL.md`로 스킬 정의, 명시 호출로 시험 실행을 지원합니다. 이 페이지는 첫 Skill의 안정적인 입문 연습입니다.
+  checkedAt: '2026-07-26'
 ---
 
 이미 작업을 내릴 수는 있지만 아직 Skill을 실제로 만들어 본 적이 없다면, 이 페이지는 첫 Skill의 기본 방법을 다룹니다.
@@ -99,7 +104,7 @@ $pr-review 현재 커밋되지 않은 변경을 검토해 주세요
 
 문제 원인이 Skill 내용인지, `description` 트리거 조건인지 구분하기 쉽습니다.
 
-### 5. description 반복
+### 5. description 개선
 
 모델이 **전혀 자동 선택하지 않으면** `description`의 트리거 단어를 좁히거나 보강하세요. **오용이 너무 잦으면** 「언제 쓰지 말지」를 추가하세요.
 
@@ -118,7 +123,7 @@ git commit -m "docs: add pr-review skill for Codex"
 
 대개 반대입니다. 첫 Skill은 작고 초점이 분명할수록 가치가 있는지 판단하기 쉽습니다.
 
-### 2. Skill의 핵심은 「똑똑하게」 쓰는 것
+### 2. Skill의 핵심은 「똑똑해 보이게」 쓰는 것이 아닙니다
 
 더 중요한 것은 **경계가 분명한** 작성입니다.
 
@@ -148,9 +153,3 @@ git commit -m "docs: add pr-review skill for Codex"
 
 ## 참고 출처
 - OpenAI Codex Skills 공식 예시와 `skill-creator`(환경에서 제공되는 경우)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE  
-**검증 근거:** 현재 Codex 런타임은 프로젝트 내 스킬 디렉터리, `SKILL.md`로 스킬 정의, 명시 호출로 시험 실행을 지원합니다. 이 페이지는 첫 Skill의 안정적인 입문 연습입니다.  
-**최근 검증:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
 title: Skill 보안과 버전
-description: 설치 출처, 권한 경계, 업그레이드와 롤백으로 팀 Skill을 거버넌스합니다.
+description: 설치 출처, 권한 경계, 업그레이드와 롤백으로 팀 Skill을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: 'a3c81ed'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: OpenAI Help 《Skills in ChatGPT》는 Skills가 instructions, supporting files, code를 포함할 수 있으며, 업로드 전후에도 사용자가 출처와 위험을 직접 검토해야 한다고 확인합니다. 이 페이지의 보안 거버넌스 제안은 그 원칙과 일치합니다.
+  checkedAt: '2026-07-26'
 ---
 
 Skill은 프롬프트 템플릿이 하나 더 생긴 것만이 아닙니다.
@@ -99,7 +104,7 @@ Skill이 장기적으로 여러 사람에게 재사용된다면 「누가 DM으�
 
 ## `$skill` 호출과의 관계
 
-사용자가 `$name`으로 명시 호출하면 의도가 분명합니다. **모델이 Skill을 자동 선택**할 때는 `AGENTS.md`에서 사용 가능한 목록과 장면을 제한하세요.
+사용자가 `$name`으로 명시 호출하면 의도가 분명합니다. **모델이 Skill을 자동 선택**할 때는 `AGENTS.md`에서 사용 가능한 목록과 사용 상황을 제한하세요.
 
 ## 팀 거버넌스 체크리스트
 
@@ -117,9 +122,3 @@ Skill이 장기적으로 여러 사람에게 재사용된다면 「누가 DM으�
 
 ## 참고 출처
 - OpenAI Codex Skills 보안 지침
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE  
-**검증 근거:** OpenAI Help 《Skills in ChatGPT》는 Skills가 instructions, supporting files, code를 포함할 수 있으며, 업로드 전후에도 사용자가 출처와 위험을 직접 검토해야 한다고 확인합니다. 이 페이지의 보안 거버넌스 제안은 그 원칙과 일치합니다.  
-**최근 검증:** 2026-07-26

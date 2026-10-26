@@ -1,17 +1,18 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI (tùy phiên bản)", "basis": "Đã đối chiếu chéo với hướng dẫn chính thức hiện tại của OpenAI Help Center về ChatGPT Memory, cùng các chương chỉ thị dự án, sở thích cá nhân và ranh giới an toàn đã kiểm chứng trong sổ tay; nội dung trang giới hạn ở nguyên tắc ổn định “bộ nhớ phù hợp sở thích cá nhân và ít thông tin thực tế ổn định, không thay quy tắc kho và quản lý thông tin nhạy cảm”.", "checkedAt": "2026-07-26"}
 title: Bộ nhớ và ngữ cảnh bền
-description: Codex nhớ sở thích và sự kiện qua phiên thế nào — năng lực, ranh giới và quy chuẩn nhóm.
+description: Codex nhớ sở thích và thông tin thực tế qua phiên thế nào — năng lực, ranh giới và quy chuẩn nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: "7a689ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
 
-Một số client Codex hỗ trợ **bộ nhớ (Memory)**: giữ sở thích hoặc sự kiện bạn đã xác nhận qua nhiều vòng hội thoại sang phiên sau. Nó bổ sung với `AGENTS.md` và cấu hình dự án, nhưng **không** thay quy chuẩn nhóm đã phiên bản hóa.
+Một số client Codex hỗ trợ **bộ nhớ (Memory)**: giữ sở thích hoặc thông tin thực tế bạn đã xác nhận qua nhiều vòng hội thoại sang phiên sau. Nó bổ sung với `AGENTS.md` và cấu hình dự án, nhưng **không** thay quy chuẩn nhóm đã phiên bản hóa.
 
 ## Nội dung
 
@@ -29,7 +30,7 @@ Ví dụ:
 - Bạn thích đưa kết luận trước rồi mới chi tiết
 - Trong một dự án “backend” mặc định chỉ thư mục nào
 
-Nó giống hơn “sở thích dài hạn cá nhân và ít sự kiện ổn định”, không phải sổ hướng dẫn dự án, cũng không phải két bí mật.
+Nó giống hơn “sở thích dài hạn cá nhân và ít thông tin thực tế ổn định”, không phải sổ hướng dẫn dự án, cũng không phải két bí mật.
 
 ## Bộ nhớ phù hợp lưu gì
 
@@ -37,7 +38,7 @@ Nó giống hơn “sở thích dài hạn cá nhân và ít sự kiện ổn đ
 |---|---|
 | Sở thích mã hóa cá nhân (ngôn ngữ chú thích, thói thụt lề) | Khóa production, token |
 | Bí danh dự án phải giải thích lặp («backend chỉ `services/api`») | Trạng thái tác vụ sprint hay đổi |
-| Sự kiện không nhạy cảm bạn nói rõ «hãy nhớ» | Quy chuẩn nhóm nên viết trong Git |
+| Thông tin thực tế không nhạy cảm bạn nói rõ «hãy nhớ» | Quy chuẩn nhóm nên viết trong Git |
 
 Quy chuẩn cấp nhóm nên vào **`AGENTS.md` hoặc cấu hình dự án**, để review và onboarding người mới. Xem [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/).
 
@@ -106,7 +107,7 @@ Hãy hỏi: ai cần thấy, thông tin tồn tại bao lâu, có cần code rev
 Nếu chưa chắc một thông tin có nên vào bộ nhớ, tự hỏi:
 
 1. Có phải sở thích cá nhân tôi thường phải nói lại không
-2. Có phải sự kiện tương đối ổn định trong thời gian ngắn không
+2. Có phải thông tin thực tế tương đối ổn định trong thời gian ngắn không
 3. Thông tin này dù người khác không thấy cũng không ảnh hưởng cộng tác nhóm không
 
 Ba câu càng gần “có”, càng phù hợp vào bộ nhớ.
@@ -114,7 +115,7 @@ Ba câu càng gần “có”, càng phù hợp vào bộ nhớ.
 ## Ranh giới an toàn
 
 - Đừng để bộ nhớ thành **kênh bí mật** vòng qua mục cấm của `AGENTS.md`
-- Đừng lưu trong bộ nhớ dữ liệu khách hàng, chứng chỉ, thông tin tài chính chưa công bố
+- Đừng lưu trong bộ nhớ dữ liệu khách hàng, thông tin xác thực, thông tin tài chính chưa công bố
 - Môi trường doanh nghiệp có thể tắt bộ nhớ — tuân chiến lược quản trị
 
 ## Lỗi thường gặp
@@ -123,13 +124,7 @@ Ba câu càng gần “có”, càng phù hợp vào bộ nhớ.
 - Bộ nhớ xung đột với `AGENTS.md` mà không cập nhật bên nào
 - Lầm tưởng bộ nhớ bằng «mô hình nhớ mãi cả kho»
 
-Bộ nhớ phù hợp nhất lưu “sở thích cá nhân luôn phải nói lại và ít sự kiện ổn định”, không phù hợp thay tài liệu kho, quy tắc nhóm và quản lý thông tin nhạy cảm.
+Bộ nhớ phù hợp nhất lưu “sở thích cá nhân luôn phải nói lại và ít thông tin thực tế ổn định”, không phù hợp thay tài liệu kho, quy tắc nhóm và quản lý thông tin nhạy cảm.
 
 ## Nguồn tham khảo
 - Tài liệu memory OpenAI Codex (lấy phiên bản làm chuẩn)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI (tùy phiên bản)  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với hướng dẫn chính thức hiện tại của OpenAI Help Center về ChatGPT Memory, cùng các chương chỉ thị dự án, sở thích cá nhân và ranh giới an toàn đã kiểm chứng trong sổ tay; nội dung trang giới hạn ở nguyên tắc ổn định “bộ nhớ phù hợp sở thích cá nhân và ít sự kiện ổn định, không thay quy tắc kho và quản lý thông tin nhạy cảm”.  
-**Kiểm chứng gần nhất:** 2026-07-26

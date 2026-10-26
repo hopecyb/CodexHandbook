@@ -3,12 +3,17 @@ title: Codex とは
 description: Codex が何をできて、何ができないか、主な利用入口をわかりやすく説明。
 locale: ja
 source_locale: zh-CN
-source_revision: 0f376b6
+source_revision: "0f376b6"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 2
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは Codex の基本的位置づけ、適用タスク、協業方式のみを説明。サイト内リンクと概念表現を再確認済み。本文に細かく変わりやすい製品デフォルト値は含まない。
+  checkedAt: '2026-07-26'
 ---
 
 Codex は OpenAI が提供する **AI プログラミングと作業 Agent** です。目標を伝えると、プロジェクトファイル、ツール、あなたの承認を組み合わせて内容を読み、変更し、コマンドを実行し、結果を生成し、プロセスと変更をあなたに確認してもらいます。
@@ -111,10 +116,3 @@ Codex をアシスタントとして使い、責任は一緒に渡さない。
 1. [Codex クライアントの選択](/ja/guide/choose-your-client/)
 2. [初心者向け用語](/ja/guide/start-here/terminology-for-beginners/)
 3. [最初のタスクを実行する](/ja/guide/getting-started/run-your-first-task/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは Codex の基本的位置づけ、適用タスク、協業方式のみを説明。サイト内リンクと概念表現を再確認済み。本文に細かく変わりやすい製品デフォルト値は含まない。  
-**最終検証：** 2026-07-26

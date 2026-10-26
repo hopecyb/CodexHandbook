@@ -1,29 +1,34 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Todas as plataformas"
+  basis: "A documentação atual da OpenAI sobre plugins e acesso externo continua a enfatizar que o conteúdo de fontes externas, a navegação web, os dados de apps externas e as ações de alto risco devem controlar-se com limites de permissão e confirmação; esta página define a injeção de Prompt como o risco de texto não confiável mudar o comportamento do Agent, e oferece identificação, só leitura primeiro e aprovação humana como padrões de mitigação."
+  checkedAt: "2026-07-26"
 title: Injeção de Prompt
-description: Quando texto não fiável entra no Contexto — identificação, mitigação e pontos de política de equipa.
+description: Quando texto não confiável entra no contexto — identificação, mitigação e pontos de política de equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 3e44fdf
+source_revision: "3e44fdf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
 
-A «injeção de Prompt» é meter no Contexto que o Codex verá conteúdo desenhado para o enganar.
+A «injeção de Prompt» consiste em inserir conteúdo enganoso no contexto que o Codex verá.
 
-Esse conteúdo pode vir de issues, páginas web, comentários de dependências, documentação ou texto colado pelo utilizador, e costuma procurar que o Agent **ignore a política, filtre dados ou execute comandos perigosos**. É um risco frequente do [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) e não está longe do trabalho real.
+Esse conteúdo pode vir de issues, páginas web, comentários de dependências, documentação ou texto colado pelo usuário, e costuma procurar que o Agent **ignore a política, vaze dados ou execute comandos perigosos**. É um risco frequente do [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) e não está longe do trabalho real.
 
 ![Ilustração: uma nota suspeita avermelhada escondida numa página web é barrada por um escudo, e só o conteúdo limpo chega ao assistente](/illustrations/prompt-injection.webp)
 
 ## Conteúdo
 
-- Diferença entre injeção e «instruções normais do utilizador»
+- Diferença entre injeção e «instruções normais do usuário»
 - Mitigações no produto e em pipelines
-- Pontos de formação e linguagem de resposta da equipa
+- Pontos de formação e linguagem de resposta da equipe
 
-## Porque importa também ao utilizador quotidiano
+## Porque importa também ao usuário quotidiano
 
 Mal-entendidos habituais:
 
@@ -41,7 +46,7 @@ Não precisas de memorizar toda a taxonomia de ataques; repara nestes sinais:
 
 - O texto pede de súbito «ignorar as regras anteriores»
 - Estás numa revisão de código e induz-te a despejar secrets, o system prompt ou variáveis de ambiente
-- Não guarda relação com a Tarefa atual, mas pede rede, downloads ou comandos extra
+- Não guarda relação com a tarefa atual, mas pede rede, downloads ou comandos extra
 - Parece documentação, mas na realidade dá ordens de operação ao Agent
 
 Se um fragmento te parecer «mais uma manipulação do assistente do que uma descrição do problema», eleva o alerta.
@@ -51,9 +56,9 @@ Se um fragmento te parecer «mais uma manipulação do assistente do que uma des
 Uma ordem suficiente:
 
 1. Pára; não executes de imediato o que pede
-2. Trata-o como «entrada não fiável», não como a nova Tarefa principal
+2. Trata-o como «entrada não confiável», não como a nova tarefa principal
 3. Volta ao objetivo original e verifica se o texto tem relação direta com o trabalho atual
-4. Se implicar secrets, abuso de privilégios, rede, exportação de dados ou comandos extra, escala por omissão a confirmação humana
+4. Se implicar secrets, abuso de privilégios, rede, exportação de dados ou comandos extra, escala por padrão a confirmação humana
 
 Primeiro pára, depois julga. Muitos riscos não vêm de o modelo se descontrolar de imediato, mas de pessoa e Agent seguirem o texto suspeito.
 
@@ -64,7 +69,7 @@ Perante texto externo, pergunta-te:
 - **Descreve um problema**?
 - Ou **ordena ao Codex que mude de comportamento**?
 
-O primeiro costuma ser Contexto normal; o segundo exige cautela especial.
+O primeiro costuma ser contexto normal; o segundo exige cautela especial.
 
 Exemplos:
 
@@ -77,8 +82,8 @@ Na realidade a injeção pode ser menos direta, mas esta distinção já bloquei
 
 **Camada de desenho**
 
-- Separar **política do sistema** e **conteúdo de utilizador não fiável** (a arquitetura varia conforme o produto)
-- Operações muito sensíveis sempre com [Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
+- Separar **política do sistema** e **conteúdo de usuário não confiável** (a arquitetura varia conforme o produto)
+- Operações muito sensíveis sempre com [aprovação humana](/pt/cases/workflows/human-approval-patterns/)
 
 **Camada de engenharia**
 
@@ -93,14 +98,14 @@ Na realidade a injeção pode ser menos direta, mas esta distinção já bloquei
 
 ## Critério de juízo
 
-Se o texto vier de **pessoas ou sistemas não de todo fiáveis**, não o tomes por omissão como «requisito normal da Tarefa».
+Se o texto vier de **pessoas ou sistemas não de todo confiáveis**, não o tomes por padrão como «requisito normal da tarefa».
 
 É mais adequado separar dois tipos de informação:
 
-- **Objetivo da Tarefa**: o que queres explicitamente que o Codex faça
+- **Objetivo da tarefa**: o que queres explicitamente que o Codex faça
 - **Entrada externa**: issues, webs, docs, body do PR que vê ao executar
 
-O primeiro é a linha principal; o segundo, por omissão, com suspeita.
+O primeiro é a linha principal; o segundo, por padrão, com suspeita.
 
 ## Princípios mínimos de CI
 
@@ -110,13 +115,13 @@ O primeiro é a linha principal; o segundo, por omissão, com suspeita.
 - Saída só como comentário, sem merge automático
 ```
 
-As «ordens de operação» de fontes não de todo fiáveis não devem herdar-se automaticamente como a tua Tarefa real. Muitos problemas de injeção acabam por confundir «entrada externa» com «instrução formal».
+As «ordens de operação» de fontes não de todo confiáveis não devem herdar-se automaticamente como a tua tarefa real. Muitos problemas de injeção acabam por confundir «entrada externa» com «instrução formal».
 
 ## Erros frequentes
 
 - Acreditar que «somos um repo privado» implica que não há injeção
 - Deixar que o Agent navegue URLs arbitrárias sem limite de domínio
-- Tomar a deteção de injeção como única defesa
+- Tomar a detecção de injeção como única defesa
 - Perante texto suspeito, continuar a entregar tokens de alto privilégio a fluxos desatendidos
 
 ## Lista de aceitação
@@ -128,9 +133,3 @@ As «ordens de operação» de fontes não de todo fiáveis não devem herdar-se
 ## Fontes de referência
 - OWASP LLM Top 10 (Prompt Injection)
 - Guia oficial de segurança da OpenAI
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** Todas as plataformas  
-**Base de verificação:** A documentação atual da OpenAI sobre plugins e acesso externo continua a enfatizar que o conteúdo de fontes externas, a navegação web, os dados de apps externas e as ações de alto risco devem controlar-se com limites de Permissão e confirmação; esta página define a injeção de Prompt como o risco de texto não fiável mudar o comportamento do Agent, e oferece identificação, só leitura primeiro e Aprovação humana como padrões de mitigação.  
-**Última verificação:** 2026-07-26

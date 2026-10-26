@@ -5,10 +5,15 @@ sidebar:
   order: 55
 locale: ja
 source_locale: zh-CN
-source_revision: 140102c
+source_revision: "140102c"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Integrations
+  basis: OpenAI Help Center の現行プラグイン・アプリ説明は、Codex / ChatGPT の連携能力が plugins、apps、app templates 経由で接続され、管理者がロールアクセス、読み書き動作、確認要件、データ境界を個別に制御できることを示している。本ページは連携設計原則、権限階層、導入順に焦点を当て、特定外部システムの瞬間的 UI には依存しない。
+  checkedAt: "2026-07-26"
 ---
 
 Codex の連携価値は、ツールを 1 つ増やすことだけではありません。Agent を、すでに使っている協業の流れ——コードホスティング、チケット、通知、社内プラットフォーム、ナレッジベース——に組み込むことです。
@@ -175,7 +180,7 @@ Slack、メール、企業 IM など。
 - [ ] 各連携の owner を明確にする
 - [ ] 読み取り / コメント / 書き戻しの 3 段階権限を分ける
 - [ ] 1 回のタスクで何を読み、何を書いたか追跡できる
-- [ ] 失敗時に通知があり、偶然気づくに頼らない
+- [ ] 失敗時に通知があり、偶然の発見に頼らない
 - [ ] 機密データを扱う場合はセキュリティ評価を通す
 
 初回連携では、Codex に「見る」「提案する」役割から始める方が、「変える」「実行する」より現実的です。
@@ -196,9 +201,3 @@ Slack、メール、企業 IM など。
 
 ## 参考ソース
 - OpenAI Codex 公式連携・開発者ドキュメント
----
-
-**状態：** verified  
-**対象製品：** Integrations  
-**検証根拠：** OpenAI Help Center の現行プラグイン・アプリ説明は、Codex / ChatGPT の連携能力が plugins、apps、app templates 経由で接続され、管理者がロールアクセス、読み書き動作、確認要件、データ境界を個別に制御できることを示している。本ページは連携設計原則、権限階層、導入順に焦点を当て、特定外部システムの瞬間的 UI には依存しない。  
-**最終検証：** 2026-07-26

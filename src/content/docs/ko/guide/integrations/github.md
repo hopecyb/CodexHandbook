@@ -3,15 +3,20 @@ title: GitHub 통합
 description: "저장소 연결, PR, Review, CI — Codex가 GitHub 워크플로에서 차지하는 위치."
 locale: ko
 source_locale: zh-CN
-source_revision: ece7161
+source_revision: 'ece7161'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Cloud / App / CLI
+  basis: OpenAI Developers의 현재 Codex use cases에는 “Review GitHub pull requests”가 포함됩니다. OpenAI Help Center의 플러그인·통합 설명도 외부 저장소 접근이 하위 앱 권한·역할 접근·동작 경계에 따른다고 계속 강조합니다. 이 페이지는 GitHub 저장소·브랜치·PR·Review·CI의 협업 위치와, 로컬·Cloud의 코드 가시성 차이만 요약합니다.
+  checkedAt: '2026-07-26'
 ---
 
-GitHub는 Codex가 가장 흔히 쓰는 코드 협업 면입니다. Cloud 작업, PR 심사, Actions, 로컬 push가 같은 브랜치·권한 세트를 중심으로 돕니다.
+GitHub는 Codex가 가장 흔히 쓰는 코드 협업 플랫폼입니다. Cloud 작업, PR 심사, Actions, 로컬 push가 같은 브랜치·권한 세트를 중심으로 동작합니다.
 
 여기서 주로 말하는 것은, Codex가 “코드 저장소, 브랜치, PR, Review” 협업 흐름에 어떻게 붙는지입니다.
 
@@ -89,20 +94,14 @@ GitHub 통합의 핵심은 Codex를 기존 코드 협업 흐름에 붙이는 것
 ## 보안
 
 - GitHub Token scope를 최소화
-- `pull_request_target` 등 민감 Actions 패턴에 경계(주입 면)
+- `pull_request_target` 등 민감 Actions 패턴에 경계(주입 공격 가능성)
 - Fork PR에서 자동화를 돌릴 때는 추가 격리 정책 필요
 
 ## 흔한 실수
 
 - Cloud 작업이 로컬 미커밋 변경이 있다고 가정
-- Codex가 PR 설명에서 소독되지 않은 지시를 실행(프롬프트 주입)
+- Codex가 PR 설명에서 안전성이 확인되지 않은 지시를 실행(프롬프트 주입)
 - 같은 PR에 포맷과 기능 변경을 섞음
 
 ## 참고 출처
 - OpenAI Codex GitHub 통합 문서
----
-
-**상태:** verified  
-**적용 제품:** Cloud / App / CLI  
-**검증 근거:** OpenAI Developers의 현재 Codex use cases에는 “Review GitHub pull requests”가 포함됩니다. OpenAI Help Center의 플러그인·통합 설명도 외부 저장소 접근이 하위 앱 권한·역할 접근·동작 경계에 따른다고 계속 강조합니다. 이 페이지는 GitHub 저장소·브랜치·PR·Review·CI의 협업 위치와, 로컬·Cloud의 코드 가시성 차이만 요약합니다.  
-**최근 검증:** 2026-07-26

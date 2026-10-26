@@ -32,8 +32,9 @@ next:
 locale: es
 source_locale: zh-CN
 source_revision: '7189374'
-translation_status: draft
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Resume un artículo en ocho diapositivas y entrega un PPTX cuyo texto pueda modificarse, vistas previas y notas de exposición. Conserva límites y conflictos de las fuentes; no añadas cifras o gráficos inventados para llenar páginas.
@@ -91,7 +92,7 @@ La referencia usa Arial Unicode MS. Si no está en tu sistema, elige una fuente 
 
 Abre el PPTX propio en un programa de presentaciones, guarda una copia de prueba, selecciona y cambia texto clave, guarda y vuelve a abrir. Exporta vistas previas de todas las páginas y comprueba chino, cortes, solapamientos, número de páginas y notas. Ocho imágenes de página completa no sustituyen una presentación editable.
 
-La referencia se importó y exportó con LibreOffice headless. En una copia temporal del PPTX se cambió un título de texto nativo de «una» a «dos» y se leyó el nuevo texto tras exportar. Esto no equivale a una prueba de edición mediante clics en la interfaz ni demuestra que todos los programas se comporten igual.
+La referencia se importó y exportó con LibreOffice headless. En una copia temporal del PPTX se cambió el texto nativo del título de «一份» (una) a «两份» (dos) y se leyó el nuevo texto tras exportar. Esto no equivale a una prueba de edición mediante clics en la interfaz ni demuestra que todos los programas se comporten igual.
 
 ![Sexta diapositiva: fuentes opuestas sobre la configuración predeterminada, conclusión sin confirmar](/downloads/article-to-slides/previews/slide-06.png)
 

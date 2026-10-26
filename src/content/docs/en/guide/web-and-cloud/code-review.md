@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: Code review in Cloud and GitHub
 description: Review a Cloud diff and use Codex on GitHub as a high-signal supplementary reviewer.
 locale: en
 source_locale: zh-CN
-source_revision: ea6796a
+source_revision: 'ea6796a'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
 ---
@@ -39,7 +43,7 @@ Codex posts findings as a normal GitHub review. The current official guidance sa
 Example prompt:
 
 ```text
-Review this PR. Report only findings that could cause wrong behavior, data loss,
+Review this PR. Report only findings that could cause wrong behavior, data corruption,
 a security issue, or a compatibility regression. Each finding must include
 severity, exact location, trigger condition, and impact. Do not report style
 preferences as defects.
@@ -76,11 +80,3 @@ Users with the required GitHub push or admin permission can enable automatic rev
 
 - [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
 - [Cross-client code review](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud, GitHub
-
-**Last verified:** 2026-08-26

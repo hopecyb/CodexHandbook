@@ -1,17 +1,18 @@
 ---
 title: Modelo de caso
-description: Estrutura unificada para redigir e fazer retrospectiva de casos Codex — facilita consolidação e comparação na equipa.
+description: Estrutura unificada para redigir e fazer retrospectiva de casos Codex — facilita consolidação e comparação na equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: "74ef905"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com o fluxo EPXV já verificado deste manual, recuperação de falhas, instruções de projeto e estrutura da biblioteca de casos; esta página só oferece um modelo unificado para redigir e fazer retrospectiva de casos, sem declarar comportamento concreto de produto.", "checkedAt": "2026-07-26"}
 ---
 
 Copie este modelo para criar uma nova página de caso ou um documento interno de retrospectiva.
 
-Antes de copiar, elimine as secções desnecessárias conforme o público e o entregável reais.
+Antes de copiar, elimine as seções desnecessárias conforme o público e o entregável reais.
 
 ---
 
@@ -20,7 +21,7 @@ Antes de copiar, elimine as secções desnecessárias conforme o público e o en
 | Campo | Preencher |
 |---|---|
 | Título do caso | |
-| Público | Principiantes / programadores / criadores / equipas |
+| Público | Iniciantes / desenvolvedores / criadores / equipes |
 | Cliente usado | App / CLI / IDE / Cloud |
 | Tempo estimado | |
 | Data de verificação | YYYY-MM-DD |
@@ -29,12 +30,12 @@ Antes de copiar, elimine as secções desnecessárias conforme o público e o en
 
 - **Objetivo de negócio:** Uma frase
 - **Critérios de sucesso:** Observáveis e verificáveis
-- **Fora de âmbito:** Exclusões explícitas
+- **Fora de escopo:** Exclusões explícitas
 
 ## 2. Preparação
 
 - Conta / permissões / estado do repositório
-- Ficheiros de contexto necessários (`AGENTS.md`, mockups, etc.)
+- Arquivos de contexto necessários (`AGENTS.md`, mockups, etc.)
 - Riscos: dados, produção, segredos
 
 ## 3. Fluxo de trabalho (EPXV)
@@ -44,14 +45,14 @@ Antes de copiar, elimine as secções desnecessárias conforme o público e o en
 - Prompt de entrada (resumo)
 - Descobertas-chave
 
-### Planear
+### Planejar
 
 - Lista de passos
 - Pontos de confirmação humana
 
 ### Executar
 
-- Âmbito real das alterações
+- Escopo real das alterações
 - Desvios face ao plano e motivos
 
 ### Verificar
@@ -69,14 +70,8 @@ Antes de copiar, elimine as secções desnecessárias conforme o público e o en
 ## 5. Consolidação
 
 - Escrever em `AGENTS.md` / Skill / Automation?
-- 3 sugestões para a equipa
+- 3 sugestões para a equipe
 
 ## 6. Fontes de referência
 - Ligações à documentação oficial
 - Se este caso foi adaptado de um tutorial externo (apenas o tipo de tarefa como referência)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com o fluxo EPXV já verificado deste manual, recuperação de falhas, instruções de projeto e estrutura da biblioteca de casos; esta página só oferece um modelo unificado para redigir e fazer retrospectiva de casos, sem declarar comportamento concreto de produto.  
-**Última verificação:** 2026-07-26

@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: ja
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: "1b7fbb3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 架空のイベント資料一式を使い、ファイルの読み取りから検証可能な通知の提出まで練習する。事前に Git やプログラミングを学んだり、依存関係をインストールしたりする必要はない。

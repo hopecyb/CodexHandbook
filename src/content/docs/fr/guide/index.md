@@ -4,17 +4,18 @@ prev: false
 next:
   link: /fr/guide/start-here/
   label: Commencer ici
-description: Comprenez Codex, choisissez un client, réalisez votre première Tâche et apprenez les Permissions, le Contexte et la Vérification.
+description: Comprenez Codex, choisissez un client, réalisez votre première tâche et apprenez les autorisations, le contexte et la vérification.
 locale: fr
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: "aa277f2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
-Cette section vous aide à comprendre ce qu'est Codex, à quoi il sert et comment passer de la première utilisation à un flux de travail stable.
+Cette section vous aide à comprendre ce que sont Codex et les agents IA, à quoi ils servent et comment passer de la première utilisation à des méthodes de travail sûres, stables et vérifiables.
 
-Si c'est votre première ouverture du handbook, ne le traitez pas comme un livre à lire de bout en bout. Utilisez-le comme une carte des premières étapes vers la maîtrise.
+Si c'est votre première ouverture du manuel, ne le traitez pas comme un livre à lire de bout en bout. Utilisez-le comme une carte des premières étapes vers la maîtrise.
 
 Vous n'avez pas besoin de connaître tous les termes, produits et flux de travail dès le départ. Trouvez votre stade actuel et avancez dans l'ordre.
 
@@ -22,34 +23,34 @@ Vous n'avez pas besoin de connaître tous les termes, produits et flux de travai
 
 - Par où commencer lors de votre première rencontre avec Codex
 - Quel client choisir en premier
-- Quoi apprendre après votre première Tâche
-- Où revenir pour les questions de Permission, Contexte et Vérification
+- Quoi apprendre après votre première tâche
+- Où revenir pour les questions de autorisation, contexte et vérification
 
 ## Ressources à emporter
 
 - [Liste de sécurité pour débuter](/fr/guide/getting-started/beginner-safety-checklist/)
 - [Méthode de choix du client](/fr/guide/choose-your-client/)
-- [Vérification des résultats et définition du travail terminé](/fr/guide/quality/)
+- [vérification des résultats et définition du travail terminé](/fr/guide/quality/)
 
 ## Ordre recommandé
 
 1. [Commencer ici](/fr/guide/start-here/) — le chemin le plus court pour les nouveaux lecteurs
 2. [Qu'est-ce que Codex](/fr/guide/start-here/what-is-codex/)
 3. [Choisir votre client](/fr/guide/choose-your-client/)
-4. [Réaliser votre première Tâche](/fr/cases/first-task/)
-5. [Permissions et Bac à sable](/fr/guide/permissions-and-sandbox/)
-6. [Contexte et fichiers](/fr/guide/context/)
-7. [Vérification](/fr/guide/quality/)
+4. [Réaliser votre première tâche](/fr/cases/first-task/)
+5. [autorisations et bac à sable](/fr/guide/permissions-and-sandbox/)
+6. [contexte et fichiers](/fr/guide/context/)
+7. [vérification](/fr/guide/quality/)
 8. En cas de blocage, consultez [Dépannage](/fr/guide/reference/troubleshooting/)
 
 ## Idées reçues courantes
 
-### 1. Je devrais lire tout le handbook avant de commencer
+### 1. Je devrais lire tout le manuel avant de commencer
 
 Pour la plupart des personnes, un meilleur rythme est :
 
 - Apprendre d'abord les bases de sécurité et de collaboration
-- Exécuter une petite Tâche
+- Exécuter une petite tâche
 - Revenir avec de vraies questions
 
 ### 2. Tant de chapitres signifie que je ne suis pas prêt
@@ -58,7 +59,7 @@ De nombreux chapitres existent pour consultation ultérieure — pas parce que v
 
 ### 3. Je n'ai besoin que d'un seul client, donc le reste n'a pas d'importance
 
-Le client n'est que le point d'entrée ; les Permissions, le Contexte et la Vérification reviennent sur tous.
+Le client n'est que le point d'entrée ; les autorisations, le contexte et la vérification reviennent sur tous.
 
 ## Points d'entrée produit
 

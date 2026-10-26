@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
 title: IDE integration settings
 description: Distinguish shared Agent configuration from VS Code-family editor behavior settings.
 locale: en
 source_locale: zh-CN
-source_revision: 6f28910
+source_revision: '6f28910'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 80
 ---
@@ -51,17 +55,9 @@ If a setting appears ineffective, identify which layer you changed and check whe
 
 ## Verify changes
 
-Change one setting class at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
+Change one setting at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
 
 ## Official sources
 
 - [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 - [Configuration basics](https://learn.chatgpt.com/docs/config)
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Last verified:** 2026-08-26

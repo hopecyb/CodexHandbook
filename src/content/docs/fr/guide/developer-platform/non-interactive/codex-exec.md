@@ -1,14 +1,19 @@
 ---
-title: codex exec
+title: Codex exec
 description: Point d'entrée d'exécution non interactive — dispatcher une tâche complète une fois dans scripts et CI.
 locale: fr
 source_locale: zh-CN
-source_revision: 6d7c481
+source_revision: '6d7c481'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 'Comparaison avec les pages officielles actuelles Non-interactive mode et Developer commands : statut Stable de `codex exec`, `--cd` / `-C`, bac à sable en lecture seule par défaut, `workspace-write`, JSONL et sortie selon un schéma.'
+  checkedAt: '2026-08-26'
 ---
 
 Si `codex` interactif est le chat pendant que vous travaillez, **`codex exec`** est plus proche de confier un job ponctuel et obtenir un résultat à la fin.
@@ -38,7 +43,7 @@ Il convient donc quand :
 
 ## Pourquoi ça existe
 
-Vous ne chattez pas avec Codex en CI, et vous ne vous attendez pas à qu'il s'arrête dix fois pour poser des questions.
+Vous ne chattez pas avec Codex en CI, et vous ne vous attendez pas à ce qu’il s'arrête dix fois pour poser des questions.
 
 Usages typiques de `codex exec` :
 
@@ -66,6 +71,8 @@ Par défaut, l'exécution utilise un bac à sable en lecture seule. Pour autoris
 codex exec --cd . --sandbox workspace-write "Réparer les tests en échec, modifier uniquement src/auth et tests/auth"
 ```
 
+La progression est écrite sur `stderr` et la réponse finale sur `stdout`. Utilisez `--json` pour transmettre le flux complet d’événements à un programme, ou `-o` / `--output-last-message` pour enregistrer seulement le dernier message dans un fichier. Ajoutez `--output-schema` si des champs stables sont nécessaires.
+
 Principes :
 
 - Dans les scripts shell, `cd` vers un worktree propre d'abord
@@ -74,7 +81,7 @@ Principes :
 
 ## Réalité facile à manquer
 
-En mode interactif vous pouvez dire « ce n'est pas ce que je voulais ».  
+En mode interactif vous pouvez dire « ce n'est pas ce que je voulais ».
 En `exec`, **si le premier prompt est mauvais, tout le run peut partir de travers**.
 
 En écrivant des prompts `exec`, soyez plus explicite que d'habitude sur :
@@ -136,7 +143,7 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 ## Erreurs courantes
 
 - Entasser l'historique de chat long dans un seul exec
-- CI utilise token d'écriture et le prompt inclut le corps PR non sanitizé
+- CI utilise token d'écriture et le prompt inclut le corps PR non vérifié
 - Version CLI non pinée casse les pipelines soudainement
 - Ignorer les codes de sortie non-zéro et marquer vert
 - Forcer des tâches de jugement humain complexe en runs non surveillés
@@ -144,7 +151,7 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 ## Frontières de sécurité
 
 - Non surveillé = [approbation humaine](/fr/cases/workflows/human-approval-patterns/) plus faible ; lecture seule par défaut
-- Voir [Identifiants de sécurité](/fr/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (référence croisée dans le même chapitre)
+- Voir [Identifiants de sécurité](/fr/guide/developer-platform/ci-cd/code-review-automation/#permissions-et-sécurité) (référence croisée dans le même chapitre)
 
 ## Liste de contrôle d'acceptation
 
@@ -161,9 +168,3 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 
 ## Sources de référence
 - Documentation CLI OpenAI Codex
----
-
-**Statut :** obsolète  
-**Produits concernés :** CLI  
-**Note de révision :** Cette page couvre `codex exec`, `--cd` et l'intégration non interactive, conformément à la documentation CLI actuelle.
-**Dernière vérification :** 2026-07-26

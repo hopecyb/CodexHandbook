@@ -8,11 +8,12 @@ title: Instalar la integración con el IDE
 description: Habilita Codex en editores compatibles con VS Code, Xcode o IDE de JetBrains.
 locale: es
 source_locale: zh-CN
-source_revision: e8f88ec
-translation_status: draft
+source_revision: 'e8f88ec'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 50
+reviewed_at: '2026-10-25'
 ---
 
 Actualmente no hay una única forma de instalar la integración con el IDE:

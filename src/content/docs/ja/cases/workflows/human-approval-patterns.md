@@ -1,20 +1,21 @@
 ---
-title: "人による承認のパターン"
-description: "タスクへの許可とツールの承認を区別し、許可が必要な具体的操作の前にレビュー可能な結果を準備します。"
+title: 人による承認のパターン
+description: タスクへの許可とツールの承認を区別し、許可が必要な具体的操作の前にレビュー可能な結果を準備します。
 contentType: guide
 editorialStatus: review
 verification:
   kind: source-checked
   checkedAt: "2026-09-18"
-  summary: "サンドボックスと承認の役割の違いを確認済みです。以下の協業パターンは本サイトの提案であり、全クライアント共通のダイアログ規則ではありません。"
+  summary: サンドボックスと承認の役割の違いを確認済みです。以下の協業パターンは本サイトの提案であり、全クライアント共通のダイアログ規則ではありません。
   evidence:
-    - label: "サンドボックスと承認に関する公式説明"
+    - label: サンドボックスと承認に関する公式説明
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: ja
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "f60dbb5"
+translation_status: reviewed
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 承認は具体的な操作とその影響に対応させます。タスクへの許可はユーザーが何を完了したいかを示し、ツールの承認は現在の実行環境で操作できるかを決めます。ファイルの書き込み、コマンドの実行、ネットワークアクセスのたびに必ず質問するわけではありません。実際の動作は許可された範囲、ツール方針、サンドボックスで決まります。[公式説明](https://learn.chatgpt.com/docs/agent-approvals-security)も参照してください。
 

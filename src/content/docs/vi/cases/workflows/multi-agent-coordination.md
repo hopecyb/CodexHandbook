@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / Cloud", "basis": "Đã đối chiếu chéo giải thích công khai hiện tại về multi-agent / subagents trên OpenAI Developers, cùng các chương Subagent, bàn giao phục hồi và làm việc song song đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào tách, cách cô lập ranh giới, cách người tổng hợp nghiệm thu”, không viết beta hiện tại hay lối vào UI thành hợp đồng cố định.", "checkedAt": "2026-07-26"}
 title: Phối hợp nhiều Agent
 description: Khám phá song song, phân công thực thi và gộp kết quả — khi nào tách, cách nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Nhiều Agent phù hợp bài toán con song song được, ít gắn kết; không phù hợp cùng sửa một tệp khi không ai điều phối.
@@ -60,10 +61,3 @@ Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/vi/guide/des
 
 - Ba Agent song song cùng sửa `package.json`
 - Không có bước tổng hợp, không biết nghe kết luận ai
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo giải thích công khai hiện tại về multi-agent / subagents trên OpenAI Developers, cùng các chương Subagent, bàn giao phục hồi và làm việc song song đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào tách, cách cô lập ranh giới, cách người tổng hợp nghiệm thu”, không viết beta hiện tại hay lối vào UI thành hợp đồng cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Organization / team"
+  basis: "OpenAI enterprise docs still emphasize role access, action permissions, and source-system boundaries for plugins and apps; this page defines AUP as organizational behavior boundary with “educational outline, legal localization required”—not an official policy template."
+  checkedAt: "2026-07-26"
 title: Acceptable Use Policy
 description: Team-level agreement on what Codex may and may not do—aligned with technical controls and training.
 locale: en
 source_locale: zh-CN
-source_revision: 0409154
+source_revision: '0409154'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -52,7 +57,7 @@ AUP must align with training, permissions, config, and audit—not length alone.
 | Permitted use | Development, docs, research, internal automation |
 | Prohibited use | Unauthorized access, harassment, bypassing security |
 | Data classification | Which repos/data allowed; customer PII rules |
-| Output responsibility | Human review before merge; no legal/medical advice externally |
+| Output responsibility | Human review before merge; do not present outputs externally as legal or medical advice |
 | Extensions | Approved Plugin/MCP list only |
 | Accounts | No shared personal seats; revoke on offboarding |
 | Incidents | How to report suspicious behavior |
@@ -98,10 +103,3 @@ More “yes” → more likely effective.
 - [ ] Review yearly or on major feature releases
 
 An AUP’s value is clear team boundaries for Codex use—and alignment with actual controls.
-
----
-
-**Status:** verified  
-**Products:** Organization / team  
-**Verification basis:** OpenAI enterprise docs still emphasize role access, action permissions, and source-system boundaries for plugins and apps; this page defines AUP as organizational behavior boundary with “educational outline, legal localization required”—not an official policy template.  
-**Last verified:** 2026-07-26

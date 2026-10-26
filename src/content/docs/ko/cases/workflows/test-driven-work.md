@@ -1,12 +1,17 @@
 ---
 title: 테스트 주도 작업
-description: 먼저 실패 테스트를 정의하거나 보완한 뒤 구현을 유도합니다—Codex 수정을 객관적으로 인수할 수 있게 합니다.
+description: 먼저 실패 테스트를 정의하거나 보완한 뒤 구현을 유도합니다—Codex 수정을 객관적으로 검수할 수 있게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: '4eb568d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: 이 핸드북에서 이미 검증된 테스트 실행, 완료 정의, 검증이 있는 Bug 수정, 명령 규칙 장과 교차 확인했습니다. 이 페이지 내용은 “먼저 테스트를 실패시키고, 이어서 최소 구현으로 통과를 유도”하는 안정적인 테스트 작업법에 초점을 둡니다.
+  checkedAt: '2026-07-26'
 ---
 
 **테스트 주도 작업**(TDD 또는 “테스트 선행”)은 먼저 테스트를 실패시킨 뒤, 최소 구현으로 통과시키는 방식입니다. 테스트 기반이 있는 코드베이스에 적합하며, [검증이 있는 Bug 수정](/ko/cases/use-cases/software-development/fix-a-bug-with-verification/) 같은 시나리오와도 직접 관련됩니다.
@@ -22,7 +27,7 @@ reviewed_at: 2026-08-26
 - 단위/통합 테스트가 있는 저장소
 - 회귀 bug, API 동작 변경, 리팩터
 
-적합하지 않은 시나리오: 테스트 기반이 없는 프로토타입, 순수 카피 사이트의 일회성 수정. 이런 작업은 [EPXV](/ko/cases/workflows/explore-plan-execute-verify/)로 사람 검증하는 편이 낫습니다.
+적합하지 않은 시나리오: 테스트 기반이 없는 프로토타입, 텍스트 중심 사이트의 일회성 수정. 이런 작업은 [EPXV](/ko/cases/workflows/explore-plan-execute-verify/)로 사람 검증하는 편이 낫습니다.
 
 ## 최소 실행 방법
 
@@ -62,7 +67,7 @@ TDD에 따르세요: 먼저 @src/foo.ts 의 「빈 입력은 [] 반환」에 대
 - 테스트 명령은 [명령 규칙](/ko/guide/customization/rules/command-rules/) 허용 범위 안에 있어야 합니다
 - 통합 테스트가 프로덕션 API에 닿으면 스펙에서 금지하거나 mock으로 바꿔야 합니다
 
-## 인수 체크리스트
+## 검수 체크리스트
 
 - [ ] 실패→통과 테스트 증거가 있음(로그 또는 CI)
 - [ ] 전체 또는 약속 범위의 테스트가 통과
@@ -73,10 +78,3 @@ TDD에 따르세요: 먼저 @src/foo.ts 의 「빈 입력은 [] 반환」에 대
 
 - [테스트 실행하기](/ko/guide/quality/run-tests/)
 - [사례: 검증이 있는 Bug 수정](/ko/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**상태:** verified  
-**적용 제품:** CLI / IDE  
-**검증 근거:** 이 핸드북에서 이미 검증된 테스트 실행, 완료 정의, 검증이 있는 Bug 수정, 명령 규칙 장과 교차 확인했습니다. 이 페이지 내용은 “먼저 테스트를 실패시키고, 이어서 최소 구현으로 통과를 유도”하는 안정적인 테스트 작업법에 초점을 둡니다.  
-**최근 검증:** 2026-07-26

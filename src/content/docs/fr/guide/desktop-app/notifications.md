@@ -3,14 +3,17 @@ title: Notifications et activité
 description: Configurez les alertes pour les tâches terminées, les demandes d'autorisation et les questions en attente de réponse.
 locale: fr
 source_locale: zh-CN
-source_revision: 4a1c672
+source_revision: "4a1c672"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 ---
-
 Les notifications vous indiquent qu'une tâche requiert votre attention. Elles ne remplacent pas la révision. L'App de bureau peut vous avertir lorsqu'un tour se termine et gérer séparément les alertes liées aux demandes d'autorisation et aux questions.
 
 ## Configuration recommandée
@@ -47,11 +50,3 @@ Les notifications de la CLI et de l'IDE fonctionnent différemment. L'IDE ne pos
 
 - [Notifications](https://learn.chatgpt.com/docs/notifications)
 - [Paramètres de l'App de bureau](https://learn.chatgpt.com/docs/app/settings)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** App
-
-**Dernière vérification :** 2026-08-26

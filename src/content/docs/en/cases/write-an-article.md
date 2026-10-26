@@ -36,9 +36,10 @@ next:
   label: Turn the article into a presentation
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: e2bb5ea
+source_revision: 'e2bb5ea'
+reviewed_at: 2026-10-25
 ---
 
 The goal is a short Chinese-language article whose every key claim can be traced back to the sources. You will handle conflicting descriptions, separate supported facts from author inferences and unresolved questions, then revise a deliberately flawed draft.
@@ -123,7 +124,7 @@ If you cannot run the script, open the three source files and check each claim-m
 
 ## Recovery when something fails
 
-- Missing file: Check the extracted directory and source index before making up content.
+- Missing file: Check the extracted directory and source index; do not invent source content.
 - Missing citation ID: Add an accurate mapping or remove an unsupported claim; do not erase legitimate uncertainty.
 - Conflicting sources: Present both accounts and say who must supply what evidence. Do not choose based on date, a majority vote, or confident wording.
 - Promotional-sounding article: Remove unsupported promises of results first, then describe concrete actions and limits.

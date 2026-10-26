@@ -3,10 +3,15 @@ title: 最初の Skill を作成する
 description: コミット可能な pr-review Skill をゼロから作り、テストとチーム共有まで。
 locale: ja
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: "14414f5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 現在の Codex ランタイムはプロジェクト内スキルディレクトリ、`SKILL.md` 定義、明示呼び出しでの試走をサポート。本ページは最初の Skill の安定した入門演習。
+  checkedAt: '2026-07-26'
 ---
 
 タスクの出し方は分かるが Skill をまだ作っていない人向けに、最初の Skill の基本手順を説明します。
@@ -93,7 +98,7 @@ $pr-review 未コミットの変更をレビューして
 
 Skill 内容の問題と `description` のトリガー条件の問題を分けやすくなります。
 
-### 5. description を反復
+### 5. description を改善する
 
 モデルが**自動選択しない**なら、トリガー語を足す・絞る。**誤用が多い**なら「いつ使わない」を追加。
 
@@ -112,7 +117,7 @@ git commit -m "docs: add pr-review skill for Codex"
 
 逆のことが多い。小さく焦点を絞った方が価値を判断しやすい。
 
-### 2. Skill の要点は「賢く見せる」こと
+### 2. Skill の要点は「賢く見せる」ことではない
 
 **境界が明確**なことが重要。何をする／しないかが「すごそう」より大事。
 
@@ -129,7 +134,7 @@ git commit -m "docs: add pr-review skill for Codex"
 - [ ] `$pr-review` が動き、危険な git 操作をしない
 - [ ] 出力に段階付き結論があり、漠然とした感想だけではない
 - [ ] `description` が一文でトリガーシーンを説明
-- [ ] [権限と承認](/ja/guide/permissions-and-sandbox/) を確認（本例はスクリプトなし）
+- [ ] [権限と承認](/ja/guide/permissions-and-sandbox/) に照らしてスクリプトに必要な権限を確認（本例はスクリプトなし）
 
 「小さく安定した」Skill から始めると、明確なワークフローを安定再利用しやすいです。
 
@@ -140,9 +145,3 @@ git commit -m "docs: add pr-review skill for Codex"
 
 ## 参考
 - OpenAI Codex Skills 公式例と `skill-creator`（環境が提供する場合）
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現在の Codex ランタイムはプロジェクト内スキルディレクトリ、`SKILL.md` 定義、明示呼び出しでの試走をサポート。本ページは最初の Skill の安定した入門演習。

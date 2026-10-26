@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App; CLI und IDE für Vorbereitung und Tests"
+  checkedAt: "2026-08-26"
 title: Vollständige Anleitung zu Scheduled tasks
 description: Wähle eigenständige oder chatgebundene Aufgaben und konfiguriere lokales Projekt, Worktree, Berechtigungen, Prompt und Review-Zyklus.
 locale: de
 source_locale: zh-CN
-source_revision: fa792dc
+source_revision: "fa792dc"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die eigentliche Schwierigkeit einer Scheduled task liegt nicht in der Uhrzeit. Jeder unbeaufsichtigte Lauf braucht stabile Eingaben, enge Berechtigungen, prüfbare Ausgaben und Abbruchbedingungen.
@@ -137,11 +141,3 @@ Wenn eine Aufgabe sofort nach einem `push`, einer PR-Erstellung oder Veröffentl
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App; CLI und IDE für Vorbereitung und Tests
-
-**Zuletzt geprüft:** 2026-08-26

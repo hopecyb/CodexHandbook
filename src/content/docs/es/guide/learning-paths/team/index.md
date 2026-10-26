@@ -19,9 +19,10 @@ sidebar:
   order: 30
 locale: es
 source_locale: zh-CN
-source_revision: "3b46738"
-translation_status: draft
+source_revision: '3b46738'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Empieza con una tarea de alcance limitado cuyos resultados se puedan comprobar. Usa dos semanas para reunir pruebas de si conviene ampliar el uso. Aquí, dos semanas son diez días laborables. Si hay pocas tareas, prolonga el piloto; no declares el éxito solo porque se acabó el plazo.
@@ -58,7 +59,7 @@ Condición de finalización: los primeros resultados tienen revisiones consultab
 
 Añade muestras o tipos de tareas dentro del alcance aprobado. Cambia solo un factor importante cada vez; no amplíes permisos, cambies el modelo y cambies la tarea a la vez. Registra las versiones de configuración para atribuir el origen de los cambios.
 
-Usa la [plantilla de incidentes y reversión](/downloads/two-week-pilot/templates/04-incident.md) para ensayar la pausa de tareas, la comprobación de procesos y colas activos, la conservación de pruebas, la restauración de una versión conocida y su nueva verificación. Detener nuevas ejecuciones no deshace efectos externos ya producidos.
+Usa la [plantilla de incidentes y reversión](/downloads/two-week-pilot/templates/04-incident.md) para ensayar la pausa de tareas, la comprobación de procesos y colas activos, la conservación de pruebas, la restauración de una versión cuyo correcto funcionamiento esté comprobado y su nueva verificación. Detener nuevas ejecuciones no deshace efectos externos ya producidos.
 
 Puedes empezar con el [ejercicio de recuperación ante fallos](/es/guide/reference/troubleshooting/failure-recovery-lab/) en un directorio aislado. Si no se han probado la programación real, la revocación de permisos o la entrega de mensajes, anótalo. Un ensayo local no prueba la reversión en producción.
 

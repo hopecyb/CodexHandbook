@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Die aktuellen OpenAI-Help-Center-Artikel «ChatGPT Work and Codex» und «Using Codex with your ChatGPT plan» unterscheiden klar local workflows und cloud tasks; diese Seite fasst im Desktop-App-Kontext nur zusammen: lokal für schnelle Iteration, Cloud für Remote-Repositories und lange Aufgaben."
+  checkedAt: "2026-07-26"
 title: Lokale und Cloud-Aufgaben
 description: Zwischen lokaler und Cloud-Ausführung in der App wechseln.
 locale: de
 source_locale: zh-CN
-source_revision: 741f686
+source_revision: "741f686"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -46,10 +51,3 @@ Häufige Fälle:
 - lokale Ressourcen nicht belasten
 
 Reicht lokal in der Desktop-App, bleib lokal; bei längeren, remote-lastigen oder umgebungsgebundenen Aufgaben eher Cloud.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App  
-**Prüfgrundlage:** Die aktuellen OpenAI-Help-Center-Artikel «ChatGPT Work and Codex» und «Using Codex with your ChatGPT plan» unterscheiden klar local workflows und cloud tasks; diese Seite fasst im Desktop-App-Kontext nur zusammen: lokal für schnelle Iteration, Cloud für Remote-Repositories und lange Aufgaben.  
-**Zuletzt geprüft:** 2026-07-26

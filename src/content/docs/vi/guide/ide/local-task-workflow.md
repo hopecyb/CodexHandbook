@@ -1,14 +1,19 @@
 ---
-title: Quy trình tác vụ local
-description: Trong IDE, khởi, theo dõi và hoàn thành tác vụ Codex local dựa trên tệp mở và vùng chọn.
-locale: vi
-source_locale: zh-CN
-source_revision: 0264d4d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Quy trình tác vụ local"
+description: "Trong IDE, khởi, theo dõi và hoàn thành tác vụ Codex local dựa trên tệp mở và vùng chọn."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "0264d4d"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 50
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Trung tâm trợ giúp OpenAI hiện vẫn mô tả IDE extension là client phối hợp với kho mã local; quy trình trang này tập trung vòng cộng tác local ổn định «mở không gian làm việc, giới hạn phạm vi tệp, mô tả tác vụ, rà soát diff, chạy kiểm thử, commit thủ công» — không phụ thuộc giao diện tiện ích cụ thể."
+  checkedAt: "2026-07-26"
 ---
 
 Tác vụ local trong IDE là vòng khép «**mở → chọn → mô tả → rà soát → kiểm thử**», phù hợp chỉnh sửa nhỏ tần suất cao. Đây là một đường thực hành phổ biến nhất; chi tiết ngữ cảnh xem [Vùng chọn và tệp mở](/vi/guide/ide/selected-code-and-open-files/).
@@ -69,10 +74,3 @@ Phù hợp kiểu:
 - Sửa xong dễ kiểm thử hoặc xem trước
 
 Tác vụ local trong IDE phù hợp bước nhỏ nhanh, nhưng «tiện» không có nghĩa được bỏ rà soát và kiểm chứng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** IDE  
-**Căn cứ kiểm chứng:** Trung tâm trợ giúp OpenAI hiện vẫn mô tả IDE extension là client phối hợp với kho mã local; quy trình trang này tập trung vòng cộng tác local ổn định «mở không gian làm việc, giới hạn phạm vi tệp, mô tả tác vụ, rà soát diff, chạy kiểm thử, commit thủ công» — không phụ thuộc giao diện tiện ích cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

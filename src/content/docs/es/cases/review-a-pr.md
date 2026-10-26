@@ -12,10 +12,10 @@ title: Revisar un PR
 description: Usa Codex para una revisión estructurada del diff antes de fusionar.
 locale: es
 source_locale: zh-CN
-source_revision: 84638f0
+source_revision: '84638f0'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -29,7 +29,7 @@ reviewed_at: 2026-08-26
 
 ## 1. Objetivo y contexto
 
-**Objetivo:** Antes de fusionar, detectar ampliación de alcance, riesgos de seguridad y lagunas de tests.
+**Objetivo:** Antes de fusionar, detectar ampliación de alcance, riesgos de seguridad y carencias en las pruebas.
 
 **Criterios de éxito:** La salida de la revisión se puede rastrear hasta archivos/líneas concretas; los P0 están resueltos o bloquean la fusión.
 
@@ -43,7 +43,7 @@ Compara el diff de la rama actual con main (no cambies código todavía):
 Devuelve un checklist con P0/P1 y rutas de archivo.
 ```
 
-## 3. Captura de equipo
+## 3. Reutilización en equipo
 
 - Usa el Skill [`$pr-review`](/es/skills/examples/review-skill/)
 - Integración CI: [Automatización de code review](/es/guide/developer-platform/ci-cd/code-review-automation/)

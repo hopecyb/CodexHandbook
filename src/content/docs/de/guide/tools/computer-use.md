@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (Version, Region, Berechtigung)"
+  basis: "OpenAI Help Center führt Computer Use weiterhin als Codex-bezogene Fähigkeit; Business-Release: ab 2026-05-29 Computer Use unter Windows. Hier nur Risikomodell, Szenarien und Freigabegrenzen — nicht „überall default verfügbar“."
+  checkedAt: "2026-07-26"
 title: Computer Use
 description: "Fortgeschrittene GUI-Bedienung über Bildschirm und Eingabegeräte — Szenarien, Risiken und Freigabe."
 locale: de
 source_locale: zh-CN
-source_revision: d4a2e11
+source_revision: "d4a2e11"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
@@ -18,7 +23,7 @@ Wirkt auf Bildschirm, Maus, Tastatur — andere Klasse als Browser und Terminal;
 ## Inhalt dieser Seite
 
 - Arbeitsteilung mit Browser und Terminal
-- Welche Aufgaben die Aktivierung lohnen
+- Für welche Aufgaben sich die Aktivierung lohnt
 - Absicherung für Personen und Teams
 
 ## Fähigkeitsgrenzen
@@ -62,7 +67,7 @@ Wert klarer wenn:
 
 ### 2. Ich schaue zu = kein Risiko?
 
-Sicheres, aber möglich:
+Aufsicht macht die Nutzung sicherer. Trotzdem sind folgende Fehler möglich:
 
 - Falscher Klick auf Bestätigen
 - Falsches Fenster
@@ -94,13 +99,13 @@ Erwägen wenn:
 
 ## Empfohlene Nutzung
 
-1. **Dedizierte Umgebung**: VM oder Nebenkonto, keine Privacy-Fenster
+1. **Dedizierte Umgebung**: VM oder Nebenkonto, keine Fenster mit privaten Inhalten
 2. **Aufgabe minimal**: „Formel im Calculator prüfen“ nicht „alle Mails“
 3. **Human-in-the-loop**: sichtbar, jederzeit unterbrechbar
 4. **Aufnahme/Log**: Team-Retros (Aufnahmen auch sensibel)
 5. **Danach prüfen**: Dateisystem, Clipboard, offene Apps
 
-Unternehmen können default deaktivieren — Managed Policy.
+In Unternehmen kann diese Fähigkeit standardmäßig deaktiviert sein; maßgeblich ist die verwaltete Richtlinie.
 
 ## Wahl vs. Browser
 
@@ -121,7 +126,7 @@ Bei System-Bestätigung zuerst stoppen und erklären, dann weiter.
 
 ## Häufige Fehler
 
-- Computer Use untrusted Projekts auf dem Hauptdesktop
+- Computer Use für ein nicht vertrauenswürdiges Projekt auf dem Hauptdesktop ausführen
 - 2FA, Bank, Kundendaten auf dem Screen und weiter
 - GUI-Automation als volle Teststrategie
 
@@ -131,10 +136,3 @@ Bei System-Bestätigung zuerst stoppen und erklären, dann weiter.
 - [ ] Prompt: erlaubte Apps und Verbote
 - [ ] Nach Aufgabe keine unerwarteten Dateien/Netzverbindungen
 - [ ] Organisationspolicy erlaubt die Fähigkeit
-
----
-
-**Status:** verified  
-**Gilt für:** App / Codex (Version, Region, Berechtigung)  
-**Prüfgrundlage:** OpenAI Help Center führt Computer Use weiterhin als Codex-bezogene Fähigkeit; Business-Release: ab 2026-05-29 Computer Use unter Windows. Hier nur Risikomodell, Szenarien und Freigabegrenzen — nicht „überall default verfügbar“.  
-**Zuletzt geprüft:** 2026-07-26

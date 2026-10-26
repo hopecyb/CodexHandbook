@@ -1,13 +1,19 @@
 ---
-title: diff 심사
+title: diff 검토
 description: 변경을 읽고 질문하는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: f7f953f
-translation_status: draft
+source_revision: 'f7f953f'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 diff 검토에서 볼 범위와 위험만 설명합니다. 사이트 내 링크와 점검 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
+reviewed_at: '2026-10-26'
 ---
 
 “diff”는 Codex가 이번에 실제로 어디를 바꿨는지를 말합니다.
@@ -50,7 +56,7 @@ diff를 읽을 때 중점:
 
 ## 흔한 오해
 
-### 1. 코드 diff를 깊게 못 읽어도 기초 심사는 가능
+### 1. 코드 diff를 깊게 못 읽어도 기초 검토는 가능
 
 1단계에서는 시니어처럼 모든 줄을 읽을 필요가 없습니다.  
 다음 세 가지만 봐도 가치가 큽니다.
@@ -78,10 +84,3 @@ diff를 처음 볼 때 이 순서가 좋습니다.
 4. 스타일과 네이밍이 맞는지
 
 실제로 무엇을 바꿨는지 먼저 보고, 그 내용에 따라 이번 결과를 받을지 정하세요.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 diff 심사에서 볼 범위와 위험만 설명합니다. 사이트 내 링크와 점검 순서를 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

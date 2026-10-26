@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App; CLI und IDE nur für Vorbereitung und Tests, ohne Verwaltungsoberfläche"
+  checkedAt: "2026-08-26"
 title: Scheduled tasks
 description: Führe bereits verifizierte Aufgaben in ChatGPT zeitgesteuert wiederholt aus.
 locale: de
 source_locale: zh-CN
-source_revision: 759c38e
+source_revision: "759c38e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Eine Scheduled task lässt ChatGPT eine Aufgabe nach einem Zeitplan im Hintergrund wiederholen. Sie eignet sich für regelmäßige Berichte, fortlaufende Nachverfolgung und wiederkehrende Pflege. Sie ersetzt keine beliebigen Webhooks, Repository-Ereignisse oder CI-Automatisierungen.
@@ -34,11 +38,3 @@ Eine Scheduled task lässt ChatGPT eine Aufgabe nach einem Zeitplan im Hintergru
 ## Offizielle Quelle
 
 - [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App; CLI und IDE nur für Vorbereitung und Tests, ohne Verwaltungsoberfläche
-
-**Zuletzt geprüft:** 2026-08-26

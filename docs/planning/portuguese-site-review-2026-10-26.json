@@ -1,0 +1,3302 @@
+{
+  "reviewed_at": "2026-10-26",
+  "source_locale": "zh-CN",
+  "target_locale": "pt",
+  "scope": "Full Chinese/Portuguese text pairs for all 283 documents; shared UI, pricing, 11 diagrams, structured data and three legal/contact pages. Shared original downloads preserved.",
+  "pages": [
+    {
+      "path": "ai-roadmap/index.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：registos → registros; registo → registro; secção → seção; principiante → iniciante"
+      ],
+      "source_sha1": "f66e3bad4ab12da72c8f00106c63551e5711f6e4",
+      "translation_sha1": "028e591693e0cd5d6c5196168feca6c733015d38",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2022-11-prompt-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "225d837da424943eeaf40dc5b20211114a04ccad",
+      "translation_sha1": "310e2d7a946159504cb3ccde3cf87231d62c065a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-06-function-calling.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：âmbito → escopo; a sua etiqueta de lançamento → publicar etiquetas",
+        "纠正“发布标签”误译为使用历史发布标签。"
+      ],
+      "source_sha1": "c362c482fae69509d183337f97024accd3a8ae2f",
+      "translation_sha1": "7f3f65aa9b5ae1db099bfdef0a17c2bff64b4aa4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2023-11-rag.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "e79c0dfb504bae1d074fd4102e0b39d4fd861867",
+      "translation_sha1": "8aabab551cfa1779ae82208111a4d1633c76c7eb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2024-11-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "7d4d121871875ea14f594a7dad376ac445ef8cd2",
+      "translation_sha1": "6190fdec8fb26fc18b8bdf63f1b664e71b968bfc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-03-tool-use.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：registos → registros; âmbito → escopo"
+      ],
+      "source_sha1": "efd508a3f54febdd32a96082c22541ab9599fa8b",
+      "translation_sha1": "33accd779b2c65bb04706c1dffc01201bd0cf035",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-06-multi-agent.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "f24f2f513051593fda55603236898385f3e0434b",
+      "translation_sha1": "3b93c24d9b2e8242cca2c7996fa28c05aa29050a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2025-09-context-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "d668433ca4fb39a861554e9c4dfb72f6037a91d1",
+      "translation_sha1": "4621553355843d0ef2ca4a88ecc85e589a940076",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openclaw.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：paragem → parada; âmbito → escopo"
+      ],
+      "source_sha1": "88681405417ba22667881c2a9d451b1404ba418a",
+      "translation_sha1": "f26316e218cbe2c947384bb0929e9f82a3c9e9b4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-01-openspec.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "1a340238db5e5bc5a7fa398f41fd05c39174fbc8",
+      "translation_sha1": "ce91a93d474934ba98eff7db47a42426716c452a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-02-harness-engineering.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "268e6114ffcfffa8bdd744404cb788d2774e5bd9",
+      "translation_sha1": "2e8828e58380a802cd8762ca00cbeddd729338bd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/2026-04-skills.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：registe → registre; âmbito → escopo; invulgares → incomuns; descarregar → baixar; competências → habilidades"
+      ],
+      "source_sha1": "952fe584e0e5be2ddba981693dabe0722b148b77",
+      "translation_sha1": "45a094c8979fac6babbdfb9aacfb546602c45218",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "ai-roadmap/timeline/index.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：académico → acadêmico; académica → acadêmica; competências → habilidades; investigação → pesquisa"
+      ],
+      "source_sha1": "847b43b89927981e9a1a8b553e7c93f26de2e3e2",
+      "translation_sha1": "1857c4c3c6a1c60311b2310f522ac8a8ba7dfa8f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/analyze-a-spreadsheet.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "68729f6738cd7785fd596ce5c592eb3d5f782436",
+      "translation_sha1": "fcaba1c285c8b60ca2fc94b3f41c15e439c71e2e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/automate-a-daily-report.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：Equipas → Equipes"
+      ],
+      "source_sha1": "2149e0a86259cdedf0ccc5fc423ca2cb5c3d50dc",
+      "translation_sha1": "753d6d444edb7993ab1043f3c225b5edb0740031",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/build-a-website.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "55fd86a34549bfe5a71b72d990a44a1407f3f264",
+      "translation_sha1": "62bfd820a44dcf181d6899e50f575db44be39938",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/coordinate-multiple-agents.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiro → arquivo; equipas → equipes; Programadores → Desenvolvedores; App de ambiente de trabalho → App para desktop"
+      ],
+      "source_sha1": "7b143fc4230464943bcc90001a95859db4f35715",
+      "translation_sha1": "b14cf72cb8dcd75645b42699f758a82e6b9edfc0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/create-a-slide-deck.md",
+      "status": "reviewed",
+      "findings": [
+        "修正语义或可复现实例：Dificuldade inicial. → Nível: iniciante.",
+        "修正语义或可复现实例：Com o roteiro de oito slides aprovado → Com o roteiro de oito slides definido",
+        "修正语义或可复现实例：o título em texto nativo mudou de “uma” para “duas” → o título em texto nativo mudou de “一份” (uma) para “两份” (duas)"
+      ],
+      "source_sha1": "7189374c7f17638c740091fc147a3c3bbddd5b6a",
+      "translation_sha1": "9f5099a131be7f9f381067e8637069c3f322634b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/first-task.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiro → arquivo; secção → seção; Principiantes → Iniciantes; App de ambiente de trabalho → App para desktop"
+      ],
+      "source_sha1": "38f925bdca2b8f9c01777e69fd8f7341a5ae6c77",
+      "translation_sha1": "760904895b4686fe592142ce518b1fc14932f1a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/fix-a-bug.md",
+      "status": "reviewed",
+      "findings": [
+        "补回缺失的原案例核验记录和2026-08-25证据日期。"
+      ],
+      "source_sha1": "405a6874270280bca5f9b3f789951785cbd05375",
+      "translation_sha1": "0345731c5c973cd2d295e73c3a824df2985858b2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "3c7676658d83b3ee0c1b93d14467281ffd0d8ac0",
+      "translation_sha1": "44cbc9aef052726b73d8fdd72badeea6f87eb495",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/review-a-pr.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiro → arquivo; equipas → equipes; equipa → equipe; detetar → detectar; âmbito → escopo; Programadores → Desenvolvedores"
+      ],
+      "source_sha1": "84638f0e9fa6dd5810cf6e89fda6484b9110a45b",
+      "translation_sha1": "f77f9fda4254e5e5f5191a39ce9c0f77a82c4dad",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/understand-a-codebase.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; Registar → Registrar; Planear → Planejar; Programadores → Desenvolvedores"
+      ],
+      "source_sha1": "c89ee30f1c341f4c290edf3a6a13f9cdf751d2cf",
+      "translation_sha1": "c97c4729cd57151ab89a2253c561ec3512f12fb3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/case-study-template.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：Ficheiros → Arquivos; equipas → equipes; equipa → equipe; Planear → Planejar; secções → seções; âmbito → escopo; Âmbito → Escopo; Principiantes → Iniciantes; programadores → desenvolvedores"
+      ],
+      "source_sha1": "74ef905d77bd1143a6a77fab2f7f0563750ba678",
+      "translation_sha1": "93f28699e6581ad78c9bc99ab8f55ad7982a72c2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：revível → revisável"
+      ],
+      "source_sha1": "5ad38bb90f340913fbe4493d74500dcd79e70ed8",
+      "translation_sha1": "ff3d19ddc08fada1bfcff05fd1e12e71360b6565",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/content-creation/refactor-docs-with-review.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "补齐中文对应的目录/类型元数据：caseCategory",
+        "补齐中文对应的目录/类型元数据：directoryOrder",
+        "补齐中文对应的目录/类型元数据：contentType",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; Planear → Planejar"
+      ],
+      "source_sha1": "db44ca392b13e1b1c17913187fb073f9479ba508",
+      "translation_sha1": "057699d0da7bfee653465ab8bc2bcda7295002e7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：equipa → equipe; Planear → Planejar; programadores → desenvolvedores; Investigação → Pesquisa; investigação → pesquisa"
+      ],
+      "source_sha1": "1e284bb1ce8b5619e3d9a4c3fa13f47cf1321bce",
+      "translation_sha1": "574ff7d2941466eb7e2e7b2accbca4b3ad45c15d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/competitive-feature-matrix.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "补齐中文对应的目录/类型元数据：caseCategory",
+        "补齐中文对应的目录/类型元数据：directoryOrder",
+        "补齐中文对应的目录/类型元数据：contentType",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; equipa → equipe; Investigação → Pesquisa; investigação → pesquisa"
+      ],
+      "source_sha1": "b74008b617eb81ffa84e11831c33636850c97f20",
+      "translation_sha1": "c8a9b51b40ffaa6a79ba14f6049402396a8a5a7f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/research-and-learning/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：fiável → confiável; Investigação → Pesquisa; investigação → pesquisa"
+      ],
+      "source_sha1": "a0be8814964db202ee5a54bb41c2f1e9a8f573d7",
+      "translation_sha1": "e3a20fa1ca65040786ce8d5fb894595e6687db39",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/fix-a-bug-with-verification.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：investigação → pesquisa"
+      ],
+      "source_sha1": "42d842e1e98fbeaf2638e101e0836d2bc164ca31",
+      "translation_sha1": "6d3902ccb69ab897db8b25f51dae00844e54e891",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/software-development/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：revível → revisável; controlo → controle; âmbito → escopo"
+      ],
+      "source_sha1": "a3d7f4cf22db1578536ea1bbcb75ab85387975d0",
+      "translation_sha1": "f993484cb6eb2eb6dcd95c3920aa288a731bbf51",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：equipa → equipe; paragem → parada"
+      ],
+      "source_sha1": "e596dcc60eacb83c2db8dc2844f6c51acbf5ee05",
+      "translation_sha1": "443fcca5e7b26b7e4d8ef6b4699f6eb2bc968da7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/issue-triage-suggestions.md",
+      "status": "reviewed",
+      "findings": [
+        "修正语义或可复现实例：possível dado entre contas → indício de acesso a dados de outra conta"
+      ],
+      "source_sha1": "6d859d72e617dd2f6f542899f9ecad722566c484",
+      "translation_sha1": "ff0bd1a1dc91f86bf9683edb1f0af8915dd9d11d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/use-cases/team-automation/scheduled-link-check.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "0d21aa90878b849fea0a8b95d7410635f305211e",
+      "translation_sha1": "d7beabff9d3518f258b3365a34c6a616ee268c1d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/artifact-first-work.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; ficheiro → arquivo; secção → seção; subsecções → subseções"
+      ],
+      "source_sha1": "e57c21522070d6f320d626cc2670d8fcd44ba4b3",
+      "translation_sha1": "f2bff04d2c9edcf18c939d58d3a813a3ad1798f2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/brainstorm-before-building.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; ficheiro → arquivo; utilizador → usuário; registo → registro; registar → registrar; planeamento → planejamento; Planear → Planejar; âmbito → escopo"
+      ],
+      "source_sha1": "9c5e6798e3d8074f0bb414f0484828a29e7e55aa",
+      "translation_sha1": "f78bbcad57d41962fadd7dc815fc8d04860aaedc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/diagnose-before-fixing.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：muita retrabalho → muito retrabalho; utilizadores → usuários; planeamento → planejamento; monitorização → monitoramento; âmbito → escopo"
+      ],
+      "source_sha1": "18193b0e5bdfe64d7067a64c029be234bbdcea22",
+      "translation_sha1": "6543c5beffa974e7dab43b15f55c33af7293cc40",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/explore-plan-execute-verify.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术葡语、纠正直译和地区用语混杂：revível → revisável; ficheiros → arquivos; ficheiro → arquivo; Ficheiros → Arquivos; equipa → equipe; planeamento → planejamento; planear → planejar; Planear → Planejar; planeie → planeje; controlo → controle; Monitorização → Monitoramento; retrospetiva → retrospectiva; âmbito → escopo"
+      ],
+      "source_sha1": "4a95760d2019656e0c4aa8afe7f7c694a033f716",
+      "translation_sha1": "7d6f9cbd2e63ffdcd43f694966f8799b00bd99ef",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/failure-recovery.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; equipa → equipe; registar → registrar; planear → planejar; detetar → detectar; Detetar → Detectar; âmbito → escopo"
+      ],
+      "source_sha1": "847e22a659f21cd7961a88c247ed1e99dbde1c40",
+      "translation_sha1": "0f808637294736f3cdbb6a2b8c07539d999c22bb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/human-approval-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、示例、范围限制与证据；无需语义修改，更新翻译复核记录。"
+      ],
+      "source_sha1": "f60dbb51d7d87200cd6a1e4932133b949a0d506a",
+      "translation_sha1": "c130692a1e84a9a6c796d2b1cd79af355d62b255",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：revíveis → revisáveis; uma especificação aceitável → uma especificação com critérios de aceitação verificáveis; registo → registro; planeamento → planejamento; Planear → Planejar; Investigação → Pesquisa"
+      ],
+      "source_sha1": "d058896385a453f54574e130d265215d06928ca6",
+      "translation_sha1": "bb0df7d10ba28d74dce8028ef49708d244cc8112",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/long-running-task-management.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "修正语义或可复现实例：Tarefa Cloud sem aprovação humana a correr a noite toda → Tarefa Cloud parada a noite toda à espera de aprovação humana",
+        "统一技术葡语、纠正直译和地区用语混杂：revível → revisável; revíveis → revisáveis; ficheiros → arquivos; ficheiro → arquivo; registos → registros; planeamento → planejamento; Planeamento → Planejamento; Planear → Planejar; monitorização → monitoramento; âmbito → escopo"
+      ],
+      "source_sha1": "c2a98877e6b2d1c44e6590967b6bbecbf85e07a9",
+      "translation_sha1": "88e3d48deed9fc2b206e4a90ddd4fb5cf4142f06",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/multi-agent-coordination.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiro → arquivo; partilhado → compartilhado"
+      ],
+      "source_sha1": "00989e93d150de284fa2aa275da2ee2ad2cfc6f6",
+      "translation_sha1": "6f7f23910ec5e4b404d26187b01eae82d2596598",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/research-with-sources.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "补齐中文对应的目录/类型元数据：caseCategory",
+        "补齐中文对应的目录/类型元数据：directoryOrder",
+        "补齐中文对应的目录/类型元数据：contentType",
+        "补齐中文对应的目录/类型元数据：outputs",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; factos → fatos; Factos → Fatos; Investigação → Pesquisa; investigação → pesquisa"
+      ],
+      "source_sha1": "a6fd20179671eccd1b50231f86151fe263be3749",
+      "translation_sha1": "94674d4aef1a3d839551d0401492865bfee3ef26",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/review-before-merge.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：equipa → equipe; utilizadores → usuários; registar → registrar; âmbito → escopo"
+      ],
+      "source_sha1": "78d5c03b9e9c4c9532f5a0696afe5798c5e1e74e",
+      "translation_sha1": "0f5f2018ecca0208b4b5d98ca923135372558045",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/specification-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：uma especificação aceitável → uma especificação com critérios de aceitação verificáveis; especificação aceitável → especificação com critérios de aceitação verificáveis; ficheiros → arquivos; ficheiro → arquivo; utilizador → usuário; âmbito → escopo; Âmbito → Escopo"
+      ],
+      "source_sha1": "70fd8a4c8d4415c133e3588e02a110ef94b2b0e6",
+      "translation_sha1": "250ae47eb711f87d0a531af2df15698efeef80d3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/test-driven-work.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：código-bases → bases de código; ficheiro → arquivo; âmbito → escopo"
+      ],
+      "source_sha1": "4eb568d4682e2ebb5c3ae91b0365562657773561",
+      "translation_sha1": "c085ebf90ea4a18aee1790209c85d37b2059973d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/workflows/turn-a-workflow-into-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：equipa → equipe; partilhar → compartilhar"
+      ],
+      "source_sha1": "3dd18c585a8a4ccc138c57670ac5d0ebb955b020",
+      "translation_sha1": "2162bc8eca7d66c84adbcd7e9c3e80a3cdf0a1f2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "cases/write-an-article.md",
+      "status": "reviewed",
+      "findings": [
+        "修正语义或可复现实例：Dificuldade inicial. → Nível: iniciante."
+      ],
+      "source_sha1": "e2bb5eab19a97b0407e879cfa3c3fcc161f00071",
+      "translation_sha1": "f975c2b2edafcadcb694c3e0bcadaa0307c1d753",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/handoff-and-resume.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "修正语义或可复现实例：O Codex que continua a receber → O Codex que assume a continuação do trabalho",
+        "修正语义或可复现实例：A Transferência teme dois extremos: → Há dois problemas comuns em um resumo de transferência:",
+        "统一技术葡语、纠正直译和地区用语混杂：ficheiros → arquivos; Ficheiros → Arquivos",
+        "修正正文普通名词无故大写，保留专有名称。"
+      ],
+      "source_sha1": "1ee17e97b466300dd1d8c1e3af552f0ba1a04e45",
+      "translation_sha1": "19fdea7b9c7dc8a6161cdb15cc0e69f3d6c1c04c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/index.md",
+      "status": "reviewed",
+      "findings": [
+        "原核验信息滞留正文；移至与中文一致的legacyVerification，保留日期并译写说明。",
+        "统一技术葡语、纠正直译和地区用语混杂：planeamento → planejamento; Planeamento → Planejamento; planear → planejar; detetar → detectar; âmbito → escopo",
+        "修正正文普通名词无故大写，保留专有名称。"
+      ],
+      "source_sha1": "3eb251e5d0206eb2c843167cf49bcb408e28fe94",
+      "translation_sha1": "325ff8c42f40846550cefe10c274d85b4d3e9754",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/planning.md",
+      "status": "reviewed",
+      "findings": [
+        "完整对照正文、代码和边界限制，无需语义修改；更新翻译复核记录。"
+      ],
+      "source_sha1": "a129229ec5f74be4acd054021efff7b5621bc27a",
+      "translation_sha1": "5b8cae0e01e10ce2f374921738ec796b54e2c8e3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/progress-and-steering.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Precisa de voltar a explicar o fundo → Precisa explicar novamente o contexto",
+        "修正原意/遗漏：fluxos de registo e recuperação de palavra-passe → fluxos de cadastro e recuperação de senha",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; planeamento → planejamento; Planeamento → Planejamento; planear → planejar; detetar → detectar; âmbito → escopo; ronda → rodada"
+      ],
+      "source_sha1": "c9ea3be403e0fb288e2e4b6a263ca55f60f8eade",
+      "translation_sha1": "c392d8403f9ceea0c0d9579205107e9f1f65bbf1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/agent-work/subagents.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐缺失legacyVerification及原核验日期/本机版本说明。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; Ficheiros → Arquivos; utilizador → usuário; registos → registros; controlo → controle; âmbito → escopo; Âmbito → Escopo; investigação → pesquisa",
+        "终校统一叙述人称与普通名词大小写: Delega subtarefas → Delegue subtarefas; fio principal → thread principal; um único fio claro → uma única thread bem definida; dos fios → das threads; distribui a responsabilidade → distribua a responsabilidade; pede explicitamente → peça explicitamente; deixa a síntese → deixe a síntese; podes usar → você pode usar; Considera usar → Considere usar; Não dividas → Não divida; Inicia um subagente → Inicie um subagente; não alteres → não altere; Não deixes → Não deixe; Reduz os conflitos → Reduza os conflitos; Divide as tarefas → Divida as tarefas; Atribui worktrees → Atribua worktrees; Define a lista → Defina a lista; não omitas → não omita; Continua em → Continue em; dá só uma vista de olhos → dê uma olhada"
+      ],
+      "source_sha1": "a3f2be543d9a53ba75d997ac27930682bc441153",
+      "translation_sha1": "61164ff8886bfaa5f9454aaf55662fc4442df6a9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/choose-your-client.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiro → arquivo; equipa → equipe; registe → registre",
+        "重译缺重音的客户端选择页，恢复Cloud三任务实例、只读性能调查、同命令复验、授权判断等遗漏。"
+      ],
+      "source_sha1": "e4c7057160e2e37640fc3d62956f5080821d08d4",
+      "translation_sha1": "051c8b27ebc7caba4e679618878694c3092f6e7a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/approvals-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipa → equipe; registos → registros; factos → fatos; injecção → injeção; facto → fato"
+      ],
+      "source_sha1": "35afd393bdd6a82067ca156b13ce1e8a4a156535",
+      "translation_sha1": "6f747fef2079e28f17bddcdb99759e7801f528c6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/commands-and-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "对齐中文稳定命令说明、exec --help、--cd/-C与工具读盘，删除过时参数推断。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; Ficheiros → Arquivos; Ficheiro → Arquivo"
+      ],
+      "source_sha1": "2896e32dd72717c020e05a11a108af7a1b1ee581",
+      "translation_sha1": "245a784d12f624412d8086336c68df00a576d039",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/configuration.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiro → arquivo; equipa → equipe; utilizadores → usuários; utilizador → usuário; registos → registros; controlo → controle; partilhada → compartilhada"
+      ],
+      "source_sha1": "0a9b2adb1d7f8cf39a3d0320fc881a0173ca0046",
+      "translation_sha1": "678faa718a512e2a6d26c8b257607f54423acd0e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：utilizadores → usuários; paragem → parada"
+      ],
+      "source_sha1": "a80ef7ec24263dc43adf43eaaff0ed43843a4f8f",
+      "translation_sha1": "3700b4f397680c61de2fe7f8773c6f39061308f6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/installation-and-updates.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "补回中文新增独立安装器更新语义及Windows/npm/Homebrew入口。"
+      ],
+      "source_sha1": "be3f2c43c8f8c2002f43c3179ae0c2a39cd71443",
+      "translation_sha1": "cbc8ca843e24dcf04c0c5adad0d18a6d0118231b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo"
+      ],
+      "source_sha1": "822e8f749813e7c889ac1a18245ba8f8cfb8a6c4",
+      "translation_sha1": "2694c66b51d7c85c2d89e8ff8a4b43eb4f629e5b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/non-interactive-mode.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐缺失legacyVerification及原核验日期/本机版本说明。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; registos → registros; secção → seção; controlo → controle; rondas → rodadas",
+        "终校统一叙述人称与普通名词大小写: entregas a tarefa → você entrega a tarefa; Depois de atualizares a CLI, volta a executar → Depois de atualizar a CLI, execute novamente; não alteres → não altere; Lista os riscos → Liste os riscos; podes redirecionar → você pode redirecionar; Cria notas → Crie notas; faz primeiro → faça primeiro; Guarda a tarefa → Guarde a tarefa; Captura o código → Capture o código; e faz o CI → e faça o CI; não estás presente → você não está presente; Consulta [ → Consulte [; Não coloques → Não coloque; mantém a tarefa → mantenha a tarefa; ainda podes → você ainda pode; Se ainda estás → Se você ainda está; Ainda não sabes → Ainda não sabe; Ainda não tens → Ainda não tem; Aprende primeiro → Aprenda primeiro; integra-o → integre-o"
+      ],
+      "source_sha1": "1f37961586b629eb8abb634cee3cfd9a1a29c473",
+      "translation_sha1": "e13c0db35721045a6bb72c79949f61438059a9c2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/cli/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; registo → registro; investigação → pesquisa"
+      ],
+      "source_sha1": "57b062fbf03d96ba5ac5f174c7901b3c9c56cdce",
+      "translation_sha1": "0cd8e32a5d65d3fae0f0239f0a977361426f0dad",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/compaction.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Condições de canto → Casos-limite",
+        "修正原意/遗漏：mantém o tronco, mas não garante que todos os ramos finos fiquem iguais → preserva as informações principais, mas não garante que todos os detalhes sejam mantidos",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; factos → fatos"
+      ],
+      "source_sha1": "c6c9d039e2f24fddc8851506d14598792d3ea613",
+      "translation_sha1": "586318cdab79a619ad4b70c54183f0e508960443",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/context-priority.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; Ficheiros → Arquivos; utilizador → usuário; registos → registros; âmbito → escopo; Âmbito → Escopo",
+        "终校统一叙述人称与普通名词大小写: Primeiro analisa → Primeiro analise; não alteres → não altere; Agora corrige → Agora corrija; executa os testes → execute os testes; Agora podes → Agora pode; Mantém a assinatura → Mantenha a assinatura; Não faças → Não faça; apresenta o diff → apresente o diff; apresenta primeiro → apresente primeiro; Corrige só → Corrija só; e conclui diretamente → e conclua diretamente; ignora o usuário → ignore o usuário; e carrega a configuração → e envie a configuração; Lista as fontes → Liste as fontes; Distingue o pedido → Distinga o pedido; Continua as partes → Continue as partes; indica a ação → indique a ação; Não trates → Não trate; nem contornes → nem contorne"
+      ],
+      "source_sha1": "13537ef1e83ebdd00a460ddb86f47bd70ef94ab7",
+      "translation_sha1": "ae3081e345e412e9f6ace573b8dae69aa100dc1e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/conversation-context.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：quanto mais longa, mais precisa de fechar ativamente → quanto mais longa, mais importante é delimitar novamente o foco",
+        "修正原意/遗漏：Não leve também o fundo já desatualizado → Não leve também o contexto já desatualizado",
+        "修正原意/遗漏：Quando o tema muda, feche ativamente. → Quando o tema mudar, delimite novamente o foco.",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; factos → fatos; ronda → rodada"
+      ],
+      "source_sha1": "3968049029137ca09b29a2ef6e06d5942c8432b3",
+      "translation_sha1": "9bf783d543b82318b5ef8f268c7a0626123698c4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/file-and-folder-context.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; factos → fatos"
+      ],
+      "source_sha1": "e9148a3c39971ea51c054904c71a85a043b12e50",
+      "translation_sha1": "7a3d92b9956cd280c2b299aaa0adb4a3fde528d4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; factos → fatos"
+      ],
+      "source_sha1": "d2baf42aacc1cc32d9fd1008fab42fa1fccf0787",
+      "translation_sha1": "e013a4c23c4793d582ce4be1ae2f3bc895737014",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/keep-context-focused.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Sinais de que já deve fechar → Sinais de que é preciso retomar o foco",
+        "修正原意/遗漏：Se aparecer isto, feche ativamente: → Se notar estes sinais, retome o foco:",
+        "修正原意/遗漏：Vamos fechar um momento. → Vamos retomar o foco por um momento.",
+        "修正原意/遗漏：Formulações de fecho prontas a usar → Instruções prontas para retomar o foco",
+        "修正原意/遗漏：sem voltar a fechar → sem delimitar novamente o foco",
+        "修正原意/遗漏：portões de fase → pontos de controle entre etapas",
+        "修正原意/遗漏：Portões de fase → Pontos de controle entre etapas",
+        "修正原意/遗漏：Um «portão de fase» → Um «ponto de controle entre etapas»",
+        "修正原意/遗漏：um troço pequeno → uma pequena etapa",
+        "统一技术词汇、纠正地区用语与直译：factos → fatos"
+      ],
+      "source_sha1": "5a55fa8ae18a8ebd12405b8544993e032ab1c035",
+      "translation_sha1": "354aad79dd70e0dd8257315160197c3d7e6ea707",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/project-context.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：oralidade temporária → explicações improvisadas a cada tarefa",
+        "修正原意/遗漏：ordem morta intocável → ordem rígida e imutável",
+        "修正原意/遗漏：o fundo longo e repetido desce ao nível do projeto → o contexto longo e repetido deve ser registrado no nível do projeto",
+        "修正原意/遗漏：O que costuma descer primeiro: → O que vale registrar primeiro:",
+        "修正原意/遗漏：vale a pena descer ao Contexto do projeto → vale registrar no contexto do projeto",
+        "修正原意/遗漏：sedimentar Contexto → registrar contexto",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipa → equipe; factos → fatos"
+      ],
+      "source_sha1": "fb3eb503d35009991b8036ed78dbe400cdf96981",
+      "translation_sha1": "4b3f1043429427837dbf31088506d3d55857ff1b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/context/sensitive-context.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：rode as chaves → faça a rotação das chaves",
+        "修正原意/遗漏：Rode de imediato chaves, palavras-passe ou tokens → Faça imediatamente a rotação de chaves, senhas ou tokens",
+        "修正原意/遗漏：Dados de clientes sem desensibilizar → Dados de clientes sem anonimização ou ocultação de informações sensíveis",
+        "修正原意/遗漏：desensibilização → anonimização e ocultação de informações sensíveis",
+        "修正原意/遗漏：Desensibilizar → Anonimizar ou ocultar informações sensíveis em",
+        "修正原意/遗漏：desensibilizar → anonimizar",
+        "修正原意/遗漏：desensibilize → anonimize",
+        "修正原意/遗漏：alguém irrelevante → uma pessoa sem relação com a tarefa",
+        "统一技术词汇、纠正地区用语与直译：ficheiro → arquivo; Ficheiros → Arquivos; utilizadores → usuários; registo → registro; factos → fatos; controlo → controle; palavras-passe → senhas; Telemóveis → Números de celular"
+      ],
+      "source_sha1": "a83db07df4ed214c9e188115a155cc44e12c7415",
+      "translation_sha1": "38f624a4c917b9bd0cfd571abc676ad3e8491282",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/add-a-prompt-example.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; âmbito → escopo; Secções → Seções; ecrãs → capturas de tela"
+      ],
+      "source_sha1": "15dabd2ef702824fd3c3df22feda65abfb67a6c9",
+      "translation_sha1": "a9f0896fc8c0057530f7082b84aee1de863367f0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：4. **Cada slug da sidebar** precisa do markdown correspondente; senão `npm run build` falha\n5. Páginas novas devem atualizar em sincronia a sidebar em `astro.config.mjs` → 4. Toda página nova deve ter frontmatter válido, caminho de arquivo e links cruzados\n5. A barra lateral dos quatro módulos lê os diretórios automaticamente; após adicionar arquivos, execute o build e confirme a ordem e os pontos de entrada",
+        "修正原意/遗漏：npm run build → pnpm build",
+        "统一技术词汇、纠正地区用语与直译：planeamento → planejamento; Factos → Fatos; principiantes → iniciantes; perspetiva → perspectiva; ecrãs → capturas de tela"
+      ],
+      "source_sha1": "1d4b3f2fbf07ac35cddf8cc8b6aadf1879d9c0ec",
+      "translation_sha1": "1a43ca9c5610ddb7ff3fa0e3c8e77a36bef6d2c6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/verify-technical-content.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术词汇、纠正地区用语与直译：registos → registros; registo → registro; factos → fatos; âmbito → escopo; regista → registra; registado → registrado; Registos → Registros; rondas → rodadas"
+      ],
+      "source_sha1": "cfb077d7936df780c63776a042cfdb5714f49d2a",
+      "translation_sha1": "c6c1fda32fa5064f2cdf06d62ebd36cf2b860689",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/contributing/write-a-guide.md",
+      "status": "reviewed",
+      "findings": [
+        "修正原意/遗漏：- Português, orientado a praticantes → - Chinês simplificado no texto-fonte, voltado a quem coloca o conteúdo em prática",
+        "统一技术词汇、纠正地区用语与直译：subsecções → subseções; factos → fatos; principiantes → iniciantes; facto → fato"
+      ],
+      "source_sha1": "dd22df1e261f62aff1e7834feb7ae9461a7de44e",
+      "translation_sha1": "04295a42138329173f3726bb36ea55fe31cc58ec",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：equipa → equipe; partilhar → compartilhar; Âmbito → Escopo"
+      ],
+      "source_sha1": "cb6371feac1277ea7f0ef49c007c95ac20b2c333",
+      "translation_sha1": "69c2cfdae5743500e82bc410a1a7d87af00af0fd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/scope-and-precedence.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; âmbito → escopo; Âmbito → Escopo",
+        "终校统一叙述人称与普通名词大小写: Segue os arquivos → Siga os arquivos; altera apenas → altere apenas; Não faças → Não faça; Executa make → Execute make; e comunica → e informe; Antes de começares, enumera → Antes de começar, enumere; e resume → e resuma; Não alteres → Não altere"
+      ],
+      "source_sha1": "b5f31ccef118796ca886345293235a49fa35880a",
+      "translation_sha1": "5c7661e17ec3524b8eab5de578b12e14111f495f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/what-is-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Antes de cada release, corrija o mesmo fluxo de verificação → Antes de cada release, execute o mesmo fluxo de verificação",
+        "统一技术词汇、纠正地区用语与直译：ficheiro → arquivo; Ficheiro → Arquivo; equipa → equipe; utilizador → usuário; registo → registro; Âmbito → Escopo"
+      ],
+      "source_sha1": "47c5866b932e13197a410f421680b3e900454e35",
+      "translation_sha1": "968b4b408f2b9318b01e0fa68a2c18f57afe4065",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/agents-md/writing-effective-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Ler Linear/Jira antes de programar → Consultar Linear/Jira ao pesquisar um ticket",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; utilizador → usuário; planear → planejar; partilhadas → compartilhadas; telemóvel → celular"
+      ],
+      "source_sha1": "63dd7118aece2126ff211101eac865985bdf9f1d",
+      "translation_sha1": "d4e2dc5f5a00f56e025f8de130c1d2930238aa61",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/choosing-the-right-mechanism.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Método de decisão em cinco passos → Como decidir",
+        "修正原意/遗漏：Essas regras de longo prazo devem descer de camada. → Essas regras de longo prazo devem ficar nas camadas persistentes descritas a seguir.",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipas → equipes; equipa → equipe; Equipas → Equipes; utilizador → usuário; factos → fatos; facto → fato"
+      ],
+      "source_sha1": "5fad7cb6e5260f8f5dcfc57c214aa21627af5ebe",
+      "translation_sha1": "a243423549277b781eb1f4c5f9b344aa75b1302a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/config-basics.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; utilizador → usuário; Utilizador → Usuário; Factos → Fatos; âmbito → escopo; principiantes → iniciantes; fiável → confiável; App de ambiente de trabalho → App para desktop; partilhados → compartilhados; partilhada → compartilhada; facto → fato"
+      ],
+      "source_sha1": "ee00ab52d6ca47ee375c25949d29c9f11656945b",
+      "translation_sha1": "faea6683791ff96416053400f551bc4401b11b46",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos"
+      ],
+      "source_sha1": "4d18d5ebc89659b55d11fe67b8588d7dae8716e6",
+      "translation_sha1": "f635288308d5c471d9c8b80b175011d07f7cb96c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/configuration/profiles.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐缺失legacyVerification及原核验日期/本机版本说明。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; utilizador → usuário; partilhados → compartilhados",
+        "终校统一叙述人称与普通名词大小写: não o descrevas → não o descreva; Confirma o significado → Confirme o significado; na tua versão → na sua versão; Se a tua versão → Se a sua versão; segue a saída → siga a saída; não definas → não defina; escolhe um sistema → escolha um sistema; Não assumas → Não presuma; Executa ` → Execute `; e confirma → e confirme; Testa ` → Teste `; Pede a leitura → Peça a leitura; Confere a configuração → Confira a configuração; sem te guiares → sem se guiar"
+      ],
+      "source_sha1": "6ab30c571b29defc9f7482fd0d3f83ad92811be7",
+      "translation_sha1": "f0fc839da57f4bc099c7b7f0eb5b81fbd5f87291",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：âmbitos → escopos"
+      ],
+      "source_sha1": "c33809fa4a4328def06f46f38856527156901a54",
+      "translation_sha1": "43bfdb26379e13a4d2664b0e9b2f05364dff0775",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/examples/monorepo-agents-md.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; Ficheiro → Arquivo; âmbito → escopo; Âmbito → Escopo; partilhados → compartilhados"
+      ],
+      "source_sha1": "a9fb1d70af6b95ea95b4992e8eb209dcff539db8",
+      "translation_sha1": "ebb6e8b0c7260777976cfc727eef1966eaeb1df3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; Ficheiros → Arquivos; equipa → equipe; utilizador → usuário; partilhado → compartilhado; Âmbito → Escopo; partilhada → compartilhada"
+      ],
+      "source_sha1": "28adc494dc91633bd709afe2f3efaf3b71ac377d",
+      "translation_sha1": "7027542cbb9240c0da15c23d7cbd7e86061b88a5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/memories-and-persistent-context.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：Ficheiros → Arquivos; Ficheiro → Arquivo; equipas → equipes; equipa → equipe; factos → fatos; Factos → Fatos; Âmbito → Escopo; partilhada → compartilhada; facto → fato"
+      ],
+      "source_sha1": "7a689ad7b9d601d4670512d1a12d4b9bd3513fe6",
+      "translation_sha1": "a4c54ff1d49f43d6356b302b527a78a264741e00",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/personal-preferences.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipa → equipe; utilizador → usuário; Âmbito → Escopo"
+      ],
+      "source_sha1": "c38105102c7e9f573327c562c9494b36d129796b",
+      "translation_sha1": "0951453c3bc2c994724c17a5e8c3b8e009fecfe0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/project-instructions.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Afunde as **explicações que repete ao Codex** em → Registre as **instruções que você repete ao Codex** em",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; secções → seções; facto → fato"
+      ],
+      "source_sha1": "76b0fdeaaed05dc731f03f666878495a656bebda",
+      "translation_sha1": "b2c939a95a9028b2f712d0cc7b90176570eef2e3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/allow-and-deny-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：Reduzir operações de baixo risco que acontecem todos os dias e exigem confirmação repetida → Reduzir confirmações repetidas para operações de baixo risco que ocorrem todos os dias",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipa → equipe; controlo → controle; facto → fato"
+      ],
+      "source_sha1": "521ecc965f30064fa7945ed427bec058175cd55c",
+      "translation_sha1": "52799836d92113872c55627fba4ec0eb1fbed569",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/command-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; equipa → equipe; utilizador → usuário; âmbito → escopo; principiantes → iniciantes; facto → fato"
+      ],
+      "source_sha1": "fdb8651c9e5733cd8805de6083966031f491a796",
+      "translation_sha1": "4ccedb293b99d240e12a99e8dd719b2da964b29e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：equipa → equipe; principiantes → iniciantes"
+      ],
+      "source_sha1": "9ac618513bcb88699b4fb6c155569e34fa5dcf1b",
+      "translation_sha1": "df8c05c513f567e19ec28215678a69d238b54228",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/customization/rules/team-rules.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "修正原意/遗漏：as regras inclinaram-se para enforcement de execução; AGENTS.md para descrição de comportamento → as regras impõem limites à execução; AGENTS.md descreve o comportamento esperado",
+        "修正原意/遗漏：libertações falsas → permissões indevidas",
+        "修正原意/遗漏：bloqueios falsos → bloqueios indevidos",
+        "修正原意/遗漏：tratar um ecrã como → tratar uma captura de tela como",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; equipa → equipe; registo → registro; controlo → controle; Âmbito → Escopo; perspetiva → perspectiva"
+      ],
+      "source_sha1": "bae8bd25ab403d08a187e25ff0f32446c454c291",
+      "translation_sha1": "64d02389c3122f238bbf05e443721df596a6bc0f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/diffs-comments-and-review.md",
+      "status": "reviewed",
+      "findings": [
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos; ficheiro → arquivo; utilizador → usuário; âmbito → escopo",
+        "终校统一叙述人称与普通名词大小写: Revê as alterações → Revise as alterações; concentrando-te → concentrando-se; Apresenta primeiro → Apresente primeiro; indica arquivo → indique arquivo; Se não encontrares problemas, diz isso → Se não encontrar problemas, diga isso; e aponta os riscos → e aponte os riscos; Resolve os comentários → Resolva os comentários; Mantém as alterações → Mantenha as alterações; volta a executar → execute novamente; e apresenta o novo diff → e apresente o novo diff"
+      ],
+      "source_sha1": "32ee40c9ef59b045f7755e0ad428ac032763f3e6",
+      "translation_sha1": "eab80ea119e7b90ddc43b761096bd5a60435f312",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧正文核验footer到基线对应metadata；旧outdated页面按中文既有核验记录恢复，未重跑事实验证。",
+        "统一技术词汇、纠正地区用语与直译：ficheiros → arquivos"
+      ],
+      "source_sha1": "d1a900709e5e6e7ae89c6f22e16110d1327dcbcd",
+      "translation_sha1": "5698bce6f94a76447f6a8ff76d4ea801214faf09",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/installation-and-interface.md",
+      "status": "reviewed",
+      "findings": [
+        "正文准确，优化入口描述。"
+      ],
+      "source_sha1": "080436d19ee79ccb7ec100eb2e99b905600a165f",
+      "translation_sha1": "64af3f1fd56670f8d61c76a0ddec4b451ce5e200",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/integrated-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "727e93e89f388ad2038b189e58a74191d863ae04",
+      "translation_sha1": "22b8eb8f2ef2ff05429728f6e95fbbae0c2a4443",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/local-and-cloud-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "741f686ed0413f8c07089e583503d7d9ce896bf4",
+      "translation_sha1": "f7d6d9cfc224ceea36e2bc8b7a839f45394e2496",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/notifications.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "4a1c6723e0d62c79a3fe4ed63e1d290f93f7ce85",
+      "translation_sha1": "c957cd23da6a0d27efee80977b6e63abec12e5d2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/parallel-agents.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "2336db1d8dd20a9d20acde0eacee764ee1b8cdad",
+      "translation_sha1": "adafb2759756fa2dca9bf884774b5c7fa00753b2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/projects-and-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "修复机械直译的完成标准与项目范围表述。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "6a1f17fdf701971889a40e35e2e2e21140187555",
+      "translation_sha1": "d3376376fea3c0e55c0da3a7e230cc518f919260",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复确认效果后再继续的遗漏条件。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "7a6d2fe2af99d8240c3752a954aa199c2857ea60",
+      "translation_sha1": "4dfbf247d9e0e4da50bb14580422c64cd1fb54b6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "c298f9f763f92ee64fff4872faf83c84ae57bf8d",
+      "translation_sha1": "98500786c5031a530c78e8449f565d2a2fdb7f3a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/desktop-app/worktrees.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "35697161369237855deb8c0b2d06759839e1e013",
+      "translation_sha1": "b3feb271c53d54e63040750219959d93fa7dc766",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/code-review-automation.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正sem filtrar secrets误译为不泄露凭证；改善人工门禁和合并表述。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "aa8b33e28ba705b41a3c6c73aedb542c8864dc9f",
+      "translation_sha1": "fa7b5bc25e7c285c639f4296798509ec05b807fb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/ci-cd/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "4aeb424dfd71913c5c4bb56b96eac5947d937417",
+      "translation_sha1": "108ef3f79b145775638039b41c5895c1070e03b5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/index.md",
+      "status": "reviewed",
+      "findings": [
+        "消除SDK新增段与整页人称不一致及生硬工程译词。"
+      ],
+      "source_sha1": "f58851ea7d7c6ab01a534861e9657b8f6802e0a4",
+      "translation_sha1": "b8e2abe54c7f8b7b8afa08144283966dcd83c6f9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/codex-exec.md",
+      "status": "reviewed",
+      "findings": [
+        "修复安全凭证交叉引用为葡语实际标题锚点；中文自身锚点无对应标题另记。"
+      ],
+      "source_sha1": "6d7c481f40816755cedb3b90ae8a3c8e2dc2fa35",
+      "translation_sha1": "86d7178fd909ede43f57866bce42b6a0dc3c1bff",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/exit-codes-and-retries.md",
+      "status": "reviewed",
+      "findings": [
+        "对齐新版退出码语义，删除未经依据的code=2和错误捕获retry模板，恢复真实退出状态捕获及有限重试边界。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "35074cd48d15f5958de20a39af9921c867cc2e34",
+      "translation_sha1": "3191bfeb23bbd605b27f5d0bf8962b8d52b6cf3b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "2d542c9177aff0d2cb04b57eb00371dd4f833a6c",
+      "translation_sha1": "ffd25d708c474981304e59571eef3fa5c2596fe4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/scripts-and-pipelines.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复--ephemeral、官方Action、checkout@v5及只读权限，删除旧安装/写权限job并补齐密钥隔离说明。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "07aeb4f2ef5902e8b8389ad6b29b1ee5fd8924e2",
+      "translation_sha1": "4586e33e2a096910866f0301dd8dbfa04054765e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/non-interactive/structured-output.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "e80b5d78570e417fe1996cd261b5f7dd1064f9b4",
+      "translation_sha1": "19e87da71f37d26286bc4c0418e9e82841938b70",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/sdk-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "e888ae6743222bd35ed2162b30e88b8c4728b2f8",
+      "translation_sha1": "c4145784c781c620701aa87fc72ef8e12d9fdd27",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复入口缺失的本地执行、事件与自建回调边界声明。"
+      ],
+      "source_sha1": "68cb29b9ea3b6d04baea22ee7311d1e3a28bea7b",
+      "translation_sha1": "a23f8d7028f5be56141b1e6fe89c3da40d65f945",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/developer-platform/webhooks/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "修复持久接收语句错误时序含义。"
+      ],
+      "source_sha1": "8a84ab85278c41fd4c91b2e092418e1f9ffdcb79",
+      "translation_sha1": "a6fa0aa0c654c613c49281ecf49b671573873fce",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/generated-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        "修复生成物“在Codex中是新文件”的机械译法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "7401176332de263f318ee791059b0f88e7f33834",
+      "translation_sha1": "1ef4a3fa2710b15c3c6f4bbf0221020133e41992",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/images-and-screenshots.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正截图误译为屏幕，统一隐私处理段人称。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "adc2b88ae3cbd1ca8b5f6b93743eae7aa306ded3",
+      "translation_sha1": "53cb34ecbfa6e00d73fa31a9f0529735838ca407",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "修复截图入口术语和首段机械直译。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "543d14ef74a0606ae2eada7e8301cc692bed0100",
+      "translation_sha1": "ec51243385b2176cdb97aaa9fa3104c895da155a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/pdf-and-documents.md",
+      "status": "reviewed",
+      "findings": [
+        "对齐中文字体嵌入的明确范围。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "1f4f82bf8abadf2fdb17e4dd291fbcb03c6cfb2b",
+      "translation_sha1": "438614a26b408d4d0a8e8ac26abfdd52ca5cb2eb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/presentations.md",
+      "status": "reviewed",
+      "findings": [
+        "澄清图表源数据与可更新要求。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "fb319fa4325fdf0714e279786e4c631db7176984",
+      "translation_sha1": "4973719fecc839fefb0c8fdec0b5c648d5d20e08",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/tables-and-spreadsheets.md",
+      "status": "reviewed",
+      "findings": [
+        "修复公式写死的生硬译法，保留原中文编码示例范围。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "b08adec53399435137ca964fb9c9e62e0c3c6e92",
+      "translation_sha1": "5157597584c8e67ca427334c6be2db5c49de5bf0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/files-and-artifacts/text-and-code-files.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复源文指定的中英混排规范而非替换为PT/EN。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "153779381cf4528add19912ddefd3b8a361b7b5b",
+      "translation_sha1": "ad21907afce254d3cb9db916c31f8384964ec0f7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/agent-basics.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "14ab120de8d9c2ccda6ca1bc5b11bb3a3cd19ea6",
+      "translation_sha1": "72e2b19a3d34b86685cadd12adb0e2be44e0a16b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/ai-and-language-models.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "ccdac83274caa0ab9896c3d935825a08375e3422",
+      "translation_sha1": "f86f37cfc752d27c13665c6f0cc8659175e1aee9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/common-misconceptions.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正想明白误译为编造、动手和翻车的逐字译法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "700e57bbbe339545097cb200dfec6ad12a187e4d",
+      "translation_sha1": "bded67241dd2544fc41e78a1a0ff88031275b5a2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/files-tools-and-commands.md",
+      "status": "reviewed",
+      "findings": [
+        "改善工具定义与提问动作的自然表达。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "9d65338a1d2c6b153bdf9b23787e5d70300ee4fe",
+      "translation_sha1": "154517ca20a25d215e2e41d8bfc6159340b5d39c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/goals-context-and-actions.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复背景不只历史的概念范围，修复任务拆解逐字译法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "280cea9aad517013ecd6a4e9f3ae5c9033ff60d2",
+      "translation_sha1": "3e097a3dbf3d4d5ccf5a050837f6e135a2792fd6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "b4d4b2b7ed5cf754697878e6927baa24587c233c",
+      "translation_sha1": "b9b0750d1681dbfcb6786e7942a031a2dc063ac6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/local-vs-cloud.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "9569b3cd3e0376e051d2b2a602fdb6441bb3eac3",
+      "translation_sha1": "f71e26c8b1ba2e4ca245147ab5c45e40736d0b0f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/models-and-reasoning.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "0685b79ddb3d42b5ce213d39c3377ebeb66e56ec",
+      "translation_sha1": "b4b7f46761deae0d3d9c8224e3559a5726e4fba3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/permissions-and-approvals.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "1beec634597ecc6420228baa6d2034370486ccb6",
+      "translation_sha1": "44f91446f8cd55b69d1e90362ad320bfd4e38032",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/sandbox-and-network.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正练习时误译为一般实践的范围扩大。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "2cf2c465baf5c06599fb69453c52964e53bb3fb0",
+      "translation_sha1": "5edff05acfc1fdb20c7840644a41bfcaa6947d2c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/threads-tasks-and-projects.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "c3604521816c51ff402be4b05b68658be34dd249",
+      "translation_sha1": "8fe7f204681ca02123678a15cfefa3d5069c63b7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/tokens-context-and-compaction.md",
+      "status": "reviewed",
+      "findings": [
+        "替换无可用导航的旧章节号05为对应上下文章节。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "cd44efe761b775c4820fb5b0bb91ff0b7f76036d",
+      "translation_sha1": "d47815bb6c9ee0b6afe3c4b5bca7c63d9f150c0d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/foundations/verification-and-human-review.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "bfe40369ed1ed780ca1d822d82420162501359cd",
+      "translation_sha1": "7513c9954802d970f9b6b7e27108ffb4b4eae650",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/account-plans-and-access.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "7b123e53f8fd45e9dfea8b69cae3e8ebe3f537f4",
+      "translation_sha1": "231180485eb54f3960271476441fe92e94e577cb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/beginner-safety-checklist.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正没有客户隐私的宾语误译。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "75bfe4dc2f24bc964c2cf0b3d5b72d179344deeb",
+      "translation_sha1": "a0bb0e544e9bed9c1a9bfd21c86b128661299dda",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/create-your-first-project.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正正式项目误译为官方项目；改善遗漏diff表述。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "43dcbdbf1f0c8bc25ef872693ea4ac24b31c41fe",
+      "translation_sha1": "085a09cedbddc8857e8afe61716f564673fac05b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/first-30-minutes.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "7d1061dedd2f2a18030d5ea47fb7a02ad326a954",
+      "translation_sha1": "dd2efe5497c6b6fc5b5b6c7c9d1a675e72eae752",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/index.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正正式内容误译为官方内容。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "62fb65dbb62e033d2e6b77791de17bfff4f2e5c4",
+      "translation_sha1": "520444627844fc36b3938d22bb1ebea1b53bf33b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-cli.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "564bd757cf7cd36427a0bcb67628edc4f0a48683",
+      "translation_sha1": "3439b0e7914c3630c3734ade35f35671e5e3d56d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-desktop-app.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "974842f06dba920506faa3e83cc8bb61b5ce33c1",
+      "translation_sha1": "7a2dba352f7a8dfa4f6f1c225714c9ce103d4245",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/install-ide-extension.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "e8f88eca639ca9121c3be98e21562256cae3bf41",
+      "translation_sha1": "1fdf96ecb411c0d34956400c034ebc111ad0899b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/review-the-result.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "a215910a8148f3ab8ea7577df58708fcc9b924fe",
+      "translation_sha1": "3ec14358e4c555186f6bcbd0f461f51a1ea16a55",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/run-your-first-task.md",
+      "status": "reviewed",
+      "findings": [
+        "消除第一次任务流程中重复且不自然的计划请求表述。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "f203611f4f654c69b744f59522f18b0e652f4e65",
+      "translation_sha1": "625007b138e192f87fc2b11440eeed83e661ac64",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/sign-in-and-authentication.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "ea83fa685e18889503453627f23d1472ee306cbc",
+      "translation_sha1": "ca6bee2baf1ce1d813744181297e1636d9dbec06",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/getting-started/undo-and-recover.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正正式项目误译为官方项目。"
+      ],
+      "source_sha1": "8aa3171c775ff30bfef121ba2af84e3dc49d5f31",
+      "translation_sha1": "edaeb45b51446924939d058ee76d6f76d2f011f7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/cloud-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "d5369b54fa1bbc3745b8e884cfd47a1eb9aaf0e0",
+      "translation_sha1": "3ee7bc8d5d786f2e7bacd74d051fa9337afc414d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/editor-context.md",
+      "status": "reviewed",
+      "findings": [
+        "补回-C别名并将脱敏从错误的desensibilize改为移除或遮盖敏感信息。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "6d1b2484db79a7285d2d8a61fce317dbb4ad2fac",
+      "translation_sha1": "88522818afe22f67bcdb49ec7631229cdd25b7f6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "c2fa50b16ab891592f65320d58f780b488aab72c",
+      "translation_sha1": "7c82169141eb5d84128fa4b4c34a23c59f5136a7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/installation.md",
+      "status": "reviewed",
+      "findings": [
+        "区分重载与重启，符合中文设置行为描述。"
+      ],
+      "source_sha1": "85e1691cf888074bf8a7337d92f93626f8d80538",
+      "translation_sha1": "6b05a3685a6b256db043b4d141713413332c53d0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/local-task-workflow.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "0264d4d9c01773ef206b854e86b29ddaa1c415f4",
+      "translation_sha1": "8ab0612c5736693bfb627d1eabf34a665898393c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/reviewing-changes.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "a6badd55babfc2f72b7f8617995435c07a674972",
+      "translation_sha1": "4c888553008df252d006fb07a51f34eca0c28242",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/selected-code-and-open-files.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "b6b264f6221a4aafd40f578baae1e09094763380",
+      "translation_sha1": "1dc5c89c45d648a209c65040d90483736f7d3840",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/settings.md",
+      "status": "reviewed",
+      "findings": [
+        "修正重载编辑器的技术表述。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "6f28910e6fa3f4373a61c4ca18395b836512a145",
+      "translation_sha1": "02a544fb053e7d81e32fc1aa149ce701896c5dcd",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/supported-editors.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "7b82896e18ef0b7ca25f4839b60dd5db91d3c9a0",
+      "translation_sha1": "dc1ff53f9f16bf6bacc97821462fce3eb734d768",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/ide/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "ebb21de9c69cd0324be9967b00dfad5d14443c1b",
+      "translation_sha1": "d64a0ca3c96c0e02994750944dddfce445fe7f43",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/index.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复总览漏译的AI Agent、安全与验收维度。"
+      ],
+      "source_sha1": "aa277f2de13e98eb2a57d9ee8bfa0472f948da65",
+      "translation_sha1": "5ae36c92936adc7cf3f867be2b7efd118a944e5b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/github.md",
+      "status": "reviewed",
+      "findings": [
+        "将过期路线图目录换为现有对应入口；修复粗略理解的贬义误译。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "ece7161bc622d24c95c7a0fccee13fe30f5ac600",
+      "translation_sha1": "5bd14de0591da11492b3f0b4c4c90ed5fcc43464",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/integrations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "修复自动合并推荐的主语/默认范围，并改正日报通知逐字译法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "140102ce4bd9f260ecb2a23f767fd347a27ddbca",
+      "translation_sha1": "2e9f7867328022a71793dde74bca8afd6540440b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/01-talk-to-codex.md",
+      "status": "reviewed",
+      "findings": [
+        "全文核对固定材料、只改指定文件、未知保留、复核及恢复条件；保留中文练习字面量与共享下载。"
+      ],
+      "source_sha1": "827a5d22da1b0a743c5cb00fe8c70ebf40690f7d",
+      "translation_sha1": "571cd9eae01210dd20601ad1473903996daf67c1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/02-work-with-files.md",
+      "status": "reviewed",
+      "findings": [
+        "全文核对固定材料、只改指定文件、未知保留、复核及恢复条件；保留中文练习字面量与共享下载。"
+      ],
+      "source_sha1": "ec5c2d3e765014553e501fca4909df22393b136e",
+      "translation_sha1": "7aad5b4e65f29cb1f6cc6fb3b9af1acd5da9e435",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/03-give-clear-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "全文核对固定材料、只改指定文件、未知保留、复核及恢复条件；保留中文练习字面量与共享下载。"
+      ],
+      "source_sha1": "664fdf72408db4d2edc0f72178e6a947486c4881",
+      "translation_sha1": "e5c33ac2ea637408e2d9e1484e350f3640484b78",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/04-review-results.md",
+      "status": "reviewed",
+      "findings": [
+        "全文核对固定材料、只改指定文件、未知保留、复核及恢复条件；保留中文练习字面量与共享下载。"
+      ],
+      "source_sha1": "e426ec4391083920b17726bdaf003ab666ac4606",
+      "translation_sha1": "182ac6a7a813803a8d92e97e24a2f9fb1dbe682f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/05-complete-first-project.md",
+      "status": "reviewed",
+      "findings": [
+        "全文核对固定材料、只改指定文件、未知保留、复核及恢复条件；保留中文练习字面量与共享下载。"
+      ],
+      "source_sha1": "cc1139b811a175f02ad577e4f66c53b42fa857b1",
+      "translation_sha1": "0a6b1263dc98e06f2e7e3fcf7e0b515ba16bdb34",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/beginner/index.md",
+      "status": "reviewed",
+      "findings": [
+        "改善交接记录术语，保留真实验证范围与独立读者尚未测试的限制。"
+      ],
+      "source_sha1": "1b7fbb340d7860591f93663eb89697c812ab968d",
+      "translation_sha1": "3a2570e56161946aeef75fedaabf98cc30a94e55",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/creator/index.md",
+      "status": "reviewed",
+      "findings": [
+        "消除模板与AI模型的歧义，全文核对四里程碑、材料衔接、冲突保留与未完成边界。"
+      ],
+      "source_sha1": "d1b46b13bb164a1929b59a4b530a88465504a06d",
+      "translation_sha1": "018d1c122967ea24b813fc6f62ad6f829b13a851",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/developer/index.md",
+      "status": "reviewed",
+      "findings": [
+        "核验状态改为尚未测试而非断言无人完成；改善当前结果验证表达。"
+      ],
+      "source_sha1": "22d8bd3a0640952eee2c8961cb8d1f7f1b4461c6",
+      "translation_sha1": "a8948f7c6cbce6984c042043713d7bac43b768fb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/index.md",
+      "status": "reviewed",
+      "findings": [
+        "修复演示误译demos，未独立测试边界及指南语法。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "2f7ff714fd4c735cea5b69c88745809693c374ea",
+      "translation_sha1": "ad207551ff11c59cf535848928a3189a80f5a9d0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/learning-paths/team/index.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "3b467382b4f4ff1292c3df41cf9266f0b6c53ee1",
+      "translation_sha1": "2b6069745b6254b7813b0f5dd7f3b800c03fa39d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/permissions-and-sandbox.md",
+      "status": "reviewed",
+      "findings": [
+        "恢复联网目的而非仅目标地址的安全检查维度。"
+      ],
+      "source_sha1": "6b5fcb85ea71e861fab7a9376f24c1f1ac63fc2a",
+      "translation_sha1": "e0d68289d55f352c5079cbbbf5d6cbe8cc391964",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/definition-of-done.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "f55e9f7fd33e5d7d12ca0ae9c65d164e092c2b23",
+      "translation_sha1": "80be931db8ae210532b2646474e0e72fdb0acefb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/handle-uncertainty.md",
+      "status": "reviewed",
+      "findings": [
+        "修复不自然的抽象名词表达。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "839ce22cc23151823d406f4b1269ba98fb471a7d",
+      "translation_sha1": "e56417b4fd7d7f504fbd08390c1cbc5fcc495ade",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/index.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "90d62fb0bee5a2ab790e65bc41e794682af27d2f",
+      "translation_sha1": "9ed08196cee7df53fe4bfed71877ad982121e6aa",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/review-diffs.md",
+      "status": "reviewed",
+      "findings": [
+        "统一新增AI代码检查段与整页文件术语。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "f7f953fd1cbb1be0341f29ca65e0a5f1214a9c36",
+      "translation_sha1": "fc2a47b6758ac3382030606badbe15d79b319d9f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/run-tests.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正无测试仍需验收被误译为仍接受；恢复小改动不跳过验证的标题语义。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "8b1e5c73df651321134ff649516555f92ad6ceac",
+      "translation_sha1": "c6e1f8ca185e82cbac30f5895dddbe74fc1b74e2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/usage-time-and-model-choice.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "8b68d9272061b5e610884b1b1d49763e7942d0bb",
+      "translation_sha1": "30478630f47b2126e2992ed290b35bb8c13eb007",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/validate-sources.md",
+      "status": "reviewed",
+      "findings": [
+        "修复孤立转折句与对外使用的机械译法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "688453128f3263f3edb614a048d99db4467269e4",
+      "translation_sha1": "cabc5363e23c7c85a91ab55878dcf57da6dab2f9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/verify-artifacts.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正截图误译屏幕。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "7a6a12e8bcf87800bd77ecedbd6cb538a1df0994",
+      "translation_sha1": "209f72228036f49e59c19142d393b2d964b816d3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/quality/workflow-evaluation.md",
+      "status": "reviewed",
+      "findings": [
+        "纠正staged错误和JSON模板被误译为计划样本/电子表格。"
+      ],
+      "source_sha1": "9ea3ecc3dab50c37a259150d95dfde4398bb66dc",
+      "translation_sha1": "5dbf84fbd972093088b6a2faea5a59054e5566e0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/commands/index.md",
+      "status": "reviewed",
+      "findings": [
+        "修复无人值守与参数调整的西语式直译；退出0含义与中文专页冲突另记。"
+      ],
+      "source_sha1": "6091bcce1c86ada657472a59d0e521b44275fb41",
+      "translation_sha1": "1b6ccaced1c59a45e834ec081c5db64e305880cf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/configuration-reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        "修复配置页不自然比喻及密钥提交语法错误。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "8f692edfee650db27f6949558f972e96ea3f027b",
+      "translation_sha1": "6e6f3a13665acaad2a3d33f7c72380fc92568b02",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/environment-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "修复泄露误译过滤、脱敏误译以及葡语语法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "58fd37baf9b6cce4c7e14005a429d826a4ab2f0d",
+      "translation_sha1": "d3f042899e54f0b3e9eca742029f59bcfe48c2d3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/error-reference.md",
+      "status": "reviewed",
+      "findings": [
+        "修复排障分流和脱敏术语、原始原因与协作句法。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "955c0a6c0bc32870a1800cc06735d189e3e651be",
+      "translation_sha1": "318e6ebddef3de88918b5a9dc7bebdda45f0d4f4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/faq.md",
+      "status": "reviewed",
+      "findings": [
+        "替换过期团队治理路线图为现有章节入口。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "c9d7ed80ca6311017e1e56560032b30c0e80af12",
+      "translation_sha1": "4f58c96819ade17ec7254cd738b3f4d3d16c9985",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/feature-comparison.md",
+      "status": "reviewed",
+      "findings": [
+        "全文中葡对照无实质遗漏；更新审校日期与中文版本标记。"
+      ],
+      "source_sha1": "b3d30b08174b9399a442efafef920bce8c116fcd",
+      "translation_sha1": "a03e2502b2f6cac0fa83b5bfe9366a20b5e3f055",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/glossary.md",
+      "status": "reviewed",
+      "findings": [
+        "将生命周期节点译为自然的触发点表述。",
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "ae4b7946102c0a2f06beda42289c9f5b99cab77e",
+      "translation_sha1": "b5e27b59014de05ea81dc0a338ab403286da4578",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/index.md",
+      "status": "reviewed",
+      "findings": [
+        "迁移旧核验页尾至与中文一致的legacyVerification，保留基线证据日期。",
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "d45e64069cbf22b67669bfdba08239a7d14e864a",
+      "translation_sha1": "b921dc139ce705c06d4763d7343eea4200361201",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/keyboard-shortcuts.md",
+      "status": "reviewed",
+      "findings": [
+        "补齐/对齐核验元数据和产品范围。"
+      ],
+      "source_sha1": "4f812d968c4bd5158953d1ed1ef1e345f7ed8329",
+      "translation_sha1": "b221b3a645130f17ae79d181ae7c6a24f5f9d48a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/model-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "修正提高模型条件：无法处理来源冲突，而非冲突仍然存在；避免暗示更强模型消除真实冲突。"
+      ],
+      "source_sha1": "20eb508b9457c23c6f0cdad9725dc6eba1a2ad1a",
+      "translation_sha1": "91d5fddb40c111437e077f657dcde4dbf76de790",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/official-resources.md",
+      "status": "reviewed",
+      "findings": [
+        "Verification footer must become metadata; improve literal official-resource phrasing.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "5a584b05a88b0e2b713141f413fbba156cb8887e",
+      "translation_sha1": "1bf458126977a5cba739314dfe069df1d4640932",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/permission-matrix/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize Brazilian terminology; retain Permission Profiles precedence and proxy requirement."
+      ],
+      "source_sha1": "c6ad6aa3300a06447252c4c24e7cab4aaa145d57",
+      "translation_sha1": "39f71f80cd0dc8e3f7c78c0b4b06f9076a1a128c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/resource-compatibility.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; retain no-install-test limitation."
+      ],
+      "source_sha1": "96ff34fad102fa99f730b03a923d60a0b57610b6",
+      "translation_sha1": "691e672853953733bfd7c3b5fdfdbed807e92815",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/slash-commands.md",
+      "status": "reviewed",
+      "findings": [
+        "Remove added password analogy; restore verification basis statement that listed commands come from official tables."
+      ],
+      "source_sha1": "a34c90f40987fe0a9e8786a4d1199db20b7b22c8",
+      "translation_sha1": "3208555f53b983ab24794eabbb4f2d0afe0440f6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/failure-recovery-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; retain exact exit codes and single-variable fixes."
+      ],
+      "source_sha1": "fc9187249ccdaa507deb2098fb670cba5774311c",
+      "translation_sha1": "c2ef55ed9b694a0f6c939aef7a7a10191e3f4c7e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/reference/troubleshooting/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Mixed tu/você voice and inconsistent technical capitalization."
+      ],
+      "source_sha1": "da350d03178d3d24eb07668a1623cf1e86560681",
+      "translation_sha1": "ddc07819fa82810bafd4fef609a10995959eb7e0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/choose-your-path.md",
+      "status": "reviewed",
+      "findings": [
+        "Verification footer and unnecessary technical capitalization.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "51ccd006cd3d17e1e52376c232ce81fbfc8f898f",
+      "translation_sha1": "7bbf81a3d8d9dadedb567b677e54f54d6d58cb4d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/codex-capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "Verification footer and awkward capability-map wording.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "1a4cd9862a170b876b18913d4ce359f2c627b83f",
+      "translation_sha1": "598312befe7e72245e112958330aa36029cd6bcb",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/handbook-version-policy.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing source legacy verification metadata."
+      ],
+      "source_sha1": "a608dc3bdae273d10843a871230964c0ca5695f3",
+      "translation_sha1": "786eac8ca1f03fbdbc2b093d4540bfb45d174b95",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Unnecessary capitalization and handbook calque."
+      ],
+      "source_sha1": "953fb894d443881b89d070b91cf6078feda6dab1",
+      "translation_sha1": "5d9fe9c44fe32ea4f390eb31aea1de3725c1638e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/prerequisites.md",
+      "status": "reviewed",
+      "findings": [
+        "Formal project mistranslated as official project; background calque.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "5fbedb8fff2e1f117588363e33818786f80dee27",
+      "translation_sha1": "2bf3217f590d0d5c0bee90eccf1c82fe857116a7",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/terminology-for-beginners.md",
+      "status": "reviewed",
+      "findings": [
+        "Capitals and handbook calque.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "a18bacf35607dca48ce12b0131c9960c34b72b47",
+      "translation_sha1": "fd583d9b2a9b6d58dd96052f171edabdcd2d6058",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/what-is-codex.md",
+      "status": "reviewed",
+      "findings": [
+        "Capability map link targets section root instead of named page (same source issue).",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "0f376b6909520c4be7cf66bd5a4ab0c831f75d1d",
+      "translation_sha1": "fb102bc66748dc47f48a38b8b914f02c5a77f743",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/start-here/who-is-this-handbook-for.md",
+      "status": "reviewed",
+      "findings": [
+        "Capitals and handbook calque.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "95272c3957c1bc1766168437ab9d803d880160d1",
+      "translation_sha1": "984df774613ab2afe3f226f43ffbfae7d7cd338e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/acceptable-use.md",
+      "status": "reviewed",
+      "findings": [
+        "Unnatural legal-review sentence; individual seats mistranslated as places.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "0409154f600cefd6290b913a10851596d660fcb6",
+      "translation_sha1": "8c0125d0915086283ad775d4079e291a93fb5939",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/governance/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize governance terminology and voice.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "6c37ab466e99484d1e8d3758a21a6a7f0fb1e5c5",
+      "translation_sha1": "45edaca1376a84dc57ab91ec7ccafab6a0db295f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Replay/review capability mistranslated as recoverable; seats translated as places.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "b44c5d131e128bc26145c305b8f7dee2f31a88ad",
+      "translation_sha1": "d59496a7e72d3c04284c8c316101061a2baf8b5d",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize voice and terminology.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "91ed6a31b4cd55294242b23e5108b6ffb1c5f53b",
+      "translation_sha1": "217f4f4a120799fde9b47b2afda4843677aa1f7a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/plugin-and-mcp-risk.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize vocabulary; retain explicit risk boundaries and restrictive-policy rule.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "bf027ad9af4036b0ed63b3a076f9f905359bd5c6",
+      "translation_sha1": "84c0f019007d5ded654ba40e197d02ce52096405",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/prompt-injection.md",
+      "status": "reviewed",
+      "findings": [
+        "Data leakage mistranslated as filtering data.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "3e44fdf485efeec10a56b4e4e192eefd94d3ca3e",
+      "translation_sha1": "75d3cef31fcd104ed5e72b0633ef003bcfccce05",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/team-enterprise/security/threat-model.md",
+      "status": "reviewed",
+      "findings": [
+        "Data leakage mistranslated as filtering data; several Spanish calques.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "4ec320da6823dff5b1fb509fe24d74b1ee7301db",
+      "translation_sha1": "42d746d0458d0756308674bc0ac31f7b438ea6d5",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/browser.md",
+      "status": "reviewed",
+      "findings": [
+        "Screenshot mistranslated as screen; malformed overflow wording; normalize browser terminology.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "802f88949188a105ea1ef7fda6bfb0f2ab375e78",
+      "translation_sha1": "64fe0f58a8894b92324ae05daeeaeaf7db3a2616",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/computer-use.md",
+      "status": "reviewed",
+      "findings": [
+        "High risk incorrectly described as requiring risk; presentation software mistranslated as demonstration software.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "d4a2e113970ec69e2d6e1cc70d93f137090c229a",
+      "translation_sha1": "6e21a2f583344d73c0e0a080d5b922e19fd6b26e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/image-generation.md",
+      "status": "reviewed",
+      "findings": [
+        "Unnatural acceptance wording and image artifact terminology.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "ea275fa8bdb4c70221d513d632de9e86e4c7b04f",
+      "translation_sha1": "a7f7db6380a0a225c1f4e35f2994d47b0213c417",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize tools vocabulary and metadata.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "5939a9d66e253f8a792e23a60a2490e33924e4b0",
+      "translation_sha1": "9bea5f190fa083967c50529a79dc1c647fda9e51",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/shell-and-terminal.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize command execution terminology.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "1438fc73c4678c5be99b62f71e9ab4d42fd8b756",
+      "translation_sha1": "2b031cc2217e9572974afdfb241b11825c2ca5c4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/tool-selection.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize tool vocabulary.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "9fdb3667e5d250476fd6b61610f3e693af0222c8",
+      "translation_sha1": "8babe4f705ba8e89d2307abf081ff7abccc8e396",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/voice.md",
+      "status": "reviewed",
+      "findings": [
+        "Redaction mistranslated as unmasking; improve voice repetition wording.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "192bba2530ac12f4f50ae4744bf55a955277f46c",
+      "translation_sha1": "957407134cd9ce66588758c4034c27055dda88b2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/tools/web-search.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize source-search vocabulary.",
+        "Moved translated verification footer into source-equivalent metadata, preserving evidence date."
+      ],
+      "source_sha1": "7adcb92c870d9328b94f96dc93b221b8de575ed2",
+      "translation_sha1": "7e34cb5dc9c97abc76220799250c9ff4cc0a9c83",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/updates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; preserve run limits and original dates."
+      ],
+      "source_sha1": "3c99d357d9bcc10689701e6377c45c0b4c81f474",
+      "translation_sha1": "ea8e2e22c7f85ee1a92d38090b3573980ecab6e6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/cloud-environments.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing legacy verification metadata; frozen install wording not equivalent to pinned versions."
+      ],
+      "source_sha1": "1745f70968380d47fb7eed0da80b51ecade18c5b",
+      "translation_sha1": "365e6c6f4affdecb85ee3a97d6f9e21eeb450ead",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/code-review.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize evidence and merge wording."
+      ],
+      "source_sha1": "ea6796af69e8aaa0dce7b12f924ac95e768a5090",
+      "translation_sha1": "45f96c7cd223327f01538de724849817750483a4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/connect-github.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing legacy verification metadata."
+      ],
+      "source_sha1": "b126a7edeb42bd1c2de2bce168ab9abb258c7b88",
+      "translation_sha1": "cdecb7fe091bfa10da885f5e05cc2b5541907747",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/create-pull-requests.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy in PR approval boundaries."
+      ],
+      "source_sha1": "39371d42d61452c60a6b8b37050af93a0030efcf",
+      "translation_sha1": "3846b62c0348b6ddf8ed91d1b57fbbb8b9120327",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/delegate-and-follow-up.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy in delegation and follow-up boundaries."
+      ],
+      "source_sha1": "38b322f5f93e6fbaf3135f4b7cf1d9a3a8adf026",
+      "translation_sha1": "e38572f5f0b296bef1d1075982a78f31495a0390",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Uncommitted files translated ambiguously as unconfirmed files."
+      ],
+      "source_sha1": "86fa0ac0049e820eede82e587706267d9ae76021",
+      "translation_sha1": "d26a8df1ae7ea7f2fe5de77712a4e114ee1ac91a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/internet-access.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing legacy verification metadata."
+      ],
+      "source_sha1": "5bbb90556614ba1d7ad93f3dfb820e13e91ca32b",
+      "translation_sha1": "c172f7321fb16e0cf7206e6b64b7316da2dde8f8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/secrets-and-variables.md",
+      "status": "reviewed",
+      "findings": [
+        "Entire page lost Portuguese diacritics; setup and ordinary configuration conflated; curl omitted from counterexample."
+      ],
+      "source_sha1": "78937be04005c1c90a2d1356dccd2f92ba1ad4e7",
+      "translation_sha1": "597c93182feca0d78fa40240ce1c3bcf3ee65927",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "guide/web-and-cloud/troubleshooting.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing legacy verification metadata."
+      ],
+      "source_sha1": "019fac1ab6e72a31d044d13336844878dd5f54ac",
+      "translation_sha1": "af5e5ad6f135622dff325edd705865d7e5cca2ee",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Homepage lacks rendered translation review date; ambiguous yen/yuan symbol and locale number format; download language disclosure missing."
+      ],
+      "source_sha1": "75dd87a279213ca7fd77e17918bbeebdca531b24",
+      "translation_sha1": "6dbab3b75cfdafd87ce6d1b8334aad452252455a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/create.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Missing final explanation that inconsistent resource paths, filenames or structure prevent loading."
+      ],
+      "source_sha1": "57e9aca9a8699f429ac8b2cb6ff36d79854d4aa8",
+      "translation_sha1": "5479564ccb59e88fb06bc5ebd21f7fb4774dda2b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/index.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Sprite atlas description omits fixed grid decoding."
+      ],
+      "source_sha1": "8b036367092bc16ba78a217c6fc238a554444787",
+      "translation_sha1": "ec2faddbfbf18d6e3369c476421ba19b1d980375",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "pets/install.mdx",
+      "status": "reviewed",
+      "findings": [
+        "Refresh Pets settings should not imply changing configuration."
+      ],
+      "source_sha1": "730c599ff9c9d82b451a976f3c96eec9d9c6fd4d",
+      "translation_sha1": "97f46cbc49d82d5e274f8c79f688938525879714",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/anti-patterns.md",
+      "status": "reviewed",
+      "findings": [
+        "Verification footer order differs; migrate all source evidence metadata.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "8e89a5a0e2154a7403d009e78ea243b71fe91bc5",
+      "translation_sha1": "f26808902d52b5ea77fbb27cc90a31aea37fe311",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/ask-for-a-plan.md",
+      "status": "reviewed",
+      "findings": [
+        "Plan-confirmation template called presentation; source Chinese literals intentionally retained."
+      ],
+      "source_sha1": "706f11b6cf358cf6ec21a6fb458ed20783fc8d7e",
+      "translation_sha1": "944335ae66832aa5ea50cad130d85fdd393fe522",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/basics.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize task-template voice and preserve boundaries.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "eb86b2a71d5c7c6ef2cb4d5c891c7234f7f10eec",
+      "translation_sha1": "37948cd1f7fe9bd2343f1c000f24d3b0126131ae",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/comparison-lab.md",
+      "status": "reviewed",
+      "findings": [
+        "Full comparison found no semantic discrepancy; preserve all twelve-run limitations."
+      ],
+      "source_sha1": "e6a23bbdbdd997a11ea55dbc290776fe0fa6abed",
+      "translation_sha1": "47f0ec5072a4526bf9c56ef0c2188dadce25794b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/constraints-and-boundaries.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize boundaries vocabulary.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "0ca4700f055f4efa23dc67e79a027c55df7ce363",
+      "translation_sha1": "a7766eab94084b14543c21222bc88a8c31d40c11",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/define-done.md",
+      "status": "reviewed",
+      "findings": [
+        "Title is literal calque; use completion criteria.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "e97e8542b82bb8fb9c789d35796bf8ebfe8bee5a",
+      "translation_sha1": "dc884e7d145e6fc8fe0575849fbf833c8707d1e3",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/goals-and-context.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "0a5141fb751ba152107b3b74d166e1c57e64b9c9",
+      "translation_sha1": "4e88afe94c7e8362b93096a22a76fd3c84d8d411",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Source stale experimental-design statement conflicts with twelve actual runs in comparison page; align wording with linked evidence."
+      ],
+      "source_sha1": "2280f53609b3990c823b4cfec03d55d3e57be4ca",
+      "translation_sha1": "dc28e3ce76a687b41b74af63f790e2c4750bff9e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/long-running-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "450ed9d87331984da0e795e4dc42508b9d6b37c3",
+      "translation_sha1": "6ccc3c7a42d826fe732ce176f7672811105c020b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompt-debugging.md",
+      "status": "reviewed",
+      "findings": [
+        "English restate left untranslated.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "efc301507107f6b3b27bef4cdd4cbea5399fa6c3",
+      "translation_sha1": "739536add8b2fb9f6cf485d89f72bd73cf2e35c0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/prompting-with-images.md",
+      "status": "reviewed",
+      "findings": [
+        "Possibility of missing business rules overstated as rarely covered.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "953a69bb6a686f6c2f9713dfd76b24a1d86c2a7b",
+      "translation_sha1": "4325ec23cb6525fe6e10e300eb7f591e3a933541",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/task-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "Heading incorrectly equates objective and acceptance; source explicitly says they differ."
+      ],
+      "source_sha1": "98c05110e79912d2b39c044e1800cbf484bf98c6",
+      "translation_sha1": "80972a59abad7d25f87e61a6afcfa56ea6bc43b9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/automate.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "2aff2e7eab78a8033b03e3c046c5a54de81385ea",
+      "translation_sha1": "af4d4f0f4c50fdcde6546ec7b2a0293359a83f70",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/change.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "6faf299321f2d8390b0c30ab77d748f3b4716163",
+      "translation_sha1": "ddae03fc1ff3abd671b9b3f2949464e5bb8e83f8",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/create.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "c47ebbf5ce0f126207dc2df3546147c3d7c01a7f",
+      "translation_sha1": "6c6e90a38fbe11542855c84b25082c33ea7b4bf9",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/diagnose.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "24913711ff76b4fb5769435ab964ff5cedbefe03",
+      "translation_sha1": "04f8b81a72c4eebf70a283d5bda0cd02eace2839",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Normalize reuse terminology and headings."
+      ],
+      "source_sha1": "fae2ed3a39853461104c3041ec66b944980d2f37",
+      "translation_sha1": "5f9c5e788aa69fdf858217a428bce0e21b4022ee",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/research.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "729d4ccbe99aa7ec254fbe1077637d6b3b06f5ed",
+      "translation_sha1": "06aefb78b7e6eb8ae7b70fd212d906e7accb0bc6",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/review.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "e89989d7d069f0f96d12acd17b3ef488d2a8dad0",
+      "translation_sha1": "162040265f92ab4bdf9c122425963abc0239a79b",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "prompts/templates/understand.md",
+      "status": "reviewed",
+      "findings": [
+        "No material semantic omission."
+      ],
+      "source_sha1": "228971d00d2d1654cb48daa4f9b3133115f1a63c",
+      "translation_sha1": "65161f846f8266ca09d0489a552d56ded80d5876",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification and supported-client boundaries."
+      ],
+      "source_sha1": "759c38e68aa07c361740b1034d14dd1deb193cdc",
+      "translation_sha1": "02f83b1d80d28f07dd428da83dba6a2d19fcdce0",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/automations/scheduled-tasks.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; normalize scheduled-task terminology."
+      ],
+      "source_sha1": "fa792dc3116b1fd95eee0e232a4a6b5b8534214c",
+      "translation_sha1": "4cbf75ecc9bb0ce735d7940bc5fbf99955165acc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/capability-map.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy in eight responsibility boundaries."
+      ],
+      "source_sha1": "183812c1f14a29d1c672edcbd1d1f6a0bda51d07",
+      "translation_sha1": "37e2f37a774302c46dafce795367fe6d74de908e",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/choosing-an-extension-method.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; retain event/time distinction clarified in translation."
+      ],
+      "source_sha1": "28ae6f55403a4955b4683b8d0464eae983245242",
+      "translation_sha1": "f5ed2aef44f3ad4d2609bf3ae36c9d2dfccd1099",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/create-your-first-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Optional review recommendation changed to imperative; footer uses alternate label spelling.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "14414f58af19e4ce863dfd6bda0125b9eafc91da",
+      "translation_sha1": "71b1ce0edf385ffa501b836f83aef6db0696bb47",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/automation-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; preserve local-state writes and untested delivery limits."
+      ],
+      "source_sha1": "6c758b9400d375a74dd272bf0bc29314b33d8e6f",
+      "translation_sha1": "73e9ead175dc673b11a5f66bb2b82f5ddfcf3010",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/index.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; preserve all test-count limits."
+      ],
+      "source_sha1": "490db95aaca6ec9bd3512750c46e7ae1f05b8cc1",
+      "translation_sha1": "b3506d4f99d5d8fd8edf2592382fcc9548301d32",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/research-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Fictional Chinese product needs readable transliteration while retaining source identity."
+      ],
+      "source_sha1": "cf2b2325eaca8a3e73685de604b3675d5e91509f",
+      "translation_sha1": "029c2eae581c8667fcb9c634f39a86a6b8c84902",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/review-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Do-not-overwrite instruction weakened to compare-before-overwrite."
+      ],
+      "source_sha1": "e29d1b3e20d114423d247d669175915f3caa67cb",
+      "translation_sha1": "0ac56bf861ad72fc091be60a696dc37766082482",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/examples/writing-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Do-not-overwrite instruction weakened to compare-before-replace; inconsistent Skill gender."
+      ],
+      "source_sha1": "cbaec37837a757ffd65f1fba598430b60da8f045",
+      "translation_sha1": "52bd18b81fd7f917e91ce4ec33bc303110df83da",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hook-event-types.md",
+      "status": "reviewed",
+      "findings": [
+        "Main thread translated as main process."
+      ],
+      "source_sha1": "07f4965e40fd9fac6e5897b975934e7ea501df9d",
+      "translation_sha1": "73f65c6bbbcd1c208276b7c71582c52cc479847f",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-examples.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; retain hosted-tool exclusion."
+      ],
+      "source_sha1": "06e9fa2df03010c1cecfa2158876786675725913",
+      "translation_sha1": "24c9fe580dd0777bb311cb2eddae5ff1d2b7e944",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/hooks-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Redacted logs phrased ambiguously; clarify without implying removed logs."
+      ],
+      "source_sha1": "ac7889bdf138a3f340fa8e43b8cc2a2de24c473f",
+      "translation_sha1": "8e48d8abd71fdacd9b6cdd56d929322b68c0e23c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/hooks/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification metadata."
+      ],
+      "source_sha1": "a0312e9122c0b5a4b83e48f04cf85a03bc504c4d",
+      "translation_sha1": "e097684a75d79dc92b718b2d12a1ace5c6b1189c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/index.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy; preserve localization diagram link."
+      ],
+      "source_sha1": "6f8df169518ceae6ecfcacc4bd4113d341f25a39",
+      "translation_sha1": "fa75eb2cd4b2f3a8e62dddd12adb66b129c146cc",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/connect-an-mcp-server.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification metadata."
+      ],
+      "source_sha1": "0675d339e67856591904a5744febe3c4e123fa73",
+      "translation_sha1": "17437ca0b8662d2825ef23d778603c7ecd8a946a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/debugging-mcp.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification metadata."
+      ],
+      "source_sha1": "d35b635a0be59a796f9cda9236d4e8400ed7242c",
+      "translation_sha1": "c9c5ca225c5fd2b4c5031b0486487bf16907e39c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing legacy verification and basis metadata."
+      ],
+      "source_sha1": "8d9ec38186a3b8d237ab68256c35070658912cbb",
+      "translation_sha1": "f746fdca30861e8ff985fcb46bd111efb9d1a296",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/mcp/mcp-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification metadata."
+      ],
+      "source_sha1": "98a06262bb08c65536204bbbca3caeeaad822327",
+      "translation_sha1": "cba52b58e7776bd90a89d0b1f41b43edff7f1bf2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/overview.md",
+      "status": "reviewed",
+      "findings": [
+        "Verification footer uses alternate labels.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "3147d2cbff3a63bc61f6dc437c261160cbd6e180",
+      "translation_sha1": "a6c9ea06dfef134b614e33edb572eb5c826ed6c2",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Missing translated legacy verification metadata."
+      ],
+      "source_sha1": "8917a5982e8437ca01bc5c8fe2d8403722113c74",
+      "translation_sha1": "1d2f563073f8d9b9bc81bad022bc330c5bfb498c",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/plugins/plugins-overview.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy."
+      ],
+      "source_sha1": "4efe5a8fc4379c743c013109ca3731fbd9425007",
+      "translation_sha1": "fdc29827861dbf7e95c22b6788213531192e9cd4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/references.md",
+      "status": "reviewed",
+      "findings": [
+        "Background English residue."
+      ],
+      "source_sha1": "955bfa783f4963afa4dfc08d512f4997da10d00a",
+      "translation_sha1": "813250fc9bba4fee628c9ced3717680e14d1d8c4",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/scripts-and-tests.md",
+      "status": "reviewed",
+      "findings": [
+        "Output narrowed to stdout though source says all output."
+      ],
+      "source_sha1": "900e6e472fb4226070730a80e620f0b06b3456b4",
+      "translation_sha1": "629e9a45e8c5575663bb2860e49e61c020b5e6f1",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/security.md",
+      "status": "reviewed",
+      "findings": [
+        "Smoke task untranslated; normalize security vocabulary.",
+        "Migrated historical verification footer without changing evidence date."
+      ],
+      "source_sha1": "a3c81ed4e32687a385210da5e0da52656c4395dc",
+      "translation_sha1": "ebe5b4e9fef5f03327e43f834f399e1735ed7ebf",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/skill-anatomy.md",
+      "status": "reviewed",
+      "findings": [
+        "Reading order differs: concluding exercise precedes two sections; restore source order."
+      ],
+      "source_sha1": "50ca48c3f95620e91f9d2c05e0655c83be40c7c4",
+      "translation_sha1": "fcec2b2a023da10f069eb2d42a100e95467bc517",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/templates.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy."
+      ],
+      "source_sha1": "82a9e01cda3f91561e83f248408b2516409b1c7e",
+      "translation_sha1": "13676c4a1c170d013cd25e11d6cac23725ba0e11",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/use-a-skill.md",
+      "status": "reviewed",
+      "findings": [
+        "Natural-language description field label."
+      ],
+      "source_sha1": "ef92b69f840e62c82a4f0992cf6757998ffdf6e1",
+      "translation_sha1": "58354577abe6448130f53e2893fd3aa9492ef46a",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "skills/when-to-use-skills.md",
+      "status": "reviewed",
+      "findings": [
+        "No semantic discrepancy."
+      ],
+      "source_sha1": "5e688f4a702320c350d4e642016feb8bb1dad6c2",
+      "translation_sha1": "6fb32485aa8b3afde05dd46412d630e5c84e3c85",
+      "reviewed_at": "2026-10-26"
+    },
+    {
+      "path": "theme/index.md",
+      "status": "reviewed",
+      "findings": [
+        "Text input mistranslated as inbox; normalize interface and checksum terminology."
+      ],
+      "source_sha1": "4ecfa1c03d8546339524f23af422801b6861bc3e",
+      "translation_sha1": "14b6effd1f1229d85f2bd7a4abbc20c16b9d3d2b",
+      "reviewed_at": "2026-10-26"
+    }
+  ],
+  "shared_review": {
+    "status": "reviewed",
+    "scope": [
+      "All Portuguese navigation and sidebar section labels",
+      "Pricing navigation, all plan and snapshot copy against Chinese",
+      "289 generated diagram labels and manual capability ladder",
+      "ContentVerification, Footer, SiteFooter, Header, PricingFooter",
+      "CaseDirectory, PetScienceFigure, GeoJsonLd",
+      "AboutHandbook, theme/language selectors and scroll-to-top",
+      "Three contact/privacy/terms pages against Chinese"
+    ],
+    "findings": [
+      "Portuguese content verification/evidence UI and translation review date were absent; added branches preserving evidence dates.",
+      "Added Tools, feedback and content update entries and original-download language disclosure.",
+      "Added Portuguese legal/contact pages and localized footer links, with separate original update and translation review dates.",
+      "Corrected structured-data language and homepage FAQ coverage.",
+      "Restored application-roadmap scope and execution/acceptance meaning in navigation, version-notice labels and tagline.",
+      "Price copy restored Plus prioritization and complete source/checkout scope, improved Portuguese idiom without changing prices, uncertainty or source dates.",
+      "Case search now means browser find-in-page; run-tested label explicitly means executed and verified; pet installation restored no-online-execution and reload wording.",
+      "Diagram labels corrected verifiable versus reproducible evidence, same-event command Hook concurrency, parsable function arguments and reduced integration costs rather than no integration.",
+      "Diagram descriptions restored omitted sandbox approval policy, subagent task boundaries and scheduled contexts. Fixed Portuguese agreement and scheduling idioms.",
+      "Rendered all 11 diagrams; shortened overflowing badges, headings and card labels, preserving constraints and evidence meanings.",
+      "Manual capability ladder description restored full source scope, replaced awkward English calques and clarified external-system tools."
+    ],
+    "limitations": [
+      "Shared source downloads, screenshots and test outputs retain their original language. No external URL availability sweep or current product fact refresh."
+    ]
+  },
+  "source_notes": {
+    "group3-notes": [
+      {
+        "path": "guide/start-here/what-is-codex.md",
+        "issue": "Chinese source capability-map label points to start-here root; Portuguese points to actual map."
+      },
+      {
+        "path": "prompts/index.md",
+        "issue": "Chinese calls comparison only experimental design, but linked page documents 12 actual runs. Portuguese now describes recorded runs without asserting general performance conclusions."
+      },
+      {
+        "path": "skills/choosing-an-extension-method.md",
+        "issue": "Chinese minimal exercise groups Hook and Scheduled task under fixed events; Portuguese preserves event-versus-time distinction."
+      }
+    ],
+    "group1-source-notes": [
+      {
+        "path": "cases/use-cases/content-creation/refactor-docs-with-review.md",
+        "note": "中文历史示例仍使用12-reference及手动sidebar，保留为案例而非当前配置指令。"
+      },
+      {
+        "path": "cases/workflows/review-before-merge.md",
+        "note": "中文“自动评论本身不能代替自动合并”语义歧义，本轮不改中文或新增自动合并授权。"
+      },
+      {
+        "path": "cases/workflows/long-running-task-management.md",
+        "note": "中文长任务固定审批/停止次数与新版授权规则有差异，本轮忠实保留教学建议。"
+      },
+      {
+        "path": "guide/customization/choosing-the-right-mechanism.md",
+        "note": "中文标题五步但只有三小节，葡语使用不承诺数量的标题。"
+      },
+      {
+        "path": "guide/contributing/write-a-guide.md",
+        "note": "中文交叉链接段仍要求手动astro.config sidebar，和贡献首页自动目录冲突；未改变此基线政策，供维护者后续修正。"
+      },
+      {
+        "path": "guide/cli/non-interactive-mode.md",
+        "note": "中文仍含08-developer-platform/non-interactive历史路线图标识，保留代码字面量。"
+      },
+      {
+        "path": "guide/customization/agents-md/writing-effective-instructions.md",
+        "note": "中文把文本开头权重类比消息层级、强制大任务确认可能与新规划章节冲突。本轮不扩大为产品事实更新。"
+      }
+    ],
+    "group2-source-notes": [
+      {
+        "path": "guide/developer-platform/non-interactive/codex-exec.md",
+        "issue": "中文安全凭证锚点不存在；葡语链接指向实际权限与安全标题。"
+      },
+      {
+        "path": "guide/foundations/permissions-and-approvals.md",
+        "issue": "中文基础页把写入/联网等概括为应停下来询问，较权限与沙箱专页按现有授权/审批策略区分的说明更宽泛；本次未擅改中文。"
+      },
+      {
+        "path": "guide/foundations/tokens-context-and-compaction.md",
+        "issue": "中文末尾旧章节编号05无法直接导航；葡语改为对应上下文章节链接。"
+      },
+      {
+        "path": "guide/integrations/github.md",
+        "issue": "中文CI/CD仍称路线图08-developer-platform，已存在正文；葡语入口指向现有章节。"
+      },
+      {
+        "path": "guide/reference/commands/index.md",
+        "issue": "中文总览把退出0写成任务按约定完成，与新版退出码专页仅保证进程成功、业务判断另验有语义差异；本次按基线保留概述，并保留专页明确解释。"
+      },
+      {
+        "path": "guide/reference/faq.md",
+        "issue": "中文FAQ仍把团队治理指向M6路线图，已有章节；葡语改为可用导航。"
+      }
+    ]
+  },
+  "independent_ui_review": [
+    {
+      "path": "src/pages/pt/contact.astro",
+      "status": "reviewed",
+      "findings": [
+        "已逐段对照中文，包括元数据、日期和链接。",
+        "未发现语义缺漏。"
+      ]
+    },
+    {
+      "path": "src/pages/pt/privacy-policy.astro",
+      "status": "reviewed",
+      "findings": [
+        "已逐段对照中文，包括元数据、日期和链接。",
+        "未发现语义缺漏。"
+      ]
+    },
+    {
+      "path": "src/pages/pt/terms.astro",
+      "status": "reviewed",
+      "findings": [
+        "已逐段对照中文，包括元数据、日期和链接。",
+        "将 garantia（易理解为保修）改为 compromisso oficial，准确表达官方产品承诺。"
+      ]
+    },
+    {
+      "path": "src/components/ContentVerification.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    },
+    {
+      "path": "src/components/GeoJsonLd.astro",
+      "status": "reviewed",
+      "findings": [
+        "主页介绍及 FAQ 的验收表达改为自然的 verificação dos resultados，避免生硬的 resultados de aceitação。"
+      ]
+    },
+    {
+      "path": "src/components/Header.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    },
+    {
+      "path": "src/components/SiteFooter.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    },
+    {
+      "path": "src/components/chatgpt-pricing/PricingFooter.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    },
+    {
+      "path": "src/components/PetScienceFigure.astro",
+      "status": "reviewed",
+      "findings": [
+        "统一动画帧为 quadros，完善 spritesheet 描述并简化单帧标签。"
+      ]
+    },
+    {
+      "path": "src/components/CaseDirectory.astro",
+      "status": "reviewed",
+      "findings": [
+        "已对照中文检查葡语标签、内容和本地化路径；未发现内容缺漏。"
+      ]
+    }
+  ],
+  "validation": {
+    "portuguese_pages_reviewed": 283,
+    "seven_locale_parity_checks": 1981,
+    "seven_locale_parity_issues": 0,
+    "all_eight_locale_parity": {
+      "pt": 0,
+      "de": 0,
+      "en": 0,
+      "fr": 0,
+      "es": 0,
+      "ja": 0,
+      "ko": 0,
+      "vi": 120
+    },
+    "build_pages": 2865,
+    "rendered_download_references": 1660,
+    "source_internal_links": 13027,
+    "portuguese_rendered_routes": 293,
+    "portuguese_internal_links_and_anchors": 49905,
+    "portuguese_rendered_errors": 0,
+    "rendered_review_dates": 283,
+    "tests_passed": 6,
+    "model_selection_regression": {
+      "locales": 10,
+      "pages": 70,
+      "links_and_anchors": 12531
+    },
+    "intentional_chinese_text_routes": 6,
+    "external_urls_network_checked": false,
+    "deployed": false
+  }
+}

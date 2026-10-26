@@ -3,15 +3,20 @@ title: Referencia de configuración
 description: Índice conceptual de claves de configuración de usuario y de proyecto de Codex — rutas y campos según la documentación oficial.
 locale: es
 source_locale: zh-CN
-source_revision: 8f692ed
+source_revision: '8f692ed'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE
+  basis: El material de configuración actual del OpenAI Help Center sigue dejando claro que existen vehículos de configuración de usuario como `~/.codex/config.toml` y `~/.codex/.env`; esta página se posiciona explícitamente como «índice conceptual» y evita fijar nombres de claves, prioridad de rutas o campos de versiones antiguas como hechos, por lo que puede marcarse `verified`.
+  checkedAt: '2026-07-26'
 ---
 
-Las páginas de «referencia de configuración» marean fácil: claves, capas, sobrescrituras por todas partes. Si dejas clara una pregunta, se entiende mucho mejor:
+Las páginas de «referencia de configuración» pueden resultar confusas: claves, capas, sobrescrituras por todas partes. Si dejas clara una pregunta, se entiende mucho mejor:
 
 > **¿Qué comportamientos deben cambiarse por configuración, y cuáles no conviene resolver con configuración?**
 
@@ -31,7 +36,7 @@ Dividirlo en tres clases aclara:
 - **Requisitos concretos de la Tarea** → normalmente en Prompt / `AGENTS.md` / Skill
 - **Valores sensibles** → normalmente en variables de entorno o Secret
 
-Si no tienes claro, pregunta: ¿estás cambiando el hábito a largo plazo de Codex, o encargando esta Tarea?
+Si no lo tienes claro, pregúntate: ¿estás cambiando el hábito a largo plazo de Codex, o encargando esta Tarea?
 
 - El hábito a largo plazo suele ir a la configuración
 - La instrucción de la Tarea actual suele ir al Prompt, `AGENTS.md` o la descripción de la Tarea
@@ -69,7 +74,7 @@ Entrada: [Fundamentos de configuración](/es/guide/customization/configuration/c
 |---|---|
 | Modelo por defecto | Model ID de las sesiones nuevas |
 | Intensidad de razonamiento / reasoning | Nivel para Tareas complejas (si se soporta) |
-| Temperatura y muestreo | Suele dejarse por defecto; fijar al scriptar |
+| Temperatura y muestreo | Suele dejarse por defecto; fijar al usar scripts |
 
 Contexto: [Modelos y razonamiento](/es/guide/foundations/models-and-reasoning/)
 
@@ -106,7 +111,7 @@ Contexto: [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approv
 | Intención | Explicación |
 |---|---|
 | Lista de servidores | Comando, URL, transporte |
-| Inyección de variables de entorno | Ligada al proceso MCP, no a Git |
+| Inyección de variables de entorno | Ligada al proceso MCP, sin guardarlas en Git |
 
 [Conectar MCP](/es/skills/mcp/connect-an-mcp-server/)
 
@@ -210,8 +215,8 @@ Secrets de Cloud: [Secrets y variables de entorno](/es/guide/web-and-cloud/secre
 
 1. Cambia solo una clase de configuración cada vez y observa una semana
 2. Los cambios de nivel proyecto pasan por PR review
-3. Tras actualizar el CLI, haz diff de las notas oficiales de migration
-4. No escribas secretos en el archivo de configuración y los committees a Git
+3. Tras actualizar el CLI, revisa las diferencias indicadas en las notas oficiales de migración
+4. No guardes claves secretas en archivos de configuración que vayas a incluir en Git
 
 La configuración es para comportamiento por defecto a largo plazo, no para valores sensibles ni para sustituir instrucciones de Tarea y reglas de equipo.
 
@@ -223,9 +228,3 @@ La configuración es para comportamiento por defecto a largo plazo, no para valo
 
 ## Fuentes de referencia
 - OpenAI Codex configuration reference
----
-
-**Estado:** verified  
-**Productos aplicables:** CLI / App / IDE  
-**Base de verificación:** El material de configuración actual del OpenAI Help Center sigue dejando claro que existen vehículos de configuración de usuario como `~/.codex/config.toml` y `~/.codex/.env`; esta página se posiciona explícitamente como «índice conceptual» y evita fijar nombres de claves, prioridad de rutas o campos de versiones antiguas como hechos, por lo que puede marcarse `verified`.  
-**Última verificación:** 2026-07-26

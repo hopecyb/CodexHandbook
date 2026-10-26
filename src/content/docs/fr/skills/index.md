@@ -7,15 +7,16 @@ title: Skills
 description: Apprendre à utiliser, écrire, tester et maintenir les Codex Skills.
 locale: fr
 source_locale: zh-CN
-source_revision: 6f8df16
-translation_status: draft
+source_revision: '6f8df16'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 
 Les Skills encapsulent méthodes stables, références, modèles et scripts en capacités réutilisables.
 
-Leur valeur ne consiste pas seulement à ajouter une capacité à Codex : elles donnent à un flux de travail des entrées, des sorties, des limites de permissions et des moyens de test clairement définis.
+Leur valeur ne consiste pas seulement à ajouter une capacité à Codex : ils donnent à un flux de travail des entrées, des sorties, des limites de permissions et des moyens de test clairement définis.
 
 ![Du prompt au pack d’équipe : prompts et modèles deviennent Skills, sous-agents, MCP et Hooks, puis sont diffusés via Plugins et Automatisations](/diagrams/codex-capability-ladder-fr.svg)
 

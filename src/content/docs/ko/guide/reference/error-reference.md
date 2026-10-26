@@ -3,17 +3,22 @@ title: 오류와 안내 참고
 description: 흔한 오류 메시지, 종료 코드, 실패 원인의 학습용 색인——장애 분석 페이지로 안내하며 공식 지원을 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 955c0a6
+source_revision: '955c0a6'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 100
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 “오류 분기 색인”이지 완전한 오류 사전이 아니며, 분류는 주로 인증·권한·환경·네트워크·작업 로직 다섯 가지입니다. 이 분기 차원은 현행 CLI, Cloud, 권한, 설정 장과 교차 확인했으며, 고정 오류 코드 표에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 많은 사람이 오류를 보면 그 한 줄의 영어만 반복해서 보고, 직감으로 답을 추측하려 합니다. 먼저 문제를 분류하는 편이 보통 더 효과적입니다.
 
-오류를 보면, **인증, 권한, 환경, 네트워크, 작업 로직** 중 어디에 가까운지 먼저 판단하세요. 이 페이지는 고빈도 안내의 대략적인 뜻과 다음 단계를 정리한 것이며, 완전한 오류 사전이 아닙니다. 최신 동작은 공식 문서와 클라이언트 출력을 기준으로 합니다.
+오류를 보면, **인증, 권한, 환경, 네트워크, 작업 로직** 중 어디에 가까운지 먼저 판단하세요. 이 페이지는 자주 나오는 메시지의 대략적인 뜻과 다음 단계를 정리한 것이며, 완전한 오류 사전이 아닙니다. 최신 동작은 공식 문서와 클라이언트 출력을 기준으로 합니다.
 
 ## 오류를 보면 먼저 어떻게 읽나
 
@@ -41,7 +46,7 @@ sidebar:
 
 긴 오류는 컨텍스트만 쌓인 경우가 많고, 실제로 유용한 것은 그중 짧은 키워드인 경우가 많습니다.
 
-### 2. 비영 종료 코드가 모델이 못한다는 뜻은 아니다
+### 2. 0이 아닌 종료 코드가 모델이 못한다는 뜻은 아니다
 
 다음일 수도 있습니다.
 
@@ -64,7 +69,7 @@ sidebar:
 
 - 어느 단계에서 트리거됐는지
 - 어느 파일, 명령, 도구가 실패했는지
-- 더 원초적인 원인 안내가 있는지
+- 근본 원인에 가까운 단서가 있는지
 
 ## CLI와 명령
 
@@ -73,7 +78,7 @@ sidebar:
 | command not found: codex | 미설치 또는 PATH | [CLI 설치](/ko/guide/getting-started/install-cli/) |
 | Config parse error | TOML/YAML 문법 | [CLI 설정](/ko/guide/cli/configuration/) |
 | Permission denied (write) | 샌드박스 또는 승인 거부 | [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/) |
-| 비영 종료 코드(exec) | 작업 실패 또는 완료 조건 미충족 | stderr 로그 확인；프롬프트를 조임 |
+| 0이 아닌 종료 코드(exec) | 작업 실패 또는 완료 조건 미충족 | stderr 로그 확인；프롬프트 범위를 좁힘 |
 
 ## 먼저 분류하기
 
@@ -84,7 +89,7 @@ sidebar:
 | 인증 | 계정, token, 로그인 상태 |
 | 권한 | 승인, 샌드박스, 저장소 권한 |
 | 환경 | 설치, PATH, 설정, 의존성 |
-| 네트워크 | 출망, 프록시, 원격 서비스 도달성 |
+| 네트워크 | 외부 네트워크 연결, 프록시, 원격 서비스 도달성 |
 | 작업 로직 | 프롬프트, 입력 파일, 출력 요구 |
 
 여기까지 분류하면, 장애 분석 방향이 빗나가기 어렵습니다.
@@ -113,7 +118,7 @@ sidebar:
 |---|---|---|
 | User rejected tool call | 당신이나 정책이 동작을 거부 | 승인해야 하는지 확인；또는 작업 변경 |
 | Sandbox violation | 쓰기 경로나 명령이 경계를 넘음 | [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/) |
-| Network access denied | 출망이 금지됨 | Cloud：[인터넷 접근](/ko/guide/web-and-cloud/internet-access/) |
+| Network access denied | 외부 네트워크 연결이 금지됨 | Cloud：[인터넷 접근](/ko/guide/web-and-cloud/internet-access/) |
 
 ## Cloud와 GitHub
 
@@ -160,13 +165,7 @@ sidebar:
 4. 변수 하나만 바꾼 뒤 한 번 재시도
 5. 안 되면 전체 정보를 들고 사람에게 묻거나 공식 문서를 확인
 
-여러 변화를 한꺼번에 섞지 않게 하고, 다른 사람도 위치를 찾기 쉬워집니다.
+여러 변화를 한꺼번에 섞지 않게 하고, 다른 사람도 원인을 파악하기 쉬워집니다.
 
 ## 참고 출처
 - OpenAI Codex 지원 문서
----
-
-**상태：** verified  
-**적용 제품：** App / CLI / IDE / Cloud  
-**검증 근거：** 이 페이지는 “오류 분기 색인”이지 완전한 오류 사전이 아니며, 분류는 주로 인증·권한·환경·네트워크·작업 로직 다섯 가지입니다. 이 분기 차원은 현행 CLI, Cloud, 권한, 설정 장과 교차 확인했으며, 고정 오류 코드 표에 의존하지 않습니다.  
-**최근 검증：** 2026-07-26

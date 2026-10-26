@@ -8,9 +8,10 @@ title: Anatomía de un Skill
 description: Roles de SKILL.md, references/, templates/ y scripts/, con ejemplos.
 locale: es
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: "50ca48c"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 La primera vez que abres un directorio de Skill, lo habitual es reconocer las carpetas… pero no entender por qué están organizadas así.
@@ -86,7 +87,7 @@ Si un paso debe ser estable, determinista y repetible, un script suele ser más 
 | Directorio | Uso |
 |---|---|
 | `SKILL.md` | Flujo principal, condiciones de activación, prohibiciones |
-| `references/` | Documentos largos, normas, APIs |
+| `references/` | Documentos largos, normas y documentación de API |
 | `templates/` | Formato de salida, esqueleto de informes |
 | `scripts/` | Comandos y comprobaciones deterministas |
 
@@ -101,17 +102,14 @@ Decide con este orden:
 
 Si uno o dos de estos puntos son «sí», empieza a separar.
 
-Primero haz funcionar el Skill con `SKILL.md`; cuando se complique de verdad, saca poco a poco material, plantillas y scripts.
-
-Práctica completa: [Crear tu primer Skill](/es/skills/create-your-first-skill/).
 ## De plantilla a Skill
 
-Muchos equipos no empiezan diseñando un Skill, sino copiando una y otra vez un Prompt útil. Puede evolucionar por etapas:
+Muchos equipos no empiezan diseñando un Skill, sino copiando una y otra vez un prompt útil. Puede evolucionar por etapas:
 
 | Etapa | Forma | Cuándo subir de nivel |
 |---|---|---|
-| Prompt único | Conversación actual | Solo se usa una vez |
-| Plantilla | Biblioteca de Prompts o docs de equipo | La tarea se repite, pero los pasos aún cambian |
+| prompt único | Conversación actual | Solo se usa una vez |
+| Plantilla | Biblioteca de prompts o docs de equipo | La tarea se repite, pero los pasos aún cambian |
 | Skill de un archivo | Un `SKILL.md` | El proceso es estable y el disparador claro |
 | Directorio Skill completo | `SKILL.md` + `templates/` + `references/` + `scripts/` | Formato de salida, referencias largas y checks deterministas ya son estables |
 
@@ -121,9 +119,13 @@ No conviertas cada plantilla en Skill. Vale la pena cuando hay repetición, crit
 
 | Componente | Sirve para |
 |---|---|
-| Instrucción principal | Disparadores, pasos, prohibiciones, definición de hecho |
+| Instrucción principal | Disparadores, pasos, prohibiciones, definición de finalización |
 | Plantillas | Salida de revisión PR, estructura de documento, informe de riesgo |
 | Referencias | Estándares de código, glosario, reglas de dominio, notas API |
-| Scripts | Complejidad, enlaces, cobertura, formato |
+| Scripts | Análisis de complejidad, comprobación de enlaces, estadísticas de cobertura y validación de formato |
 
-Un buen Skill no es un Prompt más largo: separa trabajo reutilizable en partes legibles, comprobables y mantenibles.
+Un buen Skill no es un prompt más largo: separa trabajo reutilizable en partes legibles, comprobables y mantenibles.
+
+Primero haz funcionar el Skill con `SKILL.md`; cuando se complique de verdad, saca poco a poco material, plantillas y scripts.
+
+Práctica completa: [Crear tu primer Skill](/es/skills/create-your-first-skill/).

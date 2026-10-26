@@ -1,20 +1,25 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang chỉ nêu độ ưu tiên tài nguyên chính thức và cách dùng lối vào; đã rà lại lối vào chính tài liệu OpenAI vẫn dùng được, và thân bài không giữ bước thao tác chi tiết dễ lỗi thời."
+  checkedAt: "2026-07-26"
 title: Tài nguyên chính thức
 description: "Liên kết tài liệu và lối vào chính thức OpenAI / Codex."
 locale: vi
 source_locale: zh-CN
-source_revision: 5a584b0
+source_revision: "5a584b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 120
 ---
 
-Sổ tay này là hướng dẫn mã nguồn mở cộng đồng. Hành vi sản phẩm, gói cài và gói dịch vụ lấy theo chính thức:
+Sổ tay này là hướng dẫn mã nguồn mở cộng đồng. Hành vi sản phẩm, gói cài đặt và gói dịch vụ phải được xác nhận từ nguồn chính thức:
 
 - Tài liệu nhà phát triển Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Trang nền tảng và tài khoản OpenAI: lấy theo lối vào hiện tại trên site OpenAI
+- Trang nền tảng và tài khoản OpenAI: lấy theo đường dẫn hiện tại trên trang OpenAI
 
 Tài liệu chính thức và sổ tay này phân công khác nhau:
 
@@ -72,11 +77,4 @@ Các câu hỏi kiểu dưới đây, xem chính thức đáng tin hơn:
 2. Trước khi thật sự cấu hình, cài, chạy, quay chính thức xác nhận cách viết mới nhất
 3. Nếu hai bên xung đột, lấy chính thức làm chuẩn
 
-Hướng sẽ rõ hơn và ít giẫm phải thông tin hết hạn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang chỉ nêu độ ưu tiên tài nguyên chính thức và cách dùng lối vào; đã rà lại lối vào chính tài liệu OpenAI vẫn dùng được, và thân bài không giữ bước thao tác chi tiết dễ lỗi thời.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Hướng sẽ rõ hơn và ít gặp thông tin lỗi thời.

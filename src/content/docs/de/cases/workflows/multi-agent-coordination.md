@@ -3,10 +3,17 @@ title: Multi-Agent-Koordination
 description: Parallel erkunden, arbeitsteilig ausführen und Ergebnisse zusammenführen — wann zerlegen, wie abnehmen.
 locale: de
 source_locale: zh-CN
-source_revision: 00989e9
+source_revision: "00989e9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "App / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle öffentliche Erläuterungen zu Multi-Agent / Subagents bei OpenAI Developers sowie die bereits geprüften Kapitel zu Subagents, Übergabe/Wiederaufnahme und paralleler Arbeit.
+    Der Inhalt beschränkt sich auf stabile Methoden „wann zerlegen, wie Grenzen isolieren, wie manuell zusammenführen und abnehmen“ und schreibt aktuelle Beta- oder UI-Einstiege nicht als festen Vertrag
+    fest.
+  checkedAt: '2026-07-26'
 ---
 
 Mehrere Agents eignen sich für parallelisierbare, lose gekoppelte Teilprobleme — nicht dafür, ohne Koordination dieselbe Datei gleichzeitig zu ändern.
@@ -16,7 +23,7 @@ Mehrere Agents eignen sich für parallelisierbare, lose gekoppelte Teilprobleme 
 | Geeignet | Ungeeignet |
 |---|---|
 | Frontend-Styles + Backend-API-Vertrag parallel recherchieren | Dieselbe Funktion von zweien ändern |
-| Einer Tests, einer Docs | Geteilter mutabler Zustand ohne Lock |
+| Einer Tests, einer Docs | Gemeinsamer veränderlicher Zustand ohne Sperre |
 | Mehrere Implementierungsoptionen erkunden | Starke Sequenzabhängigkeiten ungeklärt |
 
 Produktfähigkeiten: [Parallele Agents](/de/guide/desktop-app/parallel-agents/), [Subagents](/de/guide/agent-work/subagents/).
@@ -37,7 +44,7 @@ Du: Eine wählen, dann einzelner Agent ausführen
 Erkunden-Agent → Plan ausgeben → Ausführen-Agent (neuer Thread, mit Plan-Zusammenfassung)
 ```
 
-Über [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/) strukturierte Zusammenfassungen übergeben — nicht den ganzen Chat pasten.
+Über [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/) strukturierte Zusammenfassungen übergeben — nicht den ganzen Chat einfügen.
 
 ### Muster C: Isolation über Worktrees
 
@@ -60,10 +67,3 @@ Verschiedene Agents ändern in unterschiedlichen [git worktrees](/de/guide/deskt
 
 - Drei Agents parallel ändern `package.json`
 - Kein Zusammenführungsschritt — unklar, wessen Schlussfolgerung gilt
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Erläuterungen zu Multi-Agent / Subagents bei OpenAI Developers sowie die bereits geprüften Kapitel zu Subagents, Übergabe/Wiederaufnahme und paralleler Arbeit. Der Inhalt beschränkt sich auf stabile Methoden „wann zerlegen, wie Grenzen isolieren, wie manuell zusammenführen und abnehmen“ und schreibt aktuelle Beta- oder UI-Einstiege nicht als festen Vertrag fest.  
-**Zuletzt geprüft:** 2026-07-26

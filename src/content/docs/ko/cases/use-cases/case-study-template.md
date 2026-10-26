@@ -1,17 +1,22 @@
 ---
 title: 사례 템플릿
-description: Codex 사례를 작성·회고하는 통일 구조—팀 정착과 비교를 쉽게 합니다.
+description: Codex 사례를 작성·회고하는 통일 구조—팀의 경험 축적과 사례 비교를 쉽게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: '74ef905'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 핸드북에서 이미 검증된 EPXV 워크플로, 실패 복구, 프로젝트 지시, 사례 라이브러리 구조와 교차 확인했습니다. 이 페이지는 사례 작성·회고의 통일 구조 템플릿만 제공하며, 구체 제품 동작을 선언하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 이 템플릿을 복사해 새 사례 페이지 또는 내부 회고 문서를 만드세요.
 
-복사하기 전에 실제 독자와 인도물에 맞춰 불필요한 절을 지우세요.
+복사하기 전에 실제 독자와 산출물에 맞춰 불필요한 절을 지우세요.
 
 ---
 
@@ -66,7 +71,7 @@ reviewed_at: 2026-08-26
 - 어떻게 취소하거나 수정했는지
 - 다시 한다면 프롬프트/설정을 어떻게 바꿀지
 
-## 5. 정착
+## 5. 경험 정리
 
 - `AGENTS.md` / Skill / Automation에 쓸지 여부
 - 팀에게 줄 제안 3가지
@@ -74,9 +79,3 @@ reviewed_at: 2026-08-26
 ## 6. 참고 출처
 - 공식 문서 링크
 - 이 사례가 외부 튜토리얼을 바탕으로 재작성되었는지(작업 유형만 참고)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 핸드북에서 이미 검증된 EPXV 워크플로, 실패 복구, 프로젝트 지시, 사례 라이브러리 구조와 교차 확인했습니다. 이 페이지는 사례 작성·회고의 통일 구조 템플릿만 제공하며, 구체 제품 동작을 선언하지 않습니다.  
-**최근 검증:** 2026-07-26

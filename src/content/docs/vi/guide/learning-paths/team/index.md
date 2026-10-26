@@ -1,27 +1,31 @@
 ---
 title: "Lộ trình nhóm: thử nghiệm hai tuần, kiểm tra mẫu và quyết định mở rộng"
 description: "Bắt đầu bằng một tác vụ ít rủi ro, dùng mười ngày làm việc để thu thập bằng chứng về vai trò, bản ghi chạy, rà soát, hoàn tác và mở rộng có giới hạn."
-contentType: path
-audiences: [team]
-level: intermediate
-outputs: [markdown, csv]
-editorialStatus: review
+contentType: "path"
+audiences:
+  - "team"
+level: "intermediate"
+outputs:
+  - "markdown"
+  - "csv"
+editorialStatus: "review"
 verification:
-  kind: editorial
+  kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Tác giả đã diễn tập trên bàn lộ trình hai tuần, sáu mẫu tài liệu và ba tình huống ngoại lệ. Chưa có thử nghiệm với nhóm thật, rà soát độc lập hay số liệu tăng năng suất."
 assets:
-  - path: /downloads/two-week-pilot/two-week-pilot-1.0.0.zip
+  - path: "/downloads/two-week-pilot/two-week-pilot-1.0.0.zip"
     purpose: "Quy định thử nghiệm, danh sách tác vụ, biểu mẫu rà soát, sự cố và hoàn tác, quyết định và lịch mười ngày"
-    license: CC0-1.0
-    version: 1.0.0
+    license: "CC0-1.0"
+    version: "1.0.0"
 sidebar:
   order: 30
-locale: vi
-source_locale: zh-CN
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "3b46738"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Bắt đầu bằng một tác vụ có phạm vi hạn chế và kết quả kiểm tra được. Dùng hai tuần thu thập bằng chứng để quyết định có nên mở rộng sử dụng hay không. Hai tuần ở đây là mười ngày làm việc. Nếu chưa đủ tác vụ, hãy kéo dài thử nghiệm; đừng tuyên bố thành công chỉ vì đã đến hạn.
@@ -30,9 +34,9 @@ Bắt đầu bằng một tác vụ có phạm vi hạn chế và kết quả ki
 
 ## Trước khi bắt đầu: chọn tác vụ và người chịu trách nhiệm
 
-Nên bắt đầu bằng [gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/) hoặc [kiểm tra liên kết cục bộ](/vi/cases/use-cases/team-automation/scheduled-link-check/). Trước tiên chạy thủ công với đầu vào tổng hợp, giữ bước rà soát của con người và đầu ra ở máy cục bộ.
+Nên bắt đầu bằng [gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/) hoặc [kiểm tra liên kết cục bộ](/vi/cases/use-cases/team-automation/scheduled-link-check/). Trước tiên chạy thủ công với đầu vào giả lập, giữ bước rà soát của con người và đầu ra ở máy cục bộ.
 
-Chỉ định người phụ trách, người thực hiện, người rà soát, quản trị hệ thống và đầu mối bảo mật, cùng người thay thế. Có thể kiêm nhiệm, nhưng quyết định liên quan đến ghi ra bên ngoài hoặc sự cố bảo mật cần được rà soát độc lập. Nếu chưa có người rà soát, giới hạn ở đầu vào tổng hợp và bản nháp cục bộ, đồng thời ghi nhận đó là tác giả tự kiểm tra.
+Chỉ định người phụ trách, người thực hiện, người rà soát, quản trị hệ thống và đầu mối bảo mật, cùng người thay thế. Có thể kiêm nhiệm, nhưng quyết định liên quan đến ghi ra bên ngoài hoặc sự cố bảo mật cần được rà soát độc lập. Nếu chưa có người rà soát, giới hạn ở đầu vào giả lập và bản nháp cục bộ, đồng thời ghi nhận đó là tác giả tự kiểm tra.
 
 Điều kiện tiên quyết: biết lưu nhật ký, đánh giá kết quả, dừng thực thi và nêu rõ dữ liệu cùng hành động được phép. Nếu quyền chưa rõ, hãy hoàn tất chuẩn bị cục bộ trước; đừng tự mở rộng sang hệ thống sản xuất.
 

@@ -3,12 +3,16 @@ title: Accès à Internet
 description: Distinguez la connectivité du setup de celle de l'Agent, puis limitez les risques par domaine et méthode HTTP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5bbb905
+source_revision: "5bbb905"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Cloud comporte deux phases réseau distinctes :
@@ -65,11 +69,3 @@ Les Secrets Cloud sont retirés avant la phase Agent, ce qui réduit le risque d
 
 - [Accès Internet de l'Agent](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** Cloud
-
-**Dernière vérification :** 2026-08-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Structure, scenarios, and cautions rechecked against OpenAI official image input and file upload materials; body no longer depends on unofficial scenario sources and omits UI details that need per-version verification."
+  checkedAt: "2026-07-26"
 title: Prompting with images
 description: How to ask when giving Codex screenshots, designs, or whiteboard photos.
 locale: en
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: '953a69b'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Many "look at this image" tasks fail not because the model didn't see—it got an image **without being told what to look for**.
@@ -171,9 +176,3 @@ Clearer than "help me fix" and easier to continue from.
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Structure, scenarios, and cautions rechecked against OpenAI official image input and file upload materials; body no longer depends on unofficial scenario sources and omits UI details that need per-version verification.

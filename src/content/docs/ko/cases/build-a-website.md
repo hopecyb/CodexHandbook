@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
+reviewed_at: "2026-10-26"
 ---
 
 행사 자료를 브라우저에서 열 수 있는 한 페이지 웹사이트로 만듭니다. 결과물은 로컬 정적 페이지와 검수 기록입니다. 행사와 장소는 가상이며 신청 방법은 아직 정해지지 않았습니다.

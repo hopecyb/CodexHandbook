@@ -1,16 +1,17 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "Conferido com as páginas oficiais atuais de Pricing e Authentication. Esta página descreve os modos de acesso e a ordem de diagnóstico sem fixar preços, limites ou listas de funções que mudam frequentemente."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Conferido com as páginas oficiais atuais de Pricing e Authentication. Esta página descreve os modos de acesso e a ordem de diagnóstico sem fixar preços, limites ou listas de funções que mudam frequentemente.
+  checkedAt: '2026-08-26'
 title: Conta, planos e acesso
 description: Distinguir os planos ChatGPT, a utilização de API key e as permissões do workspace da organização.
 locale: pt
 source_locale: zh-CN
-source_revision: ecfa8f9
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: "7b123e5"
+translation_status: reviewed
+translated_at: 2026-10-25
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
 ---
@@ -24,7 +25,7 @@ Atualmente, o Codex pode ser usado através de um **plano ChatGPT** ou de uma **
 | Iniciar sessão com ChatGPT | Trabalho interativo pessoal, ambiente de trabalho, Cloud e workspaces de organizações | Sujeito aos limites do plano ChatGPT, aos papéis no workspace e às políticas do administrador |
 | Usar uma API key | Codex local, scripts e CI | Cobrado pela utilização da API; algumas capacidades dependentes do workspace ChatGPT ou do Cloud não estão disponíveis |
 
-A página oficial atual de Pricing inclui ChatGPT Work e Codex em planos como Free, Go, Plus, Pro, Business, Edu e Enterprise, mas preços, limites, modelos e funções incluídas podem mudar. Este manual não reproduz a tabela de preços. Consulte diretamente a [página oficial de Pricing atualizada](https://learn.chatgpt.com/docs/pricing).
+A página oficial atual de Pricing inclui ChatGPT Work e Codex em planos como Free, Go, Plus, Pro, Business, Edu e Enterprise, mas preços, limites, modelos e funções incluídas podem mudar. Esta página não mantém uma tabela de preços. Consulte [os planos e as fontes de preços do manual](/pt/chatgpt-pricing/) e confirme na [página oficial de preços atualizada](https://learn.chatgpt.com/docs/pricing).
 
 ## Porque pode ter conta e continuar sem acesso
 
@@ -56,3 +57,5 @@ O início de sessão é apenas a primeira etapa. O acesso final também depende 
 Se a CLI aceitar uma API key, mas o botão do Cloud estiver indisponível, isso não significa necessariamente que a instalação falhou. O Cloud exige autenticação com ChatGPT e está sujeito ao plano ChatGPT e às permissões do workspace; a API key destina-se sobretudo a fluxos locais e programáticos.
 
 A seguir, consulte [Início de sessão e autenticação](/pt/guide/getting-started/sign-in-and-authentication/).
+
+Consulte os modelos atuais, as diferenças entre interfaces e as recomendações por tarefa: [Escolher modelos: um ponto de partida por tarefa](/pt/guide/reference/model-selection/).

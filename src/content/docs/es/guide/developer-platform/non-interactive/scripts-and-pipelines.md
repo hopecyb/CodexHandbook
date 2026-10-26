@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: verified
+  products: CLI / GitHub Actions
+  basis: Contrastado con las recomendaciones oficiales actuales de Non-interactive mode y Codex GitHub Action; se corrigió --cd y se adoptó como límite de seguridad predeterminado separar el job que contiene la clave de API del que tiene permisos de escritura en el repositorio.
+  checkedAt: '2026-08-26'
 title: Scripts y pipelines
 description: Orquestar codex exec en shell, Makefile y GitHub Actions — repetible y auditable.
 locale: es
 source_locale: zh-CN
-source_revision: 07aeb4f
+source_revision: "07aeb4f"
 translation_status: reviewed
 translated_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
 ---
 
 Aquí se trata de pasar Codex de una operación puntual a un paso automatizado que **el equipo pueda repetir, rastrear si falla y que otra persona pueda retomar**.
@@ -20,7 +25,7 @@ Este capítulo explica cómo incrustar [codex exec](/es/guide/developer-platform
 ## Contenido de esta página
 
 - División entre script local y job de CI
-- Gestión de Prompt y secretos
+- Gestión de prompt y secretos
 - Combinación con [Automatización de revisión de código](/es/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Qué se resuelve aquí
@@ -33,15 +38,15 @@ Por eso importan tres cosas:
 - Auditable
 - Transferible
 
-## Por qué muchos equipos no «pegan el Prompt en la página de CI»
+## Por qué muchos equipos no «pegan el prompt en la página de CI»
 
 Porque es difícil de mantener:
 
 - Quien llega después no sabe cómo se diseñó
 - Un cambio de lógica no pasa por code review normal
-- Si falla la Tarea, cuesta saber si cambió el Prompt, el entorno o el script
+- Si falla la tarea, cuesta saber si cambió el prompt, el entorno o el script
 
-Meter Prompt, scripts y reglas en Git es, en la práctica, versionar el flujo automatizado.
+Meter prompt, scripts y reglas en Git es, en la práctica, versionar el flujo automatizado.
 
 ## Malentendidos frecuentes
 
@@ -49,7 +54,7 @@ Meter Prompt, scripts y reglas en Git es, en la práctica, versionar el flujo au
 
 La primera vez mucha gente quiere encadenar todo el flujo de golpe.
 
-Si el Prompt aún cambia a menudo, el criterio de éxito no está claro y los límites de Permiso no están cerrados, cuanto antes automatices, más difícil será depurar después.
+Si el prompt aún cambia a menudo, el criterio de éxito no está claro y los límites de permisos no están cerrados, cuanto antes automatices, más difícil será depurar después.
 
 ### El script sirve para fijar la práctica
 
@@ -63,7 +68,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 Incluye `prompts/ci/security-review.md` en Git; los cambios pasan por review.
@@ -72,13 +77,13 @@ Incluye `prompts/ci/security-review.md` en Git; los cambios pasan por review.
 
 La primera vez no busques «grande y completo»; fija primero estas tres:
 
-1. Dónde vive el archivo de Prompt
+1. Dónde vive el archivo de prompt
 2. Cómo se llama el script de entrada
 3. Cómo se juzga éxito y fallo
 
 Así, añadir logs, schema o notificaciones después será mucho más fluido.
 
-## Esquema de GitHub Actions
+## GitHub Actions: usar la Action oficial
 
 ```yaml
 jobs:
@@ -86,24 +91,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # Fija el número de versión según la documentación oficial de instalación
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-Ajusta el método de instalación y el scope de Permisos del ejemplo a los requisitos de seguridad de tu organización; **no** hagas echo de secretos en el workflow.
+En GitHub Actions, utiliza preferentemente la Action oficial `openai/codex-action`. No definas la clave de API como variable de entorno de todo un job que ejecute código del repositorio. Si después necesitas escribir en un PR, separa los permisos de escritura y la clave en jobs distintos y transfiere los cambios mediante un artefacto de parche.
 :::
 
 ## Flujo de trabajo recomendado
@@ -135,21 +135,15 @@ No apresures «todo automático» antes de que el flujo se estabilice; primero f
 
 ## Límites de seguridad
 
-- Privilegio mínimo del token de CI; prohibir `git push` salvo un job de Aprobación independiente
+- Privilegio mínimo del token de CI; prohibir `git push` salvo un job de aprobación independiente
 - En workflows de fork PR, cuidado con los secretos (`pull_request_target` requiere revisión de seguridad)
 
 ## Lista de aceptación
 
-- [ ] Prompt y scripts tienen versión en Git
+- [ ] prompt y scripts tienen versión en Git
 - [ ] El fallo de CI bloquea el merge (si la política lo exige)
-- [ ] La política de retención de artifacts cumple el cumplimiento
+- [ ] La política de retención de artifacts cumple los requisitos normativos
 - [ ] El comportamiento coincide con el `make review` local
 
 ## Fuentes de referencia
 - Documentación de integración OpenAI Codex + GitHub
----
-
-**Estado:** outdated  
-**Productos aplicables:** CLI  
-**Nota de revisión:** El principio de «meter Prompt, scripts y pipelines en Git para review» sigue siendo válido, pero los ejemplos dependen de `codex exec`, del método de instalación del CLI y del cableado concreto de GitHub Actions — detalles de implementación muy volátiles; se restaurará `verified` cuando haya documentación oficial de pipelines actualizada.  
-**Última verificación:** 2026-07-26

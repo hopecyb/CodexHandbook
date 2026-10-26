@@ -9,9 +9,10 @@ sidebar:
   order: 70
 locale: fr
 source_locale: zh-CN
-source_revision: c6ad6aa
-translation_status: draft
+source_revision: 'c6ad6aa'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 N’utilisez pas un tableau fixe des fenêtres d’approbation de l’App, du CLI, de l’IDE et du Cloud pour deviner les permissions. Le comportement réel dépend du lieu d’exécution, de la configuration effective, des exigences de l’organisation, du système d’exploitation et de l’action demandée.
@@ -68,8 +69,8 @@ enabled = true
 
 | Action | Risque principal | Limite minimale |
 |---|---|---|
-| Lire le code source | Inclure des fichiers sensibles dans le contexte | Lecture de l’espace de travail, refus explicite des identifiants |
-| Modifier des fichiers | Écraser ou supprimer hors du périmètre | Écriture limitée à l’espace de travail visé, puis examen du diff |
+| Lire le code source | Inclure des fichiers sensibles dans le contexte | Lecture de l’espace de travail, interdiction explicite d’accéder aux fichiers d’identifiants |
+| Modifier des fichiers | Écraser ou supprimer hors du périmètre | Écriture limitée à l’espace de travail visé, examiner d’abord le diff |
 | Exécuter des tests | Effets secondaires des scripts | Examiner les scripts et utiliser un environnement contrôlé |
 | Installer des dépendances | Chaîne d’approvisionnement et accès réseau | Versions fixées et domaines limités |
 | Git push ou PR | Modification d’un état externe | Branche distincte, protections de branche et revue humaine |

@@ -1,17 +1,22 @@
 ---
-title: Prompts avec images
+title: prompts avec images
 description: Comment formuler une demande quand vous donnez à Codex des captures, maquettes ou photos de tableau blanc.
 locale: fr
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / Cloud
+  basis: Structure, scénarios et précautions revus selon la doc officielle OpenAI sur entrées image et upload de fichiers ; pas de dépendance à des sources non officielles ni à des détails d'interface versionnés.
+  checkedAt: '2026-07-26'
 ---
 
-Beaucoup d'échecs « à partir d'une image » ne viennent pas d'une image invisible, mais d'une image **sans consigne sur quoi en tirer**.
+Beaucoup d'échecs « à partir d'une image » ne viennent pas du fait que le modèle ne voit pas l’image, mais de l’absence de consigne sur **ce qu’il doit y examiner**.
 
-Un Prompt image aide Codex à clarifier :
+Un prompt image aide Codex à clarifier :
 
 1. ce qu'est l'image
 2. où regarder
@@ -22,7 +27,7 @@ Un Prompt image aide Codex à clarifier :
 | Scénario | Rôle de l'image |
 |---|---|
 | bug UI | voir l'anomalie et l'état |
-| fidélité design | layout, hiérarchie, espacements, ambiance |
+| fidélité design | mise en page, hiérarchie, espacements, ambiance |
 | doc à partir d'écran | rédiger à partir de l'interface |
 | tableau / schéma | structurer une description |
 | actuel vs attendu | voir l'écart sans deviner le besoin |
@@ -46,7 +51,7 @@ Capture de la page de connexion en production, iPhone 14 Safari.
 Indiquez où regarder — pas seulement « trouve le problème ».
 
 ```text
-Concentre-toi sur l'espace entre le bouton du bas et le champ de saisie, et le layout quand le clavier est ouvert.
+Concentre-toi sur l'espace entre le bouton du bas et le champ de saisie, et le mise en page quand le clavier est ouvert.
 ```
 
 ### 3. Objectif de tâche
@@ -81,7 +86,7 @@ Ne modifie pas le code pour l'instant.
 
 ```text
 Voici la maquette cible.
-Résume structure de page, composants clés, points responsive et style visuel.
+Résume structure de page, composants clés, points d’adaptation aux différentes tailles d’écran et style visuel.
 Si tu implémentes, garde structure et hiérarchie ; n'ajoute pas de fonctionnalités.
 ```
 
@@ -89,7 +94,7 @@ Si tu implémentes, garde structure et hiérarchie ; n'ajoute pas de fonctionnal
 
 ```text
 Deux images : effet actuel, puis effet attendu.
-Compare layout, hiérarchie textuelle, espacements et indices d'interaction ; propose un ordre de correction.
+Compare mise en page, hiérarchie textuelle, espacements et indices d'interaction ; propose un ordre de correction.
 ```
 
 ## Contexte texte utile
@@ -98,18 +103,18 @@ L'image manque souvent de contexte d'exécution :
 
 - appareil ou navigateur
 - hover / focus / erreur
-- position de scroll
+- position de défilement
 - « actuel » ou « cible »
-- design system existant ou non
+- système de design existant ou non
 
-« OK sur Chrome desktop, bug seulement iOS Safari » vaut parfois plus qu'une image de plus.
+« OK sur Chrome sur ordinateur, bug seulement iOS Safari » vaut parfois plus qu'une image de plus.
 
 ## Plusieurs images
 
 ### Par paires
 
-- actuel + attendu  
-ou  
+- actuel + attendu
+ou
 - normal + anormal
 
 Évitez une pile d'images sans légende.
@@ -117,7 +122,7 @@ ou
 ### Rôle par image
 
 ```text
-Image 1 : rendu desktop actuel
+Image 1 : rendu sur ordinateur actuel
 Image 2 : rendu mobile actuel
 Image 3 : maquette cible
 ```
@@ -138,7 +143,7 @@ L'apparence ne dit pas toujours données, limites, logique d'interaction — com
 
 ### L'image remplace l'acceptation
 
-Même « selon la maquette », validez page réelle, diff, breakpoints, usage.
+Même « selon la maquette », validez page réelle, diff, points de rupture, usage.
 
 ## Pages liées
 
@@ -153,8 +158,8 @@ Pour une lecture « revue design », enchaînez **observation** → **jugement**
 
 ```text
 Décris d'abord uniquement ce que tu observes sur l'image, sans conclusion.
-Puis hypothèse sur la cause la plus probable.
-Enfin direction de modification suggérée.
+Formule ensuite une hypothèse sur la cause la plus probable.
+Propose enfin une piste de modification.
 ```
 
 Plus clair qu'un « corrige » seul.
@@ -163,9 +168,3 @@ Plus clair qu'un « corrige » seul.
 - OpenAI Help Center : ChatGPT Image Inputs FAQ
 - OpenAI Academy : Working with files in ChatGPT
 - OpenAI API Developer Quickstart : Analyze images and files
----
-
-**Statut :** verified  
-**Produits concernés :** App / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Structure, scénarios et précautions revus selon la doc officielle OpenAI sur entrées image et upload de fichiers ; pas de dépendance à des sources non officielles ni à des détails d'interface versionnés.

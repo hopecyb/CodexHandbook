@@ -8,11 +8,12 @@ title: CLI
 description: Introduction pratique à l'utilisation de Codex en ligne de commande.
 locale: fr
 source_locale: zh-CN
-source_revision: a80ef7e
-translation_status: draft
+source_revision: 'a80ef7e'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 11
+reviewed_at: '2026-10-26'
 ---
 
 La CLI convient aux personnes qui utilisent le terminal, ainsi qu'à l'intégration avec des scripts et la CI.

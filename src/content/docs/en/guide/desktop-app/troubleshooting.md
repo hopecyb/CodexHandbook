@@ -8,8 +8,9 @@ title: Desktop app troubleshooting
 description: Common fixes for installation, sign-in, and task failures.
 locale: en
 source_locale: zh-CN
-source_revision: c298f9f
-translation_status: draft
+source_revision: 'c298f9f'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 100

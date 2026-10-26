@@ -1,17 +1,22 @@
 ---
-title: Tự động hóa review mã
-description: "Nối review Codex vào quy trình CI hoặc PR — Prompt, quyền và cổng người."
-locale: vi
-source_locale: zh-CN
-source_revision: aa8b33e
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Tự động hóa review mã"
+description: "Nối review Codex vào quy trình CI hoặc PR — Prompt, quyền và bước phê duyệt của con người."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "aa8b33e"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "CLI / API / Cloud"
+  basis: "Trang chủ OpenAI Developers hiện vẫn mô tả Codex dùng được để kiểm thử, review và chuẩn bị giao thay đổi; use case Codex chính thức vẫn gồm «Review GitHub pull requests». Trang chỉ tóm tắt nguyên tắc nối CI an toàn và mẫu cổng, không tuyên bố lệnh cố định hay triển khai duy nhất."
+  checkedAt: "2026-07-26"
 ---
 
-Đặt Codex vào **pipeline Pull Request** có thể bắt vấn đề rõ trước khi người review, nhưng **không thay thế** review trách nhiệm và kiểm thử. Trang này nói về mẫu tự động hóa triển khai được.
+Đặt Codex vào **pipeline Pull Request** có thể bắt vấn đề rõ trước khi người review, nhưng **không thay thế** việc rà soát có người chịu trách nhiệm và kiểm thử. Trang này nói về mẫu tự động hóa triển khai được.
 
 ## Trang này sẽ nói gì
 
@@ -74,7 +79,7 @@ Lưu phiên bản trong `prompts/ci-review.md`.
 |---|---|
 | Chỉ đọc | Token CI không push (hoặc chỉ bot mở comment) |
 | Ghim mô hình | Dễ so sánh chất lượng review lịch sử |
-| Chống injection | Không ghép mô tả PR chưa khử nhiễm vào system prompt |
+| Chống injection | Không ghép mô tả PR chưa được xử lý an toàn vào system prompt |
 | Bí mật | Dùng GitHub Secrets lưu token |
 
 [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/) · [Biến môi trường](/vi/guide/reference/environment-variables/)
@@ -105,9 +110,3 @@ Giá trị lớn nhất của tự động hóa review mã là sàng vấn đề
 
 ## Nguồn tham chiếu
 - Ví dụ CI OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / API / Cloud  
-**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn mô tả Codex dùng được để kiểm thử, review và chuẩn bị giao thay đổi; use case Codex chính thức vẫn gồm «Review GitHub pull requests». Trang chỉ tóm tắt nguyên tắc nối CI an toàn và mẫu cổng, không tuyên bố lệnh cố định hay triển khai duy nhất.  
-**Kiểm chứng gần nhất:** 2026-07-26

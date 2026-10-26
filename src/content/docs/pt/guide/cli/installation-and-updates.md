@@ -3,12 +3,13 @@ title: Instalação e atualizações da CLI
 description: Instalar, atualizar e confirmar a versão.
 locale: pt
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: "be3f2c4"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Conferido com o início rápido oficial atual da CLI: opções de instalação para macOS/Linux, Windows, npm e Homebrew, caminhos de atualização e login com codex. Os comandos específicos são mantidos na página de instalação para iniciantes.", "checkedAt": "2026-08-26"}
 ---
 
 Na primeira instalação da CLI, muita gente trava nestes pontos:
@@ -29,12 +30,12 @@ A CLI está instalada de verdade quando o terminal atual a encontra de forma est
 
 ### 1. O script de instalação ter corrido significa que acabou
 
-O script ter corrido só mostra que «os passos de instalação foram executados».  
+O script ter corrido só mostra que «os passos de instalação foram executados».
 A seguir, o que importa é: o terminal que tem aberto agora reconhece o comando?
 
 ### 2. Abrir outra janela de terminal resolve sozinho
 
-Às vezes sim, às vezes não.  
+Às vezes sim, às vezes não.
 Se o `PATH` não atualizou, noutra janela também pode continuar a não encontrar.
 
 ### 3. Atualizar é só reinstalar
@@ -55,12 +56,5 @@ Logo após instalar:
 
 O critério mais prático: o terminal atual encontra-o e já consegue autenticar.
 
-Também pode confrontar: [Instalar a CLI](/pt/guide/getting-started/install-cli/)  
-Instalação e atualização oficiais: [documentação OpenAI Codex](https://developers.openai.com/codex).
-
----
-
-**Estado:** outdated  
-**Produtos aplicáveis:** CLI  
-**Nota de revisão:** Embora esta página fale da lógica de verificação pós-instalação, o corpo ainda assume um fluxo concreto atual de instalação, atualização e autenticação; como o método oficial de instalação da CLI, os passos de autenticação e os comandos de confirmação de versão são detalhes muito voláteis, sem a documentação oficial de instalação mais recente não convém marcar como `verified`.  
-**Última verificação:** 2026-07-26
+Também pode confrontar: [Instalar a CLI](/pt/guide/getting-started/install-cli/)
+As instruções oficiais de instalação e atualização estão em [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). O instalador independente oficial para macOS/Linux usa o mesmo comando para instalar e atualizar. Para Windows, npm e Homebrew, consulte a aba correspondente na página oficial.

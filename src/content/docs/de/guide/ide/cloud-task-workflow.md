@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE, Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud-Aufgaben in der IDE
 description: Delegiere Langzeitaufgaben aus der IDE an Codex Cloud und kehre zu einem prüfbaren Ergebnis zurück.
 sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: d5369b5
+source_revision: "d5369b5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die IDE kann schnelle Iterationen lokal ausführen und zugleich eine Verbindung zu Codex im Web herstellen, um längere Aufgaben an Cloud zu delegieren. Der Einstieg bleibt im Editor, Ausführungsumgebung, Repository-Zustand und Netzwerkgrenzen liegen danach jedoch in der Cloud.
@@ -67,11 +71,3 @@ Lies als Nächstes [Cloud-Umgebungen](/de/guide/web-and-cloud/cloud-environments
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE, Cloud
-
-**Zuletzt geprüft:** 2026-08-26

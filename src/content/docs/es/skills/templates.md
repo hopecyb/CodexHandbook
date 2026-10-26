@@ -8,13 +8,13 @@ title: Directorio templates/
 description: Proporciona plantillas de salida y esqueletos de informes dentro de un Skill.
 locale: es
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: "82a9e01"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-`templates/` no es solo un directorio para «ahorrar un poco de formato». Su papel práctico es estabilizar la salida del Skill sin improvisar cada vez.
+`templates/` no es solo un directorio para «ahorrar tiempo de maquetación». Su papel práctico es estabilizar la salida del Skill sin improvisar cada vez.
 
 Si `references/` se inclina más a «qué consultar al entrar», `templates/` se inclina a «cómo debe verse la salida». Resultados con estructura fija y fáciles de revisar encajan aquí.
 
@@ -40,7 +40,7 @@ En `SKILL.md` indica: «Emite la conclusión de la revisión según la estructur
 También puedes pensarlo así:
 
 - El Skill decide «cómo hacerlo»
-- La template decide «cómo presentarlo al final»
+- La plantilla decide «cómo presentarlo al final»
 
 Reduce dos problemas habituales:
 
@@ -61,11 +61,11 @@ Pero en cuanto empieces a repetir «por favor, emite según esta estructura», c
 
 ## Errores frecuentes
 
-### 1. La template solo hace el resultado más bonito
+### 1. La plantilla solo hace el resultado más bonito
 
 No solo es belleza: el resultado es más estable, comparable y fácil de revisar.
 
-### 2. Con template, el Skill ya no necesita requisitos de salida claros
+### 2. Con una plantilla, el Skill ya no necesita requisitos de salida claros
 
 Tampoco.
 

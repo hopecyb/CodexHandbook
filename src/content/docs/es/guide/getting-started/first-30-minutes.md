@@ -3,12 +3,17 @@ title: Primeros 30 minutos
 description: Ruta de 30 minutos que puedes seguir en el primer uso.
 locale: es
 source_locale: zh-CN
-source_revision: 7d1061d
+source_revision: '7d1061d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Se cruzó con las secciones ya verificadas de lista de seguridad, proyecto de práctica, primera Tarea, revisión de resultados y ruta para principiantes; esta página solo ofrece una ruta estable para «cerrar el ciclo en la primera media hora».
+  checkedAt: '2026-07-26'
 ---
 
 Si acabas de instalar y no sabes por dónde empezar el primer día, sigue esta ruta.
@@ -84,7 +89,7 @@ Entender importa, pero para un principiante es más valioso vivir una vez la exp
 
 El hábito más útil en los primeros 30 minutos es revisar el resultado aunque la Tarea sea pequeña.
 
-## Señal de completado
+## Criterios de finalización
 
 Si a los 30 minutos ya hiciste estas 4 cosas, esta ronda está hecha:
 
@@ -97,11 +102,4 @@ Si a los 30 minutos ya hiciste estas 4 cosas, esta ronda está hecha:
 
 Ve primero al [índice de resolución de problemas](/es/guide/reference/troubleshooting/). Si solo no entiendes un concepto, vuelve a [Qué necesitas antes de empezar](/es/guide/start-here/prerequisites/) y [Local frente a Cloud](/es/guide/foundations/local-vs-cloud/).
 
-En los primeros 30 minutos, completar con tus manos un ciclo de «plantear Tarea, ver resultado, juzgar tú mismo» ya vale mucho.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Se cruzó con las secciones ya verificadas de lista de seguridad, proyecto de práctica, primera Tarea, revisión de resultados y ruta para principiantes; esta página solo ofrece una ruta estable para «cerrar el ciclo en la primera media hora».  
-**Última verificación:** 2026-07-26
+En los primeros 30 minutos, completar por ti mismo un ciclo de «plantear Tarea, ver resultado, juzgar tú mismo» ya vale mucho.

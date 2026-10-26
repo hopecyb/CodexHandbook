@@ -1,25 +1,26 @@
 ---
 title: Instruções do projeto
-description: Contexto a nível de projeto além de AGENTS.md — divisão de papéis entre README, docs e referências na conversa.
+description: contexto a nível de projeto além de AGENTS.md — divisão de papéis entre README, docs e referências na conversa.
 locale: pt
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: "76b0fde"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzada com a documentação pública atual da OpenAI Developers sobre contexto de projeto e colaboração com arquivos, e com capítulos já verificados deste manual sobre contexto, arquivos e fluxos de trabalho; o conteúdo limita-se ao princípio estável de divisão entre README, `AGENTS.md`, `docs/` e a conversa da tarefa.", "checkedAt": "2026-07-26"}
 ---
 
-As «instruções do projeto» são o **Contexto estático** com que o Codex compreende o repositório; não se limitam a um único formato de ficheiro.
+As «instruções do projeto» são o **Contexto estático** com que o Codex compreende o repositório; não se limitam a um único formato de arquivo.
 
 ## Conteúdo
 
 - Além de `AGENTS.md`, onde mais deve viver a informação a nível de projeto
-- Como dividir papéis entre README, docs e ficheiros de scripts
+- Como dividir papéis entre README, docs e arquivos de scripts
 - Que informação deve ir para o repositório e qual só deve ficar na conversa atual
 
-## Composição do Contexto do projeto
+## Composição do contexto do projeto
 
 | Fonte | Função |
 |---|---|
@@ -28,13 +29,13 @@ As «instruções do projeto» são o **Contexto estático** com que o Codex com
 | `docs/` | Arquitetura, ADR, manuais de operação |
 | Dependências e scripts | `package.json`, `Makefile`, etc. — verdade executável |
 
-O Codex combina Ferramentas para ler estes materiais; o essencial é que a **verdade seja única**: o comando de arranque no README tem de funcionar de facto.
+O Codex combina ferramentas para ler estes materiais; o essencial é que a **verdade seja única**: o comando de arranque no README tem de funcionar de fato.
 
 ## Prática básica
 
-1. Garanta que o `README.md` da raiz tem quatro secções: propósito, instalação, desenvolvimento, testes
-2. Afunde as **explicações que repete ao Codex** em `AGENTS.md`
-3. Nas Tarefas, use `@` para apontar ficheiros concretos em vez de colar o texto inteiro:
+1. Garanta que o `README.md` da raiz tem quatro seções: propósito, instalação, desenvolvimento, testes
+2. Registre as **instruções que você repete ao Codex** em `AGENTS.md`
+3. Nas tarefas, use `@` para apontar arquivos concretos em vez de colar o texto inteiro:
 
 ```text
 Segundo os requisitos de teste de @AGENTS.md, corrija o null pointer em @src/auth/login.ts.
@@ -56,7 +57,7 @@ Aí não só as pessoas se confundem — o Codex também. O ponto é concentrar 
 - **Instruções do projeto**: relativamente estáveis ao longo de meses
 - **Contexto da conversa**: objetivo desta vez, restrições, conclusões intermédias
 
-Em Tarefas longas, se uma regra for mencionada repetidamente, deve **reescrever-se** em `AGENTS.md` ou `docs/`, em vez de copiar e colar em dez Threads. Ver [Manter o Contexto focado](/pt/guide/context/keep-context-focused/).
+Em tarefas longas, se uma regra for mencionada repetidamente, deve **reescrever-se** em `AGENTS.md` ou `docs/`, em vez de copiar e colar em dez threads. Ver [Manter o contexto focado](/pt/guide/context/keep-context-focused/).
 
 ## Erros habituais
 
@@ -91,18 +92,11 @@ Mais importante é:
 - `README.md`: o que é o projeto, como arrancar, como testar
 - `AGENTS.md`: regras de colaboração, zonas proibidas, definição de concluído
 - `docs/`: contexto mais longo, arquitetura, fluxos
-- Scripts e ficheiros de configuração: verdade executável
+- Scripts e arquivos de configuração: verdade executável
 
 O foco das instruções do projeto é facilitar a pessoas e ao Codex encontrarem a mesma «verdade do repositório». A quantidade de documentos em si não é o ponto.
 
 ## Lista de verificação
 
 - [ ] Quem clona o repositório de novo (ou o Codex) consegue correr os testes com README + AGENTS.md
-- [ ] Os Prompts de Tarefa usam sobretudo referências @, evitando repetir longos contextos
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com a documentação pública atual da OpenAI Developers sobre Contexto de projeto e colaboração com ficheiros, e com capítulos já verificados deste manual sobre Contexto, ficheiros e fluxos de trabalho; o conteúdo limita-se ao princípio estável de divisão entre README, `AGENTS.md`, `docs/` e a conversa da Tarefa.  
-**Última verificação:** 2026-07-26
+- [ ] Os prompts de tarefa usam sobretudo referências @, evitando repetir longos contextos

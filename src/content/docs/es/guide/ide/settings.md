@@ -3,13 +3,17 @@ title: Ajustes de la extensión para IDE
 description: Distingue entre la configuración compartida del agente y los ajustes de comportamiento de los editores basados en VS Code.
 locale: es
 source_locale: zh-CN
-source_revision: 6f28910
-translation_status: draft
+source_revision: "6f28910"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 En el IDE hay dos niveles de ajustes:
 
 | Nivel | Ubicación | Qué controla |

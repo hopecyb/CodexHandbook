@@ -1,16 +1,20 @@
 ---
-title: "AGENTS.md dans un monorepo"
+title: AGENTS.md dans un monorepo
 description: Modèles d'exemple pour placer les instructions projet, la portée et les commandes de test dans une structure multi-paquets mono-dépôt.
 locale: fr
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: "a9fb1d7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres actuels du handbook sur `AGENTS.md`, contexte fichier/répertoire et environnements Cloud ; le contenu de la page se limite aux modèles d'exemple d'instructions en couches monorepo et à l'organisation des commandes, sans traiter les points d'entrée produit spécifiques ou l'implémentation gérée comme contrats fixes.
+  checkedAt: '2026-07-26'
 ---
-
 Dans un monorepo avec plusieurs apps, paquets partagés et différentes stacks — un seul `AGENTS.md` géant fait que l'Agent **modifie le mauvais paquet** ou exécute les mauvais tests. Cette page donne un modèle d'**instructions en couches** réutilisable (exemple — adaptez pour votre dépôt).
 
 ## Ce que cette page couvre
@@ -23,13 +27,13 @@ Dans un monorepo avec plusieurs apps, paquets partagés et différentes stacks �
 
 Si un dépôt normal est une maison, un monorepo est un immeuble.
 
-Différentes pièces, résidents et règles.  
+Différentes pièces, résidents et règles.
 Si vous ne postez qu'une très longue notice à l'entrée, Codex rencontre souvent deux problèmes :
 
 - Voit tout mais ne sait pas quelle couche s'applique maintenant
 - Voulait modifier un paquet mais touche autre chose
 
-Le point est de faire suivre les règles les frontières de répertoires clairement — pas d'ajouter mécaniquement plus de fichiers `AGENTS.md`.
+L’objectif est de délimiter clairement les règles selon les répertoires — pas d'ajouter mécaniquement plus de fichiers `AGENTS.md`.
 
 ## Structure recommandée (exemple)
 
@@ -44,7 +48,7 @@ repo-root/
 Le `AGENTS.md` racine devrait inclure :
 
 - Répertoires que l'Agent **ne doit pas** modifier (ex. `infra/prod/`)
-- **Liens propriétaire ou doc** pour chaque sous-paquet
+- **Responsable ou lien vers la documentation** pour chaque sous-paquet
 - Commande d'installation globale : `pnpm install` à la racine
 
 ## Idées reçues courantes
@@ -127,10 +131,3 @@ Plus proche de (1) → racine ; plus proche de (2) et (3) → sous-paquet.
 - [ ] Les tâches cross-paquet indiquent les chemins autorisés dans le prompt
 
 AGENTS.md dans un monorepo n'a pas besoin d'être centralisé ; « consensus global » et « règles locales par répertoire » appartiennent chacun au bon endroit.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Recoupement avec les chapitres actuels du handbook sur `AGENTS.md`, contexte fichier/répertoire et environnements Cloud ; le contenu de la page se limite aux modèles d'exemple d'instructions en couches monorepo et à l'organisation des commandes, sans traiter les points d'entrée produit spécifiques ou l'implémentation gérée comme contrats fixes.  
-**Dernière vérification :** 2026-07-26

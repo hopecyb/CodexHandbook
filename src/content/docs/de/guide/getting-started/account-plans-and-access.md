@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit den aktuellen offiziellen Seiten zu Pricing und Authentication abgeglichen. Die Seite dokumentiert Zugriffsmodell und Reihenfolge der Fehlersuche, ohne veränderliche Preise, Kontingente oder Funktionslisten festzuschreiben."
+  checkedAt: "2026-08-26"
 title: Konten, Tarife und Zugriff
 description: Unterscheide ChatGPT-Tarife, nutzungsabhängige API-Key-Abrechnung und Berechtigungen in Organisations-Workspaces.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: ecfa8f9
+source_revision: "7b123e5"
 translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+translated_at: 2026-10-25
+reviewed_at: 2026-10-26
 ---
 
 Codex kann derzeit über einen **ChatGPT-Tarif** oder mit einem **nutzungsabhängig abgerechneten API-Key** verwendet werden. Beide Zugriffsarten bieten jedoch nicht dieselben Einstiege und Verwaltungsgrenzen.
@@ -20,7 +25,7 @@ Codex kann derzeit über einen **ChatGPT-Tarif** oder mit einem **nutzungsabhän
 | Anmeldung mit ChatGPT | Persönliche interaktive Nutzung, Desktop, Cloud und Organisations-Workspaces | Unterliegt Kontingent des ChatGPT-Tarifs, Workspace-Rolle und Administratorrichtlinien |
 | Anmeldung mit API-Key | Lokales Codex, Skripte und CI | Abrechnung nach API-Nutzung; einige Funktionen mit ChatGPT-Workspace- oder Cloud-Abhängigkeit sind nicht verfügbar |
 
-Auf der aktuellen offiziellen Pricing-Seite sind ChatGPT Work und Codex in Tarifen wie Free, Go, Plus, Pro, Business, Edu und Enterprise enthalten. Preise, Kontingente, Modelle und enthaltene Funktionen können sich jedoch ändern. Dieses Handbuch kopiert keine Preistabelle. Verwende die [aktuelle offizielle Pricing-Seite](https://learn.chatgpt.com/docs/pricing).
+Auf der aktuellen offiziellen Pricing-Seite sind ChatGPT Work und Codex in Tarifen wie Free, Go, Plus, Pro, Business, Edu und Enterprise enthalten. Preise, Kontingente, Modelle und enthaltene Funktionen können sich jedoch ändern. Diese Seite führt keine Preistabelle. Lies [unsere Tarifwahl und Preisquellen](/de/chatgpt-pricing/) und prüfe die [aktuelle offizielle Pricing-Seite](https://learn.chatgpt.com/docs/pricing).
 
 ## Weshalb ein vorhandenes Konto trotzdem keinen Zugriff garantiert
 
@@ -53,12 +58,5 @@ Wenn du dich in der CLI mit einem API-Key anmelden kannst, die Cloud-Schaltfläc
 
 Fahre mit [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) fort.
 
----
 
-**Status:** verified
-
-**Unterstützte Produkte:** App / CLI / IDE / Cloud
-
-**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zu Pricing und Authentication abgeglichen. Die Seite dokumentiert Zugriffsmodell und Reihenfolge der Fehlersuche, ohne veränderliche Preise, Kontingente oder Funktionslisten festzuschreiben.
-
-**Zuletzt geprüft:** 2026-08-26
+Aktuelle Modelle, Unterschiede zwischen den Produkten und Aufgabenempfehlungen: [Modellwahl nach Aufgabe](/de/guide/reference/model-selection/).

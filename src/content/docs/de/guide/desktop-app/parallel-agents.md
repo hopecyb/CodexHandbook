@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App, CLI, IDE"
+  checkedAt: "2026-08-26"
 title: Parallele Chats und Agents
 description: Bearbeite getrennt abnehmbare Aufgaben parallel in unabhängigen Chats und Worktrees.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 2336db1
+source_revision: "2336db1"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die Grundeinheit paralleler Arbeit ist ein Chat mit eigenem Kontext, eigenen Nachrichten, Ergebnissen und Zielen. Viele Schritte allein machen eine Aufgabe noch nicht parallelisierbar. Geeignet sind Aufgaben, die **voneinander unabhängig sind, eindeutige Dateigrenzen besitzen und getrennt abgenommen werden können**.
@@ -71,11 +75,3 @@ Die detailliertere Orchestrierung auf Werkzeugebene beschreibt die Seite [Subage
 - [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App, CLI, IDE
-
-**Zuletzt geprüft:** 2026-08-26

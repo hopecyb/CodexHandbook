@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App", "basis": "OpenAI Help Center hiện tại — *Moving to the new ChatGPT desktop app* và *ChatGPT Work and Codex* — đều nêu rõ ứng dụng desktop hiện gồm cả Chat/Work và Codex, và Codex giữ view độc lập; trang này chỉ là điều hướng chương Desktop App, tập trung ba thao tác cơ bản: nhập tác vụ, xem thay đổi, phê duyệt.", "checkedAt": "2026-07-26"}
 title: Ứng dụng Desktop
 description: Cài đặt, giao diện và quy trình làm việc hàng ngày của ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: d1a9007
+source_revision: "d1a9007"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -27,7 +28,7 @@ Nó không chỉ «chat được», mà còn đưa dự án, thay đổi, phê d
 
 ## Trước hết nhận ra ba việc này
 
-Không cần học hết mọi chức năng một lần.  
+Không cần học hết mọi chức năng một lần.
 Hãy nhận ra ba loại thao tác cốt lõi:
 
 1. Nhập tác vụ ở đâu
@@ -91,10 +92,3 @@ Cách này thường nhẹ nhàng hơn là lao vào nghiên cứu mọi chức n
 Lối vào bắt đầu: [Cài đặt ứng dụng Desktop](/vi/guide/getting-started/install-desktop-app/)
 
 Ứng dụng Desktop rất phù hợp để chạy thông cộng tác cơ bản với Codex trước, rồi mới bổ sung dòng lệnh và quy trình nâng cao hơn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App  
-**Căn cứ kiểm chứng:** OpenAI Help Center hiện tại — *Moving to the new ChatGPT desktop app* và *ChatGPT Work and Codex* — đều nêu rõ ứng dụng desktop hiện gồm cả Chat/Work và Codex, và Codex giữ view độc lập; trang này chỉ là điều hướng chương Desktop App, tập trung ba thao tác cơ bản: nhập tác vụ, xem thay đổi, phê duyệt.  
-**Kiểm chứng gần nhất:** 2026-07-26

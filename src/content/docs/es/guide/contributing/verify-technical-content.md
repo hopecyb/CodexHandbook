@@ -7,9 +7,10 @@ title: Verificar contenido técnico
 description: Distingue el estado editorial, la consulta de fuentes y la ejecución de ejemplos; registra alcance, entorno y evidencias.
 locale: es
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: "cfb077d"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 editorialStatus: review
 verification:
   kind: editorial
@@ -109,13 +110,13 @@ Así que hay que verificar por «cadena completa de operación», no solo escane
 1. **Marcar el alcance**: producto (App/CLI/IDE/Cloud), OS, número de versión de CLI
 2. **Reproducir paso a paso**: seguir desde cero o desde un worktree limpio
 3. **Base oficial**: citar fuentes oficiales concretas para los hechos del producto; en ejercicios de método estables, usar entradas reales y registros de comprobación sin atribuirles un aval oficial inexistente
-4. **Fuentes de la comunidad**: si te apoyas en materiales comunitarios, solo como referencia temática; los hechos prevalecen oficiales
+4. **Fuentes de la comunidad**: si te apoyas en materiales comunitarios, solo como referencia temática; para los hechos, prevalecen las fuentes oficiales
 5. **Actualizar la fecha**: `verification.checkedAt` solo debe reflejar la fecha real de la comprobación; no actualices fechas antiguas en lote haciéndolas pasar por una nueva revisión
 6. **Revisión independiente**: para `verified` se recomienda confirmación de una segunda persona distinta del autor
 
 ## Orden de verificación
 
-Este orden es el que menos se salta:
+Este orden ayuda a no omitir comprobaciones:
 
 1. Confirma primero de qué producto, entrada y escenario habla la página
 2. Recorre desde el principio los pasos del texto
@@ -127,10 +128,10 @@ Más vale quedarse en `review` que marcar `verified` antes de tiempo sin evidenc
 
 ## Información variable
 
-Lo siguiente hay que reverificar cada trimestre o con cada major:
+Lo siguiente hay que reverificar cada trimestre o con cada versión principal:
 
 - Nombres de comandos y subcomandos, flags
-- Valores por defecto de permisos y comportamiento del Sandbox
+- Valores por defecto de permisos y comportamiento del sandbox
 - Planes, nombres de modelo, disponibilidad regional
 - Nombres de eventos MCP/Hook
 

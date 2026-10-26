@@ -1,14 +1,19 @@
 ---
-title: PDF và tài liệu
-description: Phạm vi, công cụ và điểm nghiệm thu khi để Codex đọc, tóm tắt hoặc tạo tài liệu dạng PDF.
-locale: vi
-source_locale: zh-CN
-source_revision: 1f4f82b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "PDF và tài liệu"
+description: "Phạm vi, công cụ và điểm nghiệm thu khi để Codex đọc, tóm tắt hoặc tạo tài liệu dạng PDF."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "1f4f82b"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 30
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ngữ cảnh nhạy cảm và xử lý ảnh/tệp đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý ổn định “PDF nên giới hạn phạm vi, cảnh giác sai OCR/bố cục, sau khi tạo phải mở thật để nghiệm thu”."
+  checkedAt: "2026-07-26"
 ---
 
 PDF thường dùng cho quy chuẩn, bài báo, bản quét và báo cáo xuất. Khác văn bản thuần, PDF **cấu trúc phức tạp, dung lượng lớn, khó diff**, cần ước định cách làm tác vụ riêng.
@@ -18,7 +23,7 @@ Khi giao PDF cho Codex, vấn đề phổ biến nhất là hiểu cấu trúc k
 ## Nội dung trang này
 
 - Làm sao để Agent «đọc» đúng nội dung PDF
-- Ước định dạng và đường dẫn khi tạo hoặc sửa PDF
+- Quy ước định dạng và đường dẫn khi tạo hoặc sửa PDF
 - Khi nghiệm thu tránh «trông như có tệp nhưng mở không được»
 
 ## Vì sao PDF đặc biệt dễ có vấn đề
@@ -44,7 +49,7 @@ Vậy càng nói rõ “xem đoạn nào, cần kết quả gì”, hiệu quả
 
 ### Giới hạn
 
-- PDF bản quét có thể cần OCR; kết quả sai cần rút mẫu thủ công
+- PDF bản quét có thể cần OCR; cần kiểm tra mẫu thủ công vì kết quả có thể sai
 - Bố cục phức tạp, nhiều cột, chú thích dễ mất cấu trúc
 - PDF rất lớn đừng nhét cả tệp vào một tác vụ; xử lý từng đoạn, hoặc chuyển trước thành dàn ý Markdown
 
@@ -114,10 +119,3 @@ Nếu OCR hoặc nhận dạng bố cục chưa chắc, hãy đánh dấu rõ.
 - [ ] Dung lượng kho và chính sách LFS khớp quy chuẩn nhóm
 
 Xử lý PDF thì phạm vi càng rõ càng ổn. Sau khi tạo PDF, đừng chỉ xem tệp có hay không; còn phải xác nhận mở bình thường và nội dung thật sự đúng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ngữ cảnh nhạy cảm và xử lý ảnh/tệp đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý ổn định “PDF nên giới hạn phạm vi, cảnh giác sai OCR/bố cục, sau khi tạo phải mở thật để nghiệm thu”.  
-**Kiểm chứng gần nhất:** 2026-07-26

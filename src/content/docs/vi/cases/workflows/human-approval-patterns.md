@@ -12,8 +12,9 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: vi
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: "f60dbb5"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 Việc phê duyệt phải gắn với thao tác cụ thể và tác động của nó. Quyền giao tác vụ nói người dùng muốn hoàn thành việc gì; phê duyệt công cụ quyết định thao tác nào có thể chạy trong môi trường hiện tại. Ghi tệp, chạy lệnh hoặc truy cập mạng không tự nhiên đòi hỏi phải hỏi lại mỗi lần. Hành vi thực tế do phạm vi được phép, chính sách công cụ và sandbox cùng quyết định. Xem [hướng dẫn chính thức](https://learn.chatgpt.com/docs/agent-approvals-security).

@@ -2,16 +2,16 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Esta página oferece um template de tarefas de automação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto."
+  basis: "Esta página oferece um template de tarefas de automação; links e estrutura foram revistos; o corpo não depende de fatos voláteis do produto."
   checkedAt: "2026-07-26"
 title: Template de automação
-description: Tarefas repetidas e fluxos reutilizáveis.
+description: tarefas repetidas e fluxos reutilizáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: "2aff2e7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -40,7 +40,7 @@ Aceitação:
 
 ## Quando usar este template
 
-- Tarefas repetidas com regras claras
+- tarefas repetidas com regras claras
 - Fluxos a scriptar ou agendar
 - Querer primeiro dry-run, logs e códigos de saída como barreiras
 

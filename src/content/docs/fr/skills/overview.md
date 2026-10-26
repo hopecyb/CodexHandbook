@@ -3,10 +3,15 @@ title: "Vue d'ensemble des Skills"
 description: Enseigner des workflows réutilisables à Codex via SKILL.md — écrire une fois, invoquer à la demande.
 locale: fr
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: '3147d2c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Règles de chargement Skill actuelles (`SKILL.md`, lecture à la demande) alignées avec OpenAI Help « Skills in ChatGPT » ; cette page reste conceptuelle, sans UI versionnée.
+  checkedAt: '2026-07-26'
 ---
 
 Un **Skill** est un répertoire contenant `SKILL.md` (scripts et références optionnels), qui empaquette un flux fixe en capacité **appelable automatiquement ou explicitement** par Codex.
@@ -21,7 +26,7 @@ Il convient aux méthodes déjà répétées et qui le seront encore.
 
 | | Commande slash | Skill |
 |---|---|---|
-| Déclenchement | vous tapez `/xxx` | vous pouvez `$name`, ou le modèle matche la description |
+| Déclenchement | vous tapez `/xxx` | vous pouvez appeler `$name`, ou le modèle choisit selon la description |
 | Contexte | en général expansion immédiate | **divulgation progressive** : nom + description, corps lu à l'usage |
 | Convient à | entrée fixe, fréquente, mémorisée | flux long, doc nécessaire, jugement automatique du moment |
 
@@ -45,7 +50,7 @@ Exemple minimal de `SKILL.md` :
 ```md
 ---
 name: pr-review
-description: Revoir le diff de la branche courante vs main, signaler risques et lacunes de tests. À utiliser pour review, PR ou contrôle avant merge. Ne pas utiliser pour écrire une nouvelle fonctionnalité.
+description: Revoir le diff de la branche courante vs main, signaler risques et lacunes de tests. À utiliser pour review, PR ou contrôle avant merge.
 ---
 
 ## Étapes
@@ -117,9 +122,3 @@ Les Skills ne sont pas obligatoires au départ — ils organisent les flux rép�
 
 ## Sources
 - Documentation OpenAI Codex Skills
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Règles de chargement Skill actuelles (`SKILL.md`, lecture à la demande) alignées avec OpenAI Help « Skills in ChatGPT » ; cette page reste conceptuelle, sans UI versionnée.

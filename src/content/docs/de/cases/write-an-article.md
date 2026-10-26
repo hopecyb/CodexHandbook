@@ -36,9 +36,10 @@ next:
   label: Aus dem Artikel eine Präsentation machen
 locale: de
 source_locale: zh-CN
-source_revision: e2bb5ea
-translation_status: draft
+source_revision: "e2bb5ea"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-26
 ---
 
 Das Ziel ist ein kurzer chinesischer Artikel, in dem jede wesentliche Tatsache auf eine Quelle zurückgeführt werden kann. Du behandelst widersprüchliche Angaben, unterscheidest Quellenaussagen, Autorenfolgerungen und offene Fragen und überarbeitest einen bewusst fehlerhaften Erstentwurf.

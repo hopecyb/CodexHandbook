@@ -5,17 +5,22 @@ sidebar:
   order: 30
 locale: fr
 source_locale: zh-CN
-source_revision: 543d14e
+source_revision: '543d14e'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec la structure actuelle de la sous-section fichiers-et-artefacts et les pages vérifiées verify-artifacts, definition-of-done, sensitive-context et pages liées aux images ; principe stable : choisir instructions et vérification par type de fichier.'
+  checkedAt: '2026-07-26'
 ---
 
 Codex produit souvent des **changements de fichiers dans le repo** ou de **nouveaux artefacts** (docs, images, config). Cette section couvre les bonnes pratiques par type de fichier pour ne pas finir avec « généré mais inutilisable ».
 
-Les « fichiers » ne sont pas tous identiques — différents types nécessitent différentes instructions et Vérifications.
+Les « fichiers » ne sont pas tous identiques — différents types nécessitent différentes instructions et vérifications.
 
-« Éditer du code », « traiter des tableurs », « générer des captures » et « exporter des slides » ressemblent tous à des Tâches de fichiers, mais les modes d'échec diffèrent.
+« Éditer du code », « traiter des tableurs », « générer des captures » et « exporter des slides » ressemblent tous à des tâches de fichiers, mais les modes d'échec diffèrent.
 
 ![Illustration : code, images, PDF, tableurs et diapositives défilent sur un tapis devant un petit assistant qui vérifie chaque élément](/illustrations/files-and-artifacts.webp)
 
@@ -36,7 +41,7 @@ Méthode générale : [Vérifier les artefacts](/fr/guide/quality/verify-artifac
 
 Trois thèmes :
 
-- Comment décrire la Tâche clairement
+- Comment décrire la tâche clairement
 - Où les choses échouent silencieusement
 - Comment vérifier à la fin
 
@@ -44,17 +49,17 @@ C'est un guide opérationnel par type de fichier — pas une liste de fonctionna
 
 ## Principes unifiés
 
-1. **Chemins explicites** : chemin de sortie et nommage dans le Prompt
+1. **Chemins explicites** : chemin de sortie et nommage dans le prompt
 2. **Conventions de format** : extension, encodage (UTF-8), fins de ligne correspondent au projet
 3. **Conscience de la taille** : gros binaires hors Git, ou utiliser LFS/CDN
-4. **Vérification humaine** : généré ≠ terminé ; voir [Définition de terminé](/fr/guide/quality/definition-of-done/)
-5. **Données sensibles** : voir [Contexte sensible](/fr/guide/context/sensitive-context/)
+4. **vérification humaine** : généré ≠ terminé ; voir [Définition de terminé](/fr/guide/quality/definition-of-done/)
+5. **Données sensibles** : voir [contexte sensible](/fr/guide/context/sensitive-context/)
 
 ## Idées reçues courantes
 
-### 1. Fichier existe ≠ Tâche complète
+### 1. Un fichier créé ne signifie pas que la tâche est terminée
 
-Les problèmes sont souvent pas « a-t-il été généré ? » mais :
+Les problèmes ne concernent souvent pas « a-t-il été généré ? » mais :
 
 - Format correct ?
 - Contenu précis ?
@@ -78,24 +83,17 @@ Ouvrir est le minimum — pas forcément prêt à committer, publier ou livrer.
 
 Première utilisation de Codex sur des fichiers :
 
-1. Choisir le type de fichier le plus proche de votre Tâche
+1. Choisir le type de fichier le plus proche de votre tâche
 2. Lire les modes d'échec courants pour ce type
-3. Lire l'approche de Vérification correspondante
+3. Lire l'approche de vérification correspondante
 
 Plus facile que lire tout le chapitre d'un coup.
 
 ## Relation avec les outils
 
 - Lire/écrire fichiers : outils fichier + terminal
-- Voir images : [Prompt avec images](/fr/prompts/prompting-with-images/)
+- Voir images : [prompt avec images](/fr/prompts/prompting-with-images/)
 - Voir pages : [Outil navigateur](/fr/guide/tools/browser/)
 - Générer images : [Génération d'images](/fr/guide/tools/image-generation/)
 
-Les Tâches de fichiers échouent souvent silencieusement — format, règles ou contenu dérivent pendant que le fichier « existe ».
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec la structure actuelle de la sous-section fichiers-et-artefacts et les pages vérifiées verify-artifacts, definition-of-done, sensitive-context et pages liées aux images ; principe stable : choisir instructions et Vérification par type de fichier.  
-**Dernière vérification :** 2026-07-26
+Les tâches de fichiers échouent souvent silencieusement — format, règles ou contenu dérivent pendant que le fichier « existe ».

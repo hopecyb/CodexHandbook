@@ -3,14 +3,18 @@ title: Memorias y contexto persistente
 description: Cómo Codex recuerda preferencias y hechos entre sesiones — capacidades, límites y normas de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: "7a689ad"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI (según versión)
+  basis: Contrastado con la explicación oficial actual del Help Center de OpenAI sobre ChatGPT Memory, y con los capítulos ya verificados de este manual sobre instrucciones de proyecto, preferencias personales y límites de seguridad; el contenido se limita al principio estable «la memoria sirve para preferencias personales y unos pocos hechos estables; no sustituye las reglas del repositorio ni la gestión de información sensible».
+  checkedAt: '2026-07-26'
 ---
-
 Algunos clientes de Codex admiten **memoria (Memory)**: conservar preferencias o hechos que confirmaste en varios turnos para sesiones posteriores. Complementa `AGENTS.md` y la configuración del proyecto, pero **no** sustituye las normas de equipo versionadas.
 
 ## Contenido
@@ -72,7 +76,7 @@ Aunque un cliente admita memoria, no deberías dejarle guardar a largo plazo:
 
 | Mecanismo | Quién lo ve | Cómo cambia |
 |---|---|---|
-| Prompt de una sola vez | Tarea actual | Tú escribes |
+| Prompt de una sola vez | tarea actual | Tú escribes |
 | Memoria | Suele ser solo tu cuenta/workspace | Confirmación en el chat o gestión en ajustes |
 | `AGENTS.md` | Todos los colaboradores del repositorio | Git PR |
 | Configuración del proyecto | Según la capa de configuración | Archivos + política gestionada |
@@ -85,9 +89,9 @@ La memoria se vuelve confusa cuando mezclas información con distinta duración 
 |---|---|
 | Preferencia personal de explicación | Memoria |
 | Regla compartida por el equipo | `AGENTS.md` o configuración de proyecto |
-| Convención de un directorio | Instrucciones de proyecto a nivel de directorio |
-| Objetivo temporal de una tarea | Prompt actual o issue |
-| Pasos reutilizables | Skill o plantilla de Prompt |
+| Convención de un directorio | Instrucciones de proyecto o archivo de reglas del directorio |
+| Objetivo temporal de una tarea | prompt actual o issue |
+| Pasos reutilizables | Skill o plantilla de prompt |
 | Chequeo automático | Hook |
 
 Pregunta: quién debe verlo, cuánto durará y si necesita code review. El consenso de equipo va al repositorio; los hábitos personales, a memoria.
@@ -125,9 +129,3 @@ La memoria encaja mejor con «preferencias personales que siempre hay que repeti
 
 ## Referencias
 - Documentación de memoria de OpenAI Codex (según versión)
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI (según versión)  
-**Base de verificación:** Contrastado con la explicación oficial actual del Help Center de OpenAI sobre ChatGPT Memory, y con los capítulos ya verificados de este manual sobre instrucciones de proyecto, preferencias personales y límites de seguridad; el contenido se limita al principio estable «la memoria sirve para preferencias personales y unos pocos hechos estables; no sustituye las reglas del repositorio ni la gestión de información sensible».  
-**Última verificación:** 2026-07-26

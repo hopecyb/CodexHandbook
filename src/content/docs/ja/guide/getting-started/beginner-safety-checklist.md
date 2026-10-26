@@ -3,12 +3,17 @@ title: 初心者向け安全チェックリスト
 description: 初回利用前に必ず見る安全確認項目。
 locale: ja
 source_locale: zh-CN
-source_revision: 75bfe4d
+source_revision: '75bfe4d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 120
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 本ハンドブックの現在検証済みの承認、サンドボックスとネットワーク、結果確認、取り消し復元各章を相互参照して再確認済み。本ページは初回利用前に確認すべき安全前提と低リスク実践のみを説明し、具体的な製品 UI 詳細に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 初回利用前に、自分にこう問いかけてください。「間違えたら、大きな代償を払うことになるか？」
@@ -46,10 +51,3 @@ sidebar:
 使いながら学べますが、このチェックリストの項目は開始前に一通り確認する方が安定します。
 
 Codex を初めて使うときは、まず失敗コストを下げると、その後が楽になります。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**検証根拠：** 本ハンドブックの現在検証済みの承認、サンドボックスとネットワーク、結果確認、取り消し復元各章を相互参照して再確認済み。本ページは初回利用前に確認すべき安全前提と低リスク実践のみを説明し、具体的な製品 UI 詳細に依存しない。  
-**最終検証：** 2026-07-26

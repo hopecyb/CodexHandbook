@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này là nguyên tắc chọn công cụ theo tác vụ: đọc/sửa nội dung dự án ưu tiên tệp, kiểm chứng lệnh ưu tiên terminal, tra thông tin thực tế công khai ưu tiên tìm kiếm, xem trang thật ưu tiên trình duyệt; khung này đã đối chiếu chéo với chương công cụ sổ tay hiện tại và định nghĩa loại công cụ thực tế."
+  checkedAt: "2026-07-26"
 title: Chọn công cụ
 description: Khi nào dùng terminal, tìm kiếm, trình duyệt hoặc công cụ khác.
 locale: vi
 source_locale: zh-CN
-source_revision: 9fdb366
+source_revision: "9fdb366"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -29,7 +34,7 @@ Cùng một mục tiêu, chọn sai công cụ chưa chắc thất bại hoàn t
 |---|---|
 | Sửa tệp trong kho | Công cụ tệp |
 | Chạy kiểm thử/build | Terminal |
-| Tra sự kiện công khai | Tìm kiếm web |
+| Tra thông tin thực tế công khai | Tìm kiếm web |
 | Xem trạng thái trang thật | Trình duyệt (nâng cao) |
 
 Trong Prompt viết rõ công cụ được phép và bị cấm, giảm tự ý lên mạng hoặc cài dependency lung tung.
@@ -38,7 +43,7 @@ Trong Prompt viết rõ công cụ được phép và bị cấm, giảm tự ý
 
 Nếu tạm chưa chắc, phán đoán theo thứ tự:
 
-1. Đang xử lý dự án cục bộ, hay tra sự kiện bên ngoài
+1. Đang xử lý dự án cục bộ, hay tra thông tin thực tế từ bên ngoài
 2. Tôi cần “thực thi hành động”, hay chỉ cần “nhìn thấy kết quả”
 3. Công cụ nào hoàn thành bước này với phạm vi nhỏ nhất
 
@@ -61,7 +66,7 @@ Công cụ càng mạnh thường cũng nghĩa là:
 
 ### 2. Terminal làm được mọi thứ, cũng chưa chắc nên ưu tiên terminal
 
-Nếu chỉ cần xác nhận trang trông thế nào, trình duyệt thường trực tiếp hơn terminal.  
+Nếu chỉ cần xác nhận trang trông thế nào, trình duyệt thường trực tiếp hơn terminal.
 Nếu chỉ cần tra một số phiên bản công khai, tìm kiếm web phù hợp hơn để nó chạy lệnh lung tung.
 
 ### 3. Không biết chọn thì sao?
@@ -70,7 +75,7 @@ Có thể phán đoán theo quy tắc:
 
 - **Đọc/sửa nội dung dự án** -> tệp
 - **Kiểm chứng lệnh hoặc build** -> terminal
-- **Tra sự kiện công khai** -> tìm kiếm
+- **Tra thông tin thực tế công khai** -> tìm kiếm
 - **Xem trình bày thật của trang** -> trình duyệt
 
 ### 4. Một tác vụ thường không chỉ dùng một công cụ
@@ -78,7 +83,7 @@ Có thể phán đoán theo quy tắc:
 Nhiều tác vụ thật vốn kết hợp, ví dụ:
 
 - Đọc tệp trước, rồi chạy build
-- Tìm sự kiện công khai trước, rồi quay lại viết lại tài liệu
+- Tìm thông tin thực tế công khai trước, rồi quay lại viết lại tài liệu
 - Dùng trình duyệt xem trang trước, rồi sửa trong mã
 
 Then chốt là mỗi bước cố dùng công cụ phù hợp hơn; không cần cố chấp “chỉ chọn một”.
@@ -92,10 +97,3 @@ Có thể bổ sung trong tác vụ:
 ```
 
 Chọn trước công cụ nhỏ nhất, sát tác vụ nhất; đừng ngay từ đầu dùng loại ảnh hưởng phạm vi lớn nhất.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này là nguyên tắc chọn công cụ theo tác vụ: đọc/sửa nội dung dự án ưu tiên tệp, kiểm chứng lệnh ưu tiên terminal, tra sự kiện công khai ưu tiên tìm kiếm, xem trang thật ưu tiên trình duyệt; khung này đã đối chiếu chéo với chương công cụ sổ tay hiện tại và định nghĩa loại công cụ thực tế.  
-**Kiểm chứng gần nhất:** 2026-07-26

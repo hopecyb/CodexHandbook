@@ -1,29 +1,34 @@
 ---
-title: "Avaliar fluxos de trabalho: acionamento, limites, formato e qualidade separadamente"
+title: 'Avaliar fluxos de trabalho: acionamento, limites, formato e qualidade separadamente'
 description: Avalie quatro tipos de Skill com 20 amostras projetadas e campos de registro separados, sem tratar checagens estruturais ou alguns sucessos como taxa de sucesso geral.
 contentType: guide
-audiences: [developer, creator, team]
+audiences:
+- developer
+- creator
+- team
 level: intermediate
-outputs: [json]
+outputs:
+- json
 editorialStatus: review
 verification:
   kind: run-tested
-  checkedAt: "2026-09-18"
+  checkedAt: '2026-09-18'
   summary: Sete testes do verificador de registros passaram. As 20 amostras continuam sendo cenários projetados, mas não executados; não há conclusões sobre desempenho de modelos, roteamento automático ou duração.
   environment: Python 3.12.11 / Darwin arm64; biblioteca padrão e entradas temporárias para o verificador; sem chamadas a modelos.
   evidence:
-    - label: Escopo dos testes do verificador
-      href: /downloads/workflow-evaluation/validation/record.md
+  - label: Escopo dos testes do verificador
+    href: /downloads/workflow-evaluation/validation/record.md
 assets:
-  - path: /downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip
-    purpose: Vinte amostras de avaliação, registro em branco, método de pontuação e verificador de registros
-    license: CC0-1.0
-    version: 1.0.0
+- path: /downloads/workflow-evaluation/workflow-evaluation-1.0.0.zip
+  purpose: Vinte amostras de avaliação, registro em branco, método de pontuação e verificador de registros
+  license: CC0-1.0
+  version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: 9ea3ecc
-translation_status: draft
+source_revision: "9ea3ecc"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Um fluxo pode escolher o Skill correto e ainda escrever um fato errado. Também pode produzir o resultado correto, mas executar uma ação não autorizada. Juntar tudo em uma única “taxa de sucesso” pode esconder o problema que realmente precisa de correção.
@@ -46,7 +51,7 @@ Para as quatro primeiras dimensões, use `pass`, `partial`, `fail`, `not-applica
 
 Há cinco amostras para cada uma das quatro categorias de Skill — revisão, escrita, pesquisa e monitoramento de links: acionamento positivo, tarefa sem relação, limite de autorização, formato de saída e cenário crítico de qualidade. As 20 foram projetadas pelo autor, e todos os registros atuais estão como `not-run`.
 
-Os cenários de qualidade examinam um erro preparado oculto por restauração da árvore de trabalho, um artigo que elimina conflito entre fontes, uma pesquisa que omite uma fonte inutilizável e um monitor que envia notificações duplicadas ou não se recupera. As entradas usam os [quatro pacotes Skill completos](/pt/skills/examples/); o kit de avaliação não os duplica. Registre a versão e o hash do pacote utilizado.
+Os cenários de qualidade examinam um erro nas alterações preparadas para commit, oculto pela restauração da árvore de trabalho, um artigo que elimina conflito entre fontes, uma pesquisa que omite uma fonte inutilizável e um monitor que envia notificações duplicadas ou não se recupera. As entradas usam os [quatro pacotes Skill completos](/pt/skills/examples/); o kit de avaliação não os duplica. Registre a versão e o hash do pacote utilizado.
 
 ## Como realizar uma avaliação
 
@@ -68,7 +73,7 @@ python3 scripts/check_records.py --records my-records.json --evidence-root my-ev
 python3 validation/test_records.py
 ```
 
-O modelo em branco informa 20 amostras não executadas e deixa `performance_claim` em null. Ele não transforma a planilha em uma taxa de sucesso.
+O modelo em branco informa 20 amostras não executadas e deixa `performance_claim` em null. Ele não transforma o modelo de registro em uma taxa de sucesso.
 
 O verificador confere se todas as amostras estão presentes, se as não executadas não têm resultados inventados, se o tipo das durações é válido, se os registros concluídos incluem notas e arquivos de evidência e se os caminhos permanecem no escopo permitido. Ele não pode determinar se os logs são autênticos, as notas são justas ou o resultado está semanticamente correto. Registros temporários usados em testes são fixtures do verificador, não observações de modelos.
 

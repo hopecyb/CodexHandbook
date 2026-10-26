@@ -5,10 +5,15 @@ sidebar:
   order: 16
 locale: ko
 source_locale: zh-CN
-source_revision: d2baf42
+source_revision: 'd2baf42'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 컨텍스트 층위와 읽기 경로만 설명합니다. 사이트 내 링크와 개념 서술을 재검토했으며, 본문은 제품 버전·가격·UI 등 변동하기 쉬운 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 컨텍스트는 모델이 「지금 효과적으로 쓸 수 있는 정보」입니다. 컨텍스트를 못 다루면, 아무리 좋은 프롬프트도 노이즈에 묻힙니다.
@@ -47,10 +52,3 @@ reviewed_at: 2026-08-26
 - [민감 컨텍스트](/ko/guide/context/sensitive-context/)
 
 이 장이 반복해서 강조하는 것은: 컨텍스트는 “이번에 실제로 본 것”에 달려 있다는 점입니다. 알아야 한다고 생각해도 이번에 제공하지 않았다면 컨텍스트가 아닙니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 컨텍스트 층위와 읽기 경로만 설명합니다. 사이트 내 링크와 개념 서술을 재검토했으며, 본문은 제품 버전·가격·UI 등 변동하기 쉬운 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

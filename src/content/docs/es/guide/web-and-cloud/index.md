@@ -1,13 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: "Web y Cloud: resumen"
 description: Del repositorio y el entorno reproducible a la revisión y el Pull Request en tareas remotas.
 locale: es
 source_locale: zh-CN
-source_revision: 86fa0ac
-translation_status: draft
+source_revision: '86fa0ac'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 13
+reviewed_at: 2026-10-25
 ---
 
 Codex Cloud ejecuta tareas de programación en un entorno aislado en la nube. Sirve para trabajos largos en segundo plano, intentos paralelos y tareas iniciadas desde GitHub, GitLab (Beta), Linear o Slack. No controla tu ordenador a distancia ni puede ver automáticamente archivos locales que todavía no hayas enviado al repositorio.

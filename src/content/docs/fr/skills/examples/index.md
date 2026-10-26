@@ -8,9 +8,10 @@ title: "Exemples de Skills"
 description: "Accès à quatre exemples de Skills : rédaction, revue, recherche et automatisation."
 locale: fr
 source_locale: zh-CN
-source_revision: 490db95
-translation_status: draft
+source_revision: "490db95"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Vérifiez l’état du matériel avant de choisir un exemple. Les paquets complets comprennent des entrées, des références et des scripts de validation. Un squelette demande encore des ressources et des contrôles réels ; il ne constitue pas, à lui seul, un processus vérifié.

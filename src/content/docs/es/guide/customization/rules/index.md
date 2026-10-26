@@ -3,13 +3,17 @@ title: Reglas
 description: Página de introducción a allow/deny, reglas de comandos y política de equipo — primero aclara qué hay que bloquear y qué hay que recordar.
 locale: es
 source_locale: zh-CN
-source_revision: 9ac6185
+source_revision: "9ac6185"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / Cloud
+  basis: Contrastado con la estructura actual del subcapítulo rules de este repositorio y sus enlaces de entrada; esta página solo navega por grupos allow/deny, reglas de comandos y reglas de equipo, sin declarar por sí sola implementaciones concretas de reglas ni comportamientos de bloqueo por defecto.
+  checkedAt: '2026-07-26'
 ---
-
-El grupo de reglas es el que más fácil confunden los principiantes con «escribirle a Codex unas cuantas recordatorios más».
+El grupo de reglas es el que más fácil confunden los principiantes con «escribirle a Codex unos cuantos recordatorios más».
 
 Es más preciso entenderlo así: las reglas resuelven «qué acciones se permiten por defecto, cuáles hay que bloquear y cuáles deben seguir un estándar de equipo unificado».
 
@@ -26,10 +30,3 @@ Es más preciso entenderlo así: las reglas resuelven «qué acciones se permite
 - Cómo garantizar en el equipo el mismo límite ante riesgos del mismo tipo
 
 Las reglas existen para dejar el límite cerrado y que el sistema lo ejecute.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / Cloud  
-**Base de verificación:** Contrastado con la estructura actual del subcapítulo rules de este repositorio y sus enlaces de entrada; esta página solo navega por grupos allow/deny, reglas de comandos y reglas de equipo, sin declarar por sí sola implementaciones concretas de reglas ni comportamientos de bloqueo por defecto.  
-**Última verificación:** 2026-07-26

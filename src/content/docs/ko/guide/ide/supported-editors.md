@@ -3,11 +3,17 @@ title: 지원되는 편집기
 description: VS Code 호환 확장, Xcode 통합, JetBrains 통합을 구분합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 7b82896
-translation_status: draft
+source_revision: '7b82896'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 현재 공식 IDE 페이지와 대조하여 VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, JetBrains IDEs의 구체적인 접근 방식을 확인했습니다. 각 통합의 기능이 완전히 같다고 가정하지 않습니다.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 현재 Codex는 여러 방식으로 주요 편집기에 연결됩니다. VS Code 계열은 Codex 확장을 사용하고, Xcode와 JetBrains IDE는 각각의 통합 진입점을 사용합니다.

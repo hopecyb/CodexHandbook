@@ -3,10 +3,15 @@ title: Skill のセキュリティとバージョン
 description: インストール元、権限境界、アップグレードとロールバック——チーム Skill をガバナンス可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: "a3c81ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: OpenAI Help《Skills in ChatGPT》は Skill に instructions、supporting files、code を含め得ると確認。アップロード前後もユーザーがソースとリスクを審査する必要がある。本ページのガバナンス助言はその原則と一致。
+  checkedAt: '2026-07-26'
 ---
 
 Skill は単なるプロンプトテンプレートではありません。
@@ -56,7 +61,7 @@ Skill セキュリティは「誰かが一元管理」だけに頼れず、利�
 ## インストール原則
 
 1. **ソース**：公式マーケットプレイス、社内 Git を優先。匿名 gist は慎重に
-2. **閲読**：インストール前に `SKILL.md` とスクリプトを開き、不自然な権限要求を確認
+2. **内容の確認**：インストール前に `SKILL.md` とスクリプトを開き、不自然な権限要求を確認
 3. **分離**：顧客プロジェクトと個人実験 Skill をディレクトリ分け
 4. **最小利用**：10 個積むより 1 個で解決
 
@@ -79,7 +84,7 @@ Skill セキュリティは「誰かが一元管理」だけに頼れず、利�
 | 実践 | 説明 |
 |---|---|
 | バージョン固定 | チーム文書に Skill 名 + commit/tag を記録 |
-| 変更レビュー | Skill 更新は依存バンプ同様に PR |
+| 変更レビュー | Skill 更新は依存関係の更新と同様に PR |
 | changelog | チーム Skill セットのリリースノートを維持 |
 | ロールバック | 前版を保持。障害時に迅速切替 |
 
@@ -87,7 +92,7 @@ Plugin は Skill をバンドルして統一配布可能：[Plugins 概要](/ja/
 
 ## チームの習慣
 
-Skill が長期に多人で使われるなら「誰かが DM でパスを送った」ままにしない。  
+Skill が長期にわたり複数人で使われるなら「誰かが DM でパスを送った」ままにしない。
 より適切：
 
 - 固定ソース
@@ -115,9 +120,3 @@ Skill が長期に多人で使われるなら「誰かが DM でパスを送っ�
 
 ## 参考
 - OpenAI Codex Skills セキュリティガイダンス
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Help《Skills in ChatGPT》は Skill に instructions、supporting files、code を含め得ると確認。アップロード前後もユーザーがソースとリスクを審査する必要がある。本ページのガバナンス助言はその原則と一致。

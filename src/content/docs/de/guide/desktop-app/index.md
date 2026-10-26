@@ -3,12 +3,18 @@ title: Desktop-App
 description: Installation, Oberfläche und tägliche Workflows der Desktop-App.
 locale: de
 source_locale: zh-CN
-source_revision: d1a9007
+source_revision: "d1a9007"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "App"
+  basis: Die aktuellen OpenAI-Help-Center-Artikel «Moving to the new ChatGPT desktop app» und «ChatGPT Work and Codex» stellen klar, dass die Desktop-Anwendung Chat/Work und Codex enthält und Codex eine
+    eigene Ansicht behält; diese Seite dient nur als Kapitelnavigation der Desktop-App und fokussiert die drei Grundaktionen Aufgabe eingeben, Änderungen sehen und freigeben.
+  checkedAt: '2026-07-26'
 ---
 
 Die Desktop-App ist der Standardeinstieg für Einsteiger: Projekte, Aufgaben, Diffs und Freigaben werden sichtbar.
@@ -27,7 +33,7 @@ Sie ist mehr als „nur chatten“: Projekte, Änderungen, Freigaben und Überpr
 
 ## Diese drei Dinge zuerst erkennen
 
-Du musst nicht alle Funktionen auf einmal lernen.  
+Du musst nicht alle Funktionen auf einmal lernen.
 Erkenne zuerst diese drei Kernaktionen:
 
 1. Wo du eine Aufgabe eingibst
@@ -69,7 +75,7 @@ Beim ersten Einsatz der Desktop-App kannst du so vorgehen:
 3. Eine kleine Aufgabe starten
 4. Die Änderungen ansehen
 5. Freigeben und Ablehnen lernen
-6. Danach fortgeschrittene Fähigkeiten wie parallele Agenten, Arbeitsbäume und Cloud-Aufgaben
+6. Danach fortgeschrittene Fähigkeiten wie parallele Agenten, Worktrees und Cloud-Aufgaben
 
 Das ist meist entspannter, als sofort alle Funktionen zu studieren.
 
@@ -78,7 +84,7 @@ Das ist meist entspannter, als sofort alle Funktionen zu studieren.
 - [Installation und Oberfläche](/de/guide/desktop-app/installation-and-interface/)
 - [Projekte und Aufgaben](/de/guide/desktop-app/projects-and-tasks/)
 - [Parallele Agenten](/de/guide/desktop-app/parallel-agents/)
-- [Arbeitsbäume](/de/guide/desktop-app/worktrees/)
+- [Worktrees](/de/guide/desktop-app/worktrees/)
 - [Diff, Kommentare und Überprüfung](/de/guide/desktop-app/diffs-comments-and-review/)
 - [Integriertes Terminal](/de/guide/desktop-app/integrated-terminal/)
 - [Lokale und Cloud-Aufgaben](/de/guide/desktop-app/local-and-cloud-tasks/)
@@ -89,10 +95,3 @@ Das ist meist entspannter, als sofort alle Funktionen zu studieren.
 Einstieg: [Desktop-App installieren](/de/guide/getting-started/install-desktop-app/)
 
 Die Desktop-App eignet sich gut, um die Grundzusammenarbeit mit Codex zuerst durchzuspielen — CLI und fortgeschrittenere Workflows können später folgen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App  
-**Prüfgrundlage:** Die aktuellen OpenAI-Help-Center-Artikel «Moving to the new ChatGPT desktop app» und «ChatGPT Work and Codex» stellen klar, dass die Desktop-Anwendung Chat/Work und Codex enthält und Codex eine eigene Ansicht behält; diese Seite dient nur als Kapitelnavigation der Desktop-App und fokussiert die drei Grundaktionen Aufgabe eingeben, Änderungen sehen und freigeben.  
-**Zuletzt geprüft:** 2026-07-26

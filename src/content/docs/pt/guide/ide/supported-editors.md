@@ -1,18 +1,19 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "IDE"
-  basis: "Conferido com a página oficial atual do IDE para confirmar os pontos de acesso do VS Code, Cursor, Windsurf, VS Code Insiders, Xcode e IDE da JetBrains, sem pressupor que todas as integrações têm funções idênticas."
-  checkedAt: "2026-08-26"
+  status: verified
+  products: IDE
+  basis: Conferido com a página oficial atual do IDE para confirmar os pontos de acesso do VS Code, Cursor, Windsurf, VS Code Insiders, Xcode e IDE da JetBrains, sem pressupor que todas as integrações têm funções idênticas.
+  checkedAt: '2026-08-26'
 title: Editores suportados
 description: Distinguir a extensão compatível com VS Code das integrações do Xcode e da JetBrains.
 locale: pt
 source_locale: zh-CN
-source_revision: 7b82896
-translation_status: draft
-translated_at: "2026-09-20"
+source_revision: "7b82896"
+translation_status: reviewed
+translated_at: '2026-09-20'
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 Atualmente, o Codex chega aos principais editores por vias diferentes: os editores da família VS Code usam a extensão Codex, enquanto o Xcode e os IDE da JetBrains usam as suas próprias integrações.
@@ -56,4 +57,4 @@ No fim, apresente o diff e o comando de teste. Não atualize dependências.
 
 Prefira a [Codex CLI](/pt/guide/cli/) ou a [aplicação de ambiente de trabalho](/pt/guide/desktop-app/). Não force a instalação do pacote da extensão VS Code num editor incompatível nem presuma que uma integração de terceiros é uma função oficial da OpenAI.
 
-Os passos de instalação estão em [Instalar a integração no IDE](/pt/guide/getting-started/install-ide-extension/), e a utilização do contexto está em [Contexto do editor](/pt/guide/ide/editor-context/).
+Os passos de instalação estão em [Instalar a integração no IDE](/pt/guide/getting-started/install-ide-extension/), e a utilização do contexto está em [contexto do editor](/pt/guide/ide/editor-context/).

@@ -1,34 +1,35 @@
 ---
-title: Lộ trình người mới
-description: Dùng cùng một bộ tài liệu tổng hợp để hoàn thành thông báo, rà soát và khôi phục; cả năm bước đều có đầu vào và điều kiện hoàn thành.
-contentType: path
+title: "Lộ trình người mới"
+description: "Dùng cùng một bộ tài liệu giả lập để hoàn thành thông báo, rà soát và khôi phục; cả năm bước đều có đầu vào và điều kiện hoàn thành."
+contentType: "path"
 audiences:
-- beginner
-level: beginner
-editorialStatus: review
+  - "beginner"
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 40
 prev: false
 next:
-  link: /vi/guide/learning-paths/beginner/01-talk-to-codex/
-  label: Tải tài liệu và bắt đầu bước đầu tiên
+  link: "/vi/guide/learning-paths/beginner/01-talk-to-codex/"
+  label: "Tải tài liệu và bắt đầu bước đầu tiên"
 verification:
-  kind: editorial
-  checkedAt: '2026-09-18'
-  summary: Sáu thao tác tệp trong thư mục tạm đã được kiểm tra thành công; đầu ra của mô hình, thời gian người đọc và khả năng tự hoàn thành chưa được thử nghiệm.
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Sáu thao tác tệp trong thư mục tạm đã được kiểm tra thành công; đầu ra của mô hình, thời gian người đọc và khả năng tự hoàn thành chưa được thử nghiệm."
   evidence:
-  - label: Biên bản xác minh thao tác tệp
-    href: /downloads/first-project/validation/record.json
+    - label: "Biên bản xác minh thao tác tệp"
+      href: "/downloads/first-project/validation/record.json"
 assets:
-- path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: Ba tệp ban đầu, bản tham khảo của tác giả, mẫu lỗi, hai mẫu điền và biên bản xác minh khôi phục
-  license: CC0-1.0
-  version: 1.0.0
-locale: vi
-source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
-translated_at: '2026-09-20'
+  - path: "/downloads/first-project/first-project-1.0.0.zip"
+    purpose: "Ba tệp ban đầu, bản tham khảo của tác giả, mẫu lỗi, hai mẫu điền và biên bản xác minh khôi phục"
+    license: "CC0-1.0"
+    version: "1.0.0"
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "1b7fbb3"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 Dùng một bộ tài liệu về sự kiện hư cấu để luyện từ đọc tệp đến bàn giao một thông báo có thể kiểm tra. Bạn không cần học Git, lập trình hay cài phụ thuộc trước.
@@ -47,7 +48,7 @@ Sau khi giải nén, sao chép starter thành thư mục work mới rồi mở w
 
 ## Trong bộ tài liệu có gì
 
-starter cung cấp các sự thật, bản nháp thông báo và một ghi chú tổng hợp không được sửa; references cung cấp bản tham khảo của tác giả và mẫu được cố ý làm sai; templates cung cấp mẫu rà soát và bàn giao; validation lưu script tái hiện tùy chọn và biên bản thao tác tệp thực tế.
+starter cung cấp các sự thật, bản nháp thông báo và một ghi chú giả lập không được sửa; references cung cấp bản tham khảo của tác giả và mẫu được cố ý làm sai; templates cung cấp mẫu rà soát và bàn giao; validation lưu script tái hiện tùy chọn và biên bản thao tác tệp thực tế.
 
 Mọi sự kiện và địa điểm đều hư cấu; tài liệu sử dụng CC0-1.0. Bài tập chỉ xử lý tệp cục bộ, không thực sự đăng ký, xuất bản hay gửi tin nhắn.
 

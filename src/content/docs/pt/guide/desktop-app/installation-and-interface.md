@@ -1,17 +1,18 @@
 ---
 title: Instalação e primeira utilização
-description: Conheça projetos, conversas, Codex e entradas de revisão na App de desktop do ChatGPT.
+description: Conheça projetos, conversas, Codex e acesso à revisão na App de desktop do ChatGPT.
 legacyVerification:
-  status: "verified"
-  products: "App"
-  checkedAt: "2026-08-26"
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 locale: pt
 source_locale: zh-CN
 source_revision: "080436d"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 Este capítulo destina-se a quem abre a App de desktop do ChatGPT pela primeira vez. O objetivo não é memorizar todos os botões, mas concluir uma **pequena tarefa que possa ser revista e verificada**.

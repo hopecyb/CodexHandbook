@@ -1,12 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (version and permission dependent)"
+  basis: "OpenAI Help Center currently documents built-in browser in the desktop App—open pages in Work or Codex, switch tabs, download files, annotation mode, per-site approval. This page focuses on use cases, distinction from search/Computer Use, and security boundaries."
+  checkedAt: "2026-07-26"
 title: Browser tool
 description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: '802f889'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+sidebar:
+  order: 40
 ---
 
 The **browser tool** lets the Agent access real pages in a controlled environment: read the DOM, capture screenshots, sometimes perform simple interactions. Good for frontend acceptance, doc link checks, and design comparison—not a substitute for security audits or casual production admin use.
@@ -87,7 +94,7 @@ The browser tool usually beats pure text analysis.
 ## Example prompt
 
 ```text
-Only visit http://localhost:4321/guide/foundations/local-vs-cloud/ and check above-the-fold layout and hero image appearance.
+Only visit http://localhost:4321/en/guide/foundations/local-vs-cloud/ and check above-the-fold layout and hero image appearance.
 Do not access the public internet or submit any forms.
 If you find issues, provide screenshot evidence and fix suggestions.
 ```
@@ -112,10 +119,3 @@ Approvals: [permissions and approvals](/en/guide/foundations/permissions-and-app
 - [ ] Access scope fixed in prompt
 - [ ] Key visual issues have screenshots or clear text
 - [ ] Consistent with unit/E2E results—or documented known gaps
-
----
-
-**Status:** verified  
-**Applicable products:** App / Codex (version and permission dependent)  
-**Verification basis:** OpenAI Help Center currently documents built-in browser in the desktop App—open pages in Work or Codex, switch tabs, download files, annotation mode, per-site approval. This page focuses on use cases, distinction from search/Computer Use, and security boundaries.  
-**Last verified:** 2026-07-26

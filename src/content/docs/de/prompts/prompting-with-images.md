@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Struktur, Szenarien und Hinweise dieser Seite wurden anhand offizieller OpenAI-Materialien zu Bildeingabe und Datei-Upload geprüft; keine inoffiziellen Szenarioquellen und keine versionsabhängigen UI-Details."
+  checkedAt: "2026-07-26"
 title: Prompts mit Bildern
-description: 'Wie du bei Screenshots, Designs und Whiteboards fragen stellst, damit Ergebnisse ausführbar werden.'
+description: 'Wie du bei Screenshots, Designs und Whiteboards Fragen stellst, damit Ergebnisse ausführbar werden.'
 locale: de
 source_locale: zh-CN
-source_revision: 953a69b
+source_revision: "953a69b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Viele „Bild → Aktion“-Aufgaben scheitern nicht, weil das Modell nichts sieht — sondern weil nur das Bild da ist und **nicht gesagt wird, worauf es achten soll**.
@@ -105,7 +110,7 @@ Vergleiche Layout, Texthierarchie, Abstände und Interaktionshinweise; gib Fix-P
 
 ## Welche Textinfos die Treffsicherheit erhöhen
 
-Bilder fehlen oft Laufzeitkontext — hilfreich sind:
+Bildern fehlt oft der Laufzeitkontext — hilfreich sind:
 
 - Gerät oder Browser
 - Zustand inkl. hover / focus / Fehlerzustand?
@@ -151,7 +156,7 @@ Codex leitet dann alles aus dem Bild ab — auch Details, die dir egal sind, wer
 
 ### Nur Ausschnitt, kein Kontext
 
-Lokale Screenshots zeigen den Punkt, aber nicht Seitenstatus, Responsive oder Overlay-Kontext.
+Bildausschnitte zeigen die Problemstelle, aber nicht Seitenstatus, Responsive oder Overlay-Kontext.
 
 ### Design = vollständige Spec
 
@@ -186,9 +191,3 @@ Das ist klarer als „hilf mir fixen“ und führt leichter weiter.
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / Cloud  
-**Prüfgrundlage:** Struktur, Szenarien und Hinweise dieser Seite wurden anhand offizieller OpenAI-Materialien zu Bildeingabe und Datei-Upload geprüft; keine inoffiziellen Szenarioquellen und keine versionsabhängigen UI-Details.  
-**Zuletzt geprüft:** 2026-07-26

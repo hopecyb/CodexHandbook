@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this handbook's verified brainstorm, EPXV, test-driven, and `AGENTS.md` chapters; content is limited to the stable pattern of writing acceptance-ready specs first, then executing to spec."
+  checkedAt: "2026-07-26"
 title: Specification-driven work
 description: Write an acceptance-ready spec first, then have Codex implement to plan—good for clear delivery tasks.
 locale: en
 source_locale: zh-CN
-source_revision: 70fd8a4
+source_revision: '70fd8a4'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 **Specification-driven** work means preparing a short spec before large file changes—goals, scope, interfaces, and acceptance criteria. It can follow [Brainstorm before building](/en/cases/workflows/brainstorm-before-building/), or go straight into [EPXV](/en/cases/workflows/explore-plan-execute-verify/) with already-clarified requirements.
@@ -78,10 +83,3 @@ Acceptance items in the spec should be **testable** where possible; write tests 
 - [ ] At least 3 checkable acceptance criteria
 - [ ] Human or written confirmation before execution
 - [ ] Changes synced back to the spec file
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified brainstorm, EPXV, test-driven, and `AGENTS.md` chapters; content is limited to the stable pattern of writing acceptance-ready specs first, then executing to spec.

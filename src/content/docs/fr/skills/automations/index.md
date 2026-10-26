@@ -7,9 +7,10 @@ title: Tâches planifiées
 description: Répéter à une heure prévue, dans ChatGPT, une tâche déjà vérifiée.
 locale: fr
 source_locale: zh-CN
-source_revision: 759c38e
-translation_status: draft
+source_revision: "759c38e"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Une Scheduled task (tâche planifiée) permet à ChatGPT de répéter un travail en arrière-plan selon un calendrier. Elle convient aux rapports périodiques, aux suivis continus et à l’entretien récurrent. Ce n’est pas un système générique de webhooks, d’événements de dépôt ou d’automatisation CI.

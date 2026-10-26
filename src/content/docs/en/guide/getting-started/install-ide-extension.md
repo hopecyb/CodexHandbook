@@ -3,12 +3,17 @@ title: Install an IDE integration
 description: Enable Codex in VS Code-compatible editors, Xcode, or a JetBrains IDE.
 locale: en
 source_locale: zh-CN
-source_revision: e8f88ec
+source_revision: 'e8f88ec'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
+  checkedAt: '2026-08-26'
 ---
 
 Current IDE support has more than one installation path:
@@ -41,7 +46,7 @@ Open a source file, select a short section, and ask:
 
 ```text
 Explain only the inputs, outputs, and failure paths of the current selection.
-Do not edit files. Cite the relevant symbol names.
+Do not edit files. Cite the relevant function names.
 ```
 
 If the answer is unrelated to the selection, check:
@@ -52,13 +57,3 @@ If the answer is unrelated to the selection, check:
 - whether another AI extension conflicts with the integration or shortcuts.
 
 Continue with the [local IDE task workflow](/en/guide/ide/local-task-workflow/). See [Supported editors](/en/guide/ide/supported-editors/) for the complete support matrix.
-
----
-
-**Status:** verified
-
-**Applies to:** IDE
-
-**Verification basis:** The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
-
-**Last verified:** 2026-08-26

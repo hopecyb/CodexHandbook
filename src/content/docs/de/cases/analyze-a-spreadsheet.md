@@ -20,7 +20,7 @@ verification:
       href: /downloads/sales-weekly-report/record.md
 assets:
   - path: /downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip
-    purpose: Vollständige Übungsmaterialien, Referenzlösung und Prüfscripte
+    purpose: Vollständige Übungsmaterialien, Referenzlösung und Prüfskripte
     license: CC0-1.0
     version: 1.0.0
 prev:
@@ -31,9 +31,10 @@ next:
   label: Ergebnisse überprüfen lernen
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: "68729f6"
+reviewed_at: 2026-10-26
 ---
 
 In dieser Übung erstellst du einen wöchentlichen Verkaufsbericht, eine regionale Zusammenfassung, eine Produkt-Rangliste und ein zeilenweises Bereinigungsprotokoll. Die Eingaben sind eigens erstellte synthetische Daten; echte Kundendaten sind nicht nötig.
@@ -87,7 +88,7 @@ Verwende anschließend `prompts/02-report.md` aus dem Paket und schreibe die Erg
 | `top-products.csv` | Produkte nach aktuellem Nettobetrag absteigend, inklusive Erstattungen |
 | `row-ledger.csv` | Zeilennummer jedes Rohdatensatzes, Aufnahmeentscheidung, Woche und Betrag |
 
-Eingaben, `solution` und `validation` bleiben unverändert. Feldnamen und Tabellenreihenfolge folgen dem Datenwörterbuch, damit die unabhängige Prüfung jeden Punkt vergleichen kann. Im Südwesten ist der Vorwochenwert null; trage N/A für die Änderung ein, nicht 0 % oder unendliches Wachstum.
+Eingaben, `solution` und `validation` bleiben unverändert. Feldnamen und Tabellenreihenfolge folgen dem Datenwörterbuch, damit die unabhängige Prüfung jeden Punkt vergleichen kann. Im Südwesten ist der Vorwochenwert null; trage N/A für die prozentuale Änderung ein, nicht 0 % oder unendliches Wachstum.
 
 ## 3. Unabhängig prüfen statt nur „Stimmt das?“ zu fragen
 

@@ -3,10 +3,15 @@ title: 長時間タスクのプロンプト
 description: フェーズ分割、チェックポイント、引き継ぎ情報。
 locale: ja
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: "450ed9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  basis: "本ページは長時間タスクの分割と引き継ぎ手法のみを説明。サイト内リンクとフェーズ例を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  checkedAt: '2026-07-26'
 ---
 
 長時間タスクでよくある失敗は次のとおりです。
@@ -79,10 +84,3 @@ reviewed_at: 2026-08-26
 各段で止まって確認できるようにするのが適切です。
 
 関連：[進捗と誘導](/ja/guide/agent-work/progress-and-steering/) · [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは長時間タスクの分割と引き継ぎ手法のみを説明。サイト内リンクとフェーズ例を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

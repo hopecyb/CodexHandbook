@@ -3,10 +3,15 @@ title: Définir les contraintes
 description: Limiter le périmètre modifiable, le style et les interdictions.
 locale: fr
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: "0ca4700"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page traite uniquement contraintes et limites ; liens internes revus ; pas de faits volatils produit.
+  checkedAt: '2026-07-26'
 ---
 
 Beaucoup d'échecs ne viennent pas d'un objectif totalement absent, mais de **limites floues**.
@@ -53,7 +58,7 @@ Objectif : clarifier le texte du Hero de la page d'accueil
 Contraintes : pas de changement de mise en page, pas de nouvelle dépendance, pas de modification du comportement du CTA
 ```
 
-Sans contraintes, « plus clair » devient souvent un redesign plus large.
+Sans contraintes, « plus clair » devient souvent un refonte plus large.
 
 ## Idées reçues
 
@@ -72,7 +77,7 @@ Trop vague. Mieux :
 
 ### 3. Les contraintes ne servent qu'aux tâches à risque
 
-Les petites tâches aussi : une phrase vague invite à élargir le scope.
+Les petites tâches aussi : une phrase vague invite à élargir le périmètre.
 
 ## Squelette utile
 
@@ -93,11 +98,4 @@ Contraintes :
 
 L'objectif dit quoi faire ; les contraintes disent où s'arrêter.
 
-Écrivez les limites de permission avec les contraintes pour limiter les dépassements « en passant ». Voir [Définir le terminé](/fr/prompts/define-done/) et [Permissions et bac à sable](/fr/guide/permissions-and-sandbox/).
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Cette page traite uniquement contraintes et limites ; liens internes revus ; pas de faits volatils produit.
+Écrivez les limites de permission avec les contraintes pour limiter les dépassements « en passant ». Voir [Définir les critères de réussite](/fr/prompts/define-done/) et [Permissions et bac à sable](/fr/guide/permissions-and-sandbox/).

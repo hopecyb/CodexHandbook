@@ -3,10 +3,18 @@ title: "사례: 경쟁 제품 기능 비교표"
 description: 출처가 있는 리서치와 표 산출물—비개발 독자도 재사용할 수 있는 워크플로입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: 'b74008b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI
+  basis: 이 핸드북에서 이미 검증된 출처가 있는 리서치, 웹 검색, 출처 검증, 버전 정책 장과 교차 확인했습니다. 페이지 내용은 “출처가 있는 경쟁 제품 비교표 산출”의 안정적인 리서치 사례 구조로 한정되며, 구체 가격이나 제품 버전을 고정하지 않습니다.
+  checkedAt: '2026-07-26'
+caseCategory: creation
+directoryOrder: 85
+contentType: case
 ---
 
 ## 메타 정보
@@ -30,7 +38,7 @@ reviewed_at: 2026-08-26
 
 ## 2. 준비
 
-- 비교 차원을 명확히(미리 프롬프트 또는 `@brief.md`에 작성)
+- 비교 항목을 명확히(미리 프롬프트 또는 `@brief.md`에 작성)
 - [웹 검색](/ko/guide/tools/web-search/) 활성화(제품이 지원하는 경우)
 
 ## 3. 워크플로
@@ -39,7 +47,7 @@ reviewed_at: 2026-08-26
 
 ```text
 A/B/C 세 곳의 「팀 협업」기능을 비교하세요:
-각 차원에 1–2문장 설명 + 출처 URL을 주세요.
+각 항목에 1–2문장 설명 + 출처 URL을 주세요.
 공식 문서를 블로그보다 우선하세요.
 가격을 검증할 수 없으면 「확인 필요」로 표시하세요.
 markdown 표를 출력하고, 저장소의 다른 파일은 수정하지 마세요.
@@ -52,19 +60,12 @@ markdown 표를 출력하고, 저장소의 다른 파일은 수정하지 마세�
 - 출처 충돌: 두 설을 나란히 제시하고 억지로 통일하지 않음
 - 컨텍스트가 너무 김: 「먼저 A vs B, 이어서 C 추가」로 쪼갬
 
-## 5. 정착
+## 5. 경험 정리
 
-- 비교표 템플릿을 팀 약속 템플릿 디렉터리 또는 지식 베이스에 정착
+- 비교표 템플릿을 팀에서 정한 템플릿 디렉터리 또는 지식 베이스에 저장
 - Skill로 전환 가능: `source-backed-research`
 
 ## 6. 관련 장
 
 - [산출물 우선](/ko/cases/workflows/artifact-first-work/)
 - [출처 검증](/ko/guide/quality/validate-sources/)
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI  
-**검증 근거:** 이 핸드북에서 이미 검증된 출처가 있는 리서치, 웹 검색, 출처 검증, 버전 정책 장과 교차 확인했습니다. 페이지 내용은 “출처가 있는 경쟁 제품 비교표 산출”의 안정적인 리서치 사례 구조로 한정되며, 구체 가격이나 제품 버전을 고정하지 않습니다.  
-**최근 검증:** 2026-07-26

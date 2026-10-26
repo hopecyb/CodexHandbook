@@ -8,10 +8,10 @@ title: templates/ directory
 description: Provide output templates and report skeletons inside a Skill.
 locale: en
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: '82a9e01'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 `templates/` is not just for saving formatting time. Its practical job is stable Skill output without improvising every run.

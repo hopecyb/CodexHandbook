@@ -8,12 +8,12 @@ legacyVerification:
 locale: es
 source_locale: zh-CN
 source_revision: "080436d"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
+reviewed_at: 2026-10-25
 ---
-
 Este capítulo está dirigido a quienes abren por primera vez la aplicación de escritorio de ChatGPT. El objetivo no es memorizar todos los botones, sino completar **una tarea pequeña que se pueda revisar y verificar**.
 
 Para instalar la aplicación e iniciar sesión, consulta [Instalar la aplicación de escritorio](/es/guide/getting-started/install-desktop-app/). La versión oficial está disponible actualmente para macOS, Windows y Linux. Tras iniciar sesión, puedes abrir una conversación, crear un proyecto o abrir una carpeta local.

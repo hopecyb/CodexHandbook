@@ -8,10 +8,10 @@ title: scripts/ und Tests
 description: Deterministische Skripte im Skill ergänzen und ihr Verhalten prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 900e6e4
+source_revision: "900e6e4"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Am Anfang landet oft alles in `SKILL.md`. Bei einfachen Abläufen okay — sobald ein Schritt **stabil, wiederholt und prüfbar** laufen muss, sind Skripte zuverlässiger als reine Prosa.
@@ -30,7 +30,7 @@ my-skill/
     └── run-checks.sh
 ```
 
-## Wann `scripts/` prüfen
+## Wann sich `scripts/` lohnt
 
 Wenn ein Schritt eines davon erfüllt:
 
@@ -65,14 +65,15 @@ Noch prüfen:
 
 Zu wenig.
 
-Skript testet eine Aktion;  
-der Skill muss „wann / wie aufrufen / erwartete Ausgabe“ prüfen.
+Skripttests prüfen eine einzelne Aktion.
+
+Beim Skill muss zusätzlich geprüft werden, wann und wie er das Skript aufruft und ob die Ausgabe den Erwartungen entspricht.
 
 ## Typische Prüf-Reihenfolge
 
 1. Skript allein
 2. Exit-Code und Ausgabe klar?
-3. Skill einmal den vollen Ablauf
+3. Den Skill einmal den vollständigen Ablauf ausführen lassen
 4. Noch einmal in realistischerer Umgebung
 
 So trennst du „Skript kaputt“ von „Skill-Integration falsch“.

@@ -1,21 +1,26 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica minimización de información sensible y principios de anonimización; conceptos, ejemplos de riesgo y recomendaciones de tratamiento se han revisado, y el cuerpo no depende de hechos volátiles de producto.
+  checkedAt: '2026-07-26'
 title: Contexto sensible
 description: Claves, privacidad y material que no se debe compartir.
 locale: es
 source_locale: zh-CN
-source_revision: a83db07
+source_revision: "a83db07"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 70
 ---
 
-Todo lo que no quieras que se vea, copie, reenvíe o quede a largo plazo en el registro de la Tarea, trátalo primero como información sensible.
+Todo lo que no quieras que se vea, copie, reenvíe o quede a largo plazo en el registro de la tarea, trátalo primero como información sensible.
 
 ## Por qué hay que juzgar primero
 
-Muchos problemas de seguridad no vienen de alguien que viola a propósito, sino de pensarse solo «primero resolvamos el problema».
+Muchos problemas de seguridad no vienen de alguien que incumple las normas a propósito, sino de pensar solo «primero resolvamos el problema».
 
 Por ejemplo:
 
@@ -35,10 +40,10 @@ Usa marcadores de posición: `YOUR_API_KEY`. Si ya se filtró, rota la clave seg
 
 ## Cómo juzgar si no estás seguro
 
-Si no sabes si un tramo cuenta como sensible, pregúntate primero dos cosas:
+Si no sabes si un fragmento contiene información sensible, pregúntate primero dos cosas:
 
 1. Si alguien no relacionado ve este contenido, ¿hay riesgo?
-2. Si este contenido se queda a largo plazo en el registro de la Tarea, ¿me deja inquieto?
+2. Si este contenido se queda a largo plazo en el registro de la tarea, ¿me deja inquieto?
 
 Si alguna respuesta es «sí», trátalo primero como información sensible.
 
@@ -50,7 +55,7 @@ Quien usa por primera vez una IA de tipo herramienta suele pensar por inercia:
 - «Solo me ayuda a mirarlo»
 - «Este archivo no se va a enviar de verdad»
 
-Pero en cuanto la información entra en el flujo de la Tarea, hay que tratarla como sensible. El control de seguridad conviene ponerlo antes.
+Pero en cuanto la información entra en el flujo de la tarea, hay que tratarla como sensible. El control de seguridad conviene ponerlo antes.
 
 ## Contenido que más se pasa por alto
 
@@ -111,10 +116,3 @@ Trátalo según el nivel de riesgo:
 3. Informa y remedia según el proceso de la organización
 
 Al resolver problemas, por defecto da solo «la información mínima necesaria para depurar»; si se puede anonimizar, anonimiza; si se puede usar un marcador de posición, úsalo.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica minimización de información sensible y principios de anonimización; conceptos, ejemplos de riesgo y recomendaciones de tratamiento se han revisado, y el cuerpo no depende de hechos volátiles de producto.  
-**Última verificación:** 2026-07-26

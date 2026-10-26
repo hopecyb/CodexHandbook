@@ -1,6 +1,6 @@
 ---
 title: "Muster für menschliche Genehmigungen"
-description: "Unterscheide Aufgabenbefugnis von Tool-Genehmigung; bereite ein prüfbares Ergebnis vor, bevor eine konkrete genehmigungspflichtige Aktion pausiert."
+description: "Unterscheide Aufgabenbefugnis von Tool-Genehmigung; bereite ein prüfbares Ergebnis vor, und halte vor einer konkreten Aktion an, für die noch eine Genehmigung fehlt."
 contentType: guide
 editorialStatus: review
 verification:
@@ -12,9 +12,10 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: de
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: "f60dbb5"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 Genehmigungen sollten sich auf eine konkrete Aktion und ihre Folgen beziehen. Die Aufgabenbefugnis beschreibt das Ziel des Nutzers; die Tool-Genehmigung entscheidet, ob eine Aktion in der aktuellen Umgebung ausgeführt werden darf. Schreiben, Befehle und Netzwerkzugriff erfordern nicht von sich aus jedes Mal eine Nachfrage. Maßgeblich sind erlaubter Umfang, Tool-Richtlinien und Sandbox gemeinsam. Siehe die [offizielle Erklärung](https://learn.chatgpt.com/docs/agent-approvals-security).
 
@@ -22,9 +23,9 @@ Genehmigungen sollten sich auf eine konkrete Aktion und ihre Folgen beziehen. Di
 
 | Form | Was weitergehen kann | Wann warten? |
 |---|---|---|
-| Nur lesende Analyse | Lesen, vergleichen und Vorschlag ausarbeiten | Keine Implementierungsänderung ohne Nutzerbefugnis |
+| Nur lesende Analyse | Lesen, vergleichen und Vorschlag ausarbeiten | Keine Implementierungsänderung, solange der Nutzer die Umsetzung nicht autorisiert hat |
 | Umsetzung im erlaubten Umfang | Angegebene Bereiche ändern, angemessen prüfen, prüfbares Ergebnis vorbereiten | Wesentliche Information fehlt, Umfang ändert sich oder neue unbefugte Aktion nötig |
-| Gesonderte Genehmigung der Schlussaktion | Entwürfe, Builds, Vorschauen und Rückkehrvorbereitung fertigstellen | Vor Veröffentlichung, Versand oder anderer ausdrücklich vorbehaltener Aktion |
+| Gesonderte Genehmigung der Schlussaktion | Entwürfe, Builds, Vorschauen und Vorbereitung einer Rücknahme fertigstellen | Vor Veröffentlichung, Versand oder anderer ausdrücklich vorbehaltener Aktion |
 
 Das sind Arbeitsabsprachen, keine Namen neuer Produktmodi. Eine klar erteilte und noch gültige Genehmigung wird nicht erneut eingeholt. Wenn eine verbindliche Richtlinie interaktive Freigabe fordert, gilt deren Mechanismus.
 

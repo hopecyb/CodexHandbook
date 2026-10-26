@@ -3,10 +3,15 @@ title: "Mode non interactif"
 description: Jobs par lot, scripts et pipelines — comprendre quelles tâches conviennent d'abord, puis les commandes et le design de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: 2d542c9
+source_revision: '2d542c9'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API / Cloud
+  basis: Recoupement avec la structure actuelle de la sous-section non interactif et les liens d'entrée dans ce dépôt ; cette page ne regroupe que « le mode non interactif convient aux scripts, batch et pipelines » sans promettre des flags de commande spécifiques.
+  checkedAt: '2026-07-26'
 ---
 
 Beaucoup entendent d'abord « mode non interactif » et pensent « Codex sans chat ».
@@ -27,10 +32,3 @@ Le mode non interactif sert à mettre Codex dans des scripts, CI ou jobs par lot
 - Rendre la sortie facile pour les scripts en aval
 
 Cela convient quand les scripts et pipelines ont besoin d'un handoff stable — pas d'un chat aller-retour.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / API / Cloud  
-**Base de vérification :** Recoupement avec la structure actuelle de la sous-section non interactif et les liens d'entrée dans ce dépôt ; cette page ne regroupe que « le mode non interactif convient aux scripts, batch et pipelines » sans promettre des flags de commande spécifiques.  
-**Dernière vérification :** 2026-07-26

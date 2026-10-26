@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích định vị cơ bản của Codex, tác vụ phù hợp và cách cộng tác; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không giữ giá trị mặc định sản phẩm chi tiết, dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Codex là gì
 description: Giải thích bằng ngôn ngữ đời thường Codex làm được gì, không làm được gì, và các lối vào chính.
 locale: vi
 source_locale: zh-CN
-source_revision: 0f376b6
+source_revision: "0f376b6"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 2
 ---
@@ -26,7 +31,7 @@ Nhiều người mới thấy Codex hay hiểu nó như «AI chat mạnh hơn m�
 | Thứ bạn thường dùng | Có thể hiểu như |
 |---|---|
 | Chatbot thông thường | Đưa lời khuyên, giải thích khái niệm, viết một đoạn văn |
-| Codex | Ngoài trả lời, còn có thể **đọc tệp, sửa tệp, chạy lệnh, tạo artifact** |
+| Codex | Ngoài trả lời, còn có thể **đọc tệp, sửa tệp, chạy lệnh, tạo sản phẩm đầu ra** |
 
 Công cụ chat thông thường chủ yếu dừng ở trả lời; Codex trong phạm vi bạn cho phép sẽ trực tiếp làm việc.
 
@@ -96,7 +101,7 @@ Ví dụ đầy đủ của quy trình này xem tại [Chạy tác vụ đầu t
 | Web / Cloud | Kết nối kho mã, môi trường đám mây và tác vụ dài |
 | Di động và từ xa | Giám sát, phê duyệt và theo dõi nhẹ |
 
-Bảng đối chiếu xem [So sánh tính năng](/vi/guide/reference/feature-comparison/). Quan hệ khái niệm xem [Bản đồ năng lực](/vi/guide/start-here/).
+Bảng đối chiếu xem [So sánh tính năng](/vi/guide/reference/feature-comparison/). Quan hệ khái niệm xem [Bản đồ năng lực](/vi/guide/start-here/codex-capability-map/).
 
 ## Xem tiếp
 
@@ -111,10 +116,3 @@ Các trang liên quan có thể xem tiếp:
 1. [Chọn client Codex](/vi/guide/choose-your-client/)
 2. [Thuật ngữ cho người mới](/vi/guide/start-here/terminology-for-beginners/)
 3. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích định vị cơ bản của Codex, tác vụ phù hợp và cách cộng tác; liên kết nội bộ và cách diễn đạt khái niệm đã được rà lại, và nội dung không giữ giá trị mặc định sản phẩm chi tiết, dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

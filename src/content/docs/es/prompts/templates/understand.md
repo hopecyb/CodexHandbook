@@ -8,10 +8,10 @@ title: Plantilla de comprensión
 description: Construir primero el mapa mental y luego cambiar.
 locale: es
 source_locale: zh-CN
-source_revision: 228971d
+source_revision: '228971d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
@@ -25,7 +25,7 @@ Esta plantilla encaja en tareas de «entender primero, decidir después».
 Objetivo: comprender 【tema/módulo/zona del repositorio】 para preparar 【implementación/cambio/revisión】.
 Contexto: 【tipo de proyecto, stack, issues relacionados】
 Entradas: 【@rutas de archivo, enlaces de documentación, capturas】
-Restricciones: solo análisis de lectura; no modificar ningún archivo; no ejecutar comandos destructivos.
+Restricciones: análisis de solo lectura; no modificar ningún archivo; no ejecutar comandos destructivos.
 Salida:
 1. Explica en 5–8 puntos los conceptos centrales o las responsabilidades del módulo
 2. Señala los 3 archivos/directorios más relacionados con el 【objetivo】 y por qué
@@ -35,7 +35,7 @@ Aceptación: con la salida puedo decidir el alcance de la siguiente tarea.
 
 ## Cuándo usarla
 
-- Acabas de tomar un repositorio
+- Acabas de hacerte cargo de un repositorio
 - Miras un módulo desconocido
 - Antes de cambiar, quieres mapear el alcance relacionado
 
@@ -51,7 +51,7 @@ También debe señalar:
 
 ### 2. En la fase de comprensión, más detalle no siempre es mejor
 
-Aclarar primero la línea principal importa más que excavarlo todo de golpe.
+Aclarar primero la línea principal importa más que examinar todos los detalles de golpe.
 
 El valor de esta plantilla es acotar primero el alcance de la siguiente tarea.
 

@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: "1b7fbb3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 가상의 행사 자료 한 묶음으로 파일 읽기부터 확인 가능한 안내문 전달까지 연습한다. Git이나 프로그래밍을 먼저 배우거나 의존성을 설치할 필요는 없다.

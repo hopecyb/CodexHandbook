@@ -25,9 +25,10 @@ next:
   label: Start organizing three sources
 locale: en
 source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
+source_revision: 'd1b46b1'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Use one group of sources to write an article, turn it into an editable presentation, then save task instructions you can reuse. Every step leaves files that let you check whether you finished.
@@ -73,7 +74,7 @@ Start with your completed article and fact table. Follow the [slide-deck case](/
 
 Copy the article and fact table into the slide task's input directory and say they are your versions. Do not cite your own article while assuming every conclusion in the reference draft still applies.
 
-Deliver an eight-slide PPTX, eight previews, slide-by-slide notes, and a validation record. To finish, it must open in the presentation software environment you recorded, key text must be editable, and you must check the Chinese text and limitations on every slide. Source conflicts must remain clear after compression.
+Deliver an eight-slide PPTX, eight previews, slide-by-slide notes, and a validation record. To finish, it must open in the presentation software environment you recorded, key text must be editable, and you must check Chinese text and layout boundaries on every slide. Source conflicts must remain clear after compression.
 
 If no PPTX tool is available, save the outline and record the missing capability. This step remains unfinished until you continue in an environment with the tool. Then proceed to reuse.
 

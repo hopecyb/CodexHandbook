@@ -9,12 +9,18 @@ sidebar:
   order: 5
 locale: pt
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: "2f7ff71"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Conferido com a estrutura atual dos percursos de aprendizagem, as entradas por perfil e o percurso passo a passo de principiantes. A página apenas organiza a leitura por perfil e não contém detalhes voláteis do comportamento do produto.
+  checkedAt: '2026-07-26'
+reviewed_at: '2026-10-26'
 ---
 
-Os percursos de aprendizagem **só organizam a ordem de leitura**; não repetem os artigos longos do manual do produto nem das guias de capacidades.
+Os percursos de aprendizagem **só organizam a ordem de leitura**; não repetem os artigos longos do manual do produto nem dos guias de capacidades.
 
 À primeira vista, este capítulo pode parecer mais uma camada de índice. Na prática, responde a duas perguntas: com que tipo de utilizador te identificas agora e em que ordem deves continuar a ler?
 
@@ -30,7 +36,7 @@ Este capítulo não acrescenta conhecimento novo sobre o produto; ajuda-te a evi
 
 ## Percurso de principiante com materiais fixos
 
-[Descarrega o mesmo conjunto de materiais para praticar um anúncio de evento](/downloads/first-project/first-project-1.0.0.zip) e conclui o anúncio, a revisão e o registo de recuperação em cinco passos. Não é preciso programar. Leitores independentes ainda não concluíram e validaram o percurso completo.
+[Descarrega o mesmo conjunto de materiais para praticar um anúncio de evento](/downloads/first-project/first-project-1.0.0.zip) e conclui o anúncio, a revisão e o registo de recuperação em cinco passos. Não é preciso programar. A conclusão do percurso completo por leitores independentes ainda não foi testada.
 
 - **Principiante (cinco passos)**
   1. [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/)
@@ -58,7 +64,7 @@ Se já consegues concluir pequenas tarefas, o passo seguinte não é decorar mai
 | Passo | Tema | Ler primeiro |
 |---|---|---|
 | 1 | Entradas rápidas | [Comandos slash e entradas rápidas](/pt/guide/reference/slash-commands/) |
-| 2 | Contexto duradouro | [AGENTS.md](/pt/guide/customization/agents-md/) e [Memórias e contexto persistente](/pt/guide/customization/memories-and-persistent-context/) |
+| 2 | contexto duradouro | [AGENTS.md](/pt/guide/customization/agents-md/) e [Memórias e contexto persistente](/pt/guide/customization/memories-and-persistent-context/) |
 | 3 | Workflows reutilizáveis | [Visão geral de Skills](/pt/skills/overview/) e [Anatomia de Skill](/pt/skills/skill-anatomy/) |
 | 4 | Subtarefas isoladas | [Subagents](/pt/guide/agent-work/subagents/) e [Coordenação multi-agent](/pt/cases/workflows/multi-agent-coordination/) |
 | 5 | Sistemas externos | [Visão geral de MCP](/pt/skills/mcp/mcp-overview/) |
@@ -76,7 +82,7 @@ O texto principal explica; o percurso diz-te quais páginas ler agora.
 
 ### 2. Tenho de decidir primeiro a que identidade fixa pertenço
 
-Basta uma pergunta:  
+Basta uma pergunta:
 **Qual é o problema principal que queres resolver agora?**
 
 ### 3. Um percurso tem de ser seguido do início ao fim, sem saltos
@@ -87,8 +93,8 @@ O percurso é uma ordem recomendada, não um fluxo obrigatório. Na prática, po
 
 Se não souberes que percurso seguir, usa isto:
 
-- Ainda não concluíste a primeira Tarefa completa: segue o [percurso de principiante](/pt/guide/learning-paths/beginner/)
-- Queres sobretudo escrever conteúdo, imagens ou demos: vê o [percurso de criador](/pt/guide/learning-paths/creator/)
+- Ainda não concluíste a primeira tarefa completa: segue o [percurso de principiante](/pt/guide/learning-paths/beginner/)
+- Queres sobretudo escrever conteúdo, combinar textos e imagens ou criar apresentações: vê o [percurso de criador](/pt/guide/learning-paths/creator/)
 - Queres sobretudo alterar código, corrigir bugs ou integrar projetos: vê o [percurso de desenvolvedor](/pt/guide/learning-paths/developer/)
 - Estás a pensar em como a equipa adopta e controla riscos: vê o [percurso de equipa](/pt/guide/learning-paths/team/)
 

@@ -1,14 +1,19 @@
 ---
-title: Lộ trình ba mươi phút đầu
-description: Lộ trình 30 phút có thể tham khảo trực tiếp khi lần đầu bắt tay.
-locale: vi
-source_locale: zh-CN
-source_revision: 7d1061d
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Lộ trình ba mươi phút đầu"
+description: "Lộ trình 30 phút có thể tham khảo trực tiếp khi lần đầu bắt tay."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "7d1061d"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 110
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Đã đối chiếu chéo với các chương checklist an toàn, dự án luyện tập, tác vụ đầu tiên, kiểm tra kết quả và lộ trình người mới đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ cung cấp lộ trình bắt tay ổn định «nửa giờ đầu chạy thông vòng khép kín trước»."
+  checkedAt: "2026-07-26"
 ---
 
 Vừa cài xong, chưa biết ngày đầu nên bắt đầu thế nào — có thể đi theo lộ trình này.
@@ -70,7 +75,7 @@ Bước này nối «lần thành công đầu tiên» vào lộ trình học ph
 
 Lần đầu tốt nhất chỉ làm việc rất nhỏ, ví dụ:
 
-- Sửa một đoạn copy
+- Sửa một đoạn văn
 - Thêm một trang nhỏ
 - Sửa một vấn đề nhỏ mà bạn đã biết vị trí
 
@@ -98,10 +103,3 @@ Nếu sau 30 phút bạn đã làm được 4 việc sau, vòng này tính là x
 Trước hết vào [Chỉ mục xử lý sự cố](/vi/guide/reference/troubleshooting/). Nếu chỉ là khái niệm chưa hiểu, cũng có thể quay lại [Cần gì trước khi bắt đầu](/vi/guide/start-here/prerequisites/) và [Local và đám mây](/vi/guide/foundations/local-vs-cloud/).
 
 Trong ba mươi phút đầu, tự tay hoàn thành một vòng «giao tác vụ, xem kết quả, tự phán đoán» đã rất đáng.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương checklist an toàn, dự án luyện tập, tác vụ đầu tiên, kiểm tra kết quả và lộ trình người mới đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ cung cấp lộ trình bắt tay ổn định «nửa giờ đầu chạy thông vòng khép kín trước».  
-**Kiểm chứng gần nhất:** 2026-07-26

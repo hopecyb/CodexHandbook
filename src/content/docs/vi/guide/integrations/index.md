@@ -1,14 +1,19 @@
 ---
-title: Tích hợp (tổng quan)
-description: Khi nối GitHub, hệ thống ticket, công cụ chat và nền tảng nội bộ vào Codex, làm rõ ranh giới, quyền và thiết kế vòng lặp.
+title: "Tích hợp (tổng quan)"
+description: "Khi nối GitHub, hệ thống ticket, công cụ chat và nền tảng nội bộ vào Codex, làm rõ ranh giới, quyền và thiết kế vòng lặp."
 sidebar:
   order: 55
-locale: vi
-source_locale: zh-CN
-source_revision: 140102c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "140102c"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: "verified"
+  products: "Integrations"
+  basis: "Hướng dẫn plugin và ứng dụng hiện tại của OpenAI Help Center vẫn nhấn mạnh: năng lực tích hợp của Codex/ChatGPT nối qua plugins, apps và app templates, và quản trị viên có thể kiểm soát riêng quyền truy cập vai trò, hành động đọc/ghi, yêu cầu xác nhận và ranh giới dữ liệu. Nội dung trang tập trung nguyên tắc thiết kế tích hợp, phân tầng quyền và thứ tự triển khai, không phụ thuộc giao diện tức thời của một hệ thống ngoài cụ thể."
+  checkedAt: "2026-07-26"
 ---
 
 Giá trị tích hợp của Codex không chỉ là nối thêm một công cụ, mà còn đặt Agent vào chuỗi cộng tác bạn đã dùng: hosting mã, luồng ticket, hệ thống thông báo, nền tảng nội bộ, kho tri thức.
@@ -26,7 +31,7 @@ Có thể hiểu “tích hợp” là: **để Codex không chỉ giúp bạn t
 Ví dụ:
 
 - Đến GitHub đọc PR và gửi bình luận
-- Đến hệ thống ticket đọc nền, rồi sinh đề xuất xử lý
+- Đến hệ thống ticket đọc bối cảnh, rồi sinh đề xuất xử lý
 - Sau khi tác vụ xong gửi kết quả tới công cụ chat
 
 Thứ tích hợp thật sự đổi là Codex có vào được quy trình làm việc thật hay không, chứ không chỉ dừng ở trả lời trong hội thoại.
@@ -37,7 +42,7 @@ Thứ tích hợp thật sự đổi là Codex có vào được quy trình làm
 
 Nhiều nhóm lần đầu làm tích hợp muốn nối hết GitHub, Jira, Slack, kho tri thức, API nội bộ một lần.
 
-Thử điểm lần đầu thường phù hợp hơn: **chỉ nối một chuỗi ngắn nhất, dễ thấy giá trị nhất.**
+Đợt thí điểm đầu tiên thường phù hợp hơn: **chỉ nối một chuỗi ngắn nhất, dễ thấy giá trị nhất.**
 
 Lý do rất thực tế:
 
@@ -94,7 +99,7 @@ Ví dụ:
 
 ### GitHub và hosting mã
 
-Đây là loại phổ biến nhất, cũng chín nhất.
+Đây là loại phổ biến nhất, cũng trưởng thành nhất.
 
 Phù hợp:
 
@@ -144,7 +149,7 @@ Nếu chỉ muốn phán đoán nhanh “tích hợp này có đáng làm trư�
 
 1. Có phải việc đã lặp lại trong nhóm không
 2. Có chủ yếu dựa vào đọc và gom thông tin là đã tạo giá trị trước không
-3. Dù kết quả chưa hoàn hảo, người có dễ đỡ không
+3. Dù kết quả chưa hoàn hảo, con người có dễ kiểm tra và xử lý phần còn lại không
 
 Nếu cả ba đều thỏa, thường phù hợp vào ứng viên đợt đầu.
 
@@ -196,9 +201,3 @@ Lần đầu làm tích hợp, để Codex giúp bạn “xem” và “đề xu
 
 ## Nguồn tham khảo
 - Tài liệu tích hợp và lập trình viên chính thức OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** Integrations  
-**Căn cứ kiểm chứng:** Hướng dẫn plugin và ứng dụng hiện tại của OpenAI Help Center vẫn nhấn mạnh: năng lực tích hợp của Codex/ChatGPT nối qua plugins, apps và app templates, và quản trị viên có thể kiểm soát riêng quyền truy cập vai trò, hành động đọc/ghi, yêu cầu xác nhận và ranh giới dữ liệu. Nội dung trang tập trung nguyên tắc thiết kế tích hợp, phân tầng quyền và thứ tự triển khai, không phụ thuộc giao diện tức thời của một hệ thống ngoài cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

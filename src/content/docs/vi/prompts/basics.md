@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ đề cập phương pháp Prompt chung; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Cơ bản về Prompt
 description: Các thành phần cơ bản của một Prompt tốt.
 locale: vi
 source_locale: zh-CN
-source_revision: eb86b2a
+source_revision: "eb86b2a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Khi mới học Prompt, dễ tập trung vào việc câu chữ có nghe «nâng cao» hay không.  
+Khi mới học Prompt, dễ tập trung vào việc câu chữ có nghe «nâng cao» hay không.
 Với Codex, điều quan trọng vẫn là đã nói rõ những điểm sau chưa:
 
 - Bạn thực sự muốn nó làm gì
@@ -30,12 +35,12 @@ Nó chủ yếu giúp bạn tránh các vấn đề thường gặp:
 
 ## Có thể nhìn Prompt như thế nào
 
-Hãy xem Prompt như một phiếu tác vụ.  
+Hãy xem Prompt như một phiếu tác vụ.
 Một phiếu đạt yêu cầu ít nhất phải trả lời:
 
 - Làm gì
 - Vì sao
-- Dùng nguyên liệu gì
+- Dùng tài liệu đầu vào nào
 - Không được đụng gì
 - Làm đến mức nào thì đạt
 
@@ -51,7 +56,7 @@ Nếu những điểm này chưa rõ, câu chữ hay đến mấy cũng không c
 
 ### 1. Prompt càng dài càng tốt
 
-Điều quan trọng là liên quan.  
+Điều quan trọng là liên quan.
 Một đoạn bối cảnh không liên quan dài dễ làm loãng ranh giới thật sự quan trọng.
 
 ### 2. Chỉ cần nêu mục tiêu, phần còn lại có thể bỏ
@@ -100,10 +105,3 @@ Với hầu hết người mới, luyện từ **bản khuyến nghị** thườ
 Cốt lõi của Prompt tốt là giảm đoán, lệch hướng và vượt ranh giới.
 
 Ví dụ xem [Chạy tác vụ đầu tiên](/vi/cases/first-task/) và [Cấu trúc tác vụ tốt](/vi/prompts/task-anatomy/).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ đề cập phương pháp Prompt chung; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

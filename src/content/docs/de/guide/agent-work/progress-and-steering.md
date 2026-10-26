@@ -3,15 +3,21 @@ title: Fortschritt und Steuerung
 description: "Wenn die Richtung unterwegs abdriftet — mit kurzen Anweisungen Codex zurückholen."
 locale: de
 source_locale: zh-CN
-source_revision: c9ea3be
+source_revision: "c9ea3be"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu langen Aufgaben, Überprüfung und schrittweisem Vorgehen sowie verifizierte Planungs-, Qualitäts- und Kontextkapitel; nur „lokale Korrektur
+    vor Abriss“ als stabiles Kollaborationsprinzip.
+  checkedAt: '2026-07-26'
 ---
 
-Unterwegs oft nur zwei Reaktionen:
+Während der Ausführung gibt es oft nur zwei spontane Reaktionen:
 
 - Nichts sagen und weiterdriften lassen
 - „Stopp, alles neu“
@@ -30,7 +36,7 @@ Steuerung ergänzt, wie der aktuelle Schritt laufen soll:
 
 Lokale **Kurskorrektur** am aktuellen Ausführungszustand.
 
-Typisch nötig wenn:
+Das ist häufig nötig, wenn:
 
 - Ziel verstanden, Schrittfolge unideal
 - Hälfte richtig — nicht alles umwerfen
@@ -50,7 +56,7 @@ Vier Teile:
 1. Wo stoppen
 2. Was behalten
 3. Was aufgeben
-4. Was als Nächstes nur
+4. Was als Nächstes ausschließlich erledigt werden soll
 
 ## Häufige Fallen
 
@@ -70,7 +76,7 @@ Besser explizit:
 
 - Was behalten
 - Was aufgeben
-- Was jetzt Priorität
+- Was jetzt Priorität hat
 
 ### 3. Steuerung = Neu planen?
 
@@ -122,7 +128,7 @@ Noch keine Dateien ändern. Zuerst Vergleichstabelle: Ist-Ansatz vs. Vorschlag.
 Klar:
 
 ```text
-Ursachenurteil behalten, aber noch keinen Refactor. Als Nächstes nur Minimalfix und Überprüfungsschritte.
+Behalte deine Einschätzung der Ursache bei, beginne aber noch kein Refactoring. Ergänze als Nächstes nur einen Plan für die minimale Korrektur und die Prüfschritte.
 ```
 
 ## Wann zurück zu „neu planen“
@@ -130,7 +136,7 @@ Ursachenurteil behalten, aber noch keinen Refactor. Als Nächstes nur Minimalfix
 Steuerung für lokale Drift; zurück zur [Planung](/de/guide/agent-work/planning/) wenn:
 
 - Ziel selbst geändert
-- Neue Info stürzt Prämissen
+- Neue Informationen widerlegen die bisherigen Annahmen
 - Wirkungsbereich klar größer
 - Schon zwei–drei Korrekturen, immer noch Drift
 
@@ -149,12 +155,5 @@ Bei Drift unterwegs: kurz „was behalten, was stoppen, was als Nächstes nur“
 
 - Pfad zuerst klären: [Planung](/de/guide/agent-work/planning/)
 - Als Hauptkette: [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
-- An andere delelegieren: [Subagents](/de/guide/agent-work/subagents/)
+- An andere delegieren: [Subagents](/de/guide/agent-work/subagents/)
 - Nach Unterbrechung weiter: [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu langen Aufgaben, Überprüfung und schrittweisem Vorgehen sowie verifizierte Planungs-, Qualitäts- und Kontextkapitel; nur „lokale Korrektur vor Abriss“ als stabiles Kollaborationsprinzip.  
-**Zuletzt geprüft:** 2026-07-26

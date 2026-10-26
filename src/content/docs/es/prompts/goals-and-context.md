@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe cómo escribir objetivo y contexto; se han revisado enlaces y ejemplos, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Objetivos y contexto
 description: Haz que Codex sepa qué completar y por qué importa.
 locale: es
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: '0a5141f'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Muchos Prompts parecen tener bastante información, pero estas dos cosas no quedan claras:
+Muchos prompts parecen tener bastante información, pero estas dos cosas no quedan claras:
 
 - qué resultado quieres de verdad
 - por qué hay que hacerlo de esa forma
@@ -17,9 +22,9 @@ Muchos Prompts parecen tener bastante información, pero estas dos cosas no qued
 El objetivo explica «qué hay que lograr»; el contexto explica «por qué hacerlo así».
 
 **Objetivo** describe el artefacto final, no un deseo vago.  
-«Que el sitio sea mejor» → «Cambia el copy del botón principal de la home a …… y conserva las clases CSS actuales».
+«Que el sitio sea mejor» → «Cambia el texto del botón principal de la página de inicio a …… y conserva las clases CSS actuales».
 
-**Contexto** aporta el estado que el lector no conoce pero el Agent necesita: stack, audiencia, motivo del plazo, trampas conocidas.
+**Contexto** aporta el estado que el lector no conoce pero el Agent necesita: stack, audiencia, motivo del plazo, problemas conocidos.
 
 ## Por qué no mezclar «objetivo» y «contexto»
 
@@ -50,7 +55,7 @@ También puede ser contexto importante:
 
 - quién es el lector
 - el motivo del plazo
-- trampas conocidas
+- problemas conocidos
 - restricciones del equipo
 
 ## Una redacción suficiente
@@ -65,8 +70,8 @@ Contexto: por qué cambiarlo, para quién, dónde estás atascado ahora
 Por ejemplo:
 
 ```text
-Objetivo: reescribir el copy de la primera pantalla de la home de docs para principiantes, conservando la estructura actual
-Contexto: el copy actual asume que el lector conoce muchos términos; el umbral de comprensión en la primera visita es alto
+Objetivo: reescribir el texto de la primera pantalla de la página de inicio de la documentación para principiantes, conservando la estructura actual
+Contexto: el texto actual asume que el lector conoce muchos términos; el umbral de comprensión en la primera visita es alto
 ```
 
 ## Cómo comprobar si está lo bastante claro
@@ -82,11 +87,4 @@ Al revisar el contexto, mira una más:
 
 El objetivo decide qué entregar; el contexto explica por qué hacerlo así.
 
-Relacionado: el contexto a nivel de proyecto puede vivir en [Contexto del proyecto](/es/guide/context/project-context/) para no repetir párrafos largos en cada Prompt.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe cómo escribir objetivo y contexto; se han revisado enlaces y ejemplos, y el cuerpo no depende de hechos volátiles del producto.
+Relacionado: el contexto a nivel de proyecto puede vivir en [Contexto del proyecto](/es/guide/context/project-context/) para no repetir párrafos largos en cada prompt.

@@ -8,10 +8,10 @@ title: Research template
 description: Investigation and comparison with citations.
 locale: en
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: '729d4cc'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

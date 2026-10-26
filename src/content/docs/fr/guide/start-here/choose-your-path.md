@@ -8,11 +8,12 @@ title: Choisir votre parcours
 description: Choisir une lecture selon votre rôle, votre tâche ou le produit.
 locale: fr
 source_locale: zh-CN
-source_revision: 51ccd00
-translation_status: draft
+source_revision: "51ccd00"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 4
+reviewed_at: 2026-10-26
 ---
 
 Vous pouvez commencer par votre **rôle**, votre **tâche** ou votre **produit**. Les trois parcours rejoignent les mêmes pages essentielles ; seul le point de départ change.

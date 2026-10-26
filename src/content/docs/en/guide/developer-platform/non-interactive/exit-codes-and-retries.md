@@ -1,10 +1,15 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "CLI"
+  basis: "Unsupported meanings for specific exit codes have been removed. This page relies only on officially documented process success or failure and progress/error output on `stderr`; business review outcomes are handled through structured output."
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-25"
 title: Exit Codes and Retries
 description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
 locale: en
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: '35074cd'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -122,9 +127,3 @@ First separate “temporary fault” from “retry will not help,” then decide
 
 ## Reference sources
 - OpenAI API retry guidance (conceptual)
----
-
-**Status:** outdated
-**Products:** CLI
-**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.
-**Last verified:** 2026-07-26

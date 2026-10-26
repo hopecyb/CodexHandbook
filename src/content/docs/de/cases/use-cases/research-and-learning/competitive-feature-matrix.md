@@ -3,10 +3,19 @@ title: "Fall: Wettbewerbs-Feature-Matrix"
 description: Recherche mit Quellen und Tabellen-Artefakt — Workflow, den auch Nicht-Entwickler wiederverwenden können.
 locale: de
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: "b74008b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+caseCategory: creation
+directoryOrder: 85
+contentType: case
+legacyVerification:
+  status: verified
+  products: "App / CLI"
+  basis: Kreuzgeprüft gegen die bereits geprüften Kapitel zu Recherche mit Quellen, Websuche, Quellenvalidierung und Versionspolicy. Der Inhalt beschränkt sich auf die stabile Recherchefall-Struktur „Vergleichstabelle
+    mit Quellen erzeugen“ und schreibt keine konkreten Preise oder Produktversionen fest.
+  checkedAt: '2026-07-26'
 ---
 
 ## Metadaten
@@ -61,10 +70,3 @@ Markdown-Tabelle ausgeben, andere Repository-Dateien nicht ändern.
 
 - [Artefakt zuerst](/de/cases/workflows/artifact-first-work/)
 - [Quellen validieren](/de/guide/quality/validate-sources/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Recherche mit Quellen, Websuche, Quellenvalidierung und Versionspolicy. Der Inhalt beschränkt sich auf die stabile Recherchefall-Struktur „Vergleichstabelle mit Quellen erzeugen“ und schreibt keine konkreten Preise oder Produktversionen fest.  
-**Zuletzt geprüft:** 2026-07-26

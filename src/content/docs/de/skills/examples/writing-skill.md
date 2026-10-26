@@ -21,11 +21,12 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: "cbaec37"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
-Diese Skill erstellt aus bereitgestellten Quellen einen Artikel mit rückverfolgbaren Aussagen und bewahrt Stilvorgaben, Belege und ungeklärte Punkte. Sie eignet sich für quellenbasiertes Schreiben und Faktenprüfung; für einen Tippfehler braucht man diesen ganzen Ablauf nicht.
+Dieser Skill erstellt aus bereitgestellten Quellen einen Artikel mit rückverfolgbaren Aussagen und bewahrt Stilvorgaben, Belege und ungeklärte Punkte. Er eignet sich für quellenbasiertes Schreiben und Faktenprüfung; für einen Tippfehler braucht man diesen ganzen Ablauf nicht.
 
 [Vollständiges source-backed-writer v1.0.0 herunterladen](/downloads/skills/source-backed-writer/source-backed-writer-1.0.0.zip) · [SKILL.md ansehen](/downloads/skills/source-backed-writer/SKILL.md) · [Installationsanleitung](/downloads/skills/source-backed-writer/README.md)
 
@@ -36,14 +37,14 @@ Diese Skill erstellt aus bereitgestellten Quellen einen Artikel mit rückverfolg
 | Drei synthetische Quellen mit Hash-Index | Mit festen Eingaben üben, ohne ein fiktives Produkt für eine reale Kaufoption zu halten |
 | Stilvorlage und bewusstes Gegenbeispiel | Unbelegte Erfolgsversprechen durch konkrete Handlungen ersetzen |
 | Gliederung, Erstfassung, Endfassung und Überarbeitungs-Diff | Fakten-, Struktur- und Formulierungsänderungen unterscheiden |
-| Sieben belegte Aussagen und Liste offener Punkte | Quellenbelege, Autorenschlüsse und Unbestätigtes trennen |
+| Sieben Zuordnungen von Aussagen zu ihren Belegen und Liste offener Punkte | Quellenbelege, Autorenschlüsse und Unbestätigtes trennen |
 | Positive und negative Auslösefälle, Skripte und Prüfprotokoll | Einsatzbereich und Prüfgrenzen verdeutlichen |
 
-Das Material übernimmt das fiktive Werkzeug „拾页“ aus der [Übung zum quellenbasierten Artikel](/de/cases/write-an-article/). Du kannst erst diese Übung erledigen und dann die Schreibmethode als Skill speichern.
+Das Material übernimmt das fiktive Werkzeug „Shiye (拾页)“ aus der [Übung zum quellenbasierten Artikel](/de/cases/write-an-article/). Du kannst erst diese Übung erledigen und dann die Schreibmethode als Skill speichern.
 
 ## Installieren und erstmals aufrufen
 
-Lege das vollständige Verzeichnis im Übungsprojekt unter `.agents/skills/source-backed-writer/` ab. `SKILL.md` muss direkt darin liegen. Falls schon eine gleichnamige Skill existiert, vergleiche sie, bevor du etwas überschreibst. Zur Erkennung siehe [Skill verwenden](/de/skills/use-a-skill/); wenn dein Client sie zur Auswahl anbietet, rufe sie ausdrücklich auf:
+Lege das vollständige Verzeichnis im Übungsprojekt unter `.agents/skills/source-backed-writer/` ab. `SKILL.md` muss direkt darin liegen. Falls bereits ein gleichnamiger Skill existiert, vergleiche die Versionen und überschreibe ihn nicht. Zur Erkennung siehe [Skill verwenden](/de/skills/use-a-skill/); wenn dein Client ihn zur Auswahl anbietet, rufe ihn ausdrücklich auf:
 
 ```text
 $source-backed-writer Lies die drei Quellen aus sources/ in diesem Übungspaket.
@@ -69,7 +70,7 @@ Für diese Seite wurden die Skripte ausgeführt, nicht jedoch die automatische E
 
 Die [Stilvorlage](/downloads/skills/source-backed-writer/references/style.md) enthält einen gezielten Vergleich:
 
-> Gegenbeispiel: 拾页 ist ein Alleskönner, verarbeitet mühelos jedes Format und verdoppelt deine Produktivität.
+> Gegenbeispiel: Shiye (拾页) ist ein Alleskönner, verarbeitet mühelos jedes Format und verdoppelt deine Produktivität.
 
 Überarbeite es zu: „Die Beschreibung nennt nur Markdown und Klartext. Probiere zuerst eine kleine Kopie deiner Notizen aus und gehe dann zu den im Überblick genannten Originalstellen zurück.“ Der erste Satz stammt aus der Quelle, der zweite ist ein Ratschlag des Autors; in der Belegtabelle müssen sie getrennt werden. Andere Ton- oder Strukturwünsche des Nutzers gehen vor.
 
@@ -92,7 +93,7 @@ Prüfe nach dem Schreiben:
 
 Das Skript erkennt geänderte Quellen-Hashes und Fehler in der Zitatstruktur, aber keine semantisch unbelegte Aussage. Im Paket wird absichtlich ein falsches Fähigkeitsversprechen getestet, das mit gültiger ID die Strukturprüfung besteht. Menschliche Faktenprüfung bleibt nötig.
 
-## Wann die Skill nicht ausgelöst werden sollte
+## Wann der Skill nicht ausgelöst werden sollte
 
 Ein Tippfehler, ein Git-Patch-Review oder eine neue Softwarefunktion ist nicht automatisch ein vollständiger Artikelauftrag. Ein fertiger Artikel verleiht keine Veröffentlichungsbefugnis. Die [Auslösefälle](/downloads/skills/source-backed-writer/fixtures/trigger-cases.json) sind Entwurfserwartungen, keine gemessene Routing-Erfolgsrate.
 

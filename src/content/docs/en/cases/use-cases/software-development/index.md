@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas."
+  checkedAt: "2026-07-26"
 title: Software development
 description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
 locale: en
 source_locale: zh-CN
-source_revision: a3d7f4c
+source_revision: 'a3d7f4c'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Software development cases focus on this question:
@@ -22,10 +27,3 @@ Software development cases focus on this question:
 - How to state task scope clearly
 - Why verification and rollback paths matter from the start
 - Avoiding "while I'm here" extra changes in real development
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas.

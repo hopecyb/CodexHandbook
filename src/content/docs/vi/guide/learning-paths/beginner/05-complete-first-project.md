@@ -1,31 +1,32 @@
 ---
-title: Hoàn thành dự án nhỏ đầu tiên
-description: Bàn giao thông báo, biên bản rà soát và khôi phục thay vì chỉ viết cảm nghĩ học tập.
-contentType: path
+title: "Hoàn thành dự án nhỏ đầu tiên"
+description: "Bàn giao thông báo, biên bản rà soát và khôi phục thay vì chỉ viết cảm nghĩ học tập."
+contentType: "path"
 audiences:
-- beginner
-level: beginner
-editorialStatus: review
+  - "beginner"
+level: "beginner"
+editorialStatus: "review"
 sidebar:
   order: 50
 verification:
-  kind: editorial
-  checkedAt: '2026-09-18'
-  summary: Đã bổ sung tài liệu cố định và bản tham khảo của tác giả; script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa kiểm thử mô hình hoặc người đọc tự hoàn thành.
+  kind: "editorial"
+  checkedAt: "2026-09-18"
+  summary: "Đã bổ sung tài liệu cố định và bản tham khảo của tác giả; script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa kiểm thử mô hình hoặc người đọc tự hoàn thành."
   evidence:
-  - label: Biên bản thao tác tệp của tác giả
-    href: /downloads/first-project/validation/record.json
+    - label: "Biên bản thao tác tệp của tác giả"
+      href: "/downloads/first-project/validation/record.json"
 prev:
-  link: /vi/guide/learning-paths/beginner/04-review-results/
-  label: Xem xét kết quả
+  link: "/vi/guide/learning-paths/beginner/04-review-results/"
+  label: "Xem xét kết quả"
 next:
-  link: /vi/cases/analyze-a-spreadsheet/
-  label: Tiếp tục với báo cáo bán hàng hằng tuần
-locale: vi
-source_locale: zh-CN
-source_revision: cc1139b
-translation_status: draft
-translated_at: '2026-09-20'
+  link: "/vi/cases/analyze-a-spreadsheet/"
+  label: "Tiếp tục với báo cáo bán hàng hằng tuần"
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "cc1139b"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 ## Điều kiện trước khi bắt đầu

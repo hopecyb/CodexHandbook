@@ -1,14 +1,19 @@
 ---
-title: Biến môi trường
+title: "Biến môi trường"
 description: "Công dụng, tầng và bảo mật của biến môi trường liên quan Codex — bổ sung cho tham chiếu cấu hình."
-locale: vi
-source_locale: zh-CN
-source_revision: 58fd37b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "58fd37b"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 80
+legacyVerification:
+  status: "verified"
+  products: "CLI / App / IDE / Cloud"
+  basis: "Help Center OpenAI vẫn ghi `~/.codex/.env`, tiêm CI/runtime và Secrets nền tảng; trang tập trung nguyên tắc ổn định — giá trị nào thuộc env, cái gì không, `.env` như hộp chứa cục bộ — không cố định danh sách tên biến."
+  checkedAt: "2026-07-26"
 ---
 
 Biến môi trường thường bị đẩy về hai cực: «quá thấp tầng» hoặc «nhét hết vào đó». Nói ngắn: chúng truyền giá trị cho chương trình lúc chạy — đặc biệt secrets và công tắc.
@@ -161,9 +166,3 @@ Biến môi trường phù hợp giá trị đổi, nhạy cảm hoặc chỉ c�
 
 ## Nguồn tham chiếu
 - Tài liệu cấu hình / môi trường OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI / App / IDE / Cloud  
-**Cơ sở kiểm chứng:** Help Center OpenAI vẫn ghi `~/.codex/.env`, tiêm CI/runtime và Secrets nền tảng; trang tập trung nguyên tắc ổn định — giá trị nào thuộc env, cái gì không, `.env` như hộp chứa cục bộ — không cố định danh sách tên biến.  
-**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud troubleshooting
 description: Diagnose Cloud failures across repository, setup, network, Agent, and delivery layers.
 locale: en
 source_locale: zh-CN
-source_revision: 019fac1
+source_revision: '019fac1'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 80
 ---
@@ -76,11 +80,3 @@ If a problem depends on a local service, or two consecutive runs are repairing t
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**Status:** verified
-
-**Applies to:** Cloud
-
-**Last verified:** 2026-08-26

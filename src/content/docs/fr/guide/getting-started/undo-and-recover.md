@@ -5,14 +5,15 @@ legacyVerification:
   basis: 'Cette page a été recoupée avec les principes d''introduction déjà vérifiés sur les autorisations, l''examen du résultat, la récupération après échec, Git et l''espace de travail. Elle décrit la méthode stable : s''arrêter, examiner le périmètre, privilégier l''annulation, puis retrouver un état sûr. Elle ne présente aucun bouton d''annulation d''un client comme une interface immuable.'
   checkedAt: '2026-07-26'
 title: Annuler et revenir à un état sûr
-description: Revenir en arrière sans risque quand le résultat ne convient pas.
+description: Revenir en arrière prudemment quand le résultat ne convient pas.
 locale: fr
 source_locale: zh-CN
-source_revision: 8aa3171
-translation_status: draft
+source_revision: '8aa3171'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 100
+reviewed_at: '2026-10-26'
 ---
 
 Une inquiétude fréquente lors de la première utilisation de Codex est : s'il se trompe, pourrai-je revenir en arrière ?
@@ -93,6 +94,6 @@ Confirmer l'état sûr actuel
 → Conserver, annuler ou essayer une autre approche
 ```
 
-Si le client propose des points de contrôle ou une fonction de relecture, vous pouvez privilégier ces fonctions intégrées. Dans un projet Git, une branche, un stash ou un petit commit peuvent aussi servir de point de récupération. L'essentiel n'est pas de mémoriser une commande, mais de ne pas étendre les modifications lorsque leur portée reste incertaine.
+Si le client propose des points de contrôle ou une fonction de retour à un état précédent, vous pouvez privilégier ces fonctions intégrées. Dans un projet Git, une branche, un stash ou un petit commit peuvent aussi servir de point de récupération. L'essentiel n'est pas de mémoriser une commande, mais de ne pas étendre les modifications lorsque leur portée reste incertaine.
 
 Se tromper n'est pas grave en soi. Continuer à modifier sans savoir ce qui a été touché est bien plus difficile à corriger.

@@ -3,10 +3,15 @@ title: テスト駆動の作業
 description: まず失敗テストを定義または補完し、実装を駆動する——Codex の変更を客観的に受け入れ可能にする。
 locale: ja
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: 本ハンドブックの現在検証済みのテスト実行、完了の定義、検証付き Bug 修正、コマンドルール各章を相互参照して再確認済み。本ページ内容は「先にテストを失敗させ、最小実装で通過を駆動する」安定したテスト作業法に焦点を当てています。
+  checkedAt: "2026-07-26"
 ---
 
 **テスト駆動の作業**（TDD または「テスト先行」）は、まずテストを失敗させ、最小実装で通過させる方法です。すでにテスト基盤があるコードベースに適し、[検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/) などのシナリオと直接関連します。
@@ -22,7 +27,7 @@ reviewed_at: 2026-08-26
 - ユニット/統合テストがあるリポジトリ
 - 回帰 bug、API 動作変更、リファクタリング
 
-適さないシナリオ：テスト基盤のないプロトタイプ、純粋な文案サイトの一回限りの変更。このようなタスクは [EPXV](/ja/cases/workflows/explore-plan-execute-verify/) で人間による検証が適しています。
+適さないシナリオ：テスト基盤のないプロトタイプ、文章中心のサイトの一回限りの変更。このようなタスクは [EPXV](/ja/cases/workflows/explore-plan-execute-verify/) で人間による検証が適しています。
 
 ## 最小限の実践方法
 
@@ -65,7 +70,7 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 ## 受け入れチェックリスト
 
 - [ ] 失敗→通過のテスト証拠がある（ログまたは CI）
-- [ ] 全量または約定範囲のテストが通過している
+- [ ] 全量または合意した範囲のテストが通過している
 - [ ] diff に無関係なテスト削除が含まれていない
 - [ ] [完了の定義](/ja/prompts/define-done/) と一致している
 
@@ -73,10 +78,3 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 
 - [テストの実行](/ja/guide/quality/run-tests/)
 - [ケース：検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**状態：** verified  
-**対象製品：** CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ハンドブックの現在検証済みのテスト実行、完了の定義、検証付き Bug 修正、コマンドルール各章を相互参照して再確認済み。本ページ内容は「先にテストを失敗させ、最小実装で通過を駆動する」安定したテスト作業法に焦点を当てています。

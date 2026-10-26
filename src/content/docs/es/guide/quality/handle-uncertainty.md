@@ -3,14 +3,18 @@ title: Gestionar la incertidumbre
 description: Cuando falta información, exige preguntas en lugar de inventar.
 locale: es
 source_locale: zh-CN
-source_revision: 839ce22
+source_revision: "839ce22"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica principios de preguntar y corregir cuando falta información; se han revisado conceptos, frases de prompt y orden de tratamiento, y el cuerpo no depende de hechos variables de producto.
+  checkedAt: '2026-07-26'
 ---
-
 Cuando no hay información suficiente, confirma primero y luego continúa.
 
 Una de las situaciones más molestas al usar Codex es que complete la información que falta con una respuesta que «parece razonable».
@@ -68,7 +72,7 @@ Muchos problemas empiezan a crecer desde «primero adivina y haz».
 
 Detén el error primero; luego sigue. Orden:
 
-1. Señala con claridad qué línea está mal
+1. Señala con claridad qué afirmación es incorrecta
 2. Aporta la información real
 3. Si hace falta, haz que reinicie a partir de los hechos corregidos
 
@@ -89,10 +93,3 @@ Si hay varias interpretaciones posibles, lista primero los puntos de los que no 
 ```
 
 Lo más problemático es tratar la conjetura como hecho y seguir avanzando.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica principios de preguntar y corregir cuando falta información; se han revisado conceptos, frases de prompt y orden de tratamiento, y el cuerpo no depende de hechos variables de producto.  
-**Última verificación:** 2026-07-26

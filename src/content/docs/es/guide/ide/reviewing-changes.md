@@ -3,13 +3,17 @@ title: Revisar cambios en el IDE
 description: Comprueba las diferencias junto al código fuente y revisa el árbol de trabajo con un reviewer de solo lectura.
 locale: es
 source_locale: zh-CN
-source_revision: a6badd5
-translation_status: draft
+source_revision: "a6badd5"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 El IDE permite leer rápidamente el resumen junto al código fuente y examinar un diff concreto, pero que un cambio aparezca en el editor no significa que haya superado la aceptación. Primero comprueba las diferencias, luego ejecuta las pruebas y, por último, decide qué cambios conservar.
 
 ## Realizar una revisión local
@@ -32,7 +36,7 @@ Los resultados aparecen en el chat actual de forma predeterminada. Establece `ch
 ## Ejemplo: dar criterios claros al reviewer
 
 ```text
-Revisa los cambios actuales sin confirmar. Prioriza los defectos que puedan causar comportamientos erróneos, pérdida de datos o problemas de seguridad.
+Revisa los cambios actuales sin confirmar. Prioriza los defectos que puedan causar comportamientos erróneos, corrupción de datos o problemas de seguridad.
 Ignora las preferencias puramente estilísticas. Cada hallazgo debe incluir la ubicación concreta del archivo, la condición que lo desencadena y un efecto verificable.
 Si no encuentras problemas, indica qué pruebas siguen faltando.
 ```

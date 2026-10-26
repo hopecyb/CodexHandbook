@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Kreuzgeprüft gegen verifizierte Kapitel zu Dateikontext, Artefaktprüfung, sensiblem Kontext und Dateiverarbeitung; bestätigt nur „PDF begrenzen, OCR/Layout-Fehler beachten, nach Erzeugung wirklich öffnen“."
+  checkedAt: "2026-07-26"
 title: PDF und Dokumente
 description: "Umfang, Werkzeuge und Abnahme, wenn Codex PDF-Dokumente liest, zusammenfasst oder erzeugt."
 locale: de
 source_locale: zh-CN
-source_revision: 1f4f82b
+source_revision: "1f4f82b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
 
-PDFs dienen Spezifikationen, Papieren, Scans und Exportberichten. Anders als Reiner Text: PDF ist **strukturell komplex, groß, schwer zu diffen** — Aufgabenweise separat vereinbaren.
+PDFs werden für Spezifikationen, wissenschaftliche Arbeiten, Scans und exportierte Berichte verwendet. Anders als reine Textdateien sind sie **strukturell komplex, groß und schwer als Diff zu prüfen**. Vereinbare deshalb gesondert, wie die Aufgabe bearbeitet werden soll.
 
 Häufige Probleme: unvollständiges Strukturverständnis oder zu großer Umfang.
 
@@ -44,8 +49,8 @@ Je klarer „welchen Abschnitt, welches Ergebnis“, desto stabiler.
 
 ### Grenzen
 
-- Scan-PDFs brauchen oft OCR — Stichproben manuell
-- Komplexe Layouts, Mehrspalten, Fußnoten verlieren Struktur leicht
+- Gescannte PDFs benötigen möglicherweise OCR; prüfe deren Ergebnisse manuell anhand von Stichproben
+- Bei komplexen Layouts, mehreren Spalten und Fußnoten kann die Struktur verloren gehen
 - Riesige PDFs nicht in einer Aufgabe — abschnittsweise oder zuerst Markdown-Gliederung
 
 ## Häufige Missverständnisse
@@ -60,7 +65,7 @@ Bei Länge, komplexer Struktur, Scan-Seiten:
 
 ### 2. Scan-PDF ≠ Text-PDF
 
-Scans hängen oft an OCR; OCR-Fehler ziehen Zusammenfassung, Extraktion und Urteil mit.
+Scans sind oft auf OCR angewiesen. Fehler bei der Texterkennung können Zusammenfassung, Extraktion und Bewertung verfälschen.
 
 ### 3. PDF-Datei erzeugt ≠ fertig
 
@@ -82,7 +87,7 @@ Prüfen:
 Im Prompt klar:
 
 - Ausgabepfad und Dateiname
-- Seitenformat, Sprache, Schrift (bei CJK-PDF: Einbettung)
+- Seitenformat, Sprache, Schrift (bei chinesischen PDFs: Einbettung)
 - Ob nach Git (große Binärdateien oft Artifact/Release)
 
 ## Direkt nutzbare Formulierung
@@ -102,20 +107,13 @@ Bei OCR- oder Layout-Unsicherheit klar markieren.
 ## Häufige Fehler
 
 - „Ein Wort im PDF ändern“ ohne editierbare Quelle (`.md` / `.tex`)
-- Vertrauliche PDFs ins öffentliche Repo und dann Cloud
+- Vertrauliche PDFs in ein öffentliches Repository stellen und anschließend in Cloud verarbeiten lassen
 - Nur „Datei existiert“ prüfen, nicht öffnen
 
 ## Abnahmeliste
 
-- [ ] PDF im Ziel-Reader/Druckumgebung öffnbar
+- [ ] PDF im vorgesehenen Leseprogramm oder in der Druckumgebung zu öffnen
 - [ ] Seiten, TOC, kritische Tabellen wie erwartet
 - [ ] Repo-Volumen und LFS-Policy teamkonform
 
 Bei PDF: je klarer der Umfang, desto stabiler. Nach dem Erzeugen nicht nur „Datei da“ — öffnen und Inhalt prüfen.
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Dateikontext, Artefaktprüfung, sensiblem Kontext und Dateiverarbeitung; bestätigt nur „PDF begrenzen, OCR/Layout-Fehler beachten, nach Erzeugung wirklich öffnen“.  
-**Zuletzt geprüft:** 2026-07-26

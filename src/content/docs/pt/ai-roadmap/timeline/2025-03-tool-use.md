@@ -12,12 +12,13 @@ verification:
       href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: pt
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: "efd508a"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
-## Evento verificável e âmbito
+## Evento verificável e escopo
 
 **Data: 11 de março de 2025 · Tipo: lançamento de produto.** A OpenAI lançou novas ferramentas para agentes, incluindo a Responses API, ferramentas integradas e o Agents SDK. O anúncio é um marco de produto de um fornecedor específico, não a invenção do uso de ferramentas por modelos.
 
@@ -35,6 +36,6 @@ Atribua verificações repetíveis a ferramentas bem definidas e guarde códigos
 
 ## Exercício prático
 
-[Cinco exercícios de recuperação de falhas](/pt/guide/reference/troubleshooting/failure-recovery-lab/): reproduza um conjunto de falhas, leia os registos «antes», altere apenas uma variável e confira o resultado «depois». O exercício usa scripts locais e não requer chamadas às APIs do anúncio.
+[Cinco exercícios de recuperação de falhas](/pt/guide/reference/troubleshooting/failure-recovery-lab/): reproduza um conjunto de falhas, leia os registros «antes», altere apenas uma variável e confira o resultado «depois». O exercício usa scripts locais e não requer chamadas às APIs do anúncio.
 
 [Voltar ao roteiro e aos critérios de data](/pt/ai-roadmap/)

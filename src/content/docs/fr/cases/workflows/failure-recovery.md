@@ -3,12 +3,16 @@ title: Reprise après échec
 description: Quand une tâche dévie, les tests passent au rouge ou le contexte s'épuise — comment revenir en arrière en sécurité et continuer.
 locale: fr
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec les chapitres vérifiés sur le transfert et la reprise, le diagnostic, les règles de commande et la référence des erreurs ; cette page décrit des méthodes générales de limitation des dégâts et de poursuite après échec, sans traiter le bouton ou la commande de récupération d'un client comme règle fixe.
+  checkedAt: '2026-07-26'
 ---
-
 La **reprise après échec** couvre comment stabiliser la situation après qu'une tâche a dévié ou s'est interrompue. Ce chapitre propose des étapes reproductibles **détecter → limiter les dégâts → récupérer → tirer les leçons**, à associer à [Annuler et récupérer](/fr/guide/getting-started/undo-and-recover/) et à la [Gestion des tâches longues](/fr/cases/workflows/long-running-task-management/).
 
 ![Illustration : une tour de blocs à moitié effondrée est reconstruite calmement selon une liste, une flèche de retour replace un bloc sur une base stable](/illustrations/failure-recovery.webp)
@@ -16,7 +20,7 @@ La **reprise après échec** couvre comment stabiliser la situation après qu'un
 ## Ce que couvre cette page
 
 - Quand faire `git stash`, annuler des commits ou ouvrir un nouveau fil
-- Comment empaqueter les informations d'échec dans le prompt suivant
+- Comment organiser les informations sur l’échec dans le prompt suivant
 - Comment les équipes consignent les problèmes récurrents
 
 ## Signaux d'échec
@@ -57,7 +61,7 @@ Détecter (tests / humain / CI)
     → Capitaliser les leçons
 ```
 
-Multi-Agent : voir [Coordination multi-Agent](/fr/cases/workflows/multi-agent-coordination/) — en cas d'échec, préciser quel sous-tâche gère le retour arrière.
+Multi-Agent : voir [Coordination multi-Agent](/fr/cases/workflows/multi-agent-coordination/) — en cas d'échec, préciser quelle sous-tâche gère le retour arrière.
 
 ## Erreurs courantes
 
@@ -83,10 +87,3 @@ Multi-Agent : voir [Coordination multi-Agent](/fr/cases/workflows/multi-agent-co
 - [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/)
 - [Transfert et reprise](/fr/guide/agent-work/handoff-and-resume/)
 - [Référence des erreurs](/fr/guide/reference/error-reference/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur le transfert et la reprise, le diagnostic, les règles de commande et la référence des erreurs ; cette page décrit des méthodes générales de limitation des dégâts et de poursuite après échec, sans traiter le bouton ou la commande de récupération d'un client comme règle fixe.

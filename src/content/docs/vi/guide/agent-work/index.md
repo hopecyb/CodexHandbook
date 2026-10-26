@@ -1,14 +1,15 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Đã đối chiếu chéo từng đoạn với các chương kế hoạch, ngữ cảnh, kiểm chứng và cộng tác đa tác vụ đã được kiểm chứng trong sổ tay; trang này chỉ giữ nguyên tắc quy trình cộng tác ổn định, không coi giao diện hay lối vào hiện tại của một client nào đó là hợp đồng dài hạn.", "checkedAt": "2026-07-26"}
 title: Làm việc với Agent
 description: Để Codex làm việc như một người thực thi có thể cộng tác, chứ không phải máy trả lời một lần.
 sidebar:
   order: 31
 locale: vi
 source_locale: zh-CN
-source_revision: 3eb251e
+source_revision: "3eb251e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Làm việc với Agent tập trung vào: làm sao đưa một tác vụ **đến trạng thái hoàn thành có thể kiểm chứng**. Khi nào lập kế hoạch trước, khi nào tách tác vụ con, khi nào chỉnh hướng giữa chừng, khi nào bàn giao và khôi phục — đều là vấn đề chương này xử lý.
@@ -98,9 +99,3 @@ Làm việc với Agent coi trọng hơn việc tác vụ có thể liên tục 
 
 ## Nguồn tham khảo
 - Hướng dẫn cộng tác và thực thi tác vụ chính thức của OpenAI Codex
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Đã đối chiếu chéo từng đoạn với các chương kế hoạch, ngữ cảnh, kiểm chứng và cộng tác đa tác vụ đã được kiểm chứng trong sổ tay; trang này chỉ giữ nguyên tắc quy trình cộng tác ổn định, không coi giao diện hay lối vào hiện tại của một client nào đó là hợp đồng dài hạn.  
-**Kiểm chứng gần nhất:** 2026-07-26

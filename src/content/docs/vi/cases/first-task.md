@@ -11,10 +11,10 @@ title: Tác vụ đầu tiên
 description: Dùng prompt rõ ràng để hoàn thành một thay đổi nhỏ và học cách kiểm tra kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: 38f925b
+source_revision: "38f925b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 

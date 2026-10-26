@@ -3,13 +3,14 @@ title: Recuperação de falhas
 description: Quando a tarefa se desvia, os testes ficam vermelhos ou o contexto se esgota — como recuar com segurança e continuar.
 locale: pt
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: "847e22a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com os capítulos já verificados deste manual sobre transferência e retoma, diagnóstico, regras de comando e referência de erros; esta página descreve o método geral de contenção de falhas e avanço contínuo, sem transformar botões ou comandos de um cliente específico em regra fixa.", "checkedAt": "2026-07-26"}
 ---
 
-**Recuperação de falhas** trata de como estabilizar a cena quando a tarefa se desvia ou é interrompida e depois avançar. Este capítulo oferece um ciclo repetível **detetar → conter → recuperar → retrospectiva**, combinável com [desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/) e [gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/).
+**Recuperação de falhas** trata de como estabilizar a cena quando a tarefa se desvia ou é interrompida e depois avançar. Este capítulo oferece um ciclo repetível **detectar → conter → recuperar → retrospectiva**, combinável com [desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/) e [gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/).
 
 ![Ilustração: uma torre de blocos meio caída é reconstruída com calma seguindo uma lista, e uma seta de reversão devolve um bloco a uma base estável](/illustrations/failure-recovery.webp)
 
@@ -17,7 +18,7 @@ reviewed_at: 2026-08-26
 
 - Quando fazer `git stash`, reverter commit ou abrir uma nova thread
 - Como organizar a informação de falha no prompt da ronda seguinte
-- Como a equipa regista problemas recorrentes
+- Como a equipe regista problemas recorrentes
 
 ## Sinais de falha
 
@@ -25,7 +26,7 @@ reviewed_at: 2026-08-26
 |---|---|
 | Falhas de teste em larga escala | Parar a execução; reduzir o diff |
 | Diretório/ramo errado | Desfazer; `@` novamente o caminho correto |
-| Plano e implementação muito desalinhados | Voltar à fase de explorar ou planear |
+| Plano e implementação muito desalinhados | Voltar à fase de explorar ou planejar |
 | Contexto demasiado longo; restrições esquecidas | Nova thread + transferência com resumo |
 | Aprovação/regras a rejeitar repetidamente | Verificar se regras e tarefa se contradizem |
 
@@ -33,9 +34,9 @@ reviewed_at: 2026-08-26
 
 ```text
 1. Parar de alterar (diga claramente «não escreva código por agora»)
-2. Guardar o estado: git status / stash / registar o thread ID
+2. Guardar o estado: git status / stash / registrar o thread ID
 3. Resumir em no máximo 5 pontos: objetivo, feito, sintoma da falha, hipóteses
-4. Escolher: recuar / reduzir âmbito / continuar em nova thread
+4. Escolher: recuar / reduzir escopo / continuar em nova thread
 5. Após sucesso, escrever em AGENTS.md ou na retrospectiva do caso
 ```
 
@@ -43,14 +44,14 @@ Exemplo de prompt:
 
 ```text
 As alterações atuais fazem falhar 12 testes. Não continue a corrigir.
-Liste os ficheiros afetados pelos últimos 3 commits, sugira o ponto mínimo de rollback
+Liste os arquivos afetados pelos últimos 3 commits, sugira o ponto mínimo de rollback
 e apresente um plano de correção mais pequeno.
 ```
 
 ## Fluxo recomendado
 
 ```text
-Detetar (testes/humano/CI)
+Detectar (testes/humano/CI)
     → Conter (parar de escrever, isolar o ramo)
     → Diagnosticar (ver «diagnosticar antes de corrigir»)
     → Retentar em passos pequenos
@@ -83,10 +84,3 @@ Em cenários multi-Agent, ver [colaboração multi-Agent](/pt/cases/workflows/mu
 - [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/)
 - [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
 - [Referência de erros](/pt/guide/reference/error-reference/)
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre transferência e retoma, diagnóstico, regras de comando e referência de erros; esta página descreve o método geral de contenção de falhas e avanço contínuo, sem transformar botões ou comandos de um cliente específico em regra fixa.  
-**Última verificação:** 2026-07-26

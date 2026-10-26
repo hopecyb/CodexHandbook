@@ -4,15 +4,16 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Đã đối chiếu với các trang chính thức hiện hành về App, CLI, IDE, Cloud, Authentication và Pricing. Bảng chỉ giữ lại các khả năng được mô tả rõ như nơi làm việc, ngữ cảnh, cách xem xét và giới hạn đăng nhập; không suy đoán những tính năng biến động nhanh bằng nhãn 'mạnh / trung bình / yếu'."
   checkedAt: "2026-08-26"
-title: Đối chiếu tính năng
-description: So sánh ứng dụng máy tính, CLI, IDE và Cloud theo nơi làm việc, vị trí chạy và cách xem xét kết quả.
-locale: vi
-source_locale: zh-CN
-source_revision: b3d30b0
-translation_status: draft
-translated_at: 2026-09-20
+title: "Đối chiếu tính năng"
+description: "So sánh ứng dụng máy tính, CLI, IDE và Cloud theo nơi làm việc, vị trí chạy và cách xem xét kết quả."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "b3d30b0"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 30
+reviewed_at: "2026-10-26"
 ---
 
 Bảng này chỉ so sánh **những cách làm việc chính tương đối ổn định**; nó không biến các tính năng nhỏ thay đổi nhanh thành cam kết lâu dài. Hãy dùng [sơ đồ chọn ứng dụng](/vi/guide/choose-your-client/) để quyết định trước, rồi đối chiếu các khác biệt tại đây.
@@ -67,13 +68,3 @@ Plugins, Scheduled tasks, thông báo, mô hình và chính sách tổ chức th
 - Đăng nhập bằng API key có hỗ trợ một tính năng của ChatGPT hoặc Cloud không
 
 Nguyên tắc lựa chọn vẫn đơn giản: **Dùng IDE cho mã ở phạm vi nhỏ, CLI cho quy trình trong terminal, ứng dụng máy tính để điều phối tác vụ trên máy và Cloud để thực thi từ xa trong môi trường cô lập.**
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE / Cloud
-
-**Căn cứ kiểm chứng:** Đã đối chiếu với các trang chính thức hiện hành về App, CLI, IDE, Cloud, Authentication và Pricing. Bảng chỉ giữ lại các khả năng được mô tả rõ như nơi làm việc, ngữ cảnh, cách xem xét và giới hạn đăng nhập; không suy đoán những tính năng biến động nhanh bằng nhãn “mạnh / trung bình / yếu”.
-
-**Kiểm chứng gần nhất:** 2026-08-26

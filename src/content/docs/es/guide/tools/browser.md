@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Codex (seg\u00fan versi\u00f3n y permisos)"
+  basis: "El OpenAI Help Center ya publica explicaciones del navegador integrado en la App de escritorio: se pueden abrir páginas en Work o Codex, cambiar pestañas, descargar archivos, usar modo de anotación y aprobar el acceso sitio a sitio. Esta página se centra en escenarios adecuados de la herramienta de navegador, la diferencia con búsqueda/Computer Use y los límites de seguridad."
+  checkedAt: "2026-07-26"
 title: Herramienta de navegador
 description: Dejar que Codex abra páginas web, compruebe el estado de la UI y verifique comportamiento frontend — capacidades y límites.
 locale: es
 source_locale: zh-CN
-source_revision: 802f889
+source_revision: '802f889'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
 ---
@@ -21,7 +26,7 @@ Suele usarse para:
 
 - Cómo se ve ahora de verdad esta página
 - Qué ocurre al pulsar este botón
-- Si el layout se rompe a un ancho real
+- Si el diseño se rompe a un ancho real
 
 Para esas preguntas, leer solo el código o la descripción textual suele no bastar: hay que abrir la página.
 
@@ -35,7 +40,7 @@ Para esas preguntas, leer solo el código o la descripción textual suele no bas
 
 | Adecuado | No adecuado |
 |---|---|
-| Abrir la página del dev server local y mirar el layout | Rastreo masivo de sitios con ToS restrictivo |
+| Abrir la página del dev server local y mirar el diseño | Rastreo masivo de sitios con ToS restrictivo |
 | Verificar 404 en enlaces de documentación pública | Iniciar sesión automática en sistemas no autorizados |
 | Contrastar página estática e implementación | Sustituir un framework completo de tests E2E |
 | Leer texto visible de la página para depurar | Sitios que exigen CAPTCHA / verificación humana compleja |
@@ -58,13 +63,13 @@ Puede ayudarte a revisar páginas, capturas y algunas interacciones, pero no sus
 
 ### 2. Que la página se abra no significa que no haya problemas
 
-Que se abra solo dice «la página existe»; layout, copy, interacción y enlaces hay que seguir mirándolos.
+Que se abra solo dice «la página existe»; diseño, texto, interacción y enlaces hay que seguir mirándolos.
 
 ### 3. ¿Cuándo usarla?
 
 Los escenarios más habituales:
 
-- Ver si la página local tiene problemas de layout
+- Ver si la página local tiene problemas de diseño
 - Comprobar si un enlace es 404
 - Contrastar a grandes rasgos página y diseño
 - Confirmar «el código parece bien, ¿y la página real también?»
@@ -86,12 +91,12 @@ la herramienta de navegador suele encajar mejor que el análisis de texto puro.
 3. **Límites claros**: prohibir acceso a internet externo; prohibir enviar formularios a producción
 4. **Aceptación**: contrastar con [Verificar artefactos](/es/guide/quality/verify-artifacts/) y capturas
 
-## Formulación usable directamente
+## Instrucciones listas para usar
 
 Puedes pedir así:
 
 ```text
-Accede solo a http://localhost:4321/guide/foundations/local-vs-cloud/ y revisa el layout de la primera pantalla y la sensación de la imagen de cabecera.
+Accede solo a http://localhost:4321/es/guide/foundations/local-vs-cloud/ y revisa el diseño de la primera pantalla y el aspecto de la imagen de cabecera.
 No accedas a internet externo; no envíes ningún formulario.
 Si hay problemas, da evidencia en captura y sugerencias de cambio.
 ```
@@ -116,10 +121,3 @@ Concepto de aprobación: [Permisos y aprobaciones](/es/guide/foundations/permiss
 - [ ] El alcance de acceso está fijado en el prompt
 - [ ] Los problemas visuales clave tienen captura o explicación textual
 - [ ] Coincide con la conclusión de tests unitarios/E2E o la diferencia conocida está documentada
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / Codex (según versión y permisos)  
-**Base de verificación:** El OpenAI Help Center ya publica explicaciones del navegador integrado en la App de escritorio: se pueden abrir páginas en Work o Codex, cambiar pestañas, descargar archivos, usar modo de anotación y aprobar el acceso sitio a sitio. Esta página se centra en escenarios adecuados de la herramienta de navegador, la diferencia con búsqueda/Computer Use y los límites de seguridad.  
-**Última verificación:** 2026-07-26

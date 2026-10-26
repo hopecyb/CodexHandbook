@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, App, IDE, CLI"
+  checkedAt: "2026-08-26"
 title: Delegieren und nachfassen
 description: Starte eine unabhängig ausführbare Cloud-Aufgabe und korrigiere im selben Chat Richtung und Ergebnisabnahme.
 sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: 38b322f
+source_revision: "38b322f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Delegieren bedeutet nicht, „ein Problem wegzuwerfen“, sondern einem unabhängigen Cloud-Chat Ziel, Einschränkungen, Umgebung und Fertigstellungskriterien zu übergeben. Die Aufgabe kann im Hintergrund laufen. Du kannst Protokolle lesen, Kontext ergänzen, Änderungen verlangen und abschließend den Diff prüfen.
@@ -41,7 +45,7 @@ Zusätzliche Einschränkung: Ändere nicht den globalen HTTP-Client. Begrenze de
 Erkläre zuerst, wie dies den aktuellen Ansatz verändert, und fahre dann fort.
 ```
 
-Der bestehende Kontext bleibt im selben Chat erhalten. Das eignet sich zur Korrektur desselben Ziels. Für ein vollständig unabhängiges Ziel erstellst du einen neuen Chat. Parallele Aufgaben dürfen nicht denselben Branch oder dieselbe Dateimenge beschreiben.
+Der bestehende Kontext bleibt im selben Chat erhalten. Das eignet sich zur Korrektur desselben Ziels. Für ein vollständig unabhängiges Ziel erstellst du einen neuen Chat. Parallele Aufgaben dürfen nicht in denselben Branch oder dieselben Dateien schreiben.
 
 ## Nach dem Ergebnis
 
@@ -67,11 +71,3 @@ Falls ja, behebe nur diese Regression und führe die auth-Tests erneut aus. Fall
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud, App, IDE, CLI
-
-**Zuletzt geprüft:** 2026-08-26

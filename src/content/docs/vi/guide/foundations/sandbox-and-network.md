@@ -1,19 +1,24 @@
 ---
-title: Sandbox và mạng
-description: Hiểu cô lập thực thi, truy cập mạng và ranh giới rủi ro.
-locale: vi
-source_locale: zh-CN
-source_revision: 2cf2c46
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Sandbox và mạng"
+description: "Hiểu cô lập thực thi, truy cập mạng và ranh giới rủi ro."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "2cf2c46"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 80
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Tài liệu Codex CLI hiện hành trên OpenAI Help Center vẫn mô tả Full Auto là «sandboxed, network-disabled environment scoped to the current directory» và phân biệt với chế độ phê duyệt; trang này chỉ giải thích Sandbox và mạng là hai ranh giới rủi ro khác nhau, cùng cách người mới nên thắt phạm vi truy cập."
+  checkedAt: "2026-07-26"
 ---
 
 «Sandbox» và «mạng» thực ra nói về hai việc: Sandbox giới hạn nó được chạm chỗ nào; mạng giới hạn nó được kết nối tới đâu.
 
-**Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được, giảm mặt phẳng thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
+**Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được, giảm phạm vi ảnh hưởng của thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
 
 ![Minh họa: agent làm việc trong hộp cát bằng kính, giơ thẻ yêu cầu, người bên ngoài bấm phê duyệt; dây mạng đã được rút và khóa](/illustrations/sandbox-and-approval.webp)
 
@@ -70,10 +75,3 @@ Hai cánh cửa không chỉ là thiết lập kỹ thuật — cũng là cách 
 Lối vào thiết lập phía sản phẩm xem [Cài đặt](/vi/guide/desktop-app/settings/) của Desktop App; chi tiết chính thức xem [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Khi mới dùng, thà hạn chế nhiều hơn một chút trước — đừng mở hết cửa khi chưa hiểu rủi ro.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Tài liệu Codex CLI hiện hành trên OpenAI Help Center vẫn mô tả Full Auto là «sandboxed, network-disabled environment scoped to the current directory» và phân biệt với chế độ phê duyệt; trang này chỉ giải thích Sandbox và mạng là hai ranh giới rủi ro khác nhau, cùng cách người mới nên thắt phạm vi truy cập.  
-**Kiểm chứng gần nhất:** 2026-07-26

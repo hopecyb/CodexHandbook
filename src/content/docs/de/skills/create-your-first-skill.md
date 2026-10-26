@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Die aktuelle Codex-Laufzeit unterstützt projektinterne Skill-Verzeichnisse, Skills über `SKILL.md` und explizite Probeläufe; diese Seite ist eine stabile Einstiegsübung für den ersten Skill."
+  checkedAt: "2026-07-26"
 title: Ersten Skill erstellen
-description: Von null einen commitbaren pr-review-Skill — inkl. Test und Team-Sharing.
+description: Einen pr-review-Skill von Grund auf erstellen, testen und über das Repository mit dem Team teilen.
 locale: de
 source_locale: zh-CN
-source_revision: 14414f5
+source_revision: "14414f5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Wenn du Aufgaben schon verteilst, aber noch keinen echten Skill gebaut hast, zeigt diese Seite den Grundablauf.
@@ -61,7 +66,7 @@ description: "Prüft den git Diff, listet Blocker, Testlücken und Stilhinweise.
 # PR-Review
 
 ## Eingabe
-- Standard-Vergleichsbranch: main (sonst Default-Branch)
+- Standard-Vergleichsbranch: main (falls nicht vorhanden, den Standardbranch verwenden)
 
 ## Ablauf
 1. Geänderte Dateien und Typen listen (Feature/Fix/Refactor/Docs)
@@ -110,7 +115,7 @@ git add .agents/skills/pr-review
 git commit -m "docs: add pr-review skill for Codex"
 ```
 
-In Team-README oder `AGENTS.md` einen Satz: „Vor dem Merge `$pr-review` nutzen.“
+In Team-README oder `AGENTS.md` einen Satz: „Vor dem Merge kann `$pr-review` verwendet werden.“
 
 ## Häufige Missverständnisse
 
@@ -148,9 +153,3 @@ Ein „kleiner, stabiler“ Skill macht klare Arbeitsmuster leichter wiederverwe
 
 ## Quellen
 - Offizielle OpenAI-Codex-Skills-Beispiele und `skill-creator` (falls vorhanden)
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Die aktuelle Codex-Laufzeit unterstützt projektinterne Skill-Verzeichnisse, Skills über `SKILL.md` und explizite Probeläufe; diese Seite ist eine stabile Einstiegsübung für den ersten Skill.  
-**Zuletzt geprüft:** 2026-07-26

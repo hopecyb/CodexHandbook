@@ -8,15 +8,15 @@ title: Use a Skill
 description: Explicit and implicit Skill triggers, and how to write a good description.
 locale: en
 source_locale: zh-CN
-source_revision: ef92b69
+source_revision: 'ef92b69'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 A common early mistake is thinking "once installed, it just works." Using a Skill means having Codex follow a pre-written workflow.
 
-A Skill can be **named explicitly** or **chosen automatically** when the scene fits. Knowing both avoids debugging dead ends.
+A Skill can be **named explicitly** or **chosen automatically** when the task fits. Knowing both avoids debugging dead ends.
 
 
 ## Trigger modes
@@ -51,7 +51,7 @@ Auto-trigger depends on a clear `description` and whether the task looks like it
 
 ### 2. Natural language and `$name` always behave the same
 
-They do not.
+They do not necessarily behave identically.
 
 `$name` is explicit—good for verification and forcing use. Natural language is convenient but the model may pick the wrong Skill or none at all.
 

@@ -3,12 +3,17 @@ title: Apresentações
 description: Gerar, rever e exportar diapositivos e decks — acordos de estrutura, master e notas de apresentação.
 locale: pt
 source_locale: zh-CN
-source_revision: fb319fa
+source_revision: "fb319fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzada com capítulos já verificados deste manual sobre prioridade de Artefatos, Validar fontes, imagens/ecrãs e Verificar Artefatos; o conteúdo limita-se ao método estável «primeiro estrutura, depois texto, por último estilo e exportação».
+  checkedAt: '2026-07-26'
 ---
 
 Apresentações (PPT, Keynote, Google Slides, Marp/Reveal, etc.) valorizam **estrutura narrativa** e **consistência visual**. O Agent é forte em esboço e rascunho; master e normas de marca ainda precisam de revisão humana.
@@ -30,7 +35,7 @@ Com o Codex em decks, o maior valor é montar primeiro estrutura, ordem de pági
 | Google Slides | Colaboração em tempo real (muitas vezes via exportação ou MCP) |
 | Exportação PDF | Distribuição só de leitura |
 
-No início da Tarefa, fixe o formato — evite misturar várias cadeias de Ferramentas.
+No início da tarefa, fixe o formato — evite misturar várias cadeias de ferramentas.
 
 Escolha pelo destinatário final:
 
@@ -76,7 +81,7 @@ Muitas vezes o que realmente afeta a compreensão é:
 
 ### 2. Se o Agent gera o rascunho inteiro, não precisa de revisão humana?
 
-Também não.  
+Também não.
 Revise sempre:
 
 - Marca e master da empresa
@@ -86,7 +91,7 @@ Revise sempre:
 
 ### 3. Página mais cheia = informação mais completa?
 
-Normalmente fica mais difícil de apresentar.  
+Normalmente fica mais difícil de apresentar.
 Com demasiados bullets, figuras e conclusões numa página, a audiência não apanha o foco.
 
 ## Ordem habitual de produção
@@ -102,12 +107,12 @@ Se quiser que o Codex faça um deck agora:
 
 Nesta ordem costuma fechar melhor: primeiro estrutura, depois texto, por último estilo.
 
-## Pontos-chave do Prompt
+## Pontos-chave do prompt
 
 - **Audiência**: colegas técnicos vs gestão — profundidade de jargão
 - **Limite de páginas**: evitar 80 páginas de enchimento
 - **Marca**: cor principal, caminho do logo, proibir clipart (se a empresa tiver norma)
-- **Gráficos de dados**: indique o ficheiro-fonte; exija atualizável, não inventar a partir de ecrã
+- **Gráficos de dados**: indique o ficheiro-fonte; exija atualizável, não substituir por capturas de tela nem inventar dados
 
 Também pode formular assim:
 
@@ -115,7 +120,7 @@ Também pode formular assim:
 
 Isto costuma produzir uma versão mais trabalhável do que «faça um PPT impressionante».
 
-Necessidades de imagem: [Imagens e ecrãs](/pt/guide/files-and-artifacts/images-and-screenshots/); só geração de imagens: [Geração de imagens](/pt/guide/tools/image-generation/).
+Necessidades de imagem: [Imagens e capturas de tela](/pt/guide/files-and-artifacts/images-and-screenshots/); só geração de imagens: [Geração de imagens](/pt/guide/tools/image-generation/).
 
 ## Aceitação
 
@@ -147,10 +152,3 @@ Esta divisão costuma poupar tempo e facilitar o controlo de qualidade.
 - [ ] Esboço confirmado por humano antes de gerar o texto completo
 - [ ] Abre no ambiente de apresentação alvo sem fontes erradas
 - [ ] Dados-chave rastreáveis até ao ficheiro-fonte
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre prioridade de Artefatos, Validar fontes, imagens/ecrãs e Verificar Artefatos; o conteúdo limita-se ao método estável «primeiro estrutura, depois texto, por último estilo e exportação».  
-**Última verificação:** 2026-07-26

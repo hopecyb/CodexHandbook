@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo explica cómo conservar el contexto del proyecto a largo plazo; conceptos, ejemplos y límites se han revisado, y el cuerpo no depende de hechos volátiles de producto.
+  checkedAt: '2026-07-26'
 title: Contexto del proyecto
 description: Descripción del proyecto y trasfondo a nivel de directorio.
 locale: es
 source_locale: zh-CN
-source_revision: fb3eb50
+source_revision: "fb3eb50"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
 
-El «Contexto del proyecto» es la información de fondo estable a largo plazo en este proyecto, la que se reutiliza en muchas Tareas.
+El «contexto del proyecto» es la información de fondo estable a largo plazo en este proyecto, la que se reutiliza en muchas tareas.
 
 Por ejemplo:
 
@@ -25,9 +30,9 @@ Si cada vez dependes de una explicación oral improvisada, no solo cansa: tambi�
 
 ## Qué significa concretamente
 
-Puedes ver el Contexto del proyecto como la explicación de «cómo se colabora por defecto a largo plazo en este proyecto».
+Puedes ver el contexto del proyecto como la explicación de «cómo se colabora por defecto a largo plazo en este proyecto».
 
-No describe qué hay que hacer en esta Tarea concreta; le dice de antemano a Codex:
+No describe qué hay que hacer en esta tarea concreta; le dice de antemano a Codex:
 
 - Cómo se organiza normalmente este repositorio
 - Qué hábitos valen a largo plazo
@@ -38,59 +43,59 @@ Así, cada vez que entra en el proyecto, no tiene que adivinar desde cero los h�
 
 ## Por qué aquí suelen aparecer problemas
 
-Quien usa Codex por primera vez mete todos los requisitos en la Tarea actual.
+Quien usa Codex por primera vez mete todos los requisitos en la tarea actual.
 
 A corto plazo parece funcionar, pero pronto aparecen problemas:
 
 - Hay que volver a explicar cada vez
-- La formulación no coincide entre Tareas
+- La formulación no coincide entre tareas
 - Se olvidan reglas clave
 - Cuando la conversación se alarga, el trasfondo realmente importante deja de destacar
 
 La forma de tratarlo se puede dividir en dos:
 
-- Meter las **reglas válidas a largo plazo** en el Contexto del proyecto
-- Escribir los **requisitos especiales de esta Tarea** en el Prompt actual
+- Meter las **reglas válidas a largo plazo** en el contexto del proyecto
+- Escribir los **requisitos especiales de esta tarea** en el prompt actual
 
-## Cómo distinguirlo de la Tarea actual
+## Cómo distinguirlo de la tarea actual
 
 La separación más simple son dos capas:
 
-- **Contexto del proyecto**: en este proyecto se hace así normalmente
-- **Prompt de la Tarea**: esta vez quiero que hagas concretamente esto
+- **contexto del proyecto**: en este proyecto se hace así normalmente
+- **prompt de la tarea**: esta vez quiero que hagas concretamente esto
 
 Por ejemplo:
 
-- «Los componentes van unidos en `src/components/`» → Contexto del proyecto
-- «Esta vez solo cambia el copy del banner de la home» → Tarea actual
+- «Todos los componentes se guardan en `src/components/`» → contexto del proyecto
+- «Esta vez solo cambia el texto del banner de la página de inicio» → tarea actual
 
 ## Malentendidos frecuentes
 
-### 1. ¿Cuanto más Contexto del proyecto, mejor?
+### 1. ¿Cuanto más contexto del proyecto, mejor?
 
 Lo que realmente aporta valor es lo que:
 
 - Vale a largo plazo
-- Se usa en muchas Tareas
+- Se usa en muchas tareas
 - Si no se dice, es fácil tropezar
 
 Si metes también detalles de una sola vez, la propia descripción del proyecto se convierte en ruido.
 
-### 2. Si en cada Tarea lo digo claro, ¿no hace falta Contexto del proyecto?
+### 2. Si en cada tarea lo digo claro, ¿no hace falta contexto del proyecto?
 
 A corto plazo sirve; a largo plazo cansa mucho.
 
 Pronto te encontrarás con:
 
 - Repetir las mismas frases cada vez
-- Formulaciones distintas entre Tareas
+- Formulaciones distintas entre tareas
 - Reglas dichas esta vez y olvidadas la siguiente
 
-### 3. ¿El Contexto del proyecto no limita demasiado?
+### 3. ¿El contexto del proyecto no limita demasiado?
 
-No, siempre que lo trates como reglas por defecto a largo plazo, no como órdenes muertas e intocables.
+No, siempre que lo trates como reglas por defecto a largo plazo, no como órdenes rígidas e inalterables.
 
-Los requisitos realmente especiales siguen debiendo ir en la Tarea actual.
+Los requisitos realmente especiales siguen debiendo ir en la tarea actual.
 
 ## Dónde se suele colocar
 
@@ -101,9 +106,9 @@ Pon las convenciones estables en la descripción del proyecto, por ejemplo `AGEN
 - Estilo de código
 - Prohibiciones
 
-El Prompt de la Tarea solo escribe las **diferencias de esta vez**; el trasfondo largo y repetido se hunde a nivel de proyecto. La configuración en profundidad está en el hito posterior `06-customization`.
+Escribe en el prompt solo los **requisitos específicos de esta tarea**; guarda el contexto extenso y recurrente en las instrucciones del proyecto. La configuración en profundidad está en el hito posterior `06-customization`.
 
-## Cómo decidir si meterlo en el Contexto del proyecto
+## Cómo decidir si meterlo en el contexto del proyecto
 
 Si una explicación cumple estas dos condiciones, merece la pena considerarlo:
 
@@ -112,19 +117,12 @@ Si una explicación cumple estas dos condiciones, merece la pena considerarlo:
 
 ## Qué priorizar al organizar
 
-Lo que suele hundirse primero son estas categorías:
+Estas categorías suelen ser las primeras que conviene guardar:
 
 - Comandos habituales
 - Convenciones de directorios
 - Estilo de código
 - Zonas prohibidas de cambio
-- Forma de Verificación por defecto
+- Método de verificación por defecto
 
-Toda explicación que la próxima vez es muy probable que vuelva a usarse merece hundirse en el Contexto del proyecto, sin tener que teclearla de nuevo cada vez.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica cómo sedimentar Contexto de proyecto a largo plazo; conceptos, ejemplos y límites se han revisado, y el cuerpo no depende de hechos volátiles de producto.  
-**Última verificación:** 2026-07-26
+Toda explicación que la próxima vez es muy probable que vuelva a usarse merece guardarse en el contexto del proyecto, sin tener que teclearla de nuevo cada vez.

@@ -8,9 +8,10 @@ title: 프롬프트 템플릿
 description: 작업 유형별 재사용 프롬프트 골격—이해, 생성, 수정, 진단, 검토, 연구, 자동화.
 locale: ko
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: "fae2ed3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -30,13 +31,13 @@ translated_at: 2026-09-20
 1. 작업과 가장 가까운 템플릿 유형을 고른다
 2. `【】` 자리 표시를 실제 작업으로 바꾼다
 3. 관련 없는 단락을 지운다
-4. 이번 작업만의 제약과 수락을 보완한다
+4. 이번 작업만의 제약과 완료 기준을 보완한다
 
-템플릿은 비계에 가깝고, 표준 답이 아닙니다.
+템플릿은 작업의 틀을 잡아 주는 발판이며, 표준 답이 아닙니다.
 
 | 템플릿 | 적용 장면 |
 |---|---|
-| [이해](/ko/prompts/templates/understand/) | 코드베이스·문서·자료를 읽고 먼저 인지를 세움 |
+| [이해](/ko/prompts/templates/understand/) | 코드베이스·문서·자료를 읽고 먼저 내용을 파악 |
 | [생성](/ko/prompts/templates/create/) | 기능·원고·산출물을 처음부터 구현 |
 | [수정](/ko/prompts/templates/change/) | 기존 기반에서 반복 변경 |
 | [진단](/ko/prompts/templates/diagnose/) | 문제 근본 원인을 찾고, 먼저 코드는 수정하지 않음 |
@@ -92,7 +93,7 @@ translated_at: 2026-09-20
 
 - 실제 목표가 무엇인지
 - 제약을 어디까지 둘지
-- 수락을 어떻게 쓸지
+- 완료 기준을 어떻게 쓸지
 
 ### 3. 템플릿은 완전할수록 좋다
 

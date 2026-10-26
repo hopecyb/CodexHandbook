@@ -3,155 +3,166 @@ title: "Référence d'erreurs"
 description: Index d'apprentissage des erreurs courantes, codes de sortie et modes d'échec — pointe vers dépannage, pas support officiel.
 locale: fr
 source_locale: zh-CN
-source_revision: 955c0a6
+source_revision: '955c0a6'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cette page est un index d’orientation des erreurs, sans prétendre être un dictionnaire complet. Les cinq catégories — authentification, permissions, environnement, réseau et logique de la tâche — ont été recoupées avec les chapitres actuels sur le CLI, Cloud, les permissions et la configuration ; elles ne dépendent pas d’une table fixe de codes d’erreur.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 100
 ---
 
-Beaucoup fixent une ligne en anglais et devinent. Classifier le problème d'abord fonctionne généralement mieux.
+Face à une erreur, il est tentant de relire la même ligne en anglais et de deviner la réponse. Commencer par classer le problème est généralement plus efficace.
 
-Décidez si cela ressemble à **auth, permissions, environnement, réseau ou logique de tâche**. Cette page résume messages fréquents et étapes suivantes — pas un dictionnaire complet d'erreurs ; comportement le plus récent = doc officielle et sortie client.
+Déterminez s’il concerne **l’authentification, les permissions, l’environnement, le réseau ou la logique de la tâche**. Cette page résume le sens des messages fréquents et indique la suite à donner. Ce n’est pas un dictionnaire exhaustif ; pour le comportement actuel, consultez la documentation officielle et la sortie du client.
 
 ## Comment lire une erreur
 
-1. Classe de mot-clé : auth, permissions, environnement, réseau, contexte
-2. Étape : démarrage, installation, exécution, push, sortie
-3. Sauter vers la page sujet correspondante
+Commencez par trois étapes :
 
-Souvent plus rapide que deviner.
+1. Identifiez la catégorie des mots-clés : authentification, permissions, environnement, réseau ou contexte.
+2. Repérez l’étape concernée : démarrage, installation, exécution, push ou sortie.
+3. Consultez la page de dépannage correspondante.
+
+Cette démarche est souvent plus rapide que de deviner la cause.
 
 Index global : [Dépannage](/fr/guide/reference/troubleshooting/)
 
 ## Authentification et compte
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| Authentication failed / 401 | Token expiré, non connecté | [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/) |
-| Politique organisation | Org a désactivé fonctionnalité ou modèle | Contacter admin ; [Compte et accès](/fr/guide/getting-started/account-plans-and-access/) |
-| Rate limit / 429 | Trop fréquent ou quota | Retry plus tard ; vérifier usage du plan |
+| Authentication failed / 401 | Jeton expiré ou absence de connexion | [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | Fonction ou modèle désactivés par l’organisation | Contacter l’administrateur ; consulter [Compte et accès](/fr/guide/getting-started/account-plans-and-access/) |
+| Rate limit / 429 | Fréquence des requêtes ou quota | Réessayer plus tard et vérifier l’utilisation de l’offre |
 
 ## Idées reçues courantes
 
-### 1. Erreur longue ≠ problème plus dur
+### 1. Un long message indique un problème plus complexe
 
-Le signal utile est souvent un court mot-clé dans une longue stack.
+Un message long contient souvent beaucoup de contexte. Les mots-clés utiles peuvent se limiter à quelques lignes.
 
-### 2. Exit non-zéro ≠ le modèle ne peut pas faire la tâche
+### 2. Un code de sortie non nul signifie que le modèle ne sait pas réaliser la tâche
 
-Peut être permissions, réseau, format de sortie ou conditions d'échec de tâche.
+Il peut simplement indiquer :
 
-### 3. 401 / 403 / 429 diffèrent
+- des permissions manquantes ;
+- un réseau inaccessible ;
+- un format de sortie non conforme ;
+- une condition d’échec déclenchée par la tâche elle-même.
 
-- `401` : problème d'authentification
-- `403` : authentifié mais pas autorisé
-- `429` : trop rapide — retry plus tard
+### 3. 401, 403 et 429 sont équivalents
 
-### 4. La dernière ligne n'est pas toujours la cause racine
+Ces codes signalent généralement des situations différentes :
 
-Les lignes précédentes peuvent montrer étape, fichier, commande ou raison sous-jacente.
+- `401` : l’authentification n’a pas abouti ;
+- `403` : l’identité est connue, mais l’action n’est pas autorisée ;
+- `429` : les requêtes sont trop fréquentes ; réessayez plus tard.
+
+### 4. La dernière ligne est toujours la plus importante
+
+Elle peut simplement résumer l’échec. Les lignes précédentes indiquent parfois l’étape déclenchante, le fichier, la commande ou l’outil en échec, ainsi qu’une cause plus précise.
 
 ## CLI et commandes
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| command not found: codex | Non installé ou PATH | [Installer CLI](/fr/guide/getting-started/install-cli/) |
-| Config parse error | Syntaxe TOML/YAML | [Configuration CLI](/fr/guide/cli/configuration/) |
-| Permission denied (write) | Deny bac à sable ou approbation | [Approbations et bac à sable](/fr/guide/cli/approvals-and-sandbox/) |
-| Exit non-zéro (exec) | Tâche échouée ou critères de complétion non atteints | Vérifier stderr ; renforcer prompt |
+| command not found: codex | Installation absente ou problème de PATH | [Installer le CLI](/fr/guide/getting-started/install-cli/) |
+| Config parse error | Syntaxe TOML/YAML | [Configuration du CLI](/fr/guide/cli/configuration/) |
+| Permission denied (write) | Refus du bac à sable ou de l’approbation | [Approbations et bac à sable](/fr/guide/cli/approvals-and-sandbox/) |
+| Code de sortie non nul (`exec`) | Échec de la tâche ou conditions de fin non satisfaites | Examiner les journaux stderr et préciser le prompt |
 
-## Cinq catégories
+## Commencer par la catégorie
 
-| Catégorie | Vérifier |
+Si vous hésitez, répartissez les erreurs en cinq catégories :
+
+| Catégorie | Premiers éléments à vérifier |
 |---|---|
-| Auth | Compte, token, connexion |
-| Permissions | Approbation, bac à sable, accès dépôt |
-| Environnement | Installation, PATH, config, dépendances |
-| Réseau | Egress, proxy, accessibilité distant |
-| Logique de tâche | Prompt, fichiers d'entrée, exigences de sortie |
+| Authentification | Compte, jeton et état de connexion |
+| Permissions | Approbations, bac à sable et accès au dépôt |
+| Environnement | Installation, PATH, configuration et dépendances |
+| Réseau | Accès sortant, proxy et accessibilité du service distant |
+| Logique de la tâche | Prompt, fichiers d’entrée et exigences de sortie |
 
-Classer d'abord — la direction reste plus claire.
+Ce premier classement aide à garder une direction claire.
 
-## Comment utiliser cette page
+## Utilisation de l’index
 
-Traitez-la comme table de triage — pas dictionnaire complet :
+Utilisez cette page pour orienter le diagnostic, sans la traiter comme un dictionnaire complet :
 
-- Repérer mot-clé
-- Trouver catégorie
-- Ouvrir page de dépannage détaillée
+- repérez un mot-clé ;
+- trouvez sa catégorie ;
+- consultez la page de dépannage détaillée.
 
-Ou traduire en questions simples :
+Vous pouvez aussi reformuler l’erreur en question simple :
 
-- Pas connecté ?
-- Pas de permission ?
-- Commande non installée ?
-- Réseau inaccessible ?
-- Instructions floues à Codex ?
+- La connexion a-t-elle échoué ?
+- Les permissions manquent-elles ?
+- La commande est-elle correctement installée ?
+- Le réseau est-il accessible ?
+- Les instructions données à Codex sont-elles assez claires ?
 
-Utilisez cette page pour atteindre la bonne catégorie quand incertain.
+Si vous ne savez pas encore où poursuivre, commencez par identifier une grande catégorie.
 
 ## Permissions et bac à sable
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| User rejected tool call | Vous ou politique a rejeté l'action | Confirmer si approbation était correcte ; ou changer tâche |
-| Sandbox violation | Chemin ou commande hors limites | [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress bloqué | Cloud : [Accès internet](/fr/guide/web-and-cloud/internet-access/) |
+| User rejected tool call | Vous ou une politique avez refusé l’action | Déterminer si l’action doit être approuvée, ou modifier la tâche |
+| Sandbox violation | Chemin d’écriture ou commande hors du périmètre | [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/) |
+| Network access denied | Accès réseau sortant interdit | Cloud : [Accès Internet](/fr/guide/web-and-cloud/internet-access/) |
 
 ## Cloud et GitHub
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| Repository access denied | Scope OAuth insuffisant | [Connecter GitHub](/fr/guide/web-and-cloud/connect-github/) |
-| Clone failed | Nom dépôt, permissions, réseau | [Dépannage Cloud](/fr/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Mauvais nom ou scope | [Secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Protection de branche | [Créer pull requests](/fr/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Portée OAuth insuffisante | [Connecter GitHub](/fr/guide/web-and-cloud/connect-github/) |
+| Clone failed | Nom du dépôt, permissions ou réseau | [Dépannage de Cloud](/fr/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Nom incorrect ou problème de portée | [Secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Protection de branche | [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP et extensions
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| MCP server failed to start | Chemin commande, dépendance manquante | [Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/) |
-| Tool timeout | API externe lente ou down | Retry ; vérifier logs MCP |
-| Unknown tool | Config/version serveur incompatible | Redémarrer session ; mettre à jour config |
+| MCP server failed to start | Chemin de commande incorrect ou dépendances manquantes | [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/) |
+| Tool timeout | API externe lente ou indisponible | Réessayer et examiner les journaux MCP |
+| Unknown tool | Configuration incompatible avec la version du serveur | Redémarrer la session et mettre à jour la configuration |
 
 ## Contexte et modèle
 
-| Message ou symptôme | Cause probable | Étape suivante |
+| Message ou symptôme | Cause possible | Étape suivante |
 |---|---|---|
-| Context length exceeded | Conversation ou fichiers @ trop grands | [Compaction](/fr/guide/context/compaction/) · réduire portée |
-| Model not available | Limitation région ou plan | [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversation ou fichiers référencés avec @ trop volumineux | [Compaction](/fr/guide/context/compaction/) et réduction du périmètre |
+| Model not available | Modèle non pris en charge dans la région ou l’offre | [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/) |
 
-## Utiliser cette page
+## Parcours de recherche
 
-1. **Copier phrase clé** dans recherche client ou handbook
-2. Suivre table vers liste de contrôle sujet
-3. Encore bloqué : garder log complet ; voir [Ressources officielles](/fr/guide/reference/official-resources/)
+1. **Copiez la phrase clé** dans la recherche du client ou du manuel.
+2. Suivez le lien du tableau et appliquez les contrôles de la page correspondante.
+3. Si le problème persiste, conservez les journaux complets et consultez les [ressources officielles](/fr/guide/reference/official-resources/).
 
-## Aider les autres à vous aider
+## Informations à joindre à un signalement
 
-Inclure :
-
-- Type et version client (App / CLI / IDE / Cloud)
-- Système d'exploitation
-- Texte d'erreur complet (rédigé)
-- Non interactif ? CI ?
+- Type et version du client : App, CLI, IDE ou Cloud.
+- Système d’exploitation.
+- Message d’erreur complet après masquage des données sensibles.
+- Utilisation éventuelle du mode non interactif ou de la CI.
 
 ## Ordre de dépannage
 
-1. Capture d'écran ou copier erreur complète — pas seulement dernière ligne
-2. Classifier avant deviner détail technique
-3. Rappeler ce qui a changé récemment
-4. Changer une variable et retry une fois
-5. Puis demander avec contexte complet
+1. Copiez l’erreur complète ou faites une capture, sans vous limiter à la dernière ligne.
+2. Identifiez sa catégorie avant de chercher une explication technique précise.
+3. Retrouvez ce qui a été modifié récemment.
+4. Changez une seule variable, puis réessayez une fois.
+5. Si cela ne suffit pas, demandez de l’aide avec les informations complètes ou consultez la documentation officielle.
 
-Éviter mélanger plusieurs changements.
+Vous éviterez de mélanger plusieurs changements et faciliterez le diagnostic par d’autres personnes.
 
 ## Sources de référence
-- Documentation support OpenAI Codex
----
 
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Positionnée comme index de triage d'erreurs, pas dictionnaire complet ; cinq catégories recoupées avec chapitres CLI, Cloud, permissions et configuration actuels — pas de table de codes d'erreur fixe requise.  
-**Dernière vérification :** 2026-07-26
+- Documentation d’assistance OpenAI Codex

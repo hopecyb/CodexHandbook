@@ -3,11 +3,16 @@ title: Definições da extensão IDE
 description: Distingue a configuração partilhada do Agent das definições de comportamento dos editores da família VS Code.
 locale: pt
 source_locale: zh-CN
-source_revision: 6f28910
-translation_status: draft
+source_revision: "6f28910"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 No IDE existem duas camadas de definições:
@@ -50,7 +55,7 @@ Se uma definição parecer não produzir efeito, confirma primeiro qual a camada
 
 ## Verificar após uma alteração
 
-Altera apenas uma definição de cada vez. Por exemplo, depois de definir `chatgpt.reviewDelivery` como `detached`, executa `/review` num repositório Git e confirma se abre uma conversa de revisão separada. Regista o valor anterior; se o resultado não corresponder ao esperado, repõe-no e reinicia o editor.
+Altera apenas uma definição de cada vez. Por exemplo, depois de definir `chatgpt.reviewDelivery` como `detached`, executa `/review` num repositório Git e confirma se abre uma conversa de revisão separada. Regista o valor anterior; se o resultado não corresponder ao esperado, repõe-no e recarrega o editor.
 
 ## Fontes oficiais
 

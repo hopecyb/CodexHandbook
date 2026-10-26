@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "A documentação atual de modelos da OpenAI API continua a listar `Web search` como uma capacidade de ferramenta disponível; esta página enfatiza só o método «pesquisa para complementar fatos, priorizar fontes originais, conclusões voltam ao original para conferir», sem depender da UI concreta do produto."
+  checkedAt: "2026-07-26"
 title: Pesquisa Web
-description: Usar a pesquisa para complementar factos e indicar fontes.
+description: Usar a pesquisa para complementar fatos e indicar fontes.
 locale: pt
 source_locale: zh-CN
-source_revision: 7adcb92
+source_revision: "7adcb92"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
 
-A pesquisa Web serve para complementar factos — não para substituir a sua conclusão final.
+A pesquisa Web serve para complementar fatos — não para substituir a sua conclusão final.
 
 Adequado: consultar documentação pública, códigos de erro, notas de versão. Inadequado: tratar o resultado da pesquisa como conclusão jurídica/médica final.
 
@@ -29,9 +34,9 @@ O papel é encontrar primeiro o material; depois volta ao original para conferir
 
 ## Mal-entendidos habituais
 
-### 1. Encontrou resultados = a resposta é fiável?
+### 1. Encontrou resultados = a resposta é confiável?
 
-Não. Encontrar ≠ fiável; resumo fluido ≠ preciso.
+Não. Encontrar ≠ confiável; resumo fluido ≠ preciso.
 
 ### 2. Em que situações a pesquisa encaixa?
 
@@ -40,7 +45,7 @@ Cenários comuns:
 - Consultar documentação oficial
 - Consultar mensagens de erro
 - Consultar mudanças de versão
-- Verificar factos em páginas web públicas
+- Verificar fatos em páginas web públicas
 
 ### 3. Pode citar diretamente o resumo dos resultados?
 
@@ -56,9 +61,9 @@ Quando o problema for:
 
 - Juízo jurídico/médico/financeiro de alto risco
 - Precisar de confirmar o comportamento real da página
-- Precisar de conferir ficheiros locais do projeto, não material público
+- Precisar de conferir arquivos locais do projeto, não material público
 
-Aí combine outras Ferramentas ou Verificação humana.
+Aí combine outras ferramentas ou Verificação humana.
 
 ## Ordem da pesquisa
 
@@ -78,10 +83,3 @@ Pesquise primeiro e priorize fontes oficiais; ao dar conclusões, anexe ligaçõ
 ```
 
 A pesquisa dá pistas e fontes; no fim ainda tem de voltar ao original para conferir.
-
----
-
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** A documentação atual de modelos da OpenAI API continua a listar `Web search` como uma capacidade de Ferramenta disponível; esta página enfatiza só o método «pesquisa para complementar factos, priorizar fontes originais, conclusões voltam ao original para conferir», sem depender da UI concreta do produto.  
-**Última verificação:** 2026-07-26

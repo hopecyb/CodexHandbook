@@ -3,10 +3,15 @@ title: 拡張機能マップ
 description: タスク、ルール、手順、ツール、ガード、配布、起動、並行処理という八つの責務から Codex の拡張システムを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: 183812c
+source_revision: "183812c"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / デスクトップ App / Codex CLI / IDE（各仕組みの対応範囲は本文を参照）
+  basis: 2026-08-25 時点で参照できる OpenAI 公式の Skills、Plugins、MCP、Hooks、Scheduled tasks、Subagents の文書に基づき、責務モデルと入口の境界を再構成しました。
+  checkedAt: '2026-08-25'
 ---
 
 拡張の仕組みが混同されやすいのは、同じワークフローの中で一緒に使われることが多い一方、解決する問題はそれぞれ異なるためです。
@@ -95,10 +100,3 @@ MCP、Hook、子 Agent は、この仕組み化の段階で必ず通るもので
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [Codex 子 Agent](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**状態：** verified
-**対象製品：** ChatGPT Web / デスクトップ App / Codex CLI / IDE（各仕組みの対応範囲は本文を参照）
-**検証根拠：** 2026-08-25 時点で参照できる OpenAI 公式の Skills、Plugins、MCP、Hooks、Scheduled tasks、Subagents の文書に基づき、責務モデルと入口の境界を再構成しました。
-**最終検証：** 2026-08-25

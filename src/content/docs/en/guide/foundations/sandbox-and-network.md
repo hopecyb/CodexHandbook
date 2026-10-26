@@ -8,11 +8,12 @@ title: Sandbox and network
 description: Understand execution isolation, network access, and risk boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 2cf2c46
-translation_status: draft
+source_revision: '2cf2c46'
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 80
+reviewed_at: 2026-10-25
 ---
 
 “Sandbox” and “network” refer to different things: the sandbox limits what Codex can touch, while network controls where it can connect.

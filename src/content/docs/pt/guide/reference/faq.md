@@ -3,12 +3,17 @@ title: Perguntas frequentes
 description: Perguntas frequentes ao começar e ao usar.
 locale: pt
 source_locale: zh-CN
-source_revision: c9d7ed8
+source_revision: "c9d7ed8"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Cruzado item a item com as entradas verificadas de escolha de cliente, fluxo de trabalho, métodos de extensão, fluxo Cloud/GitHub e slash commands; esta página só navega perguntas frequentes e não declara por si só valores por omissão de produto variáveis.
+  checkedAt: '2026-07-26'
 ---
 
 Com perguntas soltas, começa pelo FAQ. Aqui não se desdobra o sistema completo; ajuda-te a encontrar depressa onde olhar a seguir.
@@ -21,35 +26,35 @@ Perante situações como:
 - Trava-te um problema, mas não merece abrir um capítulo inteiro
 - Só queres uma orientação de direção
 
-**P: Que cliente usar ao começar?**  
+**P: Que cliente usar ao começar?**
 R: A App de ambiente de trabalho. Ver [Escolher o cliente](/pt/guide/choose-your-client/).
 
-**P: Posso saltar a verificação e aceitar todas as alterações?**  
-R: Melhor não. Ver [Verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/).
+**P: Posso saltar a verificação e aceitar todas as alterações?**
+R: Melhor não. Ver [verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/).
 
-**P: Há template padrão de Prompt?**  
-R: Há um enquadramento, não magia. Ver [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/).
+**P: Há template padrão de prompt?**
+R: Há um enquadramento, não magia. Ver [Anatomia de uma boa tarefa](/pt/prompts/task-anatomy/).
 
-**P: O que faço se o manual chocar com a documentação oficial?**  
+**P: O que faço se o manual chocar com a documentação oficial?**
 R: Prevalece o oficial: [https://developers.openai.com/codex](https://developers.openai.com/codex), e agradece-se abrir um issue.
 
-**P: Em que se diferenciam AGENTS.md, Skill e MCP?**  
+**P: Em que se diferenciam AGENTS.md, Skill e MCP?**
 R: Ver [Mapa de capacidades de extensão](/pt/skills/capability-map/) e [Como escolher o método de extensão](/pt/skills/choosing-an-extension-method/).
 
-**P: Há um fluxo de trabalho padrão recomendado?**  
+**P: Há um fluxo de trabalho padrão recomendado?**
 R: Por omissão [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/).
 
-**P: Como o Cloud liga o GitHub e abre PRs?**  
+**P: Como o Cloud liga o GitHub e abre PRs?**
 R: Ver [Ligar o GitHub](/pt/guide/web-and-cloud/connect-github/) e [Criar Pull Request](/pt/guide/web-and-cloud/create-pull-requests/).
 
-**P: Dá para meter o CLI em CI?**  
-R: Sim; começa pelo [modo não interativo](/pt/guide/cli/non-interactive-mode/) e desenha Aprovação e Permissões.
+**P: Dá para meter o CLI em CI?**
+R: Sim; começa pelo [modo não interativo](/pt/guide/cli/non-interactive-mode/) e desenha aprovação e permissões.
 
-**P: Que slash commands há?**  
+**P: Que slash commands há?**
 R: Conforme o autocompletar `/` do cliente; explicação de aprendizagem em [Slash commands](/pt/guide/reference/slash-commands/).
 
-**P: E as rotas completas de criador/desenvolvedor/equipa?**  
-R: A rota de entrada já está escrita; casos em profundidade em [Casos de uso](/pt/cases/use-cases/); governação de equipa no roteiro M6 `11-team-enterprise`.
+**P: E as rotas completas de criador/desenvolvedor/equipa?**
+R: A rota de entrada já está escrita; casos em profundidade em [Casos de uso](/pt/cases/use-cases/); governação de equipa em [Equipas e empresas](/pt/guide/team-enterprise/).
 
 ## Mal-entendidos frequentes
 
@@ -81,10 +86,3 @@ Se estás travado e não sabes a que página ir:
 3. Segue a ligação à temática correspondente
 
 Costuma custar menos do que ir e vir pela barra lateral.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado item a item com as entradas verificadas de escolha de cliente, fluxo de trabalho, métodos de extensão, fluxo Cloud/GitHub e slash commands; esta página só navega perguntas frequentes e não declara por si só valores por omissão de produto variáveis.  
-**Última verificação:** 2026-07-26

@@ -1,14 +1,19 @@
 ---
-title: Quyền và phê duyệt
-description: Giải thích khi nào Codex cần bạn phê duyệt thao tác.
-locale: vi
-source_locale: zh-CN
-source_revision: 1beec63
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Quyền và phê duyệt"
+description: "Giải thích khi nào Codex cần bạn phê duyệt thao tác."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "1beec63"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 70
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Tài liệu nhập môn Codex CLI hiện hành trên OpenAI Help Center vẫn phân biệt rõ các chế độ phê duyệt (approval modes) và phân tầng rủi ro theo đọc tệp, ghi tệp, thực thi lệnh; trang này chỉ giải thích vì sao có phê duyệt, khi nào nên phê duyệt thận trọng, và người dùng phán đoán phạm vi ảnh hưởng thế nào — không tuyên bố giá trị mặc định sản phẩm cố định."
+  checkedAt: "2026-07-26"
 ---
 
 Codex không nên thực thi thao tác rủi ro cao khi chưa được đồng ý. **Phê duyệt** là cánh cổng trong cộng tác người–máy.
@@ -76,10 +81,3 @@ Thường thì không. Bạn có thể từ chối, rồi để nó đổi cách
 Chính sách chính thức và giá trị mặc định có thể thay đổi — hãy đối chiếu [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Vai trò của phê duyệt là để việc «được phép làm hay không» luôn do bạn quyết định.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Tài liệu nhập môn Codex CLI hiện hành trên OpenAI Help Center vẫn phân biệt rõ các chế độ phê duyệt (approval modes) và phân tầng rủi ro theo đọc tệp, ghi tệp, thực thi lệnh; trang này chỉ giải thích vì sao có phê duyệt, khi nào nên phê duyệt thận trọng, và người dùng phán đoán phạm vi ảnh hưởng thế nào — không tuyên bố giá trị mặc định sản phẩm cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

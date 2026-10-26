@@ -3,12 +3,17 @@ title: 출처 검증
 description: 연구 결론에 추적 가능한 근거를 요구합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6884531
+source_revision: '6884531'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 출처 추적 가능성을 요구·점검하는 방법만 설명합니다. 사이트 내 링크와 방법 표현을 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 결론이 외부 사실에 의존한다면, 결론만 받지 말고 출처도 함께 받으세요.
@@ -45,10 +50,3 @@ Agent에게 요구하세요.
 - 이미 낡지 않았는지
 
 연구형 작업에서 출처 자체는 결론 신뢰도의 일부입니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 출처 추적 가능성을 요구·점검하는 방법만 설명합니다. 사이트 내 링크와 방법 표현을 재확인했으며, 본문은 쉽게 바뀌는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

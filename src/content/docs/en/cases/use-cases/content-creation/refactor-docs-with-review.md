@@ -1,15 +1,23 @@
 ---
+caseCategory: development
+directoryOrder: 75
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "Cross-checked against this handbook's verified content artifacts, EPXV, build verification, and case template chapters; content is limited to the stable content-engineering case of small multi-file doc-site edits, build verification, and failure recovery."
+  checkedAt: "2026-07-26"
 title: Refactor docs with review
 description: Case study—batch link and section updates in an Astro/Starlight docs project; small diffs and build verification.
 locale: en
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: 'db44ca3'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
-This case demonstrates a **content engineering** task: multi-file Markdown, sidebar config, build verification. The stack matches this handbook, but the pattern applies to any static site.
+This case demonstrates a **content engineering** task: multi-file Markdown, sidebar config, build verification. The stack is similar to this handbook, but the pattern applies to any static site.
 
 ## Metadata
 
@@ -74,9 +82,3 @@ Steps: config first, then md, then update 12-reference/index.md.
 
 ## References
 - This repo's actual M2 docs iteration flow
----
-
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified content artifacts, EPXV, build verification, and case template chapters; content is limited to the stable content-engineering case of small multi-file doc-site edits, build verification, and failure recovery.

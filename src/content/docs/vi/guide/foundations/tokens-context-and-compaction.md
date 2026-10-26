@@ -1,14 +1,19 @@
 ---
-title: Token, ngữ cảnh và nén
-description: Hiểu cửa sổ ngữ cảnh, mức chiếm dụng và nén.
-locale: vi
-source_locale: zh-CN
-source_revision: cd44efe
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Token, ngữ cảnh và nén"
+description: "Hiểu cửa sổ ngữ cảnh, mức chiếm dụng và nén."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "cd44efe"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 100
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích khái niệm cơ bản về Token, cửa sổ ngữ cảnh và nén; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Lần đầu xem trang này có thể thấy hơi trừu tượng — không cần hiểu nguyên lý tầng dưới trước. Model không phải bộ nhớ vô hạn. Nội dung càng nhiều, càng phân tán, càng kéo dài — nó càng dễ mất trọng tâm; ràng buộc quan trọng đã nói trước đó cũng có thể dần nhạt đi.
@@ -65,11 +70,4 @@ Nếu lo yêu cầu then chốt bị quên, có thể làm các việc sau:
 - Đổi chủ đề thì mở Thread mới
 - Nguyên lý và gợi ý thao tác xem [Nén ngữ cảnh](/vi/guide/context/compaction/) cùng [Giữ ngữ cảnh tập trung](/vi/guide/context/keep-context-focused/)
 
-Ở đây nói khái niệm trước. Cách kiểm soát cụ thể có thể xem tiếp phần `05`.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích khái niệm cơ bản về Token, cửa sổ ngữ cảnh và nén; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26
+Trang này giới thiệu khái niệm; xem cách kiểm soát cụ thể trong [Quản lý ngữ cảnh](/vi/guide/context/).

@@ -7,12 +7,13 @@ next:
 description: Conheça o Codex, escolha o cliente, complete a primeira Tarefa e entenda Permissão, Contexto e Verificação.
 locale: pt
 source_locale: zh-CN
-source_revision: aa277f2
-translation_status: draft
+source_revision: "aa277f2"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
-Aqui você entende o que é o Codex, para que serve e como passar do primeiro uso a um fluxo de trabalho estável.
+Aqui você entende o que são o Codex e os Agents de IA, para que servem e como passar do primeiro uso a fluxos de trabalho seguros, estáveis e com resultados verificáveis.
 
 Se é a primeira vez que abre este handbook, não o trate como um livro para ler do início ao fim. É mais natural vê-lo como um mapa «do primeiro contato até usar com fluidez».
 
@@ -22,24 +23,24 @@ Você não precisa dominar toda a terminologia, produtos e fluxos de antemão. E
 
 - Na primeira vez com o Codex, por onde começar
 - Qual cliente escolher primeiro
-- Depois da primeira Tarefa, que capacidade reforçar
-- Em problemas de Permissão, Contexto ou Verificação, a que capítulo voltar
+- Depois da primeira tarefa, que capacidade reforçar
+- Em problemas de permissão, contexto ou verificação, a que capítulo voltar
 
 ## Recursos para usar
 
 - [Lista de segurança para iniciantes](/pt/guide/getting-started/beginner-safety-checklist/)
 - [Como escolher um cliente](/pt/guide/choose-your-client/)
-- [Verificação de resultados e definição de conclusão](/pt/guide/quality/)
+- [verificação de resultados e definição de conclusão](/pt/guide/quality/)
 
 ## Ordem recomendada
 
 1. [Comece aqui](/pt/guide/start-here/) — caminho mais curto para novos leitores
 2. [O que é o Codex](/pt/guide/start-here/what-is-codex/)
 3. [Escolher o cliente](/pt/guide/choose-your-client/)
-4. [Completar a primeira Tarefa](/pt/cases/first-task/)
-5. [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/)
-6. [Contexto e arquivos](/pt/guide/context/)
-7. [Verificação](/pt/guide/quality/)
+4. [Completar a primeira tarefa](/pt/cases/first-task/)
+5. [permissões e Sandbox](/pt/guide/permissions-and-sandbox/)
+6. [contexto e arquivos](/pt/guide/context/)
+7. [verificação](/pt/guide/quality/)
 8. Em caso de problema, veja [Solução de problemas](/pt/guide/reference/troubleshooting/)
 
 ## Mal-entendidos comuns
@@ -49,7 +50,7 @@ Você não precisa dominar toda a terminologia, produtos e fluxos de antemão. E
 Para a maioria, o ritmo mais adequado é:
 
 - Entender primeiro o mínimo de segurança e colaboração
-- Completar uma Tarefa pequena
+- Completar uma tarefa pequena
 - Voltar a complementar a leitura com problemas reais
 
 ### 2. Há muitos capítulos — ainda não estou pronto para começar
@@ -58,7 +59,7 @@ Há muitos capítulos para você ter onde consultar depois — não significa qu
 
 ### 3. Depois de escolher um cliente, o resto não tem a ver comigo
 
-O cliente é só a entrada; muitos conceitos centrais — Permissão, Contexto, Verificação — reaparecem em todas as pontas.
+O cliente é só a entrada; muitos conceitos centrais — permissão, contexto, verificação — reaparecem em todas as pontas.
 
 ## Entradas de produto
 

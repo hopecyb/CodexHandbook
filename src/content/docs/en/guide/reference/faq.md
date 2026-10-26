@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: c9d7ed8
+source_revision: 'c9d7ed8'
+reviewed_at: 2026-10-25
 ---
 
 For a scattered question, start with the FAQ. It does not reproduce whole chapters; it helps you find where to go next.

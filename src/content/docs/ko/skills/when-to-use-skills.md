@@ -8,10 +8,10 @@ title: 언제 Skills를 쓰는가
 description: 작업을 Skill로 묶을지 판단하고, 슬래시 명령·MCP와의 역할을 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: '5e688f4'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 ---
 
 Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 가치가 있는가입니다.
@@ -33,7 +33,7 @@ Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 �
 - 앞으로도 다시 할 일
 - 다음에도 가능한 한 같은 방식으로 하고 싶은 일
 
-많은 Skill은 결국 이런 장면에 모입니다.
+많은 Skill은 결국 이런 상황에 쓰입니다.
 
 - diff 검토
 - changelog 생성
@@ -80,7 +80,7 @@ Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 �
 | Skill | 재사용 가능한 절차, 점진적 공개 |
 | MCP | 외부 API·데이터 소스 연결 |
 | Hooks | 특정 이벤트 지점에서 자동 실행 |
-| `AGENTS.md` | 프로젝트급 상시 규칙 |
+| `AGENTS.md` | 프로젝트 수준의 상시 규칙 |
 
 Skill은 「반복되고, 일관성이 필요하며, 매번 다시 설명하고 싶지 않은」 절차를 정리하기에 더 적합합니다.
 

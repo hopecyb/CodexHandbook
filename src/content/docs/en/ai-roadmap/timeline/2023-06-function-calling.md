@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: en
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: 'c362c48'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 
@@ -35,6 +36,6 @@ Prioritize inputs that can be validated, explicit permission scopes, and failure
 
 ## Hands-on exercise
 
-[Dry-run Issue triage suggestions](/en/cases/use-cases/team-automation/issue-triage-suggestions/): check that structured suggestions for synthetic Issues are tied to their inputs; keep a human review queue. This exercise tests data boundaries without calling the historical API or release label.
+[Dry-run Issue triage suggestions](/en/cases/use-cases/team-automation/issue-triage-suggestions/): check that structured suggestions for synthetic Issues are tied to their inputs; keep a human review queue. This exercise tests data boundaries without calling the historical API or applying labels.
 
 [Return to the roadmap and date conventions](/en/ai-roadmap/)

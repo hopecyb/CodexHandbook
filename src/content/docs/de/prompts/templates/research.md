@@ -4,14 +4,14 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Diese Seite liefert eine Vorlage für Recherche-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
   checkedAt: "2026-07-26"
-title: Recherchieren-Vorlage
+title: Recherchevorlage
 description: Recherche und Vergleich mit Quellenangaben.
 locale: de
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: "729d4cc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -33,7 +33,7 @@ Ausgabe: Vergleichstabelle + Empfehlung + offene Fragen
 
 - Produkt-/Optionsvergleich
 - aktuelle Fähigkeiten, Regeln oder Unterschiede prüfen
-- Schlussfolgerungen später nachprüfbar brauchen
+- Schlussfolgerungen später nachprüfen müssen
 
 ## Häufige Irrtümer
 

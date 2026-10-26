@@ -8,8 +8,9 @@ title: Explore—plan—execute—verify
 description: Scale exploration, planning, execution, and verification to the task's scope and uncertainty, and identify decisions that require a pause.
 locale: en
 source_locale: zh-CN
-source_revision: 4a95760
-translation_status: draft
+source_revision: '4a95760'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 ---
 
@@ -91,4 +92,4 @@ Teams can embed the four phases in [case study template](/en/cases/use-cases/cas
 
 - Plan stays in your head—execution drifts
 - Verification is only "looks like it runs"
-- Insufficient explore—wrong module changed
+- Insufficient exploration leads to changes in the wrong module

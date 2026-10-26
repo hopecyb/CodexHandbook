@@ -1,20 +1,21 @@
 ---
-title: "OpenClaw（個人向け AI アシスタントのプロジェクト）"
-description: "この項目では、個人向けアシスタントがチャネル、会話、外部機能に接続するときに管理すべき境界を扱います。対応チャネル、インストール方法、権限はプロジェクトのバージョンによって変わるため、該当バージョンの説明を確認してください。"
-contentType: "guide"
-editorialStatus: "review"
+title: OpenClaw（個人向け AI アシスタントのプロジェクト）
+description: この項目では、個人向けアシスタントがチャネル、会話、外部機能に接続するときに管理すべき境界を扱います。対応チャネル、インストール方法、権限はプロジェクトのバージョンによって変わるため、該当バージョンの説明を確認してください。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事やプロジェクトの説明は一次資料と照合しました。学習上の助言は筆者の判断であり、製品を実際に動かして検証したものとして扱っていません。
   evidence:
-    - label: "OpenClaw 公式リポジトリ"
-      href: "https://github.com/openclaw/openclaw"
+  - label: OpenClaw 公式リポジトリ
+    href: https://github.com/openclaw/openclaw
 locale: ja
 source_locale: zh-CN
 source_revision: "8868140"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## 確認可能な出来事と範囲

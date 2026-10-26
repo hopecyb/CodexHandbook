@@ -8,8 +8,9 @@ title: Desktop app
 description: Installation, interface, and everyday workflows for the desktop app.
 locale: en
 source_locale: zh-CN
-source_revision: d1a9007
-translation_status: draft
+source_revision: 'd1a9007'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: '2026-09-20'
 sidebar:
   order: 10

@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Ambientes com host Codex local; siga a documentação oficial do Codex CLI para revisão de confiança e gerenciamento com `/hooks`"
+  checkedAt: "2026-08-25"
 title: Hooks
 description: Execute scripts ou ferramentas MCP em pontos do ciclo de vida do Codex para verificar, registrar e aplicar políticas.
 locale: pt
 source_locale: zh-CN
-source_revision: a0312e9
-translation_status: draft
+source_revision: "a0312e9"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Um Hook é um manipulador automático do ciclo de vida do Codex. Ele pode executar um script ou uma ferramenta MCP quando a sessão começa, um prompt é enviado, uma ferramenta é chamada ou termina, o contexto é compactado, um subagente para ou a thread principal termina.

@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: 'fc91872'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-25'
 ---
 
 Guarda primero el error, determina en qué capa se produjo y cambia solo una variable antes de repetir. Esta página demuestra el proceso con cinco entradas fijas. El autor provocó los fallos a propósito; los registros proceden de ejecuciones reales en la línea de comandos, no de incidentes de clientes.

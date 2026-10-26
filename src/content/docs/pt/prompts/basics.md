@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só trata métodos gerais de Prompt; os links internos foram revistos e o corpo não depende de fatos voláteis (versão do produto, preços, interface, etc.)."
+  checkedAt: "2026-07-26"
 title: Fundamentos de Prompts
 description: Os elementos essenciais de um bom Prompt.
 locale: pt
 source_locale: zh-CN
-source_revision: eb86b2a
+source_revision: "eb86b2a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Ao começar com Prompts, é fácil focar em se a redação soa «avançada».  
+Ao começar com Prompts, é fácil focar em se a redação soa «avançada».
 Para o Codex, o essencial é se você deixou claro isto:
 
 - o que você quer exatamente que ele faça
@@ -24,13 +29,13 @@ Um bom Prompt deixa claros os limites da tarefa; não precisa parecer um feitiç
 Serve sobretudo para evitar estes problemas habituais:
 
 - objetivo tão vago que o resultado é só «otimize um pouco»
-- âmbito não indicado, então o Codex muda mais do que o previsto
+- escopo não indicado, então o Codex muda mais do que o previsto
 - sem critérios de aceitação, no fim só se julga a olho
 - sem instrução quando falta informação, então começa a adivinhar
 
 ## Como ver um Prompt
 
-Pode vê-lo como um ticket de tarefa.  
+Pode vê-lo como um ticket de tarefa.
 Um ticket aceitável responde pelo menos a:
 
 - o que fazer
@@ -51,7 +56,7 @@ Se isso não estiver claro, nem as frases mais elegantes resolvem.
 
 ### 1. Quanto mais longo o Prompt, melhor
 
-O importante é a relevância.  
+O importante é a relevância.
 Um bloco longo de contexto irrelevante dilui os limites de verdade.
 
 ### 2. Com o objetivo basta; o resto pode omitir-se
@@ -100,10 +105,3 @@ Para a maioria dos iniciantes, começar pela **versão recomendada** costuma ser
 O núcleo de um bom Prompt: menos suposições, menos desvios, menos extralimitação.
 
 Exemplos: [Primeira tarefa](/pt/cases/first-task/) e [Anatomia de uma tarefa](/pt/prompts/task-anatomy/).
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só trata métodos gerais de Prompt; os links internos foram revistos e o corpo não depende de factos voláteis (versão do produto, preços, interface, etc.).

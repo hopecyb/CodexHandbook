@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / Cloud"
+  basis: "Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior."
+  checkedAt: "2026-07-26"
 title: Rules
 description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
 locale: en
 source_locale: zh-CN
-source_revision: 9ac6185
+source_revision: '9ac6185'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 The rules group is easy for beginners to mistake for “writing a few more reminders for Codex.”
@@ -26,10 +31,3 @@ More accurately, rules answer: which actions are allowed by default, which to bl
 - How teams keep the same boundaries for similar risks
 
 Rules exist to nail down boundaries so the system executes against them.
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior.  
-**Last verified:** 2026-07-26

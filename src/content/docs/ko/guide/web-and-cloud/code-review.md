@@ -3,15 +3,16 @@ title: Cloud와 GitHub의 코드 검토
 description: Cloud 작업의 diff를 검토하고 GitHub에서 Codex의 중요한 발견을 보조 검토로 활용합니다.
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: ea6796a
-translation_status: draft
+source_revision: "ea6796a"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+reviewed_at: "2026-10-26"
 ---
 
 Cloud 작업이 끝나면 요약과 diff가 제공됩니다. 이어서 질문하거나 수정을 요청하거나 PR을 만들 수 있습니다. 작업이 완료되었다고 해서 병합이 승인된 것은 아닙니다. 최종적으로는 프로젝트의 CI, 브랜치 보호 규칙, 사람의 판단을 거쳐야 합니다.
@@ -53,9 +54,9 @@ Codex는 발견 사항을 일반적인 GitHub review 형식으로 게시합니�
 적용되는 디렉터리의 `AGENTS.md`에 다음과 같이 작성합니다.
 
 ```md
-## 코드 검토 규칙
+## Code Review Rules
 
-### 인증 경계
+### Authentication boundaries
 
 - 액세스 토큰을 로그에 기록하거나 허용 목록에 없는 호스트로 보내는
   모든 경로를 지적합니다. 안전한 방법은 토큰을 자격 증명 제공자에

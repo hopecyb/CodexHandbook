@@ -3,15 +3,16 @@ legacyVerification:
   status: "verified"
   products: "App"
   checkedAt: "2026-08-26"
-title: Cài đặt
-description: Tùy chỉnh hành vi thường ngày, phím tắt, thông báo và giao diện của ứng dụng máy tính.
-locale: vi
-source_locale: zh-CN
-source_revision: 7a6d2fe
-translation_status: draft
+title: "Cài đặt"
+description: "Tùy chỉnh hành vi thường ngày, phím tắt, thông báo và giao diện của ứng dụng máy tính."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "7a6d2fe"
+translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:
   order: 90
+reviewed_at: "2026-10-26"
 ---
 
 Trang Settings dùng để cá nhân hóa hành vi của ứng dụng, không bao gồm toàn bộ cấu hình quyền của Codex. Hãy giữ giá trị mặc định lúc đầu và chỉ thay đổi khi đã hiểu phạm vi ảnh hưởng.

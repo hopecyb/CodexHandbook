@@ -7,6 +7,7 @@
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
+import yaml from 'js-yaml';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -16,6 +17,7 @@ const docsRoot = path.join(root, 'src/content/docs');
 const supportedLocales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko'];
 const localeIndex = process.argv.indexOf('--locale');
 const summaryOnly = process.argv.includes('--summary');
+const allPages = process.argv.includes('--all');
 const locales =
 	localeIndex >= 0
 		? process.argv[localeIndex + 1]?.split(',').map((locale) => locale.trim()).filter(Boolean)
@@ -82,19 +84,22 @@ function internalPaths(body) {
 }
 
 function shouldLocalizePath(pathname) {
+	// Public assets share content roots such as /theme/ but have no locale route.
+	if (fs.existsSync(path.join(root, 'public', pathname)) && fs.statSync(path.join(root, 'public', pathname)).isFile()) return false;
 	const first = pathname.split('/').filter(Boolean)[0];
 	if (!first || localeRoots.has(first)) return false;
 	return localizedContentRoots.has(first);
 }
 
 function changedSourceIds() {
-	const output = execFileSync('git', ['diff', '--name-only', '--diff-filter=AM', '--', 'src/content/docs'], {
-		cwd: root,
-		encoding: 'utf8',
-	});
+	// Include staged and newly created source pages, not only unstaged edits.
+	const outputs = [
+		['diff', 'HEAD', '--name-only', '--diff-filter=AM', '--', 'src/content/docs'],
+		['ls-files', '--others', '--exclude-standard', '--', 'src/content/docs'],
+	].map((args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }));
+	const output = outputs.join('\n');
 	const prefix = 'src/content/docs/';
-	return output
-		.split(/\r?\n/)
+	return [...new Set(output.split(/\r?\n/))]
 		.filter((file) => file.startsWith(prefix))
 		.map((file) => file.slice(prefix.length))
 		.filter((id) => !localeRoots.has(id.split('/')[0]) && /\.(md|mdx)$/.test(id));
@@ -103,7 +108,15 @@ function changedSourceIds() {
 const issues = [];
 const issueCounts = Object.fromEntries(locales.map((locale) => [locale, 0]));
 const failedPages = Object.fromEntries(locales.map((locale) => [locale, new Set()]));
-const ids = changedSourceIds();
+function allSourceIds(directory = docsRoot) {
+	return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+		if (directory === docsRoot && localeRoots.has(entry.name)) return [];
+		const fullPath = path.join(directory, entry.name);
+		if (entry.isDirectory()) return allSourceIds(fullPath);
+		return /\.(md|mdx)$/.test(entry.name) ? [path.relative(docsRoot, fullPath).split(path.sep).join('/')] : [];
+	});
+}
+const ids = allPages ? allSourceIds().sort() : changedSourceIds();
 
 function addIssue(locale, message) {
 	issues.push(message);
@@ -128,6 +141,12 @@ for (const id of ids) {
 
 		const translationContent = fs.readFileSync(translationPath, 'utf8');
 		const translation = splitDocument(translationContent);
+		try {
+			yaml.load(translation.frontmatter);
+		} catch (error) {
+			addIssue(locale, `${label}: invalid YAML frontmatter (${error.reason ?? error.message})`);
+			continue;
+		}
 		const actualRevision = metadata(translation.frontmatter, 'source_revision');
 		if (actualRevision !== expectedRevision) {
 			addIssue(locale, `${label}: source_revision ${actualRevision ?? 'missing'} != ${expectedRevision}`);
@@ -160,7 +179,7 @@ for (const id of ids) {
 	}
 }
 
-console.log('i18n changed-page parity');
+console.log(allPages ? 'i18n full-site parity' : 'i18n changed-page parity');
 console.log(`  source pages: ${ids.length}`);
 console.log(`  locale checks: ${ids.length * locales.length}`);
 console.log(`  issues: ${issues.length}`);
@@ -174,3 +193,6 @@ if (!summaryOnly) {
 }
 
 if (issues.length > 0) process.exitCode = 1;
+
+// Also validate all standalone pricing translations, which live outside docs.
+await import('./check-pricing-locales.mjs');

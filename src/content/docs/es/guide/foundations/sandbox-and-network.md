@@ -3,15 +3,20 @@ title: Sandbox y red
 description: Entiende el aislamiento de ejecución, el acceso a la red y los límites de riesgo.
 locale: es
 source_locale: zh-CN
-source_revision: 2cf2c46
+source_revision: '2cf2c46'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: La documentación actual de Codex CLI en OpenAI Help Center sigue describiendo Full Auto como “sandboxed, network-disabled environment scoped to the current directory” y lo distingue de los modos de Aprobación; esta página solo explica que Sandbox y red son dos límites de riesgo distintos, y cómo un principiante debe estrechar el alcance de acceso.
+  checkedAt: '2026-07-26'
 ---
 
-«Sandbox» y «red» son en realidad dos cosas: el Sandbox limita a dónde puede tocar; la red, a dónde puede conectarse.
+«Sandbox» y «red» son en realidad dos cosas: el Sandbox limita a qué recursos puede acceder; la red, a dónde puede conectarse.
 
 El **Sandbox** limita el sistema de archivos y parte de las capacidades del sistema a las que puede llegar el Agent, y reduce la superficie de errores. El **acceso a la red** es otra capa de riesgo: puede filtrar información sensible del Prompt o traer datos no fiables.
 
@@ -19,7 +24,7 @@ El **Sandbox** limita el sistema de archivos y parte de las capacidades del sist
 
 ## Por qué importan estos dos límites
 
-Sin estos bordes, si Codex entiende mal la Tarea, el problema puede ser mayor, por ejemplo:
+Sin estos límites, si Codex entiende mal la Tarea, el problema puede ser mayor, por ejemplo:
 
 - cambiar directorios que no querías tocar
 - leer archivos sensibles que no debería
@@ -42,13 +47,13 @@ El Sandbox sirve sobre todo para controlar el riesgo, no para recortar capacidad
 
 ### 2. ¿Cuanta más red, mejor?
 
-Cuanta más red, significa:
+Un mayor acceso a la red implica:
 
 - fuentes de información más complejas
 - posible contacto con contenido no fiable
 - que parte del contenido de la Tarea pueda salir a servicios externos
 
-En la práctica, si puedes no salir a la red, mejor no salir primero.
+Durante los ejercicios, empieza sin acceso a la red siempre que sea posible.
 
 ### 3. ¿Cómo juzgo una solicitud de permiso?
 
@@ -70,10 +75,3 @@ Ninguna es solo un ajuste técnico; también es tu forma de controlar el riesgo.
 Entrada de ajustes en el producto: App de escritorio [Ajustes](/es/guide/desktop-app/settings/); detalles oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Al empezar, mejor restringir un poco de más que abrir todas las puertas cuando aún no entiendes el riesgo.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** La documentación actual de Codex CLI en OpenAI Help Center sigue describiendo Full Auto como “sandboxed, network-disabled environment scoped to the current directory” y lo distingue de los modos de Aprobación; esta página solo explica que Sandbox y red son dos límites de riesgo distintos, y cómo un principiante debe estrechar el alcance de acceso.  
-**Última verificación:** 2026-07-26

@@ -3,12 +3,16 @@ title: 프롬프트 예시 추가
 description: examples/prompts에 재현 가능한 프롬프트를 제출 — 메타데이터와 검증 기준 포함.
 locale: ko
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: '15dabd2'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  basis: 저장소의 현재 `examples/` 디렉터리, 예시 frontmatter, 인덱스 방식, 기여 흐름을 항목별로 확인했습니다. 페이지 요구는 기존 사례/워크플로 링크 구조와 맞추었으며, 특정 Codex 제품 단의 쉽게 바뀌는 동작에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 프롬프트 예시는 저장소 루트 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)에 두고, 핸드북 본문이 링크로 참조합니다. 설계 규범은 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md)를 보세요.
@@ -60,14 +64,14 @@ last_verified: YYYY-MM-DD
 
 ## 본문 필수 소절
 
-1. **사용 장면**
+1. **사용 상황**
 2. **사용 전 준비**(권한, 브랜치, 컨텍스트 파일)
-3. **권장판 프롬프트**(완전한 복사 가능)
+3. **권장 프롬프트**(전체를 복사해 사용 가능)
 4. **검증 기준**(체크리스트, 객관 점검 가능)
 5. **흔한 실패 방식**
 6. **관련 핸드북 페이지**(`src/content/docs/`로 링크)
 
-선택: 극단 축약판, 교육용 분해, 교체 가능 변수.
+선택: 간결한 버전, 교육용 분해, 교체 가능 변수.
 
 ## 흔한 오해
 
@@ -77,7 +81,7 @@ last_verified: YYYY-MM-DD
 
 더 안정적인 쓰기:
 
-- 권장판 프롬프트를 먼저 완전하게
+- 권장 프롬프트를 먼저 완전하게
 - 전제·변수·실패 방식을 보완
 - 설명성 내용은 마지막
 
@@ -108,7 +112,7 @@ last_verified: YYYY-MM-DD
 - [ ] git push를 실행하지 않음
 ```
 
-## 품질 문턱
+## 품질 기준
 
 - 목표와 완료 정의가 분명
 - 권한·보안 경계 설명이 있음
@@ -120,7 +124,7 @@ last_verified: YYYY-MM-DD
 이 순서가 보통 더 안정적입니다.
 
 1. 이 예시가 푸는 실제 작업 유형을 먼저 정함
-2. 남이 바로 복사할 수 있는 프롬프트 한 판을 씀
+2. 남이 바로 복사할 수 있는 프롬프트 초안을 씀
 3. 최소 필수 전제와 경계를 제시
 4. “성공이란 무엇인가”를 분명히
 5. 민감 정보 유출·잘못된 디렉터리를 마지막에 점검
@@ -131,9 +135,3 @@ last_verified: YYYY-MM-DD
 - [ ] 사례 페이지 또는 워크플로 페이지가 최소 하나 해당 예시로 링크(선택이나 권장)
 
 좋은 프롬프트 예시는 남이 그대로 재현해 비슷한 결과를 얻게 해야 합니다.
-
----
-
-**상태:** verified  
-**검증 근거:** 저장소의 현재 `examples/` 디렉터리, 예시 frontmatter, 인덱스 방식, 기여 흐름을 항목별로 확인했습니다. 페이지 요구는 기존 사례/워크플로 링크 구조와 맞추었으며, 특정 Codex 제품 단의 쉽게 바뀌는 동작에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die Kollaborationsunterschiede zwischen Agent und gewöhnlichem Chat; interne Links sowie Konzept- und Analogieformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: Agent-Grundlagen
 description: "Erklärt, wie ein Agent um ein Ziel herum Werkzeuge aufruft und iterativ vorgeht."
 locale: de
 source_locale: zh-CN
-source_revision: 14ab120
+source_revision: "14ab120"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -59,10 +64,3 @@ Am Anfang lohnt sich parallel:
 - Menschliche Freigabe: siehe [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
 
 Das Besondere am Agent: Er kann um ein Ziel herum mehrere Schritte am Stück machen — nicht nur einen Textabschnitt zurückgeben.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die Kollaborationsunterschiede zwischen Agent und gewöhnlichem Chat; interne Links sowie Konzept- und Analogieformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

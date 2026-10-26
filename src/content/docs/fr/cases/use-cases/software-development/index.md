@@ -3,10 +3,15 @@ title: Développement logiciel
 description: Point d'entrée des cas de modification de code, correction de bugs et ajout de vérifications — contrôle du périmètre, tests et retour arrière.
 locale: fr
 source_locale: zh-CN
-source_revision: a3d7f4c
+source_revision: 'a3d7f4c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec l'entrée software-development actuelle du dépôt et les chapitres flux de développement, exécution des tests et retour arrière ; cette page décrit uniquement l'entrée et les priorités du groupe de cas développement.
+  checkedAt: '2026-07-26'
 ---
 
 Les cas de développement logiciel portent surtout sur cette question :
@@ -22,10 +27,3 @@ Les cas de développement logiciel portent surtout sur cette question :
 - Comment clarifier le périmètre de la tâche
 - Pourquoi penser dès le départ à la vérification et au retour arrière
 - Comment éviter les « modifications opportunistes » en développement réel
-
----
-
-**Statut :** verified  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec l'entrée software-development actuelle du dépôt et les chapitres flux de développement, exécution des tests et retour arrière ; cette page décrit uniquement l'entrée et les priorités du groupe de cas développement.

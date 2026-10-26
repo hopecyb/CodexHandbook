@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this repo's current case library structure, domain index pages, case template, and examples prompt entry; this page only navigates cases organized by real task type."
+  checkedAt: "2026-07-26"
 title: Scenarios and case library
 description: End-to-end real tasks—prep, execution, verification, failure recovery, and retrospectives.
 locale: en
 source_locale: zh-CN
-source_revision: 1e284bb
+source_revision: '1e284bb'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 The case library answers: **"What does running Codex end-to-end look like for this real goal?"** It complements single-topic product docs.
@@ -41,10 +46,3 @@ Copyable prompts live in repo [`examples/prompts/`](https://github.com/hopecyb/C
 - Reproducible steps (repo, branch, commands)
 - Label applicable clients and verification date
 - Avoid unverifiable "first try success" narratives
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current case library structure, domain index pages, case template, and examples prompt entry; this page only navigates cases organized by real task type.

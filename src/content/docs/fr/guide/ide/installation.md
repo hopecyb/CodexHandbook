@@ -3,14 +3,17 @@ title: Installer et activer l'intégration IDE
 description: Ouvrir correctement Codex dans les éditeurs de la famille VS Code, Xcode et les IDE JetBrains.
 locale: fr
 source_locale: zh-CN
-source_revision: 85e1691
+source_revision: "85e1691"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
 ---
-
 Les points d'entrée dans les IDE se répartissent en deux groupes, dont les méthodes d'installation ne sont pas interchangeables :
 
 | Éditeur | Point d'entrée actuel | Comment l'ouvrir |
@@ -53,11 +56,3 @@ Pour le parcours détaillé destiné aux débutants, consultez [Installer une in
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Paramètres de l'IDE](https://learn.chatgpt.com/docs/ide/settings)
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** IDE
-
-**Dernière vérification :** 2026-08-26

@@ -20,8 +20,9 @@ sidebar:
 locale: de
 source_locale: zh-CN
 source_revision: "13537ef"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Bei der Frage „Welche Anweisung gilt?“ zuerst drei Dinge trennen: In welcher Rolle kam die Nachricht, wie wurden Projektdateien geladen und was lässt die Ausführungsumgebung zu? „Der neueste Satz gewinnt immer“ ist keine allgemeine Regel. Ebenso wird Text mit dem Wort „verboten“ nicht automatisch zu einer unveränderlichen Systemberechtigung.

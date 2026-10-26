@@ -10,9 +10,10 @@ verification:
   summary: "Les trois catégories de tâches et les deux comparaisons sont des conseils de collaboration éditoriaux. Les limites d’autorisation et d’exécution ont été vérifiées ; il ne s’agit pas de modes fixes du client ni d’une expérience sur le taux de réussite du modèle."
 locale: fr
 source_locale: zh-CN
-source_revision: 706f11b
-translation_status: draft
+source_revision: "706f11b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Demander un plan dépend des décisions qui restent à prendre. Une modification au périmètre clair et facile à annuler peut être exécutée directement. Si la démarche est incertaine, planifiez d'abord. Avant une action précise qui exige une autorisation supplémentaire, arrêtez-vous. Demander un plan n'implique pas d'attendre une réponse de l'utilisateur après chaque étape.

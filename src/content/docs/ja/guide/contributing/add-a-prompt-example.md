@@ -3,12 +3,16 @@ title: プロンプト例の追加
 description: examples/prompts に再現可能なプロンプトを提出する——メタデータと受け入れ基準を含む。
 locale: ja
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: "15dabd2"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 20
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  basis: リポジトリの現行 `examples/` ディレクトリ、例の frontmatter、索引方式、コントリビューションフローを項目ごとに再確認済み。ページ要件は既存の事例／ワークフローのリンク構造と整合し、特定の Codex クライアントの変わりやすい動作には依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 プロンプト例はリポジトリルートの [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) に置き、ハンドブック本文からリンクします。設計仕様は [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) を参照してください。
@@ -30,7 +34,7 @@ reviewed_at: 2026-08-26
 
 - いつ使うか
 - 具体的にどう言うか
-- 使ったあと、うまくいったかどうう判断するか
+- 使ったあと、うまくいったかどう判断するか
 
 前提も検証方法もわからない、ただ賢そうな一文だけなら、メモに近く、例とは言えません。
 
@@ -67,7 +71,7 @@ last_verified: YYYY-MM-DD
 5. **よくある失敗の仕方**
 6. **関連ハンドブックページ**（`src/content/docs/` へのリンク）
 
-任意：極簡版、解説用の分解、差し替え可能な変数。
+任意：最小版、解説用の分解、差し替え可能な変数。
 
 ## よくある誤解
 
@@ -131,10 +135,3 @@ last_verified: YYYY-MM-DD
 - [ ] 少なくとも一つの事例ページまたはワークフローページからその例へリンクしている（任意だが推奨）
 
 良いプロンプト例は、他の人がそのまま再現し、近い結果を得られるものです。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** リポジトリの現行 `examples/` ディレクトリ、例の frontmatter、索引方式、コントリビューションフローを項目ごとに再確認済み。ページ要件は既存の事例／ワークフローのリンク構造と整合し、特定の Codex 製品端の変わりやすい動作には依存しない。

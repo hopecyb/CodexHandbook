@@ -3,12 +3,17 @@ title: Web 検索
 description: 検索で事実を補い、出典を明記する。
 locale: ja
 source_locale: zh-CN
-source_revision: 7adcb92
+source_revision: "7adcb92"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI API の現在のモデルドキュメントでは、`Web search` は引き続き利用可能なツール能力のひとつとして記載されています。本ページは「検索は事実補完に使う、一次情報を優先する、結論は原文で確認する」という方法論のみを説明し、特定の製品 UI に依存しません。
+  checkedAt: '2026-07-26'
 ---
 
 Web 検索は事実を補うのに向いていますが、最終結論を代わりに下す用途には向きません。
@@ -78,10 +83,3 @@ Web 検索は事実を補うのに向いていますが、最終結論を代わ�
 ```
 
 検索は手がかりと出典を与えます。最後は必ず原文に戻って確認しましょう。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI API の現在のモデルドキュメントでは、`Web search` は引き続き利用可能なツール能力のひとつとして記載されています。本ページは「検索は事実補完に使う、一次情報を優先する、結論は原文で確認する」という方法論のみを説明し、特定の製品 UI に依存しません。  
-**最終検証：** 2026-07-26

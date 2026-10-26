@@ -8,10 +8,10 @@ title: When to use Skills
 description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: 5e688f4
+source_revision: '5e688f4'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 When you first encounter Skills, a common question is: is this worth packaging as a Skill?
@@ -57,7 +57,7 @@ A one-off special task may only add maintenance burden as a Skill.
 
 ### 2. More Skills is better
 
-Too many Skills with fuzzy boundaries make the model misuse them and the team harder to maintain.
+Too many Skills with fuzzy boundaries increase the risk of incorrect selection and make them harder for the team to maintain.
 
 ### 3. If it connects to external systems, start with a Skill
 

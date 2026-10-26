@@ -31,9 +31,10 @@ next:
   label: Aprender a verificar resultados
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: '68729f6'
+reviewed_at: 2026-10-25
 ---
 
 En este ejercicio entregarás un informe semanal de ventas, un resumen por región, una clasificación de productos y un registro de limpieza por fila. La entrada son datos sintéticos preparados para este sitio; no necesitas datos reales de clientes.

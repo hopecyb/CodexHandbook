@@ -8,11 +8,12 @@ title: Inicio de sesión y autenticación
 description: Elige el método de inicio de sesión adecuado en los clientes locales y Cloud, y comprueba de forma segura la identidad activa.
 locale: es
 source_locale: zh-CN
-source_revision: ea83fa6
-translation_status: draft
+source_revision: 'ea83fa6'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 60
+reviewed_at: '2026-10-25'
 ---
 
 Al utilizar modelos de OpenAI, Codex ofrece dos formas de inicio de sesión personal:

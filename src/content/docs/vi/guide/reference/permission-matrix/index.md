@@ -1,18 +1,23 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App、CLI、IDE、Cloud"
+  checkedAt: "2026-08-26"
 title: Ma trận quyền
 description: Phân biệt Permission Profiles cục bộ, sandbox cũ và chính sách mạng của Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: c6ad6aa
-translation_status: draft
+source_revision: "c6ad6aa"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+reviewed_at: 2026-10-26
 ---
 
 Đừng dùng một bảng cố định kiểu “App/CLI/IDE/Cloud có hiện hộp thoại hay không” để đoán quyền. Hành vi thực tế do nơi thực thi, cấu hình có hiệu lực, yêu cầu của tổ chức, hệ điều hành và thao tác cụ thể cùng quyết định.
 
-![Luồng quyết định giữa việc sandbox chặn thao tác, con người phê duyệt và kết quả thực thi](/diagrams/sandbox-approval-flow-zh-cn.svg)
+![Luồng quyết định giữa việc sandbox chặn thao tác, con người phê duyệt và kết quả thực thi](/diagrams/sandbox-approval-flow-vi.svg)
 
 ## Trước tiên phân biệt ba cơ chế
 

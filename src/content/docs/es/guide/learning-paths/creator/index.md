@@ -25,9 +25,10 @@ next:
   label: Empezar a organizar las tres fuentes
 locale: es
 source_locale: zh-CN
-source_revision: d1b46b1
-translation_status: draft
+source_revision: 'd1b46b1'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Usa un conjunto de fuentes para escribir un artículo, convertirlo en una presentación editable y guardar instrucciones que puedas reutilizar. Cada paso produce archivos que te permiten comprobar si has terminado.
@@ -73,7 +74,7 @@ Parte del artículo terminado y la tabla de hechos. Sigue el [caso de la present
 
 Copia el artículo y la tabla de hechos en el directorio de entrada de la tarea de presentación e indica que son tus versiones. No cites tu propio artículo suponiendo que siguen siendo válidas todas las conclusiones del borrador de referencia.
 
-Entrega un PPTX de ocho diapositivas, ocho vistas previas, notas por diapositiva y un registro de validación. Para terminar, debe abrirse en el programa de presentaciones que hayas registrado, el texto clave debe ser editable y debes revisar el texto chino y los límites en cada diapositiva. Los conflictos entre fuentes deben seguir claros tras la síntesis.
+Entrega un PPTX de ocho diapositivas, ocho vistas previas, notas por diapositiva y un registro de validación. Para terminar, debe abrirse en el programa de presentaciones que hayas registrado, el texto clave debe ser editable y debes revisar el texto chino y los márgenes y desbordamientos en cada diapositiva. Los conflictos entre fuentes deben seguir claros tras la síntesis.
 
 Si no tienes una herramienta PPTX, guarda el esquema y registra la capacidad que falta. El paso queda sin terminar hasta que continúes en un entorno con esa herramienta. Después pasa a la reutilización.
 

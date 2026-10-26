@@ -5,10 +5,15 @@ sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 15dabd2
+source_revision: "15dabd2"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  basis: Mit dem aktuellen Verzeichnis `examples/`, dem Frontmatter vorhandener Beispiele, der Indexierung und dem Beitragsablauf dieses Repositorys abgeglichen. Die Anforderungen entsprechen der bestehenden
+    Linkstruktur von Fallbeispielen und Workflows und hängen nicht vom veränderlichen Verhalten eines bestimmten Codex-Clients ab.
+  checkedAt: '2026-07-26'
 ---
 
 Prompt-Beispiele liegen im Stammverzeichnis des Repositorys unter [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) und werden aus dem Handbuchtext verlinkt. Die Gestaltungsregeln findest du unter [System für Prompts, Skills und Fallbeispiele](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
@@ -131,9 +136,3 @@ Diese Reihenfolge ist in der Regel zuverlässig:
 - [ ] Mindestens eine Fallbeispiel- oder Workflow-Seite verlinkt das Beispiel (optional, aber empfohlen)
 
 Ein gutes Prompt-Beispiel ermöglicht anderen, den Ablauf direkt zu reproduzieren und ein vergleichbares Ergebnis zu erhalten.
-
----
-
-**Status:** verified  
-**Prüfgrundlage:** Mit dem aktuellen Verzeichnis `examples/`, dem Frontmatter vorhandener Beispiele, der Indexierung und dem Beitragsablauf dieses Repositorys abgeglichen. Die Anforderungen entsprechen der bestehenden Linkstruktur von Fallbeispielen und Workflows und hängen nicht vom veränderlichen Verhalten eines bestimmten Codex-Clients ab.  
-**Zuletzt geprüft:** 2026-07-26

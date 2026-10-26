@@ -8,32 +8,32 @@ title: Empieza aquí
 description: Entiende qué es Codex, para quién sirve y elige tu ruta de aprendizaje.
 locale: es
 source_locale: zh-CN
-source_revision: 953fb89
+source_revision: '953fb89'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 1
 ---
 
 
-Este handbook está pensado sobre todo para **principiantes en IA**: no asume que sepas usar la terminal, Git o Agents, pero te irá explicando paso a paso lo que necesitarás después.
+Este manual está pensado sobre todo para **principiantes en IA**: no asume que sepas usar la terminal, Git o Agents, pero te irá explicando paso a paso lo que necesitarás después.
 
 ![Ilustración: en el inicio del sendero, un poste señala varias rutas junto a una guía abierta y un pequeño asistente que da la bienvenida](/illustrations/start-here.webp)
 
 ## Contenido
 
 - Aclarar qué puede y qué no puede hacer Codex
-- Elegir una ruta de lectura según tu rol y tu Tarea
-- Completar tu primera Tarea verificable en un proyecto de práctica seguro
-- Aprender a escribir Prompts con objetivo, límites y criterios de aceptación, y a revisar resultados
+- Elegir una ruta de lectura según tu rol y tu tarea
+- Completar tu primera tarea verificable en un proyecto de práctica seguro
+- Aprender a escribir prompts con objetivo, límites y criterios de aceptación, y a revisar resultados
 
 ## Orden de lectura sugerido
 
 1. [Qué es Codex](/es/guide/start-here/what-is-codex/) — qué puede y qué no puede hacer
 2. [Elige un cliente](/es/guide/choose-your-client/) — App, CLI, IDE o Cloud
-3. [Completa tu primera Tarea](/es/cases/first-task/) — un cambio pequeño con un Prompt claro y revisión del resultado
-4. [Permisos y Sandbox](/es/guide/permissions-and-sandbox/) — aprobación, aislamiento y límites de red
+3. [Completa tu primera tarea](/es/cases/first-task/) — un cambio pequeño con un prompt claro y revisión del resultado
+4. [Permisos y sandbox](/es/guide/permissions-and-sandbox/) — aprobación, aislamiento y límites de red
 5. [Contexto y archivos](/es/guide/context/) — cómo dar entradas útiles
 6. [Verificación](/es/guide/quality/) — hábitos de revisión y pruebas
 
@@ -48,7 +48,7 @@ Esta sección aclara entradas y orden. No intenta meterte todo el contenido de g
 Con saber esto basta por ahora:
 
 - cómo colaboras con Codex
-- cómo abres una Tarea
+- cómo abres una tarea
 - cómo revisas el resultado
 
 El resto lo irás completando sobre la marcha.
@@ -61,17 +61,17 @@ No basta. Hay que combinar comprensión, práctica en pequeño y comprobación d
 
 | Tiempo | Qué hacer |
 |---|---|
-| 0–5 min | Lee los puntos de seguridad en [Permisos y Sandbox](/es/guide/permissions-and-sandbox/) |
+| 0–5 min | Lee los puntos de seguridad en [Permisos y sandbox](/es/guide/permissions-and-sandbox/) |
 | 5–10 min | Instala e inicia sesión en el cliente que elijas (ver [App de escritorio](/es/guide/desktop-app/) y similares) |
-| 10–25 min | Sigue el [caso de la primera Tarea](/es/cases/first-task/) |
-| 25–30 min | Mira [Fundamentos de prompts](/es/prompts/basics/) para escribir Tareas más claras |
+| 10–25 min | Sigue el [caso de la primera tarea](/es/cases/first-task/) |
+| 25–30 min | Mira [Fundamentos de prompts](/es/prompts/basics/) para escribir tareas más claras |
 
 Si te atascas, consulta [Solución de problemas](/es/guide/reference/troubleshooting/).
 
 ## Qué leer después
 
 1. [Qué es Codex](/es/guide/start-here/what-is-codex/)
-2. [Para quién es este handbook](/es/guide/start-here/who-is-this-handbook-for/)
+2. [Para quién es este manual](/es/guide/start-here/who-is-this-handbook-for/)
 3. [Elige tu ruta](/es/guide/start-here/choose-your-path/)
 4. Entra en [Fundamentos](/es/guide/foundations/) y [Primeros pasos](/es/guide/getting-started/)
 

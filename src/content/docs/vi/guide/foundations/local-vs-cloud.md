@@ -1,14 +1,19 @@
 ---
-title: Local và đám mây
-description: Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud.
-locale: vi
-source_locale: zh-CN
-source_revision: 9569b3c
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Local và đám mây"
+description: "Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "9569b3c"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 50
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "OpenAI Help Center hiện hành 《Using Codex with your ChatGPT plan》 vẫn phân biệt rõ «local workflows run on your device» và «cloud tasks run in OpenAI-managed environments»; 《ChatGPT Work and Codex》 cũng xác nhận Work trên web/mobile chạy trên đám mây. Trang này chỉ tóm tắt tình huống phù hợp và sự cân nhắc của tác vụ local với đám mây — không gắn gói cụ thể hay chi tiết lối vào."
+  checkedAt: "2026-07-26"
 ---
 
 «Local» và «đám mây» nghe như thuật ngữ kỹ thuật — nói đơn giản: local là làm việc trên máy của bạn; đám mây là làm việc trên máy từ xa.
@@ -78,10 +83,3 @@ Nếu giờ vẫn chưa phân biệt được, có thể theo quy tắc này: l�
 Nhiều người mới bắt đầu từ **local + Desktop App**. Chi tiết Cloud xem [Tổng quan Web và Cloud](/vi/guide/web-and-cloud/). Chuyển đổi trong App xem [Tác vụ local và đám mây](/vi/guide/desktop-app/local-and-cloud-tasks/).
 
 Local phù hợp hơn để hiểu quy trình trước và sửa thứ nhỏ. Đám mây phù hợp hơn với tác vụ dài hơn, chuẩn hóa hơn, cộng tác từ xa nhiều hơn.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** OpenAI Help Center hiện hành 《Using Codex with your ChatGPT plan》 vẫn phân biệt rõ «local workflows run on your device» và «cloud tasks run in OpenAI-managed environments»; 《ChatGPT Work and Codex》 cũng xác nhận Work trên web/mobile chạy trên đám mây. Trang này chỉ tóm tắt tình huống phù hợp và sự cân nhắc của tác vụ local với đám mây — không gắn gói cụ thể hay chi tiết lối vào.  
-**Kiểm chứng gần nhất:** 2026-07-26

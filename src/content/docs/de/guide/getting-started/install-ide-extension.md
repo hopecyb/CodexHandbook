@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Der aktuelle offizielle IDE-Schnellstart führt VS Code, Cursor, Windsurf und VS Code Insiders sowie die jeweils eigenen Integrationswege für Xcode und JetBrains ausdrücklich auf. Diese Seite trennt die beiden Installationsarten entsprechend."
+  checkedAt: "2026-08-26"
 title: IDE-Integration installieren
 description: Aktiviere Codex in VS-Code-kompatiblen Editoren, Xcode oder JetBrains-IDEs.
 sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: e8f88ec
+source_revision: "e8f88ec"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Die derzeit unterstützten IDEs verwenden nicht alle denselben Installationsweg:
@@ -51,13 +56,3 @@ Wenn die Antwort offensichtlich keinen Bezug zur Auswahl hat, prüfe zuerst:
 - Sind gleichzeitig andere KI-Erweiterungen oder Tastenkombinationen aktiv, die Konflikte verursachen?
 
 Lies anschließend [Workflow für lokale IDE-Aufgaben](/de/guide/ide/local-task-workflow/). Den vollständigen Unterstützungsumfang beschreibt [Unterstützte Editoren](/de/guide/ide/supported-editors/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** IDE
-
-**Prüfgrundlage:** Der aktuelle offizielle IDE-Schnellstart führt VS Code, Cursor, Windsurf und VS Code Insiders sowie die jeweils eigenen Integrationswege für Xcode und JetBrains ausdrücklich auf. Diese Seite trennt die beiden Installationsarten entsprechend.
-
-**Zuletzt geprüft:** 2026-08-26

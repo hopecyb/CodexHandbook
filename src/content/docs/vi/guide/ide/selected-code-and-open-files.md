@@ -1,14 +1,19 @@
 ---
-title: Vùng chọn và tệp mở
-description: Dùng mã đã chọn và tệp đang mở để giới hạn chính xác phạm vi tác vụ IDE.
-locale: vi
-source_locale: zh-CN
-source_revision: b6b264f
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Vùng chọn và tệp mở"
+description: "Dùng mã đã chọn và tệp đang mở để giới hạn chính xác phạm vi tác vụ IDE."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "b6b264f"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 40
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Trang này nói phương pháp kiểm soát phạm vi ổn định nhất trong tiện ích IDE: kết hợp vùng chọn, tệp mở và đường dẫn `@` tường minh; đây là cách tổ chức ngữ cảnh chung khi sống cùng mã trong trình soạn thảo, không phụ thuộc tên nút tiện ích cụ thể."
+  checkedAt: "2026-07-26"
 ---
 
 Tiện ích IDE rất phù hợp thay đổi **phạm vi nhỏ, độ chính xác cao**: bạn chọn một đoạn mã, nêu ý định, Codex sửa trong ngữ cảnh lân cận. Ở đây chủ yếu nói cách dùng vùng chọn và tệp mở để thắt phạm vi, tránh sửa sai chỗ.
@@ -87,9 +92,3 @@ Phía sản phẩm: [Rà soát thay đổi trong IDE](/vi/guide/ide/reviewing-ch
 
 ## Nguồn tham khảo
 - [Định nghĩa ràng buộc](/vi/prompts/constraints-and-boundaries/)
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** IDE  
-**Căn cứ kiểm chứng:** Trang này nói phương pháp kiểm soát phạm vi ổn định nhất trong tiện ích IDE: kết hợp vùng chọn, tệp mở và đường dẫn `@` tường minh; đây là cách tổ chức ngữ cảnh chung khi sống cùng mã trong trình soạn thảo, không phụ thuộc tên nút tiện ích cụ thể.  
-**Kiểm chứng gần nhất:** 2026-07-26

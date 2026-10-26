@@ -1,17 +1,22 @@
 ---
 title: Vérifier les artefacts générés
-description: Accepter systématiquement les fichiers, rapports et sorties de build que Codex crée ou exporte.
+description: Vérifier méthodiquement les fichiers, rapports et résultats de compilation créés ou exportés par Codex.
 locale: fr
 source_locale: zh-CN
-source_revision: 7401176
+source_revision: '7401176'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec les pages vérifiées verify-artifacts, definition-of-done, handle-uncertainty et pages fichier-artefact ; se concentre sur la méthode stable : généré ≠ livrable, doit ouvrir et vérifier, clarifier la politique de commit.'
+  checkedAt: '2026-07-26'
 ---
 
-Lorsqu'un Agent termine, il peut créer des rapports, scripts, sites statiques, données de test et autres **artefacts générés**. Ils peuvent ne pas passer par votre chemin habituel de revue de code — ils nécessitent donc leur propre habitude de Vérification.
+Lorsqu'un Agent termine, il peut créer des rapports, scripts, sites statiques, données de test et autres **artefacts générés**. Ils peuvent ne pas passer par votre chemin habituel de revue de code — ils nécessitent donc leur propre habitude de vérification.
 
 Les nouveaux fichiers de Codex ne sont pas automatiquement prêts à l'emploi.
 
@@ -23,7 +28,7 @@ Les nouveaux fichiers de Codex ne sont pas automatiquement prêts à l'emploi.
 
 ## Types d'artefacts
 
-| Type | Focus de Vérification |
+| Type | Focus de vérification |
 |---|---|
 | Scripts `.sh` `.py` | Exécutable, sûr, idempotent |
 | Rapports `.md` `.html` | Exactitude factuelle, liens valides |
@@ -33,17 +38,17 @@ Les nouveaux fichiers de Codex ne sont pas automatiquement prêts à l'emploi.
 
 ## Ce que « artefact généré » signifie ici
 
-- Fichiers que Codex a écrits de nouveau
+- Nouveaux fichiers créés par Codex
 - Rapports qu'il a exportés
 - Pages, répertoires ou packages qu'il a construits
 
 Contrairement à « changé quelques lignes de code existant », ceux-ci sont faciles à manquer.
 
-## Flux de Vérification
+## Flux de vérification
 
 ```text
 1. Ouvrir l'artefact (ne pas compter uniquement sur le résumé Agent)
-2. Comparer à la « définition de terminé » dans la Tâche
+2. Comparer à la « définition de terminé » dans la tâche
 3. Exécuter les tests ou commandes de prévisualisation associés
 4. Vérifier chemin, permissions, taille
 5. Décider : accepter / édition partielle / abandonner et refaire
@@ -71,7 +76,7 @@ Certaines sorties sont pour usage temporaire local uniquement — pas Git.
 - Éviter des mégabytes de cache de build dans une PR
 - Gros artefacts : artefact CI ou stockage externe
 
-## Ordre de Vérification pratique
+## Ordre de vérification pratique
 
 1. Confirmer ce qui a été généré
 2. Ouvrir l'artefact le plus important
@@ -81,11 +86,11 @@ Certaines sorties sont pour usage temporaire local uniquement — pas Git.
 
 ## Artefacts non fiables
 
-Pour repos non fiables ou Tâches pilotées de l'extérieur :
+Pour repos non fiables ou tâches pilotées de l'extérieur :
 
 - Lire les scripts avant exécution
 - Surveiller `curl | bash`, payloads obfusqués
-- Prévisualiser dans Bac à sable ou container
+- Prévisualiser dans bac à sable ou container
 
 Généré ne signifie pas vérifié — ouvrir, valider et savoir s'il doit être commité.
 
@@ -99,15 +104,8 @@ Généré ne signifie pas vérifié — ouvrir, valider et savoir s'il doit êtr
 
 - [ ] Chaque nouveau chemin de fichier est dans le périmètre autorisé
 - [ ] Contenu principal ouvert et survolé
-- [ ] Vérifications automatisées (lint/test/vérification liens) exécutées
+- [ ] vérifications automatisées (lint/test/vérification liens) exécutées
 - [ ] Pas de secrets, pas de répertoires générés errants
 
 ## Sources de référence
 - [Gérer l'incertitude](/fr/guide/quality/handle-uncertainty/)
-- exigences d'acceptation cas intégration sources externes
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec les pages vérifiées verify-artifacts, definition-of-done, handle-uncertainty et pages fichier-artefact ; se concentre sur la méthode stable : généré ≠ livrable, doit ouvrir et vérifier, clarifier la politique de commit.  
-**Dernière vérification :** 2026-07-26

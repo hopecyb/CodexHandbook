@@ -8,11 +8,12 @@ title: Permisos y sandbox
 description: Entiende el sandbox, las aprobaciones, el acceso a la red y los límites de ejecución local y en Cloud mediante una secuencia de decisiones.
 locale: es
 source_locale: zh-CN
-source_revision: 6b5fcb8
-translation_status: draft
+source_revision: '6b5fcb8'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 14
+reviewed_at: 2026-10-25
 ---
 
 Para usar Codex con seguridad, hay que tener en cuenta dos controles: **el sandbox determina hasta dónde puede llegar técnicamente; la política de aprobación determina si debe preguntarte antes de cruzar el límite actual.**

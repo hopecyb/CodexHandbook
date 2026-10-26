@@ -1,5 +1,5 @@
 ---
-title: "Ejemplo: una Skill de escritura con fuentes y muestra de estilo"
+title: "Ejemplo: un Skill de escritura con fuentes y muestra de estilo"
 description: "Descarga un paquete completo para practicar el mapa de afirmaciones, la revisión del estilo, la conservación de conflictos y la comprobación humana."
 contentType: skill
 audiences: [creator]
@@ -21,11 +21,12 @@ assets:
     version: 1.0.0
 locale: es
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: 'cbaec37'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
-Esta Skill convierte las fuentes proporcionadas en un artículo con afirmaciones rastreables, manteniendo requisitos de estilo, fundamentos y cuestiones sin resolver. Sirve para escribir a partir de fuentes y revisar hechos; corregir una errata no requiere todo el proceso.
+Este Skill convierte las fuentes proporcionadas en un artículo con afirmaciones rastreables, manteniendo requisitos de estilo, fundamentos y cuestiones sin resolver. Sirve para escribir a partir de fuentes y revisar hechos; corregir una errata no requiere todo el proceso.
 
 [Descarga source-backed-writer v1.0.0](/downloads/skills/source-backed-writer/source-backed-writer-1.0.0.zip) · [Ver SKILL.md](/downloads/skills/source-backed-writer/SKILL.md) · [Instrucciones de instalación](/downloads/skills/source-backed-writer/README.md)
 
@@ -39,11 +40,11 @@ Esta Skill convierte las fuentes proporcionadas en un artículo con afirmaciones
 | Siete afirmaciones vinculadas y lista de pendientes | Separar respaldo de la fuente, inferencia del autor y datos no confirmados |
 | Casos positivos y negativos de activación, scripts y registro | Delimitar el uso y las limitaciones de las comprobaciones |
 
-Los materiales reutilizan la herramienta ficticia «拾页» del [ejercicio de artículo basado en fuentes](/es/cases/write-an-article/). Puedes completar primero ese ejercicio y guardar después el método en una Skill.
+Los materiales reutilizan la herramienta ficticia «拾页» (Shiye) del [ejercicio de artículo basado en fuentes](/es/cases/write-an-article/). Puedes completar primero ese ejercicio y guardar después el método en un Skill.
 
 ## Instalación y primera llamada
 
-Coloca el directorio completo en `.agents/skills/source-backed-writer/` de tu proyecto de práctica, con `SKILL.md` en el primer nivel. Si existe otra Skill con el mismo nombre, compara antes de sobrescribirla. Consulta [Usar una Skill](/es/skills/use-a-skill/) para el descubrimiento; cuando confirmes que puedes elegirla en tu cliente, llámala expresamente:
+Coloca el directorio completo en `.agents/skills/source-backed-writer/` de tu proyecto de práctica, con `SKILL.md` en el primer nivel. Si existe otro Skill con el mismo nombre, compara primero; no sobrescribas el existente. Consulta [Usar un Skill](/es/skills/use-a-skill/) para saber cómo lo detecta el cliente; cuando confirmes que puedes seleccionarlo, invócalo expresamente:
 
 ```text
 $source-backed-writer Lee las tres fuentes de sources/ de este paquete didáctico.
@@ -52,7 +53,7 @@ article.md, claim-map.csv y unresolved.md en my-output/.
 Conserva su identidad sintética. No publiques.
 ```
 
-Leer y escribir no requieren Python. La comprobación estructural opcional usa solo la biblioteca estándar de Python 3.10+. Desde el directorio de la Skill descomprimida:
+Leer y escribir no requieren Python. La comprobación estructural opcional usa solo la biblioteca estándar de Python 3.10+. Desde el directorio del Skill descomprimido:
 
 ```sh
 # Comprobar el borrador de referencia incluido
@@ -71,7 +72,7 @@ La [muestra de estilo](/downloads/skills/source-backed-writer/references/style.m
 
 > Contraejemplo: 拾页 es una solución universal que procesa sin esfuerzo cualquier formato y duplica tu productividad.
 
-Cámbialo por: «La descripción solo menciona Markdown y texto sin formato. Prueba primero con una copia pequeña de tus notas y después vuelve al texto original citado en el resumen». La primera frase procede de la fuente; la segunda es un consejo del autor. Distínguelas en el mapa de afirmaciones. Si el usuario pide otro tono o estructura, sigue la tarea real.
+Cámbialo por: «La descripción solo menciona Markdown y texto sin formato. Prueba primero con copias de unas pocas notas y después vuelve al texto original citado en el resumen». La primera frase procede de la fuente; la segunda es un consejo del autor. Distínguelas en el mapa de afirmaciones. Si el usuario pide otro tono o estructura, sigue la tarea real.
 
 [Versión final de referencia](/downloads/skills/source-backed-writer/solution/article.md) · [Mapa de afirmaciones](/downloads/skills/source-backed-writer/solution/claim-map.csv) · [Diff de revisión](/downloads/skills/source-backed-writer/solution/revision.diff)
 

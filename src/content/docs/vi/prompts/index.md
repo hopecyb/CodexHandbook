@@ -7,9 +7,10 @@ title: Prompts
 description: Học cách nêu rõ tác vụ, bối cảnh, đầu vào, ràng buộc và tiêu chí nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 2280f53
-translation_status: draft
+source_revision: "2280f53"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Phần prompt hướng dẫn cách diễn đạt tác vụ để Codex hiểu mục tiêu, bối cảnh, ranh giới và tiêu chí hoàn thành. Một prompt hữu ích cũng giúp làm rõ điều chưa chắc chắn trong lúc thực hiện, yêu cầu xác nhận khi cần và trả về kết quả có thể kiểm tra.

@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  checkedAt: "2026-08-26"
 title: Settings
 description: Configure everyday desktop App behavior, shortcuts, notifications, and appearance.
 locale: en
 source_locale: zh-CN
-source_revision: 7a6d2fe
+source_revision: '7a6d2fe'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 90
 ---
@@ -44,22 +48,14 @@ Choose light, dark, or system appearance, and adjust the accent color, backgroun
 - The sandbox, approval policy, and organization policy jointly determine whether files, networks, and commands are available.
 - Managed organization policy may restrict what an individual can select.
 
-A visible setting therefore does not guarantee that the current task has the corresponding permission. When an operation is denied, read [Permissions and sandboxing](/en/guide/permissions-and-sandbox/) before expanding access.
+A visible setting therefore does not guarantee that the current task has the corresponding permission. When an operation is denied, first read [Permissions and sandboxing](/en/guide/permissions-and-sandbox/); do not immediately expand access.
 
 ## Verify each change
 
-Change one class of settings at a time and verify it with a low-risk chat. Record the previous value. If behavior differs from your expectation, restore the default first, then check the App version, operating-system permissions, and organization policy.
+Change one class of settings at a time and verify it with a low-risk chat. Record the previous value and confirm the effect before continuing. If behavior differs from your expectation, restore the default first, then check the App version, operating-system permissions, and organization policy.
 
 ## Official sources
 
 - [ChatGPT desktop App settings](https://learn.chatgpt.com/docs/app/settings)
 - [Codex configuration basics](https://learn.chatgpt.com/docs/config)
 - [Permissions](https://learn.chatgpt.com/docs/permissions)
-
----
-
-**Status:** verified
-
-**Applies to:** App
-
-**Last verified:** 2026-08-26

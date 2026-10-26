@@ -8,13 +8,13 @@ title: Vérification et revue humaine
 description: Pourquoi les résultats doivent être contrôlables et comment les examiner.
 locale: fr
 source_locale: zh-CN
-source_revision: bfe4036
-translation_status: draft
+source_revision: "bfe4036"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 110
+reviewed_at: '2026-10-26'
 ---
-
 Codex peut vous faire gagner du temps, mais il ne peut pas assumer à votre place la responsabilité de valider le résultat final.
 
 La rapidité **ne dispense pas des contrôles d'acceptation**. Au minimum :

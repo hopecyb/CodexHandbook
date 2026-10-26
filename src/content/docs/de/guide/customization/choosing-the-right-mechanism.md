@@ -3,12 +3,18 @@ title: Den richtigen Mechanismus wählen
 description: "Temporärer Prompt, AGENTS.md, Erinnerung, Skill, MCP — wohin gehört welche Schicht; ein Entscheidungsrahmen."
 locale: de
 source_locale: zh-CN
-source_revision: 5fad7cb
+source_revision: "5fad7cb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen die bereits verifizierten Kapitel zu `AGENTS.md`, Kontext, Skills, MCP und Qualität; diese Seite behält nur den stabilen Entscheidungsrahmen „temporäre Anforderungen, Projektregeln,
+    persönliche Vorlieben, Ablaufkapselung und externe Fähigkeiten gehören in Schichten“.
+  checkedAt: '2026-07-26'
 ---
 
 Viele Teamprobleme entstehen, weil **dieselbe Information am falschen Ort** landet: Repo-Regeln landen im Chat, Skill-taugliche Abläufe in `AGENTS.md`, und Daten, die nur lesend angebunden werden sollten, bekommen ein hochprivilegiertes MCP.
@@ -29,7 +35,7 @@ Hier geht es um eine praktische Frage:
 
 Reicht die Tabelle nicht, lesen Sie weiter.
 
-## Fünf-Schritte-Entscheidung
+## Drei Fragen zur Einordnung
 
 ### 1. Information gilt nur für die aktuelle Aufgabe
 
@@ -47,7 +53,7 @@ Nicht geeignet:
 - Verzeichnisse, die im Repo nicht geändert werden dürfen
 - Jede PR-Prüfung folgt derselben Ausgabevorlage
 
-Solche langfristigen Regeln sollten weiter „absinken“.
+Solche langfristigen Regeln gehören auf eine dauerhafte Ebene.
 
 ### 2. Projekt-Kollaborationsregel oder persönliche Gewohnheit?
 
@@ -118,7 +124,7 @@ Geeignet: Teamregeln sind stabil, Ausdrucksgewohnheiten unterscheiden sich.
 Aufteilung:
 
 - `AGENTS.md` schreibt gemeinsame Teamnormen
-- Erinnerung hält persönliche Vorlieben: Sprache, Erklärstil, Standard-Ausgabe struktur
+- Erinnerung hält persönliche Vorlieben: Sprache, Erklärstil, Standard-Ausgabestruktur
 
 Nicht umkehren. Teamregeln dürfen nicht nur in einer privaten Erinnerung leben.
 
@@ -152,7 +158,7 @@ Nicht jedes Mal die ganze Vorlage einfügen.
 
 Stabiler:
 
-1. Ausgabe struktur als Skill
+1. Ausgabestruktur als Skill festhalten
 2. In der `description` klarstellen: „bei review, Prüfung, Pre-Merge-Check verwenden“
 3. Bei Team-Standard den Skill-Pfad in die Projektdoku aufnehmen
 
@@ -190,7 +196,7 @@ Wenn das Team noch unordentlich ist, so konvergieren:
 
 1. Zuerst eine minimal nutzbare `AGENTS.md`
 2. Abläufe, die dreimal wiederkehren, zu Skills verdichten
-3. MCP nur bei echtem Bedarf an externe Systeme
+3. MCP nur bei echtem Bedarf an externen Systemen
 4. Zuletzt persönliche Erinnerungen und Vorlieben sortieren
 
 So stabilisieren Sie zuerst den **Kollaborationskonsens**, dann erweitern Sie Fähigkeiten.
@@ -205,9 +211,3 @@ So stabilisieren Sie zuerst den **Kollaborationskonsens**, dann erweitern Sie F�
 
 ## Quellen
 - Offizielle OpenAI-Codex-Dokumentation (jeweils aktuelle Version)
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen die bereits verifizierten Kapitel zu `AGENTS.md`, Kontext, Skills, MCP und Qualität; diese Seite behält nur den stabilen Entscheidungsrahmen „temporäre Anforderungen, Projektregeln, persönliche Vorlieben, Ablaufkapselung und externe Fähigkeiten gehören in Schichten“.  
-**Zuletzt geprüft:** 2026-07-26

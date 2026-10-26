@@ -12,10 +12,10 @@ title: Review a PR
 description: Use Codex for structured diff review before merge.
 locale: en
 source_locale: zh-CN
-source_revision: 84638f0
+source_revision: '84638f0'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 

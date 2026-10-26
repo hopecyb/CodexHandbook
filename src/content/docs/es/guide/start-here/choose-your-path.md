@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo explica cómo elegir una ruta de lectura por rol, tarea o entrada de producto; se revisaron enlaces internos y el agrupamiento de rutas, y el cuerpo no depende de hechos de producto volátiles."
+  checkedAt: "2026-07-26"
 title: Elige tu ruta
-description: Elige una ruta de lectura según rol, Tarea o entrada de producto.
+description: Elige una ruta de lectura según rol, tarea o entrada de producto.
 locale: es
 source_locale: zh-CN
-source_revision: 51ccd00
+source_revision: '51ccd00'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 4
 ---
 
-Puedes entrar por **rol**, **Tarea** o **producto**. Las tres rutas vuelven al mismo conjunto de páginas centrales; solo cambia el punto de partida.
+Puedes entrar por **rol**, **tarea** o **producto**. Las tres rutas vuelven al mismo conjunto de páginas centrales; solo cambia el punto de partida.
 
 Hay muchas entradas: elige primero la que más se acerque a tu problema actual.
 
@@ -22,13 +27,13 @@ Hay muchas entradas: elige primero la que más se acerque a tu problema actual.
 - [Resumen de la ruta para desarrolladores](/es/guide/learning-paths/developer/)
 - [Resumen de la ruta para equipos](/es/guide/learning-paths/team/)
 
-## Por Tarea
+## Por tarea
 
 | Quieres… | Empieza por |
 |---|---|
 | Entender Codex y la terminología | [Fundamentos](/es/guide/foundations/) |
-| Completar una pasada hoy | [Primeros pasos](/es/guide/getting-started/) |
-| Escribir buenos Prompts | [Prompts](/es/prompts/) |
+| Completar una tarea hoy | [Primeros pasos](/es/guide/getting-started/) |
+| Escribir buenos prompts | [Prompts](/es/prompts/) |
 | Aprender a comprobar resultados | [Calidad y verificación](/es/guide/quality/) |
 | Consultar tablas y resolver problemas | [Referencia](/es/guide/reference/) |
 
@@ -45,11 +50,11 @@ Si aún no lo tienes claro, mira [Elige un cliente de Codex](/es/guide/choose-yo
 
 ### 1. Al principio no hace falta clasificarte con demasiado detalle
 
-Más práctico: ¿necesitas aprender la operación básica ahora, o resolver primero un tipo concreto de Tarea?
+Más práctico: ¿necesitas aprender el manejo básico ahora, o resolver primero un tipo concreto de tarea?
 
 ### 2. No tienes que elegir solo una de las tres entradas
 
-Son formas distintas de entrar, no una elección exclusiva. Empezar por Tarea y luego completar por producto también es habitual.
+Son formas distintas de entrar, no una elección exclusiva. Empezar por tarea y luego completar por producto también es habitual.
 
 ### 3. Si te equivocas de ruta, no tienes que empezar de cero
 
@@ -59,15 +64,8 @@ La ruta sirve para dar menos rodeos, no es un curso obligatorio en orden fijo.
 
 Cuando dudes, juzga en este orden:
 
-1. Aún no has completado tu primera Tarea: ve a la [ruta para principiantes](/es/guide/learning-paths/beginner/)
-2. Ya sabes qué quieres hacer: entra por la tabla de «Tarea»
+1. Aún no has completado tu primera tarea: ve a la [ruta para principiantes](/es/guide/learning-paths/beginner/)
+2. Ya sabes qué quieres hacer: entra por la tabla de «tarea»
 3. Ya sabes en qué entrada trabajas sobre todo: ve al capítulo de producto correspondiente
 
 Empieza por la entrada más cercana a tu problema actual; luego puedes ajustar.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo explica cómo elegir una ruta de lectura por rol, Tarea o entrada de producto; se revisaron enlaces internos y el agrupamiento de rutas, y el cuerpo no depende de hechos de producto volátiles.  
-**Última verificación:** 2026-07-26

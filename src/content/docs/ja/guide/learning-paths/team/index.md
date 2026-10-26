@@ -20,8 +20,9 @@ sidebar:
 locale: ja
 source_locale: zh-CN
 source_revision: "3b46738"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 結果を確認できる限定的な作業から始め、利用を広げる価値があるかを2週間で判断する材料を集めます。ここでの2週間は10営業日です。作業量が不足していれば試行期間を延ばし、期日が来ただけで成功と宣言しないでください。

@@ -3,14 +3,18 @@ title: Installer la CLI
 description: Installer Codex CLI, vérifier sa version et son état de connexion, puis exécuter une première tâche dans un dépôt.
 locale: fr
 source_locale: zh-CN
-source_revision: 564bd75
+source_revision: "564bd75"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: comparaison avec le guide de démarrage rapide et la documentation d'authentification actuels de Codex CLI, notamment le programme d'installation officiel pour macOS/Linux, le démarrage avec `codex`, la connexion avec ChatGPT et la commande d'état. Les autres méthodes d'installation renvoient vers les onglets officiels à jour.
+  checkedAt: '2026-08-26'
 ---
-
 Codex CLI regroupe l'exploration, la modification, les tests et la révision dans le terminal. La page d'installation officielle propose des options pour macOS/Linux, Windows, npm et Homebrew. Choisissez celle qui correspond à votre système d'exploitation et à votre méthode de gestion des paquets.
 
 ## Programme d'installation autonome officiel pour macOS et Linux
@@ -42,7 +46,7 @@ Après l'autorisation dans le navigateur, démarrez une session interactive depu
 codex
 ```
 
-La première tâche doit rester en lecture seule :
+La première tâche peut rester en lecture seule :
 
 ```text
 Ne modifie encore aucun fichier. Explique comment ce projet est installé, testé et compilé,
@@ -59,13 +63,3 @@ et indique les chemins des fichiers utilisés comme preuves.
 Ne collez jamais une clé API dans l'historique du shell, un ticket ou une conversation. Pour vous connecter avec une clé API, utilisez la méthode par entrée standard décrite dans [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/).
 
 Poursuivez avec le [Mode interactif de la CLI](/fr/guide/cli/interactive-mode/). Pour les autres échecs, consultez le [Dépannage de la CLI](/fr/guide/cli/troubleshooting/).
-
----
-
-**Statut :** vérifié
-
-**Produits concernés :** CLI
-
-**Base de vérification :** comparaison avec le guide de démarrage rapide et la documentation d'authentification actuels de Codex CLI, notamment le programme d'installation officiel pour macOS/Linux, le démarrage avec `codex`, la connexion avec ChatGPT et la commande d'état. Les autres méthodes d'installation renvoient vers les onglets officiels à jour.
-
-**Dernière vérification :** 2026-08-26

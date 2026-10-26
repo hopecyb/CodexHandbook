@@ -3,12 +3,17 @@ title: Install the CLI
 description: Install Codex CLI, check its version and sign-in state, and run a first repository task.
 locale: en
 source_locale: zh-CN
-source_revision: 564bd75
+source_revision: '564bd75'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: Compared with the current Codex CLI quickstart and authentication documentation, including the official macOS/Linux installer, `codex` startup, ChatGPT sign-in, and status command. Other installation paths point to the live official tabs.
+  checkedAt: '2026-08-26'
 ---
 
 Codex CLI keeps exploration, editing, testing, and review in the terminal. The official installation page provides macOS/Linux, Windows, npm, and Homebrew options. Choose one that matches your operating system and package-management approach.
@@ -59,13 +64,3 @@ and list the file paths you used as evidence.
 Never paste an API key into shell history, tickets, or chats. For API-key sign-in, use the standard-input method in [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/).
 
 Continue with [CLI interactive mode](/en/guide/cli/interactive-mode/). For other failures, see [CLI troubleshooting](/en/guide/cli/troubleshooting/).
-
----
-
-**Status:** verified
-
-**Applies to:** CLI
-
-**Verification basis:** Compared with the current Codex CLI quickstart and authentication documentation, including the official macOS/Linux installer, `codex` startup, ChatGPT sign-in, and status command. Other installation paths point to the live official tabs.
-
-**Last verified:** 2026-08-26

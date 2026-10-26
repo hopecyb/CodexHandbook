@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against OpenAI Developers’ current public description of project context and file collaboration, and this handbook’s verified project context, files, and workflow chapters; page content keeps only the stable division of labor among README, `AGENTS.md`, `docs/`, and task conversation."
+  checkedAt: "2026-07-26"
 title: Project Instructions
 description: Project-level context beyond AGENTS.md—how README, docs, and conversation references divide labor.
 locale: en
 source_locale: zh-CN
-source_revision: 76b0fde
+source_revision: '76b0fde'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -33,7 +38,7 @@ Codex reads these materials with tools; the key is a **single source of truth**�
 ## Basic Practice
 
 1. Ensure the root `README.md` has four sections: purpose, install, development, test
-2. Sink **instructions you repeat to Codex** into `AGENTS.md`
+2. Record **instructions you repeat to Codex** in `AGENTS.md`
 3. In tasks, use `@` to point at specific files instead of pasting full text:
 
 ```text
@@ -99,10 +104,3 @@ The point of project instructions is to help Codex and humans find the same “r
 
 - [ ] Someone who freshly clones the repo (or Codex) can run tests from README + AGENTS.md
 - [ ] Task prompts rely mainly on @ references, avoiding repeated long background
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context and file collaboration, and this handbook’s verified project context, files, and workflow chapters; page content keeps only the stable division of labor among README, `AGENTS.md`, `docs/`, and task conversation.  
-**Last verified:** 2026-07-26

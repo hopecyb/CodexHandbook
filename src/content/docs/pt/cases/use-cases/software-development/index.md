@@ -1,17 +1,18 @@
 ---
 title: Desenvolvimento de software
-description: Entrada para casos de alterar código, corrigir bugs e complementar verificação — foco em controlo de âmbito, testes e rollback.
+description: Entrada para casos de alterar código, corrigir bugs e complementar verificação — foco em controle de escopo, testes e rollback.
 locale: pt
 source_locale: zh-CN
-source_revision: a3d7f4c
+source_revision: "a3d7f4c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com a entrada atual de casos software-development neste repositório e com capítulos de fluxos de desenvolvimento, correr testes e rollback; esta página só explica entradas e focos do grupo de desenvolvimento.", "checkedAt": "2026-07-26"}
 ---
 
 Os casos de desenvolvimento de software focam este tipo de problema:
 
-> **Como o Codex altera com precisão num repositório real, de forma revível, e ainda verifica depois de alterar.**
+> **Como o Codex altera com precisão num repositório real, de forma revisável, e ainda verifica depois de alterar.**
 
 ## Entradas deste grupo
 
@@ -19,13 +20,6 @@ Os casos de desenvolvimento de software focam este tipo de problema:
 
 ## Foco deste grupo
 
-- Como clarificar o âmbito da tarefa
+- Como clarificar o escopo da tarefa
 - Porque caminhos de verificação e rollback devem ser pensados desde o início
 - Como evitar «alterar mais um pouco de passagem» no desenvolvimento real
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com a entrada atual de casos software-development neste repositório e com capítulos de fluxos de desenvolvimento, correr testes e rollback; esta página só explica entradas e focos do grupo de desenvolvimento.  
-**Última verificação:** 2026-07-26

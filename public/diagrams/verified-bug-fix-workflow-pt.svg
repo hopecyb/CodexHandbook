@@ -1,6 +1,6 @@
 <svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
   <title id="title">Fluxo verificado de correção de bug</title>
-  <desc id="desc">Reproduza vermelho estável e registre evidências; localize a causa raiz, faça a menor correção, alcance verde nos testes relacionados e então rode regressão completa e revisão de diff. Falhas retornam à etapa relevante.</desc>
+  <desc id="desc">Primeiro execute o teste para reproduzir a falha de forma estável e registre as evidências. Localize a causa raiz, faça a correção mínima e execute os testes relevantes até passarem. Depois faça a regressão completa e revise o diff. Se alguma etapa falhar, retorne à etapa correspondente.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -28,7 +28,7 @@
   <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
 
   <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
-  <text x="112" y="235" text-anchor="middle" class="label">1. Reproduzir de forma confiável</text>
+  <text x="112" y="235" text-anchor="middle" class="label">1. Reprodução estável</text>
   <text x="112" y="261" text-anchor="middle" class="note">Executar o teste com falha</text>
   <text x="112" y="283" text-anchor="middle" class="note">Salvar asserção e stack</text>
   <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">VERMELHO · falha esperada</text>
@@ -41,8 +41,8 @@
 
   <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="488" y="235" text-anchor="middle" class="label">3. Menor correção</text>
-  <text x="488" y="261" text-anchor="middle" class="note">Alterar apenas o caminho da causa raiz</text>
-  <text x="488" y="283" text-anchor="middle" class="note">Preservar comportamento público</text>
+  <text x="488" y="261" text-anchor="middle" class="note">Alterar só a causa raiz</text>
+  <text x="488" y="283" text-anchor="middle" class="note">Manter comportamento público</text>
   <text x="488" y="304" text-anchor="middle" class="tiny">Rejeitar refatoração incidental</text>
 
   <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
@@ -62,6 +62,6 @@
   <text x="1021" y="275" text-anchor="middle" class="note">Evidência completa</text>
 
   <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
-  <text x="550" y="504" text-anchor="middle" class="note">Cadeia de evidências: comando e asserção com falha → explicação da causa raiz → diff mínimo → testes relacionados passam → regressão completa passa → revisão humana de escopo</text>
+  <text x="550" y="504" text-anchor="middle" class="note">Evidências: comando e asserção com falha → causa raiz → diff mínimo → testes passam → regressão completa passa → revisão humana do escopo</text>
   <text x="550" y="526" text-anchor="middle" class="tiny">Falha em teste relacionado retorna à menor correção; falha em regressão completa ou revisão de diff retorna à análise da causa raiz.</text>
 </svg>

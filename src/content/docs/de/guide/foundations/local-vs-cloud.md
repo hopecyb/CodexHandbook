@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Das OpenAI Help Center unterscheidet in „Using Codex with your ChatGPT plan“ weiterhin „local workflows run on your device“ und „cloud tasks run in OpenAI-managed environments“; „ChatGPT Work and Codex“ bestätigt, dass Work on web/mobile in der Cloud läuft. Diese Seite fasst nur Einsatzszenarien und Abwägungen lokaler vs. Cloud-Aufgaben zusammen und bindet keine konkreten Tarife oder Einstiegsdetails."
+  checkedAt: "2026-07-26"
 title: Lokal und Cloud
 description: "Vergleicht Einsatzszenarien für lokale Aufgaben und Cloud-Aufgaben."
 locale: de
 source_locale: zh-CN
-source_revision: 9569b3c
+source_revision: "9569b3c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 50
 ---
@@ -19,7 +24,7 @@ Willst du Codex zuerst nur in Gang bringen, ist **lokal** meist einfacher.
 |---|---|---|
 | Laufort | Deine Maschine / lokale Umgebung | Cloud-Umgebung |
 | Geeignet für | Schnelle Iteration, lokale Dateien, Debugging mit lokalen Secrets | Remote-Repos, lange Aufgaben, standardisierte Umgebung |
-| Achtung | Lokale Berechtigungen und Fehländerungsrisiko | Umgebungskonfiguration, Secret-Injection, Netzwerkpolitik |
+| Achtung | Lokale Berechtigungen und Fehländerungsrisiko | Umgebungskonfiguration, Secret-Injection, Netzwerkrichtlinie |
 
 ![Illustration: links die Arbeit mit dem Agenten am eigenen Rechner, rechts isolierte Cloud-Container, die parallel laufen und Ergebnisse zurückschicken](/illustrations/local-vs-cloud.webp)
 
@@ -28,7 +33,7 @@ Willst du Codex zuerst nur in Gang bringen, ist **lokal** meist einfacher.
 Ungefähr so:
 
 - **Lokale Aufgabe**: Du sitzt vor deinem Rechner, Codex hilft am aktuellen Projekt
-- **Cloud-Aufgabe**: Du gibst die Aufgabe an eine remote Arbeitsmaschine, die dort weiterläuft
+- **Cloud-Aufgabe**: Du gibst die Aufgabe an eine entfernte Arbeitsmaschine, die dort weiterläuft
 
 Der Unterschied ist nicht nur der Ort:
 
@@ -78,10 +83,3 @@ Zu Cloud wechseln, wenn du wirklich brauchst:
 Viele Anfänger starten mit **lokal + Desktop-App**. Cloud-Details: [Web- und Cloud-Überblick](/de/guide/web-and-cloud/). Wechsel in der App: [Lokale und Cloud-Aufgaben](/de/guide/desktop-app/local-and-cloud-tasks/).
 
 Lokal eignet sich besser, um den Ablauf zu verstehen und Kleines zu ändern. Cloud eignet sich besser für längere, standardisierte, remote-kollaborative Aufgaben.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Das OpenAI Help Center unterscheidet in „Using Codex with your ChatGPT plan“ weiterhin „local workflows run on your device“ und „cloud tasks run in OpenAI-managed environments“; „ChatGPT Work and Codex“ bestätigt, dass Work on web/mobile in der Cloud läuft. Diese Seite fasst nur Einsatzszenarien und Abwägungen lokaler vs. Cloud-Aufgaben zusammen und bindet keine konkreten Tarife oder Einstiegsdetails.  
-**Zuletzt überprüft:** 2026-07-26

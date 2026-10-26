@@ -20,17 +20,18 @@ verification:
       href: /downloads/reading-event/validation/recovery.json
 assets:
   - path: /downloads/reading-event/reading-event-1.0.0.zip
-    purpose: Exigences fixes, faits fictifs, HTML de départ, page de référence, exemple défectueux, modèle de réception et script de validation
+    purpose: Exigences fixes, faits fictifs, HTML de départ, page de référence, exemple défectueux, modèle de validation et script de validation
     license: CC0-1.0
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
+reviewed_at: 2026-10-26
 ---
 
-Transformez les informations d’un événement en site d’une page ouvrable dans un navigateur. Vous livrerez une page statique locale et un compte rendu de réception. L’événement et le lieu sont fictifs ; le mode d’inscription reste à déterminer.
+Transformez les informations d’un événement en site d’une page ouvrable dans un navigateur. Vous livrerez une page statique locale et un compte rendu de validation. L’événement et le lieu sont fictifs ; le mode d’inscription reste à déterminer.
 
 [Télécharger le dossier complet](/downloads/reading-event/reading-event-1.0.0.zip) · [Ouvrir la page de référence](/downloads/reading-event/solution/index.html) · [Lire la présentation des fichiers](/downloads/reading-event/README.md)
 
@@ -55,11 +56,11 @@ internes. Indiquez les contrôles réellement effectués et les points inachevé
 ne déclarez pas réussis des contrôles non exécutés.
 ```
 
-Le [schéma de mise en page](/downloads/reading-event/wireframe.md) décrit l’ordre de lecture en deux colonnes sur ordinateur et une seule sur mobile. Les couleurs et la décoration peuvent varier, mais les faits, les inconnues et les critères de réception doivent rester exacts.
+Le [schéma de mise en page](/downloads/reading-event/wireframe.md) décrit l’ordre de lecture en deux colonnes sur ordinateur et une seule sur mobile. Les couleurs et la décoration peuvent varier, mais les faits, les inconnues et les critères de validation doivent rester exacts.
 
 ## Vérifier le résultat
 
-| Contrôle | Critère de réception |
+| Contrôle | Critère de validation |
 |---|---|
 | Faits | 17 octobre 2026, 14 h 00–15 h 30, salle de lecture fictive, 18 personnes, gratuité et livre apporté volontairement : tout correspond aux documents |
 | Inconnues | L’inscription reste à confirmer ; aucun QR code, numéro de téléphone ou lien inventé |
@@ -67,7 +68,7 @@ Le [schéma de mise en page](/downloads/reading-event/wireframe.md) décrit l’
 | Interaction | La touche Tab atteint le bouton principal, le focus est visible ; Entrée ou un clic mène aux modalités de participation |
 | Portée | Seul `work/index.html` a changé ; aucune dépendance, aucun formulaire de collecte ni publication externe |
 
-Copiez le [modèle de réception](/downloads/reading-event/review-template.md) hors du dossier de travail et renseignez vos propres résultats. La page de référence a été rédigée par l’auteur ; son compte rendu ne remplace pas la réception du résultat produit ici par le modèle.
+Copiez le [modèle de validation](/downloads/reading-event/review-template.md) hors du dossier de travail et renseignez vos propres résultats. La page de référence a été rédigée par l’auteur ; son compte rendu ne remplace pas la validation du résultat produit ici par le modèle.
 
 ## Reproduire et réparer un bouton défectueux
 

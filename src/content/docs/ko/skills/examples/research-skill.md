@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: "cf2b232"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: "2026-10-26"
 ---
 
 열리지 않는 출처, 어떤 사실을 언급하지 않는 자료, 서로 다른 주장을 하는 두 자료는 각각 다르게 다뤄야 합니다. 이 Skill은 그 차이를 보존해 어떤 결론을 다시 확인할 수 있고 어떤 결론에 추가 근거가 필요한지 보여 줍니다.

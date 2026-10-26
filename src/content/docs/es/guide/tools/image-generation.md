@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud (seg\u00fan versi\u00f3n)"
+  basis: "Revisado con material oficial de OpenAI sobre generación y edición de imágenes respecto a escenarios, forma de escribir prompts y límites de aceptación; el cuerpo conserva la conclusión prudente de «prioridad al borrador; el artefacto formal necesita revisión»."
+  checkedAt: "2026-07-26"
 title: Generación de imágenes
 description: Generar o editar imágenes en tareas Codex — prompts, formatos y aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: ea275fa
+source_revision: 'ea275fa'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 60
 ---
@@ -35,7 +40,7 @@ Complementa [Prompts con imágenes](/es/prompts/prompting-with-images/): esa pá
 
 Encaja mejor en:
 
-- Sacudir rápido una dirección
+- Explorar rápidamente una dirección visual
 - Ayudarte a ver un concepto visual
 - Dar a artículos, docs o prototipos un boceto usable primero
 
@@ -82,7 +87,7 @@ Se acerca más a:
 - Herramienta de imagen de acompañamiento de contenido
 - Herramienta de boceto conceptual
 
-No a un sustituto de la entrega de diseño estricta.
+No sustituye un trabajo de diseño sujeto a requisitos estrictos.
 
 ## Cómo formularlo
 
@@ -114,11 +119,4 @@ Puedes pedir con esta estructura:
 - Usar imágenes generadas como si fueran foto real o logo oficial
 - No restringir «sin texto» en el prompt y obtener subtítulos corruptos
 
-La generación de imágenes encaja mejor para dirección y borradores primero; en la entrega externa, sigue aceptando con el estándar de artefacto formal.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / Cloud (según versión)  
-**Base de verificación:** Revisado con material oficial de OpenAI sobre generación y edición de imágenes respecto a escenarios, forma de escribir prompts y límites de aceptación; el cuerpo conserva la conclusión prudente de «prioridad al borrador; el artefacto formal necesita revisión».  
-**Última verificación:** 2026-07-26
+La generación de imágenes encaja mejor para dirección y borradores primero; en la entrega externa, comprueba el resultado con los mismos criterios que cualquier entrega final.

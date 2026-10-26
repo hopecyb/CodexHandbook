@@ -8,13 +8,13 @@ title: Extension IDE
 description: 'Utiliser Codex dans l''éditeur : installation, contexte, tâches locales et cloud, revue et réglages.'
 locale: fr
 source_locale: zh-CN
-source_revision: c2fa50b
-translation_status: draft
+source_revision: "c2fa50b"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 12
+reviewed_at: '2026-10-26'
 ---
-
 L'extension IDE convient au travail où l'on **écrit tout en examinant le diff** : ouvrez un fichier, sélectionnez du code et décrivez une tâche dans le panneau latéral. Ce chapitre couvre tout le parcours, du choix de l'éditeur à la revue du résultat.
 
 Si vous écrivez habituellement du code ou modifiez des documents dans un éditeur, l'IDE est souvent le point de départ le plus naturel.

@@ -20,7 +20,7 @@ verification:
       href: /downloads/prompt-comparison-results/reviewer-checks.json
 assets:
   - path: /downloads/prompt-comparison-results/prompt-comparison-results-1.0.0.zip
-    purpose: Zwölf Aufgaben, Eingaben, öffentliche Kopien der Rohergebnisse, Logs, Dauer, Einzelbewertungen und Prüfscripte
+    purpose: Zwölf Aufgaben, Eingaben, öffentliche Kopien der Rohergebnisse, Logs, Dauer, Einzelbewertungen und Prüfskripte
     license: CC0-1.0
     version: 1.0.0
   - path: /downloads/prompt-comparisons/prompt-comparisons-1.0.0.zip
@@ -29,14 +29,15 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: "e6a23bb"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
 Ein Vergleich soll zeigen, welche Anforderungen die Lieferung verändern, nicht beweisen, dass längere Prompts besser sind. Diese Seite bietet drei Sätze fester Eingaben und Protokolle von zwölf tatsächlich am 18. September 2026 abgeschlossenen Läufen. Die Stichprobe zeigt vor allem Unterschiede in den gelieferten Nachweisen und reicht nicht für allgemeine Aussagen.
 
-[Vollständige Vergleichsmaterialien herunterladen](/downloads/prompt-comparisons/prompt-comparisons-1.0.0.zip) · [Laufprotokoll](/downloads/prompt-comparisons/README.md) · [Leere Vorlage](/downloads/prompt-comparisons/blank-run.json)
+[Vollständige Vergleichsmaterialien herunterladen](/downloads/prompt-comparisons/prompt-comparisons-1.0.0.zip) · [Durchführungsprotokoll](/downloads/prompt-comparisons/README.md) · [Leere Vorlage](/downloads/prompt-comparisons/blank-run.json)
 
 ## Drei Aufgaben, eine Vergleichsmethode
 

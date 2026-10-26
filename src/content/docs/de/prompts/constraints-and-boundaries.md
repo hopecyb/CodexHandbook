@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Constraint- und Grenzformulierung; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Constraints definieren
 description: Änderbaren Scope, Stil und Verbote eingrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: "0ca4700"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Viele Aufgaben scheitern nicht, weil das Ziel fehlt — sondern weil **Grenzen unklar** sind.
@@ -92,18 +97,11 @@ Constraints:
 
 Besonders dann klar schreiben:
 
-- Altprojekte mit viel Altlast
-- Nur lokale Patches gewünscht
+- Ältere Projekte mit vielen Altlasten
+- Nur gezielte Änderungen in einem begrenzten Bereich gewünscht
 - Harte Team-Vorgaben zu Stil/Architektur
 - Berechtigungen, Netz, Dependency-Installation
 
 Das Ziel sagt Codex, was zu tun ist; Constraints sagen, wo Schluss ist.
 
 Berechtigungsgrenzen am besten zusammen mit Constraints schreiben, damit „nebenbei“ weniger übergreift. Siehe [Fertigstellungsstandard definieren](/de/prompts/define-done/) und [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/).
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Constraint- und Grenzformulierung; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

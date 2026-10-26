@@ -3,15 +3,16 @@ legacyVerification:
   status: "verified"
   products: "App"
   checkedAt: "2026-08-26"
-title: Terminal tích hợp
-description: Chạy lệnh trong dự án hoặc worktree hiện tại và xác minh kết quả tác vụ bằng đầu ra thực tế.
-locale: vi
-source_locale: zh-CN
-source_revision: 727e93e
-translation_status: draft
+title: "Terminal tích hợp"
+description: "Chạy lệnh trong dự án hoặc worktree hiện tại và xác minh kết quả tác vụ bằng đầu ra thực tế."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "727e93e"
+translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:
   order: 60
+reviewed_at: "2026-10-26"
 ---
 
 Mỗi cuộc trò chuyện trong ứng dụng ChatGPT trên máy tính đều có một terminal gắn với dự án hoặc worktree hiện tại. Đây không chỉ là nơi “xem log”, mà còn là cửa sổ bằng chứng để bạn kiểm tra kết luận của Codex.

@@ -7,11 +7,17 @@ title: Parcours d'apprentissage
 description: Ordre de lecture organisé par rôle, avec liens vers le contenu de référence.
 locale: fr
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: "2f7ff71"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 5
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Les parcours par rôle et les étapes du parcours débutant ont été recoupés avec la structure actuelle du dépôt. Cette page organise uniquement l’ordre de lecture par rôle et ne décrit pas de comportements du produit susceptibles de changer.
+  checkedAt: '2026-07-26'
+reviewed_at: 2026-10-26
 ---
 
 Les parcours d'apprentissage **organisent uniquement l'ordre de lecture** ; ils ne reproduisent pas les longs articles du manuel produit ou des dossiers sur les capacités.
@@ -60,17 +66,17 @@ Si vous terminez déjà de petites tâches, l'étape suivante n'est pas d'appren
 | 1 | Entrées rapides | [Commandes slash et entrées rapides](/fr/guide/reference/slash-commands/) |
 | 2 | Contexte durable | [AGENTS.md](/fr/guide/customization/agents-md/) et [Mémoires et contexte persistant](/fr/guide/customization/memories-and-persistent-context/) |
 | 3 | Workflows réutilisables | [Aperçu des Skills](/fr/skills/overview/) et [Anatomie d'un Skill](/fr/skills/skill-anatomy/) |
-| 4 | Sous-tâches isolées | [Subagents](/fr/guide/agent-work/subagents/) et [Coordination multi-agent](/fr/cases/workflows/multi-agent-coordination/) |
+| 4 | Sous-tâches isolées | [Sous-agents](/fr/guide/agent-work/subagents/) et [Coordination multi-agent](/fr/cases/workflows/multi-agent-coordination/) |
 | 5 | Systèmes externes | [Aperçu MCP](/fr/skills/mcp/mcp-overview/) |
 | 6 | Garde-fous automatiques | [Aperçu des Hooks](/fr/skills/hooks/hooks-overview/) |
 | 7 | Distribution d'équipe | [Aperçu des Plugins](/fr/skills/plugins/plugins-overview/) |
 | 8 | Récupération et revue | [Annuler et récupérer](/fr/guide/getting-started/undo-and-recover/) et [Relire les diffs](/fr/guide/quality/review-diffs/) |
 
-Ce parcours aide à passer de « demander parfois de l'aide à Codex » à « une petite mécanique répétable pour l'équipe » : les instructions projet fixent les règles, les Skills la méthode, MCP expose les outils externes, les subagents découpent le travail, les Hooks protègent les points sensibles et les Plugins distribuent l'ensemble.
+Ce parcours aide à passer de « demander parfois de l'aide à Codex » à « une petite mécanique répétable pour l'équipe » : les instructions projet fixent les règles, les Skills la méthode, MCP expose les outils externes, les sous-agents prennent en charge des sous-tâches aux limites claires, les Hooks protègent les points sensibles et les Plugins distribuent l'ensemble.
 
 ## Malentendus fréquents
 
-### 1. Les parcours d'apprentissage répètent le contenu du handbook
+### 1. Les parcours d'apprentissage répètent le contenu du manuel
 
 Les articles expliquent le sujet ; les parcours indiquent quelles pages lire maintenant.
 

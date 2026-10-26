@@ -3,11 +3,16 @@ title: Conversas e Agents em paralelo
 description: Use conversas e worktrees separados para avançar tarefas independentes que podem ser avaliadas individualmente.
 locale: pt
 source_locale: zh-CN
-source_revision: 2336db1
-translation_status: draft
+source_revision: "2336db1"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 A unidade básica do trabalho em paralelo é uma conversa com contexto, mensagens, resultados e objetivo próprios. Uma tarefa não é adequada ao paralelismo apenas por ter muitas etapas. As tarefas precisam ser **independentes entre si, ter limites claros de arquivos e poder ser avaliadas separadamente**.
@@ -60,7 +65,7 @@ Não junte as entregas sem análise. A conversa principal deve verificar:
 3. se as conclusões se contradizem;
 4. se a integração exige novos testes.
 
-## Tarefas longas e modo Goal
+## tarefas longas e modo Goal
 
 Digite `/goal` no aplicativo para desktop, no CLI ou no IDE para iniciar o modo Goal. O objetivo deve definir resultado, restrições e critérios de verificação. Cada conversa tem seu próprio objetivo. A execução paralela não amplia o sandbox nem as permissões; ações que exigem uma decisão ainda serão pausadas.
 
@@ -68,6 +73,6 @@ Para uma coordenação mais detalhada no nível das ferramentas, veja [Subagente
 
 ## Fontes oficiais
 
-- [Tarefas longas](https://learn.chatgpt.com/docs/long-running-work)
+- [tarefas longas](https://learn.chatgpt.com/docs/long-running-work)
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [Subagentes](https://learn.chatgpt.com/docs/agent-configuration/subagents)

@@ -21,11 +21,12 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: "cbaec37"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
-Esta Skill transforma fontes fornecidas em um artigo cujas afirmações podem ser rastreadas, preservando exigências de estilo, evidências e pendências. Serve para escrita baseada em fontes e revisão factual; corrigir um erro de digitação não exige todo o fluxo.
+Este Skill transforma fontes fornecidas em um artigo cujas afirmações podem ser rastreadas, preservando exigências de estilo, evidências e pendências. Serve para escrita baseada em fontes e revisão factual; corrigir um erro de digitação não exige todo o fluxo.
 
 [Baixar source-backed-writer v1.0.0](/downloads/skills/source-backed-writer/source-backed-writer-1.0.0.zip) · [Ver SKILL.md](/downloads/skills/source-backed-writer/SKILL.md) · [Instruções de instalação](/downloads/skills/source-backed-writer/README.md)
 
@@ -39,11 +40,11 @@ Esta Skill transforma fontes fornecidas em um artigo cujas afirmações podem se
 | Sete afirmações mapeadas e lista de pendências | Distinguir suporte da fonte, inferência do autor e informação não confirmada |
 | Casos positivos e negativos de acionamento, scripts e registro | Definir escopo e limites das verificações |
 
-O material reutiliza a ferramenta fictícia «拾页» do [exercício de artigo com fontes](/pt/cases/write-an-article/). Você pode fazer esse exercício antes e depois salvar o método como Skill.
+O material reutiliza a ferramenta fictícia «Shiye (拾页)» do [exercício de artigo com fontes](/pt/cases/write-an-article/). Você pode fazer esse exercício antes e depois salvar o método como Skill.
 
 ## Instalação e primeira chamada
 
-Coloque a pasta completa em `.agents/skills/source-backed-writer/` do projeto de exercício, com `SKILL.md` no primeiro nível. Se já houver uma Skill com o mesmo nome, compare antes de substituir. Veja [Usar uma Skill](/pt/skills/use-a-skill/) para a descoberta; após confirmar que ela aparece no cliente, chame-a explicitamente:
+Coloque a pasta completa em `.agents/skills/source-backed-writer/` do projeto de exercício, com `SKILL.md` no primeiro nível. Se já houver um Skill com o mesmo nome, compare as versões primeiro e não substitua o Skill existente. Veja [Usar um Skill](/pt/skills/use-a-skill/) para a descoberta; após confirmar que ele aparece no cliente, chame-o explicitamente:
 
 ```text
 $source-backed-writer Leia as três fontes em sources/ deste pacote didático.
@@ -52,7 +53,7 @@ article.md, claim-map.csv e unresolved.md em my-output/.
 Preserve a identidade sintética. Não publique.
 ```
 
-Leitura e escrita não exigem Python. A verificação estrutural opcional usa só a biblioteca padrão do Python 3.10+. Na pasta da Skill descompactada:
+Leitura e escrita não exigem Python. A verificação estrutural opcional usa só a biblioteca padrão do Python 3.10+. Na pasta do Skill descompactada:
 
 ```sh
 # Verificar o rascunho de referência incluído

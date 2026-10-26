@@ -9,7 +9,8 @@ description: "Điều chỉnh việc khám phá, lập kế hoạch, thực thi 
 locale: vi
 source_locale: zh-CN
 source_revision: "4a95760"
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

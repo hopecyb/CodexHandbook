@@ -10,9 +10,10 @@ sidebar:
   order: 20
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 1438fc7
+source_revision: '1438fc7'
+reviewed_at: 2026-10-25
 ---
 
 The terminal is one of the most direct ways for Codex to take action. It is efficient, but makes it especially important to understand the risks.

@@ -26,6 +26,8 @@ sidebar:
 
 ## 学习向索引
 
+- [模型选择：按任务找到起点](/guide/reference/model-selection/)
+
 - [术语表](/guide/reference/glossary/)
 - [常见问题](/guide/reference/faq/)
 - [功能对照](/guide/reference/feature-comparison/)

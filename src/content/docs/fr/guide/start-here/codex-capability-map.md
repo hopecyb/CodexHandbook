@@ -9,10 +9,11 @@ description: Vue d'ensemble des prompts, outils, extensions, agents multiples et
 locale: fr
 source_locale: zh-CN
 source_revision: "1a4cd98"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 7
+reviewed_at: 2026-10-26
 ---
 
 Le manuel compte de nombreux modules. Au début, on peut facilement perdre de vue leurs liens. Cette page rassemble les capacités principales sur une même carte.

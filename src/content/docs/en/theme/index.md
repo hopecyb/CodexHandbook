@@ -16,9 +16,10 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 4ecfa1c
+source_revision: '4ecfa1c'
+reviewed_at: 2026-10-25
 ---
 
 Codex Dream Skin is a third-party desktop theme project. Its documentation says it injects appearance changes through a local CDP connection without changing the official installation package. That is the project's description of its method; this handbook has not verified file behavior, network behavior, or interface compatibility across all versions.

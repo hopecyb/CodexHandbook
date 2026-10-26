@@ -1,0 +1,562 @@
+{
+  "zh-CN": {
+    "title": "ChatGPT 套餐选择与价格来源",
+    "subtitle": "先判断需要哪些能力和额度，再核对购买渠道的价格。",
+    "navigation": "本页导航",
+    "plans": "套餐怎么选",
+    "official": "官网月费记录",
+    "history": "渠道历史快照",
+    "notes": "核验说明",
+    "guide": "先选模型：Chat、Work 与 Codex 怎么选 →",
+    "editorial": "以下是本站编辑建议，不是效果实测或普遍的性价比排名。",
+    "plan": "套餐",
+    "fit": "适合的使用方式",
+    "upgrade": "何时考虑升级或选择",
+    "rows": [
+      [
+        "Free",
+        "偶尔问答、轻量写作",
+        "现有功能与额度够用时继续使用。"
+      ],
+      [
+        "Go",
+        "需要更多日常工具用量",
+        "核对当地价格与功能，再和 Plus 比较；尚未核对 Go 的官网月费。"
+      ],
+      [
+        "Plus",
+        "经常学习、写作、分析或编程",
+        "需要更多能力或额度时可优先考虑。"
+      ],
+      [
+        "Pro 100",
+        "持续进行困难研究或编程",
+        "Plus 无法满足实际需求时比较，不因型号名称直接升级。"
+      ],
+      [
+        "Pro 200",
+        "重度使用，较低档位经常耗尽",
+        "核对当前账号额度；新旧订阅的过渡额度可能不同。"
+      ],
+      [
+        "Pro 500",
+        "最高用量需求，需要 Ultrafast",
+        "为容量和速度模式付费；不代表每项任务的答案一定更好。"
+      ]
+    ],
+    "limit": "Pro 模型仍有使用限制。Chat、Work/Codex 和 API 的额度与计费分别核对；月费不等于 API 充值。",
+    "officialNote": "以下为官方文档公开的美元月费，核对日期为 2026-10-24；不是全球各地区结账报价。地区适用范围与税费口径未确认，请以实际结账页为准。",
+    "monthly": "公开月费",
+    "coverage": "地区 / 税费",
+    "unknown": "未确认；以结账为准",
+    "date": "核对日期",
+    "source": "官方来源",
+    "month": "月",
+    "more": "官网套餐与功能对照",
+    "historyNote": "以下保留 2026-09-18 美国 App Store 内购清单原始快照。它与上面的官网月费分开记录，不推定内购项目的订阅周期。"
+  },
+  "en": {
+    "title": "ChatGPT plans and price sources",
+    "subtitle": "Choose the capabilities and allowance you need, then check the price in your purchase channel.",
+    "navigation": "On this page",
+    "plans": "Choose a plan",
+    "official": "Official monthly prices",
+    "history": "Historical channel snapshot",
+    "notes": "Verification notes",
+    "guide": "Choose a model first: Chat, Work, and Codex →",
+    "editorial": "These are editorial recommendations, not benchmarks or a universal value ranking.",
+    "plan": "Plan",
+    "fit": "Usage pattern",
+    "upgrade": "When to consider it",
+    "rows": [
+      [
+        "Free",
+        "Occasional questions and light writing",
+        "Keep it while its features and allowance meet your needs."
+      ],
+      [
+        "Go",
+        "More everyday tool usage",
+        "Compare local features and pricing with Plus; an official monthly Go price has not been verified here."
+      ],
+      [
+        "Plus",
+        "Frequent learning, writing, analysis, or coding",
+        "Consider when you need more capability or allowance."
+      ],
+      [
+        "Pro 100",
+        "Sustained demanding research or coding",
+        "Compare when Plus does not meet actual needs, rather than upgrading for a model name."
+      ],
+      [
+        "Pro 200",
+        "Heavy use that exhausts lower tiers",
+        "Check current account limits; transitional allowances may differ between new and existing subscriptions."
+      ],
+      [
+        "Pro 500",
+        "Highest usage needs and Ultrafast",
+        "Pay for capacity and speed options; this does not guarantee a better answer on every task."
+      ]
+    ],
+    "limit": "Pro models still have limits. Check Chat, Work/Codex, and API allowances and billing separately; subscription fees are not API credit purchases.",
+    "officialNote": "These are public USD monthly prices in official documentation, checked on 2026-10-24, not checkout quotes for every region. Regional applicability and tax treatment are unconfirmed; use your checkout information.",
+    "monthly": "Public monthly price",
+    "coverage": "Region / taxes",
+    "unknown": "Unconfirmed; check at checkout",
+    "date": "Checked on",
+    "source": "Official source",
+    "month": "month",
+    "more": "Official plans and features",
+    "historyNote": "The original US App Store snapshot from 2026-09-18 is preserved below, separately from official monthly prices. No subscription period is inferred for its listed items."
+  },
+  "zh-TW": {
+    "title": "ChatGPT 套餐選擇與價格來源",
+    "subtitle": "先判斷需要哪些能力和額度，再核對購買渠道的價格。",
+    "navigation": "本頁導航",
+    "plans": "套餐怎麼選",
+    "official": "官網月費記錄",
+    "history": "渠道歷史快照",
+    "notes": "核驗說明",
+    "guide": "先選模型：Chat、Work 與 Codex 怎麼選 →",
+    "editorial": "以下是本站編輯建議，不是效果實測或普遍的性價比排名。",
+    "plan": "套餐",
+    "fit": "適合的使用方式",
+    "upgrade": "何時考慮升級或選擇",
+    "rows": [
+      [
+        "Free",
+        "偶爾問答、輕量寫作",
+        "現有功能與額度夠用時繼續使用。"
+      ],
+      [
+        "Go",
+        "需要更多日常工具用量",
+        "核對當地價格與功能，再和 Plus 比較；尚未核對 Go 的官網月費。"
+      ],
+      [
+        "Plus",
+        "經常學習、寫作、分析或編程",
+        "需要更多能力或額度時可優先考慮。"
+      ],
+      [
+        "Pro 100",
+        "持續進行困難研究或編程",
+        "Plus 無法滿足實際需求時比較，不因型號名稱直接升級。"
+      ],
+      [
+        "Pro 200",
+        "重度使用，較低檔位經常耗盡",
+        "核對當前賬號額度；新舊訂閱的過渡額度可能不同。"
+      ],
+      [
+        "Pro 500",
+        "最高用量需求，需要 Ultrafast",
+        "為容量和速度模式付費；不代表每項任務的答案一定更好。"
+      ]
+    ],
+    "limit": "Pro 模型仍有使用限制。Chat、Work/Codex 和 API 的額度與計費分別核對；月費不等於 API 充值。",
+    "officialNote": "以下為官方文檔公開的美元月費，核對日期為 2026-10-24；不是全球各地區結賬報價。地區適用範圍與稅費口徑未確認，請以實際結賬頁為準。",
+    "monthly": "公開月費",
+    "coverage": "地區 / 稅費",
+    "unknown": "未確認；以結賬為準",
+    "date": "核對日期",
+    "source": "官方來源",
+    "month": "月",
+    "more": "官網套餐與功能對照",
+    "historyNote": "以下保留 2026-09-18 美國 App Store 內購清單原始快照。它與上面的官網月費分開記錄，不推定內購項目的訂閱週期。"
+  },
+  "fr": {
+    "title": "Offres ChatGPT et sources des prix",
+    "subtitle": "Déterminez les capacités et le quota nécessaires, puis vérifiez le prix auprès du canal d’achat choisi.",
+    "navigation": "Sur cette page",
+    "plans": "Choisir une offre",
+    "official": "Prix mensuels officiels",
+    "history": "Instantané historique par canal",
+    "notes": "Notes de vérification",
+    "guide": "Choisir d’abord un modèle : Chat, Work et Codex →",
+    "editorial": "Ces recommandations sont éditoriales ; ce ne sont ni des mesures comparatives ni un classement universel du rapport qualité-prix.",
+    "plan": "Offre",
+    "fit": "Type d’utilisation",
+    "upgrade": "Quand l’envisager",
+    "rows": [
+      [
+        "Free",
+        "Questions occasionnelles et rédaction légère",
+        "Conservez cette offre tant que ses fonctions et son quota répondent à vos besoins."
+      ],
+      [
+        "Go",
+        "Davantage d’utilisation des outils au quotidien",
+        "Comparez les fonctions et les prix locaux avec Plus ; le prix mensuel officiel de Go n’a pas été vérifié ici."
+      ],
+      [
+        "Plus",
+        "Apprentissage, rédaction, analyse ou programmation fréquents",
+        "À envisager si vous avez besoin de capacités ou de quotas supplémentaires."
+      ],
+      [
+        "Pro 100",
+        "Recherche ou programmation exigeante et régulière",
+        "Comparez lorsque Plus ne répond pas à vos besoins réels, sans changer d’offre pour un simple nom de modèle."
+      ],
+      [
+        "Pro 200",
+        "Usage intensif épuisant souvent les quotas des offres inférieures",
+        "Vérifiez les limites de votre compte ; les quotas de transition peuvent différer entre les abonnements existants et les nouveaux abonnements."
+      ],
+      [
+        "Pro 500",
+        "Besoins de quota maximaux et accès à Ultrafast",
+        "Vous payez pour la capacité et les modes de vitesse ; cela ne garantit pas une meilleure réponse à chaque tâche."
+      ]
+    ],
+    "limit": "Les modèles Pro restent soumis à des limites. Vérifiez séparément les quotas et la facturation de Chat, Work/Codex et de l’API ; un abonnement ne constitue pas un achat de crédits API.",
+    "officialNote": "Ces prix mensuels publics en USD proviennent de la documentation officielle, vérifiée le 2026-10-24. Il ne s’agit pas de prix finaux applicables dans toutes les régions. Le périmètre géographique et le traitement des taxes ne sont pas confirmés ; fiez-vous à votre page de paiement.",
+    "monthly": "Prix mensuel public",
+    "coverage": "Région / taxes",
+    "unknown": "Non confirmé ; vérifiez au paiement",
+    "date": "Vérifié le",
+    "source": "Source officielle",
+    "month": "mois",
+    "more": "Offres et fonctionnalités officielles",
+    "historyNote": "L’instantané original de l’App Store américain du 2026-09-18 est conservé ci-dessous, séparément des prix mensuels officiels. Aucune période d’abonnement n’est déduite pour les articles répertoriés."
+  },
+  "de": {
+    "title": "ChatGPT-Tarife und Preisquellen",
+    "subtitle": "Klären Sie zuerst, welche Fähigkeiten und Kontingente Sie benötigen, und prüfen Sie dann den Preis beim gewählten Kaufkanal.",
+    "navigation": "Auf dieser Seite",
+    "plans": "Tarif auswählen",
+    "official": "Offizielle Monatspreise",
+    "history": "Historische Momentaufnahme des Kaufkanals",
+    "notes": "Prüfhinweise",
+    "guide": "Zuerst das Modell wählen: Chat, Work und Codex →",
+    "editorial": "Dies sind redaktionelle Empfehlungen, keine Leistungstests oder allgemeingültige Rangliste zum Preis-Leistungs-Verhältnis.",
+    "plan": "Tarif",
+    "fit": "Nutzungsweise",
+    "upgrade": "Wann er infrage kommt",
+    "rows": [
+      [
+        "Free",
+        "Gelegentliche Fragen und einfache Schreibaufgaben",
+        "Behalten Sie den Tarif bei, solange Funktionen und Kontingent ausreichen."
+      ],
+      [
+        "Go",
+        "Mehr alltägliche Werkzeugnutzung",
+        "Vergleichen Sie lokale Funktionen und Preise mit Plus; ein offizieller Monatspreis für Go wurde hier nicht geprüft."
+      ],
+      [
+        "Plus",
+        "Häufiges Lernen, Schreiben, Analysieren oder Programmieren",
+        "Ziehen Sie ihn vorrangig in Betracht, wenn Sie mehr Fähigkeiten oder Kontingent benötigen."
+      ],
+      [
+        "Pro 100",
+        "Regelmäßige anspruchsvolle Recherche oder Programmierung",
+        "Vergleichen Sie Pro 100 mit Plus, wenn Plus Ihren tatsächlichen Bedarf nicht deckt; wechseln Sie nicht allein wegen eines Modellnamens."
+      ],
+      [
+        "Pro 200",
+        "Intensive Nutzung, die Kontingente niedrigerer Tarife häufig ausschöpft",
+        "Prüfen Sie die Kontolimits; Übergangskontingente können für bestehende und neue Abonnements unterschiedlich ausfallen."
+      ],
+      [
+        "Pro 500",
+        "Höchster Nutzungsbedarf und Ultrafast",
+        "Sie bezahlen für Kapazität und Geschwindigkeitsmodi; eine bessere Antwort auf jede Aufgabe ist damit nicht garantiert."
+      ]
+    ],
+    "limit": "Auch Pro-Modelle haben Limits. Prüfen Sie Kontingente und Abrechnung von Chat, Work/Codex und API getrennt; Abonnementgebühren sind kein Kauf von API-Guthaben.",
+    "officialNote": "Dies sind öffentlich dokumentierte Monatspreise in USD aus offiziellen Quellen, geprüft am 2026-10-24, keine verbindlichen Kaufpreise für alle Regionen. Regionale Gültigkeit und steuerliche Behandlung sind nicht bestätigt; maßgeblich sind die Angaben beim Bezahlen.",
+    "monthly": "Öffentlicher Monatspreis",
+    "coverage": "Region / Steuern",
+    "unknown": "Nicht bestätigt; maßgeblich sind die Angaben beim Bezahlen",
+    "date": "Geprüft am",
+    "source": "Offizielle Quelle",
+    "month": "Monat",
+    "more": "Offizielle Tarife und Funktionen",
+    "historyNote": "Die ursprüngliche Momentaufnahme des US-App-Store vom 2026-09-18 bleibt unten erhalten, getrennt von den offiziellen Monatspreisen. Für die aufgeführten Artikel wird keine Abonnementlaufzeit angenommen."
+  },
+  "es": {
+    "title": "Planes de ChatGPT y fuentes de precios",
+    "subtitle": "Elige las capacidades y el cupo que necesitas y comprueba el precio en tu canal de compra.",
+    "navigation": "En esta página",
+    "plans": "Elegir un plan",
+    "official": "Precios mensuales oficiales",
+    "history": "Registro histórico por canal",
+    "notes": "Notas de verificación",
+    "guide": "Elige primero un modelo: Chat, Work y Codex →",
+    "editorial": "Estas son recomendaciones editoriales, no pruebas comparativas ni una clasificación universal de relación calidad-precio.",
+    "plan": "Plan",
+    "fit": "Forma de uso",
+    "upgrade": "Cuándo considerarlo",
+    "rows": [
+      [
+        "Free",
+        "Preguntas ocasionales y escritura ligera",
+        "Continúa mientras sus funciones y cupo cubran tus necesidades."
+      ],
+      [
+        "Go",
+        "Más uso de herramientas cotidianas",
+        "Compara funciones y precios locales con Plus; aquí no se ha verificado el precio mensual oficial de Go."
+      ],
+      [
+        "Plus",
+        "Aprendizaje, escritura, análisis o programación frecuentes",
+        "Considéralo cuando necesites más capacidad o cupo."
+      ],
+      [
+        "Pro 100",
+        "Investigación o programación exigentes de forma continuada",
+        "Compáralo cuando Plus no cubra tus necesidades reales, sin cambiar de plan solo por el nombre de un modelo."
+      ],
+      [
+        "Pro 200",
+        "Uso intensivo que agota los niveles inferiores",
+        "Comprueba los límites de tu cuenta; los cupos durante la transición pueden diferir entre las suscripciones nuevas y las existentes."
+      ],
+      [
+        "Pro 500",
+        "Necesidades máximas de uso y Ultrafast",
+        "Pagas por capacidad y opciones de velocidad; no garantiza una respuesta mejor en cada tarea."
+      ]
+    ],
+    "limit": "Los modelos Pro también tienen límites. Comprueba por separado los cupos y la facturación de Chat, Work/Codex y API; pagar la suscripción no equivale a comprar créditos de API.",
+    "officialNote": "Estos son los precios mensuales públicos en USD de la documentación oficial, verificados el 2026-10-24, no son precios finales de compra válidos para todas las regiones. No se ha confirmado su aplicación regional ni el tratamiento fiscal; consulta la información al pagar.",
+    "monthly": "Precio mensual público",
+    "coverage": "Región / impuestos",
+    "unknown": "Sin confirmar; consulta al pagar",
+    "date": "Fecha de verificación",
+    "source": "Fuente oficial",
+    "month": "mes",
+    "more": "Planes y funciones oficiales",
+    "historyNote": "A continuación se conserva el registro original del App Store de Estados Unidos del 2026-09-18, separado de los precios mensuales oficiales. No se deduce ningún periodo de suscripción para los artículos de la lista."
+  },
+  "pt": {
+    "title": "Planos do ChatGPT e fontes de preços",
+    "subtitle": "Identifique as capacidades e a cota de que precisa e confirme o preço no canal de compra.",
+    "navigation": "Nesta página",
+    "plans": "Escolher um plano",
+    "official": "Preços mensais oficiais",
+    "history": "Registro histórico por canal",
+    "notes": "Notas de verificação",
+    "guide": "Escolha primeiro um modelo: Chat, Work e Codex →",
+    "editorial": "Estas são recomendações editoriais, não testes comparativos nem uma classificação universal de custo-benefício.",
+    "plan": "Plano",
+    "fit": "Forma de uso",
+    "upgrade": "Quando considerar",
+    "rows": [
+      [
+        "Free",
+        "Perguntas ocasionais e escrita leve",
+        "Continue enquanto as funcionalidades e a cota responderem às suas necessidades."
+      ],
+      [
+        "Go",
+        "Mais uso de ferramentas do dia a dia",
+        "Compare as funcionalidades e os preços locais com Plus; o preço mensal oficial de Go não foi verificado aqui."
+      ],
+      [
+        "Plus",
+        "Aprendizagem, escrita, análise ou programação frequentes",
+        "Pode ser a primeira opção a considerar quando precisar de mais capacidades ou cota."
+      ],
+      [
+        "Pro 100",
+        "Pesquisa ou programação complexa de forma contínua",
+        "Compare quando Plus não responder às necessidades reais, sem mudar de plano apenas pelo nome de um modelo."
+      ],
+      [
+        "Pro 200",
+        "Uso intensivo que esgota as cotas dos planos inferiores",
+        "Verifique os limites da conta; as cotas durante a transição podem diferir entre assinaturas novas e existentes."
+      ],
+      [
+        "Pro 500",
+        "Necessidades máximas de uso e Ultrafast",
+        "Você paga por capacidade e modos de velocidade; isso não garante uma resposta melhor em todas as tarefas."
+      ]
+    ],
+    "limit": "Os modelos Pro também têm limites. Verifique separadamente as cotas e a cobrança do Chat, Work/Codex e da API; pagar a assinatura não equivale a comprar créditos de API.",
+    "officialNote": "Estes são os preços mensais públicos em USD da documentação oficial, verificados em 2026-10-24, não valores de compra para todas as regiões. A aplicabilidade regional e o tratamento fiscal não foram confirmados; consulte a informação no pagamento.",
+    "monthly": "Preço mensal público",
+    "coverage": "Região / impostos",
+    "unknown": "Não confirmado; consulte no pagamento",
+    "date": "Data de verificação",
+    "source": "Fonte oficial",
+    "month": "mês",
+    "more": "Planos e funcionalidades oficiais",
+    "historyNote": "O registro original da App Store dos Estados Unidos de 2026-09-18 é preservado abaixo, separado dos preços mensais oficiais. Não se deduz qualquer período de assinatura para os itens da lista."
+  },
+  "ja": {
+    "title": "ChatGPT のプラン選択と価格の出典",
+    "subtitle": "必要な機能と利用枠を判断してから、購入先の価格を確認します。",
+    "navigation": "このページの内容",
+    "plans": "プランを選ぶ",
+    "official": "公式月額料金の記録",
+    "history": "購入先の過去のスナップショット",
+    "notes": "確認に関する注記",
+    "guide": "まずモデルを選ぶ：Chat、Work、Codex →",
+    "editorial": "以下は編集上の推奨であり、性能実測や普遍的な費用対効果ランキングではありません。",
+    "plan": "プラン",
+    "fit": "利用スタイル",
+    "upgrade": "検討する目安",
+    "rows": [
+      [
+        "Free",
+        "時々の質問や軽い文章作成",
+        "機能と利用枠が足りていれば継続して使います。"
+      ],
+      [
+        "Go",
+        "日常ツールをもっと使いたい",
+        "地域の機能と価格を Plus と比較してください。本ページでは Go の公式月額料金は未確認です。"
+      ],
+      [
+        "Plus",
+        "頻繁な学習、文章作成、分析、プログラミング",
+        "より多くの機能や利用枠が必要なときに、まず検討するプランです。"
+      ],
+      [
+        "Pro 100",
+        "難しい調査やプログラミングを継続して行う",
+        "モデル名だけでアップグレードせず、Plus が実際の需要を満たさない場合に比較します。"
+      ],
+      [
+        "Pro 200",
+        "下位プランの枠を頻繁に使い切るヘビーユーザー",
+        "アカウントの現在の上限を確認してください。移行期間の利用枠は、新規契約と既存契約で異なる場合があります。"
+      ],
+      [
+        "Pro 500",
+        "最大の利用枠と Ultrafast が必要",
+        "利用容量と速度の選択肢に対する料金です。すべてのタスクで回答が良くなる保証ではありません。"
+      ]
+    ],
+    "limit": "Pro モデルにも上限があります。Chat、Work/Codex、API の利用枠と課金は別々に確認してください。サブスクリプション料金は API クレジットの購入ではありません。",
+    "officialNote": "以下は公式文書に公開された米ドル建ての月額料金で、確認日は 2026-10-24 です。すべての地域の決済価格ではありません。地域の適用範囲と税の扱いは未確認のため、実際の決済情報を確認してください。",
+    "monthly": "公開月額料金",
+    "coverage": "地域 / 税",
+    "unknown": "未確認。決済時に確認",
+    "date": "確認日",
+    "source": "公式の出典",
+    "month": "月",
+    "more": "公式のプランと機能",
+    "historyNote": "以下には 2026-09-18 の米国 App Store のアプリ内課金一覧の元のスナップショットを、公式月額料金とは別に保存しています。掲載項目の契約期間は推定していません。"
+  },
+  "ko": {
+    "title": "ChatGPT 요금제 선택과 가격 출처",
+    "subtitle": "필요한 기능과 사용 한도를 먼저 판단한 뒤 구매 경로별 가격을 확인하세요.",
+    "navigation": "이 페이지의 내용",
+    "plans": "요금제 선택",
+    "official": "공식 월 요금 기록",
+    "history": "구매 경로의 과거 스냅샷",
+    "notes": "검증 안내",
+    "guide": "먼저 모델 선택: Chat, Work, Codex는 어떻게 고를까? →",
+    "editorial": "편집상의 추천이며 성능 실측이나 보편적인 가성비 순위가 아닙니다.",
+    "plan": "요금제",
+    "fit": "사용 방식",
+    "upgrade": "검토할 시점",
+    "rows": [
+      [
+        "Free",
+        "가끔 질문하거나 가볍게 글쓰기",
+        "기능과 한도가 필요를 충족하면 계속 사용하세요."
+      ],
+      [
+        "Go",
+        "일상 도구를 더 많이 사용",
+        "현지 기능과 가격을 Plus와 비교하세요. 이 페이지에서는 Go의 공식 월 요금을 아직 확인하지 않았습니다."
+      ],
+      [
+        "Plus",
+        "잦은 학습, 글쓰기, 분석, 코딩",
+        "더 많은 기능이나 사용 한도가 필요하면 우선 고려할 수 있습니다."
+      ],
+      [
+        "Pro 100",
+        "까다로운 연구나 코딩을 지속적으로 수행",
+        "모델 이름 때문에 업그레이드하지 말고 Plus가 실제 필요를 충족하지 못할 때 비교하세요."
+      ],
+      [
+        "Pro 200",
+        "낮은 요금제의 한도를 자주 소진하는 집중 사용",
+        "계정의 현재 한도를 확인하세요. 전환 기간의 사용 한도는 신규 구독과 기존 구독 간에 다를 수 있습니다."
+      ],
+      [
+        "Pro 500",
+        "가장 많은 사용량과 Ultrafast 필요",
+        "용량과 속도 옵션에 비용을 지불합니다. 모든 작업에서 더 나은 답변을 보장하지 않습니다."
+      ]
+    ],
+    "limit": "Pro 모델에도 한도가 있습니다. Chat, Work/Codex, API의 한도와 과금을 각각 확인하세요. 구독료는 API 크레딧 구매가 아닙니다.",
+    "officialNote": "아래는 2026-10-24에 확인한 공식 문서의 공개 미국 달러 월 요금이며 모든 지역의 결제 견적이 아닙니다. 지역 적용 범위와 세금 처리는 확인되지 않았으므로 실제 결제 정보를 기준으로 하세요.",
+    "monthly": "공개 월 요금",
+    "coverage": "지역 / 세금",
+    "unknown": "미확인. 결제 시 확인",
+    "date": "확인일",
+    "source": "공식 출처",
+    "month": "월",
+    "more": "공식 요금제와 기능",
+    "historyNote": "2026-09-18의 미국 App Store 앱 내 구매 목록 원본 스냅샷을 공식 월 요금과 별도로 아래에 보존합니다. 목록 항목의 구독 기간은 추정하지 않습니다."
+  },
+  "vi": {
+    "title": "Chọn gói ChatGPT và nguồn giá",
+    "subtitle": "Chọn năng lực và hạn mức cần dùng, rồi kiểm tra giá tại kênh mua.",
+    "navigation": "Nội dung trang",
+    "plans": "Chọn gói",
+    "official": "Bản ghi giá tháng chính thức",
+    "history": "Bản lưu lịch sử theo kênh",
+    "notes": "Ghi chú xác minh",
+    "guide": "Chọn mô hình trước: Chat, Work và Codex →",
+    "editorial": "Đây là khuyến nghị biên tập, không phải kết quả đo hay bảng xếp hạng hiệu quả chi phí cho mọi người.",
+    "plan": "Gói",
+    "fit": "Cách sử dụng",
+    "upgrade": "Khi nào nên cân nhắc",
+    "rows": [
+      [
+        "Free",
+        "Hỏi đáp không thường xuyên, viết nội dung đơn giản",
+        "Tiếp tục dùng khi tính năng và hạn mức vẫn đáp ứng nhu cầu."
+      ],
+      [
+        "Go",
+        "Dùng công cụ hằng ngày nhiều hơn",
+        "So sánh tính năng và giá địa phương với Plus; trang này chưa xác minh giá tháng chính thức của Go."
+      ],
+      [
+        "Plus",
+        "Thường xuyên học, viết, phân tích hoặc lập trình",
+        "Có thể ưu tiên cân nhắc khi cần thêm khả năng hoặc hạn mức."
+      ],
+      [
+        "Pro 100",
+        "Nghiên cứu hoặc lập trình khó trong thời gian dài",
+        "So sánh khi Plus không đáp ứng nhu cầu thực tế, không nâng cấp chỉ vì tên mô hình."
+      ],
+      [
+        "Pro 200",
+        "Sử dụng nhiều, thường hết hạn mức gói thấp hơn",
+        "Kiểm tra hạn mức của tài khoản hiện tại; hạn mức trong giai đoạn chuyển tiếp có thể khác nhau giữa thuê bao mới và thuê bao hiện có."
+      ],
+      [
+        "Pro 500",
+        "Nhu cầu sử dụng cao nhất và cần Ultrafast",
+        "Trả phí cho hạn mức và tùy chọn tốc độ; không bảo đảm mọi tác vụ đều có câu trả lời tốt hơn."
+      ]
+    ],
+    "limit": "Mô hình Pro vẫn có giới hạn. Kiểm tra riêng hạn mức và cách tính phí của Chat, Work/Codex và API; phí thuê bao không phải khoản mua tín dụng API.",
+    "officialNote": "Đây là giá tháng bằng USD công khai trong tài liệu chính thức, kiểm tra ngày 2026-10-24, không phải báo giá thanh toán cho mọi khu vực. Phạm vi áp dụng và cách tính thuế chưa được xác nhận; hãy dùng thông tin tại trang thanh toán.",
+    "monthly": "Giá tháng công khai",
+    "coverage": "Khu vực / thuế",
+    "unknown": "Chưa xác nhận; kiểm tra khi thanh toán",
+    "date": "Ngày kiểm tra",
+    "source": "Nguồn chính thức",
+    "month": "tháng",
+    "more": "Gói và tính năng chính thức",
+    "historyNote": "Bản lưu gốc danh sách mua trong ứng dụng trên App Store Mỹ ngày 2026-09-18 được giữ bên dưới, tách biệt với giá tháng chính thức. Không suy đoán chu kỳ thuê bao của các mục trong danh sách."
+  }
+}

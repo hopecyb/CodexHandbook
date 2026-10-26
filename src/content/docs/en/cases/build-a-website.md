@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: '55fd86a'
+reviewed_at: 2026-10-25
 ---
 
 Turn an event brief into a one-page website you can open in a browser. The deliverables are a local static page and an acceptance record. The event and venue are fictional, and the registration method has not been decided.

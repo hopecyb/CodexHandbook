@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and reviewing cases—not specific product behavior."
+  checkedAt: "2026-07-26"
 title: Case study template
-description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
+description: Unified structure for writing and reviewing Codex case studies so teams can record and compare their experience.
 locale: en
 source_locale: zh-CN
-source_revision: 74ef905
+source_revision: '74ef905'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Copy this template to create a new case page or internal retro doc.
@@ -74,9 +79,3 @@ Before copying, delete sections your actual readers and deliverables don't need.
 ## 6. References
 - Official doc links
 - Whether this case adapts an external tutorial (task type only)
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and retrospecting cases—not specific product behavior.

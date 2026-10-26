@@ -3,14 +3,18 @@ title: Progreso y reorientación
 description: Si a mitad de la ejecución la dirección se desvía, cómo recuperar a Codex con instrucciones cortas.
 locale: es
 source_locale: zh-CN
-source_revision: c9ea3be
+source_revision: "c9ea3be"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con las descripciones actuales de OpenAI Developers sobre tareas largas, verificación y avance por pasos, y con los capítulos ya verificados de planificación, calidad y contexto de este manual; esta página solo conserva el principio estable de colaboración «corrección local mejor que tirar un tramo entero».
+  checkedAt: '2026-07-26'
 ---
-
 Las reacciones habituales a mitad de la ejecución suelen ser solo dos:
 
 - No decir nada y dejar que siga desviándose
@@ -91,7 +95,7 @@ Es más eficaz señalar con claridad:
 Puedes juzgar así:
 
 - **Solo orden incorrecto, alcance demasiado grande o forma de salida incorrecta**: reorienta primero
-- **Cambió el objetivo, la premisa o la superficie de impacto**: vuelve a planificar
+- **Cambió el objetivo, la premisa o el alcance del impacto**: vuelve a planificar
 
 ## Tres formas habituales de reorientar
 
@@ -130,7 +134,7 @@ Primero no cambies archivos. Dame una tabla comparativa de la diferencia entre e
 Esta frase queda bastante clara:
 
 ```text
-Conserva tu diagnóstico de la causa, pero no entres aún al refactor. El siguiente paso solo: un arreglo mínimo y pasos de verificación.
+Conserva tu diagnóstico de la causa, pero no entres aún al refactor. El siguiente paso solo: una propuesta de corrección mínima y los pasos de verificación.
 ```
 
 ## Cuándo volver a «replanificar»
@@ -159,10 +163,3 @@ Cuando detectas desviación en la ejecución, puedes usar una instrucción corta
 - Necesitas escribir el flujo como cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
 - Necesitas delegar la tarea a otros: ver [Subagents](/es/guide/agent-work/subagents/)
 - Continuar tras interrumpir la tarea: ver [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con las descripciones actuales de OpenAI Developers sobre tareas largas, verificación y avance por pasos, y con los capítulos ya verificados de planificación, calidad y contexto de este manual; esta página solo conserva el principio estable de colaboración «corrección local mejor que tirar un tramo entero».  
-**Última verificación:** 2026-07-26

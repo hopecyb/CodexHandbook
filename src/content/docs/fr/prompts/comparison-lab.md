@@ -29,9 +29,10 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: "e6a23bb"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Comparer permet de découvrir quelles exigences changent le livrable, pas de prouver qu'un prompt plus long est meilleur. Cette page rassemble trois jeux d'entrées fixes et les relevés de douze exécutions réelles achevées le 18 septembre 2026. Ces échantillons montrent surtout des différences dans les preuves livrées, insuffisantes pour établir un effet général.

@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: cf2b232
-translation_status: draft
+source_revision: "cf2b232"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Nguồn không mở được, tài liệu không đề cập một dữ kiện và hai tài liệu bất đồng cần được xử lý theo cách khác nhau. Skill này giữ rõ các khác biệt để người đọc biết kết luận nào có thể kiểm tra lại và kết luận nào còn thiếu bằng chứng.
@@ -75,12 +76,12 @@ python3 validation/test_checks.py
 
 Kết quả tham khảo bình thường là P/I/C `available`, M `missing` và bốn mục bằng chứng đạt kiểm tra cấu trúc. Mã thoát 0 nghĩa là kiểm tra hoàn tất và cấu trúc đạt yêu cầu, không có nghĩa tất cả nguồn đều dùng được. Hãy đọc từng status, nhất là với `--inspect-only`.
 
-Trình kiểm tra phát hiện thay đổi hàm băm nội dung, tệp thiếu hoặc không đọc được và tệp không có hàm băm dự kiến. Không được dùng nguồn không khả dụng như bằng chứng đã đọc hoặc âm thầm bỏ nó khỏi báo cáo. Script chỉ xử lý tệp cục bộ, không kiểm tra trạng thái HTTP hay khả năng truy cập trang web.
+Trình kiểm tra phát hiện thay đổi giá trị băm nội dung, tệp thiếu hoặc không đọc được và tệp không có giá trị băm dự kiến. Không được dùng nguồn không khả dụng như bằng chứng đã đọc hoặc âm thầm bỏ nó khỏi báo cáo. Script chỉ xử lý tệp cục bộ, không kiểm tra trạng thái HTTP hay khả năng truy cập trang web.
 
 ## Khôi phục sau lỗi
 
 - **Thiếu tệp:** kiểm tra đường dẫn. Nếu nguồn thực sự không được cung cấp, giữ trạng thái không khả dụng và giao các kết luận còn lại có căn cứ.
-- **Nội dung thay đổi:** so sánh phiên bản và khác biệt rồi kiểm tra lại trích dẫn. Đừng chỉ cập nhật hàm băm để vượt qua phép kiểm tra.
+- **Nội dung thay đổi:** so sánh phiên bản và khác biệt rồi kiểm tra lại trích dẫn. Đừng chỉ cập nhật giá trị băm để vượt qua phép kiểm tra.
 - **Bằng chứng mâu thuẫn:** đối chiếu phiên bản, điều kiện cài đặt và đối tượng áp dụng. Nếu chưa giải quyết được, để mở thay vì chỉ chọn theo ngày.
 - **Thiếu dữ kiện:** liệt kê các trường hay giải thích cần người bảo trì cung cấp. Đừng viết khuyến nghị thành sự thật đã xác nhận.
 

@@ -3,12 +3,17 @@ title: 처음 30분 경로
 description: 첫 시작 때 바로 참고할 수 있는 30분 경로.
 locale: ko
 source_locale: zh-CN
-source_revision: 7d1061d
+source_revision: '7d1061d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 110
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 이 핸드북에서 이미 검증된 안전 체크리스트·연습 프로젝트·첫 작업·결과 확인·초보자 경로 장과 교차 재확인했습니다. 이 페이지는 「첫 30분에 루프를 먼저 통하게」하는 안정 시작 경로만 제공합니다.
+  checkedAt: '2026-07-26'
 ---
 
 막 설치했고 첫날 어떻게 시작할지 모르겠다면, 이 경로를 따르세요.
@@ -25,14 +30,14 @@ sidebar:
 
 ## 이 30분에서 끝낼 것
 
-반 시간에 모든 기능을 배울 필요는 없습니다. 이 체인만 통하면 됩니다.
+30분에 모든 기능을 배울 필요는 없습니다. 다음의 전체 흐름만 경험하면 됩니다.
 
 - 제품에 들어갈 수 있음
 - Codex가 실제 디렉터리에 대해 일할 수 있음
 - 결과를 볼 수 있음
 - 결과를 수락할 가치가 있는지 판단할 수 있음
 
-이 체인이 통하면 CLI·IDE·Cloud·Skill·자동화를 배우기가 수월해집니다.
+이 흐름을 경험하면 CLI·IDE·Cloud·Skill·자동화를 배우기가 수월해집니다.
 
 ## 각 구간에서 끝낼 것
 
@@ -95,13 +100,6 @@ sidebar:
 
 ## 막히면
 
-먼저 [문제 해결 색인](/ko/guide/reference/troubleshooting/)으로 가세요. 개념만 안 들렸다면 [시작 전에 필요한 것](/ko/guide/start-here/prerequisites/)과 [로컬과 클라우드](/ko/guide/foundations/local-vs-cloud/)로 돌아가도 됩니다.
+먼저 [문제 해결 색인](/ko/guide/reference/troubleshooting/)으로 가세요. 개념만 이해되지 않았다면 [시작 전에 필요한 것](/ko/guide/start-here/prerequisites/)과 [로컬과 클라우드](/ko/guide/foundations/local-vs-cloud/)로 돌아가도 됩니다.
 
 처음 30분에 「작업 내기·결과 보기·스스로 판단」루프를 한 번 손으로 끝내면 이미 충분히 가치 있습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE  
-**검증 근거:** 이 핸드북에서 이미 검증된 안전 체크리스트·연습 프로젝트·첫 작업·결과 확인·초보자 경로 장과 교차 재확인했습니다. 이 페이지는 「첫 반 시간에 루프를 먼저 통하게」하는 안정 시작 경로만 제공합니다.  
-**최근 검증:** 2026-07-26

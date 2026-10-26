@@ -3,12 +3,17 @@ title: 종료 코드와 재시도
 description: 파이프라인에서 codex exec의 성패를 올바르게 해석합니다——언제 재시도하고, 언제 즉시 실패할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 35074cd
+source_revision: '35074cd'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 근거 없는 특정 종료 코드의 의미를 제거했습니다. 이 페이지는 현재 공식 문서로 확인된 프로세스의 성공·실패, `stderr` 진행 및 오류 출력만을 전제로 하며, 업무상 검토 결론은 구조화된 결과로 처리합니다.
+  checkedAt: '2026-08-26'
 ---
 
 CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 장은 [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/)의 흔한 의미, 재시도 전략, 멱등 설계를 설명합니다.
@@ -57,33 +62,30 @@ CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 �
 
 | 상황 | 권장 처리 |
 |---|---|
-| `0` | 작업 완료 + 프롬프트의 성공 기준 충족 |
+| `0` | `codex exec` 프로세스가 성공적으로 완료됨. 업무상 통과 여부는 구조화된 결과를 확인해야 함 |
 | 비 `0`이고 로그에 policy/sandbox 거부 | **맹목 재시도하지 말고** 설정이나 프롬프트를 고침 |
-| 비 `0`이고 API 429/5xx | 제한된 횟수의 지수 백오프 재시도 |
+| 비 `0`이고 실행기가 일시적인 네트워크 또는 서비스 오류임을 확인함 | 제한된 횟수의 백오프 재시도 |
 | P0 문제를 찾았지만 실행은 성공 | [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/)의 `pass: false` + 스크립트 `exit 1` |
 
 「보안 문제를 발견했다」는 크래시성 예외에 의존하지 말고, JSON에 `pass: false`를 **명시**하고 래퍼 스크립트가 종료 코드를 결정하게 하세요.
 
-## 재시도 템플릿(bash)
+## 종료 코드 수집 템플릿(bash)
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-「재시도 불가」 코드를 공식 문서와 맞춘 뒤 `case` 분기에 넣으세요.
+공식 정의가 없는 숫자에 임의의 의미를 부여하지 마세요. 예를 들어 `2`가 항상 정책 실패를 뜻한다고 가정하면 안 됩니다. 재시도가 필요하면 외부 실행기가 안정적으로 식별할 수 있는 오류 유형을 기준으로 결정하고, 횟수·총 시간·부작용을 제한하세요.
 
 ## 멱등과 부작용
 
@@ -125,9 +127,3 @@ exit 1
 
 ## 참고 출처
 - OpenAI API 재시도 가이드(개념)
----
-
-**상태：** outdated  
-**적용 제품：** CLI  
-**재검토 설명：** 이 페이지는 종료 코드와 재시도에 합리적인 엔지니어링 제안을 주지만, 예시에 특정 종료 코드 의미(예: `code=2`)와 `codex exec` 동작 가정이 포함됩니다. 이런 세부사항은 현재 충분히 강한 현행 공식 근거가 없어, 새 CLI 문서로 확인한 뒤 `verified`로 되돌리세요.  
-**최근 검증：** 2026-07-26

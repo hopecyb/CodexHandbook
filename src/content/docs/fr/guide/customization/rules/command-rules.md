@@ -1,16 +1,20 @@
 ---
-title: "Règles de commandes"
+title: Règles de commandes
 description: Allow/deny au niveau commande pour les appels shell et outils — plus exécutable qu'un accord verbal.
 locale: fr
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: La documentation CLI Codex actuelle d'OpenAI traite encore l'exécution de commandes, les modes d'approbation et l'isolation du bac à sable comme frontières de sécurité centrales ; cette page positionne les règles de commandes comme un modèle d'ingénierie pour séparer les commandes à haut et faible risque et marque le snippet JSON comme illustratif, pas syntaxe officielle.
+  checkedAt: '2026-07-26'
 ---
-
 Les **règles de commandes** se concentrent sur « quelles commandes l'Agent peut exécuter et avec quels arguments ». C'est la forme la plus courante des [Règles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/), généralement dans la configuration ou les fichiers de règles revus par l'équipe.
 
 ## Ce que cette page couvre
@@ -27,14 +31,14 @@ Si allow/deny indique ce qui est permis en principe, les règles de commandes an
 - Quelles ne peuvent pas
 - Celles qui semblent similaires mais diffèrent grandement en risque
 
-Le point est transformer les frontières que l'équipe connaît déjà en frontières que la machine peut appliquer.
+L’objectif est de transformer les frontières que l'équipe connaît déjà en frontières que la machine peut appliquer.
 
 ## Un concept central d'abord
 
 Les règles correspondent à l'**intention exécutable**, pas au langage naturel. `npm test` et `npm run test` sont deux commandes différentes en politique ; `bash -c "rm -rf /"` ne doit pas passer parce que `bash` était autorisé.
 
 ```text
-Tâche utilisateur → modèle propose commande → moteur de règles → (pass) exécution bac à sable / (reject) approbation ou blocage
+Tâche utilisateur → modèle propose commande → moteur de règles → (autorisé) exécution dans le bac à sable / (refusé) approbation ou blocage
 ```
 
 ## Idées reçues courantes
@@ -90,7 +94,7 @@ Illustratif (format selon configuration officielle) :
 |---|---|
 | Inventaire | Extraire les vraies commandes des scripts `package.json`, Makefile, workflow CI |
 | Couche | Baseline deny organisation → supplément allow projet → exception locale personnelle (si applicable) |
-| Essai | Valider avec des tâches à faible risque : « doit approuver fait ; doit bloquer bloque » |
+| Essai | Valider avec des tâches à faible risque : « les actions autorisées passent, les actions interdites sont bloquées » |
 | Aligner | Règles locales et [GitHub Action](/fr/guide/developer-platform/ci-cd/code-review-automation/) partagent la source quand possible |
 
 ## Erreurs courantes
@@ -105,7 +109,7 @@ Les règles de commandes ne sont pas « mémoriser les commandes » — elles s�
 ## Frontières de sécurité
 
 - Les règles de commandes **ne peuvent pas** remplacer la protection de branche et la revue de code
-- Les prompts malveillants peuvent inciter l'Agent à **tenter** des commandes sur-privilégiées — garder les défauts du bac à sable stricts
+- Les prompts malveillants peuvent inciter l'Agent à **tenter** des commandes sur-privilégiées — garder des restrictions strictes par défaut dans le bac à sable
 - Les variables d'environnement avec clés ou tokens ne devraient pas fuiter parce que « echo était autorisé »
 
 ## Liste de contrôle d'acceptation
@@ -120,10 +124,3 @@ Les règles de commandes ne sont pas « mémoriser les commandes » — elles s�
 - [Politique de règles d'équipe](/fr/guide/customization/rules/team-rules/)
 - [Approbation et bac à sable CLI](/fr/guide/cli/approvals-and-sandbox/)
 - [Matrice des permissions](/fr/guide/reference/permission-matrix/)
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / App  
-**Base de vérification :** La documentation CLI Codex actuelle d'OpenAI traite encore l'exécution de commandes, les modes d'approbation et l'isolation du bac à sable comme frontières de sécurité centrales ; cette page positionne les règles de commandes comme un modèle d'ingénierie pour séparer les commandes à haut et faible risque et marque le snippet JSON comme illustratif, pas syntaxe officielle.  
-**Dernière vérification :** 2026-07-26

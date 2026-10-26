@@ -1,12 +1,20 @@
 ---
+caseCategory: creation
+directoryOrder: 85
+contentType: case
+legacyVerification:
+  status: "verified"
+  products: "App / CLI"
+  basis: "Cross-checked against this handbook's verified research-with-sources, web search, validate sources, and version policy chapters; content is limited to the stable research case structure for a source-backed competitive matrix—specific prices or product versions are not fixed."
+  checkedAt: "2026-07-26"
 title: "Case study: Competitive feature matrix"
 description: Source-backed research and table output—a workflow non-engineers can reuse.
 locale: en
 source_locale: zh-CN
-source_revision: b74008b
+source_revision: 'b74008b'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 ## Metadata
@@ -61,10 +69,3 @@ output markdown table; do not change other repo files.
 
 - [Artifact-first work](/en/cases/workflows/artifact-first-work/)
 - [Validate sources](/en/guide/quality/validate-sources/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified research-with-sources, web search, validate sources, and version policy chapters; content is limited to the stable research case structure for a source-backed competitive matrix—specific prices or product versions are not fixed.

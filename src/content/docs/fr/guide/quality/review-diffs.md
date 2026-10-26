@@ -8,13 +8,13 @@ title: Examiner les diffs
 description: Lire les modifications et poser les bonnes questions.
 locale: fr
 source_locale: zh-CN
-source_revision: f7f953f
-translation_status: draft
+source_revision: "f7f953f"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
-
 Un « diff » montre exactement ce que Codex a modifié cette fois-ci.
 
 Lors d'une première validation, beaucoup de personnes ne lisent que son résumé, sans regarder les modifications réelles. C'est surtout dans le diff que l'on repère les problèmes ; l'annonce « j'ai terminé » n'est qu'une indication.

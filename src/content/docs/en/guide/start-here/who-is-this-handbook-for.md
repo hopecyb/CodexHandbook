@@ -8,11 +8,12 @@ title: Who is this handbook for?
 description: How beginners, creators, developers, and teams can use this handbook.
 locale: en
 source_locale: zh-CN
-source_revision: "95272c3"
-translation_status: draft
+source_revision: '95272c3'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 3
+reviewed_at: 2026-10-25
 ---
 
 This handbook is mainly for people who are just beginning to use Codex seriously.

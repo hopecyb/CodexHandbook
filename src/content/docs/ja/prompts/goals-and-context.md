@@ -3,10 +3,15 @@ title: 目標とコンテキストを伝える
 description: Codex に何を達成し、なぜ重要かを知らせる。
 locale: ja
 source_locale: zh-CN
-source_revision: 0a5141f
+source_revision: "0a5141f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  basis: "本ページは目標と背景の書き方のみを説明。サイト内リンクと例の表現を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  checkedAt: '2026-07-26'
 ---
 
 情報は多いのに、次の2点が不明瞭なプロンプトはよくあります。
@@ -81,10 +86,3 @@ reviewed_at: 2026-08-26
 目標が何を届けるかを決め、背景がなぜそうするかを補います。
 
 関連：プロジェクト単位の背景は [プロジェクトコンテキスト](/ja/guide/context/project-context/) に置き、毎回のプロンプトで長文を繰り返さない。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは目標と背景の書き方のみを説明。サイト内リンクと例の表現を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

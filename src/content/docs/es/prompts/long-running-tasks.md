@@ -1,21 +1,26 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo describe cómo dividir tareas largas y el traspaso; se han revisado enlaces y ejemplos de fases, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
 title: Prompts para tareas largas
-description: Dividir en fases, checkpoints e información de traspaso.
+description: Dividir en fases, puntos de control e información de traspaso.
 locale: es
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: '450ed9d'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Las formas habituales de fallar en tareas largas:
 
 - hacer demasiado de un golpe
-- sin checkpoints intermedios
+- sin puntos de control intermedios
 - el hilo se alarga y las restricciones anteriores empiezan a chocar
 
-Lo importante no es alargar el Prompt, sino dividir la tarea en una cadena de fases pequeñas con checkpoints.
+Lo importante no es alargar el prompt, sino dividir la tarea en una cadena de fases pequeñas con puntos de control.
 
 Divide la tarea larga en fases; cada una con aceptación:
 
@@ -56,7 +61,7 @@ Cada fase debería tener una salida clara, por ejemplo:
 
 ### 3. Insistir en un solo hilo hasta el final no siempre es mejor
 
-Cuando la tarea es muy larga, traspasar, resumir y reabrir el hilo suele ser más claro.
+Cuando la tarea es muy larga, preparar un traspaso, resumir y continuar en un hilo nuevo suele ser más claro.
 
 ## Un enfoque de fases suficiente
 
@@ -79,10 +84,3 @@ Fase 4: resume cambios, riesgos y siguientes pasos
 Lo más adecuado es poder parar a comprobar en cada tramo, no terminarlo de un golpe.
 
 Complementos: [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/) · [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe cómo dividir tareas largas y el traspaso; se han revisado enlaces y ejemplos de fases, y el cuerpo no depende de hechos volátiles del producto.

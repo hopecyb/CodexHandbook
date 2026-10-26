@@ -3,12 +3,17 @@ title: Shell とターミナル
 description: コマンド実行の能力とリスク。
 locale: ja
 source_locale: zh-CN
-source_revision: 1438fc7
+source_revision: "1438fc7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページは、ターミナル実行がファイル編集より高い動作能力とリスクを持つことのみを説明し、承認前のコマンド理解、書き込み範囲の確認、ネットワーク接続と復旧方法の把握を強調しています。関連原則は、サイト内の権限、検証、ツール各章と相互確認済みです。
+  checkedAt: '2026-07-26'
 ---
 
 ターミナルは Codex に動作を実行させる最も直接的な方法のひとつです。効率は高い一方で、リスクを理解する必要もあります。
@@ -101,10 +106,3 @@ sidebar:
 ```
 
 実行前に、そのコマンドがどこを変更するのかを確認しましょう。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページは、ターミナル実行がファイル編集より高い動作能力とリスクを持つことのみを説明し、承認前のコマンド理解、書き込み範囲の確認、ネットワーク接続と復旧方法の把握を強調しています。関連原則は、サイト内の権限、検証、ツール各章と相互確認済みです。  
-**最終検証：** 2026-07-26

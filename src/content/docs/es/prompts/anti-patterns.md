@@ -1,23 +1,28 @@
 ---
-title: Anti-patterns de Prompts
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo resume antipatrones habituales de prompts; se han revisado referencias cruzadas y ejemplos, y el cuerpo no depende de hechos volátiles del producto."
+  checkedAt: "2026-07-26"
+title: Antipatrones de prompts
 description: Formulaciones vagas, exceso de permisos y peticiones de razonamiento oculto que conviene evitar.
 locale: es
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: '8e89a5a'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Al aprender Prompts, es fácil centrarse solo en «cómo hay que escribir».  
+Al aprender a escribir prompts, es fácil centrarse solo en «cómo hay que escribir».
 A menudo, saber qué formulaciones desvían la tarea ahorra más rodeos.
 
-Aquí van varios «pozos» habituales.
+Aquí van varios errores habituales.
 
-| Anti-pattern | Por qué perjudica |
+| Antipatrón | Por qué perjudica |
 |---|---|
 | «Optimízalo un poco como quieras» | sin objetivo ni límites |
-| «Tienes todos los permisos; decide tú» | superficie de accidente máxima |
+| «Tienes todos los permisos; decide tú» | máximo alcance de posibles daños |
 | «No me preguntes; cámbialo todo de una vez» | salta aclaración y aprobación |
 | «Imprime todo tu proceso de razonamiento oculto» | poco fiable y casi nunca ayuda a la aceptación |
 | Pegar logs con secretos | filtración de credenciales |
@@ -51,7 +56,7 @@ A corto plazo parece una ronda menos; después suele pasar:
 Cuanto más permiso, mayor superficie de error.  
 Sobre todo si los límites de la tarea aún no están claros, más permiso suele amplificar el riesgo.
 
-## Cómo sustituir el anti-pattern por una formulación clara
+## Cómo sustituir el antipatrón por una formulación clara
 
 ### No escribas así
 
@@ -62,7 +67,7 @@ Optimízalo un poco como quieras
 ### Empieza así
 
 ```text
-Reescribe el copy de la primera pantalla de la home para principiantes; solo este archivo; conserva la estructura actual; al terminar dame el diff y el resultado del build.
+Reescribe el texto de la primera pantalla de la página de inicio para principiantes; solo este archivo; conserva la estructura actual; al terminar dame el diff y el resultado de la compilación.
 ```
 
 ## Una fórmula de sustitución suficiente
@@ -79,13 +84,6 @@ Por ejemplo:
 - Alcance: solo dónde
 - Aceptación: cómo juzgar que está terminado
 
-La mayoría de anti-patterns de Prompts no fallan por «mala expresión», sino por omitir límites críticos y criterios de aceptación.
+La mayoría de antipatrones de prompts no fallan por «mala expresión», sino por omitir límites críticos y criterios de aceptación.
 
 Sustituye lo vago por estructura: objetivo + restricciones + aceptación.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo resume anti-patterns habituales de Prompts; se han revisado referencias cruzadas y ejemplos, y el cuerpo no depende de hechos volátiles del producto.

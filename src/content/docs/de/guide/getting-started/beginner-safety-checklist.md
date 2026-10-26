@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Gegen die im Handbuch bereits geprüften Kapitel zu Freigabe, Sandbox/Netzwerk, Ergebnisprüfung und Rückgängig/Wiederherstellen abgeglichen; diese Seite erklärt nur Sicherheitsvoraussetzungen und risikoarme Praxis vor der ersten Nutzung und hängt nicht von konkreten Produkt-UI-Details ab."
+  checkedAt: "2026-07-26"
 title: Sicherheits-Checkliste für Anfänger
 description: "Sicherheitsprüfungen, die du vor der ersten Nutzung sehen solltest."
 locale: de
 source_locale: zh-CN
-source_revision: 75bfe4d
+source_revision: "75bfe4d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 120
 ---
@@ -30,7 +35,7 @@ Konzeptergänzung: [Berechtigungen und Freigaben](/de/guide/foundations/permissi
 
 ### 1. Die Sicherheitsliste ist nur für besonders Vorsichtige
 
-Sie ist für den ersten Einstieg — weil man beim ersten Mal leicht überschätzt, „alles verstehen zu müssen“.
+Sie ist für den ersten Einstieg — weil man beim ersten Mal leicht überschätzt, wie viel man bereits versteht.
 
 ### 2. Keine gefährlichen Befehle klicken = schon sicher genug
 
@@ -46,10 +51,3 @@ Häufigere Erstprobleme:
 Beim Nutzen lernen ist ok — diese Punkte vor dem Start einmal durchzugehen ist stabiler.
 
 Erste Codex-Nutzung: Fehlerkosten zuerst niedrig halten — danach wird alles leichter.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel zu Freigabe, Sandbox/Netzwerk, Ergebnisprüfung und Rückgängig/Wiederherstellen abgeglichen; diese Seite erklärt nur Sicherheitsvoraussetzungen und risikoarme Praxis vor der ersten Nutzung und hängt nicht von konkreten Produkt-UI-Details ab.  
-**Zuletzt überprüft:** 2026-07-26

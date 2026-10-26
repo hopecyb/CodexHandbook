@@ -3,14 +3,18 @@ title: Comptes, forfaits et accès
 description: Distinguer l'accès lié à un forfait ChatGPT, l'utilisation d'une clé API et les autorisations de l'espace de travail d'une organisation.
 locale: fr
 source_locale: zh-CN
-source_revision: ecfa8f9
+source_revision: "7b123e5"
 translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+translated_at: 2026-10-25
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: comparaison avec les pages officielles actuelles sur les tarifs et l'authentification. Cette page décrit le modèle d'accès et l'ordre de diagnostic sans figer des tarifs, des limites ou des listes de fonctionnalités susceptibles d'évoluer.
+  checkedAt: '2026-08-26'
 ---
-
 Codex peut actuellement être utilisé avec un **forfait ChatGPT** ou avec une **clé API facturée à l'usage**, mais ces deux méthodes ne donnent pas accès aux mêmes points d'entrée ni aux mêmes règles de gouvernance.
 
 ## Commencer par choisir une méthode d'accès
@@ -20,7 +24,7 @@ Codex peut actuellement être utilisé avec un **forfait ChatGPT** ou avec une *
 | Connexion avec ChatGPT | Travail interactif personnel, environnement de bureau, Cloud et espaces de travail d'organisation | Dépend des limites du forfait ChatGPT, des rôles dans l'espace de travail et des politiques de l'administrateur |
 | Connexion avec une clé API | Codex en local, scripts et CI | Facturation selon l'utilisation de l'API ; certaines fonctions liées à l'espace de travail ChatGPT ou au Cloud ne sont pas disponibles |
 
-La page officielle des tarifs inclut actuellement ChatGPT Work et Codex dans les forfaits Free, Go, Plus, Pro, Business, Edu et Enterprise. Les tarifs, limites, modèles et fonctionnalités incluses peuvent évoluer. Ce manuel ne reproduit donc pas la grille tarifaire ; consultez la [page officielle des tarifs à jour](https://learn.chatgpt.com/docs/pricing).
+La page officielle des tarifs inclut actuellement ChatGPT Work et Codex dans les forfaits Free, Go, Plus, Pro, Business, Edu et Enterprise. Les tarifs, limites, modèles et fonctionnalités incluses peuvent évoluer. Cette page ne tient pas de grille tarifaire ; consultez [notre guide des offres et sources des prix](/fr/chatgpt-pricing/) et vérifiez la [page officielle des tarifs à jour](https://learn.chatgpt.com/docs/pricing).
 
 ## Pourquoi un compte peut rester sans accès
 
@@ -49,16 +53,9 @@ La connexion n'est que la première étape. L'accès final dépend aussi des él
 
 ## Exemple de diagnostic
 
-Si la CLI fonctionne avec une clé API, mais que le bouton Cloud n'est pas disponible, l'installation n'est probablement pas en cause. Cloud exige une connexion avec ChatGPT et dépend du forfait ChatGPT ainsi que des droits dans l'espace de travail ; les clés API couvrent principalement les workflows locaux et programmatiques.
+Si la CLI fonctionne avec une clé API, mais que le bouton Cloud n'est pas disponible, cela ne signifie pas nécessairement que l’installation est en cause. Cloud exige une connexion avec ChatGPT et dépend du forfait ChatGPT ainsi que des droits dans l'espace de travail ; les clés API couvrent principalement les workflows locaux et programmatiques.
 
 Poursuivez avec [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/).
 
----
 
-**Statut :** vérifié
-
-**Produits concernés :** App / CLI / IDE / Cloud
-
-**Base de vérification :** comparaison avec les pages officielles actuelles sur les tarifs et l'authentification. Cette page décrit le modèle d'accès et l'ordre de diagnostic sans figer des tarifs, des limites ou des listes de fonctionnalités susceptibles d'évoluer.
-
-**Dernière vérification :** 2026-08-26
+Consultez les modèles actuels, les différences entre produits et les recommandations par tâche : [Choisir un modèle selon la tâche](/fr/guide/reference/model-selection/).

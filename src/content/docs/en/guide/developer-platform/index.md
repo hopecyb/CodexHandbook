@@ -10,8 +10,9 @@ sidebar:
   order: 50
 locale: en
 source_locale: zh-CN
-source_revision: f58851e
-translation_status: draft
+source_revision: 'f58851e'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---
 

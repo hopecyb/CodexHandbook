@@ -3,12 +3,16 @@ title: Travail piloté par les tests
 description: Définir ou ajouter d'abord des tests en échec, puis guider l'implémentation — acceptation objective des modifications Codex.
 locale: fr
 source_locale: zh-CN
-source_revision: 4eb568d
+source_revision: "4eb568d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: Recoupement avec les chapitres vérifiés sur l'exécution des tests, la définition de terminé, la correction de bug avec vérification et les règles de commande ; cette page se concentre sur le mode stable « faire échouer les tests d'abord, puis implémentation minimale pour passer ».
+  checkedAt: '2026-07-26'
 ---
-
 Le **travail piloté par les tests** (TDD ou « tests d'abord ») consiste à faire échouer les tests d'abord, puis à implémenter le minimum pour les faire passer. Cela convient aux dépôts avec infrastructure de tests et se relie directement à des cas comme [Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Ce que couvre cette page
@@ -22,7 +26,7 @@ Le **travail piloté par les tests** (TDD ou « tests d'abord ») consiste à fa
 - Dépôts avec tests unitaires/intégration
 - Bugs de régression, changements de comportement API, refactorisations
 
-Peu adapté : prototypes sans tests, modifications ponctuelles de texte sur un site marketing. Préférer l'[EPXV](/fr/cases/workflows/explore-plan-execute-verify/) avec vérification manuelle.
+Peu adapté : prototypes sans tests, modifications ponctuelles de texte sur un site purement rédactionnel. Préférer l'[EPXV](/fr/cases/workflows/explore-plan-execute-verify/) avec vérification manuelle.
 
 ## Approche minimale viable
 
@@ -73,10 +77,3 @@ lancez les tests pour confirmer l'échec, puis modifiez l'implémentation ; à c
 
 - [Lancer les tests](/fr/guide/quality/run-tests/)
 - [Cas : Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/)
-
----
-
-**Statut :** verified  
-**Produits concernés :** CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Recoupement avec les chapitres vérifiés sur l'exécution des tests, la définition de terminé, la correction de bug avec vérification et les règles de commande ; cette page se concentre sur le mode stable « faire échouer les tests d'abord, puis implémentation minimale pour passer ».

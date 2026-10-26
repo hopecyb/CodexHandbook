@@ -3,14 +3,17 @@ title: Terminal intégré
 description: Exécutez des commandes dans le projet ou worktree actuel et vérifiez les résultats avec des sorties réelles.
 locale: fr
 source_locale: zh-CN
-source_revision: 727e93e
+source_revision: "727e93e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: '2026-08-26'
 ---
-
 Chaque conversation de l'App de bureau ChatGPT dispose d'un terminal limité au projet ou au worktree actuel. Ce terminal ne sert pas uniquement à consulter les journaux : c'est aussi la fenêtre de preuves qui permet de vérifier les conclusions de Codex.
 
 Ouvrez-le avec l'icône de terminal en haut à droite de l'App, ou appuyez simultanément sur `Ctrl` et la touche accent grave. ChatGPT peut lire la sortie actuelle du terminal ; vous pouvez donc lui demander d'analyser un build en échec ou un serveur de développement en cours d'exécution.
@@ -62,11 +65,3 @@ La documentation officielle cite des commandes courantes comme `git status`, `gi
 
 - [Terminal intégré](https://learn.chatgpt.com/docs/integrated-terminal)
 - [Environnements locaux](https://learn.chatgpt.com/docs/environments/local)
-
----
-
-**Statut :** verified
-
-**Produit concerné :** App
-
-**Dernière vérification :** 2026-08-26

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against verified verify-artifacts, definition-of-done, handle-uncertainty, and file-artifact pages; focuses on stable method: generated ≠ deliverable, must open and verify, clarify commit policy."
+  checkedAt: "2026-07-26"
 title: Verifying Generated Artifacts
-description: Systematically accept files, reports, and build outputs that Codex creates or exports.
+description: Systematically verify files, reports, and build outputs that Codex creates or exports.
 locale: en
 source_locale: zh-CN
-source_revision: 7401176
+source_revision: '7401176'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 sidebar:
   order: 60
 ---
@@ -104,9 +109,3 @@ Generated does not mean verified—open, validate, and know whether it should be
 
 ## Reference sources
 - [Handle uncertainty](/en/guide/quality/handle-uncertainty/)
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified verify-artifacts, definition-of-done, handle-uncertainty, and file-artifact pages; focuses on stable method: generated ≠ deliverable, must open and verify, clarify commit policy.  
-**Last verified:** 2026-07-26

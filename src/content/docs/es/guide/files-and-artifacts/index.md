@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con la estructura actual del subcapítulo files-and-artifacts de este repositorio y con los capítulos ya verificados de verificación de artefactos, definición de finalización, contexto sensible e imágenes; esta página solo explica el principio estable de elegir forma de encargar y de aceptar según el tipo de archivo.
+  checkedAt: '2026-07-26'
 title: Archivos y artefactos
-description: Cómo Codex lee y escribe distintos tipos de archivo, gestiona generados y puntos clave de aceptación.
+description: Cómo Codex lee y escribe distintos tipos de archivo, gestiona los archivos generados y qué comprobar antes de aceptarlos.
 sidebar:
   order: 30
 locale: es
 source_locale: zh-CN
-source_revision: 543d14e
+source_revision: "543d14e"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 La producción central de Codex suele ser **cambios de archivos en el repositorio** o **artefactos recién generados** (documentos, imágenes, configuración). Este tema explica las mejores prácticas por tipo de archivo, para evitar «se generó pero no sirve».
@@ -47,7 +52,7 @@ Se parece más a un manual operativo desglosado por tipo de archivo que a una me
 1. **Ruta clara**: en el prompt, escribe la ruta de salida y el nombre
 2. **Formato acordado**: extensión, codificación (UTF-8), finales de línea alineados con el proyecto
 3. **Conciencia de tamaño**: los binarios grandes no van a Git, o usa LFS/CDN
-4. **Aceptación humana**: generar ≠ terminar; contrasta con [Definición de hecho](/es/guide/quality/definition-of-done/)
+4. **Aceptación humana**: generar ≠ terminar; contrasta con [Definición de finalización](/es/guide/quality/definition-of-done/)
 5. **Datos sensibles**: ver [Contexto sensible](/es/guide/context/sensitive-context/)
 
 ## Malentendidos habituales
@@ -94,10 +99,3 @@ Así es menos fácil que te abrume todo el capítulo de golpe.
 - Generar imágenes: [Generación de imágenes](/es/guide/tools/image-generation/)
 
 En tareas de archivos es habitual que el resultado ya esté generado, pero el formato, las reglas o el contenido ya se hayan desviado en silencio.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con la estructura actual del subcapítulo files-and-artifacts de este repositorio y con los capítulos ya verificados de verificación de artefactos, definición de hecho, contexto sensible e imágenes; esta página solo explica el principio estable de elegir forma de encargar y de aceptar según el tipo de archivo.  
-**Última verificación:** 2026-07-26

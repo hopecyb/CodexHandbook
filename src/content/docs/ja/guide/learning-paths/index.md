@@ -7,11 +7,17 @@ title: 学習パス
 description: 役割ごとに読む順序を整理し、正本の本文へリンクします。
 locale: ja
 source_locale: zh-CN
-source_revision: 2f7ff71
-translation_status: draft
+source_revision: "2f7ff71"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 5
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 現在のリポジトリの learning paths の構成、役割別の入口ページ、初心者向けの段階別パスを相互に照合済みです。このページは役割に応じた読書順を案内するためのもので、変化しやすい製品動作の詳細は扱いません。
+  checkedAt: '2026-07-26'
+reviewed_at: "2026-10-26"
 ---
 
 学習パスは **読む順序だけを整理** し、製品マニュアルや機能別ガイドの長い記事を複製しません。
@@ -88,7 +94,7 @@ sidebar:
 どのパスを進むべきか迷ったら、次の方法で選べます。
 
 - まだ初回の完全なタスクを通していない：[初心者パス](/ja/guide/learning-paths/beginner/)
-- 主にコンテンツ作成、図文、デモをしたい：[クリエイターパス](/ja/guide/learning-paths/creator/)
+- 主に文章・画像入りコンテンツ・プレゼンテーションの作成をしたい：[クリエイターパス](/ja/guide/learning-paths/creator/)
 - 主にコード変更、バグ修正、プロジェクト対応をしたい：[開発者パス](/ja/guide/learning-paths/developer/)
 - 主にチームでの導入方法やリスク管理を考えている：[チームパス](/ja/guide/learning-paths/team/)
 

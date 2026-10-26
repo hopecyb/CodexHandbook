@@ -3,11 +3,16 @@ title: 위임과 후속 작업
 description: 독립적으로 실행할 Cloud 작업을 시작하고 같은 대화에서 방향과 검수 결과를 조정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 38b322f
-translation_status: draft
+source_revision: "38b322f"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: Cloud / App / IDE / CLI
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 위임은 문제를 맡겨 두고 잊는 일이 아닙니다. 목표, 제약, 환경, 완료 기준을 독립적인 Cloud 대화에 전달하는 일입니다. 작업은 백그라운드에서 실행될 수 있으며, 로그를 확인하고 맥락을 추가하거나 수정을 요청한 뒤 마지막에 diff를 검토할 수 있습니다.

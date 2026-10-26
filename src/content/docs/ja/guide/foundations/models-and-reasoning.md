@@ -3,11 +3,17 @@ title: モデルと推論
 description: モデル選択と推論強度を決めるときの考慮点。
 locale: ja
 source_locale: zh-CN
-source_revision: 0cbc9dc
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: '0685b79'
+translation_status: reviewed
+reviewed_at: '2026-10-26'
+translated_at: 2026-10-25
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の OpenAI Codex および開発者向けモデルの文書と製品画面では、能力、速度、コストに応じたモデル選択を扱っています。このページは特定のモデル名や段階を固定せず、タスクの複雑さ、待ち時間、コスト、検証可能性を判断する安定した原則に限定しています。
+  checkedAt: '2026-07-26'
 ---
 
 選択可能なモデルと「推論 / 思考」レベルは製品更新で変わります。選ぶときは次を天秤にかけてください。
@@ -50,11 +56,13 @@ sidebar:
 
 いったん判断に迷ったら、このルールで十分です。
 
-- **小さな変更 / 小さな理解 / 小さな要約**：デフォルトか軽めの設定
+- **小さな変更 / 限定した範囲の理解 / 短い要約**：デフォルトか軽めの設定
 - **複数ファイル / アーキテクチャ / 高リスクタスク**：より高い推論強度を検討し、計画と検証とセットで使う
 
 大切なのは、「もう少し考える」価値があるタスクかどうかを判断することです。
 
-本ハンドブックは特定のモデル名に依存しません。クライアントの現在の一覧と [https://developers.openai.com/codex](https://developers.openai.com/codex) を基準にしてください。
+本ページでは安定した選択原則を説明し、具体的なモデルは選択ガイドで別途管理します。クライアントの現在の一覧と [https://developers.openai.com/codex](https://developers.openai.com/codex) を基準にしてください。
 
-具体的な記録方法は[使用量、時間、モデルの選択](/guide/quality/usage-time-and-model-choice/)を参照してください。現在は中国語のみのページで、サブスクリプションの利用枠、API 費用、待ち時間、人による手直しを分けて扱います。
+具体的な記録方法は[使用量、時間、モデルの選択](/ja/guide/quality/usage-time-and-model-choice/)を参照してください。サブスクリプションの利用枠、API 費用、待ち時間、人による手直しを分けて扱います。
+
+現在のモデル、製品ごとの違い、タスク別の推奨はこちら：[モデル選択：タスクに合う出発点](/ja/guide/reference/model-selection/)。

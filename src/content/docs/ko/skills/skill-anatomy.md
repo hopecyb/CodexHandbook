@@ -8,9 +8,10 @@ title: Skill 구조
 description: SKILL.md, references/, templates/, scripts/의 역할과 예시.
 locale: ko
 source_locale: zh-CN
-source_revision: 50ca48c
-translation_status: draft
+source_revision: '50ca48c'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Skill 디렉터리를 처음 볼 때 흔한 느낌은 「폴더는 다 아는데, 왜 이렇게 나눠 두는지 모르겠다」입니다.
@@ -25,7 +26,7 @@ Skill 디렉터리를 처음 볼 때 흔한 느낌은 「폴더는 다 아는데
 ```text
 my-skill/
 ├── SKILL.md          # 필수
-├── scripts/          # 선택: 결정적 단계
+├── scripts/          # 선택: 결정론적 단계
 ├── references/       # 선택: 긴 참고 문서
 └── templates/        # 선택: 출력 템플릿
 ```
@@ -35,7 +36,7 @@ my-skill/
 - `SKILL.md`: 주 설명서. Codex에 「무엇인지, 언제 쓰는지, 어떤 단계로 하는지」를 먼저 알림
 - `references/`: 긴 자료함. 모든 배경을 주 파일에 억지로 넣지 않음
 - `templates/`: 바로 쓸 출력 골격. 매번 즉흥으로 만들지 않음
-- `scripts/`: 결정적으로 실행할 단계는 스크립트에 맡김. 전부 자연어로만 쓰지 않음
+- `scripts/`: 결정론적으로 실행할 단계는 스크립트에 맡김. 전부 자연어로만 쓰지 않음
 
 처음에는 `SKILL.md` 하나만으로도 충분합니다.  
 나중에 정말 복잡해지면 `references/`, `templates/`, `scripts/`를 분리하세요.
@@ -79,7 +80,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 
 ### 3. `scripts/`는 가능하면 쓰지 않는다
 
-어떤 단계가 원래 안정·결정·반복 가능해야 한다면, 계속 자연어로 설명하는 것보다 스크립트로 쓰는 편이 더 신뢰할 수 있습니다.
+어떤 단계가 원래 안정적이고 결정론적으로 반복 가능해야 한다면, 계속 자연어로 설명하는 것보다 스크립트로 쓰는 편이 더 신뢰할 수 있습니다.
 
 ## 각 디렉터리 역할
 
@@ -88,7 +89,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 | `SKILL.md` | 주 절차, 트리거 조건, 금지 항목 |
 | `references/` | 긴 문서, 규범, API 설명 |
 | `templates/` | 출력 형식, 보고서 골격 |
-| `scripts/` | 결정적 명령과 검사 |
+| `scripts/` | 결정론적 명령과 검사 |
 
 ## 언제 디렉터리를 나눌까
 
@@ -101,9 +102,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 
 이 네 가지 중 하나둘에 「예」라면 분리를 시작해도 됩니다.
 
-먼저 `SKILL.md`로 통과시킨 뒤, 정말 복잡해질 때 자료·템플릿·스크립트를 단계적으로 빼내세요.
 
-전체 실습: [첫 Skill 만들기](/ko/skills/create-your-first-skill/).
 ## 템플릿에서 Skill로
 
 많은 팀은 처음부터 Skill을 설계하지 않습니다. 반복해서 복사하던 프롬프트에서 시작합니다. 다음 단계로 발전시킬 수 있습니다.
@@ -113,7 +112,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 | 일회성 프롬프트 | 현재 대화 | 한 번만 사용 |
 | 템플릿 | 프롬프트 모음 또는 팀 문서 | 비슷한 작업은 반복되지만 단계는 아직 바뀜 |
 | 단일 파일 Skill | `SKILL.md` 하나 | 절차가 안정되고 트리거가 명확함 |
-| 완전한 Skill 디렉터리 | `SKILL.md` + `templates/` + `references/` + `scripts/` | 출력 형식, 긴 참고자료, 결정적 검사가 안정됨 |
+| 완전한 Skill 디렉터리 | `SKILL.md` + `templates/` + `references/` + `scripts/` | 출력 형식, 긴 참고자료, 결정론적 검사가 안정됨 |
 
 모든 템플릿을 Skill로 바꿀 필요는 없습니다. 반복 사용, 명확한 성공 기준, 팀 합의가 있는 것만 남기세요.
 
@@ -127,3 +126,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 | 스크립트 | 복잡도 분석, 링크 검사, 커버리지 집계, 포맷 검사 |
 
 좋은 Skill은 더 긴 프롬프트가 아니라, 재사용 과정을 읽기 쉽고 테스트 가능하며 유지보수 가능한 부분으로 나눈 것입니다.
+
+먼저 `SKILL.md`로 통과시킨 뒤, 정말 복잡해질 때 자료·템플릿·스크립트를 단계적으로 빼내세요.
+
+전체 실습: [첫 Skill 만들기](/ko/skills/create-your-first-skill/).

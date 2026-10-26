@@ -8,9 +8,10 @@ title: MCP
 description: Relier ChatGPT et Codex à des outils et du contexte tiers de manière contrôlée.
 locale: fr
 source_locale: zh-CN
-source_revision: 8d9ec38
-translation_status: draft
+source_revision: '8d9ec38'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 MCP (Model Context Protocol) répond à la question « comment un Agent accède-t-il aux outils et aux données hors du dépôt ? », pas à la question « comment définir un processus de travail ? ».

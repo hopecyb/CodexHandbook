@@ -12,11 +12,11 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: es
 source_locale: zh-CN
-source_revision: f60dbb5
-translation_status: draft
+source_revision: "f60dbb5"
+translation_status: reviewed
 translated_at: 2026-09-20
----
-La aprobación debe corresponder a una acción concreta y sus efectos. La autorización de la tarea indica qué quiere completar el usuario; la aprobación de herramientas determina si una acción puede ejecutarse en el entorno actual. Escribir un archivo, ejecutar un comando o acceder a la red no exige preguntar cada vez por naturaleza. El comportamiento depende del alcance autorizado, las políticas de herramientas y el sandbox. Consulta la [guía oficial](https://learn.chatgpt.com/docs/agent-approvals-security).
+reviewed_at: 2026-10-25
+---La aprobación debe corresponder a una acción concreta y sus efectos. La autorización de la tarea indica qué quiere completar el usuario; la aprobación de herramientas determina si una acción puede ejecutarse en el entorno actual. Escribir un archivo, ejecutar un comando o acceder a la red no exige preguntar cada vez por naturaleza. El comportamiento depende del alcance autorizado, las políticas de herramientas y el sandbox. Consulta la [guía oficial](https://learn.chatgpt.com/docs/agent-approvals-security).
 
 ## Tres formas de colaboración que se pueden elegir expresamente
 
@@ -32,7 +32,7 @@ Son acuerdos de colaboración, no nombres de nuevos modos del producto. Si una a
 
 ```text
 Esta vez, trabaja solo en modo de lectura: examina el proyecto y propón cambios. No modifiques código ni hagas commit.
-Si una comprobación escribe caché, capturas o archivos de salida, indícalo; no supongas que todas las «pruebas» son de solo lectura.
+Si una comprobación escribe caché, instantáneas o archivos de salida, indícalo; no supongas que todas las «pruebas» son de solo lectura.
 ```
 
 Sirve cuando el objetivo aún no está decidido y hay que comparar alternativas. También en una tarea de solo lectura hay que observar los efectos reales de los comandos. No combines «puedes ejecutar pruebas» con «no escribir nada en disco» sin comprobarlas.

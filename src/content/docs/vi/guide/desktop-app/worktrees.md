@@ -3,15 +3,16 @@ legacyVerification:
   status: "verified"
   products: "App"
   checkedAt: "2026-08-26"
-title: Cây làm việc
-description: Dùng Git worktree để tách biệt các cuộc trò chuyện song song và quay lại vùng làm việc cục bộ một cách an toàn.
-locale: vi
-source_locale: zh-CN
+title: "Cây làm việc"
+description: "Dùng Git worktree để tách biệt các cuộc trò chuyện song song và quay lại vùng làm việc cục bộ một cách an toàn."
+locale: "vi"
+source_locale: "zh-CN"
 source_revision: "3569716"
-translation_status: draft
-translated_at: 2026-09-20
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 40
+reviewed_at: "2026-10-26"
 ---
 
 Cây làm việc (worktree) cho phép cùng một kho Git có nhiều thư mục checkout độc lập. Mỗi thư mục có tệp và trạng thái nhánh riêng, nhưng dùng chung dữ liệu Git của kho mã. Nhờ vậy, nhiều cuộc trò chuyện lập trình có thể tiến hành song song mà không ghi đè tệp của nhau.

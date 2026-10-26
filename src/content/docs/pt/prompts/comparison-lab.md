@@ -29,9 +29,10 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-source_revision: e6a23bb
-translation_status: draft
+source_revision: "e6a23bb"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 O objetivo de comparar é descobrir quais requisitos afetam a entrega, não provar que prompts mais longos são melhores. Esta página reúne três conjuntos de entradas fixas e os registros de 12 execuções reais concluídas em 18 de setembro de 2026. A amostra mostra principalmente diferenças nas evidências entregues; é pequena demais para estabelecer efeitos gerais.
@@ -42,7 +43,7 @@ O objetivo de comparar é descobrir quais requisitos afetam a entrega, não prov
 
 Em cada par, A e B usam as mesmas entradas e ferramentas. B mantém toda a tarefa de A e acrescenta um conjunto de requisitos explícitos de aceitação. Por isso, não se pode atribuir uma diferença a uma frase isolada desse conjunto.
 
-| Tarefa | Entrada fixa | O que B acrescenta | O que observar |
+| tarefa | Entrada fixa | O que B acrescenta | O que observar |
 |---|---|---|---|
 | Relatório semanal de vendas | CSV sintético de 46 linhas e dicionário de dados | Decisões linha a linha, explicações de anomalias e registro de conferência independente | Além de números corretos, é possível rastrear reembolsos, duplicatas e bases zero? |
 | Artigo baseado em fontes | Três fontes sintéticas com conflitos intencionais | Tabela de fatos, lista de questões em aberto e nenhuma escolha sem fundamento entre fontes conflitantes | As incertezas são preservadas? Cada afirmação específica tem apoio de uma fonte? |
@@ -64,7 +65,7 @@ Cada nota precisa estar ligada a evidências específicas. Um relatório bem esc
 
 Cada grupo seguiu a ordem A1 → B1 → B2 → A2, com três tarefas diferentes em paralelo por rodada. Cada execução usou um novo contexto de Agent e diretório de trabalho, sem fornecer respostas da avaliação. O modelo e as configurações de raciocínio não foram definidos explicitamente; os valores reais são desconhecidos. A separação dos diretórios dependia de instruções, não de isolamento pelo sistema operacional. O Agent principal revisou sem cegamento; não houve notas humanas independentes.
 
-| Tarefa | Duas observações de A | Duas observações de B | O que essas execuções mostram |
+| tarefa | Duas observações de A | Duas observações de B | O que essas execuções mostram |
 |---|---|---|---|
 | Relatório semanal de vendas | Números, lançamentos e tratamento de anomalias corretos; também houve conferências espontâneas | Números corretos e explicação da conferência; uma execução não salvou o comando completo de cálculo | Os requisitos adicionais não garantiram registros completos |
 | Artigo baseado em fontes | Fatos, fontes e conflitos tratados corretamente; o texto foi entregue | Os mesmos limites factuais foram preservados, com uma tabela de fatos e questões em aberto | Havia mais material para revisão |

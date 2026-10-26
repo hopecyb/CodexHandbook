@@ -5,10 +5,16 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: "be3f2c4"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Mit dem aktuellen offiziellen Schnellstart der CLI abgeglichen. Verifiziert wurden die Installationswege für macOS/Linux, Windows, npm und Homebrew, die Aktualisierungswege und die Anmeldung mit
+    `codex`. Konkrete Befehle werden zentral auf der Einsteigerseite zur Installation gepflegt.
+  checkedAt: '2026-08-26'
 ---
 
 Bei der ersten Installation der CLI bleiben häufig diese Fragen offen:
@@ -29,12 +35,12 @@ Die CLI ist nicht schon deshalb einsatzbereit, weil der Installationsbefehl einm
 
 ### 1. Ein abgeschlossenes Installationsskript bedeutet eine fertige Installation
 
-Ein abgeschlossenes Skript zeigt nur, dass die Installationsschritte ausgeführt wurden.  
+Ein abgeschlossenes Skript zeigt nur, dass die Installationsschritte ausgeführt wurden.
 Prüfe als Nächstes, ob das aktuell geöffnete Terminal den Befehl erkennt.
 
 ### 2. Ein neues Terminalfenster behebt das Problem automatisch
 
-Manchmal trifft das zu, manchmal nicht.  
+Manchmal trifft das zu, manchmal nicht.
 Wenn `PATH` nicht aktualisiert wurde, kann der Befehl auch in einem neuen Fenster unauffindbar bleiben.
 
 ### 3. Aktualisieren bedeutet einfach erneut installieren
@@ -56,13 +62,3 @@ Gehe direkt nach der Installation folgendermaßen vor:
 Das praktische Erfolgskriterium lautet: Das aktuelle Terminal findet den Befehl, und du kannst die Authentifizierung abschließen.
 
 Weitere Hinweise bietet [CLI installieren](/de/guide/getting-started/install-cli/). Die offiziellen Installations- und Aktualisierungsanweisungen findest du unter [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). Das offizielle eigenständige Installationsprogramm für macOS und Linux verwendet denselben Befehl für Installation und Aktualisierung. Für Windows, npm und Homebrew gelten die jeweiligen Registerkarten der offiziellen Seite.
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** CLI
-
-**Prüfgrundlage:** Mit dem aktuellen offiziellen Schnellstart der CLI abgeglichen. Verifiziert wurden die Installationswege für macOS/Linux, Windows, npm und Homebrew, die Aktualisierungswege und die Anmeldung mit `codex`. Konkrete Befehle werden zentral auf der Einsteigerseite zur Installation gepflegt.
-
-**Zuletzt geprüft:** 2026-08-26

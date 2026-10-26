@@ -3,10 +3,15 @@ title: 長時間タスク管理
 description: 数時間・複数セッションにまたがる大タスク——チェックポイント、圧縮、委任、終了条件。
 locale: ja
 source_locale: zh-CN
-source_revision: c2a9887
+source_revision: "c2a9887"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers の長期目標・長時間協業の公開ユースケースと、本ハンドブックの検証済み引き継ぎ／計画／圧縮／委任章を照合。長時間タスクのチェックポイント、引き継ぎ、終了条件の安定した方法のみ。
+  checkedAt: "2026-07-26"
 ---
 
 長時間タスクではよく同じ問題に当たります：**コンテキストが満杯**、**人が離席**、**方向がずれる**、**いつ止めるか不明**。本ページは [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) を、数時間または複数セッションに及ぶシナリオに適用します。
@@ -46,7 +51,7 @@ reviewed_at: 2026-08-26
 
 ### 3. 締めくくりまたは委任
 
-- ローカル容量不足 → [Cloud 委任](/ja/guide/web-and-cloud/delegate-and-follow-up/)
+- ローカル環境では対応しきれない場合 → [Cloud 委任](/ja/guide/web-and-cloud/delegate-and-follow-up/)
 - 継続監視 → Automation + 明示的な**最大反復／期限**
 
 ## 終了条件（自動化では必須）
@@ -69,10 +74,3 @@ reviewed_at: 2026-08-26
 - [ ] 長タスク開始前に計画ドキュメントがある
 - [ ] 少なくとも 2 チェックポイントでレビュー可能な diff がある
 - [ ] 一時停止・再開・引き継ぎの方法が分かっている
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の長期目標・長時間協業の公開ユースケースと、本ハンドブックの検証済み引き継ぎ／計画／圧縮／委任章を照合。長時間タスクのチェックポイント、引き継ぎ、終了条件の安定した方法のみ。

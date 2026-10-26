@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  basis: "Das OpenAI Help Center führt die IDE-Erweiterung weiterhin als einen wichtigen Einstieg in Verbindung mit lokalen Werkzeugen. Diese Seite setzt keine bestimmte Schaltfläche voraus, sondern beschreibt die stabile Methodik, nach der Workspace, geöffnete Dateien, Auswahl, `@`-Dateien und Projektregeln gemeinsam den IDE-Kontext bilden."
+  checkedAt: "2026-07-26"
 title: Editor-Kontext
 description: So übergibt die IDE-Erweiterung geöffnete Dateien, Workspace und Projektregeln an Codex.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 6d1b248
+source_revision: "6d1b248"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 In einer IDE liest Codex nicht nur deinen Prompt, sondern erhält automatisch den **Editor-Zustand**. Das ist der zentrale Vorteil der IDE gegenüber der CLI. Wenn du weißt, woher der Kontext stammt, vermeidest du die Frustration, dass eine scheinbar sichtbare Datei nicht berücksichtigt wird.
@@ -75,9 +80,3 @@ Entferne vertrauliche Informationen aus Protokollen und Kundendaten, bevor du si
 
 ## Quellen
 - [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
----
-
-**Status:** verified  
-**Unterstützte Produkte:** IDE  
-**Prüfgrundlage:** Das OpenAI Help Center führt die IDE-Erweiterung weiterhin als einen wichtigen Einstieg in Verbindung mit lokalen Werkzeugen. Diese Seite setzt keine bestimmte Schaltfläche voraus, sondern beschreibt die stabile Methodik, nach der Workspace, geöffnete Dateien, Auswahl, `@`-Dateien und Projektregeln gemeinsam den IDE-Kontext bilden.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,14 +1,19 @@
 ---
-title: Thuật ngữ
-description: Định nghĩa ngắn các thuật ngữ thường dùng trong sổ tay.
-locale: vi
-source_locale: zh-CN
-source_revision: ae4b794
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Thuật ngữ"
+description: "Định nghĩa ngắn các thuật ngữ thường dùng trong sổ tay."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "ae4b794"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 10
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang chỉ cung cấp định nghĩa ngắn thuật ngữ thường dùng trong sổ tay; liên kết trong site và chú giải thuật ngữ đã rà lại, và thân bài không phụ thuộc sự thật dễ biến như phiên bản sản phẩm, giá hoặc giao diện."
+  checkedAt: "2026-07-26"
 ---
 
 | Thuật ngữ | Định nghĩa |
@@ -32,7 +37,7 @@ Bản người mới: [Thuật ngữ cho người mới](/vi/guide/start-here/te
 
 ## Cách dùng
 
-Đây là từ điển tra cứu nhanh, không phải tutorial đầy đủ.  
+Đây là từ điển tra cứu nhanh, không phải tutorial đầy đủ.
 Nếu trên trang khác thấy một từ mà tạm quên nghĩa, có thể quay lại tra ở đây.
 
 Nếu hầu hết các từ còn lạ, đọc [Thuật ngữ cho người mới](/vi/guide/start-here/terminology-for-beginners/) trước sẽ thuận hơn.
@@ -64,10 +69,3 @@ Có thể xử lý như sau:
 3. Rồi tới trang chuyên đề xem giải thích đầy đủ
 
 Như vậy ít bị một thuật ngữ làm đứt nhịp đọc cả trang quá lâu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang chỉ cung cấp định nghĩa ngắn thuật ngữ thường dùng trong sổ tay; liên kết trong site và chú giải thuật ngữ đã rà lại, và thân bài không phụ thuộc sự thật dễ biến như phiên bản sản phẩm, giá hoặc giao diện.  
-**Kiểm chứng gần nhất:** 2026-07-26

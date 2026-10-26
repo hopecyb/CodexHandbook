@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: verified
+  products: App de escritorio de ChatGPT / Codex CLI / IDE; ChatGPT Web usa MCP remoto mediante Plugins
+  checkedAt: '2026-08-25'
 title: Introducción a MCP
 description: Comprende clientes, servidores, herramientas, autenticación y límites de seguridad de MCP.
 locale: es
-source_locale: zh-cn
-source_revision: 98a0626
+source_locale: zh-CN
+source_revision: "98a0626"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 MCP convierte «el modelo quiere usar una capacidad externa» en una llamada estructurada a una herramienta. Sirve para conectar documentación de terceros, navegadores, Figma, gestores de incidencias y servicios internos.
@@ -40,7 +44,7 @@ Revisa el comando, la procedencia de las dependencias y las variables de entorno
 
 ### Streamable HTTP
 
-Codex se conecta a una URL remota. La documentación actual confirma compatibilidad con tokens Bearer, OAuth y autenticación de sesión de ChatGPT para servidores propios de confianza.
+Codex se conecta a una URL remota. La documentación actual confirma compatibilidad con tokens Bearer, OAuth y autenticación de sesión de ChatGPT para servidores de confianza del propio proveedor.
 
 El servicio recibe los argumentos de la herramienta. Comprueba TLS, identidad, registros, conservación de datos y permisos de las herramientas.
 
@@ -71,7 +75,7 @@ Son responsabilidades ortogonales, no una escala de evolución. Consulta el [map
 1. **Prueba de solo lectura:** documentación pública o tenant de prueba, solo herramientas de consulta.
 2. **Validación del equipo:** proyecto, rol y allowlist de herramientas restringidos; registrar fallos y latencia.
 3. **Escrituras limitadas:** operaciones pequeñas y reversibles con aprobación humana.
-4. **Operación gobernada:** autorización revocable, configuración revisable, registros redactados y aislamiento por entorno.
+4. **Operación gobernada:** autorización revocable, configuración revisable, registros con datos sensibles ocultos y aislamiento por entorno.
 
 No incluyas tokens en prompts, Git ni cabeceras HTTP estáticas. Usa preferiblemente OAuth, `bearer_token_env_var` o variables de entorno reenviadas.
 
@@ -92,11 +96,3 @@ Ve a [Conectar un servidor MCP](/es/skills/mcp/connect-an-mcp-server/), empieza 
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Estado:** verified
-
-**Productos aplicables:** App de escritorio de ChatGPT / Codex CLI / IDE; ChatGPT Web usa MCP remoto mediante Plugins
-
-**Última verificación:** 2026-08-25

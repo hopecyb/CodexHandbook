@@ -5,10 +5,15 @@ sidebar:
   order: 7
 locale: ko
 source_locale: zh-CN
-source_revision: 1a4cd98
+source_revision: "1a4cd98"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 이 페이지는 각 기능 모듈과 이를 설명하는 기준 문서를 안내합니다. 사이트 내 링크·구조도·모듈 매핑을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 핸드북의 모듈이 많아 처음에는 흩어져 보이기 쉽습니다. 이 페이지는 주요 능력을 한 장에 모아 구조를 빠르게 맞춥니다.
@@ -55,7 +60,7 @@ Skills, MCP, Hooks, 자동화는 강력하지만, 효율 확대와 규모 있는
 사이트 목차를 페이지마다 다 읽을 필요는 없습니다. 이 순서로 가도 됩니다.
 
 1. Codex가 어떻게 작동하는지 이해합니다
-2. 작업을 주고 방법·컨텍스트를 주는 방법·결과를 검증하는 방법을 배웁니다
+2. 작업을 지시하고 컨텍스트를 제공하며 결과를 검증하는 방법을 배웁니다
 3. 익숙해진 뒤 설정·확장·자동화를 고려합니다
 
 ## 시작 순서
@@ -65,9 +70,9 @@ Skills, MCP, Hooks, 자동화는 강력하지만, 효율 확대와 규모 있는
 3. [빠른 시작](/ko/guide/getting-started/)으로 들어갑니다
 4. 막히면 [기초 개념](/ko/guide/foundations/)과 [학습 경로](/ko/guide/learning-paths/)로 돌아옵니다
 
-## 모듈과 권위 장
+## 모듈별 기준 문서
 
-| 능력 | 권위 위치 |
+| 능력 | 기준 문서 |
 |---|---|
 | 모델, Agent, 권한, 샌드박스 | [기초 개념](/ko/guide/foundations/) |
 | 각 입구에서 어떻게 누르고 실행하는지 | [제품 매뉴얼](/ko/guide/) |
@@ -78,11 +83,4 @@ Skills, MCP, Hooks, 자동화는 강력하지만, 효율 확대와 규모 있는
 | 엔드투엔드 사례 | [시나리오 사례](/ko/cases/use-cases/) |
 | 읽기 순서 | [학습 경로](/ko/guide/learning-paths/) |
 
-확장 선정 총도는 [확장 능력 지도](/ko/skills/capability-map/)를, 제품 대조는 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요. 입구별 능력 차이는 기능 비교 페이지에 둡니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 이 페이지는 능력 모듈과 권위 장 귀속만 총괄합니다. 사이트 내 링크·구조도·모듈 매핑을 재확인했으며, 본문은 쉽게 변하는 제품 사실에 의존하지 않습니다.  
-**최근 검증:** 2026-07-26
+확장 선택을 위한 전체 지도는 [확장 능력 지도](/ko/skills/capability-map/)를, 제품 대조는 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요. 입구별 능력 차이는 기능 비교 페이지에 둡니다.

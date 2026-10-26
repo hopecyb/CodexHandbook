@@ -3,10 +3,11 @@ title: Consolidar um fluxo de trabalho como Skill
 description: Um fluxo repetido pela terceira vez merece um Skill — gatilho, instruções e aceitação num só pacote.
 locale: pt
 source_locale: zh-CN
-source_revision: 3dd18c5
+source_revision: "3dd18c5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis": "Cruzado com os use cases públicos atuais de OpenAI Developers «Save workflows as skills» e com os capítulos já verificados deste manual sobre Skills, automatização, regras de comando e riscos de extensões; o conteúdo limita-se ao método estável «quando consolidar um fluxo repetido como Skill e como organizar instruções e aceitação».", "checkedAt": "2026-07-26"}
 ---
 
 Quando o mesmo tipo de tarefa (verificação de release, sincronização de docs, scan de segurança) é concluído pela **terceira** vez com copy-paste de prompts, é altura de considerar um [Skill](/pt/skills/overview/). Este capítulo liga [métodos de fluxo de trabalho](/pt/cases/workflows/) ao sistema de extensões.
@@ -15,7 +16,7 @@ Quando o mesmo tipo de tarefa (verificação de release, sincronização de docs
 
 - Quando promover um modelo de prompt a Skill
 - Que partes um Skill deve incluir (instruções, recursos, scripts)
-- Como partilhar e versionar com a equipa
+- Como compartilhar e versionar com a equipe
 
 ## Sinais de que vale consolidar
 
@@ -42,8 +43,8 @@ Começar: [criar o primeiro Skill](/pt/skills/create-your-first-skill/)
 Extrair prompt e itens de aceitação de um caso bem-sucedido
     → Reduzir ao corpo do Skill (remover oralidade; manter restrições)
     → Acrescentar descrição de gatilho («antes de fundir», «antes de publicar»)
-    → Review em PR pela equipa
-    → Escrever no diretório examples/ acordado, plugin da equipa ou biblioteca interna de skills
+    → Review em PR pela equipe
+    → Escrever no diretório examples/ acordado, plugin da equipe ou biblioteca interna de skills
 ```
 
 Compare com [transformar o fluxo em automatização](/pt/skills/automations/scheduled-tasks/): Skill inclina-se a **orientação interativa**; Automation a **agendamento / sem supervisão**.
@@ -58,20 +59,14 @@ Compare com [transformar o fluxo em automatização](/pt/skills/automations/sche
 ## Limites de segurança
 
 - Ver [segurança e versões de Skills](/pt/skills/security/)
-- Skills da equipa devem entrar na lista de aprovação de extensões (ver [riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Skills da equipe devem entrar na lista de aprovação de extensões (ver [riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Lista de aceitação
 
 - [ ] Um colega novo consegue concluir uma tarefa só com o Skill
 - [ ] Condições de gatilho claras; disparos errados pouco frequentes
-- [ ] Há versão ou CHANGELOG (nível de equipa)
+- [ ] Há versão ou CHANGELOG (nível de equipe)
 - [ ] Ligação cruzada com a documentação do fluxo de origem
 
 ## Fontes de referência
 - No repositório: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) e [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com os use cases públicos atuais de OpenAI Developers «Save workflows as skills» e com os capítulos já verificados deste manual sobre Skills, automatização, regras de comando e riscos de extensões; o conteúdo limita-se ao método estável «quando consolidar um fluxo repetido como Skill e como organizar instruções e aceitação».  
-**Última verificação:** 2026-07-26

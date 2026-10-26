@@ -1,17 +1,22 @@
 ---
-title: Für wen ist dieses Handbook
-description: "Erklärt, wie Anfänger, Creator, Entwickler und Teams dieses Handbook nutzen."
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Zielgruppe und Nutzungsszenarien des Handbuchs; interne Links und Einteilung der Lesergruppen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
+title: Für wen ist dieses Handbuch
+description: "Erklärt, wie Anfänger, Creator, Entwickler und Teams dieses Handbuch nutzen."
 locale: de
 source_locale: zh-CN
-source_revision: 95272c3
+source_revision: "95272c3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 3
 ---
 
-Dieses Handbook richtet sich vor allem an Menschen, die Codex gerade erst ernsthaft kennenlernen.
+Dieses Handbuch richtet sich vor allem an Menschen, die Codex gerade erst ernsthaft kennenlernen.
 
 Es setzt nicht voraus, dass du Folgendes schon kannst:
 
@@ -25,7 +30,7 @@ Wenn du das schon beherrschst, liest du schneller; wenn nicht, bleibt der Text m
 
 ## Vier Lesergruppen
 
-| Leser | So nutzt du dieses Handbook |
+| Leser | So nutzt du dieses Handbuch |
 |---|---|
 | KI-Anfänger | Von „Was ist das?“ bis zur ersten sicheren Aufgabe; Begriffe werden erklärt |
 | Creator | Recherche, Schreiben, Demos und Prototypen; zuerst Überblick, dann Fähigkeitsthemen |
@@ -48,9 +53,9 @@ Der Text ist vor allem für **Leser geschrieben, die Terminal und Agent noch nic
 
 ## Häufige Missverständnisse
 
-### 1. Dieses Handbook ist nicht nur für Programmierer
+### 1. Dieses Handbuch ist nicht nur für Programmierer
 
-Wenn deine Arbeit Folgendes enthält, passt das Handbook auch zu dir:
+Wenn deine Arbeit Folgendes enthält, passt das Handbuch auch zu dir:
 
 - Schreiben und Inhalte ordnen
 - Recherche und Informationsabgleich
@@ -74,7 +79,7 @@ Viele lesen so:
 2. Die erste kleine Aufgabe durchziehen
 3. Danach nach der eigenen Rolle springen
 
-## Wofür das Handbook nicht gedacht ist
+## Wofür das Handbuch nicht gedacht ist
 
 - Als vollständiges offizielles Changelog eines einzelnen Produkts
 - Als Skript-Repo, das ohne Überprüfung in Produktion darf
@@ -82,18 +87,11 @@ Viele lesen so:
 
 ## Für wen es sich lohnt
 
-Bei diesen Bedürfnissen lohnt sich das Handbook:
+Bei diesen Bedürfnissen lohnt sich das Handbuch:
 
 - Du willst Codex sicher in Gang bringen
 - Du kannst schon etwas, fühlst dich aber unsicher beim Formulieren von Aufgaben
-- Du willst persönliche Nutzung zu team-tauglichen Abläufen machen
+- Du willst persönliche Nutzung zu im Team wiederverwendbaren Abläufen machen
 - Du kommst nicht aus der Entwicklung, willst KI aber wirklich in den Alltag einbinden
 
 Als Nächstes: [Deinen Pfad wählen](/de/guide/start-here/choose-your-path/).
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur Zielgruppe und Nutzungsszenarien des Handbooks; interne Links und Leser-Schichtung wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

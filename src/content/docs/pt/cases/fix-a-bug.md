@@ -3,9 +3,11 @@ title: "Corrigir um bug: por onde começar"
 description: Escolha o caminho adequado ao problema e siga para o caso completo com materiais executáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 405a687
-translation_status: draft
+source_revision: "405a687"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Esta página de entrada mantém apenas a escolha do caminho e um ciclo estável de engenharia. Os comandos de falha esperada e de sucesso do exemplo foram executados e verificados neste repositório.", "checkedAt": "2026-08-25"}
 ---
 
 Esta é uma página inicial curta. As etapas completas, o código executável, as evidências dos testes antes e depois da correção e os prompts de cada fase ficam em [Corrigir um bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/). Assim, evitamos que duas páginas repitam o mesmo conteúdo e acabem divergindo.

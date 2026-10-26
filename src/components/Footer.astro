@@ -7,12 +7,20 @@ import config from 'virtual:starlight/user-config';
 import { Icon } from '@astrojs/starlight/components';
 
 const { pagination, entry } = Astro.locals.starlightRoute;
+const vietnamese = Astro.locals.starlightRoute.locale === 'vi';
+const portuguese = Astro.locals.starlightRoute.locale === 'pt';
+const german = Astro.locals.starlightRoute.locale === 'de';
+const french = Astro.locals.starlightRoute.locale === 'fr';
+const korean = Astro.locals.starlightRoute.locale === 'ko';
+const japanese = Astro.locals.starlightRoute.locale === 'ja';
+const spanish = entry.id.startsWith('es/');
+const english = entry.id.startsWith('en/');
 const traditional = entry.id.startsWith('zh-tw/');
 const chinese = !/^(en|de|es|fr|ja|ko|pt|vi)\//.test(entry.id);
 // The splash homepage already links updates and contributing in its about block.
-const showFeedback = chinese && entry.data.template !== 'splash';
+const showFeedback = (chinese || english || spanish || japanese || korean || french || german || portuguese || vietnamese) && entry.data.template !== 'splash';
 const correction = feedbackUrl({ pathname: Astro.url.pathname, title: entry.data.title, verificationDate: entry.data.verification?.checkedAt });
-const updatesPath = traditional ? '/zh-tw/guide/updates/' : '/guide/updates/';
+const updatesPath = vietnamese ? '/vi/guide/updates/' : portuguese ? '/pt/guide/updates/' : german ? '/de/guide/updates/' : french ? '/fr/guide/updates/' : korean ? '/ko/guide/updates/' : japanese ? '/ja/guide/updates/' : spanish ? '/es/guide/updates/' : english ? '/en/guide/updates/' : traditional ? '/zh-tw/guide/updates/' : '/guide/updates/';
 const hasPagination = Boolean(pagination.prev || pagination.next);
 ---
 
@@ -21,8 +29,8 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 		<EditLink />
 		<LastUpdated />
 		{showFeedback && <span class="feedback-links" data-pagefind-ignore>
-			<a href={correction} target="_blank" rel="noopener noreferrer">{traditional ? '回報本頁問題（GitHub 草稿）' : '反馈本页问题（GitHub 草稿）'}</a>
-			{' · '}<a href={updatesPath}>{traditional ? '內容更新' : '内容更新'}</a>
+			<a href={correction} target="_blank" rel="noopener noreferrer">{vietnamese ? 'Báo lỗi trên trang này (bản nháp GitHub)' : portuguese ? 'Relatar um problema nesta página (rascunho no GitHub)' : german ? 'Problem auf dieser Seite melden (GitHub-Entwurf)' : french ? 'Signaler un problème sur cette page (brouillon GitHub)' : korean ? '이 페이지의 문제 신고(GitHub 초안)' : japanese ? 'このページの問題を報告（GitHub の下書き）' : spanish ? 'Comunicar un problema de esta página (borrador en GitHub)' : english ? 'Report a page issue (GitHub draft)' : traditional ? '回報本頁問題（GitHub 草稿）' : '反馈本页问题（GitHub 草稿）'}</a>
+			{' · '}<a href={updatesPath}>{vietnamese ? 'Cập nhật nội dung' : portuguese ? 'Atualizações do conteúdo' : german ? 'Inhaltsaktualisierungen' : french ? 'Mises à jour du contenu' : korean ? '콘텐츠 업데이트' : japanese ? 'コンテンツの更新' : spanish ? 'Actualizaciones de contenido' : english ? 'Content updates' : traditional ? '內容更新' : '内容更新'}</a>
 		</span>}
 	</div>
 

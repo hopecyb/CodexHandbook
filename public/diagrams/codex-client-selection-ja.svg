@@ -37,7 +37,7 @@
   <path d="M62 410H262" fill="none" stroke="#164e63"/>
   <text x="62" y="441" class="note">タスクと diff を確認</text>
   <text x="62" y="469" class="note">承認と並列作業を管理</text>
-  <text x="62" y="497" class="tiny">最適：初回利用、長時間タスク</text>
+  <text x="62" y="497" class="tiny">用途：初回利用、長時間タスク</text>
 
   <rect x="334" y="278" width="240" height="248" rx="10" fill="#07101f" stroke="#34d399" stroke-width="1.5"/>
   <rect x="354" y="298" width="54" height="24" rx="4" fill="#34d399"/>
@@ -47,7 +47,7 @@
   <path d="M354 410H554" fill="none" stroke="#14532d"/>
   <text x="354" y="441" class="note">Git とテストコマンドに近い</text>
   <text x="354" y="469" class="note">再現可能な手順を記録しやすい</text>
-  <text x="354" y="497" class="tiny">最適：ターミナル利用者、自動化</text>
+  <text x="354" y="497" class="tiny">用途：ターミナル利用者、自動化</text>
 
   <rect x="626" y="278" width="240" height="248" rx="10" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
   <rect x="646" y="298" width="72" height="24" rx="4" fill="#a78bfa"/>
@@ -67,11 +67,11 @@
   <path d="M938 410H1138" fill="none" stroke="#713f12"/>
   <text x="938" y="441" class="note">並列委任と長時間タスク</text>
   <text x="938" y="469" class="note">完了後に結果をまとめてレビュー</text>
-  <text x="938" y="497" class="tiny">最適：リモート連携、非同期作業</text>
+  <text x="938" y="497" class="tiny">用途：リモート連携、非同期作業</text>
 
   <path d="M162 526V586H1038V526" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6 5"/>
   <rect x="190" y="574" width="820" height="116" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
   <text x="600" y="610" text-anchor="middle" class="label">入口間で引き継げる</text>
   <text x="600" y="640" text-anchor="middle" class="note">IDE で局所を確認 → App / Cloud に長時間タスクを委任 → CLI でチームコマンドを実行 → diff のレビューに戻る</text>
-  <text x="600" y="670" text-anchor="middle" class="tiny">選択後は、読み取り、変更、diff、検証、権限判断を 1 回ずつ行い、実際の閉ループを完了します。</text>
+  <text x="600" y="670" text-anchor="middle" class="tiny">選択後は、読み取り、変更、diff、検証、権限判断までの一連の手順を実際に確認します。</text>
 </svg>

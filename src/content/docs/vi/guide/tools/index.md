@@ -1,26 +1,31 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này là điều hướng chuyên đề công cụ; các lối vào chương terminal, tìm kiếm, trình duyệt, Computer Use, hình ảnh và giọng nói đã đối chiếu chéo với mục lục nội bộ; phần thân chỉ nói “công cụ ảnh hưởng phạm vi thực thi và rủi ro”, không tuyên bố ma trận hỗ trợ cố định."
+  checkedAt: "2026-07-26"
 title: Công cụ
 description: Chọn và chuyên đề công cụ Agent Codex có thể dùng — terminal, tìm kiếm, trình duyệt, Computer Use, v.v.
 sidebar:
   order: 20
 locale: vi
 source_locale: zh-CN
-source_revision: 5939a9d
+source_revision: "5939a9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Agent dùng **Công cụ** để đọc tệp, chạy lệnh, tìm trên mạng, mở trình duyệt, v.v. Chọn đúng công cụ và viết rõ ranh giới giúp giảm tự ý lên mạng hoặc sửa quá mức.
 
-“Công cụ” ở đây là năng lực Codex thật sự gọi khi thực thi tác vụ. Không phải mọi tác vụ chỉ dựa vào hội thoại.  
+“Công cụ” ở đây là năng lực Codex thật sự gọi khi thực thi tác vụ. Không phải mọi tác vụ chỉ dựa vào hội thoại.
 Có tác vụ cần đọc tệp, có tác vụ cần chạy lệnh, có tác vụ cần xem trang web, có tác vụ cần nhìn trang thật.
 
 ![Minh họa: bộ công cụ trên bàn — terminal, trình duyệt, kính lúp tìm kiếm, hình ảnh, micro và con trỏ — trợ lý nhỏ chọn công cụ phù hợp](/illustrations/tools-overview.webp)
 
 ## Vì sao cần hiểu công cụ trước
 
-Khi mới dùng, dễ coi Codex chỉ là trợ lý hội thoại thuần.  
+Khi mới dùng, dễ coi Codex chỉ là trợ lý hội thoại thuần.
 Nhưng một khi bạn cho phép, nó có thể:
 
 - Đọc tệp dự án
@@ -54,10 +59,3 @@ Lần đầu xem chương này, có thể đọc theo thứ tự:
 3. Trang tìm kiếm, trình duyệt hoặc công cụ khác, tiếp tục theo tác vụ đang có
 
 Công cụ quyết định Codex có thể “ra tay” thế nào; bạn chịu trách nhiệm nói rõ công cụ nào được dùng, công cụ nào không.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này là điều hướng chuyên đề công cụ; các lối vào chương terminal, tìm kiếm, trình duyệt, Computer Use, hình ảnh và giọng nói đã đối chiếu chéo với mục lục nội bộ; phần thân chỉ nói “công cụ ảnh hưởng phạm vi thực thi và rủi ro”, không tuyên bố ma trận hỗ trợ cố định.  
-**Kiểm chứng gần nhất:** 2026-07-26

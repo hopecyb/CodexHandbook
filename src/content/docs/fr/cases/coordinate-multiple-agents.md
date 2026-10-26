@@ -11,10 +11,10 @@ title: Coordonner plusieurs agents
 description: Cas de collaboration avec exploration parallèle, exécution partagée et fusion des résultats.
 locale: fr
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: "7b143fc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -37,8 +37,8 @@ reviewed_at: 2026-08-26
 ### Exploration parallèle, choix humain
 
 ```text
-Agent 1 : avantages, inconvénients et charge de travail du schéma A
-Agent 2 : avantages, inconvénients et charge de travail du schéma B
+Agent 1 : avantages, inconvénients et charge de travail de la solution A
+Agent 2 : avantages, inconvénients et charge de travail de la solution B
 (vous choisissez, puis un seul agent exécute)
 ```
 

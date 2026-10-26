@@ -5,15 +5,20 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: d1a9007
+source_revision: 'd1a9007'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App
+  basis: OpenAI Help Center 현행 《Moving to the new ChatGPT desktop app》와 《ChatGPT Work and Codex》는 데스크톱 앱에 Chat/Work와 Codex가 함께 포함되며 Codex는 독립 뷰를 유지한다고 명시합니다. 이 페이지는 데스크톱 App 장의 탐색용이며, 작업 입력·변경 확인·승인 세 가지 기본 동작에 초점을 둡니다.
+  checkedAt: '2026-07-26'
 ---
 
 데스크톱 App은 초보자의 기본 진입점입니다. 프로젝트, 작업, 차이, 승인을 시각적으로 다룰 수 있습니다.
 
-명령줄이나 IDE 확장에 익숙하지 않은 사람에게도 비교적 접근하기 쉬운 입구입니다.
+명령줄이나 IDE 확장에 익숙하지 않은 사람에게도 비교적 시작하기 쉬운 인터페이스입니다.
 
 단순히 “채팅할 수 있다”는 수준이 아니라, 프로젝트·변경·승인·검증을 같은 화면에서 볼 수 있게 모아 둡니다.
 
@@ -86,13 +91,6 @@ reviewed_at: 2026-08-26
 - [설정](/ko/guide/desktop-app/settings/)
 - [문제 해결](/ko/guide/desktop-app/troubleshooting/)
 
-시작 입구: [데스크톱 App 설치](/ko/guide/getting-started/install-desktop-app/)
+시작하기: [데스크톱 App 설치](/ko/guide/getting-started/install-desktop-app/)
 
-데스크톱 App은 Codex와의 기본 협업을 먼저 통과시키는 데 적합합니다. 그다음에 명령줄과 더 고급 워크플로를 보완하면 됩니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App  
-**검증 근거:** OpenAI Help Center 현행 《Moving to the new ChatGPT desktop app》와 《ChatGPT Work and Codex》는 데스크톱 앱에 Chat/Work와 Codex가 함께 포함되며 Codex는 독립 뷰를 유지한다고 명시합니다. 이 페이지는 데스크톱 App 장의 탐색용이며, 작업 입력·변경 확인·승인 세 가지 기본 동작에 초점을 둡니다.  
-**최근 검증:** 2026-07-26
+데스크톱 App은 Codex와의 기본 협업 과정을 먼저 익히는 데 적합합니다. 그다음에 명령줄과 더 고급 워크플로를 보완하면 됩니다.

@@ -7,8 +7,9 @@ title: Kiểm chứng nội dung kỹ thuật
 description: Phân biệt trạng thái biên tập, đối chiếu nguồn và chạy thử ví dụ; ghi lại phạm vi, môi trường và bằng chứng kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: "cfb077d"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -80,7 +81,7 @@ verification:
 
 Đối chiếu nguồn và chạy thử dùng danh sách `evidence`, mỗi mục có `label` và `href`. Chạy thử còn phải điền `environment`, nêu rõ hệ điều hành, phiên bản ứng dụng liên quan và phiên bản phụ thuộc. Bản dựng sẽ từ chối bản ghi chạy thử thiếu môi trường hoặc liên kết bằng chứng. Có liên kết không đồng nghĩa bằng chứng đã đủ; người duy trì phải đọc bản ghi.
 
-### Bài cộng đồng giúp bạn hiểu, nhưng không thay kiểm chứng sự kiện
+### Bài cộng đồng giúp bạn hiểu, nhưng không thay kiểm chứng dữ kiện
 
 Bài viết cộng đồng hoặc tài liệu cộng đồng khác rất hợp để giúp bạn thấy nên bổ sung chủ đề nào.
 
@@ -108,8 +109,8 @@ Vậy phải kiểm theo “cả chuỗi thao tác”, không chỉ quét mặt 
 
 1. **Ghi rõ phạm vi**: sản phẩm (App/CLI/IDE/Cloud), OS, số phiên bản CLI
 2. **Tái hiện từng bước**: làm theo từ đầu hoặc worktree sạch
-3. **Căn cứ chính thức**: ghi nguồn chính thức cụ thể cho sự kiện về sản phẩm; bài tập phương pháp ổn định dùng đầu vào thật và bản ghi kiểm tra, không nhận vơ sự chứng thực chính thức
-4. **Nguồn cộng đồng**: nếu tham khảo tài liệu cộng đồng, chỉ lấy chủ đề; sự kiện lấy chính thức làm chuẩn
+3. **Căn cứ chính thức**: ghi nguồn chính thức cụ thể cho dữ kiện về sản phẩm; bài tập phương pháp ổn định dùng đầu vào thật và bản ghi kiểm tra, không nhận vơ sự chứng thực chính thức
+4. **Nguồn cộng đồng**: nếu tham khảo tài liệu cộng đồng, chỉ lấy chủ đề; dữ kiện lấy chính thức làm chuẩn
 5. **Cập nhật ngày**: chỉ ghi ngày kiểm tra thực tế vào `verification.checkedAt`; không cập nhật hàng loạt ngày cũ để giả như đã rà soát lại
 6. **Rà độc lập**: `verified` khuyến nghị người thứ hai không phải tác giả xác nhận
 
@@ -132,7 +133,7 @@ Các mục sau phải kiểm lại mỗi quý hoặc theo phát hành major:
 - Tên lệnh và lệnh con, flags
 - Mặc định quyền và hành vi Sandbox
 - Gói, tên mô hình, khả dụng theo khu vực
-- Tên sự kiện MCP/Hook
+- Tên dữ kiện MCP/Hook
 
 ## Khi thất bại
 

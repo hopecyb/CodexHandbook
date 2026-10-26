@@ -8,8 +8,9 @@ title: File and folder context
 description: Identify relevant files and avoid unrelated noise.
 locale: en
 source_locale: zh-CN
-source_revision: "e9148a3"
-translation_status: draft
+source_revision: 'e9148a3'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 sidebar:
   order: 20

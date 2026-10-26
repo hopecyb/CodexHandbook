@@ -23,9 +23,10 @@ assets:
     version: 1.0.0
 locale: vi
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: "fc91872"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Trước tiên lưu lỗi, sau đó xác định lớp nào thất bại, cuối cùng chỉ thay một biến rồi chạy lại. Trang này minh họa quá trình bằng năm bộ đầu vào cố định. Tác giả cố tình tạo lỗi; nhật ký là kết quả chạy lệnh thực tế, không giả làm sự cố của khách hàng.
@@ -54,13 +55,13 @@ Thư mục đầu ra phải chưa tồn tại để tránh ghi đè chứng cứ
 
 Nếu nguồn thật sự thay đổi, hãy kiểm tra lại phiên bản, nội dung, kết luận và giữ hồ sơ nguồn mới. Việc khôi phục tệp cũ trong ví dụ này chỉ đúng vì đã xác định đây là thay đổi nhầm.
 
-## 2. Trích dẫn trong bài không có trong bảng sự thật
+## 2. Trích dẫn trong bài không có trong bảng dữ kiện
 
 **Triệu chứng:** `FAIL: Unmapped or unused claim ID`, mã thoát 1.
 
-**Chẩn đoán:** Bài viết ghi F99 thay vì F1; bảng sự thật không có F99. Kiểm tra P1 cho thấy câu đó vẫn gắn với F1.
+**Chẩn đoán:** Bài viết ghi F99 thay vì F1; bảng dữ kiện không có F99. Kiểm tra P1 cho thấy câu đó vẫn gắn với F1.
 
-**Thay đổi duy nhất:** Chỉ sửa mã bị gõ nhầm về F1 và chạy lại, trả mã 0. Đừng tạo thêm dòng sự thật để che một trích dẫn chưa biết.
+**Thay đổi duy nhất:** Chỉ sửa mã bị gõ nhầm về F1 và chạy lại, trả mã 0. Đừng tạo thêm dòng dữ kiện để che một trích dẫn chưa biết.
 
 [Nhật ký lỗi](/downloads/failure-recovery/validation/02-unmapped-citation-before.json) · [Nhật ký khôi phục](/downloads/failure-recovery/validation/02-unmapped-citation-after.json)
 
@@ -84,7 +85,7 @@ Khi nội dung Issue thật thay đổi, phải phân tích lại ảnh hưởng
 
 **Chẩn đoán:** Trạng thái gắn với site fixed nhưng tham số `--site` lại trỏ đến broken. Lỗi xảy ra ở phép kiểm tra phạm vi; bản thân các liên kết không đột nhiên hỏng.
 
-**Thay đổi duy nhất:** Chỉ đổi `--site` về thư mục gốc, giữ nguyên tệp trạng thái và tham số khác. Chạy lại trả mã 0; lần gọi sai không ghi đè trạng thái đã có.
+**Thay đổi duy nhất:** Chỉ đổi `--site` về thư mục ban đầu, giữ nguyên tệp trạng thái và tham số khác. Chạy lại trả mã 0; lần gọi sai không ghi đè trạng thái đã có.
 
 [Nhật ký lỗi](/downloads/failure-recovery/validation/04-wrong-site-scope-before.json) · [Nhật ký khôi phục](/downloads/failure-recovery/validation/04-wrong-site-scope-after.json)
 

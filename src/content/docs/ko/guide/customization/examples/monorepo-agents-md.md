@@ -3,12 +3,17 @@ title: Monorepo의 AGENTS.md
 description: 단일 저장소 다중 패키지에서 프로젝트 지침·범위·테스트 명령을 두는 예시 패턴.
 locale: ko
 source_locale: zh-CN
-source_revision: a9fb1d7
+source_revision: 'a9fb1d7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 본 핸드북의 현재 `AGENTS.md`·파일 디렉터리 컨텍스트·Cloud 환경 장과 교차 확인했습니다. 내용은 monorepo 계층 설명의 예시 패턴과 명령 조직 방법으로 한정하며, 구체 제품 진입점이나 관리형 구현을 고정 계약처럼 두지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
 Monorepo에는 여러 app, 공유 패키지, 서로 다른 기술 스택이 공존합니다. 거대한 `AGENTS.md` 하나로는 Agent가 **잘못된 패키지를 고치거나** 잘못된 테스트를 돌리기 쉽습니다. 이 페이지는 재사용 가능한 **계층 설명** 패턴(예시이며 저장소에 맞게 잘라 쓰세요)을 줍니다.
@@ -24,7 +29,7 @@ Monorepo에는 여러 app, 공유 패키지, 서로 다른 기술 스택이 공�
 일반 저장소가 집 한 채라면, monorepo는 건물 한 동에 가깝습니다.
 
 방마다 거주자와 규칙이 다릅니다.  
-대문에 초장 총설명만 붙이면 Codex에게 두 문제가 쉽게 납니다.
+대문에 매우 긴 종합 안내문만 붙이면 Codex에게 두 가지 문제가 쉽게 생깁니다.
 
 - 전부 보이지만 지금 어느 층을 지켜야 할지 모름
 - 한 패키지만 고치려다 다른 곳을 함께 건드림
@@ -81,7 +86,7 @@ monorepo 지침을 처음 쓸 때 모든 제약을 루트 `AGENTS.md`에 쑤셔 
 공유 타입은 `@acme/shared`에서 import하고, 복사·붙여넣지 않습니다.
 ```
 
-## 작업 prompt 협력
+## 작업 프롬프트와 함께 사용하기
 
 크로스 패키지 리팩터에서는 **경로를 명시**하세요.
 
@@ -118,7 +123,7 @@ Monorepo는 Cloud에서 **루트 설치를 빼먹거나** filter 오류로 자�
 2. 특정 디렉터리에만 성립하는가
 3. 잘못된 위치에 두면 Agent가 범위를 잘못 고칠 수 있는가
 
-1번에 가깝면 루트, 2·3번에 가깝면 서브패키지 쪽이 맞습니다.
+1번에 가까우면 루트, 2·3번에 가까우면 서브패키지 쪽이 맞습니다.
 
 ## 검증 체크리스트
 
@@ -127,10 +132,3 @@ Monorepo는 Cloud에서 **루트 설치를 빼먹거나** filter 오류로 자�
 - [ ] 크로스 패키지 작업은 prompt에 허용 경로를 명시
 
 Monorepo의 AGENTS.md는 무조건 한곳에 모을 필요가 없습니다. “전역 합의”와 “디렉터리 국소 규칙”을 각각 맞는 위치에 두는 편이 낫습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** 본 핸드북의 현재 `AGENTS.md`·파일 디렉터리 컨텍스트·Cloud 환경 장과 교차 확인했습니다. 내용은 monorepo 계층 설명의 예시 패턴과 명령 조직 방법으로 한정하며, 구체 제품 진입점이나 호스팅 구현을 고정 계약처럼 두지 않습니다.  
-**최근 검증:** 2026-07-26

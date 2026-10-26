@@ -2,21 +2,21 @@
 legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
-  basis: "Die aktuelle Codex-Laufzeit kann Skills mit Begleitdateien führen; diese Seite behandelt das stabile Muster Ausgabevorlagen und hängt nicht an Client-UI oder Installationsabläufen."
+  basis: "Die aktuelle Codex-Laufzeit unterstützt Anweisungen in Skills zur Nutzung mitgelieferter Dateien; diese Seite behandelt das stabile Muster Ausgabevorlagen und hängt nicht an Client-UI oder Installationsabläufen."
   checkedAt: "2026-07-26"
 title: Verzeichnis templates/
-description: Ausgabevorlagen und Report-Skelette im Skill bereitstellen.
+description: Ausgabevorlagen und Berichtsgerüste im Skill bereitstellen.
 locale: de
 source_locale: zh-CN
-source_revision: 82a9e01
+source_revision: "82a9e01"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 `templates/` spart nicht nur Layout-Zeit. Der praktische Nutzen: Skill-Ausgaben werden stabiler — ohne jedes Mal neu zu improvisieren.
 
-Während `references/` eher „was beim Input gilt“ betrifft, geht es bei `templates/` um „wie die Ausgabe aussieht“. Feste Struktur und leichte Nachprüfung gehören hierher.
+Während `references/` eher „welche Materialien bei der Bearbeitung herangezogen werden“ betrifft, geht es bei `templates/` um „wie die Ausgabe aussieht“. Feste Struktur und leichte Nachprüfung gehören hierher.
 
 
 `templates/` speichert Ausgabeformate, die der Skill wiederverwendet — z. B. Review-Report, Changelog-Skelett, Forschungs-Vergleichstabelle.

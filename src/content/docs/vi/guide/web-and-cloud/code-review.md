@@ -1,17 +1,18 @@
 ---
 legacyVerification:
   status: "verified"
-  products: "Cloud、GitHub"
+  products: "Cloud / GitHub"
   checkedAt: "2026-08-26"
 title: Đánh giá mã trên Cloud và GitHub
 description: Xem xét diff trên Cloud và dùng Codex trên GitHub để bổ sung một lượt đánh giá tập trung vào các vấn đề quan trọng.
 locale: vi
 source_locale: zh-CN
-source_revision: ea6796a
-translation_status: draft
+source_revision: "ea6796a"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 50
+reviewed_at: 2026-10-26
 ---
 
 Khi một tác vụ Cloud hoàn tất, bạn sẽ nhận được bản tóm tắt và diff. Bạn có thể hỏi tiếp, yêu cầu chỉnh sửa hoặc tạo PR. Việc hoàn tất tác vụ không đồng nghĩa với chấp thuận hợp nhất: quyết định cuối cùng vẫn phải dựa trên CI, quy tắc bảo vệ nhánh của dự án và đánh giá của con người.

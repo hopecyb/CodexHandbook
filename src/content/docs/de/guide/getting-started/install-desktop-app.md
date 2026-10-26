@@ -1,14 +1,19 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App"
+  basis: "Der aktuelle offizielle App-Schnellstart bietet ausdrücklich Downloads für macOS, Windows und Linux und verlangt nach der Anmeldung die Auswahl eines Chats, Projekts oder Ordners. Diese Seite schreibt keine veränderlichen Schaltflächenpositionen oder Paketnamen fest."
+  checkedAt: "2026-08-26"
 title: Desktop-App installieren
 description: Installiere die ChatGPT-Desktop-App und öffne darin den Codex-Arbeitsbereich.
 sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 974842f
+source_revision: "974842f"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Mit „Desktop-App“ bezeichnet dieses Handbuch den aktuellen **Codex-Arbeitsbereich in der ChatGPT-Desktop-App**. Offizielle Versionen sind für macOS, Windows und Linux verfügbar.
@@ -54,13 +59,3 @@ Prüfe zuerst, ob die aktuelle Aufgabe sie tatsächlich benötigt. Beim Öffnen 
 Die Desktop-App wird häufig aktualisiert. Als Erfolgskriterium gilt: Du kannst dich anmelden, den Arbeitsort auswählen, eine Aufgabe starten und das Ergebnis prüfen. Verlasse dich nicht auf die feste Position einer Schaltfläche.
 
 Eine ausführlichere Einführung bietet [Installation und erster Einsatz](/de/guide/desktop-app/installation-and-interface/). Bei Fehlern hilft die [Fehlersuche für die Desktop-App](/de/guide/desktop-app/troubleshooting/).
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** App
-
-**Prüfgrundlage:** Der aktuelle offizielle App-Schnellstart bietet ausdrücklich Downloads für macOS, Windows und Linux und verlangt nach der Anmeldung die Auswahl eines Chats, Projekts oder Ordners. Diese Seite schreibt keine veränderlichen Schaltflächenpositionen oder Paketnamen fest.
-
-**Zuletzt geprüft:** 2026-08-26

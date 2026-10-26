@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "O OpenAI Help *Skills in ChatGPT* confirma que Skills podem incluir instructions, supporting files e code, e que o usuário ainda precisa revisar origem e risco antes/depois do upload; as recomendações de governança desta página alinham-se a esse princípio."
+  checkedAt: "2026-07-26"
 title: Segurança e versões de Skills
-description: Origem da instalação, limites de Permissão, upgrade e rollback — Skills de equipe governáveis.
+description: Origem da instalação, limites de permissão, upgrade e rollback — Skills de equipe governáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: "a3c81ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Skill não é só mais um template de Prompt.
 
 Ele influencia como o Codex trabalha e, às vezes, traz scripts ou recursos extras.
 
-Por isso, com origem duvidosa, conteúdo sem revisão ou drift de versão, o risco não fica muito atrás do MCP. Esta página mostra como a equipe **escolhe, instala, atualiza e audita** Skills.
+Por isso, com origem duvidosa, conteúdo sem revisão ou divergência de versões, o risco não fica muito atrás do MCP. Esta página mostra como a equipe **escolhe, instala, atualiza e audita** Skills.
 
 ## Conteúdo
 
@@ -41,7 +46,7 @@ Base: [Visão geral de Skills](/pt/skills/overview/) · [Criar seu primeiro Skil
 | Risco | Manifestação |
 |---|---|
 | Skill malicioso | Induz vazamento de segredos, shell destrutivo |
-| Permissão excessiva | Lê/escreve caminhos que não deveria |
+| permissão excessiva | Lê/escreve caminhos que não deveria |
 | Cadeia de suprimentos | Dependência de repositório de Skills de terceiros adulterado |
 | Skill obsoleto | Incompatível com CLI novo, comportamento estranho |
 
@@ -58,7 +63,7 @@ Se duas das três ficarem sem resposta, não entre direto em projeto de produç�
 ## Princípios de instalação
 
 1. **Origem**: priorize marketplace oficial e Git interno da empresa; cuidado com gists anônimos
-2. **Leitura**: antes de instalar, abra `SKILL.md` e scripts anexos; veja se pedem Permissão estranha
+2. **Leitura**: antes de instalar, abra `SKILL.md` e scripts anexos; veja se pedem permissão estranha
 3. **Isolamento**: Skills de projeto de cliente e de experimento pessoal em diretórios separados
 4. **Uso mínimo**: se um Skill resolve, não empilhe dez
 
@@ -70,7 +75,7 @@ Como influencia workflow, escolha de ferramentas e execução de scripts, o risc
 
 ### 2. Se muita gente usa, pode ir direto para produção
 
-Usar em outro lugar não significa caber no seu repositório, nos seus limites de Permissão e nas regras da equipe.
+Usar em outro lugar não significa caber no seu repositório, nos seus limites de permissão e nas regras da equipe.
 
 ### 3. Atualizar Skill é como atualizar um documento
 
@@ -89,7 +94,7 @@ Plugin pode empacotar Skills para distribuição unificada: [Visão geral de Plu
 
 ## Hábitos de equipe
 
-Se um Skill for reutilizado por muita gente por muito tempo, não deixe em «alguém mandou um caminho no chat».  
+Se um Skill for reutilizado por muita gente por muito tempo, não deixe em «alguém mandou um caminho no chat».
 Melhor:
 
 - Origem fixa
@@ -112,14 +117,8 @@ Quando o usuário chama `$name` de forma explícita, a intenção é clara; quan
 
 - Instalar «Skill universal com um clique» por link de chat
 - `AGENTS.md` de produção apontando para Skill em caminho pessoal
-- Atualizar e não rodar Tarefa de smoke
+- Atualizar e não rodar tarefa de teste básico
 - Confiar no comportamento sem ler `SKILL.md`
 
 ## Fontes
 - Orientações de segurança OpenAI Codex Skills
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base da Verificação:** O OpenAI Help *Skills in ChatGPT* confirma que Skills podem incluir instructions, supporting files e code, e que o usuário ainda precisa revisar origem e risco antes/depois do upload; as recomendações de governança desta página alinham-se a esse princípio.  
-**Última Verificação:** 2026-07-26

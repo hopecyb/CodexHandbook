@@ -5,9 +5,14 @@ sidebar:
   order: 13
 locale: ko
 source_locale: zh-CN
-source_revision: 86fa0ac
-translation_status: draft
+source_revision: "86fa0ac"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 Codex Cloud는 격리된 클라우드 환경에서 코딩 작업을 실행합니다. 백그라운드의 긴 작업, 병렬 시도, GitHub·GitLab(Beta)·Linear·Slack에서 시작하는 작업에 적합합니다. 사용자 컴퓨터를 원격 제어하는 방식이 아니며, 로컬에서 아직 푸시하지 않은 파일도 자동으로 볼 수 없습니다.

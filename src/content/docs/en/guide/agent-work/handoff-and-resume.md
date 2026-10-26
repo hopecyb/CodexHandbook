@@ -4,14 +4,15 @@ legacyVerification:
   products: "App / CLI / IDE / Cloud"
   basis: "Cross-checked against current public OpenAI Developers guidance on long-running tasks, persistent goals, and Codex collaboration. This page keeps only the stable method that a handoff summary should help the next session continue; it does not treat a product-specific handoff button or workflow as a fixed rule."
   checkedAt: "2026-07-26"
-title: "Handoff and Resumption"
+title: "Handoff and resume"
 description: "Continue unfinished work across sessions."
 sidebar:
   order: 40
 locale: en
 source_locale: zh-CN
-source_revision: 1ee17e9
-translation_status: draft
+source_revision: '1ee17e9'
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
 ---
 This page addresses a common question:
@@ -28,7 +29,7 @@ Without a handoff, reopening the task can cause three problems:
 
 ## What a handoff preserves
 
-A handoff and resumption leave an instruction card for whoever continues the work. That “person” could be:
+Handoff and resume means leaving an instruction card for whoever continues the work. That “person” could be:
 
 - You a few hours later.
 - Another newly opened task.
@@ -74,7 +75,7 @@ That says almost nothing. Turn “finish it” into a specific action, such as:
 
 - Run `pnpm build`.
 - Continue writing `guide/verification.md`.
-- Check how the title image looks on `/guide/foundations/local-vs-cloud/`.
+- Check how the title image looks on `/en/guide/foundations/local-vs-cloud/`.
 
 ## Resume more reliably
 

@@ -3,15 +3,21 @@ title: Freigabe und Sandbox
 description: Freigabestrategien für Shell, Schreibzugriff und Netz in der CLI — und wie die Sandbox Agent-Verhalten begrenzt.
 locale: de
 source_locale: zh-CN
-source_revision: 35afd39
+source_revision: "35afd39"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: Aktuelle OpenAI-Help-Center-CLI-Einstiegsdokumentation unterscheidet weiterhin approval modes für Lesen/Schreiben, Befehlsausführung und Sandbox-/Netzgrenzen; diese Seite fokussiert Konzepte, Interaktion
+    und Risikounterschiede ohne feste Buttontexte oder Modusnamen als Fakten.
+  checkedAt: '2026-07-26'
 ---
 
-In der CLI kann der Agent **Dateien lesen und schreiben, Shell ausführen, ggf. netzwerken** — Freigabe und Sandbox sind das Sicherheitsventil zwischen dir und Automatisierung. Falsche Konfiguration: ständige Popups interaktiv, oder unkontrolliertes Risiko in unbeaufsichtigtem CI.
+In der CLI kann der Agent **Dateien lesen und schreiben, Shell-Befehle ausführen und gegebenenfalls auf das Netzwerk zugreifen** — Freigabe und Sandbox sind das Sicherheitsventil zwischen dir und Automatisierung. Falsche Konfiguration: ständige Popups interaktiv, oder unkontrolliertes Risiko in unbeaufsichtigtem CI.
 
 ## Inhalt dieser Seite
 
@@ -32,7 +38,7 @@ Grundlagen: [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and
 
 ## Wann Freigabe kommt
 
-Typische Auslöser (laut Produkt):
+Typische Auslöser (die tatsächlichen Regeln hängen vom Produkt ab):
 
 | Aktionstyp | Risiko | Default-Tendenz |
 |---|---|---|
@@ -77,7 +83,7 @@ Empfohlene CI-Prinzipien:
 
 ## Mit Allow/Deny-Regeln
 
-Projekte können in [Allow- und Deny-Regeln](/de/guide/customization/rules/allow-and-deny-patterns/) «erwartete Befehle» deklarieren. **Regeln müssen zum echten Produktverhalten passen** — sonst blockiert der Agent weiter oder wird zu weit.
+Projekte können in [Allow- und Deny-Regeln](/de/guide/customization/rules/allow-and-deny-patterns/) «erwartete Befehle» deklarieren. **Regeln müssen zum echten Produktverhalten passen** — sonst wird der Agent weiterhin blockiert oder erhält zu weitreichende Befugnisse.
 
 ## Häufige Fehler
 
@@ -110,9 +116,3 @@ Am Anfang CLI-Freigabe und Sandbox eher konservativ. Erst lockern, wenn du weiß
 
 ## Quellen
 - OpenAI-Codex-CLI-Sicherheits- und Sandbox-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI  
-**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-CLI-Einstiegsdokumentation unterscheidet weiterhin approval modes für Lesen/Schreiben, Befehlsausführung und Sandbox-/Netzgrenzen; diese Seite fokussiert Konzepte, Interaktion und Risikounterschiede ohne feste Buttontexte oder Modusnamen als Fakten.  
-**Zuletzt geprüft:** 2026-07-26

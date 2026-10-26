@@ -8,14 +8,14 @@ title: Plantilla de creación
 description: Implementar de cero una función, un texto o un artefacto.
 locale: es
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: 'c47ebbf'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 
-En tareas de creación desde cero, los dos problemas más fáciles son:
+En tareas de creación desde cero, los dos problemas más frecuentes son:
 
 - objetivo amplio sin límites
 - poca información, pero prisa por que Codex genere ya
@@ -31,7 +31,7 @@ Entradas: 【especificación, boceto, referencias @archivos】
 Restricciones:
 - modificar/crear solo dentro de 【alcance de rutas】
 - no introducir 【exclusiones】
-- operaciones de alto riesgo: ejecutar tras mi aprobación
+- ejecutar 【operaciones de alto riesgo】 solo después de mi aprobación
 Aceptación:
 - 【resultado observable 1】
 - 【resultado observable 2】
@@ -68,4 +68,4 @@ Lo peor en creación: empezar sin aclarar «qué» y «para quién».
 ## Relacionado
 
 - [Trabajo guiado por especificación](/es/cases/workflows/specification-driven-work/)
-- [Definir el terminado](/es/prompts/define-done/)
+- [Definir criterios de finalización](/es/prompts/define-done/)

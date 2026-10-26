@@ -3,11 +3,18 @@ title: Interaktiver Modus
 description: Im Terminal mit Codex sprechen und Aufgaben ausführen.
 locale: de
 source_locale: zh-CN
-source_revision: 822e8f7
-translation_status: draft
+source_revision: "822e8f7"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: "CLI"
+  basis: 'Aktuelle OpenAI-Help-Center-CLI-Einstiegsdokumentation beschreibt weiterhin: Codex im Terminal starten, im Gespräch ausführen, Operationen bei Bedarf freigeben; diese Seite skizziert nur die Grundform
+    und erste Tipps — ohne feste Shortcut-Listen.'
+  checkedAt: '2026-07-26'
+reviewed_at: 2026-10-26
 ---
 
 „Interaktiver Modus“ heißt: Du redest im Terminal hin und her mit Codex — es erklärt, führt aus und wartet bei Bedarf auf deine Bestätigung.
@@ -42,12 +49,12 @@ Wenn die Aufgabe so stabil ist, dass keine Rückfragen mehr nötig sind, ziehe d
 
 Nein.
 
-Der Einstieg ist Terminal — Aufgabenqualität bleibt gleich wichtig.  
+Auch im Terminal bleibt die Qualität der Aufgabenbeschreibung wichtig.
 Ziel, Einschränkungen und Fertigkriterien: je klarer, desto stabiler.
 
 ### 2. Warum „im Projektverzeichnis starten“ betonen?
 
-Weil die CLI wissen muss, in welchem Projekt sie arbeitet.  
+Weil die CLI wissen muss, in welchem Projekt sie arbeitet.
 Falsches Verzeichnis → oft:
 
 - relevante Dateien unsichtbar
@@ -66,11 +73,4 @@ Kleine erste Aufgabe:
 - nur eine Datei ändern
 - danach erklären lassen, was geändert wurde
 
-CLI-Interaktivmodus = dialogischer Aufgabenfluss im Terminal. Verzeichnis stimmen, Prompt klar halten.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** CLI  
-**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-CLI-Einstiegsdokumentation beschreibt weiterhin: Codex im Terminal starten, im Gespräch ausführen, Operationen bei Bedarf freigeben; diese Seite skizziert nur die Grundform und erste Tipps — ohne feste Shortcut-Listen.  
-**Zuletzt geprüft:** 2026-07-26
+Im interaktiven CLI-Modus erledigst du Aufgaben im Dialog. Achte auf das richtige Verzeichnis und einen klaren Prompt.

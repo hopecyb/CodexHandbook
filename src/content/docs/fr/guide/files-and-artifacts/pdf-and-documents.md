@@ -1,17 +1,22 @@
 ---
 title: PDF et documents
-description: Périmètre, outils et Vérification lorsque Codex lit, résume ou génère des PDF et longs documents.
+description: Périmètre, outils et vérification lorsque Codex lit, résume ou génère des PDF et longs documents.
 locale: fr
 source_locale: zh-CN
-source_revision: 1f4f82b
+source_revision: '1f4f82b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 'Recoupement avec les pages vérifiées contexte fichier/dossier, verify-artifacts, sensitive-context et gestion fichier/image ; principes stables : limiter le périmètre, surveiller erreurs OCR/mise en page, ouvrir et vérifier après génération.'
+  checkedAt: '2026-07-26'
 ---
 
-Les PDF sont courants pour specs, articles, scans et rapports exportés. Contrairement au texte brut, les PDF sont **structurellement complexes, volumineux et difficiles à diff** — ils nécessitent une conception de Tâche explicite.
+Les PDF sont courants pour specs, articles, scans et rapports exportés. Contrairement au texte brut, les PDF sont **structurellement complexes, volumineux et difficiles à comparer par diff** — ils nécessitent une conception de tâche explicite.
 
 La plupart des problèmes PDF : compréhension incomplète de la structure ou périmètre trop large.
 
@@ -19,7 +24,7 @@ La plupart des problèmes PDF : compréhension incomplète de la structure ou p�
 
 - Comment faire « lire » correctement le contenu PDF à l'Agent
 - Conventions de format et chemin lors de génération ou mise à jour de PDF
-- Vérification au-delà de « fichier existe »
+- vérification au-delà de « fichier existe »
 
 ## Pourquoi les PDF sont délicats
 
@@ -39,14 +44,14 @@ Un périmètre plus clair (« quelle section, quelle sortie ») signifie génér
 
 1. **Spécifier le chemin** : `docs/spec.pdf` ou référence @ (selon support client)
 2. **Indiquer l'objectif** : résumé, comparer un chapitre, extraire données de tableau
-3. **Page ou section** : limiter le périmètre sur longs docs pour sauver le Contexte
-4. **Contenu sensible** : contrats, scans d'ID — suivre [Contexte sensible](/fr/guide/context/sensitive-context/)
+3. **Page ou section** : limiter le périmètre sur longs docs pour économiser le contexte
+4. **Contenu sensible** : contrats, scans d'ID — suivre [contexte sensible](/fr/guide/context/sensitive-context/)
 
 ### Limites
 
 - PDF scannés peuvent nécessiter OCR ; vérifier ponctuellement les résultats
 - Mise en page complexe, colonnes, notes de bas de page peuvent perdre la structure
-- Ne pas entasser de gros PDF dans une Tâche — segmenter ou convertir en plan Markdown d'abord
+- Ne pas entasser de gros PDF dans une tâche — segmenter ou convertir en plan Markdown d'abord
 
 ## Idées reçues courantes
 
@@ -55,7 +60,7 @@ Un périmètre plus clair (« quelle section, quelle sortie ») signifie génér
 Pour PDF longs, complexes ou scannés :
 
 - Spécifier la plage
-- Spécifier la Tâche
+- Spécifier la tâche
 - Traiter par segments
 
 ### 2. PDF scannés vs texte diffèrent beaucoup
@@ -79,13 +84,13 @@ Vérifier aussi :
 | Imprimer depuis HTML | Mise en page simple |
 | Génération par bibliothèque (ex. reportlab) | Tickets, étiquettes programmatiques |
 
-Dans le Prompt spécifier :
+Dans le prompt spécifier :
 
 - Chemin et nom de fichier de sortie
 - Taille de page, langue, polices (PDF CJK en particulier)
 - S'il faut committer (gros binaires souvent artefact ou release)
 
-## Modèle de Prompt copier-coller
+## Modèle de prompt copier-coller
 
 ```text
 Lire uniquement les pages 12–18 de `docs/spec.pdf` et extraire les critères d'acceptation.
@@ -93,7 +98,7 @@ Ne pas résumer le document entier.
 Si OCR ou mise en page incertaine, le dire explicitement.
 ```
 
-## Politique repo
+## Politique du dépôt
 
 - Gros PDF : **Git LFS** ou hors repo
 - Quand le diff est illisible, vérifier par **ouverture du fichier** + [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/)
@@ -112,10 +117,3 @@ Si OCR ou mise en page incertaine, le dire explicitement.
 - [ ] Taille du repo et politique LFS respectent les normes d'équipe
 
 Pour les PDF, un périmètre plus étroit est plus stable. Après génération, ouvrir et confirmer le contenu — pas seulement la présence.
-
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Vérifié croisé avec les pages vérifiées Contexte fichier/dossier, verify-artifacts, sensitive-context et gestion fichier/image ; principes stables : limiter le périmètre, surveiller erreurs OCR/mise en page, ouvrir et vérifier après génération.  
-**Dernière vérification :** 2026-07-26

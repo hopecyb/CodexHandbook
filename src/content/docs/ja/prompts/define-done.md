@@ -3,10 +3,15 @@ title: 完了基準を定義する
 description: 検査可能な完了条件を書く。
 locale: ja
 source_locale: zh-CN
-source_revision: e97e854
+source_revision: "e97e854"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  basis: "本ページは受け入れと完了基準の書き方のみを説明。サイト内リンクを再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  checkedAt: '2026-07-26'
 ---
 
 「何が欲しいか」は言うのに「どこまでできたら完了か」を書かない人が多く、終わったかどうかは感覚頼みになります。
@@ -51,7 +56,7 @@ reviewed_at: 2026-08-26
 
 ## よく使う書き方
 
-書き方に迷ったら、次の3類から選べます。
+書き方に迷ったら、次の3種類から選べます。
 
 - **機能チェック**：挙動が期待どおりか
 - **技術チェック**：ビルド／テスト／lint が通るか
@@ -77,10 +82,3 @@ reviewed_at: 2026-08-26
 要するに、「完了したか」を推測頼みにしないことです。
 
 検証コマンドを基準に書くと、Agent が自ら実行しやすくなります：[テストの実行](/ja/guide/quality/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは受け入れと完了基準の書き方のみを説明。サイト内リンクを再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。

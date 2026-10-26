@@ -12,9 +12,10 @@ verification:
       href: https://learn.chatgpt.com/docs/agent-approvals-security
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: f60dbb5
+source_revision: 'f60dbb5'
 ---
 
 Approval should correspond to a specific action and its effects. Task authorization describes what the user wants completed; tool approval determines whether an action can run in the current environment. Writing a file, running a command, or accessing the network does not inherently require asking every time. Actual behavior depends on the authorized scope, tool policy, and sandbox together. See the [official guidance](https://learn.chatgpt.com/docs/agent-approvals-security).

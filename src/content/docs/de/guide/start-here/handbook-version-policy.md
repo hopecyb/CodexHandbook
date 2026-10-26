@@ -1,10 +1,16 @@
 ---
-title: Versionsstrategie des Handbooks
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Mit dem im Handbuch verwendeten System aus sechs Statuswerten, den Regeln für Prüfhinweise und dem Vorrang offizieller Quellen abgeglichen. Diese Seite erläutert die Versionsstrategie und Lesemethode der Website; sie hängt nicht von Parametern einer bestimmten Produktversion ab."
+  checkedAt: "2026-07-26"
+title: Versionsstrategie des Handbuchs
 description: "Erklärt Inhaltsstatus, Prüfdatum und wie laufende Updates funktionieren."
 locale: de
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 8
@@ -12,13 +18,13 @@ sidebar:
 
 ## Laufende Aktualisierung
 
-Dieses Handbook bleibt nicht dauerhaft an eine einzige Codex-Versionsnummer gebunden. Das Produkt ändert sich. Deshalb erläutern Seiten mit Status, Prüfdatum und konkreten Belegen, was geprüft wurde. Das Datum allein ist keine Bewertung der Verlässlichkeit.
+Dieses Handbuch bleibt nicht dauerhaft an eine einzige Codex-Versionsnummer gebunden. Das Produkt ändert sich. Deshalb erläutern Seiten mit Status, Prüfdatum und konkreten Belegen, was geprüft wurde. Das Datum allein ist keine Bewertung der Verlässlichkeit.
 
 ## Inhalt
 
-- Warum dieses Handbook nicht von ewiger Unveränderlichkeit ausgehen kann
+- Warum dieses Handbuch nicht von ewiger Unveränderlichkeit ausgehen kann
 - Wie du Status und Prüfdatum am Seitenanfang liest
-- Wem du glaubst, wenn Handbook und Offizielles kollidieren
+- Wem du glaubst, wenn Handbuch und Offizielles kollidieren
 
 ## Seitenstatus
 
@@ -52,7 +58,7 @@ Produktverhalten richtet sich nach der OpenAI-Dokumentation: [https://developers
 
 ## Häufige Missverständnisse
 
-### 1. „Steht im Handbook“ heißt nicht „ändert sich nie“
+### 1. „Steht im Handbuch“ heißt nicht „ändert sich nie“
 
 Besonders anfällig für Änderungen:
 
@@ -65,11 +71,11 @@ Besonders anfällig für Änderungen:
 
 `review` bedeutet: Der Hauptinhalt steht, ist aber noch nicht auf der höchsten Bestätigungsstufe — du darfst ihn trotzdem als Referenz nutzen.
 
-### 3. Bei Konflikt zwischen Community-Handbook und Offiziellem nicht „halb und halb“ glauben
+### 3. Bei Konflikt zwischen Community-Handbuch und Offiziellem nicht „halb und halb“ glauben
 
 So aufteilen:
 
-- Verständnis und Pfaderklärung → Handbook
+- Verständnis und Pfaderklärung → Handbuch
 - Aktuelles Verhalten und Parameter → Offizielles
 
 ## Wie du einschätzt, ob eine Seite verlässlich ist

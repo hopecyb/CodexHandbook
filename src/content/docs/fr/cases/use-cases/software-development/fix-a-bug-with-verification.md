@@ -12,9 +12,10 @@ title: "Cas pratique : corriger un bug avec vérification"
 description: Utilisez un bug exécutable de calcul de remise pour reproduire le rouge, localiser la cause racine, effectuer la correction minimale, vérifier le vert, lancer la régression et réviser le diff.
 locale: fr
 source_locale: zh-CN
-source_revision: 42d842e
-translation_status: draft
+source_revision: '42d842e'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Il ne s'agit pas d'un modèle de prompt dans lequel il suffirait de remplacer des noms de fichiers. Vous allez exécuter un véritable code de départ, observer l'échec d'un test, puis examiner comment la correction de référence fait réussir la même suite.
@@ -72,6 +73,8 @@ examples/complete-workflows/developer/verified-bug-fix/
 `starter/` contient volontairement le bug ; `solution/` est une référence exécutable indépendante. Ne vous exercez pas directement sur la solution.
 
 ## 3. Reproduire le rouge
+
+Exécutez cette commande à la racine du dépôt :
 
 ```bash
 node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
@@ -154,7 +157,7 @@ Cet exercice ne contient qu'une suite. Dans un dépôt réel, exécutez égaleme
 ## 7. Réviser
 
 ```text
-Révise cette correction sans modifier de fichier. Commence par les constats :
+Révise cette correction sans modifier de fichier. Commence par les constats, puis donne une conclusion :
 - Convertit-elle réellement le pourcentage au lieu d'affaiblir les tests ?
 - Modifie-t-elle la signature ou une logique sans rapport ?
 - Le panier vide, l'absence de remise et la remise de 10 % sont-ils couverts ?
@@ -171,7 +174,7 @@ Vérifiez également qu'aucune dépendance, aucun journal de débogage, aucun fo
 | Le vert apparaît après modification du test | Restaurer l'assertion ; modifier uniquement la conversion du pourcentage |
 | Le test concerné échoue encore | Comparer les valeurs et l'emplacement de `/ 100` |
 | La suite complète présente de nouveaux échecs | Revenir à la cause racine, au comportement public et au périmètre |
-| Le test est flaky | Stabiliser l'environnement ; une seule exécution verte ne constitue pas une preuve |
+| Le test échoue de manière intermittente | Stabiliser l'environnement ; une seule exécution verte ne constitue pas une preuve |
 
 ## 9. Transposer le flux dans un dépôt réel
 
@@ -182,8 +185,8 @@ Périmètre : uniquement [implémentation] et tests nécessaires ; aucun refacto
 ni mise à niveau.
 Acceptation : tests initial et de limites réussis ; [commande complète] réussie ;
 diff sans modification étrangère.
-Autorisations : aucun push, aucune publication, aucune donnée de production ;
-s'arrêter avant tout accès supplémentaire.
+Autorisations : aucun push, aucune publication, aucune modification des données de production ;
+s'arrêter et expliquer le besoin avant de demander des autorisations supplémentaires.
 Localiser la cause racine et les risques en lecture seule ; attendre l'approbation
 du plan avant de modifier.
 ```

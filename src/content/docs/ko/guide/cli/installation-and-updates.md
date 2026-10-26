@@ -3,12 +3,17 @@ title: CLI 설치와 업데이트
 description: 설치, 업그레이드, 버전 확인.
 locale: ko
 source_locale: zh-CN
-source_revision: be3f2c4
+source_revision: 'be3f2c4'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 10
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI
+  basis: 현재 공식 CLI 빠른 시작 문서를 대조해 macOS/Linux, Windows, npm, Homebrew 설치 방식, 업데이트 경로, `codex` 로그인 절차를 확인했습니다. 구체적인 명령은 초보자용 설치 페이지에서 모아 관리합니다.
+  checkedAt: '2026-08-26'
 ---
 
 CLI를 처음 설치할 때 많은 사람이 여기서 막힙니다.
@@ -56,11 +61,4 @@ CLI 설치 완료는 명령을 한 번 실행한 것으로 끝나지 않습니�
 더 실질적인 기준은: 현재 터미널이 찾고, 인증까지 마친 상태입니다.
 
 대조: [CLI 설치](/ko/guide/getting-started/install-cli/)
-공식 설치·업그레이드 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
-
----
-
-**상태:** outdated  
-**적용 제품:** CLI  
-**재검토 설명:** 이 페이지는 설치 후 점검 생각을 다루지만, 본문은 특정 현행 설치·업데이트·인증 흐름을 전제로 합니다. 공식 CLI 설치 방식·인증 단계·버전 확인 명령은 변동이 큰 세부이며, 최신 공식 설치 문서가 보강되기 전에는 `verified`로 두기 어렵습니다.  
-**최근 검증:** 2026-07-26
+공식 설치·업그레이드 설명은 [Codex CLI](https://learn.chatgpt.com/docs/codex/cli)를 보세요. macOS/Linux 공식 독립 설치 프로그램은 설치와 업데이트에 같은 명령을 사용합니다. Windows, npm, Homebrew 방식은 공식 페이지의 해당 탭을 기준으로 하세요.

@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur Abnahme- und Fertigstellungsstandards; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab."
+  checkedAt: "2026-07-26"
 title: Fertigstellungsstandard definieren
 description: Prüfbare Fertigstellungsbedingungen formulieren.
 locale: de
 source_locale: zh-CN
-source_revision: e97e854
+source_revision: "e97e854"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Viele nennen „was ich will“, aber nicht „wann es fertig genug ist“. Ob wirklich fertig, bleibt dann Gefühlssache.
@@ -26,7 +31,7 @@ Oft vermischen sich Ziel und Fertigstellungsstandard.
 - **Fertigstellungsstandard**: wie du bestätigst, dass es erreicht ist
 
 „Diesen Bug fixen“ ist Ziel;  
-„Fix stabil reproduzierbar, relevante Tests grün, keine neuen Console-Errors“ ist näher am Fertigstellungsstandard.
+„Fix stabil reproduzierbar, relevante Tests grün, keine neuen Konsolenfehler“ ist näher am Fertigstellungsstandard.
 
 ## Häufige Irrtümer
 
@@ -63,7 +68,7 @@ Zum Beispiel:
 Abnahmekriterien:
 - Nur Docs-Homepage-Text, kein Layout/keine Komponenten
 - `pnpm build` bestanden
-- First-Screen für Einsteiger; setzt keine Fachbegriffe voraus
+- Text im ersten sichtbaren Bereich für Einsteiger verständlich; setzt keine Kenntnis von Fachbegriffen voraus
 ```
 
 ## Prüffrage
@@ -77,10 +82,3 @@ Wenn nicht, ist es meist noch zu vage.
 Kurz: „fertig?“ darf kein Rätselraten sein.
 
 Schreib Verifikationsbefehle in den Standard — dann führt der Agent sie eher aus: [Tests ausführen](/de/guide/quality/)
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Abnahme- und Fertigstellungsstandards; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26

@@ -3,9 +3,10 @@ title: Índice de eventos y temas
 description: Explora temas de ingeniería de aplicaciones de IA mediante eventos fechados sin tomar su publicación como origen de los conceptos.
 locale: es
 source_locale: zh-CN
-source_revision: 847b43b
-translation_status: draft
+source_revision: "847b43b"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-25
 ---
 
 Este mapa separa los eventos públicos verificables de las recomendaciones de aprendizaje. **Cada fecha se refiere únicamente al artículo, anuncio o trabajo académico de su fila; no señala automáticamente el nacimiento de un concepto, su adopción en el sector ni la madurez de una capacidad.** Se pueden usar distintas técnicas a la vez y el orden cronológico no impone una secuencia de aprendizaje o actualización.

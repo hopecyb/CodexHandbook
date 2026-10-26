@@ -3,12 +3,17 @@ title: Recursos oficiales
 description: Enlaces a documentación y entradas oficiales de OpenAI / Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 5a584b0
+source_revision: '5a584b0'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-25'
 sidebar:
   order: 120
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Esta página solo aclara la prioridad de recursos oficiales y cómo usar las entradas; se comprobó que la entrada principal de documentación oficial de OpenAI sigue disponible, y el cuerpo no conserva pasos de operación granulares fáciles de quedar obsoletos.
+  checkedAt: '2026-07-26'
 ---
 
 Este manual es una guía comunitaria de código abierto. Comportamiento del producto, paquetes de instalación y planes los marca lo oficial:
@@ -19,7 +24,7 @@ Este manual es una guía comunitaria de código abierto. Comportamiento del prod
 La documentación oficial y este manual tienen roles distintos:
 
 - Este manual explica conceptos y enfoques de uso
-- La documentación oficial confirma la versión actual y la redacción más reciente
+- La documentación oficial confirma la versión actual y la sintaxis o las instrucciones vigentes
 
 Si cambia una URL oficial, prevalece la navegación del sitio de OpenAI; se agradece un PR para actualizar esta página.
 
@@ -29,7 +34,7 @@ Ante estas preguntas, vuelve directamente a la documentación oficial:
 
 - Instalación e inicio de sesión
 - Si la función actual está soportada
-- Redacción más reciente de claves de configuración o comandos
+- Sintaxis vigente de claves de configuración o comandos
 - Cambios de plan, Permisos y comportamiento del producto
 
 ## Malentendidos frecuentes
@@ -69,14 +74,7 @@ Estas, más fiable lo oficial:
 ## Si no tienes claro a qué mirar primero
 
 1. Usa el manual para entender conceptos y dirección
-2. Antes de configurar, instalar o ejecutar de verdad, confirma la redacción más reciente en lo oficial
+2. Antes de configurar, instalar o ejecutar de verdad, confirma la sintaxis o las instrucciones vigentes en lo oficial
 3. Si chocan, prevalece lo oficial
 
-Así la dirección queda más clara y pisas menos información caducada.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo aclara la prioridad de recursos oficiales y cómo usar las entradas; se comprobó que la entrada principal de documentación oficial de OpenAI sigue disponible, y el cuerpo no conserva pasos de operación granulares fáciles de quedar obsoletos.  
-**Última verificación:** 2026-07-26
+Así la dirección queda más clara y reduces el riesgo de usar información obsoleta.

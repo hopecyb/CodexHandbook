@@ -3,12 +3,17 @@ title: このハンドブックは誰向けか
 description: 初心者、クリエイター、開発者、チームがこのハンドブックをどう使うかを説明。
 locale: ja
 source_locale: zh-CN
-source_revision: 95272c3
+source_revision: "95272c3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 sidebar:
   order: 3
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ページはハンドブックの対象読者と利用シーンのみを説明。サイト内リンクと読者分類の表現を再確認済み。本文は変わりやすい製品事実に依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 このハンドブックは、Codex を本格的に使い始める人向けに書かれています。
@@ -40,7 +45,7 @@ sidebar:
 - もともとコンテンツクリエイターだが、サイト修正も Codex に任せ始めた
 - チームリーダーが個人として先に試用する
 
-したがって、この 4 分類は排他的な身分ではなく、**利用シーン** に近いです。
+したがって、この 4 分類は互いに排他的な分類ではなく、**利用シーン** に近いです。
 
 ## 主な対象読者
 
@@ -90,10 +95,3 @@ sidebar:
 - 開発出身ではないが、AI を日常業務に本当に接続したい
 
 次のステップ：[パスを選ぶ](/ja/guide/start-here/choose-your-path/)。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** 本ページはハンドブックの対象読者と利用シーンのみを説明。サイト内リンクと読者分類の表現を再確認済み。本文は変わりやすい製品事実に依存しない。  
-**最終検証：** 2026-07-26

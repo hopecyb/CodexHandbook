@@ -10,15 +10,16 @@ verification:
   evidence:
     - label: "Descripción del proyecto Dream Skin"
       href: https://github.com/Fei-Away/Codex-Dream-Skin
-    - label: "Instrucciones de instalación y retirada en macOS"
+    - label: "Instrucciones de instalación y desinstalación en macOS"
       href: https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md
     - label: "Paquetes publicados e historial de versiones"
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: "4ecfa1c"
+source_revision: '4ecfa1c'
+reviewed_at: 2026-10-25
 ---
 
 Codex Dream Skin es un tema de escritorio de terceros. Su documentación dice que inyecta cambios visuales mediante una conexión CDP local sin modificar el paquete oficial. Es la descripción del proyecto; este manual no ha verificado el comportamiento de archivos y red ni la compatibilidad de la interfaz en todas las versiones.
@@ -34,7 +35,7 @@ La ilustración ya alojada aquí no es una prueba de esta revisión de versión.
 | Fuente | [Repositorio del proyecto](https://github.com/Fei-Away/Codex-Dream-Skin) y [versiones publicadas](https://github.com/Fei-Away/Codex-Dream-Skin/releases) |
 | Versión observada | [v1.5.18](https://github.com/Fei-Away/Codex-Dream-Skin/releases/tag/v1.5.18), comprobada el 18-09-2026, commit `34335d27d54300eccb325cc652f6c93fef428b84`; no instalada |
 | Cliente local | Info.plist leído sin modificar: 26.911.61220, build 9647, identificador com.openai.codex |
-| Combinación tema/cliente probada | Ninguna; instalación, interacciones y retirada no probadas |
+| Combinación tema/cliente probada | Ninguna; instalación, interacciones y desinstalación no probadas |
 | Compatibilidad con Windows | No probada por este manual |
 | Resultado de recuperación | No probado; a continuación hay pasos y criterios de aceptación |
 
@@ -47,7 +48,7 @@ Leer la versión del cliente aporta información del entorno, no prueba la compa
 1. Elige una versión concreta en las publicaciones del proyecto. Anota nombre del paquete, URL de descarga y SHA-256. Si el autor proporciona un archivo de sumas, compáralo con el paquete. Un hash coincidente prueba que los archivos coinciden, no que el programa sea seguro.
 2. Guarda las versiones del cliente y del sistema, la configuración del tema y copias de imágenes personalizadas que tengas derecho a usar. Anota dónde se encuentra la copia de seguridad.
 3. Comprueba primero la pantalla de inicio, las tareas, la entrada, el desplazamiento, la búsqueda y la interfaz de aprobaciones sin tema como referencia.
-4. Lee las instrucciones de instalación, actualización y retirada correspondientes a la versión elegida. La documentación de la rama main puede ser más reciente que el instalador.
+4. Lee las instrucciones de instalación, actualización y desinstalación correspondientes a la versión elegida. La documentación de la rama main puede ser más reciente que el instalador.
 
 En macOS, consulta la [guía de instalación del proyecto](https://github.com/Fei-Away/Codex-Dream-Skin/blob/v1.5.18/docs/install-macos.md); en Windows, la [guía para Windows](https://github.com/Fei-Away/Codex-Dream-Skin/blob/main/docs/install-windows.md). No atribuyas por defecto un aviso de «dañado» o un bloqueo del sistema a la falta de firma. Comprueba fuente, integridad del paquete y error concreto antes de seguir.
 

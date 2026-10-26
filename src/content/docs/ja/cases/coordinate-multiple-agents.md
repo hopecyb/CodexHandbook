@@ -11,10 +11,10 @@ title: 複数 Agent の調整
 description: 並列探索、分担実行、結果のマージ——協働ケース。
 locale: ja
 source_locale: zh-CN
-source_revision: 7b143fc
+source_revision: "7b143fc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 

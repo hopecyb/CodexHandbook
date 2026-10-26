@@ -23,7 +23,7 @@
   <rect x="42" y="34" width="816" height="132" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
   <text x="72" y="86" class="title">Roteiro de engenharia de aplicações de IA</text>
   <text x="72" y="122" class="subtitle">Do mais recente ao mais antigo. As datas são das fontes da tabela, não da origem do conceito.</text>
-  <text x="72" y="148" class="subtitle">Leitura vertical: ambiente e reuso → colaboração → protocolo → entrada → ancoragem.</text>
+  <text x="72" y="148" class="subtitle">Leitura vertical: ambiente e reuso → execução conjunta → protocolo de ferramentas → controle de entrada → ancoragem.</text>
 
   <line x1="224" y1="218" x2="224" y2="1398" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-main)"/>
 
@@ -63,7 +63,7 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Skills (habilidades)</text>
     <text x="28" y="55" class="node-date">2025-10-16 · Unidades de fluxo reutilizáveis</text>
-    <text x="28" y="78" class="node-body">Empacotar prompts, etapas, exemplos, scripts e recursos para reutilizar experiência.</text>
+    <text x="28" y="78" class="node-body">Prompts, etapas, exemplos, scripts e recursos: reúso consistente pela IA em tarefas recorrentes.</text>
   </g>
   <g transform="translate(240 470)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -91,14 +91,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP (protocolo de contexto de modelo)</text>
     <text x="28" y="55" class="node-date">2024-11-25 · Protocolo de ferramentas</text>
-    <text x="28" y="78" class="node-body">Expor ferramentas, recursos, prompts e contexto como protocolo, sem integrações avulsas.</text>
+    <text x="28" y="78" class="node-body">Expor ferramentas, recursos, prompts e contexto por protocolo, reduzindo custos de integrações avulsas.</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Function Calling (chamadas de função)</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Ações estruturadas</text>
-    <text x="28" y="78" class="node-body">O modelo não só gera texto: chama funções, APIs e ações de negócio.</text>
+    <text x="28" y="78" class="node-body">Além de texto, chamar funções, APIs e ações de negócio com parâmetros interpretáveis.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -112,6 +112,6 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#f97316"/>
     <text x="28" y="32" class="node-title">RAG (geração aumentada por recuperação)</text>
     <text x="28" y="55" class="node-date">2020-05-22 · Ancoragem em conhecimento</text>
-    <text x="28" y="78" class="node-body">Trazer fontes externas ao contexto para reduzir alucinações e rastrear respostas.</text>
+    <text x="28" y="78" class="node-body">Buscar fontes externas no contexto, reduzir alucinações e vincular respostas a fontes rastreáveis.</text>
   </g>
 </svg>

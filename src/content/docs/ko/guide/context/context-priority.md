@@ -19,9 +19,10 @@ sidebar:
   order: 40
 locale: ko
 source_locale: zh-CN
-source_revision: "13537ef"
-translation_status: draft
+source_revision: '13537ef'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 '어느 지시를 따를까?'라는 질문에서는 먼저 세 가지를 구분하세요. 메시지가 어떤 역할로 전달됐는지, 프로젝트 파일이 어떻게 로드됐는지, 실행 환경에서 무엇이 허용되는지입니다. '가장 최근 문장이 항상 우선'은 일반 법칙이 아닙니다. '금지'라는 단어가 들어 있다고 해서 불변의 시스템 권한이 되는 것도 아닙니다.

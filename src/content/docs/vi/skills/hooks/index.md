@@ -1,11 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Môi trường sử dụng Codex host cục bộ; việc xét duyệt độ tin cậy và quản lý bằng `/hooks` tuân theo tài liệu chính thức của Codex CLI"
+  checkedAt: "2026-08-25"
 title: Hooks
 description: Chạy script hoặc công cụ MCP tại các mốc trong vòng đời Codex để kiểm tra, ghi nhận và áp dụng quy tắc.
 locale: vi
 source_locale: zh-CN
-source_revision: a0312e9
-translation_status: draft
+source_revision: "a0312e9"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Hook là bộ xử lý tự động trong vòng đời của Codex. Nó có thể chạy script hoặc công cụ MCP khi phiên bắt đầu, prompt được gửi, trước hoặc sau khi gọi công cụ, lúc nén ngữ cảnh, khi Agent con dừng hoặc khi luồng chính kết thúc.

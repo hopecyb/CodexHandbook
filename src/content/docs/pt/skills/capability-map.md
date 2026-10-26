@@ -8,9 +8,10 @@ title: "Mapa das capacidades de extensão"
 description: "Entenda o sistema de extensões do Codex por oito responsabilidades: tarefa, regras, processo, ferramentas, proteção, distribuição, acionamento e trabalho paralelo."
 locale: pt
 source_locale: zh-CN
-source_revision: 183812c
-translation_status: draft
+source_revision: "183812c"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 É fácil confundir os mecanismos de extensão porque eles costumam aparecer no mesmo fluxo de trabalho, embora resolvam tipos diferentes de problema.
@@ -31,10 +32,10 @@ Ao ler o diagrama, observe três pontos:
 
 | Responsabilidade | Mecanismo | Mais adequado para | Não se encarrega de |
 |---|---|---|---|
-| Tarefa atual | Prompt | Definir o que fazer agora, o escopo e a aceitação | Regras permanentes do projeto |
+| tarefa atual | Prompt | Definir o que fazer agora, o escopo e a aceitação | Regras permanentes do projeto |
 | Regras persistentes | `AGENTS.md` | Comandos do repositório, convenções e limites de diretórios | Todas as etapas de uma classe de tarefas |
 | Processo reutilizável | Skill | Etapas estáveis, referências, modelos e scripts auxiliares | Obter, por si só, permissão para sistemas externos |
-| Ferramentas externas | MCP / Connector | Permitir que o Codex acesse dados e execute ações fora do repositório | Decidir se o objetivo de negócio está correto |
+| ferramentas externas | MCP / Connector | Permitir que o Codex acesse dados e execute ações fora do repositório | Decidir se o objetivo de negócio está correto |
 | Proteção no ciclo de vida | Hook | Registrar, verificar, acrescentar contexto ou bloquear antes e depois de eventos da sessão ou chamadas de ferramenta | Substituir testes e revisão humana |
 | Composição e distribuição | Plugin | Empacotar Skills, conectores, MCP, Hooks e modelos de tarefa | Tornar todos os componentes automaticamente confiáveis |
 | Acionamento por tempo | Scheduled task | Executar periodicamente uma tarefa já verificada | Substituir prompts claros e condições de parada |
@@ -74,7 +75,7 @@ Use a sequência abaixo para decidir se vale a pena consolidar o processo:
 | Modelo | Estrutura fixa de “objetivo, contexto, restrições e aceitação” | A classe de tarefa se repete, mas as etapas ainda estão mudando |
 | Skill | `SKILL.md` com modelos, referências ou scripts | O processo está estável e os critérios de sucesso estão claros |
 | Plugin | Pacote que combina Skills, conectores, MCP, Hooks e modelos | É preciso padronizar instalação, atualizações e governança |
-| Scheduled task | Tarefa salva, regra de horário e histórico de execuções | O trabalho já foi verificado manualmente e vale a pena repeti-lo periodicamente |
+| Scheduled task | tarefa salva, regra de horário e histórico de execuções | O trabalho já foi verificado manualmente e vale a pena repeti-lo periodicamente |
 
 MCP, Hooks e subagents não são etapas obrigatórias dessa sequência. Adicione-os apenas quando a tarefa realmente exigir ferramentas externas, proteção em pontos do ciclo de vida ou divisão paralela do trabalho.
 

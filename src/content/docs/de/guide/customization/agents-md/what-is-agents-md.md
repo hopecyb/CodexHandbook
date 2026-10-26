@@ -3,12 +3,18 @@ title: Was ist AGENTS.md
 description: "Persistente Projektanweisungsdatei — der «Kollaborationsvertrag» für Codex, keine Architektur-Enzyklopädie."
 locale: de
 source_locale: zh-CN
-source_revision: 47c5866
+source_revision: "47c5866"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Projektkontext, Aufgabengrenzen und Freigabe/Sandbox; Inhalt beschränkt auf Zweck, Grenzen und gängige Schreibweisen von `AGENTS.md`, ohne
+    unbestätigte Zwangsprioritätsdetails.
+  checkedAt: '2026-07-26'
 ---
 
 `AGENTS.md` ist eine **Markdown-Projektanweisung** im Repo (oder Unterverzeichnis). Codex liest sie beim Betreten des Projekts, um Coding-Stil, Testanforderungen, Commit-Normen und Tabuzonen auszurichten.
@@ -54,7 +60,7 @@ Im Repo-Root `AGENTS.md` anlegen:
 ## Definition of Done
 - Relevante Tests grün
 - Keine neuen Lint-Fehler
-- Im PR-Beschreibung Verifikationsschritte nennen
+- In der PR-Beschreibung Verifikationsschritte nennen
 ```
 
 Danach in neuen Aufgaben nur die **Differenz dieser Runde** schreiben, z. B.: „Layout-Bug der Login-Seite unter Safari beheben, Abnahme nach AGENTS.md.“
@@ -63,7 +69,7 @@ Danach in neuen Aufgaben nur die **Differenz dieser Runde** schreiben, z. B.: �
 
 ### 1. Muss ich diese Regeln jedes Mal manuell wiederholen?
 
-Meist nicht.  
+Meist nicht.
 Genau das leistet `AGENTS.md`: **stabile Projektregeln** ablegen, damit neue Aufgaben sie nicht erneut erklären müssen.
 
 ### 2. Heißt „geschrieben“ automatisch „Codex macht es zu 100 %“?
@@ -78,7 +84,7 @@ Es hilft beim Ausrichten — es ist kein Allzweck-Zwangsmittel.
 
 ### 3. Muss ich das als Nicht-Entwickler kennen?
 
-Das Grundkonzept ja.  
+Das Grundkonzept ja.
 Auch ohne selbst zu coden: Solange Codex dauerhaft an einem Projekt arbeitet, reduziert `AGENTS.md` Wiederholung und Drift.
 
 ## Wohin legen
@@ -129,9 +135,3 @@ Beispiele:
 
 ## Quellen
 - OpenAI-Codex: Projektkontext
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Projektkontext, Aufgabengrenzen und Freigabe/Sandbox; Inhalt beschränkt auf Zweck, Grenzen und gängige Schreibweisen von `AGENTS.md`, ohne unbestätigte Zwangsprioritätsdetails.  
-**Zuletzt geprüft:** 2026-07-26

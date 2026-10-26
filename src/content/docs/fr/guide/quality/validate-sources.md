@@ -8,13 +8,13 @@ title: Vérifier les sources
 description: Exiger des preuves traçables pour les conclusions de recherche.
 locale: fr
 source_locale: zh-CN
-source_revision: '6884531'
-translation_status: draft
+source_revision: "6884531"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 40
+reviewed_at: '2026-10-26'
 ---
-
 Dès qu'une conclusion dépend de faits externes, demandez les sources en même temps que la conclusion.
 
 Demandez à l'agent :

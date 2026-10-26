@@ -1,13 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Solución de problemas de Cloud
 description: Localiza los fallos de Cloud en las capas de repositorio, setup, red, Agent y entrega.
 locale: es
 source_locale: zh-CN
-source_revision: 019fac1
-translation_status: draft
+source_revision: '019fac1'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 80
+reviewed_at: 2026-10-25
 ---
 
 Reintentar una tarea Cloud consume tiempo de nuevo, pero no soluciona por sí solo los permisos, las dependencias o la configuración de red que faltan. Primero identifica en qué etapa ocurre el fallo.

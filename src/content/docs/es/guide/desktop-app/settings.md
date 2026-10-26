@@ -7,13 +7,13 @@ title: Configuración
 description: Ajusta el comportamiento diario, los atajos de teclado, las notificaciones y la apariencia de la aplicación de escritorio.
 locale: es
 source_locale: zh-CN
-source_revision: 7a6d2fe
-translation_status: draft
+source_revision: "7a6d2fe"
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 90
+reviewed_at: 2026-10-25
 ---
-
 La página de configuración permite personalizar el comportamiento de la aplicación, pero no reúne todos los permisos de Codex. Mantén primero los valores predeterminados y modifica cada opción solo cuando entiendas su alcance.
 
 En macOS, pulsa `Cmd + ,`; en Windows, `Ctrl + ,`. También puedes abrir Settings desde el menú de la aplicación.

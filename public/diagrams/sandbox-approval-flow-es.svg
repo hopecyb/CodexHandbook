@@ -1,6 +1,6 @@
 <svg lang="es" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
   <title id="title">Flujo de sandbox Codex y decisión de aprobación</title>
-  <desc id="desc">Codex propone una acción y comprueba el sandbox. Las acciones dentro del alcance se ejecutan con evidencia; las que quedan fuera solicitan una decisión humana. La denegación acota o explica; la aprobación permite solo la acción indicada. Ambas rutas terminan en verificación.</desc>
+  <desc id="desc">Codex propone una acción y comprueba si está dentro del sandbox. Dentro del alcance, la ejecuta y deja evidencia; fuera, sigue la política de aprobación para solicitar una decisión humana. Si se deniega, acota la acción o explica el bloqueo; si se aprueba, ejecuta solo lo autorizado. Ambas rutas terminan en verificación.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }

@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: "6c758b9"
+reviewed_at: "2026-10-26"
 ---
 
 검사를 반복한다고 매번 알림을 보내야 하는 것은 아닙니다. 이 Skill은 [링크 검사 사례](/ko/cases/use-cases/team-automation/scheduled-link-check/)를 재사용해 변경, 복구, 실행 오류를 기록합니다. 결과가 같으면 조용히 유지합니다.

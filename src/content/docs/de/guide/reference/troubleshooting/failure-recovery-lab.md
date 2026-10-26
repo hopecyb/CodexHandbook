@@ -23,8 +23,9 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-source_revision: fc91872
-translation_status: draft
+source_revision: "fc91872"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

@@ -8,11 +8,12 @@ title: codex exec
 description: 비대화형 실행 명령으로 스크립트와 CI에서 완전한 작업을 한 번에 전달합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 6d7c481
-translation_status: draft
+source_revision: '6d7c481'
+translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:
   order: 10
+reviewed_at: '2026-10-26'
 ---
 
 대화형 `codex`가 대화하면서 작업하는 방식이라면, **`codex exec`**는 한 번에 작업을 맡기고 끝난 뒤 결과를 돌려받는 방식에 가깝습니다.

@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Kreuzgeprüft gegen verifizierte Kapitel zu Artefaktprüfung, Definition of Done, Unsicherheit und Datei-Artefakten; Fokus „Generieren ≠ lieferbar, öffnen und abnehmen, commit-Klarheit“."
+  checkedAt: "2026-07-26"
 title: Generierte Artefakte abnehmen
 description: "Von Codex neu angelegte oder exportierte Dateien, Reports und Build-Artefakte systematisch abnehmen."
 locale: de
 source_locale: zh-CN
-source_revision: 7401176
+source_revision: "7401176"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 60
 ---
 
-Beim Aufgabenabschluss kann der Agent Reports, Skripte, Static Sites, Testdaten usw. als **Artefakte** neu anlegen. Sie laufen oft nicht über Ihren gewohnten Code-Review-Pfad — eigene Abnahmegewohnheit nötig.
+Beim Abschluss einer Aufgabe kann der Agent **Artefakte** wie Berichte, Skripte, statische Websites und Testdaten erstellen. Sie durchlaufen nicht unbedingt den gewohnten Code-Review-Prozess. Deshalb brauchen sie eine eigene Abnahme.
 
 Neu generiert heißt nicht automatisch einsatzbereit.
 
@@ -19,7 +24,7 @@ Neu generiert heißt nicht automatisch einsatzbereit.
 
 - Abnahmeunterschied zu „bestehenden Code ändern“
 - Checkliste
-- Wann ablehnen und neu verlangen
+- Wann du ein Ergebnis ablehnen und neu erstellen lassen solltest
 
 ## Artefakttypen
 
@@ -27,9 +32,9 @@ Neu generiert heißt nicht automatisch einsatzbereit.
 |---|---|
 | Skripte `.sh` `.py` | ausführbar, harmlos, idempotent |
 | Reports `.md` `.html` | Fakten korrekt, Links gültig |
-| Build-Output `dist/` | ob gitignore |
-| Test-Fixtures | kein echtes PII |
-| Config-Templates | keine Default-Schwachpasswörter |
+| Build-Output `dist/` | Prüfen, ob das Verzeichnis in `.gitignore` gehört |
+| Test-Fixtures | keine echten personenbezogenen Daten |
+| Konfigurationsvorlagen | keine schwachen Standardpasswörter |
 
 ## Was „Artefakt“ hier meint
 
@@ -37,16 +42,16 @@ Neu generiert heißt nicht automatisch einsatzbereit.
 - exportierte Reports
 - gebaute Seiten, Verzeichnisse oder Pakete
 
-Anders als „ein paar Zeilen bestehenden Code“ — Inhalt wird leichter übersehen.
+Diese Ergebnisse unterscheiden sich von einer Änderung an wenigen bestehenden Codezeilen: Ihr tatsächlicher Inhalt wird leichter übersehen.
 
 ## Abnahmeprozess
 
 ```text
 1. Artefakt öffnen (nicht nur Agent-Textzusammenfassung)
-2. Gegen «Definition of Done» der Aufgabe
-3. Relevante Tests oder Preview-Befehle
+2. Mit der „Definition of Done“ der Aufgabe abgleichen
+3. Relevante Tests oder Vorschaubefehle ausführen
 4. Pfad, Berechtigungen, Volumen prüfen
-5. Entscheiden: annehmen / lokal ändern / verwerfen und neu
+5. Entscheiden: annehmen / gezielt nachbessern / verwerfen und neu erstellen
 ```
 
 Methoden: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/), [Definition of Done](/de/guide/quality/definition-of-done/)
@@ -55,11 +60,11 @@ Methoden: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/), [Defini
 
 ### 1. „Fertig“ gesagt — trotzdem echtes Artefakt ansehen
 
-Zusammenfassung sagt, was der Agent *denkt* getan zu haben — ersetzt nicht das Öffnen.
+Die Zusammenfassung beschreibt, was der Agent seiner Ansicht nach getan hat. Sie ersetzt nicht das Öffnen und Prüfen der Datei.
 
 ### 2. Neue Datei ≠ sicherer als Änderung
 
-Neue Dateien können ebenso:
+Auch neue Dateien können folgende Probleme enthalten:
 
 - falschen Inhalt
 - überflüssige Dependencies
@@ -68,12 +73,12 @@ Neue Dateien können ebenso:
 
 ### 3. Läuft ≠ wert, zu committen
 
-Manches Artefakt nur lokal temporär — nicht für Git.
+Manche Artefakte eignen sich nur für eine vorübergehende lokale Nutzung und gehören nicht in Git.
 
 ## Bezug zu Git
 
 - Klar: welche Artefakte **committen**, welche `.gitignore`
-- Keine Megabyte Build-Caches in einem PR
+- Keine megabytegroßen Build-Caches in einen PR aufnehmen
 - Große Artefakte: CI Artifact oder externer Speicher
 
 ## Übliche Abnahmereihenfolge
@@ -86,19 +91,19 @@ Bei frischen Artefakten:
 4. Soll es ins Repo
 5. Annehmen, ändern oder neu
 
-## Untrusted Artefakte
+## Nicht vertrauenswürdige Artefakte
 
-Bei untrusted Repos oder extern datengetriebenen Aufgaben:
+Bei nicht vertrauenswürdigen Repositories oder Aufgaben mit externen Eingabedaten:
 
 - Skript zuerst lesen, dann ausführen
-- Vorsicht vor `curl | bash`, obfuscated Payloads
+- Vorsicht vor `curl | bash`, verschleierten Nutzdaten
 - Preview in Sandbox oder Container
 
 Artefakte nicht nur als „schon generiert“ werten — mindestens öffnen, prüfen, wissen ob committen.
 
 ## Häufige Fehler
 
-- Nur Agent-Bullet-Summary, Datei nicht öffnen
+- Nur die Stichpunktzusammenfassung des Agents lesen, ohne die Datei zu öffnen
 - Einmalige Debug-Ausgabe nach main committen
 - HTML-Reports mit Tracking-Pixel oder ungeprüften Fremdskripten
 
@@ -111,9 +116,3 @@ Artefakte nicht nur als „schon generiert“ werten — mindestens öffnen, pr�
 
 ## Quellen
 - [Unsicherheit handhaben](/de/guide/quality/handle-uncertainty/)
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Artefaktprüfung, Definition of Done, Unsicherheit und Datei-Artefakten; Fokus „Generieren ≠ lieferbar, öffnen und abnehmen, commit-Klarheit“.  
-**Zuletzt geprüft:** 2026-07-26

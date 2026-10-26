@@ -5,13 +5,18 @@ sidebar:
   order: 70
 locale: ko
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: 'b44c5d1'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: 조직판 / 팀 기능(플랜에 따라 다름)
+  basis: OpenAI의 현행 헬프 센터와 플러그인/앱 문서는 팀이 Codex/ChatGPT를 정착시킬 때 역할 접근, 플러그인 활성화, 동작 승인, 데이터 경계, 감사 책임 같은 거버넌스 층 능력이 필요하다고 계속 강조합니다. 이 페이지는 팀·엔터프라이즈 장 내비로, 거버넌스 모델과 읽기 순서에 초점을 두며 구체 관리 화면 경로에 묶지 않습니다.
+  checkedAt: '2026-07-26'
 ---
 
-**팀과 엔터프라이즈** 장은 엔지니어링 책임자, 플랫폼·보안 팀을 향합니다. Codex를 개인이 쓸 수 있는 수준에서 팀이 관리·감사·복기할 수 있는 수준으로 올리는 데 초점을 둡니다. [학습 경로 · 팀](/ko/guide/learning-paths/team/)과 함께 읽을 때, 이 장은 거버넌스와 정착에 더 가깝습니다.
+**팀과 엔터프라이즈** 장은 엔지니어링 책임자, 플랫폼·보안 팀을 대상으로 합니다. Codex를 개인이 쓸 수 있는 수준에서 팀이 관리·감사·복기할 수 있는 수준으로 올리는 데 초점을 둡니다. [학습 경로 · 팀](/ko/guide/learning-paths/team/)과 함께 읽을 때, 이 장은 거버넌스와 정착에 더 가깝습니다.
 
 아직 개인 사용이거나 기초 사용법에 익숙해지는 단계라면, 이 장은 나중에 봐도 됩니다. 여기서는 여러 사람이 함께 쓸 때 경계, 프로세스, 책임을 어떻게 정리할지를 주로 다룹니다.
 
@@ -27,10 +32,10 @@ reviewed_at: 2026-08-26
 ## 이 장 내용
 
 - 소규모 팀 파일럿에서 조직 확산까지의 경로
-- 보안, 컴플라이언스, 확장(Plugin/MCP)위험
+- 보안, 컴플라이언스, 확장(Plugin/MCP) 위험
 - 본 핸드북 다른 장과의 교차 참조
 
-## 읽기 맞는 사람
+## 권장 독자
 
 | 역할 | 먼저 읽을 것 |
 |---|---|
@@ -41,13 +46,13 @@ reviewed_at: 2026-08-26
 ## 거버넌스 모델(개념)
 
 ```text
-정책(조직 호스팅、AUP)
+정책(조직 관리, AUP)
     ↓
-표준(AGENTS.md、승인 확장 목록)
+표준(AGENTS.md, 승인 확장 목록)
     ↓
-실행(규칙、샌드박스、Hooks、CI)
+실행(규칙, 샌드박스, Hooks, CI)
     ↓
-관측(감사、지표、복기)
+관측(감사, 지표, 복기)
 ```
 
 ## 이 장 내비(시작)
@@ -61,7 +66,7 @@ reviewed_at: 2026-08-26
 
 ## 개인화 설정과의 관계
 
-- [AGENTS.md 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)의 조직 호스팅 계층
+- [AGENTS.md 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)의 조직 관리 계층
 - [팀 규칙 정책](/ko/guide/customization/rules/team-rules/)
 
 ## 흔한 실수
@@ -95,10 +100,3 @@ reviewed_at: 2026-08-26
 - [허용 가능한 사용 정책](/ko/guide/team-enterprise/governance/acceptable-use/)
 
 개인 입문이 주 관심이면 이 장은 나중에 두고, 팀 확산·권한 관리·위험 통제를 시작할 때 돌아오세요.
-
----
-
-**상태：** verified  
-**적용 제품：** 조직판 / 팀 기능(플랜에 따라 다름)  
-**검증 근거：** OpenAI의 현행 헬프 센터와 플러그인/앱 문서는 팀이 Codex/ChatGPT를 정착시킬 때 역할 접근, 플러그인 활성화, 동작 승인, 데이터 경계, 감사 책임 같은 거버넌스 층 능력이 필요하다고 계속 강조합니다. 이 페이지는 팀·엔터프라이즈 장 내비로, 거버넌스 모델과 읽기 순서에 초점을 두며 구체 관리 화면 경로에 묶지 않습니다.  
-**최근 검증：** 2026-07-26

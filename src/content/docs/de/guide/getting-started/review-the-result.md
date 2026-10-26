@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Gegen die im Handbuch bereits geprüften Kapitel Diffs prüfen, Fertig-Definition und Rückgängig/Wiederherstellen abgeglichen; Fokus dieser Seite ist die stabile Prüfmethode „Umfang, Ergebnis, Nebenwirkungen — dann entscheiden, ob annehmen“."
+  checkedAt: "2026-07-26"
 title: Ergebnis prüfen
 description: "Änderungen lesen, Artefakte validieren und annehmen oder anpassen."
 locale: de
 source_locale: zh-CN
-source_revision: a215910
+source_revision: "a215910"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 90
 ---
@@ -38,7 +43,7 @@ Codex kann Zusammenfassungen flüssig schreiben — entscheidend bleibt:
 
 ### 2. „Passt ungefähr“ → direkt annehmen
 
-„Ungefähr“ hinterlässt oft kleine Fallen.  
+„Ungefähr“ hinterlässt oft kleine Fallen.
 Fehlt nur wenig: Lieber einen präzisen Nachsatz — nicht stillschweigend hinnehmen.
 
 ### 3. Merken, dass es nicht passt — aber nicht wissen, wie man es sagt
@@ -58,10 +63,3 @@ Beim ersten Üben so:
 3. **Nebenwirkungen**: Überflüssige Änderungen oder neue Fehler?
 
 Bei der Abnahme geht es vor allem darum, ob du das Ergebnis beruhigt annehmen kannst.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Diffs prüfen, Fertig-Definition und Rückgängig/Wiederherstellen abgeglichen; Fokus dieser Seite ist die stabile Prüfmethode „Umfang, Ergebnis, Nebenwirkungen — dann entscheiden, ob annehmen“.  
-**Zuletzt überprüft:** 2026-07-26

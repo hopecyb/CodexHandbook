@@ -10,9 +10,10 @@ sidebar:
   order: 50
 locale: ko
 source_locale: zh-CN
-source_revision: e8f88ec
-translation_status: draft
+source_revision: 'e8f88ec'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 현재 IDE에서 Codex를 사용하는 방법은 한 가지가 아닙니다.

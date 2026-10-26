@@ -3,9 +3,10 @@ title: Ein Codex Pet installieren
 description: "Verstehe Installationsordner, Aktivierungsfluss und Sicherheitsgrenzen von Codex Pets."
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 730c599
+source_revision: "730c599"
 contentType: guide
 editorialStatus: review
 verification:
@@ -35,7 +36,7 @@ Ein Pet ist meist ein lokaler Ordner mit mindestens zwei Dateien:
 
 ## Die Logik der Installation
 
-1. Paket holen: prüfen, dass mindestens `pet.json` und eine Spritesheet enthalten sind.
+1. Paket holen: prüfen, dass mindestens `pet.json` und ein Spritesheet enthalten sind.
 2. In den Pets-Ordner legen: üblich ist `~/.codex/pets/<pet-id>/`.
 3. Client neu lesen lassen: Codex neu starten oder Pets-Einstellungen aktualisieren.
 4. Suche im aktuellen Client nach der Pet-Auswahl; Name und Position des Menüs können je nach Version abweichen. Falls die Option fehlt, prüfe zuerst, ob diese Version Pets unterstützt.
@@ -48,7 +49,7 @@ Wenn das Pet nach der Installation nicht erscheint, prüfe:
 
 - Der Ordnername passt zur `id` in `pet.json`.
 - `spritesheetPath` ist ein relativer Pfad, etwa `spritesheet.webp`.
-- Die Spritesheet liegt wirklich im selben Ordner.
+- Das Spritesheet liegt wirklich im selben Ordner.
 - Codex wurde neu gestartet oder die Pets-Einstellungen wurden aktualisiert.
 - Windows, WSL oder ein eigenes `CODEX_HOME` zeigen nicht auf einen anderen Ordner.
 
@@ -56,9 +57,9 @@ Wenn Pfade und Dateien stimmen, prüfe auch die Formatversion, die Unterstützun
 
 ## Aktualisieren und Entfernen
 
-Sichere vor dem Aktualisieren den alten Ordner. Wenn das neue Paket funktioniert, ersetze `pet.json` und die Spritesheet.
+Sichere vor dem Aktualisieren den alten Ordner. Wenn das neue Paket funktioniert, ersetze `pet.json` und das Spritesheet.
 
-Wechsle vor dem Deaktivieren eines eigenen Pets zu einem integrierten Pet oder blende Pets aus. Verschiebe das eigene Paket dann an einen Sicherungsort außerhalb des vom Client durchsuchen Pets-Verzeichnisses. Aktualisiere die Einstellungen oder starte neu und prüfe, dass es nicht mehr erscheint. Zur Wiederherstellung verschiebst du das ursprüngliche Paket zurück und prüfst es erneut. Lösche die Sicherung erst, wenn sie nicht mehr gebraucht wird. Dieser Ablauf wurde hier nicht mit einer dokumentierten Clientversion getestet.
+Wechsle vor dem Deaktivieren eines eigenen Pets zu einem integrierten Pet oder blende Pets aus. Verschiebe das eigene Paket dann an einen Sicherungsort außerhalb des vom Client durchsuchten Pets-Verzeichnisses. Aktualisiere die Einstellungen oder starte neu und prüfe, dass es nicht mehr erscheint. Zur Wiederherstellung verschiebst du das ursprüngliche Paket zurück und prüfst es erneut. Lösche die Sicherung erst, wenn sie nicht mehr gebraucht wird. Dieser Ablauf wurde hier nicht mit einer dokumentierten Clientversion getestet.
 
 ## Sicherheit
 

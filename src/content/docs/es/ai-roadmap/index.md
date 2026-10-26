@@ -3,15 +3,15 @@ title: Hoja de ruta de aplicaciones de IA
 description: Distingue artículos académicos, lanzamientos de productos, artículos de ingeniería y recomendaciones de aprendizaje del autor, y conecta cada tema con la práctica.
 locale: es
 source_locale: zh-CN
-source_revision: f66e3ba
-translation_status: draft
+source_revision: "f66e3ba"
+translation_status: reviewed
 translated_at: 2026-10-24
 prev: false
 next:
   link: /es/ai-roadmap/timeline/
   label: Índice de eventos y temas
+reviewed_at: 2026-10-25
 ---
-
 Este mapa separa los eventos públicos verificables de las recomendaciones de aprendizaje. **Las fechas se refieren solo a los artículos académicos, anuncios o textos de la tabla. No indican automáticamente cuándo nació un concepto, cuándo se generalizó en el sector ni cuándo maduró una capacidad.** Pueden usarse distintas técnicas a la vez; la cronología no es un orden de aprendizaje obligatorio.
 
 Cada página temática ofrece fuentes primarias, límites de aplicación y una práctica del sitio. Comprobar fuentes no equivale a ejecutar software. Se conservan las URL originales; el año o mes de una URL puede diferir de la fecha corregida del evento. Prevalece el texto de la página.
@@ -36,8 +36,8 @@ Cada página temática ofrece fuentes primarias, límites de aplicación y una p
 
 Lee estos proyectos por separado, sin ordenarlos según fechas de primera publicación no confirmadas.
 
-- [OpenSpec](/es/ai-roadmap/timeline/2026-01-openspec/): La página oficial de lanzamientos del proyecto documenta v1.0.0 (The OPSX Release). Esta revisión no deduce de esa versión la fecha de primera publicación del proyecto ni conserva una fecha inicial en npm que la evidencia revisada no confirma.
-- [OpenClaw](/es/ai-roadmap/timeline/2026-01-openclaw/): Esta página utiliza el repositorio oficial de OpenClaw como fuente de identidad y descripción del proyecto. No se obtuvo evidencia suficiente para confirmar su primera publicación, por lo que no se muestra esa fecha.
+- [OpenSpec (desarrollo guiado por especificaciones)](/es/ai-roadmap/timeline/2026-01-openspec/): La página oficial de lanzamientos del proyecto documenta v1.0.0 (The OPSX Release). Esta revisión no deduce de esa versión la fecha de primera publicación del proyecto ni conserva una fecha inicial en npm que la evidencia revisada no confirma.
+- [OpenClaw (proyecto de asistente personal de IA)](/es/ai-roadmap/timeline/2026-01-openclaw/): Esta página utiliza el repositorio oficial de OpenClaw como fuente de identidad y descripción del proyecto. No se obtuvo evidencia suficiente para confirmar su primera publicación, por lo que no se muestra esa fecha.
 
 ## Elige una práctica según la tarea actual
 

@@ -28,40 +28,40 @@
   <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
 
   <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
-  <text x="112" y="235" text-anchor="middle" class="label">1. Zuverlässig reproduzieren</text>
-  <text x="112" y="261" text-anchor="middle" class="note">Fehlschlagenden Test ausführen</text>
-  <text x="112" y="283" text-anchor="middle" class="note">Assertion und Stacktrace sichern</text>
+  <text x="112" y="235" text-anchor="middle" class="label">1. Stabil reproduzieren</text>
+  <text x="112" y="261" text-anchor="middle" class="note">Fehlertest ausführen</text>
+  <text x="112" y="283" text-anchor="middle" class="note">Assertion + Stack sichern</text>
   <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · erwarteter Fehler</text>
 
   <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="300" y="235" text-anchor="middle" class="label">2. Ursache finden</text>
-  <text x="300" y="261" text-anchor="middle" class="note">Implementierung und Tests lesen</text>
-  <text x="300" y="283" text-anchor="middle" class="note">Benachbarte Hypothesen ausschließen</text>
+  <text x="300" y="261" text-anchor="middle" class="note">Implementierung + Tests lesen</text>
+  <text x="300" y="283" text-anchor="middle" class="note">Nahe Hypothesen ausschließen</text>
   <text x="300" y="304" text-anchor="middle" class="tiny">Zuerst erklären, Code nicht ändern</text>
 
   <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
   <text x="488" y="235" text-anchor="middle" class="label">3. Minimale Behebung</text>
-  <text x="488" y="261" text-anchor="middle" class="note">Nur den Ursachenpfad ändern</text>
-  <text x="488" y="283" text-anchor="middle" class="note">Öffentliches Verhalten bewahren</text>
+  <text x="488" y="261" text-anchor="middle" class="note">Nur Ursachenpfad ändern</text>
+  <text x="488" y="283" text-anchor="middle" class="note">Öffentl. Verhalten bewahren</text>
   <text x="488" y="304" text-anchor="middle" class="tiny">Beiläufiges Refactoring vermeiden</text>
 
   <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
   <text x="676" y="235" text-anchor="middle" class="label">4. Relevante Tests</text>
-  <text x="676" y="261" text-anchor="middle" class="note">Ursprünglicher Test wird GREEN</text>
+  <text x="676" y="261" text-anchor="middle" class="note">Originaltest wird GREEN</text>
   <text x="676" y="283" text-anchor="middle" class="note">Grenzfalltests bestehen</text>
   <text x="676" y="304" text-anchor="middle" class="tiny" fill="#34d399">GREEN</text>
 
   <rect x="790" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
-  <text x="864" y="235" text-anchor="middle" class="label">5. Regression und Review</text>
+  <text x="864" y="235" text-anchor="middle" class="label">5. Regression / Review</text>
   <text x="864" y="261" text-anchor="middle" class="note">Alle Tests · lint</text>
   <text x="864" y="283" text-anchor="middle" class="note">diff- und Umfangsprüfung</text>
   <text x="864" y="304" text-anchor="middle" class="tiny">Restrisiken dokumentieren</text>
 
   <rect x="974" y="218" width="94" height="84" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
   <text x="1021" y="250" text-anchor="middle" class="label">Ausliefern</text>
-  <text x="1021" y="275" text-anchor="middle" class="note">Nachweise vollständig</text>
+  <text x="1021" y="275" text-anchor="middle" class="note">Belege vollständig</text>
 
   <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
-  <text x="550" y="504" text-anchor="middle" class="note">Nachweiskette: fehlschlagender Befehl und Assertion → Ursachenerklärung → minimaler diff → relevante Tests bestanden → vollständige Regression bestanden → menschliche Umfangsprüfung</text>
+  <text x="550" y="504" text-anchor="middle" class="note">Nachweise: Fehlerbefehl + Assertion → Ursache → minimaler diff → Tests bestanden → volle Regression bestanden → menschliche Umfangsprüfung</text>
   <text x="550" y="526" text-anchor="middle" class="tiny">Bei Fehlern in relevanten Tests zur minimalen Behebung zurückkehren; bei Fehlern in vollständiger Regression oder diff-Review zur Ursachenanalyse.</text>
 </svg>

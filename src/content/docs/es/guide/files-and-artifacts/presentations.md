@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Contrastado con los capítulos ya verificados de este manual sobre artefacto primero, validar fuentes, imágenes y capturas, verificar artefactos, etc.; el contenido se limita al método estable de trabajo con presentaciones «primero estructura, luego textos, al final estilo y exportación».
+  checkedAt: '2026-07-26'
 title: Presentaciones
 description: Generar, revisar y exportar diapositivas y guiones — convenciones de estructura, plantilla maestra y notas del orador.
 locale: es
 source_locale: zh-CN
-source_revision: fb319fa
+source_revision: "fb319fa"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 50
 ---
@@ -62,11 +67,11 @@ Avanzar en estas 3 capas suele ser más estable:
 
 1. Fija primero «qué debe dejar claro esta presentación»
 2. Luego «qué mensaje clave lleva cada página»
-3. Solo al final deja que el Agent rellene copy, notas de gráficos y notas del orador
+3. Solo al final deja que el Agent redacte textos, notas de gráficos y notas del orador
 
 ## Malentendidos habituales
 
-### 1. ¿Un PPT más florido equivale a expresión más fuerte?
+### 1. ¿Una presentación más llamativa comunica mejor?
 
 A menudo, lo que de verdad afecta a la comprensión es:
 
@@ -100,9 +105,9 @@ Si quieres que Codex te ayude ya con una presentación, puedes pedir en este ord
 5. Tras confirmar el esquema, que desarrolle cada página
 6. Al final, notas del orador, requisitos visuales y formato de exportación
 
-Con ese orden suele ser más fácil cerrar: primero estructura, luego copy, al final estilo.
+Con ese orden suele ser más fácil cerrar: primero estructura, luego textos, al final estilo.
 
-## Puntos clave del Prompt
+## Puntos clave del prompt
 
 - **Audiencia**: colegas técnicos vs. dirección — decide la profundidad del léxico
 - **Tope de páginas**: evita 80 páginas de relleno
@@ -131,9 +136,9 @@ Necesidades de imagen: [Imágenes y capturas](/es/guide/files-and-artifacts/imag
 | Dividir el esquema en páginas | Redacción final de la conclusión |
 | Borrador de títulos de página | Consistencia de marca |
 | Borrador de notas del orador | Datos sensibles |
-| Copy de explicación de gráficos | Versión de publicación externa |
+| Textos explicativos de gráficos | Versión de publicación externa |
 
-Esa división suele ahorrar tiempo y facilita sujetar la calidad al final.
+Esa división suele ahorrar tiempo y facilita comprobar la calidad final.
 
 ## Errores frecuentes
 
@@ -147,10 +152,3 @@ Esa división suele ahorrar tiempo y facilita sujetar la calidad al final.
 - [ ] El esquema lo confirma una persona antes de generar el texto completo
 - [ ] Se abre en el entorno de reproducción objetivo sin tipografía rota
 - [ ] Los datos clave se pueden rastrear hasta el archivo fuente
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre artefacto primero, validar fuentes, imágenes y capturas, verificar artefactos, etc.; el contenido se limita al método estable de trabajo con presentaciones «primero estructura, luego copy, al final estilo y exportación».  
-**Última verificación:** 2026-07-26

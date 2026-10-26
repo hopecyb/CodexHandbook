@@ -3,12 +3,16 @@ title: Permission matrix
 description: Distinguish local Permission Profiles, legacy sandboxing, and Cloud network policy.
 locale: en
 source_locale: zh-CN
-source_revision: c6ad6aa
+source_revision: 'c6ad6aa'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE, Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
@@ -33,7 +37,7 @@ Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configu
 | `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
 | `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
 
-A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
+A custom profile can set paths to `read`, `write`, or `deny`, and use more specific rules to exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
 
 ## Least-privilege example
 
@@ -68,7 +72,7 @@ enabled = true
 | Read source | Sensitive files enter context | Workspace read with explicit credential denies |
 | Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
 | Run tests | Script side effects | Review scripts; use controlled environment |
-| Install dependencies | Supply chain and network | Pin versions and domains |
+| Install dependencies | Supply chain and network | Pin versions and restrict network domains |
 | Git push / PR | External state change | Separate branch, protection, human review |
 | MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
 
@@ -90,11 +94,3 @@ Permission Profiles remain Beta. Rerun this verification after upgrades.
 - [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
 - [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
 - [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-
----
-
-**Status:** verified
-
-**Applies to:** App, CLI, IDE, Cloud
-
-**Last verified:** 2026-08-26

@@ -18,7 +18,7 @@
   </defs>
   <rect width="1200" height="800" rx="8" fill="#020617"/>
   <rect width="1200" height="800" rx="8" fill="url(#grid)"/>
-  <text x="44" y="48" class="h1">Agent chính điều phối, Agent con tập trung, bằng chứng trở về luồng chính để chấp nhận</text>
+  <text x="44" y="48" class="h1">Agent chính điều phối, Agent con tập trung; nghiệm thu bằng chứng ở luồng chính</text>
   <text x="44" y="75" class="sub">Ưu tiên chạy song song công việc chỉ đọc có ranh giới rõ. Cô lập ngữ cảnh không đồng nghĩa cô lập tệp; tác vụ ghi phải có quyền sở hữu riêng.</text>
 
   <rect x="356" y="108" width="488" height="132" rx="10" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
@@ -33,7 +33,7 @@
 
   <rect x="44" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#34d399" stroke-width="1.5"/>
   <text x="192" y="357" text-anchor="middle" class="label">Agent con A</text>
-  <text x="192" y="388" text-anchor="middle" class="note">Đọc đường dẫn mã ở chế độ chỉ đọc</text>
+  <text x="192" y="388" text-anchor="middle" class="note">Khảo sát luồng mã, không sửa</text>
   <path d="M72 408H312" fill="none" stroke="#14532d"/>
   <text x="192" y="439" text-anchor="middle" class="note">Bàn giao: chuỗi gọi và vị trí tệp</text>
   <text x="192" y="469" text-anchor="middle" class="tiny">Ngữ cảnh độc lập · kế thừa quyền</text>
@@ -70,5 +70,5 @@
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">Agent chính tổng hợp, xử lý xung đột và xác minh</text>
   <text x="600" y="721" text-anchor="middle" class="note">So sánh bằng chứng → quyết định sửa → hợp nhất → chạy lại kiểm thử và build</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Tác vụ con hoàn tất không có nghĩa tác vụ tổng thể hoàn tất; kết luận cuối chỉ dựa trên bằng chứng có thể kiểm tra lại.</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Xong tác vụ con chưa phải xong toàn bộ; kết luận cần bằng chứng kiểm tra lại được.</text>
 </svg>

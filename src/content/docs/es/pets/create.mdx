@@ -1,11 +1,12 @@
 ---
 title: Crear un Codex Pet
-description: "Entiende la creación de un Codex Pet desde assets, spritesheets, metadatos y licencias."
+description: "Entiende la creación de un Codex Pet desde recursos, spritesheets, metadatos y licencias."
 locale: es
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 57e9aca
+reviewed_at: 2026-10-25
+source_revision: "57e9aca"
 contentType: guide
 editorialStatus: review
 verification:
@@ -33,15 +34,15 @@ La estructura mínima habitual es:
 
 ## Qué es una spritesheet
 
-Una spritesheet combina muchos frames de animación en una imagen grande. El cliente no necesita cargar decenas de archivos pequeños; recorta cada frame por coordenadas de fila y columna, y luego los reproduce en secuencia.
+Una spritesheet combina muchos fotogramas de animación en una imagen grande. El cliente no necesita cargar decenas de archivos pequeños; recorta cada frame por coordenadas de fila y columna, y luego los reproduce en secuencia.
 
 Comprueba juntos la especificación del atlas y los campos de versión. Un esquema antiguo de este sitio usa 8 columnas × 9 filas, con fotogramas de 192 × 208 px (imagen completa de 1536 × 1872 px). No es una especificación universal para todos los clientes. Antes de crear los recursos, consigue la documentación del formato de la versión del cliente o herramienta de creación de destino y confirma cuadrícula, correspondencia de acciones y campos de versión.
 
 No basta con aumentar la altura de la imagen y conservar los metadatos antiguos para ampliar el atlas. Si no hay documentación del formato que pueda rastrearse, detén la creación y aclara el contrato en lugar de deducir compatibilidad del esquema.
 
-## Preparar assets
+## Preparar recursos
 
-Los buenos assets suelen cumplir:
+Los buenos recursos suelen cumplir:
 
 - Silueta clara y fondo fácil de limpiar.
 - Escala, vista y línea base consistentes entre acciones.
@@ -49,7 +50,7 @@ Los buenos assets suelen cumplir:
 - Suficiente margen para evitar cortes durante la reproducción.
 - Acciones que correspondan a trabajo, espera, finalización, error, movimiento o reposo.
 
-Si el arte viene de fan art, juegos, anime, marcas u obras de otras personas, confirma primero la fuente y la licencia. No describas assets sin permiso como recursos aptos para uso comercial.
+Si el arte viene de fan art, juegos, anime, marcas u obras de otras personas, confirma primero la fuente y la licencia. No describas recursos sin permiso como recursos aptos para uso comercial.
 
 ## Qué hace `pet.json`
 
@@ -72,7 +73,7 @@ Recomendaciones:
 - Escribe una `description` concreta.
 - Conserva autor, versión, procedencia y licencia en el README o LICENSE del paquete; no supongas que el cliente acepta campos adicionales arbitrarios.
 
-`pet.json` no guarda la animación en sí. Le dice al cliente quién es el paquete, dónde están los assets y cómo interpretarlos.
+`pet.json` no guarda la animación en sí. Le dice al cliente qué paquete es, dónde están los recursos y cómo interpretarlos. Si las rutas, los nombres de archivo o la estructura de carpetas no coinciden, normalmente el cliente no podrá cargarlo.
 
 ## Revisión local
 
@@ -83,11 +84,11 @@ Antes de publicar o compartir, verifica:
 - El tamaño y la cuadrícula de la spritesheet coinciden con el contrato actual.
 - Las animaciones no saltan, se desplazan ni se recortan de forma evidente.
 - El fondo transparente está limpio.
-- El paquete no contiene archivos temporales, imágenes fuente o assets que no deban publicarse.
+- El paquete no contiene archivos temporales, imágenes fuente o recursos que no deban publicarse.
 
 ## Licencia y fuentes
 
-Los assets pueden venir de fan art, capturas, imágenes generadas por IA, bibliotecas públicas u obras de terceros. Distingue:
+Los recursos pueden venir de fan art, capturas, imágenes generadas por IA, bibliotecas públicas u obras de terceros. Distingue:
 
 - Si puedes usarlos personalmente.
 - Si puedes compartirlos públicamente.

@@ -3,10 +3,15 @@ title: "Corriger un bug : par où commencer"
 description: Choisissez le parcours de correction adapté à votre situation, puis poursuivez avec le cas complet et exécutable.
 locale: fr
 source_locale: zh-CN
-source_revision: 405a687
+source_revision: "405a687"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification:
+  status: verified
+  products: CLI / IDE
+  basis: cette page d'entrée ne maintient que le choix du parcours et une boucle d'ingénierie stable. Les commandes censées échouer puis réussir ont été exécutées dans le dépôt actuel.
+  checkedAt: '2026-08-25'
 ---
 
 Cette page sert de point d'entrée rapide. Les étapes complètes, le code exécutable, les preuves de tests rouge/vert et les prompts propres à chaque phase sont regroupés dans [Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/), afin d'éviter que deux versions ne divergent.
@@ -39,18 +44,11 @@ L'étape 4 sans l'étape 1 ne prouve pas que le test couvre le problème initial
 Le dépôt contient un exemple JavaScript de remise sur un panier, sans dépendance tierce :
 
 ```bash
-# Starter: one test is expected to fail
+# État initial : un test doit échouer
 node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-# Reference solution: all three tests are expected to pass
+# Solution de référence : les trois tests doivent réussir
 node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
 Tous les fichiers se trouvent dans [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Statut :** verified
-**Produits concernés :** CLI / IDE
-**Base de vérification :** cette page d'entrée ne maintient que le choix du parcours et une boucle d'ingénierie stable. Les commandes censées échouer puis réussir ont été exécutées dans le dépôt actuel.
-**Dernière vérification :** 2026-08-25

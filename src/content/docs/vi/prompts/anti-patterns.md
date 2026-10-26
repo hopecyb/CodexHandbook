@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ tóm tắt phản mẫu Prompt thường gặp; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Phản mẫu Prompt
 description: Các yêu cầu mơ hồ, vượt quyền và đòi suy luận ẩn cần tránh.
 locale: vi
 source_locale: zh-CN
-source_revision: 8e89a5a
+source_revision: "8e89a5a"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Khi học Prompt, dễ dồn chú ý vào «nên viết thế nào».
@@ -17,12 +22,12 @@ Dưới đây là vài «hố Prompt» thường gặp.
 | Phản mẫu | Vì sao có hại |
 |---|---|
 | «Tối ưu một chút tùy ý» | Không mục tiêu, không ranh giới |
-| «Cho toàn quyền, tự liệu đi» | Mặt sự cố lớn nhất |
+| «Cho toàn quyền, tự liệu đi» | Phạm vi rủi ro lớn nhất |
 | «Đừng hỏi tôi, sửa xong luôn» | Bỏ qua làm rõ và phê duyệt |
 | «In hết quá trình suy luận ẩn của bạn» | Không đáng tin và thường không giúp nghiệm thu |
 | Dán log chứa khóa bí mật | Rò rỉ thông tin xác thực |
 
-## Vì sao những cách nói này dễ lật xe
+## Vì sao những cách nói này dễ gây sai sót
 
 Chúng thường có điểm chung:
 
@@ -35,7 +40,7 @@ Phần bạn cắt đi cuối cùng trở thành phần Codex phải tự phán.
 
 ### 1. Nói tùy ý một chút có giống cộng tác người thật hơn không
 
-Nói tự nhiên không sao.  
+Nói tự nhiên không sao.
 Vấn đề lớn hơn là nói mất điều kiện then chốt.
 
 ### 2. «Sửa xong luôn, đừng hỏi tôi» sẽ hiệu quả hơn
@@ -48,7 +53,7 @@ Ngắn hạn trông như bớt một lượt hội thoại; kết quả thườn
 
 ### 3. Quyền lớn hơn thì việc mới tiến nhanh
 
-Quyền càng lớn, mặt thao tác nhầm cũng càng lớn.  
+Quyền càng lớn, phạm vi ảnh hưởng của thao tác nhầm cũng càng lớn.
 Đặc biệt khi ranh giới tác vụ chưa nghĩ rõ, quyền lớn thường chỉ phóng đại rủi ro cùng lúc.
 
 ## Đổi phản mẫu thành cách nói rõ hơn
@@ -62,7 +67,7 @@ Tối ưu một chút tùy ý
 ### Có thể đổi thành thế này trước
 
 ```text
-Sửa copy màn hình đầu trang chủ cho dễ hiểu với người mới; chỉ sửa tệp này; giữ cấu trúc hiện có; xong đưa diff và kết quả build.
+Sửa nội dung chữ ở phần đầu trang chủ cho dễ hiểu với người mới; chỉ sửa tệp này; giữ cấu trúc hiện có; xong đưa diff và kết quả build.
 ```
 
 ## Một công thức thay thế đủ dùng
@@ -82,10 +87,3 @@ Ví dụ:
 Hầu hết phản mẫu Prompt không phải vì «diễn đạt kém», mà vì đã cắt mất ranh giới then chốt và điều kiện nghiệm thu.
 
 Có thể thay từ mơ hồ bằng cấu trúc: mục tiêu + ràng buộc + nghiệm thu.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ tóm tắt phản mẫu Prompt thường gặp; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

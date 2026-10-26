@@ -1,14 +1,18 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud, GitHub"
+  checkedAt: "2026-08-26"
 title: GitHub verbinden
 description: Konfiguriere den GitHub-Zugriff für Codex Cloud mit dem kleinstmöglichen Repository-Umfang.
 sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: b126a7e
+source_revision: "b126a7e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Codex Cloud muss zuerst mit GitHub oder GitLab (Beta) verbunden werden, bevor eine Umgebung für ein Repository erstellt werden kann. Der GitHub-Verbindungsumfang bestimmt, welche Repositorys sichtbar sind. Lokale Klone und noch nicht gepushte Änderungen gehören nicht dazu.
@@ -62,11 +66,3 @@ Erlaube nicht sämtliche privaten Repositorys, nur um einen 403-Fehler zu behebe
 
 - [Codex Cloud quickstart](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud, GitHub
-
-**Zuletzt geprüft:** 2026-08-26

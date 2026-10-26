@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / Cloud"
+  basis: "Geprüft gegen offizielle OpenAI-Materialien zu Bild-Input und Datei-Upload (Upload, Fokusmarkierung, Volumen, Privacy); keine versionsgebundenen UI-Schritte im Text."
+  checkedAt: "2026-07-26"
 title: Bilder und Screenshots
 description: "Screenshots und Designs an Codex geben und Bilddateien in Aufgaben verwalten."
 locale: de
 source_locale: zh-CN
-source_revision: adc2b88
+source_revision: "adc2b88"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
 
-Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite: Input (Ihre Bilder) und Bildverwaltung im Repo; neue Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/).
+Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite behandelt bereitgestellte Bilder und die Bildverwaltung im Repository. Neue Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/).
 
 Bei Screenshot-Aufgaben: klar sagen, wohin geschaut werden soll und warum dort ein Problem liegt.
 
@@ -34,7 +39,7 @@ Vertiefung: [Prompting mit Bildern](/de/prompts/prompting-with-images/)
 
 ## Was Bilder wirklich ergänzen
 
-Wertvoll, wo Text schwer beschreibt:
+Bilder sind besonders hilfreich, wenn sich etwas mit Worten schwer beschreiben lässt:
 
 - Wie schief das Layout wirklich ist
 - Wohin der Button gequetscht ist
@@ -42,11 +47,11 @@ Wertvoll, wo Text schwer beschreibt:
 
 Bilder sagen Codex aber nicht automatisch:
 
-- Welchen Bereich Sie am meisten meinen
+- Welcher Bereich dir am wichtigsten ist
 - Wie geändert werden soll
 - Ob „Ist-Zustand“ oder „Soll-Zustand“
 
-Deshalb meist ein klarer Begleitsatz nötig.
+Deshalb braucht das Bild meist eine kurze, klare Erläuterung.
 
 ## Qualitätsanforderungen
 
@@ -70,14 +75,14 @@ Visueller Beleg ja — trotzdem ergänzen:
 Zu große Originale:
 
 - zu viel Irrelevantes
-- Repo-/Kontextvolumen schwer
+- Repository und Kontext werden unnötig groß
 
 ### 3. Nur Designbild reicht nicht
 
 Bei „nach Bild umsetzen“ besser:
 
 - Breakpoint-Anforderungen
-- Komponentenconstraints
+- Vorgaben für Komponenten
 - Was frei, was nicht
 
 ## Bilder im Repo
@@ -85,7 +90,7 @@ Bei „nach Bild umsetzen“ besser:
 | Praxis | Grund |
 |---|---|
 | Einheitlich `assets/` oder `docs/images/` | Wartbar |
-| WebP/Kompression | Clone-Volumen |
+| WebP/Kompression | Begrenzt die Größe beim Klonen |
 | Sinnvolle Dateinamen | `login-form-mobile.png` statt `image1.png` |
 | Alt-Text (in Docs) | Barrierefreiheit |
 
@@ -94,13 +99,13 @@ Bei „nach Bild umsetzen“ besser:
 ```text
 Bild 1 = aktuelle Seite, Bild 2 = gewünschter Effekt.
 Bitte Fokus auf Hero-Titelbereich und Button-Abstände.
-Keine Geschäftslogik aus dem Screenshot raten — nur Visual und Layout.
+Keine Geschäftslogik aus dem Screenshot raten — nur Darstellung und Layout.
 ```
 
-## Privacy und Sicherheit
+## Datenschutz und Sicherheit
 
 - Screenshots können Kundendaten, interne URLs, Token enthalten — zuerst schwärzen
-- Keine Config-UIs mit Secrets an untrusted Aufgaben
+- Keine Konfigurationsansichten mit Zugangsdaten an nicht vertrauenswürdige Aufgaben übergeben
 - [Sensibler Kontext](/de/guide/context/sensitive-context/)
 
 ## Quellen
@@ -121,11 +126,4 @@ Bei „nach Bild umsetzen“:
 - 4K-Original direkt committen
 - Annehmen, das Modell liest Figma-Links ohne Export
 
-Gute Screenshots sind mehr als „Bild da“. Bild klar, Fokus klar, Erwartung klar — dann trifft die Aufgabe eher.
-
----
-
-**Status:** verified  
-**Gilt für:** App / Cloud  
-**Prüfgrundlage:** Geprüft gegen offizielle OpenAI-Materialien zu Bild-Input und Datei-Upload (Upload, Fokusmarkierung, Volumen, Privacy); keine versionsgebundenen UI-Schritte im Text.  
-**Zuletzt geprüft:** 2026-07-26
+Gute Screenshots sind mehr als „Bild da“. Bild klar, Fokus klar, Erwartung klar — dann lässt sich die Aufgabe zuverlässiger lösen.

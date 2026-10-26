@@ -8,9 +8,10 @@ title: Cấu trúc của một tác vụ tốt
 description: Xác định mục tiêu, bối cảnh, đầu vào, ràng buộc, tiêu chí nghiệm thu và phạm vi quyền hạn.
 locale: vi
 source_locale: zh-CN
-source_revision: 98c0511
-translation_status: draft
+source_revision: "98c0511"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Khi mô tả yêu cầu, càng có nhiều thông tin, nội dung càng dễ trở nên rời rạc: tài liệu thì nhiều, nhưng kết quả mong muốn, giới hạn và tiêu chí nghiệm thu lại lẫn vào nhau. Codex phải tự lấp các khoảng trống đó.
@@ -144,13 +145,3 @@ Có thể rút gọn mẫu theo quy mô tác vụ, nhưng bỏ một phần cũn
 - [Ràng buộc và giới hạn](/vi/prompts/constraints-and-boundaries/)
 - [Yêu cầu lập kế hoạch trước](/vi/prompts/ask-for-a-plan/)
 - [Khảo sát — lập kế hoạch — thực hiện — kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**Trạng thái:** verified
-
-**Áp dụng cho:** App / CLI / IDE / Cloud
-
-**Căn cứ kiểm chứng:** Trang này chỉ trình bày cách cấu trúc một tác vụ. Các ví dụ và liên kết nội bộ đã được kiểm tra lại; nội dung không phụ thuộc vào những thông tin dễ thay đổi như phiên bản sản phẩm, giá hoặc giao diện.
-
-**Kiểm chứng gần nhất:** 2026-08-25

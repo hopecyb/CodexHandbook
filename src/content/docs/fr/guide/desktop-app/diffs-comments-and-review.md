@@ -3,14 +3,17 @@ title: Diffs, commentaires et révision
 description: Vérifiez les modifications réelles et laissez des commentaires ligne par ligne dans le volet de révision avant tout commit ou push.
 locale: fr
 source_locale: zh-CN
-source_revision: 32ee40c
+source_revision: "32ee40c"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App, CLI, IDE
+  checkedAt: '2026-08-26'
 ---
-
 Le résumé d'une conversation est l'explication du travail donnée par Codex. Le diff Git montre ce qui a réellement changé dans les fichiers. Le volet de révision de l'App de bureau affiche les diffs, permet d'ajouter des commentaires ligne par ligne et de choisir les modifications à indexer, annuler, commiter ou pousser.
 
 Le projet doit se trouver dans un dépôt Git pour utiliser le volet de révision complet et `/review`.
@@ -62,11 +65,3 @@ Suivez un ordre d'acceptation constant : périmètre → comportement → tests 
 ## Source officielle
 
 - [Révision de code](https://learn.chatgpt.com/docs/code-review)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** App, CLI, IDE
-
-**Dernière vérification :** 2026-08-26

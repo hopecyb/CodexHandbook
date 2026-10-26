@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills Instructions, Begleitdateien und Code enthalten können und Nutzer Quelle und Risiko vor/nach dem Upload prüfen müssen; die Governance-Hinweise hier passen dazu."
+  checkedAt: "2026-07-26"
 title: Skill-Sicherheit und Versionierung
 description: Installationsquellen, Berechtigungsgrenzen, Upgrade und Rollback — Skills teamfähig steuern.
 locale: de
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: "a3c81ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein Skill ist mehr als eine weitere Prompt-Vorlage.
 
 Er beeinflusst, wie Codex arbeitet, und kann Skripte oder Extra-Ressourcen mitbringen.
 
-Bei unglaubwürdiger Quelle, ungeprüftem Inhalt oder Versionsdrift ist das Risiko kaum geringer als bei MCP. Diese Seite: Skills **auswählen, installieren, upgraden und auditieren**.
+Bei einer nicht vertrauenswürdigen Quelle, ungeprüftem Inhalt oder Versionsdrift ist das Risiko kaum geringer als bei MCP. Diese Seite erläutert, wie Teams Skills **auswählen, installieren, aktualisieren und auditieren**.
 
 ## Inhalt
 
@@ -21,7 +26,7 @@ Bei unglaubwürdiger Quelle, ungeprüftem Inhalt oder Versionsdrift ist das Risi
 - Version pinnen und Änderungen prüfen
 - Bezug zur Plugin-Verteilung
 
-## Warum auch Alltagnutzer das wissen sollten
+## Warum auch Anwender im Alltag das wissen sollten
 
 Wenn du:
 
@@ -32,7 +37,7 @@ Wenn du:
 
 bist du Teil der Risikokette.
 
-Skill-Sicherheit braucht nicht nur „eine zentrale Stelle“ — jede nutzende Person braucht Grundurteilskraft.
+Skill-Sicherheit braucht nicht nur „eine zentrale Stelle“ — jede nutzende Person braucht ein grundlegendes Urteilsvermögen.
 
 Basis: [Skill-Überblick](/de/skills/overview/) · [Ersten Skill erstellen](/de/skills/create-your-first-skill/)
 
@@ -116,9 +121,3 @@ Bei explizitem `$name` ist die Absicht klar; bei **automatischer Modell-Wahl** i
 
 ## Quellen
 - OpenAI Codex Skills-Sicherheitsleitfaden
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** OpenAI Help „Skills in ChatGPT“ bestätigt, dass Skills Instructions, Begleitdateien und Code enthalten können und Nutzer Quelle und Risiko vor/nach dem Upload prüfen müssen; die Governance-Hinweise hier passen dazu.  
-**Zuletzt geprüft:** 2026-07-26

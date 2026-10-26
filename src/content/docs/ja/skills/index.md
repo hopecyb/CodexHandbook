@@ -7,9 +7,10 @@ title: Skills
 description: Codex Skill の利用、作成、テスト、保守の方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: 6f8df16
-translation_status: draft
+source_revision: "6f8df16"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 

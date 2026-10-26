@@ -12,8 +12,9 @@ verification:
       href: "https://openai.com/index/new-tools-for-building-agents/"
 locale: vi
 source_locale: zh-CN
-source_revision: efd508a
-translation_status: draft
+source_revision: "efd508a"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 

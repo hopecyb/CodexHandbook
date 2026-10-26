@@ -3,11 +3,16 @@ title: IDE에서 변경 사항 검토하기
 description: 소스 코드 옆에서 차이를 확인하고 읽기 전용 reviewer로 작업 트리를 점검합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: a6badd5
-translation_status: draft
+source_revision: 'a6badd5'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: IDE
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 IDE에서는 소스 코드 옆에서 요약과 필요한 diff를 빠르게 읽을 수 있습니다. 그러나 변경 사항이 편집기에 보인다는 사실만으로 검수가 끝난 것은 아닙니다. 차이를 확인하고 테스트를 실행한 뒤 남길 내용을 결정하세요.

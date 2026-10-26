@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ mô tả cách tách tác vụ dài và bàn giao; liên kết nội bộ và ví dụ giai đoạn đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
+  checkedAt: "2026-07-26"
 title: Prompt cho tác vụ dài
 description: Tách giai đoạn, checkpoint và thông tin bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 450ed9d
+source_revision: "450ed9d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Tác vụ dài thường thất bại theo các cách này:
@@ -48,7 +53,7 @@ Tác vụ dài cần **quản lý theo đoạn**, không chỉ viết thêm bố
 
 ### 2. Chỉ liệt kê giai đoạn vẫn chưa đủ
 
-Mỗi giai đoạn nên có lối thoát rõ, ví dụ:
+Mỗi giai đoạn nên có điều kiện kết thúc rõ ràng, ví dụ:
 
 - Chỉ xuất phương án, không sửa code
 - Chỉ làm triển khai tối thiểu
@@ -79,10 +84,3 @@ Giai đoạn 4: Tóm tắt thay đổi, rủi ro và đề xuất tiếp theo
 Cách phù hợp hơn là mỗi đoạn có thể dừng để kiểm, chứ không làm một mạch đến hết.
 
 Kết hợp: [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/) · [Bàn giao và phục hồi](/vi/guide/agent-work/handoff-and-resume/)
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách tách tác vụ dài và bàn giao; liên kết nội bộ và ví dụ giai đoạn đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

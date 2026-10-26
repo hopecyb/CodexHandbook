@@ -8,10 +8,10 @@ title: レビューテンプレート
 description: diff と変更リスクを構造化してレビューする。
 locale: ja
 source_locale: zh-CN
-source_revision: e89989d
+source_revision: "e89989d"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -26,7 +26,7 @@ reviewed_at: 2026-08-26
 観点：
 1. 【issue／仕様】の範囲を超えていないか
 2. ロジックエラー、境界、エラーハンドリング
-3. セキュリティ（鍵、インジェクション、権限）
+3. セキュリティ（シークレット、インジェクション、権限）
 4. テストとドキュメントが変更に追随しているか
 出力：🔴 ブロック / 🟡 提案 / 🟢 合格 の段階付きリスト。各項目にファイルと行番号。
 ```

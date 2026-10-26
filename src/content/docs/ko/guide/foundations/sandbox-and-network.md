@@ -3,17 +3,22 @@ title: 샌드박스와 네트워크
 description: 실행 격리·네트워크 접근과 위험 경계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 2cf2c46
+source_revision: '2cf2c46'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center의 현재 Codex CLI 문서는 Full Auto를 “sandboxed, network-disabled environment scoped to the current directory”로 설명하며 승인 모드와 구분합니다. 이 페이지는 샌드박스와 네트워크가 서로 다른 위험 경계이며, 초보자가 접근 범위를 어떻게 좁혀야 하는지만 설명합니다.
+  checkedAt: '2026-07-26'
 ---
 
 「샌드박스」와 「네트워크」는 사실 두 가지입니다. 샌드박스는 어디에 닿을 수 있는지, 네트워크는 어디에 연결할 수 있는지를 제한합니다.
 
-**샌드박스**는 Agent가 닿을 수 있는 파일 시스템과 일부 시스템 능력을 제한해 오조작 면을 줄입니다. **네트워크 접근**은 또 다른 위험 층입니다. 프롬프트의 민감 정보가 유출되거나, 신뢰할 수 없는 데이터를 가져올 수 있습니다.
+**샌드박스**는 Agent가 닿을 수 있는 파일 시스템과 일부 시스템 기능을 제한해 잘못된 조작의 영향 범위를 줄입니다. **네트워크 접근**은 또 다른 위험 층입니다. 프롬프트의 민감 정보가 유출되거나, 신뢰할 수 없는 데이터를 가져올 수 있습니다.
 
 ![일러스트: 유리 샌드박스 안의 에이전트가 요청 카드를 들고, 밖의 사람이 승인 버튼을 누른다. 네트워크 케이블은 뽑혀 잠겨 있다](/illustrations/sandbox-and-approval.webp)
 
@@ -31,7 +36,7 @@ sidebar:
 ## 시작 제안
 
 1. 연습할 때 불필요한 네트워크를 끄거나, 분명히 필요한 접근만 허용합니다
-2. 프로덕션 비밀키를 연습 프로젝트에 넣지 마세요
+2. 프로덕션 인증 키를 연습 프로젝트에 넣지 마세요
 3. 「외부망 / 민감 경로 쓰기」요청이 보이면, 이해하고 나서 승인하세요
 
 ## 흔한 오해
@@ -40,9 +45,9 @@ sidebar:
 
 샌드박스는 주로 위험을 통제하기 위한 것이며, 능력을 일부러 깎는 것이 아닙니다.
 
-### 2. 네트워크는 많을수록 좋은가?
+### 2. 네트워크 연결은 많을수록 좋은가?
 
-네트워크가 많을수록:
+외부 연결이 많아질수록:
 
 - 정보 출처가 더 복잡해집니다
 - 신뢰할 수 없는 내용에 닿을 수 있습니다
@@ -67,13 +72,6 @@ sidebar:
 
 두 문 모두 기술 설정만이 아니라, 위험을 통제하는 방식입니다.
 
-제품 측 설정 입구는 데스크톱 App [설정](/ko/guide/desktop-app/settings/)을, 공식 세부는 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 보세요.
+제품의 설정 방법은 데스크톱 App [설정](/ko/guide/desktop-app/settings/)을, 공식 세부는 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 보세요.
 
 처음에는 위험을 아직 모를 때 문을 한꺼번에 열지 말고, 조금 더 제한하는 편이 낫습니다.
-
----
-
-**상태:** verified  
-**적용 제품:** App / CLI / IDE / Cloud  
-**검증 근거:** OpenAI Help Center의 현재 Codex CLI 문서는 Full Auto를 “sandboxed, network-disabled environment scoped to the current directory”로 설명하며 승인 모드와 구분합니다. 이 페이지는 샌드박스와 네트워크가 서로 다른 위험 경계이며, 초보자가 접근 범위를 어떻게 좁혀야 하는지만 설명합니다.  
-**최근 검증:** 2026-07-26

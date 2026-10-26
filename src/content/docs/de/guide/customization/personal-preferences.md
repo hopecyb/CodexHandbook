@@ -3,12 +3,18 @@ title: Persönliche Vorlieben
 description: Benutzerkonfiguration, Standardmodell und UI-Gewohnheiten — ohne Teamvereinbarungen im Repo zu verunreinigen.
 locale: de
 source_locale: zh-CN
-source_revision: c381051
+source_revision: "c381051"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE"
+  basis: Kreuzgeprüft gegen verifizierte Kapitel zu Projektanweisungen, Profiles, Einstellungsaufteilung und Sicherheitsgrenzen; diese Seite erklärt nur das stabile Schichtungsprinzip „persönliche Gewohnheiten
+    dürfen Team-Repo-Regeln nicht verunreinigen“ und schreibt keine aktuelle UI eines Clients als festen Vertrag fest.
+  checkedAt: '2026-07-26'
 ---
 
 **Persönliche Vorlieben** sind Einstellungen, die lokal projektübergreifend gelten: Standardmodell, Theme, Freigabegewohnheiten, persönliche Skill-Pfade usw. Anders als `AGENTS.md` im Repo sollten persönliche Vorlieben **nicht** voraussetzen, dass Teamkollegen dieselben haben.
@@ -53,7 +59,7 @@ Ohne Trennung entsteht leicht:
 
 ## Empfohlene Praxis
 
-1. **Work-/Personal-Profile trennen**: Kundenprojekte mit strengem Profile, Übungsprojekte dürfen lockerer sein
+1. **Work-/Personal-Profile trennen**: Kundenprojekte mit einem strengen Profile, Übungsprojekte dürfen lockerer sein
 2. **In neuen Repos zuerst Projektregeln lesen**, dann entscheiden, ob persönliche Defaults temporär überschrieben werden
 3. **Regelmäßig aufräumen**: ungenutzte persönliche MCP- und Skill-Drittanbieterquellen entfernen
 4. Beim Gerätewechsel: Config-Liste exportieren (ohne Geheimniswerte)
@@ -66,7 +72,7 @@ Sind Ihre Defaults locker, passen sie in Kunden- oder Teamprojekten oft nicht.
 
 ### 2. Persönliche Vorlieben und Projektregeln sind doch ähnlich?
 
-Sehr unterschiedlich.  
+Sehr unterschiedlich.
 Persönliche Vorliebe: „So arbeite ich gern.“ Projektregel: „In diesem Repo sollten alle möglichst so vorgehen.“
 
 ### 3. „Lokal ist alles okay“ reicht nicht als Urteil
@@ -91,7 +97,7 @@ Persönliche Vorlieben sollen Ihre Arbeit handlicher machen — nicht Teamregeln
 
 ## Zum Erinnerungsfeature
 
-Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerungen und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/). Erinnerung eignet sich für stabile Gewohnheiten; **projektspezifische Constraints bleiben Dateien im Repo**.
+Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerungen und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/). Erinnerung eignet sich für stabile Gewohnheiten; **für projektspezifische Vorgaben bleiben die Dateien im Repository maßgeblich**.
 
 ## Häufige Fehler
 
@@ -102,12 +108,5 @@ Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerun
 ## Abnahmeliste
 
 - [ ] Je ein Beispiel für persönlich / Projekt / Organisation nennen können
-- [ ] Mindestens ein Kundenprojekt mit strengem Profile konfiguriert
+- [ ] Mindestens ein Kundenprojekt mit einem strengen Profile konfiguriert
 - [ ] Keine persönlichen Geheimnisse im Repo
-
----
-
-**Status:** verified  
-**Gilt für:** App / CLI / IDE  
-**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Projektanweisungen, Profiles, Einstellungsaufteilung und Sicherheitsgrenzen; diese Seite erklärt nur das stabile Schichtungsprinzip „persönliche Gewohnheiten dürfen Team-Repo-Regeln nicht verunreinigen“ und schreibt keine aktuelle UI eines Clients als festen Vertrag fest.  
-**Zuletzt geprüft:** 2026-07-26

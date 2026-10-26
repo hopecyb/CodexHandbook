@@ -34,7 +34,7 @@
   <text x="340" y="190" text-anchor="middle" class="label">2. Verificar manualmente</text>
   <text x="340" y="219" text-anchor="middle" class="note">Mismo prompt · Skill</text>
   <text x="340" y="243" text-anchor="middle" class="note">Mismas herramientas y permisos</text>
-  <text x="340" y="265" text-anchor="middle" class="tiny">Programar solo después de revisión manual</text>
+  <text x="340" y="265" text-anchor="middle" class="tiny">Programar cuando el resultado pueda revisarse</text>
 
   <rect x="460" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="550" y="190" text-anchor="middle" class="label">3. Elegir contexto</text>

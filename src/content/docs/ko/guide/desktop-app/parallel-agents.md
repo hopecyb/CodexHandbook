@@ -3,15 +3,16 @@ title: 병렬 채팅과 Agent
 description: 독립적으로 검증할 수 있는 작업을 별도 채팅과 작업 트리에서 병렬로 진행합니다.
 legacyVerification:
   status: "verified"
-  products: "App、CLI、IDE"
+  products: "App / CLI / IDE"
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: "2336db1"
-translation_status: draft
+source_revision: '2336db1'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
 병렬 작업의 기본 단위는 각각 독립적인 컨텍스트, 메시지, 결과, 목표를 가진 채팅입니다. 단순히 “단계가 많다”는 이유로 병렬로 나누는 것이 아닙니다. **작업이 서로 독립적이고 파일 경계가 분명하며 각각 따로 검증할 수 있을 때** 병렬 진행에 적합합니다.
@@ -27,7 +28,7 @@ sidebar:
 | 두 가지 방안의 시제품을 각각 만듦 | 요구 사항이 아직 자주 바뀜 |
 | 각 작업에 독립적인 테스트가 있음 | 통합한 뒤에야 옳고 그름을 알 수 있음 |
 
-공식 문서는 두 채팅이 같은 데이터 소스를 쓰지 않도록 권고합니다. 코드를 병렬로 수정할 때는 서로 다른 Git worktree를 사용하세요.
+공식 문서는 두 채팅이 같은 데이터 소스에 동시에 쓰지 않도록 권고합니다. 코드를 병렬로 수정할 때는 서로 다른 Git worktree를 사용하세요.
 
 ## 간단한 작업부터 복잡한 작업까지
 

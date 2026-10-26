@@ -31,9 +31,10 @@ next:
   label: Apprendre à vérifier les résultats
 locale: fr
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 68729f6
+source_revision: "68729f6"
+reviewed_at: 2026-10-26
 ---
 
 Dans cet exercice, vous livrerez un rapport hebdomadaire des ventes, une synthèse régionale, un classement des produits et un registre de nettoyage ligne par ligne. Les données sont fictives et créées pour ce site ; aucune donnée client réelle n’est nécessaire.
@@ -67,7 +68,7 @@ Confiez la tâche suivante à Codex. La façon de fournir des fichiers varie sel
 ```text
 Lis brief.md, starter/data-dictionary.md et starter/sales.csv.
 Confirme leur présence et liste les champs, la plage de dates, le nombre
- d’enregistrements et les numéros des lignes à traiter spécialement.
+d’enregistrements et les numéros des lignes à traiter spécialement.
 Ne modifie pas le tableau d’origine et ne consulte pas solution.
 Distingue doublon exact, date manquante, montant négatif et vrai zéro.
 Décris les deux semaines conformément au dictionnaire ; signale tout conflit.

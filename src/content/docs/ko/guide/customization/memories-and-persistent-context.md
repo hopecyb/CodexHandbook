@@ -3,12 +3,17 @@ title: 기억과 지속 컨텍스트
 description: Codex가 세션을 넘어 선호와 사실을 어떻게 기억하는지 — 능력, 경계, 팀 규범.
 locale: ko
 source_locale: zh-CN
-source_revision: 7a689ad
+source_revision: '7a689ad'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App / CLI(버전에 따라)
+  basis: OpenAI Help Center의 현재 ChatGPT Memory 공식 설명과, 본 핸드북에서 이미 검증한 프로젝트 지침·개인 선호·보안 경계 장을 교차 확인했습니다. 내용은 “기억은 개인 선호와 소량 안정 사실에 맞고, 저장소 규칙과 민감 정보 관리를 대체하지 않는다”는 안정 원칙으로 한정합니다.
+  checkedAt: '2026-07-26'
 ---
 
 일부 Codex 클라이언트는 **기억(Memory)**을 지원합니다. 여러 턴 대화에서 확인한 선호나 사실을 이후 세션까지 남깁니다. `AGENTS.md`·프로젝트 설정과 보완 관계이지만, 버전 관리되는 팀 규범을 **대체할 수 없습니다**.
@@ -39,7 +44,7 @@ sidebar:
 | 반복 설명하는 프로젝트 별칭(「백엔드는 `services/api`」) | 바뀌는 sprint 작업 상태 |
 | 「기억해 줘」라고 명시했고 비민감한 사실 | Git에 넣어야 할 팀 규범 |
 
-팀급 규범은 **`AGENTS.md` 또는 프로젝트 설정**에 두어 review와 신규 onboarding이 가능하게 하세요. [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)를 참고하세요.
+팀 수준의 규범은 **`AGENTS.md` 또는 프로젝트 설정**에 두어 review와 신규 onboarding이 가능하게 하세요. [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)를 참고하세요.
 
 ## 흔한 오해
 
@@ -75,7 +80,7 @@ sidebar:
 | 단발 prompt | 현재 작업 | 직접 입력 |
 | 기억 | 보통 당신 계정/워크스페이스만 | 대화에서 확인하거나 설정 페이지에서 관리 |
 | `AGENTS.md` | 저장소 전체 협업자 | Git PR |
-| 프로젝트 설정 | 설정 계층에 따름 | 파일 + 호스팅 정책 |
+| 프로젝트 설정 | 설정 계층에 따름 | 파일 + 관리 정책 |
 
 ## 정보를 층별로 두는 법
 
@@ -85,7 +90,7 @@ sidebar:
 |---|---|
 | 개인 설명 선호 | 기억 |
 | 팀 공통 규칙 | `AGENTS.md` 또는 프로젝트 설정 |
-| 특정 디렉터리 규칙 | 디렉터리 수준 프로젝트 지침 |
+| 특정 디렉터리 규칙 | 디렉터리 수준 프로젝트 지침 또는 규칙 파일 |
 | 일시적 작업 목표 | 현재 프롬프트 또는 issue |
 | 재사용 단계 | Skill 또는 프롬프트 템플릿 |
 | 자동 검사 | Hook |
@@ -113,7 +118,7 @@ sidebar:
 
 - 기억이 `AGENTS.md` 금지 항목을 우회하는 **비밀 통로**가 되게 두지 마세요
 - 기억에 고객 데이터, 자격 증명, 미공개 재무 정보를 저장하지 마세요
-- 기업 환경에서는 기억 기능이 비활성화될 수 있습니다 — 호스팅 정책을 따르세요
+- 기업 환경에서는 기억 기능이 비활성화될 수 있습니다 — 관리 정책을 따르세요
 
 ## 흔한 실수
 
@@ -125,9 +130,3 @@ sidebar:
 
 ## 참고 출처
 - OpenAI Codex memory 문서(버전 기준)
----
-
-**상태:** verified  
-**적용 제품:** App / CLI(버전에 따라)  
-**검증 근거:** OpenAI Help Center의 현재 ChatGPT Memory 공식 설명과, 본 핸드북에서 이미 검증한 프로젝트 지침·개인 선호·보안 경계 장을 교차 확인했습니다. 내용은 “기억은 개인 선호와 소량 안정 사실에 맞고, 저장소 규칙과 민감 정보 관리를 대체하지 않는다”는 안정 원칙으로 한정합니다.  
-**최근 검증:** 2026-07-26

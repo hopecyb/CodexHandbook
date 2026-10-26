@@ -8,13 +8,13 @@ title: Vérifier les livrables
 description: Contrôler les documents, pages et autres éléments produits.
 locale: fr
 source_locale: zh-CN
-source_revision: 7a6a12e
-translation_status: draft
+source_revision: "7a6a12e"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
-
 Ici, un « livrable » désigne le résultat remis à la fin d'une tâche, par exemple :
 
 - Un document

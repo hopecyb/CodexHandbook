@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / App"
+  basis: "OpenAI Help Center configuration materials still directly use `~/.codex/config.toml` and `~/.codex/.env`, and note that desktop App/IDE may need a restart to read these settings; this page avoids binding volatile key names and keeps only the stable framework of user-level configuration, managed policy, and common intents such as model/approval/sandbox."
+  checkedAt: "2026-07-26"
 title: Configuration Basics
 description: Codex config file locations, common settings, and intro to approval, sandbox, and model settings.
 locale: en
 source_locale: zh-CN
-source_revision: ee00ab5
+source_revision: 'ee00ab5'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 10
 ---
@@ -132,9 +137,3 @@ Configuration suits defaults you would otherwise repeat almost every time; you d
 
 ## References
 - OpenAI Codex configuration documentation
----
-
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI Help Center configuration materials still directly use `~/.codex/config.toml` and `~/.codex/.env`, and note that desktop App/IDE may need a restart to read these settings; this page avoids binding volatile key names and keeps only the stable framework of user-level configuration, managed policy, and common intents such as model/approval/sandbox.  
-**Last verified:** 2026-07-26

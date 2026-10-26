@@ -34,7 +34,7 @@
   <text x="115" y="237" text-anchor="end" class="note">Eingaben</text><text x="125" y="237" class="tiny">Erforderliches Material</text>
   <text x="115" y="267" text-anchor="end" class="note">Vorgaben</text><text x="125" y="267" class="tiny">Umfang und Verbote</text>
   <text x="115" y="297" text-anchor="end" class="note">Abnahme</text><text x="125" y="297" class="tiny">Beobachtbare Nachweise</text>
-  <text x="115" y="327" text-anchor="end" class="note">Berechtigungen</text><text x="125" y="327" class="tiny">Netzwerk · Schreiben · Freigaben</text>
+  <text x="115" y="327" text-anchor="end" class="note">Rechte</text><text x="125" y="327" class="tiny">Netzwerk · Schreiben · Freigaben</text>
   <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
   <text x="145" y="364" text-anchor="middle" class="tiny">Bei fehlenden Informationen fragen, nicht raten</text>
 
@@ -59,7 +59,7 @@
   <text x="878" y="311" text-anchor="middle" class="note">Screenshots · Quellen</text>
 
   <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
-  <text x="630" y="408" text-anchor="middle" class="label">Bestanden: verifizierbares Ergebnis liefern</text>
+  <text x="630" y="408" text-anchor="middle" class="label">Bestanden: prüfbares Ergebnis liefern</text>
   <text x="630" y="429" text-anchor="middle" class="tiny">Artefakt + Nachweise + Restrisiken</text>
   <text x="905" y="393" class="tiny" fill="#34d399">Bestanden</text>
   <text x="460" y="472" class="tiny" fill="#fb7185">Fehlgeschlagen: mit Fehlernachweisen zur Aufgabe oder zum Plan zurückkehren</text>

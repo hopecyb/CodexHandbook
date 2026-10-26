@@ -26,9 +26,10 @@ next:
   label: "Commencer une correction de bug vérifiée"
 locale: fr
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: "22d8bd3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 Utilisez un petit exercice de panier pour mener quatre activités : expliquer le code, corriger un défaut, examiner les différences et transmettre les preuves. Il n’est pas nécessaire de maîtriser d’abord tous les clients, réglages ou fonctions multi-agents.
 

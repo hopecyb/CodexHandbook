@@ -1,17 +1,22 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur den Zerlegungsrahmen aus Ziel, Kontext, Aktionen und Abnahme; interne Links und Beispielstruktur wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: "Ziel, Kontext und Aktionen"
 description: "Eine gelungene Interaktion in Ziel, Hintergrund, Aktionen und Abnahme zerlegen."
 locale: de
 source_locale: zh-CN
-source_revision: 280cea9
+source_revision: "280cea9"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
 
-Manche Aufgaben laufen schnell rund, andere ziehen sich schief — der Unterschied liegt selten daran, dass das Modell plötzlich klüger oder dümmer wird, sondern daran, ob du die Aufgabe klar zerlegt hast.
+Manche Aufgaben laufen schnell rund, andere entfernen sich mit jeder Rückfrage weiter vom Ziel — der Unterschied liegt selten daran, dass das Modell plötzlich klüger oder dümmer wird, sondern daran, ob du die Aufgabe klar zerlegt hast.
 
 In der Kurzfassung: Das Ziel sagt „was am Ende rauskommen soll“, der Kontext „worauf basierend“, die Aktionen „wie es vorgehen darf“, die Abnahme „wann es als fertig gilt“.
 
@@ -59,7 +64,7 @@ Zu wenig Kontext lässt es raten; zu viel Kontext ertränkt den Fokus. Entscheid
 
 ### 3. Aktionen muss man nicht nennen — es entscheidet selbst
 
-Manchmal ja — für Anfänger unstabil.
+Manchmal ja — für Anfänger wenig zuverlässig.
 
 Wenn du klar schreibst:
 
@@ -83,16 +88,9 @@ Das ist klarer als nur „Hilf mir mit dem Problem“.
 
 ## Kleines Beispiel
 
-> Ziel: Die Überschriftenhierarchie in `notes.md` klar ordnen.  
-> Kontext: Nur diese eine Datei ändern; Absatzreihenfolge behalten.  
-> Aktionen: Diese Datei darf editiert werden; keine Abhängigkeiten installieren.  
+> Ziel: Die Überschriftenhierarchie in `notes.md` klar ordnen.
+> Kontext: Nur diese eine Datei ändern; Absatzreihenfolge behalten.
+> Aktionen: Diese Datei darf editiert werden; keine Abhängigkeiten installieren.
 > Abnahme: Nach dem Öffnen sind Überschriften von H1 bis H3 durchgängig, ohne Sprünge.
 
 Eine stabile Aufgabe nennt mindestens Ziel, Kontext, Aktionsgrenzen und Abnahmeweise klar.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur den Zerlegungsrahmen aus Ziel, Kontext, Aktionen und Abnahme; interne Links und Beispielstruktur wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

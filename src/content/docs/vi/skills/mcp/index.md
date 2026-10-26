@@ -1,11 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Ứng dụng ChatGPT trên máy tính / Codex CLI / IDE; ChatGPT Web dùng công cụ MCP từ xa thông qua Plugin"
+  basis: "Khả năng hỗ trợ của client, cấu hình dùng chung, phương thức truyền tải và lệnh CLI"
+  checkedAt: "2026-08-25"
 title: MCP
 description: Kết nối công cụ và ngữ cảnh bên thứ ba với ChatGPT và Codex theo cách có kiểm soát.
 locale: vi
 source_locale: zh-CN
-source_revision: 8d9ec38
-translation_status: draft
+source_revision: "8d9ec38"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 MCP (Model Context Protocol) giải quyết câu hỏi Agent gọi công cụ và dữ liệu ngoài kho mã như thế nào. Nó không tự xác định một quy trình làm việc.

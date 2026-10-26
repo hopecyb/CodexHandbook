@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: "6c758b9"
+reviewed_at: "2026-10-26"
 ---
 
 検査を繰り返しても、毎回通知する必要はありません。このSkillは[リンク検査の演習](/ja/cases/use-cases/team-automation/scheduled-link-check/)を再利用し、変化、復旧、実行異常を記録します。結果が変わらなければ通知候補も増やさず、静かにします。

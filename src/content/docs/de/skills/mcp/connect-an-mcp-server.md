@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT-Desktop-App / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: Einen MCP-Server verbinden
 description: Konfiguriere, authentifiziere und verifiziere den ersten MCP-Server mit CLI oder config.toml.
 locale: de
 source_locale: zh-CN
-source_revision: 0675d33
+source_revision: "0675d33"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Dieses Kapitel verwendet die aktuellen offiziellen Schnittstellen für einen minimalen Zyklus: **Server hinzufügen → Konfiguration anzeigen → Werkzeuge in einer Sitzung bestätigen → schreibgeschützten Aufruf ausführen**.
@@ -100,11 +104,3 @@ Abnahmenachweise: Der Server erscheint in `codex mcp list` oder `/mcp`, ein schr
 ## Offizielle Quelle
 
 - [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** ChatGPT-Desktop-App / Codex CLI / IDE
-
-**Zuletzt geprüft:** 2026-08-25

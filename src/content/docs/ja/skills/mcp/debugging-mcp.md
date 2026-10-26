@@ -3,9 +3,14 @@ title: MCP 接続をデバッグする
 description: 設定、通信、認証、ツールの四層に分けて MCP の障害を特定します。
 locale: ja
 source_locale: zh-CN
-source_revision: d35b635
-translation_status: draft
+source_revision: "d35b635"
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT デスクトップ App / Codex CLI / IDE
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 MCP の障害は「ツールが使えない」の一言にまとめられがちです。まずどの層で失敗しているかを判断し、その後は一度に一つの変数だけを変更するほうが早く解決できます。

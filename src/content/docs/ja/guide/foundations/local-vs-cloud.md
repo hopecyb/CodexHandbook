@@ -3,17 +3,22 @@ title: ローカルとクラウド
 description: ローカルタスクと Cloud タスクの適用シーンを比較する。
 locale: ja
 source_locale: zh-CN
-source_revision: 9569b3c
+source_revision: '9569b3c'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 50
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Help Center の現行「Using Codex with your ChatGPT plan」は依然として「local workflows run on your device」と「cloud tasks run in OpenAI-managed environments」を区別している。『ChatGPT Work and Codex』も Work on web/mobile runs in the cloud を確認している。本ページはローカルとクラウドタスクの適用シーンとトレードオフのみを要約し、特定のプランや入口の詳細には依存しない。
+  checkedAt: '2026-07-26'
 ---
 
 「ローカル」「クラウド」は技術用語に聞こえますが、簡単に言えばローカルは自分のコンピュータで作業し、クラウドはリモートのマシンで作業します。
 
-まず Codex を使い始めるだけなら、通常は **ローカル** から選ぶほうが手軽です。
+まず Codex を使い始めるだけなら、通常は **ローカル** で始めるほうが手軽です。
 
 | | ローカルタスク | Cloud タスク |
 |---|---|---|
@@ -45,11 +50,11 @@ sidebar:
 - プロジェクトを開き、結果を見て、手で直すのが容易
 - 失敗したときの取り消し経路が明確
 
-初めて使う人にとって、最初からクラウドに行くより、タスクの一連の流れを閉じてみるほうが重要です。
+初めて使う人にとって、最初からクラウドに行くより、タスクの一連の流れを最後まで実行してみるほうが重要です。
 
 ## よくある誤解
 
-### 1. クラウドのほうが必ず上級で、本番向きとは限らない
+### 1. クラウドのほうが高度とは限らず、実務に適しているとも限らない
 
 ローカルのプロジェクトを直し、ローカルファイルを見て、何度か試すタスクなら、ローカルのほうが直接的です。
 
@@ -78,10 +83,3 @@ sidebar:
 多くの初心者は **ローカル + デスクトップ App** から始めます。Cloud の詳細は [Web と Cloud の概要](/ja/guide/web-and-cloud/)。App 内での切り替えは [ローカルとクラウドのタスク](/ja/guide/desktop-app/local-and-cloud-tasks/) を参照してください。
 
 ローカルは流れを理解し、小さな変更を試すのに向いています。クラウドはより長く、標準化され、リモート協業が多いタスクに向いています。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** OpenAI Help Center の現行「Using Codex with your ChatGPT plan」は依然として「local workflows run on your device」と「cloud tasks run in OpenAI-managed environments」を区別している。『ChatGPT Work and Codex』も Work on web/mobile runs in the cloud を確認している。本ページはローカルとクラウドタスクの適用シーンとトレードオフのみを要約し、特定のプランや入口の詳細には依存しない。  
-**最終検証：** 2026-07-26

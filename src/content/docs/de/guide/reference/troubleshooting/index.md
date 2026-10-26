@@ -8,14 +8,15 @@ title: Troubleshooting-Index
 description: Symptome den passenden Tutorials und Produktseiten zuordnen.
 locale: de
 source_locale: zh-CN
-source_revision: da350d0
-translation_status: draft
+source_revision: "da350d0"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:
   order: 110
 ---
 
-Unklar, ob App, CLI, IDE oder Cloud? Zuerst hier Orientierung suchen.
+Wenn du ein Problem hast, aber nicht weißt, ob du im Kapitel zu App, CLI, IDE oder Cloud suchen sollst, findest du hier Orientierung.
 
 Nach Symptom suchen ist schneller als die ganze Site durchzuklicken.
 
@@ -24,7 +25,7 @@ Nach Symptom suchen ist schneller als die ganze Site durchzuklicken.
 | Installation fehlgeschlagen | [Desktop-Troubleshooting](/de/guide/desktop-app/troubleshooting/) · [CLI-Troubleshooting](/de/guide/cli/troubleshooting/) · [IDE-Troubleshooting](/de/guide/ide/troubleshooting/) |
 | Login/Auth fehlgeschlagen | [Anmelden](/de/guide/getting-started/sign-in-and-authentication/) |
 | Welcher Client? | [Client wählen](/de/guide/choose-your-client/) · [Funktionsvergleich](/de/guide/reference/feature-comparison/) |
-| Ergebnis über Grenzen / schlecht | [Ergebnis prüfen](/de/guide/getting-started/review-the-result/) · [Prompt-Debugging](/de/prompts/prompt-debugging/) · [Rückgängig](/de/guide/getting-started/undo-and-recover/) |
+| Ergebnis überschreitet den vereinbarten Umfang oder ist unbrauchbar | [Ergebnis prüfen](/de/guide/getting-started/review-the-result/) · [Prompt-Debugging](/de/prompts/prompt-debugging/) · [Rückgängig](/de/guide/getting-started/undo-and-recover/) |
 | Kontext chaotisch | [Kontext fokussiert halten](/de/guide/context/keep-context-focused/) |
 | Fragen zu Berechtigung/Sandbox | [Berechtigungen](/de/guide/foundations/permissions-and-approvals/) · [Sandbox](/de/guide/foundations/sandbox-and-network/) |
 

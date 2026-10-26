@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / Desktop-App / Codex CLI / IDE; Umfang unterscheidet sich nach Mechanismus"
+  basis: "Zuständigkeiten, Produkteinstiege und Sicherheitsgrenzen wurden anhand der offiziellen OpenAI-Dokumentation zu Skills, Plugins, MCP, Hooks und Scheduled tasks vom 2026-08-25 geprüft."
+  checkedAt: "2026-08-25"
 title: Den Erweiterungsmechanismus wählen
 description: Wähle Prompt, AGENTS.md, Skill, MCP, Hook, Plugin oder Scheduled task anhand dessen, was dauerhaft erhalten oder automatisch ausgelöst werden soll.
 locale: de
 source_locale: zh-CN
-source_revision: 28ae6f5
+source_revision: "28ae6f5"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Bei vielen Erweiterungsmechanismen besteht der häufigste Fehler darin, zuerst einen technischen Namen auszuwählen und anschließend ein passendes Problem zu suchen. Beginne stattdessen mit der Frage: **Was soll dauerhaft erhalten bleiben oder automatisch geschehen?**
@@ -56,7 +61,7 @@ Erwäge ein Plugin. Ein Plugin ist eine Bündelungs- und Verteilungsebene und ka
 
 ### 7. Läuft die Aufgabe manuell stabil und soll zeitgesteuert wiederholt werden?
 
-Erstelle erst dann eine Scheduled task. Verifiziere Prompt, Skill, Berechtigungen und Ausgabeformat zunächst in einer normalen Aufgabe. Prüfe nach Beginn der Planung die ersten Läufe und behalte ein menschliches Veröffentlichungs- oder Merge-Gate.
+Erstelle erst dann eine Scheduled task. Verifiziere Prompt, Skill, Berechtigungen und Ausgabeformat zunächst in einer normalen Aufgabe. Prüfe nach Beginn der zeitgesteuerten Ausführung die ersten Läufe und behalte ein menschliches Veröffentlichungs- oder Merge-Gate.
 
 ## Szenarien
 
@@ -141,10 +146,3 @@ Beantworte bei jeder zusätzlichen Ebene erneut drei Fragen: Welche neue Berecht
 - [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-
----
-
-**Status:** verified
-**Unterstützte Produkte:** ChatGPT Web / Desktop-App / Codex CLI / IDE; Umfang unterscheidet sich nach Mechanismus
-**Prüfgrundlage:** Zuständigkeiten, Produkteinstiege und Sicherheitsgrenzen wurden anhand der offiziellen OpenAI-Dokumentation zu Skills, Plugins, MCP, Hooks und Scheduled tasks vom 2026-08-25 geprüft.
-**Zuletzt geprüft:** 2026-08-25

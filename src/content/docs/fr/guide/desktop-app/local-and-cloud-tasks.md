@@ -8,13 +8,13 @@ title: Tâches locales et cloud
 description: Choisir entre exécution locale et cloud dans l'application.
 locale: fr
 source_locale: zh-CN
-source_revision: 741f686
-translation_status: draft
+source_revision: "741f686"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 70
+reviewed_at: '2026-10-26'
 ---
-
 Ce choix détermine si une tâche lancée dans l'application de bureau s'exécute sur votre ordinateur ou dans un environnement distant.
 
 Choisissez le lieu d'exécution :

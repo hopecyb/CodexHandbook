@@ -8,12 +8,11 @@ title: Mẫu tự động hóa
 description: Tác vụ lặp và quy trình tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 2aff2e7
+source_revision: "2aff2e7"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Hiểu lầm thường gặp của tác vụ tự động hóa: chỉ nghĩ «có chạy tự động được không», mà chưa nghĩ:
 
@@ -50,7 +49,7 @@ Nghiệm thu:
 
 Nhiều tự động hóa dễ triển khai thực tế chỉ là kiểm tra tự động, tổng hợp tự động, mở bản nháp tự động.
 
-### 2. Chạy thông một lần là tự động hóa được
+### 2. Chạy thành công một lần là tự động hóa được
 
 Để thành tự động hóa chạy lâu dài còn cần bổ sung:
 

@@ -7,9 +7,10 @@ title: Hướng dẫn đầy đủ về tác vụ định kỳ
 description: Chọn tác vụ độc lập hoặc tác vụ trong cuộc trò chuyện, cấu hình dự án cục bộ, worktree, quyền, prompt và quy trình rà soát.
 locale: vi
 source_locale: zh-CN
-source_revision: fa792dc
-translation_status: draft
+source_revision: "fa792dc"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 Phần khó thực sự của tác vụ định kỳ không phải là “chạy lúc mấy giờ”, mà là bảo đảm mỗi lần chạy không có người giám sát đều có đầu vào ổn định, quyền hạn hẹp, đầu ra có thể rà soát và điều kiện dừng.
@@ -47,7 +48,7 @@ Tiêu chí chọn: nếu mỗi lần chạy cần “bắt đầu lại”, hãy
 
 ### Chạy trên Web
 
-Đưa hướng dẫn lâu dài vào prompt tác vụ hoặc Skill, và đặt tài liệu cần dùng trong tệp tải lên, Project hoặc dịch vụ đã kết nối. Đừng viết “đọc latest.csv trên màn hình máy tính của tôi”; Web không thể truy cập trực tiếp đường dẫn cục bộ.
+Đưa hướng dẫn lâu dài vào prompt tác vụ hoặc Skill, và đặt tài liệu cần dùng trong tệp tải lên, Project hoặc dịch vụ đã kết nối. Đừng viết “đọc latest.csv trong thư mục Desktop của tôi”; Web không thể truy cập trực tiếp đường dẫn cục bộ.
 
 ### Dùng dự án cục bộ trong ứng dụng máy tính
 

@@ -5,15 +5,14 @@ legacyVerification:
   basis: "Trang này cung cấp mẫu tác vụ kiểu sửa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi."
   checkedAt: "2026-07-26"
 title: Mẫu sửa
-description: Lặp có ranh giới trên nền hiện có.
+description: Cải tiến trong phạm vi xác định dựa trên nội dung hiện có.
 locale: vi
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: "6faf299"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Mẫu này phù hợp tác vụ «sửa một chút trên cái đã có».
 
@@ -39,7 +38,7 @@ Nghiệm thu:
 
 - Sửa trang hoặc component hiện có
 - Sửa một bug đã rõ
-- Chỉnh nhẹ copy, tương tác hoặc cấu hình
+- Chỉnh nhẹ nội dung chữ, tương tác hoặc cấu hình
 - Muốn nhấn mạnh «chỉ sửa khối này, đừng tái cấu trúc tiện tay»
 
 ## Hiểu lầm thường gặp

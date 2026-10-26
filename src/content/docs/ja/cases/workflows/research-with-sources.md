@@ -3,10 +3,20 @@ title: 出典付き調査
 description: Codex で検索・比較・ファクトチェック——追跡可能な出典と結論。
 locale: ja
 source_locale: zh-CN
-source_revision: a6fd201
+source_revision: "a6fd201"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers の現行公開ウェブ検索・出典付き調査能力と、本ハンドブックの検証済みウェブ検索、出典検証、不確実性、バージョンポリシー章を照合。主要結論の出典追跡と矛盾・不確実性の明示という安定した調査方法のみ。
+  checkedAt: "2026-07-26"
+caseCategory: creation
+directoryOrder: 80
+contentType: case
+outputs:
+  - markdown
 ---
 
 **出典付き調査**とは、主要な結論が公式ドキュメント、論文、リポジトリファイルなど特定の出典に追跡できること——根拠のない主張だけにしないことです。技術選定、競合比較、文献レビュー、ポリシー解釈に向きます。
@@ -42,7 +52,7 @@ reviewed_at: 2026-08-26
 
 ## よくあるミス
 
-- URL 不要——出力を再確認できない
+- URL を求めず、出力を再確認できない
 - 古いブログと公式を区別せず混在
 - 調査結論を実装指示として仕様を飛ばす
 - 機密データを未承認外部ツールにアップロード
@@ -63,10 +73,3 @@ reviewed_at: 2026-08-26
 
 - [不確実性への対処](/ja/guide/quality/handle-uncertainty/)
 - [事例：レビュー付きドキュメント改修](/ja/cases/use-cases/content-creation/refactor-docs-with-review/)
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE / Cloud  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers の現行公開ウェブ検索・出典付き調査能力と、本ハンドブックの検証済みウェブ検索、出典検証、不確実性、バージョンポリシー章を照合。主要結論の出典追跡と矛盾・不確実性の明示という安定した調査方法のみ。

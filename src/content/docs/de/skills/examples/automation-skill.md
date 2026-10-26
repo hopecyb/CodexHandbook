@@ -9,7 +9,7 @@ editorialStatus: review
 verification:
   kind: run-tested
   checkedAt: '2026-09-18'
-  summary: Acht Zustandstests und drei CLI-Durchläufe waren erfolgreich. Ein wiederholter Fehler erzeugt kein neues Ereignis; nach der Reparatur wird eine Wiederherstellung protokolliert. Echte Zeitplanung, Modell-Routing und Nachrichtenzustellung wurden nicht getestet.
+  summary: Acht Zustandstests und drei CLI-Durchläufe waren erfolgreich. Ein wiederholter Fehler erzeugt kein neues Ereignis; nach der Reparatur wird eine Wiederherstellung protokolliert. Tatsächliche zeitgesteuerte Ausführung, Modell-Routing und Nachrichtenzustellung wurden nicht getestet.
   environment: Python 3.12.11 / Darwin arm64; temporäre synthetische statische Website, Standardbibliothek, kein Netzwerk.
   evidence:
     - label: Protokoll der tatsächlichen Ausführung
@@ -21,9 +21,10 @@ assets:
     version: 1.0.0
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 6c758b9
+source_revision: "6c758b9"
 ---
 
 Eine wiederholte Prüfung erfordert nicht jedes Mal eine Benachrichtigung. Dieser Skill nutzt die [Linkprüf-Übung](/de/cases/use-cases/team-automation/scheduled-link-check/) und hält Änderungen, Wiederherstellung und Ausführungsfehler fest. Bei unverändertem Ergebnis bleibt er still.
@@ -85,11 +86,11 @@ Das Skript protokolliert nur lokale Ereignisse. Alle `delivery`-Werte sind `not-
 
 Wenn ein autorisierter Sender angeschlossen wird, lies dauerhafte, nicht zugestellte Ereignisse, entferne Duplikate anhand der ID und speichere Zustellbestätigungen. Wer nur das `new_event` dieses Terminal-Laufs liest, kann nach einer Prozessunterbrechung ein Ereignis übersehen. Das Paket enthält keinen Sender und verspricht keine genau einmalige Zustellung über Systemgrenzen hinweg.
 
-## Vom Handlauf zur regelmäßigen Ausführung
+## Vom manuellen Lauf zur regelmäßigen Ausführung
 
 Bestätige zuerst einen erfolgreichen Build und prüfe erst dann die neueste Ausgabe. Scheitert der Build, stoppe, statt einen alten Ordner zu prüfen. Verwende bei jedem geplanten Lauf dieselbe Website und Zustandsdatei und vermeide parallele Schreibzugriffe. Löse die Prüfung in der Zielumgebung erst manuell aus, kontrolliere Protokolle und Stoppverhalten und richte dann die Wiederholung ein. Kanal, Empfänger und Umfang echter Benachrichtigungen müssen durch eine vorhandene Autorisierung gedeckt sein.
 
-Echte Zeitplanung und Nachrichtenzustellung wurden hier nicht getestet. Externe Links bleiben `unchecked`; ein lokaler gesunder Zustand bedeutet nicht, dass „alle Links der Website funktionieren“.
+Tatsächliche zeitgesteuerte Ausführung und Nachrichtenzustellung wurden hier nicht getestet. Externe Links bleiben `unchecked`; ein lokaler gesunder Zustand bedeutet nicht, dass „alle Links der Website funktionieren“.
 
 ## Einsatzbereich und Abnahme
 

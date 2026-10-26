@@ -7,8 +7,8 @@ title: Vérifier le contenu technique
 description: Distinguer le statut éditorial, la vérification des sources et les essais d’exemples ; consigner le périmètre, l’environnement et les preuves.
 locale: fr
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: 'cfb077d'
+translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -17,22 +17,23 @@ verification:
   summary: Consignes de contribution mises à jour pour les nouveaux champs de métadonnées du site ; cela ne signifie pas que tous les mécanismes produit cités ici ont été exécutés à nouveau.
 sidebar:
   order: 30
+reviewed_at: '2026-10-26'
 ---
 
-Les commandes, permissions, tarifs et fonctionnalités produit changent. La **Vérification** signifie que les lecteurs qui suivent la doc aujourd'hui obtiennent des résultats prévisibles.
+Les commandes, permissions, tarifs et fonctionnalités produit changent. La **vérification** signifie que les lecteurs qui suivent la doc aujourd'hui obtiennent des résultats prévisibles.
 
 ## Ce que cette page couvre
 
 Beaucoup de contributeurs doc pour la première fois confondent « ça a l'air bon pour moi » et « vérifié ».
 
-Pour un handbook technique :
+Pour un manuel technique :
 
 - Le premier est subjectif
 - Le second signifie que vous l'avez essayé sur la version, l'environnement et les étapes actuelles
 
 Cette page explique comment passer de « semble correct » à « preuve que ça fonctionne encore ».
 
-## Ce que la Vérification contrôle
+## Ce que la vérification contrôle
 
 Pas seulement la prose — confirmer qu'un lecteur peut le faire **aujourd'hui**.
 
@@ -40,10 +41,10 @@ Particulièrement important car :
 
 - Les commandes changent
 - Les emplacements de menu bougent
-- Les défauts de permission changent
+- Les permissions par défaut changent
 - Les capacités produit et régions évoluent
 
-La Vérification empêche les lecteurs de suivre une doc obsolète vers des pièges.
+La vérification empêche les lecteurs de suivre une doc obsolète vers des pièges.
 
 ## Significations des statuts
 
@@ -80,7 +81,7 @@ verification:
 
 Les vérifications des sources et les essais utilisent une liste `evidence` dont chaque élément comporte `label` et `href`. Les essais exigent aussi `environment`, avec le système, la version du client concerné et celles des dépendances. La compilation rejette les enregistrements d’essai sans environnement ou liens vers les preuves. La présence d’un lien ne prouve pas à elle seule que la preuve suffit : les responsables doivent lire l’enregistrement.
 
-### Les articles communautaires informent les sujets, pas les faits
+### Les articles communautaires aident à comprendre, mais ne remplacent pas la vérification des faits
 
 Les articles communautaires aident à voir quoi couvrir.
 
@@ -93,7 +94,7 @@ Pour :
 
 —utiliser la doc officielle ou le comportement en direct.
 
-### La Vérification n'est pas une phrase à la fois
+### La vérification n'est pas une phrase à la fois
 
 Les phrases peuvent chacune avoir l'air correctes pendant que le chemin entier échoue :
 
@@ -104,7 +105,7 @@ Les phrases peuvent chacune avoir l'air correctes pendant que le chemin entier �
 
 Vérifier le **chemin opérationnel complet**.
 
-## Checklist de Vérification
+## Checklist de vérification
 
 1. **Indiquer le périmètre** : produit (App/CLI/IDE/Cloud), OS, version CLI
 2. **Reproduire étape par étape** : depuis zéro ou worktree propre
@@ -113,11 +114,11 @@ Vérifier le **chemin opérationnel complet**.
 5. **Mettre à jour la date** : `verification.checkedAt` doit correspondre à la date réelle du contrôle ; ne pas rafraîchir en masse d’anciennes dates comme si une nouvelle révision avait eu lieu
 6. **Revue indépendante** : `verified` idéalement confirmé par quelqu'un autre que l'auteur
 
-## Ordre de Vérification
+## Ordre de vérification
 
 1. Confirmer produit, entrée, scénario
 2. Parcourir les étapes documentées
-3. Vérifier croisé les faits volatils avec la doc officielle
+3. Recouper les faits susceptibles de changer avec la documentation officielle
 4. Rétrograder les parties incertaines ou non reproduites
 5. Mettre à jour statut et date en dernier
 
@@ -128,7 +129,7 @@ Préférer `review` plutôt qu'un `verified` prématuré.
 Re-vérifier trimestriellement ou sur les releases majeures :
 
 - Noms de commandes et sous-commandes, flags
-- Permissions par défaut et comportement Bac à sable
+- Permissions par défaut et comportement bac à sable
 - Plans, noms de modèles, disponibilité régionale
 - Noms d'événements MCP/Hook
 
@@ -140,7 +141,7 @@ Re-vérifier trimestriellement ou sur les releases majeures :
 
 ## Associé
 
-- [Politique de version du handbook](/fr/guide/start-here/handbook-version-policy/)
+- [Politique de version du manuel](/fr/guide/start-here/handbook-version-policy/)
 - [Ressources officielles](/fr/guide/reference/official-resources/)
 
 `verified` signifie vérifié contre la base actuelle indiquée avec des preuves traçables — pas seulement l'intuition de l'auteur.

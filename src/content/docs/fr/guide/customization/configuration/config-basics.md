@@ -1,16 +1,20 @@
 ---
-title: "Bases de la configuration"
+title: Bases de la configuration
 description: Emplacements des fichiers de configuration Codex, paramètres courants et introduction aux approbations, bac à sable et modèles.
 locale: fr
 source_locale: zh-CN
-source_revision: ee00ab5
+source_revision: "ee00ab5"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: Les matériaux de configuration du Help Center OpenAI utilisent encore directement `~/.codex/config.toml` et `~/.codex/.env`, et notent que l'App de bureau/IDE peut nécessiter un redémarrage pour lire ces paramètres ; cette page évite de lier des noms de clés volatils et ne conserve que le cadre stable de configuration utilisateur, politique gérée et intentions courantes comme modèle/approbation/bac à sable.
+  checkedAt: '2026-07-26'
 ---
-
 La configuration permet d'**unifier le comportement de Codex** sur votre machine ou dans un projet sans répéter le modèle, le niveau d'approbation ou la politique de bac à sable à chaque session.
 
 ## Sur cette page
@@ -83,7 +87,7 @@ Contexte conceptuel : [Modèles et raisonnement](/fr/guide/foundations/models-an
 |---|---|
 | Débutant / dépôt non fiable | Approbation plus stricte ; limiter le réseau et la portée d'écriture |
 | Projet personnel fiable | Réduire les interruptions dans des limites sûres |
-| Dépôt entreprise | Suivre la politique gérée ; ne pas relaxer par vous-même |
+| Dépôt entreprise | Suivre la politique gérée ; ne pas assouplir vous-même les restrictions |
 
 Contexte conceptuel : [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
@@ -128,13 +132,7 @@ Généralement :
 
 La configuration peut inclure **listes d'autorisation de chemins, politique réseau, listes de serveurs MCP** — avant de modifier, imaginez « un prompt malveillant pourrait abuser de ce paramètre ? » En environnement entreprise, les administrateurs devraient déployer ; les individus ne devraient pas contourner la politique gérée.
 
-La configuration convient aux défauts que vous répéteriez presque à chaque fois ; vous n'avez pas besoin de chaque règle dans les fichiers de configuration.
+La configuration convient aux réglages par défaut que vous choisissez presque à chaque fois ; vous n'avez pas besoin de chaque règle dans les fichiers de configuration.
 
 ## Références
 - Documentation de configuration OpenAI Codex
----
-
-**Statut :** vérifié  
-**Produits concernés :** CLI / App  
-**Base de vérification :** Les matériaux de configuration du Help Center OpenAI utilisent encore directement `~/.codex/config.toml` et `~/.codex/.env`, et notent que l'App de bureau/IDE peut nécessiter un redémarrage pour lire ces paramètres ; cette page évite de lier des noms de clés volatils et ne conserve que le cadre stable de configuration utilisateur, politique gérée et intentions courantes comme modèle/approbation/bac à sable.  
-**Dernière vérification :** 2026-07-26

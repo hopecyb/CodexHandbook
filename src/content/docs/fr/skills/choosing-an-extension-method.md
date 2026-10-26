@@ -3,9 +3,15 @@ title: Choisir une méthode d'extension
 description: Choisir entre prompt, AGENTS.md, Skill, MCP, Hook, Plugin et Scheduled task selon ce qu'il faut conserver ou automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: 28ae6f5
-translation_status: draft
+source_revision: '28ae6f5'
+translation_status: reviewed
 translated_at: 2026-09-20
+legacyVerification:
+  status: verified
+  products: ChatGPT Web / App de bureau / Codex CLI / IDE (prise en charge variable selon le mécanisme)
+  basis: Responsabilités, points d’entrée des produits et limites de sécurité comparés à la documentation officielle OpenAI Skills, Plugins, MCP, Hooks et Scheduled tasks du 25 août 2026.
+  checkedAt: '2026-08-25'
+reviewed_at: '2026-10-26'
 ---
 
 Quand les mécanismes d'extension se multiplient, l'erreur la plus fréquente consiste à choisir d'abord un nom technique, puis à chercher un problème auquel l'appliquer. Il vaut mieux commencer par cette question : **que voulez-vous conserver, ou que voulez-vous déclencher automatiquement ?**

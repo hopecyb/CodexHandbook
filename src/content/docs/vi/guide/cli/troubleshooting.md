@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "CLI", "basis": "Tài liệu nhập môn và cấu hình CLI hiện tại trên OpenAI Help Center vẫn phủ các nguồn vấn đề phổ biến về cài đặt, xác thực, quyền/Sandbox và thư mục làm việc; trang này dùng phương pháp phân theo triệu chứng thành bốn loại cài đặt, đăng nhập, quyền, thư mục — là khung phân luồng sự cố ổn định.", "checkedAt": "2026-07-26"}
 title: Xử lý sự cố CLI
 description: Lần theo xác thực, quyền và lệnh thất bại.
 locale: vi
 source_locale: zh-CN
-source_revision: 57b062f
+source_revision: "57b062f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -55,10 +56,3 @@ Nhiều vấn đề CLI không phải lệnh không chạy được, mà bạn c
 Khi xử lý sự cố CLI, phân rõ đây là vấn đề cài đặt, đăng nhập, quyền hay thư mục thì lần theo thường suôn hơn.
 
 Giải thích chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** CLI  
-**Căn cứ kiểm chứng:** Tài liệu nhập môn và cấu hình CLI hiện tại trên OpenAI Help Center vẫn phủ các nguồn vấn đề phổ biến về cài đặt, xác thực, quyền/Sandbox và thư mục làm việc; trang này dùng phương pháp phân theo triệu chứng thành bốn loại cài đặt, đăng nhập, quyền, thư mục — là khung phân luồng sự cố ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26

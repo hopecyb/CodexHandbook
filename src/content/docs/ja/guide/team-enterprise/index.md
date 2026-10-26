@@ -1,17 +1,22 @@
 ---
 title: チームとエンタープライズ
-description: 採用、標準、管理、セキュリティガバナンス——Codex を大規模に着地させつつ制御を失わない。
+description: 採用、標準、管理、セキュリティガバナンス——Codex を大規模に導入しつつ制御を失わない。
 sidebar:
   order: 70
 locale: ja
 source_locale: zh-CN
-source_revision: b44c5d1
+source_revision: "b44c5d1"
 translation_status: reviewed
-translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+translated_at: "2026-08-26"
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: 組織版 / チーム機能（プランによる）
+  basis: OpenAI 現行ヘルプセンターと Plugin/アプリ文書は、チームでの Codex/ChatGPT の導入にロールアクセス、Plugin 有効化、動作承認、データ境界、監査責任などのガバナンス層が必要と継続強調。本章ナビとガバナンスモデル、読書順に焦点。具体管理画面パスにバインドしない。
+  checkedAt: "2026-07-26"
 ---
 
-**チームとエンタープライズ**章はエンジニアリング責任者、プラットフォーム、セキュリティチーム向けです。Codex を個人で使える状態から、チームで管理・監査・振り返り可能な状態へ進めることを主眼に置きます。[学習パス · チーム](/ja/guide/learning-paths/team/) と併読すると、本章はガバナンスと着地寄りです。
+**チームとエンタープライズ**章はエンジニアリング責任者、プラットフォーム、セキュリティチーム向けです。Codex を個人で使える状態から、チームで管理・監査・振り返り可能な状態へ進めることを主眼に置きます。[学習パス · チーム](/ja/guide/learning-paths/team/) と併読すると、本章はガバナンスと導入に重点を置いていますです。
 
 まだ個人利用、または基礎に慣れている段階なら後回しでよいです。多人数利用時の境界、プロセス、責任の整理が主題です。
 
@@ -34,7 +39,7 @@ reviewed_at: 2026-08-26
 
 | 役割 | 先に読むページ |
 |---|---|
-| EM / 責任者 | [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) · [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) |
+| EM / 責任者 | [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) · [許容利用](/ja/guide/team-enterprise/governance/acceptable-use/) |
 | プラットフォームエンジニア | [チームルール](/ja/guide/customization/rules/team-rules/) · [Hooks](/ja/skills/hooks/hooks-overview/) |
 | セキュリティ | [Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/ja/guide/team-enterprise/security/prompt-injection/) |
 
@@ -55,7 +60,7 @@ reviewed_at: 2026-08-26
 | テーマ | ページ |
 |---|---|
 | セキュリティ | [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) · [Plugin/MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/ja/guide/team-enterprise/security/prompt-injection/) |
-| ガバナンス | [acceptable use 政策](/ja/guide/team-enterprise/governance/acceptable-use/) |
+| ガバナンス | [許容利用ポリシー](/ja/guide/team-enterprise/governance/acceptable-use/) |
 
 adoption、administration、deployment-patterns などは [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（リポジトリ計画文書）で補充予定。
 
@@ -72,7 +77,7 @@ adoption、administration、deployment-patterns などは [chapter-outline](http
 
 ## 受け入れチェックリスト
 
-- [ ] 書面 AUP または同等政策がある
+- [ ] 書面 AUP または同等ポリシーがある
 - [ ] 高リスク拡張に承認フローがある
 - [ ] インシデント連絡先（セキュリティ／プラットフォーム）が明確
 
@@ -82,20 +87,13 @@ adoption、administration、deployment-patterns などは [chapter-outline](http
 
 必ず今深読する必要はありません。Codex が個人ツールからチームシステムになると、prompt の書き方以外の問題が出ます。
 
-### 2. なぜ監査、ガバナンス、政策ばかり？
+### 2. なぜ監査、ガバナンス、ポリシーばかり？
 
 チーム環境では、長期多人数利用で境界が曖昧になるリスクが大きいからです。
 
 ### 3. 概念だけ知りたいなら何から？
 
 - [Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [acceptable use 政策](/ja/guide/team-enterprise/governance/acceptable-use/)
+- [許容利用ポリシー](/ja/guide/team-enterprise/governance/acceptable-use/)
 
 個人入門が主なら後回し。チーム展開、権限管理、リスク制御のときに戻ってください。
-
----
-
-**状態：** verified  
-**対象製品：** 組織版 / チーム機能（プランによる）  
-**検証根拠：** OpenAI 現行ヘルプセンターと Plugin/アプリ文書は、チームでの Codex/ChatGPT 着地にロールアクセス、Plugin 有効化、動作承認、データ境界、監査責任などのガバナンス層が必要と継続強調。本章ナビとガバナンスモデル、読書順に焦点。具体管理画面パスにバインドしない。  
-**最終検証：** 2026-07-26

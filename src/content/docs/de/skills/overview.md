@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Die aktuellen Codex-Laufzeitregeln zum Laden von Skills (`SKILL.md`, vollständige Skill-Datei bei Bedarf) und die OpenAI-Help-Definition von Skills als wiederverwendbare Workflows in „Skills in ChatGPT“ stimmen überein; diese Seite fokussiert Konzepte und Verzeichnisorganisation und hängt nicht an volatiler UI."
+  checkedAt: "2026-07-26"
 title: Skills-Überblick
 description: Mit SKILL.md wiederverwendbare Workflows an Codex vermitteln — einmal schreiben, bei Bedarf aufrufen.
 locale: de
 source_locale: zh-CN
-source_revision: 3147d2c
+source_revision: "3147d2c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Ein **Skill** ist ein Verzeichnis mit `SKILL.md` (optional Skripte und Referenzen), das einen festen Ablauf zu einer Fähigkeit packt, die Codex **automatisch oder explizit** aufrufen kann.
@@ -21,7 +26,7 @@ Er eignet sich für Methoden, die schon wiederholt vorkamen und weiter wiederver
 
 | | Slash-Befehl | Skill |
 |---|---|---|
-| Auslöser | Du tippst `/xxx` | Du rufst `$name` auf, oder das Modell matched die Beschreibung |
+| Auslöser | Du tippst `/xxx` | Du rufst `$name` auf, oder das Modell gleicht die Aufgabe mit der Beschreibung ab |
 | Kontext | Wird in der Regel sofort expandiert | **Progressive Disclosure**: sonst nur Name + Beschreibung, vollständiger Text erst bei Auswahl |
 | Geeignet für | Feste, häufige Einstiege, die du dir merkst | Lange Abläufe mit Doku, bei denen das Modell selbst entscheiden soll, wann sie passen |
 
@@ -117,9 +122,3 @@ Skills sind kein Muss zum Start — sie eignen sich, um wiederkehrende Abläufe 
 
 ## Quellen
 - OpenAI Codex Skills-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfgrundlage:** Die aktuellen Codex-Laufzeitregeln zum Laden von Skills (`SKILL.md`, vollständige Skill-Datei bei Bedarf) und die OpenAI-Help-Definition von Skills als wiederverwendbare Workflows in „Skills in ChatGPT“ stimmen überein; diese Seite fokussiert Konzepte und Verzeichnisorganisation und hängt nicht an volatiler UI.  
-**Zuletzt geprüft:** 2026-07-26

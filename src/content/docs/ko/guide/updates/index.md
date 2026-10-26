@@ -9,9 +9,10 @@ verification:
   summary: 현재 저장소 내용과 실행 기록을 바탕으로 정리했습니다. 안내서의 변경 기록이지 OpenAI 제품 출시 기록이나 사이트 배포 완료를 뜻하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 3c99d35
-translation_status: draft
+source_revision: '3c99d35'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 이 페이지는 안내서에서 무엇이 바뀌었고 어떤 작업에 영향을 주며 어디까지 검증했는지 기록합니다. 날짜는 내용을 정리한 날입니다. 실제 게시 상황은 지금 방문 중인 사이트 버전을 기준으로 확인하세요. 제품 기능의 변화는 관련 튜토리얼에 연결된 공식 출처를 확인하세요.
@@ -23,7 +24,7 @@ translated_at: 2026-09-20
 | [주간 매출 보고서](/ko/cases/analyze-a-spreadsheet/)에 전체 입력과 결과 추가 | 46행의 합성 데이터를 내려받아 환불, 중복 제거, 전기 대비 변화를 연습할 수 있음 | [독립 계산 검증](/downloads/sales-weekly-report/record.md) |
 | [출처 기반 글](/ko/cases/write-an-article/)에 사실 매핑과 상충 자료 추가 | 모르는 점을 남기고 합성 인터뷰를 실제 증언으로 취급하지 않는 연습 | [출처 및 구조 검사](/downloads/source-backed-article/validation/record.md) |
 | [발표 자료](/ko/cases/create-a-slide-deck/)에 PPTX, PDF, 8쪽 미리 보기 제공 | 편집 가능한 텍스트와 화면을 확인할 수 있으나 모든 소프트웨어와의 호환성은 보장하지 않음 | [소프트웨어 및 렌더링 기록](/downloads/article-to-slides/validation/record.md) |
-| [제작자 경로](/ko/guide/learning-paths/creator/)와 [개발자 경로](/ko/guide/learning-paths/developer/)를 결과물 중심 단계로 변경 | 각 단계에 자료, 인수 기준, 다음 단계가 있고 개발자는 실패와 성공 테스트를 기록 가능 | [개발자 재실행 기록](/downloads/developer-path/run-record.json) |
+| [제작자 경로](/ko/guide/learning-paths/creator/)와 [개발자 경로](/ko/guide/learning-paths/developer/)를 결과물 중심 단계로 변경 | 각 단계에 자료, 완료 기준, 다음 단계가 있고 개발자는 실패와 성공 테스트를 기록 가능 | [개발자 재실행 기록](/downloads/developer-path/run-record.json) |
 | [네 종류의 Skill](/ko/skills/examples/)에 완전한 다운로드 패키지 제공 | 리뷰, 글쓰기, 조사, 자동화에 참고 자료와 확인 절차가 있음. 호출 샘플을 라우팅 측정으로 취급하지 않음 | 각 상세 페이지의 “검증 환경과 증거” |
 | [Issue 분류](/ko/cases/use-cases/team-automation/issue-triage-suggestions/)의 schema와 도입 기준 수정 | “샘플 3개와 일치율 80%”를 도입 근거로 삼지 않고 사람의 검토를 권장 | [드라이런 기록](/downloads/issue-triage/validation/record.md) |
 | [링크 검사](/ko/cases/use-cases/team-automation/scheduled-link-check/)와 [실패 복구](/ko/guide/reference/troubleshooting/failure-recovery-lab/)에 실행 자료 추가 | 로컬 오류와 복구를 재현할 수 있음. 외부 링크, 실제 예약 실행, 로그인 장애는 검증하지 않음 | [복구 기록](/downloads/failure-recovery/validation/record.md) |
@@ -38,19 +39,19 @@ translated_at: 2026-09-20
 
 ## 2026-09-18: 완전한 웹사이트 연습
 
-[웹사이트 만들기](/ko/cases/build-a-website/) 사례에 고정 요구사항, HTML 시작 페이지, 참고 완성본, 인수 양식, 버튼 앵커 오류를 추가했습니다. 참고 페이지는 데스크톱과 너비 375px 화면에서 확인했으며 실제 수정과 링크 로그를 보존했습니다. 배포, 가입자 확보, 모델 효과를 주장하지 않습니다.
+[웹사이트 만들기](/ko/cases/build-a-website/) 사례에 고정 요구사항, HTML 시작 페이지, 참고 완성본, 검수 양식, 버튼 앵커 오류를 추가했습니다. 참고 페이지는 데스크톱과 너비 375px 화면에서 확인했으며 실제 수정과 링크 로그를 보존했습니다. 배포, 가입자 확보, 모델 효과를 주장하지 않습니다.
 
 ## 2026-09-18: 중국어 시작 화면 정리
 
-홈은 작업하기, 역할별 경로, 문제 찾기, 재사용 자료를 중심으로 구성하고 반복되는 소개와 기능 설명을 덜어냈습니다. 간체와 번체 중국어 주 메뉴는 작업, 학습 경로, 참고 자료를 강조합니다. 로드맵은 자료 메뉴로 옮겼고 모바일도 같은 입구를 사용합니다.
+홈은 작업하기, 역할별 경로, 문제 찾기, 재사용 자료를 중심으로 구성하고 반복되는 소개와 기능 설명을 덜어냈습니다. 간체와 번체 중국어 주 메뉴는 작업, 학습 경로, 참고 자료를 강조합니다. 로드맵은 자료 메뉴로 옮겼고 모바일도 같은 메뉴를 사용합니다.
 
 ## 2026-09-18: 초보자 고정 자료와 복구 연습
 
 [초보자 다섯 단계 경로](/ko/guide/learning-paths/beginner/)는 하나의 합성 행사 자료, 참고 공지, 네 가지 오류 샘플, 검토와 인계 양식을 사용합니다. 읽기 전용, 단일 파일 수정에서 실제 복사본 복구까지 진행합니다. [작성자의 스크립트 기록](/downloads/first-project/validation/record.json)은 파일 작업 흐름만 증명하며 독립적인 모델 평가나 독자의 완주 결과는 없습니다.
 
-## 2026-09-18: 로드맵 날짜와 실습 입구
+## 2026-09-18: 로드맵 날짜와 실습 안내
 
-[AI 애플리케이션 로드맵](/ko/ai-roadmap/)은 이제 논문, 제품 출시, 엔지니어링 글, 최초 발표일 순으로 정렬하지 않은 프로젝트 주제를 구분합니다. 각 주제에 구체적인 출처와 연습 입구가 있습니다. 글 한 편의 날짜로 업계 전체의 확산 시기를 표현하지 않고, Skill 패키지 구조 검사도 클라이언트 호출 실측으로 제시하지 않습니다. 기존 URL은 유지하며 옛 연월은 현재 사건의 날짜가 아닙니다. 출처와 검증 범위는 각 주제 페이지 상단에 있습니다.
+[AI 애플리케이션 로드맵](/ko/ai-roadmap/)은 이제 논문, 제품 출시, 엔지니어링 글, 최초 발표일 순으로 정렬하지 않은 프로젝트 주제를 구분합니다. 각 주제에 구체적인 출처와 연습 링크가 있습니다. 글 한 편의 날짜로 업계 전체의 확산 시기를 표현하지 않고, Skill 패키지 구조 검사도 클라이언트 호출 실측으로 제시하지 않습니다. 기존 URL은 유지하며 옛 연월은 현재 사건의 날짜가 아닙니다. 출처와 검증 범위는 각 주제 페이지 상단에 있습니다.
 
 ## 2026-09-18: 오해를 줄이는 설명 수정
 

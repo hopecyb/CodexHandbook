@@ -1,20 +1,21 @@
 ---
-title: "Context Engineering（コンテキストエンジニアリング）"
-description: "コンテキストにはタスク、指示、ファイル、検索結果、ツール出力が含まれます。今のタスクに含めるもの、必要時に読むもの、圧縮後に残すものを決める必要があります。"
-contentType: "guide"
-editorialStatus: "review"
+title: Context Engineering（コンテキストエンジニアリング）
+description: コンテキストにはタスク、指示、ファイル、検索結果、ツール出力が含まれます。今のタスクに含めるもの、必要時に読むもの、圧縮後に残すものを決める必要があります。
+contentType: guide
+editorialStatus: review
 verification:
-  kind: "source-checked"
-  checkedAt: "2026-09-18"
-  summary: "以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。"
+  kind: source-checked
+  checkedAt: '2026-09-18'
+  summary: 以下の出来事とプロジェクトの説明は一次資料で確認済みです。学習上の助言は筆者の判断であり、出典の確認は製品を実際に試したことを意味しません。
   evidence:
-    - label: "コンテキストエンジニアリングの記事"
-      href: "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+  - label: コンテキストエンジニアリングの記事
+    href: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
 locale: ja
 source_locale: zh-CN
-source_revision: d668433
-translation_status: draft
+source_revision: "d668433"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 ## 確認可能な出来事と範囲
 

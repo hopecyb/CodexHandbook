@@ -1,31 +1,36 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Integrations"
+  basis: "OpenAI Help Center zu Plugins/Apps betont weiterhin: Integration über Plugins, Apps und Templates; Admins steuern Rollen, Lese-/Schreibaktionen, Bestätigung und Datengrenzen. Fokus: Designprinzipien, Berechtigungsschichtung, Einführungsreihenfolge — nicht flüchtige UI eines externen Systems."
+  checkedAt: "2026-07-26"
 title: Integrationen (Überblick)
 description: "GitHub, Ticketsysteme, Chat und interne Plattformen an Codex — Grenzen, Berechtigungen und Rückkopplung."
 sidebar:
   order: 55
 locale: de
 source_locale: zh-CN
-source_revision: 140102c
+source_revision: "140102c"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Codex-Integration heißt nicht nur „noch ein Tool anschließen“, sondern den Agent in Ihre bestehende Kollaborationskette zu setzen: Code-Hosting, Ticketfluss, Notifications, interne Plattformen, Wissensbasen.
+Codex-Integration heißt nicht nur „noch ein Tool anschließen“, sondern den Agent in deine bestehenden Arbeitsabläufe zu setzen: Code-Hosting, Ticketfluss, Notifications, interne Plattformen, Wissensbasen.
 
 Vor dem Bau klären:
 
 - Wer darf die Automatisierungskette auslösen
 - Was Codex lesen und zurückschreiben darf
-- Bei Fehlern: wer erfährt es, wer haftet, wie Rollback
+- Bei Fehlern: wer erfährt es, wer verantwortlich ist, wie Rollback
 
 ## Was Integration verändert
 
-**Integration** = Codex nicht nur im Chat, sondern in den Systemen, die Sie ohnehin nutzen.
+**Integration** = Codex nicht nur im Chat, sondern in den Systemen, die du ohnehin nutzt.
 
 Zum Beispiel:
 
-- GitHub: PRs und Review-Kommentare lesen
+- GitHub: PRs lesen und Kommentare einreichen
 - Ticketsystem: Hintergrund lesen, Handlungsvorschläge erzeugen
 - Nach Aufgabenabschluss Ergebnis in den Chat
 
@@ -37,7 +42,7 @@ Integration ändert, ob Codex in echte Workflows eintritt — oder nur im Dialog
 
 Viele Teams wollen GitHub, Jira, Slack, Wissensbasis, interne APIs auf einmal.
 
-Erster Pilot: **eine kürzeste Kette mit erkennbarem Nutzen**.
+Erster Pilot: **eine möglichst kurze Kette mit erkennbarem Nutzen**.
 
 Realistisch:
 
@@ -88,7 +93,7 @@ Zum Beispiel:
 
 - PR-Review-Kommentarentwurf automatisch
 - Issue-Zusammenfassung automatisch
-- Nicht default auto-mergen, Prod-Config ändern, Hochrisiko-Tickets schließen
+- Standardmäßig weder automatisch zusammenführen noch Produktionskonfigurationen ändern oder Tickets mit hohem Risiko schließen
 
 ## Häufige Integrationstypen
 
@@ -138,7 +143,7 @@ Geeignet:
 
 Hier zählen **Berechtigungsschichtung und Inhaltsvertrauen**.
 
-## Vor dem Landen urteilen
+## Vor der Umsetzung entscheiden
 
 Schnell „lohnt sich zuerst?“:
 
@@ -196,9 +201,3 @@ Erste Integration: Codex zuerst „sehen“ und „vorschlagen“ lassen — lei
 
 ## Quellen
 - Offizielle OpenAI-Codex-Integrations- und Entwicklerdokumentation
----
-
-**Status:** verified  
-**Gilt für:** Integrations  
-**Prüfgrundlage:** OpenAI Help Center zu Plugins/Apps betont weiterhin: Integration über Plugins, Apps und Templates; Admins steuern Rollen, Lese-/Schreibaktionen, Bestätigung und Datengrenzen. Fokus: Designprinzipien, Berechtigungsschichtung, Einführungsreihenfolge — nicht flüchtige UI eines externen Systems.  
-**Zuletzt geprüft:** 2026-07-26

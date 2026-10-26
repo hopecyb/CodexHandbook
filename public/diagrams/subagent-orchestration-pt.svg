@@ -1,6 +1,6 @@
 <svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="title desc">
   <title id="title">Arquitetura de orquestração de subagentes Codex</title>
-  <desc id="desc">O Agent principal mantém objetivos, restrições e permissões enquanto delega trabalho delimitado. Subagentes herdam o sandbox e podem compartilhar um workspace; retornam evidências para resolução de conflitos, merge e verificação final.</desc>
+  <desc id="desc">O Agent principal mantém o objetivo geral, as restrições do usuário e o modo de permissão. Delega exploração somente de leitura, localização de testes e conferência de propostas com limites claros a contextos independentes. Os subagentes herdam o sandbox e podem compartilhar a área de trabalho. Retornam conclusões e evidências; o Agent principal resolve conflitos, integra os resultados e faz a verificação final.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
     .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
@@ -18,7 +18,7 @@
   </defs>
   <rect width="1200" height="800" rx="8" fill="#020617"/>
   <rect width="1200" height="800" rx="8" fill="url(#grid)"/>
-  <text x="44" y="48" class="h1">O Agent principal orquestra, subagentes focam e evidências retornam ao thread principal para aceitação</text>
+  <text x="44" y="48" class="h1">Agent principal coordena; subagentes focam; o thread principal valida as evidências</text>
   <text x="44" y="75" class="sub">Paralelize primeiro trabalho delimitado de somente leitura. Isolamento de contexto não é isolamento de arquivos; tarefas de escrita precisam de propriedade separada.</text>
 
   <rect x="356" y="108" width="488" height="132" rx="10" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
@@ -33,7 +33,7 @@
 
   <rect x="44" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#34d399" stroke-width="1.5"/>
   <text x="192" y="357" text-anchor="middle" class="label">Subagente A</text>
-  <text x="192" y="388" text-anchor="middle" class="note">Caminho de código somente leitura</text>
+  <text x="192" y="388" text-anchor="middle" class="note">Examinar caminhos de código sem editar</text>
   <path d="M72 408H312" fill="none" stroke="#14532d"/>
   <text x="192" y="439" text-anchor="middle" class="note">Entregar: cadeia de chamadas e locais de arquivos</text>
   <text x="192" y="469" text-anchor="middle" class="tiny">Contexto independente · permissões herdadas</text>
@@ -45,7 +45,7 @@
   <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
   <text x="600" y="439" text-anchor="middle" class="note">Entregar: comando com falha e logs</text>
   <text x="600" y="469" text-anchor="middle" class="tiny">Contexto independente · permissões herdadas</text>
-  <text x="600" y="491" text-anchor="middle" class="tiny">Conclusões devem ser reproduzíveis</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Conclusões devem ser verificáveis</text>
 
   <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1008" y="357" text-anchor="middle" class="label">Subagente C</text>
@@ -70,5 +70,5 @@
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">O Agent principal consolida, resolve conflitos e verifica</text>
   <text x="600" y="721" text-anchor="middle" class="note">Comparar evidências → decidir edições → fazer merge → rodar testes e build novamente</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Conclusão de subtarefa não é conclusão da tarefa; apenas evidência reproduzível sustenta a conclusão final.</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Concluir uma subtarefa não conclui o todo; a conclusão final exige evidências verificáveis.</text>
 </svg>

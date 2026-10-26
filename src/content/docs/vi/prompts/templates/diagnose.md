@@ -8,12 +8,11 @@ title: Mẫu chẩn đoán
 description: Định vị nguyên nhân gốc trước khi bàn sửa.
 locale: vi
 source_locale: zh-CN
-source_revision: 2491371
+source_revision: "2491371"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
-
 
 Hiểu lầm thường gặp của tác vụ chẩn đoán: miệng nói «kiểm tra trước» nhưng vẫn mặc định để nó sửa luôn.
 
@@ -29,7 +28,7 @@ Ràng buộc: Chưa sửa code; liệt kê 2–3 nguyên nhân gốc có thể v
 Đầu ra:
 1. Nguyên nhân gốc khả dĩ nhất (kèm bằng chứng)
 2. Bước kiểm chứng thực thi được (lệnh hoặc checkpoint)
-3. Nếu kiểm chứng pass, bản nháp kế hoạch sửa (chờ tôi xác nhận rồi mới thực thi)
+3. Nếu xác minh được nguyên nhân, bản nháp kế hoạch sửa (chờ tôi xác nhận rồi mới thực thi)
 ```
 
 ## Khi nào phù hợp mẫu này

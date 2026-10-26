@@ -9,8 +9,9 @@ description: "Erkundung, Planung, Ausführung und Prüfung nach Umfang und Unsic
 locale: de
 source_locale: zh-CN
 source_revision: "4a95760"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Dies ist die vom Handbuch empfohlene Art, Aufgaben zu organisieren – von „noch unklar, wie es geht“ bis „bereit zur Abnahme“. Vier Phasen bedeuten nicht vier Genehmigungen. Eine kleine Aufgabe mit klarem Umfang kann ohne Unterbrechung erledigt werden; nur wenn die Vorgehensweise offen ist oder eine nötige Berechtigung fehlt, muss auf eine Entscheidung gewartet werden. Beginnen Sie mit den [Aufgabenstufen](/de/prompts/ask-for-a-plan/).
@@ -36,7 +37,7 @@ Beispiel-Prompt:
 Ändere vorerst keinen Code. Lies @src/auth/ und die zugehörigen Tests und erkläre in einer Liste:
 1. Aktuellen Login-Ablauf
 2. Dateien, die mit dem Safari-Layout-Bug zusammenhängen könnten
-3. Einen Punkt, den du unsicher bist und den ich bestätigen soll
+3. Einen Punkt, bei dem du unsicher bist und den ich bestätigen soll
 ```
 
 Artefakt: Problemstellung, Wirkungsradius, offene Bestätigungspunkte.

@@ -24,9 +24,10 @@ assets:
   version: 1.0.0
 locale: ko
 source_locale: zh-CN
-source_revision: e29d1b3
-translation_status: draft
+source_revision: "e29d1b3"
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: "2026-10-26"
 ---
 
 검토 전에 무엇을 비교할지 명확히 하세요. 이 Skill은 '현재 커밋되지 않은 변경'을 'main 대비 커밋'으로 잘못 이해하거나 작업 트리가 정상으로 보여 인덱스의 오류를 놓치는 일을 막습니다.
@@ -46,7 +47,7 @@ translated_at: '2026-09-20'
 
 ## 설치와 첫 호출
 
-Python 3.10 이상, Git, 하나 이상의 커밋이 있는 로컬 연습 저장소가 필요합니다. 압축을 푼 `scoped-review/`를 대상 프로젝트의 `.agents/skills/`에 넣고 진입점이 `.agents/skills/scoped-review/SKILL.md`인지 확인하세요. 같은 이름의 Skill이 있으면 덮어쓰기 전에 비교하세요.
+Python 3.10 이상, Git, 하나 이상의 커밋이 있는 로컬 연습 저장소가 필요합니다. 압축을 푼 `scoped-review/`를 대상 프로젝트의 `.agents/skills/`에 넣고 진입점이 `.agents/skills/scoped-review/SKILL.md`인지 확인하세요. 같은 이름의 Skill이 있으면 먼저 비교하고 기존 파일을 덮어쓰지 마세요.
 
 로컬 Skill의 발견 및 진입점은 [공식 안내](https://learn.chatgpt.com/docs/build-skills)를 따르세요. 설치 후 선택 가능한지 확인하고 명시적으로 호출합니다.
 
@@ -68,7 +69,7 @@ $scoped-review 이 연습 저장소에서 현재 커밋되지 않은 코드 변�
 
 이때 `git diff HEAD`에는 변화가 없어 보일 수 있지만 인덱스를 커밋하면 여전히 오류가 들어갑니다. `amount=40, percent=10`이면 staged 버전의 결과는 36이 아니라 -360입니다.
 
-올바른 검토는 staged 버전의 오류와 unstaged 패치가 이를 수정한다는 점을 각각 보고해야 합니다. [작성자 참고 자료](/downloads/skills/scoped-review/fixtures/expected-review.md)는 브랜치 모드를 이 로컬 문제에 섞지 말아야 하는 이유도 설명합니다. 실제 모델 출력은 아닙니다.
+올바른 검토는 staged 버전의 오류와 unstaged 패치가 이를 수정한다는 점을 각각 보고해야 합니다. [작성자 참고 자료](/downloads/skills/scoped-review/fixtures/expected-review.md)는 브랜치 검토에 이 로컬 문제를 포함하지 말아야 하는 이유도 설명합니다. 실제 모델 출력은 아닙니다.
 
 ## 포함된 검증 실행
 

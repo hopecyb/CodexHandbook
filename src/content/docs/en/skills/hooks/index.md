@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Environments using a local Codex host; trust review and `/hooks` management follow the Codex CLI documentation"
+  checkedAt: "2026-08-25"
 title: Hooks
 description: Run scripts or MCP tools at Codex lifecycle points for checks, logging, and policy control.
 locale: en
 source_locale: zh-CN
-source_revision: a0312e9
+source_revision: 'a0312e9'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 A Hook is an automatic handler in the Codex lifecycle. It can run a script or MCP tool when a session starts, a prompt is submitted, before or after a tool call, around context compaction, when a subagent stops, or when the main thread ends.
@@ -34,16 +38,8 @@ A Hook is an automatic handler in the Codex lifecycle. It can run a script or MC
 | Check a submitted prompt or add context | `UserPromptSubmit` |
 | Require the main thread or a subagent to continue another turn | `Stop` / `SubagentStop` |
 
-Hooks do not replace sandboxing, approvals, command rules, or service-side permissions. They are an additional guardrail, and some managed-tool paths do not pass through local tool Hooks.
+Hooks do not replace sandboxing, approvals, command rules, or service-side permissions. They are an additional guardrail, and some hosted-tool paths do not pass through local tool Hooks.
 
 ## Official source
 
 - [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
-
----
-
-**Status:** verified
-
-**Applies to:** Environments using a local Codex host; trust review and `/hooks` management follow the Codex CLI documentation
-
-**Last verified:** 2026-08-25

@@ -26,9 +26,10 @@ next:
   label: "Fehlerbehebung mit Überprüfung beginnen"
 locale: de
 source_locale: zh-CN
-source_revision: 22d8bd3
-translation_status: draft
+source_revision: "22d8bd3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 Mit einer kleinen Warenkorbübung erledigst du vier Dinge: Code erklären, Fehler beheben, Unterschiede prüfen und Belege übergeben. Dafür musst du nicht vorher alle Clients, Konfigurationen oder Multi-Agent-Funktionen lernen.
 
@@ -36,7 +37,7 @@ Voraussetzung: einfaches JavaScript lesen und Node.js-Tests im lokalen Terminal 
 
 ## Code und Belegverzeichnis vorbereiten
 
-Verwende `examples/complete-workflows/developer/verified-bug-fix/` im [Quellrepository des Handbuchs](https://github.com/hopecyb/CodexHandbook). Lies zuerst `brief.md` und `README.md`, ohne `solution/` anzusehen. Die vollständigen Schritte stehen in [Fehler mit Überprüfung beheben](/de/cases/use-cases/software-development/fix-a-bug-with-verification/).
+Verwende `examples/complete-workflows/developer/verified-bug-fix/` im [Quellrepository des Handbuchs](https://github.com/hopecyb/CodexHandbuch). Lies zuerst `brief.md` und `README.md`, ohne `solution/` anzusehen. Die vollständigen Schritte stehen in [Fehler mit Überprüfung beheben](/de/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 Im Übungsverzeichnis:
 
@@ -52,7 +53,7 @@ Behebe den Fehler in `work/`. Bewahre `starter/` als fehlgeschlagenen Ausgangszu
 |---|---|---|---|
 | 1. Code lesen | `brief.md` und `starter/` | `code-map.md` | Eingabe, Datenweg, Fehler und Ursache sind anhand von Dateien belegt |
 | 2. Beheben und prüfen | Ursache und unveränderte Tests | `work/cart.js`, `red.txt`, `green.txt` | Erst Fehler reproduzieren, dann dieselben Tests bestehen |
-| 3. Diff prüfen | Änderung und beide Testausgaben | `review.md`, Implementierungs-Diff | Erwartungen und API unverändert, keine fremden Änderungen |
+| 3. Diff prüfen | Änderung und beide Testausgaben | `review.md`, Implementierungs-Diff | Erwartungen und API unverändert, keine sachfremden Änderungen |
 | 4. Übergeben | Belege der ersten drei Schritte | `handoff.md` | Nachfolgende Person findet aktuelle Dateien und kann den nächsten Schritt erneut ausführen |
 
 ## 1. Code lesen und eine überprüfbare Übersicht erstellen
@@ -96,7 +97,7 @@ diff -u starter/cart.test.js work/cart.test.js
 
 Der erste Befehl soll die Prozentumrechnung zeigen; Exit-Code 1 bedeutet eine Differenz, keinen Befehlsfehler. Der zweite soll ohne Ausgabe mit Code 0 enden. Lass Codex den echten Diff und die Rot-Grün-Logs nur lesend prüfen und notiere Befunde, Belege, ungedeckte Punkte und Entscheidungen in `evidence/review.md`.
 
-Prüfe zum Abschluss, dass Tests nicht abgeschwächt, API nicht geändert und keine zusätzlichen Abhängigkeiten oder irrelevanten Änderungen eingeführt wurden. Geldgenauigkeit, Steuern und ungültige Eingaben sind nicht abgedeckt; drei bestandene Tests beweisen keine Produktionssicherheit. Vergleiche mit der [Prüfreferenz des Autors](/downloads/developer-path/review-reference.md).
+Prüfe zum Abschluss, dass Tests nicht abgeschwächt, API nicht geändert und keine zusätzlichen Abhängigkeiten oder irrelevanten Änderungen eingeführt wurden. Genauigkeit von Geldbeträgen, Steuern und ungültige Eingaben sind nicht abgedeckt; drei bestandene Tests beweisen keine Produktionssicherheit. Vergleiche mit der [Prüfreferenz des Autors](/downloads/developer-path/review-reference.md).
 
 ## 4. Übergabe schreiben und aus Dateien wiederaufnehmen
 
@@ -120,7 +121,7 @@ Abgeschlossen ist die Übergabe, wenn allein die Datei zum Code, den Tests und G
 - Datei fehlt: Terminalverzeichnis und `work/` prüfen; zurück zur Vorbereitung.
 - Kein roter Test: ursprünglichen Ausgangspunkt und Tests prüfen; grünes Referenzergebnis ist keine Reproduktion.
 - Tests bestehen erst nach Änderungen an Tests: ursprüngliche Assertions wiederherstellen und Ursache erneut analysieren.
-- Fremde Änderungen: Diff behalten, Korrektur eingrenzen und Tests erneut ausführen.
+- Sachfremde Änderungen: Diff behalten, Korrektur eingrenzen und Tests erneut ausführen.
 - Übergabe passt nicht zu Dateien: aktuelle Dateien gelten, Protokoll aktualisieren, dann weiterarbeiten.
 
 Im echten Projekt ergänze die vom Repository geforderten Lint-, Typ- und vollständigen Testläufe. Ob sie nötig sind und welche Befehle gelten, steht in den Projektanweisungen. Diese Übung enthält solche zusätzlichen Prüfungen nicht; erfinde keine erfolgreichen Ergebnisse.

@@ -1,19 +1,24 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Positioniert als Fehler-Triage-Index, kein Lexikon; Klassifikation Auth/Berechtigung/Umgebung/Netz/Aufgabenlogik mit CLI-, Cloud-, Berechtigungs- und Config-Kapiteln abgeglichen; keine feste Fehlercode-Tabelle."
+  checkedAt: "2026-07-26"
 title: Fehler- und Hinweisreferenz
 description: 'Lernindex gängiger Fehlermeldungen, Exit-Codes und Ursachen — zeigt auf Troubleshooting, ersetzt keinen offiziellen Support.'
 locale: de
 source_locale: zh-CN
-source_revision: 955c0a6
+source_revision: "955c0a6"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 100
 ---
 
 Viele starren bei Fehlern auf eine englische Zeile und raten. Zuerst **klassifizieren** ist meist effektiver.
 
-Bei Fehlern zuerst: eher **Auth, Berechtigung, Umgebung, Netz oder Aufgabenlogik**? Diese Seite fasst Sinn und nächsten Schritt häufiger Hinweise — kein vollständiges Fehlerlexikon; aktuelles Verhalten: offizielle Docs und Client-Ausgabe.
+Bei Fehlern zuerst: eher **Auth, Berechtigung, Umgebung, Netz oder Aufgabenlogik**? Diese Seite erläutert die Bedeutung häufiger Hinweise und den nächsten Schritt — kein vollständiges Fehlerlexikon; aktuelles Verhalten: offizielle Docs und Client-Ausgabe.
 
 ## Fehler zuerst so lesen
 
@@ -37,7 +42,7 @@ Globaler Index: [Troubleshooting](/de/guide/reference/troubleshooting/)
 
 Oft nur Kontext; nützlich ist oft ein kurzes Schlüsselwort.
 
-### 2. Nicht-null Exit ≠ Modell kann es nicht
+### 2. Exitcode ungleich null ≠ Modell kann es nicht
 
 Kann sein:
 
@@ -67,7 +72,7 @@ Manchmal nur „finale Zusammenfassung“; nützlich darüber:
 | command not found: codex | Nicht installiert oder PATH | [CLI installieren](/de/guide/getting-started/install-cli/) |
 | Config parse error | TOML/YAML-Syntax | [CLI-Konfiguration](/de/guide/cli/configuration/) |
 | Permission denied (write) | Sandbox oder Freigabe abgelehnt | [Freigaben und Sandbox](/de/guide/cli/approvals-and-sandbox/) |
-| Nicht-null Exit (exec) | Aufgabe fehlgeschlagen oder Done-Kriterien | stderr-Logs; Prompt straffen |
+| Exitcode ungleich null (exec) | Aufgabe fehlgeschlagen oder Done-Kriterien | stderr-Logs; Prompt straffen |
 
 ## Zuerst klassifizieren
 
@@ -105,7 +110,7 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| User rejected tool call | Sie oder Policy abgelehnt | Freigeben oder Aufgabe ändern |
+| User rejected tool call | Du oder eine Richtlinie haben die Aktion abgelehnt | Prüfen, ob eine Freigabe angemessen ist, oder die Aufgabe ändern |
 | Sandbox violation | Schreibpfad oder Befehl über Grenzen | [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/) |
 | Network access denied | Outbound gesperrt | Cloud: [Internetzugriff](/de/guide/web-and-cloud/internet-access/) |
 
@@ -143,7 +148,7 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 
 - Client-Typ und Version (App / CLI / IDE / Cloud)
 - Betriebssystem
-- Redaktierter voller Fehlertext
+- Vollständiger Fehlertext mit entfernten vertraulichen Angaben
 - Nicht-interaktiv? CI?
 
 ## Fehlerreihenfolge
@@ -151,16 +156,10 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 1. Voller Fehler (nicht nur letzte Zeile)
 2. Klasse bestimmen, nicht sofort Technik raten
 3. Was gerade geändert?
-4. Eine Variable ändern und einmal retryen
+4. Eine Variable ändern und einmal erneut versuchen
 5. Sonst mit voller Info Mensch/offizielle Docs
 
 Vermeidet vermischte Änderungen; anderen hilft die Lokalisierung.
 
 ## Quellen
 - OpenAI Codex Support-Dokumentation
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Positioniert als Fehler-Triage-Index, kein Lexikon; Klassifikation Auth/Berechtigung/Umgebung/Netz/Aufgabenlogik mit CLI-, Cloud-, Berechtigungs- und Config-Kapiteln abgeglichen; keine feste Fehlercode-Tabelle.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,15 +1,20 @@
 ---
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: OpenAI Help «Skills in ChatGPT» confirma que los Skills pueden incluir instructions, supporting files y code, y que el usuario debe revisar origen y riesgo antes y después de subirlos; las recomendaciones de gobernanza de esta página se alinean con ese principio.
+  checkedAt: '2026-07-26'
 title: Seguridad y versiones de Skills
 description: Origen de instalación, límites de permisos, actualización y rollback — gobernar Skills de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: a3c81ed
+source_revision: "a3c81ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
-Un Skill no es solo una plantilla de Prompt más.
+Un Skill no es solo una plantilla de prompt más.
 
 Influye en cómo trabaja Codex y a veces trae scripts u otros recursos.
 
@@ -70,7 +75,7 @@ Como afecta al flujo, a la elección de herramientas y a cómo se ejecutan scrip
 
 ### 2. Si mucha gente lo usa, puede ir directo a producción
 
-Que a otros les sirva no implica que encaje con tu repo, límites de Permiso y normas de equipo.
+Que a otros les sirva no implica que encaje con tu repo, límites de permisos y normas de equipo.
 
 ### 3. Actualizar un Skill es como actualizar un documento
 
@@ -112,14 +117,8 @@ Cuando el usuario llama con `$name` de forma explícita, la intención es clara;
 
 - Instalar desde un enlace de chat un «Skill universal de un clic»
 - Que el AGENTS.md de un repo de producción apunte a un Skill en una ruta personal
-- Actualizar sin correr una tarea de humo
+- Actualizar sin ejecutar una prueba básica de funcionamiento
 - Confiar en el comportamiento sin haber leído `SKILL.md`
 
 ## Fuentes de referencia
 - Guías de seguridad de OpenAI Codex Skills
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** OpenAI Help «Skills in ChatGPT» confirma que los Skills pueden incluir instructions, supporting files y code, y que el usuario debe revisar origen y riesgo antes y después de subirlos; las recomendaciones de gobernanza de esta página alinean con ese principio.  
-**Última verificación:** 2026-07-26

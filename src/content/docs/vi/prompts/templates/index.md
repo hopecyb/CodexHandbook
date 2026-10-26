@@ -8,11 +8,11 @@ title: Mẫu Prompt
 description: Khung Prompt tái sử dụng theo loại tác vụ—hiểu, tạo, sửa, chẩn đoán, review, nghiên cứu, tự động hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: fae2ed3
-translation_status: draft
+source_revision: "fae2ed3"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
-
 
 Khi thấy «mẫu», phản ứng thường có hai kiểu:
 
@@ -38,7 +38,7 @@ Mẫu giống giàn giáo hơn là đáp án chuẩn.
 |---|---|
 | [Hiểu](/vi/prompts/templates/understand/) | Đọc codebase, tài liệu hoặc tư liệu; lập nhận thức trước |
 | [Tạo](/vi/prompts/templates/create/) | Triển khai từ đầu chức năng, bản thảo hoặc Artifact |
-| [Sửa](/vi/prompts/templates/change/) | Lặp lại thay đổi trên nền hiện có |
+| [Sửa](/vi/prompts/templates/change/) | Cải tiến nội dung hiện có |
 | [Chẩn đoán](/vi/prompts/templates/diagnose/) | Định vị nguyên nhân gốc; chưa sửa code |
 | [Review](/vi/prompts/templates/review/) | Review diff, PR hoặc thay đổi tài liệu |
 | [Nghiên cứu](/vi/prompts/templates/research/) | Khảo sát và so sánh kèm trích dẫn |
@@ -84,7 +84,7 @@ Prompt dài hơn chưa chắc tốt hơn. Điều đáng tái sử dụng là t�
 
 ### 1. Mẫu là để copy nguyên xi
 
-Nếu không sửa placeholder và không xóa đoạn không liên quan, mẫu phản lại làm tác vụ trống rỗng.
+Nếu không sửa placeholder và không xóa đoạn không liên quan, mẫu lại khiến yêu cầu thiếu nội dung cụ thể.
 
 ### 2. Chỉ cần dùng mẫu thì Prompt tự nhiên chuyên nghiệp
 

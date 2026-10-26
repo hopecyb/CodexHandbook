@@ -8,13 +8,13 @@ title: Gérer l'incertitude
 description: Demander des précisions plutôt qu'inventer quand il manque des informations.
 locale: fr
 source_locale: zh-CN
-source_revision: 839ce22
-translation_status: draft
+source_revision: "839ce22"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 50
+reviewed_at: '2026-10-26'
 ---
-
 Quand les informations manquent, clarifiez-les avant de poursuivre.
 
 Avec Codex, l'un des cas les plus gênants est de le voir combler une lacune par une réponse qui paraît plausible. Si l'hypothèse de départ est fausse, les étapes suivantes s'égarent aussi.

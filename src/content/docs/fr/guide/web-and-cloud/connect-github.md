@@ -3,12 +3,16 @@ title: Connecter GitHub
 description: Configurez l'accès de Codex Cloud à GitHub avec le périmètre de dépôts le plus restreint possible.
 locale: fr
 source_locale: zh-CN
-source_revision: b126a7e
+source_revision: "b126a7e"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: Cloud, GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Codex Cloud se connecte à GitHub ou à GitLab (Beta) avant de créer un environnement pour un dépôt. Le périmètre de l'autorisation GitHub détermine les dépôts visibles. Un clone local et les modifications non poussées restent hors de ce périmètre.
@@ -62,11 +66,3 @@ N'accordez pas l'accès à tous les dépôts privés pour résoudre un seul code
 
 - [Démarrage rapide de Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [Révision de pull request GitHub](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**Statut :** verified
-
-**Produits concernés :** Cloud, GitHub
-
-**Dernière vérification :** 2026-08-26

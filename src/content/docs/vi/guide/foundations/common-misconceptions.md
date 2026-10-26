@@ -1,14 +1,19 @@
 ---
-title: Hiểu nhầm thường gặp
-description: Làm rõ vài hiểu nhầm khi coi Codex như hộp đen vạn năng.
-locale: vi
-source_locale: zh-CN
-source_revision: 700e57b
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Hiểu nhầm thường gặp"
+description: "Làm rõ vài hiểu nhầm khi coi Codex như hộp đen vạn năng."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "700e57b"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 120
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ làm rõ các hiểu nhầm khi dùng phổ biến; liên kết nội bộ, bảng đối chiếu và ranh giới khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 Nhiều người ban đầu dùng Codex chưa tốt không phải vì không biết thao tác — mà vì ngay từ đầu đã nghĩ lệch về nó.
@@ -19,7 +24,7 @@ Ví dụ:
 - Cứ tưởng nó như đồng nghiệp thuê ngoài — giao một lần là phải tự nghĩ hết mọi chi tiết
 - Cứ tưởng chỉ cần model đủ mạnh là bỏ qua kiểm tra, kiểm thử và phán đoán thủ công
 
-Những hiểu nhầm này chưa chắc làm bạn lật xe ngay bước đầu, nhưng dễ khiến sau vài vòng bạn bắt đầu nghi nó không ổn định. Vấn đề thường không nằm ở chính model — mà ở kỳ vọng ngay từ đầu đã đặt lệch.
+Những hiểu nhầm này chưa chắc làm bạn gặp lỗi ngay bước đầu, nhưng dễ khiến sau vài vòng bạn bắt đầu nghi nó không ổn định. Vấn đề thường không nằm ở chính model — mà ở kỳ vọng ngay từ đầu đã đặt lệch.
 
 ## Đặt hiểu biết cho đúng trước
 
@@ -37,12 +42,12 @@ Bạn giao càng rõ, nó càng ổn định; càng trông chờ nó tự đoán
 |---|---|
 | «Nó tự đảm bảo đúng» | Nó tạo kết quả ứng viên; bạn chịu trách nhiệm nghiệm thu |
 | «Prompt càng thần bí càng tốt» | Mục tiêu, ràng buộc và nghiệm thu rõ ràng quan trọng hơn câu thần chú |
-| «Cho hết quyền thì nhanh hơn» | Mở rộng quyền cũng mở rộng mặt phẳng sự cố |
+| «Cho hết quyền thì nhanh hơn» | Mở rộng quyền cũng mở rộng phạm vi ảnh hưởng khi xảy ra sự cố |
 | «Một phiên siêu dài giải quyết hết» | Ngữ cảnh cũ sẽ làm nhiễm tác vụ mới |
 | «Cloud chắc chắn an toàn hơn local» | An toàn phụ thuộc chính sách, khóa và rà soát — không phải địa điểm |
 | «Cẩm nang viết rồi coi như chính thức» | Lấy tài liệu OpenAI làm chuẩn; cẩm nang giúp bạn học |
 
-## Ba hố dễ nhất
+## Ba sai lầm dễ mắc nhất
 
 ### Nhầm «biết trả lời» thành «đã hoàn thành»
 
@@ -77,10 +82,3 @@ Thiếu một trong ba điều này, xác suất sinh vấn đề tăng rõ.
 Codex rất mạnh, nhưng đặt trong mục tiêu và ranh giới rõ ràng thì dùng tốt hơn — nó không thay bạn tiết kiệm việc hiểu và phán đoán.
 
 Bước tiếp theo: [Bắt đầu nhanh](/vi/guide/getting-started/).
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ làm rõ các hiểu nhầm khi dùng phổ biến; liên kết nội bộ, bảng đối chiếu và ranh giới khái niệm đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

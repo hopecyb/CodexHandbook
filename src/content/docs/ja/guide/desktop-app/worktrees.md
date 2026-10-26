@@ -3,12 +3,16 @@ title: worktree
 description: Git worktree で並行チャットを隔離し、安全にローカルワークスペースへ戻します。
 locale: ja
 source_locale: zh-CN
-source_revision: 3569716
+source_revision: "3569716"
 translation_status: reviewed
-translated_at: 2026-08-26
+translated_at: "2026-08-26"
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: App
+  checkedAt: "2026-08-26"
 ---
 
 worktree を使うと、一つの Git リポジトリに独立した複数の checkout ディレクトリを持たせられます。各ディレクトリは固有のファイルとブランチ状態を持ち、リポジトリの Git メタデータを共有します。複数のコーディングチャットを、互いのファイルを上書きせずに並行して進めるのに適しています。
@@ -40,7 +44,7 @@ Codex を初めて練習するだけなら、まず Local モードでタスク�
 
 A と B に共有 lockfile または同じ設定ファイルを同時に変更させないでください。必要な場合は、一つのチャットだけが変更し、もう一つは分析結果だけを提供するよう事前に決めます。
 
-## Handoff 前のチェック
+## 引き渡し前のチェック
 
 ```bash
 git status --short
@@ -60,11 +64,3 @@ git diff --stat
 
 - [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
 - [長時間タスクと並行チャット](https://learn.chatgpt.com/docs/long-running-work)
-
----
-
-**状態：** verified
-
-**対象製品：** App
-
-**最終検証：** 2026-08-26

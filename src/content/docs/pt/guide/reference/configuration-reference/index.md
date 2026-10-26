@@ -3,19 +3,24 @@ title: Referência de configuração
 description: Índice conceptual de chaves de configuração de utilizador e de projeto do Codex — caminhos e campos conforme a documentação oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: 8f692ed
+source_revision: "8f692ed"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 60
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE
+  basis: O material de configuração atual do OpenAI Help Center continua a deixar claro que existem veículos de configuração de utilizador como `~/.codex/config.toml` e `~/.codex/.env`; esta página posiciona-se explicitamente como «índice conceptual» e evita fixar nomes de chaves, prioridade de caminhos ou campos de versões antigas como factos, pelo que pode marcar-se `verified`.
+  checkedAt: '2026-07-26'
 ---
 
-As páginas de «referência de configuração» enjoam fácil: chaves, camadas, sobrescritas por todo o lado. Se deixares clara uma pergunta, compreende-se muito melhor:
+As páginas de «referência de configuração» podem confundir logo no início: chaves, camadas, sobrescritas por todo o lado. Se deixares clara uma pergunta, compreende-se muito melhor:
 
 > **Que comportamentos devem mudar-se por configuração, e quais não convém resolver com configuração?**
 
-Os ficheiros de configuração costumam unificar comportamentos de **modelo, Sandbox, Aprovação, MCP**, etc. Esta página é um **índice conceptual**; caminhos concretos de ficheiro e nomes de chaves TOML/YAML são definidos pela [documentação OpenAI Codex](https://developers.openai.com/codex) e pela versão que tiveres instalada.
+Os ficheiros de configuração costumam unificar comportamentos de **modelo, Sandbox, aprovação, MCP**, etc. Esta página é um **índice conceptual**; caminhos concretos de ficheiro e nomes de chaves TOML/YAML são definidos pela [documentação OpenAI Codex](https://developers.openai.com/codex) e pela versão que tiveres instalada.
 
 ## Um princípio de juízo
 
@@ -23,24 +28,24 @@ Na configuração costuma ir o que **queres que influencie a longo prazo o compo
 
 - Valores sensíveis
 - O texto completo de regras de equipa
-- Instruções temporárias de uma só Tarefa
+- Instruções temporárias de uma só tarefa
 
 Dividi-lo em três classes clarifica:
 
 - **Preferências de comportamento a longo prazo** → normalmente na configuração
-- **Requisitos concretos da Tarefa** → normalmente no Prompt / `AGENTS.md` / Skill
+- **Requisitos concretos da tarefa** → normalmente no prompt / `AGENTS.md` / Skill
 - **Valores sensíveis** → normalmente em variáveis de ambiente ou Secret
 
-Se não tiveres claro, pergunta: estás a mudar o hábito a longo prazo do Codex, ou a encarregar esta Tarefa?
+Se não tiveres claro, pergunta: estás a mudar o hábito a longo prazo do Codex, ou a encarregar esta tarefa?
 
 - O hábito a longo prazo costuma ir à configuração
-- A instrução da Tarefa atual costuma ir ao Prompt, `AGENTS.md` ou a descrição da Tarefa
+- A instrução da tarefa atual costuma ir ao prompt, `AGENTS.md` ou a descrição da tarefa
 
 ## Camadas de configuração
 
 | Camada | Localização (conceito) | Conteúdo típico |
 |---|---|---|
-| Nível utilizador | `~/.codex/`, etc. | Modelo por omissão, hábitos pessoais de Aprovação |
+| Nível utilizador | `~/.codex/`, etc. | Modelo por omissão, hábitos pessoais de aprovação |
 | Nível projeto | Ficheiro de configuração no repo | Sandbox de equipa, lista de MCP |
 | Variáveis de ambiente | Injeção Shell / CI | Secrets, interruptores temporários |
 | Gerida | Emitida pela organização | Política obrigatória não sobrescritível |
@@ -68,7 +73,7 @@ Entrada: [Fundamentos de configuração](/pt/guide/customization/configuration/c
 | Intenção | Explicação |
 |---|---|
 | Modelo por omissão | Model ID das sessões novas |
-| Intensidade de raciocínio / reasoning | Nível para Tarefas complexas (se suportado) |
+| Intensidade de raciocínio / reasoning | Nível para tarefas complexas (se suportado) |
 | Temperatura e amostragem | Costuma deixar-se por omissão; fixar ao scriptar |
 
 Contexto: [Modelos e raciocínio](/pt/guide/foundations/models-and-reasoning/)
@@ -83,22 +88,22 @@ Contexto: [Modelos e raciocínio](/pt/guide/foundations/models-and-reasoning/)
 
 Contexto: [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
-### Política de Aprovação
+### Política de aprovação
 
 | Intenção | Explicação |
 |---|---|
 | Antes de executar shell | Perguntar sempre / lista de confiança / automático (alto risco) |
 | Antes de escrever ficheiros | Igual |
-| Chamadas a Ferramentas MCP | Por servidor ou por Ferramenta |
+| Chamadas a ferramentas MCP | Por servidor ou por Ferramenta |
 
-Contexto: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/) · Matriz: [Matriz de Permissões](/pt/guide/reference/permission-matrix/)
+Contexto: [permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/) · Matriz: [Matriz de permissões](/pt/guide/reference/permission-matrix/)
 
 ### Espaço de trabalho e CLI
 
 | Intenção | Explicação |
 |---|---|
 | `cwd` por omissão | Diretório de arranque |
-| Por omissão não interativo | Aprovação e Sandbox para exec |
+| Por omissão não interativo | aprovação e Sandbox para exec |
 | Nível de log | Subi-lo ao diagnosticar |
 
 ### Servidores MCP
@@ -125,7 +130,7 @@ Alguns itens só estão na UI de definições da extensão e podem partilhar o m
 - `AGENTS.md`
 - Variáveis de ambiente
 - Skill
-- Descrição da Tarefa atual
+- Descrição da tarefa atual
 
 A configuração não é um contentor universal.
 
@@ -135,7 +140,7 @@ A maioria só precisa de compreender no início:
 
 - Modelo
 - Sandbox
-- Aprovação
+- aprovação
 - MCP
 
 Essas quatro classes cobrem a imensa maioria das dúvidas reais.
@@ -150,7 +155,7 @@ O que a maioria encontra primeiro são estas quatro:
 
 - Modelo por omissão
 - Alcance do Sandbox
-- Política de Aprovação
+- Política de aprovação
 - Ligação MCP
 
 Compreender essas quatro já cobre a maior parte das perguntas da fase de entrada.
@@ -170,7 +175,7 @@ Perante «isto deve ir à configuração?», usa estas 4 perguntas:
 1. Queres que aplique por omissão a longo prazo?
 2. É informação sensível?
 3. É hábito pessoal ou regra partilhada do projeto?
-4. Estás a ajustar o comportamento do sistema ou só a encarregar esta Tarefa?
+4. Estás a ajustar o comportamento do sistema ou só a encarregar esta tarefa?
 
 Com essas 4, costuma ser mais difícil colocá-lo mal.
 
@@ -178,7 +183,7 @@ Com essas 4, costuma ser mais difícil colocá-lo mal.
 
 Quando quiseres «ajustar o comportamento do Codex»:
 
-1. É comportamento por omissão a longo prazo ou um requisito temporário desta Tarefa?
+1. É comportamento por omissão a longo prazo ou um requisito temporário desta tarefa?
 2. É um valor sensível ou configuração normal?
 3. É preferência pessoal ou regra partilhada do projeto?
 
@@ -188,7 +193,7 @@ Assim costuma ficar claro se vai a:
 - Variável de ambiente
 - `AGENTS.md`
 - Skill
-- Prompt atual
+- prompt atual
 
 ## Cenários habituais
 
@@ -198,7 +203,7 @@ Estas são as que mais confundem principiantes:
 |---|---|
 | Fixar um modelo a longo prazo | Configuração de utilizador ou de projeto |
 | A equipa exige correr testes antes de alterar código | `AGENTS.md` |
-| Esta Tarefa só permite alterar `docs/` | Prompt atual |
+| Esta tarefa só permite alterar `docs/` | prompt atual |
 | API key / token | Variável de ambiente ou Secret |
 | Ligar um serviço MCP | Configuração de projeto + variáveis de ambiente |
 
@@ -210,10 +215,10 @@ Secrets Cloud: [Secrets e variáveis de ambiente](/pt/guide/web-and-cloud/secret
 
 1. Muda só uma classe de configuração de cada vez e observa uma semana
 2. As mudanças de nível projeto passam por PR review
-3. Após atualizar o CLI, faz Diff das notas oficiais de migration
-4. Não escrevas secrets no ficheiro de configuração e os commits a Git
+3. Após atualizar o CLI, faz diff das notas oficiais de migration
+4. Não escrevas segredos no ficheiro de configuração para depois o submeteres ao Git
 
-A configuração é para comportamento por omissão a longo prazo, não para valores sensíveis nem para substituir instruções de Tarefa e regras de equipa.
+A configuração é para comportamento por omissão a longo prazo, não para valores sensíveis nem para substituir instruções de tarefa e regras de equipa.
 
 ## Erros frequentes
 
@@ -223,9 +228,3 @@ A configuração é para comportamento por omissão a longo prazo, não para val
 
 ## Fontes de referência
 - OpenAI Codex configuration reference
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / App / IDE  
-**Base de verificação:** O material de configuração atual do OpenAI Help Center continua a deixar claro que existem veículos de configuração de utilizador como `~/.codex/config.toml` e `~/.codex/.env`; esta página posiciona-se explicitamente como «índice conceptual» e evita fixar nomes de chaves, prioridade de caminhos ou campos de versões antigas como factos, pelo que pode marcar-se `verified`.  
-**Última verificação:** 2026-07-26

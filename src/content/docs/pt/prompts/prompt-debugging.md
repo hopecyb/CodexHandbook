@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só descreve a abordagem de depuração de Prompts; links e ordem de depuração foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Depuração de Prompts
 description: Como localizar o problema no Prompt quando o resultado se desvia.
 locale: pt
 source_locale: zh-CN
-source_revision: efc3015
+source_revision: "efc3015"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Quando o resultado falha, causas comuns:
@@ -25,9 +30,9 @@ O foco da depuração de Prompts é descobrir **qual camada de informação falt
 Se o resultado desviou, não precisa recomeçar tudo. Localizar a camada economiza trabalho:
 
 1. Objetivo pouco claro?
-2. Alcance fora de controlo?
-3. Contexto insuficiente?
-4. Tarefa grande demais?
+2. Alcance fora de controle?
+3. contexto insuficiente?
+4. tarefa grande demais?
 5. Ou a rota de ferramentas em si estava errada?
 
 ## Quando o resultado falha, pergunte nesta ordem:
@@ -48,7 +53,7 @@ Se o objetivo é vago — «otimize um pouco» — o desvio é comum.
 
 Muitos «excesso de mudança» não vêm de incapacidade; vêm de não ter dito «só até aqui».
 
-### 3. Contexto desatualizado ou em conflito
+### 3. contexto desatualizado ou em conflito
 
 Em Threads longas é fácil:
 
@@ -60,7 +65,7 @@ Em Threads longas é fácil:
 
 Com tarefa grande, executar direto desvia mais do que planear primeiro.
 
-### 5. Ferramenta mal escolhida
+### 5. ferramenta mal escolhida
 
 Por exemplo: queria foco no código local e ele foi à web; ou queria pesquisa com citações e respondeu só de memória.
 
@@ -90,15 +95,8 @@ Para puxar o problema de volta ao trilho:
 2. Acrescente «só alterar isto / não alterar aquilo»
 3. Se a tarefa for grande, peça plano primeiro
 4. Se ainda estiver confuso, reduza a um arquivo ou a uma reprodução de um só problema
-5. Se ainda falhar, abra uma Thread nova e restate os limites críticos
+5. Se ainda falhar, abra uma Thread nova e reafirme os limites críticos
 
 O núcleo da depuração de Prompts é achar que camada crítica não foi transmitida — não complicar a redação.
 
-Se continuar a falhar, reduza a uma reprodução num único arquivo, ou abra uma Thread nova e restate as restrições.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve a abordagem de depuração de Prompts; links e ordem de depuração foram revistos; o corpo não depende de factos voláteis do produto.
+Se continuar a falhar, reduza a uma reprodução num único arquivo, ou abra uma Thread nova e reafirme as restrições.

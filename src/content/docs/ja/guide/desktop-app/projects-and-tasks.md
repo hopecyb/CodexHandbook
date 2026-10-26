@@ -3,12 +3,17 @@ title: プロジェクトとタスク
 description: App でプロジェクトとタスクを管理する。
 locale: ja
 source_locale: zh-CN
-source_revision: 6a1f17f
+source_revision: "6a1f17f"
 translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: App
+  basis: OpenAI Help Center の現行デスクトップ App 説明は、プロジェクト／プロジェクトコンテキストと具体的な chat/work/codex セッションの区別を引き続き明記しており、デスクトップ App でローカルフォルダやプロジェクトを開いて作業できることも説明している。本ページは「プロジェクトは作業場、タスクは今回の依頼」という概念のレイヤー分けのみを説明する。
+  checkedAt: "2026-07-26"
 ---
 
 「プロジェクト」と「タスク」は単純に見えますが、初めて使うときに混同しやすい用語です。プロジェクトは扱っているファイルやリポジトリであり、タスクは今回 Codex に依頼する具体的な作業です。
@@ -85,10 +90,3 @@ Codex は、今回どのファイル、どのリポジトリに対して作業�
 2. タスクの目標が 1 つの主要なことだけを扱っているか確認する
 3. 制限範囲と完了基準を補う
 4. 開始後は計画、ツール呼び出し、変更結果に注目する
-
----
-
-**状態：** verified  
-**対象製品：** App  
-**検証根拠：** OpenAI Help Center の現行デスクトップ App 説明は、プロジェクト／プロジェクトコンテキストと具体的な chat/work/codex セッションの区別を引き続き明記しており、デスクトップ App でローカルフォルダやプロジェクトを開いて作業できることも説明している。本ページは「プロジェクトは作業場、タスクは今回の依頼」という概念のレイヤー分けのみを説明する。  
-**最終検証：** 2026-07-26

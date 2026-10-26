@@ -1,21 +1,25 @@
 ---
-title: "Qu'est-ce que AGENTS.md"
+title: Qu'est-ce que AGENTS.md
 description: Fichier d'instructions projet persistant — un « contrat de collaboration » pour Codex, pas une encyclopédie d'architecture.
 locale: fr
 source_locale: zh-CN
-source_revision: 47c5866
+source_revision: "47c5866"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Recoupement avec la description publique actuelle d'OpenAI Developers sur le contexte projet, les limites de tâche et les contraintes d'approbation/bac à sable ; le contenu de la page se limite au but, aux frontières et aux modèles courants pour `AGENTS.md`, sans détails de priorité obligatoire non vérifiés.
+  checkedAt: '2026-07-26'
 ---
-
 `AGENTS.md` est un fichier d'**instructions projet Markdown** dans le dépôt (ou un sous-répertoire). Codex le lit en entrant dans le projet pour s'aligner sur le style de code, les exigences de test, les conventions de commit et les zones interdites.
 
 Considérez `AGENTS.md` comme les instructions pour « comment Codex doit travailler avec ce projet ».
 
-Ce n'est pas un document d'architecture avancé ni un handbook complet pour les nouveaux employés humains ; ce sont des règles de collaboration projet pour Codex.
+Ce n'est pas un document d'architecture avancé ni un manuel complet pour les nouveaux employés humains ; ce sont des règles de collaboration projet pour Codex.
 
 ![Illustration : dans un dépôt en coupe, un guide est à la racine et des notes dans les sous-dossiers ; l’assistant lit le guide puis la note la plus proche](/illustrations/agents-md.webp)
 
@@ -57,13 +61,13 @@ Créez `AGENTS.md` à la racine du dépôt :
 - Décrire les étapes de vérification dans la description PR
 ```
 
-Après sauvegarde, dans une nouvelle tâche écrivez uniquement **le delta de cette tâche**, par exemple : « Corriger la mise en page de la page de connexion sur Safari ; acceptation selon AGENTS.md. »
+Après sauvegarde, dans une nouvelle tâche écrivez uniquement **les particularités de cette tâche**, par exemple : « Corriger la mise en page de la page de connexion sur Safari ; acceptation selon AGENTS.md. »
 
 ## Idées reçues courantes
 
 ### 1. Dois-je répéter ces règles manuellement à chaque fois ?
 
-Généralement non.  
+Généralement non.
 C'est l'une des raisons pour lesquelles `AGENTS.md` existe :
 y mettre les **règles projet stables** pour ne pas les réexpliquer à chaque nouvelle tâche.
 
@@ -79,7 +83,7 @@ Plus précisément, il aide l'alignement ; ce n'est pas un exécuteur universel.
 
 ### 3. Si je ne suis pas programmeur, dois-je quand même m'y intéresser ?
 
-Il faut comprendre l'idée de base.  
+Il faut comprendre l'idée de base.
 Même si vous ne codez pas vous-même, tant que Codex travaille sur un projet au fil du temps, `AGENTS.md` réduit les explications répétées et la dérive.
 
 ## Où le mettre
@@ -104,7 +108,7 @@ Utilisez `AGENTS.md` pour les règles projet ; les **ensembles d'étapes répét
 
 ## Comment décider où écrire quelque chose
 
-Si vous ne savez pas où une phrase appartient, utilisez cette règle :
+Si vous ne savez pas où placer une consigne, utilisez cette règle :
 
 - **Cette règle tient à long terme** : mieux dans `AGENTS.md`
 - **C'est spécial pour cette tâche seulement** : dans le prompt de tâche actuel
@@ -130,9 +134,3 @@ Par exemple :
 
 ## Références
 - Documentation OpenAI Codex sur le contexte projet
----
-
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** Recoupement avec la description publique actuelle d'OpenAI Developers sur le contexte projet, les limites de tâche et les contraintes d'approbation/bac à sable ; le contenu de la page se limite au but, aux frontières et aux modèles courants pour `AGENTS.md`, sans détails de priorité obligatoire non vérifiés.  
-**Dernière vérification :** 2026-07-26

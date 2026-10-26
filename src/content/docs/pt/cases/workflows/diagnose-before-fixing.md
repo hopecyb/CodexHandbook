@@ -3,18 +3,19 @@ title: Diagnosticar antes de corrigir
 description: Problemas de produção e bugs teimosos — construa primeiro a cadeia de evidências, só depois intervir.
 locale: pt
 source_locale: zh-CN
-source_revision: 18193b0
+source_revision: "18193b0"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com os capítulos já verificados deste manual sobre planejamento, qualidade e recuperação de falhas; esta página confirma apenas o método estável de diagnóstico «cadeia de evidências primeiro, correção mínima depois», sem depender de implementações concretas de produto.", "checkedAt": "2026-07-26"}
 ---
 
-Pedir ao Codex para corrigir o bug de imediato costuma gerar muita retrabalho. O fluxo de diagnóstico enfatiza: **sintoma → hipótese → evidência → correção mínima**.
+Pedir ao Codex para corrigir o bug de imediato costuma gerar muito retrabalho. O fluxo de diagnóstico enfatiza: **sintoma → hipótese → evidência → correção mínima**.
 
 ## Quando usar
 
 - Causa da falha de teste pouco clara
-- Alertas de produção, relatos de utilizadores «intermitentes»
+- Alertas de produção, relatos de usuários «intermitentes»
 - O problema persiste após a última correção
 
 ## Passos
@@ -25,7 +26,7 @@ Pedir ao Codex para corrigir o bug de imediato costuma gerar muita retrabalho. O
 Não altere código de negócio. Liste: passos de reprodução, logs relevantes, commits recentes relacionados.
 ```
 
-### 2. Reduzir o âmbito
+### 2. Reduzir o escopo
 
 - Bissecção: que commit introduziu?
 - Isolamento: repositório ou caso de teste de reprodução mínima
@@ -41,7 +42,7 @@ Hipótese B: … Forma de verificar: …
 
 ### 4. Verificar hipóteses (preferência só de leitura)
 
-Correr testes direcionados, acrescentar logs temporários (ramo descartável), ler monitorização.
+Correr testes direcionados, acrescentar logs temporários (ramo descartável), ler monitoramento.
 
 ### 5. Correção mínima
 
@@ -69,10 +70,3 @@ O diagnóstico pode ver-se como uma versão aprofundada da fase **Explorar**; na
 - Alterar código sem reproduzir
 - Um único patch a corrigir três problemas — impossível de rever
 - Remover logs temporários sem acrescentar testes permanentes
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre planeamento, qualidade e recuperação de falhas; esta página confirma apenas o método estável de diagnóstico «cadeia de evidências primeiro, correção mínima depois», sem depender de implementações concretas de produto.  
-**Última verificação:** 2026-07-26

@@ -34,7 +34,7 @@
   <rect x="80" y="278" width="190" height="92" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
   <text x="175" y="311" text-anchor="middle" class="label">PreToolUse</text>
   <text x="175" y="337" text-anchor="middle" class="note">Trước khi chạy: từ chối hoặc viết lại</text>
-  <text x="175" y="357" text-anchor="middle" class="tiny">Cục bộ hỗ trợ đường dẫn công cụ</text>
+  <text x="175" y="357" text-anchor="middle" class="tiny">Đường công cụ hỗ trợ cục bộ</text>
   <path d="M270 324H326" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="326" y="278" width="200" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4"/>
   <text x="426" y="311" text-anchor="middle" class="label">PermissionRequest</text>
@@ -59,7 +59,7 @@
   <text x="682" y="448" text-anchor="middle" class="tiny">Sau khi nén ngữ cảnh</text>
   <rect x="808" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#fb923c"/>
   <text x="908" y="427" text-anchor="middle" class="label">Stop</text>
-  <text x="908" y="448" text-anchor="middle" class="tiny">Có thể yêu cầu luồng chính tiếp tục thêm một lượt</text>
+  <text x="908" y="448" text-anchor="middle" class="tiny">Có thể yêu cầu luồng chính chạy tiếp</text>
 
   <text x="46" y="550" class="lane">Agent con</text>
   <rect x="180" y="516" width="210" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
@@ -73,7 +73,7 @@
   <text x="46" y="648" class="lane">Kết thúc luồng chính</text>
   <rect x="180" y="614" width="210" height="72" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
   <text x="285" y="644" text-anchor="middle" class="label">SessionEnd</text>
-  <text x="285" y="668" text-anchor="middle" class="note">Chỉ áp dụng cho luồng chính; mặc định 1 giây</text>
+  <text x="285" y="668" text-anchor="middle" class="note">Chỉ luồng chính; mặc định 1 giây</text>
   <rect x="470" y="614" width="538" height="72" rx="8" fill="#0f172a" stroke="#334155"/>
   <text x="739" y="643" text-anchor="middle" class="note">Mọi Hook khớp từ nhiều nguồn đều chạy; command Hook của cùng sự kiện có thể khởi động song song</text>
   <text x="739" y="668" text-anchor="middle" class="tiny">Hook của dự án và Plugin cần được rà soát và tin cậy; phải rà soát lại sau khi hash thay đổi</text>

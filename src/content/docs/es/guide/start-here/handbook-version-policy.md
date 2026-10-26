@@ -1,22 +1,28 @@
 ---
-title: Política de versiones del handbook
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Se revisó según el sistema de seis estados, las reglas de anotación y la prioridad de la documentación oficial que utiliza el manual. Explica la política de versiones del sitio y cómo leerlo; no depende de parámetros de una versión concreta del producto."
+  checkedAt: "2026-07-26"
+title: Política de versiones del manual
 description: Explica el estado del contenido, las fechas de verificación y cómo se actualiza de forma continua.
 locale: es
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: 'a608dc3'
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
+reviewed_at: 2026-10-25
 ---
 
 ## Actualización continua
 
-Este handbook no queda congelado indefinidamente en una sola versión de Codex. El producto cambia; por eso, cada página explica el alcance de lo comprobado mediante su estado, fecha de verificación y pruebas concretas. La fecha por sí sola no es una puntuación de fiabilidad.
+Este manual no queda congelado indefinidamente en una sola versión de Codex. El producto cambia; por eso, cada página explica el alcance de lo comprobado mediante su estado, fecha de verificación y pruebas concretas. La fecha por sí sola no es una puntuación de fiabilidad.
 
 ## Contenido
 
-- Por qué este handbook no puede asumir que nada cambie nunca
+- Por qué este manual no puede asumir que nada cambie nunca
 - Cómo leer el estado y la fecha de verificación al principio de la página
 - A quién creer si hay conflicto con lo oficial
 
@@ -35,7 +41,7 @@ Este handbook no queda congelado indefinidamente en una sola versión de Codex. 
 
 - `planned`: aún no escrito
 - `draft`: en marcha, pero aún inestable
-- `review`: el cuerpo principal ya está, pero falta el nivel más fuerte de confirmación
+- `review`: el cuerpo principal ya está, pero todavía necesita revisión
 - `verified`: ya verificado según la base indicada
 - `outdated`: pudo ser correcto antes; ahora conviene desconfiar de lo caduco
 - `archived`: se conserva como referencia, no como contenido de la línea principal actual
@@ -52,7 +58,7 @@ El comportamiento del producto se rige por la documentación de OpenAI: [https:/
 
 ## Malentendidos frecuentes
 
-### 1. Si está en el handbook, no significa que no vaya a cambiar nunca
+### 1. Si está en el manual, no significa que no vaya a cambiar nunca
 
 Sobre todo esto suele cambiar:
 
@@ -69,7 +75,7 @@ Sobre todo esto suele cambiar:
 
 Puedes repartirlo así:
 
-- Comprensión y rutas: el handbook
+- Comprensión y rutas: el manual
 - Comportamiento y parámetros más recientes: lo oficial
 
 ## Cómo juzgar si una página es fiable

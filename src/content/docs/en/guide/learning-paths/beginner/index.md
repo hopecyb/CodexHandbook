@@ -26,9 +26,10 @@ assets:
   version: 1.0.0
 locale: en
 source_locale: zh-CN
-source_revision: 1b7fbb3
-translation_status: draft
+source_revision: '1b7fbb3'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: 2026-10-25
 ---
 
 Use one set of fictional event materials to practice going from reading files to delivering a verifiable notice. You do not need to learn Git or programming or install dependencies first.

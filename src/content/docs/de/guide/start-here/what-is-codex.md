@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur die Grundposition von Codex, passende Aufgaben und die Zusammenarbeit; interne Links und Konzeptformulierungen wurden geprüft, und der Text enthält keine detaillierten, schnell veränderlichen Produktvorgaben."
+  checkedAt: "2026-07-26"
 title: Was ist Codex
 description: "Erklärt in verständlicher Sprache, was Codex kann, was nicht, und welche Einstiege es gibt."
 locale: de
 source_locale: zh-CN
-source_revision: 0f376b6
+source_revision: "0f376b6"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 2
 ---
@@ -15,7 +20,7 @@ Codex ist der von OpenAI bereitgestellte **KI-Programmier- und Arbeits-Agent**. 
 
 Er wirkt eher wie ein digitaler Kollege, der Werkzeuge bedienen kann. Du legst Ziel, Grenzen und Abnahmekriterien fest; er recherchiert, ändert Dateien und führt Schritte aus — die letzte Entscheidung bleibt bei dir.
 
-Maßgeblich für das Produkt ist die offizielle Dokumentation unter [OpenAI Codex](https://developers.openai.com/codex). Dieses Handbook ist ein community-basiertes Open-Source-Guide für systematisches Lernen und Praxis — es ersetzt die offizielle Dokumentation nicht.
+Maßgeblich für das Produkt ist die offizielle Dokumentation unter [OpenAI Codex](https://developers.openai.com/codex). Dieses Handbuch ist ein von der Community erstellter Open-Source-Leitfaden für systematisches Lernen und Praxis — es ersetzt die offizielle Dokumentation nicht.
 
 ![Illustration: Sie übergeben Codex eine Aufgabenkarte, und es arbeitet Laptop, Dokumente und Terminal Schritt für Schritt ab](/illustrations/what-is-codex.webp)
 
@@ -96,7 +101,7 @@ Ein vollständiges Beispiel findest du unter [Erste Aufgabe ausführen](/de/guid
 | Web / Cloud | Repos verbinden, Cloud-Umgebung und lange Aufgaben |
 | Mobil und remote | Überwachen, freigeben und leicht nachverfolgen |
 
-Vergleichstabelle: [Funktionsvergleich](/de/guide/reference/feature-comparison/). Konzeptuelle Zusammenhänge: [Fähigkeitskarte](/de/guide/start-here/).
+Vergleichstabelle: [Funktionsvergleich](/de/guide/reference/feature-comparison/). Konzeptuelle Zusammenhänge: [Fähigkeitskarte](/de/guide/start-here/codex-capability-map/).
 
 ## Als Nächstes
 
@@ -111,10 +116,3 @@ Weiterführende Seiten:
 1. [Codex-Client wählen](/de/guide/choose-your-client/)
 2. [Begriffe für Anfänger](/de/guide/start-here/terminology-for-beginners/)
 3. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur die Grundposition von Codex, passende Aufgaben und die Zusammenarbeit; interne Links und Konzeptformulierungen wurden geprüft, und der Text enthält keine feinkörnigen, schnell veränderlichen Produktdefaults.  
-**Zuletzt überprüft:** 2026-07-26

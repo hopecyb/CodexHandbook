@@ -7,8 +7,9 @@ title: Verify Technical Content
 description: Distinguish editorial status, source checks, and example runs; record scope, environment, and evidence.
 locale: en
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: 'cfb077d'
+translation_status: reviewed
+reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 editorialStatus: review
 verification:

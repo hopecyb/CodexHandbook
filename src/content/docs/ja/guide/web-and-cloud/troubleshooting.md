@@ -3,12 +3,16 @@ title: Cloud のトラブルシューティング
 description: リポジトリ、setup、ネットワーク、Agent、成果物の 5 層に分けて Cloud の失敗原因を特定します。
 locale: ja
 source_locale: zh-CN
-source_revision: 019fac1
+source_revision: "019fac1"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 80
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
 ---
 
 Cloud で再試行すると、再び時間を消費します。しかし、不足している権限、依存関係、ネットワーク設定が自動的に補われるわけではありません。まず、どの段階で失敗したかを判断してください。
@@ -76,11 +80,3 @@ Cloud がリポジトリに設定されていること、Code review が有効�
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-
----
-
-**ステータス：** verified
-
-**対象製品：** Cloud
-
-**最終確認：** 2026-08-26

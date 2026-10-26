@@ -8,9 +8,10 @@ title: "A estrutura de uma boa tarefa"
 description: "Objetivo, contexto, entradas, restrições, critérios de aceitação e limites de permissão."
 locale: pt
 source_locale: zh-CN
-source_revision: 98c0511
-translation_status: draft
+source_revision: "98c0511"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 
 Ao descrever uma demanda, é fácil dispersar as informações quando há muito a dizer: os materiais estão presentes, mas o resultado esperado, os limites e os critérios de aceitação ficam misturados. O Codex acaba tendo que preencher as lacunas por conta própria.
@@ -54,7 +55,7 @@ Os seis itens à esquerda do diagrama não existem para alongar o prompt, mas pa
 ## Para que serve cada parte
 
 - **Objetivo:** evita que a tarefa descreva apenas uma ação, sem dizer qual resultado se espera.
-- **Contexto:** ajuda o Codex a entender por que o trabalho deve ser feito daquela maneira.
+- **contexto:** ajuda o Codex a entender por que o trabalho deve ser feito daquela maneira.
 - **Entradas:** coloca ao alcance os arquivos, links e materiais que ele realmente precisa consultar.
 - **Restrições:** evita ultrapassar o escopo e fazer mudanças adicionais por conveniência.
 - **Critérios de aceitação:** transforma “está pronto?” em algo que pode ser verificado.
@@ -67,7 +68,7 @@ Os seis itens à esquerda do diagrama não existem para alongar o prompt, mas pa
 Este modelo se parece mais com uma lista de verificação do que com um formulário.
 Algumas tarefas não exigem um contexto extenso, mas omiti-lo também reduz as informações disponíveis para tomar decisões.
 
-### 2. Objetivo e aceitação são a mesma coisa
+### 2. Objetivo e aceitação não são a mesma coisa
 
 São coisas diferentes.
 

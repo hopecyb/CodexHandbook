@@ -11,9 +11,10 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: a129229
-translation_status: draft
+source_revision: "a129229"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
 Ein Plan beschreibt einen Ausführungsweg, den man prüfen und anpassen kann. Er macht Lücken bei Umfang, Abhängigkeiten und Abnahme früh sichtbar. Eine größere Aufgabe bedeutet aber nicht, dass man immer wieder auf Bestätigung warten muss.
 

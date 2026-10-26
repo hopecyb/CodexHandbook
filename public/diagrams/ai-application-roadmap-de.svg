@@ -23,7 +23,7 @@
   <rect x="42" y="34" width="816" height="132" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
   <text x="72" y="86" class="title">Roadmap für KI-Anwendungsentwicklung</text>
   <text x="72" y="122" class="subtitle">Neueste zuerst. Daten beziehen sich nur auf die Quellen in der Tabelle, nicht auf die Entstehung.</text>
-  <text x="72" y="148" class="subtitle">Von oben nach unten: Harness → Zusammenarbeit → Tool-Protokoll → Eingabe → Verankerung.</text>
+  <text x="72" y="148" class="subtitle">Von oben: Ausführungsumgebung und Wiederverwendung → Zusammenarbeit → Tool-Protokoll → Eingabesteuerung → Wissensverankerung.</text>
 
   <line x1="224" y1="218" x2="224" y2="1398" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-main)"/>
 
@@ -63,14 +63,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Skills (Fähigkeiten)</text>
     <text x="28" y="55" class="node-date">2025-10-16 · Wiederverwendbare Workflow-Einheiten</text>
-    <text x="28" y="78" class="node-body">Prompts, Schritte, Beispiele, Skripte und Ressourcen bündeln, damit KI Erfahrung wiederverwendet.</text>
+    <text x="28" y="78" class="node-body">Prompts, Schritte, Beispiele, Skripte und Ressourcen bündeln: Erfahrung bei Wiederholungen sicher nutzen.</text>
   </g>
   <g transform="translate(240 470)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
     <text x="28" y="32" class="node-title">Context Engineering (Kontext-Engineering)</text>
     <text x="28" y="55" class="node-date">2025-09-29 · Kontextgestaltung</text>
-    <text x="28" y="78" class="node-body">Von „guten Prompt schreiben“ zu „festlegen, was das Modell sieht und in welcher Reihenfolge“.</text>
+    <text x="28" y="78" class="node-body">Von guten Prompts zur Gestaltung dessen, was das Modell mit welcher Priorität sieht.</text>
   </g>
   <g transform="translate(240 592)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
@@ -91,14 +91,14 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
     <text x="28" y="32" class="node-title">MCP (Model Context Protocol)</text>
     <text x="28" y="55" class="node-date">2024-11-25 · Tool-Protokoll</text>
-    <text x="28" y="78" class="node-body">Tools, Ressourcen, Prompts und Kontext als Protokoll bereitstellen statt Einzelintegrationen.</text>
+    <text x="28" y="78" class="node-body">Tools, Ressourcen, Prompts und Kontext per Protokoll anbinden; individuelle Integrationskosten senken.</text>
   </g>
   <g transform="translate(240 1006)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
     <text x="28" y="32" class="node-title">Function Calling (Funktionsaufrufe)</text>
     <text x="28" y="55" class="node-date">2023-06-13 · Strukturierte Aktionen</text>
-    <text x="28" y="78" class="node-body">Das Modell erzeugt nicht nur Text, sondern ruft Funktionen, APIs und Geschäftsaktionen auf.</text>
+    <text x="28" y="78" class="node-body">Neben Text: Funktionen, APIs und Geschäftsaktionen mit auswertbaren Parametern aufrufen.</text>
   </g>
   <g transform="translate(240 1152)" filter="url(#soft-shadow)">
     <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
@@ -112,6 +112,6 @@
     <rect x="0" y="0" width="10" height="96" rx="5" fill="#f97316"/>
     <text x="28" y="32" class="node-title">RAG (retrieval-augmentierte Generierung)</text>
     <text x="28" y="55" class="node-date">2020-05-22 · Wissensverankerung</text>
-    <text x="28" y="78" class="node-body">Externe Quellen in den Kontext holen, Halluzinationen senken, Antworten nachvollziehbar machen.</text>
+    <text x="28" y="78" class="node-body">Externe Quellen abrufen, Halluzinationen reduzieren und Antworten an nachvollziehbare Wissensquellen binden.</text>
   </g>
 </svg>

@@ -3,12 +3,17 @@ title: 구조화 출력
 description: exec가 기계가 파싱할 수 있는 결과를 내게 합니다——후속 단계, 대시보드, 게이트용입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: 'e80b5d7'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 30
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / API
+  basis: OpenAI API의 현행 모델/비교 문서는 여전히 `Structured outputs` 능력을 나열합니다. 이 페이지 내용은 “비대화형 작업의 안정된 출력 인터페이스 설계” 일반 실천으로 한정하며, 예시의 JSON schema·검증·폴백 전략은 엔지니어링 패턴 설명입니다.
+  checkedAt: '2026-07-26'
 ---
 
 처음 자동화할 때 Codex가 “그럴듯한 문장”을 쓰게 두는 경우가 많습니다. 사람이 읽기에는 괜찮지만, 스크립트에는 불친절합니다.
@@ -123,9 +128,3 @@ schema 정의(버전 v1)
 
 ## 참고 출처
 - OpenAI structured outputs 일반 실천(개념 정렬)
----
-
-**상태：** verified  
-**적용 제품：** CLI / API  
-**검증 근거：** OpenAI API의 현행 모델/비교 문서는 여전히 `Structured outputs` 능력을 나열합니다. 이 페이지 내용은 “비대화형 작업의 안정된 출력 인터페이스 설계” 일반 실천으로 한정하며, 예시의 JSON schema·검증·폴백 전략은 엔지니어링 패턴 설명입니다.  
-**최근 검증：** 2026-07-26

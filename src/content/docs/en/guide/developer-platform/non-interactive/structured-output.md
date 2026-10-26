@@ -1,10 +1,15 @@
 ---
-reviewed_at: 2026-08-26
+legacyVerification:
+  status: "verified"
+  products: "CLI / API"
+  basis: "OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance."
+  checkedAt: "2026-07-26"
+reviewed_at: "2026-10-25"
 title: Structured Output
 description: Make exec produce machine-parseable results for downstream steps, dashboards, and gates.
 locale: en
 source_locale: zh-CN
-source_revision: e80b5d7
+source_revision: 'e80b5d7'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
@@ -121,9 +126,3 @@ See [SDK overview](/en/guide/developer-platform/sdk-overview/).
 
 ## Reference sources
 - OpenAI structured outputs general practice (conceptual alignment)
----
-
-**Status:** verified
-**Products:** CLI / API
-**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.
-**Last verified:** 2026-07-26

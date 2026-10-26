@@ -3,11 +3,17 @@ title: Models and reasoning
 description: Factors to consider when choosing a model and reasoning setting.
 locale: en
 source_locale: zh-CN
-source_revision: 0cbc9dc
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: '0685b79'
+translation_status: reviewed
+reviewed_at: 2026-10-25
+translated_at: 2026-10-24
 sidebar:
   order: 90
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Official model documentation and Codex developer entry points describe model choice, speed, cost, and capability as configurable tradeoffs. This page keeps stable principles based on task complexity, latency, cost, and verifiability without tying them to a model name or fixed setting.
+  checkedAt: '2026-07-26'
 ---
 
 Available models and “reasoning / thinking” settings change as products are updated. Balance:
@@ -53,6 +59,8 @@ As a starting rule:
 
 The key judgment is whether thinking a little longer is worth the added time and cost for this task.
 
-This handbook does not depend on a particular model's marketing name. Check the current list in your client and [the Codex developer documentation](https://developers.openai.com/codex).
+This page covers stable selection principles; current model names are maintained in the selection guide. Check the current list in your client and [the Codex developer documentation](https://developers.openai.com/codex).
 
 For a concrete way to track your choice, see [Usage, time, and model choice](/en/guide/quality/usage-time-and-model-choice/). It separates subscription allowance, API cost, waiting, and human rework.
+
+For current model options, surface differences, and task recommendations: [Model selection: find a starting point](/en/guide/reference/model-selection/).

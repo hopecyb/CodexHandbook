@@ -3,211 +3,192 @@ title: "Référence de configuration"
 description: Index conceptuel des clés de configuration Codex utilisateur et projet — chemins et champs selon la doc officielle.
 locale: fr
 source_locale: zh-CN
-source_revision: 8f692ed
+source_revision: '8f692ed'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE
+  basis: La documentation de configuration du Help Center OpenAI mentionne toujours les fichiers utilisateur `~/.codex/config.toml` et `~/.codex/.env`. Cette page reste un index conceptuel et ne présente pas des clés précises, des priorités de chemins ou d’anciens champs comme des faits immuables ; son statut est donc « verified ».
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 60
 ---
 
-Les pages de référence de configuration peuvent submerger avec clés, couches et overrides. Commencez par une question :
+Les références de configuration peuvent sembler complexes, avec leurs clés, leurs niveaux et leurs règles de priorité. Commencez par une question :
 
-> **Qu'est-ce qui devrait être configuration — et qu'est-ce qui ne devrait pas ?**
+> **Quels comportements faut-il régler dans la configuration, et quels problèmes faut-il résoudre ailleurs ?**
 
-Les fichiers de config unifient souvent le comportement **modèle, bac à sable, approbation, MCP**. Cette page est un **index conceptuel** ; chemins de fichiers et clés TOML/YAML doivent suivre la [documentation OpenAI Codex](https://developers.openai.com/codex) et votre version installée.
+Les fichiers de configuration servent souvent à harmoniser le **modèle, le bac à sable, les approbations et MCP**. Cette page est un **index conceptuel**. Pour les chemins de fichiers et les clés TOML/YAML précis, consultez la [documentation OpenAI Codex](https://developers.openai.com/codex) correspondant à la version installée.
 
 ## Un principe de décision
 
-La config contient ce qui **devrait affecter le comportement à long terme**. Généralement pas :
+La configuration convient aux réglages **destinés à influencer durablement le comportement**. Elle ne convient généralement pas :
 
-- Secrets
-- Prose complète des règles d'équipe
-- Instructions de tâche ponctuelles
+- aux valeurs sensibles ;
+- au texte complet des règles d’équipe ;
+- aux instructions d’une tâche ponctuelle.
 
-Trois compartiments :
+Distinguez trois catégories :
 
-- **Préférences de comportement à long terme** → config
-- **Exigences de tâche spécifiques** → prompt / `AGENTS.md` / Skill
-- **Secrets** → variables d'environnement ou Secret store
+- **Préférences durables de comportement** : configuration.
+- **Exigences d’une tâche précise** : prompt, `AGENTS.md` ou Skill.
+- **Valeurs sensibles** : variables d’environnement ou gestionnaire de secrets.
 
-Hésitant ? Changez-vous les habitudes long terme de Codex ou décrivez-vous cette tâche ?
+En cas de doute, demandez-vous si vous modifiez les habitudes de Codex ou décrivez la tâche actuelle. Les premières relèvent généralement de la configuration ; la seconde, du prompt, d’`AGENTS.md` ou de la description de tâche.
 
-- Habitudes long terme → config
-- Cette tâche → prompt, `AGENTS.md` ou description de tâche
+## Niveaux de configuration
 
-## Couches de configuration
-
-| Couche | Emplacement (conceptuel) | Contenu typique |
+| Niveau | Emplacement conceptuel | Contenu typique |
 |---|---|---|
-| Utilisateur | `~/.codex/` etc. | Modèle par défaut, habitudes d'approbation personnelles |
-| Projet | Config dans le dépôt | Bac à sable d'équipe, liste MCP |
-| Variables d'environnement | Injection shell / CI | Clés, interrupteurs temporaires |
-| Gérée | Provisionnée org | Politique obligatoire non annulable |
+| Utilisateur | `~/.codex/`, entre autres | Modèle par défaut, préférences personnelles d’approbation |
+| Projet | Fichiers de configuration du dépôt | Bac à sable de l’équipe, liste MCP |
+| Variables d’environnement | Injection par le shell ou la CI | Clés et options temporaires |
+| Géré | Paramètres imposés par l’organisation | Politiques obligatoires non modifiables localement |
 
-## Ce que chaque couche gère
+## Rôle de chaque niveau
 
-- **Utilisateur** : vos défauts personnels
-- **Projet** : défauts partagés pour ce dépôt
-- **Variables d'environnement** : valeurs injectées à l'exécution
-- **Politique gérée** : frontières fixées par l'org que vous ne pouvez pas annuler localement
+- **Utilisateur** : vos préférences personnelles par défaut.
+- **Projet** : les comportements par défaut partagés dans ce dépôt.
+- **Variables d’environnement** : les valeurs injectées temporairement à l’exécution.
+- **Politique gérée** : les limites fixées par l’organisation que vous ne pouvez pas modifier localement.
 
-Pas besoin de mémoriser la priorité le premier jour — savoir à quoi sert chaque couche :
+Au début, inutile de mémoriser toutes les règles de priorité. Retenez le rôle de chaque niveau : « mes habitudes », « les habitudes partagées du dépôt », « les valeurs de cette exécution » et « les limites imposées par l’organisation ».
 
-- Utilisateur : « comment j'aime personnellement travailler »
-- Projet : « comment ce dépôt veut que tout le monde travaille »
-- Environnement : « valeurs pour ce run »
-- Gérée : « l'org a déjà décidé »
+Introduction : [Bases de la configuration](/fr/guide/customization/configuration/config-basics/) · Terminal : [Configuration du CLI](/fr/guide/cli/configuration/)
 
-Intro : [Bases de la config](/fr/guide/customization/configuration/config-basics/) · Focus CLI : [Configuration CLI](/fr/guide/cli/configuration/)
-
-## Domaines de configuration (conceptuels)
+## Domaines de configuration : index conceptuel
 
 ### Modèle et raisonnement
 
-| Intention | Notes |
+| Intention | Précision |
 |---|---|
-| Modèle par défaut | ID modèle pour nouvelles sessions |
-| Force de raisonnement | Niveau de complexité si supporté |
-| Échantillonnage (température, etc.) | Généralement défaut ; pin pour scripts |
+| Modèle par défaut | Identifiant du modèle utilisé dans les nouvelles sessions |
+| Intensité du raisonnement | Niveau destiné aux tâches complexes, si pris en charge |
+| Échantillonnage, dont la température | Conserver généralement les valeurs par défaut ; les fixer pour les scripts |
 
 Contexte : [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/)
 
 ### Bac à sable et réseau
 
-| Intention | Notes |
+| Intention | Précision |
 |---|---|
-| Portée filesystem | Chemins écrivables, écriture hors projet |
-| Accès réseau | Deny / restreint / allow |
-| Domaines egress | Liste d'autorisation si supporté |
+| Périmètre du système de fichiers | Chemins accessibles en écriture, autorisation d’écrire hors du projet |
+| Accès réseau | Interdit, restreint ou autorisé |
+| Domaines de destination | Liste d’autorisation, si prise en charge |
 
 Contexte : [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
-### Politique d'approbation
+### Politique d’approbation
 
-| Intention | Notes |
+| Intention | Précision |
 |---|---|
-| Avant shell | Toujours demander / liste de confiance / auto (haut risque) |
-| Avant écriture fichier | Idem |
-| Appels outils MCP | Granularité par serveur ou outil |
+| Avant une commande shell | Toujours demander, liste de confiance ou mode automatique à haut risque |
+| Avant l’écriture d’un fichier | Même principe |
+| Appels d’outils MCP | Réglage par serveur ou par outil |
 
-Contexte : [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/) · Matrice : [Matrice des permissions](/fr/guide/reference/permission-matrix/)
+Contexte : [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/) · [Matrice des permissions](/fr/guide/reference/permission-matrix/)
 
-### Workspace et CLI
+### Espace de travail et CLI
 
-| Intention | Notes |
+| Intention | Précision |
 |---|---|
 | `cwd` par défaut | Répertoire de démarrage |
-| Défauts non interactifs | approbation et bac à sable exec |
-| Niveau de log | Augmenter pour dépannage |
+| Valeurs par défaut du mode non interactif | Approbations et bac à sable pour `exec` |
+| Niveau de journalisation | L’augmenter pour le dépannage |
 
 ### Serveurs MCP
 
-| Intention | Notes |
+| Intention | Précision |
 |---|---|
-| Liste serveurs | Commande, URL, transport |
-| Injection env | Liée au processus MCP — pas dans Git |
+| Liste des serveurs | Commandes, URL et modes de transport |
+| Injection de variables d’environnement | Associée au processus MCP, sans enregistrer les valeurs dans Git |
 
-[Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/)
+[Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/)
 
-### Extension IDE / App
+### Extensions IDE et App
 
-Certains paramètres vivent uniquement dans l'UI d'extension ; peuvent partager le backend config utilisateur avec CLI — selon doc produit.
+Certains réglages ne figurent que dans l’interface de l’extension. Ils peuvent partager la configuration utilisateur du CLI ; vérifiez les indications du produit.
 
-[Paramètres IDE](/fr/guide/ide/settings/) · [Paramètres App de bureau](/fr/guide/desktop-app/settings/)
+[Paramètres de l’IDE](/fr/guide/ide/settings/) · [Paramètres de l’App de bureau](/fr/guide/desktop-app/settings/)
 
 ## Idées reçues courantes
 
-### 1. Tout n'appartient pas à la config
+### 1. Tout réglage possible doit figurer dans un fichier de configuration
 
-Souvent mieux dans :
+Certains éléments ont plutôt leur place dans `AGENTS.md`, une variable d’environnement, un Skill ou la description de la tâche actuelle. La configuration n’est pas un conteneur universel.
 
-- `AGENTS.md`
-- Variables d'environnement
-- Skill
-- Description de tâche actuelle
+### 2. Il faut comprendre toutes les clés dès le début
 
-La config n'est pas un fourre-tout.
+Commencez par le modèle, le bac à sable, les approbations et MCP. Ces quatre domaines couvrent la plupart des questions initiales.
 
-### 2. Pas besoin de chaque clé le premier jour
+### 3. La configuration du projet remplace la documentation d’équipe
 
-La plupart commencent avec :
+Elle exprime des comportements par défaut du système. Elle ne remplace pas les explications sur les raisons d’un choix et les circonstances dans lesquelles il ne faut pas l’appliquer.
 
-- Modèle
-- Bac à sable
-- Approbation
-- MCP
+### 4. Il faut apprendre toutes les clés officielles d’un coup
 
-Ces quatre couvrent la plupart des questions initiales.
+Le modèle par défaut, le périmètre du bac à sable, la politique d’approbation et les connexions MCP suffisent généralement pour commencer.
 
-### 3. La config projet remplace la doc d'équipe ?
+## Configuration et variables d’environnement
 
-La config exprime les défauts système — pas « pourquoi et quand ne pas ».
-
-### 4. Les clés officielles sont nombreuses — apprendre quatre d'abord
-
-- Modèle par défaut
-- Portée bac à sable
-- Politique d'approbation
-- Connexions MCP
-
-## vs variables d'environnement
-
-| Type | Où |
+| Type | Emplacement |
 |---|---|
-| Clé API, token | Variable d'environnement ou gestionnaire de secrets |
-| Interrupteurs non sensibles | Variable d'environnement ou config |
-| Conventions de code | `AGENTS.md`, pas config |
+| Clé API ou jeton | Variable d’environnement ou gestionnaire de secrets |
+| Option non sensible | Variable d’environnement ou configuration |
+| Conventions de code | `AGENTS.md`, pas la configuration |
 
-## Cela devrait aller en config ?
+## Décider si un élément relève de la configuration
 
-Quatre questions :
+Posez-vous quatre questions :
 
-1. Devrait s'appliquer à long terme par défaut ?
-2. Est-ce sensible ?
-3. Habitude personnelle ou règle projet partagée ?
-4. Ajuster le comportement système ou décrire cette tâche ?
+1. Doit-il s’appliquer durablement par défaut ?
+2. Contient-il des informations sensibles ?
+3. S’agit-il d’une préférence personnelle ou d’une règle partagée du projet ?
+4. Ajuste-t-il le comportement du système ou décrit-il seulement cette tâche ?
 
-## En ajustant le comportement
+Ces questions aident à choisir le bon emplacement.
 
-1. Défaut long terme ou tâche ponctuelle ?
-2. Sensible ou ordinaire ?
-3. Personnel ou partagé ?
+## Ajuster le comportement de Codex
 
-Puis placer dans config, env, `AGENTS.md`, Skill ou prompt actuel.
+Pour choisir où intervenir, distinguez :
+
+1. un comportement durable d’une exigence ponctuelle ;
+2. une valeur sensible d’un réglage ordinaire ;
+3. une préférence personnelle d’une règle partagée.
+
+Vous pourrez alors choisir entre le fichier de configuration, une variable d’environnement, `AGENTS.md`, un Skill et le prompt actuel.
 
 ## Scénarios courants
 
-| Objectif | Généralement |
+| Objectif | Emplacement habituel |
 |---|---|
-| Pin un modèle à long terme | Config utilisateur ou projet |
-| L'équipe veut tests avant éditions | `AGENTS.md` |
-| Cette tâche : uniquement `docs/` | Prompt actuel |
-| Clé API / token | Environnement ou Secret |
-| Connecter un MCP | Config projet + env |
+| Conserver un modèle précis par défaut | Configuration utilisateur ou projet |
+| Exiger des tests avant de modifier du code | `AGENTS.md` |
+| Limiter cette tâche à `docs/` | Prompt actuel |
+| Fournir une clé API ou un jeton | Variable d’environnement ou secret |
+| Connecter un service MCP | Configuration du projet et variables d’environnement |
 
-Plus facile que fixer des listes de clés.
+Partir de l’objectif est souvent plus simple que parcourir une liste de clés.
 
-Secrets Cloud : [Secrets et variables d'environnement](/fr/guide/web-and-cloud/secrets-and-variables/)
+Cloud : [Secrets et variables d’environnement](/fr/guide/web-and-cloud/secrets-and-variables/)
 
-## Discipline de changement
+## Discipline de modification
 
-1. Changer une classe de config à la fois ; observer une semaine
-2. Changements niveau projet via revue PR
-3. Après mise à niveau CLI, lire notes de migration officielles
-4. Ne jamais committer des secrets dans les fichiers de config
+1. Modifiez une seule catégorie de configuration à la fois et observez les effets pendant une semaine.
+2. Faites examiner les changements du projet dans une PR.
+3. Après une mise à jour du CLI, comparez les changements décrits dans les notes officielles de migration.
+4. Ne placez pas de clés dans un fichier de configuration destiné à être commité.
 
-La config est pour les défauts à long terme — pas secrets, prose de tâche ou essais de règles d'équipe.
+La configuration contient surtout des comportements durables par défaut. Elle ne remplace ni le stockage des secrets, ni la description des tâches, ni les règles d’équipe.
 
 ## Erreurs courantes
 
-- Noms de clés doc ne correspondent pas à ancienne CLI
-- Bac à sable personnel relaxé utilisé sur dépôts clients
-- Config contredit `AGENTS.md` (config permet, doc interdit)
+- Utiliser des clés de la documentation qui ne correspondent pas à une ancienne version du CLI.
+- Appliquer à un dépôt client un bac à sable assoupli pour son usage personnel.
+- Créer une contradiction avec `AGENTS.md` : la configuration autorise une action que les instructions interdisent.
 
 ## Sources de référence
-- Référence de configuration OpenAI Codex
----
 
-**Statut :** vérifié  
-**Produits concernés :** CLI / App / IDE  
-**Base de vérification :** Le Help Center OpenAI documente encore des porteurs niveau utilisateur comme `~/.codex/config.toml` et `~/.codex/.env` ; cette page est explicitement un index conceptuel — ne fixe pas des noms de clés spécifiques, priorité de chemins ou champs legacy — donc `vérifié` est approprié.  
-**Dernière vérification :** 2026-07-26
+- Référence de configuration OpenAI Codex

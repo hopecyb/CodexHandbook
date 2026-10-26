@@ -3,12 +3,17 @@ title: Projektkontext
 description: Projektbeschreibung und verzeichnisweite Hintergründe.
 locale: de
 source_locale: zh-CN
-source_revision: fb3eb50
+source_revision: "fb3eb50"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
+legacyVerification:
+  status: verified
+  products: "App / CLI / IDE / Cloud"
+  basis: Diese Seite erklärt nur, wie langfristiger Projektkontext abgelegt wird; Konzepte, Beispiele und Grenzen wurden geprüft, ohne Abhängigkeit von volatilen Produktfakten.
+  checkedAt: '2026-07-26'
 ---
 
 „Projektkontext“ meint langfristig stabile Hintergrundinformationen im Projekt, die bei vielen Aufgaben wiederkehren.
@@ -121,10 +126,3 @@ Priorität haben meist:
 - Default-Verifikationsweg
 
 Was nächstes Mal wahrscheinlich wieder gebraucht wird, gehört in den Projektkontext — nicht jedes Mal neu tippen.
-
----
-
-**Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur, wie langfristiger Projektkontext abgelegt wird; Konzepte, Beispiele und Grenzen wurden geprüft, ohne Abhängigkeit von volatilen Produktfakten.  
-**Zuletzt geprüft:** 2026-07-26

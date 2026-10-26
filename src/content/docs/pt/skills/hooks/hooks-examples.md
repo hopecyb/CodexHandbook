@@ -7,14 +7,15 @@ title: Exemplos de configuração de Hooks
 description: Implementar uma proteção PreToolUse testável com um hooks.json real e um script Python da biblioteca padrão.
 locale: pt
 source_locale: zh-CN
-source_revision: 06e9fa2
-translation_status: draft
+source_revision: "06e9fa2"
+translation_status: reviewed
 translated_at: "2026-09-20"
+reviewed_at: 2026-10-26
 ---
 
 Este capítulo removeu os nomes de eventos e campos de configuração ilustrativos da versão anterior. O exemplo segue a estrutura oficial atual de `hooks.json` e inclui testes executáveis.
 
-Os ficheiros completos estão em [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
+Os arquivos completos estão em [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
 ## Objetivo e limites
 
@@ -98,7 +99,7 @@ Uma entrada normal não produz nada em stdout.
 Em produção, as equipas começam geralmente por auditoria ou contexto adicional sem bloqueio e só depois passam a `deny`. Antes dessa mudança, responda pelo menos a estas perguntas:
 
 - As fixtures cobrem os falsos positivos conhecidos?
-- Um timeout ou falha do script é compreensível para o utilizador?
+- Um timeout ou falha do script é compreensível para o usuário?
 - A regra também é assegurada pela CI ou por uma política do serviço?
 - Os meios de contorno e a recuperação de emergência são auditáveis?
 

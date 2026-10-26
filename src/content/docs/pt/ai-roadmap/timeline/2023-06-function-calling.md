@@ -12,12 +12,13 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: pt
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: "c362c48"
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---
 
-## Evento verificável e âmbito
+## Evento verificável e escopo
 
 **Data: 13 de junho de 2023 · Tipo: lançamento de produto.** A OpenAI anunciou chamadas de função para a API Chat Completions da época. Essa data corresponde ao lançamento da API de um fornecedor específico, não ao início de todas as chamadas de ferramentas.
 
@@ -35,6 +36,6 @@ Dê prioridade a entradas verificáveis, âmbitos de permissão explícitos e re
 
 ## Exercício prático
 
-[Simulação de sugestões para triagem de Issues](/pt/cases/use-cases/team-automation/issue-triage-suggestions/): verifique se as sugestões estruturadas para Issues sintéticas correspondem às entradas e mantenha uma fila de revisão humana. O exercício testa os limites dos dados sem chamar a API histórica nem usar a sua etiqueta de lançamento.
+[Simulação de sugestões para triagem de Issues](/pt/cases/use-cases/team-automation/issue-triage-suggestions/): verifique se as sugestões estruturadas para Issues sintéticas correspondem às entradas e mantenha uma fila de revisão humana. O exercício testa os limites dos dados sem chamar a API histórica nem publicar etiquetas.
 
 [Voltar ao roteiro e aos critérios de data](/pt/ai-roadmap/)

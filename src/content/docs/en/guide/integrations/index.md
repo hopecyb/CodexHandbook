@@ -10,9 +10,10 @@ sidebar:
   order: 55
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-25
 translated_at: 2026-09-20
-source_revision: 140102c
+source_revision: '140102c'
 ---
 
 Integration is valuable not merely because Codex gains another tool. It places an agent in workflows you already use: code hosting, ticket queues, notifications, internal platforms, and knowledge bases.
@@ -27,7 +28,7 @@ Before connecting anything, decide:
 
 Think of integration as **bringing Codex into existing systems to work with you**, instead of leaving it to answer in a chat window.
 
-For example, it might read a GitHub PR and draft a comment, read ticket context and propose a response, or send a result to a chat tool after a task ends. What changes is whether Codex can enter the real workflow.
+For example, it might read a GitHub PR and submit a comment, read ticket context and propose a response, or send a result to a chat tool after a task ends. What changes is whether Codex can enter the real workflow.
 
 ## Common misconceptions
 

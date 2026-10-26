@@ -1,17 +1,21 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Cloud"
+  checkedAt: "2026-08-26"
 title: Cloud-Umgebungen
 description: Konfiguriere Laufzeit, Abhängigkeiten, Setup, Cache und Repository-Ausgangspunkt von Codex Cloud.
 sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 1745f70
+source_revision: "1745f70"
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
-Eine Cloud-Umgebung legt fest, was Codex für ein Repository installiert und ausführt. Sie übernimmt die Konfiguration deines Laptops nicht. Wenn ein lokaler Lauf besteht und Cloud fehlschlägt, vergleiche zuerst Laufzeit, Abhängigkeiten, Variablen und Netzwerk.
+Eine Cloud-Umgebung legt fest, was Codex für ein Repository installiert und ausführt. Sie übernimmt die Konfiguration deines Laptops nicht. Wenn die Ausführung lokal gelingt, in Cloud aber fehlschlägt, vergleiche zuerst Laufzeit, Abhängigkeiten, Variablen und Netzwerk.
 
 ## Ausführungsreihenfolge eines Chats
 
@@ -74,11 +78,3 @@ Diese Grenzen werden häufig verwechselt. Das nächste Kapitel behandelt sie aus
 
 - [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 - [Image codex-universal](https://github.com/openai/codex-universal)
-
----
-
-**Status:** verified
-
-**Unterstützte Produkte:** Cloud
-
-**Zuletzt geprüft:** 2026-08-26

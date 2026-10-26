@@ -3,11 +3,16 @@ title: Secrets와 환경 변수
 description: Cloud setup용 Secret과 채팅 전반에 적용되는 일반 환경 변수를 올바르게 구분합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 78937be
-translation_status: draft
+source_revision: "78937be"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 Cloud 환경 변수와 Secrets는 사용 가능한 시점이 다릅니다. 이 차이가 각각 안전하게 지원할 수 있는 일을 결정합니다. 단순히 “화면에서 값이 가려지는가”만의 문제가 아닙니다.

@@ -3,15 +3,22 @@ title: Error Reference
 description: Learning index of common errors, exit codes, and failure modes—points to troubleshooting, not official support.
 locale: en
 source_locale: zh-CN
-source_revision: 955c0a6
+source_revision: '955c0a6'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: Positioned as error triage index, not full dictionary; five categories cross-checked with current CLI, Cloud, permissions, and configuration chapters—no fixed error code table required.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 100
 ---
 
-Many people stare at one English line and guess. Classifying the problem first usually works better.
+It is easy to stare at an error message and guess its cause. Classifying the problem first usually works better.
 
-Decide if it looks like **auth, permissions, environment, network, or task logic**. This page summarizes frequent messages and next steps—not a complete error dictionary; latest behavior is official docs and client output.
+Decide if it looks like **auth, permissions, environment, network, or task logic**. This page summarizes frequent messages and next steps—not a complete error dictionary; consult official documentation and client output for current behavior.
 
 ## How to read an error
 
@@ -94,7 +101,7 @@ Use this page to land in the right category when unsure.
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| User rejected tool call | You or policy rejected action | Confirm if approval was right; or change task |
+| User rejected tool call | You or policy rejected action | Decide whether to approve the action, or adjust the task |
 | Sandbox violation | Path or command out of bounds | [Sandbox and network](/en/guide/foundations/sandbox-and-network/) |
 | Network access denied | Egress blocked | Cloud: [Internet access](/en/guide/web-and-cloud/internet-access/) |
 
@@ -143,15 +150,9 @@ Include:
 2. Classify before guessing technical detail
 3. Recall what changed recently
 4. Change one variable and retry once
-5. Then ask with full context
+5. If it still fails, ask for help or consult official documentation with the full context
 
 Avoid mixing multiple changes.
 
 ## Reference sources
 - OpenAI Codex support documentation
----
-
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Positioned as error triage index, not full dictionary; five categories cross-checked with current CLI, Cloud, permissions, and configuration chapters—no fixed error code table required.  
-**Last verified:** 2026-07-26

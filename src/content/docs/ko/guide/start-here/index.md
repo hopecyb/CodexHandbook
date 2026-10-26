@@ -10,10 +10,10 @@ sidebar:
   order: 1
 locale: ko
 source_locale: zh-CN
-source_revision: 953fb89
+source_revision: "953fb89"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -75,7 +75,7 @@ reviewed_at: 2026-08-26
 3. [경로 고르기](/ko/guide/start-here/choose-your-path/)
 4. [기초 개념](/ko/guide/foundations/)과 [빠른 시작](/ko/guide/getting-started/)으로 들어가기
 
-바로 손을 대고 싶다면 [처음 30분 경로](/ko/guide/getting-started/first-30-minutes/)를 보고, [초보자 안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/)도 한 번 확인하세요.
+바로 실습하고 싶다면 [처음 30분 경로](/ko/guide/getting-started/first-30-minutes/)를 보고, [초보자 안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/)도 한 번 확인하세요.
 
 ## 이 사이트의 계층
 

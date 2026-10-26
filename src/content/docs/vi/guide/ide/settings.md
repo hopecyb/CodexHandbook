@@ -1,13 +1,18 @@
 ---
-title: Cài đặt tiện ích IDE
-description: Phân biệt cấu hình Agent dùng chung với cài đặt hành vi của các trình soạn thảo thuộc họ VS Code.
-locale: vi
-source_locale: zh-CN
-source_revision: 6f28910
-translation_status: draft
-translated_at: 2026-09-20
+title: "Cài đặt tiện ích IDE"
+description: "Phân biệt cấu hình Agent dùng chung với cài đặt hành vi của các trình soạn thảo thuộc họ VS Code."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "6f28910"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 80
+legacyVerification:
+  status: "verified"
+  products: "IDE"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Trong IDE có hai lớp cài đặt:
@@ -29,7 +34,7 @@ Chọn biểu tượng bánh răng trên thanh bên Codex, rồi chọn **Codex 
 
 | Khóa | Giá trị mặc định | Khi nào cần đổi |
 |---|---:|---|
-| `chatgpt.openOnStartup` | `false` | Muốn tiện ích tự đưa thanh bên lên trước khi khởi động |
+| `chatgpt.openOnStartup` | `false` | Muốn tiện ích tự chuyển tiêu điểm đến thanh bên sau khi khởi động |
 | `chatgpt.followUpQueueMode` | `queue` | Đổi thành `steer` để tin nhắn mới định hướng lượt chạy đang diễn ra |
 | `chatgpt.composerEnterBehavior` | `enter` | Thường vô tình gửi prompt nhiều dòng |
 | `chatgpt.reviewDelivery` | `inline` | Dùng `detached` nếu muốn `/review` hiển thị trong cuộc trò chuyện riêng |

@@ -27,9 +27,10 @@ assets:
   version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: 6d859d7
-translation_status: draft
+source_revision: '6d859d7'
+translation_status: reviewed
 translated_at: '2026-09-20'
+reviewed_at: '2026-10-26'
 ---
 
 Cet exercice décompose le tri des issues en « produire une proposition → valider → faire examiner par une personne ». Vous obtiendrez cinq fiches à revoir. Aucun commentaire, label ou fermeture d'issue n'est publié automatiquement.
@@ -38,7 +39,7 @@ Cet exercice décompose le tri des issues en « produire une proposition → val
 
 ## Entrées et critères de fin
 
-Les cinq entrées synthétiques originales concernent une erreur de calcul, un lien rompu dans la documentation, un indice de données entre comptes, un manque d'informations et une instruction malveillante dans le corps d'une issue. Elles ne contiennent aucune donnée client réelle. Chaque proposition contient un type, une priorité, des labels, un indicateur de revue de sécurité, une justification et les informations manquantes.
+Les cinq entrées synthétiques originales concernent une erreur de calcul, un lien rompu dans la documentation, un indice d’exposition de données entre comptes, un manque d'informations et une instruction malveillante dans le corps d'une issue. Elles ne contiennent aucune donnée client réelle. Chaque proposition contient un type, une priorité, des labels, un indicateur de revue de sécurité, une justification et les informations manquantes.
 
 Pour terminer, associez une proposition à chaque entrée et validez les valeurs autorisées ainsi que le hachage de l'entrée. Une personne responsable du dépôt doit ensuite accepter, modifier ou rejeter chaque proposition en consignant sa raison. Une structure valide ne remplace pas ce jugement.
 

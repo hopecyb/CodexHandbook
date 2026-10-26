@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página solo indica que la ejecución en terminal tiene mayor capacidad de acción y riesgo que la edición de archivos, y enfatiza entender el comando antes de la aprobación, confirmar alcance de escritura, red y forma de recuperación; los principios se contrastaron con los capítulos de permisos, verificación y herramientas del sitio."
+  checkedAt: "2026-07-26"
 title: Shell y terminal
 description: Capacidades y riesgos de la ejecución de comandos.
 locale: es
 source_locale: zh-CN
-source_revision: 1438fc7
+source_revision: '1438fc7'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
 ---
@@ -20,7 +25,7 @@ Las herramientas de archivo tratan sobre todo texto; el terminal opera directame
 Una vez en el terminal, las acciones habituales ya no son solo leer; pueden pasar a:
 
 - Instalar
-- Construir
+- Compilar
 - Probar
 - Borrar
 - Hacer commit
@@ -55,7 +60,7 @@ Si no entiendes un comando, pregunta primero y luego decide si lo permites.
 Estas cosas encajan con el terminal:
 
 - Ejecutar tests
-- Ejecutar builds
+- Ejecutar compilaciones
 - Consultar el estado de archivos
 - Ejecutar scripts que ya tiene el proyecto
 
@@ -103,10 +108,3 @@ Antes de ejecutar un comando, explica el propósito, si escribe archivos, si sal
 ```
 
 Antes de ejecutar, confirma qué va a cambiar ese comando.
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Base de verificación:** Esta página solo indica que la ejecución en terminal tiene mayor capacidad de acción y riesgo que la edición de archivos, y enfatiza entender el comando antes de la aprobación, confirmar alcance de escritura, red y forma de recuperación; los principios se contrastaron con los capítulos de permisos, verificación y herramientas del sitio.  
-**Última verificación:** 2026-07-26

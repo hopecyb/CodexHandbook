@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Compared with current Codex sandbox, approval, and security guidance. This page separates operating-system boundaries, approval policy, task constraints, and human review, and explains the different local and Cloud network models."
+  checkedAt: "2026-08-26"
 title: Permissions and sandboxing
 description: Use one decision chain to understand sandboxing, approvals, network access, and local versus cloud execution.
 locale: en
 source_locale: zh-CN
-source_revision: 6b5fcb8
+source_revision: '6b5fcb8'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 14
 ---
@@ -104,13 +109,3 @@ This makes intent explicit, but the actual execution boundary still comes from t
 - **Hooks replace the sandbox:** Hooks add guardrails and auditing; they do not replace operating-system enforcement.
 
 See [CLI approvals and sandboxing](/en/guide/cli/approvals-and-sandbox/) and [Desktop App settings](/en/guide/desktop-app/settings/) for product settings, and [Constraints and boundaries](/en/prompts/constraints-and-boundaries/) for task wording.
-
----
-
-**Status:** verified
-
-**Applies to:** App / CLI / IDE / Cloud
-
-**Verification basis:** Compared with current Codex sandbox, approval, and security guidance. This page separates operating-system boundaries, approval policy, task constraints, and human review, and explains the different local and Cloud network models.
-
-**Last verified:** 2026-08-26

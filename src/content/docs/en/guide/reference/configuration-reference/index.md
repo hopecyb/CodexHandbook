@@ -3,10 +3,17 @@ title: Configuration Reference
 description: Conceptual index of Codex user- and project-level configuration keys—paths and fields per official docs.
 locale: en
 source_locale: zh-CN
-source_revision: 8f692ed
+source_revision: '8f692ed'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE
+  basis: OpenAI Help Center still documents user-level carriers like `~/.codex/config.toml` and `~/.codex/.env`; this page is explicitly a conceptual index—does not fix specific key names, path precedence, or legacy fields—so `verified` is appropriate.
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 60
 ---
 
 Configuration reference pages can overwhelm with keys, layers, and overrides. Start with one question:
@@ -205,9 +212,3 @@ Config is for long-term defaults—not secrets, task prose, or team rule essays.
 
 ## Reference sources
 - OpenAI Codex configuration reference
----
-
-**Status:** verified  
-**Products:** CLI / App / IDE  
-**Verification basis:** OpenAI Help Center still documents user-level carriers like `~/.codex/config.toml` and `~/.codex/.env`; this page is explicitly a conceptual index—does not fix specific key names, path precedence, or legacy fields—so `verified` is appropriate.  
-**Last verified:** 2026-07-26

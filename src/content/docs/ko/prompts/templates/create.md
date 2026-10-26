@@ -8,10 +8,10 @@ title: 생성 템플릿
 description: 기능, 원고, 산출물을 처음부터 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: c47ebbf
+source_revision: "c47ebbf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -32,7 +32,7 @@ reviewed_at: 2026-08-26
 - 【경로 범위】만 수정/생성
 - 【제외 항목】을 도입하지 말 것
 - 【고위험 작업】은 제 승인 후에 실행
-수락:
+완료 기준:
 - 【관찰 가능한 결과 1】
 - 【관찰 가능한 결과 2】
 - 자체 점검 단계 제공
@@ -59,7 +59,7 @@ reviewed_at: 2026-08-26
 
 생성 작업에서 배경은 산출물 방향에 직접 영향을 주는 경우가 많습니다.
 
-### 3. 수락에 “괜찮아 보이면 됨”이면 충분하다
+### 3. 완료 기준을 “괜찮아 보이면 됨”으로 정하는 것은 부족합니다
 
 그렇게 쓰면 결국 끝났는지 판단하기 어렵습니다.
 

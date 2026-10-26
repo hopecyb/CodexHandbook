@@ -7,8 +7,8 @@ title: Technische Inhalte prüfen
 description: Redaktionellen Status, Quellenabgleich und Probeläufe unterscheiden; Umfang, Umgebung und Prüfbelege dokumentieren.
 locale: de
 source_locale: zh-CN
-source_revision: cfb077d
-translation_status: draft
+source_revision: "cfb077d"
+translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -17,6 +17,7 @@ verification:
   summary: Beitragsregeln an die neuen Metadatenfelder der Website angepasst; das bedeutet nicht, dass sämtliche hier genannten Produktmechanismen erneut getestet wurden.
 sidebar:
   order: 30
+reviewed_at: 2026-10-26
 ---
 
 Befehle, Berechtigungen, Preise und Produktfunktionen ändern sich mit Versionen. **Prüfung** sorgt dafür, dass Lesende erwartbare Ergebnisse bekommen.
@@ -43,7 +44,7 @@ Wichtig, weil vieles nicht ewig stabil ist:
 - Berechtigungsdefaults ändern sich
 - Fähigkeiten und Verfügbarkeit aktualisieren sich
 
-Prüfung ist keine Editiermanie — sie verhindert, dass Lesende alten Docs folgen und stolpern.
+Die Prüfung ist keine redaktionelle Pedanterie — sie verhindert, dass Lesende alten Docs folgen und stolpern.
 
 ## Statusbedeutung
 
@@ -54,7 +55,7 @@ Prüfung ist keine Editiermanie — sie verhindert, dass Lesende alten Docs folg
 | `review` | Inhalt fertig, Review ausstehend |
 | `verified` | Nach angegebenen Belegen geprüft |
 | `outdated` | Nach Produktänderung Update nötig |
-| `archived` | Historisch, nicht in Haupnavigation |
+| `archived` | Historisch, nicht in Hauptnavigation |
 
 ## Häufige Missverständnisse
 
@@ -117,13 +118,13 @@ Als **ganze Operationskette** prüfen, nicht nur Wortlaut.
 
 1. Welches Produkt, Einstieg, Szenario
 2. Schritte von vorn durchgehen
-3. Flüchtige Infos gegen offizielle Doku
+3. Veränderliche Informationen gegen offizielle Doku
 4. Unsicheres / Nicht-Reproduziertes herabstufen
 5. Status und Datum aktualisieren
 
 Lieber `review` behalten, als `verified` ohne genug Belege.
 
-## Flüchtige Informationen
+## Veränderliche Informationen
 
 Quartalsweise oder bei Major-Release neu prüfen:
 

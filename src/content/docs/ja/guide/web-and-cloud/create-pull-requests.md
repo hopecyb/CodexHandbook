@@ -3,12 +3,16 @@ title: Pull Request を作成する
 description: Cloud の結果を、レビューと検証が可能で自動 merge されない PR として引き渡します。
 locale: ja
 source_locale: zh-CN
-source_revision: 39371d4
+source_revision: "39371d4"
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 40
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
+legacyVerification:
+  status: verified
+  products: Cloud、GitHub
+  checkedAt: '2026-08-26'
 ---
 
 Cloud タスクが完了したら、最初に要約と diff を確認します。結果が範囲と検証基準を満たしている場合にだけ Pull Request を作成してください。満たしていない場合は、同じチャットで続けて修正します。
@@ -68,11 +72,3 @@ PR の作成と merge は別の権限境界です。Cloud が PR を作成でき
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
-
----
-
-**状態：** verified
-
-**対象製品：** Cloud、GitHub
-
-**最終検証：** 2026-08-26

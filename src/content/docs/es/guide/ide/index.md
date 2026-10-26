@@ -1,21 +1,25 @@
 ---
 title: Extensión IDE
-description: Usar Codex en el editor — instalación, Contexto, Tareas locales y Cloud, revisión y ajustes.
+description: Usar Codex en el editor — instalación, contexto, tareas locales y Cloud, revisión y ajustes.
 sidebar:
   order: 12
 locale: es
 source_locale: zh-CN
-source_revision: c2fa50b
+source_revision: "c2fa50b"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: OpenAI Help Center (*Using Codex with your ChatGPT plan*) sigue confirmando la Codex IDE extension y la sitúa junto a CLI y App de escritorio como cliente local; esta página solo navega el capítulo IDE y destaca el flujo estable de «archivo actual, selección y revisión de diff».
+  checkedAt: '2026-07-26'
 ---
-
-La extensión IDE conviene cuando **escribes y miras el diff a la vez**: abres archivos, seleccionas código y describes la Tarea en la barra lateral. Este capítulo cubre el recorrido completo, desde la elección hasta la revisión.
+La extensión IDE conviene cuando **escribes y miras el diff a la vez**: abres archivos, seleccionas código y describes la tarea en la barra lateral. Este capítulo cubre el recorrido completo, desde la elección hasta la revisión.
 
 Si sueles escribir código o editar documentación en el editor, el IDE suele ser la entrada más natural.
 
-Trae directamente el archivo abierto y la selección actuales, así que muchas Tareas de «cambio de alcance reducido» son más fáciles de acotar.
+Trae directamente el archivo abierto y la selección actuales, así que muchas tareas de «cambio de alcance reducido» son más fáciles de acotar.
 
 ![Ilustración: un bloque de código seleccionado en el editor; en el panel lateral, un asistente propone un cambio con un botón de aceptar](/illustrations/ide.webp)
 
@@ -41,11 +45,4 @@ La primera vez, fíjate en tres cosas:
 2. Puedes acotar el alcance con la selección
 3. Después de cambiar, sigues teniendo que revisar el diff tú mismo
 
-La extensión IDE encaja con Tareas de «alcance pequeño, ir mirando y cambiando», pero el control de alcance y la revisión siguen siendo imprescindibles.
-
----
-
-**Estado:** verified  
-**Productos aplicables:** IDE  
-**Base de verificación:** OpenAI Help Center (*Using Codex with your ChatGPT plan*) sigue confirmando la Codex IDE extension y la sitúa junto a CLI y App de escritorio como cliente local; esta página solo navega el capítulo IDE y destaca el flujo estable de «archivo actual, selección y revisión de diff».  
-**Última verificación:** 2026-07-26
+La extensión IDE encaja con tareas de «alcance pequeño, ir mirando y cambiando», pero el control de alcance y la revisión siguen siendo imprescindibles.

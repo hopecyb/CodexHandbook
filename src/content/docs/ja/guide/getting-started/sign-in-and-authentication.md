@@ -3,12 +3,17 @@ title: ログインと認証
 description: ローカルクライアントと Cloud で正しいログイン方法を選び、現在の ID を安全に確認します。
 locale: ja
 source_locale: zh-CN
-source_revision: ea83fa6
+source_revision: 'ea83fa6'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:
   order: 60
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 現在の公式 Authentication ページを照合し、ChatGPT と API key による二種類のローカルログイン、Cloud の ChatGPT ログイン要件、CLI コマンド、キャッシュ共有、認証情報ストレージの境界を確認しました。
+  checkedAt: '2026-08-26'
 ---
 
 Codex で OpenAI モデルを使う個人向けログイン方法は二つあります。
@@ -68,13 +73,3 @@ CLI と IDE はキャッシュされたログイン情報を共有します。�
 CLI のログインには専用ログがあり、公式サポートまたはログイン問題の調査時に利用できます。ログも先に機密情報を確認してください。
 
 プランの境界は[アカウント、プラン、アクセス](/ja/guide/getting-started/account-plans-and-access/)を、完全な詳細は[公式 Authentication ページ](https://learn.chatgpt.com/docs/auth)を参照してください。
-
----
-
-**状態：** verified
-
-**対象製品：** App / CLI / IDE / Cloud
-
-**検証根拠：** 現在の公式 Authentication ページを照合し、ChatGPT と API key による二種類のローカルログイン、Cloud の ChatGPT ログイン要件、CLI コマンド、キャッシュ共有、認証情報ストレージの境界を確認しました。
-
-**最終検証：** 2026-08-26

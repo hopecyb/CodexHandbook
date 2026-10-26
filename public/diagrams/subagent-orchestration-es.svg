@@ -45,7 +45,7 @@
   <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
   <text x="600" y="439" text-anchor="middle" class="note">Entregar: comando fallido y registros</text>
   <text x="600" y="469" text-anchor="middle" class="tiny">Contexto independiente · permisos heredados</text>
-  <text x="600" y="491" text-anchor="middle" class="tiny">Las conclusiones deben ser reproducibles</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Las conclusiones deben poder verificarse</text>
 
   <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1008" y="357" text-anchor="middle" class="label">Subagente C</text>
@@ -70,5 +70,5 @@
   <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
   <text x="600" y="690" text-anchor="middle" class="label">El Agent principal consolida, resuelve conflictos y verifica</text>
   <text x="600" y="721" text-anchor="middle" class="note">Comparar evidencia → decidir ediciones → fusionar → volver a ejecutar pruebas y build</text>
-  <text x="600" y="749" text-anchor="middle" class="tiny">Completar una subtarea no completa la tarea total; solo la evidencia reproducible sostiene la conclusión final.</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Completar una subtarea no completa la tarea global; la conclusión final debe apoyarse en evidencias verificables.</text>
 </svg>

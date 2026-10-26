@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Esta página só descreve restrições e limites; os links internos foram revistos; o corpo não depende de fatos voláteis do produto."
+  checkedAt: "2026-07-26"
 title: Restrições e limites
 description: Limite o alcance editável, o estilo e as proibições.
 locale: pt
 source_locale: zh-CN
-source_revision: 0ca4700
+source_revision: "0ca4700"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 Muitas tarefas falham não porque o objetivo falte por completo, mas porque os **limites estão pouco claros**.
@@ -74,7 +79,7 @@ Mais útil:
 
 ### 3. Restrições só para tarefas de alto risco
 
-Tarefas pequenas também precisam — é aí que um pedido vago convida a expandir o âmbito sozinho.
+tarefas pequenas também precisam — é aí que um pedido vago convida a expandir o escopo sozinho.
 
 ## Uma formulação suficiente
 
@@ -94,16 +99,9 @@ Nestes casos, escreva-as com clareza:
 
 - projeto antigo, com muita dívida histórica
 - você só quer um remendo local
-- a equipa tem regras rígidas de estilo ou arquitetura
+- a equipe tem regras rígidas de estilo ou arquitetura
 - envolve permissões, rede ou instalação de dependências
 
 O objetivo diz ao Codex o que fazer; a restrição diz até onde ir.
 
-Escreva limites de permissão junto com as restrições, para reduzir extralimitação «de passagem». Ver [Definir o concluído](/pt/prompts/define-done/) e [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/).
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Última verificação:** 2026-07-26  
-**Base de verificação:** Esta página só descreve restrições e limites; os links internos foram revistos; o corpo não depende de factos voláteis do produto.
+Escreva limites de permissão junto com as restrições, para reduzir extralimitação «de passagem». Ver [Definir o concluído](/pt/prompts/define-done/) e [permissões e Sandbox](/pt/guide/permissions-and-sandbox/).

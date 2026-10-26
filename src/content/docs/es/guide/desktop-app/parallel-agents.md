@@ -3,13 +3,17 @@ title: Conversaciones y Agents en paralelo
 description: Usa conversaciones y worktrees separados para avanzar tareas independientes que puedan revisarse por separado.
 locale: es
 source_locale: zh-CN
-source_revision: 2336db1
-translation_status: draft
+source_revision: "2336db1"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  checkedAt: '2026-08-26'
+reviewed_at: 2026-10-25
 ---
-
 La unidad básica del trabajo en paralelo es una conversación con contexto, mensajes, resultados y objetivo propios. Una tarea no es apta para el paralelismo solo porque tenga muchos pasos: **las tareas deben ser independientes, tener límites claros de archivos y poder evaluarse por separado**.
 
 ![Diagrama en el que la conversación principal distribuye tareas independientes entre subagentes y reúne las evidencias y los conflictos](/diagrams/subagent-orchestration-es.svg)

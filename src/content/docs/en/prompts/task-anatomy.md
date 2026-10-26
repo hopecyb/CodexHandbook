@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "This page documents a stable task-design method. Examples and internal links were reviewed and do not depend on volatile UI, pricing, or version facts."
+  checkedAt: "2026-08-25"
 title: Anatomy of a good task
 description: Goal, background, inputs, constraints, acceptance, and permission boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 98c0511
+source_revision: '98c0511'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 A requirement with too much unstructured information mixes outcomes, boundaries, and acceptance. Codex must then fill the gaps.
@@ -97,7 +102,7 @@ It lacks audience, scope, and success criteria.
 Goal: Rewrite the homepage first screen so a reader new to Codex knows within
 30 seconds what it is and where to start.
 Background: The current page assumes Agent, context, and Skill knowledge.
-Input: src/content/docs/guide/index.md
+Input: src/content/docs/en/guide/index.md
 Constraints: Modify only this file; do not change navigation, styles, or
 components. Explain Agent plainly on first use.
 Acceptance:
@@ -105,7 +110,7 @@ Acceptance:
 - Preserve frontmatter and heading levels.
 - Add no unexplained jargon.
 - pnpm build passes.
-Permissions: May read related site pages; no internet, installs, config changes,
+Permissions: May read related site pages; no internet, installs,
 or Git commit.
 If information is missing: list it and the proposed scope, then wait.
 ```
@@ -135,10 +140,3 @@ Scale the template to the task. A typo needs little background; a cross-module m
 - [Constraints and boundaries](/en/prompts/constraints-and-boundaries/)
 - [Ask for a plan](/en/prompts/ask-for-a-plan/)
 - [Explore, plan, execute, verify](/en/cases/workflows/explore-plan-execute-verify/)
-
----
-
-**Status:** verified
-**Applies to:** App / CLI / IDE / Cloud
-**Verification basis:** This page documents a stable task-design method. Examples and internal links were reviewed and do not depend on volatile UI, pricing, or version facts.
-**Last verified:** 2026-08-25

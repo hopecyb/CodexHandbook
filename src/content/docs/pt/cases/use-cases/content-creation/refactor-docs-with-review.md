@@ -3,10 +3,14 @@ title: Refatorar um site de documentação com revisão
 description: "Caso: atualizar ligações e capítulos em lote num projeto de documentação Astro/Starlight — diffs pequenos, verificação por build."
 locale: pt
 source_locale: zh-CN
-source_revision: db44ca3
+source_revision: "db44ca3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
+legacyVerification: {"status": "verified", "products": "CLI / IDE", "basis": "Cruzado com os capítulos já verificados deste manual sobre artefatos de conteúdo, EPXV, aceitação por build e modelo de caso; o conteúdo limita-se ao caso estável de engenharia de conteúdo «alterações pequenas multi-ficheiro num site de documentação, verificação por build e recuperação de falhas».", "checkedAt": "2026-07-26"}
+caseCategory: "development"
+directoryOrder: 75
+contentType: "case"
 ---
 
 Este caso demonstra tarefas de **engenharia de conteúdo**: Markdown multi-ficheiro, configuração da barra lateral, verificação por build. A stack é semelhante à deste manual, mas o cenário migra para qualquer site estático.
@@ -50,14 +54,14 @@ Passos: alterar config primeiro, depois escrever o md, por fim atualizar 12-refe
 ## Pontos de execução
 
 - **Config primeiro, conteúdo depois:** evitar build a reportar missing slug
-- Commit de 3–5 ficheiros por lote, para facilitar a review
-- Usar [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Commit de 3–5 arquivos por lote, para facilitar a review
+- Usar [Explorar—Planejar—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
 
 ## Verificação
 
-- [ ] Cada slug da barra lateral tem ficheiro correspondente
+- [ ] Cada slug da barra lateral tem arquivo correspondente
 - [ ] Ligações internas seguem a convenção de caminhos relativos
-- [ ] Log do build sem avisos Starlight (se a equipa exigir zero avisos)
+- [ ] Log do build sem avisos Starlight (se a equipe exigir zero avisos)
 
 ## Recuperação de falhas
 
@@ -74,9 +78,3 @@ Passos: alterar config primeiro, depois escrever o md, por fim atualizar 12-refe
 
 ## Fontes de referência
 - Fluxo real de iteração M2 da documentação neste repositório
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre artefatos de conteúdo, EPXV, aceitação por build e modelo de caso; o conteúdo limita-se ao caso estável de engenharia de conteúdo «alterações pequenas multi-ficheiro num site de documentação, verificação por build e recuperação de falhas».  
-**Última verificação:** 2026-07-26

@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu cách giới hạn phạm vi tệp và thư mục; cách viết ví dụ và diễn đạt khái niệm đã kiểm lại, và phần thân không phụ thuộc phiên bản sản phẩm, giá hay giao diện dễ đổi.", "checkedAt": "2026-07-26"}
 title: Ngữ cảnh tệp và thư mục
 description: Chỉ định tệp liên quan và tránh nhiễu không liên quan.
 locale: vi
 source_locale: zh-CN
-source_revision: e9148a3
+source_revision: "e9148a3"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 20
 ---
@@ -53,7 +54,7 @@ Câu này đồng thời nói:
 
 ### 1. Tệp liên quan nói càng nhiều càng tốt?
 
-Quá ít khiến nó đoán; quá nhiều khiến trọng tâm bị pha.  
+Quá ít khiến nó đoán; quá nhiều khiến trọng tâm bị pha.
 Cách hợp hơn: **chỉ đưa phần thật sự cần để hoàn thành tác vụ hiện tại.**
 
 ### 2. Tôi không biết tệp liên quan ở đâu — làm sao?
@@ -104,10 +105,3 @@ Nếu còn cần tệp khác, nói trước vì sao cần, rồi mới tiếp t�
 ```
 
 Chỉ phạm vi tệp cho Codex chính là giảm đoán, nhiễu và sửa nhầm.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu cách giới hạn phạm vi tệp và thư mục; cách viết ví dụ và diễn đạt khái niệm đã kiểm lại, và phần thân không phụ thuộc phiên bản sản phẩm, giá hay giao diện dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

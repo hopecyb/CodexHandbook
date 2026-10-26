@@ -3,23 +3,28 @@ title: Rodar a primeira Tarefa
 description: Complete uma mudança pequena com um Prompt claro.
 locale: pt
 source_locale: zh-CN
-source_revision: f203611
+source_revision: "f203611"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 80
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Cruzado com os capítulos já verificados deste handbook sobre fundamentos de Prompt, revisão de resultado, desfazer/recuperar e projeto de prática; o conteúdo se limita ao método estável de «na primeira vez, só uma Tarefa de alcance pequeno, verificável e reversível».
+  checkedAt: '2026-07-26'
 ---
 
-O exemplo abaixo assume o **App desktop** por padrão; CLI/IDE podem usar o mesmo Prompt.
+O exemplo abaixo assume o **App desktop** por padrão; CLI/IDE podem usar o mesmo prompt.
 
 Muita gente, na primeira vez com o Codex, quer pedir de cara «faça um site completo» ou «refatore o projeto inteiro». Assim é fácil perder o controle de uma vez.
 
-Uma primeira Tarefa pequena é mais estável. Fechar o fluxo completo importa mais do que começar grande.
+Uma primeira tarefa pequena é mais estável. Fechar o fluxo completo importa mais do que começar grande.
 
-## Por que a primeira Tarefa deve ser tão pequena
+## Por que a primeira tarefa deve ser tão pequena
 
-A primeira Tarefa idealmente atende a estas três condições:
+A primeira tarefa idealmente atende a estas três condições:
 
 - Alcance de mudança pequeno
 - Resultado fácil de verificar de relance
@@ -27,7 +32,7 @@ A primeira Tarefa idealmente atende a estas três condições:
 
 Por isso usamos aqui um exemplo de prática bem pequeno.
 
-## Exemplo de Tarefa
+## Exemplo de tarefa
 
 No projeto de prática, diga ao Codex:
 
@@ -38,9 +43,9 @@ Aceite: no final do arquivo aparecem esse título e exatamente três itens de li
 Se faltar informação, pergunte antes — não adivinhe.
 ```
 
-## Papel de cada parte do Prompt
+## Papel de cada parte do prompt
 
-Este Prompt separa com clareza várias coisas importantes:
+Este prompt separa com clareza várias coisas importantes:
 
 - **Objetivo**: o que fazer
 - **Restrições**: o que não pode alterar à toa
@@ -51,13 +56,13 @@ Não é um template fixo — só deixa claras as partes mais fáceis de ficar va
 
 ## Mal-entendidos comuns
 
-### 1. Quanto maior a primeira Tarefa, mais se aprende de verdade
+### 1. Quanto maior a primeira tarefa, mais se aprende de verdade
 
 Na primeira vez, o mais importante é percorrer o ciclo completo — não fazer a coisa grande de uma vez.
 
-### 2. Com o Prompt escrito, o resto fica com ele
+### 2. Com o prompt escrito, o resto fica com ele
 
-Na primeira Tarefa, o foco é vigiar três coisas:
+Na primeira tarefa, o foco é vigiar três coisas:
 
 - O alcance ultrapassou?
 - Ele está agindo no arquivo que você disse?
@@ -65,7 +70,7 @@ Na primeira Tarefa, o foco é vigiar três coisas:
 
 ### 3. Se a primeira vez der errado, é porque eu não sei usar
 
-A primeira Tarefa já inclui:
+A primeira tarefa já inclui:
 
 - Descobrir o que está errado
 - Conseguir apontar o problema
@@ -73,7 +78,7 @@ A primeira Tarefa já inclui:
 
 ## Atenção na execução
 
-1. Peça um plano curto (ou peça o plano de forma ativa)
+1. Deixe o Codex apresentar um plano curto ou peça um explicitamente
 2. Ao aprovar a escrita de arquivo, confirme que o caminho está certo
 3. Ao terminar, vá a [Revisar o resultado](/pt/guide/getting-started/review-the-result/)
 
@@ -82,7 +87,7 @@ A primeira Tarefa já inclui:
 Dá para seguir estes 5 passos:
 
 1. Escolher um projeto de prática seguro
-2. Dar uma Tarefa pequena que altera só um arquivo
+2. Dar uma tarefa pequena que altera só um arquivo
 3. Antes de aprovar, ver com clareza o que ele vai mexer
 4. Depois, verificar alcance e resultado
 5. Se não gostar, desfazer ou continuar com correção precisa
@@ -97,7 +102,7 @@ Foque nestas três coisas:
 2. No final do arquivo realmente apareceu aquela seção?
 3. A quantidade de itens da lista é exatamente três?
 
-Se as três estiverem certas, esta Tarefa pequena basicamente fechou bem.
+Se as três estiverem certas, esta tarefa pequena basicamente fechou bem.
 
 ## Se ele errar
 
@@ -113,11 +118,4 @@ Ou:
 Não continue alterando. Diga-me o que você alterou agora há pouco.
 ```
 
-Princípios de Prompt: [Fundamentos de Prompt](/pt/prompts/basics/).
-
----
-
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste handbook sobre fundamentos de Prompt, revisão de resultado, desfazer/recuperar e projeto de prática; o conteúdo se limita ao método estável de «na primeira vez, só uma Tarefa de alcance pequeno, verificável e reversível».  
-**Última verificação:** 2026-07-26
+Princípios de prompt: [Fundamentos de prompt](/pt/prompts/basics/).

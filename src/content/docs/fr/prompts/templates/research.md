@@ -8,10 +8,10 @@ title: Modèle de recherche
 description: Enquête et comparaison avec citations.
 locale: fr
 source_locale: zh-CN
-source_revision: 729d4cc
+source_revision: "729d4cc"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 ---
 
 
@@ -43,7 +43,7 @@ Ici : sources, limites, points à confirmer.
 
 ### 2. Mieux une fausse certitude que « je ne sais pas »
 
-« À confirmer » vaut mieux qu'un faux positif.
+Mieux vaut indiquer « à confirmer » que feindre la certitude.
 
 Règle clé : chaque conclusion importante doit être **traçable** — pas seulement bien formatée.
 

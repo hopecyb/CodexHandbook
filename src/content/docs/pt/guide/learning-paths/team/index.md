@@ -1,27 +1,31 @@
 ---
-title: "Percurso de equipa: piloto de duas semanas, amostragem e decisão de expansão"
-description: "Comece por uma tarefa de baixo risco e reúna, em dez dias úteis, provas sobre papéis, execuções, revisão, reversão e expansão limitada."
+title: 'Percurso de equipa: piloto de duas semanas, amostragem e decisão de expansão'
+description: Comece por uma tarefa de baixo risco e reúna, em dez dias úteis, provas sobre papéis, execuções, revisão, reversão e expansão limitada.
 contentType: path
-audiences: [team]
+audiences:
+- team
 level: intermediate
-outputs: [markdown, csv]
+outputs:
+- markdown
+- csv
 editorialStatus: review
 verification:
   kind: editorial
-  checkedAt: "2026-09-18"
-  summary: "O percurso de duas semanas, seis modelos e três cenários de exceção foram analisados pelo autor num exercício de mesa. Não houve piloto real de equipa, revisão independente nem medição de ganhos de produtividade."
+  checkedAt: '2026-09-18'
+  summary: O percurso de duas semanas, seis modelos e três cenários de exceção foram analisados pelo autor num exercício de mesa. Não houve piloto real de equipa, revisão independente nem medição de ganhos de produtividade.
 assets:
-  - path: /downloads/two-week-pilot/two-week-pilot-1.0.0.zip
-    purpose: "Plano do piloto, lista de tarefas, ficha de revisão, incidente e reversão, decisão e calendário de dez dias"
-    license: CC0-1.0
-    version: 1.0.0
+- path: /downloads/two-week-pilot/two-week-pilot-1.0.0.zip
+  purpose: Plano do piloto, lista de tarefas, ficha de revisão, incidente e reversão, decisão e calendário de dez dias
+  license: CC0-1.0
+  version: 1.0.0
 sidebar:
   order: 30
 locale: pt
 source_locale: zh-CN
 source_revision: "3b46738"
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 Comece por uma tarefa limitada cujo resultado possa ser verificado. Use duas semanas para reunir provas de que vale a pena expandir o uso. Aqui, duas semanas correspondem a dez dias úteis. Se houver poucas tarefas, prolongue o piloto; não declare sucesso só porque o prazo terminou.
@@ -70,7 +74,7 @@ Peça ao revisor que examine resultados críticos, enviesamento da amostra e pro
 
 | Decisão | O que explicar |
 |---|---|
-| Expansão limitada | Tarefas, pessoas e permissões sustentadas pelas provas; amostragem contínua e responsabilidade pela reversão |
+| Expansão limitada | tarefas, pessoas e permissões sustentadas pelas provas; amostragem contínua e responsabilidade pela reversão |
 | Continuar o piloto | Amostras ou provas de recuperação em falta, responsável e data da próxima revisão |
 | Parar | Como desativar o agendamento, tratar permissões, conservar registos e gerir eventos pendentes |
 

@@ -3,13 +3,18 @@ title: Preferencias personales
 description: Configuración de usuario, modelo por defecto y hábitos de interfaz — sin contaminar las convenciones del equipo en el repositorio.
 locale: es
 source_locale: zh-CN
-source_revision: c381051
-translation_status: draft
+source_revision: "c381051"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: Contrastado con los capítulos ya verificados de este manual sobre instrucciones de proyecto, Profiles, reparto de ajustes y límites de seguridad; esta página solo explica el principio estable de estratificación «los hábitos personales no deben contaminar las reglas del repositorio del equipo», sin convertir la UI de ajustes actual de un cliente concreto en un contrato fijo.
+  checkedAt: '2026-07-26'
+reviewed_at: 2026-10-25
 ---
-
 Las **preferencias personales** son ajustes de tu máquina que valen entre proyectos: modelo por defecto, tema, hábitos de aprobación, rutas de Skills personales, etc. A diferencia de `AGENTS.md` en el repositorio, las preferencias personales **no** deben asumir que los compañeros tienen las mismas.
 
 ## Contenido
@@ -41,13 +46,13 @@ Si no se separan, después es fácil que pase:
 | Modelo y nivel de razonamiento predeterminados | Rendimiento del equipo y plan personal |
 | Tema, fuentes y notificaciones | [Ajustes](/es/guide/desktop-app/settings/) de la aplicación de escritorio |
 | Herramientas MCP personales | Acceso de solo lectura a una base local, autorizado con cuidado |
-| Ruta de la biblioteca personal de Skills | Mantenerla distinta de los Plugins del equipo |
+| Ruta de la biblioteca personal de Skills | Evitar conflictos con los Plugins del equipo |
 | Alias de terminal y directorio habitual de inicio de `codex` | Ver [Configuración de la CLI](/es/guide/cli/configuration/) |
 
 ## Contenido de equipo que no debe vivir solo en la capa personal
 
 - Estilo de código, comandos de test, estructura de directorios → **`AGENTS.md` del proyecto**
-- Política de Sandbox obligatoria → **configuración del proyecto o gestión de la organización**
+- Política de sandbox obligatoria → **configuración del proyecto o gestión de la organización**
 - Requisitos de cumplimiento en repositorios de clientes → **documentación + CI**, no memoria personal
 
 ## Prácticas recomendadas
@@ -65,7 +70,7 @@ Si tus hábitos por defecto son bastante permisivos, en un proyecto de cliente o
 
 ### 2. ¿Preferencias personales y reglas de proyecto son casi lo mismo?
 
-No.  
+No.
 Las preferencias personales son «yo suelo hacerlo así»; las reglas de proyecto son «en este repositorio todos deberían intentar hacerlo así».
 
 ### 3. Que en tu máquina no haya problemas no basta para juzgar si el conjunto es razonable
@@ -103,10 +108,3 @@ Si el producto ofrece «memoria» o preferencias persistentes, ver [Memorias y c
 - [ ] Puedes dar un ejemplo de cada capa: personal vs proyecto vs organización
 - [ ] Has configurado al menos un Profile estricto para un proyecto de cliente
 - [ ] No hay secretos personales dentro del repositorio
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / IDE  
-**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre instrucciones de proyecto, Profiles, reparto de ajustes y límites de seguridad; esta página solo explica el principio estable de estratificación «los hábitos personales no deben contaminar las reglas del repositorio del equipo», sin convertir la UI de ajustes actual de un cliente concreto en un contrato fijo.  
-**Última verificación:** 2026-07-26

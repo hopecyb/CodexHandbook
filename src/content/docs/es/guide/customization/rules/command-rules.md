@@ -3,19 +3,23 @@ title: Reglas de comandos
 description: Restringe llamadas a shell y herramientas con allow/deny a nivel de comando — más ejecutable que un acuerdo oral.
 locale: es
 source_locale: zh-CN
-source_revision: fdb8651
+source_revision: "fdb8651"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: CLI / App
+  basis: La documentación actual del CLI de Codex de OpenAI sigue tratando ejecución de comandos, modos de aprobación y aislamiento en sandbox como límites de seguridad centrales; esta página sitúa las reglas de comandos como un patrón de ingeniería para «gestionar por separado comandos de alto y bajo riesgo», y marca el fragmento JSON como ilustrativo, sin convertir una sintaxis concreta en hecho oficial.
+  checkedAt: '2026-07-26'
 ---
-
 Las **reglas de comandos** se centran en «qué comandos puede ejecutar el Agent y con qué parámetros». Son la forma más habitual de [reglas de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/), y suelen escribirse en configuración o archivos de reglas que el equipo puede revisar.
 
 ## Qué cubre esta página
 
-- Reparto entre reglas de comandos, Sandbox y ventanas de aprobación
+- Reparto entre reglas de comandos, sandbox y ventanas de aprobación
 - Cómo escribir una allowlist «lo bastante estrecha»
 - Alineación con CI y scripts de desarrollo local
 
@@ -64,7 +68,7 @@ Desde el punto de vista de las reglas, suele equivaler a abrir también un mont�
 3. **Mete las reglas en Git**, alineadas con la descripción de «comandos de test» en `AGENTS.md`
 4. **Revisa cambios de reglas en el PR**, como si cambiaras un Dockerfile
 
-Ilustración (el formato sigue la configuración oficial):
+Ejemplo ilustrativo (consulta la configuración oficial para conocer el formato válido):
 
 ```json
 {
@@ -105,7 +109,7 @@ Las reglas de comandos no «memorizan comandos»; separan cuáles son acciones c
 ## Límites de seguridad
 
 - Las reglas de comandos **no** sustituyen protección de ramas ni code review
-- Un prompt malicioso puede inducir al Agent a **intentar** comandos fuera de permiso — mantén el Sandbox estricto por defecto
+- Un prompt malicioso puede inducir al Agent a **intentar** comandos fuera de permiso — mantén el sandbox estricto por defecto
 - Variables de entorno con secretos o tokens no deben filtrarse solo porque se haya «permitido echo»
 
 ## Lista de verificación
@@ -118,12 +122,5 @@ Las reglas de comandos no «memorizan comandos»; separan cuáles son acciones c
 
 - [Patrones de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/)
 - [Política de reglas de equipo](/es/guide/customization/rules/team-rules/)
-- [Aprobación y Sandbox en CLI](/es/guide/cli/approvals-and-sandbox/)
+- [Aprobación y sandbox en CLI](/es/guide/cli/approvals-and-sandbox/)
 - [Matriz de permisos](/es/guide/reference/permission-matrix/)
-
----
-
-**Estado:** verificado  
-**Productos aplicables:** CLI / App  
-**Base de verificación:** La documentación actual del CLI de Codex de OpenAI sigue tratando ejecución de comandos, modos de aprobación y aislamiento en Sandbox como límites de seguridad centrales; esta página sitúa las reglas de comandos como un patrón de ingeniería para «gestionar por separado comandos de alto y bajo riesgo», y marca el fragmento JSON como ilustrativo, sin convertir una sintaxis concreta en hecho oficial.  
-**Última verificación:** 2026-07-26

@@ -3,165 +3,167 @@ title: "Variables d'environnement"
 description: Objectif, couche et sécurité des variables d'environnement liées à Codex — supplément à la référence de configuration.
 locale: fr
 source_locale: zh-CN
-source_revision: 58fd37b
+source_revision: '58fd37b'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
+legacyVerification:
+  status: verified
+  products: CLI / App / IDE / Cloud
+  basis: 'La documentation de configuration du Help Center OpenAI décrit toujours `~/.codex/.env`, l’injection par la CI ou à l’exécution et les secrets des plateformes. Cette page porte sur les principes stables : valeurs adaptées ou non aux variables d’environnement et rôle de conteneur local de `.env`, sans figer une liste de noms de variables.'
+  checkedAt: '2026-07-26'
+sidebar:
+  order: 80
 ---
 
-Les variables d'environnement sont à deux extrêmes : « trop bas niveau » ou « tout y mettre ». Simplement : elles passent des valeurs aux programmes à l'exécution — surtout secrets et interrupteurs.
+Les variables d’environnement suscitent souvent deux réactions : les juger trop techniques ou vouloir y placer toute la configuration. Elles servent simplement à transmettre des valeurs aux programmes au moment de l’exécution, notamment des informations sensibles et des options.
 
-Utilisez-les pour **injecter clés, override interrupteurs, adapter CI** sans écrire des secrets dans fichiers de config ou Git. Index conceptuel ; noms exacts selon [doc officielle](https://developers.openai.com/codex) et `codex --help`.
+Elles permettent d’**injecter des clés, de modifier temporairement des options et d’adapter l’exécution en CI**, sans enregistrer les valeurs sensibles dans des fichiers de configuration ou dans Git. Cette page est un index conceptuel. Pour les noms exacts, consultez la [documentation officielle](https://developers.openai.com/codex) et `codex --help`.
 
-## Ce que cette page couvre
+## Contenu de cette page
 
-- Ce qui appartient aux env vars vs fichiers de config
-- Division utilisateur, projet, Secrets Cloud, CI
-- Nommage courant et risques de fuite
+- Quand préférer les variables d’environnement aux fichiers de configuration.
+- Comment répartir les réglages entre utilisateur, projet, secrets Cloud et CI.
+- Les conventions de nommage courantes et les risques de fuite.
 
-## Règle de décision
+## Principe de décision
 
-Préférer les variables d'environnement si l'un s'applique :
+Envisagez en priorité une variable d’environnement si la valeur :
 
-- Ne doit pas aller dans Git
-- Varie par machine, utilisateur ou environnement
-- Nécessaire uniquement pour ce run
+- ne doit pas être enregistrée dans Git ;
+- varie selon la machine, l’utilisateur ou l’environnement ;
+- ne doit s’appliquer que pendant cette exécution.
 
-Donc tokens, interrupteurs temporaires et injection CI utilisent souvent env — pas fichiers codés en dur.
+C’est pourquoi les jetons, options temporaires et valeurs injectées par la CI sont souvent transmis de cette manière plutôt qu’inscrits en dur.
 
-Concepts config : [Référence de configuration](/fr/guide/reference/configuration-reference/) ; Cloud : [Secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/).
+Voir la [référence de configuration](/fr/guide/reference/configuration-reference/) et, pour Cloud, les [secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/).
 
-## Bon choix pour variables d'environnement
+## Contenus adaptés aux variables d’environnement
 
-| Type | Intention exemple | Ne pas |
+| Type | Exemple d’usage | À éviter |
 |---|---|---|
-| Token auth | Clé API, PAT GitHub | Committer dans dépôt |
-| Interrupteur temporaire | Niveau log debug | Config métier long terme |
-| Injection CI | Mode revue lecture seule | Token d'écriture production |
-| Processus enfant MCP | Clé service tiers | Texte clair dans `AGENTS.md` |
+| Jeton d’authentification | Clé API, PAT GitHub | Enregistrement dans le dépôt |
+| Option temporaire | Niveau des journaux de débogage | Configuration métier durable |
+| Injection CI | Mode de revue en lecture seule | Jeton autorisant l’écriture en production |
+| Sous-processus MCP | Clé d’un service tiers | Valeur en clair dans `AGENTS.md` |
 
-## Pas un tiroir universel
+## Ne pas en faire un tiroir universel
 
-Éviter « si ça rentre, env ».
+Évitez d’y placer une valeur simplement parce que c’est possible. Distinguez :
 
-- **Sensible, spécifique runtime** : variables d'environnement
-- **Accord d'équipe long terme** : config ou docs
-- **Règles de flux de travail** : `AGENTS.md` ou Skill
+- **valeurs sensibles ou différences à l’exécution** : variables d’environnement ;
+- **conventions durables de l’équipe** : fichiers de configuration ou documentation ;
+- **règles de travail** : `AGENTS.md` ou Skill.
 
-Dépannage plus facile plus tard.
+Vous saurez ainsi plus facilement où chercher lors d’un dépannage.
 
-## Ce qu'est `.env`
+## Ce qu’est un fichier `.env`
 
-`.env` n'est pas un autre centre de config — c'est une façon courante pour les outils de **charger en lot les variables d'environnement** pour dev local.
+Le fichier `.env` est souvent le premier contact avec les variables d’environnement. Il ne constitue pas un autre centre de configuration : de nombreux outils l’utilisent pour **charger plusieurs variables d’environnement à la fois** pendant le développement local.
 
-- Variable d'environnement = la valeur
-- `.env` = un conteneur local pour ces valeurs
+- La variable d’environnement correspond à la valeur transmise.
+- `.env` est un conteneur local courant pour ces valeurs.
 
-Donc :
+Par conséquent :
 
-- Pratique ≠ sécurisé
-- `.env.example` montre les noms — pas les vrais secrets
-- Production/CI utilise généralement les gestionnaires Secret de plateforme
+- la commodité de `.env` ne garantit pas sa sécurité ;
+- `.env.example` doit montrer les noms, sans contenir de véritables clés ;
+- en production ou en CI, on utilise généralement un gestionnaire de secrets.
 
-## Mauvais choix pour env seul
+## Ce qui ne devrait pas reposer uniquement sur ces variables
 
-- Standards de code, structure de répertoires → `AGENTS.md`
-- Modèle par défaut d'équipe → config projet (parties non secrètes)
-- Listes d'autorisation complexes → [Règles](/fr/guide/customization/rules/allow-and-deny-patterns/)
+- Conventions de code et structure des répertoires : `AGENTS.md`.
+- Modèle par défaut choisi par l’équipe : configuration du projet, pour les parties non sensibles.
+- Listes d’autorisation complexes : [règles](/fr/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Idées reçues courantes
 
-### 1. Les env vars ne sont pas pour toute la configuration
+### 1. Toute la configuration peut être stockée dans les variables d’environnement
 
-Bon pour les valeurs — pas les règles d'équipe complètes et long prose.
+Elles conviennent aux valeurs, beaucoup moins à un ensemble complet de règles d’équipe ou à de longues explications.
 
-### 2. `.env` sur disque ≠ sûr
+### 2. Une valeur dans `.env` est forcément protégée
 
-`.env` commité, partagé en capture d'écran ou loggé fuit encore.
+Elle peut encore fuiter si le fichier est commité, visible pendant un partage d’écran ou imprimé dans un journal.
 
-### 3. `unset` ≠ risque éliminé
+### 3. `unset` élimine tout risque
 
-Peut rester dans historique shell, processus enfants, logs, fichiers, captures.
+Des traces peuvent subsister dans l’historique du shell, les processus enfants, les journaux et les fichiers ou captures déjà enregistrés.
 
-### 4. Modèle `.env` local ≠ modèle production
+### 4. Il suffit d’envoyer le même `.env` en production
 
-CI/Cloud/plateformes gérées utilisent généralement :
+Dans la CI, Cloud et les plateformes gérées, on procède plutôt ainsi :
 
-- Configurer Secrets dans la console
-- Injecter à l'exécution
-- Garder les vraies valeurs hors des fichiers du dépôt
+- configurer les secrets dans la console de la plateforme ;
+- injecter les variables à l’exécution ;
+- garder les véritables valeurs hors des fichiers du dépôt.
 
-## Couche et priorité (conceptuelle)
+## Niveaux et priorité : schéma conceptuel
 
 ```text
-Politique obligatoire org (si applicable)
-    ↓ override
-Variables d'environnement injectées shell / CI
-    ↓ fusionne avec fichiers de config (selon règles officielles)
-Fichiers de config utilisateur / projet
+Politique obligatoire de l’organisation, le cas échéant
+    ↓ prend le pas sur
+Variables d’environnement injectées par le shell ou la CI
+    ↓ combinaison avec les fichiers selon les règles officielles
+Fichiers de configuration utilisateur ou projet
 ```
 
-Quand la même clé est définie à plusieurs endroits, suivre la **priorité officielle** ; pour dépannage imprimer config effective ou vérifier logs.
+Si une clé est définie à plusieurs endroits, appliquez la **priorité indiquée dans la documentation officielle**. Pour le dépannage, examinez la configuration effective ou les journaux.
 
 ## Ordre de décision pratique
 
-1. Est-ce sensible ?
-2. Local uniquement ou CI/Cloud ?
-3. Longue durée ou ce run seulement ?
-4. Env local, Secret CI ou Secret Cloud ?
+1. La valeur est-elle sensible ?
+2. Est-elle destinée à un usage local personnel ou à la CI / Cloud ?
+3. Doit-elle être conservée durablement ou seulement pendant cette exécution ?
+4. Relève-t-elle d’une variable locale, d’un secret CI ou d’un secret Cloud ?
 
-Réduit « bonne valeur, mauvais endroit ».
+Cela évite de placer une valeur correcte au mauvais endroit.
 
 ## Scénarios courants
 
 | Scénario | Approche plus sûre |
 |---|---|
-| Debug API tiers local | Env local ou `.env`, gitignored |
-| Exemple partagé équipe | Committer `.env.example`, pas vraies valeurs |
-| GitHub Actions / CI | Secrets de plateforme |
-| Tâche Cloud appelle service privé | Secret Cloud |
-| Serveur MCP a besoin d'une clé | Env parent ou injection Secret |
+| Déboguer localement une API tierce | Variable locale ou `.env` exclu de Git |
+| Partager un exemple avec l’équipe | Commiter `.env.example` sans véritables valeurs |
+| GitHub Actions / CI | Secrets de la plateforme |
+| Appeler un service privé depuis une tâche Cloud | Secret Cloud |
+| Fournir une clé à un serveur MCP | Environnement du processus parent ou injection d’un secret |
 
-Règle empirique : les vraies clés ne devraient pas vivre comme contenu de fichier de dépôt en clair à long terme.
+Évitez de conserver durablement de véritables clés en clair dans les fichiers du dépôt.
 
 ## Usages typiques
 
 ### Développement local
 
-Exporter token personnel dans `~/.zshrc` ou direnv `.envrc` — **ne pas committer** `.env`.
+Exportez le jeton personnel dans `~/.zshrc` ou dans `.envrc` avec direnv ; **ne commitez pas** `.env`.
 
 ### CLI non interactif
 
-CI injecte via secret store puis exécute `codex exec`. Voir [Mode non interactif](/fr/guide/cli/non-interactive-mode/).
+La CI injecte les variables depuis son gestionnaire de secrets avant de lancer `codex exec`. Voir le [mode non interactif](/fr/guide/cli/non-interactive-mode/).
 
 ### Serveurs MCP
 
-Les processus MCP héritent souvent l'env parent ; référencer `$VAR` dans config au lieu de coder en dur. Voir [Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/).
+Les processus MCP héritent souvent de l’environnement de leur parent. Référencez `$VAR` dans la configuration plutôt que d’y écrire la valeur. Voir [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 
-Secrets niveau dépôt dans console Cloud ; noms correspondent aux références de tâche.
+Configurez les secrets du dépôt dans la console Cloud avec les mêmes noms que les références utilisées dans la tâche.
 
-Les variables d'environnement conviennent aux valeurs qui changent, sont sensibles ou nécessaires uniquement à l'exécution — pas règles long terme ou documentation.
+Les variables d’environnement conviennent aux valeurs changeantes, sensibles ou nécessaires uniquement à l’exécution. Elles ne remplacent pas les règles durables ni la documentation.
 
-## Liste de contrôle sécurité
+## Liste de contrôle de sécurité
 
-- [ ] `.env` dans `.gitignore`
-- [ ] Rédiger tokens avant journalisation
-- [ ] Rotation des clés fuites
-- [ ] Scopes privilège minimum (token CI lecture seule, etc.)
+- [ ] Ajouter `.env` à `.gitignore`.
+- [ ] Masquer les jetons avant d’écrire dans les journaux.
+- [ ] Remplacer les clés qui ont fuité.
+- [ ] Limiter les droits au minimum nécessaire, par exemple avec un jeton CI en lecture seule.
 
 ## Erreurs courantes
 
-- Vraies clés dans `.env.example` commité
-- `export` visible pendant partage d'écran
-- Supposer `unset` rend les processus enfants sûrs — vérifier l'arborescence de processus
+- Commiter `.env.example` après y avoir ajouté de véritables clés.
+- Afficher un jeton dans une commande `export` pendant un partage d’écran.
+- Supposer que `unset` protège aussi les processus enfants ; vérifiez leur arborescence.
 
 ## Sources de référence
-- Documentation configuration / environnement OpenAI Codex
----
 
-**Statut :** vérifié  
-**Produits concernés :** CLI / App / IDE / Cloud  
-**Base de vérification :** Le Help Center OpenAI documente encore `~/.codex/.env`, injection CI/runtime et Secrets de plateforme ; la page se concentre sur principes stables — quelles valeurs appartiennent à env, ce qui n'y appartient pas, `.env` comme conteneur local — sans fixer une liste de noms de variables.  
-**Dernière vérification :** 2026-07-26
+- Documentation OpenAI Codex sur la configuration et l’environnement

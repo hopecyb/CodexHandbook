@@ -3,12 +3,17 @@ title: 最初の練習プロジェクトを作成する
 description: 捨てられる安全な練習ディレクトリを用意する。
 locale: ja
 source_locale: zh-CN
-source_revision: 43dcbdb
+source_revision: '43dcbdb'
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: '2026-10-26'
 sidebar:
   order: 70
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE
+  basis: 本ハンドブックの現在検証済みの初心者安全チェックリスト、結果確認、取り消し復元各章を相互参照して再確認済み。ページ内容は「まず捨てられる練習ディレクトリでフローを通す」安定した入門方法に限定。
+  checkedAt: '2026-07-26'
 ---
 
 初めて練習プロジェクトを作るとき、手元の本番プロジェクトで試したくなることがよくあります。楽に見えて、リスクは高くなります。
@@ -61,10 +66,3 @@ sidebar:
 4. 変更が一目でわかる
 
 最初の練習プロジェクトは本番環境のようである必要はありません。安全で単純、間違えても取り戻しやすければ十分です。
-
----
-
-**状態：** verified  
-**対象製品：** App / CLI / IDE  
-**検証根拠：** 本ハンドブックの現在検証済みの初心者安全チェックリスト、結果確認、取り消し復元各章を相互参照して再確認済み。ページ内容は「まず捨てられる練習ディレクトリでフローを通す」安定した入門方法に限定。  
-**最終検証：** 2026-07-26

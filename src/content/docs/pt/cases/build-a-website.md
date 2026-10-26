@@ -25,9 +25,10 @@ assets:
     version: 1.0.0
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
+reviewed_at: 2026-10-26
 translated_at: 2026-09-20
-source_revision: 55fd86a
+source_revision: "55fd86a"
 ---
 
 Transforme os materiais de um evento em um site de uma página que possa ser aberto no navegador. Entregue uma página estática local e um registro de aceite. O evento e o local são fictícios; a forma de inscrição ainda não foi definida.

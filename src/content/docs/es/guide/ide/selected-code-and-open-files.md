@@ -1,24 +1,28 @@
 ---
 title: Selección y archivos abiertos
-description: Acotar con precisión el alcance de la Tarea en el IDE mediante código seleccionado y archivos abiertos.
+description: Acotar con precisión el alcance de la tarea en el IDE mediante código seleccionado y archivos abiertos.
 locale: es
 source_locale: zh-CN
-source_revision: b6b264f
+source_revision: "b6b264f"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 sidebar:
   order: 40
+legacyVerification:
+  status: verified
+  products: IDE
+  basis: 'Esta página describe el método de control de alcance más estable en la extensión IDE: la combinación de selección, archivos abiertos y rutas `@` explícitas; es una forma genérica de organizar contexto al convivir con el código en el editor, sin depender del nombre de un botón concreto.'
+  checkedAt: '2026-07-26'
 ---
-
-La extensión IDE encaja especialmente con cambios de **alcance pequeño y alta precisión**: seleccionas un fragmento, explicas la intención y Codex modifica en el Contexto cercano. Aquí se trata sobre todo de cómo usar selección y archivos abiertos para apretar el alcance y no cambiar el sitio equivocado.
+La extensión IDE encaja especialmente con cambios de **alcance pequeño y alta precisión**: seleccionas un fragmento, explicas la intención y Codex modifica en el contexto cercano. Aquí se trata sobre todo de cómo usar selección y archivos abiertos para apretar el alcance y no cambiar el sitio equivocado.
 
 El papel de la selección es simple: decirle a Codex que mire aquí, y que no amplíe el alcance por su cuenta.
 
 ## Contenido de esta página
 
 - Cómo elegir entre selección, archivo completo y ruta `@`
-- Cómo organizar el Contexto en refactorizaciones multiarchivo
+- Cómo organizar el contexto en refactorizaciones multiarchivo
 - Cómo reducir «ha tocado un montón de archivos irrelevantes»
 
 ## Tres formas de acotar
@@ -33,7 +37,7 @@ Profundidad conceptual: [Contexto de archivos y carpetas](/es/guide/context/file
 
 ## Práctica mínima viable
 
-1. Selecciona el **fragmento mínimo relevante** (suele ser 10–80 líneas) y en el Prompt deja claro el objetivo y la [definición de hecho](/es/prompts/define-done/)
+1. Selecciona el **fragmento mínimo relevante** (suele ser 10–80 líneas) y en el prompt deja claro el objetivo y la [definición de terminado](/es/prompts/define-done/)
 2. Si implica a quien llama, abre o haz `@` a 1–2 archivos aguas arriba
 3. Pide «solo cambia archivos relacionados con X; lista los que modificarás antes de tocar»
 4. En el diff del IDE acepta bloque a bloque; no aceptes todo de golpe
@@ -56,7 +60,7 @@ No necesariamente. Pero si ya sabes que el foco está en un tramo pequeño, sele
 
 ### 2. Seleccionar más no siempre es más seguro
 
-Si seleccionas demasiado, vuelves a aflojar el alcance; si seleccionas demasiado poco, puede faltar Contexto necesario. El criterio práctico es «lo justo».
+Si seleccionas demasiado, vuelves a aflojar el alcance; si seleccionas demasiado poco, puede faltar contexto necesario. El criterio práctico es «lo justo».
 
 ### 3. ¿Qué diferencia hay entre archivo abierto y ruta `@`?
 
@@ -81,15 +85,9 @@ En el producto: [Revisar cambios en el IDE](/es/guide/ide/reviewing-changes/)
 
 | Error | Consecuencia |
 |---|---|
-| Seleccionar un archivo entero de miles de líneas | Desperdicio de Contexto, superficie de cambio demasiado grande |
+| Seleccionar un archivo entero de miles de líneas | Desperdicio de contexto, alcance de cambios demasiado amplio |
 | Cero selección y solo «optimízalo un poco» | El modelo amplía el alcance por su cuenta |
 | Aceptar todas las sugerencias sin leer el diff | Deriva de estilo o vulnerabilidades de seguridad |
 
 ## Fuentes de referencia
 - [Definir restricciones](/es/prompts/constraints-and-boundaries/)
----
-
-**Estado:** verified  
-**Productos aplicables:** IDE  
-**Base de verificación:** Esta página describe el método de control de alcance más estable en la extensión IDE: la combinación de selección, archivos abiertos y rutas `@` explícitas; es una forma genérica de organizar Contexto al convivir con el código en el editor, sin depender del nombre de un botón concreto.  
-**Última verificación:** 2026-07-26

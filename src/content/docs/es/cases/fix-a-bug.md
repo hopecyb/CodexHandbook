@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "CLI / IDE"
+  basis: "Esta página de entrada solo mantiene la elección de ruta y un ciclo de ingeniería estable. Los comandos con el fallo esperado y con la solución correcta se ejecutaron en el repositorio actual."
+  checkedAt: "2026-08-25"
 title: 'Corregir un bug: por dónde empezar'
 description: Elige la ruta de corrección que corresponda a tu situación y continúa con el caso completo y ejecutable.
 locale: es
-source_locale: zh-cn
-source_revision: 405a687
+source_locale: zh-CN
+source_revision: '405a687'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 Esta es una página de entrada breve. Los pasos completos, el código ejecutable, las evidencias de pruebas en rojo y verde y los prompts de cada fase se mantienen en [Corrección de bugs con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/) para evitar que dos páginas se repitan y acaben contradiciéndose.
@@ -19,7 +24,7 @@ Esta es una página de entrada breve. Los pasos completos, el código ejecutable
 | Ya existe una prueba que falla de forma fiable | [Corrección de bugs con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/) |
 | No conoces el módulo relacionado | [Comprender una base de código](/es/cases/understand-a-codebase/) |
 | La corrección está terminada y lista para fusionar | [Revisar un PR](/es/cases/review-a-pr/) |
-| La propia prueba es inestable | Lee primero [Ejecutar pruebas](/es/guide/quality/run-tests/); una flaky test no demuestra una corrección |
+| La propia prueba es inestable | Lee primero [Ejecutar pruebas](/es/guide/quality/run-tests/); una prueba inestable no demuestra una corrección |
 
 ## Ciclo mínimo de evidencias
 
@@ -47,10 +52,3 @@ node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart
 ```
 
 Los materiales completos están en [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
-
----
-
-**Estado:** verified
-**Productos aplicables:** CLI / IDE
-**Base de verificación:** Esta página de entrada solo mantiene la elección de ruta y un ciclo de ingeniería estable. Los comandos con el fallo esperado y con la solución correcta se ejecutaron en el repositorio actual.
-**Última verificación:** 2026-08-25

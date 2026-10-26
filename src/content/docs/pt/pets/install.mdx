@@ -3,9 +3,10 @@ title: Instalar um Codex Pet
 description: "Entenda a pasta de instalação, o fluxo de ativação e os limites de segurança dos Codex Pets."
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 730c599
+reviewed_at: 2026-10-26
+source_revision: "730c599"
 contentType: guide
 editorialStatus: review
 verification:
@@ -37,7 +38,7 @@ Um Pet costuma ser uma pasta local com pelo menos dois arquivos:
 
 1. Obter o pacote: confirme que ele contém pelo menos `pet.json` e uma spritesheet.
 2. Colocar na pasta Pets: um caminho comum é `~/.codex/pets/<pet-id>/`.
-3. Fazer o cliente ler novamente: reinicie o Codex ou atualize as configurações de Pets.
+3. Fazer o cliente ler novamente: reinicie o Codex ou use a opção de atualizar na área de configurações de Pets.
 4. Procure a opção de seleção de Pets no cliente atual; o nome e a posição do menu variam conforme a versão. Se não houver essa opção, confira primeiro se a versão oferece suporte a Pets.
 
 No Windows, a pasta costuma ficar em `.codex\pets\<pet-id>\` dentro do diretório do usuário. Se você usa `CODEX_HOME`, siga a pasta Pets exibida pelo cliente atual.
@@ -49,7 +50,7 @@ Se o pet não aparecer depois da instalação, verifique:
 - O nome da pasta corresponde ao `id` em `pet.json`.
 - `spritesheetPath` é um caminho relativo, como `spritesheet.webp`.
 - A spritesheet realmente está na mesma pasta.
-- O Codex foi reiniciado ou as configurações de Pets foram atualizadas.
+- O Codex foi reiniciado ou a opção de atualizar nas configurações de Pets foi usada.
 - Windows, WSL ou um `CODEX_HOME` personalizado não apontam para outro diretório.
 
 Se caminhos e arquivos estiverem corretos, verifique também a versão do formato, o suporte do cliente e os erros reais de carregamento.

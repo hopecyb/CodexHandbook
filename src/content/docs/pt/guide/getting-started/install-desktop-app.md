@@ -3,11 +3,17 @@ title: Instalar o aplicativo para desktop
 description: Instale o aplicativo ChatGPT para desktop e abra nele um espaço de trabalho do Codex.
 locale: pt
 source_locale: zh-CN
-source_revision: 974842f
-translation_status: draft
+source_revision: "974842f"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 30
+legacyVerification:
+  status: verified
+  products: App
+  basis: O guia rápido oficial atual do App oferece downloads para macOS, Windows e Linux e pede que, após entrar, você escolha uma conversa, um projeto ou uma pasta. Esta página não fixa posições de botões nem nomes de instaladores sujeitos a mudanças.
+  checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 Neste manual, «aplicativo para desktop» significa o **espaço de trabalho do Codex dentro do aplicativo ChatGPT para desktop**. Há versões oficiais para macOS, Windows e Linux.
@@ -22,7 +28,7 @@ Neste manual, «aplicativo para desktop» significa o **espaço de trabalho do C
 
 Não baixe o instalador de sites de terceiros encontrados em pesquisas. Se os dispositivos da empresa forem gerenciados por administradores, siga a política de distribuição e atualização de software da organização.
 
-## Verificação mínima após instalar
+## verificação mínima após instalar
 
 Prepare uma pasta de exercícios sem chaves secretas e confirme que:
 
@@ -47,7 +53,7 @@ Confira primeiro a conta, o espaço de trabalho e o acesso disponível no plano.
 
 ### O sistema pede acesso a arquivos, acessibilidade ou controle de aplicativos
 
-Verifique se a tarefa atual realmente exige esse acesso. Para abrir apenas a pasta de exercícios, não é necessário conceder ao mesmo tempo acesso a discos ou recursos de sistema sem relação com ela. Veja [Permissões e sandbox](/pt/guide/permissions-and-sandbox/) para decidir.
+Verifique se a tarefa atual realmente exige esse acesso. Para abrir apenas a pasta de exercícios, não é necessário conceder ao mesmo tempo acesso a discos ou recursos de sistema sem relação com ela. Veja [permissões e sandbox](/pt/guide/permissions-and-sandbox/) para decidir.
 
 ### A interface instalada não corresponde às capturas de tela
 

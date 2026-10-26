@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins"
+  checkedAt: "2026-08-25"
 title: MCP overview
 description: Understand MCP clients, servers, tools, authentication, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 98a0626
+source_revision: '98a0626'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
@@ -92,11 +96,3 @@ Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_
 
 - [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 - [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
-
-**Last verified:** 2026-08-25

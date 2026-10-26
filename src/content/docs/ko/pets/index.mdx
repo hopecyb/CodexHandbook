@@ -3,15 +3,16 @@ title: Codex 펫
 description: "Codex Pets가 무엇인지, 어떻게 동작하는지, 설치와 제작 때 무엇을 확인해야 하는지 이해합니다."
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
-source_revision: 8b03636
+source_revision: '8b03636'
 contentType: guide
 editorialStatus: review
 verification:
   kind: editorial
   checkedAt: "2026-09-18"
   summary: "형식과 복구 범위를 보완했지만, 이 사이트에서는 특정 클라이언트와 Pet 패키지의 설치·애니메이션 재생·삭제를 아직 직접 시험하지 않았습니다. 디렉터리와 메뉴는 대상 버전에서 확인해야 합니다."
+reviewed_at: '2026-10-26'
 ---
 
 import PetScienceFigure from '/src/components/PetScienceFigure.astro';
@@ -30,7 +31,7 @@ Codex 펫은 Codex 클라이언트 안에 표시되는 애니메이션 동반 �
 Pet은 보통 작은 로컬 패키지로 이해할 수 있습니다.
 
 - `pet.json`: ID, 표시 이름, 설명, 애니메이션 이미지 경로 같은 메타데이터.
-- `spritesheet.webp`: 여러 애니메이션 프레임을 담은 이미지 아틀라스.
+- `spritesheet.webp`: 여러 애니메이션 프레임을 한 장에 담은 이미지 아틀라스로, 클라이언트가 고정된 격자에 따라 읽습니다.
 - 펫 폴더: 메타데이터와 애셋을 함께 보관하는 디렉터리.
 
 이 관점에서 Codex Pet은 네트워크 프로그램보다 테마 리소스나 작은 시각 위젯에 가깝습니다.

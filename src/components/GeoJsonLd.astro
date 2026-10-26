@@ -3,13 +3,48 @@ import logo from '../assets/brand/logo.png';
 
 const siteUrl = 'https://codexhandbook.com';
 const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
-const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/en/';
-const title = Astro.url.pathname.startsWith('/en/') ? 'Codex Handbook' : 'Codex 指南手册';
-const description = Astro.url.pathname.startsWith('/en/')
+const vietnamese = Astro.url.pathname.startsWith('/vi/');
+const portuguese = Astro.url.pathname.startsWith('/pt/');
+const german = Astro.url.pathname.startsWith('/de/');
+const french = Astro.url.pathname.startsWith('/fr/');
+const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/en/' || Astro.url.pathname === '/fr/' || Astro.url.pathname === '/de/' || Astro.url.pathname === '/pt/' || Astro.url.pathname === '/vi/';
+const title = vietnamese ? 'Sổ tay Codex' : portuguese ? 'Manual Codex' : german ? 'Codex-Handbuch' : french ? 'Manuel Codex' : Astro.url.pathname.startsWith('/en/') ? 'Codex Handbook' : 'Codex 指南手册';
+const description = vietnamese
+	? 'Sổ tay Codex trình bày cách bắt đầu sử dụng sản phẩm, prompts, Skills và các tình huống thực tế, giúp biến mô tả tác vụ, quá trình thực hiện và kết quả nghiệm thu thành phương pháp có thể tái sử dụng.'
+	: portuguese
+	? 'O Manual Codex aborda os primeiros passos no produto, prompts, Skills e casos práticos para transformar descrições de tarefas, processos de execução e verificação dos resultados em métodos reutilizáveis.'
+	: german
+	? 'Das Codex-Handbuch behandelt Produkteinstieg, Prompts, Skills und Praxisbeispiele. Es hilft dabei, Aufgabenbeschreibungen, Ausführungsabläufe und Abnahmeergebnisse in wiederverwendbare Methoden zu überführen.'
+	: french
+	? 'Le Manuel Codex présente les bases du produit, les prompts, les Skills et des cas pratiques pour rendre réutilisables la formulation des tâches, leur exécution et la vérification des résultats.'
+	: Astro.url.pathname.startsWith('/en/')
 	? 'Codex Handbook turns product basics, prompting, Skills, and real cases into reusable methods for describing tasks, guiding execution, and checking results.'
 	: 'Codex 指南手册围绕产品入门、提示词、Skills 与真实案例，帮助你把任务说明、执行过程和验收结果沉淀成可复用方法。';
-const homeFaq =
-	Astro.url.pathname.startsWith('/en/')
+const homeFaq = vietnamese
+	? [
+		{ question: 'Sổ tay Codex dành cho ai?', answer: 'Sổ tay Codex dành cho người mới, nhà sáng tạo, lập trình viên và các nhóm muốn biến mô tả tác vụ, quá trình thực hiện và kết quả nghiệm thu thành phương pháp có thể tái sử dụng.' },
+		{ question: 'Nên đọc gì trước khi sử dụng Codex lần đầu?', answer: 'Hãy bắt đầu với thuật ngữ, cách chọn ứng dụng khách, giới hạn quyền và tác vụ đầu tiên, rồi chuyển sang prompts, Skills và quy trình làm việc nhóm.' },
+		{ question: 'Các nhóm có thể sử dụng Codex ổn định hơn như thế nào?', answer: 'Ưu tiên hướng dẫn dự án, giới hạn phê duyệt, rà soát mã, tiêu chí kiểm chứng và quản trị an toàn. Ghi lại kinh nghiệm trong kho mã hoặc tài liệu của nhóm.' },
+	]
+	: portuguese
+	? [
+		{ question: 'Para quem é o Manual Codex?', answer: 'O Manual Codex é voltado a iniciantes, criadores, desenvolvedores e equipes que desejam transformar descrições de tarefas, processos de execução e verificação dos resultados em métodos reutilizáveis.' },
+		{ question: 'O que ler primeiro ao começar a usar o Codex?', answer: 'Comece pela terminologia, pela escolha do cliente, pelos limites de permissão e pela primeira tarefa. Depois avance para prompts, Skills e fluxos de trabalho em equipe.' },
+		{ question: 'Como as equipes podem usar o Codex com mais confiabilidade?', answer: 'Priorize as instruções do projeto, os limites de aprovação, a revisão de código, os critérios de verificação e a governança de segurança. Registre as experiências no repositório ou na documentação da equipe.' },
+	]
+	: german
+	? [
+		{ question: 'Für wen ist das Codex-Handbuch gedacht?', answer: 'Das Codex-Handbuch richtet sich an Einsteiger, Kreative, Entwickler und Teams, die Aufgabenbeschreibungen, Ausführungsabläufe und Abnahmeergebnisse in wiederverwendbare Methoden überführen möchten.' },
+		{ question: 'Was sollte man beim ersten Einsatz von Codex zuerst lesen?', answer: 'Beginnen Sie mit den Begriffen, der Client-Auswahl, den Berechtigungsgrenzen und der ersten Aufgabe. Danach folgen Prompts, Skills und Team-Workflows.' },
+		{ question: 'Wie können Teams Codex zuverlässiger einsetzen?', answer: 'Konzentrieren Sie sich zunächst auf Projektanweisungen, Freigabegrenzen, Code-Reviews, Prüfkriterien und Sicherheitsregeln. Halten Sie die Erfahrungen anschließend im Repository oder in der Teamdokumentation fest.' },
+	]
+	: french
+	? [
+		{ question: 'À qui s’adresse le Manuel Codex ?', answer: 'Le Manuel Codex s’adresse aux débutants, aux créateurs, aux développeurs et aux équipes qui souhaitent rendre réutilisables la formulation des tâches Codex, leur exécution et la vérification des résultats.' },
+		{ question: 'Par où commencer lors d’une première utilisation de Codex ?', answer: 'Commencez par les termes, le choix du client, les limites des autorisations et la première tâche, puis passez aux prompts, aux Skills et aux workflows d’équipe.' },
+		{ question: 'Comment les équipes peuvent-elles utiliser Codex de façon plus fiable ?', answer: 'Concentrez-vous sur les instructions du projet, les limites d’approbation, la revue de code, les critères de vérification et la gouvernance de la sécurité. Consignez ensuite les enseignements dans le dépôt ou la documentation de l’équipe.' },
+	]
+	: Astro.url.pathname.startsWith('/en/')
 		? [
 				{
 					question: 'Who is Codex Handbook for?',
@@ -84,7 +119,7 @@ const graph = [
 		},
 		datePublished: '2026-07-26',
 		dateModified: '2026-07-28',
-		inLanguage: Astro.url.pathname.startsWith('/en/') ? 'en' : 'zh-CN',
+		inLanguage: vietnamese ? 'vi' : portuguese ? 'pt' : german ? 'de' : french ? 'fr' : Astro.url.pathname.startsWith('/en/') ? 'en' : 'zh-CN',
 	},
 ];
 

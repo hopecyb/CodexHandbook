@@ -3,11 +3,17 @@ title: ハンドブックのバージョンポリシー
 description: コンテンツの状態、検証日、継続的な更新方法を説明。
 locale: ja
 source_locale: zh-CN
-source_revision: a608dc3
-translation_status: draft
+source_revision: "a608dc3"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
+legacyVerification:
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: 本ハンドブックの現在の6種類の状態、注記の表示ルール、公式情報を優先する原則に沿って確認済みです。このページはサイト内のバージョン管理方針と読み方を説明しており、特定の製品バージョンのパラメータには依存しません。
+  checkedAt: '2026-07-26'
+reviewed_at: "2026-10-26"
 ---
 
 ## 継続的な更新
@@ -63,7 +69,7 @@ sidebar:
 
 ### 2. `review` は読んではいけないわけではない
 
-`review` は本体コンテンツがあるが、最強の確認レベルには達していないことを示し、参考にならないわけではありません。
+`review` は本体コンテンツがあるが、十分な確認はまだ完了していないことを示し、参考にならないわけではありません。
 
 ### 3. コミュニティハンドブックと公式ドキュメントが矛盾したら、半分ずつ信じるわけではない
 

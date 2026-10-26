@@ -3,8 +3,8 @@ title: Referência de comandos CLI
 description: Consulta rápida de subcomandos e parâmetros habituais do CLI Codex — índice de aprendizagem, não substitui o manual oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: 6091bcc
-translation_status: draft
+source_revision: "6091bcc"
+translation_status: reviewed
 translated_at: '2026-09-20'
 sidebar:
   order: 50
@@ -13,6 +13,7 @@ legacyVerification:
   products: CLI
   basis: 'Conferido com a tabela oficial atual de Developer commands: só são listadas entradas Stable e foram verificados --cd / -C, sandbox e aprovação. Comandos experimentais ou obsoletos ficam fora.'
   checkedAt: '2026-08-26'
+reviewed_at: '2026-10-26'
 ---
 
 
@@ -27,13 +28,13 @@ Esta página reúne as entradas **Stable** atuais do Codex CLI para consulta e c
 Usos habituais:
 
 - Se devo entrar já ao interativo ou correr um comando de uma só vez
-- Se a Tarefa é mais de chat ou mais de script
+- Se a tarefa é mais de chat ou mais de script
 - Sei que quero o CLI, mas não sei que tipo de entrada olhar
 
 ## Escolha de entrada
 
 - Ver, conversar e corrigir ao mesmo tempo: usa `codex`
-- Entregar a Tarefa de uma vez e obter o resultado ao terminar: olha `codex exec`
+- Entregar a tarefa de uma vez e obter o resultado ao terminar: olha `codex exec`
 
 Para quem começa com o CLI, isso já resolve a maior parte da escolha de entrada.
 
@@ -42,7 +43,7 @@ Para quem começa com o CLI, isso já resolve a maior parte da escolha de entrad
 | Entrada | Uso | Detalhe |
 |---|---|---|
 | `codex` | Sessão TUI interativa | [Modo interativo](/pt/guide/cli/interactive-mode/) |
-| `codex exec` / `codex e` | Tarefa única ou em pipeline, não interativa | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
+| `codex exec` / `codex e` | tarefa única ou em pipeline, não interativa | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
 | `codex doctor` | Gerar relatório de diagnóstico de instalação, configuração, autenticação, ambiente de execução, Git e terminal | [Diagnóstico do CLI](/pt/guide/cli/troubleshooting/) |
 | `codex login` / `codex logout` | Gerir a autenticação | [Início de sessão e autenticação](/pt/guide/getting-started/sign-in-and-authentication/) |
 | `codex resume` / `codex fork` | Retomar ou bifurcar uma sessão guardada | [Passagem de contexto e retomada](/pt/guide/agent-work/handoff-and-resume/) |
@@ -57,15 +58,15 @@ A referência oficial também contém comandos Experimental, Beta e Deprecated. 
 
 ### 1. Não precisas de memorizar todos os comandos da página de referência
 
-O prático é saber primeiro «que tipo de entrada encaixa com a Tarefa atual»; o resto consulta-se no momento com `--help`.
+O prático é saber primeiro «que tipo de entrada encaixa com a tarefa atual»; o resto consulta-se no momento com `--help`.
 
 ### 2. `codex exec` não é só a versão avançada de `codex`
 
-Orienta-se mais a desatendido, scripts e CI, não a uma entrada interativa «mais potente».
+Destina-se mais à execução sem supervisão, scripts e CI, não a uma entrada interativa «mais potente».
 
 ### 3. Ver um parâmetro não implica que devas tocá-lo já
 
-Muitos parâmetros dependem da versão, do ambiente e da política de segurança atuais; compreende a intenção antes de decidir se os moves.
+Muitos parâmetros dependem da versão, do ambiente e da política de segurança atuais; compreende a intenção antes de decidir se os alteras.
 
 ### 4. A página de referência de comandos ≠ tutorial de operação
 
@@ -107,7 +108,7 @@ Se queres começar já:
 2. Se queres conversar e agir ao mesmo tempo, entra em `codex`
 3. Se é para CI ou scripts, então estuda `codex exec`
 
-Mais leve do que afundar-te de golpe no detalhe de parâmetros.
+Mais leve do que mergulhar logo nos detalhes dos parâmetros.
 
 ## Exec não interativo (conceito)
 
@@ -123,7 +124,7 @@ codex exec --cd /path/to/repo "a tua descrição completa da tarefa"
 # pipeline stdin  ler o prompt de um ficheiro ou comando anterior
 ```
 
-Segurança: [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
+Segurança: [Padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/)
 
 ## Configuração e autenticação (conceito)
 
@@ -137,7 +138,7 @@ Segurança: [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-
 
 O modo não interativo costuma usar o **código de saída** para sucesso/falha, pensado para CI:
 
-- `0`: a Tarefa terminou segundo o acordado
+- `0`: a tarefa terminou segundo o acordado
 - Diferente de `0`: falha ou faz falta intervenção humana — olha o log artifact
 
 A página de comandos CLI serve sobretudo para distinguir entradas e consultar intenções; não precisas de memorizar parâmetros para começar.
@@ -157,6 +158,6 @@ Não ignores stderr em CI; conserva logs para [diagnosticar primeiro](/pt/cases/
 |---|---|
 | Comando não existe | [Instalar CLI](/pt/guide/getting-started/install-cli/) |
 | Configuração não aplica | [Configuração do CLI](/pt/guide/cli/configuration/) |
-| Aprovação bloqueia CI | Endurecer o Prompt + Sandbox só de leitura |
+| aprovação bloqueia CI | Endurecer o prompt + Sandbox só de leitura |
 
 [Diagnóstico do CLI](/pt/guide/cli/troubleshooting/)

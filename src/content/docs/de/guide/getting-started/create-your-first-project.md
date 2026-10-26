@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE"
+  basis: "Gegen die im Handbuch bereits geprüften Kapitel Sicherheits-Checkliste für Anfänger, Ergebnisprüfung und Rückgängig/Wiederherstellen abgeglichen; der Inhalt beschränkt sich auf die stabile Einstiegsmethode „zuerst mit wegwerfbarem Übungsverzeichnis den Ablauf durchziehen“."
+  checkedAt: "2026-07-26"
 title: Erstes Übungsprojekt anlegen
 description: "Ein wegwerfbares, sicheres Übungsverzeichnis vorbereiten."
 locale: de
 source_locale: zh-CN
-source_revision: 43dcbdb
+source_revision: "43dcbdb"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
 ---
@@ -22,7 +27,7 @@ Beim ersten Übungsprojekt greifen viele direkt zum echten Projekt — wirkt eff
 
 ## Warum zuerst ein Übungsprojekt
 
-Ziel der ersten Aufgabe ist der Ablauf — nicht Business-Lieferung. Isolation senkt die Kosten von Fehländerungen stark.
+Ziel der ersten Aufgabe ist, den Ablauf zu lernen, nicht ein Geschäftsergebnis zu liefern. Isolation senkt die Kosten von Fehländerungen stark.
 
 Beim ersten Üben zählen vor allem diese Aktionen:
 
@@ -61,10 +66,3 @@ Mindestens diese 4 Punkte:
 4. Änderungen auf einen Blick verständlich
 
 Das erste Übungsprojekt muss nicht wie Produktion wirken. Sicher, einfach, bei Fehlern leicht zurücknehmbar — das reicht.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE  
-**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Sicherheits-Checkliste für Anfänger, Ergebnisprüfung und Rückgängig/Wiederherstellen abgeglichen; der Inhalt beschränkt sich auf die stabile Einstiegsmethode „zuerst mit wegwerfbarem Übungsverzeichnis den Ablauf durchziehen“.  
-**Zuletzt überprüft:** 2026-07-26

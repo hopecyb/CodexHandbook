@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Diese Seite erklärt nur das Grundprinzip, dass Sprachmodelle Ausgaben aus dem Kontext erzeugen; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab."
+  checkedAt: "2026-07-26"
 title: KI und Sprachmodelle
 description: "Verstehe, wie Sprachmodelle Antworten aus dem Kontext erzeugen."
 locale: de
 source_locale: zh-CN
-source_revision: ccdac83
+source_revision: "ccdac83"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 10
 ---
@@ -33,7 +38,7 @@ Es sieht:
 
 Daraus erzeugt es den Schritt, den es für am passendsten hält.
 
-Es schiebt vom aktuellen Kontext aus weiter — es „weiß“ die Antwort nicht unabhängig.
+Es erzeugt auf Grundlage des aktuellen Kontexts weitere Inhalte — es „weiß“ die Antwort nicht unabhängig.
 
 ## Was das für dich bedeutet
 
@@ -47,7 +52,7 @@ Es schiebt vom aktuellen Kontext aus weiter — es „weiß“ die Antwort nicht
 
 In der Regel nicht.
 
-Es kann raten — aber du solltest nicht darauf setzen, dass es standardmäßig richtig rät.  
+Es kann raten — aber du solltest nicht darauf setzen, dass es standardmäßig richtig rät.
 Was du im Kopf hast, aber nicht klar übergeben hast, ist oft genau die Fehlerquelle.
 
 ### 2. Weil es Code oder Doku schreiben kann, hat es es wirklich verstanden
@@ -69,10 +74,3 @@ Du brauchst Urteil eher noch mehr:
 Suchmaschinen liefern vor allem bestehende Webseiten; Codex wirkt eher so, dass es unter deinem Ziel **Werkzeuge aufruft und ausführbare Änderungen erzeugt**. Bei beiden musst du Glaubwürdigkeit einschätzen.
 
 Am nützlichsten wird ein Sprachmodell, wenn genug Kontext da ist — dann kann es schnell entlang deines Ziels weiterarbeiten.
-
----
-
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** Diese Seite erklärt nur das Grundprinzip, dass Sprachmodelle Ausgaben aus dem Kontext erzeugen; interne Links und Konzeptformulierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
-**Zuletzt überprüft:** 2026-07-26

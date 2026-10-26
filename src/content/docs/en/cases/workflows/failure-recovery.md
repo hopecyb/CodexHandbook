@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Cross-checked against currently verified handoff and resume, diagnose, command rules, and error reference chapters in this handbook; this page describes general failure stop-loss and continue methods—not treating one client's recovery button or command as fixed rules."
+  checkedAt: "2026-07-26"
 title: Failure recovery
 description: When tasks drift, tests go red, or context runs out—how to roll back safely and continue.
 locale: en
 source_locale: zh-CN
-source_revision: 847e22a
+source_revision: '847e22a'
 translation_status: reviewed
 translated_at: 2026-07-26
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-25
 ---
 
 **Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/en/guide/getting-started/undo-and-recover/) and [Long-running task management](/en/cases/workflows/long-running-task-management/).
@@ -63,7 +68,7 @@ Multi-agent: see [Multi-agent coordination](/en/cases/workflows/multi-agent-coor
 
 - Stack patches in the wrong direction
 - Don't save failure logs—new thread repeats same error
-- Force `git push` to salvage
+- Force-pushing with `git push` to salvage the situation
 - Don't distinguish environment (local vs Cloud)—recovery steps invalid
 
 ## Safety boundaries
@@ -83,10 +88,3 @@ Multi-agent: see [Multi-agent coordination](/en/cases/workflows/multi-agent-coor
 - [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/)
 - [Handoff and resume](/en/guide/agent-work/handoff-and-resume/)
 - [Error reference](/en/guide/reference/error-reference/)
-
----
-
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified handoff and resume, diagnose, command rules, and error reference chapters in this handbook; this page describes general failure stop-loss and continue methods—not treating one client's recovery button or command as fixed rules.

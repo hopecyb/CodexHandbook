@@ -12,9 +12,10 @@ verification:
       href: "https://openai.com/index/function-calling-and-other-api-updates/"
 locale: fr
 source_locale: zh-CN
-source_revision: c362c48
-translation_status: draft
+source_revision: 'c362c48'
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: '2026-10-26'
 ---
 
 ## Événement vérifiable et portée
@@ -35,6 +36,6 @@ Privilégiez des entrées vérifiables, une portée d'autorisation explicite et 
 
 ## Exercice pratique
 
-[Simulation de suggestions de tri des Issues](/fr/cases/use-cases/team-automation/issue-triage-suggestions/) : vérifiez que les suggestions structurées sur des Issues synthétiques correspondent aux entrées ; conservez une file de vérification humaine. L'exercice teste les limites des données sans appeler l'API historique ni utiliser son étiquette de version.
+[Simulation de suggestions de tri des Issues](/fr/cases/use-cases/team-automation/issue-triage-suggestions/) : vérifiez que les suggestions structurées sur des Issues synthétiques correspondent aux entrées ; conservez une file de vérification humaine. L'exercice teste les limites des données sans appeler l'API historique ni publier de labels.
 
 [Retour à la feuille de route et aux conventions de date](/fr/ai-roadmap/)

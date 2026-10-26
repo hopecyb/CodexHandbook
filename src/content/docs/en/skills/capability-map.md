@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT Web / desktop App / Codex CLI / IDE (see individual mechanism boundaries)"
+  basis: "Rebuilt from OpenAI Skills, Plugins, MCP, Hooks, Scheduled tasks, and Subagents documentation available on 2026-08-25."
+  checkedAt: "2026-08-25"
 title: Extension capability map
 description: 'Understand Codex extensions through eight responsibilities: task, rules, process, tools, guards, distribution, triggering, and parallel work.'
 locale: en
 source_locale: zh-CN
-source_revision: 183812c
+source_revision: '183812c'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 Extension mechanisms are confusing because they appear in one workflow while solving different problems.
@@ -43,7 +48,7 @@ For weekly dependency-risk checks:
 1. `AGENTS.md` defines package manager, tests, and prohibited directories.
 2. A `dependency-audit` Skill defines collection, advisory checks, grading, and verification.
 3. GitHub or package-source MCP supplies read-only external data.
-4. A Hook blocks real credentials or logs external calls.
+4. A Hook can block output containing real credentials or log external tool calls.
 5. A Plugin distributes the Skill, MCP config, and Hook.
 6. A Scheduled task runs weekly and creates only a report or draft issue for human review.
 
@@ -91,10 +96,3 @@ Check [Feature comparison](/en/guide/reference/feature-comparison/) and official
 - [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
 - [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 - [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
-
----
-
-**Status:** verified
-**Applies to:** ChatGPT Web / desktop App / Codex CLI / IDE (see individual mechanism boundaries)
-**Verification basis:** Rebuilt from OpenAI Skills, Plugins, MCP, Hooks, Scheduled tasks, and Subagents documentation available on 2026-08-25.
-**Last verified:** 2026-08-25

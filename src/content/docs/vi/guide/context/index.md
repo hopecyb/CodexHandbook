@@ -1,12 +1,13 @@
 ---
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Trang này chỉ nêu phân tầng ngữ cảnh và đường đọc; liên kết trong site và diễn đạt khái niệm đã kiểm lại, và phần thân không phụ thuộc phiên bản sản phẩm, giá hay giao diện dễ đổi.", "checkedAt": "2026-07-26"}
 title: Ngữ cảnh
 description: Quản lý ngữ cảnh dự án, tệp và hội thoại.
 locale: vi
 source_locale: zh-CN
-source_revision: d2baf42
+source_revision: "d2baf42"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 16
 ---
@@ -47,10 +48,3 @@ Lần đầu xem có hệ thống, gợi ý thứ tự:
 - [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
 
 Chương này nhấn đi nhấn lại: ngữ cảnh phụ thuộc «lần này nó thật sự thấy gì». Nếu bạn nghĩ nó nên biết, nhưng lần này chưa cung cấp, thì không tính là ngữ cảnh.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Căn cứ kiểm chứng:** Trang này chỉ nêu phân tầng ngữ cảnh và đường đọc; liên kết trong site và diễn đạt khái niệm đã kiểm lại, và phần thân không phụ thuộc phiên bản sản phẩm, giá hay giao diện dễ đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

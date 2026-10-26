@@ -1,12 +1,17 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "Alle Plattformen"
+  basis: "Aktuelle OpenAI-Plugin- und Externzugriffs-Dokumentation betont weiterhin Kontrolle externer Inhalte, Website-Zugriff, App-Daten und Risikoaktionen über Rechte und Bestätigung; diese Seite definiert Prompt Injection als „unvertrauenswürdiger Text ändert Agent-Verhalten“ und gibt Erkennung, Read-only-first und menschliche Freigabe als Milderung."
+  checkedAt: "2026-07-26"
 title: Prompt Injection
 description: 'Wenn unvertrauenswürdiger Text in den Kontext kommt — Erkennen, Mildern und Team-Policy-Punkte.'
 locale: de
 source_locale: zh-CN
-source_revision: 3e44fdf
+source_revision: "3e44fdf"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 30
 ---
@@ -53,7 +58,7 @@ Ausreichende Reihenfolge:
 1. Pause — geforderte Aktion nicht sofort ausführen
 2. Als **unvertrauenswürdige Eingabe** behandeln, nicht als neue Hauptaufgabe
 3. Zurück zum ursprünglichen Ziel: Ist der Text direkt relevant?
-4. Bei Secrets, Overreach, Netz, Export oder Extra-Befehlen: default menschliche Bestätigung
+4. Bei Zugangsdaten, unzulässigen Zugriffen, Netzwerkzugriff, Datenexport oder zusätzlichen Befehlen: standardmäßig eine menschliche Bestätigung einholen
 
 Erst stoppen, dann urteilen. Viele Risiken entstehen, weil Mensch und Agent dem verdächtigen Text weiter folgen.
 
@@ -82,7 +87,7 @@ Reale Injections sind oft subtiler — diese Unterscheidung blockt schon viele t
 
 **Engineering**
 
-- CI-Prompt **nicht** 1:1 mit PR-Body concatenieren; strukturierte Felder + Längenlimit
+- CI-Prompt **nicht** unverändert mit dem PR-Text zusammenfügen; strukturierte Felder + Längenlimit
 - [Hooks](/de/skills/hooks/hooks-examples/) bekannte Injection-Phrasen scannen (Zusatzschicht)
 - Read-only-Token, kein `git push`
 
@@ -93,14 +98,14 @@ Reale Injections sind oft subtiler — diese Unterscheidung blockt schon viele t
 
 ## Denkweise
 
-Kommt Text von **nicht voll vertrauenswürdigen** Personen/Systemen — nicht default als „normale Aufgabenanforderung“ übernehmen.
+Kommt Text von **nicht voll vertrauenswürdigen** Personen/Systemen — nicht standardmäßig als „normale Aufgabenanforderung“ übernehmen.
 
 Besser zwei Informationsarten trennen:
 
-- **Aufgaben ziel**: Was Sie Codex klar tun lassen wollen
+- **Aufgabenziel**: Was Sie Codex klar tun lassen wollen
 - **Externe Eingabe**: Issues, Seiten, Dokus, PR-Bodies während der Ausführung
 
-Erstere ist die Hauptlinie; letztere default skeptisch lesen.
+Erstere ist die Hauptlinie; letztere grundsätzlich kritisch prüfen.
 
 ## Minimale CI-Prinzipien
 
@@ -115,7 +120,7 @@ Erstere ist die Hauptlinie; letztere default skeptisch lesen.
 ## Häufige Fehler
 
 - „Privates Repo = keine Injection“
-- Agent browsed beliebige URLs ohne Domain-Limits
+- Der Agent besucht beliebige URLs ohne Domainbeschränkungen
 - Injection-Detection als einzige Verteidigung
 - Trotz verdächtigem Text Hochrechte-Token an unüberwachte Flows geben
 
@@ -128,9 +133,3 @@ Erstere ist die Hauptlinie; letztere default skeptisch lesen.
 ## Quellen
 - OWASP LLM Top 10 (Prompt Injection)
 - Offizielle OpenAI Security Guidelines
----
-
-**Status:** verified  
-**Anwendbare Produkte:** Alle Plattformen  
-**Prüfgrundlage:** Aktuelle OpenAI-Plugin- und Externzugriffs-Dokumentation betont weiterhin Kontrolle externer Inhalte, Website-Zugriff, App-Daten und Risikoaktionen über Rechte und Bestätigung; diese Seite definiert Prompt Injection als „unvertrauenswürdiger Text ändert Agent-Verhalten“ und gibt Erkennung, Read-only-first und menschliche Freigabe als Milderung.  
-**Zuletzt geprüft:** 2026-07-26

@@ -1,17 +1,18 @@
 ---
-title: Contexto sensível
+title: contexto sensível
 description: Chaves, privacidade e material que não se partilha.
 locale: pt
 source_locale: zh-CN
-source_revision: a83db07
+source_revision: "a83db07"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: 2026-10-26
 sidebar:
   order: 70
+legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Esta página só explica princípios de minimização e anonimização e ocultação de informações sensíveis de informação sensível; conceitos, exemplos de risco e sugestões de tratamento foram revistos, e o corpo não depende de fatos voláteis do produto.", "checkedAt": "2026-07-26"}
 ---
 
-Tudo o que não quer que seja visto, copiado, enviado para fora ou deixado a longo prazo no registo da Tarefa deve tratar-se primeiro como informação sensível.
+Tudo o que não quer que seja visto, copiado, enviado para fora ou deixado a longo prazo no registro da tarefa deve tratar-se primeiro como informação sensível.
 
 ## Por que julgar primeiro
 
@@ -27,18 +28,18 @@ Isto parece conveniente no momento; depois costuma ser o mais difícil de remedi
 
 Não forneça ao Codex (em prática ou produção):
 
-- Chaves de API, palavras-passe, cookies de sessão
-- Dados de clientes sem desensibilizar, números de identificação, etc.
+- Chaves de API, senhas, cookies de sessão
+- Dados de clientes sem anonimização ou ocultação de informações sensíveis, números de identificação, etc.
 - Material interno não público cuja partilha o contrato proíbe
 
-Use placeholders: `YOUR_API_KEY`. Se já vazou, rode as chaves conforme o processo da organização.
+Use placeholders: `YOUR_API_KEY`. Se já vazou, faça a rotação das chaves conforme o processo da organização.
 
 ## Como julgar na dúvida
 
 Se não tiver a certeza se um trecho é sensível, pergunte-se primeiro:
 
-1. Se alguém irrelevante vir isto, há risco?
-2. Se isto ficar a longo prazo no registo da Tarefa, fico inquieto?
+1. Se uma pessoa sem relação com a tarefa vir isto, há risco?
+2. Se isto ficar a longo prazo no registro da tarefa, fico inquieto?
 
 Se a resposta a qualquer uma for «sim», trate primeiro como informação sensível.
 
@@ -48,22 +49,22 @@ Na primeira vez com IA de ferramentas, muita gente pensa:
 
 - «É só colar um momento»
 - «É só para ele olhar»
-- «Este ficheiro não vai mesmo sair»
+- «Este arquivo não vai mesmo sair»
 
-Mas assim que a informação entra no fluxo da Tarefa, deve tratá-la como sensível. O controlo de segurança fica melhor a priori.
+Mas assim que a informação entra no fluxo da tarefa, deve tratá-la como sensível. O controle de segurança fica melhor a priori.
 
 ## Conteúdo mais fácil de ignorar
 
-Além de palavras-passe e chaves, isto também costuma ser sensível:
+Além de senhas e chaves, isto também costuma ser sensível:
 
 - Listas de clientes
-- Telemóveis, e-mails, números de identificação
+- Números de celular, e-mails, números de identificação
 - Capturas internas, planos ainda não publicados
-- Ficheiros de configuração com endereços reais de produção ou tokens de acesso
+- Arquivos de configuração com endereços reais de produção ou tokens de acesso
 
 Ou seja: informação sensível não é só uma chave `sk-...`.
 
-## Até que ponto desensibilizar basta
+## Até que ponto anonimizar basta
 
 Não é apagar tudo: é manter a **informação mínima necessária para resolver o problema**.
 
@@ -84,7 +85,7 @@ Mas substituir:
 
 - Chaves reais
 - E-mails reais
-- Telemóveis reais
+- Números de celular reais
 - Nomes reais de clientes
 
 ## Quando tem de fornecer — como fazer com mais estabilidade
@@ -92,7 +93,7 @@ Mas substituir:
 Práticas mais seguras:
 
 - Substituir chaves por valores falsos ou placeholders
-- Desensibilizar dados reais de utilizadores
+- Anonimizar ou ocultar informações sensíveis em dados reais de usuários
 - Manter só os campos realmente necessários para investigar
 - Se puder descrever o fenómeno, evite colar blocos brutos sensíveis
 
@@ -107,14 +108,7 @@ Substitua a API Key real por YOUR_API_KEY e o e-mail real por user@example.com.
 Trate por nível de risco:
 
 1. Pare primeiro de continuar a espalhar
-2. Rode de imediato chaves, palavras-passe ou tokens
+2. Faça imediatamente a rotação de chaves, senhas ou tokens
 3. Reporte e remedie conforme o processo da organização
 
-Ao resolver problemas, por defeito dê só a **informação mínima necessária para investigar**; se puder desensibilizar, desensibilize; se puder usar placeholder, use.
-
----
-
-**Estado:** verified  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Base de verificação:** Esta página só explica princípios de minimização e desensibilização de informação sensível; conceitos, exemplos de risco e sugestões de tratamento foram revistos, e o corpo não depende de factos voláteis do produto.  
-**Última verificação:** 2026-07-26
+Ao resolver problemas, por defeito dê só a **informação mínima necessária para investigar**; se puder anonimizar, anonimize; se puder usar placeholder, use.

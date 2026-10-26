@@ -16,9 +16,10 @@ verification:
       href: https://github.com/Fei-Away/Codex-Dream-Skin/releases
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-09-20
 source_revision: "4ecfa1c"
+reviewed_at: "2026-10-26"
 ---
 
 Codex Dream Skin은 타사 데스크톱 테마 프로젝트입니다. 프로젝트 문서에 따르면 공식 설치 패키지를 바꾸지 않고 로컬 CDP 연결로 외관을 주입합니다. 이는 프로젝트 측의 설명이며, 이 핸드북은 모든 버전의 파일·네트워크 동작과 화면 호환성을 확인하지 않았습니다.
@@ -38,7 +39,7 @@ Codex Dream Skin은 타사 데스크톱 테마 프로젝트입니다. 프로젝�
 | Windows 호환성 | 이 핸드북에서 미시험 |
 | 복구 결과 | 미시험. 아래는 절차와 확인 방법 |
 
-릴리스 노트는 일부 화면 수정 사항을 상위 macOS Codex 26.901.41123에서 확인했다고 합니다. 여기서 기록한 26.911.61220과 다르므로 해당 조합의 호환성 근거가 되지 않습니다. 이 페이지의 macOS 설치 링크는 v1.5.18에 고정됐습니다. 다른 버전은 해당 태그를 확인하세요.
+릴리스 노트는 일부 화면 수정 사항을 상위 프로젝트 측 macOS Codex 26.901.41123에서 확인했다고 합니다. 여기서 기록한 26.911.61220과 다르므로 해당 조합의 호환성 근거가 되지 않습니다. 이 페이지의 macOS 설치 링크는 v1.5.18에 고정됐습니다. 다른 버전은 해당 태그를 확인하세요.
 
 클라이언트 버전 읽기는 환경 정보일 뿐 테마 호환성 근거가 아닙니다. 직접 시험한 결과는 [리소스 호환성과 복구 기록](/ko/guide/reference/resource-compatibility/)에 남기세요.
 

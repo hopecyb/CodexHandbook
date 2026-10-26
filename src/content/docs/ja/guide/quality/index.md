@@ -1,8 +1,8 @@
 ---
 legacyVerification:
-  status: "verified"
-  products: "App / CLI / IDE / Cloud"
-  basis: "OpenAI Developers のトップページは現在も、Codex で構築、テスト、レビュー、変更を届けることを強調している。本ページは検証を差分レビュー、テスト実行、出典確認、完了定義に分け、品質章と突合済み。"
+  status: verified
+  products: App / CLI / IDE / Cloud
+  basis: OpenAI Developers のトップページは現在も、Codex で構築、テスト、レビュー、変更を届けることを強調している。本ページは検証を差分レビュー、テスト実行、出典確認、完了定義に分け、品質章と突合済み。
   checkedAt: "2026-07-26"
 title: 品質と検証
 description: 差分のレビュー、テスト実行、出典確認、完了基準の定義。
@@ -10,9 +10,10 @@ sidebar:
   order: 21
 locale: ja
 source_locale: zh-CN
-source_revision: 90d62fb
-translation_status: draft
-translated_at: 2026-09-20
+source_revision: "90d62fb"
+translation_status: reviewed
+translated_at: "2026-09-20"
+reviewed_at: "2026-10-26"
 ---
 
 
@@ -20,9 +21,9 @@ Codex を初めて使う人が陥りやすいミスは、**「完了した」と
 
 検証とは、言葉ではなく、結果が要件を満たしているかを見ることです。
 
-Codex の出力は必ず確認可能であるべきです。検証は任意ではなく、毎回のタスク閉じの一部です。
+Codex の出力は必ず確認可能であるべきです。検証は任意ではなく、各タスクを完了させる過程の一部です。
 
-![イラスト：虫眼鏡で diff の追加・削除行を確認し、横には一項目に印の付いたチェックリストと合格したテスト](/illustrations/verification.webp)
+![イラスト：虫眼鏡で diff の追加・削除行を確認し、横にはチェックリストとテスト用の試験管があり、一項目が対応待ちとして示されている](/illustrations/verification.webp)
 
 ## 検証で見ていること
 
@@ -102,4 +103,4 @@ Codex の出力は必ず確認可能であるべきです。検証は任意で�
 
 検証は、結果が本当に使え、安心して渡せるかを確かめるためのものです。
 
-プロンプトでの検収基準の書き方は [完了基準の定義](/ja/prompts/define-done/)。端到端の事例は [実践事例](/ja/cases/)。
+プロンプトでの検収基準の書き方は [完了基準の定義](/ja/prompts/define-done/)。エンドツーエンドの事例は [実践事例](/ja/cases/)。

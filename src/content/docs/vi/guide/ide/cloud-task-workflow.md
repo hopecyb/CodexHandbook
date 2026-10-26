@@ -1,13 +1,18 @@
 ---
-title: Tác vụ Cloud từ IDE
-description: Giao tác vụ dài từ IDE cho Codex Cloud và quay lại xem kết quả có thể rà soát.
-locale: vi
-source_locale: zh-CN
-source_revision: d5369b5
-translation_status: draft
-translated_at: 2026-09-20
+title: "Tác vụ Cloud từ IDE"
+description: "Giao tác vụ dài từ IDE cho Codex Cloud và quay lại xem kết quả có thể rà soát."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "d5369b5"
+translation_status: "reviewed"
+translated_at: "2026-09-20"
 sidebar:
   order: 60
+legacyVerification:
+  status: "verified"
+  products: "IDE, Cloud"
+  checkedAt: "2026-08-26"
+reviewed_at: "2026-10-26"
 ---
 
 Bạn có thể giữ những lần chỉnh sửa nhanh ở máy cục bộ trong IDE, hoặc kết nối với Codex web để giao tác vụ mất nhiều thời gian hơn cho Cloud. Điểm bắt đầu vẫn nằm trong trình soạn thảo, nhưng môi trường thực thi, trạng thái kho lưu trữ và giới hạn truy cập mạng lúc này thuộc về môi trường Cloud.

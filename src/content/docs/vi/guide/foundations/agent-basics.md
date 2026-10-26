@@ -1,14 +1,19 @@
 ---
-title: Cơ bản về Agent
-description: Giải thích Agent gọi công cụ quanh mục tiêu và lặp để tiến tới như thế nào.
-locale: vi
-source_locale: zh-CN
-source_revision: 14ab120
-translation_status: reviewed
-translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+title: "Cơ bản về Agent"
+description: "Giải thích Agent gọi công cụ quanh mục tiêu và lặp để tiến tới như thế nào."
+locale: "vi"
+source_locale: "zh-CN"
+source_revision: "14ab120"
+translation_status: "reviewed"
+translated_at: "2026-07-28"
+reviewed_at: "2026-10-26"
 sidebar:
   order: 20
+legacyVerification:
+  status: "verified"
+  products: "App / CLI / IDE / Cloud"
+  basis: "Trang này chỉ giải thích khác biệt cộng tác giữa Agent và chat thông thường; liên kết nội bộ cùng cách diễn đạt khái niệm và phép so sánh đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi."
+  checkedAt: "2026-07-26"
 ---
 
 **Agent** sẽ liên tục làm quanh mục tiêu: hiểu mục tiêu → chọn công cụ → quan sát kết quả → điều chỉnh bước tiếp theo, cho đến khi hoàn thành hoặc cần bạn can thiệp.
@@ -59,10 +64,3 @@ Khi mới dùng, nên đọc đồng thời:
 - Phê duyệt thủ công: xem [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
 
 Đặc điểm của Agent là nó có thể liên tục làm vài bước quanh mục tiêu — không chỉ trả bạn một đoạn chữ.
-
----
-
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ giải thích khác biệt cộng tác giữa Agent và chat thông thường; liên kết nội bộ cùng cách diễn đạt khái niệm và phép so sánh đã được rà lại, và nội dung không phụ thuộc vào chi tiết sản phẩm dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26

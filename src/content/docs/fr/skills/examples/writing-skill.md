@@ -1,5 +1,5 @@
 ---
-title: "Exemple : une Skill de rédaction avec sources et échantillon de style"
+title: "Exemple : un Skill de rédaction avec sources et échantillon de style"
 description: "Téléchargez un dossier complet pour apprendre à relier les affirmations aux sources, réviser le style, conserver les contradictions et vérifier manuellement."
 contentType: skill
 audiences: [creator]
@@ -21,11 +21,12 @@ assets:
     version: 1.0.0
 locale: fr
 source_locale: zh-CN
-source_revision: cbaec37
-translation_status: draft
+source_revision: "cbaec37"
+translation_status: reviewed
 translated_at: 2026-09-20
+reviewed_at: 2026-10-26
 ---
-Cette Skill transforme les sources fournies en article dont on peut retrouver les justifications, tout en conservant les exigences de style, les preuves et les points non résolus. Elle convient à la rédaction fondée sur des sources et à la vérification factuelle ; corriger une simple coquille ne nécessite pas ce processus complet.
+Ce Skill transforme les sources fournies en article dont on peut retrouver les justifications, tout en conservant les exigences de style, les preuves et les points non résolus. Il convient à la rédaction fondée sur des sources et à la vérification factuelle ; corriger une simple coquille ne nécessite pas ce processus complet.
 
 [Télécharger source-backed-writer v1.0.0](/downloads/skills/source-backed-writer/source-backed-writer-1.0.0.zip) · [Voir SKILL.md](/downloads/skills/source-backed-writer/SKILL.md) · [Instructions d’installation](/downloads/skills/source-backed-writer/README.md)
 
@@ -39,11 +40,11 @@ Cette Skill transforme les sources fournies en article dont on peut retrouver le
 | Sept affirmations reliées aux sources et liste des points non résolus | Séparer ce que les sources attestent, les déductions de l’auteur et l’inconnu |
 | Cas positifs et négatifs de déclenchement, scripts et journal | Définir le périmètre et les limites des contrôles |
 
-Le dossier réutilise l’outil fictif « 拾页 » de l’[exercice d’article fondé sur des sources](/fr/cases/write-an-article/). Vous pouvez faire cet exercice d’abord, puis enregistrer cette méthode dans une Skill.
+Le dossier réutilise l’outil fictif « Shiye (拾页) » de l’[exercice d’article fondé sur des sources](/fr/cases/write-an-article/). Vous pouvez faire cet exercice d’abord, puis enregistrer cette méthode dans un Skill.
 
 ## Installer et lancer pour la première fois
 
-Placez le dossier complet dans `.agents/skills/source-backed-writer/` de votre projet d’exercice, avec `SKILL.md` au premier niveau. Si une Skill du même nom existe, comparez avant d’écraser. Consultez [Utiliser une Skill](/fr/skills/use-a-skill/) pour la découverte ; après avoir confirmé qu’elle est disponible dans votre client, appelez-la explicitement :
+Placez le dossier complet dans `.agents/skills/source-backed-writer/` de votre projet d’exercice, avec `SKILL.md` au premier niveau. Si un Skill du même nom existe, comparez-les sans écraser le Skill existant. Consultez [Utiliser un Skill](/fr/skills/use-a-skill/) pour la découverte ; après avoir confirmé qu’il est disponible dans votre client, appelez-le explicitement :
 
 ```text
 $source-backed-writer Lis les trois documents de sources/ de ce dossier pédagogique.
@@ -69,7 +70,7 @@ Cette page a exécuté les scripts, sans tester la découverte automatique ni l�
 
 L’[échantillon de style](/downloads/skills/source-backed-writer/references/style.md) propose une comparaison conçue pour l’exercice :
 
-> Contre-exemple : 拾页 est une solution universelle qui traite sans effort tous les formats et double votre productivité.
+> Contre-exemple : Shiye est une solution universelle qui traite sans effort tous les formats et double votre productivité.
 
 Remplacez-le par : « La notice ne mentionne que Markdown et le texte brut. Essayez d’abord sur une petite copie de vos notes, puis retournez au texte d’origine cité par le résumé. » La première phrase vient de la source ; la seconde est un conseil de l’auteur. Distinguez-les dans le tableau des affirmations. Si l’utilisateur demande un ton ou une structure différents, suivez sa demande réelle.
 
@@ -92,7 +93,7 @@ Après rédaction, vérifiez chaque point :
 
 Le script détecte les changements d’empreinte des sources et les erreurs de structure des citations, mais ne juge pas si une source soutient vraiment une affirmation. Le dossier teste volontairement une fausse promesse de capacité qui passe le contrôle structurel avec un identifiant valide. Une relecture factuelle humaine reste nécessaire.
 
-## Quand ne pas déclencher la Skill
+## Quand ne pas déclencher le Skill
 
 Corriger une coquille, examiner un patch Git ou ajouter une fonction logicielle ne devrait pas devenir automatiquement une rédaction complète. Terminer l’article n’accorde pas le droit de le publier. Les [cas de déclenchement](/downloads/skills/source-backed-writer/fixtures/trigger-cases.json) représentent des attentes de conception, pas un taux de réussite du routage.
 

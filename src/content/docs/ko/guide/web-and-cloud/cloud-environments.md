@@ -3,11 +3,16 @@ title: Cloud 환경
 description: Codex Cloud의 런타임, 의존성, setup, 캐시, 저장소 시작점을 설정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 1745f70
-translation_status: draft
+source_revision: "1745f70"
+translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 20
+legacyVerification:
+  status: verified
+  products: Cloud
+  checkedAt: '2026-08-26'
+reviewed_at: "2026-10-26"
 ---
 
 Cloud 환경은 Codex가 특정 저장소에 무엇을 설치하고 실행할지 정의합니다. 내 노트북 설정을 그대로 물려받지는 않습니다. 로컬에서는 실행되지만 Cloud에서 실패한다면 런타임, 의존성, 변수, 네트워크부터 비교하세요.
@@ -67,7 +72,7 @@ setup, maintenance, 환경 변수 또는 secrets를 바꾸면 캐시가 자동�
 | lockfile | 고정 설치 사용 |
 | setup | 반복 가능하고, 대화형 입력이 필요 없으며, 실패하면 즉시 중단 |
 | 검증 명령 | `AGENTS.md`에 기록 |
-| 네트워크 | Agent에는 필요한 도메인과 방식만 허용 |
+| 네트워크 | Agent에는 필요한 도메인과 HTTP 메서드만 허용 |
 
 ## 공식 근거
 

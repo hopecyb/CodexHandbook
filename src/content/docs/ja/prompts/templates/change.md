@@ -5,13 +5,13 @@ legacyVerification:
   basis: "本ページは変更系タスクのテンプレートを提供。サイト内リンクとテンプレート構造を再確認済みで、本文は製品バージョン・価格・UI などの変わりやすい事実に依存しない。"
   checkedAt: "2026-07-26"
 title: 変更テンプレート
-description: 既存の上で境界のある反復変更。
+description: 既存の機能やファイルを、範囲を限定して改善する。
 locale: ja
 source_locale: zh-CN
-source_revision: 6faf299
+source_revision: "6faf299"
 translation_status: reviewed
 translated_at: 2026-07-28
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-26"
 ---
 
 

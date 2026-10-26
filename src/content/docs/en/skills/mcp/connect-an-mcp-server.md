@@ -1,12 +1,16 @@
 ---
+legacyVerification:
+  status: "verified"
+  products: "ChatGPT desktop App / Codex CLI / IDE"
+  checkedAt: "2026-08-25"
 title: Connect an MCP server
 description: Configure, authenticate, and verify the first MCP server through the CLI or config.toml.
 locale: en
 source_locale: zh-CN
-source_revision: 0675d33
+source_revision: '0675d33'
 translation_status: reviewed
 translated_at: 2026-08-26
-reviewed_at: 2026-08-26
+reviewed_at: "2026-10-25"
 ---
 
 This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
@@ -100,11 +104,3 @@ Record the exact error and diagnose configuration, process/network, authenticati
 ## Official source
 
 - [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
-
----
-
-**Status:** verified
-
-**Applies to:** ChatGPT desktop App / Codex CLI / IDE
-
-**Last verified:** 2026-08-25
