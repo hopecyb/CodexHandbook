@@ -75,11 +75,6 @@ const t = vietnamese
 		{editorialStatus && <p>{t.status}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese ? ': ' : '：'}{statusLabels[editorialStatus]}</p>}
 		<p><strong>{labels[verification.kind]}</strong> · <time datetime={verification.checkedAt}>{verification.checkedAt}</time></p>
 		<p>{verification.summary}</p>
-		{(verification.environment || verification.evidence.length > 0) && <details>
-			<summary>{t.evidence}</summary>
-			{verification.environment && <p>{t.environment}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese ? ': ' : '：'}{verification.environment}</p>}
-			{verification.evidence.length > 0 && <ul>{verification.evidence.map(item => <li><a href={item.href}>{item.label}</a></li>)}</ul>}
-		</details>}
 	</aside>
 )}
 

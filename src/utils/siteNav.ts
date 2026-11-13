@@ -388,6 +388,14 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 				},
 			},
 			{
+				href: 'mailto:service@codexhandbook.com',
+				global: true,
+				label: {
+					'zh-CN': 'service@codexhandbook.com',
+					en: 'service@codexhandbook.com',
+				},
+			},
+			{
 				href: '/privacy-policy/',
 				global: true,
 				label: {

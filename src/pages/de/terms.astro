@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-26';
 ---
-<!doctype html>
-<html lang="de">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Nutzungsbedingungen | Codex-Handbuch</title><meta name="description" content="Die Nutzungsbedingungen des Codex-Handbuchs erläutern den Zweck der Inhalte, Grenzen der Genauigkeit, externe Links und Beiträge." /><link rel="canonical" href="https://codexhandbook.com/de/terms/" /></head>
-<body><main><a href="/de/">Codex-Handbuch</a><h1>Nutzungsbedingungen</h1>
+
+<LegalPage lang="de" title="Nutzungsbedingungen | Codex-Handbuch" description="Die Nutzungsbedingungen des Codex-Handbuchs erläutern den Zweck der Inhalte, Grenzen der Genauigkeit, externe Links und Beiträge." canonical="https://codexhandbook.com/de/terms/">
+<h1>Nutzungsbedingungen</h1>
 <p>Das Codex-Handbuch dient als Lern- und Praxishilfe. Es stellt weder eine offizielle Produktzusage von OpenAI noch eine Rechtsberatung, ein Sicherheitsaudit oder eine professionelle Beratung dar.</p>
 <h2>Genauigkeit der Inhalte</h2><p>Wir bemühen uns, Prüfgrundlagen, Geltungsbereiche und Aktualisierungsdaten anzugeben. Benutzeroberflächen, Zugänge zu Funktionen, Preise und Richtlinien können sich ändern. Prüfen Sie aktuelle Fakten anhand offizieller Quellen.</p>
 <h2>Externe Quellen</h2><p>Die Website kann auf OpenAI, GitHub oder andere Drittanbieterquellen verweisen. Diese Quellen werden von den jeweiligen Websites gepflegt. Wir haben keinen Einfluss auf ihre Verfügbarkeit oder auf Änderungen ihrer Inhalte.</p>
 <h2>Beiträge</h2><p>Korrekturen über GitHub sind willkommen. Beitragende sollten sicherstellen, dass ihre Inhalte klar belegte Quellen haben, keine sensiblen Informationen offenlegen und für eine öffentliche Veröffentlichung geeignet sind.</p>
 <p>Original zuletzt aktualisiert: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Übersetzung geprüft am <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/terms/">Chinesisches Original</a></p>
-</main></body></html>
+</LegalPage>

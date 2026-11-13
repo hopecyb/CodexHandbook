@@ -1,13 +1,13 @@
 ---
-const updatedAt = '2026-07-28';
-const reviewedAt = '2026-10-25';
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-11-13';
+const reviewedAt = '2026-11-13';
 ---
-<!doctype html>
-<html lang="es">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Contacto | Manual de Codex</title><meta name="description" content="Contacta con quienes mantienen el Manual de Codex para comunicar problemas de contenido, actualizaciones de fuentes, mejoras de traducción o propuestas de colaboración." /><link rel="canonical" href="https://codexhandbook.com/es/contact/" /></head>
-<body><main><a href="/es/">Manual de Codex</a><h1>Contacto</h1>
-<p>Para comunicar problemas de contenido, actualizaciones de fuentes, mejoras de traducción o propuestas de colaboración, abre una issue o una pull request en el repositorio de GitHub.</p>
-<ul><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues de GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Repositorio del proyecto</a></li></ul>
+
+<LegalPage lang="es" title="Contacto | Manual de Codex" description="Contacta con quienes mantienen el Manual de Codex para comunicar problemas de contenido, actualizaciones de fuentes, mejoras de traducción o propuestas de colaboración." canonical="https://codexhandbook.com/es/contact/">
+<h1>Contacto</h1>
+<p>Para comunicar problemas de contenido, actualizaciones de fuentes, mejoras de traducción, consultas de publicidad u otras propuestas, escríbenos por correo o abre una issue o una pull request en GitHub.</p>
+<ul><li>Correo: <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a></li><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues de GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Repositorio del proyecto</a></li></ul>
 <p>Última actualización del original: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Traducción revisada: <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/contact/">Original en chino</a></p>
-</main></body></html>
+</LegalPage>

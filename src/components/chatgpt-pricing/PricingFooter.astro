@@ -34,6 +34,7 @@ const communityLinks = [
 
 const trustLinks = [
 	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/contact/` : '/contact/', key: 'contact' },
+	{ href: 'mailto:service@codexhandbook.com', label: 'service@codexhandbook.com' },
 	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/privacy-policy/` : '/privacy-policy/', key: 'privacy' },
 	{ href: ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(locale) ? `/${locale}/terms/` : '/terms/', key: 'terms' },
 ] as const;
@@ -98,8 +99,8 @@ const trustLinks = [
 					{
 						trustLinks.map((link) => (
 							<li>
-								<a href={link.href} data-i18n={link.key}>
-									{t(link.key)}
+								<a href={link.href} data-i18n={'key' in link ? link.key : undefined}>
+									{'label' in link ? link.label : t(link.key)}
 								</a>
 							</li>
 						))

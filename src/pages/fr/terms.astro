@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-26';
 ---
-<!doctype html>
-<html lang="fr">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Conditions d’utilisation | Manuel Codex</title><meta name="description" content="Conditions d’utilisation du Manuel Codex : usage du contenu, limites d’exactitude, ressources externes et contributions." /><link rel="canonical" href="https://codexhandbook.com/fr/terms/" /></head>
-<body><main><a href="/fr/">Manuel Codex</a><h1>Conditions d’utilisation</h1>
+
+<LegalPage lang="fr" title="Conditions d’utilisation | Manuel Codex" description="Conditions d’utilisation du Manuel Codex : usage du contenu, limites d’exactitude, ressources externes et contributions." canonical="https://codexhandbook.com/fr/terms/">
+<h1>Conditions d’utilisation</h1>
 <p>Le Manuel Codex fournit des ressources pour l’apprentissage et la pratique. Il ne constitue ni un engagement officiel d’OpenAI sur ses produits, ni un avis juridique, ni un audit de sécurité, ni une prestation de conseil professionnel.</p>
 <h2>Exactitude du contenu</h2><p>Nous nous efforçons d’indiquer les éléments de vérification, le champ d’application et la date de mise à jour. Les interfaces, les accès aux fonctionnalités, les prix et les politiques peuvent évoluer. Consultez à nouveau les sources officielles lorsque vous avez besoin d’informations actuelles.</p>
 <h2>Ressources externes</h2><p>Le site peut proposer des liens vers OpenAI, GitHub ou d’autres ressources tierces. Ces ressources sont gérées par les sites concernés ; nous ne contrôlons ni leur disponibilité ni les modifications de leur contenu.</p>
 <h2>Contributions</h2><p>Les propositions de correction via GitHub sont les bienvenues. Les contributeurs doivent s’assurer que leurs contenus ont des sources claires, ne divulguent aucune information sensible et peuvent être publiés.</p>
 <p>Dernière mise à jour de l’original : <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Traduction relue le <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/terms/">Original chinois</a></p>
-</main></body></html>
+</LegalPage>

@@ -267,6 +267,7 @@ export default defineConfig({
 				Hero: './src/components/Hero.astro',
 				Sidebar: './src/components/Sidebar.astro',
 				PageFrame: './src/components/PageFrame.astro',
+				PageSidebar: './src/components/PageSidebar.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				Footer: './src/components/Footer.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',

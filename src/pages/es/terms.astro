@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-25';
 ---
-<!doctype html>
-<html lang="es">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Términos de uso | Manual de Codex</title><meta name="description" content="Finalidad del contenido, límites de exactitud, enlaces externos y contribuciones al Manual de Codex." /><link rel="canonical" href="https://codexhandbook.com/es/terms/" /></head>
-<body><main><a href="/es/">Manual de Codex</a><h1>Términos de uso</h1>
+
+<LegalPage lang="es" title="Términos de uso | Manual de Codex" description="Finalidad del contenido, límites de exactitud, enlaces externos y contribuciones al Manual de Codex." canonical="https://codexhandbook.com/es/terms/">
+<h1>Términos de uso</h1>
 <p>El Manual de Codex ofrece material de referencia para aprender y practicar. No constituye un compromiso oficial de producto de OpenAI, asesoramiento jurídico, una auditoría de seguridad ni consultoría profesional.</p>
 <h2>Exactitud del contenido</h2><p>Procuramos indicar las bases de verificación, el ámbito de aplicación y las fechas de actualización. Las interfaces, los accesos a funciones, los precios y las políticas pueden cambiar. Cuando necesites información vigente, contrástala con fuentes oficiales.</p>
 <h2>Recursos externos</h2><p>El sitio puede enlazar a recursos de OpenAI, GitHub u otros terceros. Sus respectivos sitios mantienen esos recursos; no controlamos su disponibilidad ni sus cambios de contenido.</p>
 <h2>Contribuciones</h2><p>Las correcciones mediante GitHub son bienvenidas. Quienes contribuyan deben asegurarse de que el contenido tenga fuentes claras, no revele información sensible y sea adecuado para su publicación.</p>
 <p>Última actualización del original: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Traducción revisada: <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/terms/">Original en chino</a></p>
-</main></body></html>
+</LegalPage>

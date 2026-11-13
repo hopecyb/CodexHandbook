@@ -1,0 +1,207 @@
+---
+import { ArrowRight, Megaphone } from '@lucide/astro';
+import config from 'virtual:starlight/user-config';
+import { getSiteLang, pickLabel, type LocalizedLabel } from '../utils/siteNav';
+
+const locale = Astro.locals.starlightRoute.locale ?? 'root';
+const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
+const { placement = 'inline', hideOnWide = false } = Astro.props;
+const email = 'service@codexhandbook.com';
+const mailto = `mailto:${email}?subject=${encodeURIComponent('Advertising inquiry - Codex Handbook')}`;
+
+const copy: Record<'label' | 'title' | 'description' | 'action', LocalizedLabel> = {
+	label: {
+		'zh-CN': '广告位',
+		en: 'Advertisement',
+		'zh-TW': '廣告位',
+		fr: 'Publicité',
+		ja: '広告枠',
+		ko: '광고',
+		es: 'Publicidad',
+		de: 'Werbung',
+		pt: 'Publicidade',
+		vi: 'Quảng cáo',
+	},
+	title: {
+		'zh-CN': '向 Codex 与 AI Agent 用户展示你的产品',
+		en: 'Reach Codex and AI agent users',
+		'zh-TW': '向 Codex 與 AI Agent 使用者展示你的產品',
+		fr: 'Présentez votre produit aux utilisateurs de Codex et des agents IA',
+		ja: 'Codex・AI エージェントのユーザーに製品を紹介',
+		ko: 'Codex 및 AI 에이전트 사용자에게 제품을 소개하세요',
+		es: 'Presenta tu producto a usuarios de Codex y agentes de IA',
+		de: 'Präsentieren Sie Ihr Produkt Codex- und KI-Agent-Nutzern',
+		pt: 'Apresente seu produto a usuários do Codex e de agentes de IA',
+		vi: 'Giới thiệu sản phẩm tới người dùng Codex và AI Agent',
+	},
+	description: {
+		'zh-CN': '面向 AI 工具、开发者产品与优质服务开放合作。广告内容会明确标注，并与正文保持区分。',
+		en: 'Open to relevant AI tools, developer products, and quality services. Sponsored content is clearly labeled and separated from the guide.',
+		'zh-TW': '面向 AI 工具、開發者產品與優質服務開放合作。廣告內容會明確標註，並與正文保持區分。',
+		fr: 'Ouvert aux outils d’IA, produits pour développeurs et services pertinents. Le contenu sponsorisé reste clairement identifié et séparé du guide.',
+		ja: 'AI ツール、開発者向け製品、良質なサービスとの提携を受け付けています。広告は明示し、本文と区別します。',
+		ko: 'AI 도구, 개발자 제품 및 양질의 서비스를 위한 공간입니다. 광고는 명확히 표시하고 본문과 구분합니다.',
+		es: 'Abierto a herramientas de IA, productos para desarrolladores y servicios de calidad. El contenido patrocinado se identifica y se separa de la guía.',
+		de: 'Offen für passende KI-Tools, Entwicklerprodukte und hochwertige Dienste. Gesponserte Inhalte werden klar gekennzeichnet und vom Leitfaden getrennt.',
+		pt: 'Espaço aberto a ferramentas de IA, produtos para desenvolvedores e serviços de qualidade. O conteúdo patrocinado é identificado e separado do guia.',
+		vi: 'Dành cho công cụ AI, sản phẩm nhà phát triển và dịch vụ phù hợp. Nội dung tài trợ được ghi nhãn rõ ràng và tách biệt với bài viết.',
+	},
+	action: {
+		'zh-CN': '联系广告合作',
+		en: 'Discuss advertising',
+		'zh-TW': '聯絡廣告合作',
+		fr: 'Discuter d’un partenariat',
+		ja: '広告掲載を相談',
+		ko: '광고 문의',
+		es: 'Consultar publicidad',
+		de: 'Werbung anfragen',
+		pt: 'Consultar publicidade',
+		vi: 'Trao đổi quảng cáo',
+	},
+};
+---
+
+<aside
+	class:list={['ad-slot', `ad-slot--${placement}`, { 'ad-slot--hide-wide': hideOnWide }]}
+	aria-label={pickLabel(copy.label, lang)}
+	data-pagefind-ignore
+>
+	<p class="ad-slot__badge">
+		<Megaphone aria-hidden="true" />
+		<span>{pickLabel(copy.label, lang)}</span>
+	</p>
+	<div class="ad-slot__body">
+		<p class="ad-slot__title">{pickLabel(copy.title, lang)}</p>
+		<p class="ad-slot__text">{pickLabel(copy.description, lang)}</p>
+	</div>
+	<a class="ad-slot__action" href={mailto}>
+		<span>{pickLabel(copy.action, lang)}</span>
+		<ArrowRight aria-hidden="true" />
+	</a>
+</aside>
+
+<style>
+	/* A clearly labelled, quiet card: neutral surface, dashed edge, no glow. */
+	.ad-slot {
+		--ad-edge: color-mix(in srgb, var(--sl-color-gray-3) 45%, transparent);
+		display: grid;
+		gap: 0.65rem;
+		margin-block-start: 3rem;
+		padding: 1rem 1.15rem 1.1rem;
+		border: 1px dashed var(--ad-edge);
+		border-radius: 0.75rem;
+		background: color-mix(in srgb, var(--sl-color-gray-6) 55%, transparent);
+	}
+
+	.ad-slot__badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		width: fit-content;
+		margin: 0;
+		padding: 0.15rem 0.55rem;
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--sl-color-gray-5) 70%, transparent);
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		line-height: 1.5;
+	}
+
+	.ad-slot__badge :global(svg) {
+		width: 0.8rem;
+		height: 0.8rem;
+	}
+
+	.ad-slot__body {
+		min-width: 0;
+	}
+
+	.ad-slot__title {
+		margin: 0;
+		color: var(--sl-color-white);
+		font-size: var(--sl-text-base);
+		font-weight: 600;
+		line-height: 1.45;
+	}
+
+	.ad-slot__text {
+		margin: 0.25rem 0 0;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		line-height: 1.6;
+	}
+
+	.ad-slot__action {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem;
+		width: fit-content;
+		padding: 0.45rem 0.8rem;
+		border: 1px solid color-mix(in srgb, var(--sl-color-accent) 55%, transparent);
+		border-radius: 0.5rem;
+		color: var(--sl-color-accent-high);
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		line-height: 1.3;
+		text-decoration: none;
+		transition:
+			background-color 0.15s ease,
+			border-color 0.15s ease;
+	}
+
+	.ad-slot__action:hover,
+	.ad-slot__action:focus-visible {
+		border-color: var(--sl-color-accent);
+		background: color-mix(in srgb, var(--sl-color-accent) 14%, transparent);
+	}
+
+	.ad-slot__action :global(svg) {
+		width: 0.95rem;
+		height: 0.95rem;
+	}
+
+	:global(html[data-theme='light']) .ad-slot__title {
+		color: var(--sl-color-gray-1);
+	}
+
+	/* Right rail: stacked, full-width action. */
+	.ad-slot--rail {
+		margin-block-start: 1.5rem;
+		padding: 0.9rem;
+	}
+
+	.ad-slot--rail .ad-slot__title {
+		font-size: var(--sl-text-sm);
+	}
+
+	.ad-slot--rail .ad-slot__text {
+		font-size: var(--sl-text-xs);
+	}
+
+	.ad-slot--rail .ad-slot__action {
+		width: 100%;
+	}
+
+	/* End of article: badge on top, copy and action side by side on wide columns. */
+	@media (min-width: 44rem) {
+		.ad-slot--inline {
+			grid-template-columns: minmax(0, 1fr) auto;
+			align-items: center;
+			column-gap: 1.5rem;
+		}
+
+		.ad-slot--inline .ad-slot__badge {
+			grid-column: 1 / -1;
+		}
+	}
+
+	/* The rail already carries the slot at this width. */
+	@media (min-width: 72rem) {
+		.ad-slot--hide-wide {
+			display: none;
+		}
+	}
+</style>

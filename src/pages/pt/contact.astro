@@ -1,13 +1,13 @@
 ---
-const updatedAt = '2026-07-28';
-const reviewedAt = '2026-10-26';
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-11-13';
+const reviewedAt = '2026-11-13';
 ---
-<!doctype html>
-<html lang="pt">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Contato | Manual Codex</title><meta name="description" content="Entre em contato com os mantenedores do Manual Codex para apontar problemas de conteúdo, atualizar fontes, melhorar traduções ou sugerir uma colaboração." /><link rel="canonical" href="https://codexhandbook.com/pt/contact/" /></head>
-<body><main><a href="/pt/">Manual Codex</a><h1>Contato</h1>
-<p>Para apontar problemas de conteúdo, atualizar fontes, melhorar traduções ou sugerir uma colaboração, abra uma issue ou um pull request no repositório do GitHub.</p>
-<ul><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues no GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Repositório de código-fonte</a></li></ul>
+
+<LegalPage lang="pt" title="Contato | Manual Codex" description="Entre em contato com os mantenedores do Manual Codex para apontar problemas de conteúdo, atualizar fontes, melhorar traduções ou sugerir uma colaboração." canonical="https://codexhandbook.com/pt/contact/">
+<h1>Contato</h1>
+<p>Para relatar problemas, atualizar fontes, melhorar traduções, consultar sobre publicidade ou enviar outras sugestões, escreva por e-mail ou abra uma issue ou um pull request no GitHub.</p>
+<ul><li>E-mail: <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a></li><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues no GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Repositório de código-fonte</a></li></ul>
 <p>Última atualização do original: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Tradução revisada em <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/contact/">Original em chinês</a></p>
-</main></body></html>
+</LegalPage>

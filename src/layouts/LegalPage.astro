@@ -1,0 +1,655 @@
+---
+import { Search } from '@lucide/astro';
+import Select from '../components/Select.astro';
+import '../styles/select.css';
+import { footerBrand, footerLegal, footerLinkGroups, pickLabel, type SiteLang } from '../utils/siteNav';
+
+interface Props {
+	lang: SiteLang;
+	title: string;
+	description: string;
+	canonical: string;
+}
+
+const { lang, title, description, canonical } = Astro.props;
+const LANGS: { code: SiteLang; label: string; prefix: string }[] = [
+	{ code: 'zh-CN', label: '简体中文', prefix: '' },
+	{ code: 'en', label: 'English', prefix: '/en' },
+	{ code: 'zh-TW', label: '繁體中文', prefix: '/zh-tw' },
+	{ code: 'fr', label: 'Français', prefix: '/fr' },
+	{ code: 'ja', label: '日本語', prefix: '/ja' },
+	{ code: 'ko', label: '한국어', prefix: '/ko' },
+	{ code: 'es', label: 'Español', prefix: '/es' },
+	{ code: 'de', label: 'Deutsch', prefix: '/de' },
+	{ code: 'pt', label: 'Português', prefix: '/pt' },
+	{ code: 'vi', label: 'Tiếng Việt', prefix: '/vi' },
+];
+const prefix = LANGS.find((item) => item.code === lang)?.prefix ?? '';
+const homeHref = `${prefix}/`;
+const slug = Astro.url.pathname.replace(/\/+$/, '').split('/').pop() ?? '';
+const langOptions = LANGS.map((item) => ({ ...item, href: `${item.prefix}/${slug}/` }));
+const ui: Record<'search' | 'searchPlaceholder' | 'noResults' | 'language' | 'theme' | 'themeDark' | 'themeLight' | 'themeAuto' | 'menu', Partial<Record<SiteLang, string>> & { en: string }> = {
+	search: { 'zh-CN': '搜索', 'zh-TW': '搜尋', en: 'Search', fr: 'Rechercher', ja: '検索', ko: '검색', es: 'Buscar', de: 'Suchen', pt: 'Pesquisar', vi: 'Tìm kiếm' },
+	searchPlaceholder: { 'zh-CN': '搜索手册内容', 'zh-TW': '搜尋手冊內容', en: 'Search the handbook', fr: 'Rechercher dans le manuel', ja: 'ハンドブックを検索', ko: '핸드북 검색', es: 'Buscar en el manual', de: 'Im Handbuch suchen', pt: 'Pesquisar no manual', vi: 'Tìm trong sổ tay' },
+	noResults: { 'zh-CN': '没有找到相关内容', 'zh-TW': '沒有找到相關內容', en: 'No results found', fr: 'Aucun résultat', ja: '結果が見つかりません', ko: '결과가 없습니다', es: 'Sin resultados', de: 'Keine Ergebnisse', pt: 'Nenhum resultado', vi: 'Không có kết quả' },
+	language: { 'zh-CN': '选择语言', 'zh-TW': '選擇語言', en: 'Select language', fr: 'Choisir la langue', ja: '言語を選択', ko: '언어 선택', es: 'Seleccionar idioma', de: 'Sprache wählen', pt: 'Selecionar idioma', vi: 'Chọn ngôn ngữ' },
+	themeDark: { 'zh-CN': '深色', 'zh-TW': '深色', en: 'Dark', fr: 'Sombre', ja: 'ダーク', ko: '다크', es: 'Oscuro', de: 'Dunkel', pt: 'Escuro', vi: 'Tối' },
+	themeLight: { 'zh-CN': '浅色', 'zh-TW': '淺色', en: 'Light', fr: 'Clair', ja: 'ライト', ko: '라이트', es: 'Claro', de: 'Hell', pt: 'Claro', vi: 'Sáng' },
+	themeAuto: { 'zh-CN': '自动', 'zh-TW': '自動', en: 'Auto', fr: 'Auto', ja: '自動', ko: '자동', es: 'Auto', de: 'Auto', pt: 'Auto', vi: 'Tự động' },
+	theme: { 'zh-CN': '切换主题', 'zh-TW': '切換主題', en: 'Toggle theme', fr: 'Changer de thème', ja: 'テーマを切り替え', ko: '테마 전환', es: 'Cambiar tema', de: 'Design wechseln', pt: 'Alternar tema', vi: 'Đổi giao diện' },
+	menu: { 'zh-CN': '页面导航', 'zh-TW': '頁面導覽', en: 'Page navigation', fr: 'Navigation', ja: 'ページナビ', ko: '페이지 탐색', es: 'Navegación', de: 'Seitennavigation', pt: 'Navegação', vi: 'Điều hướng' },
+};
+const t = (key: keyof typeof ui) => ui[key][lang] ?? ui[key].en;
+const brand = pickLabel(footerBrand.name, lang);
+const legalLinks = (footerLinkGroups.find((group) => group.id === 'trust')?.links ?? [])
+	.filter((link) => !link.href.startsWith('mailto:'))
+	.map((link) => ({
+		href: `${prefix}${link.href}`,
+		label: pickLabel(link.label, lang),
+		current: link.href.replace(/\//g, '') === slug,
+	}));
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="icon" href="/favicon.png" />
+		<script is:inline>
+			(() => {
+				let theme = '';
+				try {
+					theme = localStorage.getItem('starlight-theme') || '';
+				} catch {}
+				if (theme !== 'light' && theme !== 'dark') {
+					theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+				}
+				document.documentElement.dataset.theme = theme;
+			})();
+		</script>
+	</head>
+	<body>
+		<header class="legal-header">
+			<a class="legal-brand" href={homeHref}>
+				<img src="/brand/logo.png" alt="" width="32" height="32" />
+				<span>{brand}</span>
+			</a>
+			<div class="legal-tools">
+				<button class="legal-search-btn" type="button" data-search-open aria-label={t('search')} hidden>
+					<Search aria-hidden="true" />
+					<span>{t('search')}</span>
+					<kbd>⌘K</kbd>
+				</button>
+				<div data-lang-select>
+					<Select
+						icon="translate"
+						label={t('language')}
+						width="6.5em"
+						options={langOptions.map((item) => ({ value: item.href, label: item.label, selected: item.code === lang }))}
+					/>
+				</div>
+				<div data-theme-select>
+					<Select
+						icon="laptop"
+						compact
+						label={t('theme')}
+						width="2.5rem"
+						options={[
+							{ label: t('themeDark'), value: 'dark', selected: false },
+							{ label: t('themeLight'), value: 'light', selected: false },
+							{ label: t('themeAuto'), value: 'auto', selected: true },
+						]}
+					/>
+				</div>
+			</div>
+		</header>
+
+		<div class="legal-layout">
+			<nav class="legal-sidebar" aria-label={t('menu')}>
+				<ul>
+					{legalLinks.map((link) => (
+						<li>
+							<a href={link.href} aria-current={link.current ? 'page' : undefined}>{link.label}</a>
+						</li>
+					))}
+				</ul>
+			</nav>
+			<main class="legal-main">
+				<article class="legal-article">
+					<slot />
+				</article>
+			</main>
+		</div>
+
+		<dialog class="legal-search" data-search-dialog aria-label={t('search')}>
+			<form method="dialog" class="legal-search__form">
+				<Search aria-hidden="true" />
+				<input type="search" data-search-input placeholder={t('searchPlaceholder')} autocomplete="off" />
+				<button value="close" aria-label="Esc">Esc</button>
+			</form>
+			<ul class="legal-search__results" data-search-results></ul>
+			<p class="legal-search__empty" data-search-empty hidden>{t('noResults')}</p>
+		</dialog>
+
+		<footer class="legal-footer">
+			<nav aria-label={brand}>
+				{legalLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+			</nav>
+			<p>&copy; {year} <a href={homeHref}>{footerLegal.site}</a></p>
+		</footer>
+		<script is:inline>
+			(() => {
+				const root = document.documentElement;
+				const themeSelect = document.querySelector('[data-theme-select] select');
+				let stored = 'auto';
+				try {
+					const saved = localStorage.getItem('starlight-theme');
+					if (saved === 'light' || saved === 'dark') stored = saved;
+				} catch {}
+				if (themeSelect) {
+					themeSelect.value = stored;
+					themeSelect.closest('sl-select')?.syncFromNative?.();
+					themeSelect.addEventListener('change', () => {
+						const choice = themeSelect.value;
+						const next = choice === 'auto' ? (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : choice;
+						root.dataset.theme = next;
+						try {
+							localStorage.setItem('starlight-theme', choice === 'auto' ? '' : choice);
+						} catch {}
+					});
+				}
+				document.querySelector('[data-lang-select] select')?.addEventListener('change', (event) => {
+					window.location.href = event.target.value;
+				});
+
+				// Search: reuse the Pagefind index built with the docs (absent in `astro dev`).
+				const openBtn = document.querySelector('[data-search-open]');
+				const dialog = document.querySelector('[data-search-dialog]');
+				const input = document.querySelector('[data-search-input]');
+				const list = document.querySelector('[data-search-results]');
+				const empty = document.querySelector('[data-search-empty]');
+				let pagefind;
+				const load = async () => {
+					if (pagefind) return pagefind;
+					try {
+						pagefind = await import(/* @vite-ignore */ '/pagefind/pagefind.js');
+						await pagefind.options({ baseUrl: '/' });
+					} catch {
+						pagefind = null;
+					}
+					return pagefind;
+				};
+				load().then((pf) => {
+					if (pf && openBtn) openBtn.hidden = false;
+				});
+				const open = async () => {
+					if (!(await load())) return;
+					dialog.showModal();
+					input.focus();
+				};
+				openBtn?.addEventListener('click', open);
+				document.addEventListener('keydown', (event) => {
+					if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+						event.preventDefault();
+						open();
+					}
+				});
+				dialog?.addEventListener('click', (event) => {
+					if (event.target === dialog) dialog.close();
+				});
+				const esc = (value) => value.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+				let timer;
+				input?.addEventListener('input', () => {
+					clearTimeout(timer);
+					timer = setTimeout(async () => {
+						const query = input.value.trim();
+						list.replaceChildren();
+						empty.hidden = true;
+						if (!query || !pagefind) return;
+						const search = await pagefind.search(query);
+						const items = await Promise.all(search.results.slice(0, 8).map((result) => result.data()));
+						if (!items.length) {
+							empty.hidden = false;
+							return;
+						}
+						list.innerHTML = items
+							.map((item) => `<li><a href="${esc(item.url)}"><strong>${esc(item.meta?.title || item.url)}</strong><span>${item.excerpt}</span></a></li>`)
+							.join('');
+					}, 150);
+				});
+			})();
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: dark;
+		--lg-bg: #17181c;
+		--lg-nav: #1c1e24;
+		--lg-text: #eceef2;
+		--lg-muted: #a6aab5;
+		--lg-hair: #353841;
+		--lg-accent: #b3c7ff;
+		--lg-accent-strong: #3d6bff;
+		--lg-card: #1f2128;
+		/* Starlight tokens used by the shared dropdown (select.css). */
+		--sl-color-white: #ffffff;
+		--sl-color-black: #000000;
+		--sl-color-gray-1: #eceef2;
+		--sl-color-gray-4: #7b7f8b;
+		--sl-color-gray-5: #353841;
+		--sl-color-gray-6: #24262d;
+		--sl-color-bg-nav: #1c1e24;
+		--sl-color-accent: #3d6bff;
+		--sl-text-sm: 0.875rem;
+	}
+
+	:root[data-theme='light'] {
+		color-scheme: light;
+		--lg-bg: #ffffff;
+		--lg-nav: #f6f7f9;
+		--lg-text: #24272f;
+		--lg-muted: #545861;
+		--lg-hair: #d2d5dd;
+		--lg-accent: #1a47d6;
+		--lg-accent-strong: #2e5bff;
+		--lg-card: #f6f7f9;
+		--sl-color-white: #24272f;
+		--sl-color-black: #ffffff;
+		--sl-color-gray-1: #24272f;
+		--sl-color-gray-4: #7b7f8b;
+		--sl-color-gray-5: #d2d5dd;
+		--sl-color-gray-6: #eceef2;
+		--sl-color-bg-nav: #ffffff;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		margin: 0;
+		background: var(--lg-bg);
+		color: var(--lg-text);
+		font-family:
+			system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+			'Noto Sans CJK SC', sans-serif;
+		line-height: 1.75;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+	}
+
+	.legal-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		height: 3.5rem;
+		padding-inline: clamp(1rem, 3vw, 2rem);
+		border-bottom: 1px solid var(--lg-hair);
+		background: var(--lg-nav);
+	}
+
+	.legal-brand {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+		color: var(--lg-text);
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.legal-brand img {
+		border-radius: 0.4rem;
+	}
+
+	.legal-tools {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.legal-tools svg {
+		width: 1rem;
+		height: 1rem;
+		flex: none;
+	}
+
+	.legal-search-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		padding: 0.5rem 0.7rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background-color: color-mix(in srgb, var(--sl-color-gray-6) 40%, transparent);
+		color: var(--lg-muted);
+		font: inherit;
+		font-size: var(--sl-text-sm);
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	.legal-search-btn[hidden] {
+		display: none;
+	}
+
+	.legal-search-btn:hover {
+		border-color: var(--sl-color-gray-4);
+		color: var(--lg-text);
+	}
+
+	.legal-search-btn kbd {
+		padding: 0.05rem 0.35rem;
+		border: 1px solid var(--lg-hair);
+		border-radius: 0.3rem;
+		font: inherit;
+		font-size: 0.7rem;
+	}
+
+	.legal-layout {
+		display: grid;
+		flex: 1;
+		grid-template-columns: 15rem minmax(0, 1fr);
+		width: 100%;
+	}
+
+	.legal-sidebar {
+		padding: 1.5rem 1rem;
+		border-inline-end: 1px solid var(--lg-hair);
+		background: var(--lg-nav);
+	}
+
+	.legal-sidebar ul {
+		position: sticky;
+		top: 1.5rem;
+		display: grid;
+		gap: 0.25rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.legal-sidebar a {
+		display: block;
+		padding: 0.45rem 0.75rem;
+		border-radius: 0.5rem;
+		color: var(--lg-muted);
+		font-size: 0.9rem;
+		text-decoration: none;
+	}
+
+	.legal-sidebar a:hover {
+		color: var(--lg-text);
+		background: color-mix(in srgb, var(--lg-hair) 45%, transparent);
+	}
+
+	.legal-sidebar a[aria-current='page'] {
+		color: var(--lg-accent);
+		background: color-mix(in srgb, var(--lg-accent-strong) 14%, transparent);
+		font-weight: 600;
+	}
+
+	.legal-main {
+		min-width: 0;
+		padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
+	}
+
+	.legal-article {
+		max-width: 44rem;
+		margin-inline: auto;
+	}
+
+	/* Search dialog */
+	.legal-search {
+		width: min(36rem, calc(100vw - 2rem));
+		max-height: 80vh;
+		margin-block-start: 10vh;
+		padding: 0;
+		border: 1px solid var(--lg-hair);
+		border-radius: 0.9rem;
+		background: var(--lg-bg);
+		color: var(--lg-text);
+		box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 0.35);
+	}
+
+	.legal-search::backdrop {
+		background: rgb(0 0 0 / 0.55);
+	}
+
+	.legal-search__form {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.75rem 1rem;
+		border-bottom: 1px solid var(--lg-hair);
+	}
+
+	.legal-search__form svg {
+		width: 1.1rem;
+		height: 1.1rem;
+		color: var(--lg-muted);
+	}
+
+	.legal-search__form input {
+		flex: 1;
+		min-width: 0;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+		font-size: 1rem;
+	}
+
+	.legal-search__form button {
+		padding: 0.1rem 0.4rem;
+		border: 1px solid var(--lg-hair);
+		border-radius: 0.3rem;
+		background: transparent;
+		color: var(--lg-muted);
+		font: inherit;
+		font-size: 0.7rem;
+		cursor: pointer;
+	}
+
+	.legal-search__results {
+		max-height: 60vh;
+		margin: 0;
+		padding: 0.5rem;
+		overflow-y: auto;
+		list-style: none;
+	}
+
+	.legal-search__results a {
+		display: grid;
+		gap: 0.15rem;
+		padding: 0.6rem 0.75rem;
+		border-radius: 0.5rem;
+		color: var(--lg-text);
+		text-decoration: none;
+	}
+
+	.legal-search__results a:hover,
+	.legal-search__results a:focus-visible {
+		background: color-mix(in srgb, var(--lg-accent-strong) 14%, transparent);
+	}
+
+	.legal-search__results span {
+		color: var(--lg-muted);
+		font-size: 0.8125rem;
+		line-height: 1.5;
+	}
+
+	.legal-search__results mark {
+		background: color-mix(in srgb, var(--lg-accent-strong) 30%, transparent);
+		color: inherit;
+	}
+
+	.legal-search__empty {
+		margin: 0;
+		padding: 1.25rem;
+		color: var(--lg-muted);
+		text-align: center;
+	}
+
+	@media (max-width: 52rem) {
+		.legal-layout {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr;
+		}
+
+		.legal-sidebar {
+			padding: 0.5rem 1rem;
+			border-inline-end: 0;
+			border-bottom: 1px solid var(--lg-hair);
+		}
+
+		.legal-sidebar ul {
+			position: static;
+			display: flex;
+			gap: 0.25rem;
+			overflow-x: auto;
+		}
+
+		.legal-sidebar a {
+			white-space: nowrap;
+		}
+
+		.legal-brand span,
+		.legal-search-btn span,
+		.legal-search-btn kbd {
+			display: none;
+		}
+	}
+
+	.legal-article h1 {
+		margin: 0 0 1rem;
+		font-size: clamp(1.75rem, 4vw, 2.25rem);
+		line-height: 1.25;
+	}
+
+	.legal-article h2 {
+		margin: 2.25rem 0 0.5rem;
+		padding-block-start: 1.5rem;
+		border-top: 1px solid var(--lg-hair);
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.legal-article p,
+	.legal-article li {
+		color: var(--lg-text);
+	}
+
+	.legal-article p {
+		margin: 0.75rem 0;
+	}
+
+	.legal-article ul {
+		margin: 1rem 0;
+		padding: 0;
+		list-style: none;
+		border: 1px solid var(--lg-hair);
+		border-radius: 0.75rem;
+		background: var(--lg-card);
+	}
+
+	.legal-article ul li {
+		padding: 0.75rem 1rem;
+	}
+
+	.legal-article ul li + li {
+		border-top: 1px solid var(--lg-hair);
+	}
+
+	.legal-article ol {
+		padding-inline-start: 1.5rem;
+	}
+
+	.legal-article a {
+		color: var(--lg-accent);
+		text-underline-offset: 0.2em;
+		overflow-wrap: anywhere;
+	}
+
+	.legal-article a:hover {
+		color: var(--lg-accent-strong);
+	}
+
+	.legal-article time {
+		color: var(--lg-muted);
+	}
+
+	.legal-article p:has(> time) {
+		margin-block-start: 2rem;
+		color: var(--lg-muted);
+		font-size: 0.875rem;
+	}
+
+	.legal-footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.5rem 1.5rem;
+		padding: 1.25rem clamp(1rem, 3vw, 2rem);
+		border-top: 1px solid var(--lg-hair);
+		background: var(--lg-nav);
+		color: var(--lg-muted);
+		font-size: 0.8125rem;
+	}
+
+	.legal-footer nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.25rem;
+	}
+
+	.legal-footer p {
+		margin: 0;
+	}
+
+	.legal-footer a {
+		color: var(--lg-muted);
+		text-decoration: none;
+	}
+
+	.legal-footer a:hover {
+		color: var(--lg-text);
+		text-decoration: underline;
+	}
+
+	a:focus-visible {
+		outline: 2px solid var(--lg-accent-strong);
+		outline-offset: 2px;
+		border-radius: 0.25rem;
+	}
+
+	@media print {
+		.legal-header,
+		.legal-sidebar,
+		.legal-footer {
+			display: none;
+		}
+	}
+</style>

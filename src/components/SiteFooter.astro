@@ -15,6 +15,7 @@ import {
 	uiLabels,
 } from '../utils/siteNav';
 import { standaloneHref } from '../utils/standalonePages';
+import { Mail } from '@lucide/astro';
 
 const locale = Astro.locals.starlightRoute.locale ?? 'root';
 const normalizedLocale = locale === 'root' ? undefined : locale;
@@ -37,124 +38,237 @@ const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
 	...group,
 	links: group.links.filter((link) => isNavItemVisible(link, lang)),
 }));
+
+function resolveHref(link: (typeof visibleFooterLinkGroups)[number]['links'][number]) {
+	const legalPrefix = lang === 'zh-TW' ? '/zh-tw' : ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(lang) ? `/${lang}` : '';
+	return legalPrefix &&
+		link.global &&
+		['/contact/', '/privacy-policy/', '/terms/'].includes(link.href)
+		? `${legalPrefix}${link.href}`
+		: link.external || link.global
+			? link.href
+			: link.standalonePage
+				? standaloneHref(link.standalonePage, locale)
+				: localizeHref(link.href);
+}
+
+// Link columns stay in the grid; contact / legal links move to the bottom bar.
+const columnGroups = visibleFooterLinkGroups.filter((group) => group.id !== 'trust');
+const trustLinks = visibleFooterLinkGroups.find((group) => group.id === 'trust')?.links ?? [];
+const contactLink = trustLinks.find((link) => link.href.startsWith('mailto:'));
+const legalLinks = trustLinks.filter((link) => !link.href.startsWith('mailto:'));
+const githubLink = visibleFooterLinkGroups
+	.flatMap((group) => group.links)
+	.find((link) => link.href.includes('github.com'));
+
 ---
 
 <footer class="site-footer print:hidden" aria-label={footerLabel}>
 	<div class="site-footer__inner">
-		<div class="site-footer__grid">
+		<div class="site-footer__top">
 			<div class="site-footer__brand">
 				<a class="site-footer__brand-link" href={localizeHref('/')}>
-					<img src={logo.src} alt="" width="36" height="36" loading="lazy" decoding="async" />
+					<img src={logo.src} alt="" width="40" height="40" loading="lazy" decoding="async" />
 					<span>{pickLabel(footerBrand.name, lang)}</span>
 				</a>
 				<p class="site-footer__tagline">{pickLabel(footerBrand.tagline, lang)}</p>
+				<div class="site-footer__chips">
+					{
+						githubLink && (
+							<a class="site-footer__chip" href={githubLink.href} target="_blank" rel="noopener noreferrer">
+								<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+								<span>{pickLabel(githubLink.label, lang)}</span>
+							</a>
+						)
+					}
+					{
+						contactLink && (
+							<a class="site-footer__chip" href={contactLink.href}>
+								<Mail aria-hidden="true" />
+								<span>{pickLabel(contactLink.label, lang)}</span>
+							</a>
+						)
+					}
+				</div>
 			</div>
 
-			{
-				visibleFooterLinkGroups.map((group) => (
-					<nav class="site-footer__group" aria-labelledby={`footer-${group.id}`}>
-						<p class="site-footer__group-title" id={`footer-${group.id}`}>
-							{pickLabel(group.title, lang)}
-						</p>
-						<ul>
-							{group.links.map((link) => {
-								const href = ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(lang) && link.global && ['/contact/', '/privacy-policy/', '/terms/'].includes(link.href)
-									? `/${lang}${link.href}`
-									: link.external || link.global
-									? link.href
-									: link.standalonePage
-										? standaloneHref(link.standalonePage, locale)
-										: localizeHref(link.href);
-								const current =
-									!link.external && group.id === 'modules' && isModuleActive(link.href)
-										? 'page'
-										: undefined;
-								return (
-									<li>
-										<a
-											href={href}
-											aria-current={current}
-											{...(link.external
-												? { target: '_blank', rel: 'noopener noreferrer' }
-												: {})}
-										>
-											{pickLabel(link.label, lang)}
-										</a>
-									</li>
-								);
-							})}
-						</ul>
-					</nav>
-				))
-			}
+			<div class="site-footer__columns">
+				{
+					columnGroups.map((group) => (
+						<nav class:list={['site-footer__group', `site-footer__group--${group.id}`]} aria-labelledby={`footer-${group.id}`}>
+							<p class="site-footer__group-title" id={`footer-${group.id}`}>
+								{pickLabel(group.title, lang)}
+							</p>
+							<ul>
+								{group.links.map((link) => {
+									const current =
+										!link.external && group.id === 'modules' && isModuleActive(link.href)
+											? 'page'
+											: undefined;
+									return (
+										<li>
+											<a
+												href={resolveHref(link)}
+												aria-current={current}
+												{...(link.external
+													? { target: '_blank', rel: 'noopener noreferrer' }
+													: {})}
+											>
+												{pickLabel(link.label, lang)}
+											</a>
+										</li>
+									);
+								})}
+							</ul>
+						</nav>
+					))
+				}
+			</div>
 		</div>
 
-		<div class="site-footer__legal">
-			<p>
+		<div class="site-footer__bottom">
+			<p class="site-footer__copyright">
 				<span>&copy; {year}</span>
 				{' '}
 				<a href={localizeHref('/')}>{footerLegal.site}</a>
 			</p>
+			<ul class="site-footer__legal">
+				{
+					legalLinks.map((link) => (
+						<li>
+							<a href={resolveHref(link)}>{pickLabel(link.label, lang)}</a>
+						</li>
+					))
+				}
+			</ul>
 		</div>
 	</div>
 </footer>
 
 <style>
 	.site-footer {
+		position: relative;
 		width: 100%;
-		border-top: 1px solid var(--sl-color-gray-5);
 		background-color: var(--sl-color-bg-nav);
+	}
+
+	/* Accent hairline instead of a flat border. */
+	.site-footer::before {
+		content: '';
+		position: absolute;
+		inset: 0 0 auto;
+		height: 1px;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			color-mix(in srgb, var(--sl-color-accent) 70%, transparent) 30%,
+			color-mix(in srgb, var(--sl-color-accent) 70%, transparent) 70%,
+			transparent
+		);
 	}
 
 	.site-footer__inner {
 		width: 100%;
-		padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 3vw, 2.5rem) 1.5rem;
+		max-width: 80rem;
+		margin-inline: auto;
+		padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem) 1.5rem;
 	}
 
-	.site-footer__grid {
+	.site-footer__top {
 		display: grid;
-		grid-template-columns: minmax(14rem, 1.4fr) repeat(4, minmax(8rem, 1fr));
-		gap: clamp(1.25rem, 2.5vw, 2.25rem);
-		margin-block-end: clamp(1.5rem, 3vw, 2.25rem);
+		grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+		gap: clamp(2rem, 5vw, 4.5rem);
+		padding-block-end: clamp(1.75rem, 3vw, 2.5rem);
 	}
 
 	.site-footer__brand-link {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.65rem;
-		margin-block-end: 0.75rem;
+		gap: 0.7rem;
 		color: var(--sl-color-white);
-		font-weight: 600;
+		font-size: var(--sl-text-lg);
+		font-weight: 700;
 		text-decoration: none;
 	}
 
 	.site-footer__brand-link img {
-		border-radius: 0.35rem;
+		border-radius: 0.5rem;
 	}
 
 	.site-footer__tagline {
-		margin: 0;
-		max-width: 20rem;
+		margin: 0.85rem 0 0;
 		color: var(--sl-color-gray-2);
 		font-size: var(--sl-text-sm);
-		line-height: 1.7;
+		line-height: 1.75;
+	}
+
+	.site-footer__chips {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-block-start: 1.25rem;
+	}
+
+	.site-footer__chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		max-width: 100%;
+		padding: 0.4rem 0.75rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-xs);
+		font-weight: 500;
+		line-height: 1.4;
+		text-decoration: none;
+		overflow-wrap: anywhere;
+		transition:
+			color 0.15s ease,
+			border-color 0.15s ease,
+			background-color 0.15s ease;
+	}
+
+	.site-footer__chip :global(svg) {
+		flex: none;
+		width: 0.95rem;
+		height: 0.95rem;
+	}
+
+	.site-footer__chip:hover,
+	.site-footer__chip:focus-visible {
+		border-color: var(--sl-color-accent);
+		background-color: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+		color: var(--sl-color-white);
+	}
+
+	.site-footer__columns {
+		display: grid;
+		grid-template-columns: 2fr repeat(2, minmax(0, 1fr));
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+		align-content: start;
 	}
 
 	.site-footer__group-title {
-		margin: 0 0 0.75rem;
-		color: var(--sl-color-accent-high);
+		margin: 0 0 0.8rem;
+		color: var(--sl-color-white);
 		font-size: var(--sl-text-sm);
 		font-weight: 700;
-		letter-spacing: 0;
-		text-transform: uppercase;
+		letter-spacing: 0.02em;
 	}
 
 	.site-footer__group ul {
 		display: grid;
-		gap: 0.25rem;
+		gap: 0.15rem;
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+
+	/* The module list is long: split it into two columns on wide screens. */
+	.site-footer__group--modules ul {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 1rem;
 	}
 
 	.site-footer__group a {
@@ -165,6 +279,7 @@ const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
 		color: var(--sl-color-gray-2);
 		font-size: var(--sl-text-sm);
 		font-weight: 500;
+		line-height: 1.5;
 		text-decoration: none;
 		transition:
 			color 0.15s ease,
@@ -181,52 +296,72 @@ const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
 		background-color: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
 	}
 
-	.site-footer__legal {
+	.site-footer__bottom {
 		display: flex;
-		justify-content: flex-end;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 0.5rem 1.5rem;
 		padding-block-start: 1.25rem;
 		border-top: 1px solid var(--sl-color-gray-6);
 		color: var(--sl-color-gray-3);
 		font-size: var(--sl-text-xs);
 	}
 
-	.site-footer__legal p {
+	.site-footer__copyright {
 		margin: 0;
 	}
 
-	.site-footer__legal a {
+	.site-footer__legal {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 1.25rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.site-footer__bottom a {
 		color: var(--sl-color-gray-2);
 		text-decoration: none;
 	}
 
-	.site-footer__legal a:hover {
+	.site-footer__bottom a:hover {
 		color: var(--sl-color-white);
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
 	}
 
-	:global(html[data-theme='light']) .site-footer__brand-link {
+	:global(html[data-theme='light']) .site-footer__brand-link,
+	:global(html[data-theme='light']) .site-footer__group-title {
 		color: var(--sl-color-gray-1);
 	}
 
 	:global(html[data-theme='light']) .site-footer__group a:hover,
-	:global(html[data-theme='light']) .site-footer__legal a:hover {
+	:global(html[data-theme='light']) .site-footer__chip:hover,
+	:global(html[data-theme='light']) .site-footer__chip:focus-visible,
+	:global(html[data-theme='light']) .site-footer__bottom a:hover {
 		color: var(--sl-color-gray-1);
 	}
 
-	@media (max-width: 72rem) {
-		.site-footer__grid {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		.site-footer__brand {
-			grid-column: 1 / -1;
+	@media (max-width: 64rem) {
+		.site-footer__top {
+			grid-template-columns: 1fr;
 		}
 	}
 
-	@media (max-width: 44rem) {
-		.site-footer__grid {
-			grid-template-columns: 1fr;
+	@media (max-width: 40rem) {
+		.site-footer__columns {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.site-footer__group--modules {
+			grid-column: 1 / -1;
+		}
+
+		.site-footer__bottom {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 </style>

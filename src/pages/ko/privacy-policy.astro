@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-26';
 ---
-<!doctype html>
-<html lang="ko">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>개인정보 처리방침 | Codex 핸드북</title><meta name="description" content="Codex 핸드북의 사이트 콘텐츠, 기본 접속 데이터, 외부 서비스 이용에 관한 안내입니다." /><link rel="canonical" href="https://codexhandbook.com/ko/privacy-policy/" /></head>
-<body><main><a href="/ko/">Codex 핸드북</a><h1>개인정보 처리방침</h1>
+
+<LegalPage lang="ko" title="개인정보 처리방침 | Codex 핸드북" description="Codex 핸드북의 사이트 콘텐츠, 기본 접속 데이터, 외부 서비스 이용에 관한 안내입니다." canonical="https://codexhandbook.com/ko/privacy-policy/">
+<h1>개인정보 처리방침</h1>
 <p>Codex 핸드북은 공개 콘텐츠 사이트입니다. 페이지에서 독자에게 계정을 만들거나 개인정보를 제출하도록 요구하지 않습니다.</p>
 <h2>접속 데이터</h2><p>방문 수, 페이지 성능, 오류 현황을 파악하기 위해 호스팅 플랫폼, 분석 도구, 브라우저의 기본 로그를 사용할 수 있습니다. 이 데이터는 사이트 품질을 유지하는 데 사용합니다.</p>
 <h2>외부 링크</h2><p>이 사이트에는 OpenAI 문서, GitHub 및 기타 자료로 이동하는 외부 링크가 있습니다. 외부 사이트를 방문할 때는 해당 서비스의 개인정보 처리방침을 확인하세요.</p>
 <h2>문의</h2><p>개인정보 관련 질문은 <a href="/ko/contact/">문의 페이지</a>에 안내된 GitHub 창구로 전달해 주세요.</p>
 <p>원문 최근 업데이트: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>번역 검토: <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/privacy-policy/">중국어 원문</a></p>
-</main></body></html>
+</LegalPage>

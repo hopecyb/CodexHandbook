@@ -5,8 +5,10 @@ import LastUpdated from 'virtual:starlight/components/LastUpdated';
 import Pagination from 'virtual:starlight/components/Pagination';
 import config from 'virtual:starlight/user-config';
 import { Icon } from '@astrojs/starlight/components';
+import AdSlot from './AdSlot.astro';
 
-const { pagination, entry } = Astro.locals.starlightRoute;
+const { pagination, entry, toc } = Astro.locals.starlightRoute;
+const showAd = entry.data.template !== 'splash';
 const vietnamese = Astro.locals.starlightRoute.locale === 'vi';
 const portuguese = Astro.locals.starlightRoute.locale === 'pt';
 const german = Astro.locals.starlightRoute.locale === 'de';
@@ -25,6 +27,7 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 ---
 
 <footer class="sl-flex">
+	{showAd && <AdSlot placement="inline" hideOnWide={Boolean(toc)} />}
 	<div class="meta sl-flex">
 		<EditLink />
 		<LastUpdated />

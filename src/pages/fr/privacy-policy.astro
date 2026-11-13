@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-26';
 ---
-<!doctype html>
-<html lang="fr">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Politique de confidentialité | Manuel Codex</title><meta name="description" content="Politique de confidentialité du Manuel Codex : contenu du site, données de visite de base et services tiers." /><link rel="canonical" href="https://codexhandbook.com/fr/privacy-policy/" /></head>
-<body><main><a href="/fr/">Manuel Codex</a><h1>Politique de confidentialité</h1>
+
+<LegalPage lang="fr" title="Politique de confidentialité | Manuel Codex" description="Politique de confidentialité du Manuel Codex : contenu du site, données de visite de base et services tiers." canonical="https://codexhandbook.com/fr/privacy-policy/">
+<h1>Politique de confidentialité</h1>
 <p>Le Manuel Codex est un site de contenu public. Ses pages ne demandent pas aux lecteurs de créer un compte ni de fournir des données personnelles.</p>
 <h2>Données de visite</h2><p>Le site peut utiliser la plateforme d’hébergement, des outils d’analyse ou les journaux de base du navigateur pour comprendre la fréquentation, les performances des pages et les erreurs. Ces données servent à maintenir la qualité du site.</p>
 <h2>Liens externes</h2><p>Le site contient des liens vers la documentation OpenAI, GitHub et d’autres ressources. Lorsque vous consultez un site externe, référez-vous à la politique de confidentialité du service concerné.</p>
 <h2>Contact</h2><p>Pour toute question concernant la confidentialité, utilisez les canaux GitHub indiqués sur la <a href="/fr/contact/">page de contact</a>.</p>
 <p>Dernière mise à jour de l’original : <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Traduction relue le <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/privacy-policy/">Original chinois</a></p>
-</main></body></html>
+</LegalPage>

@@ -1,15 +1,15 @@
 ---
+import LegalPage from '../../layouts/LegalPage.astro';
 const updatedAt = '2026-07-28';
 const reviewedAt = '2026-10-26';
 ---
-<!doctype html>
-<html lang="pt">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Termos de uso | Manual Codex</title><meta name="description" content="Os termos de uso do Manual Codex explicam a finalidade do conteúdo, os limites de precisão, os links externos e como contribuir." /><link rel="canonical" href="https://codexhandbook.com/pt/terms/" /></head>
-<body><main><a href="/pt/">Manual Codex</a><h1>Termos de uso</h1>
+
+<LegalPage lang="pt" title="Termos de uso | Manual Codex" description="Os termos de uso do Manual Codex explicam a finalidade do conteúdo, os limites de precisão, os links externos e como contribuir." canonical="https://codexhandbook.com/pt/terms/">
+<h1>Termos de uso</h1>
 <p>O Manual Codex oferece referências para estudo e prática. Ele não constitui um compromisso oficial da OpenAI sobre o produto, orientação jurídica, auditoria de segurança ou consultoria profissional.</p>
 <h2>Precisão do conteúdo</h2><p>Procuramos indicar as bases de verificação, o escopo de aplicação e a data de atualização. Interfaces, acessos a funcionalidades, preços e políticas podem mudar. Ao tratar de fatos atuais, confira as fontes oficiais.</p>
 <h2>Fontes externas</h2><p>O site pode incluir links para a OpenAI, o GitHub ou outras fontes de terceiros. Essas fontes são mantidas pelos respectivos sites. Não controlamos sua disponibilidade nem as mudanças de conteúdo.</p>
 <h2>Contribuições</h2><p>Correções pelo GitHub são bem-vindas. Quem contribui deve garantir que o conteúdo tenha fontes claras, não divulgue informações sensíveis e seja adequado para publicação.</p>
 <p>Última atualização do original: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Tradução revisada em <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/terms/">Original em chinês</a></p>
-</main></body></html>
+</LegalPage>

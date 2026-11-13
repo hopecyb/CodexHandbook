@@ -1,13 +1,13 @@
 ---
-const updatedAt = '2026-07-28';
-const reviewedAt = '2026-10-26';
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-11-13';
+const reviewedAt = '2026-11-13';
 ---
-<!doctype html>
-<html lang="vi">
-<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Liên hệ | Sổ tay Codex</title><meta name="description" content="Liên hệ với người duy trì Sổ tay Codex để báo vấn đề nội dung, cập nhật nguồn, cải thiện bản dịch hoặc đề xuất hợp tác." /><link rel="canonical" href="https://codexhandbook.com/vi/contact/" /></head>
-<body><main><a href="/vi/">Sổ tay Codex</a><h1>Liên hệ</h1>
-<p>Để báo vấn đề nội dung, cập nhật nguồn, cải thiện bản dịch hoặc đề xuất hợp tác, hãy tạo issue hoặc pull request trong kho GitHub.</p>
-<ul><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues trên GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Kho mã nguồn</a></li></ul>
+
+<LegalPage lang="vi" title="Liên hệ | Sổ tay Codex" description="Liên hệ với người duy trì Sổ tay Codex để báo vấn đề nội dung, cập nhật nguồn, cải thiện bản dịch hoặc đề xuất hợp tác." canonical="https://codexhandbook.com/vi/contact/">
+<h1>Liên hệ</h1>
+<p>Để báo vấn đề nội dung, cập nhật nguồn, cải thiện bản dịch, trao đổi quảng cáo hoặc gửi đề xuất khác, hãy gửi email hoặc tạo issue hay pull request trên GitHub.</p>
+<ul><li>Email: <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a></li><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues trên GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Kho mã nguồn</a></li></ul>
 <p>Bản gốc cập nhật lần cuối: <time datetime={updatedAt}>{updatedAt}</time></p>
 <p>Bản dịch được rà soát ngày <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/contact/">Bản gốc tiếng Trung</a></p>
-</main></body></html>
+</LegalPage>

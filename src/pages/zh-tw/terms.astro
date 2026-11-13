@@ -1,0 +1,16 @@
+---
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-07-28';
+---
+
+<LegalPage lang="zh-TW" title="使用條款 | Codex 指南手冊" description="Codex 指南手冊的使用條款，說明內容用途、準確性邊界、外部連結和貢獻方式。" canonical="https://codexhandbook.com/zh-tw/terms/">
+<h1>使用條款</h1>
+<p>Codex 指南手冊提供學習與實踐參考，不構成 OpenAI 官方產品承諾、法律意見、安全審計或專業諮詢。</p>
+<h2>內容準確性</h2>
+<p>我們會盡量標註核驗依據、適用範圍和更新時間。產品介面、功能入口、價格與政策可能變化，涉及當前事即時應複核官方資料。</p>
+<h2>外部資料</h2>
+<p>站點可能連結到 OpenAI、GitHub 或其他第三方資料。外部資料由對應站點維護，我們不控制其可用性或內容變化。</p>
+<h2>貢獻</h2>
+<p>歡迎通過 GitHub 提交修訂。貢獻者應確保提交內容有清晰來源、沒有洩露敏感資訊，並適合公開發布。</p>
+<p>最近更新：<time datetime={updatedAt}>{updatedAt}</time></p>
+</LegalPage>
