@@ -54,6 +54,8 @@ for source in sorted((ROOT / 'examples/skills').glob('*')):
             public_file.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(file, public_file)
 
+AUTHOR_ONLY_VALIDATION = {'first-project'}
+
 # Standalone team, beginner and web exercises, with explicit validation boundaries.
 standalone_sources = [source for category in ("team", "beginner", "web")
                       for source in (ROOT / "examples/complete-workflows" / category).glob("*")]
@@ -67,6 +69,9 @@ for source in sorted(standalone_sources):
             if not file.is_file() or '__pycache__' in file.parts or file.suffix not in {'.md', '.py', '.json', '.csv', '.html', '.diff', '.js', '.log', '.txt', '.sh'}:
                 continue
             relative = file.relative_to(source)
+            # Author-only validation material stays in examples/ and is not published.
+            if source.name in AUTHOR_ONLY_VALIDATION and relative.parts[0] == 'validation':
+                continue
             item = ZipInfo(f'{source.name}/{relative.as_posix()}', (2026, 9, 18, 0, 0, 0))
             item.compress_type = ZIP_DEFLATED
             item.external_attr = 0o644 << 16
