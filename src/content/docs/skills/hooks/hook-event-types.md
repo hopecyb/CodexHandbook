@@ -9,7 +9,7 @@ description: 按会话、任务轮次、工具调用、压缩和子 Agent 生命
 
 选择 Hook 的第一问不是“脚本怎么写”，而是“副作用发生前还是发生后处理”。事件放错位置，再完善的脚本也可能只会事后报告。
 
-![Codex Hook 生命周期与关键事件](/diagrams/hook-lifecycle-events-zh-cn.svg)
+![Codex Hook 生命周期与关键事件](/illustrations/flow-hook-lifecycle.webp)
 
 ## 当前事件清单
 

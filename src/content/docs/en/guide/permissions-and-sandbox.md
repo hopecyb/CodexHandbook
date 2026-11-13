@@ -18,7 +18,7 @@ sidebar:
 
 Using Codex safely requires two control layers: **the sandbox determines the maximum technical reach, while the approval policy determines whether Codex asks before crossing the current boundary.**
 
-![Codex sandbox and approval flow: an action meets the sandbox boundary, requests human approval when crossing it, and ultimately leaves verification evidence](/diagrams/sandbox-approval-flow-en.svg)
+![Codex sandbox and approval flow: an action meets the sandbox boundary, requests human approval when crossing it, and ultimately leaves verification evidence](/illustrations/flow-sandbox-approval.webp)
 
 ## Remember this distinction
 

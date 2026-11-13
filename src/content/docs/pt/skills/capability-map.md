@@ -20,7 +20,7 @@ Esta página apresenta primeiro uma visão do sistema: prompts e `AGENTS.md` for
 
 ## Arquitetura do sistema
 
-![Arquitetura de um sistema de trabalho reutilizável com Codex](/diagrams/codex-work-system-architecture-pt.svg)
+![Arquitetura de um sistema de trabalho reutilizável com Codex](/illustrations/arch-work-system.webp)
 
 Ao ler o diagrama, observe três pontos:
 

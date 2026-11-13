@@ -46,7 +46,7 @@ Dies ist keine Prompt-Vorlage, die allein durch das Austauschen von Dateinamen v
 
 **Nicht im Umfang:** Bibliotheken für Geldbeträge, Steuern, Währungsumrechnung, Abhängigkeitsaktualisierungen und Benutzeroberflächen.
 
-![Workflow für einen verifizierten Bugfix](/diagrams/verified-bug-fix-workflow-de.svg)
+![Workflow für einen verifizierten Bugfix](/illustrations/flow-bug-fix.webp)
 
 Die beiden Rückwege im Diagramm sind entscheidend: Schlagen die relevanten Tests fehl, kehrst du zum minimalen Fix zurück. Schlägt die vollständige Regression oder die Diff-Prüfung fehl, gehst du zurück zur Ursachenanalyse. Entferne keine Assertions und vergrößere nicht den Änderungsumfang, nur um möglichst schnell grüne Tests zu erhalten.
 

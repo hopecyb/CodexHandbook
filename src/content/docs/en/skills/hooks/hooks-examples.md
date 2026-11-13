@@ -17,6 +17,8 @@ This chapter removes old illustrative event names and fields. The example follow
 
 Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
+![Illustration: a glowing gate across a tool call's path — a scanner lets safe commands through a green lane and a red barrier stops a dangerous one, with a test panel showing green lights beside it](/illustrations/hooks-guardrail.webp)
+
 ## Goal and boundary
 
 Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.

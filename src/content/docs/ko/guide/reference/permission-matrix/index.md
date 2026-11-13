@@ -17,7 +17,7 @@ reviewed_at: '2026-10-26'
 
 “App/CLI/IDE/Cloud 중 어디에서 확인 창이 뜨는가”를 고정된 표 하나로 추측하지 마세요. 실제 동작은 실행 위치, 적용 중인 설정, 조직의 requirements, 운영체제, 수행하려는 작업이 함께 결정합니다.
 
-![샌드박스 차단, 사람의 승인, 실행 결과 사이의 결정 흐름](/diagrams/sandbox-approval-flow-ko.svg)
+![샌드박스 차단, 사람의 승인, 실행 결과 사이의 결정 흐름](/illustrations/flow-sandbox-approval.webp)
 
 ## 먼저 세 가지 방식을 구분하기
 

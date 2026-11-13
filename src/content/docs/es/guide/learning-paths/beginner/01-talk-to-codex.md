@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Los materiales fijos y la referencia del autor están completos; las operaciones con archivos se ejecutaron en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo o lectores."
-  evidence:
-    - label: "Registro de operaciones con archivos del autor"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/es/guide/learning-paths/beginner/"
   label: "Ruta para principiantes y materiales"

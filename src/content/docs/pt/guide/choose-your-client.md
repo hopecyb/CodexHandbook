@@ -14,7 +14,7 @@ legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud"
 
 Ao escolher sua primeira forma de usar o Codex, não é preciso comparar dezenas de recursos. Comece por uma pergunta: **onde este trabalho acontece principalmente?**
 
-![Escolha do cliente Codex: parta do local de trabalho para escolher App para desktop, CLI, integração com IDE ou Cloud](/diagrams/codex-client-selection-pt.svg)
+![Escolha do cliente Codex: parta do local de trabalho para escolher App para desktop, CLI, integração com IDE ou Cloud](/illustrations/flow-client-selection.webp)
 
 ## Escolha em 30 segundos
 

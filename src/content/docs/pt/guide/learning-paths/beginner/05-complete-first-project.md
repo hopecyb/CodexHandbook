@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Os materiais fixos e a referência do autor foram completados; o script de operações com arquivos em um diretório temporário foi executado, mas ainda não houve testes independentes com modelo ou leitores.
-  evidence:
-  - label: Registro de operações com arquivos do autor
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /pt/guide/learning-paths/beginner/04-review-results/
   label: Revisar resultados
@@ -51,8 +48,6 @@ A entrega inclui o notice.md final, o facts.md original, seus próprios review.m
 ## O que conta como concluído
 
 O aviso tem base factual e não inventa o que ainda é desconhecido; o escopo das alterações está correto; os erros do exemplo defeituoso foram identificados; a recuperação foi de fato executada e registrada; e o repasse permite que outra pessoa encontre as fontes e pendências. Escrever apenas “três tarefas concluídas” não comprova a conclusão.
-
-O [registro de validação das operações com arquivos](/downloads/first-project/validation/record.json) e o [script de reprodução](/downloads/first-project/validation/reproduce.py) do autor comprovam somente o processo de referência de cópia e recuperação em um diretório temporário. O exercício principal não requer Python e esses registros não substituem sua própria execução.
 
 Continue com o [relatório semanal de vendas](/pt/cases/analyze-a-spreadsheet/) ou o [percurso para criadores](/pt/guide/learning-paths/creator/).
 

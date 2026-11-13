@@ -18,7 +18,7 @@ Skills encapsulam métodos estáveis, material de referência, templates e scrip
 
 O valor deles não é apenas dar mais uma capacidade ao Codex: eles definem entradas, saídas, limites de permissão e formas de teste para um fluxo de trabalho.
 
-![De um prompt a um pacote de equipe: prompts e modelos viram Skills, subagentes, MCP e Hooks, e chegam à equipe por Plugins e Automações](/diagrams/codex-capability-ladder-pt.svg)
+![Ilustração: seis degraus luminosos, de uma nota com um prompt até uma pasta Skill, subagentes, uma conexão MCP, um portão de proteção Hook e, por fim, um pacote de capacidades entregue à equipe e executado em agenda](/illustrations/skills-capability-ladder.webp)
 
 ## Ordem recomendada
 

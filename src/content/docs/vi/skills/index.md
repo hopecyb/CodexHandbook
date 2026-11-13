@@ -17,7 +17,7 @@ Skills dùng để đóng gói phương pháp ổn định, tài liệu tham chi
 
 Giá trị của Skills không chỉ là giúp Codex làm thêm một việc: chúng còn xác định rõ đầu vào, đầu ra, giới hạn quyền và cách kiểm thử của một quy trình.
 
-![Từ một prompt đến gói năng lực nhóm: prompt và mẫu trở thành Skill, subagent, MCP và Hook, rồi được phân phối cho nhóm qua Plugin và chạy tự động qua Automation](/diagrams/codex-capability-ladder-vi.svg)
+![Minh họa: sáu bậc thang phát sáng, từ một ghi chú prompt đến thư mục Skill, subagent, kết nối MCP, cổng bảo vệ Hook, rồi gói năng lực được trao cho nhóm và chạy theo lịch](/illustrations/skills-capability-ladder.webp)
 
 ## Thứ tự khuyến nghị
 

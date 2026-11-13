@@ -16,7 +16,7 @@ Este mapa separa los eventos públicos verificables de las recomendaciones de ap
 
 Cada página temática ofrece fuentes primarias, límites de aplicación y una práctica del sitio. Comprobar fuentes no equivale a ejecutar software. Se conservan las URL originales; el año o mes de una URL puede diferir de la fecha corregida del evento. Prevalece el texto de la página.
 
-![Hoja de ruta de ingeniería de aplicaciones de IA: Harness Engineering, Skills, ingeniería del contexto, colaboración multiagente, uso de herramientas, MCP, llamadas a funciones, ingeniería de prompts y RAG en orden cronológico inverso, con las mismas fechas que la tabla siguiente](/diagrams/ai-application-roadmap-es.svg)
+![Hoja de ruta de ingeniería de aplicaciones de IA: Harness Engineering, Skills, ingeniería del contexto, colaboración multiagente, uso de herramientas, MCP, llamadas a funciones, ingeniería de prompts y RAG en orden cronológico inverso, con las mismas fechas que la tabla siguiente](/illustrations/roadmap-ai-application.webp)
 
 ## Eventos verificables
 

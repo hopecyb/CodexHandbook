@@ -14,7 +14,7 @@ description: 从任务、规则、流程、工具、守护、分发、触发和�
 
 ## 系统架构
 
-![Codex 可复用工作系统架构](/diagrams/codex-work-system-architecture-zh-cn.svg)
+![Codex 可复用工作系统架构](/illustrations/arch-work-system.webp)
 
 读图时抓住三点：
 

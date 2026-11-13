@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "The fixed materials and author reference are complete; file operations in a temporary directory were run, but no independent model or reader completion test has been performed."
-  evidence:
-    - label: "Author’s file operation record"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/en/guide/learning-paths/beginner/"
   label: "Beginner path and materials"

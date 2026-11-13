@@ -40,7 +40,7 @@ description: 用可运行的折扣计算 Bug 完成红灯复现、根因定位�
 
 **不在范围：** 金额精度库、税费、货币换算、依赖升级和 UI。
 
-![带验证的 Bug 修复工作流](/diagrams/verified-bug-fix-workflow-zh-cn.svg)
+![带验证的 Bug 修复工作流](/illustrations/flow-bug-fix.webp)
 
 图中最关键的是两条返回路径：相关测试失败时回到最小修复；全量回归或 diff 审查失败时回到根因分析。不要为了尽快变绿而删除断言或扩大改动。
 

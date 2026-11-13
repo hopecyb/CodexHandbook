@@ -15,6 +15,8 @@ description: SKILL.md、references/、templates/、scripts/ 的职责与示例�
 这样更方便阅读、修改和复用，也不容易越写越乱。
 
 
+![插画：一个像分层柜子一样打开的文件夹，主指令卡在上，下面是参考资料、模板和脚本三个抽屉，助手只取用需要的那一层](/illustrations/skills-anatomy.webp)
+
 ## 目录结构
 
 ```text

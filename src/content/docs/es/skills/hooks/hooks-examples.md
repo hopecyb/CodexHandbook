@@ -16,6 +16,8 @@ Este capítulo elimina nombres de eventos y campos ilustrativos antiguos. El eje
 
 Los archivos completos están en [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
+![Ilustración: una puerta luminosa en el camino de una llamada a herramienta: un escáner deja pasar los comandos seguros por un carril verde y una barrera roja detiene uno peligroso, con un panel de pruebas en verde al lado](/illustrations/hooks-guardrail.webp)
+
 ## Objetivo y límite
 
 Antes de ejecutar una llamada a `Bash` o `apply_patch`, rechaza cualquier entrada de comando que contenga una cadena de prueba con la forma de un AWS Access Key ID.

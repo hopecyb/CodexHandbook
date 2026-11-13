@@ -17,7 +17,7 @@ Este mapa separa eventos públicos verificáveis de sugestões de aprendizagem. 
 
 Cada página temática oferece fontes primárias, limites de aplicação e um exercício do site. Conferir fontes não é o mesmo que executar software. As URLs originais são mantidas; o ano ou mês no endereço pode diferir da data corrigida do evento. Siga a data indicada no texto.
 
-![Roteiro de engenharia de aplicações de IA: Harness Engineering, Skills, engenharia de contexto, colaboração multiagente, uso de ferramentas, MCP, chamadas de função, engenharia de prompts e RAG em ordem cronológica inversa, com as mesmas datas da tabela abaixo](/diagrams/ai-application-roadmap-pt.svg)
+![Roteiro de engenharia de aplicações de IA: Harness Engineering, Skills, engenharia de contexto, colaboração multiagente, uso de ferramentas, MCP, chamadas de função, engenharia de prompts e RAG em ordem cronológica inversa, com as mesmas datas da tabela abaixo](/illustrations/roadmap-ai-application.webp)
 
 ## Eventos verificáveis
 

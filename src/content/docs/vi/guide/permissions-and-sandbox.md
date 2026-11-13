@@ -18,7 +18,7 @@ legacyVerification:
 
 Để dùng Codex an toàn, cần xem đồng thời hai lớp kiểm soát: **sandbox quyết định về mặt kỹ thuật có thể chạm tới đâu, còn chính sách phê duyệt quyết định có phải hỏi bạn trước khi vượt ranh giới hiện tại hay không.**
 
-![Luồng sandbox và phê duyệt của Codex: hành động đi qua ranh giới sandbox, yêu cầu con người phê duyệt khi vượt biên và cuối cùng để lại bằng chứng xác minh](/diagrams/sandbox-approval-flow-vi.svg)
+![Luồng sandbox và phê duyệt của Codex: hành động đi qua ranh giới sandbox, yêu cầu con người phê duyệt khi vượt biên và cuối cùng để lại bằng chứng xác minh](/illustrations/flow-sandbox-approval.webp)
 
 ## Trước hết hãy nhớ sự khác biệt này
 

@@ -15,6 +15,8 @@ reviewed_at: '2026-10-26'
 
 On résume souvent une panne MCP par « l'outil ne fonctionne pas ». Il est plus efficace de déterminer d'abord à quel niveau l'échec se produit, puis de ne modifier qu'une seule variable à la fois.
 
+![Illustration : une coupe transparente en quatre couches — configuration, transport, authentification, outils — où un assistant inspecte chaque couche à la lampe pendant qu'un tuyau cassé est réparé](/illustrations/mcp-debugging.webp)
+
 ## Conserver d'abord quatre éléments de preuve
 
 ```bash

@@ -6,7 +6,7 @@ audiences: ["beginner"]
 level: "beginner"
 editorialStatus: "review"
 sidebar: {"order": 50}
-verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。", "evidence": [{"label": "作者文件操作记录", "href": "/downloads/first-project/validation/record.json"}]}
+verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。"}
 prev: {"link": "/guide/learning-paths/beginner/04-review-results/", "label": "审查结果"}
 next: {"link": "/cases/analyze-a-spreadsheet/", "label": "继续做销售周报"}
 ---
@@ -33,8 +33,6 @@ next: {"link": "/cases/analyze-a-spreadsheet/", "label": "继续做销售周报"
 ## 怎样算完成
 
 通知有事实依据，未知没有被编造；改动范围正确；坏样本错误已识别；恢复演练已实际执行并记录；交接能让别人找到依据和未决项。只写“三次任务成功”不足以证明完成。
-
-作者的[文件操作验证记录](/downloads/first-project/validation/record.json)与[复现脚本](/downloads/first-project/validation/reproduce.py)仅证明临时目录中的参考复制和恢复流程。主练习不需要 Python，这些记录也不能替代你的实际操作。
 
 继续选择：[销售周报](/cases/analyze-a-spreadsheet/)或[创作者路径](/guide/learning-paths/creator/)。
 

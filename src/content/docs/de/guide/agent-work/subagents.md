@@ -19,7 +19,7 @@ legacyVerification:
 
 Ein **Subagent** ist eine unabhängige Arbeitseinheit, die der Haupt-Agent für ein eindeutig umrissenes Teilproblem startet. Sie besitzt einen eigenen Kontext und gibt anschließend Ergebnisse und Nachweise an den Hauptthread zurück. Die Verantwortung für übergreifende Entscheidungen und die endgültige Abnahme verbleibt beim Haupt-Agent.
 
-![Orchestrierung von Codex-Subagents: Der Haupt-Agent delegiert abgegrenzte Teilaufgaben, Subagents liefern Nachweise zurück und der Haupt-Agent führt sie zusammen und verifiziert sie](/diagrams/subagent-orchestration-de.svg)
+![Orchestrierung von Codex-Subagents: Der Haupt-Agent delegiert abgegrenzte Teilaufgaben, Subagents liefern Nachweise zurück und der Haupt-Agent führt sie zusammen und verifiziert sie](/illustrations/flow-subagents.webp)
 
 ## Zuerst die drei Ebenen unterscheiden
 

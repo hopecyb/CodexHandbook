@@ -29,7 +29,7 @@ Mesmo quando a intenção é “estender o Codex”, às vezes um único prompt 
 
 ## Diagrama de escolha
 
-![Diagrama para escolher um método de extensão do Codex](/diagrams/extension-selection-map-pt.svg)
+![Diagrama para escolher um método de extensão do Codex](/illustrations/map-extension-selection.webp)
 
 Esta não é uma árvore de decisões com opções mutuamente exclusivas. Um fluxo de trabalho consolidado pode usar `AGENTS.md`, Skill e MCP ao mesmo tempo. O diagrama ajuda a não atribuir a um mecanismo uma responsabilidade para a qual ele não é adequado.
 

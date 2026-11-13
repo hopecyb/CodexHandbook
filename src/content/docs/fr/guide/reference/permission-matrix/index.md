@@ -17,7 +17,7 @@ reviewed_at: '2026-10-26'
 
 N’utilisez pas un tableau fixe des fenêtres d’approbation de l’App, du CLI, de l’IDE et du Cloud pour deviner les permissions. Le comportement réel dépend du lieu d’exécution, de la configuration effective, des exigences de l’organisation, du système d’exploitation et de l’action demandée.
 
-![Enchaînement entre blocage par le bac à sable, approbation humaine et résultat de l’exécution](/diagrams/sandbox-approval-flow-fr.svg)
+![Enchaînement entre blocage par le bac à sable, approbation humaine et résultat de l’exécution](/illustrations/flow-sandbox-approval.webp)
 
 ## Distinguer d’abord trois mécanismes
 

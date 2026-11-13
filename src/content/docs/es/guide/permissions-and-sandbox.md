@@ -18,7 +18,7 @@ reviewed_at: 2026-10-25
 
 Para usar Codex con seguridad, hay que tener en cuenta dos controles: **el sandbox determina hasta dónde puede llegar técnicamente; la política de aprobación determina si debe preguntarte antes de cruzar el límite actual.**
 
-![Flujo del sandbox y las aprobaciones de Codex: una acción pasa por el límite del sandbox, solicita aprobación humana si lo cruza y deja pruebas para verificar el resultado](/diagrams/sandbox-approval-flow-es.svg)
+![Flujo del sandbox y las aprobaciones de Codex: una acción pasa por el límite del sandbox, solicita aprobación humana si lo cruza y deja pruebas para verificar el resultado](/illustrations/flow-sandbox-approval.webp)
 
 ## Recuerda esta distinción
 

@@ -21,6 +21,8 @@ Feste Aktionen → Skript; Urteil und Koordination → Skill.
 
 Muss ein Schritt deterministisch laufen (Tests, Diff erzeugen, Format prüfen), gehört das Skript nach `scripts/`, und `SKILL.md` sagt, wann es aufgerufen wird.
 
+![Illustration: ein Assistent übergibt einen wiederkehrenden Schritt an eine Maschine (ein deterministisches Skript), deren Ausgabe einen Testkontrollpunkt passiert – grüne Lampen bestanden, eine rote wird repariert](/illustrations/skills-scripts.webp)
+
 ## Beispiel
 
 ```text

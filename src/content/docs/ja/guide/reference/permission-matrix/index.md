@@ -17,7 +17,7 @@ legacyVerification:
 
 「App / CLI / IDE / Cloud のどれが確認ダイアログを出すか」という固定表だけで権限を推測しないでください。実際の動作は、実行場所、有効な設定、組織の requirements、OS、タスクが行う操作の組み合わせで決まります。
 
-![サンドボックスによる阻止、人による承認、実行結果までの判断フロー](/diagrams/sandbox-approval-flow-ja.svg)
+![サンドボックスによる阻止、人による承認、実行結果までの判断フロー](/illustrations/flow-sandbox-approval.webp)
 
 ## まず 3 つの仕組みを区別する
 

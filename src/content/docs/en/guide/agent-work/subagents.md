@@ -18,7 +18,7 @@ sidebar:
 
 A **subagent** is an independent work unit started by the main Agent for a defined subproblem. It has its own context and returns conclusions and evidence to the main thread. The main Agent retains global decisions and final acceptance.
 
-![Codex subagent orchestration: the main Agent delegates bounded work, subagents return evidence, and the main Agent consolidates and verifies](/diagrams/subagent-orchestration-en.svg)
+![Codex subagent orchestration: the main Agent delegates bounded work, subagents return evidence, and the main Agent consolidates and verifies](/illustrations/flow-subagents.webp)
 
 ## Three isolation layers
 

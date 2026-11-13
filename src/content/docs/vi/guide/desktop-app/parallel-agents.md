@@ -17,7 +17,7 @@ reviewed_at: "2026-10-26"
 
 Đơn vị cơ bản của công việc song song là một cuộc trò chuyện có ngữ cảnh, tin nhắn, kết quả và mục tiêu riêng. Một việc không phù hợp để chạy song song chỉ vì nó có nhiều bước. **Các tác vụ phải độc lập, có ranh giới tệp rõ ràng và có thể nghiệm thu riêng**.
 
-![Sơ đồ luồng chính giao việc độc lập cho nhiều Agent con rồi tổng hợp bằng chứng và xung đột](/diagrams/subagent-orchestration-vi.svg)
+![Sơ đồ luồng chính giao việc độc lập cho nhiều Agent con rồi tổng hợp bằng chứng và xung đột](/illustrations/flow-subagents.webp)
 
 ## Trước tiên, xem có thể chạy song song không
 

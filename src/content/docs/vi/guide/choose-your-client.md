@@ -14,7 +14,7 @@ reviewed_at: 2026-10-26
 
 Khi chọn điểm vào Codex lần đầu, bạn không cần so sánh hàng chục tính năng. Hãy trả lời một câu hỏi trước: **công việc lần này chủ yếu diễn ra ở đâu?**
 
-![Sơ đồ chọn client Codex: chọn App máy tính, CLI, tích hợp IDE hoặc Cloud theo nơi làm việc](/diagrams/codex-client-selection-vi.svg)
+![Sơ đồ chọn client Codex: chọn App máy tính, CLI, tích hợp IDE hoặc Cloud theo nơi làm việc](/illustrations/flow-client-selection.webp)
 
 ## Chọn trong 30 giây
 

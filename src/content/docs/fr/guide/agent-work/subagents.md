@@ -17,7 +17,7 @@ legacyVerification:
 ---
 Un **sous-agent** est une unité de travail indépendante lancée par l'Agent principal pour traiter un sous-problème défini. Il dispose de son propre contexte et renvoie ses conclusions et ses preuves au fil principal. Les décisions globales et l'acceptation finale restent du ressort de l'Agent principal.
 
-![Orchestration des sous-agents Codex : l'Agent principal délègue un travail délimité, les sous-agents renvoient des preuves, puis l'Agent principal les réunit et vérifie](/diagrams/subagent-orchestration-fr.svg)
+![Orchestration des sous-agents Codex : l'Agent principal délègue un travail délimité, les sous-agents renvoient des preuves, puis l'Agent principal les réunit et vérifie](/illustrations/flow-subagents.webp)
 
 ## Trois niveaux d'isolation
 

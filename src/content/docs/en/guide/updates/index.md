@@ -49,7 +49,7 @@ The home page now groups tasks, role-based paths, troubleshooting, and reusable 
 
 ## 2026-09-18: Fixed beginner materials and recovery exercise
 
-The [five-step beginner path](/en/guide/learning-paths/beginner/) uses one set of synthetic event materials, a reference announcement, four error samples, and review and handoff templates. The exercise progresses from read-only work and a single-file edit to restoring a real copy. The [author's script record](/downloads/first-project/validation/record.json) proves only the file-operation sequence; there is no independent model evaluation or evidence that readers completed it successfully.
+The [five-step beginner path](/en/guide/learning-paths/beginner/) uses one set of synthetic event materials, a reference announcement, four error samples, and review and handoff templates. The exercise progresses from read-only work and a single-file edit to restoring a real copy. The author's script record proves only the file-operation sequence; there is no independent model evaluation or evidence that readers completed it successfully.
 
 ## 2026-09-18: Roadmap dates and practice entry points
 

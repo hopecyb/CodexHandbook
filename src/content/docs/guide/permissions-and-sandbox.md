@@ -12,7 +12,7 @@ sidebar:
 
 安全使用 Codex，需要同时看两层控制：**沙箱决定技术上能碰到哪里，审批策略决定越过当前边界前是否要问你。**
 
-![Codex 沙箱与审批流程：动作先经过沙箱边界，越界时请求人工审批，最终留下验证证据](/diagrams/sandbox-approval-flow-zh-cn.svg)
+![Codex 沙箱与审批流程：动作先经过沙箱边界，越界时请求人工审批，最终留下验证证据](/illustrations/flow-sandbox-approval.webp)
 
 ## 先记住这个区别
 

@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Lỗi MCP thường bị gộp thành một câu: “không dùng được công cụ”. Cách nhanh hơn là xác định lỗi nằm ở lớp nào trước, sau đó mỗi lần chỉ thay đổi một yếu tố.
 
+![Minh họa: mặt cắt trong suốt bốn lớp — cấu hình, truyền tải, xác thực, công cụ — trợ lý soi từng lớp bằng đèn pin trong khi một đoạn ống gãy đang được sửa](/illustrations/mcp-debugging.webp)
+
 ## Lưu bốn bằng chứng trước
 
 ```bash

@@ -15,14 +15,12 @@ verification:
   summary: "Format- und Wiederherstellungsgrenzen wurden ergänzt; Installation, Animationswiedergabe und Deinstallation wurden hier aber noch nicht mit einem konkreten Client und Pet-Paket getestet. Verzeichnisse und Menüs sind anhand der Zielversion zu prüfen."
 ---
 
-import PetScienceFigure from '/src/components/PetScienceFigure.astro';
-
 Diese Site hat die Kompatibilität eines bestimmten Clients und Pet-Pakets noch nicht getestet. Notiere zuerst Versionen und Herkunft und prüfe die tatsächlichen Ergebnisse mit dem [Kompatibilitäts- und Wiederherstellungsprotokoll](/de/guide/reference/resource-compatibility/). Die Abbildung erklärt nur den Aufbau; sie ist keine Formatgarantie für jede Version.
 
 
 Ein Codex Pet zu erstellen bedeutet nicht nur, ein schönes Bild zu erzeugen. Ziel ist ein Paket, das Codex erkennen, laden, animieren und zwischen Zuständen umschalten kann. Denke daran als Kombination aus Metadaten, Animationsatlas sowie Quellen- und Lizenzhinweisen.
 
-<PetScienceFigure variant="spritesheet" locale="de" />
+![Illustration: der Weg zum eigenen Pet – von der Handskizze über Rasterausrichtung und Spritesheet bis zum fertigen Pet-Ordner](/illustrations/pets-create.webp)
 
 Die übliche Minimalstruktur ist:
 
@@ -33,6 +31,8 @@ Die übliche Minimalstruktur ist:
 ```
 
 ## Was ein Spritesheet ist
+
+![Illustration: ein Spritesheet mit einer Aktion pro Zeile, ein Einzelbild wird als Filmstreifen ausgeschnitten und auf dem Bildschirm abgespielt](/illustrations/pets-spritesheet.webp)
 
 Ein Spritesheet kombiniert viele Animationsframes in einem großen Bild. Der Client muss nicht dutzende kleine Dateien laden, sondern schneidet Frames anhand von Zeile und Spalte aus dem Bild und spielt sie nacheinander ab.
 

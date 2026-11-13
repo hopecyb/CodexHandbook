@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Ya están completos los materiales fijos y el resultado de referencia del autor. Se ejecutó el script de operaciones con archivos en un directorio temporal, pero aún no se ha realizado una prueba independiente con un modelo ni con lectores."
-  evidence:
-    - label: "Registro de operaciones con archivos del autor"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/es/guide/learning-paths/beginner/01-talk-to-codex/"
   label: "Hablar con Codex"

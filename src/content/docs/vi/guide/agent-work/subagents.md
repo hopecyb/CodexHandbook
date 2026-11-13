@@ -14,7 +14,7 @@ sidebar:
 
 **Agent con (Subagent)** là đơn vị làm việc độc lập do Agent chính khởi chạy để xử lý một vấn đề con cụ thể. Mỗi Agent con có ngữ cảnh riêng và gửi lại kết luận cùng bằng chứng cho luồng chính khi hoàn thành. Agent chính vẫn chịu trách nhiệm về các quyết định tổng thể và nghiệm thu cuối cùng.
 
-![Kiến trúc điều phối Agent con trong Codex: Agent chính phân công tác vụ con có ranh giới rõ ràng, Agent con trả về bằng chứng, Agent chính tổng hợp và kiểm tra](/diagrams/subagent-orchestration-vi.svg)
+![Kiến trúc điều phối Agent con trong Codex: Agent chính phân công tác vụ con có ranh giới rõ ràng, Agent con trả về bằng chứng, Agent chính tổng hợp và kiểm tra](/illustrations/flow-subagents.webp)
 
 ## Trước hết, hiểu ba lớp quan hệ
 

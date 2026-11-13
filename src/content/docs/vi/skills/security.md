@@ -20,6 +20,8 @@ Nó ảnh hưởng cách Codex làm việc, đôi khi còn kèm script hoặc t�
 
 Vì vậy khi nguồn không đáng tin, nội dung chưa review, phiên bản lệch, rủi ro của nó không thấp hơn MCP bao nhiêu. Trang này nói nhóm **chọn, cài, nâng cấp và kiểm toán** Skill thế nào.
 
+![Minh họa: gói skill đến trên băng chuyền và được kiểm tra trước khi cài — kính lúp xem nguồn, khiên xác nhận, cổng quyền bị khóa, và một phiên bản cũ được giữ để khôi phục](/illustrations/skills-security.webp)
+
 ## Nội dung
 
 - Skill nào không nên cài

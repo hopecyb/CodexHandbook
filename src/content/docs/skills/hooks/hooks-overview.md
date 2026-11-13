@@ -9,7 +9,7 @@ description: 理解 Hook 的配置发现、信任审查、处理器与安全边�
 
 Hooks 让你在 Codex 的 Agent 循环中运行命令脚本或已连接 MCP 服务器的工具。典型用途包括提示词密钥扫描、工具调用策略、审计记录、会话摘要和停止前验证。
 
-![Codex Hook 生命周期：会话、任务轮次、工具调用、压缩与子 Agent 事件](/diagrams/hook-lifecycle-events-zh-cn.svg)
+![Codex Hook 生命周期：会话、任务轮次、工具调用、压缩与子 Agent 事件](/illustrations/flow-hook-lifecycle.webp)
 
 图里最重要的区别是：`PreToolUse` 能在支持的本地工具执行前拒绝或改写输入；`PostToolUse` 发生在工具完成后，不能撤销已经产生的副作用。
 

@@ -17,7 +17,7 @@ legacyVerification:
 ---
 Un **subagent** es una unidad de trabajo independiente que el Agent principal inicia para resolver un subproblema definido. Tiene su propio contexto y devuelve conclusiones y evidencias al hilo principal. El Agent principal conserva las decisiones globales y la aceptación final.
 
-![Orquestación de subagents en Codex: el Agent principal delega tareas delimitadas, los subagents devuelven evidencias y el Agent principal consolida y verifica](/diagrams/subagent-orchestration-es.svg)
+![Orquestación de subagents en Codex: el Agent principal delega tareas delimitadas, los subagents devuelven evidencias y el Agent principal consolida y verifica](/illustrations/flow-subagents.webp)
 
 ## Tres capas de aislamiento
 

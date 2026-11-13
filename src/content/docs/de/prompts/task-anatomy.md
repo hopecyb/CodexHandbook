@@ -48,7 +48,7 @@ Berechtigungsgrenzen: … [Netzwerk, Abhängigkeiten installieren, Konfiguration
 Bei fehlenden Informationen: Zuerst fragen, nicht raten.
 ```
 
-![Geschlossener Zyklus von der Aufgabenbeschreibung zum verifizierbaren Ergebnis](/diagrams/task-execution-loop-de.svg)
+![Geschlossener Zyklus von der Aufgabenbeschreibung zum verifizierbaren Ergebnis](/illustrations/flow-task-loop.webp)
 
 Die sechs Elemente auf der linken Seite des Diagramms sollen den Prompt nicht verlängern, sondern entscheidende Lücken schließen. Nach Beginn der Ausführung bestimmen Verifikationsnachweise den nächsten Schritt: Nur ein erfolgreiches Ergebnis wird ausgeliefert. Bei einem Fehlschlag kehrt die Aufgabe mit den Fehlerinformationen zur Beschreibung oder zum Plan zurück, statt blind weiter verändert zu werden.
 

@@ -18,6 +18,8 @@ Vous savez déjà donner des tâches, mais pas encore créer un Skill ? Cette pa
 
 15–30 minutes pour un Skill **réutilisable dans le dépôt** valent mieux qu'une longue théorie. Bon point de départ : un petit Skill aux limites nettes.
 
+![Illustration : un petit assistant assemble son premier Skill sur un établi — carte d'instructions, loupe sur un diff, liste cochée et drapeau sur le dossier terminé](/illustrations/skills-first-skill.webp)
+
 ## Public
 
 Vous avez fait [Première tâche](/fr/cases/first-task/) et acceptez d'essayer dans un dépôt de test.

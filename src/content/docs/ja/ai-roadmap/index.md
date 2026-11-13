@@ -17,7 +17,7 @@ reviewed_at: "2026-10-26"
 
 各テーマのページには一次資料、適用範囲の限界、サイト内の演習があります。出典の確認はソフトウェアの実行テストではありません。元の URL は維持しているため、URL 内の年月と修正後の出来事の日付が異なる場合があります。本文の日付を基準にしてください。
 
-![AI アプリケーション工学ロードマップ：Harness Engineering、Skills、コンテキスト工学、マルチエージェント協調、ツール利用、MCP、関数呼び出し、プロンプト工学、RAG を新しい順に並べ、日付は下の表と一致](/diagrams/ai-application-roadmap-ja.svg)
+![AI アプリケーション工学ロードマップ：Harness Engineering、Skills、コンテキスト工学、マルチエージェント協調、ツール利用、MCP、関数呼び出し、プロンプト工学、RAG を新しい順に並べ、日付は下の表と一致](/illustrations/roadmap-ai-application.webp)
 
 ## 確認可能な出来事
 

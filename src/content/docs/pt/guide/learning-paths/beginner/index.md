@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Seis operações com arquivos em um diretório temporário foram validadas; a saída do modelo, o tempo dos leitores e a conclusão independente ainda não foram testados.
-  evidence:
-  - label: Registro de validação das operações com arquivos
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: Três arquivos iniciais, referência do autor, exemplo com erros, dois modelos para preencher e registro de validação da restauração
+  purpose: Três arquivos iniciais, referência do autor, exemplo com erros e dois modelos para preencher
   license: CC0-1.0
   version: 1.0.0
 locale: pt

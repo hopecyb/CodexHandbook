@@ -16,7 +16,7 @@ Cette carte sépare les événements publics vérifiables des conseils d’appre
 
 Chaque page thématique présente des sources primaires, des limites d’application et un exercice sur ce site. Vérifier des sources ne revient pas à exécuter un logiciel. Les URL d’origine sont conservées ; leur année ou leur mois peut différer de la date corrigée de l’événement. Référez-vous au texte de la page.
 
-![Feuille de route de l’ingénierie des applications IA : Harness Engineering, Skills, ingénierie du contexte, collaboration multi-agents, utilisation d’outils, MCP, appel de fonctions, ingénierie des prompts et RAG, du plus récent au plus ancien, avec les mêmes dates que le tableau ci-dessous](/diagrams/ai-application-roadmap-fr.svg)
+![Feuille de route de l’ingénierie des applications IA : Harness Engineering, Skills, ingénierie du contexte, collaboration multi-agents, utilisation d’outils, MCP, appel de fonctions, ingénierie des prompts et RAG, du plus récent au plus ancien, avec les mêmes dates que le tableau ci-dessous](/illustrations/roadmap-ai-application.webp)
 
 ## Événements vérifiables
 

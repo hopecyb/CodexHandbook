@@ -15,7 +15,7 @@ reviewed_at: '2026-10-26'
 
 Hook을 고를 때 첫 질문은 “스크립트를 어떻게 작성할까?”가 아니라 “부작용이 생기기 전과 후 중 언제 처리해야 할까?”입니다. 이벤트를 잘못된 위치에 두면 스크립트가 아무리 좋아도 일이 끝난 뒤 보고만 할 수 있습니다.
 
-![Codex Hook 수명 주기와 주요 이벤트](/diagrams/hook-lifecycle-events-ko.svg)
+![Codex Hook 수명 주기와 주요 이벤트](/illustrations/flow-hook-lifecycle.webp)
 
 ## 현재 이벤트 목록
 

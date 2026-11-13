@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Os materiais fixos e a referência do autor estão completos; as operações com arquivos foram executadas em uma pasta temporária, mas ainda não houve teste independente com um modelo ou leitores.
-  evidence:
-  - label: Registro de operações com arquivos do autor
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /pt/guide/learning-paths/beginner/
   label: Trilha para iniciantes e materiais

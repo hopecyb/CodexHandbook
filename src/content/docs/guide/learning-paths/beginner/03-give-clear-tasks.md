@@ -6,7 +6,7 @@ audiences: ["beginner"]
 level: "beginner"
 editorialStatus: "review"
 sidebar: {"order": 30}
-verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。", "evidence": [{"label": "作者文件操作记录", "href": "/downloads/first-project/validation/record.json"}]}
+verification: {"kind": "editorial", "checkedAt": "2026-09-18", "summary": "固定材料与作者参考已补齐；临时目录文件操作脚本已实跑，尚未进行独立模型或读者通关测试。"}
 prev: {"link": "/guide/learning-paths/beginner/02-work-with-files/", "label": "处理文件"}
 next: {"link": "/guide/learning-paths/beginner/04-review-results/", "label": "审查结果"}
 ---

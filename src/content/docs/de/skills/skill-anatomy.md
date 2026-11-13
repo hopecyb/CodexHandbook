@@ -21,6 +21,8 @@ Diese Seite zeigt, wie du Hauptablauf, lange Erklärungen, Vorlagen und Skripte 
 Das erleichtert Lesen, Ändern und Wiederverwenden und verhindert Chaos.
 
 
+![Illustration: ein wie ein Schichtenschrank geöffneter Ordner mit der Hauptanweisungskarte oben und Schubladen für Referenzen, Vorlagen und Skripte; der Assistent lädt nur die benötigte Ebene](/illustrations/skills-anatomy.webp)
+
 ## Verzeichnisstruktur
 
 ```text

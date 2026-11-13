@@ -21,6 +21,8 @@ Esta página explica como separar «fluxo principal, documentação longa, templ
 Fica mais fácil de ler, alterar e reutilizar — e menos propenso a virar bagunça.
 
 
+![Ilustração: uma pasta aberta como um arquivo em camadas, com o cartão de instruções no topo e gavetas de referências, modelos e scripts; o assistente carrega só a camada necessária](/illustrations/skills-anatomy.webp)
+
 ## Estrutura de diretórios
 
 ```text

@@ -17,6 +17,8 @@ reviewed_at: '2026-10-26'
 
 전체 파일은 [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard)에 있습니다.
 
+![일러스트: 도구 호출 경로에 놓인 빛나는 게이트. 스캐너가 안전한 명령은 초록 차선으로 통과시키고 위험한 명령은 빨간 장벽으로 막으며, 옆의 테스트 패널에는 초록 불이 켜져 있다](/illustrations/hooks-guardrail.webp)
+
 ## 목표와 한계
 
 목표는 `Bash` 또는 `apply_patch`의 명령 입력에 AWS Access Key ID처럼 보이는 테스트 문자열이 있으면 도구 실행 전에 거부하는 것입니다.

@@ -18,6 +18,8 @@ If you can assign tasks but have not built a Skill yet, this page covers the bas
 
 Spend 15–30 minutes on a **repo-reusable** Skill—often more direct than reading theory first. A small, well-bounded Skill is a good start.
 
+![Illustration: a small assistant assembling its first Skill on a workbench — filing an instruction card, checking a diff with a magnifier, ticking a checklist and planting a flag on the finished folder](/illustrations/skills-first-skill.webp)
+
 ## Who this is for
 
 You can complete [your first task](/en/cases/first-task/) and are willing to experiment in a test repo.

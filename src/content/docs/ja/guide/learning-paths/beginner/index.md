@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: 一時ディレクトリでの 6 項目のファイル操作検証に合格した。モデルの出力、読者の所要時間、独力での完了はまだ検証していない。
-  evidence:
-  - label: ファイル操作の検証記録
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: 3 つの開始ファイル、筆者の参考資料、誤りのある例、記入用テンプレート 2 点、復元検証記録
+  purpose: 3 つの開始ファイル、筆者の参考資料、誤りのある例、記入用テンプレート 2 点
   license: CC0-1.0
   version: 1.0.0
 locale: ja

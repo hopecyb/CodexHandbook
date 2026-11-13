@@ -46,7 +46,7 @@ translated_at: 2026-09-20
 
 **Ngoài phạm vi:** Thư viện xử lý độ chính xác tiền tệ, thuế, đổi tiền, nâng cấp phụ thuộc và giao diện người dùng.
 
-![Quy trình sửa lỗi có kiểm chứng](/diagrams/verified-bug-fix-workflow-vi.svg)
+![Quy trình sửa lỗi có kiểm chứng](/illustrations/flow-bug-fix.webp)
 
 Hai đường quay lại trong sơ đồ là quan trọng nhất: nếu phép thử liên quan vẫn thất bại, quay lại bản sửa tối thiểu; nếu kiểm thử hồi quy toàn bộ hoặc bước xem xét diff thất bại, quay lại phân tích nguyên nhân gốc. Đừng xóa các khẳng định kiểm thử hoặc mở rộng phạm vi sửa đổi chỉ để sớm có kết quả xanh.
 

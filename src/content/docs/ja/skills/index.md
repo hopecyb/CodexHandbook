@@ -18,7 +18,7 @@ Skill は、安定した手法、参考資料、テンプレート、スクリ�
 
 価値は「Codexにできることを一つ増やす」だけではありません。一連の作業に明確な入力、出力、権限の境界、テスト方法を与えられます。
 
-![一度きりのプロンプトからチーム能力パックへ：プロンプトとテンプレートが Skill・サブエージェント・MCP・Hook になり、Plugin と Automation でチームに展開される](/diagrams/codex-capability-ladder-ja.svg)
+![イラスト：6 段の光る階段。1 つのプロンプトのメモから、Skill フォルダー、サブエージェント、MCP 接続、Hook のガードゲートを経て、チームに配布され定期実行される能力パックへ](/illustrations/skills-capability-ladder.webp)
 
 ## 推奨順序
 

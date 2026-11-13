@@ -18,7 +18,7 @@ Skills package stable methods, reference material, templates, and scripts into r
 
 Their value goes beyond giving Codex another capability: it gives a workflow clear inputs, outputs, permission boundaries, and ways to test it.
 
-![From one prompt to a team capability pack: prompts and templates become Skills, subagents, MCP, and Hooks, then ship to the team through Plugins and Automations](/diagrams/codex-capability-ladder-en.svg)
+![Illustration: six glowing steps from a single prompt note to a Skill folder, subagents, an MCP connection, a Hook guardrail gate, and finally a capability pack handed to a team and run on a schedule](/illustrations/skills-capability-ladder.webp)
 
 ## Recommended order
 

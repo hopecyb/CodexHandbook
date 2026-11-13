@@ -12,9 +12,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Đã bổ sung đủ tài liệu cố định và kết quả tham khảo của tác giả. Script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa có bài kiểm tra hoàn thành độc lập với mô hình hoặc người học."
-  evidence:
-    - label: "Bản ghi thao tác tệp của tác giả"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/vi/guide/learning-paths/beginner/01-talk-to-codex/"
   label: "Trò chuyện với Codex"

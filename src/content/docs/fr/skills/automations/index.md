@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Une Scheduled task (tâche planifiée) permet à ChatGPT de répéter un travail en arrière-plan selon un calendrier. Elle convient aux rapports périodiques, aux suivis continus et à l’entretien récurrent. Ce n’est pas un système générique de webhooks, d’événements de dépôt ou d’automatisation CI.
 
+![Illustration : un convoyeur en boucle sous une grande horloge et un calendrier — une tâche validée s'exécute à l'heure et produit un rapport, qu'un relecteur humain approuve et peut mettre en pause à tout moment](/illustrations/automations-schedule.webp)
+
 ## Vérifier d’abord si ce mécanisme convient
 
 | Adapté | Peu adapté |

@@ -21,6 +21,8 @@ This page explains how to separate main flow, long docs, templates, and scripts 
 That makes reading, editing, and reuse easier and avoids a mess as you grow.
 
 
+![Illustration: a folder opened like a layered cabinet, a main instruction card on top and drawers for references, templates and scripts below, with the assistant loading only the layer it needs](/illustrations/skills-anatomy.webp)
+
 ## Directory layout
 
 ```text

@@ -17,7 +17,7 @@ reviewed_at: '2026-10-26'
 
 A unidade básica do trabalho em paralelo é uma conversa com contexto, mensagens, resultados e objetivo próprios. Uma tarefa não é adequada ao paralelismo apenas por ter muitas etapas. As tarefas precisam ser **independentes entre si, ter limites claros de arquivos e poder ser avaliadas separadamente**.
 
-![Diagrama em que a conversa principal distribui tarefas independentes entre subagentes e reúne evidências e conflitos](/diagrams/subagent-orchestration-pt.svg)
+![Diagrama em que a conversa principal distribui tarefas independentes entre subagentes e reúne evidências e conflitos](/illustrations/flow-subagents.webp)
 
 ## Primeiro, avalie se é possível trabalhar em paralelo
 

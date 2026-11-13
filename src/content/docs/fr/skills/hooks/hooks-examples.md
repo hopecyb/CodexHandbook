@@ -16,6 +16,8 @@ Ce chapitre ne contient plus les anciens noms d’événements et champs de conf
 
 Les fichiers complets se trouvent dans [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
+![Illustration : une barrière lumineuse sur le chemin d'un appel d'outil — un scanner laisse passer les commandes sûres par la voie verte et une barrière rouge arrête une commande dangereuse, avec un panneau de tests aux voyants verts](/illustrations/hooks-guardrail.webp)
+
 ## Objectif et limites
 
 Objectif : si l’entrée d’une commande `Bash` ou `apply_patch` contient une chaîne de test ressemblant à un AWS Access Key ID, refuser l’appel avant l’exécution de l’outil.

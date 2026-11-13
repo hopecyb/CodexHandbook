@@ -12,9 +12,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Bộ tài liệu cố định và phần tham khảo của tác giả đã đầy đủ; thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa có thử nghiệm độc lập với mô hình hoặc người học hoàn thành bài."
-  evidence:
-    - label: "Bản ghi thao tác tệp của tác giả"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/vi/guide/learning-paths/beginner/"
   label: "Lộ trình cho người mới và tài liệu"

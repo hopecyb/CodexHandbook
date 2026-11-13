@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Die erste Frage bei der Hook-Auswahl lautet nicht „Wie schreibe ich das Skript?“, sondern „Muss die Nebenwirkung vor oder nach ihrem Auftreten behandelt werden?“ Ein falsch platziertes Ereignis kann selbst mit einem guten Skript nur noch nachträglich Bericht erstatten.
 
-![Lebenszyklus und zentrale Ereignisse eines Codex-Hooks](/diagrams/hook-lifecycle-events-de.svg)
+![Lebenszyklus und zentrale Ereignisse eines Codex-Hooks](/illustrations/flow-hook-lifecycle.webp)
 
 ## Aktuelle Ereignisliste
 

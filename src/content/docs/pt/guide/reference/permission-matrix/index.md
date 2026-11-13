@@ -17,7 +17,7 @@ sidebar:
 
 Não tente prever as permissões com uma tabela fixa de «a App, a CLI, o IDE ou o Cloud vão mostrar um pedido de aprovação?». O comportamento real depende do local de execução, da configuração efetiva, dos requisitos da organização, do sistema operacional e da ação pedida.
 
-![Fluxo de decisão entre bloqueio pela sandbox, aprovação humana e resultado da execução](/diagrams/sandbox-approval-flow-pt.svg)
+![Fluxo de decisão entre bloqueio pela sandbox, aprovação humana e resultado da execução](/illustrations/flow-sandbox-approval.webp)
 
 ## Distinguir primeiro três mecanismos
 

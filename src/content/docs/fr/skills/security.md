@@ -20,6 +20,8 @@ Il influence comment Codex agit, parfois avec scripts ou ressources.
 
 Source douteuse, contenu non revu, dérive de version : risque comparable à MCP. Cette page couvre **choix, installation, mise à niveau et audit** en équipe.
 
+![Illustration : un paquet de skill arrive sur un tapis et est inspecté avant l'installation — loupe sur la source, bouclier de validation, porte de permissions verrouillée et ancienne version gardée pour le retour arrière](/illustrations/skills-security.webp)
+
 ## Contenu
 
 - quels Skills ne pas installer

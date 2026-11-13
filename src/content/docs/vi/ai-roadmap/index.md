@@ -17,7 +17,7 @@ Bản đồ này tách các sự kiện công khai có thể kiểm chứng kh�
 
 Mỗi trang chủ đề có nguồn sơ cấp, giới hạn áp dụng và bài tập trên trang. Đối chiếu nguồn không đồng nghĩa với chạy thử phần mềm. URL cũ được giữ lại, nên năm tháng trong URL có thể khác ngày sự kiện đã hiệu chỉnh. Hãy lấy nội dung bài làm chuẩn.
 
-![Lộ trình kỹ thuật ứng dụng AI: Harness Engineering, Skills, kỹ thuật ngữ cảnh, phối hợp đa tác nhân, sử dụng công cụ, MCP, gọi hàm, kỹ thuật prompt và RAG theo thứ tự thời gian ngược, cùng ngày với bảng bên dưới](/diagrams/ai-application-roadmap-vi.svg)
+![Lộ trình kỹ thuật ứng dụng AI: Harness Engineering, Skills, kỹ thuật ngữ cảnh, phối hợp đa tác nhân, sử dụng công cụ, MCP, gọi hàm, kỹ thuật prompt và RAG theo thứ tự thời gian ngược, cùng ngày với bảng bên dưới](/illustrations/roadmap-ai-application.webp)
 
 ## Sự kiện có thể kiểm chứng
 

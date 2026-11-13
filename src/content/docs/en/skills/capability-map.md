@@ -20,7 +20,7 @@ Prompts and `AGENTS.md` provide tasks and rules; Skills provide reusable process
 
 ## System architecture
 
-![Reusable Codex work-system architecture](/diagrams/codex-work-system-architecture-en.svg)
+![Reusable Codex work-system architecture](/illustrations/arch-work-system.webp)
 
 Read the diagram around three ideas:
 

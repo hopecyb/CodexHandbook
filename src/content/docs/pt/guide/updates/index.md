@@ -47,7 +47,7 @@ A página inicial organiza tarefas, caminhos por função, busca de problemas e 
 
 ## 2026-09-18: materiais fixos para iniciantes e exercício de recuperação
 
-O [caminho de cinco passos para iniciantes](/pt/guide/learning-paths/beginner/) usa um único conjunto de materiais sintéticos de evento, comunicado de referência, quatro exemplos de erro e modelos de revisão e passagem de trabalho. O exercício vai de leitura e edição de um único arquivo à restauração real de uma cópia. O [registro do script do autor](/downloads/first-project/validation/record.json) demonstra apenas as operações de arquivo; não há avaliação independente de modelo nem prova de conclusão por leitores.
+O [caminho de cinco passos para iniciantes](/pt/guide/learning-paths/beginner/) usa um único conjunto de materiais sintéticos de evento, comunicado de referência, quatro exemplos de erro e modelos de revisão e passagem de trabalho. O exercício vai de leitura e edição de um único arquivo à restauração real de uma cópia. O registro do script do autor demonstra apenas as operações de arquivo; não há avaliação independente de modelo nem prova de conclusão por leitores.
 
 ## 2026-09-18: datas do roteiro e entradas práticas
 

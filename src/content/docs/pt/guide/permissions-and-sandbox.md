@@ -18,7 +18,7 @@ reviewed_at: '2026-10-26'
 
 Para usar o Codex em segurança, considere duas camadas de controlo ao mesmo tempo: **a sandbox determina até onde uma ação pode chegar tecnicamente; a política de aprovação determina se é preciso pedir-lhe autorização antes de ultrapassar o limite atual.**
 
-![Fluxo da sandbox e da aprovação no Codex: a ação encontra o limite da sandbox, pede aprovação humana ao ultrapassá-lo e deixa provas para verificação](/diagrams/sandbox-approval-flow-pt.svg)
+![Fluxo da sandbox e da aprovação no Codex: a ação encontra o limite da sandbox, pede aprovação humana ao ultrapassá-lo e deixa provas para verificação](/illustrations/flow-sandbox-approval.webp)
 
 ## Comece por esta distinção
 

@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Les documents fixes et la référence de l’auteur sont complets ; le script d’opérations sur fichiers dans un répertoire temporaire a été exécuté, mais aucun test autonome avec un modèle ou des lecteurs n’a encore été effectué.
-  evidence:
-  - label: Compte rendu des opérations sur fichiers de l’auteur
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /fr/guide/learning-paths/beginner/04-review-results/
   label: Examiner les résultats
@@ -51,8 +48,6 @@ La livraison comprend le notice.md final, le facts.md original, vos propres revi
 ## Critères de réussite
 
 L’annonce repose sur des faits sans inventer les inconnues ; le périmètre des changements est correct ; les erreurs de l’exemple fautif ont été repérées ; l’exercice de restauration a réellement été effectué et consigné ; la transmission permet à une autre personne de retrouver les sources et les questions ouvertes. Écrire seulement « trois tâches réussies » ne prouve pas que l’exercice est terminé.
-
-Le [compte rendu de validation des opérations sur fichiers](/downloads/first-project/validation/record.json) et le [script de reproduction](/downloads/first-project/validation/reproduce.py) de l’auteur prouvent uniquement le processus de copie et de restauration de référence dans un répertoire temporaire. L’exercice principal ne nécessite pas Python et ces documents ne remplacent pas vos propres actions.
 
 Continuez avec le [rapport de ventes hebdomadaire](/fr/cases/analyze-a-spreadsheet/) ou le [parcours créateur](/fr/guide/learning-paths/creator/).
 

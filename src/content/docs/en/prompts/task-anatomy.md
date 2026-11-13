@@ -48,7 +48,7 @@ Permission boundary: ... (internet, dependencies, configuration)
 If information is missing: ask first; do not guess.
 ```
 
-![Loop from a task specification to a verifiable result](/diagrams/task-execution-loop-en.svg)
+![Loop from a task specification to a verifiable result](/illustrations/flow-task-loop.webp)
 
 The six fields do not exist to make a prompt long. They remove critical gaps. Verification decides the next step: deliver only on success; otherwise return with evidence to the task or plan instead of editing blindly.
 

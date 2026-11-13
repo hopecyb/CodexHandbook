@@ -19,6 +19,8 @@ When you first encounter Skills, a common question is: is this worth packaging a
 If everything becomes a Skill, things get heavy; if you never capture repeatable flows, you keep re-explaining the same steps by hand. This page helps you decide when to solidify a workflow.
 
 
+![Illustration: a conveyor belt carries task cards to a fork — repetitive, well-defined, multi-step tasks go into a glowing toolbox, one-off vague tasks go into a plain chat bubble](/illustrations/skills-when.webp)
+
 ## Good candidates for a Skill
 
 - The same flow has been repeated manually a third time

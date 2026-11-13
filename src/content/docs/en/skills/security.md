@@ -20,6 +20,8 @@ It changes how Codex works and may include scripts or extra resources.
 
 Untrusted sources, unreviewed content, and version drift make Skill risk comparable to MCP. This page covers how teams **select, install, upgrade, and audit** Skills.
 
+![Illustration: a skill package arrives on a belt and is inspected before installation — a magnifier checks its source, a shield confirms it, a permission gate is locked, and an older version stays on a shelf for rollback](/illustrations/skills-security.webp)
+
 ## Contents
 
 - Which Skills not to install

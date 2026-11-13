@@ -17,7 +17,7 @@ reviewed_at: '2026-10-26'
 
 각 주제 페이지에는 1차 출처, 적용 범위의 한계, 사이트 내 실습이 있습니다. 출처 확인은 소프트웨어를 실제 실행한 것과 다릅니다. 기존 URL은 유지하므로 URL의 연월이 수정된 사건 날짜와 다를 수 있습니다. 본문 날짜를 기준으로 삼으세요.
 
-![AI 애플리케이션 엔지니어링 로드맵: Harness Engineering, Skills, 컨텍스트 엔지니어링, 다중 에이전트 협업, 도구 사용, MCP, 함수 호출, 프롬프트 엔지니어링, RAG를 최신순으로 나열하며 날짜는 아래 표와 같음](/diagrams/ai-application-roadmap-ko.svg)
+![AI 애플리케이션 엔지니어링 로드맵: Harness Engineering, Skills, 컨텍스트 엔지니어링, 다중 에이전트 협업, 도구 사용, MCP, 함수 호출, 프롬프트 엔지니어링, RAG를 최신순으로 나열하며 날짜는 아래 표와 같음](/illustrations/roadmap-ai-application.webp)
 
 ## 확인 가능한 사건
 

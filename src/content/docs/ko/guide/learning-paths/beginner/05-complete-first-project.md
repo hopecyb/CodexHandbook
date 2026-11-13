@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: 고정 자료와 작성자 참고 자료를 보완했고, 임시 디렉터리의 파일 작업 스크립트를 실제로 실행했다. 모델이나 독자가 독립적으로 완수하는 테스트는 아직 하지 않았다.
-  evidence:
-  - label: 작성자의 파일 작업 기록
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /ko/guide/learning-paths/beginner/04-review-results/
   label: 결과 검토하기
@@ -51,8 +48,6 @@ reviewed_at: "2026-10-26"
 ## 완료 판단 기준
 
 안내문에 사실 근거가 있고 미확인 정보를 지어내지 않았으며, 변경 범위가 올바르고, 오류 예시의 문제를 식별했고, 복원 연습을 실제 수행하여 기록했으며, 인계 내용으로 다른 사람이 근거와 미해결 사항을 찾을 수 있어야 한다. “작업 세 번 성공”이라고만 적어서는 완료를 증명할 수 없다.
-
-작성자의 [파일 작업 검증 기록](/downloads/first-project/validation/record.json)과 [재현 스크립트](/downloads/first-project/validation/reproduce.py)는 임시 디렉터리에서 참고용 복사와 복원 절차를 검증한 것만 증명한다. 주 실습에는 Python이 필요하지 않으며 이 기록이 자신의 실제 작업을 대신하지 않는다.
 
 다음으로 [주간 매출 보고서](/ko/cases/analyze-a-spreadsheet/) 또는 [크리에이터 경로](/ko/guide/learning-paths/creator/)를 선택한다.
 

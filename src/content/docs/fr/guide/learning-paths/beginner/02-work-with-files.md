@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Les supports fixes et le résultat de référence de l'auteur sont prêts. Le script de manipulation des fichiers dans un répertoire temporaire a été exécuté, mais aucun test indépendant avec un modèle ou des lecteurs n'a encore été réalisé."
-  evidence:
-    - label: "Journal des opérations sur les fichiers de l'auteur"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/fr/guide/learning-paths/beginner/01-talk-to-codex/"
   label: "Parler avec Codex"

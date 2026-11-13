@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Este capítulo usa as interfaces oficiais atuais para completar o ciclo mínimo: **adicionar o servidor → consultar a configuração → confirmar as ferramentas numa sessão → fazer uma chamada só de leitura**.
 
+![Ilustração: um assistente encaixa um conector em um servidor, a autorização acende a luz verde e uma requisição de teste segue pelo cabo até um banco de dados e volta com um resultado](/illustrations/mcp-connect.webp)
+
 ## Antes de começar
 
 - Lê a [Visão geral de MCP](/pt/skills/mcp/mcp-overview/).

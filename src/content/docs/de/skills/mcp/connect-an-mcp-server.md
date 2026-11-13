@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Dieses Kapitel verwendet die aktuellen offiziellen Schnittstellen für einen minimalen Zyklus: **Server hinzufügen → Konfiguration anzeigen → Werkzeuge in einer Sitzung bestätigen → schreibgeschützten Aufruf ausführen**.
 
+![Illustration: ein Assistent steckt einen Stecker in einen Server, die Autorisierung schaltet die Statuslampe auf Grün, und eine Testanfrage läuft übers Kabel zu einer Datenbank und kommt mit einem Ergebnis zurück](/illustrations/mcp-connect.webp)
+
 ## Voraussetzungen
 
 - Du hast den [MCP-Überblick](/de/skills/mcp/mcp-overview/) gelesen

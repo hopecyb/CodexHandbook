@@ -15,6 +15,8 @@ reviewed_at: "2026-10-25"
 
 “MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
 
+![Illustration: a transparent four-layer cross-section — configuration, transport, authentication, tools — with an assistant inspecting each layer by flashlight while a broken pipe segment is repaired](/illustrations/mcp-debugging.webp)
+
 ## Preserve four pieces of evidence
 
 ```bash

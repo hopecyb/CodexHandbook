@@ -18,6 +18,8 @@ Wenn du Aufgaben schon verteilst, aber noch keinen echten Skill gebaut hast, zei
 
 In 15–30 Minuten einen **im Repo wiederverwendbaren** Skill zu bauen hilft oft mehr als lange Theorie. Guter Start: ein kleiner Skill mit klaren Grenzen.
 
+![Illustration: ein kleiner Assistent baut an der Werkbank seinen ersten Skill zusammen – Anweisungskarte ablegen, Diff mit der Lupe prüfen, Checkliste abhaken, Fähnchen auf den fertigen Ordner setzen](/illustrations/skills-first-skill.webp)
+
 ## Für wen
 
 Du kannst die [erste Aufgabe](/de/cases/first-task/) durchziehen und willst in einem Test-Repo experimentieren.

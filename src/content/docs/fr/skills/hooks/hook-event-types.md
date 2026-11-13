@@ -14,7 +14,7 @@ reviewed_at: '2026-10-26'
 ---
 Pour choisir un Hook, la première question n’est pas « comment écrire le script ? », mais « faut-il intervenir avant ou après l’effet de bord ? ». Un script associé au mauvais événement risque de ne signaler un problème qu’une fois les effets produits.
 
-![Cycle de vie des Hooks Codex et événements principaux](/diagrams/hook-lifecycle-events-fr.svg)
+![Cycle de vie des Hooks Codex et événements principaux](/illustrations/flow-hook-lifecycle.webp)
 
 ## Liste actuelle des événements
 

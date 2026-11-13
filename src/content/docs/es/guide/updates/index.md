@@ -46,7 +46,7 @@ La portada agrupa tareas, itinerarios por rol, búsqueda de ayuda y materiales r
 
 ## 2026-09-18: materiales fijos para principiantes y recuperación
 
-El [itinerario de cinco pasos para principiantes](/es/guide/learning-paths/beginner/) usa un mismo conjunto de materiales sintéticos de un evento, anuncio de referencia, cuatro ejemplos de error y plantillas de revisión y entrega. La práctica avanza de la lectura y edición de un archivo a la restauración real de una copia. El [registro del script del autor](/downloads/first-project/validation/record.json) solo demuestra las operaciones con archivos; no hay evaluación independiente del modelo ni evidencia de que lectores hayan completado el itinerario.
+El [itinerario de cinco pasos para principiantes](/es/guide/learning-paths/beginner/) usa un mismo conjunto de materiales sintéticos de un evento, anuncio de referencia, cuatro ejemplos de error y plantillas de revisión y entrega. La práctica avanza de la lectura y edición de un archivo a la restauración real de una copia. El registro del script del autor solo demuestra las operaciones con archivos; no hay evaluación independiente del modelo ni evidencia de que lectores hayan completado el itinerario.
 
 ## 2026-09-18: fechas de la hoja de ruta y accesos prácticos
 

@@ -46,7 +46,7 @@ La page d'accueil organise tâches, parcours par rôle, recherche d'aide et ress
 
 ## 2026-09-18 : supports fixes pour débutants et exercice de récupération
 
-Le [parcours débutant en cinq étapes](/fr/guide/learning-paths/beginner/) utilise un même jeu de documents synthétiques sur un événement, une annonce de référence, quatre exemples d'erreur et des modèles de revue et de passation. L'exercice va de la lecture seule et d'une modification de fichier à la restauration réelle d'une copie. Le [journal de script de l'auteur](/downloads/first-project/validation/record.json) démontre uniquement les opérations sur les fichiers ; aucune évaluation indépendante de modèle ni réussite de lecteurs n'est établie.
+Le [parcours débutant en cinq étapes](/fr/guide/learning-paths/beginner/) utilise un même jeu de documents synthétiques sur un événement, une annonce de référence, quatre exemples d'erreur et des modèles de revue et de passation. L'exercice va de la lecture seule et d'une modification de fichier à la restauration réelle d'une copie. Le journal de script de l'auteur démontre uniquement les opérations sur les fichiers ; aucune évaluation indépendante de modèle ni réussite de lecteurs n'est établie.
 
 ## 2026-09-18 : dates de la feuille de route et exercices pratiques
 

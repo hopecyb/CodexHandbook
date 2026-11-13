@@ -18,7 +18,7 @@ Skills kapseln stabile Methoden, Referenzmaterial, Vorlagen und Skripte als wied
 
 Ihr Nutzen besteht nicht nur darin, Codex etwas Neues beizubringen: Sie geben einem Arbeitsablauf klare Eingaben, Ausgaben, Berechtigungsgrenzen und Testmöglichkeiten.
 
-![Vom Prompt zum Team-Fähigkeitenpaket: Prompts und Vorlagen werden zu Skills, Subagenten, MCP und Hooks und werden über Plugin und Automation im Team verteilt und automatisch ausgeführt](/diagrams/codex-capability-ladder-de.svg)
+![Illustration: sechs leuchtende Stufen von einer einzelnen Prompt-Notiz über einen Skill-Ordner, Subagenten, eine MCP-Verbindung und ein Hook-Schutztor bis zum Fähigkeitenpaket, das dem Team übergeben und planmäßig ausgeführt wird](/illustrations/skills-capability-ladder.webp)
 
 ## Empfohlene Reihenfolge
 

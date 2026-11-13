@@ -17,7 +17,7 @@ reviewed_at: 2026-10-26
 
 Die Grundeinheit paralleler Arbeit ist ein Chat mit eigenem Kontext, eigenen Nachrichten, Ergebnissen und Zielen. Viele Schritte allein machen eine Aufgabe noch nicht parallelisierbar. Geeignet sind Aufgaben, die **voneinander unabhängig sind, eindeutige Dateigrenzen besitzen und getrennt abgenommen werden können**.
 
-![Orchestrierungsdiagramm: Ein Hauptthread delegiert unabhängige Aufgaben an mehrere Subagents und führt Nachweise sowie Konflikte zusammen](/diagrams/subagent-orchestration-de.svg)
+![Orchestrierungsdiagramm: Ein Hauptthread delegiert unabhängige Aufgaben an mehrere Subagents und führt Nachweise sowie Konflikte zusammen](/illustrations/flow-subagents.webp)
 
 ## Zuerst die Parallelisierbarkeit prüfen
 

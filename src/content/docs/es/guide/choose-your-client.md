@@ -18,7 +18,7 @@ sidebar:
 
 Al elegir por primera vez un punto de entrada de Codex, no empieces comparando decenas de funciones. Responde antes a una pregunta: **¿dónde se realiza principalmente este trabajo?**
 
-![Diagrama de selección de clientes de Codex: elegir App de escritorio, CLI, integración IDE o Cloud a partir del lugar de trabajo](/diagrams/codex-client-selection-es.svg)
+![Diagrama de selección de clientes de Codex: elegir App de escritorio, CLI, integración IDE o Cloud a partir del lugar de trabajo](/illustrations/flow-client-selection.webp)
 
 ## Decide en 30 segundos
 

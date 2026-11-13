@@ -19,6 +19,8 @@ Khi mới làm quen Skill, hiểu lầm thường gặp là “cài xong là nó
 Skill vừa có thể được bạn **chỉ tên tường minh**, vừa có thể được model **tự chọn** trong kịch bản phù hợp. Phân biệt hai cách kích hoạt giúp tránh mất thời gian kiểm tra sai hướng.
 
 
+![Minh họa: hai cách gọi skill đặt cạnh nhau — bên trái một bàn tay chỉ thẳng vào một hộp công cụ (gọi tường minh), bên phải trợ lý đọc nhãn và tự chọn hộp phù hợp (kích hoạt ngầm)](/illustrations/skills-trigger.webp)
+
 ## Cách kích hoạt
 
 1. **Tường minh**: trong môi trường hỗ trợ, gọi bằng `$skill-name` (tên khớp `name` trong frontmatter)

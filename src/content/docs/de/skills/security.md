@@ -20,6 +20,8 @@ Er beeinflusst, wie Codex arbeitet, und kann Skripte oder Extra-Ressourcen mitbr
 
 Bei einer nicht vertrauenswürdigen Quelle, ungeprüftem Inhalt oder Versionsdrift ist das Risiko kaum geringer als bei MCP. Diese Seite erläutert, wie Teams Skills **auswählen, installieren, aktualisieren und auditieren**.
 
+![Illustration: ein Skill-Paket kommt auf dem Band an und wird vor der Installation geprüft – Lupe auf der Quelle, Schild als Freigabe, verschlossenes Berechtigungstor und eine ältere Version im Regal für den Rollback](/illustrations/skills-security.webp)
+
 ## Inhalt
 
 - Welche Skills nicht installieren

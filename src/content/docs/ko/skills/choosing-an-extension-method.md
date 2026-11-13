@@ -29,7 +29,7 @@ reviewed_at: '2026-10-26'
 
 ## 선택 도표
 
-![Codex 확장 방식 선택 도표](/diagrams/extension-selection-map-ko.svg)
+![Codex 확장 방식 선택 도표](/illustrations/map-extension-selection.webp)
 
 이 그림은 하나만 고르는 배타적 결정 트리가 아닙니다. 성숙한 작업 흐름은 `AGENTS.md`, Skill, MCP를 함께 사용할 수도 있습니다. 그림의 목적은 한 방식에 맞지 않는 역할까지 맡기지 않도록 돕는 것입니다.
 

@@ -20,6 +20,8 @@ Influye en cómo trabaja Codex y a veces trae scripts u otros recursos.
 
 Por eso, si el origen no es de confianza, el contenido no se ha revisado o las versiones se desvían, el riesgo no es mucho menor que el de MCP. Esta página explica cómo el equipo **elige, instala, actualiza y audita** Skills.
 
+![Ilustración: un paquete de skill llega en una cinta y se inspecciona antes de instalarlo: lupa sobre el origen, escudo de aprobación, puerta de permisos cerrada y una versión anterior guardada para revertir](/illustrations/skills-security.webp)
+
 ## Contenido
 
 - Qué Skills no conviene instalar

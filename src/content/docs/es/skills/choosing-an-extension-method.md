@@ -29,7 +29,7 @@ A veces basta con un prompt; los mecanismos más complejos solo tienen sentido b
 
 ## Diagrama de decisión
 
-![Diagrama para elegir un método de extensión de Codex](/diagrams/extension-selection-map-es.svg)
+![Diagrama para elegir un método de extensión de Codex](/illustrations/map-extension-selection.webp)
 
 No es un árbol de decisiones excluyente. Un flujo maduro puede combinar `AGENTS.md`, un Skill y MCP; el diagrama ayuda a no asignar a cada mecanismo una responsabilidad inadecuada.
 

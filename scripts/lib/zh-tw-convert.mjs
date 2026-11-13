@@ -221,9 +221,6 @@ export function convertDocument(source, { converter, sourceRevision: revision, t
 	let convertedBody = convertTranslatableText(body, converter);
 	convertedBody = localizeBodyLinks(convertedBody);
 	convertedBody = fixMdxImportDepth(convertedBody);
-	convertedBody = convertedBody
-		.replaceAll('/diagrams/codex-capability-ladder-zh-cn.svg', '/diagrams/codex-capability-ladder-zh-tw.svg')
-		.replaceAll('/diagrams/codex-capability-ladder-zh-cn.png', '/diagrams/codex-capability-ladder-zh-tw.png');
 	convertedBody = convertedBody.replace(
 		/\/diagrams\/([a-z0-9-]+)-zh-cn\.svg/g,
 		(match, diagramName) =>

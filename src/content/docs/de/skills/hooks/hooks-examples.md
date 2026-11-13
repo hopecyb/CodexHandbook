@@ -17,6 +17,8 @@ Dieses Kapitel enthält keine veralteten Beispielereignisse und Konfigurationsfe
 
 Alle Dateien befinden sich unter [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
+![Illustration: ein leuchtendes Tor auf dem Weg eines Tool-Aufrufs – ein Scanner lässt sichere Befehle über eine grüne Spur durch, eine rote Schranke stoppt einen gefährlichen, daneben ein Testpanel mit grünen Lampen](/illustrations/hooks-guardrail.webp)
+
 ## Ziel und Grenzen
 
 Ziel: Vor der Werkzeugausführung ablehnen, wenn die Befehlseingabe für `Bash` oder `apply_patch` eine Testzeichenfolge enthält, die wie eine AWS Access Key ID aussieht.

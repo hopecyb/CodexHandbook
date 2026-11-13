@@ -46,7 +46,7 @@ No es una plantilla de prompt que se completa cambiando nombres de archivo. Ejec
 
 **Fuera del alcance:** bibliotecas de precisión monetaria, impuestos, conversión de divisas, actualizaciones y UI.
 
-![Flujo de corrección de bugs con verificación](/diagrams/verified-bug-fix-workflow-es.svg)
+![Flujo de corrección de bugs con verificación](/illustrations/flow-bug-fix.webp)
 
 Las dos rutas de retorno son importantes: si falla una prueba relacionada, se vuelve a la reparación mínima; si falla la regresión o la revisión del diff, se vuelve al análisis de la causa raíz. Nunca elimines aserciones ni amplíes los cambios solo para llegar al verde.
 

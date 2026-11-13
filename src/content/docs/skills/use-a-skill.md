@@ -13,6 +13,8 @@ description: 显式与隐式触发 Skill，以及写好 description 的要点。
 Skill 既可以由你**明确点名**调用，也可能在合适场景下被模型**自动选用**。分清这两种触发方式，能少走一些排查弯路。
 
 
+![插画：两种调用方式并排——左边用手直接点名某个工具箱（显式调用），右边助手读标签后自己挑出匹配的工具箱（隐式触发）](/illustrations/skills-trigger.webp)
+
 ## 触发方式
 
 1. **显式**：在支持的环境中用 `$skill-name` 调用（名称与 frontmatter `name` 一致）

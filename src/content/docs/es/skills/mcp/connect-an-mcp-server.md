@@ -15,6 +15,8 @@ reviewed_at: 2026-10-25
 
 Este capítulo completa el ciclo oficial actual: **añadir el servidor -> inspeccionar la configuración -> confirmar las herramientas en una sesión -> realizar una llamada de solo lectura**.
 
+![Ilustración: un asistente conecta un enchufe a un servidor, la autorización enciende la luz verde y una solicitud de prueba viaja por el cable hasta una base de datos y vuelve con un resultado](/illustrations/mcp-connect.webp)
+
 ## Antes de empezar
 
 - Lee la [introducción a MCP](/es/skills/mcp/mcp-overview/).

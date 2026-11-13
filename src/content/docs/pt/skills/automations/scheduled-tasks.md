@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 A parte realmente difícil de uma tarefa agendada não é escolher a hora. É garantir que cada execução sem supervisão tem dados de entrada estáveis, permissões restritas, resultados fáceis de rever e condições de paragem.
 
-![Ciclo seguro da verificação manual à execução agendada, revisão humana e ajuste](/diagrams/scheduled-task-safety-loop-pt.svg)
+![Ciclo seguro da verificação manual à execução agendada, revisão humana e ajuste](/illustrations/flow-scheduled-safety.webp)
 
 ## A quem se destina
 

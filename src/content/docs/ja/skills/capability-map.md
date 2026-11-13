@@ -20,7 +20,7 @@ legacyVerification:
 
 ## システムアーキテクチャ
 
-![Codex の再利用可能な作業システムのアーキテクチャ](/diagrams/codex-work-system-architecture-ja.svg)
+![Codex の再利用可能な作業システムのアーキテクチャ](/illustrations/arch-work-system.webp)
 
 図を読むときは、次の三点を押さえてください。
 

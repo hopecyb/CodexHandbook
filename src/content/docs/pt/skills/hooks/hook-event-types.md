@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Ao escolher um Hook, a primeira pergunta não é «como escrever o script?», mas sim «deve atuar antes ou depois do efeito secundário?». Um script ligado ao evento errado pode limitar-se a comunicar o problema depois de ele acontecer.
 
-![Ciclo de vida dos Hooks Codex e eventos principais](/diagrams/hook-lifecycle-events-pt.svg)
+![Ciclo de vida dos Hooks Codex e eventos principais](/illustrations/flow-hook-lifecycle.webp)
 
 ## Lista atual de eventos
 

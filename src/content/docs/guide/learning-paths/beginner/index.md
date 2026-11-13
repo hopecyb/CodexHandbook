@@ -15,12 +15,9 @@ verification:
   kind: editorial
   checkedAt: "2026-09-18"
   summary: 六项临时目录文件操作检查通过；模型输出、读者耗时与独立通关尚未测试。
-  evidence:
-    - label: 文件操作验证记录
-      href: /downloads/first-project/validation/record.json
 assets:
   - path: /downloads/first-project/first-project-1.0.0.zip
-    purpose: 三个起始文件、作者参考、错误样本、两份填写模板与恢复验证记录
+    purpose: 三个起始文件、作者参考、错误样本、两份填写模板
     license: CC0-1.0
     version: 1.0.0
 ---

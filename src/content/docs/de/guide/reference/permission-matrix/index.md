@@ -17,7 +17,7 @@ reviewed_at: 2026-10-26
 
 Versuche Berechtigungen nicht mit einer starren Tabelle vorherzusagen, die nur fragt, ob App, CLI, IDE oder Cloud einen Dialog anzeigen. Das tatsächliche Verhalten hängt gemeinsam von Ausführungsort, wirksamer Konfiguration, Organisationsanforderungen, Betriebssystem und konkreter Aktion ab.
 
-![Entscheidungsablauf zwischen Sandbox-Blockade, menschlicher Genehmigung und Ausführungsergebnis](/diagrams/sandbox-approval-flow-de.svg)
+![Entscheidungsablauf zwischen Sandbox-Blockade, menschlicher Genehmigung und Ausführungsergebnis](/illustrations/flow-sandbox-approval.webp)
 
 ## Zuerst drei Mechanismen unterscheiden
 

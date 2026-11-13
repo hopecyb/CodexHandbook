@@ -19,6 +19,8 @@ A common early mistake is thinking "once installed, it just works." Using a Skil
 A Skill can be **named explicitly** or **chosen automatically** when the task fits. Knowing both avoids debugging dead ends.
 
 
+![Illustration: two ways to call a skill side by side — on the left a hand names one toolbox directly (explicit call), on the right the assistant reads labels and picks the matching toolbox itself (implicit trigger)](/illustrations/skills-trigger.webp)
+
 ## Trigger modes
 
 1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)

@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: 임시 디렉터리에서 여섯 가지 파일 작업 검증을 통과했다. 모델 출력, 독자 소요 시간, 독립적인 완수 여부는 아직 테스트하지 않았다.
-  evidence:
-  - label: 파일 작업 검증 기록
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: 시작 파일 3개, 작성자 참고 자료, 오류 예시, 작성용 템플릿 2개와 복원 검증 기록
+  purpose: 시작 파일 3개, 작성자 참고 자료, 오류 예시, 작성용 템플릿 2개
   license: CC0-1.0
   version: 1.0.0
 locale: ko

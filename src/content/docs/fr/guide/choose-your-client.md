@@ -18,7 +18,7 @@ legacyVerification:
 
 Pour choisir votre premier point d'entrée Codex, inutile de comparer des dizaines de fonctionnalités. Commencez par répondre à une question : **où ce travail se déroule-t-il principalement ?**
 
-![Schéma de sélection du client Codex : choisir l'App de bureau, la CLI, l'intégration IDE ou Cloud selon le lieu de travail](/diagrams/codex-client-selection-fr.svg)
+![Schéma de sélection du client Codex : choisir l'App de bureau, la CLI, l'intégration IDE ou Cloud selon le lieu de travail](/illustrations/flow-client-selection.webp)
 
 ## Choisir en 30 secondes
 

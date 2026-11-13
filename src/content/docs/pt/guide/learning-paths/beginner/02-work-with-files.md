@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Os materiais fixos e o resultado de referência do autor estão completos. O script de operações com ficheiros num diretório temporário foi executado, mas ainda não houve um teste independente com um modelo ou leitores.
-  evidence:
-  - label: Registo das operações com ficheiros do autor
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /pt/guide/learning-paths/beginner/01-talk-to-codex/
   label: Conversar com o Codex

@@ -46,7 +46,7 @@ Il ne s'agit pas d'un modèle de prompt dans lequel il suffirait de remplacer de
 
 **Hors périmètre :** bibliothèques de précision monétaire, taxes, conversion de devises, mises à niveau et interface utilisateur.
 
-![Flux de correction de bug avec vérification](/diagrams/verified-bug-fix-workflow-fr.svg)
+![Flux de correction de bug avec vérification](/illustrations/flow-bug-fix.webp)
 
 Les deux chemins de retour sont essentiels : l'échec d'un test concerné ramène à la correction minimale ; l'échec de la régression ou de la révision du diff ramène à l'analyse de la cause racine. Ne supprimez jamais une assertion et n'élargissez jamais les modifications uniquement pour obtenir le vert.
 

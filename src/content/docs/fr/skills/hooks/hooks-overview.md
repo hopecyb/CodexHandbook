@@ -14,7 +14,7 @@ reviewed_at: '2026-10-26'
 ---
 Les Hooks permettent d’exécuter des scripts de commande ou des outils de serveurs MCP déjà connectés pendant la boucle de l’Agent Codex. Ils servent notamment à détecter des secrets dans les prompts, appliquer des règles aux appels d’outils, tenir des journaux d’audit, résumer les sessions ou vérifier le travail avant l’arrêt.
 
-![Cycle de vie des Hooks Codex : sessions, tours de tâche, appels d’outils, compression du contexte et événements des sous-agents](/diagrams/hook-lifecycle-events-fr.svg)
+![Cycle de vie des Hooks Codex : sessions, tours de tâche, appels d’outils, compression du contexte et événements des sous-agents](/illustrations/flow-hook-lifecycle.webp)
 
 La distinction essentielle dans ce schéma est la suivante : `PreToolUse` peut refuser ou modifier l’entrée d’un outil local pris en charge avant son exécution. `PostToolUse` intervient après et ne peut pas annuler les effets déjà produits.
 

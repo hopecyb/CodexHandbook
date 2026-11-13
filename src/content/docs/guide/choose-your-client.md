@@ -12,7 +12,7 @@ sidebar:
 
 第一次选择 Codex 入口时，不必先比较几十项功能。先回答一个问题：**这次工作主要发生在哪里？**
 
-![Codex 客户端选择图：从工作位置出发，选择桌面 App、CLI、IDE 扩展或 Cloud](/diagrams/codex-client-selection-zh-cn.svg)
+![Codex 客户端选择图：从工作位置出发，选择桌面 App、CLI、IDE 扩展或 Cloud](/illustrations/flow-client-selection.webp)
 
 ## 30 秒做出选择
 

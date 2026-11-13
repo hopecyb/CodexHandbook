@@ -12,7 +12,7 @@ Codex Handbook 接受教程改写、事实核验、提示词、Skill、完整案
 | 提示词 | `src/content/docs/prompts/`、`examples/prompts/` | 适用场景、可复制模板、失败方式 |
 | Skill | `src/content/docs/skills/`、`examples/skills/` | 触发边界、结构、权限、测试 |
 | 完整案例 | `src/content/docs/cases/`、`examples/complete-workflows/` | 输入、过程、产物、验证、复盘 |
-| 图示 | `public/diagrams/`、`docs/visual-sources/` | SVG/图片、alt 文本、源稿、清单记录 |
+| 插画 | `public/illustrations/`、`docs/planning/illustration-prompt-guide.md` | WebP 图片、逐语言 alt 文本、提示词记录 |
 | 翻译 | `src/content/docs/<locale>/` | 源修订信息、术语检查、语言复核 |
 
 ## 工作流程

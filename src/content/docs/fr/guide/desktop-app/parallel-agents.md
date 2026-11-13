@@ -16,7 +16,7 @@ legacyVerification:
 ---
 L'unité de base du travail parallèle est une conversation qui possède son propre contexte, ses messages, son résultat et son objectif. Une tâche se prête à une exécution parallèle lorsque **ses parties sont indépendantes, possèdent des limites de fichiers claires et peuvent être acceptées séparément**, et non simplement parce qu'elle comporte de nombreuses étapes.
 
-![Schéma d'orchestration où le fil principal délègue des travaux indépendants à plusieurs sous-agents, puis réunit les preuves et résout les conflits](/diagrams/subagent-orchestration-fr.svg)
+![Schéma d'orchestration où le fil principal délègue des travaux indépendants à plusieurs sous-agents, puis réunit les preuves et résout les conflits](/illustrations/flow-subagents.webp)
 
 ## Déterminer si le travail peut être parallélisé
 

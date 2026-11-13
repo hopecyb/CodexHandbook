@@ -29,7 +29,7 @@ Toutes ces méthodes « étendent Codex », mais un simple prompt suffit parfois
 
 ## Schéma de choix
 
-![Schéma de choix d'une méthode d'extension pour Codex](/diagrams/extension-selection-map-fr.svg)
+![Schéma de choix d'une méthode d'extension pour Codex](/illustrations/map-extension-selection.webp)
 
 Ce schéma n'est pas un arbre de décision exclusif. Un workflow mûr peut utiliser à la fois `AGENTS.md`, un Skill et MCP. Il sert à éviter de confier à un mécanisme un rôle qu'il remplit mal.
 

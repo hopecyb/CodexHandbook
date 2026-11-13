@@ -48,7 +48,7 @@ Límites de permisos: ... (internet, dependencias y configuración)
 Si falta información: pregunta primero; no hagas suposiciones.
 ```
 
-![Ciclo desde la especificación de una tarea hasta un resultado verificable](/diagrams/task-execution-loop-es.svg)
+![Ciclo desde la especificación de una tarea hasta un resultado verificable](/illustrations/flow-task-loop.webp)
 
 Los seis campos de la izquierda no pretenden alargar el prompt, sino eliminar vacíos críticos. Una vez iniciada la ejecución, las evidencias de verificación determinan el siguiente paso: solo se entrega si todo pasa; si no, se vuelve a la tarea o al plan con la información del fallo, en lugar de seguir cambiando cosas a ciegas.
 

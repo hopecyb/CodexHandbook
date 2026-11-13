@@ -19,6 +19,8 @@ Question fréquente au début : est-ce que ça vaut le coup de faire un Skill ?
 Tout transformer en Skill alourdit ; ne rien figer force à répéter les mêmes consignes. Cette page aide à décider quand formaliser un processus.
 
 
+![Illustration : un tapis roulant amène des cartes de tâches à une bifurcation — les tâches répétitives, claires et multi-étapes vont dans une boîte à outils lumineuse, les tâches ponctuelles et floues dans une simple bulle de chat](/illustrations/skills-when.webp)
+
 ## Bon candidat pour un Skill
 
 - même flux répété manuellement une troisième fois

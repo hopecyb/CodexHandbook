@@ -21,6 +21,8 @@ Esta página explica cómo separar «flujo principal, documentación larga, plan
 Así es más fácil leer, modificar y reutilizar, y menos probable que el contenido se enrede.
 
 
+![Ilustración: una carpeta abierta como un archivador por capas, con la tarjeta de instrucciones arriba y cajones de referencias, plantillas y scripts debajo; el asistente carga solo la capa necesaria](/illustrations/skills-anatomy.webp)
+
 ## Estructura de directorios
 
 ```text

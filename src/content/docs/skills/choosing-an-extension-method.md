@@ -23,7 +23,7 @@ description: 根据要持久化的对象选择提示词、AGENTS.md、Skill、MC
 
 ## 选择图
 
-![Codex 扩展方式选择图](/diagrams/extension-selection-map-zh-cn.svg)
+![Codex 扩展方式选择图](/illustrations/map-extension-selection.webp)
 
 这不是互斥决策树。一个成熟工作流可能同时使用 `AGENTS.md`、Skill 和 MCP；图的作用是避免让某个机制承担它不擅长的职责。
 

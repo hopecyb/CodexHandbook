@@ -11,7 +11,7 @@ sidebar:
 
 并行的基本单位是拥有独立上下文、消息、结果与目标的聊天。适合并行的不是“步骤很多”，而是**任务彼此独立、文件边界清晰、可以分别验收**。
 
-![主线程把独立任务分派给多个子 Agent，并汇总证据与冲突的编排图](/diagrams/subagent-orchestration-zh-cn.svg)
+![主线程把独立任务分派给多个子 Agent，并汇总证据与冲突的编排图](/illustrations/flow-subagents.webp)
 
 ## 先判断能不能并行
 

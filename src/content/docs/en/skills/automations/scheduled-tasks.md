@@ -15,7 +15,7 @@ reviewed_at: 2026-10-25
 
 The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
 
-![Safety loop from manual verification to scheduling, human review, and adjustment](/diagrams/scheduled-task-safety-loop-en.svg)
+![Safety loop from manual verification to scheduling, human review, and adjustment](/illustrations/flow-scheduled-safety.webp)
 
 ## Who it is for
 

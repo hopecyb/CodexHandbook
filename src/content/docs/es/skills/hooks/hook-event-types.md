@@ -14,7 +14,7 @@ legacyVerification:
 ---
 La primera pregunta al elegir un Hook no es «¿cómo escribo el script?», sino «¿esto debe suceder antes o después del efecto secundario?». Un script asociado al evento equivocado quizá solo pueda informar del daño cuando ya se ha producido.
 
-![Ciclo de vida de los Hooks de Codex y eventos principales](/diagrams/hook-lifecycle-events-es.svg)
+![Ciclo de vida de los Hooks de Codex y eventos principales](/illustrations/flow-hook-lifecycle.webp)
 
 ## Eventos actuales
 

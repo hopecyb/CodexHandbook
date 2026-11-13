@@ -15,7 +15,7 @@ reviewed_at: 2026-10-25
 
 La parte difícil de una Scheduled task no es elegir la hora. Es conseguir que cada ejecución desatendida tenga entradas estables, permisos limitados, resultados revisables y condiciones de parada.
 
-![Ciclo de seguridad desde la verificación manual hasta la programación, la revisión humana y el ajuste](/diagrams/scheduled-task-safety-loop-es.svg)
+![Ciclo de seguridad desde la verificación manual hasta la programación, la revisión humana y el ajuste](/illustrations/flow-scheduled-safety.webp)
 
 ## Para quién es
 

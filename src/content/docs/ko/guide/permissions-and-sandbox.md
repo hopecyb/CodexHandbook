@@ -18,7 +18,7 @@ legacyVerification:
 
 Codex를 안전하게 사용하려면 두 제어 계층을 함께 봐야 합니다. **샌드박스는 기술적으로 접근할 수 있는 범위를 정하고, 승인 정책은 현재 경계를 넘기 전에 사용자에게 질문할지를 정합니다.**
 
-![Codex 샌드박스와 승인 흐름: 동작은 샌드박스 경계를 거치고 경계를 넘으면 사람에게 승인을 요청하며 마지막에 검증 증거를 남김](/diagrams/sandbox-approval-flow-ko.svg)
+![Codex 샌드박스와 승인 흐름: 동작은 샌드박스 경계를 거치고 경계를 넘으면 사람에게 승인을 요청하며 마지막에 검증 증거를 남김](/illustrations/flow-sandbox-approval.webp)
 
 ## 먼저 기억할 차이
 

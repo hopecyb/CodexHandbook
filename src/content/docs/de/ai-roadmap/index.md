@@ -17,7 +17,7 @@ Diese Karte trennt überprüfbare öffentliche Ereignisse von Lernempfehlungen. 
 
 Jede Themenseite nennt Primärquellen, Geltungsgrenzen und eine Übung auf dieser Website. Quellenabgleich ist kein Software-Testlauf. Die ursprünglichen URLs bleiben erhalten; Jahr oder Monat im Pfad können vom korrigierten Ereignisdatum abweichen. Maßgeblich ist der Text der Seite.
 
-![Roadmap für KI-Anwendungsentwicklung: Harness Engineering, Skills, Kontext-Engineering, Multi-Agent-Zusammenarbeit, Tool-Nutzung, MCP, Funktionsaufrufe, Prompt-Engineering und RAG in umgekehrter zeitlicher Reihenfolge, mit denselben Daten wie die Tabelle unten](/diagrams/ai-application-roadmap-de.svg)
+![Roadmap für KI-Anwendungsentwicklung: Harness Engineering, Skills, Kontext-Engineering, Multi-Agent-Zusammenarbeit, Tool-Nutzung, MCP, Funktionsaufrufe, Prompt-Engineering und RAG in umgekehrter zeitlicher Reihenfolge, mit denselben Daten wie die Tabelle unten](/illustrations/roadmap-ai-application.webp)
 
 ## Überprüfbare Ereignisse
 

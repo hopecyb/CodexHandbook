@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Chương này sử dụng giao diện chính thức hiện tại để hoàn thành một quy trình tối thiểu: **thêm máy chủ → xem cấu hình → xác nhận công cụ trong phiên → thực hiện một lệnh gọi chỉ đọc**.
 
+![Minh họa: trợ lý cắm đầu nối vào máy chủ, sau khi cấp quyền đèn trạng thái chuyển xanh, và một yêu cầu thử đi theo cáp đến cơ sở dữ liệu rồi nhận về kết quả](/illustrations/mcp-connect.webp)
+
 ## Trước khi bắt đầu
 
 - Đã đọc [Tổng quan MCP](/vi/skills/mcp/mcp-overview/).

@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Sechs Dateioperationen in einem temporären Verzeichnis wurden erfolgreich geprüft; Modellausgaben, Zeitaufwand der Leser und selbstständiger Abschluss wurden noch nicht getestet.
-  evidence:
-  - label: Prüfprotokoll der Dateioperationen
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: Drei Ausgangsdateien, Autorenreferenz, fehlerhaftes Beispiel, zwei auszufüllende Vorlagen und Protokoll der Wiederherstellungsprüfung
+  purpose: Drei Ausgangsdateien, Autorenreferenz, fehlerhaftes Beispiel und zwei auszufüllende Vorlagen
   license: CC0-1.0
   version: 1.0.0
 locale: de

@@ -18,7 +18,7 @@ reviewed_at: 2026-10-26
 
 Für eine sichere Nutzung von Codex musst du zwei Kontrollebenen gemeinsam betrachten: **Die Sandbox legt fest, welche Bereiche technisch erreichbar sind. Die Genehmigungsrichtlinie legt fest, ob Codex vor dem Überschreiten der aktuellen Grenze fragen muss.**
 
-![Ablauf von Codex-Sandbox und Genehmigung: Eine Aktion durchläuft zuerst die Sandbox-Grenze, fordert bei Überschreitung menschliche Genehmigung an und hinterlässt schließlich Verifikationsnachweise](/diagrams/sandbox-approval-flow-de.svg)
+![Ablauf von Codex-Sandbox und Genehmigung: Eine Aktion durchläuft zuerst die Sandbox-Grenze, fordert bei Überschreitung menschliche Genehmigung an und hinterlässt schließlich Verifikationsnachweise](/illustrations/flow-sandbox-approval.webp)
 
 ## Zuerst diesen Unterschied verstehen
 

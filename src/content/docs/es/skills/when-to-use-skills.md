@@ -19,6 +19,8 @@ Al empezar con Skills, la pregunta habitual es: ¿merece la pena convertir esto 
 Si lo conviertes todo en Skill, el sistema se vuelve pesado; si no consolidas lo que debería repetirse, seguirás repitiendo a mano las mismas instrucciones. Esta página ayuda a decidir cuándo fijar un flujo.
 
 
+![Ilustración: una cinta transportadora lleva tarjetas de tareas a una bifurcación: las tareas repetitivas, claras y de varios pasos van a una caja de herramientas luminosa, las puntuales y vagas a una burbuja de chat](/illustrations/skills-when.webp)
+
 ## Cuándo conviene crear un Skill
 
 - El mismo flujo se ha repetido manualmente por tercera vez

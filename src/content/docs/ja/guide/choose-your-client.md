@@ -18,7 +18,7 @@ legacyVerification:
 
 初めて Codex の入口を選ぶとき、何十項目もの機能を比較する必要はありません。まず、**今回の作業は主にどこで行うか**を考えてください。
 
-![Codex クライアント選択図：作業場所からデスクトップ App、CLI、IDE 統合、Cloud を選ぶ](/diagrams/codex-client-selection-ja.svg)
+![Codex クライアント選択図：作業場所からデスクトップ App、CLI、IDE 統合、Cloud を選ぶ](/illustrations/flow-client-selection.webp)
 
 ## 30 秒で選ぶ
 

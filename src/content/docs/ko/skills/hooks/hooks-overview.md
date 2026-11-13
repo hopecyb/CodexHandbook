@@ -15,7 +15,7 @@ reviewed_at: '2026-10-26'
 
 Hooks를 사용하면 Codex의 Agent 실행 루프 안에서 명령 스크립트나 연결된 MCP 서버의 도구를 실행할 수 있습니다. 대표적인 용도로는 프롬프트의 비밀 정보 검사, 도구 호출 정책, 감사 기록, 세션 요약, 종료 전 검증이 있습니다.
 
-![세션, 작업 차례, 도구 호출, 컨텍스트 압축 및 하위 Agent 이벤트를 보여 주는 Codex Hook 수명 주기](/diagrams/hook-lifecycle-events-ko.svg)
+![세션, 작업 차례, 도구 호출, 컨텍스트 압축 및 하위 Agent 이벤트를 보여 주는 Codex Hook 수명 주기](/illustrations/flow-hook-lifecycle.webp)
 
 그림에서 가장 중요한 차이는 다음과 같습니다. `PreToolUse`는 지원되는 로컬 도구가 실행되기 전에 입력을 거부하거나 바꿀 수 있습니다. `PostToolUse`는 도구가 완료된 후에 발생하므로 이미 생긴 부작용을 되돌릴 수 없습니다.
 

@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "固定の教材と筆者による参照結果を用意しました。一時ディレクトリでファイル操作スクリプトを実行済みですが、独立したモデルや読者による完走テストはまだ行っていません。"
-  evidence:
-    - label: "筆者によるファイル操作の記録"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/ja/guide/learning-paths/beginner/01-talk-to-codex/"
   label: "Codex と会話する"

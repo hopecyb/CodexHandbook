@@ -11,7 +11,7 @@ sidebar:
 
 不要用一张“App/CLI/IDE/Cloud 都会不会弹窗”的固定表猜权限。实际行为由执行位置、有效配置、组织 requirements、操作系统和任务动作共同决定。
 
-![沙箱拦截、人工审批与执行结果之间的决策流程](/diagrams/sandbox-approval-flow-zh-cn.svg)
+![沙箱拦截、人工审批与执行结果之间的决策流程](/illustrations/flow-sandbox-approval.webp)
 
 ## 先分清三套机制
 

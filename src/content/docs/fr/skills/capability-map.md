@@ -20,7 +20,7 @@ Cette page présente d’abord une vue d’ensemble : le prompt et `AGENTS.md` d
 
 ## Architecture du système
 
-![Architecture d’un système de travail Codex réutilisable](/diagrams/codex-work-system-architecture-fr.svg)
+![Architecture d’un système de travail Codex réutilisable](/illustrations/arch-work-system.webp)
 
 Retenez trois points en lisant le schéma :
 

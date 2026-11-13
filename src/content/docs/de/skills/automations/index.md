@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Eine Scheduled task lässt ChatGPT eine Aufgabe nach einem Zeitplan im Hintergrund wiederholen. Sie eignet sich für regelmäßige Berichte, fortlaufende Nachverfolgung und wiederkehrende Pflege. Sie ersetzt keine beliebigen Webhooks, Repository-Ereignisse oder CI-Automatisierungen.
 
+![Illustration: ein Förderband im Kreis unter einer großen Uhr und einem Kalender – eine geprüfte Aufgabe läuft planmäßig und erzeugt einen Bericht, den ein menschlicher Prüfer abnickt und jederzeit pausieren kann](/illustrations/automations-schedule.webp)
+
 ## Zuerst die Eignung prüfen
 
 | Geeignet | Nicht geeignet |

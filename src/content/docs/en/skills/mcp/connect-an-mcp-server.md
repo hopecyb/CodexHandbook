@@ -15,6 +15,8 @@ reviewed_at: "2026-10-25"
 
 This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
 
+![Illustration: an assistant plugs a connector into a server, authorization turns the status light green, and a test request travels along the cable to a database and returns a result](/illustrations/mcp-connect.webp)
+
 ## Before starting
 
 - Read the [MCP overview](/en/skills/mcp/mcp-overview/).

@@ -15,7 +15,7 @@ reviewed_at: 2026-10-25
 
 The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
 
-![Codex Hook lifecycle and key events](/diagrams/hook-lifecycle-events-en.svg)
+![Codex Hook lifecycle and key events](/illustrations/flow-hook-lifecycle.webp)
 
 ## Current events
 

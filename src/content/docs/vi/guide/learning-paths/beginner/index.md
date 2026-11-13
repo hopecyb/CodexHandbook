@@ -16,12 +16,9 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Sáu thao tác tệp trong thư mục tạm đã được kiểm tra thành công; đầu ra của mô hình, thời gian người đọc và khả năng tự hoàn thành chưa được thử nghiệm."
-  evidence:
-    - label: "Biên bản xác minh thao tác tệp"
-      href: "/downloads/first-project/validation/record.json"
 assets:
   - path: "/downloads/first-project/first-project-1.0.0.zip"
-    purpose: "Ba tệp ban đầu, bản tham khảo của tác giả, mẫu lỗi, hai mẫu điền và biên bản xác minh khôi phục"
+    purpose: "Ba tệp ban đầu, bản tham khảo của tác giả, mẫu lỗi và hai mẫu điền"
     license: "CC0-1.0"
     version: "1.0.0"
 locale: "vi"

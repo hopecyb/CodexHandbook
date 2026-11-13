@@ -14,7 +14,7 @@ legacyVerification: {"status": "verified", "products": "App / CLI / IDE", "basis
 
 Um **subagente (Subagent)** é uma unidade de trabalho independente que o Agent principal inicia para resolver um subproblema definido. Tem o seu próprio contexto e devolve conclusões e evidências ao thread principal. O Agent principal continua responsável pelas decisões globais e pela aceitação final.
 
-![Arquitetura de orquestração de subagentes Codex: o Agent principal delega tarefas delimitadas, os subagentes devolvem evidências e o Agent principal sintetiza e verifica](/diagrams/subagent-orchestration-pt.svg)
+![Arquitetura de orquestração de subagentes Codex: o Agent principal delega tarefas delimitadas, os subagentes devolvem evidências e o Agent principal sintetiza e verifica](/illustrations/flow-subagents.webp)
 
 ## Compreender três níveis de separação
 

@@ -19,6 +19,8 @@ Beim Einstieg in Skills lautet die typische Frage: Lohnt es sich, genau das als 
 Wenn jede Aufgabe zu einem Skill wird, steigt der Aufwand. Werden wiederkehrende Abläufe dagegen nicht festgehalten, muss man dieselben Anweisungen immer wieder von Hand geben. Hier geht es vor allem darum, wann Abläufe festgeschrieben werden sollten.
 
 
+![Illustration: ein Förderband bringt Aufgabenkarten zu einer Weggabelung – wiederkehrende, klare, mehrstufige Aufgaben landen in einer leuchtenden Werkzeugkiste, einmalige, vage in einer gewöhnlichen Chat-Blase](/illustrations/skills-when.webp)
+
 ## Gut als Skill geeignet
 
 - Derselbe Ablauf wird zum dritten Mal manuell wiederholt

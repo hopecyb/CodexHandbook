@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Six opérations sur fichiers dans un répertoire temporaire ont été validées ; les réponses du modèle, le temps nécessaire aux lecteurs et la réussite autonome n’ont pas encore été testés.
-  evidence:
-  - label: Compte rendu de validation des opérations sur fichiers
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: Trois fichiers de départ, une référence rédigée par l’auteur, un exemple erroné, deux modèles à remplir et un compte rendu de restauration
+  purpose: Trois fichiers de départ, une référence rédigée par l’auteur, un exemple erroné et deux modèles à remplir
   license: CC0-1.0
   version: 1.0.0
 locale: fr

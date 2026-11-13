@@ -19,6 +19,8 @@ Idée reçue : « installé = actif tout seul ». Utiliser un Skill, c'est faire
 Déclenchement **explicite** (vous nommez) ou **implicite** (le modèle choisit). Cette distinction facilite le diagnostic des problèmes de déclenchement.
 
 
+![Illustration : deux façons d'appeler un skill côte à côte — à gauche une main désigne directement une boîte à outils (appel explicite), à droite l'assistant lit les étiquettes et choisit lui-même la bonne (déclenchement implicite)](/illustrations/skills-trigger.webp)
+
 ## Modes de déclenchement
 
 1. **Explicite** : appeler `$skill-name` dans un environnement compatible ; le nom doit correspondre à `name` dans le frontmatter

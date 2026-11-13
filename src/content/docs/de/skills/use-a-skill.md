@@ -19,6 +19,8 @@ Ein häufiger Irrtum am Anfang: „Sobald er installiert ist, wirkt er von allei
 Skills können von dir **explizit benannt** oder in passenden Szenarien vom Modell **automatisch gewählt** werden. Die beiden Auslösearten zu trennen, spart Fehlersuche.
 
 
+![Illustration: zwei Arten, einen Skill aufzurufen, nebeneinander – links zeigt eine Hand direkt auf eine Werkzeugkiste (expliziter Aufruf), rechts liest der Assistent die Etiketten und wählt selbst die passende (impliziter Trigger)](/illustrations/skills-trigger.webp)
+
 ## Auslösearten
 
 1. **Explizit**: In unterstützten Umgebungen mit `$skill-name` (Name = Frontmatter-`name`)

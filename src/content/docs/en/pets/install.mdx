@@ -15,14 +15,12 @@ verification:
   summary: "We added boundaries for file formats and recovery, but have not tested installation, animation playback, or removal with a specific client and pet package. Check directories and menus against the target version."
 ---
 
-import PetScienceFigure from '/src/components/PetScienceFigure.astro';
-
 This site has not completed compatibility tests for a specific client and pet package. Record their versions and sources first, then use the [compatibility and recovery record](/en/guide/reference/resource-compatibility/) to check actual results. The illustration explains the structure; it is not a file-format contract for every version.
 
 
 Installing a Codex Pet means placing a client-readable resource package into a known folder. When the client starts or refreshes settings, it reads that folder, finds the metadata, and loads the matching animation assets.
 
-<PetScienceFigure variant="install" locale="en" />
+![Illustration: inspecting a pet package with a magnifier, filing it into a drawer-style folder, then the pet appearing on a laptop screen after a refresh](/illustrations/pets-install.webp)
 
 A Pet is usually a local folder with at least two files:
 

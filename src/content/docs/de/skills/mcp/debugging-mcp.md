@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 MCP-Fehler werden häufig nur als „Werkzeug funktioniert nicht“ beschrieben. Schneller ist es, zuerst die fehlerhafte Ebene zu bestimmen und dann genau eine Variable zu ändern.
 
+![Illustration: ein transparenter Vierschichtenschnitt – Konfiguration, Transport, Authentifizierung, Tools – bei dem ein Assistent jede Schicht mit der Taschenlampe prüft, während ein gebrochenes Rohr repariert wird](/illustrations/mcp-debugging.webp)
+
 ## Zuerst vier Nachweise sichern
 
 ```bash

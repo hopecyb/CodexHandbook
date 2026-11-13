@@ -18,7 +18,7 @@ Les Skills encapsulent méthodes stables, références, modèles et scripts en c
 
 Leur valeur ne consiste pas seulement à ajouter une capacité à Codex : ils donnent à un flux de travail des entrées, des sorties, des limites de permissions et des moyens de test clairement définis.
 
-![Du prompt au pack d’équipe : prompts et modèles deviennent Skills, sous-agents, MCP et Hooks, puis sont diffusés via Plugins et Automatisations](/diagrams/codex-capability-ladder-fr.svg)
+![Illustration : six marches lumineuses, d'une simple note de prompt au dossier Skill, aux sous-agents, à la connexion MCP, à la barrière de garde Hook, puis au pack de capacités remis à l'équipe et exécuté selon un calendrier](/illustrations/skills-capability-ladder.webp)
 
 ## Ordre recommandé
 

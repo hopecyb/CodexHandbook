@@ -17,7 +17,7 @@ sidebar:
 
 The basic unit of parallel work is a chat with its own context, messages, result, and goal. A task is suitable for parallel execution when **its parts are independent, have clear file boundaries, and can be accepted separately**, not merely because it has many steps.
 
-![Orchestration diagram in which the main thread delegates independent work to several subagents and consolidates evidence and conflicts](/diagrams/subagent-orchestration-en.svg)
+![Orchestration diagram in which the main thread delegates independent work to several subagents and consolidates evidence and conflicts](/illustrations/flow-subagents.webp)
 
 ## Decide whether work can run in parallel
 

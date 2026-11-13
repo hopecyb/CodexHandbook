@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Les supports fixes et la référence de l’auteur sont prêts ; les opérations sur fichiers ont été exécutées dans un répertoire temporaire, mais aucun test indépendant avec un modèle ou des lecteurs n’a encore été réalisé."
-  evidence:
-    - label: "Journal des opérations sur fichiers de l’auteur"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/fr/guide/learning-paths/beginner/"
   label: "Parcours débutant et supports"

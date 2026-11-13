@@ -47,7 +47,7 @@ Trang chủ được tổ chức theo làm tác vụ, lộ trình vai trò, tra 
 
 ## 2026-09-18: tài liệu cố định cho người mới và bài phục hồi
 
-[Lộ trình năm bước cho người mới](/vi/guide/learning-paths/beginner/) dùng cùng một bộ tài liệu sự kiện tổng hợp, thông báo tham chiếu, bốn mẫu lỗi và mẫu rà soát, bàn giao. Bài thực hành đi từ chỉ đọc, sửa một tệp đến khôi phục bản sao thật. [Nhật ký script của tác giả](/downloads/first-project/validation/record.json) chỉ chứng minh quy trình thao tác tệp; chưa có đánh giá model độc lập hoặc bằng chứng người đọc hoàn thành.
+[Lộ trình năm bước cho người mới](/vi/guide/learning-paths/beginner/) dùng cùng một bộ tài liệu sự kiện tổng hợp, thông báo tham chiếu, bốn mẫu lỗi và mẫu rà soát, bàn giao. Bài thực hành đi từ chỉ đọc, sửa một tệp đến khôi phục bản sao thật. Nhật ký script của tác giả chỉ chứng minh quy trình thao tác tệp; chưa có đánh giá model độc lập hoặc bằng chứng người đọc hoàn thành.
 
 ## 2026-09-18: ngày tháng trên lộ trình và bài tập thực tế
 

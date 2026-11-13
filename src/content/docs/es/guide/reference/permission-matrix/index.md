@@ -17,7 +17,7 @@ reviewed_at: '2026-10-25'
 
 No intentes deducir los permisos a partir de una tabla fija que solo indique si la aplicación, la CLI, el IDE o Cloud mostrarán un aviso. El comportamiento real depende del lugar de ejecución, la configuración efectiva, los requisitos de la organización, el sistema operativo y la acción concreta.
 
-![Flujo de decisiones entre el bloqueo del sandbox, la aprobación humana y el resultado de la ejecución](/diagrams/sandbox-approval-flow-es.svg)
+![Flujo de decisiones entre el bloqueo del sandbox, la aprobación humana y el resultado de la ejecución](/illustrations/flow-sandbox-approval.webp)
 
 ## Distingue primero los tres mecanismos
 

@@ -9,6 +9,8 @@ description: 用 CLI 或 config.toml 配置、鉴权并验证第一个 MCP 服�
 
 本章使用当前官方接口完成一个最小闭环：**添加服务器 -> 查看配置 -> 在会话里确认工具 -> 做一次只读调用**。
 
+![插画：小助手把连接器插进服务器，经过授权后绿灯亮起，测试请求沿线缆发到数据库并收到结果](/illustrations/mcp-connect.webp)
+
 ## 开始前
 
 - 已阅读 [MCP 概述](/skills/mcp/mcp-overview/)

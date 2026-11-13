@@ -29,7 +29,7 @@ Für eine „Erweiterung von Codex“ genügt manchmal ein Prompt. Erst in ander
 
 ## Auswahlgrafik
 
-![Auswahlgrafik für Codex-Erweiterungsmechanismen](/diagrams/extension-selection-map-de.svg)
+![Auswahlgrafik für Codex-Erweiterungsmechanismen](/illustrations/map-extension-selection.webp)
 
 Dies ist kein Baum mit gegenseitig ausschließenden Entscheidungen. Ein ausgereifter Workflow kann `AGENTS.md`, Skill und MCP gemeinsam verwenden. Die Grafik verhindert, dass ein Mechanismus eine Aufgabe übernimmt, für die er ungeeignet ist.
 

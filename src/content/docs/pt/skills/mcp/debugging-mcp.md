@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 É comum resumir todas as falhas MCP a “a ferramenta não funciona”. É mais rápido identificar primeiro em que camada ocorre a falha e depois alterar apenas uma variável de cada vez.
 
+![Ilustração: um corte transparente em quatro camadas — configuração, transporte, autenticação e ferramentas — com um assistente inspecionando cada camada com uma lanterna enquanto um cano quebrado é consertado](/illustrations/mcp-debugging.webp)
+
 ## Guardar primeiro quatro evidências
 
 ```bash

@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Os Hooks permitem executar scripts de comando ou ferramentas de servidores MCP já ligados durante o ciclo do Agent Codex. Usos comuns incluem detectar segredos em prompts, aplicar regras às chamadas de ferramentas, manter logs de auditoria, resumir sessões e verificar o trabalho antes da paragem.
 
-![Ciclo de vida dos Hooks Codex: sessões, turnos, chamadas de ferramentas, compactação e eventos dos subagentes](/diagrams/hook-lifecycle-events-pt.svg)
+![Ciclo de vida dos Hooks Codex: sessões, turnos, chamadas de ferramentas, compactação e eventos dos subagentes](/illustrations/flow-hook-lifecycle.webp)
 
 A distinção mais importante no diagrama é que `PreToolUse` pode recusar ou alterar a entrada de uma ferramenta local suportada antes da execução. `PostToolUse` ocorre depois e não consegue desfazer os efeitos já produzidos.
 

@@ -17,7 +17,7 @@ This map separates verifiable public events from learning suggestions. **Dates r
 
 Each topic page offers primary sources, scope limits, and a practice exercise on this site. Checking sources is not the same as running software. The original URLs are retained; a year or month in a URL may differ from the corrected event date. Follow the date in the article text.
 
-![AI application engineering roadmap: Harness Engineering, Skills, context engineering, multi-agent collaboration, tool use, MCP, function calling, prompt engineering, and RAG in reverse chronological order, with the same dates as the table below](/diagrams/ai-application-roadmap-en.svg)
+![AI application engineering roadmap: Harness Engineering, Skills, context engineering, multi-agent collaboration, tool use, MCP, function calling, prompt engineering, and RAG in reverse chronological order, with the same dates as the table below](/illustrations/roadmap-ai-application.webp)
 
 ## Verifiable events
 

@@ -21,6 +21,8 @@ Las acciones fijas van al script; el juicio y el flujo de colaboración se queda
 
 Cuando un paso debe ejecutarse de forma determinista (correr pruebas, generar un diff, validar formato), ofrece el script en `scripts/` y explica en `SKILL.md` cuándo invocarlo.
 
+![Ilustración: un asistente entrega un paso repetitivo a una máquina (un script determinista) cuya salida pasa por un control de pruebas: luces verdes aprobadas y una roja en reparación](/illustrations/skills-scripts.webp)
+
 ## Ejemplo
 
 ```text

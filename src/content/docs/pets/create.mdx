@@ -9,14 +9,12 @@ verification:
   summary: 已补充格式与恢复边界；尚无本站客户端安装、动画播放或卸载实测记录，目录与菜单应以目标版本为准。
 ---
 
-import PetScienceFigure from '/src/components/PetScienceFigure.astro';
-
 本站尚未完成具体客户端与宠物包的兼容测试。请先记录版本与来源，使用[兼容及恢复记录](/guide/reference/resource-compatibility/)核对实际结果。示意图只解释结构，不代表所有版本的格式契约。
 
 
 制作 Codex Pet 的目标不是单独得到一张好看的图片，而是得到一个 Codex 能识别、能播放、能切换状态的资源包。你可以把它理解成“元数据 + 动画图集 + 授权说明”的组合。
 
-<PetScienceFigure variant="spritesheet" locale="zh" />
+![插画：从手绘草图、网格对齐、动作图集到打包成宠物文件夹的制作流程](/illustrations/pets-create.webp)
 
 最小结构通常是：
 
@@ -27,6 +25,8 @@ import PetScienceFigure from '/src/components/PetScienceFigure.astro';
 ```
 
 ## spritesheet 是什么
+
+![插画：一张图集按行列排列多个动作，截取单帧后连成胶片并在屏幕上播放](/illustrations/pets-spritesheet.webp)
 
 Spritesheet 是把多帧动画合并到一张大图里的做法。客户端不需要加载几十张小图，而是按行列坐标从大图中裁切每一帧，再连续播放。
 

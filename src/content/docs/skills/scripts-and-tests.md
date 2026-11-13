@@ -15,6 +15,8 @@ description: 在 Skill 中加入确定性脚本，并验证其行为。
 
 当某步骤必须确定性执行（跑测试、生成 diff、校验格式）时，在 `scripts/` 中提供脚本，并在 `SKILL.md` 中说明何时调用。
 
+![插画：小助手把重复步骤交给一台机械装置（确定性脚本），输出经过测试关卡，绿灯通过，红灯正在被修复](/illustrations/skills-scripts.webp)
+
 ## 示例
 
 ```text

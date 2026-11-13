@@ -19,6 +19,8 @@ Quem começa com Skill costuma perguntar: isso realmente vale a pena virar um Sk
 Se tudo virar Skill, o sistema fica pesado; se o que deveria consolidar-se não consolidar, você repete as mesmas instruções à mão. Aqui o foco é decidir quando fixar um fluxo.
 
 
+![Ilustração: uma esteira leva cartões de tarefa a uma bifurcação — tarefas repetitivas, claras e em várias etapas vão para uma caixa de ferramentas brilhante, tarefas pontuais e vagas para um balão de chat](/illustrations/skills-when.webp)
+
 ## Adequado para encapsular em Skill
 
 - O mesmo fluxo já foi repetido manualmente pela terceira vez

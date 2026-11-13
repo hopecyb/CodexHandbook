@@ -15,6 +15,8 @@ reviewed_at: 2026-10-25
 
 A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
 
+![Illustration: a loop conveyor under a big clock and calendar — a verified task card runs on schedule and produces a report, and a human reviewer gives a thumbs-up and can press pause at any time](/illustrations/automations-schedule.webp)
+
 ## Decide whether it fits
 
 | Suitable | Unsuitable |

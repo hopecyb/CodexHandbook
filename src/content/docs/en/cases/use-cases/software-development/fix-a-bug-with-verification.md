@@ -46,7 +46,7 @@ This is not a prompt template that merely swaps filenames. You will run real sta
 
 **Out of scope:** monetary precision libraries, tax, currency conversion, upgrades, UI.
 
-![Verified bug-fix workflow](/diagrams/verified-bug-fix-workflow-en.svg)
+![Verified bug-fix workflow](/illustrations/flow-bug-fix.webp)
 
 The two return paths matter: a related-test failure returns to the minimal repair; regression or diff failure returns to root-cause analysis. Never delete assertions or broaden changes only to reach green.
 

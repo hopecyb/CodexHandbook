@@ -47,7 +47,7 @@ Die Startseite ordnet Aufgaben, rollenbezogene Lernpfade, Fehlersuche und wieder
 
 ## 2026-09-18: Festes Einsteigermaterial und Wiederherstellungsübung
 
-Der [fünfstufige Einsteigerpfad](/de/guide/learning-paths/beginner/) nutzt einheitliches synthetisches Veranstaltungsmaterial, eine Referenzmitteilung, vier Fehlersamples sowie Vorlagen für Prüfung und Übergabe. Die Übung führt von lesendem Zugriff über eine Änderung in einer Datei bis zur tatsächlichen Wiederherstellung einer Kopie. Das [Skriptprotokoll des Autors](/downloads/first-project/validation/record.json) belegt nur die Dateioperationen; es gibt keine unabhängige Modellbewertung und keinen Nachweis, dass Leser den Pfad abgeschlossen haben.
+Der [fünfstufige Einsteigerpfad](/de/guide/learning-paths/beginner/) nutzt einheitliches synthetisches Veranstaltungsmaterial, eine Referenzmitteilung, vier Fehlersamples sowie Vorlagen für Prüfung und Übergabe. Die Übung führt von lesendem Zugriff über eine Änderung in einer Datei bis zur tatsächlichen Wiederherstellung einer Kopie. Das Skriptprotokoll des Autors belegt nur die Dateioperationen; es gibt keine unabhängige Modellbewertung und keinen Nachweis, dass Leser den Pfad abgeschlossen haben.
 
 ## 2026-09-18: Roadmap-Daten und praktische Einstiege
 

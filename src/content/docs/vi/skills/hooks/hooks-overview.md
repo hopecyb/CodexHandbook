@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Hooks cho phép chạy script lệnh hoặc công cụ của máy chủ MCP đã kết nối tại các điểm trong vòng lặp Agent của Codex. Các ứng dụng thường gặp gồm quét khóa trong prompt, áp dụng chính sách gọi công cụ, ghi nhật ký kiểm toán, tóm tắt phiên và kiểm tra trước khi dừng.
 
-![Vòng đời Codex Hook: các sự kiện phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con](/diagrams/hook-lifecycle-events-vi.svg)
+![Vòng đời Codex Hook: các sự kiện phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con](/illustrations/flow-hook-lifecycle.webp)
 
 Điểm khác biệt quan trọng nhất trong hình là: `PreToolUse` có thể từ chối hoặc sửa đầu vào trước khi công cụ cục bộ được hỗ trợ thực thi; `PostToolUse` xảy ra sau khi công cụ hoàn thành nên không thể hoàn tác tác dụng phụ đã xảy ra.
 

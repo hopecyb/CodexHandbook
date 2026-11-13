@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Le plus difficile dans une tâche planifiée n’est pas de choisir son heure d’exécution. Chaque exécution sans surveillance doit disposer d’entrées stables, de permissions limitées, d’un résultat facile à examiner et de conditions d’arrêt.
 
-![Boucle de sécurité, de la vérification manuelle à la planification, au contrôle humain et à l’ajustement](/diagrams/scheduled-task-safety-loop-fr.svg)
+![Boucle de sécurité, de la vérification manuelle à la planification, au contrôle humain et à l’ajustement](/illustrations/flow-scheduled-safety.webp)
 
 ## À qui cela s’adresse
 

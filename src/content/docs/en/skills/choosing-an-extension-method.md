@@ -29,7 +29,7 @@ Sometimes a prompt is enough; heavier mechanisms are conditional.
 
 ## Decision diagram
 
-![Codex extension-method selection diagram](/diagrams/extension-selection-map-en.svg)
+![Codex extension-method selection diagram](/illustrations/map-extension-selection.webp)
 
 This is not an exclusive tree. A mature workflow may combine `AGENTS.md`, a Skill, and MCP; the diagram prevents assigning the wrong responsibility.
 

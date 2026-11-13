@@ -19,7 +19,7 @@ legacyVerification:
 
 Beim ersten Einstieg in Codex musst du nicht Dutzende Funktionen vergleichen. Beantworte zunächst eine Frage: **Wo findet diese Arbeit hauptsächlich statt?**
 
-![Auswahl eines Codex-Clients: Vom Arbeitsort zur Desktop-App, CLI, IDE-Erweiterung oder Cloud](/diagrams/codex-client-selection-de.svg)
+![Auswahl eines Codex-Clients: Vom Arbeitsort zur Desktop-App, CLI, IDE-Erweiterung oder Cloud](/illustrations/flow-client-selection.webp)
 
 ## In 30 Sekunden entscheiden
 

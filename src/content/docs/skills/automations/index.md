@@ -9,6 +9,8 @@ description: 在 ChatGPT 中按时间重复运行已经验证过的任务。
 
 Scheduled task（定时任务）让 ChatGPT 在后台按计划重复工作。它适合定期报告、持续跟进和重复维护，不等于任意 webhook、仓库事件或 CI 自动化。
 
+![插画：大钟和日历上方的循环传送带，已验证的任务卡按时间运行并产出报告，人工审核者看完报告点赞，也可以随时按下暂停](/illustrations/automations-schedule.webp)
+
 ## 先判断是否适合
 
 | 适合 | 不适合 |

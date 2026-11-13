@@ -21,6 +21,8 @@ Hand fixed actions to scripts; leave judgment and collaboration to the Skill.
 
 When a step must run deterministically (run tests, generate diff, validate format), provide a script under `scripts/` and document when to call it in `SKILL.md`.
 
+![Illustration: an assistant hands a repetitive step to a mechanical machine (a deterministic script), whose output passes a test checkpoint — green lights pass and a red one is being fixed](/illustrations/skills-scripts.webp)
+
 ## Example
 
 ```text

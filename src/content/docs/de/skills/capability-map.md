@@ -20,7 +20,7 @@ Diese Seite stellt zunächst das Gesamtsystem dar: Prompts und `AGENTS.md` liefe
 
 ## Systemarchitektur
 
-![Architektur eines wiederverwendbaren Codex-Arbeitssystems](/diagrams/codex-work-system-architecture-de.svg)
+![Architektur eines wiederverwendbaren Codex-Arbeitssystems](/illustrations/arch-work-system.webp)
 
 Achte beim Lesen der Grafik auf drei Punkte:
 

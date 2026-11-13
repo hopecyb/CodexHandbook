@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Phần khó thực sự của tác vụ định kỳ không phải là “chạy lúc mấy giờ”, mà là bảo đảm mỗi lần chạy không có người giám sát đều có đầu vào ổn định, quyền hạn hẹp, đầu ra có thể rà soát và điều kiện dừng.
 
-![Vòng lặp an toàn từ xác minh thủ công đến chạy định kỳ, con người rà soát và điều chỉnh](/diagrams/scheduled-task-safety-loop-vi.svg)
+![Vòng lặp an toàn từ xác minh thủ công đến chạy định kỳ, con người rà soát và điều chỉnh](/illustrations/flow-scheduled-safety.webp)
 
 ## Phù hợp với ai
 

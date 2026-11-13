@@ -18,7 +18,7 @@ legacyVerification:
 
 처음 Codex 진입점을 선택할 때 수십 개의 기능을 먼저 비교할 필요는 없습니다. 한 가지 질문부터 답하세요. **이번 작업은 주로 어디에서 이루어집니까?**
 
-![Codex 클라이언트 선택도: 작업 위치에서 데스크톱 App, CLI, IDE 통합 또는 Cloud 선택](/diagrams/codex-client-selection-ko.svg)
+![Codex 클라이언트 선택도: 작업 위치에서 데스크톱 App, CLI, IDE 통합 또는 Cloud 선택](/illustrations/flow-client-selection.webp)
 
 ## 30초 안에 선택하기
 

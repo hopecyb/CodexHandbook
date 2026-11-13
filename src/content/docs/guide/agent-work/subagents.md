@@ -12,7 +12,7 @@ sidebar:
 
 **子 Agent（Subagent）** 是主 Agent 为一个明确子问题启动的独立工作单元。它有自己的上下文，完成后把结论和证据返回主线程；主 Agent 仍负责全局决策与最终验收。
 
-![Codex 子 Agent 编排架构：主 Agent 分派有边界的子任务，子 Agent 返回证据，主 Agent 汇总并验证](/diagrams/subagent-orchestration-zh-cn.svg)
+![Codex 子 Agent 编排架构：主 Agent 分派有边界的子任务，子 Agent 返回证据，主 Agent 汇总并验证](/illustrations/flow-subagents.webp)
 
 ## 先理解三层关系
 

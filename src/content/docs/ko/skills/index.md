@@ -18,7 +18,7 @@ Skills는 안정된 방법, 참고 자료, 템플릿, 스크립트를 재사용 
 
 가치는 Codex에 기능을 하나 더하는 데 그치지 않습니다. 작업 흐름의 입력과 출력, 권한 경계, 테스트 방법을 분명하게 할 수 있습니다.
 
-![한 번의 프롬프트에서 팀 역량 패키지로: 프롬프트와 템플릿이 Skill, 서브에이전트, MCP, Hook이 되고 Plugin과 Automation으로 팀에 배포되고 자동 실행된다](/diagrams/codex-capability-ladder-ko.svg)
+![일러스트: 여섯 단의 빛나는 계단. 프롬프트 한 장의 메모에서 Skill 폴더, 서브에이전트, MCP 연결, Hook 가드 게이트를 거쳐 팀에 배포되고 정기 실행되는 역량 패키지까지](/illustrations/skills-capability-ladder.webp)
 
 ## 권장 순서
 

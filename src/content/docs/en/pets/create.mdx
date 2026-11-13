@@ -15,14 +15,12 @@ verification:
   summary: "We added boundaries for file formats and recovery, but have not tested installation, animation playback, or removal with a specific client and pet package. Check directories and menus against the target version."
 ---
 
-import PetScienceFigure from '/src/components/PetScienceFigure.astro';
-
 This site has not completed compatibility tests for a specific client and pet package. Record their versions and sources first, then use the [compatibility and recovery record](/en/guide/reference/resource-compatibility/) to check actual results. The illustration explains the structure; it is not a file-format contract for every version.
 
 
 Creating a Codex Pet is not just making a nice image. The goal is to produce a package that Codex can identify, load, animate, and switch between states. Think of it as metadata plus an animation atlas plus source and license notes.
 
-<PetScienceFigure variant="spritesheet" locale="en" />
+![Illustration: the pet-making workflow from a hand-drawn sketch to grid alignment, a sprite sheet and a finished pet folder](/illustrations/pets-create.webp)
 
 The smallest common structure is:
 
@@ -33,6 +31,8 @@ The smallest common structure is:
 ```
 
 ## What a Spritesheet Is
+
+![Illustration: a sprite sheet with actions in rows, one frame cut out into a film strip and played on a screen](/illustrations/pets-spritesheet.webp)
 
 A spritesheet combines many animation frames into one larger image. The client does not need to load dozens of small files; it crops frames from the larger image by row and column, then plays them in sequence.
 

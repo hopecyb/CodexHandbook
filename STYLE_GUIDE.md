@@ -93,7 +93,7 @@
 
 每张图必须解释正文中的一种关系：流程、层级、选择、状态变化、组件关系或对比。纯装饰图不计入教学图示。
 
-- 站点图示放在 `public/diagrams/`，可编辑源稿放在 `docs/visual-sources/`。
+- 站点插画放在 `public/illustrations/`（无文字 AI 插画，所有语言共用，替代文字逐语言撰写），画风与提示词见 `docs/planning/illustration-prompt-guide.md`；需要精确文字的示意图另行评估，不再使用带文字的 SVG。
 - 文件名使用有意义的英文 kebab-case，并以语言后缀结尾，如 `task-execution-loop-zh-cn.svg`。
 - SVG 必须包含 `<title>`、`<desc>`、`role="img"` 和稳定 `viewBox`。
 - 正文必须提供准确 alt 文本；复杂图再补一段文字说明，不能让关键信息只存在于图片里。

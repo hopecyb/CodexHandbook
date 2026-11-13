@@ -14,7 +14,7 @@ legacyVerification:
 ---
 Los Hooks ejecutan scripts de comandos o herramientas de servidores MCP conectados dentro del ciclo del Agent de Codex. Entre sus usos habituales están detectar secretos en prompts, aplicar políticas a llamadas de herramientas, registrar auditorías, resumir sesiones y verificar antes de detenerse.
 
-![Ciclo de vida de los Hooks de Codex en sesiones, turnos, llamadas a herramientas, compactación y subagents](/diagrams/hook-lifecycle-events-es.svg)
+![Ciclo de vida de los Hooks de Codex en sesiones, turnos, llamadas a herramientas, compactación y subagents](/illustrations/flow-hook-lifecycle.webp)
 
 La distinción más importante es que `PreToolUse` puede rechazar o reescribir la entrada de herramientas locales compatibles antes de ejecutarlas. `PostToolUse` se ejecuta después y no puede deshacer los efectos secundarios.
 

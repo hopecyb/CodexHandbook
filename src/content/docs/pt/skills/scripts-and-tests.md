@@ -21,6 +21,8 @@ Ações fixas vão para script; julgamento e colaboração ficam no Skill.
 
 Quando um passo deve ser determinístico (rodar testes, gerar diff, validar formato), coloque o script em `scripts/` e diga em `SKILL.md` quando chamá-lo.
 
+![Ilustração: um assistente entrega uma etapa repetitiva a uma máquina (um script determinístico) cuja saída passa por um ponto de teste — luzes verdes aprovadas e uma vermelha sendo consertada](/illustrations/skills-scripts.webp)
+
 ## Exemplo
 
 ```text

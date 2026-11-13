@@ -21,6 +21,8 @@ Trang này giải thích cách tách “quy trình chính, mô tả dài, templa
 Như vậy dễ đọc, sửa và tái dùng hơn, cũng ít bị viết càng lúc càng loạn.
 
 
+![Minh họa: một thư mục mở ra như tủ nhiều lớp, thẻ hướng dẫn chính ở trên và các ngăn tài liệu tham khảo, mẫu và script bên dưới; trợ lý chỉ tải lớp cần dùng](/illustrations/skills-anatomy.webp)
+
 ## Cấu trúc thư mục
 
 ```text

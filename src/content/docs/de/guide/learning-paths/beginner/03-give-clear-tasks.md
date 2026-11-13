@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Die festen Materialien und die Autorenreferenz sind vollständig; Dateivorgänge wurden in einem temporären Verzeichnis ausgeführt. Ein unabhängiger Test mit einem Modell oder Lernenden steht noch aus."
-  evidence:
-    - label: "Dateioperationsprotokoll des Autors"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/de/guide/learning-paths/beginner/02-work-with-files/"
   label: "Mit Dateien arbeiten"

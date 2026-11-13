@@ -9,7 +9,7 @@ description: 选择独立任务或聊天内任务，配置本地项目、worktre
 
 定时任务真正困难的部分不是“几点运行”，而是让每次无人值守运行都有稳定输入、窄权限、可审查输出和停止条件。
 
-![从手动验证到定时运行、人工复核和调整的安全闭环](/diagrams/scheduled-task-safety-loop-zh-cn.svg)
+![从手动验证到定时运行、人工复核和调整的安全闭环](/illustrations/flow-scheduled-safety.webp)
 
 ## 适合谁
 

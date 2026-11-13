@@ -15,6 +15,8 @@ reviewed_at: 2026-10-25
 
 «La herramienta MCP no funciona» oculta varias capas posibles de fallo. Identifica primero la capa y cambia después una sola variable.
 
+![Ilustración: un corte transparente de cuatro capas —configuración, transporte, autenticación y herramientas— con un asistente que revisa cada capa con una linterna mientras se repara una tubería rota](/illustrations/mcp-debugging.webp)
+
 ## Conservar cuatro evidencias
 
 ```bash

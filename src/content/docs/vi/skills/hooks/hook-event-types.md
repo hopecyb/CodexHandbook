@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Khi chọn Hook, câu hỏi đầu tiên không phải “viết script thế nào” mà là “xử lý trước hay sau khi tác dụng phụ xảy ra”. Đặt sai điểm sự kiện thì dù script hoàn thiện đến đâu, nó cũng có thể chỉ báo cáo được sau sự việc.
 
-![Vòng đời Codex Hook và các sự kiện quan trọng](/diagrams/hook-lifecycle-events-vi.svg)
+![Vòng đời Codex Hook và các sự kiện quan trọng](/illustrations/flow-hook-lifecycle.webp)
 
 ## Danh sách sự kiện hiện tại
 

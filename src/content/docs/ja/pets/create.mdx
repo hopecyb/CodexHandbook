@@ -15,14 +15,12 @@ verification:
 reviewed_at: '2026-10-26'
 ---
 
-import PetScienceFigure from '/src/components/PetScienceFigure.astro';
-
 このサイトでは、特定のクライアントとPetパッケージの互換性をまだ確認していません。まずバージョンと入手元を記録し、[互換性と復旧の記録](/ja/guide/reference/resource-compatibility/)で実際の結果を確かめてください。図は構造を説明するだけで、すべてのバージョンに共通する形式の仕様ではありません。
 
 
 Codex Pet の作成は、単に見栄えのよい画像を作ることではありません。Codex が識別し、読み込み、再生し、状態を切り替えられるパッケージを作ることが目的です。「メタデータ + アニメーションアトラス + 出所とライセンス情報」の組み合わせとして考えると分かりやすいです。
 
-<PetScienceFigure variant="spritesheet" locale="ja" />
+![イラスト：手描きのスケッチからグリッド整列、スプライトシート、ペットフォルダーの完成までの制作の流れ](/illustrations/pets-create.webp)
 
 最小構成は通常次のとおりです。
 
@@ -33,6 +31,8 @@ Codex Pet の作成は、単に見栄えのよい画像を作ることではあ�
 ```
 
 ## spritesheet とは
+
+![イラスト：行ごとに動作を並べたスプライトシートから 1 コマを切り出し、フィルムにして画面で再生する](/illustrations/pets-spritesheet.webp)
 
 Spritesheet は、複数のアニメーションフレームを一枚の大きな画像にまとめる方式です。クライアントは多数の小さな画像を読み込む必要がなく、行と列の座標で各フレームを切り出し、順番に再生します。
 

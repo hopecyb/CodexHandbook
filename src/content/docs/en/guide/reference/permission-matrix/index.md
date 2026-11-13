@@ -17,7 +17,7 @@ legacyVerification:
 
 Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
 
-![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-en.svg)
+![Decision flow between sandbox enforcement, human approval, and the executed result](/illustrations/flow-sandbox-approval.webp)
 
 ## Three mechanisms to separate
 

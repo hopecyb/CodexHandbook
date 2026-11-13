@@ -18,7 +18,7 @@ legacyVerification:
 
 **子 Agent（Subagent）** は、主 Agent が明確なサブ問題のために起動する独立した作業単位です。子 Agent はそれぞれ独自のコンテキストを持ち、完了すると結論と証拠をメインスレッドへ返します。全体に関わる判断と最終検収は、引き続き主 Agent が担います。
 
-![Codex の子 Agent オーケストレーション構成：主 Agent が境界の明確なサブタスクを委任し、子 Agent が証拠を返し、主 Agent が集約して検証する](/diagrams/subagent-orchestration-ja.svg)
+![Codex の子 Agent オーケストレーション構成：主 Agent が境界の明確なサブタスクを委任し、子 Agent が証拠を返し、主 Agent が集約して検証する](/illustrations/flow-subagents.webp)
 
 ## まず三つの層の関係を理解する
 

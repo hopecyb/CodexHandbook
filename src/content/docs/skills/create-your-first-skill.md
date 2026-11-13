@@ -12,6 +12,8 @@ description: 从零做一个可提交的 pr-review Skill，含测试与团队共
 
 用 15–30 分钟做一个**能在仓库里复用**的 Skill，通常比先读大量理论更直接。比较好的起点，是一个边界很清楚的小 Skill。
 
+![插画：小助手在工作台上像拼装套件一样做出第一个 Skill——放入指令卡、用放大镜检查 diff、勾选清单、给完成的文件夹插上小旗](/illustrations/skills-first-skill.webp)
+
 ## 适合谁
 
 已能跑通 [首个任务](/cases/first-task/)，并愿意在测试仓库里试验。

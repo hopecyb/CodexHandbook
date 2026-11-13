@@ -21,6 +21,8 @@ Actions fixes → script ; jugement et collaboration → Skill.
 
 Si une étape doit s'exécuter de façon déterministe (tests, diff, format), placez un script dans `scripts/` et documentez dans `SKILL.md` quand l'appeler.
 
+![Illustration : un assistant confie une étape répétitive à une machine mécanique (un script déterministe) dont la sortie passe un point de test — voyants verts validés, un voyant rouge en cours de réparation](/illustrations/skills-scripts.webp)
+
 ## Exemple
 
 ```text

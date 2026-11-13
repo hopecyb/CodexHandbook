@@ -15,7 +15,7 @@ reviewed_at: "2026-10-26"
 
 Hook を選ぶときの最初の問いは「スクリプトをどう書くか」ではなく、「副作用が起きる前と後のどちらで処理するか」です。イベントを選び間違えると、どれだけ優れたスクリプトでも事後報告しかできません。
 
-![Codex Hook のライフサイクルと主なイベント](/diagrams/hook-lifecycle-events-ja.svg)
+![Codex Hook のライフサイクルと主なイベント](/illustrations/flow-hook-lifecycle.webp)
 
 ## 現在のイベント一覧
 

@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Die festen Materialien und die Autorenreferenz wurden ergänzt; das Skript für Dateioperationen in einem temporären Verzeichnis wurde ausgeführt. Unabhängige Tests mit Modell oder Lesern stehen noch aus.
-  evidence:
-  - label: Dateioperationsprotokoll des Autors
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /de/guide/learning-paths/beginner/04-review-results/
   label: Ergebnisse prüfen
@@ -51,8 +48,6 @@ Zur Abgabe gehören die endgültige notice.md, die ursprüngliche facts.md, dein
 ## Wann ist die Aufgabe abgeschlossen?
 
 Die Mitteilung beruht auf Fakten und erfindet keine unbekannten Angaben; der Änderungsumfang stimmt; Fehler im mangelhaften Beispiel sind erkannt; die Wiederherstellung wurde tatsächlich durchgeführt und protokolliert; anhand der Übergabe können andere Grundlagen und offene Punkte finden. Allein „drei Aufgaben erfolgreich“ zu schreiben, belegt keinen Abschluss.
-
-Das [Validierungsprotokoll der Dateioperationen](/downloads/first-project/validation/record.json) und das [Reproduktionsskript](/downloads/first-project/validation/reproduce.py) des Autors belegen nur den Referenzablauf für Kopie und Wiederherstellung in einem temporären Verzeichnis. Die Hauptübung benötigt kein Python, und diese Unterlagen ersetzen deine eigene Durchführung nicht.
 
 Weiter mit dem [wöchentlichen Verkaufsbericht](/de/cases/analyze-a-spreadsheet/) oder dem [Creator-Pfad](/de/guide/learning-paths/creator/).
 

@@ -21,6 +21,8 @@ Cette page explique comment séparer **flux principal, longue doc, modèles, scr
 Plus lisible, modifiable et réutilisable.
 
 
+![Illustration : un dossier ouvert comme un meuble à tiroirs, avec la carte d'instructions principale au-dessus et des tiroirs de références, modèles et scripts, l'assistant ne chargeant que la couche utile](/illustrations/skills-anatomy.webp)
+
 ## Structure
 
 ```text

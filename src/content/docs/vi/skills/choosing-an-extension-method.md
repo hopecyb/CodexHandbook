@@ -29,7 +29,7 @@ Cùng là “mở rộng Codex”, đôi khi một lời nhắc là đủ; chỉ
 
 ## Sơ đồ lựa chọn
 
-![Sơ đồ chọn phương thức mở rộng Codex](/diagrams/extension-selection-map-vi.svg)
+![Sơ đồ chọn phương thức mở rộng Codex](/illustrations/map-extension-selection.webp)
 
 Đây không phải cây quyết định với các lựa chọn loại trừ lẫn nhau. Một quy trình đã hoàn thiện có thể dùng đồng thời `AGENTS.md`, Skill và MCP. Sơ đồ giúp tránh giao cho một cơ chế trách nhiệm mà nó không phù hợp.
 

@@ -48,7 +48,7 @@ Phạm vi quyền hạn: …… (có được truy cập mạng, cài phụ thu�
 Khi thiếu thông tin: hỏi trước, đừng đoán.
 ```
 
-![Vòng lặp từ bản mô tả tác vụ đến kết quả có thể kiểm chứng](/diagrams/task-execution-loop-vi.svg)
+![Vòng lặp từ bản mô tả tác vụ đến kết quả có thể kiểm chứng](/illustrations/flow-task-loop.webp)
 
 Sáu mục bên trái sơ đồ không nhằm kéo dài câu lệnh, mà nhằm giảm bớt những khoảng trống quan trọng. Khi tác vụ bước vào giai đoạn thực hiện, bằng chứng kiểm chứng sẽ quyết định bước tiếp theo: chỉ bàn giao khi đạt yêu cầu; nếu chưa đạt, mang thông tin về lỗi quay lại bản mô tả tác vụ hoặc kế hoạch, thay vì tiếp tục sửa mò.
 

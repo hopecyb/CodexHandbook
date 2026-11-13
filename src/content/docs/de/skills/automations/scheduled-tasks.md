@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Die eigentliche Schwierigkeit einer Scheduled task liegt nicht in der Uhrzeit. Jeder unbeaufsichtigte Lauf braucht stabile Eingaben, enge Berechtigungen, prüfbare Ausgaben und Abbruchbedingungen.
 
-![Sicherheitszyklus von manueller Verifikation über geplante Ausführung und menschliches Review bis zur Anpassung](/diagrams/scheduled-task-safety-loop-de.svg)
+![Sicherheitszyklus von manueller Verifikation über geplante Ausführung und menschliches Review bis zur Anpassung](/illustrations/flow-scheduled-safety.webp)
 
 ## Zielgruppe
 

@@ -15,7 +15,7 @@ reviewed_at: 2026-10-25
 
 Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
 
-![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-en.svg)
+![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/illustrations/flow-hook-lifecycle.webp)
 
 The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
 

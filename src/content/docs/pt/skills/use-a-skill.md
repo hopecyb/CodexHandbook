@@ -19,6 +19,8 @@ Quem começa com Skill costuma achar que «depois de instalar, ele ativa sozinho
 O Skill pode ser chamado por você de forma **explícita**, ou **escolhido automaticamente** pelo modelo em cenários adequados. Separar esses dois disparos evita muita confusão na investigação.
 
 
+![Ilustração: duas formas de chamar um skill lado a lado — à esquerda uma mão aponta direto para uma caixa (chamada explícita), à direita o assistente lê as etiquetas e escolhe a certa (acionamento implícito)](/illustrations/skills-trigger.webp)
+
 ## Formas de disparo
 
 1. **Explícito**: em ambientes com suporte, chame com `$skill-name` (nome igual ao `name` do frontmatter)

@@ -11,6 +11,8 @@ description: 用真实 hooks.json 和标准库 Python 脚本实现可测试的 P
 
 完整文件位于 [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard)。
 
+![插画：工具调用路上的发光闸门，扫描器放行安全命令走绿色通道，危险命令被红色屏障拦下，旁边的测试面板亮着绿灯](/illustrations/hooks-guardrail.webp)
+
 ## 目标与边界
 
 目标：当 `Bash` 或 `apply_patch` 的命令输入出现形似 AWS Access Key ID 的测试串时，在工具执行前拒绝。

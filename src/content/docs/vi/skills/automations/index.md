@@ -15,6 +15,8 @@ reviewed_at: 2026-10-26
 
 Scheduled task (tác vụ theo lịch) cho phép ChatGPT lặp lại công việc ở chế độ nền theo một lịch định trước. Nó phù hợp với báo cáo định kỳ, theo dõi liên tục và công việc bảo trì lặp lại. Nó không phải webhook dùng chung, sự kiện của kho mã hay hệ thống CI.
 
+![Minh họa: băng chuyền vòng dưới chiếc đồng hồ và lịch lớn — thẻ nhiệm vụ đã kiểm chứng chạy theo lịch và tạo báo cáo, người duyệt xem rồi đồng ý và có thể tạm dừng bất cứ lúc nào](/illustrations/automations-schedule.webp)
+
 ## Trước tiên, xem có phù hợp không
 
 | Phù hợp | Không phù hợp |

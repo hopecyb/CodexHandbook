@@ -20,7 +20,7 @@ Trang này bắt đầu bằng một sơ đồ tổng thể: lời nhắc và `A
 
 ## Kiến trúc hệ thống
 
-![Kiến trúc hệ thống làm việc có thể tái sử dụng của Codex](/diagrams/codex-work-system-architecture-vi.svg)
+![Kiến trúc hệ thống làm việc có thể tái sử dụng của Codex](/illustrations/arch-work-system.webp)
 
 Khi đọc sơ đồ, hãy chú ý ba điểm:
 

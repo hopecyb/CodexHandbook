@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: The fixed materials and author reference are complete; the temporary-directory file-operation script was run, but independent model and reader completion tests have not been performed.
-  evidence:
-  - label: Author file-operation record
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /en/guide/learning-paths/beginner/04-review-results/
   label: Review results
@@ -51,8 +48,6 @@ Deliver the final notice.md, original facts.md, your own review.md and handoff.m
 ## What counts as complete
 
 The notice is based on facts and does not invent unknowns; the scope of changes is correct; you have identified the errors in the faulty sample; you actually performed and recorded the recovery drill; and the handoff lets another person find the sources and open questions. Writing only “three tasks succeeded” does not prove completion.
-
-The author’s [file-operation validation record](/downloads/first-project/validation/record.json) and [reproduction script](/downloads/first-project/validation/reproduce.py) prove only the reference copying and recovery process in a temporary directory. The main exercise does not require Python, and these records do not replace your own work.
 
 Continue with the [weekly sales report](/en/cases/analyze-a-spreadsheet/) or [creator path](/en/guide/learning-paths/creator/).
 

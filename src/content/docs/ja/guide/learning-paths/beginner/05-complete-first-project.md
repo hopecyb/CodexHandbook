@@ -12,9 +12,6 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: 固定資料と筆者の参考資料を整え、一時ディレクトリでファイル操作スクリプトを実行した。モデルや読者による独立した完了テストはまだ行っていない。
-  evidence:
-  - label: 筆者のファイル操作記録
-    href: /downloads/first-project/validation/record.json
 prev:
   link: /ja/guide/learning-paths/beginner/04-review-results/
   label: 結果をレビューする
@@ -51,8 +48,6 @@ reviewed_at: "2026-10-26"
 ## 完了の判断基準
 
 通知は事実に基づき、不明なことを作り上げていない。変更範囲は正しく、誤りのある例を見つけ、復元演習を実際に行って記録し、引き継ぎから第三者が根拠と未解決事項をたどれる。「3 つのタスクが成功した」と書くだけでは完了の証拠にならない。
-
-筆者の[ファイル操作の検証記録](/downloads/first-project/validation/record.json)と[再現スクリプト](/downloads/first-project/validation/reproduce.py)が証明するのは、一時ディレクトリでの参考用コピーと復元の手順だけである。主な演習に Python は不要であり、これらの記録は自分の実際の作業の代わりにはならない。
 
 次は[売上週報](/ja/cases/analyze-a-spreadsheet/)または[クリエイターパス](/ja/guide/learning-paths/creator/)へ進む。
 

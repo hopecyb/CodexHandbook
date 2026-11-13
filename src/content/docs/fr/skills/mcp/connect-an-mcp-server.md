@@ -15,6 +15,8 @@ reviewed_at: '2026-10-26'
 
 Ce chapitre suit les interfaces officielles actuelles pour réaliser un premier cycle complet : **ajouter le serveur → consulter sa configuration → confirmer les outils dans une session → faire un appel en lecture seule**.
 
+![Illustration : un assistant branche un connecteur sur un serveur, l'autorisation allume le voyant vert, puis une requête de test part par le câble vers une base de données et revient avec un résultat](/illustrations/mcp-connect.webp)
+
 ## Avant de commencer
 
 - Lisez la [présentation de MCP](/fr/skills/mcp/mcp-overview/).

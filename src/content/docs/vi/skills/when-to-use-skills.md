@@ -19,6 +19,8 @@ Khi mới làm quen Skill, câu hỏi thường gặp là: việc này có đán
 Nếu cái gì cũng thành Skill, hệ thống ngày càng nặng; nếu không lưu lại những quy trình đáng tái sử dụng, bạn sẽ phải liên tục hướng dẫn lại cùng một việc. Phần này giúp bạn quyết khi nào nên cố định quy trình.
 
 
+![Minh họa: băng chuyền đưa thẻ nhiệm vụ đến ngã rẽ — việc lặp lại, rõ ràng, nhiều bước vào hộp công cụ phát sáng, việc một lần, mơ hồ vào bong bóng chat thường](/illustrations/skills-when.webp)
+
 ## Phù hợp đóng thành Skill
 
 - Cùng một quy trình đã bị lặp thủ công lần thứ ba

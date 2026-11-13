@@ -21,6 +21,8 @@ Hành động cố định giao cho script; phán đoán và quy trình cộng t
 
 Khi một bước phải chạy xác định (chạy test, sinh diff, kiểm tra định dạng), hãy cung cấp script trong `scripts/` và nói rõ trong `SKILL.md` khi nào gọi.
 
+![Minh họa: trợ lý giao một bước lặp lại cho một cỗ máy (script xác định), đầu ra đi qua trạm kiểm thử — đèn xanh đạt, một đèn đỏ đang được sửa](/illustrations/skills-scripts.webp)
+
 ## Ví dụ
 
 ```text

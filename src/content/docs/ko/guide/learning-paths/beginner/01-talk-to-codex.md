@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "고정 자료와 작성자 참고 자료는 준비되었습니다. 임시 디렉터리에서 파일 작업 스크립트를 실행했지만, 독립적인 모델 또는 독자 완료 테스트는 아직 하지 않았습니다."
-  evidence:
-    - label: "작성자의 파일 작업 기록"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/ko/guide/learning-paths/beginner/"
   label: "초보자 학습 경로와 자료"

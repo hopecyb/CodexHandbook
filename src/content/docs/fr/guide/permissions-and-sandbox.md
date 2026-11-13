@@ -18,7 +18,7 @@ legacyVerification:
 
 Pour utiliser Codex en toute sécurité, il faut distinguer deux niveaux de contrôle : **le bac à sable détermine la portée technique maximale, tandis que la politique d'approbation détermine si Codex doit vous consulter avant de franchir la limite actuelle.**
 
-![Flux du bac à sable et des approbations Codex : une action rencontre la limite du bac à sable, demande une approbation humaine pour la franchir, puis produit des preuves de vérification](/diagrams/sandbox-approval-flow-fr.svg)
+![Flux du bac à sable et des approbations Codex : une action rencontre la limite du bac à sable, demande une approbation humaine pour la franchir, puis produit des preuves de vérification](/illustrations/flow-sandbox-approval.webp)
 
 ## Retenir cette distinction
 

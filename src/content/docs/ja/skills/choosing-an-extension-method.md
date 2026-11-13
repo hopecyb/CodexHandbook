@@ -29,7 +29,7 @@ legacyVerification:
 
 ## 選択図
 
-![Codex の拡張方式の選択図](/diagrams/extension-selection-map-ja.svg)
+![Codex の拡張方式の選択図](/illustrations/map-extension-selection.webp)
 
 これは排他的な決定木ではありません。成熟したワークフローでは `AGENTS.md`、Skill、MCP を同時に使うこともあります。この図の目的は、各方式に得意でない責務を負わせないことです。
 

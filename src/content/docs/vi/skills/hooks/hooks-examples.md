@@ -17,6 +17,8 @@ Chương này đã loại bỏ tên sự kiện và trường cấu hình minh h
 
 Các tệp đầy đủ nằm tại [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
+![Minh họa: một cổng phát sáng chắn đường gọi công cụ — máy quét cho lệnh an toàn đi làn xanh, rào đỏ chặn lệnh nguy hiểm, bên cạnh là bảng kiểm thử sáng đèn xanh](/illustrations/hooks-guardrail.webp)
+
 ## Mục tiêu và ranh giới
 
 Mục tiêu: khi đầu vào lệnh của `Bash` hoặc `apply_patch` chứa một chuỗi thử nghiệm trông giống AWS Access Key ID, từ chối trước khi công cụ chạy.

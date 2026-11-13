@@ -17,7 +17,7 @@ reviewed_at: 2026-10-26
 
 Đừng dùng một bảng cố định kiểu “App/CLI/IDE/Cloud có hiện hộp thoại hay không” để đoán quyền. Hành vi thực tế do nơi thực thi, cấu hình có hiệu lực, yêu cầu của tổ chức, hệ điều hành và thao tác cụ thể cùng quyết định.
 
-![Luồng quyết định giữa việc sandbox chặn thao tác, con người phê duyệt và kết quả thực thi](/diagrams/sandbox-approval-flow-vi.svg)
+![Luồng quyết định giữa việc sandbox chặn thao tác, con người phê duyệt và kết quả thực thi](/illustrations/flow-sandbox-approval.webp)
 
 ## Trước tiên phân biệt ba cơ chế
 

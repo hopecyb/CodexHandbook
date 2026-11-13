@@ -18,7 +18,7 @@ sidebar:
 
 When choosing a Codex entry point for the first time, do not compare dozens of features. Answer one question first: **where does this work mainly happen?**
 
-![Codex client-selection diagram: choose the desktop App, CLI, IDE integration, or Cloud from the work location](/diagrams/codex-client-selection-en.svg)
+![Codex client-selection diagram: choose the desktop App, CLI, IDE integration, or Cloud from the work location](/illustrations/flow-client-selection.webp)
 
 ## Decide in 30 seconds
 

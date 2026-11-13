@@ -12,9 +12,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "Đã bổ sung tài liệu cố định và bản tham khảo của tác giả; script thao tác tệp trong thư mục tạm đã được chạy, nhưng chưa kiểm thử mô hình hoặc người đọc tự hoàn thành."
-  evidence:
-    - label: "Biên bản thao tác tệp của tác giả"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/vi/guide/learning-paths/beginner/04-review-results/"
   label: "Xem xét kết quả"
@@ -51,8 +48,6 @@ Bàn giao gồm notice.md cuối cùng, facts.md gốc, review.md và handoff.md
 ## Thế nào là hoàn thành
 
 Thông báo có căn cứ và không bịa điều chưa biết; phạm vi sửa đúng; đã xác định lỗi trong mẫu sai; đã thực sự thực hiện và ghi lại bài tập khôi phục; nội dung bàn giao giúp người khác tìm lại căn cứ và việc còn bỏ ngỏ. Chỉ viết “ba tác vụ thành công” chưa đủ chứng minh hoàn thành.
-
-[Biên bản xác minh thao tác tệp](/downloads/first-project/validation/record.json) và [script tái hiện](/downloads/first-project/validation/reproduce.py) của tác giả chỉ chứng minh quy trình sao chép, khôi phục tham khảo trong thư mục tạm. Bài tập chính không cần Python; các tài liệu đó cũng không thay thế thao tác thực tế của bạn.
 
 Tiếp tục với [báo cáo bán hàng hằng tuần](/vi/cases/analyze-a-spreadsheet/) hoặc [lộ trình người sáng tạo](/vi/guide/learning-paths/creator/).
 

@@ -20,7 +20,7 @@ reviewed_at: '2026-10-26'
 
 ## 시스템 구조
 
-![재사용 가능한 Codex 작업 체계 구조](/diagrams/codex-work-system-architecture-ko.svg)
+![재사용 가능한 Codex 작업 체계 구조](/illustrations/arch-work-system.webp)
 
 그림에서 세 가지를 확인하세요.
 

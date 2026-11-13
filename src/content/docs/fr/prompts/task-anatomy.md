@@ -48,7 +48,7 @@ Limites de permission : … (accès à Internet, installation de dépendances, m
 Si des informations manquent : poser une question d’abord, sans deviner.
 ```
 
-![De la description de tâche à un résultat vérifiable](/diagrams/task-execution-loop-fr.svg)
+![De la description de tâche à un résultat vérifiable](/illustrations/flow-task-loop.webp)
 
 Les six éléments à gauche du schéma ne servent pas à allonger le prompt, mais à réduire les lacunes importantes. Une fois la tâche lancée, les preuves de vérification déterminent la suite : livrer si elle réussit ; sinon, revenir à la demande ou au plan avec les éléments de l’échec, au lieu de modifier à l’aveugle.
 

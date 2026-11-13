@@ -16,12 +16,9 @@ verification:
   kind: editorial
   checkedAt: '2026-09-18'
   summary: Six file operations in a temporary directory passed validation; model output, reader time, and independent completion have not yet been tested.
-  evidence:
-  - label: File operation validation record
-    href: /downloads/first-project/validation/record.json
 assets:
 - path: /downloads/first-project/first-project-1.0.0.zip
-  purpose: Three starter files, author reference, faulty sample, two fill-in templates, and recovery validation record
+  purpose: Three starter files, author reference, faulty sample, and two fill-in templates
   license: CC0-1.0
   version: 1.0.0
 locale: en

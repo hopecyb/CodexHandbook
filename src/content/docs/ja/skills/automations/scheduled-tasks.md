@@ -15,7 +15,7 @@ legacyVerification:
 
 Scheduled task で本当に難しいのは「何時に実行するか」ではありません。無人実行のたびに、安定した入力、狭い権限、レビュー可能な出力、停止条件をそろえることです。
 
-![手動検証から定期実行、人的レビュー、調整までの安全な循環](/diagrams/scheduled-task-safety-loop-ja.svg)
+![手動検証から定期実行、人的レビュー、調整までの安全な循環](/illustrations/flow-scheduled-safety.webp)
 
 ## 対象読者
 

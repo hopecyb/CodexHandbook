@@ -18,7 +18,7 @@ reviewed_at: '2026-10-26'
 
 **서브 에이전트(Subagent)**는 주 Agent가 명확한 하위 문제 하나를 위해 시작하는 독립적인 작업 단위입니다. 자체 컨텍스트에서 작업하고 완료 후 결론과 근거를 주 스레드에 돌려줍니다. 전체적인 결정과 최종 검수 책임은 여전히 주 Agent에게 있습니다.
 
-![Codex 서브 에이전트 구성: 주 Agent가 범위가 명확한 하위 작업을 나누고, 서브 에이전트가 근거를 반환하며, 주 Agent가 이를 종합하고 검증합니다](/diagrams/subagent-orchestration-ko.svg)
+![Codex 서브 에이전트 구성: 주 Agent가 범위가 명확한 하위 작업을 나누고, 서브 에이전트가 근거를 반환하며, 주 Agent가 이를 종합하고 검증합니다](/illustrations/flow-subagents.webp)
 
 ## 먼저 세 가지 관계 이해하기
 

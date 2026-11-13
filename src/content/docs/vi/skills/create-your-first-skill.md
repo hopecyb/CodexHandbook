@@ -18,6 +18,8 @@ Nếu bạn đã biết giao Tác vụ nhưng chưa từng làm Skill thật, tr
 
 Dành 15–30 phút làm một Skill **tái dùng được trong repo** thường thẳng hơn đọc nhiều lý thuyết trước. Điểm bắt đầu tốt là một Skill nhỏ có ranh giới rõ.
 
+![Minh họa: một trợ lý nhỏ lắp ráp Skill đầu tiên trên bàn làm việc — đặt thẻ hướng dẫn, dùng kính lúp xem diff, đánh dấu danh sách và cắm cờ lên thư mục hoàn chỉnh](/illustrations/skills-first-skill.webp)
+
 ## Phù hợp với ai
 
 Đã chạy thành công [Tác vụ đầu tiên](/vi/cases/first-task/) và sẵn sàng thử trong repo kiểm thử.

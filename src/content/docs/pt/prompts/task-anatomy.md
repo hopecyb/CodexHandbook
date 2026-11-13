@@ -48,7 +48,7 @@ Limites de permissão: … (pode acessar a internet, instalar dependências ou a
 Se faltarem informações: pergunte antes, não adivinhe.
 ```
 
-![Ciclo da descrição da tarefa até um resultado verificável](/diagrams/task-execution-loop-pt.svg)
+![Ciclo da descrição da tarefa até um resultado verificável](/illustrations/flow-task-loop.webp)
 
 Os seis itens à esquerda do diagrama não existem para alongar o prompt, mas para eliminar lacunas essenciais. Depois que a tarefa entra em execução, a evidência da verificação determina o próximo passo: entregue somente se passar; se falhar, leve as informações da falha de volta à descrição da tarefa ou ao plano, em vez de continuar editando às cegas.
 

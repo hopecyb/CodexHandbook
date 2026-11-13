@@ -11,9 +11,6 @@ verification:
   kind: "editorial"
   checkedAt: "2026-09-18"
   summary: "固定教材と著者の参照資料はそろっています。一時ディレクトリでのファイル操作は実行済みですが、独立したモデルによる試行や読者の完了テストはまだ行っていません。"
-  evidence:
-    - label: "著者によるファイル操作記録"
-      href: "/downloads/first-project/validation/record.json"
 prev:
   link: "/ja/guide/learning-paths/beginner/02-work-with-files/"
   label: "ファイルを扱う"

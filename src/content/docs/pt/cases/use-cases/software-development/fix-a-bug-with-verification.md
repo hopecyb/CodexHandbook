@@ -46,7 +46,7 @@ Isto não é um modelo de prompt que se completa apenas trocando nomes de arquiv
 
 **Fora do escopo:** bibliotecas de precisão monetária, impostos, conversão de moedas, atualização de dependências e interface de usuário.
 
-![Fluxo de correção de bug com verificação](/diagrams/verified-bug-fix-workflow-pt.svg)
+![Fluxo de correção de bug com verificação](/illustrations/flow-bug-fix.webp)
 
 Os dois caminhos de retorno do diagrama são os mais importantes: se o teste relacionado falhar, volte à correção mínima; se a regressão completa ou a revisão do diff falhar, volte à análise da causa raiz. Não remova asserções nem amplie a alteração apenas para obter testes verdes mais rápido.
 

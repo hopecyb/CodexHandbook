@@ -15,7 +15,7 @@ reviewed_at: 2026-10-26
 
 Mit Hooks kannst du Befehlsskripte oder Werkzeuge verbundener MCP-Server innerhalb der Agent-Schleife von Codex ausführen. Typische Zwecke sind die Erkennung von Zugangsdaten im Prompt, Richtlinien für Werkzeugaufrufe, Auditprotokolle, Sitzungszusammenfassungen und Verifikation vor dem Ende.
 
-![Lebenszyklus eines Codex-Hooks mit Ereignissen für Sitzung, Aufgabenrunde, Werkzeugaufruf, Komprimierung und Subagent](/diagrams/hook-lifecycle-events-de.svg)
+![Lebenszyklus eines Codex-Hooks mit Ereignissen für Sitzung, Aufgabenrunde, Werkzeugaufruf, Komprimierung und Subagent](/illustrations/flow-hook-lifecycle.webp)
 
 Der wichtigste Unterschied in der Grafik: `PreToolUse` kann die Eingabe eines unterstützten lokalen Werkzeugs vor der Ausführung ablehnen oder ändern. `PostToolUse` tritt erst nach dem Werkzeugende auf und kann entstandene Nebenwirkungen nicht rückgängig machen.
 

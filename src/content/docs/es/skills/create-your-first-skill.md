@@ -18,6 +18,8 @@ Si ya sabes asignar tareas pero aún no has hecho un Skill de verdad, esta pági
 
 Dedicar 15–30 minutos a un Skill **reutilizable en el repositorio** suele ser más directo que leer mucha teoría. Un buen punto de partida es un Skill pequeño con límites claros.
 
+![Ilustración: un pequeño asistente arma su primer Skill en un banco de trabajo: guarda la tarjeta de instrucciones, revisa un diff con una lupa, marca una lista y pone una bandera en la carpeta terminada](/illustrations/skills-first-skill.webp)
+
 ## Para quién
 
 Ya puedes completar la [primera tarea](/es/cases/first-task/) y estás dispuesto a experimentar en un repositorio de prueba.

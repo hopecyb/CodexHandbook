@@ -19,6 +19,8 @@ Un malentendido habitual al empezar es pensar: «una vez instalado, ya funciona 
 Un Skill puede invocarse **por nombre explícito** o, en el escenario adecuado, ser **elegido automáticamente** por el modelo. Distinguir ambas formas de activación evita rodeos al depurar.
 
 
+![Ilustración: dos formas de invocar un skill, lado a lado: a la izquierda una mano señala directamente una caja (invocación explícita), a la derecha el asistente lee las etiquetas y elige la adecuada (activación implícita)](/illustrations/skills-trigger.webp)
+
 ## Formas de activación
 
 1. **Explícita**: en entornos compatibles, llama con `$skill-name` (coincide con el `name` del frontmatter)
