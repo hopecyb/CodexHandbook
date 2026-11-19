@@ -7,7 +7,7 @@ title: Hook のイベント種類
 description: セッション、ターン、ツール呼び出し、コンテキスト圧縮、サブエージェントのライフサイクルに応じてイベントを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: "07f4965"
+source_revision: '68a5b0e'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: "2026-10-26"

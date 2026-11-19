@@ -3,7 +3,7 @@ title: "Cuộc trò chuyện và Agent chạy song song"
 description: "Dùng cuộc trò chuyện và worktree riêng để thực hiện đồng thời những tác vụ độc lập có thể nghiệm thu riêng."
 locale: "vi"
 source_locale: "zh-CN"
-source_revision: "2336db1"
+source_revision: 'a028309'
 translation_status: "reviewed"
 translated_at: "2026-09-20"
 sidebar:

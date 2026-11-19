@@ -4,10 +4,10 @@ legacyVerification:
   basis: "Mit dem aktuellen Statussystem des Handbuchs, mehreren abgeschlossenen Prüfrunden und dem Vorrang offizieller Quellen abgeglichen. Diese Seite beschreibt interne Standards für die Einstufung als `verified` und für eine Herabstufung."
   checkedAt: "2026-07-26"
 title: Technische Inhalte prüfen
-description: Redaktionellen Status, Quellenabgleich und Probeläufe unterscheiden; Umfang, Umgebung und Prüfbelege dokumentieren.
+description: Technische Fakten prüfen, Schritte reproduzieren und Geltungsbereich sowie Belege festhalten.
 locale: de
 source_locale: zh-CN
-source_revision: "cfb077d"
+source_revision: '7fba563'
 translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
@@ -17,131 +17,54 @@ verification:
   summary: Beitragsregeln an die neuen Metadatenfelder der Website angepasst; das bedeutet nicht, dass sämtliche hier genannten Produktmechanismen erneut getestet wurden.
 sidebar:
   order: 30
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
-Befehle, Berechtigungen, Preise und Produktfunktionen ändern sich mit Versionen. **Prüfung** sorgt dafür, dass Lesende erwartbare Ergebnisse bekommen.
+Befehle, Berechtigungen, Preise und Produktfunktionen können sich zwischen Versionen ändern. Die technische Prüfung soll Leser erkennen lassen, welche Aussagen aktuell belegt sind, für welche Umgebungen sie gelten und was noch selbst geprüft werden muss.
 
-## Inhalt dieser Seite
+## Ziel der Prüfung
 
-Viele halten „sehe keinen Fehler“ für „schon geprüft“.
+Die Prüfung geht über sprachliche Klarheit hinaus. Wesentliche Fakten müssen zum aktuellen Produkt passen, Schritte in der angegebenen Umgebung funktionieren und Schlussfolgerungen innerhalb der belegten Grenzen bleiben.
 
-Im Technikhandbuch sind das zwei Dinge:
+## Vorrang der Belege
 
-- Ersteres: subjektiv „wirkt wahr“
-- Letzteres: mit aktueller Version, Umgebung, Schritten wirklich nachvollzogen
+1. Verwenden Sie für Produktverhalten, Parameter und Grenzen zuerst die offizielle OpenAI-Dokumentation.
+2. Für jedes als „ausgeführt“ bezeichnete Beispiel müssen ein tatsächliches Ergebnis und Umgebungsangaben vorliegen.
+3. Community-Artikel können Themen aufzeigen, ersetzen aber weder offizielle Quellen noch einen tatsächlichen Testlauf.
+4. Ein erreichbarer Link beweist nicht, dass sein Inhalt eine Aussage stützt; lesen Sie die Quelle.
+5. Wenn sich etwas nicht bestätigen lässt, benennen Sie die Unsicherheit, statt Lücken durch Vermutungen zu füllen.
 
-Hier: von „wirkt richtig“ zu „mit Belegen jetzt noch richtig“.
+## Zu dokumentierender Geltungsbereich
 
-## Was „Prüfung“ prüft
+- Betroffenes Produkt: App, CLI, IDE oder Cloud
+- Betriebssystem, Client und Versionen wichtiger Abhängigkeiten
+- Tatsächlich ausgeführte Schritte und Art der Ergebniskontrolle
+- Nicht abgedeckte Plattformen, Einstiege und Randfälle
+- Die konkrete Quellseite statt nur der Startseite einer Website
 
-Nicht nur Lesbarkeit — ob Lesende es **heute noch nachmachen** können.
+## Reihenfolge der Prüfung
 
-Wichtig, weil vieles nicht ewig stabil ist:
+1. Bestimmen Sie Produkt, Einstieg und Szenario der Seite.
+2. Gleichen Sie veränderliche Fakten mit der aktuellen offiziellen Dokumentation ab.
+3. Führen Sie behauptete Abläufe in einer sauberen Umgebung von Anfang an aus.
+4. Begrenzen Sie nicht getestete oder unsichere Aussagen und nennen Sie die Einschränkung im Text.
+5. Prüfen Sie interne und externe Links sowie die benötigten Voraussetzungen.
 
-- Befehle ändern sich
-- Menüorte wandern
-- Berechtigungsdefaults ändern sich
-- Fähigkeiten und Verfügbarkeit aktualisieren sich
+## Häufig veränderliche Informationen
 
-Die Prüfung ist keine redaktionelle Pedanterie — sie verhindert, dass Lesende alten Docs folgen und stolpern.
+Prüfen Sie nach größeren Produktveröffentlichungen zuerst:
 
-## Statusbedeutung
+- Befehle, Unterbefehle und Flags
+- Standardberechtigungen und Sandbox-Verhalten
+- Tarife, Modellnamen, Preise, Kontingente und regionale Verfügbarkeit
+- MCP, Hooks und andere Integrationsschnittstellen
+- Menüpositionen, Schaltflächennamen und Produkteinstiege
 
-| Status | Bedeutung |
-|---|---|
-| `planned` | Geplant, noch nicht geschrieben |
-| `draft` | In Arbeit, noch nicht fertig |
-| `review` | Inhalt fertig, Review ausstehend |
-| `verified` | Nach angegebenen Belegen geprüft |
-| `outdated` | Nach Produktänderung Update nötig |
-| `archived` | Historisch, nicht in Hauptnavigation |
+## Wenn etwas nicht bestätigt werden kann
 
-## Häufige Missverständnisse
+Stellen Sie Vermutungen nicht als Tatsachen dar. Entfernen Sie veraltete Einzelheiten, beschreiben Sie eine stabile Methode oder halten Sie die offene Frage in einem PR oder Issue fest. Für aktuelles Verhalten, Preise und Richtlinien sind die offiziellen Quellen maßgeblich.
 
-### Redaktioneller Status und Prüfart sind zwei verschiedene Felder
+## Verwandte Seiten
 
-`editorialStatus` hält den Fortschritt beim Schreiben und Prüfen fest. `verification.kind` beschreibt, welche Art von Prüfung tatsächlich erfolgt ist; aus `verified` lässt sich nicht ableiten, dass ein Beispiel ausgeführt wurde.
-
-| Prüfart | Zulässige Schlussfolgerung | Erforderliche Belege |
-|---|---|---|
-| `editorial` | Struktur, Formulierung oder interne Verweise wurden geprüft | Prüfzusammenfassung und Datum |
-| `source-checked` | Fakten im angegebenen Umfang stimmen mit den Quellen überein | Konkrete Quellenlinks, Zusammenfassung und Datum |
-| `run-tested` | Das Beispiel wurde in der dokumentierten Umgebung ausgeführt | Umgebung, Ausführungs- und Prüfprotokolle, Zusammenfassung und Datum |
-
-`run-tested` garantiert keine allgemeine Gültigkeit für alle Plattformen. Die Zusammenfassung muss erklären, was geprüft und was nicht geprüft wurde; eine eigenständige Nachrechnung ist keine Prüfung durch eine zweite Person. Alte Einträge ohne Belege bleiben in `legacyVerification` und werden keiner neuen Prüfart automatisch zugeordnet.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Struktur und interne Links geprüft; das Beispiel wurde nicht ausgeführt.
-```
-
-Quellenabgleiche und Probeläufe verwenden eine `evidence`-Liste, deren Einträge jeweils `label` und `href` enthalten. Probeläufe benötigen außerdem `environment` mit System, relevanter Clientversion und Versionen der Abhängigkeiten. Der Build weist Probelauf-Einträge ohne Umgebung oder Beleglinks zurück. Dass ein Link existiert, beweist noch nicht die Aussagekraft des Belegs; die Verantwortlichen müssen den Eintrag lesen.
-
-### Community-Artikel helfen verstehen, ersetzen keine Faktenprüfung
-
-Community-Artikel helfen, Themen zu finden.
-
-Aber bei:
-
-- Befehlsnamen
-- Berechtigungsverhalten
-- Produkteinstiegen
-- Preis, Quota, Regionsunterschieden
-
-zurück zur offiziellen Doku oder aktuellem Lauf.
-
-### Prüfung ≠ einzelne Sätze scannen
-
-Sätze können einzeln ok sein, die Kette nicht:
-
-- Produkt und Seite passen nicht
-- Schrittfolge falsch
-- Default-Prämissen fehlen
-- Titel verspricht mehr als verifizierter Umfang
-
-Als **ganze Operationskette** prüfen, nicht nur Wortlaut.
-
-## Prüfliste
-
-1. **Umfang nennen**: Produkt (App/CLI/IDE/Cloud), OS, CLI-Version
-2. **Schrittweise reproduzieren**: von Null oder sauberem Worktree
-3. **Offizielle Grundlage**: Produktfakten mit konkreten offiziellen Quellen belegen; für stabile Methodenübungen echte Eingaben und Prüfprotokolle verwenden, ohne eine offizielle Bestätigung vorzutäuschen
-4. **Community-Quellen**: Community-Artikel nur als Themenreferenz; Fakten offiziell
-5. **Datum aktualisieren**: `verification.checkedAt` nur auf das tatsächliche Prüfdatum setzen; alte Daten nicht massenhaft auffrischen und als erneute Prüfung ausgeben
-6. **Unabhängiges Review**: `verified` idealerweise zweite Person ≠ Autor
-
-## Prüfreihenfolge
-
-1. Welches Produkt, Einstieg, Szenario
-2. Schritte von vorn durchgehen
-3. Veränderliche Informationen gegen offizielle Doku
-4. Unsicheres / Nicht-Reproduziertes herabstufen
-5. Status und Datum aktualisieren
-
-Lieber `review` behalten, als `verified` ohne genug Belege.
-
-## Veränderliche Informationen
-
-Quartalsweise oder bei Major-Release neu prüfen:
-
-- Befehls- und Subbefehlsnamen, Flags
-- Berechtigungsdefaults und Sandbox-Verhalten
-- Tarife, Modellnamen, Regionsverfügbarkeit
-- MCP-/Hook-Ereignisnamen
-
-## Bei Fehlschlag
-
-- Auf `review`, `draft` oder `outdated` herabstufen
-- Im PR sagen, welcher Schritt von der offiziellen Doku abweicht
-- Große Abweichung: Issue mit `outdated`
-
-## Verwandt
-
-- [Handbuch-Versionspolitik](/de/guide/start-here/handbook-version-policy/)
+- [Zuverlässigkeit der Inhalte](/de/guide/start-here/handbook-version-policy/)
 - [Offizielle Ressourcen](/de/guide/reference/official-resources/)
-
-`verified` heißt: „nach aktuellen Belegen wirklich geprüft und nachvollziehbar“ — Autor-Selbstvertrauen reicht nicht.

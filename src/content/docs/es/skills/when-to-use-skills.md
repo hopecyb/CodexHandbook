@@ -8,7 +8,7 @@ title: Cuándo usar Skills
 description: Decide si una tarea encaja como Skill, y cómo se reparte el trabajo con comandos slash y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: "5e688f4"
+source_revision: '7b72e00'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25

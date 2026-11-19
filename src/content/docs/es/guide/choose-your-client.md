@@ -8,7 +8,7 @@ title: Elegir un cliente de Codex
 description: Elige entre la App de escritorio, CLI, la integración IDE y Cloud según dónde y cómo se realiza el trabajo.
 locale: es
 source_locale: zh-CN
-source_revision: 'e4c7057'
+source_revision: 'efaef36'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

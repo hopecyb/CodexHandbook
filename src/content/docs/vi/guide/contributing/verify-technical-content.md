@@ -4,12 +4,12 @@ legacyVerification:
   basis: "Đã đối chiếu với hệ thống trạng thái hiện tại của sổ tay, nhiều đợt rà soát đã hoàn thành và nguyên tắc ưu tiên nguồn chính thức. Trang này mô tả tiêu chuẩn nội bộ để nâng trang lên `verified` và nguyên tắc hạ cấp."
   checkedAt: "2026-07-26"
 title: Kiểm chứng nội dung kỹ thuật
-description: Phân biệt trạng thái biên tập, đối chiếu nguồn và chạy thử ví dụ; ghi lại phạm vi, môi trường và bằng chứng kiểm chứng.
+description: Cách kiểm tra dữ kiện kỹ thuật, tái hiện các bước và ghi lại phạm vi cùng bằng chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: "cfb077d"
+source_revision: '7fba563'
 translation_status: reviewed
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -20,130 +20,51 @@ sidebar:
   order: 30
 ---
 
-Trong sổ tay, lệnh, quyền, giá, tính năng sản phẩm thay đổi theo phiên bản. **Kiểm chứng** đảm bảo khi độc giả làm theo tài liệu, kết quả có thể kỳ vọng được.
+Lệnh, quyền, giá và tính năng sản phẩm có thể thay đổi giữa các phiên bản. Việc kiểm tra kỹ thuật giúp người đọc hiểu nhận định nào có căn cứ hiện tại, áp dụng cho môi trường nào và phần nào vẫn cần tự xác nhận.
 
-## Nội dung trang này
+## Mục tiêu kiểm tra
 
-Nhiều người lần đầu tham gia duy trì tài liệu coi “tôi nhìn không thấy vấn đề” là “đã kiểm chứng rồi”.
+Kiểm tra không chỉ là chỉnh câu chữ cho rõ. Dữ kiện chính phải khớp với sản phẩm hiện tại, các bước phải chạy được trong môi trường đã nêu và kết luận không được vượt quá phạm vi bằng chứng hỗ trợ.
 
-Nhưng với sổ tay kỹ thuật, hai việc này khác nhau nhiều:
+## Thứ tự ưu tiên của bằng chứng
 
-- Cái trước chỉ là chủ quan thấy giống đúng
-- Cái sau nghĩa là bạn đã thật sự thử với phiên bản hiện tại, môi trường hiện tại, bước hiện tại
+1. Ưu tiên tài liệu chính thức của OpenAI cho hành vi, tham số và giới hạn sản phẩm.
+2. Ví dụ được mô tả là “đã chạy” phải có kết quả thực tế và thông tin môi trường.
+3. Bài viết cộng đồng có thể gợi ý chủ đề nhưng không thay thế nguồn chính thức hoặc lần chạy thực tế.
+4. Liên kết mở được không có nghĩa nội dung đủ hỗ trợ nhận định; phải đọc nguồn.
+5. Khi không thể xác nhận, hãy nêu rõ sự không chắc chắn thay vì phỏng đoán để lấp chỗ trống.
 
-Ở đây giải quyết cách nâng “trông đúng” thành “có bằng chứng chứng minh giờ vẫn đúng”.
+## Phạm vi cần ghi lại
 
-## “Kiểm chứng” đang kiểm gì
+- Sản phẩm áp dụng: App, CLI, IDE hoặc Cloud
+- Hệ điều hành, ứng dụng khách và phiên bản phụ thuộc quan trọng
+- Các bước thực sự đã làm và cách kiểm tra kết quả
+- Nền tảng, điểm truy cập và trường hợp biên chưa được bao phủ
+- Trang nguồn cụ thể, không chỉ trang chủ của website
 
-“Kiểm chứng nội dung kỹ thuật” có thể hiểu là: không chỉ kiểm chữ có trôi không, mà xác nhận độc giả làm theo thì hôm nay thật sự vẫn làm ra được.
+## Trình tự kiểm tra
 
-Việc này đặc biệt quan trọng vì nhiều nội dung không ổn định mãi, ví dụ:
+1. Xác định sản phẩm, điểm truy cập và tình huống mà trang đề cập.
+2. Đối chiếu dữ kiện dễ thay đổi với tài liệu chính thức hiện tại.
+3. Nếu trang nói các bước có thể chạy, hãy thực hiện từ đầu trong môi trường sạch.
+4. Thu hẹp nhận định chưa thử hoặc chưa chắc chắn và nêu giới hạn trong nội dung.
+5. Kiểm tra liên kết nội bộ, liên kết ngoài và điều kiện tiên quyết.
 
-- Lệnh sẽ đổi
-- Vị trí menu sẽ đổi
-- Giá trị mặc định của quyền sẽ điều chỉnh
-- Năng lực sản phẩm và phạm vi khả dụng sẽ cập nhật
+## Thông tin thường thay đổi
 
-Vậy kiểm chứng không phải sạch sẽ biên tập thái quá, mà tránh độc giả làm theo tài liệu cũ rồi dính hố.
+Sau các bản phát hành lớn, hãy ưu tiên kiểm tra lại:
 
-## Ý nghĩa trạng thái
+- Lệnh, lệnh con và flags
+- Quyền mặc định và hành vi sandbox
+- Gói dịch vụ, tên mô hình, giá, hạn mức và phạm vi khu vực
+- MCP, Hooks và các giao diện tích hợp khác
+- Vị trí menu, tên nút và điểm truy cập sản phẩm
 
-| Trạng thái | Ý nghĩa |
-|---|---|
-| `planned` | Đã lập kế hoạch, chưa viết |
-| `draft` | Đang viết, chưa chốt đầy đủ |
-| `review` | Nội dung xong, chờ rà lại |
-| `verified` | Đã kiểm chứng theo căn cứ đánh dấu |
-| `outdated` | Sản phẩm đổi, cần cập nhật |
-| `archived` | Giữ lịch sử, không vào điều hướng chính |
+## Khi không thể xác nhận
 
-## Hiểu lầm thường gặp
-
-### Trạng thái biên tập và cách kiểm chứng là hai trường khác nhau
-
-`editorialStatus` ghi tiến độ viết và rà soát. `verification.kind` ghi loại kiểm tra thực sự đã làm; không thể suy từ `verified` rằng ví dụ đã được chạy.
-
-| Cách kiểm chứng | Kết luận có thể đưa ra | Bằng chứng bắt buộc |
-|---|---|---|
-| `editorial` | Đã rà cấu trúc, cách diễn đạt hoặc liên kết nội bộ | Tóm tắt kiểm tra và ngày |
-| `source-checked` | Sự kiện trong phạm vi ghi rõ khớp với nguồn | Liên kết nguồn cụ thể, tóm tắt và ngày |
-| `run-tested` | Ví dụ đã chạy trong môi trường được ghi lại | Môi trường, bản ghi chạy và rà soát, tóm tắt và ngày |
-
-`run-tested` không bảo đảm ví dụ hoạt động trên mọi nền tảng. Bản tóm tắt phải nói rõ đã và chưa kiểm chứng điều gì; tự đối chiếu bằng phép tính độc lập không thể gọi là người thứ hai rà soát. Bản ghi cũ thiếu bằng chứng được giữ trong `legacyVerification`, không tự động suy thành trạng thái kiểm chứng mới nào.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Đã kiểm tra cấu trúc và liên kết nội bộ; ví dụ chưa được chạy thử.
-```
-
-Đối chiếu nguồn và chạy thử dùng danh sách `evidence`, mỗi mục có `label` và `href`. Chạy thử còn phải điền `environment`, nêu rõ hệ điều hành, phiên bản ứng dụng liên quan và phiên bản phụ thuộc. Bản dựng sẽ từ chối bản ghi chạy thử thiếu môi trường hoặc liên kết bằng chứng. Có liên kết không đồng nghĩa bằng chứng đã đủ; người duy trì phải đọc bản ghi.
-
-### Bài cộng đồng giúp bạn hiểu, nhưng không thay kiểm chứng dữ kiện
-
-Bài viết cộng đồng hoặc tài liệu cộng đồng khác rất hợp để giúp bạn thấy nên bổ sung chủ đề nào.
-
-Nhưng một khi liên quan:
-
-- Tên lệnh
-- Hành vi quyền
-- Lối vào sản phẩm
-- Giá, hạn ngạch, khác biệt khu vực
-
-vẫn phải quay về tài liệu chính thức hoặc kết quả chạy thật hiện tại.
-
-### Kiểm chứng không phải chỉ nhìn từng câu
-
-Đôi khi mỗi câu đơn lẻ không sao, nhưng nối lại thì không đứng vững, ví dụ:
-
-- Sản phẩm áp dụng không khớp trang thực tế
-- Thứ tự bước sai
-- Tiền đề mặc định không viết ra
-- Tiêu đề hứa nhiều hơn phạm vi thân bài thật sự đã kiểm
-
-Vậy phải kiểm theo “cả chuỗi thao tác”, không chỉ quét mặt chữ.
-
-## Danh sách kiểm chứng
-
-1. **Ghi rõ phạm vi**: sản phẩm (App/CLI/IDE/Cloud), OS, số phiên bản CLI
-2. **Tái hiện từng bước**: làm theo từ đầu hoặc worktree sạch
-3. **Căn cứ chính thức**: ghi nguồn chính thức cụ thể cho dữ kiện về sản phẩm; bài tập phương pháp ổn định dùng đầu vào thật và bản ghi kiểm tra, không nhận vơ sự chứng thực chính thức
-4. **Nguồn cộng đồng**: nếu tham khảo tài liệu cộng đồng, chỉ lấy chủ đề; dữ kiện lấy chính thức làm chuẩn
-5. **Cập nhật ngày**: chỉ ghi ngày kiểm tra thực tế vào `verification.checkedAt`; không cập nhật hàng loạt ngày cũ để giả như đã rà soát lại
-6. **Rà độc lập**: `verified` khuyến nghị người thứ hai không phải tác giả xác nhận
-
-## Thứ tự kiểm chứng
-
-Thứ tự sau dễ nhất để không sót:
-
-1. Xác nhận trước trang nói sản phẩm nào, lối vào nào, tình huống nào
-2. Đi lại từ đầu các bước trong bài
-3. Đối chiếu tài liệu chính thức với thông tin dễ thay đổi
-4. Hạ cấp chỗ chưa chắc, chưa tái hiện được
-5. Cuối cùng mới cập nhật trạng thái và ngày
-
-Thà giữ `review` trước, đừng viết `verified` sớm khi bằng chứng chưa đủ.
-
-## Thông tin dễ thay đổi
-
-Các mục sau phải kiểm lại mỗi quý hoặc theo phát hành major:
-
-- Tên lệnh và lệnh con, flags
-- Mặc định quyền và hành vi Sandbox
-- Gói, tên mô hình, khả dụng theo khu vực
-- Tên dữ kiện MCP/Hook
-
-## Khi thất bại
-
-- Hạ cấp theo thực tế thành `review`, `draft` hoặc `outdated`
-- Trong PR nói rõ bước nào không khớp chính thức
-- Lệch lớn thì mở issue gắn `outdated`
+Đừng trình bày suy luận như sự thật. Hãy xóa chi tiết lỗi thời, viết lại theo một phương pháp ổn định hoặc ghi câu hỏi còn mở trong PR hay issue. Với hành vi, giá và chính sách hiện tại, nguồn chính thức là căn cứ cuối cùng.
 
 ## Liên quan
 
-- [Chính sách phiên bản sổ tay](/vi/guide/start-here/handbook-version-policy/)
+- [Độ tin cậy của nội dung](/vi/guide/start-here/handbook-version-policy/)
 - [Tài nguyên chính thức](/vi/guide/reference/official-resources/)
-
-`verified` nghĩa là “đã kiểm chứng thật theo căn cứ đánh dấu hiện tại, và có căn cứ truy được”. Chỉ dựa vào tác giả tự thấy đáng tin thì chưa đủ.

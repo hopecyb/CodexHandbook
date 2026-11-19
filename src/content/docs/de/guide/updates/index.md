@@ -9,9 +9,9 @@ verification:
   summary: Aus aktuellem Repository-Inhalt und Laufprotokollen zusammengestellt. Dies ist ein Änderungsprotokoll des Handbuchs, keine OpenAI-Produktankündigung und kein Nachweis einer Veröffentlichung der Website.
 locale: de
 source_locale: zh-CN
-source_revision: "3c99d35"
+source_revision: '1686a65'
 translation_status: reviewed
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 ---
 
@@ -51,28 +51,28 @@ Der [fünfstufige Einsteigerpfad](/de/guide/learning-paths/beginner/) nutzt einh
 
 ## 2026-09-18: Roadmap-Daten und praktische Einstiege
 
-Die [Roadmap für KI-Anwendungen](/de/ai-roadmap/) unterscheidet jetzt Forschungsarbeiten, Produktveröffentlichungen, Engineering-Artikel und Projektthemen, die nicht nach Erstveröffentlichung geordnet sind. Jedes Thema hat konkrete Quellen und einen Übungseinstieg. Das Datum eines einzelnen Artikels steht nicht mehr für eine branchenweite Verbreitung; ein Strukturcheck eines Skill-Pakets gilt nicht als Client-Auslösetest. Bestehende URLs bleiben erhalten, frühere Monats- und Jahresangaben sind keine aktuellen Ereignisdaten. Quellen und Prüfumfang stehen am Anfang der Themenseiten.
+Die [Roadmap für KI-Anwendungen](/de/ai-roadmap/) unterscheidet jetzt Forschungsarbeiten, Produktveröffentlichungen, Engineering-Artikel und Projektthemen, die nicht nach Erstveröffentlichung geordnet sind. Jedes Thema hat konkrete Quellen und einen Übungseinstieg. Das Datum eines einzelnen Artikels steht nicht mehr für eine branchenweite Verbreitung; ein Strukturcheck eines Skill-Pakets gilt nicht als Client-Auslösetest. Bestehende URLs bleiben erhalten, frühere Monats- und Jahresangaben sind keine aktuellen Ereignisdaten. Jede Themenseite nennt im Text Quellenlinks und Geltungsgrenzen.
 
 ## 2026-09-18: Erläuterungen gegen häufige Missverständnisse
 
 - Der Preiseinstieg heißt jetzt „Preisreferenz“. Belegte Snapshots in Originalwährungen werden von unbekannten Werten getrennt; Schätzungen dienen nicht mehr als weltweite Preisrangliste. Prüfen Sie vor dem Kauf den tatsächlich angezeigten Anbieterpreis.
-- Seitenköpfe unterscheiden redaktionellen Status, Quellenprüfung, Beispiel-Lauf und historische Hinweise. „Getestet“ bezieht sich nur auf genannte Skripte und Umgebungen, nicht auf eine Zuverlässigkeitsquote von Modellausgaben.
+- Die betroffenen Seiten erläutern Quellen, Geltungsgrenzen und den Umfang tatsächlicher Testläufe jetzt direkt im Text. „Getestet“ bezieht sich nur auf genannte Skripte und Umgebungen, nicht auf eine Zuverlässigkeitsquote von Modellausgaben.
 - Die [Priorität von Anweisungen](/de/guide/context/context-priority/) unterscheidet Nachrichtenrollen, Auffinden von Projektanweisungen und Ausführungsrechte. Sie behauptet nicht pauschal, dass neuere oder strengere Anweisungen immer gewinnen.
 - [SDK](/de/guide/developer-platform/sdk-overview/) und [Webhook](/de/guide/developer-platform/webhooks/overview/) unterscheiden lokale Ausführung, selbst betriebene Dienste und Callback-Entwurf. Vorgeschlagene Schnittstellen werden nicht als offizielle Verträge beschrieben.
 - Die [Aufgabeneinstufung](/de/prompts/ask-for-a-plan/) unterscheidet direkte Ausführung, vorherige Planung und Freigabe von Aktionen, statt jeden Schritt pauschal zu unterbrechen.
 
-Die Quellen und Grenzen der Prüfung dieser Mechanismen stehen am Anfang der jeweiligen Seiten. Diese Zusammenfassung ist keine vollständige API-Referenz.
+Die betroffenen Seiten beschreiben ihre Quellen und Grenzen im Text. Diese Zusammenfassung ist keine vollständige API-Referenz.
 
 ## Wenn Sie einen Seitenfehler finden
 
-Am Ende jedes chinesischen Artikels steht „Problem auf dieser Seite melden (GitHub-Entwurf)“. Der Link öffnet einen noch nicht eingereichten Issue-Entwurf mit Seitentitel, Website-Pfad und erfasstem Prüfdatum. Prüfen Sie den Inhalt und reichen Sie ihn selbst ein; ein GitHub-Konto ist erforderlich.
+Jede Handbuchseite bietet im Seitenfuß einen lokalisierten Link „Problem auf dieser Seite melden (GitHub-Entwurf)“. Er übernimmt nur Seitentitel und Website-Pfad und öffnet einen öffentlichen, noch nicht eingereichten Issue-Entwurf. Prüfen Sie ihn vor dem Absenden; ein GitHub-Konto ist erforderlich.
 
-Beschreiben Sie Absatz, erwartetes und tatsächliches Verhalten, relevante Umgebung und bei Bedarf eine öffentliche Quelle. Geben Sie nur anonymisierte Daten weiter: keine API-Schlüssel, Konten, privaten Verzeichnisse, Kundendaten oder vollständigen Rohlogs. Der Entwurf sammelt Aufgabenlogs nicht automatisch und enthält keine Abfrageparameter der Seite.
+Nennen Sie Abschnitt, Soll- und Ist-Inhalt, die nötige Umgebung und öffentliche Belege. Entfernen Sie API-Schlüssel, Kontodaten, private Pfade, Kundendaten und nicht anonymisierte Protokolle. Der Entwurf erfasst keine Aufgabendaten und enthält keine Abfrageparameter der Seite.
 
-Ohne GitHub-Konto können Sie Pfad und Fehlerbeschreibung zunächst lokal notieren und einen berechtigten Mitarbeiter um Einreichung bitten. Eine Bearbeitungsfrist wird nicht versprochen; Nachrichten werden nicht automatisch verschickt.
+Ohne GitHub-Konto können Sie Pfad und Problembeschreibung lokal notieren und eine Person mit Zugriff um das Einreichen bitten. Es wird keine Reaktionszeit zugesagt und keine Nachricht automatisch gesendet.
 
 ## Vorgehen der Handbuchverantwortlichen
 
-Nach Reproduktion oder Quellenprüfung wird festgehalten, warum eine Meldung angenommen, korrigiert oder vorerst nicht bestätigt wurde. Bei Änderungen an Produktfakten werden die zugehörigen Belege aktualisiert, nicht pauschal die Prüfdaten anderer Seiten. Bei Übungsänderungen werden Ausgangsmaterial, Download-Paket und Artikel synchron gehalten. Wird eine frühere Schlussfolgerung ungültig, erklären Sie die Folgen der alten Vorgehensweise und die Migrationsschritte, statt nur „Inhalt optimiert“ zu schreiben.
+Nach Reproduktion oder Quellenprüfung wird festgehalten, warum eine Meldung angenommen, korrigiert oder vorerst nicht bestätigt wurde. Bei Änderungen an Produktfakten werden Text und Belege aktualisiert, ohne unbeteiligte Seiten als aktualisiert zu kennzeichnen. Bei Übungsänderungen werden Ausgangsmaterial, Download-Paket und Artikel synchron gehalten. Wird eine frühere Schlussfolgerung ungültig, erklären Sie die Folgen der alten Vorgehensweise und die Migrationsschritte, statt nur „Inhalt optimiert“ zu schreiben.
 
-Bei Aktualisierung dieser Seite verlinken Sie konkrete Seiten und Prüfprotokolle und halten ungetesteten Umfang sichtbar. Dies ist das Änderungsprotokoll eines Community-Handbuchs, kein offizielles OpenAI-Release-Log.
+Verlinken Sie bei der Aktualisierung die betroffenen Seiten und öffentlichen Quellen und benennen Sie den noch ungetesteten Umfang. Dies ist das Änderungsprotokoll eines Community-Handbuchs, kein offizielles OpenAI-Release-Log.

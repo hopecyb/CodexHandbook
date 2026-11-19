@@ -8,7 +8,7 @@ title: 언제 Skills를 쓰는가
 description: 작업을 Skill로 묶을지 판단하고, 슬래시 명령·MCP와의 역할을 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '5e688f4'
+source_revision: '7b72e00'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

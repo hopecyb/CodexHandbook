@@ -3,7 +3,7 @@ title: 서브 에이전트
 description: 경계가 명확한 하위 작업을 독립 컨텍스트에 위임하고, 주 Agent가 근거를 종합하고 충돌을 해결하며 최종 검수합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 'a3f2be5'
+source_revision: 'b1cefc0'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:

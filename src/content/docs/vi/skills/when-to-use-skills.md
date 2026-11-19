@@ -8,7 +8,7 @@ title: Khi nào dùng Skills
 description: Quyết định Tác vụ có nên đóng thành Skill, và phân công với lệnh slash, MCP.
 locale: vi
 source_locale: zh-CN
-source_revision: "5e688f4"
+source_revision: '7b72e00'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

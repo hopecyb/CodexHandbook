@@ -8,7 +8,7 @@ title: Bản đồ các khả năng mở rộng
 description: "Hiểu hệ thống mở rộng của Codex qua tám vai trò: tác vụ, quy tắc, quy trình, công cụ, bảo vệ, phân phối, kích hoạt và làm việc song song."
 locale: vi
 source_locale: zh-CN
-source_revision: "183812c"
+source_revision: '32771c6'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

@@ -5,85 +5,43 @@ legacyVerification:
   basis: "Đã rà soát theo hệ thống sáu trạng thái, quy tắc ghi chú xác minh và nguyên tắc ưu tiên nguồn chính thức của cẩm nang. Trang giải thích chính sách phiên bản và cách đọc trong website, không phụ thuộc tham số của một phiên bản sản phẩm cụ thể."
   checkedAt: "2026-07-26"
 title: Chính sách phiên bản cẩm nang
-description: Giải thích trạng thái nội dung, ngày kiểm chứng và cách cập nhật liên tục.
+description: Cách sổ tay được cập nhật và cách đánh giá nội dung còn phù hợp hay không.
 locale: vi
 source_locale: zh-CN
-source_revision: "a608dc3"
+source_revision: '7f6fd2b'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 8
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 ## Cập nhật liên tục
 
-Cẩm nang này không cố định lâu dài ở một phiên bản Codex duy nhất. Sản phẩm thay đổi, nên mỗi trang dùng trạng thái, ngày kiểm chứng và bằng chứng cụ thể để cho biết phạm vi đã kiểm tra. Chỉ riêng ngày tháng không phải điểm đánh giá độ tin cậy.
+Sổ tay này không bị cố định lâu dài ở một phiên bản Codex duy nhất. Sản phẩm tiếp tục thay đổi, vì vậy cách cài đặt, đăng nhập, quyền, mô hình, cấu hình và hành vi của Cloud có thể thay đổi theo thời gian.
 
-## Nội dung
+## Nên tin nguồn nào
 
-- Vì sao cẩm nang này không thể giả định mãi không đổi
-- Cách đọc trạng thái và ngày kiểm chứng ở đầu trang
-- Khi xung đột với tài liệu chính thức thì tin ai
+Đối với hành vi hiện tại của sản phẩm, hãy dựa vào [tài liệu Codex chính thức của OpenAI](https://developers.openai.com/codex). Sổ tay này giải thích khái niệm, sắp xếp lộ trình và cung cấp phương pháp thực hành. Nếu có mâu thuẫn, hãy theo tài liệu chính thức và báo vấn đề qua liên kết sửa nội dung ở cuối trang.
 
-## Trạng thái trang
+## Cách đánh giá nội dung còn phù hợp hay không
 
-| Trạng thái | Ý nghĩa |
-|---|---|
-| planned | Đã lên kế hoạch, chưa viết |
-| draft | Đang viết |
-| review | Nội dung xong, chờ rà soát lại |
-| verified | Đã kiểm chứng theo cơ sở đã ghi |
-| outdated | Sau thay đổi sản phẩm cần cập nhật |
-| archived | Giữ lịch sử, không vào điều hướng chính |
+Khi đọc thông tin có thể thay đổi, hãy xem ba điểm:
 
-## Cách đọc trạng thái trang
+1. Chủ đề có thường xuyên thay đổi hay không, chẳng hạn như cài đặt, cấu hình, quyền hoặc điểm truy cập sản phẩm.
+2. Ngày cập nhật nội dung hiển thị trên trang có quá xa hiện tại hay không.
+3. Các nguồn chính thức được trích dẫn có còn khớp với hành vi hiện tại của sản phẩm hay không.
 
-- `planned`: chưa viết
-- `draft`: đang viết, nhưng chưa ổn định
-- `review`: phần chính đã thành hình, nhưng còn cần rà soát lại
-- `verified`: đã kiểm chứng theo cơ sở đã ghi
-- `outdated`: trước đây có thể đúng, nhưng giờ cần cảnh giác lỗi thời
-- `archived`: giữ để tham khảo, không coi là nội dung dòng chính hiện tại
+Khái niệm, phương pháp và cách nghiệm thu thường ổn định hơn nút bấm, tham số và đường dẫn giao diện cụ thể. Với hành vi, tham số, giá hoặc quy tắc hiện hành, hãy kiểm tra lại nguồn chính thức.
 
-## Hồ sơ kiểm chứng và cập nhật nội dung
+## Cập nhật và sửa nội dung
 
-Đầu mỗi trang hiển thị riêng trạng thái biên tập, phương pháp kiểm chứng, ngày kiểm chứng và bằng chứng áp dụng. `editorial` là rà soát biên tập, `source-checked` là đối chiếu nguồn, còn `run-tested` là chạy thử ví dụ trong môi trường đã ghi. Không phương pháp nào thay thế phương pháp nào. Ghi chú lịch sử được giữ riêng và không tự động trở thành bằng chứng chạy thử hiện tại.
+[Cập nhật và sửa nội dung](/vi/guide/updates/) ghi lại các thay đổi quan trọng và ảnh hưởng của chúng. Chân trang có thể mở bản nháp Issue GitHub chứa tiêu đề và đường dẫn của trang hiện tại. Hãy kiểm tra và xóa thông tin nhạy cảm trước khi gửi.
 
-[Cập nhật và đính chính nội dung](/vi/guide/updates/) giải thích các thay đổi cụ thể và tác động của chúng. Ở cuối các trang có nội dung tiếng Trung, người đọc có thể mở bản nháp đính chính trên GitHub kèm thông tin trang hiện tại. Cần kiểm tra và xóa dữ liệu nhạy cảm trước khi gửi.
+## Nội dung thường thay đổi
 
-## Cơ sở chính thức
-
-Hành vi sản phẩm lấy tài liệu OpenAI làm chuẩn: [https://developers.openai.com/codex](https://developers.openai.com/codex). Kho này là hướng dẫn cộng đồng; nếu xung đột với chính thức, lấy chính thức làm chuẩn và hoan nghênh mở issue.
-
-## Hiểu nhầm thường gặp
-
-### 1. Chỉ cần ghi vào cẩm nang là nghĩa là lâu dài không đổi
-
-Đặc biệt các nội dung sau dễ thay đổi nhất:
-
-- Cách cài đặt
-- Quy trình đăng nhập và tài khoản
-- Quyền, model, mục cấu hình
-- Hành vi Cloud và lối vào sản phẩm
-
-### 2. `review` không có nghĩa là không được xem
-
-`review` nghĩa là nội dung chính đã có, nhưng chưa tới mức xác nhận mạnh nhất — không phải không được tham khảo.
-
-### 3. Khi cẩm nang cộng đồng xung đột với tài liệu chính thức, không được tin mỗi bên một nửa
-
-Có thể phân như sau:
-
-- Hiểu và giải thích lộ trình xem cẩm nang
-- Hành vi mới nhất và cách viết tham số xem chính thức
-
-## Cách phán đoán một trang có đáng tin không
-
-Nếu lo một trang đã lỗi thời, xem ba việc này:
-
-1. Trạng thái biên tập ở đầu trang là `review`, `verified` hay `outdated`
-2. Ngày kiểm chứng gần nhất cách hiện tại xa không
-3. Đang nói khái niệm, hay đang nói cài đặt, cấu hình, quyền — những thứ dễ đổi
-
-Phàm liên quan hành vi, tham số và quy tắc mới nhất, cuối cùng đều phải lấy tài liệu chính thức hiện hành làm chuẩn.
+- Cách cài đặt và yêu cầu hệ thống
+- Đăng nhập, tài khoản và luồng cấp quyền
+- Mô hình, tùy chọn cấu hình và cú pháp tham số
+- Hành vi của Cloud, ứng dụng khách và điểm truy cập sản phẩm
+- Giá, hạn mức và giới hạn dịch vụ

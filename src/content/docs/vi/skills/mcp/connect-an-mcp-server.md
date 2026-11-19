@@ -7,7 +7,7 @@ title: Kết nối máy chủ MCP
 description: Dùng CLI hoặc config.toml để cấu hình, xác thực và kiểm tra máy chủ MCP đầu tiên.
 locale: vi
 source_locale: zh-CN
-source_revision: "0675d33"
+source_revision: '67b417d'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26

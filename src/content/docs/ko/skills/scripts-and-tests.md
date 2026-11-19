@@ -8,7 +8,7 @@ title: scripts/와 테스트
 description: Skill에 결정론적 스크립트를 넣고 동작을 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '900e6e4'
+source_revision: '05a2f68'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

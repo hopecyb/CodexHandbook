@@ -3,7 +3,7 @@ title: 拡張方式の選び方
 description: 永続化したい対象に応じて、プロンプト、AGENTS.md、Skill、MCP、Hook、Plugin、Scheduled task を選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: "28ae6f5"
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: '2026-10-26'

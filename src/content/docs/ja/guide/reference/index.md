@@ -5,7 +5,7 @@ sidebar:
   order: 60
 locale: ja
 source_locale: zh-CN
-source_revision: 'd45e640'
+source_revision: 'bea12b4'
 translation_status: reviewed
 translated_at: 2026-10-25
 reviewed_at: '2026-10-26'
@@ -53,7 +53,7 @@ legacyVerification:
 - [公式リソース](/ja/guide/reference/official-resources/)
 
 :::note[バージョンによる変化]
-コマンド、設定キー、デフォルト権限は製品更新で変わります——各ページに検証日を記載。使用前に公式ドキュメントを確認してください。
+コマンド、設定キー、デフォルト権限は製品更新で変わります。使用前に公式ドキュメントを確認してください。
 :::
 
 リファレンスのセクションは中心となるチュートリアルではありません。用語、設定、コマンド、トラブルシュートのときに戻ってください。

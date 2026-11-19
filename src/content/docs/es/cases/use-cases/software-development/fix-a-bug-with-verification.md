@@ -12,7 +12,7 @@ title: "Caso: corrección de bugs con verificación"
 description: Usa un bug ejecutable en el cálculo de descuentos para reproducir el rojo, localizar la causa raíz, aplicar la reparación mínima, verificar el verde, ejecutar la regresión y revisar el diff.
 locale: es
 source_locale: zh-CN
-source_revision: "42d842e"
+source_revision: 'c89a885'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-25

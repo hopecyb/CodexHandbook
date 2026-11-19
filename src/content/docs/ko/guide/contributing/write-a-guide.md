@@ -7,12 +7,12 @@ title: 가이드 페이지 작성
 description: 새 핸드북 본문의 구조, frontmatter, 교차 링크 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: 'dd22df1'
+source_revision: '4eddfb9'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 
 이 페이지는 `src/content/docs/`에 **가이드형** 페이지(순수 사례·순수 참고표가 아님)를 추가하거나 다시 쓰는 방법을 설명합니다.
@@ -38,22 +38,11 @@ reviewed_at: '2026-10-26'
 ```yaml
 ---
 title: 페이지 제목
-description: 이 글이 푸는 문제를 한 문장으로
+description: 이 페이지가 해결하는 문제를 한 문장으로 설명
 ---
 ```
 
-새 페이지는 편집 상태와 검증 방법을 frontmatter에 기록합니다. 자유 형식의 검증 푸터는 더 이상 붙이지 않습니다.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: 내용 구조를 확인함. 실제로 수행한 확인 사항과 날짜로 바꾸세요.
-```
-
-출처 확인이나 예제 실행을 표시하려면 [기술 내용 검증](/ko/guide/contributing/verify-technical-content/)에 따라 링크와 환경 정보를 추가하세요. 날짜는 따옴표로 묶은 `YYYY-MM-DD` 문자열을 사용합니다.
-
+저장소 유지관리 필드는 검증 도구가 처리하며 본문이나 바닥글에 표시하지 않습니다. 독자가 페이지를 이해하고 사용하는 데 필요한 정보만 남기세요. 명령, 가격, 권한처럼 자주 바뀌는 사실은 [기술 콘텐츠 확인](/ko/guide/contributing/verify-technical-content/)에 따라 확인하고 필요한 적용 범위를 본문에 직접 밝힙니다.
 ## 권장 구조
 
 [외부 자료 통합 템플릿](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)의 소절을 골라 쓰세요. 흔한 조합:

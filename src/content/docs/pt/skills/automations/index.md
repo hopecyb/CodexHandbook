@@ -7,7 +7,7 @@ title: tarefas agendadas
 description: Repita no ChatGPT, em horários definidos, tarefas que já foram verificadas.
 locale: pt
 source_locale: zh-CN
-source_revision: "759c38e"
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

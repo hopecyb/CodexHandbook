@@ -8,7 +8,7 @@ title: Skill 구조
 description: SKILL.md, references/, templates/, scripts/의 역할과 예시.
 locale: ko
 source_locale: zh-CN
-source_revision: '50ca48c'
+source_revision: 'c4b740a'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

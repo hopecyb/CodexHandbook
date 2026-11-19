@@ -13,7 +13,7 @@ source_locale: zh-CN
 translation_status: reviewed
 reviewed_at: 2026-10-25
 translated_at: 2026-10-24
-source_revision: 'd45e640'
+source_revision: 'bea12b4'
 ---
 
 Short, precise, and searchable: this section is mainly a quick-reference index. Deeper explanations belong in the topic chapters. Use these pages as a toolbox; you need not read them front to back.
@@ -52,7 +52,7 @@ Come here with a question instead of reading everything at once.
 - [Official Resources](/en/guide/reference/official-resources/)
 
 :::note[Version-sensitive]
-Commands, configuration keys, and default permissions change with product updates. Each page records a verification date; check official documentation before relying on it.
+Commands, configuration keys, and default permissions change with product updates. Check the official documentation before relying on them.
 :::
 
 This reference section is not a start-to-finish tutorial. Return when you need to check a term, setting, command, or troubleshooting step.

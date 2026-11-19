@@ -7,7 +7,7 @@ title: Exemplos de configuração de Hooks
 description: Implementar uma proteção PreToolUse testável com um hooks.json real e um script Python da biblioteca padrão.
 locale: pt
 source_locale: zh-CN
-source_revision: "06e9fa2"
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26

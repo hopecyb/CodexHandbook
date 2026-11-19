@@ -3,7 +3,7 @@ title: MCP 接続をデバッグする
 description: 設定、通信、認証、ツールの四層に分けて MCP の障害を特定します。
 locale: ja
 source_locale: zh-CN
-source_revision: "d35b635"
+source_revision: 'de0bea5'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

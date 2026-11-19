@@ -7,7 +7,7 @@ title: Hướng dẫn đầy đủ về tác vụ định kỳ
 description: Chọn tác vụ độc lập hoặc tác vụ trong cuộc trò chuyện, cấu hình dự án cục bộ, worktree, quyền, prompt và quy trình rà soát.
 locale: vi
 source_locale: zh-CN
-source_revision: "fa792dc"
+source_revision: '532489c'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26

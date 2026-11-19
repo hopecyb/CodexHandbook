@@ -9,9 +9,9 @@ verification:
   summary: Compiled from the current repository content and run records. This is a handbook change log, not an OpenAI product release log or a claim that the site has been deployed.
 locale: en
 source_locale: zh-CN
-source_revision: '3c99d35'
+source_revision: '1686a65'
 translation_status: reviewed
-reviewed_at: 2026-10-25
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 ---
 
@@ -53,28 +53,28 @@ The [five-step beginner path](/en/guide/learning-paths/beginner/) uses one set o
 
 ## 2026-09-18: Roadmap dates and practice entry points
 
-The [AI application roadmap](/en/ai-roadmap/) now distinguishes papers, product launches, engineering articles, and project topics that are not sorted by first-release date. Each topic has specific sources and a practice entry point. The date of one article is no longer used as the date of an industry-wide trend, and structural checks of a Skill package are not presented as a client trigger test. Original URLs remain, but historical year-month labels are not current event dates. Each topic page records its sources and verification scope near the top.
+The [AI application roadmap](/en/ai-roadmap/) now distinguishes papers, product launches, engineering articles, and project topics that are not sorted by first-release date. Each topic has specific sources and a practice entry point. The date of one article is no longer used as the date of an industry-wide trend, and structural checks of a Skill package are not presented as a client trigger test. Original URLs remain, but historical year-month labels are not current event dates. Each topic provides source links and applicability limits in the body.
 
 ## 2026-09-18: Clarifications that prevent common misreadings
 
 - The pricing entry is now “Price reference.” Sourced snapshots in their original currencies are separated from unknowns; estimates no longer drive a global high-to-low price comparison. Check the actual seller's display before buying.
-- Page headers distinguish editorial status, source checking, example runs, and historical notes. A “run tested” label covers only the named scripts and environments; it is not a reliability rate for model output.
+- Relevant pages now explain sources, applicability, and actual run scope directly in the body. A “run tested” claim covers only the named scripts and environments; it is not a reliability rate for model output.
 - [Instruction priority](/en/guide/context/context-priority/) distinguishes message roles, how project instructions are discovered, and execution permissions. It no longer broadly claims that newer or stricter instructions always win.
 - [SDK](/en/guide/developer-platform/sdk-overview/) and [Webhook](/en/guide/developer-platform/webhooks/overview/) pages distinguish local execution, self-hosted services, and callback design; proposed interfaces are not presented as official contracts.
 - [Task levels](/en/prompts/ask-for-a-plan/) distinguish direct execution, planning first, and action approval, avoiding pauses at every step regardless of risk.
 
-See each mechanism page's header for its sources and verification scope. This update summary is not a complete API reference.
+The relevant pages describe their sources and limits in the body. This update summary is not a complete API reference.
 
 ## If you find a problem on a page
 
-Each Chinese article has a “Report a problem with this page (GitHub draft)” link at the bottom. It puts the page title, site path, and recorded verification date into an unsubmitted Issue draft. Check its contents before submitting it yourself; a GitHub account is required.
+Every handbook page has a localized “Report a page issue (GitHub draft)” link in its footer. It includes only the page title and site path, then opens a public Issue draft that has not been submitted. Review it before submitting it yourself; a GitHub account is required.
 
-Describe the exact passage, expected and actual behavior, relevant environment, and a public source if needed. Share only redacted information. Do not paste API keys, account details, private directories, customer data, or full raw logs. The draft does not automatically collect your task logs or include the page query parameters.
+Identify the section, expected and actual content, necessary environment, and public evidence. Remove API keys, account details, private paths, customer data, and unredacted logs. The draft does not collect task records or include the page query string.
 
-Without a GitHub account, copy the page path and issue description into a local note, then ask a collaborator with access to submit it. No response time is promised, and no message is sent automatically.
+Without a GitHub account, copy the page path and problem description into a local note and ask a collaborator with access to submit it. This does not promise a response time or send a message automatically.
 
 ## How maintainers handle reports
 
-After reproducing an issue or checking the source, record why it was accepted, revised, or could not yet be confirmed. When changing a product fact, update its evidence rather than refreshing the verification dates of unrelated pages. When changing an exercise, synchronize the source material, download package, and article. If an earlier conclusion is invalid, explain the impact of the old approach and the migration steps instead of simply saying the content was “improved.”
+After reproducing an issue or checking the source, record why it was accepted, revised, or could not yet be confirmed. When changing a product fact, update the body and its evidence without marking unrelated pages as updated. When changing an exercise, synchronize the source material, download package, and article. If an earlier conclusion is invalid, explain the impact of the old approach and the migration steps instead of simply saying the content was “improved.”
 
-When updating this page, link specific pages and verification records and keep untested scope visible. This is a community handbook change log, not an official OpenAI release log.
+When updating this page, link the affected pages and public sources and state what remains untested. This is a community handbook change log, not an official OpenAI release log.

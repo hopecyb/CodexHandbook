@@ -7,7 +7,7 @@ title: เขียนหน้าคู่มือ
 description: โครงสร้าง frontmatter และข้อตกลงลิงก์ข้ามหน้าสำหรับเนื้อหาคู่มือใหม่
 locale: th
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
@@ -42,18 +42,7 @@ description: อธิบายปัญหาที่หน้านี้แ�
 ---
 ```
 
-หน้าใหม่ให้บันทึกสถานะการแก้ไขและวิธีตรวจสอบไว้ใน frontmatter โดยไม่เพิ่มข้อความตรวจสอบอิสระที่ท้ายหน้าอีก:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: ตรวจโครงสร้างเนื้อหาแล้ว ให้แทนด้วยการตรวจสอบและวันที่ที่ทำจริงสำหรับหน้านี้
-```
-
-หากต้องระบุว่าตรวจแหล่งข้อมูลหรือรันตัวอย่างจริง ให้เพิ่มลิงก์และสภาพแวดล้อมตาม [ตรวจสอบเนื้อหาทางเทคนิค](/th/guide/contributing/verify-technical-content/) วันที่ต้องเป็นสตริง `YYYY-MM-DD` ที่มีเครื่องหมายคำพูด
-
+ฟิลด์สำหรับดูแลรีโพซิทอรีจะจัดการโดยเครื่องมือตรวจสอบและไม่แสดงในเนื้อหาหรือส่วนท้าย ให้เก็บเฉพาะข้อมูลที่ผู้อ่านต้องใช้เพื่อทำความเข้าใจและใช้งานหน้า ตรวจข้อเท็จจริงที่เปลี่ยนง่าย เช่น คำสั่ง ราคา และสิทธิ์ ตาม [ตรวจสอบเนื้อหาทางเทคนิค](/th/guide/contributing/verify-technical-content/) และระบุขอบเขตการใช้ที่จำเป็นไว้ในเนื้อหาโดยตรง
 ## โครงสร้างที่แนะนำ
 
 เลือกหัวข้อย่อยตาม [เทมเพลตรวมแหล่งข้อมูลภายนอก](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF) รูปแบบที่พบบ่อยคือ:

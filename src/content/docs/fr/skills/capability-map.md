@@ -8,7 +8,7 @@ title: Carte des capacités d’extension
 description: "Comprendre les extensions de Codex à travers huit responsabilités : tâche, règles, processus, outils, garde-fous, distribution, déclenchement et parallélisme."
 locale: fr
 source_locale: zh-CN
-source_revision: '183812c'
+source_revision: '32771c6'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

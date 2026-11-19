@@ -3,7 +3,7 @@ title: Conversaciones y Agents en paralelo
 description: Usa conversaciones y worktrees separados para avanzar tareas independientes que puedan revisarse por separado.
 locale: es
 source_locale: zh-CN
-source_revision: "2336db1"
+source_revision: 'a028309'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:

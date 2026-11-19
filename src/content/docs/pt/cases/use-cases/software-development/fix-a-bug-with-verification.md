@@ -12,7 +12,7 @@ title: "Caso: correção de bug com verificação"
 description: "Use um bug executável no cálculo de descontos para reproduzir a falha, identificar a causa, fazer a menor correção, repetir os testes e revisar o diff."
 locale: pt
 source_locale: zh-CN
-source_revision: "42d842e"
+source_revision: 'c89a885'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20

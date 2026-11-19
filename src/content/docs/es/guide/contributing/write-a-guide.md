@@ -7,10 +7,10 @@ title: Escribir una página de guía
 description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-25
+reviewed_at: 2026-11-19
 sidebar:
   order: 10
 ---
@@ -38,22 +38,11 @@ Así que no suele ser solo una lista de puntos ni solo una lista de comandos: ta
 ```yaml
 ---
 title: Título de la página
-description: En una frase, el problema que resuelve este texto
+description: Una frase sobre el problema que resuelve la página
 ---
 ```
 
-Las páginas nuevas registran el estado editorial y el método de verificación en el frontmatter. Ya no se añade un pie de verificación en texto libre:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Estructura del contenido revisada; sustitúyelo por las comprobaciones realizadas y su fecha.
-```
-
-Para indicar que se revisaron fuentes o se ejecutó un ejemplo, sigue [Verificar contenido técnico](/es/guide/contributing/verify-technical-content/) y añade los enlaces y datos del entorno necesarios. Las fechas deben ser cadenas `YYYY-MM-DD` entre comillas.
-
+Los campos de mantenimiento del repositorio los gestionan las herramientas de validación y no se muestran en el texto ni en el pie de página. Conserva solo la información que los lectores necesitan para entender y usar la página. Comprueba los datos que cambian, como comandos, precios y permisos, mediante [Verificar contenido técnico](/es/guide/contributing/verify-technical-content/) e indica directamente en el texto los límites de aplicación necesarios.
 ## Estructura recomendada
 
 Elige secciones según la [plantilla de integración de fuentes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板); combinaciones habituales:

@@ -7,7 +7,7 @@ title: Vollständige Anleitung zu Scheduled tasks
 description: Wähle eigenständige oder chatgebundene Aufgaben und konfiguriere lokales Projekt, Worktree, Berechtigungen, Prompt und Review-Zyklus.
 locale: de
 source_locale: zh-CN
-source_revision: "fa792dc"
+source_revision: '532489c'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

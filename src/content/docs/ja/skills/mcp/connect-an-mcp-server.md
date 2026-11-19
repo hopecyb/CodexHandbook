@@ -3,7 +3,7 @@ title: MCP サーバーに接続する
 description: CLI または config.toml で最初の MCP サーバーを設定・認証・検証します。
 locale: ja
 source_locale: zh-CN
-source_revision: "0675d33"
+source_revision: '67b417d'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

@@ -1,4 +1,18 @@
 ---
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-18"
+  summary: Checked against the OpenAI Hooks documentation and the public source, license, and Codex integration documentation for HOL Guard 3.x. The third-party section is source-checked only; this site did not install it or independently test its blocking behavior.
+  evidence:
+    - label: OpenAI Hooks documentation
+      href: https://learn.chatgpt.com/docs/hooks
+    - label: HOL Guard source and Apache-2.0 license
+      href: https://github.com/hashgraph-online/hol-guard
+    - label: HOL Guard Codex 3.x integration guide
+      href: https://hol.org/guard/docs/guard/codex-harness
+    - label: HOL Guard local and Cloud boundary
+      href: https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/local-vs-cloud.md
 legacyVerification:
   status: "verified"
   products: "Ambientes que usam um host Codex local; a CLI fornece `/hooks` para gerir a confiança"
@@ -7,10 +21,10 @@ title: Visão geral dos Hooks
 description: Compreender a descoberta da configuração, a revisão de confiança, os processadores e os limites de segurança dos Hooks.
 locale: pt
 source_locale: zh-CN
-source_revision: "ac7889b"
+source_revision: '595bd2a'
 translation_status: reviewed
 translated_at: "2026-09-20"
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 Os Hooks permitem executar scripts de comando ou ferramentas de servidores MCP já ligados durante o ciclo do Agent Codex. Usos comuns incluem detectar segredos em prompts, aplicar regras às chamadas de ferramentas, manter logs de auditoria, resumir sessões e verificar o trabalho antes da paragem.
@@ -74,6 +88,12 @@ A cobertura de ferramentas pelos Hooks não constitui uma fronteira de seguranç
 2. Para problemas de elevada confiança, use `systemMessage` ou contexto adicional como aviso.
 3. Bloqueie em `PreToolUse` apenas se a regra for inequívoca, o script tiver fixtures e os falsos positivos forem aceitáveis.
 4. Alinhe os Hooks com a CI, as verificações antes do commit e as permissões do serviço para evitar políticas contraditórias.
+
+## Referência a uma ferramenta de terceiros
+
+Se não quiser escrever um script de proteção do zero, pode avaliar o [HOL Guard](https://github.com/hashgraph-online/hol-guard). É um projeto de código aberto de terceiros com licença Apache-2.0. Segundo o [guia de integração com o Codex 3.x](https://hol.org/guard/docs/guard/codex-harness), o instalador regista Hooks como `PreToolUse` e `PermissionRequest`. Também usa um shim de arranque e um proxy MCP parcial para recusar, avisar ou encaminhar para aprovação humana, conforme a política local, comandos shell, leituras sensíveis, chamadas MCP e operações de pacotes compatíveis. Não pausa todas as operações para pedir confirmação. O Guard Cloud é um serviço pago opcional e separado; a proteção local não exige início de sessão no Cloud.
+
+Não é uma ferramenta oficial da OpenAI, e este site não testou de forma independente a sua taxa de bloqueio nem a segurança. Antes de experimentar, execute `hol-guard install codex --dry-run`, verifique as alterações em `~/.codex/config.toml`, no comando de arranque e na configuração MCP, e consulte a [cobertura e o comportamento em caso de falha](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/harness-support.md) da versão atual. Teste erros e timeouts dos Hooks, resultados inválidos que possam permitir a operação e o processo de desinstalação e reversão. Tal como um Hook próprio, a ferramenta está limitada pela cobertura de ferramentas do Codex e não substitui sandbox, privilégio mínimo, gestão de segredos nem controlos do servidor.
 
 ## Lista de verificação
 

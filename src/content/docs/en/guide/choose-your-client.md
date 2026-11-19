@@ -8,7 +8,7 @@ title: Choose a Codex client
 description: Choose among the desktop App, CLI, IDE integration, and Cloud based on where and how the work happens.
 locale: en
 source_locale: zh-CN
-source_revision: 'e4c7057'
+source_revision: 'efaef36'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

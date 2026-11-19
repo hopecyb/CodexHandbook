@@ -4,10 +4,10 @@ legacyVerification:
   basis: "Vérifié au regard du système de statuts actuel du manuel, de plusieurs séries de révisions achevées et du principe de priorité aux sources officielles. Cette page décrit les critères internes pour passer une page à `verified` et les principes de rétrogradation."
   checkedAt: "2026-07-26"
 title: Vérifier le contenu technique
-description: Distinguer le statut éditorial, la vérification des sources et les essais d’exemples ; consigner le périmètre, l’environnement et les preuves.
+description: Comment vérifier les faits techniques, reproduire les étapes et consigner la portée et les preuves.
 locale: fr
 source_locale: zh-CN
-source_revision: 'cfb077d'
+source_revision: '7fba563'
 translation_status: reviewed
 translated_at: 2026-09-20
 editorialStatus: review
@@ -17,131 +17,54 @@ verification:
   summary: Consignes de contribution mises à jour pour les nouveaux champs de métadonnées du site ; cela ne signifie pas que tous les mécanismes produit cités ici ont été exécutés à nouveau.
 sidebar:
   order: 30
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 
-Les commandes, permissions, tarifs et fonctionnalités produit changent. La **vérification** signifie que les lecteurs qui suivent la doc aujourd'hui obtiennent des résultats prévisibles.
+Les commandes, les autorisations, les tarifs et les fonctionnalités peuvent évoluer d’une version à l’autre. La vérification technique doit aider les lecteurs à comprendre quels énoncés reposent sur des éléments actuels, dans quels environnements ils s’appliquent et ce qu’ils doivent encore confirmer eux-mêmes.
 
-## Ce que cette page couvre
+## Objectif de la vérification
 
-Beaucoup de contributeurs doc pour la première fois confondent « ça a l'air bon pour moi » et « vérifié ».
+La vérification ne se limite pas à améliorer la clarté du texte. Les faits essentiels doivent correspondre au produit actuel, les étapes doivent fonctionner dans l’environnement annoncé et les conclusions doivent rester dans les limites des éléments disponibles.
 
-Pour un manuel technique :
+## Priorité des éléments de preuve
 
-- Le premier est subjectif
-- Le second signifie que vous l'avez essayé sur la version, l'environnement et les étapes actuelles
+1. Utilisez d’abord la documentation officielle d’OpenAI pour le comportement, les paramètres et les limites du produit.
+2. Tout exemple présenté comme « exécuté » doit avoir un résultat réel et des informations sur l’environnement.
+3. Les articles communautaires peuvent faire découvrir des sujets, mais ne remplacent ni les sources officielles ni une exécution réelle.
+4. Un lien fonctionnel ne prouve pas que son contenu étaye une affirmation : lisez la source.
+5. Si une information ne peut pas être confirmée, exprimez l’incertitude au lieu de combler les lacunes par des suppositions.
 
-Cette page explique comment passer de « semble correct » à « preuve que ça fonctionne encore ».
+## Portée à consigner
 
-## Ce que la vérification contrôle
-
-Pas seulement la prose — confirmer qu'un lecteur peut le faire **aujourd'hui**.
-
-Particulièrement important car :
-
-- Les commandes changent
-- Les emplacements de menu bougent
-- Les permissions par défaut changent
-- Les capacités produit et régions évoluent
-
-La vérification empêche les lecteurs de suivre une doc obsolète vers des pièges.
-
-## Significations des statuts
-
-| Statut | Signification |
-|---|---|
-| `planned` | Planifié, pas encore écrit |
-| `draft` | En cours, pas finalisé |
-| `review` | Complet, en attente de second passage |
-| `verified` | Vérifié selon la base indiquée |
-| `outdated` | Produit changé ; mise à jour nécessaire |
-| `archived` | Historique ; pas dans la nav principale |
-
-## Idées reçues courantes
-
-### Le statut éditorial et la méthode de vérification sont deux champs distincts
-
-`editorialStatus` indique l’avancement de la rédaction et de la révision. `verification.kind` indique le type de contrôle réellement effectué ; `verified` ne permet pas de déduire qu’un exemple a été exécuté.
-
-| Méthode de vérification | Conclusion permise | Preuves obligatoires |
-|---|---|---|
-| `editorial` | La structure, la formulation ou les références internes ont été relues | Résumé du contrôle et date |
-| `source-checked` | Les faits dans le périmètre indiqué concordent avec les sources | Liens vers les sources précises, résumé et date |
-| `run-tested` | L’exemple a été exécuté dans l’environnement consigné | Environnement, traces d’exécution et de révision, résumé et date |
-
-`run-tested` ne garantit pas le fonctionnement sur toutes les plateformes. Le résumé doit préciser ce qui a été contrôlé et ce qui ne l’a pas été ; un autocontrôle par calcul indépendant ne constitue pas une révision par une deuxième personne. Les anciens enregistrements sans preuves restent dans `legacyVerification` et ne deviennent pas automatiquement un nouveau statut de vérification.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Structure et liens internes vérifiés ; l’exemple n’a pas été exécuté.
-```
-
-Les vérifications des sources et les essais utilisent une liste `evidence` dont chaque élément comporte `label` et `href`. Les essais exigent aussi `environment`, avec le système, la version du client concerné et celles des dépendances. La compilation rejette les enregistrements d’essai sans environnement ou liens vers les preuves. La présence d’un lien ne prouve pas à elle seule que la preuve suffit : les responsables doivent lire l’enregistrement.
-
-### Les articles communautaires aident à comprendre, mais ne remplacent pas la vérification des faits
-
-Les articles communautaires aident à voir quoi couvrir.
-
-Pour :
-
-- Noms de commandes
-- Comportement des permissions
-- Points d'entrée produit
-- Tarifs, quotas, différences régionales
-
-—utiliser la doc officielle ou le comportement en direct.
-
-### La vérification n'est pas une phrase à la fois
-
-Les phrases peuvent chacune avoir l'air correctes pendant que le chemin entier échoue :
-
-- Produits ne correspondent pas au périmètre de page
-- Ordre des étapes incorrect
-- Hypothèses non énoncées
-- Le titre promet plus que le corps vérifié
-
-Vérifier le **chemin opérationnel complet**.
-
-## Checklist de vérification
-
-1. **Indiquer le périmètre** : produit (App/CLI/IDE/Cloud), OS, version CLI
-2. **Reproduire étape par étape** : depuis zéro ou worktree propre
-3. **Base officielle** : citer des sources officielles précises pour les faits relatifs au produit ; pour les exercices de méthode stables, utiliser de vraies entrées et des traces de contrôle sans revendiquer un aval officiel
-4. **Sources communautaires** : articles communautaires pour les sujets seulement — faits depuis l'officiel
-5. **Mettre à jour la date** : `verification.checkedAt` doit correspondre à la date réelle du contrôle ; ne pas rafraîchir en masse d’anciennes dates comme si une nouvelle révision avait eu lieu
-6. **Revue indépendante** : `verified` idéalement confirmé par quelqu'un autre que l'auteur
+- Produit concerné : App, CLI, IDE ou Cloud
+- Système d’exploitation, client et versions des dépendances importantes
+- Étapes réellement effectuées et méthode de contrôle du résultat
+- Plateformes, points d’entrée et cas limites non couverts
+- Page source précise, et non la seule page d’accueil d’un site
 
 ## Ordre de vérification
 
-1. Confirmer produit, entrée, scénario
-2. Parcourir les étapes documentées
-3. Recouper les faits susceptibles de changer avec la documentation officielle
-4. Rétrograder les parties incertaines ou non reproduites
-5. Mettre à jour statut et date en dernier
+1. Identifiez le produit, le point d’entrée et le scénario traités par la page.
+2. Comparez les faits susceptibles d’évoluer à la documentation officielle actuelle.
+3. Si la page affirme que des étapes peuvent être exécutées, réalisez-les depuis le début dans un environnement propre.
+4. Réduisez la portée des affirmations non testées ou incertaines et indiquez la limite dans le texte.
+5. Vérifiez les liens internes, les liens externes et les prérequis nécessaires aux lecteurs.
 
-Préférer `review` plutôt qu'un `verified` prématuré.
+## Informations qui changent souvent
 
-## Informations volatiles
+Après une mise à jour majeure du produit, revérifiez en priorité :
 
-Re-vérifier trimestriellement ou sur les releases majeures :
+- Commandes, sous-commandes et flags
+- Autorisations par défaut et comportement du sandbox
+- Offres, noms de modèles, tarifs, quotas et disponibilité régionale
+- MCP, Hooks et autres interfaces d’intégration
+- Emplacement des menus, nom des boutons et points d’entrée du produit
 
-- Noms de commandes et sous-commandes, flags
-- Permissions par défaut et comportement bac à sable
-- Plans, noms de modèles, disponibilité régionale
-- Noms d'événements MCP/Hook
+## En cas d’incertitude
 
-## En cas d'échec
+Ne présentez pas une déduction comme un fait. Supprimez les détails obsolètes, reformulez autour d’une méthode stable ou consignez la question dans une PR ou une issue. Pour le comportement actuel, les tarifs et les politiques, les sources officielles font foi.
 
-- Rétrograder vers `review`, `draft` ou `outdated` selon le cas
-- Dans la PR, noter quelle étape diffère de la doc officielle
-- Grande dérive : ouvrir une issue labellée `outdated`
+## Voir aussi
 
-## Associé
-
-- [Politique de version du manuel](/fr/guide/start-here/handbook-version-policy/)
+- [Fiabilité du contenu](/fr/guide/start-here/handbook-version-policy/)
 - [Ressources officielles](/fr/guide/reference/official-resources/)
-
-`verified` signifie vérifié contre la base actuelle indiquée avec des preuves traçables — pas seulement l'intuition de l'auteur.

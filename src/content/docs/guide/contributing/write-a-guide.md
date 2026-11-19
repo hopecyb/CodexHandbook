@@ -36,18 +36,7 @@ description: 一句话说明本文解决的问题
 ---
 ```
 
-新页面在 frontmatter 记录编辑状态和验证方式，不再附自由文本核验页脚：
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: 已检查内容结构；替换为本页实际完成的检查和日期。
-```
-
-需要标记来源核对或示例实跑时，按[核验技术内容](/guide/contributing/verify-technical-content/)补齐链接和环境。日期应使用带引号的 `YYYY-MM-DD` 字符串。
-
+仓库维护字段由校验工具处理，不在正文或页脚展示。正文只保留读者理解和使用页面所需的信息。命令、价格、权限等易变事实应按[核验技术内容](/guide/contributing/verify-technical-content/)核对，并在正文中直接说明必要的适用边界。
 ## 推荐结构
 
 按[外部资料整合模板](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)选用小节，常见组合：

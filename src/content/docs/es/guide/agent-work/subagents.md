@@ -3,7 +3,7 @@ title: Subagents
 description: Delega trabajo bien delimitado en contextos independientes y deja que el Agent principal consolide las evidencias, resuelva conflictos y acepte el resultado.
 locale: es
 source_locale: zh-CN
-source_revision: "a3f2be5"
+source_revision: 'b1cefc0'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

@@ -7,7 +7,7 @@ title: Hook 설정 예시
 description: 실제 hooks.json과 Python 표준 라이브러리 스크립트로 테스트 가능한 PreToolUse 보호 장치를 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '06e9fa2'
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: '2026-10-26'

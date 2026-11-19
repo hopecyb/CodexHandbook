@@ -3,7 +3,7 @@ title: Roteiro de aplicações de IA
 description: Distingue artigos científicos, lançamentos de produtos, artigos de engenharia e sugestões de aprendizagem do autor, ligando cada tema à prática.
 locale: pt
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-10-24

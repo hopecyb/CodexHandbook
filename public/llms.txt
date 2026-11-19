@@ -4,9 +4,7 @@
 
 Primary URL: https://codexhandbook.com/
 Source repository: https://github.com/hopecyb/CodexHandbook
-Primary language: zh-CN
 Maintainers: Codex Handbook contributors
-Last updated: 2026-07-28
 
 ## Key Pages
 

@@ -4,12 +4,12 @@ legacyVerification:
   basis: "Cross-checked against the handbook’s current status system, completed rounds of review, and the official-first principle. This page describes internal standards for promoting pages to `verified` and for downgrading them."
   checkedAt: "2026-07-26"
 title: Verify Technical Content
-description: Distinguish editorial status, source checks, and example runs; record scope, environment, and evidence.
+description: How to check technical facts, reproduce steps, and record scope and evidence.
 locale: en
 source_locale: zh-CN
-source_revision: 'cfb077d'
+source_revision: '7fba563'
 translation_status: reviewed
-reviewed_at: "2026-10-25"
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -20,128 +20,51 @@ sidebar:
   order: 30
 ---
 
-Commands, permissions, pricing, and product features change. **Verification** means readers who follow the doc today get predictable results.
+Commands, permissions, pricing, and product features can change between versions. Technical verification should help readers understand which claims have current support, which environments they apply to, and what they still need to confirm themselves.
 
-## What this page covers
+## Verification goal
 
-Many first-time doc contributors confuse “looks fine to me” with “verified.”
+Verification goes beyond editing for clarity. Key facts must match the current product, steps must work in the stated environment, and conclusions must stay within what the evidence supports.
 
-For a technical handbook:
+## Evidence priority
 
-- The first is subjective
-- The second means you tried it on current version, environment, and steps
+1. Use official OpenAI documentation first for product behavior, parameters, and limits.
+2. Any example described as “run” must have an actual result and environment information.
+3. Community articles can help identify topics, but they do not replace official sources or an actual run.
+4. A working link does not prove that its content supports a claim; read the source.
+5. State uncertainty directly when information cannot be confirmed instead of filling gaps with guesses.
 
-This page explains upgrading “seems right” to “evidence it still works.”
+## Scope to record
 
-## What verification checks
+- Applicable product: App, CLI, IDE, or Cloud
+- Operating system, client, and important dependency versions
+- Steps actually performed and how the result was checked
+- Platforms, entry points, and edge cases that were not covered
+- The specific source page, rather than only a website homepage
 
-Not only prose—confirm a reader can do it **today**.
+## Verification sequence
 
-Especially important because:
+1. Identify the product, entry point, and scenario discussed by the page.
+2. Check volatile facts against the current official documentation.
+3. If the page says steps can be run, execute them from the beginning in a clean environment.
+4. Narrow any untested or uncertain claim and state the limitation in the body.
+5. Check internal links, external links, and prerequisites readers need.
 
-- Commands change
-- Menu locations move
-- Permission defaults shift
-- Product capabilities and regions evolve
+## Information that changes often
 
-Verification prevents readers following stale docs into traps.
+Recheck these topics first after major product releases:
 
-## Status meanings
+- Commands, subcommands, and flags
+- Permission defaults and sandbox behavior
+- Plans, model names, pricing, quotas, and regional availability
+- MCP, Hooks, and other integration interfaces
+- Menu locations, button names, and product entry points
 
-| Status | Meaning |
-|---|---|
-| `planned` | Planned, not yet written |
-| `draft` | In progress, not finalized |
-| `review` | Complete, awaiting second pass |
-| `verified` | Checked per stated basis |
-| `outdated` | Product changed; needs update |
-| `archived` | Historical; not in main nav |
+## When something cannot be confirmed
 
-## Common misconceptions
-
-### Editorial status and verification method are separate fields
-
-`editorialStatus` records writing and review progress. `verification.kind` records which kind of check was actually performed; readers cannot infer from `verified` that an example was run.
-
-| Verification method | Supported conclusion | Required evidence |
-|---|---|---|
-| `editorial` | Structure, wording, or internal references were reviewed | Check summary and date |
-| `source-checked` | Facts within the stated scope agree with the sources | Specific source links, summary, and date |
-| `run-tested` | The example ran in the recorded environment | Environment, execution and review records, summary, and date |
-
-`run-tested` does not guarantee that the example works on every platform. The summary must say what was and was not checked; an independent calculation self-check is not a review by a second author. Old records without evidence remain in `legacyVerification` and do not automatically imply any new verification status.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Checked the structure and internal links; the example has not been run.
-```
-
-Source checks and runs use an `evidence` list whose entries each contain `label` and `href`. Runs also require `environment`, specifying the system, relevant client version, and dependency versions. The build rejects run records that lack an environment or evidence links. A link’s existence alone does not prove that the evidence is sufficient; maintainers must read the record.
-
-### Community articles inform topics, not facts
-
-Community articles can help you see what to cover.
-
-For:
-
-- Command names
-- Permission behavior
-- Product entry points
-- Pricing, quotas, regional differences
-
-—use official docs or live behavior.
-
-### Verification is not one sentence at a time
-
-Sentences may each look fine while the whole path fails:
-
-- Products mismatch page scope
-- Step order wrong
-- Unstated assumptions
-- Title promises more than body verified
-
-Verify the **full operational path**.
-
-## Verification checklist
-
-1. **State scope**: product (App/CLI/IDE/Cloud), OS, CLI version
-2. **Reproduce step by step**: from zero or clean worktree
-3. **Official basis**: cite specific official sources for product facts; for stable method exercises, use real inputs and check records without claiming official endorsement
-4. **Community sources**: community articles for topics only—facts from official
-5. **Update date**: set `verification.checkedAt` only to the actual check date; do not bulk-refresh old dates and pass them off as renewed review
-6. **Independent review**: `verified` ideally confirmed by someone other than author
-
-## Verification order
-
-1. Confirm product, entry, scenario
-2. Walk the documented steps
-3. Cross-check volatile facts with official docs
-4. Downgrade uncertain or unreproduced parts
-5. Update status and date last
-
-Prefer `review` over premature `verified`.
-
-## Volatile information
-
-Re-check quarterly or on major releases:
-
-- Command and subcommand names, flags
-- Default permissions and sandbox behavior
-- Plans, model names, regional availability
-- MCP/Hook event names
-
-## On failure
-
-- Downgrade to `review`, `draft`, or `outdated` as appropriate
-- In PR, note which step disagrees with official docs
-- Large drift: open issue labeled `outdated`
+Do not present an inference as fact. Remove obsolete specifics, rewrite the section around a stable method, or record the open question in a PR or issue. For current behavior, pricing, and policies, the official sources are authoritative.
 
 ## Related
 
-- [Handbook version policy](/en/guide/start-here/handbook-version-policy/)
+- [Content reliability](/en/guide/start-here/handbook-version-policy/)
 - [Official resources](/en/guide/reference/official-resources/)
-
-`verified` means checked against stated current basis with traceable evidence—not author gut feel alone.

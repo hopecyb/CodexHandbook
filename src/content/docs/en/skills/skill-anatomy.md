@@ -8,7 +8,7 @@ title: Skill anatomy
 description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
 locale: en
 source_locale: zh-CN
-source_revision: '50ca48c'
+source_revision: 'c4b740a'
 translation_status: reviewed
 reviewed_at: "2026-10-25"
 translated_at: 2026-09-20

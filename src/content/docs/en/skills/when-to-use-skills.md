@@ -8,7 +8,7 @@ title: When to use Skills
 description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: '5e688f4'
+source_revision: '7b72e00'
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"

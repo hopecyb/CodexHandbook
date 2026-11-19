@@ -3,7 +3,7 @@ title: Choisir un client Codex
 description: Choisissez entre l'App de bureau, la CLI, l'intégration IDE et Cloud selon le lieu et la manière dont le travail s'effectue.
 locale: fr
 source_locale: zh-CN
-source_revision: "e4c7057"
+source_revision: 'efaef36'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

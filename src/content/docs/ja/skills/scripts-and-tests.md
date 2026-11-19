@@ -8,7 +8,7 @@ title: scripts/ とテスト
 description: Skill に同じ手順を確実に実行するスクリプトを追加し、挙動を検証する。
 locale: ja
 source_locale: zh-CN
-source_revision: "900e6e4"
+source_revision: '05a2f68'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

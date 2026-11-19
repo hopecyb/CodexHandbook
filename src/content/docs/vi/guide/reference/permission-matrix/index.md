@@ -7,7 +7,7 @@ title: Ma trận quyền
 description: Phân biệt Permission Profiles cục bộ, sandbox cũ và chính sách mạng của Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: "c6ad6aa"
+source_revision: 'c38e374'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:

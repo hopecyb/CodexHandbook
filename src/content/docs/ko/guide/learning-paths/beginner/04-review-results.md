@@ -19,7 +19,7 @@ next:
   label: "첫 작은 프로젝트 완성하기"
 locale: ko
 source_locale: zh-CN
-source_revision: "e426ec4"
+source_revision: 'ca6a935'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: "2026-10-26"

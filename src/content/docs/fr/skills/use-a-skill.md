@@ -8,7 +8,7 @@ title: Utiliser un Skill
 description: Déclenchement explicite et implicite, et bien rédiger description.
 locale: fr
 source_locale: zh-CN
-source_revision: 'ef92b69'
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

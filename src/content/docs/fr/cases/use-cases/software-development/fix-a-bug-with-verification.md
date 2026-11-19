@@ -12,7 +12,7 @@ title: "Cas pratique : corriger un bug avec vérification"
 description: Utilisez un bug exécutable de calcul de remise pour reproduire le rouge, localiser la cause racine, effectuer la correction minimale, vérifier le vert, lancer la régression et réviser le diff.
 locale: fr
 source_locale: zh-CN
-source_revision: '42d842e'
+source_revision: 'c89a885'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

@@ -8,7 +8,7 @@ title: Choose an extension method
 description: Choose prompts, AGENTS.md, Skills, MCP, Hooks, Plugins, or Scheduled tasks by what must persist.
 locale: en
 source_locale: zh-CN
-source_revision: '28ae6f5'
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: "2026-10-25"

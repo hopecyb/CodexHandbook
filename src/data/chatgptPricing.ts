@@ -24,7 +24,7 @@ export const translations = {
 		skills: 'Skills',
 		cases: '实战案例',
 		pets: 'Codex 宠物',
-		theme: 'Codex主题皮肤',
+		theme: 'Codex 主题皮肤',
 		pricingNav: 'ChatGPT 套餐与价格',
 		footerTagline: '把任务说明、执行过程与验收结果沉淀成可复用的 Codex 方法。',
 		footerModules: '模块',

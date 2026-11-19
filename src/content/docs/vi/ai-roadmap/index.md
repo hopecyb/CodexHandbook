@@ -3,7 +3,7 @@ title: Lộ trình ứng dụng AI
 description: Phân biệt bài nghiên cứu, công bố sản phẩm, bài kỹ thuật và gợi ý học tập của tác giả, rồi đi từ mỗi chủ đề đến thực hành.
 locale: vi
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-10-24

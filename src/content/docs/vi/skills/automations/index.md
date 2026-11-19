@@ -7,7 +7,7 @@ title: Tác vụ theo lịch
 description: Cho ChatGPT lặp lại theo lịch những tác vụ đã được kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: "759c38e"
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

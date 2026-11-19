@@ -9,10 +9,10 @@ verification:
   summary: Rédigé d'après le contenu actuel du dépôt et les journaux d'exécution. Il s'agit des changements du manuel, pas des nouveautés produit d'OpenAI ni d'une confirmation de déploiement public.
 locale: fr
 source_locale: zh-CN
-source_revision: "3c99d35"
+source_revision: '1686a65'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 Cette page indique ce qui a changé dans le manuel, les opérations concernées et ce qui a été vérifié. Les dates correspondent à la préparation du contenu ; pour l'état réel de publication, référez-vous à la version du site que vous consultez. Pour les changements de fonctionnalités, consultez les sources officielles citées dans les tutoriels concernés.
 
@@ -50,28 +50,28 @@ Le [parcours débutant en cinq étapes](/fr/guide/learning-paths/beginner/) util
 
 ## 2026-09-18 : dates de la feuille de route et exercices pratiques
 
-La [feuille de route des applications d'IA](/fr/ai-roadmap/) distingue désormais articles de recherche, lancements de produit, articles d'ingénierie et sujets de projet non classés par première date de publication. Chaque sujet propose des sources précises et un exercice. La date d'un article ne représente plus la généralisation dans le secteur, et un contrôle de structure d'un paquet Skill ne vaut pas test de déclenchement dans le client. Les anciennes URL sont conservées ; les anciens mois et années ne sont pas des dates d'événements actuels. Sources et périmètre de vérification figurent en tête de chaque sujet.
+La [feuille de route des applications d'IA](/fr/ai-roadmap/) distingue désormais articles de recherche, lancements de produit, articles d'ingénierie et sujets de projet non classés par première date de publication. Chaque sujet propose des sources précises et un exercice. La date d'un article ne représente plus la généralisation dans le secteur, et un contrôle de structure d'un paquet Skill ne vaut pas test de déclenchement dans le client. Les anciennes URL sont conservées ; les anciens mois et années ne sont pas des dates d'événements actuels. Chaque sujet fournit dans son texte des liens vers les sources et ses limites d'application.
 
 ## 2026-09-18 : clarifications contre les erreurs de lecture
 
 - L'entrée des tarifs devient « Référence de prix ». Les relevés sourcés dans leur devise d'origine sont séparés des inconnues ; une estimation ne sert plus à classer les prix mondiaux. Vérifiez le prix affiché par le vendeur avant d'acheter.
-- Les en-têtes distinguent état éditorial, contrôle des sources, exécution d'exemple et note historique. « Exécuté » ne concerne que les scripts et environnements nommés ; ce n'est pas un taux de fiabilité des sorties du modèle.
+- Les pages concernées expliquent désormais directement dans le texte leurs sources, leur domaine d’application et la portée des exécutions réelles. « Exécuté » ne concerne que les scripts et environnements indiqués ; ce n’est pas un taux de fiabilité des sorties du modèle.
 - La [priorité des instructions](/fr/guide/context/context-priority/) distingue rôles des messages, découverte des instructions du projet et permissions d'exécution, sans affirmer globalement que les instructions les plus récentes ou strictes l'emportent toujours.
 - Les pages [SDK](/fr/guide/developer-platform/sdk-overview/) et [Webhook](/fr/guide/developer-platform/webhooks/overview/) distinguent exécution locale, service auto-hébergé et conception des rappels ; elles ne présentent pas des interfaces proposées comme des contrats officiels.
 - Les [niveaux de tâche](/fr/prompts/ask-for-a-plan/) distinguent exécution directe, planification préalable et approbation d'action, sans imposer une pause à chaque étape.
 
-Les sources et limites de vérification de ces mécanismes figurent en tête des pages concernées. Ce résumé ne constitue pas une référence complète des interfaces.
+Les pages concernées décrivent leurs sources et leurs limites dans le texte. Ce résumé ne constitue pas une référence complète des interfaces.
 
 ## Signaler un problème sur une page
 
-Chaque article en chinois comporte en bas un lien « Signaler un problème sur cette page (brouillon GitHub) ». Il ouvre un brouillon d'Issue non soumis avec titre de la page, chemin sur le site et date de vérification enregistrée. Vérifiez son contenu avant de le soumettre vous-même ; un compte GitHub est nécessaire.
+Chaque page du manuel comporte dans son pied de page un lien localisé « Signaler un problème sur cette page (brouillon GitHub) ». Il inclut seulement le titre et le chemin de la page, puis ouvre un brouillon d’Issue public qui n’a pas encore été envoyé. Vérifiez-le avant de l’envoyer vous-même ; un compte GitHub est nécessaire.
 
-Indiquez le passage précis, l'écart entre comportement attendu et constaté, l'environnement utile et, si nécessaire, une source publique. Ne partagez que des informations anonymisées : pas de clés API, données de compte, répertoires privés, données client ou journaux bruts complets. Le brouillon ne collecte pas automatiquement vos journaux de tâche et n'inclut pas les paramètres de requête de la page.
+Indiquez la section, le contenu attendu et actuel, l’environnement nécessaire et les sources publiques. Retirez les clés API, données de compte, chemins privés, données client et journaux non anonymisés. Le brouillon ne collecte pas les données des tâches et n’inclut pas la chaîne de requête de la page.
 
-Sans compte GitHub, copiez le chemin de la page et la description du problème dans une note locale, puis demandez à un collaborateur autorisé de soumettre l'Issue. Aucun délai de réponse n'est promis et aucun message n'est envoyé automatiquement.
+Sans compte GitHub, copiez le chemin et la description du problème dans une note locale, puis demandez à une personne disposant de l’accès de l’envoyer. Aucun délai de réponse n’est garanti et aucun message n’est envoyé automatiquement.
 
 ## Traitement par les responsables du manuel
 
-Après reproduction ou vérification des sources, notez pourquoi le signalement est accepté, corrigé ou encore incertain. Si vous modifiez un fait produit, mettez à jour sa preuve sans renouveler en masse les dates de vérification d'autres pages. Si vous modifiez un exercice, synchronisez documents source, paquet téléchargeable et article. Quand une conclusion antérieure devient invalide, expliquez l'impact de l'ancienne méthode et les étapes de migration, pas seulement une « amélioration du contenu ».
+Après reproduction ou vérification des sources, notez pourquoi le signalement est accepté, corrigé ou encore incertain. Si vous modifiez un fait produit, mettez à jour le texte et ses éléments de preuve sans marquer comme actualisées des pages sans rapport. Si vous modifiez un exercice, synchronisez les documents source, le paquet téléchargeable et l’article. Quand une conclusion antérieure devient invalide, expliquez l’impact de l’ancienne méthode et les étapes de migration, pas seulement une « amélioration du contenu ».
 
-Lors de la mise à jour de cette page, liez les pages et comptes rendus de vérification précis et conservez ce qui n'a pas été testé. C'est le journal des changements d'un manuel communautaire, pas les notes de version officielles d'OpenAI.
+Lors de la mise à jour de cette page, liez les pages concernées et les sources publiques, et indiquez ce qui n’a pas encore été testé. C’est le journal des changements d’un manuel communautaire, pas les notes de version officielles d’OpenAI.

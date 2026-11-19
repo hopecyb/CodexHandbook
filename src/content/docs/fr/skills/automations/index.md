@@ -7,7 +7,7 @@ title: Tâches planifiées
 description: Répéter à une heure prévue, dans ChatGPT, une tâche déjà vérifiée.
 locale: fr
 source_locale: zh-CN
-source_revision: "759c38e"
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

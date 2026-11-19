@@ -8,7 +8,7 @@ title: Cách chọn phương thức mở rộng
 description: Chọn lời nhắc, AGENTS.md, Skill, MCP, Hook, Plugin hoặc Scheduled task dựa trên thứ bạn muốn duy trì hoặc tự động hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: "28ae6f5"
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

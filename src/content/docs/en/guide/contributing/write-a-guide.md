@@ -7,9 +7,9 @@ title: Write a Guide Page
 description: Structure, frontmatter, and cross-link conventions for new handbook guides.
 locale: en
 source_locale: zh-CN
-source_revision: 'dd22df1'
+source_revision: '4eddfb9'
 translation_status: reviewed
-reviewed_at: "2026-10-25"
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -38,22 +38,11 @@ It is more than a list of facts or commands: it should also show readers where t
 ```yaml
 ---
 title: Page title
-description: One sentence on what problem this page solves
+description: One sentence describing the problem this page solves
 ---
 ```
 
-New pages record editorial status and the verification method in frontmatter. Do not add a free-text verification footer:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Checked the content structure; replace with the checks actually performed and their date.
-```
-
-To mark source checks or an example run, follow [Verify technical content](/en/guide/contributing/verify-technical-content/) and include the relevant links and environment. Quote dates as `YYYY-MM-DD` strings.
-
+Repository maintenance fields are handled by validation tools and are not displayed in the body or footer. Keep only the information readers need to understand and use the page. Check volatile facts such as commands, pricing, and permissions with [Verify technical content](/en/guide/contributing/verify-technical-content/) and state necessary applicability limits directly in the body.
 ## Recommended structure
 
 Choose sections from the [external source integration template](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Common combinations include:

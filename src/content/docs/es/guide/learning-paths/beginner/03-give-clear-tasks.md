@@ -19,7 +19,7 @@ next:
   label: "Revisar resultados"
 locale: es
 source_locale: zh-CN
-source_revision: '664fdf7'
+source_revision: 'a9c854f'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-25

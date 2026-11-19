@@ -12,7 +12,7 @@ title: "Tình huống: sửa lỗi có kiểm chứng"
 description: Dùng lỗi tính chiết khấu có thể chạy thử để tái hiện phép thử thất bại, tìm nguyên nhân, sửa tối thiểu, chạy kiểm thử hồi quy và xem xét diff.
 locale: vi
 source_locale: zh-CN
-source_revision: "42d842e"
+source_revision: 'c89a885'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20

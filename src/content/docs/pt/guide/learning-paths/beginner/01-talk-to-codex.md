@@ -20,7 +20,7 @@ next:
   label: Trabalhar com arquivos
 locale: pt
 source_locale: zh-CN
-source_revision: "827a5d2"
+source_revision: '66e8f94'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

@@ -3,7 +3,7 @@ title: Hoja de ruta de aplicaciones de IA
 description: Distingue artículos académicos, lanzamientos de productos, artículos de ingeniería y recomendaciones de aprendizaje del autor, y conecta cada tema con la práctica.
 locale: es
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 translated_at: 2026-10-24
 prev: false

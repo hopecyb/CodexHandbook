@@ -9,10 +9,10 @@ verification:
   summary: Organizado a partir do conteúdo atual do repositório e dos registros de execução. É um histórico de mudanças do manual, não um anúncio de produto da OpenAI nem prova de publicação do site.
 locale: pt
 source_locale: zh-CN
-source_revision: "3c99d35"
+source_revision: '1686a65'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 Esta página registra o que mudou no manual, quais operações foram afetadas e até onde chegou a verificação. As datas indicam a preparação do conteúdo; para saber o estado real da publicação, confira a versão do site que está acessando. Mudanças em recursos do produto devem ser verificadas nas fontes oficiais citadas nos tutoriais correspondentes.
@@ -51,28 +51,28 @@ O [caminho de cinco passos para iniciantes](/pt/guide/learning-paths/beginner/) 
 
 ## 2026-09-18: datas do roteiro e entradas práticas
 
-O [roteiro de aplicações de IA](/pt/ai-roadmap/) agora distingue artigos científicos, lançamentos de produto, artigos de engenharia e temas de projeto que não estão ordenados pela primeira data de publicação. Cada tema inclui fontes concretas e um exercício. A data de um artigo não representa mais adoção em toda a indústria, nem uma verificação estrutural de pacote Skill é apresentada como teste de acionamento no cliente. As URLs antigas permanecem; meses e anos históricos não são datas de eventos atuais. Fontes e escopo de verificação aparecem no início de cada tema.
+O [roteiro de aplicações de IA](/pt/ai-roadmap/) agora distingue artigos científicos, lançamentos de produto, artigos de engenharia e temas de projeto que não estão ordenados pela primeira data de publicação. Cada tema inclui fontes concretas e um exercício. A data de um artigo não representa mais adoção em toda a indústria, nem uma verificação estrutural de pacote Skill é apresentada como teste de acionamento no cliente. As URLs antigas permanecem; meses e anos históricos não são datas de eventos atuais. Cada tema inclui no texto links para as fontes e limites de aplicação.
 
 ## 2026-09-18: esclarecimentos contra leituras equivocadas
 
 - A entrada de preços passou a “Referência de preços”. Capturas com fontes nas moedas originais ficam separadas de dados desconhecidos; estimativas não formam mais uma lista mundial do mais barato ao mais caro. Confira o preço real exibido pelo vendedor antes de comprar.
-- Os cabeçalhos separam estado editorial, conferência de fontes, execução de exemplo e nota histórica. “Executado” cobre só os scripts e ambientes listados, não representa taxa de confiabilidade das saídas de modelos.
+- As páginas correspondentes agora explicam no próprio texto as fontes, os limites de aplicação e o escopo das execuções reais. “Executado” cobre apenas os scripts e ambientes listados, não representa uma taxa de confiabilidade das saídas de modelos.
 - A [prioridade das instruções](/pt/guide/context/context-priority/) diferencia papéis das mensagens, descoberta das instruções do projeto e permissões de execução, sem afirmar genericamente que instruções mais novas ou restritivas sempre prevalecem.
 - [SDK](/pt/guide/developer-platform/sdk-overview/) e [Webhook](/pt/guide/developer-platform/webhooks/overview/) distinguem execução local, serviço próprio e desenho de callback; interfaces propostas não são descritas como contratos oficiais.
 - Os [níveis de tarefa](/pt/prompts/ask-for-a-plan/) distinguem execução direta, planejamento prévio e aprovação de ações, evitando pausa indiscriminada em cada etapa.
 
-As fontes e os limites de verificação desses mecanismos estão no cabeçalho das respectivas páginas. Este resumo não é uma referência completa das interfaces.
+As páginas correspondentes descrevem as fontes e os limites no texto. Este resumo não é uma referência completa das interfaces.
 
 ## Ao encontrar um problema em uma página
 
-No rodapé de cada artigo em chinês há um link “Relatar problema nesta página (rascunho GitHub)”. Ele abre um rascunho de Issue ainda não enviado com título da página, caminho no site e data de verificação registrada. Confira o conteúdo antes de enviar você mesmo; é necessária uma conta GitHub.
+Todas as páginas do manual têm no rodapé um link localizado “Relatar um problema nesta página (rascunho no GitHub)”. Ele inclui apenas o título e o caminho no site e abre um rascunho de Issue público que ainda não foi enviado. Revise-o antes de enviar; é necessária uma conta GitHub.
 
-Informe o trecho específico, a diferença entre esperado e observado, o ambiente relevante e, quando necessário, uma fonte pública. Compartilhe apenas informações anonimizadas: não cole chaves API, dados de conta, diretórios privados, dados de clientes nem logs brutos completos. O rascunho não coleta automaticamente seus registros de tarefa e não inclui parâmetros de consulta da página.
+Informe a seção, o conteúdo esperado e atual, o ambiente necessário e evidências públicas. Remova chaves de API, dados de contas, caminhos privados, dados de clientes e logs não anonimizados. O rascunho não coleta dados de tarefas nem inclui a query string da página.
 
-Sem conta GitHub, copie o caminho e a descrição do problema para uma nota local e peça a um colaborador com acesso que envie. Não há promessa de prazo de resposta nem envio automático de mensagens.
+Sem conta GitHub, copie o caminho e a descrição do problema para uma nota local e peça a um colaborador com acesso para enviar. Não há promessa de prazo de resposta e nenhuma mensagem é enviada automaticamente.
 
 ## Como a equipe do manual trata os relatos
 
-Após reproduzir ou conferir a fonte, registre por que o relato foi aceito, corrigido ou ainda não pôde ser confirmado. Ao mudar um fato do produto, atualize a evidência correspondente sem renovar em massa as datas de outras páginas. Ao mudar um exercício, sincronize material de origem, pacote para download e artigo. Se uma conclusão anterior deixou de valer, explique o impacto do método antigo e os passos de migração, em vez de apenas escrever “conteúdo otimizado”.
+Após reproduzir ou conferir a fonte, registre por que o relato foi aceito, corrigido ou ainda não pôde ser confirmado. Ao mudar um fato do produto, atualize o texto e as evidências sem marcar páginas não relacionadas como atualizadas. Ao mudar um exercício, sincronize o material de origem, o pacote para download e o artigo. Se uma conclusão anterior deixou de valer, explique o impacto do método antigo e os passos de migração, em vez de apenas escrever “conteúdo otimizado”.
 
-Ao atualizar esta página, vincule páginas e registros de verificação concretos e preserve o escopo ainda não testado. Este é o histórico de mudanças de um manual da comunidade, não o changelog oficial da OpenAI.
+Ao atualizar esta página, vincule as páginas afetadas e as fontes públicas e informe o que ainda não foi testado. Este é o histórico de mudanças de um manual da comunidade, não o changelog oficial da OpenAI.

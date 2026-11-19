@@ -8,7 +8,7 @@ title: Usar un Skill
 description: Activación explícita e implícita de Skills, y claves para escribir bien description.
 locale: es
 source_locale: zh-CN
-source_revision: "ef92b69"
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25

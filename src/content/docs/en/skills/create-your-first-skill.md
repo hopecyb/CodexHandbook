@@ -8,7 +8,7 @@ title: Create your first Skill
 description: Build a committable pr-review Skill from scratch, with testing and team sharing.
 locale: en
 source_locale: zh-CN
-source_revision: '14414f5'
+source_revision: 'aa4baf7'
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"

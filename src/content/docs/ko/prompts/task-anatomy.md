@@ -8,7 +8,7 @@ title: 좋은 작업 요청의 구조
 description: 목표, 배경, 입력, 제약, 완료 기준, 권한 범위를 명확히 정하는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: "98c0511"
+source_revision: 'b933eca'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: "2026-10-26"

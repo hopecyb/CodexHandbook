@@ -3,7 +3,7 @@ title: MCP 연결 디버깅
 description: 설정, 전송, 인증, 도구의 네 단계로 MCP 오류를 찾습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 'd35b635'
+source_revision: 'de0bea5'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

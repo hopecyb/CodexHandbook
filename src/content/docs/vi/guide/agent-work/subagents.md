@@ -4,7 +4,7 @@ title: Agent con
 description: Giao các tác vụ con có ranh giới rõ ràng cho ngữ cảnh độc lập, để Agent chính tổng hợp bằng chứng, xử lý xung đột và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: "a3f2be5"
+source_revision: 'b1cefc0'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20

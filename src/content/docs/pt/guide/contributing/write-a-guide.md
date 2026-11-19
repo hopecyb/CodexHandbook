@@ -7,9 +7,9 @@ title: Escrever uma página de guia
 description: Estrutura, frontmatter e acordos de ligações cruzadas para o corpo novo do manual.
 locale: pt
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -38,22 +38,11 @@ Por isso não é só uma lista de conhecimentos nem só uma lista de comandos �
 ```yaml
 ---
 title: Título da página
-description: Uma frase sobre o problema que este texto resolve
+description: Uma frase sobre o problema que a página resolve
 ---
 ```
 
-As páginas novas registam o estado editorial e o método de verificação no frontmatter. Deixa de se acrescentar um rodapé de verificação em texto livre:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Estrutura do conteúdo verificada; substitua pelas verificações realmente efetuadas e pela respetiva data.
-```
-
-Para assinalar a verificação de fontes ou a execução de um exemplo, siga [Verificar conteúdo técnico](/pt/guide/contributing/verify-technical-content/) e acrescente as ligações e o ambiente necessários. As datas devem ser cadeias `YYYY-MM-DD` entre aspas.
-
+Os campos de manutenção do repositório são tratados pelas ferramentas de validação e não aparecem no texto nem no rodapé. Mantenha apenas as informações necessárias para o leitor compreender e usar a página. Confira fatos voláteis, como comandos, preços e permissões, com [Verificar conteúdo técnico](/pt/guide/contributing/verify-technical-content/) e informe diretamente no texto os limites de aplicação necessários.
 ## Estrutura recomendada
 
 Escolha subseções segundo o [modelo de integração de fontes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板); combinações comuns:

@@ -9,10 +9,10 @@ sidebar:
   order: 10
 locale: de
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 Diese Seite erklärt, wie du unter `src/content/docs/` eine **Anleitungsseite** hinzufügst oder überarbeitest, also weder ein reines Fallbeispiel noch eine reine Referenztabelle.
@@ -38,22 +38,11 @@ Deshalb enthält sie üblicherweise mehr als eine Liste von Begriffen oder Befeh
 ```yaml
 ---
 title: Seitentitel
-description: Ein Satz zum Problem, das diese Seite löst
+description: Ein Satz über das Problem, das diese Seite löst
 ---
 ```
 
-Neue Seiten halten den redaktionellen Status und die Art der Prüfung im Frontmatter fest. Füge keinen frei formulierten Prüf-Footer mehr an:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Inhaltsstruktur geprüft; durch die tatsächlich durchgeführten Prüfungen und deren Datum ersetzen.
-```
-
-Wenn du Quellenprüfungen oder einen Probelauf kennzeichnest, ergänze gemäß [Technische Inhalte verifizieren](/de/guide/contributing/verify-technical-content/) die passenden Links und Angaben zur Umgebung. Datumsangaben müssen als `YYYY-MM-DD`-Zeichenfolgen in Anführungszeichen stehen.
-
+Wartungsfelder des Repositorys werden von Prüfwerkzeugen verarbeitet und nicht im Text oder Seitenfuß angezeigt. Behalten Sie nur Informationen, die Leser zum Verstehen und Anwenden der Seite benötigen. Prüfen Sie veränderliche Fakten wie Befehle, Preise und Berechtigungen anhand von [Technische Inhalte prüfen](/de/guide/contributing/verify-technical-content/) und nennen Sie notwendige Geltungsgrenzen direkt im Text.
 ## Empfohlene Struktur
 
 Wähle passende Abschnitte aus der [Vorlage zur Integration externer Quellen](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Häufig verwendet werden:

@@ -7,7 +7,7 @@ title: Tipos de eventos Hook
 description: Escolher eventos ao longo do ciclo de vida da sessão, do turno, das chamadas de ferramentas, da compactação e dos subagentes.
 locale: pt
 source_locale: zh-CN
-source_revision: "07f4965"
+source_revision: '68a5b0e'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26

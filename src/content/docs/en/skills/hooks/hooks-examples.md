@@ -7,7 +7,7 @@ title: Hook configuration example
 description: Build a testable PreToolUse guard with a real hooks.json file and a Python standard-library script.
 locale: en
 source_locale: zh-CN
-source_revision: '06e9fa2'
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

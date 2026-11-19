@@ -7,9 +7,9 @@ title: Viết trang hướng dẫn
 description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 sidebar:
   order: 10
@@ -38,22 +38,11 @@ Vậy thường nó không chỉ là danh sách kiến thức, cũng không ch�
 ```yaml
 ---
 title: Tiêu đề trang
-description: Một câu nói rõ vấn đề trang này giải quyết
+description: Một câu mô tả vấn đề mà trang giải quyết
 ---
 ```
 
-Trang mới ghi trạng thái biên tập và cách kiểm chứng trong frontmatter. Không thêm chân trang kiểm chứng dạng văn bản tự do nữa:
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Đã kiểm tra cấu trúc nội dung; thay bằng các bước kiểm tra thực tế đã thực hiện và ngày tương ứng.
-```
-
-Khi cần đánh dấu việc đối chiếu nguồn hoặc chạy thử ví dụ, hãy làm theo [Kiểm chứng nội dung kỹ thuật](/vi/guide/contributing/verify-technical-content/) và bổ sung liên kết cùng thông tin môi trường. Ngày phải là chuỗi `YYYY-MM-DD` đặt trong dấu ngoặc kép.
-
+Các trường phục vụ bảo trì kho mã do công cụ kiểm tra xử lý và không hiển thị trong nội dung hoặc chân trang. Chỉ giữ lại thông tin người đọc cần để hiểu và sử dụng trang. Hãy kiểm tra các dữ kiện dễ thay đổi như lệnh, giá và quyền theo [Kiểm tra nội dung kỹ thuật](/vi/guide/contributing/verify-technical-content/) và nêu trực tiếp trong nội dung các giới hạn áp dụng cần thiết.
 ## Cấu trúc khuyến nghị
 
 Chọn mục theo [mẫu tích hợp nguồn ngoài](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板), tổ hợp thường gặp:

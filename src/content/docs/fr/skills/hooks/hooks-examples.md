@@ -7,7 +7,7 @@ legacyVerification:
   checkedAt: '2026-08-25'
 locale: fr
 source_locale: zh-CN
-source_revision: "06e9fa2"
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

@@ -7,7 +7,7 @@ title: 예약 작업 전체 가이드
 description: 독립 작업과 채팅 내 작업을 구분하고 로컬 프로젝트, worktree, 권한, 프롬프트, 검토 과정을 설정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: "fa792dc"
+source_revision: '532489c'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: "2026-10-26"

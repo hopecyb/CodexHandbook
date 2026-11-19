@@ -3,7 +3,7 @@ title: 並行チャットと Agent
 description: 独立したチャットと worktree を使い、個別に検収できるタスクを並行して進めます。
 locale: ja
 source_locale: zh-CN
-source_revision: "2336db1"
+source_revision: 'a028309'
 translation_status: reviewed
 translated_at: "2026-08-26"
 sidebar:

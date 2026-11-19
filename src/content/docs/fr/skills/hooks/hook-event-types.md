@@ -7,7 +7,7 @@ title: Types d’événements Hook
 description: Choisir un événement selon le cycle de vie de la session, du tour de tâche, de l’appel d’outil, de la compression du contexte ou du sous-agent.
 locale: fr
 source_locale: zh-CN
-source_revision: "07f4965"
+source_revision: '68a5b0e'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: '2026-10-26'

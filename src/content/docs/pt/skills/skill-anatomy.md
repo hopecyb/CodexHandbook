@@ -8,7 +8,7 @@ title: Anatomia de um Skill
 description: Papéis e exemplos de SKILL.md, references/, templates/ e scripts/.
 locale: pt
 source_locale: zh-CN
-source_revision: "50ca48c"
+source_revision: 'c4b740a'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

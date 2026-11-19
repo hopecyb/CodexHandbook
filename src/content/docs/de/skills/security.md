@@ -8,7 +8,7 @@ title: Skill-Sicherheit und Versionierung
 description: Installationsquellen, Berechtigungsgrenzen, Upgrade und Rollback — Skills teamfähig steuern.
 locale: de
 source_locale: zh-CN
-source_revision: "a3c81ed"
+source_revision: 'f61cb1f'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

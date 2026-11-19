@@ -7,7 +7,7 @@ title: Hook 設定例
 description: 実際の hooks.json と Python 標準ライブラリのスクリプトで、テスト可能な PreToolUse ガードを実装する。
 locale: ja
 source_locale: zh-CN
-source_revision: "06e9fa2"
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: "2026-10-26"

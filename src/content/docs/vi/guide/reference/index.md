@@ -5,7 +5,7 @@ sidebar:
   order: 60
 locale: "vi"
 source_locale: "zh-CN"
-source_revision: "d45e640"
+source_revision: "bea12b4"
 translation_status: "reviewed"
 translated_at: "2026-10-25"
 reviewed_at: "2026-10-26"
@@ -53,7 +53,7 @@ Trang «Tài liệu tham chiếu» nội dung nhiều; dùng như hộp công c�
 - [Tài nguyên chính thức](/vi/guide/reference/official-resources/)
 
 :::note[Nhạy cảm phiên bản]
-Lệnh, khóa cấu hình và quyền mặc định đổi theo cập nhật sản phẩm — mỗi trang ghi ngày kiểm chứng; trước khi dùng hãy đối chiếu tài liệu chính thức.
+Lệnh, khóa cấu hình và quyền mặc định đổi theo cập nhật sản phẩm. Trước khi dùng, hãy đối chiếu tài liệu chính thức.
 :::
 
 Khu tài liệu tham chiếu không phải tutorial chính. Khi gặp thuật ngữ, cấu hình, lệnh hoặc xử lý sự cố, quay lại tra là được.

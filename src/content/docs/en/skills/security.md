@@ -8,7 +8,7 @@ title: Skill security and versioning
 description: Install sources, permission boundaries, upgrades and rollbacks—govern team Skills.
 locale: en
 source_locale: zh-CN
-source_revision: 'a3c81ed'
+source_revision: 'f61cb1f'
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"

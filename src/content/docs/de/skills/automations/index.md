@@ -7,7 +7,7 @@ title: Scheduled tasks
 description: Führe bereits verifizierte Aufgaben in ChatGPT zeitgesteuert wiederholt aus.
 locale: de
 source_locale: zh-CN
-source_revision: "759c38e"
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

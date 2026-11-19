@@ -7,7 +7,7 @@ title: Einen MCP-Server verbinden
 description: Konfiguriere, authentifiziere und verifiziere den ersten MCP-Server mit CLI oder config.toml.
 locale: de
 source_locale: zh-CN
-source_revision: "0675d33"
+source_revision: '67b417d'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

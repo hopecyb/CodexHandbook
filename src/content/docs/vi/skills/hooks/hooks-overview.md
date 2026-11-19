@@ -1,4 +1,18 @@
 ---
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-18"
+  summary: Checked against the OpenAI Hooks documentation and the public source, license, and Codex integration documentation for HOL Guard 3.x. The third-party section is source-checked only; this site did not install it or independently test its blocking behavior.
+  evidence:
+    - label: OpenAI Hooks documentation
+      href: https://learn.chatgpt.com/docs/hooks
+    - label: HOL Guard source and Apache-2.0 license
+      href: https://github.com/hashgraph-online/hol-guard
+    - label: HOL Guard Codex 3.x integration guide
+      href: https://hol.org/guard/docs/guard/codex-harness
+    - label: HOL Guard local and Cloud boundary
+      href: https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/local-vs-cloud.md
 legacyVerification:
   status: "verified"
   products: "Môi trường sử dụng Codex host cục bộ; CLI cung cấp `/hooks` để quản lý độ tin cậy"
@@ -7,10 +21,10 @@ title: Tổng quan về Hooks
 description: Tìm hiểu cách phát hiện cấu hình, rà soát tin cậy, bộ xử lý và ranh giới bảo mật của Hook.
 locale: vi
 source_locale: zh-CN
-source_revision: "ac7889b"
+source_revision: '595bd2a'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 Hooks cho phép chạy script lệnh hoặc công cụ của máy chủ MCP đã kết nối tại các điểm trong vòng lặp Agent của Codex. Các ứng dụng thường gặp gồm quét khóa trong prompt, áp dụng chính sách gọi công cụ, ghi nhật ký kiểm toán, tóm tắt phiên và kiểm tra trước khi dừng.
@@ -74,6 +88,12 @@ Phạm vi bao phủ công cụ của Hook không phải ranh giới bảo mật 
 2. Với vấn đề có độ tin cậy cao, dùng `systemMessage` hoặc ngữ cảnh bổ sung để nhắc nhở.
 3. Chỉ chặn tại `PreToolUse` khi quy tắc xác định rõ, script có fixture và mức báo nhầm chấp nhận được.
 4. Căn chỉnh Hook với CI, kiểm tra trước commit và quyền phía máy chủ để tránh ba bộ chính sách mâu thuẫn nhau.
+
+## Tham khảo công cụ của bên thứ ba
+
+Nếu không muốn tự viết script bảo vệ từ đầu, bạn có thể đánh giá [HOL Guard](https://github.com/hashgraph-online/hol-guard). Đây là dự án nguồn mở của bên thứ ba theo giấy phép Apache-2.0. Theo [hướng dẫn tích hợp Codex 3.x](https://hol.org/guard/docs/guard/codex-harness), trình cài đặt đăng ký các Hook như `PreToolUse` và `PermissionRequest`, đồng thời dùng shim khởi động và proxy MCP một phần để từ chối, cảnh báo hoặc chuyển các lệnh shell, thao tác đọc nhạy cảm, lệnh gọi MCP và thao tác gói được hỗ trợ sang bước phê duyệt của con người theo chính sách cục bộ. Công cụ không đơn giản là dừng mọi thao tác để chờ xác nhận. Guard Cloud là dịch vụ trả phí tùy chọn và tách biệt; bảo vệ cục bộ không yêu cầu đăng nhập Cloud.
+
+Đây không phải công cụ chính thức của OpenAI và trang này chưa kiểm thử độc lập tỷ lệ chặn hay tính bảo mật. Trước khi dùng thử, hãy chạy `hol-guard install codex --dry-run`, kiểm tra thay đổi đối với `~/.codex/config.toml`, lệnh khởi động và cấu hình MCP, rồi xem [phạm vi bao phủ và hành vi khi lỗi](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/harness-support.md) của phiên bản hiện tại. Hãy thử lỗi Hook, hết thời gian chờ, kết quả sai định dạng có thể khiến thao tác được cho qua, cũng như quy trình gỡ cài đặt và hoàn tác. Giống Hook tự viết, công cụ bị giới hạn bởi phạm vi bao phủ công cụ của Codex và không thay thế sandbox, nguyên tắc đặc quyền tối thiểu, quản lý bí mật hay kiểm soát phía máy chủ.
 
 ## Danh sách nghiệm thu
 

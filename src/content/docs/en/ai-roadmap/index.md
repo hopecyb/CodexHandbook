@@ -3,7 +3,7 @@ title: AI application roadmap
 description: Distinguish papers, product launches, engineering articles, and the author’s learning suggestions; then move from each topic into practice.
 locale: en
 source_locale: zh-CN
-source_revision: 'f66e3ba'
+source_revision: '1db64dd'
 translation_status: reviewed
 reviewed_at: 2026-10-25
 translated_at: 2026-10-24

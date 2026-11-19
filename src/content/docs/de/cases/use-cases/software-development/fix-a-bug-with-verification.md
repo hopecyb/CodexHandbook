@@ -12,7 +12,7 @@ title: 'Fallbeispiel: Bugfix mit Verifikation'
 description: Behebe einen ausführbaren Fehler in einer Rabattberechnung anhand einer roten Reproduktion, Ursachenanalyse, minimalen Korrektur, grünen Regressionstests und einer Diff-Prüfung.
 locale: de
 source_locale: zh-CN
-source_revision: "42d842e"
+source_revision: 'c89a885'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

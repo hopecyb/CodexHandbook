@@ -1,4 +1,18 @@
 ---
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-18"
+  summary: Checked against the OpenAI Hooks documentation and the public source, license, and Codex integration documentation for HOL Guard 3.x. The third-party section is source-checked only; this site did not install it or independently test its blocking behavior.
+  evidence:
+    - label: OpenAI Hooks documentation
+      href: https://learn.chatgpt.com/docs/hooks
+    - label: HOL Guard source and Apache-2.0 license
+      href: https://github.com/hashgraph-online/hol-guard
+    - label: HOL Guard Codex 3.x integration guide
+      href: https://hol.org/guard/docs/guard/codex-harness
+    - label: HOL Guard local and Cloud boundary
+      href: https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/local-vs-cloud.md
 title: Hooks 개요
 description: Hook 설정의 탐색, 신뢰 검토, 처리기 및 보안 경계를 이해합니다.
 legacyVerification:
@@ -7,10 +21,10 @@ legacyVerification:
   checkedAt: "2026-08-25"
 locale: ko
 source_locale: zh-CN
-source_revision: 'ac7889b'
+source_revision: '595bd2a'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 
 Hooks를 사용하면 Codex의 Agent 실행 루프 안에서 명령 스크립트나 연결된 MCP 서버의 도구를 실행할 수 있습니다. 대표적인 용도로는 프롬프트의 비밀 정보 검사, 도구 호출 정책, 감사 기록, 세션 요약, 종료 전 검증이 있습니다.
@@ -74,6 +88,12 @@ Hook이 포괄하는 도구 범위만으로 완전한 보안 경계가 되지는
 2. 확신도가 높은 문제는 `systemMessage`나 추가 컨텍스트로 알립니다.
 3. 규칙이 확실하고 스크립트에 fixture가 있으며 오탐을 감수할 수 있을 때만 `PreToolUse`에서 차단합니다.
 4. Hook을 CI, 커밋 전 검사, 서버 측 권한과 맞춰 서로 모순되는 세 정책이 생기지 않도록 합니다.
+
+## 서드파티 도구 참고
+
+보호 스크립트를 처음부터 작성하고 싶지 않다면 [HOL Guard](https://github.com/hashgraph-online/hol-guard)를 후보로 검토할 수 있습니다. Apache-2.0 라이선스의 서드파티 오픈소스 프로젝트입니다. [Codex 3.x 통합 안내](https://hol.org/guard/docs/guard/codex-harness)에 따르면 설치 프로그램은 `PreToolUse`, `PermissionRequest` 등의 Hook을 등록합니다. 또한 시작 shim과 일부 MCP 프록시를 이용해 지원되는 셸 명령, 민감한 읽기, MCP 호출, 패키지 작업을 로컬 정책에 따라 거부하거나 경고하거나 사람의 승인을 받도록 전달합니다. 모든 작업을 무조건 멈추고 확인을 기다리는 방식은 아닙니다. Guard Cloud는 별도의 선택형 유료 서비스이며 로컬 보호에는 Cloud 로그인이 필요하지 않습니다.
+
+이 도구는 OpenAI 공식 도구가 아니며, 이 사이트도 차단률이나 보안을 독립적으로 시험하지 않았습니다. 사용 전에 `hol-guard install codex --dry-run`을 실행하고 `~/.codex/config.toml`, 시작 명령, MCP 설정의 변경 사항을 확인하세요. 현재 버전의 [적용 범위와 실패 시 동작](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/harness-support.md)을 검토하고 Hook 오류, 시간 초과, 잘못된 반환 형식으로 인해 작업이 허용될 수 있는 경우, 제거와 롤백 절차도 시험하세요. 직접 작성한 Hook과 마찬가지로 Codex 도구 적용 범위의 제한을 받으며 샌드박스, 최소 권한, 비밀 정보 관리, 서버 측 제어를 대신하지 않습니다.
 
 ## 완료 확인 목록
 

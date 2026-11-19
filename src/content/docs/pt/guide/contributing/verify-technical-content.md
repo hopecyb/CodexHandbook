@@ -4,12 +4,12 @@ legacyVerification:
   basis: "Conferido com o sistema de estados atual do manual, várias rodadas de revisão concluídas e o princípio de prioridade das fontes oficiais. Esta página descreve os critérios internos para elevar uma página a `verified` e os princípios de rebaixamento."
   checkedAt: "2026-07-26"
 title: Verificar conteúdo técnico
-description: Distingue estado editorial, consulta de fontes e execução de exemplos; registra escopo, ambiente e provas.
+description: Como conferir fatos técnicos, reproduzir etapas e registrar escopo e evidências.
 locale: pt
 source_locale: zh-CN
-source_revision: "cfb077d"
+source_revision: '7fba563'
 translation_status: reviewed
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 translated_at: 2026-09-20
 editorialStatus: review
 verification:
@@ -20,130 +20,51 @@ sidebar:
   order: 30
 ---
 
-No manual, comandos, permissões, preços e recursos do produto mudam com as versões. A **Verificação** garante que, ao seguir o documento, o leitor obtenha um resultado previsível.
+Comandos, permissões, preços e funcionalidades podem mudar entre versões. A conferência técnica deve ajudar os leitores a entender quais afirmações têm respaldo atual, a que ambientes se aplicam e o que ainda precisam confirmar por conta própria.
 
-## Conteúdo desta página
+## Objetivo da conferência
 
-Muitas pessoas, na primeira vez que ajudam a manter a documentação, tratam «não vi nenhum problema» como «já verifiquei».
+Conferir vai além de melhorar a redação. Os fatos principais devem corresponder ao produto atual, as etapas devem funcionar no ambiente informado e as conclusões devem permanecer dentro do que as evidências sustentam.
 
-Num manual técnico, isso é bem diferente:
+## Prioridade das evidências
 
-- O primeiro é só uma impressão subjetiva
-- O segundo significa que você já testou de verdade com a versão, o ambiente e os passos atuais
+1. Use primeiro a documentação oficial da OpenAI para comportamento, parâmetros e limites do produto.
+2. Qualquer exemplo descrito como “executado” deve ter resultado real e informações do ambiente.
+3. Artigos da comunidade podem ajudar a descobrir temas, mas não substituem fontes oficiais nem uma execução real.
+4. Um link funcionar não prova que o conteúdo sustenta uma afirmação; leia a fonte.
+5. Se uma informação não puder ser confirmada, declare a incerteza em vez de preencher lacunas com suposições.
 
-O que resolvemos aqui é como passar de «parece certo» para «há evidência de que ainda está certo».
+## Escopo a registrar
 
-## O que a verificação examina
+- Produto aplicável: App, CLI, IDE ou Cloud
+- Sistema operacional, cliente e versões de dependências importantes
+- Etapas realmente executadas e forma de conferir o resultado
+- Plataformas, pontos de entrada e casos-limite não cobertos
+- A página específica da fonte, e não apenas a página inicial do site
 
-«Verificar conteúdo técnico» significa: não basta checar se o texto flui — é confirmar que o leitor, seguindo o texto, ainda consegue fazer o que está escrito hoje.
+## Ordem da conferência
 
-Isso importa porque muita coisa não é estável para sempre, por exemplo:
+1. Identifique o produto, o ponto de entrada e o cenário discutido na página.
+2. Compare fatos voláteis com a documentação oficial atual.
+3. Se a página afirmar que as etapas podem ser executadas, faça tudo desde o início num ambiente limpo.
+4. Reduza o alcance de afirmações não testadas ou incertas e informe a limitação no texto.
+5. Confira links internos, links externos e pré-requisitos necessários.
 
-- Comandos mudam
-- Menus mudam de lugar
-- Valores padrão de permissão mudam
-- Capacidades e disponibilidade do produto se atualizam
+## Informações que mudam com frequência
 
-Verificação não é perfeccionismo editorial — é evitar que o leitor tropece em documentação antiga.
+Após lançamentos importantes do produto, confira primeiro:
 
-## Significado dos estados
+- Comandos, subcomandos e flags
+- Permissões padrão e comportamento do sandbox
+- Planos, modelos, preços, cotas e disponibilidade regional
+- MCP, Hooks e outras interfaces de integração
+- Localização de menus, nomes de botões e pontos de entrada
 
-| Status | Significado |
-|---|---|
-| `planned` | Planejado, ainda não escrito |
-| `draft` | Em redação, ainda sem fechamento completo |
-| `review` | Conteúdo pronto, aguardando revisão |
-| `verified` | Verificado conforme a base indicada |
-| `outdated` | Precisa de atualização após mudança no produto |
-| `archived` | Histórico preservado, fora da navegação principal |
+## Quando algo não puder ser confirmado
 
-## Mal-entendidos comuns
-
-### O estado editorial e o método de verificação são campos diferentes
-
-`editorialStatus` registra o progresso da escrita e revisão. `verification.kind` indica o tipo de verificação realmente efetuado; `verified` não permite concluir que um exemplo foi executado.
-
-| Método de verificação | Conclusão permitida | Provas obrigatórias |
-|---|---|---|
-| `editorial` | Foram revistas a estrutura, a redação ou as referências internas | Resumo da verificação e data |
-| `source-checked` | Os fatos no escopo indicado coincidem com as fontes | Ligações para fontes específicas, resumo e data |
-| `run-tested` | O exemplo foi executado no ambiente registrado | Ambiente, registros da execução e revisão, resumo e data |
-
-`run-tested` não garante o funcionamento em todas as plataformas. O resumo deve indicar o que foi e não foi verificado; uma autoverificação por cálculo independente não é uma revisão por uma segunda pessoa. Registros antigos sem provas continuam em `legacyVerification` e não implicam automaticamente nenhum novo estado de verificação.
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Estrutura e ligações internas verificadas; o exemplo ainda não foi executado.
-```
-
-A consulta de fontes e as execuções usam uma lista `evidence`, cujos elementos contêm `label` e `href`. As execuções exigem ainda `environment`, indicando o sistema, a versão do cliente relevante e as versões das dependências. A compilação rejeita registros de execução sem ambiente ou ligações para provas. A mera existência de uma ligação não torna a prova suficiente: os responsáveis devem ler o registro.
-
-### Artigos da comunidade ajudam a entender, mas não substituem a verificação factual
-
-Artigos comunitários ou outros materiais comunitários ajudam a descobrir temas a complementar.
-
-Mas quando envolve:
-
-- Nome de comando
-- Comportamento de permissão
-- Entrada do produto
-- Preço, cota, diferença regional
-
-volte à documentação oficial ou ao resultado real da execução atual.
-
-### Verificar não é só olhar frases isoladas
-
-Às vezes cada frase isolada parece ok, mas o conjunto não se sustenta, por exemplo:
-
-- Produto aplicável e página real não batem
-- Ordem dos passos errada
-- Premissas padrão não escritas
-- O título promete mais do que o corpo realmente validou
-
-Verifique pela «cadeia operacional completa», não só pelo literal.
-
-## Checklist de verificação
-
-1. **Marcar o escopo**: produto (App/CLI/IDE/Cloud), SO, versão do CLI
-2. **Reproduzir passo a passo**: seguir do zero ou de um worktree limpo
-3. **Base oficial**: indicar fontes oficiais específicas para fatos do produto; em exercícios de método estáveis, usar entradas reais e registros de verificação sem alegar um aval oficial inexistente
-4. **Fontes da comunidade**: se usar materiais comunitários, só como referência de tema; fatos pela oficial
-5. **Atualizar a data**: `verification.checkedAt` deve indicar apenas a data efetiva da verificação; não atualizar datas antigas em massa como se tivesse ocorrido uma nova revisão
-6. **Revisão independente**: `verified` deve, de preferência, ser confirmado por segunda pessoa (não o autor)
-
-## Ordem de verificação
-
-Esta ordem reduz falhas:
-
-1. Confirmar de qual produto, entrada e cenário a página fala
-2. Percorrer os passos do texto do início
-3. Confrontar informações voláteis com a documentação oficial
-4. Rebaixar o que estiver incerto ou não reproduzido
-5. Só então atualizar status e data
-
-É melhor manter `review` do que marcar `verified` sem evidência suficiente.
-
-## Informações voláteis
-
-Estas precisam de rechecagem trimestral ou a cada major release:
-
-- Nomes de comandos e subcomandos, flags
-- Padrões de permissão e comportamento do Sandbox
-- Planos, nomes de modelo, disponibilidade regional
-- Nomes de eventos MCP/Hook
-
-## Em caso de falha
-
-- Rebaixar para `review`, `draft` ou `outdated` conforme a realidade
-- Explicar no PR qual passo divergiu do oficial
-- Em desvio grande, abrir issue marcada `outdated`
+Não apresente uma inferência como fato. Remova detalhes obsoletos, reescreva a seção em torno de um método estável ou registre a dúvida numa PR ou issue. Para comportamento, preços e políticas atuais, as fontes oficiais prevalecem.
 
 ## Relacionado
 
-- [Política de versão do manual](/pt/guide/start-here/handbook-version-policy/)
+- [Confiabilidade do conteúdo](/pt/guide/start-here/handbook-version-policy/)
 - [Recursos oficiais](/pt/guide/reference/official-resources/)
-
-`verified` significa «foi realmente verificado com a base atual indicada, e há rastreabilidade». Só a confiança do autor não basta.

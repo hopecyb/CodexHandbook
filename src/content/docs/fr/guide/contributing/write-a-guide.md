@@ -7,12 +7,12 @@ title: Écrire une page guide
 description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du manuel.
 locale: fr
 source_locale: zh-CN
-source_revision: 'dd22df1'
+source_revision: '4eddfb9'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 
 Cette page explique comment ajouter ou réviser des pages de style **guide** dans `src/content/docs/` (pas les cas purs ou les tableaux de référence purs).
@@ -42,18 +42,7 @@ description: Une phrase sur le problème que cette page résout
 ---
 ```
 
-Les nouvelles pages consignent leur statut éditorial et leur méthode de vérification dans le frontmatter. N’ajoutez plus de pied de page de vérification en texte libre :
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: Structure du contenu vérifiée ; remplacez ce texte par les contrôles réellement effectués et leur date.
-```
-
-Pour signaler une vérification des sources ou l’exécution d’un exemple, suivez [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/) et ajoutez les liens et l’environnement nécessaires. Les dates doivent être des chaînes `YYYY-MM-DD` entre guillemets.
-
+Les champs de maintenance du dépôt sont gérés par les outils de validation et ne sont pas affichés dans le texte ni dans le pied de page. Conservez uniquement les informations nécessaires pour comprendre et utiliser la page. Vérifiez les faits susceptibles d’évoluer, comme les commandes, les tarifs et les autorisations, avec [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/) et indiquez directement dans le texte les limites d’application utiles.
 ## Structure recommandée
 
 Choisissez les sections selon le [modèle d’intégration des sources externes](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Combinaisons courantes :

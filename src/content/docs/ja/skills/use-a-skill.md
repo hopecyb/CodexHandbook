@@ -8,7 +8,7 @@ title: Skill を使う
 description: Skill の明示的・暗黙的トリガー、および description の書き方の要点。
 locale: ja
 source_locale: zh-CN
-source_revision: "ef92b69"
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

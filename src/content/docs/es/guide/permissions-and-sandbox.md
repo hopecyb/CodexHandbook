@@ -8,7 +8,7 @@ title: Permisos y sandbox
 description: Entiende el sandbox, las aprobaciones, el acceso a la red y los límites de ejecución local y en Cloud mediante una secuencia de decisiones.
 locale: es
 source_locale: zh-CN
-source_revision: '6b5fcb8'
+source_revision: '8fa3f8c'
 translation_status: reviewed
 translated_at: "2026-09-20"
 sidebar:

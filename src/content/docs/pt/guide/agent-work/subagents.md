@@ -3,7 +3,7 @@ title: Subagentes
 description: Delegue subtarefas com limites claros a contextos independentes, mantendo no Agent principal a síntese, a resolução de conflitos e a aceitação final.
 locale: pt
 source_locale: zh-CN
-source_revision: "a3f2be5"
+source_revision: 'b1cefc0'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20

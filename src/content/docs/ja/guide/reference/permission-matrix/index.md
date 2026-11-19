@@ -3,7 +3,7 @@ title: 権限マトリクス
 description: ローカルの Permission Profile、従来のサンドボックス、Cloud のネットワークポリシーを区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: 'c6ad6aa'
+source_revision: 'c38e374'
 translation_status: reviewed
 translated_at: 2026-08-26
 sidebar:

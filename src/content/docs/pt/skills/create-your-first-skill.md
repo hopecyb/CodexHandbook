@@ -8,7 +8,7 @@ title: Criar seu primeiro Skill
 description: Crie do zero um Skill pr-review pronto para versionar no Git, com testes e compartilhamento em equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: "14414f5"
+source_revision: 'aa4baf7'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

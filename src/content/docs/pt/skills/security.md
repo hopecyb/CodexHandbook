@@ -8,7 +8,7 @@ title: Segurança e versões de Skills
 description: Origem da instalação, limites de permissão, upgrade e rollback — Skills de equipe governáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: "a3c81ed"
+source_revision: 'f61cb1f'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

@@ -8,6 +8,7 @@ import { Icon } from '@astrojs/starlight/components';
 import AdSlot from './AdSlot.astro';
 
 const { pagination, entry, toc } = Astro.locals.starlightRoute;
+const locale = Astro.locals.starlightRoute.locale ?? 'root';
 const showAd = entry.data.template !== 'splash';
 const vietnamese = Astro.locals.starlightRoute.locale === 'vi';
 const thai = Astro.locals.starlightRoute.locale === 'th';
@@ -23,7 +24,7 @@ const traditional = entry.id.startsWith('zh-tw/');
 const chinese = !/^(en|de|es|fr|ja|ko|pt|vi|th|ru)\//.test(entry.id);
 // The splash homepage already links updates and contributing in its about block.
 const showFeedback = (chinese || english || spanish || japanese || korean || french || german || portuguese || vietnamese || thai || russian) && entry.data.template !== 'splash';
-const correction = feedbackUrl({ pathname: Astro.url.pathname, title: entry.data.title, verificationDate: entry.data.verification?.checkedAt });
+const correction = feedbackUrl({ pathname: Astro.url.pathname, title: entry.data.title, locale });
 const updatesPath = russian ? '/ru/guide/updates/' : thai ? '/th/guide/updates/' : vietnamese ? '/vi/guide/updates/' : portuguese ? '/pt/guide/updates/' : german ? '/de/guide/updates/' : french ? '/fr/guide/updates/' : korean ? '/ko/guide/updates/' : japanese ? '/ja/guide/updates/' : spanish ? '/es/guide/updates/' : english ? '/en/guide/updates/' : traditional ? '/zh-tw/guide/updates/' : '/guide/updates/';
 const hasPagination = Boolean(pagination.prev || pagination.next);
 ---

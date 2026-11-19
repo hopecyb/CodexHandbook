@@ -7,7 +7,7 @@ title: Skills
 description: Apprendre à utiliser, écrire, tester et maintenir les Codex Skills.
 locale: fr
 source_locale: zh-CN
-source_revision: '6f8df16'
+source_revision: '2871994'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

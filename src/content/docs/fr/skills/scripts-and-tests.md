@@ -8,7 +8,7 @@ title: Scripts/ et tests
 description: Scripts déterministes dans un Skill et validation de leur comportement.
 locale: fr
 source_locale: zh-CN
-source_revision: '900e6e4'
+source_revision: '05a2f68'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

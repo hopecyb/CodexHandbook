@@ -195,7 +195,7 @@ export const mainNavItems: NavItem[] = [
 	{
 		href: '/theme/',
 		label: {
-			'zh-CN': 'Codex主题皮肤',
+			'zh-CN': 'Codex 主题皮肤',
 			en: 'Codex Theme',
 			'zh-TW': 'Codex 主題皮膚',
 			fr: 'Thèmes Codex',

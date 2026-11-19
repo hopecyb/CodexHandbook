@@ -20,7 +20,7 @@ next:
   label: Continuar con el informe semanal de ventas
 locale: es
 source_locale: zh-CN
-source_revision: 'cc1139b'
+source_revision: '3f64fff'
 translation_status: reviewed
 translated_at: '2026-09-20'
 reviewed_at: 2026-10-25

@@ -3,7 +3,7 @@ title: MCP 서버 연결
 description: CLI 또는 config.toml로 첫 MCP 서버를 설정하고 인증한 뒤 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '0675d33'
+source_revision: '67b417d'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

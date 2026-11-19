@@ -3,7 +3,7 @@ title: Scheduled task 完全ガイド
 description: 独立タスクまたはチャット内タスクを選び、ローカルプロジェクト、worktree、権限、プロンプト、レビューの循環を設定する。
 locale: ja
 source_locale: zh-CN
-source_revision: "fa792dc"
+source_revision: '532489c'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: "2026-10-26"

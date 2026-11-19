@@ -5,7 +5,7 @@ sidebar:
   order: 60
 locale: pt
 source_locale: zh-CN
-source_revision: "d45e640"
+source_revision: "bea12b4"
 translation_status: reviewed
 translated_at: 2026-10-25
 reviewed_at: '2026-10-26'
@@ -54,7 +54,7 @@ Vem com uma pergunta concreta; não precisas de ler tudo de uma vez.
 - [Recursos oficiais](/pt/guide/reference/official-resources/)
 
 :::note[Sensível à versão]
-Comandos, chaves de configuração e permissões por omissão mudam com o produto — cada página indica a data de verificação; confirma a documentação oficial antes de usar.
+Comandos, chaves de configuração e permissões por omissão mudam com o produto. Confirma a documentação oficial antes de usar.
 :::
 
 A zona de referência não é o tutorial principal. Quando precisares de termos, configuração, comandos ou diagnóstico, volta aqui.

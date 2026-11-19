@@ -9,10 +9,10 @@ verification:
   summary: Tổng hợp từ nội dung kho mã và nhật ký chạy hiện tại. Đây là lịch sử thay đổi của cẩm nang, không phải thông báo sản phẩm OpenAI hay bằng chứng rằng website đã triển khai công khai.
 locale: vi
 source_locale: zh-CN
-source_revision: "3c99d35"
+source_revision: '1686a65'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 ---
 
 Trang này ghi cẩm nang đã thay đổi gì, tác vụ nào bị ảnh hưởng và đã xác minh đến đâu. Ngày tháng là ngày chuẩn bị nội dung; tình trạng xuất bản thực tế phụ thuộc vào phiên bản website bạn đang xem. Với thay đổi khả năng sản phẩm, hãy xem nguồn chính thức được dẫn trong bài hướng dẫn tương ứng.
@@ -51,28 +51,28 @@ Trang chủ được tổ chức theo làm tác vụ, lộ trình vai trò, tra 
 
 ## 2026-09-18: ngày tháng trên lộ trình và bài tập thực tế
 
-[Lộ trình ứng dụng AI](/vi/ai-roadmap/) giờ phân biệt bài nghiên cứu, công bố sản phẩm, bài kỹ thuật và chủ đề dự án không được sắp theo ngày đầu tiên xuất hiện. Mỗi chủ đề có nguồn cụ thể và điểm vào thực hành. Ngày của một bài viết không còn đại diện cho thời điểm phổ biến toàn ngành, và phép kiểm tra cấu trúc gói Skill không được gọi là đo kích hoạt trong ứng dụng khách. URL cũ vẫn giữ; tháng năm lịch sử không phải ngày của sự kiện hiện tại. Nguồn và phạm vi kiểm tra ở đầu từng trang chủ đề.
+[Lộ trình ứng dụng AI](/vi/ai-roadmap/) giờ phân biệt bài nghiên cứu, công bố sản phẩm, bài kỹ thuật và chủ đề dự án không được sắp theo ngày đầu tiên xuất hiện. Mỗi chủ đề có nguồn cụ thể và điểm vào thực hành. Ngày của một bài viết không còn đại diện cho thời điểm phổ biến toàn ngành, và phép kiểm tra cấu trúc gói Skill không được gọi là đo kích hoạt trong ứng dụng khách. URL cũ vẫn giữ; tháng năm lịch sử không phải ngày của sự kiện hiện tại. Mỗi trang chủ đề cung cấp liên kết nguồn và giới hạn áp dụng ngay trong nội dung.
 
 ## 2026-09-18: sửa các giải thích dễ gây hiểu nhầm
 
 - Điểm vào giá đổi thành “Tham khảo giá”. Bản ghi giá tại một thời điểm có nguồn, theo đồng tiền gốc được tách khỏi dữ liệu chưa biết; ước tính không còn dùng để xếp giá cao thấp toàn cầu. Trước khi mua, hãy kiểm tra giá thực tế hiển thị ở kênh bán.
-- Đầu trang phân biệt trạng thái biên tập, đối chiếu nguồn, ví dụ đã chạy và ghi chú lịch sử. “Đã chạy” chỉ bao gồm script và môi trường được liệt kê, không phải tỷ lệ tin cậy của đầu ra model.
+- Các trang liên quan hiện giải thích trực tiếp trong nội dung về nguồn, giới hạn áp dụng và phạm vi chạy thực tế. “Đã chạy” chỉ bao gồm script và môi trường được liệt kê, không phải tỷ lệ tin cậy của đầu ra model.
 - [Thứ tự ưu tiên chỉ dẫn](/vi/guide/context/context-priority/) phân biệt vai trò thông điệp, quy tắc tìm hướng dẫn dự án và quyền thực thi, tránh khẳng định chung rằng chỉ dẫn mới hơn hoặc nghiêm hơn luôn ưu tiên.
 - [SDK](/vi/guide/developer-platform/sdk-overview/) và [Webhook](/vi/guide/developer-platform/webhooks/overview/) phân biệt chạy cục bộ, dịch vụ tự vận hành và thiết kế callback; giao diện được đề xuất không được mô tả như hợp đồng chính thức.
 - [Phân cấp tác vụ](/vi/prompts/ask-for-a-plan/) phân biệt thực hiện ngay, lập kế hoạch trước và phê duyệt hành động, không dừng ở mọi bước một cách máy móc.
 
-Nguồn và phạm vi xác minh các cơ chế này nằm ở đầu những trang tương ứng. Bản tóm tắt cập nhật này không phải tài liệu giao diện đầy đủ.
+Các trang liên quan mô tả nguồn và giới hạn ngay trong nội dung. Bản tóm tắt cập nhật này không phải tài liệu giao diện đầy đủ.
 
 ## Khi phát hiện vấn đề trên trang
 
-Cuối mỗi bài tiếng Trung có liên kết “Báo vấn đề của trang này (bản nháp GitHub)”. Liên kết mở bản nháp Issue chưa gửi, điền tiêu đề trang, đường dẫn nội bộ và ngày xác minh đã ghi. Hãy xem nội dung rồi tự gửi; cần tài khoản GitHub.
+Mỗi trang trong sổ tay đều có liên kết đã bản địa hóa ở chân trang để báo vấn đề bằng bản nháp GitHub. Liên kết chỉ điền tiêu đề và đường dẫn trang rồi mở một bản nháp Issue công khai chưa được gửi. Hãy kiểm tra trước khi tự gửi; cần có tài khoản GitHub.
 
-Nên nêu đoạn cụ thể, chênh lệch giữa kỳ vọng và thực tế, môi trường cần thiết và nguồn công khai nếu có. Chỉ chia sẻ thông tin đã ẩn dữ liệu: không dán khóa API, dữ liệu tài khoản, thư mục riêng, dữ liệu khách hàng hoặc nhật ký thô đầy đủ. Bản nháp không tự thu thập nhật ký tác vụ và không gồm tham số truy vấn của trang.
+Nêu rõ phần liên quan, nội dung mong đợi và hiện tại, môi trường cần thiết cùng căn cứ công khai. Xóa khóa API, dữ liệu tài khoản, đường dẫn riêng tư, dữ liệu khách hàng và nhật ký chưa ẩn danh. Bản nháp không thu thập dữ liệu tác vụ và không chứa chuỗi truy vấn của trang.
 
-Nếu không có tài khoản GitHub, hãy lưu đường dẫn trang và mô tả vấn đề vào ghi chú cục bộ, rồi nhờ cộng tác viên có quyền gửi. Không cam kết thời gian xử lý và không tự gửi tin nhắn.
+Nếu không có tài khoản GitHub, hãy sao chép đường dẫn và mô tả vấn đề vào ghi chú cục bộ rồi nhờ cộng tác viên có quyền gửi. Không có cam kết về thời gian phản hồi và không có tin nhắn nào được gửi tự động.
 
 ## Cách người duy trì xử lý
 
-Sau khi tái hiện hoặc đối chiếu nguồn, hãy ghi lý do tiếp nhận, sửa hoặc chưa thể xác nhận. Khi thay đổi thông tin thực tế về sản phẩm, cập nhật bằng chứng tương ứng, không làm mới hàng loạt ngày xác minh của trang khác. Khi thay bài thực hành, đồng bộ tài liệu nguồn, gói tải và nội dung bài. Nếu kết luận cũ không còn đúng, giải thích tác động của cách làm cũ và các bước chuyển đổi, thay vì chỉ viết “đã tối ưu nội dung”.
+Sau khi tái hiện hoặc đối chiếu nguồn, hãy ghi lý do tiếp nhận, sửa hoặc chưa thể xác nhận. Khi thay đổi thông tin thực tế về sản phẩm, hãy cập nhật nội dung và bằng chứng tương ứng mà không đánh dấu các trang không liên quan là đã cập nhật. Khi thay bài thực hành, đồng bộ tài liệu nguồn, gói tải và nội dung bài. Nếu kết luận cũ không còn đúng, giải thích tác động của cách làm cũ và các bước chuyển đổi, thay vì chỉ viết “đã tối ưu nội dung”.
 
-Khi cập nhật trang này, hãy liên kết đến trang và hồ sơ xác minh cụ thể, giữ rõ phần chưa kiểm thử. Đây là lịch sử thay đổi của cẩm nang cộng đồng, không phải nhật ký phát hành chính thức của OpenAI.
+Khi cập nhật trang này, hãy liên kết đến các trang bị ảnh hưởng và nguồn công khai, đồng thời nêu rõ phần chưa được kiểm thử. Đây là lịch sử thay đổi của sổ tay cộng đồng, không phải nhật ký phát hành chính thức của OpenAI.

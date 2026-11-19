@@ -3,7 +3,7 @@ title: Scheduled tasks
 description: 検証済みのタスクを ChatGPT でスケジュールに従って繰り返し実行します。
 locale: ja
 source_locale: zh-CN
-source_revision: "759c38e"
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: "2026-10-26"

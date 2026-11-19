@@ -7,7 +7,7 @@ title: Scheduled tasks
 description: Repeat a previously verified task on a schedule in ChatGPT.
 locale: en
 source_locale: zh-CN
-source_revision: '759c38e'
+source_revision: 'c6510bf'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

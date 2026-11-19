@@ -12,7 +12,7 @@ title: "Case: verified bug fixing"
 description: Use a runnable discount-calculation bug to reproduce red, locate the root cause, make the smallest fix, verify passing tests, run regression checks, and review the diff.
 locale: en
 source_locale: zh-CN
-source_revision: '42d842e'
+source_revision: 'c89a885'
 translation_status: reviewed
 reviewed_at: "2026-10-25"
 translated_at: 2026-09-20

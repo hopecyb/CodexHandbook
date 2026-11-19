@@ -5,7 +5,7 @@ sidebar:
   order: 14
 locale: "vi"
 source_locale: "zh-CN"
-source_revision: "6b5fcb8"
+source_revision: '8fa3f8c'
 translation_status: "reviewed"
 translated_at: "2026-08-26"
 reviewed_at: "2026-10-26"

@@ -8,7 +8,7 @@ title: "Mapa das capacidades de extensão"
 description: "Entenda o sistema de extensões do Codex por oito responsabilidades: tarefa, regras, processo, ferramentas, proteção, distribuição, acionamento e trabalho paralelo."
 locale: pt
 source_locale: zh-CN
-source_revision: "183812c"
+source_revision: '32771c6'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

@@ -8,7 +8,7 @@ title: "Como escolher um método de extensão"
 description: "Escolha entre prompt, AGENTS.md, Skill, MCP, Hook, Plugin e Scheduled task de acordo com o que precisa permanecer ou acontecer automaticamente."
 locale: pt
 source_locale: zh-CN
-source_revision: "28ae6f5"
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

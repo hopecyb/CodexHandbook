@@ -8,7 +8,7 @@ title: Skill 사용하기
 description: Skill의 명시적·암시적 트리거와 좋은 description 작성 요점.
 locale: ko
 source_locale: zh-CN
-source_revision: 'ef92b69'
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

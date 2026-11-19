@@ -15,7 +15,7 @@ title: 事例：検証付き Bug 修正
 description: 実行可能な割引計算の Bug で、RED の再現、根本原因、最小修正、GREEN、回帰、diff レビューを行います。
 locale: ja
 source_locale: zh-CN
-source_revision: "42d842e"
+source_revision: 'c89a885'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

@@ -3,7 +3,7 @@ title: 最初の Skill を作成する
 description: コミット可能な pr-review Skill をゼロから作り、テストとチーム共有まで。
 locale: ja
 source_locale: zh-CN
-source_revision: "14414f5"
+source_revision: 'aa4baf7'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

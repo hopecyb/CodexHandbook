@@ -3,7 +3,7 @@ title: Skill 보안과 버전
 description: 설치 출처, 권한 경계, 업그레이드와 롤백으로 팀 Skill을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 'a3c81ed'
+source_revision: 'f61cb1f'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

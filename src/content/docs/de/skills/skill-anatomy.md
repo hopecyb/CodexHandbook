@@ -8,7 +8,7 @@ title: Skill-Aufbau
 description: Rollen von SKILL.md, references/, templates/ und scripts/ mit Beispielen.
 locale: de
 source_locale: zh-CN
-source_revision: "50ca48c"
+source_revision: 'c4b740a'
 translation_status: reviewed
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20

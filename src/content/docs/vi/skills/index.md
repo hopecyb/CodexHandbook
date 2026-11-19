@@ -7,7 +7,7 @@ title: Skills
 description: Học cách dùng, viết, kiểm thử và duy trì Codex Skills.
 locale: vi
 source_locale: zh-CN
-source_revision: "6f8df16"
+source_revision: '2871994'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

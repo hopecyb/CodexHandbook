@@ -7,7 +7,7 @@ title: Beispiele für Hook-Konfigurationen
 description: Implementiere mit einer echten hooks.json und einem Python-Skript aus der Standardbibliothek einen testbaren PreToolUse-Schutz.
 locale: de
 source_locale: zh-CN
-source_revision: "06e9fa2"
+source_revision: 'a8abc38'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

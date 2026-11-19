@@ -8,7 +8,7 @@ title: Cấu trúc Skill
 description: Vai trò và ví dụ của SKILL.md, references/, templates/, scripts/.
 locale: vi
 source_locale: zh-CN
-source_revision: "50ca48c"
+source_revision: 'c4b740a'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

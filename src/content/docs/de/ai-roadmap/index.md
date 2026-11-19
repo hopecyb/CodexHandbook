@@ -3,7 +3,7 @@ title: Roadmap für KI-Anwendungen
 description: Unterscheidet wissenschaftliche Arbeiten, Produktankündigungen, Engineering-Artikel und Lernempfehlungen des Autors und führt von jedem Thema zur Praxis.
 locale: de
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 translated_at: 2026-10-24
 prev: false

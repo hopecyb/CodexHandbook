@@ -13,7 +13,7 @@ source_locale: zh-CN
 translation_status: reviewed
 reviewed_at: '2026-10-26'
 translated_at: 2026-10-25
-source_revision: 'd45e640'
+source_revision: 'bea12b4'
 ---
 
 Des pages courtes, précises et faciles à rechercher : cette section sert surtout d'index et d'aide-mémoire. Les explications approfondies se trouvent dans les chapitres thématiques. Utilisez ces pages comme une boîte à outils, sans devoir les lire de bout en bout.
@@ -51,7 +51,7 @@ Consultez-la avec une question précise plutôt que de tout lire d'une traite.
 - [Ressources officielles](/fr/guide/reference/official-resources/)
 
 :::note[Sensible aux versions]
-Les commandes, clés de configuration et permissions par défaut évoluent avec le produit. Chaque page indique une date de vérification ; consultez la documentation officielle avant de vous y fier.
+Les commandes, clés de configuration et permissions par défaut évoluent avec le produit. Consultez la documentation officielle avant de vous y fier.
 :::
 
 Cette section n'est pas un cours à suivre du début à la fin. Revenez-y pour vérifier un terme, un réglage, une commande ou une démarche de dépannage.

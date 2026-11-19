@@ -8,7 +8,7 @@ title: Dùng Skill
 description: Kích hoạt Skill tường minh và ngầm, cùng điểm then chốt khi viết description.
 locale: vi
 source_locale: zh-CN
-source_revision: "ef92b69"
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

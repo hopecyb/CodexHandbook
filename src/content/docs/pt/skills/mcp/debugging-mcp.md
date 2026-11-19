@@ -7,7 +7,7 @@ title: Depurar uma ligação MCP
 description: "Localiza falhas MCP em quatro camadas: configuração, transporte, autenticação e ferramentas."
 locale: pt
 source_locale: zh-CN
-source_revision: "d35b635"
+source_revision: 'de0bea5'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

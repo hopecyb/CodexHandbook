@@ -3,7 +3,7 @@ title: 확장 기능 지도
 description: 작업, 규칙, 절차, 도구, 보호, 배포, 실행 시점, 병렬 분업의 여덟 역할로 Codex 확장 체계를 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '183812c'
+source_revision: '32771c6'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

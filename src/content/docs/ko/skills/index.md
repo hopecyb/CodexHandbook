@@ -7,7 +7,7 @@ title: Skills
 description: Codex Skills를 사용·작성·테스트·유지하는 방법을 배웁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '6f8df16'
+source_revision: '2871994'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

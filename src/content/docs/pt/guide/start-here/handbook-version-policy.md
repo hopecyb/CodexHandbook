@@ -5,85 +5,43 @@ legacyVerification:
   basis: "Revisado conforme os seis estados de conteúdo, as regras de anotação e a prioridade das fontes oficiais adotados neste manual. A página explica a política de versões e a forma de leitura do site; não depende de parâmetros de uma versão específica do produto."
   checkedAt: "2026-07-26"
 title: Política de versão do manual
-description: Explica o status do conteúdo, a data de verificação e como as atualizações contínuas funcionam.
+description: Como o manual se mantém atualizado e como avaliar se um conteúdo ainda se aplica.
 locale: pt
 source_locale: zh-CN
-source_revision: "a608dc3"
+source_revision: '7f6fd2b'
 translation_status: reviewed
 translated_at: 2026-09-20
-reviewed_at: 2026-10-26
+reviewed_at: 2026-11-19
 sidebar:
   order: 8
 ---
 
 ## Atualização contínua
 
-Este manual não fica congelado indefinidamente em uma única versão do Codex. O produto muda; por isso, cada página explica o que foi verificado por meio de status, data de verificação e evidências específicas. A data, por si só, não é uma nota de confiabilidade.
+Este manual não fica preso indefinidamente a uma única versão do Codex. O produto continua mudando, portanto instalação, login, permissões, modelos, configuração e comportamento do Cloud podem mudar com o tempo.
 
-## Conteúdo
+## Em que fonte confiar
 
-- Por que este manual não pode pressupor que nada muda
-- Como ler o status e a data de verificação no início da página
-- Em quem confiar quando houver conflito com o oficial
+Para o comportamento atual do produto, consulte a [documentação oficial do Codex da OpenAI](https://developers.openai.com/codex). Este manual explica conceitos, organiza caminhos e apresenta métodos práticos. Em caso de conflito, siga a documentação oficial e use o link de correção no rodapé da página para avisar sobre o problema.
 
-## Status da página
+## Como avaliar se o conteúdo ainda se aplica
 
-| Status | Significado |
-|---|---|
-| planned | Planejado, ainda não escrito |
-| draft | Em redação |
-| review | Conteúdo pronto, aguardando revisão |
-| verified | Verificado conforme a base indicada |
-| outdated | Precisa de atualização após mudanças no produto |
-| archived | Mantido por histórico, fora da navegação principal |
+Ao ler informações que podem mudar, observe três pontos:
 
-## Como ler o status da página
+1. Se o tema muda com frequência, como instalação, configuração, permissões ou pontos de entrada do produto.
+2. Se a data visível da última atualização do conteúdo está muito distante.
+3. Se as fontes oficiais citadas ainda correspondem ao comportamento atual do produto.
 
-- `planned`: ainda não foi escrito
-- `draft`: em escrita, ainda instável
-- `review`: o núcleo já existe, mas ainda precisa de revisão
-- `verified`: já foi verificado conforme a base indicada
-- `outdated`: pode ter sido correto antes, mas agora desconfie de desatualização
-- `archived`: mantido como referência, não como conteúdo principal atual
+Conceitos, métodos e práticas de aceitação costumam ser mais estáveis do que botões, parâmetros e caminhos exatos da interface. Para comportamento, parâmetros, preços ou regras atuais, consulte novamente as fontes oficiais.
 
-## Registro de verificação e atualização do conteúdo
+## Atualizações e correções
 
-No início de cada página aparecem separadamente o status editorial, o método de verificação, a data da verificação e as evidências aplicáveis. `editorial` indica revisão editorial, `source-checked` indica conferência de fontes e `run-tested` indica que um exemplo foi executado no ambiente registrado. Nenhum desses métodos substitui os outros. As notas históricas ficam separadas e não se tornam automaticamente evidência de uma execução atual.
+[Atualizações e correções](/pt/guide/updates/) registra mudanças importantes e seus efeitos. O rodapé da página pode abrir um rascunho de Issue no GitHub com o título e o caminho da página atual. Revise-o e remova informações sensíveis antes de enviar.
 
-[Atualizações e correções do conteúdo](/pt/guide/updates/) explica mudanças específicas e seus efeitos. No fim das páginas com texto em chinês, é possível abrir um rascunho de correção no GitHub com informações da página atual. Verifique-o e remova dados sensíveis antes de enviar.
+## Tópicos que mudam com frequência
 
-## Base oficial
-
-O comportamento do produto segue a documentação da OpenAI: [https://developers.openai.com/codex](https://developers.openai.com/codex). Este repositório é um guia comunitário; se houver conflito com o oficial, prevalece o oficial — e issues são bem-vindas.
-
-## Mal-entendidos comuns
-
-### 1. Estar no manual não significa que nunca muda
-
-Estes conteúdos mudam com mais facilidade:
-
-- Forma de instalação
-- Fluxos de login e conta
-- permissões, modelos e opções de configuração
-- Comportamento de Cloud e das entradas de produto
-
-### 2. `review` não significa que não se pode ler
-
-`review` indica que o conteúdo principal já existe, mas ainda não chegou ao nível máximo de confirmação — não que não sirva de referência.
-
-### 3. Em conflito entre manual comunitário e documentação oficial, não acredite metade em cada um
-
-Dá para separar assim:
-
-- Entendimento e explicação de caminhos: manual
-- Comportamento e parâmetros mais recentes: oficial
-
-## Como julgar se uma página é confiável
-
-Se suspeitar que uma página está desatualizada, olhe estas três coisas:
-
-1. O status editorial no início da página é `review`, `verified` ou `outdated`?
-2. A data da última verificação está longe de hoje?
-3. O tema é conceitual, ou é instalação, configuração, permissões — coisas que mudam fácil?
-
-Sempre que envolver comportamento, parâmetros e regras atuais, a documentação oficial vigente prevalece.
+- Métodos de instalação e requisitos do sistema
+- Login, contas e fluxos de permissão
+- Modelos, opções de configuração e sintaxe de parâmetros
+- Comportamento do Cloud, dos clientes e dos pontos de entrada
+- Preços, cotas e limites do serviço

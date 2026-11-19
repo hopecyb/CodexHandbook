@@ -7,7 +7,7 @@ title: Parallel chats and Agents
 description: Use independent chats and worktrees to advance tasks that can be accepted separately.
 locale: en
 source_locale: zh-CN
-source_revision: '2336db1'
+source_revision: 'a028309'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25

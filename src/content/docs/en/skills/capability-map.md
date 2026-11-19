@@ -8,7 +8,7 @@ title: Extension capability map
 description: 'Understand Codex extensions through eight responsibilities: task, rules, process, tools, guards, distribution, triggering, and parallel work.'
 locale: en
 source_locale: zh-CN
-source_revision: '183812c'
+source_revision: '32771c6'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: "2026-10-25"

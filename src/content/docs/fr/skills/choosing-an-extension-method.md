@@ -3,7 +3,7 @@ title: Choisir une méthode d'extension
 description: Choisir entre prompt, AGENTS.md, Skill, MCP, Hook, Plugin et Scheduled task selon ce qu'il faut conserver ou automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: '28ae6f5'
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

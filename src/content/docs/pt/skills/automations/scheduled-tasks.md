@@ -7,7 +7,7 @@ title: Guia completo de tarefas agendadas
 description: Escolher tarefas independentes ou dentro de uma conversa e configurar projeto local, worktree, permissões, prompt e revisão.
 locale: pt
 source_locale: zh-CN
-source_revision: "fa792dc"
+source_revision: '532489c'
 translation_status: reviewed
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26

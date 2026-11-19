@@ -8,7 +8,7 @@ title: Den Erweiterungsmechanismus wählen
 description: Wähle Prompt, AGENTS.md, Skill, MCP, Hook, Plugin oder Scheduled task anhand dessen, was dauerhaft erhalten oder automatisch ausgelöst werden soll.
 locale: de
 source_locale: zh-CN
-source_revision: "28ae6f5"
+source_revision: 'ef86d5a'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

@@ -5,7 +5,7 @@ sidebar:
   order: 60
 locale: ko
 source_locale: zh-CN
-source_revision: 'd45e640'
+source_revision: 'bea12b4'
 translation_status: reviewed
 translated_at: 2026-10-25
 reviewed_at: '2026-10-26'
@@ -53,7 +53,7 @@ legacyVerification:
 - [공식 리소스](/ko/guide/reference/official-resources/)
 
 :::note[버전에 따라 변경될 수 있음]
-명령, 설정 키, 기본 권한은 제품 업데이트에 따라 바뀝니다. 각 페이지에 검증일이 있으니, 쓰기 전에 공식 문서를 확인하세요.
+명령, 설정 키, 기본 권한은 제품 업데이트에 따라 바뀝니다. 사용하기 전에 공식 문서를 확인하세요.
 :::
 
 참고 자료 구역은 메인 튜토리얼이 아닙니다. 용어, 설정, 명령, 장애 분석이 필요할 때 돌아오면 됩니다.

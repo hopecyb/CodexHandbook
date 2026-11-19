@@ -3,7 +3,7 @@ title: Autorisations et bac à sable
 description: Suivez une chaîne de décision unique pour comprendre le bac à sable, les approbations, l'accès au réseau et les limites d'exécution locale ou Cloud.
 locale: fr
 source_locale: zh-CN
-source_revision: "6b5fcb8"
+source_revision: '8fa3f8c'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

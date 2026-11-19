@@ -12,7 +12,7 @@ title: "사례: 검증을 동반한 버그 수정"
 description: 실행 가능한 할인 계산 버그를 통해 실패 재현, 원인 파악, 최소 수정, 테스트 통과, 회귀 검사, diff 검토를 수행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: '42d842e'
+source_revision: 'c89a885'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

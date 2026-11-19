@@ -20,7 +20,7 @@ next:
   label: Dar tarefas claras
 locale: pt
 source_locale: zh-CN
-source_revision: "ec5c2d3"
+source_revision: 'a379994'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'

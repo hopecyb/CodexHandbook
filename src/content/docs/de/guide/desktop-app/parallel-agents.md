@@ -9,7 +9,7 @@ sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: "2336db1"
+source_revision: 'a028309'
 translation_status: reviewed
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26

@@ -8,7 +8,7 @@ title: scripts/ và kiểm thử
 description: Thêm script xác định vào Skill và Kiểm chứng hành vi của chúng.
 locale: vi
 source_locale: zh-CN
-source_revision: "900e6e4"
+source_revision: '05a2f68'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26

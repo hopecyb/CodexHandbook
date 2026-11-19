@@ -8,7 +8,7 @@ title: "A estrutura de uma boa tarefa"
 description: "Objetivo, contexto, entradas, restrições, critérios de aceitação e limites de permissão."
 locale: pt
 source_locale: zh-CN
-source_revision: "98c0511"
+source_revision: 'b933eca'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

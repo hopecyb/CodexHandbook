@@ -7,7 +7,7 @@ legacyVerification:
   checkedAt: "2026-08-26"
 locale: ko
 source_locale: zh-CN
-source_revision: '2336db1'
+source_revision: 'a028309'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:

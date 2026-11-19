@@ -8,7 +8,7 @@ title: scripts/ y pruebas
 description: Añade scripts deterministas a un Skill y verifica su comportamiento.
 locale: es
 source_locale: zh-CN
-source_revision: "900e6e4"
+source_revision: '05a2f68'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25

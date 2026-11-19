@@ -3,7 +3,7 @@ title: AI アプリケーションロードマップ
 description: 論文、製品発表、技術記事、筆者の学習提案を区別し、各テーマから実践へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 translated_at: "2026-10-24"
 prev: false

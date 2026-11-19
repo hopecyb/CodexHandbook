@@ -8,7 +8,7 @@ title: Use a Skill
 description: Explicit and implicit Skill triggers, and how to write a good description.
 locale: en
 source_locale: zh-CN
-source_revision: 'ef92b69'
+source_revision: '5fd7e53'
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"

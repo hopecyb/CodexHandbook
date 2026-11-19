@@ -10,7 +10,7 @@ sidebar:
   order: 60
 locale: de
 source_locale: zh-CN
-source_revision: "d45e640"
+source_revision: "bea12b4"
 translation_status: reviewed
 translated_at: 2026-10-25
 reviewed_at: 2026-10-26
@@ -53,7 +53,7 @@ Besser mit konkreter Frage kommen, als alles auf einmal lesen.
 - [Offizielle Ressourcen](/de/guide/reference/official-resources/)
 
 :::note[Versionsempfindlich]
-Befehle, Config-Schlüssel und Default-Berechtigungen ändern sich mit dem Produkt — die Seiten nennen das Datum der letzten Überprüfung; vor Nutzung offizielle Docs abgleichen.
+Befehle, Config-Schlüssel und Default-Berechtigungen ändern sich mit dem Produkt. Gleichen Sie sie vor der Nutzung mit der offiziellen Dokumentation ab.
 :::
 
 Die Referenz ist kein Haupt-Tutorial. Bei Terminologie, Config, Befehlen oder Troubleshooting zurückkommen.

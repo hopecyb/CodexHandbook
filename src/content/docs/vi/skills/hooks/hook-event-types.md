@@ -7,7 +7,7 @@ title: Các loại sự kiện Hook
 description: Chọn sự kiện theo vòng đời phiên, lượt tác vụ, gọi công cụ, nén ngữ cảnh và Agent con.
 locale: vi
 source_locale: zh-CN
-source_revision: "07f4965"
+source_revision: '68a5b0e'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

@@ -7,12 +7,12 @@ title: ガイドページの執筆
 description: 新しいハンドブック本文の構造、frontmatter、相互リンクの約束事。
 locale: ja
 source_locale: zh-CN
-source_revision: "dd22df1"
+source_revision: "4eddfb9"
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:
   order: 10
-reviewed_at: '2026-10-26'
+reviewed_at: 2026-11-19
 ---
 
 本ページでは、`src/content/docs/` に**ガイド型**のページ（純粋な事例や参照表だけではないページ）を追加・改稿する方法を説明します。
@@ -37,23 +37,12 @@ reviewed_at: '2026-10-26'
 
 ```yaml
 ---
-title: ページタイトル
-description: 本文が解決する問題を一文で
+title: ページの題名
+description: このページが解決する問題を一文で説明
 ---
 ```
 
-新しいページでは、編集状態と検証方法を frontmatter に記録します。自由記述の検証フッターは付けません。
-
-```yaml
-editorialStatus: review
-verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: 内容の構成を確認済み。実際に行った確認内容と日付に置き換えてください。
-```
-
-出典の確認やサンプルの実行を示す場合は、[技術コンテンツの検証](/ja/guide/contributing/verify-technical-content/)に従い、必要なリンクと環境情報を追加します。日付は引用符で囲んだ `YYYY-MM-DD` 形式の文字列にしてください。
-
+リポジトリの保守用フィールドは検証ツールで処理し、本文やフッターには表示しません。読者がページを理解して使うために必要な情報だけを残してください。コマンド、価格、権限など変わりやすい事実は[技術内容を確認する](/ja/guide/contributing/verify-technical-content/)に従って確認し、必要な適用範囲を本文に直接記載します。
 ## 推奨構造
 
 [外部資料統合テンプレート](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板) から節を選び、よくある組み合わせは次のとおりです。

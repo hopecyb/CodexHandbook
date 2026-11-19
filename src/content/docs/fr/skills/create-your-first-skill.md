@@ -3,7 +3,7 @@ title: Créer votre premier Skill
 description: Créer de zéro un Skill pr-review à intégrer au dépôt, avec des étapes de test et de partage en équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: '14414f5'
+source_revision: 'aa4baf7'
 translation_status: reviewed
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'

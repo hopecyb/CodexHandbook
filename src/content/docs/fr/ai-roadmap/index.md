@@ -3,7 +3,7 @@ title: Feuille de route des applications IA
 description: Distinguer articles scientifiques, lancements de produits, articles d’ingénierie et conseils d’apprentissage de l’auteur, puis passer de chaque sujet à la pratique.
 locale: fr
 source_locale: zh-CN
-source_revision: "f66e3ba"
+source_revision: '1db64dd'
 translation_status: reviewed
 translated_at: 2026-10-24
 prev: false

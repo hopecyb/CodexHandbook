@@ -3,7 +3,7 @@ title: Matriz de permisos
 description: Distingue entre los Permission Profiles locales, el sandbox anterior y las políticas de red de Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: 'c6ad6aa'
+source_revision: 'c38e374'
 translation_status: reviewed
 translated_at: 2026-09-20
 sidebar:

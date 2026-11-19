@@ -3,7 +3,7 @@ title: Déboguer une connexion MCP
 description: "Localiser une panne MCP parmi quatre niveaux : configuration, transport, authentification et outils."
 locale: fr
 source_locale: zh-CN
-source_revision: 'd35b635'
+source_revision: 'de0bea5'
 translation_status: reviewed
 translated_at: 2026-09-20
 legacyVerification:

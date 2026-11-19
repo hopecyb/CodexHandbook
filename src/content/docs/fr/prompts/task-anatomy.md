@@ -8,7 +8,7 @@ title: "Anatomie d’une bonne tâche"
 description: Objectif, contexte, entrées, contraintes, acceptation et limites de permission.
 locale: fr
 source_locale: zh-CN
-source_revision: "98c0511"
+source_revision: 'b933eca'
 translation_status: reviewed
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26

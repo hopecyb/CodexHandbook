@@ -3,7 +3,7 @@ title: AI 애플리케이션 로드맵
 description: 논문, 제품 발표, 엔지니어링 글과 작성자의 학습 제안을 구분하고 각 주제에서 실습으로 이어집니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 'f66e3ba'
+source_revision: '1db64dd'
 translation_status: reviewed
 translated_at: 2026-10-24
 prev: false
