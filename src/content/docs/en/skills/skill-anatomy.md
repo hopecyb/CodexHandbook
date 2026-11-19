@@ -9,7 +9,7 @@ description: Roles of SKILL.md, references/, templates/, and scripts/, with exam
 locale: en
 source_locale: zh-CN
 source_revision: 'c4b740a'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---

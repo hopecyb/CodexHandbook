@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE"
   basis: "当前 Codex 运行时对 Skill 的装载规则（`SKILL.md`、按需读取完整技能文件）与 OpenAI Help《Skills in ChatGPT》对 Skill 作为可复用 workflow 的定义一致；本页以概念与目录组织为主，不依赖易变 UI。"
-  checkedAt: "2026-07-26"
+  checkedAt: "2026-11-19"
 title: Skills 概述
 description: 用 SKILL.md 把可复用工作流教给 Codex，写一次，按需调用。
 ---
@@ -36,8 +36,13 @@ Codex 启动时只看到每个 Skill 的 **name、description、路径**；只�
 my-skill/
 ├── SKILL.md          # 必需
 ├── scripts/          # 可选：确定性步骤
-└── references/       # 可选：长参考文档
+├── references/       # 可选：长参考文档
+├── assets/           # 可选：模板、图片和输出资源
+└── agents/
+    └── openai.yaml   # 可选：UI metadata、依赖与调用策略
 ```
+
+`templates/` 不是官方约定的标准层；团队若保留这个目录，应把它写成项目约定，或将模板放到 `assets/`。`agents/openai.yaml` 可描述界面元数据、MCP 依赖以及是否允许隐式调用，字段以当前官方 schema 为准。
 
 `SKILL.md` 最小示例：
 
@@ -62,7 +67,7 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 | 用户 Skill | 用户 skills 目录（见官方文档） | 个人跨项目 |
 | 官方精选 | 通过安装器安装 | 路径由安装器管理，勿与手写目录混淆 |
 
-**不要**照搬过时教程中的错误路径或虚构的 `trigger:` 字段；以 [官方 Skills 文档](https://developers.openai.com/codex/skills) 为准。
+**不要**照搬过时教程中的错误路径或虚构的 `trigger:` 字段；以 [官方 Skills 文档](https://learn.chatgpt.com/docs/build-skills) 为准。
 
 ## 触发方式
 
@@ -115,4 +120,4 @@ Skill 不是起步必需品，更适合拿来整理那些已经反复出现的�
 - 用脚本替代本可清晰描述的步骤，难以维护
 
 ## 参考来源
-- OpenAI Codex Skills 文档
+- [OpenAI：Build skills](https://learn.chatgpt.com/docs/build-skills)

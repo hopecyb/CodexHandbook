@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: Cloud 环境
 description: 配置 Codex Cloud 的运行时、依赖、setup、缓存和仓库起点。
 sidebar:
@@ -48,10 +48,10 @@ Cloud 最多缓存容器状态 12 小时，以加速新聊天和跟进。缓存�
 
 修改 setup、maintenance、环境变量或 secrets 会自动使缓存失效；仓库变化导致缓存不兼容时，手动 **Reset cache**。Business 与 Enterprise 的环境缓存可能由有权访问该环境的用户共享，重置会影响工作区其他用户。
 
-## 环境变量和 Secret
+## 环境变量和 Network secret
 
-- 环境变量贯穿 setup 与 Agent 阶段；
-- Secret 只在 setup 阶段解密，Agent 开始前会移除；
+- direct environment variable 的原值可被环境中的程序读取，可用于 setup 和任务阶段；
+- network secret 向 Agent 暴露 placeholder，代理只在匹配允许目标的 HTTPS 请求中替换真实值，也可用于 setup 和任务阶段；
 - setup 阶段有互联网访问；
 - Agent 阶段默认断网，可按环境单独开放。
 
@@ -70,5 +70,5 @@ Cloud 最多缓存容器状态 12 小时，以加速新聊天和跟进。缓存�
 
 ## 官方依据
 
-- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments)
 - [codex-universal 镜像](https://github.com/openai/codex-universal)

@@ -8,7 +8,7 @@ description: กำหนดการเข้าถึง GitHub ให้ Code
 locale: th
 source_locale: zh-CN
 source_revision: "b126a7e"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 sidebar:

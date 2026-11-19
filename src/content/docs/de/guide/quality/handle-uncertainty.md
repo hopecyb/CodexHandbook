@@ -9,7 +9,7 @@ description: Bei fehlenden Informationen nachfragen statt erfinden.
 locale: de
 source_locale: zh-CN
 source_revision: "839ce22"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 sidebar:

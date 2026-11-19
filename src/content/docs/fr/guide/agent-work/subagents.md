@@ -4,7 +4,7 @@ description: Déléguez un travail bien délimité à des contextes indépendant
 locale: fr
 source_locale: zh-CN
 source_revision: 'b1cefc0'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: '2026-10-26'
 sidebar:

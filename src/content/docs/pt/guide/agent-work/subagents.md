@@ -4,7 +4,7 @@ description: Delegue subtarefas com limites claros a contextos independentes, ma
 locale: pt
 source_locale: zh-CN
 source_revision: 'b1cefc0'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:

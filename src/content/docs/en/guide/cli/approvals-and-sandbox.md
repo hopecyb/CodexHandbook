@@ -11,7 +11,7 @@ description: CLI approval policy for shell, disk, and network—and how sandbox 
 locale: en
 source_locale: zh-CN
 source_revision: '35afd39'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"
 ---

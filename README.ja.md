@@ -140,7 +140,7 @@ Codex Handbook
 
 環境要件：
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 開発環境の起動：
@@ -162,7 +162,7 @@ pnpm build
 pnpm i18n:status -- --locale ja
 ```
 
-日本語本文は `src/content/docs/ja/`（簡体字中国語ソース `src/content/docs/` のミラー）にあります。用語集：[`glossary/ja.md`](./glossary/ja.md)。2026-07-28 時点で日本語ページのカバー率は **100%**（いずれも `translation_status: draft`、言語・技術レビュー待ち）。
+日本語本文は `src/content/docs/ja/`（簡体字中国語ソース `src/content/docs/` のミラー）にあります。用語集：[`glossary/ja.md`](./glossary/ja.md)。現在のカバー率と revision 状態は上記コマンドで確認してください。メタデータの `reviewed` や `current` はワークフロー上の印であり、母語話者や技術者によるレビュー済みであることの証明ではありません。
 
 ## プロジェクトの原則
 

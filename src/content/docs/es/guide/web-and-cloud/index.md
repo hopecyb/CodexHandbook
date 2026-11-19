@@ -8,7 +8,7 @@ description: Del repositorio y el entorno reproducible a la revisión y el Pull 
 locale: es
 source_locale: zh-CN
 source_revision: '86fa0ac'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 13

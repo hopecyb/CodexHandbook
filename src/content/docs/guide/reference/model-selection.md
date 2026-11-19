@@ -9,7 +9,7 @@ sidebar:
   order: 5
 verification:
   kind: source-checked
-  checkedAt: "2026-10-24"
+  checkedAt: "2026-11-19"
   summary: 核对官方模型、Chat 思考档位与套餐说明；场景推荐为编辑建议，没有模型胜率、速度或成本实测。
   evidence:
     - label: Work 与 Codex 模型
@@ -20,11 +20,11 @@ verification:
       href: https://learn.chatgpt.com/docs/pricing
 ---
 
-**做复杂任务先试 GPT‑6.1 Sol，明确的小任务试 Luna，要求严格的难题再考虑 Astra。普通 Chat 按 Instant、Thinking 或 Pro 选择。** 先确认使用入口，再看下面对应的表格。
+**做复杂任务先试 GPT‑6.2 Sol，明确的小任务可试 Luna，要求严格的难题再考虑 GPT‑6.2 Astra。普通 Chat 按 Instant、Thinking 或 Pro 选择。** 先确认使用入口，再看下面对应的表格。
 
 [Work / Codex 选型](#work-codex) · [普通 Chat 选型](#chat) · [套餐与价格](/chatgpt-pricing/) · [记录实际用量](/guide/quality/usage-time-and-model-choice/)
 
-:::note[适用范围 · 2026-10-24]
+:::note[适用范围 · 2026-11-19]
 模型、档位和额度随账号、客户端、工作区与发布进度变化。本文是带日期的参考；推荐是尝试起点，不能保证你的账号已开放对应模型。Chat、Work 和 Codex 的菜单与用量规则需要分别核对。
 :::
 
@@ -36,22 +36,22 @@ verification:
 
 | 你想完成的任务 | 建议起点 | 何时提高档位或换模型 | 跟做与核对 |
 |---|---|---|---|
-| 提取字段、格式转换、小范围改写 | GPT‑6 Luna | 输入明确后仍漏字段或边界，再试 Sol | [记录用量与返工](/guide/quality/usage-time-and-model-choice/) |
-| 根据多份材料写文章 | GPT‑6.1 Sol | 无法处理来源冲突、反复遗漏要求时考虑 Astra | [写一篇文章](/cases/write-an-article/) |
-| 分析销售数据、完成周报 | GPT‑6.1 Sol | 退款、去重、环比仍算不清时提高设置，并保留独立计算核对 | [销售周报](/cases/analyze-a-spreadsheet/) |
-| 修复缺陷、跨文件修改 | GPT‑6.1 Sol | 跨文件依赖难定位或修复反复失败时考虑 Astra | [修复 Bug 并验证](/cases/use-cases/software-development/fix-a-bug-with-verification/) |
-| 多来源研究、约束严格的交付 | GPT‑6.1 Sol；难题考虑 Astra | 推理无法整合冲突证据或持续丢失约束时提高设置 | [结果验收](/guide/quality/) |
+| 提取字段、格式转换、小范围改写 | GPT‑6 Luna | 输入明确后仍漏字段或边界，再试 GPT‑6.2 Sol | [记录用量与返工](/guide/quality/usage-time-and-model-choice/) |
+| 根据多份材料写文章 | GPT‑6.2 Sol | 无法处理来源冲突、反复遗漏要求时考虑 GPT‑6.2 Astra | [写一篇文章](/cases/write-an-article/) |
+| 分析销售数据、完成周报 | GPT‑6.2 Sol | 退款、去重、环比仍算不清时提高设置，并保留独立计算核对 | [销售周报](/cases/analyze-a-spreadsheet/) |
+| 修复缺陷、跨文件修改 | GPT‑6.2 Sol | 跨文件依赖难定位或修复反复失败时考虑 GPT‑6.2 Astra | [修复 Bug 并验证](/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| 多来源研究、约束严格的交付 | GPT‑6.2 Sol；难题考虑 GPT‑6.2 Astra | 推理无法整合冲突证据或持续丢失约束时提高设置 | [结果验收](/guide/quality/) |
 
 ## 模型特点与取舍
 
 | 模型 | 主要定位 | 取舍与使用边界 |
 |---|---|---|
 | GPT‑6 Luna | 面向明确、重复、高频任务的高效率模型 | 适合先完成小任务；复杂判断需要更仔细核对 |
-| GPT‑6.1 Sol | 兼顾能力与成本的复杂工作主力 | 官方定位为以较低成本提供接近 Astra 的表现，并非所有任务效果相同 |
-| GPT‑6 Astra | 面向困难、多步骤任务的最强能力选择 | 更适合结果要求高的任务；简单任务未必值得额外用量 |
-| GPT‑6 Sol、GPT‑5.6 系列 | 仍可能出现在客户端的较早选项 | 已验证有效的流程可继续使用；新任务先比较当前推荐模型 |
+| GPT‑6.2 Sol | 当前面向复杂工作的通用起点 | 适合作为多数多步骤任务的首选；仍需用自己的验收标准比较 |
+| GPT‑6.2 Astra | 当前面向困难、多步骤任务的高能力选择 | 更适合结果要求高的任务；简单任务未必值得额外用量 |
+| GPT‑6.1 Sol、GPT‑6 Astra / Sol、GPT‑5.6 系列 | 仍可能出现在客户端或既有流程的较早选项 | 已验证有效的流程可继续使用；新任务先比较当前推荐模型 |
 
-[官方模型指南](https://learn.chatgpt.com/docs/models)将 6.1 Sol 的可选入口列为 Work 与 Codex；不要据此推断普通 Chat 有同名选项。Work/Codex 的模型说明与 Chat 的 GPT‑6 显示名称也不应混用。
+[官方模型指南](https://learn.chatgpt.com/docs/models)列出 Work 与 Codex 当前可选模型；不要据此推断普通 Chat 有同名选项。Work/Codex 的模型说明与 Chat 的 GPT‑6 显示名称也不应混用。
 
 <span id="chat"></span>
 
@@ -100,4 +100,5 @@ verification:
 
 产品事实来自页首的官方来源；任务建议为本站编辑判断，本页没有进行模型性能实测。价格记录单独维护在价格页，购买前核对实际结账信息。
 
+- 2026-11-19：加入 GPT‑6.2 Sol / Astra，将 6.1 与更早模型降为兼容/历史选项。
 - 2026-10-24：首次建立 Chat 与 Work/Codex 分开的选型指南，接入本站任务案例、用量记录与价格来源。

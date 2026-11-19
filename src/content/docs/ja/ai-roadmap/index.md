@@ -4,7 +4,7 @@ description: 論文、製品発表、技術記事、筆者の学習提案を区�
 locale: ja
 source_locale: zh-CN
 source_revision: '1db64dd'
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-10-24"
 prev: false
 next:

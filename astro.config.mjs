@@ -84,7 +84,10 @@ function localizedRedirects(map) {
 }
 
 const siteUrl = 'https://codexhandbook.com';
-const legacyRedirectPaths = new Set(Object.keys(legacyRedirects));
+const normalizedRedirects = Object.fromEntries(
+	Object.entries(legacyRedirects).map(([from, to]) => [from, to.endsWith('/') ? to : `${to}/`]),
+);
+const legacyRedirectPaths = new Set(Object.keys(normalizedRedirects));
 const sitemapLocales = {
 	root: 'zh-CN',
 	en: 'en',
@@ -145,7 +148,7 @@ function rehypeExternalLinks() {
 // https://astro.build/config
 export default defineConfig({
 	site: siteUrl,
-	redirects: legacyRedirects,
+	redirects: normalizedRedirects,
 	markdown: {
 		processor: unified({
 			rehypePlugins: [rehypeLocaleInternalLinks, rehypeExternalLinks],
@@ -211,40 +214,11 @@ export default defineConfig({
 					},
 				},
 				{
-					tag: 'script',
-					content: `
-						(function () {
-							const hostname = window.location.hostname;
-							const isLocalHost =
-								hostname === "localhost" ||
-								hostname === "127.0.0.1" ||
-								hostname === "0.0.0.0" ||
-								hostname === "::1" ||
-								hostname.endsWith(".local") ||
-								hostname.startsWith("192.168.") ||
-								hostname.startsWith("10.") ||
-								/^172\\.(1[6-9]|2\\d|3[0-1])\\./.test(hostname);
-
-							if (isLocalHost) return;
-
-							const googleAnalyticsScript = document.createElement("script");
-							googleAnalyticsScript.async = true;
-							googleAnalyticsScript.src =
-								"https://www.googletagmanager.com/gtag/js?id=G-KPP4Z7D6SZ";
-							document.head.appendChild(googleAnalyticsScript);
-
-							window.dataLayer = window.dataLayer || [];
-							function gtag(){dataLayer.push(arguments);}
-							gtag('js', new Date());
-							gtag('config', 'G-KPP4Z7D6SZ');
-
-							(function(c,l,a,r,i,t,y){
-								c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-								t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-								y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-							})(window, document, "clarity", "script", "xtawngb7re");
-						})();
-					`,
+					tag: 'meta',
+					attrs: {
+						'http-equiv': 'Content-Security-Policy',
+						content: "default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:",
+					},
 				},
 				{
 					tag: 'script',
@@ -254,16 +228,32 @@ export default defineConfig({
 						const selector = '.sl-markdown-content img[src^="/diagrams/"]';
 						const dialog = document.createElement('dialog');
 						dialog.className = 'diagram-zoom';
-						dialog.addEventListener('click', () => dialog.close());
+						dialog.setAttribute('aria-labelledby', 'diagram-zoom-title');
+						let lastTrigger;
+						dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+						dialog.addEventListener('close', () => lastTrigger?.focus());
 						const mark = () => document.querySelectorAll(selector).forEach((img) => {
 							img.dataset.zoomable = '';
 							img.tabIndex = 0;
 							img.setAttribute('role', 'button');
+							img.setAttribute('aria-haspopup', 'dialog');
 						});
 						const open = (img) => {
-							dialog.replaceChildren(Object.assign(new Image(), { src: img.currentSrc || img.src, alt: img.alt }));
+							lastTrigger = img;
+							const title = document.createElement('p');
+							title.id = 'diagram-zoom-title';
+							title.className = 'diagram-zoom__title';
+							title.textContent = img.alt || 'Diagram preview';
+							const close = document.createElement('button');
+							close.type = 'button';
+							close.className = 'diagram-zoom__close';
+							close.setAttribute('aria-label', document.documentElement.lang.startsWith('zh') ? '关闭大图' : 'Close diagram');
+							close.textContent = '×';
+							close.addEventListener('click', () => dialog.close());
+							dialog.replaceChildren(title, close, Object.assign(new Image(), { src: img.currentSrc || img.src, alt: img.alt }));
 							if (!dialog.isConnected) document.body.append(dialog);
 							dialog.showModal();
+							close.focus();
 						};
 						document.addEventListener('click', (event) => {
 							const img = event.target.closest?.(selector);

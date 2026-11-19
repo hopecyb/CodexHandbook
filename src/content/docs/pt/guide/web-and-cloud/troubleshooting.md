@@ -8,7 +8,7 @@ description: Localize falhas do Cloud nas camadas de repositório, setup, rede, 
 locale: pt
 source_locale: zh-CN
 source_revision: "019fac1"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26
 sidebar:

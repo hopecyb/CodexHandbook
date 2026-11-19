@@ -9,7 +9,7 @@ description: Nguồn cài đặt, ranh giới Quyền, nâng cấp và rollback 
 locale: vi
 source_locale: zh-CN
 source_revision: 'f61cb1f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 ---

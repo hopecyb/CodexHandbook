@@ -5,7 +5,7 @@ description: Sự cố production và bug cứng đầu — dựng chuỗi bằn
 locale: vi
 source_locale: zh-CN
 source_revision: "18193b0"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 ---

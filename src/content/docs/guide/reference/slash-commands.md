@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE"
   basis: "已对照当前官方桌面 App Slash commands 与 Developer commands，明确不同工作面的命令集合并不相同；列出的命令均来自当前官方表，最终可用性仍以 composer 补全为准。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 斜杠命令与快捷入口
 description: / 命令与 $ Skill 调用——学习向速查，非完整参数手册。
 sidebar:
@@ -59,7 +59,9 @@ sidebar:
 
 自然语言本身就能完成大多数任务。斜杠命令更多是在你已经熟一点之后，用来提速和走固定入口。
 
-## 当前常见入口
+## 当前精选入口
+
+下面是按工作面挑出的常用项，不是完整清单。先输入 `/` 查看当前客户端、账号和工作区实际提供的命令。
 
 ### 桌面 App / IDE
 
@@ -72,9 +74,17 @@ sidebar:
 ### CLI 特有的会话控制
 
 - `/permissions`：调整当前会话的权限方式
-- `/agent`：检查或切换 Agent 线程
+- `/agents`：检查或切换 Agent 线程
 - `/model`：选择当前模型
 - `/status`：核对当前会话设置
+- `/pets` / `/pet`：打开宠物入口（支持的客户端/终端）
+- `/statusline`：配置状态栏
+- `/title`：修改当前会话标题
+- `/theme`：选择界面主题
+- `/export`：导出当前会话
+- `/recap`：生成会话回顾
+- `/debug-config`：检查合并后的配置
+- `/keymap`：查看或配置快捷键
 
 ChatGPT Web 有自己的 composer 命令菜单，不能假设桌面 App 或 CLI 的命令在 Web 中同名可用。
 
@@ -113,3 +123,9 @@ ChatGPT Web 有自己的 composer 命令菜单，不能假设桌面 App 或 CLI 
 斜杠命令可以看成聊天里的快捷入口，先看当前环境实际提供什么，比死记命令名有用。
 
 CLI 子命令见 [CLI 交互模式](/guide/cli/interactive-mode/) 与 [非交互模式](/guide/cli/non-interactive-mode/)。完整参数表见 [CLI 命令参考](/guide/reference/commands/)。
+
+## 官方来源
+
+- [Developer commands](https://learn.chatgpt.com/docs/developer-commands)
+- [CLI reference](https://learn.chatgpt.com/docs/cli/reference)
+- [Commands](https://learn.chatgpt.com/docs/reference/commands)

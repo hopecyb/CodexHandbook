@@ -9,7 +9,7 @@ description: Repères rapides sur les commandes `/` et l’invocation des Skills
 locale: fr
 source_locale: zh-CN
 source_revision: 'a34c90f'
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-09-20"
 sidebar:
   order: 40

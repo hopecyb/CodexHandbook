@@ -8,7 +8,7 @@ description: Delegate a long task from the IDE to Codex Cloud and return to revi
 locale: en
 source_locale: zh-CN
 source_revision: 'd5369b5'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

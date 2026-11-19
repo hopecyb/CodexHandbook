@@ -1,60 +1,67 @@
 ---
-title: 安装 Codex Pet
-description: "从科普角度理解 Codex Pet 的安装目录、启用流程和安全边界。"
+title: 启用或上传 Codex Pet
+description: "按桌面 App、ChatGPT Web 和 CLI 的当前公开入口启用宠物，并核对文件与安全边界。"
 contentType: guide
-editorialStatus: review
+editorialStatus: verified
 verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: 已补充格式与恢复边界；尚无本站客户端安装、动画播放或卸载实测记录，目录与菜单应以目标版本为准。
+  kind: source-checked
+  checkedAt: "2026-11-19"
+  summary: 已对照官方 Pets 与 Commands 文档，区分桌面创建、Web 上传和 CLI 命令；未验证账号级开放情况。
+  evidence:
+    - label: OpenAI Pets
+      href: https://learn.chatgpt.com/docs/pets
+    - label: OpenAI Commands
+      href: https://learn.chatgpt.com/docs/reference/commands
 ---
 
-本站尚未完成具体客户端与宠物包的兼容测试。请先记录版本与来源，使用[兼容及恢复记录](/guide/reference/resource-compatibility/)核对实际结果。示意图只解释结构，不代表所有版本的格式契约。
-
-
-安装 Codex Pet 的本质，是把一个客户端能识别的资源包放到约定目录里。客户端启动或刷新设置时读取这个目录，找到元数据，再加载对应的动画素材。
+当前公开流程是在产品界面中创建、上传或选择 Pet。不要先去创建 `~/.codex/pets/<id>/pet.json`：官方公开文档没有把这个目录结构作为通用安装契约。
 
 ![插画：先用放大镜检查资源包，再放入抽屉式目录，刷新后宠物出现在笔记本屏幕上](/illustrations/pets-install.webp)
 
-一个 Pet 通常是一个本地文件夹，里面至少有两个文件：
+## 桌面 App
 
-```text
-~/.codex/pets/<pet-id>/
-  pet.json
-  spritesheet.webp
-```
+macOS 和 Windows 桌面 App 当前流程是：
 
-`pet.json` 描述宠物名称、说明和 spritesheet 路径；`spritesheet.webp` 保存动画帧。两个文件通常放在同一个宠物目录中，且 `pet.json` 里的 `spritesheetPath` 要指向实际存在的文件。
+1. 打开 **Settings → Pets → Create pet**；
+2. App 安装内置 `hatch-pet` Skill、重新加载 Skills，并打开新聊天；
+3. 描述想要的 Pet 并发送；
+4. 任务完成后回到 **Settings → Pets**，选择 **Refresh**，再选择新 Pet。
 
-## 安装流程背后的逻辑
+桌面创建的自定义 Pet 保存在本机，不会自动同步到 ChatGPT Web。入口、按钮和开放范围仍可能随版本、账号与组织策略变化；如果看不到入口，先更新客户端并检查工作区设置，不要用未知脚本“强制安装”。
 
-1. 获取宠物包：确认它至少包含 `pet.json` 和 spritesheet。
-2. 放入 Pets 目录：常见位置是 `~/.codex/pets/<pet-id>/`。
-3. 让客户端重新读取：重启 Codex，或在 Pets 设置里刷新。
-4. 在当前客户端中查找宠物选择入口；菜单名称与位置随版本变化。若没有入口，先确认该版本支持情况。
+## ChatGPT Web
 
-Windows 上通常使用用户目录下的 `.codex\pets\<pet-id>\`。如果你配置过 `CODEX_HOME`，以当前客户端显示的 Pets 文件夹为准。
+1. 打开 **Settings → Personalization → Pet**。
+2. 选择 **Upload pet**。
+3. 上传符合当前要求的单个透明 sprite sheet 文件：
+   - 1536 × 1872 px；
+   - 透明背景；
+   - PNG 或 WebP；
+   - 不超过 20 MiB。
+4. 保存后在界面中检查缩放、裁切和透明边缘。
 
-## 为什么经常安装失败
+上传前以界面给出的限制为最终依据；如果产品拒绝文件，不要仅通过改扩展名绕过校验。
 
-安装后没有出现时，先看这几项：
+## CLI
 
-- 文件夹名和 `pet.json` 里的 `id` 是否一致。
-- `spritesheetPath` 是否是相对路径，例如 `spritesheet.webp`。
-- spritesheet 是否真的在同一目录中。
-- 是否重启过 Codex，或在 Pets 设置里刷新过。
-- Windows、WSL 或自定义 `CODEX_HOME` 是否指向了不同目录。
+在交互式 Codex CLI 中，先输入 `/` 查看补全：
 
-若路径与文件检查通过，仍需排查格式版本、客户端支持情况及实际加载错误。
+- `/pets` 或 `/pet`：打开 picker；
+- `/pets <name>`：直接选择；
+- `/pets off`：关闭终端 Pet。
 
-## 更新和卸载的本质
+终端需要 iTerm2 3.6 或更新版本，或支持 Kitty graphics / Sixel；tmux 与 Zellij 中不可用。命令不可见时，检查 CLI 版本和终端支持。IDE 扩展没有 Pet picker 或浮动 Pet。
 
-更新前先备份旧目录。确认新包可用后，再覆盖 `pet.json` 和 spritesheet。
+## 安全与恢复
 
-停用前先切回内置宠物或关闭显示，再将对应自定义包移到 Pets 扫描目录之外的备份位置。刷新或重启后，确认该包不再出现。需要恢复时放回原包并重新验证；确认备份不再需要后才删除。此流程尚未在本站记录的客户端版本上实测。
+- 不运行来源不明的 `curl | sh`、安装器或修改客户端目录的脚本。
+- 上传前检查文件中是否含姓名、账号、工作画面或其他不应公开的信息。
+- 保留原图、来源、许可与修改记录；切换宠物前记录当前设置。
+- 如果显示异常，先在产品界面切回内置/默认选项，再移除上传内容。
 
-## 安全提醒
+历史或社区教程可能使用 `pet.json + spritesheet.webp`。在目标版本没有公开 schema 和恢复说明时，只能把它视为未核实格式，不能作为本站主路径。
 
-不要直接运行来历不明的远程 shell 命令。安装脚本可能会写入本地文件，甚至执行额外命令。更稳妥的方式是先下载包、检查 `pet.json`、确认素材来源和许可，再手动复制到 Pets 目录。
+## 官方来源
 
-把安装理解成“复制本地资源包”，会让风险边界更清楚：资源文件可检查，脚本行为要审阅，来源和授权要保留。
+- [OpenAI：Pets](https://learn.chatgpt.com/docs/pets)
+- [OpenAI：Commands](https://learn.chatgpt.com/docs/reference/commands)

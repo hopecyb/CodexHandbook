@@ -4,7 +4,7 @@ description: 명령·경로 규칙으로 Agent가 실행할 수 있는 조작을
 locale: ko
 source_locale: zh-CN
 source_revision: '521ecc9'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 sidebar:

@@ -1185,6 +1185,9 @@
 
 	.pricing-footer__legal {
 		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.4rem;
 		justify-content: flex-end;
 		padding-top: 18px;
 		border-top: 1px solid var(--line);
@@ -1363,6 +1366,7 @@
 		}
 
 		.pricing-footer__legal {
+			align-items: flex-start;
 			justify-content: flex-start;
 		}
 	}

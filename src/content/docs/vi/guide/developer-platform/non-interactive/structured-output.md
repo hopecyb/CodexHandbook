@@ -4,7 +4,7 @@ description: "Để `exec` tạo kết quả máy parse được — cho bước
 locale: "vi"
 source_locale: "zh-CN"
 source_revision: "e80b5d7"
-translation_status: "reviewed"
+translation_status: stale
 translated_at: "2026-08-26"
 sidebar:
   order: 30

@@ -9,7 +9,7 @@ description: หน้าที่และตัวอย่างของ SKI
 locale: th
 source_locale: zh-CN
 source_revision: 'c4b740a'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 ---

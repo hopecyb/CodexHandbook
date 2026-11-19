@@ -140,7 +140,7 @@ Codex Handbook
 
 環境要求：
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 啟動開發環境：

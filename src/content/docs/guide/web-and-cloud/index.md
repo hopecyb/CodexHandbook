@@ -2,14 +2,14 @@
 legacyVerification:
   status: "verified"
   products: "Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: Web 与 Cloud（概述）
 description: 从仓库连接、可复现环境到审查和 Pull Request 的远程任务主线。
 sidebar:
   order: 13
 ---
 
-Codex Cloud 在隔离的云环境中执行编码任务，适合后台长任务、并行尝试和从 GitHub、GitLab（Beta）、Linear 或 Slack 发起的工作。它不是“远程控制你的电脑”，也不会自动看到本地未推送的文件。
+Codex Cloud 在隔离的云环境中执行编码任务，适合后台长任务、并行尝试和从 GitHub、GitLab（Beta）、Linear 或 Slack 发起的工作。它不是“远程控制你的电脑”。从 Web 选择远程仓库创建任务时，不会自动读取本机未推送文件；从 IDE 委托到 Cloud 时，handoff 可以携带当前对话中的本地源码改动，因此提交前应先检查 diff、未跟踪文件和 secrets。
 
 ![插画：浏览器里的仓库连到云端隔离容器执行任务，结果以带绿勾的 Pull Request 卡片返回](/illustrations/web-and-cloud.webp)
 
@@ -59,4 +59,5 @@ Cloud 的价值是隔离、可复现和并行，不是取消审查。
 ## 官方依据
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
-- [Cloud 环境](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Cloud 环境](https://learn.chatgpt.com/docs/environments/cloud-environments)
+- [Prompting：IDE handoff](https://learn.chatgpt.com/docs/prompting)

@@ -3,8 +3,8 @@ legacyVerification:
   status: "verified"
   products: "CLI / API / Cloud"
   basis: "已按本仓库当前 non-interactive 子章节结构与入口链接交叉复核；本页只承担“非交互模式适合脚本、批处理与流水线”的分组说明，不单独承诺具体命令参数。"
-  checkedAt: "2026-07-26"
-title: 非交互模式
+  checkedAt: "2026-11-19"
+title: 非交互模式概览
 description: 批处理、脚本和流水线的说明页，先理解它适合什么任务，再看具体命令与输出设计。
 ---
 

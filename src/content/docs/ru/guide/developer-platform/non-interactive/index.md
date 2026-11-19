@@ -9,7 +9,7 @@ description: Пакетные задания, скрипты и конвейер
 locale: ru
 source_locale: zh-CN
 source_revision: '2d542c9'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 ---

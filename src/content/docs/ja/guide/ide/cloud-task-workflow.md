@@ -4,7 +4,7 @@ description: IDE から長時間タスクを Codex Cloud へ委任し、レビ�
 locale: ja
 source_locale: zh-CN
 source_revision: "d5369b5"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-08-26"
 sidebar:
   order: 60

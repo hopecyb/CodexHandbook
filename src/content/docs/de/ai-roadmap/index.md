@@ -4,7 +4,7 @@ description: Unterscheidet wissenschaftliche Arbeiten, Produktankündigungen, En
 locale: de
 source_locale: zh-CN
 source_revision: '1db64dd'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-10-24
 prev: false
 next:

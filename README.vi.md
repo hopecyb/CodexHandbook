@@ -140,7 +140,7 @@ Dự án dùng [Astro](https://astro.build/) + [Starlight](https://starlight.ast
 
 Yêu cầu:
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 Khởi chạy môi trường dev:
@@ -162,7 +162,7 @@ Theo dõi tiến độ dịch tiếng Việt:
 pnpm i18n:status -- --locale vi
 ```
 
-Nội dung tiếng Việt nằm ở `src/content/docs/vi/` (bản phản chiếu của nguồn tiếng Trung giản thể). Thuật ngữ: [`glossary/vi.md`](./glossary/vi.md). Tính đến 2026-07-28, độ phủ trang tiếng Việt là **100%** (tất cả `translation_status: draft`; chờ review ngôn ngữ/kỹ thuật).
+Nội dung tiếng Việt nằm ở `src/content/docs/vi/` (bản phản chiếu của nguồn tiếng Trung giản thể). Thuật ngữ: [`glossary/vi.md`](./glossary/vi.md). Dùng lệnh ở trên để xem độ phủ và trạng thái revision hiện tại. Giá trị `reviewed` hoặc `current` trong metadata chỉ là tín hiệu quy trình, không chứng minh đã được người bản ngữ hoặc kỹ thuật viên thẩm định.
 
 ## Nguyên tắc
 

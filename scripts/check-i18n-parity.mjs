@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
- * Validate structural and metadata parity for zh-CN pages changed in the
- * current worktree. This catches metadata-only "syncs" whose translated body
- * still reflects an older source structure.
+ * Validate translation freshness and structure for changed zh-CN pages, or
+ * the full site with --all. A source hash mismatch is allowed only when the
+ * translation is explicitly marked stale; current/reviewed pages must retain
+ * the source structure.
  */
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -108,6 +109,7 @@ function changedSourceIds() {
 const issues = [];
 const issueCounts = Object.fromEntries(locales.map((locale) => [locale, 0]));
 const failedPages = Object.fromEntries(locales.map((locale) => [locale, new Set()]));
+const stalePages = Object.fromEntries(locales.map((locale) => [locale, 0]));
 function allSourceIds(directory = docsRoot) {
 	return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
 		if (directory === docsRoot && localeRoots.has(entry.name)) return [];
@@ -148,19 +150,29 @@ for (const id of ids) {
 			continue;
 		}
 		const actualRevision = metadata(translation.frontmatter, 'source_revision');
-		if (actualRevision !== expectedRevision) {
-			addIssue(locale, `${label}: source_revision ${actualRevision ?? 'missing'} != ${expectedRevision}`);
-		}
-
 		const status = metadata(translation.frontmatter, 'translation_status');
-		if (status !== 'reviewed') {
-			addIssue(locale, `${label}: translation_status is ${status ?? 'missing'}, expected reviewed`);
+		const isCurrent = actualRevision === expectedRevision;
+		if (!isCurrent) {
+			if (status === 'stale') {
+				stalePages[locale] += 1;
+			} else {
+				addIssue(
+					locale,
+					`${label}: source_revision ${actualRevision ?? 'missing'} != ${expectedRevision}, but translation_status is ${status ?? 'missing'} (expected stale)`,
+				);
+			}
+		} else if (status !== 'reviewed') {
+			addIssue(locale, `${label}: current translation_status is ${status ?? 'missing'}, expected reviewed`);
 		}
 
-		const actualStructure = structure(translation.body);
-		for (const key of Object.keys(expectedStructure)) {
-			if (actualStructure[key] !== expectedStructure[key]) {
-				addIssue(locale, `${label}: ${key} ${JSON.stringify(actualStructure[key])} != ${JSON.stringify(expectedStructure[key])}`);
+		// A deliberately stale translation may have the old source structure. Only
+		// compare structure after a reviewer has confirmed the current source.
+		if (isCurrent) {
+			const actualStructure = structure(translation.body);
+			for (const key of Object.keys(expectedStructure)) {
+				if (actualStructure[key] !== expectedStructure[key]) {
+					addIssue(locale, `${label}: ${key} ${JSON.stringify(actualStructure[key])} != ${JSON.stringify(expectedStructure[key])}`);
+				}
 			}
 		}
 
@@ -184,6 +196,7 @@ console.log(`  source pages: ${ids.length}`);
 console.log(`  locale checks: ${ids.length * locales.length}`);
 console.log(`  issues: ${issues.length}`);
 console.log(`  by locale: ${locales.map((locale) => `${locale} ${issueCounts[locale]}`).join(', ')}`);
+console.log(`  stale pages: ${locales.map((locale) => `${locale} ${stalePages[locale]}`).join(', ')}`);
 console.log(
 	`  passing pages: ${locales.map((locale) => `${locale} ${ids.length - failedPages[locale].size}/${ids.length}`).join(', ')}`,
 );
@@ -192,7 +205,12 @@ if (!summaryOnly) {
 	if (issues.length > 240) console.log(`  - … and ${issues.length - 240} more`);
 }
 
-if (issues.length > 0) process.exitCode = 1;
+if (!allPages && ids.length === 0) {
+	console.error('  SKIPPED: no changed zh-CN source pages; rerun with --all for a full-site check.');
+	process.exitCode = 2;
+} else if (issues.length > 0) {
+	process.exitCode = 1;
+}
 
 // Also validate all standalone pricing translations, which live outside docs.
 await import('./check-pricing-locales.mjs');

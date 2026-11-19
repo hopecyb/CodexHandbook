@@ -4,7 +4,7 @@ description: インストール時と Agent 実行時のネットワークを区
 locale: ja
 source_locale: zh-CN
 source_revision: "5bbb905"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 70

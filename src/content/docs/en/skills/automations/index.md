@@ -8,7 +8,7 @@ description: Repeat a previously verified task on a schedule in ChatGPT.
 locale: en
 source_locale: zh-CN
 source_revision: 'c6510bf'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 ---

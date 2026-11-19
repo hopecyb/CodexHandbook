@@ -4,7 +4,7 @@ description: Codex Cloud の ランタイム、依存関係、setup、cache、�
 locale: ja
 source_locale: zh-CN
 source_revision: "1745f70"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 20

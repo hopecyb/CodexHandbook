@@ -20,7 +20,7 @@ verification:
       href: https://learn.chatgpt.com/docs/pricing
 locale: es
 source_locale: zh-CN
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-10-25
 reviewed_at: '2026-10-25'
 source_revision: '20eb508'

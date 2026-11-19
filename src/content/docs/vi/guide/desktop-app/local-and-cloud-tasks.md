@@ -4,7 +4,7 @@ description: "Chuyển giữa thực thi local và Cloud trong App."
 locale: "vi"
 source_locale: "zh-CN"
 source_revision: "741f686"
-translation_status: "reviewed"
+translation_status: stale
 translated_at: "2026-07-28"
 reviewed_at: "2026-10-26"
 sidebar:

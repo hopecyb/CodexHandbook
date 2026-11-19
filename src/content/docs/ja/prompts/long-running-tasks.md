@@ -4,7 +4,7 @@ description: フェーズ分割、チェックポイント、引き継ぎ情報�
 locale: ja
 source_locale: zh-CN
 source_revision: "450ed9d"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: "2026-10-26"
 legacyVerification:

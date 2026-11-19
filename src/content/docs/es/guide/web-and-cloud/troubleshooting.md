@@ -8,7 +8,7 @@ description: Localiza los fallos de Cloud en las capas de repositorio, setup, re
 locale: es
 source_locale: zh-CN
 source_revision: '019fac1'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 80

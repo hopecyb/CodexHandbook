@@ -4,7 +4,7 @@ description: / コマンドと $ Skill 呼び出し——学習向け早見。�
 locale: ja
 source_locale: zh-CN
 source_revision: 'a34c90f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 40

@@ -2,15 +2,15 @@
 legacyVerification:
   status: "verified"
   products: "CLI / App"
-  basis: "OpenAI 当前 Codex CLI 文档仍把命令执行、审批模式与沙盒隔离作为核心安全边界；本页将命令规则定位为“把高低风险命令分开管理”的工程模式，并把 JSON 片段明确标为示意，不把特定语法写成官方事实。"
-  checkedAt: "2026-07-26"
+  basis: "已对照当前实验性 Rules 文档，示例使用真实 Starlark `prefix_rule` 语法，并提供 `codex execpolicy check` 校验命令。"
+  checkedAt: "2026-11-19"
 title: 命令规则
 description: 用命令级 allow/deny 约束 shell 与工具调用——比口头约定更可执行。
 sidebar:
   order: 20
 ---
 
-**命令规则**聚焦「Agent 能跑哪些命令、以什么参数跑」。它们是 [允许与拒绝规则](/guide/customization/rules/allow-and-deny-patterns/) 的最常见形态，通常写在团队可审查的配置或规则文件中。
+**命令规则**聚焦“哪些命令可以在沙箱外运行、哪些必须询问、哪些直接禁止”。当前 `.rules` 使用 Starlark `prefix_rule`，属于实验功能；它不决定沙箱内命令是否符合业务意图。
 
 ## 这篇会讲什么
 
@@ -58,30 +58,37 @@ sidebar:
 
 ## 最小可用做法
 
-1. **默认拒绝写操作外的危险命令**：`rm -rf`、`curl | bash`、`git push --force`
-2. **允许项目内常用只读/构建命令**：`git status`、`npm test`、`pnpm lint`
-3. **把规则放进 Git**，与 `AGENTS.md` 中的「测试命令」描述一致
-4. **在 PR 里 review 规则变更**，像改 Dockerfile 一样
+1. 先为确实需要出沙箱的窄命令写前缀，不要把所有项目内命令都放行。
+2. 使用 `match` / `not_match` 作为内联单元测试。
+3. 项目规则放在可信项目配置层的 `.codex/rules/`；组织底线用受管配置。
+4. 用 `codex execpolicy check` 验证，再在 PR 中 review。
 
-示意（格式以官方配置为准）：
+例如 `~/.codex/rules/default.rules`：
 
-```json
-{
-  "rules": {
-    "allow": [
-      "npm run test",
-      "npm run lint",
-      "git diff",
-      "git status"
+```python
+prefix_rule(
+    pattern = ["gh", "pr", "view"],
+    decision = "prompt",
+    justification = "查看 PR 前确认仓库与参数",
+    match = [
+        "gh pr view 7888",
+        "gh pr view --repo openai/codex",
     ],
-    "deny": [
-      "git push",
-      "git reset --hard",
-      "rm -rf"
-    ]
-  }
-}
+    not_match = [
+        "gh pr --repo openai/codex view 7888",
+    ],
+)
 ```
+
+保存后重启 Codex，并测试一条命令：
+
+```bash
+codex execpolicy check --pretty \
+  --rules ~/.codex/rules/default.rules \
+  -- gh pr view 7888 --json title,body,comments
+```
+
+如果多条规则同时匹配，采用最严格决定：`forbidden` 高于 `prompt`，`prompt` 高于 `allow`。
 
 ## 推荐工作流
 
@@ -119,3 +126,7 @@ sidebar:
 - [团队规则策略](/guide/customization/rules/team-rules/)
 - [CLI 审批与沙盒](/guide/cli/approvals-and-sandbox/)
 - [权限矩阵](/guide/reference/permission-matrix/)
+
+## 官方来源
+
+- [OpenAI：Rules](https://learn.chatgpt.com/docs/agent-configuration/rules)

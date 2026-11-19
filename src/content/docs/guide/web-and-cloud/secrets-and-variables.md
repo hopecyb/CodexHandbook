@@ -2,34 +2,27 @@
 legacyVerification:
   status: "verified"
   products: "Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: Secrets 与环境变量
-description: 正确选择 Cloud setup Secret 与贯穿聊天的普通环境变量。
+description: 区分 Cloud 直接环境变量与 network secret，理解原值可见性、代理替换和网络边界。
 sidebar:
   order: 30
 ---
 
-Cloud 环境变量和 Secrets 的生命周期不同。这个差异决定了它们能安全支持什么，而不只是“界面会不会掩码”。
+Cloud 当前区分直接 environment variable 与 network secret。关键不再是“setup 后一律删除”，而是任务中的程序能否读取原值、代理何时替换，以及请求被允许发往哪里。
 
-| 类型 | 可见阶段 | 适合内容 |
-|---|---|---|
-| 环境变量 | setup + Agent 全程 | 非敏感配置，如运行模式、公开 API 基址 |
-| Secret | 仅 setup script | 私有包 token、安装依赖所需凭据 |
+| 类型 | Agent/程序看到什么 | 阶段 | 适合内容 |
+|---|---|---|---|
+| Environment variable | 环境内程序可读取原值 | setup 与任务阶段，取决于环境配置 | 非敏感配置；或确实必须读取原值且权限很小的临时凭据 |
+| Network secret | Agent 看到 placeholder；网络代理在匹配请求中替换真实值 | setup 与任务阶段均可使用 | 发往明确允许域名的 HTTPS 认证请求 |
 
-Secret 会额外加密保存，只在任务执行时解密，并在 Agent 阶段开始前移除。它不是让 Agent 在运行期调用生产 API 的通用凭据通道。
+Network secret 不是“任务阶段不存在”，也不是让任意程序直接读取原值的变量。代理只在允许目标的 HTTPS 请求中替换 placeholder；仍应把域名、端口、方法和凭据权限缩到最小。
 
-## 正确示例：安装私有包
+## 示例：访问私有包仓库
 
-在环境设置中创建 `NPM_TOKEN` Secret。setup script 使用它生成临时认证配置并安装依赖：
+优先评估 network secret：只允许私有 registry 域名，让包管理器向该 HTTPS 目标发请求时由代理替换 placeholder。不要在日志中打印变量，也不要开放无关域名。
 
-```bash
-set -euo pipefail
-printf '//registry.npmjs.org/:_authToken=%s\n' "$NPM_TOKEN" > ~/.npmrc
-pnpm install --frozen-lockfile
-rm -f ~/.npmrc
-```
-
-Agent 阶段不再需要 token，只使用已经安装好的依赖。setup 日志中不得 `echo` Secret。
+如果工具必须在进程内读取 token 原值、无法通过网络代理完成，才考虑 direct environment variable，并使用只读、短期、范围最小的凭据。此时要明确：任务中的程序与子进程可能接触原值，不能把它描述成 Agent 前会自动消失。
 
 ## 不正确示例
 
@@ -38,18 +31,18 @@ Agent 阶段不再需要 token，只使用已经安装好的依赖。setup 日�
 再让 Agent curl 外部接口验证真实订单。
 ```
 
-这样会让敏感值贯穿 Agent 阶段，并在开放网络时形成外传或误操作风险。应改用测试夹具、mock、权限极小的临时测试凭据，或把必须认证的准备工作限制在 setup。
+这样会让敏感值被任务程序读取，并在开放网络时形成外传或误操作风险。应改用测试夹具、mock、权限极小的临时凭据；若只需向固定 HTTPS 服务认证，优先使用带域名限制的 network secret。
 
 ## 配置检查
 
-1. 列出 setup 和 Agent 各自真正需要的值；
-2. 敏感且只用于安装的值使用 Secret；
-3. Agent 必须使用的非敏感设置使用环境变量；
+1. 列出 setup 和任务阶段各自真正需要的值；
+2. 只需向固定 HTTPS 目标认证时，优先 network secret；
+3. 程序必须读取原值时才用 direct environment variable，并缩小凭据权限；
 4. 不把值写进 prompt、issue、PR、仓库或 `AGENTS.md`；
 5. 运行 secret scanner，并检查 setup 日志；
 6. 定期轮换并删除不再使用的凭据。
 
-setup 在独立 Bash 会话中运行，普通 `export` 不会自动延续到 Agent 阶段。需要贯穿聊天的非敏感值应直接配置成环境变量，而不是依赖临时 shell 状态。
+setup 在独立 Bash 会话中运行，脚本里的临时 `export` 不会自动变成环境配置。需要在后续任务使用的值应通过环境配置声明，不要依赖某个 setup shell 的临时状态。
 
 ## 与 CI 的关系
 
@@ -61,4 +54,4 @@ GitHub Actions Secrets 与 Codex Cloud Secrets 是不同存储系统，不会自
 
 ## 官方依据
 
-- [Cloud environments：variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Cloud environments：variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environments)

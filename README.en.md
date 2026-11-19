@@ -140,7 +140,7 @@ This project uses [Astro](https://astro.build/) + [Starlight](https://starlight.
 
 Requirements:
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 Start the dev server:
@@ -163,7 +163,7 @@ pnpm i18n:status
 pnpm i18n:status -- --missing
 ```
 
-English content lives under `src/content/docs/en/` (mirrors the Simplified Chinese source at `src/content/docs/`). Terminology for translators: [`glossary/en.md`](./glossary/en.md). As of 2026-07-26, English page coverage is **100%** of the zh-CN source set; core onboarding sections are marked `reviewed`, and remaining pages are `draft` pending language/tech review.
+English content lives under `src/content/docs/en/` (mirrors the Simplified Chinese source at `src/content/docs/`). Terminology for translators: [`glossary/en.md`](./glossary/en.md). Run the command above for current coverage and revision status. A `reviewed` or `current` metadata value is a workflow signal, not proof of native-language or technical review.
 
 ## Principles
 

@@ -1,6 +1,10 @@
 [
-  {"plan":"Plus","currency":"USD","amount":20,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-10-24","source":"https://learn.chatgpt.com/docs/pricing"},
-  {"plan":"Pro 100","currency":"USD","amount":100,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-10-24","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
-  {"plan":"Pro 200","currency":"USD","amount":200,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-10-24","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
-  {"plan":"Pro 500","currency":"USD","amount":500,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-10-24","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"}
+  {"plan":"Free","currency":"USD","amount":0,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://learn.chatgpt.com/docs/pricing"},
+  {"plan":"Go","currency":"USD","amount":8,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://learn.chatgpt.com/docs/pricing"},
+  {"plan":"Plus","currency":"USD","amount":20,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://learn.chatgpt.com/docs/pricing"},
+  {"plan":"Pro 100","currency":"USD","amount":100,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
+  {"plan":"Pro 200","currency":"USD","amount":200,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
+  {"plan":"Pro 500","currency":"USD","amount":500,"period":"month","channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers"},
+  {"plan":"Business","currency":"USD","amount":20,"period":"user-month","billing":"annual","minimumUsers":2,"channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://learn.chatgpt.com/docs/pricing"},
+  {"plan":"Business","currency":"USD","amount":25,"period":"user-month","billing":"monthly","minimumUsers":2,"channel":"official-web","region":null,"taxIncluded":null,"checkedAt":"2026-11-19","source":"https://learn.chatgpt.com/docs/pricing"}
 ]

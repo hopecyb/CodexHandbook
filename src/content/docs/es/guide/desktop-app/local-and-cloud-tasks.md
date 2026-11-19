@@ -4,7 +4,7 @@ description: Cambiar entre ejecución local y Cloud en la App.
 locale: es
 source_locale: zh-CN
 source_revision: "741f686"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25
 sidebar:

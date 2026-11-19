@@ -4,7 +4,7 @@ description: Codex Cloud에 필요한 최소 저장소 범위로 GitHub 접근 �
 locale: ko
 source_locale: zh-CN
 source_revision: "b126a7e"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 10

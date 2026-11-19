@@ -6,7 +6,7 @@ sidebar:
 locale: ko
 source_locale: zh-CN
 source_revision: '8fa3f8c'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: "2026-10-26"
 legacyVerification:

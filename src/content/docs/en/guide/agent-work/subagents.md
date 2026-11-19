@@ -9,7 +9,7 @@ description: Delegate bounded work to independent contexts, then let the main Ag
 locale: en
 source_locale: zh-CN
 source_revision: 'b1cefc0'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

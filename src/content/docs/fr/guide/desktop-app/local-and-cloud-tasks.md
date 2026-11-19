@@ -9,7 +9,7 @@ description: Choisir entre exécution locale et cloud dans l'application.
 locale: fr
 source_locale: zh-CN
 source_revision: "741f686"
-translation_status: reviewed
+translation_status: stale
 translated_at: '2026-09-20'
 sidebar:
   order: 70

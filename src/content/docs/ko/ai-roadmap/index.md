@@ -4,7 +4,7 @@ description: 논문, 제품 발표, 엔지니어링 글과 작성자의 학습 �
 locale: ko
 source_locale: zh-CN
 source_revision: '1db64dd'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-10-24
 prev: false
 next:

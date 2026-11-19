@@ -91,7 +91,6 @@ function removeStaleOutputs(generatedPaths) {
 }
 
 const converter = createZhTwConverter();
-const translatedAt = new Date().toISOString().slice(0, 10);
 const sourceFiles = walkSourceFiles(docsRoot).sort();
 const generatedPaths = new Set();
 
@@ -105,7 +104,6 @@ for (const sourcePath of sourceFiles) {
 	const output = convertDocument(source, {
 		converter,
 		sourceRevision: sourceRevision(source),
-		translatedAt,
 	});
 
 	generatedPaths.add(targetPath);

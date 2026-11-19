@@ -1,11 +1,20 @@
 ---
 title: 事件与主题索引
 description: 按明确的来源事件阅读 AI 应用工程主题，不把发布日期当作概念起源。
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-19"
+  summary: 本页只维护主题事件索引；当前产品变化改由路线图首页的独立入口与官方 Changelog 承担。
+  evidence:
+    - label: OpenAI Changelog
+      href: https://learn.chatgpt.com/docs/changelog
 ---
 
 这张地图把可核对的公开事件与学习建议分开。**日期只指表中列出的论文、公告或文章，不自动代表概念诞生、行业普及或能力成熟。** 不同技术可以同时使用，时间先后也不是必须依次升级的学习顺序。
 
 每个主题页提供一手来源、适用边界和站内练习。来源核对不等于软件实跑；原有 URL 保留，其中的年月可能与修订后的事件日期不同，请以正文为准。
+
+当前模型、Hooks、Automations、Record & Replay、Appshots 等产品变化不并入这条主题时间线；请看[路线图首页的当前产品变化入口](/ai-roadmap/#当前产品变化入口)和[官方 Changelog](https://learn.chatgpt.com/docs/changelog)。
 
 | 日期 | 类型 | 主题与具体事件 |
 |---|---|---|

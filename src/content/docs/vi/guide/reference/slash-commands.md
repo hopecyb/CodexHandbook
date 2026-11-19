@@ -9,7 +9,7 @@ description: Tra cứu nhanh để học cách dùng lệnh / và gọi Skill b�
 locale: vi
 source_locale: zh-CN
 source_revision: "a34c90f"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 40

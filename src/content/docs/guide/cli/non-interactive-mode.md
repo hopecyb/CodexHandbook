@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "CLI"
   basis: "已对照当前官方 Non-interactive mode，核实 `codex exec`、`--cd`、默认只读沙箱，以及进度走 `stderr`、最终回复走 `stdout` 的管道行为。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 非交互模式
 description: 用 codex exec 与脚本管道集成——适合 CI、定时任务与自动化流水线。
 sidebar:
@@ -48,11 +48,26 @@ sidebar:
 codex exec --cd . "列出相对 main 的 diff 中的安全风险，不要修改文件"
 ```
 
-`codex exec` 默认使用只读沙箱。运行过程中进度写到 `stderr`，最终 Agent 回复写到 `stdout`，因此可以安全地把最终结果重定向给下游：
+`codex exec` 默认使用只读沙箱。运行过程中进度写到 `stderr`，最终 Agent 回复写到 `stdout`。但 shell 会在 Codex 启动前创建或截断 `>` 的目标文件；失败时也可能留下空文件或半成品，因此不要把直接覆盖称为“安全”。优先用 `-o` 写临时新文件，检查退出码和内容后再替换正式文件：
 
 ```bash
-codex exec --cd . "生成最近 10 个提交的发布说明" > release-notes.md
+tmp=$(mktemp ./release-notes.XXXXXX)
+if codex exec --cd . \
+  --output-last-message "$tmp" \
+  "生成最近 10 个提交的发布说明" && test -s "$tmp"; then
+  mv "$tmp" release-notes.md || {
+    status=$?
+    rm -f "$tmp"
+    exit "$status"
+  }
+else
+  status=$?
+  rm -f "$tmp"
+  exit "$status"
+fi
 ```
+
+临时文件放在目标目录，`mv` 才能在同一文件系统内完成原子替换；若替换本身失败，也必须清理并返回非零状态。
 
 实践建议：
 

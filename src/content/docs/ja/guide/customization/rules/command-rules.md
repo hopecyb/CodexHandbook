@@ -4,7 +4,7 @@ description: コマンドレベルの allow/deny で shell とツール呼び出
 locale: ja
 source_locale: zh-CN
 source_revision: "fdb8651"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-07-28"
 reviewed_at: "2026-10-26"
 sidebar:

@@ -8,7 +8,7 @@ description: Répéter à une heure prévue, dans ChatGPT, une tâche déjà vé
 locale: fr
 source_locale: zh-CN
 source_revision: 'c6510bf'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26
 ---

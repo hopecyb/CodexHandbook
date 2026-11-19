@@ -2,45 +2,47 @@
 title: Codex 宠物
 description: "用科普视角理解 Codex 宠物：它是什么、怎么工作、安装和制作时要注意什么。"
 contentType: guide
-editorialStatus: review
+editorialStatus: verified
 verification:
-  kind: editorial
-  checkedAt: "2026-09-18"
-  summary: 已补充格式与恢复边界；尚无本站客户端安装、动画播放或卸载实测记录，目录与菜单应以目标版本为准。
+  kind: source-checked
+  checkedAt: "2026-11-19"
+  summary: 已对照官方 Pets 与 Commands 文档，主路径改为桌面创建、Web 上传和 CLI 命令；未把私有目录格式当作公开契约。
+  evidence:
+    - label: OpenAI Pets
+      href: https://learn.chatgpt.com/docs/pets
+    - label: OpenAI Commands
+      href: https://learn.chatgpt.com/docs/reference/commands
 ---
 
-本站尚未完成具体客户端与宠物包的兼容测试。请先记录版本与来源，使用[兼容及恢复记录](/guide/reference/resource-compatibility/)核对实际结果。示意图只解释结构，不代表所有版本的格式契约。
-
-
-Codex 宠物是一类出现在 Codex 客户端里的动态陪伴元素。它不是模型能力，也不是自动化工具，而是一组本地视觉资源：客户端在工作、等待、完成、出错或需要你介入时，可以用不同动画状态表达当前氛围。
+Codex 宠物是 ChatGPT/Codex 界面里的动态陪伴元素。它不是模型能力，也不会改变 Agent 的权限、任务或输出。当前公开入口以产品内创建、上传或选择为准，不需要手工构造 `~/.codex/pets` 目录。
 
 ![插画：一只像素风小宠物趴在 Codex 代码窗口边，开心地陪伴](/illustrations/pets-hero.webp)
 
-这个栏目定位为科普：解释 Codex 宠物的基本概念、常见文件结构、安装时的安全边界，以及制作一个 Pet 时需要理解的素材和元数据关系。本站不提供宠物资源列表，也不把任何外部资源站作为官方来源。
+这个栏目解释当前公开入口、文件限制和素材安全。本站不提供宠物资源列表，也不把外部资源站作为官方来源。
 
-## 它通常由什么组成
+## 当前公开入口
 
 ![插画：打开的资源包里飘出三样东西——元数据卡片、多帧动画图集和授权卷轴](/illustrations/pets-anatomy.webp)
 
-一个 Pet 通常可以理解成一个小型资源包：
+| 表面 | 入口 | 说明 |
+|---|---|---|
+| 桌面 App | Settings → Pets → Create pet | 在产品内创建和管理，界面随版本变化 |
+| ChatGPT Web | Settings → Personalization → Pet → Upload pet | 上传单个符合规格的透明 sprite sheet 文件 |
+| CLI | `/pets` 或 `/pet` | 需要 iTerm2 3.6+、Kitty graphics 或 Sixel；tmux/Zellij 中不可用 |
 
-- `pet.json`：描述宠物身份、展示名称、说明、动画图路径等元数据。
-- `spritesheet.webp`：把多帧动画合并到一张图里，客户端按固定网格读取。
-- 宠物目录：把元数据和素材放在同一个可识别的文件夹中。
-
-从这个角度看，Codex Pet 更接近“主题资源”或“小组件素材包”，而不是一段需要联网运行的程序。
+Web 上传文件当前要求 **1536 × 1872 px、透明背景、PNG 或 WebP、最大 20 MiB**。Web Pet 只出现在支持的 ChatGPT Work chats 中；桌面自定义 Pet 保存在本机，不会自动同步到 Web。IDE 扩展不提供 Pet picker 或浮动 Pet。这些是带日期的产品事实，使用前仍应以界面提示为准。
 
 ## 为什么需要了解它
 
 了解 Pets 的结构可以帮你判断三件事：
 
-- 安装时：知道文件应该放在哪里，哪些脚本值得警惕。
-- 排错时：知道为什么宠物没有出现、动画为什么不播放。
-- 制作时：知道图片帧、透明背景、元数据和授权说明分别负责什么。
+- 启用时：选对产品入口，不运行来历不明的安装脚本。
+- 排错时：检查账号开放、客户端版本、终端兼容和文件限制。
+- 制作时：处理透明背景、画布尺寸和素材授权。
 
 ## 阅读路径
 
-1. [安装 Codex Pet](./install/)：从科普角度理解目录、启用流程和安全检查。
-2. [制作 Codex Pet](./create/)：理解一个宠物包如何从素材变成可加载资源。
+1. [启用或上传 Codex Pet](./install/)：按桌面、Web、CLI 三条路径操作。
+2. [制作 Codex Pet](./create/)：准备当前 Web 上传所需的单图，并保留来源与授权。
 
-把 Pets 当作一个小而清晰的本地资源包来管理，会比直接复制来历不明的命令更稳，也更容易长期维护。
+旧教程中的 `pet.json + spritesheet.webp` 私有目录格式没有出现在当前公开契约中。它可能属于历史版本、内部实现或社区工具；除非目标版本提供可核验说明，不要把它当成通用安装方式。

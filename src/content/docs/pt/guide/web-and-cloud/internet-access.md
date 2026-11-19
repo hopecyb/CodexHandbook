@@ -8,7 +8,7 @@ description: Distingue o acesso durante a instalação do acesso do Agent e limi
 locale: pt
 source_locale: zh-CN
 source_revision: "5bbb905"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26
 sidebar:

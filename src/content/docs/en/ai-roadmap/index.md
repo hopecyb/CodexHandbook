@@ -4,7 +4,7 @@ description: Distinguish papers, product launches, engineering articles, and the
 locale: en
 source_locale: zh-CN
 source_revision: '1db64dd'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-10-25
 translated_at: 2026-10-24
 prev: false

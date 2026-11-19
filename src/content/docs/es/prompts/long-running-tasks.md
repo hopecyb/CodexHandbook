@@ -9,7 +9,7 @@ description: Dividir en fases, puntos de control e información de traspaso.
 locale: es
 source_locale: zh-CN
 source_revision: '450ed9d'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25
 ---

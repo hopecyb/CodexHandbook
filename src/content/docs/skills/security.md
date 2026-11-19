@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE"
   basis: "OpenAI Help《Skills in ChatGPT》确认 Skills 可包含 instructions、supporting files 和 code，上传前后仍需用户自行审查来源与风险；本页安全治理建议与该原则一致。"
-  checkedAt: "2026-07-26"
+  checkedAt: "2026-11-19"
 title: Skill 安全与版本
 description: 安装来源、权限边界、升级与回滚，让团队 Skill 可治理。
 ---
@@ -100,7 +100,15 @@ Plugin 可把 Skill 打包统一分发：[Plugins 概述](/skills/plugins/plugin
 
 ## 与 `$skill` 调用
 
-用户用 `$name` 显式调用时意图清晰；**模型自动选用 Skill** 时要在 `AGENTS.md` 限制可用列表与场景。
+用户用 `$name` 显式调用时意图清晰；模型也可能按描述隐式选用 Skill。`AGENTS.md` 可以给出行为指导，但不是禁用开关。要停用本地 Skill，应使用当前配置中的 `[[skills.config]]`：
+
+```toml
+[[skills.config]]
+path = "/absolute/path/to/skill/SKILL.md"
+enabled = false
+```
+
+也可按官方规则使用 `name` 选择器；每项只指定一种选择器。团队统一禁用或捆绑策略应通过受管配置/组织设置落实，而不是只写一段自然语言约束。
 
 ## 团队治理清单
 
@@ -117,4 +125,4 @@ Plugin 可把 Skill 打包统一分发：[Plugins 概述](/skills/plugins/plugin
 - 看都没看 `SKILL.md` 就直接信任它的行为
 
 ## 参考来源
-- OpenAI Codex Skills 安全指引
+- [OpenAI：Build skills（启用或禁用本地 Skills）](https://learn.chatgpt.com/docs/build-skills#enable-or-disable-local-codex-skills)

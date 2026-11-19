@@ -1,8 +1,9 @@
 ---
 import { Search } from '@lucide/astro';
+import ConsentManager from '../components/ConsentManager.astro';
 import Select from '../components/Select.astro';
 import '../styles/select.css';
-import { footerBrand, footerLegal, footerLinkGroups, pickLabel, type SiteLang } from '../utils/siteNav';
+import { footerBrand, footerLegal, footerLinkGroups, pickLabel, type LocalizedLabel, type SiteLang } from '../utils/siteNav';
 
 interface Props {
 	lang: SiteLang;
@@ -30,6 +31,23 @@ const prefix = LANGS.find((item) => item.code === lang)?.prefix ?? '';
 const homeHref = `${prefix}/`;
 const slug = Astro.url.pathname.replace(/\/+$/, '').split('/').pop() ?? '';
 const langOptions = LANGS.map((item) => ({ ...item, href: `${item.prefix}/${slug}/` }));
+const alternateLinks = LANGS.map((item) => ({
+	hreflang: item.code,
+	href: `https://codexhandbook.com${item.prefix}/${slug}/`,
+}));
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': slug === 'contact' ? 'ContactPage' : 'WebPage',
+	name: title,
+	description,
+	url: canonical,
+	inLanguage: lang,
+	isPartOf: {
+		'@type': 'WebSite',
+		name: 'Codex Handbook',
+		url: 'https://codexhandbook.com/',
+	},
+};
 const ui: Record<'search' | 'searchPlaceholder' | 'noResults' | 'language' | 'theme' | 'themeDark' | 'themeLight' | 'themeAuto' | 'menu', Partial<Record<SiteLang, string>> & { en: string }> = {
 	search: { 'zh-CN': '搜索', 'zh-TW': '搜尋', en: 'Search', fr: 'Rechercher', ja: '検索', ko: '검색', es: 'Buscar', de: 'Suchen', pt: 'Pesquisar', vi: 'Tìm kiếm', th: 'ค้นหา', ru: 'Поиск' },
 	searchPlaceholder: { 'zh-CN': '搜索手册内容', 'zh-TW': '搜尋手冊內容', en: 'Search the handbook', fr: 'Rechercher dans le manuel', ja: 'ハンドブックを検索', ko: '핸드북 검색', es: 'Buscar en el manual', de: 'Im Handbuch suchen', pt: 'Pesquisar no manual', vi: 'Tìm trong sổ tay', th: 'ค้นหาในคู่มือ', ru: 'Поиск по руководству' },
@@ -43,6 +61,11 @@ const ui: Record<'search' | 'searchPlaceholder' | 'noResults' | 'language' | 'th
 };
 const t = (key: keyof typeof ui) => ui[key][lang] ?? ui[key].en;
 const brand = pickLabel(footerBrand.name, lang);
+const independentCopy: LocalizedLabel = {
+	'zh-CN': '社区维护的独立项目，非 OpenAI 官方站点；不代表 OpenAI 的赞助或背书。',
+	en: 'An independent community-maintained project; not an official OpenAI site and not sponsored or endorsed by OpenAI.',
+	'zh-TW': '由社群維護的獨立專案，並非 OpenAI 官方網站；不代表 OpenAI 的贊助或背書。',
+};
 const legalLinks = (footerLinkGroups.find((group) => group.id === 'trust')?.links ?? [])
 	.filter((link) => !link.href.startsWith('mailto:'))
 	.map((link) => ({
@@ -60,8 +83,17 @@ const year = new Date().getFullYear();
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta name="twitter:card" content="summary" />
 		<link rel="canonical" href={canonical} />
+		{alternateLinks.map((item) => <link rel="alternate" hreflang={item.hreflang} href={item.href} />)}
+		<link rel="alternate" hreflang="x-default" href={`https://codexhandbook.com/${slug}/`} />
 		<link rel="icon" href="/favicon.png" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		<script is:inline>
 			(() => {
 				let theme = '';
@@ -142,8 +174,10 @@ const year = new Date().getFullYear();
 			<nav aria-label={brand}>
 				{legalLinks.map((link) => <a href={link.href}>{link.label}</a>)}
 			</nav>
+			<p>{pickLabel(independentCopy, lang)}</p>
 			<p>&copy; {year} <a href={homeHref}>{footerLegal.site}</a></p>
 		</footer>
+		<ConsentManager {lang} />
 		<script is:inline>
 			(() => {
 				const root = document.documentElement;

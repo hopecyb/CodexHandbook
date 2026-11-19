@@ -9,7 +9,7 @@ description: Command-level allow/deny for shell and tool calls—more executable
 locale: en
 source_locale: zh-CN
 source_revision: 'fdb8651'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-26
 reviewed_at: 2026-10-25
 sidebar:

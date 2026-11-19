@@ -4,7 +4,7 @@
 
 规范详见 [`docs/planning/examples-system.md`](../docs/planning/examples-system.md)。
 
-## 目录
+## 目录（按能力）
 
 ```text
 examples/
@@ -15,12 +15,18 @@ examples/
 │   └── meta-workflows/
 ├── hooks/
 │   └── secret-guard/
+├── skills/
 └── complete-workflows/
-    └── developer/
-        └── verified-bug-fix/
+    ├── beginner/
+    ├── creator/
+    ├── developer/
+    ├── team/
+    └── web/
 ```
 
-## 提示词索引（首批）
+下列索引覆盖当前一级示例组；仓库中的素材、fixture、预览和验证产物不会逐文件列出。链接完整性由 `pnpm check:links` 校验。
+
+## 提示词索引（精选）
 
 | ID | 文件 | 说明 |
 |---|---|---|
@@ -33,12 +39,20 @@ examples/
 
 | ID | 目录 | 可验证结果 |
 |---|---|---|
-| `case.verified-bug-fix` | [developer/verified-bug-fix](complete-workflows/developer/verified-bug-fix/) | 起始代码 1 个测试失败，参考修复 3 个测试通过 |
-
+| `case.first-project` | [beginner/first-project](complete-workflows/beginner/first-project/README.md) | 五步完成并核对一份活动通知 |
+| `case.article-to-slides` | [creator/article-to-slides](complete-workflows/creator/article-to-slides/README.md) | 八页 PPTX、PDF、预览和来源记录 |
+| `case.sales-weekly-report` | [creator/sales-weekly-report](complete-workflows/creator/sales-weekly-report/README.md) | 46 行合成数据和独立核对脚本 |
+| `case.source-backed-article` | [creator/source-backed-article](complete-workflows/creator/source-backed-article/README.md) | 三份合成资料、事实映射和结构校验 |
+| `case.verified-bug-fix` | [developer/verified-bug-fix](complete-workflows/developer/verified-bug-fix/README.md) | 起始代码 1 个测试失败，参考修复 3 个测试通过 |
 | `case.issue-triage` | [team/issue-triage](complete-workflows/team/issue-triage/README.md) | 五份合成输入、schema 与人工队列；八项测试通过，无 GitHub 写入 |
 | `case.docs-link-audit` | [team/docs-link-audit](complete-workflows/team/docs-link-audit/README.md) | 故障数 2→1→0，七项测试通过；外链未检查 |
-
 | `case.failure-recovery` | [team/failure-recovery](complete-workflows/team/failure-recovery/README.md) | 五组实际失败/恢复 CLI，单变量修正，原始输入不变 |
+| `case.prompt-comparison-results` | [team/prompt-comparison-results](complete-workflows/team/prompt-comparison-results/README.md) | 三组提示词的 12 次运行记录 |
+| `case.prompt-comparisons` | [team/prompt-comparisons](complete-workflows/team/prompt-comparisons/README.md) | 固定输入的提示词对照材料 |
+| `case.two-week-pilot` | [team/two-week-pilot](complete-workflows/team/two-week-pilot/README.md) | 两周团队试点包 |
+| `case.usage-log` | [team/usage-log](complete-workflows/team/usage-log/README.md) | 用量与耗时记录模板 |
+| `case.workflow-evaluation` | [team/workflow-evaluation](complete-workflows/team/workflow-evaluation/README.md) | 工作流评估方法与样本集 |
+| `case.reading-event` | [web/reading-event](complete-workflows/web/reading-event/README.md) | 一页阅读分享会网站案例 |
 
 ## 扩展能力示例
 
@@ -56,14 +70,3 @@ examples/
 ## 贡献
 
 见手册 [添加提示词示例](/guide/contributing/add-a-prompt-example/)。
-
-## 新增完整练习
-
-- [销售 CSV 到可核对的周报](complete-workflows/creator/sales-weekly-report/README.md)：46 行合成数据、参考报告、独立核对脚本与完整下载材料。
-- [三份资料到带来源的文章](complete-workflows/creator/source-backed-article/README.md)：合成资料、事实映射、冲突处理、初终稿差异与结构校验。
-- [文章到八页可编辑演示稿](complete-workflows/creator/article-to-slides/README.md)：原生文本 PPTX、PDF、八页预览、来源备注、字体恢复与验证记录。
-- [开发者路径配套材料](complete-workflows/developer/verified-bug-fix/path-materials/README.md)：代码阅读、差异审查与交接模板、作者参考和重新运行记录；配合已有购物车练习使用。
-
----
-
-**最近更新：** 2026-09-18

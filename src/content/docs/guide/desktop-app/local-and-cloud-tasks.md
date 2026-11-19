@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App"
   basis: "OpenAI Help Center 当前《ChatGPT Work and Codex》与《Using Codex with your ChatGPT plan》都明确区分 local workflows 与 cloud tasks；本页只在桌面 App 语境下概括“本地更适合快速迭代，Cloud 更适合远程仓库与长任务”的选型原则。"
-  checkedAt: "2026-07-26"
+  checkedAt: "2026-11-19"
 title: 本地与云端任务
 description: 在 App 中切换本地与 Cloud 执行。
 sidebar:
@@ -20,6 +20,8 @@ sidebar:
 概念：[本地与云端](/guide/foundations/local-vs-cloud/) · 概述：[Web 与 Cloud](/guide/web-and-cloud/)
 
 切换前确认：密钥是否应出现在该环境、网络策略是否允许。
+
+如果从 IDE 将任务 handoff 到 Cloud，当前聊天上下文可以包含本地源码改动。委托前检查 diff、未跟踪文件和 secrets，不能把“尚未提交”等同于“不会上传”。从 Web 选择远程仓库直接启动则仍以远程分支/提交为起点。
 
 ## 常见误会
 

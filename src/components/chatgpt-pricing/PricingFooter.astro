@@ -11,6 +11,11 @@ interface Props {
 
 const { year, locale = 'root', lang = 'zh-CN' } = Astro.props;
 const t = (key: string) => translations[lang]?.[key] ?? translations['zh-CN'][key] ?? key;
+const independentCopy = {
+	'zh-CN': '社区维护的独立项目，非 OpenAI 官方站点，也不代表 OpenAI 的赞助或背书。',
+	en: 'An independent community-maintained project. It is not an official OpenAI site and is not sponsored or endorsed by OpenAI.',
+	'zh-TW': '由社群維護的獨立專案，並非 OpenAI 官方網站，也不代表 OpenAI 的贊助或背書。',
+};
 
 function localizedPath(path: string) {
 	if (locale === 'root') return path;
@@ -109,6 +114,7 @@ const trustLinks = [
 			</nav>
 		</div>
 		<div class="pricing-footer__legal">
+			<p>{pickLabel(independentCopy, lang)}</p>
 			<p>&copy; {year} <a href={localizedPath('/')}>codexhandbook.com</a></p>
 		</div>
 	</div>

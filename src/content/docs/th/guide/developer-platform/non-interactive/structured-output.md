@@ -9,7 +9,7 @@ description: "ให้ exec สร้างผลลัพธ์ที่เค
 locale: th
 source_locale: zh-CN
 source_revision: "e80b5d7"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 sidebar:

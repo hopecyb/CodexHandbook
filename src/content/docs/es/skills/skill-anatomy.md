@@ -9,7 +9,7 @@ description: Roles de SKILL.md, references/, templates/ y scripts/, con ejemplos
 locale: es
 source_locale: zh-CN
 source_revision: 'c4b740a'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-25
 ---

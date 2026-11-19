@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 /**
- * Align translation source_revision metadata for zh-CN pages whose body did
- * not change in the current worktree. Translation review status is preserved.
+ * Keep translation freshness metadata honest.
  *
- * Usage:
+ * Default mode marks translations stale when their source hash differs. It
+ * never advances source_revision automatically. A reviewer can advance one
+ * translation only with an explicit acknowledgement:
+ *
  *   node scripts/sync-i18n-revisions.mjs
  *   node scripts/sync-i18n-revisions.mjs --check
+ *   node scripts/sync-i18n-revisions.mjs --confirm-reviewed \
+ *     --locale ja --page guide/start-here/index.md --reviewed-at 2026-11-19
  */
 import { createHash } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,10 +19,30 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const docsRoot = path.join(root, 'src/content/docs');
-const checkOnly = process.argv.includes('--check');
+const args = process.argv.slice(2);
+const checkOnly = args.includes('--check');
+const confirmReviewed = args.includes('--confirm-reviewed');
 const locales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko', 'th', 'ru'];
-const localeTags = { en: 'en', fr: 'fr', de: 'de', es: 'es', pt: 'pt', vi: 'vi', ja: 'ja', ko: 'ko', th: 'th', ru: 'ru' };
 const localeRoots = new Set([...locales, 'zh-tw']);
+
+function option(name) {
+	const index = args.indexOf(name);
+	return index >= 0 ? args[index + 1] : null;
+}
+
+const selectedLocale = option('--locale');
+const selectedPage = option('--page');
+const reviewedAt = option('--reviewed-at');
+
+if (confirmReviewed) {
+	if (!locales.includes(selectedLocale)) throw new Error(`Unsupported locale: ${selectedLocale ?? 'missing'}`);
+	if (!selectedPage || selectedPage.startsWith('/') || selectedPage.includes('..') || !/\.(md|mdx)$/.test(selectedPage)) {
+		throw new Error('--confirm-reviewed requires a safe relative --page ending in .md or .mdx.');
+	}
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(reviewedAt ?? '')) {
+		throw new Error('--confirm-reviewed requires --reviewed-at YYYY-MM-DD.');
+	}
+}
 
 function walkSources(dir, files = []) {
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -38,20 +61,8 @@ function sourceRevision(content) {
 	return createHash('sha1').update(content).digest('hex').slice(0, 7);
 }
 
-function changedSourceIds() {
-	const output = execFileSync(
-		'git',
-		['diff', '--name-only', '--diff-filter=AM', '--', 'src/content/docs'],
-		{ cwd: root, encoding: 'utf8' },
-	);
-	const prefix = 'src/content/docs/';
-	return new Set(
-		output
-			.split(/\r?\n/)
-			.filter((file) => file.startsWith(prefix))
-			.map((file) => file.slice(prefix.length))
-			.filter((id) => !localeRoots.has(id.split('/')[0])),
-	);
+function metadata(frontmatter, key) {
+	return frontmatter.match(new RegExp(`^${key}:\\s*['\"]?([^'\"\\n]+)`, 'm'))?.[1]?.trim() ?? null;
 }
 
 function setFrontmatterField(frontmatter, key, value) {
@@ -60,39 +71,60 @@ function setFrontmatterField(frontmatter, key, value) {
 	return pattern.test(frontmatter) ? frontmatter.replace(pattern, line) : `${frontmatter.trimEnd()}\n${line}`;
 }
 
-function updateTranslation(content, locale, revision) {
+function updateFrontmatter(content, updates) {
 	const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-	if (!match) return content;
+	if (!match) throw new Error('Translation has no YAML frontmatter.');
 	let frontmatter = match[1];
-	frontmatter = setFrontmatterField(frontmatter, 'locale', localeTags[locale]);
-	frontmatter = setFrontmatterField(frontmatter, 'source_locale', 'zh-CN');
-	frontmatter = setFrontmatterField(frontmatter, 'source_revision', revision);
+	for (const [key, value] of Object.entries(updates)) frontmatter = setFrontmatterField(frontmatter, key, value);
 	return content.replace(match[0], `---\n${frontmatter}\n---`);
 }
 
-const changed = changedSourceIds();
-const sourceFiles = walkSources(docsRoot).sort();
+const sourceFiles = confirmReviewed ? [path.join(docsRoot, selectedPage)] : walkSources(docsRoot).sort();
 let written = 0;
 let unchanged = 0;
-let skippedChanged = 0;
+let markedStale = 0;
+let alreadyStale = 0;
+let confirmedReviewed = 0;
 let missing = 0;
 
 for (const sourcePath of sourceFiles) {
+	if (!fs.existsSync(sourcePath)) throw new Error(`Source page not found: ${path.relative(root, sourcePath)}`);
 	const id = path.relative(docsRoot, sourcePath).split(path.sep).join('/');
-	if (changed.has(id)) {
-		skippedChanged += locales.length;
-		continue;
-	}
-
 	const revision = sourceRevision(fs.readFileSync(sourcePath, 'utf8'));
-	for (const locale of locales) {
+	const targetLocales = confirmReviewed ? [selectedLocale] : locales;
+
+	for (const locale of targetLocales) {
 		const translationPath = path.join(docsRoot, locale, id);
 		if (!fs.existsSync(translationPath)) {
 			missing += 1;
 			continue;
 		}
+
 		const current = fs.readFileSync(translationPath, 'utf8');
-		const next = updateTranslation(current, locale, revision);
+		const match = current.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+		if (!match) throw new Error(`Translation has no YAML frontmatter: ${path.relative(root, translationPath)}`);
+		const currentRevision = metadata(match[1], 'source_revision');
+		const currentStatus = metadata(match[1], 'translation_status');
+		let next = current;
+
+		if (confirmReviewed) {
+			next = updateFrontmatter(current, {
+				locale,
+				source_locale: 'zh-CN',
+				source_revision: revision,
+				translation_status: 'reviewed',
+				reviewed_at: reviewedAt,
+			});
+			confirmedReviewed += 1;
+		} else if (currentRevision !== revision) {
+			if (currentStatus === 'stale') {
+				alreadyStale += 1;
+			} else {
+				next = updateFrontmatter(current, { translation_status: 'stale' });
+				markedStale += 1;
+			}
+		}
+
 		if (next === current) {
 			unchanged += 1;
 			continue;
@@ -102,12 +134,14 @@ for (const sourcePath of sourceFiles) {
 	}
 }
 
-console.log(`i18n revision sync ${checkOnly ? '(check)' : 'complete'}`);
-console.log(`  source pages:          ${sourceFiles.length}`);
-console.log(`  changed-page entries:  ${skippedChanged}`);
-console.log(`  written:               ${written}`);
-console.log(`  unchanged:             ${unchanged}`);
-console.log(`  missing translations:  ${missing}`);
+console.log(`i18n freshness ${checkOnly ? '(check)' : 'complete'}`);
+console.log(`  source pages:       ${sourceFiles.length}`);
+console.log(`  marked stale:       ${markedStale}`);
+console.log(`  already stale:      ${alreadyStale}`);
+console.log(`  confirmed reviewed: ${confirmedReviewed}`);
+console.log(`  written:            ${written}`);
+console.log(`  unchanged:          ${unchanged}`);
+console.log(`  missing:            ${missing}`);
 
 if (checkOnly && written > 0) process.exitCode = 1;
 if (missing > 0) process.exitCode = 1;

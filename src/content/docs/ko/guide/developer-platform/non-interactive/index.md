@@ -4,7 +4,7 @@ description: 배치, 스크립트, 파이프라인용 설명 페이지입니다.
 locale: ko
 source_locale: zh-CN
 source_revision: '2d542c9'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 legacyVerification:

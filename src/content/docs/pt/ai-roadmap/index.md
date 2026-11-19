@@ -4,7 +4,7 @@ description: Distingue artigos científicos, lançamentos de produtos, artigos d
 locale: pt
 source_locale: zh-CN
 source_revision: '1db64dd'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-10-26
 translated_at: 2026-10-24
 prev: false

@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: Cloud 排障
 description: 按仓库、setup、网络、Agent 与交付五层定位 Cloud 失败。
 sidebar:
@@ -38,9 +38,9 @@ Cloud 重试会重新消耗时间，但不会自动补齐缺失的权限、依�
 
 ## 高频问题
 
-### setup 中能读 Secret，Agent 中为空
+### 程序读到 placeholder，认证请求仍失败
 
-这是设计行为：Secret 在 Agent 阶段前被移除。把使用凭据的安装动作放在 setup；不要改成普通环境变量来绕开保护。
+先确认配置的是 network secret，并检查请求是否为 HTTPS、域名/端口是否在允许范围、工具是否真的把 placeholder 放进对应认证位置。Network secret 的原值由代理在匹配请求中替换，不会直接交给程序。若程序必须读取原值，应重新评估是否使用范围极小的 direct environment variable，而不是把 placeholder 当成失效凭据。
 
 ### setup 能联网，Agent 不能
 
@@ -71,6 +71,6 @@ Cloud 重试会重新消耗时间，但不会自动补齐缺失的权限、依�
 
 ## 官方依据
 
-- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments)
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)

@@ -8,7 +8,7 @@ description: Xác định lỗi Cloud theo năm lớp là kho mã, setup, mạng
 locale: vi
 source_locale: zh-CN
 source_revision: "019fac1"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 80

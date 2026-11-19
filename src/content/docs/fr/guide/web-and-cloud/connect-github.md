@@ -4,7 +4,7 @@ description: Configurez l'accès de Codex Cloud à GitHub avec le périmètre de
 locale: fr
 source_locale: zh-CN
 source_revision: "b126a7e"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26
 sidebar:

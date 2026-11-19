@@ -2,8 +2,8 @@
 legacyVerification:
   status: "verified"
   products: "CLI / API"
-  basis: "OpenAI API 当前模型/对比文档仍列出 `Structured outputs` 能力；本页内容限定在“为非交互任务设计稳定输出接口”的通用实践，示例中的 JSON schema、校验与降级策略属于工程模式说明。"
-  checkedAt: "2026-07-26"
+  basis: "已对照当前 Non-interactive mode 与 CLI reference，核实 `--output-schema`、`-o/--output-last-message` 和 `--json` JSONL 事件流的用途。"
+  checkedAt: "2026-11-19"
 title: 结构化输出
 description: 让 exec 产出机器可解析的结果——供下游步骤、仪表盘与门禁使用。
 sidebar:
@@ -19,7 +19,7 @@ sidebar:
 ## 本页内容
 
 - 何时要求 JSON / Markdown 表格 / 固定字段
-- Prompt 中如何定义 schema
+- 如何用 `--output-schema` 绑定 JSON Schema
 - 解析失败时的降级策略
 
 ## 常见误会
@@ -45,29 +45,70 @@ sidebar:
 
 ## 最小可用做法
 
-在 prompt 末尾固定格式要求：
+先把输出接口保存为版本化的 JSON Schema，例如 `schemas/review-output.json`：
 
-```text
-…（任务正文）…
-
-输出要求：
-- 仅输出一个 JSON 对象，不要 markdown 代码围栏
-- 字段：{"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
-- 若无问题，findings 为空数组
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pass", "findings"],
+  "properties": {
+    "pass": { "type": "boolean" },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "file", "message"],
+        "properties": {
+          "severity": { "enum": ["P0", "P1", "P2"] },
+          "file": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+}
 ```
 
-Shell 解析（示意）：
+让 CLI 校验最终消息并把它写入文件，再由下游验证业务条件：
 
 ```bash
-result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
-echo "$result" | jq -e '.pass == true'
+mkdir -p artifacts
+tmp=$(mktemp artifacts/.review.XXXXXX)
+if codex exec --cd . \
+    --output-schema schemas/review-output.json \
+    --output-last-message "$tmp" \
+    "$(cat prompts/structured-review.md)" \
+  && jq -e '.pass == true' "$tmp" >/dev/null; then
+  mv "$tmp" artifacts/review.json || {
+    status=$?
+    rm -f "$tmp"
+    exit "$status"
+  }
+else
+  status=$?
+  rm -f "$tmp"
+  exit "$status"
+fi
 ```
+
+临时文件与正式 artifact 位于同一目录，只有命令、schema 和业务条件都通过才原子替换。失败时保留非零退出码，也不会把旧 artifact 当成本次结果。prompt 仍应描述字段语义，但格式约束以 schema 为准。
+
+## 区分三种输出
+
+| 入口 | 得到什么 | 适合 |
+|---|---|---|
+| 默认 stdout | 最终的人类可读消息 | 终端查看、简单管道 |
+| `-o` / `--output-last-message` | 只把最终消息写入指定文件 | artifact、与 `--output-schema` 配合 |
+| `--json` | 执行过程的 JSONL 事件流 | 进度、工具调用和遥测消费；不是单个业务 JSON 对象 |
 
 ## 常见坑
 
-### 1. 只说“输出 JSON”，没说“只能输出 JSON”
+### 1. 只靠 prompt 说“输出 JSON”
 
-结果模型前面先来一句解释，后面再给 JSON，解析就挂了。
+结果可能夹带解释或字段漂移。当前 CLI 应优先使用 `--output-schema`；prompt-only 只作为旧版本兼容方案。
 
 ### 2. 今天一个字段名，明天一个字段名
 
@@ -98,7 +139,7 @@ echo "$result" | jq -e '.pass == true'
 
 ## 与 SDK 对比
 
-| | CLI + JSON prompt | SDK |
+| | CLI + output schema | SDK |
 |---|---|---|
 | 集成成本 | 低 | 中 |
 | 类型安全 | 靠约定 + 校验 | 可用 SDK 类型 |
@@ -108,7 +149,7 @@ echo "$result" | jq -e '.pass == true'
 
 ## 常见错误
 
-- 模型输出夹杂解释文字，JSON 解析失败——在 prompt 中强调「仅 JSON」
+- 只用 prompt 约束 JSON，模型夹杂解释导致解析失败
 - Schema 变更未升版本，旧 CI 误解析
 - 把密钥放进 JSON 字段回传日志
 - 没有为解析失败设计明确的退出行为
@@ -121,4 +162,5 @@ echo "$result" | jq -e '.pass == true'
 - [ ] 与 [退出码](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 策略一致
 
 ## 参考来源
-- OpenAI structured outputs 通用实践（概念对齐）
+- [OpenAI：Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode)
+- [OpenAI：CLI reference](https://learn.chatgpt.com/docs/cli/reference)

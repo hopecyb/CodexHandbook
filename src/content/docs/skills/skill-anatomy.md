@@ -3,9 +3,9 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
   basis: "当前 Codex 运行时技能说明仍以 `SKILL.md` 为核心文件，并允许按需扩展脚本与参考资料；本页聚焦目录职责划分，未绑定易变产品入口。"
-  checkedAt: "2026-07-26"
+  checkedAt: "2026-11-19"
 title: Skill 结构
-description: SKILL.md、references/、templates/、scripts/ 的职责与示例。
+description: SKILL.md、references/、assets/、scripts/ 与 agents/openai.yaml 的职责与示例。
 ---
 
 第一次看 Skill 目录时，常见的感觉是“文件夹我都认识，但不知道为什么要这样放”。
@@ -24,18 +24,21 @@ my-skill/
 ├── SKILL.md          # 必需
 ├── scripts/          # 可选：确定性步骤
 ├── references/       # 可选：长参考文档
-└── templates/        # 可选：输出模板
+├── assets/           # 可选：模板、图片和输出资源
+└── agents/
+    └── openai.yaml   # 可选：UI metadata、MCP 依赖与调用策略
 ```
 
 ## 每一层分别做什么
 
 - `SKILL.md`：主说明书，先告诉 Codex“这是什么、什么时候用、按什么步骤做”
 - `references/`：长资料柜，不把所有背景知识硬塞进主文件
-- `templates/`：现成输出骨架，避免每次临场发挥
+- `assets/`：模板、图片和输出资源；只在任务需要时读取或复制
 - `scripts/`：能确定执行的步骤交给脚本，别全靠自然语言描述
+- `agents/openai.yaml`：可选的产品元数据，可声明 UI 展示、MCP 依赖与隐式调用策略
 
 最开始甚至只需要一个 `SKILL.md`。  
-后面真的变复杂了，再拆 `references/`、`templates/`、`scripts/`。
+后面真的变复杂了，再拆 `references/`、`assets/`、`scripts/`；需要产品元数据时再加 `agents/openai.yaml`。
 
 ## 按需加载，而不是一次全塞进去
 
@@ -45,7 +48,7 @@ my-skill/
 |---|---|---|
 | 元信息 | 名称、描述、触发场景 | 让 Codex 判断是否该用 |
 | 主说明 | 必做步骤、禁止事项、完成定义 | Skill 被触发后先读 |
-| 附件 | 模板、参考资料、脚本、示例 | 只有任务真的需要时再打开或运行 |
+| 附件 | assets、参考资料、脚本、示例 | 只有任务真的需要时再打开或运行 |
 
 这样做的好处是：平时只暴露很短的触发说明，真正执行时再加载细节。Skill 越多，这种分层越重要。
 
@@ -84,8 +87,9 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 |---|---|
 | `SKILL.md` | 主流程、触发条件、禁止项 |
 | `references/` | 长文档、规范、API 说明 |
-| `templates/` | 输出格式、报告骨架 |
+| `assets/` | 输出模板、图片和需要复制的资源 |
 | `scripts/` | 确定性命令与检查 |
+| `agents/openai.yaml` | UI metadata、依赖和调用策略；使用官方 schema |
 
 ## 何时拆分目录
 
@@ -107,7 +111,7 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 | 一次性提示 | 写在当前对话里 | 只用一次，不需要复用 |
 | 模板 | 放进提示词模板或团队文档 | 同类任务反复出现，但步骤还在调整 |
 | 单文件 Skill | 一个 `SKILL.md` | 流程稳定，触发条件清楚 |
-| 完整 Skill 目录 | `SKILL.md` + `templates/` + `references/` + `scripts/` | 输出格式、长参考、确定性检查都稳定下来 |
+| 完整 Skill 目录 | `SKILL.md` + `assets/` + `references/` + `scripts/`，按需加 `agents/openai.yaml` | 输出格式、长参考、确定性检查都稳定下来 |
 
 不要急着把每个模板都变成 Skill。真正值得沉淀的，是那些已经反复出现、成功标准清楚、团队愿意按同一套流程执行的任务。
 
@@ -125,3 +129,11 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 可以先用 `SKILL.md` 跑通，再在真的变复杂时，把资料、模板和脚本逐步拆出去。
 
 完整动手练习：[创建第一个 Skill](/skills/create-your-first-skill/)。
+
+:::note[团队自定义目录]
+如果现有仓库使用 `templates/`，可以继续作为团队约定，但不要把它写成 Codex 的官方标准层；对外分发时优先归入 `assets/` 并在 `SKILL.md` 说明路径。
+:::
+
+## 官方来源
+
+- [OpenAI：Build skills](https://learn.chatgpt.com/docs/build-skills)

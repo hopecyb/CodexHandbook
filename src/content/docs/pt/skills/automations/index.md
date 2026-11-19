@@ -8,7 +8,7 @@ description: Repita no ChatGPT, em horários definidos, tarefas que já foram ve
 locale: pt
 source_locale: zh-CN
 source_revision: 'c6510bf'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26
 ---

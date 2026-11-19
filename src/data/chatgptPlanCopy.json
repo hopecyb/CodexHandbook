@@ -21,12 +21,22 @@
       [
         "Go",
         "需要更多日常工具用量",
-        "核对当地价格与功能，再和 Plus 比较；尚未核对 Go 的官网月费。"
+        "官网公开价为 USD 8/月；购买前仍需核对当地功能、税费与结账价。"
       ],
       [
         "Plus",
         "经常学习、写作、分析或编程",
         "需要更多能力或额度时可优先考虑。"
+      ],
+      [
+        "Business",
+        "至少 2 人协作，需要团队工作区和集中管理",
+        "年付公开价为每用户 USD 20/月，月付为 USD 25/月；购买前核对席位、地区与税费。"
+      ],
+      [
+        "Enterprise",
+        "需要企业合同、治理、部署支持或定制采购",
+        "官网未公开统一月费，应联系销售获取适用于组织的报价。"
       ],
       [
         "Pro 100",
@@ -45,7 +55,7 @@
       ]
     ],
     "limit": "Pro 模型仍有使用限制。Chat、Work/Codex 和 API 的额度与计费分别核对；月费不等于 API 充值。",
-    "officialNote": "以下为官方文档公开的美元月费，核对日期为 2026-10-24；不是全球各地区结账报价。地区适用范围与税费口径未确认，请以实际结账页为准。",
+    "officialNote": "以下为官方文档公开的美元月费，核对日期为 2026-11-19；不是全球各地区结账报价。地区适用范围与税费口径未确认，请以实际结账页为准。Business 价格按用户计费，至少 2 人；Enterprise 需联系销售。",
     "monthly": "公开月费",
     "coverage": "地区 / 税费",
     "unknown": "未确认；以结账为准",
@@ -77,12 +87,22 @@
       [
         "Go",
         "More everyday tool usage",
-        "Compare local features and pricing with Plus; an official monthly Go price has not been verified here."
+        "The published price is USD 8/month; still verify local features, taxes, and checkout price."
       ],
       [
         "Plus",
         "Frequent learning, writing, analysis, or coding",
         "Consider when you need more capability or allowance."
+      ],
+      [
+        "Business",
+        "Teams of at least two that need a shared workspace and centralized administration",
+        "The published price is USD 20 per user/month billed annually, or USD 25 with monthly billing; verify seats, region, and taxes."
+      ],
+      [
+        "Enterprise",
+        "Organizations that need contracts, governance, deployment support, or custom procurement",
+        "There is no single public monthly price; contact sales for an organization-specific quote."
       ],
       [
         "Pro 100",
@@ -101,7 +121,7 @@
       ]
     ],
     "limit": "Pro models still have limits. Check Chat, Work/Codex, and API allowances and billing separately; subscription fees are not API credit purchases.",
-    "officialNote": "These are public USD monthly prices in official documentation, checked on 2026-10-24, not checkout quotes for every region. Regional applicability and tax treatment are unconfirmed; use your checkout information.",
+    "officialNote": "These are public USD monthly prices in official documentation, checked on 2026-11-19, not checkout quotes for every region. Regional applicability and tax treatment are unconfirmed; use your checkout information.",
     "monthly": "Public monthly price",
     "coverage": "Region / taxes",
     "unknown": "Unconfirmed; check at checkout",
@@ -133,12 +153,22 @@
       [
         "Go",
         "需要更多日常工具用量",
-        "核對當地價格與功能，再和 Plus 比較；尚未核對 Go 的官網月費。"
+        "官網公開價為 USD 8/月；購買前仍需核對當地功能、稅費與結帳價。"
       ],
       [
         "Plus",
         "經常學習、寫作、分析或編程",
         "需要更多能力或額度時可優先考慮。"
+      ],
+      [
+        "Business",
+        "至少 2 人協作，需要團隊工作區和集中管理",
+        "年付公開價為每位使用者 USD 20/月，月付為 USD 25/月；購買前核對席位、地區與稅費。"
+      ],
+      [
+        "Enterprise",
+        "需要企業合約、治理、部署支援或客製採購",
+        "官網未公開統一月費，應聯絡銷售取得適用於組織的報價。"
       ],
       [
         "Pro 100",
@@ -157,7 +187,7 @@
       ]
     ],
     "limit": "Pro 模型仍有使用限制。Chat、Work/Codex 和 API 的額度與計費分別核對；月費不等於 API 充值。",
-    "officialNote": "以下為官方文檔公開的美元月費，核對日期為 2026-10-24；不是全球各地區結賬報價。地區適用範圍與稅費口徑未確認，請以實際結賬頁為準。",
+    "officialNote": "以下為官方文件公開的美元月費，核對日期為 2026-11-19；不是全球各地區結帳報價。地區適用範圍與稅費口徑未確認，請以實際結帳頁為準。Business 價格按使用者計費，至少 2 人；Enterprise 需聯絡銷售。",
     "monthly": "公開月費",
     "coverage": "地區 / 稅費",
     "unknown": "未確認；以結賬為準",
@@ -189,12 +219,22 @@
       [
         "Go",
         "Davantage d’utilisation des outils au quotidien",
-        "Comparez les fonctions et les prix locaux avec Plus ; le prix mensuel officiel de Go n’a pas été vérifié ici."
+        "Le prix public est de 8 USD par mois ; vérifiez tout de même les fonctions locales, les taxes et le prix au paiement."
       ],
       [
         "Plus",
         "Apprentissage, rédaction, analyse ou programmation fréquents",
         "À envisager si vous avez besoin de capacités ou de quotas supplémentaires."
+      ],
+      [
+        "Business",
+        "Équipes d’au moins deux personnes ayant besoin d’un espace partagé et d’une administration centralisée",
+        "Le prix public est de 20 USD par utilisateur et par mois avec facturation annuelle, ou 25 USD avec facturation mensuelle ; vérifiez les sièges, la région et les taxes."
+      ],
+      [
+        "Enterprise",
+        "Organisations ayant besoin de contrats, de gouvernance, d’aide au déploiement ou d’achats sur mesure",
+        "Il n’existe pas de prix mensuel public unique ; contactez le service commercial pour obtenir un devis adapté."
       ],
       [
         "Pro 100",
@@ -213,7 +253,7 @@
       ]
     ],
     "limit": "Les modèles Pro restent soumis à des limites. Vérifiez séparément les quotas et la facturation de Chat, Work/Codex et de l’API ; un abonnement ne constitue pas un achat de crédits API.",
-    "officialNote": "Ces prix mensuels publics en USD proviennent de la documentation officielle, vérifiée le 2026-10-24. Il ne s’agit pas de prix finaux applicables dans toutes les régions. Le périmètre géographique et le traitement des taxes ne sont pas confirmés ; fiez-vous à votre page de paiement.",
+    "officialNote": "Ces prix mensuels publics en USD proviennent de la documentation officielle, vérifiée le 2026-11-19. Il ne s’agit pas de prix finaux applicables dans toutes les régions. Le périmètre géographique et le traitement des taxes ne sont pas confirmés ; fiez-vous à votre page de paiement.",
     "monthly": "Prix mensuel public",
     "coverage": "Région / taxes",
     "unknown": "Non confirmé ; vérifiez au paiement",
@@ -245,12 +285,22 @@
       [
         "Go",
         "Mehr alltägliche Werkzeugnutzung",
-        "Vergleichen Sie lokale Funktionen und Preise mit Plus; ein offizieller Monatspreis für Go wurde hier nicht geprüft."
+        "Der veröffentlichte Preis beträgt 8 USD pro Monat; prüfen Sie dennoch lokale Funktionen, Steuern und den Preis beim Bezahlen."
       ],
       [
         "Plus",
         "Häufiges Lernen, Schreiben, Analysieren oder Programmieren",
         "Ziehen Sie ihn vorrangig in Betracht, wenn Sie mehr Fähigkeiten oder Kontingent benötigen."
+      ],
+      [
+        "Business",
+        "Teams ab zwei Personen, die einen gemeinsamen Arbeitsbereich und zentrale Verwaltung benötigen",
+        "Der veröffentlichte Preis beträgt 20 USD pro Nutzer und Monat bei jährlicher Abrechnung oder 25 USD bei monatlicher Abrechnung; prüfen Sie Plätze, Region und Steuern."
+      ],
+      [
+        "Enterprise",
+        "Organisationen mit Bedarf an Verträgen, Governance, Bereitstellungsunterstützung oder individueller Beschaffung",
+        "Es gibt keinen einheitlichen öffentlichen Monatspreis; ein organisationsspezifisches Angebot erhalten Sie beim Vertrieb."
       ],
       [
         "Pro 100",
@@ -269,7 +319,7 @@
       ]
     ],
     "limit": "Auch Pro-Modelle haben Limits. Prüfen Sie Kontingente und Abrechnung von Chat, Work/Codex und API getrennt; Abonnementgebühren sind kein Kauf von API-Guthaben.",
-    "officialNote": "Dies sind öffentlich dokumentierte Monatspreise in USD aus offiziellen Quellen, geprüft am 2026-10-24, keine verbindlichen Kaufpreise für alle Regionen. Regionale Gültigkeit und steuerliche Behandlung sind nicht bestätigt; maßgeblich sind die Angaben beim Bezahlen.",
+    "officialNote": "Dies sind öffentlich dokumentierte Monatspreise in USD aus offiziellen Quellen, geprüft am 2026-11-19, keine verbindlichen Kaufpreise für alle Regionen. Regionale Gültigkeit und steuerliche Behandlung sind nicht bestätigt; maßgeblich sind die Angaben beim Bezahlen.",
     "monthly": "Öffentlicher Monatspreis",
     "coverage": "Region / Steuern",
     "unknown": "Nicht bestätigt; maßgeblich sind die Angaben beim Bezahlen",
@@ -301,12 +351,22 @@
       [
         "Go",
         "Más uso de herramientas cotidianas",
-        "Compara funciones y precios locales con Plus; aquí no se ha verificado el precio mensual oficial de Go."
+        "El precio publicado es de 8 USD al mes; comprueba aun así las funciones locales, los impuestos y el precio al pagar."
       ],
       [
         "Plus",
         "Aprendizaje, escritura, análisis o programación frecuentes",
         "Considéralo cuando necesites más capacidad o cupo."
+      ],
+      [
+        "Business",
+        "Equipos de al menos dos personas que necesitan un espacio compartido y administración centralizada",
+        "El precio público es de 20 USD por usuario al mes con facturación anual, o 25 USD con facturación mensual; comprueba plazas, región e impuestos."
+      ],
+      [
+        "Enterprise",
+        "Organizaciones que necesitan contratos, gobernanza, ayuda de despliegue o compras personalizadas",
+        "No hay un precio mensual público único; contacta con ventas para obtener una cotización para la organización."
       ],
       [
         "Pro 100",
@@ -325,7 +385,7 @@
       ]
     ],
     "limit": "Los modelos Pro también tienen límites. Comprueba por separado los cupos y la facturación de Chat, Work/Codex y API; pagar la suscripción no equivale a comprar créditos de API.",
-    "officialNote": "Estos son los precios mensuales públicos en USD de la documentación oficial, verificados el 2026-10-24, no son precios finales de compra válidos para todas las regiones. No se ha confirmado su aplicación regional ni el tratamiento fiscal; consulta la información al pagar.",
+    "officialNote": "Estos son los precios mensuales públicos en USD de la documentación oficial, verificados el 2026-11-19, no son precios finales de compra válidos para todas las regiones. No se ha confirmado su aplicación regional ni el tratamiento fiscal; consulta la información al pagar.",
     "monthly": "Precio mensual público",
     "coverage": "Región / impuestos",
     "unknown": "Sin confirmar; consulta al pagar",
@@ -357,12 +417,22 @@
       [
         "Go",
         "Mais uso de ferramentas do dia a dia",
-        "Compare as funcionalidades e os preços locais com Plus; o preço mensal oficial de Go não foi verificado aqui."
+        "O preço publicado é de USD 8 por mês; confirme ainda as funcionalidades locais, os impostos e o preço no pagamento."
       ],
       [
         "Plus",
         "Aprendizagem, escrita, análise ou programação frequentes",
         "Pode ser a primeira opção a considerar quando precisar de mais capacidades ou cota."
+      ],
+      [
+        "Business",
+        "Equipas de pelo menos duas pessoas que precisam de um espaço partilhado e administração centralizada",
+        "O preço publicado é de USD 20 por utilizador/mês com faturação anual, ou USD 25 com faturação mensal; confirme lugares, região e impostos."
+      ],
+      [
+        "Enterprise",
+        "Organizações que precisam de contratos, governação, apoio à implementação ou compras personalizadas",
+        "Não existe um preço mensal público único; contacte vendas para obter uma proposta adequada à organização."
       ],
       [
         "Pro 100",
@@ -381,7 +451,7 @@
       ]
     ],
     "limit": "Os modelos Pro também têm limites. Verifique separadamente as cotas e a cobrança do Chat, Work/Codex e da API; pagar a assinatura não equivale a comprar créditos de API.",
-    "officialNote": "Estes são os preços mensais públicos em USD da documentação oficial, verificados em 2026-10-24, não valores de compra para todas as regiões. A aplicabilidade regional e o tratamento fiscal não foram confirmados; consulte a informação no pagamento.",
+    "officialNote": "Estes são os preços mensais públicos em USD da documentação oficial, verificados em 2026-11-19, não valores de compra para todas as regiões. A aplicabilidade regional e o tratamento fiscal não foram confirmados; consulte a informação no pagamento.",
     "monthly": "Preço mensal público",
     "coverage": "Região / impostos",
     "unknown": "Não confirmado; consulte no pagamento",
@@ -413,12 +483,22 @@
       [
         "Go",
         "日常ツールをもっと使いたい",
-        "地域の機能と価格を Plus と比較してください。本ページでは Go の公式月額料金は未確認です。"
+        "公開価格は月額 8 米ドルです。地域ごとの機能、税金、決済価格は購入前に確認してください。"
       ],
       [
         "Plus",
         "頻繁な学習、文章作成、分析、プログラミング",
         "より多くの機能や利用枠が必要なときに、まず検討するプランです。"
+      ],
+      [
+        "Business",
+        "共有ワークスペースと一元管理が必要な 2 人以上のチーム",
+        "公開価格は年払いで 1 ユーザーあたり月額 20 米ドル、月払いでは 25 米ドルです。席数、地域、税金を購入前に確認してください。"
+      ],
+      [
+        "Enterprise",
+        "契約、ガバナンス、導入支援、個別調達が必要な組織",
+        "一律の公開月額料金はありません。組織向けの見積もりは営業窓口に問い合わせてください。"
       ],
       [
         "Pro 100",
@@ -437,7 +517,7 @@
       ]
     ],
     "limit": "Pro モデルにも上限があります。Chat、Work/Codex、API の利用枠と課金は別々に確認してください。サブスクリプション料金は API クレジットの購入ではありません。",
-    "officialNote": "以下は公式文書に公開された米ドル建ての月額料金で、確認日は 2026-10-24 です。すべての地域の決済価格ではありません。地域の適用範囲と税の扱いは未確認のため、実際の決済情報を確認してください。",
+    "officialNote": "以下は公式文書に公開された米ドル建ての月額料金で、確認日は 2026-11-19 です。すべての地域の決済価格ではありません。地域の適用範囲と税の扱いは未確認のため、実際の決済情報を確認してください。",
     "monthly": "公開月額料金",
     "coverage": "地域 / 税",
     "unknown": "未確認。決済時に確認",
@@ -469,12 +549,22 @@
       [
         "Go",
         "일상 도구를 더 많이 사용",
-        "현지 기능과 가격을 Plus와 비교하세요. 이 페이지에서는 Go의 공식 월 요금을 아직 확인하지 않았습니다."
+        "공개 가격은 월 USD 8입니다. 구매 전 현지 기능, 세금, 결제 가격을 다시 확인하세요."
       ],
       [
         "Plus",
         "잦은 학습, 글쓰기, 분석, 코딩",
         "더 많은 기능이나 사용 한도가 필요하면 우선 고려할 수 있습니다."
+      ],
+      [
+        "Business",
+        "공유 작업 공간과 중앙 관리가 필요한 2명 이상의 팀",
+        "공개 가격은 연간 결제 시 사용자당 월 USD 20, 월간 결제 시 USD 25입니다. 좌석 수, 지역, 세금을 구매 전에 확인하세요."
+      ],
+      [
+        "Enterprise",
+        "계약, 거버넌스, 배포 지원 또는 맞춤 조달이 필요한 조직",
+        "단일 공개 월 요금은 없습니다. 조직별 견적은 영업팀에 문의하세요."
       ],
       [
         "Pro 100",
@@ -493,7 +583,7 @@
       ]
     ],
     "limit": "Pro 모델에도 한도가 있습니다. Chat, Work/Codex, API의 한도와 과금을 각각 확인하세요. 구독료는 API 크레딧 구매가 아닙니다.",
-    "officialNote": "아래는 2026-10-24에 확인한 공식 문서의 공개 미국 달러 월 요금이며 모든 지역의 결제 견적이 아닙니다. 지역 적용 범위와 세금 처리는 확인되지 않았으므로 실제 결제 정보를 기준으로 하세요.",
+    "officialNote": "아래는 2026-11-19에 확인한 공식 문서의 공개 미국 달러 월 요금이며 모든 지역의 결제 견적이 아닙니다. 지역 적용 범위와 세금 처리는 확인되지 않았으므로 실제 결제 정보를 기준으로 하세요.",
     "monthly": "공개 월 요금",
     "coverage": "지역 / 세금",
     "unknown": "미확인. 결제 시 확인",
@@ -525,12 +615,22 @@
       [
         "Go",
         "Dùng công cụ hằng ngày nhiều hơn",
-        "So sánh tính năng và giá địa phương với Plus; trang này chưa xác minh giá tháng chính thức của Go."
+        "Giá công bố là 8 USD mỗi tháng; vẫn cần kiểm tra tính năng địa phương, thuế và giá thanh toán trước khi mua."
       ],
       [
         "Plus",
         "Thường xuyên học, viết, phân tích hoặc lập trình",
         "Có thể ưu tiên cân nhắc khi cần thêm khả năng hoặc hạn mức."
+      ],
+      [
+        "Business",
+        "Nhóm từ hai người trở lên cần không gian làm việc chung và quản trị tập trung",
+        "Giá công bố là 20 USD mỗi người dùng/tháng khi thanh toán năm, hoặc 25 USD khi thanh toán tháng; hãy kiểm tra số chỗ, khu vực và thuế."
+      ],
+      [
+        "Enterprise",
+        "Tổ chức cần hợp đồng, quản trị, hỗ trợ triển khai hoặc quy trình mua sắm tùy chỉnh",
+        "Không có một mức giá tháng công khai chung; hãy liên hệ bộ phận bán hàng để nhận báo giá cho tổ chức."
       ],
       [
         "Pro 100",
@@ -549,7 +649,7 @@
       ]
     ],
     "limit": "Mô hình Pro vẫn có giới hạn. Kiểm tra riêng hạn mức và cách tính phí của Chat, Work/Codex và API; phí thuê bao không phải khoản mua tín dụng API.",
-    "officialNote": "Đây là giá tháng bằng USD công khai trong tài liệu chính thức, kiểm tra ngày 2026-10-24, không phải báo giá thanh toán cho mọi khu vực. Phạm vi áp dụng và cách tính thuế chưa được xác nhận; hãy dùng thông tin tại trang thanh toán.",
+    "officialNote": "Đây là giá tháng bằng USD công khai trong tài liệu chính thức, kiểm tra ngày 2026-11-19, không phải báo giá thanh toán cho mọi khu vực. Phạm vi áp dụng và cách tính thuế chưa được xác nhận; hãy dùng thông tin tại trang thanh toán.",
     "monthly": "Giá tháng công khai",
     "coverage": "Khu vực / thuế",
     "unknown": "Chưa xác nhận; kiểm tra khi thanh toán",
@@ -581,12 +681,22 @@
       [
         "Go",
         "ใช้เครื่องมือในชีวิตประจำวันมากขึ้น",
-        "เปรียบเทียบความสามารถและราคาในพื้นที่กับ Plus; หน้านี้ยังไม่ได้ตรวจสอบราคารายเดือนอย่างเป็นทางการของ Go"
+        "ราคาที่เผยแพร่คือ USD 8 ต่อเดือน โปรดตรวจสอบฟีเจอร์ ภาษี และราคาชำระเงินจริงในพื้นที่ก่อนซื้อ"
       ],
       [
         "Plus",
         "เรียน เขียน วิเคราะห์ หรือเขียนโค้ดเป็นประจำ",
         "พิจารณาเมื่อคุณต้องการความสามารถหรือโควตาเพิ่มขึ้น"
+      ],
+      [
+        "Business",
+        "ทีมอย่างน้อย 2 คนที่ต้องการพื้นที่ทำงานร่วมกันและการดูแลจากส่วนกลาง",
+        "ราคาที่เผยแพร่คือ 20 USD ต่อผู้ใช้ต่อเดือนเมื่อชำระรายปี หรือ 25 USD เมื่อชำระรายเดือน โปรดตรวจสอบจำนวนที่นั่ง ภูมิภาค และภาษี"
+      ],
+      [
+        "Enterprise",
+        "องค์กรที่ต้องการสัญญา การกำกับดูแล การสนับสนุนการติดตั้งใช้งาน หรือการจัดซื้อเฉพาะ",
+        "ไม่มีราคารายเดือนสาธารณะแบบเดียว โปรดติดต่อฝ่ายขายเพื่อขอใบเสนอราคาสำหรับองค์กร"
       ],
       [
         "Pro 100",
@@ -605,7 +715,7 @@
       ]
     ],
     "limit": "โมเดล Pro ยังคงมีขีดจำกัด ตรวจสอบโควตาและการเรียกเก็บเงินของ Chat, Work/Codex และ API แยกกัน; ค่าสมาชิกไม่ใช่เครดิต API",
-    "officialNote": "ราคานี้เป็นราคารายเดือนสกุล USD ที่เผยแพร่ในเอกสารอย่างเป็นทางการ ตรวจสอบเมื่อ 2026-10-24 ไม่ใช่ราคาชำระเงินสำหรับทุกภูมิภาค การใช้ในแต่ละภูมิภาคและการคิดภาษียังไม่ได้รับการยืนยัน โปรดใช้ข้อมูลในหน้าชำระเงินของคุณ",
+    "officialNote": "ราคานี้เป็นราคารายเดือนสกุล USD ที่เผยแพร่ในเอกสารอย่างเป็นทางการ ตรวจสอบเมื่อ 2026-11-19 ไม่ใช่ราคาชำระเงินสำหรับทุกภูมิภาค การใช้ในแต่ละภูมิภาคและการคิดภาษียังไม่ได้รับการยืนยัน โปรดใช้ข้อมูลในหน้าชำระเงินของคุณ",
     "monthly": "ราคารายเดือนที่เผยแพร่",
     "coverage": "ภูมิภาค / ภาษี",
     "unknown": "ยังไม่ยืนยัน; ตรวจสอบเมื่อชำระเงิน",
@@ -637,12 +747,22 @@
       [
         "Go",
         "Более частое повседневное использование инструментов",
-        "Сравните местные возможности и цену с Plus; официальная месячная цена Go здесь не проверена."
+        "Опубликованная цена — 8 USD в месяц; перед покупкой проверьте местные функции, налоги и итоговую цену."
       ],
       [
         "Plus",
         "Регулярное обучение, письмо, анализ или программирование",
         "Рассмотрите, когда нужны дополнительные возможности или лимиты."
+      ],
+      [
+        "Business",
+        "Команды от двух человек, которым нужны общее рабочее пространство и централизованное администрирование",
+        "Опубликованная цена — 20 USD за пользователя в месяц при годовой оплате или 25 USD при ежемесячной оплате; проверьте число мест, регион и налоги."
+      ],
+      [
+        "Enterprise",
+        "Организации, которым нужны договоры, управление, помощь с развёртыванием или особые закупочные процедуры",
+        "Единой публичной месячной цены нет; обратитесь в отдел продаж за предложением для организации."
       ],
       [
         "Pro 100",
@@ -661,7 +781,7 @@
       ]
     ],
     "limit": "У моделей Pro тоже есть лимиты. Проверяйте квоты и оплату Chat, Work/Codex и API отдельно; плата за подписку не является покупкой кредитов API.",
-    "officialNote": "Это публичные месячные цены в долларах США из официальной документации, проверенные 2026-10-24, а не цены оформления заказа для всех регионов. Региональная доступность и налоги не подтверждены; ориентируйтесь на данные при оформлении.",
+    "officialNote": "Это публичные месячные цены в долларах США из официальной документации, проверенные 2026-11-19, а не цены оформления заказа для всех регионов. Региональная доступность и налоги не подтверждены; ориентируйтесь на данные при оформлении.",
     "monthly": "Публичная месячная цена",
     "coverage": "Регион / налоги",
     "unknown": "Не подтверждено; проверьте при оформлении",

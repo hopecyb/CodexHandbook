@@ -11,6 +11,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import yaml from 'js-yaml';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -66,9 +67,17 @@ function readTranslationMeta(filePath) {
 	const text = fs.readFileSync(filePath, 'utf8');
 	const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---/);
 	if (!match) return { translation_status: 'unknown', source_revision: null };
-	const fm = match[1];
-	const status = fm.match(/translation_status:\s*(\S+)/)?.[1] ?? 'missing-field';
-	const sourceRevision = fm.match(/source_revision:\s*['"]?([a-f0-9]{7})['"]?/i)?.[1] ?? null;
+	let fm;
+	try {
+		fm = yaml.load(match[1]) ?? {};
+	} catch {
+		return { translation_status: 'invalid-yaml', source_revision: null };
+	}
+	const status = typeof fm.translation_status === 'string' ? fm.translation_status : 'missing-field';
+	const sourceRevision =
+		typeof fm.source_revision === 'string' && /^[a-f0-9]{7}$/i.test(fm.source_revision)
+			? fm.source_revision
+			: null;
 	return { translation_status: status, source_revision: sourceRevision };
 }
 

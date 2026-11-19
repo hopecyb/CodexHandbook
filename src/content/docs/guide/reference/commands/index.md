@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "CLI"
   basis: "已对照当前官方 Developer commands 的成熟度表，仅列 Stable 入口，并核实 `--cd` / `-C`、沙箱和审批参数；实验性与弃用命令不进入基础速查。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: CLI 命令参考
 description: Codex CLI 常用子命令与参数速查——学习向索引，非替代官方手册。
 sidebar:
@@ -42,6 +42,18 @@ sidebar:
 | `codex resume` / `codex fork` | 继续或分叉已保存会话 | [交接与恢复](/guide/agent-work/handoff-and-resume/) |
 | `codex mcp` | 管理 MCP 服务器 | [连接 MCP](/skills/mcp/connect-an-mcp-server/) |
 | `codex plugin` | 安装、列出和移除 Plugin | [Plugins](/skills/plugins/) |
+| `codex agents` | 查看和管理 Agent | 运行 `codex agents --help` |
+| `codex app` | 打开桌面 App 相关入口 | 运行 `codex app --help` |
+| `codex apply` | 应用 Codex 生成的 diff | 运行 `codex apply --help` |
+| `codex archive` / `codex unarchive` | 归档或恢复会话 | 运行对应 `--help` |
+| `codex completion` | 生成 shell 补全脚本 | 运行 `codex completion --help` |
+| `codex delete` | 删除已保存会话 | 先运行 `codex delete --help` 并核对目标 |
+| `codex features` | 查看功能开关 | 运行 `codex features --help` |
+| `codex plugin marketplace` | 管理 Plugin marketplace | 运行 `codex plugin marketplace --help` |
+| `codex queue` | 查看或管理队列 | 运行 `codex queue --help` |
+| `codex review` | 启动代码审查 | 运行 `codex review --help` |
+| `codex sandbox` | 在指定沙箱策略下运行命令 | 运行 `codex sandbox --help` |
+| `codex update` | 检查或执行客户端更新 | 运行 `codex update --help` |
 
 :::caution[成熟度不同]
 官方参考还包含 Experimental、Beta 和 Deprecated 命令。本页不把它们混进基础速查；需要时先在官方表中确认成熟度与风险。

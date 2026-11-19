@@ -13,10 +13,16 @@
 
 ```text
 src/content/docs/
-├── 00-start-here/          # zh-CN（root）
-├── ...
+├── guide/                  # zh-CN（root）
+├── prompts/
+├── skills/
+├── cases/
+├── ai-roadmap/
+├── pets/
+├── theme/
+├── index.mdx
 ├── en/
-│   └── 00-start-here/
+│   └── guide/ ...
 ├── zh-tw/
 ├── fr/
 ├── ja/
@@ -103,10 +109,9 @@ glossary/
 
 ### 教学图示
 
-- 简体中文 `-zh-cn.svg` 是图示布局和语义的权威源。
-- 图内 `<title>`、`<desc>` 与可见文字由 `scripts/i18n/diagram-labels.<locale>.json` 提供。
-- `pnpm i18n:diagrams` 生成各语言 SVG；任何中文标签缺少目标语言译文时命令必须失败。
-- 目标语言可能比中文更长。生成后必须在桌面和移动视口检查节点溢出、连线遮挡和局部横向滚动。
+- 当前仓库没有可执行的图示本地化生成器；`scripts/i18n/diagram-labels.<locale>.json` 只是现存标签资料，不能当作已完成生成的证明。
+- 新增含文字图示时，应同时提交目标语言产物和生成/校验脚本；在恢复流水线前，不得在维护文档中引用不存在的 `i18n:diagrams` 命令。
+- 目标语言可能比中文更长。提交前必须在桌面和移动视口检查节点溢出、连线遮挡和局部横向滚动。
 - 纯装饰且不含文字的图片可以跨语言复用；包含界面文字的截图需要按目标语言重新拍摄或明确标注界面语言。
 
 ## 6. 翻译流程
@@ -128,12 +133,20 @@ glossary/
 # 查看覆盖率、审校状态和 source_revision 新鲜度
 pnpm i18n:status -- --locale en --stale
 
-# 生成并检查本地化教学图
-pnpm i18n:diagrams
-node scripts/generate-localized-diagrams.mjs --check
+# 全站检查必须显式使用 --all；无改动页的增量检查会返回 SKIPPED
+pnpm check:i18n -- --all --summary
 
-# 只校准本轮未改源页的 revision，不提升审校状态
+# 将 source_revision 不一致的译文标记为 stale（不会推进 revision）
 pnpm i18n:revisions
+
+# 校验所有语言的 freshness 标记；应在 CI 使用
+pnpm i18n:revisions -- --check
+
+# 译者完成正文与技术复核后，只显式确认一个页面
+pnpm i18n:revisions -- --confirm-reviewed \
+  --locale ja \
+  --page guide/start-here/index.md \
+  --reviewed-at 2026-11-19
 
 # 给所有译文中的站内内容链接补齐语言前缀
 pnpm i18n:links
@@ -153,14 +166,21 @@ pnpm i18n:zh-tw
 - 产品界面与集成
 - SDK、协议和自动化接口
 
-这类页面必须包含：
+这类页面必须使用当前 content schema 的字段：
 
 ```yaml
-status: verified
-last_verified: YYYY-MM-DD
-official_basis:
-  - official-url
+reviewed_at: YYYY-MM-DD
+editorialStatus: verified
+verification:
+  kind: source-checked
+  checkedAt: YYYY-MM-DD
+  summary: 核验了哪些易变事实
+  evidence:
+    - label: 官方文档
+      href: https://example.com/official-source
 ```
+
+实际运行过的教程使用 `kind: run-tested`，并同时填写 `environment` 和至少一条可追溯证据。旧字段只作为历史兼容输入，不得用于新页面。
 
 基础方法论和概念页也要复核，但可以采用更长周期。
 

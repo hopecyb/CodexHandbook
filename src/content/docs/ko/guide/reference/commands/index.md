@@ -4,7 +4,7 @@ description: Codex CLI의 자주 쓰는 하위 명령과 파라미터 빠른 조
 locale: ko
 source_locale: zh-CN
 source_revision: '6091bcc'
-translation_status: reviewed
+translation_status: stale
 translated_at: '2026-09-20'
 sidebar:
   order: 50

@@ -4,7 +4,7 @@ description: "Lệnh con và flag Codex CLI phổ biến — chỉ mục học, 
 locale: "vi"
 source_locale: "zh-CN"
 source_revision: "6091bcc"
-translation_status: "reviewed"
+translation_status: stale
 translated_at: "2026-09-20"
 sidebar:
   order: 50

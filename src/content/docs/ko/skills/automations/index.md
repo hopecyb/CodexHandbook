@@ -4,7 +4,7 @@ description: ChatGPT에서 검증된 작업을 일정에 따라 반복 실행합
 locale: ko
 source_locale: zh-CN
 source_revision: 'c6510bf'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 legacyVerification:
   status: verified

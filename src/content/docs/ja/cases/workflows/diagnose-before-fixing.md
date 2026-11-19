@@ -4,7 +4,7 @@ description: 本番問題と根深い bug——証拠チェーンを構築して
 locale: ja
 source_locale: zh-CN
 source_revision: "18193b0"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-07-28"
 reviewed_at: "2026-10-26"
 legacyVerification:

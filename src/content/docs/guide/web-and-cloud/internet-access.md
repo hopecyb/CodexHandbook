@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 互联网访问
 description: 区分安装期联网与 Agent 联网，并以域名和 HTTP 方法限制风险。
 sidebar:
@@ -48,7 +48,7 @@ Agent 互联网访问按环境配置：
 
 ## 与 Secret 的关键关系
 
-Cloud Secret 在 Agent 阶段前会被移除，这降低了 Agent 直接外传 setup Secret 的风险；但普通环境变量、仓库内容和任务产生的数据仍可能被发出。不要把敏感值伪装成普通变量来绕过 Secret 生命周期。
+Direct environment variable 的原值可被环境中的程序读取；network secret 则以 placeholder 暴露，并只在匹配允许域名的 HTTPS 请求时由代理替换。两者都可能在任务阶段发挥作用，不能假设 secret 会在 Agent 开始前一律消失。收窄域名、端口和方法，使用最小权限凭据，并检查日志与出站目标。
 
 ## 验收清单
 
@@ -62,4 +62,4 @@ Cloud Secret 在 Agent 阶段前会被移除，这降低了 Agent 直接外传 s
 ## 官方依据
 
 - [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
-- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments)

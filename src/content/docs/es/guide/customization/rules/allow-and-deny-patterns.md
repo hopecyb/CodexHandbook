@@ -4,7 +4,7 @@ description: Restringe con reglas de comandos y rutas lo que el Agent puede ejec
 locale: es
 source_locale: zh-CN
 source_revision: "521ecc9"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25
 sidebar:

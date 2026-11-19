@@ -9,7 +9,7 @@ description: "จุดเข้าแบบไม่โต้ตอบสำห
 locale: th
 source_locale: zh-CN
 source_revision: "6d7c481"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 sidebar:

@@ -8,7 +8,7 @@ description: รันงานที่ตรวจสอบแล้วซ้�
 locale: th
 source_locale: zh-CN
 source_revision: 'c6510bf'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 ---

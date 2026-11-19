@@ -4,7 +4,7 @@ description: Problemas de produção e bugs teimosos — construa primeiro a cad
 locale: pt
 source_locale: zh-CN
 source_revision: "18193b0"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 legacyVerification: {"status": "verified", "products": "App / CLI / IDE / Cloud", "basis": "Cruzado com os capítulos já verificados deste manual sobre planejamento, qualidade e recuperação de falhas; esta página confirma apenas o método estável de diagnóstico «cadeia de evidências primeiro, correção mínima depois», sem depender de implementações concretas de produto.", "checkedAt": "2026-07-26"}

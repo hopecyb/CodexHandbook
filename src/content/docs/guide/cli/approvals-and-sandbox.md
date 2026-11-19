@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "CLI"
   basis: "OpenAI Help Center 当前 CLI 入门文档仍按 approval modes 区分读写、命令执行与沙盒/网络边界；本页聚焦审批与沙盒的概念、交互和无人值守场景的风险差异，没有把具体按钮文案或模式名写成固定事实。"
-  checkedAt: "2026-07-26"
+  checkedAt: "2026-11-19"
 title: 审批与沙盒
 description: CLI 中 shell、写盘与联网请求的批准策略，以及沙盒如何限制 Agent 行为。
 sidebar:
@@ -29,27 +29,26 @@ CLI 里 Agent 能**读文件、写文件、跑 shell、可能联网**——审�
 
 概念基础：[权限与审批](/guide/foundations/permissions-and-approvals/) · [沙盒与网络](/guide/foundations/sandbox-and-network/)
 
-## 审批发生在何时
+## 当前默认组合怎么理解
 
-典型触发点（具体以产品为准）：
+常见的 Auto 组合是 `workspace-write + on-request`：工作区内的普通读写和本地命令可以自动执行；越出工作区、访问网络或触发其他受限能力时，才根据策略请求批准。组织托管策略、不受信项目和你显式选择的模式可以更严格。
 
-| 操作类型 | 风险 | 默认倾向 |
+| preset / 组合 | 工作区内读写与常规命令 | 工作区外、网络等受限动作 |
 |---|---|---|
-| 写项目内文件 | 中 | 常需确认 |
-| 写项目外路径 | 高 | 应拒绝或严格确认 |
-| 运行 shell | 高 | 确认命令内容 |
-| 联网 / curl | 高 | 确认目标与数据 |
-| MCP 工具调用 | 视服务器 | 按工具粒度 |
+| Auto（常见为 `workspace-write + on-request`） | 通常自动执行 | 请求批准或按策略拒绝 |
+| Read-only | 只读动作可执行；写入受阻 | 请求更宽权限或拒绝 |
+| Full access | 文件、命令和网络边界大幅放宽 | 通常不再依赖逐步审批，应只在受信环境使用 |
+| 组织托管配置 | 以管理员设置为准，可比以上更严 | 用户不能绕过组织底线 |
 
-交互时你有 **一次允许 / 会话允许 / 拒绝** 等选项（名称因版本而异）。**不要对看不懂的命令点「始终允许」。**
+审批弹窗的选项和持续范围会随版本、规则与组织策略变化。**不要对看不懂的命令或过宽前缀选择长期允许。** 已经在当前沙箱内允许的动作通常不会再额外弹窗，因此“没有弹窗”不等于“没有副作用”。
 
 ## 沙盒档位（概念）
 
 | 档位意图 | 适合 |
 |---|---|
-| 严格 / 只读 | 审不可信代码、CI 只读审查 |
-| 标准 | 日常开发仓库 |
-| 放宽 | 个人受信环境，且符合公司政策 |
+| `read-only` | 审不可信代码、只读检查 |
+| `workspace-write` | 日常开发仓库；限制写入工作区 |
+| Full access / danger-full-access | 仅受信环境和明确需要的任务，且符合公司政策 |
 
 沙盒可能限制：
 
@@ -76,7 +75,7 @@ CI 必读：[非交互模式](/guide/cli/non-interactive-mode/) · [人工审批
 
 ## 与 allow/deny 规则
 
-项目可在 [允许与拒绝规则](/guide/customization/rules/allow-and-deny-patterns/) 中声明「可预期命令」。**规则需与真实产品行为一致**，否则 Agent 仍会被拦或反而过宽。
+实验性的 Rules 可在 [允许与拒绝规则](/guide/customization/rules/allow-and-deny-patterns/) 中控制命令出沙箱时是 allow、prompt 还是 forbidden。Rules 不负责路径、网络或 MCP 的全部权限，也不替代沙箱。
 
 ## 常见错误
 
@@ -108,4 +107,5 @@ CI 必读：[非交互模式](/guide/cli/non-interactive-mode/) · [人工审批
 开始阶段把 CLI 审批和沙盒调得偏保守，通常更稳。等你真的知道自己在放开什么，再一点点放宽也不迟。
 
 ## 参考来源
-- OpenAI Codex CLI 安全与沙盒文档
+- [OpenAI：Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [OpenAI：Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security)

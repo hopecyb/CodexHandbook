@@ -8,7 +8,7 @@ description: Chọn đúng Secret chỉ dùng trong Cloud setup và biến môi 
 locale: vi
 source_locale: zh-CN
 source_revision: "78937be"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 30

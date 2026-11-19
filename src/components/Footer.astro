@@ -6,9 +6,20 @@ import Pagination from 'virtual:starlight/components/Pagination';
 import config from 'virtual:starlight/user-config';
 import { Icon } from '@astrojs/starlight/components';
 import AdSlot from './AdSlot.astro';
+import { footerLinkGroups, getSiteLang, pickLabel, type LocalizedLabel } from '../utils/siteNav';
 
 const { pagination, entry, toc } = Astro.locals.starlightRoute;
 const locale = Astro.locals.starlightRoute.locale ?? 'root';
+const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
+const legalPrefix = lang === 'zh-CN' ? '' : lang === 'zh-TW' ? '/zh-tw' : `/${lang}`;
+const legalLinks = (footerLinkGroups.find((group) => group.id === 'trust')?.links ?? [])
+	.filter((link) => !link.href.startsWith('mailto:'))
+	.map((link) => ({ href: `${legalPrefix}${link.href}`, label: pickLabel(link.label, lang) }));
+const independentCopy: LocalizedLabel = {
+	'zh-CN': '社区维护的独立项目，非 OpenAI 官方站点，也不代表 OpenAI 的赞助或背书。OpenAI、ChatGPT 与 Codex 是其各自权利人的商标。',
+	en: 'An independent community-maintained project. It is not an official OpenAI site and is not sponsored or endorsed by OpenAI. OpenAI, ChatGPT, and Codex are trademarks of their respective owners.',
+	'zh-TW': '由社群維護的獨立專案，並非 OpenAI 官方網站，也不代表 OpenAI 的贊助或背書。OpenAI、ChatGPT 與 Codex 是其各自權利人的商標。',
+};
 const showAd = entry.data.template !== 'splash';
 const vietnamese = Astro.locals.starlightRoute.locale === 'vi';
 const thai = Astro.locals.starlightRoute.locale === 'th';
@@ -38,6 +49,12 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 			<a href={correction} target="_blank" rel="noopener noreferrer">{russian ? 'Сообщить о проблеме на странице (черновик GitHub)' : thai ? 'รายงานปัญหาในหน้านี้ (ฉบับร่าง GitHub)' : vietnamese ? 'Báo lỗi trên trang này (bản nháp GitHub)' : portuguese ? 'Relatar um problema nesta página (rascunho no GitHub)' : german ? 'Problem auf dieser Seite melden (GitHub-Entwurf)' : french ? 'Signaler un problème sur cette page (brouillon GitHub)' : korean ? '이 페이지의 문제 신고(GitHub 초안)' : japanese ? 'このページの問題を報告（GitHub の下書き）' : spanish ? 'Comunicar un problema de esta página (borrador en GitHub)' : english ? 'Report a page issue (GitHub draft)' : traditional ? '回報本頁問題（GitHub 草稿）' : '反馈本页问题（GitHub 草稿）'}</a>
 			{' · '}<a href={updatesPath}>{russian ? 'Обновления материалов' : thai ? 'การอัปเดตเนื้อหา' : vietnamese ? 'Cập nhật nội dung' : portuguese ? 'Atualizações do conteúdo' : german ? 'Inhaltsaktualisierungen' : french ? 'Mises à jour du contenu' : korean ? '콘텐츠 업데이트' : japanese ? 'コンテンツの更新' : spanish ? 'Actualizaciones de contenido' : english ? 'Content updates' : traditional ? '內容更新' : '内容更新'}</a>
 		</span>}
+	</div>
+	<div class="trust-meta" data-pagefind-ignore>
+		<p>{pickLabel(independentCopy, lang)}</p>
+		<nav aria-label={pickLabel({ 'zh-CN': '法律与联系', en: 'Legal and contact', 'zh-TW': '法律與聯絡' }, lang)}>
+			{legalLinks.map((link, index) => <>{index > 0 && <span aria-hidden="true"> · </span>}<a href={link.href}>{link.label}</a></>)}
+		</nav>
 	</div>
 
 	{
@@ -78,6 +95,25 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 		margin-top: 3rem;
 		font-size: var(--sl-text-sm);
 		color: var(--sl-color-gray-3);
+	}
+
+	.trust-meta {
+		display: grid;
+		gap: 0.35rem;
+		padding-block-start: 1rem;
+		border-top: 1px solid var(--sl-color-hairline-light);
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-xs);
+		line-height: 1.6;
+	}
+
+	.trust-meta p {
+		margin: 0;
+	}
+
+	.trust-meta a {
+		color: var(--sl-color-gray-2);
+		text-underline-offset: 0.2em;
 	}
 
 	.meta > :global(p:only-child) {

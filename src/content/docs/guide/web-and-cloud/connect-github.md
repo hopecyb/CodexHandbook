@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "Cloud、GitHub"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 连接 GitHub
 description: 以最小仓库范围为 Codex Cloud 配置 GitHub 访问。
 sidebar:
@@ -26,7 +26,7 @@ Codex Cloud 需要先连接 GitHub 或 GitLab（Beta），再为仓库创建环�
 
 - [ ] 目标仓库不是误选的同名 fork
 - [ ] 默认分支与任务起点已确认
-- [ ] 本地必要改动已经 push，或明确不包含在任务中
+- [ ] 若从 Web/远程仓库直接启动，本地必要改动已经 push；若从 IDE handoff，已审查允许上传的本地源码改动
 - [ ] 主分支禁止未经审查的直接写入
 - [ ] 环境中没有生产级全权限凭据
 - [ ] 第一次任务只改低风险文件
@@ -52,7 +52,7 @@ Codex 会发布标准 GitHub review。自动审查需要在 Codex Settings 单�
 - 仓库不在列表：检查 GitHub 授权的仓库范围；
 - 组织仓库 403：检查组织策略、SSO 与安装许可；
 - 无法启用自动 review：确认拥有设置所需的 GitHub push 或 admin 权限；
-- Cloud 看不到本地 commit：它只从远程仓库 checkout，先 push 到明确分支。
+- Web/远程仓库任务看不到仅存在本机的 commit：先 push 到明确分支；IDE handoff 是另一条路径，可携带当前上下文中的本地源码改动。
 
 不要为解决一个 403 直接授权全部私有仓库。先确认目标仓库和缺少的具体权限。
 
@@ -60,3 +60,4 @@ Codex 会发布标准 GitHub review。自动审查需要在 Codex Settings 单�
 
 - [Codex Cloud 快速开始](https://learn.chatgpt.com/docs/cloud)
 - [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
+- [Prompting：IDE handoff](https://learn.chatgpt.com/docs/prompting)

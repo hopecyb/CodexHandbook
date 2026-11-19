@@ -9,7 +9,7 @@ description: มอบหมายงานย่อยที่มีขอบ�
 locale: th
 source_locale: zh-CN
 source_revision: "b1cefc0"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 sidebar:

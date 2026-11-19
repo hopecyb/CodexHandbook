@@ -9,7 +9,7 @@ description: Integra codex exec con scripts y pipelines para CI, tareas programa
 locale: es
 source_locale: zh-CN
 source_revision: "1f37961"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

@@ -5,7 +5,7 @@ description: Common Codex CLI subcommands and flags—learning index, not a subs
 locale: en
 source_locale: zh-CN
 source_revision: '6091bcc'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 legacyVerification:
   status: verified

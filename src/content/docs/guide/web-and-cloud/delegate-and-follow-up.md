@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "Cloud、App、IDE、CLI"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 委托与跟进
 description: 发起可独立运行的 Cloud 任务，并用同一聊天修正方向和验收结果。
 sidebar:
@@ -14,12 +14,12 @@ sidebar:
 ## 什么时候适合委托
 
 - 任务需要较长构建或测试；
-- 输入已经存在于远程仓库；
+- 输入已经存在于远程仓库，或已通过 IDE handoff 明确选择可上传的本地源码改动；
 - 环境能够脚本化重建；
 - 任务可以与当前工作独立推进；
 - 你愿意在结果出来后审查，而不是直接合并。
 
-依赖本地未提交状态、本机服务或持续人工操作的任务，先留在本地。
+依赖本机服务或持续人工操作的任务先留在本地。未提交改动若经 IDE handoff 进入 Cloud，委托前必须检查 diff、未跟踪文件和 secrets；从 Web/远程仓库直接启动时则应先 push 必要改动。
 
 ## 一个完整委托
 
@@ -65,3 +65,4 @@ Cloud 可从 Web、IDE、GitHub、GitLab（Beta）、Linear 或 Slack 发起；�
 
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 - [长任务](https://learn.chatgpt.com/docs/long-running-work)
+- [Prompting：IDE handoff](https://learn.chatgpt.com/docs/prompting)

@@ -4,7 +4,7 @@ description: 단계 분할, 체크포인트, 인수인계 정보입니다.
 locale: ko
 source_locale: zh-CN
 source_revision: "450ed9d"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: "2026-10-26"
 legacyVerification:

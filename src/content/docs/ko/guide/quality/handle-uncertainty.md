@@ -4,7 +4,7 @@ description: 정보가 부족할 때는 지어내지 말고 질문을 요구합�
 locale: ko
 source_locale: zh-CN
 source_revision: '839ce22'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 sidebar:

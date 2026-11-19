@@ -9,7 +9,7 @@ description: เชื่อม `codex exec` กับ pipeline ของสค�
 locale: th
 source_locale: zh-CN
 source_revision: "1f37961"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 reviewed_at: 2026-11-19
 sidebar:

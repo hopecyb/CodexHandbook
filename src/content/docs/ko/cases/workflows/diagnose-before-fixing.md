@@ -4,7 +4,7 @@ description: 프로덕션 문제와 고질적인 bug—먼저 증거 사슬을 �
 locale: ko
 source_locale: zh-CN
 source_revision: '18193b0'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 legacyVerification:

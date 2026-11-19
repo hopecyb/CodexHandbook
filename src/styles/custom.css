@@ -760,12 +760,46 @@ html[data-theme='light'] .path-card strong {
 	background: rgb(2 6 23 / 0.8);
 }
 
+.diagram-zoom__title {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.diagram-zoom__close {
+	position: sticky;
+	z-index: 1;
+	top: 0.75rem;
+	float: right;
+	width: 2.75rem;
+	height: 2.75rem;
+	margin: 0.75rem 0.75rem -3.5rem 0;
+	border: 1px solid var(--sl-color-gray-4);
+	border-radius: 999px;
+	background: var(--sl-color-bg-nav);
+	color: var(--sl-color-white);
+	font-size: 1.75rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.diagram-zoom__close:hover,
+.diagram-zoom__close:focus-visible {
+	border-color: var(--sl-color-accent);
+}
+
 .diagram-zoom img {
 	display: block;
 	width: 100%;
 	min-width: 48rem;
 	height: auto;
-	cursor: zoom-out;
+	cursor: default;
 }
 
 .diagram-zoom:has(img[src^='/diagrams/ai-application-roadmap-']) {

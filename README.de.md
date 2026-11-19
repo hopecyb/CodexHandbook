@@ -140,7 +140,7 @@ Dieses Projekt nutzt [Astro](https://astro.build/) + [Starlight](https://starlig
 
 Anforderungen:
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 Entwicklungsumgebung starten:
@@ -162,7 +162,7 @@ Fortschritt der deutschen Übersetzung prüfen:
 pnpm i18n:status -- --locale de
 ```
 
-Der deutsche Inhalt liegt in `src/content/docs/de/` (Spiegel der Quelle in vereinfachtem Chinesisch). Glossar: [`glossary/de.md`](./glossary/de.md). Stand 2026-07-28: deutsche Seitenabdeckung **100%** (alle `translation_status: draft`; sprachliche/technische Review ausstehend).
+Der deutsche Inhalt liegt in `src/content/docs/de/` (Spiegel der Quelle in vereinfachtem Chinesisch). Glossar: [`glossary/de.md`](./glossary/de.md). Die aktuellen Angaben zu Abdeckung und Revision liefert der obige Befehl. Ein Metadatenwert `reviewed` oder `current` ist ein Workflow-Signal, kein Nachweis einer muttersprachlichen oder technischen Prüfung.
 
 ## Prinzipien
 

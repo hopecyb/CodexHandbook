@@ -9,7 +9,7 @@ description: Constrain what the Agent can run with command and path rules—pers
 locale: en
 source_locale: zh-CN
 source_revision: '521ecc9'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-26
 reviewed_at: 2026-10-25
 sidebar:

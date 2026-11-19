@@ -9,7 +9,7 @@ description: Vai trò và ví dụ của SKILL.md, references/, templates/, scri
 locale: vi
 source_locale: zh-CN
 source_revision: 'c4b740a'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-26
 ---

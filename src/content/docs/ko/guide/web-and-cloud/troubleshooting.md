@@ -8,7 +8,7 @@ description: 저장소, setup, 네트워크, Agent 실행, 결과 전달의 다�
 locale: ko
 source_locale: zh-CN
 source_revision: "019fac1"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-09-20"
 sidebar:
   order: 80

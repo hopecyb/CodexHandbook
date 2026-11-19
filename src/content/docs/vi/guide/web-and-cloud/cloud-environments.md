@@ -8,7 +8,7 @@ legacyVerification:
 locale: vi
 source_locale: zh-CN
 source_revision: "1745f70"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 20

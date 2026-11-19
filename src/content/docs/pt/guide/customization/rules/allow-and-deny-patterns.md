@@ -4,7 +4,7 @@ description: Constranger com regras de comandos e caminhos as operações que o 
 locale: pt
 source_locale: zh-CN
 source_revision: "521ecc9"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 sidebar:

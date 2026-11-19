@@ -4,7 +4,7 @@
 
 输出文件：
 
-- [两周销售周报](/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-01/output/weekly-report.md)
-- [地区汇总](/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-01/output/region-summary.csv)
-- [产品排名](/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-01/output/top-products.csv)
-- [逐行台账](/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-01/output/row-ledger.csv)
+- [两周销售周报](../output/weekly-report.md)
+- [地区汇总](../output/region-summary.csv)
+- [产品排名](../output/top-products.csv)
+- [逐行台账](../output/row-ledger.csv)

@@ -4,7 +4,7 @@ description: 독립적으로 실행할 Cloud 작업을 시작하고 같은 대�
 locale: ko
 source_locale: zh-CN
 source_revision: "38b322f"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 60

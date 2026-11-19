@@ -4,7 +4,7 @@ description: リポジトリ、setup、ネットワーク、Agent、成果物の
 locale: ja
 source_locale: zh-CN
 source_revision: "019fac1"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 80

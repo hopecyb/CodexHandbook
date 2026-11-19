@@ -9,7 +9,7 @@ description: Install sources, permission boundaries, upgrades and rollbacks—go
 locale: en
 source_locale: zh-CN
 source_revision: 'f61cb1f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-26
 reviewed_at: "2026-10-25"
 ---

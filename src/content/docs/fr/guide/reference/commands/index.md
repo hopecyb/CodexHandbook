@@ -4,7 +4,7 @@ description: Index des principales commandes et options de Codex CLI, en complé
 locale: fr
 source_locale: zh-CN
 source_revision: '6091bcc'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 legacyVerification:
   status: verified

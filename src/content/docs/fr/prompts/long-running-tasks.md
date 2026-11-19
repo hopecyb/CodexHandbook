@@ -4,7 +4,7 @@ description: Découper en phases, points de contrôle et informations de passati
 locale: fr
 source_locale: zh-CN
 source_revision: "450ed9d"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 legacyVerification:

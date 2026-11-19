@@ -8,7 +8,7 @@ description: Khởi chạy một tác vụ Cloud độc lập, rồi điều ch�
 locale: vi
 source_locale: zh-CN
 source_revision: "38b322f"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 60

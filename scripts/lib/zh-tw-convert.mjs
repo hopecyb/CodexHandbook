@@ -1,6 +1,11 @@
 import { createHash } from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
 import { dump, load } from 'js-yaml';
 import OpenCC from 'opencc-js';
+import { fileURLToPath } from 'node:url';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
 export const LOCALE_CODE = 'zh-tw';
 
@@ -62,9 +67,22 @@ const SKIP_CONVERT_KEYS = new Set([
 ]);
 
 const LINK_KEYS = new Set(['link', 'href']);
+const TRANSLATABLE_FENCE_LANGUAGES = new Set(['text', 'txt', 'plaintext', 'markdown', 'md', 'prompt']);
 
 export function createZhTwConverter() {
-	return OpenCC.Converter({ from: 'cn', to: 'twp' });
+	const opencc = OpenCC.Converter({ from: 'cn', to: 'twp' });
+	const glossary = load(fs.readFileSync(path.join(root, 'glossary/terms.yml'), 'utf8')) ?? {};
+	const replacements = (glossary.terms ?? [])
+		.filter((term) => typeof term['zh-CN'] === 'string' && typeof term['zh-TW'] === 'string')
+		.flatMap((term) => [term['zh-CN'], opencc(term['zh-CN'])].map((source) => [source, term['zh-TW']]))
+		.filter(([source, target]) => source && source !== target)
+		.sort((a, b) => b[0].length - a[0].length);
+
+	return (text) => {
+		let converted = opencc(text);
+		for (const [source, target] of replacements) converted = converted.replaceAll(source, target);
+		return converted;
+	};
 }
 
 export function sourceRevision(content) {
@@ -105,12 +123,10 @@ function restoreSegments(text, placeholders) {
 	return text.replace(/\u0000PH(\d+)\u0000/g, (_, index) => placeholders[Number(index)] ?? '');
 }
 
-export function convertTranslatableText(text, converter) {
+function convertUnfencedText(text, converter) {
 	if (!text || !/[\u4e00-\u9fff]/.test(text)) return text;
 
 	const { protectedText, placeholders } = protectSegments(text, [
-		/```[\s\S]*?```/g,
-		/~~~[\s\S]*?~~~/g,
 		/`[^`\n]+`/g,
 		/^import\s.+$/gm,
 		/https?:\/\/[^\s"'`)>\]]+/g,
@@ -119,6 +135,34 @@ export function convertTranslatableText(text, converter) {
 
 	const converted = converter(protectedText);
 	return restoreSegments(converted, placeholders);
+}
+
+function fenceLanguage(info) {
+	const token = info.trim().split(/\s+/, 1)[0]?.toLowerCase() ?? '';
+	return token.replace(/^\{?\.?/, '').replace(/\}?$/, '');
+}
+
+export function convertTranslatableText(text, converter) {
+	if (!text || !/[\u4e00-\u9fff]/.test(text)) return text;
+
+	// Prose and prompt fences are reader-facing content and must be converted.
+	// Executable/configuration fences remain byte-for-byte stable.
+	const fences = [];
+	const tokenized = text.replace(
+		/^(?<marker>`{3,}|~{3,})(?<info>[^\r\n]*)\r?\n(?<body>[\s\S]*?)^\k<marker>[ \t]*$/gm,
+		(match, marker, info, body) => {
+			const language = fenceLanguage(info);
+			const convertedBody = TRANSLATABLE_FENCE_LANGUAGES.has(language)
+				? convertUnfencedText(body, converter)
+				: body;
+			const token = `\u0000FENCE${fences.length}\u0000`;
+			fences.push(`${marker}${info}\n${convertedBody}${marker}`);
+			return token;
+		},
+	);
+
+	const converted = convertUnfencedText(tokenized, converter);
+	return converted.replace(/\u0000FENCE(\d+)\u0000/g, (_, index) => fences[Number(index)] ?? '');
 }
 
 function convertFrontmatterValue(key, value, converter) {
@@ -169,7 +213,6 @@ export function convertFrontmatter(frontmatter, converter, meta) {
 		source_locale: 'zh-CN',
 		source_revision: meta.sourceRevision,
 		translation_status: 'draft',
-		translated_at: meta.translatedAt,
 	};
 }
 
@@ -207,7 +250,7 @@ function fixMdxImportDepth(body) {
 	);
 }
 
-export function convertDocument(source, { converter, sourceRevision: revision, translatedAt }) {
+export function convertDocument(source, { converter, sourceRevision: revision }) {
 	const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
 	if (!match) {
 		return convertTranslatableText(source, converter);
@@ -217,7 +260,6 @@ export function convertDocument(source, { converter, sourceRevision: revision, t
 	const body = source.slice(match[0].length);
 	const convertedFrontmatter = convertFrontmatter(frontmatter ?? {}, converter, {
 		sourceRevision: revision,
-		translatedAt,
 	});
 
 	let convertedBody = convertTranslatableText(body, converter);

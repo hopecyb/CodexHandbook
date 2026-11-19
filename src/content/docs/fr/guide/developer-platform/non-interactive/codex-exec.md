@@ -4,7 +4,7 @@ description: Point d'entrée d'exécution non interactive — dispatcher une tâ
 locale: fr
 source_locale: zh-CN
 source_revision: '6d7c481'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: '2026-10-26'
 sidebar:

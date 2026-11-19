@@ -4,7 +4,7 @@ description: Enseigner des workflows réutilisables à Codex via SKILL.md — é
 locale: fr
 source_locale: zh-CN
 source_revision: '3147d2c'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 legacyVerification:

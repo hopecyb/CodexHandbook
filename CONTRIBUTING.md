@@ -22,7 +22,7 @@ Codex Handbook 接受教程改写、事实核验、提示词、Skill、完整案
 3. 从最小可验证内容开始，补齐示例和失败路径。
 4. 涉及产品事实时查阅 OpenAI 官方文档，并记录核验日期。
 5. 新增图示时同步更新视觉资产清单。
-6. 在 Node.js `>=22.12.0` 环境运行 `pnpm build`。构建结束会自动检查渲染后的共享下载链接；修改语言链接规则后，也需运行 `node --test scripts/localized-download-links.test.mjs scripts/rendered-downloads.test.mjs`。
+6. 在 Node.js `>=22.23.4` 环境运行 `pnpm build`。构建结束会自动检查渲染后的共享下载链接；修改语言链接规则后，也需运行 `node --test scripts/localized-download-links.test.mjs scripts/rendered-downloads.test.mjs`。
 7. 复查现有构建的下载地址可运行 `pnpm check:downloads`。此检查覆盖生成 HTML 的下载链接与本地目标，不替代 ZIP 内容、浏览器操作或外部链接验证。
 8. 阅读最终 diff，移除不应纳入版本控制的生成文件、真实凭据和无关改动，并按下方规范编写提交信息。
 

@@ -4,7 +4,7 @@ description: Explore applied AI engineering topics through dated source events w
 locale: en
 source_locale: zh-CN
 source_revision: '847b43b'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: "2026-10-25"
 translated_at: 2026-09-20
 ---

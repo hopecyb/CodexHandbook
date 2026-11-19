@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE"
   basis: "已对照 Codex 当前子 Agent 官方说明；本页明确子 Agent 的上下文隔离、权限继承、活动入口、token 成本与并行写冲突，并把最终汇总和验证责任保留给主 Agent。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 子 Agent
 description: 把边界清楚的子任务委托给独立上下文，并由主 Agent 汇总证据、处理冲突和验收。
 sidebar:
@@ -28,7 +28,7 @@ sidebar:
 
 当前 Codex 版本默认提供子 Agent 能力，并可在桌面 App、CLI 和 IDE 的相应界面查看活动。界面细节会变化，但稳定的使用方式是：明确要求 Codex 把独立子任务委托出去，并让主线程负责汇总。
 
-CLI 中可以用 `/agent` 查看或切换线程；IDE 在支持的界面中显示后台 Agent；桌面 App 会呈现任务中的线程活动。是否能看到某个控件，以当前客户端和账号能力为准。
+CLI 中可以用 `/agents` 查看或切换线程；IDE 在支持的界面中显示后台 Agent；桌面 App 会呈现任务中的线程活动。是否能看到某个控件，以当前客户端和账号能力为准。
 
 ## 什么时候值得拆
 

@@ -4,7 +4,7 @@ description: exec가 기계가 파싱할 수 있는 결과를 내게 합니다�
 locale: ko
 source_locale: zh-CN
 source_revision: 'e80b5d7'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 30

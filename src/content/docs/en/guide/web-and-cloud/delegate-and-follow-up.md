@@ -8,7 +8,7 @@ description: Start an independently runnable Cloud task and use the same chat to
 locale: en
 source_locale: zh-CN
 source_revision: '38b322f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

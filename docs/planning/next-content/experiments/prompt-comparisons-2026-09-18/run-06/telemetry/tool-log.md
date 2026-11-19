@@ -3,7 +3,7 @@
 Outputs combine stdout/stderr as returned by exec_command; separate streams unavailable. Expected nonzero exits: original failing test and diff detecting changes.
 
 ## 1
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 mkdir -p telemetry; python3 - <<'PY'
@@ -22,7 +22,7 @@ Combined stdout/stderr:
 ```
 
 ## 2
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 cat task.md
@@ -38,7 +38,7 @@ Combined stdout/stderr:
 ```
 
 ## 3
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 rg --files -g '!telemetry/**' -g '!node_modules/**'
@@ -55,7 +55,7 @@ input/cart.js
 ```
 
 ## 4
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 cat input/package.json input/cart.js input/cart.test.js
@@ -92,7 +92,7 @@ test('applies a percentage discount', () => {
 ```
 
 ## 5
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input
 
 ```sh
 node --test cart.test.js
@@ -119,7 +119,7 @@ not ok 3 - applies a percentage discount
   ---
   duration_ms: 0.671667
   type: 'test'
-  location: '/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input/cart.test.js:13:1'
+  location: '/REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input/cart.test.js:13:1'
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
@@ -132,7 +132,7 @@ not ok 3 - applies a percentage discount
   actual: -360
   operator: 'strictEqual'
   stack: |-
-    TestContext.<anonymous> (file:///Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input/cart.test.js:14:9)
+    TestContext.<anonymous> (file:///REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/input/cart.test.js:14:9)
     Test.runInAsyncScope (node:async_hooks:214:14)
     Test.run (node:internal/test_runner/test:1047:25)
     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
@@ -153,7 +153,7 @@ not ok 3 - applies a percentage discount
 ```
 
 ## 6
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 mkdir -p output; cp input/cart.js input/cart.test.js input/package.json output/
@@ -166,7 +166,7 @@ Combined stdout/stderr:
 ```
 
 ## 7
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/output
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/output
 
 ```sh
 node --test cart.test.js
@@ -207,7 +207,7 @@ ok 3 - applies a percentage discount
 ```
 
 ## 8
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 diff -u input/cart.js output/cart.js
@@ -231,7 +231,7 @@ Combined stdout/stderr:
 ```
 
 ## 9
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 cmp input/cart.test.js output/cart.test.js
@@ -244,7 +244,7 @@ Combined stdout/stderr:
 ```
 
 ## 10
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 python3 - <<'PY'
@@ -261,7 +261,7 @@ Combined stdout/stderr:
 ```
 
 ## 11
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06
 
 ```sh
 diff -u input/cart.js output/cart.js
@@ -284,7 +284,7 @@ Combined stdout/stderr:
 ```
 
 ## 12
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/output
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-06/output
 
 ```sh
 node --test cart.test.js

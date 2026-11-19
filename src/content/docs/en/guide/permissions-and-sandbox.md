@@ -9,7 +9,7 @@ description: Use one decision chain to understand sandboxing, approvals, network
 locale: en
 source_locale: zh-CN
 source_revision: '8fa3f8c'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

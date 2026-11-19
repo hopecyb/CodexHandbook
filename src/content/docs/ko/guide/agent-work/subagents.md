@@ -4,7 +4,7 @@ description: 경계가 명확한 하위 작업을 독립 컨텍스트에 위임�
 locale: ko
 source_locale: zh-CN
 source_revision: 'b1cefc0'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 30

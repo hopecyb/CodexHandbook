@@ -55,7 +55,7 @@ Stderr:
 ```
 
 ## Executed command
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input
 ```sh
 cat package.json cart.test.js
 ```
@@ -87,7 +87,7 @@ Stderr:
 ```
 
 ## Executed command
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input
 ```sh
 node --test cart.test.js
 ```
@@ -112,7 +112,7 @@ not ok 3 - applies a percentage discount
   ---
   duration_ms: 0.70625
   type: 'test'
-  location: '/Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input/cart.test.js:13:1'
+  location: '/REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input/cart.test.js:13:1'
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
@@ -125,7 +125,7 @@ not ok 3 - applies a percentage discount
   actual: -360
   operator: 'strictEqual'
   stack: |-
-    TestContext.<anonymous> (file:///Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input/cart.test.js:14:9)
+    TestContext.<anonymous> (file:///REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/input/cart.test.js:14:9)
     Test.runInAsyncScope (node:async_hooks:214:14)
     Test.run (node:internal/test_runner/test:1047:25)
     Test.processPendingSubtests (node:internal/test_runner/test:744:18)
@@ -150,7 +150,7 @@ Stderr:
 ```
 
 ## Executed command
-Working directory: /Users/hope/Workspace/cyberhope/codex-handbook/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/output
+Working directory: /REDACTED_REPO/docs/planning/next-content/experiments/prompt-comparisons-2026-09-18/run-09/output
 ```sh
 node --test cart.test.js
 ```

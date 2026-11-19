@@ -4,7 +4,7 @@ description: Cuando falta información, exige preguntas en lugar de inventar.
 locale: es
 source_locale: zh-CN
 source_revision: "839ce22"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-25
 sidebar:

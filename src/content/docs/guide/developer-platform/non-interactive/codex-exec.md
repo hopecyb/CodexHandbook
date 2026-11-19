@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "CLI"
   basis: "已对照当前官方 Non-interactive mode 与 Developer commands，核实 `codex exec` 为 Stable、`--cd` / `-C`、默认只读沙箱、`workspace-write`、JSONL 与 schema 输出方式。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: codex exec
 description: 非交互执行入口——在脚本与 CI 中单次下发完整任务。
 sidebar:
@@ -67,7 +67,7 @@ codex exec --cd . "只读：对比当前分支与 main 的 diff，列出 3 个�
 codex exec --cd . --sandbox workspace-write "修复失败测试，只修改 src/auth 与 tests/auth"
 ```
 
-进度写入 `stderr`，最终回复写入 `stdout`。机器消费完整事件流时使用 `--json`，只要最终消息文件时使用 `-o` / `--output-last-message`；需要稳定字段时再加 `--output-schema`。
+进度写入 `stderr`，最终回复写入 `stdout`。机器消费完整事件流时使用 `--json`（JSONL 事件流，不是单个业务对象）；只要最终消息文件时使用 `-o` / `--output-last-message`；需要稳定字段时再加 `--output-schema`。
 
 原则：
 

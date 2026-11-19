@@ -4,7 +4,7 @@ description: Guía rápida para aprender los comandos / y las llamadas a Skills 
 locale: es
 source_locale: zh-CN
 source_revision: 'a34c90f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 40

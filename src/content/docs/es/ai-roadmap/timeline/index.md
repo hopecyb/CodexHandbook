@@ -4,7 +4,7 @@ description: Explora temas de ingeniería de aplicaciones de IA mediante eventos
 locale: es
 source_locale: zh-CN
 source_revision: "847b43b"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: 2026-10-25
 ---

@@ -4,7 +4,7 @@ description: 설치 출처, 권한 경계, 업그레이드와 롤백으로 팀 S
 locale: ko
 source_locale: zh-CN
 source_revision: 'f61cb1f'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 legacyVerification:

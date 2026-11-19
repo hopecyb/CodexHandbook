@@ -4,7 +4,7 @@ description: Explore temas de engenharia de aplicações de IA por eventos datad
 locale: pt
 source_locale: zh-CN
 source_revision: "847b43b"
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 ---

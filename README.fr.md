@@ -140,7 +140,7 @@ Ce projet utilise [Astro](https://astro.build/) + [Starlight](https://starlight.
 
 Prérequis :
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 Démarrer l’environnement de développement :
@@ -162,7 +162,7 @@ Suivre la couverture de traduction française :
 pnpm i18n:status -- --locale fr
 ```
 
-Le contenu français se trouve sous `src/content/docs/fr/` (miroir de la source en chinois simplifié). Glossaire : [`glossary/fr.md`](./glossary/fr.md). Au 2026-07-28, la couverture française est de **100 %** (`translation_status: draft`, revue linguistique / technique à venir).
+Le contenu français se trouve sous `src/content/docs/fr/` (miroir de la source en chinois simplifié). Glossaire : [`glossary/fr.md`](./glossary/fr.md). Utilisez la commande ci-dessus pour connaître la couverture et l’état de révision actuels. Une valeur `reviewed` ou `current` dans les métadonnées est un signal de workflow, pas la preuve d’une révision linguistique ou technique.
 
 ## Principes
 

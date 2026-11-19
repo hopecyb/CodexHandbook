@@ -4,7 +4,7 @@ description: 独立して実行できる Cloud タスクを開始し、同じチ
 locale: ja
 source_locale: zh-CN
 source_revision: "38b322f"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 sidebar:
   order: 60

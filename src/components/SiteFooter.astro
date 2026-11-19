@@ -12,6 +12,7 @@ import {
 	isNavItemVisible,
 	mainNavItems,
 	pickLabel,
+	type LocalizedLabel,
 	uiLabels,
 } from '../utils/siteNav';
 import { standaloneHref } from '../utils/standalonePages';
@@ -60,6 +61,11 @@ const legalLinks = trustLinks.filter((link) => !link.href.startsWith('mailto:'))
 const githubLink = visibleFooterLinkGroups
 	.flatMap((group) => group.links)
 	.find((link) => link.href.includes('github.com'));
+const independentCopy: LocalizedLabel = {
+	'zh-CN': '社区维护的独立项目，非 OpenAI 官方站点；不代表 OpenAI 的赞助或背书。',
+	en: 'An independent community-maintained project; not an official OpenAI site and not sponsored or endorsed by OpenAI.',
+	'zh-TW': '由社群維護的獨立專案，並非 OpenAI 官方網站；不代表 OpenAI 的贊助或背書。',
+};
 
 ---
 
@@ -132,6 +138,7 @@ const githubLink = visibleFooterLinkGroups
 				{' '}
 				<a href={localizeHref('/')}>{footerLegal.site}</a>
 			</p>
+			<p class="site-footer__independent">{pickLabel(independentCopy, lang)}</p>
 			<ul class="site-footer__legal">
 				{
 					legalLinks.map((link) => (
@@ -312,6 +319,12 @@ const githubLink = visibleFooterLinkGroups
 		margin: 0;
 	}
 
+	.site-footer__independent {
+		flex: 1 1 24rem;
+		margin: 0;
+		text-align: center;
+	}
+
 	.site-footer__legal {
 		display: flex;
 		flex-wrap: wrap;
@@ -362,6 +375,10 @@ const githubLink = visibleFooterLinkGroups
 		.site-footer__bottom {
 			flex-direction: column;
 			align-items: flex-start;
+		}
+
+		.site-footer__independent {
+			text-align: start;
 		}
 	}
 </style>

@@ -4,7 +4,7 @@ description: 발행일을 개념의 기원으로 간주하지 않고 출처가 �
 locale: ko
 source_locale: zh-CN
 source_revision: '847b43b'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 reviewed_at: '2026-10-26'
 ---

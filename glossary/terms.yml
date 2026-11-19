@@ -5,6 +5,7 @@ terms:
   - id: agent
     en: Agent
     zh-CN: Agent
+    zh-TW: Agent
     ja: Agent
     fr: Agent
     ko: Agent
@@ -20,6 +21,7 @@ terms:
   - id: approval
     en: Approval
     zh-CN: 审批
+    zh-TW: 審批
     ja: 承認
     fr: Approbation
     ko: 승인
@@ -35,6 +37,7 @@ terms:
   - id: cloud-task
     en: Cloud task
     zh-CN: Cloud 任务
+    zh-TW: Cloud 任務
     ja: Cloud タスク
     fr: Tâche Cloud
     ko: Cloud 작업
@@ -50,6 +53,7 @@ terms:
   - id: compaction
     en: Compaction
     zh-CN: 压缩
+    zh-TW: 壓縮
     ja: 圧縮
     fr: Compression
     ko: 압축
@@ -65,6 +69,7 @@ terms:
   - id: context
     en: Context
     zh-CN: 上下文
+    zh-TW: 上下文
     ja: コンテキスト
     fr: Contexte
     ko: 컨텍스트
@@ -77,9 +82,26 @@ terms:
     keep_english: false
     note: Information the model can currently use (files, conversation, project).
 
+  - id: documentation
+    en: Documentation
+    zh-CN: 文档
+    zh-TW: 文件
+    ja: ドキュメント
+    fr: Documentation
+    ko: 문서
+    es: Documentación
+    de: Dokumentation
+    pt: Documentação
+    vi: Tài liệu
+    th: เอกสาร
+    ru: документация
+    keep_english: false
+    note: Product or project documentation. In zh-TW prefer 文件, not 檔案, for this editorial term.
+
   - id: diff
     en: Diff
     zh-CN: 差异 / diff
+    zh-TW: 差異 / diff
     ja: diff / 差分
     fr: Diff / écart
     ko: diff / 차이
@@ -95,6 +117,7 @@ terms:
   - id: hook
     en: Hook
     zh-CN: Hook
+    zh-TW: Hook
     ja: Hook
     fr: Hook
     ko: Hook
@@ -110,6 +133,7 @@ terms:
   - id: mcp
     en: MCP
     zh-CN: MCP
+    zh-TW: MCP
     ja: MCP
     fr: MCP
     ko: MCP
@@ -125,6 +149,7 @@ terms:
   - id: plugin
     en: Plugin
     zh-CN: Plugin
+    zh-TW: Plugin
     ja: Plugin
     fr: Plugin
     ko: Plugin
@@ -140,6 +165,7 @@ terms:
   - id: prompt
     en: Prompt
     zh-CN: 提示词
+    zh-TW: 提示詞
     ja: プロンプト
     fr: Prompt
     ko: 프롬프트
@@ -155,6 +181,7 @@ terms:
   - id: sandbox
     en: Sandbox
     zh-CN: 沙箱
+    zh-TW: 沙箱
     ja: サンドボックス
     fr: Bac à sable
     ko: 샌드박스
@@ -170,6 +197,7 @@ terms:
   - id: skill
     en: Skill
     zh-CN: Skill
+    zh-TW: Skill
     ja: Skill
     fr: Skill
     ko: Skill
@@ -185,6 +213,7 @@ terms:
   - id: task
     en: Task
     zh-CN: 任务
+    zh-TW: 任務
     ja: タスク
     fr: Tâche
     ko: 작업
@@ -200,6 +229,7 @@ terms:
   - id: thread
     en: Thread
     zh-CN: 线程
+    zh-TW: 對話串
     ja: スレッド
     fr: Fil / thread
     ko: 스레드
@@ -215,6 +245,7 @@ terms:
   - id: token
     en: Token
     zh-CN: Token
+    zh-TW: Token
     ja: Token
     fr: Token
     ko: Token
@@ -230,6 +261,7 @@ terms:
   - id: tool
     en: Tool
     zh-CN: 工具
+    zh-TW: 工具
     ja: ツール
     fr: Outil
     ko: 도구
@@ -245,6 +277,7 @@ terms:
   - id: worktree
     en: Worktree
     zh-CN: 工作树
+    zh-TW: 工作樹
     ja: 作業ツリー
     fr: Arbre de travail
     ko: 작업 트리
@@ -260,6 +293,7 @@ terms:
   - id: agents-md
     en: AGENTS.md
     zh-CN: AGENTS.md
+    zh-TW: AGENTS.md
     ja: AGENTS.md
     fr: AGENTS.md
     ko: AGENTS.md
@@ -275,6 +309,7 @@ terms:
   - id: thread-session
     en: Thread / session
     zh-CN: 线程 / 会话
+    zh-TW: 對話串 / 工作階段
     ja: スレッド / セッション
     fr: Fil / session
     ko: 스레드 / 세션
@@ -290,6 +325,7 @@ terms:
   - id: cloud-environment
     en: Cloud environment
     zh-CN: Cloud 环境
+    zh-TW: Cloud 環境
     ja: Cloud 環境
     fr: Environnement Cloud
     ko: Cloud 환경
@@ -305,6 +341,7 @@ terms:
   - id: profile
     en: Profile
     zh-CN: Profile
+    zh-TW: Profile
     ja: Profile
     fr: Profile
     ko: Profile
@@ -320,6 +357,7 @@ terms:
   - id: subagent
     en: Subagent
     zh-CN: Subagent
+    zh-TW: Subagent
     ja: Subagent
     fr: Subagent
     ko: Subagent
@@ -335,6 +373,7 @@ terms:
   - id: verification
     en: Verification
     zh-CN: 核验 / 验证
+    zh-TW: 核驗 / 驗證
     ja: 検証
     fr: Vérification
     ko: 검증
@@ -350,6 +389,7 @@ terms:
   - id: artifact
     en: Artifact
     zh-CN: 产物 / 制品
+    zh-TW: 產物 / 製品
     ja: 成果物
     fr: Artefact / livrable
     ko: 산출물
@@ -365,6 +405,7 @@ terms:
   - id: permission
     en: Permission
     zh-CN: 权限
+    zh-TW: 權限
     ja: 権限
     fr: Permission
     ko: 권한
@@ -380,6 +421,7 @@ terms:
   - id: reasoning
     en: Reasoning
     zh-CN: 推理
+    zh-TW: 推理
     ja: 推論
     fr: Raisonnement
     ko: 추론
@@ -395,6 +437,7 @@ terms:
   - id: non-interactive
     en: Non-interactive mode
     zh-CN: 非交互模式
+    zh-TW: 非互動模式
     ja: 非対話モード
     fr: Mode non interactif
     ko: 비대화형 모드
@@ -410,6 +453,7 @@ terms:
   - id: interactive
     en: Interactive mode
     zh-CN: 交互模式
+    zh-TW: 互動模式
     ja: 対話モード
     fr: Mode interactif
     ko: 대화형 모드
@@ -425,6 +469,7 @@ terms:
   - id: handover
     en: Handoff
     zh-CN: 交接
+    zh-TW: 交接
     ja: 引き継ぎ
     fr: Passation
     ko: 인수인계
@@ -440,6 +485,7 @@ terms:
   - id: steering
     en: Steering
     zh-CN: 引导 / 纠偏
+    zh-TW: 引導 / 糾偏
     ja: 軌道修正 / 誘導
     fr: Pilotage / recentrage
     ko: 궤도 수정 / 유도

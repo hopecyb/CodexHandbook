@@ -1,0 +1,266 @@
+---
+import { pickLabel, type LocalizedLabel, type SiteLang } from '../utils/siteNav';
+
+interface Props {
+	lang: SiteLang;
+}
+
+const { lang } = Astro.props;
+
+const copy: Record<
+	| 'bannerTitle'
+	| 'bannerBody'
+	| 'accept'
+	| 'reject'
+	| 'settings'
+	| 'dialogTitle'
+	| 'essentialTitle'
+	| 'essentialBody'
+	| 'analyticsTitle'
+	| 'analyticsBody'
+	| 'save'
+	| 'cancel'
+	| 'privacy',
+	LocalizedLabel
+> = {
+	bannerTitle: {
+		'zh-CN': '帮助改进本站',
+		en: 'Help improve this site',
+		'zh-TW': '協助改進本站',
+	},
+	bannerBody: {
+		'zh-CN': '只有在你明确同意后，我们才会加载 Google Analytics 和 Microsoft Clarity。广告存储始终关闭。',
+		en: 'We load Google Analytics and Microsoft Clarity only after you explicitly agree. Advertising storage always stays off.',
+		'zh-TW': '只有在你明確同意後，我們才會載入 Google Analytics 和 Microsoft Clarity。廣告儲存一律關閉。',
+	},
+	accept: { 'zh-CN': '同意分析', en: 'Allow analytics', 'zh-TW': '同意分析' },
+	reject: { 'zh-CN': '拒绝', en: 'Reject', 'zh-TW': '拒絕' },
+	settings: { 'zh-CN': '隐私设置', en: 'Privacy settings', 'zh-TW': '隱私設定' },
+	dialogTitle: { 'zh-CN': '分析与隐私设置', en: 'Analytics and privacy settings', 'zh-TW': '分析與隱私設定' },
+	essentialTitle: { 'zh-CN': '必要存储', en: 'Essential storage', 'zh-TW': '必要儲存' },
+	essentialBody: {
+		'zh-CN': '用于记住主题和隐私选择，站点正常工作需要这些本地设置。',
+		en: 'Local settings used to remember your theme and privacy choice and keep the site working.',
+		'zh-TW': '用於記住主題和隱私選擇，網站正常運作需要這些本機設定。',
+	},
+	analyticsTitle: { 'zh-CN': '可选分析', en: 'Optional analytics', 'zh-TW': '選用分析' },
+	analyticsBody: {
+		'zh-CN': '允许 Google Analytics 统计页面访问，并允许 Microsoft Clarity 记录交互和生成热图。可随时撤回。',
+		en: 'Allow Google Analytics to measure page visits and Microsoft Clarity to record interactions and create heatmaps. You can withdraw at any time.',
+		'zh-TW': '允許 Google Analytics 統計頁面瀏覽，並允許 Microsoft Clarity 記錄互動和產生熱圖。可隨時撤回。',
+	},
+	save: { 'zh-CN': '保存选择', en: 'Save choice', 'zh-TW': '儲存選擇' },
+	cancel: { 'zh-CN': '取消', en: 'Cancel', 'zh-TW': '取消' },
+	privacy: { 'zh-CN': '查看隐私政策', en: 'Read the privacy policy', 'zh-TW': '查看隱私政策' },
+};
+
+const label = (key: keyof typeof copy) => pickLabel(copy[key], lang);
+const localePrefix = lang === 'zh-CN' ? '' : lang === 'zh-TW' ? '/zh-tw' : `/${lang}`;
+---
+
+<div class="consent-manager" data-consent-manager data-pagefind-ignore>
+	<section class="consent-banner" data-consent-banner hidden aria-labelledby="consent-banner-title">
+		<div>
+			<h2 id="consent-banner-title">{label('bannerTitle')}</h2>
+			<p>{label('bannerBody')} <a href={`${localePrefix}/privacy-policy/`}>{label('privacy')}</a></p>
+		</div>
+		<div class="consent-banner__actions">
+			<button type="button" class="consent-button consent-button--primary" data-consent-accept>{label('accept')}</button>
+			<button type="button" class="consent-button consent-button--primary" data-consent-reject>{label('reject')}</button>
+			<button type="button" class="consent-button" data-consent-open>{label('settings')}</button>
+		</div>
+	</section>
+
+	<button type="button" class="consent-manage" data-consent-open>{label('settings')}</button>
+
+	<dialog class="consent-dialog" data-consent-dialog aria-labelledby="consent-dialog-title">
+		<form method="dialog" data-consent-form>
+			<h2 id="consent-dialog-title">{label('dialogTitle')}</h2>
+			<div class="consent-option consent-option--locked">
+				<div>
+					<strong>{label('essentialTitle')}</strong>
+					<p>{label('essentialBody')}</p>
+				</div>
+				<input type="checkbox" checked disabled aria-label={label('essentialTitle')} />
+			</div>
+			<label class="consent-option">
+				<div>
+					<strong>{label('analyticsTitle')}</strong>
+					<p>{label('analyticsBody')}</p>
+				</div>
+				<input type="checkbox" data-consent-analytics />
+			</label>
+			<p class="consent-dialog__policy"><a href={`${localePrefix}/privacy-policy/`}>{label('privacy')}</a></p>
+			<div class="consent-dialog__actions">
+				<button type="submit" value="cancel" class="consent-button">{label('cancel')}</button>
+				<button type="button" class="consent-button consent-button--primary" data-consent-save>{label('save')}</button>
+			</div>
+		</form>
+	</dialog>
+</div>
+
+<script is:inline>
+	(() => {
+		const root = document.currentScript?.previousElementSibling;
+		if (!root?.matches('[data-consent-manager]') || root.dataset.initialized) return;
+		root.dataset.initialized = 'true';
+		const STORAGE_KEY = 'codexhandbook:analytics-consent:v1';
+		const GA_ID = 'G-KPP4Z7D6SZ';
+		const CLARITY_ID = 'xtawngb7re';
+		const banner = root.querySelector('[data-consent-banner]');
+		const dialog = root.querySelector('[data-consent-dialog]');
+		const analyticsInput = root.querySelector('[data-consent-analytics]');
+		let analyticsLoaded = false;
+
+		const isLocalHost = (() => {
+			const hostname = window.location.hostname;
+			return hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0' || hostname === '::1' || hostname.endsWith('.local') || hostname.startsWith('192.168.') || hostname.startsWith('10.') || /^172\.(1[6-9]|2\d|3[0-1])\./.test(hostname);
+		})();
+		const readChoice = () => {
+			try {
+				const value = localStorage.getItem(STORAGE_KEY);
+				return value === 'granted' || value === 'denied' ? value : null;
+			} catch {
+				return null;
+			}
+		};
+		const writeChoice = (value) => {
+			try { localStorage.setItem(STORAGE_KEY, value); } catch {}
+		};
+
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+		const googleConsent = (analytics) => window.gtag('consent', 'update', {
+			analytics_storage: analytics,
+			ad_storage: 'denied',
+			ad_user_data: 'denied',
+			ad_personalization: 'denied',
+		});
+		const ensureClarityQueue = () => {
+			window.clarity = window.clarity || function () {
+				(window.clarity.q = window.clarity.q || []).push(arguments);
+			};
+		};
+		const clarityConsent = (analytics) => {
+			ensureClarityQueue();
+			window.clarity('consentv2', { ad_Storage: 'denied', analytics_Storage: analytics });
+		};
+
+		const loadAnalytics = () => {
+			if (analyticsLoaded || isLocalHost) return;
+			analyticsLoaded = true;
+			window[`ga-disable-${GA_ID}`] = false;
+			window.gtag('consent', 'default', {
+				analytics_storage: 'denied',
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+			});
+			googleConsent('granted');
+			const google = document.createElement('script');
+			google.async = true;
+			google.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+			google.dataset.optionalAnalytics = '';
+			document.head.appendChild(google);
+			window.gtag('js', new Date());
+			window.gtag('config', GA_ID, { allow_google_signals: false, allow_ad_personalization_signals: false });
+
+			clarityConsent('granted');
+			const clarity = document.createElement('script');
+			clarity.async = true;
+			clarity.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+			clarity.dataset.optionalAnalytics = '';
+			document.head.appendChild(clarity);
+		};
+
+		const clearAnalyticsCookies = () => {
+			const names = document.cookie.split(';').map((part) => part.split('=')[0].trim()).filter((name) => name.startsWith('_ga') || name === '_clck' || name === '_clsk');
+			for (const name of names) {
+				document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+				if (location.hostname.includes('.')) document.cookie = `${name}=; Max-Age=0; Path=/; Domain=.${location.hostname.replace(/^www\./, '')}; SameSite=Lax`;
+			}
+		};
+		const denyAnalytics = () => {
+			window[`ga-disable-${GA_ID}`] = true;
+			googleConsent('denied');
+			clarityConsent('denied');
+			clearAnalyticsCookies();
+		};
+		const applyChoice = (granted) => {
+			writeChoice(granted ? 'granted' : 'denied');
+			banner.hidden = true;
+			if (granted) loadAnalytics();
+			else denyAnalytics();
+		};
+		const openSettings = () => {
+			analyticsInput.checked = readChoice() === 'granted';
+			dialog.showModal();
+			analyticsInput.focus();
+		};
+
+		root.querySelector('[data-consent-accept]')?.addEventListener('click', () => applyChoice(true));
+		root.querySelector('[data-consent-reject]')?.addEventListener('click', () => applyChoice(false));
+		root.querySelectorAll('[data-consent-open]').forEach((button) => button.addEventListener('click', openSettings));
+		root.querySelector('[data-consent-save]')?.addEventListener('click', () => {
+			const wasGranted = readChoice() === 'granted';
+			const granted = analyticsInput.checked;
+			applyChoice(granted);
+			dialog.close();
+			if (wasGranted && !granted && analyticsLoaded) window.setTimeout(() => location.reload(), 50);
+		});
+		dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+
+		const stored = readChoice();
+		if (stored === 'granted') loadAnalytics();
+		else if (stored === null) banner.hidden = false;
+		else denyAnalytics();
+	})();
+</script>
+
+<style>
+	.consent-manager { position: relative; z-index: calc(var(--sl-z-index-navbar, 10) + 4); }
+	.consent-banner {
+		position: fixed; inset: auto 1rem 1rem; display: grid;
+		grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 1.5rem; align-items: center;
+		max-width: 64rem; margin-inline: auto; padding: 1rem 1.1rem;
+		border: 1px solid var(--sl-color-gray-5, #555); border-radius: 0.75rem;
+		background: var(--sl-color-bg-nav, #17181c); box-shadow: 0 1rem 3rem rgb(0 0 0 / 35%);
+		color: var(--sl-color-white, #fff);
+	}
+	.consent-banner[hidden] { display: none; }
+	.consent-banner h2, .consent-dialog h2 { margin: 0; font-size: 1rem; }
+	.consent-banner p, .consent-option p, .consent-dialog__policy {
+		margin: 0.35rem 0 0; color: var(--sl-color-gray-2, #c5c7ce); font-size: 0.875rem; line-height: 1.55;
+	}
+	.consent-banner a, .consent-dialog a { color: var(--sl-color-accent-high, #b3c7ff); }
+	.consent-banner__actions, .consent-dialog__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+	.consent-button, .consent-manage {
+		min-height: 2.5rem; padding: 0.45rem 0.8rem; border: 1px solid var(--sl-color-gray-4, #777);
+		border-radius: 0.5rem; background: var(--sl-color-bg-nav, #17181c); color: var(--sl-color-white, #fff);
+		font: inherit; font-size: 0.875rem; font-weight: 600; cursor: pointer;
+	}
+	.consent-button:hover, .consent-button:focus-visible, .consent-manage:hover, .consent-manage:focus-visible { border-color: var(--sl-color-accent, #7691ff); }
+	.consent-button--primary { border-color: var(--sl-color-accent, #7691ff); background: var(--sl-color-accent, #4d65d9); color: var(--sl-color-black, #07101f); }
+	.consent-manage {
+		position: fixed; inset: auto auto 0.75rem 0.75rem; z-index: 1; min-height: 2rem;
+		padding: 0.3rem 0.6rem; font-size: 0.75rem; box-shadow: 0 0.35rem 1.25rem rgb(0 0 0 / 20%);
+	}
+	.consent-dialog {
+		width: min(36rem, calc(100vw - 2rem)); padding: 0; border: 1px solid var(--sl-color-gray-5, #555);
+		border-radius: 0.75rem; background: var(--sl-color-bg, #17181c); color: var(--sl-color-white, #fff);
+		box-shadow: 0 1rem 4rem rgb(0 0 0 / 45%);
+	}
+	.consent-dialog::backdrop { background: rgb(0 0 0 / 65%); }
+	.consent-dialog form { display: grid; gap: 1rem; padding: 1.25rem; }
+	.consent-option {
+		display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: center;
+		padding: 0.9rem; border: 1px solid var(--sl-color-gray-6, #444); border-radius: 0.5rem;
+	}
+	.consent-option input { width: 1.25rem; height: 1.25rem; }
+	.consent-option--locked { opacity: 0.78; }
+	.consent-dialog__actions { justify-content: flex-end; }
+	@media (max-width: 44rem) {
+		.consent-banner { grid-template-columns: 1fr; inset-inline: 0.5rem; inset-block-end: 0.5rem; }
+		.consent-banner__actions .consent-button { flex: 1 1 7rem; }
+	}
+</style>

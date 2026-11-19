@@ -10,7 +10,7 @@ description: Настройте машиночитаемые результат�
 locale: ru
 source_locale: zh-CN
 source_revision: 'e80b5d7'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-11-19
 sidebar:
   order: 30

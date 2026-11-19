@@ -9,7 +9,7 @@ description: 비대화형 실행 명령으로 스크립트와 CI에서 완전한
 locale: ko
 source_locale: zh-CN
 source_revision: '6d7c481'
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-09-20"
 sidebar:
   order: 10

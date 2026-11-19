@@ -5,6 +5,7 @@ import quotes from '../../data/chatgptPriceQuotes.json';
 import planQuotes from '../../data/chatgptPlanQuotes.json';
 import planCopy from '../../data/chatgptPlanCopy.json';
 import snapshotCopy from '../../data/chatgptSnapshotCopy.json';
+import ConsentManager from '../ConsentManager.astro';
 import PricingFooter from './PricingFooter.astro';
 import {
 	standaloneHref,
@@ -26,6 +27,19 @@ const languageRoutes = Object.fromEntries(
 );
 const currentPath = standaloneHref('chatgpt-pricing', currentLocale);
 const canonicalUrl = `https://codexhandbook.com${currentPath}`;
+const structuredData = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	name: planCopy[initialLanguage].title,
+	description: planCopy[initialLanguage].subtitle,
+	url: canonicalUrl,
+	inLanguage: initialLanguage,
+	isPartOf: {
+		'@type': 'WebSite',
+		name: 'Codex Handbook',
+		url: 'https://codexhandbook.com/',
+	},
+};
 
 function localizedPath(path: string, locale: StandaloneLocaleCode = currentLocale) {
 	if (locale === 'root') return path;
@@ -48,6 +62,24 @@ const topbarLinks: {href: string; key?: string; label?: string; current?: boolea
 const plan = planCopy[initialLanguage];
 const copy = snapshotCopy[initialLanguage];
 const guideHref = localizedPath('/guide/reference/model-selection/');
+const planCheckedAt = planQuotes.reduce(
+	(latest, quote) => quote.checkedAt > latest ? quote.checkedAt : latest,
+	'0000-00-00',
+);
+const officialNote = plan.officialNote.replace(/\d{4}-\d{2}-\d{2}/, planCheckedAt);
+
+function formatPlanPrice(quote: (typeof planQuotes)[number]) {
+	if (quote.period !== 'user-month' || !('billing' in quote)) {
+		return `${quote.currency} ${quote.amount} / ${plan.month}`;
+	}
+	if (initialLanguage === 'zh-CN') {
+		return `${quote.currency} ${quote.amount} / 用户 / 月（${quote.billing === 'annual' ? '年付' : '月付'}，至少 2 人）`;
+	}
+	if (initialLanguage === 'zh-TW') {
+		return `${quote.currency} ${quote.amount} / 使用者 / 月（${quote.billing === 'annual' ? '年付' : '月付'}，至少 2 人）`;
+	}
+	return `${quote.currency} ${quote.amount} / user / ${plan.month} · ${quote.billing} billing · minimum 2 users`;
+}
 
 ---
 
@@ -56,19 +88,27 @@ const guideHref = localizedPath('/guide/reference/model-selection/');
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
 		<title>{plan.title} | Codex Handbook</title>
 		<meta name="description" content={plan.subtitle} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Codex Handbook" />
+		<meta property="og:title" content={`${plan.title} | Codex Handbook`} />
+		<meta property="og:description" content={plan.subtitle} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta name="twitter:card" content="summary" />
 		<link rel="canonical" href={canonicalUrl} />
 		{
 			languages.map((language) => (
 				<link
 					rel="alternate"
-					hreflang={language.code === 'zh-CN' ? 'zh-Hans' : language.code === 'zh-TW' ? 'zh-Hant' : language.code}
+					hreflang={language.code}
 					href={`https://codexhandbook.com${languageRoutes[language.code]}`}
 				/>
 			))
 		}
 		<link rel="alternate" hreflang="x-default" href="https://codexhandbook.com/chatgpt-pricing/" />
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	</head>
 	<body>
 		<main class="pricing-shell">
@@ -107,7 +147,7 @@ const guideHref = localizedPath('/guide/reference/model-selection/');
             <div lang={initialLanguage}>
             <section class="hero">
                 <div>
-                    <p class="eyebrow">{copy.sourceChecked} · 2026-10-24</p>
+                    <p class="eyebrow">{copy.sourceChecked} · {planCheckedAt}</p>
                     <h1>{plan.title}</h1>
                     <p>{plan.subtitle}</p>
                 </div>
@@ -137,12 +177,12 @@ const guideHref = localizedPath('/guide/reference/model-selection/');
             </section>
             <section class="plan-section" id="official-prices" aria-labelledby="official-heading">
                 <h2 id="official-heading">{plan.official}</h2>
-                <p>{plan.officialNote}</p>
+                <p>{officialNote}</p>
                 <div class="snapshot-table" tabindex="0" role="region" aria-label={plan.official}>
                     <table>
-                        <caption>USD · {plan.month} · 2026-10-24</caption>
+                        <caption>USD · {plan.month} · {planCheckedAt}</caption>
                         <thead><tr><th scope="col">{plan.plan}</th><th scope="col">{plan.monthly}</th><th scope="col">{plan.coverage}</th><th scope="col">{plan.date}</th><th scope="col">{plan.source}</th></tr></thead>
-                        <tbody>{planQuotes.map(quote => <tr><th scope="row">{quote.plan}</th><td>{quote.currency} {quote.amount} / {plan.month}</td><td>{plan.unknown}</td><td><time datetime={quote.checkedAt}>{quote.checkedAt}</time></td><td><a href={quote.source}>{plan.source} ↗</a></td></tr>)}</tbody>
+                        <tbody>{planQuotes.map(quote => <tr><th scope="row">{quote.plan}</th><td>{formatPlanPrice(quote)}</td><td>{plan.unknown}</td><td><time datetime={quote.checkedAt}>{quote.checkedAt}</time></td><td><a href={quote.source}>{plan.source} ↗</a></td></tr>)}</tbody>
                     </table>
                 </div>
             </section>
@@ -176,6 +216,7 @@ const guideHref = localizedPath('/guide/reference/model-selection/');
 		</main>
 
 		<PricingFooter year={currentYear} locale={currentLocale} lang={initialLanguage} />
+		<ConsentManager lang={initialLanguage} />
 
 		<script src="/scripts/chatgpt-pricing.js" defer></script>
 	</body>

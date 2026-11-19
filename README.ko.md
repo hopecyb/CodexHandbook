@@ -140,7 +140,7 @@ Codex Handbook
 
 환경 요구사항:
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 개발 환경 시작:
@@ -162,7 +162,7 @@ pnpm build
 pnpm i18n:status -- --locale ko
 ```
 
-한국어 본문은 `src/content/docs/ko/`(중국어 간체 소스 `src/content/docs/`의 미러)에 있습니다. 용어집: [`glossary/ko.md`](./glossary/ko.md). 2026-07-28 기준 한국어 페이지 커버리지는 **100%**(모두 `translation_status: draft`, 언어·기술 리뷰 대기).
+한국어 본문은 `src/content/docs/ko/`(중국어 간체 소스 `src/content/docs/`의 미러)에 있습니다. 용어집: [`glossary/ko.md`](./glossary/ko.md). 현재 커버리지와 revision 상태는 위 명령으로 확인하세요. 메타데이터의 `reviewed` 또는 `current` 값은 워크플로 신호일 뿐, 원어민이나 기술 검토가 완료되었다는 증거가 아닙니다.
 
 ## 프로젝트 원칙
 

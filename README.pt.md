@@ -140,7 +140,7 @@ Este projeto usa [Astro](https://astro.build/) + [Starlight](https://starlight.a
 
 Requisitos:
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 Iniciar o ambiente de desenvolvimento:
@@ -162,7 +162,7 @@ Acompanhar a cobertura da tradução para português:
 pnpm i18n:status -- --locale pt
 ```
 
-O conteúdo em português está em `src/content/docs/pt/` (espelho da fonte em chinês simplificado). Glossário: [`glossary/pt.md`](./glossary/pt.md). Em 2026-07-28, a cobertura portuguesa é de **100%** (`translation_status: draft`; revisão linguística/técnica pendente).
+O conteúdo em português está em `src/content/docs/pt/` (espelho da fonte em chinês simplificado). Glossário: [`glossary/pt.md`](./glossary/pt.md). Use o comando acima para consultar a cobertura e o estado de revisão atuais. Um valor `reviewed` ou `current` nos metadados é um sinal do fluxo de trabalho, não uma prova de revisão linguística nativa ou técnica.
 
 ## Princípios
 

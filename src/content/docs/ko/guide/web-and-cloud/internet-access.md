@@ -8,7 +8,7 @@ description: 설치 단계와 Agent 단계의 인터넷 접근을 구분하고 �
 locale: ko
 source_locale: zh-CN
 source_revision: "5bbb905"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-09-20"
 sidebar:
   order: 70

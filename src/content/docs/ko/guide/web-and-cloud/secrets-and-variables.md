@@ -4,7 +4,7 @@ description: Cloud setup용 Secret과 채팅 전반에 적용되는 일반 환�
 locale: ko
 source_locale: zh-CN
 source_revision: "78937be"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-09-20
 sidebar:
   order: 30

@@ -4,7 +4,7 @@ description: Suivez une chaîne de décision unique pour comprendre le bac à sa
 locale: fr
 source_locale: zh-CN
 source_revision: '8fa3f8c'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-26
 sidebar:

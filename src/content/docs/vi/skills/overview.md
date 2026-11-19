@@ -9,7 +9,7 @@ description: Dùng SKILL.md để dạy Codex workflow tái sử dụng — vi�
 locale: vi
 source_locale: zh-CN
 source_revision: "3147d2c"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 ---

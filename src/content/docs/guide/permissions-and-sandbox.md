@@ -3,7 +3,7 @@ legacyVerification:
   status: "verified"
   products: "App / CLI / IDE / Cloud"
   basis: "已对照 Codex 当前沙箱、审批与安全说明；本页区分操作系统级执行边界、审批策略、任务约束和人工审查，并单独说明本地与 Cloud 的网络模型。"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: 权限与沙箱
 description: 用一条判断链理解沙箱、审批、网络访问和本地与云端执行边界。
 sidebar:
@@ -44,7 +44,14 @@ Codex 准备执行命令或调用工具时，可以按下面的顺序理解：
 | App / CLI / IDE 的本地任务 | 操作系统级沙箱与当前审批策略 | 本地任务通常不应默认依赖外网；需要时明确批准或配置 | 工作区范围、命令、项目外路径、联网目的 |
 | Cloud 任务 | OpenAI 管理的隔离容器 | 设置阶段可按环境配置联网；Agent 阶段默认关闭网络，除非显式启用 | 仓库、环境配置、允许域名、返回的 diff 与验证证据 |
 
-Cloud 环境中的 secrets 用于设置阶段，并会在 Agent 阶段开始前移除。仍应坚持最小权限，不把无关生产凭据放入任务环境。
+Cloud 环境中的敏感值不是一种统一的生命周期：
+
+| 类型 | Agent/程序看到什么 | 可用阶段 | 主要边界 |
+|---|---|---|---|
+| Environment variable | 环境中的程序可读取原值 | setup 与任务阶段，取决于环境配置 | 只放任务确实需要的值；代码、日志和子进程都可能接触它 |
+| Network secret | Agent 看到 placeholder；代理只在匹配请求中替换真实值 | setup 和任务阶段均可使用 | 仅对允许域名的 HTTPS 请求替换；不支持把原值直接交给程序，也不等于零泄漏风险 |
+
+不要再假设 secret 会在 Agent 开始前一律移除。按用途选择类型，收窄允许域名和端口，避免把无关生产凭据放进任务环境，并检查日志、构建输出和网络目的地。
 
 ## 看到审批请求时，按四步判断
 
@@ -104,3 +111,8 @@ pnpm install
 - **Hooks 可以代替沙箱**：Hook 是额外守护与审计层，不是操作系统强制隔离的替代品。
 
 产品级设置见 [CLI 审批与沙盒](/guide/cli/approvals-and-sandbox/) 和 [桌面 App 设置](/guide/desktop-app/settings/)，任务写法见 [约束与边界](/prompts/constraints-and-boundaries/)。
+
+## 官方依据
+
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environments)
+- [Agent approvals & security](https://learn.chatgpt.com/docs/agent-approvals-security)

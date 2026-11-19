@@ -8,7 +8,7 @@ description: O percurso das tarefas remotas, da ligação ao repositório e do a
 locale: pt
 source_locale: zh-CN
 source_revision: "86fa0ac"
-translation_status: reviewed
+translation_status: stale
 translated_at: "2026-09-20"
 reviewed_at: 2026-10-26
 sidebar:

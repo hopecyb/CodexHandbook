@@ -1,8 +1,8 @@
 ---
 legacyVerification:
   status: "verified"
-  products: "ChatGPT Web / 桌面 App；CLI 与 IDE 用于准备和测试"
-  checkedAt: "2026-08-26"
+  products: "ChatGPT Web / 移动 App / 桌面 App；CLI 与 IDE 用于准备和测试"
+  checkedAt: "2026-11-19"
 title: 定时任务完整指南
 description: 选择独立任务或聊天内任务，配置本地项目、worktree、权限、提示词和复核闭环。
 ---
@@ -22,6 +22,7 @@ description: 选择独立任务或聊天内任务，配置本地项目、worktre
 | 表面 | 能做什么 | 关键限制 |
 |---|---|---|
 | ChatGPT Web | 创建、管理、查看运行；使用上传文件、连接工具、Skills、Plugins | 不能直接访问本机文件夹 |
+| ChatGPT 移动 App | 创建、管理和查看账号已开放的时间或 App 事件任务 | 不访问本机项目目录；事件类型取决于已连接 App 和账号资格 |
 | ChatGPT 桌面 App | 创建、管理；可选本地项目或 Git worktree | 本地文件任务需要机器开机、App 运行、项目存在 |
 | Codex CLI | 准备和手动测试提示词、Skill、脚本 | 没有 Scheduled 管理界面 |
 | IDE 扩展 | 在工作区验证命令和修改 | 没有 Scheduled 管理界面 |
@@ -116,9 +117,11 @@ Git 仓库可以选择：
 
 聊天内轮询还要写终止条件，例如“PR 合并、关闭、连续 3 次相同错误或需要人工审批时停止”。
 
-## Scheduled task 不是事件驱动 CI
+## 时间任务、App 事件与 CI 要分开
 
-如果任务必须在 `push`、PR 创建、发布完成等仓库事件发生后立即运行，应使用 GitHub Actions、CI、webhook 或 Codex SDK 等事件入口。不要把“每分钟轮询”当成精确事件触发器。
+当前 Automations 已能在符合资格的账号上响应一组受支持 App 事件，包括 GitHub 的 PR review、comment、commit update、merge，以及 Gmail、Slack 等连接器事件。可用事件必须以创建任务时的连接器菜单为准。
+
+它仍不是任意 webhook：如果任务必须响应未列出的 `push`、自定义系统事件或发布流水线，应使用 GitHub Actions、CI、webhook 或 Codex SDK。不要把“每分钟轮询”当成精确事件触发器。
 
 ## 验收清单
 
@@ -134,4 +137,5 @@ Git 仓库可以选择：
 ## 官方来源
 
 - [OpenAI：Scheduled tasks](https://learn.chatgpt.com/docs/automations)
-- [OpenAI：Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
+- [OpenAI：What’s new](https://learn.chatgpt.com/docs/whats-new)
+- [OpenAI：Sandboxing](https://learn.chatgpt.com/docs/sandboxing)

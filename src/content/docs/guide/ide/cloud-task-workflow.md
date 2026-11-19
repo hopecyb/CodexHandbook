@@ -2,7 +2,7 @@
 legacyVerification:
   status: "verified"
   products: "IDE、Cloud"
-  checkedAt: "2026-08-26"
+  checkedAt: "2026-11-19"
 title: IDE 中的云端任务
 description: 从 IDE 把长任务委托给 Codex Cloud，并回到可审查结果。
 sidebar:
@@ -16,11 +16,11 @@ IDE 可以把快速迭代留在本地，也可以连接 Codex web，把耗时更
 | 留在本地 | 委托到 Cloud |
 |---|---|
 | 需要和当前选区快速来回修改 | 任务步骤多、运行时间长 |
-| 依赖尚未提交的本地状态 | 输入已经在远程仓库或可上传 |
+| 需要立即在本机验证、且不希望上传当前改动 | 输入已经在远程仓库，或已确认可随 IDE handoff 上传 |
 | 必须访问本机专用工具 | 云环境可重建依赖与验证 |
 | 你需要实时操作进程 | 你希望本地继续做其他工作 |
 
-云端不会自动拥有你本机尚未提交的文件、凭据或运行进程。委托前必须明确任务从哪个仓库、分支与提交开始。
+要先区分入口：从 Web/远程仓库直接创建的任务，以所选仓库、分支或提交为起点，不会自动读取本机文件；从 IDE 使用 Cloud handoff 时，当前对话上下文会随委托传递，**其中可以包含本地源码改动**。运行中的本机进程不会随之迁移。委托前先检查 diff、未跟踪文件和上下文，确认哪些内容可以上传；任何凭据都不要放进文件、diff 或提示词。
 
 ## 委托前清单
 
@@ -28,7 +28,7 @@ IDE 可以把快速迭代留在本地，也可以连接 Codex web，把耗时更
 - [ ] 已连接 GitHub，或正在使用当前支持的 GitLab Beta 集成
 - [ ] 云环境能执行安装和验证脚本
 - [ ] 必要变量与 secrets 已在环境中配置，没有写进提示词
-- [ ] 本地未提交改动已处理，或明确不包含在任务中
+- [ ] 已检查本地 diff、未跟踪文件与对话上下文，并确认允许随 handoff 上传的内容
 - [ ] 目标、允许路径、禁区和验收命令已经写清
 
 ## 端到端示例
@@ -65,3 +65,4 @@ IDE 可以把快速迭代留在本地，也可以连接 Codex web，把耗时更
 
 - [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 - [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Prompting：IDE 到 Cloud 的上下文传递](https://learn.chatgpt.com/docs/prompting)

@@ -4,7 +4,7 @@ description: CLI에서 shell·디스크 쓰기·네트워크 요청의 승인 �
 locale: ko
 source_locale: zh-CN
 source_revision: '35afd39'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: '2026-10-26'
 sidebar:

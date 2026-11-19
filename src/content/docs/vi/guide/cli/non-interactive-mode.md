@@ -9,7 +9,7 @@ description: Tích hợp codex exec vào script và pipeline, phù hợp với C
 locale: vi
 source_locale: zh-CN
 source_revision: "1f37961"
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-10-26
 translated_at: 2026-09-20
 sidebar:

@@ -144,7 +144,7 @@ Codex Handbook
 
 环境要求：
 
-- Node.js `>=22.12.0`
+- Node.js `>=22.23.4`
 - `pnpm`
 
 启动开发环境：

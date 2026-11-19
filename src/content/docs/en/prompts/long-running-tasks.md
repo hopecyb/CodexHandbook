@@ -9,7 +9,7 @@ description: Phases, checkpoints, and handoff information.
 locale: en
 source_locale: zh-CN
 source_revision: '450ed9d'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-26
 reviewed_at: 2026-10-25
 ---

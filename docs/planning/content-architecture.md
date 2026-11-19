@@ -70,11 +70,22 @@
 | 模板与实例 | 提供可复制材料 | 代替原理讲解 |
 | 参考资料 | 提供短、准、可搜索的信息 | 承担连续教学 |
 
-## 公开网站结构
+## 5. 公开网站结构
 
-公开网站采用四个一级模块：Codex 指南、提示词、Skills、实战案例。旧的编号型结构作为内容素材池和内部维护视图，不再作为公开一级导航。
+公开网站由七个 Starlight 内容模块和一组独立页面组成：
 
-## 5. 仓库结构
+- `guide/`：产品入口、能力、工作流、参考与贡献指南
+- `prompts/`：提示词方法和模板
+- `skills/`：Skills、Hooks、自动化及相关治理
+- `cases/`：端到端案例
+- `ai-roadmap/`：AI 工程主题路线图
+- `pets/`：Pets 使用说明
+- `theme/`：站点主题说明
+- 独立页面：ChatGPT/Codex 定价、联系、隐私政策和使用条款
+
+中文和 zh-TW 顶栏采用任务型入口；正文侧栏由上述内容目录自动生成。旧路径只通过 `astro.config.mjs` 的重定向保留，不再作为内容源目录。
+
+## 6. 仓库结构
 
 ```text
 codex-handbook/
@@ -86,53 +97,53 @@ codex-handbook/
 ├── public/
 ├── src/
 │   ├── content.config.ts
-│   └── content/docs/           # 手册正文（简体中文为 root 语言）
-│       ├── 00-start-here/
-│       ├── 01-foundations/
-│       └── ...
+│   ├── content/docs/           # Starlight 正文，简体中文为 root 语言
+│   │   ├── guide/
+│   │   ├── prompts/
+│   │   ├── skills/
+│   │   ├── cases/
+│   │   ├── ai-roadmap/
+│   │   ├── pets/
+│   │   ├── theme/
+│   │   └── <locale>/           # 10 个跟踪译文；zh-tw 为生成物
+│   ├── pages/                  # 定价、联系、隐私、条款
+│   ├── components/
+│   └── data/                   # 定价与多语言界面文案
+├── scripts/                    # 构建、i18n、链接和仓库检查
 ├── docs/
 │   ├── planning/
-│   └── superpowers/specs/
+│   └── visual-sources/
 ├── examples/
 │   ├── prompts/
 │   ├── skills/
-│   ├── configurations/
+│   ├── hooks/
 │   └── complete-workflows/
-├── templates/
-├── assets/
-├── glossary/
-└── meta/
+└── glossary/
 ```
 
-手册正文位于 `src/content/docs/`。简体中文为 root 语言，路径如 `00-start-here/`；其他语言使用同构子目录，如 `en/00-start-here/`、`zh-tw/00-start-here/`。
+手册正文位于 `src/content/docs/`。简体中文为 root 语言，例如 `guide/start-here/`；其他语言使用同构子目录，例如 `en/guide/start-here/`。zh-TW 不提交到 Git，由 `scripts/generate-zh-tw.mjs` 在开发和构建前从 zh-CN 生成。
 
-每个章节目录的首页文件名为 `index.md`（Starlight 约定），不是 `README.md`。页面相对路径去掉扩展名即为临时页面 ID，例如 `05-core-capabilities/prompting/prompt-basics`。
+每个章节目录的首页文件名为 `index.md` 或 `index.mdx`，不是 `README.md`。页面相对路径去掉扩展名即为页面 ID，例如 `guide/prompting/prompt-basics`。
 
-这里只定义目标结构。未开始建设的目录不创建空占位文件。
+定价与法律页不是 content collection；它们分别由 `src/data/`、`src/pages/` 和共享布局维护。
 
-## 6. 每种语言的同构目录
+## 7. 每种语言的同构目录
 
 ```text
 src/content/docs/[<locale>/]
-├── 00-start-here/
-├── 01-foundations/
-├── 02-getting-started/
-├── 03-learning-paths/
-├── 04-product-guides/
-├── 05-core-capabilities/
-├── 06-customization/
-├── 07-extensions-automation/
-├── 08-developer-platform/
-├── 09-workflows/
-├── 10-use-cases/
-├── 11-team-enterprise/
-├── 12-reference/
-└── 13-contributing/
+├── guide/
+├── prompts/
+├── skills/
+├── cases/
+├── ai-roadmap/
+├── pets/
+├── theme/
+└── index.mdx
 ```
 
 所有语言使用相同英文路径、文件名和页面 ID。标题与正文翻译，路径不翻译，以保证链接稳定、合并简单、工具可处理。
 
-## 7. 导航入口
+## 8. 导航入口
 
 每种语言至少提供以下入口：
 
@@ -143,7 +154,7 @@ src/content/docs/[<locale>/]
 - 按能力：提示词、上下文、Skills、Plugins、MCP、Hooks、多 Agent
 - 按难度：入门、引导实践、实战、高级、团队
 
-## 8. 去重规则
+## 9. 去重规则
 
 1. 一个概念只能有一个权威解释页。
 2. 产品差异写在产品手册，通用原理写在能力专题。
@@ -152,7 +163,7 @@ src/content/docs/[<locale>/]
 5. 多个场景共享的提示词模式只保留一份模板。
 6. 页面拆分依据是独立阅读目标，不以篇幅作为唯一标准。
 
-## 9. 页面状态
+## 10. 页面状态
 
 | 状态 | 含义 |
 |---|---|

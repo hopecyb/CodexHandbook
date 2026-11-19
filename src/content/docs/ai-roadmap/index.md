@@ -5,11 +5,31 @@ next:
   link: /ai-roadmap/timeline/
   label: 事件与主题索引
 description: 区分论文、产品发布、工程文章和作者学习建议，并从每个主题进入实践。
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-19"
+  summary: 路线图事件仍按一手来源组织；另增当前产品变化入口，避免把主题史误作产品更新日志。
+  evidence:
+    - label: OpenAI Changelog
+      href: https://learn.chatgpt.com/docs/changelog
+    - label: OpenAI What's new
+      href: https://learn.chatgpt.com/docs/whats-new
 ---
 
 这张地图把可核对的公开事件与学习建议分开。**日期只指表中列出的论文、公告或文章，不自动代表概念诞生、行业普及或能力成熟。** 不同技术可以同时使用，时间先后也不是必须依次升级的学习顺序。
 
 每个主题页提供一手来源、适用边界和站内练习。来源核对不等于软件实跑；原有 URL 保留，其中的年月可能与修订后的事件日期不同，请以正文为准。
+
+## 当前产品变化入口
+
+本页是主题与公开事件路线图，**不是 2026 年产品更新日志**。截至 2026-11-19，当前产品还包括 GPT‑6.2 Sol/Astra、Hooks GA、受支持 App 事件触发的 Automations/Team Tasks、Record & Replay、Appshots、浏览器 annotations 与移动远程等能力。它们的套餐、地区、客户端和成熟度不同，不能只凭本路线图判断账号是否可用。
+
+- 模型选择：[ChatGPT 与 Codex 模型怎么选](/guide/reference/model-selection/)
+- 自动化：[Scheduled tasks](/skills/automations/)
+- 官方动态：[Changelog](https://learn.chatgpt.com/docs/changelog) · [What’s new](https://learn.chatgpt.com/docs/whats-new)
+- 新能力官方页：[Hooks](https://learn.chatgpt.com/docs/hooks) · [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay) · [Appshots](https://learn.chatgpt.com/docs/appshots)
+
+产品事实应按上面的带日期入口核对；下面的时间线继续只承担主题史与学习导航。
 
 ![AI 应用工程路线图：按时间倒序列出 Harness Engineering、Skills、上下文工程、多智能体协作、工具使用、MCP、函数调用、提示词工程和 RAG，日期与下表一致](/illustrations/roadmap-ai-application.webp)
 

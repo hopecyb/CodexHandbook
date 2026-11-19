@@ -9,7 +9,7 @@ description: При недостатке информации задавайте
 locale: ru
 source_locale: zh-CN
 source_revision: '839ce22'
-translation_status: reviewed
+translation_status: stale
 reviewed_at: 2026-11-19
 translated_at: 2026-11-19
 sidebar:

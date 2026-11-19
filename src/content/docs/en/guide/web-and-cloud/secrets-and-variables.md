@@ -8,7 +8,7 @@ description: Choose correctly between Cloud setup Secrets and ordinary variables
 locale: en
 source_locale: zh-CN
 source_revision: '78937be'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:

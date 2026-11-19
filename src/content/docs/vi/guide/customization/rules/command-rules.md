@@ -5,7 +5,7 @@ description: Dùng allow/deny cấp lệnh để ràng buộc shell và gọi c�
 locale: vi
 source_locale: zh-CN
 source_revision: "fdb8651"
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-07-28
 reviewed_at: 2026-10-26
 sidebar:

@@ -8,7 +8,7 @@ description: Configure GitHub access for Codex Cloud with the smallest repositor
 locale: en
 source_locale: zh-CN
 source_revision: 'b126a7e'
-translation_status: reviewed
+translation_status: stale
 translated_at: 2026-08-26
 reviewed_at: 2026-10-25
 sidebar:
