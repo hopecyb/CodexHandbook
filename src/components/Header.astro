@@ -96,7 +96,10 @@ const isResourcesActive = resourceNavItems.some((item) => isActive(item.prefix))
 		}
 		{
 			capabilityNavItems.length > 0 && (
-				<details class:list={{ 'more-menu': true, 'is-active': isCapabilitiesActive }}>
+				<details
+					name="desktop-header-menu"
+					class:list={{ 'more-menu': true, 'is-active': isCapabilitiesActive }}
+				>
 					<summary>
 						<span>{pickLabel(uiLabels.capabilities, lang)}</span>
 						<Icon name="down-caret" aria-hidden="true" />
@@ -126,7 +129,10 @@ const isResourcesActive = resourceNavItems.some((item) => isActive(item.prefix))
 		}
 		{
 			resourceNavItems.length > 0 && (
-				<details class:list={{ 'more-menu': true, 'is-active': isResourcesActive }}>
+				<details
+					name="desktop-header-menu"
+					class:list={{ 'more-menu': true, 'is-active': isResourcesActive }}
+				>
 					<summary>
 						<span>{pickLabel(uiLabels.resources, lang)}</span>
 						<Icon name="down-caret" aria-hidden="true" />
