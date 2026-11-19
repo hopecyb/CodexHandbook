@@ -1,0 +1,127 @@
+---
+title: คู่มือภาคปฏิบัติ Codex / AI Agent
+head:
+  - tag: title
+    content: คู่มือภาคปฏิบัติ Codex / AI Agent
+description: คู่มือภาคปฏิบัติ AI Agent ที่มี Codex เป็นแกนหลัก ช่วยให้บุคคล ครีเอเตอร์ นักพัฒนา และทีมเปลี่ยนความร่วมมือที่สำเร็จหนึ่งครั้งให้เป็นวิธีทำงานที่นำกลับมาใช้ซ้ำ ตรวจสอบ และส่งต่องานได้
+template: splash
+editUrl: false
+lastUpdated: false
+locale: th
+source_locale: zh-CN
+source_revision: '75dd87a'
+translation_status: reviewed
+translated_at: 2026-11-19
+reviewed_at: 2026-11-19
+hero:
+  title: ใช้ Codex <br /> เปลี่ยนความร่วมมือที่สำเร็จ<wbr />ให้เป็นวิธีที่ใช้ซ้ำได้
+  tagline: คู่มือภาคปฏิบัติ AI Agent ที่มี Codex เป็นแกนหลัก ตั้งแต่เขียนโจทย์ให้ชัด ลงมือทำ ตรวจสอบ ทบทวน ไปจนถึงส่งต่องาน เพื่อเปลี่ยนไอเดียให้เป็นผลลัพธ์ที่เชื่อถือได้อย่างสม่ำเสมอ
+  image:
+    html: |
+      <div class="home-hero-art" aria-hidden="true">
+        <span class="home-hero-art__halo"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--back"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--mid"></span>
+        <span class="home-hero-art__shelf"></span>
+        <div class="home-hero-art__book">
+          <img src="/icon-512.png" alt="" />
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--guide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--check">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  actions:
+    - text: ทำรายงานประจำสัปดาห์ที่ตรวจสอบย้อนกลับได้
+      icon: right-arrow
+      link: /th/cases/analyze-a-spreadsheet/
+    - text: เริ่มต้นที่นี่
+      variant: secondary
+      link: /th/guide/start-here/
+---
+
+import AboutHandbook from '../../../components/AboutHandbook.astro';
+
+<section class="home-section" aria-labelledby="tasks-heading">
+	<div class="section-heading">
+		<p>เลือกหนึ่งงาน แล้วรับผลลัพธ์กลับไป</p>
+		<h2 id="tasks-heading">วันนี้อยากทำอะไรให้เสร็จ?</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/th/cases/analyze-a-spreadsheet/"><img src="/illustrations/home-weekly-report.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>ทำรายงานยอดขายประจำสัปดาห์</strong>
+			<span>มีชุดสื่อครบ · สคริปต์อ้างอิงผ่านการรันจริงแล้ว ฝึกจัดการเงินคืน ข้อมูลซ้ำ และการเทียบรอบด้วยข้อมูลสังเคราะห์ 46 แถว พร้อมส่งมอบรายงานประจำสัปดาห์และบันทึกตรวจสอบยอด</span>
+		</a>
+		<a class="path-card" href="/th/cases/use-cases/software-development/fix-a-bug-with-verification/"><img src="/illustrations/home-bug-fix.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>แก้บั๊กและทำให้การทดสอบผ่าน</strong>
+			<span>แบบฝึกหัดครบชุด · มีบันทึกการตรวจสอบย้อนหลัง เริ่มจากการทดสอบที่ล้มเหลว แล้วส่งมอบการแก้ไขที่เล็กที่สุด ผลการทดสอบถดถอย และบันทึก Review</span>
+		</a>
+		<a class="path-card" href="/th/cases/write-an-article/"><img src="/illustrations/home-article.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>เขียนบทความ</strong>
+			<span>มีชุดสื่อครบ · ผู้เขียนตรวจสอบแหล่งที่มาด้วยตนเอง ฝึกอ้างอิงข้อเท็จจริง จัดการความขัดแย้งระหว่างเวอร์ชัน และแก้ไขต้นฉบับด้วยข้อมูลสังเคราะห์สามชุด พร้อมส่งมอบบทความและตารางข้อเท็จจริง</span>
+		</a>
+	</div>
+	<p>ผลลัพธ์อ้างอิงของรายงานประจำสัปดาห์: ยอดสุทธิ <strong>4,644.75 หยวน</strong> พร้อมคำอธิบายเงินคืนและรายการผิดปกติ <a href="/downloads/sales-weekly-report/summary.md">ดูรายงานอ้างอิง</a> · <a href="/downloads/sales-weekly-report/sales-weekly-report-1.0.0.zip">ดาวน์โหลดชุดสื่อทั้งหมด</a> ตัวเลขมาจากข้อมูลสังเคราะห์เพื่อการเรียนการสอน คาดว่าใช้เวลาฝึก 30–45 นาที และยังไม่ได้จับเวลาจากผู้อ่านจริง</p>
+	<p><a href="/th/cases/">ดูกรณีศึกษาและสถานะสื่อตามงาน</a> · <a href="/th/guide/learning-paths/">เรียนตามบทบาท</a> · <a href="/th/guide/reference/">ค้นคู่มืออ้างอิง</a></p>
+</section>
+
+<section class="home-section" aria-labelledby="paths-heading">
+	<div class="section-heading">
+		<p>เลือกเส้นทางของคุณ</p>
+		<h2 id="paths-heading">เริ่มจากเป้าหมายของคุณ</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/th/guide/learning-paths/beginner/01-talk-to-codex/"><img src="/illustrations/home-path-beginner.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>ผู้เริ่มต้น</strong>
+			<span>ใช้ชุดสื่อดาวน์โหลดเดียวกันเพื่อทำประกาศกิจกรรม ตรวจทานข้อผิดพลาด และกู้คืนสำเนา ไม่ต้องเขียนโปรแกรม และทุกขั้นตอนมีเกณฑ์การยอมรับ</span>
+		</a>
+		<a class="path-card" href="/th/guide/learning-paths/creator/"><img src="/illustrations/home-path-creator.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>ครีเอเตอร์</strong>
+			<span>ใช้ข้อมูลชุดเดียวทำตารางข้อเท็จจริง บทความ และสไลด์แปดหน้า จากนั้นบันทึกคำสั่งงานที่นำกลับมาใช้ซ้ำได้ มีชุดสื่อดาวน์โหลดและเกณฑ์ตรวจรับทีละขั้น</span>
+		</a>
+		<a class="path-card" href="/th/guide/learning-paths/developer/"><img src="/illustrations/home-path-developer.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>นักพัฒนา</strong>
+			<span>ทำความเข้าใจบั๊กในตะกร้าสินค้า บันทึกการทดสอบสถานะแดงและเขียว Review การแก้ไขที่เล็กที่สุด แล้วเขียนบันทึกส่งต่องาน พร้อมเทมเพลตกรอกข้อมูลสามชุด</span>
+		</a>
+		<a class="path-card" href="/th/guide/learning-paths/team/"><img src="/illustrations/home-path-team.webp" alt="" width="960" height="540" loading="lazy" decoding="async" />
+			<strong>ทีม</strong>
+			<span>ทำโครงการนำร่องขนาดเล็ก สุ่มตรวจ และซ้อมย้อนกลับภายในสิบวันทำการ ก่อนตัดสินใจว่าจะขยายผลหรือไม่ พร้อมเทมเพลตกรอกข้อมูลหกชุด</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="lookup-heading">
+	<div class="section-heading"><p>มีปัญหาอะไร ค้นได้ทันที</p><h2 id="lookup-heading">หาขั้นตอนถัดไป</h2></div>
+	<div class="path-grid">
+		<a class="path-card" href="/th/guide/reference/model-selection/"><strong>เลือกโมเดลและดูแพ็กเกจ</strong><span>เลือกจุดเริ่มต้นตามงานสนทนา งานเขียน สเปรดชีต หรือการเขียนโปรแกรม แล้วตรวจสอบแพ็กเกจกับการใช้งานจริง</span></a>
+		<a class="path-card" href="/th/guide/reference/troubleshooting/"><strong>ติดตั้ง เข้าสู่ระบบ หรือรันไม่สำเร็จ</strong><span>ค้นจุดเริ่มแก้ปัญหาตามอาการ หรือทำแบบฝึกกู้คืนที่มีบันทึก log ไปทีละขั้น</span></a>
+		<a class="path-card" href="/th/guide/reference/"><strong>ค้นคำสั่ง สิทธิ์ และคำศัพท์</strong><span>เปิดสารบัญอ้างอิงเพื่อตรวจสอบขอบเขตการใช้งานและแหล่งที่มา</span></a>
+		<a class="path-card" href="/th/guide/quality/"><strong>ตัดสินว่าผลลัพธ์เสร็จสมบูรณ์หรือยัง</strong><span>ตรวจข้อเท็จจริง ไฟล์ และหลักฐานการทดสอบ พร้อมเก็บรายการที่ยังไม่ได้ยืนยันไว้</span></a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>รับสินทรัพย์ที่นำกลับมาใช้ซ้ำได้</p>
+		<h2 id="assets-heading">อ่านจบแล้วไม่เพียงรู้ว่า “ทำอย่างไร” แต่เริ่มลงมือได้ทันที</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/th/prompts/templates/"><strong>เทมเพลตพรอมต์สำหรับงาน</strong><span>นำกลับมาใช้ซ้ำตามประเภทงาน เช่น ทำความเข้าใจ วิจัย สร้าง แก้ไข วินิจฉัย และทำงานอัตโนมัติ</span></a>
+		<a class="path-card" href="/th/skills/examples/"><strong>ตัวอย่าง Skill</strong><span>เริ่มจากตัวอย่างที่อ่านง่าย แล้วดูอินพุต เอาต์พุต ขอบเขต และวิธีทดสอบ</span></a>
+		<a class="path-card" href="/th/cases/use-cases/case-study-template/"><strong>เทมเพลตทบทวนกรณีศึกษา</strong><span>บันทึกเป้าหมาย การดำเนินงาน การตรวจโดยมนุษย์ วิธีตรวจสอบ การรับมือความล้มเหลว และสิ่งที่จะปรับปรุงครั้งถัดไป</span></a>
+		<a class="path-card" href="/th/guide/quality/"><strong>รายการตรวจรับ</strong><span>เปลี่ยนจาก “ดูเหมือนเสร็จแล้ว” ให้เป็นผลลัพธ์ที่ตรวจซ้ำ ย้อนกลับ และส่งต่องานได้</span></a>
+	</div>
+</section>
+
+<AboutHandbook title="แหล่งที่มา การอัปเดต และการร่วมพัฒนา">
+
+คู่มือนี้ดูแลโดยผู้ร่วมพัฒนาโอเพนซอร์ส และใช้ภาษาจีนตัวย่อเป็นภาษาต้นฉบับ คำอธิบายผลิตภัณฑ์ สื่อการสอนที่ผู้เขียนออกแบบ และบันทึกการรันจริงจะแยกกำกับไว้อย่างชัดเจน การที่สคริปต์รันผ่านไม่ได้พิสูจน์ประสิทธิภาพของโมเดลหรือยืนยันว่าผู้อ่านจะทำแบบฝึกหัดสำเร็จ โปรดดูขอบเขตการตรวจสอบในบันทึกของแต่ละหน้า
+
+[การอัปเดตเนื้อหา](/th/guide/updates/) · [เวอร์ชันและวิธีตรวจสอบ](/th/guide/start-here/handbook-version-policy/) · [ร่วมพัฒนา](/th/guide/contributing/)
+
+</AboutHandbook>

@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const docsRoot = path.join(root, 'src/content/docs');
-const supportedLocales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko'];
+const supportedLocales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko', 'th', 'ru'];
 const localeIndex = process.argv.indexOf('--locale');
 const summaryOnly = process.argv.includes('--summary');
 const allPages = process.argv.includes('--all');

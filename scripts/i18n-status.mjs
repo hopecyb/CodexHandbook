@@ -34,6 +34,8 @@ const CONTENT_LOCALE_PREFIXES = new Set([
 	'de',
 	'pt',
 	'vi',
+	'th',
+	'ru',
 ]);
 
 function walk(dir, files = []) {

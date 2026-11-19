@@ -23,21 +23,23 @@ const LANGS: { code: SiteLang; label: string; prefix: string }[] = [
 	{ code: 'de', label: 'Deutsch', prefix: '/de' },
 	{ code: 'pt', label: 'Português', prefix: '/pt' },
 	{ code: 'vi', label: 'Tiếng Việt', prefix: '/vi' },
+	{ code: 'th', label: 'ไทย', prefix: '/th' },
+	{ code: 'ru', label: 'Русский', prefix: '/ru' },
 ];
 const prefix = LANGS.find((item) => item.code === lang)?.prefix ?? '';
 const homeHref = `${prefix}/`;
 const slug = Astro.url.pathname.replace(/\/+$/, '').split('/').pop() ?? '';
 const langOptions = LANGS.map((item) => ({ ...item, href: `${item.prefix}/${slug}/` }));
 const ui: Record<'search' | 'searchPlaceholder' | 'noResults' | 'language' | 'theme' | 'themeDark' | 'themeLight' | 'themeAuto' | 'menu', Partial<Record<SiteLang, string>> & { en: string }> = {
-	search: { 'zh-CN': '搜索', 'zh-TW': '搜尋', en: 'Search', fr: 'Rechercher', ja: '検索', ko: '검색', es: 'Buscar', de: 'Suchen', pt: 'Pesquisar', vi: 'Tìm kiếm' },
-	searchPlaceholder: { 'zh-CN': '搜索手册内容', 'zh-TW': '搜尋手冊內容', en: 'Search the handbook', fr: 'Rechercher dans le manuel', ja: 'ハンドブックを検索', ko: '핸드북 검색', es: 'Buscar en el manual', de: 'Im Handbuch suchen', pt: 'Pesquisar no manual', vi: 'Tìm trong sổ tay' },
-	noResults: { 'zh-CN': '没有找到相关内容', 'zh-TW': '沒有找到相關內容', en: 'No results found', fr: 'Aucun résultat', ja: '結果が見つかりません', ko: '결과가 없습니다', es: 'Sin resultados', de: 'Keine Ergebnisse', pt: 'Nenhum resultado', vi: 'Không có kết quả' },
-	language: { 'zh-CN': '选择语言', 'zh-TW': '選擇語言', en: 'Select language', fr: 'Choisir la langue', ja: '言語を選択', ko: '언어 선택', es: 'Seleccionar idioma', de: 'Sprache wählen', pt: 'Selecionar idioma', vi: 'Chọn ngôn ngữ' },
-	themeDark: { 'zh-CN': '深色', 'zh-TW': '深色', en: 'Dark', fr: 'Sombre', ja: 'ダーク', ko: '다크', es: 'Oscuro', de: 'Dunkel', pt: 'Escuro', vi: 'Tối' },
-	themeLight: { 'zh-CN': '浅色', 'zh-TW': '淺色', en: 'Light', fr: 'Clair', ja: 'ライト', ko: '라이트', es: 'Claro', de: 'Hell', pt: 'Claro', vi: 'Sáng' },
-	themeAuto: { 'zh-CN': '自动', 'zh-TW': '自動', en: 'Auto', fr: 'Auto', ja: '自動', ko: '자동', es: 'Auto', de: 'Auto', pt: 'Auto', vi: 'Tự động' },
-	theme: { 'zh-CN': '切换主题', 'zh-TW': '切換主題', en: 'Toggle theme', fr: 'Changer de thème', ja: 'テーマを切り替え', ko: '테마 전환', es: 'Cambiar tema', de: 'Design wechseln', pt: 'Alternar tema', vi: 'Đổi giao diện' },
-	menu: { 'zh-CN': '页面导航', 'zh-TW': '頁面導覽', en: 'Page navigation', fr: 'Navigation', ja: 'ページナビ', ko: '페이지 탐색', es: 'Navegación', de: 'Seitennavigation', pt: 'Navegação', vi: 'Điều hướng' },
+	search: { 'zh-CN': '搜索', 'zh-TW': '搜尋', en: 'Search', fr: 'Rechercher', ja: '検索', ko: '검색', es: 'Buscar', de: 'Suchen', pt: 'Pesquisar', vi: 'Tìm kiếm', th: 'ค้นหา', ru: 'Поиск' },
+	searchPlaceholder: { 'zh-CN': '搜索手册内容', 'zh-TW': '搜尋手冊內容', en: 'Search the handbook', fr: 'Rechercher dans le manuel', ja: 'ハンドブックを検索', ko: '핸드북 검색', es: 'Buscar en el manual', de: 'Im Handbuch suchen', pt: 'Pesquisar no manual', vi: 'Tìm trong sổ tay', th: 'ค้นหาในคู่มือ', ru: 'Поиск по руководству' },
+	noResults: { 'zh-CN': '没有找到相关内容', 'zh-TW': '沒有找到相關內容', en: 'No results found', fr: 'Aucun résultat', ja: '結果が見つかりません', ko: '결과가 없습니다', es: 'Sin resultados', de: 'Keine Ergebnisse', pt: 'Nenhum resultado', vi: 'Không có kết quả', th: 'ไม่พบผลลัพธ์', ru: 'Ничего не найдено' },
+	language: { 'zh-CN': '选择语言', 'zh-TW': '選擇語言', en: 'Select language', fr: 'Choisir la langue', ja: '言語を選択', ko: '언어 선택', es: 'Seleccionar idioma', de: 'Sprache wählen', pt: 'Selecionar idioma', vi: 'Chọn ngôn ngữ', th: 'เลือกภาษา', ru: 'Выбрать язык' },
+	themeDark: { 'zh-CN': '深色', 'zh-TW': '深色', en: 'Dark', fr: 'Sombre', ja: 'ダーク', ko: '다크', es: 'Oscuro', de: 'Dunkel', pt: 'Escuro', vi: 'Tối', th: 'มืด', ru: 'Тёмная' },
+	themeLight: { 'zh-CN': '浅色', 'zh-TW': '淺色', en: 'Light', fr: 'Clair', ja: 'ライト', ko: '라이트', es: 'Claro', de: 'Hell', pt: 'Claro', vi: 'Sáng', th: 'สว่าง', ru: 'Светлая' },
+	themeAuto: { 'zh-CN': '自动', 'zh-TW': '自動', en: 'Auto', fr: 'Auto', ja: '自動', ko: '자동', es: 'Auto', de: 'Auto', pt: 'Auto', vi: 'Tự động', th: 'อัตโนมัติ', ru: 'Авто' },
+	theme: { 'zh-CN': '切换主题', 'zh-TW': '切換主題', en: 'Toggle theme', fr: 'Changer de thème', ja: 'テーマを切り替え', ko: '테마 전환', es: 'Cambiar tema', de: 'Design wechseln', pt: 'Alternar tema', vi: 'Đổi giao diện', th: 'เปลี่ยนธีม', ru: 'Переключить тему' },
+	menu: { 'zh-CN': '页面导航', 'zh-TW': '頁面導覽', en: 'Page navigation', fr: 'Navigation', ja: 'ページナビ', ko: '페이지 탐색', es: 'Navegación', de: 'Seitennavigation', pt: 'Navegação', vi: 'Điều hướng', th: 'การนำทางในหน้า', ru: 'Навигация по странице' },
 };
 const t = (key: keyof typeof ui) => ui[key][lang] ?? ui[key].en;
 const brand = pickLabel(footerBrand.name, lang);

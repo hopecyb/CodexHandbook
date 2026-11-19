@@ -3,6 +3,20 @@ legacyVerification:
   status: "verified"
   products: "使用本地 Codex host 的环境；CLI 提供 `/hooks` 信任管理"
   checkedAt: "2026-08-25"
+editorialStatus: review
+verification:
+  kind: source-checked
+  checkedAt: "2026-11-18"
+  summary: 已对照 OpenAI Hooks 文档与 HOL Guard 3.x 的公开源码、许可证和 Codex 集成文档核对；第三方工具部分仅为来源核对，本站未安装或独立实测其拦截效果。
+  evidence:
+    - label: OpenAI Hooks 文档
+      href: https://learn.chatgpt.com/docs/hooks
+    - label: HOL Guard 源码与 Apache-2.0 许可证
+      href: https://github.com/hashgraph-online/hol-guard
+    - label: HOL Guard 的 Codex 3.x 集成说明
+      href: https://hol.org/guard/docs/guard/codex-harness
+    - label: HOL Guard 本地版与 Cloud 边界
+      href: https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/local-vs-cloud.md
 title: Hooks 概述
 description: 理解 Hook 的配置发现、信任审查、处理器与安全边界。
 ---
@@ -68,6 +82,12 @@ Hook 的工具覆盖不是完整安全边界。官方文档明确指出，某些
 2. 对高置信问题用 `systemMessage` 或附加上下文提醒。
 3. 只有规则确定、脚本有 fixture、误报可接受时才在 `PreToolUse` 阻断。
 4. 把 Hook 与 CI、预提交检查和服务端权限对齐，避免三套互相矛盾的政策。
+
+## 第三方工具参考
+
+如果不想从零编写守护脚本，可以把 [HOL Guard](https://github.com/hashgraph-online/hol-guard) 作为候选方案评估。它是 Apache-2.0 许可的第三方开源项目；其 [Codex 3.x 集成说明](https://hol.org/guard/docs/guard/codex-harness)显示，安装程序会注册 `PreToolUse`、`PermissionRequest` 等 Hook，并通过启动 shim 和部分 MCP 代理，对支持路径中的 shell 命令、敏感读取、MCP 调用和软件包操作按本地策略拒绝、提示或转交人工审批，而不是一律暂停等待确认。Guard Cloud 是另行提供的可选付费服务，本地保护不要求登录 Cloud。
+
+这不是 OpenAI 官方工具，本站也没有独立实测其拦截率或安全性。试用前先运行 `hol-guard install codex --dry-run`，检查它对 `~/.codex/config.toml`、启动命令和 MCP 配置的修改，再核对当前版本的[覆盖与失败行为](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/harness-support.md)，并演练 Hook 错误、超时或返回格式异常时可能放行的情况以及卸载回退步骤。它和自写 Hook 一样受 Codex 工具覆盖边界限制，不能替代沙箱、最小权限、密钥管理或服务端控制。
 
 ## 验收清单
 

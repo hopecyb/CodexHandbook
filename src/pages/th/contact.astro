@@ -1,0 +1,17 @@
+---
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-11-13';
+const reviewedAt = '2026-11-19';
+---
+
+<LegalPage lang="th" title="ติดต่อ | คู่มือ Codex" description="ติดต่อผู้ดูแลคู่มือ Codex เพื่อแจ้งปัญหาเนื้อหา การอัปเดตแหล่งข้อมูล การปรับปรุงคำแปล หรือข้อเสนอความร่วมมือ" canonical="https://codexhandbook.com/th/contact/">
+<h1>ติดต่อ</h1>
+<p>หากต้องการแจ้งปัญหาเนื้อหา อัปเดตแหล่งข้อมูล เสนอการปรับปรุงคำแปล ติดต่อเรื่องโฆษณา หรือส่งข้อเสนอแนะอื่น ๆ โปรดส่งอีเมล หรือเปิด issue หรือ pull request ในรีโพซิทอรี GitHub</p>
+<ul>
+<li>อีเมล: <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a></li>
+<li><a href="https://github.com/hopecyb/CodexHandbook/issues">GitHub issues</a></li>
+<li><a href="https://github.com/hopecyb/CodexHandbook">รีโพซิทอรีซอร์สโค้ด</a></li>
+</ul>
+<p>ต้นฉบับอัปเดตล่าสุด: <time datetime={updatedAt}>{updatedAt}</time></p>
+<p>ตรวจทานคำแปลเมื่อ: <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/contact/">ต้นฉบับภาษาจีน</a></p>
+</LegalPage>

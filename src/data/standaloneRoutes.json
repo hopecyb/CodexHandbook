@@ -1,6 +1,6 @@
 {
   "chatgpt-pricing": {
     "slug": "chatgpt-pricing",
-    "supportedLocales": ["root", "en", "zh-tw", "fr", "ja", "ko", "es", "de", "pt", "vi"]
+    "supportedLocales": ["root", "en", "zh-tw", "fr", "ja", "ko", "es", "de", "pt", "vi", "th", "ru"]
   }
 }

@@ -3,13 +3,19 @@ import logo from '../assets/brand/logo.png';
 
 const siteUrl = 'https://codexhandbook.com';
 const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
+const thai = Astro.url.pathname.startsWith('/th/');
+const russian = Astro.url.pathname.startsWith('/ru/');
 const vietnamese = Astro.url.pathname.startsWith('/vi/');
 const portuguese = Astro.url.pathname.startsWith('/pt/');
 const german = Astro.url.pathname.startsWith('/de/');
 const french = Astro.url.pathname.startsWith('/fr/');
-const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/en/' || Astro.url.pathname === '/fr/' || Astro.url.pathname === '/de/' || Astro.url.pathname === '/pt/' || Astro.url.pathname === '/vi/';
-const title = vietnamese ? 'Sổ tay Codex' : portuguese ? 'Manual Codex' : german ? 'Codex-Handbuch' : french ? 'Manuel Codex' : Astro.url.pathname.startsWith('/en/') ? 'Codex Handbook' : 'Codex 指南手册';
-const description = vietnamese
+const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/en/' || Astro.url.pathname === '/fr/' || Astro.url.pathname === '/de/' || Astro.url.pathname === '/pt/' || Astro.url.pathname === '/vi/' || Astro.url.pathname === '/th/' || Astro.url.pathname === '/ru/';
+const title = russian ? 'Руководство Codex' : thai ? 'คู่มือ Codex' : vietnamese ? 'Sổ tay Codex' : portuguese ? 'Manual Codex' : german ? 'Codex-Handbuch' : french ? 'Manuel Codex' : Astro.url.pathname.startsWith('/en/') ? 'Codex Handbook' : 'Codex 指南手册';
+const description = russian
+	? 'Руководство Codex объясняет основы продукта, промпты, Skills и практические сценарии, помогая превращать постановку задач, выполнение и проверку результатов в повторно используемые методы.'
+	: thai
+	? 'คู่มือ Codex ครอบคลุมพื้นฐานผลิตภัณฑ์ พรอมต์ Skills และกรณีใช้งานจริง เพื่อช่วยเปลี่ยนคำอธิบายงาน ขั้นตอนการทำงาน และการตรวจรับผลลัพธ์ให้เป็นวิธีที่นำกลับมาใช้ได้'
+	: vietnamese
 	? 'Sổ tay Codex trình bày cách bắt đầu sử dụng sản phẩm, prompts, Skills và các tình huống thực tế, giúp biến mô tả tác vụ, quá trình thực hiện và kết quả nghiệm thu thành phương pháp có thể tái sử dụng.'
 	: portuguese
 	? 'O Manual Codex aborda os primeiros passos no produto, prompts, Skills e casos práticos para transformar descrições de tarefas, processos de execução e verificação dos resultados em métodos reutilizáveis.'
@@ -20,7 +26,19 @@ const description = vietnamese
 	: Astro.url.pathname.startsWith('/en/')
 	? 'Codex Handbook turns product basics, prompting, Skills, and real cases into reusable methods for describing tasks, guiding execution, and checking results.'
 	: 'Codex 指南手册围绕产品入门、提示词、Skills 与真实案例，帮助你把任务说明、执行过程和验收结果沉淀成可复用方法。';
-const homeFaq = vietnamese
+const homeFaq = russian
+	? [
+		{ question: 'Для кого предназначено Руководство Codex?', answer: 'Для начинающих, авторов, разработчиков и команд, которым нужны надёжные и повторно используемые методы работы с Codex.' },
+		{ question: 'Что прочитать перед первым использованием Codex?', answer: 'Начните с терминов, выбора клиента, границ разрешений и первой задачи, затем переходите к промптам, Skills и командным процессам.' },
+		{ question: 'Как командам надёжнее использовать Codex?', answer: 'Сосредоточьтесь на инструкциях проекта, границах подтверждений, проверке кода, критериях валидации и правилах безопасности. Сохраняйте опыт в репозитории или документации команды.' },
+	]
+	: thai
+	? [
+		{ question: 'คู่มือ Codex เหมาะกับใคร?', answer: 'คู่มือ Codex เหมาะกับผู้เริ่มต้น นักสร้างสรรค์ นักพัฒนา และทีมที่ต้องการวิธีใช้ Codex อย่างปลอดภัยและนำกลับมาใช้ได้' },
+		{ question: 'ผู้ใช้ Codex ครั้งแรกควรอ่านอะไรก่อน?', answer: 'เริ่มจากคำศัพท์ การเลือกไคลเอนต์ ขอบเขตสิทธิ์ และงานแรก จากนั้นจึงไปต่อที่พรอมต์ Skills และเวิร์กโฟลว์ของทีม' },
+		{ question: 'ทีมจะใช้ Codex ให้เชื่อถือได้มากขึ้นอย่างไร?', answer: 'ให้ความสำคัญกับคำสั่งของโครงการ ขอบเขตการอนุมัติ การตรวจทานโค้ด เกณฑ์การตรวจสอบ และการกำกับดูแลความปลอดภัย แล้วบันทึกประสบการณ์ไว้ในที่เก็บหรือเอกสารของทีม' },
+	]
+	: vietnamese
 	? [
 		{ question: 'Sổ tay Codex dành cho ai?', answer: 'Sổ tay Codex dành cho người mới, nhà sáng tạo, lập trình viên và các nhóm muốn biến mô tả tác vụ, quá trình thực hiện và kết quả nghiệm thu thành phương pháp có thể tái sử dụng.' },
 		{ question: 'Nên đọc gì trước khi sử dụng Codex lần đầu?', answer: 'Hãy bắt đầu với thuật ngữ, cách chọn ứng dụng khách, giới hạn quyền và tác vụ đầu tiên, rồi chuyển sang prompts, Skills và quy trình làm việc nhóm.' },
@@ -90,7 +108,7 @@ const graph = [
 		name: 'Codex Handbook',
 		alternateName: 'Codex 指南手册',
 		url: siteUrl,
-		inLanguage: ['zh-CN', 'en', 'zh-TW', 'fr', 'ja', 'ko', 'es', 'de', 'pt', 'vi'],
+		inLanguage: ['zh-CN', 'en', 'zh-TW', 'fr', 'ja', 'ko', 'es', 'de', 'pt', 'vi', 'th', 'ru'],
 		publisher: {
 			'@id': `${siteUrl}/#organization`,
 		},
@@ -119,7 +137,7 @@ const graph = [
 		},
 		datePublished: '2026-07-26',
 		dateModified: '2026-07-28',
-		inLanguage: vietnamese ? 'vi' : portuguese ? 'pt' : german ? 'de' : french ? 'fr' : Astro.url.pathname.startsWith('/en/') ? 'en' : 'zh-CN',
+		inLanguage: russian ? 'ru' : thai ? 'th' : vietnamese ? 'vi' : portuguese ? 'pt' : german ? 'de' : french ? 'fr' : Astro.url.pathname.startsWith('/en/') ? 'en' : 'zh-CN',
 	},
 ];
 

@@ -10,6 +10,8 @@ export const SITE_LOCALE_ORDER = [
 	'de',
 	'pt',
 	'vi',
+	'th',
+	'ru',
 ] as const;
 
 export type SiteLocaleCode = (typeof SITE_LOCALE_ORDER)[number];

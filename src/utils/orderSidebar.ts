@@ -1,7 +1,7 @@
 import type { SidebarEntry } from '@astrojs/starlight/utils/routing/types';
 import { getCollection } from 'astro:content';
 
-const localePrefix = /^\/(en|de|es|fr|ja|ko|pt|vi|zh-tw)(?=\/)/;
+const localePrefix = /^\/(en|de|es|fr|ja|ko|pt|vi|th|ru|zh-tw)(?=\/)/;
 const withSlash = (path: string) => (path.endsWith('/') ? path : `${path}/`);
 const normalize = (href: string) => withSlash(href.replace(localePrefix, ''));
 

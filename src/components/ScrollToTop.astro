@@ -19,7 +19,11 @@ const scrollLabel =
 								? 'Voltar ao topo'
 								: locale === 'vi'
 									? 'Lên đầu trang'
-									: 'Back to top';
+									: locale === 'th'
+										? 'กลับขึ้นด้านบน'
+										: locale === 'ru'
+											? 'Наверх'
+											: 'Back to top';
 ---
 
 <button type="button" class="scroll-to-top" aria-label={scrollLabel} hidden>

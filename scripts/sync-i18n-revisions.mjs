@@ -17,8 +17,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const docsRoot = path.join(root, 'src/content/docs');
 const checkOnly = process.argv.includes('--check');
-const locales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko'];
-const localeTags = { en: 'en', fr: 'fr', de: 'de', es: 'es', pt: 'pt', vi: 'vi', ja: 'ja', ko: 'ko' };
+const locales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko', 'th', 'ru'];
+const localeTags = { en: 'en', fr: 'fr', de: 'de', es: 'es', pt: 'pt', vi: 'vi', ja: 'ja', ko: 'ko', th: 'th', ru: 'ru' };
 const localeRoots = new Set([...locales, 'zh-tw']);
 
 function walkSources(dir, files = []) {

@@ -13,6 +13,16 @@ pluginFramesTexts.overrideTexts("zh-TW", {
   "copyButtonTooltip": "複製到剪貼簿",
   "terminalWindowFallbackTitle": "終端視窗"
 });
+pluginFramesTexts.overrideTexts("th", {
+  "copyButtonCopied": "คัดลอกแล้ว",
+  "copyButtonTooltip": "คัดลอกไปยังคลิปบอร์ด",
+  "terminalWindowFallbackTitle": "หน้าต่างเทอร์มินัล"
+});
+pluginFramesTexts.overrideTexts("ru", {
+  "copyButtonCopied": "Скопировано",
+  "copyButtonTooltip": "Копировать в буфер обмена",
+  "terminalWindowFallbackTitle": "Окно терминала"
+});
 
 import { defineConfig } from 'astro/config';
 import { unified } from '@astrojs/markdown-remark';
@@ -51,6 +61,8 @@ const legacyRedirects = {
 	'/de/roadmap': '/de/ai-roadmap',
 	'/pt/roadmap': '/pt/ai-roadmap',
 	'/vi/roadmap': '/vi/ai-roadmap',
+	'/th/roadmap': '/th/ai-roadmap',
+	'/ru/roadmap': '/ru/ai-roadmap',
 	...localizedRedirects({
 		// 2026-10 dedupe: duplicate pages merged into the page that keeps the topic.
 		'/guide/getting-started/choose-your-codex-client': '/guide/choose-your-client',
@@ -63,7 +75,7 @@ const legacyRedirects = {
 
 /** Expand root-locale redirects to every locale prefix. */
 function localizedRedirects(map) {
-	const prefixes = ['', '/en', '/zh-tw', '/fr', '/ja', '/ko', '/es', '/de', '/pt', '/vi'];
+	const prefixes = ['', '/en', '/zh-tw', '/fr', '/ja', '/ko', '/es', '/de', '/pt', '/vi', '/th', '/ru'];
 	return Object.fromEntries(
 		prefixes.flatMap((prefix) =>
 			Object.entries(map).map(([from, to]) => [`${prefix}${from}`, `${prefix}${to}`]),
@@ -84,6 +96,8 @@ const sitemapLocales = {
 	de: 'de',
 	pt: 'pt',
 	vi: 'vi',
+	th: 'th',
+	ru: 'ru',
 };
 
 function mergeRel(value) {
@@ -161,6 +175,8 @@ export default defineConfig({
 				de: 'Codex-Handbuch',
 				pt: 'Manual Codex',
 				vi: 'Sổ tay Codex',
+				th: 'คู่มือ Codex',
+				ru: 'Руководство Codex',
 			},
 			logo: {
 				src: './src/assets/brand/logo.png',
@@ -288,6 +304,8 @@ export default defineConfig({
 				de: { label: 'Deutsch', lang: 'de' },
 				pt: { label: 'Português', lang: 'pt' },
 				vi: { label: 'Tiếng Việt', lang: 'vi' },
+				th: { label: 'ไทย', lang: 'th' },
+				ru: { label: 'Русский', lang: 'ru' },
 			},
 			social: [
 				{
@@ -309,6 +327,8 @@ export default defineConfig({
 						de: 'Codex-Leitfaden',
 						pt: 'Guia Codex',
 						vi: 'Hướng dẫn Codex',
+						th: 'คู่มือ Codex',
+						ru: 'Руководство Codex',
 					},
 					items: [{ autogenerate: { directory: 'guide', collapsed: true } }],
 				},
@@ -324,6 +344,8 @@ export default defineConfig({
 						de: 'Prompts',
 						pt: 'Prompts',
 						vi: 'Prompts',
+						th: 'พรอมต์',
+						ru: 'Промпты',
 					},
 					items: [{ autogenerate: { directory: 'prompts', collapsed: true } }],
 				},
@@ -339,6 +361,8 @@ export default defineConfig({
 						de: 'Skills',
 						pt: 'Skills',
 						vi: 'Skills',
+						th: 'Skills',
+						ru: 'Skills',
 					},
 					items: [{ autogenerate: { directory: 'skills', collapsed: true } }],
 				},
@@ -354,6 +378,8 @@ export default defineConfig({
 						de: 'Praxisbeispiele',
 						pt: 'Casos práticos',
 						vi: 'Tình huống thực tế',
+						th: 'กรณีใช้งาน',
+						ru: 'Практические примеры',
 					},
 					items: [{ autogenerate: { directory: 'cases', collapsed: true } }],
 				},
@@ -369,6 +395,8 @@ export default defineConfig({
 						de: 'Roadmap für KI-Anwendungen',
 						pt: 'Roteiro de aplicações de IA',
 						vi: 'Lộ trình ứng dụng AI',
+						th: 'แผนงานการประยุกต์ใช้ AI',
+						ru: 'Карта развития применения ИИ',
 					},
 					items: [{ autogenerate: { directory: 'ai-roadmap', collapsed: true } }],
 				},
@@ -384,6 +412,8 @@ export default defineConfig({
 						de: 'Codex-Haustiere',
 						pt: 'Pets do Codex',
 						vi: 'Thú cưng Codex',
+						th: 'สัตว์เลี้ยง Codex',
+						ru: 'Питомцы Codex',
 					},
 					items: [{ autogenerate: { directory: 'pets', collapsed: true } }],
 				},
@@ -399,6 +429,8 @@ export default defineConfig({
 						de: 'Codex-Themes',
 						pt: 'Temas do Codex',
 						vi: 'Giao diện Codex',
+						th: 'ธีม Codex',
+						ru: 'Темы Codex',
 					},
 					items: [{ autogenerate: { directory: 'theme', collapsed: true } }],
 				},

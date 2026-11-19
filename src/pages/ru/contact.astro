@@ -1,0 +1,13 @@
+---
+import LegalPage from '../../layouts/LegalPage.astro';
+const updatedAt = '2026-11-13';
+const reviewedAt = '2026-11-19';
+---
+
+<LegalPage lang="ru" title="Контакты | Codex Handbook" description="Свяжитесь с редакцией Codex Handbook, чтобы сообщить об ошибке, обновлении источника, предложить улучшение перевода или сотрудничество." canonical="https://codexhandbook.com/ru/contact/">
+<h1>Контакты</h1>
+<p>Чтобы сообщить об ошибке в материалах, обновлении источника, предложить улучшение перевода, обсудить рекламное сотрудничество или поделиться другими предложениями, напишите нам по электронной почте либо создайте issue или pull request в репозитории на GitHub.</p>
+<ul><li>Электронная почта: <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a></li><li><a href="https://github.com/hopecyb/CodexHandbook/issues">Issues на GitHub</a></li><li><a href="https://github.com/hopecyb/CodexHandbook">Репозиторий с исходным кодом</a></li></ul>
+<p>Исходный текст обновлён: <time datetime={updatedAt}>{updatedAt}</time></p>
+<p>Перевод проверен: <time datetime={reviewedAt}>{reviewedAt}</time> · <a href="/contact/">Китайский оригинал</a></p>
+</LegalPage>

@@ -10,7 +10,9 @@ export type SiteLang =
 	| 'es'
 	| 'de'
 	| 'pt'
-	| 'vi';
+	| 'vi'
+	| 'th'
+	| 'ru';
 
 export type LocalizedLabel = Partial<Record<SiteLang, string>> & {
 	'zh-CN': string;
@@ -52,6 +54,8 @@ const LOCALE_LANG: Record<string, SiteLang> = {
 	de: 'de',
 	pt: 'pt',
 	vi: 'vi',
+	th: 'th',
+	ru: 'ru',
 };
 
 const SITE_LANGS: SiteLang[] = [
@@ -65,6 +69,8 @@ const SITE_LANGS: SiteLang[] = [
 	'de',
 	'pt',
 	'vi',
+	'th',
+	'ru',
 ];
 
 function isSiteLang(value: string): value is SiteLang {
@@ -85,6 +91,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Codex-Leitfaden',
 			pt: 'Guia Codex',
 			vi: 'Hướng dẫn Codex',
+			th: 'คู่มือ Codex',
+			ru: 'Руководство Codex',
 		},
 		prefix: '/guide',
 	},
@@ -101,6 +109,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Prompts',
 			pt: 'Prompts',
 			vi: 'Prompts',
+			th: 'พรอมต์',
+			ru: 'Промпты',
 		},
 		prefix: '/prompts',
 	},
@@ -117,6 +127,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Skills',
 			pt: 'Skills',
 			vi: 'Skills',
+			th: 'Skills',
+			ru: 'Skills',
 		},
 		prefix: '/skills',
 	},
@@ -133,6 +145,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Praxisbeispiele',
 			pt: 'Casos práticos',
 			vi: 'Tình huống thực tế',
+			th: 'กรณีใช้งาน',
+			ru: 'Практические примеры',
 		},
 		prefix: '/cases',
 	},
@@ -149,6 +163,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Roadmap für KI-Anwendungen',
 			pt: 'Roteiro de aplicações de IA',
 			vi: 'Lộ trình ứng dụng AI',
+			th: 'แผนงานการประยุกต์ใช้ AI',
+			ru: 'Карта развития применения ИИ',
 		},
 		prefix: '/ai-roadmap',
 	},
@@ -171,6 +187,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Codex-Haustiere',
 			pt: 'Pets do Codex',
 			vi: 'Thú cưng Codex',
+			th: 'สัตว์เลี้ยง Codex',
+			ru: 'Питомцы Codex',
 		},
 		prefix: '/pets',
 	},
@@ -187,6 +205,8 @@ export const mainNavItems: NavItem[] = [
 			de: 'Codex-Themes',
 			pt: 'Temas do Codex',
 			vi: 'Giao diện Codex',
+			th: 'ธีม Codex',
+			ru: 'Темы Codex',
 		},
 		prefix: '/theme',
 	},
@@ -207,6 +227,8 @@ export const footerBrand: {
 		de: 'Codex-Handbuch',
 		pt: 'Manual Codex',
 		vi: 'Sổ tay Codex',
+		th: 'คู่มือ Codex',
+		ru: 'Руководство Codex',
 	},
 	tagline: {
 		'zh-CN': '把任务说明、执行过程与验收结果沉淀成可复用的 Codex 方法。',
@@ -219,6 +241,8 @@ export const footerBrand: {
 		de: 'Verwandeln Sie Aufgabenbeschreibungen, Ausführungsabläufe und Abnahmeergebnisse in wiederverwendbare Codex-Methoden.',
 		pt: 'Transforme descrições de tarefas, processos de execução e resultados de aceitação em métodos reutilizáveis com o Codex.',
 		vi: 'Biến mô tả tác vụ, quá trình thực hiện và kết quả nghiệm thu thành phương pháp Codex tái sử dụng được.',
+		th: 'เปลี่ยนคำอธิบายงาน ขั้นตอนการทำงาน และผลการตรวจรับให้เป็นวิธีใช้ Codex ที่นำกลับมาใช้ได้',
+		ru: 'Превращайте постановки задач, ход выполнения и результаты проверки в повторно используемые методы работы с Codex.',
 	},
 };
 
@@ -236,6 +260,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			de: 'Module',
 			pt: 'Módulos',
 			vi: 'Mô-đun',
+			th: 'ส่วนต่าง ๆ',
+			ru: 'Разделы',
 		},
 		links: mainNavItems.map(({ href, label, global, standalonePage, visibleIn }) => ({
 			href,
@@ -258,6 +284,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			de: 'Ressourcen',
 			pt: 'Recursos',
 			vi: 'Tài nguyên',
+			th: 'แหล่งข้อมูล',
+			ru: 'Ресурсы',
 		},
 		links: [
 			{
@@ -273,6 +301,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'GitHub-Repository',
 					pt: 'Repositório no GitHub',
 					vi: 'Kho GitHub',
+					th: 'ที่เก็บ GitHub',
+					ru: 'Репозиторий GitHub',
 				},
 				external: true,
 			},
@@ -289,6 +319,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Offizielle OpenAI-Codex-Dokumentation',
 					pt: 'Documentação oficial do OpenAI Codex',
 					vi: 'Tài liệu chính thức OpenAI Codex',
+					th: 'เอกสารอย่างเป็นทางการของ OpenAI Codex',
+					ru: 'Официальная документация OpenAI Codex',
 				},
 				external: true,
 			},
@@ -307,6 +339,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			de: 'Community',
 			pt: 'Comunidade',
 			vi: 'Cộng đồng',
+			th: 'ชุมชน',
+			ru: 'Сообщество',
 		},
 		links: [
 			{
@@ -322,6 +356,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Mitwirken',
 					pt: 'Contribuir',
 					vi: 'Đóng góp',
+					th: 'ร่วมพัฒนา',
+					ru: 'Участие в проекте',
 				},
 			},
 			{
@@ -337,6 +373,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Lernpfade',
 					pt: 'Trilhas de aprendizado',
 					vi: 'Lộ trình học',
+					th: 'เส้นทางการเรียนรู้',
+					ru: 'Учебные маршруты',
 				},
 			},
 			{
@@ -352,6 +390,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Versionen und Hinweise',
 					pt: 'Versões e avisos',
 					vi: 'Phiên bản và tuyên bố',
+					th: 'เวอร์ชันและประกาศ',
+					ru: 'Политика версий',
 				},
 			},
 		],
@@ -369,6 +409,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			de: 'Vertrauen',
 			pt: 'Confiança',
 			vi: 'Tin cậy',
+			th: 'ความน่าเชื่อถือ',
+			ru: 'Доверие',
 		},
 		links: [
 			{
@@ -385,6 +427,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Kontakt',
 					pt: 'Contato',
 					vi: 'Liên hệ',
+					th: 'ติดต่อ',
+					ru: 'Контакты',
 				},
 			},
 			{
@@ -409,6 +453,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Datenschutz',
 					pt: 'Privacidade',
 					vi: 'Quyền riêng tư',
+					th: 'นโยบายความเป็นส่วนตัว',
+					ru: 'Политика конфиденциальности',
 				},
 			},
 			{
@@ -425,6 +471,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Nutzungsbedingungen',
 					pt: 'Termos',
 					vi: 'Điều khoản',
+					th: 'ข้อกำหนดการใช้งาน',
+					ru: 'Условия использования',
 				},
 			},
 		],
@@ -443,6 +491,8 @@ export const uiLabels = {
 		de: 'Hauptnavigation',
 		pt: 'Navegação principal',
 		vi: 'Điều hướng chính',
+		th: 'การนำทางหลัก',
+		ru: 'Основная навигация',
 	},
 	more: {
 		'zh-CN': '更多',
@@ -455,6 +505,8 @@ export const uiLabels = {
 		de: 'Mehr',
 		pt: 'Mais',
 		vi: 'Thêm',
+		th: 'เพิ่มเติม',
+		ru: 'Ещё',
 	},
 	capabilities: {
 		'zh-CN': '能力中心',
@@ -467,6 +519,8 @@ export const uiLabels = {
 		de: 'Fähigkeiten',
 		pt: 'Capacidades',
 		vi: 'Năng lực',
+		th: 'ความสามารถ',
+		ru: 'Возможности',
 	},
 	resources: {
 		'zh-CN': '资源',
@@ -479,6 +533,8 @@ export const uiLabels = {
 		de: 'Ressourcen',
 		pt: 'Recursos',
 		vi: 'Tài nguyên',
+		th: 'แหล่งข้อมูล',
+		ru: 'Ресурсы',
 	},
 	menu: {
 		'zh-CN': '菜单',
@@ -491,6 +547,8 @@ export const uiLabels = {
 		de: 'Menü',
 		pt: 'Menu',
 		vi: 'Menu',
+		th: 'เมนู',
+		ru: 'Меню',
 	},
 	siteFooter: {
 		'zh-CN': '站点页脚',
@@ -503,6 +561,8 @@ export const uiLabels = {
 		de: 'Seitenfußzeile',
 		pt: 'Rodapé do site',
 		vi: 'Chân trang',
+		th: 'ส่วนท้ายของเว็บไซต์',
+		ru: 'Подвал сайта',
 	},
 };
 

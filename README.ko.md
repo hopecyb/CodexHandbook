@@ -30,6 +30,10 @@
   <a href="./README.pt.md">Português</a>
   ·
   <a href="./README.vi.md">Tiếng Việt</a>
+  ·
+  <a href="./README.th.md">ไทย</a>
+  ·
+  <a href="./README.ru.md">Русский</a>
 </p>
 
 <p align="center">

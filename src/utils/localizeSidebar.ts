@@ -25,6 +25,8 @@ const OVERVIEW_LABELS: Record<string, string> = {
 	de: 'Übersicht',
 	pt: 'Visão geral',
 	vi: 'Tổng quan',
+	th: 'ภาพรวม',
+	ru: 'Обзор',
 };
 
 function localeFromHref(href: string): string {

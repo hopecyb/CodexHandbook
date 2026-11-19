@@ -2,7 +2,7 @@ import standaloneRoutes from '../data/standaloneRoutes.json';
 import type { LocalizedLabel, SiteLang } from './siteNav';
 
 export type StandalonePageId = 'chatgpt-pricing';
-export type StandaloneLocaleCode = 'root' | 'en' | 'zh-tw' | 'fr' | 'ja' | 'ko' | 'es' | 'de' | 'pt' | 'vi';
+export type StandaloneLocaleCode = 'root' | 'en' | 'zh-tw' | 'fr' | 'ja' | 'ko' | 'es' | 'de' | 'pt' | 'vi' | 'th' | 'ru';
 
 export type StandalonePage = {
 	id: StandalonePageId;
@@ -23,6 +23,8 @@ export const standaloneLocaleToLang: Record<StandaloneLocaleCode, SiteLang> = {
 	de: 'de',
 	pt: 'pt',
 	vi: 'vi',
+	th: 'th',
+	ru: 'ru',
 };
 
 export const standaloneLangToLocale: Record<SiteLang, StandaloneLocaleCode> = {
@@ -36,6 +38,8 @@ export const standaloneLangToLocale: Record<SiteLang, StandaloneLocaleCode> = {
 	de: 'de',
 	pt: 'pt',
 	vi: 'vi',
+	th: 'th',
+	ru: 'ru',
 };
 
 export const standalonePages: Record<StandalonePageId, StandalonePage> = {
@@ -55,6 +59,8 @@ export const standalonePages: Record<StandalonePageId, StandalonePage> = {
 			'de': 'ChatGPT-Pläne und Preise',
 			'pt': 'Planos e preços do ChatGPT',
 			'vi': 'Gói và giá ChatGPT',
+			'th': 'แพ็กเกจและราคาของ ChatGPT',
+			'ru': 'Тарифы и цены ChatGPT',
 		},
 	},
 };

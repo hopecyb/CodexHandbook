@@ -13,6 +13,8 @@ const labels: Record<string, string[]> = {
   ja: ['オフィス分析','コンテンツ制作','ソフトウェア開発','チームの自動化','編集レビュー','出典確認済み','実行例を検証済み','初級','中級','上級','件のケース','ケースを絞り込む','タスクの種類','すべてのタスク','キーワード','例：週報、PPTX、バグ','絞り込む','リセット','現在、すべてのケースを表示しています。JavaScript を有効にすると絞り込みができます。ブラウザー内検索も使えます。','該当するケースがありません。キーワードを消すか、条件をリセットしてください。','難易度未設定','過去の検証 · 本文参照','手順例 · 実行記録なし','成果物','タスクの説明を参照','ダウンロード資料あり','準備方法は本文を参照'],
   ko: ['사무 분석','콘텐츠 제작','소프트웨어 개발','팀 자동화','편집 검토','출처 확인','예제 실행 검증','초급','중급','고급','개 사례','사례 필터링','작업 유형','모든 작업','키워드','예: 주간 보고서, PPTX, 버그','필터','초기화','현재 모든 사례를 표시합니다. JavaScript를 켜면 필터링할 수 있으며 브라우저의 페이지 내 검색도 사용할 수 있습니다.','일치하는 사례가 없습니다. 키워드를 지우거나 필터를 초기화하세요.','난이도 미표기','이전 검증 · 본문 참조','예시 절차 · 실행 기록 없음','결과물','작업 설명 참조','다운로드 자료 있음','준비 방법은 본문 참조'],
   vi: ['Phân tích văn phòng','Sáng tạo nội dung','Phát triển phần mềm','Tự động hóa nhóm','Rà soát biên tập','Đã đối chiếu nguồn','Đã chạy và kiểm chứng ví dụ','Cơ bản','Trung cấp','Nâng cao','tình huống','Lọc tình huống','Loại tác vụ','Tất cả tác vụ','Từ khóa','Ví dụ: báo cáo, PPTX, lỗi','Lọc','Đặt lại','Đang hiển thị tất cả tình huống. Bật JavaScript để lọc hoặc dùng chức năng tìm trong trang của trình duyệt.','Không có tình huống phù hợp. Xóa từ khóa hoặc đặt lại bộ lọc.','Chưa ghi độ khó','Xác minh trước đây · xem bài viết','Quy trình ví dụ · chưa ghi nhận lần chạy','Sản phẩm','Xem mô tả tác vụ','Có tài liệu tải xuống','Xem cách chuẩn bị trong bài'],
+  th: ['การวิเคราะห์งานสำนักงาน','การสร้างเนื้อหา','การพัฒนาซอฟต์แวร์','ระบบอัตโนมัติสำหรับทีม','ตรวจทานโดยบรรณาธิการ','ตรวจสอบแหล่งข้อมูลแล้ว','รันและตรวจสอบตัวอย่างแล้ว','เริ่มต้น','ระดับกลาง','ขั้นสูง','กรณีศึกษา','กรองกรณีศึกษา','ประเภทงาน','งานทั้งหมด','คำสำคัญ','ตัวอย่าง: รายงาน, PPTX, บั๊ก','กรอง','รีเซ็ต','กำลังแสดงกรณีศึกษาทั้งหมด เปิดใช้ JavaScript เพื่อกรอง หรือใช้คำสั่งค้นหาในหน้าของเบราว์เซอร์','ไม่พบกรณีศึกษาที่ตรงกัน ล้างคำสำคัญหรือรีเซ็ตตัวกรอง','ไม่ได้ระบุระดับ','การตรวจสอบก่อนหน้า · ดูในบทความ','ขั้นตอนตัวอย่าง · ไม่มีบันทึกการรัน','ผลลัพธ์','ดูคำอธิบายงาน','มีไฟล์ให้ดาวน์โหลด','ดูวิธีเตรียมในบทความ'],
+  ru: ['Офисная аналитика','Создание контента','Разработка ПО','Автоматизация команды','Редакторская проверка','Источники проверены','Пример запущен и проверен','Начальный','Средний','Продвинутый','Примеры','Фильтр примеров','Тип задачи','Все задачи','Ключевые слова','Например: отчёт, PPTX, ошибка','Применить','Сбросить','Показаны все примеры. Включите JavaScript для фильтрации или используйте поиск по странице в браузере.','Подходящих примеров нет. Очистите ключевые слова или сбросьте фильтры.','Уровень не указан','Предыдущая проверка · см. статью','Пример процесса · запуск не зафиксирован','Результаты','См. описание задачи','Доступно для скачивания','Подготовка описана в статье'],
 };
 const l = labels[locale] ?? labels.root;
 const outputSeparator = locale === 'fr' ? ' : ' : ['root','zh-tw','ja','ko'].includes(locale) ? '：' : ': ';
@@ -29,14 +31,14 @@ const entries = docs.filter(({id,data}) => id.startsWith('cases/') && !!data.cas
   .filter((entry): entry is NonNullable<typeof entry> => entry !== null)
 	.sort((a,b)=>(a.directoryOrder ?? 999)-(b.directoryOrder ?? 999));
 ---
-<case-directory data-count-label={l[10]}>
+<case-directory data-count-label={l[10]} data-count-format={locale === 'ru' ? 'prefix' : 'suffix'}>
 	<form hidden role="search" aria-label={l[11]}>
 		<div class="control"><label for="case-category">{l[12]}</label><select id="case-category" name="category"><option value="all">{l[13]}</option>{Object.entries(categories).map(([key,label])=><option value={key}>{label}</option>)}</select></div>
 		<div class="control"><label for="case-query">{l[14]}</label><input id="case-query" type="search" name="q" placeholder={l[15]} /></div>
 		<button type="submit">{l[16]}</button><button type="button" data-reset>{l[17]}</button>
 	</form>
 	<noscript><p>{l[18]}</p></noscript>
-	<p data-count role="status" aria-live="polite">{entries.length} {l[10]}</p>
+	<p data-count role="status" aria-live="polite">{locale === 'ru' ? `${l[10]}: ${entries.length}` : `${entries.length} ${l[10]}`}</p>
 	<p data-empty hidden>{l[19]}</p>
 	<ul class="case-list">{entries.map(({id,data,caseCategory}) => <li data-case data-category={caseCategory} data-search={[data.title,data.description,...(data.outputs ?? []),categories[caseCategory!]].join(' ').toLocaleLowerCase()}>
 		<div class="case-meta"><span>{categories[caseCategory!]}</span><span>{data.level ? levels[data.level] : l[20]}</span><span>{data.verification ? states[data.verification.kind] : data.legacyVerification ? l[21] : l[22]}</span></div>
@@ -74,7 +76,9 @@ const entries = docs.filter(({id,data}) => id.startsWith('cases/') && !!data.cas
 					card.hidden = !(category.value === 'all' || card.dataset.category === category.value) || !terms.every(term => card.dataset.search!.includes(term));
 					if (!card.hidden) count++;
 				}
-				this.querySelector('[data-count]')!.textContent = `${count} ${this.dataset.countLabel}`;
+				this.querySelector('[data-count]')!.textContent = this.dataset.countFormat === 'prefix'
+					? `${this.dataset.countLabel}: ${count}`
+					: `${count} ${this.dataset.countLabel}`;
 				(this.querySelector('[data-empty]') as HTMLElement).hidden = count > 0;
 			};
 			const restore = () => {

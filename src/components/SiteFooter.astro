@@ -40,7 +40,7 @@ const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
 }));
 
 function resolveHref(link: (typeof visibleFooterLinkGroups)[number]['links'][number]) {
-	const legalPrefix = lang === 'zh-TW' ? '/zh-tw' : ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi'].includes(lang) ? `/${lang}` : '';
+	const legalPrefix = lang === 'zh-TW' ? '/zh-tw' : ['en', 'es', 'ja', 'ko', 'fr', 'de', 'pt', 'vi', 'th', 'ru'].includes(lang) ? `/${lang}` : '';
 	return legalPrefix &&
 		link.global &&
 		['/contact/', '/privacy-policy/', '/terms/'].includes(link.href)

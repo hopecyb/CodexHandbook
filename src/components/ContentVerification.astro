@@ -2,6 +2,8 @@
 const { entry } = Astro.locals.starlightRoute;
 const { verification, legacyVerification, editorialStatus } = entry.data;
 const vietnamese = Astro.locals.starlightRoute.locale === 'vi';
+const thai = Astro.locals.starlightRoute.locale === 'th';
+const russian = Astro.locals.starlightRoute.locale === 'ru';
 const portuguese = Astro.locals.starlightRoute.locale === 'pt';
 const german = Astro.locals.starlightRoute.locale === 'de';
 const french = Astro.locals.starlightRoute.locale === 'fr';
@@ -10,8 +12,12 @@ const japanese = Astro.locals.starlightRoute.locale === 'ja';
 const spanish = entry.id.startsWith('es/');
 const english = entry.id.startsWith('en/');
 const traditional = entry.id.startsWith('zh-tw/');
-const cn = !/^(en|de|es|fr|ja|ko|pt|vi)\//.test(entry.id);
-const labels = vietnamese
+const cn = !/^(en|de|es|fr|ja|ko|pt|vi|th|ru)\//.test(entry.id);
+const labels = russian
+	? { editorial: 'Редакторская проверка', 'source-checked': 'Источники проверены', 'run-tested': 'Пример запущен и проверен' }
+	: thai
+	? { editorial: 'การตรวจทานโดยบรรณาธิการ', 'source-checked': 'ตรวจสอบแหล่งข้อมูลแล้ว', 'run-tested': 'รันและตรวจสอบตัวอย่างแล้ว' }
+	: vietnamese
 	? { editorial: 'Rà soát biên tập', 'source-checked': 'Đã đối chiếu nguồn', 'run-tested': 'Đã chạy và kiểm chứng ví dụ' }
 	: portuguese
 	? { editorial: 'Revisão editorial', 'source-checked': 'Fontes conferidas', 'run-tested': 'Exemplo executado e verificado' }
@@ -30,7 +36,11 @@ const labels = vietnamese
 	: traditional
 	? { editorial: '編輯審閱', 'source-checked': '來源核對', 'run-tested': '示例實跑' }
 	: { editorial: '编辑审阅', 'source-checked': '来源核对', 'run-tested': '示例实跑' };
-const statusLabels = vietnamese
+const statusLabels = russian
+	? { planned: 'Запланировано', draft: 'Черновик', review: 'Ожидает проверки', verified: 'Проверено', outdated: 'Требует обновления', archived: 'Архивировано' }
+	: thai
+	? { planned: 'วางแผนแล้ว', draft: 'ฉบับร่าง', review: 'รอตรวจทาน', verified: 'ตรวจสอบแล้ว', outdated: 'ต้องอัปเดต', archived: 'เก็บถาวร' }
+	: vietnamese
 	? { planned: 'Đã lên kế hoạch', draft: 'Bản nháp', review: 'Chờ rà soát', verified: 'Đã kiểm tra', outdated: 'Cần cập nhật', archived: 'Đã lưu trữ' }
 	: portuguese
 	? { planned: 'Planejado', draft: 'Rascunho', review: 'Aguardando revisão', verified: 'Conferido', outdated: 'Requer atualização', archived: 'Arquivado' }
@@ -49,7 +59,11 @@ const statusLabels = vietnamese
 	: traditional
 	? { planned: '規劃', draft: '草稿', review: '待複核', verified: '已核對', outdated: '待更新', archived: '歸檔' }
 	: { planned: '规划', draft: '草稿', review: '待复核', verified: '已核对', outdated: '待更新', archived: '归档' };
-const t = vietnamese
+const t = russian
+	? { label: 'Запись о проверке материала', status: 'Редакционный статус', evidence: 'Посмотреть среду и свидетельства проверки', environment: 'Среда проверки', lastChecked: 'Последняя проверка', notes: 'Сведения о проверке', legacyNote: 'Это устаревшая запись о проверке без структурированных свидетельств. Она не подтверждает, что примеры на странице были запущены.', scope: 'Область применения' }
+	: thai
+	? { label: 'บันทึกการตรวจสอบเนื้อหา', status: 'สถานะการแก้ไข', evidence: 'ดูสภาพแวดล้อมและหลักฐานการตรวจสอบ', environment: 'สภาพแวดล้อมการตรวจสอบ', lastChecked: 'ตรวจสอบล่าสุด', notes: 'รายละเอียดการตรวจสอบ', legacyNote: 'นี่คือบันทึกการตรวจสอบรูปแบบเดิมที่ไม่มีหลักฐานแบบมีโครงสร้าง จึงไม่ได้ยืนยันว่ามีการรันตัวอย่างในหน้านี้แล้ว', scope: 'ขอบเขตที่ใช้' }
+	: vietnamese
 	? { label: 'Hồ sơ kiểm chứng nội dung', status: 'Trạng thái biên tập', evidence: 'Xem môi trường và bằng chứng kiểm chứng', environment: 'Môi trường kiểm chứng', lastChecked: 'Lần đối chiếu gần nhất', notes: 'Chi tiết kiểm chứng', legacyNote: 'Đây là hồ sơ đối chiếu theo định dạng cũ, chưa có bằng chứng có cấu trúc. Hồ sơ này không có nghĩa là các ví dụ trên trang đã được chạy.', scope: 'Phạm vi áp dụng' }
 	: portuguese
 	? { label: 'Registro de verificação do conteúdo', status: 'Status editorial', evidence: 'Ver ambiente e evidências da verificação', environment: 'Ambiente de verificação', lastChecked: 'Última conferência', notes: 'Detalhes da verificação', legacyNote: 'Este é um registro antigo de conferência, sem evidências estruturadas. Ele não comprova que os exemplos desta página foram executados.', scope: 'Escopo de aplicação' }
@@ -70,24 +84,24 @@ const t = vietnamese
 	: { label: '内容核验记录', status: '编辑状态', evidence: '查看验证环境与证据', environment: '验证环境', lastChecked: '最后核对', notes: '核对说明', legacyNote: '这是旧版核对记录，尚未登记结构化证据，不代表本页示例已实跑。', scope: '适用范围' };
 ---
 
-{(cn || english || spanish || japanese || korean || french || german || portuguese || vietnamese) && verification && (
+{(cn || english || spanish || japanese || korean || french || german || portuguese || vietnamese || thai || russian) && verification && (
 	<aside class="verification" aria-label={t.label} data-pagefind-ignore>
-		{editorialStatus && <p>{t.status}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese ? ': ' : '：'}{statusLabels[editorialStatus]}</p>}
+		{editorialStatus && <p>{t.status}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese || thai || russian ? ': ' : '：'}{statusLabels[editorialStatus]}</p>}
 		<p><strong>{labels[verification.kind]}</strong> · <time datetime={verification.checkedAt}>{verification.checkedAt}</time></p>
 		<p>{verification.summary}</p>
 	</aside>
 )}
 
-{(cn || english || spanish || japanese || korean || french || german || portuguese || vietnamese) && !verification && (legacyVerification || editorialStatus) && (
+{(cn || english || spanish || japanese || korean || french || german || portuguese || vietnamese || thai || russian) && !verification && (legacyVerification || editorialStatus) && (
 	<details class="verification-meta" aria-label={t.label} data-pagefind-ignore>
 		<summary>
 			{legacyVerification?.checkedAt && <span>{t.lastChecked} <time datetime={legacyVerification.checkedAt}>{legacyVerification.checkedAt}</time></span>}
-			{editorialStatus && <span>{t.status}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese ? ': ' : '：'}{statusLabels[editorialStatus]}</span>}
+			{editorialStatus && <span>{t.status}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese || thai || russian ? ': ' : '：'}{statusLabels[editorialStatus]}</span>}
 			{legacyVerification && <span class="verification-meta__more">{t.notes}</span>}
 		</summary>
 		{legacyVerification && <div class="verification-meta__body">
 			<p>{t.legacyNote}</p>
-			{legacyVerification.products && <p>{t.scope}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese ? ': ' : '：'}{legacyVerification.products}</p>}
+			{legacyVerification.products && <p>{t.scope}{french ? ' : ' : english || spanish || korean || german || portuguese || vietnamese || thai || russian ? ': ' : '：'}{legacyVerification.products}</p>}
 			{legacyVerification.basis && <p>{legacyVerification.basis}</p>}
 		</div>}
 	</details>
@@ -116,6 +130,12 @@ const t = vietnamese
 
 {vietnamese && entry.data.reviewed_at && <p class="verification-meta" data-pagefind-ignore>Bản dịch đã được rà soát theo bản gốc tiếng Trung: <time datetime={entry.data.reviewed_at}>{entry.data.reviewed_at}</time>. Đây không phải ngày kiểm chứng mới về thông tin sản phẩm.</p>}
 {vietnamese && entry.body?.includes('/downloads/') && <p class="verification-meta" data-pagefind-ignore>Các tệp tải xuống là tài liệu bài tập gốc dùng chung giữa các ngôn ngữ và có thể chứa tiếng Trung. Tên tệp, kết quả đã ghi nhận và mã kiểm tra tính toàn vẹn được giữ nguyên.</p>}
+
+{thai && entry.data.reviewed_at && <p class="verification-meta" data-pagefind-ignore>ตรวจทานคำแปลเทียบกับต้นฉบับภาษาจีนเมื่อ: <time datetime={entry.data.reviewed_at}>{entry.data.reviewed_at}</time> วันที่นี้ไม่ใช่วันที่ตรวจสอบข้อมูลผลิตภัณฑ์ครั้งใหม่</p>}
+{thai && entry.body?.includes('/downloads/') && <p class="verification-meta" data-pagefind-ignore>ไฟล์ดาวน์โหลดเป็นสื่อแบบฝึกหัดต้นฉบับที่ใช้ร่วมกันทุกภาษาและอาจมีข้อความภาษาจีน ชื่อไฟล์ ผลลัพธ์ที่บันทึกไว้ และค่า checksum จะคงไว้ตามต้นฉบับ</p>}
+
+{russian && entry.data.reviewed_at && <p class="verification-meta" data-pagefind-ignore>Перевод сверен с китайским оригиналом: <time datetime={entry.data.reviewed_at}>{entry.data.reviewed_at}</time>. Это не новая дата проверки сведений о продукте.</p>}
+{russian && entry.body?.includes('/downloads/') && <p class="verification-meta" data-pagefind-ignore>Файлы для загрузки — это общие оригинальные учебные материалы; они могут содержать текст на китайском языке. Имена файлов, записанные результаты и контрольные суммы сохранены.</p>}
 
 <style>
 	.verification { margin-block: 1rem; padding: .8rem 1rem; border-inline-start: 3px solid var(--sl-color-accent); background: var(--sl-color-gray-6); font-size: var(--sl-text-sm); overflow-wrap: anywhere; }

@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, '..');
 const docsRoot = path.join(root, 'src/content/docs');
-const supportedLocales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko', 'zh-tw'];
+const supportedLocales = ['en', 'fr', 'de', 'es', 'pt', 'vi', 'ja', 'ko', 'zh-tw', 'th', 'ru'];
 const localeRoots = new Set(supportedLocales);
 const localizedContentRoots = new Set(['ai-roadmap', 'cases', 'guide', 'pets', 'prompts', 'skills', 'theme']);
 const repositoryUrl = 'https://github.com/hopecyb/CodexHandbook';
