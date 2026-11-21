@@ -1,6 +1,5 @@
 ---
 import { Search } from '@lucide/astro';
-import ConsentManager from '../components/ConsentManager.astro';
 import Select from '../components/Select.astro';
 import '../styles/select.css';
 import { footerBrand, footerLegal, footerLinkGroups, pickLabel, type LocalizedLabel, type SiteLang } from '../utils/siteNav';
@@ -92,7 +91,7 @@ const year = new Date().getFullYear();
 		{alternateLinks.map((item) => <link rel="alternate" hreflang={item.hreflang} href={item.href} />)}
 		<link rel="alternate" hreflang="x-default" href={`https://codexhandbook.com/${slug}/`} />
 		<link rel="icon" href="/favicon.png" />
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
 		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 		<script is:inline>
 			(() => {
@@ -177,7 +176,6 @@ const year = new Date().getFullYear();
 			<p>{pickLabel(independentCopy, lang)}</p>
 			<p>&copy; {year} <a href={homeHref}>{footerLegal.site}</a></p>
 		</footer>
-		<ConsentManager {lang} />
 		<script is:inline>
 			(() => {
 				const root = document.documentElement;

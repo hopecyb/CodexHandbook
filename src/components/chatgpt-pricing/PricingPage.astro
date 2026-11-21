@@ -5,7 +5,6 @@ import quotes from '../../data/chatgptPriceQuotes.json';
 import planQuotes from '../../data/chatgptPlanQuotes.json';
 import planCopy from '../../data/chatgptPlanCopy.json';
 import snapshotCopy from '../../data/chatgptSnapshotCopy.json';
-import ConsentManager from '../ConsentManager.astro';
 import PricingFooter from './PricingFooter.astro';
 import {
 	standaloneHref,
@@ -88,7 +87,7 @@ function formatPlanPrice(quote: (typeof planQuotes)[number]) {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.clarity.ms https://c.bing.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.clarity.ms https://c.bing.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; connect-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:" />
 		<title>{plan.title} | Codex Handbook</title>
 		<meta name="description" content={plan.subtitle} />
 		<meta property="og:type" content="website" />
@@ -216,7 +215,6 @@ function formatPlanPrice(quote: (typeof planQuotes)[number]) {
 		</main>
 
 		<PricingFooter year={currentYear} locale={currentLocale} lang={initialLanguage} />
-		<ConsentManager lang={initialLanguage} />
 
 		<script src="/scripts/chatgpt-pricing.js" defer></script>
 	</body>

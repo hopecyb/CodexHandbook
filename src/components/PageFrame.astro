@@ -1,17 +1,12 @@
 ---
 import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
-import config from 'virtual:starlight/user-config';
-import ConsentManager from './ConsentManager.astro';
 import ExternalLinks from './ExternalLinks.astro';
 import GeoJsonLd from './GeoJsonLd.astro';
 import ScrollToTop from './ScrollToTop.astro';
 import SiteFooter from './SiteFooter.astro';
-import { getSiteLang } from '../utils/siteNav';
 
 const { hasSidebar } = Astro.locals.starlightRoute;
 const showSiteFooter = !hasSidebar;
-const locale = Astro.locals.starlightRoute.locale ?? 'root';
-const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
 ---
 
 <GeoJsonLd />
@@ -38,7 +33,6 @@ const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
 </div>
 <ExternalLinks />
 <ScrollToTop />
-<ConsentManager {lang} />
 
 <style>
 	@layer starlight.core {
