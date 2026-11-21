@@ -3,17 +3,22 @@ import LegalPage from '../layouts/LegalPage.astro';
 const updatedAt = '2026-11-21';
 ---
 
-<LegalPage lang="zh-CN" title="隐私政策 | Codex 指南手册" description="Codex 指南手册的隐私政策，说明基础访问数据和浏览器本地设置的使用方式。" canonical="https://codexhandbook.com/privacy-policy/">
+<LegalPage lang="zh-CN" title="隐私政策 | Codex 指南手册" description="Codex 指南手册的隐私政策，说明基础访问数据、无 Cookie 分析和浏览器本地设置。" canonical="https://codexhandbook.com/privacy-policy/">
 <h1>隐私政策</h1>
 <p>Codex 指南手册是由社区维护的独立公开内容站点，并非 OpenAI 官方网站。站点不要求读者创建账户，也不提供收集个人资料的站内表单。</p>
 <h2>谁负责本站</h2>
 <p>本站由 Codex Handbook 项目维护者运营。隐私或删除请求可发送至 <a href="mailto:service@codexhandbook.com">service@codexhandbook.com</a>，也可通过公开的 <a href="https://github.com/hopecyb/CodexHandbook/issues">GitHub issues</a> 联系。涉及隐私的内容请优先使用邮件，不要在公开 issue 中提交个人信息。</p>
 <h2>必要处理</h2>
 <p>为了向浏览器传输页面，托管和网络基础设施会处理请求所需的数据，例如 IP 地址、请求时间、所访问的 URL、浏览器或设备信息以及错误日志。该处理用于提供站点、保障安全和排查故障。本站代码不设置账户标识，也不把这些基础日志用于广告画像。</p>
-<h2>不使用第三方分析</h2>
-<p>本站不加载 Google Analytics、Microsoft Clarity 或其他第三方分析、广告及会话回放脚本，也不设置这类服务使用的 cookie。因此，本站没有需要读者接受或拒绝的非必要分析选项。</p>
+<h2>无 Cookie 分析</h2>
+<p>页面会自动加载以下第三方分析服务，但不会显示分析同意横幅，也不会为分析或广告存储设置 cookie：</p>
+<ul>
+<li><strong>Google Analytics 4</strong>：接收无 Cookie 的页面访问统计。本站将分析存储、广告存储、广告用户数据和广告个性化均设为拒绝，并关闭 Google signals 和广告个性化信号。</li>
+<li><strong>Microsoft Clarity</strong>：接收无 Cookie 的页面访问和基础交互数据。分析存储和广告存储均设为拒绝，因此跨页面会话会被拆分，部分完整回放和用户旅程功能不可用。</li>
+</ul>
+<p>这些数据用于发现内容、性能和可用性问题。即使不使用 cookie，请求仍可能包含页面 URL、来源页面、时间、浏览器或设备信息以及由网络连接产生的 IP 地址。数据会发送给 Google 和 Microsoft，并可能由其全球基础设施在你所在地区之外处理。请同时阅读 <a href="https://policies.google.com/privacy">Google 隐私政策</a>和 <a href="https://privacy.microsoft.com/privacystatement">Microsoft 隐私声明</a>。</p>
 <h2>浏览器本地设置</h2>
-<p>本站可能使用浏览器本地存储记住你的主题选择。这项设置只保存在当前浏览器中，不会发送给第三方分析或广告服务；你可以随时通过浏览器设置将其清除。</p>
+<p>本站可能使用浏览器本地存储记住你的主题选择。这项设置只保存在当前浏览器中；你可以随时通过浏览器设置将其清除。本站不会在本地存储中保存分析同意状态。</p>
 <h2>你的选择与权利</h2>
 <p>你可以要求查询、更正或删除与本站相关的个人信息。由于本站没有账户，处理请求时可能需要你提供足以定位记录的有限信息；我们不会要求与请求无关的资料。</p>
 <h2>外部链接</h2>

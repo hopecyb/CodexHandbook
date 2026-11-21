@@ -1,0 +1,68 @@
+<script is:inline>
+	(() => {
+		if (window.__codexHandbookAnalyticsLoaded) return;
+
+		const hostname = window.location.hostname;
+		const isLocalHost =
+			hostname === 'localhost' ||
+			hostname === '127.0.0.1' ||
+			hostname === '0.0.0.0' ||
+			hostname === '::1' ||
+			hostname.endsWith('.local') ||
+			hostname.startsWith('192.168.') ||
+			hostname.startsWith('10.') ||
+			/^172\.(1[6-9]|2\d|3[0-1])\./.test(hostname);
+		if (isLocalHost) return;
+
+		window.__codexHandbookAnalyticsLoaded = true;
+		const GA_ID = 'G-KPP4Z7D6SZ';
+		const CLARITY_ID = 'xtawngb7re';
+
+		// Remove choices and cookies left by the retired consent interface.
+		try {
+			localStorage.removeItem('codexhandbook:analytics-consent:v1');
+		} catch {}
+		const analyticsCookies = document.cookie
+			.split(';')
+			.map((part) => part.split('=')[0].trim())
+			.filter((name) => name.startsWith('_ga') || name === '_clck' || name === '_clsk');
+		for (const name of analyticsCookies) {
+			document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+			if (hostname.includes('.')) {
+				document.cookie = `${name}=; Max-Age=0; Path=/; Domain=.${hostname.replace(/^www\./, '')}; SameSite=Lax`;
+			}
+		}
+
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+		window.gtag('consent', 'default', {
+			analytics_storage: 'denied',
+			ad_storage: 'denied',
+			ad_user_data: 'denied',
+			ad_personalization: 'denied',
+		});
+		window.gtag('js', new Date());
+		window.gtag('config', GA_ID, {
+			allow_google_signals: false,
+			allow_ad_personalization_signals: false,
+		});
+		const google = document.createElement('script');
+		google.async = true;
+		google.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+		google.dataset.siteAnalytics = 'google';
+		document.head.appendChild(google);
+
+		window.clarity = window.clarity || function () {
+			(window.clarity.q = window.clarity.q || []).push(arguments);
+		};
+		window.clarity('consentv2', {
+			ad_Storage: 'denied',
+			analytics_Storage: 'denied',
+		});
+		const clarity = document.createElement('script');
+		clarity.async = true;
+		clarity.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
+		clarity.dataset.siteAnalytics = 'clarity';
+		document.head.appendChild(clarity);
+	})();
+</script>

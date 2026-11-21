@@ -1,5 +1,6 @@
 ---
 import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+import Analytics from './Analytics.astro';
 import ExternalLinks from './ExternalLinks.astro';
 import GeoJsonLd from './GeoJsonLd.astro';
 import ScrollToTop from './ScrollToTop.astro';
@@ -33,6 +34,7 @@ const showSiteFooter = !hasSidebar;
 </div>
 <ExternalLinks />
 <ScrollToTop />
+<Analytics />
 
 <style>
 	@layer starlight.core {
